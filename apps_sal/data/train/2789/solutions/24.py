@@ -2,8 +2,6 @@ def bmi(weight, height):
     bmi_val = weight / height**2
     return get_weight_class(bmi_val)
 
-# bmi_ranges start open bound & end closed bound
-
 
 def get_weight_class(bmi_val):
     bmi_ranges = [(0, 18.5), (18.5, 25), (25, 30), (30, float("inf"))]
@@ -13,7 +11,6 @@ def get_weight_class(bmi_val):
         (25, 30): "Overweight",
         (30, float("inf")): "Obese",
     }
-    # see what range bmi belongs to with binary search
     start = 0
     end = len(bmi_ranges) - 1
 

@@ -1,11 +1,9 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
 
-        # dp[i] represents dp(1, i)
         dp = range(N + 1)
 
         for k in range(2, K + 1):
-            # dp2 represents dp(k, i)
             dp2 = [0]
             A = 1
 

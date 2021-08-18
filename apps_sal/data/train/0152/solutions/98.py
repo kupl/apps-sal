@@ -4,10 +4,8 @@ class Solution:
             return max(position) - min(position)
         position.sort()
         l, r = 1, (max(position) - min(position) + 1) // (m - 1)
-        # print(l,r)
 
         def helper(mindist):
-            # print(mindist)
             cnt = m - 1
             cur = min(position)
             for i in position[1:]:
@@ -25,7 +23,4 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid
-        # if helper(l):
-            # return l
-        # else:
         return l - 1

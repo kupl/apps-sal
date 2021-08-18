@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 cur = int(input()) + 1
 steps = 1

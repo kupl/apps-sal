@@ -6,10 +6,9 @@ class Solution:
 
         ans, n = 0, len(p)
         seen = set()
-        vertices = [(0, (0, 0))]  # (distance, (last_vertice, cur_vertice))
+        vertices = [(0, (0, 0))]
 
         while len(seen) < n:
-            # print(vertices, seen)
             d, (u, v) = heapq.heappop(vertices)
             if u not in seen and v in seen:
                 print(u, v)

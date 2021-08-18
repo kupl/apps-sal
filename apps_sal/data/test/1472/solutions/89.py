@@ -36,7 +36,6 @@ def search(start, N, X, Y):
 
 def main():
     N, X, Y = [int(n) for n in input().split(" ")]
-    #N, X, Y = 10, 3, 8
 
     X = X - 1
     Y = Y - 1

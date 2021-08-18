@@ -1,6 +1,6 @@
 __author__ = 'Alex'
 s = input().strip()
-cur = '#'
+cur = '
 cnt = 0
 pd = False
 ans = []
@@ -13,7 +13,7 @@ for x in s:
         cnt -= 1
     else:
         ans.append(x)
-cur = '#'
+cur = '
 cnt = 0
 s = ans
 ans = []

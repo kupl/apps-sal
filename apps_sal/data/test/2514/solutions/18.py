@@ -15,7 +15,7 @@ MOD = 1000000007
 n = int(input())
 A = [int(i) for i in input().split()]
 q = int(input())
-B = [[int(i) for i in input().split()]for j in range(q)]    # nは行数
+B = [[int(i) for i in input().split()]for j in range(q)]
 
 tmp = 0
 res = [sum(A)]

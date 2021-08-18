@@ -30,7 +30,6 @@ else:
         if not(S[right - 1] == '0' and (K == 0)):
             if maxlen < right - left:
                 maxlen = right - left
-        # next
         while left < N and S[left] == S[left + 1]:
             left += 1
         if S[left] == '0':

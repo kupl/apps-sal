@@ -17,15 +17,12 @@ ans3s = [1, 1, 1]
 for i in range(N + 10):
     ans = ans3s[-2] + ans3s[-1]
     ans3s.append(ans % MOD)
-# print('# ans3s:', ans3s, file=sys.stderr)
 ans4s = [1, 1, 1]
 for i in range(N + 10):
     ans = ans4s[-1] * 2
     ans4s.append(ans % MOD)
-# print('# ans4s:', ans4s, file=sys.stderr)
 
 ptn = ptns[C]
-# print('# C:', C, '/ ptn:', ptn, file=sys.stderr)
 if ptn == 1:
     ans = 1
 elif ptn == 3:

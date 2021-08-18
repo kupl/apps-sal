@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 import numpy as np
@@ -17,7 +16,7 @@ def solve(X: int):
 
 
 def main():
-    X = int(input())  # type: int
+    X = int(input())
     answer = solve(X)
     print(answer)
 

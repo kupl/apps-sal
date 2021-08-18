@@ -22,9 +22,7 @@ def main():
         x3 = W - x1 - x2
         ans = min(ans, max(x1 * H, x2 * H, x3 * H) - min(x1 * H, x2 * H, x3 * H))
 
-    # 縦にスライス + 残りに横にスライス
     x1_cand = [floor(W / 3), ceil(W / 3)]
-    # x1_cand = [i for i in range(1, W)]
     y1 = H
     for x1 in x1_cand:
         x2 = W - x1
@@ -33,9 +31,7 @@ def main():
         y3 = H - y2
         ans = min(ans, max((x1 * y1), (x2 * y2), (x3 * y3)) - min((x1 * y1), (x2 * y2), (x3 * y3)))
 
-    # 横にスライス + 残りに縦にスライス
     y1_cand = [floor(H / 3), ceil(H / 3)]
-    # y1_cand = [i for i in range(1, H)]
     x1 = W
     for y1 in y1_cand:
         y2 = H - y1

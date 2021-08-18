@@ -6,8 +6,8 @@ ans = 0
 d = deque([])
 for i in range(H):
     for j in range(W):
-        if S[i][j] == '#':
-            continue
+        if S[i][j] == '
+        continue
         d.append((i, j, 0))
         visited = [[-1] * W for _ in range(H)]
         visited[i][j] = 0

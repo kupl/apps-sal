@@ -1,12 +1,9 @@
-# coding: utf-8
-# Your code here!
 import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
 
 n, m = list(map(int, readline().split()))
 
-# 補グラフ
 g = [[1] * n for _ in range(n)]
 for i in range(n):
     g[i][i] = 0
@@ -40,12 +37,10 @@ for i in range(n):
                         break
 
         dp = (dp << a) | (dp << b)
-        # print(a,b)
         if not ok:
             dp = 0
             break
 
-# print(bin(dp)[2:][::-1])
 
 ans = -1
 for i in range(n // 2 + 1):

@@ -6,18 +6,14 @@ def main():
     loop, loopstart, loopout, cur = 0, -1, False, 0
     i = 0
     while i < k:
-        #print("{}->{}".format(cur+1, a[cur]+1))
         cur = a[cur]
         if not loopout and visit[cur]:
-            #print("OnLoop", k)
             if loopstart == cur:
                 k = (k - sum(visit)) % loop
                 loopout = True
-                #print("OutLoop", k)
                 i = 0
                 continue
             elif loopstart == -1:
-                #print("loop start with", cur+1)
                 loopstart = cur
             loop += 1
         else:

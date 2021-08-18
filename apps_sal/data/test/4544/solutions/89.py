@@ -1,11 +1,9 @@
-# 10 C - Together
 N = int(input())
 a = list(map(int, input().split()))
 a = sorted(a, reverse=True)
 a_set = set(a)
 
-# aの各要素の個数をカウント
-a_cnt = [0] * (max(a) + 2)  # 0からmax(a)+1まで
+a_cnt = [0] * (max(a) + 2)
 for i in a:
     a_cnt[i] += 1
 

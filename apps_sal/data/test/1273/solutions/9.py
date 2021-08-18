@@ -1,4 +1,3 @@
-# create date: 2020-07-05 13:34
 
 from collections import deque
 import sys

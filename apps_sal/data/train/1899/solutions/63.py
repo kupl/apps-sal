@@ -1,7 +1,5 @@
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
-        # find first island
-        # find all boundary cells for first island
         m = len(A)
         n = len(A[0])
         visited = [[False] * n for _ in range(m)]
@@ -13,14 +11,11 @@ class Solution:
                     if A[r][c] == 1:
                         return (r, c)
 
-        # starts from all boundary cells for first island
         queue = deque()
 
         def dfs(r, c):
             if visited[r][c]:
                 return
-            # find all boundary cells
-            # mark first island as visited
             visited[r][c] = True
             if isBoundary(r, c):
                 queue.append((r, c, -1))
@@ -44,7 +39,6 @@ class Solution:
         dfs(sr, sc)
 
         visited2 = [[False] * n for _ in range(m)]
-        # do BFS starting from boundary cells
         while queue:
             r, c, d = queue.popleft()
             visited2[r][c] = True
@@ -58,7 +52,5 @@ class Solution:
                 if not visited2[nr][nc]:
                     visited2[nr][nc] = True
                     queue.append((nr, nc, d + 1))
-                    # if A[nr][nc] == 1:
-                    #     return d+1
 
         return 1

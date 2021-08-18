@@ -35,7 +35,6 @@ def reduce(ind_filled, d_values, ll):
             index += 1
 
         elif ind_filled[index] // 2 == ind_filled[index + 1] // 2:
-            # merge
             anext = ind_filled[index + 1]
             d_res[ai // 2] = (min(d_values[ai][0] + d_values[anext][0],
                                   (d_values[ai][1] + d_values[anext][1]) * B * 2 * ll),

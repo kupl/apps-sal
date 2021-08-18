@@ -2,7 +2,6 @@ class Solution:
     def minOperations(self, nums: List[int]) -> int:
         if sum(nums) == 0:
             return 0
-        # print(nums)
         s = 0
         for i in range(len(nums)):
             if nums[i] % 2 == 1:

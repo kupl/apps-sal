@@ -23,12 +23,11 @@ class Solution:
 
         self.a = sorted(A)
         self.square = set()
-        i = 0  # not 1
+        i = 0
         while i * i <= self.a[-1] * 2:
             self.square.add(i * i)
             i += 1
 
-        # print(self.square)
         self.ans = 0
         self.n = len(self.a)
         self.usable = [True] * self.n

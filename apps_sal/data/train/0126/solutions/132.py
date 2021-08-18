@@ -1,7 +1,7 @@
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
 
-        counts = {}  # string -> number
+        counts = {}
 
         for current_size in range(minSize, maxSize + 1):
             window = {}
@@ -17,14 +17,11 @@ class Solution:
                 if i == len(s):
                     break
 
-                # add current
                 c = s[i]
                 window[c] = window.get(c, 0) + 1
-                # remove tail
                 c = s[start]
                 window[c] -= 1
                 if window[c] == 0:
                     del window[c]
 
-        # print(counts)
         return max(counts.values()) if len(counts) else 0

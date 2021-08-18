@@ -8,8 +8,6 @@ def mForMaxSeq(arr, n):
 
     keys = sorted(eim.keys())
 
-    # print(eim, keys)
-
     connected = False
     count = 0
     pI = -1

@@ -1,4 +1,3 @@
-# your code goes here
 mod = 1000003
 fact = [0] * mod
 fact[0] = 1

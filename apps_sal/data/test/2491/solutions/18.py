@@ -1,4 +1,4 @@
-def bellman_ford():  # ﾌﾍｲﾛ検出
+def bellman_ford():
     n, m = list(map(int, input().split()))
     g = [[] for _ in range(n)]
     for i in range(m):
@@ -11,7 +11,7 @@ def bellman_ford():  # ﾌﾍｲﾛ検出
         for v in range(n):
             for k in range(len(g[v])):
                 edge = g[v][k]
-                if(dist[v] != inf and dist[v] + edge[1] < dist[edge[0]]):  # dist[v]!=10000:未到達だったら無視するので
+                if(dist[v] != inf and dist[v] + edge[1] < dist[edge[0]]):
                     dist[edge[0]] = dist[v] + edge[1]
 
     ans = dist[n - 1]

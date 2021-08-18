@@ -34,7 +34,6 @@ def main():
             cnt += 1
         if n == 0:
             break
-        # break
     l.reverse()
     print(("".join(map(str, l))))
 

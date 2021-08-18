@@ -1,4 +1,3 @@
-# Description of the problem can be found at http://codeforces.com/problemset/problem/285/B
 
 n, s, t = map(int, input().split())
 l_m = list(map(int, input().split()))

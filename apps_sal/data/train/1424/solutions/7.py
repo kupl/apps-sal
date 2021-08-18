@@ -1,5 +1,4 @@
 
-# def solve():
 
 '''while test:
     solve()

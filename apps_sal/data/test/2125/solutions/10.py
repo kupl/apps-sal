@@ -34,7 +34,6 @@ for i in range(1, n + 1):
         minx = 2 * m
         for l in range(0, x * 3):
             minx = min(minx, rows[i - l][j])
-        #print(i, j, x, y, minx)
         ans += (minx + 1)
 
 print(ans)

@@ -20,7 +20,6 @@ class Solution:
             for j in range(i + 1, len(nums1)):
                 key = nums1[i] * nums1[j]
                 newlist2[key].add((i, j))
-        # print(newlist)
 
         for n in nums1:
             if n**2 in newlist1:

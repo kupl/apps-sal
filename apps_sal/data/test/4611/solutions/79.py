@@ -11,7 +11,6 @@ for i in range(N):
         ans = 'No'
         break
     else:
-        # dt >= dist
         if (dt - dist) % 2 != 0:
             ans = 'No'
             break

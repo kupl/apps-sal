@@ -2,18 +2,15 @@ import itertools
 
 
 def count_order():
-    # 入力
     N = int(input())
     P = list(map(int, input().split()))
     Q = list(map(int, input().split()))
-    # 処理
     permutations_list = itertools.permutations(x for x in range(1, N + 1))
     count = 0
     for one_case in permutations_list:
         count += 1
         for i in range(len(one_case)):
             if one_case[i] == P[i]:
-                # a = count
                 is_ok_P = True
             else:
                 is_ok_P = False

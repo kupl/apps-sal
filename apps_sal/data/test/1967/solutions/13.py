@@ -7,13 +7,11 @@ for i in range(b):
     for j in range(a):
         matrix_in[i][j] = line[j]
 
-# Right rotate and flip
 matrix_rotated = [[0 for i in range(b)] for j in range(a)]
 for i in range(a):
     for j in range(b):
         matrix_rotated[i][j] = matrix_in[j][i]
 
-# Print
 for i in range(a):
     toprint = ""
     for j in range(b):

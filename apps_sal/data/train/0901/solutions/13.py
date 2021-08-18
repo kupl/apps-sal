@@ -10,6 +10,5 @@ while t > 0:
     ind = 0
     while arr[ind] > s:
         ind += 1
-    #temp = temp[ind:] + temp[:ind]
     ans = [str(i + 1) for i in temp]
     print(' '.join(ans))

@@ -4,7 +4,6 @@ for i in range(t):
     dum = 0
     [n, start] = input().split(' ')
     n = int(n)
-    # print(n,starter)
     for k in range(n):
         pile = input()
         if pile[0] == '0':

@@ -1,7 +1,5 @@
 mod = 1000000007
 
-# gcd(a, m) = 1
-
 
 def inv_mod(a, m):
     a %= m

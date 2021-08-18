@@ -20,16 +20,13 @@ for i in plus:
 
     if i[0] <= r:
         r += i[1]
-        # print(r)
     else:
         flag = False
         break
-# print("GANTI")
 if flag:
     for i in minn:
         if i[0] <= r:
             r += i[1]
-            # print(r)
         else:
             flag = False
             break

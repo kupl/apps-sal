@@ -4,7 +4,6 @@ for n in range(2, 9000):
     A000166.append((n - 1) * (A000166[n - 1] + A000166[n - 2]))
 
 
-# this is just A000166(n-k)*binomial(n,k)
 def fixed_points_perms(n, k):
     if n < k:
         return 0

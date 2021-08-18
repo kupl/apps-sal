@@ -9,10 +9,6 @@ xis, yis = [], []
 
 while True:
 
-    # print("Iteration")
-    #print(ix, x[ix:])
-    #print(iy, y[iy:])
-
     if sumx == sumy:
         if sumx != 0:
             xis.append(ix - 1)
@@ -32,14 +28,11 @@ while True:
         sumx += x[ix]
         ix += 1
 
-    #print(sumx, sumy, ix, iy)
-
     if ix == len(x) and iy == len(y):
         break
 
 if len(xis) == len(yis):
     print(len(xis) + 1)
-    #print(xis, "\n", yis)
 
 else:
     print("error", xis, yis)

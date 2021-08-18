@@ -35,14 +35,6 @@ def coefficient(arr):
 class Solution:
     def maxSatisfaction(self, unsortedSatisfaction: List[int]) -> int:
         satisfaction = mergeSort(unsortedSatisfaction)
-        # negative,nonnegative = splitAtZero(satisfaction)
-        # res = nonnegative[:]
-        # for dish in reversed(negative):
-        #     attempt = [dish] + res[:]
-        #     if coefficient(attempt) > coefficient(res):
-        #         res = attempt[:]
-        #     else:
-        #         return coefficient(res)
         runningSum = 0
         for i in reversed(list(range(len(satisfaction)))):
             runningSum += satisfaction[i]

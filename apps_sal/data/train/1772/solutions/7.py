@@ -1,5 +1,4 @@
 from itertools import cycle
-# cycle => cycle(abc) = abcabcabc
 
 
 class VigenereCipher(object):

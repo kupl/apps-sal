@@ -1,5 +1,4 @@
 class Solution:
-    # DP bottom-up working from end to start
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         arr, length = [], len(startTime)
         for i in range(length):

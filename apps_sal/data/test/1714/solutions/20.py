@@ -1,6 +1,5 @@
 
 n, k = input().split()
-# ksnf;s
 n = int(n)
 k = int(k)
 l = []

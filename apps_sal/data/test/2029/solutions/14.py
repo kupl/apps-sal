@@ -20,7 +20,6 @@ def what(obj):
         pp(obj, sys.stderr)
 
 
-#############################################
 n, s = map(int, input().split())
 
 d = {}
@@ -43,7 +42,6 @@ for e in d:
 
 print(2 * s / cnt)
 
-##############################################
 if __flag:
     stdout.close()
     stdin.close()

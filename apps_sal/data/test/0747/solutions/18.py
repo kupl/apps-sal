@@ -70,7 +70,6 @@ def main(h, candies, last_type):
 
 def __starting_point():
     (n, h) = rints()
-    # type, height, mass
     candies = [Candy(rints()) for i in range(n)]
     prnt(candies)
 

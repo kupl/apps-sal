@@ -27,13 +27,10 @@ def calc(i, j, m):
     if SCORE[i * (m + 1) + j] != 0:
         return SCORE[i * (m + 1) + j]
 
-    # print(i,j)
     if j == i + 1 or i == j:
         return 1
 
     MININD = MININDLIST[i][j - 1]
-
-    # print(MININD)
 
     ANS1 = ANS2 = 0
 

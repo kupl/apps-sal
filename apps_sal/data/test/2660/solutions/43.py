@@ -10,7 +10,6 @@ b = b1
 
 min_arg = -hq_left[0]
 min_diff = 0
-# min_value=b
 for _ in range(Q - 1):
     query = list(map(int, input().split()))
     if len(query) == 3:

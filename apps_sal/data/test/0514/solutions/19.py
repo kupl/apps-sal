@@ -45,11 +45,6 @@ def problem6():
 
 
 def __starting_point():
-    # problem6()
-    # problem5()
-    # problem4()
-    # problem3()
-    # problem2()
     problem1()
 
 

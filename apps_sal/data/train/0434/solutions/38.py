@@ -1,4 +1,3 @@
-# 1493. Longest Subarray of 1's After Deleting One Element
 
 def get_longest(nums):
     arr = [1 - x for x in nums]

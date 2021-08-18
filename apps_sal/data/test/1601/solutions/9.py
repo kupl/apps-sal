@@ -26,7 +26,6 @@ while i < len(points):
     else:
         rem.append(points[i])
         i += 1
-# print(rem)
 points = list(rem)
 rem = []
 i = 0

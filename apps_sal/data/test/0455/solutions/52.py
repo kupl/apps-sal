@@ -9,11 +9,8 @@ command = np.array([''] * N, dtype=object)
 
 
 def solve(k, X, Y, arms, command):
-    # |X|+|Y| <= 2^{k+1} のときに、2^kを使って
-    # |X|+|Y| <= 2^kに書き直す
     if k == -1:
         return solve_final(X, Y, arms, command)
-    # 絶対値が大きい方を操作
     bl_X = (np.abs(X) > np.abs(Y))
     bl_Y = ~bl_X
     negative_X = (X < 0)
@@ -43,7 +40,6 @@ def solve_final(X, Y, arms, command):
         return arms, command
     elif not bl1:
         return None, None
-    # |X| + |Y| = 1が保証されている
     arms.append(1)
     L = (X == -1)
     R = (X == 1)

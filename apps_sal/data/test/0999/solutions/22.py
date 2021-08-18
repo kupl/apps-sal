@@ -1,4 +1,4 @@
-"""Codeforces Round #404 (Div. 2)
+"""Codeforces Round 
 
 B. Anton and Classes
 """

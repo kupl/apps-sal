@@ -31,4 +31,3 @@ def dp(i, r):
 
 
 print(dp(0, R) + ans)
-# JSR

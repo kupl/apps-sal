@@ -1,13 +1,9 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
-# 双方向グラフで幅優先探索
 
 from collections import deque
 
 n, u, v = map(int, input().split())
 g = [[] for _ in range(n)]
-# 隣接リストの作成
 for i in range(n - 1):
     a, b = map(int, input().split())
     a, b = a - 1, b - 1
@@ -15,7 +11,6 @@ for i in range(n - 1):
     g[b].append(a)
 
 
-# 幅優先探索
 def bfs(x):
     q = deque()
     seen = [False] * n
@@ -31,9 +26,7 @@ def bfs(x):
         for i in g[cur]:
             if seen[i] == False:
                 seen[i] = True
-                # 階層
                 level[i] = lvl + 1
-                # 親
                 parent[i] = cur
                 q.append(i)
     return level

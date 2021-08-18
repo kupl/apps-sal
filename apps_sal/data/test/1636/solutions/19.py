@@ -32,10 +32,8 @@ wi = [int(i) for i in w]
 arr = [1 for i in range(n)]
 lsol = []
 done = 1
-# print(lofpoints)
 for i in range(n):
     x = binsearch(lofpoints, 0, n - 1, wi[i], arr)
-    # print(x)
     if(x == "None"):
         done = 0
         break
@@ -47,7 +45,6 @@ for i in range(n):
         break
     else:
         lsol.append((lofpoints[x][1], lofpoints[x][2]))
-# print(lsol)
 if(done == 1):
     hashi = dict()
     for i in range(n):

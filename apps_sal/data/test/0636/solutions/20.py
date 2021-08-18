@@ -1,5 +1,4 @@
 instr, days = (int(x) for x in input().split())
-# print (instr, days)
 arr = [(int(y), x + 1) for x, y in enumerate(input().split())]
 arr.sort()
 if arr[0][0] > days:

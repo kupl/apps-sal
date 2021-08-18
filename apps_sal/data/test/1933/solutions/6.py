@@ -14,7 +14,6 @@ def best(col):
             for r2 in range(row + 1, min(row + k, n)):
                 if matrix[r2][col] == 1:
                     results[row] += 1
-    # print(results)
     rows = list(sorted(results.keys()))
     best_result = None
     for row in rows:
@@ -22,7 +21,6 @@ def best(col):
             best_result = {'res': results[row], 'idx': row}
     if best_result is None:
         return 0, 0
-    # calcualte replacements
     replacements = 0
     idx = best_result['idx']
     for row in rows:
@@ -34,8 +32,6 @@ def best(col):
 result = 0
 replacements = 0
 for col in range(m):
-    # Go down on col
-    # print(f'On col {# col}')
     res, repl = best(col)
     result += res
     replacements += repl

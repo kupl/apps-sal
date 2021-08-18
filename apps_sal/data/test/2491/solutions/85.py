@@ -1,4 +1,3 @@
-# longest version bellman ford
 N, M = map(int, input().split())
 edges = []
 for _ in range(M):
@@ -11,7 +10,6 @@ dist = [-inf for i in range(N)]
 dist[0] = 0
 is_cycle = False
 
-# 辺の緩和
 for i in range(N):
     for edge in edges:
         new_dist = dist[edge[0]] + edge[2]

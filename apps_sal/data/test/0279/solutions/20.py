@@ -7,7 +7,6 @@ for l, v in zip((l1, l2), (v1, v2)):
         l.append(v + d * i)
 
 l2 = list(reversed(l2))
-#print(l1, l2)
 
 split = 0
 for i in range(t):
@@ -16,5 +15,4 @@ for i in range(t):
         break
 
 l = l1[:split] + l2[split:]
-# print(l)
 print(sum(l))

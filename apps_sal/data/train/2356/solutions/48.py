@@ -25,14 +25,11 @@ for i in range(1, N + 1):
 for i in range(1, N + 1):
     for j in range(0, i):
         dp[j][i] = 0
-# pprint(dp)
 for i in range(1, N + 1):
     for j in range(N, 0, -1):
-        # print(i,j)
         if dp[i][j] == -1:
             if 2 * j <= i:
                 dp[i][j] = (dp[i - 1][j - 1] + dp[i][2 * j]) % p
             else:
                 dp[i][j] = dp[i - 1][j - 1] % p
-        # pprint(dp)
 print((dp[N][K]))

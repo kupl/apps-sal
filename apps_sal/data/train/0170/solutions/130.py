@@ -1,17 +1,14 @@
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
-        # [start_f, end_f] is the first sorting part
         start_f, end_f = 0, 0
         while end_f + 1 < len(arr):
             if arr[end_f + 1] >= arr[end_f]:
                 end_f += 1
             else:
                 break
-        # the entire array is sorted
         if end_f == len(arr) - 1:
             return 0
         start_b, end_b = len(arr) - 1, len(arr) - 1
-        # the last part is smaller than first part
         if arr[-1] < arr[end_f]:
             start_b = len(arr)
         else:

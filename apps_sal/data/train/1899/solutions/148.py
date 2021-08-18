@@ -10,7 +10,7 @@ class Solution:
             return poss
 
         def expand(i, j):
-            A[i][j] = '#'
+            A[i][j] = '
             poss = get_poss(i, j)
             for x, y in poss:
                 expand(x, y)
@@ -24,7 +24,6 @@ class Solution:
                         found_first = True
                         expand(i, j)
                     else:
-                        # if get_poss(i, j, 0):
                         boundaries.append((i, j))
 
         def bfs(boundaries):
@@ -34,14 +33,14 @@ class Solution:
             while roots:
                 next_level = []
                 for x, y in roots:
-                    poss1 = get_poss(x, y, '#')
+                    poss1 = get_poss(x, y, '
                     if poss1:
                         return depth
-                    poss = get_poss(x, y, 0)
+                    poss=get_poss(x, y, 0)
                     for pos in poss:
                         if pos not in recorder:
                             recorder.add(pos)
                             next_level.append(pos)
                 depth += 1
-                roots = next_level
+                roots=next_level
         return bfs(boundaries)

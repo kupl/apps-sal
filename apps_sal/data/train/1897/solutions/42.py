@@ -6,7 +6,6 @@ class Solution:
             prefix.append(prev ^ a)
             prev = prev ^ a
 
-        # print(prefix)
         ans = []
         for left, right in queries:
             if left == 0:

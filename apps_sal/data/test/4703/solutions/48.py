@@ -8,7 +8,6 @@ for i in range(2**(len_S - 1)):
     for j in range(len_S - 1):
         i, mod = divmod(i, 2)
         if mod == 1:
-            # print(left,j)
             ans += int(S[left:j + 1])
             left = j + 1
     ans += int(S[left:len_S])

@@ -17,7 +17,6 @@ class Solution:
             if newProfit > maxProfit:
                 maxProfit = newProfit
                 maxMid = i
-        # print(profit)
         if left == 0:
             return maxMid
         elif left < 4:

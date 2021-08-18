@@ -10,7 +10,6 @@ class Solution:
         while q:
             i, j, step, available, path = q.popleft()
             if i == m - 1 and j == n - 1:
-                # print(path)
                 return step
             for ni, nj in [[i + 1, j], [i - 1, j], [i, j + 1], [i, j - 1]]:
                 if 0 <= ni < m and 0 <= nj < n:

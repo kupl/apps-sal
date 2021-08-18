@@ -17,7 +17,6 @@ class Solution:
                 if prev not in path and do(prev, path | {prev}):
                     return True
             return False
-        # print(reach)
         for p, n in enumerate(jumps):
             if n == 0 and do(p):
                 return True

@@ -3,12 +3,10 @@
 10000 7
 10000 8 7 6 5 3 2
 '''
-# its a simulation
 from sys import stdin
 from bisect import bisect_left
 
 
-# main starts
 q = int(stdin.readline().strip())
 for _ in range(q):
     h, n = list(map(int, stdin.readline().split()))
@@ -18,7 +16,6 @@ for _ in range(q):
     pos = h
     count = 0
     while pos > 0:
-        # print('pos', pos, count)
         if pos - 1 in moved:
             if pos - 2 in moved:
                 pos -= 2

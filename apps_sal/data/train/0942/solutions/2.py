@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n, l = map(int, input().split())
     a_l = list(map(int, input().split()))
@@ -28,6 +27,4 @@ for _ in range(int(input())):
                         break
                     dp[i][il] = max(dp[i][il], min(dif, dp[j][il - 1]))
             ans = max(ans, dp[i][il])
-    #     print(dp)
-    # print(dic)
     print(ans)

@@ -9,10 +9,6 @@ class Solution:
         max_a = A[-1][1] if A else None
         max_b = B[-1][1] if B else None
 
-        # key: (Int, Int) - (first line interval id, second line interval id)
-        # value: List[Int] - list of intersections
-        #intersections = {}
-
         self.k1 = None
         self.k2 = None
         self.res2 = []

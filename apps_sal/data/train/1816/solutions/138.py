@@ -1,6 +1,5 @@
 def time2num(t):
     h, m = t.split(':')
-    # print(h,m)
     return [int(h), int(m)]
 
 
@@ -34,8 +33,6 @@ class Solution:
         l2 = list(map(time2num, list_time))
         print(l2)
         l2 = sorted(l2)
-        # print(l2)
-        # print(list_time)
         n = len(list_time)
         for i in range(n - 2):
             if check_1hour(l2[i], l2[i + 2]):

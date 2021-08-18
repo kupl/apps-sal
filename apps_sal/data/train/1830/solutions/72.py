@@ -1,10 +1,10 @@
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
 
-        availables = []  # available days, will be sorted ascendingly
+        availables = []
         n = len(rains)
         ans = [-1] * n
-        prev_rain = dict()  # prev_rain[lake] tells us when it last rained on lake, assuming lake is full.
+        prev_rain = dict()
 
         for day in range(n):
             if rains[day] == 0:
@@ -14,9 +14,6 @@ class Solution:
                 if lake not in prev_rain:
                     prev_rain[lake] = day
                 else:
-                    # we must find the earliest available day to empty this lake
-                    # after prev_rain[lake] then remove it from availables and
-                    # remove lake from prev_rain, and indicate this in the answer
                     if len(availables) == 0 or availables[-1] < prev_rain[lake]:
                         return []
                     low = 0

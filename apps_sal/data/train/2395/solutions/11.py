@@ -1,5 +1,4 @@
 def go():
-    # n,k = map(int,input().split())
 
     n = int(input())
     x = input()
@@ -28,12 +27,9 @@ def go():
     return ''.join(a) + '\n' + ''.join(b)
 
 
-# x,s = map(int,input().split())
 t = int(input())
-# t=1
 ans = []
 for _ in range(t):
-    # go()
     ans.append(str(go()))
 
 print('\n'.join(ans))

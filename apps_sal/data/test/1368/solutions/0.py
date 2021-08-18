@@ -31,7 +31,6 @@ if cntl == A:
         t //= m + 1
     print(F)
 else:
-    # calc comb(cntl + cntr, cntl)
     t = 1
     for m in range(cntl):
         t *= c - m

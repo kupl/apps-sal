@@ -14,7 +14,6 @@ for i in range(n):
     elif a == "-":
         if data[b] == 0:
             data[b] = -1
-            #peoplein-= 1
             capacity += 1
         elif data[b] == 1:
             data[b] = -1

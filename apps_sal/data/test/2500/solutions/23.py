@@ -1,4 +1,3 @@
-# solution
 
 data = int(input())
 

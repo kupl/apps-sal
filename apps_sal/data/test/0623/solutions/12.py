@@ -13,6 +13,5 @@ while a1 * a2 != 0:
     else:
         a1 += 1
         a2 -= 2
-    #print(a1, a2, ans)
     ans += 1
 print(ans)

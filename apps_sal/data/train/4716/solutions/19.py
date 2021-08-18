@@ -1,5 +1,5 @@
 def distribution_of(golds):
-    out, n, g = [0, 0], 0, golds[::]  # never directly edit supplied lists
+    out, n, g = [0, 0], 0, golds[::]
     for i in range(len(golds)):
         if g[n] < g[-1]:
             x = g.pop()

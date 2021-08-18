@@ -1,11 +1,5 @@
 def number(bus_stops):
-    # bus_stops[0][0]
-    # bus_stops[1][0]
-    # bus_stops[2][0]
 
-    # bus_stops[0][1]
-    # bus_stops[1][1]
-    # bus_stops[2][1]
     came = 0
     left = 0
     for counter, _ in enumerate(bus_stops, 0):

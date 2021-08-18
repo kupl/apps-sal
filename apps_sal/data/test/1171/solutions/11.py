@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -14,14 +13,13 @@ def main():
     N, K = list(map(int, input().split()))
     V = list(map(int, input().split()))
 
-    # 方針: 操作Aの回数・操作Bの回数で全探索
     ans = 0
     R = min(N, K)
 
     for i in range(R + 1):
         for j in range(R + 1 - i):
             tmp = 0
-            q = []  # 価値が負の宝石をいれる(C)
+            q = []
 
             for k in range(i):
                 tmp += V[k]

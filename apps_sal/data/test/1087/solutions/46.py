@@ -26,14 +26,11 @@ def solve(N, K, A):
             x >>= 1
     k = k[::-1]
     b = b[::-1]
-    # dp[i][1]: 上位iビットがKと等しいときの最大値
-    # dp[i][0]: 上位iビットがKより小さいときの最大値
     dp = [[-1, -1] for i in range(L + 1)]
     dp[0][1] = 0
     for i in range(L):
         if dp[i][0] >= 0:
             dp[i + 1][0] = (dp[i][0] << 1) + max(b[i], N - b[i])
-        # if dp[i][1] >= 0:
         if k[i] == 1:
             dp[i + 1][0] = max(dp[i + 1][0], (dp[i][1] << 1) + b[i])
             dp[i + 1][1] = (dp[i][1] << 1) + (N - b[i])

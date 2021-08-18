@@ -14,7 +14,6 @@ class Solution:
             min_q.append(en)
             max_q.append(en)
 
-            #print (st , en)
             while nums[max_q[0]] - nums[min_q[0]] > limit:
                 st += 1
                 if st > min_q[0]:
@@ -24,6 +23,5 @@ class Solution:
 
             ans = max(ans, en - st + 1)
             en += 1
-            # print(ans)
 
         return ans

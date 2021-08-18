@@ -24,7 +24,6 @@ def solve(printing):
                 dupeindexindv[nums[i]][1].append(i)
             else:
                 dupeindexindv[nums[i]] = [0, [i], False]
-                # left location, dupe indexs, if already located original
 
     for num in dupeindexindv:
         dupeindexindv[num][0] = len(dupeindexindv[num][1])
@@ -37,29 +36,23 @@ def solve(printing):
 
     misslen = len(missing)
     misindex = 0
-    #answer = 0
     for index in dupeindex:
 
         if misslen <= misindex:
             break
 
         elif dupeindexindv[nums[index]][0] == 1 and not dupeindexindv[nums[index]][2]:
-            # one spot left but original not located yet.
-            # locate original.
             dupeindexindv[nums[index]][0] -= 1
             dupeindexindv[nums[index]][2] = True
 
         elif dupeindexindv[nums[index]][0] > 0:
 
             if dupeindexindv[nums[index]][2] or missing[misindex] < nums[index]:
-                # num is smaller or original is already located.
-                # locate missing number.
                 dupeindexindv[nums[index]][0] -= 1
                 nums[index] = missing[misindex]
                 misindex += 1
-                #answer += 1
 
-            else:  # locate original
+            else:
                 dupeindexindv[nums[index]][0] -= 1
                 dupeindexindv[nums[index]][2] = True
 

@@ -1,4 +1,3 @@
-# cook your dish here
 d = ["saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday"]
 t = int(input())
 for i in range(t):

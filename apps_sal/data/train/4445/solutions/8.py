@@ -1,4 +1,3 @@
-# https://www.codewars.com/kata/5c765a4f29e50e391e1414d4/train/python
 def is_haiku(text):
     is_haiku = True
     vowel_list = ["a", "e", "i", "o", "u", "y"]

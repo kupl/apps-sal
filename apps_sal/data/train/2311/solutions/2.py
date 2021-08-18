@@ -2,7 +2,7 @@ from collections import defaultdict
 import sys
 
 
-def f(n):  # O(digits)
+def f(n):
     out = 1
     while(n > 0):
         digit = n % 10
@@ -12,7 +12,7 @@ def f(n):  # O(digits)
     return out
 
 
-memorization = defaultdict(int)  # For much faster calculation g(n)
+memorization = defaultdict(int)
 
 
 def g(n):
@@ -41,22 +41,20 @@ def s(L, l, r, k):
 
 ans = {i: [1000001] for i in range(1, 10)}
 
-for i in range(1, 1000001):  # O(n) because 9*9*9*9*9*9 = 531441 -> Maxnimum each number between [1,531441] will calculated only once
-    g_i = g(i)             # due to memorization
+for i in range(1, 1000001):
+    g_i = g(i)
     if g_i != 0:
         ans[g_i].append(i)
-for i in ans:  # O( nlog(n) )
+for i in ans:
     ans[i].sort()
 
 input = sys.stdin.readline
 n = int(input())
-for i in range(n):  # O( Qlog(n) )
-    l, r, k = [int(i) for i in input().split()]  # O (logn) for each Q
+for i in range(n):
+    l, r, k = [int(i) for i in input().split()]
     l_idx, r_idx = s(ans[k], 0, len(ans[k]) - 1, l), s(ans[k], 0, len(ans[k]) - 1, r)
-    # FIX l_idx to Upper_bound
     if ans[k][l_idx] != l and ans[k][l_idx] < l and ans[k][l_idx + 1] > l:
         l_idx += 1
-    # FIX r_idx to Lower_bound
     if ans[k][r_idx] != r and not (ans[k][r_idx] < r and ans[k][r_idx + 1] > r):
         r_idx -= 1
     print(r_idx - l_idx + 1)

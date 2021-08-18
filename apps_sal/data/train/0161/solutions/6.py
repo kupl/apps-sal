@@ -10,11 +10,11 @@ class Solution:
         s = []
         for a in arr:
             s.append(a)
-            while len(s) >= 3 and s[-1] == '#' and s[-2] == '#' and s[-3] != '#':
+            while len(s) >= 3 and s[-1] == '
                 s.pop()
                 s.pop()
                 s.pop()
-                s.append('#')
-        if s == ['#']:
+                s.append('
+        if s == ['
             return True
         return False

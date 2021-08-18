@@ -36,7 +36,6 @@ class Solution:
         q.append([bx, by, sx, sy, 0])
 
         while q:
-            # print(q)
             bx, by, sx, sy, step = q.popleft()
             for dx, dy in dirs:
                 nbx, nby = bx + dx, by + dy

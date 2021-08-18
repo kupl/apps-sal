@@ -1,7 +1,6 @@
 class StreamChecker:
 
     def __init__(self, words: List[str]):
-        # time O(h)
         self.stream = deque([])
         self.trie = {}
 
@@ -14,7 +13,6 @@ class StreamChecker:
             node['$'] = word
 
     def query(self, letter: str) -> bool:
-        # time O(h)
         self.stream.appendleft(letter)
         node = self.trie
         for char in self.stream:
@@ -25,8 +23,3 @@ class StreamChecker:
             node = node[char]
 
         return '$' in node
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

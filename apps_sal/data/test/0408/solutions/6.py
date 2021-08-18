@@ -23,11 +23,5 @@ def brute(n, m):
                 best = max(best, a + b)
     return best
 
-# for n in range(10):
-#     for m in range(10):
-#         if smart(n, m) != brute(n, m):
-#             print(smart(n,m), brute(n,m))
-
 
 print(smart(n, m))
-# print(brute(n, m))

@@ -3,9 +3,9 @@ class Solution:
         knight_mp = {1: {8, 6},
                      2: {9, 7},
                      3: {4, 8},
-                     4: {3, 9, 0},  # 0 also
+                     4: {3, 9, 0},
                      5: {},
-                     6: {7, 1, 0},  # 0 also
+                     6: {7, 1, 0},
                      7: {2, 6},
                      8: {3, 1},
                      9: {2, 4},
@@ -23,19 +23,13 @@ class Solution:
         return res
 
     def knightDialer(self, n: int) -> int:
-        #         res = 0
-        #         mod = 10**9+7
-        #         memo = {}
-        #         for i in range(0, 10):
-        #             res+=self.knight(n, i, memo)%mod
-        #         return res%mod
 
         knight_mp = {1: {8, 6},
                      2: {9, 7},
                      3: {4, 8},
-                     4: {3, 9, 0},  # 0 also
+                     4: {3, 9, 0},
                      5: {},
-                     6: {7, 1, 0},  # 0 also
+                     6: {7, 1, 0},
                      7: {2, 6},
                      8: {3, 1},
                      9: {2, 4},

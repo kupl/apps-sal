@@ -1,4 +1,3 @@
-# cook your dish here
 t = input()
 s = str(t)
 ans = 'Inclusive'

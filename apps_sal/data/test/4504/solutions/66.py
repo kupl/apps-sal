@@ -10,7 +10,6 @@ for i in range(start, 0, -2):
     a = S[:half]
     b = S[half:half * 2]
     if a == b:
-        # print(a,b)
         ans = len(a) * 2
         break
 

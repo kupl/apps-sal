@@ -1,4 +1,3 @@
-# len(set) 愚直
 n = int(input())
 s = list(input())
 ans = 0

@@ -6,7 +6,6 @@ for i in range(0, T):
     for j in range(0, len(s)):
         L.append(j)
     arr = sorted(zip(s, L))
-    # print(arr)
     ptr = -1
     for j in range(0, len(arr)):
         if(arr[j][1] == 0):

@@ -6,7 +6,6 @@ if AB:
     AB = not AB
     BA = not BA
     AA, BB = not BB, not AA
-# AB == False
 
 if N <= 3:
     ans = 1

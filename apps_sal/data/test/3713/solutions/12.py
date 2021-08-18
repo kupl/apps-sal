@@ -1,4 +1,3 @@
-#! /bin/python
 n = int(input())
 tab = str(input())
 

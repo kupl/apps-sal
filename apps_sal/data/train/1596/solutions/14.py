@@ -1,4 +1,3 @@
-# cook your dish here
 def fuck_off(x, y):
     X = bin(x + 1)[2:]
     Y = bin(y + 1)[2:]

@@ -1,24 +1,5 @@
 class Solution:
     def sumOddLengthSubarrays(self, arr: List[int]) -> int:
-        #         subArrayLengths = []
-        #         for i in range(len(arr)):
-        #             if (i+1)%2!=0:
-        #                 subArrayLengths.append(i+1)
-        #         print(subArrayLengths)
-
-        #         subSum=0
-        #         totalSum=0
-        #         totalSum=0
-        #         subSum=0
-        #         flag=True
-        #         subIndex=0
-        #         while flag==True:
-
-        #             if subIndex==len(arr) or subIndex==len(arr)-1:
-        #                 flag = False
-        #             else:
-        #                 subIndex+=2
-        #         return totalSum
 
         flag = True
         i = 1

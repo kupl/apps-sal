@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -18,7 +16,7 @@ for i in range(M):
         res[j] = (res[j] + res[j - 1]) % MOD
     powsum.append(res)
 
-dp = [0] * (c + 1)  # dp[i][k] = i まで見て k次斉次式
+dp = [0] * (c + 1)
 dp[0] = 1
 
 for ai, bi in zip(a, b):

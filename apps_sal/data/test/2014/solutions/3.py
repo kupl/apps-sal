@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 """
 
@@ -20,8 +19,6 @@ def solve(N, K, A, pos):
     for i in range(1, N + 1):
         maxx = 0
         for p in range(1, i):
-            # if the A[1][p], A[1][i] is the last two elements of ans
-            # A[1][p] should appears before A[1][i] at every input array A[1:]
             if all([pos[k][A[1][p]] < pos[k][A[1][i]] for k in range(2, K + 1)]):
                 maxx = max(maxx, dp[p])
         dp[i] = maxx + 1

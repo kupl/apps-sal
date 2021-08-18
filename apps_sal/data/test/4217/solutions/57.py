@@ -1,4 +1,3 @@
-# ABC118B
 n, m = list(map(int, input().split()))
 l = [0] * m
 for i in range(n):

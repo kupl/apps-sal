@@ -1,7 +1,7 @@
 import sys
 import collections
 
-_ = sys.stdin.readline()  # read count, not needed for us
+_ = sys.stdin.readline()
 
 names = collections.OrderedDict()
 

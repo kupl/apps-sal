@@ -3,8 +3,6 @@ from math import factorial
 
 class Solution:
     def getProbability(self, balls: List[int]) -> float:
-        # number of distinct arrangements where some balls are identical
-        # fact(sum(balls)) / fact(balls[0]) * fact(balls[1]) * .. * fact(balls[n - 1])
 
         n = len(balls)
         a = [0] * n

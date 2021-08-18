@@ -1,12 +1,12 @@
 class Solution:
     def shortestSuperstring(self, A: List[str]) -> str:
-        def dist(a, b):  # cost to append b to a
+        def dist(a, b):
             for i in range(min(len(a), len(b)), 0, -1):
                 if a[-i:] == b[:i]:
                     return len(b) - i
             return len(b)
 
-        def build_graph():  # build cost graph
+        def build_graph():
             graph = [[0] * n for _ in range(n)]
             for i in range(n):
                 for j in range(n):

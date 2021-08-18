@@ -1,4 +1,3 @@
-##初期値設定##
 N, Q = map(int, input().split())
 S = input()
 dl = []
@@ -8,7 +7,6 @@ for i in range(Q):
     dl.append(line[0])
     dr.append(line[1])
 
-##ACの個数配列計算##
 a = []
 for i in range(N - 1):
     tmp_S = S[i:i + 2]
@@ -17,12 +15,10 @@ for i in range(N - 1):
     else:
         a.append(0)
 
-##累積和計算##
 s = [0]
 for i in range(len(a)):
     s.append(s[i] + a[i])
 
-##解答算出##
 ans = []
 for l, r in zip(dl, dr):
     ans.append(s[r - 1] - s[l - 1])

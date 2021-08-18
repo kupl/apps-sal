@@ -20,7 +20,7 @@ def main():
         if len(enrate[i].h) != 0:
             saikyourate.insert(-(enrate[i].get_min()))
     for _ in range(q):
-        c, d = map(int, input().split())  # 移動 syozoku[c]→d
+        c, d = map(int, input().split())
         saikyourate.erase(-(enrate[syozoku[c]].get_min()))
         enrate[syozoku[c]].erase(-rate[c])
         if len(enrate[syozoku[c]].h) != 0:
@@ -33,7 +33,7 @@ def main():
         print(saikyourate.get_min())
 
 
-class HeapDict:  # 実装https://tsubo.hatenablog.jp/entry/2020/06/15/124657
+class HeapDict:
     def __init__(self):
         self.h = []
         self.d = dict()

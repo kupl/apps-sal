@@ -2,8 +2,8 @@ def main():
     from sys import stdin, stdout
     (n, m) = list(map(int, stdin.readline().strip().split(' ')))
     a = [0] + list(map(int, stdin.readline().strip().split(' ')))
-    r = [0] * (n + 1)  # r[i] stores highest index to right of i st. i..ri is nondecreasing
-    l = [0] * (n + 1)  # l[i] stores smallest index to the left of i st. li..i is nonincreasing
+    r = [0] * (n + 1)
+    l = [0] * (n + 1)
 
     l[1] = 1
     r[n] = n

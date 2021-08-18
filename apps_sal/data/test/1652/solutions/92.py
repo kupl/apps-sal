@@ -6,7 +6,6 @@ found = False
 
 while len(search) > 0:
     se = search[0]
-    # print(se, search)
     search = search[1:]
     if se in ("dream", "dreamer", "erase", "eraser"):
         print("YES")

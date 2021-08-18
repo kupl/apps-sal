@@ -3,8 +3,6 @@ class Solution:
 
         n = len(arr1)
         points = list(zip(arr1, arr2, range(n)))
-        # Create 4 functions that can give abs value possibilities based on
-        # whether arr1[i] is larger or smaller than arr1[j] and so on.
         funcs = [
             lambda x, y, z: x + y + z,
             lambda x, y, z: - x + y + z,

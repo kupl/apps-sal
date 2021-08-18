@@ -12,22 +12,18 @@ def __starting_point():
         print(-1)
     else:
         l, r = 0, 10**9
-        #print (10/3)
 
         def is_ok(target):
             total = m + target
             remain = total
             for i in range(n):
                 remain -= remain / off[i]
-                #print (remain)
                 if remain < m and abs(remain - m) > eps:
                     return False
                 remain -= remain / land[(i + 1) % n]
-                #print (remain)
                 if remain < m and abs(remain - m) > eps:
                     return False
             return True
-        # is_ok(6)
         while True:
             mid = (l + r) / 2
             if abs(r - l) <= eps:

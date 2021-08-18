@@ -26,16 +26,7 @@ class Solution:
         maxp = -1
         val = -1
 
-        # print(tracker, wheel, line)
         if max(tracker) <= 0:
             return -1
         else:
             return tracker.index(max(tracker))
-        # for i in range(len(tracker)):
-        #     if tracker[i] >= max(tracker):
-        #         maxp = tracker[i]
-        #         val = i
-        # if maxp > 0:
-        #     return val
-        # else:
-        #     return -1

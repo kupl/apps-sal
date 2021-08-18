@@ -41,7 +41,6 @@ def main():
     elist = []
     d = h = 0
 
-    # depth_v = None
     last_v = 0
     mother_v = 0
     if td == th:
@@ -64,8 +63,6 @@ def main():
             last_v = i
             d += 1
             dst[i] = d
-            # if d == td:
-            # 	last_v = 0
         else:
             add_e(adj, elist, mother_v, i)
 

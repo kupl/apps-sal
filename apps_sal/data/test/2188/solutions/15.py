@@ -1,11 +1,7 @@
-# from bisect import bisect_left
 import sys
 
 
 def solve(a, cmp):
-    # if not a:
-    #     return []
-    # print(up)
     res = [-1 for _ in a]
     ptr = 0
     for id, e in enumerate(a):

@@ -30,7 +30,6 @@ class Solution1:
                     candidates.append(count)
                     return
 
-            # string is not able to split to too much parts
             if e - s + 1 < k + 1:
                 return
 
@@ -41,8 +40,6 @@ class Solution1:
         findMin(0, n - 1, k - 1, 0, candidates)
 
         return min(candidates)
-
-# https://leetcode.com/problems/palindrome-partitioning-iii/discuss/441427/Python3-Top-down-DFS-with-Memoization
 
 
 class Solution:
@@ -60,27 +57,22 @@ class Solution:
             return r
 
         def dfs(i, k):
-            # case already in memo
             if (i, k) in memo:
                 return memo[(i, k)]
 
             if n - i < k:
                 return float('inf')
 
-            # base case that each substring just have one character
             if n - i == k:
                 return 0
 
-            # base case that need to transfer whole substring into palidrome
             if k == 1:
                 return cost(s, i, n - 1)
 
             res = float('inf')
 
-            # keep making next part of substring into palidrome
             for j in range(i + 1, n):
 
-                # compare different divisions to get the minimum cost
                 res = min(res, dfs(j, k - 1) + cost(s, i, j - 1))
             memo[(i, k)] = res
             return res

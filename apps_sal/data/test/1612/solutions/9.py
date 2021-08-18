@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 n = int(input())
 cards = [[set(map(int, input().split()[1:])), i, True] for i in range(n)]

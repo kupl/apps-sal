@@ -9,7 +9,7 @@ def f(v):
     state[v] = 1
     a = As[v]
     idx = bisect.bisect_left(D, a)
-    stack.append((idx, D[idx]))  # push
+    stack.append((idx, D[idx]))
     D[idx] = a
 
     ans[v] = bisect.bisect_left(D, float('inf'))
@@ -18,7 +18,6 @@ def f(v):
         if state[u] == 0:
             f(u)
 
-    # 巻き戻し
     i_pre, d_pre = stack.pop()
     D[i_pre] = d_pre
 

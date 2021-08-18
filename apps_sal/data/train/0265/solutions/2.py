@@ -10,10 +10,8 @@ class Solution:
         d = {0: 0}
         temp = []
         for i in range(n):
-            #     print(i, cumsum[i+1]-target)
             if cumsum[i + 1] - target in d:
                 temp.append((d[cumsum[i + 1] - target], i + 1))
-                # print(d[cumsum[i+1]-target], i+1)
             d[cumsum[i + 1]] = i + 1
         l = sorted(temp, key=lambda x: (x[0], x[1]))
         cur_s = -1

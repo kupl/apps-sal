@@ -6,13 +6,11 @@ pv = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
 
 for i in range(m):
     a, b, t = map(int, input().split())
-    # matrix[b][a] = t
     adj[b].append(a)
     ad_w[b].append(t)
     if a == 1:
         dp[b][2] = t
         pv[b][2] = 1
-    # matrix[a][b] = t
 
 for c in range(3, n + 1):
     for v in range(2, n + 1):

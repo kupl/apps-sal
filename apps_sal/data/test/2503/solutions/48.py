@@ -33,7 +33,6 @@ for _ in range(N):
         imos(i1, 0, i1 + K, j1)
         imos(i1, j1 + K, i1 + K, K2)
 
-# 累積和
 Mij = np.array(Mij)
 for x in range(K2):
     Mij[:, x + 1] += Mij[:, x]

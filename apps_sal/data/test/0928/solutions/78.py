@@ -11,7 +11,6 @@ for i in range(n):
     if aa[i] + k > aa[n]:
         continue
     ii = bisect_left(aa, aa[i] + k)
-#    print(i,aa[i],aa[i]+k,ii,n+1-ii)
     icnt += max(n + 1 - ii, 0)
 
 print(icnt)

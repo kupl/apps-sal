@@ -1,5 +1,4 @@
 def multiples(m, n):
-    # Implement me! :)
     v = 1
     a = []
     while v <= m:

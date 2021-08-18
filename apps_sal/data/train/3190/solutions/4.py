@@ -1,6 +1,5 @@
 two_digit_primes = set('11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97'.split())
 
-# pregenerate eligible numbers
 numbers = []
 for n in range(11, 9799 + 1):
     if str(n)[:2] in two_digit_primes:

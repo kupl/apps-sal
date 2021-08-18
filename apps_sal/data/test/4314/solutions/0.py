@@ -10,9 +10,9 @@ counter = []
 for i in range(w):
     flag = 0
     for j in range(len(cell)):
-        if cell[j][i] == "#":
-            flag = 1
-            break
+        if cell[j][i] == "
+        flag = 1
+        break
     if flag == 1:
         counter.append(i)
 

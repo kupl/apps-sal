@@ -1,9 +1,3 @@
-# class Solution:
-#     def threeSum(self, nums):
-#         """
-#         :type nums: List[int]
-#         :rtype: List[List[int]]
-#         """
 
 d, k, a, b, t = [int(x) for x in input().split()]
 

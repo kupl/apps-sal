@@ -11,5 +11,4 @@ for i in range(n):
         dp[i + 1] += dp[i]
         dp[i + 2] += dp[i]
 
-# print(dp)
 print(dp[n] % (10**9 + 7))

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     c = 0
     x, y, n = tuple(map(int, input().split()))

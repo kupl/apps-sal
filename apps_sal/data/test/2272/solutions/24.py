@@ -1,8 +1,6 @@
 """
 Solution to the 320B problem on CodeForces.
 
-# pylint: disable = C0325
-# pylint: disable = W0611
 """
 
 from collections import deque

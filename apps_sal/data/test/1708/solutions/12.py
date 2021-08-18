@@ -19,10 +19,8 @@ n, m = li()
 a = list(li())
 c = list(li())
 
-# dictionary of idx-num
 dic = {idx: ai for idx, ai in enumerate(a)}
 
-# cheap order
 cord = [idx for (_, idx) in sorted([(ci, idx) for idx, ci in enumerate(c)])]
 cord = deque(cord)
 

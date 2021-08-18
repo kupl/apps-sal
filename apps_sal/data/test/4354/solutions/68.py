@@ -7,12 +7,9 @@ cp = []
 for w in range(M):
     ci, di = map(int, input().split())
     cp.append((w, ci, di))
-# 大きい番号から調べることで同じ値のとき最小のチェックポイントに行ける
 cp = cp[::-1]
 ans = [0] * N
-# ある学生について
 for i, x, y in stu:
-    # あるチェックポイントについて
     mindist = 10**16
     cp_num = 0
     for j, k, l in cp:

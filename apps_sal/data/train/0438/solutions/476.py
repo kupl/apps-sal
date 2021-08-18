@@ -6,18 +6,15 @@ class Solution:
         ans = -1
         for real_n in arr:
             step += 1
-            # print(\"step\", step)
             n = real_n - 1
             bits[n] = 1
             uf.father[n] = n
             uf.cnt[n] = 1
             uf.cntFreq[1] += 1
-            # print(bits)
             if n - 1 >= 0 and bits[n - 1] == 1:
                 uf.union(n, n - 1)
             if n + 1 < len(bits) and bits[n + 1] == 1:
                 uf.union(n, n + 1)
-            # print(uf.cntFreq)
             if uf.cntFreq[m] > 0:
                 ans = step
         return ans

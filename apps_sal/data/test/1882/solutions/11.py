@@ -15,7 +15,6 @@ def solve(n, t, tasks):
     while lo <= hi:
         mid = lo + (hi - lo) // 2
 
-        # check if we can make mid.
         valid_tasks = []
         for i in tasks:
             if i[0] >= mid:
@@ -54,7 +53,6 @@ def main():
         tasks.append((a_i, t_i, idx))
         idx += 1
         n -= 1
-    # print(nums, t, tasks)
     res, res_arry = solve(nums, t, tasks)
     print(res)
     print(res)

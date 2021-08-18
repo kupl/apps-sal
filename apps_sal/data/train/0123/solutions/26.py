@@ -7,9 +7,7 @@ class Solution:
                 return 1 if j == 0 else 0
             if (i, j) in memo:
                 return memo[(i, j)]
-            # non repeat
             ans = dp(i - 1, j - 1) * (N - (j - 1))
-            # repeat
             ans += dp(i - 1, j) * max(0, j - K)
             memo[(i, j)] = ans % (10 ** 9 + 7)
             return memo[(i, j)]

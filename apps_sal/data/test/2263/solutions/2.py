@@ -2,7 +2,6 @@ from queue import Queue
 import sys
 
 cost = []
-# coo
 def readarray(): return map(int, input().split(' '))
 
 

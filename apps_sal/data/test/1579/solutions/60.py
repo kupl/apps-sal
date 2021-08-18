@@ -1,5 +1,3 @@
-# https://drken1215.hatenablog.com/entry/2019/06/23/004700
-# https://tjkendev.github.io/procon-library/python/union_find/union_find.html
 
 def main():
     import sys
@@ -28,7 +26,7 @@ def main():
 
     n = int(input())
     for _ in range(n):
-        x, y = (int(x) - 1 for x in input().split())  # [1,)->[0,)
+        x, y = (int(x) - 1 for x in input().split())
         unite(x, y + MX)
 
     xs = [0] * (MX * 2)

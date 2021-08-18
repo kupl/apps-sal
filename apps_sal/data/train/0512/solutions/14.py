@@ -13,7 +13,7 @@ query = [[int(x) for x in input().split()] for _ in range(Q)]
 
 depth = [0] * (N + 1)
 U = 17
-ancestor = [[0] * (U + 1) for _ in range(N + 1)]  # 2**i だけ遡った頂点の番号、行き過ぎは0
+ancestor = [[0] * (U + 1) for _ in range(N + 1)]
 
 q = [(1, 0, 0)]
 while q:

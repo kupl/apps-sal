@@ -35,12 +35,12 @@ def main():
     MOD = 10 ** 9 + 7
 
     N, K = list(map(int, input().split()))
-    K = min(K, N - 1)  # K=最大空室数->N部屋空室は不可能
+    K = min(K, N - 1)
 
     calc = Calc(max_value=N * 2, mod=MOD)
 
     ans = 0
-    for v in range(K + 1):  # 空室数
+    for v in range(K + 1):
         ans = (ans + (calc.combination(N, v) * calc.combination(v + (N - v) - 1, v)) % MOD) % MOD
 
     print(ans)

@@ -1,7 +1,7 @@
 class StockSpanner:
 
     def __init__(self):
-        self.stock = []  # a list that stores tuples (date_stock_price, span_start_index)
+        self.stock = []
 
     def next(self, price: int) -> int:
         if not self.stock or (price < self.stock[-1][0]):
@@ -14,8 +14,3 @@ class StockSpanner:
             span = len(self.stock) - i
             self.stock.append((price, i + 1))
         return span
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

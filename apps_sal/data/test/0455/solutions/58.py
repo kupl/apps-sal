@@ -13,7 +13,7 @@ def gcd(a, b):
 
 
 def solve():
-    file = sys.stdin.readline  # single: int(file()), line: map(int, file().split())
+    file = sys.stdin.readline
     N = int(file())
     point = [[int(i) for i in file().split()] for j in range(N)]
     length = (point[0][0] + point[0][1]) % 2

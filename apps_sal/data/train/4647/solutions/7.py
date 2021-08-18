@@ -5,7 +5,6 @@ def get_offsets(distance, moore=True):
             if (dr, dc) == (0, 0):
                 continue
             if not moore and abs(dr) + abs(dc) > distance:
-                # Manhattan distance too large
                 continue
             yield (dr, dc)
 
@@ -13,7 +12,6 @@ def get_offsets(distance, moore=True):
 def get_neighbourhood(n_type, arr, coordinates, distance=1):
     h, w = len(arr), len(arr[0])
     if not (0 <= coordinates[0] < h and 0 <= coordinates[1] < w):
-        # Coordinate not in arr
         return []
     r, c = coordinates
     return [

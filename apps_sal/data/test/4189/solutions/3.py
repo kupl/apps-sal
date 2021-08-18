@@ -11,8 +11,6 @@ for i in range(n):
         hard += 1
 
 for i in range(1, 100):
-    # field1 = [[0] * i for j in range(i)]
-    # field2 = [[0] * i for j in range(i)]
 
     s1 = soft
     h1 = hard

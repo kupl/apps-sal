@@ -1,4 +1,3 @@
-# abc129d
 import numpy as np
 h, w = list(map(int, input().split()))
 s = np.array([list(input()) for i in range(h)]) == '.'

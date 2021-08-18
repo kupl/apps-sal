@@ -19,5 +19,4 @@ for i in range(n - m + 1):
     if (tmp > Max):
         Max = tmp
         pos = i + 1
-#print(ttot, ta);
 print(Max)

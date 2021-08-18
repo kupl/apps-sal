@@ -27,10 +27,8 @@ k = 0.5
 d = 999 / 1000
 
 
-# print(x_ave,y_ave)
 while r_diff > MIN:
     tmpres = check(x_ave, y_ave, r)
-    # print(r,x_ave,y_ave)
     if tmpres[0]:
         r -= r_diff
     else:

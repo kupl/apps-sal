@@ -1,6 +1,5 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        # exactly k = at most k - at most k - 1
 
         def at_most(x):
             left = 0

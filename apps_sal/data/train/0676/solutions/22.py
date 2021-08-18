@@ -1,10 +1,8 @@
-# cook your dish here
 
 tests = int(input())
 for te in range(tests):
     n = int(input())
     strings = list(input().split())
-    # print(strings)
     dic = {}
     for i in range(n):
         if(strings[i] not in dic):

@@ -31,24 +31,24 @@ def main():
 
     for b in B:
 
-        A_ng = -1  # ng:とり得る最小の値-1
-        A_ok = len(A)  # ok:とり得る最大の値+1
+        A_ng = -1
+        A_ok = len(A)
 
         while (abs(A_ok - A_ng) > 1):
             A_mid = (A_ok + A_ng) // 2
 
-            if A[A_mid] >= b:  # 計算の結果、midが条件を満たすならokにmidを代入。そうでなければngにmidを代入。
+            if A[A_mid] >= b:
                 A_ok = A_mid
             else:
                 A_ng = A_mid
 
-        C_ng = -1  # ng:とり得る最小の値-1
-        C_ok = len(C)  # ok:とり得る最大の値+1
+        C_ng = -1
+        C_ok = len(C)
 
         while (abs(C_ok - C_ng) > 1):
             C_mid = (C_ok + C_ng) // 2
 
-            if C[C_mid] > b:  # 計算の結果、midが条件を満たすならokにmidを代入。そうでなければngにmidを代入。
+            if C[C_mid] > b:
                 C_ok = C_mid
             else:
                 C_ng = C_mid

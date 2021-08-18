@@ -1,9 +1,5 @@
 from math import factorial
 
-# on factorial number system and its relation to lexicographically ordered permutations;
-# https://medium.com/@aiswaryamathur/find-the-n-th-permutation-of-an-ordered-string-using-factorial-number-system-9c81e34ab0c8
-# https://en.wikipedia.org/wiki/Factorial_number_system
-
 
 def factoradic_representation(n):
     res = []

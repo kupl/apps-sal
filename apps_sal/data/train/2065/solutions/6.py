@@ -14,15 +14,11 @@ for i in range(k):
 
         for j, val in enumerate(mtr[:-1]):
             if val - mtr[j + 1] != 1:
-                # print('*')
                 time += j - ln + 1
-                #print('!', j-ln+1)
                 ln = j + 1
                 dlt = mtr[j + 1]
 
     else:
-        #print('-', i, len(mtr)-1)
         time += len(mtr) - 1
 
-#print('\n------------------\n', time, n,  dlt)
 print(time + n - dlt)

@@ -40,7 +40,6 @@ for i in range(q):
                 last_app_idx[app] = max(last_app_idx[app], number)
                 unread -= 1
         last_q_idx = max(last_q_idx, num)
-    # print(action, num, last_q_idx, last_app_idx, queue)
     ans.append(unread)
 
 print("\n".join(map(str, ans)))

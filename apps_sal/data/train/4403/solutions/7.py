@@ -1,5 +1,3 @@
-# Switch the endianness of integer n
-# Assume 64-bit unsigned integers
 import re
 import math
 

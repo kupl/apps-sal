@@ -23,7 +23,6 @@ for _ in range(m):
         p = tup[1] - 1
         p0 = p
         x = tup[2]
-#         flush(p - 1, x)
         marker = []
         while p < n and cap[p] < x:
             x -= cap[p]

@@ -6,7 +6,6 @@ def main():
             x = (x * 10 + int(c)) % a
             if not x and s[i] != '0':
                 pfx.append(i)
-            #print(c,ord(c) - 48)
     except IndexError:
         pass
     x, p, i = 0, 1, len(s)

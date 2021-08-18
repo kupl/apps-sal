@@ -18,7 +18,6 @@ while q != 0:
         i = 1
         r = query[1]
         while(i * r < n):
-            # print "[", f[i*r], "]",
             ans = ans * f[i * r]
             i += 1
 

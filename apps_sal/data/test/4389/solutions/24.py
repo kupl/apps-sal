@@ -14,5 +14,3 @@ for _ in range(t):
         ans += s[i]
     ans += s[-1]
     print(ans)
-# n, m = map(int, input().split())
-# nums = list(map(int, stdin.readline().split()))

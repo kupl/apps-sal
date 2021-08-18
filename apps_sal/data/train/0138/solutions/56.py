@@ -5,10 +5,7 @@ class Solution:
         for n in nums:
             if n > 0:
                 neg, pos = (1 + neg) if neg > 0 else 0, 1 + pos
-                #pos = (1 + pos)
             elif n < 0:
-                #n1 = neg
-                #neg = (1 + pos)
                 pos, neg = (1 + neg) if neg > 0 else 0, 1 + pos
 
             else:

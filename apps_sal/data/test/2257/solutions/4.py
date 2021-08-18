@@ -1,4 +1,3 @@
-# author="_rabbit"
 n, x1, y1, x2, y2 = list(map(int, input().split()))
 x = []
 y = []
@@ -12,13 +11,10 @@ for i in range(n):
     for j in range(n):
         flag.append(0)
     tt = (x[i] - x1) * (x[i] - x1) + (y[i] - y1) * (y[i] - y1)
-    # print("#### ")
-   # print(tt)
     for j in range(n):
         ss = (x[j] - x1) * (x[j] - x1) + (y[j] - y1) * (y[j] - y1)
         if ss <= tt:
             flag[j] = 1
-   # print(flag)
     hh = int(0)
     for j in range(n):
         if flag[j] == 1:

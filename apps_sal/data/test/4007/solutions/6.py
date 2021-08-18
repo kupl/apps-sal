@@ -20,8 +20,6 @@ for i in range(N):
     if not end[i]:
         want.append(i)
 
-#print (give)
-#print (want)
 
 for i in range(len(give) - 1):
 

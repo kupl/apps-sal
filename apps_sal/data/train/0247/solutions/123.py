@@ -7,7 +7,6 @@ class Solution:
         best = [float('inf') for i in range(len(arr))]
         ans = float('inf')
         size = float('inf')
-        # count=2
         l = 0
         r = 0
         window = 0
@@ -15,7 +14,6 @@ class Solution:
 
             window += arr[r]
             while l <= r and window > target:
-                # print(l,r)
                 window -= arr[l]
 
                 l += 1
@@ -34,33 +32,3 @@ class Solution:
 
         else:
             return ans
-
-
-#         dp=[0 for i in range(len(arr)+1)]
-
-#         currSum=0
-#         l=[]
-#         i=0
-#         j=0
-
-#         while i<=j and j<len(arr):
-
-#             currSum=currSum+arr[j]
-#             print(i,j,currSum)
-#             if currSum==target or arr[j]==target:
-#                 l.append(j-i+1)
-#                 currSum=0
-#                 j+=1
-#                 i=j
-
-#             elif currSum<target:
-#                 currSum+=arr[j]
-#                 j+=1
-
-#             else:
-#                 # print(\"h\",currSum)
-#                 currSum=currSum-arr[i]
-#                 # print(currSum,arr[i])
-#                 i+=1
-
-#         print(l)

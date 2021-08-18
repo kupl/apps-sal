@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 from collections import defaultdict
 import sys
 import heapq
@@ -28,7 +26,7 @@ def solution():
     badcnt = 0
     border = -que[0][0]
     stocked = []
-    heapq.heapify(stocked)  # where not still used
+    heapq.heapify(stocked)
     ording = 0
     while (que or stocked) and border > 0:
         ording += 1
@@ -41,11 +39,6 @@ def solution():
                 border = -que[0][0]
             continue
 
-        # print("phase: ", ording)
-        # print("que: ", que)
-        # print("stocked: ", stocked)
-        # print("border: ", border)
-        # print("\n")
         if stocked:
             good_candi, bad_candi = heapq.heappop(stocked)
             good_candi *= -1

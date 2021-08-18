@@ -1,4 +1,3 @@
-# ABD106D
 
 N, M, Q = map(int, input().split())
 Trs = [tuple(map(int, input().split())) for i in range(M)]

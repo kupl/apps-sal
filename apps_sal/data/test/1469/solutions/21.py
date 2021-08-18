@@ -11,6 +11,6 @@ for i in range(0, N - 1):
 
 weight = L
 for i in range(0, N - 1):
-    if Lbin[i] == '1':  # 2^iの位
+    if Lbin[i] == '1':
         weight -= 2 ** i
         print(i + 1, N, weight)

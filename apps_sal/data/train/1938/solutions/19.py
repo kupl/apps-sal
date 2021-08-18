@@ -7,7 +7,7 @@ class Solution:
             return [max(a[0], b[0]), max(a[1], b[1]), min(a[2], b[2]), min(a[3], b[3])]
 
         def area(rec):
-            dx = max(0, rec[2] - rec[0])  # <================== need to use max!!!
+            dx = max(0, rec[2] - rec[0])
             dy = max(0, rec[3] - rec[1])
             return dx * dy
 
@@ -20,7 +20,6 @@ class Solution:
 
         return a % (10**9 + 7)
 
-    # 50
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
 
         xmap = [{}, {}]
@@ -33,7 +32,6 @@ class Solution:
             xs[1].append(i[3])
         xs[0].sort()
         xs[1].sort()
-        # print(xs)
         rmap = [[], []]
         for k in range(2):
             cnt = 0
@@ -42,14 +40,12 @@ class Solution:
                     xmap[k][i] = cnt
                     rmap[k].append(i)
                     cnt += 1
-        # print(rmap)
-        grid = [[0] * len(rmap[0]) for _ in range(len(rmap[1]))]  # donnot add extra []
+        grid = [[0] * len(rmap[0]) for _ in range(len(rmap[1]))]
 
         for r in rectangles:
             for i in range(xmap[0][r[0]], xmap[0][r[2]]):
                 for j in range(xmap[1][r[1]], xmap[1][r[3]]):
-                    # print(i, j, len(grid), len(grid[0]))
-                    grid[j][i] = 1   # <========================= not [i][j]
+                    grid[j][i] = 1
 
         area = 0
         for i in range(len(rmap[0]) - 1):

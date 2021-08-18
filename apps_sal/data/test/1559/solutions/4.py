@@ -23,7 +23,6 @@ if (L == n):
 elif (L % n == 0):
     p_numb = A[:n]
 
-    # eval
     for i in range(n, L):
         if (int(p_numb[i % n]) > int(A[i])):
             break

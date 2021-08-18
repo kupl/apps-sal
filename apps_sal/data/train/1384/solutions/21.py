@@ -1,5 +1,4 @@
 te = int(input())
-# print(te)
 while te > 0:
     te -= 1
     n, k = list(map(int, input().split()))

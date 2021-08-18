@@ -41,5 +41,3 @@ fact, fact_inv = make_fact(U, MOD)
 
 answer = cmb(r2 + c2 + 2, r2 + 1) - cmb(r2 + 1 + c1, r2 + 1) - cmb(r1 + c2 + 1, r1) + cmb(r1 + c1, r1)
 print((answer % MOD))
-
-# 16

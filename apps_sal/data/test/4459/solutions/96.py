@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Wed Sep 23 15:39:14 2020
 
@@ -21,5 +20,4 @@ for i in range(N):
             ans += d[i] - (i + 1)
         if d[i] < i + 1:
             ans += d[i]
-# print(d)
 print(ans)

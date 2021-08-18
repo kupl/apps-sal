@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 n, k = list(map(int, input().split()))
 mod = 10**9 + 7
 
@@ -12,7 +11,6 @@ for i in range(k - 1, 0, -1):
         d[i] -= d[j]
         j += i
 
-#print('d =', d)
 ans = 0
 for i in range(1, k + 1):
     ans += (i * d[i]) % mod

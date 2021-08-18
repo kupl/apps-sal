@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 from collections import Counter
@@ -18,7 +17,6 @@ def YES(): print('YES')
 def NO(): print('NO')
 
 
-# sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
 

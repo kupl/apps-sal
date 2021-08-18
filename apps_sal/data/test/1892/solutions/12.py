@@ -20,4 +20,3 @@ for i in range(1, n):
     for j in reversed(list(range(n))):
         s[i][j] += (dp[i][j] + s[i][j + 1]) % MOD
 print(s[n - 1][0] % MOD)
-# sum from all levels

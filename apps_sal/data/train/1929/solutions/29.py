@@ -31,7 +31,3 @@ class StreamChecker:
                 revised_pointers.append(node)
         self.pointers = revised_pointers
         return result
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

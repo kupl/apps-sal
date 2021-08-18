@@ -1,5 +1,4 @@
 class Solution:
-    # O(n) Time | O(1) Space
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         result = 0
         totalPeople = 0

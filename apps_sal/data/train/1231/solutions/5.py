@@ -7,7 +7,6 @@ def main():
     for t in range(t):
         n = int(s())
         comp = str(2**n)
-        # print comp
         sum = 0
         for i in comp:
             sum += int(i)

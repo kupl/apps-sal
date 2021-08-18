@@ -19,8 +19,6 @@ def will_reach(loc, commands):
     all_destinations = [minus_two(loc, pl) for pl in possible_locs]
 
     for destination in all_destinations:
-        ##        print("destination", destination)
-        ##        print("slope", new_loc)
         realdx = destination[0]
         realdy = destination[1]
 

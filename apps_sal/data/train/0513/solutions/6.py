@@ -32,7 +32,6 @@ def main():
         c = s[-1]
         ci, clis = c[0], c[1]
 
-        # lis処理
         if ci not in v:
             if len(clis) == 0:
                 clis.append(A[ci - 1])

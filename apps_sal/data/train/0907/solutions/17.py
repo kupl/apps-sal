@@ -8,7 +8,6 @@ for i in range(R):
     for j in s:
         if j == "H" or j == "T":
             a.append(j)
-    # List gets completed.
     while len(a) > 2 * b:
         if len(a) % 2 != 0:
             print("Invalid")

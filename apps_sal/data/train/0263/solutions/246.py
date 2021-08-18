@@ -1,7 +1,6 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
         dic = {1: [6, 8], 2: [7, 9], 4: [0, 3, 9], 5: [], 7: [2, 6], 8: [1, 3], 0: [4, 6]}
-        # 1 = 3, 4 = 6, 7 = 9
         pair = {3: 1, 6: 4, 9: 7}
 
         @lru_cache(None)

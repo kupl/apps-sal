@@ -16,7 +16,6 @@ class Solution:
                     hist_max = max(hist_max, ord(s[idx + level]))
             return nextOrd2CurIdx[hist_max]
 
-        # Filtering indexes with maximum ord by comparing k-level away
         level = 1
         while 1:
             max_ord_idxs = findNextMaxOrd(max_ord_idxs, level)

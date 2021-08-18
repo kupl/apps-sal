@@ -4,7 +4,6 @@ from decimal import Decimal
 
 
 def expand(x, digit):
-    # your code
     x = Fraction(Decimal(x)).limit_denominator(digit)
     incr = 0
     ex = 0

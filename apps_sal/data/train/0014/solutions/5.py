@@ -48,10 +48,9 @@ def GI(V, E, ls=None, Directed=False, index=1):
     return g, org_inp
 
 
-def GGI(h, w, search=None, replacement_of_found='.', mp_def={'#': 1, '.': 0}, boundary=1):
-    # h,w,g,sg=GGI(h,w,search=['S','G'],replacement_of_found='.',mp_def={'#':1,'.':0}) # sample usage
-    mp = [boundary] * (w + 2)
-    found = {}
+def GGI(h, w, search=None, replacement_of_found='.', mp_def={'
+    mp=[boundary] * (w + 2)
+    found={}
     for i in range(h):
         s = input()
         for char in search:
@@ -84,7 +83,6 @@ Yn = ['Yes', 'No']
 mo = 10**9 + 7
 inf = float('inf')
 l_alp = string.ascii_lowercase
-# sys.setrecursionlimit(10**7)
 def input(): return sys.stdin.readline().rstrip()
 
 
@@ -101,12 +99,12 @@ class Tree:
             self.size = int(input())
         else:
             self.size = inp_size
-        self.edges, _ = GI(self.size, self.size - 1, index=index)
+        self.edges, _=GI(self.size, self.size - 1, index=index)
         return
 
     def listin(self, ls, index=0):
         self.size = len(ls) + 1
-        self.edges, _ = GI(self.size, self.size - 1, ls, index=index)
+        self.edges, _=GI(self.size, self.size - 1, ls, index=index)
         return
 
     def __str__(self):
@@ -164,15 +162,15 @@ class Tree:
     def LCA(self, root, x, y):
         if self.LCA_init_stat == False:
             self.LCA_init(root)
-        xin, xout = self.ETin[x], self.ETout[x]
-        yin, yout = self.ETin[y], self.ETout[y]
-        a = min(xin, yin)
-        b = max(xout, yout, xin, yin)
-        id_of_min_dep_in_et = self.st.query_id(a, b + 1)
+        xin, xout=self.ETin[x], self.ETout[x]
+        yin, yout=self.ETin[y], self.ETout[y]
+        a=min(xin, yin)
+        b=max(xout, yout, xin, yin)
+        id_of_min_dep_in_et=self.st.query_id(a, b + 1)
         return self.ETtable[id_of_min_dep_in_et]
 
 
-class SparseTable:  # O(N log N) for init, O(1) for query(l,r)
+class SparseTable:
     def __init__(self, ls, init_func=min, init_idl=float('inf')):
         self.func = init_func
         self.idl = init_idl
@@ -191,17 +189,13 @@ class SparseTable:  # O(N log N) for init, O(1) for query(l,r)
             self.table += [tmp]
             self.index += [tmp_id]
 
-    # return func of [l,r)
     def query(self, l, r):
-        # N=(r-l).bit_length()-1
         N = self.lg[r - l]
         return self.func(self.table[N][l], self.table[N][r - (1 << N)])
 
-    # return index of which val[i] = func of v among [l,r)
     def query_id(self, l, r):
-        # N=(r-l).bit_length()-1
         N = self.lg[r - l]
-        a, b = self.index[N][l], self.index[N][r - (1 << N)]
+        a, b=self.index[N][l], self.index[N][r - (1 << N)]
         if self.table[0][a] == self.func(self.table[N][l], self.table[N][r - (1 << N)]):
             b = a
         return b
@@ -220,11 +214,11 @@ ans = 0
 
 T = I()
 for _ in range(T):
-    a, b = LI()
-    c, d = LI()
+    a, b=LI()
+    c, d=LI()
     if a > b:
-        a, b = b, a
+        a, b=b, a
     if c > d:
-        c, d = d, c
-    ans = 'Yes' if b == d and a + c == b else 'No'
+        c, d=d, c
+    ans='Yes' if b == d and a + c == b else 'No'
     print(ans)

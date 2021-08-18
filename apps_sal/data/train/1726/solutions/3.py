@@ -1,25 +1,17 @@
-def path_finder(maze):  # DFS
-    # Create a matrix of given stringMaze and add walls around it
+def path_finder(maze):
 
     maze = [list("W" + string + "W") for string in maze.split('\n')]
     n = len(maze[0])
     maze = [['W'] * n] + maze + [['W'] * n]
 
-    #################################################
-
-    # Create Visited dict with indexes as keys
-
     visited = {(i, j): 0 for i in range(n) for j in range(n)}
     visited[(1, 1)] = 1
 
-    #################################################
-
-    # Stack to store DFS info as index tuples
     stack = [(1, 1)]
     while len(stack) > 0:
         idx1, idx2 = stack.pop()
 
-        if idx1 == n - 2 and idx2 == n - 2:  # (ง°ل͜°)ง
+        if idx1 == n - 2 and idx2 == n - 2:
             return True
 
         if maze[idx1 - 1][idx2] == '.' and visited[(idx1 - 1, idx2)] == 0:

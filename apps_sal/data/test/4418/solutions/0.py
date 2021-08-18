@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 n = int(input())
 a = list(map(int, input().split()))
 k = [None, 4, 8, 15, 16, 23, 42]

@@ -4,13 +4,10 @@ class Solution:
 
         dp[0][0] = 1
 
-        # Iterate through every dice
         for i in range(1, d + 1):
 
-            # iterate through every target
             for j in range(1, target + 1):
 
-                # go through every possible value on dice
                 for k in range(1, f + 1):
                     if k <= j:
                         dp[i][j] += dp[i - 1][j - k]

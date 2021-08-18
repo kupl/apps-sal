@@ -8,19 +8,18 @@ class Solution:
         counter = Counter(arr)
         size = len(arr)
 
-        # unique elements (remove half of them)
         if len(counter) == size:
             return (size - 1) // 2 + 1
 
         max_heap = [(-freq, value) for value, freq in list(counter.items())]
         heapify(max_heap)
 
-        removed = 0  # number of elements removed
-        removed_size = 0  # size of the remvoved set
+        removed = 0
+        removed_size = 0
 
         while removed < size // 2:
             count, value = heappop(max_heap)
-            count = -count  # change the count back to +ve
+            count = -count
             removed += count
             removed_size += 1
 

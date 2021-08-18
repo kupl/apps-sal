@@ -1,16 +1,4 @@
-# [] DP
-# O(6N * 6T): T: upperbound of rollMax
 
-# f(i, d): number of combinations of res[0~i] if the last number is d
-# f(i, ?) = 1 if i == 0
-#               d'd d d ... d [d]
-#               ? d'd d ... d [d]
-#               ? ? d'd ... d [d]
-#               ? ? ? d'... d [d]
-#               ? ? ? ? ... d'[d]
-# f(i, d) = sum{ f(j, d') for j in i-rollMax[d] ~ i-1 for d' in 0~5
-#               if i-rollMax[d] >= 0 and d' != d }
-#          sum{ f(i-1, d') for any d' if rollMax[d] < i} < no limit
 MOD = 1000000007
 
 

@@ -52,13 +52,11 @@ def lca(u, v):
         u, v = v, u
         dd = -dd
 
-    # assert depth[u] <= depth[v]
     for k in range(LV + 1):
         if dd & 1:
             v = kprv[k][v]
         dd >>= 1
 
-    # assert depth[u] == depth[v]
     if u == v:
         return u
 
@@ -69,7 +67,6 @@ def lca(u, v):
             u = pu
             v = pv
 
-    # assert kprv[0][u] == kprv[0][v]
     return kprv[0][u]
 
 

@@ -12,16 +12,15 @@ class Solution:
         for i in range(n):
             dis[i][i] = 0
 
-        # Dijkstra
         visited = set()
         for i in range(n):
-            pool = [(0, i)]                                          # pool[j] = x:  d(i,j) = x
+            pool = [(0, i)]
             while pool:
-                x, j = heappop(pool)                                 # x = d(i,j)
-                if (i, j) not in visited and x <= distanceThreshold:  # early stop, if distance exceeds threshold
+                x, j = heappop(pool)
+                if (i, j) not in visited and x <= distanceThreshold:
                     visited.add((i, j))
                     for k in nei[j]:
-                        dis[i][k] = min(dis[i][k], x + dis[j][k])     # dis(i,k) = min(dis(i,k), dis(i,j)+dis(j,k))
+                        dis[i][k] = min(dis[i][k], x + dis[j][k])
                         heappush(pool, (dis[i][k], k))
         globalMin = [-1, -1]
         for i in range(n):

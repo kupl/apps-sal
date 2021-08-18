@@ -1,14 +1,7 @@
-# atcoder template
 def main():
     import sys
     input = sys.stdin.readline
-    # 文字列入力の時は上記はerrorとなる。
-    # ここにコード
-    # input
     x, y = map(int, input().split())
-
-    # output
-    # y以下でも最も大きい2^z
 
     answer = 0
     if x == 1:
@@ -20,8 +13,6 @@ def main():
             answer += 1
 
     print(answer)
-
-    # N = 1のときなどcorner caseを確認！
 
 
 def __starting_point():

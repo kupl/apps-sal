@@ -34,10 +34,10 @@ for p in itertools.permutations([(0, 1), (0, -1), (-1, 0), (1, 0)]):
         if (curr == end):
             break
 
-        if (is_valid(curr, r, c)) and (m[curr[0]][curr[1]] != '#'):
+        if (is_valid(curr, r, c)) and (m[curr[0]][curr[1]] != '
             continue
 
-        poss = False
+        poss=False
         break
 
     if poss and (curr == end):

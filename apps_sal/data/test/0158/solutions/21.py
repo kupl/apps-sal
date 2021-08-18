@@ -1,4 +1,3 @@
-# A. Chess Tourney
 
 n = int(input())
 r = list(map(int, input().split()))

@@ -18,8 +18,4 @@ else:
         tailTime = r / 2
     else:
         tailTime = r - k
-#print('energyPerPeriod: ' + str(c))
-#print('energyTotal: ' + str(2*t))
-#print('tailTime: ' + str(tailTime))
-# print(nrFullPeriods)
 print(nrFullPeriods * periodTime + tailTime)

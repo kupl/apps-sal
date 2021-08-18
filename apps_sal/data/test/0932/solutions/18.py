@@ -23,7 +23,6 @@ def ok(AA, resB):
 [m, n] = input().split(" ")
 m = int(m)
 n = int(n)
-#print("m:%d n:%d" % ( m , n ) )
 
 B = []
 A = []
@@ -36,7 +35,6 @@ for i in range(0, m):
     B.append(brow)
     A.append(arow)
 
-# print(B)
 for i in range(0, m):
     for j in range(0, n):
         if B[i][j] == 0:

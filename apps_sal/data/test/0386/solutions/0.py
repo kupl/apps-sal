@@ -28,7 +28,6 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
-############################## SOLUTION ##############################
 n = int(input().strip())
 mn = -2 * 10**9
 mx = 2 * 10**9

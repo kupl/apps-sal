@@ -4,7 +4,6 @@ class Solution:
         :type obstacleGrid: List[List[int]]
         :rtype: int
         """
-        # m * n
         m = len(obstacleGrid)
         n = len(obstacleGrid[0])
         ways = [[0 for i in range(n)] for j in range(m)]

@@ -1,15 +1,11 @@
-# UNIONFIND
 class UnionFind:
     def __init__(self, n):
-        # 負  : 根であることを示す。絶対値はランクを示す
-        # 非負: 根でないことを示す。値は親を示す
         self.table = [-1] * n
 
     def _root(self, x):
         if self.table[x] < 0:
             return x
         else:
-            # 経路の圧縮
             self.table[x] = self._root(self.table[x])
             return self.table[x]
 
@@ -21,7 +17,6 @@ class UnionFind:
         r2 = self._root(y)
         if r1 == r2:
             return
-        # ランクの取得
         d1 = self.table[r1]
         d2 = self.table[r2]
         if d1 <= d2:

@@ -1,5 +1,5 @@
 import string
-input()  # ignore length of word
+input()
 already_revealed = input()
 
 n = int(input())
@@ -11,7 +11,6 @@ end_set = set(string.ascii_lowercase + "%")
 for i in range(n):
     word = input()
 
-    # check word
     word_ok = True
     for i, char in enumerate(word):
         if i not in indeces:

@@ -7,11 +7,6 @@ for _ in range(n):
 
     l = min(p1, p2)
 
-    # while(m > 0 and l > 0):
-    #    k = min(l, m)
-    #    l -= k
-    #    m -= 1
-
     q = min(p1, p2)
     d = min((m * (m + 1)) / 2, q)
 

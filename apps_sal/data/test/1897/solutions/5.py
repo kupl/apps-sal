@@ -19,16 +19,3 @@ for i in range(1, l + 1):
 for i in range(1, l + 1):
     tot += ey[i] * run[i]
 print(tot)
-##god = {}
-##god2 = {}
-# for i in range(0, 15):
-##    god[i] = []
-##    god2[i] = []
-# for i in range(1, l+1):
-# for j in range(i, l+1):
-# god[j].append("1/"+str(j-i+1))
-# god[i-1].append("-1/"+str(j-i+1))
-# god2[j].append(1/(j-i+1))
-# god2[i-1].append(-1/(j-i+1))
-##        tot += (run[j]-run[i-1])/(j-i+1)
-# print(tot)

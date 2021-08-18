@@ -21,7 +21,5 @@ while tmp != h:
     for i in range(right, left + 1):
         tmp[i] += 1
     ans += 1
-#    print(right,left,ans)
-#    print(tmp)
 
 print(ans)

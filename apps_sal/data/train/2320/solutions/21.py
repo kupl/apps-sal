@@ -4,7 +4,7 @@ import math
 def bcof(x, y):
     a = math.factorial(x)
     b = math.factorial(y)
-    c = math.factorial(x - y)  # that appears to be useful to get the correct result
+    c = math.factorial(x - y)
     return a // (b * c)
 
 

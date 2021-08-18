@@ -22,7 +22,6 @@ sa = 0
 while sa < x - c:
     i, j = p[-1]
     p.pop()
-    # print(i,j,sa)
     if not visited[i][j]:
         if ok(i, j - 1):
             if not visited[i][j - 1]:

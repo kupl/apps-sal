@@ -74,9 +74,8 @@ class Game():
             return self._lines
 
     def createcompleteb(self):
-        # create a complete board
-        switch = 1  # 0 = number 1 = dot/inner
-        doi = 0  # 0 = dot 1 = inner
+        switch = 1
+        doi = 0
         count = 1
         tmp = []
         for y in range(self._board + 1 + self._board):
@@ -101,9 +100,8 @@ class Game():
 
 
 def creategameb(self, lines):
-    # create a game board using provided "lines"
-    switch = 1  # 0 = number 1 = dot/inner
-    doi = 0  # 0 = dot 1 = inner
+    switch = 1
+    doi = 0
     count = 1
     tmp = []
     for y in range(self._board + 1 + self._board):

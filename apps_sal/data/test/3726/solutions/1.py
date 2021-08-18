@@ -8,7 +8,6 @@ input = sys.stdin.readline
 N = int(input())
 X = set(int(x) for x in input().split())
 
-# 2は素数でないとして扱って
 U = 10**7 + 100
 is_prime = np.zeros(U, dtype=np.bool)
 is_prime[3::2] = 1
@@ -18,14 +17,11 @@ for p in range(3, U, 2):
     if is_prime[p]:
         is_prime[p * p::p + p] = 0
 
-# imosで値を入れないといけない場所
 X ^= set(x + 1 for x in X)
 
 EV = set(x for x in X if x % 2 == 0)
 OD = set(x for x in X if x % 2 == 1)
 
-# 1手でとれるペアを見つける：最大マッチング
-# 奇点から偶点に辺を貼る
 source = -1
 sink = -2
 graph = defaultdict(dict)

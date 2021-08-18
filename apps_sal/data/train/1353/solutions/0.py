@@ -1,4 +1,3 @@
-# cook your dish here
 def check(px, x):
     if px[1] == x[1]:
         return (x[2] - px[2]) <= (x[0] - px[0]) and (x[2] >= px[2])

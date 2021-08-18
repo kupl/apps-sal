@@ -13,7 +13,6 @@ class Solution:
             l.append([key, val])
 
         l.sort(key=lambda x: x[1])
-        # print(l)
         count = len(l)
 
         for i in range(len(l)):
@@ -26,5 +25,4 @@ class Solution:
                 count -= 1
                 i -= 1
 
-        # print(l)
         return count

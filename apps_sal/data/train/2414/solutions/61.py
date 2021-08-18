@@ -1,7 +1,6 @@
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         n = len(arr)
-        #arr = list(sorted(arr))
         count = 0
         for i in range(n):
             for j in range(i + 1, n):

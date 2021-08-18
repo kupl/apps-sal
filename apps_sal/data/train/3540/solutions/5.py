@@ -6,7 +6,7 @@ def numDays(y, m, d):
     return sum([31, 29 if isLeap(y) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][:m - 1]) + d
 
 
-def whatDay_Jan1st(y):  # monday: 1, tuesday: 2, ..., sunday: 7
+def whatDay_Jan1st(y):
     y = (y - 1) % 400
     return ((y // 100) * (76 * 1 + 24 * 2) + ((y % 100) // 4) * (1 + 1 + 1 + 2) + (y % 4)) % 7 + 1
 

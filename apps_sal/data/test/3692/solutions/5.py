@@ -11,23 +11,23 @@ class Circle:
         self.r = r
 
     def contains(self, c):
-        dd = (self.x - c.x)**2 + (self.y - c.y)**2  # dd = d*d
+        dd = (self.x - c.x)**2 + (self.y - c.y)**2
         return dd < (self.r - c.r)**2 and self.r > c.r
 
     def in_touches(self, c):
-        dd = (self.x - c.x)**2 + (self.y - c.y)**2  # dd = d*d
+        dd = (self.x - c.x)**2 + (self.y - c.y)**2
         return dd == (self.r - c.r)**2 and self.r > c.r
 
     def ex_touches(self, c):
-        dd = (self.x - c.x)**2 + (self.y - c.y)**2  # dd = d*d
+        dd = (self.x - c.x)**2 + (self.y - c.y)**2
         return dd == (self.r + c.r)**2
 
     def intersects(self, c):
-        dd = (self.x - c.x)**2 + (self.y - c.y)**2  # dd = d*d
+        dd = (self.x - c.x)**2 + (self.y - c.y)**2
         return (self.r - c.r)**2 < dd < (self.r + c.r)**2
 
     def not_intersects(self, c):
-        dd = (self.x - c.x)**2 + (self.y - c.y)**2  # dd = d*d
+        dd = (self.x - c.x)**2 + (self.y - c.y)**2
         return dd > (self.r + c.r)**2
 
     def get_intersections(self, c):
@@ -89,7 +89,6 @@ def count_regions(n, circles):
                 return 4 + c1.intersects(c2)
             elif c0.intersects(c2):
                 if c1.intersects(c2):
-                    # intersects: 7/6, depends on intersections
                     c0_x_c2 = c0.get_intersections(c2)
                     return 6 + all(not c1.is_on(p) for p in c0_x_c2)
                 else:
@@ -112,7 +111,6 @@ def count_regions(n, circles):
 
             elif c0.intersects(c2):
                 if c1.intersects(c2):
-                    # intersects: 8/7/6?
                     c0_x_c1 = c0.get_intersections(c1)
                     return 7 + all(not c2.is_on(p) for p in c0_x_c1)
                 elif c1.ex_touches(c2):
@@ -125,7 +123,6 @@ def count_regions(n, circles):
                 return 5 + c1.intersects(c2)
 
             elif c0.contains(c2):
-                # [?] c1.intersects(c2) -> ?
                 return 5 + c1.intersects(c2)
 
             elif c0.in_touches(c2) or c0.ex_touches(c2):
@@ -148,7 +145,7 @@ def count_regions(n, circles):
                 elif c1.in_touches(c2) or c1.ex_touches(c2) or c2.in_touches(c1):
                     return 7 - any(c2.is_on(p) for p in c0_x_c1)
 
-                else:  # if c1.contains(c2) or c2.contains(c1) or c1.not_intersects(c2):
+                else:
                     return 6
 
         return 4
@@ -161,7 +158,6 @@ def main():
     circles = [tuple(map(int, input().split())) for c in range(n)]
     circles.sort(key=lambda c: (-c[2], c[0], c[1]))
     circles = [Circle(*u) for u in circles]
-    # print(n, circles)
     print(count_regions(n, circles))
 
 

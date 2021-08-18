@@ -4,9 +4,7 @@ from collections import defaultdict
 
 class UnionFind:
     def __init__(self, n):
-        # initially, each node is an independent component
         self.parent = [i for i in range(n)]
-        # keep the size of each component
         self.size = [1] * n
 
     def find(self, x):
@@ -20,7 +18,6 @@ class UnionFind:
 
         if px == py:
             return px
-        # otherwise, connect the two sets
         if self.size[px] > self.size[py]:
             px, py = py, px
         self.parent[px] = py

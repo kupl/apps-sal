@@ -1,6 +1,5 @@
 N = int(input())
 slist = [x == "o" for x in input()]
-# print(slist)
 
 answer_list = [0] * N
 

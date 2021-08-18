@@ -12,8 +12,6 @@ class Solution:
             for r in route:
                 graph[r].add(bus)
 
-        # print(graph)
-
         queue = deque([(S, 0)])
         seen = set([S])
 

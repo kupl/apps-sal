@@ -4,7 +4,6 @@ class Solution:
             found = True
             for j in range(0, m):
                 for n in range(1, k):
-                    #print(i, j, n, i+j, m*n + i+j)
                     if arr[i + j] != arr[m * n + i + j]:
                         found = False
             if found:

@@ -9,7 +9,6 @@ vs_odd = vs[1::2]
 count_e = collections.Counter(vs_even).most_common()
 count_o = collections.Counter(vs_odd).most_common()
 
-# ダミー
 count_e.append((0, 0))
 count_o.append((0, 0))
 

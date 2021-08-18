@@ -25,7 +25,6 @@ def calc(a, b, mod):
     ans = 0
     for k in range(min(a, b) + 1):
         ans += (cnk(a, k, mod) * cnk(b, k, mod) * fact[k])
-        # print(a,b,cnk(a,k,mod),cnk(b,k,mod))
         ans %= mod
     return ans
 

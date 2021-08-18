@@ -16,6 +16,5 @@ class Solution:
                     if nb >= 0 and nb < len(arr) and nb != cur and nb not in visited:
                         visited.add(cur)
                         q.append(nb)
-                # seen.add(cur)
             step += 1
         return -1

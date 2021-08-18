@@ -10,7 +10,6 @@ class Solution:
             for j in range(i - 1, -1, -1):
                 diff = A[i] - A[j]
                 if diff in ld[j]:
-                    # print(i,j,diff,ld[j][diff])
                     if diff in ld[i]:
                         ld[i][diff] = max(ld[j][diff] + 1, ld[i][diff])
                     else:
@@ -23,7 +22,5 @@ class Solution:
                 if ld[i][diff] > ans:
                     ind = i
                 ans = max(ans, ld[i][diff])
-
-        # print(ind,ld[ind],A[ind],len(A))
 
         return ans

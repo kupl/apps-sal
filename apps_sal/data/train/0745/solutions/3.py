@@ -1,4 +1,3 @@
-# cook your dish here
 def temple(n, arr):
     s = sum(arr)
     left = [0] * n
@@ -10,11 +9,9 @@ def temple(n, arr):
 
     for i in range(1, n):
         left[i] = min(left[i - 1] + 1, arr[i])
-    # print(*left)
 
     for i in range(n - 2, -1, -1):
         right[i] = min(right[i + 1] + 1, arr[i])
-    # print(*right)
 
     for i in range(n):
         maxHeight = max(maxHeight, min(left[i], right[i]))

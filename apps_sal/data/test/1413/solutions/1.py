@@ -12,7 +12,7 @@ def solve(N, S):
     return ans
 
 
-for tc in range(1):  # rri()):
+for tc in range(1):
     N = rri()
     S = rr()
     print(solve(N, S))

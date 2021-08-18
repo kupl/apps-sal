@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 sys.setrecursionlimit(10**6)
 
@@ -11,5 +10,4 @@ for i in range(n):
         ans *= 2
     else:
         ans += k
-    # print(ans)
 print(ans)

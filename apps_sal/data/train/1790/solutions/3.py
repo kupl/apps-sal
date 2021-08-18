@@ -1,12 +1,9 @@
 class Graph():
 
     def __init__(self, vertices_num):
-        # number of nodes (an integer)
         self.v = vertices_num
-        # (maybe not useful here) : list of nodes from "A0", "A1" ... to "A index (vertices_num - 1)"
         self.nodes = None
 
-    # from adjacency matrix to dictionary
     def adjmat_2_graph(self, matrix):
         dictionary = {}
         step = 0
@@ -20,7 +17,6 @@ class Graph():
             step += 1
         return dictionary
 
-    # from dictionary to adjacency matrix
     def graph_2_mat(self, dictionary):
         matrix = []
         step = 0
@@ -32,7 +28,6 @@ class Graph():
             step += 1
         return matrix
 
-    # from dictionary to adjacency list
     def graph_2_list(self, dictionary):
         list = []
         step = 0
@@ -42,14 +37,12 @@ class Graph():
             step += 1
         return list
 
-    # from adjacency list to dictionary
     def list_2_graph(self, list):
         dictionary = {}
         for vertex in list:
             dictionary[vertex[0]] = vertex[1]
         return dictionary
 
-    # from adjacency matrix to adjacency list
     def mat_2_list(self, matrix):
         list = []
         step = 0
@@ -64,7 +57,6 @@ class Graph():
             step += 1
         return list
 
-    # from adjacency list to adjacency matrix
     def list_2_mat(self, list):
         matrix = []
         step = 0
@@ -78,7 +70,6 @@ class Graph():
                     step += 1
         return matrix
 
-    # find all path from node start_vertex to node end_vertex
     def find_all_paths(self, dictionary, start, end):
         def dfs(dictionary, start, end, path=[]):
             path = path + [start]

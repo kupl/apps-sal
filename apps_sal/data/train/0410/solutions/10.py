@@ -3,7 +3,6 @@ class Solution:
         d = {}
         for i in range(lo, hi + 1):
             self.pow(i, i, d, 0)
-            # print(d)
         d1 = OrderedDict(sorted(list(d.items()), key=lambda x: x[1]))
         l = list(d1.keys())
         return l[k - 1]

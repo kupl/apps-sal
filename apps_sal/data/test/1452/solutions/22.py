@@ -39,7 +39,6 @@ if ans == 1:
     for i in range(1, h):
         for j in range(1, w):
             if j > arrr[i] and i > arrc[j]:
-                # print(i,j)
                 ans *= 2
                 if ans > mod:
                     ans -= mod

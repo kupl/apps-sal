@@ -16,5 +16,4 @@ class Solution:
                     for k in range(j - 1, i - 2, -1):
                         val = max(jobDifficulty[k + 1], val)
                         dp[i][j] = min(dp[i][j], dp[i - 1][k] + val)
-        # print(dp)
         return dp[-1][-1]

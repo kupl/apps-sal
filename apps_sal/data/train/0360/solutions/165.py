@@ -6,7 +6,6 @@ class Solution:
             high += weight
             low = max(low, weight)
 
-        # Search over the possible solutions of [max value, sum of weights]
         while (low < high):
             mid = (high + low) // 2
 
@@ -18,10 +17,8 @@ class Solution:
                     days += 1
                 cur_weight += weight
 
-            # Did it in too many days, need higher capacity
             if days > D:
                 low = mid + 1
-            # Did it in too few days, need lower capacity
             else:
                 high = mid
 

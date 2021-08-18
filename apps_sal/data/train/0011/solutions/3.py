@@ -48,12 +48,8 @@ for _ in range(t):
     bs.reverse()
     bw.reverse()
 
-    #print(fa, fd, fs, fw)
-    #print(ba, bd, bs, bw)
-
     hok, vok = False, False
     for i in range(1, n):
-        #print(n, i)
         if fd[i] - fa[i] < h and abs(bd[i] - ba[i]) < h:
             hok = True
         if fw[i] - fs[i] < v and abs(bw[i] - bs[i]) < v:

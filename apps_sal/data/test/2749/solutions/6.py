@@ -5,7 +5,6 @@ s = []
 for i in range(1, N + 1):
     for j in range(a[i - 1]):
         s.append(i)
-# print(s)
 num = 0
 for i in range(H):
     tmp = []

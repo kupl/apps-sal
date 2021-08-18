@@ -12,8 +12,6 @@ for t in range(T):
     aa = Counter(tuple(sorted([a[i], a[n - i - 1]])) for i in range(mid))
     bb = Counter(tuple(sorted([b[i], b[n - i - 1]])) for i in range(mid))
 
-    # print(aa)
-    # print(bb)
     if aa != bb:
         print('No')
         continue

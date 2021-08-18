@@ -1,5 +1,5 @@
 def unlucky_days(y):
-    count = 0  # Clean & Pure Math Example
+    count = 0
     for m in range(3, 15):
         if m == 13:
             y -= 1

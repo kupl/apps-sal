@@ -1,5 +1,3 @@
-# The real secret to success is enthusiasm. Walter Chrysler
-# by : Blue Edge - Create some chaos
 
 def give(n):
     i = 2

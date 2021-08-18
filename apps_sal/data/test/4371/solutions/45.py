@@ -1,5 +1,3 @@
-# B - 754
-# https://atcoder.jp/contests/abc114/tasks/abc114_b
 
 s = input()
 

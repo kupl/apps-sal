@@ -19,7 +19,6 @@ def bishop(r1, c1, r2, c2):
 
 def king(r1, c1, r2, c2):
     mine = abs(r1 - r2) + abs(c1 - c2)
-    # move horizonatal
     for i in range(1, 9):
         if abs(i - r2) == abs(c1 - c2):
             mine = min(mine, abs(i - r1) + abs(c1 - c2))

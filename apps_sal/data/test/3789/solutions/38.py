@@ -67,7 +67,6 @@ class Dinic():
             res += self.dfs()
         return res
 
-    # これが出力用
     def get_max_flow(self):
         if self.max_flow == -1:
             self.max_flow = self.calculation()

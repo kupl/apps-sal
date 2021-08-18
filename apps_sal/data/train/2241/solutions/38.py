@@ -7,7 +7,7 @@ def main():
     dp[0] = 1
     ans = 0
 
-    p = [[0] * (401) for _ in [0] * 401]  # p[i][j]でj^i
+    p = [[0] * (401) for _ in [0] * 401]
     for i in range(401):
         for j in range(401):
             p[i][j] = pow(j, i, mod)

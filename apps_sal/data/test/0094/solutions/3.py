@@ -14,11 +14,9 @@ for i in range(m):
                 rec[j + 1] = min(rec[j + 1], u + d)
             else:
                 rec[j + 1] = u + d
-            #print(d, j+1, rec)
     else:
         if rec[i + 1]:
             rec[i + 1] = min(rec[i + 1], u)
         else:
             rec[i + 1] = u
-        #print(i, rec)
 print(rec[-1])

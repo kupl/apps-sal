@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 s = input()
 m = int(input())
@@ -8,7 +7,6 @@ for i in range(m):
     start = s[:l - 1]
     middle = s[l - 1:r]
     end = s[r:]
-    # shift middle k times
     ln = r - l + 1
     k %= ln
     middle_e = middle[:ln - k]

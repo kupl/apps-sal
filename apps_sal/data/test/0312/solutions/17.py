@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
 """
-Codeforces Round #316 (Div. 2)
+Codeforces Round 
 
 Problem B. Simple Game
 

@@ -5,7 +5,6 @@ def main():
     MOD = 10 ** 9 + 7
     N = int(input())
     A = list(map(int, input().split(' ')))
-    # 答えは sum(lcm(A) / A)
     L = 1
     for a in A:
         L = L * a // math.gcd(L, a)

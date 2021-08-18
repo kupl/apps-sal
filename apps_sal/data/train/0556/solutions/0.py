@@ -7,19 +7,15 @@ while i < z:
     p = int(n**(0.5))
     if p * (p + 1) < n:
         p += 1
-    # print("P", p)
     x, y = 0, 0
     q = 0
     flag = True
     if p * (p + 1) == n:
-        # print("Even steps, nice")
         q = p
     else:
-        # remaining steps
         q = p - 1
         flag = False
     if q % 2:
-        # odd
         x -= ((q + 1) // 2)
         y += ((q + 1) // 2)
     else:
@@ -28,14 +24,11 @@ while i < z:
     if flag:
         print(x, y)
     else:
-        # remaining steps
         l = q * (q + 1)
         t = p * (p + 1)
         diff = t - l
 
-        # print(x, y)
         if x < 0:
-            # left
             if n - l >= diff // 2:
                 y *= (-1)
                 l += (diff // 2)
@@ -44,7 +37,6 @@ while i < z:
                 y -= (n - l)
 
         else:
-            # right
             if n - l >= diff // 2:
                 y *= (-1)
                 y += 1
@@ -52,6 +44,5 @@ while i < z:
                 x -= (n - l)
             else:
                 y += (n - l)
-        # print("Remaining steps: ", n-l)
         print(x, y)
     i += 1

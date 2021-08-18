@@ -20,16 +20,12 @@ class Solution:
                 b_c_idx = preferences[b].index(c)
                 b_d_idx = preferences[b].index(d)
 
-                # a-c
                 if c_a_idx < c_d_idx and a_c_idx < a_b_idx:
                     unhappy[a] = unhappy[c] = 1
-                # a-d
                 if d_a_idx < d_c_idx and a_d_idx < a_b_idx:
                     unhappy[a] = unhappy[d] = 1
-                # b-c
                 if c_b_idx < c_d_idx and b_c_idx < b_a_idx:
                     unhappy[b] = unhappy[c] = 1
-                # b-d
                 if d_b_idx < d_c_idx and b_d_idx < b_a_idx:
                     unhappy[b] = unhappy[d] = 1
         return sum(unhappy)

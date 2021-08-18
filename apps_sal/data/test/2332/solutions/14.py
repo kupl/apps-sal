@@ -8,10 +8,8 @@ for i in range(k):
     for i in range(2, inp[0] + 1):
         if A[inp[i] - 1] < A[inp[ind] - 1]:
             ind = i
-    # print(ind)
     for i in range(1, inp[0] + 1):
         A[inp[i] - 1] = A[inp[ind] - 1]
-    # print(A)
 
 dic = dict()
 for i in range(n):

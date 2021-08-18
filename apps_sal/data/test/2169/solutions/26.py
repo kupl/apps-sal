@@ -1,22 +1,13 @@
-# coding: utf-8
 import bisect
 import math
 from collections import defaultdict
 import sys
 
-# from operator import itemgetter
 sysread = sys.stdin.buffer.readline
 read = sys.stdin.buffer.read
 printout = sys.stdout.write
 sprint = sys.stdout.flush
-# from heapq import heappop, heappush
 sys.setrecursionlimit(10 ** 7)
-# from itertools import product, accumulate, combinations, product
-# import numpy as np
-# from copy import deepcopy
-#from collections import deque
-# from decimal import Decimal
-# from numba import jit
 
 INF = 1 << 50
 EPS = 1e-8
@@ -59,19 +50,15 @@ def run():
             ci, cj = V[mostR]
             tmp = 0
             cache[mostR] = 0
-            #print(mostL, mostR)
             for v in range(mostR - D, mostL - D, -D):
-                #print(v, V[v])
                 ni, nj = V[v]
                 tmp += abs(ni - ci) + abs(nj - cj)
                 cache[v] = tmp
                 ci, cj = ni, nj
-        # print(cache)
         print((cache[l] - cache[r]))
 
 
 def __starting_point():
-    #print(math.gcd(0, 10))
     run()
 
 

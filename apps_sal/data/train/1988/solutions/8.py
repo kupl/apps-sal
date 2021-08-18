@@ -3,7 +3,6 @@ import numpy as np
 
 class Solution:
     def shortestAlternatingPaths(self, n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
-        # construct the graph, 1 means red edge, 2 means blue edge
         graph = collections.defaultdict(set)
         for src, des in red_edges:
             graph[src].add((des, 1))
@@ -14,17 +13,14 @@ class Solution:
 
         res = [-1] * n
 
-        # initiate the q for bfs with node (cur Node, distanceTo0, from which color)
         q = [(0, 0, 1), (0, 0, 2)]
 
         while q:
             nextq = []
             for cur, dist, color in q:
-                # shortest distance we get so far
                 if res[cur] == -1:
                     res[cur] = dist
                 for neighbor, nextColor in graph[cur]:
-                    # visit the node with a different color and record the edges we have visited so far
                     if nextColor != color and (cur, neighbor, nextColor) not in seen:
                         nextq.append((neighbor, dist + 1, nextColor))
                         seen.add((cur, neighbor, nextColor))

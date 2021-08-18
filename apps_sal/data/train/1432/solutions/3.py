@@ -1,5 +1,3 @@
-# cook your dish here
-# problem code: BANDMATR, language: python3.6
 for __ in range(int(input())):
     a = []
     n = int(input())

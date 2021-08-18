@@ -4,7 +4,6 @@ def resolve():
     A = list(map(int, input().split(" ")))
     import collections
     cnter = collections.Counter(A)
-    # print(cnter)
     evens = 0
     for i in list(cnter.values()):
         if i % 2 == 0:

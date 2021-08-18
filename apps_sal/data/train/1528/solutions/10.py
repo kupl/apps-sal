@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     nk = [int(i) for i in input().split()]
     k = nk[1]

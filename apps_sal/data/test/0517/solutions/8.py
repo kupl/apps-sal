@@ -3,7 +3,6 @@ from sys import setrecursionlimit
 setrecursionlimit(100000)
 
 n, d, h = list(map(int, input().split()))
-# ~ a = list(map(int, input().split()))
 if (n == 2):
     if (d == 1 and h == 1):
         print('1 2')

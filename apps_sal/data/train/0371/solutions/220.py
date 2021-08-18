@@ -10,7 +10,6 @@ class Solution:
         dist[S] = depth
         vis_bs = set()
 
-        # from cities to buses
         c_to_bs = defaultdict(list)
         for pos_b, b in enumerate(routes):
             for c in b:
@@ -21,7 +20,7 @@ class Solution:
         while len(cur_cs) > 0:
             depth += 1
             cur_bs = set()
-            for c in cur_cs:  # new buses from last cities
+            for c in cur_cs:
                 for pos_b in c_to_bs[c]:
                     if pos_b not in vis_bs:
                         cur_bs.add(pos_b)

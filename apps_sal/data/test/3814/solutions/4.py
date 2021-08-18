@@ -16,13 +16,10 @@ A[n]
 B = np.zeros((N + 1, N + 1), dtype=np.int64)
 B[0, 0] = 1
 for n in range(1, N + 1):
-    # 1番を単独で使う
     B[n, 1:] = B[n - 1, :-1]
-    # 1番をどこかに混ぜてもらう
     B[n, 1:] += B[n - 1, 1:] * np.arange(1, N + 1) % MOD
     B[n] %= MOD
 
-# 2^{kl}
 pow_2 = np.ones((N + 1, N + 1), dtype=np.int64)
 for n in range(1, N + 1):
     pow_2[1, n] = 2 * pow_2[1, n - 1] % MOD

@@ -32,9 +32,8 @@ class Solution:
         while queue:
             i, j, t, c = queue.popleft()
             for i2, j2, t2 in parents(i, j, t):
-                # if this parent node is not colored
                 if color[i2, j2, t2] is DRAW:
-                    if t2 == c:  # winning move
+                    if t2 == c:
                         color[i2, j2, t2] = c
                         queue.append((i2, j2, t2, c))
                     else:

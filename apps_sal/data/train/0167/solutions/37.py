@@ -1,6 +1,5 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
-        # we have floors = dp[nummoves][eggs]
         dp = [[
               0
               for egg in range(K + 1)]

@@ -6,14 +6,14 @@ class UnionFind():
         self.n = n
         self.parents = [-1] * n
 
-    def find(self, x):  # 要素xが属するグループの根を返す
+    def find(self, x):
         if self.parents[x] < 0:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def union(self, x, y):  # 要素xが属するグループと要素yが属するグループを併合
+    def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
 
@@ -26,20 +26,20 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def size(self, x):  # グループのサイズ
+    def size(self, x):
         return -self.parents[self.find(x)]
 
-    def same(self, x, y):  # 要素xと要素yが同じグループかどうか
+    def same(self, x, y):
         return self.find(x) == self.find(y)
 
-    def members(self, x):  # 要素xが属するグループに属する要素をリストで返す
+    def members(self, x):
         root = self.find(x)
         return [i for i in range(self.n) if self.find(i) == root]
 
-    def roots(self):  # すべての根の要素をリストで返す
+    def roots(self):
         return [i for i, x in enumerate(self.parents) if x < 0]
 
-    def group_count(self):  # グループの数を変えす
+    def group_count(self):
         return len(self.roots())
 
     def all_group_members(self):

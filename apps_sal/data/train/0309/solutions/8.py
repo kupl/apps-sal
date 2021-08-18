@@ -8,7 +8,7 @@ class Solution:
         m = 2
 
         for i in range(1, len(A)):
-            for j in range(i):  # here we have to iterate from 0 to i-1 and not i-1 to 0.
+            for j in range(i):
 
                 diff = A[i] - A[j]
                 if diff in dp[j]:

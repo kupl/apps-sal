@@ -1,4 +1,3 @@
-# cook your code here
 test = int(input())
 a = 0
 while(a < test):

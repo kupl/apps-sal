@@ -14,8 +14,6 @@ class Solution:
                     expected_sum = l**2
                     x, y = i + l, j + l
                     range_sum = dp[x][y] - dp[x][j] - dp[i][y] + dp[i][j]
-                    # print(i,j,l,x,y)
-                    # print(expected_sum, range_sum)
                     if expected_sum != range_sum:
                         break
                     result += 1

@@ -19,7 +19,6 @@ for v in a:
     if v % 2 == 1:
         mid += 1
     r22 += v // 2
-# print(r4,r22,mid,r2)
 if r4 > 0:
     mid -= r4
     r22 -= r4

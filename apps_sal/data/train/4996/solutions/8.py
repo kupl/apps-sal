@@ -1,4 +1,3 @@
-# RECURSION!
 from functools import lru_cache
 __import__("sys").setrecursionlimit(2600)
 

@@ -8,36 +8,26 @@ for i in range(n):
     a.append([0] * (n))
     b.append([0] * (n))
 
-#import numpy as np
-# b=np.array(b)
-# print(a)
 '''
 for i in range(m):
     l,r=map(int,input().split())
-    #print(a[(r-1):n,0:l])
-    #a[(r-1):n,0:l]+=1
     for j in range(r-1,n):
         for k in range(l):
             a[j][k]+=1
 '''
 for i in range(m):
     l, r = map(int, input().split())
-    # print(a[(r-1):n,0:l])
     a[l - 1][r - 1] += 1
 
-# print(a)
 
 for i in range(n):
     a[i] = list(accumulate(a[i]))
 
-# print(a)
 
 for i in range(n):
     for j in range(n - i - 1):
         a[n - i - j - 2][n - i - 1] += a[n - i - j - 1][n - i - 1]
-        # print(a)
 
-# print(a)
 
 '''
 for l in range(n):
@@ -46,10 +36,7 @@ for l in range(n):
         for i in range(r,n):
             for j in range(0,l+1):
                 b[i][j]+=temp
-        #b[r:n,0:l+1]+=temp
 '''
-# print(a)
-# print(b)
 
 for i in range(q):
     P, Q = map(int, input().split())

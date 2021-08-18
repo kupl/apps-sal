@@ -1,8 +1,3 @@
-#
-# @lc app=leetcode id=842 lang=python3
-#
-# [842] Split Array into Fibonacci Sequence
-#
 class Solution:
     def splitIntoFibonacci(self, S: str) -> List[int]:
         size = len(S)

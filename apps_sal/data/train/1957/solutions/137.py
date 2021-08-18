@@ -25,6 +25,3 @@ class Solution:
                         dq.append((x, y, ob + grid[x][y], step + 1))
                         cache[(x, y, ob + grid[x][y])] = step + 1
         return -1 if minStep == np.inf else minStep
-
-# This is a difficult problem, and illustrate well bfs, definitely need to review
-# 1. Basic idea is to BFS the whole grid, state is actually i,j and number of obstacles removed, this state is the key and value is the steps taken so far

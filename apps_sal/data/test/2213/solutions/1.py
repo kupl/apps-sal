@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 
 n, m, k = map(int, input().split())
 

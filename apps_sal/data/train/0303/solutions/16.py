@@ -13,5 +13,4 @@ class Solution:
                 mv = max(mv, A[i - j])
                 dp[i + 1] = max(dp[i + 1], dp[i - j] + (j + 1) * mv)
 
-        # print(dp)
         return dp[N]

@@ -31,15 +31,11 @@ c = Counter([])
 for i in range(1, n + 1):
     c += factorization(i)
 
-# cから適当に約数を選んで約数の個数が75となるように選ぶ
-# factorization(75): [5,2][3,1]
 lc = [[k, v] for k, v in c.items()]
 
 ans = 0
-# 一つの素因数が75個
 f75 = sum([1 for v in c.values() if v >= 74])
 ans += f75
-# 3, 3, 5のパターン
 f3 = sum([1 for v in c.values() if v >= 2])
 f5 = sum([1 for v in c.values() if v >= 4])
 f15 = sum([1 for v in c.values() if v >= 14])

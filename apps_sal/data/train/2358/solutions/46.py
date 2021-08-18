@@ -14,12 +14,10 @@ for i in range(N + 2):
         xj, yj, rj = Cs[j]
         Es[i][j] = Es[j][i] = max(0, math.sqrt((xi - xj)**2 + (yi - yj)**2) - ri - rj)
 
-# dists: sortest path
 INF = float('inf')
 dists = [INF] * (N + 2)
 dists[N] = 0
 
-# dijk
 q = []
 close = set()
 start = N

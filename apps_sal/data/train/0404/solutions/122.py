@@ -4,7 +4,7 @@ class Solution:
         for i in range(1, len(prefix)):
             prefix[i] += prefix[i - 1]
 
-        def query(i, j):  # inclusive
+        def query(i, j):
             return prefix[j + 1] - prefix[i]
 
         def get_average(i, j):

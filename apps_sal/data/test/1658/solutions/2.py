@@ -1,4 +1,3 @@
-# fast io
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
 def input(): return next(_data)
@@ -28,7 +27,6 @@ def mul_vec_sparse_mat(v, ta):
 def mod_pow_kitamasa(a, x):
     n = len(a)
 
-    # sparse matrix of a^T
     ta = [[] for i in range(n)]
     for i in range(n):
         for j in range(n):

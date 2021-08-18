@@ -21,7 +21,7 @@ def factorize(n):
     return len(a)
 
 
-s = [0] * 100001  # s[i]==1:iが素数
+s = [0] * 100001
 for i in range(100001):
     s[i] = factorize(i)
 j = [0] * 100001

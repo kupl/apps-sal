@@ -6,7 +6,7 @@ class UnionFind:
     def __init__(self, n):
         self._id = list(range(n))
         self._sz = [1] * n
-        self.cc = n  # connected components
+        self.cc = n
 
     def _root(self, i):
         j = i

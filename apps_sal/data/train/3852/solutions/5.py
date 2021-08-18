@@ -1,5 +1,4 @@
 def ips_between(start, end):
-    # TODO
     difference = [int(b) - int(a) for a, b in zip(start.split("."), end.split("."))]
     sum = 0
     for d in difference:

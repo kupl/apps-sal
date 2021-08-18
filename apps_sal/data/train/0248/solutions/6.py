@@ -1,6 +1,6 @@
 class UnionFind:
     def __init__(self, n):
-        self.parent = [i for i in range(n)]  # i is the parent of i , initially
+        self.parent = [i for i in range(n)]
         self.size = [1 for i in range(n)]
 
     def find(self, A):

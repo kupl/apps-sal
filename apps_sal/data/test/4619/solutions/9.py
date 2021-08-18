@@ -1,8 +1,8 @@
 w, h, n = map(int, input().split())
-x1 = [0]  # 1 left border of white area
-x2 = [w]  # 2
-y1 = [0]  # 3
-y2 = [h]  # 4
+x1 = [0]
+x2 = [w]
+y1 = [0]
+y2 = [h]
 for i in range(n):
     x, y, a = map(int, input().split())
     if a == 1:

@@ -13,7 +13,6 @@ class Solution:
             return True
 
         visited.append(start)
-        # print(start)
         res = self.canReach2(arr, start + arr[start], visited) or self.canReach2(arr, start - arr[start], visited)
         if res is False:
             visited.pop()

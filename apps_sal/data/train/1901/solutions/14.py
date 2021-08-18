@@ -35,17 +35,14 @@ class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
         m = len(grid)
         n = len(grid[0])
-        # assuming we have a UnionFind data structure
 
         def rc2idx(r, c):
             return r * n + c
 
-        # build uf out of the islands
         uf = UnionFind(m * n)
         max_area = 0
         for r in range(m):
             for c in range(n):
-                # union with the neighbours
                 if grid[r][c] == 1:
                     for dr, dc in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
                         nr, nc = r + dr, c + dc
@@ -56,7 +53,6 @@ class Solution:
 
                     max_area = max(max_area, uf.size[uf.find(rc2idx(r, c))])
 
-        # check all possible points for setting 0 to 1
         for r in range(m):
             for c in range(n):
                 area = 0

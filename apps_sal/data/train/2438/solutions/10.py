@@ -6,11 +6,11 @@ class Solution:
         """
         l = len(s)
         n_c = 0
-        for i in range(l - 1, -1, -1):  # 从末尾开始计数
+        for i in range(l - 1, -1, -1):
             if s[i] != ' ':
                 n_c += 1
             elif s[i] == ' ' and n_c == 0:
                 pass
-            elif s[i] == ' ' and n_c != 0:  # 遇到空格，且字符计数非零时，返回计数值
+            elif s[i] == ' ' and n_c != 0:
                 return n_c
         return n_c

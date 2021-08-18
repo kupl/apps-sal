@@ -21,14 +21,14 @@ def crosstable(players, results):
         len(max([str(val[2]) for val in D], key=len))
     D.sort(key=lambda x: (-x[1], -float(x[2]), x[0].split()[1]))
     points = {k: [v[0], v[1], sortme_sensei(k, v[2], D, players)] for k, v in list(points.items())}
-    string = "#".rjust(sep_points) + "  " + "Player".ljust(playa) + "".join(
-        str(i).rjust(sep_points + 1) if i - 1 else str(i).rjust(sep_points) for i in range(1, len(players) + 1)) \
-        + "  " + "Pts".center(ptsz) + "  " + (
+    string = "
+        str(i).rjust(sep_points + 1) if i - 1 else str(i).rjust(sep_points) for i in range(1, len(players) + 1)) +
+        "  " + "Pts".center(ptsz) + "  " + (
         "SB".center(Sb - 1)[:-1] if "SB".center(Sb - 1)[-1] == " " else "SB".center(Sb - 1)) + "\n"
-    tempo, C = "", 0
+    tempo, C="", 0
     for i in range(len(D)):
-        tempo += str(i + 1 if D[i - 1][2] != D[i][2] or D[i - 1][1] != D[i][1] else "").rjust(sep_points) + "  " + \
-            D[i][0].ljust(playa)
+        tempo += str(i + 1 if D[i - 1][2] != D[i][2] or D[i - 1][1] != D[i][1] else "").rjust(sep_points) + "  "
+            + D[i][0].ljust(playa)
         for idx, res in enumerate(points[D[i][0]][2]):
             if idx:
                 tempo += res in [1, 0] and str(int(res)).rjust(sep_points + 1) or res == 0.5 and "=".rjust(
@@ -36,9 +36,9 @@ def crosstable(players, results):
             else:
                 tempo += res in [1, 0] and str(int(res)).rjust(sep_points) or res == 0.5 and "=".rjust(sep_points) or (
                     sep_points) * " "
-        tempo += "  " + str(D[i][1]).rjust(ptsz) + "  " + \
-            str(D[i][2]).rjust(Sb) + ("\n" if i != len(D) - 1 else "")
+        tempo += "  " + str(D[i][1]).rjust(ptsz) + "  "
+            + str(D[i][2]).rjust(Sb) + ("\n" if i != len(D) - 1 else "")
         if not C:
             string += (len(tempo) - 1) * "=" + "\n"
-            C = 1
+            C=1
     return string + tempo

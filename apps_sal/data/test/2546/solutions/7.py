@@ -20,12 +20,9 @@ def solve():
         a, b = getList()
         sals.append((a, b))
 
-    # ls.sort()
-    # rs.sort()
     ans_mx = 10**10
     ans_mn = 0
     while(ans_mx - ans_mn > 1):
-        # print(ans_mx, ans_mn)
         tmp = 0
         heap = []
         mid = (ans_mn + ans_mx) // 2
@@ -35,14 +32,12 @@ def solve():
             else:
                 heapq.heappush(heap, (-sal[0], -sal[1]))
 
-        # print(len(heap))
         if len(heap) < (n + 1) // 2:
             ans_mx = mid
             continue
 
         high = 0
         tgt = n // 2
-        # print(heap)
         while(heap):
             sal_cur = heapq.heappop(heap)
             if high <= tgt:
@@ -56,14 +51,10 @@ def solve():
 
         else:
             ans_mx = mid
-        # print(tmp)
 
-# ================================
-#     print(ans_mx, ans_mn)
     tmp = 0
     heap = []
     mid = ans_mx
-    # print("mid", mid)
     for sal in sals:
         if sal[1] < mid:
             tmp += sal[0]
@@ -76,16 +67,13 @@ def solve():
 
     high = 0
     tgt = n // 2
-    # print(heap)
     while (heap):
         sal_cur = heapq.heappop(heap)
-        # print(sal_cur)
         if high <= tgt:
             tmp += max(mid, -sal_cur[0])
             high += 1
         else:
             tmp += -sal_cur[0]
-        # print(tmp)
     if tmp <= money:
         print(mid)
         return
@@ -93,7 +81,6 @@ def solve():
     else:
         print(ans_mn)
         return
-    # print(tmp)
 
 
 def main():

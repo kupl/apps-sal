@@ -1,8 +1,6 @@
 N, M = map(int, input().split())
 
-# 学生N人の現在地(a,b)
 A_B = [list(map(int, input().split())) for _ in range(N)]
-# チェックポイントM個の場所(c,d)
 C_D = [list(map(int, input().split())) for _ in range(M)]
 
 

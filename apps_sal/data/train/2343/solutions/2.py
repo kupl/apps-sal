@@ -7,7 +7,6 @@ for _ in range(t):
         a.append(1 << i)
         i += 1
     a.append((1 << i) - (1 << (i + 1)) + d + 1)
-    # print(a)
     ans = 1
     for x in a:
         ans *= x + 1

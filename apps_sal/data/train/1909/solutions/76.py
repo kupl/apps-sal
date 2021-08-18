@@ -2,8 +2,8 @@ class Solution:
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
         n = len(grid)
         m = len(grid[0])
-        rows = [[0 for j in range(m + 1)] for i in range(1 + n)]  # along rows
-        cols = [[0 for j in range(m + 1)] for i in range(1 + n)]  # along cols
+        rows = [[0 for j in range(m + 1)] for i in range(1 + n)]
+        cols = [[0 for j in range(m + 1)] for i in range(1 + n)]
         for i in range(1, n + 1):
             for j in range(1, m + 1):
                 rows[i][j] = rows[i][j - 1] + grid[i - 1][j - 1]

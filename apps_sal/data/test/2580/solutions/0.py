@@ -38,9 +38,6 @@ for _ in range(int(input())):
                 c = size[nv] * (n - size[nv])
                 coef.append(c)
     mod = 10**9 + 7
-    # print(coef)
-    # print(p)
-    # print(size)
     if m < n - 1:
         res = 0
         coef.sort(reverse=True)

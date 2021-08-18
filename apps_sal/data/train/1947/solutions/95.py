@@ -14,16 +14,13 @@ class Solution:
             res_b = count(b)
             for i in range(26):
                 b_max[i] = max(b_max[i], res_b[i])
-        # print(b_max)
         for a in A:
-            # Following is one simple way to compare two lists
             '''res_a = count(a)
             for i in range(26):
                 if b_max[i] > res_a[i]:
                     break
                 if i == 25:
                     output_list.append(a)'''
-            # Following is another zip function way to compare two list(or iterators)
             if all(x >= y for x, y in zip(count(a), b_max)):
                 output_list.append(a)
         return output_list

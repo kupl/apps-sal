@@ -1,7 +1,4 @@
-#import sys
 
-#sys.stdin = open('input.txt', 'r')
-#sys.stdout = open('output.txt', 'w')
 
 s = input()
 x = int(s[:len(s) - 1])

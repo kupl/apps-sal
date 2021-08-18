@@ -7,7 +7,7 @@ def modpow(a, n, p):
     else:
         if n % 2 == 0:
             ans = (modpow(a, n // 2, p) ** 2) % p
-        else:  # n % 2 == 1
+        else:
             ans = (a * (modpow(a, n // 2, p) ** 2)) % p
 
     return ans

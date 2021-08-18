@@ -2,7 +2,6 @@ n = int(input())
 friendry = list(map(int, input().split()))
 friendry.sort()
 friendry.reverse()
-# print(friendry)
 ans = 0
 t = n - 1
 for i in range(n - 1):

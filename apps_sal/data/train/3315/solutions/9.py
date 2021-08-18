@@ -14,4 +14,3 @@ def strongest_even(n, m):
             b += 2
 
     return a * b
-# strongest_even(33,47)

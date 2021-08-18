@@ -37,8 +37,3 @@ class StreamChecker:
             cur = cur.next[c]
             if cur.end_here:
                 return True
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

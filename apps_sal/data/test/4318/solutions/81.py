@@ -1,8 +1,8 @@
 N = int(input())
 H = list(map(int, input().split()))
-result = 1  # 先頭の+1
+result = 1
 
-H.reverse()  # 計算しやすいように並び変える
+H.reverse()
 HH = H.copy()
 
 for i in H:
@@ -15,7 +15,6 @@ for i in H:
         if i < ii:
             break
     else:
-        # print(i)
         result += 1
 
 

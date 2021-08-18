@@ -5,7 +5,7 @@ class Solution:
         nr = len(grid)
         nc = len(grid[0])
 
-        seen = set()  # (r, c, remaining k)
+        seen = set()
         if grid[0][0] == 0:
             start = (0, 0, k)
         elif grid[0][0] == 1:
@@ -29,7 +29,7 @@ class Solution:
                             if new_item not in seen:
                                 seen.add(new_item)
                                 next_level.append(new_item)
-                        else:  # == 0
+                        else:
                             new_item = (new_r, new_c, ob)
                             if new_item not in seen:
                                 seen.add(new_item)

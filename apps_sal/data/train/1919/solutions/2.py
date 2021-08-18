@@ -4,7 +4,6 @@ class Solution:
         for edge in prerequisites:
             graph[edge[1]].append(edge[0])
 
-        # print(graph);
         mark = [0] * numCourses
         order = []
         for i in range(0, numCourses):

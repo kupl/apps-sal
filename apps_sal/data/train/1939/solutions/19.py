@@ -20,10 +20,8 @@ class Solution:
             if imd_w not in cache:
                 cache[imd_w] = w
 
-        # print(cache)
         res = []
         for q in queries:
-            # print(q)
             if q in words:
                 res.append(q)
             else:
@@ -35,10 +33,8 @@ class Solution:
                     for i, ch in enumerate(q):
                         if ch.lower() in vowels:
                             imd_w = imd_w[:i] + '*' + imd_w[i + 1:]
-                    # print(imd_w)
                     if imd_w in cache:
                         res.append(cache[imd_w])
                     else:
                         res.append('')
         return res
-        # deal with Capitalization issue

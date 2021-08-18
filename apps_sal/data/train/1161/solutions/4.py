@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     a = str(input())
     s = a.count('s')

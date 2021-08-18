@@ -16,7 +16,6 @@ def resolve():
             if dist_from_u[adj] > dist_from_u[node] + 1:
                 dist_from_u[adj] = dist_from_u[node] + 1
                 q.appendleft(adj)
-    # print(dist_from_u)
     dist_from_v = [float("inf") for _ in range(N)]
     dist_from_v[v] = 0
     import collections
@@ -27,7 +26,6 @@ def resolve():
             if dist_from_v[adj] > dist_from_v[node] + 1:
                 dist_from_v[adj] = dist_from_v[node] + 1
                 q.appendleft(adj)
-    # print(dist_from_v)
     length = 0
     for i in range(N):
         if dist_from_u[i] < dist_from_v[i] and length < dist_from_v[i]:

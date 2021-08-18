@@ -17,14 +17,14 @@ for _ in range(T):
 
         else:
             if k % 2 == 0:
-                a = k // 2  # even numbers
-                b = a - 1  # odd numbers
+                a = k // 2
+                b = a - 1
 
                 ans = ((n**2) % mod) + ((a * ((2 * n) % mod)) % mod) + ((b * (b + 1)) % mod)
             else:
                 k -= 1
-                a = k // 2  # even numbers
-                b = a  # odd numbers
+                a = k // 2
+                b = a
 
                 ans = ((n**2) % mod) + ((a * ((2 * n) % mod)) % mod) + ((b * (b + 1)) % mod)
 

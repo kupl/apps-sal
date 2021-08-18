@@ -1,4 +1,3 @@
-# unionfind
 class Uf:
     def __init__(self, N):
         self.p = list(range(N))

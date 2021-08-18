@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 def ri():
     return int(input())
@@ -15,7 +13,6 @@ def rli():
 
 def mileage(t, v, vl, vr):
     assert(0 <= vl <= v and 0 <= vr <= v)
-    # 最高速度v, 左端での速度vl, 右端での速度vr, 秒数tの時の走行距離を求める
     l = v - vl
     r = t - (v - vr)
     if l > r:
@@ -35,7 +32,7 @@ def main():
     lv = rli()
     lt.append(0)
     lv.append(0)
-    lefts = [0]  # 各区間の左端での列車の速度
+    lefts = [0]
     for i in range(n):
         left = min(lefts[i] + lt[i], lv[i], lv[i + 1])
         offset = 0
@@ -43,7 +40,6 @@ def main():
             left = min(left, offset + lv[j])
             offset += lt[j]
         lefts.append(left)
-    # print(lefts)
     ans = 0
     for i in range(n):
         ans += mileage(lt[i], lv[i], lefts[i], lefts[i + 1])

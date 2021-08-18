@@ -15,6 +15,4 @@ for _ in range(2 * n):
             st = []
     else:
         st.append(int(s[4:]))
-    #print (st,end=" ")
-    #print (ans)
 print(ans)

@@ -6,7 +6,6 @@ A = [int(i) for i in input().split()]
 cul_sum = [0] * (n + 1)
 
 
-# pre-processing
 for i in range(1, n + 1):
     cul_sum[i] = cul_sum[i - 1] + A[i - 1]
 

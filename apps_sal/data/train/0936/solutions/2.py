@@ -1,10 +1,8 @@
-# cook your dish here
 for i in range(int(input())):
     n = int(input())
     mat = []
     for i in range(n):
         mat.append([int(j) for j in input().split()])
-    # print(mat)
     ans = 0
     t = True
     for i in range(n - 1, 0, -1):

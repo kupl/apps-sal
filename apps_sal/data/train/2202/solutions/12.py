@@ -1,4 +1,3 @@
-# 1208D
 class segTree():
     def __init__(self, n):
         self.t = [0] * (n << 2)
@@ -30,7 +29,6 @@ def do():
     weightTree = segTree(n)
     for i in range(1, n + 1):
         weightTree.update(1, 1, n, i, i)
-    # print(weightTree.t)
     for i in range(n - 1, -1, -1):
         res[i] = weightTree.query(1, 1, n, nums[i] + 1)
         weightTree.update(1, 1, n, res[i], 0)

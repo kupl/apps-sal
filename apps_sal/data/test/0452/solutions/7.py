@@ -13,9 +13,6 @@ class Task:
         self.p, self.q = [int(x) for x in input().split(' ')]
         input()
         self.a = [int(x) for x in input().split(' ')]
-        #inFile = open('input.txt', 'r')
-        # inFile.readline().rstrip()
-        #self.childs = inFile.readline().rstrip()
 
     def solve(self):
         p, q = self.toFraction(self.a)
@@ -33,8 +30,6 @@ class Task:
 
     def printAnswer(self):
         print(self.answer)
-        #outFile = open('output.txt', 'w')
-        # outFile.write(self.answer)
 
 
 task = Task()

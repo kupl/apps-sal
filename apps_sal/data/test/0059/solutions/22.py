@@ -16,7 +16,4 @@ if len(stack) > 0:
 
 for l, r in pairs:
     a[l:r + 1] = sorted(a[l:r + 1])
-# if l != None and r == None:
-##    r = len(rot)
-##    a[l:r+1] = sorted(a[l:r+1])
 print('YNEOS'[not(a == sorted(a))::2])

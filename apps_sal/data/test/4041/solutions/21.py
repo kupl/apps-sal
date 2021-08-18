@@ -1,12 +1,10 @@
 import io
 import os
-#input = io.StringIO(os.read(0, os.fstat(0).st_size).decode()).readline
 
 
 def check(d):
     for i in range(len(s) - d + 1):
         pos = 0
-        #print(s[:i] + s[i + d:], i)
         for x in s[:i]:
             if x == s1[pos]:
                 pos += 1

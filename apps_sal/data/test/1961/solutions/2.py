@@ -16,7 +16,7 @@ def main():
                 a[i][j - 1] = a[i][j + 1] = a[i + 1][j - 1] = a[i + 1][j + 1] = a[i + 1][j] = a[i - 1][j - 1] = a[i - 1][j + 1] = a[i - 1][j] = '?'
     for i in range(n):
         for j in range(m):
-            if (a[i][j] == '#'):
+            if (a[i][j] == '
                 print("NO")
                 return
     print("YES")

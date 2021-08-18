@@ -22,10 +22,8 @@ class Solution:
                 if idx > 0:
                     _, lowerIdx = sd.peekitem(idx - 1)
                     goodEvenIndices[i] = goodOddIndices[lowerIdx]
-                    # goodOddIndices[i] = goodEvenIndices[lowerIdx]
                 if idx < len(sd) - 1:
                     _, higherIdx = sd.peekitem(idx + 1)
-                    # goodEvenIndices[i] = goodOddIndices[higherIdx]
                     goodOddIndices[i] = goodEvenIndices[higherIdx]
             i -= 1
         totalGoodIndices = 0

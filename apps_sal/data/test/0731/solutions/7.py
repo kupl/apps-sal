@@ -6,5 +6,4 @@ while w >= len(str(m)) * k:
     m1 = m
     m += min(w1 // (k * len(str(m1))), 10**len(str(m1)) - m1)
     w -= k * len(str(m1)) * min(w1 // (k * len(str(m1))), 10**len(str(m1)) - m1)
-    # print(w,m,ans)
 print(ans)

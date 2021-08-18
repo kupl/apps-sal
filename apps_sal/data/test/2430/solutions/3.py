@@ -1,6 +1,5 @@
 import sys
 f = sys.stdin
-#f = open("input.txt", "r")
 n = f.readline()
 h = [int(i) for i in f.read().strip().split("\n")]
 count = h[0] + 1

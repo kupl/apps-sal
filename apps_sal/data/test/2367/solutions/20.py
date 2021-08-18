@@ -8,13 +8,10 @@ def calcModOfPow(a, n, p):
     btm = a
     ans = 1
     while n != 0:
-        # print('btm: {}'.format(btm))
         if n & 1:
             ans = (ans * btm) % p
-            # print('ans: {}'.format(ans))
         n = n >> 1
         btm = (btm**2) % p
-        # print(n)
 
     return ans
 
@@ -56,11 +53,7 @@ class FirstHalf:
                 calcModOfInv(self.k, DIV_VALUE)
             ) % DIV_VALUE
         self.k += 1
-        # print('----- k == {} -----'.format(self.k))
-        # print(self.numOfCases)
-        # self.numOfCases %= DIV_VALUE
         return self.numOfCases
-        # return self.numOfCases % DIV_VALUE
 
 
 class SecondHalf:
@@ -81,14 +74,6 @@ class SecondHalf:
             self.numOfCases *= calcModOfInv(bottom, DIV_VALUE)
             self.numOfCases %= DIV_VALUE
 
-        # self.numOfCases = (
-        #     math.factorial(self.H + self.W - self.B - 2)
-        # ) // (
-        #     math.factorial(self.W - self.B - 1)
-        # ) // (
-        #     math.factorial(self.H - 1)
-        # )
-
     def getNumOfCases(self):
         if self.k != 0:
             self.numOfCases = self.numOfCases * (
@@ -100,10 +85,7 @@ class SecondHalf:
                 )
             ) % DIV_VALUE
         self.k += 1
-        # print(self.numOfCases)
-        # self.numOfCases %= DIV_VALUE
         return self.numOfCases
-        # return self.numOfCases % DIV_VALUE
 
 
 def __starting_point():
@@ -115,7 +97,6 @@ def __starting_point():
     totalCases = 0
 
     mid = time.time()
-    # print('mid: {}'.format(mid - start))
     for _ in range(H - A):
         totalCases += (
             fstHlf.getNumOfCases() * sndHlf.getNumOfCases()
@@ -123,14 +104,7 @@ def __starting_point():
         totalCases %= DIV_VALUE
 
     end = time.time()
-    # print('end: {}'.format(end - mid))
     print(totalCases)
-
-    #print('{} {} {} {}'.format(H, W, A, B))
-    # print(DIV_VALUE)
-
-    # for i in range(12):
-    #     print('inv: {}'.format(calcModOfInv(i+1, 13)))
 
 
 __starting_point()

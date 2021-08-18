@@ -1,4 +1,3 @@
-# 桁和最小の自然数は1
 from collections import deque
 k = int(input())
 d = [k] * k

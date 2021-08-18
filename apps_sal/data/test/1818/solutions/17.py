@@ -15,7 +15,6 @@ for i in range(n):
     else:
         cnt[tmp] += 1
 
-#print( cnt )
 
 ans = 0
 for i in cnt:

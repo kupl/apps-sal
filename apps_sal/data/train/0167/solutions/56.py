@@ -47,24 +47,6 @@ class Solution:
                 h = mid - 1
             ans = min(max(low, high) + 1, ans)
 
-
-#         for k in range(1,f+1):
-
-#             low = 0
-#             high = 0
-
-#             if self.cache[e-1][k-1] != -1:
-#                 low = self.cache[e-1][k-1]
-#             else:
-#                 low = self.drop(e-1,k-1)
-
-#             if self.cache[e][f-k] != -1:
-#                 high = self.cache[e][f-k]
-#             else:
-#                 high = self.drop(e,f-k)
-
-#             ans = min(max(low,high)+1,ans)
-
         self.cache[e][f] = ans
 
         return ans

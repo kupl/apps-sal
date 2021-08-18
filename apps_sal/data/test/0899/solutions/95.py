@@ -1,16 +1,8 @@
-# Python3 (3.4.3)
 from scipy.sparse.csgraph import csgraph_from_dense, floyd_warshall
 import sys
 input = sys.stdin.readline
 
-# -------------------------------------------------------------
-# function
-# -------------------------------------------------------------
 
-
-# -------------------------------------------------------------
-# main
-# -------------------------------------------------------------
 N, M = map(int, input().split())
 ABC = [list(map(int, input().split())) for _ in range(M)]
 

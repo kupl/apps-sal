@@ -19,11 +19,8 @@ for z in range(int(input())):
                 j += 1
             else:
                 break
-        # print(c0,c1)
         if(maxl < (c0 + c1 + k)):
             maxl = c0 + c1 + k
 
-    # if(n==k):
-        # print(k)
     else:
         print(maxl)

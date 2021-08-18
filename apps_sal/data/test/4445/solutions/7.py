@@ -72,5 +72,3 @@ while 1:
 
 
 print(sum(a) - max(ans, ans1))
-
-# print(even,odd)

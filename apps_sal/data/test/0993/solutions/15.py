@@ -1,5 +1,3 @@
-# D - Candy Distribution
-# https://atcoder.jp/contests/abc105/tasks/abc105_d
 
 from collections import Counter
 

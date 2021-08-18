@@ -6,7 +6,6 @@ c = sorted(C(l).items())
 res = 0
 j = 0
 for hi, ni in c:
-    # print(hi, ni, j)
     h = min(hi - j, ni) + j
     res += (hi - 1) * ni
     if h > j:

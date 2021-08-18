@@ -39,6 +39,5 @@ class Solution:
         ans = 0
         for i in range(len(arr)):
             jump(i)
-            # print(i, path[i])
             ans = max(ans, dp[i])
         return ans

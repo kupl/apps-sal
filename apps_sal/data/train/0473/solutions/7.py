@@ -12,6 +12,5 @@ class Solution:
                 for k in range(j, n):
                     t = prefix[i - 1] if i > 0 else 0
                     if prefix[j - 1] ^ t == prefix[k] ^ prefix[j - 1]:
-                        # print(i, j, k, prefix[i - 1], prefix[j - 1], prefix[k])
                         ans += 1
         return ans

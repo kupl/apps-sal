@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 t, x = map(int, input().split())
 for i in range(t):

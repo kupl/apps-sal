@@ -3,9 +3,8 @@ xc = [tuple(map(int, input().split())) for i in range(N)]
 xc.sort()
 ans = 0
 p = 0
-# 右を取る範囲と左を取る範囲を決めればいい
-s = [0] * (N + 1)  # 時計回り
-ss = [0] * (N + 1)  # 反時計回り
+s = [0] * (N + 1)
+ss = [0] * (N + 1)
 for i in range(N):
     s[i + 1] = s[i] + xc[i][1]
 

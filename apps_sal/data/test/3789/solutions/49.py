@@ -16,7 +16,6 @@ for i in range(1, n + 1):
 
 for i in range(1, n // 2 + 1):
     for j in range(2 * i, n + 1, i):
-        # print(i, j)
         G.add_edge(j, i)
 
 try:

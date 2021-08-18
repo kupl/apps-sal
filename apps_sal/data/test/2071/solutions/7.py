@@ -17,14 +17,10 @@ def main():
             sum.append(aa + bb)
     sum = list(reversed(sum))
 
-    # print(sum)
-
     d_a[-1] = b[-1]
     d_b[-1] = a[-1]
 
     for i in reversed(list(range(n - 1))):
-        # print(n-i)
-        # print((n - i) * 2 - 1)
         d_a[i] = sum[i + 1] + d_a[i + 1] + ((n - i) * 2 - 1) * b[i]
         d_b[i] = sum[i + 1] + d_b[i + 1] + ((n - i) * 2 - 1) * a[i]
 
@@ -68,8 +64,6 @@ def test(i):
 
 
 def __starting_point():
-    # test(1)
-    # test(2)
     return(main())
 
 

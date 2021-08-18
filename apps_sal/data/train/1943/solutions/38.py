@@ -14,7 +14,4 @@ class Solution:
                 i += 1
             else:
                 j += 1
-            # else:
-            #     i+=1
-            #     j+=1
         return ans

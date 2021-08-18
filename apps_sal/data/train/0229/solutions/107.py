@@ -11,7 +11,6 @@ class Solution:
             if count[num] > 0:
                 double = num * 2
                 if double in count and count[double] > 0:
-                    # print(\"found\", double)
                     count[num] -= 1
                     count[double] -= 1
 

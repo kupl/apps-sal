@@ -13,7 +13,4 @@ class Solution:
             total_cost += cost
             for i, (p2, dist) in enumerate(points):
                 points[i][1] = min(points[i][1], distance(p1, p2))
-                #newdist = distance(p1, p2)
-                # if newdist < dist:
-                #    points[i][1] = newdist
         return total_cost

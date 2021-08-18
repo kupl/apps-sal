@@ -1,12 +1,9 @@
-# 白だけ動いて(0,0)から(H-1, W-1)に行く
-# その際にできるだけ黒を増やす
-# 全体の白から最短距離を除いたものが答え
 
 from collections import deque
 
 
 H, W = list(map(int, input().split()))
-grid = [list(input()) for _ in range(H)]  # .は白、#は黒
+grid = [list(input()) for _ in range(H)]
 visited = [[-1] * W for _ in range(H)]
 moves = [(1, 0), (0, 1), (-1, 0), (0, -1)]
 
@@ -23,8 +20,8 @@ while q:
 
         if moved_y < 0 or H - 1 < moved_y or moved_x < 0 or W - 1 < moved_x:
             continue
-        if grid[moved_y][moved_x] == '#':
-            continue
+        if grid[moved_y][moved_x] == '
+        continue
         if visited[moved_y][moved_x] != -1:
             continue
 

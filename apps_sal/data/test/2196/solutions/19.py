@@ -1,5 +1,3 @@
-# array de indices em ordem crescente
-# quantos 2**b precisa para 2**v-1 (soma de sequencia)
 
 import math
 

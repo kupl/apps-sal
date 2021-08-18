@@ -1,7 +1,6 @@
 import sys
 from collections import defaultdict
 readline = sys.stdin.buffer.readline
-# sys.setrecursionlimit(10**8)
 
 
 def geta(fn=lambda s: s.decode()):
@@ -15,8 +14,6 @@ def gete(fn=lambda s: s.decode()):
 class UnionFind:
 
     def __init__(self, N: int):
-        # d[i] = <parent id> if i is a child,
-        #       - <size of the group> if i is a root
         self.d = [-1 for _ in range(N)]
 
     def root(self, x: int) -> int:

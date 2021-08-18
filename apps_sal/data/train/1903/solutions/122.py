@@ -23,7 +23,6 @@ class Solution:
         minDists = {i: float('inf') for i in range(n)}
         while len(pq) != 0:
             (dist, i) = heapq.heappop(pq)
-            # print(dist,i)
             if i in seen:
                 continue
             seen.add(i)
@@ -35,12 +34,5 @@ class Solution:
                     continue
                 minDists[j] = min(minDists[j], distsMap[(i, j)])
                 heapq.heappush(pq, (minDists[j], j))
-
-            # for j in range(n):
-            #     if j in seen:
-            #         continue
-            #     # nextDist = min(distsMap[(ip,j)] for ip in seen)
-            #     heapq.heappush(pq, (minDists[j],j) )
-                # for ip in seen:
 
         return result

@@ -13,8 +13,6 @@ class Solution:
                 for c in friends[idx]:
                     queue.append((c, depth + 1))
 
-        # print(dist)
-
         freq = defaultdict(int)
         for i, l in enumerate(dist):
             if l == level:
@@ -22,6 +20,5 @@ class Solution:
                     freq[vid] += 1
 
         pairs = sorted([(v, k) for k, v in list(freq.items())])
-        # print(pairs)
 
         return [x[-1] for x in pairs]

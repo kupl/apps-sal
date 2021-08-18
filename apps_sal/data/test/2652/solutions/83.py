@@ -10,7 +10,6 @@ class UnionFind(object):
     def find(self, x):
         if self.parent[x] == x:
             return x
-        # path compression
         self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
 
@@ -18,7 +17,6 @@ class UnionFind(object):
         x, y = self.find(x), self.find(y)
         if x == y:
             return
-        # union by rank
         if self.rank[x] < self.rank[y]:
             self.parent[x] = y
         else:

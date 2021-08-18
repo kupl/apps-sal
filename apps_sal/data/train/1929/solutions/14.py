@@ -42,8 +42,3 @@ class StreamChecker:
         if len(self.cache) > self.maxlen:
             self.cache = self.cache[1:]
         return self.result
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

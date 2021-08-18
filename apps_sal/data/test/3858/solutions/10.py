@@ -1,8 +1,6 @@
 import sys
 from collections import defaultdict
 
-# sys.stdin = open('e1.in')
-
 
 def read_int_list():
     return list(map(int, input().split()))

@@ -48,15 +48,13 @@ class Forest():
     def build(self):
         roots = []
         max_dist = []
-        #diam = []
         list_root = []
         for i in self.nodes:
             tree = (list([x.get_dist() for x in i]))
             ma = max(tree)
             max_dist.append(ma)
-            # diam.append(ma)
             m = i[tree.index(min(tree))]
-            roots.append(m)  # .val)
+            roots.append(m)
         if len(roots) > 1:
             ind = max_dist.index(max(max_dist))
             if len(roots) > 1 and ind != 0:
@@ -67,11 +65,10 @@ class Forest():
                 s.add(j.val)
         r = list(set(range(1, n + 1)) - s)
 
-        if len(roots) > 0:  # and len(diam) > 0:
+        if len(roots) > 0:
             for i in range(1, len(roots)):
                 self.add(roots[0].val, roots[i].val)
                 list_root.append((roots[0].val, roots[i].val))
-            #print(roots + r)
 
             for i in r:
                 self.add(roots[0].val, i)
@@ -97,7 +94,6 @@ class Forest():
         self.set_nodes.add(u)
         v_node, v_list = self.find(v)
         u_node, u_list = self.find(u)
-        #print(v_node, u_node)
         if v_node == None and u_node == None:
             v_node = Node(v)
             u_node = Node(u)
@@ -134,5 +130,4 @@ for i in range(m):
     v, u = list(map(int, input().split()))
     f.add(v, u)
 
-# print(f.nodes)
 f.build()

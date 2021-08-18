@@ -8,16 +8,6 @@ class Solution:
         return sum(l) % D
 
     def transform_list(self, l: List[int]) -> List[int]:
-        # 0 -> 4, 6
-        # 1 -> 6, 8
-        # 2 -> 7, 9
-        # 3 -> 4, 8
-        # 4 -> 3, 9, 0
-        # 5 -> None
-        # 6 -> 1, 7, 0
-        # 7 -> 2, 6
-        # 8 -> 1, 3
-        # 9 -> 2, 4
         nl = [0 for _ in range(10)]
         nl[0] = l[4] + l[6]
         nl[1] = l[6] + l[8]

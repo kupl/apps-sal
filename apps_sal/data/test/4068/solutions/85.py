@@ -1,7 +1,6 @@
 N, M = map(int, input().split())
 res = 0
 flag = True
-# 任意の数Kに対してたどり着く通り数
 INF = 100000000000
 stepList = [INF] * (N + 1)
 stepList[0] = 1
@@ -28,7 +27,6 @@ else:
     List = []
     for i in range(M):
         List.append(int(input()))
-    # 任意の数aが壊れている場合
 
     for i in range(M):
         if i == 0:

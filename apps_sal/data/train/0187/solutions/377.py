@@ -18,7 +18,6 @@ class Solution:
             rot += 1
             waiting = 0 if waiting <= 4 else waiting - 4
             profit = (cust * boardingCost) - (rot * runningCost)
-            #print([rot, profit])
             if profit > max_profit[1]:
                 max_profit = [rot, profit]
             if j == 3:

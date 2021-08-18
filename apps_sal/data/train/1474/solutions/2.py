@@ -1,4 +1,3 @@
-# write your code in next line.
 a = int(input())
 while(a):
     b = int(input())

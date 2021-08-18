@@ -15,21 +15,16 @@ class Solution:
                 r_arr[r[1] + 1] -= 1
 
         idxes = defaultdict(lambda: [])
-        # curr = 0
         idxes[r_arr[0]].append(0)
         for r in range(1, len(r_arr)):
-            # if r_arr[r] > 0:
             r_arr[r] += r_arr[r - 1]
             idxes[r_arr[r]].append(r)
 
         ks = list(idxes.keys())
-        # print(ks)
         ks.sort(reverse=True)
 
         res_arr = [0] * len(nums)
         nums.sort(reverse=True)
-        # print(nums)
-        # print(r_arr)
         for k in ks:
             for ele in idxes[k]:
                 res_arr[ele] = nums.pop(0)
@@ -38,4 +33,3 @@ class Solution:
         for i in range(len(res_arr)):
             res += (res_arr[i] * r_arr[i]) % MOD
         return res % MOD
-        # return res

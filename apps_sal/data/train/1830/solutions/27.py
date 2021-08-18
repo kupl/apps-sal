@@ -7,11 +7,11 @@ class Solution:
 
         N = len(rains)
         res = [1] * N
-        heap = []  # days in order of indicies
+        heap = []
 
         for day, lake in enumerate(rains):
             if lake:
-                lakes[lake].popleft()  # current
+                lakes[lake].popleft()
                 if lakes[lake]:
                     next_lake_day = lakes[lake][0]
                     heappush(heap, next_lake_day)

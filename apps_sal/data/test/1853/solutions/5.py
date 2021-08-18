@@ -12,7 +12,6 @@ for i in range(1, n + 1):
     if member[i] < n - 1:
         num = i
         break
-# print(linked)
 if num:
     for i in range(1, n + 1):
         if i != num:

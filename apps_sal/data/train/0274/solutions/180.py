@@ -1,6 +1,5 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        # print('start')
         import sortedcontainers
 
         sl = sortedcontainers.SortedList()
@@ -15,5 +14,4 @@ class Solution:
                     sl.remove(nums[start])
                     start += 1
             end += 1
-            # print(len(sl))
         return best

@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 
 l_in = stdin.readline
@@ -12,16 +11,13 @@ for i in range(t):
     count = 0
     N, P = list(map(int, (l_in().strip().split())))
     ar = list(range(1, P + 1))
-    # print(ar)
-    for i in ar:  # range(P):
-        for j in ar:  # range(P):
-            for k in ar:  # range(P):
+    for i in ar:
+        for j in ar:
+            for k in ar:
                 M = (((N % i) % j) % k) % N
                 if M > MaxM:
                     count = 1
                     MaxM = M
-                    #print("{} {} {} {}".format(i,j,k,MaxM))
                 elif M == MaxM:
                     count = count + 1
-                    #print("{} {} {} {}".format(i,j,k,MaxM))
     print(count)

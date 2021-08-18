@@ -48,6 +48,5 @@ for i in range(1, n):
         for k in range(j + 1):
 
             dp[i][j] = min(dp[i][j], dp[i - 1][j - k] + m[i][k])
-            #dp[i][j] = min(dp[i][j], dp[i - 1][k]+m[i][j-k])
 
 print(min(dp[n - 1]))

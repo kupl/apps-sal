@@ -14,7 +14,6 @@ class Solution:
             for j in range(i + 2):
                 mul *= m
                 m -= 1
-            # print(mul)
             ls.append(mul + ls[-1])
         if n >= 9:
             return ls[9]

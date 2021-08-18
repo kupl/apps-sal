@@ -17,12 +17,11 @@ k = 0
 ans = ()
 
 for i in range(n):
-    m = find_min(i)  # ����� ����������� �������� �� �������
+    m = find_min(i)
     if i != m:
         a[i] = a[i] + a[m]
         a[m] = a[i] - a[m]
         a[i] = a[i] - a[m]
-        # �������� ��������
         ans += (i, m)
         k += 1
 

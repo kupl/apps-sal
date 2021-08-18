@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 def ri():
     return int(input())
@@ -19,7 +17,6 @@ def solve(la):
     for i in range(1, len(la)):
         a = la[i]
         ns = s + a
-        # print(i, s, a, ns)
         if s * ns < 0:
             s = ns
             continue

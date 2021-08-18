@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 import statistics
 from statistics import mode

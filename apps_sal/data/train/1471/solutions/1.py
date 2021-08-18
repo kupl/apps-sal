@@ -9,7 +9,6 @@ def spaces(a, n, m, k, visit1, visit2, dist, position):
         point = queue[0]
         i = point[0]
         j = point[1]
-        # print 'point',i,j
         if visit1[i][j] == False:
             visit1[i][j] = True
             startx = max(i - k, 0)
@@ -21,13 +20,10 @@ def spaces(a, n, m, k, visit1, visit2, dist, position):
                     if (a[x][y] == 0 and visit1[x][y] == False):
                         if visit2[x][y] == True:
                             lastedit.append([x, y])
-                        # print x,y,
                         if dist[x][y] > dist[i][j] + 1:
                             dist[x][y] = dist[i][j] + 1
                             queue.append([x, y])
-        # print queue,dist
         queue = queue[1:]
-        # print
     return lastedit
 
 
@@ -36,7 +32,6 @@ for t in range(int(input())):
     a = []
     for i in range(n):
         a.append(list(map(int, input().split())))
-    # print a
     value = sys.maxsize
     listing = []
     visit1 = [[False for i in range(m)]for j in range(n)]
@@ -50,8 +45,6 @@ for t in range(int(input())):
         listing = spaces(a, n, m, k1, visit2, visit1, dist2, [0, 0])
     if k1 < k2:
         listing = spaces(a, n, m, k2, visit2, visit1, dist2, [0, m - 1])
-    # print visit1
-    # sprint visit2
     if k1 == k2:
         if dist1[0][m - 1] == sys.maxsize:
             print('-1')

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 n = int(input())
 a = [0] + list(map(int, input().split()))
 p = sorted((-a[i], -i) for i in range(n + 1))

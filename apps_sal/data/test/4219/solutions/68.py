@@ -21,6 +21,5 @@ for i in range(2**N):
                     break
     if f == 0:
         ans = max(ans, t)
-        # print(b)
 
 print(ans)

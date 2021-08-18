@@ -1,4 +1,4 @@
-keyboard = "A A# B C C# D D# E F F# G G#".split()
+keyboard = "A A
 
 
 def which_note(count):

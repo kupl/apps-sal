@@ -5,8 +5,6 @@ n = int(input())
 ratings = list(map(int, input().split(' ')))
 
 value_ind_map = defaultdict(list)
-# for i in range(len(ratings)):
-#     value_ind_map[ratings[i]].put(i)
 res = [-1]
 txt = []
 for rating in sorted(ratings):

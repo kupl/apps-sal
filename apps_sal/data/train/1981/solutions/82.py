@@ -12,7 +12,6 @@ class Solution:
         for i in range(len(nums)):
             counts[i] = counts[i - 1] + dp[i]
 
-        # print(counts)
         nums.sort()
         counts.sort()
 

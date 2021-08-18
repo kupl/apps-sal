@@ -10,7 +10,6 @@ class Solution:
             mapp1 = defaultdict(int)
             for i in range(m - 1):
                 for j in range(i + 1, len(mat)):
-                    # mat[i][j] = nums[i]**2 + nums[j]**2
                     mapp1[nums[i] * nums[j]] += 1
 
             return mapp1

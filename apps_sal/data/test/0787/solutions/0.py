@@ -1,6 +1,5 @@
 import sys
 
-#fin = open("input.txt", 'r')
 fin = sys.stdin
 
 n = int(fin.readline())

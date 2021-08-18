@@ -1,4 +1,3 @@
-# cook your dish here
 def find(n, i):
     if i == '0':
         return n // 2

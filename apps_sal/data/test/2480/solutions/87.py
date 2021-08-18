@@ -17,7 +17,7 @@ def main():
     dq = deque()
     ans = 0
     for x in acc:
-        if x in d:  # inで判定してみる
+        if x in d:
             ans += d[x]
         d[x] += 1
         dq.append(x)

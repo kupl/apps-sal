@@ -30,7 +30,7 @@ def poohbear(code):
         elif cmd == 'c':
             copied_value = memory[cur_m]
         elif cmd == 'p':
-            memory[cur_m] = copied_value  # ??? NONE?
+            memory[cur_m] = copied_value
         elif cmd == 'W':
             code_pointer = while_loop[code_pointer] if memory[cur_m] == 0 else code_pointer
         elif cmd == 'E':

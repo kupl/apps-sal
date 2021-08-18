@@ -25,24 +25,7 @@ class CombinationIterator:
             for j in range(i + 2, self.n):
                 self.inds[j] = self.inds[j - 1] + 1
 
-
-#         for i in range(self.n-1, -1 ,-1):
-#             self.inds[i] += c
-#             if self.inds[i] == self.iMax-self.n+i+1:
-#                 if i != 0:
-#                     self.inds[i] = self.inds[i-1] + 2
-#                     c = 1
-#                 else:
-#                     self.gotNext = False
-#             else:
-#                 c = 0
         return ans
 
     def hasNext(self) -> bool:
         return self.gotNext
-
-
-# Your CombinationIterator object will be instantiated and called as such:
-# obj = CombinationIterator(characters, combinationLength)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()

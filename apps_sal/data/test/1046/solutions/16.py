@@ -1,4 +1,3 @@
-# July 4, 2014
 secs = int(input())
 calls = input().split(' ')
 total = 0

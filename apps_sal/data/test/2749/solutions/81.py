@@ -14,7 +14,6 @@ for i in range(n):
             y = cc
         else:
             y = w - cc - 1
-        # print(now,i,x,y)
         ans[x][y] = str(i + 1)
         now += 1
 

@@ -49,9 +49,4 @@ class Solution:
                     if u.ranks[i]:
                         u.union(v, i)
 
-            # print (step, u.ranks, u.parents)
-
-            # if u.ranks[u.findP(v)]==m:
-            #   res = step
-
         return res

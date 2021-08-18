@@ -1,4 +1,3 @@
-# python3
 n, m = tuple(map(int, input().split()))
 
 mask = 0
@@ -9,7 +8,7 @@ while n:
 
     row = 0
     for char in input():
-        row = (row << 1) | (char == '#')
+        row = (row << 1) | (char == '
 
     if row & mask:
         if row not in collected:

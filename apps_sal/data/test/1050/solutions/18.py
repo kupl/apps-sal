@@ -1,8 +1,6 @@
 import math
 import sys
 
-# imgur.com/Pkt7iIf.png
-
 
 def ii(): return int(input())
 def mi(): return map(int, input().split())

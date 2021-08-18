@@ -1,5 +1,5 @@
 H, W = map(int, input().split())
-anslist = [["#" for i in range(W + 2)]for j in range(H + 2)]
+anslist = [["
 for i in range(H):
     a = input()
     for j in range(W):

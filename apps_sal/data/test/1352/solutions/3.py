@@ -3,7 +3,6 @@ N, X = map(int, input().split(' '))
 
 class Next():
     def __init__(self, arr):
-        # array of length X
         next_ = [None for _ in arr]
         for i in range(len(arr) - 2, -1, -1):
             next_[i] = next_[i + 1]
@@ -22,7 +21,6 @@ def fast_solution():
     if most_right is None:
         most_right = -1
 
-    # Find longest non-decreasing prefix
     while True:
         if pref == X - 1:
             break
@@ -32,7 +30,6 @@ def fast_solution():
         if pref + 1 < X and last[pref] is not None:
             most_right = max(most_right, last[pref])
 
-    # Find longest non-decreasing suffix
     suf = X - 1
     most_left = first[X - 1]
     if most_left is None:

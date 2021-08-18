@@ -3,7 +3,6 @@ for _ in range(int(input())):
     a, b = list(map(str, input().split()))
     res.append([a, int(b)])
 res.sort(key=lambda x: x[-1])
-# print(res)
 for _ in range(int(input())):
     check = input().strip()
     f = 1

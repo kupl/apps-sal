@@ -13,7 +13,6 @@ class Solution:
             full.remove(rains[position])
             seq.pop()
         elif rains[position] == 0:
-            # must choose one lake that is full to dry
             for lake in full:
                 seq.append(lake)
                 full.remove(lake)
@@ -22,7 +21,7 @@ class Solution:
                 full.add(lake)
                 seq.pop()
             if len(full) < 1:
-                seq.append(1)  # random lake
+                seq.append(1)
                 if self.backtrack(rains, full, position + 1, seq):
                     return True
                 seq.pop()
@@ -43,7 +42,6 @@ class Solution:
             if rains[i] > 0:
                 ans.append(-1)
                 if rains[i] in full:
-                    # we need to have dried this lake for sure
                     valid = False
                     for d in range(len(spares)):
                         dry = spares[d]
@@ -56,15 +54,11 @@ class Solution:
                     if not valid:
                         return []
                 elif rains[i] in recent and recent[rains[i]] == i - 1:
-                    # no chance to dry this one
                     return []
                 else:
                     full.add(rains[i])
                 recent[rains[i]] = i
             else:
-                # we can dry one lake
-                # greedy chooses some random lake
-                # that will be replaced if needed
                 ans.append(1)
                 spares.append(i)
         return ans

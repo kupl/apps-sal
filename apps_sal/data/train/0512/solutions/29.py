@@ -3,8 +3,6 @@ sys.setrecursionlimit(10**7)
 
 
 def main0(n, g, xyuv):
-    # LCAを求める。自作する。
-    # 各頂点の深さ。根は深さ0
     depth = [0] * n
     tour = []
     hatsu = [0] * n
@@ -40,7 +38,6 @@ def main0(n, g, xyuv):
             while i:
                 i >>= 1
                 self.data[i] = self.f(self.data[i * 2], self.data[i * 2 + 1])
-        # 区間[l,r)へのクエリ
 
         def query(self, l, r):
             l, r = l + self.size, r + self.size
@@ -100,7 +97,6 @@ def main0(n, g, xyuv):
         vnum, vsum = dc[x][vidx]
         uvsum = usum + vsum - wsum * 2
         uvnum = unum + vnum - wnum * 2
-        # print(uvlen-uvsum+uvnum*y,uvlen,usum,vsum,wsum,uvnum,w)
         ret.append(uvlen - uvsum + uvnum * y)
     return ret
 

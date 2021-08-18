@@ -1,12 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Date    : 2014-12-03 16:10:54
-# @Author  : Your Name (you@example.org)
-# @Link    : http://example.org
-# @Version : $Id$
 
 import os
-# print('now')
 maxn = 1000010
 pre, next, ans, vis = [], [], [], []
 for i in range(maxn):
@@ -17,12 +10,10 @@ for i in range(maxn):
 n = int(input())
 for i in range(n):
     a, b = input().split()
-    # print('in', a, b)
     x, y = int(a), int(b)
     vis[x] = vis[y] = 1
     pre[y] = x
     next[x] = y
-# print('next[2]')
 ans[0] = 0
 vis[0] = 2
 i = 0
@@ -50,7 +41,6 @@ while next[i] != -1:
     ans[j] = i
     j += 2
     vis[i] = 2
-# print("here")
 for i in range(n + 2):
     if ans[i] > 0:
         print(ans[i], end=' ')

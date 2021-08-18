@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
 import sys
 sys.setrecursionlimit(10**6)
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
-# Union Find
 
 
 def find(x):

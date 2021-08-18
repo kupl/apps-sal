@@ -6,4 +6,3 @@ def is_divide_by(number, a, b):
             return (False)
     else:
         return (False)
-    # return number % b == 0

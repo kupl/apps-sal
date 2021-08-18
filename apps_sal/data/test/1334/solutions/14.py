@@ -14,17 +14,14 @@ for i in range(1, len(s)):
     if s[i] != s[i - 1]:
         a.append(s[i])
 
-# print(st)
 while len(st) < k:
     st.append(a[0])
     b = False
 
 
-# print(a)
 if b:
     for i in reversed(range(k)):
         if st[i] != a[len(a) - 1]:
-            # print(st[i])
             for j in range(len(a) - 1):
                 if st[i] == a[j]:
                     st[i] = a[j + 1]

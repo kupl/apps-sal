@@ -25,6 +25,3 @@ for i in range(n):
 
 
 print(min(t for t, w in pos if t >= w))
-
-
-# Made By Mostafa_Khaled

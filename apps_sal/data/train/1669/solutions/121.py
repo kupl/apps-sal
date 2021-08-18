@@ -8,7 +8,6 @@ class Solution:
             minele = min(hand)
             for i in range(0, W):
                 try:
-                    # print(minele+i)
                     hand.remove(minele + i)
                 except:
                     return False

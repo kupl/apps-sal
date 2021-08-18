@@ -33,8 +33,6 @@ for l in range(t):
     n = int(input())
     s = []
 
-    # print(prime(1000))
-
     for i in range(n):
         j = seive[i]
         s.append(seive[j - 1])

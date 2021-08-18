@@ -29,7 +29,6 @@ class Solution:
                 i += 1
             if k > 1:
                 add_prime(k, j, primes)
-        # print(primes)
         for l in primes.values():
             j, r = l[0], g.find(l[0])
             for i in l[1:]:
@@ -37,6 +36,4 @@ class Solution:
                 if nd != r:
                     g.p[nd] = r
                     g.s[r] += g.s[nd]
-        # print(g.p)
-        # print(g.s)
         return max(g.s)

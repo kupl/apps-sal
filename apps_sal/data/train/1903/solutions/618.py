@@ -4,7 +4,6 @@ class Solution:
         uf = UF(len(points))
         n = len(points)
         for i, ps in enumerate(points):
-            # for j in range(i+1,):
             j = i + 1
             while j < n:
                 pt = points[j]
@@ -13,13 +12,6 @@ class Solution:
 
                 j += 1
 
-            # for j, pt in enumerate(points):
-            #     if ps != pt:
-            #         dist = abs(ps[0]-pt[0]) + abs(ps[1]-pt[1])
-            #         uf.addEdge(i, j, dist)
-
-        # print(uf.g)
-        # uf.exec()
         return uf.exec()
 
 
@@ -58,13 +50,7 @@ class UF:
     def exec(self):
         parent = [_ for _ in range(self.n)]
         rank = [0] * self.n
-        # print(self.find(1, parent))
-        # print(self.union(1,2, parent, rank))
-        # print(self.union(1,3, parent, rank))
-        # print(parent, rank)
-        # print(self.g)
         self.g.sort(key=lambda edge: edge[2])
-        # print(self.g)
         totalans = 0
         for edge in self.g:
             x = edge[0]

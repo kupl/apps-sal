@@ -2,7 +2,7 @@ class Solution:
 
     def coinChange(self, coins, amount):
         coins.sort()
-        stack = [(0, 0, len(coins))]  # steps, accumulated
+        stack = [(0, 0, len(coins))]
         min_steps = 2**31
         while len(stack) != 0:
             steps, accumulated, sequence = stack.pop()

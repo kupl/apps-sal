@@ -1,7 +1,5 @@
 from functools import lru_cache
 
-# Your new function as given to you by me, your boss.
-
 
 @lru_cache(maxsize=None)
 def cl(p, n):

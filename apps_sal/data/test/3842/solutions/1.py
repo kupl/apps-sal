@@ -90,6 +90,3 @@ def solve(n, p, q, ABs):
 n, p, q, ABs = read_data()
 
 print(solve(n, p, q, ABs))
-
-
-# Made By Mostafa_Khaled

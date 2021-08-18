@@ -1,4 +1,3 @@
-# まきもどし？
 import sys
 import heapq as hq
 import itertools
@@ -23,14 +22,13 @@ for i in range(n - 1):
     v -= 1
     tree[u].append(v)
     tree[v].append(u)
-# print(tree)
 
 
-def isok(num, val):  # 適宜変更
+def isok(num, val):
     return num < val
 
 
-def bisect(ls, val):  # valの関数isok(x,val)がTrueとなる一番右のindex を返す 全部Falseなら-1,Trueならlen(ls)-1
+def bisect(ls, val):
     ok = -1
     ng = len(ls)
     x = (ok + ng) // 2
@@ -41,10 +39,10 @@ def bisect(ls, val):  # valの関数isok(x,val)がTrueとなる一番右のindex
         else:
             ng = x
         x = (ok + ng) // 2
-    return ok  # 一番右のTrueのindex  Trueの個数はok+1こ
+    return ok
 
 
-def LIS_1(x, ls, right):  # right ::これまでわかっている右端
+def LIS_1(x, ls, right):
     idx = bisect(ls, x) + 1
     if idx + 1 > right:
         ret = idx + 1
@@ -52,7 +50,6 @@ def LIS_1(x, ls, right):  # right ::これまでわかっている右端
         ret = right
     rewind_idxval.append((idx, ls[idx]))
     ls[idx] = x
-    # print(x,ls)
     return ret
 
 
@@ -62,7 +59,6 @@ def DFS_LIS(prev, ls, right):
         if not visited[node]:
             visited[node] = True
             DFS_LIS(node, ls, ans[prev])
-    # rewind
     idx, pval = rewind_idxval.pop()
     ls[idx] = pval
 
@@ -75,6 +71,5 @@ visited = [False] * n
 visited[s] = True
 ls = [INF] * n
 DFS_LIS(s, ls, right)
-# print(ls)
 for a in ans:
     print(a)

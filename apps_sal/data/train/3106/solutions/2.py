@@ -10,8 +10,6 @@ def fact(n):
 def comb(n, k):
     return fact(n) // fact(k) // fact(n - k)
 
-# https://en.wikipedia.org/wiki/Stirling_numbers_of_the_second_kind
-
 
 def combs_non_empty_boxes(n, k):
     if n == k:

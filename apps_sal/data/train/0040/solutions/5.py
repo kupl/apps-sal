@@ -33,7 +33,6 @@ for e in range(ArraysNumber):
         Results.append(0)
         continue
 
-    # print(Array)
     TheRightOrder = DeleteRepetitionsIn2(Array)
     TheRightOrder.sort()
     TheCurrentOrder = {}
@@ -43,15 +42,9 @@ for e in range(ArraysNumber):
             continue
         TheCurrentOrder[Array[i]][1] = i
 
-    # print(TheRightOrder)
-    # print(TheCurrentOrder)
-    # print(Array)
-
     TheCurrentResult = 1
     TheMaxResult = 1
     for i in range(len(TheRightOrder)):
-        #print("a =", TheCurrentResult)
-        #print("b =", TheMaxResult)
         if i == len(TheRightOrder) - 1:
             if TheCurrentResult >= TheMaxResult:
                 TheMaxResult = TheCurrentResult

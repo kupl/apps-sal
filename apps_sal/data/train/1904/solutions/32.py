@@ -8,17 +8,12 @@ class Solution:
 
         d = []
 
-#         large = -float(inf)
-#         small = float(inf)
-
         for i in range(len(points)):
 
             dist = math.sqrt(points[i][0] ** 2 + points[i][1] ** 2)
-            # print(dist)
             distances[dist] = distances.get(dist, []) + [points[i]]
             d.append(dist)
 
-        # print(distances)
         d.sort()
         ans = []
 

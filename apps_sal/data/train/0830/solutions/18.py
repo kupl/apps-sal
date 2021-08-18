@@ -20,7 +20,6 @@ for _ in range(T):
         for i in range(len(A)):
             if A[i] != B[i]:
                 L.append(B[i])
-        # print(L)
         P = list(dict.fromkeys(L))
         print(len(P))
         P.sort(reverse=True)

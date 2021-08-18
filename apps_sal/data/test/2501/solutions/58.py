@@ -38,6 +38,4 @@ while b < len(B) and c < len(C):
         c += 1
     else:
         b += 1
-# print(B)
-# print(C)
 print(ans)

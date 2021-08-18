@@ -18,7 +18,6 @@ while t:
             if(l[i] == '0' and br[i] == '1'):
                 ind = i
                 break
-        # print(ind)
         for i in range(len(l) - 1, ind, -1):
             k += 1
             if(l[i] == '1'):

@@ -43,7 +43,6 @@ from collections import Counter
 class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
 
-        # if there are no ages
         if not ages:
             return 0
 
@@ -54,14 +53,10 @@ class Solution:
                 return False
             return True
 
-        # define a counter for ages
         counter = Counter(ages)
 
-        # total friend requests
         requests = 0
 
-        # iterate over the ages
-        # [16, 16, 16] => 2, 2, 2 => 6
         for ageA, countA in list(counter.items()):
             for ageB, countB in list(counter.items()):
                 if friend(ageA, ageB):

@@ -7,10 +7,6 @@ fac = [1] + [0] * MAX_N
 fac_inv = [1] + [0] * MAX_N
 for i in range(1, n + 1):
     fac[i] = fac[i - 1] * (i) % MOD
-    # Fermat's little theorem says
-    # a**(p-1) mod p == 1
-    # then, a * a**(p-2) mod p == 1
-    # it means a**(p-2) is inverse element
     fac_inv[i] = fac_inv[i - 1] * pow(i, MOD - 2, MOD) % MOD
 
 

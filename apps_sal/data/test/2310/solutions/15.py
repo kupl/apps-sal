@@ -57,6 +57,3 @@ for i in range(int(input())):
     input()
 
     testCase()
-
-
-# Made By Mostafa_Khaled

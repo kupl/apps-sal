@@ -1,4 +1,4 @@
-class Solution(object):  # aw
+class Solution(object):
     def lemonadeChange(self, bills):
         five = ten = 0
         for bill in bills:

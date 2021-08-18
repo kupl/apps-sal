@@ -1,7 +1,5 @@
 from bisect import bisect_left, bisect
 
-# ===================================== 約数のリスト
-
 
 def enum_div(n):
     ir = int(n**(0.5)) + 1

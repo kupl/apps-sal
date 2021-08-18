@@ -18,5 +18,4 @@ class Solution:
                     dp[i] += dp[start] * dp[end] * 2
                 start += 1
                 end -= 1
-        # print(dp)
         return sum(dp) % (10**9 + 7)

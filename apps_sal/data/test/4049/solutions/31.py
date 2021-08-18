@@ -7,8 +7,6 @@ from collections import defaultdict as dd
 from bisect import bisect_left as bl, bisect_right as br
 from collections import Counter
 
-# sys.setrecursionlimit(100000000)
-
 
 def inp(): return int(input())
 def strng(): return input().strip()
@@ -40,7 +38,6 @@ b1, b2, b3 = stdarr()
 mi = 0
 ma = 0
 
-# for max
 wi = min(a1, b2)
 re = max(a1 - wi, 0)
 draw = min(re, b1)
@@ -65,7 +62,6 @@ lose = min(re, b2)
 
 ma += wi
 
-# for min
 
 l1 = min(a1, b3)
 re = max(a1 - l1, 0)

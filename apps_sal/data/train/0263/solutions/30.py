@@ -13,15 +13,6 @@ class Solution:
         d[8] = {1, 3}
         d[9] = {2, 4}
 
-#         memo = [[0]*10 for i in range(n+1)]
-#         memo[1] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-
-#         for i in range(2, n+1):
-#             for key, val in d.items():
-#                 for v in val:
-#                     memo[i][key] += memo[i-1][v]
-
-        # memo = [[0]*10 for i in range(n+1)]
         memo = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         memo2 = [0] * 10
 

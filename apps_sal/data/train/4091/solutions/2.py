@@ -1,4 +1,4 @@
-NOTES = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
+NOTES = ['A', 'A
 NUMBER_OF_KEYS = 88
 
 

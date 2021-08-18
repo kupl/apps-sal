@@ -17,12 +17,8 @@ class Solution:
         for i in range(k + 1):
             if i == 0:
                 max_score = max(max_score, back[-1])
-                # print(i,back[-1])
             elif i == k:
                 max_score = max(max_score, front[k - 1])
-                # print(i,front[k-1])
             else:
                 max_score = max(max_score, front[i - 1] + back[k - i - 1])
-                # print(i,k-i,max_score,front[i-1]+back[k-i-1])
-            # print(i,k-i,max_score)
         return max_score

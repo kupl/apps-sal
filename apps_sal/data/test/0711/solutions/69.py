@@ -26,8 +26,6 @@ def comb(n, max_k, mod):
         n %= mod
     return res
 
-# 素因数分解
-
 
 def prime_factors(n):
     i = 2

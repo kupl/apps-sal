@@ -1,5 +1,3 @@
-# Codeforces 258
-# Game with Sticks
 
 a, b = input().split()
 horiz = int(a)

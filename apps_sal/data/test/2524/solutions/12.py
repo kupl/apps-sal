@@ -10,5 +10,4 @@ for i in range(100):
     zero = N - one
     ans += (one * zero) % M * pow(2, i, M) % M
     ans %= M
-    # print(one,zero)
 print(ans)

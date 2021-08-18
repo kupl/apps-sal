@@ -23,7 +23,6 @@ def solve(l, r, c, row, col, po):
     return count
 
 
-# cook your dish here
 for _ in range(int(input())):
     r, c, q = map(int, input().split())
 

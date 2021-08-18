@@ -20,18 +20,15 @@ while test > 0:
             x = x - 1
         pre[i] = x
     for i in range(1, n + 1):
-        #print(arr[i], end = " ")
         brr = [0 for k in range(2001)]
         lis = []
         for j in range(i, n + 1):
             brr[arr[j]] = brr[arr[j]] + 1
             bisect.insort(lis, arr[j])
-            # print(lis)
             size = j - i + 1
             xt = pre[size]
             y = lis[xt - 1]
             f = brr[y]
             if brr[f] > 0:
-                #print(i," ",j," ",y)
                 c = c + 1
     print(c)

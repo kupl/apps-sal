@@ -1,9 +1,4 @@
 
-# -*- coding: utf-8 -*-
-# @Date    : 2019-06-11 10:26:57
-# @Author  : raj lath (oorja.halt@gmail.com)
-# @Link    : link
-# @Version : 1.0.0
 
 from collections import deque
 import sys

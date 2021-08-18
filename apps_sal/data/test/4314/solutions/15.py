@@ -2,14 +2,14 @@ H, W = map(int, input().split())
 A = []
 for i in range(H):
     x = input()
-    if x.count('#') == 0:
+    if x.count('
         continue
     A.append(x)
 
-c = set()
+c=set()
 for a in A:
     for i in range(W):
-        if a[i] == '#':
+        if a[i] == '
             c.add(i)
 
 for a in A:

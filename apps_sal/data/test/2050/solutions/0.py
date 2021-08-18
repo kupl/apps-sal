@@ -3,7 +3,6 @@ Created on Oct 12, 2014
 
 @author: Ismael
 '''
-#import time
 
 from fractions import gcd
 
@@ -33,7 +32,5 @@ def solve(n, k):
         print(' '.join([str(x * k) for x in setK]))
 
 
-#t = time.clock()
 n, k = list(map(int, input().split()))
 solve(n, k)
-# print(time.clock()-t)

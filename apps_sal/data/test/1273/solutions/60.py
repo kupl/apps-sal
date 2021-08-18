@@ -11,12 +11,10 @@ def readinput():
         a, b = list(map(int, input().split()))
         edges.append((a, b))
         nList[a].append(b)
-        # nList[b].append(a)
     return n, nList, edges
 
 
 def bfs(s, nList):
-    # print(nList)
     WHITE = 0
     GRAY = 1
     BLACK = 2
@@ -41,7 +39,6 @@ def bfs(s, nList):
                 col += 1
         maxcolor = max(maxcolor, col - 1)
         status[u] = BLACK
-        # print(u,usedcolor)
     return color, maxcolor
 
 

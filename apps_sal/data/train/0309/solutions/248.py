@@ -1,7 +1,5 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        # find step between number, and count max of consequence index.
-        # step: [arr], # preserve order?
 
         if not A:
             return 0

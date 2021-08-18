@@ -3,11 +3,11 @@ class Solution:
         nums.sort()
         count = collections.Counter(nums)
 
-        for n in nums:  # loop all the numbers
+        for n in nums:
 
-            if count[n] != 0:  # base condition whre count[n] is null means no need to continue the loop
+            if count[n] != 0:
 
-                for v in range(n, n + k):  # each num in num if it is in count dict then. loop for 4 nums
+                for v in range(n, n + k):
                     count[v] -= 1
                     if count[v] < 0:
                         return False

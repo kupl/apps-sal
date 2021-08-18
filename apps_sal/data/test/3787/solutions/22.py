@@ -9,15 +9,9 @@ def make_divisors(n):
             if i != n // i:
                 divisors.append(n // i)
 
-    # divisors.sort()
     return divisors
 
-#a = list(map(int, input().split()))
 
-#####################################
-
-
-# 2:26
 n, a, b = list(map(int, input().split()))
 ans = []
 if(n < a + b - 1 or n > a * b):

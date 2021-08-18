@@ -22,7 +22,6 @@ for _i in range(t):
             res.append(i + 1)
             res.append(i + 1)
 
-        # print(nums)
     if nums[n - 3] == nums[n - 1] and nums[n - 2] > nums[n - 1]:
         res.append(n - 2)
         nums[n - 1], nums[n - 2] = nums[n - 2], nums[n - 1]

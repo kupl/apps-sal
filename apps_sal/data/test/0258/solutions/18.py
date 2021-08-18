@@ -15,8 +15,6 @@ for i in range(n // 2, n):
         rq += 1
     else:
         rsum += int(arr[i])
-# if(lsum==rsum and lq==rq):
-#    print("Bicarp")
 if((lq + rq) % 2 == 1):
     print("Monocarp")
 elif((lsum - rsum) // 9 == (rq - lq) // 2 and (lsum - rsum) % 9 == 0):

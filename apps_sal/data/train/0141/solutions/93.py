@@ -1,7 +1,5 @@
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
-        # does sorting help?
-        # if we sort, we can use a pointer and continue incrementing until weight is over limit
 
         people.sort()
         boats = 0

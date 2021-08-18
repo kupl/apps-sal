@@ -1,14 +1,7 @@
-#import sys
-#import numpy as np
 import math
-#from fractions import Fraction
 import itertools
 from collections import deque
 from collections import Counter
-#import heapq
-#from fractions  import gcd
-# input=sys.stdin.readline
-#import bisect
 Mod = 10**9 + 7
 h, w, K = list(map(int, input().split()))
 dp = [[0] * w for _ in range(h + 1)]

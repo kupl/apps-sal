@@ -2,8 +2,6 @@ def __starting_point():
 
     n = int(input())
 
-    # 1+2+3+・・・+x <= n+1となるような最大のxを求める
-
     left = 0
     right = 10**18 + 2
 

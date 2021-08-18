@@ -10,7 +10,6 @@ class Solution:
                     if s[i:i + j] not in occurence:
                         occurence[s[i:i + j]] = 0
                     occurence[s[i:i + j]] += 1
-        # print(occurence)
         if len(occurence) == 0:
             return 0
         return max(occurence.values())

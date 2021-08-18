@@ -1,4 +1,3 @@
-# cook your dish here
 n, m = list(map(int, input().split()))
 k = n + m - 1
 l1 = list(map(int, input().split()))

@@ -9,26 +9,22 @@ def isaban(i, j, ki, kj):
 def ischeck(i, j, ki, kj, ai, aj):
     if i == ai and j == aj:
         return False
-    # Rook
     if i == ai:
         if ai != ki or (kj < j and kj < aj) or (kj > j and kj > aj):
             return True
     if j == aj:
         if aj != kj or (ki < i and ki < ai) or (ki > i and ki > ai):
             return True
-    # Bishop
     if i + j == ai + aj:
         if ai + aj != ki + kj or (ki < i and ki < ai) or (ki > i and ki > ai):
             return True
     if i - j == ai - aj:
         if ai - aj != ki - kj or (ki < i and ki < ai) or (ki > i and ki > ai):
             return True
-    # Knight
     Knight = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
     for item in Knight:
         if ai == i + item[0] and aj == j + item[1]:
             return True
-    # Not checked
     return False
 
 

@@ -3,7 +3,7 @@ class Solution1:
         if not A:
             return 0
 
-        def findAndCompact(l, i):  # require i >= 0
+        def findAndCompact(l, i):
             if l[i] == i:
                 return i
             p = l[i]
@@ -13,7 +13,6 @@ class Solution1:
                 p = l[p]
             root = p
 
-            # compact
             p = i
             while p >= 0 and l[p] != p:
                 t = l[p]
@@ -22,7 +21,7 @@ class Solution1:
             return root
 
         slist = [-1] * len(A)
-        d = {}  # record prime->(root of union-find set)
+        d = {}
         for i in range(len(A)):
             n = A[i]
             has_factor = False
@@ -30,7 +29,6 @@ class Solution1:
                 if n % j == 0:
                     has_factor = True
                     k = n // j
-                    #print(n, j, k)
                     ri = -1 if slist[i] < 0 else findAndCompact(slist, slist[i])
                     rj = -1 if j not in d else findAndCompact(slist, d[j])
                     rk = -1 if k not in d else findAndCompact(slist, d[k])
@@ -45,16 +43,14 @@ class Solution1:
                         if k in d:
                             slist[rk] = mm
                         slist[i] = d[j] = d[k] = mm
-            if not has_factor:  # prime
+            if not has_factor:
                 if A[i] not in d:
                     slist[i] = d[A[i]] = i
                 else:
                     slist[i] = d[A[i]]
-            #print(slist, d)
 
         for i in range(len(A)):
             findAndCompact(slist, i)
-        # print('### ', slist)
         cc = Counter(slist)
         m = cc.most_common(2)
         return m[0][1] if m[0][0] != -1 else m[1][1]
@@ -69,7 +65,6 @@ class DSU:
         while n >= 0 and self.p[n] != n:
             n = self.p[n]
         root = n
-        # compact
         n = x
         while n >= 0 and self.p[n] != n:
             t = self.p[n]

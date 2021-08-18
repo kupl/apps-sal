@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
 
-# Code by H~$~C
 
 import math
 from sys import stdin

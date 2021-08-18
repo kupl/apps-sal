@@ -1,11 +1,9 @@
-#
 import bisect
 import collections
 import atexit
 import math
 import sys
 from functools import cmp_to_key
-#key=cmp_to_key(lambda x,y: 1 if x not in y else -1 )
 
 sys.setrecursionlimit(1000000)
 
@@ -15,7 +13,6 @@ def getIntList():
 
 
 try:
-    #raise ModuleNotFoundError
     import numpy
 
     def dprint(*args, **kwargs):
@@ -49,11 +46,11 @@ inId = 0
 outId = 0
 if inId > 0:
     dprint('use input', inId)
-    sys.stdin = open('input' + str(inId) + '.txt', 'r')  # 标准输出重定向至文件
+    sys.stdin = open('input' + str(inId) + '.txt', 'r')
 if outId > 0:
     dprint('use output', outId)
-    sys.stdout = open('stdout' + str(outId) + '.txt', 'w')  # 标准输出重定向至文件
-    atexit.register(lambda: sys.stdout.close())  # idle 中不会执行 atexit
+    sys.stdout = open('stdout' + str(outId) + '.txt', 'w')
+    atexit.register(lambda: sys.stdout.close())
 
 N, = getIntList()
 

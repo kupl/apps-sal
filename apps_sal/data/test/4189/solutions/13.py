@@ -8,7 +8,6 @@ for i in range(n):
     else:
         q += 1
 for i in range(1, 100):
-    # soft::
     if (((i * i + 1) // 2 >= p) and ((i * i) // 2 >= q)) or (((i * i + 1) // 2 >= q) and ((i * i) // 2 >= p)):
         print(i)
         break

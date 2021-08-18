@@ -4,7 +4,6 @@ class Solution:
 
         if S == T:
             return 0
-        # turn routes into graph
         edge_dict = {}
         for i in range(len(routes)):
             for j in range(i + 1, len(routes)):
@@ -18,8 +17,6 @@ class Solution:
                     edge_dict[i][j] = 1
                     edge_dict[j][i] = 1
 
-        # print(edge_dict)
-        # bfs on this graph, starting at S trying to get to T
         frontier = queue.SimpleQueue()
         seen = {}
 
@@ -30,7 +27,6 @@ class Solution:
 
         while not frontier.empty():
             node, dist = frontier.get()
-            # print(node)
             if T in routes[node]:
                 return dist
             neighbors = list(edge_dict[node].keys())
@@ -40,5 +36,3 @@ class Solution:
                     frontier.put((neighbor, dist + 1))
 
         return -1
-
-        # if bfs fails return -1

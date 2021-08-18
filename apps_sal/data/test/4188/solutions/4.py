@@ -28,12 +28,9 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
-############################## SOLUTION ##############################
 answers = [1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0]
 
 x = int(input())
 
-# tests: 1 7 13 3 8 16 11 2 5 10 9 12- 12- 4 _ _
-#if x not in [1,7,13,3,16,8,11,2,5,10] and x < 7: print(1/0)
 
 print(answers[x - 1])

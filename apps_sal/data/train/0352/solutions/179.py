@@ -1,24 +1,14 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        # Note: order does not matter for this problem
         words = sorted(words, key=lambda word: len(word))
-        # Once we've sorted words by length, we need an efficient way to
-        # check if a longer word can be generated from a shorter word
-        # We can simply do a char by char comparison which is O(W), where W
-        # is the maximum length of a word
-        # You have to do this for all strings of length 1 less than current string's length
-        # If you find a match, then increment the dp value
         n = len(words)
         if n == 1:
             return 1
 
         ans = 1
-        # dp[i] is the length of the longest chain ending at i
         dp = [1] * n
 
-        # Check if string at i can be generated from string at j
         def match(i, j):
-            # This function assumes that len(words[i]) - len(words[j]) == 1
             idx_i = 0
             idx_j = 0
             skipped = False

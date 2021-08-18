@@ -47,7 +47,6 @@ while fl:
             c += 1
         else:
             break
-# print(floop)
 if floop == 1:
     orig = la
     cm = 0
@@ -75,7 +74,6 @@ if floop == 1:
 
         ans += s1
     c += max(cn, cm)
-    # print(s1,s2)
 
 
 print(c)

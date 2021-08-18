@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-# E
-# 文字列比較をローリングハッシュを用いると高速
 
 import sys
 from collections import defaultdict, deque
@@ -9,13 +6,9 @@ import math
 import bisect
 input = sys.stdin.readline
 
-# 再起回数上限変更
-# sys.setrecursionlimit(1000000)
 
 n = int(input())
 s = input()[:-1]
-# s = list(map(ord, list(input()[:-1])))
-# print(s)
 
 lb = 0
 ub = n // 2 + 1
@@ -43,9 +36,6 @@ def check2(m):
         res %= mod
 
     dic = {res: 0}
-    # defaultdictが早い
-    # dic = defaultdict(int)
-    # dic[res] = 0
 
     for i in range(n - m):
         res = ((res - s[i] * power[m - 1]) * base +
@@ -77,7 +67,6 @@ while ub > lb + 1:
         lb = x
     else:
         ub = x
-    # print(lb, ub)
 
 
 '''

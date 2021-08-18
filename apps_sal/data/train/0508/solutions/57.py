@@ -10,7 +10,6 @@ ans = [-1] * Q
 skip = [-1] * Q
 
 for S, T, X in STX:
-    # [S - X, T - X)
     left = bisect_left(D, S - X)
     right = bisect_right(D, T - X - 1)
 

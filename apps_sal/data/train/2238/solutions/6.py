@@ -1,4 +1,3 @@
-# 484A
 
 from sys import stdin
 

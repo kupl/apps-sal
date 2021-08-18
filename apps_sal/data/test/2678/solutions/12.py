@@ -23,7 +23,6 @@ def solve(sets):
 
 n = int(input().strip())
 sets = []
-# [n,m] = list(map(int, input().strip().split()))
 
 for i in range(n):
     sets.append(list(map(int, input().strip().split())))

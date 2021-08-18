@@ -11,7 +11,6 @@ while tc:
     for i in range(n):
         graph2.append([int(x) for x in input().split()])
 
-    # Begin LOL
     for x in range(2):
         a = []
         op = ''
@@ -26,6 +25,5 @@ while tc:
             k -= 1
         op += str(a[0])
         print(op)
-    # End LOL
 
     tc -= 1

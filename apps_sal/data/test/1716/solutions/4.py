@@ -1,4 +1,4 @@
-from itertools import accumulate  # list(accumulate(A))
+from itertools import accumulate
 import sys
 sys.setrecursionlimit(10**8)
 def ii(): return int(sys.stdin.readline())
@@ -6,14 +6,6 @@ def mi(): return map(int, sys.stdin.readline().split())
 def li(): return list(map(int, sys.stdin.readline().split()))
 def li2(N): return [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
 def dp2(ini, i, j): return [[ini] * i for _ in range(j)]
-
-# import bisect #bisect.bisect_left(B, a)
-# from collections import defaultdict #d = defaultdict(int) d[key] += value
-# from collections import Counter # a = Counter(A).most_common()
-
-# BIT木
-
-# Binary Indexed Tree (Fenwick Tree)
 
 
 class BIT:
@@ -30,7 +22,6 @@ class BIT:
         return s
 
     def add(self, i, x):
-        # assert i > 0
         self.el[i] += x
         while i <= self.n:
             self.data[i] += x
@@ -63,9 +54,7 @@ ans = [0] * (Q)
 
 for i in range(M + Q):
     if lrpq[i][0] == 0:
-        #L[lrpq[i][1]] += 1
         bit.add(lrpq[i][1] + 1, 1)
-        #BIT_update(lrpq[i][1]+1, 1)
     else:
         bit.sum(lrpq[i][2])
         if lrpq[i][1] > 0:

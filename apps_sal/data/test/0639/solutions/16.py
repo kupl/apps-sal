@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 N, X = list(map(int, input().split()))
 A = set(map(int, input().split()))

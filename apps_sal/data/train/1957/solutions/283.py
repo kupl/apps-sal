@@ -7,7 +7,6 @@ class Solution:
         ans = []
         while nodes:
             x, r, steps = nodes.popleft()
-            # print([x, r, steps], end=' ')
             if x[0] == len(grid) - 1 and x[1] == len(grid[0]) - 1:
                 ans.append(steps)
                 break

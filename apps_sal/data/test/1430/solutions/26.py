@@ -1,4 +1,3 @@
-# create date: 2020-07-03 22:02
 
 from itertools import groupby, accumulate
 import sys

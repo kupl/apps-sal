@@ -22,4 +22,3 @@ class Solution:
         powers = [self.helper(x) for x in range(lo, hi + 1)]
         tosort = list(zip(powers, list(range(lo, hi + 1))))
         return sorted(tosort)[k - 1][1]
-        # print(ranks)

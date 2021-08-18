@@ -6,7 +6,6 @@ ans = 0
 for x in X:
     dis = x - now
     tmp = min(A * dis, B)
-    # print(tmp)
     ans += tmp
     now = x
 

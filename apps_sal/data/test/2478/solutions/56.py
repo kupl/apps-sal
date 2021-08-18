@@ -1,7 +1,6 @@
 n = int(input())
 s = list(str(input()))
 
-# (
 x = 0
 y = 0
 for i in range(n):

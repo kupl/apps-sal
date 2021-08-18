@@ -16,7 +16,6 @@ class Solution:
                 j = i + 1
                 while j < len(col[1]):
                     common_x = list(set(y_order[col[1][i]]) & set(y_order[col[1][j]]))
-                    # remove the side of the col we hold now
                     common_x.remove(col[0])
                     if common_x:
                         for x in common_x:

@@ -68,6 +68,3 @@ else:
     ans = ans * 2 - 1
 
 print(ans)
-
-
-# Made By Mostafa_Khaled

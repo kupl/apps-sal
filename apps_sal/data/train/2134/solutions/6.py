@@ -14,7 +14,6 @@ stack.append((0, 1))
 a[0] = s[0]
 while len(stack) > 0:
     v, depth = stack.pop()
-    # assert (s[v]==-1) == (depth%2==0)
     if depth % 2 == 0:
         if len(children[v]) > 0:
             s[v] = s[min(children[v], key=lambda child: s[child])]

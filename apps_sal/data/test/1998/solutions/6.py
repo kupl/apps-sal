@@ -27,13 +27,11 @@ def get_working(string):
     return aux
 
 
-# main starts
 n, a, b, k = list(map(int, stdin.readline().split()))
 string = list(stdin.readline().strip())
 
 ans = 0
 working = get_working(string)
-# print(working)
 current = a
 flag = 0
 for i in working:
@@ -73,10 +71,5 @@ for i in range(len(string)):
     if string[i] == '2':
         ans.append(i + 1)
         break
-# print(string)
 print(len(ans))
 print(*ans)
-# print(ans)
-# for i in range(n):
-# 	if string[i] == 'b':
-# 		print(i + 1, end = ' ')

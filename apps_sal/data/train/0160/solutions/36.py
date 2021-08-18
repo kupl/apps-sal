@@ -1,7 +1,6 @@
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
 
-        # returns the maximum points Alex can get
         mem = {}
 
         def dp(l, r):

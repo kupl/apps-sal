@@ -28,11 +28,4 @@ class Solution:
                 if not dp[i][j] and B[j - 1] == C[i + j - 1]:
                     dp[i][j] = dp[i][j - 1]
 
-                # if A[i-1] == C[i+j-1] and B[j - 1] != C[i + j - 1]:
-                #     dp[i][j] = dp[i - 1][j]
-                # elif A[i - 1] != C[i + j - 1] and B[j - 1] == C[i + j - 1]:
-                #     dp[i][j] = dp[i][j - 1]
-                # elif A[i - 1] == C[i + j - 1] and B[j - 1] == C[i + j - 1]:
-                #     dp[i][j] = dp[i - 1][j] or dp[i][j - 1]
-
         return dp[-1][-1]

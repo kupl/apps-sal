@@ -28,7 +28,6 @@ else:
 
 
 dp[1][0], dp[1][1], dp[1][2] = zero, one, two
-#print(zero, one, two)
 
 for i in range(2, n + 1):
     dp[i][0], dp[i][1], dp[i][2] = (

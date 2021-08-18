@@ -64,10 +64,6 @@ def main():
     xes = make_edges(xs, start=0)
     yes = make_edges(ys, start=N)
 
-    # Kruskal
-    # 最小コストの辺から順に使用する
-    # 同じ連結成分に属していればつながない(閉路を作らない)
-    # コスト昇順ソート済みの辺リストを使用する
     ret = 0
     for cost, a, b in sorted(xes + yes, key=itemgetter(0)):
         if uf.same(a, b):

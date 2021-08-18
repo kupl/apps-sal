@@ -10,7 +10,6 @@ class Solution:
                     x = x * 3 + 1
                     k.append(x)
             return len(k) - 1
-        #l = [i for i in range(lo,hi+1)]
         power = []
         for i in range(lo, hi + 1):
             power.append([i, find_transform(i)])

@@ -2,7 +2,6 @@ from itertools import combinations
 from math import sqrt
 
 
-# determinant of matrix a
 def det(a):
     return a[0][0] * a[1][1] * a[2][2] + \
         a[0][1] * a[1][2] * a[2][0] + \
@@ -12,7 +11,6 @@ def det(a):
         a[0][0] * a[1][2] * a[2][1]
 
 
-# unit normal vector of plane defined by points a, b, and c
 def unit_normal(a, b, c):
     x = det([[1, a[1], a[2]],
              [1, b[1], b[2]],
@@ -27,12 +25,10 @@ def unit_normal(a, b, c):
     return x / magnitude, y / magnitude, z / magnitude
 
 
-# dot product of vectors a and b
 def dot(a, b):
     return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
 
 
-# cross product of vectors a and b
 def cross(a, b):
     x = a[1] * b[2] - a[2] * b[1]
     y = a[2] * b[0] - a[0] * b[2]
@@ -40,9 +36,8 @@ def cross(a, b):
     return x, y, z
 
 
-# area of polygon poly
 def area(poly):
-    if len(poly) < 3:  # not a plane - no area
+    if len(poly) < 3:
         return 0
 
     total = [0, 0, 0]

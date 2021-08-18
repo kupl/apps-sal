@@ -15,9 +15,7 @@ for x in range(eval(input())):
         else:
             ans += 1
             t = t * 2
-    # print t,ans
     while t < 2**(k):
-        # print 1
         ans += 1
         t = t * 2
     print(ans)

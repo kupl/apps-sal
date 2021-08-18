@@ -22,15 +22,11 @@ def solve(b, s, t):
         if c in visited:
             continue
         if c[0] < 0 or c[0] >= 1e6 or c[1] < 0 or c[1] >= 1e6:
-            # outside!
             continue
         if c in b:
-            # blocked!
             continue
         if c == t:
-            # found!
             return True
-        # search neighbors:
 
         visited.add(c)
         x = c[0]
@@ -55,7 +51,6 @@ def solve(b, s, t):
         heapq.heappush(heap, create_priority_item((c[0] - 1, c[1]), t))
         heapq.heappush(heap, create_priority_item((c[0], c[1] + 1), t))
         heapq.heappush(heap, create_priority_item((c[0], c[1] - 1), t))
-    # we live in a cavity :(
     return False
 
 

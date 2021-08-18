@@ -1,6 +1,5 @@
 n = int(input().strip())
 w = (n - 1) * 2 + ((n * 2) - 1)
-# upper half
 for i in range(1, n, 1):
     number_of_letter = (i * 2) - 1
     s = ''
@@ -16,7 +15,6 @@ for i in range(1, n, 1):
     print((s.center(w, '-')))
 
 
-# bottom half
 for i in range(n, 0, -1):
     number_of_letter = (i * 2) - 1
     s = ''

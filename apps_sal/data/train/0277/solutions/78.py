@@ -3,8 +3,6 @@ class Solution:
         res = 0
         n = len(light)
 
-        # Actual turned on light (positive)
-        # Required turned on light (negative)
         counter = collections.Counter()
         for i in range(n):
             counter[light[i]] += 1

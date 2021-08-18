@@ -17,8 +17,6 @@ class Solution:
                 if left >= A[i] or left not in a_set:
                     continue
 
-                #print(left, A[i], A[j], dp[(left, A[i])])
-
                 dp[(A[i], A[j])] = dp[(left, A[i])] + 1
 
                 ret = max(ret, dp[(A[i], A[j])])

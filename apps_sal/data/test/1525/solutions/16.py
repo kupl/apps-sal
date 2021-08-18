@@ -5,8 +5,6 @@ def main():
 
     dp = [[0] * W for _ in range(H + 1)]
     dp[0][0] = 1
-    # 横線[0,H)
-    # H->終着点
 
     for h in range(H):
         for bit in range(1 << (W - 1)):
@@ -24,14 +22,6 @@ def main():
 
 def __starting_point():
     main()
-
-# import sys
-# input = sys.stdin.readline
-#
-# sys.setrecursionlimit(10 ** 7)
-#
-# (int(x)-1 for x in input().split())
-# rstrip()
 
 
 __starting_point()

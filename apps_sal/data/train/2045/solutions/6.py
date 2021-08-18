@@ -22,8 +22,6 @@ for i in range(m):
             parent[cnt] = cnt + 1
             answer[cnt] = x - 1
         cnt = getParent(cnt)
-    # print(parent)
-    # print(answer)
 c = 0
 s = ""
 for i in answer:

@@ -7,8 +7,6 @@ class DisjointSetUnion():
         self.par_size = [-1] * n
 
     def merge(self, a, b):
-        #assert 0 <= a < self.n
-        #assert 0 <= b < self.n
         x = self.leader(a)
         y = self.leader(b)
         if x == y:
@@ -20,12 +18,9 @@ class DisjointSetUnion():
         return x
 
     def same(self, a, b):
-        #assert 0 <= a < self.n
-        #assert 0 <= b < self.n
         return self.leader(a) == self.leader(b)
 
     def leader(self, a):
-        #assert 0 <= a < self.n
         x = a
         while self.par_size[x] >= 0:
             x = self.par_size[x]
@@ -35,7 +30,6 @@ class DisjointSetUnion():
         return x
 
     def size(self, a):
-        #assert 0 <= a < self.n
         return -self.par_size[self.leader(a)]
 
 

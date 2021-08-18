@@ -2,7 +2,6 @@ class Solution:
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
         START = 1
         END = 0
-        # we want it to end first then start
         MOD = 10**9 + 7
         xaxis = []
 
@@ -39,7 +38,6 @@ class Solution:
                 length += yaxis[i][1] - yaxis[i][0]
             else:
                 if prev[1] >= yaxis[i][1]:
-                    # don't want to update prev end point
                     continue
                 length += max(0, yaxis[i][1] - prev[1])
             prev = yaxis[i]

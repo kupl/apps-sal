@@ -1,10 +1,4 @@
-#import numpy as np
-#import math
-#from decimal import *
-#from numba import njit
 from bisect import bisect_left
-
-# @njit
 
 
 def main():
@@ -23,7 +17,6 @@ def main():
     n = 1
     stack = []
     while True:
-        #print(n, lastLis, stack)
         if not visited[n]:
             if len(lastLis) == 0 or a[n - 1] > lastLis[-1]:
                 lastLis.append(a[n - 1])
@@ -45,7 +38,6 @@ def main():
                 n = 0
                 break
             n = parent[n]
-            # 巻き戻し
             index, value = stack.pop(len(stack) - 1)
             if value < 0:
                 lastLis.pop(index)

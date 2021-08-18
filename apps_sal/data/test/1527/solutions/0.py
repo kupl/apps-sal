@@ -7,10 +7,10 @@ t = ((0, 1), (1, 0), (-1, 0), (0, -1))
 m = 0
 for sy in range(h):
     for sx in range(w):
-        if s[sy][sx] == "#":
-            continue
+        if s[sy][sx] == "
+        continue
         ss = deepcopy(s)
-        ss[sy][sx] = "#"
+        ss[sy][sx] = "
         q = deque([(0, sy, sx)])
         max_cost = 0
         my, mx = 0, 0
@@ -24,6 +24,6 @@ for sy in range(h):
                 if 0 <= ny < h and 0 <= nx < w:
                     if ss[ny][nx] == ".":
                         q.append((cost, ny, nx))
-                        ss[ny][nx] = "#"
+                        ss[ny][nx] = "
         m = max(m, max_cost)
 print(m)

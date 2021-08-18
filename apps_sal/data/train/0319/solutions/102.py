@@ -8,6 +8,5 @@ class Solution:
                 localTotal += stoneValue[j]
                 otherPlayerMax = dp[j + 1] if j + 1 < numStones else 0
                 dp[i] = max(dp[i], localTotal - otherPlayerMax)
-        # print(dp)
         winner = 'Alice' if dp[0] > 0 else 'Bob' if dp[0] < 0 else 'Tie'
         return winner

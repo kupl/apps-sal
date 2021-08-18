@@ -1,13 +1,6 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         '''
-        # approach 1
-        # traverse ll, if node in G, put in components as another list or extending the list
 
         num_components=0
         components=[]
@@ -31,9 +24,6 @@ class Solution:
         print(len(components))
         return len(components)
         '''
-        # approach 2 :
-        # traverse ll, check if prev node in G. use a flag
-        # if not prev_in : increment count, else continue traversal (going through the same component)
 
         cur = head
         prev_in = False

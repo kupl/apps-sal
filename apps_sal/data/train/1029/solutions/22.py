@@ -11,7 +11,6 @@ for _ in range(int(input())):
             continue
         temp.append(tempI)
         tempI += 1
-    # print(temp)
     if(n - m) <= 0:
         print()
         print()

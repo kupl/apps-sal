@@ -5,7 +5,6 @@ import math
 def duh0(x1, x2, x3, x4, y1, y2, y3, y4, midonly=False):
     W = B = 0
     if (x3 <= x2) and (x1 <= x4):
-        # print(1)
         w, b = duh1(max(x1, x3), min(x2, x4),
                     y1, y2, y3, y4, midonly)
         W += w
@@ -14,13 +13,11 @@ def duh0(x1, x2, x3, x4, y1, y2, y3, y4, midonly=False):
         return (W, B)
 
     if (x1 < x3):
-        # print(3)
         w, b = duh1(x1, min(x2, x3 - 1),
                     y1, y2, y3, y4)
         W += w
         B += b
     if (x4 < x2):
-        # print(7)
         w, b = duh1(max(x1, x4 + 1), x2,
                     y1, y2, y3, y4)
         W += w
@@ -31,7 +28,6 @@ def duh0(x1, x2, x3, x4, y1, y2, y3, y4, midonly=False):
 def duh1(xa, xb, y1, y2, y3, y4, midonly=False):
     W = B = 0
     if (y3 <= y2) and (y1 <= y4):
-        # print("  ", 1, y1, y2, y3, y4)
         w, b = cnt(xa, xb, max(y1, y3), min(y2, y4))
         W += w
         B += b
@@ -39,12 +35,10 @@ def duh1(xa, xb, y1, y2, y3, y4, midonly=False):
         return (W, B)
 
     if (y1 < y3):
-        # print("  ", 4)
         w, b = cnt(xa, xb, y1, min(y2, y3 - 1))
         W += w
         B += b
     if (y4 < y2):
-        # print("  ", 8)
         w, b = cnt(xa, xb, max(y1, y4 + 1), y2)
         W += w
         B += b
@@ -72,13 +66,7 @@ def solve(n, m,
     W = st[0] + whi[1] - its[1] - bla[0]
     B = st[1] - whi[1] + its[1] + bla[0]
 
-    # print(st, whi, its, bla, sep="  ")
-
     print(W, B)
-
-
-###########################
-###########################
 
 
 def intRead():

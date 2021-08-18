@@ -9,7 +9,6 @@ rook = 0
 bishop = 0
 king = 0
 
-# rook
 if (y1 == y2) ^ (x1 == x2):
     rook = 1
 elif y1 == y2 and x1 == x2:
@@ -17,7 +16,6 @@ elif y1 == y2 and x1 == x2:
 else:
     rook = 2
 
-# bishop
 if (x1 == x2 and y1 == y2) or ((abs(x1 - x2)) % 2 != (abs(y1 - y2)) % 2):
     bishop = 0
 elif abs(x1 - x2) == abs(y1 - y2):
@@ -25,7 +23,6 @@ elif abs(x1 - x2) == abs(y1 - y2):
 else:
     bishop = 2
 
-# king
 while x1 != x2 and y1 != y2:
     if x1 < x2:
         x1 += 1

@@ -23,8 +23,6 @@ for i in range(n):
 comp = comp[::-1]
 cnt = ans
 ans += kind**2
-# print(comp)
-# print(sing)
 if len(comp) > len(sing):
     for i in range(len(sing)):
         dc, ds = comp[i], sing[i]

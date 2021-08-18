@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from itertools import accumulate
 n = int(input())
@@ -16,7 +15,6 @@ for i in range(1, n - 1):
     b_1 = s_cumsum_rev[-2 - i]
     b_0 = (n - 1 - i) - b_1
 
-    # print(a_1+b_0)
     ans = min(ans, a_1 + b_0)
 
 ans = min(ans, s_cumsum[-2])

@@ -20,7 +20,6 @@ n, m = map(int, input().split(" "))
 a = list(map(int, input().split(" ")))
 zero = False
 count = 0
-#a = list(map(lambda x: x // 2, na))
 mini = lcm(a)
 if len(a) != 1:
     maxi = gcd(a)
@@ -38,10 +37,8 @@ for i in a:
     if i % (2 * nibai) == 0:
         zero = True
         break
-#print(nibai, maxi, mini)
 if not zero:
     t = Decimal(str((m * 2 // mini) / 2))
-    # print(t)
     print(t.quantize(Decimal('0'), rounding=ROUND_HALF_UP))
 else:
     print(0)

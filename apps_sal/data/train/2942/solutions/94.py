@@ -8,4 +8,3 @@ def fold_to(distance):
             thick = 2 * thick
             i = i + 1
     return i
-    # your code here

@@ -4,13 +4,10 @@ class Solution:
 
         dp = [[0 for i in range(face + 1)] for j in range(n + 1)]
 
-        # 0 roll
         dp[0][face] = 1
-        # 1 roll
         for f in range(face):
             dp[1][f] = 1
         dp[1][face] = 6
-        # 2 roll and more
 
         for i in range(2, n + 1):
             for j in range(face):

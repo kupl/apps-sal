@@ -2,7 +2,6 @@ class Solution:
     def longestArithSeqLength(self, nums: List[int]) -> int:
         if not nums:
             return 0
-        # Write your code here
         memo = [0] * len(nums)
         graph = collections.defaultdict(lambda: collections.defaultdict(int))
 

@@ -4,7 +4,6 @@ while len(kouho) < 2019 and L <= R:
     temp = L % 2019
     kouho.add(temp)
     L += 1
-# print(kouho)
 A = list(kouho)
 A.sort()
 ans = 2018

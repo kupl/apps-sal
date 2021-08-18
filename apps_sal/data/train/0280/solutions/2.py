@@ -1,8 +1,5 @@
 class Solution:
     def palindromePartition(self, s: str, k: int) -> int:
-        # dp[i][k]: minimum cost to make s[:i] can be divided into k substring
-        # xxxxxxxxxxxxxjxxxxxxi
-        # dp[j-1][k-1]  s[j:i]
         n = len(s)
         dp = [[math.inf for _ in range(k + 1)] for _ in range(n + 1)]
         dp[0][0] = 0

@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 a = list(map(int, input().split()))[:t]
 b = (t * (t + 1)) // 2

@@ -4,7 +4,6 @@ def main():
     obj[0] = list(map(int, input().split()))
     obj[1] = list(map(int, input().split()))
 
-    # portrait
     def vlezet(a, b, i, j, sx, sy):
         return (i + sx <= a) and (j + sy <= b)
 

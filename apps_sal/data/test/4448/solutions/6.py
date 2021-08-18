@@ -13,9 +13,9 @@ n_items = list(map(int, inf.readline().split(' ')))
 sales = []
 for _ in range(M):
     sale = list(map(int, inf.readline().split(' ')))
-    sales.append(sale)  # sale_day, sale_type
+    sales.append(sale)
 
-sales = sorted(sales, key=lambda x: x[0], reverse=True)  # sort by day
+sales = sorted(sales, key=lambda x: x[0], reverse=True)
 
 
 def can_buy_in(dday):
@@ -29,7 +29,6 @@ def can_buy_in(dday):
         if money_left > sale_day:
             money_left = sale_day
         can_buy = min(items[sale_type - 1], money_left)
-        # buy it
         used += can_buy
         items[sale_type - 1] -= can_buy
         money_left -= can_buy
@@ -45,7 +44,6 @@ total_items = sum(n_items)
 low = total_items
 high = total_items * 2
 
-# find minimum can_buy day
 while low <= high:
     mid = (low + high) // 2
     if can_buy_in(mid):

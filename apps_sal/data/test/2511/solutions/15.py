@@ -1,10 +1,4 @@
-# https://atcoder.jp/contests/abc133/tasks/abc133_e
 
-# あー解説あたまいい
-# そのノードで塗れる色の候補を持つのではなくて、
-# そのノードの子で塗れる通りの数を持っておく
-# あるノードの子で塗れる通りの数は、親とそのノードで塗る色の通りも確定してると考えると、(K-2)P(子の数)となる。(自身が根のときは自身の色の通りも考慮して、(K)P(子の数+1)となる)
-# これをdfsで実装すれば良い
 
 import sys
 from collections import defaultdict
@@ -16,7 +10,6 @@ enu = enumerate
 
 
 def mina(*argv, sub=1): return list([x - sub for x in argv])
-# 受け渡されたすべての要素からsubだけ引く.リストを*をつけて展開しておくこと
 
 
 def read_a_int(): return int(read())
@@ -37,7 +30,7 @@ for _ in range(N - 1):
 
 
 def perm_mod(n, r, mod=MOD):
-    if n < r:  # そんな通りはありえない
+    if n < r:
         return 0
 
     ret = 1
@@ -48,11 +41,10 @@ def perm_mod(n, r, mod=MOD):
     return ret
 
 
-def dfs(u, p):  # 現在のuと親のp
+def dfs(u, p):
     if len(tree[u]) == 1 and tree[u][0] == p:
-        # 葉なので終了
         return 1
-    ret = 1  # その地点までの通りの数
+    ret = 1
     for to in tree[u]:
         if to == p:
             continue

@@ -29,9 +29,7 @@ class Solution:
         return res
 
     def dp(self, K: int, N: int) -> int:
-        # dp[i][j] - i eggs for j floors
         dp = [[inf for _ in range(N + 1)] for _ in range(K + 1)]
-        # dp[i][0] -> 0, dp[1][j] -> j, dp[i][1] -> 1
         for i in range(K + 1):
             dp[i][0] = 0
             dp[i][1] = 1
@@ -48,8 +46,6 @@ class Solution:
                     else:
                         right = mid
                 dp[i][j] = 1 + self.max(dp[i - 1][left - 1], dp[i][j - left])
-                # for k in range(i, j + 1):
-                #    dp[i][j] = self.min(dp[i][j] , 1 + self.max(dp[i - 1][k - 1], dp[i][j - k])
 
         return dp[K][N]
 

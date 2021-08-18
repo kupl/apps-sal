@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     n1 = int(input())
     wina = winb = ma = mb = n = m = 0

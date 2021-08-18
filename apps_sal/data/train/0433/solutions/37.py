@@ -6,7 +6,6 @@ class Solution:
         c = 0
         while(j <= len(arr)):
             if(s // k >= threshold):
-                # print(s,arr[i:j])
                 c += 1
             s -= arr[i]
             if(j < len(arr)):

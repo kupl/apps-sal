@@ -14,7 +14,6 @@ l.append(999999999999)
 count = 1
 temp = [l[0]]
 for i in range(n):
-    # print(temp)
     if s[i] == s[i + 1]:
         count += 1
         temp.append(l[i + 1])

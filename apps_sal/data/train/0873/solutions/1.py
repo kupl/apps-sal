@@ -21,11 +21,9 @@ def Check(S):
         if not found:
             isBreak = True
             break
-        # print result
     if not isBreak:
         return result
     result = ''
-    # print 'nextstart'
     for c in S:
         found = False
         if result == '':
@@ -40,7 +38,6 @@ def Check(S):
                     found = True
         if not found:
             return str(-1)
-        # print result
     return result
 
 

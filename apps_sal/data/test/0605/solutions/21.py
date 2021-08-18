@@ -12,4 +12,3 @@ elif mishaRes > vasyaRes:
     print("Misha")
 else:
     print("Vasya")
-# print (mishaRes, vasyaRes)

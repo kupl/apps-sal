@@ -8,6 +8,3 @@ for _ in range(int(input())):
         if arr1[i] == arr2[i] and sum(arr1[:i]) == sum(arr2[:i]):
             res += arr1[i]
     print(res)
-
-
-# cook your dish here

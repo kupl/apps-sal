@@ -14,7 +14,6 @@ S_f_lower, S_upperは一斉に定数を足す：変化量のみ持つ
 N = int(input())
 LR = [[int(x) for x in input().split()] for _ in range(N)]
 
-# initialize
 L, R = LR[0]
 S_lower = [-L]
 S_upper = [L]
@@ -32,11 +31,8 @@ def pop_R(): return heappop(S_upper)
 
 for L, R in LR[1:]:
     w = R - L
-    # 平行移動とのminをとるステップ
     add_lower -= w
     add_upper += prev_w
-    # abs(x-L) を加えるステップ
-    # abs は瞬間に2傾きが変わるので
     x = pop_L() + add_lower
     y = pop_R() + add_upper
     a, b, c, d = sorted([x, y, L, L])

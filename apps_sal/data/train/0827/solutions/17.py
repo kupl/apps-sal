@@ -5,7 +5,6 @@ for i in range(t):
     na = s.count('a')
     nb = s.count('b')
     temp = nb
-    # print(na,nb)
     summ = 0
     for i in range(len(s)):
         if(s[i] == 'a'):
@@ -14,6 +13,5 @@ for i in range(t):
             nb -= 1
         else:
             pass
-    # print(summ)
     ans = summ * k + ((k * (k - 1)) // 2) * na * temp
     print(ans)

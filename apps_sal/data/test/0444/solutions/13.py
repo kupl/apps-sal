@@ -17,9 +17,6 @@ def read_string():
 def read_string_list(delim=" "):
     return input().strip().split(delim)
 
-###### Author : Samir Vyas #######
-###### Write Code Below    #######
-
 
 n = read_int()
 

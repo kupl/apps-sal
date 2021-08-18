@@ -1,5 +1,3 @@
-# in the name of god
-# Mr_Rubick
 l, r = list(map(int, input().split()))
 i = 0
 if l == r:

@@ -1,4 +1,3 @@
-# python3
 
 def read_project_name():
     name, version = input().split()

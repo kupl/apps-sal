@@ -7,8 +7,6 @@ class Solution:
         waiting = 0
         cur = 0
 
-        #waiting = waiting + customers[0]
-
         rot = 0
         min = 0
 

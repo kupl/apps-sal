@@ -1,6 +1,3 @@
-#import math
-#import itertools
-#from collections import deque
 
 def INT(): return int(input())
 def INTM(): return map(int, input().split())

@@ -22,7 +22,7 @@ def do_normalize(current_elem, dimension, size, growing_value):
             return_elem.append(
                 do_normalize(fill_value, dimension - 1, size, growing_value)
             )
-    else:  # dimension == 1
+    else:
         return_elem = list(current_items)
         return_elem.extend(repeat_value(fill_value, missing_element_count))
 

@@ -15,7 +15,6 @@ def mean_of_ways(graph, n):
     while active_vertices:
         where = active_vertices.popleft()
 
-        # remember what happens if we change place of used assignment
         is_leaf = True
 
         leafs_count = ([not used[v] for v in graph[where]]).count(True)
@@ -44,8 +43,6 @@ def main():
 
     graph = [list() for i in range(n)]
     for i in range(n - 1):
-        # It there are vertices in descending order we can don't check
-        # used it or not by making edges one directional
         u, v = list(map(int, input().split()))
         u -= 1
         v -= 1

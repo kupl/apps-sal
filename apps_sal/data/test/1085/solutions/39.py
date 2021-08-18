@@ -1,6 +1,5 @@
 import sys
 n = int(input())
-# 約分
 
 
 def make_divisors(n):
@@ -36,4 +35,3 @@ for li in l:
     if func(n, li):
         ans += 1
 print(ans)
-# print(ans)

@@ -29,6 +29,5 @@ n = int(input())
 ans_list = []
 
 answer = list(set(test(n, ans_list)))
-# answer.sort()
 
 print(len(answer))

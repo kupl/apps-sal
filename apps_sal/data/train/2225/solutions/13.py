@@ -65,7 +65,6 @@ def main():
                 tmp //= 2
                 cnt += 1
             g ^= (2**cnt)
-            #print(g, s, s2, t, t2, dic[t], dic2[t2])
         seen[s] = 1
         seen2[s2] = 1
         seen3[s3] = 1

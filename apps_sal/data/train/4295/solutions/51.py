@@ -3,11 +3,11 @@ def balanced_num(numbers):
     string_n = str(numbers)
     for i in string_n:
         args.append(int(i))
-    last_index = len(args) - 1  # get the last index number of the list
+    last_index = len(args) - 1
     if len(args) % 2 == 0:
-        first_index = last_index // 2  # get the indexs of two characters in the middle of the list
+        first_index = last_index // 2
         second_index = last_index // 2 + 1
-        if sum(args[0:first_index]) == sum(args[second_index + 1:]):  # use slice to get characters from left and right side
+        if sum(args[0:first_index]) == sum(args[second_index + 1:]):
             return 'Balanced'
         else:
             return 'Not Balanced'

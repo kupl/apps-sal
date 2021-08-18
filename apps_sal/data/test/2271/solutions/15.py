@@ -1,10 +1,9 @@
 import sys
-# with open(filename, 'r') as f:
 with sys.stdin as f:
     for i, line in enumerate(f):
         if i == 0:
             N = int(line)
-            graph = [[] for _ in range(N)]  # [[]] * N not working, no deepcopy
+            graph = [[] for _ in range(N)]
         else:
             fromVertex, toVertex = line.split(' ')
             fromVertex, toVertex = int(fromVertex) - 1, int(toVertex) - 1

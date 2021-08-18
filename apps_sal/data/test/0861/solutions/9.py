@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from math import sqrt
 m, r = list(map(int, input().split()))
 acc = 0.0

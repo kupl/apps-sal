@@ -1,6 +1,3 @@
-# 解説動画みた： https://www.youtube.com/watch?v=XI8exXVxZ-Q
-# 最小公倍数
-# ユーグリッドの互除法
 
 import math
 

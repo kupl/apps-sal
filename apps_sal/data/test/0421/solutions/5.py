@@ -11,7 +11,6 @@ def __starting_point():
     cnt = 0
     now = 1
     for i in range(0, len(sorders)):
-        # print(now)
         if sorders[i][1] > now or i == 0:
             cnt += 1
             now = sorders[i][0]

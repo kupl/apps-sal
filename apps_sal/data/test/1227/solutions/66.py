@@ -4,12 +4,6 @@ def resolve():
     K = int(input())
     N = len(S)
 
-    # dp[i][j][smaller]
-    # i桁目まで見たときに0以外の数字をｊ個使用し、条件を満たす個数
-    # smaller:
-    # 0:i桁目まで見たときに一致している(次の桁は余裕が無い)
-    # 1:次の桁は余裕がある
-
     dp = [[[0] * 2 for _ in range(4)] for _ in range(N + 1)]
     dp[0][0][0] = 1
 
@@ -26,9 +20,9 @@ def resolve():
                     if nj > K:
                         continue
                     if smaller == 0:
-                        if d > now:  # 値を超えている
+                        if d > now:
                             continue
-                        if d < now:  # 次の桁は余裕がある
+                        if d < now:
                             n_smaller = 1
                     dp[ni][nj][n_smaller] += dp[i][j][smaller]
     ans = dp[N][K][0] + dp[N][K][1]

@@ -1,4 +1,3 @@
-# cook your dish here
 def read_i_l(l=False):
     m = list(map(int, input().strip().split(" ")))
     if l:

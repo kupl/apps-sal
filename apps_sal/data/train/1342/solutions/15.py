@@ -4,9 +4,7 @@ for _ in range(int(input())):
     a.sort()
     count = 0
     for i in range(n):
-        # count+=1
         if a[i] * 2 >= x:
-            # count-=1
             break
     p = i
 

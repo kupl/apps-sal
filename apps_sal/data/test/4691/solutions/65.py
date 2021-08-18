@@ -1,5 +1,5 @@
 N = int(input())
-dic = {"AC": 0, "WA": 0, "TLE": 0, "RE": 0}  # キーと初期値を設定
+dic = {"AC": 0, "WA": 0, "TLE": 0, "RE": 0}
 
 for i in range(N):
     S = input()

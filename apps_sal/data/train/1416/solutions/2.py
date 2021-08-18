@@ -33,7 +33,6 @@ else:
         if x == sum1 // 2:
             lis = n[j]
             break
-        # print lis,len(lis)
     new1 = list(lis)
     sum2 = sum(new1)
     for j in range(len(lis)):

@@ -5,7 +5,7 @@ class Solution:
         @lru_cache(None)
         def dp(i, k, last, last_count):
             if (n - i) <= k:
-                return 0  # remove all
+                return 0
 
             if s[i] == last:
                 inc = 1 if last_count in [1, 9, 99] else 0

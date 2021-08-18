@@ -13,7 +13,6 @@ for i in range(N):
 
         s_a += a[idx]
         idx += 1
-    #print(idx, ans, s_a)
     if(s_a >= K):
         ans += N - idx + 1
         s_a -= a[i]

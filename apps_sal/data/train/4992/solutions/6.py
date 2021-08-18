@@ -3,7 +3,6 @@ def bingo(card, numbers):
     c = 'BINGO'
     r = []
 
-    # col
     col = []
     for i, v in enumerate(c):
         for j in range(5):
@@ -13,7 +12,6 @@ def bingo(card, numbers):
         r.append(col)
         col = []
 
-    # row
     row = []
     for j in range(5):
         for i, v in enumerate(c):
@@ -23,7 +21,6 @@ def bingo(card, numbers):
         r.append(row)
         row = []
 
-    # down diag
     dd = []
     for i in range(5):
         s = f'{c[i]}{card[i][i]}'
@@ -31,7 +28,6 @@ def bingo(card, numbers):
             dd.append(s)
     r.append(dd)
 
-    # up diag
     du = []
     for i in range(4, -1, -1):
         s = f'{c[4-i]}{card[i][4-i]}'

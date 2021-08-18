@@ -1,4 +1,3 @@
-# F - Distinct Numbers
 from bisect import bisect_left
 
 

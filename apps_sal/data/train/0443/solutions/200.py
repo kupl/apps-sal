@@ -3,7 +3,6 @@ class Solution:
         N = len(rating)
         numteams = 0
 
-        # strictly increasing
         for i in range(N):
             left = 0
             right = 0
@@ -17,7 +16,6 @@ class Solution:
                         right += 1
             numteams += (left * right)
 
-        # strictly decreasing
         for i in range(N):
             left = 0
             right = 0

@@ -10,7 +10,6 @@ class Solution:
             return 11
 
         for i in range(2, MAX_K):
-            # no need for even as would be div by 11
             o = make_odd_palindrome(i)
             if o >= N and is_prime(o):
                 return o

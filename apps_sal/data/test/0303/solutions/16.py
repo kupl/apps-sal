@@ -1,4 +1,3 @@
-# 1
 
 inp = list(map(int, input().split()))
 x1, y1, x2, y2 = [inp[i] for i in range(4)]

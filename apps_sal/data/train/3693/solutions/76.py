@@ -5,4 +5,3 @@ def make_negative(number):
         return 0
     else:
         return (number - (number * 2))
-    # ...

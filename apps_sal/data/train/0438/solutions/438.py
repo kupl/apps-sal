@@ -30,7 +30,6 @@ class DSU:
 
         self.p[xr] = yr
 
-        # both islands will be mutated after the following assignment
         if self.islands[yr] == self.m:
             self.hasm -= 1
         if self.islands[xr] == self.m:
@@ -46,7 +45,6 @@ class DSU:
 
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # DSU
         res = -1
         dsu = DSU(m)
         for i, x in enumerate(arr):

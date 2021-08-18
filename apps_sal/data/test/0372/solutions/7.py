@@ -29,10 +29,10 @@ O2[0], O2[1], r2 = map(Decimal, input().split())
 d2 = (O1[0] - O2[0])**2 + (O1[1] - O2[1])**2
 ans = 0
 
-if d2 <= (r1 - r2)**2:  # d^2 <= |r1 - r2| -> a circle inside another one
+if d2 <= (r1 - r2)**2:
     ans = pi * (min(r1, r2) ** 2)
 
-elif (r1 - r2)**2 < d2 < (r1 + r2)**2:  # 2 circles cut
+elif (r1 - r2)**2 < d2 < (r1 + r2)**2:
     kite = (-r1**4 - d2**2 - r2**4 + 2 * (r1 * r1 * d2 + r2 * r2 * d2 + r1 * r1 * r2 * r2)).sqrt()
     d = d2.sqrt()
 

@@ -29,12 +29,12 @@ for _ in range(t):
     mx = 1
     for i in li:
 
-        if i in d:  # i在d内，表示前面出现过i
-            if prev[i] in d and d[prev[i]][1].final_ctr == ctr[prev[i]]:  # 前一个元素已选满
+        if i in d:
+            if prev[i] in d and d[prev[i]][1].final_ctr == ctr[prev[i]]:
                 if d[prev[i]][1].length > max(d[i][1].length, d[i][0].length):
                     d[i][0].length = d[prev[i]][1].length
                     d[i][0].final_ctr = 0
-            if c.get(prev[i], 0) > max(d[i][1].length, d[i][0].length):  # 前一个元素(不一定选满)的计数大于现在的，现在的不选满
+            if c.get(prev[i], 0) > max(d[i][1].length, d[i][0].length):
                 d[i][0].length = c[prev[i]]
                 d[i][0].final_ctr = 0
             d[i][1].final_ctr += 1

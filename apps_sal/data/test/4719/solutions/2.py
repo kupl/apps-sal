@@ -1,16 +1,10 @@
-#!/usr/bin/env python3
 
-# from numba import njit
 from collections import Counter
-# input = stdin.readline
-
-# @njit
 
 
 def solve(n, a):
     alphabetLst = {}
     for i in range(n):
-        # i番目の文字列の中の文字を数える
         d = Counter(a[i])
         for c in (chr(ord("a") + i) for i in range(26)):
             if not c in d.keys():

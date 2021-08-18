@@ -1,4 +1,3 @@
-# cook your dish here
 def Solve2():
     n, m = map(int, input().split())
     if n % 2 == 1:

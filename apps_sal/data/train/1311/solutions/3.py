@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 t = int(input())
 while t:
@@ -9,12 +8,10 @@ while t:
     l = [-1 * (i + 1) for i in range(n)]
     for i in range(1, n, 2):
         l[i] = l[i] * (-1)
-    # print(l)
     if k - (math.floor(n / 2)) > 0:
         s = k - (math.floor(n / 2))
         while s:
             for i in range(n - 1, -1, -1):
-                # print(i,s,"*",l)
                 if l[i] < 0:
                     l[i] = (-1) * l[i]
                     s = s - 1

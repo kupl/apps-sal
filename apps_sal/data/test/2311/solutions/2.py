@@ -25,7 +25,6 @@ for i in range(1, int(k**0.5) + 1):
                     count = 0
                 if(count >= f2):
                     temp2 += 1
-            # print(f1,f2,temp1,temp2)
             ans += temp1 * temp2
             temp1 = 0
             count = 0
@@ -46,7 +45,6 @@ for i in range(1, int(k**0.5) + 1):
                 if(count >= f1):
                     temp2 += 1
             ans += temp1 * temp2
-            # print(f1,f2,temp1,temp2)
         else:
             temp1 = 0
             count = 0
@@ -67,5 +65,4 @@ for i in range(1, int(k**0.5) + 1):
                 if(count >= f2):
                     temp2 += 1
             ans += temp1 * temp2
-            # print(f1,f2,temp1,temp2)
 print(ans)

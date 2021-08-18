@@ -16,7 +16,6 @@ inf = 10**18
 lis = [inf] * (n + 1)
 ans = [0 for _ in range(n)]
 visited = [True] * n
-# print(edge)
 
 
 def dfs(s):
@@ -33,6 +32,5 @@ def dfs(s):
 
 
 dfs(0)
-# print(lis)
 for i in range(n):
     print(ans[i])

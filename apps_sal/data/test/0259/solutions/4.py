@@ -9,7 +9,6 @@ for i in range(n):
         w = s - t
     else:
         w = (d - (t - s)) % d
-    # print(s,d,w,mw,nbest)
     if w < mw:
         mw = w
         nbest = i + 1

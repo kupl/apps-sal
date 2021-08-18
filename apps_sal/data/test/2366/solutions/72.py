@@ -14,4 +14,3 @@ for i in range(n):
     n = tt[arr[i]]
     d = (n * (n - 1) // 2) - ((n - 1) * (n - 2) // 2)
     print((total - d))
-# x * x-1 // 2

@@ -25,6 +25,4 @@ for i in range(m):
             ans = (ans + ar[i]) % mod
 
 
-# print(aux)
-# print(ar)
 print(ans)

@@ -1,4 +1,4 @@
-keys = ["123456789*0#", "adgjmptw", "behknqux", "cfilorvy", "sz"]
+keys = ["123456789 * 0
 
 
 def mobile_keyboard(s):

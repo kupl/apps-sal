@@ -1,8 +1,6 @@
 from typing import List
 
 
-#   The problem is how to find next greater element in array, that is righter
-#   We will use decreasing stack and process elements in sorted order
 class Solution:
     def build_next_greater_el_array(self, increasing_elements_idxs, next_bigger_el_idxs):
         decr_stack = []
@@ -19,19 +17,16 @@ class Solution:
 
         arr_with_idx = [[arr[i], i] for i in range(len(arr))]
 
-        #   for next bigger element
         arr_with_idx_sorted = sorted(arr_with_idx, key=lambda x: x[0])
         increasing_elements_idxs = list(map(lambda x: x[1], arr_with_idx_sorted))
         next_bigger_el_idxs = [None for i in range(len(arr))]
         self.build_next_greater_el_array(increasing_elements_idxs, next_bigger_el_idxs)
 
-        #   for next smaller element
         arr_with_idx_sorted_desc = sorted(arr_with_idx, key=lambda x: x[0], reverse=True)
         increasing_elements_idxs_desc = list(map(lambda x: x[1], arr_with_idx_sorted_desc))
         next_smaller_el_idxs = [None for i in range(len(arr))]
         self.build_next_greater_el_array(increasing_elements_idxs_desc, next_smaller_el_idxs)
 
-        #   process elements
         higher = [False for i in range(len(arr))]
         lower = [False for i in range(len(arr))]
 

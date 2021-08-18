@@ -2,7 +2,6 @@ from itertools import permutations
 
 
 def max_number(n):
-    # your code here
     n = str(n)
     l = []
     l = list(permutations(n))

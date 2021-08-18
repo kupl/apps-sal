@@ -7,25 +7,25 @@ class Solution:
 
         for i in range(len(grid)):
             for j in range(len(grid[i])):
-                if '#' not in grid[i][j]:
-                    stack = [(i, j, 0, 0)]
-                    symbol = grid[i][j]
-                    grid[i][j] = '#' + symbol
+                if '
+                stack = [(i, j, 0, 0)]
+                symbol = grid[i][j]
+                grid[i][j] = '
 
-                    while stack:
-                        row, col, prev_row, prev_col = stack.pop()
+                while stack:
+                    row, col, prev_row, prev_col = stack.pop()
 
-                        for direction in directions:
-                            nr = row + direction[0]
-                            nc = col + direction[1]
+                    for direction in directions:
+                         nr = row + direction[0]
+                          nc = col + direction[1]
 
-                            if nr == prev_row and nc == prev_col:
+                           if nr == prev_row and nc == prev_col:
                                 continue
                             if len(grid) > nr >= 0 and len(grid[nr]) > nc >= 0 and symbol in grid[nr][nc]:
-                                if '#' in grid[nr][nc]:
-                                    return True
+                                if '
+                                return True
                                 else:
-                                    grid[nr][nc] = '#' + symbol
+                                    grid[nr][nc] = '
                                     stack.append((nr, nc, row, col))
 
         return False

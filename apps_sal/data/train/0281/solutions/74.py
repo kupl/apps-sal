@@ -13,5 +13,4 @@ class Solution:
         min_move_needed = 0
         for shift, v in list(shift_needed.items()):
             min_move_needed = max(min_move_needed, 26 * (v - 1) + shift)
-        #print(shift_needed, min_move_needed)
         return min_move_needed <= k

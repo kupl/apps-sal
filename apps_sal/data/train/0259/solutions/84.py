@@ -3,17 +3,6 @@ import math
 
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        # max = 0
-        # for j in range(threshold):
-        #     count = 0
-        #     for i in range(len(nums)):
-        #         a = nums[i]/(j+1)
-        #         count += math.ceil(a)
-        #     print(count)
-        #     if count <= threshold:
-        #         if max < count:
-        #             max = count
-        # return j
         def checking(mid):
             ans = 0
             for num in nums:

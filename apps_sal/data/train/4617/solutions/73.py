@@ -6,6 +6,3 @@ def powers_of_two(n):
         x += 1
         ans.append(a)
     return ans
-
-    #n = n ** 2
-    # return range [ x , n, n **2 ]

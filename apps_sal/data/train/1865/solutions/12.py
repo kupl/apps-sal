@@ -3,10 +3,6 @@ import heapq
 
 class Solution:
     def minPushBox(self, grid: List[List[str]]) -> int:
-        # bfs, dfs, a-star search
-        # key:
-        # represent the state using (xb, yb, xp, yp), box and storekeeper coordinates, where storekeeper can move around,
-        # up down left and right, and push the box when storekeeper move to box position and the cell next to it is empty.
         m, n = len(grid), len(grid[0])
         xb, yb, xs, ys, xt, yt = -1, -1, -1, -1, -1, -1
         for x in range(m):
@@ -20,9 +16,6 @@ class Solution:
                 if grid[x][y] == 'T':
                     xt, yt = x, y
                     grid[x][y] = '.'
-        # a-star search
-        # heuristic: h(box, target) = abs(xb - xt) + abs(yb - yt), as the lower bound of moves to push box to target.
-        # init
         q, seen = [(abs(xb - xt) + abs(yb - yt) + 0, 0, xb, yb, xs, ys)], set()
         while q:
             h, d, xb, yb, xs, ys = heapq.heappop(q)
@@ -30,7 +23,6 @@ class Solution:
                 return d
             if (xb, yb, xs, ys) not in seen:
                 seen.add((xb, yb, xs, ys))
-                # storekeeper moves around and pushes the box when step into box coordinates
                 for dx, dy in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
                     xr, yr = xs + dx, ys + dy
                     if 0 <= xr < m and 0 <= yr < n and grid[xr][yr] == '.':

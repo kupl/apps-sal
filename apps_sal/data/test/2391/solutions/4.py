@@ -1,14 +1,5 @@
-# coding: utf-8
 
 def main():
-
-    # N = 0
-    # a = []
-    # b = []
-    # with open("C:/Users/admin/Downloads/random_05") as f:
-    # 	N = int(f.readline())
-    # 	a = [int(x) for x in f.readline().split()]
-    # 	b = [int(x) for x in f.readline().split()]
 
     N = int(input())
     a = [int(x) for x in input().split()]

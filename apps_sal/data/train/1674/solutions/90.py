@@ -4,7 +4,6 @@ from collections import defaultdict
 class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
         N = len(piles)
-        # dp=[[-1 for _ in range(N)] for _ in range(2)]
         dp = defaultdict(int)
         M = 1
         return self.DP(N, dp, piles, M, 0)

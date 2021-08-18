@@ -1,5 +1,4 @@
 def zombie_shootout(zombies, distance, ammo):
-    # your code goes here
     if ammo >= zombies and (2 * distance) >= zombies:
         return ("You shot all {} zombies.".format(zombies))
     elif ammo < zombies and ammo < (2 * distance):

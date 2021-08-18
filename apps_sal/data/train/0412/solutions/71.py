@@ -25,5 +25,4 @@ class Solution:
             return memo[(num, tar)]
 
         dfs(d, target)
-        # print(memo)
         return memo[(d, target)]

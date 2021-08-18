@@ -12,14 +12,13 @@ class Solution:
 
         @lru_cache(None)
         def search(m: int, c: int, turn: int, time: int) -> int:
-            # 1: mouse wins, 2: cat wins, 0: draw
             if m == 0:
                 return 1
             elif m == c:
                 return 2
             elif time >= 50:
                 return 0
-            if turn == 0:  # mouse moves
+            if turn == 0:
                 can_draw = False
                 for y in adj[m]:
                     res = search(y, c, 1 - turn, time + 1)

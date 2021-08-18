@@ -19,7 +19,6 @@ class Solution:
             l = len(q)
             for _ in range(l):
                 curt = q.popleft()
-                # if curt in s2b:
                 for nb in s2b[curt]:
                     if nb in visited:
                         continue

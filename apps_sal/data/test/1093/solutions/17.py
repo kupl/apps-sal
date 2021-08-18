@@ -36,7 +36,6 @@ def getMindelta(mapH):
 
 inStr = input()
 n, m = inStr.split()
-# n строк по m символов в каждой
 mymap = []
 mapHieght = []
 for i in range(int(n)):

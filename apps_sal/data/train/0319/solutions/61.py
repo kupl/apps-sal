@@ -1,6 +1,5 @@
 class Solution:
     def stoneGameIII(self, stones: List[int]) -> str:
-        # dp[i]: max value can get after i piles stone removed
         n = len(stones)
         dp = [-math.inf for _ in range(n + 1)]
         dp[n] = 0

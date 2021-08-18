@@ -6,7 +6,6 @@ location = [x0, y0]
 movement = {tuple(location)}
 for i in range(1, l + 1):
     let = s[i - 1]
-    # print(location)
     if let == 'L':
         if location[1] - 1 > 0:
             location[1] -= 1

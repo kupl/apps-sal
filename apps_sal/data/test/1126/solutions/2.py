@@ -9,19 +9,15 @@ def read():
 
 
 def solve(N, X, M):
-    # log2(10**10) ~ 33.2
     D = 34
     A = [[0 for j in range(M)] for i in range(D)]
     S = [[0 for j in range(M)] for i in range(D)]
 
     for j in range(M):
-        # A[0][j] := 0ステップ目がjであるときの、2^0=1ステップ先の値
         A[0][j] = j * j % M
-        # S[0][j] := jの2^0=1ステップ目までの総和
         S[0][j] = j
     for i in range(0, D - 1):
         for j in range(M):
-            # A[i][j] := 0ステップ目がjであるときの、2^iステップ先の値
             A[i + 1][j] = A[i][A[i][j]]
             S[i + 1][j] = S[i][j] + S[i][A[i][j]]
     ans = 0

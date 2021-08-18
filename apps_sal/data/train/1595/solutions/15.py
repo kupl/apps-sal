@@ -14,7 +14,6 @@ def read():
 
 def add(s, f):
     result = ''
-    # print 'adding '+s+' and '+f+' results in ',
     for i in range(len(s)):
         if s[i] == '+' and f[i] == '+':
             result += '-'
@@ -22,7 +21,6 @@ def add(s, f):
             result += '+'
         else:
             result += '-'
-    # print result
     return result
 
 
@@ -52,7 +50,6 @@ for t in range(int(read())):
     else:
         count = 1
     requiredF = getRequired(s)
-    # print 'required '+requiredF
     n = int(read())
     f = []
     for i in range(n):
@@ -60,11 +57,7 @@ for t in range(int(read())):
     y = powerset(f, n)
     for item in y:
         for temp in item:
-            # print temp
             output = resultfilter(temp)
-            # print output
-            # print output==requiredF
             if output == requiredF:
-                # print 'Increasing count'
                 count += 1
     print(count % 1000000007)

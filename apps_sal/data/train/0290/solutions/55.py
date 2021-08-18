@@ -35,7 +35,6 @@ class Solution1:
                 path.add(cut)
                 min_cut = min(min_cut, end - start + self.dfs(start, cut, path, cuts) + self.dfs(cut, end, path, cuts))
                 path.remove(cut)
-        # 如果没切割点则返回0
         if not flag:
             min_cut = 0
         self.dp[start][end] = min_cut
@@ -65,14 +64,13 @@ class Solution:
                 path.add(cut)
                 min_cut = min(min_cut, end - start + self.dfs(start, cut, path, cuts) + self.dfs(cut, end, path, cuts))
                 path.remove(cut)
-        # 如果没切割点则返回0
         if not flag:
             min_cut = 0
         self.dp[self.cuts_map[start]][self.cuts_map[end]] = min_cut
         return min_cut
 
     def minCost(self, n: int, cuts: List[int]) -> int:
-        self.dp = [[sys.maxsize for _ in range(len(cuts) + 2)] for _ in range(len(cuts) + 2)]  # 内存太大，需要优化
+        self.dp = [[sys.maxsize for _ in range(len(cuts) + 2)] for _ in range(len(cuts) + 2)]
         cuts.extend([0, n])
         cuts = sorted(cuts)
         self.cuts_map = {}

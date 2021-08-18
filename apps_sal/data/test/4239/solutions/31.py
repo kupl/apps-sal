@@ -3,7 +3,6 @@ import numpy as np
 N = int(input())
 
 
-# @njit
 def main(n):
     dp = []
     for i in range(10**5 + 1):

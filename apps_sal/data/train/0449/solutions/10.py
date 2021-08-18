@@ -4,11 +4,6 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        # m = nums[0]
-        # for num in nums:
-        #     if num < m:
-        #         m = num
-        # return m
         if len(nums) == 1:
             return nums[0]
 

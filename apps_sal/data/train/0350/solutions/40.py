@@ -15,5 +15,5 @@ class Solution:
                 if lookup[s[l]] == 0:
                     counter -= 1
                 l += 1
-            res += r - l  # the number of subarrays ending with s[r-1] **
+            res += r - l
         return res

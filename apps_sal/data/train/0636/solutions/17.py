@@ -1,4 +1,3 @@
-# cook your dish here
 a = list(map(int, input("").strip().split()))
 n = a[0]
 t = a[1]

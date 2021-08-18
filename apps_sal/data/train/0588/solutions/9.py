@@ -1,5 +1,3 @@
-# cut pizza codechef solution
-# first try to handle boundary conditions, if n(cuts) = 360, return 0
 from math import gcd
 from functools import reduce
 
@@ -14,7 +12,6 @@ def n_cuts(x):
         print(0)
         return
 
-    # find minimum difference
     mini = min(x)
     flag = 0
     for i in range(len(x)):
@@ -26,7 +23,6 @@ def n_cuts(x):
             print(360 // mini - l)
             return
 
-    # find gcd
     GCD = reduce(gcd, x)
     result = int(360 / GCD)
     print(result - l)
@@ -34,10 +30,10 @@ def n_cuts(x):
 
 
 def __starting_point():
-    t = int(input())  # number of test cases
+    t = int(input())
     for i in range(t):
-        n = int(input())  # not use
-        x = list(map(int, input().split(' ')))  # x is the cuts list
+        n = int(input())
+        x = list(map(int, input().split(' ')))
         diff = []
         for i in range(1, len(x)):
             diff.append(x[i] - x[i - 1])

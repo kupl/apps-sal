@@ -26,6 +26,5 @@ class Solution:
         for i, r in enumerate(routes):
             for stop in r:
                 busAtStops[stop].append(i)
-            # routes[i] = set(routes[i])
 
         return bfs()

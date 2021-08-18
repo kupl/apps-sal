@@ -1,5 +1,5 @@
-n, m, k = list(map(int, input().split()))  # object,箱,size,
-A = list(map(int, input().split()))  # size
+n, m, k = list(map(int, input().split()))
+A = list(map(int, input().split()))
 
 
 A.reverse()

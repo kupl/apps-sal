@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     s, k = map(int, input().split())
     num = str(s)

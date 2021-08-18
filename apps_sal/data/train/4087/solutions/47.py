@@ -4,7 +4,7 @@ def get_char(c):
     myascii['32'] = ' '
     myascii['33'] = '!'
     myascii['34'] = '"'
-    myascii['35'] = '#'
+    myascii['35'] = '
     myascii['36'] = '$'
     myascii['37'] = '%'
     myascii['38'] = '&'

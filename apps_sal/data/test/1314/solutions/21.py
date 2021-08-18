@@ -17,9 +17,6 @@ def read_string():
 def read_string_list(delim=" "):
     return input().strip().split(delim)
 
-###### Author : Samir Vyas #######
-###### Write Code Below    #######
-
 
 def sumup(t1, t2):
     return (t1[0] + t2[0], t1[1] + t2[1])
@@ -38,13 +35,6 @@ for _ in range(n):
 locs.sort()
 deltas.sort(reverse=True)
 
-# foos = []
 
-# for i in range(n):
-# 	foos.append(sumup(locs[i],deltas[i]))
-# print(locs)
-# print(deltas)
-
-# print(foos)
 ans = sumup(locs[0], deltas[0])
 print(ans[0], ans[1])

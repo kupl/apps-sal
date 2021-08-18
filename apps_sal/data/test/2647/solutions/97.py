@@ -1,6 +1,6 @@
 from collections import *
 H, W = map(int, input().split())
-S = [(W + 2) * ["#"]] + list(["#"] + list(input()) + ["#"] for h in range(H)) + [(W + 2) * ["#"]]
+S = [(W + 2) * ["
 S[1][1] = 1
 Q = deque([[1, 1]])
 D = [[1, 0], [-1, 0], [0, 1], [0, -1]]
@@ -15,4 +15,4 @@ while Q:
 if S[H][W] == ".":
     print(-1)
 else:
-    print((H + 2) * (W + 2) - sum(s.count("#") for s in S) - S[H][W])
+    print((H + 2) * (W + 2) - sum(s.count("

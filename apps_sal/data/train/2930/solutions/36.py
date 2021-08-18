@@ -4,4 +4,4 @@ def summation(num):
     for i in x:
         sum += i
     return sum
-    pass  # Code here
+    pass

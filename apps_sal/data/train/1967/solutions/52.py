@@ -11,8 +11,6 @@ class Solution:
             return False
 
         num3 = num1 + num2
-        # if num1 == 123 and num2 == 456:
-        #     print(num3, i)
         n3 = str(num3)
 
         j = 0
@@ -40,15 +38,12 @@ class Solution:
 
         ret = []
 
-        # print(\"01\".isnumeric())
-
         i = 0
         while i < len(S):
             j = 1
             while i + j < len(S):
                 n1 = S[: i + 1]
                 n2 = S[i + 1: i + j + 1]
-                # print(n1, n2)
                 if self.validFib(S, n1, n2, i + j + 1, ret):
                     ret.append(n2)
                     ret.append(n1)

@@ -20,7 +20,3 @@ def bear_fur(bears):
             return 'light brown'
         else:
             return 'unknown'
-
-# first compare every combination where is only one color for bear
-# than check all situations where bear skin is different
-# and return the result

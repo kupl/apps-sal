@@ -49,10 +49,6 @@ def __starting_point():
     for i in range(t):
         res = list(map(str, solve(*read_input())))
         print(" ".join(res))
-    # print solve(4, 5, 10, 4, 6)
-    # print solve(4, 5, 6, 10, 4)
-    # print solve(4, 5, 4, 6, 10)
-    # print solve(2, 2, 2, 2, 2)
 
 
 __starting_point()

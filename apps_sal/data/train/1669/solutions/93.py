@@ -4,10 +4,8 @@ class Solution:
         dic = collections.Counter(hand)
         while dic:
             m = next(iter(dic))
-            # print(m)
             for k in range(m, m + W):
                 v = dic.get(k)
-                # print(v,k)
                 if not v:
                     return False
                 if v == 1:

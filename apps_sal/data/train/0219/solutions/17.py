@@ -18,12 +18,3 @@ class Solution:
             if score - 1 in seen:
                 res = max(res, i - seen[score - 1])
         return res
-
-
-# tiring_count = 1, not_tiring_count = 0, max_length = 1
-# tiring_count = 2, not_tiring_count = 0, max_length = 2
-# tiring_count = 2, not_tiring_count = 1, max_length = 3
-# tiring_count = 2, not_tiring_count = 2, tiring_count = 0
-# tiring_count = 0, nt = 3
-#nt = 4
-# tiring count += 1

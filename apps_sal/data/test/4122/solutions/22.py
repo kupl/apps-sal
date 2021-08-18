@@ -14,7 +14,6 @@ else:
     x = abs((h + m) // pref[n])
     ans = n * x
     h += x * pref[n]
-    #     print(m,x,ans,h)
     for i in range(10 * n):
         h += l[i % n]
         ans += 1

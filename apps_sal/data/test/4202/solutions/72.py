@@ -5,8 +5,6 @@ def mod(num):
     return num % 2019
 
 
-#  (2019a + x)(2019b + y) = 2019(n) + xy
-
 ans = 10 ** 9
 
 lr = min(R, L + 2019) + 1

@@ -1,5 +1,4 @@
 def seven(m):
-    # your code
     print(m)
     steps = 0
     while m >= 100:

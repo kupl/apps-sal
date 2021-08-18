@@ -9,8 +9,6 @@ for i in range(1, N + 1):
 T[0] = 0
 S[0] = [0, 0]
 
-# print(T)
-# print(S)
 
 for i in range(1, N + 1):
     if (T[i] - T[i - 1]) < (abs(S[i][0] - S[i - 1][0]) + abs(S[i][1] - S[i - 1][1])):

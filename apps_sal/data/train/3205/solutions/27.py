@@ -8,8 +8,8 @@ so you should use: from math import gcd"""
 
 from fractions import gcd
 def is_divisible(n, x, y):
-    """Computes the least common multiple (lcm) -> 
-    https://en.wikipedia.org/wiki/Least_common_multiple#Computing_the_least_common_multiple"""
+    """Computes the least common multiple (lcm) ->
+    https://en.wikipedia.org/wiki/Least_common_multiple
     lcm = (x * y) / gcd(x, y)
-    """if x divides n, and y divides n, so lcm(x,y) also divides n"""
+    """if x divides n, and y divides n, so lcm(x, y) also divides n"""
     return n % lcm == 0

@@ -7,7 +7,6 @@ class Solution:
         elif num == 0:
             return "0"
         temp = num
-        #str1 = ""
         list1 = []
         while temp > 0:
             num = temp % 7

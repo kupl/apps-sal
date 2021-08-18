@@ -15,7 +15,6 @@ class Solution:
             if count <= group + 1:
                 min_count += group + 1
             else:
-                # apply pigeonhole principle
                 a, b = divmod(count, group + 1)
                 min_count += (a + (b > 0)) * (group + 1)
 

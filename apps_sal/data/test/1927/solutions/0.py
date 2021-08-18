@@ -1,4 +1,3 @@
-#!usr/bin/env python3
 import sys
 import bisect
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
@@ -45,8 +44,6 @@ def solve():
     for i in range(n):
         print(MIN[i], MAX[i])
     return
-
-# Solve
 
 
 def __starting_point():

@@ -10,16 +10,6 @@ class Solution:
 
         m, n = len(obstacleGrid), len(obstacleGrid[0])
 
-        # DP:
-        #   dp(i, j):   no. of unique paths to obstacleGrid[i][j]
-        #   bound:
-        #       dp(0, 0) = 0 if obstacleGrid[0][0] == 1 else 1
-        #       dp(-1, *) = 0
-        #       dp(*, -1) =  0
-        #   progress:
-        #       dp(i, j) = | 0,             if obstacleGrid[i][j] == 1
-        #                  | dp(i-1, j) + dp(i, j-1),           else
-
         dp = [0] * n
         for i in range(m):
             for j in range(n):

@@ -2,8 +2,6 @@ class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
 
         MOD = (10 ** 9) + 7
-        # ways to roll target with d dice:
-        # roll target - 1, -2, -3, .. , -f with d - 1 dice
         f = min(target, f)
         dp = [[0 for val in range(target + 1)] for die in range(d)]
 

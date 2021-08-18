@@ -1,7 +1,6 @@
 k = 72
 kk = k // 4
 K = 1 << k
-# nu = lambda L: int("".join([hex(K+a)[3:] for a in L[::-1]]), 16)
 
 
 def nu(L, sl=-1):
@@ -30,12 +29,10 @@ def grow(d, v, h, start):
     for i in range(1, 3 * d + 3):
         iv[i] = ti[i] * t[i - 1] % P
 
-    ###
     fg = li(st(nuf * nu(iv[1:2 * d + 2])), d, d * 2 + 1)
     for i, (_fg, _ti) in enumerate(zip(fg, ti)):
         h[i] = h[i] * (_fg * t[d + i + 1] % P * _ti % P) % P
 
-    ###
     fg1 = li(st(nuf * nu(inv[1:2 * d + 2])), d, d * 2 + 1)
     fg2 = li(st(nuf * nu(iv[d + 2:3 * d + 3])), d, d * 2 + 1)
     fg1.pop()
@@ -43,8 +40,6 @@ def grow(d, v, h, start):
         h[i + d + 1] = _fg1 * fa[d + i + 1] % P * fainv[i] % P * (_fg2 * t[2 * d + i + 2] % P * ti[d + i + 1] % P) % P
 
     return h
-
-# Create a table of the factorial of the first v+2 multiples of v, i.e., [0!, v!, 2v!, ..., (v(v+1))!]
 
 
 def create_table(v, start):
@@ -82,7 +77,7 @@ for i in range(1, 2 * v + 2):
     inv[i] = fainv[i] * fa[i - 1] % P
 
 
-def prod(a, b, vv):  # a * (a + 1) * ... * (b - 1) % P
+def prod(a, b, vv):
     T = create_table(vv, a)
     c = b - a
     s = T[c // vv]

@@ -33,14 +33,3 @@ for i in range(1, len(L)):
     e = e & L[i]
 
 print(len(e))
-
-# if len(e)==0:
-#    if m==2:
-#        print(maxi)
-# else:
-#    print(len(e))
-
-# if len(e)>0 and len(e)<=nbret:
-
-# else:
-#   print(0)

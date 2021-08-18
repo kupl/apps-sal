@@ -23,32 +23,27 @@ for i in range(40):
     for j in range(i + 1, 40):
         howmanyhavelengthgreater[i] += CT[j]
 
-# second
 
 for i in arr:
     cur = 0
     for j in range(len(i) - 1, -1, -1):
         for k in range(cur, 2 * cur + 1):
             if (k != 2 * cur):
-                P[k] += int(i[j]) * (CT[cur - (2 * cur - k)])  # >something
+                P[k] += int(i[j]) * (CT[cur - (2 * cur - k)])
             else:
-                #print (i[j],k,cur,howmanyhavelengthgreater[cur]+CT[cur])
-                P[k] += int(i[j]) * (howmanyhavelengthgreater[cur] + CT[cur])  # >something
+                P[k] += int(i[j]) * (howmanyhavelengthgreater[cur] + CT[cur])
         cur += 1
 
-
-# first
 
 for i in arr:
     cur = 0
     for j in range(len(i) - 1, -1, -1):
         for k in range(cur + 1, 2 * cur + 2):
             if(k == 2 * cur + 1):
-                P[k] += int(i[j]) * (howmanyhavelengthgreater[cur + 1] + CT[cur + 1])  # >something
+                P[k] += int(i[j]) * (howmanyhavelengthgreater[cur + 1] + CT[cur + 1])
             else:
-                P[k] += int(i[j]) * (CT[cur + 1 - (2 * cur + 1 - k)])  # >something
+                P[k] += int(i[j]) * (CT[cur + 1 - (2 * cur + 1 - k)])
         cur += 1
-    # print(P)
 
 
 for i in range(30):

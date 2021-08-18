@@ -14,7 +14,7 @@ class Solution:
 
             directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
             original = grid[row][col]
-            grid[row][col] = 0  # mark row, col as visited
+            grid[row][col] = 0
 
             max_sum = 0
             for dr, dc in directions:
@@ -22,7 +22,6 @@ class Solution:
                 c = col + dc
                 max_sum = max(max_sum, backtrack(r, c, rows, cols, grid))
 
-            # unmark row, col
             grid[row][col] = original
 
             return original + max_sum

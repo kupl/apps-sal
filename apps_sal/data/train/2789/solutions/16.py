@@ -8,4 +8,3 @@ def bmi(weight, height):
         return 'Normal'
     else:
         return 'Underweight'
-    # your code here

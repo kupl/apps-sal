@@ -23,7 +23,6 @@ class Solution:
             for i in range(0, 10):
                 for j in transition[i]:
                     new_vec[j] = (new_vec[j] + vec[i]) % (1_000_000_000 + 7)
-                    # print(new_vec, vec)
             vec = new_vec
 
         return sum(vec) % (1_000_000_000 + 7)

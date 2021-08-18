@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 dic_memo = {0: 1, 1: 2}
 M = 10**9 + 7
 

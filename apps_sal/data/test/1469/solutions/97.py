@@ -1,17 +1,13 @@
 l = int(input())
-# l = 1000000
 r = 1
 while 2 ** r <= l:
     r += 1
 r = min(19, r - 1)
-# print(r)
 
 n = r + 1
-# print(n)
 
 ts = [i for i in range(1, n)]
 ts.reverse()
-# print(ts)
 
 m = (n - 1) * 2
 

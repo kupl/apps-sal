@@ -3,7 +3,7 @@ class Solution:
         ans = 1
         bfs = [n]
         seen = set()
-        while bfs:  # bfs
+        while bfs:
             bfs2 = []
             for x in bfs:
                 if x == 1:

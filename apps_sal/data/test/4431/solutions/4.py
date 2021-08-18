@@ -4,8 +4,6 @@ n, k = map(int, sys.stdin.readline().strip().split(' '))
 s = sys.stdin.readline().strip()
 letters = sys.stdin.readline().strip().split(' ')
 
-#print(n, k, s, letters)
-# print(len(s))
 
 current_counter = 0
 result = 0

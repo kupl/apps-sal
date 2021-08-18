@@ -1,6 +1,5 @@
 import sys
 import math
-#input = sys.stdin.readline
 
 t = int(input())
 

@@ -1,6 +1,4 @@
 class Solution:
-    # from collections import defaultdict
-    # def isPossibleDivide(self, nums: List[int], k: int) -> bool:
     def isPossibleDivide(self, A, k):
         c = collections.Counter(A)
         print(c)

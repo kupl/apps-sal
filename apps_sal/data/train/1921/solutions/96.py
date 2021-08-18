@@ -13,9 +13,6 @@ class DinnerPlates:
             idx = self.q.get()
             if idx > len(self.stacks) - 1:
                 self.stacks.append([])
-            # if len(self.stacks[idx]) == self.cap:
-            #     continue
-            # else:
             self.stacks[idx].append(val)
             if len(self.stacks[idx]) < self.cap:
                 self.q.put(idx)
@@ -54,10 +51,3 @@ class DinnerPlates:
                 return -1
         else:
             return -1
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

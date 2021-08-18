@@ -1,7 +1,6 @@
 a, b, c = list(map(float, input().split(' ')))
 a = int(a)
 c = int(c)
-# dp[i][j] = probability that after i seconds, ther are j ppl on escalator
 dp = [[0] * (c + 1) for _ in range(c + 1)]
 
 for i in range(c + 1):

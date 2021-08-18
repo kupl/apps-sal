@@ -18,6 +18,5 @@ else:
         else:
             lo = mid
 
-    # in bucket hi
     index = k - tri[hi - 1]
     print(a[index])

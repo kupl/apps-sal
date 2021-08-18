@@ -19,8 +19,6 @@ if (n + b - 1) // b <= a <= n + 1 - b:
         n -= p
         ind += 1
 
-    # print(L)
-
     i = nn
     for j in range(bb):
         i -= L[j]

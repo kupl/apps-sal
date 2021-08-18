@@ -14,10 +14,9 @@ class Solution:
             fa[fx] = fy
 
         res = 0
-        A = 0  # nodes Alice can go
-        B = 0  # nodes Bob can go
+        A = 0
+        B = 0
 
-        # type 3
         for t, u, v in edges:
             if t == 3:
                 fu = find(u)
@@ -30,7 +29,6 @@ class Solution:
                     B += 1
 
         fa_copy = fa[:]
-        # edges Alice can go
         for t, u, v in edges:
             if t == 1:
                 fu = find(u)
@@ -41,8 +39,7 @@ class Solution:
                     uni(u, v)
                     A += 1
 
-        fa = fa_copy  # Bob can't use the graph of Alice
-        # edges bob can go
+        fa = fa_copy
         for t, u, v in edges:
             if t == 2:
                 fu = find(u)

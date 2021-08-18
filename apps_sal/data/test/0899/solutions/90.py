@@ -4,7 +4,7 @@ import heapq
 def dijkstra(n, s, g):
     h = [(0, s)]
     heapq.heapify(h)
-    cost = [float("Inf")] * (n + 1)  # cost: i -> j
+    cost = [float("Inf")] * (n + 1)
     cost[s] = 0
 
     while h:

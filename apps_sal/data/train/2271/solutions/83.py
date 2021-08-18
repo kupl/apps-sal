@@ -26,7 +26,7 @@ for start in range(N + 1):
     groups.append(t_group)
 
 result = 0
-for group in groups[1:]:  # セットの最初は{0}になっているため
+for group in groups[1:]:
     result += sum(1 for m in group if p_list[m - 1] in group)
 
 print(result)

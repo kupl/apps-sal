@@ -1,5 +1,4 @@
 class Solution:
-    # @lru_cache(None)
     def __init__(self):
         self.store = defaultdict(int)
 
@@ -22,6 +21,5 @@ class Solution:
                 return result
 
     def dieSimulator(self, n: int, rm: List[int]) -> int:
-        # print(rm)
         res = self.rds(n, rm, None, 0)
         return res

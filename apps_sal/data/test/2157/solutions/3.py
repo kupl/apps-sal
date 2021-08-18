@@ -10,10 +10,8 @@ cur = 0
 for i in range(n):
     cur += b[i]
     c[i] = cur
-# print(c)
 c.sort()
 a.sort()
-# print(a)
 cur = 0
 for i in range(n):
     cur += a[i] * c[i]

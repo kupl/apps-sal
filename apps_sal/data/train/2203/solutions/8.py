@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 N = int(input())
 
 min_arr = [0 for _ in range(N)]

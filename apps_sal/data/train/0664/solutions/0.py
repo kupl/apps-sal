@@ -1,4 +1,3 @@
-# cook your dish here
 MOD = 998244353
 
 fball = [[0] * 101 for _ in range(101)]

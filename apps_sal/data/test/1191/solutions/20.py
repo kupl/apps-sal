@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 @Project : CodeForces
 @File    : 2.py 

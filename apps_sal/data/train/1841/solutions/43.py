@@ -7,9 +7,7 @@ class Solution:
 
         arr = sorted(arr)
         length = len(arr)
-        #mid = len(arr) // 2
         median = arr[(len(arr) - 1) // 2]
-        #median = (sorted_array[length // 2] + sorted_array[(length-1)//2])/2
         print()
         print(median)
         heap = []

@@ -7,5 +7,4 @@ class Solution:
             for d in range(1, min(k, i + 1) + 1):
                 cur_max = max(cur_max, arr[i - d + 1])
                 dp[i + 1] = max(dp[i + 1], dp[i + 1 - d] + cur_max * d)
-            # print(dp)
         return dp[-1]

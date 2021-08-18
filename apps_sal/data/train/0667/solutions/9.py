@@ -1,4 +1,3 @@
-#
 
 def getAns(d, arr):
     latestDate = 0

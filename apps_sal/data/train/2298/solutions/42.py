@@ -15,7 +15,7 @@ n, t = ma()
 A = lma()
 INF = 10**15
 
-mns = [INF] * (n + 1)  # mxs[i] :: max(A[i:n])
+mns = [INF] * (n + 1)
 for i in range(n):
     mns[i] = min(mns[i - 1], A[i])
 c = 0

@@ -1,7 +1,5 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        # cover[i] shows the list number of taps needed to cover 0-i
-        # inf for impossible
         cover = [math.inf] * n
 
         for i, r in enumerate(ranges):

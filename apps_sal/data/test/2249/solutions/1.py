@@ -1,8 +1,5 @@
 def main():
-    # string     input()
-    # strList    input().split()
     n = int(input())
-    # integers   map(int, input().split())
     a = list(map(int, input().split()))
     uniques = [0] * (n - 1) + [1]
     bools = [True] * 100001

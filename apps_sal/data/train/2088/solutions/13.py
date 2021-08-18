@@ -4,7 +4,6 @@ A = [int(i) for i in input().split()]
 
 
 def do(i, j):
-    #print('At',i , j)
     if i >= j:
         dp[i][j] = 1
         return 1

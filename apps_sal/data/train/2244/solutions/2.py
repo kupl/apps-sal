@@ -1,4 +1,3 @@
-# seishin.py
 from heapq import heappush, heappop
 N = int(input())
 P = [list(map(int, input().split())) for i in range(N)]

@@ -7,6 +7,5 @@ while t > 0:
     arr = list(map(int, input().split()))
     temp = list(range(n, 0, -1))
     random.shuffle(temp)
-    # random.shuffle(temp)
     ans = [str(i) for i in temp]
     print(' '.join(ans[::-1]))

@@ -9,7 +9,6 @@ class Solution:
         for j in range(1, len(tree)):
             basket[tree[j]] = basket.get(tree[j], 0) + 1
             while (len(basket) > 2):
-                # remove tree[i], decrement i
                 basket[tree[i]] = basket.get(tree[i], 0) - 1
                 if (basket[tree[i]] == 0):
                     basket.pop(tree[i])

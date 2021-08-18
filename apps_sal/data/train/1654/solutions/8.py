@@ -2,7 +2,7 @@ def solve_runes(runes):
     massV = []
     massV_ind = []
     massD1 = []
-    massD2 = []                # more lists to the god of lists!!!!!!!!!!!
+    massD2 = []
     massD1_ind = []
     massD2_ind = []
     ex = []
@@ -71,7 +71,6 @@ def solve_runes(runes):
             if d1 + d2 == val:
                 ex.append(i)
 
-                # hate
     if dig_1[0] == '-':
         if 1 in massD1_ind:
             if len(massD1) > 1:
@@ -82,7 +81,6 @@ def solve_runes(runes):
             if len(massD1) > 1:
                 if 0 in ex:
                     ex.remove(0)
-                    # minuses
     if dig_2[0] == '-':
         if 1 in massD2_ind:
             if len(massD2) > 1:
@@ -116,6 +114,6 @@ def solve_runes(runes):
         for i in ex:
             if i in mat:
                 continue
-            else:                         # rofl-master
-                return i                  # 3 hours
-    return -1                             # ------   o,o   -------    -_-
+            else:
+                return i
+    return -1

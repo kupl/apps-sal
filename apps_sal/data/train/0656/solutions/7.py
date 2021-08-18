@@ -1,4 +1,3 @@
-# cook your dish here
 x = int(input())
 if(x % 4 == 0):
     print(x + 1)

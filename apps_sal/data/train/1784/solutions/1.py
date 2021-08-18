@@ -1,15 +1,15 @@
 def curry_partial(f, *args):
     if not callable(f):
-        return f  # ignore extra args
+        return f
     try:
-        return f(*args)  # handle nested currying
+        return f(*args)
     except:
         pass
     try:
-        return f()  # ignore extra args if we are done
+        return f()
     except:
         pass
     if args:
-        return curry_partial(lambda *a: f(args[0], *a), *args[1:])  # curry
+        return curry_partial(lambda *a: f(args[0], *a), *args[1:])
     else:
-        return lambda *a: curry_partial(f, *a)  # leave to caller
+        return lambda *a: curry_partial(f, *a)

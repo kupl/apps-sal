@@ -3,10 +3,6 @@ class Solution:
 
         @lru_cache(None)
         def cut(left, right):
-            # if not subcuts:
-            #     return 0
-            # elif (left, right) in dp:
-            #     return dp[(left, right)]
 
             res = right - left
             min_subproblem = float('inf')
@@ -18,9 +14,6 @@ class Solution:
                 return 0
 
             res += min_subproblem
-            # dp[(left, right)] = res
             return res
-
-        # dp = {}
 
         return cut(0, n)

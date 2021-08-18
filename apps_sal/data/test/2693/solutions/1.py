@@ -1,4 +1,3 @@
-#author : dokueki
 
 import sys
 
@@ -47,7 +46,6 @@ def main():
 
 
 def __starting_point():
-    # IOE()
     main()
 
 

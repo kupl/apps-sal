@@ -7,7 +7,6 @@ class Solution:
             count[j + 1] -= 1
         for i in range(1, n + 1):
             count[i] += count[i - 1]
-        # print(count)
         count.sort(reverse=True)
         res = 0
         nums.sort()

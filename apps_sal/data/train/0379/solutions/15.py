@@ -46,8 +46,6 @@ class Solution:
             format_nums1.append([[0, 0], 1])
         if format_nums2[-1][1] == 0:
             format_nums2.append([[0, 0], 1])
-        # print(format_nums1)
-        # print(format_nums2)
         max_value1 = [0, 0]
         max_value2 = [0, 0]
         n = len(format_nums1)
@@ -60,8 +58,6 @@ class Solution:
                 temp2 = self.add_value_pair(max_value1, format_nums2[i][0])
                 max_value1 = self.max(self.add_value_pair(max_value1, format_nums1[i][0]), temp1)
                 max_value2 = self.max(self.add_value_pair(max_value2, format_nums2[i][0]), temp2)
-                # max_value1 = self.add_value_pair(max_value1, format_nums1[i][0])
-                # max_value2 = self.add_value_pair(max_value2, format_nums2[i][0])
         return self.max(max_value1, max_value2)[1]
 
     def add_value(self, value_pair, value):

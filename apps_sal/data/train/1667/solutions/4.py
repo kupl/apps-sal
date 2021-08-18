@@ -12,8 +12,6 @@ def unflatten(flat_array, depth):
             i = len(new_array) - 1
     return new_array
 
-#true = left, false = right
-
 
 def unflatten_list(array, direction, i):
     new_list = []

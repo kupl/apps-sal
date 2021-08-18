@@ -23,10 +23,8 @@ while queue:
             continue
         d[i] = d[now] + 1
         queue.append(i)
-# print(d)
 E = [0] * (N + 1)
 for i in range(M):
-    #  print(d[A[i]],d[B[i]])
     if d[B[i]] - d[A[i]] == 1 and E[B[i]] == 0:
         E[B[i]] = A[i]
     elif d[A[i]] - d[B[i]] == 1 and E[A[i]] == 0:

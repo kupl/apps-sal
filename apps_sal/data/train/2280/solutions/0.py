@@ -6,9 +6,7 @@ readline = sys.stdin.readline
 
 
 class PMS:
-    # 1-indexed
     def __init__(self, A, B, issum=False):
-        # Aに初期状態の要素をすべて入れる,Bは値域のリスト
         self.X, self.comp = self.compress(B)
         self.size = len(self.X)
         self.tree = [0] * (self.size + 1)
@@ -26,19 +24,15 @@ class PMS:
                 self.sumtree[i] = Ssum[i] - Ssum[i - (i & -i)]
 
     def compress(self, L):
-        # 座圧
         L2 = list(set(L))
         L2.sort()
         C = {v: k for k, v in enumerate(L2, 1)}
-        # 1-indexed
         return L2, C
 
     def leng(self):
-        # 今入っている個数を取得
         return self.count(self.X[-1])
 
     def count(self, v):
-        # v(Bの元)以下の個数を取得
         i = self.comp[v]
         s = 0
         while i > 0:
@@ -47,7 +41,6 @@ class PMS:
         return s
 
     def less(self, v):
-        # v(Bの元である必要はない)未満の個数を取得
         i = bl(self.X, v)
         s = 0
         while i > 0:
@@ -56,7 +49,6 @@ class PMS:
         return s
 
     def leq(self, v):
-        # v(Bの元である必要はない)以下の個数を取得
         i = br(self.X, v)
         s = 0
         while i > 0:
@@ -65,14 +57,12 @@ class PMS:
         return s
 
     def add(self, v, x):
-        # vをx個入れる,負のxで取り出す,iの個数以上取り出すとエラーを出さずにバグる
         i = self.comp[v]
         while i <= self.size:
             self.tree[i] += x
             i += i & -i
 
     def get(self, i):
-        # i番目の値を取得
         if i <= 0:
             return -1
         s = 0
@@ -85,7 +75,6 @@ class PMS:
         return self.X[s]
 
     def gets(self, v):
-        # 累積和がv以下となる最大のindexを返す
         v1 = v
         s = 0
         k = self.p
@@ -99,7 +88,6 @@ class PMS:
         return self.count(self.X[s]) + (v1 - self.countsum(self.X[s])) // self.X[s]
 
     def addsum(self, i, x):
-        # sumを扱いたいときにaddの代わりに使う
         self.add(i, x)
         x *= i
         i = self.comp[i]
@@ -108,7 +96,6 @@ class PMS:
             i += i & -i
 
     def countsum(self, v):
-        # v(Bの元)以下のsumを取得
         i = self.comp[v]
         s = 0
         while i > 0:
@@ -117,7 +104,6 @@ class PMS:
         return s
 
     def getsum(self, i):
-        # i番目までのsumを取得
         x = self.get(i)
         return self.countsum(x) - x * (self.count(x) - i)
 

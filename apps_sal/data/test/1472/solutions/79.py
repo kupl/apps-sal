@@ -1,8 +1,6 @@
 n, x, y = list(map(int, input().split()))
 
 a = [0] * n
-# x-=1
-# y-=1
 
 
 for i in range(1, n + 1):

@@ -9,7 +9,6 @@ class Solution:
             count[left] -= 1
             count[right] -= 1
             count[length[a]] += 1
-            # print(length, count)
             if count[m]:
                 ans = i + 1
         return ans

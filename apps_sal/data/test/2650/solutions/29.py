@@ -11,12 +11,10 @@ for i in range(N):
     A, B = list(map(int, input().split()))
     AB.append((A, B))
     heapq.heappush(yo[B], (-A, i + 1))
-#
 for i in range(1, ymax + 1):
     if yo[i]:
         mA, c = yo[i][0]
         heapq.heappush(ym, (-mA, c, i))
-#
 for i in range(Q):
     C, D = list(map(int, input().split()))
     A, B = AB[C]
@@ -31,7 +29,6 @@ for i in range(Q):
     if yo[D]:
         mA, c = yo[D][0]
         heapq.heappush(ym, (-mA, c, D))
-#
     while ym:
         if AB[ym[0][1]][1] != ym[0][2]:
             heapq.heappop(ym)
@@ -39,6 +36,4 @@ for i in range(Q):
             heapq.heappop(ym)
         else:
             break
-#
     print((ym[0][0]))
-#

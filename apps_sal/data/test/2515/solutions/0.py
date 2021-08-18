@@ -6,7 +6,7 @@ def eratosthenes(m):
         return []
     dp = [True] * (m + 1)
     sosu = [2]
-    like = [0] * (m + 1)  # 累積和
+    like = [0] * (m + 1)
     like[3] = 1
     for x in range(3, m + 1, 2):
         if dp[x]:

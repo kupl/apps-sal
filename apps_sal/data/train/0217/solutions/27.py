@@ -5,6 +5,4 @@ class Solution(object):
         for x in A:
             cur = {x | y for y in cur} | {x}
             ans |= cur
-            # print(cur)
-            # print(\"ans\",ans)
         return len(ans)

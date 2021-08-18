@@ -10,11 +10,6 @@ class event:
 
 
 def custom_sort(a, b):
-    # if a.i == b.i:
-    # 	if a.type == "s" and b.type == "e":
-    # 		return -1
-    # 	if a.type == "e" and b.type == "s":
-    # 		return 1
     if a.x < b.x:
         return - 1
     if a.x > b.x:
@@ -48,13 +43,11 @@ def __starting_point():
 
     cnt = 0
     for curr in events:
-        # print(curr.x, curr.type, curr.i, cnt)
         if curr.type == "s":
             cnt += 1
             active[curr.i] = 1
 
             if cnt > k:
-                # print("over:", curr.i, cnt)
                 to_remove = 0
                 rightmost = -inf
                 for i in active.keys():

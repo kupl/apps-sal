@@ -13,8 +13,6 @@ class Solution:
             boarding = min(4, waiting)
             total_boarding += boarding
             currProfit = total_boarding * boardingCost - op * runningCost
-            # other way is to just add the profit
-            # currProfit += boarding * boardingCost - runningCost
             waiting -= boarding
             if currProfit > maxProfit:
                 maxProfit = currProfit

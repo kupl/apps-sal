@@ -10,7 +10,6 @@ for i in range(n):
     if odd == 0:
         if i < n - 1:
             cost.append(abs(ns[i + 1] - ns[i]))
-# print(cost)
 cost.sort()
 sum = 0
 p = False

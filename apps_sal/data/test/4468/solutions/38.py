@@ -6,7 +6,6 @@ ans = 0
 
 for i in l:
     now = i
-    # print(now,latest,t)
     if now - latest >= t:
         ans += t
     else:

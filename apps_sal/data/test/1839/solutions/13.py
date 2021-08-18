@@ -1,4 +1,3 @@
-#! /usr/bin/python
 
 n = int(input())
 v = [0 for i in range(n)]

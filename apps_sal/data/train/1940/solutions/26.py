@@ -1,8 +1,3 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         numbers = []
@@ -19,5 +14,4 @@ class Solution:
                 if answers[n] == 0:
                     answers[n] = head.val
                 n -= 1
-            # print(numbers, answers)
         return answers

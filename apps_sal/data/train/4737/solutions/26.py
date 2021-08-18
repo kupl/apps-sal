@@ -12,4 +12,3 @@ def fuel_price(litres, price_per_litre):
     else:
         price = litres * (price_per_litre - 0.25)
     return round(price, 2)
-    # your code here

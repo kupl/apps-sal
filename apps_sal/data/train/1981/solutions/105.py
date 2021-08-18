@@ -20,15 +20,7 @@ class Solution:
             temp2.append(count)
         sorted_counter = sorted(temp2, reverse=True)
 
-        # print(sorted_nums)
-        # print(len(sorted_nums))
-        # print(temp)
-        # print(len(temp))
-        # print(sorted_counter)
-
         for counter in sorted_counter:
             sum_ += (counter * sorted_nums.pop(0)) % MOD
-
-        # print(sorted_nums)
 
         return sum_ % MOD

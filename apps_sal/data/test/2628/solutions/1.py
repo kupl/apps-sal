@@ -14,12 +14,8 @@ class Solution:
         while len(result) != res_len:
             cnt *= 2
             result.extend(result[::-1])
-            #offset = 0
             start = len(result) // 2
             for i in range(start, len(result)):
-                # if i > 0 and i % cnt == 0:
-                #    offset = cnt;
-                #result[i] += offset
                 result[i] += cnt
 
         return result

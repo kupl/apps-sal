@@ -8,7 +8,7 @@ class Solution:
         ans = [-1] * len(rains)
         rem = []
 
-        def get(r):  # idx for first zero b4 right
+        def get(r):
             low, high = 0, len(rem) - 1
             while low <= high:
                 mid = low + (high - low) // 2
@@ -16,13 +16,10 @@ class Solution:
                     low = mid + 1
                 else:
                     high = mid - 1
-            # print(low)
             return rem[low] if 0 <= low < len(rem) else -1
 
         for i in range(len(rains) - 1, -1, -1):
             curr = rains[i]
-            # if i == 8:
-            #     print(rem)
             if curr == 0:
                 rem.append(i)
                 continue
@@ -34,8 +31,6 @@ class Solution:
                 zero = get(idx)
 
                 if not i < zero < idx:
-                    # print(rem)
-                    # print(curr, i, zero, idx)
                     return []
                 ans[zero] = curr
                 rem.remove(zero)

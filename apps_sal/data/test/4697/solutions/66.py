@@ -7,6 +7,5 @@ else:
     res = n
     n -= res
     m -= res * 2
-    # ここでnは0
     res += m // 4
     print(res)

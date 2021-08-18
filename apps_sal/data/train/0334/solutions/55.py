@@ -17,7 +17,6 @@ class Solution:
                         max_cost = cost[i - 1]
                     sums += cost[i - 1]
                     ans += sums - max_cost
-                    # print(ans, sums, max_cost)
                 sums = 0
                 flag = False
                 max_cost = 0
@@ -27,6 +26,5 @@ class Solution:
                 max_cost = cost[-1]
             sums += cost[-1]
             ans += sums - max_cost
-            # print(ans, sums, max_cost)
 
         return ans

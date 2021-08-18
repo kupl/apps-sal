@@ -1,4 +1,3 @@
-# cook your dish here
 def rev(s):
     s1 = ''
     for i in s:

@@ -6,13 +6,10 @@ class Solution:
         mx = -1
         for ind, i in enumerate(arr):
             i -= 1
-            # Current Element
             current = res[i]
             prev = nxt = 0
-            # Last element of previous sequence
             if i - 1 > -1 and res[i - 1][0] == 1:
                 prev = res[i - 1][1]
-            # first element and last element of next sequence
             if i < len(res) - 1 and res[i + 1][0] == 1:
                 nxt = res[i + 1][1]
 

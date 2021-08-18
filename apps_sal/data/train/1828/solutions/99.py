@@ -1,6 +1,5 @@
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
-        # Construct max heap
 
         hash_map = dict()
         heap = list()
@@ -10,7 +9,6 @@ class Solution:
         for bar_code in barcodes:
             hash_map[bar_code] = hash_map.get(bar_code, 0) + 1
 
-        # {1 : 3, 2 : 3}
         print(hash_map)
         for code, freq in hash_map.items():
             heap.append((-freq, code))

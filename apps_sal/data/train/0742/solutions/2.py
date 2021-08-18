@@ -1,4 +1,3 @@
-# cook your dish here
 def fun(st, en, l):
     for i in range(st, maxpow + 1):
         for j in range(0, m - 1):

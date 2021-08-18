@@ -1,4 +1,3 @@
-# your code goes here
 t = int(input())
 for _t in range(t):
     st = input()

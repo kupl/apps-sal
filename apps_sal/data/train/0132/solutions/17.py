@@ -12,11 +12,3 @@ class Solution:
                 cost[i] = cost[max(i - 1, 0)]
 
         return cost[365]
-
-#         cost = [0 for j in range(days)]
-
-#         for i, d in enumerate(days):
-#             if(d <= 7):
-#                 cost[i] = cost[i-1] + c[0] # take day pass
-#             if(d <= 30): # choose between day pass and month pass
-#                 cost[i] = min(cost[i-1]+c[0], cost)

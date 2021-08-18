@@ -1,6 +1,5 @@
 import sys
 
-#sys.stdin = open('input.txt')
 
 top = [-1] * 8
 top_let = [''] * 8

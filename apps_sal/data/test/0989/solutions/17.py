@@ -1,4 +1,3 @@
-# encoding: utf-8
 from sys import stdin
 
 n, k = [int(i) for i in stdin.readline().strip().split()]

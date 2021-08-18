@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 X, A, B = list(map(int, input().split()))
 
 if B <= A:

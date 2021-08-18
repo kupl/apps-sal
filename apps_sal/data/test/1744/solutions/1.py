@@ -22,7 +22,6 @@ def main():
                         new += counts[j] * (j + 1)
                         count += math.ceil((time[i] + new - m) / (j + 1))
                         break
-                    # print(new,j+1,counts[j],count)
             ans.append(count)
 
         counts[time[i] - 1] += 1

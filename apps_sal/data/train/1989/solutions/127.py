@@ -6,7 +6,7 @@ class Solution:
             P.append(P[-1])
             P[-1] ^= 1 << x
 
-        first = {}  # first[mask] = i the lowest i with P[i] = mask
+        first = {}
         valid = {1 << x for x in range(10)}
         print(valid)
         valid.add(0)

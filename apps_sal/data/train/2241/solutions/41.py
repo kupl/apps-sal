@@ -8,9 +8,8 @@ P[0, :] = 1
 ar = np.arange(404, dtype=np.int64)
 for i in range(1, 404):
     P[i] = P[i - 1] * ar % mod
-# この時点で  # P[i, c] = i**c % mod
 
-P = P.cumsum(axis=1, dtype=np.int64) % mod  # P[i, c] = Σ_{k=0}^i k**c % mod
+P = P.cumsum(axis=1, dtype=np.int64) % mod
 P = P.T
 
 dp = np.zeros(C + 1, dtype=np.int64)

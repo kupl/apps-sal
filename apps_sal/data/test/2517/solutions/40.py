@@ -1,4 +1,3 @@
-# https://atcoder.jp/contests/abc073/tasks/abc073_d
 
 from scipy.sparse.csgraph import dijkstra
 from scipy.sparse import csr_matrix
@@ -11,14 +10,6 @@ def read_ints():
     return list(map(int, read().split()))
 
 
-# default import
-
-
-# ダイクストラか？
-# 全点間の最小距離を取得
-# rについてpermutationして。その通りに訪れたときの距離をシミュレーション
-# 最小値を選ぶ
-
 N, M, r = read_ints()
 R = [x - 1 for x in read_ints()]
 adj_mat = [[0] * N for _ in range(N)]
@@ -29,10 +20,7 @@ for _ in range(M):
     adj_mat[a][b] = c
     adj_mat[b][a] = c
 
-# print(csr_matrix(adj_mat, dtype='int'))
 D = dijkstra(csr_matrix(adj_mat, dtype='int'), directed=False)
-# print(D)
-# 全探索パート
 ans = 2 ** 31
 
 

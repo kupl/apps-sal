@@ -15,6 +15,5 @@ for i in range(1, int(sqrt(n)) + 1):
         j = n // i
         y = j * f(n // j - 1) + n // j
         s.add(y)
-        #print(i, j, x,y)
 
 print(" ".join(map(str, sorted(list(s)))))

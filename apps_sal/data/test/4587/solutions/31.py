@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 def get_input() -> tuple:
     """
@@ -71,26 +70,21 @@ def main(N: int, A: list, B: list, C: list) -> None:
         B (list): 中部のパーツのサイズ(1 <= B_i <= 10**9)
         C (list): 下部のパーツのサイズ(1 <= C_i <= 10**9)
     """
-    # 事前にリストをソートしておく
     A = sorted(A)
     B = sorted(B)
     C = sorted(C)
 
-    # 求解処理
     ans = 0
     for i in range(N):
         B_i = B[i]
         ans += (get_ub(A, B_i) + 1) * (N - get_lb(C, B_i))
 
-    # 結果出力
     print(ans)
 
 
 def __starting_point():
-    # 標準入力を取得
     N, A, B, C = get_input()
 
-    # メイン処理
     main(N, A, B, C)
 
 

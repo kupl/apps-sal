@@ -1,5 +1,5 @@
 def traverse_TCP_states(events):
-    state = "CLOSED"  # initial state, always
+    state = "CLOSED"
     transitiontable = {
         'CLOSED': {'APP_PASSIVE_OPEN': 'LISTEN', 'APP_ACTIVE_OPEN': 'SYN_SENT'},
         'LISTEN': {'RCV_SYN': 'SYN_RCVD', 'APP_SEND': 'SYN_SENT', 'APP_CLOSE': 'CLOSED'},

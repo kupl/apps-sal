@@ -26,7 +26,6 @@ ans = [None] * len(queries)
 i = 0
 for q, ix in queries:
     bns = q
-    # bns += sum(min(d, w) for d in D)
     i = bisect(D, q, i)
     bns += P[i] + q * (len(D) - i)
     ans[ix] = bns

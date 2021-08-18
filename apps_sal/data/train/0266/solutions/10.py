@@ -1,13 +1,3 @@
-# class Solution:
-#     def numSplits(self, s: str) -> int:
-#         n = len(s)
-#         output = 0
-#         for i in range(1, n):
-#             if len(set(s[:i])) == len(set(s[i:n])):
-#                 output += 1
-#             if len(set(s[:i])) > len(set(s[i:n])):
-#                 break
-#         return output
 
 class Solution:
     def numSplits(self, s: str) -> int:
@@ -19,7 +9,6 @@ class Solution:
                 dic[x] = [i, i]
             else:
                 dic[x][1] = i
-        # print(dic)
         for i in range(0, n - 1):
             left = 0
             right = 0

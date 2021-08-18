@@ -1,4 +1,3 @@
-# python 3.5.2
 import math
 str = input()
 n = int(str)

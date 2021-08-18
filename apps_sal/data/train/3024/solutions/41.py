@@ -6,5 +6,3 @@ def friend(x):
         else:
             pass
     return friendList
-
-    # Code

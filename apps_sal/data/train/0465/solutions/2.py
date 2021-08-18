@@ -3,7 +3,6 @@ class Solution:
         if not s:
             return 0
 
-        # Accelerate
         if s == s[::-1]:
             return 0
         length = len(s)
@@ -11,7 +10,6 @@ class Solution:
             if s[:i] == s[:i][::-1] and s[i:] == s[i:][::-1]:
                 return 1
 
-        # Algorithm
         cut = [i for i in range(-1, length)]
         for i in range(length):
             r1, r2 = 0, 0

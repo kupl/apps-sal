@@ -1,5 +1,5 @@
 """
-Codeforces Round #331  (Div. 2)
+Codeforces Round 
 
 Problem 596 B Wilbur and Array
 
@@ -17,10 +17,6 @@ import sys
 
 def solve(xs, n):
     return abs(xs[0]) + sum(abs(b - a) for (a, b) in zip(xs, xs[1:]))
-
-
-# def p(*args, **kwargs):
-#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

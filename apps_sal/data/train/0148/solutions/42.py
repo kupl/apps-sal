@@ -20,9 +20,6 @@ class Solution:
 
             best_profit[ind] = max(best_profit[ind], profit[i])
 
-        # print(best_profit)
-        # print(difficulty)
-
         m = ind + 1
 
         def bins(target):
@@ -49,8 +46,6 @@ class Solution:
         h = dict()
 
         for w in worker:
-            # if w not in h:
-            # h[w] = bins(w)
 
             res += bins(w)
 

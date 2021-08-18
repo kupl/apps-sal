@@ -1,5 +1,4 @@
 class Solution:
-    # hash map, time O(n), space O(n)
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         records = collections.defaultdict(list)
         for name, time in zip(keyName, keyTime):

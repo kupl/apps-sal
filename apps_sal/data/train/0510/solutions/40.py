@@ -23,8 +23,6 @@ for _ in range(Q):
         ans = 0
         for i in range(26):
             indexL = bisect.bisect_left(alphabet[i], A - 1)
-            # indexR=bisect.bisect_right(alphabet[i],B-1)
-            # ans+=(indexL!=indexR)
             if indexL == len(alphabet[i]):
                 continue
             ans += (alphabet[i][indexL] <= B - 1)

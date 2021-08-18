@@ -1,6 +1,6 @@
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
-        max_len = min(steps // 2 + 1, arrLen)  # steps //2 + 1
+        max_len = min(steps // 2 + 1, arrLen)
         mod = 10**9 + 7
         dp = [[0] * (max_len + 1) for _ in range(steps + 1)]
         dp[1][0] = 1

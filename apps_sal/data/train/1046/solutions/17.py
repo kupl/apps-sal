@@ -13,7 +13,6 @@ for _ in range(int(input())):
         sum1 += m
         if(sum1 <= B):
             d += 1
-    # print(c,d)
     if(c > d):
         print("Limak")
     else:

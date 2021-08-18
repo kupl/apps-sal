@@ -9,8 +9,6 @@ count = 0
 ptr1 = 0
 ptr2 = 0
 while(ptr2 < len(l2) and ptr1 < len(l1)):
-    # print(l2[ptr2]-l1[ptr1])
-    # print(z)
     if((l2[ptr2] - l1[ptr1]) >= z):
         count += 1
         ptr1 += 1

@@ -6,14 +6,12 @@ else:
     P = sorted(P)
 assert len(P) == N
 cands = []
-# 下側検索
 x = X
 while True:
     if x not in P:
         cands.append(x)
         break
     x -= 1
-# 上側検索
 x = X
 while True:
     if x not in P:

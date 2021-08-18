@@ -6,15 +6,11 @@ class Solution:
             pre += el
             sums.append(pre)
 
-        # print(\"---\")
-       # print(sums)
         ans = 0
-        seen = {}  # seen[v] = i iff sums[i] == v
+        seen = {}
         for i, v in enumerate(sums):
-            # print(f\"seen: {seen}\")
             if v - target in seen:
                 ans += 1
-                seen = {}  # satisfies non-overlapping
+                seen = {}
             seen[v] = i
-        # print(f\"seen: {seen}\")
         return ans

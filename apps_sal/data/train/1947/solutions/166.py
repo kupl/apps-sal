@@ -4,7 +4,6 @@ from collections import Counter
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
 
-        # build maxCountB
         maxCountB = {}
         for w in B:
             c = Counter(w)

@@ -1,4 +1,4 @@
-class Solution:  # 372 ms
+class Solution:
     def numBusesToDestination(self, routes, start, target):
         if start == target:
             return 0
@@ -10,7 +10,6 @@ class Solution:  # 372 ms
                 route2Stop[i].add(stop)
                 stop2Route[stop].add(i)
 
-     #   return stop2Route, route2Stop
         visited = set()
         visitedStop = set()
 
@@ -32,7 +31,5 @@ class Solution:  # 372 ms
                             visited.add(route)
 
             q = stack
-         #   print(q, stop, stack, visited, step, visitedStop)
-         #   return
 
         return -1

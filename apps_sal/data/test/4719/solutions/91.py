@@ -1,4 +1,3 @@
-# 要素が入ってない場合の list.index の定義
 def myindex(l: list, element, default=-1):
     if element in set(l):
         return l.index(element)

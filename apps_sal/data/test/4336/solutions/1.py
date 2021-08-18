@@ -1,4 +1,3 @@
-# 長方形のど真ん中の点を通る直線で分ければ半分にできます
 w, h, x, y = list(map(float, input().split()))
 half_w = w / 2
 half_h = h / 2

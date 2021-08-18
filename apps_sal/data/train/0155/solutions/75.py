@@ -14,8 +14,6 @@ def bfs(arr, i, d, memo):
             break
         res = max(res, bfs(arr, j, d, memo) + 1)
 
-    # print(i,res)
-
     memo[i] = res
     return res
 

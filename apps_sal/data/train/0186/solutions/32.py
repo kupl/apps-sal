@@ -16,7 +16,6 @@ class Solution:
                     continue
                 curr_number = ''.join(sorted(cost_to_digit[c] + curr_number, reverse=True))
                 max_number = curr_number if max_number is None or len(curr_number) > len(max_number) or (len(curr_number) == len(max_number) and curr_number > max_number) else max_number
-            #print(target, max_number)
             return max_number
 
         ans = helper(target)

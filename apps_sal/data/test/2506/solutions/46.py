@@ -14,8 +14,6 @@ for i in range(maxA * 2 + 1):
     accum += cnt[i]
     rui[i + 1] -= accum
 
-# 左手を決めた時(left)に、幸福度がx 以上となる組み合わせの数を返す
-
 
 def f(x):
     ret = 0
@@ -32,7 +30,6 @@ while hi - lo > 1:
         lo = md
     else:
         hi = md
-# もとまる lo が m 通り以上握手ができる最小の数。
 
 ruiA = [0] * (n + 1)
 for i in range(n):
@@ -46,6 +43,6 @@ for i in range(n):
     ans += ruiA[-1] - ruiA[pos] + A[i] * (n - pos)
 if cnt == m:
     print(ans)
-else:  # m個よりも多い分を引く
+else:
     rem = cnt - m
     print(ans - rem * lo)

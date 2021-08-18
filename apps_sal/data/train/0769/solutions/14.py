@@ -1,4 +1,3 @@
-# cook your dish here
 def gcd(a, b):
     a, b = max(a, b), min(a, b)
     while b != 0:

@@ -1,10 +1,7 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 
-#xs,ys,xt,yt = map(int,readline().split())
 
 s = input()
 

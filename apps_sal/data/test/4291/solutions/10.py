@@ -1,7 +1,6 @@
 N, Q = map(int, input().split())
 S = input()
 
-# 累積和的な発想
 t = [0] * N
 for i in range(N - 1):
     t[i + 1] = t[i]

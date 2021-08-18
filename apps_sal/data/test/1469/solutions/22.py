@@ -1,15 +1,4 @@
-#
-# 　　  ⋀_⋀
-#　　  (･ω･)
-# .／ Ｕ ∽ Ｕ＼
-#  │＊　合　＊│
-#  │＊　格　＊│
-#  │＊　祈　＊│
-#  │＊　願　＊│
-#  │＊　　　＊│
-#      ￣
-#
-from math import floor, sqrt, factorial, hypot, log  # log2ないｙｐ
+from math import floor, sqrt, factorial, hypot, log
 from itertools import accumulate, permutations, combinations, product, combinations_with_replacement
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect_right
@@ -62,7 +51,7 @@ def main():
         ans.append((i + 1, i + 2, 1 << i))
     for i in range(N - 1)[::-1]:
         X = L - (1 << i)
-        if(X >= power):  # X<(1<<N)ならダブる
+        if(X >= power):
             ans.append((i + 1, N, X))
             L -= 1 << i
     M = len(ans)

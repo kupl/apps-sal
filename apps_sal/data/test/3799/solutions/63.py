@@ -19,14 +19,12 @@ s = lc()
 left = s[0]
 right = s[-1]
 
-# aba型のとき
 if s[0] == s[-1]:
     if len(s) % 2:
         print("Second")
     else:
         print("First")
 
-# ab型のとき
 else:
     if len(s) % 2:
         print("First")

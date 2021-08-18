@@ -1,6 +1,5 @@
 from math import ceil
 from collections import defaultdict
-# from fractions import Fraction
 
 
 def read_line():

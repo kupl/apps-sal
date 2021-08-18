@@ -13,7 +13,6 @@ class Solution:
         return ans
 
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
-        # split the array into d subarray, want to minimize sum(max(subarrays))
         self.x, self.n = jobDifficulty, len(jobDifficulty)
         if self.n < d:
             return -1

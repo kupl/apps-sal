@@ -1,4 +1,3 @@
-#!python3
 
 import sys
 
@@ -47,7 +46,6 @@ def resolve():
         T[i] = T[i2] | T[i2 | 1]
 
     ans = []
-    # print(T)
     for cmd, i, j in zip(*[iter(sys.stdin.read().split())] * 3):
         i = int(i) - 1
         if cmd == "1":

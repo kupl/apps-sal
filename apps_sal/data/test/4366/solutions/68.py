@@ -1,4 +1,3 @@
-# A - Remaining Time
 def main():
     a, b = map(int, input().split())
 

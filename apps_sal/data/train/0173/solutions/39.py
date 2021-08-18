@@ -18,13 +18,8 @@ class Solution:
             else:
                 if k - i in d:
                     if len(d[i]) != len(d[k - i]):
-                        # print(\"----\")
                         return False
                 else:
-                    # print(\"#####\")
                     return False
-
-            # if i > k //2:
-            #     break
 
         return True

@@ -2,7 +2,6 @@ import sys
 
 
 class MyReader:
-    #    file = null;
     def __init__(self):
         filename = "file.in"
         if self.isLocal():

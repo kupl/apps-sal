@@ -11,7 +11,6 @@ if (m <= 5):
     l = []
 
     def gen(x, c, ln):
-        # print x, c, ln
         if (ln >= m):
             l.append((c, x))
         else:

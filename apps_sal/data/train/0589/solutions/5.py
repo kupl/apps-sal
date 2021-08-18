@@ -1,4 +1,3 @@
-# https://www.codechef.com/problems/ATTIC
 
 T = int(input())
 
@@ -10,8 +9,8 @@ for t in range(T):
     jump_len_known = 1
 
     while i < L:
-        while i < L and s[i] == '#':
-            i += 1
+        while i < L and s[i] == '
+        i += 1
 
         if i < L:
             j = i + 1

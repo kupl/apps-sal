@@ -1,7 +1,6 @@
 """
 @author: phamv
 """
-# Function Definition
 
 
 def find(x):
@@ -19,8 +18,6 @@ def merge(u, v):
     ret = s[u] > 0 and s[v] > 0
     s[v] += s[u]
     return ret
-
-###############
 
 
 n, m, k = map(int, input().split())

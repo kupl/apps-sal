@@ -1,15 +1,11 @@
-# -*- coding: utf-8 -*-
 """
 @author: coding_don
 """
 import sys
-#sys.stdin = open('ip.txt', 'r')
-#sys.stdout = open('op.txt', 'w')
 try:
 
     def main():
         t = 1
-        # t=int(sys.stdin.readline())
         while(t):
             n, m = [int(x) for x in sys.stdin.readline().split()]
             a = []

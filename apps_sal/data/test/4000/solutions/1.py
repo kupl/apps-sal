@@ -1,8 +1,6 @@
 import sys
 from collections import deque
 
-# inf = open('input.txt', 'r')
-# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
 
@@ -15,7 +13,6 @@ for _ in range(n - 1):
     g[v].append(to)
     g[to].append(v)
 
-# (vertex, distance)
 queue = deque([(0, 0)])
 visited = [False] * n
 while queue:
@@ -26,7 +23,6 @@ while queue:
             queue.append((to, d + 1))
 a = v
 
-# (vertex, distance)
 queue = deque([(a, 0)])
 prev = [-1] * n
 for i in range(n):
@@ -72,5 +68,3 @@ while curr != a:
 
 print(ctr + add)
 print(a + 1, b + 1, c + 1)
-
-# inf.close()

@@ -53,8 +53,3 @@ class StreamChecker:
         if len(self.queries) > self.maxLen:
             del self.queries[0]
         return self.trie.isMember(self.queries)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,29 +1,19 @@
 def main():
-    # IMPORT MODULE
-    #import sys
 
-    # sys.setrecursionlimit(100000)
-    #input=lambda :sys.stdin.readline().rstrip()
-
-    # f_inf=float("inf")
     MOD = 998244353
 
     if 'get_ipython' in globals():
-        # SAMPLE INPUT
         n, m, k = 60522, 114575, 7559
 
     else:
-        # INPUT
-        #n = input()
         n, m, k = map(int, input().split())
 
-    # SUBMITION CODES HERE
     fac = [1] * (n + 1)
     inv = [1] * (n + 1)
 
     for i in range(n):
-        fac[i + 1] = fac[i] * (i + 1) % MOD  # Calculating the Factorial
-        inv[i + 1] = pow(fac[i + 1], MOD - 2, MOD)  # The inverse of the MOD's law (Fermat's Little Theorem)
+        fac[i + 1] = fac[i] * (i + 1) % MOD
+        inv[i + 1] = pow(fac[i + 1], MOD - 2, MOD)
 
     def nCr(n, r):
         if 2 * r > n:

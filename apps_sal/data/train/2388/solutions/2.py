@@ -11,7 +11,6 @@ for _ in range(int(input())):
     col[1] = 1
     d = deque([1])
     vis = [0] * (n + 1)
-    # vis[1]=1
     ans = [[], [1]]
 
     while d:

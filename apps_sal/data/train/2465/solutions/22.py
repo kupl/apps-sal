@@ -21,7 +21,6 @@ class Solution:
                 self.d[n - i] = wins
 
             if not wins:
-                # this player choses this i as the next one will lose
                 return True
 
         return False

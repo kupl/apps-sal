@@ -35,4 +35,3 @@ else:
         otvet += abs(result - r) // raznitsa
         otvet += abs(result - l) // raznitsa
     print(otvet)
-    # 3 * (- 54) + 81 =

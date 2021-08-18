@@ -5,4 +5,3 @@ def tower_of_hanoi(rings):
         else:
             return 2 * hanoi(n - 1) + 1
     return hanoi(rings)
-    # your code here

@@ -1,4 +1,3 @@
-# Brute Force Solution
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
 
@@ -9,7 +8,6 @@ class Solution:
 
                 a_bool = abs(arr[i] - arr[j]) <= a
 
-                # break case
                 if a_bool:
                     for k in range(j + 1, len(arr)):
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from itertools import accumulate
 
 n, s, t = int(input()), input(), input()

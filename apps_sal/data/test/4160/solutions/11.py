@@ -5,7 +5,6 @@ def atc_165b(X: int) -> int:
 
     while savings < X:
         years += 1
-        # savings += savings * 0.01 * 100 // 100
         savings += savings // 100
     return years
 

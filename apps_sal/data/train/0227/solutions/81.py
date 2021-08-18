@@ -20,7 +20,6 @@ class Solution:
         if K >= len(zeros_indices):
             return len(A)
 
-        # [0, 1, 4, 5, 9, 12, 13, 14]
         zero_order = -1
         for i in range(len(A)):
             if A[i] == 0:

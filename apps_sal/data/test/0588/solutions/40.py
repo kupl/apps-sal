@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 from math import atan2, degrees, hypot
@@ -31,12 +30,9 @@ for i in range(N):
     XY.append((x, y))
     deg = degrees(atan2(y, x))
     if deg < 0:
-        # 負の数なら時計回り側にあるので逆向きにする
         deg += 360
     degs.append((deg, i))
-# 角度でソート
 degs.sort()
-# 2周目をつける
 degs += [(deg + 360, i) for deg, i in degs]
 
 ans = 0
@@ -45,7 +41,6 @@ for i in range(N):
     xsm, ysm = XY[idx]
     ans = max(ans, hypot(xsm, ysm))
     j = i + 1
-    # 始点から180度未満の方向に向かうものを全て追加しながら最大を取る
     while degs[j][0] < deg + 180:
         _, idx = degs[j]
         x, y = XY[idx]

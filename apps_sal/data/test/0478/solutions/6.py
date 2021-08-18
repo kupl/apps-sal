@@ -20,7 +20,6 @@ def solve():
     for c in minp():
         s[i] = ord(c) - ord('a')
         i += 1
-    # print(s)
     for c in range(25, 0, -1):
         i = 0
         while i < len(s):
@@ -30,11 +29,9 @@ def solve():
                 s.pop(i)
                 if i > 0:
                     i -= 1
-                # print(s)
             else:
                 i += 1
     print(n - len(s))
 
 
-# for i in range(mint())
 solve()

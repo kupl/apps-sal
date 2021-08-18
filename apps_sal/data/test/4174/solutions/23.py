@@ -1,4 +1,3 @@
-# Di = Di-1 + Li-1
 n, x = list(map(int, input().split()))
 L = list(map(int, input().split()))
 ans = 0

@@ -1,7 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 
-# even is +
 now = 0
 even_count = 0
 for i, a in enumerate(A):
@@ -13,7 +12,6 @@ for i, a in enumerate(A):
         even_count += abs(-1 - now)
         now = -1
 
-# odd is +
 now = 0
 odd_count = 0
 for i, a in enumerate(A):

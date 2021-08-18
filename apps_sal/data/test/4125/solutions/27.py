@@ -1,6 +1,4 @@
-#! /usr/bin/env python3
 
-# from fractions import gcd
 from math import gcd
 from collections import Counter, deque, defaultdict
 from heapq import heappush, heappop, heappushpop, heapify, heapreplace, merge

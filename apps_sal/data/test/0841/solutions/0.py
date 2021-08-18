@@ -1,13 +1,7 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 from itertools import accumulate
 
 T = int(input())
-#s = input()
-#N,M,K,Q = [int(x) for x in stdin.readline().split()]
-#arr = [int(x) for x in stdin.readline().split()]
 
 check = [0] * 45000
 
@@ -25,7 +19,6 @@ for i in range(T):
         print('1', '3' * idx, '7', sep='', end='\n')
 
     else:
-        # find largest number < N in check
         target = max(num for num in check if num < N)
         three = check.index(target)
 

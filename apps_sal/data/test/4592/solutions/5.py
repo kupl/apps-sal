@@ -1,7 +1,6 @@
 from collections import defaultdict
 
 
-# 素因数分解
 d = defaultdict(int)
 
 

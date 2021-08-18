@@ -1,21 +1,20 @@
 def bell_numbers(start, stop):
-    # Swap start and stop if start > stop
     if stop < start:
         start, stop = stop, start
     if start < 1:
         start = 1
     if stop < 1:
         stop = 1
-    t = [[1]]  # Initialize the triangle as a two        -dimensional array
-    c = 1  # Bell numbers count
+    t = [[1]]
+    c = 1
     while c <= stop:
         if c >= start:
-            yield t[-1][0]  # Yield the Bell number of the previous                 row
-        row = [t[-1][-1]]  # Initialize a new row
+            yield t[-1][0]
+        row = [t[-1][-1]]
         for b in t[-1]:
-            row.append(row[-1] + b)  # Populate the new row
-        c += 1  # We have found another Bell number
-        t.append(row)  # Append the row to the triangle
+            row.append(row[-1] + b)
+        c += 1
+        t.append(row)
 
 
 be = []

@@ -6,7 +6,6 @@ while(t):
     for i in range(100000):
         if((i * (i - 1) // 2) > n):
             ch = i - 1
-            # print(ch)
             break
 
     rem = n - (ch * (ch - 1)) // 2

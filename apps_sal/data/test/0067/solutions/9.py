@@ -21,4 +21,3 @@ elif c == 0 and a == b:
     print('0')
 else:
     print('?')
-# python3 p.py

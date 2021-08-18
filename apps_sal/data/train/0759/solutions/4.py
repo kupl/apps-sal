@@ -2,8 +2,6 @@ def prime(num):
     if n > 1:
         for i in range(2, int(num**0.5) + 1):
 
-            # If num is divisible by any number between
-            # 2 and n / 2, it is not prime
             if (num % i) == 0:
                 return False
                 break

@@ -28,8 +28,8 @@ l = [int(i) for i in d]
 l.sort()
 p1 = [0, 0]
 p2 = [0, 0]
-s1 = 0  # Path to p2
-s2 = 0  # Path to p1
+s1 = 0
+s2 = 0
 for i_ in l:
     i = str(i_)
     p = sort_(d[i])

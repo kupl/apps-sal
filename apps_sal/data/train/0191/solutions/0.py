@@ -10,7 +10,6 @@ class Solution:
 
         digits_sorted = sorted(digits)
 
-        # now length should equal to len(n), we compare the number with same length
         current_digit = 0
         while current_digit < length:
             for digit in digits_sorted:

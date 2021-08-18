@@ -44,7 +44,6 @@ for obj in change:
         movable.popleft()
         req -= 1
 
-# print(c)
 ans = [0 for _ in range(n)]
 
 for i in range(m):

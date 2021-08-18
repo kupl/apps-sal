@@ -1,7 +1,6 @@
 N = int(input())
 As = list(map(int, input().split()))
 
-# 負の数カウントと絶対値リスト作成
 abs_As = []
 negative_count = 0
 
@@ -13,9 +12,6 @@ for A in As:
     else:
         abs_As.append(A)
 
-# print(As)
-# print(abs_As)
-# print(negative_count)
 
 if(negative_count % 2 == 0):
     print(sum(abs_As))

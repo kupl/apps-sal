@@ -25,7 +25,7 @@ def maze(sx, sy):
 ans = 0
 for i in range(H):
     for j in range(W):
-        if S[i][j] == '#':
-            continue
+        if S[i][j] == '
+        continue
         ans = max(ans, maze(i, j))
 print(ans)

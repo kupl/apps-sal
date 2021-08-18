@@ -1,4 +1,3 @@
-# cook your dish here
 ab = input().split(' ')
 a = ab[0]
 b = int(ab[1])

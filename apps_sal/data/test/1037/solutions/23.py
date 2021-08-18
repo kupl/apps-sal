@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# vim: set fileencoding=utf-8
-
-# pylint: disable=unused-import, invalid-name, missing-docstring, bad-continuation
 
 
 """Module docstring
@@ -42,12 +38,8 @@ def solve(values: List[int], nb: int) -> int:
 def do_job():
     "Do the work"
     LOG.debug("Start working")
-    # first line is number of test cases
     N = int(input())
     values = list(map(int, input().split()))
-    # values = []
-    # for _ in range(N):
-    #     values.append(input().split())
     result = solve(values, N)
     print(result)
 
@@ -56,36 +48,33 @@ def print_output(testcase: int, result) -> None:
     "Formats and print result"
     if result is None:
         result = "IMPOSSIBLE"
-    print(("Case #{}: {}".format(testcase + 1, result)))
-    # 6 digits float precision {:.6f} (6 is the default value)
-    # print("Case #{}: {:f}".format(testcase + 1, result))
+    print(("Case
 
 
-def configure_log(log_file: Optional[str] = None) -> None:
+def configure_log(log_file: Optional[str]=None) -> None:
     "Configure the log output"
-    log_formatter = logging.Formatter(
+    log_formatter=logging.Formatter(
         "%(asctime)s - %(filename)s:%(lineno)d - " "%(levelname)s - %(message)s"
     )
     if log_file:
-        handler = logging.FileHandler(filename=log_file)
+        handler=logging.FileHandler(filename=log_file)
     else:
-        handler = logging.StreamHandler(sys.stdout)
+        handler=logging.StreamHandler(sys.stdout)
     handler.setFormatter(log_formatter)
     LOG.addHandler(handler)
 
 
-LOG = None
-# for interactive call: do not add multiple times the handler
+LOG=None
 if not LOG:
-    LOG = logging.getLogger("template")
+    LOG=logging.getLogger("template")
     configure_log()
 
 
 def main(argv=None):
     "Program wrapper."
     if argv is None:
-        argv = sys.argv[1:]
-    parser = ArgumentParser()
+        argv=sys.argv[1:]
+    parser=ArgumentParser()
     parser.add_argument(
         "-v",
         "--verbose",
@@ -94,7 +83,7 @@ def main(argv=None):
         default=False,
         help="run as verbose mode",
     )
-    args = parser.parse_args(argv)
+    args=parser.parse_args(argv)
     if args.verbose:
         LOG.setLevel(logging.DEBUG)
     do_job()
@@ -115,19 +104,17 @@ class memoized:
     """
 
     def __init__(self, func):
-        self.func = func
-        self.cache = {}
+        self.func=func
+        self.cache={}
 
     def __call__(self, *args):
         try:
             return self.cache[args]
         except KeyError:
-            value = self.func(*args)
-            self.cache[args] = value
+            value=self.func(*args)
+            self.cache[args]=value
             return value
         except TypeError:
-            # uncachable -- for instance, passing a list as an argument.
-            # Better to not cache than to blow up entirely.
             return self.func(*args)
 
     def __repr__(self):

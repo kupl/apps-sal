@@ -1,5 +1,4 @@
 def get_planet_name(i):
-    # hi my dear friends ))))
     return {
         1: "Mercury", 2: "Venus",
         3: "Earth",

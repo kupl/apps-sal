@@ -1,6 +1,4 @@
 for _ in range(int(input())):
-    #n, m = map(int, input().split())
-    #A = list(map(int, input().split()))
     n = int(input())
     if n > 3:
         for i in range(2, int(n ** 0.5) + 1):

@@ -86,13 +86,9 @@ def filllower():
 
             i += 1
 
-            # print("i=%d,lst[i]=%d"%(i,lst[i]))
-
         diff = lst[i] - lst[i - 1]
 
         kk -= i * diff
-
-        #print("lower kk = %d",kk)
 
         if kk == 0:
 
@@ -104,8 +100,6 @@ def filllower():
 
             cur = lst[i] - int(-kk / i) - 1
 
-            #print("-kk/i = %d",int(-kk/i))
-
             if (-kk % i) == 0:
 
                 cur += 1
@@ -113,8 +107,6 @@ def filllower():
             break
 
         cur = lst[i]
-
-    #print("min = ",cur)
 
     return cur
 
@@ -133,13 +125,9 @@ def fillupper():
 
             i -= 1
 
-            # print("i=%d,lst[i]=%d"%(i,lst[i]))
-
         diff = lst[i + 1] - lst[i]
 
         kk -= (n - i - 1) * diff
-
-        #print("upper kk = ",kk)
 
         if kk == 0:
 
@@ -158,8 +146,6 @@ def fillupper():
             break
 
         cur = lst[i]
-
-    #print("max = ",cur)
 
     return cur
 
@@ -237,7 +223,6 @@ while k:
 
 	sortmax()
 
-	#print(lst)
 
 	lst[0]+=1
 
@@ -247,7 +232,6 @@ while k:
 
 		break
 
-	#print(lst)
 
 	k-=1
 
@@ -262,6 +246,3 @@ print(lst[-1]-lst[0])
 
 
 '''
-
-
-# Made By Mostafa_Khaled

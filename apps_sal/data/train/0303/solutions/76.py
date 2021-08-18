@@ -11,7 +11,6 @@ class Solution:
                 v = best_a[j - 1] + max(sa) * len(sa)
                 if v > max_v:
                     max_v = v
-                # print(best_a,max_v,i,j,sa)
             best_a[i] = max_v
 
         return best_a[-1]

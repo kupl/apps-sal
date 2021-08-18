@@ -12,5 +12,4 @@ class Solution:
             for j in range(i + 1, n + 1):
                 if check(text[i:j]):
                     res.add(text[i:j])
-        # print(res)
         return len(res)

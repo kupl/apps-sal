@@ -15,11 +15,11 @@ def main():
 
     s = (xs, ys, 0, 0)
     g = (xt, yt, 0, N - 1)
-    ps = [s, g]  # x,y,r,idx
+    ps = [s, g]
     adj = [[inf] * N for _ in range(N)]
     adj[0][N - 1] = adj[N - 1][0] = dist(s, g)
     for idx1 in range(1, N - 1):
-        *p1, = list(map(int, input().split()))  # x,y,r
+        *p1, = list(map(int, input().split()))
         p1.append(idx1)
         for *p2, idx2 in ps:
             d = dist(p1, p2)
@@ -31,7 +31,7 @@ def main():
 
         dist = [inf] * N
 
-        h = [(0, s)]  # c,v
+        h = [(0, s)]
         dist[s] = 0
 
         while h:

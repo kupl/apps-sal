@@ -105,7 +105,7 @@ class Solution:
                         bfsQ.append((r, c))
                         visited.add((r, c))
 
-                if len(bfsQ) >= 20000:  # max block area upper bound
+                if len(bfsQ) >= 20000:
                     return True
 
             return False

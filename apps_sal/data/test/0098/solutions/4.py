@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -33,4 +31,3 @@ else:
     print("NO")
 
 finish = time.time()
-#print(finish - start)

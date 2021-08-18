@@ -1,17 +1,12 @@
-# modulo
 MOD = 10 ** 9 + 7
 
-# number of vertices
 n = int(input())
-# adjacency list
 edge = [[] for _ in range(n)]
-# 0-index
 for _ in range(n - 1):
     a, b = map(int, input().split())
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
 
-# factorial and inverse and inverse of factorial
 fact = [1] * n
 inverse = [1] * n
 inv_fact = [1] * n
@@ -20,8 +15,6 @@ for i in range(2, n):
     inverse[i] = -inverse[MOD % i] * (MOD // i) % MOD
     inv_fact[i] = inv_fact[i - 1] * inverse[i] % MOD
 
-# regarding index 0 as root of tree
-# calculating parents of vertices and route from root with DFS
 stack = [0]
 parent = [0] * n
 route = []
@@ -33,8 +26,6 @@ while stack:
             parent[child] = vertex
             stack.append(child)
 
-# tree DP regarding index 0 as root of tree
-# process from leaves to root
 dp = [1] * n
 size = [1] * n
 for vertex in route[:0:-1]:
@@ -45,14 +36,11 @@ for vertex in route[:0:-1]:
     size[pa] += sz
 dp[0] = dp[0] * fact[n - 1] % MOD
 
-# rerooting
-# process from root to leaves
 for vertex in route[1:]:
     pa = parent[vertex]
     sz = size[vertex]
     inv_dp = pow(dp[vertex], MOD - 2, MOD)
     dp[vertex] = dp[vertex] * dp[pa] * inv_dp * sz * inverse[n - sz] % MOD
 
-# printing result
 for value in dp:
     print(value)

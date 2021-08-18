@@ -6,7 +6,7 @@ def sursurungal(txt):
             out = None
             if sursurungal.pluralize <= 1:
                 out = word
-            else:  # <-- Look at that curve!
+            else:
                 base = word
                 if word[-1] == 's':
                     base = word[0:-1]

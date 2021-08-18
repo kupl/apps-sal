@@ -104,7 +104,6 @@ def f(x, n):
         r += f(x + 1, n)
     if 2 * x <= n:
         r += f(x * 2, n)
-    #print(x, r)
     return r
 
 
@@ -116,7 +115,6 @@ def f1(x, n):
         r += f(x + 1, n)
     if 2 * x <= n:
         r += f(x * 2, n)
-    #print(x, r)
     return r
 
 

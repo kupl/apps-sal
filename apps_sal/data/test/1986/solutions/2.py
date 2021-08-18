@@ -1,6 +1,5 @@
 import sys
 my_file = sys.stdin
-#my_file = open("input.txt", "r")
 num = [int(i) for i in my_file.readline().strip("\n").split(" ")]
 n = num[0]
 k = num[1]

@@ -22,11 +22,8 @@ class Solution:
             if square <= n:
                 squares.add(square)
                 dp[square] = True
-        # print(squares)
         for i in range(1, n + 1):
             if i not in squares:
                 possible = [not dp[i - square] for square in squares if square < i]
-                # print(i, possible)
                 dp[i] = any(possible)
-        # print(dp)
         return dp[-1]

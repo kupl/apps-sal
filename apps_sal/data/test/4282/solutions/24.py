@@ -1,4 +1,3 @@
-# 15:35
 
 n = int(input())
 circ = []

@@ -14,7 +14,6 @@ class Solution:
 
         max_string = None
         for start_idx in char_to_idx[max_char]:
-            # for j in range(start_idx+1, len(s)+1):
             new_string = s[start_idx:]
             if max_string == None or new_string > max_string:
                 max_string = new_string

@@ -1,18 +1,14 @@
-#from hypothesis import given
-#from hypothesis.strategies import permutations, integers
 
 
 def solve(n, p):
     i_p = list(enumerate(p))
     i_p.sort(key=lambda i_ab: (i_ab[1][1], i_ab[1][0], i_ab[0]))
     zig = list(reversed([i for i, (a, b) in i_p if a < b]))
-    #print([(i, p[i]) for i in zig])
     for i in range(len(zig) - 1):
         assert p[zig[i]][1] > p[zig[i + 1]][0]
     for i in zig:
         assert p[i][0] < p[i][1]
     zag = [i for i, (a, b) in i_p if a > b]
-    #print([(i, p[i]) for i in zag])
     for i in range(len(zag) - 1):
         assert p[zag[i]][1] < p[zag[i + 1]][0]
     for i in zag:
@@ -20,14 +16,6 @@ def solve(n, p):
     if len(zig) < len(zag):
         return zag
     return zig
-
-
-# IDK why generation is so slow for this.
-# @given(integers(min_value=2, max_value=int(1e2))
-#    .flatmap(lambda n: permutations(range(1, 2*n + 1)))
-#    .map(lambda ab: [(ab[i], ab[i + 1]) for i in range(0, len(ab), 2)]))
-# def test_solve(p):
-#    solve(len(p), p)
 
 
 def main():

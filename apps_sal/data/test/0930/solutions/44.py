@@ -8,8 +8,8 @@ def nCr_frL(n, r, mod):
 
 N, K = list(map(int, input().split()))
 MOD = 10**9 + 7
-com1 = nCr_frL(N, N, MOD)  # nCi
-com2 = nCr_frL(N - 1, N - 1, MOD)  # n-1Ci
+com1 = nCr_frL(N, N, MOD)
+com2 = nCr_frL(N - 1, N - 1, MOD)
 
 if K > N - 1:
     K = N - 1

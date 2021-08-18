@@ -13,5 +13,4 @@ class Solution:
                 count = 1
                 arr.append(arr[0])
                 arr = arr[1:]
-            #print(arr, count)
         return arr[0]

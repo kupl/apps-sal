@@ -15,9 +15,3 @@ class SubrectangleQueries:
                 ans = val
                 break
         return ans if ans else self.matrix[row][col]
-
-
-# Your SubrectangleQueries object will be instantiated and called as such:
-# obj = SubrectangleQueries(rectangle)
-# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-# param_2 = obj.getValue(row,col)

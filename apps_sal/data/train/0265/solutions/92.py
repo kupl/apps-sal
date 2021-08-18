@@ -11,6 +11,5 @@ class Solution:
                 cnt = collections.Counter()
                 cnt[0] = 0
             cnt[prefix] += 1
-            # print(cnt, ans)
         print('--')
         return ans

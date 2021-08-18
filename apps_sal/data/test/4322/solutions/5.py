@@ -28,7 +28,6 @@ while (l <= N):
             ansl = l
             ansr = r
             ans = now
-        # print(l,r,now)
         if l == r:
             l = r + 1
         else:

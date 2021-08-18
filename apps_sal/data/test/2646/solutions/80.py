@@ -9,7 +9,6 @@ for i in range(m):
     graph[a].append(b)
     graph[b].append(a)
 
-#  print(graph)
 
 mark = [-1] * (n + 1)
 mark[0] = 0

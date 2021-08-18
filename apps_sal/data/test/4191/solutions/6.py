@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# @Author: wjh
-# @Date:   2017-03-31 23:26:44
-# @Last Modified by:   wjh
-# @Last Modified time: 2017-03-31 23:36:16
 
 op = [int.__xor__, int.__or__, int.__and__]
 

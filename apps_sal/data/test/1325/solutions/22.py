@@ -14,9 +14,7 @@ ans, ch = 0, 0
 for i in range(l, r + 1):
     temp = abs(ord(s[i]) - ord(s[n - 1 - i]))
     ch += min(temp, 26 - temp)
-    #print (min(temp, 26-temp),s[i], s[n-1-i])
 if l < r:
-    #print (min(abs(p-r), abs(p-l))+ abs(r-l) + ch)
     ans += min(abs(p - r), abs(p - l)) + abs(r - l) + ch
 elif l == r:
     if ch:

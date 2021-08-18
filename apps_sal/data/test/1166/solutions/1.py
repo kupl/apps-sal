@@ -9,7 +9,6 @@ winners = n * [""]
 for c in reversed(ascending):
     if board[c] == n:
         winners[c] = "B"
-    # going down
     toCheck = c - board[c]
     while(toCheck >= 0):
         if winners[toCheck] == "B":
@@ -23,9 +22,6 @@ for c in reversed(ascending):
             toCheck = toCheck + board[c]
     if winners[c] == "":
         winners[c] = "B"
-    #print("board at c",board[c])
-    # print(c)
-    # print(winners)
 
 for i in range(n):
     print(winners[i], end="")

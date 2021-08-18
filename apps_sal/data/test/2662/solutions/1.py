@@ -8,7 +8,6 @@ Sorted list implementations:
 * :class:`SortedList`
 * :class:`SortedKeyList`
 """
-# pylint: disable=too-many-lines
 
 
 import sys
@@ -25,9 +24,6 @@ from _thread import get_ident
 
 def recursive_repr(fillvalue='...'):
     "Decorator to make a repr function return fillvalue for a recursive call."
-    # pylint: disable=missing-docstring
-    # Copied from reprlib in Python 3
-    # https://hg.python.org/cpython/file/3.6/Lib/reprlib.py
 
     def decorating_function(user_function):
         repr_running = set()
@@ -47,10 +43,6 @@ def recursive_repr(fillvalue='...'):
         return wrapper
 
     return decorating_function
-
-###############################################################################
-# END Python 2/3 Shims
-###############################################################################
 
 
 class SortedList(MutableSequence):
@@ -136,7 +128,6 @@ class SortedList(MutableSequence):
         :param key: function used to extract comparison key (optional)
         :return: sorted list or sorted-key list instance
         """
-        # pylint: disable=unused-argument
         if key is None:
             return object.__new__(cls)
         else:
@@ -146,7 +137,7 @@ class SortedList(MutableSequence):
                 raise TypeError('inherit SortedKeyList for key argument')
 
     @property
-    def key(self):  # pylint: disable=useless-return
+    def key(self):
         """Function used to extract comparison key from values.
         Sorted list compares values directly so the key function is none.
         """
@@ -456,21 +447,12 @@ class SortedList(MutableSequence):
 
         total = 0
 
-        # Increment pos to point in the index to len(self._lists[pos]).
-
         pos += self._offset
-
-        # Iterate until reaching the root of the index tree at pos = 0.
 
         while pos:
 
-            # Right-child nodes are at odd indices. At such indices
-            # account the total below the left child node.
-
             if not pos & 1:
                 total += _index[pos - 1]
-
-            # Advance pos to the parent node.
 
             pos = (pos - 1) >> 1
 
@@ -638,9 +620,6 @@ class SortedList(MutableSequence):
 
             indices = range(start, stop, step)
 
-            # Delete items from greatest index to least so
-            # that the indices remain valid throughout iteration.
-
             if step > 0:
                 indices = reversed(indices)
 
@@ -675,8 +654,6 @@ class SortedList(MutableSequence):
             start, stop, step = index.indices(self._len)
 
             if step == 1 and start < stop:
-                # Whole slice optimization: start to stop slices the whole
-                # sorted list.
 
                 if start == 0 and stop == self._len:
                     return reduce(iadd, self._lists, [])
@@ -684,9 +661,6 @@ class SortedList(MutableSequence):
                 start_pos, start_idx = self._pos(start)
                 start_list = _lists[start_pos]
                 stop_idx = start_idx + stop - start
-
-                # Small slice optimization: start index and stop index are
-                # within the start list.
 
                 if len(start_list) >= stop_idx:
                     return start_list[start_idx:stop_idx]
@@ -708,10 +682,6 @@ class SortedList(MutableSequence):
                 result = self._getitem(slice(stop + 1, start + 1))
                 result.reverse()
                 return result
-
-            # Return a list because a negative step could
-            # reverse the order of the items and this could
-            # be the desired behavior.
 
             indices = range(start, stop, step)
             return list(self._getitem(index) for index in indices)
@@ -901,9 +871,6 @@ class SortedList(MutableSequence):
 
         _lists = self._lists
 
-        # Calculate the minimum (pos, idx) pair. By default this location
-        # will be inclusive in our calculation.
-
         if minimum is None:
             min_pos = 0
             min_idx = 0
@@ -922,9 +889,6 @@ class SortedList(MutableSequence):
                     return iter(())
 
                 min_idx = bisect_right(_lists[min_pos], minimum)
-
-        # Calculate the maximum (pos, idx) pair. By default this location
-        # will be exclusive in our calculation.
 
         if maximum is None:
             max_pos = len(_maxes) - 1
@@ -1325,29 +1289,18 @@ class SortedList(MutableSequence):
             assert len(self._maxes) == len(self._lists)
             assert self._len == sum(len(sublist) for sublist in self._lists)
 
-            # Check all sublists are sorted.
-
             for sublist in self._lists:
                 for pos in range(1, len(sublist)):
                     assert sublist[pos - 1] <= sublist[pos]
 
-            # Check beginning/end of sublists are sorted.
-
             for pos in range(1, len(self._lists)):
                 assert self._lists[pos - 1][-1] <= self._lists[pos][0]
-
-            # Check _maxes index is the last value of each sublist.
 
             for pos in range(len(self._maxes)):
                 assert self._maxes[pos] == self._lists[pos][-1]
 
-            # Check sublist lengths are less than double load-factor.
-
             double = self._load << 1
             assert all(len(sublist) <= double for sublist in self._lists)
-
-            # Check sublist lengths are greater than half load-factor for all
-            # but the last sublist.
 
             half = self._load >> 1
             for pos in range(0, len(self._lists) - 1):
@@ -1357,13 +1310,9 @@ class SortedList(MutableSequence):
                 assert self._len == self._index[0]
                 assert len(self._index) == self._offset + len(self._lists)
 
-                # Check index leaf nodes equal length of sublists.
-
                 for pos in range(len(self._lists)):
                     leaf = self._index[self._offset + pos]
                     assert leaf == len(self._lists[pos])
-
-                # Check index branch nodes are the sum of their children.
 
                 for pos in range(self._offset):
                     child = (pos << 1) + 1
@@ -1819,9 +1768,6 @@ class SortedKeyList(SortedList):
 
         _keys = self._keys
 
-        # Calculate the minimum (pos, idx) pair. By default this location
-        # will be inclusive in our calculation.
-
         if min_key is None:
             min_pos = 0
             min_idx = 0
@@ -1840,9 +1786,6 @@ class SortedKeyList(SortedList):
                     return iter(())
 
                 min_idx = bisect_right(_keys[min_pos], min_key)
-
-        # Calculate the maximum (pos, idx) pair. By default this location
-        # will be exclusive in our calculation.
 
         if max_key is None:
             max_pos = len(_maxes) - 1
@@ -2142,36 +2085,23 @@ class SortedKeyList(SortedList):
             assert len(self._maxes) == len(self._lists) == len(self._keys)
             assert self._len == sum(len(sublist) for sublist in self._lists)
 
-            # Check all sublists are sorted.
-
             for sublist in self._keys:
                 for pos in range(1, len(sublist)):
                     assert sublist[pos - 1] <= sublist[pos]
 
-            # Check beginning/end of sublists are sorted.
-
             for pos in range(1, len(self._keys)):
                 assert self._keys[pos - 1][-1] <= self._keys[pos][0]
-
-            # Check _keys matches _key mapped to _lists.
 
             for val_sublist, key_sublist in zip(self._lists, self._keys):
                 assert len(val_sublist) == len(key_sublist)
                 for val, key in zip(val_sublist, key_sublist):
                     assert self._key(val) == key
 
-            # Check _maxes index is the last value of each sublist.
-
             for pos in range(len(self._maxes)):
                 assert self._maxes[pos] == self._keys[pos][-1]
 
-            # Check sublist lengths are less than double load-factor.
-
             double = self._load << 1
             assert all(len(sublist) <= double for sublist in self._lists)
-
-            # Check sublist lengths are greater than half load-factor for all
-            # but the last sublist.
 
             half = self._load >> 1
             for pos in range(0, len(self._lists) - 1):
@@ -2181,13 +2111,9 @@ class SortedKeyList(SortedList):
                 assert self._len == self._index[0]
                 assert len(self._index) == self._offset + len(self._lists)
 
-                # Check index leaf nodes equal length of sublists.
-
                 for pos in range(len(self._lists)):
                     leaf = self._index[self._offset + pos]
                     assert leaf == len(self._lists[pos])
-
-                # Check index branch nodes are the sum of their children.
 
                 for pos in range(self._offset):
                     child = (pos << 1) + 1
@@ -2289,23 +2215,15 @@ class SortedSet(MutableSet, Sequence):
         """
         self._key = key
 
-        # SortedSet._fromset calls SortedSet.__init__ after initializing the
-        # _set attribute. So only create a new set if the _set attribute is not
-        # already present.
-
         if not hasattr(self, '_set'):
             self._set = set()
 
         self._list = SortedList(self._set, key=key)
 
-        # Expose some set methods publicly.
-
         _set = self._set
         self.isdisjoint = _set.isdisjoint
         self.issubset = _set.issubset
         self.issuperset = _set.issuperset
-
-        # Expose some sorted list methods publicly.
 
         _list = self._list
         self.bisect_left = _list.bisect_left
@@ -2531,7 +2449,6 @@ class SortedSet(MutableSet, Sequence):
         :return: value
         :raises IndexError: if index is out of range
         """
-        # pylint: disable=arguments-differ
         value = self._list.pop(index)
         self._set.remove(value)
         return value
@@ -2837,9 +2754,6 @@ class SortedDict(dict):
 
         self._list = SortedList(key=_key)
 
-        # Reaching through ``self._list`` repeatedly adds unnecessary overhead
-        # so cache references to sorted list methods.
-
         _list = self._list
         self._list_add = _list.add
         self._list_clear = _list.clear
@@ -2848,8 +2762,6 @@ class SortedDict(dict):
         self._list_pop = _list.pop
         self._list_remove = _list.remove
         self._list_update = _list.update
-
-        # Expose some sorted list methods publicly.
 
         self.bisect_left = _list.bisect_left
         self.bisect = _list.bisect_right
@@ -2880,7 +2792,6 @@ class SortedDict(dict):
         Deprecated in version 2 of Sorted Containers. Use
         :func:`SortedDict.keys` instead.
         """
-        # pylint: disable=attribute-defined-outside-init
         try:
             return self._iloc
         except AttributeError:
@@ -2993,30 +2904,7 @@ class SortedDict(dict):
         """
         return SortedValuesView(self)
 
-    # if sys.hexversion < 0x03000000:
-    #	 def __make_raise_attributeerror(original, alternate):
-    #		 # pylint: disable=no-self-argument
-    #		 message = (
-    #			 'SortedDict.{original}() is not implemented.'
-    #			 ' Use SortedDict.{alternate}() instead.'
-    #		 ).format(original=original, alternate=alternate)
-
-    #		 def method(self):
-    #			 # pylint: disable=missing-docstring,unused-argument
-    #			 raise AttributeError(message)
-    #		 method.__name__ = original  # pylint: disable=non-str-assignment-to-dunder-name
-    #		 method.__doc__ = message
-    #		 return property(method)
-
-    #	 iteritems = __make_raise_attributeerror('iteritems', 'items')
-    #	 iterkeys = __make_raise_attributeerror('iterkeys', 'keys')
-    #	 itervalues = __make_raise_attributeerror('itervalues', 'values')
-    #	 viewitems = __make_raise_attributeerror('viewitems', 'items')
-    #	 viewkeys = __make_raise_attributeerror('viewkeys', 'keys')
-    #	 viewvalues = __make_raise_attributeerror('viewvalues', 'values')
-
     class _NotGiven(object):
-        # pylint: disable=too-few-public-methods
         def __repr__(self):
             return '<not-given>'
 
@@ -3337,8 +3225,6 @@ class SortedValuesView(ValuesView, Sequence):
         return _mapping[key]
 
     __delitem__ = _view_delitem
-# Copyright 2014 - 2019 Grant Jenks
-# https://github.com/grantjenks/python-sortedcontainers
 
 
 """

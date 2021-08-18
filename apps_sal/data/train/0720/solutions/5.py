@@ -1,6 +1,6 @@
 for i in range(int(input())):
     s = input()
-    one = [0] * (len(s) + 1)  # number of ones from first place to i-th place
+    one = [0] * (len(s) + 1)
     for i in range(len(s)):
         if s[i] == '1':
             one[i + 1] = one[i] + 1
@@ -8,7 +8,7 @@ for i in range(int(input())):
             one[i + 1] = one[i]
     ans = 0
     i = 1
-    r = 2  # r for range in interval r=i+i**2
+    r = 2
     while r <= len(s):
         r = i + i**2
         j = 0

@@ -1,5 +1,4 @@
 def get_grade(s1, s2, s3):
-    # Code here
     mean = (s1 + s2 + s3) / 3
     score = mean
     if 90 <= score <= 100:

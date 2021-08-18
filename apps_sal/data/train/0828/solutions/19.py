@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     for T in range(int(input())):
         N = int(input())

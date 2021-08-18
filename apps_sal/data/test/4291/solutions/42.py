@@ -1,5 +1,4 @@
 n, q = list(map(int, input().split()))
-#print(n, q)
 
 s = input()
 

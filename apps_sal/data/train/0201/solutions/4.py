@@ -38,7 +38,6 @@ class Solution:
 
             left_combinations = max(1, sum(count(left, lower_bound, root - 1) for left in range(lower_bound, root)))
             right_combinations = max(1, sum(count(right, root + 1, upper_bound) for right in range(root + 1, upper_bound + 1)))
-            #print(root, lower_bound, upper_bound, left_combinations, right_combinations)
             return left_combinations * right_combinations
 
         return sum(count(root, 1, n) for root in range(1, n + 1))

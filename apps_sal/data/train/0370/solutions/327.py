@@ -19,7 +19,6 @@ class Solution:
         return max(list(Counter(uf.root(x) for x in A).values()), default=0)
         '''
         
-        # build bipartite graph from factors and values
         g = Graph()
         for factor, values in factors.items():
             g.add_factor(factor)
@@ -62,7 +61,6 @@ class UnionFind:
 class Sieve:
     def __init__(self, limit):
         self.primes = self._compute_primes(limit)
-        # better runtime than simply empty dict!
         self.factors = {p: {p} for p in self.primes}
         self.factors[1] = set()
 
@@ -75,14 +73,11 @@ class Sieve:
 
             primes.append(prime)
 
-            # better runtime than a manual while loop!
             for j in range(prime + prime, limit, prime):
                 sieve[j] = False
 
         return primes
 
-    # this hurts the runtime!
-    # @lru_cache(maxsize=MAX_N)
     def factorize(self, n):
         if n in self.factors:
             return self.factors[n]

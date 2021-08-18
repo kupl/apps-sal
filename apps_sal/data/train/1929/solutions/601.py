@@ -20,21 +20,14 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
 
-        # print('start', letter, self.curr)
-
         if len(self.curr) < self.MAX:
             self.curr += letter
         elif len(self.curr) == self.MAX:
             self.curr = self.curr[1:] + letter
 
-        # print(letter, self.curr)
-
         if letter in self.last:
 
-            # print('in')
-
             for i in range(1, len(self.curr) + 1):
-                # print(i, self.curr, self.curr[-i:])
                 if self.curr[-i:] in self.storage[i]:
                     return True
                 else:
@@ -43,8 +36,3 @@ class StreamChecker:
 
         else:
             return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

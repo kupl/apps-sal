@@ -4,7 +4,7 @@ class Solution:
             return -1
         memo = {}
 
-        def dp(memo, jD, i, d):  # 求解mD(jD[i:], d)
+        def dp(memo, jD, i, d):
             if len(jD) - i < d:
                 return -1
             if d == 1:
@@ -12,9 +12,9 @@ class Solution:
             if (i, d) in memo:
                 return memo[(i, d)]
             ans, cur = 9999999999, 0
-            for j in range(i, len(jD)):  # 遍历S(D_1)
+            for j in range(i, len(jD)):
                 cur = max(cur, jD[j])
-                x = dp(memo, jD, j + 1, d - 1)  # 核心代码 md(D_1^{rest}, d-1)
+                x = dp(memo, jD, j + 1, d - 1)
                 if x != -1:
                     ans = min(ans, cur + x)
             memo[(i, d)] = ans

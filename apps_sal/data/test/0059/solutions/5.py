@@ -9,9 +9,6 @@ def main():
     for i in range(n):
         oo[xx[i][1]] = i
 
-    # print(a)
-    # print(oo)
-
     nn = -1
     for i in range(n):
         nn = max(nn, oo[i])

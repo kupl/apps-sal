@@ -2,7 +2,6 @@ class Solution:
     def dieSimulator(self, N: int, rollMax: List[int]) -> int:
 
         def dp(curr_cnt, curr, n):
-            # print (curr_cnt, curr,n, rollMax[curr-1], curr_cnt)
             if curr > 0 and rollMax[curr - 1] < curr_cnt:
                 return 0
             elif n == 0:

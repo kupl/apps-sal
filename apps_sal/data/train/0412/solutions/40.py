@@ -3,7 +3,6 @@ class Solution:
         self.dp = []
 
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
-        # Initiate memoization array
         for dice in range(0, d + 1):
             self.dp.append([-1] * (target + 1))
 

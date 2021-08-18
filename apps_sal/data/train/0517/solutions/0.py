@@ -1,7 +1,5 @@
-# cook your dish here
 def offset(l, flag):
     x = 0
-    # print(l)
     for i in range(1, len(l)):
         temp = []
         for j in range(i):
@@ -52,7 +50,5 @@ else:
         v = n // v
         temp.append(v)
         ans -= 2**v - 2
-        # print(ans)
     ans += offset(temp, True)
-    # print(fs)
     print(ans % m)

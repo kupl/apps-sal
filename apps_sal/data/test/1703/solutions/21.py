@@ -1,5 +1,3 @@
-# This code sucks, you know it and I know it.
-# Move on and call me an idiot later.
 
 def check(symbolString):
     s = []
@@ -39,7 +37,6 @@ b = 0
 for i in range(n):
     a = input()
     x = check(a)
-    # print(x)
     if x[0] == "()":
         b += 1
     elif x[0] == '(':

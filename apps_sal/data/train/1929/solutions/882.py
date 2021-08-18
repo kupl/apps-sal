@@ -30,8 +30,3 @@ class TrieNode:
                 node.child[letter] = new_node
             node = node.child[letter]
         node.is_complete = True
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

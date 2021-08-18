@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
 import sys
 
 
 def rint():
     return list(map(int, sys.stdin.readline().split()))
-#lines = stdin.readlines()
 
 
 t = int(input())
@@ -14,11 +12,9 @@ for tt in range(t):
     d = []
     for i in range(n):
         d.append(int(d_str[i]))
-    # print(d)
     di = []
     for i in range(n):
         di.append(i)
-    # print(d)
     for b in range(10):
         one_min = -1
         two_min = -1

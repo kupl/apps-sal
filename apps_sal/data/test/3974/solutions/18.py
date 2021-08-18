@@ -20,4 +20,3 @@ def kadane(s):
 
 
 print(max(kadane(s), kadane(s1)))
-# @print(kadane(s))

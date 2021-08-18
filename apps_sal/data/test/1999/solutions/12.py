@@ -8,8 +8,6 @@ def main():
         while x in idx:
             del idx[x]
             x *= 2
-        # there is no any pair of equal number in idx
-        # so every time when updating idx, i is the right place to record x
         idx[x] = i
 
     ans = list(sorted(idx.keys(), key=lambda x: idx[x]))

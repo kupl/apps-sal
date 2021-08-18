@@ -20,7 +20,6 @@ class Solution:
                     r, c = i + di, j + dj
                     if 0 <= r < R and 0 <= c < C:
                         if grid[r][c].islower():
-                            #s1 = s
                             s1 = s.copy()
                             s1.add(grid[r][c])
                             if len(s1) == target:
@@ -35,10 +34,10 @@ class Solution:
                                 if (r, c, tuple_s) not in seen:
                                     seen.add((r, c, tuple_s))
                                     Q.append((r, c, d + 1, s))
-                        elif grid[r][c] != '#':
-                            tuple_s = tuple(sorted(set(s)))
-                            if (r, c, tuple_s) not in seen:
-                                seen.add((r, c, tuple_s))
-                                Q.append((r, c, d + 1, s))
+                        elif grid[r][c] != '
+                        tuple_s = tuple(sorted(set(s)))
+                        if (r, c, tuple_s) not in seen:
+                            seen.add((r, c, tuple_s))
+                            Q.append((r, c, d + 1, s))
             return -1
         return bfs(ii, jj)

@@ -29,7 +29,6 @@ class BIT:
 
 
 class RABIT():
-    # range add BIT
     def __init__(self, N):
         self.bit0 = BIT(N)
         self.bit1 = BIT(N)

@@ -22,18 +22,15 @@ class Solution:
 
         while(lo < hi):
 
-            # get value stored for height. calculate width.
             height_a = items[lo]
             height_b = items[hi]
             width = hi - lo
             height = min(height_a, height_b)
 
-            # calculate area (height * width)
             area = height * width
             if area > max_area:
                 max_area = area
 
-            # move the smaller pointer in
             if height_a < height_b:
                 lo += 1
             else:

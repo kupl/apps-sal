@@ -20,8 +20,8 @@ mod = 10**9 + 7
 
 X, Y = list(map(int, input().split()))
 
-a = X % 2  # 1の数
-b = X // 2  # 2の数
+a = X % 2
+b = X // 2
 for i in range(b + 1):
     if a * 2 + b * 1 == Y:
         break

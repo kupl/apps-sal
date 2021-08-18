@@ -25,13 +25,11 @@ def main(n, k, s):
                 return 'S'
 
     def f(left, left_idx, right, right_idx):
-        # print(left, left_idx, right, right_idx)
 
         if memo.get((left_idx, right_idx, right - left)) is not None:
             return memo[(left_idx, right_idx, right - left)]
 
         if right - left == 1:
-            # print(left, left_idx, right, right_idx, s[left_idx])
             return s[left_idx]
 
         mid = left + (right - left) // 2
@@ -39,7 +37,6 @@ def main(n, k, s):
         res = junken(f(left, left_idx, mid, mid % n), f(mid, mid % n, right, right_idx))
         memo[(left_idx, right_idx, right - left)] = res
 
-        # print(left, left_idx, right, right_idx, res)
         return res
 
     print((f(0, 0 % n, (1 << k), (1 << k) % n)))

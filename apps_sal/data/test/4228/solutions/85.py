@@ -1,5 +1,3 @@
-# AtCoder Beginner Contest 131
-# B - Bite Eating
 
 N, L = map(int, input().split())
 minabs = 10**9

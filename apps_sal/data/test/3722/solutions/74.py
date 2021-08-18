@@ -1,11 +1,8 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 
 N = int(readline())
-#n,m = map(int,readline().split())
 aa = readline().strip()
 ab = readline().strip()
 ba = readline().strip()
@@ -27,7 +24,6 @@ for i in range(3, n):
     d = nd
     ans[i] = len(d)
 
-# print(ans)
 
 MOD = 10**9 + 7
 r = (ans[2], ans[3], ans[4], ans[5])

@@ -10,7 +10,6 @@ for i in range(N):
         if (p + a, q + b) not in dp[i + 1]:
             dp[i + 1][(p + a, q + b)] = 100000
         dp[i + 1][(p + a, q + b)] = min(dp[i + 1][(p + a, q + b)], dp[i][(p, q)] + c)
-# print(dp[N])
 rs = []
 for k in range(1, 10000):
     if (k * Ma, k * Mb) in dp[N]:

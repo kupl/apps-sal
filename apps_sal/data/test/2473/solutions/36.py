@@ -8,7 +8,6 @@ n, k = map(int, input().split())
 xs = set()
 ys = set()
 ps = []
-# 座圧
 for _ in range(n):
     x, y = map(int, input().split())
     ps.append((x, y))
@@ -19,7 +18,6 @@ ydic = {y: i for i, y in enumerate(sorted(list(ys)))}
 rxdic = {i: x for i, x in enumerate(sorted(list(xs)))}
 rydic = {i: y for i, y in enumerate(sorted(list(ys)))}
 
-# 2D累積和
 h = len(xdic)
 w = len(ydic)
 A = [[0 for i in range(w + 1)] for j in range(h + 1)]
@@ -34,7 +32,6 @@ for i in range(len(xdic)):
     for j in range(len(ydic)):
         Acum[i + 1][j + 1] = Acum[i][j + 1] + Acum[i + 1][j] - Acum[i][j] + A[i][j]
 
-# 探索
 ans = 1 << 100
 h = len(xdic)
 w = len(ydic)
@@ -43,7 +40,6 @@ for i1 in range(h + 1):
         for j1 in range(w + 1):
             for j2 in range(j1 + 1, w + 1):
                 num = Acum[i2][j2] - Acum[i1][j2] - Acum[i2][j1] + Acum[i1][j1]
-                # print((i1,i2),(j1,j2),num)
                 if num == k:
                     x1 = rxdic[i1]
                     x2 = rxdic[i2 - 1]

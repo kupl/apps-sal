@@ -9,6 +9,5 @@ for _ in range(N):
     k = max(kt, ka, 1)
     vt = k * T
     va = k * A
-    # print(vt,va)
 
 print(vt + va)

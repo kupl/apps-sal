@@ -31,6 +31,3 @@ elif(d[1] == n - 1 and d[n - 1] == 1):
 else:
 
     print('unknown topology')
-
-
-# Made By Mostafa_Khaled

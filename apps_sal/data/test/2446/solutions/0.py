@@ -3,7 +3,6 @@ from collections import defaultdict
 from math import gcd, sqrt
 
 MAX = pow(10, 5)
-# stdin = open("testdata.txt", "r")
 ip = sys.stdin
 
 n = int(ip.readline())

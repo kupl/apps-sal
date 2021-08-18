@@ -1,7 +1,5 @@
 class Solution:
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
-        # Time  complexity: O(N^2)
-        # Space complexity: O(N)
         A.sort()
         dic = {num: 1 for num in A}
         for i in range(1, len(A)):

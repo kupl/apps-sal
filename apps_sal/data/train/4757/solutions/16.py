@@ -9,7 +9,6 @@ def eprint(*args):
 
 
 zz = 1
-# sys.setrecursionlimit(10**6)
 if zz:
     input = sys.stdin.readline
 else:
@@ -47,7 +46,6 @@ while t > 0:
     flag = 0
     for k in range(b * m):
         if d[i][j] == '1':
-            # print(i,j,"LOL")
             pp = i - 1
             while i != pp - 1 and d[i][j] == '1':
                 i += 1
@@ -65,9 +63,6 @@ while t > 0:
             d[i][j] = '1'
             i = (i + 1) % n
             j = (j + 1) % m
-        # print(i,j)
-        # for ppp in d:
-        #	print(*ppp)
 
     if flag:
         print("NO")

@@ -2,8 +2,6 @@ import sys
 from heapq import heappush, heappop
 from collections import Counter, defaultdict
 
-# inf = open('input.txt', 'r')
-# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, line.split())) for line in sys.stdin)
 
 
@@ -75,7 +73,6 @@ for test in range(t):
     visited = [False] * (n + 1)
     s = 1
     stack = [s]
-#     print(g)
     while stack:
         v = stack.pop()
         if not visited[v]:
@@ -85,5 +82,3 @@ for test in range(t):
                 stack.append(to)
     print(*ansP)
     print(*ansQ)
-
-# inf.close()

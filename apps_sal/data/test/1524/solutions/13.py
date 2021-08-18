@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# FileName: 	D
-# CreatedDate:  2020-08-18 14:44:25 +0900
-# LastModified: 2020-09-11 15:35:56 +0900
-#
 
 
 import os

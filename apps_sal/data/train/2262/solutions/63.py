@@ -22,7 +22,6 @@ for i in range(N):
         continue
     L.append((circ(x1, y1), i))
     L.append((circ(x2, y2), i))
-#board=[[circ(x,y) for y in range(C+1)] for x in range(R+1)]
 R = [s[1] for s in sorted(L)]
 X = []
 for i in R:

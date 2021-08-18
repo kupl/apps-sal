@@ -3,16 +3,13 @@ from functools import lru_cache
 
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        # string : length of longest chain ends with string
         wset = set(words)
 
-        # return the longest chain begin with word
         memo = {}
 
         def dp(word):
             if word in memo:
                 return memo[word]
-            # contruct all the possible successor from word
             ans = 1
             for i in range(len(word) + 1):
                 for j in range(26):

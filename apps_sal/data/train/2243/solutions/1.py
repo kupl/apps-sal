@@ -52,7 +52,6 @@ for x in xxx:
     ab[a].add(b)
     coordinates.add(b)
 
-# Bitのindexは1から始まるように作っているが、"0"を取れるようにするため、全体を1ずらす
 cor_dict = {b: i for i, b in enumerate(sorted(coordinates), start=2)}
 cdg = cor_dict.get
 MOD = 10 ** 9 + 7

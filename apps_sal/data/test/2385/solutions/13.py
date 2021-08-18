@@ -86,13 +86,11 @@ class ReRooting(object):
         resTD = [self.e] * self.V
 
         for p in self.order:
-            # 左からaccTDを更新
             ac = resTD[p]
             for v in self.edge[p]:
                 accTD[v] = ac
                 ac = self.merge(ac, resBU[v])
 
-            # 右からaccTDを更新
             ac = self.e
             for v in reversed(self.edge[p]):
                 accTD[v] = self.merge(accTD[v], ac)
@@ -110,12 +108,11 @@ class ReRooting(object):
         return res
 
 
-#########################################################################################
 N = int(input())
 MOD = 10 ** 9 + 7
 
-fact = [1] * (N + 1)  # fact[n]: n!
-factinv = [1] * (N + 1)  # n!の逆元
+fact = [1] * (N + 1)
+factinv = [1] * (N + 1)
 for i in range(N):
     fact[i + 1] = fact[i] * (i + 1) % MOD
 factinv[-1] = pow(fact[-1], MOD - 2, MOD)
@@ -123,7 +120,7 @@ for i in range(N - 1, -1, -1):
     factinv[i] = factinv[i + 1] * (i + 1) % MOD
 
 
-def inv(n): return fact[n - 1] * factinv[n] % MOD  # inv[n]: nの逆元
+def inv(n): return fact[n - 1] * factinv[n] % MOD
 
 
 def main():

@@ -1,6 +1,5 @@
 class Solution:
     def maxRepOpt1(self, text: str) -> int:
-        # out
         tcounter = Counter(text)
         res = 0
         counter = Counter()

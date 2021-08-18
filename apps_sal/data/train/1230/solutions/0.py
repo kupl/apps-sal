@@ -1,15 +1,5 @@
 dic = {}
-#num = "1"
-# def tonum(num):
-#   res=0
-#   for i in range(len(num)):
-#       res = 2*res + int(num[i])
-#   return res
 
-# for i in range(64):
-#   number = tonum(num)
-#   dic[num] = []
-#   num = num+"0"
 
 n = int(input())
 flag = 0

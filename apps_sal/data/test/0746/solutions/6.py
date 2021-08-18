@@ -5,7 +5,6 @@ for i in range(int(input())):
     d = (x - a) * (x - a) + (y - b) * (y - b)
     d = d**0.5
     t = abs(d / v)
-    # print(d,t)
     if t < m:
         m = t
 print(m)

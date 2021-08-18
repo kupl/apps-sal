@@ -1,7 +1,7 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         n = len(A)
-        dp = [{} for i in range(n)]  # i: {step: length}
+        dp = [{} for i in range(n)]
         for i in range(1, n):
             for j in range(i):
                 step = A[i] - A[j]

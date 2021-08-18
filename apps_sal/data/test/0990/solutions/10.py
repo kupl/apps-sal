@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
 
@@ -49,7 +48,6 @@ for i in range(1, 2**m):
     lsb = i & (-i)
     edge_of_state[i] = edge_of_state[i ^ lsb] | target_edge[lsb.bit_length() - 1]
 
-# dp[fills uv as st]
 dp = [0] * 2**m
 dp[0] = pow(2, n - 1)
 ans = dp[0]

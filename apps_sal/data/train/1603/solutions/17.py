@@ -17,6 +17,3 @@ for k in d:
 print(len(ans))
 
 print('\n'.join(map(' '.join, ans)))
-
-
-# Made By Mostafa_Khaled

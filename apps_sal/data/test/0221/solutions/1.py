@@ -1,5 +1,3 @@
-#import sys
-#sys.stdin = open("in.txt", "r")
 
 n, k = map(int, input().split())
 one = k * 2 + 1
@@ -18,7 +16,6 @@ while cnt <= ans:
     if t > n:
         minus = t - n
     arr += [t]
-    #print("%d" % t, end=" ")
     t += one
     cnt += 1
 

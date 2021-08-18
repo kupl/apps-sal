@@ -16,7 +16,6 @@ else:
 
 
 def check_simple_pattern(task, pattern):
-    #print(task +" -> " + pattern)
     for i in range(len(task)):
         if pattern[i] != task[i] and not (pattern[i] == '?' and task[i] in good):
             return False

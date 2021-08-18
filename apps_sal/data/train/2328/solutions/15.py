@@ -1,4 +1,3 @@
-# cook your code here
 a = []
 b = []
 c = []
@@ -26,7 +25,6 @@ for i in range(0, a[1]):
     if c[0] == 3:
         temp = b[c[1] - 1:c[2]]
         temp.sort()
-        # print temp
         j = -1
         f = int(c[3])
 

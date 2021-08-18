@@ -9,7 +9,6 @@ class Solution:
         print(cumsum)
         minSum = []
         for idx, c in enumerate(cumsum):
-            # print(c, target, target-c, h2idx)
             if c == target:
                 minSum.append(idx + 1)
             if (c - target) in h2idx:
@@ -18,9 +17,6 @@ class Solution:
         if len(minSum) < 2:
             return -1
         return sum(list(sorted(minSum))[:2])
-
-# t = 7
-# [ 2, 2, 3, 4, 3, 4]
 
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         prefix = {0: -1}

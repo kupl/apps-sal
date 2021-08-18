@@ -35,7 +35,6 @@ class Solution:
         for i in incNums:
             firstLessL[i] = -1
         ans = 0
-        #print(firstLessR, firstLessL)
         for i in range(n):
             w = (firstLessR[i] - i) * (i - firstLessL[i])
             ans += w * A[i]

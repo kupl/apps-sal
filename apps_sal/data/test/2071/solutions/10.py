@@ -28,8 +28,6 @@ def main():
             y = a[-i - 1] + 2 * sums[i - 1] + best_t[i - 1]
             best_t.append(max([x, top_to_bottom[i]]))
             best_b.append(max([y, bottom_to_top[i]]))
-    # print(list(reversed(best_t)))
-    # print(list(reversed(best_b)))
     print(best_t[-1])
 
 

@@ -7,9 +7,6 @@ Language: Python 3.3.4
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -28,7 +25,6 @@ def write(s="\n"):
     print(s, end="")
 
 
-# SOLUTION
 n, = read()
 s = read(3)
 s.sort(reverse=True)

@@ -15,7 +15,7 @@ class Solution:
                 return sum([dfs(c, n - 1) for c in ['a', 'e', 'o', 'u']])
             elif p == 'o':
                 return sum([dfs(c, n - 1) for c in ['i', 'u']])
-            else:  # u
+            else:
                 return dfs('a', n - 1)
 
         return sum([dfs(c, n - 1) for c in ['a', 'e', 'i', 'o', 'u']]) % mod

@@ -9,7 +9,6 @@
 
 def main():
     n = int(input())
-    # x=abcd(n+1)
     a = 1
     b = 2
     if(n == 1):
@@ -23,7 +22,6 @@ def main():
             b = temp % 15746
 
         print(temp % 15746)
-        #print(power(0.55, 67, 1355))
 
 
 main()

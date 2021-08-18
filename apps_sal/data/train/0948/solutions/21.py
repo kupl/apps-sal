@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 a, b = map(int, input().split())
 x = 1

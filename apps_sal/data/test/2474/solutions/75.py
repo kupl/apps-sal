@@ -38,10 +38,8 @@ dp = [[INF] * M for i in range(N)]
 N = int(input())
 C = list(map(int, input().split()))
 
-# コストの小さいものから更新していけばいい
 C.sort()
 
-# 2のべき乗は先に計算しておく
 beki = [1]
 for i in range(1, 3 * N + 20):
     beki.append((beki[i - 1] * 2) % MOD)

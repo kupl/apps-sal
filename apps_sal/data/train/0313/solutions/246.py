@@ -3,18 +3,18 @@ class Solution:
         if m * k > len(bloomDay):
             return -1
 
-        def feasible(day):  # check whether it is possible to arrange m banquet on this day.
+        def feasible(day):
             banquet = 0
             streak = 0
             for d in bloomDay:
-                if d > day:  # available
+                if d > day:
                     streak = 0
                 else:
                     streak += 1
-                    if streak == k:  # enough for a banquet
+                    if streak == k:
                         banquet += 1
                         streak = 0
-                    if banquet == m:  # enough banquet
+                    if banquet == m:
                         return True
             return False
 

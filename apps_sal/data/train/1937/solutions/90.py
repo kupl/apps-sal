@@ -2,7 +2,6 @@ from collections import defaultdict
 
 
 class ThroneInheritance:
-    # inheritance = []
     def __init__(self, kingName: str):
         self.family = defaultdict(list)
         self.king = kingName
@@ -25,10 +24,3 @@ class ThroneInheritance:
 
         for child in self.family[root]:
             self.dfs(child)
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

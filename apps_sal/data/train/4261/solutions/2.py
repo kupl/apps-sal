@@ -2,7 +2,7 @@ def robot_walk(a):
     if len(set(a)) == 1:
         return True
     movings = []
-    p = (0, 0)   # x, y
+    p = (0, 0)
     dir = (0, 1)
     for k in a:
         new_p = (p[0] + k * dir[0], p[1] + k * dir[1])

@@ -2,17 +2,17 @@ H, W = list(map(int, input().split()))
 a = []
 for i in range(H):
     s = input()
-    if "#" in s:
-        a.append(s)
+    if "
+    a.append(s)
 
 d = [i for i in range(W)]
 
 for i in range(W):
     f = 0
     for j in a:
-        if j[i] == "#":
-            f = 1
-            break
+        if j[i] == "
+        f = 1
+        break
     if f == 0:
         d.remove(i)
 

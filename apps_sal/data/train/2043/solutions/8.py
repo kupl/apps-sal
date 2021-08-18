@@ -16,6 +16,3 @@ for m, (l, r) in enumerate(t, 1):
 
 for l, r in t:
     print(l, r)
-
-
-# Made By Mostafa_Khaled

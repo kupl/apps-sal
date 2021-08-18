@@ -2,9 +2,6 @@ import sys
 
 sys.setrecursionlimit(100000000)
 
-# def input():
-#     return sys.stdin.readline()[:-1]
-
 
 N, M = map(int, input().split())
 line = [x for x in input()]

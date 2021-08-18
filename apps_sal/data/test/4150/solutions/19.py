@@ -20,7 +20,7 @@ def main():
         while q and used[pos]:
             item, pos = heapq.heappop(q)
         if used[pos]:
-            break  # all done
+            break
 
         teams[pos] = team + 1
         used[pos] = True

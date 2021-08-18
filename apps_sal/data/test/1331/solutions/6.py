@@ -24,6 +24,5 @@ while n > 0:
         s += 1
     a.popleft()
     n -= 1
-    # print(e, c, s, r, result)
 
 print(result)

@@ -21,7 +21,6 @@ class Solution:
             if nums == [0] * len(nums):
                 return ops
 
-            # divide all by 2
             self.divide_by_2(nums)
             ops += 1
         return ops

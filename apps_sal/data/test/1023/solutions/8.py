@@ -19,16 +19,12 @@ ans = 0
 for i in range(k + 1):
     t = a[i]
     j = find_ge(b, t)
-    # print(t, b[j])
     if j is None:
         print(-1)
         raise SystemExit(0)
-    # print('Cancel ', k - i)
     j += k - i
     if j >= len(b):
         print(-1)
         raise SystemExit(0)
-    # print('b[j]', b[j])
-    # print(b[j] + tb)
     ans = max(ans, b[j] + tb)
 print(ans)

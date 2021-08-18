@@ -1,6 +1,5 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        # https://blog.csdn.net/fuxuemingzhu/article/details/83716573
         self.ans = dict()
         self.ans[0] = 10
         board = [[1] * 3 for _ in range(4)]

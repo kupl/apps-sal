@@ -9,7 +9,6 @@ class Solution:
         for j in range(1, N):
             for i in range(j):
                 if A[j] - A[i] in D and D[A[j] - A[i]] < i:
-                    #print(i, j)
                     dp[i][j] = dp[D[A[j] - A[i]]][i] + 1
 
         res = max(map(max, dp))

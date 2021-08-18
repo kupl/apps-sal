@@ -1,4 +1,3 @@
-# cook your dish here
 
 def sort_array(array):
     array.sort()

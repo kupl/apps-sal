@@ -8,5 +8,3 @@ class Dog ():
 
 snoopy = Dog("Beagle")
 scoobydoo = Dog("Great Dane")
-
-# snoopy.bark = lambda: "Woof"  :P

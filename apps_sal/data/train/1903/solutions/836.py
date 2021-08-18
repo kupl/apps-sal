@@ -38,8 +38,6 @@ class DSU:
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
-        # Standard minimum spanning tree
-
         n = len(points)
         edges = []
 
@@ -62,5 +60,4 @@ class Solution:
             if (not graph.add_edge(u, v)):
                 cost += wt
 
-        # print(edges)
         return cost

@@ -5,7 +5,6 @@ for _ in range(int(input())):
     ind = {}
     for i in range(n):
         ind[l[i]] = i
-    # dup=l[:]
     dup = sorted(l)
     for i in range(n):
         chote = i

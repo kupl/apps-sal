@@ -1,5 +1,3 @@
-#!/usr/local/bin/python3
-# https://atcoder.jp/contests/abc121/tasks/abc121_b
 
 N, M, C = list(map(int, input().split()))
 B = list(map(int, input().split()))

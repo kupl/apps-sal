@@ -55,9 +55,7 @@ def solve1(n, u, v):
     while len(AllVerts) > 0:
         vert = AllVerts.pop()
         for v1 in nexts[vert]:
-            #print(cutFlag[vert], cutFlag[v1]);
             cutFlag[vert] = cutFlag[v1] == cutFlag[vert]
-            # print(cutFlag[vert])
         if cutFlag[vert]:
             result += 1
     return result

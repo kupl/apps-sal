@@ -4,10 +4,6 @@ for i in range(n):
     short_ips.append(input())
 
 
-# leading zeros can be deleted, but has to have one number remained
-# Continuous sequences of 16-bit zero blocks can be shortened to "::"
-
-
 answers = [[] for x in range(n)]
 ans_id = -1
 for ip in short_ips:

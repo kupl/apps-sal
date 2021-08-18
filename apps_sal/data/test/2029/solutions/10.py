@@ -1,5 +1,3 @@
-# list(map(int, input().split()))
-# map(int, input().split())
 
 n, s = map(int, input().split())
 g = [[] for i in range(n)]

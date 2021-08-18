@@ -7,7 +7,6 @@ for i in range(len(a)):
     pos[a[i]] = i + 1
     arr[i + 1] = a[i]
 l = 0
-#print(pos, arr)
 for i in b:
     if pos[i] % k:
         l += pos[i] // k + 1

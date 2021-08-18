@@ -9,7 +9,6 @@ def main():
     N, S = map(int, input().split())
     A = list(map(int, input().split()))
 
-    # 多項式
     polynomial = np.zeros(S + 1, int)
     ans = 0
     for i in A:

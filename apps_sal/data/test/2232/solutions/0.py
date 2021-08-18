@@ -9,11 +9,6 @@ for _ in range(n - 1):
     edges[i].append(j)
     edges[j].append(i)
 
-# Prunes the graph starting from the vertices with
-# only 1 edge until we reach a vertex with 3+ edges.
-# Stores the distance from each non-pruned vertex
-# to each of the leaves it reaches.
-
 
 def prune():
     pruned = [False for _ in range(n)]
@@ -36,9 +31,6 @@ def prune():
 
 pruned, leaves = prune()
 
-# Returns the furthest non-pruned vertices
-# from another non-pruned vertex.
-
 
 def furthest(i):
     assert not pruned[i]
@@ -59,16 +51,10 @@ def furthest(i):
                 todo.append((d + 1, j))
     return top_distance, top_vertices
 
-# Single center topology.
-# Only 1 vertex with 3+ edges.
-
 
 def solve_single_center(i):
     l = list(reversed(sorted(leaves[i])))[:4]
     return list(l[j][1] for j in range(4))
-
-# Scores non-pruned vertices according to the sum
-# of the distances to their two furthest leaves.
 
 
 def vertices_score(v):
@@ -80,16 +66,10 @@ def vertices_score(v):
         scores.append(score)
     return list(reversed(sorted(scores)))
 
-# Single cluster topology.
-# 1 cluster of vertices, all equally far away from each other.
-
 
 def solve_single_cluster(v):
     scores = vertices_score(v)[:2]
     return scores[0][1], scores[1][1], scores[0][2], scores[1][2]
-
-# Double cluster topology.
-# 2 clusters of vertices, pairwise equally far away from each other.
 
 
 def solve_double_cluster(v1, v2):

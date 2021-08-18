@@ -1,8 +1,4 @@
 def resolve():
-    # n=int(input())
-    # a,b=map(int,input().split())
-    # x=list(map(int,input().split()))
-    #a=[list(map(lambda x:int(x)%2,input().split())) for _ in range(h)]
     a, b, x, y = map(int, input().split())
     if b >= a:
         print((b - a) * min(2 * x, y) + x)

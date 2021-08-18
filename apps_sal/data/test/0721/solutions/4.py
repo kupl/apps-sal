@@ -8,7 +8,6 @@ def __starting_point():
     m = int(sys.stdin.readline().rstrip())
 
     if m <= n:
-        # enough hooks
         print(sum(a_arr[:m]))
     else:
         print(sum(a_arr) - (m - n) * d)

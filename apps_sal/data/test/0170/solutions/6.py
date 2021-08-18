@@ -21,7 +21,6 @@ def main():
     number_of_fights = 0
 
     while first_cards and second_cards:
-        # code = get_code(first_cards, second_cards)
         code = (tuple(first_cards), tuple(second_cards))
         if code in existing_states:
             print(-1)

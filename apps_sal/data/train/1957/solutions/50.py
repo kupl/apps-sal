@@ -19,9 +19,6 @@ class Solution:
                     R = r + x
                     C = c + y
 
-                    # if (R, C, k) in seen:
-                    #     continue
-
                     if R >= 0 and R < m and C >= 0 and C < n:
                         if k > 0 and grid[R][C] == 1 and (R, C, k - 1) not in seen:
                             q.append((R, C, k - 1))

@@ -10,4 +10,4 @@ a = 0
 for i in range(t):
     if (q[i] >= int(s[2])):
         a += 1
-print(a)  # kitten
+print(a)

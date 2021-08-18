@@ -9,7 +9,6 @@ for _ in range(T):
     mic = [2000] * 26
 
     X = [[-1 if a == "." else ord(a) - 97 for a in input()] for i in range(N)]
-    # print(X)
     ma = -1
     for i in range(N):
         for j in range(M):

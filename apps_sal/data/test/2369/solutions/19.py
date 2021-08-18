@@ -25,7 +25,6 @@ for i in range(n):
     a = A[i]
     mi = i
     ma = n - 1 - i
-    ## +miCk-1*a - maCk-1
     ans_sum += cmb(mi, k - 1, mod) * a
     ans_sum -= cmb(ma, k - 1, mod) * a
     ans_sum %= mod

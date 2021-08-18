@@ -20,11 +20,8 @@ class Solution:
 
         def backtrack(index, rating, candidates, candidate_count, direction):
             if isSolution(candidate_count):
-                # self.lst.append(list(candidates))
                 self.count += 1
                 return
-             # -1 means decreasing order
-            # for direction in directions:
             for i in range(index, len(rating)):
                 if isViable(rating, i, candidates, direction):
                     candidates.append(rating[i])
@@ -34,5 +31,4 @@ class Solution:
         directions = [1, -1]
         for direction in directions:
             backtrack(0, rating, [], 0, direction)
-        # return len(self.lst)
         return self.count

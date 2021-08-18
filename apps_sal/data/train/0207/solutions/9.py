@@ -30,7 +30,6 @@ class Solution:
             return K
 
         def compare(n1, n2):
-            #print(n1, n2, ":")
             l1 = len(n1)
             l2 = len(n2)
             i = 0
@@ -39,17 +38,12 @@ class Solution:
                 n1 = n1 + n2
                 n2 = n2 + tmp
                 l1 = l1 + l2
-            #print(n1, n2)
             while i < max(l1, l2):
-                #print(i, n1[i], n2[i])
                 if n1[i] < n2[i]:
-                    #print(n1, "<", n2)
                     return -1
                 elif n1[i] > n2[i]:
-                    #print(n1, ">", n2)
                     return 1
                 i += 1
-            #print(n1, "=", n2)
             return 0
 
         def convert(num):

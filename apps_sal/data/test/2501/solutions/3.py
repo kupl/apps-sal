@@ -6,8 +6,6 @@ from heapq import heappop, heappush, heapify
 import math
 from copy import deepcopy
 import queue
-#import numpy as np
-# sympy as syp(素因数分解とか)
 Mod = 1000000007
 fact = [1, 1]
 factinv = [1, 1]
@@ -83,7 +81,7 @@ def pow_k(x, n):
     return K * x
 
 
-def main():  # startline-------------------------------------------
+def main():
     n = int(input())
     a = list(map(int, input().split()))
     d = defaultdict(int)
@@ -97,7 +95,7 @@ def main():  # startline-------------------------------------------
 
 
 def __starting_point():
-    main()  # endline===============================================
+    main()
 
 
 __starting_point()

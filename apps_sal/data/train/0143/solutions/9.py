@@ -9,15 +9,12 @@ class Solution:
         uniq = set()
         while p2 < len(tree):
             if len(uniq) > 2:
-                # remove here
                 mmap[tree[p1]] -= 1
                 if mmap[tree[p1]] == 0:
                     uniq.remove(tree[p1])
 
                 p1 += 1
-                #print(mmap, uniq, p1, p2)
             else:
-                # add here
                 if tree[p2] in mmap:
                     mmap[tree[p2]] += 1
                 else:

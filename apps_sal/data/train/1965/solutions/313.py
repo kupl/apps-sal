@@ -44,7 +44,6 @@ class Solution:
                 continue
             dsu1.union(x, y)
             counter1 += 1
-        # print(dsu1.dsu)
         dsu2 = deepcopy(dsu)
         counter2 = 0
         for x, y in bob:
@@ -52,7 +51,6 @@ class Solution:
                 continue
             dsu2.union(x, y)
             counter2 += 1
-        # print(dsu2.dsu)
         if counter1 + counter3 != n - 1 or counter2 + counter3 != n - 1:
             return -1
         else:

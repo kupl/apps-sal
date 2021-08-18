@@ -1,4 +1,3 @@
-# cook your dish here
 '''z=int(input())
 for i in range(z):
 	n=int(input())

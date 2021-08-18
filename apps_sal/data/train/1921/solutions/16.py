@@ -12,7 +12,6 @@ class DinnerPlates:
             self.RMNE = len(self.stacks)
             if(self.capacity > 1):
                 self.LMNF = len(self.stacks) - 1
-            #if(self.LMNF < 0):self.LMNF = len(self.stacks)
         else:
             if(len(self.stacks[self.LMNF]) == self.capacity):
                 self.LMNF += 1
@@ -48,10 +47,3 @@ class DinnerPlates:
         if(self.LMNF > index or self.LMNF < 0):
             self.LMNF = index
         return val
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

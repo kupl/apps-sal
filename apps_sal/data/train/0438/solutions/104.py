@@ -4,7 +4,6 @@ class Solution:
             return m
 
         counts = [0] * (len(arr) + 2)
-        # m_nums = 0
         ans = -1
 
         for index, i in enumerate(arr):
@@ -17,13 +16,5 @@ class Solution:
 
             if left == m or right == m:
                 ans = index
-            # if left==m:
-            #     m_nums-=1
-            # if right == m:
-            #     m_nums-=1
-            # if total == m:
-            #     m_nums+=1
-            # if m_nums >0:
-            #     ans = index+1
 
         return ans

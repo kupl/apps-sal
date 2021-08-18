@@ -15,7 +15,7 @@ class Solution:
         k = abs(k)
 
         dic = {0: -1}
-        rem = 0   # remainder
+        rem = 0
         i = 0
         while i < len(nums):
             rem = (rem + nums[i]) % k

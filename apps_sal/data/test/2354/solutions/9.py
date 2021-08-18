@@ -1,4 +1,3 @@
-#
 from sys import stdin, stdout
 from math import ceil, floor
 n, q = map(int, input().split())

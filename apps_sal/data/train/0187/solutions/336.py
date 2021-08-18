@@ -10,7 +10,6 @@ class Solution:
             i += 1
             boarded = min(waiting, 4)
             cur_profit += boarded * boardingCost - runningCost
-            #print(waiting, boarded, cur_profit, max_profit)
             if cur_profit > max_profit:
                 res = i
                 max_profit = cur_profit

@@ -15,8 +15,6 @@ for i in range(k):
 safe = sorted(list([int(qi) - 1 for qi in input().split()]))
 
 
-# print(safe)
-
 def dist(lower, upper, row):
     posr = bisect_left(safe, lower)
     options = []

@@ -8,7 +8,6 @@ def convert_string(string_list, len_string_list):
     for i in range(len_string_list):
         if string_list[i] in change_dict:
             string_list[i] = change_dict[string_list[i]]
-    # print(string_list)
 
 
 def form_frequency_dict(given_list):
@@ -36,12 +35,10 @@ def find_max_repititions(required_string_freq_dict, given_string_freq_dict):
 inputlist = sys.stdin.readlines()
 required_string = list(inputlist[0].strip())
 given_string = list(inputlist[1].strip())
-# print(required_string,given_string)
 len_required_string = len(required_string)
 len_given_string = len(given_string)
 convert_string(required_string, len_required_string)
 convert_string(given_string, len_given_string)
-# print(required_string,given_string)
 required_string_freq_dict = form_frequency_dict(required_string)
 given_string_freq_dict = form_frequency_dict(given_string)
 max_repititions = find_max_repititions(required_string_freq_dict, given_string_freq_dict)

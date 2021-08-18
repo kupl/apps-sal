@@ -10,7 +10,7 @@ class Solution:
             return 1
         N = len(nums)
         sol = [0 for _ in nums]
-        sol[0] = [1, 1]  # starting with -, starting with +
+        sol[0] = [1, 1]
         for i in range(1, N):
             new = [0, 0]
             if nums[i] > nums[i - 1]:

@@ -1,5 +1,3 @@
-# cook your dish here
-# code by RAJ BHAVSAR
 
 def getdiv(m):
     i = 1

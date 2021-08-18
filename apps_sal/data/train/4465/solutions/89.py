@@ -1,5 +1,4 @@
 def super_size(n):
-    # your code here
     a = []
     b = len(str(n))
     for i in range(b):

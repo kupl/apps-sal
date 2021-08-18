@@ -25,6 +25,3 @@ while hi - lo > 1:
         hi = mi
 
 print(lo + 1)
-
-# ~ for i in range(-1, len(r)+1):
-#~ print(is_subsequence(a, b, idx, i))

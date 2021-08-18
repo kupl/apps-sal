@@ -7,7 +7,6 @@ class Solution:
 
             nonlocal res
             if pos == len(s):
-                # print(path)
                 res = max(res, len(set(path)))
 
             for i in range(pos + 1, len(s) + 1):

@@ -1,4 +1,3 @@
-# cook your dish here
 a = []
 for x in range(0, 12):
     a.append(2**x)

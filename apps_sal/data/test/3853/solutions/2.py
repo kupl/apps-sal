@@ -1,9 +1,8 @@
-# Solution to CodeForces 269A Magic Boxes
 from math import ceil, log
 
-max_size = -1  # Largest square, answer
+max_size = -1
 
-for _ in range(int(input().strip())):  # Number of cases
+for _ in range(int(input().strip())):
     size, count = map(int, input().strip().split())
     container = ceil(log(count, 4))
     max_size = max(max_size, size + max(container, 1))

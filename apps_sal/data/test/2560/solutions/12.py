@@ -1,10 +1,8 @@
-# https://codeforces.com/problemset/problem/397/B
 import sys
 sys.setrecursionlimit(1500)
 
 inst_num = int(input())
 
-# reading data
 n = 0
 l = 0
 r = 0

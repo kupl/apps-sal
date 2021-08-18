@@ -1,7 +1,7 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        self.groups_start = {}  # start pos: length
-        self.groups_end = {}  # end pos: start pos
+        self.groups_start = {}
+        self.groups_end = {}
 
         last_pos = -1
         m_start_pos = set()
@@ -10,7 +10,6 @@ class Solution:
             start_pos = i
             if i + 1 <= n:
                 if i + 1 in self.groups_start:
-                    # merge
                     length = self.groups_start[i + 1]
                     del self.groups_start[i + 1]
                     self.groups_start[i] = length + 1
@@ -25,7 +24,6 @@ class Solution:
                 self.groups_end[i] = i
             if i - 1 >= 1:
                 if i - 1 in self.groups_end:
-                    # merge
                     start_pos = self.groups_end[i - 1]
                     if start_pos in m_start_pos:
                         m_start_pos.remove(start_pos)

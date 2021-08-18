@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from collections import Counter
 from math import sqrt
 m = 2750131 + 100

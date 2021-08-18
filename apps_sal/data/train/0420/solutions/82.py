@@ -2,7 +2,6 @@ class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
         res = 0
 
-        # cur encodes occurence (odd/even) of 'aeiou'
         cur = 0
         seen = {0: -1}
         for i, char in enumerate(s):

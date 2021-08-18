@@ -27,8 +27,6 @@ class Solution:
             if not pos in mem[s]:
                 mem[s][pos] = total
 
-            #print(s, pos, total)
-
             return total
 
         ans = dfs(steps, arrLen, 0)

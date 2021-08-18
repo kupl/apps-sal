@@ -29,14 +29,6 @@ b = ri()
 k = dd(int)
 
 
-# for i in range(n):
-# 	if a[i]!=0:
-# 		temp=(b[i]*pow(a[i],mod-2,mod))%mod
-# 		k[temp]+=1
-# 	if a[i]==0 and b[i]==0:
-# 		k[0]+=1
-
-
 k[0, 0, 0] = 0
 for i in range(n):
     ok = gcd(a[i], b[i])

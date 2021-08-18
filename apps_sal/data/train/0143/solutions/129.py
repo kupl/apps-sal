@@ -22,6 +22,4 @@ class Solution:
                 hMap.pop(r, None)
                 count = i - j
 
-            # print(tree[i], hMap, count, maxCount)
-
         return maxCount

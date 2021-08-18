@@ -9,10 +9,6 @@ for i in range(100):
 
 
 x, y, t = list(map(int, input().split()))
-# print (pts[0])
-# print (pts[1])
-# print (pts[2])
-# print (pts[3])
 _max = 0
 for i in range(len(pts)):
     for j in range(len(pts)):

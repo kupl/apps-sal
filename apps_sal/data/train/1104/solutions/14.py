@@ -15,7 +15,6 @@ for _ in range(t):
     up = k // 2
     l = up + n - 1
     nz = l**2 + l
-    # print(nz)
     if rem == 0:
         ans = nz + n
         print(ans % mod)

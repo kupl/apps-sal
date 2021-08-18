@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import math
 
@@ -38,15 +37,14 @@ def abc163e(n, a):
 
             for left in range(num + 1):
                 right = num - left
-                if left == num:  # left end
+                if left == num:
                     dp[left][right] = dp[left - 1][right] + hap * abs(tgt - left + 1)
-                elif left == 0:  # right end
+                elif left == 0:
                     dp[left][right] = dp[left][right - 1] + hap * abs(n - right - tgt)
                 else:
                     left_dp = dp[left - 1][right] + hap * abs(tgt - left + 1)
                     right_dp = dp[left][right - 1] + hap * abs(n - right - tgt)
                     dp[left][right] = max(left_dp, right_dp)
-                # print("[",str(left),"][",str(right),"]=",str(dp[left][right]))
 
     ans_list = []
     for i in range(num + 1):
@@ -54,17 +52,10 @@ def abc163e(n, a):
     return max(ans_list)
 
 
-###
-# main
 if(__name__ == '__main__'):
-    # input
     n = int(input())
     a = list(map(int, input().split(" ")))
 
     ans = abc163e(n, a)
 
-    # output
     print(ans)
-
-# else:
-    # do nothing

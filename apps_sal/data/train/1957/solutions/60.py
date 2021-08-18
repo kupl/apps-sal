@@ -1,7 +1,6 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         n, m = len(grid), len(grid[0])
-        # cost, used, i, j
         bfs = collections.deque([(0, 0, 0, 0)])
         seen = set([(0, 0, 0)])
         while bfs:

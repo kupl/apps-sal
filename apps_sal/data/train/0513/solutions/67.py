@@ -1,6 +1,6 @@
 from bisect import bisect_right, bisect_left
 import sys
-sys.setrecursionlimit(10101000)  # ?
+sys.setrecursionlimit(10101000)
 n = int(input())
 *a, = list(map(int, input().split()))
 t = [[] for _ in range(n)]
@@ -19,7 +19,7 @@ ans = [-1] * n
 
 
 def dfs(v):
-    l = bisect_left(lis, a[v])  # ?
+    l = bisect_left(lis, a[v])
     his[v] = (l, lis[l])
     lis[l] = a[v]
     ans[v] = bisect_left(lis, INF)

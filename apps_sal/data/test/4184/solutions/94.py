@@ -1,4 +1,3 @@
-# ABC129 B
 
 N = int(input())
 W = list(map(int, input().split()))

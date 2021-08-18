@@ -33,9 +33,3 @@ class ThroneInheritance:
                 stack.append(member.children[i])
 
         return order
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

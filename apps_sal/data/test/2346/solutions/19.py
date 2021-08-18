@@ -3,16 +3,11 @@ from functools import reduce
 from collections import Counter
 import sys
 sys.setrecursionlimit(2000)
-# sys.stdin.readline()
 
 
 def __starting_point():
 
-    # single variables
     n = [int(val) for val in sys.stdin.readline().split()][0]
-
-    # On each step you select such a non-root vertex that it does not
-    # respect its parent and none of its children respects it
 
     tree = {i + 1: [[], []] for i in range(n)}
     for i in range(n):

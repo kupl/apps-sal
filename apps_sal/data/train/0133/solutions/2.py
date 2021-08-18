@@ -1,6 +1,5 @@
 class Solution:
     def balancedString(self, s: str) -> int:
-        # minimum window so that outside is possible
         if len(s) // 4 != len(s) / 4:
             return -1
         ans, p1, p2, n_cnt = len(s), 0, 0, collections.Counter(s)

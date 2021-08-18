@@ -11,6 +11,5 @@ for _ in range(T):
         s3 = l[j:]
         new = list(py.array(s2) * k)
         l = s1 + new + s3
-        # print(l)
 s = sum(l) // N
 print(s)

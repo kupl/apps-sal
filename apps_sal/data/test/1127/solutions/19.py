@@ -3,7 +3,6 @@ for _ in range(int(input())):
     digits = [int(c) for c in input()]
     ans = None
     if n & 1:
-        # if n is odd
         for i in range(0, n, 2):
             if digits[i] & 1:
                 ans = True

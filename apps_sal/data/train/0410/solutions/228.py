@@ -25,5 +25,4 @@ class Solution:
                 powers[i] = getPower(i + lo)
 
         idxs = sorted(range(len(powers)), key=lambda x: powers[x])
-        # print(powers, idxs)
         return lo + idxs[k - 1]

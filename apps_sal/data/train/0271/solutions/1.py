@@ -16,7 +16,6 @@ class Solution:
                         flag = True
                         break
                 if flag == False:
-                    # print(i, num)
                     return False
             maxReachable = max(maxReachable, i + num)
         return True

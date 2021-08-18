@@ -1,4 +1,3 @@
-# 素数関連
 from collections import deque
 
 

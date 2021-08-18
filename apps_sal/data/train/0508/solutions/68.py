@@ -11,15 +11,14 @@ d = [int(input())for i in range(q)]
 R = [-1] * q
 ans = [-1] * q
 for s, t, x in stop:
-    # lからrにある区間のansをxに更新したい
     l = bisect_left(d, s - x)
     r = bisect_left(d, t - x)
     while l < r:
-        if R[l] == -1:  # 最左がまだ確定していない場合
+        if R[l] == -1:
             ans[l] = x
             R[l] = r
             l += 1
         else:
-            l = R[l]  # 確定しているところを飛ばす
+            l = R[l]
 for x in ans:
     print(x)

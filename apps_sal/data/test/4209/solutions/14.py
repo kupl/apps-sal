@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/21 12:10
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : F2. Same Sum Blocks (Hard).py
 
 from collections import defaultdict
 

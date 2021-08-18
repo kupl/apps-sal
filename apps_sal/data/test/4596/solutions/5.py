@@ -1,7 +1,6 @@
 num = int(input())
 nu_list = [int(v) for v in input().split()]
 count = 0
-# print(nu_list)
 bool = True
 while bool == True:
     for i in range(len(nu_list)):

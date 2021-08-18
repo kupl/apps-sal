@@ -13,18 +13,12 @@ def main():
     s = input()
     n = len(s)
     s += "".join(chr(i + 97) for i in range(26))
-    # print(s)
-    # 次をその文字にした時の「長さ、位置」
     size = [0] * 26
     pos = [n + i for i in range(26)]
-    # 解答復元のための移動先
     nxt = [-1] * n
-    # 後ろの文字から順に見る
     for i in range(n - 1, -1, -1):
         min_size = inf
         min_pos = -1
-        # 次をどの文字にすれば短くなるか調べる
-        # 同じ長さの時は辞書順優先
         for sz, p in zip(size, pos):
             if sz < min_size:
                 min_size = sz
@@ -33,11 +27,6 @@ def main():
         size[code] = min_size + 1
         pos[code] = i
         nxt[i] = min_pos
-        # print(size)
-        # print(pos)
-        # print(nxt)
-        # print()
-    # 最短になる最初の文字を調べて、nxtの順にたどる
     min_size = inf
     min_pos = -1
     for sz, p in zip(size, pos):

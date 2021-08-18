@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 
 def solve(s, c):
     if(len(s) == 1):

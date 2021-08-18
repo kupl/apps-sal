@@ -8,7 +8,6 @@ class Solution:
 
         @lru_cache(None)
         def dp(i, j):
-            # How many ways to place P_i with relative rank j?
             if not(0 <= j <= i):
                 return 0
             if i == 0:

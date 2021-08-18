@@ -18,19 +18,3 @@ class Solution:
             res = max(res, max(mi))
 
         return res
-
-#         h = dict()
-
-#         res = 2
-
-#         for i, ai in enumerate(A):
-#             for j in range(i):
-#                 diff = A[j] - ai
-#                 aux = (j, diff)
-#                 if aux in h:
-#                     h[(i, diff)] = h[aux] + 1
-#                     # res = max(res, h[(i, diff)])
-#                 else:
-#                     h[(i, diff)] = 2
-
-#         return max(h.values())

@@ -4,7 +4,6 @@ while True:
         matrix = []
         for row in range(n):
             matrix.append(list(map(int, input().strip().split())))
-        # for row in matrix: print row
 
         queries = int(input())
         for q in range(queries):

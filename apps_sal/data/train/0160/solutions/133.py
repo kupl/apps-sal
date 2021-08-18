@@ -3,7 +3,6 @@ class Solution:
         n = len(piles)
         dp = [[0] * n for _ in range(n)]
 
-        # Init
         for i in range(n):
             dp[i][i] = piles[i]
 

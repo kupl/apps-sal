@@ -1,7 +1,7 @@
 import bisect
 
 
-def find(x):  # 要素がどの集合か判断
+def find(x):
     if par[x] < 0:
         return x
     else:
@@ -9,7 +9,7 @@ def find(x):  # 要素がどの集合か判断
         return par[x]
 
 
-def unite(x, y):  # 集合に結合
+def unite(x, y):
     x = find(x)
     y = find(y)
     if x == y:

@@ -22,7 +22,6 @@ def __starting_point():
     last = [0, 0]
     for i in range(n):
         x = iparse()
-        # print(len(x))
         l = (last[0] + x[0] - 1) // x[0]
         r = (last[1] + x[1] - 1) // x[1]
         m = max(l, r)

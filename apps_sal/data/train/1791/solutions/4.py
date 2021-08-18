@@ -16,16 +16,16 @@ def escape(maze):
     x, y = row, maze[row].index(sym)
     xend = (0, X)
     yend = (0, Y)
-    q = [(0, sym, (x, y), [])]    # (isEnd,symbol,pos,steps)
+    q = [(0, sym, (x, y), [])]
 
     while q and not q[0][0]:
         _, sym, (x, y), S = heappop(q)
         for dx, dy in MOVES:
             pos = a, b = x + dx, y + dy
-            if 0 <= a <= X and 0 <= b <= Y and maze[a][b] != '#':
-                maze[a][b] = '#'
-                steps = S.copy()
-                for i in direc:
+            if 0 <= a <= X and 0 <= b <= Y and maze[a][b] != '
+             maze[a][b] = '
+              steps = S.copy()
+               for i in direc:
                     if sym + MOVES[(dx, dy)] in i:
                         steps.append(direc[i])
                         break

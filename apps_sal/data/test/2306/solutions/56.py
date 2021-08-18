@@ -1,13 +1,13 @@
 import sys
 def I(): return int(sys.stdin.readline().rstrip())
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))  # 空白あり
+def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 
 
 N = I()
 t = LI()
 v = LI()
 
-max_v = [0] * (N + 1)  # 0秒後,t1秒後,t1+t2秒後,…の時点で出せる最大速度
+max_v = [0] * (N + 1)
 for i in range(N - 1):
     max_v[i + 1] = min(v[i], v[i + 1], max_v[i] + t[i])
 for i in range(N - 2, -1, -1):

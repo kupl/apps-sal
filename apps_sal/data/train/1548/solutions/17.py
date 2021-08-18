@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for t1 in range(0, t):
     n = int(input())
@@ -25,8 +24,6 @@ for t1 in range(0, t):
                 right.append((right[-1][0], right[-1][1] + 1))
     ans = []
     right = right[::-1]
-    # print(left)
-    # print(right)
     for i in range(0, n):
         ans.append(min(left[i][0] + left[i][1], right[i][0] + right[i][1]))
     print(*ans)

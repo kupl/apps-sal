@@ -3,9 +3,7 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 while t:
-    # n=int(input())
     n, x, y = list(map(int, input().split()))
-    # l=list(map(int,input().split()))
     dif = y - x
     for i in range(n - 1, -1, -1):
         if(dif % i == 0):

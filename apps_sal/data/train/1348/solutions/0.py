@@ -1,6 +1,5 @@
 from collections import defaultdict
 import copy
-# def dfs(l,r,dct):
 
 
 def dfs(l, r, dct):
@@ -51,7 +50,6 @@ for _ in range(int(input())):
     if not dfs(l, r, dct):
         print(-1)
         continue
-    # print(cost)
     lo = 1
     hi = 101
     for i in range(100):

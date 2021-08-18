@@ -3,7 +3,6 @@ class Solution:
         flip_time = 0
         n = len(A)
         close = [False for i in range(n)]
-        # print(close)
         res = 0
         for i in range(n):
             if close[i]:

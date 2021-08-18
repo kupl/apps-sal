@@ -1,8 +1,5 @@
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
-        # cut.append(0)
-        # cuts.append(n)
-        # cuts.sort()
         return self.dfs(cuts, 0, n, dict())
 
     def dfs(self, cuts, i, j, memo):

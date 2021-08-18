@@ -23,7 +23,6 @@ def solve():
         ridx = bisect.bisect_right(hl, x)
         much = shl[-1] - shl[ridx] - x * (n - ridx)
         less = x * lidx - shl[lidx]
-        # print(x, lidx, ridx, much, less)
         res = min(m, a + r) * min(much, less)
         if much > less:
             res += r * (much - less)
@@ -31,12 +30,10 @@ def solve():
             res += a * (less - much)
         return res
 
-    # print([cost(i) for i in range(10)])
     lo, hi = min(hl) - 1, max(hl) + 1
     while hi - lo > 3:
         mlo = (hi + lo * 2) // 3
         mhi = (hi * 2 + lo) // 3
-        # print(mlo, cost(mlo))
         if cost(mlo) < cost(mhi):
             hi = mhi
         else:
@@ -46,7 +43,3 @@ def solve():
 
 
 solve()
-
-# T = ni()
-# for _ in range(T):
-#     solve()

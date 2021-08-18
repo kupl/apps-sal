@@ -9,5 +9,4 @@ class Solution:
                 current[x] = count + 1
             elif x not in current:
                 current[x] = 1
-            #print(f'{x, current}')
         return max([x for x in list(current.values())])

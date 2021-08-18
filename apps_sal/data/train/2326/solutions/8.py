@@ -13,14 +13,12 @@ def SI(): return sys.stdin.readline()[:-1]
 def main():
     n = II()
     aa = LI()
-    # できる数列にインデックスがかかれるときの最大値の底(bottom)
     bot = []
     mx = 0
     for i, a in enumerate(aa):
         if a > mx:
             bot.append((mx, i))
             mx = a
-    # print(bot)
     aa.sort()
     ans = [0] * n
     j = n
@@ -31,7 +29,6 @@ def main():
             j -= 1
             s += aa[j]
         ans[i] = s - (n - j) * mx - fin
-        # print(mx,i,j,s,fin,ans)
         fin += ans[i]
     print(*ans, sep="\n")
 

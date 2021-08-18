@@ -3,7 +3,6 @@ a = []
 for i in range(n):
     a.append(int(input()))
 a = sorted(a)
-# print(a)
 if n == 0:
     print('YES')
     print(1)

@@ -16,7 +16,6 @@ class Solution:
             return '0'
 
         def path(rem, now):
-            # print(rem, now)
             if rem <= 0:
                 return now if rem == 0 else ''
             for i, c in enumerate(reversed(cost)):

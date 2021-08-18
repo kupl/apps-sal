@@ -7,9 +7,6 @@
         
 
 
-# Your StreamChecker object will be instantiated and calle as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)'''
 
 
 class Trie:
@@ -49,7 +46,3 @@ class StreamChecker:
         self.stream.appendleft(letter)
         return self.t.search(self.stream)
 
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

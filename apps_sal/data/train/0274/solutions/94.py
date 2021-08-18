@@ -13,7 +13,6 @@ class Solution:
                 mn = nums[j]
             if mx < nums[j]:
                 mx = nums[j]
-            # print(i,j,mn,mx)
             if mx - mn <= limit:
                 if j - i + 1 > l:
                     l = j - i + 1

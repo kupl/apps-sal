@@ -1,4 +1,3 @@
-# precalculate results
 results = {}
 n, digits = 1, 0
 while digits <= 1000:

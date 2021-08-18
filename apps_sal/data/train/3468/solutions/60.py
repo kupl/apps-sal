@@ -18,4 +18,3 @@ def scramble(s1, s2):
         else:
             return False
     return True
-    # your code here

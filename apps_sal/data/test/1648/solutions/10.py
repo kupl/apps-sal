@@ -2,21 +2,13 @@ def readinput():
     n, k = list(map(int, input().split()))
     return n, k
 
-# 法Pの下での組み合わせ数 nCk を求める
-# MAX: nの最大値
 
-
-MAX = 2000 + 5  # (X+Y)/3より大きい整数 1 <= X, Y <= 10**6
+MAX = 2000 + 5
 MOD = (10**9) + 7
 
 fac = [1 for x in range(MAX)]
 inv = [1 for x in range(MAX)]
 finv = [1 for x in range(MAX)]
-
-# 拡張ユークリッドアルゴリズム
-# (d, x, y): d=ax+by を満たすd, x, yを求める
-# aとbが互いに素な整数であればgcd(a,b)=d=1, ax=1 (mod b)
-# xは法bの元でaの乗法逆元a^-1になる
 
 
 def exEuclid(a, b):
@@ -29,7 +21,6 @@ def exEuclid(a, b):
 
 def COMinit():
     for i in range(2, MAX):
-        # print(i,fac)
         fac[i] = fac[i - 1] * i % MOD
         (d, x, y) = exEuclid(i, MOD)
         inv[i] = x

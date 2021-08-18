@@ -96,8 +96,6 @@ for _ in range(int(input())):
                             ans.append([i, j])
                             s[i], t[j] = t[j], s[i]
                             break
-            # assert(s[i]==t[i])
-        # assert(len(ans)<=2*n)
         print('Yes')
         print(len(ans))
         for i in ans:

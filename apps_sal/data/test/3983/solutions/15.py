@@ -3,7 +3,6 @@ class UnionFind:
         self.par = [i for i in range(n + 1)]
         self.rank = [0] * (n + 1)
 
-    # search
     def find(self, x):
         if self.par[x] == x:
             return x
@@ -11,7 +10,6 @@ class UnionFind:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
 
-    # unite
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -22,7 +20,6 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
-    # check
     def same_check(self, x, y):
         return self.find(x) == self.find(y)
 
@@ -30,18 +27,15 @@ class UnionFind:
 def solve(t, case_list):
     res_list = []
     for i in range(t):
-        # union-find
         n, m, edge_list = case_list[i]
         uf = UnionFind(n)
         for j in range(m):
             x, y = edge_list[j]
             uf.union(x, y)
-        # query parent
         parent_size = [0] * (n + 1)
         for p in range(n):
             parent = uf.find(p + 1)
             parent_size[parent] += 1
-        # count size
         s1 = parent_size[uf.find(1)]
         sn = parent_size[uf.find(n)]
 

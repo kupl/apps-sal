@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))
     org_ratings = list(map(int, input().split()))
@@ -12,9 +11,7 @@ for _ in range(int(input())):
                 l[i][j] = l[i][j] + org_ratings[i]
             else:
                 l[i][j] = l[i][j] + l[i][j - 1]
-    # print(l)
     ranks = [[-1 for i in range(len(l[0]))] for j in range(len(l))]
-    # print(ranks)
     for i in range(m):
         l2 = []
         for j in range(n):
@@ -31,10 +28,7 @@ for _ in range(int(input())):
                 else:
                     pos = ind + 1
             ranks[l2[ind][1] - 1][i] = pos
-    # print(ranks)
     for i in range(n):
-        # print(ranks[i].index(min(ranks[i])))
-        # print(l[i].index(max(l[i])))
         if l[i].index(max(l[i])) != ranks[i].index(min(ranks[i])):
             count += 1
     print(count)

@@ -6,5 +6,3 @@ def find_multiples(integer, limit):
             lst.append(acc)
             acc += integer
     return lst
-
-    # Your code here!

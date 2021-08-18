@@ -18,20 +18,16 @@ for i in range(1, math.floor((N + 1) / 2) + 1):
     if(i > math.floor(N / 2)):
         mult = 1
     q.put((-maxi, num * mult, i))
-    #print(str(maxi) + " " + str(num) + " " + str(mult))
 
 
 ans = 0
 while(K > 0):
     pop = q.get()
-    # print(pop)
     a = -1 * pop[0]
     b = pop[1]
     c = pop[2]
     d = min(min(c, N - c + 1), min(R, N - R + 1))
     if(d != a):
-       # if(q.)
-       # if(q.get(-(a - d)) != )
         mult = 2
         if (c > N / 2):
             mult = 1
@@ -40,8 +36,6 @@ while(K > 0):
     K -= b
 
 tot = (N - R + 1) * (M - R + 1)
-#print("ANS = " + str(ans))
-#print("FINANS = " + str(ans/tot))
 print(str(ans / tot))
 
 

@@ -2,16 +2,14 @@ from scipy.sparse import csgraph
 from scipy.sparse import csr_matrix
 n, m, l = list(map(int, input().split()))
 
-# 基本的にワーシャルフロイドの場合、行列式のリストで距離を保管する
 d = [[10**12 for i in range(n + 1)] for i in range(n + 1)]
 for i in range(m):
     x, y, z = list(map(int, input().split()))
-    # 有向グラフか無向グラフかによってここで場合わけが生じる
     d[x][y] = z
     d[y][x] = z
 
 for i in range(n + 1):
-    d[i][i] = 0  # 自身のところに行くコストは０
+    d[i][i] = 0
 q = int(input())
 que = []
 for _ in range(q):

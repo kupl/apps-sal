@@ -18,7 +18,6 @@ def solve(n, a, b):
         reminder = n - a * i
         tail = b - nd
         batch_length = min(a, reminder - tail)
-        # print("i: {}, reminder: {}, tail: {}, batch_length: {}".format(i, reminder, tail, batch_length))
         batch = list(range(n + 1 - a * i - batch_length, n + 1 - a * i))
         surrogate_ans += batch
         if batch_length != a:

@@ -17,8 +17,6 @@ while i >= 0:
     arr.appendleft(((j, i), 1))
     i = j - 1
 
-# print(arr)
-
 
 def gte(x, y):
 
@@ -44,6 +42,5 @@ while len(arr) > 1:
         arr.appendleft(((x[0][0], y[0][1]), x[1] + y[1]))
     else:
         arr.appendleft(((x[0][0], y[0][1]), 1))
-    # print(arr)
 
 print(arr[0][1])

@@ -1,4 +1,3 @@
-# python 3.5.2
 
 n, q = list(map(int, input().split()))
 arr = list(map(int, input().split()))

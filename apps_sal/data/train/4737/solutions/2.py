@@ -6,5 +6,4 @@ def fuel_price(litres, price_per_liter):
     return (litres * price_per_liter) - (litres * discount)
 
 
-# PEP8: function name should use snake_case
 fuelPrice = fuel_price

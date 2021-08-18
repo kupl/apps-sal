@@ -1,8 +1,5 @@
 T = int(input())
 
-# for every prime x
-# (b-a)/ab
-# 1/a-1/b
 
 MAX = 33000
 

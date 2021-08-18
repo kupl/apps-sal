@@ -4,7 +4,7 @@ class Solution(object):
     f = ''
 
     def getNext(self, formular, locked=False):
-        stype = 0  # 0:null, 1:numeric, 2/20: Elem, 3: parenthesis
+        stype = 0
         ret = 0
         if self.loc == self.lastloc:
             return (0, 0)

@@ -3,11 +3,9 @@ def parse_terms(string):
     for i in string:
         if i == "+" and len(add) != 0:
             poly.append(add)
-            # poly.append("+")
             add = ""
         elif i == "-" and len(add) != 0:
             poly.append(add)
-            # poly.append("+")
             add = "-"
         else:
             add = add + i

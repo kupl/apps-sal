@@ -7,10 +7,8 @@ class Solution:
             k = nums[i]
             k = bin(k)
             ans += k.count('1')
-           # print(k)
             big = max(big, 0, len(k) - 3)
 
-      #  print(ans, big)
         ans += big
 
         return ans

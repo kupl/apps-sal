@@ -1,5 +1,4 @@
 def hoop_count(n):
-    # Good Luck!
     r = "Great, now move on to tricks"
     if n < 10:
         r = "Keep at it until you get it"

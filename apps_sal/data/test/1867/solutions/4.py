@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 counter = dict()
 max_num = (0, 0)
 

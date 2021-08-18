@@ -16,13 +16,10 @@ ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
 
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-# def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def I(): return int(sys.stdin.readline())
 def F(): return float(sys.stdin.readline())
 def LS(): return sys.stdin.readline().split()
 def S(): return input()
-
-# Union-Find -- START --
 
 
 class UnionFind():
@@ -58,7 +55,6 @@ class UnionFind():
 
     def get_amount(self, k):
         return self.amount[k]
-# Union-Find --- END ---
 
 
 def main():
@@ -83,5 +79,4 @@ def main():
     return ans
 
 
-# main()
 print((main()))

@@ -16,8 +16,8 @@ class Solution:
         results = [[0 for j in range(ncolumns)] for i in range(nrows)]
         results[0] = dishes
         for name, table, dish in orders:
-            i = tables.index(table)  # + 1
-            j = dishes.index(dish)  # + 1
+            i = tables.index(table)
+            j = dishes.index(dish)
             results[i][0] = table
             results[i][j] = results[i][j] + 1
         for i in range(nrows):

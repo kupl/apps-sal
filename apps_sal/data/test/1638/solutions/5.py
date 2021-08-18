@@ -7,7 +7,6 @@ ma = []
 for m in range(n):
     minh = 0
     thisans = 0
-    # increasing
     np = False
     height[m] = a[m]
     for i in range(m - 1, -1, -1):
@@ -20,7 +19,6 @@ for m in range(n):
         if height[i] > a[i]:
             height[i] = a[i]
     thisans = sum(height)
-    # fans = max(fans, thisans)
     if thisans > fans:
         ma = height.copy()
         fans = thisans

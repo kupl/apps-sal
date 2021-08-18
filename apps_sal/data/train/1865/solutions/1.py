@@ -17,14 +17,12 @@ class Solution:
         floor = {player, box, target, *g['.']}
 
         alpha = [(f(box, 1), 1, player, box)]
-        directions, visited = (1, -1, 1j, -1j), set()   # 下上右左
+        directions, visited = (1, -1, 1j, -1j), set()
 
-        # 因为都不是数而是复数。因此采用字典映射的方式定义low dfn
-        low = dict.fromkeys(floor, 0)  # 标准的dict.fromkeys创建字典。keys来源第一个参数第二个参数默认或赋值
+        low = dict.fromkeys(floor, 0)
         dfn = low.copy()
         count = 0
         index = {}
-        # 标准无向图tarjan深度优先扩展函数，参数currIndex为当前拓展点，记录拓展的父节点防止重复拓展
 
         def tarjan(currIndex, parentIndex):
             nonlocal count
@@ -38,22 +36,14 @@ class Solution:
                         tarjan(nextIndex, currIndex)
                     low[currIndex] = min(low[currIndex], low[nextIndex])
 
-        # 运行tarjan函数，初始值为box的坐标，因为坐标都在复平面第一象限，初始父节点取-1不影响计算
         tarjan(box, -1)
-        # print(low)
-        # print(dfn)
-        # 如果箱子在割点上仍可以移动的话，则箱子在移动的过程中，人的坐标也完成了强连通分量的转移，
-        # 所以即便是宽度为1的碎片化的强连通分量隧道，也不影响上述结论。
-        for currIndex in floor:  # 所有的可达点
+        for currIndex in floor:
             connect = [currIndex]
             while dfn[connect[-1]] != low[connect[-1]]:
                 connect.append(index[low[connect[-1]]])
             for w in connect[:-2]:
                 low[w] = low[connect[-1]]
-        # print(low)
 
-        # 计算完强连通分量后可以加一个剪枝，即如果人或目标点没被计算到，则表示三个关键点不在同一个并查集里面，
-        # 可以直接返回-1
         if not low[player] * low[target]:
             return -1
 

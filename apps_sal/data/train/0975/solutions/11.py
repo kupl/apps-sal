@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n, r, x, y = map(int, input().split())
     if x == 1:

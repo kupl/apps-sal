@@ -1,14 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 N = int(input())
 A = list(map(int, input().split()))
-
-
-# In[18]:
 
 
 mod = 10**9 + 7
@@ -19,6 +12,3 @@ for n in range(61):
     ans %= mod
 
 print(ans)
-
-
-# In[ ]:

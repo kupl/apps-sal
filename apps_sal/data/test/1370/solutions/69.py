@@ -25,7 +25,6 @@ def solve(choco, cut_pos, k):
                 blocks[i] = sum(col[s:e])
 
         cuts += need_cut
-    # print('cuts:', cuts)
     return cuts
 
 

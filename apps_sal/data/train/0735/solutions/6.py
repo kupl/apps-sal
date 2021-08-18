@@ -1,4 +1,3 @@
-# your code goes here
 t = int(input())
 while (t > 0):
     n = int(input())

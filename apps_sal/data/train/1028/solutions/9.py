@@ -1,4 +1,3 @@
-# cook your dish her
 for _ in range(int(input())):
     num = int(input())
     s = 0

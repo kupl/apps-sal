@@ -14,7 +14,6 @@ class Solution:
         ans = 0
         if curr_city == finish:
             ans = 1
-        # even after adding to ans, continue processing
         for next_city in range(len(location)):
             if next_city == curr_city:
                 continue

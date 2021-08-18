@@ -8,10 +8,8 @@ class Solution:
             if not remaining or i == len(words):
                 return scoreSoFar
 
-            # 1) Skip words[i]
             res = helper(i + 1, remaining, scoreSoFar)
 
-            # 2) Take words[i] if possible
             cw = Counter(words[i])
             if not (cw - remaining):
                 res = max(res, helper(i + 1, remaining - cw, scoreSoFar + sum(map(letterScore, words[i]))))

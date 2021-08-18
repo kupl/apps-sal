@@ -1,4 +1,3 @@
-# WARNING This code is just for fun. Reading it might give u a brainfreeze
 
 n, d, k = [int(x) for x in input().strip().split(' ')]
 l = []
@@ -25,12 +24,10 @@ else:
         start = se[cnt1][0]
         end = se[cnt1][1]
         mode = se[cnt1][2]
-        # print(se)
         kk = 3
         while (i < n) and (kk <= k):
             if i < n and not flag:
                 j = start
-                # print(j,"kk")
                 while i < n and j < end:
                     if mode == 1:
                         c = min(j - start + 1, end - j)
@@ -42,7 +39,6 @@ else:
                     ki = j
                     while i < n and c > 0:
                         l.append(str(ki) + " " + str(i))
-                        # print(j,i,c)
                         c -= 1
                         ki = i
                         i += 1
@@ -54,7 +50,6 @@ else:
             kk += 1
         cnt1 += 1
     if i < n or flag:
-        # print(l)
         print("NO")
     else:
         print("YES")

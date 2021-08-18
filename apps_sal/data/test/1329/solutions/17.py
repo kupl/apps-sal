@@ -19,7 +19,6 @@ N = int(input())
 arr = []
 for i in range(1, N + 1):
     arr += fact(i)
-# print(arr)
 arc = collections.Counter(arr)
 num74cnt = 0
 num24cnt = 0

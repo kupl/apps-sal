@@ -1,9 +1,5 @@
 import sys
-# # t=int(input())
-# t=1
-# for i in range(t):
 n, sx, sy = list(map(int, sys.stdin.readline().strip().split()))
-# a,b=sys.stdin.readline().strip().split()
 a, b, c, d = 0, 0, 0, 0
 for i in range(n):
     x, y = list(map(int, sys.stdin.readline().strip().split()))

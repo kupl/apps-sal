@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
 MOD = 998244353
 
 n = int(input())
 xd = []
-# Add sentinel
 places = [(10**12, 0)]
 for _ in range(n):
     x, d = [int(item) for item in input().split()]

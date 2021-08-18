@@ -1,7 +1,6 @@
 n = int(input())
 a = list(enumerate(list(map(int, input().split())), start=1))
 a = [a[0]] + sorted(a[1:], key=lambda x: x[1], reverse=True)
-# print(a)
 
 used = [0] * n
 used[0] = 1
@@ -15,7 +14,6 @@ for i in range(n):
         j = i + 1
         if j != n:
             while j < n and cnt < a[i][1]:
-                #print(i, j)
                 if not used[j]:
                     used[j] = 1
                     total += 1

@@ -13,7 +13,6 @@ class Solution:
 
         @lru_cache(None)
         def dp(mask, i):
-            # if mask == 2 ** n - 1:return set()
             if i == n:
                 return set() if mask == 2 ** n - 1 else set(range(len(l2)))
 

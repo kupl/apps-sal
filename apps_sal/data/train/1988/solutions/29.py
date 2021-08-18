@@ -22,7 +22,6 @@ class Solution:
         for i, j in blue_edges:
             e[i][1].add(j)
 
-        # print(e)
         res = [0] * n
         for i in range(1, n):
             red = bfs(i, 0)

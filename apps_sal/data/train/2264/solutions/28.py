@@ -97,8 +97,6 @@ t -= 1
 links = [{} for _ in range(n)]
 for uvd in sys.stdin.readlines():
     u, v, d = list(map(int, uvd.split()))
-    # for _ in range(m):
-    #     u, v, d = map(int, input().split())
     u -= 1
     v -= 1
     links[u][v] = d

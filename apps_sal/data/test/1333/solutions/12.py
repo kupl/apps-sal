@@ -3,12 +3,12 @@ field = ''
 k = 0
 for i in range(n):
     if i % 2 == 0:
-        field += '#' * m + '\n'
+        field += '
     else:
         if k == 0:
             k = 1
-            field += '.' * (m - 1) + '#' + '\n'
+            field += '.' * (m - 1) + '
         else:
             k = 0
-            field += '#' + '.' * (m - 1) + '\n'
+            field += '
 print(field.strip())

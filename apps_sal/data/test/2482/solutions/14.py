@@ -1,4 +1,3 @@
-# solution
 import io
 import math
 import string

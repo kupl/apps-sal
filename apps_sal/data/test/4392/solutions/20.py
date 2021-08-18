@@ -15,7 +15,6 @@ for tests in range(t):
         for j in range(n - 1, i, -1):
             if A[i] > A[j]:
                 top = j + 1
-                # print(i,top)
                 break
         for j in range(i + 1, top):
             if j in P:

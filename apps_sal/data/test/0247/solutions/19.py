@@ -9,7 +9,7 @@ def iscollinear(p1, p2, p3):
 
 def checkfortwolines(a, b, points):
     set1 = set(points)
-    for i in range(n):  # erase all points collinear with a, b
+    for i in range(n):
         if iscollinear(a, b, points[i]):
             set1.remove(points[i])
 
@@ -17,7 +17,7 @@ def checkfortwolines(a, b, points):
         return True
     else:
         pts1 = list(set1)
-        for i in range(len(pts1)):  # check if remaining points are all collinear
+        for i in range(len(pts1)):
             if not iscollinear(pts1[0], pts1[1], pts1[i]):
                 return False
         return True

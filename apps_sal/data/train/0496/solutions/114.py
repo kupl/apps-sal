@@ -1,6 +1,5 @@
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
-        #
         count = collections.Counter(A)
         to_move = []
         num_moves = 0

@@ -1,4 +1,3 @@
-# 素直に全探索したほうが楽
 H, W = (int(T) for T in input().split())
 minSH = H * W
 minSW = H * W

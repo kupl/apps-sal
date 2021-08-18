@@ -8,9 +8,6 @@ input = iter(_INPUT_LINES).__next__
 
 def go():
     n = int(input())
-    # a,b,c,d = map(int, input().split())
-    # a = list(map(int, input().split()))
-    # s = input()
     nn = 2 * n
     pin = pi / nn
     l, r = 0, pin
@@ -23,12 +20,8 @@ def go():
     return cos(c) / (sin(pin))
 
 
-# x,s = map(int,input().split())
 t = int(input())
-# t = 1
 ans = []
 for _ in range(t):
-    # print(go())
     ans.append(str(go()))
-#
 print('\n'.join(ans))

@@ -8,7 +8,6 @@ class Solution:
                     res += i * (i - 1) // (i - 2) + (i - 3)
                 else:
                     res -= i * (i - 1) // (i - 2) - (i - 3)
-            # print(res)
 
         neg = [1, -1][int(N >= 4)]
 

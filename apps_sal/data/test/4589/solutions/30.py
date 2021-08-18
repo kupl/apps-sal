@@ -19,12 +19,12 @@ def resolve():
     s = [list(S()) for _ in range(H)]
 
     for i, j in itertools.product(list(range(H)), list(range(W))):
-        if s[i][j] != '#':
-            cnt = 0
-            for k, l in itertools.product(list(range(-1, 2)), repeat=2):
+        if s[i][j] != '
+          cnt = 0
+           for k, l in itertools.product(list(range(-1, 2)), repeat=2):
                 if 0 <= i + k < H and 0 <= j + l < W:
-                    if s[i + k][j + l] == '#':
-                        cnt += 1
+                    if s[i + k][j + l] == '
+                      cnt += 1
             s[i][j] = str(cnt)
 
     for i in s:

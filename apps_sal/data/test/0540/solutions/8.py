@@ -20,14 +20,12 @@ def countNeighbours(A, x, y, t='.'):
 
 
 def hasPath(A, xs, ys, xe, ye):
-    # Pre-set end-location 'dot'
     A[xe][ye] = '.'
 
     D = [[-1 for _ in range(len(A[0]))] for _ in range(len(A))]
     D[xs][ys] = 0
     Q = [(xs, ys)]
 
-    # BFS
     while len(Q) > 0:
         u = Q.pop()
         for v in getNeighbours(A, *u):

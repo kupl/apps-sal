@@ -12,7 +12,6 @@ class Solution:
             return False
 
         numSets = len(nums) // k
-        # find first smallest
         freqCnt = dict()
         for i in nums:
             if i not in freqCnt:

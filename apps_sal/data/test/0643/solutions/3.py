@@ -42,7 +42,6 @@ while t > 0:
             gaps = (-ya + (-a // g) - 1) // (-a // g)
             xa += gaps * (b // g)
             ya -= gaps * (a // g)
-        #print(xa, ya, a, b, c)
         if xa < 0 or ya < 0:
             print(-1)
         else:

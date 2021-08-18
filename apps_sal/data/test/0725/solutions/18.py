@@ -12,6 +12,6 @@ for i in range(N):
     if flg:
         break
 if flg:
-    print("#Color")
+    print("
 else:
-    print("#Black&White")
+    print("

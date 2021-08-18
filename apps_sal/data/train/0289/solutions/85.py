@@ -6,11 +6,9 @@ class Solution:
         psum = 0
         j = 0
         result = max(result, max(lsum + msum, lsum + psum))
-        # print(lsum, msum, psum, result)
         prefix = [0] * len(A)
         for i in range(0, len(A) - M + 1):
             prefix[i + M - 1] = sum(A[i:i + M])
-        # For the first run the below is imp
         for k in range(L + M - 1, len(A)):
             result = max(result, lsum + prefix[k])
         for i in range(L, len(A)):
@@ -19,8 +17,6 @@ class Solution:
                 for k in range(i + M, len(A)):
                     result = max(result, lsum + prefix[k])
             if i - L > M - 1:
-                # print(i)
                 for k in range(0, i - L):
                     result = max(result, lsum + prefix[k])
-            # print(lsum, result)
         return result

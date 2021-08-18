@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import collections
 import itertools
 import fractions
@@ -14,7 +13,7 @@ def solve():
     cells = []
     for i in range(n):
         if i % 2 == 0:
-            for j in range(m):  # left to right
+            for j in range(m):
                 cells.append((i + 1, j + 1))
         else:
             for j in range(m, 0, -1):

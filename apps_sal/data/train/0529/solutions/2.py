@@ -3,7 +3,6 @@ import sys
 import math as m
 import random as rd
 import bisect as b
-#import numpy as np
 import time
 sys.setrecursionlimit(1000000)
 
@@ -18,8 +17,6 @@ def tres(): return map(int, sys.stdin.readline().strip().split())
 
 
 def cuatro(): return sys.stdin.readline().strip().split()
-
-################## CODE STARTS FROM HERE ######################
 
 
 for _ in range(uno()):

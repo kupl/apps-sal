@@ -33,7 +33,7 @@ class UnionFind:
 
 def main():
     input = sys.stdin.readline
-    V = 10**5  # max size of x
+    V = 10**5
     N = int(input())
     uft = UnionFind(2 * V)
     for _ in range(N):
@@ -46,7 +46,7 @@ def main():
     cnt_y = defaultdict(lambda: 0)
     for i in range(2 * V):
         root = uft.find(i)
-        if i < V:  # node of x coordinate.
+        if i < V:
             cnt_x[root] += 1
         else:
             cnt_y[root] += 1

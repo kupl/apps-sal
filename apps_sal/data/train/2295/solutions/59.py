@@ -1,4 +1,3 @@
-# https://betrue12.hateblo.jp/entry/2019/06/06/214607
 
 N = int(input())
 AB = (list(map(int, input().split())) for _ in range(N))

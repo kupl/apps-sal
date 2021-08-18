@@ -9,9 +9,6 @@ if py2:
     range = xrange
 
 
-# FastIO for PyPy2 and PyPy3 by Pajenegod
-
-
 class FastI(object):
     def __init__(self, fd=0, buffersize=2**14):
         self.stream = stream = BytesIO()

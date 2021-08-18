@@ -1,4 +1,3 @@
-# A - One Card Poker
 def main():
     a, b = map(int, input().split())
 

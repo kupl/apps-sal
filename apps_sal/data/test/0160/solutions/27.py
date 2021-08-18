@@ -28,7 +28,6 @@ for i in D:
     cn = 0
     e = sum(E)
     left, right = e, 0
-    # print(i,E)
     for k in range(len(E)):
         left -= E[-1 - k]
         right += (i - E[-1 - k])

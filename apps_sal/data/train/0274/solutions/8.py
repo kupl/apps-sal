@@ -2,7 +2,7 @@ class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         min_heap, max_heap = deque([0]), deque([0])
         res = 1
-        far = -1  # stores the index of the position where the array becomes invalid
+        far = -1
         for i in range(1, len(nums)):
 
             while min_heap and nums[min_heap[-1]] > nums[i]:

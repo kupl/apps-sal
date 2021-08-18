@@ -13,10 +13,6 @@ def comp(da, db, t, a, b):
     ra = a + da * t
     rb = b + db * t
 
-    # assert(ra.v0 >= 0);
-    # assert(ra.v1 >= 0);
-    # assert(rb.v0 >= 0);
-    # assert(rb.v1 >= 0);
     return ra + rb
 
 

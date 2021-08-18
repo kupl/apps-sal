@@ -9,14 +9,12 @@ class Solution:
         import heapq
 
         edges = []
-        #G = collections.defaultdict(dict)
         for i in range(len(points)):
             for j in range(len(points)):
                 if i != j:
                     edges.append([i, j, dist(points[i], points[j])])
-        # print(\"eges is \", edges)
 
-        def primLazy(edges, n):  # n nodes from 0 to n-1
+        def primLazy(edges, n):
 
             def visit(v):
                 included[v] = True
@@ -29,10 +27,10 @@ class Solution:
                 G[v][w] = weight
                 G[w][v] = weight
 
-            included = [False for i in range(n)]  # vertices that are in the tree, Sedgewick uses marked
-            mst = []  # edges already added to the spanning tree
-            pq = []  # edges that are crossing from included vertices to not, and ineligible edges
-            visit(points[0])  # start with edge 0
+            included = [False for i in range(n)]
+            mst = []
+            pq = []
+            visit(points[0])
             d = 0
             while pq:
                 dist, v, w = heapq.heappop(pq)
@@ -46,10 +44,10 @@ class Solution:
                     visit(w)
             return mst
 
-        def kruskalSize(edges, n):  # edges should be of form [v, w, weight]
+        def kruskalSize(edges, n):
 
-            parent = [i for i in range(n)]  # sets up default parents for union find
-            sz = [1 for i in range(n)]  # creates size for each group, num of items
+            parent = [i for i in range(n)]
+            sz = [1 for i in range(n)]
 
             def find(i):
                 while i != parent[i]:
@@ -73,7 +71,6 @@ class Solution:
             for v, w, weight in edges:
                 if find(v) != find(w):
                     mst.append([v, w])
-                    # print(\"just added edge \",v,w,weight)
                     d += weight
                     union(v, w)
             return d

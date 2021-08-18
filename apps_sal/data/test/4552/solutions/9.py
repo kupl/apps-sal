@@ -17,9 +17,7 @@ for k in range(1, 1 << 10):
         for j in range(10):
             if L[i][j] and k >> j & 1:
                 cnt += 1
-        # print(L[i],v,cnt,i,score,score[i][cnt])
         sc += score[i][cnt]
-        # print(L[i],v,cnt,i,score,score[i][cnt])
     ans = max(ans, sc)
 
 print(ans)

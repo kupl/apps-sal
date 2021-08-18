@@ -28,8 +28,3 @@ class StreamChecker:
             curr = curr.children[c]
         return '$' in curr.children
         pass
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

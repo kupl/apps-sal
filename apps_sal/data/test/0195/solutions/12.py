@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -14,4 +12,3 @@ if (ans <= 0) or (C > A) or (C > B):
 
 print(ans)
 finish = time.time()
-#print(finish - start)

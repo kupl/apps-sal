@@ -22,7 +22,7 @@ class Solution:
                 if newclears >= 0 and newcost < costs[xn][yn]:
                     costs[xn][yn] = newcost
                     if blocked:
-                        bfs.append((xn, yn, newcost, newclears))  # dfs stack
+                        bfs.append((xn, yn, newcost, newclears))
                     else:
-                        bfs.appendleft((xn, yn, newcost, newclears))  # bfs queue
+                        bfs.appendleft((xn, yn, newcost, newclears))
         return -1 if costs[m - 1][n - 1] == maxmn else costs[m - 1][n - 1]

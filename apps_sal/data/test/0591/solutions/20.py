@@ -15,6 +15,3 @@ W = open('output.txt', 'w')
 W.write(str(a[m[0] - 1]) + '\n' + ' '.join(map(str, m)))
 
 W.close()
-
-
-# Made By Mostafa_Khaled

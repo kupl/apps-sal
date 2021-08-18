@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from bisect import bisect_right
 
@@ -15,7 +14,6 @@ def main():
         dp[j] = -A[i]
 
     print((sum([1 for d in dp if d < INF])))
-    # print(dp)
 
 
 def __starting_point():

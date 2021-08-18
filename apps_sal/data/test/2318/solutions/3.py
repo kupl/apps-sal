@@ -22,8 +22,6 @@ for i in range(n):
         else:
             BB.append([B[i], 1])
 
-    # print(AA,BB)
-
     if len(AA) != len(BB):
         print("NO")
     else:

@@ -1,4 +1,3 @@
-# https://t123456ll.github.io/1131.%20Maximum%20of%20Absolute%20Value%20Expression.html
 
 class Solution:
     def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:

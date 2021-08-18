@@ -1,4 +1,3 @@
-# cook your dish here
 def check(arr, n):
     for a in range(len(arr)):
         if a < len(arr) - 1:

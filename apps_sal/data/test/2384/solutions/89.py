@@ -1,18 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 
-# dp[i][k] 列iを選択し、k個持っているときの最大値
-# kは(i-1)//2 or i//2 or (i+1)//2
-# それぞれki=0,1,2とする。
-# 最大でも4マス前まで(oxxxo)
-# iが奇数
-# dp[i+2][0]=Ai + max(dp[i][0], dp[i][1], dp[i-1][1],  dp[i-2][2])
-# dp[i+2][1]=dp[i+2][0]
-# dp[i+2][2]=Ai + max(dp[i][2])
-# iが偶数
-# dp[i+2][0]=0
-# dp[i+2][1]=Ai + max(dp[i][1], dp[i][2], dp[i-1][2])
-# dp[i+2][2]=dp[i+2][1]
 
 dp = [[0 for i in range(3)] for j in range(n)]
 ans = 0

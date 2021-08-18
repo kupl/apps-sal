@@ -8,7 +8,6 @@ for _ in range(t):
         for i in p:
             if a[i - 1] > a[i]:
                 a[i - 1], a[i] = a[i], a[i - 1]
-        # print(a)
         if b == a:
             break
     b = a.copy()

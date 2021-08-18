@@ -5,7 +5,6 @@ class Solution:
         dp = [1] + [0] * N
         cursum = 1
         for i in range(1, N + 1):
-            # dp[i]=sum(dp[max(0,i-W):min(i,K)])*(1/W)
             dp[i] = cursum * (1 / W)
             if i < K:
                 cursum += dp[i]

@@ -11,7 +11,6 @@ class UnionFind():
     def unite(self, x, y):
         rx = self.root(x)
         ry = self.root(y)
-        #print(f'root: {rx} {ry}')
         if rx == ry:
             return
 
@@ -24,8 +23,6 @@ uf = UnionFind(N)
 for i in range(M):
     A, B = map(lambda x: int(x), input().split())
     A, B = A - 1, B - 1
-    #print(f'{A} {B} {uf.par}')
     uf.unite(A, B)
-    #print(f'{A} {B} {uf.par}')
 
 print(-min(uf.par))

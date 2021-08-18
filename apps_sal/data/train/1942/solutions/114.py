@@ -15,7 +15,6 @@ class Solution:
                     cur.add(d[x])
             com += [cur]
         ans = []
-        # print(com)
         for i in range(len(com)):
             flag = False
             for j in range(len(com)):

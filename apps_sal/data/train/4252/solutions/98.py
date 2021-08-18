@@ -1,5 +1,4 @@
 def merge_arrays(first, second):
-    # your code here
     pass
     l = []
     l1 = []

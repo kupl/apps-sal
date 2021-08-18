@@ -1,10 +1,10 @@
 ab = list(map(int, input().split()))
 
-g = [['#'] * 100 for _ in range(50)] + [['.'] * 100 for _ in range(50)]
+g = [['
 for k in range(2):
     cnt = 0
     flag = False
-    c = '.' if k == 0 else '#'
+    c = '.' if k == 0 else '
     for i in range(51 * k, 50 * (k + 1), 2):
         for j in range(0, 100, 2):
             if cnt == ab[k] - 1:

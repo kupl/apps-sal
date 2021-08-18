@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -.- coding: utf-8 -.-
 
 k, n, w = (int(item) for item in input().strip().split(" "))
 acc = 0

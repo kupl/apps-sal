@@ -9,7 +9,6 @@ while (i < n):
     while (j + 1 < n and s[j + 1] == s[i]):
         j += 1
 
-    #[i, j]
     if i == j - 1 and (s[i] == 'e' or s[i] == 'o'):
         ans += s[i]
         ans += s[i + 1]

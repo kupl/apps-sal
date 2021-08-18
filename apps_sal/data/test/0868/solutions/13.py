@@ -1,4 +1,4 @@
-def power(a, pow1, MOD):  # ������� ���������� � ������� �� ������ MOD
+def power(a, pow1, MOD):
     if pow1 == 0:
         return 1
     elif pow1 % 2 == 1:

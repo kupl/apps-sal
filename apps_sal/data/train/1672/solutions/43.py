@@ -15,7 +15,6 @@ for x in arr:
     else:
         a = math.sqrt(abs(x))
         b = -5 * (abs(x)**3)
-    # print(x,a,b)
     fin = a + b
     fin = round(fin, 2)
     fin = str(fin)

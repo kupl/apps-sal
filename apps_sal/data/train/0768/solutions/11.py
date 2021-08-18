@@ -33,8 +33,5 @@ for _ in range(int(input())):
     V = int(input())
     gra = Graph(V)
     gra.addEdges()
-    # print(gra.graph)
     x, y = gra.DFS(0)
     print(y - 1)
-    # print(height*height)
-    # print((gra.height*(gra.height+1))//2)

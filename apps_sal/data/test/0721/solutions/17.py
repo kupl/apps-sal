@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n, d = (int(x) for x in input().split(None, 2))
 a = [int(x) for x in input().split()]

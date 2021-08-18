@@ -9,4 +9,4 @@ for i in range(n):
 
 for i in range(m):
     a, b = R('str')
-    print(a + ' ' + b + ' ' + '#' + d[b[:-1]])
+    print(a + ' ' + b + ' ' + '

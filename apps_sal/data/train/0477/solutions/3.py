@@ -7,7 +7,6 @@ class Solution:
         counter = 1
         x = '0'
         while counter != n:
-            # make new string, increment counter
             x = x + '1' + revStr(invert(x))
             counter += 1
 

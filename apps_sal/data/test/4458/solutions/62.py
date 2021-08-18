@@ -1,4 +1,3 @@
-# C
 N = int(input())
 P = list(map(int, input().split()))
 min_p = 10**10

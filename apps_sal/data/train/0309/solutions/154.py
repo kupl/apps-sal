@@ -15,4 +15,3 @@ class Solution:
                     maxLength = dp[i][diff]
 
         return maxLength
-# O(n2) time, O(n2) space

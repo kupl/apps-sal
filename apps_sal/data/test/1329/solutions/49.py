@@ -2,8 +2,6 @@ from collections import Counter, defaultdict
 
 N = int(input())
 
-# 素数のリスト
-
 
 def createPrimeList(N, isTable=True):
     isPrime = [True] * (N + 1)
@@ -17,7 +15,6 @@ def createPrimeList(N, isTable=True):
     return isPrime if isTable else [i for i in range(2, N) if isPrime[i]]
 
 
-# 素因数分解(複数回)
 primeList = createPrimeList(100, False)
 
 

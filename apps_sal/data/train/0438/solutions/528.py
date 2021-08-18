@@ -20,7 +20,6 @@ class UnionFind:
         jrep = self.find(j)
         if irep == jrep:
             return
-        # union by rank
         if self.subsets[irep].rank > self.subsets[jrep].rank:
             self.subsets[jrep].parent = irep
             self.subsets[irep].size += self.subsets[jrep].size
@@ -35,7 +34,6 @@ class UnionFind:
 
     def find(self, i):
         if self.subsets[i].parent != i:
-            # path compression
             self.subsets[i].parent = self.find(self.subsets[i].parent)
         return self.subsets[i].parent
 

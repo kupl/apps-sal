@@ -31,14 +31,12 @@ for i in range(n):
                 is_gcd[cur_gcd] = 1
                 ans[cur_gcd] = 0
             ans[cur_gcd] += 1
-# print(ans)
 
 keys = list(ans.keys())
 ans1 = [0] * 1000001
 for i in keys:
     for j in range(i, 1000001, i):
         ans1[j] += ans[i]
-# print(ans1[:10])
 
 for q in range(inn()):
     k = inn()

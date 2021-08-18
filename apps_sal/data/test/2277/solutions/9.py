@@ -2,7 +2,7 @@ n = int(input())
 
 s = list(map(int, input().split()))
 
-t = False  # even
+t = False
 
 for i in range(n):
     for j in range(i + 1, n):

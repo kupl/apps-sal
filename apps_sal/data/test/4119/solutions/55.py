@@ -8,7 +8,6 @@ def main(n, m, x):
     if m <= n:
         return 0
     xs = sorted(x)
-    # print(xs)
     d = []
     for i in range(m - 1):
         d.append((xs[i + 1] - xs[i], i + 1))
@@ -16,7 +15,6 @@ def main(n, m, x):
     c = [0] * m
     for i in range(n - 1):
         c[ds[i][1]] += 1
-    # print(c)
     ans = 0
     for i in range(1, m):
         if c[i] == 0:

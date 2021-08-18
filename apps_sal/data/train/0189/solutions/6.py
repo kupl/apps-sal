@@ -27,11 +27,11 @@ class Solution:
                 b_d_idx = idx_table[b][d]
 
                 if c_a_idx < c_d_idx and a_c_idx < a_b_idx:
-                    unhappy[a] = unhappy[c] = 1  # a & c prefer each other
+                    unhappy[a] = unhappy[c] = 1
                 if d_a_idx < d_c_idx and a_d_idx < a_b_idx:
-                    unhappy[a] = unhappy[d] = 1  # a & d prefer each other
+                    unhappy[a] = unhappy[d] = 1
                 if c_b_idx < c_d_idx and b_c_idx < b_a_idx:
-                    unhappy[b] = unhappy[c] = 1  # b & c prefer each other
+                    unhappy[b] = unhappy[c] = 1
                 if d_b_idx < d_c_idx and b_d_idx < b_a_idx:
-                    unhappy[b] = unhappy[d] = 1  # b & d prefer each other
+                    unhappy[b] = unhappy[d] = 1
         return sum(unhappy)

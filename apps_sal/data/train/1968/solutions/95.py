@@ -5,18 +5,18 @@ class Solution:
         for path in folder:
             curr = trie
             for token in tokens[path]:
-                if '#' in curr:
+                if '
                     break
                 if token not in curr:
                     curr[token] = {}
                 curr = curr[token]
-            curr['#'] = True
+            curr['
 
         paths = set(folder)
         for path in folder:
             curr = trie
             for token in tokens[path]:
-                if '#' in curr:
+                if '
                     paths.remove(path)
                     break
                 curr = curr[token]

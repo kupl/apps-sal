@@ -8,7 +8,6 @@ for _ in range(int(input())):
     l1.reverse()
     for i in l:
         l1.append(i)
-    # print(l1)
     sums = sum(l1[:k])
     sumlist = [sums]
     for i in range(len(l1) - k):

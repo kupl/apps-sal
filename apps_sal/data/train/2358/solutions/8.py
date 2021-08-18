@@ -13,7 +13,6 @@ n = int(input())
 xyr = [None] * (n + 2)
 for i in range(n):
     xyr[i] = tuple(map(int, input().split()))
-# ns = [[] for _ in range(n+2)]
 data = []
 rs = []
 cs = []

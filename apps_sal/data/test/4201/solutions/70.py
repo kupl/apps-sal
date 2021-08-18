@@ -13,15 +13,15 @@ INF = inf
 MOD = 1000000007
 
 h, w, k = [int(i) for i in input().split()]
-C = [input() for j in range(h)]  # nは行数
+C = [input() for j in range(h)]
 
 tmp = 0
 res = 0
 
 for r in range(h):
     for c in range(w):
-        if C[r][c] == "#":
-            tmp += 1
+        if C[r][c] == "
+        tmp += 1
 
 for i in range(2 ** h):
     for j in range(2 ** w):
@@ -30,8 +30,8 @@ for i in range(2 ** h):
         tmp_2 = 0
         for r in range(h):
             for c in range(w):
-                if (rs[r] == "1" or cs[c] == "1") and C[r][c] == "#":
-                    tmp_2 += 1
+                if (rs[r] == "1" or cs[c] == "1") and C[r][c] == "
+                tmp_2 += 1
         if tmp - tmp_2 == k:
             res += 1
 

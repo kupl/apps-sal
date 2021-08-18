@@ -10,8 +10,8 @@ def bfs(i, j):
     que = deque()
     cost[i][j] = 0
     que.append((i, j))
-    if s[i][j] == '#':
-        return 0
+    if s[i][j] == '
+    return 0
     while que:
         ni, nj = que.popleft()
         for k in range(4):

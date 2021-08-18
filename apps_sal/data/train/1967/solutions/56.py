@@ -1,7 +1,6 @@
 class Solution:
     def splitIntoFibonacci(self, S: str) -> List[int]:
         result = []
-        # return arry contains list of possible start in form (num1,num2, start of remain)
 
         def getStarter():
             arr = []
@@ -18,7 +17,6 @@ class Solution:
                 result.append(arr)
                 return True
             sum = arr[-2] + arr[-1]
-            # get next possible target by len of sum
             length = len(str(sum))
             nextNum = int(S[start:start + length])
             if 0 <= sum <= mx and nextNum == sum:

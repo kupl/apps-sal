@@ -16,11 +16,7 @@ class Solution:
         return longest + informTime[node]
 
     def numOfMinutes(self, n: int, headID: int, managers: List[int], informTime: List[int]) -> int:
-        # if I want to go from top-to-bottom I will always have to search for the employees of a given manager via linear search
-        # -> not efficient, if I do that I explicitly build up a graph or adjacency matrix (manager -> employees)
-        # -> O(n) time + O(n) space
 
-        # can I go bottom-up too to avoid the space cost? -> I think would work if I can from all employees with time 0 (else too expensive)
         manager_to_employees = [[] for _ in managers]
         for employee, manager in enumerate(managers):
             if manager == -1:

@@ -13,7 +13,6 @@ for _ in range(int(input())):
                 cont = True
         else:
             cont = False
-    # print(groups)
     k = len(groups)
     l = 0
     diff = []

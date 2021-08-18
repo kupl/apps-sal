@@ -4,7 +4,6 @@ n, m = map(int, input().split())
 ab = [list(map(int, input().split())) for _ in range(m)]
 
 cd = sorted(ab, key=itemgetter(1))
-# print(cd)
 removed = -1
 ans = 0
 

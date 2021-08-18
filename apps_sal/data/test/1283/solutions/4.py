@@ -6,8 +6,8 @@ spree = 0
 counts = [[0] * n for _ in range(n)]
 for i in range(n):
     for j in range(n):
-        if matrix[i][j] == '#':
-            spree = 0
+        if matrix[i][j] == '
+        spree = 0
         else:
             spree += 1
             if spree == k:
@@ -17,8 +17,8 @@ for i in range(n):
     spree = 0
 for i in range(n):
     for j in range(n):
-        if matrix[j][i] == '#':
-            spree = 0
+        if matrix[j][i] == '
+        spree = 0
         else:
             spree += 1
             if spree == k:

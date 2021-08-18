@@ -10,7 +10,6 @@ class Solution:
                 b = 0
                 for k in range(j, n):
                     b ^= arr[k]
-                    # print(i, j, k, a == b)
                     if a == b:
                         out += 1
                 a ^= arr[j]

@@ -1,5 +1,4 @@
 def whatday(num):
-  # Put your code here
     if(1 <= num <= 7):
         if(num == 1):
             return "Sunday"

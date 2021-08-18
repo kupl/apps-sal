@@ -13,8 +13,3 @@ class Solution:
                     minArea = min(area, minArea)
 
         return minArea if minArea < math.inf else 0
-
-        # x     x    x
-        #    x       x
-        # x     x
-#         x          x

@@ -1,5 +1,4 @@
 def distinct(seq):
-    # return list(set(seq))
 
     seq2 = []
     for i in seq:

@@ -1,9 +1,7 @@
 class Solution:
-    # Time: O(n * k), Space: O(n) - where k is number of maximum stones a player can pick
     def bottomUpDP(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
         suffix_sum = [0 for _ in range(n + 1)]
-        # dp[i] - maximum sum a player can accumulate he/she starts at position i
         dp = [0 for _ in range(n + 1)]
 
         for i in range(n - 1, -1, -1):
@@ -20,7 +18,7 @@ class Solution:
 
         if 2 * dp[0] == suffix_sum[0]:
             return 'Tie'
-        elif 2 * dp[0] > suffix_sum[0]:  # Alice score > Bob's score, dp[0] > suffix_sum[0] - dp[0]
+        elif 2 * dp[0] > suffix_sum[0]:
             return 'Alice'
         else:
             return 'Bob'

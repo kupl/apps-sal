@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-#def input(f=open('in3')): return f.readline().rstrip()
 
 n, m = list(map(int, input().split()))
 txt = [input() for _ in range(n)]

@@ -1,10 +1,4 @@
 def main():
-    # n ,m= map(int,input().split())
-    # arr = list(map(int,input().split()))
-    # b = list(map(int,input().split()))
-    # n = int(input())
-    # string = str(input())
-    # a = list(map(int,input().split()))
     n = int(input())
     a = list(map(int, input().split()))
     for i in range(n - 2):
@@ -15,7 +9,6 @@ def main():
     print("NO")
 
 
-# main()
 def test():
     t = int(input())
     while t:

@@ -29,7 +29,6 @@ class Solution:
                 operations.append((curr, 0))
             i -= 1
 
-        # print(operations)
         sol = 0
         index = 0
         if len(operations) == 1:

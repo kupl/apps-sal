@@ -12,15 +12,12 @@ for i in range(1, n + 1):
     else:
         G[i] = G[i - 1] + C[i]
 
-# print(F)
-# print(G)
 
 summa = 0
 for i in range(1, n + 1):
     if i in K:
         summa += G[i - 2] * C[i]
         summa += (F[n] - F[i]) * C[i]
-        #print(i, G[i-2] * C[i], (F[n] - F[i ]) * C[i])
 
     elif i < n:
         summa += C[i] * C[i + 1]

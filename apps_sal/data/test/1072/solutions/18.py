@@ -1,7 +1,7 @@
 s = input()
 s = s.split()
-n = int(s[0])  # Linhas
-m = int(s[1])  # Colunas
+n = int(s[0])
+m = int(s[1])
 l = []
 
 for i in range(0, n):

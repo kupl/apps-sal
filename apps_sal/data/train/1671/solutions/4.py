@@ -1,7 +1,4 @@
 """
-#If FastIO not needed, use this and don't forget to strip
-#import sys, math
-#input = sys.stdin.readline
 """
 
 import math
@@ -68,9 +65,6 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
-#start_time = time.time()
-
-
 def getInts():
     return [int(s) for s in input().split()]
 
@@ -110,7 +104,4 @@ def solve():
 
 
 for _ in range(getInt()):
-    # print(solve())
     solve()
-
-# print(time.time()-start_time)

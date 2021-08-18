@@ -1,7 +1,6 @@
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
         self.memo = {}
-        # self.memo[(i, j)]表示把i~j切成最小需要最少cost
         self.helper(0, n, cuts)
         return self.memo[(0, n)]
 

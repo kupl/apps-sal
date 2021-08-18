@@ -6,7 +6,6 @@ for i in range(n):
     if s[i] == "o":
         available.append(i)
 
-# 左側から〇を数える
 left = [0] * n
 rest = 0
 cnt = 0
@@ -19,7 +18,6 @@ for i in range(n):
     else:
         left[i] = cnt
 
-# 右側から〇を数える
 right = [0] * n
 rest = n - 1
 cnt = 0
@@ -32,7 +30,6 @@ for i in range(n - 1, -1, -1):
     else:
         right[i] = cnt
 
-# -1日目、n+1日目がエラーにならないように0を足す
 for i in ([left, right]):
     i.insert(0, 0)
     i.append(0)

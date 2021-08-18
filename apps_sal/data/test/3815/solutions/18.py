@@ -8,7 +8,6 @@ def fun(a, b, i):
 
 
 def div(x, y):
-    # calculate x // y mod p
     return (x * pow(y, MOD - 2, MOD)) % MOD
 
 

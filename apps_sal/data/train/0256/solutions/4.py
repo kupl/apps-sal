@@ -1,6 +1,5 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        # if len(piles) == 1:return -(piles[0] // -H)
         self.piles = piles
         l, r = 1, max(piles)
 
@@ -19,6 +18,4 @@ class Solution:
             cnt += q
             if mod != 0:
                 cnt += 1
-            # cnt += banana / K
-            # if banana%K != 0: cnt += 1
         return cnt

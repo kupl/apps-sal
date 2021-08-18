@@ -2,7 +2,7 @@ A, B = list(map(int, input().split()))
 h, w = 99, 99
 
 a = '.'
-b = '#'
+b = '
 
 if A > B:
     a, b = b, a

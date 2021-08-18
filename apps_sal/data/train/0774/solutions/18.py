@@ -1,4 +1,3 @@
-# cook your dish here
 n, k, q = list(map(int, input().split()))
 b = list(map(int, input().split()))
 a = sorted(b)
@@ -11,7 +10,6 @@ for i in range(n - 1):
     else:
         start = a[i + 1]
         ans[a[i + 1]] = start
-# print(b,a)
 for u in range(q):
     x, y = list(map(int, input().split()))
     if ans[max(b[y - 1], b[x - 1])] <= min(b[x - 1], b[y - 1]):

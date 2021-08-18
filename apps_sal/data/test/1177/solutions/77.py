@@ -1,8 +1,6 @@
-#!python3
 
 import numpy as np
 
-# input
 N, S = list(map(int, input().split()))
 A = list(map(int, input().split()))
 

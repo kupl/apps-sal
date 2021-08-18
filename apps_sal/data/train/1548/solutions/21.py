@@ -24,8 +24,6 @@ for t1 in range(0, t):
                 right.append((right[-1][0], right[-1][1] + 1))
 
     right = right[::-1]
-    # print(left)
-    # print(right)
     final1 = []
     for i in range(0, n):
         final1.append(min(left[i][0] + left[i][1], a[i]))
@@ -48,8 +46,6 @@ for t1 in range(0, t):
     if a!=ans:
      print(l)
      print(a)
-     #print(left)
-     #print(right)
      print(ans)
      print()
     print(a)

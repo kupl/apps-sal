@@ -30,8 +30,6 @@ class Solution:
         q = collections.deque([(0, start)])
         while q:
             step, (i, j, k) = q.popleft()
-            # if k >= (m - i - 1) + (n - j - 1) - 1:
-            # return step + (m - i - 1) + (n - j - 1)
             if (i, j) == (m - 1, n - 1):
                 return step
             for ni, nj in neighbors(i, j):

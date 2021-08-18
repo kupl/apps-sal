@@ -23,7 +23,6 @@ while l < N:
         for k in range(l, r + 1):
             h[k] -= 1
         count += 1
-        # print(h)
     elif flag == 0:
         break
 print(count)

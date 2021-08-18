@@ -1,10 +1,7 @@
-# Define
 mod = int(1e9 + 7)
 maxN = int(2e5 + 100)
 pow = [1] * maxN
 cost = []
-
-# Functions
 
 
 def add(x, y): return (x + y) % mod
@@ -16,7 +13,6 @@ def prepare():
         pow[i] = mul(pow[i - 1], 2)
 
 
-# Main
 prepare()
 n = int(input())
 inp = input().split()

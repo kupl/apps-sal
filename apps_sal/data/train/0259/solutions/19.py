@@ -4,8 +4,8 @@ class Solution:
 
         while lo <= hi:
             mid = (lo + hi) // 2
-            divisor_sum = sum([math.ceil(x / mid) for x in nums])  # will be larger
-            next_sum = sum([math.ceil(x / (mid + 1)) for x in nums])  # will be smaller
+            divisor_sum = sum([math.ceil(x / mid) for x in nums])
+            next_sum = sum([math.ceil(x / (mid + 1)) for x in nums])
 
             if next_sum <= threshold < divisor_sum:
                 return mid + 1

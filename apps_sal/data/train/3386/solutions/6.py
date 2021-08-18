@@ -10,7 +10,6 @@ def get_column_title(number):
 
         if isinstance(num, list):
             n = num[0]
-            # result = num
         else:
             if len(result) == 0:
                 result.append(num)

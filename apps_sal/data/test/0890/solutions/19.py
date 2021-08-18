@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -7,7 +5,6 @@ import time
 def test(a, b, C, s, n, l, r, x, p):
     if C == []:
         if s >= l and s <= r and b - a >= x:
-            #            print("!!!!!!!!", a, b, C, s, p)
             return 1
         return 0
 
@@ -16,7 +13,6 @@ def test(a, b, C, s, n, l, r, x, p):
     else:
         acc = 0
 
-#    print(a, b, C, s, p)
     for i in range(len(C)):
 
         if s + C[i] <= r:
@@ -27,7 +23,6 @@ def test(a, b, C, s, n, l, r, x, p):
 
 (n, l, r, x) = (int(i) for i in input().split())
 C = sorted([int(i) for i in input().split()])
-# print(C)
 
 start = time.time()
 acc = 0
@@ -37,4 +32,3 @@ for i in range(len(C)):
 
 print(acc)
 finish = time.time()
-#print(finish - start)

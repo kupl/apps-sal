@@ -1,4 +1,3 @@
-# Magnets
 
 n = int(input())
 

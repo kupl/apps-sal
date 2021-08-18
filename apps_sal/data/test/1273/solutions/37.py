@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from operator import add, itemgetter, mul, xor
 from math import gcd
 from decimal import Decimal
@@ -31,7 +30,6 @@ def LLI(n): return [list(map(int, input().split())) for _ in range(n)]
 
 n = I()
 
-# graph[i]には頂点iと繋がっている頂点を格納する
 graph = [[] for _ in range(n + 1)]
 prev_col = [0] * (n + 1)
 a_b = []
@@ -41,7 +39,6 @@ for i in range(n - 1):
     a_b.append(str(a) + " " + str(b))
     graph[a].append(b)
     graph[b].append(a)
-# check[i] == -1ならば未探索
 check = [-1] * (n + 1)
 check[0] = 0
 check[1] = 0

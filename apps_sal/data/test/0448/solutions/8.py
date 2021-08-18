@@ -4,13 +4,11 @@ result = -2
 finished = False
 
 while finished == False:
-    # print(a)
     finished = True
     last_child = -1
     for index, el in enumerate(a):
         if el <= 0:
             continue
-        # don't go home
         if el > m:
             finished = False
         else:

@@ -11,7 +11,6 @@ while(t):
     '''
     b = np.zeros(n, dtype='bool')
 
-    # print b
     pos = 0
     while(True):
         if b[(pos + m) % n] == True:
@@ -19,8 +18,6 @@ while(t):
         else:
             b[(pos + m) % n] = True
             pos = (pos + m) % n
-
-        # print b,pos
 
     s = sum(b)
     if s == n:

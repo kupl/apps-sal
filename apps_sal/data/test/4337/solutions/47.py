@@ -1,5 +1,3 @@
-# B - Hina Arare
-# https://atcoder.jp/contests/abc089/tasks/abc089_b
 
 N = int(input())
 s = list(map(str, input().split()))

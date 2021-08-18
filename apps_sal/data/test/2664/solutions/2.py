@@ -1,4 +1,3 @@
-# step 1
 import sys
 import random
 balls = list(map(str, list(range(1, 6))))
@@ -12,7 +11,6 @@ sys.stdout.flush()
 ans = int(input().strip())
 
 if ans == 0:
-    # lucky!
     print('2')
     print('5')
     sys.stdout.flush()

@@ -1,21 +1,20 @@
-# yet another rewrite of Joachim Henke's C# implementation
 
-ENCODE = list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~\"")
-DECODE = dict(map(reversed, enumerate(ENCODE)))
+ENCODE = list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!
+DECODE=dict(map(reversed, enumerate(ENCODE)))
 
 
 def b91encode(s):
-    b, i = 0, 0
-    r = ""
+    b, i=0, 0
+    r=""
 
     for c in s:
         b |= ord(c) << i
         i += 8
         if i > 13:
-            v = b & 0x1FFF
-            k = 13
+            v=b & 0x1FFF
+            k=13
             if v < 89:
-                v = b & 0x3FFF
+                v=b & 0x3FFF
                 k += 1
             b >>= k
             i -= k
@@ -29,11 +28,11 @@ def b91encode(s):
 
 
 def b91decode(s):
-    v, b, i = -1, 0, 0
-    r = ""
+    v, b, i=-1, 0, 0
+    r=""
 
     for c in s:
-        c = DECODE[c]
+        c=DECODE[c]
         if ~v:
             v += c * 91
             b |= v << i
@@ -44,9 +43,9 @@ def b91decode(s):
                 i -= 8
                 if i < 8:
                     break
-            v = -1
+            v=-1
         else:
-            v = c
+            v=c
     if ~v:
         r += chr((b | v << i) & 0xFF)
 

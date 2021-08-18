@@ -7,7 +7,6 @@ def skal(a, b):
 
 
 def vect(a, b):
-    #print(a, b, a[0][0] * b[0][1] - b[0][0] * a[0][1])
     return a[0][0] * b[0][1] - b[0][0] * a[0][1]
 
 
@@ -33,10 +32,8 @@ a = []
 for i in range(n):
     x, y = map(int, input().split())
     a.append([[x, y], i + 1])
-#a.sort(key = cmp_to_key(myfun))
 a.sort(key=lambda x: atan2(x[0][1], x[0][0]))
 a.append(a[0])
-# print(a)
 c = [[skal(a[0], a[1]), abs(vect(a[0], a[1]))], [a[0][1], a[1][1]]]
 for i in range(1, n):
     d = [[skal(a[i], a[i + 1]), abs(vect(a[i], a[i + 1]))], [a[i][1], a[i + 1][1]]]

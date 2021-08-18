@@ -68,7 +68,5 @@ for i in range(n):
         if questions2[i]:
             right = (right + pow(3, questions2[i] - 1, mod) * questions2[i]) % mod
 
-        # print(l, i, left, right)
-
         ans = (ans + left * right) % mod
 print(ans)

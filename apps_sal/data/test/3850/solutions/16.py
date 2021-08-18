@@ -1,4 +1,3 @@
-# self.author = Fuad Ashraful Mehmet ,CSE-UAP
 
 def read(): return map(int, input().split())
 

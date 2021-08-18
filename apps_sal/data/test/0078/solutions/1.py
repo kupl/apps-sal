@@ -13,7 +13,6 @@ mod = 10**9 + 7
 def calc(used, recent, time):
     ANS = 0
     for i in range(n):
-        # print(i,used)
         if i in used:
             continue
         if time + S[i][0] > T:

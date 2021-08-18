@@ -19,8 +19,6 @@ class Solution:
                 bins[st[i:i + k]] = 1
 
         for i in bins:
-            #     print(i)
-            #     print(bin2dec(i))
             numbers[bin2dec(i)] = 1
 
         c = 0

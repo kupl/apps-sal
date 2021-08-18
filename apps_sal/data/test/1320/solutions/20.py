@@ -11,9 +11,6 @@ def __starting_point():
     for i in range(n):
         cake.append([c for c in input()])
 
-    # for line in cake:
-    #    print(line)
-
     res = 0
 
     for i in range(n):

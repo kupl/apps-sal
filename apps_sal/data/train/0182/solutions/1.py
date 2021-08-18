@@ -4,21 +4,6 @@ class Solution:
         :type height: List[int]
         :rtype: int
         """
-        # if len(height) < 3 :
-        #     return 0
-        # maxTrap = 0
-        # stack=[]
-        # i = 0
-        # while i < len(height):
-        #     if not stack or height[i] <= height[stack[-1]]:
-        #         stack.append(i)
-        #         i += 1
-        #     else :
-        #         bot = stack.pop()
-        #         trap = 0 if not stack else (min(height[i],height[stack[-1]]) - height[bot] ) * (i-stack[-1]-1)
-        #         maxTrap += trap
-        #     # print(stack)
-        # return maxTrap
         if not height:
             return 0
         left, right = 0, len(height) - 1

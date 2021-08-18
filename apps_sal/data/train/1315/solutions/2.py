@@ -1,4 +1,3 @@
-#
 n = int(input())
 ans = {}
 count = 0

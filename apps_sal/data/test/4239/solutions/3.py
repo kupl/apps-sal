@@ -1,10 +1,10 @@
-def sinsuuton(X, n):  # 10進数の Xをn進数に
+def sinsuuton(X, n):
     if (int(X / n)):
         return sinsuuton(int(X / n), n) + str(X % n)
     return str(X % n)
 
 
-def sinsuutoo10(X, n):  # n進数のX(str)を10進数に
+def sinsuutoo10(X, n):
     return sum([X[-i - 1] * n**i for i in range(len(X))])
 
 

@@ -1,8 +1,6 @@
 import sys
 from collections import defaultdict
 
-#sys.stdin = open('input')
-
 
 def main():
     n, k = [int(x) for x in input().split()]

@@ -8,8 +8,6 @@ def main():
     pass
 
 
-# region fastio
-
 BUFSIZE = 8192
 
 
@@ -80,7 +78,6 @@ def solve(m):
 t = int(input())
 out = []
 for m in map(int, input().split()):
-    # out.append(solve(m))
     v = m // 2
     u = v // 2
     w = (v - u)

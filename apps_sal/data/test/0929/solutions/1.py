@@ -33,21 +33,16 @@ for i in range(h):
         wed = -1
         wpt = -1
     for j in range(wst, wed, wpt):
-        #        print("i,j:",i,j)
         if a[i][j] % 2 == 1 and astat == 0:
             astat = 1
-#            print("A:",im,jm,i,j)
         elif a[i][j] % 2 == 1 and astat == 1:
             q.append((im, jm, i, j))
-#            print("B:",im,jm,i,j)
             astat = 0
         elif a[i][j] % 2 == 0 and astat == 0:
             astat = 0
-#            print("C:",im,jm,i,j)
         elif a[i][j] % 2 == 0 and astat == 1:
             astat = 1
             q.append((im, jm, i, j))
-#            print("D:",im,jm,i,j)
         im = i
         jm = j
 

@@ -5,4 +5,4 @@ for _ in range(a):
     dic1[m] = n
 for _ in range(b):
     c, i = input().split()
-    print(c + " " + i + " #" + dic1[i[:-1]])
+    print(c + " " + i + "

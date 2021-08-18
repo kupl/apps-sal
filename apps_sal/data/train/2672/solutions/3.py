@@ -1,6 +1,5 @@
-#         R  Y  G
-PROBS = [[1, 1, 1],   # Smooth
-         [4, 2, 1]]   # Bumpy
+PROBS = [[1, 1, 1],
+         [4, 2, 1]]
 IDX = {'red': 0, 'yellow': 1, 'green': 2, 'smooth': 0, 'bumpy': 1}
 
 

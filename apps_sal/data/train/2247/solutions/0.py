@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/280/C
 from collections import defaultdict, deque
 import sys
 

@@ -13,8 +13,6 @@ def main():
 
     ans = 0
 
-    # x
-    # plus, plus
     tmp = [0, 0]
     for x, y in XY:
         if x > 0:
@@ -26,8 +24,6 @@ def main():
 
     ans = max(ans, math.sqrt(tmp[0] ** 2 + tmp[1] ** 2))
 
-    # x
-    # plus, minus
     tmp = [0, 0]
     for x, y in XY:
         if x > 0:
@@ -39,8 +35,6 @@ def main():
 
     ans = max(ans, math.sqrt(tmp[0] ** 2 + tmp[1] ** 2))
 
-    # x
-    # minus, plus
     tmp = [0, 0]
     for x, y in XY:
         if x < 0:
@@ -52,8 +46,6 @@ def main():
 
     ans = max(ans, math.sqrt(tmp[0] ** 2 + tmp[1] ** 2))
 
-    # x
-    # minus, minus
     tmp = [0, 0]
     for x, y in XY:
         if x < 0:
@@ -65,8 +57,6 @@ def main():
 
     ans = max(ans, math.sqrt(tmp[0] ** 2 + tmp[1] ** 2))
 
-    # y
-    # plus, plus
     tmp = [0, 0]
     for x, y in XY:
         if y > 0:
@@ -78,8 +68,6 @@ def main():
 
     ans = max(ans, math.sqrt(tmp[0] ** 2 + tmp[1] ** 2))
 
-    # y
-    # plus, minus
     tmp = [0, 0]
     for x, y in XY:
         if y < 0:
@@ -91,8 +79,6 @@ def main():
 
     ans = max(ans, math.sqrt(tmp[0] ** 2 + tmp[1] ** 2))
 
-    # y
-    # minus, plus
     tmp = [0, 0]
     for x, y in XY:
         if y > 0:
@@ -104,8 +90,6 @@ def main():
 
     ans = max(ans, math.sqrt(tmp[0] ** 2 + tmp[1] ** 2))
 
-    # y
-    # minus, minus
     tmp = [0, 0]
     for x, y in XY:
         if y < 0:

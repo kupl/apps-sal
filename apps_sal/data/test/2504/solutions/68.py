@@ -16,7 +16,6 @@ EPS = 0.000000001
 
 
 def warshall_floyd(d, n):
-    # d[i][j]:iからjへの最短距離
     for k in range(n):
         for i in range(n):
             for j in range(n):

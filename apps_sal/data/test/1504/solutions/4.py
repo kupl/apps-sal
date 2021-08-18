@@ -4,13 +4,10 @@ tt = int(stdin.readline())
 
 for loop in range(tt):
 
-    # don't
-
     n, k = map(int, stdin.readline().split())
     l1, r1 = map(int, stdin.readline().split())
     l2, r2 = map(int, stdin.readline().split())
 
-    # don't
     if l1 >= r2 or l2 >= r1:
         ans = float("inf")
         for usenum in range(1, n + 1):

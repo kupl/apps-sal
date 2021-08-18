@@ -21,11 +21,8 @@ def comb_mod(n, k, p):
             v %= p
         return v
 
-    # n! mod p
     n_mod = fact_mod(n, p)
-    # k!^(p-2) mod p
     k_mod = pow(fact_mod(k, p), p - 2, p)
-    # (n-k)!^(p-2) mod p
     n_minus_k_mod = pow(fact_mod(n - k, p), p - 2, p)
 
     return (n_mod * k_mod * n_minus_k_mod) % p

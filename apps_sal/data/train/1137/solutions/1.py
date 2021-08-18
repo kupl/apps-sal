@@ -6,7 +6,6 @@ print2 = stdout.write
 
 def sub_lists(my_list, le):
     for x in combinations(my_list, 2):
-        # print(x)
         if sum(x) == 2000:
             return "Accepted"
     return "Rejected"

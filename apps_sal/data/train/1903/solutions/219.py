@@ -4,9 +4,7 @@ import heapq
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         total_cost = 0
-        # any initial point can be chosen
         x1, y1 = points.pop()
-        # then make a heap sorted by distance to that point
 
         cost_heap = []
         heapq.heapify(cost_heap)

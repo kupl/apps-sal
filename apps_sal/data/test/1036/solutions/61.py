@@ -43,7 +43,7 @@ def gi():
 
 
 def gtc(tc, ans):
-    print(("Case #" + str(tc) + ":", ans))
+    print(("Case
 
 
 def cil(n, m):
@@ -59,7 +59,7 @@ def pro(a):
 
 
 def swap(a, i, j):
-    a[i], a[j] = a[j], a[i]
+    a[i], a[j]=a[j], a[i]
 
 
 def si():
@@ -84,14 +84,14 @@ def bo(i):
 
 def graph(n, m):
     for i in range(m):
-        x, y = mi()
+        x, y=mi()
         a[x].append(y)
         a[y].append(x)
 
 
-t = 1
-uu = t
-w = {"PS": "S", "PR": "P", "RS": "R"}
+t=1
+uu=t
+w={"PS": "S", "PR": "P", "RS": "R"}
 
 
 def winner(s, p):
@@ -100,21 +100,21 @@ def winner(s, p):
     return w["".join(sorted(s + p))]
 
 
-dp = {}
+dp={}
 
 
 def rec(i, j):
     if j == 0:
-        dp[i, j] = s[i]
+        dp[i, j]=s[i]
         return dp[i, j]
     if (i, j) in dp:
         return dp[i, j]
-    dp[i, j] = winner(rec(i, j - 1), rec((i + pow(2, j - 1, n)) % n, j - 1))
+    dp[i, j]=winner(rec(i, j - 1), rec((i + pow(2, j - 1, n)) % n, j - 1))
     return dp[i, j]
 
 
 while t > 0:
     t -= 1
-    n, k = mi()
-    s = ii()
+    n, k=mi()
+    s=ii()
     print((rec(0, k)))

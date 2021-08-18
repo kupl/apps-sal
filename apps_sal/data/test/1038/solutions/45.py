@@ -20,10 +20,8 @@ def main():
 
     A -= 1
     if A % 2 == 1:
-        # 偶数個
         if (A // 2) % 2 == 1:
             A = 0
-        # 奇数個
         else:
             A = 1
     else:

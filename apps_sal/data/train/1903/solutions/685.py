@@ -6,8 +6,7 @@ class Solution:
         n = len(points)
         mst_nodes = [0 for i in range(n)]
         mst_nodes_cnt = 0
-        # mst_edges = set() # (int,int)
-        h = []  # heap of edges connected to MST (distance, source, dest)
+        h = []
         def man_dist(i, j): return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
 
         mst_nodes[0] = 1

@@ -1,7 +1,3 @@
-# Math
-# Explanation: Solution 1
-# O(n)
-# O(logn)
 
 class Solution:
     def primePalindrome(self, N: int) -> int:

@@ -6,7 +6,7 @@ class Solution:
 
         def find(i):
             while not root[i] == i:
-                root[i] = root[root[i]]  # path compress to reduce test time, since we need to do dfs to get the root, so we can find the current root and set previous to this one, repeat it till get the final root we wanted
+                root[i] = root[root[i]]
                 i = root[i]
             return i
 
@@ -19,8 +19,4 @@ class Solution:
                     union(a, i)
                     union(a, a // i)
 
-        # for a in A:
-        #     dic[find(a)] += 1
-        #     res = max(res, dic[find(a)])
-        # return res
         return Counter([find(a) for a in A]).most_common(1)[0][1]

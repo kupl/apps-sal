@@ -12,12 +12,6 @@ class Skiplist:
         self.Hash = {(-1, -1): [self.Levels[0]]}
 
     def search(self, target: int) -> bool:
-        # print('search',target)
-        # for l in self.Levels:
-        #     print('new level')
-        #     while l:
-        #         print(l.v)
-        #         l = l.next
         height = len(self.Levels) - 1
         start = self.Levels[-1]
         old = self.Levels[-1]
@@ -33,11 +27,8 @@ class Skiplist:
         return False
 
     def add(self, num: int) -> None:
-        # print('add',num)
         cand = []
         height = len(self.Levels) - 1
-        # start = self.Levels[-1]
-        # start = self.Hash[old.v][height]
         old = self.Levels[-1]
         while height >= 0:
             start = self.Hash[old.v][height]
@@ -47,7 +38,6 @@ class Skiplist:
                 start = start.__next__
             cand.append(old)
             height -= 1
-        # print(cand)
         i, flag = len(cand) - 1, True
         new = (num, cand[-1].v[1] + 1) if cand[-1].v[0] == num else (num, 0)
         self.Hash[new] = []
@@ -66,14 +56,8 @@ class Skiplist:
                 self.Levels[-1].next = node
                 node.next = Node(10000000, 10000000)
             flag = random.choices([True, False], [0.5, 0.5])[0]
-        # for l in self.Levels:
-        #     print('new level')
-        #     while l:
-        #         print(l.v)
-        #         l = l.next
 
     def erase(self, num: int) -> bool:
-        # print('erase',num)
         cand = []
         height = len(self.Levels) - 1
         old = self.Levels[-1]
@@ -89,8 +73,6 @@ class Skiplist:
         if todel.v[0] != num:
             return False
         l = len(cand)
-        # for c in cand:
-        #     print(c.v)
         for i in range(l - 1, -1, -1):
             if cand[i].next.v == todel.v:
                 t = cand[i].__next__
@@ -99,16 +81,4 @@ class Skiplist:
             else:
                 break
         del self.Hash[todel.v]
-        # for l in self.Levels:
-        #     print('new level')
-        #     while l:
-        #         print(l.v)
-        #         l = l.next
         return True
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

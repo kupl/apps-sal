@@ -1,4 +1,3 @@
-# cook your dish here
 pr = [2]
 sv = [0] * (203)
 for i in range(3, 202, 2):
@@ -10,7 +9,6 @@ sp = [0] * (5 * 10**4)
 for i in range(len(pr)):
     for j in range(i + 1, len(pr)):
         sp[pr[i] * pr[j]] = 1
-# print(sp[:40])
 for _ in range(int(input())):
     n = int(input())
     an = "NO"

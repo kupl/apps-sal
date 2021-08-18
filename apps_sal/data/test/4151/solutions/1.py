@@ -21,7 +21,6 @@ arrx = []
 for i in list(dict2.keys()):
     arrx.append((dict2[i][0], dict2[i][1]))
 arrx.sort()
-# print(*arrx)
 count = 0
 indexes = 0
 if(len(arrx) == 0):
@@ -45,7 +44,6 @@ else:
             maxval = max(maxval, arrx[i][1])
     count += 1
     rem = n - indexes
-    # print(rem,count)
     if(flag == 1):
         countx = count + rem
     else:

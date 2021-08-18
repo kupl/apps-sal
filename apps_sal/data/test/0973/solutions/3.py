@@ -7,13 +7,11 @@ def A():
             return False
         pasture.append(line)
 
-    # Check columns
     for i in range(C):
         column = ''.join([l[i] for l in pasture])
         if 'WS' in column or 'SW' in column:
             return False
 
-    # Here it is ok
     return '\n'.join(pasture)
 
 

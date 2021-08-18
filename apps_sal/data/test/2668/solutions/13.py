@@ -1,4 +1,3 @@
-# cook your dish here
 j, s, m = map(int, input().split())
 rem = m - j
 n = rem // s

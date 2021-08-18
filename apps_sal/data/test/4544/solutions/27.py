@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 N = int(input())
 a = list(map(int, input().split()))
@@ -13,5 +12,4 @@ for i in range(N):
         count[a[i] + 1] += 1
 
 max_value = max(count)
-#max_index = count.index(max_value)
 print(max_value)

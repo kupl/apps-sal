@@ -34,11 +34,11 @@ and 255.
     TypeError: 'b' is not of type int
     """
 
-    if not type(r).__name__ == 'int':    # python2 does not have instanceof()
+    if not type(r).__name__ == 'int':
         raise TypeError("'r' is not of type int")
-    if not type(g).__name__ == 'int':    # python2 does not have instanceof()
+    if not type(g).__name__ == 'int':
         raise TypeError("'g' is not of type int")
-    if not type(b).__name__ == 'int':    # python2 does not have instanceof()
+    if not type(b).__name__ == 'int':
         raise TypeError("'b' is not of type int")
 
     return "{r:02X}{g:02X}{b:02X}".format(
@@ -69,7 +69,7 @@ def saturate(x):
         ...
     TypeError: given value is not of type int
     """
-    if not type(x).__name__ == 'int':    # python2 does not have instanceof()
+    if not type(x).__name__ == 'int':
         raise TypeError("given value is not of type int")
 
     x = 0 if x < 0 else x

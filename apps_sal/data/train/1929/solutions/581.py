@@ -11,10 +11,6 @@ class StreamChecker:
         return self.trie.search(self.history[::-1])
 
 
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
-
 class Node():
     def __init__(self):
         self.children = {}

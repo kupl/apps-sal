@@ -1,5 +1,5 @@
 h = int(input())
-l = [c == '#' for _ in range(h) for c in input()]
+l = [c == '
 w = len(l) // h
 cross = (0, w - 1, w, w + 1, 2 * w)
 for i in range(1, (h - 2) * w - 1):

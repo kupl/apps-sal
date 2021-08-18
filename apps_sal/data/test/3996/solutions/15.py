@@ -32,9 +32,7 @@ if top == 0:
     bot = modinv(2, mod)
 else:
     bot = pow(2, top - 1, mod)
-# print(bot)
 
-# odd case
 if yoink % 2 == 0:
     blah = modinv(3, mod)
     blah *= (bot + 1)

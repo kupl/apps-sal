@@ -6,9 +6,6 @@ line = input()
 
 shapes = list(map(int, line.split()))
 
-# circle = 1
-# triangle = 2
-# square = 3
 
 for a, b in zip(shapes, shapes[1:]):
     if a == 1 or b == 1:

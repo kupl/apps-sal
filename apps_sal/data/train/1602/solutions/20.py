@@ -32,11 +32,9 @@ for i in range(t):
        if n==0:
         lis.append("Possible")
         break
-        #val = False
       else:
        lis.append("Impossible")
        break
-       #val = False
      day+=1
 '''
 for i in lis:

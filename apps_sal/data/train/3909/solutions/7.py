@@ -1,4 +1,3 @@
-# It's nice to put the OEIS but it's not that interesting if they give the algo
 def is_keith_number(n):
     if n < 10:
         return False

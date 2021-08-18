@@ -1,4 +1,3 @@
-# ABC090
 s = input()
 t = input()
 ans = 0

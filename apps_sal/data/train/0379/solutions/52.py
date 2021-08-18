@@ -1,6 +1,5 @@
 class Solution:
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-        # Represents the max value (looking ahead) from this node
         dp1 = [0 for _ in range(len(nums1))] + [0]
         dp2 = [0 for _ in range(len(nums2))] + [0]
 
@@ -23,7 +22,6 @@ class Solution:
                 dp2[j] = (nums2[j + 1] + dp2[j + 1])
                 j -= 1
             else:
-                # Find which one has the greater parent
                 max_value = max(dp1[i + 1] + nums1[i + 1], dp2[j + 1] + nums2[j + 1])
                 dp1[i] = max_value
                 dp2[j] = max_value

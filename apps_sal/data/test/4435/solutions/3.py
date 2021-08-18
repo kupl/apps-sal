@@ -19,7 +19,6 @@ for i, x in enumerate(a):
         graph[i - x].append(i)
     if t:
         que.append(i)
-# print(graph)
 while len(que) > 0:
     now = que.popleft()
     for ne in graph[now]:

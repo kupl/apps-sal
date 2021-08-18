@@ -9,8 +9,6 @@ for i in range(k):
 trap.sort()
 a.sort()
 
-# print(trap)
-# print(a)
 
 x = -1
 l = 0
@@ -35,7 +33,6 @@ while r - l >= 0:
                 rtrap = i[1]
                 ltrap = i[0]
     time += rtrap - ltrap
-    #print(x, weig, time)
     if 2 * time + n + 1 <= t:
         s = max(s, len(a) - x)
         r = x - 1

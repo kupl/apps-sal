@@ -23,7 +23,7 @@ class Combination:
             return 0
         return self.fact[n] * (self.factInv[r] * self.factInv[n - r] % MOD) % MOD
 
-    def nhr(self, n, r):  # 重複組合せ: x_1 + ... + x_n = r
+    def nhr(self, n, r):
         return self.ncr(n + r - 1, n - 1)
 
 
@@ -32,8 +32,8 @@ comb = Combination(N + 100)
 
 
 def primeCount(N):
-    R = int(N**(0.5)) + 1  # 素数の範囲
-    primes = {}  # 素数のリスト
+    R = int(N**(0.5)) + 1
+    primes = {}
     n = N
     for num in range(2, R):
         primes[num] = 0
@@ -42,7 +42,7 @@ def primeCount(N):
             primes[num] += 1
     if n > 1:
         primes[n] = 1
-    return {key: val for key, val in list(primes.items()) if val > 0}  # フィルターをかける
+    return {key: val for key, val in list(primes.items()) if val > 0}
 
 
 ans = 1

@@ -1,8 +1,7 @@
-"""#N=int(input())
+"""
 n,k=map(int,input().split())
 s=input()
 L=[0]*26
-#s=[int(x) for x in input().split()]
 for j in range(0,len(s)):
     L[ord(s[j])-65]=L[ord(s[j])-65]+1
 ans=1000000007
@@ -14,7 +13,6 @@ print(ans)"""
 pre=[]
 for i in range(0,45010):
     pre.append(((i*(i+1))//2))
-#print(pre[:100])
 n=int(input())
 if(n==0 or n==1 or n==2):
     print('No')

@@ -8,7 +8,6 @@ for i in range(0, n):
     mls.append((ls[i] % m, i))
 
 mls.sort()
-# print(mls)
 
 bk1 = set()
 bk2 = set()

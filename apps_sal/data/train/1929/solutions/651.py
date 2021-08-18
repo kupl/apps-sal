@@ -18,20 +18,6 @@ class StreamChecker:
         self.history = ''
 
     def query(self, letter: str) -> bool:
-        # stream next letter if it's in children
-        # new = self.trie
-        # self.streamer.append(new)
-        # i = 0
-        # n = len(self.streamer)
-        # res = False
-        # while i<n:
-        #     pointer = self.streamer.popleft()
-        #     #print(pointer.children)
-        #     if letter in pointer.children:
-        #         self.streamer.append(pointer.children[letter])
-        #         if pointer.children[letter].end:
-        #             res = True
-        #     i+=1
         self.history += letter
         streamer = self.trie
         for c in self.history[::-1]:
@@ -41,8 +27,3 @@ class StreamChecker:
                 return True
             streamer = streamer.children[c]
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

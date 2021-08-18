@@ -1,4 +1,3 @@
-# aとbどちらが勝つか
 def comp(a, b):
     if a == 'R' and b == 'P':
         return b

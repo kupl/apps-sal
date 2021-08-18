@@ -13,6 +13,3 @@ for z in (a, b, c):
         ans -= (m + 1) * (m + 2)
 
 print(ans // 2)
-
-
-# Made By Mostafa_Khaled

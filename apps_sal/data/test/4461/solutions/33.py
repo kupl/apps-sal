@@ -5,14 +5,11 @@ def main():
     H, W = [int(a) for a in input().split(" ")]
 
     cand = []
-    # case 1. w 3 split, h 3 split
     if W % 3 == 0 or H % 3 == 0:
         print((0))
         return 0
-    # W % 3 !== 0 and H % 3 !== 0
     cand.append(H)
     cand.append(W)
-    # case 2. w split -> h split
     cand += split_3(H, W)
     cand += split_3(W, H)
 

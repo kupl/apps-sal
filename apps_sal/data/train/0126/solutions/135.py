@@ -7,7 +7,6 @@ class Solution:
                     my_dict[s[i:i + minSize]] += 1
                 else:
                     my_dict[s[i:i + minSize]] = 1
-        # print(my_dict)
         k = minSize + 1
         if minSize != maxSize:
             while(maxSize >= k):
@@ -17,6 +16,5 @@ class Solution:
                             my_dict[s[i:i + k]] += 1
                         else:
                             my_dict[s[i:i + k]] = 1
-                # print(my_dict)
                 k += 1
         return max(my_dict.values()) if my_dict else 0

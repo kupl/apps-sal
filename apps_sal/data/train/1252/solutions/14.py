@@ -18,5 +18,4 @@ def prime(n):
 for _ in range(int(input())):
     n = int(input())
     s1 = prime(n)
-    # print(s1)
     print(s1 % 10)

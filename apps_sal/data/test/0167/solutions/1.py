@@ -31,7 +31,6 @@ if (ans > len(b) - len(y)):
     lb = 0
     rb = len(y)
 
-#ans = min(len(b) - len(x), len(b) - len(y))
 
 j = len(y) - 1
 
@@ -47,7 +46,6 @@ for i in range(len(x)):
         ans = len(b) - i - j - 2
         lb = i + 1
         rb = j + 1
-    #ans = min(ans, len(b) - i - j - 2)
 
 
 if (ans == len(b)):

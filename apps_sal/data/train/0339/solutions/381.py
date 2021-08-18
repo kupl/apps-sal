@@ -1,6 +1,5 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        # TC : O(n**2), where n = max(#nums1, #nums2)
         nums1_sq_dct = collections.defaultdict(int)
         nums2_sq_dct = collections.defaultdict(int)
 

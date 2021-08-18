@@ -1,5 +1,3 @@
-# Contest: Educational Codeforces Round 78 (Rated for Div. 2) (https://codeforces.com/contest/1278)
-# Problem: B: A and B (https://codeforces.com/contest/1278/problem/B)
 
 def rint():
     return int(input())

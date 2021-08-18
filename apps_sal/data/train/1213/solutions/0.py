@@ -1,4 +1,3 @@
-# cook your dish here
 for t in range(int(input())):
     x1, x2, x3, v1, v2 = [int(x)for x in input().rstrip().split()]
     t1 = abs(x3 - x1) / v1

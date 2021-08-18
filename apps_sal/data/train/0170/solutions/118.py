@@ -21,8 +21,6 @@ class Solution:
             nonlocal p1
             nonlocal p2
 
-            # print (p1, p2)
-
             if l >= p2:
                 return True
 
@@ -43,10 +41,6 @@ class Solution:
                     return True
 
             return False
-
-        # print (chk(8))
-
-        # return 0
 
         l = 0
         r = n

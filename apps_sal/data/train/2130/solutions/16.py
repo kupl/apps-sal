@@ -19,5 +19,3 @@ for i in range(1, n):
     dp[i] = C(ar[i] - 1, ar[i - 1]) * dp[i - 1] % M
 
 print(dp[n - 1])
-
-#  C:\Users\Usuario\HOME2\Programacion\ACM

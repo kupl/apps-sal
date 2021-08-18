@@ -1,4 +1,3 @@
-# This is the Miller-Rabin test for primes, which works for super large n
 
 import random
 

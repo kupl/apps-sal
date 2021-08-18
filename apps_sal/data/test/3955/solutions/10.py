@@ -28,5 +28,3 @@ else:
         if maximo < var:
             maximo = var
     print(maximo)
-
-# 1500336849347

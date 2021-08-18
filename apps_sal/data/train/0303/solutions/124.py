@@ -5,20 +5,6 @@ class Solution:
         dp2 = [0 for _ in range(len(A))]
 
         for i in range(len(A)):
-            # we have 2 options - to partition or not to partition.
-
-            #             if i - K + 1 < 0:
-            #                 maxCand = max(A[:i+1])
-            #                 size = i + 1
-            #             else:
-            #                 maxCand = max(A[i - K + 1:i+1])
-            #                 size = K
-
-            #             # if we choose not to partition
-            #             dp[0][i] = size * maxCand + max(dp[0][i - K], dp[1][i - K])
-
-            #             # if we choose to partition at this candidate
-            #             dp[1][i] = A[i] + max(dp[0][i - 1], dp[1][i - 1])
 
             startIndex = max(0, i - K + 1)
             currMax = 0

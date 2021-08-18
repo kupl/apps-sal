@@ -31,7 +31,6 @@ ma = max(ma, prod)
 
 
 for i in range(1, len(digits)):
-    # print(digits)
     if not digits[~i] == 0:
         digits[~i] -= 1
         j = 1
@@ -43,7 +42,6 @@ for i in range(1, len(digits)):
         continue
 
     prod = 1
-    # print(digits)
     for j in range(len(digits)):
         if not (j == 0 and digits[j] == 0):
             prod = prod * digits[j]

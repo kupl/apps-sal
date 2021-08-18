@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 k = int(input())
 ds = list(map(int, input().split()))
 es = []

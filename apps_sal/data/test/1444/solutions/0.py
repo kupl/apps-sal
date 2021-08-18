@@ -19,7 +19,6 @@ for x in range(k):
 low = total
 lowInd = 0
 
-# print(total)
 
 for x in range(n - k):
     s -= a[x][0]

@@ -16,7 +16,6 @@ class Solution:
 
             l.append(cur % ln)
 
-        # print(l)
         res = 0
         for i in l:
             res += i

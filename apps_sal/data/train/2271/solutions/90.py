@@ -1,16 +1,16 @@
-class Unionfind():  # Unionfind
+class Unionfind():
     def __init__(self, N):
         self.N = N
         self.parents = [-1] * N
 
-    def find(self, x):  # グループの根
+    def find(self, x):
         if self.parents[x] < 0:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def union(self, x, y):  # グループの併合
+    def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
         if x == y:
@@ -20,7 +20,7 @@ class Unionfind():  # Unionfind
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def groups(self):  # 全てのグループごとの要素
+    def groups(self):
         members_dict = {}
         for i in range(self.N):
             if self.find(i) not in members_dict:

@@ -2,7 +2,7 @@ from operator import mul
 
 
 def getMatrixProduct(Ass, Bss, MOD):
-    BssTr = [list(Bs) for Bs in zip(*Bss)]  # 転置
+    BssTr = [list(Bs) for Bs in zip(*Bss)]
     ansss = [[sum(map(mul, As, Bs)) % MOD for Bs in BssTr] for As in Ass]
     return ansss
 

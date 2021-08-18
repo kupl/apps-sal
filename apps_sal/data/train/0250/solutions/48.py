@@ -1,8 +1,5 @@
 class Solution(object):
     def mincostToHireWorkers(self, quality, wage, K):
-        #from fractions import Fraction
-        # workers = sorted((Fraction(w, q), q, w)
-        #                 for q, w in zip(quality, wage))
         workers = sorted((w / q, q, w)
                          for q, w in zip(quality, wage))
 

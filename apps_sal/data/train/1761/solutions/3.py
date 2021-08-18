@@ -1,8 +1,3 @@
-# That was the easy?
-# - Cache is too slow (first version with bisect failed monsters)
-# - Recursion is too deep
-# - Formula is too imprecise
-# I fear what the hard version will be x)
 
 x, y, r, i, memo = 3, 4, 2, 0, []
 for n in range(3, 100000):

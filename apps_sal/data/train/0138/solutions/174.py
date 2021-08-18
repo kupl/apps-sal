@@ -22,5 +22,4 @@ class Solution:
                     is_pos = not is_pos
                 if is_pos:
                     max_len = max(max_len, i - start)
-            # print(start, i, is_pos, max_len)
         return max_len

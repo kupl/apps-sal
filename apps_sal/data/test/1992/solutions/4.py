@@ -6,15 +6,6 @@ order = [int(x) for x in input().split()]
 
 touch = [int(x) for x in input().split()]
 
-# n = 100000
-# order = [0] * n
-# k = 2
-# m = 100000
-# touch = [0] * n
-# for i in range(n):
-#     order[i] = i
-# for i in range(m):
-#     touch[i] = i
 
 res = 0
 d = {}

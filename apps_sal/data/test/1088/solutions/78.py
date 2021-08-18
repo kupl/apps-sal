@@ -5,18 +5,6 @@ N, K = map(int, readline().split())
 DIV = 998244353
 A = [list(map(int, readline().split())) for i in range(N)]
 
-# Kの制約がない場合
-# どんなに入れ替えても、同じ行・同じ列に存在する数の組み合わせは変わらない
-# つまり入れ替え可能な列のペアは限られている
-# 行・列に対して、入れ替え可能なペアの通り数を算出し、それを掛け合わせたものが答え
-
-# 行Aと行Bが入れ替え可能で行Bと行Cが入れ替え可能な場合、
-# 行Aと行Cが直接入れ替え可能でなくても操作によって行A,行Cは入れ替えることが出来る
-# UnionFindで入れ替え可能なもの同士をグルーピングする
-
-# by size
-# 0-indexed
-
 
 class UnionFind:
     N = 0
@@ -43,7 +31,6 @@ class UnionFind:
         if x == y:
             return
         if self.size[x] > self.size[y]:
-            # 大きい方にくっつける
             self.parent[y] = x
             self.size[x] += self.size[y]
         else:
@@ -74,15 +61,12 @@ for i in range(N - 1):
             if A[i][k] + A[j][k] > K:
                 break
         else:
-            # print("行",i,j,"入れ替え可能")
             UF_row.unite(i, j)
 
 row_pat = 1
 row_roots = UF_row.get_roots()
 for root in row_roots:
     siz = UF_row.get_group_size(root)
-    # sizの階乗通り分組み合わせが存在する
-    # print("root",root,"siz",siz)
     pat = 1
     for p in range(1, siz + 1):
         pat *= p
@@ -90,7 +74,6 @@ for root in row_roots:
     row_pat *= pat
     row_pat %= DIV
 
-# print("row_pat",row_pat)
 
 UF_col = UnionFind(N)
 
@@ -100,14 +83,12 @@ for i in range(N - 1):
             if A[k][i] + A[k][j] > K:
                 break
         else:
-            # print("列",i,j,"入れ替え可能")
             UF_col.unite(i, j)
 
 col_pat = 1
 col_roots = UF_col.get_roots()
 for root in col_roots:
     siz = UF_col.get_group_size(root)
-    # print("root",root,"siz",siz)
     pat = 1
     for p in range(1, siz + 1):
         pat *= p
@@ -115,6 +96,5 @@ for root in col_roots:
     col_pat *= pat
     col_pat %= DIV
 
-# print("col_pat",col_pat)
 
 print((row_pat * col_pat) % DIV)

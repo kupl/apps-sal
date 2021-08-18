@@ -16,6 +16,5 @@ for i in range(n + 1):
                 if s0[k] == s[j]:
                     tmp += 1
                     s0[k] = -1
-    # print(i,tmp)
     tmp, ans = 0, max(ans, tmp)
 print(ans)

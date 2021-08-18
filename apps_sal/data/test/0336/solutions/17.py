@@ -1,4 +1,3 @@
-# You lost the game.
 n, a, b, c, d = list(map(int, input().split()))
 r = 0
 for e in range(1, n + 1):

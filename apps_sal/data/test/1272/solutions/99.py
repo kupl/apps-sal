@@ -1,4 +1,3 @@
-# AC
 
 class UnionFind():
     def __init__(self, n):
@@ -72,7 +71,6 @@ for i in range(m):
         member_a = uf.size(a)
         member_b = uf.size(b)
         uf.union(a, b)
-        # 不便さの減少幅(>=0)
         add = culc(uf.size(a)) - culc(member_a) - culc(member_b)
         ans.append(ans[-1] - add)
 

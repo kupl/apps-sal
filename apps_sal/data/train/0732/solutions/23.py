@@ -9,7 +9,6 @@ for _ in range(int(input())):
         s2 += B[i]
         d1.append(s1 * (i + 1))
         d2.append(s2 * (i + 1))
-    #  print(d1, d2)
     for i in range(N):
         if (d1[i] == d2[i]) and (d1[i + 1] == d2[i + 1]):
             ans += A[i]

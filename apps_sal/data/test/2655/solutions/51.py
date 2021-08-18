@@ -5,10 +5,10 @@ A.sort(reverse=True)
 
 ans = 0
 
-i = 0  # 何人目のフレンドリーさがプラスされるか
-nokori = N - 1  # 残り入れなければならない人数
+i = 0
+nokori = N - 1
 while nokori > 0:
-    if i == 0:  # 最もフレンドリーな人は初めに入れる
+    if i == 0:
         ans += A[i]
         nokori -= 1
     else:

@@ -30,24 +30,19 @@ for n in range(64):
             tvoneone.append(i)
 
     b = np.zeros((N, N), dtype=np.uint64)
-    ###行のAND=1とOR=0を埋める###
     for i in range(N):
         if su[i] == 1:
             b[i] = np.ones(N, int)
-    ###列のAND=1とOR=0を埋める###
     for i in range(N):
         if tv[i] == 1:
             b[:, i] = np.ones(N, int)
-    ###行と列の値が一致するところを埋める###
     b |= np.dot(np.array([u]).T, np.ones((1, N), dtype=np.uint64)) & np.dot(np.array([v]).T, np.ones((1, N), dtype=np.uint64)).T
-    ###行のOR=1を満たしていく###
     if 1 not in tv and 3 not in tv:
         m = len(tvzerozero)
         now = 0
         for i in suoneone:
             b[i][tvzerozero[now % m]] += 1
             now += 1
-    ###列のOR=1を満たしていく###
     if 1 not in su and 3 not in su:
         m = len(suzerozero)
         now = 0

@@ -15,7 +15,6 @@ for j in range(num_customers):
 
     cost = served * dish_costs[dish]
     not_served = amount - served
-    # print(j, dish, served)
 
     while not_served > 0 and dbp_i != num_dishes:
         i = dishes_by_price[dbp_i]
@@ -23,7 +22,6 @@ for j in range(num_customers):
         cost += served * dish_costs[i]
         dish_amounts[i] -= served
         not_served -= served
-        # print(j, i, served)
 
         if dish_amounts[i] == 0:
             dbp_i += 1

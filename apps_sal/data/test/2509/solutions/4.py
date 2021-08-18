@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 
 
@@ -17,7 +16,6 @@ for b in range(1, N + 1):
         total -= N
     else:
         total -= K * (N // b) + max(0, min(N % b, K - 1))
-    #print(b, total)
 
 answer = total
 print(answer)

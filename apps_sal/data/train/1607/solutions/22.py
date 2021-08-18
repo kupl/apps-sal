@@ -1,5 +1,3 @@
-# http://codeforces.com/contest/894/problem/0
-# solved
 
 array = input()
 a = len(array)

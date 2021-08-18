@@ -63,4 +63,3 @@ for i in cnt_2:
             if i != j_ and j_ != k_ and k_ != i:
                 ans += 1
 print(ans)
-# print(d)

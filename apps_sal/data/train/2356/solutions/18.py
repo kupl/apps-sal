@@ -13,7 +13,6 @@ dp[0][0] = 1
 
 for i in range(1, N + 1):
     for j in range(N, 0, -1):
-        # j-1 の i-1 分割に 1 を足す + 2*j の i 分割を 2 で割る
         dp[i][j] = (dp[i - 1][j - 1] + dp[i][2 * j]) % mod
 
 print(dp[N][K] % mod)

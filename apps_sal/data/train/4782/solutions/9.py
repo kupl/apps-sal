@@ -1,6 +1,4 @@
 import operator
-# a skeleton class with required operators provided for convenience
-# feel free to use another approach
 
 
 def calc(tree, args):

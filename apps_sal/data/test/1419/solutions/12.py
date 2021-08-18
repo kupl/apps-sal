@@ -12,7 +12,7 @@ while lb <= ub:
         while ptr < len(S) and wid + len(S[ptr]) + (ptr + 1 < len(S)) - wptr <= mid:
             wid += len(S[ptr]) + (ptr + 1 < len(S)) - wptr
             ptr, wptr = ptr + 1, 0
-        best = wptr  # [ wptr, best )
+        best = wptr
         wnxt = wptr
         while ptr < len(S) and wnxt < len(S[ptr]) and wid + wnxt + 1 - wptr <= mid:
             if S[ptr][wnxt] == '-':

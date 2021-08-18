@@ -9,8 +9,8 @@ for R in range(2**H):
             if R >> y & 1:
                 for x in range(W):
                     if C >> x & 1:
-                        if c[y][x] == "#":
-                            n += 1
+                        if c[y][x] == "
+                        n += 1
         if n == K:
             ans += 1
 print(ans)

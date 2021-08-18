@@ -4,9 +4,7 @@ t = int(input())
 
 
 def isprime(c):
-    # print(int(math.ceil(math.sqrt(c)))+1)
     for x in range(2, int(math.ceil(math.sqrt(c))) + 1):
-        # print("x: {}".format(x))
         if c % x == 0:
             return False
 

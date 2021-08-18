@@ -8,7 +8,6 @@ def prime(num):
         while num % i == 0:
             num /= i
             array.append(i)
-    # リストが空なら入力(num)は素数
 
     if array == []:
         return [num]

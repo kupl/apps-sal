@@ -12,7 +12,6 @@ while(i < n):
     else:
         ans += s[i]
         i += 1
-# print(ans)
 while(i < n):
     if(dict1[int(s[i])] < int(s[i])):
         break

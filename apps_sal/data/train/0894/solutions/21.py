@@ -8,7 +8,6 @@ for testCase in range(t):
         array = input()
     for i in range(n):
         array1[i] = array2[i] = i + 1
-#	print array2,"     ",array1
     for i in range(n):
         rand = random.randint(0, len(array1) - 1)
         print(array1[rand], end=' ')

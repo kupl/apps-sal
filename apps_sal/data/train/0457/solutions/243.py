@@ -1,6 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        def helper(coins, rem, count):  # count is a list
+        def helper(coins, rem, count):
             if rem < 0:
                 return -1
             if rem == 0:

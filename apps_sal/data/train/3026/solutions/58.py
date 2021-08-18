@@ -5,4 +5,3 @@ def min_value(digits):
             storage.append(str(scan))
     storage.sort()
     return int("".join(storage))
-    # your code here

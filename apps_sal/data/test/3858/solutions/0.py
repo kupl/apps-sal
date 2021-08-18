@@ -16,16 +16,14 @@ N = int(input())
 XY = [[int(x) for x in input().split()] for _ in range(N)]
 
 answer = pow(2, N, MOD)
-answer -= N + 1  # 空、1点
+answer -= N + 1
 for i, (x, y) in enumerate(XY):
-    # i を選び、i+1番目以上のうちいくつかを選んで線分とする
     pts = []
     for x1, y1 in XY[i + 1:]:
         dx, dy = x1 - x, y1 - y
         g = gcd(dx, dy)
         dx //= g
         dy //= g
-        # 標準化
         if dx < 0:
             dx, dy = -dx, -dy
         elif dx == 0:

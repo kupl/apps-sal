@@ -34,5 +34,4 @@ for i in range(h):
                         dq.append((y + m[1], x + m[0], d + 1))
 
             ans = max(ans, d)
-            # print(d,i,j)
 print(ans)

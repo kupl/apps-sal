@@ -28,15 +28,12 @@ class Solution:
 
             if (r >= len(A)):
                 if (r - l > ans):
-                    #print (l,r,ans)
                     ans = r - l
                 break
 
             if (r - l + 1 > ans):
-                #print (l,r,ans)
                 ans = r - l + 1
 
-            # r+=1
             while (l < len(A) and A[l] == 1):
                 l += 1
 

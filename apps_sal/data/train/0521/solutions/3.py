@@ -32,8 +32,6 @@ for _ in range(t):
             d1 = dist(a, 0, x, y)
             d2 = dist(b, 0, x, y)
             ans = return_angle(d1, d2, d)
-          #  r=(d1*d2*d)/(4*ar(d1,d2,d))
-         #   ans=asin(d/(2*r))
             ans = abs(ans)
             pp.append([ans, i, j])
     pp.sort(reverse=True)

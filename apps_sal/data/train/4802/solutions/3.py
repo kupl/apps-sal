@@ -1,4 +1,3 @@
-# A blank slate
 import re
 
 
@@ -54,7 +53,6 @@ class Checkout(object):
 
                     if quant == count_items:
                         self.ci = [x for x in self.ci if x[0] != item]
-                        #print('updated', self.ci)
                         self.promo_ci.append((item, doll))
                 elif type == 'buy':
                     items_sofar = [x for x in self.ci if x[0] == item]
@@ -65,9 +63,7 @@ class Checkout(object):
                     if quant + doll == count_items:
 
                         self.ci = [x for x in self.ci if x[0] != item]
-                        #print('updated', self.ci)
                         self.promo_ci.append((item, quant * self.get_price(item)))
-                        # self.free.append(item)
                 elif type == 'ormore':
                     if item not in self.ormore:
                         items_sofar = [x for x in self.ci if x[0] == item]
@@ -76,8 +72,6 @@ class Checkout(object):
                         print(('ormore', quant, doll, item, self.ci, count_items))
 
                         if count_items >= quant:
-                            #self.ci = [x for x in self.ci if x[0]!=item]
-                            #print('updated', self.ci)
                             self.promo_ci.append((item, -doll))
                             self.ormore.append(item)
 

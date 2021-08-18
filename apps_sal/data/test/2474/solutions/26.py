@@ -2,7 +2,7 @@ N = int(input())
 C = list(map(int, input().split()))
 MOD = 1_000_000_007
 
-B = [0 for _ in range(N + 1)]  # 2べきmod
+B = [0 for _ in range(N + 1)]
 B[0] = 1
 for i in range(1, N + 1):
     B[i] = B[i - 1] * 2
@@ -21,7 +21,7 @@ ans %= MOD
 print(ans)
 
 """
-D = [0 for _ in range(N)]#累積和
+D = [0 for _ in range(N)]
 D[0] = C[0]
 for i in range(1,N):
   D[i] = D[i-1] + C[i]

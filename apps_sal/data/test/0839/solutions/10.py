@@ -1,6 +1,5 @@
 from itertools import permutations
 import sys
-#sys.stdin = open('input.txt', 'r')
 g = []
 for i in range(5):
     g.append([])

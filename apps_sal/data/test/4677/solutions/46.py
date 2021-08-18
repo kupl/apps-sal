@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 S = list(input())
 ans = []

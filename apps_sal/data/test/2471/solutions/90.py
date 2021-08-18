@@ -12,7 +12,6 @@ def main(h, w, coords):
     ans = [0 for _ in range(10)]
     for coor in coords:
         sq.extend(getsqs(coor, h, w))
-#        print(coor,getsqs(coor,h,w))
     sq.sort()
     sq.append(h * w)
     ind = 0

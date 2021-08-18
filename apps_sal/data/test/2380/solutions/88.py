@@ -2,7 +2,6 @@ N, M = list(map(int, input().split()))
 A = sorted(list(map(int, input().split())))
 BC = [list(map(int, input().split())) for _ in range(M)]
 
-# n番目の要素でソートsort
 BC = sorted(BC, reverse=True, key=lambda x: x[1])
 
 m = A[0]

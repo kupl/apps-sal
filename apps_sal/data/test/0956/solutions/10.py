@@ -21,7 +21,6 @@ for i in sor:
     for j in sor:
         if (i != j) & (j not in d[i]):
             m = d[i] & d[j]
-#			print(i, j, d[i] & d[j])
             if (len(m) / len(d[i])) - (k / 100.0) > -0.000000001:
                 tmp.append(j)
     print(i, ": ", len(tmp), " ", " ".join(map(str, tmp)), sep="")

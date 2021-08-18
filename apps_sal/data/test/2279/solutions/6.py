@@ -8,7 +8,6 @@ for i in range(2, 2 * n + 1):
         dict[L[j]] = (i, j + 1)
 
 sorted_dict = sorted(dict.items(), key=operator.itemgetter(0), reverse=True)
-# print(sorted_dict)
 ans = [0] * 2 * n
 
 for i in sorted_dict:

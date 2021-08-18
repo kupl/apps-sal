@@ -1,9 +1,6 @@
 L = input()
 l = len(L)
 dp = [[0] * 2 for _ in range(100002)]
-# dp[i][smaller]: i桁目までみる　未満なら1
-# dp[i][1] : i桁目までみて、a, bどちらもL未満
-# dp[i][0] : i桁目までみて、a+b = L
 dp[0][0] = 1
 mod = 10**9 + 7
 

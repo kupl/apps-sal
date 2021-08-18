@@ -57,7 +57,6 @@ if z > 1:
         ma = math.log(x) + math.log(y) + math.log(math.log(z))
         c = 10
 
-# if max(x , y, z) <= 1
 if c == -1:
     if ma < x ** (y ** z):
         ma = x ** (y ** z)

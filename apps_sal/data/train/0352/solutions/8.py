@@ -20,6 +20,6 @@ class Solution:
             substring = word[:i] + word[i + 1:]
 
             if substring in dictionary:
-                step.append(substring)  # choose
-                self.helper(substring, step, dictionary, result)  # explore
-                step.pop()  # unchoose
+                step.append(substring)
+                self.helper(substring, step, dictionary, result)
+                step.pop()

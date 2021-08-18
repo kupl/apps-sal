@@ -1,5 +1,4 @@
 n = int(input())
-# find A and B such that 3^A + 5^B = N
 maxA = 1
 maxB = 1
 while (3**maxA <= n):

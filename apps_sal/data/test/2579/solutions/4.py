@@ -1,4 +1,3 @@
-# IAWT
 l, r, x, y, k = list(map(int, input().split()))
 
 

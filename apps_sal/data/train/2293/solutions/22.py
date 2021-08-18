@@ -50,7 +50,6 @@ for i in range(2**N):
             if A[nb] < A[tb]:
                 nb = tb
 
-    #print (i,na,nb)
     ans = max(A[na] + A[nb], ans)
     aaa.append(ans)
     dp.append((na, nb))

@@ -1,4 +1,3 @@
-# cook your dish here
 def pw(x, n):
     if x == 0:
         return 1

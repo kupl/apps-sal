@@ -1,7 +1,5 @@
 from functools import lru_cache
 
-# removehigh = [(1 << l) - 1 for l in range(31)]
-
 
 @lru_cache()
 def removehigh(l: int) -> int:

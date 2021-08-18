@@ -1,5 +1,4 @@
 def sum_array(arr):
-    # your code here
     sum = 0
     if arr == None or arr == []:
         return 0

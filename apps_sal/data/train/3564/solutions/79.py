@@ -1,5 +1,4 @@
 def stringy(size):
-    # Good Luck!
     x = ''
     while size > len(x):
         x = x + '1'

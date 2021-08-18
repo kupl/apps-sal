@@ -1,6 +1,5 @@
 import sys
 
-# B - log
 import math
 
 n = int(input())

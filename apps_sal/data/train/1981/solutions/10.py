@@ -28,7 +28,6 @@ class Solution:
                 times -= point[2]
                 prev = point[0] + 1
 
-            # prev = point[0]
         segments.sort(key=lambda element: element[1], reverse=True)
         st = 0
         ans = 0

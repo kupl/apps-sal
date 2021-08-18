@@ -3,15 +3,12 @@ class Solution:
 
         edges = []
         nodes = set()
-        # set up edges with (weight, u, v)
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
                 dis = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 edges.append((dis, i, j))
                 nodes.add(i)
                 nodes.add(j)
-
-        # set up union find
 
         class UnionFindSet:
             def __init__(self, nodes):
@@ -44,7 +41,6 @@ class Solution:
 
         uf = UnionFindSet(nodes)
 
-        # Kruskal Algorithm
         edges.sort()
         cost = 0
         for dis, u, v in edges:

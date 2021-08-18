@@ -6,13 +6,12 @@ class Solution:
         r tracks the hash key for suffix
         '''
         res, l, r = 0, 0, 0
-        mod = 10**9 + 5  # used to ensure that the hash value doesn't overflow
+        mod = 10**9 + 5
         '''
         now start from the beginning and end of the string
         - note you shouldn't search teh whole string because the longest prefix/suffix is the string itself
         '''
         for i in range(len(s) - 1):
-            # hash the prefix/suffix in o(1); 128 can be substituted with any value; it just happens to be the length of ASCII
             '''
             for a given string 'elkmmmelk', prefix elk will be hashed in ascending order.
             e: 'e': hash[e] = ord(e)
@@ -28,6 +27,6 @@ class Solution:
             '''
             l = (l * 128 + ord(s[i])) % mod
             r = (r + pow(128, i, mod) * ord(s[-i - 1])) % mod
-            if l == r:  # if both hash values match, update res
+            if l == r:
                 res = i + 1
         return s[:res]

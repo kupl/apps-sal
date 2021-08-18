@@ -3,7 +3,6 @@ def main():
     def input(): return sys.stdin.readline().strip()
 
     N = int(input())
-    # C:所要時間,S:開始後,F:間隔
     CSF = [list(map(int, input().split())) for _ in range(N - 1)]
 
     for i in range(N):

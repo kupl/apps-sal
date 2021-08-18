@@ -26,9 +26,7 @@ class Solution:
         time = 0
         ht = {}
         for ii in range(len(manager)):
-            # if informTime[ii]==0: ## no sub
-            #    continue
-            if manager[ii] == -1:  # head
+            if manager[ii] == -1:
                 time = informTime[ii]
                 continue
             if manager[ii] not in ht:
@@ -38,27 +36,16 @@ class Solution:
             ht[manager[ii]]['subord'].append(ii)
         print(ht)
 
-        queue = collections.deque()  # store managers only
+        queue = collections.deque()
         queue.append(headID)
-        # print(queue)
         informed = 1
         while len(queue):
             n_sub = len(queue)
-            # print('#########')
-            # print(n_sub)
             for ii in range(n_sub):
                 m = queue.popleft()
-                # print('---------')
-                # print(m)
 
-                # print(ht[m])
-                # if ii == 0:
-                #    time += ht[m]['time'] ##same time/parallel
                 if m in ht:
                     for e in ht[m]['subord']:
-                        if e in ht:  # also a manager
+                        if e in ht:
                             queue.append(e)
-                #print('after updating queue')
-                # print(queue)
-                #informed += 1
         return time

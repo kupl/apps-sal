@@ -33,7 +33,6 @@ def calc(day, a, b, c):
             break
 
     while True:
-        # 0=Monday
         if day == 0 or day == 3 or day == 6:
             a -= 1
             if a < 0:

@@ -1,8 +1,5 @@
 class Solution:
     def mctFromLeafValues(self, arr: List[int]) -> int:
-        # it's equivalent to merge adjacent pairs one by one
-        # every time we merge a pair, they become the bigger one
-        # and add the product to the result
 
         def to_remove():
             cur_min = arr[0] * arr[1]

@@ -7,10 +7,6 @@ def main():
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
-    #from math import gcd
-
-    #inf = 10**17
-    #mod = 10**9 + 7
 
     h, w = map(int, input().split())
     a = [list(map(int, input().split())) for _ in range(h)]
@@ -20,7 +16,6 @@ def main():
         for j in range(w):
             c[i][j] = abs(a[i][j] - b[i][j])
 
-    # 80*160//2 xbit目が1→数値x-6400を取る
     mid = 6400
     dp = [[0] * w for _ in range(h)]
     dp[0][0] = (1 << (mid + c[0][0])) | (1 << (mid - c[0][0]))

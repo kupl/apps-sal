@@ -6,4 +6,4 @@ def compare(a, b):
 
 
 def specificity(s):
-    return [len(re.findall(r, s)) for r in (r'#\w+', r'\.\w+', r'(^| )\w+')]
+    return [len(re.findall(r, s)) for r in (r'

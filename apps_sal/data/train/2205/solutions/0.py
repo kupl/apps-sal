@@ -6,8 +6,6 @@ def main():
 
     H, W, Q = list(map(int, input().split()))
     grid = array('b', [0] * (H * W))
-    #flg_0 = 0
-    #flg_1 = 0
     for h in range(H):
         line = input().rstrip('\n')
         """

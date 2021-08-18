@@ -2,7 +2,6 @@ from itertools import accumulate
 
 *S, = [1 if x == 'A' else 2 for x in input()]
 *T, = [1 if x == 'A' else 2 for x in input()]
-# A=1,B=2
 
 acc_s = (0,) + tuple(accumulate(S))
 acc_t = (0,) + tuple(accumulate(T))

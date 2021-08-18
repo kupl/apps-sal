@@ -45,8 +45,6 @@ def solve():
                 books[ai] = True
                 cost += 1
 
-        # print([i for i in range(n) if books[i]])
-
     print(cost)
 
 

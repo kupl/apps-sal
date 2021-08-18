@@ -21,8 +21,6 @@ def Line(N):
     read_all = [tuple(map(int, input().split())) for _ in range(N)]
     return map(list, zip(*read_all))
 
-#################
-
 
 L = I()
 

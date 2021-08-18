@@ -16,7 +16,6 @@ class Solution:
             presum.pop()
             presum.insert(0, presum[0] + nums[i])
             nums[i] = max([get_one, get_two, get_three])
-        # print(nums)
         if nums[0] == presum[0] / 2:
             return 'Tie'
         elif nums[0] > presum[0] / 2:

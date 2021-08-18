@@ -6,8 +6,6 @@ class Solution:
         for x in transactions:
             t[x[0]].append([int(x[1]), int(x[2]), x[3]])
 
-        # print(t)
-
         for name in t:
             t[name].sort(key=lambda x: x[0])
 
@@ -29,5 +27,4 @@ class Solution:
                     else:
                         break
 
-        # print(t)
         return res

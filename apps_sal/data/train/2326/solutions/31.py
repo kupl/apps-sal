@@ -10,7 +10,6 @@ for i in range(1, N + 1):
 
 A = list(D.items())
 A.sort(reverse=True)
-# print(A)
 
 ans = 0
 ANS = [0 for i in range(N + 1)]

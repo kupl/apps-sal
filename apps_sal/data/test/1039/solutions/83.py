@@ -17,10 +17,10 @@ INF = 10**18
 
 def dijkstra(N, s0, edge):
 
-    d = [INF] * N  # 始点からの距離
-    used = [False] * N  # 探索済みリスト
-    edgelist = [(0, s0)]  # 始点はコスト0で初期化
-    heapq.heapify(edgelist)  # ヒープにpush
+    d = [INF] * N
+    used = [False] * N
+    edgelist = [(0, s0)]
+    heapq.heapify(edgelist)
 
     while len(edgelist):
         minedge = heapq.heappop(edgelist)

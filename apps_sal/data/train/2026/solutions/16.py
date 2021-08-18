@@ -1,29 +1,29 @@
 n, d = list(map(int, input().split()))
 
-a = [0] + list(map(int, input().split())) + [0]  # aumento de timer según estación
+a = [0] + list(map(int, input().split())) + [0]
 X = []
 Y = []
 
 for i in range(n):
-    x, y = list(map(int, input().split()))  # Coordenadas de la estación i.
+    x, y = list(map(int, input().split()))
     X.append(x)
     Y.append(y)
 
-mon = [-1] * n  # array para el monto necesario para llegar.
+mon = [-1] * n
 mon[0] = 0
-Z = 0  # valor que permitirá entrar al loop
+Z = 0
 
 while Z == 0:
     Z = 1
 
-    for i in range(n):  # estamos en estación i
+    for i in range(n):
 
-        for j in range(1, n):  # queremos ir a estación j
+        for j in range(1, n):
 
-            if i != j and mon[i] != -1:  # si no queremos ir a la misma estación y donde estamos pudimos llegar.
-                costo = mon[i] + (abs(X[i] - X[j]) + abs(Y[i] - Y[j])) * d - a[j]  # nuevo costo necesario para ir de i a j.
+            if i != j and mon[i] != -1:
+                costo = mon[i] + (abs(X[i] - X[j]) + abs(Y[i] - Y[j])) * d - a[j]
 
-                if mon[j] == -1 or costo < mon[j]:  # si el nuevo costo es menor que uno anterior, se guarda este o si antes no había ningun costo guardado.
+                if mon[j] == -1 or costo < mon[j]:
                     mon[j] = costo
-                    Z = 0  # volvemos a entrar al loop, esto asegura que todos los mon[] van a dejar de ser '1 y tendran un costo.
-print(mon[-1])  # costo de llegar a la última estación.
+                    Z = 0
+print(mon[-1])

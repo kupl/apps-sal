@@ -14,10 +14,6 @@ class Solution:
             elif len(path) + 1 < len(res):
                 for i, p in enumerate(people):
                     if req_skills[idx] in p_skills[i]:
-                        # intersection = has & p_skills[i]
-                        # has |= p_skills[i]
-                        # new = h
                         dfs(idx + 1, path + [i], has | p_skills[i])
-                        # has -= {x for x in p_skills[i] if x not in intersection}
         dfs()
         return res

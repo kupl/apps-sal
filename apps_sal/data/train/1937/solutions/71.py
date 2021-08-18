@@ -34,10 +34,3 @@ class ThroneInheritance:
                 dfs(self.mapping[child])
         dfs(self.root)
         return [name for name in res if name not in self.dead]
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

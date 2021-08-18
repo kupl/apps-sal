@@ -1,4 +1,3 @@
-# @see http://codeforces.com/contest/644/problem/0
 
 import sys
 

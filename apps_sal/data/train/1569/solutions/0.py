@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 import sys
 import math
@@ -29,7 +28,6 @@ def lcm(a, b):
 def find_sub_string(str):
     str_len = len(str)
 
-    # Count all distinct characters.
     dist_count_char = len(set([x for x in str]))
 
     ctr, start_pos, start_pos_index, min_len = 0, 0, -1, 9999999999

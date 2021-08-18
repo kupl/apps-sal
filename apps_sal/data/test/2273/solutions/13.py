@@ -11,20 +11,17 @@ def fill(graph, n):
     count1, count2, count3 = 0, 0, 0
     for i in graph:
         if dp[i][0]:
-            # fill
             l[i], count1 = 1, count1 + 1
             vis[i] = 1
             for j in graph[i]:
                 dp[j][0] = False
         elif dp[i][1]:
-            # fill
             l[i] = 2
             count2 += 1
             vis[i] = 2
             for j in graph[i]:
                 dp[j][1] = False
         elif dp[i][2]:
-            # fill
             l[i] = 3
             count3 += 1
             vis[i] = 3

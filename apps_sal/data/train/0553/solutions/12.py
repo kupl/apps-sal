@@ -2,7 +2,6 @@ from sys import stdout
 def intput(): return [int(i) for i in input().split()]
 
 
-# Write your code here
 sol = "3332323313233322223333"
 subsets = ['100', '010', '001', '110', '101', '011', '111']
 def eq(x, y): return abs(x - y) < 1e-6

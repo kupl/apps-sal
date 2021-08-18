@@ -1,4 +1,3 @@
-# cook your dish here
 def precumpute(s, n):
     a = [0 for i in range(n)]
     b = [0 for i in range(n)]
@@ -7,7 +6,6 @@ def precumpute(s, n):
     for i in range(n - 3, -1, -1):
         if s[i] == s[i + 1] or s[i + 1] == s[i + 2] or s[i] == s[i + 2]:
             a[i] = 1
-    # print(a)
     prev = -1
     for i in range(n - 1, -1, -1):
         if a[i] == 1:
@@ -33,7 +31,6 @@ def read():
         n, q = list(map(int, input().strip().split()))
         s = input().strip()
         b = precumpute(s, n)
-        # print(b)
         for i in range(q):
             l, r = list(map(int, input().strip().split()))
             solve(b, n, l - 1, r - 1)

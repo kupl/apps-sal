@@ -20,10 +20,8 @@ class Solution:
                 if curflowers == k:
                     bouquets += 1
                     curflowers = 0
-                # print(m,i,curflowers,bouquets)
 
                 if bouquets == m:
-                    # print(m,i,'here')
                     hi = mi
                     break
             if hi > mi:

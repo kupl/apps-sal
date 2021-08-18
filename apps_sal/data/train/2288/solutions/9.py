@@ -18,16 +18,14 @@ L = 0
 R = X
 A = 0
 B = X
-dx = -1  # 初めは減る方
+dx = -1
 current = 0
 answer = []
 for t, a in task:
-    # とりあえず上限を突破して落とす
     A += dx * (t - current)
     B += dx * (t - current)
     current = t
     if a != -1:
-        # 体積の計算
         if a <= L:
             x = A
         elif a >= R:

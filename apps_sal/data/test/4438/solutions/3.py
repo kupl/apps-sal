@@ -15,7 +15,6 @@ for i in range(n):
     x, y = list(map(int, minp().split()))
     a[i] = (max(x, y), x, -y)
 a.sort()
-# print(a)
 p = [None] * 2
 d = [None] * 2
 p[0] = [None] * (n + 1)

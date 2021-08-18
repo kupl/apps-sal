@@ -46,8 +46,6 @@ for i in range(len(t)):
     else:
         b += 1
     tcnt[i + 1] = (a, b)
-# print(scnt)
-# print(tcnt)
 
 for i in range(q):
     a, b, c, d = abcd[i]
@@ -55,7 +53,6 @@ for i in range(q):
     sa, sb = sa[0] - sb[0], sa[1] - sb[1]
     ta, tb = tcnt[d], tcnt[c - 1]
     ta, tb = ta[0] - tb[0], ta[1] - tb[1]
-    # print(sa,sb,ta,tb)
 
     if abs((sa - sb) - (ta - tb)) % 3 == 0:
         print("YES")

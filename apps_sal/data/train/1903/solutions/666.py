@@ -1,7 +1,5 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # O(n^2) edges, sort them, select from low to high, and add edge to tree
-        # if both sides are not in a same set.
         out = 0
         edges = []
         for i in range(len(points)):

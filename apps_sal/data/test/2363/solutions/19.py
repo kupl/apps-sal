@@ -1,22 +1,8 @@
-#!/usr/bin/env python3
 
-# ------------------------------
-# cs104c/assignment7/CutRibbon.py
-# Copyright (C) 2017
-# Drew Romanyk
-# ------------------------------
-
-# -------
-# imports
-# -------
 
 import math
 import sys
 
-
-# -------
-# solve
-# -------
 
 def solve(r, w):
     """
@@ -42,10 +28,6 @@ def solve(r, w):
 
         print(ops)
 
-
-# -------
-# main
-# -------
 
 def __starting_point():
     solve(sys.stdin, sys.stdout)

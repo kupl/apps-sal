@@ -22,12 +22,8 @@ class Solution:
         '''
         N = len(startTime)
 
-        # sort by start times
-
         res = sorted(zip(startTime, endTime, profit), key=lambda x: x[0])
-        # print(\"res\", res)
 
-        # unzip it now!
         unzipped_res = list(zip(*res))
 
         startTime = unzipped_res[0]
@@ -40,13 +36,8 @@ class Solution:
             if i == N:
                 return 0
 
-            # either take or dont
             start = startTime[i]
             end = endTime[i]
-
-            # you can skip to the index that has a start time ahead of
-            # end time -> so that you dont have to
-            # pass along endtime in memtable?
 
             nextI = N
 
@@ -58,12 +49,9 @@ class Solution:
 
             prof = profit[i]
 
-            # take it
             taken = solve(nextI) + profit[i]
 
-            # dont take:
             notTaken = solve(i + 1)
-            # print(\"nextI, TAKEN AND NOT TAKEN ARE\", i,nextI, taken, notTaken)
             return max(taken, notTaken)
 
         amt = solve(0)

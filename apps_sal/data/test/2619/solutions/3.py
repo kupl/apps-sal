@@ -17,7 +17,6 @@ def main():
             brightness = (s + t) % (c + 1)
             g[t][x][y] += brightness
 
-    # dp stores cummulative brightness at time t
     dp = [[[0 for i in range(102)] for j in range(102)] for k in range(12)]
     for t in range(c + 1):
         for x in range(1, 101):

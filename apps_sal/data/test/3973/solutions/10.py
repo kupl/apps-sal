@@ -13,15 +13,12 @@ for i in range(n - 1):
         imos[a0 + dif + 1] -= dif
         imos[a0 + dif + 2] += dif - 1
 
-# print(imos)
 
 for i in range(1, 2 * m + 2):
     imos[i] += imos[i - 1]
-# print(imos)
 
 for i in range(1, 2 * m + 2):
     imos[i] += imos[i - 1]
-# print(imos)
 
 for i in range(m):
     imos[i] += imos[i + m]

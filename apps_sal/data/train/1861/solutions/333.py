@@ -3,10 +3,6 @@ class Solution:
         points.sort()
         min_area = 40000**2 + 1
         m = len(points)
-        # set_points = set()
-        # for i in points:
-        #     set_points.add(i)
-        # print(set_points)
         points_table = set()
 
         for x, y in points:

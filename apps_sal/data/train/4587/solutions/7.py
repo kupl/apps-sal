@@ -4,7 +4,7 @@ def clean(string):
 
 def range_parser(string):
     l = []
-    for elem in clean(string).split(','):  # 1-10, 15, 20, 30-40:3
+    for elem in clean(string).split(','):
         if '-' in elem:
             l.extend(parse_range(elem))
         else:

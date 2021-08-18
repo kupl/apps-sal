@@ -8,7 +8,6 @@ def unlucky_days(year):
 
     while start_day <= end_day:
         if (start_day.weekday() == 4) and (start_day.day == 13):
-          #  print(start_day)
             count += 1
         else:
             pass

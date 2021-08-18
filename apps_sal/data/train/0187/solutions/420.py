@@ -1,11 +1,10 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        #       for one run:
         p1 = 4 * boardingCost - runningCost
         n = 0
-        pn = 0  # profit for n runs
-        res = [0, 0]  # (max_profit, n times)
-        w = 0  # waiting
+        pn = 0
+        res = [0, 0]
+        w = 0
 
         if p1 <= 0:
             return -1
@@ -21,7 +20,6 @@ class Solution:
                 n += 1
                 res = self.comp(res, pn, n)
                 w = 0
-        # print(res)
         n += w // 4
         pn += (w // 4) * p1
         ps = (w % 4) * boardingCost - runningCost

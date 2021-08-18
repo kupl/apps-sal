@@ -23,5 +23,3 @@ for i in range(int(input())):
             break
         else:
             cnt += 1
-
-# cook your dish here

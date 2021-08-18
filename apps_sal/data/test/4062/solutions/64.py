@@ -1,4 +1,3 @@
-#coding: utf-8
 import math
 
 num_list = list(map(int, input().split()))

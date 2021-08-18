@@ -1,6 +1,5 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
-        # 1)
         i, A2, seen = 0, [], set()
         while i < len(A):
             if A[i] not in seen:
@@ -31,7 +30,6 @@ class Solution:
             else:
                 B.pop(i)
 
-        # 2) merge all the dicts of B into one dict
         while len(B) > 1:
             for key in B[1]:
                 if key in B[0]:
@@ -42,7 +40,6 @@ class Solution:
             B.pop(0)
         B_dct = B[0]
 
-        # 3)
         ans, A_len, B_len = [], len(A), len(B)
         for i in range(A_len):
             isSubset = True

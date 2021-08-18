@@ -8,8 +8,6 @@ for _ in range(n):
     x.reverse()
     for i in range(len(x)):
         weight[ord(x[i]) - 97] += pow(10, i)
-# print(canzero)
-# print(weight)
 zero = 10
 cl = weight[:]
 while True:
@@ -25,5 +23,4 @@ weight = sorted(weight)
 weight.reverse()
 for i in range(1, 10):
     result += i * weight[i - 1]
-# print(cl, zero, weight)
 print(result)

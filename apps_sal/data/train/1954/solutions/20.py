@@ -1,12 +1,3 @@
-# [Runtime: 1872 ms, faster than 12.67%] DP
-# O(N * 2^R) N: number of people, R: number of skills
-# f(i, S): the minimum people count to use first i people to fulfill state S
-# state S is a binary set which is a combinations of skills
-# f(N, all 1) = 0,  f(N, not all 1) = inf
-# return f(-1, 0)
-# f(i, S) = min( f(i+1, S) , 1+f(i+1, S + req_skill[i])
-# WA: [\"gvp\",\"jgpzzicdvgxlfix\",\"kqcrfwerywbwi\",\"jzukdzrfgvdbrunw\",\"k\"]
-# [[],[],[],[],[\"jgpzzicdvgxlfix\"],[\"jgpzzicdvgxlfix\",\"k\"],[\"jgpzzicdvgxlfix\",\"kqcrfwerywbwi\"],[\"gvp\"],[\"jzukdzrfgvdbrunw\"],[\"gvp\",\"kqcrfwerywbwi\"]]
 from math import inf
 from functools import reduce
 from operator import or_
@@ -41,7 +32,6 @@ class Solution:
                 return choose
         i, mask, res = -1, 0, []
         dp(i, mask)
-        # collect answer
         while mask < MASK:
             if child[(i, mask)] != (i + 1, mask):
                 res.append(i)

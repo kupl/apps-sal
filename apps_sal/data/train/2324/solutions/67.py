@@ -29,13 +29,11 @@ for _ in range(N - 1):
 vF = [-1] * (N + 1)
 vF[1] = 0
 dfs(vF, 1, 0)
-# print(vF)
 
 vS = [-1] * (N + 1)
 vS[N] = 0
 
 dfs(vS, N, 0)
-# print(vS)
 
 fc = 0
 sc = 0
@@ -46,7 +44,6 @@ for f, s in zip(vF[1:N + 1], vS[1:N + 1]):
     else:
         sc += 1
 
-# print(fc,sc)
 if fc > sc:
     print("Fennec")
 else:

@@ -16,8 +16,6 @@ class Solution:
                 totalWays += result
         return totalWays
 
-    # def checkTerminal(self, steps, currentPos)
-
     '''def validPath(self, steps: int, currentPos: int) -> bool:
         return currentPos <= steps'''
 
@@ -26,13 +24,10 @@ class Solution:
 
     def validMoves(self, steps: int, currentPos: int, arrLen: int) -> list:
         validList = []
-        # Check left move
         if (currentPos - 1 <= steps - 1) and currentPos - 1 >= 0:
             validList.append(currentPos - 1)
-        # Check stay move
         if (currentPos <= steps - 1):
             validList.append(currentPos)
-        # Check right move
         if (currentPos + 1 <= steps - 1) and currentPos + 1 < arrLen:
             validList.append(currentPos + 1)
 

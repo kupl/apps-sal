@@ -1,4 +1,3 @@
-# cook your dish here
 for x in range(int(input())):
     n = list(input())
     l = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]

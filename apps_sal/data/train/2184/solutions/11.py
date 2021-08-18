@@ -9,7 +9,6 @@ for j in range(n):
         sizes[A[j]][1] = j
     else:
         sizes[A[j]] = [j, j, 1]
-# print(sizes)
 
 answer = 0
 end = -1
@@ -19,7 +18,6 @@ for j in range(n):
     max_size = max(max_size, sizes[A[j]][2])
     if j == end:
         answer += max_size
-        #print(j, max_size)
         max_size = 0
 
 answer = -answer

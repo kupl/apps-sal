@@ -16,11 +16,9 @@ class Solution:
                 f[i] = k
                 continue
 
-            # underspeed
             for j in range(k - 1):
                 f[i] = min(f[i], f[i - 2 ** (k - 1) + 2 ** j] + k - 1 + j + 2)
 
-            # overspeed
             if 2 ** k - 1 - i < i:
                 f[i] = min(f[i], f[2 ** k - 1 - i] + k + 1)
         return f[target]

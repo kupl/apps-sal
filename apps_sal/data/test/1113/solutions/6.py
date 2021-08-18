@@ -1,6 +1,4 @@
 from math import *
-# n,k=map(int,input().split())
-#A = list(map(int,input().split()))
 n = int(input())
 A = list(map(int, input().split()))
 ans = -1

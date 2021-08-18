@@ -12,10 +12,8 @@ class Solution:
             y_axes[point[1]].add(point[0])
 
         def findMinArea(point, x_axes, y_axes):
-            # traverse x axes, fix y axis
             possible_x = y_axes[point[1]]
             possible_y = x_axes[point[0]]
-            # print(point, possible_x, possible_y)
             min_area = None
             for x in possible_x:
                 if x == point[0]:
@@ -25,7 +23,6 @@ class Solution:
                         continue
                     if x in y_axes[y]:
                         area = abs((x - point[0]) * (y - point[1]))
-                        # print(area)
                         min_area = area if min_area is None else min(area, min_area)
             return min_area
 

@@ -12,8 +12,8 @@ for loop in range(tt):
     ai.sort()
     ind = 0
 
-    b = [0] * n  # newlist
-    non = [0] * (n + 1)  # numbers of numbers
+    b = [0] * n
+    non = [0] * (n + 1)
 
     for i in range(n):
 

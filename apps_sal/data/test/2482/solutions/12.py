@@ -15,9 +15,6 @@ def SI(): return sys.stdin.readline()[:-1]
 class UnionFind:
     def __init__(self, n):
         self.state = [-1] * n
-        #self.size_table = [1<<i for i in range(n)]
-        # cntはグループ数
-        # self.cnt = n
 
     def root(self, u):
         v = self.state[u]
@@ -38,9 +35,6 @@ class UnionFind:
         if du == dv:
             self.state[ru] -= 1
         self.state[rv] = ru
-        # self.cnt -= 1
-        #self.size_table[ru] |= self.size_table[rv]
-        # self.size_table[rv]=0
         return
 
 

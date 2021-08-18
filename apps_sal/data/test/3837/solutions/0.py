@@ -20,7 +20,6 @@ if not valid:
     print('NO')
 else:
     print('YES')
-    # print(students)
     for i, x in enumerate(students):
         low = 0
         high = m - 1
@@ -30,11 +29,9 @@ else:
                 high = mid - 1
             else:
                 low = mid + 1
-        # print(x,high)
         students[i] = high
 
     students = sorted([(students[x] + 1, rate[x], x + 1) for x in range(n)], reverse=True)
-    # print(students)
     l1 = 1
     high = m
 
@@ -68,7 +65,6 @@ else:
             else:
                 break
         if len(group) == segs and total <= s:
-            # print(mid,total)
             high = mid - 1
             lastValid = group
             lastD = mid

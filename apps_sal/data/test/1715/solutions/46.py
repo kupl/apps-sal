@@ -13,7 +13,6 @@ sとtのどちらを先にするか
 
 
 def minl(x):
-    # sを選択
     idx = bisect.bisect_left(s, x)
     ret = 3 * 10**10
     if idx == 0:
@@ -51,7 +50,6 @@ def minl(x):
                 second = min(now - t[idx - 1], t[idx] - now)
             ret = min(ret, first + second)
 
-    # tを選択
     idx = bisect.bisect_left(t, x)
     if idx == 0:
         first = t[0] - x

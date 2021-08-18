@@ -22,11 +22,7 @@ def main():
             z = z - 1
         m[z], c[z] = b[i], d[i]
         z = z + 1
-    #for j in range(n):print(d[j])
     print(d[n - 1])
 
 
 main()
-
-
-# Made By Mostafa_Khaled

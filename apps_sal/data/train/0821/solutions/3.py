@@ -1,7 +1,5 @@
-# cook your dish here
 def f(arr: list):
     arr.sort()
-    # print(arr)
     pl, pr, pc = float('-inf'), float('-inf'), 0
     col = [0 for x in range(len(arr))]
     for i in arr:

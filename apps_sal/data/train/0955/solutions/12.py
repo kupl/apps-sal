@@ -4,8 +4,7 @@ marker = [0] * N
 PRIMES = []
 levy = [0] * N
 
-# PRECAL PRIMES
-marker[0] = marker[1] = 1  # marked non primes
+marker[0] = marker[1] = 1
 for i in range(2, int(N**0.5)):
     for j in range(i * i, N, i):
         marker[j] = 1
@@ -14,7 +13,6 @@ for i in range(N):
     if not marker[i]:
         PRIMES.append(i)
 
-# PRECAL LEVY
 n_primes = len(PRIMES)
 
 for i in range(n_primes):
@@ -24,7 +22,6 @@ for i in range(n_primes):
         if a + 2 * b < N:
             levy[a + 2 * b] += 1
 
-# MAIN
 
 t = int(input())
 

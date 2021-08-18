@@ -4,7 +4,6 @@ sqrt = int(0.75 * n**0.5)
 
 data = [0] * (n)
 ans = [[]]
-# out = []
 for i in range(1, sqrt):
     ans.append([0] * i)
 j = int(sys.stdin.readline())
@@ -25,9 +24,3 @@ for qu in qus:
             for i in range(q[2], n, q[1]):
                 sm += data[i]
             sys.stdout.write(str(sm) + '\n')
-            # out.append(str(sm))
-
-            #out.append(str(sum([data[i] for i in range(q[2], n, q[1])])))
-
-
-# sys.stdout.write('\n'.join(out) + '\n')

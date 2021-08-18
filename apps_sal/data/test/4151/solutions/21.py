@@ -28,9 +28,7 @@ for j in range(l - 1):
     if(ma < arr[k][0]):
         sets += 1
         ma = arr[k][-1]
-        # print(ma,k)
 
     elif(ma < arr[k][-1]):
         ma = arr[k][-1]
-# print(sets)
 print(pow(2, sets - 1, 998244353))

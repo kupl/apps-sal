@@ -1,4 +1,3 @@
-##
 N = int(input())
 N_List = list(map(int, input().split()))
 Four_List = [i for i in N_List if i % 4 == 0]

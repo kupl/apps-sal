@@ -3,7 +3,6 @@ class Solution:
         mem = {}
 
         def helper(i, k, arrLen):
-            # print(i, k)
             if i == 0 and k == 0:
                 return 1
             if (i, k) in mem:

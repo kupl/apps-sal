@@ -17,5 +17,4 @@ for i in range(0, (n // 2)):
     if l == 2:
         if s.count(s[0]) != 2:
             ans += 1
-    # print(i,ans)
 print(ans)

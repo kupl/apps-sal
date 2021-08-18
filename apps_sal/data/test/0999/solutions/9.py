@@ -14,6 +14,5 @@ for _ in range(0, n):
     maxl2 = max(a, maxl2)
     minr2 = min(b, minr2)
 
-# print(maxl1,minr1,maxl2,minr2)
 
 print(max(max(0, maxl1 - minr2), max(0, maxl2 - minr1)))

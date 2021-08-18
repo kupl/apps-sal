@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# 整数の入力
 s = input()
 number = "1"
 

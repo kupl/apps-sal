@@ -22,11 +22,8 @@ class Solution:
             if idx == n:
                 res = max(res, curlen)
                 return
-            # use arr[idx]
             if mask & str_masks[idx] == 0:
-                # can use arr[idx]
                 dfs(idx + 1, mask | str_masks[idx], curlen + len(arr[idx]))
-            # not use arr[idx]
             dfs(idx + 1, mask, curlen)
         dfs(0, 0, 0)
         return res

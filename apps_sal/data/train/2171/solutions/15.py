@@ -1,4 +1,3 @@
-# Made By Mostafa_Khaled
 bot = True
 n = int(input())
 
@@ -47,5 +46,3 @@ while s:
 print(len(q))
 
 print('\n'.join(map(str, q)))
-
-# Made By Mostafa_Khaled

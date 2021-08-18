@@ -19,11 +19,9 @@ class Solution:
                 bit_to_parent[bit] = root
                 curr = tmp
 
-            # print(\"root\", bit, root)
             return root
 
         def union(b1, b2):
-            # print(\"union\", b1, b2)
             nonlocal size
             nonlocal groups_of_size_m
 
@@ -37,7 +35,6 @@ class Solution:
             root_b2 = root(b2)
 
             if root_b1 == -1 or root_b2 == -1:
-                # Can't union
                 return
 
             if size[root_b1] >= size[root_b2]:
@@ -53,7 +50,6 @@ class Solution:
             size[parent] += size[child]
             bit_to_parent[child] = parent
 
-            # print(\"union\", b1, b2, parent, child, old_parent_size, old_child_size, size[parent])
             if old_parent_size == m:
                 groups_of_size_m -= 1
 

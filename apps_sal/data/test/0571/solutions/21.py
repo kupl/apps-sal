@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/4/13 22:44
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Serval and Parenthesis Sequence.py
 
 
 def main():
@@ -39,7 +34,6 @@ def main():
         if i != n - 1 and not stack:
             print(':(')
             return
-        # print(s)
 
     print(''.join(s))
 

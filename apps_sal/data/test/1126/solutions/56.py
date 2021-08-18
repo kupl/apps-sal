@@ -3,7 +3,6 @@ from operator import add
 
 class DoublingAggregation:
     def __init__(self, nexts, arr, max_n, op, e):
-        # op はモノイド
         n = len(nexts)
         self.table = [nexts[:]]
         self.data = [arr[:]]
@@ -16,13 +15,12 @@ class DoublingAggregation:
             dat = self.data[-1]
             dat_next = []
             for p, d in zip(perm, dat):
-                perm_next.append(perm[p])  # perm[p] == perm[perm[idx_perm]]
+                perm_next.append(perm[p])
                 dat_next.append(op(d, dat[p]))
             self.table.append(perm_next)
             self.data.append(dat_next)
 
     def prod(self, idx, n):
-        # arr[idx] * arr[nexts[idx]] * arr[nexts[nexts[idx]] * ... を n 回繰り替えした値を返す
         val = self.e
         op = self.op
         for bit, (t, dat) in enumerate(zip(self.table, self.data)):
@@ -32,8 +30,6 @@ class DoublingAggregation:
         return idx, val
 
     def max_right(self, idx, f):
-        # f(arr[idx] * arr[nexts[idx]] * arr[nexts[nexts[idx]] * ... (n 回)) が
-        # True である最大の n と、そのときの prod(idx, n)
         n = 0
         val = self.e
         op = self.op

@@ -5,7 +5,6 @@ class Solution:
         seen = set([n])
 
         while q:
-            # print(q)
             node, lvl = q.popleft()
             if node == 1:
                 return lvl

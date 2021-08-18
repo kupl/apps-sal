@@ -7,4 +7,3 @@ for i in range(n):
             print(j, j + 1)
             amount += 1
             a[j], a[j - 1] = a[j - 1], a[j]
-#print(amount, a)

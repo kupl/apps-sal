@@ -4,8 +4,6 @@ import re
 mod = 10**9 + 7
 letters = "ACGT"
 
-# 文字を添え字に
-
 
 def to_int(s):
     res = 0
@@ -14,8 +12,6 @@ def to_int(s):
         res += letters.index(x)
     return res
 
-# 添え字を文字に
-
 
 def to_str(x, digit):
     res = ""
@@ -23,8 +19,6 @@ def to_str(x, digit):
         res += letters[x & 3]
         x >>= 2
     return res[::-1]
-
-# 部分文字列として含んではいけないものを正規表現で判定
 
 
 def is_ok(s):
@@ -35,7 +29,6 @@ def is_ok(s):
     return True
 
 
-# 行列作成　各状態からの各遷移が有効か確かめる
 A = [[0] * 64 for _ in range(64)]
 for i in range(64):
     s = to_str(i, 3)
@@ -46,7 +39,6 @@ for i in range(64):
 A = np.array(A, dtype="object")
 
 
-# 行列の二分累乗
 def mat_power(A, p, mod):
     res = np.eye(A.shape[0], dtype="object")
     while p:
@@ -57,7 +49,6 @@ def mat_power(A, p, mod):
     return res
 
 
-# ベクトル作成　TTTのみ立てておく
 x = [0] * 64
 x[63] = 1
 x = np.array(x)

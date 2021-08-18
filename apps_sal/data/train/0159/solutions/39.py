@@ -22,7 +22,5 @@ class Solution:
             if best is not None and dp[i] < best + nums[i]:
                 dp[i] = best + nums[i]
 
-            # print(dp)
-
             heapq.heappush(heap, (-dp[i], i))
         return max(dp)

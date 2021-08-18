@@ -10,5 +10,4 @@ class Solution:
                 for i in range(len(nums)):
                     nums[i] /= 2
                 res += 1
-            # print(nums)
         return res

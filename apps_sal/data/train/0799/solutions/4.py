@@ -1,4 +1,3 @@
-# cook your dish here
 a = int(input())
 z = 0
 for i in range(a):

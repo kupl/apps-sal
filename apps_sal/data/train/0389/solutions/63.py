@@ -7,7 +7,6 @@ class Solution:
         if Solution.dp[curr_element_count][curr_sum] != None:
             return Solution.dp[curr_element_count][curr_sum]
         if curr_element_count != 0 and (actual_sum - curr_sum) / (len(l) - curr_element_count) == curr_sum / curr_element_count:
-            # print(curr_sum/curr_element_count)
             return True
         Solution.dp[curr_element_count][curr_sum] = self.is_possible(
             l, actual_sum, index + 1, curr_sum + l[index], curr_element_count + 1

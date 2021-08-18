@@ -17,13 +17,11 @@ for i in range(n):
 sum = f(L, R)
 old = deepcopy(sum)
 new = deepcopy(old)
-#print(L, R)
 for i in range(n):
     L -= mas[i][0]
     R -= mas[i][1]
     L += mas[i][1]
     R += mas[i][0]
-    #print(L, R)
     if f(L, R) > new:
         ans = i
         new = f(L, R)

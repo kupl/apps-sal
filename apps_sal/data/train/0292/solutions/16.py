@@ -1,8 +1,6 @@
 class Solution:
     def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:
-        # fix i and test for j
 
-        # count arr1 i, arr2 i, ind
         minmin = []
         minmax = []
         maxmin = []
@@ -24,6 +22,4 @@ class Solution:
             res = max(res, v1 - minmax[0] + minmax[1] - v2 + i - minmax[2])
             res = max(res, maxmin[0] - v1 + v2 - maxmin[1] + i - maxmin[2])
             res = max(res, maxmax[0] - v1 + maxmax[1] - v2 + i - maxmax[2])
-            # print(maxmax[0]-v1+maxmax[1]-v2+i-maxmin[2])
-        # print(minmin,minmax,maxmin,maxmax)
         return res

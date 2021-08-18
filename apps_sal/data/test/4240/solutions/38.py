@@ -19,9 +19,6 @@ def iparse():
     return list(map(int, input().split()))
 
 
-# RUN LENGTH ENCODING str -> tuple
-
-
 def runLengthEncode(S: str):
     grouped = groupby(S)
     res = []

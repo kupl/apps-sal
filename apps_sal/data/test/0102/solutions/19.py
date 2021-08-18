@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -.- coding: utf-8 -.-
 
 dec = ["zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
 units = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]

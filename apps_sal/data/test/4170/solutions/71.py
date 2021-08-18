@@ -1,4 +1,3 @@
-# しゃくとり法
 n = int(input())
 h = list(map(int, input().split()))
 ans = 0

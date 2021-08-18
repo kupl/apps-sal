@@ -22,23 +22,8 @@ n, k, A, B = mi()
 
 avg = lm()
 
-#adic=[dd(int) for i in range(n)]
-
-
-# for j in avg:
-
-
-#	for i in range(n):
-#		place=math.ceil(j/(2**(n-i-1)))
-#
-#		adic[i][place]+=1
-#
-
-# print(adic)
-
 
 def divide(startbin, endbin, level, currentas, currentlength):
-    # print(currentas,level)
     if currentlength == 0:
         return A
 
@@ -52,21 +37,11 @@ def divide(startbin, endbin, level, currentas, currentlength):
             aend.append(a)
 
     binlength = 2**(n - level)
-    # dicheight=level-1
-    # a1=adic[dicheight][startbin]
-    # a2=adic[dicheight][endbin]
-    # print(astart,aend)
-
-    # a1+a2==0:
-    #	return A
 
     a1 = len(astart)
     a2 = len(aend)
 
     cost1 = (a1 + a2) * B * (binlength * 2)
-
-    # if cost1<=A:
-    #	return cost1
 
     if level == n:
         if a1 == 0:

@@ -14,7 +14,6 @@ for i in s:
     if i[0] != i[1]:
         skip = 1
     ss.append(i)
-# print(ss)
 
 
 mod = 10**9 + 7
@@ -26,7 +25,6 @@ else:
     f = 0
     ans *= 6
 
-# f = 1 : X
 for i in range(1, len(ss)):
     if ss[i][0] == ss[i][1]:
         nf = 1

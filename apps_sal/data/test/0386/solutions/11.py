@@ -29,7 +29,7 @@ for i in range(n):
             right = num
         else:
             right = min(right, num)
-    else:  # op == '<'
+    else:
         if right == None:
             right = num - 1
         else:

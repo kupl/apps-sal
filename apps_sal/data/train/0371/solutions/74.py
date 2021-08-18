@@ -17,11 +17,6 @@ class Solution:
                 else:
                     stopGraph[stop] = [i]
 
-#         {7: [1, 0, 2],
-#         8: [2, 0, 4]}
-
-#         { 1:[0, 2],0:[1, 2], 2:[0, 1, 3, 4], 3:[2, 4], 4:[2, 3]}
-
         graph = {}
         for stop in list(stopGraph.keys()):
             validRoutes = stopGraph[stop]
@@ -33,10 +28,6 @@ class Solution:
                 for x in validRoutes:
                     if x != route:
                         graph[route].add(x)
-        # print(graph)
-        # print(stopGraph)
-        # print(possibleStarts)
-        # print(possibleEnd)
         queue = [(x, 1) for x in possibleStarts]
         seen = set()
         while queue:

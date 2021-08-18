@@ -11,7 +11,6 @@ string = """0   zero    10  ten     20 twenty
 9   nine    19  nineteen        90      ninety """
 
 Set = string.split()
-#print (Set)
 numbers = dict(zip(Set[0::2], Set[1::2]))
 if n in numbers:
     print(numbers[n])

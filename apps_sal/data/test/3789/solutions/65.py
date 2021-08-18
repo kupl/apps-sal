@@ -9,11 +9,9 @@ for i in range(1, N + 1):
         table[0][i] = -P[i - 1]
     for j in range(2 * i, N + 1, i):
         table[i][j] = inf
-# print(table)
 
 
 def fk(x, t, f):
-    # print(x)
     visit[x] = True
     if x == t:
         return f

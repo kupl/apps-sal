@@ -17,7 +17,6 @@ def racunaj():
 
 
 najdel = racunaj()
-# print(najdel)
 
 for _q in range(q):
     n = int(input())

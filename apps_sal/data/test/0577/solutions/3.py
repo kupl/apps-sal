@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from bisect import bisect_left, bisect_right
@@ -28,8 +27,6 @@ def LSR(n): return [LS() for _ in range(n)]
 mod = 1000000007
 inf = float('INF')
 
-# solve
-
 
 def solve():
     n, k = LI()
@@ -55,7 +52,6 @@ def solve():
     return
 
 
-# main
 def __starting_point():
     solve()
 

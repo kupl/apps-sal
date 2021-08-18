@@ -19,6 +19,4 @@ class Solution:
             if not add:
                 dp.append(0)
             i += 1
-        # print(dp)
-        #print([i for i in range(n+1)])
         return dp[n]

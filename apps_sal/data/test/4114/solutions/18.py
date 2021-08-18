@@ -1,8 +1,7 @@
-# 初期入力
 from collections import defaultdict
 from bisect import bisect_right
 import sys
-input = sys.stdin.readline  # 文字列では使わない
+input = sys.stdin.readline
 N = int(input())
 xyh = [0] * N
 h_list = [0] * N
@@ -31,8 +30,6 @@ for x, y, h in xyh[ind:]:
             elif cx > x and cy > y:
                 H[(cx, cy)].add((h - xx - yy))
 
-# print(xyh)
-#H.sort(key =lambda x:x[1])
 if len(xyh[ind:]) == 1:
     print(*xyh[-1])
 else:

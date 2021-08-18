@@ -28,20 +28,13 @@ class Solution:
             ans %= 10**9 + 7
         return ans
 
-        # print(nums1)
-        # print(nums2)
-        # print('')
-
         def _dp(ii, its1, val):
-            # print(ii, its1, val)
             nums = nums1 if its1 else nums2
             oums = nums2 if its1 else nums1
             if ii == len(nums):
                 return val
-            # path.append((its1, nums[ii]))
             if nums[ii] in oums:
                 ix = oums.index(nums[ii])
-                # path.append((not its1, nums[ii]))
                 opt = _dp(ix + 1, not its1, val + nums[ii])
             else:
                 opt = 0

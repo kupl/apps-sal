@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
 def main():
-    # 二分探索でも解ける
     A, B, X = list(map(int, input().split()))
     num_max = 10 ** 9
 

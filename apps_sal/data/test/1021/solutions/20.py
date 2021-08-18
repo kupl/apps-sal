@@ -9,7 +9,6 @@ from bisect import *
 if(os.getcwd() == 'C:\\Users\\User\\Desktop\\python\\Prog'):
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
-# print(os.getcwd())
 
 
 def rI():

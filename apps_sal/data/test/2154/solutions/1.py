@@ -8,7 +8,7 @@ def maxProfit(prices, days):
     maxPrice, minPrice = max(prices), min(prices)
     maxIndex, minIndex = prices.index(maxPrice), prices.index(minPrice)
     iterator = iter(prices)
-    h = []  # heap
+    h = []
 
     if days == 1:
         print(0)

@@ -1,7 +1,5 @@
 class Solution:
     def kSimilarity(self, A: str, B: str) -> int:
-        #assert(len(A) == len(B))
-        #assert(sorted(A) == sorted(B))
 
         if A == B:
             return 0

@@ -14,12 +14,10 @@ class Solution:
                 print(len(nums))
 
             else:
-                # find the first negative and remove the list from there and update array
                 first = 0
                 last = len(nums) - 1
 
                 while first <= last:
-                    #print (first,last,nums[first],nums[last])
                     if nums[first] < 0:
                         nums = nums[first + 1:]
                         break
@@ -33,19 +31,14 @@ class Solution:
 
             return len(nums)
 
-        # ---------------------------------------------
-
         ans = 0
         zero = 0
         remove = 0
-        # count positive , negative and 0 numbers
         for i in nums:
             if i == 0:
                 zero += 1
 
         while (zero != 0):
-            # remove the array after or before 0 , depending on whats short
-            # update the array
             first = 0
             last = len(nums) - 1
 

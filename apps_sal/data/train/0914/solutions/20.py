@@ -4,7 +4,6 @@ for i in range(t):
     arr = []
     for j in range(n):
         arr += [[int(j) for j in input().split()]]
-    # print(arr)
 
     dp = [[0 for i in range(m)] for j in range(n)]
     ans = [[0 for i in range(m)] for j in range(n)]
@@ -18,7 +17,6 @@ for i in range(t):
             dp[i][0] = max(dp[i - 1][0], arr[i][0])
             if dp[i][0] == arr[i][0]:
                 ans[i][0] = 1
-        # print(dp)
         for x in ans:
             print(*x, sep='')
         continue

@@ -7,7 +7,6 @@ for i in range(n):
 nx = n * n
 dp = [[0] * (2 * nx + 1) for i in range(n + 1)]
 
-# print(dp)
 
 dp[0][nx] = 1
 

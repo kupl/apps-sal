@@ -35,8 +35,6 @@ for s in ss:
     if good:
         rmap[len(stack)] += 1
 
-# print(lmap)
-# print(rmap)
 
 res = 0
 for val, cnt in list(lmap.items()):

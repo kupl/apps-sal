@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -16,8 +14,6 @@ for ai in a[::-1]:
     if high - ai > delta:
         delta = high - ai
 
-#from collections import Counter
-#d = Counter()
 
 high = a[-1]
 

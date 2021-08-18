@@ -27,6 +27,3 @@ for L, (k, D) in list(p.items()):
     m = max(D, m)
 
 print(sum(d for l, d in s) - m)
-
-
-# Made By Mostafa_Khaled

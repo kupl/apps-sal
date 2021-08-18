@@ -29,10 +29,7 @@ class Solution:
             par[i] = i
         for i in pairs:
             union(i[0], i[1])
-            # print(par[:5])
-        # print(par[:10])
         poi = [0] * (n + 3)
-        # a=[0]*(n+3)
         for i in range(n):
             par[i] = find(par[i])
         ans = [[]for i in range(n + 3)]

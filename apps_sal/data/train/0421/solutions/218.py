@@ -1,6 +1,5 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
-        # start from s[i], s[j] (i=0,j=i+1)
         i = 0
         j = i + 1
         k = 0

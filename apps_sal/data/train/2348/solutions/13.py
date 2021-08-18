@@ -15,7 +15,7 @@ def main():
     L = int(input())
     Q = int(input())
 
-    LOG = 30    # 30 > log2(10**9)
+    LOG = 30
     nxt = [[-1] * N for _ in range(LOG)]
     for i in range(N):
         nxt[0][i] = bisect.bisect_left(x, x[i] + L + 1) - 1

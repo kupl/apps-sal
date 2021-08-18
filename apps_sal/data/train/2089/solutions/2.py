@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def simu(P, i):
     for c, x in P:

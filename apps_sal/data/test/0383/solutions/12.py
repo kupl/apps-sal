@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 (n, k, d) = list(map(int, input().split()))
 

@@ -1,5 +1,4 @@
 def add_binary(a, b):
-    # your code here
     tot = a + b
     i = 0
     binsum = ''

@@ -1,6 +1,3 @@
-# import sys
-# sys.stdin = open('input.txt','r')
-# sys.stdout = open('output1.txt','w')
 import math
 from sys import stdin, stdout
 from math import gcd, sqrt, ceil, floor, inf
@@ -14,13 +11,6 @@ def isa(): return stdin.readline().strip().split()
 
 
 mod = 1000000007
-# fib=[1,1]
-# a=1
-# b=1
-# for i in range(100001):
-#     a,b=b,a+b
-#     fib.append(b%mod)
-# print(fib[0:10])
 for _ in range(ii1()):
     n, k = iia()
     new = k - 1

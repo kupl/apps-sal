@@ -1,4 +1,3 @@
-# cook your dish here
 def modular_pow(base, exponent, modulus):
     result = 1
     while exponent > 0:

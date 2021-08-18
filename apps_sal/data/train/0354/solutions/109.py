@@ -15,7 +15,6 @@ class Solution:
                 else:
                     if i == lastVal:
                         newCount = lastConsecCount + 1
-                        #print(lastVal, lastConsecCount)
                     else:
                         newCount = 1
 

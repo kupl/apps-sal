@@ -23,7 +23,6 @@ class Solution:
 
         while(r_s < r_e and c_s < c_e):
             if go_row:
-                # Traverse row
                 s = npa[row_index, c_s:c_e].tolist()
                 if forward:
                     r_s += 1
@@ -35,7 +34,6 @@ class Solution:
                 ans.extend(s)
 
             else:
-                # traverse col
                 s = npa[r_s:r_e, col_index].tolist()
                 if forward:
                     c_e -= 1

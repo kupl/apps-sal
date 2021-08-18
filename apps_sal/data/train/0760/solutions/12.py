@@ -25,7 +25,6 @@ def factorialMod(n, modulus):
     ans = 1
     l = []
     if n <= modulus // 2:
-        # calculate the factorial normally (right argument of range() is exclusive)
         for i in range(1, n + 1):
             ans = (ans * i) % modulus
             l.append(ans)
@@ -117,13 +116,11 @@ while t > 0:
     for i in dic:
         xxx = (xxx % mod * modinv(fact[dic[i] - 1] % mod, mod)) % mod
     ans = (xxx * xxx) % mod
-    # print count_one
     zero = xxx
     one = (xxx * count_one % mod) % mod
     if len(dic) == len_s:
         aa = len_s - 2
         two = (aa % mod * (aa + 1) % mod * (aa + 2) % mod * (3 * aa + 5) % mod * modinv(24, mod)) % mod
-        # print two
     elif len(dic) == 2 and ((dic[s[0]] == 1) or dic[s[0]] == len_s - 1 or dic[s[0]] == len_s):
         two = 0
     else:

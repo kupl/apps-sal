@@ -1,6 +1,5 @@
 import sys
 import heapq
-# sys.setrecursionlimit(200000)
 input = sys.stdin.readline
 n, m = map(int, input().split())
 g = [[] for i in range(n)]

@@ -14,12 +14,10 @@ class Solution:
             need = goal[0]
             work = None
             for i in range(len(curr)):
-                # need to find one where curr[i] == goal[0] and goal[i] == curr[0]
                 if curr[i] == goal[0] and goal[i] == curr[0]:
                     work = i
                     break
             if work:
-                # only swap this one
                 q.append((cost + 1, curr[1:work] + curr[work + 1:], goal[1:work] + goal[work + 1:]))
             else:
                 for i in range(1, len(curr)):

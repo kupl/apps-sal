@@ -4,7 +4,6 @@ class Solution:
             return 1
         if m > n:
             m, n = n, m
-        # ans = float('inf')
 
         @lru_cache(None)
         def helper(skyline):
@@ -29,5 +28,5 @@ class Solution:
                 ans = min(ans, helper(tuple(newsl)))
             return ans + 1
 
-        ans = helper(tuple([0] * m))  # initial skyline
+        ans = helper(tuple([0] * m))
         return ans

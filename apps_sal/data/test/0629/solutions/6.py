@@ -12,7 +12,6 @@ for i in range(n):
         res = sum(a0s[:i]) + sum(a0s[:j]) \
             + bs[i] + bs[j] \
             + sum(a1s[i:]) + sum(a1s[j:])
-        #print(i, j, res)
         if res < best:
             best = res
 

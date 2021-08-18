@@ -3,7 +3,7 @@ from itertools import combinations, permutations, product, combinations_with_rep
 from heapq import heapify, heappop, heappush, heappushpop
 from bisect import bisect_left, bisect_right
 from collections import Counter, defaultdict, deque
-from math import sqrt, log, floor, ceil, factorial, cos, sin, pi  # , gcd
+from math import sqrt, log, floor, ceil, factorial, cos, sin, pi
 from fractions import gcd
 from operator import mul
 from functools import reduce
@@ -129,7 +129,6 @@ def main():
         cx, dy, a, b = ILI()
         a -= 1
         b -= 1
-        #ans[i] = gr.dist(a, b)
         c = gr.lca(a, b)
         ans[i] = gr.costs[a] + gr.costs[b] - gr.costs[c] * 2
         qs[a].append((cx, i, 1, dy))

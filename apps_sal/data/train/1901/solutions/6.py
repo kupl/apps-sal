@@ -16,7 +16,6 @@ class Solution:
                     res += dfs(x, y, key)
             return res + 1
 
-        # map each island to distinct keys
         mappings = {0: 0}
         index = 2
         for i in range(m):

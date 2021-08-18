@@ -1,6 +1,5 @@
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
-        # dp[i][j][k] is the minimum cost to paint {0, 1, ..., `i`} houses of `j` neighborhoods, and the `i`th house is painted as color `k`
 
         dp = [[[math.inf for k in range(n)] for j in range(target)] for i in range(m)]
 

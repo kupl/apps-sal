@@ -8,7 +8,6 @@ def search(rules, m):
                 if a == r0:
                     nex.append(b + tail)
         ret = nex
-    # print(ret)
     return len(ret)
 
 
@@ -20,8 +19,6 @@ def main():
         line = input().split()
         line.reverse()
         rules.append(line)
-    # print(m)
-    # print(rules)
     l = search(rules, m)
     print(l)
 

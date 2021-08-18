@@ -11,5 +11,4 @@ def century(year):
 
     return century
 
-    # Finish this :)
     return

@@ -10,14 +10,11 @@ for _ in range(t):
         if(s[i] == "1"):
             ones = ones + 1
         else:
-            if(k >= ones):  # would go to start
+            if(k >= ones):
                 k = k - ones
                 zeros = zeros + 1
             else:
-              #              print(zeros)
 
-             #               print(ones-k)
-                #                print(s[i+1:])
                 ans = "0" * zeros + "1" * (ones - k) + "0" + "1" * k + s[i + 1:]
                 flag = 1
                 break

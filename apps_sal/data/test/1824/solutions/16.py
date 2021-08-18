@@ -1,4 +1,3 @@
-# sorry for the source code iam a newbie in Python
 import collections
 n = int(input())
 s = []

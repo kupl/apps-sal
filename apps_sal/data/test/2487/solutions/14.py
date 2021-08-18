@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 sys.setrecursionlimit(10**8)
 def input(): return sys.stdin.readline().strip()

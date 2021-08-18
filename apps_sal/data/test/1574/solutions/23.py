@@ -36,7 +36,6 @@ def dfs(graph, u, visited, rps):
     if len(adju) == 0 or visited[u]:
         return ret
     visited[u] = True
-    # puts "visited: #{u} #{adju}"
     for v in adju:
         if visited[v]:
             continue
@@ -51,7 +50,6 @@ def dfs(graph, u, visited, rps):
             if not visited[v]:
                 continue
             if ret > rps[u] + rps[v] + rps[p] - 6:
-                # print(u, v, p, graph.adj(u), graph.adj(v), graph.adj(p), rps[u], rps[v], rps[p])
                 ret = rps[u] + rps[v] + rps[p] - 6
     return ret
 

@@ -21,7 +21,6 @@ def main():
             t = n // k
             o += min(a * (n - t), b)
             n = t
-        #print(n, o)
     print(o)
 
 

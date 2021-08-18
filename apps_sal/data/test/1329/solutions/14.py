@@ -1,7 +1,3 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
 
 def prime_factorization(x):
     """素因数分解"""
@@ -20,10 +16,6 @@ def prime_factorization(x):
     return re
 
 
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N):
     pf = []
     for i in range(1, N + 1):
@@ -46,11 +38,6 @@ def solve(N):
 def __starting_point():
     N = int(input())
     solve(N)
-
-    # # test
-    # from random import randint
-    # from func import random_str
-    # solve()
 
 
 __starting_point()

@@ -13,7 +13,6 @@ class Solution:
         start_buses = set()
         target_buses = set()
         queue = []
-        # connect buses which have common stops
         stop_bus = defaultdict(set)
         for bus, route in enumerate(routes):
             for bus2 in range(bus + 1, len(routes)):

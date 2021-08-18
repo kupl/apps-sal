@@ -1,5 +1,4 @@
 TOT = 2 * 10**5
-# print(TOT)
 a = [-1] * (TOT + 1)
 
 q = int(input())

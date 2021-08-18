@@ -8,7 +8,6 @@ def RI(): return list(map(int, input().split()))
 def RS(): return input().rstrip().split()
 
 
-#################################################
 n, m = RI()
 ans = 0
 while m:

@@ -1,4 +1,3 @@
-# coding: utf-8
 
 num, time = map(int, input().split())
 count = 0

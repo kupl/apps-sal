@@ -11,5 +11,4 @@ class Solution:
                 else:
                     tmp.add(b)
             bcache = tmp
-        # print(f'{bcache} {kcache}')
         return res

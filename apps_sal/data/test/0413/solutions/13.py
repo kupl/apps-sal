@@ -2,7 +2,6 @@ m, n = [int(i) for i in input().split()]
 
 
 def d(begin, end):
-   #print(begin, end)
     if begin == end:
         return 0
 

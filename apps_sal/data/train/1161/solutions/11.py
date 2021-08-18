@@ -1,22 +1,3 @@
-# cook your dish here
-# T = int(input())
-# while T>0:
-#     s = list(input())
-#     l = len(s)
-#     for i in range(l):
-#       if s[i]=='m' and i>0 and s[i-1]=='s':
-#           s[i-1]='*'
-#       elif s[i]=='m' and i<l-1 and s[i+1]=='s':
-#           s[i+1]='*'
-#     a=s.count('s')
-#     b=s.count('m')
-#     if a>b:
-#         print("snakes")
-#     elif b>a:
-#         print("mangooses")
-#     else:
-#         print("tie")
-#     T-=1
 
 for h in range(int(input())):
     s = input()

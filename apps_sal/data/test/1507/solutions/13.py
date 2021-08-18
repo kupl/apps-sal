@@ -9,9 +9,7 @@ for i in data:
         c[i] += 1
 count = 0
 m = 0
-# print(c)
 for i in data:
-    # print(m,d,count)
     if i not in d:
         count += 1
         d[i] = 1

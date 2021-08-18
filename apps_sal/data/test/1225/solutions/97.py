@@ -1,4 +1,3 @@
-# D
 H = int(input())
 cnt = 1
 ans = 0

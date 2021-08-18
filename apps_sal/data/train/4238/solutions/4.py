@@ -1,5 +1,4 @@
 def squares_needed(grains):
-    # your code here
     sum_wheat = 0
     if grains == 0:
         return 0

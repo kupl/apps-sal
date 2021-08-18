@@ -21,8 +21,6 @@ for face in list(faces.keys()):
         else:
             status[face] = 'bad'
 
-# print(status)
-# print(faces)
 
 if 'bad' in list(status.values()):
     print('NO')

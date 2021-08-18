@@ -25,14 +25,9 @@ class Solution:
                             if complement != i:
                                 result += hashtable[i] * hashtable[complement]
                                 met.append(complement)
-                                # print(hashtable[i] * hashtable[complement], i, complement)
-                                # hashtable[i] = 0
-                                # hashtable[complement] = 0
                             else:
                                 met.append(i)
                                 result += sum([j for j in range(hashtable[i])])
-                                # print(hashtable[i], i, complement)
-                                # hashtable[i] = 0
 
             return result
 

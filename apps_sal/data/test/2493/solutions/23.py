@@ -10,9 +10,9 @@ def make_tables(mod, n):
     """
     階乗テーブル、逆元の階乗テーブルを作成する
     """
-    fac = [1, 1]  # 階乗テーブル・・・(1)
-    ifac = [1, 1]  # 逆元の階乗テーブル・・・(2)
-    inverse = [0, 1]  # 逆元テーブル・・・(3)
+    fac = [1, 1]
+    ifac = [1, 1]
+    inverse = [0, 1]
 
     for i in range(2, n + 1):
         fac.append((fac[-1] * i) % mod)

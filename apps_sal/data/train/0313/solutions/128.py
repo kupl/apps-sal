@@ -7,10 +7,6 @@ class Solution:
             for i in range(len(bloomDay)):
                 if bloomDay[i] > d:
                     curr = 0
-                # else:
-                #     curr += 1
-                # if curr==k:
-                #     total += 1
                 else:
                     total += (curr + 1) // k
                     curr = (curr + 1) % k

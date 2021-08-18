@@ -1,5 +1,4 @@
 from math import pi as p
-# print p
 for II_II in range(eval(input())):
     r1, h1, r2, h2 = list(map(float, input().split()))
     a1 = ((p * r1 * r1 * h1) / 3) + ((2 * p * r1 * r1 * r1) / 3)

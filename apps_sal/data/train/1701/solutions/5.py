@@ -4,11 +4,10 @@ from functools import partialmethod, reduce
 
 class Machine(object):
     def __init__(self, cpu):
-        # Because Python ...
         cpu.read_reg = cpu.readReg
         cpu.write_reg = cpu.writeReg
         cpu.pop_stack = cpu.popStack
-        cpu.push_stack = cpu.writeStack  # ... (and poor naming)
+        cpu.push_stack = cpu.writeStack
         self.cpu = cpu
 
     def execute(self, instruction):

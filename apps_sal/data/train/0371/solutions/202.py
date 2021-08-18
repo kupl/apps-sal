@@ -5,12 +5,10 @@ class Solution:
             return 0
 
         graph = self.createGraph(routes)
-        # print(g/raph)
 
         sourceBuses = self.getBuses(routes, S)
         targetBuses = set(self.getBuses(routes, T))
 
-        # print(sourceBuses, targetBuses)
         if not sourceBuses or not targetBuses:
             return -1
 
@@ -21,19 +19,16 @@ class Solution:
             curLevel = queue.pop()
             newLevel = []
 
-            # print(curLevel)
             for station in curLevel:
                 if station in targetBuses:
                     return buses
 
-                # print(graph[station], visited)
                 for conn in graph[station]:
                     if conn not in visited:
 
                         visited.add(conn)
                         newLevel.append(conn)
 
-            # print(newLevel)
             if newLevel:
                 queue.append(newLevel)
                 buses += 1

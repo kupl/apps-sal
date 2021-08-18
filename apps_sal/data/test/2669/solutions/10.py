@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 arr1 = list(map(int, input().strip().split()))
 arr2 = list(map(int, input().strip().split()))

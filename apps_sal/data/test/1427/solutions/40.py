@@ -1,4 +1,3 @@
-#
 
 import sys
 from fractions import gcd

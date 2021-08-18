@@ -27,15 +27,12 @@ class Solution:
         N = len(grid)
         M = len(grid[0])
         ALL = N * M
-        # print(\"size\", N, M, ALL)
         tree = UnionFind(ALL)
         for i in range(N):
             for j in range(M):
                 for k in range(2):
                     if 0 <= i + dx[k] < N and 0 <= j + dy[k] < M:
                         if grid[i][j] == grid[i + dx[k]][j + dy[k]]:
-                            # print(i, j, k)
-                            # print((i+dx[k])*M+j+dy[k])
                             if tree.same(i * M + j, (i + dx[k]) * M + j + dy[k]):
                                 return True
                             tree.unite(i * M + j, (i + dx[k]) * M + j + dy[k])

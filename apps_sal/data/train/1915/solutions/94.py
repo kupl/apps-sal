@@ -1,6 +1,5 @@
 class Solution:
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        # work backward; time O(n(n-m)); space O(1)
         n_s, n_t = len(stamp), len(target)
         stamp, target = list(stamp), list(target)
 

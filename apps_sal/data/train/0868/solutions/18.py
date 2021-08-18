@@ -25,7 +25,6 @@ while(t):
                 q += 1
                 l -= 1
             l = z + 1
-            # print(x,l)
             while(l < len(x)):
                 if(x[l] != x[z]):
                     break

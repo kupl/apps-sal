@@ -17,10 +17,10 @@ class Solution:
         stack = []
 
         while len(pushed) or len(popped) or len(stack):
-            if len(stack) and len(popped) and stack[-1] == popped[0]:  # can pop
+            if len(stack) and len(popped) and stack[-1] == popped[0]:
                 stack.pop()
                 popped = popped[1:]
-            elif len(pushed):  # can push
+            elif len(pushed):
                 stack.append(pushed[0])
                 pushed = pushed[1:]
             else:

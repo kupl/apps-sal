@@ -1,15 +1,10 @@
-# your code goes here
 def fun(l):
     t = []
     s = list(set(l))
     for i in s:
         t.append(l.count(i))
-    # print(t)
-    # print(len(t),len(set(t)))
     if len(t) == len(set(t)):
-        # print(1)
         return 1
-    # print(0)
     return 0
 
 

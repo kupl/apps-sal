@@ -10,6 +10,5 @@ class Solution:
             for j in range(i):
                 diff = z - A[j]
                 table[i][diff] = table[j][diff] + 1
-                #if table[i][diff] > result: result = table[i][diff]
 
         return max([max(y.values()) for y in table])

@@ -7,7 +7,6 @@ ans = [0 for i in range(100)]
 while True:
     tmp = p
     for i in range(n + 1):
-        # print("i, p: ", i, p)
         x = (p % k + k) % k
         ans[i] = x
         p = -(p - x) // k

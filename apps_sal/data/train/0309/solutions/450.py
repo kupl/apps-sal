@@ -11,5 +11,4 @@ class Solution:
 
                 ans = max(ans, currLen)
                 table[i][A[i] - A[j]] = max(table[i][A[i] - A[j]], currLen)
-        # print(table)
         return ans

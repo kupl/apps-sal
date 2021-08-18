@@ -47,8 +47,6 @@ class HELPER:
 
         return l
 
-    # Printing Arena
-
     def printArray(self, a, nextLine):
         for x in a:
             sc.write("{} ".format(x))
@@ -145,7 +143,6 @@ def testCase():
 
 def main():
     t = int(input())
-    # t = 1
     while t > 0:
         testCase()
         t -= 1

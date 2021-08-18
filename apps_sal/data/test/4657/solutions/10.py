@@ -25,7 +25,6 @@ for i in range(t):
             if nums[i] % 2 == 1:
                 ans.append(i + 1)
                 cur_k += 1
-        #print("ans ", ans)
         if cur_k < k or not has:
             print("NO")
         else:

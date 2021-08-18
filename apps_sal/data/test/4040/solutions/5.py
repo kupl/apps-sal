@@ -21,13 +21,10 @@ while(j < n):
             gap = 1
             tot -= arr[ptr]
             j += arr[ptr]
-            # print(j-1)
             ptr += 1
         else:
             j += 1
             bool1 = False
-    # print(j)
-# print(res,bool1)
 if(bool1 == False):
     print("NO")
 else:

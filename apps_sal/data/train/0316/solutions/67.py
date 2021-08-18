@@ -1,5 +1,3 @@
-# ababdababc
-# 0012012340
 
 class Solution:
     def computelps(self, p: str):

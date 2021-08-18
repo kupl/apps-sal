@@ -29,8 +29,6 @@ def main():
     n = int(input())
     xy = LLI(n)
     cnt_online = {}
-    # 各２点を結ぶ直線をax+by+c=0の(a,b,c)で表し
-    # 各直線上にいくつの点があるかカウントする
     for i in range(n):
         x0, y0 = xy[i]
         counted = set()
@@ -45,13 +43,10 @@ def main():
             counted.add((a, b, c))
             cnt_online.setdefault((a, b, c), 1)
             cnt_online[(a, b, c)] += 1
-    # print(cnt_online)
-    # 各直線上で、2点以上で多角形ができない点の選び方を数える
     sum_online = 0
     for plot_n in cnt_online.values():
         sum_online += pow(2, plot_n, md) - 1 - plot_n
         sum_online %= md
-    # すべての2点以上の選び方から、多角形ができないものを引く
     ans = pow(2, n, md) - 1 - n - sum_online
     print(ans % md)
 

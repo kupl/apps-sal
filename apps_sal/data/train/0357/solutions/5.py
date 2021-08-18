@@ -6,7 +6,6 @@ class Solution:
         s_p, e_p = 0, 0
         min_dist = 0
         while e_p < len(empties):
-            # make the determination:
             while (s_p < len(seated) - 1) and empties[e_p] > seated[s_p]:
                 s_p += 1
             if s_p > 0:

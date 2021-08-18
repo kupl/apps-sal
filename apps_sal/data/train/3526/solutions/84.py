@@ -1,5 +1,4 @@
 def any_arrows(arrows):
-    # your code here
     for item in arrows:
 
         try:

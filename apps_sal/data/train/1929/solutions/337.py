@@ -8,7 +8,7 @@ class StreamChecker:
             tmp = self.trie
             for c in w[::-1]:
                 tmp = tmp.setdefault(c, {})
-            tmp['#'] = True
+            tmp['
             self.word_len = max(self.word_len, len(w))
 
     def query(self, letter: str) -> bool:
@@ -18,13 +18,8 @@ class StreamChecker:
         for c in self.s_list[::-1]:
             if c in curr:
                 curr = curr[c]
-                if curr.get('#', False):
+                if curr.get('
                     return True
             else:
                 break
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

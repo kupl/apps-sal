@@ -4,17 +4,13 @@ class StreamChecker:
         self.stream = ''
         self.trie = {}
 
-        # Initialize trie with words
         curr = self.trie
         for word in words:
-            # Add reverse of word
             for char in word[::-1]:
                 curr.setdefault(char, {})
                 curr = curr[char]
             curr['end'] = True
             curr = self.trie
-
-        # print(self.trie)
 
     def query(self, letter: str) -> bool:
         self.stream += letter
@@ -29,7 +25,3 @@ class StreamChecker:
             return False
 
         return _search(self.stream[::-1], self.trie)
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

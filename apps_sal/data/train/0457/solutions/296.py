@@ -16,7 +16,6 @@ class Solution:
             min_steps = math.inf
             for coin in coins:
                 rest = rest_amount - coin
-                #print(c, rest, step)
                 res = dfs(step + 1, rest)
                 if res >= 0:
                     min_steps = min(min_steps, res)

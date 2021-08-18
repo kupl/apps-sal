@@ -27,16 +27,15 @@ def bfs(edges, s):
     return used
 
 
-def bellman(dist):  # 負辺があるケースでの、スタートからゴールへの最短路を求めるアルゴ。
+def bellman(dist):
     cost = [float("inf")] * n
     cost[0] = 0
-    for _ in range(n):  # 頂点の個数の分だけ回る
+    for _ in range(n):
         updated = False
-        for u, v, c in dist:  # 辺の個数の分だけ回る
+        for u, v, c in dist:
             if cost[u] + c < cost[v]:
                 cost[v] = cost[u] + c
                 updated = True
-    # 収束しない場合は負閉路があるため無限に小さくできる。
     if updated == True:
         return -1
     else:
@@ -46,7 +45,7 @@ def bellman(dist):  # 負辺があるケースでの、スタートからゴー�
 n, m, p = map(int, input().split())
 dist = []
 edge1 = [[] for _ in range(n)]
-edge2 = [[] for _ in range(n)]  # rev_edge
+edge2 = [[] for _ in range(n)]
 for _ in range(m):
     u, v, c = map(int, input().split())
     u -= 1

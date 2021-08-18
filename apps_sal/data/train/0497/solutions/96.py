@@ -1,5 +1,4 @@
 class Solution:
-    # Without cache, O(2^n log n) time, O(1) space; with cache, O(n x log n) time, O(n) space
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
 
         A = sorted(zip(startTime, endTime, profit))
@@ -19,10 +18,8 @@ class Solution:
 
             if A[left][0] >= start_time:
                 return left
-            # left < start_time
             if A[right][0] >= start_time:
                 return right
-            # right < start_time
             return right + 1
 
         cache = {n: 0}
@@ -39,13 +36,11 @@ class Solution:
 
         return find_max_profit(0)
 
-    # O(n x log n) time, O(n) space
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
 
         A = sorted(zip(endTime, startTime, profit))
         n = len(A)
 
-        # The biggest profit as of the ith task
         cache = [0] * (n + 1)
 
         def find_closest_ending_point(cur_ending_point, end_time_limit):
@@ -62,10 +57,8 @@ class Solution:
 
             if end_time_limit >= A[right][0]:
                 return right + 1
-            # end_time_limit < right
             if end_time_limit >= A[left][0]:
                 return left + 1
-            # end_time_limit < left
             return left
 
         for i in range(1, n + 1):

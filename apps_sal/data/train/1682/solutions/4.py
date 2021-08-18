@@ -1,4 +1,3 @@
-# cook your dish here
 n = input() + "0"
 
 max_sum = 0

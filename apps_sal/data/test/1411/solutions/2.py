@@ -62,6 +62,3 @@ x2, y2, z2, n2 = solve(second)
 d = x1 + x2 if n1 + n2 > s else max(x1 + y2, x2 + y1)
 
 print(z1 + z2 + d)
-
-
-# Made By Mostafa_Khaled

@@ -1,6 +1,5 @@
 import sys
 import math
-# from collections import defaultdict, deque
 
 
 def fout(s, end='\n'): sys.stdout.write(str(s) + end)
@@ -12,7 +11,7 @@ while t > 0:
     t -= 1
     s = fin()
     r = fin()
-    un = isl = 0  # unequal
+    un = isl = 0
     count = 0
     eqisl = []
     count2 = 0

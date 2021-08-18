@@ -12,7 +12,7 @@ def crosstable(players, results):
     width_sb = len(str(f'{max(sb):0.2f}'))
     lines = []
     lines.append(
-        f'{"#":>{width_rank}}  '
+        f'{"
         f'{"Player":<{width_player}}  '
         f'{" ".join(f"{i+1:>{width_result}}" for i in range(len(players)))}  '
         f'{"Pts":^{width_pts}}  ' +

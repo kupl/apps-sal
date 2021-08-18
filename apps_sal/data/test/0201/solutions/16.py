@@ -15,6 +15,3 @@ for i in range(10 ** 5):
         ans = max(ans, Hb * i + (C - Wb * i) // Wr * Hr)
 
 print(ans)
-
-
-# Made By Mostafa_Khaled

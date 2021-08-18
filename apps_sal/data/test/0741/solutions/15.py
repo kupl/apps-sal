@@ -14,14 +14,12 @@ else:
 backward = backward[::-1]
 i = 0
 for a, b in zip(arr, arr[1:]):
-    # print("%d or %d: " % (a+1, b-1))
     res1 = forward[i] + (1 if i % 2 == 0 else b - (a + 1)) + backward[i + 1]
     if a + 1 == b:
         res1 = -1
     res2 = forward[i] + (b - 1 - a if i % 2 == 0 else 1) + backward[i + 1]
     if b - 1 == a:
         res2 = -1
-    # print("%d - %d: " % (res1, res2))
     mx = max(mx, res1, res2)
     i += 1
 

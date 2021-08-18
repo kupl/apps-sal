@@ -1,5 +1,4 @@
 def f(n):
-    # odd number is 2k + 1
     k = (n + 1) // 2
     def line(i): return print(" " * (i - 1) + "*")
 

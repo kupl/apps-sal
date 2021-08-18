@@ -7,7 +7,6 @@ def main():
         string = input()
         last = string[-1]
         operation = Find(string, last)
-        # print(operation)
         for i in string:
             if i == "L":
                 arr = Left(arr)

@@ -43,7 +43,6 @@ for i in range(n):
                 max_c.append(coins)
         except:
             pass
-# print(max_knights)
 for i in range(n):
     max_knights[i] = MaxKnight(max_knights[i], knights[i].index)
 max_knights.sort(key=operator.attrgetter('index'))

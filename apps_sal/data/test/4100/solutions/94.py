@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 N, K, Q = list(map(int, input().split()))
 A_list = []
 for _ in range(Q):

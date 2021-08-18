@@ -8,7 +8,6 @@ for _ in range(M):
     graph[a].append(b)
     graph[b].append(a)
 
-# seen[i]は、頂点iを訪問済みの場合はTrue、未訪問の場合はFalse
 seen = [False] * (N + 1)
 
 
@@ -21,7 +20,6 @@ for i in range(1, N + 1):
 
         while S:
             v = S.popleft()
-            # 訪問済みの頂点をTrueにする
             for i in graph[v]:
                 if seen[i] == False:
                     seen[i] = True

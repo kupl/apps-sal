@@ -1,6 +1,4 @@
 from sys import stdin, stdout
-# stdout = open('output.txt', 'w+')
-# stdin = open('input.txt','r+')
 
 
 from collections import Counter
@@ -56,11 +54,6 @@ if len(counter_s) == 2 and len(counter_t) == 2:
         stdout.write(t)
         counter_s['0'] -= counter_t['0']
         counter_s['1'] -= counter_t['1']
-
-    # while canprint(counter_s,counter_repeating_part)==True:
-    # 	stdout.write(repeating_part);
-    # 	counter_s['0']-=counter_repeating_part['0'];
-    # 	counter_s['1']-=counter_repeating_part['1'];
 
     if '0' in counter_repeating_part and '1' in counter_repeating_part:
         if counter_repeating_part['0'] > 0 and counter_repeating_part['1'] > 0:

@@ -8,15 +8,12 @@ for _ in range(t):
     while(i < n):
         if i == n - 1:
             A.append(L[i])
-            # print(i+1)
         else:
             if L[i] == L[i + 1]:
                 A.append(L[i + 1])
-                # print(i+2)
                 i = i + 1
             else:
                 A.append(L[i])
-                # print(i+1)
         i += 1
     count = Counter(A)
     z = []

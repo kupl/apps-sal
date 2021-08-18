@@ -16,7 +16,7 @@ class Solution:
                     continue
                 dis[j] = min(dis[j], abs(x - x0) + abs(y - y0))
 
-            delta, curr = min((d, j) for j, d in enumerate(dis))  # curr 后续还会加到explored里面，妙
+            delta, curr = min((d, j) for j, d in enumerate(dis))
             dis[curr] = math.inf
             res += delta
 

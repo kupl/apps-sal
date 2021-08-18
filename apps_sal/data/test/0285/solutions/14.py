@@ -1,5 +1,5 @@
 """
-Codeforces Round #329 (Div. 2)
+Codeforces Round 
 
 Problem 593 B. Anton and Lines
 

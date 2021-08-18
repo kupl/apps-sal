@@ -5,7 +5,7 @@ def main():
 
     a, b = -1, 0
     n = int(input())
-    line = input()  # Read the whole line
+    line = input()
     x = line.split()
 
     for i in range(n):

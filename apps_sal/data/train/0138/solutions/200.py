@@ -1,6 +1,5 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        # ------------------------------
         def helper(array):
             if len(array) == 0:
                 return 0
@@ -17,7 +16,6 @@ class Solution:
 
                 result = max(result, pos)
             return result
-        # ------------------------------
 
         arrays = []
         subarray = []

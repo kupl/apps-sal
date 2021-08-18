@@ -22,8 +22,6 @@ def main():
         print('YES')
     else:
         print('NO')
-    # print(A)
-    # print(part)
 
 
 def __starting_point():

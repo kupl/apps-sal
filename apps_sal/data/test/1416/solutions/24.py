@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 N, W = tuple(map(int, input().split(' ')))
 A = list(map(int, input().split(' ')))

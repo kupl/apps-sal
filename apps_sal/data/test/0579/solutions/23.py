@@ -10,12 +10,11 @@ def main():
     for i in range(n):
         start, count = i, 1
         val = c[start]
-        while p[start] - 1 != i:  # ループ部分. iに戻る直前まで続ける.
+        while p[start] - 1 != i:
             start = p[start] - 1
             count += 1
             val += c[start]
         start = i
-        # この時点でvalは1ループのスコア合計, カウントは1ループのsizeになっている
         '''
     以下の基本的な方針は
     - 1ループ分のスコア合計が正であればできるだけループしてスコアを稼ぎ、残りの余りの分の最大をとる。
@@ -26,12 +25,12 @@ def main():
     また、負の場合は基本的に1周以内だが、kが極端に小さいときの処理が必要。
     '''
         if val > 0:
-            a = (k // count - 1) * val  # 最後に余りのk%count回ぶんだけでなく1周半ぶんは試したいので(ループ余りではk%count回しか移動できないわけではない)
+            a = (k // count - 1) * val
             ans = max(a, ans)
             num = count + k % count
         else:
             a = 0
-            num = min(k, count)  # 1周以内におさめたい. k<countという非常に限られた場合のみk回までの移動になることを考慮。
+            num = min(k, count)
         for _ in range(num):
             start = p[start] - 1
             a += c[start]

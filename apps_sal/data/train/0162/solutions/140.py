@@ -1,6 +1,5 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        # hashh={}
         def helper(text1, text2, i, j, hashh):
             if i >= len(text1) or j >= len(text2):
                 return 0

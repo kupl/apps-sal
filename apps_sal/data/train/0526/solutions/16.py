@@ -1,4 +1,3 @@
-# cook your dish here
 test = int(input())
 for t in range(test):
     s = input()
@@ -20,6 +19,5 @@ for t in range(test):
         total += 40
     else:
         total += 8
-    # print(total)
     diff = (len(s) * 8) - (total)
     print(diff)

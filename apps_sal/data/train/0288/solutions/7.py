@@ -20,9 +20,6 @@ class Solution(object):
         statuNumToStatu[(2, 4)] = tuple(True if((i % 2 == 0) ^ (i % 3 == 1)) else False for i in range(1, lightNum + 1))
         statuNumToStatu[(3, 4)] = tuple(True if((i % 2 == 1) ^ (i % 3 == 1)) else False for i in range(1, lightNum + 1))
 
-        # for key in statuNumToStatu:
-        # print(key,statuNumToStatu[key])
-
         statuNumToNextStatuNums = {
             0: [1, 2, 3, 4],
             1: [0, 2, 3, (1, 4)],

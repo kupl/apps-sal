@@ -11,7 +11,7 @@ class UF:
     def union(self, x, y):
         fx, fy = self.find(x), self.find(y)
         if fx != fy:
-            if self.cc[fx] <= self.cc[fy]:  # path compression
+            if self.cc[fx] <= self.cc[fy]:
                 self.f[fx] = fy
                 self.cc[fx], self.cc[fy] = 0, self.cc[fx] + self.cc[fy]
             else:

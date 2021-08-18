@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from scipy.sparse.csgraph import floyd_warshall
 
 """

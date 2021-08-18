@@ -63,28 +63,25 @@ class Segment_Tree(object):
 
         res = self.root.count.copy()
 
-        sentinel = False  # 3
+        sentinel = False
 
         def helper(node):
             nonlocal res, l, r, sentinel, threshold
 
             if sentinel:
-                return None  # 3
+                return None
 
-            if (not res) or max(res.values()) < threshold:  # 3
-                # there is no solution so set res = {} and escape recursive function
+            if (not res) or max(res.values()) < threshold:
                 sentinel = True
                 res = {}
                 return None
 
             i, j = node.val
-            if (j < l) or (i > r):  # 2
-                # this node has only values that are OUTSIDE of [left,right] so subtract them from res
+            if (j < l) or (i > r):
                 res -= node.count
                 return None
 
-            if (l <= i) and (j <= r):  # 4
-                # this node has only values that are INSIDE of [left,right] so keep the values
+            if (l <= i) and (j <= r):
                 return None
 
             helper(node.left)
@@ -102,11 +99,5 @@ class MajorityChecker:
         self.tree = Segment_Tree(arr)
 
     def query(self, left: int, right: int, threshold: int) -> int:
-        # Find the value (val) that occurs the most frequently in range [left,right]
         val, freq = self.tree.find_most_common(left, right, threshold)
         return val if freq >= threshold else -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

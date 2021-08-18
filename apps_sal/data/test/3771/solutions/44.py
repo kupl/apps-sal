@@ -1,29 +1,19 @@
-# 最大流
-# https://tjkendev.github.io/procon-library/python/max_flow/dinic.html
 from collections import deque
 import sys
 sys.setrecursionlimit(10**7)
 
 
 class MaxFlow:
-    # n:頂点数
     def __init__(self, n):
         self.n = n
         self.g = [[] for i in range(n)]
 
-    # 辺を追加する
-    # fr:辺の始点
-    # to:辺の終点
-    # cap:辺のキャパシティ
     def add_edge(self, fr, to, cap):
         forward = [to, cap, None]
         forward[2] = backward = [fr, 0, forward]
-        # forward[2]=backward,backward[2]=forwardとなるように再帰的にforwardとbackwardを定義
         self.g[fr].append(forward)
         self.g[to].append(backward)
-        # print('add_edge',fr,to)
 
-    # sから各頂点への距離を返す。フローを流すごとにcapが減り、最終的に通れる辺が減り、tまで辿り着けなくなる。それまでフローを流す
     def bfs(self, s, t):
         self.level = level = [None] * self.n
         deq = deque([s])
@@ -37,14 +27,11 @@ class MaxFlow:
                     level[nv] = nlv
                     deq.append(nv)
         return level[t] is not None
-    # v->tにfを流す。再帰的に呼び出す。v=tとなるまで続ける。
-    # sから遠ざかるようなパスを見つけ、フローを流す
 
     def dfs(self, v, t, f):
         if v == t:
             return f
         level = self.level
-        # self.it[v]:頂点vから伸びる辺。一本の辺について着目するとfordwardとbackwardが交互に呼び出される。
         for e in self.it[v]:
             nv, cap, rev = e
             if cap and level[v] < level[nv]:
@@ -55,21 +42,14 @@ class MaxFlow:
                     return d
         return 0
 
-    # sからtへの最大フローを返す。
-    # 以下の処理をフローを流しきるまで繰り返す。
-    # BFSでsourceから各頂点までの距離(level)を計算
-    # DFSでsourceからの距離が遠くなるようなパスを見つけ、フローを流す
     def flow(self, s, t):
         flow = 0
         INF = 10**9 + 7
         g = self.g
-        # sから各頂点への距離を計算。sからtへ辿り着けない場合、終了。距離はself.levelに保存される。
         while self.bfs(s, t):
-            # グラフの各要素をイテレータに変換ものをself.itに入れる。????
             *self.it, = list(map(iter, self.g))
             f = INF
             while f:
-                # s->tにフローを流す。流せた量をflowに加算。流せる量があるまで続ける。
                 f = self.dfs(s, t, INF)
                 flow += f
         return flow

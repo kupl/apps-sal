@@ -17,7 +17,6 @@ def sum_difference(N: int, X: int, D: int) -> int:
             return 1
         return N + 1
 
-    # D != 0
     g = gcd(X, D)
     a, b = D // g, -X // g
 
@@ -31,7 +30,6 @@ def sum_difference(N: int, X: int, D: int) -> int:
         kl, kr = i_range[k]
         nl = sum_seq1(0, k - 1)
         nr = sum_seq1(N - k, N - 1)
-        # print('k: ({}, {}), n: ({}, {})'.format(kl, kr, nl, nr))
 
         if k + a <= N:
             i_range[k + a] = (b + min(kl, nl), b + max(kr, nr))

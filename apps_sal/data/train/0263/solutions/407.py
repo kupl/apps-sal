@@ -15,7 +15,7 @@ class Solution:
         }
 
         dp1 = [1] * 10
-        for i in range(n - 1):  # do n - 1 times
+        for i in range(n - 1):
             dp2 = [0] * 10
             for digit in range(10):
                 for neib in moves[digit]:

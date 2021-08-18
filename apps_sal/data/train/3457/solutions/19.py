@@ -1,6 +1,3 @@
-# Today I am mostly implementing Scala's pattern matching in Python...
-# Wondering if I can implement the Elixir pipe operator |> via decorators next
-# I may be bored.
 
 _ = '_'
 

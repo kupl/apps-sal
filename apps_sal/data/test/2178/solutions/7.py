@@ -1,5 +1,3 @@
-# Author:      Divesh Uttamchandani
-# Institution: BITS Pilani
 n = int(input().strip())
 a = list(map(int, input().strip().split()))
 b = list(map(int, input().strip().split()))
@@ -18,5 +16,3 @@ for i in b:
         ans.append(0)
 
 print(' '.join(list(map(str, ans))))
-# <> with <3 using Termicoder:
-# https://termicoder.github.io

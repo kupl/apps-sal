@@ -10,7 +10,6 @@ def secretRecipe(x1, x2, x3, v1, v2):
     return
 
 
-# Driver code starts here
 t = int(input())
 for _ in range(t):
     x1, x2, x3, v1, v2 = map(int, input().split())

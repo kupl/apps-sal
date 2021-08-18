@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split(" ")))
@@ -6,7 +5,6 @@ for _ in range(int(input())):
     x = (n // 4) - 1
     y = x + n // 4
     z = y + n // 4
-    # print(x,y,z)
     if a[x] == a[x + 1]:
         print(-1)
         continue

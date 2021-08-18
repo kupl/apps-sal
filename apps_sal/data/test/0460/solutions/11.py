@@ -1,7 +1,6 @@
 def main():
     p, x, y = list(map(int, input().split()))
 
-    # 0 check
     xcopy = x
     while xcopy >= y:
         if p in choice(xcopy):
@@ -9,7 +8,6 @@ def main():
             return
         xcopy -= 50
 
-    # + check
     i = 1
     while x <= 23800:
         if (p in choice(x + 100 * i - 50)) or (p in choice(x + 100 * i)):
@@ -30,8 +28,6 @@ def choice(s):
 
 
 def __starting_point():
-    # nonlocal stime
-    # stime = time.clock()
     main()
 
 

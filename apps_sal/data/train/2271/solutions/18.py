@@ -3,38 +3,35 @@ import sys
 
 class UnionFind:
     def __init__(self, n):
-        self.parent = list(range(n))  # 親ノード
-        self.size = [1] * n  # グループの要素数
+        self.parent = list(range(n))
+        self.size = [1] * n
 
-    def root(self, x):  # root(x): xの根ノードを返す．
+    def root(self, x):
         while self.parent[x] != x:
             self.parent[x] = self.parent[self.parent[x]]
             x = self.parent[x]
         return x
 
-    def merge(self, x, y):  # merge(x,y): xのいる組とyのいる組をまとめる
+    def merge(self, x, y):
         x, y = self.root(x), self.root(y)
         if x == y:
             return False
         if self.size[x] < self.size[y]:
-            x, y = y, x  # xの要素数が大きいように
-        self.size[x] += self.size[y]  # xの要素数を更新
-        self.parent[y] = x  # yをxにつなぐ
+            x, y = y, x
+        self.size[x] += self.size[y]
+        self.parent[y] = x
         return True
 
-    def issame(self, x, y):  # same(x,y): xとyが同じ組ならTrue
+    def issame(self, x, y):
         return self.root(x) == self.root(y)
 
-    def getsize(self, x):  # size(x): xのいるグループの要素数を返す
+    def getsize(self, x):
         return self.size[self.root(x)]
 
 
-# coding: utf-8
-# Your code here!
 readline = sys.stdin.readline
 read = sys.stdin.read
 
-#n = int(readline())
 n, m = list(map(int, readline().split()))
 *p, = list(map(int, readline().split()))
 
@@ -51,10 +48,8 @@ for i in range(n):
     q[v].add(i)
     r[v].add(p[i] - 1)
 
-# print(q,r)
 ans = 0
 for i in range(n):
     ans += len(q[i] & r[i])
-    # print(q[i]&r[i])
 
 print(ans)

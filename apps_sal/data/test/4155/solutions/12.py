@@ -39,7 +39,6 @@ s = v()
 def check(n):
     if 
 
-#コマンドの種類
 comand = ["A","B","X","Y"]
 p = list(itertools.permutations(comand,2))
 for i in range(len(p)):

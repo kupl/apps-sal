@@ -1,7 +1,7 @@
 def main():
     N, K = [int(x) for x in input().split(" ")]
     S = list(input())
-    cnt = [0]  # idx = 0, 2, 4 ... -> handstand
+    cnt = [0]
     a = 0
     for i in range(len(S)):
         if S[i] == "0":

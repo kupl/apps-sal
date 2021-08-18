@@ -7,5 +7,4 @@ for i in range(m - 1):
     diff[i] = xl[i + 1] - xl[i]
 
 diff_s = sorted(diff, reverse=True)
-# print(diff_s)
 print(sum(diff_s[n - 1:]))

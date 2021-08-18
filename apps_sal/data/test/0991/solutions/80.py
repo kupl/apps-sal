@@ -18,7 +18,6 @@ for i in range(N):
     a, b = list(map(int, input().split()))
     C.append((a, b))
 
-# dijkstra
 dp = [[INF] * MAX for _ in [0] * N]
 q = []
 
@@ -47,7 +46,6 @@ while q:
     for u, a, b in G[v]:
         push(t + b, s - a, u)
 
-# output
 for d in dp[1:]:
     ans = INF
     for s in range(MAX):

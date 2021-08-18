@@ -13,7 +13,7 @@ def solve(lst, l, no_of_group):
     if no_of_group >= list_len:
         return solve_equal(lst, no_of_elem_in_group)
 
-    else:  # no_of_group < list_len
+    else:
         lst.sort()
         dist = sum(lst[0:list_len - no_of_group])
         return dist + solve_equal(lst, no_of_elem_in_group)
@@ -37,7 +37,6 @@ for z in range(T):
         if l % no_of_group == 0:
             lst2 = lst[:]
             tmp = solve(lst2, l, no_of_group)
-            # print(i,tmp)
             if tmp < mn:
                 mn = tmp
     print(mn)

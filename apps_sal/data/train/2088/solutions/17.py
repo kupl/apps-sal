@@ -1,4 +1,3 @@
-# Problem F - Zuma
 
 
 n = int(input())

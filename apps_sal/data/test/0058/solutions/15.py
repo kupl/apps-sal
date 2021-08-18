@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# Door Frames
 n = int(input())
 a = int(input())
 b = int(input())

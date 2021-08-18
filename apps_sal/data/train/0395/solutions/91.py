@@ -47,10 +47,6 @@ class Solution:
         can_reach_odd[-1] = True
         can_reach_even[-1] = True
 
-        # print(smaller)
-        # print(larger)
-        # print(curr_list)
-
         for i in range(2, len(A) + 1):
             if larger[-i] != None:
                 can_reach_odd[-i] = can_reach_even[larger[-i]]

@@ -16,7 +16,6 @@ def test(x):
 l = 0
 r = 10**18 * 2 + 1
 while r - l > 1:
-    # print(l,r)
     m = (l + r) // 2
     if test(m):
         r = m

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 from decimal import Decimal, ROUND_HALF_UP
@@ -18,8 +17,8 @@ def main():
 
         return (True if cnt <= K else False)
 
-    L = 0.1          # the minimum length
-    R = max(A_list)  # the maximum length
+    L = 0.1
+    R = max(A_list)
 
     while (R - L) > 0.01:
         M = L + (R - L) / 2

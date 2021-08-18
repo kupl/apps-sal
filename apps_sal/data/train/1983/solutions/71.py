@@ -1,7 +1,5 @@
 class ProductOfNumbers:
 
-    # [3, 0, 0, 2, 5, 4]
-    # [(3, 1, -1), (0, 3, 1), (0, 1, 2), (2,1,2), (5,2,2), (4,10,2)]
     def __init__(self):
         self.nums = []
 
@@ -31,9 +29,3 @@ class ProductOfNumbers:
         if right_last_zero < left_ind:
             return right_val * right_product // left_product
         return 0
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

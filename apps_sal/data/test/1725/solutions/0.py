@@ -12,9 +12,6 @@ class Task:
         n, m, self.d = [int(x) for x in input().split(' ')]
         for _ in range(n):
             self.a += [int(x) for x in input().split(' ')]
-        #inFile = open('input.txt', 'r')
-        # inFile.readline().rstrip()
-        #self.childs = inFile.readline().rstrip()
 
     def solve(self):
         a = self.a
@@ -53,9 +50,6 @@ class Task:
 
     def printAnswer(self):
         print(self.answer)
-        #print(re.sub('[\[\],]', '', str(self.answer)))
-        #outFile = open('output.txt', 'w')
-        # outFile.write(self.answer)
 
 
 task = Task()

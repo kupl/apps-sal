@@ -14,7 +14,6 @@ def snd(x): return x[1]
 
 inf = float('inf')
 
-# 方向別のX・Yの最大最小
 S = {d: {'xmin': min(list(map(fst, P[d])), default=inf),
          'xmax': max(list(map(fst, P[d])), default=-inf),
          'ymin': min(list(map(snd, P[d])), default=inf),
@@ -25,11 +24,7 @@ vars = ('xmax', 'xmin', 'ymax', 'ymin')
 maxmin = {'max': max, 'min': min}
 dirs = {d: {'x': dirs[d][0], 'y': dirs[d][1]} for d in dirs}
 
-# S[L][xmax] - t1 == max(S[U][xmax], S[D][xmax])  t < t1 -> S[UD] < S[L]
-# S[R][xmax] + t2 == max(S[U][xmax], S[D][xmax])  t < t2 -> S[R]  < S[UD]
-# S[L][xmax] - t3 == S[R][xmax] + t3              t < t3 -> S[R]  < S[L]
 
-# 変化がある時刻の集合
 T = set()
 T.add(0)
 for v in vars:

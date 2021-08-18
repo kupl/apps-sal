@@ -14,7 +14,6 @@ class Solution:
             for j in range(i):
                 if(A[i] % A[j] == 0 and A[i] // A[j] in dict_num):
                     factor_pair[i].append((A[j], A[i] // A[j]))
-        # print(factor_pair)
         for i in range(n):
             root = A[i]
             num_trees = 1

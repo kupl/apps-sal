@@ -13,8 +13,6 @@ def str_multiple():
 def str_single():
     return input()
 
-# start
-
 
 n, k = int_multiple()
 l = int_multiple()
@@ -45,7 +43,5 @@ for c in costs:
         if (cost < min_cost):
             min_cost = cost
 
-# for cc in costs:
-#    print(cc)
 
 print(min_cost)

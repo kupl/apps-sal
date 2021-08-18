@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Contents   : AtCoder Regular Contest 094 d問題 WA
 Author     : Kitaura Hiromi

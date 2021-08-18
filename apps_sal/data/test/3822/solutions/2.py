@@ -12,8 +12,6 @@ def bscheck(n, l, v1, v2, k, t):
             return True
         if l / v2 > t:
             return False
-    #    v2 * tx + v1 * (t - tx) = l
-    #    (v2 - v1) * tx = l - v1 * t
         tx = (l - v1 * t) / (v2 - v1)
         ty = (tx * v2 - tx * v1) / (v1 + v2)
 

@@ -6,7 +6,6 @@ tempmin = P[0]
 
 for i in range(N):
     if tempmin >= P[i]:
-        # print(tempmin,P[i])
         ans += 1
     tempmin = min(tempmin, P[i])
 

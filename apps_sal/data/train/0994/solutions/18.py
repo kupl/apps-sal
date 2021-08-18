@@ -1,6 +1,6 @@
 import math
 
-t = int(input())  # scanf("%d",&t);
+t = int(input())
 while(t != 0):
     t -= 1
     ans = 0

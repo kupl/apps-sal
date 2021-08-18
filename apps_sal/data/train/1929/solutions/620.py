@@ -38,8 +38,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.letters += letter
         return self.trie.search(self.letters)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

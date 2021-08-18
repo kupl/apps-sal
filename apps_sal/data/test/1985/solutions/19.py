@@ -9,6 +9,4 @@ for mast_b in b:
         all_maybe_for_b_i.add(mast_b)
     all_maybe_all_b += [all_maybe_for_b_i]
 pack_ans_intersection = set.intersection(*all_maybe_all_b)
-# print(all_maybe_all_b)
-# print(pack_ans_intersection)
 print(len(pack_ans_intersection))

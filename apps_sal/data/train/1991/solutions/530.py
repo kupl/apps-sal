@@ -4,7 +4,7 @@ from functools import lru_cache
 class Solution:
     def countRoutes(self, locations, start: int, finish: int, fuel: int) -> int:
         @lru_cache(None)
-        def dfs(s, f):  # start and fuel
+        def dfs(s, f):
             if f < 0:
                 return 0
             res = 0
@@ -13,7 +13,6 @@ class Solution:
             for e in range(length):
                 if s != e:
                     res += dfs(e, f - matrix[s][e])
-            # print(s, f, res)
             return res % M
 
         M = 10**9 + 7

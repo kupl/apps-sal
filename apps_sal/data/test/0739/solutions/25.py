@@ -35,14 +35,9 @@ class ModInt:
 
 
 size = 0
-# 全部つなげたのを X とすると、
-# [今の X, 次に加算する数, 公差]
 vec = [ModInt(0), ModInt(A), ModInt(B)]
-# 加算する数の桁数
 digits = 1
 while size < L:
-    # 桁数が digits である要素の数
-    # digits 以下の要素の数の合計から今までに加算した数を引く
     cnt = max(0, (10 ** digits - 1 - A) // B - size + 1)
     cnt = min(cnt, L - size)
 

@@ -8,5 +8,3 @@ elif k == 2:
 else:
     x = max(a)
 print(x)
-
-#print(" ".join(map(str,a)))

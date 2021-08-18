@@ -6,12 +6,9 @@ for _ in range(t):
     kk = set(list(range(1, n + 1)))
     s = set([i for i in it if i != 0])
     left = kk - s
-    # print(left)
     mm = list(itertools.permutations(list(left)))
     tot = 0
-    # print(mm)
     for perm in mm:
-        # print(perm)
         k = 0
         mt = it[:]
         ind = 0

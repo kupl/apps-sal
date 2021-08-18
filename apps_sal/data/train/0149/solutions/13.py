@@ -6,7 +6,7 @@ class Solution:
             return s
 
         def helper(string, itr_range):
-            not_found = False  # if no k repeating elements found, then True
+            not_found = False
 
             while not not_found:
                 not_found = True

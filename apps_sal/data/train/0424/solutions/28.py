@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
-        # help function to count overlaps in A (shifted) and B:
         def check_overlap(side_x, down_x, A, B):
             overlap = 0
             for i in range(len(A)):
@@ -15,7 +14,6 @@ class Solution:
 
             return overlap
 
-        # try all options:
         max_overlap = 0
         for i in range(len(A)):
             for j in range(len(A)):

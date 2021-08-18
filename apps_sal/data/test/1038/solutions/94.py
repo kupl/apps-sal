@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 a, b = list(map(int, input().split()))
 """
 bit ごとにみる
@@ -12,13 +11,11 @@ else: 0
 """
 
 ans = 0
-# 0からbまでのxor
 if b % 2 == 1:
     ans = (b + 1) // 2 % 2
 else:
     ans = b ^ (b // 2 % 2)
 
-# 0からa-1までのxorを掛ける
 if a == 0:
     print(ans)
 else:

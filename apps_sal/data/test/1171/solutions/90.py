@@ -2,7 +2,6 @@ N, K = list(map(int, input().split()))
 V = list(map(int, input().split()))
 
 ans = []
-# きっちりK回しなくていいみたい
 for left in range(N + 1):
     for right in range(N + 1):
         if left + right > N:

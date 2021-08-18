@@ -1,4 +1,3 @@
-# cook your dish here
 num, loc = map(int, input().split())
 houses = list(map(int, input().split()))
 ans = 10**9

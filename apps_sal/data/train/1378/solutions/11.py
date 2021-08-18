@@ -1,4 +1,3 @@
-# cook your dish here
 a, n, k = map(int, input().split())
 L = [0] * k
 for i in range(k):

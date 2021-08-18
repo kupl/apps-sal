@@ -1,5 +1,3 @@
-# python3
-# utf-8
 
 players_nr, max_win_streak = (int(x) for x in input().split())
 player_idx___power = [int(x) for x in input().split()]

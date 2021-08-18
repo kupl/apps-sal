@@ -26,7 +26,6 @@ for _ in range(t):
             pg.append([mul, p])
         pg.sort()
         pg = pg[::-1]
-        # print(pg)
         cur = 0
         if pg[0][0] == 1:
             a = pg[0][1]

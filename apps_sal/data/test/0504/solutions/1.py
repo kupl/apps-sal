@@ -1,4 +1,3 @@
-# python3
 from sys import stdin
 
 
@@ -11,7 +10,7 @@ def bdiff(creature): return max(0, creature[0] - creature[1])
 n, a, b = readline()
 hand = [tuple(map(int, line.split())) for line in stdin.readlines()]
 
-ans = sum(creature[1] for creature in hand)  # default damage
+ans = sum(creature[1] for creature in hand)
 if b:
     hand.sort(key=bdiff)
 

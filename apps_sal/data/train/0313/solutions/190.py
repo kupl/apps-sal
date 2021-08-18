@@ -14,8 +14,6 @@ class Solution:
                 r = day
             else:
                 l = day + 1
-            # if l >= r and not p:
-            #    not_possible = True
 
         return l if not not_possible else -1
 

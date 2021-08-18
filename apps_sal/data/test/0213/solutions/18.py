@@ -17,7 +17,6 @@ if (max_ != int(max_)):
     max_ += 1
 max_ = int(max_)
 
-#print(min_, max_)
 
 s = set()
 for i in range(max(1, min_), max_):

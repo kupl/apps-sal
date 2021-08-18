@@ -29,18 +29,15 @@ for i in range(int(input())):
     lvA = bfs(a)
     lvB = bfs(b)
     lvC = bfs(c)
-    # print(lvA, lvB, lvC)
     ans = int(1e18)
     cost.sort()
     cost.insert(0, 0)
     for i in range(1, len(cost)):
         cost[i] += cost[i - 1]
-    # print(cost)
     for i in range(n):
         d1 = lvB[i]
         d2 = lvA[i] + lvC[i]
         if d1 + d2 >= len(cost):
             continue
-        # print(f'i={i}, d1={d1}, d2={d2}')
         ans = min(ans, cost[d1] * 2 + cost[d1 + d2] - cost[d1])
     print(ans)

@@ -12,6 +12,5 @@ for i in range(a):
     else:
         otv[l1[i][1]] = otv[l1[j][1]]
         j += 1
-    # print(j,i)
 print(k)
 print(" ".join(map(str, otv)))

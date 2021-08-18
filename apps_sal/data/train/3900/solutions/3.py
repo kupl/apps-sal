@@ -16,4 +16,4 @@ shape = ' 000 |1   2|1   2|1   2| 333 |4   5|4   5|4   5| 666 '.split('|')
 
 def segment_display(n):
     s = str(n).rjust(6, ' ')
-    return '\n'.join('|' + ('|'.join(' ' + (''.join(' #'[c in displays[d]] for c in shape[j]) + ' ') for d in s)) + '|' for j in range(9))
+    return '\n'.join('|' + ('|'.join(' ' + (''.join('

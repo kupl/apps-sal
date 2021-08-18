@@ -17,7 +17,6 @@ for i in range(n):
 flag = False
 c = min2
 
-# print(min1,min2,min3)
 for i in range(n):
     a[i] -= min1
 

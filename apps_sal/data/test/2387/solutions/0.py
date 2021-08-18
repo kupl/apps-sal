@@ -1,5 +1,3 @@
-# 写経
-# https://atcoder.jp/contests/abc167/submissions/13072107
 import sys
 readline = sys.stdin.readline
 

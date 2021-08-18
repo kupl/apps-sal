@@ -17,6 +17,6 @@ class Solution:
                 down[j] = 0
         ans = 0
         for i in range(m):
-            if up[i] and down[i]:  # need peak
+            if up[i] and down[i]:
                 ans = max(ans, up[i] + down[i] + 1)
         return ans

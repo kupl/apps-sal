@@ -3,7 +3,6 @@ A = []
 for i in range(N):
     A.append(int(input()) - 1)
 
-#A.insert(0, 0)
 ans = -1
 push = 0
 

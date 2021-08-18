@@ -35,7 +35,6 @@ for i in range(n - 1):
 imosnum = 0
 plus = 0
 
-#print (start,end)
 
 for i in range(2 * m):
 
@@ -54,9 +53,7 @@ for i in range(2 * m):
             imosnum += 1
             state[j] = 1
 
-    #print (i+1,imosnum,plus)
 
 if (allsum - max(lis) < 0):
     print(asxacscd)
-#print (lis)
 print(allsum - max(lis))

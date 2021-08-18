@@ -17,7 +17,6 @@ class Solution:
             row, start, end = allowed
             intervals_dict[row].append([start, end])
 
-        # merge intervals
         for row in intervals_dict:
             intervals = intervals_dict[row]
             intervals.sort()
@@ -37,7 +36,6 @@ class Solution:
             last_start = start
             intervals_dict[row] = final_merged
 
-        # BFS
         queue = deque([startK])
         moves = 0
         seen = set((startK[0], startK[1]))

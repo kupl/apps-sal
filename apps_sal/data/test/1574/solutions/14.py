@@ -1,5 +1,5 @@
 class CF574B:
-    M = int(1e12)   # $$ +\infty $$
+    M = int(1e12)
 
     def __init__(self):
         n, m = list(map(int, input().split()))

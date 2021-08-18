@@ -1,7 +1,6 @@
 x = []
 for i in range(8):
     x.append(input())
-# B
 B_mov = 1000
 for i in range(8):
     for j in range(8):
@@ -16,7 +15,6 @@ for i in range(8):
                 if count < B_mov:
                     B_mov = count
             count = 0
-# W
 A_mov = 1000
 for i in range(8):
     for j in range(8):

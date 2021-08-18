@@ -31,7 +31,6 @@ for i in range(1, q + 1):
 
     if ge >= 0:
         remain = s[ge] - attack
-        #print(remain, s[ge], i)
         if remain > 0:
             result[i] = n - ge
         else:
@@ -45,7 +44,6 @@ for i in range(1, q + 1):
         remain = 0
     '''
     else:
-        # all soldiers died
         remain -= k[i-1]
         attack = 0
         if remain > 0: result[i] = n-ge

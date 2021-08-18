@@ -1,10 +1,8 @@
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
         dp = [[[0, 0] for _ in range(len(piles))]for _ in range(len(piles))]
-        # print(dp)
         for i in range(len(piles)):
             dp[i][i] = [piles[i], 0]
-        # print(dp)
         for i in range(len(piles) - 1, -1, -1):
             for j in range(i, len(piles)):
                 if i == j:

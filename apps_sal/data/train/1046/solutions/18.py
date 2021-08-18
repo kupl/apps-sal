@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     a, b = list(map(int, input().split()))
     l = b1 = 0

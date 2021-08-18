@@ -50,9 +50,9 @@ for m in range(M):
     adj.append([a - 1, b - 1])
 
 ans = 0
-for i in range(M):  # 取り除く辺の番号
+for i in range(M):
     uf = UnionFind(N)
-    for j in range(M):  # 辺を追加しない（取り除く）
+    for j in range(M):
         if i == j:
             continue
         uf.union(*adj[j])

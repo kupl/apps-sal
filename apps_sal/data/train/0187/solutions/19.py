@@ -18,5 +18,4 @@ class Solution:
                 wheelCount += 1
             numOfCustomers -= boardingUsers
 
-        # print(wheelCount, numOfCustomers)
         return wheelCount

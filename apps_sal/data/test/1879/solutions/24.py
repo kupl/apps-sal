@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-#! -*- coding: utf-8 -*-
 
 
 def main():
@@ -10,7 +8,6 @@ def main():
         print(0)
         return
     for i, move in enumerate(path):
-        #print(dx, dy)
         if dx < 0 and move == 'W':
             dx += 1
         elif dx > 0 and move == 'E':

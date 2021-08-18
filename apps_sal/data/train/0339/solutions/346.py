@@ -14,7 +14,6 @@ class Solution:
             sq = i * i
             for j in set(nums2):
                 ano = sq / j
-                # print(\"ano,\", ano, sq, j)
                 if ano != int(ano):
                     continue
                 ano = int(ano)
@@ -25,7 +24,6 @@ class Solution:
                     else:
                         inc += len(dic2[ano]) * len(dic2[j]) / 2
                     count += inc
-                    # print(\"i is\", i, \" inc\", inc)
         for i in nums2:
             sq = i * i
             for j in set(nums1):
@@ -39,6 +37,5 @@ class Solution:
                         inc += int(len(dic1[ano]) * (len(dic1[ano]) - 1) / 2)
                     else:
                         inc += len(dic1[ano]) * len(dic1[j]) / 2
-                    # print(\"i is\", i, \" inc\", inc)
                     count += inc
         return int(count)

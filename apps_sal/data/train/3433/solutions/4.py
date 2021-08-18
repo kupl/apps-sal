@@ -1,5 +1,4 @@
 def replace_zero(arr):
-    # (len, index)
     best_len, best_idx = 0, 0
     curr_len, curr_idx = 0, None
 

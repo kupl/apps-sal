@@ -1,8 +1,3 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         nodeList = []
@@ -18,7 +13,6 @@ class Solution:
             while y < len(nodeList):
                 sum = sum + nodeList[y]
                 if sum == 0:
-                    # delete array index x to y
                     del nodeList[x:y + 1]
                     x -= 1
                     break

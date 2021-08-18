@@ -10,7 +10,6 @@ class Solution:
         ans = [n * m]
 
         def dfs(layers, stepsNow):
-            # print(layers, stepsNow)
             if stepsNow > ans[0]:
                 return
 
@@ -27,7 +26,6 @@ class Solution:
                     i0 = i
 
             if minH == m:
-                # print(layers)
                 ans[0] = min(ans[0], stepsNow)
                 return
 

@@ -1,8 +1,3 @@
-# I'm slightly sad, I had a simple clean solution, that wasn't quite fast enough, needed 2-3 more seconds
-#
-# def multiply(n, k):
-#     return k if k<2 else sum(multiply(x,k-1) for x in factors(n))
-#
 
 from collections import Counter
 from functools import lru_cache, reduce
@@ -16,11 +11,8 @@ def multiply(n, k):
         return k
     if k == 2:
         return len(factors(n))
-    # get all the combinations that prod to n
     tups = get_factor_tuples(n, k)
-    # insert all the extra 1s
     tups = {tuple((1,) * (k - len(x)) + x) for x in tups}
-    # do factorial math to find # of unique combinations of each tuple (multinomial coefficient)
     f = factorial(k)
     return sum(f // reduce(mul, [factorial(v) for v in list(Counter(p).values()) if v > 1] + [1]) for p in tups)
 

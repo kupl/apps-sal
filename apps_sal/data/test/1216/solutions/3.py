@@ -1,7 +1,4 @@
 
-# coding: utf-8
-
-# In[21]:
 
 odd = input()
 s = input()
@@ -24,6 +21,3 @@ for g in a:
     else:
         res += g[0]
 print(res)
-
-
-# In[ ]:

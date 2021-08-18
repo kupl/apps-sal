@@ -1,5 +1,3 @@
-# Causes TLE
-# C++17 implemention -> 1062c.cpp
 
 MOD = 1000000007
 
@@ -11,7 +9,7 @@ def main():
     q = int(buflist[1])
     buf = input()
     x = buf
-    sum_list = [0]  # sentinel / one indexing
+    sum_list = [0]
     for i, deliciousness in enumerate(x):
         sum_list.append(int(deliciousness) + sum_list[i])
     enjoyment_list = [0]
@@ -21,8 +19,8 @@ def main():
     for i in range(q):
         buf = input()
         buflist = buf.split()
-        l = int(buflist[0])  # one indexing
-        r = int(buflist[1])  # one indexing
+        l = int(buflist[0])
+        r = int(buflist[1])
         query_list.append((l, r))
     for i, query in enumerate(query_list):
         l = query[0]
@@ -31,7 +29,6 @@ def main():
         delicious_count = sum_list[r] - sum_list[l - 1]
         non_delicious_count = banhmi_count - delicious_count
         enjoyment = 0
-        # main part
         if delicious_count == 0:
             enjoyment = 0
         else:

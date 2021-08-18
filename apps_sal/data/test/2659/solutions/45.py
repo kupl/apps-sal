@@ -1,4 +1,3 @@
-# D問題
 K = int(input())
 keta = 1
 now = 1

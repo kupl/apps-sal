@@ -11,4 +11,4 @@ for i in range(n):
             break
         j += 1
 
-print(count)  # cook your dish here
+print(count)

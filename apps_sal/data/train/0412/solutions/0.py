@@ -18,10 +18,7 @@ class Solution:
                 sum = int((sum + comb(d, j) * comb(y + d - 1, y)))
             else:
                 sum = int((sum - comb(d, j) * comb(y + d - 1, y)))
-            #print( comb(d, j) * comb(y+d-1,y))
-            #print('i ={} y= {} sum={}  '.format(i,y,sum))
             j = j + 1
             i = i + f
 
-        # print(sum)
         return int(sum) % 1000000007

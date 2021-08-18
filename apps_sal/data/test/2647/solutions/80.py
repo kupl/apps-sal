@@ -14,8 +14,8 @@ while q:
         break
     for i, j in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
         ny, nx = y + i, x + j
-        if (not 0 <= ny < h) or (not 0 <= nx < w) or s[ny][nx] == '#':
-            continue
+        if (not 0 <= ny < h) or (not 0 <= nx < w) or s[ny][nx] == '
+        continue
         elif visited[ny][nx] == -1:
             visited[ny][nx] = visited[y][x] + 1
             q.append([ny, nx])

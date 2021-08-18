@@ -5,4 +5,3 @@ def pre_fizz(n):
         a.append(i)
         i = i + 1
     return a
-    # your code here

@@ -1,5 +1,4 @@
 def find(n):
-    # Code here
     total = 0
     i = 0
     while i < n:

@@ -9,13 +9,9 @@ B.sort()
 C.sort()
 
 ans = 0
-# print(A)
-# print(B)
-# print(C)
 for i in range(n):
     b = B[i]
     pos_a = bisect_left(A, b)
     pos_c = bisect_right(C, b)
     ans += pos_a * (n - pos_c)
-    # print(b, pos_a, pos_c)
 print(ans)

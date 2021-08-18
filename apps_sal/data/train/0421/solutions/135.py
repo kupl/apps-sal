@@ -1,7 +1,5 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
-        # starts with max(ord(char)) should be start
-        # longer substrings dominate
         i, j, k = 0, 1, 0
         while j + k < len(s):
             if s[i + k] == s[j + k]:

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     a, b = list(map(int, input().split()))
     c = list(bin(a + 1)[2:])

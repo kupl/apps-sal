@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 import numpy as np
 
@@ -40,7 +39,7 @@ def make_fact(U, MOD):
     return fact, fact_inv
 
 
-U = 2 * 10 ** 6 + 10  # 階乗テーブルの上限
+U = 2 * 10 ** 6 + 10
 fact, fact_inv = make_fact(U, MOD)
 
 r1, c1, r2, c2 = lr()
@@ -49,4 +48,3 @@ answer -= cmb(r2 + c1 + 1, r2 + 1) - 1
 answer -= cmb(r1 + c2 + 1, c2 + 1) - 1
 answer += cmb(r1 + c1, r1) - 1
 print((answer % MOD))
-# 26

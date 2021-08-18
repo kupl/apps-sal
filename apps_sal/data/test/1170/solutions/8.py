@@ -76,8 +76,6 @@ def sol_m_n(x):
     for k, n in kn:
         l = math.ceil((n + 1) / (k + 1))
         r = math.floor((n) / (k))
-    # if l == (n+1)/(k+1):
-     #   l +=1
 
         if l <= r:
             return r, n
@@ -94,8 +92,6 @@ def __starting_point():
             print(-1)
         else:
             print(int(n), int(m))
-
-# 5, 8
 
 
 __starting_point()

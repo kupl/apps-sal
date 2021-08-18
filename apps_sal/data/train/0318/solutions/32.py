@@ -8,7 +8,6 @@ class Solution:
         def helper(arr, n):
             m = len(arr)
 
-            # dp[i][j] represents max sum when pick j elements from array of length i
             dp = [[0 for j in range(n + 1)] for i in range(m + 1)]
             for i in range(1, m + 1):
                 for j in range(1, n + 1):

@@ -17,6 +17,5 @@ for i in range(n):
         k1 = max(k1, k)
         for u in sp:
             b[u] = k
-# print(s,b,k1)
 k2 = max(s)
 print(sum(list([x * x for x in s])) + k1 * k1 + 2 * k1 * k2)

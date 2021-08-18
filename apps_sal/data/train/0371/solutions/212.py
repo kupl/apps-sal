@@ -11,9 +11,7 @@ class Solution:
                 graph[node].append(idx)
         visited_stop = set([S])
         visited_bus = [0 for _ in range(len(routes))]
-        queue = [(idx, 0) for idx in graph[S]]  # bus idx
-        # for bus, _ in queue:
-        #     visited_bus[bus] = 1
+        queue = [(idx, 0) for idx in graph[S]]
         while queue:
             bus_id, depth = queue.pop(0)
             new_stop = set(routes[bus_id]) - visited_stop

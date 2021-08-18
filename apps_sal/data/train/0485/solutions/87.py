@@ -3,9 +3,7 @@ class Solution:
         cur, res = 0, 0
 
         for i in range(len(A)):
-            # to check if A[i-K] has been flipped
             if i >= K and A[i - K] > 1:
-                # since i-K is out of the sliding window, need to substract the total flip number by 1
                 cur -= 1
 
             if (cur % 2) ^ A[i] == 0:

@@ -20,18 +20,17 @@ for x, y, c in XYC:
     i0 = i % K
     j0 = j % K
     if (i < K and j < K) or (i >= K and j >= K):
-        sum2d(0, 0, i0, j0)  # 左上
-        sum2d(i0 + K, 0, K * 2, j0)  # 右上
-        sum2d(i0, j0, i0 + K, j0 + K)  # 真ん中
-        sum2d(0, j0 + K, i0, K * 2)  # 左下
-        sum2d(i0 + K, j0 + K, K * 2, K * 2)  # 右下
+        sum2d(0, 0, i0, j0)
+        sum2d(i0 + K, 0, K * 2, j0)
+        sum2d(i0, j0, i0 + K, j0 + K)
+        sum2d(0, j0 + K, i0, K * 2)
+        sum2d(i0 + K, j0 + K, K * 2, K * 2)
     else:
-        sum2d(i0, 0, i0 + K, j0)  # 上
-        sum2d(0, j0, i0, j0 + K)  # 左
-        sum2d(i0 + K, j0, K * 2, j0 + K)  # 右
-        sum2d(i0, j0 + K, i0 + K, K * 2)  # 下
+        sum2d(i0, 0, i0 + K, j0)
+        sum2d(0, j0, i0, j0 + K)
+        sum2d(i0 + K, j0, K * 2, j0 + K)
+        sum2d(i0, j0 + K, i0 + K, K * 2)
 
-# 2次元累積和
 AA = np.array(A)
 for i in range(K * 2):
     AA[i + 1, :] += AA[i, :]

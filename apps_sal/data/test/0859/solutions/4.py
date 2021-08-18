@@ -21,7 +21,7 @@ if(counterS1 == counterS2):
 else:
     if('?' not in counterS2):
         print("0.000000000000")
-    else:  # there is at least one ? in s2
+    else:
         nbPlusToMuch = counterS2['+'] - counterS1['+']
         nbMinusToMuch = counterS2['-'] - counterS1['-']
         if(nbPlusToMuch > 0 or nbMinusToMuch > 0):

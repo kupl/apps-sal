@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def getFolderNames(self, names: List[str]) -> List[str]:
-        exists = {}  # maps a name to its count.
+        exists = {}
         res = []
         for name in names:
             if name not in exists:

@@ -22,7 +22,6 @@ class Solution:
             string[idx] = 1
             root[idx] = idx
 
-            # we check the sizes of its two neigbor sets before we merge them with it
             if idx - 1 >= 0 and string[idx - 1] == 1:
                 if m == size[find(idx - 1)]:
                     res = step

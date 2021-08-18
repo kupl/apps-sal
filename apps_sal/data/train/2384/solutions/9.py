@@ -56,10 +56,7 @@ def main():
 
     print(n - max(map(max, f.values())))
 
-#input = sys.stdin.readline
 
-
-# sys.setrecursionlimit(2097152)
 tn = int(input())
 for _ in range(tn):
     main()

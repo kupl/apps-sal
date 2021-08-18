@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -26,8 +24,6 @@ MOD = 10**9 + 7
 
 for _ in range(n):
     ndp = [0] * N
-    #cnt = 0
-    #bad = 0
     for mask in range(N):
         if dp[mask] == 0:
             continue
@@ -51,7 +47,6 @@ for _ in range(n):
                 ndp[nmask] %= MOD
 
     dp = ndp
-    # print(sum(dp),"sum")
 
 ans = (pow(10, n, MOD) - sum(dp))
 print((ans % MOD))

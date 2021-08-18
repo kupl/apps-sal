@@ -1,5 +1,4 @@
 def min_value(digits):
-    # your code here
     new = sorted(digits)
     i = 0
     j = i + 1

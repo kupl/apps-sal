@@ -10,7 +10,6 @@ for x in range(1, int(s ** 0.5) + 1):
             cands.append(s // x)
 
 cands.sort(reverse=True)
-# print(cands)
 
 ans = 0
 for cand in cands:
@@ -19,12 +18,10 @@ for cand in cands:
     sb = [0 for _ in range(n + 1)]
     for i in range(n):
         sb[i + 1] = sb[i] + b[i]
-    #print(cand, sb)
 
     flg = False
     for i in range(n + 1):
         x = max(sb[i], cand * (n - i) - (sb[n] - sb[i]))
-        #print(i, sb[i], cand * (n - i) - (sb[n] - sb[i]))
         if x <= k:
             flg = True
             break

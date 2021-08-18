@@ -2,7 +2,6 @@ class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
 
         def dfs(i, j, runsum):
-            # ending condition ==> when all the nodes around you are visited or zero. there is no way to proceed further
             runsum += grid[i][j]
             visited[i][j] = 1
             dirr = [(i + 1, j), (i, j + 1), (i - 1, j), (i, j - 1)]

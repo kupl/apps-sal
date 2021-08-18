@@ -14,7 +14,6 @@ def absolute():
         if c.get(i, 0) < q:
             m += q - c.get(i, 0)
             c[i] = q
-    # print(c)
     return m
 
 

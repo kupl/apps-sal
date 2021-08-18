@@ -37,9 +37,6 @@ for i in range(1, n + 1):
         if prime_fact:
             prime_factors[j].append(i)
 
-# Calculate the number i = x * y
-# Such that j in [1, n // x]  gcd(j, y) == 1
-
 
 def f(x, y):
     remain = 0
@@ -56,7 +53,6 @@ def f(x, y):
 
 
 for i in range(2, n + 1):
-    # i = y * b
     e_len = 0
     for ele in factors[i]:
         if ele != i:

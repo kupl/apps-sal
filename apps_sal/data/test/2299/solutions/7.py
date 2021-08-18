@@ -1,4 +1,3 @@
-#---------------EL FUTURO ES INCIERTO--------------#
 n, m = [int(x) for x in input().split()]
 arr = [[int(x) for x in input().split()]for i in range(0, n)]
 p = [i for i in range(0, n + 1)]
@@ -10,8 +9,6 @@ for j in range(0, m):
             p[i + 1] = min(cur, p[i + 1])
         else:
             cur = i + 1
-    # end for
-# end for
 
 q = int(input())
 res = ""
@@ -25,6 +22,5 @@ for _ in range(0, q):
         res += "No"
     if _ != q - 1:
         res += "\n"
-# end for
 
 print(res)

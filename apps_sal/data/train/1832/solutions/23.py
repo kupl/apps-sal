@@ -5,8 +5,8 @@ class Solution:
             costs[i][j] = c
             costs[j][i] = c
         visited = set()
-        spans = defaultdict(int)  # (i, j): inner_nodes_visited, i < j
-        q = [(0, 0)]  # total_cost, node
+        spans = defaultdict(int)
+        q = [(0, 0)]
         while q:
             dist, a = heapq.heappop(q)
             if a in visited:

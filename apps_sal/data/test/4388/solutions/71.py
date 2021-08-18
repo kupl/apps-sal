@@ -1,5 +1,3 @@
-# ABC111
-# A AtCoder Beginner Contest999
 n = list(input())
 for i in range(len(n)):
     if n[i] == "1":

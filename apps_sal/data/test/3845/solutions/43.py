@@ -1,10 +1,10 @@
 a, b = map(int, input().split())
-s = [['.'] * 99 if i < 50 else ['#'] * 99 for i in range(100)]
+s = [['.'] * 99 if i < 50 else ['
 print(100, 99)
 for i in range(b - 1):
     row = ((i * 2) // 99) * 2
     col = (i * 2) % 99
-    s[row][col] = '#'
+    s[row][col] = '
 for i in range(a - 1):
     row = ((i * 2) // 99) * 2 + 51
     col = (i * 2) % 99

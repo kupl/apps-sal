@@ -5,8 +5,6 @@ class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         i = 1
         n = len(A)
-        # A=A+A
-        # end = n
         ans = A[0]
         ans_max = A[0]
         ans_min = A[0]

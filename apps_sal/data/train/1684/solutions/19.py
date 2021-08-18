@@ -1,6 +1,6 @@
 """
 
-    Author - AYUSHMAN CHAHAR #
+    Author - AYUSHMAN CHAHAR 
 
 """
 
@@ -9,7 +9,6 @@ import math
 import heapq
 import itertools
 import sys
-#import numpy
 from itertools import combinations
 from itertools import permutations
 from collections import deque

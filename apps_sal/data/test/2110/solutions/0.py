@@ -30,13 +30,10 @@ def solve():
             c += 1
     e[2 * n] = (0, 0, 0)
     e[2 * n + 1] = (m - 1, 0, 0)
-    # print(e)
     e.sort()
     p = -1
     r = (int(1e9), 0)
-    # print(e)
     for x, t, id in e:
-        # print(x,t,id,c)
         if p != x and p != -1:
             r = min(r, (c, p))
         p = x
@@ -52,5 +49,4 @@ def solve():
             print(i + 1, end=' ')
 
 
-# for i in range(mint()):
 solve()

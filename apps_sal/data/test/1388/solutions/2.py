@@ -1,4 +1,3 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations, accumulate
@@ -85,8 +84,6 @@ def solve():
         p[x][1] -= m
     print(ans * 2)
     return
-
-# Solve
 
 
 def __starting_point():

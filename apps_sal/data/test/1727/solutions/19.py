@@ -17,11 +17,9 @@ else:
         x, h = trees[i]
         next = trees[i + 1][0]
         if (x - h) > last:
-            #print("last", trees[i], last, next)
             count += 1
             last = x
         elif (x + h) < next:
-            #print("next", trees[i], last, next)
             count += 1
             last = x + h
         else:

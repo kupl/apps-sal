@@ -1,4 +1,3 @@
-# 問題: https://atcoder.jp/contests/abc144/tasks/abc144_d
 
 import math
 a, b, x = list(map(int, input().strip().split()))

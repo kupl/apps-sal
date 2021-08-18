@@ -11,5 +11,4 @@ T = int(input())
 while T > 0:
     T = T - 1
     list_num = [int(x) for x in input().split()]
-    # print list_num
     print(moves(list_num[0], list_num[1], list_num[2]))

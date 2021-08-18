@@ -19,10 +19,7 @@ for i in range(p):
 def matrix(n, m, d):
     ans = m - 1
     l = list(reversed(sorted(d.keys())))
-    # print "l = ",l
-    # print "d = ",d
     for i in range(len(l)):
-        # print "ans = ",ans
         number = l[i]
         if number > 1:
             below = number - 1
@@ -100,11 +97,9 @@ for i in range(1, n + 1):
      first = temp + d[i].count(temp)
      while temp > 1:
       second = (temp-1) + d[i].count(temp-1)
-      #print d[i]
       if first >= second:
        s += first-second
        first = second
-       #print "s = ",s
       else:
        flag = False
        break

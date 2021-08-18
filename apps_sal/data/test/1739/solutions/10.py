@@ -19,6 +19,3 @@ while k % x == 0:
     k = k // x + t.count(b)
 
 print(pow(x, min(r, s), 1000000007))
-
-
-# Made By Mostafa_Khaled

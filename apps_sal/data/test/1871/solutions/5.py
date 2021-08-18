@@ -1,6 +1,5 @@
 sa = input().split(' ')
 subjs = int(sa[0])
-# timeper chapter
 time = int(sa[1])
 sa2 = input().split(' ')
 sa3 = []

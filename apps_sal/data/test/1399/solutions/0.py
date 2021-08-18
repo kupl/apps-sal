@@ -1,4 +1,3 @@
-#
 import sys
 
 
@@ -47,17 +46,13 @@ for i in range(N):
     day = (zp[i][3] - ay) // zgcd[i]
     cross = []
     for j in range(i + 1, N):
-        # dprint('node',i,j)
         bx = zp[j][0]
         dbx = (zp[j][2] - bx) // zgcd[j]
         by = zp[j][1]
         dby = (zp[j][3] - by) // zgcd[j]
-        # dprint(ax,dax,ay,day)
-        # dprint(bx,dbx,by,dby)
         t1 = ax * day - ay * dax - bx * day + by * dax
         t2 = dbx * day - dby * dax
 
-        # dprint(t1,t2)
         if t2 == 0:
             continue
         if t1 % t2 != 0:
@@ -77,7 +72,6 @@ for i in range(N):
             k1 = t3 // day
         if k1 < 0 or k1 > zgcd[i]:
             continue
-        #dprint(ax + k1 * dax, ay+k1 * day)
         cross.append(k1)
     if not cross:
         continue

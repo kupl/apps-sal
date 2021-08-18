@@ -1,11 +1,6 @@
 import sys
 import math
-#from queue import *
-#import random
-# sys.setrecursionlimit(int(1e6))
 input = sys.stdin.readline
-
-############ ---- USER DEFINED INPUT FUNCTIONS ---- ############
 
 
 def inp():
@@ -23,8 +18,6 @@ def insr():
 
 def invr():
     return(list(map(int, input().split())))
-################################################################
-############ ---- THE ACTUAL CODE STARTS BELOW ---- ############
 
 
 n, k, q = invr()

@@ -16,5 +16,4 @@ class Solution:
                     for i in range(end):
                         dp[idx + 1][end] += dp[idx][i]
 
-        # for d in dp: print(d)
         return sum(dp[-1]) % (10 ** 9 + 7)

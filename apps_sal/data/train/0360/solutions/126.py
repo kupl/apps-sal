@@ -5,7 +5,6 @@ class Solution:
 
         while start < end:
             mid = (start + end) // 2
-            # print(start, end, mid)
 
             days = 1
             curr_sum = 0
@@ -20,7 +19,6 @@ class Solution:
                     curr_sum = weights[i]
                 else:
                     curr_sum += weights[i]
-            # print(days)
 
             if start == mid:
                 if days > D:

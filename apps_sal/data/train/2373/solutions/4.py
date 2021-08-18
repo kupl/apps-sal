@@ -4,8 +4,6 @@ from heapq import heappush, heappop
 import math
 from collections import *
 from functools import reduce, cmp_to_key
-# import io, os
-# input = io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
 import sys
 input = sys.stdin.readline
 

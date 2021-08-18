@@ -1,5 +1,3 @@
-# Contest: Codeforces Round #582 (Div. 3) (https://codeforces.com/contest/1213)
-# Problem: C: Book Reading (https://codeforces.com/contest/1213/problem/C)
 
 from math import gcd
 

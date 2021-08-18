@@ -24,7 +24,6 @@ def solve(n, a):
                 cnt += dx
                 y += d
             if valid:
-                # print(d)
                 if cnt < min_cnt or min_cnt < 0:
                     min_cnt = cnt
     return min_cnt

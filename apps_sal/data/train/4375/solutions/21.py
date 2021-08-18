@@ -8,6 +8,6 @@ def get_planet_name(id):
         6: "Saturn",
         7: "Uranus",
         8: "Neptune",
-        9: "Pluto"  # I mean, c'mon, let's be real
+        9: "Pluto"
     }
     return planets.get(id)

@@ -2,11 +2,6 @@ def main():
     n, m, k = list(map(int, input().split()))
     icons = list(map(int, input().split()))
     icons_for_launch_positions = list(map(int, input().split()))
-    # n = 10
-    # m = 12
-    # k = 3
-    # icons = [6, 1, 2, 9, 3, 10, 8, 5, 7, 4]
-    # icons_for_launch_positions = [3, 9, 9, 4, 8, 2, 3, 8, 10, 8, 3, 4]
 
     gestures = m
     icons_positions = [0] * (n + 1)

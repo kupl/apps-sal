@@ -1,5 +1,3 @@
-# import sys
-# sys.stdin = open('in.txt', 'r')
 
 input()
 a = list(map(int, input().split()))

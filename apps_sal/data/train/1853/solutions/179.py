@@ -20,7 +20,6 @@ class Solution:
                 return seen
 
             distances = [dijkstrase(i) for i in range(n)]
-            # print(distances)
             ans = []
             for i in range(n):
                 total = 0
@@ -29,7 +28,6 @@ class Solution:
                         total += 1
                 ans.append(total)
 
-            # print(ans)
             return max([i for i in range(n) if ans[i] == min(ans)])
 
         return method1()

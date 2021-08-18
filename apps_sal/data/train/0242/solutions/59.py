@@ -14,7 +14,6 @@ class LinkedList:
                 if self.map[new_key][2] > 0:
                     self.map[self.map[new_key][2]][1] = new_key
 
-                # update min
                 if self.min == key:
                     self.min = new_key
                 new_key = self.map[key][1]
@@ -24,9 +23,7 @@ class LinkedList:
             self.map[key] = [1, self.min, -1]
             if self.min > 0:
                 self.map[self.min][2] = key
-            # update min
             self.min = key
-        # update max
         if self.max <= 0 or self.map[self.max][0] < self.map[key][0]:
             self.max = key
 
@@ -91,15 +88,6 @@ class Solution:
         result = 2
         for length, num in enumerate(nums):
             out.add_to_key(num)
-            #print(length + 1, out.check(), out.map, out.max, out.min, out.unique_max())
-            #xx = [str(length)]
-            #elem = out.max
-            #limit = 100
-            # while elem != -1 and limit > 0:
-            #    xx.append(str(elem))
-            #    elem = out.map[elem][2]
-            #    limit -= 1
-            # print(\">\".join(xx))
             if out.check():
                 result = length + 1
         return result

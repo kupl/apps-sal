@@ -71,7 +71,7 @@ on('@')(lambda self: setattr(self, 'running', False))
 on('$')(lambda self: self.stack.pop())
 on('.')(lambda self: self.output.append(str(self.stack.pop())))
 on(',')(lambda self: self.output.append(chr(self.stack.pop())))
-on('#')(lambda self: self.forward())
+on('
 on('"')(lambda self: self.string_literal())
 on('p')(lambda self: self.plane[self.stack.pop()].__setitem__(self.stack.pop(), chr(self.stack.pop())))
 on('g')(lambda self: self.stack.append(ord(self.plane[self.stack.pop()][self.stack.pop()])))

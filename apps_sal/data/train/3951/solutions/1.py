@@ -1,4 +1,3 @@
-# My 1st Solution
 
 def duplicate_count(text):
     count = 0

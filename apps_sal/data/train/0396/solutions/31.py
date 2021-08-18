@@ -6,7 +6,6 @@ class Solution:
         m = ['1'] * l
         s = ''.join(m)
         n = int(s)
-        #n = 1
         while(True):
             if(n % K == 0):
                 return len(str(n))

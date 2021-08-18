@@ -8,7 +8,6 @@ class Solution:
         mod = 2**63 - 1
 
         def test(L):
-            # print(26, L, mod)
             p = pow(26, L, mod)
             cur = reduce(lambda x, y: (x * 26 + y) % mod, A[:L], 0)
             seen = {cur}
@@ -27,39 +26,3 @@ class Solution:
             else:
                 hi = mi - 1
         return S[res:res + lo]
-
-#         s = [ord(num) - ord(\"a\") for num in S]
-
-#         mod = 10 ** 9 + 7
-#         def check(l):
-#             cur = 0
-#             seen = set()
-#             maxBASE = pow(26, l-1, mod)
-#             for i in range(len(s)):
-#                 if i < l:
-#                     cur = (cur * 26 + s[i]) % mod
-#                 else:
-#                     cur -= maxBASE * s[i-l]
-#                     cur = (cur * 26 + s[i]) % mod
-#                 if i == l-1:
-#                     seen.add(cur)
-#                 elif i >= l:
-#                     if cur in seen:
-#                         return i-l+1
-#                     else:
-#                         seen.add(cur)
-#             return 0
-
-
-#         l = 1
-#         r = len(S) - 1
-#         res = -1
-#         while l < r:
-#             m = (l+r) // 2
-#             pos = check(m)
-#             if pos:
-#                 l = m
-#                 res = pos
-#             else:
-#                 r = m - 1
-#         return S[res:res + l]

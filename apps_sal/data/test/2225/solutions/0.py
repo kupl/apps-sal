@@ -1,4 +1,3 @@
-#!/usr/bin/pypy3
 
 from sys import stdin, stderr
 import random
@@ -65,7 +64,6 @@ def alter_tree(n, t, p, b):
     op = (n % 2 == 0)
     while width > 1:
         width //= 2
-        # print(nix)
         if p >= width:
             nix2 = 2 * nix + 2
             s.append((nix, nix2 - 1))
@@ -75,7 +73,6 @@ def alter_tree(n, t, p, b):
             s.append((nix, nix2 + 1))
         nix = nix2
         op = not op
-    # print(nix)
     t[nix] = b
     v = b
     while s:

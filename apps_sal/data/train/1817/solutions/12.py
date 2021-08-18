@@ -21,7 +21,7 @@ class Solution:
          return ''.join(res)
          '''
         cnt = collections.Counter(S)
-        res = '#'
+        res = '
         while cnt:
             stop = True
             for k, v in cnt.most_common():

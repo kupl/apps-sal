@@ -1,4 +1,3 @@
-# cook your dish here
 for k in range(int(input())):
     s = input()
     ans = 0

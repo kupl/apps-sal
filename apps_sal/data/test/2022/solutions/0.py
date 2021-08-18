@@ -9,10 +9,6 @@ for u, v in e:
     g[u].append(v)
     g[v].append(u)
 
-# req = 1
-# while req * req < n:
-#     req += 1
-
 
 def dfs():
     dep = [0] * (n + 1)

@@ -1,5 +1,4 @@
 def pick_peaks(arr):
-    # your code here
     pos = []
     prob_peak = False
     for i in range(1, len(arr)):

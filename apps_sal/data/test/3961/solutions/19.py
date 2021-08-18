@@ -13,5 +13,4 @@ for i in range(1, n):
         ls1[i] %= mod
     sum += ls1[i]
     sum %= mod
-   # print(ls1[i])
 print(sum)

@@ -14,7 +14,7 @@ def main():
     """
 
     N = int(input())
-    V = 10 ** 5 + 1  # padding for y
+    V = 10 ** 5 + 1
     repn = [[] for _ in range(V * 2)]
     for _ in range(N):
         x, y = list(map(int, input().split()))
@@ -24,7 +24,6 @@ def main():
     visited = [0] * (V * 2)
     count = [0, 0]
 
-    # dfsでその都度連結成分を求める
     def dfs(v):
         if visited[v]:
             return

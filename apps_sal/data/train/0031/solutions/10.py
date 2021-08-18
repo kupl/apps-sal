@@ -1,31 +1,7 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 1000000007#998244353
-# INF = 10000
-
-# from sys import stdout
-# from heapq import heappush, heappop
-# from collections import defaultdict
-# from collections import deque
-# import bisect
-
-# from math import sqrt
-# from math import gcd
-# from math import log2
-
-# with open('input.in','r') as Reader:
-#     with open('output.out','w') as out:
-# n = int(Reader.readline())
-
-
-# print(len(arr))
-# print(arr[:10])
 
 
 t = int(input())
 for test in range(t):
-    # n = int(input())
-    # n, m = list(map(int, input().split()))
-    # n2, m2 = list(map(int, input().split()))
     s = input()
     v = set()
     start = 0

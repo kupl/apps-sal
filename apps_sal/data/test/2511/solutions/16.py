@@ -16,7 +16,7 @@ ans = []
 
 def wfs(now, back):
     if now != 0:
-        cnt = K - 2  # まず一個上のを引く。
+        cnt = K - 2
     else:
         cnt = K - 1
     for nxt in tree[now]:

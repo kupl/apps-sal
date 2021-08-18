@@ -13,7 +13,7 @@ for i in range(n):
     s = input()
     inputs.append(s)
     zero_is_permitted[s[0]] = False
-    reversed_s = s[::-1]  # reversed
+    reversed_s = s[::-1]
     for (j, c) in enumerate(reversed_s):
         char_priority_dict[c] += 10 ** j
 

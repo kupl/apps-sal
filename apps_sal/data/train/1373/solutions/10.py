@@ -1,4 +1,3 @@
-#
 def sol(arr, n, k):
     m = -1
     for i in range(n):
@@ -40,7 +39,6 @@ for _ in range(int(input())):
     for x in range(n):
 
         freq[arr[x]] += 1
-        # print(freq)
         if freq[arr[x]] == 1:
             c += 1
         while(c > k):

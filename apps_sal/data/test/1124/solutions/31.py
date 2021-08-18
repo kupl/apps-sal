@@ -1,5 +1,4 @@
 def resolve():
-    # ====input code===
     n = int(input())
     a = list(map(int, input().split()))
     while True:
@@ -10,5 +9,4 @@ def resolve():
             break
 
 
-# ================
 resolve()

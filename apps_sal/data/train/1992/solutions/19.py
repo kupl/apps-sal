@@ -8,7 +8,7 @@ class CombinationIterator:
         self.idx[-1] -= 1
 
     def __next__(self) -> str:
-        k = self.comblen  # the digit where the calculation stop propagating
+        k = self.comblen
         while k > 0:
             k -= 1
             self.idx[k] += 1
@@ -21,9 +21,3 @@ class CombinationIterator:
 
     def hasNext(self) -> bool:
         return self.idx[0] != self.totlen - self.comblen
-
-
-# Your CombinationIterator object will be instantiated and called as such:
-# obj = CombinationIterator(characters, combinationLength)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()

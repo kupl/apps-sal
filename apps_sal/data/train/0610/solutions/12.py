@@ -1,4 +1,3 @@
-# cook your dish here
 def covid(n, m):
     p = False
     for j in range(len(m)):

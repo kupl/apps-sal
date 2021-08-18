@@ -12,7 +12,6 @@ for s, c in SC:
     elif condition[dig] != c:
         invalid = True
 
-# print(invalid)
 
 if str(condition[0]) == '0':
     if M > 1:
@@ -24,7 +23,6 @@ for i in range(N):
             condition[i] = 1
         else:
             condition[i] = 0
-# print(condition)
 
 if condition[0] != 0 and not invalid:
     ans = ''

@@ -12,7 +12,6 @@ class Solution:
         i = 0
         maxValue = -1
         while i < len(resL):
-            # right
             for j in range(i + L, len(resM)):
                 maxValue = max(resL[i] + resM[j], maxValue)
             for j in range(min(i - M, len(resM))):

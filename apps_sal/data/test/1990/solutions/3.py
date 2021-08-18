@@ -1,6 +1,3 @@
-# Thanks for mitribunskiy
-# efficient input style
-# https://codeforces.com/contest/1263/submission/66081769
 
 from collections import deque
 import sys
@@ -41,7 +38,6 @@ for i, c in enumerate(operations):
             left.append((q, su + q, min(mi, su + q), max(ma, su + q)))
         else:
             left.append((q, q, q, q))
-    # check
     _, sl, mil, mal = left[-1]
     _, sr, mir, mar = right[0]
     if sl == sr and mil >= 0 and mir >= 0:

@@ -1,6 +1,3 @@
-# cook your dish here
-# cook your dish here
-# cook your dish here
 n = int(input())
 l = []
 for j in range(n):

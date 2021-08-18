@@ -4,7 +4,7 @@ n = 0
 
 inp = []
 
-tree = []  # stores the index of min in range(i,j)
+tree = []
 
 
 def build(node, i, j):
@@ -34,7 +34,7 @@ def build(node, i, j):
         tree[node] = tree[2 * node + 1]
 
 
-def RMQ(node, i, j, l, r):  # return  index of minimum in range i,j #r,l is current range
+def RMQ(node, i, j, l, r):
 
     if((i <= l) and (r <= j)):
 
@@ -46,7 +46,7 @@ def RMQ(node, i, j, l, r):  # return  index of minimum in range i,j #r,l is curr
 
     mid = int((l + r) / 2)
 
-    a = RMQ(2 * node, i, j, l, mid)  # j,l,mid)
+    a = RMQ(2 * node, i, j, l, mid)
 
     b = RMQ(2 * node + 1, i, j, mid + 1, r)
 
@@ -91,13 +91,8 @@ if(__name__ == "__main__"):
 
     sys.setrecursionlimit(10000)
 
-    # build RMQ array
-
     tree = [int(n) for x in range(4 * n + 10)]
 
     build(1, 0, n - 1)
 
     print((solve(0, n - 1, 0)))
-
-
-# Made By Mostafa_Khaled

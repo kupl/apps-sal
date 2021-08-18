@@ -17,10 +17,6 @@ for p in probs:
     num = (num + denum) * 100 % M
     denum = denum * p % M
 
-    #print(num, denum)
 
 inv, _ = gcd(denum, M)
 print(num * inv % M)
-
-
-#d[i + 1] = (d[i] + 1) * 100 / p

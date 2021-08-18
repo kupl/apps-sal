@@ -11,7 +11,7 @@
         for i in range(15, total_age):
             if ageCnt[i] == 0:
                 continue 
-            res += ageCnt[i]*(prefixSum[i]-prefixSum[int(i*.5+7)]-1)#)- ageCnt[i]
+            res += ageCnt[i]*(prefixSum[i]-prefixSum[int(i*.5+7)]-1)
         return res '''
 
 

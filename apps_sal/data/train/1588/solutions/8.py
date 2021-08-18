@@ -1,7 +1,3 @@
-# input t,n,a[]
-# sort integers
-# if integer repeats continue
-# else break
 
 T = int(input())
 for t in range(0, T):

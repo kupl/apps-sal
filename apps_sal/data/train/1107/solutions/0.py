@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin
 from math import sqrt, ceil, log10
 

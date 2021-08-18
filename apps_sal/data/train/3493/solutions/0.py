@@ -1,4 +1,3 @@
-# Remember you have a CHANGE dictionary to work with ;)
 
 def change_count(change):
     money = {'penny': 0.01, 'nickel': 0.05, 'dime': 0.10, 'quarter': 0.25, 'dollar': 1.00}

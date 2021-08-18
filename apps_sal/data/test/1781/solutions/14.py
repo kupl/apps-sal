@@ -31,7 +31,6 @@ for row in placement:
 for i in range(3):
     for j in range(len(placement)):
         if (kk == 0):
-            # print(f'broken here {i}, {j}')
             break
         for k in range(len(placement[j])):
             if placement[j][k] == i:
@@ -39,7 +38,6 @@ for i in range(3):
                 kc += i
                 kk -= 1
                 if (kk == 0):
-                    # print("broken")
                     break
 
 kkk = 0

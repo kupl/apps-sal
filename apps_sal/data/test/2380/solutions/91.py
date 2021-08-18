@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# 問題：https://atcoder.jp/contests/abc127/tasks/abc127_d
-# プライオリティキュー　解説を見ながら実装
 
 
 import heapq

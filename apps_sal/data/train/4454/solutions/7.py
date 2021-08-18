@@ -15,6 +15,6 @@ def presses(phrase):
                     counter += res * i
                     s.remove(c)
         else:
-            for ch in ['1', '*', '#']:
+            for ch in ['1', '*', '
                 counter += 1 * phrase.count(ch)
     return counter

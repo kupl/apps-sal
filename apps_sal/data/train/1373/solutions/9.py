@@ -1,4 +1,3 @@
-# cook your dish here
 def sol(arr, n, k):
     m = -1
     for i in range(n):

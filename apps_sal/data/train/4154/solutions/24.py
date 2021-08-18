@@ -4,4 +4,3 @@ def is_triangle(a, b, c):
     t3 = b + c > a
 
     return t1 and t2 and t3
-    # return False

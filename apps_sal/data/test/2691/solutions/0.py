@@ -1,13 +1,8 @@
-# cook your dish here
 n, p = map(int, input().split())
 s = input()
 
 d = s.count('d')
 u = s.count('u')
-
-# c = 1
-# l = 1
-# for i in range(1,n):
 
 
 if(d <= p or u <= p):
@@ -30,7 +25,6 @@ else:
                 pp = p
             elif(s[i] == 'u'):
                 pp -= 1
-            # print(l,i,ii)
             i += 1
             l += 1
         print(max(c, l))
@@ -51,7 +45,6 @@ else:
                 pp = p
             elif(s[i] == 'd'):
                 pp -= 1
-            # print(l,i,ii)
             i += 1
             l += 1
         print(max(c, l))

@@ -25,5 +25,3 @@ for zz in range(int(input())):
             used.add((ppos, tuple(pos)))
             ans += 5
     print(ans)
-
-# aaa

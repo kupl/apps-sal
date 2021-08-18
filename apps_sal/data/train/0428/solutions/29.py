@@ -11,23 +11,22 @@ class Solution:
         def key_id(c):
             if c.isupper():
                 return ord(c) - ord('A'), True
-            return ord(c) - ord('a'), False  # id, upper
+            return ord(c) - ord('a'), False
         seen = {(si, sj, 0)}
-        q = deque([(0, si, sj, 0)])  # cost,i,j,keys
+        q = deque([(0, si, sj, 0)])
         while q:
             cost, i, j, keys = q.popleft()
             if keys == needed_keys:
                 return cost
             for ni, nj in [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]:
-                if not 0 <= ni < len(grid) or not 0 <= nj < len(grid[0]) or grid[ni][nj] == '#':
-                    continue
-                # get new keys bitset
+                if not 0 <= ni < len(grid) or not 0 <= nj < len(grid[0]) or grid[ni][nj] == '
+                continue
                 new_keys = keys
                 if grid[ni][nj].isalpha():
                     idx, capped = key_id(grid[ni][nj])
                     if capped:
                         if not keys & (1 << idx):
-                            continue  # cant enter a door we dont have a key to
+                            continue
                     else:
                         new_keys |= 1 << idx
                 if (ni, nj, new_keys) in seen:

@@ -1,4 +1,3 @@
-# your code goes here
 arr = input().split()
 p = int(arr[0])
 q = int(arr[1])
@@ -13,7 +12,6 @@ while(a <= p):
     b = x
     while(b < a and b <= q):
         flag += 1
-        #print(str(a) + ' ' + str(b))
         b += 1
     a += 1
 print(str(flag))

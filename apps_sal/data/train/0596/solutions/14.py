@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 M = 1000000007
 for z in range(t):

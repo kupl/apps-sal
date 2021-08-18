@@ -1,4 +1,3 @@
-# cook your dish here
 for w in range(int(input())):
     danx, dany = list(map(int, input().split()))
     detx, dety = list(map(int, input().split()))

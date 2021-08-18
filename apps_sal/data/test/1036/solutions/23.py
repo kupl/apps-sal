@@ -9,10 +9,6 @@ def strline(): return sys.stdin.readline().strip().split()
 def strread(): return sys.stdin.read().strip().split()
 
 
-#from numba import njit, b1, i4, i8, f8, jit
-#import numpy as np
-
-
 def main():
     n, k, s = strread()
     N, K = int(n), int(k)
@@ -22,7 +18,6 @@ def main():
     rel[('S', 'P')] = 'S'
     for a, b in list(rel.keys()):
         rel[(b, a)] = rel[(a, b)]
-    # print(rel)
     for k in range(K, 0, -1):
         if len(s) % 2:
             s = s + s
@@ -32,7 +27,6 @@ def main():
         if math.log2(len(next_s)) > k - 1:
             next_s = next_s[:2 ** (k - 1)]
         s = next_s
-        # print(next_s)
     print(s[0])
 
 

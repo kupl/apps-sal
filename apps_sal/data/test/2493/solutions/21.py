@@ -23,10 +23,10 @@ def nCr_mod_p(n, r, p):
 
 
 p = 10 ** 9 + 7
-N = 10 ** 5  # N は必要分だけ用意する
-fact = [1, 1]  # fact[n] = (n! mod p), 0! = 1! = 1
-factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p), 0! = 1! = 1
-inv = [0, 1]  # inv[n] = n^(-1) mod p, 0! = 1　だけど便宜上inv[0]=0にしてる
+N = 10 ** 5
+fact = [1, 1]
+factinv = [1, 1]
+inv = [0, 1]
 
 for i in range(2, N + 2):
     fact.append((fact[-1] * i) % p)

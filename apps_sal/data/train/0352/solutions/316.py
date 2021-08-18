@@ -17,7 +17,6 @@ class Solution:
 
     def longestStrChain(self, words: List[str]) -> int:
 
-        # sort by length
         if len(words) == 1:
             return 1
         len_counts = {}
@@ -32,10 +31,8 @@ class Solution:
             else:
                 len_counts[l].append(w)
 
-        # keep track of the last link, and count
         chains = {}
 
-        # start the chains with the smallest words
         for w in len_counts[min_len]:
             chains[w] = 1
         ans = -1
@@ -44,12 +41,10 @@ class Solution:
         prev_len = keys[0]
         for l in keys[1:]:
 
-            # get all words of this length
             poss = len_counts[l]
             if l != prev_len + 1:
                 prev_len = l
 
-                # just add these to dict
                 for w in poss:
                     if w not in chains:
                         chains[w] = 1
@@ -58,17 +53,13 @@ class Solution:
 
             poss_last = len_counts[prev_len]
 
-            # print(poss, poss_last)
             for w in poss:
                 if w not in chains:
                     chains[w] = 1
 
-                # check for each word less than this
                 for last in poss_last:
                     if self.match(last, w):
                         chains[w] = max(chains[w], chains[last] + 1)
 
             prev_len = l
-        # return max value in chains
-        # print(chains)
         return max(chains.values())

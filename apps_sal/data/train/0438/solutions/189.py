@@ -31,11 +31,4 @@ class Solution:
                 tree_root[right_node_root][0] = bit_idx
                 tree_root[bit_idx][1] += tree_root[right_node_root][1]
 
-            # for j in range(len(arr)):
-            #     if (tree_root[j][0] == j and tree_root[j][1] == m):
-            #         last_t = i + 1
-
-            # if (tree_root[bit_idx][1] == m):
-            #     last_t = i + 1
-
         return last_t

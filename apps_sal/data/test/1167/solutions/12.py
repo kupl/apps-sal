@@ -5,10 +5,6 @@ import collections
 from collections import Counter
 
 
-#########################
-# imgur.com/Pkt7iIf.png #
-#########################
-
 def pow(x, y, mod):
     r = 1
     x = x % mod

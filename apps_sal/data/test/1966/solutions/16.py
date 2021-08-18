@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import sys
 
@@ -10,8 +9,6 @@ for i in range(4):
         blks[-1].append(sys.stdin.readline().strip())
     if i != 3:
         sys.stdin.readline()
-
-# start from B
 
 
 def to_BW(blk):

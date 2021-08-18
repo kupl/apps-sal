@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/770/C
 n, k = list(map(int, input().split()))
 K = set(list(map(int, input().split())))
 g = {}
@@ -68,12 +67,3 @@ if len(K) > 0:
 else:
     print(len(ans))
     print(' '.join([str(x) for x in ans]))
-
-# 6 2
-# 5 6
-# 0
-# 1 1
-# 1 4 5
-# 2 2 1
-# 1 4
-# 2 5 3

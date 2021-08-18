@@ -26,10 +26,6 @@ def LIR(row, col):
         read_all = [LI() for _ in range(row)]
         return map(list, zip(*read_all))
 
-#################
-
-# A[i]>B[i]を満たす最小のB[i]を残して終える
-
 
 N = I()
 A, B = LIR(N, 2)

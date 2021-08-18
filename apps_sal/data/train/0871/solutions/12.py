@@ -1,4 +1,3 @@
-# cook your dish here
 '''test=int(input())
 for _ in range(test):
     r,c=map(int,input().split())
@@ -9,7 +8,7 @@ for _ in range(test):
         ci=list(map(str,input()))
         rc.append(ci)
         for j in range(c):
-            if(ci[j]!='#' and ci[j]!='-'):
+            if(ci[j]!='
                 pathant.append([ci[j],i,j])
             
     count=0
@@ -20,28 +19,28 @@ for _ in range(test):
         if(pathant[i][0]=='L'):
             count=pathant[i][2]
             for j in range(count,-1,-1):
-                if(rc[pathant[i][1]][j]=='#'):
+                if(rc[pathant[i][1]][j]=='
                     break
                 temp.append([pathant[i][1],j])
             parr.append(temp)
         if(pathant[i][0]=='R'):
             count=pathant[i][2]
             for j in range(count,c):
-                if(rc[pathant[i][1]][j]=='#'):
+                if(rc[pathant[i][1]][j]=='
                     break
                 temp.append([pathant[i][1],j])
             parr.append(temp)
         if(pathant[i][0]=='U'):
             count=pathant[i][1]
             for j in range(count,-1,-1):
-                if(rc[j][pathant[i][2]]=='#'):
+                if(rc[j][pathant[i][2]]=='
                     break
                 temp.append([j,pathant[i][2]])
             parr.append(temp)
         if(pathant[i][0]=='D'):
             count=pathant[i][1]
             for j in range(count,r):
-                if(rc[j][pathant[i][2]]=='#'):
+                if(rc[j][pathant[i][2]]=='
                     break
                 temp.append([j,pathant[i][2]])
             parr.append(temp)
@@ -74,35 +73,33 @@ for x in range(t):
             if a[i][j] == 'U':
 
                 for k in range(i - 1, -1, -1):
-                    if a[k][j] != '#':
-                        timer += 1
-                        p[str(k) + ' ' + str(j)].append(timer)
+                    if a[k][j] != '
+                    timer += 1
+                    p[str(k) + ' ' + str(j)].append(timer)
                     else:
                         break
             if a[i][j] == 'R':
                 for k in range(j + 1, c):
-                    if a[i][k] != '#':
-                        timer += 1
-                        p[str(i) + ' ' + str(k)].append(timer)
+                    if a[i][k] != '
+                    timer += 1
+                    p[str(i) + ' ' + str(k)].append(timer)
                     else:
                         break
             if a[i][j] == 'D':
                 for k in range(i + 1, r):
-                    if a[k][j] != '#':
-                        timer += 1
-                        p[str(k) + ' ' + str(j)].append(timer)
+                    if a[k][j] != '
+                    timer += 1
+                    p[str(k) + ' ' + str(j)].append(timer)
                     else:
                         break
             if a[i][j] == 'L':
                 for k in range(j - 1, -1, -1):
-                    if a[i][k] != '#':
-                        timer += 1
-                        p[str(i) + ' ' + str(k)].append(timer)
+                    if a[i][k] != '
+                    timer += 1
+                    p[str(i) + ' ' + str(k)].append(timer)
                     else:
                         break
-    # print(p)
     total = 0
-    # print(p)
     for i in p:
         y = set(p[i])
         for j in y:

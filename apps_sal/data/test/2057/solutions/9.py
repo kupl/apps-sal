@@ -1,8 +1,5 @@
 import sys
 
-#sys.stdin = open("input.txt", "r");
-#sys.stdout = open("output.txt", "w");
-
 
 def ria():
     return [int(x) for x in input().split()]
@@ -27,6 +24,3 @@ for i in range(1, n + 1, 1):
 tf += 1
 
 print(tf)
-
-
-# sys.stdout.close();

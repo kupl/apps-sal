@@ -5,7 +5,6 @@ class Solution:
         for i in range(N):
             dp[i][i] = piles[i]
 
-        # j - i = d start from the shortest subarray
         for d in range(1, N):
             for i in range(N - d):
                 j = d + i

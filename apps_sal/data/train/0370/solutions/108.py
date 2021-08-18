@@ -40,7 +40,6 @@ class Solution(object):
             for x in p:
                 primes[x].append(i)
 
-        # now we need to merge the disjoint sets and see which is the longest
         uf = DSU(n)
         for i in primes.items():
             vals = i[1]

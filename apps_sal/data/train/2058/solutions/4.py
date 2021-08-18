@@ -3,9 +3,9 @@ from bisect import insort
 
 class Graph:
     def __init__(_):
-        _.change = [-10**27]  # increment slope at ...
-        _.a = _.y = 0  # last line has slope a, starts from y
-        _.dx = 0      # the whole graph is shifted right by ...
+        _.change = [-10**27]
+        _.a = _.y = 0
+        _.dx = 0
 
     def __repr__(_): return f"<{[x+_.dx for x in _.change]}; {_.a} {_.y}>"
 
@@ -28,7 +28,6 @@ class Graph:
         insort(_.change, v - _.dx)
         _.a += 1
         _.y += _.change[-1] - (v - _.dx)
-    #def remleft(_, v): change.remove(v-_.dx)
 
     def cutright(_):
         dx = _.change.pop() - _.change[-1]

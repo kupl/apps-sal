@@ -12,7 +12,6 @@ RI = lambda x=' ': list(map(int, input().split(x)))
 RS = lambda x=' ': input().rstrip().split(x)
 mod = int(1e9 + 7)
 eps = 1e-6
-#################################################
 n = RI()[0]
 a = (9 * (n - 3) + 24) * (4**(n - 3))
 print(a)

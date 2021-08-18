@@ -3,17 +3,14 @@ class Solution:
         if S == T:
             return 0
 
-        # Builds graph.
-        graph = collections.defaultdict(list)  # Don't use set. See below.
+        graph = collections.defaultdict(list)
         for bus, stops in enumerate(routes):
-            bus = -bus - 1  # To avoid conflict with the stops.
+            bus = -bus - 1
 
-            # `set.update` consumes extra memory, so a `list` is used instead.
             graph[bus] = stops
             for s in stops:
                 graph[s].append(bus)
 
-        # Does BFS.
         dq = deque()
         dq.append((S, 0))
         seen = {S}
@@ -24,7 +21,6 @@ class Solution:
                     continue
                 if adj == T:
                     return depth
-                # If `adj` < 0, it's a bus, so we add 1 to `depth`.
                 dq.append((adj, depth + 1 if adj < 0 else depth))
                 seen.add(adj)
         return -1

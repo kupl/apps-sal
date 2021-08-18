@@ -13,20 +13,3 @@ class Solution:
             else:
                 return max(memo_solve(p1, p2 + 1), memo_solve(p1 + 1, p2))
         return memo_solve(0, 0)
-
-
-#         @lru_cache(maxsize = None)
-#         def memo_solve(p1, p2):
-#             if len(text1) == p1 or len(text2) == p2:
-#                 return 0
-
-#             option_1 = memo_solve(p1 + 1, p2)
-
-#             first_occurence = text2.find(text1[p1], p2)
-#             option_2 = 0
-#             if first_occurence != -1:
-#                 option_2 = 1 + memo_solve(p1 + 1, first_occurence + 1)
-
-#             return max(option_1, option_2)
-
-#         return memo_solve(0, 0)

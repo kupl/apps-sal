@@ -12,7 +12,6 @@ class Solution:
                 dic[single] = 0
             else:
                 dic[single] += 1
-            # print(a, b, \" dic:\", dic)
             if dic[single] * 26 + single > k:
                 return False
         return True

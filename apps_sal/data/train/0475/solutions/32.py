@@ -25,7 +25,6 @@ class Solution:
                         for j in range(i1, len(arr1)):
                             arr.append(arr1[j])
                         return arr
-        # print(rsum)
         while len(rsum) >= 2:
             rsum_new = []
             i = 0
@@ -37,7 +36,6 @@ class Solution:
             rsum = rsum_new
         v = 0
         rsum = rsum[0]
-        # print(rsum)
         for i in range(left - 1, right):
             v += rsum[i]
         return v % (10**9 + 7)

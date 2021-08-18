@@ -5,12 +5,12 @@ def main():
     h, w = list(map(int, input().split()))
     c = list([int(x) + 1 for x in input().split()])
     d = list([int(x) + 1 for x in input().split()])
-    s = ['#' * (w + 4)] * 2 + ['#' * 2 + input() + '#' * 2 for _ in range(h)] + ['#' * (w + 4)] * 2
+    s = ['
 
     ans = [[-1] * (w + 4) for _ in range(h + 4)]
     for i in range(h + 4):
         for j in range(w + 4):
-            if s[i][j] == '#':
+            if s[i][j] == '
                 ans[i][j] = -2
     ans[c[0]][c[1]] = 0
 

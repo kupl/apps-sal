@@ -20,7 +20,6 @@ class Solution:
         if sum == 0:
             return ans
         while(sum > 0):
-            # find last index
             index = opens[-1]
             opens = opens[:-1]
             ans = ans[:index] + ans[index + 1:]

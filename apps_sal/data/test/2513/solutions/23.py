@@ -13,7 +13,6 @@ def main():
                     t += t[-2]
                 else:
                     t += "S" if t[-2] == "W" else "W"
-        # check1
         if t[0] == "S":
             if s[0] == "o":
                 f = t[-1] == t[1]
@@ -25,7 +24,6 @@ def main():
             else:
                 f = t[-1] != t[1]
 
-        # check2
         if t[-1] == "S":
             if s[-1] == "o":
                 g = t[-2] == t[0]

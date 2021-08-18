@@ -1,5 +1,5 @@
 """
-Codeforces Educational Round #2
+Codeforces Educational Round 
 Problem 600 D. Area of Two Circles' Intersection
 
 @author yamaton
@@ -51,9 +51,9 @@ def solve(r1, r2, d_squared):
     r1, r2 = min(r1, r2), max(r1, r2)
 
     d = math.sqrt(d_squared)
-    if d >= r1 + r2:  # circles are far apart
+    if d >= r1 + r2:
         return 0.0
-    if r2 >= d + r1:  # whole circle is contained in the other
+    if r2 >= d + r1:
         return math.pi * r1 ** 2
 
     r1f, r2f, dsq = map(fractions.Fraction, [r1, r2, d_squared])
@@ -65,14 +65,6 @@ def solve(r1, r2, d_squared):
     theta1 = acos_sqrt(cos_theta1_sq, math.copysign(1, numer1))
     theta2 = acos_sqrt(cos_theta2_sq, math.copysign(1, numer2))
     result = r1 * r1 * f(theta1) + r2 * r2 * f(theta2)
-
-    # pp("d = %.16e" % d)
-    # pp("cos_theta1_sq = %.16e" % cos_theta1_sq)
-    # pp("theta1 = %.16e" % theta1)
-    # pp("theta2 = %.16e" % theta2)
-    # pp("f(theta1) = %.16e" % f(theta1))
-    # pp("f(theta2) = %.16e" % f(theta2))
-    # pp("result = %.16e" % result)
 
     return result
 

@@ -9,10 +9,10 @@ N = I()
 XYR = []
 for _ in range(N):
     XYR.append(tuple(MI()))
-XYR.append((xs, ys, 0))  # 始点を半径0のバリアとみなす
-XYR.append((xt, yt, 0))  # 終点を半径0のバリアとみなす
+XYR.append((xs, ys, 0))
+XYR.append((xt, yt, 0))
 
-Graph = [[0] * (N + 2) for _ in range(N + 2)]  # Graph[i][j] = バリア i からバリア j までの'距離'
+Graph = [[0] * (N + 2) for _ in range(N + 2)]
 for i in range(N + 1):
     x0, y0, r0 = XYR[i]
     for j in range(i + 1, N + 2):
@@ -20,9 +20,8 @@ for i in range(N + 1):
         Graph[i][j] = max(0, ((x1 - x0)**2 + (y1 - y0)**2)**.5 - r0 - r1)
         Graph[j][i] = max(0, ((x1 - x0)**2 + (y1 - y0)**2)**.5 - r0 - r1)
 
-# ダイクストラ法
 
-dist = [10**10] * (N + 2)  # dist[i] = バリア N からバリア i への最短'距離'
+dist = [10**10] * (N + 2)
 dist[N] = 0
 q = []
 heappush(q, (0, N))

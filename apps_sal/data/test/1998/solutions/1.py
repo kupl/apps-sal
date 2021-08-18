@@ -11,7 +11,6 @@ for i in range(k):
 
 if (len(s) - ind) >= b:
     ans.append([len(s) - ind, ind, len(s)])
-# print(ans)
 
 aans = []
 count = 0
@@ -21,7 +20,6 @@ for i in range(len(ans)):
         j += b
         aans.append(j + 1)
 
-# print(*aans)
 l = len(aans) - a + 1
 aans = aans[:l]
 print(len(aans))

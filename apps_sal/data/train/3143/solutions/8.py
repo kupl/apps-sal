@@ -8,7 +8,7 @@ def sort_by_name(arr):
         50: 'fifty', 60: 'sixty', 70: 'seventy', 80: 'eighty',
         90: 'ninety', 0: 'zero', -1: '', -10: ''
     }
-    raw_list = []  # will be tuple [('two', 2), ('zero', 0)]
+    raw_list = []
     for i in arr:
         if i in num_dict:
             raw_list.append(tuple([num_dict[i], i]))
@@ -41,7 +41,6 @@ def sort_by_name(arr):
                 raw_list.append(tuple(['{} hundred {} {}'.format(num_dict[int(raw_i[0])],
                                                                  num_dict[z * 10], num_dict[k]).replace("  ", ' '), i]))
     raw_list.sort(key=lambda x: x[0])
-    # raw_list.sort(key = lambda x: (x[0], x[1]))
     out_list = []
     for i in raw_list:
         out_list.append(i[1])

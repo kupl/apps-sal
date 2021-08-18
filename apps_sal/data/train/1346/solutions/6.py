@@ -1,4 +1,3 @@
-# cook your dish here
 mo = 10**9 + 7
 
 

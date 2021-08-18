@@ -12,7 +12,6 @@ for i in range(n):
         else:
             c -= 1
         minm = min(minm, c)
-        # maxm=max(maxm,c)
     if(c == 0 and minm >= 0):
         c1 += 1
     elif c < 0 and minm == c:

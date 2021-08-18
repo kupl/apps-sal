@@ -12,19 +12,19 @@ for i in range(MAX, 0, -1):
     rev_m[i - 1] = (rev_m[i] * i) % mod
 
 
-def Comb(n, k):  # nCk
+def Comb(n, k):
     return (fac[n] * rev_m[k] * rev_m[n - k]) % mod
 
 
 def f(n, k, i):
     if i == 2:
-        if n < 0 or (k == 1 and n >= 2):  # 例外処理
+        if n < 0 or (k == 1 and n >= 2):
             return 0
         elif n == 0:
             return 1
         else:
             return (Comb(k - 2 + n, n) + Comb(k - 2 + n - 1, n - 1)) % mod
-    else:  # i>2
+    else:
         Sp = i // 2 - 1
         ans = 0
         for p in range(Sp + 1):
@@ -36,7 +36,7 @@ def g(n, k, i, p):
     Sp = i // 2 - 1
     if p == 0:
         return f(n - Sp, k - Sp, 2) * pow(2, Sp, mod) % mod
-    else:  # p>0
+    else:
         return g(n, k - 2 * p, i - 2 * p, 0) * Comb(Sp, p)
 
 

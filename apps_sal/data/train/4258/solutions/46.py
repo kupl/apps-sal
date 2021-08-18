@@ -1,5 +1,4 @@
 def series_sum(n):
-    # Happy Coding ^_^
     f = 3 * n - 2
     s = 0
     if n == 0:

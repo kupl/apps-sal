@@ -1,4 +1,3 @@
-# D - Even Relation
 from typing import List, Tuple
 
 

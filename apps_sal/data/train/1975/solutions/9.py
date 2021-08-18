@@ -12,7 +12,6 @@ class CustomStack:
         self.currsize += 1
 
     def pop(self) -> int:
-        # print(self.arr)
         if len(self.arr) == 0:
             return -1
         self.currsize -= 1
@@ -23,10 +22,3 @@ class CustomStack:
 
         for i in range(minsize):
             self.arr[i] += val
-
-
-# Your CustomStack object will be instantiated and called as such:
-# obj = CustomStack(maxSize)
-# obj.push(x)
-# param_2 = obj.pop()
-# obj.increment(k,val)

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 
 def run_prime_factorization(max_number: int) -> dict:

@@ -1,4 +1,3 @@
-# your code goes here
 import math
 arr = input().split()
 r = int(arr[0])

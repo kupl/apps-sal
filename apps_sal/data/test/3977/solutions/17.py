@@ -1,9 +1,7 @@
-# inputs
 n, m, ngovs = [int(x) for x in input().split()]
 
 govs = [int(i) - 1 for i in input().split()]
 
-# build graph
 graph = [list([]) for i in range(n)]
 visited = [False for i in range(n)]
 for i in range(m):
@@ -12,7 +10,6 @@ for i in range(m):
     graph[verts[1]].append(verts[0])
 
 
-# DFS
 res = 0
 cur_max = 0
 

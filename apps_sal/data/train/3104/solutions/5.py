@@ -1,7 +1,5 @@
 from math import ceil
 
-# Why is this 6 kyu?
-
 
 def reindeer(presents):
     if presents > 180:

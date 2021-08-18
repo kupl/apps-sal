@@ -1,11 +1,5 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        # there's definitely a dfs approach, but it seems
-        # expensive...need as many recursive calls per level
-        # as the length of the list +1 for op 1
-        # start is [0,0]
-        # can we extract the solution from the binary rep of all the nums?
-        # pad to 32 bit or
         N = len(nums)
         ansr = 0
         while(any(nums)):

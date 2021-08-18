@@ -22,7 +22,6 @@ for _ in range(int(input())):
         for i in range(l):
             if (sx[i] != sy[i]):
                 break
-        #print("i = ",i)
 
         if (i == 0):
             t1 = 1
@@ -31,12 +30,10 @@ for _ in range(int(input())):
 
         rstval = 2**(l - i - 1)
 
-        # no limits
         if (sx[i] == '0' and sn[i] == '1'):
             print(t1 * rstval)
 
         elif (sx[i] == '1' and sn[i] == '1'):
-            # print(256)
             if (i == l - 1):
                 t2 = 1
             else:
@@ -47,7 +44,6 @@ for _ in range(int(input())):
             t2 = rstval
             print((t1 - 1) * t2)
 
-        # limits
         else:
             if (i == l - 1):
                 t2 = 1

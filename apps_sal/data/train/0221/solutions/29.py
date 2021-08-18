@@ -16,7 +16,6 @@ class Solution:
                     return i - Val + 1
 
                 hm[hk] = i - Val + 1
-            # print(mid, hm)
 
         N = len(S)
         start, end = 1, N

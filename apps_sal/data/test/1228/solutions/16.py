@@ -13,8 +13,6 @@ def getList():
 
 
 def main():
-    # something
-    # 1 3 2 4
     n = getN()
     if n % 4 == 1:
         print("0 A")

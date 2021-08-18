@@ -45,6 +45,4 @@ for _ in range(int(input())):
         if(string[len(string) - 1] == 1 and string[len(string) - 2] == 0):
             string[len(string) - 2] = 1
 
-        # print(string)
-
     print(string.count(1))

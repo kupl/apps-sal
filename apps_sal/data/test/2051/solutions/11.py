@@ -2,7 +2,6 @@ from collections import deque, defaultdict
 
 
 def BFS(graph, source, visited):
-    # Generator which yields all vertices connected to source (includes source)
     n = len(graph)
     queue = deque()
     queue.append(source)

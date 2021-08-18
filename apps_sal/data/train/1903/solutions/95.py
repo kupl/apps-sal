@@ -60,35 +60,3 @@ class Solution:
                     break
 
         return cost
-
-
-#         visited = set()
-#         costs = []
-#         minValue = float('inf')
-#         minIndex = (0,0)
-#         for i in range(n):
-#             for j in range(n):
-#                 if mat[i][j] < minValue:
-#                     minValue = min(minValue, mat[i][j])
-#                     minIndex = (i,j)
-
-#         visited.add(minIndex[0])
-#         visited.add(minIndex[1])
-#         costs.append(minValue)
-
-#         while len(visited) != n:
-#             minValue = float('inf')
-#             minIndex = (0,0)
-#             for i in visited:
-#                 for idx, value in enumerate(mat[i]):
-#                     if value < minValue and idx not in visited:
-#                         minValue = min(minValue, value)
-#                         minIndex = (i, idx)
-
-#             visited.add(minIndex[0])
-#             visited.add(minIndex[1])
-#             costs.append(minValue)
-#             mat[minIndex[0]][minIndex[1]] = float('inf')
-#             mat[minIndex[1]][minIndex[0]] = float('inf')
-
-#         return sum(costs)

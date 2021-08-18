@@ -4,17 +4,13 @@ import sys
 import math
 import os.path
 
-# CONFIG
 sys.setrecursionlimit(10**9)
-
-# LOG
 
 
 def log(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
 
-# INPUT
 def ni():
     return list(map(int, input().split()))
 
@@ -27,7 +23,6 @@ def nia():
     return list(map(int, input().split()))
 
 
-# CONVERT
 def toString(aList, sep=" "):
     return sep.join(str(x) for x in aList)
 
@@ -45,8 +40,6 @@ def countMap(arr):
 
 def sortId(arr):
     return sorted(list(range(arr)), key=lambda k: arr[k])
-
-# MAIN
 
 
 n, k = ni()
@@ -68,21 +61,13 @@ for ni in range(1, n1):
     for ki in range(1, nk1):
         mficount = min(k, ki) + 1
         for kii in range(mficount):
-            # log(ni,ki, kii, dp[ni][ki], dp[ni-1][ki-kii] + h[kii])
             dp[ni][ki] = max(dp[ni][ki], dp[ni - 1][ki - kii] + h[kii])
-    # log(dp[ni])
 
-# log(n,k)
-# log("c", cc)
-# log("f", cf)
-# log("h", h)
-# log(dp)
 
 res = 0
 
 
 for fk, fv in list(cf.items()):
-    # log(fk, fv, cc.get(fk,0))
     res += dp[fv][cc.get(fk, 0)]
 
 print(res)

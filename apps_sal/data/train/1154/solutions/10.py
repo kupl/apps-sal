@@ -1,4 +1,3 @@
-# cook your dish here
 k = int(input())
 act_name = list(map(int, input().split()))
 imposter = list(map(int, input().split()))

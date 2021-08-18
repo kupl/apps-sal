@@ -1,14 +1,11 @@
 class Solution:
     def getFolderNames(self, names: List[str]) -> List[str]:
-        # from collections import defaultdict
-        # hashmap = defaultdict(int)
         hashmap = {}
 
         seen = set()
         ans = []
         for name in names:
-            # k = hashmap[name] # if defaultdict(int) is used
-            k = hashmap.setdefault(name, 0)  # if ordinary dict is used
+            k = hashmap.setdefault(name, 0)
             current = name
             while current in seen:
                 k += 1

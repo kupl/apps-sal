@@ -11,14 +11,11 @@ class Solution:
             for j in range(i + 1, len(points)):
                 edges.append((i, j, dist(i, j)))
         edges = sorted(edges, key=lambda x: x[2])
-        # print(edges)
 
         total = 0
         group = [x for x in range(len(points))]
         while sum(group) > 0:
             x, y, w = edges.pop(0)
-            # print(group)
-            # print(f\"{x} {y} {w} {total} {edges}\")
             if group[x] == group[y]:
                 continue
 
@@ -28,8 +25,5 @@ class Solution:
             for i in range(len(group)):
                 if group[i] == gy or group[i] == gx:
                     group[i] = g
-                # print(f\"\\t{g} {i} {group}\")
             total += w
-        # print(group)
-        # print(f\"{x} {y} {w} {total} {edges}\")
         return total

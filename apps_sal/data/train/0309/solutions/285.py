@@ -2,7 +2,7 @@ class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         n = len(A)
 
-        m = {}  # expect: {step: length}
+        m = {}
         for i in range(1, n):
             e = m.pop(A[i], {})
             for step, length in e.items():

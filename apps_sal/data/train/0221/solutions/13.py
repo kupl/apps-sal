@@ -17,7 +17,6 @@ class Solution:
 
             for i in range(1, n - m + 1):
                 y = ((y - num[i - 1] * p % mod) * b % mod + num[i - 1 + m]) % mod
-                #y = (y-num[i-1]*p)*b+num[i-1+m]
 
                 if y not in mp:
                     mp[y] = i
@@ -28,10 +27,9 @@ class Solution:
 
         n = len(S)
 
-        b = 26                      # no need to be 128
+        b = 26
 
-        # mod = 10**9+7              # too small => conflict
-        mod = 2**32                 # here
+        mod = 2**32
 
         num = []
         for i in range(n):

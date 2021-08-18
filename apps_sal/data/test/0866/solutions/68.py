@@ -38,7 +38,6 @@ X, Y = list(map(int, input().split()))
 a = X + Y
 b = a // 3
 a = a % 3
-# print(a,b)
 if a == 0 and b <= X <= b * 2:
     print((combination(b, X - b)))
 else:

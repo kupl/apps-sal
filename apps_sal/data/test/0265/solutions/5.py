@@ -1,8 +1,6 @@
 import sys
 import math
 input = sys.stdin.readline
-# sys.setrecursionlimit(1000000)
-#I=lambda : list(map(int,input().split()))
 ma = int(10000000000000000)
 n, m = map(int, input().split())
 a = [ma] * (515)

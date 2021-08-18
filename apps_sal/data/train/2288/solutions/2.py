@@ -23,10 +23,6 @@ val = [0, 0, X]
 direc = "-"
 prv = 0
 for pos in pos_lst:
-    #    print(left, right)
-    #    print(val)
-    #    print(pos)
-    #    print()
 
     elapsed = pos[0] - prv
     prv = pos[0]
@@ -44,7 +40,7 @@ for pos in pos_lst:
 
     if pos[1] == "+" or pos[1] == "-":
         direc = pos[1]
-    else:  # is query
+    else:
         a = a_lst[pos[1]]
 
         if a <= left:

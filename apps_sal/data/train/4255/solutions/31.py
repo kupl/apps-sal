@@ -1,5 +1,4 @@
 def make_upper_case(s):
-    # Code here
     str = ""
     for i in s:
         if 97 <= ord(i) <= 122:

@@ -9,7 +9,6 @@ def bellman_ford(edges, N, start, end):
 
             if cost[to] > cost[fro] + c:
                 cost[to] = cost[fro] + c
-                # 頂点の数と同じ回数ループすると負の経路がある
                 if i == N - 1:
                     negative[to] = True
 

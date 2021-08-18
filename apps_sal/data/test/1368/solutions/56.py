@@ -27,6 +27,4 @@ if left == 0:
         ans += combi(cnt, i)
 else:
     ans += combi(cnt, a - left)
-    # if (sum(V[:a])/a).is_integer():
-    #     ans *= pow(2,V.count(int(V[:a]/a)))
 print(ans)

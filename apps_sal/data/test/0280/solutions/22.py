@@ -3,7 +3,6 @@ def main():
     w = list(map(int, input().split()))
     lv = [list(map(int, input().split())) for _ in [0] * m]
 
-    # ダメな時はすぐ終わる
     min_v = 10**15
     for l, v in lv:
         min_v = min(min_v, v)
@@ -29,11 +28,9 @@ def main():
     ans = 10**15
 
     for p in perm:
-        # d[i][j]:iとjの必要な距離
         d = [[0] * n for _ in [0] * n]
         for i in range(n - 1):
             for j in range(i + 1, n):
-                #print(i, j)
                 weight = sum(p[i:j + 1])
                 b = bl(w_list, weight) - 1
                 d[i][j] = max(d[i][j], l_list[b])

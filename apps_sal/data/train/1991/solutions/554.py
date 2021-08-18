@@ -22,4 +22,3 @@ class Solution:
                 d[i][fuel] = res
                 return res
         return dfs(start, fuel) % (10**9 + 7)
-        # print(d[1])

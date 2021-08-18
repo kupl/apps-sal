@@ -40,7 +40,7 @@ def main():
             new_coin = max_coin
         push_todo(node, new_coin, current_time + time)
 
-    todo = [(0, 0, s)]  # time, node, coin
+    todo = [(0, 0, s)]
     while todo:
         current_time, node, current_coin = heapq.heappop(todo)
         if current_time > DP[node][current_coin]:

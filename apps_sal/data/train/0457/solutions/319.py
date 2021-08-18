@@ -23,6 +23,4 @@ class Solution:
                     t[i][j] = min(t[i][j - arr[i - 1]] + 1, t[i - 1][j])
                 else:
                     t[i][j] = t[i - 1][j]
-        # from pprint import pprint
-        # pprint(t)
         return -1 if t[n][w] == math.inf else t[n][w]

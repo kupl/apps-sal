@@ -16,7 +16,7 @@ def solve(n, l_binary):
     if n <= 1:
         return 1
     elif n == 2:
-        sum_l = sum(l_binary) % 2  # if sum_l = 0 return YES else return NO
+        sum_l = sum(l_binary) % 2
         return sum_l - 1
     else:
         for k in range(n - 2):

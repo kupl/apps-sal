@@ -11,14 +11,14 @@ def resolve():
     res = [[""] * 100 for _ in range(100)]
     for i in range(100):
         for j in range(100):
-            res[i][j] = "." if i < 50 else "#"
+            res[i][j] = "." if i < 50 else "
 
     b -= 1
     for i in range(0, 50, 2):
         for j in range(0, 100, 2):
             if b == 0:
                 break
-            res[i][j] = "#"
+            res[i][j] = "
             b -= 1
         else:
             continue

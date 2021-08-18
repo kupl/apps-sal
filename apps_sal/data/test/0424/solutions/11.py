@@ -26,7 +26,6 @@ def main():
 
         a = prime[i]
         x0 = min(i - a + 1, x0)
-        # print("i",i,"prime[i]",prime[i],"x0",x0)
     print(x0)
 
 

@@ -7,5 +7,3 @@ def whoseMove(lastPlayer, win):
     if win:
         return lastPlayer
     return other
-
-    # Your Move...

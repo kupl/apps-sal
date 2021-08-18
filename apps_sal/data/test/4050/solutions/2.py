@@ -1,19 +1,10 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 998244353
 from collections import defaultdict
 INF = 100_000_000
-# from heapq import heappush, heappop
-t = 1  # int(input())
-# from math import sqrt
+t = 1
 
 
 for test in range(t):
     n = int(input())
-    # H, n = (map(int, input().split()))
-    # a = []
-    # for i in range(n):
-    # l = input()
-    # r = input()
     a = (list((list(map(int, input().split())))))
     pre = [0 for i in range(n + 1)]
 
@@ -25,7 +16,6 @@ for test in range(t):
     for i in range(n):
         for j in range(i, n):
             tmp = pre[j + 1] - pre[i]
-            # print(i,j,tmp)
             Sum[tmp].append((i, j))
 
     maxVal = 0

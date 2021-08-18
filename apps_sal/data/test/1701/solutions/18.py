@@ -9,4 +9,4 @@ for _ in range(m):
     cmd, ip = input().split()
     assert ip[-1] == ';'
     ip = ip[:-1]
-    print('%s %s; #%s' % (cmd, ip, ip2name[ip]))
+    print('% s % s;

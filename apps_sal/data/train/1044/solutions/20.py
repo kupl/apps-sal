@@ -1,4 +1,3 @@
-# cook your dish here
 def add():
     n = input()
     sum = 0

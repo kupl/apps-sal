@@ -7,7 +7,6 @@ ab = [list(map(int, input().split())) for i in range(q)]
 
 keta = len(format(n + 1, "b"))
 nxt = [[0 for _ in range(n)] for _ in range(keta)]
-# nxt[k][node] == farthest node-num from node in 2**k days
 
 for i in range(n):
     num = x[i] + l

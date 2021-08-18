@@ -4,7 +4,6 @@ class Solution:
         i = 0
         while i < len(s) - 1:
             if s[i] == s[i + 1]:
-                # input();
                 sumCost = cost[i]
                 maxCost = cost[i]
                 j = i + 1
@@ -15,7 +14,6 @@ class Solution:
                 if s[j] == s[i]:
                     sumCost += cost[j]
                     maxCost = max(maxCost, cost[j])
-                #print('i=',i,'j=',j,'sumCost=', sumCost,'maxCost=', maxCost)
                 answer += sumCost - maxCost
                 i = j + 1
             else:

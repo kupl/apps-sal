@@ -9,4 +9,3 @@ def pick_peaks(arr):
             ans["peaks"].append(arr[point])
             point = False
     return ans
-    # your code here

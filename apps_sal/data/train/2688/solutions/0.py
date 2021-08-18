@@ -1,7 +1,5 @@
 from itertools import count
 
-# Couldn't find the pattern of why it's 1 or 8, I'm sad :(
-
 
 def repeat_sequence_len(n):
     memo = {}

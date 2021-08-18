@@ -1,6 +1,5 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
-        # sort the array nums
         nums.sort(reverse=True)
         N, M = len(nums), len(requests)
         freq = [0 for i in range(N + 1)]

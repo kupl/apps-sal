@@ -1,7 +1,5 @@
 class Solution:
     def canBeMadeSortedByDeletingKElements(self, arr: List[int], k: int) -> bool:
-        # k   : 0 1 2 3 4 5 . . .
-        # f(k): 0 0 0 0 1 1 1 1 1 1 1 1
         n = len(arr)
 
         i = 1
@@ -12,24 +10,11 @@ class Solution:
         while j < n and arr[n - j - 1] <= arr[n - j]:
             j += 1
 
-        if i == n:  # and j == n
+        if i == n:
             return True
-
-        # i         > k         j
-        # -----  # # # # # ------
-        # 3 4 5 1 1 2 3 4
-        # k = 2
 
         if i + j + k < n:
             return False
-
-        # k = 3
-        # 0 1 2 3 4 5 6
-
-        # k = 3
-        #        0 1 2 3 4 5
-        # i = 0: - - -
-        # i = 1:   - - -
 
         for start in range(0, n - k + 1):
             left = start

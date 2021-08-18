@@ -14,8 +14,6 @@ class Solution:
             else:
                 i += 1
 
-        # print(arr)
-
         c = 0
 
         for i in arr:

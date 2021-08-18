@@ -2,9 +2,6 @@ import numba
 from numba import jit
 import numpy as np
 
-# (i,j)→(i+1,j)のように動くときはアイテムを入手できる回数がリセットされる
-# dp[列][今、何個アイテムを取ったか]でdpテーブルを作る
-
 
 @jit
 def main(r, c):

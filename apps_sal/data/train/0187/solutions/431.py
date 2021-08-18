@@ -32,7 +32,6 @@ class Solution:
                 profit += (customer * boardingCost) - runningCost
                 turns += 1
 
-            #print((i, profit, maxProfit, turns, waitingCustomers))
             if profit > maxProfit:
                 maxProfit = profit
                 bestTurns = turns

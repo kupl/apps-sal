@@ -23,8 +23,6 @@ class Solution:
 
             n0 = group[-1]
 
-            # print(n0[0], counted[0][0], group)
-
             if n0[0] + 1 == counted[0][0]:
                 n1 = heappop(counted)
 
@@ -37,7 +35,6 @@ class Solution:
             group.append(n1)
 
             if len(group) == W:
-                # print(\"adding group\", group)
                 groups.append(group)
 
                 for val, count in group:
@@ -45,7 +42,6 @@ class Solution:
                     if count != 0:
                         heappush(counted, (val, count))
 
-                # print(\"heap now: \", counted)
                 group = []
                 if counted:
                     group.append(heappop(counted))

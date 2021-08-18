@@ -7,8 +7,6 @@ import itertools
 from collections import deque, Counter
 from operator import mul
 import copy
-# ! /usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import heapq
 m = 2 * 10 ** 5

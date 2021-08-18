@@ -11,6 +11,4 @@ class Solution:
             dp[tuple([i, j])] = max(lcs(i + 1, j), lcs(i, j + 1))
             return dp[tuple([i, j])]
         dp = {}
-        # text1+=\"0\"
-        # text2+=\"0\"
         return lcs(0, 0)

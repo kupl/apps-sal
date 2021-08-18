@@ -1,5 +1,4 @@
 class Solution:
-    # O(n^3) time, O(1) space
     def numPoints(self, points: List[List[int]], r: int) -> int:
         n = len(points)
         result = 1
@@ -34,10 +33,10 @@ class Solution:
                 count += calc_dist(center, points[idx]) <= r
             return count
 
-        for i in range(n):  # O(n)
-            for j in range(i + 1, n):  # O(n)
+        for i in range(n):
+            for j in range(i + 1, n):
                 centers = get_centers(i, j)
                 for center in centers:
-                    result = max(result, count_points_inside(center, i, j))  # O(n)
+                    result = max(result, count_points_inside(center, i, j))
 
         return result

@@ -1,4 +1,3 @@
-# cook your dish here
 def sm(b):
     v = 0
     v = b % 10

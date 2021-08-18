@@ -1,7 +1,3 @@
-#  author: ThePonyCoder
-#  created: 19.06.2019, 17:45
-#  filename: a.py
-#  path: C:/Users/User/Desktop/python/Prog/CodeForces/rounds/cf_568/a.py
 
 def ri():
     return [int(i) for i in input().split()]
@@ -45,9 +41,6 @@ def main(n, m, t):
         else:
             print(0, end=' ')
         d[t[i]] += 1
-
-        # print(ans, )
-    # return ans
 
 
 n, m = ri()

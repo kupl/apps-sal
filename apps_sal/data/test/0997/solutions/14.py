@@ -17,5 +17,4 @@ def main():
     print('"' + ','.join(b) + '"' if len(b) else '-')
 
 
-# help(str)
 main()

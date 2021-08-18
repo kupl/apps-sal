@@ -33,7 +33,6 @@ class UnionFind:
 
     def size(self, n):
         return self.__sizes[n]
-####
 
 
 def main():

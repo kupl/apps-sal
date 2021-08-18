@@ -11,14 +11,11 @@ class Solution:
                     days += 1
                     return days <= D
                 j += 1
-            # print(f\"After exiting second loop: sum_ = {sum_}, j = {j}\")
             days += 1
-            # print(f\"Increased days to {days}\")
 
             if i == len(weights) - 1:
                 break
             i += j - 1
-            # print(f\"Set i = {i}\")
             if days > D:
                 return False
         return days <= D

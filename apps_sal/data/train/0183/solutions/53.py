@@ -1,11 +1,9 @@
-# DP
 
 import sys
 
 
 class Solution:
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
-        # DP[i][j] -- max-dot-prod(nums1[0:i], nums[0:j])
         M = len(nums1)
         N = len(nums2)
 

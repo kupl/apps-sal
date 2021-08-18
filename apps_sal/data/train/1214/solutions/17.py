@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     w = 1
     t = int(input())

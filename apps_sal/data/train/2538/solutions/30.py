@@ -9,10 +9,8 @@ class Solution:
         for j in range(len(q)):
             p = 0
             for k in range(len(str(q[j]))):
-                # print(str(q[j])[k])
                 p = p + int(str(q[j])[k])
             l.append(p)
-        # print(l)
         q = Counter(l)
         x = 0
 
@@ -30,7 +28,5 @@ class Solution:
                 x = x + 1
         if n < 10:
             return n
-            # print(n)
         else:
             return (x)
-            # print(x)

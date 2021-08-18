@@ -1,4 +1,3 @@
-# 他の方と処理内容がほぼ同じなのに何でTLEになるか分からないので、他の方のコードでテスト
 N = int(input())
 a = list(map(int, input().split(' ')))
 a.sort()

@@ -9,8 +9,8 @@ for y in range(1 << h):
         cnt = 0
         for y2 in range(h):
             for x2 in range(w):
-                if m[y2][x2] == '#' and y >> y2 & 1 and x >> x2 & 1:
-                    cnt += 1
+                if m[y2][x2] == '
+                cnt += 1
         if cnt == k:
             ans += 1
 print(ans)

@@ -15,5 +15,4 @@ for q in range(m):
         now.append(i)
 
     now.sort(key=lambda x: x[1])
-    # print(k, pos, now)
     print(now[pos - 1][0])

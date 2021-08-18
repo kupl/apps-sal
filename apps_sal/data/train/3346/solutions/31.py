@@ -20,4 +20,3 @@ def gap(g, m, n):
                         break
                     else:
                         break
-# OH MY GOD IT ACTUALLY WORKED

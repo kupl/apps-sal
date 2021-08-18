@@ -12,7 +12,6 @@ class Solution:
                 outdict[i].append(rightChild[i])
                 indict[rightChild[i]].append(i)
 
-        #print(indict, outdict)
         rootcount = []
         for nownode in range(n):
 
@@ -25,7 +24,6 @@ class Solution:
                 if innode in outdict[nownode]:
                     return False
 
-        # print(rootcount)
         if len(rootcount) != 1:
             return False
 
@@ -55,7 +53,6 @@ class Solution:
 
         res = traverse(root)
 
-        # print(ans)
         if len(ans) == n and res == True:
             return True
 

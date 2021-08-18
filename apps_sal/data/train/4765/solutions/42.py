@@ -1,6 +1,6 @@
 class Hero(object):
-    def __init__(self, name=None):  # Pass name=None to get None if no argument is passed
-        if name == None:  # Assignm values according to the appropriate arguments passed to the object
+    def __init__(self, name=None):
+        if name == None:
             self.name = 'Hero'
         else:
             self.name = name

@@ -19,12 +19,9 @@ class Solution:
                 heappop(used)
 
             ct[k] = len(used)
-            # print(ct, i, j)
 
         ct = sorted(ct, reverse=True)
         nums = sorted(nums, reverse=True)
-        # print(ct)
-        # print(nums)
 
         res = 0
         for n, c in zip(nums, ct):

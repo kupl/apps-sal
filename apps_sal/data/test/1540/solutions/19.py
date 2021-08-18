@@ -3,7 +3,6 @@ table = []
 for i in range(n):
     table.append([int(a) for a in input().split()])
 
-# print(table)
 event = []
 for i in range(k):
     event.append([int(a) for a in input().split()])

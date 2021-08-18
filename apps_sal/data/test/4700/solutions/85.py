@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 
@@ -18,11 +17,11 @@ def solve(
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    N = int(next(tokens))  # type: int
-    M = int(next(tokens))  # type: int
-    H = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
-    A = [int()] * (M)  # type: "List[int]"
-    B = [int()] * (M)  # type: "List[int]"
+    N = int(next(tokens))
+    M = int(next(tokens))
+    H = [int(next(tokens)) for _ in range(N)]
+    A = [int()] * (M)
+    B = [int()] * (M)
     for i in range(M):
         A[i] = int(next(tokens))
         B[i] = int(next(tokens))

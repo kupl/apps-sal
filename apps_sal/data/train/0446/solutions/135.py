@@ -6,7 +6,6 @@ class Solution:
 
         for _ in range(k):
             val, key = heapq.heappop(heap)
-            #val -= 1
             if val > 1:
                 heapq.heappush(heap, (val - 1, key))
 

@@ -1,4 +1,3 @@
-# editorial解法
 from math import sqrt
 Q = int(input())
 for i in range(Q):
@@ -12,6 +11,6 @@ for i in range(Q):
     if C * C == mul:
         C -= 1
     if (C + 1) * C < mul:
-        print(((2 * C) - 1))  # (A-1) + (2*C - A)
+        print(((2 * C) - 1))
     else:
-        print(((2 * C) - 2))  # (A-1) + (2*C - A - 1)
+        print(((2 * C) - 2))

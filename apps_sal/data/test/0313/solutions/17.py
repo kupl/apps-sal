@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -25,4 +23,3 @@ while(i < len(a) - 1):
 print(sum(a))
 
 finish = time.time()
-#print(finish - start)

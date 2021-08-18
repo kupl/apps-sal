@@ -1,4 +1,3 @@
-# 解説AC
 M, K = map(int, input().split())
 
 if M == 1:

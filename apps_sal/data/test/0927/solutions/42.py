@@ -23,7 +23,6 @@ for i in range(1, N + 1):
 ans = ""
 temp = N
 
-# なるべく大きい数字から使う
 for i, x in sorted(D.items(), key=lambda x: x[1], reverse=True):
     while temp - i >= 0 and dp[temp - i] == dp[temp] - 1:
         ans += str(x)

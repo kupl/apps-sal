@@ -28,7 +28,6 @@ if ok:
         b = n + 1
     for i in range(n):
         if D1[i] == 0 and D2[i] == 0:
-            # print(i,a1,a2)
             if i >= a2 and i <= b:
                 r += 1
     if a1 == -1:

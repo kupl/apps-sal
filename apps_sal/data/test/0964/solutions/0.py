@@ -2,7 +2,6 @@ import sys
 
 
 def get_sol(a, b, c, n, reverse):
-    # 1
     if reverse[0]:
         a = (a[1], a[0], a[2])
     if reverse[1]:
@@ -34,9 +33,6 @@ def printans(ans, n):
     for line in ans:
         print(line)
     return
-
-#sys.stdin = open('input.txt')
-#sys.stdout = open('output.txt', 'w')
 
 
 x1, y1, x2, y2, x3, y3 = [int(i) for i in input().split()]

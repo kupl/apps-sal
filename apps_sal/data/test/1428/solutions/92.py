@@ -1,6 +1,5 @@
 from itertools import combinations, permutations
 3
-# -*- coding:utf-8 -*-
 
 
 def main():

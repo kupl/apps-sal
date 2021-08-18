@@ -36,7 +36,6 @@ def abc(l):
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
-    #
     d = {}
     for i in l:
         try:

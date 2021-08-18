@@ -38,7 +38,6 @@ def primeFactorization(n):
 def resolve():
     N = I()
 
-    # N!の素因数を求める
     pf_N_fact = collections.Counter()
     for i in range(1, N + 1):
         pf = primeFactorization(i)
@@ -48,9 +47,6 @@ def resolve():
     l.sort()
     pf_num = len(pf_N_fact)
 
-    # 約数75個: 素因数の個数+1の積が75になるように組み合わせる
-    # 素因数の個数を以下の組み合わせで何通り取れるかを調べる
-    # (2, 4, 4), (2, 24), (4, 14), (74)
     ans = 0
     num_2 = pf_num - bisect.bisect_left(l, 2)
     num_4 = pf_num - bisect.bisect_left(l, 4)

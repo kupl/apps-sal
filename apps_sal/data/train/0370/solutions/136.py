@@ -1,13 +1,11 @@
 class UnionFind:
     def __init__(self, N):
-        self.indices = list(range(N))  # each elem belongs to diff index
+        self.indices = list(range(N))
 
     def find(self, x):
         if x == self.indices[x]:
             return x
 
-        # Was unioned with a diff number, find that number's index
-        # Set ans to elem, makes subsequent queries faster
         self.indices[x] = self.find(self.indices[x])
 
         return self.indices[x]
@@ -15,7 +13,6 @@ class UnionFind:
     def union(self, x, y):
         x_i, y_i = self.find(x), self.find(y)
 
-        # Set x's index to y's index, unions both number's sets
         self.indices[x_i] = y_i
 
 

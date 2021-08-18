@@ -1,4 +1,3 @@
-#n = int(input())
 n, k = map(int, input().split())
 
 current = 1

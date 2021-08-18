@@ -2,8 +2,6 @@ for _ in range(int(input())):
     n, m = map(int, input().split())
     s = input()
     t1, t2, t3, t4 = 0, 0, 0, 0
-    # d={'L':0,'R':1,'U':2,'D':3}
-    # l=[0,0,0,0]
     xp, xn, yp, yn = 0, 0, 0, 0
     c1, c2 = 0, 0
     for i, x in enumerate(s):

@@ -1,6 +1,5 @@
 class Solution:
     def shortestSubarray(self, A: List[int], K: int) -> int:
-        # (index, value)
         queue = collections.deque([[0, 0]])
         res = float('inf')
 

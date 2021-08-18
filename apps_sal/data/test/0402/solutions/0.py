@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-# SOLUTION
-
 
 def main():
     n, k = read()
@@ -16,8 +14,6 @@ def main():
         avail -= 5 * i
         i += 1
     print(i - 1)
-
-# HELPERS
 
 
 def read(callback=int):

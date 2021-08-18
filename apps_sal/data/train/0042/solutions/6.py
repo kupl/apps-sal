@@ -16,8 +16,6 @@ for _ in range(t):
             continue
         else:
             for j in range(bisect_right(zeronumber, z)):
-                # print(j)
-                #print(s[i:i+len(strings[j])], strings[j])
                 if i + len(strings[j]) - 1 <= len(s) - 1:
                     if s[i:i + len(strings[j])] == strings[j]:
                         ans += 1

@@ -40,14 +40,11 @@ def find(arr, start, end, x, y, k):
 
     min_cost = float('inf')
     total = end - start + 1
-    # print(total,start,end)
 
-    # print('here',x,y,k)
     i = 0
     while i * k <= total:
         rem = total - i * k
         if rem <= second_use_limit:
-            # print(i*x+rem*y,i,rem)
             min_cost = min(min_cost, i * x + rem * y)
 
         i += 1

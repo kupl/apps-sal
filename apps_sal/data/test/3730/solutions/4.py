@@ -1,13 +1,10 @@
-# input
 n = int(input())
 alist = [int(x) for x in input().split()]
 
-# variables
 maximum = 2
 l = [1] * n
 r = l[:]
 
-# main
 if n < 3:
     print(n)
     quit()

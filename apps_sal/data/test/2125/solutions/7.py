@@ -6,7 +6,6 @@ def f(A, r, c, l):
     q, w, e = A[r][c][0], A[r][c - l][0], A[r][c - 2 * l][0]
     x, y, z = A[r][c][1], A[r][c - l][1], A[r][c - 2 * l][1]
 
-    #print(r, c, x,y,z,l, q,w,e)
     if x != y and y != z and e >= l and w == q == l:
         return (l, z, y, x)
     else:
@@ -43,9 +42,6 @@ for i in range(r):
         else:
             narr[i][j] = f(length_str, i, j, l)
 
-
-# for i in narr:
-#  print(i)
 
 dp = [[0] * c for i in range(r)]
 

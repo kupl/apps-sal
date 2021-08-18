@@ -15,8 +15,4 @@ class Solution:
                 if dic[j] > 0:
                     final_s += j
                     dic[j] -= 1
-     #       for x in ssr:
-     #           if dic[x]>0:
-      #              final_s+=x
-     #               dic[x]-=1
         return final_s

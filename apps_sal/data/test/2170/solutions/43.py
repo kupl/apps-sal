@@ -1,12 +1,3 @@
-# 解説などを参考に作成
-# https://mathtrain.jp/hojo
-# https://qiita.com/DaikiSuyama/items/4d0388a3f68b60c3e5f3
-# https://atcoder.jp/contests/abc172/submissions/16541798
-# tag: 包除原理
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
 
 class FermatCmb:
     """フェルマー小定理を使用した順列, 組み合わせ計算"""
@@ -37,10 +28,6 @@ class FermatCmb:
         return (self.fact[n] * self.factinv[n - k]) % self.mod
 
 
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N, M):
     mod = 10 ** 9 + 7
     cf = FermatCmb(M, mod)
@@ -53,18 +40,8 @@ def solve(N, M):
 
 
 def __starting_point():
-    # S = input()
-    # N = int(input())
     N, M = list(map(int, input().split()))
-    # A = [int(i) for i in input().split()]
-    # B = [int(i) for i in input().split()]
-    # AB = [[int(i) for i in input().split()] for _ in range(N)]
     solve(N, M)
-
-    # # test
-    # from random import randint
-    # from func import random_str
-    # solve()
 
 
 __starting_point()

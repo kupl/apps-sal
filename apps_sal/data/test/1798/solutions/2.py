@@ -29,7 +29,6 @@ def main():
         if count == 1:
             answer.append([x, 0])
             continue
-        # else:
         d = AP(iters)
         if d != -1:
             answer.append([x, d])

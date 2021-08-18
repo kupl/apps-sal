@@ -16,7 +16,6 @@ while t:
     res = n + 1
     _res = -1
     for i in range(n):
-        #print(suma[i], sumb[i])
         if (suma[i], sumb[i]) in d.keys():
             if res > i - d[(suma[i], sumb[i])]:
                 res = i - d[(suma[i], sumb[i])]

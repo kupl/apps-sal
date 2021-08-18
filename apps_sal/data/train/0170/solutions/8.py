@@ -5,17 +5,14 @@ class Solution:
         while l < n - 1 and arr[l] <= arr[l + 1]:
             l += 1
 
-        # print(l)
         if l == n - 1:
             return 0
-        # if l == 0: return len(arr)-1
         r = len(arr) - 1
         while r > 0 and arr[r] >= arr[r - 1]:
             r -= 1
 
         left = n - (l + 1)
         right = r
-        # print(r)
         ans = min(left, right)
 
         i = 0

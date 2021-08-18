@@ -8,8 +8,6 @@ class Solution:
                 a, b = b, a % b
             return a
 
-        # print (gcd(6, 4))
-
         sol = []
         for denom in range(2, n + 1):
             for numer in range(1, denom):

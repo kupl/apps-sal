@@ -10,9 +10,7 @@ for i in range(t):
     n = int(input())
     strr = input().strip()
     flag = 0
-    # print(strr)
     vol = list(strr)
-    # n=len(strr)
     if n > 1:
         if isVowel(strr[0]) and isVowel(strr[-1]):
             print("Yes")

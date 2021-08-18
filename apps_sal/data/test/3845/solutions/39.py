@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 sys.setrecursionlimit(10 ** 8)
@@ -17,7 +16,6 @@ def solve():
     hb = min(B, 12)
     h = (hb * 2 + 1) * 3
     w = 100
-    # If not flipped, False -> White (A), True -> Black (B)
     grid = [[True] * w for _ in range(h)]
     black = 1
     white = 0
@@ -68,7 +66,7 @@ def print_grid(grid):
     for r in range(h):
         for c in range(w):
             if grid[r][c] ^ color_flipped:
-                print("#", end="")
+                print("
             else:
                 print(".", end="")
         print()

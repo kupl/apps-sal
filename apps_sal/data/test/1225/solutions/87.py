@@ -1,5 +1,5 @@
 H = int(input())
-s = 1  # sはモンスターの数
+s = 1
 t = 0
 while H > 1:
     H = H // 2

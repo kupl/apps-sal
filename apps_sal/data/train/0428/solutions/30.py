@@ -25,8 +25,8 @@ class Solution:
                     if x + i >= 0 and x + i < m and y + j >= 0 and y + j < n:
                         c = grid[x + i][y + j]
                         new_key = key
-                        if c == '#':
-                            continue
+                        if c == '
+                        continue
                         if c >= 'A' and c <= 'F' and (key >> (ord(c) - ord('A')) & 1 == 0):
                             continue
                         if c >= 'a' and c <= 'f':

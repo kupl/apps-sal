@@ -1,5 +1,4 @@
 def greet(language):
-    # your code here
     if language == "dutch":
         return 'Welkom'
     elif language == "czech":

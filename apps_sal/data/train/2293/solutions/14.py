@@ -1,9 +1,4 @@
-#!/usr/bin/env python
 
-#from collections import deque
-#import itertools as it
-#import sys
-#import math
 
 def func():
     N = int(input())
@@ -30,7 +25,6 @@ def func():
     for i in range(1, 2 ** N):
         ans = max(ans, P[i][0][0] + P[i][1][0])
         print(ans)
-    # print(P)
 
 
 func()

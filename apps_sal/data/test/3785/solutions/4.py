@@ -13,8 +13,8 @@ visited = [[False] * b for i in range(a)]
 
 def ok(i, j):
     if 0 <= i <= a - 1 and 0 <= j <= b - 1:
-        if array[i][j] != '#':
-            return True
+        if array[i][j] != '
+        return True
     return False
 
 

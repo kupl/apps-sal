@@ -11,7 +11,6 @@ class Solution:
             return binarySum
 
         def incrementVowels(char):
-            # print(\"Current: \", current)
             nonlocal current
             if char == 'a':
                 current[0] = 1 - current[0]
@@ -28,7 +27,6 @@ class Solution:
         maxLength = 0
         current = [0, 0, 0, 0, 0]
         for index, char in enumerate(s):
-            # print(\"Current: \",current)
             incrementVowels(char)
             binarySum = convertToInteger()
             if binarySum not in earliest:

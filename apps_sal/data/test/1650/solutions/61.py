@@ -36,10 +36,10 @@ for i in range(len(L)):
             for k in range(2):
                 nk = k
 
-                if nk == 0:  # 未確定
+                if nk == 0:
                     if nd == 1 and a == b == 0:
                         nk = 1
-                    if nd == 0 and a | b:  # 超える
+                    if nd == 0 and a | b:
                         continue
 
                 dp[ni][nk] += dp[i][k]

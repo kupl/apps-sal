@@ -9,7 +9,7 @@ class Solution:
         dislike_table = collections.defaultdict(list)
         color_table = [NOT_COLORED for _ in range(N + 1)]
 
-        for i, j in dislikes:  # undirected graph
+        for i, j in dislikes:
             dislike_table[i].append(j)
             dislike_table[j].append(i)
 

@@ -18,7 +18,6 @@ for i in range(n):
     a = 'A' in s
     b = 'B' in s
     c = 'C' in s
-    #print(a, b, c)
     if a:
         abc[0] = rf(abc[0], k)
     if b:

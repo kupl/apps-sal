@@ -11,7 +11,6 @@ def main():
 
     else:
         min_ = 2 ** 20
-        # l の商と余り
         p = l // 2019
         q = l % 2019
         for xi in range(l, r):

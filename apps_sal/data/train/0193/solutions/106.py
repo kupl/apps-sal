@@ -3,8 +3,6 @@ from collections import defaultdict
 
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
-        # we will store the frequency of all the elements in a dictionary and from the dictionary we will pick the ones with the maximum value and remove them till we do not get half size
-        # we keep two dictionaries ones from number to their frequency and another from frequency to number for better manipulation
         num_fre = defaultdict(int)
         fre_num = defaultdict(set)
         for i in range(len(arr)):

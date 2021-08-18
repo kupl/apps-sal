@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 def is_sorted(l, f):

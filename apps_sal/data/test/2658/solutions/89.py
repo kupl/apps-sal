@@ -16,7 +16,6 @@ while i <= N:
     F[new] = 1
     G.append(new)
     i += 1
-# print(G,A[G[-1]],G.index(A[G[-1]]))
 t = G.index(A[G[-1]])
 if (K < t):
     print(G[K])

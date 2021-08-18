@@ -16,14 +16,12 @@ for i in range(n):
 s.sort()
 s.append((INF, INF))
 
-# Calc facs
 facs = [1] * (n + 1)
 ans = 1
 for i in range(1, n + 1):
     facs[i] = facs[i - 1] * i % MOD
 ans = facs[n]
 
-# Check both sort
 pa = 0
 pb = 0
 both_cnt = 1
@@ -41,14 +39,12 @@ for a, b in s:
     pa = a
     pb = b
 
-# Check upper sort
 acnt = Counter(a_s)
 first_cnt = 1
 for key in acnt.keys():
     first_cnt *= facs[acnt[key]]
     first_cnt %= MOD
 
-# Check lower sort
 bcnt = Counter(b_s)
 second_cnt = 1
 for key in bcnt.keys():

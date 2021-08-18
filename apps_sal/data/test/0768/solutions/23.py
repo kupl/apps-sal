@@ -4,4 +4,4 @@ for i in range(n):
     a = input()
     for j in range(m):
         c[j] += a[j] == 'Y'
-print(sum(c[i] >= k for i in range(m)))  # kitten
+print(sum(c[i] >= k for i in range(m)))

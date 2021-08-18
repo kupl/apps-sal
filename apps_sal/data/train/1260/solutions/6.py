@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n, m, k = list(map(int, input().split()))
 
@@ -28,7 +27,6 @@ for _ in range(int(input())):
                     q.append(vv)
             sum_l.append(summa)
 
-    # print(sum_l)
     if len(sum_l) < k:
         print(-1)
     else:

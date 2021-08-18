@@ -7,7 +7,7 @@ for i in range(k):
     if ax == 1:
         r[crd - 1] = (clr, i)
     else:
-        c[crd - 1] = (clr, i)  # ax === 2
+        c[crd - 1] = (clr, i)
 for i in range(n):
     s = []
     for j in range(m):

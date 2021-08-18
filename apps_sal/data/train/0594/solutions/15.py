@@ -1,4 +1,3 @@
-# cook your dish here
 n, x = map(int, input().split())
 l = list(map(int, input().split()))
 ans = l[0]

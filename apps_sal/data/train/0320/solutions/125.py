@@ -18,4 +18,3 @@ class Solution:
                 not_zero.remove(j)
             if len(not_zero) > 0:
                 ans += 1
-            # print(not_zero, nums, ans)

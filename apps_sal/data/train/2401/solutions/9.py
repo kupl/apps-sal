@@ -13,12 +13,10 @@ class Solution:
             return False
         else:
             for n in range(L1):
-                # dictionary key exists already, just check for value
                 if pattern[n] in dictionary.keys():
                     if(dictionary[pattern[n]] != wordlist[n]):
                         return False
                 else:
-                    # dictionary key does not exist
                     if (wordlist[n] not in dictionary.values()):
                         dictionary[pattern[n]] = wordlist[n]
                     else:

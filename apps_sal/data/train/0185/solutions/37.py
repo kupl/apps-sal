@@ -1,13 +1,4 @@
 class Solution:
-    # def hasAllCodes(self, s: str, k: int) -> bool:
-    #     target_len = len(bin(k))-2
-    #     for target in range(k, -1, -1):
-    #         target = bin(target)[2:]
-    #         target = (target_len-len(target))*'0'+target
-    #         print (target)
-    #         if s.find(target)==-1:
-    #             return False
-    #     return True
 
     def hasAllCodes(self, s: str, k: int) -> bool:
         d = set()

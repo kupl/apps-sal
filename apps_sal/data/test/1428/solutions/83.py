@@ -8,8 +8,6 @@ def main():
     d = [list(map(int, input().split())) for _ in range(c)]
 
     '''
-    # if I can change the color of the same square many times
-    # Warshall-Floyd algorithm
     for k in range(c):
         for i in range(c):
             for j in range(c):
@@ -24,11 +22,9 @@ def main():
         for j in range(n):
             counters[(i + j) % 3][color[i][j] - 1] += 1
 
-    # full search
     cost = []
     for group in counters:
         l = []
-        # from j to i
         for i in range(c):
             num = 0
             for j in range(c):

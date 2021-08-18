@@ -1,4 +1,3 @@
-# cook your dish here
 from math import gcd
 st = ''
 
@@ -24,13 +23,8 @@ def func(n, l1):
 
 
 for _ in range(int(input())):
-    # a,b=map(str,input().split())
     n = int(input())
-    # s=input()
     l1 = list(map(int, input().split()))
-    #l2 = list(map(int, input().split()))
-    # l1=input().split()
-    # l2=input().split()
     st += str(func(n, l1)) + '\n'
 
 print(st)

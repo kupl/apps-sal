@@ -66,7 +66,6 @@ for j in range(4):
                     else:
                         trr[i + 1] = 3
 
-    # print(trr)
     if fl:
         print('YES')
         print(*trr)

@@ -5,7 +5,7 @@ class Solution:
             for j in range(len(graph[i])):
                 n = max(n, graph[i][j])
 
-        status = [[[0] * 3 for i in range(n + 1)] for j in range(n + 1)]  # s[m][c][t]
+        status = [[[0] * 3 for i in range(n + 1)] for j in range(n + 1)]
 
         queue = []
         for i in range(1, n + 1):

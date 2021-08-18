@@ -10,7 +10,6 @@ class Solution:
             if i < K:
                 cur += dp[-1]
 
-        # print(dp)
         total = sum(dp[1:min(W + 1, K)])
         left = 1
         for i in range(W + 1, W + K):
@@ -19,7 +18,6 @@ class Solution:
             left += 1
             if i < K:
                 total += dp[-1]
-        # print(dp)
         end = sum(dp[K:])
         good_end = sum(dp[K:N + 1])
         return good_end / end

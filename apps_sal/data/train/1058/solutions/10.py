@@ -1,4 +1,3 @@
-# cook your dish here
 test_cases = int(input())
 
 

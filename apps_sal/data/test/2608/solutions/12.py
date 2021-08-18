@@ -27,10 +27,6 @@ for tt in range(t):
         wo, bo = wb(x6 - x5 + 1, y6 - y5 + 1, (x5 + y5) % 2 == 1)
     else:
         wo, bo = 0, 0
-    # print('w, b', w, b)
-    # print('wm, bm', wm, bm)
-    # print('wd, bd', wd, bd)
-    # print('wo, bo', wo, bo)
     w = w + bm - wd - bo
     b = b - bm + wd + bo
     print(w, b)

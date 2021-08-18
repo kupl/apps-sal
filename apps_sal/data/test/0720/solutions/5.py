@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/2/23 18:26
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : B. Draw!.py
 
 
 def main():

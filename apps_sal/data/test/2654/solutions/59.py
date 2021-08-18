@@ -1,5 +1,3 @@
-# float型を許すな
-# numpyはpythonで
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 from operator import itemgetter

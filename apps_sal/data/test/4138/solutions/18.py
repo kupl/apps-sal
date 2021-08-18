@@ -54,7 +54,6 @@ def find(s, begin_, sum_):
         else:
             l = md
 
-    # pos, remain
     return l, s - f(l, begin_, sum_)
 
 

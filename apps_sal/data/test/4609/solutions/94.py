@@ -1,13 +1,9 @@
 from functools import partial, reduce
 from collections import Counter
 import sys
-## io ##
 def IS(): return sys.stdin.readline().rstrip()
 def II(): return int(IS())
 def MII(): return list(map(int, IS().split()))
-
-
-#======================================================#
 
 
 def f_chain(*args):

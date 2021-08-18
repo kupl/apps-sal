@@ -18,16 +18,6 @@ def bfs(x1, y1, d):
             for k in range(1, K + 1):
                 x2 = x1 + dx * k
                 y2 = y1 + dy * k
-                # if m[x2][y2] == '@':
-                #     break
-                # if x2 < 0 or x2 >= H:
-                #     break
-                # if y2 < 0 or y2 >= W:
-                #     break
-                # if M[x2][y2] < d + 1:
-                #     break
-                # if M[x2][y2] == d + 1:
-                #     continue
 
                 if (0 <= x2 < H) and (0 <= y2 < W):
                     if m[x2][y2] == '@':

@@ -1,4 +1,3 @@
-# cook your dish here
 def getProduct(n):
     product = 1
 

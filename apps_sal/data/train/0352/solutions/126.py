@@ -30,5 +30,4 @@ class Solution:
                     temp = max(temp, dp[j] + 1)
             dp[i] = temp
             maxAnswer = max(maxAnswer, dp[i])
-        # print(dp)
         return maxAnswer

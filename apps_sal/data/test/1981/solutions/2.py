@@ -12,19 +12,18 @@ for i in range(n - 1):
     tree[x].append(y)
     tree[y].append(x)
 
-# BFS
 res = 0
-root = (1, a[0], 0)  # node,sum,from
+root = (1, a[0], 0)
 d = deque()
 d.append(root)
 while len(d) != 0:
     curr = d.popleft()
     children = tree[curr[0]]
-    if len(children) == 1 and curr[0] != 1:  # leaf with only father, not root
+    if len(children) == 1 and curr[0] != 1:
         res += 1
     else:
         for child in children:
-            if child == curr[2]:  # father
+            if child == curr[2]:
                 continue
             next_sum = 0
             if a[child - 1] == 1:

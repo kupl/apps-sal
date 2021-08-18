@@ -1,5 +1,4 @@
 def greet(language='english'):
-    # your code here
 
     dict_ = {'english': 'Welcome',
              'czech': 'Vitejte',

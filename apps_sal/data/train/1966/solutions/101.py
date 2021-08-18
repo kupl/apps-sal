@@ -7,7 +7,6 @@ class Solution:
             for j in range(c - 2, -1, -1):
                 if mat[i][j] != 0:
                     mat[i][j] = mat[i][j + 1] + 1
-        # print(mat)
         count = 0
         for i in range(r):
             for j in range(c):

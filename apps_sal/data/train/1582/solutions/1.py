@@ -1,4 +1,3 @@
-# cook your dish here
 
 n = int(input())
 string1 = input()

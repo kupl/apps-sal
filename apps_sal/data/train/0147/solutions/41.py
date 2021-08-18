@@ -18,6 +18,5 @@ class Solution:
                 total += (-heap[0] + worker[i][0])
                 minE = worker[i][1]
                 res = max(res, minE * total)
-                # heapq.heappop(heap)
                 heapq.heappushpop(heap, worker[i][0])
         return res % 1000000007

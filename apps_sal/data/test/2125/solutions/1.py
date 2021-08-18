@@ -13,8 +13,6 @@ def main():
         dp[0].append([0, (0, '0'), (0, '0'), (0, '0'), 0])
     for i in range(n):
         dp.append([[0, (0, '0'), (0, '0'), (0, '0'), 0]])
-    #dp = [[[0, (0, None), (0, None), (0, None), 0]] * (m+1)] + [[[0, (0, None), (0, None), (0, None), 0]]] * n
-    #dp = [[[0, [0, None], [0, None], [0, None], 0]] * (m+1)] * (n+1)
     for i in range(n):
         for j in range(m):
             dp[i + 1].append([0, (0, None), (0, None), (0, None), 0])
@@ -32,9 +30,6 @@ def main():
                     dp[i + 1][j + 1][4] = dp[i + 1][j][4]
                 dp[i + 1][j + 1][0] += dp[i + 1][j + 1][4] + 1
                 dp[i + 1][j + 1][4] += 1
-    # for i, x in enumerate(dp):
-    #    for j, y in enumerate(x):
-    #        print(i, j, y)
     print(dp[n][m][0])
 
 

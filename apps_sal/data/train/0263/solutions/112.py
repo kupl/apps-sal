@@ -17,9 +17,7 @@ class Solution:
 
             for key in range(10):
                 val = n[key]
-                # print(val)
                 for c in val:
                     end2[key] += end[c]
-                # print(end2)
             end = end2
         return (sum(end.values())) % MOD

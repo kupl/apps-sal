@@ -38,7 +38,7 @@ for _ in range(t):
     for i in range(n):
         par(i)
     cp = Counter(p)
-    if (cp[par(0)] - cp[par(n - 1)]) % 2:  # par
+    if (cp[par(0)] - cp[par(n - 1)]) % 2:
         print('First')
         continue
     if (n * (n - 1) // 2 - cp[par(0)] * cp[par(n - 1)] - m) % 2:

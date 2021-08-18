@@ -5,8 +5,6 @@ class Solution:
         :type str: str
         :rtype: bool
         """
-        # d['a'] = word
-        #pattern_arr = list(pattern)
         str_arr = str.split()
         pattern_dict = {}
         str_dict = {}

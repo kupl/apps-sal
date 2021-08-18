@@ -2,10 +2,6 @@ def main():
     import sys
     input = sys.stdin.readline
 
-    # 偶数長含めた回文の長さを求める
-    # R[2*i] = L: S[i]を中心とする奇数長の最大回文
-    # R[2*i+1] = L: S[i:i+2]を中心とする偶数長の最大回文
-    # ダミー文字を挟むが、各 R[i] は実際の回文の文字列長と一致する
     def manacher(S):
         C = []
         for a in S:
@@ -74,7 +70,6 @@ def main():
         else:
             ans = S[iii - M // 2 + 1: iii + M // 2 + 1]
         print(''.join([ss, ans, ss[::-1]]))
-        #print(S, R, iii, M)
 
 
 def __starting_point():

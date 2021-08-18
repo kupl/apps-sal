@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 class V:
     def __init__(self, f, v=None):
         self.f = f
@@ -33,11 +32,9 @@ def sep(m, n):
         a = i * n
         mm = (m - i) // 2
 
-        # 横
         b, c = (m - i) * nn, (m - i) * (n - nn)
         ans(minmax(a, b, c))
 
-        # 縦
         b, c = mm * n, (m - i - mm) * n
         ans(minmax(a, b, c))
 

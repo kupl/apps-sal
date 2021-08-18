@@ -12,7 +12,6 @@ class Solution:
             if not stack or l[stack[-1]] < l[i]:
                 stack.append(i)
 
-            # print(stack, total)
         if stack:
             total += l[stack[-1]]
 

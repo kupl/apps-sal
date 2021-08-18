@@ -27,10 +27,9 @@ Accepted 55,377 / 107,280 submissions.
 NOTE: Clarify: rectangle formed by ALL these points (convex hull)
             v. rectangle formed by ANY four distinct points
 '''
-###############################################################################
 
 
-class SolutionDefDictSort:      # Faster
+class SolutionDefDictSort:
     '''
     Runtime: 664 ms, faster than 90.46% of Python3 online submissions for Minimum Area Rectangle.
     Memory Usage: 31.7 MB, less than 20.13% of Python3 online submissions for Minimum Area Rectangle.
@@ -53,10 +52,8 @@ class SolutionDefDictSort:      # Faster
                     lastx[y1, y2] = x
         return ans if ans < float('inf') else 0
 
-###############################################################################
 
-
-class SolutionTupleSet:         # Slower
+class SolutionTupleSet:
     '''
     Runtime: 1628 ms, faster than 38.40% in Python3.
     Memory Usage: 14.4 MB, less than 17.19% in Python3.
@@ -87,8 +84,6 @@ class SolutionTupleSet:         # Slower
                 maxy = max(maxy, y)
             area = (maxx - minx) * (maxy - miny)
         return area
-
-###############################################################################
 
 
 class Solution:

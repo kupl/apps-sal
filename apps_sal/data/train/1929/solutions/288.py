@@ -60,8 +60,3 @@ class StreamChecker:
             self.length += 1
 
         return self.tri.check(self.recent)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

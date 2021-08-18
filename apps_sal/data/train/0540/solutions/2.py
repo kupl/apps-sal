@@ -4,7 +4,6 @@ for _ in range(int(input())):
     ar.sort()
     f = 0
     j = 1
-    # v=[]
     if m == 1:
         c = ar.count(1)
         if n - c == 0:

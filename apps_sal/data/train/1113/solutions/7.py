@@ -4,10 +4,8 @@ while(n):
     a = []
     a = input().split()
     i = 0
-    # b=len(a)*[0]
     while(i < len(a)):
         a[i] = int(a[i])
-        # print 'hello'
         i += 1
     j = max(a)
     freq = []

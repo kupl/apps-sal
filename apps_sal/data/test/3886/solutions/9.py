@@ -65,6 +65,3 @@ for _ in range(q):
             ans = a[2][k - 1]
 
     print(ans, end="")
-
-
-# Made By Mostafa_Khaled

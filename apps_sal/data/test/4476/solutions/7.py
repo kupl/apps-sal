@@ -35,7 +35,6 @@ def solve():
             print(2)
 
 
-# query_count = 1
 query_count = Read.int()
 while query_count:
     query_count -= 1

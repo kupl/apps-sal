@@ -5,17 +5,13 @@ input = sys.stdin.readline
 
 H, W = map(int, input().split())
 
-# start = 0
-# rows = 1,2,...,H
-# cols = H+1,...,H+W
-# goal = H+W+1
 
 INF = 10 ** 9
 start = 0
 goal = H + W + 1
 V = H + W + 2
 graph = [[0] * V for _ in range(V)]
-edges = []  # 隣接リスト
+edges = []
 for i in range(H):
     row = input()
     for j, cell in enumerate(row):
@@ -30,8 +26,6 @@ for i in range(H):
     if t != -1:
         graph[1 + i][goal] = INF
         graph[1 + H + t][goal] = INF
-
-# あとは max flow を求めればよい
 
 
 def max_flow(graph):

@@ -16,8 +16,3 @@ class StreamChecker:
         if letter in self.root:
             self.active.append(self.root[letter])
         return any('word' in node for node in self.active)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

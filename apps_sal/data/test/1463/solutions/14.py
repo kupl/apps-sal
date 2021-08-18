@@ -1,5 +1,3 @@
-# def proverka(b, k, m, p):
-#  for i in range()
 
 n = int(input())
 a = []

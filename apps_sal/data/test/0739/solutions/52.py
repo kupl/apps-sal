@@ -31,8 +31,6 @@ def powB(B, L, D, M):
     ans = powB2(B, T[k], D, M) % M
     if L != T[k]:
         ans += nasu(T[k] + 1, 1, L - T[k], D, M) * t % M
-        #ans += powB(1, L - T[k], D, M) * t % M
-        #ans += powA(-T[k], L - T[k], D, M) * t % M
     return ans % M
 
 

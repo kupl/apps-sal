@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 from operator import itemgetter
 from fractions import gcd
@@ -16,13 +15,11 @@ def mi(): return map(int, input().rstrip().split())
 def lmi(): return list(map(int, input().rstrip().split()))
 def li(): return list(input().rstrip())
 def debug(x): print("debug: ", x, file=sys.stderr)
-# template
 
 
 def main():
     n, k, m, t = mi()
     ans = [k - 1, n - k]
-    # print(ans)
     for i in range(t):
         c, i = mi()
         if c == 1:

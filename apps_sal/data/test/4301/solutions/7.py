@@ -7,13 +7,10 @@ for i in range(N):
 
 amax = max(A)
 amaxindex = A.index(amax)
-# print(A,amax,amaxindex)
 B = copy.deepcopy(A)
 del B[amaxindex]
 bmax = max(B)
-# print(B,bmax)
 
-# print(amax,bmax)
 for i in range(N):
     if i == amaxindex:
         print(bmax)

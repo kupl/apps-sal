@@ -1,5 +1,4 @@
 def is_orthogonal(u, v):
-    # your code here
     count = list()
 
     for x, y in zip(u, v):

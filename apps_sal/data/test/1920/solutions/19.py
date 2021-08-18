@@ -7,7 +7,7 @@ for _ in range(n):
     p, start, end = input().split()
 
     start = int(start) - 1
-    end = int(end)  # end == 366
+    end = int(end)
 
     if p == "F":
         females[start] += 1

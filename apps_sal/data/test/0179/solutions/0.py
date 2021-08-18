@@ -30,7 +30,6 @@ def main():
     if chk1 > x - 1 or chk_r > n - x:
         print(0)
     else:
-        # (x - 1)! / (x - 1 - chk1)! * (n - x)! / (n - x - chk_r)! * (n - chk1 - chk_r - 1)!
         rest = n - chk1 - chk_r - 1
         print(f(x - 1, chk1) * f(n - x, chk_r) * f(rest, rest) % MOD)
 

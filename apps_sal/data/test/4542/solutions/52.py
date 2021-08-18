@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 s = input()
 ans = 0

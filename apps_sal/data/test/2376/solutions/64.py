@@ -1,6 +1,6 @@
 n, w = list(map(int, input().split()))
 wv = [tuple(map(int, input().split())) for i in range(n)]
-wv.sort(key=lambda x: -x[1])  # reverse
+wv.sort(key=lambda x: -x[1])
 wv.sort(key=lambda x: x[0])
 
 w0 = wv[0][0]

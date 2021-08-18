@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 def test(x):
     if x == 'X' or type(x) == int:

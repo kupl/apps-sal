@@ -15,8 +15,6 @@ class Solution:
                 nex = str(nex)
                 if int(nex) >= 2**31:
                     return
-                # if nex != '0' and nex[0] == '0':
-                #     return
                 if newS[:len(nex)] == nex:
                     newS = newS[len(nex):]
                     ans += nex,

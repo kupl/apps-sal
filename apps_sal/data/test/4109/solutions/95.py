@@ -9,7 +9,6 @@ def solve():
         c, *A_ = list(map(int, input().split()))
         C.append(c)
         A.append(A_)
-        # print(C, list(A_))
 
     ret = 10**9
     for m in range(1, N + 1):
@@ -21,7 +20,6 @@ def solve():
                     vec[j] += A_e
                 cost += C[i]
 
-            # print(comb, vec)
             if min(vec) >= X:
                 ret = min(ret, cost)
 

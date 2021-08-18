@@ -1,7 +1,6 @@
 class Solution:
     def wrapper(self, toSquare, toProd):
 
-        # create a hash table of count of unique squared ints in arr 1
         table = {}
         for integer in toSquare:
             squared = integer**2
@@ -11,9 +10,8 @@ class Solution:
                 table[squared] += 1
 
         counter = 0
-        # get all pairs products, check in hash table, if so, inc counter by count in table
         i = 0
-        while i < len(toProd):  # minus one ok too?
+        while i < len(toProd):
             j = i + 1
             while j < len(toProd):
                 product = toProd[i] * toProd[j]
@@ -55,7 +53,6 @@ class Solution:
         return products, squares
 
     def get_counts(self, products, squares):
-        # iterate over the smaller set
         counter = 0
         if len(products) > len(squares):
             for square in squares:

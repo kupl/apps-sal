@@ -49,13 +49,7 @@ class UF:
     def KruskalMST(self):
         parent = [_ for _ in range(self.n)]
         rank = [0] * self.n
-        # print(self.find(1, parent))
-        # print(self.union(1,2, parent, rank))
-        # print(self.union(1,3, parent, rank))
-        # print(parent, rank)
-        # print(self.g)
         self.g.sort(key=lambda edge: edge[2])
-        # print(self.g)
         totalans = 0
         for edge in self.g:
             x = edge[0]

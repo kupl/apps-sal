@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -9,5 +8,4 @@ for _ in range(int(input())):
         q += b[i]
         if(p == q and a[i] == b[i]):
             d += a[i]
-            # print(d)
     print(d)

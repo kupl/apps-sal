@@ -8,7 +8,6 @@ def readinput():
 
 def main(n, p):
     p.sort(reverse=True)
-    # print(p)
     p[0] = p[0] // 2
     return sum(p)
 

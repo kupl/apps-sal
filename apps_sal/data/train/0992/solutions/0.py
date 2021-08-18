@@ -37,7 +37,6 @@ for _ in range(int(input())):
         length.append(li)
         cost.append(ci)
     ans = 0
-    # print(sides)
     for k in sides:
         ans = ans + knapsack(k, length, cost, m)
     print(int(ans))

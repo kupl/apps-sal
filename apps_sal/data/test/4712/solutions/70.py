@@ -4,10 +4,10 @@ def main():
     for i in range(h):
         a.append(input())
     cnt = len(a[0]) + 2
-    print(("#" * cnt))
+    print(("
     for _ in a:
-        print(f'#{_}#')
-    print(("#" * cnt))
+        print(f'
+    print(("
 
 
 def __starting_point():

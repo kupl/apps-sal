@@ -27,7 +27,6 @@ for _ in range(q):
     line = list(map(int, input().split()))
 
     if len(line) == 3:
-        # type 1
         l = line[1]
         r = line[2]
         res = 0
@@ -43,6 +42,5 @@ for _ in range(q):
 
         print(res)
     else:
-        # type 2
         x += line[1]
         p = perm(x)

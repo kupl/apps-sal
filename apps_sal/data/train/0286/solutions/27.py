@@ -39,5 +39,4 @@ class Solution:
         n = len(balls)
         k = sum(balls)
         choose(0, k // 2, {}, {})
-        # print(t, e)
         return e / t

@@ -1,7 +1,6 @@
 __author__ = 'MoonBall'
 
 import sys
-# sys.stdin = open('data/B.in', 'r')
 T = 1
 
 

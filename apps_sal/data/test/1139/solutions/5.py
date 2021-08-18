@@ -28,20 +28,17 @@ def solve():
             lend[r + 1].append((i, l))
     for i in range(1, m + 2):
         for r, start in lend[i]:
-            #print("end", r, start, i-1)
             for p in range(start, i):
                 rows[r][p] -= 1
                 if rows[r][p] == 0:
                     col[p] += 1
         for r, end in lstart[i]:
-            #print("start", r, i, end)
             for p in range(i, end):
                 rows[r][p] += 1
                 if rows[r][p] == 1:
                     col[p] -= 1
         bcol = col.copy()
         brows = [rows[i].copy() for i in range(n)]
-        #print(i, col)
         cc = [None] * (i - 1)
         for j in range(i - 1):
             for r, start in lend[j]:
@@ -62,7 +59,6 @@ def solve():
             for p in range(j + 1, i):
                 d = max(d, dp[j][p] + dp[p][i] + col[p]**2)
             dp[j][i] = d
-            #print(j, i, col, d)
         col = bcol
         rows = brows
     print(dp[0][m + 1])

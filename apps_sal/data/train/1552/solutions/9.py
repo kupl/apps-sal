@@ -31,18 +31,10 @@ def knap(M, W, m):
     if m * (m + 1) / 2 < M:
         cache[(M, tuple(W), m)] = m * (m + 1) / 2
         return cache[(M, tuple(W), m)]
-    # if (M,W,m) in cache:
-    #    return cache[(M,W,m)]
     val = find_max(M, W, m)
     W.add(val)
-    # if val == M:
-    #    return val
-    # print val,M
-    # cache[(M,W,m)] =
     cache[(M, tuple(W), m)] = val + knap(M - val, W, m)
     return cache[(M, tuple(W), m)]
-
-    # return cache[(M,W,m)]
 
 
 tests = int(input())

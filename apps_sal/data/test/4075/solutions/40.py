@@ -8,10 +8,8 @@ for i in range(2 ** n):
     for j in range(n):
         if i >> j & 1:
             for k in range(m):
-                #print(i, j+1, ks[k][1:])
                 if j + 1 in ks[k][1:]:
                     den[k + 1] += 1
-    #print(i, den)
     for j in range(m):
         if den[j + 1] % 2 == p[j]:
             count += 1

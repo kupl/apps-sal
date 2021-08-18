@@ -1,7 +1,5 @@
 n = int(input())
-#a, b = map(int, input().split())
 bl = list(map(int, input().split()))
-#al=[list(input()) for i in range(n)]
 
 al = [0] * n
 al[-1] = bl[-1]

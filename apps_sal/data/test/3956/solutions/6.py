@@ -28,35 +28,30 @@ for i in range(MAX, 0, -1):
     gyakugen[i - 1] = (gyakugen[i] * i) % mod
 
 
-def Comb(n, k):  # nCk
+def Comb(n, k):
     return (fac[n] * gyakugen[k] * gyakugen[n - k]) % mod
-
-# K=k,N=n,0pair = 0
 
 
 def calc(k, n, i):
-    # i=2に帰着させる
     pairs = (i - 2) // 2
     k -= pairs
     n -= pairs
 
-    # 色々と例外処理
     if n < 0 or k <= 0:
         return 0
     elif k == 1 and n >= 2:
         return 0
 
-    if n == 0:  # 球が0個なら1通り
+    if n == 0:
         ans = 1
     else:
         ans = 0
-        # i=2の時の数え上げ
         for x in range(2):
-            ball = n - x  # 球
-            box = k - 1  # 箱
+            ball = n - x
+            box = k - 1
             ans += Comb(box - 1 + ball, ball) % mod
 
-    ans *= pow(2, pairs, mod)  # 0pairの選び方
+    ans *= pow(2, pairs, mod)
     return ans % mod
 
 
@@ -65,7 +60,7 @@ for i in range(2, K + 2):
     if i % 2 == 0:
         pairs = (i - 2) // 2
         tmp = 0
-        for p0 in range(pairs + 1):  # p0 = 0pairの数
+        for p0 in range(pairs + 1):
             tmp += calc(K - p0 * 2, N, i - p0 * 2) * Comb(pairs, p0) % mod
             tmp %= mod
     ans.append(tmp)

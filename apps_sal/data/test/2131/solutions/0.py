@@ -1,4 +1,3 @@
-# python3
 
 
 def readline(): return tuple(map(int, input().split()))

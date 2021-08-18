@@ -27,6 +27,5 @@ while inda < n and indb < n:
     while inda < n and USE[A[inda]] == 1:
         inda += 1
 
-    # print(inda,indb,ANS)
 
 print(ANS)

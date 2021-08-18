@@ -1,4 +1,3 @@
-# your code goes here
 test_cases = int(input())
 for i in range(0, test_cases):
     num_digits = int(input())

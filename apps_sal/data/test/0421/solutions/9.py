@@ -1,5 +1,5 @@
 """
-Codeforces Testing Round #12
+Codeforces Testing Round 
 
 Problem 597B. Restaurant
 

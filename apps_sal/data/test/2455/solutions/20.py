@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 def evaluate(origin_str):
     ans = []
     for i in [1, 2, 3, 4, 6, 12]:

@@ -6,7 +6,6 @@ class Solution:
         edges.sort(key=lambda x: (-x[0]))
         num_used = 0
 
-        # Using the UnionFind DS with idx 0 as the parent and idx 1 as the height
         uf1 = [[i for i in range(n)]] + [[0] * n]
         uf2 = [[i for i in range(n)]] + [[0] * n]
 
@@ -46,7 +45,7 @@ class Solution:
         p2 = self.union_find_get_parent(uf, node2)
 
         if p1 == p2:
-            return False  # We can discard the edge as both have same parent
+            return False
 
         if uf[1][p1] > uf[1][p2]:
             uf[0][p2] = p1

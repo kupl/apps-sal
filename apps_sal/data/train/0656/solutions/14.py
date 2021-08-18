@@ -1,4 +1,3 @@
-# cook your dish here
 N = int(input())
 
 if N % 4 == 0:

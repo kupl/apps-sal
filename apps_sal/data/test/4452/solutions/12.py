@@ -7,9 +7,6 @@ from itertools import combinations as comb, permutations as perm
 from bisect import bisect_left as bl, bisect_right as br, bisect
 from time import perf_counter
 from fractions import Fraction
-# sys.setrecursionlimit(pow(10, 6))
-# sys.stdin = open("input.txt", "r")
-# sys.stdout = open("output.txt", "w")
 mod = pow(10, 9) + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()

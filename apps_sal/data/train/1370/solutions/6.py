@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     k, n = map(str, input().split())
     if k[0] == k[1] == k[2]:

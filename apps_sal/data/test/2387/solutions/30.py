@@ -1,4 +1,3 @@
-# F
 
 N = int(input())
 

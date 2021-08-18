@@ -8,7 +8,7 @@ class Solution:
 
             temp = list(s)
             for j in range(i + 1, N):
-                if s[j] == B[i]:  # and s[j]!=B[j]:
+                if s[j] == B[i]:
                     temp[i], temp[j] = temp[j], temp[i]
                     res.append(''.join(temp))
                     temp[i], temp[j] = temp[j], temp[i]

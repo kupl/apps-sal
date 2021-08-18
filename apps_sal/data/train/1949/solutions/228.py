@@ -3,7 +3,6 @@ class Solution:
         res = 0
         summ = 0
         visited = set()
-        # 遍历所有有黄金的点作为起始点，寻找最大值
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if self.in_area(grid, i, j):

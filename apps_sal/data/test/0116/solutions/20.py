@@ -1,5 +1,3 @@
-#!/usr/local/env python3
-# -*- encoding: utf-8 -*-
 import sys
 
 
@@ -26,12 +24,9 @@ def intersect(l1, r1, l2, r2):
 
 
 def solve():
-    #    print_args()
-    # m = readnlines(sys.stdin)
     line = sys.stdin.readline().strip()
     l1, r1, l2, r2, k = [int(i) for i in line.split()]
     left, right, inters = intersect(l1, r1, l2, r2)
-    #print("left={}, right={}, intesec={}".format(left, right, inters))
     if inters < 1:
         return 0
     else:

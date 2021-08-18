@@ -2,7 +2,6 @@ n = int(input())
 ar = []
 for i in range(n - 2):
     ar.append(list(map(int, input().split())))
-# print(ar)
 
 br = [False] * n
 vr = [0] * n
@@ -24,14 +23,12 @@ for i in range(n - 2):
     rel[c].add(a)
     rel[c].add(b)
 
-# print(rel)
 
 for i in range(n):
     if len(rel[i + 1]) == 2:
         start = i + 1
         break
 
-# print(start)
 
 br[start - 1] = True
 ans.append(start)
@@ -43,7 +40,6 @@ for i in rel[start]:
         x = i
 ans.append(x)
 br[x - 1] = True
-# print(ans,br,x)
 
 i = 1
 while(i < n - 2):
@@ -52,7 +48,6 @@ while(i < n - 2):
             ans.append(j)
             br[j - 1] = True
             break
-    # print(br,ans,i)
     i += 1
 
 for i in range(n):

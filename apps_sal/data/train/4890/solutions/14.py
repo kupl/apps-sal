@@ -1,5 +1,4 @@
 def find_difference(a, b):
-    # Your code here!
     p = 1
     q = 1
     for nums in a:

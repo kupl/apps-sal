@@ -10,9 +10,7 @@ def main():
 
     for i in range(N):
         x1, y1, x2, y2 = xyxy[i]
-        # どちらも周上にある場合は周上の座標に変換してから記録
         if ((x1 == 0 or x1 == R) or (y1 == 0 or y1 == C)) and ((x2 == 0 or x2 == R) or (y2 == 0 or y2 == C)):
-            # １つ目
             if x1 == 0:
                 r.append((y1, i))
             elif x1 == R:
@@ -21,7 +19,6 @@ def main():
                 r.append((R - x1 + C * 2 + R, i))
             else:
                 r.append((x1 + C, i))
-            # 2つ目
             if x2 == 0:
                 r.append((y2, i))
             elif x2 == R:
@@ -32,7 +29,6 @@ def main():
                 r.append((x2 + C, i))
 
     r = sorted(r)
-    # print(r)
     stack = []
     for i in range(len(r)):
         if len(stack) > 0:

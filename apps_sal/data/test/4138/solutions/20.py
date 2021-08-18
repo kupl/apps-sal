@@ -46,26 +46,14 @@ def binsrch(a, b, x, f):
 
 
 def test(x):
-    # number of full sequences
     pref_seq_cnt = binsrch(0, 100 * x, x, sum_seq_len)
 
-    # print(i, x, sum_seq_len(x), sum_seq_len(x+1))
-    # assert sum_seq_len(x) < i <= sum_seq_len(x+1)
-
-    # length of last sequence
     seq_l = x - sum_seq_len(pref_seq_cnt)
 
-    # biggest complete number in sequence
     big = binsrch(0, seq_l, seq_l, seq_len)
-    # print(seq_l, big)
 
-    # which digit of big+1 to print out
     ind = seq_l - seq_len(big)
     return str(big + 1)[ind - 1]
-
-    # x = seq_len(i)
-    # y = brut_sl(i)
-    # assert x == y
 
 
 def __starting_point():

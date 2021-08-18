@@ -2,11 +2,11 @@ n = int(input())
 
 sosuu = [2]
 A = 1000
-for L in range(3, A, 2):  # 2 以外の素数は奇数なので
+for L in range(3, A, 2):
     for L2 in sosuu:
         if L % L2 == 0:
-            break  # 素数でないことがわかったらそれ以上ループする必要はない
-    else:  # break で抜けることがなかったら L は素数（Python 特有の制御構文）
+            break
+    else:
         sosuu.append(L)
 ans = []
 

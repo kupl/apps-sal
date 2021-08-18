@@ -47,7 +47,6 @@ class Solution:
             if break_flag:
                 break
             for j in range(n):
-                # print(i, j)
 
                 if A[i][j] == 1:
                     dfs_visit(i, j, source_nodes)
@@ -59,8 +58,6 @@ class Solution:
             q.append(((i, j), 0))
 
         visited = set()
-
-        # print(q)
 
         while len(q):
             curr_node, curr_dist = q.pop(0)

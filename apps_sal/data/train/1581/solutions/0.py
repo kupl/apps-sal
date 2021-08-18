@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 MOD = 1000000007
 

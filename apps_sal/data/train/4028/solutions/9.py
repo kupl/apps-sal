@@ -18,6 +18,3 @@ def riders(stations, station_x):
                 riders += 1
                 r_miles = s_distance
     return riders
-
-    #print (stations)
-    #print (station_x)

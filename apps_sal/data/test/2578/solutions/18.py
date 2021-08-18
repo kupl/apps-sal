@@ -18,7 +18,6 @@ def union(Set, u, v):
 
 
 def solve():
-    #stdin = open("C. News Distribution.txt")
 
     N, M = map(int, stdin.readline().split())
 

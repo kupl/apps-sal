@@ -126,7 +126,6 @@ for i in range(n):
                 dic[x]=min(dic[x],y)
             else:
                 dic[x]=y
-#print(dic)
 if not dic:
     ans=0
 else:

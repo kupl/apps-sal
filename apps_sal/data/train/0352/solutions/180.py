@@ -6,11 +6,9 @@ class Solution:
         for i in range(1, len(words)):
             maxi = 1
             for j in list(range(0, i))[::-1]:
-                # print(j)
                 if(self.check(words[j], words[i]) and dp[j] + 1 > maxi):
                     maxi = dp[j] + 1
             dp[i] = maxi
-        # print(dp)
         return max(dp)
 
     def check(self, chain, word):

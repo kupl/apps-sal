@@ -23,8 +23,4 @@ for _ in range(t):
             if b <= j:
                 poss[i + 1][j] |= poss[i][j - b]
 
-    # print()
-    # print(blocks)
-    # for r in poss:
-    #     print(r)
     print("YES" if poss[len(blocks)][n] else "NO")

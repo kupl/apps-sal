@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import stdin
 from bisect import bisect_left, bisect_right
 

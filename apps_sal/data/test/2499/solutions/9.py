@@ -17,7 +17,6 @@ for b in range(59, -1, -1):
         if a & (1 << b):
             if i > pos:
 
-                # i番目とpos番目を入れ替える
                 a_list[i] = a_list[pos]
                 a_list[pos] = a
 

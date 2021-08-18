@@ -20,7 +20,6 @@ class CodeforcesTask1147BSolution:
             segm["{1}_{0}".format(*point)] = True
         for k in range(1, self.n_m[0]):
             if not self.n_m[0] % k:
-                # print(k)
                 do = True
                 for p in self.points:
                     a, b = (p[0] + k) % self.n_m[0], (p[1] + k) % self.n_m[0]

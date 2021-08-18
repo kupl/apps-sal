@@ -1,7 +1,5 @@
 import sys
 
-# da[i][j]:(0,0)~(i,j)の長方形の和
-
 
 def da_generate(h, w, a):
     da = [[0] * w for j in range(h)]
@@ -14,8 +12,6 @@ def da_generate(h, w, a):
             cnt_w += a[i][j]
             da[i][j] = da[i - 1][j] + cnt_w
     return da
-
-# da_calc(p,q,x,y):(p,q)~(x,y)の長方形の和
 
 
 def da_calc(p, q, x, y):
@@ -37,11 +33,11 @@ da = da_generate(H, W, grid)
 ans = 10 ** 18
 for i in range(2**(H - 1)):
     res = 0
-    s = [k for k, j in enumerate(range(H), 1) if i >> j & 1]  # s行は含まない
+    s = [k for k, j in enumerate(range(H), 1) if i >> j & 1]
     res += len(s)
     s.append(H)
     y = 0
-    for w in range(1, W + 1):  # w行は含まない
+    for w in range(1, W + 1):
         x = 0
         flag = False
         for s_i in s:

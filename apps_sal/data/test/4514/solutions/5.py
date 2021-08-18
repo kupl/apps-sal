@@ -1,7 +1,5 @@
 
 
-#input = open('e1.in').readline
-
 n, q = map(int, input().split())
 children = [[] for i in range(n)]
 size = [0] * n

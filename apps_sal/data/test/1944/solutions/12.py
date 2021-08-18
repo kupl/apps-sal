@@ -18,7 +18,6 @@ for i in range(N):
 
 laptops.sort()
 
-# print(laptops)
 
 isReverse = False
 

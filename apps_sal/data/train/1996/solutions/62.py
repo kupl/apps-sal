@@ -5,8 +5,6 @@ Graph DFS brute force search
 
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
-        # cycle detection
-        # initial state 0, processing 1, eventual state 2
         n = len(graph)
 
         states = [0 for i in range(n)]

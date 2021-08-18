@@ -20,9 +20,6 @@ class Solution:
 
         ans = l + 1
 
-        # for i in range(l):
-        #     if left[i] < l and right[i] < l:
-        #         ans = min(ans, left[i] + right[i])
         ans = min(left[i] + right[i] if left[i] < l and right[i] < l else l + 1 for i in range(l))
 
         return ans if ans < l + 1 else -1

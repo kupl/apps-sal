@@ -1,8 +1,5 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        # get the next zero or end
-        # get the last idx of negative before zero and end
-        # get how many negative numbers
 
         next_zero_or_end = [0] * (len(nums) + 1)
         next_idx = len(nums)

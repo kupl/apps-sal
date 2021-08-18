@@ -14,9 +14,8 @@
     入力は全て整数
 '''
 
-# 標準入力から N, A, B の値を取得する
 n, a, b = list(map(int, input().split()))
 
-result = [n * a, b]  # 結果出力用のリスト
+result = [n * a, b]
 
 print((min(result)))

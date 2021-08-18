@@ -5,7 +5,6 @@ for i in range(100):
         x = str(j) + '9' * i
         x = int(x)
         serch_table.append(x)
-# print(serch_table)
 
 L = []
 for i in serch_table:
@@ -20,7 +19,6 @@ for i in L:
     if tmp < i[1]:
         M.append(i[1])
         tmp = i[1]
-#print(M,len(serch_table ))
 N = int(input())
 for i in range(N):
     print((M[i]))

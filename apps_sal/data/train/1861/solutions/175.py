@@ -10,7 +10,6 @@ class Solution:
         d = set()
         for i in range(N):
             d.add(tuple(points[i]))
-        # print(d)
         for i in range(N):
             for j in range(i + 1, N, 1):
                 x1, y1 = points[i]

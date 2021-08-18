@@ -5,7 +5,6 @@ class Solution:
                 if not mat[i][j]:
                     continue
                 mat[i][j] += mat[i - 1][j] if i - 1 >= 0 else 0
-        # count submatrices with all 1s with bottom right corner at (i,j)
         ret = 0
         for i in range(len(mat)):
             row = mat[i]

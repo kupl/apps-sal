@@ -1,9 +1,7 @@
-# cook your dish here
 try:
     import string
     alphabets = string.ascii_lowercase
     test = int(input())
-    # ans=[]
 
     def solve():
 
@@ -52,8 +50,6 @@ try:
         for i in ans:
             i.sort()
             print(len(i), *i)
-        # for i in ans:
-            #print(" ".join(map(str,i)))
 
     for _ in range(test):
         solve()

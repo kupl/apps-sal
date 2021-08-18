@@ -9,16 +9,11 @@ def pallin(s):
 
 def __starting_point():
     s = input()
-    # print(s)
-    # print(pallin(s))
     n = len(s)
     for i in range(n - 1, 0, -1):
         s1 = s[0:i]
         s2 = s[i:]
         t = s2 + s1
-        # print(s1)
-        # print(s2)
-        # print(t)
         if s != t and pallin(t):
             print("1")
             return

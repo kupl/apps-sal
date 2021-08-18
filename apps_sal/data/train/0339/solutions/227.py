@@ -1,6 +1,5 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        # tow product. O(nm), O(n)
         cnt = 0
         for num in nums1:
             target = num * num

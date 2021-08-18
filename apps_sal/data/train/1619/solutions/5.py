@@ -1,5 +1,4 @@
 def decompose(n):
-    # your code
     def fun(s, i):
         if s < 0:
             return None

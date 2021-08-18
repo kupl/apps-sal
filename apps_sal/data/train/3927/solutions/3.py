@@ -1,5 +1,4 @@
 def dig_pow(n, p):
-    # your code
     n_list = [int(i) for i in str(n)]
     n_sum = 0
     p_i = p

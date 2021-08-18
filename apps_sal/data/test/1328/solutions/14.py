@@ -1,4 +1,3 @@
-# DP
 INF = float('inf')
 
 N, Ma, Mb = list(map(int, input().split()))

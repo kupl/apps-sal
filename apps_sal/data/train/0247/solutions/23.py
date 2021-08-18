@@ -19,8 +19,8 @@ class Solution:
                 dp[i] = min(dp[i - 1], dp[i])
             return dp
 
-        dp_left = get_sub_arrays(arr)                     # from front
-        dp_right = get_sub_arrays(arr[::-1])[::-1]        # from backwards
+        dp_left = get_sub_arrays(arr)
+        dp_right = get_sub_arrays(arr[::-1])[::-1]
 
         ans = float('inf')
         for i in range(1, len(arr)):

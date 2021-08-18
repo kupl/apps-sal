@@ -18,7 +18,6 @@ for i in range(n):
 
     c[Fraction(b[i], a[i])] += 1
 
-# print(c)
 
 r += c.most_common(1)[0][1] if len(c) > 0 else 0
 

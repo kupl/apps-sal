@@ -15,9 +15,4 @@ def solve():
         print(*l2)
 
 
-# import sys
-# def fast():
-#     sys.stdin = open("input.txt", "r")
-#     sys.stdout = open("output.txt", "w")
-# fast()
 solve()

@@ -48,8 +48,6 @@ def solve(s):
     lefts.sort()
     rights.sort()
     r_itr = iter(rights)
-    # print(lefts)
-    # print(rights)
     for i, (li, ri) in enumerate(lefts):
         bubbles[li] = i + 1
         bubbles[ri] = n - i
@@ -57,7 +55,6 @@ def solve(s):
         li, ri = next(r_itr)
         bubbles[li] = i + 1
         bubbles[ri] = n - i
-    # print(bubbles)
 
     ans = 0
     bit = Bit(n)

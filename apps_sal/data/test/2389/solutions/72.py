@@ -1,8 +1,6 @@
-# input
 N, A, B, C = map(int, input().split())
 S = [input() for _ in range(N)]
 
-# process
 V = {"A": A, "B": B, "C": C}
 S.append("XX")
 op = ""
@@ -19,7 +17,6 @@ for i in range(N):
     V[y] -= 1
     op += x
 
-# output
 if len(op) != N:
     print("No")
 else:

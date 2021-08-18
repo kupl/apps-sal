@@ -3,14 +3,9 @@ import sys
 input = sys.stdin.readline
 
 t = int(input())
-# t=1
 for tests in range(t):
     n = int(input())
     A = list(map(int, input().split()))
-
-    # n=6
-    #A=[random.randint(1,10) for i in range(n)]
-    # print(A)
 
     REST = [-1] * n
     MIN = 1 << 60
@@ -36,5 +31,3 @@ for tests in range(t):
             break
     else:
         print("YES")
-
-    # print(REST,MIN)

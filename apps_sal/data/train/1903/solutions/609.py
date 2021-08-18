@@ -39,10 +39,6 @@ class Solution:
                 if mins[i] < min_d:
                     min_i = i
                     min_d = mins[i]
-                # for j in c:
-                    # if mapper[i][j] < min_d:
-                    #     min_i = i
-                    #     min_d = mapper[i][j]
             cost += min_d
             c.add(min_i)
             unc.remove(min_i)

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 try:
     from typing import Dict, List
@@ -20,7 +19,7 @@ def solve(N: int, M: int, A: "List[int]"):
             dp[i] = m
     assert dp[N] >= 0
     k = N
-    res = []  # type: List[int]
+    res = []
     while dp[k]:
         for Ai in A:
             if k - mn[Ai] >= 0 and dp[k - mn[Ai]] == dp[k] - 1:
@@ -37,9 +36,9 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    M = int(next(tokens))  # type: int
-    A = [int(next(tokens)) for _ in range(M)]  # type: "List[int]"
+    N = int(next(tokens))
+    M = int(next(tokens))
+    A = [int(next(tokens)) for _ in range(M)]
     solve(N, M, A)
 
 

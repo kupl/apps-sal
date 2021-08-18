@@ -1,11 +1,9 @@
-#coding: utf-8
 import math
 import heapq
 import bisect
 import numpy as np
 from collections import Counter, deque
 import itertools
-#from scipy.misc import comb
 
 MOD = 10**9 + 7
 H, W, A, B = map(int, input().split())

@@ -14,9 +14,9 @@ def cost(left):
     right = n - left
     diff = left - right
     bonus = 0
-    if diff > 0:  # left part is larger
+    if diff > 0:
         bonus = ql * (diff - 1)
-    elif diff < 0:  # right part is larger
+    elif diff < 0:
         bonus = qr * (-diff - 1)
     return bonus + l * s[left] + r * (s[n] - s[left])
 

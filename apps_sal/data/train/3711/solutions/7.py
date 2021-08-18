@@ -6,7 +6,7 @@ def xMasTree(n):
         line = ''
         buff = '_' * (n - row)
         line += buff
-        line += '#' * (2 * row - 1)
+        line += '
         line += buff
         res.append(line)
         row += 1
@@ -14,7 +14,7 @@ def xMasTree(n):
         line = ''
         buff = '_' * (n - 1)
         line += buff
-        line += '#'
+        line += '
         line += buff
         res.append(line)
     return res

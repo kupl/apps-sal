@@ -38,8 +38,3 @@ class StreamChecker:
                 curr = curr.children[ch]
                 if curr.is_end:
                     return True
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

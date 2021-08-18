@@ -14,5 +14,4 @@ class Solution:
             return ''.join(encoding)
 
         p_enc = encodeWord(pattern)
-        # print(p_enc)
         return [word for word in words if encodeWord(word) == p_enc]

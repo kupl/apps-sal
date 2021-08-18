@@ -1,5 +1,3 @@
-# = list(map(int, input().split()))
-# = map(int, input().split())
 a, b, c = list(map(int, input().split()))
 ans = 0
 for i in range(a + 1):

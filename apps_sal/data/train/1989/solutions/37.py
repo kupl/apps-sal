@@ -1,5 +1,4 @@
 def find(dp, mask):
-    # d = {0:-1}
     d = {}
     ans = 0
     for i in range(0, len(dp)):

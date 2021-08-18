@@ -1,8 +1,8 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
-        d = dict()  # max length of 1‘s at index i
-        counter = collections.Counter()  # count of occurence of len
+        d = dict()
+        counter = collections.Counter()
         ans = -1
         for i, num in enumerate(arr, 1):
             left = d.get(num - 1, 0)

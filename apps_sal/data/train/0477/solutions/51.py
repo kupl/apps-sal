@@ -11,15 +11,9 @@ class Solution:
                     if temp[j] == '0':
                         temp[j] = '1'
 
-                        # temp2=''
-                        # temp=(temp2.join(temp))
-
                     else:
-                        # temp=list(temp)
                         temp[j] = '0'
 
-                        # temp2=''
-                        # temp=(temp2.join(temp))
                 temp = temp[::-1]
 
                 s.append([])
@@ -29,6 +23,4 @@ class Solution:
                 for zz in temp:
                     s[i].append(zz)
 
-        # for i in (s[k-1]):
-        #     print(i)
         return (s[-1][k - 1])

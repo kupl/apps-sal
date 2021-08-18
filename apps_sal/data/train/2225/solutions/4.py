@@ -8,7 +8,6 @@ def getGrundyNumber(x):
 N, L = list(map(int, input().split()))
 Ss = [input() for i in range(N)]
 
-# トライ木を作成する
 Trie = [[-1, -1]]
 for S in Ss:
     iT = 0
@@ -18,7 +17,6 @@ for S in Ss:
             Trie[iT][c] = len(Trie) - 1
         iT = Trie[iT][c]
 
-# 子が１つの頂点を探す
 Hgts = {}
 stack = [(0, L + 1)]
 while stack:
@@ -32,7 +30,6 @@ while stack:
     if num == 1:
         Hgts[Hgt - 1] = Hgts.get(Hgt - 1, 0) + 1
 
-# Grundy数のXORを求める
 ans = 0
 for Hgt, num in list(Hgts.items()):
     if num % 2:

@@ -1,4 +1,3 @@
-# seishin.py
 from bisect import bisect
 N = int(input())
 *A, = map(int, input().split())

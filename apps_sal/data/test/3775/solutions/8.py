@@ -39,8 +39,6 @@ for e in l2:
         if(((e[1][0] in e1[1]) or (e[1][1] in e1[1])) and e[1] != e1[1]):
             dic2[e[0]] = dic2.get(e[0], []) + [e1[1]]
 mybool = True
-# print(dic1)
-# print(dic2)
 for k, v in list(dic1.items()):
     k = l1[k][1]
     mybool = mybool and (all([k[0] in p for p in v]) or all([k[1] in p for p in v]))

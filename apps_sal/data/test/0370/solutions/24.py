@@ -21,7 +21,6 @@ else:
         elif Y - yy > K:
             yy += K
             vec_list.append((0, K))
-    # print(xx,yy,vec_list)
     diff_x = X - xx
     diff_y = Y - yy
 
@@ -58,7 +57,6 @@ else:
         else:
             raise("Error")
 
-    # print(vec_list)
     print(len(vec_list))
     pos_x, pos_y = 0, 0
     for x, y in vec_list:

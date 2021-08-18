@@ -1,5 +1,3 @@
-# This code sucks, you know it and I know it.
-# Move on and call me an idiot later.
 
 t = int(input())
 while t:

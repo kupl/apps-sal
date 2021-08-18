@@ -9,6 +9,5 @@ def did_we_win(plays):
         elif play == 'sack':
             dist += play_dist
         else:
-            # Turnover
             break
     return False

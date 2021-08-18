@@ -9,7 +9,6 @@ class Solution:
                 subSeq = [A[i], A[j]]
                 while subSeq[-1] + subSeq[-2] in S:
                     subSeq.append(subSeq[-1] + subSeq[-2])
-                    # print(subSeq)
                     if len(subSeq) > max_len:
                         max_len = len(subSeq)
                 j += 1

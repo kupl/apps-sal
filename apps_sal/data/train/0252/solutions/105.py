@@ -4,7 +4,6 @@ class Solution:
         for i, r in enumerate(ranges):
             intervals.append([i - r, i + r])
         intervals.sort(key=lambda x: [x[0], -x[1]])
-        # print(intervals)
         count = 0
 
         def getnext(l):
@@ -18,7 +17,6 @@ class Solution:
         j = 0
         while j < n:
             iv = getnext(j)
-            # print(count,j,iv)
             if iv:
                 j = iv[1]
                 count += 1

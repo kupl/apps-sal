@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def sufficientSubset(self, root: TreeNode, limit: int) -> TreeNode:
         sum_t_root = TreeNode(root.val)
@@ -13,7 +7,6 @@ class Solution:
         def calSumT(node, sum_t_node, s):
             if not node:
                 return
-            # print (node.val)
             if not node.left and not node.right:
                 sum_t_node.val = True if s >= limit else False
             if node.left:
@@ -30,8 +23,6 @@ class Solution:
                 return []
             return [node.val] + strT(node.left) + strT(node.right)
 
-        # print (strT(sum_t_root))
-
         def checkSumT(node):
             if not node.left and not node.right:
                 return
@@ -46,12 +37,10 @@ class Solution:
 
         sum_t_node = sum_t_root
         checkSumT(sum_t_node)
-        # print (strT(sum_t_root))
 
         def updateNode(node, s_node):
             if not node or not s_node.val:
                 return None
-            # print (node.val)
             if node.left:
                 node.left = updateNode(node.left, s_node.left)
             if node.right:

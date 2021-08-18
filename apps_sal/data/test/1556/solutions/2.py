@@ -24,7 +24,6 @@ for i, x in enumerate(num):
 
 while k:
     absx, curi = heapq.heappop(heap)
-    #print(curi, num[curi])
     if num[curi] >= 0:
         num[curi] += v
     else:

@@ -1,4 +1,3 @@
-# 054_a
 A, B = list(map(int, input().split()))
 if (1 <= A & A <= 13) & (1 <= B & B <= 13):
     if A == B:

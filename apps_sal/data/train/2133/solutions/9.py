@@ -1,11 +1,9 @@
 def ug(s):
     index = [0] * 7
     for x in s:
-        # print(x)
         for i in range(7):
             if(x[i] == "1"):
                 index[i] += 1
-    # print(index)
     return max(index)
 
 

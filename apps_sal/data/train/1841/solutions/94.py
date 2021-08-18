@@ -1,6 +1,5 @@
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
-        # K * n
         temp = list(arr)
         temp.sort()
         median = 0

@@ -18,7 +18,6 @@ fact = [None] * 220000
 for i in range(1, 220000):
     fact[0] = 1
     fact[i] = i * fact[i - 1] % MOD
-    # inv[i] = modPow(fact[i], MOD-2, MOD)
 
 
 def ncr(n, r):
@@ -34,7 +33,6 @@ def number_of_paths(h, w):
 
 ans = 0
 for i in range(b + 1, w + 1):
-    # print('first', h-a, i)
     ans += number_of_paths(h - a, i) * number_of_paths(a, w - i + 1)
 
 print((int(ans % MOD)))

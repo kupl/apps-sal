@@ -3,7 +3,6 @@ class Solution:
         counts = Counter(A)
         increments = 0
 
-        # upper bound of the problem
         for num in range(100000):
             count = counts[num]
             if count > 1:

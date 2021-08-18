@@ -13,7 +13,7 @@ class Solution:
             while nums[m] == nums[l] and l < m:
                 l += 1
 
-            if nums[l] <= nums[m]:  # [l,m] is sorted
+            if nums[l] <= nums[m]:
                 if nums[l] <= target < nums[m]:
                     r = m - 1
                 else:

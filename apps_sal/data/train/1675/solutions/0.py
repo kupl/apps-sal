@@ -30,9 +30,7 @@ for _ in range(T):
             distance += max_ci - min_ci
             lastx = i
             lasty = min_ci
-    # ans.append(round(distance,2))
     ans.append("{:.2f}".format(distance))
-    # ans.append(distance)
 
 for i in ans:
     print(i)

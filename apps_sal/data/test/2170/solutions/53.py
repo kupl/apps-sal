@@ -11,8 +11,8 @@ def per(n, r, p):
     return fact[n] * factinv[n - r] % p
 
 
-p = 10 ** 9 + 7  # mod
-N = 5 * pow(10, 5)  # N は必要分だけ用意する。大体問題設定のオーダーに合わせる(N >= max(n, r)。上のcmb関数のリスト同士の掛け算において、fact[n], factinv[r]を参照するため)
+p = 10 ** 9 + 7
+N = 5 * pow(10, 5)
 fact = [1, 1]
 factinv = [1, 1]
 inv = [0, 1]

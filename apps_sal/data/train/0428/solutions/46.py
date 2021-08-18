@@ -10,7 +10,6 @@ class Solution:
 
         def setKey(state, key):
             return state | keyMap[key]
-        # BFS?
         keys = set()
         start = None
         target = 0
@@ -24,8 +23,8 @@ class Solution:
         def neighbors(i, j):
             moves = [(1, 0), (-1, 0), (0, 1), (0, -1)]
             for di, dj in moves:
-                if 0 <= i + di < len(grid) and 0 <= j + dj < len(grid[0]) and grid[i][j] != '#':
-                    yield (i + di, j + dj)
+                if 0 <= i + di < len(grid) and 0 <= j + dj < len(grid[0]) and grid[i][j] != '
+                yield (i + di, j + dj)
 
         visited = set()
         q = deque([[start, 0, 0]])

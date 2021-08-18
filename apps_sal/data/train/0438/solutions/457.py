@@ -31,5 +31,4 @@ class Solution:
                         uf.union(i, j)
             if uf.ranks[uf.find(i)] == m:
                 ans = step + 1
-            # print(step, i, uf.ranks, ans)
         return ans

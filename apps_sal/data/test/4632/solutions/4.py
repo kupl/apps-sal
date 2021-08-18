@@ -15,7 +15,6 @@ for _ in range(int(input())):
 
         res += 'R' * dx + 'U' * dy
 
-    # print(packs)
     if res != 'NO':
         print('YES')
         print(res)

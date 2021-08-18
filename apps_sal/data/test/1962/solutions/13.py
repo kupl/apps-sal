@@ -1,6 +1,5 @@
 n, k, l = list(map(int, input().split()))
 a = sorted(list(map(int, input().split(' '))))
-# print(n, k, l, a)
 index = 0
 for i in a:
     if i > a[0] + l:

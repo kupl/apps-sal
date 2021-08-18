@@ -1,9 +1,7 @@
-# your code goes here
 import math
 t = eval(input())
 for i in range(t):
     b = []
-    # c=[]
     h, s = list(map(int, input().split()))
     a = math.pow(h, 4) - 16 * s * s
     if(a < 0):
@@ -12,8 +10,6 @@ for i in range(t):
         ans = math.sqrt(a)
         answe = (h * h + ans) / 2
         answe2 = (h * h - ans) / 2
-        # print answe
-        # print answe2
         if(answe > 0):
             b.append(math.sqrt(answe))
             b.append((2 * s) / b[0])

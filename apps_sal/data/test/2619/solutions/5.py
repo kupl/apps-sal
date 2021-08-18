@@ -1,4 +1,3 @@
-# Fast I/O template
 import sys
 
 
@@ -26,7 +25,6 @@ def put(n):
     sys.stdout.write(str(n) + "\n")
 
 
-# Your code goes here
 a = getArr()
 cc = a[2]
 st = []
@@ -56,5 +54,4 @@ for i in range(a[1]):
     for m in range(11):
         lk = (m + t) % (cc + 1)
         ans += (count[m] * lk)
-        # print(m,lk,ans)
     print(ans)

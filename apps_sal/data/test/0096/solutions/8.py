@@ -45,7 +45,6 @@ while(r >= l):
         ans1 = mid
     else:
         r = mid // 2 - 1
-    # print(mid,check(mid))
 l = 1
 r = n
 ans2 = 0
@@ -57,5 +56,4 @@ while(r >= l):
         ans2 = mid
     else:
         r = (mid + 1) // 2 - 1
-    # print(mid,check(mid))
 print(max(ans1, ans2))

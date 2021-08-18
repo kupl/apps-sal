@@ -1,6 +1,5 @@
 l1, r1, t1 = list(map(int, input().split()))
 l2, r2, t2 = list(map(int, input().split()))
-# a=list(map(int,input().split()))
 
 
 def gcd(a, b):

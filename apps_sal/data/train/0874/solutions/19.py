@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 no_of_test_cases = int(input())
 

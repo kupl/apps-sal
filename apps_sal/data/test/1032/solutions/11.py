@@ -8,13 +8,11 @@ def getlist():
 
 
 def Binary_Search(N, P, A, dif):
-    # 初期化
     left = 0
     right = N - 1
     ansleft = dif
     ansright = -INF
 
-    # 二分探索
     while left <= right:
         mid = (left + right) // 2
         jud = "Yes"
@@ -24,7 +22,6 @@ def Binary_Search(N, P, A, dif):
         for t in range(N):
             B[t] -= mid
 
-        # 尺取り
         array = [None] * N
         i = 0
         j = 0
@@ -48,15 +45,12 @@ def Binary_Search(N, P, A, dif):
 
     return ansleft, ansright
 
-# 処理内容
-
 
 def main():
     N, P = getlist()
     A = getlist()
     A = sorted(A)
     dif = 0
-    # 配列の初期化
     for i in range(N):
         dif = max(dif, A[i] - i)
     for i in range(N):

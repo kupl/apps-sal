@@ -57,7 +57,6 @@ def resolve():
     N = I()
     xy = [LI() for _ in range(N)]
 
-    # 辺の候補は、xyそれぞれでソートした隣同士の点の間のみに絞れる
     xy_x_asc = sorted(enumerate(xy), key=lambda x: x[1][0])
     xy_y_asc = sorted(enumerate(xy), key=lambda x: x[1][1])
     edge = []
@@ -78,7 +77,6 @@ def resolve():
         xyn_num = xy_y_asc[i + 1][0]
         edge.append([xyc_num, xyn_num, abs(yn - yc)])
 
-    # print(edge)
     mst_cost = kruskal(edge, N)
     print(mst_cost)
 

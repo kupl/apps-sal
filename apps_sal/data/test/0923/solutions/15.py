@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 N = int(input())
 G = list(map(int, input().split()))

@@ -1,11 +1,9 @@
 class Solution:
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
-        # Recursive approach
         memo = {}
 
         def getMax(arr, k, idx):
 
-            # if reached end
             if idx == len(arr):
                 return 0
             if idx in memo:
@@ -20,7 +18,3 @@ class Solution:
             return maxSum
 
         return getMax(A, K, 0)
-
-#         # dp[i] will hold the maximum sum
-#         # from [0, i)
-#         dp[i] = [0] * (len(A)+1)

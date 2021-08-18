@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 from heapq import heapify, heappush, heappop
@@ -31,21 +30,18 @@ A3 = [-a for a in A[N * 2:]]
 heapify(A1)
 heapify(A3)
 
-# 真ん中グループ(A2)をiまで左に取り込んだ時の左グループ(A1)の最大値
 ansa = [0] * (N + 1)
 ansa[0] = sum(A1)
 for i in range(N):
     heappush(A1, A2[i])
     ansa[i + 1] = ansa[i] + A2[i] - heappop(A1)
 
-# 真ん中グループ(A2)を後ろからiまで右に取り込んだ時の右グループ(A1)の最小値
 ansb = [0] * (N + 1)
 ansb[N] = -sum(A3)
 for i in range(N - 1, -1, -1):
     heappush(A3, -A2[i])
     ansb[i] = ansb[i + 1] + A2[i] - (-heappop(A3))
 
-# 各位置iから一番いい場所を得る
 ans = -INF
 for i in range(N + 1):
     ans = max(ans, ansa[i] - ansb[i])

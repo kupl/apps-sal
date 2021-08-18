@@ -1,5 +1,4 @@
 try:
-    # if(True):
     for _ in range(int(input())):
         m, n = map(int, input().split())
         c = []
@@ -29,7 +28,6 @@ try:
                     last = k[-1]
             c.append(k)
         count = 0
-#         print(c)
 
         for i in range(rowstart, rowend + 1):
 

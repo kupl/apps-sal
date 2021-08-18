@@ -12,8 +12,8 @@ def check(x):
     return time <= x
 
 
-left = 0  # False
-right = 10**10  # True
+left = 0
+right = 10**10
 while left + 1 < right:
     mid = (left + right) // 2
     if check(mid):

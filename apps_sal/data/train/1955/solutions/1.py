@@ -6,7 +6,6 @@ class Solution:
 
         def find_parent(i):
             while parents[i] != i:
-                # path compression
                 parents[i] = parents[parents[i]]
                 i = parents[i]
             return i

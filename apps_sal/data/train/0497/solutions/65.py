@@ -15,5 +15,4 @@ class Solution:
                     prof = dp[j + 1]
                     break
             dp[i + 1] = max(dp[i], prof + jobs[i][2])
-        # print(dp)
         return dp[n]

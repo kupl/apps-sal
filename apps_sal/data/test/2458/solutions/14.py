@@ -26,11 +26,11 @@ def solve():
 def read(mode=2):
     inputs = input().strip()
     if mode == 0:
-        return inputs  # String
+        return inputs
     if mode == 1:
-        return inputs.split()  # List of strings
+        return inputs.split()
     if mode == 2:
-        return list(map(int, inputs.split()))  # List of integers
+        return list(map(int, inputs.split()))
 
 
 def write(s="\n"):
@@ -45,7 +45,6 @@ def write(s="\n"):
 
 
 def run():
-    #if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
     res = solve()
     write(res)
 

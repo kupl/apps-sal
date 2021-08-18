@@ -46,10 +46,9 @@ def GI(V, E, Directed=False, index=0):
     return g, org_inp
 
 
-def GGI(h, w, search=None, replacement_of_found='.', mp_def={'#': 1, '.': 0}):
-    # h,w,g,sg=GGI(h,w,search=['S','G'],replacement_of_found='.',mp_def={'#':1,'.':0}) # sample usage
-    mp = [1] * (w + 2)
-    found = {}
+def GGI(h, w, search=None, replacement_of_found='.', mp_def={'
+    mp=[1] * (w + 2)
+    found={}
     for i in range(h):
         s = input()
         for char in search:
@@ -82,21 +81,20 @@ Yn = ['Yes', 'No']
 mo = 10**9 + 7
 inf = float('inf')
 l_alp = string.ascii_lowercase
-# sys.setrecursionlimit(10**7)
 def input(): return sys.stdin.readline().rstrip()
 
 
 def ran_input():
     n = random.randint(4, 16)
-    rmin, rmax = 1, 10
-    a = [random.randint(rmin, rmax) for _ in range(n)]
+    rmin, rmax=1, 10
+    a=[random.randint(rmin, rmax) for _ in range(n)]
     return n, a
 
 
-show_flg = False
-show_flg = True
+show_flg=False
+show_flg=True
 
-t = I()
+t=I()
 for _ in range(t):
     s = input() + 'R'
     ans = 1

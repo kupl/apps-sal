@@ -12,7 +12,6 @@ for x in range(n + d + 1):
     sumt += temp[x]
     if (x >= d):
         sumt -= temp[x - d]
-    #print(sumt, (n - x + s + d- 2)%n + 1, x)
     if (sumt > msum):
         minx = 10**6
         msum = sumt

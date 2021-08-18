@@ -13,7 +13,6 @@ for i in range(len(zone) - 1):
         G[i][j] = dist
         G[j][i] = dist
 
-# 浴びた距離, 頂点
 q = [(0, 0)]
 hq.heapify(q)
 seen = set()

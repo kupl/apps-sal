@@ -1,8 +1,5 @@
 class Solution:
 
-    # problem: https://leetcode.com/problems/friends-of-appropriate-ages/
-    # refered the solution in : https://leetcode.com/problems/friends-of-appropriate-ages/discuss/837786/Binary-Search-beating-100-with-detail-explanation
-
     def numFriendRequests(self, ages: List[int]) -> int:
         ages.sort()
         right_most = {}

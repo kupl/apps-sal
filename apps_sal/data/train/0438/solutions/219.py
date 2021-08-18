@@ -5,9 +5,7 @@ class Solution:
         ans = -1
         for (s, j) in enumerate(arr):
             i = j - 1
-            # print(i,d)
             if i + 1 not in d and i - 1 not in d:
-                # print(i,d)
                 d[i] = 1
                 if d[i] == m:
                     res.add(i)
@@ -26,9 +24,7 @@ class Solution:
                 if d[i] == m:
                     res.add(i)
 
-                # print(i,d)
             elif i - 1 in d and i + 1 not in d:
-                # print(i,d)
                 if i - 1 in res:
                     res.remove(i - 1)
                 if i - d[i - 1] in res:
@@ -59,12 +55,10 @@ class Solution:
                     res.remove(b)
                 d[a] = b - a + 1
                 d[b] = b - a + 1
-                # print(i,a,b,d[i-1],d[i+1])
                 if b - a + 1 == m:
                     res.add(a)
                     res.add(b)
 
-            # print(d,res)
             if res:
                 ans = s + 1
         return ans

@@ -71,7 +71,6 @@ def calc(prefix, t):
     for i in range(len(prefix)):
         if j == len(prefix):
             ans += s.query(ind[i] + 1, len(prefix) - 1)
-            # print(ans,ind[i])
             continue
         while(prefix[j] - t < prefix[i]):
             s.__setitem__(ind[j], 1)
@@ -79,7 +78,6 @@ def calc(prefix, t):
             if j == len(prefix):
                 break
         ans += s.query(ind[i] + 1, len(prefix) - 1)
-        # print(ans,ind[i])
     print(ans)
 
 

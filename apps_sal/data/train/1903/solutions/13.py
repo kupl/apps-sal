@@ -21,8 +21,6 @@ class Solution:
                 mand = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heapq.heappush(dists, (mand, i, j))
 
-        # dists.sort(key=lambda item: item[0])
-
         res = 0
 
         while dists:

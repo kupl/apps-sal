@@ -128,15 +128,6 @@ def _fenwick_move_all_before_to(tree, index_arg):
     i_queue = 0
     while i_queue < len(queue_to_make_segments_zero):
         i = queue_to_make_segments_zero[i_queue]
-        # Make all elements zero in the segment of i
-        # Example:
-        # i = 11 0100 0000
-        # j = 11 0010 0000  (initial)
-        # j = 11 0011 0000
-        # j = 11 0011 1000
-        # j = 11 0011 1100
-        # j = 11 0011 1110
-        # j = 11 0011 1111
         sum_in_that_segment_except_last = 0
         last_i_digit = i & (-i)
         j = i - (last_i_digit >> 1)

@@ -28,8 +28,8 @@ def main():
         rez = ''
         state = None
         for i in range(len(code)):
-            if code[i] == '#':
-                state = 'comment'
+            if code[i] == '
+            state = 'comment'
             elif code[i] == '\n':
                 rez += code[i]
                 state = None

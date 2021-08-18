@@ -5,8 +5,6 @@ from bisect import bisect_right
 from sys import setcheckinterval, stdin
 setcheckinterval(1000)
 
-# print("Case #{}: {} {}".format(i, n + m, n * m))
-
 
 def iin(): return int(stdin.readline())
 def lin(): return list(map(int, stdin.readline().split()))
@@ -27,7 +25,6 @@ for i in range(1, b):
 a = []
 for i in sa:
     x = bisect_right(sol, i) - 1
-    # print(x,ans)
     if x < 0:
         a.append(0)
     else:

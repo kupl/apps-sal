@@ -1,5 +1,5 @@
 def generate_hashtag(s):
-    output = "#"
+    output = "
 
     for word in s.split():
         output += word.capitalize()

@@ -8,7 +8,6 @@ class Solution:
         arr = [0 for _ in range(26)]
         for b in B:
             for i, j in enumerate(freq(b)):
-                # print(i,j)
                 arr[i] = max(arr[i], j)
         ans = []
         for a in A:

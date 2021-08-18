@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 import numpy as np
 
@@ -8,7 +7,6 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
-# neg, zero, posに分けて、二分探索
 N, K = lr()
 A = np.array(lr())
 A.sort()
@@ -19,7 +17,7 @@ pos = A[A > 0]
 
 def check(x):
     '''x以下の積がK個以上あるならTrueを返す'''
-    cnt = 0  # 最後に２でわる
+    cnt = 0
     if x >= 0:
         cnt += len(zero) * N
     cnt += (np.searchsorted(A, x // pos, side='right')).sum()
@@ -39,4 +37,3 @@ while abs(ng - ok) > 1:
         ng = mid
 
 print(ok)
-# 30

@@ -1,5 +1,4 @@
 def order_weight(strng):
-    # your code
     weight_list = strng.split()
     faux_list = []
     for weight in weight_list:

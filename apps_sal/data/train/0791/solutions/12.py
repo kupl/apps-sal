@@ -1,4 +1,3 @@
-# code
 
 T = eval(input())
 

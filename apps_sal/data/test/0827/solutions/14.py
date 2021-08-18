@@ -39,7 +39,6 @@ def do():
     for i in range(3):
         can, x = do(i)
         if can:
-            #print("offset", i, x)
             print((10**10 - x + 1))
             return
     print((0))

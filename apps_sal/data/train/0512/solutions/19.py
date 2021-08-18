@@ -3,7 +3,7 @@ from itertools import combinations, permutations, product, combinations_with_rep
 from heapq import heapify, heappop, heappush, heappushpop
 from bisect import bisect_left, bisect_right
 from collections import Counter, defaultdict, deque
-from math import sqrt, log, floor, ceil, factorial, cos, sin, pi  # , gcd
+from math import sqrt, log, floor, ceil, factorial, cos, sin, pi
 from fractions import gcd
 from operator import mul
 from functools import reduce
@@ -76,7 +76,6 @@ class LCA:
         for i in range(self.l - 1):
             for v in range(self.N):
                 self.par[v][i + 1] = self.par[self.par[v][i]][i]
-    # def __call__(self, a: int, b: int) -> int:
 
     def lcs(self, a: int, b: int) -> int:
         dep_s, dep_l = self.dep[a], self.dep[b]
@@ -101,12 +100,10 @@ class LCA:
         return self_par[a][0]
 
     def length(self, a: int, b: int) -> int:
-        #c = self.__call__(a, b)
         c = self.lcs(a, b)
         return self.dep[a] + self.dep[b] - self.dep[c] * 2
 
     def dist(self, a: int, b: int):
-        #c = self.__call__(a, b)
         c = self.lcs(a, b)
         return self.costs[a] + self.costs[b] - self.costs[c] * 2
 
@@ -130,7 +127,6 @@ def main():
         cx, dy, a, b = ILI()
         a -= 1
         b -= 1
-        #ans[i] = gr.dist(a, b)
         c = gr.lcs(a, b)
         ans[i] = gr.costs[a] + gr.costs[b] - gr.costs[c] * 2
         qs[a].append((cx, i, 1, dy))

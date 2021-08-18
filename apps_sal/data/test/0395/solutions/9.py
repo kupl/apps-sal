@@ -1,8 +1,5 @@
 import sys
 
-#sys.stdin = open("input.txt", "r");
-#sys.stdout = open("output.txt", "w");
-
 
 def ria():
     return [int(x) for x in input().split()]
@@ -26,6 +23,3 @@ if (tf == 1):
     print("YES")
 else:
     print("NO")
-
-
-# sys.stdout.close();

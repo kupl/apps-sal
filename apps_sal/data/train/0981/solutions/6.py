@@ -1,4 +1,3 @@
-#!/bin/python
 
 
 t = eval(input())

@@ -1,16 +1,9 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 from collections import defaultdict
 import math
 import copy
 
-#T = int(input())
-#N = int(input())
-#s = input()
 N, M = [int(x) for x in stdin.readline().split()]
-#arr = [int(x) for x in stdin.readline().split()]
 
 data = [[0] * M for _ in range(N)]
 B = [[0] * M for _ in range(N)]

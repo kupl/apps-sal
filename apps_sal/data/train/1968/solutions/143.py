@@ -34,6 +34,5 @@ class Solution:
         trie = Trie()
         for f in folder:
             f = f.split('/')[1:]
-            # print(f)
             trie.insert(f)
         return trie.find()

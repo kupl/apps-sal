@@ -1,4 +1,3 @@
-#k, p = 10, 10000
 
 k, p = list(map(int, input().strip().split()))
 

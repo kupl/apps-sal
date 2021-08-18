@@ -1,7 +1,7 @@
 class SierpinskiSumFunc():
     def __init__(self):
         sierpinski_number = 4
-        sierpinski_numbers_add = (5, 47, 5, 8)  # (47, 5, 8, 5)
+        sierpinski_numbers_add = (5, 47, 5, 8)
         sierpinski_sum = [4, ]
         n = 0
         while sierpinski_sum[-1] < 520000000000000:

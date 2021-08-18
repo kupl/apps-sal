@@ -2,7 +2,6 @@ class Solution:
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
         START = 1
         END = 0
-        # we want it to end first then start
         MOD = 10**9 + 7
         xaxis = []
 

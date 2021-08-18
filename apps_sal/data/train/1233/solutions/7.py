@@ -1,6 +1,5 @@
 from sys import stdin
 
-#stdin = open("input", "r")
 
 for _ in range(int(stdin.readline())):
     s = stdin.readline().strip()

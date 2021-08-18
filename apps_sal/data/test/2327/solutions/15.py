@@ -14,5 +14,4 @@ for qq in range(t):
         s += val * (k // step)
         step *= 2
         val += 1
-        #print(s, end = ' ')
     print(s)

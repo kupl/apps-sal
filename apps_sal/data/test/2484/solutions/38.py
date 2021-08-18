@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -14,10 +13,9 @@ def main():
     N = int(input())
     A = list(map(int, input().split()))
 
-    # しゃくとり法の練習
     res = 0
     right = 0
-    sumA = 0  # leftからrightまでの算術和（=論理和）
+    sumA = 0
 
     for left in range(N):
         while right < N and (sumA + A[right]) == sumA ^ A[right]:

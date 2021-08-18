@@ -1,4 +1,4 @@
-def nth_chandos_number(n):  # :( stupid code
+def nth_chandos_number(n):
     a, i, j, m = [], -1, 1, 5
     while len(a) < n:
         m = 5 ** j

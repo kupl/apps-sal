@@ -1,4 +1,3 @@
-# cook your dish here
 from itertools import count, islice
 
 

@@ -13,7 +13,6 @@ for i, line in enumerate(l):
     if pe != -1:
         end = (pe, i)
 
-# up, down, left, right
 ways = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 cnt = 0
 
@@ -23,8 +22,8 @@ for p in itertools.permutations(list(range(4))):
     for d in dirs:
         px += dst[d][0]
         py += dst[d][1]
-        if px < 0 or px >= m or py < 0 or py >= n or l[py][px] == '#':
-            break
+        if px < 0 or px >= m or py < 0 or py >= n or l[py][px] == '
+        break
         if (px, py) == end:
             cnt += 1
             break

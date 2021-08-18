@@ -5,7 +5,6 @@ def traffic_lights(road, n):
     index_green_init = [i for i, j in enumerate(road) if j == 'G']
     index_orange_init = [i for i, j in enumerate(road) if j == 'O']
     print(index_green_init)
-    # print(type(road))
     road_lst = [i for i in road]
 
     red_init = 'RRRRRGGGGGO'
@@ -20,8 +19,6 @@ def traffic_lights(road, n):
     final = []
     while time <= n and car_index <= len(road) - 1:
 
-        # if car_index == len(road) - 1:
-
         if count >= len(red_init):
             count = count - len(red_init)
         for i in index_red_init:
@@ -30,8 +27,6 @@ def traffic_lights(road, n):
             road_lst[i] = green_init[count]
         for i in index_orange_init:
             road_lst[i] = orange_init[count]
-
-        #print(car_index + 1)
 
         if car_index != len(road) - 1:
 

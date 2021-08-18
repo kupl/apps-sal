@@ -1,4 +1,3 @@
-# 579_B
 
 import sys
 

@@ -16,7 +16,6 @@ ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
 
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-# def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def I(): return int(sys.stdin.readline())
 def F(): return float(sys.stdin.readline())
 def LS(): return sys.stdin.readline().split()
@@ -38,7 +37,6 @@ def main():
         else:
             d[x] = [i]
 
-    # print(d)
     i = 0
     j = 0
     ans = 1
@@ -73,17 +71,13 @@ def main():
                         right = m
                     else:
                         left = m
-                    # print(right,left,m,i)
                 ans += l[right] - i + 1
                 i = l[right] + 1
                 j += 1
-
-        # print(i,ans)
 
         i %= n
 
     return ans - 1
 
 
-# main()
 print((main()))

@@ -34,7 +34,6 @@ class Solution:
         if result1 == CAN_MEET:
             return True
 
-        # result1 == CAN_WALK_200_STEPS
         result2 = can_meet(target, source)
         if result2 == CAN_WALK_200_STEPS:
             return True

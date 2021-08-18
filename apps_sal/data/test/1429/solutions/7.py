@@ -23,6 +23,5 @@ for i in range(N):
     i_AT = left_AT_number[i]
     for k in range(i + 1, N + 1):
         if i_CG - left_CG_number[k] == 0 and i_AT - left_AT_number[k] == 0:
-            # print(i,k)
             ans += 1
 print(ans)

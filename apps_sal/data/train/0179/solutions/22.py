@@ -8,10 +8,8 @@ class Solution:
                 if i == -1:
                     return 0
                 else:
-                    # delete s[i]
                     if k > 0:
                         ans = min(ans, process(i - 1, x, c, k - 1))
-                    # keep s[i]
                     if s[i] != x:
                         ans = min(ans, 1 + process(i - 1, s[i], 1, k))
                     elif c == 1 or c == 9 or c == 99:

@@ -23,10 +23,7 @@ for i in range(t):
             sb += 1
 
     final7, final4 = 0, 0
-    # print sa,fa,ac1,ac2
-    # print sb,fb,bc1,bc2
 
-    # Check for 7s in A
     if sa:
         x = sa if bc2 > sa else bc2
         final7 += x

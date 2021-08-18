@@ -1,4 +1,3 @@
-# Simple non-optimized class of matrices. Used with small dense matrices.
 import functools
 import itertools
 import math

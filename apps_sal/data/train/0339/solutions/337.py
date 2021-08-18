@@ -1,6 +1,5 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        # counters
         nums1_squared = [i**2 for i in nums1]
         nums2_squared = [i**2 for i in nums2]
 

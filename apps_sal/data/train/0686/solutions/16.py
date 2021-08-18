@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n, v1, v2 = list(map(int, input().split()))
     t1 = (n / v1)

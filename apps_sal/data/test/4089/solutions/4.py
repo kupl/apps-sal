@@ -15,7 +15,7 @@ def main():
     digits.reverse()
     for d in digits:
         print(chr(96 + d), end='')
-    print()  # 改行
+    print()
 
 
 def __starting_point():

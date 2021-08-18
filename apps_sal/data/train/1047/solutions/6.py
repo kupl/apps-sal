@@ -19,5 +19,4 @@ for test in range(t):
         for i in range(2, n):
             a1 = min(a1, a_set[i] - a_set[i - 1])
             b1 = min(b1, b_set[i] - b_set[i - 1])
-        # print(a1,b1)
         print(min(a1, b1) / 2)

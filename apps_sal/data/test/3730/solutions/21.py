@@ -20,7 +20,6 @@ def strs():
 
 
 def main():
-    # lines will now contain all of the input's lines in a list
     (n,) = ints()
     nums = ints()
     if n == 1:

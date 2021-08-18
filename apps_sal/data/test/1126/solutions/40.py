@@ -1,6 +1,4 @@
 N, X, M = list(map(int, input().split()))
-# Mでわるので、高々M個の種類しかなく、ループする
-# ループ開始のindexを保管していく
 dic = {}
 a = X
 dic[X] = 1
@@ -32,7 +30,6 @@ if roop_length > 0:
             break
     roop_ans = roop_ans * ((N - roop_start + 1) // roop_length - 1)
 
-# ループ後ののこりは？
 rest_ans = 0
 if roop_length > 0:
     rest_num = (N - roop_start + 1) % roop_length

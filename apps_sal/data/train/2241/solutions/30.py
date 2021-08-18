@@ -8,14 +8,12 @@ A, B = [0] + LI(), [0] + LI()
 mod = 10**9 + 7
 
 X = [[0] * 401 for _ in range(401)]
-# X[k][l] = 0**k+1**k+…+l**k
 for k in range(401):
     for l in range(1, 401):
         X[k][l] = X[k][l - 1] + pow(l, k, mod)
         X[k][l] %= mod
 
 dp = [[0] * (C + 1) for _ in range(N + 1)]
-# dp[i][j] = 子供1~iに合計j個の飴を配るときの答え
 dp[0][0] = 1
 for i in range(1, N + 1):
     a, b = A[i], B[i]

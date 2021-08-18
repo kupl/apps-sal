@@ -18,7 +18,6 @@ class Solution:
         for i in range(m):
             ks = list(count.keys()).copy()
             ks.sort()
-            # print(count)
             for j in range(len(ks)):
                 if len(arr) == 0 or arr[len(arr) - 1] == ks[j] - 1:
                     arr.append(ks[j])

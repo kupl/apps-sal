@@ -7,7 +7,6 @@ for j in range(t):
         u = a ^ b
         b = 2 * (a & b)
         a = u
-        #b = 2*v
         i += 1
 
     print(i)

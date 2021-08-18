@@ -16,5 +16,4 @@ def lnint(n): return [int(input()) for _ in range(n)]
 def lint_list(n): return [lint() for _ in range(n)]
 
 
-############################################################
 print(('vowel' if si() in 'aiueo' else 'consonant'))

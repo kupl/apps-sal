@@ -54,9 +54,3 @@ class DinnerPlates:
             self._stacks[index] = self._stacks[index]._replace(on_push_heap=True)
             heapq.heappush(self._next_push_heap, index)
         return ret
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

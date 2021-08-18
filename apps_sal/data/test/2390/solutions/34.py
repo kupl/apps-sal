@@ -5,8 +5,6 @@ for _ in range(N):
     x, v = map(int, input().split())
     XV.append((x, v))
 
-# R:右回りでそこまで行くときの満足度
-# Rr:右行って引き返す時の最大満足度
 R = [0]
 Rr = [0]
 for x, v in XV:
@@ -18,7 +16,6 @@ for i, (x, v) in enumerate(XV):
 for i in range(N):
     Rr[i + 1] = max(Rr[i + 1], Rr[i])
 
-# 左バージョン
 L = [0]
 Lr = [0]
 for x, v in reversed(XV):
@@ -30,7 +27,6 @@ for i, (x, v) in enumerate(reversed(XV)):
 for i in range(N):
     Lr[i + 1] = max(Lr[i + 1], Lr[i])
 
-#print(R, Rr, L, Lr)
 ans = 0
 
 for i in range(1, N + 1):

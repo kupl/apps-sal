@@ -73,29 +73,6 @@ class RURQ:
         self.f.update(j + 1, -1 * v * j)
 
 
-# f = [0, 1, 0, 1, 2, 3, 2, 1, 1, 0]
-# ft = FTree(f)
-# print(ft.query(1, 6) == 7)
-# print(ft.query(1, 3) == 1)
-# print(ft.select(7) == 6)
-# ft.update(5, 1)
-# print(ft.query(1, 10) == 12)
-
-# r = RUPQ(10)
-# r.update(2, 9, 7)
-# r.update(6, 7, 3)
-# print(r.query(1) == 0)
-# print(r.query(2) == 7)
-# print(r.query(3) == 7)
-# print(r.query(4) == 7)
-# print(r.query(5) == 7)
-# print(r.query(6) == 10)
-# print(r.query(7) == 10)
-# print(r.query(8) == 7)
-# print(r.query(9) == 7)
-# print(r.query(10) == 0)
-
-
 n, k = [int(i) for i in sys.stdin.readline().split()]
 
 mmn = 1
@@ -111,7 +88,6 @@ for ln in lns:
     bds.append(t)
     ftree.update(bds[-1][0], bds[-1][1], 1)
 
-# bds.sort(key=lambda a: mmx*a[0] - a[1])
 bds.sort()
 
 bind = 0
@@ -128,28 +104,3 @@ for i in range(1, mmx + 1):
         ftree.update(i, -1 * bd, -1)
 print(len(ans))
 print(*ans)
-
-
-# r = RURQ(10)
-# r.update(2, 9, 7)
-# r.update(6, 7, 3)
-# print(r.query(3, 5) == 21)
-# print(r.query(7, 8) == 17)
-
-# Example for https://open.kattis.com/problems/fenwick
-# from sys import stdin, stdout
-#
-# def main():
-#     n, q = [int(i) for i in stdin.readline().split(' ')]
-#     f = FTree([0] * n)
-#     for l in stdin.read()[:-1].split('\n'):
-#         a = l.split(' ')
-#         if a[0] == '?':
-#             if a[1] == '0':
-#                 stdout.write("0\n")
-#             else:
-#                 stdout.write("{}\n".format(f.q(1, int(a[1]))))
-#         else:
-#             f.u(int(a[1]) + 1, int(a[2]))
-#
-# main()

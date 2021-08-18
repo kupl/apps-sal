@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(0, int(input())):
     power, x, y, z = list(map(float, input().split()))
     summ = x + y + z

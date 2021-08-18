@@ -18,12 +18,10 @@ def main():
         for j in range(W - 1):
             if i >> j & 1:
                 tmp[j] += 1
-        # 2辺連続で引かれていないかをチェック
         for j, k in zip(tmp, tmp[1:]):
             if j == k == 1:
                 break
         else:
-            # チェックをパスした状態をカウント
             for j in range(W - 1):
                 cnt[j] += tmp[j]
             for j in range(W):

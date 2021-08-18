@@ -17,8 +17,5 @@ while n > 0:
             break
         high = n
 
-# print(low)
-# print(high)
 n = (low + high) // 2
-# print(n)
 print(num - n)

@@ -3,7 +3,6 @@ class Solution:
         n = len(points)
         visited = [False] * n
 
-        # Prim Algo
         dist = collections.defaultdict(list)
         for i in range(n):
             p1, p2 = points[i]
@@ -26,16 +25,3 @@ class Solution:
             for d in dist[cur]:
                 heapq.heappush(hp, d)
         return res
-
-        # dist = [math.inf] * n
-        # cur = res = 0
-        # for i in range(n-1):
-        #     p1, p2 = points[cur]
-        #     visited[cur] = True
-        #     for j, (x, y) in enumerate(points):
-        #         if not visited[j]:
-        #             dist[j] = min(dist[j], abs(p1-x) + abs(p2-y))
-        #     cost, cur = min([(v, k) for k, v in enumerate(dist)])
-        #     dist[cur] = math.inf
-        #     res += cost
-        # return res

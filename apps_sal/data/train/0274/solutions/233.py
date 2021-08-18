@@ -9,7 +9,7 @@ class Solution:
         heapq.heapify(minheap)
         heapq.heapify(maxheap)
 
-        heapq.heappush(minheap, [nums[0], 0])  # add first element and its index
+        heapq.heappush(minheap, [nums[0], 0])
         heapq.heappush(maxheap, [-nums[0], 0])
 
         begin = 0
@@ -33,45 +33,3 @@ class Solution:
             heapq.heappush(maxheap, [-nums[end], end])
             end += 1
         return length
-
-#         def isValid(int_diff, j, max_value, min_value, limit, nums):
-#             max_boundary = abs(max_value - nums[j])
-#             min_boundary = abs(min_value - nums[j])
-#             return int_diff <= limit and max_boundary <= limit and min_boundary <= limit
-
-#         def find_error(int_diff,i, j, max_value, min_value, limit, nums,cache):
-#             max_boundary = abs(max_value - nums[j])
-#             min_boundary = abs(min_value - nums[j])
-
-#             if int_diff > limit: return i
-#             if max_boundary > limit: return cache[max_value]
-#             if min_boundary > limit: return cache[min_value]
-
-#         output = 1
-#         i = 0
-#         idx = 0
-#         cache = defaultdict(int)
-#         while i < len(nums) and idx < len(nums)-1:
-#             min_value = float('inf')
-#             max_value = float('-inf')
-#             cache[min_value] = i
-#             cache[max_value] = i
-#             for j in range(i,len(nums)):
-
-#                 int_diff = abs(nums[j] - nums[i])
-#                 temp_min = min_value
-#                 temp_max = max_value
-#                 min_value = min(min_value, nums[j])
-#                 max_value = max(max_value, nums[j])
-#                 if temp_min != min_value:
-#                     cache[min_value] = j
-#                 if temp_max != min_value:
-#                     cache[max_value] = j
-#                 if isValid(int_diff, j, max_value, min_value, limit, nums):
-#                     output = max(output, (j - i) + 1)
-#                 else:
-#                     i = find_error(int_diff, i, j, max_value, min_value, limit, nums,cache) + 1
-
-#                     break
-#                 idx = j
-#         return output

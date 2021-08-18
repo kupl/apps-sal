@@ -1,4 +1,3 @@
-# 0,1,2 = グー、パー、チョキ
 def janken(h1, h2):
     handdet = (h2 - h1) % 3
     if handdet == 1:
@@ -7,7 +6,7 @@ def janken(h1, h2):
         return h1
 
 
-def jankenOnce(handls):  # 偶数。みんなにじゃんけんしてもらう
+def jankenOnce(handls):
     wonhand = []
     L = len(handls)
     for pair in range(L // 2):
@@ -15,7 +14,7 @@ def jankenOnce(handls):  # 偶数。みんなにじゃんけんしてもらう
     return wonhand
 
 
-def getWinner(handls):  # 2のべき乗である必要がある
+def getWinner(handls):
     if len(handls) % 2 == 1:
         return handls
     else:

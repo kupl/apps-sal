@@ -1,5 +1,4 @@
 import sys
-# sys.stdin = open("2.in") # COMMENT THIS BEFORE SUBMIT
 input = sys.stdin.readline
 
 N = int(input())

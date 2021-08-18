@@ -13,12 +13,10 @@ class Solution:
                 max_b = b
         everything_else = [b for b in barcodes if b != max_b]
         arranged = [max_b] * max_count
-        # Split everything once
         i = 1
         while i <= len(arranged) and len(everything_else) != 0:
             arranged.insert(i, everything_else.pop(0))
             i += 2
-        # Add everything else
 
         def can_add_at(i, b):
             if i == 0:

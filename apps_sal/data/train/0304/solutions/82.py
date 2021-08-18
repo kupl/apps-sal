@@ -12,6 +12,6 @@ class Solution:
 
                 res += agesCount[i] * agesCount[j]
                 if i == j:
-                    res -= agesCount[i]  # because I can't send request to myself
+                    res -= agesCount[i]
 
         return res

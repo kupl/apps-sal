@@ -13,7 +13,6 @@ def __starting_point():
             primes[i] = cnt
     if bcopy > 1:
         primes[bcopy] = 1
-    # print(primes)
 
     prime___npow = {}
     count = 0
@@ -24,7 +23,6 @@ def __starting_point():
             pw += 1
         prime___npow[prime] = count
         count = 0
-    # print(prime___npow)
     MAX = 10 ** 18
     count = MAX
 

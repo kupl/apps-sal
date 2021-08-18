@@ -1,7 +1,6 @@
 n, m = list(map(int, input().split(' ')))
 if m > n:
     n, m = m, n
-# n > m
 
 rowsGroups = n // 6
 restRows = n % 6

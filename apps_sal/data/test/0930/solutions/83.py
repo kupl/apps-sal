@@ -1,4 +1,3 @@
-# 部屋にいる人数が０の組み合わせ（nCi）と０でない部屋にいる人数の組み合わせ（(n-1)Ci）の積で求めることが出来る
 
 
 N, K = list(map(int, input().split()))
@@ -18,13 +17,10 @@ for i in range(2, 200001):
 dp = [0] * N
 
 for i in range(N):
-    # nCiを求める
     f1 = (fact[N] * fact_inv[N - i] * fact_inv[i]) % mod
 
-    # (n-1)Ciを求める
     f2 = (fact[N - 1] * fact_inv[N - i - 1] * fact_inv[i]) % mod
 
-    # 積の計算
     f = (f1 * f2) % mod
 
     if i == 0:

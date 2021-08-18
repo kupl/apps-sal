@@ -19,7 +19,7 @@ for i in range(rows_and_columns):
     if not seen[i]:
         inserts += 1
         stack = [i]
-        while stack:  # BFS
+        while stack:
             current = stack.pop()
             if not seen[current]:
                 seen[current] = True

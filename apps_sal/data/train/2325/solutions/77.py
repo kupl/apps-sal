@@ -1,8 +1,3 @@
-# AB -> BBAA -> BAAAA -> BA
-# Thus, this problem has commutative property.
-# So, if we let A and B satisfy x^2 + x + 1 == 0,
-# then A^2 == B, B^2 == A, and A^3 == B^3 == 1.
-# So this makes an invariant.
 
 from itertools import accumulate
 

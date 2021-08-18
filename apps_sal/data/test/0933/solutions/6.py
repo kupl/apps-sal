@@ -5,13 +5,13 @@ def readln(): return tuple(map(int, input().split()))
 
 
 cnt = []
-for s in list(input() + '#'):
+for s in list(input() + '
     if cnt == [] or cnt[-1][0] != s:
         cnt.append([s, 1])
     else:
         cnt[-1][1] += 1
-ans = []
-tmp = []
+ans=[]
+tmp=[]
 for s, c in cnt:
     if c == 1:
         for _ in range(len(tmp)):
@@ -20,7 +20,7 @@ for s, c in cnt:
             else:
                 ans.append(tmp[_])
         ans.append(s)
-        tmp = []
+        tmp=[]
     else:
         tmp.append(s)
 print(''.join(ans[:-1]))

@@ -2,8 +2,8 @@ import math
 A, B, H, M = map(int, input().split())
 if H >= 12:
     H -= 12
-choperminute = 360 / 60  # 一分で長針が何度動くか
-tanperminute = 30 / 60  # 一分で短針が何度動くか
+choperminute = 360 / 60
+tanperminute = 30 / 60
 
 tankaku = H * 30 + tanperminute * M
 chokaku = choperminute * M

@@ -12,7 +12,6 @@ class Solution:
         while low < high:
 
             mid = low + (high - low) // 2
-            # print(low,high,mid)
             if isPossible(piles, mid, H):
                 high = mid
             else:

@@ -1,4 +1,3 @@
-# 27
 N, A, B = map(int, input().split(' '))
 
 ans = 0

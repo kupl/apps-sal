@@ -6,13 +6,12 @@ class UnionFind:
 
     def find(self, u):
         if u != self.parent[u]:
-            # path compression
             self.parent[u] = self.find(self.parent[u])
         return self.parent[u]
 
     def union(self, u, v):
         pu, pv = self.find(u), self.find(v)
-        if pu == pv:  # ALREADY in the same set
+        if pu == pv:
             return
 
         if self.rank[pu] > self.rank[pv]:

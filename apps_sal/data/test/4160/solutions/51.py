@@ -1,4 +1,3 @@
-# ABC165
 X = int(input())
 mon = 100
 count = 0

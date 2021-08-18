@@ -1,4 +1,3 @@
-# cook your dish here
 def check(mid):
     time = 0.0
     for i in range(n):

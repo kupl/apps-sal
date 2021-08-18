@@ -1,4 +1,3 @@
-# python3
 import sys
 import threading
 import os.path
@@ -44,13 +43,11 @@ def main():
         input = open('input.txt', 'r')
     else:
         input = sys.stdin
-    # --------------------------------INPUT---------------------------------
     n, m = list(map(int, input.readline().split()))
     mat = []
     for i in range(n):
         mat.append(list(map(int, input.readline().split())))
     allprimes = generate_primes(150000)
-    # print(allprimes)
     tostore = []
     for i in range(n):
         tostore.append([])
@@ -72,11 +69,8 @@ def main():
         for j in range(m):
             rowsum[i] += tostore[i][j]
             colsum[j] += tostore[i][j]
-    # print(rowsum[:n])
-    # print(colsum[:m])
     minone = min(min(rowsum[:n]), min(colsum[:m]))
     output = minone
-    # -------------------------------OUTPUT----------------------------------
     if os.path.exists('output.txt'):
         open('output.txt', 'w').writelines(str(output))
     else:
@@ -85,7 +79,6 @@ def main():
 
 def __starting_point():
     main()
-# threading.Thread(target=main).start()
 
 
 __starting_point()

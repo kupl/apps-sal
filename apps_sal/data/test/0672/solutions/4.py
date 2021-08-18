@@ -7,14 +7,12 @@ if a < b:
 else:
     if a == b:
         print("infinity")
-    else:  # >b and divisors of a
+    else:
         def FindAllDivisors(x, b):
             y = 1
             ans = []
             while y <= int(math.sqrt(x)):
-                # print(y)
                 if x % y == 0:
-                    #print(x, int(x/y))
                     if y != int(x / y):
                         if y > b:
                             ans.append(y)

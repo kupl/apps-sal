@@ -1,9 +1,7 @@
-#!python3
 
 def LI(): return list(map(int, input().split()))
 
 
-# input
 N = int(input())
 UV = [LI() for _ in range(N - 1)]
 

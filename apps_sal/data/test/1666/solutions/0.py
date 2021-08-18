@@ -1,6 +1,5 @@
 import sys
 f = sys.stdin
-#f = open("input.txt", "r")
 x, y, a, b = map(int, f.readline().strip().split())
 a1, a2 = [], []
 if a + (x - a) <= b:

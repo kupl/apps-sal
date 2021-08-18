@@ -2,7 +2,7 @@ from scipy.sparse.csgraph import floyd_warshall
 from scipy.sparse import csr_matrix
 import sys
 import re
-from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees  # , log2
+from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees
 from collections import deque, defaultdict, Counter
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
 from operator import itemgetter, mul
@@ -32,17 +32,10 @@ for A, B, C in ABC:
     dist_matrix[A - 1][B - 1] = C
     dist_matrix[B - 1][A - 1] = C
 
-# for i in range(N):
-#	print(dist_matrix[i])
 
-# ワーシャルフロイド法  注意 PyPy非対応!!!!
+graph = csr_matrix(dist_matrix)
+dist_matrix = floyd_warshall(graph, directed=False)
 
-graph = csr_matrix(dist_matrix)  # 隣接行列からcsr行列をつくる
-dist_matrix = floyd_warshall(graph, directed=False)  # 無向の場合directed=False
-# dist_matrixの中身はfloatになっているので注意！
-
-# for i in range(N):
-#	print(dist_matrix[i])
 
 ans = INF
 for x in permutations(r):

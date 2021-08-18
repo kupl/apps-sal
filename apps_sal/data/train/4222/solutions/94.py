@@ -3,5 +3,3 @@ def get_size(w, h, d):
     volume = w * h * d
     total = [area, volume]
     return total
-
-    # your code here

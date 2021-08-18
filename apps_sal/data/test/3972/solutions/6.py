@@ -15,7 +15,6 @@ def main():
         ans[i] = (ans[i + 1] + S + N * (i + 1) + (N - 1) * (N - i - 2)) % mod
         S = (S + ans[i + 2]) % mod
     print((ans[1]))
-    # print(ans)
 
 
 def __starting_point():

@@ -34,7 +34,6 @@ for l in LEAF:
 else:
     MIN = 1
 
-# print(MIN)
 
 MAX = n - 1
 

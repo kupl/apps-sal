@@ -38,7 +38,6 @@ def main():
 
     h1 = h1 + a * (22 - 14)
     dh = (a - b) * 12
-    # print(h1, h2, dh)
 
     days = (h2 - h1) // dh + ((h2 - h1) % dh != 0)
 

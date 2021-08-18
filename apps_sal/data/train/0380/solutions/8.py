@@ -24,8 +24,6 @@ class Solution:
                     return 'Neither'
                 elif any([j not in hex for j in i]):
                     return 'Neither'
-                # elif (len(i)>1) & (all([j =='0' for j in i])):
-                #    return 'Neither'
             return 'IPv6'
         else:
             return 'Neither'

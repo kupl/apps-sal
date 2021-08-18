@@ -5,14 +5,14 @@ def traffic_lights(road, n):
 
     for turn in range(1, n + 1):
 
-        for i, delta in lightsIdx:                                  # Update all lights
+        for i, delta in lightsIdx:
             state = (delta + turn) % 11
             mut[i] = 'G' if state < 5 else 'O' if state == 5 else 'R'
 
-        car += car + 1 >= len(road) or mut[car + 1] in '.G'              # Move the car if possible (even if outside of the road)
+        car += car + 1 >= len(road) or mut[car + 1] in '.G'
 
         if car < len(road):
-            old, mut[car] = mut[car], 'C'            # Update, archive, then restore the road state
+            old, mut[car] = mut[car], 'C'
         out.append(''.join(mut))
         if car < len(road):
             mut[car] = old

@@ -18,7 +18,6 @@ arr = sorted(list(cnt.keys()))
 N = len(arr)
 
 
-# print(N,arr, cnt)
 left, right, k = 0, 0, cnt[arr[0]]
 left_best, right_best, k_best = 0, 0, cnt[arr[0]]
 
@@ -41,7 +40,6 @@ while right < N:
         right = right + 1
         k = cnt[arr[left]] + cnt[arr[right]]
 
-# print(left_best, right_best, k_best,"___________")
 print(k_best)
 for idx in range(left_best, right_best + 1):
     print((str(arr[idx]) + " ") * (cnt[arr[idx]] - 1), end="")

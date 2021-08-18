@@ -20,19 +20,14 @@ def __starting_point():
                     A[j] ^= a
             idx += 1
 
-    # for a in A:
-    #    print(bin(a))
-
     s = 0
     for a in A:
         s ^= a
-    # print(f"s={bin(s)}")
 
     for i in range(60):
         if x >> i & 1 == 1 and s >> i & 1:
             s ^= 1 << i
 
-    # print(x, s)
     print((x + (s << 1)))
 
 

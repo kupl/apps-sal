@@ -1,4 +1,3 @@
-# yeh dil maange more
 n, m = map(int, input().split())
 a = [0] + list(map(int, input().split()))
 b = [0] + list(map(int, input().split()))
@@ -11,7 +10,6 @@ for i in range(1, n + 1):
     c[i] = a[i]
     for j in range(1, i):
         c[i - j] = min(c[i - j], a[i] - a[j])
-# print(c)
 for i in range(1, m + 1):
     b[i] = b[i - 1] + b[i]
     d[i] = b[i]

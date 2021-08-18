@@ -21,5 +21,3 @@ r = r[::-1]
 for i in range(k):
     if l[i] == r[i]:
         print((l[i] + 1))
-# print(l)
-# print(r)

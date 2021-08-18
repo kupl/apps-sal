@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 a, b = list(map(int, input().split()))
 cnt = 0
 for i in range(2, 64 * 8):

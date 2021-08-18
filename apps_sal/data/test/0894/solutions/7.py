@@ -1,5 +1,3 @@
-# Codeforces 195, div. 2
-# Task A
 
 def solve(x, y):
     t = abs(x) + abs(y)

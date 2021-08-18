@@ -18,9 +18,6 @@ class Solution:
 
             else:
                 status[idx] = 1
-            # print(status)
-            # print(numBlue)
-            # print(i + 1)
             if numBlue == i + 1:
                 res += 1
 

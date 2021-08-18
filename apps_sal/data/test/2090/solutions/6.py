@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/22 23:41
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Playlist.py
 
 import heapq
 import atexit
@@ -27,7 +22,6 @@ def main():
         t, b = map(int, input().split())
         songs.append((b, t))
     songs.sort(reverse=True)
-    # print(songs)
 
     ret = 0
     curr_count, curr_sum = 0, 0

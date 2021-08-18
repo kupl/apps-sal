@@ -12,15 +12,11 @@ cd = x[0][1] - x[0][0]
 ch = h
 j = i
 while i < len(x):
-    # print(cd,ch)
-    # j = i
     while (j + 1) < len(x) and x[j][1] + ch > x[j + 1][0]:
         cd += x[j + 1][1] - x[j][1]
         ch -= x[j + 1][0] - x[j][1]
         j += 1
     if cd + ch > best:
-        # print(i)
-        # print(cd + ch)
         best = cd + ch
     if i + 1 < len(x):
         cd -= x[i + 1][0] - x[i][0]

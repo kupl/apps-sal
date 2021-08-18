@@ -1,4 +1,3 @@
-# cook your dish here
 def tax(n):
     if(n <= 250000):
         return 0

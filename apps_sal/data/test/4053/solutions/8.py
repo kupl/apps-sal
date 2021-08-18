@@ -22,7 +22,6 @@ valid = True
 for i in range(2, n):
     first = q[i][0]
     second = q[i][1]
-    # assuming first is prefix and second is suffix
     if (first[0][:-1] == pre) and (second[0][1:] == suf):
         ans[first[1]] = 'P'
         ans[second[1]] = 'S'
@@ -48,7 +47,6 @@ if not valid:
     for i in range(2, n):
         first = q[i][0]
         second = q[i][1]
-        # assuming first is prefix and second is suffix
         if (first[0][:-1] == pre) and (second[0][1:] == suf):
             ans[first[1]] = 'P'
             ans[second[1]] = 'S'

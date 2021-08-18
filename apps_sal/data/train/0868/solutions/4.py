@@ -12,7 +12,6 @@ for _ in range(int(input())):
         cnt = [0] * (2002)
         for j in range(i, n):
             add = ceil(k / (j - i + 1))
-            # ind=bl(curr,l[j])
             insort(curr, l[j])
             cnt[l[j]] += 1
             if k <= j - i + 1:

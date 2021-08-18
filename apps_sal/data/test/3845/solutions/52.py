@@ -23,7 +23,7 @@ def main():
     for y in range(100):
         for x in range(100):
             if 0 <= y < 50:
-                grid[y][x] = '#'
+                grid[y][x] = '
             else:
                 grid[y][x] = '.'
 
@@ -38,7 +38,7 @@ def main():
         for x in range(100):
             if y % 2 == 1 and x % 2 == 0:
                 if B > 1:
-                    grid[y][x] = '#'
+                    grid[y][x] = '
                     B -= 1
 
     print((100, 100))

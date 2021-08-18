@@ -1,4 +1,3 @@
-# cook your dish here
 
 x, y = map(float, input().split())
 if(x % 5 == 0):

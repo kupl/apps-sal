@@ -26,8 +26,4 @@ for _ in range(testCase):
                 name = [name[0]]
             else:
                 break
-    # if len(name)>1:
-    #     name.sort()
-    #     print(name[0])
-    # else:
     print(name[0])

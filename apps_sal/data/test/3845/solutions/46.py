@@ -1,5 +1,5 @@
 w, b = map(int, input().split())
-A, B, C, D = ['##'], ['..'], ['#.'], ['.#']
+A, B, C, D = ['
 w -= 1
 b -= 1
 print(100, 50)

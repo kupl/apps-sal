@@ -1,9 +1,8 @@
 def number(bus_stops):
-    # Good Luck!
     '''
-    input: bus_stops tuple - the # of people who get on and off the bus
+    input: bus_stops tuple - the 
     approach: loop through and sum the first element and sum the last element then subtract the two numbers
-    output: the # of people left on the bus after the last stop
+    output: the 
     '''
     passengersOn = 0
     passengersOff = 0

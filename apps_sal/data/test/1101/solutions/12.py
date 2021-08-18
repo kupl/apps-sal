@@ -16,6 +16,3 @@ for l, r in zip(t, t[k:]):
     s = min(s, f(m))
 
 print(s)
-
-
-# Made By Mostafa_Khaled

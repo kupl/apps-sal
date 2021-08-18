@@ -5,8 +5,6 @@ class Solution:
         :rtype: str
         """
 
-        # edge case: 981 3,31 331 313
-
         strs = [str(num) for num in nums]
 
         def bigger(str1, str2):

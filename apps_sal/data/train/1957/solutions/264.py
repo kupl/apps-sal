@@ -11,7 +11,6 @@ class Solution:
         while queue:
             for _ in range(len(queue)):
                 x, y, o = queue.popleft()
-                #print(x, y, o)
                 if o > k:
                     continue
                 elif (x, y) == (len(grid) - 1, len(grid[0]) - 1):

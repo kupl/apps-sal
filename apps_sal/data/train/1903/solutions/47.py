@@ -17,8 +17,6 @@ class DSU:
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
-        # minimum spanning tree
-
         n = len(points)
         if n == 1:
             return 0
@@ -30,7 +28,6 @@ class Solution:
                 ax, ay = points[i]
                 bx, by = points[j]
                 heapq.heappush(heap, [abs(ax - bx) + abs(ay - by), i, j])
-        # print(heap)
         count = 0
         dsu = DSU(n)
         while heapq:
@@ -38,7 +35,6 @@ class Solution:
             dist, i, j = heapq.heappop(heap)
 
             if dsu.find(i) != dsu.find(j):
-                #print(dist, i, j)
                 count += dist
                 dsu.union(i, j)
             for i in range(n):

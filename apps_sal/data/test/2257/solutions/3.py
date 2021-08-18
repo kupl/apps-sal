@@ -9,8 +9,6 @@ for i in range(n):
     dis2 = (x - x2)**2 + (y - y2)**2
     flowers.append((dis1, dis2))
 
-# for i in flowers:
-#	print(str(i[2]) + " " + str(i[3]))
 
 flowers = sorted(flowers)
 

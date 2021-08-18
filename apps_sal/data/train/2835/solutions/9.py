@@ -1,4 +1,3 @@
-# pregenerate primes
 LIMIT = 10**6
 primes = []
 sieve = list(range(LIMIT))

@@ -12,12 +12,8 @@ class Solution:
         sort = sorted(adict.items(), key=lambda x: x[1])
 
         for i in sort:
-            # print(i[1])
             if k >= i[1]:
-                # print(i[1])
                 k -= i[1]
                 size -= 1
-                # print(k)
-                # print(size)
 
         return size

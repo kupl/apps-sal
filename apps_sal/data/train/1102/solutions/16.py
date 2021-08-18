@@ -1,4 +1,3 @@
-# cook your dish here
 constant = (10**9) + 7
 try:
     testCases = int(input().strip())

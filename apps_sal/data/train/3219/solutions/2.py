@@ -1,5 +1,3 @@
-# Reference: https://oeis.org/A022008
-# I hope this isn't considered as cheating :)
 
 
 A022008 = [

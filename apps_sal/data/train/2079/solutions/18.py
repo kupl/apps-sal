@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Wed Jul 15 23:50:55 2020
 
@@ -16,19 +14,16 @@ def find_cost(node_1, node_2, intersect_dict):
     while node_1 != 0:
         new_dict[node_1] = 1
         cost += intersect_dict[node_1]
-#        print(node_1,cost)
         node_1 //= 2
 
     while node_2 != 0:
         if new_dict[node_2]:
             cost -= intersect_dict[node_2]
-#            print(node_2)
             break
         else:
             new_dict[node_2] = 1
             cost += intersect_dict[node_2]
             node_2 //= 2
-#            print(node_2,cost)
     while node_2 != 0:
         node_2 //= 2
         cost -= intersect_dict[node_2]
@@ -57,7 +52,6 @@ def increase_cost_on_path(node_1, node_2, inc_cost, intersect_dict):
 
 Q = int(input())
 
-#arr = [0 for i in range(n+1)]
 
 intersect_dict = defaultdict(lambda: 0)
 

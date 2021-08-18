@@ -11,4 +11,3 @@ def sum_array(arr):
     for i in arr:
         result += i
     return result
-    # your code here

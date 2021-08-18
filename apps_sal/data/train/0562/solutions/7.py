@@ -67,9 +67,6 @@ for i in range(n):
     B.append(sb)
     C.append(sc)
 
-# print(*B, sep='\n')
-# print("****")
-# print(*C, sep='\n')
 
 compareWith(A, B, n, m, 1)
 compareWith(A, C, n, m, 0)

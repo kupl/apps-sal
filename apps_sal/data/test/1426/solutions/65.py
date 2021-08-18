@@ -1,4 +1,3 @@
-# Hopscotch Addict
 
 import heapq
 N, M = list(map(int, input().split()))

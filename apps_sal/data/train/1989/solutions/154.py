@@ -1,5 +1,4 @@
 class Solution:
-    # copied from https://leetcode.com/problems/find-longest-awesome-substring/discuss/779893/C%2B%2BJavaPython3-with-picture-(similar-to-1371)
     def longestAwesome(self, s: str) -> int:
         mask, res = 0, 0
         dp = [-1] + [len(s)] * 1023

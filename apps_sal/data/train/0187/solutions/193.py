@@ -3,8 +3,8 @@ class Solution:
         ans = -1
         most = profit = waiting = 0
         for i, x in enumerate(customers):
-            waiting += x  # more people waiting in line
-            waiting -= (running := min(4, waiting))  # boarding
+            waiting += x
+            waiting -= (running := min(4, waiting))
             profit += running * boardingCost - runningCost
             if most < profit:
                 ans, most = i + 1, profit

@@ -7,5 +7,4 @@ if N < 2 or M < 2:
 elif N == 2 or M == 2:
     print((0))
 else:
-    # 中空-四辺+角になる
     print(((N - 2) * (M - 2)))

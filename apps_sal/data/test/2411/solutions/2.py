@@ -88,8 +88,3 @@ print(total // 2)
 
 pos = math.gcd(-4, 2)
 neg = math.gcd(4, -2)
-# print(pos,neg)
-
-# print(-4//pos,2//pos)
-
-# print(4//neg,-2//neg)

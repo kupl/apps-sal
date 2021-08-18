@@ -11,8 +11,6 @@ class Solution:
                 popped.pop()
                 stack.pop()
 
-        # if not pushed and not popped:
-        #    return True
         if not stack:
             return True
         return False

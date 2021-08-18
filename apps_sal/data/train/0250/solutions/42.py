@@ -11,7 +11,6 @@ class Solution:
             unit_price = max(u, unit_price)
             heapq.heappush(heap, -q)
             total_quality += q
-            # if we already hire K workers, we fire the worker with the highest quality
             if len(heap) > K:
                 total_quality += heapq.heappop(heap)
             if len(heap) == K:

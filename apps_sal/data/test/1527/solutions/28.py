@@ -6,8 +6,8 @@ directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]
 ans = 0
 for sh in range(H):
     for sw in range(W):
-        if maze[sh][sw] == "#":
-            continue
+        if maze[sh][sw] == "
+        continue
         dist = [[-1] * W for _ in range(H)]
         dist[sh][sw] = 0
         que = deque([[sh, sw]])
@@ -18,8 +18,8 @@ for sh in range(H):
                 tmp_h, tmp_w = nh + dh, nw + dw
                 if not ((0 <= tmp_h < H) and (0 <= tmp_w < W)):
                     continue
-                if maze[tmp_h][tmp_w] == "#":
-                    continue
+                if maze[tmp_h][tmp_w] == "
+                continue
                 if dist[tmp_h][tmp_w] != -1:
                     continue
 

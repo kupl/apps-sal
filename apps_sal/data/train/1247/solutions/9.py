@@ -37,14 +37,11 @@ for _ in range(int(input())):
         array[i % d].append(p[i])
         if p[i] % ((i % d) + 1) != 0:
             flag = 1
-    # print(array)
     if flag == 1:
         print("-1")
     else:
         ans = 0
         for i in range(d):
-            #  print(array[i])
             g, v = mergeSortInversions(array[i])
-            #  print(array[i],v)
             ans += v
         print(ans)

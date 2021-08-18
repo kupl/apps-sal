@@ -1,10 +1,10 @@
 def step(a, b):
-    if a > n - 3 or b == 0 or b == n - 1 or l[a + 1][b] == '#' or l[a + 2][b] == '#' or l[a + 1][b - 1] == '#' or l[a + 1][b + 1] == '#':
-        return False
+    if a > n - 3 or b == 0 or b == n - 1 or l[a + 1][b] == '
+    return False
     else:
-        l[a] = l[a][:b] + '#' + l[a][b + 1:]
-        l[a + 1] = l[a + 1][:b - 1] + '###' + l[a + 1][b + 2:]
-        l[a + 2] = l[a + 2][:b] + '#' + l[a + 2][b + 1:]
+        l[a] = l[a][:b] + '
+        l[a + 1] = l[a + 1][:b - 1] + '
+        l[a + 2] = l[a + 2][:b] + '
         return True
 
 

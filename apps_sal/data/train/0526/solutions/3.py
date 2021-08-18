@@ -1,4 +1,3 @@
-# cook your dish here
 def compress(a):
     prev = None
     prev_c = 1
@@ -23,7 +22,6 @@ def compress(a):
     else:
         ans_s = ans_s + str(prev)
         k += 8
-    # print(ans_s)
     return k
 
 

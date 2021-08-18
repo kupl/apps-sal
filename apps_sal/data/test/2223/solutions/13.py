@@ -7,7 +7,7 @@ def dfs(g, s):
         s = stack.pop()
         cnt = 0
 
-        cnt += 1  # count the size of the current subtree
+        cnt += 1
         visited.add(s)
 
         for v in g[s]:
@@ -49,7 +49,6 @@ def dfs2(g, s, n):
 
 
 def solve():
-    #f = open("Cut em all - DFS.txt")
     n = int(input())
 
     tree = [[] for i in range(n + 1)]
@@ -64,7 +63,6 @@ def solve():
         print(-1)
         return
 
-    #print (dfs(tree, 1))
     print(dfs2(tree, 1, n))
 
 

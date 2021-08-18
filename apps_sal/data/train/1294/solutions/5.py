@@ -23,7 +23,6 @@ def main1():
         minval = [0 for i in range(N)]
         lfnode = []
 
-        # Appending node 1
         vis[0] = 1
         Q = collections.deque([0])
         maxval[0][0], maxval[0][1] = A[0], 1
@@ -34,7 +33,7 @@ def main1():
             mv1 = maxval[a][0]
             mv2 = minval[a]
 
-            flag = 0  # to check leaf node
+            flag = 0
 
             for i in Tree[a]:
                 if (vis[i] == 0):
@@ -66,7 +65,6 @@ def main1():
 
         K1 = len(bin(K)) - 2
 
-        # print(lfnode,val)
         for i in lfnode:
             v1, v2 = maxval[i][0], maxval[i][1]
 

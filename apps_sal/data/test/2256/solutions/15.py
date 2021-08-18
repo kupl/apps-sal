@@ -3,9 +3,6 @@ Created on 2019. 9. 21.
 
 @author: kkhh88
 '''
-#q = int(input())
-#x, y = map(int,input().split(' '))
-#print (' '.join(list(map(str, s))))
 
 q = int(input())
 

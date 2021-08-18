@@ -1,4 +1,3 @@
-# 137-A
 
 A, B = list(map(int, input().split()))
 

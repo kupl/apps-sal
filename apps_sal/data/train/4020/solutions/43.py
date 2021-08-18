@@ -5,5 +5,3 @@ def validate_hello(g):
         if i in g:
             return True
     return False
-
-    # your code here

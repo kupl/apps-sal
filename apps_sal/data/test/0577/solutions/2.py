@@ -29,7 +29,6 @@ def main():
         now |= now >> k
         now &= mask
         pre = now
-        # print(bin(pre))
     ans = 0
     for r in range(k):
         if pre >> r & 1:

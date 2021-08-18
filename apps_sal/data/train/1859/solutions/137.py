@@ -31,9 +31,6 @@ class Solution:
                     horizMemo[i][j] = horizMemo[i][j - 1] + 1
                     diagMemo[i][j] = diagMemo[i - 1][j - 1] + 1
                     squareMemo[i][j] = min(squareMemo[i - 1][j - 1] + 1, vertMemo[i][j], horizMemo[i][j])
-        # print(vertMemo)
-        # print(horizMemo)
-        # print(diagMemo)
         print(squareMemo)
         totSquares = 0
         for i in range(len(matrix)):

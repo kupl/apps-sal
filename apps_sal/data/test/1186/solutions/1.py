@@ -1,6 +1,5 @@
 from math import log2, floor
 n = int(input())
-# n=100
 if n % 2:
     print('NO')
 else:

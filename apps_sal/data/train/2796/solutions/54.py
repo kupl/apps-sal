@@ -2,7 +2,6 @@ print("Are you playing banjo?")
 
 
 def areYouPlayingBanjo(name):
-    # return positive if name.lower().startswith "r"
     if name.lower().startswith("r"):
         return name + " plays banjo"
     else:

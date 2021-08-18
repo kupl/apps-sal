@@ -1,4 +1,3 @@
-# 066a
 
 def atc_066a(abc: str) -> int:
     abc_int = [int(ai) for ai in abc.split(" ")]

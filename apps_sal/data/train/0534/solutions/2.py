@@ -1,4 +1,3 @@
-# cook your dish here
 def detect_triangle(adj):
     for x in range(len(adj)):
         for y in adj[x]:

@@ -1,11 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
-        # lets give each edge a weight
-        # an edge will be some point A to another point B
-        # we will store the distances in a minheap
-        # then we will perform union find to connect all points
-        # using prim's algorithm - we choose the minimum from the current point we are at building out the MST
         if len(points) <= 1:
             return 0
         N = len(points)

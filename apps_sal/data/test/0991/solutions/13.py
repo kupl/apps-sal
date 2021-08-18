@@ -8,8 +8,6 @@ for i in range(m):
     v -= 1
     hq.heappush(G[u], (B, A, v))
     hq.heappush(G[v], (B, A, u))
-    # G[u].append((B,A,v))
-    # G[v].append((B,A,u))
 
 c = [0] * n
 d = [0] * n

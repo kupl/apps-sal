@@ -1,4 +1,3 @@
-# D - Various Sushi
 import sys
 from collections import defaultdict
 import heapq

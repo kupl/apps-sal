@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n, a, b, c, d, p, q, y = list(map(int, input().split()))
@@ -11,4 +10,3 @@ for _ in range(t):
         print(min(time1, time2))
     else:
         print(time1)
-# cook your dish here

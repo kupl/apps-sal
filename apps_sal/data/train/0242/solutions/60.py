@@ -15,5 +15,4 @@ class Solution:
             if maxRepeat == 1 or maxRepeat == i + 1:
                 ans = i + 1
 
-            # print(counterCounter, maxRepeat)
         return ans

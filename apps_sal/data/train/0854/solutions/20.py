@@ -1,4 +1,3 @@
-# cook your dish heret
 t = int(input())
 w = []
 for i in range(t):

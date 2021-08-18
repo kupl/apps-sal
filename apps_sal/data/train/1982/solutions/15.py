@@ -1,6 +1,5 @@
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
-        # build graph
         graph = [set() for _ in range(N + 1)]
         for a, b in dislikes:
             graph[a - 1].add(b - 1)

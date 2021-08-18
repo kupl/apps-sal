@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from copy import deepcopy
 from fractions import Fraction
@@ -11,7 +10,7 @@ def main():
     dp[0] = [0, 1]
     for j in range(n):
         dppre = deepcopy(dp)
-        for i in range(n):  # 配る
+        for i in range(n):
             vnew = dppre[i][0] + v[j]
             ways = dppre[i][1]
             if vnew > dp[i + 1][0]:

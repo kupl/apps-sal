@@ -1,6 +1,4 @@
-# cook your dish here
-'''#include <bits/stdc++.h> 
-#include <math.h> 
+'''
 using namespace std; 
 
 main(){

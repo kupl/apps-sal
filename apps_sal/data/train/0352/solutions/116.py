@@ -35,8 +35,3 @@ class Solution:
                 dp[word] = maxx + 1
 
         return max(dp.values())
-
-
-#         def recur(word:str,words:List[str],remain:List[str],length:int):
-#             if len(word)==len(max(words)) and len(remain)==0:
-#                 return 1

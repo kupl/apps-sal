@@ -1,7 +1,5 @@
 from collections import defaultdict
 from math import sqrt, factorial, gcd, log2, inf, ceil
-# map(int,input().split())
-# l = list(map(int,input().split()))
 mod = 10**9 + 7
 
 
@@ -34,8 +32,6 @@ def merge(arr, temp_arr, left, mid, right):
     inv_count = 0
 
     while i <= mid and j <= right:
-
-        # There will be no inversion if arr[i] <= arr[j]
 
         if arr[i] <= arr[j]:
             temp_arr[k] = arr[i]

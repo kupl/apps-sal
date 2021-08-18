@@ -1,4 +1,3 @@
-# SPCANDY
 
 t = int(input())
 A = []

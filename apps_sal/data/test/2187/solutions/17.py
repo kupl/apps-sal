@@ -13,8 +13,6 @@ for tests in range(t):
 
     A.append(M[-1])
 
-    # print(M)
-
     ANS = 0
     for i in range(n):
         if A[i] > A[i + 1]:

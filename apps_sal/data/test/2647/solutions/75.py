@@ -18,22 +18,17 @@ X = 0
 while True:
     try:
         y, x = queue.pop()
-        # print(y,x)
     except:
-        # print("Fail")
         break
     for i in range(4):
         nx = x + (-1, 0, 1, 0)[i]
         ny = y + (0, -1, 0, 1)[i]
-        # print("nynx",ny,nx)
-        if (0 <= nx and nx <= W - 1 and 0 <= ny and ny <= H - 1 and A[ny][nx] != '#' and distance[ny][nx] == inf):
+        if (0 <= nx and nx <= W - 1 and 0 <= ny and ny <= H - 1 and A[ny][nx] != '
             queue.insert(0, (ny, nx))
-            distance[ny][nx] = distance[y][x] + 1
-            A[ny][nx] = "!"
-    # print(queue,"Q")
+            distance[ny][nx]=distance[y][x] + 1
+            A[ny][nx]="!"
 
 if distance[H - 1][W - 1] != inf:
-    # print(distance[gy][gx])
     ans -= distance[gy][gx] + 1
     print(ans)
 else:

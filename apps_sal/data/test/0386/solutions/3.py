@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import math
 
@@ -35,7 +33,6 @@ for n in range(N):
         mn = max(mn, num)
     elif sign == '<=':
         mx = min(mx, num)
-    # print("mn, mx = ", mn, mx)
 
 if mn > mx:
     print('Impossible')

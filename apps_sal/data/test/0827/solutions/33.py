@@ -1,14 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 N = int(input())
 T = input()
-
-
-# In[2]:
 
 
 l = 10**10
@@ -22,6 +15,3 @@ else:
             ans = l - ((i + N - 1) // 3)
             break
 print(ans)
-
-
-# In[ ]:

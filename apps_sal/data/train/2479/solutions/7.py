@@ -7,7 +7,6 @@ class Solution:
         x = 0
         y = 0
         for move in moves:
-            # print(move)
             if move == 'L':
                 x -= 1
             elif move == 'R':

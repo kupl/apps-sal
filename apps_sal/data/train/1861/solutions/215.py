@@ -12,7 +12,6 @@ class Solution:
                 if not (b1 > a1 and b2 > a2):
                     continue
                 if b2 in diag[a1] and a2 in diag[b1]:
-                    # print(\"?\")
                     res = min(res, abs(a1 - b1) * abs(a2 - b2))
 
         return res if res != sys.maxsize else 0

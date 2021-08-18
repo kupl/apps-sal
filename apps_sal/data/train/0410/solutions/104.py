@@ -12,5 +12,4 @@ class Solution:
         for i in range(lo, hi + 1):
             sol.append((process(i, 0), i))
         sol.sort()
-        # print (sol)
         return sol[k - 1][1]

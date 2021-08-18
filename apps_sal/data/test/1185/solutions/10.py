@@ -15,6 +15,5 @@ else:
     for i in range(1, k + 1):
         for j in range(i * m, n + 1):
             d[i][j] = max(d[i][j - 1], d[i - 1][j - m] + curr_s2[j] - curr_s2[j - m])
-        # print(d)
 
     print(d[k][n])

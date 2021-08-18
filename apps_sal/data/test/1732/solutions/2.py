@@ -1,4 +1,3 @@
-# D
 input()
 ok = {0: 0}
 for p, c in zip(list(map(int, input().split())),

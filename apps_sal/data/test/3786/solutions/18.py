@@ -5,9 +5,6 @@ depth = [0]
 for v in range(n - 1):
     depth.append(depth[parent[v]] + 1)
 
-# parity = [0] * n
-# for d in depth:
-#     parity[d] ^= 1
 
 freq = {}
 
@@ -21,5 +18,3 @@ res = 0
 for d in freq:
     res += freq[d] % 2
 print(res)
-
-# print(sum(parity))

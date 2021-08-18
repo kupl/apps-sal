@@ -16,5 +16,4 @@ class Solution:
                 if self.is_unique(t):
                     arr.append(t)
                     maxVal = max(maxVal, len(t))
-        # print(dct)
         return maxVal

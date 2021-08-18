@@ -1,22 +1,3 @@
-# def is_prime(n):
-#   if n == 2 or n == 3: return True
-#   if n < 2 or n%2 == 0: return False
-#   if n < 9: return True
-#   if n%3 == 0: return False
-#   r = int(n**0.5)
-#   f = 5
-#   while f <= r:
-#     if n%f == 0: return False
-#     if n%(f+2) == 0: return False
-#     f +=6
-#   return True
-# ans=0
-# for i in range(100000):
-#     if is_prime(i):
-#         ans+=1
-#         print(i)
-# print(ans)
-# print(is_prime(5003))
 from math import gcd as bltin_gcd
 
 
@@ -56,5 +37,3 @@ for i in range(1, n + 1):
                 pri()
                 quit()
 print(no)
-
-# connect!!!

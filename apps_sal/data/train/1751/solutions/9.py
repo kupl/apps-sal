@@ -43,7 +43,7 @@ class Game():
         for bullet in self.bullets:
             if bullet.distance_to_target <= 0:
                 bullet.target.leader.alive = False
-        self.bullets = {b for b in self.bullets if b.distance_to_target > 0}  # Clear bullets
+        self.bullets = {b for b in self.bullets if b.distance_to_target > 0}
         self.print_state()
 
     def fire_bullets(self):
@@ -98,9 +98,9 @@ class Army():
 
     def regroup(self):
         if self.leader.alive:
-            self.soldiers.append(self.soldiers.popleft())  # Move head to the back
+            self.soldiers.append(self.soldiers.popleft())
         else:
-            self.soldiers.popleft()  # Head just dies
+            self.soldiers.popleft()
         if len(self.soldiers) > 0:
             self.leader = self.soldiers[0]
         else:

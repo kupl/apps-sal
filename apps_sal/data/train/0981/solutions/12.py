@@ -1,4 +1,3 @@
-#!/usr/bin/pyhton
 MAX = 10000000000
 
 

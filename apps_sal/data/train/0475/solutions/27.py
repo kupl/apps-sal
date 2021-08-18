@@ -12,12 +12,8 @@ class Solution:
         totsum = sum(l)
         self.quickselect(l, 0, len(l) - 1, left)
         s1 = sum(l[:left - 1])
-        # print(l)
         self.quickselect(l, 0, len(l) - 1, right)
-        # print(l)
         s2 = sum(l[right:])
-        # print(s1,s2,totsum)
-        # print(sorted(l))
         return (totsum - s1 - s2) % (10**9 + 7)
 
     def quickselect(self, arr, l, h, k):

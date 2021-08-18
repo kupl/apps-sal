@@ -1,7 +1,6 @@
 import sys
 import math
 
-#f = open('input/input_1', 'r')
 f = sys.stdin
 
 N = int(f.readline())

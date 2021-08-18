@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 sys.setrecursionlimit(10**6)
 
@@ -7,7 +6,6 @@ t = list(str(input()))
 
 ans = []
 for i in range(len(s) - len(t) + 1):
-    # print(i)
     ans_tmp = ""
     for j in range(len(s)):
         if j >= i and i + len(t) > j:

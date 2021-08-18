@@ -1,4 +1,3 @@
-# region header
 import sys
 import bisect
 import math
@@ -6,17 +5,12 @@ import itertools
 import heapq
 import collections
 from operator import itemgetter
-# a.sort(key=itemgetter(i)) # i番目要素でsort
 from functools import lru_cache
 import copy
-# @lru_cache(maxsize=None)
-# sys.setrecursionlimit(10**8)
 input = sys.stdin.readline
 INF = float('inf')
 mod = 10**9 + 7
 eps = 10**-7
-# endregion
-# region input function
 
 
 def inp():
@@ -38,8 +32,6 @@ def str_inp():
     文字列をリストとして読み込む
     '''
     return list(input()[:-1])
-
-# endregion
 
 
 n, k = inpl()

@@ -22,7 +22,6 @@ for x in a:
         x = x // 2
         i += 1
     d[0].append(i)
-    # print(d)
 
 ans = 9999999999999
 for x in d:

@@ -59,10 +59,4 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.size += 1
         self.l.append(letter)
-        # print(letter)
         return self.root.search(self.l, self.size - 1)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

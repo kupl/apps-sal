@@ -1,8 +1,8 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         a = len(A)
-        dp = [[0] * a for _ in range(a)]  # dp array
-        index = [-1] * 20001  # index array
+        dp = [[0] * a for _ in range(a)]
+        index = [-1] * 20001
         maximum = 2
         for i in range(0, a):
             dp[i] = [2] * a

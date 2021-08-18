@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     L = input().split()
     N = int(L[0])

@@ -18,7 +18,6 @@ for _ in range(t):
 
     poss = True
     for i in arr:
-        #print(z1 + i, z2 + i, z1 - i, z2 - i)
         if ((abs(z1 + i) in arr) or (abs(z2 + i) in arr)) and \
                 ((abs(z1 - i) in arr) or (abs(z2 - i) in arr)):
             pass

@@ -10,10 +10,8 @@ class Solution:
                     return 1
 
         for k in range(1, len(stations)):
-            # use k stations to reach target
             maxPrevFuel = dpRefuels[k - 1]
             for i in range(k, len(stations)):
-                # the i-th station would be the k-th refuel at each iteration
                 temp = max(maxPrevFuel, dpRefuels[i])
                 if maxPrevFuel >= stations[i][0]:
                     dpRefuels[i] = maxPrevFuel + stations[i][1]

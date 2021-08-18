@@ -1,6 +1,5 @@
 n, l, r = [int(i) for i in input().split()]
 
-#dp = [[0 for i in range(3)] for j in range(3)]
 
 number_of_zeros = 0
 number_of_ones = 0

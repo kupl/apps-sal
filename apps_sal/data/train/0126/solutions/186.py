@@ -4,7 +4,6 @@ class Solution:
         counterSubstring = collections.defaultdict(int)
         best = 0
         for start in range(len(s)):
-            # for size in range(minSize, maxSize + 1):
             if start + minSize <= len(s):
                 substring = s[start:start + minSize]
                 counterSubstring[substring] += 1

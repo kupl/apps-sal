@@ -1,4 +1,3 @@
-# coding=utf-8
 from functools import reduce
 
 a = input()
@@ -19,7 +18,6 @@ while i < clen:
         j += 1
     kmpnext[i + 1] = j
     i += 1
-# print(kmpnext)
 
 f = [[[0 for i in range(clen + 2)] for i in range(blen + 2)] for i in range(alen + 2)]
 g = [[[0 for i in range(clen + 2)] for i in range(blen + 2)] for i in range(alen + 2)]
@@ -34,7 +32,6 @@ for i in range(alen):
     for j in range(blen):
         for k in range(clen):
             if h[i][j][k] == 0:
-                # print(i,j,k)
                 continue
             if f[i + 1][j][k] < f[i][j][k] or h[i + 1][j][0] == 0:
                 f[i + 1][j][k] = f[i][j][k]
@@ -46,7 +43,6 @@ for i in range(alen):
                 h[i][j + 1][k] = 1
 
             if a[i] == b[j]:
-                # print(i,j,a[i],b[j])
                 kt = k
                 while kt != 0 and a[i] != c[kt]:
                     kt = kmpnext[kt]
@@ -61,7 +57,6 @@ for i in range(alen):
                         g[i + 1][j + 1][0] = (i, j, k)
                         h[i + 1][j + 1][0] = 1
 
-            # print(i,j,k,f[i][j][k],g[i][j][k])
 
 for i in range(alen + 1):
     for j in range(blen + 1):

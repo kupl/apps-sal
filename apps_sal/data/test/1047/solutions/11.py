@@ -14,7 +14,6 @@ while n != 0:
             n -= pow10
         pow10 *= 10
     nums.append(num)
-    # sys.stdout.write(str(num) + " ")
 
 print(len(nums))
 print(" ".join(map(str, nums)))

@@ -9,8 +9,6 @@ class Solution:
         res = 0
         md = 10**9 + 7
 
-        # print(nums)
-
         while left <= right:
             if nums[left] + nums[right] <= target:
                 res += pow(2, right - left)

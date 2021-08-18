@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 n, m = list(map(int, input().split()))
@@ -37,6 +33,3 @@ for hen in range(m):
     if not connected:
         count += 1
 print(count)
-
-
-# In[ ]:

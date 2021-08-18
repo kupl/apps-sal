@@ -10,7 +10,6 @@ x_now, y_now = n - 1, n - 1
 
 ans = (n - 2) ** 2
 
-#que = [(1, i) for i in range(2, n)] + [(2, i) for i in range(2, n)]
 for i in range(q):
     flg, x = map(int, input().split())
     if flg == 1:

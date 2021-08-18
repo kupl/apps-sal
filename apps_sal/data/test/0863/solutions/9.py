@@ -1,7 +1,6 @@
 from math import ceil
 from sys import stdin
 3
-# -*- config:utf-8 -*-
 
 
 def getdata():
@@ -49,7 +48,6 @@ def getfile():
 def run1():
     starttime = 5 * 60
     endtime = 23 * 60 + 59
-    # a,ta,b,tb,dtm=getdata()
     a, ta, b, tb, dtm = getfile()
     b_first_dt = dtm - tb
     if b_first_dt < starttime:
@@ -97,7 +95,6 @@ def run():
     starttime = 5 * 60
     endtime = 23 * 60 + 59
     a, ta, b, tb, dtm = getdata()
-    # a,ta,b,tb,dtm=getfile()
     first_bus_departure_time = dtm - tb
     last_bus_departure_time = dtm + ta
     first_bus_departure_time = check_time(first_bus_departure_time, starttime, endtime)

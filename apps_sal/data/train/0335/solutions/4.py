@@ -1,6 +1,5 @@
 class Solution:
     def exclu(self, nums):
-        # whether we can find two elements x and y in nums so that x & y == 0
         n = len(nums)
         if n <= 1:
             return False
@@ -25,8 +24,6 @@ class Solution:
         return False
 
     def exclu2(self, set0, set1):
-        # whether we can find x in set0 and y in set1 so that x & y == 0
-        # set0 and set1 are not empty
         if len(set0) == 0 or len(set1) == 0:
             return False
         if len(set1) == 1:
@@ -79,20 +76,15 @@ class Solution:
 
         b = 1
         for x in rods:
-            # print(f'x={x}')
             for y in range(m - x, -1, -1):
                 comb = infos[y]
                 if comb:
                     infos[x + y] += [z + b for z in comb]
             b *= 2
-            # print(infos)
 
         for y in range(m, 0, -1):
             comb, n = infos[y], len(infos[y])
-            # print( (y, n, comb)  )
             if n >= 2:
-                # print( (y, n)  )
-                # print(n)
                 if self.exclu(comb):
                     return y
         return 0

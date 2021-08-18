@@ -14,5 +14,4 @@ class Solution:
 
         dfs(s, n, '', res)
         res.sort()
-        # print(res)
         return res[k - 1] if k <= len(res) else ''

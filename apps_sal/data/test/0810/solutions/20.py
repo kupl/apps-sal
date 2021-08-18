@@ -28,7 +28,6 @@ for i in range(1, n + 1):
 ans = 0
 temp = b * n
 for i in range(n + 1):
-    # print(i)
     if(good(temp)):
         ans += ncr(n, i)
     temp += a - b

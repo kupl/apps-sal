@@ -15,8 +15,6 @@ class Solution:
         result = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                # Ideal of optimization: if the node should not be used as the start node,
-                # do not do DFS on it. But this may be difficult to check.
                 result = max(result, dfs(grid, i, j))
 
         return result

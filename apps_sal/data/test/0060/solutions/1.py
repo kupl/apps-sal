@@ -1,4 +1,3 @@
-# You lost the game.
 s = str(input())
 l = s[len(s) - 1]
 r = int(s[:len(s) - 1]) - 1

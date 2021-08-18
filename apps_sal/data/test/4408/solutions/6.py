@@ -41,8 +41,6 @@ def countMap(arr):
 def sortId(arr):
     return sorted(range(arr), key=lambda k: arr[k])
 
-# MAIN
-
 
 n, k = ni()
 c = nia()

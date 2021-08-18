@@ -23,10 +23,6 @@ class Solution:
                 roots[r2] += roots[r1]
                 roots[r1] = r2
 
-        # print(roots)
-        #union(0, 3)
-        # print(roots)
-
         res = 0
         heapq.heapify(dists)
         while dists:

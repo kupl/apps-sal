@@ -1,4 +1,3 @@
-# map(int, input().split())
 def main():
     n, x = list(map(int, input().split()))
     a = list(map(int, input().split()))

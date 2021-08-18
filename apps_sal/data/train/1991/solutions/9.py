@@ -5,7 +5,6 @@ class Solution:
 
         @lru_cache(None)
         def go(pos, fuel):
-            # print(pos)
             temp = 0
             if fuel < 0:
                 return 0

@@ -1,6 +1,4 @@
 import sys
-#sys.stdin = open("apples.in","r")
-#sys.stdout = open("apples.out","w")
 
 n = int(input())
 k = n // 7
@@ -18,7 +16,3 @@ elif (n % 7 == 1):
     print(k * 2 + 1)
 else:
     print(k * 2 + 2)
-
-
-# sys.stdin.close()
-# sys.stdout.close()

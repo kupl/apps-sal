@@ -1,4 +1,3 @@
-#=============templates==============#
 from math import floor, ceil, log2
 import sys
 def takeArr(): return list(map(int, input().split()))
@@ -6,9 +5,6 @@ def takeList(): return list(map(int, input().split()))
 
 
 sys.setrecursionlimit(10**6)
-# import itertools
-# import collections
-#==================MAIN==================#
 
 
 def powOfPositive(n):
@@ -48,5 +44,3 @@ def main(t):
 
 
 main(int(input()))
-
-#==================END==================#

@@ -11,5 +11,5 @@ if c[0][0] - c[0][1] == c[1][0] - c[1][1] == c[2][0] - c[2][1] and\
 
 if ans == True:
     print('Yes')
-else:  # ans == False:
+else:
     print('No')

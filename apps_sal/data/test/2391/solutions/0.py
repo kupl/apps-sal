@@ -13,22 +13,21 @@ for i in range(N):
 
 AX += AX + [AX[0]]
 
-# Rolling Hashで。
 
 p = 1 << 30
-mod = (1 << 62) + 1  # Hashがぶつからない, pと互いに素な数を適当に指定
+mod = (1 << 62) + 1
 
-A_TABLE = [0]  # Rolling Hashのテーブル. 最初は0
-B_TABLE = [0]  # Rolling Hashのテーブル. 最初は0
+A_TABLE = [0]
+B_TABLE = [0]
 
 for i in range(len(AX)):
-    A_TABLE.append((p * A_TABLE[-1] % mod + AX[i]) % mod)  # テーブルを埋める
+    A_TABLE.append((p * A_TABLE[-1] % mod + AX[i]) % mod)
 
 for i in range(len(BX)):
-    B_TABLE.append((p * B_TABLE[-1] % mod + BX[i]) % mod)  # テーブルを埋める
+    B_TABLE.append((p * B_TABLE[-1] % mod + BX[i]) % mod)
 
 
-def hash(i, j):  # [i,j)のハッシュ値を求める
+def hash(i, j):
     return (A_TABLE[j] - A_TABLE[i] * pow(p, j - i, mod)) % mod
 
 

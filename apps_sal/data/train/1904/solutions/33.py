@@ -1,15 +1,3 @@
-#     Version I sort:
-#       Step1: write a comparator
-#       Step2: write a distance calculator
-#       Step3: sort
-#       T: O(nlgn) S: O(n)
-#     Version II: k sort
-#       T: O(nlgk) S: O(k)
-#     Version III: quick select
-#       Step1: start, end
-#       Step2: find mid and seperate to left part and right part
-#       Step3: check if mid == k: return [:mid] or check mid again in right part or left part again
-#       T: O(n) S: O(lgn) the height of stack
 class Solution:
     def _getDistance(self, point):
         dis = math.sqrt(point[0]**2 + point[1]**2)

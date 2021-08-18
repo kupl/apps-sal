@@ -20,20 +20,17 @@ class Solution:
             root1 = find(city1)
             root2 = find(city2)
             if root1 == root2:
-                return False  # Cycle
-            parent[root2] = root1  # Join roots
+                return False
+            parent[root2] = root1
             return True
 
-        # Keep track of disjoint sets. Initially each city is its own set.
         parent = {city: city for city in range(0, len(points))}
-        # Sort connections so we are always picking minimum cost edge.
         graph.sort(key=lambda x: x[2])
         totalCost = 0
         for city1, city2, cost in graph:
             if union(city1, city2):
                 totalCost += cost
 
-        # Check that all cities are connected
         root = find(len(points) - 1)
         for i in range(0, len(points)):
             if find(i) == root:

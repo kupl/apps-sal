@@ -26,7 +26,6 @@ for i in range(t):
 
     d = bs(0, len(arr) - 1, n)
     diff = n - arr[d]
-    # print(d,diff)
 
     ans = ["1", "3", "3"]
     for j in range(diff):

@@ -12,10 +12,9 @@ root = Node(-1)
 
 
 def add(n):
-    #print("Add", n)
 
     curr_node = root
-    bitstr = bin(n)[2:].zfill(32)   # 32-bit string
+    bitstr = bin(n)[2:].zfill(32)
 
     for bit in bitstr:
         if bit == "1":
@@ -33,7 +32,6 @@ def add(n):
 
 
 def remove(n):
-    #print("Remove", n)
 
     curr_node = root
     bitstr = bin(n)[2:].zfill(32)
@@ -55,7 +53,6 @@ def remove(n):
 
 
 def query(n):
-    #print("Query", n)
 
     bitstr = bin(n)[2:].zfill(32)
     curr_node = root
@@ -87,7 +84,6 @@ def query(n):
     print(int("".join(result), 2))
 
 
-# Parse input
 num_q = int(input())
 for _ in range(num_q):
 
@@ -95,7 +91,7 @@ for _ in range(num_q):
     symbol = expr[0]
     num = int(expr[2:])
 
-    add(0)    # 0 is always in the set
+    add(0)
 
     if symbol == "+":
         add(num)

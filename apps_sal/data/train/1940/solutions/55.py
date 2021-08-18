@@ -1,8 +1,3 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         results = {}
@@ -20,7 +15,6 @@ class Solution:
             index += 1
             stack.append((index, next.val))
             next = next.__next__
-        # add extra zeros
         for i in range(len(stack)):
             results[stack[i][0]] = 0
         result_arr = [0] * len(results)

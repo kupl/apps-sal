@@ -22,12 +22,9 @@ class Solution:
                             nn = len(neigh.get(i, []))
                         else:
                             nn = len(neigh.get(i, [])) - 1
-#                        print(i,nn)
                         for j in neigh.get(i, []):
                             if not j in visited:
                                 q[j] = p[i] / nn
                                 visited.add(j)
             p = {i: q.get(i, 0) for i in range(1, n + 1)}
-#            print(steps,p)
-#        print(neigh)
         return(p.get(target, 0))

@@ -1,6 +1,5 @@
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
-        # return self.greedy(quality, wage, K)
         return self.heap(quality, wage, K)
 
     def greedy(self, quality, wage, K):

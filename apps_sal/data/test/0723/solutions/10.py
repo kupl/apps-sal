@@ -23,6 +23,3 @@ for h in range(1, 1001):
         s = min(s, h * w)
 
 print(s)
-
-
-# Made By Mostafa_Khaled

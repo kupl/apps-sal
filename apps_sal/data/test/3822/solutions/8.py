@@ -1,5 +1,5 @@
 n, s, v1, v2, k = map(int, input().split())
-n = (n + k - 1) // k  # k = 1
+n = (n + k - 1) // k
 l, r, m = 0, 1000000000000000000, 0
 for _ in range(300):
     m = (l + r) / 2

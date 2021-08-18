@@ -10,7 +10,6 @@ def solve():
         adj[a - 1].append(b - 1)
         adj[b - 1].append(a - 1)
 
-    # path
     goal = N - 1
     path = [0]
     candidates = [adj[0][:]]
@@ -25,7 +24,6 @@ def solve():
     black = path[(len(path) - 1) // 2]
     white = path[(len(path) - 1) // 2 + 1]
 
-    # count
     path = [black]
     candidates = [[n for n in adj[black] if n != white]]
     cnt = 0

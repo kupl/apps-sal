@@ -14,5 +14,3 @@ def is_divisible(n, x, y):
         return False
     else:
         return True
-
-    # your code here

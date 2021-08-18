@@ -21,7 +21,7 @@ def main():
     for i, p1 in enumerate(ps):
         for j, p2 in enumerate(ps):
             if i <= j:
-                break  # 自己辺なし
+                break
             adj[i][j] = adj[j][i] = dist(p1, p2)
 
     def dijkstra(s):

@@ -1,6 +1,5 @@
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
-        # { name -> {time -> amount city i}
         invalidIdxList = set()
         transDict = {}
         for i, transaction in enumerate(transactions):

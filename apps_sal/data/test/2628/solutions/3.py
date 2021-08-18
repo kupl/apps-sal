@@ -8,10 +8,6 @@ class Solution:
             return [0]
         result = [0, 1]
 
-        # mirror the previous layer
-        # then padding '1' at the most significant bit position --- for the second half
-        # 0 1  --> 00 01 | 11 10 (1 + 1; 1 + 0)
-
         for i in range(2, n + 1):
             mask = 1 << (i - 1)
             temp = []

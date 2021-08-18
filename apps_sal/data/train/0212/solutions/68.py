@@ -1,4 +1,3 @@
-# 823. Binary Trees With Factors
 
 MOD = 10**9 + 7
 

@@ -1,11 +1,3 @@
-#	!/usr/bin/env python3
-#	encoding: UTF-8
-#	Modified: <26/May/2019 09:11:38 PM>
-
-
-#	✪ H4WK3yE乡
-#	Mohd. Farhan Tahir
-#	Indian Institute Of Information Technology (IIIT), Gwalior
 
 
 import sys
@@ -56,8 +48,6 @@ def main():
         if daniel[i] == vlad[i] and daniel[i] != -1:
             ans = 'YES'
             break
-    # print(vlad)
-    # print(daniel)
     print(ans)
 
 

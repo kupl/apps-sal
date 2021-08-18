@@ -1,4 +1,3 @@
-# cook your dish here
 import bisect
 t = int(input())
 for _ in range(t):

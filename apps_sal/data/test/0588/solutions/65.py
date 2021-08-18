@@ -3,7 +3,6 @@ from collections import deque
 import math
 import sys
 input = sys.stdin.readline
-# キュー(FIFO)
 
 
 N = int(input())

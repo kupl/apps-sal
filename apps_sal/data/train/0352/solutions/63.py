@@ -3,7 +3,6 @@ class Solution:
         words = list(set(words))
         words = sorted(words, key=lambda x: len(x))
 
-        # key is current word, value is current length
         chains = {}
         len_arr = [len(x) for x in words]
         min_len, max_len = min(len_arr), max(len_arr)

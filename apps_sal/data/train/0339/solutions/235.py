@@ -12,8 +12,6 @@ class Solution:
                 b = nums1[pos_b]
                 c_square = a * b
                 potential_c = math.floor(math.sqrt(c_square))
-                # print(f\"{potential_c}**2 = {c_square}\")
-                # print(f\"{a}{b}{potential_c}\")
                 if potential_c**2 == (c_square):
                     if potential_c in freq_dict_2:
                         answer += freq_dict_2[potential_c]

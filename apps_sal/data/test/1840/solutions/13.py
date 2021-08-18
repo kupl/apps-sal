@@ -9,7 +9,6 @@ p2 = 0
 s = 0
 ans = [0 for _ in range(len(a))]
 while p1 < len(a) and p2 < len(b):
-    # print(p1, p2)
     if a[p1][0] >= b[p2][0]:
         s += b[p2][1]
         p2 += 1

@@ -1,6 +1,5 @@
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
-        # Sliding window with fixed width (=k)
         vowels = 'aeiou'
         num_vowels = sum(1 for i in range(k) if s[i] in vowels)
         max_vowels = num_vowels

@@ -17,7 +17,7 @@ def factorize(n):
     return facts
 
 
-MOD = 10 ** 9 + 7  # should be a prime number
+MOD = 10 ** 9 + 7
 MAX = 10 ** 5 + 100
 FACTS = [1] * (MAX + 1)
 for i in range(1, MAX + 1):

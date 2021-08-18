@@ -6,7 +6,7 @@ class Solution:
         len1 = 0
         i = 0
         res = 0
-        zc = 0  # number of zeros in the middle
+        zc = 0
         while i < len(nums):
             if nums[i] == 1:
                 len1 += 1

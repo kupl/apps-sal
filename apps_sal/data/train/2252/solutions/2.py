@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 """
 
@@ -35,8 +34,6 @@ Output one number, representing how many palindrome pairs there are in the array
 
 
 
-# a, b can be transform to palindrome only when number of every characters in a+b is even, or only one is odd.
-# only odd+even => odd
 
 
 """

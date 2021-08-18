@@ -8,7 +8,6 @@ class Solution:
             target = Counter(target)
             for i in range(0, len(pool) - 1):
                 for j in range(i + 1, len(pool)):
-                    # print(sqrt(pool[i]*pool[j]))
                     if sqrt(pool[i] * pool[j]) in target:
                         ans += target[sqrt(pool[i] * pool[j])]
             return ans

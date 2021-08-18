@@ -9,11 +9,9 @@ class Solution:
             while q:
                 x = q.popleft()
                 if x[1] == 1 or x[1] in h:
-                    # print(i,x)
                     xx = x[0]
                     if x[1] in h:
                         xx += h[x[1]]
-                        # print(xx)
                     if i not in h:
                         h[i] = xx
                     if len(heap) < k:
@@ -27,5 +25,4 @@ class Solution:
                     q.append((x[0] + 1, x[1] // 2))
                 else:
                     q.append((x[0] + 1, (3 * x[1]) + 1))
-        # print(heap)
         return -heap[0][1]

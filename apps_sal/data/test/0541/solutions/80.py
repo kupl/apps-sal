@@ -25,9 +25,7 @@ def resolve():
     ab = [LI_() for _ in range(M)]
     ab.sort(key=lambda x: x[1])
 
-    # 区間スケジューリング
     ans = 0
-    # print(ab)
     right = -1
     for a, b in ab:
         if right <= a:

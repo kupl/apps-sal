@@ -5,7 +5,6 @@ class Solution:
             left = max(0, i - minjump[i])
             right = min(n, i + minjump[i])
             minjump[left] = max(minjump[left], right - left)
-        # print(minjump)
         jump = 1
         steps = minjump[0]
         maxreach = minjump[0]

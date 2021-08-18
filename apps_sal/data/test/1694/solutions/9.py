@@ -11,7 +11,6 @@ def solve():
     for _ in range(m):
         t, l, r = map(int, input().split())
         d[t - 1] = (l - 1, r - 1)
-    # d = {(t - 1) : (l - 1, r - 1) for t,l,r in map(int, input().split()) for _ in range(m)}
     step = 0
     res = list()
     while s != f:
@@ -27,7 +26,7 @@ def solve():
         else:
             res.append('X')
         step += 1
-    print(''.join(map(str, res)))  # change to string at end to see if faster
+    print(''.join(map(str, res)))
 
 
 if sys.hexversion == 50594544:

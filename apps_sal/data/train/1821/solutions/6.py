@@ -1,8 +1,6 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
 
-        # recursive merge sort
-
         def merge_sort(nums):
 
             if len(nums) <= 1:
@@ -12,7 +10,6 @@ class Solution:
 
             left_list = merge_sort(nums[:mid])
             right_list = merge_sort(nums[mid:])
-            #print(left_list, right_list)
             return merge(left_list, right_list)
 
         def merge(left_list, right_list):

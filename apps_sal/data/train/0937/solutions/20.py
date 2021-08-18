@@ -7,8 +7,6 @@ for _ in range(int(input())):
     for i in y:
         s += i
 
-    # print(s,x)
-
     if(s == x):
 
         print('yes')

@@ -7,9 +7,6 @@ Language: Python 3.3.4
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -26,7 +23,6 @@ def write(s="\n"):
     print(s, end="")
 
 
-# SOLUTION
 s = read(0)
 t = read(0)
 resstr = ["need tree", "automaton", "array", "both"]
@@ -44,7 +40,6 @@ for i in range(26):
         break
 if not (res + 1):
 
-    # automaton check
     i = 0
     j = 0
     while i < len(s) and j < len(t):

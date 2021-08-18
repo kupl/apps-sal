@@ -1,4 +1,3 @@
-# 803D
 
 def do():
     k = int(input())
@@ -16,10 +15,6 @@ def do():
                 if l == -1 and r != len(ad) - 1:
                     return False
                 count += 1
-                # if r != len(ad) - 1:
-                #     print([count, ad[r-width+1:l+1]])
-                # else:
-                #     print([count, ad[r-width+1:]])
                 if r == len(ad) - 1:
                     cur = 0
                 else:

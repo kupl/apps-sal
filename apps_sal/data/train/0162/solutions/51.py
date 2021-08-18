@@ -4,9 +4,6 @@ from typing import List
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
 
-        # dp[i][j] 表示 text1[0:i+1] 和 text2[0:j+1] 的 Longest Common Subsequence 的长度
-        # 其中 0 <= i < len(text1)
-        # 其中 0 <= j < len(text2)
         dp: List[List[int]] = []
         for i in range(len(text1)):
             dp.append(len(text2) * [-1])

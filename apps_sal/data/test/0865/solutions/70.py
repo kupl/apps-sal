@@ -8,7 +8,6 @@ for i in range(N):
 data.sort()
 data = np.array(data)
 
-# print(data)
 
 dp = np.zeros(T)
 ans = 0

@@ -2,7 +2,6 @@ import copy
 
 
 def swap(data, i1, i2):
-    # i1 と i2とスワップ
     tmp = data[i1]
     tmp2 = data[i2]
     data[i2] = tmp
@@ -22,12 +21,9 @@ def check_finish(data):
 def __starting_point():
     n = int(input())
     c = list(input())
-    # print(c)
     if 'R' not in c:
-        # print("'R' not in")
         print((0))
     elif 'W' not in c:
-        # print("'W' not in")
         print((0))
     else:
         w_count = c.count('W')
@@ -38,7 +34,6 @@ def __starting_point():
             if c[i] == 'R':
                 same_r_count += 1
 
-        # print(r_count, same_r_count)
         A = r_count - same_r_count
         print(A)
 

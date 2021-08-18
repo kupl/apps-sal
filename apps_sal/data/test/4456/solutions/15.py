@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/1213/problem/F
 
 n, k = map(int, input().split())
 p = list(map(int, input().split()))

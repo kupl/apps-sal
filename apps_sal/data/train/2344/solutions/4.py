@@ -2,8 +2,6 @@ import sys
 
 
 def main():
-    # sys.stdin = open("in.txt", "r")
-    # sys.stdout = open("out.txt", "w")
 
     it = iter(map(int, sys.stdin.read().split()))
 

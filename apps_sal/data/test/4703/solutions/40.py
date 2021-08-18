@@ -6,5 +6,5 @@ for i in range(2**(len(s) - 1)):
         if (i >> j) & 1:
             l += "+"
         l += s[j + 1]
-    ans += eval(l)  # eval関数は文字列を数式としてその解を返す
+    ans += eval(l)
 print(ans)

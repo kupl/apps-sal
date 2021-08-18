@@ -1,6 +1,5 @@
 
 import sys
-# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 n, m = list(map(int, input().split()))
@@ -10,7 +9,6 @@ g = [[0] * m for _ in range(n)]
 
 ans = []
 
-# get differences
 f1 = min([realg[0][i] for i in range(m)])
 for i in range(m):
     for _ in range(realg[0][i] - f1):
@@ -25,7 +23,6 @@ for i in range(n):
     for j in range(m):
         g[i][j] += realg[i][0] - f2
 
-# check
 bad = 0
 floor = realg[0][0] - g[0][0]
 for i in range(n):
@@ -36,7 +33,6 @@ for i in range(n):
 if bad:
     print("-1")
 else:
-    # get floor done
     if n < m:
         for i in range(n):
             for j in range(floor):

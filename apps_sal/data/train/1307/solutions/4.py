@@ -1,4 +1,3 @@
-# cook your dish here
 s = pow(10, 9) + 7
 a = [[0 for i in range(11)]for j in range(1001)]
 for i in range(1, 11):

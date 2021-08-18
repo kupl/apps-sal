@@ -1,4 +1,3 @@
-# D - We Love ABC
 
 S = list(str(input()))
 MOD = 10**9 + 7
@@ -13,7 +12,7 @@ for s in S:
         ab = (ab + a) % MOD
     elif s == 'C':
         abc = (abc + ab) % MOD
-    else:  # s == '?'
+    else:
         tmpa = a
         tmpab = ab
         a = (3 * a + pat) % MOD

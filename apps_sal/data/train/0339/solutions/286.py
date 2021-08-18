@@ -1,5 +1,4 @@
 class Solution:
-    # O(N*M) Solution
     def numTriplets(self, nums1, nums2):
         res = 0
         for n in nums1:
@@ -11,26 +10,23 @@ class Solution:
 
     def twoProduct(self, target, nums):
         count = 0
-        compFreq = {}  # key: compliment (target/cur), element: freq of this compliment (NOT idx!!!)
+        compFreq = {}
         for i in range(len(nums)):
             comp = target / nums[i]
-            if comp == int(comp):  # is comp is a float, no need to proceed
+            if comp == int(comp):
                 if nums[i] in compFreq:
                     count += compFreq[nums[i]]
 
-                if comp in compFreq:  # update freq
+                if comp in compFreq:
                     compFreq[comp] += 1
                 else:
                     compFreq[comp] = 1
         return count
 
     '''
-    # O(N^2) Solution
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int: 
         res = 0
         
-        # freq is dict that has key=n^2, element=frequency of n^2 occur
-        # if there are duplicate in nums1=[2,2], and nums2=[1,4], there are 2 cases in stead on 1
         freq1 = {}
         freq2 = {}
         for n in nums1:

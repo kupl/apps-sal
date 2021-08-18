@@ -19,7 +19,6 @@ for S in Query:
         else:
             T.append((x + 1, y))
 
-    # up, down, left, right
     dp1 = [[0, 0, 0, 0] for _ in range(L + 1)]
     for i, (x, y) in enumerate(T):
         if i == 0:

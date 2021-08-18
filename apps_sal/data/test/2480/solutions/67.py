@@ -5,7 +5,6 @@ s = [0]
 for i in range(n):
     s.append((s[-1] + a[i] - 1) % k)
 
-# dic = {remainder:number}
 dic = {0: 1}
 ans = 0
 if n < k:

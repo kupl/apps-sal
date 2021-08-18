@@ -18,7 +18,7 @@ def dfs(u, t, bottleneck, graph, visited):
 
 def max_flow(G, s, t):
     flow = 0
-    augment = 1  # for while to pass
+    augment = 1
     while augment > 0:
         visited = [False] * len(G)
         augment = dfs(s, t, math.inf, G, visited)
@@ -55,7 +55,7 @@ for i, c in enumerate(b, 1 + n):
 
 max_cap = math.inf
 for i in range(1, len(a) + 1):
-    graph[i].append(Edge(i + n, max_cap))  # self edges
+    graph[i].append(Edge(i + n, max_cap))
 
 for _ in range(m):
     u, v = list(map(int, input().strip().split()))

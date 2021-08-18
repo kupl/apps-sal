@@ -1,12 +1,12 @@
 class UnionFindTree:
     def __init__(self, n):
-        self.nodes = [-1] * n  # 根にサイズを負の値で格納する。
+        self.nodes = [-1] * n
 
     def find(self, i):
-        if self.nodes[i] < 0:  # 値が負の場合は根
+        if self.nodes[i] < 0:
             return i
         else:
-            self.nodes[i] = self.find(self.nodes[i])  # 縮約
+            self.nodes[i] = self.find(self.nodes[i])
             return self.nodes[i]
 
     def union(self, i, j):
@@ -14,12 +14,12 @@ class UnionFindTree:
         j = self.find(j)
         if i == j:
             return
-        if self.nodes[i] > self.nodes[j]:  # サイズ比較してiの方がサイズが大きいようにする
+        if self.nodes[i] > self.nodes[j]:
             i, j = j, i
-        self.nodes[i] += self.nodes[j]  # 大きい方に小さい方を統合しサイズを登録する。
-        self.nodes[j] = i  # jの親はi
+        self.nodes[i] += self.nodes[j]
+        self.nodes[j] = i
 
-    def size(self, i):  # 所属する集合の大きさを返す
+    def size(self, i):
         i = self.find(i)
         return -self.nodes[i]
 

@@ -14,5 +14,4 @@ class Solution:
             cur_profit += min(total_customer, 4) * boardingCost - runningCost
             total_customer -= min(total_customer, 4)
             profit.append(cur_profit)
-        # print(profit)
         return np.argmax(profit) + 1 if max(profit) > 0 else -1

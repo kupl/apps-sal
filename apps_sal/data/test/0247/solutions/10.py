@@ -12,11 +12,7 @@ def solve(n, p):
     if n < 5:
         return "YES"
     p5 = p[:5]
-# for p1, p2 in combinations(p5, 2):
-##        print(p1, p2, line(p1, p2), nb_points(line(p1, p2), p5))
     lines = set(line(p1, p2) for p1, p2 in combinations(p5, 2))
-# for l in lines:
-##        print(l, nb_points(l, p5))
     l0 = None
     for l in lines:
         if nb_points(l, p5) > 2:

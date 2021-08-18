@@ -8,9 +8,6 @@ point["s"] = s
 point["p"] = p
 
 t = input()
-# グー:r
-# チョキ:s
-# パー:p
 
 
 def janken(opp, rireki, point, k):

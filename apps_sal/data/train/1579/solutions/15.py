@@ -1,4 +1,3 @@
-# cook your dish here
 def subArrayBitWiseOR(A):
     res = set()
     pre = {0}

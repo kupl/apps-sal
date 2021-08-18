@@ -8,9 +8,6 @@ class Solution:
             if A == B:
                 return 0
 
-#         9 4 2 10  7  8 8  1 9
-#         1 1 -1 1 -1  0 1 -1
-
         n = len(A)
         ans = 1
         start = 0

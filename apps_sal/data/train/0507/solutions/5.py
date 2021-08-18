@@ -4,14 +4,6 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        # # O(N) time complexity O(1) space using bit XOR manipulation
-        # x = nums[0]
-        # for num in nums[1:]:
-        #     x = x^num
-        # return x
-
-        # O(logN) runtime and O(1) Space using cool binary search (it's sorted)
-        # focuses on the index
 
         left = 0
         if len(nums) == 1:

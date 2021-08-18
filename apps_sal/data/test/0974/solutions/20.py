@@ -1,16 +1,15 @@
 n_boxes = int(input())
 
-stack = []  # stack
+stack = []
 b = 1
-count = 0  # count
+count = 0
 
 for i in range(2 * n_boxes):
     input_string = input().split(' ')
-    # check command type
-    if len(input_string) == 2:  # add
+    if len(input_string) == 2:
         x = int(input_string[1])
         stack.append(x)
-    else:  # remove
+    else:
         if len(stack) != 0:
             if stack[-1] == b:
                 stack.pop()

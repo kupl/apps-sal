@@ -16,7 +16,6 @@ def lcm(a, b):
 def main():
     for _ in range(int(input())):
         n = int(input())
-        # a=list(map(int, input().split()))
         s = input()
         c = 0
         for i in range(1, len(s)):

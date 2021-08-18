@@ -9,8 +9,6 @@ class Solution:
             else:
                 nums[i] = 0
 
-        # print(nums)
-
         mp = {0: 1}
         cnt = 0
 

@@ -5,7 +5,6 @@ a.sort(reverse=True)
 s = 0
 for a_i in a:
     s ^= a_i
-# print(s)
 
 c = [(~s) & a_i for a_i in a]
 base = []
@@ -18,10 +17,8 @@ for c_i in c:
         base.append(c_i)
         base.sort(reverse=True)
 
-# print(base)
 t = 0
 for base_j in base:
     t ^= base_j
-# print(t)
 ans = s + t * 2
 print(ans)

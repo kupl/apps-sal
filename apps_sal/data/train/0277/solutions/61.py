@@ -23,7 +23,6 @@ class Solution:
                     del ranges[l - 1]
                 if rr != l + 1:
                     del ranges[l + 1]
-            # print(ranges)
             if len(ranges) == 1:
                 r += (list(ranges.items())[0][0] == 1)
             elif len(ranges) == 2:

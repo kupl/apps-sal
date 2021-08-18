@@ -1,4 +1,3 @@
-# 頂点は0番から始まるとして、出力時に+1する
 def graph(L):
     beki = 1
     for n in range(20):

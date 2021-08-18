@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 
 N = int(input().strip())
 AB_list = [list(map(int, input().rstrip().split())) for i in range(N)]
-# -----
 
 A_list, B_list = list(map(list, list(zip(*AB_list))))
 

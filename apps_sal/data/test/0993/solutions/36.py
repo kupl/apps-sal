@@ -1,5 +1,3 @@
-# 頭に0を足して、累積和のmod Mを取る
-# 各mod Mの個数に対して、個数C2を取って足し合わせる
 
 from collections import Counter
 import sys

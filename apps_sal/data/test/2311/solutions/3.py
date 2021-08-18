@@ -37,8 +37,6 @@ prev = 0
 for i in arrb:
     consb[i] += prev
     prev = consb[i]
-# print(consa,'consa')
-# print(consb,'consb')
 ans = 0
 vis = defaultdict(int)
 for i in range(1, n + 1):

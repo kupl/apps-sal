@@ -74,8 +74,6 @@ def solve():
             for j in range(11):
                 if f0[i][j] == 0:
                     continue
-                # print(f0[i][j], tab[(j + j + 11 - s0) % 11] \
-                # , fac[i] % mod * fac[c0 - i] % mod, C[j + (c1 - part) - 1][(c1 - part) - 1] % mod * C[part + c0 - i][part] % mod )
                 ans = (ans +
                        fac[i] % mod * fac[c0 - i] % mod *
                         f0[i][j] * tab[(j + j + 11 - s0) % 11] % mod *

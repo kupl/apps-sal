@@ -2,8 +2,6 @@ class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         '''
         行不通的 example4就不满足
-        #最长的bi-value subarray
-        #记录到i处一共几种数出现，两个减出来=2意味着中间只有两种。subarray标准套路.
         from collections import Counter
         n = len(tree)
         record = []
@@ -14,7 +12,7 @@ class Solution:
         print(record)
         dic = {}
         ans = 0
-        dic[0] = [-1,-1] #记录第一次出现和最后一次出现的位置
+        dic[0] = [-1,-1] 
         for i in range(n):
             if record[i] not in dic.keys():
                 dic[record[i]] = [i,i]
@@ -29,7 +27,6 @@ class Solution:
 
         return ans
         '''
-        # sliding  window, two pointers:x,i
         n = len(tree)
         dic = {}
         x = 0

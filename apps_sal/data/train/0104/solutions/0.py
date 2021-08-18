@@ -28,7 +28,6 @@ for rwerew in range(q):
         for j in i:
             cyk.append(c[j])
         grupacol.append(cyk)
-    # print(grupacol)
     mini = 234283742834
     for cykl in grupacol:
         dziel = []
@@ -41,7 +40,6 @@ for rwerew in range(q):
         for d in dziel:
             dodat.append(len(cykl) / d)
         dziel_ost = list(map(int, dziel + dodat))
-        #print(dziel_ost, len(cykl))
         for dzielnik in dziel_ost:
             for i in range(dzielnik):
                 indeks = i

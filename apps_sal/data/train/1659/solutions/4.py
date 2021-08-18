@@ -4,7 +4,6 @@ dictionary = {}
 def exp_sum(n, k=None):
     if k is None or k > n:
         k = n
-    # use the usual recurrence relation, and memoization
     if n == 0 and k == 0:
         return 1
     elif n < 0 or k < 0:

@@ -8,7 +8,6 @@ class Solution:
         i, = np.where(input_list == np.max(input_list))
 
         r = ''
-        # M = max(s)
         for e in i:
             r = max(r, s[e:])
 

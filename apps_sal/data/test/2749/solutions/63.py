@@ -4,17 +4,12 @@ def fill(color_no, color_count, pos_x, pos_y, W, grid):
 
     while color_count > 0:
         grid[pos_y][pos_x] = color_no
-        # print(pos_x,pos_y,grid)
-        # 右端に到達
         if pos_x == W - 1 and pos_y % 2 == 0:
             pos_y = pos_y + 1
-        # 左端に到達
         elif pos_x == 0 and pos_y % 2 == 1:
             pos_y = pos_y + 1
-        # 右から左へ
         elif pos_y % 2 == 0:
             pos_x = pos_x + 1
-        # 左から右へ
         elif pos_y % 2 == 1:
             pos_x = pos_x - 1
         color_count = color_count - 1

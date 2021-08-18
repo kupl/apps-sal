@@ -1,7 +1,4 @@
 def bfs(polycarp, all_projects, existed_projects):
-    # print(polycarp)
-    # print(all_projects)
-    # print(existed_projects)
 
     queue0 = {polycarp[0]: polycarp[1]}
     queue1 = {}

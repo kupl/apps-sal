@@ -23,5 +23,3 @@ def greet(language):
         return my_data_base[language]
     else:
         return "Welcome"
-
-    # your code here

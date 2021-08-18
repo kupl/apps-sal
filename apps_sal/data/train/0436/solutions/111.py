@@ -4,13 +4,12 @@ import heapq
 class Solution:
     def minDays(self, n: int) -> int:
 
-        heap = [[0, n]]  # BFS
+        heap = [[0, n]]
 
         covered = set()
 
         while True:
 
-            # print(heap, \" ||| \", covered)
             node = heapq.heappop(heap)
 
             if node[1] == 0:

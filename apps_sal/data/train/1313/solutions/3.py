@@ -11,7 +11,6 @@ def sieve(n):
             primes.append(i)
         for j in range(i * 2, n + 1, i):
             arr[j] = False
-    # saved till start primes now saving from start till n
     for i in range(start, n + 1):
         if arr[i] == True:
             primes.append(i)
@@ -32,7 +31,6 @@ def divs(n, primes):
 
 
 primes = sieve(int((10**5)**0.5 + 1))
-# print(primes)
 for _ in range(int(input())):
     n = int(input())
     ls = [int(X) for X in input().split()]
@@ -44,7 +42,3 @@ for _ in range(int(input())):
         print(x[1])
     else:
         print(-1)
-
-    # gcd gives you the greatest common divisor simply printing this is incorrect
-    # since gcd divides all the numbers in the array it's divisors will also do the same
-    # find the smallest divisor (smallest prime)

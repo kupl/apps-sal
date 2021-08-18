@@ -1,4 +1,3 @@
-# cook your dish h
 for _ in range(int(input())):
     a = list(input())
 

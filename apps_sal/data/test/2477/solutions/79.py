@@ -7,7 +7,6 @@ r = max(A) + 1
 
 
 def cut(l, k):
-    # 長さlの丸太を最大とすることができるかどうかを返す
     for a in A:
         if a > l:
             k -= (-(-a // l) - 1)

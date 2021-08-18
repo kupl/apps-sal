@@ -11,7 +11,7 @@ for i in range(N - 1):
 print(max(map(lambda x: len(relation[x]), relation)))
 answer = {}
 queue = []
-queue.append((0, 0))  # (node_id, color_id)
+queue.append((0, 0))
 already = set()
 counter = 0
 already.add(0)

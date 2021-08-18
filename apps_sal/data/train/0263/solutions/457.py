@@ -18,30 +18,26 @@ class Solution:
     }
 
     def knightDialer(self, n: int) -> int:
-        cache = {}  # from (remainingMoves, location) => numberOfPaths
+        cache = {}
 
         def reducer(acc: int, x: int) -> int:
-            return (acc + x) % 1000000007  # 10^9+7
+            return (acc + x) % 1000000007
 
         def helper(remainingMoves: int, location: int) -> int:
             depth = n - remainingMoves
             insert = '\\t' * depth
-            # print('{}ENTER: at {} with {} remaining'.format('\\t' * (depth - 1), location, remainingMoves))
 
             if remainingMoves == 0:
-                # print('{}Ran out of moves in location {}'.format(insert, location))
                 return 1
             else:
                 if (remainingMoves, location) in cache:
                     answer = cache[(remainingMoves, location)]
-                    # print('{}Found ({}, {}) in cache: returning {}'.format(insert, remainingMoves, location, answer))
                     return answer
                 else:
                     nextMoves = self.validMoves[location]
                     answers = [helper(remainingMoves - 1, newLocation) for newLocation in nextMoves]
                     reduced = reduce(reducer, answers, 0)
                     cache[(remainingMoves, location)] = reduced
-                    # print('{}Calculated ({}, {}) = {}'.format(insert, remainingMoves, location, reduced))
                     return reduced
 
         answers = [helper(n - 1, x) for x in range(0, 10)]

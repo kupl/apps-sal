@@ -1,4 +1,3 @@
-# cook your dish here
 """
 This is a tricky problem
 

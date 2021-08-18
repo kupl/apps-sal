@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/1/23 22:56
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Nice Garland.py
 
 
 def main():

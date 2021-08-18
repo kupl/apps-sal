@@ -7,7 +7,6 @@ class Solution:
                     dfs(j)
         rank = {}
         initial = set(initial)
-        # rank, initial = collections.defaultdict(list), set(initial)
         for node in sorted(initial):
             nodes = set()
             dfs(node)
@@ -27,9 +26,3 @@ class Solution:
             return min(initial)
         else:
             return passed[0][0]
-
-        # return min(initial)
-
-        #     if nodes & initial == {node}:
-        #         rank[len(nodes)].append(node)
-        # return rank[max(rank)][0] if rank else min(initial)

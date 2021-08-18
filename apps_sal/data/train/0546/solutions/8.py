@@ -1,4 +1,3 @@
-# cook your dish here
 def balls():
     d = int(input())
     i = 0

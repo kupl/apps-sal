@@ -34,8 +34,6 @@ def main():
 
 
 def __starting_point():
-    # import sys
-    # sys.stdin = open("in.txt")
     main()
 
 

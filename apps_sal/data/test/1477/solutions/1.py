@@ -17,7 +17,6 @@ while len(leafs) > 0:
     if len(parents[leaf]) == 0:
         res = max(res, deep[leaf])
         continue
-##    print(leaf, leafs)
     for parent in parents[leaf]:
         l = deep[leaf]
         if tps[parent] == 1 and tps[leaf] == 0:
@@ -28,7 +27,6 @@ while len(leafs) > 0:
         deps[parent] -= 1
         if deps[parent] == 0:
             leafs.add(parent)
-##        print(leaf, parent, l, deps[parent], leafs, deep)
 
 
 print(res)

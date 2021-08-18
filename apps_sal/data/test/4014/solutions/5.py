@@ -1,4 +1,3 @@
-# Hello World program in Python
 class exam:
     def __init__(self, tickets, ex_day, prep_days, index):
         self.tick = tickets - 1

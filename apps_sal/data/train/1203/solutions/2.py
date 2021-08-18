@@ -16,7 +16,6 @@ for i in range(2, 4001):
     p2.append((p2[-1] * 2) % mm)
 
 
-# print("a")
 t = int(input())
 while t > 0:
     n, m = [int(x) for x in input().split()]
@@ -25,7 +24,6 @@ while t > 0:
         if b > a:
             print(0)
         else:
-            # r=abc(a-1,b-1)
             r = comb[a - 1][b - 1]
             print((r * p2[n - a]) % mm)
         m -= 1

@@ -7,16 +7,10 @@ t = []
 for i in range(n):
     now += a[i][1]
     s.append(now)
-    # if (now-a[i][0] > ans):
-    #ans = now-a[i][0]
-# print(ans)
 now = 0
 for i in range(n):
     now += a[n - 1 - i][1]
     t.append(now)
-    # if (now-(c-a[n-1-i][0]) > ans):
-    #ans = now-(c-a[n-1-i][0])
-# print(ans)
 back = 0
 ans = max(ans, s[-1] - a[-1][0])
 for i in range(n - 2, -1, -1):

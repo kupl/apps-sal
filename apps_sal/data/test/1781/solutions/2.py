@@ -1,6 +1,5 @@
 from collections import Counter
 n, k = list(map(int, input().split()))
-# n,k=1,2
 a = set()
 c = [set() for i in range(3)]
 b = set()

@@ -21,4 +21,4 @@ for _ in range(int(input())):
     if l == 1:
         print(GLR(r))
     else:
-        print((GLR(r) - GLR(l - 1)))  # cook your dish here
+        print((GLR(r) - GLR(l - 1)))

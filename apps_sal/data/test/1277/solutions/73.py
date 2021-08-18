@@ -13,8 +13,7 @@ d_from_u = [float('inf') for _ in range(N)]
 d_from_v = [float('inf') for _ in range(N)]
 d_from_u[u] = 0
 d_from_v[v] = 0
-# print(tonari)
-now = [v]  # 追いかける方
+now = [v]
 d = 0
 while now:
     d += 1
@@ -27,14 +26,14 @@ while now:
     now = nextvisit
 
 
-now = [u]  # 逃げる方
+now = [u]
 d = 0
 while now:
     d += 1
     nextvisit = []
     for n in now:
         for t in tonari[n]:
-            if d_from_v[t] <= d:  # 追いかける方より遠い地点は排除
+            if d_from_v[t] <= d:
                 continue
             elif d_from_u[t] > d:
                 d_from_u[t] = d
@@ -44,7 +43,7 @@ while now:
 
 distance = []
 for U, V in zip(d_from_u, d_from_v):
-    if U < N + 1:  # infを排除
+    if U < N + 1:
         distance.append((U, V))
 
 if distance:

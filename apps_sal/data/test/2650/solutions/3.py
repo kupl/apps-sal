@@ -6,23 +6,20 @@ readline = sys.stdin.readline
 N, Q = list(map(int, readline().split()))
 NN = 2 * (10 ** 5)
 
-# (レート, 所属園)
 infants = [None] * (N + 1)
-# (最強園児, 園児番号)
 kinda = [[] for i in range(NN + 1)]
 for i in range(N):
     a, b = list(map(int, readline().split()))
     infants[i + 1] = [a, b]
     hq.heappush(kinda[b], (-a, i + 1))
 
-# (最弱園児, 園の番号)
 all_kinda = []
 for i in range(len(kinda)):
     if kinda[i]:
         hq.heappush(all_kinda, (-kinda[i][0][0], i))
 
 
-def get_max_rate(x):  # 園xの最強レートを取り出す
+def get_max_rate(x):
     q = kinda[x]
     while q:
         rate, ind = hq.heappop(q)

@@ -29,7 +29,7 @@ def ni(): return int(ns())
 def nf(): return float(ns())
 def na(): return list(map(int, stdin.readline().split()))
 def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ns(): return stdin.readline().rstrip()
 
 
 H, W = na()
@@ -43,6 +43,5 @@ ans = 0
 for y in range(H):
     for x in range(W):
         if A[y][x] != -1:
-            # print(ans)
             ans += d[A[y][x]][1]
 print((int(ans)))

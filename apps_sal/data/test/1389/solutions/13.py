@@ -9,7 +9,6 @@ for k in range(n + m, 1, -1):
         j = k - i
         if (j > m or j < 1):
             continue
-        #print(str(i)+" "+str(j)+s[i-1][j-1])
         tmp = 0
         if (s[i - 1][j - 1] == 'W'):
             tmp = 1 - f[i][j]

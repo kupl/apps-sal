@@ -9,7 +9,6 @@ children = [[] for x in range(n)]
 for i in range(1, n):
     children[p[i - 1]].append(i)
 
-# print(children)
 
 count = [(0, 0) for i in range(n)]
 for i in reversed(list(range(n))):

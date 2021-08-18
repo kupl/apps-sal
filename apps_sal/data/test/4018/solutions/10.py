@@ -19,7 +19,6 @@ for i in range(1, n):
                 for t in range(26):
                     tm += dp[i - 1][j - 1][t]
                 dp[i][j][cc] = tm
-# print(dp[-1][-1])
 
 
 def get(x):

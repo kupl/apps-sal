@@ -1,4 +1,3 @@
-#n = int(input())
 from collections import defaultdict
 god = defaultdict(int)
 n, m = [int(i) for i in input().split(" ")]

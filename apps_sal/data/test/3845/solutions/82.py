@@ -28,7 +28,7 @@ def main():
             B -= 1
     print((h, w))
     for i in range(h):
-        print((''.join(['.' if G[i][j] == 0 else '#' for j in range(w)])))
+        print((''.join(['.' if G[i][j] == 0 else '
 
 
 def __starting_point():

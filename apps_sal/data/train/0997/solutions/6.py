@@ -9,11 +9,3 @@ for test_case in range(int(input())):
             arr[a1] *= k
 
     print(sum(arr) // n)
-
-# from sys import stdin, stdout
-
-# t=int(stdin.readline())
-# for i in range(2):
-#     n= int(stdin.readline())
-#     m = int(stdin.readline())
-#     print(n, m)

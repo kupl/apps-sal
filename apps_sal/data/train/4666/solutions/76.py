@@ -3,5 +3,3 @@ def array_plus_array(a, b):
     for n in newl:
         sum += n
     return sum
-
-# or just sum(a+b)

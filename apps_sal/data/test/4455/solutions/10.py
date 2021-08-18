@@ -7,7 +7,7 @@ r = list(R())
 h = sorted(r)
 d = {}
 
-d[h[0]] = 0  # d[i]: 比i小的数字数量
+d[h[0]] = 0
 for i in range(1, n):
     if h[i - 1] != h[i]:
         d[h[i]] = i

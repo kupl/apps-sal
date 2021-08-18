@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 from collections import defaultdict
 

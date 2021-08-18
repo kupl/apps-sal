@@ -19,7 +19,6 @@ class Solution:
         left, right = 1, max(bloomDay)
         while left <= right:
             mid = (left + right) // 2
-            # print(left, right, mid)
             if invalid(mid):
                 left = mid + 1
             else:

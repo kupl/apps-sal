@@ -31,49 +31,25 @@ def main():
     n, k, q = reader.read_ints()
     t = reader.read_ints()
 
-    # queue = PriorityQueue()
     queue = []
     qsize = 0
-
-    # online = [False]*n
-    # online_n = 0
-    # prior = sorted([(i, t[i]) for i in range(n)], key=op.itemgetter(1), inverse=True)
-    # pos = [0]*n
-    # for i, p in enumerate(prior):
-    # 	pos[p[0]] = i
 
     for i in range(q):
         qt, qid = reader.read_ints()
         qid -= 1
 
         if qt == 1:
-            # qid online
-            # online[qid] = True
-            # online_n += 1
             if len(queue) == k:
-                # queue.get()
-                # heapq.heappop(queue)
-                # qsize -= 1
                 heapq.heappushpop(queue, (t[qid], qid))
             else:
                 heapq.heappush(queue, (t[qid], qid))
 
-            # queue.put((t[qid], qid))
-            # heapq.heappush(queue, )
-            # qsize += 1
         else:
-            # query qid
             box = [i[1] for i in queue]
-            # print(box)
             if qid in box:
                 print('YES')
             else:
                 print('NO')
-
-            # if not online[qid]:
-            # 	print('NO')
-            # else:
-            # 	pass
 
 
 def __starting_point():

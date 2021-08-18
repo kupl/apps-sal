@@ -26,12 +26,9 @@ for i in range(n):
             cnt[pre[i]] = [0, 0]
         cnt[pre[i]][0] += 1
 cnt1 = 0
-# print(pre)
-# print(cnt)
 for i in list(cnt.values()):
     sum1 = i[0] + i[1]
     cnt1 += add(sum1 // 2)
     cnt1 += add((sum1 + 1) // 2)
 cnt1 += sum(cnt[0]) // 2
-# print(cnt1)
 print((n * (n + 1)) // 2 - cnt1)

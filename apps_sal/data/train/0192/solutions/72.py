@@ -9,4 +9,3 @@ class Solution:
             i -= 2
             c += 1
         return ans
-    # 1 2 2 4 7 8

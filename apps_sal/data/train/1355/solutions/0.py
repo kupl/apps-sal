@@ -1,4 +1,3 @@
-# cook your dish here
 def index(n, val):
     while(val >= n):
         val = val // 2

@@ -1,18 +1,9 @@
-# coding: utf-8
 from collections import deque
 import numpy as np
 import sys
-# from operator import itemgetter
 sysread = sys.stdin.readline
 read = sys.stdin.read
 sys.setrecursionlimit(10 ** 7)
-#from heapq import heappop, heappush
-#from collections import OrderedDict, defaultdict
-#import math
-#from itertools import product, accumulate, combinations, product
-# import bisect# lower_bound etc
-#from copy import deepcopy
-#import numba
 
 
 def generate_inv(n, mod):
@@ -62,11 +53,8 @@ def run():
     inv = generate_inv(M, mod)
 
     comb_m_i = generate_comb_m_i(M, N, inv, mod)
-    # print(comb_m_i[0])
     p_N_i = generate_p_N_i(N, mod)
-    # print(p_N_i[0])
     p_mi_ni = generate_p_mi_ni(M, N, mod)
-    # print(p_mi_ni[0])
 
     ret = p_mi_ni[0]
 

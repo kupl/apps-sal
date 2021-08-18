@@ -1,11 +1,8 @@
-# CodeforcesB.py
 leer = input()
 leer = leer.split("e")
 listo = 0
-# Despues de la e
 numero = int(leer[1])
 
-# Antes del punto
 valor = leer[0]
 valor = valor.split(".")
 

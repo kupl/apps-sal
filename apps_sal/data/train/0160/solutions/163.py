@@ -9,10 +9,8 @@ class Solution:
                 if i >= j:
                     grid[i][j] = 0
                 else:
-                    # alex
                     if (j - i) % 2 == 1:
                         grid[i][j] = max(piles[i] + grid[i + 1][j], piles[j] + grid[i][j - 1])
-                    # lee
                     else:
                         grid[i][j] = min(-piles[i] + grid[i + 1][j], -piles[j] + grid[i][j - 1])
         return grid[0][len(piles) - 1] > 0

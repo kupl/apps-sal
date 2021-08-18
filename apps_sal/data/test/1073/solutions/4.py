@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 DIR = {
     'U': (-1, 0),

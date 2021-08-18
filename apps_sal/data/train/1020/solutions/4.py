@@ -26,7 +26,6 @@ for Case in range(testCases):
                     sum += l[i]
                 else:
                     sum -= l[i]
-    # print('sum',sum)
     if sum < 0:
         s = (-1) * sum
     else:

@@ -15,7 +15,6 @@ class Solution:
             else:
                 yAxis[point[1]] = [point[0]]
 
-        # Treat every point as bottom left corner then try to find valid points
         for point in points:
             topLeft = xAxis[point[0]]
             bottomRight = yAxis[point[1]]

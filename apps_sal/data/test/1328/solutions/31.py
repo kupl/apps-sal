@@ -32,7 +32,7 @@ def main():
     xcs = []
     for _ in range(N):
         ai, bi, ci = list(map(int, input().split()))
-        x = Ma * bi - Mb * ai  # Σai:Σbi=Ma:Mb<->Ma*Σbi-Mb*Σai=0
+        x = Ma * bi - Mb * ai
         xcs.append((x, ci))
 
     p1, p2 = half_enumeration(xcs, func=update)

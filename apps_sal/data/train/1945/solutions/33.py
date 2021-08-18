@@ -4,7 +4,6 @@ from collections import defaultdict
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         '''
-        # Analysis:
 
 
         '''

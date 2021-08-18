@@ -11,7 +11,6 @@ class Solution:
                 else:
                     mcost += cost[i + 1]
 
-                    # then swap the cost
                     temp = cost[i]
                     cost[i] = cost[i + 1]
                     cost[i + 1] = temp

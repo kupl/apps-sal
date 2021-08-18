@@ -41,4 +41,3 @@ class Solution:
         => n * f(n) = n * f(n-1)
         => f(n) = f(n-1) = f(2) = 1/2 , when n > 2
         '''
-        # return 1 if n==1 else 0.5

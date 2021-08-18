@@ -1,4 +1,3 @@
-# your code goes here
 t = int(input())
 for sc in range(t):
     n, m = list(map(int, input().split()))

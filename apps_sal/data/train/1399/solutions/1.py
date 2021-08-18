@@ -1,12 +1,9 @@
-# cook your dish here
 import sys
 import math
 from collections import Counter
 from heapq import heapify, heappop, heappush
 import numpy as np
 
-# sys.setrecursionlimit(10**6)
-# input = sys.stdin.buffer.readline
 
 MAX_INT = 2**62 - 1
 MOD = 10**9 + 7
@@ -36,8 +33,6 @@ def __starting_point():
             k >>= 1
             mat = mat @ mat
             mat &= 1
-            # print(k, trans)
-        # print(trans)
 
         ans = np.zeros((n,), dtype=np.int)
         for i in range(60)[::-1]:

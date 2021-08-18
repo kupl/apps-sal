@@ -1,7 +1,6 @@
 def check(mid):
     need = 0
     for i in range(mid):
-        #        print(mid,n-mid+i,i,mon,pri)
         if mon[n - mid + i] < pri[i]:
             need += pri[i] - mon[n - mid + i]
     return need <= a
@@ -12,7 +11,6 @@ mon = sorted(map(int, input().split()))
 pri = sorted(map(int, input().split()))
 l = 0
 r = min(n, m)
-# print(mon,pri)
 while l <= r:
     mid = l + (r - l) // 2
     if check(mid):

@@ -9,7 +9,6 @@ sb = 0
 a.sort(reverse=True)
 b.sort(reverse=True)
 d = 0
-# print(a,b)
 i = 0
 j = 0
 for p in range(2 * n):

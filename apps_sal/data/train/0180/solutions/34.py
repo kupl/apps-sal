@@ -13,7 +13,6 @@ class Solution:
                 if dp[j] >= stations[i][0] and totalFuel >= dp[j + 1]:
                     dp[j + 1] = (totalFuel)
                 j -= 1
-        # print(dp)
         for i, fuel in enumerate(dp):
             if fuel >= target:
                 return i

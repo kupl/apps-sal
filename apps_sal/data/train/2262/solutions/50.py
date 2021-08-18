@@ -27,7 +27,6 @@ for i in range(n):
         else:
             dots.append((2 * (r + c) - x2, i))
 
-# print(dots)
 if num <= 1:
     print("YES")
 else:

@@ -9,6 +9,5 @@ class Solution:
                 r -= 1
             else:
                 res = (res + (1 << (r - l))) % MOD
-                # print(res)
                 l += 1
         return res

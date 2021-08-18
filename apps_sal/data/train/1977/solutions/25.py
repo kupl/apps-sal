@@ -9,7 +9,6 @@ class Solution:
                 if 0 <= x + dx < M and 0 <= y + dy < N and grid[x + dx][y + dy] == 0:
                     dfs(x + dx, y + dy)
 
-        # eliminate outer islands
         for i in range(M):
             if grid[i][0] == 0:
                 dfs(i, 0)
@@ -20,7 +19,6 @@ class Solution:
                 dfs(0, j)
             if grid[M - 1][j] == 0:
                 dfs(M - 1, j)
-        # count ans
         ans = 0
         for i in range(1, M - 1):
             for j in range(1, N - 1):

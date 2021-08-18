@@ -27,7 +27,6 @@ days = 1
 
 for i, num in enumerate(l):
     maxsofar = max(maxsofar, num)
-    # print(maxsofar)
     if maxsofar == i + 1 and i < len(l) - 1:
         days += 1
 

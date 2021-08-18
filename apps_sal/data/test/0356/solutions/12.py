@@ -1,22 +1,14 @@
 import atexit
 import io
 import sys
-# import os
 
-# from bisect import *
-# from collections import *
-# from fractions import gcd
-# from fractions import Fraction as fr_
-# from itertools import *
-# import math
 
-inf = float('inf')  # sys.maxint in py2
-inf_neg = float('-inf')  # sys.maxsize = 9*1e18
+inf = float('inf')
+inf_neg = float('-inf')
 range_5 = int(1e5 + 1)
 range_6 = int(1e6 + 1)
 range_7 = int(1e7 + 1)
 range_8 = int(1e8 + 1)
-# sys.setrecursionlimit(range_8)
 
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
@@ -30,8 +22,6 @@ def write():
 
 
 def main():
-    # ll = list(map(int, input().split()))
-    # print(f"{ ll }")
     n = int(input())
     a = list(map(int, input().split()))
     m = int(input())

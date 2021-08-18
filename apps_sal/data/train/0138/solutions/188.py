@@ -8,11 +8,11 @@ class Solution:
             if a[i] > 0:
                 pos[i] = pos[i - 1] + 1
                 if neg[i - 1]:
-                    neg[i] = neg[i - 1] + 1  # we can extend neg iff it exists
+                    neg[i] = neg[i - 1] + 1
             elif a[i] < 0:
                 if neg[i - 1]:
-                    pos[i] = neg[i - 1] + 1  # same idea as above
+                    pos[i] = neg[i - 1] + 1
                 neg[i] = pos[i - 1] + 1
-            else:  # a[i] == 0
+            else:
                 pass
         return max(pos)

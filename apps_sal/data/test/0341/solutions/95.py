@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Sep  8 22:36:36 2020
 
@@ -16,7 +15,6 @@ for i in range(0, K):
     while tmp < N:
         s += T[tmp]
         tmp += K
-    # print(s)
     count = 1
     prev = str()
     for j in range(len(s)):

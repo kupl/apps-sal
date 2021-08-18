@@ -2,7 +2,6 @@ from math import ceil, floor, sqrt, pow
 import os
 import sys
 from io import BytesIO, IOBase
-# region fastio
 BUFSIZE = 8192
 
 
@@ -53,8 +52,6 @@ class IOWrapper(IOBase):
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
-# ------------------------------
-
 
 def RL(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def RLL(): return list(map(int, sys.stdin.readline().rstrip().split()))
@@ -63,14 +60,6 @@ def N(): return int(input())
 
 def print_list(l):
     print(' '.join(map(str, l)))
-
-# import sys
-# sys.setrecursionlimit(5010)
-# from heapq import *
-# from collections import deque as dq
-# import bisect as bs
-# from collections import Counter
-# from collections import defaultdict as dc
 
 
 def judgePrime(n):

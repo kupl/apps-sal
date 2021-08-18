@@ -1,6 +1,5 @@
 class Solution:
     def tallestBillboard(self, rods: List[int]) -> int:
-        # dp[diff] = a: have a pair of (a, a + diff)
 
         dp = {0: 0}
         for rod in rods:

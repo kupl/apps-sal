@@ -3,7 +3,6 @@ class Solution:
         x = 0
         res = 0
         maxn = max(nums)
-        # minn = min(nums)
         for i in range(maxn + 1):
             res = 0
             for y in nums:

@@ -1,7 +1,5 @@
 import sys
 
-#sys.stdin = open("input.txt")
-#sys.stdout = open("output.txt", "w")
 
 n, n1 = map(int, input().split())
 a1 = set(map(int, input().split()))

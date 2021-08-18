@@ -23,6 +23,3 @@ for i in range(n):
     mx = max(mx, dp[i])
 
 print(mx)
-
-
-# Made By Mostafa_Khaled

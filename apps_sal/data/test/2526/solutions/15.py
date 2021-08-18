@@ -12,8 +12,6 @@ def main():
     pout = sys.stdout.write
     perr = sys.stderr.write
 
-#   dl=[]
-
     X, Y, A, B, C = list(map(int, pin().split()))
     p = list(map(int, pin().split()))
     q = list(map(int, pin().split()))
@@ -41,11 +39,9 @@ def main():
         if t[1] == 0 and t[0] < k and cntp <= X:
             ans += k
             cntp += 1
-#       dl.append(k)
         elif t[1] == 1 and t[0] < k and cntq <= Y:
             ans += k
             cntq += 1
-#       dl.append(k)
         else:
             ans += t[0]
             break
@@ -53,13 +49,9 @@ def main():
         try:
             s = heapq.heappop(Q)
             ans += s[0]
-#       dl.append(s[0])
         except:
             break
     print(ans)
-#   print(dl)
-#   print(p)
-#   print(q)
 
     return
 

@@ -5,9 +5,6 @@ from itertools import permutations, combinations
 import sys
 import bisect
 import string
-#import math
-#import time
-#import random
 
 
 def I():
@@ -38,11 +35,7 @@ def show(*inp, end='\n'):
 YN = ['Yes', 'No']
 mo = 10**9 + 7
 inf = float('inf')
-# ts=time.time()
-# sys.setrecursionlimit(10**6)
-# input=sys.stdin.readline
 show_flg = False
-# show_flg=True
 
 
 def solve(s):
@@ -81,5 +74,4 @@ q = 1
 for _ in range(q):
     n = I()
     s = list(input())
-    #s=[chr(random.randint(1,2)+96-32) for i in range(random.randint(1,6))]
     solve(s)

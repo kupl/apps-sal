@@ -21,7 +21,6 @@ class Solution:
             return sum(dist[i] < math.inf for i in range(n)) - 1
 
         nei = [(dfs(i), -i) for i in range(n)]
-        # print(nei)
         heapq.heapify(nei)
         ans = heapq.heappop(nei)
         return -ans[1]

@@ -64,7 +64,6 @@ for i in range(n):
             for x3 in siblings(initial[2], root[2]):
                 for x4 in siblings(initial[3], root[3]):
                     if isSquare(x1, x2, x3, x4):
-                       #print(x1, x2, x3, x4)
                         _max = min(_max,
                                    distOri(x1, initial[0], root[0]) + distOri(x2, initial[1], root[1]) +
                                    distOri(x3, initial[2], root[2]) + distOri(x4, initial[3], root[3]))

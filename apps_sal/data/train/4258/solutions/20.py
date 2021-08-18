@@ -1,5 +1,4 @@
 def series_sum(n):
-    # Happy Coding ^_^
     sum = 0.00
     if n == 1:
         return("1.00")

@@ -1,4 +1,3 @@
-# AC
 import sys
 from heapq import heappush, heappop
 

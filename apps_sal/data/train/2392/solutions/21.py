@@ -38,5 +38,4 @@ for _ in range(int(input())):
         else:
             break
     nmul = lmul - fmul + 1
-    # print(c, nmul, nmul//len(c))
     print(sum(c) * (nmul // len(c)) + sum(c[:nmul % len(c)]))

@@ -3,7 +3,6 @@ import itertools
 n, c = map(int, input().split())
 D = [list(map(int, input().split()))for _ in range(c)]
 
-# 集計
 diago = [defaultdict(int)for _ in range(3)]
 for i in range(n):
     for j, color in enumerate(map(int, input().split())):
@@ -16,7 +15,6 @@ for i in range(n):
             diago[2][color] += 1
 
 
-# 0列目をcにするときのcにするときの最小コスト
 costs = [[0] * c for _ in range(3)]
 for i in range(3):
     for j in range(c):

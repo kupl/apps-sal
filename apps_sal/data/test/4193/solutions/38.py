@@ -1,4 +1,3 @@
-# coding=utf-8
 import sys
 
 
@@ -20,8 +19,6 @@ def __starting_point():
                 if bingo[j][k] == b:
                     ans[j][k] = 1
 
-    #print(bingo, ans)
-
     for i in range(3):
         if (ans[0][i] + ans[1][i] + ans[2][i]) == 3:
             print("Yes")
@@ -32,7 +29,6 @@ def __starting_point():
             print("Yes")
             return
 
-    # naname
     if (ans[0][0] + ans[1][1] + ans[2][2]) == 3:
         print("Yes")
         return

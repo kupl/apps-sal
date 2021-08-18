@@ -76,7 +76,6 @@ def gutyoku(N, A):
 def solve(N, A):
     ans = 0
     dic = defaultdict(lambda: 0)
-    # debug = defaultdict(lambda: [0,0])
     for pro in product([0, 1], repeat=N - 1):
         lis = [1] * N
         pro = list(pro)
@@ -92,16 +91,7 @@ def solve(N, A):
                 lis2[p] = min(lis2[p], A[i])
             for i in range(num - 1, 0, -1):
                 lis2[i] = min(lis2[i], lis2[i + 1])
-            # cnt = 0
-            # j = 0
-            # cum = 1
-            # for i in range(1,num+1):
-            #   if lis2[i]-lis2[j]==0:
-            #     continue
-            #   if j-1>=0:
-            #     cum *= comb(lis2[i-1]-lis2[j-1],i-j)
-            #   cnt += cum*comb(lis2[i]-lis2[j],num+1-i)
-            #   j = i
+
             def comp(arr): return {i: e for i, e in enumerate(sorted(set(arr)))}
             compdic = comp(lis2)
             complis2 = compress(lis2[:])
@@ -117,19 +107,11 @@ def solve(N, A):
                             break
                         dp[i][j] += sum(dp[k - 1][:j]) * comb(compdic[j] - compdic[j - 1], i - k + 1)
             ans += sum(dp[-1]) * LIS(N, perm)
-            # debug[tuple(lis2)][0] = sum(dp[-1])
-            # debug[tuple(lis2)][1] += LIS(N,perm)
-            # print(list(perm),lis2,sum(dp[-1]),LIS(N,perm))
-    # for k,v in debug.items():
-        # print(k,v)
     return ans
 
 
-# ans1 = gutyoku(N,A)
 ans2 = solve(N, A)
 for i in range(N):
     ans2 *= pow(A[i], mod - 2, mod)
     ans2 %= mod
 print(ans2)
-# if ans1!=ans2:
-# print(ans1,ans2)

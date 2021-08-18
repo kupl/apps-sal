@@ -2,7 +2,6 @@ import string
 
 
 def words_to_marks(s):
-    # Easy one
     letter_dict = {}
     letters = list(string.ascii_lowercase)
     for i in range(0, 26):

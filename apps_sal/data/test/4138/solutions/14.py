@@ -37,8 +37,7 @@ def block_len_sum(block_num):
     l = len(str(block_num))
     result = 0
     for i in range(1, l + 1):
-        # прибавляем суммарную длину блоков, заканчивающихся на числа длины i
-        ls = len_sum(i)  # длина блока для числа 10 ** i - 1
+        ls = len_sum(i)
         if i < l:
             ln = len_num(i)
         else:

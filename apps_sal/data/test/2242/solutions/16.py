@@ -24,8 +24,6 @@ s = input()
 
 @lru_cache(None)
 def F(s, k):
-    # sの左からk文字目以降を整数と見なしたとき、
-    # 2019で割った余りを返す
     if k == len(s) - 1:
         return int(s[k])
     ret = F(s, k + 1) + int(s[k]) * pow(10, len(s) - 1 - k, 2019)

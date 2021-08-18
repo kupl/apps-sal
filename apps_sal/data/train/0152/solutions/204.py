@@ -1,7 +1,5 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
-        # m表示球的数量
-        # 寻找m-1个空隙，来满足距离要求
         def dist_valid(interval, k):
             count, k_count = 0, 0
             for i in interval:

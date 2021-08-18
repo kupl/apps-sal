@@ -20,7 +20,6 @@ class Solution:
             parent[py] = px
             return True
 
-        # both
         for i in range(n):
             parent[i] = i
 
@@ -33,7 +32,6 @@ class Solution:
                 else:
                     ans += 1
 
-        # alice
         ogparent = copy.deepcopy(parent)
         for i in range(len(edges)):
             t, u, v = edges[i]
@@ -44,7 +42,6 @@ class Solution:
                     ans += 1
         for i in range(n):
             parent[i] = i
-        # bob
         parent = copy.deepcopy(ogparent)
         for i in range(len(edges)):
             t, u, v = edges[i]

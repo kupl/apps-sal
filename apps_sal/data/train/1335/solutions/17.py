@@ -1,4 +1,3 @@
-# cook your dish here
 test = int(input())
 
 x = list(map(int, input().strip().split()))

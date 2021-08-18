@@ -21,7 +21,6 @@ def factorization(n):
         arr.append([n, 1])
     return [arr[1]+1 for arr in arr ]
 
-#print(factorization(N))
 
 sum_ans = 0
 def cal(list):
@@ -33,9 +32,7 @@ def cal(list):
 
 
 for i in range(1,N+1):
-    #print(factorization(i),i)
     sum_ans += i * cal(factorization(i))
-    #lenが掛け算
 
 print(sum_ans)
 """

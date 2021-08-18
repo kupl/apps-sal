@@ -13,7 +13,6 @@ class Solution:
             for ch in f:
                 curr = curr.children[ch]
             curr.index = i
-        # print(self.root)
         return self.bfs(self.root, folder)
 
     def bfs(self, trie, folder):
@@ -28,30 +27,5 @@ class Solution:
                         q.append(node.children[c])
             else:
                 for c in node.children:
-                    # if c != '/':
                     q.append(node.children[c])
         return res
-# class Trie:
-#     def __init__(self):
-#         self.sub = collections.defaultdict(Trie)
-#         self.index = -1
-# class Solution:
-#     def removeSubfolders(self, folder: List[str]) -> List[str]:
-#         self.root = Trie()
-#         for i in range(len(folder)):
-#             curr = self.root
-#             for ch in folder[i]:
-#                 curr = curr.sub[ch]
-#             curr.index = i
-#         return self.bfs(self.root, folder)
-
-#     def bfs(self, node, folder):
-#         q, ans = [node], []
-#         for t in q:
-#             if t.index >= 0:
-#                 ans.append(folder[t.index])
-#             # else:
-#             for c in t.sub:
-#                 if c != '/' or t.index < 0:
-#                     q.append(t.sub.get(c))
-#         return ans

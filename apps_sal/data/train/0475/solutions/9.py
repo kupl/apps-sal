@@ -13,5 +13,4 @@ class Solution:
                 sums.append(prev[i] + nums[i + l])
             ans[l] = nxt
             l += 1
-        # print(sums)
         return sum(sorted(sums)[left - 1: right]) % 1000000007

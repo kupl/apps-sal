@@ -6,17 +6,14 @@ class Solution:
         def feasible(days):
             flower = 0
             bouq = 0
-            # print('----------'+str(days))
             for bloom in bloomDay:
                 if bloom > days:
                     flower = 0
                 else:
                     flower += 1
-                    # print(bloom,flower)
                     if flower >= k:
                         bouq += 1
                         flower = 0
-                        # print(bloom,bouq)
             return bouq >= m
 
         left = 1

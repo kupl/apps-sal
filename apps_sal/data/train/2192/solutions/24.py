@@ -13,8 +13,8 @@ def bsearch(arr, num, start, end):
 t = int(input())
 A = []
 B = []
-N = []  # next undestroyed beacon
-NUM = []  # number of destroyed beacon if current veacon activated
+N = []
+NUM = []
 
 abp = []
 for i in range(0, t):

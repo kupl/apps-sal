@@ -1,4 +1,3 @@
-# cook your dish here
 def subarr(arr):
     ans = 0
     cur = 0

@@ -12,7 +12,6 @@ for i in range(n):
     s = input().split()
     x.append(int(s[0]) - px)
     y.append(int(s[1]) - py)
-    # print(x[i],y[i])
 
 l = []
 x0, y0 = x[-1], y[-1]
@@ -26,10 +25,5 @@ for i in range(n):
     x0, y0 = x[i], y[i]
 
 a = 3.141592653589793 * (max(l) - min(l))
-#print (px,py)
-#print (x[imax],y[imax])
-#print (x[imin],y[imin])
-#print (((px - x[imax])*(px - x[imax]) + (py - y[imax])*(py - y[imax])))
-#print (((px - x[imin])*(px - x[imin]) + (py - y[imin])*(py - y[imin])))
 
 print(a)

@@ -2,7 +2,6 @@ import sys
 import threading
 sys.setrecursionlimit(100010)
 threading.stack_size(67108864)
-# sys.stdin=open("input.txt","r")
 
 
 def main():

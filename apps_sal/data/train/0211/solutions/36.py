@@ -4,7 +4,6 @@ class Solution:
         n = len(s)
 
         def dp(cur, ss):
-            # print(ss)
             if cur == n - 1:
                 return len(set(ss.split()))
             cur += 1

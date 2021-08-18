@@ -12,5 +12,4 @@ for ii, ss in enumerate(s):
             r1 += 1
         else:
             r2 += 1
-# print(r1,r2)
 print(min(r1, r2))

@@ -29,7 +29,6 @@ def main():
                         if (i * 3 + 1 >= n or a[z][i * 3 + 1] == '.') and (i * 3 + 2 >= n or a[z][i * 3 + 2] == '.') and (i * 3 + 3 >= n or a[z][i * 3 + 3] == '.'):
                             w[z][i + 1] = True
     can = w[0][n] or w[1][n] or w[2][n]
-    # print(w)
     if can:
         print("YES")
     else:

@@ -1,6 +1,3 @@
-#import sys
-#sys.stdin = open('in.txt')
-# sys.setrecursionlimit(10000)
 def isPrefix(sa, sb):
     if len(sa) >= len(sb):
         return False
@@ -38,7 +35,6 @@ def printG():
         print(chr(ord('a') + i), "".join(["1" if x else "0" for x in g[i]]), sep="")
 
 
-# get a table
 for i in range(n - 1):
     if names[i] == names[i + 1] or isPrefix(names[i], names[i + 1]):
         continue
@@ -47,17 +43,13 @@ for i in range(n - 1):
         break
     else:
         ca, cb = getOrder(names[i], names[i + 1])
-        #print(ca, '<', cb)
         if g[ord(cb) - ord('a')][ord(ca) - ord('a')]:
             res = False
             break
         else:
-            # pass
-            # printG()
             a = ord(ca) - ord('a')
             b = ord(cb) - ord('a')
             g[a][b] = True
-            # printG()
 
 if not res:
     print("Impossible")
@@ -68,7 +60,6 @@ else:
                 return i
         return -1
 
-    # cacl Indegree
     strOrder = []
     vis = [False] * 26
     Indegree = [0] * 26
@@ -79,7 +70,6 @@ else:
                 ithIndegree += 1
         Indegree[i] = ithIndegree
 
-    # get the order string
     for i in range(26):
         ZeroIndegreeNode = getZeroIndegreeNode()
         if ZeroIndegreeNode == -1:

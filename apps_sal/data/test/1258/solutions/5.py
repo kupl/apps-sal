@@ -35,7 +35,6 @@ for i in range(2, n):
     next_key = key[0] * di + key[1] if key[0] < key[1] else key[1] * di + key[0]
     next_l = d[next_key]
     next_n = next_l[0] if next_l[0] not in used else next_l[1]
-    #print(key, next_key, next_n)
     ans[i] = next_n
     key[0], key[1] = key[1], next_n
     used.add(next_n)

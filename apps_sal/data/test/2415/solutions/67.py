@@ -12,7 +12,6 @@ d[0] = True
 
 for i in range(len(s)):
     if d[i]:
-        # print(i)
         if s[i] > 'Z':
             while True:
                 s += '1'

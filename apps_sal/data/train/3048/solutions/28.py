@@ -1,5 +1,4 @@
 def alternateCase(s):
-    # your code here
     if s == '':
         return s
     r = ''

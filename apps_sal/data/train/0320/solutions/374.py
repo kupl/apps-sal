@@ -22,8 +22,6 @@ class Solution:
                 count.pop(n + 1)
 
         while len(count) > 0:
-            # print(ans)
-            # print(count)
             keys = list(count.keys())
             ans += 1
             new_count = {}

@@ -1,10 +1,8 @@
-# 1 DP (Top-down with memoization)
 class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
         if len(piles) <= 2:
             return sum(piles)
         n = len(piles)
-        # Compute suffix sum
         for i in range(n - 2, -1, -1):
             piles[i] += piles[i + 1]
         piles.append(0)

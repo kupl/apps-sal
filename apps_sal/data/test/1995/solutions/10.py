@@ -1,5 +1,3 @@
-# import sys
-# sys.stdin = open('cf598b.in')
 
 s = list(input())
 m = int(input())

@@ -1,7 +1,6 @@
 N, M, C = map(int, input().split())
 B = list(map(int, input().split()))
 
-# N個のソースコードのうち、この問題に正答するソースコードの個数を出力
 
 count = 0
 

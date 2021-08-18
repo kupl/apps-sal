@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -8,7 +7,6 @@ for _ in range(int(input())):
     pr = [l[0]]
     for i in range(1, n):
         pr.append(pr[-1] + (l[i]))
-    # print(pr)
     while ix < n - 1:
         an += 1
         ix += cr

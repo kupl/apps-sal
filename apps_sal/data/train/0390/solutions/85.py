@@ -1,7 +1,6 @@
 def canWin(n, squares, memo):
 
     if n in squares:
-        # print(n,True)
         return True
 
     if n in memo:
@@ -11,7 +10,6 @@ def canWin(n, squares, memo):
     for i in reversed(squares):
         if i > n:
             continue
-        #if n==13: print('here',n-i)
         if not canWin(n - i, squares, memo):
             res = True
             break

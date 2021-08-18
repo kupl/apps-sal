@@ -4,8 +4,6 @@ H, W, K = [int(_) for _ in input().split()]
 S = np.zeros((H + 1, W + 1), dtype=int)
 S[1:, 1:] = [[int(_) for _ in input()] for _ in range(H)]
 cum = S.cumsum(axis=0).cumsum(axis=1)
-# sum(a,b -> x,y) (1-indexed)
-# cum[x][y]+cum[a-1][b-1]-cum[a-1][y]-cum[x][b-1]
 ans = 10**10
 for bs in itertools.product([True, False], repeat=H - 1):
     bs = [True] + list(bs) + [True]

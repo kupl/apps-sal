@@ -1,5 +1,3 @@
-# learnt about numpy from this code thank you nohtaray
-# source: https://atcoder.jp/contests/abc129/submissions/5850116
 import bisect
 import os
 from collections import Counter, deque

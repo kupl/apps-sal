@@ -1,8 +1,5 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        # dp[i, j] = # of distinct phone numbers of length j that can be dialed starting at i
-        # dp[i, 1] = 1
-        # dp[i, j] = sum(dp[i-1, k]) where k are all the possible numbers the knight can jump to
         if n == 1:
             return 10
         dp_old = [1 for _ in range(10)]
@@ -32,6 +29,3 @@ class Solution:
         for num in dp_new:
             total += num
         return total % (10**9 + 7)
-
-# 1 1 1 1 1 1 1 1 1
-#

@@ -1,4 +1,3 @@
-# ABC162
 import math
 K = int(input())
 ans = 0

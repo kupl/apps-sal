@@ -1,4 +1,3 @@
-# DSU
 import bisect
 import sys
 from collections import deque, namedtuple

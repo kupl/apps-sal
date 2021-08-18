@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# coding: utf-8
-# Last Modified: 22/Jan/20 08:07:33 PM
 
 
 import sys

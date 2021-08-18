@@ -1,7 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-# n=2
-# a=[4,8]
 minimum = 10000000
 for i in range(-100, 101):
     cost = 0

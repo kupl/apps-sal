@@ -1,11 +1,3 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(H, W, K, Si):
     Si = [[int(i) for i in S] for S in Si]
     ans = H + W
@@ -25,7 +17,7 @@ def solve(H, W, K, Si):
                     wc_num += 1
             if max(white_counts) > K:
                 if choco_w == 1:
-                    break  # 1列の時点で > K の場合は条件を達成できない
+                    break
                 w_border += 1
                 white_counts = tmp_count
                 choco_w = 1
@@ -38,17 +30,6 @@ def __starting_point():
     H, W, K = list(map(int, input().split()))
     Si = [input() for _ in range(H)]
     solve(H, W, K, Si)
-
-    # # test
-    # from random import randint
-    # from func import random_str
-    #
-    # H, W, K = 10, 1000, randint(1, 100)
-    # Si = [random_str(W, '01') for _ in range(H)]
-    # print(H, W, K)
-    # for S in Si:
-    #     print(S)
-    # solve(H, W, K, Si)
 
 
 __starting_point()

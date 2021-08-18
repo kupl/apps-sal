@@ -37,7 +37,6 @@ for _ in range(int(input())):
                 fl = 0
             if x == r:
                 fr = 1
-    # bless Ctrl+C Ctrl+V
     x, y = r - l + 1, u - d + 1
     s, k = x * y, x * y
     if x > 2 and not fl * fr:

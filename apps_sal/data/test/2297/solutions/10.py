@@ -2,8 +2,6 @@ cs = int(input())
 
 for c in range(cs):
     l, r = map(int, input().split())
-    # odd     => -
-    # even    => +
 
     if l % 2 == 0 and r % 2 == 0:
         print((r - l) // 2 + l)

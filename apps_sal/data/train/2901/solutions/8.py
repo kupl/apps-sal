@@ -3,8 +3,6 @@ powerPointsPerDay = [0, 2, 6, 11, 17, 25, 35, 46, 58, 72, 88,
 
 
 def psion_power_points(level, score):
-    # pppd: Power points per day
-    # bpp: Bonus power points
     if score <= 10:
         return 0
     pppd = powerPointsPerDay[min(level, 20)]

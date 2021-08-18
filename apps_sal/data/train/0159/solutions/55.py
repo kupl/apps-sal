@@ -7,9 +7,7 @@ class Solution:
         dp = [0] * N
         for i, val in enumerate(nums):
             if queue and (i - queue[0] > k):
-                # if i > k and (queue[0] == i - k - 1):
                 queue.popleft()
-            #dp[i] = (val + max(dp[queue[0]], 0)) if queue else val
             if queue and dp[queue[0]] > 0:
                 dp[i] = val + dp[queue[0]]
             else:
@@ -30,17 +28,12 @@ class Solution:
             return sum(nums)
         queue, N = deque(), len(nums)
         for i in range(N):
-            # if queue and (i - queue[0] > k):
             while queue and queue[0] < i - k:
                 queue.popleft()
-            # compute the max sum we can get at index i
             if queue:
                 nums[i] += nums[queue[0]]
-            # delet all the sequence that smaller than current sum, becaus there will never be
-            # considers ==> smaller than current sequence, and end before current sequence
             while queue and nums[queue[-1]] < nums[i]:
                 queue.pop()
-            # if nums[i] < 0, it can't be a useful prefix sum
             if nums[i] > 0:
                 queue.append(i)
         return max(nums)

@@ -1,5 +1,5 @@
 def main():
-    M = int(1e12)  # $$ +\infty $$
+    M = int(1e12)
 
     n, m = list(map(int, input().split()))
     graph = [set() for _ in range(n + 1)]

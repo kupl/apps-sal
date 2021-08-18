@@ -1,9 +1,6 @@
-# Bhargey Mehta (Sophomore)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
-#sys.stdin = open("input.txt", "r")
 MOD = 10**9 + 7
 sys.setrecursionlimit(1000000)
 

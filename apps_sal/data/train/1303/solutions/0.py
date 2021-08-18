@@ -1,4 +1,3 @@
-# cook your dish here
 mod = 10**9 + 7
 for i in range(int(input())):
     n, k, m = tuple(map(int, input().split()))

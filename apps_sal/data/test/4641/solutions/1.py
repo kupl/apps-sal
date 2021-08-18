@@ -40,8 +40,6 @@ for qu in range(q):
     t = int(input())
     add1(t % x, seg_el)
 
-    # print(SEG)
-
     MIN = getvalues(0, x)
 
     OK = 0
@@ -55,5 +53,4 @@ for qu in range(q):
         else:
             NG = mid
 
-    # print(MIN,OK)
     print(MIN * x + OK)

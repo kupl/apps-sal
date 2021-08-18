@@ -10,6 +10,4 @@ def count(chessBoard):
                 grid[i][j] = min(grid[i - 1][j], grid[i][j - 1], grid[i - 1][j - 1]) + 1
                 for x in range(2, grid[i][j] + 1):
                     ans[x] += 1
-    # for i in range(n+1):
-        # print(grid[i])
     return(ans)

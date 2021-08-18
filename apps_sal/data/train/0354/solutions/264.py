@@ -6,13 +6,11 @@ class Solution:
         dp: List[List[int]] = [[0] * 6 for _ in range(n)]
         sums: List[int] = [0] * n
 
-        # Init
         for j in range(6):
             dp[0][j] = 1
 
         sums[0] = sum(dp[0])
 
-        # DP
         for i in range(1, n):
             for j in range(6):
                 for k in range(1, rollMax[j] + 1):
@@ -25,6 +23,3 @@ class Solution:
             sums[i] = sum(dp[i]) % MOD
 
         return sums[-1]
-
-# roll_max_2 = 3
-# _, _, _, 2 = (_, _, !2, 2) + (_, !2, 2, 2) + (!2, 2, 2, 2)

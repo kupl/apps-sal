@@ -20,6 +20,4 @@ class Solution:
 
         N %= nAB
 
-#         print(nAB,r,N)
-
         return (r * LCM + sorted(set([A * i for i in range(N + 1)]) | set([B * i for i in range(N + 1)]))[N]) % 1000000007

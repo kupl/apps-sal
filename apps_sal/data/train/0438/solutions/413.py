@@ -13,8 +13,6 @@ class Solution:
                     if uf.getrank(neighbor) == m:
                         res = step - 1
                     uf.union(neighbor, curr)
-            # if uf.getrank(curr) == m:
-            #     res = step
         return res
 
 

@@ -97,7 +97,5 @@ class Solution:
 
     def sortArray(self, nums: List[int]) -> List[int]:
 
-        # self.mergesort(0,len(nums)-1,nums)
-        # self.insertionSort(nums)
         self.heapsort(nums)
         return nums

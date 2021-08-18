@@ -1,4 +1,3 @@
-# input must be invalid because no runtime error after handling invalid input
 
 def parse(movestr):
     moves = []
@@ -23,16 +22,12 @@ def parse(movestr):
 
 def make_move(x, y, direc, dist):
     if direc == 0:
-        # north
         y += dist
     elif direc == 1:
-        # west
         x -= dist
     elif direc == 2:
-        # south
         y -= dist
     elif direc == 3:
-        # east
         x += dist
     return x, y
 

@@ -1,5 +1,3 @@
-# https://atcoder.jp/contests/abc146/tasks/abc146_c
-# 二部探索
 
 a, b, x = map(int, input().split())
 i = 1

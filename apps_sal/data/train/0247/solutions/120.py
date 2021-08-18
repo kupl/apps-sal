@@ -4,7 +4,6 @@ from itertools import accumulate
 
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        # TC: O(N), SC: O(N), prefix sum + deque
         x, n = list(accumulate(arr, initial=0)), len(arr)
         s, d = [], {}
         for i in range(n + 1):
@@ -12,7 +11,6 @@ class Solution:
             if y in d:
                 s.append([i - d[y], d[y], i])
             d[x[i]] = i
-        # min length beyond index i-th
         for k in range(len(s) - 2, -1, -1):
             s[k][0] = min(s[k][0], s[k + 1][0])
         ans, queue = float('inf'), deque([])

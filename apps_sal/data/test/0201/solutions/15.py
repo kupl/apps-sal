@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-
-#max_grams = 10
-#weight_r = 3
-#joy_r = 5
-#weight_b = 2
-#joy_b = 3
 
 
 import math
@@ -30,7 +23,6 @@ def max_joy(max_grams, weight_r, joy_r, weight_b, joy_b, jollies, memoiser):
 
 
 def main():
-   # max_grams, weight_r, joy_r, weight_b, joy_b = [int(x) for x in input().split()]
     max_grams = 982068341
     weight_r = 55
     joy_r = 57
@@ -40,8 +32,6 @@ def main():
     jollies = 0
     res = max_joy(max_grams, weight_r, joy_r, weight_b, joy_b, jollies, memoiser)
     print(res)
-
-# main()
 
 
 c, x, y, a, b = map(int, input().split())

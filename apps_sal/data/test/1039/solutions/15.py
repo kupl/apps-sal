@@ -11,7 +11,6 @@ for _ in range(N - 1):
 
 Q, K = map(int, sys.stdin.readline().split())
 
-# Kを始点とする、各点までの距離
 dist = [-1 for _ in range(N)]
 
 visited = set()
@@ -25,7 +24,6 @@ while q:
     visited.add(p)
     for (next_p, next_c) in edges[p]:
         q.append((next_p, c + next_c))
-# print(dist)
 
 for _ in range(Q):
     x, y = map(int, sys.stdin.readline().split())

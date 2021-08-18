@@ -13,8 +13,8 @@ while len(q) > 0:
         h = qq[0] + dh[i]
         w = qq[1] + dw[i]
         if 0 <= h < H and 0 <= w < W:
-            if s[h][w] == "#" or t[h][w] != -1:
-                continue
+            if s[h][w] == "
+            continue
             t[h][w] = t[qq[0]][qq[1]] + 1
             q.append([h, w])
 

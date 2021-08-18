@@ -1,5 +1,4 @@
 def super_size(n):
-    # your code here
     q = []
     for i in str(n):
         q.append(i)

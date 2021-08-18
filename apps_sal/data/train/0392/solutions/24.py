@@ -1,7 +1,5 @@
 class Solution:
     def numWays(self, s: str) -> int:
-        # 000 ==> 1
-        # 111 ===> 1
         nums = [0] * len(s)
         cum = 0
         hh = Counter()

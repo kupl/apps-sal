@@ -28,7 +28,6 @@ class Solution:
             for j in range(i + 1, len(A)):
                 x1, x2 = A[i], A[j]
 
-                # calculate X_{max_len+1}
                 if x1 * C1[max_len] + x2 * C2[max_len] > A[-1]:
                     break
                 max_len = max(max_len, getLLFS(x1, x2))

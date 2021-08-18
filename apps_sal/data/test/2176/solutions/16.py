@@ -14,19 +14,6 @@ for _ in range(num):
     l.append(data[-1][1])
 
 ans = 0
-# f.sort()
-# last = -1
-# tot = 1
-# run = 0
-# for p in f:
-#     if p == last:
-#         run += 1
-#     else:
-#         tot = (tot * fact[run])%mod
-#         run = 1
-#         last = p
-# tot = (tot * fact[run])%mod
-# ans += tot
 
 l.sort()
 last = -1
@@ -79,7 +66,6 @@ if sor:
             run = 1
             last = p
     tot = (tot * fact[run]) % mod
-    # print(tot)
 
     ans -= tot
 q = fact[num]

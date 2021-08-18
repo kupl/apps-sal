@@ -93,7 +93,6 @@ for _ in range(int(input())):
         else:
             if pre[i] % 2:
                 ans.append(i)
-    # print(ans)
     if len(ans) < k:
         print('NO')
     else:

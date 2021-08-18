@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 from operator import itemgetter
 from fractions import gcd
@@ -16,13 +15,11 @@ def mi(): return map(int, input().rstrip().split())
 def lmi(): return list(map(int, input().rstrip().split()))
 def li(): return list(input().rstrip())
 def debug(x): print("debug: ", x, file=sys.stderr)
-# template
 
 
 def main():
     n = ii()
     a = [tuple(mi()) for i in range(4 * n + 1)]
-    # print(a)
     for x in range(60):
         for y in range(60):
             for m in range(60):
@@ -33,7 +30,6 @@ def main():
                     else:
                         ans.append(a[i])
                 if len(ans) == 1:
-                    # print(x, y, m)
                     print(ans[0][0], ans[0][1])
                     return
 

@@ -1,6 +1,3 @@
-# for _ in range(int(input())):
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
-#dt = {k:v for k,v in sorted(x.items(), key=lambda i: i[1])}
 def ipnl(n): return [int(input()) for _ in range(n)]
 
 
@@ -25,12 +22,10 @@ for i in range(1, r + 1):
             x[i][j] = {'D': 0, 'R': 0, 'CT': 1, 'f': 0}
         elif x[i][j]['f'] != 2:
             x[i][j] = {'D': 0, 'R': 0, 'CT': 0, 'f': 0}
-            # from up
             if x[i - 1][j]['f'] == 0 and x[i - 1][j]['D'] < d:
                 flag += 1
                 x[i][j]['D'] = x[i - 1][j]['D'] + 1
                 x[i][j]['CT'] += x[i - 1][j]['CT']
-            # from left
             if x[i][j - 1]['f'] == 0 and x[i][j - 1]['R'] < d:
                 flag += 1
                 x[i][j]['R'] = x[i][j - 1]['R'] + 1

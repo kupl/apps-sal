@@ -32,7 +32,7 @@ def analyze(s):
 r = []
 for _ in range(int(input())):
     p = input()
-    if all(x == p[0] for x in p):  # pure
+    if all(x == p[0] for x in p):
         k = get_k(p[0])
         for i in range(26):
             if i == k:
@@ -52,10 +52,4 @@ for _ in range(int(input())):
             t[lk], t[rk] = t[lk] + lb, t[rk] + rb
         for i in range(26):
             t[i] = max(t[i], bt[i])
-    # r.append(max(t))
-    # print('\ntableInfo: ', end= ' ')
-    # for i in range(26):
-    #     print('{}:{}/'.format(chr(i + ord('a')), t[i]), end=' ')
-    # print('')
-# print(' '.join(map(str, r)))
 print(max(t))

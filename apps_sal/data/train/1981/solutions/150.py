@@ -10,8 +10,6 @@ class Solution:
             if i:
                 rng[i] += rng[i - 1]
             lst.append(rng[i])
-        # print(rng)
-        # print(lst)
 
         ans = 0
         return sum(num * cnt for num, cnt in zip(sorted(nums, reverse=True), sorted(lst, reverse=True))) % 1000000007

@@ -1,4 +1,3 @@
-#autor @ShymCoder
 
 n, m = map(int, input().split())
 a = []

@@ -35,4 +35,3 @@ for i in range(t):
                 k = x + 1
                 print(x + 1)
                 break
-    # print(l)

@@ -1,4 +1,3 @@
-# http://codeforces.com/contest/601/problem/A
 import sys
 from collections import deque
 

@@ -3,12 +3,10 @@ import collections
 
 class Solution:
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
-        # lst = [[] for i in range(n)]
         lst = collections.defaultdict(list)
 
         for r, c in reservedSeats:
             lst[r].append(c)
-            # lst[r-1].append(c)
         ret = n * 2
         for r in lst:
             flag1 = False
@@ -28,4 +26,3 @@ class Solution:
             if (flag1 and flag2) and not flag3:
                 ret += 1
         return ret
-        # print(lst)

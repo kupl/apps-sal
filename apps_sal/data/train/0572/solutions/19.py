@@ -1,4 +1,3 @@
-# cook your dish here
 N = int(input())
 for i in range(N):
     m, o, k = list(map(int, input().split()))

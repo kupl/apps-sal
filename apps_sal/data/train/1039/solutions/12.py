@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     for t in range(int(input())):
         x, u = map(int, input().split())

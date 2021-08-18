@@ -3,7 +3,7 @@ H, W, K = list(map(int, input().split()))
 S = [input() for _ in range(H)]
 
 ans = 10**10
-for i in range(2**(H - 1)):   # iはbit
+for i in range(2**(H - 1)):
     rel = [0 for h in range(H)]
     a, b = 0, 0
     for h in range(H - 1):

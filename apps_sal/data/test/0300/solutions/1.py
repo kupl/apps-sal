@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-#    0 1 2 3 4 5
 c = [0, 0, 0, 0, 0, 0]
 for _ in a:
     c[_] += 1

@@ -1,7 +1,4 @@
 def main():
-    # import sys
-    # readline = sys.stdin.buffer.readline
-    # readlines = sys.stdin.buffer.readlines
     N = int(input())
     L = input()
 
@@ -12,16 +9,6 @@ def main():
         for i in range(2, N + 1):
             a = A[i - 1]
             s = 0 if L[i - 1] == 'o' else 1
-            # if a == 0:
-            #     if s == 0:
-            #         A[i] = A[i - 2]
-            #     elif s == 1:
-            #         A[i] = A[i - 2] ^ 1
-            # elif a == 1:
-            #     if s == 0:
-            #         A[i] = A[i - 2] ^ 1
-            #     elif s == 1:
-            #         A[i] = A[i - 2]
             A[i] = A[i - 2] ^ (a ^ s)
         am = A[1] ^ (A[0] ^ (L[0] == 'x'))
         if A[0] == A[N] and am == A[N - 1]:

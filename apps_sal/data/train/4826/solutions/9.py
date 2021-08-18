@@ -2,7 +2,8 @@ import re
 
 
 def count_robots(li):
-    legs, body, find = '[a-zA-Z]', '[|};&#[\]/><\(\)*]', []
+    legs, body, find = '[a-zA-Z]', '[ | }
+    &
     a = m = 0
     for i in li:
         r = re.search(r'automatik|mechanik', i, re.I)

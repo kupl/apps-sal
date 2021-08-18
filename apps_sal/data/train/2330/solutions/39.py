@@ -33,5 +33,3 @@ if graph is None:
     print((-1))
 else:
     print(('\n'.join(graph)))
-
-# 42

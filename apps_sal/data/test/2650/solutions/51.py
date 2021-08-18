@@ -1,7 +1,6 @@
 from collections import defaultdict
 import heapq
 3
-# -*- coding:utf-8 -*-
 
 
 def remove(hq, belongs, maxs, pd):

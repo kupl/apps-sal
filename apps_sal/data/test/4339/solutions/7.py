@@ -14,6 +14,5 @@ def go():
     return res // 2
 
 
-# t = int(input())
 for _ in range(1):
     print(go())

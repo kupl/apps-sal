@@ -27,7 +27,7 @@ for _ in range(t):
         else:
             print("YES")
     else:
-        if ls[0] < a:  # or ls[-1] > a+(2*b-1)*2:
+        if ls[0] < a:
             print("NO")
         elif len(ls) >= 2 and ls[-2] >= 2 * b:
             print("NO")

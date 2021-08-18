@@ -1,4 +1,3 @@
-# 再帰の深さが1000を超えそうなときはこれをやっておく
 import sys
 sys.setrecursionlimit(10**7)
 

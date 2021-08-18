@@ -10,9 +10,7 @@ for i, a in enumerate(A):
     for j in range(a):
         out.append(i + 1)
 
-# print(out)
 out = np.array(out).reshape((H, W))
-# print(out, out.shape)
 
 sign = 1
 for li in out:

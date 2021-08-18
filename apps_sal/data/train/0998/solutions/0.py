@@ -18,12 +18,6 @@ for i in range(q):
         dc[j] += k
         if mec < dc[j]:
             mec = dc[j]
-# m=max(list(dr.values()))+max(list(dc.values()))
 
-# for i in range(n):
-#     for j in range(n):
-#         ar[i][j]=dr[i+1]+dc[j+1]
-#         if ar[i][j]>m:
-#             m=ar[i][j]
 
 print(mer + mec)

@@ -1,14 +1,14 @@
 h, w = list(map(int, input().split()))
 
-matrix = [list('#' * (w + 2))]
-count_sharp = 0
+matrix = [list('
+count_sharp=0
 for _ in range(h):
-    C = list(input())
-    count_sharp += C.count('#')
-    matrix.append(['#'] + C + ['#'])
-matrix.append(list('#') * (w + 2))
+    C=list(input())
+    count_sharp += C.count('
+    matrix.append(['
+matrix.append(list('
 
-B = [[] for _ in range(10000)]
+B=[[] for _ in range(10000)]
 
 
 for i in range(h + 2):
@@ -23,23 +23,22 @@ for i in range(h + 2):
             if matrix[i + 1][j] == '.':
                 B[100 * i + j].append(100 * (i + 1) + j)
 
-# print(matrix)
 
 
 def solver(matrix, h, w, count_):
-    path = [10000000] * 10000
-    depth = 0
-    path[101] = 0
-    reached = [101]
-    stack = []
+    path=[10000000] * 10000
+    depth=0
+    path[101]=0
+    reached=[101]
+    stack=[]
     stack.append(101)
     while len(stack) > 0:
         depth += 1
         for _ in range(len(stack)):
-            val = stack.pop(0)
+            val=stack.pop(0)
             for j in matrix[val]:
                 if j not in set(reached):
-                    path[j] = min(depth, path[j])
+                    path[j]=min(depth, path[j])
                     reached.append(j)
                     stack.append(j)
 

@@ -24,8 +24,3 @@ class Cashier:
             self.discount_count = self.discount_limit
 
         return bill
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

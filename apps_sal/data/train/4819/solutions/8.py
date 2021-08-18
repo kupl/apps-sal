@@ -11,7 +11,4 @@ class SelfClosing(object):
         self._jar.close_jar()
 
 
-### OR ###
-
-
 SelfClosing = type("SelfClosing", (object,), {"__init__": lambda s, j: (setattr(s, "j", j), setattr(s, "take", s.j.take))[0], "__enter__": lambda s: (s.j.open_jar(), s)[1], "__exit__": lambda s, *a: s.j.close_jar()})

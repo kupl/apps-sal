@@ -20,7 +20,6 @@ for s in p:
     else:
         head = que.pop()
 
-        # print(head)
         ans.append(head[1])
 
 print(*ans)

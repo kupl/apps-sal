@@ -31,6 +31,3 @@ def solve(n):
 
 x, y = solve(int(input()))
 print(x, y)
-
-# for i in range(21):
-#   print(i, solve(i))

@@ -5,8 +5,6 @@ class Solution:
         def firstscore(i, j):
             if i >= j:
                 return 0
-            # if j == i+1 and j < len(piles): #because [i, j)
-            #     return piles[i]
             if (i, j) in cache:
                 return cache[i, j]
             res = max(piles[i] + min(firstscore(i + 2, j), firstscore(i + 1, j - 1)),

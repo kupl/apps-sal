@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -15,7 +14,6 @@ def main():
     xyz = [None for _ in range(N)]
     for i in range(N):
         xyz[i] = list(map(int, input().split()))
-    # print(xyz)
     ans = 0
     for i in range(2**3):
         tmp = [0] * N

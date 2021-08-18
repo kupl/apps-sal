@@ -7,8 +7,6 @@ for _ in range(N):
     x, y = list(map(int, input().split()))
     ps.append((x, y))
 
-# 2点を直径とする円の中心と半径を求める
-
 
 def circleThrough2Points(x1, y1, x2, y2):
     if x1 == x2 and y1 == y2:
@@ -19,7 +17,6 @@ def circleThrough2Points(x1, y1, x2, y2):
     return px, py, r
 
 
-# 3点を通る円の中心と半径を求める
 def circleThrough3Points(x1, y1, x2, y2, x3, y3):
     a, b, c, d, e, f = x1, y1, x2, y2, x3, y3
     a2, b2, c2, d2, e2, f2 = a * a, b * b, c * c, d * d, e * e, f * f

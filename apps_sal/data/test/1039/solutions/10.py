@@ -1,4 +1,3 @@
-# 深さ優先探索
 N = int(input())
 links = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
@@ -23,4 +22,3 @@ for _ in range(Q):
     x, y = list(map(int, input().split()))
     result.append(d[x] + d[y])
 print(('\n'.join(str(v) for v in result)))
-#print(*result, sep='\n')

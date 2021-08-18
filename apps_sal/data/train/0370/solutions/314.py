@@ -1,11 +1,8 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        # common factor as key, value stored in a set
         parents = list(range(max(A) + 1))
 
         def find(x):
-            # find the parent/root of x
-            # does path compression simultaneously
             while parents[x] != x:
                 parents[x] = parents[parents[x]]
                 x = parents[x]

@@ -10,7 +10,6 @@ def main():
     Q, K = list(map(int, input().split()))
     K -= 1
 
-    # import
     from collections import deque
 
     que = deque([K])

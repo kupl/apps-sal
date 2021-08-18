@@ -11,5 +11,4 @@ class Solution:
             temp1.reverse()
             temp = s + ['1'] + temp1
             s = temp
-        # print(s)
         return s[k - 1]

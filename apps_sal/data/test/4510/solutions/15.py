@@ -77,7 +77,6 @@ for i in a:
             j += 1
             st.append(i)
             f[i] = 1
-    # print(st)
 print(len(st) - j)
 for i in range(len(st) - 1, j - 1, -1):
     print(st[i], end=' ')

@@ -26,8 +26,6 @@ else:
     l.append(((x1 - xB)**2 + (yA - y2)**2)**0.5 + abs(yA - y1) + abs(x2 - xB))
 
     l.append(((xA - x2)**2 + (y1 - yB)**2)**0.5 + abs(x1 - xA) + abs(y2 - yB))
-    # print(l[-1])
-    # print(l)
     print(min(l))
 
     '''

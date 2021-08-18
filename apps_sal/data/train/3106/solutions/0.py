@@ -1,6 +1,3 @@
-# Stirling numbers of second kind
-# http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html
-# S(n,k)=1/(k!)sum_(i=0)^k(-1)^i(k; i)(k-i)^n
 from math import factorial as fact
 
 

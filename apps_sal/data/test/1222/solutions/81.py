@@ -6,22 +6,6 @@ def input_nums(): return list(map(int, input().split()))
 
 def main():
     K = int(input())
-    # cnt = 0
-    # dq = deque(['1','2','3','4','5','6','7','8','9'])
-    # while cnt < K:
-    #     cnt += 1
-    #     d = dq.popleft()
-    #     a = int(d[-1])
-    #     if a == 0:
-    #         dq.append(d+str(0))
-    #         dq.append(d+str(1))
-    #     elif a == 9:
-    #         dq.append(d+str(8))
-    #         dq.append(d+str(9))
-    #     else:
-    #         for i in range(a-1, a+2):
-    #             dq.append(d+str(i))
-    # print(d)
 
     runrun_lst = []
 

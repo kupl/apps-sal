@@ -1,5 +1,4 @@
 def problem(a):
-    # Easy Points ^_^
     try:
         if type(a) != str:
             a = float(a) * 50 + 6

@@ -5,11 +5,10 @@ from itertools import combinations_with_replacement as Cr
 def __starting_point():
     n, c = list(map(int, Si.readline().split()))
 
-    S = tuple(map(int, Si.readline().split()))  # score
-    T = tuple(map(int, Si.readline().split()))  # time
+    S = tuple(map(int, Si.readline().split()))
+    T = tuple(map(int, Si.readline().split()))
     L, R = 0, 0
     for i in range(n):
-        # print(S[i],sum(T[:i+1])*c,S[n-1-i],sum(T[n-1-i:])*c)
         L += max(0, S[i] - sum(T[:i + 1]) * c)
         R += max(0, S[n - 1 - i] - sum(T[n - 1 - i:]) * c)
     if L > R:
@@ -22,13 +21,12 @@ def __starting_point():
 
 '''
     A = input()
-    stack = []      #Real Stack
+    stack = []      
     Graph = {
         ')':'('
         }
     count = 0
     def black(A):
-        #p for possibility
         stak =[]
         for e in A:
             if e in ['(']:
@@ -37,14 +35,13 @@ def __starting_point():
                 if stak==[] or Graph[e]!=stak[-1]:
                     p=False
                 else:
-                    stak.pop(len(stak)-1)     #pop last 
+                    stak.pop(len(stak)-1)     
         if len(stak) ==0:
             p=True
         else:
             p=False
         if not p:   return [0]
         else:
-            #stak is not empty
             stak = []
             count = []
             for e in range(len(A)):

@@ -6,11 +6,11 @@ class Solution:
         visited = [-1] * n
 
         def dfs(i):
-            visited[i] = 0  # i is visiting
+            visited[i] = 0
             for t in graph[i]:
                 if visited[t] == 0 or (visited[t] == -1 and not dfs(t)):
                     return False
-            visited[i] = 1  # i visited already
+            visited[i] = 1
             terminal.append(i)
             return True
 

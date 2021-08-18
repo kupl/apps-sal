@@ -9,7 +9,6 @@ def next(x):
         r -= 1
     if (r == -len(x) - 1):
         y = ['1'] + ['0'] * (len(x) - 1) + ['9']
-        # print('\t\ty')
         return y
     x[r] = str(int(x[r]) + 1)
     x[len(x) + r + 1:] = ['0'] * (abs(r + 1))
@@ -22,5 +21,4 @@ x = ['1', '9']
 k = int(input())
 for i in range(k - 1):
     x = next(x)
-    #print('\t\t', x)
 print(''.join(x))

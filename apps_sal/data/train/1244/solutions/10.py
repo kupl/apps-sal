@@ -32,8 +32,6 @@ def main():
     for i in range(1, 10**5 + 2):
         pos[i] = pos[i] + pos[i - 1]
         ans = (ans + pos[i]) % mod
-    # print(neg[0:5])
-    # print(pos[0:5])
     print(ans)
 
 

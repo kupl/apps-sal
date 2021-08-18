@@ -5,10 +5,10 @@ class Solution:
         l = 0
         r = len(nums) - 1
         mod = 10 ** 9 + 7
-        while l <= r:  # min和max值可以相等！！
+        while l <= r:
             if nums[l] + nums[r] > target:
                 r -= 1
             else:
                 res += 2 ** (r - l) % mod
-                l += 1  # 这个开头的最大值！！
+                l += 1
         return res % mod

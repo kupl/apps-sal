@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 
-# Baqir Khan
-# Software Engineer (Backend)
 
 from collections import defaultdict
 from sys import stdin

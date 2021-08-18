@@ -1,7 +1,7 @@
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
-        n = len(arr)  # panjang dari array
-        goodTriplet = 0  # jumlah goodTriplet
+        n = len(arr)
+        goodTriplet = 0
 
         for i in range(n - 2):
             for j in range(i + 1, n - 1):

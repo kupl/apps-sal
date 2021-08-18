@@ -1,6 +1,5 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        # DFS
         self.N = len(locations)
         self.finish = finish
         self.M = dict()

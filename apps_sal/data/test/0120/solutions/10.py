@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def solve():
     _ = input()
     genom = list(input().strip())

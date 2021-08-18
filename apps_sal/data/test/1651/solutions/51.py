@@ -33,11 +33,6 @@ def get_int_multi():
 def get_string_char_list():
     return list(str(input()))
 
-# print("{} {}".format(a, b))
-# a_list = [0] * a
-# dp = [[0] * a for _ in range(b)]
-# pow(8, -1, c_mod)) 逆元。MOD計算の割り算の際にかける
-
 
 sys.setrecursionlimit(10 ** 6)
 

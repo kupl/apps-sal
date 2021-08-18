@@ -17,13 +17,11 @@ class Solution:
             for i in range(1, d + 1):
                 if node + i >= n or arr[node + i] >= arr[node]:
                     break
-                # print(node,i+node)
                 ans = max(ans, solve(i + node))
 
             for i in range(1, d + 1):
                 if node - i < 0 or arr[node - i] >= arr[node]:
                     break
-                # print(node,-i+node)
                 ans = max(ans, solve(node - i))
 
             dp[node] = 1 + ans
@@ -33,5 +31,4 @@ class Solution:
         for i in range(n):
             solve(i)
 
-        # print(dp)
         return max(dp)

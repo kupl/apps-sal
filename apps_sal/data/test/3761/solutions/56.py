@@ -1,6 +1,4 @@
-#!python3
 
-# input
 S = input()
 X, Y = list(map(int, input().split()))
 
@@ -38,12 +36,10 @@ def main():
     side = True
     i = d
     while i < n:
-        # change
         while i < n and S[i] == "T":
             side = not side
             i += 1
 
-        # forward
         c = 0
         while i < n and S[i] == "F":
             c += 1

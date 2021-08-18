@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 for j in range(t):
@@ -10,7 +9,6 @@ for j in range(t):
     rak = [0, 0]
 
     for i in range(steps):
-        # print(route[i])
         if route[i] == 'L':
             rak[0] -= 1
         elif route[i] == 'R':
@@ -19,8 +17,6 @@ for j in range(t):
             rak[1] += 1
         elif route[i] == 'D':
             rak[1] -= 1
-
-        #print(rak[0] , rak[1])
 
     if rak[0] == rx and rak[1] == ry:
         print("Case " + str(j + 1) + ": " + "REACHED")

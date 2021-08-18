@@ -5,7 +5,6 @@ x = list(map(int, input().split()))
 l = int(input())
 q = int(input())
 
-# r[i][j]: jから(2**i)日で行ける右端
 r = [[i for i in range(n)] for _ in range(18)]
 for j in range(n):
     r[0][j] = bisect(x, x[j] + l) - 1

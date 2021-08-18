@@ -20,9 +20,7 @@ while t:
     n, m = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a.sort()
-    # mn = min(a)
     mn = fgcd(a)
-    # print(mn)
     c = 0
     if(n >= mn):
         c = n - mn

@@ -48,7 +48,6 @@ def solve():
     t = 1
     for it in range(t):
         n = nu()
-        # PRITHIBIR JOTO GAN*U SETTER EITA TAR MODDHE EK NUMBER
         xp = [15, 14, 12, 13, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5, 6, 7, 16, 17]
         print(xp[n])
         continue

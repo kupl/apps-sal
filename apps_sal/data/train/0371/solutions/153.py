@@ -3,8 +3,6 @@ from collections import deque
 
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        # bfs  put routes contain S into q
-        # from existing bus -> next bus until there is T
         if not routes:
             return -1
 
@@ -29,7 +27,6 @@ class Solution:
                 if T in r[bus]:
                     return res
 
-                # potential transfer
                 for stop in r[bus]:
                     for idx, route in enumerate(r):
                         if stop in route and idx not in visited:

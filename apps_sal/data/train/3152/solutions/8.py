@@ -1,6 +1,6 @@
 def interpreter(tape, array):
-    curloc = 0  # current location in array
-    ret = list(array)  # list to be returned
+    curloc = 0
+    ret = list(array)
     while True:
         for x in tape:
             if curloc == len(array):

@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-# SOLUTION
-
 
 def main():
     n, = read()
@@ -26,8 +24,6 @@ def main():
         print("Infinity")
         return
     print(mx)
-
-# HELPERS
 
 
 def read(callback=int):

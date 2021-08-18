@@ -7,7 +7,6 @@ class Solution:
         n = math.floor(math.log(m, 2))
         res = 0
         while n >= 1:
-            # print(nums)
             for i, num in enumerate(nums):
                 if num >= 2**n:
                     if num % 2 == 1:

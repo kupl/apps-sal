@@ -26,11 +26,11 @@ def case():
                         print('No')
                         return
                     elif M[ny][nx] != 'B':
-                        M[ny][nx] = '#'
+                        M[ny][nx] = '
 
-    if M[-1][-1] == '#':
-        print('No' if good else 'Yes')
-        return
+    if M[-1][-1] == '
+    print('No' if good else 'Yes')
+    return
 
     V = [[False] * m for _ in range(n)]
     V[n - 1][m - 1] = True
@@ -45,8 +45,8 @@ def case():
 
             if nx < 0 or ny < 0 or nx >= m or ny >= n:
                 continue
-            if M[ny][nx] == '#' or V[ny][nx]:
-                continue
+            if M[ny][nx] == '
+            continue
             V[ny][nx] = True
             Q.append((nx, ny))
 

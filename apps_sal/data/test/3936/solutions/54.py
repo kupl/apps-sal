@@ -14,7 +14,6 @@ while(now < n):
         u.append(1)
         now += 2
 
-# print(u)
 
 ans = 1
 

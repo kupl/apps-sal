@@ -12,7 +12,6 @@ class Solution:
                 else:
                     flow += 1
                 if flow >= k:
-                    # enough adjacent flowers to make bouque
                     flow = 0
                     bouq += 1
                     if bouq == m:

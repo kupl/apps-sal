@@ -1,10 +1,4 @@
-#import numpy as np
-#import math
-#from decimal import *
-#from numba import njit
 from collections import Counter
-
-# @njit
 
 
 def main():

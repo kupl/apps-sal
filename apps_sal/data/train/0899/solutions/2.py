@@ -12,4 +12,3 @@ for _ in range(t):
         else:
             ans = max(ans, (s // (i + 1)) + 1)
     print(ans)
-    # case 1

@@ -31,7 +31,6 @@ def main():
         heapq.heappush(A, discounted)
 
     print(sum(A) * -1)
-#
 
 
 def __starting_point():

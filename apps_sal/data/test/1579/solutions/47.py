@@ -37,7 +37,7 @@ class UnionFind:
     def groups(self):
         if isinstance(self.parent, list):
             return list(map(lambda x: x < 0, self.parent)).count(True)
-        else:  # self.parent: defaultdict
+        else:
             return list(map(lambda x: x < 0, self.parent.values())).count(True)
 
 

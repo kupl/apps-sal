@@ -3,7 +3,6 @@ class Solution:
         arrSize = len(s)
         suffArr = []
 
-        # first construct a suffix array
         for i in s:
             suffArr.append(ord(i))
 
@@ -23,21 +22,18 @@ class Solution:
         ret = 0
 
         while True:
-            maxNum = max(currArr)  # find the max value
+            maxNum = max(currArr)
             maxInds = []
 
-            # find all the maximum indices
             for i in range(len(currArr)):
                 if maxNum == currArr[i]:
                     maxInds.append(i)
 
-            # if there's only one entry
             if len(maxInds) == 1:
                 return str(s[maxInds[0]:])
 
             blockSize += 1
 
-            # otherwise, we have to keep comparing
             for i in maxInds:
                 if i + blockSize >= arrSize:
                     currArr[i] = sumArr[i]

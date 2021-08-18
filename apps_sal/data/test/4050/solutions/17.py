@@ -26,7 +26,6 @@ def main():
                     store[z][1].append((y, x))
             if bo:
                 store.append([total, [(y, x)]])
-    # print(store)
     biggest = 0
     big_val = []
     for x in range(len(store)):

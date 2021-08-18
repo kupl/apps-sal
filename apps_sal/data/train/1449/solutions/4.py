@@ -1,5 +1,3 @@
-#import psyco
-# psyco.full()
 
 for _ in range(int(input())):
     s = input().strip()

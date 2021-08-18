@@ -14,7 +14,6 @@ for _ in range(x):
             if n[i] == n[i - 1]:
                 c += 1
             else:
-                # print(c,l,i)
                 l = max(l, c)
                 c = 1
         l = max(l, c)

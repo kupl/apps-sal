@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import math
 import sys
 sys.setrecursionlimit(10**6)
@@ -34,8 +33,6 @@ for i in range(0, 10**5 + 5):
 c_sum = [0]
 for i in range(1, len(c)):
     c_sum.append(c[i] + c_sum[-1])
-# print(c)
-# print(c_sum)
 
 
 for i in range(q):

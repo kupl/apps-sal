@@ -16,7 +16,6 @@ def median_of_medians(N: int, A: list) -> int:
             res_nega += r
         return res_nega
 
-    # binary search
     a_sorted = sorted(A)
     left = 0
     right = N

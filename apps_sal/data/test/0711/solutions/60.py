@@ -49,7 +49,6 @@ def resolve():
     N, M = LI()
 
     pf = primeFactorization(M)
-    # 素因数ごとに、N個のグループにどう振り分けるかを計算する
     ans = 1
     for i in list(pf.values()):
         ans *= combMod(i + N - 1, i, MOD)

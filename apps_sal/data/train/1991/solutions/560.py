@@ -1,5 +1,4 @@
 class Solution:
-    # We always get plus 1 if we're on the finish, because we have the option of never moving again.
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         def cost(i, j): return abs(locations[i] - locations[j])
 
@@ -7,7 +6,6 @@ class Solution:
         def dfs(i, f):
             if f < abs(cost(i, finish)):
                 return 0
-            # if f<0: return 0
             return sum([dfs(j, f - cost(i, j)) for j in range(len(locations)) if j != i]) + (i == finish)
         return dfs(start, fuel) % (10**9 + 7)
 

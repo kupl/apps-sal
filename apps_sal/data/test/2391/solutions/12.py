@@ -42,7 +42,6 @@ class KMP:
         i = 0
         L = len(S)
         while m + i < L:
-            # print(m, i)
             if self.W[i] == S[m + i]:
                 i += 1
                 if i == self.L:
@@ -55,18 +54,6 @@ class KMP:
                 m = m + i - self.T[i]
                 if i > 0:
                     i = self.T[i]
-
-# def ok(x, i):
-#     for j in range(N):
-#         if A[(j + i) % N] ^ B[j] != x:
-#             return False
-#     return True
-#
-#
-# for i in range(N):
-#     x = A[i] ^ B[0]
-#     if ok(x, i):
-#         print(i, x)
 
 
 kmp = KMP(D)

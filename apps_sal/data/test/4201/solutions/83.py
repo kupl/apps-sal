@@ -11,7 +11,7 @@ for ii in range(1 << h):
                     continue
                 if (jj >> j & 1):
                     continue
-                if (s[i][j] == '#'):
+                if (s[i][j] == '
                     cnt += 1
 
         if cnt == k:

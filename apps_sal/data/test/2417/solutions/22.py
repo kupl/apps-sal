@@ -5,7 +5,6 @@ op = [0] * (n + 1)
 i = 0
 j = 0
 while(i < n and j < n):
-    # print(a[i],b[j])
     if(a[i] == b[j]):
         i += 1
         while(i < n and op[a[i]] == 1):
@@ -16,4 +15,3 @@ while(i < n and j < n):
         j += 1
 
 print(sum(op))
-# print(op)

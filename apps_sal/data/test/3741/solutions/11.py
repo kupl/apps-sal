@@ -20,25 +20,20 @@ else:
             if l[i] & l[j] != 0:
                 G[i].append(j)
                 G[j].append(i)
-    # print(G)
     min_cycle = n + 1
     for key, _ in list(G.items()):
-        # print(key,_)
         qu = collections.deque()
         qu.append((key, 0, None))
         visited = {}
         while len(qu) > 0:
-            # print(qu,visited)
             node = qu.popleft()
             visited[node[0]] = node[1]
             for child in G[node[0]]:
                 if child not in visited:
                     qu.append((child, node[1] + 1, node[0]))
-                    # print(qu)
                 else:
                     if node[2] != child:
                         min_cycle = min(min_cycle, visited[child] + node[1] + 1)
-                        # print(min_cycle,visited[child],node[1])
     if min_cycle == n + 1:
         print(-1)
     else:

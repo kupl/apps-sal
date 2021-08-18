@@ -1,4 +1,3 @@
-# coding:utf-8
 s = input()
 a = s.count('0')
 b = s.count('1')

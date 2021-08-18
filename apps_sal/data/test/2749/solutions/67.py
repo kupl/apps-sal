@@ -11,7 +11,6 @@ c = 1
 for a in alist:
     while a:
         if y < W:
-            # print(x,y)
             cmat[x][y] = c
             y += 1
             a -= 1
@@ -22,10 +21,8 @@ for a in alist:
 
     c += 1
 
-# print(cmat)
 for i in range(1, H, 2):
     cmat[i].reverse()
-# print(cmat)
 
 for i in range(H):
     print(*cmat[i])

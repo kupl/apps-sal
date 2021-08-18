@@ -14,11 +14,6 @@ class Solution:
                     parents[parx] = pary
                     if rank[parx] == rank[pary]:
                         rank[parx] += 1
-                # elif rank[parx] < rank[pary]:
-                #     parents[parx] = pary
-                # else:
-                #     parents[parx] = pary
-                #     rank[pary] += 1
 
         if not grid or not grid[0]:
             return False

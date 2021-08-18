@@ -13,11 +13,9 @@ for i in range(T):
     out_1, out_2 = [], []
     flag1, flag2 = True, True
     for c in range(len(s)):
-        # print out_1, out_2, flag1, flag2
         if c == 0:
             out_1.append(let_to_num[s[c]][0])
             out_2.append(let_to_num[s[c]][1])
-            # print out_1, out_2, '\n'
         else:
             if flag1:
                 conn_1 = set(connections[out_1[-1]])
@@ -28,7 +26,6 @@ for i in range(T):
                 else:
                     out_1.extend(list(conn_1.intersection(to_conn_1)))
 
-                # print 'out1',conn_1, to_conn_1, flag1, conn_1.intersection(to_conn_1)
             if flag2:
                 conn_2 = set(connections[out_2[-1]])
                 to_conn_2 = set(let_to_num[s[c]])
@@ -37,8 +34,6 @@ for i in range(T):
                     flag2 = False
                 else:
                     out_2.extend(list(conn_2.intersection(to_conn_2)))
-                # print 'out2', conn_2, to_conn_2, flag2, conn_2.intersection(to_conn_2)
-            # print out_1, out_2, flag1, flag2, '\n'
             if (not flag1) and (not flag2):
                 break
     if (not flag1) and (not flag2):

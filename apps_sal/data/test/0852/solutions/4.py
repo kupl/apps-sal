@@ -30,8 +30,6 @@ for _ in range(t):
                 modif = min(modif, 2 * k - modif)
 
                 depth = ddd[s] + modif
-                # if j==3:
-                #    print(depth, j)
                 if depth > l:
                     ok = 0
 

@@ -14,8 +14,6 @@ for i in range(1, 82):
         temp1 = temp1 + (int)(temp % 10)
         temp = (int)(temp / 10)
 
-    # print(temp2)
-    # print(temp1)
     if temp2 > 0 and temp2 < 1000000000 and temp1 == i:
         ans.add(temp2)
 

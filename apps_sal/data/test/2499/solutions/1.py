@@ -1,9 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 x = 0
-# for a in A:
-#     print(bin(a))
-# print()
 for a in A:
     x ^= a
 idx = 0
@@ -20,13 +17,9 @@ for i in range(59, -1, -1):
                 A[j] ^= a
         idx += 1
 s = 0
-# for a in A:
-#    print(bin(a))
 for a in A:
     s ^= a
-# print(f"s={bin(s)}")
 for i in range(60):
     if x >> i & 1 == 1 and s >> i & 1:
         s ^= 1 << i
-#print(x, s)
 print((x + (s << 1)))

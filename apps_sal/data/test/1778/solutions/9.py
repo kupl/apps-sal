@@ -11,13 +11,11 @@ for i in range(n * 2):
             Bs.pop()
         else:
             scores[1] += Bs.pop()
-        #scores[i%2] += Bs.pop()
     elif len(Bs) == 0:
         if is_a:
             scores[0] += As.pop()
         else:
             As.pop()
-        #scores[i%2] += As.pop()
     else:
         if As[-1] > Bs[-1]:
             if is_a:
@@ -29,5 +27,4 @@ for i in range(n * 2):
                 Bs.pop()
             else:
                 scores[1] += Bs.pop()
-#			scores[i%2] += Bs.pop()
 print(scores[0] - scores[1])

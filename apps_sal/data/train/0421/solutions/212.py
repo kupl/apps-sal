@@ -1,11 +1,6 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
 
-        # Recursively find all with the largest lecsographical order,
-
-        # when only one left => that is end of our substring
-
-        # store start index and end index
         all_same = True
         first_char = s[0]
         for c in s:

@@ -15,7 +15,6 @@ for i in range(1, w):
     else:
         dp[i] = min(a[i], su[i - 1] - su[i - l - 1])
     su[i] = su[i - 1] + dp[i]
-#    print(i, ' -- ', dp[i])
 res = inf
 
 for i in range(l, w):

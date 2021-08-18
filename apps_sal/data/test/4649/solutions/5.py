@@ -26,9 +26,6 @@ for m in range(q):
         if k3[i - 1] == 'B':
             k3 = k3 + 'R'
     minn = n
-    # print(k1)
-    # print(k2)
-    # print(k3)
     for i in range(n - k + 1):
         tec = 0
         for j in range(k):
@@ -48,7 +45,6 @@ for m in range(q):
         for j in range(k):
             if l[i + j] != k3[j]:
                 tec += 1
-                #print(l[i+j], k3[j])
         if tec < minn:
             minn = tec
     b.append(minn)

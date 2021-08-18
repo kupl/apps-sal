@@ -12,8 +12,8 @@ for i in range(1 << H):
                     continue
                 if (j >> q) & 1:
                     continue
-                if lis[p][q] == "#":
-                    cnt += 1
+                if lis[p][q] == "
+                cnt += 1
         if cnt == K:
             ans += 1
 print(ans)

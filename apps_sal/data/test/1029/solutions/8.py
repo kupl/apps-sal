@@ -23,6 +23,3 @@ while i < len(a):
         ans = 1
 
 print(ans)
-
-
-# Made By Mostafa_Khaled

@@ -1,5 +1,4 @@
 n, a, b = list(map(int, input().split()))
-# Pick any i,j such that i*a + j*b == n
 choose = None
 for i in range(n + 1):
     if a * i > n:
@@ -16,7 +15,6 @@ if choose:
         arr.append(b)
     got = 0
     answer = []
-    # print(arr)
     for x in arr:
         cur = []
         for i in range(got + 1, got + x + 1):

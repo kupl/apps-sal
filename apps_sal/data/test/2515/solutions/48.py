@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def pre_calcularion():
     num_max = 10 ** 5
     lst = [True] * (num_max + 1)

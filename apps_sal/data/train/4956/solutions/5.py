@@ -1,6 +1,5 @@
 def protein_synthesis(dna):
 
-    # Transcribe
     table = str.maketrans('GCAT', 'CGUA')
     pressed_rna = dna.translate(table)
 
@@ -12,7 +11,6 @@ def protein_synthesis(dna):
 
     rna = ''.join(rna).strip()
 
-    # Translate
     protein = []
     for rna_bit in rna.split(' '):
         protein_bit = CODON_DICT.get(rna_bit, None)

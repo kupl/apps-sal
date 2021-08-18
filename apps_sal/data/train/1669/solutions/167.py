@@ -17,8 +17,6 @@ class Solution:
         while card_counts:
             min_val = keys[0]
             for hand in range(min_val, min_val + W):
-                # print(hand[i])
-                # print(card_counts)
                 if hand not in card_counts:
                     return False
 

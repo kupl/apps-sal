@@ -1,6 +1,5 @@
 def sumGCD(N, K, M):
     dp = [None for _ in range(K + 1)]
-    # dp[i]:gcd(A) % i == 0を満たすAの個数
     for i in reversed(list(range(1, K + 1))):
         dp[i] = pow(K // i, N, M)
         for j in range(2, K // i + 1):

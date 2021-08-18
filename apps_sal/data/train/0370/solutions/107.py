@@ -1,17 +1,5 @@
 def get_primes(max_num):
     return []
-#     primes = []
-#     possible_primes = [True for _ in range(max_num + 1)]
-#     value = 2
-#     while value <= max_num:
-#         if possible_primes[value]:
-#             primes.append(value)
-#             for multiplier in range(2, max_num // value + 1):
-#                 possible_primes[multiplier * value] = False
-
-#         value += 1
-
-#     return primes
 
 
 def get_prime_factors(num, primes):
@@ -20,19 +8,6 @@ def get_prime_factors(num, primes):
             return list(set(get_prime_factors(num // i, primes) + [i]))
 
     return [num]
-#     if num == 1:
-#         return [1]
-
-#     prime_factors = set()
-
-#     for prime in primes:
-#         if num < prime:
-#             break
-#         while num % prime == 0:
-#             num = num // prime
-#             prime_factors.add(prime)
-
-#     return list(prime_factors)
 
 
 class DisjointSet:

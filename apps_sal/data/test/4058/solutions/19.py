@@ -25,7 +25,6 @@ if c.count(0) == 0:
             i = j
             break
     while True:
-        # print(i)
         if i + r - 1 >= n - 1:
             break
 

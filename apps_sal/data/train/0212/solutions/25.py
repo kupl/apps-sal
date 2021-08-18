@@ -7,7 +7,7 @@ class Solution:
 
         for i, x in enumerate(A):
             for j in range(i):
-                if x % A[j] == 0:  # A[j] will be left child
+                if x % A[j] == 0:
                     right_child = x / A[j]
                     if right_child in reverse_map:
                         dp[i] += dp[j] * dp[reverse_map[right_child]]

@@ -14,9 +14,7 @@ while (True):
     if (t[-1] >= p):
         break
 
-    # print(i, t[-1])
 
-# print(d, l)
 a = 0
 b = 0
 neg = []
@@ -30,7 +28,6 @@ for i in range(d):
 ans = []
 done = True
 for i in range(d - 1, -1, -1):
-    # print(i)
     if (i == 0):
         if p in l[i]:
             ans.append(p)
@@ -39,14 +36,11 @@ for i in range(d - 1, -1, -1):
         break
 
     for j in range(k):
-        # print(j, neg[i - 1], pos[i - 1])
         if (l[i][j] + neg[i - 1] <= p and l[i][j] + pos[i - 1] >= p):
             ans.append(j)
             p -= l[i][j]
-            # print(p, j)
             break
 
-# print(done, ans)
 
 if (done and len(ans) == d):
     while (ans[0] == 0):

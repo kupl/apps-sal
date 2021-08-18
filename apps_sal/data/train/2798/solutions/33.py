@@ -9,5 +9,3 @@ def to_alternating_case(string):
         else:
             c += k
     return c
-
-    # your code here

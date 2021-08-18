@@ -1,6 +1,5 @@
 k, a, b, v = list(map(int, input().split()))
 
-#k, a, b, v = 3, 10, 1, 3
 rezult = 0
 
 

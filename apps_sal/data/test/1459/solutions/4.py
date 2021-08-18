@@ -1,6 +1,5 @@
 import sys
 my_file = sys.stdin
-##my_file = open("input.txt", "r")
 num = int(my_file.readline())
 dist = my_file.readline().strip("\n").split(" ")
 coords = my_file.readline().strip("\n").split(" ")
@@ -12,11 +11,8 @@ if start > end:
     temp = start
     start = end
     end = temp
-##print(dist, "\n", coords)
 len1 = sum(dist[start:end:])
 len2 = sum(dist[end:len(dist):]) + sum(dist[:start:])
-# print(sum(dist[:start:]))
-##print(len1, len2)
 if len1 < len2:
     print(len1)
 else:

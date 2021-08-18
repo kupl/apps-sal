@@ -27,7 +27,6 @@ def main():
     L = set(L)
 
     def warshall_floyd(d):
-        # d[i][j]: iからjへの最短距離
         for k in range(N):
             for i in range(N):
                 for j in range(N):

@@ -13,7 +13,7 @@ class Solution:
         data = sorted(list(zip(speed, efficiency)), key=lambda x: -x[1])
 
         for s, e in data:
-            if len(heap) < k:  # always add this eng.
+            if len(heap) < k:
                 cur_sum += s
                 heapq.heappush(heap, s)
                 if cur_sum * e > best:

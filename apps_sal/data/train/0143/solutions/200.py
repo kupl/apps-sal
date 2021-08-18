@@ -17,6 +17,5 @@ class Solution(object):
             while right < n and basket.get(tree[right], 0) > 0:
                 basket.update({tree[right]: basket.get(tree[right], 0) + 1})
                 right += 1
-            # print(left, right, basket)
             ans = max(ans, right - left)
         return ans

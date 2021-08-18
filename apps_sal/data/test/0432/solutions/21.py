@@ -1,4 +1,3 @@
-# 1027D
 import collections
 
 

@@ -1,6 +1,4 @@
 def solve_dp(needle, haystack):
-    # let prefixes[h][n] = number of n-letters-long prefixes
-    #                      ending in h-th position of haystack
     N, H = len(needle), len(haystack)
     prefixes = [[1] + N * [0] for h in range(H)]
 

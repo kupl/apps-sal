@@ -5,8 +5,6 @@ class Solution:
         :rtype: bool
         """
 
-   #    public CONCISE solution....
-
         if num <= 0:
             return False
         while num % 2 == 0:
@@ -18,7 +16,6 @@ class Solution:
         return num == 1
 
         """
-    #    my solution......a bit too slow....
     
          if num <= 0:
              return False

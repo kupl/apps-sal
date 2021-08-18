@@ -23,7 +23,6 @@ for i in range(N, -1, -1):
         tmp += 2 ** i
 
 M = len(edges)
-# assert N <= 20 and M <= 60
 print((N, M))
 for edge in edges:
     print((*edge))

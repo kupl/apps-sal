@@ -1,5 +1,4 @@
 3
-# coding=utf-8
 
 __metaclass__ = type
 __author__ = 'xdlove'
@@ -13,7 +12,7 @@ for R in range(n):
     if res[R] == 0:
         num_0 += 1
     while num_0 > k:
-        if r - l < R - L:  # [l,r)
+        if r - l < R - L:
             l, r = L, R
         if res[L] == 0:
             num_0 -= 1

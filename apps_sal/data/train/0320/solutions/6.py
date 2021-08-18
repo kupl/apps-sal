@@ -6,7 +6,6 @@ class Solution:
         for n in nums:
             max_num = max(max_num, n)
             while n > 0:
-                # drop lowest bit
                 n = n & (n - 1)
                 ops += 1
 

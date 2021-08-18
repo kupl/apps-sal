@@ -1,13 +1,12 @@
 class Solution:
     def shortestSubarray(self, A: List[int], K: int) -> int:
-        # make p array which is a cumulative sum
         p = [0]
 
         for i in range(len(A)):
             p.append(p[-1] + A[i])
 
         q = []
-        result = len(A) + 1  # a high value
+        result = len(A) + 1
         for i in range(len(A) + 1):
 
             while(q and p[i] - p[q[0]] >= K):

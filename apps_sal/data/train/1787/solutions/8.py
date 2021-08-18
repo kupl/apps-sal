@@ -1,5 +1,4 @@
 
-# https://integratedmlai.com/matrixinverse/
 def identity_matrix(n):
     """
     Creates and returns an identity matrix.
@@ -25,20 +24,15 @@ def invert_matrix(A, tol=None):
     I = identity_matrix(n)
     IM = copy_matrix(I)
 
-    # Section 3: Perform row operations
-    indices = list(range(n))  # to allow flexible row referencing ***
-    for fd in range(n):  # fd stands for focus diagonal
+    indices = list(range(n))
+    for fd in range(n):
         fdScaler = 1.0 / AM[fd][fd]
-        # FIRST: scale fd row with fd inverse.
-        for j in range(n):  # Use j to indicate column looping.
+        for j in range(n):
             AM[fd][j] *= fdScaler
             IM[fd][j] *= fdScaler
-        # SECOND: operate on all rows except fd row as follows:
         for i in indices[0:fd] + indices[fd + 1:]:
-            # *** skip row with fd in it.
-            crScaler = AM[i][fd]  # cr stands for "current row".
+            crScaler = AM[i][fd]
             for j in range(n):
-                # cr - crScaler * fdRow, but one element at a time.
                 AM[i][j] = AM[i][j] - crScaler * AM[fd][j]
                 IM[i][j] = IM[i][j] - crScaler * IM[fd][j]
     return IM

@@ -20,7 +20,6 @@ class Solution:
             cost -= runningCost
             rotations += 1
             profits.append((rotations, cost))
-        # print(profits)
         p_ans = float('-inf')
         r_ans = None
         for p in profits:

@@ -16,10 +16,10 @@ if n >= 4:
 if n >= 1:
     print("O.", end="")
 else:
-    print("#.", end="")
+    print("
 for i in range(1, 11):
     if i > a:
-        print("#.", end="")
+        print("
     else:
         print("O.", end="")
 print("|D|)")
@@ -28,10 +28,10 @@ print("|", end="")
 if n >= 2:
     print("O.", end="")
 else:
-    print("#.", end="")
+    print("
 for i in range(1, 11):
     if i > b:
-        print("#.", end="")
+        print("
     else:
         print("O.", end="")
 print("|.|")
@@ -40,17 +40,17 @@ print("|", end="")
 if n >= 3:
     print("O.", end="")
 else:
-    print("#.", end="")
+    print("
 print("......................|")
 
 print("|", end="")
 if n >= 4:
     print("O.", end="")
 else:
-    print("#.", end="")
+    print("
 for i in range(1, 11):
     if i > c:
-        print("#.", end="")
+        print("
     else:
         print("O.", end="")
 print("|.|)")

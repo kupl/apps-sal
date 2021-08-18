@@ -1,4 +1,3 @@
-#a, b, k = map(int, input().split( ))
 import math
 
 
@@ -10,7 +9,6 @@ right = [0] * (n + 1)
 for i in range(n):
     left[i + 1] = (math.gcd(left[i], a[i]))
     right[n - i - 1] = (math.gcd(right[n - i], a[n - 1 - i]))
-#print(left, right)
 
 ans = 0
 for i in range(n):

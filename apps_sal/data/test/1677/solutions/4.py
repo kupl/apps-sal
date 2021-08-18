@@ -45,6 +45,3 @@ for i in range(n):
         p[b] = 0
 
 print(d + 1)
-
-
-# Made By Mostafa_Khaled

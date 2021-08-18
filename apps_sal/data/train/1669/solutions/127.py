@@ -23,4 +23,4 @@ class Solution:
                     del cnt[i]
             if not cnt:
                 return True
-        return False  # never happen
+        return False

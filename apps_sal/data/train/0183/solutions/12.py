@@ -14,5 +14,4 @@ class Solution:
                 else:
                     dp[i][j] = max(dp[i - 1][j], dp[i][j - 1], nums1[i] * nums2[j], nums1[i] * nums2[j] + dp[i - 1][j - 1])
             res = max(res, dp[i][-1])
-        # print(dp)
         return res

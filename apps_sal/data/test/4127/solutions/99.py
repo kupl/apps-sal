@@ -1,5 +1,5 @@
 
-M, N = input().split()   # 2つ整数の読み取り
+M, N = input().split()
 A = int(M)
 B = N.replace(".", "")
 B = int(B)

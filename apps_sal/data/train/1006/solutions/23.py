@@ -1,5 +1,3 @@
-# your code goes here
-# your code goes here
 for _ in range(int(input())):
     n, d = map(int, input().split())
     l = list(map(int, list(str(n))))

@@ -18,7 +18,6 @@ def main():
         cnt += 1
         x = r
 
-    # print(c)
     for _ in range(k):
         u, v = [int(_) for _ in input().split()]
         u -= 1

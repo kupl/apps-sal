@@ -13,7 +13,6 @@ while True:
             a = c
         else:
             b = c
-#	print(a)
     if (a % 2 != 0) & (e * a + a * (a - 3) // 2 == N):
         B = True
         print(a * e)

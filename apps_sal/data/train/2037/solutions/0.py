@@ -1,4 +1,3 @@
-# python3
 import sys
 from collections import namedtuple
 
@@ -48,7 +47,7 @@ def main():
     n, = readline()
 
     floor = 1
-    positions = {(): 0}  # empty elevator, time = 0
+    positions = {(): 0}
     for (a, b) in readlines():
         max_acceptable_time = min(positions.values()) + 16 - abs(floor - a)
 

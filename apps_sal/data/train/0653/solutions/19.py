@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input().strip())
 l = [int(x) for x in input().strip().split()]
 p = int(input().strip())

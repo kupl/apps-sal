@@ -4,4 +4,3 @@ if N % X == 0:
 else:
     answer = (N // X + 1) * T
 print((int(answer)))
-# 小数点が出てしまう

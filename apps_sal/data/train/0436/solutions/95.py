@@ -4,8 +4,6 @@ sys.setrecursionlimit(1500000)
 
 class Solution:
     def minDays(self, n: int) -> int:
-        # 我当时看到数据范围n觉得直接dp(n)会超时因此我就没做。
-        # 但是实际上每次都是整除2整除3其实只需要log(n)时间就搞定！
         @lru_cache(None)
         def go(x):
             if x == 0:

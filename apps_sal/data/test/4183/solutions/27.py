@@ -1,5 +1,3 @@
-# ==================================================-
-# 最大公約数n個
 import functools
 
 
@@ -14,8 +12,6 @@ def multiple(a, b):
     return a * b // euclid(a, b)
 
 
-# ------メイン関数-------
-# numsは整数のリスト
 def lcm(nums):
     return functools.reduce(multiple, nums)
 

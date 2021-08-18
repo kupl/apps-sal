@@ -1,7 +1,6 @@
 n, k = map(int, input().split())
 A = list(map(int, input().split()))
 
-# 累積和と二分探索解法
 
 a = [0]
 for i in range(n):

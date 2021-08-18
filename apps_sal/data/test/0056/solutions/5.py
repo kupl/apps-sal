@@ -17,4 +17,3 @@ for i in range(n):
         if matrix[i][j] == norma:
             counter += 1
 print(counter)
-# print(matrix)

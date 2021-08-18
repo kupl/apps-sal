@@ -7,7 +7,7 @@ class Solution:
 
     def dfs(self, v, M):
 
-        self.visited[v] = M  # 0, 0_3_0, 0_3_1, 0_3_2,
+        self.visited[v] = M
         if M <= 0:
             return
 
@@ -38,8 +38,6 @@ class Solution:
 
                 if M >= v_dist + w + 1:
                     heappush(nodes_queue, (v_dist + w + 1, u))
-
-        # self.dfs(0,M)
 
         res = len(list(self.visited.items()))
         for u, v, w in edges:

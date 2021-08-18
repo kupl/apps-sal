@@ -1,7 +1,6 @@
 n, m = list(map(int, input().split()))
 nums = list(map(int, input().split()))
 
-# 0 to m-1 remainders
 remainder = [0] * m
 limit = n // m
 moves = 0
@@ -17,8 +16,6 @@ for i in range(m):
     if remainder[i] < 0:
         deficit.add(i)
 
-# print(remainder)
-# print(deficit)
 spare = []
 convert = {}
 
@@ -63,6 +60,5 @@ for i in range(n):
 
         if len(convert[rem]) == 0:
             del convert[rem]
-# print(convert)
 print(moves)
 print(*nums)

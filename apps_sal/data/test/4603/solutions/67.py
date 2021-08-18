@@ -1,5 +1,3 @@
-# A - Traveling Budget
-# https://atcoder.jp/contests/abc092/tasks/abc092_a
 
 train = []
 bus = []

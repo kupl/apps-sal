@@ -15,16 +15,12 @@ def chmax(a: str, b: str):
     return a
 
 
-# 数字 : 必要なマッチの本数
 cnt = dict(zip(range(1, 10), [2, 5, 5, 4, 5, 6, 3, 7, 6]))
 
-# dp[i]: マッチをi本使って作れる数値の最大値
 dp = [INF] * (10 ** 5)
 
-# 初期条件
 dp[0] = ""
 
-# 配るDP
 for i in range(N):
     if dp[i] == INF:
         continue

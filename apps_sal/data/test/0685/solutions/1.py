@@ -17,7 +17,6 @@ for i in range(1, n):
 if sum < h:
     maximum = L[-1][1] - L[0][0] + h - sum
 else:
-    #print('x =', x)
     ans = L[x - 1][1] - L[0][0] + h - N[x - 1]
     maximum = ans
     for i in range(1, n):
@@ -26,5 +25,4 @@ else:
         ans = L[x - 1][1] - L[i][0] + h - (N[x - 1] - N[i])
         if ans > maximum:
             maximum = ans
-        #print('i =', i, 'x =', x, 'ans =', ans)
 print(maximum)

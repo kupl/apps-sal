@@ -1,5 +1,4 @@
 t = int(input())
-# a = list(map(int, input().split()))
 for _ in range(t):
     n, x, y = map(int, input().split())
 

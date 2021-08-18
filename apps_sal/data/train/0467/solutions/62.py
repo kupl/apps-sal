@@ -1,7 +1,6 @@
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
 
-        # LEARN THISS BRUHHHH
         res = 0
         for i in range(len(nums)):
             curSum, curAns = 1 + nums[i], 2

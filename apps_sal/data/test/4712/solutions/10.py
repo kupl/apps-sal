@@ -1,4 +1,4 @@
 H, W = map(int, input().split())
-L = ['#' + input() + '#' for _ in range(H)]
-L = ['#' * (W + 2)] + L + ['#' * (W + 2)]
+L = ['
+L = ['
 [print(i) for i in L]

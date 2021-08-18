@@ -6,10 +6,8 @@ class Solution:
         :rtype: int
         """
 
-        # unique elms in list
         elms = set()
 
-        # prevent dup. effort during consecutive search
         visited = set()
         max_consecutive = 0
 
@@ -17,7 +15,6 @@ class Solution:
 
             elms.add(num)
 
-        # look for all unique consecutive subsequences
         for num in nums:
 
             if num in visited:
@@ -26,12 +23,9 @@ class Solution:
 
             visited.add(num)
 
-            # elm by itself
             curr_consecutive = 1
             tmp = num - 1
 
-            # number of consecutive elms before
-            # this elm
             while tmp in elms:
 
                 visited.add(tmp)
@@ -40,8 +34,6 @@ class Solution:
 
             tmp = num + 1
 
-            # number of consecutive elms after
-            # this elm
             while tmp in elms:
 
                 visited.add(tmp)

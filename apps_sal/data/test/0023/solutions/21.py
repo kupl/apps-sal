@@ -36,7 +36,6 @@ def main():
 
 def recur(curr, poss, maxi):
     maxNum = 0
-    #print(curr, poss, maxi)
     if len(poss) == 0:
         return curr
     if int(str(maxi)[len(str(curr))]) in poss:
@@ -53,7 +52,6 @@ def recur(curr, poss, maxi):
                 a = max(x, a)
         if a not in poss:
             return maxi + 5
-        #print(maxD, poss, a, maxi, curr)
         curr = curr * 10 + a
         poss.remove(a)
         for x in poss:

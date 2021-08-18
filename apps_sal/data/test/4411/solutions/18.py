@@ -1,7 +1,5 @@
 import sys
 from heapq import *
-#sys.stdin = open('in', 'r')
-#n = int(input())
 n, k = list(map(int, input().split()))
 seg = []
 for i in range(n):
@@ -34,8 +32,3 @@ while i < n:
 print(len(res))
 if len(res) > 0:
     print(' '.join(map(str, res)))
-
-
-# sys.stdout.write('YES\n')
-# sys.stdout.write(f'{res}\n')
-#sys.stdout.write(f'{y1} {x1} {y2} {x2}\n')

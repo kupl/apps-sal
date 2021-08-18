@@ -6,7 +6,7 @@ if (g > t):
     g, t = t, g
 if (t - g) % k:
     print("NO")
-elif "#" in s[g + k:t:k]:
-    print("NO")
+elif "
+print("NO")
 else:
     print("YES")

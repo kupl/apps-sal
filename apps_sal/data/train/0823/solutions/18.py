@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 POW = 1 << 4
@@ -13,7 +12,6 @@ for _ in range(t):
                 if s == -1:
                     s = 0
                 s += j
-        # print('')
         if s == 0:
             f = 0
             break

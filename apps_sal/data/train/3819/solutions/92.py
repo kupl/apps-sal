@@ -1,5 +1,4 @@
 def smash(words):
-    # Begin here
     res = ''
     if len(words) == 1:
         for i in words:

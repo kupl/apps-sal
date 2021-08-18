@@ -1,5 +1,5 @@
 def win(a, b):
-    w = a  # あいこなら a, a が負けなら b
+    w = a
     if a == 'R' and b == 'P':
         w = b
     if a == 'P' and b == 'S':

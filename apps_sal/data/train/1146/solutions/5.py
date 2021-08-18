@@ -1,4 +1,3 @@
-# cook your dish here
 n, d = list(map(int, input().split()))
 l = list()
 pair = 0

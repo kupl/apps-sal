@@ -86,28 +86,3 @@ for _ in range(Q):
         Seg.update(int(l) - 1, createBit(r))
     else:
         print((bin(Seg.query(int(l) - 1, int(r))).count('1')))
-
-# N = int(input())
-# S = input()
-# Q = int(input())
-# queries = [list(input().split()) for _ in range(Q)]
-
-
-# def a2n(a):
-#     return ord(a)-ord("a")
-
-
-# def createInp(a):
-#     return 1 << a2n(a)
-
-
-# Seg = SegmentTree(len(S), lambda x, y: x | y, init=0)
-# for i, s in enumerate(S):
-#     Seg.set(i, createInp(s))
-# Seg.build()
-
-# for q, l, r in queries:
-#     if q == "1":
-#         Seg.update(int(l)-1, createInp(r))
-#     else:
-#         print(bin(Seg.query(int(l)-1, int(r))).count('1'))

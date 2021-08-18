@@ -1,11 +1,8 @@
-# coding: utf-8
-# Your code here!
 import sys
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
 
 n = int(input())
-#n = [int(i) for i in readline().split()]
 
 g = [[] for _ in range(n)]
 for i in range(n - 1):
@@ -13,8 +10,6 @@ for i in range(n - 1):
     g[a - 1].append(b - 1)
     g[b - 1].append(a - 1)
 
-
-#from collections import deque
 
 cnt = [-1] * n
 parent = [-1] * n
@@ -47,14 +42,9 @@ for v in reversed(order):
             res += pow2[nc] - 1
             num[v] += nc
             nokori -= nc
-            # print(c,v,nc)
     res += pow2[nokori] - 1
-    # print(res,nokori)
     ans += pow2[n - 1] - res
 
-# print(parent)
-# print(num)
-# print(pow2)
 
 R = (MOD + 1) // 2
 

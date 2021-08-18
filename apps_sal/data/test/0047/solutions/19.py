@@ -49,7 +49,7 @@ else:
 
     for i in range(n + 1):
         base = SUM[i]
-        PLUS = MAXLIST_INV[i]  # getvalues(i,n+2,0,0,seg_el)
+        PLUS = MAXLIST_INV[i]
 
         ANS = max(ANS, NOWMINUS + PLUS - base + base * x)
 

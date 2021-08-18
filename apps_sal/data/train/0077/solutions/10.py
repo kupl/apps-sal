@@ -14,5 +14,4 @@ for _ in range(int(input())):
             for k in range(3):
                 if a[i][0] + j != a[i - 1][0] + k:
                     dp[i][j] = min(dp[i][j], dp[i - 1][k] + j * a[i][1])
-    # print(dp)
     print(min(dp[n - 1]))

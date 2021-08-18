@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -16,4 +14,3 @@ start = time.time()
 
 print(ans)
 finish = time.time()
-#print(finish - start)

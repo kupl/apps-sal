@@ -1,7 +1,6 @@
 import sys
 import math
 
-#f = open('input/input_2', 'r')
 f = sys.stdin
 
 
@@ -12,8 +11,6 @@ def modInverse(a, m):
     else:
         return power(a, m - 2, m)
 
-# To compute x^y under modulo m
-
 
 def power(x, y, m):
     if (y == 0):
@@ -22,8 +19,6 @@ def power(x, y, m):
     if (y & 1 == 1):
         p *= x
     return (p % m)
-
-# Function to return gcd of a and b
 
 
 def gcd(a, b):
@@ -38,7 +33,6 @@ n, m = list(map(int, f.readline().split()))
 s1 = list(map(int, f.readline().split()))
 s2 = list(map(int, f.readline().split()))
 
-# 0 same, 1 big
 pos = [1, 0]
 all_pos = 1
 for a1, a2 in zip(s1, s2):

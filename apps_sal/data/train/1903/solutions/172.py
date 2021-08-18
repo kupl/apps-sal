@@ -1,4 +1,3 @@
-# Prim's algorithm
 from heapq import *
 
 

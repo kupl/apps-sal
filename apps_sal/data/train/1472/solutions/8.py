@@ -1,4 +1,3 @@
-# cook your dish here
 
 e = [[6, 0],
      [20, 1],

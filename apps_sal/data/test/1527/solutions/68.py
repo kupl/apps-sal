@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from operator import add, itemgetter, mul, xor
 from math import gcd
 from decimal import Decimal
@@ -26,15 +25,6 @@ def I(): return int(input())
 def LI(): return list(map(int, input().split()))
 def MI(): return map(int, input().split())
 def LLI(n): return [list(map(int, input().split())) for _ in range(n)]
-
-# bisect.bisect_left(list,key)はlistのなかでkey未満の数字がいくつあるかを返す
-# つまりlist[i] < x となる i の個数
-# bisect.bisect_right(list, key)はlistのなかでkey以下の数字がいくつあるかを返す
-# つまりlist[i] <= x となる i の個数
-# これを応用することで
-# len(list) - bisect.bisect_left(list,key)はlistのなかでkey以上の数字がいくつあるかを返す
-# len(list) - bisect.bisect_right(list,key)はlistのなかでkeyより大きい数字がいくつあるかを返す
-# これらを使うときはあらかじめlistをソートしておくこと！
 
 
 def maze_solve(S_1, S_2, maze_list):
@@ -69,8 +59,8 @@ else:
     start_list = []
     for i in range(h):
         for j in range(w):
-            if maze[i][j] == "#":
-                dist[i][j] = 0
+            if maze[i][j] == "
+            dist[i][j] = 0
             else:
                 start_list.append([i, j])
     dist_copy = deepcopy(dist)

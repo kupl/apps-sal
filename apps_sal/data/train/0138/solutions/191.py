@@ -10,5 +10,4 @@ class Solution:
             else:
                 f = [0, 0]
             ans = max(ans, f[0])
-        # print(f)
         return ans

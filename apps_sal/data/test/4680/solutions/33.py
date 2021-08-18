@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 def __starting_point():
     str_list = list(map(int, input().split()))

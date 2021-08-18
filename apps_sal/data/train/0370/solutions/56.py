@@ -38,8 +38,6 @@ class Solution:
             for prime in get_primes(num):
                 common_primes[prime].append(i)
 
-        # print(common_primes)
-
         dsu = DSU(len(a))
 
         for idxs in list(common_primes.values()):

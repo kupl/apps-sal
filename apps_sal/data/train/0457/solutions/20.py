@@ -11,5 +11,4 @@ class Solution:
                 if i - j >= 0 and dp[i - j] < min:
                     min = dp[i - j]
             dp[i] = min + 1
-        # print(dp)
         return dp[-1] if dp[-1] != math.inf else -1

@@ -6,12 +6,9 @@ class Solution:
         result = 0
         for i in range(len(A)):
             cumulatedSum[i + 1] = cumulatedSum[i] + A[i]
-        # L before M
         for i in range(len(A) - L + 1):
-            # sum[i: i + L - 1]
             lSum = cumulatedSum[i + L] - cumulatedSum[i]
             for j in range(i + L, len(A) - M + 1):
-                # sum[j, j + M -1]
                 mSum = cumulatedSum[j + M] - cumulatedSum[j]
                 result = max(result, lSum + mSum)
 

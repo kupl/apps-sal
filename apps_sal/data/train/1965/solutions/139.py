@@ -14,11 +14,7 @@ class Solution:
             if l1 == l2:
                 ans += 1
             else:
-                # mi=min(l1,l2)
-                # ma=max(l1,l2)
                 A[l1 - 1] = -l2
-                # print(l1,l2)
-                # print(A)
                 B[l1 - 1] = -l2
                 cA -= 1
                 cB -= 1
@@ -32,8 +28,6 @@ class Solution:
             if l1 == l2:
                 ans += 1
             else:
-                # mi=min(l1,l2)
-                # ma=max(l1,l2)
                 B[l1 - 1] = -l2
                 cB -= 1
             if cB == 1:
@@ -52,8 +46,6 @@ class Solution:
             if l1 == l2:
                 ans += 1
             else:
-                # mi=min(l1,l2)
-                # ma=max(l1,l2)
                 A[l1 - 1] = -l2
                 cA -= 1
             if cA == 1:

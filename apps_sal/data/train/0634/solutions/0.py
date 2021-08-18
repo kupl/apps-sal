@@ -14,6 +14,5 @@ for i in range(len(string)):
         else:
             check_no += string[j]
         j += 1
-    # print(check_no)
     max_no = max(max_no, int(check_no))
 print(max_no)

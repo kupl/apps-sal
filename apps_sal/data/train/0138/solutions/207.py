@@ -1,14 +1,5 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        # encouter 0 reset it as 0
-        # how many -1 in the left, if is even, update the  longest length O(n) cur_poistion - 0_position
-
-        # [1,-2,-3,4] => [0, 1, 2, 2] => 4
-        # [0,1,-2,-3,-4] => [0, 0, 1, 2, 3] => 3
-        # [-1,-2,-3,0,1] => [1, 2, 3, 0, 0] => 2
-        # [-1,2] => [1, 1] => 1 (consider if itself > 0, 1)
-        # [1,2,3,5,-6,4,0,10] => [0, 0, 0, 0, 1, 1, 0, 1] => 4
-        # [0, 0 ,0 ,0] => [0, 0, 0, 0] => 0 (consider if itself == 0, 0)
 
         carry_len = 0
         left_neg = 0

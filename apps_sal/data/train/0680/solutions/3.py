@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 input = sys.stdin.readline
 mxn = 998244353

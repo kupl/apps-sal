@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 sys.setrecursionlimit(10**6)
 
@@ -21,19 +20,12 @@ for i in range(C):
         end = min((t - 1) * 2 + 1, 10**5 * 2 - 1)
         data_tmp[start] += 1
         data_tmp[end + 1] -= 1
-    # print(data_tmp[:30])
     for j in range(1, len(data_tmp) - 1):
         if data_tmp[j] > 0:
             data_tmp[j - 1] += data_tmp[j]
             data_tmp[j] = 0
-    # for j in reversed(range(1, len(data_tmp)-1)):
-    #     if data_tmp[j] < 0:
-    #         data_tmp[j+1] += data_tmp[j]
-    #         data_tmp[j] = 0
     for j in range(0, len(data_tmp)):
         data[j] += data_tmp[j]
-    # print(data_tmp[:30])
-    # print()
 ans = [data[0]]
 for i in range(1, len(data)):
     ans.append(ans[-1] + data[i])

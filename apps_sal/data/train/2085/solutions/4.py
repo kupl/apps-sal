@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import math
 import collections
@@ -18,10 +17,6 @@ for i in range(N):
     S.append(input())
 M = int(input())
 
-# t0 = time.time()
-# N = 3
-# S = ["", "00010110000", "110101110101101010101101101110100010000001101101011000010001011000010101", "11100101100111010"]
-# M = 1000
 
 A = [[set() for _ in range(10)] for _ in range(M + N + 1)]
 D = collections.defaultdict(int)
@@ -38,7 +33,6 @@ for i in range(1, N + 1):
             D[i] = j
 
 for i in range(M):
-    # a, b = random.randint(1, i+N), random.randint(1, i+N)
     a, b = list(map(int, input().split()))
     s, sa, sb = S[a] + S[b], S[a], S[b]
     if len(s) > 30:
@@ -61,6 +55,3 @@ for i in range(M):
         ans = dv
     print(ans)
     D[ai] = ans
-
-
-# print(time.time() - t0)

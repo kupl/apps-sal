@@ -6,13 +6,13 @@ l.append(["."] * (w + 2))
 
 
 def count(i, j):
-    if l[i][j] == "#":
-        return "#"
+    if l[i][j] == "
+    return "
     c = 0
     for n in range(i - 1, i + 2):
         for m in range(j - 1, j + 2):
-            if l[n][m] == "#":
-                c += 1
+            if l[n][m] == "
+            c += 1
     return str(c)
 
 

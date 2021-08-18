@@ -1,5 +1,3 @@
-# map(int, input().split())
-# list(map(int, input().split()))
 A, B = list(map(int, input().split()))
 x, y, z = list(map(int, input().split()))
 need_a = 2 * x + 1 * y + 0 * z

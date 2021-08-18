@@ -5,22 +5,14 @@ class Solution:
         def isFeasible(mid):
             pos = arr[0]
 
-            # Initialize count of elements placed.
             elements = 1
 
-            # Try placing k elements with minimum
-            # distance mid.
             for i in range(1, len(arr)):
                 if (arr[i] - pos >= mid):
 
-                    # Place next element if its distance
-                    # from the previously placed element
-                    # is greater than current mid
                     pos = arr[i]
                     elements += 1
 
-                    # Return if all elements are placed
-                    # successfully
                     if (elements == m):
                         return True
             return 0

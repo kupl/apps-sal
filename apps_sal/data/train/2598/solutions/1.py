@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def __starting_point():
     A = set(map(int, input().strip().split(' ')))

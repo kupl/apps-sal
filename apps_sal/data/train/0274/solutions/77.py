@@ -10,7 +10,6 @@ class Solution:
 
         while right < len(nums):
             diff = max_vals[0][0] * -1 - min_vals[0][0] if max_vals and min_vals else 0
-            #print(diff, left, right)
             if diff <= limit:
                 max_subsize = max(max_subsize, right - left)
                 heappush(min_vals, (nums[right], right))

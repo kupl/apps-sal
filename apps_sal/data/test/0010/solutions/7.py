@@ -1,4 +1,3 @@
-# coding: utf-8
 
 
 import math
@@ -21,7 +20,7 @@ if d <= 2:
     max_off += d
 elif 2 < d and d <= 5:
     max_off += 2
-else:                           # d==6
+else:
     max_off += 2
     min_off += 1
 print("{} {}".format(min_off, max_off))

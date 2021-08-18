@@ -24,7 +24,6 @@ class Solution:
             else:
                 res = False
 
-#         print(self.stack)
         return res
 
     def lemonadeChange(self, bills: List[int]) -> bool:

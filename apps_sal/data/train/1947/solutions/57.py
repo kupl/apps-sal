@@ -10,6 +10,3 @@ class Solution:
             if all(a.count(k) >= dic[k] for k in dic):
                 res.append(a)
         return res
-
-
-# https://leetcode.com/problems/word-subsets/discuss/659164/Python-90-with-comments-and-explanation

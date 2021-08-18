@@ -1,4 +1,3 @@
-# cook your dish here
 def findMaximumNum(st, n, k):
     for i in range(n):
 

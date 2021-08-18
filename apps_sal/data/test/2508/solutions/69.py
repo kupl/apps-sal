@@ -1,5 +1,3 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
 from collections import deque
 H, W, K = map(int, input().split())
@@ -19,7 +17,6 @@ def bfs(sth, stw, glh, glw):
     Seen[sth][stw] = 0
 
     while len(next_q) != 0:
-        # キュー取り出し(先頭)
         h, w, c = next_q.popleft()
         for dh, dw in direc:
             for sk in range(1, K + 1):

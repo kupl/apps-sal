@@ -18,9 +18,7 @@ class Solution:
                         visited[neighbour] = True
                         dfs(neighbour, p)
 
-        # check if connected
         visited = {}
-        # dfs on 1,3,
         dfs(1, [1, 3])
         if len(list(visited.keys())) != n:
             return -1
@@ -29,11 +27,8 @@ class Solution:
         dfs(1, [2, 3])
         if len(list(visited.keys())) != n:
             return -1
-        # dfs on 2,3
 
-        # find number of blue components:
         visited = {}
-        # dfs on blue edges,
         blue_cc = 0
         blue_edges = 0
         for Type, start, end in edges:
@@ -53,9 +48,5 @@ class Solution:
 
         unvisited = len(list(graph.keys())) - len(list(visited.keys()))
 
-        # keep track of # of visitedNode -1
-        # number of times dfs is called
-
-        # calc ans = totalnumber of edges - (blue edges + 2*unvisited nodes + 2*(blue components-1))
         print((blue_edges, unvisited, blue_cc))
         return len(edges) - (blue_edges + 2 * unvisited + 2 * (blue_cc - 1))

@@ -21,7 +21,6 @@ class Solution:
             nxt = s[i + k - 1]
             if nxt in d:
                 d[nxt] += 1
-            # print('i',i,'d',d)
             total = max(total, checkVowels())
             i += 1
         return total

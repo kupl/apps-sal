@@ -24,7 +24,6 @@ class Solution:
                 left = divisor
                 divisor = (divisor + right) // 2
 
-            #print(f\"left:{left}, right:{right}\")
 
             divided_list = [div(num, divisor) for num in nums]
 

@@ -4,9 +4,6 @@ from sortedcontainers import SortedSet
 
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        # print('-----')
-        # print(f'n: {n}')
-        # print(f'ranges: {ranges}')
 
         intervals = SortedSet()
 
@@ -33,8 +30,6 @@ class Solution:
                         del intervals[idx - 1]
                         change = True
                 intervals.add(newInterval)
-
-        # print(f'intervals={intervals}')
 
         prevEnd = 0
         for (start, end) in intervals:

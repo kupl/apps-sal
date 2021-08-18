@@ -2,8 +2,8 @@ H, W = map(int, input().split())
 A = [input() for _ in range(H)]
 
 W += 2
-f = '#'
+f = '
 print(f * W)
 for a in A:
-    print(f'#{a}#')
+    print(f'
 print(f * W)

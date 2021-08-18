@@ -1,5 +1,4 @@
 import math
-#import fractions
 from functools import reduce
 
 n = int(input())

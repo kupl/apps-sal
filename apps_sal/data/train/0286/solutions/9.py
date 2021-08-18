@@ -2,12 +2,8 @@ class Solution:
     def getProbability(self, balls: List[int]) -> float:
         @lru_cache(None)
         def C(n, m):
-            # c = 1
-            # for i in range(n, n - m, -1):
-            #     c *= i
             return math.factorial(n) / math.factorial(m) / math.factorial(n - m)
 
-        # @lru_cache(None)
         def choose(i, k, d1, d2, cnt):
             if k == 0 and i <= n:
                 return cnt, (cnt if d1 == d2 + n - i else 0)

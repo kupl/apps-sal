@@ -1,6 +1,5 @@
 
 n = int(input())
-# 00 = 0, 01 = 1, 10 = 2, 11 = 3
 tonumber = {'00': 0, '01': 1, '10': 2, '11': 3}
 people = [[], [], [], []]
 for i in range(n):
@@ -10,7 +9,6 @@ for i in range(n):
 people[0].sort(reverse=True)
 people[1].sort(reverse=True)
 people[2].sort(reverse=True)
-# print(people)
 totalInfluence = sum(people[3])
 totalPeople = len(people[3])
 support = [len(people[3]), len(people[3])]
@@ -30,7 +28,6 @@ else:
     longerIndex = 1
 indices = [0, minLen]
 allEmpty = [len(people[0]), len(people[longerIndex])]
-#print(longer, longerIndex, minLen, indices, allEmpty)
 while indices != allEmpty:
     top = [-1, -1]
     if indices[0] != allEmpty[0]:
@@ -39,7 +36,6 @@ while indices != allEmpty:
         top[1] = people[longerIndex][indices[1]]
     if top[0] > top[1]:
         if support[longer] >= (totalPeople + 1) / 2 and support[not longer] >= (totalPeople + 1) / 2:
-            #print(str(support[longer]) + ' ' +  str((totalPeople + 1) / 2) + ';' + str(support[not longer]) + ' ' +  str((totalPeople + 1) / 2))
             totalInfluence += top[0]
             totalPeople += 1
             indices[0] += 1
@@ -53,7 +49,6 @@ while indices != allEmpty:
             indices[1] += 1
         else:
             indices[1] += 1
-    #print(top, support, totalInfluence, totalPeople)
 
 if totalPeople != 0:
     print(totalInfluence)

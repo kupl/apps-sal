@@ -1,5 +1,4 @@
 def calculate_age(yob, cy):
-    # your code here
     if yob < cy:
         if (cy - yob) == 1:
             return f"You are {cy-yob} year old."

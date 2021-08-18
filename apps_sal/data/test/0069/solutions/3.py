@@ -10,8 +10,6 @@ for _ in range(int(input())):
 
     jump = pref.pop()
 
-#	print(pref, jump)
-
     if jump == 0:
         print(-1 * (min(pref) <= x <= max(pref)))
     else:

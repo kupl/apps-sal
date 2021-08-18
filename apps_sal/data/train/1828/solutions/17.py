@@ -10,7 +10,7 @@ class Solution:
                 ans.extend([y, x])
         else:
             mid = barcodes[n // 2]
-            added, x_last = 0, -1  # added: flag indicating if the middle element is added to the result
+            added, x_last = 0, -1
             for x, y in zip(barcodes[:n // 2], barcodes[n // 2 + 1:]):
                 if not added and x_last != mid and y != mid:
                     ans.append(mid)

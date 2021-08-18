@@ -17,12 +17,10 @@ def f(n, k, mod):
 
 
 ans = 0
-# 0人の部屋はmaxいくつできるか
 a = min(k, n - 1)
 ans = 0
 for i in range(a + 1):
     d = f(n, i, mod) * f(n - 1, i, mod)
-    # print(i,d)
     ans += d % mod
     ans %= mod
 

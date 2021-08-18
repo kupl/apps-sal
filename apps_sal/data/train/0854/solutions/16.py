@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 
 for no in range(T):

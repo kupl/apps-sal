@@ -1,4 +1,3 @@
-# Pattern F
 T = int(input())
 
 for t in range(T):

@@ -5,10 +5,6 @@ def coefficient(arr):
     if len(arr) <= 0:
         return 0
     return dot(arr, list(range(1, len(arr) + 1)))
-    # res = 0
-    # for i in range(len(arr)):
-    #     res += (i+1)*arr[i]
-    # return res
 
 
 class Solution:

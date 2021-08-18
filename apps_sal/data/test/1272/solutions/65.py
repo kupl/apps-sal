@@ -1,7 +1,6 @@
 from collections import defaultdict
 import sys
 import itertools
-# import numpy as np
 import time
 import math
 
@@ -24,8 +23,6 @@ class UnionFind(object):
         if self.link[x] == x:
             return x
 
-        # re-connect union find to make the height of tree lower
-        # you can use while, but recursion makes it easier to reconnect
         self.link[x] = self.find(self.link[x])
         return self.link[x]
 

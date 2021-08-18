@@ -26,9 +26,9 @@ def shallowest_path(river):
             current_row, current_col = path[-1]
             if (current_row, current_col) in visited or (current_col == 0 and path_length > 1):
                 continue
-            if current_col == cols - 1:  # We reached the right bank
+            if current_col == cols - 1:
                 if depth == 1 and len(path) == cols:
-                    return path  # Optimal path
+                    return path
                 if best_solution is None or depth < best_solution.depth or (depth == best_solution.depth and len(path) < len(best_solution.path)):
                     best_solution = Solution(depth, path)
                 continue

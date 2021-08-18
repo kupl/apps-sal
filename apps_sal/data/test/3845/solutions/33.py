@@ -2,11 +2,11 @@ def main():
     a, b = map(int, input().split())
     k = 50
     gw = [['.'] * 2 * k for _ in range(k)]
-    gb = [['#'] * 2 * k for _ in range(k)]
+    gb = [['
     for i in range(b - 1):
         h = (i // k) * 2
         w = (i % k) * 2
-        gw[h][w] = '#'
+        gw[h][w] = '
     for i in range(a - 1):
         h = (i // k) * 2 + 1
         w = (i % k) * 2 + 1

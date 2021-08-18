@@ -20,6 +20,5 @@ for i in items:
 for i in range(1, k + 1):
     for j in range(1, i + 1):
         b = offers[j]
-        # buy j items, b free
         dp[i] = min(dp[i], dp[i - j] + prefix[i] - prefix[i - j + b])
 print(dp[-1])

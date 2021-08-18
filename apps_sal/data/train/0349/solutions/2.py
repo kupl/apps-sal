@@ -5,7 +5,7 @@ class Solution:
         :rtype: int
         """
         nums.sort()
-        nums.append(-1)  # end symbol
+        nums.append(-1)
         prev_max, cur_max = 0, 0
         prev = -1
         j, i = 0, 0

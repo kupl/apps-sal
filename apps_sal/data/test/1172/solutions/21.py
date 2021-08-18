@@ -2,7 +2,6 @@ from sys import stdin
 
 
 def main():
-    # 入力
     readline = stdin.readline
     s = readline().strip()
 
@@ -11,14 +10,12 @@ def main():
     dp = [[0] * 4 for _ in range(n + 1)]
     dp[0][0] = 1
     for i in range(1, n + 1):
-        # i文字目を選ばない
         for j in range(4):
             if s[i - 1] != "?":
                 dp[i][j] += dp[i - 1][j]
             else:
                 dp[i][j] += dp[i - 1][j] * 3
 
-        # i文字目を選ぶ
         if s[i - 1] == "A":
             dp[i][1] += dp[i - 1][0]
         elif s[i - 1] == "B":

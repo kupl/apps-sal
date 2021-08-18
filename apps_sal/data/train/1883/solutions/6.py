@@ -10,33 +10,26 @@ class Solution:
     def uniquePathsIII(self, grid: List[List[int]]) -> int:
         def traverse(row, col, spacesLeft):
             nonlocal results
-            # end case
             if spacesLeft == 1 and grid[row][col] == 2:
                 results += 1
                 return
 
-            # visit current
             temp = grid[row][col]
-            grid[row][col] = '#'
+            grid[row][col] = '
             spacesLeft -= 1
 
-            # visit next in all directions
             for rowOffset, colOffset in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
                 nextRow, nextCol = row + rowOffset, col + colOffset
-                # don't traverse if out of range
                 if nextRow < 0 or nextRow == rows or nextCol < 0 or nextCol == cols:
                     continue
-                # don't traverse if obstacle or visited
-                if grid[nextRow][nextCol] == -1 or grid[nextRow][nextCol] == '#':
-                    continue
+                if grid[nextRow][nextCol] == -1 or grid[nextRow][nextCol] == '
+                continue
                 traverse(nextRow, nextCol, spacesLeft)
 
-            # backtrack
             grid[row][col] = temp
 
         rows, cols = len(grid), len(grid[0])
         spaces = 0
-        # get data from grid first
         for row in range(rows):
             for col in range(cols):
                 if grid[row][col] >= 0:

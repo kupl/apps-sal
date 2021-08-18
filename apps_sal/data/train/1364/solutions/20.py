@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     N, c = [int(i) for i in input().split()]
     coordinates, temp, checkpoints, operations = [], [], 0, 0
@@ -14,7 +13,6 @@ for _ in range(int(input())):
             dict1[i[0] - i[1]].append(i[0])
         except:
             dict1[i[0] - i[1]] = [i[0]]
-    # print(dict1)
 
     for i in dict1:
         list1 = dict1[i]

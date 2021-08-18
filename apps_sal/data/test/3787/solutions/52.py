@@ -1,4 +1,3 @@
-# でつoO(YOU PLAY WITH THE CARDS YOU'RE DEALT..)
 import sys
 
 

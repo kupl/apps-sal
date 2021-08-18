@@ -12,6 +12,5 @@ for i in a:
 ans = 0
 for i in range(len(t)):
     if i % 2 == 0:
-        # print(min(i + 2 * k + 1, len(t) - 1))
         ans = max(ans, t[min(i + 2 * k + 1, len(t) - 1)] - t[i])
 print(ans)

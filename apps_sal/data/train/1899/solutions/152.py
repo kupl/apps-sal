@@ -18,7 +18,6 @@ class Solution:
             if flag:
                 break
         dfs(i, j)
-        # print(A)
         q = collections.deque([(0, i, j) for i in range(M) for j in range(N) if A[i][j] == 1])
         seen = set([(i, j) for i in range(M) for j in range(N) if A[i][j] == 1])
         while q:

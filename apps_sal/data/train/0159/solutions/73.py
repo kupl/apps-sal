@@ -17,6 +17,4 @@ class Solution:
                 heapq.heappush(h, (m, index))
                 ans = max(ans, nums[i] - m, nums[i])
                 heapq.heappush(h, (min(m - nums[i], -nums[i]), i))
-            # print(h)
-        # print(ans)
         return ans

@@ -49,7 +49,6 @@ def main():
                     if right - left > right2 - left2:
                         res = 1
                 ans += res
-                # print(string,l,res)
             print(ans)
 
 

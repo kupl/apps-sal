@@ -26,6 +26,5 @@ while(i < N):
     elif (c < M and j == K):
         tt = tt + 1
         i = k1 + K
-    # print(i,c)
 
 print(tt)

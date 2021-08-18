@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 def add(c, v, p=0):
     assert(v < 10 and p < len(c))

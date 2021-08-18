@@ -8,6 +8,6 @@ def is_divide_by(number, a, b):
     div3 = number // a
     div4 = number // b
     if div == div3 and div2 == div4:
-        return True  # good luck
+        return True
     else:
         return False

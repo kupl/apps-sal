@@ -4,7 +4,6 @@ from collections import deque
 def main():
     n, k = map(int, input().split())
     s = input()
-    # maked group
     t = []
     t.append(s[0])
     x = s[0]
@@ -12,7 +11,6 @@ def main():
         if x != s[i]:
             t.append(s[i])
             x = s[i]
-    # print(t)
 
     j = 0
     t = deque(t)

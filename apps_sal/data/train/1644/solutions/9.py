@@ -3,7 +3,7 @@ b91_enctab = [
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '#', '$',
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '
     '%', '&', '(', ')', '*', '+', ',', '.', '/', ':', ';', '<', '=',
     '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~', '"'
 ]
@@ -66,14 +66,14 @@ def b91encode(strng):
     return encode_str
 
 
-a = """<txG@<^F#H~H8MxsCYDpde4_SW"yER~]JwO_!g|OcxW$1^:KNRedl$r6l/:=JsiD+[R]bKVws=Op!v"?%9|Tn<7@,{q;r>d:sZH)"""
+a = """<txG@<^F
 
 
-r = """4J>StI@i5oLyF.Th)8=+!tB9!#/`l$e$+Kz<}c6~%DsV@(rcJJ>yZ=?Y3JU@7bjoME3J<b5*KN.6xTP6zT1B1Zpc%nVRQxp1|+Zh|4@53d">!|$7+)vwUl:>cK"""
+r = """4J > StI @ i5oLyF.Th)8=+!tB9!
 
 
-a = '''4J>StI@i5oLyF.Th)8=+!tB9!#/`l$e$+Kz<}c6~%DsV@(rcJJ>yZ=?Y3JU@7bjoME3J<b5*KN.6xTP6zT1B1Zpc%nVRQxp1|+Zh|4@53d">!|$7+)vwUl:>cK'''
+a= '''4J>StI@i5oLyF.Th)8=+!tB9!
 
-print((b91encode('<txG@<^F#H~H8MxsCYDpde4_SW"yER~]JwO_!g|OcxW$1^:KNRedl$r6l/:=JsiD+[R]bKVws=Op!v"?%9|Tn<7@,{q;r>d:sZH)')))
+print((b91encode('<txG@<^F
 
 print((r == b91encode(a)))

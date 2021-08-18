@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-"""Codeforces Round #553 (Div. 2)
+"""Codeforces Round 
 
 Problem E. Number of Components
 

@@ -1,4 +1,3 @@
-# cook your dish here
 n, m, k = map(int, input().split())
 blasters = []
 for _ in range(k):

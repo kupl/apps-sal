@@ -14,7 +14,5 @@ for i in range(1, 10):
     for j in range(1, 10):
         ans += l[i][j] * l[j][i]
 
-# for i in range(10):
-#    print(l[i])
 
 print(ans)

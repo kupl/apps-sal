@@ -23,13 +23,13 @@ class Solution:
                     size.append(1)
                 size.append(size[i - 1] + 1)
             else:
-                if item1_ls > item2_ls:  # item1 stays
+                if item1_ls > item2_ls:
                     item1_fs = item2_ls + 1
                     item2_val = tree[i]
                     item2_fs = i
                     item2_ls = i
                     size.append(i - item1_fs + 1)
-                else:  # item2 stays
+                else:
                     item2_fs = item1_ls + 1
                     item1_val = tree[i]
                     item1_fs = i

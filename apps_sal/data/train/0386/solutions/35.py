@@ -2,8 +2,6 @@ class Solution:
     def countVowelPermutation(self, n: int) -> int:
         if n <= 1:
             return n * 5
-        # table = {'a': ['e'], 'e': ['a', 'i'], 'i': ['a', 'e', 'o', 'u'], 'o': ['i', 'u'], 'u': ['a']}
-        # idx_table = ['a', 'e', 'i', 'o', 'u']
         end_table = {0: [1, 2, 4], 1: [0, 2], 2: [1, 3], 3: [2], 4: [2, 3]}
         dp = [[0] * 5 for i in range(n + 1)]
         for i in range(5):

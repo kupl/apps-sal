@@ -10,7 +10,6 @@ for i in range(Q):
 
 M_list = [i for i in range(1, M + 1)]
 A_list = list(itertools.combinations_with_replacement(M_list, N))
-# print(A_list)
 ans = 0
 
 for i in range(len(A_list)):

@@ -1,8 +1,6 @@
 def solve():
-    #n = int(input())
     n, w = map(int, input().split())
     a = list(map(int, input().split()))
-    #a = [list(map(int, input().split())) for _ in range(n)]
     mp = [[a[i], i] for i in range(n)]
     mp.sort()
     ans = [[mp[i][1], 0] for i in range(n)]

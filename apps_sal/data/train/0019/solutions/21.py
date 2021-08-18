@@ -1,6 +1,4 @@
 def solve(n, k, d, a):
-    # if n == d:
-    #  return len(set(a))
     m = {}
     s = list(set(a))
     ans = float("inf")
@@ -12,12 +10,9 @@ def solve(n, k, d, a):
         if m[a[i]] == 1:
             sm += 1
     ans = sm
-    # print(m)
     for i in range(d, n):
-     #   print(m)
         x = a[i - d]
         y = a[i]
-      #  print(x,y, i, d)
         m[x] -= 1
         if m[x] == 0:
             sm -= 1

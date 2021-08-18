@@ -9,5 +9,4 @@ for i in range(n):
     if s[i] == 'Z':
         last = b
 
-# print(first, last)
 print((last - first + 1))

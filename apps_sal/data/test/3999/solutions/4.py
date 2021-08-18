@@ -13,8 +13,6 @@ def normal(xs):
     if xs[(xi + 1) % 4] > xs[(xi + 3) % 4]:
         xi = (xi + 2) % 4
     return (xs[xi % 4], xs[(xi + 1) % 4], xs[(xi + 2) % 4], xs[(xi + 3) % 4])
-#x = (0,2,2,0)
-# print(normal(x))
 
 
 dd = defaultdict(int)
@@ -42,7 +40,6 @@ def dcr(x):
 
 
 def f(ff, gg):
-    # print(dd)
     a, b, c, d = ff
     e, h, g, f = gg
     tl = list(map(normal, [(a, e, f, b), (b, f, g, c), (c, g, h, d), (d, h, e, a)]))

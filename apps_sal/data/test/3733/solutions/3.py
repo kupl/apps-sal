@@ -9,11 +9,9 @@ A = list(map(int, input().split()))
 k = math.floor((I * 8) / n)
 K = 2**min(k, 20)
 
-# find distinct
 s = sorted(set(A))
 dis = len(s)
 
-# count occurence
 count = {}
 
 for i in range(n):
@@ -22,7 +20,6 @@ for i in range(n):
     else:
         count[A[i]] += 1
 
-# test eliminating
 diff = max(dis - K, 0)
 
 ct = 0

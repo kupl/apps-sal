@@ -150,7 +150,6 @@ def get_heap(arr, n):
     return mheap
 
 
-# main starts
 q = int(stdin.readline().strip())
 for _ in range(q):
     n = int(stdin.readline().strip())

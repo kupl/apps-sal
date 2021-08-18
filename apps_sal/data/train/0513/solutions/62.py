@@ -15,7 +15,6 @@ def resolve():
             if to == parent:
                 continue
             dfs(to, s)
-        # 頂点sでの結果をもとに戻す
         dp[i] = v
         return
 

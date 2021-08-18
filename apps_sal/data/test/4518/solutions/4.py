@@ -38,10 +38,6 @@ from time import perf_counter
 from fractions import Fraction
 from decimal import Decimal
 from copy import deepcopy
-# sys.setrecursionlimit(pow(10, 6))
-# sys.stdin = open("input.txt", "r")
-# sys.stdout = open("output.txt", "w")
-# mod = 10 ** 9 + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
 def out(var, end="\n"): sys.stdout.write(str(var) + end)

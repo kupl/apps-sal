@@ -12,8 +12,6 @@ class Solution:
         def getMins(time):
             return int(time[:2]) * 60 + int(time[3:])
 
-        # print(M)
-
         for key in keys:
             for i in range(2, len(M[key])):
                 curr = M[key][i]

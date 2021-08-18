@@ -14,7 +14,6 @@ class Solution:
                     ans.append((x_, y_))
             return ans
 
-        # return area of the island
         def dfs(x, y, idx):
             ans = 1
             grid[x][y] = idx

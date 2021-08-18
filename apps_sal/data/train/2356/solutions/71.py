@@ -1,4 +1,3 @@
-#from collections import deque,defaultdict
 def printn(x): return print(x, end='')
 def inn(): return int(input())
 
@@ -8,9 +7,8 @@ def inm(): return map(int, input().split())
 def ins(): return input().strip()
 
 
-DBG = True  # and False
+DBG = True
 BIG = 10**18
-#R = 10**9 + 7
 R = 998244353
 
 

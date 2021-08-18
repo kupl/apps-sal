@@ -1,4 +1,3 @@
-# cook your dish here
 def fun1(S, N, K, R):
     total = K
     for _ in range(1, N):

@@ -23,7 +23,6 @@ else:
             comp[i] = a
             visited[i] = 1
             q = [i]
-            # bfs
             while len(q) > 0:
                 u = q.pop(0)
                 for v in G[u]:
@@ -57,7 +56,6 @@ else:
                     queue.append(v)
                     if not d:
                         break
-        # bfs
         while len(queue) > 0 and n_edges < n - 1:
             u = queue.pop(0)
             for v in G[u]:

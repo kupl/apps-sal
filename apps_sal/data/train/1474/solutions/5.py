@@ -4,7 +4,6 @@ for i in range(tc):
     n = int(input())
     p = list(map(str, input().split()))
     q = input()
-    # print p
     no = 0
     for j in p:
         if q in j:

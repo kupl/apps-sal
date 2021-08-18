@@ -20,6 +20,5 @@ if len(c) == 1:
 else:
     c.sort()
     c.reverse()
-    # print(c)
     m = c[0] + c[1]
     print(m * m + sum([d * d for d in c[2:]]))

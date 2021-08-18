@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 def main():
@@ -32,7 +31,6 @@ def main():
                             last = b
                         else:
                             used.append((last, last + dur))
-                            # used.sort()
                         print(last, last + dur - 1)
 
     except EOFError:

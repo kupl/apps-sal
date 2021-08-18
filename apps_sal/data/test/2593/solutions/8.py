@@ -1,7 +1,5 @@
 for _ in range(int(input())):
     n = int(input())
-    # s = input()
-    # n,m = map(int,input().split())
     ar = list(map(int, input().split()))
     ar.sort()
     ans = 0
@@ -20,5 +18,4 @@ for _ in range(int(input())):
             count = 0
         i += 1
     ans += (count * (count + 1)) // 2
-    # print(t)
     print(ans)

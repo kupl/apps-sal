@@ -17,7 +17,6 @@ class Trie:
         if ind == len(word):
             node.isLast = True
         else:
-            # print(word)
             if word[ind] not in node.child:
                 node.child[word[ind]] = Node()
             self.insert(ind + 1, word, node.child[word[ind]])
@@ -49,8 +48,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         return self.trie.isPrefix(0, self.stream)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

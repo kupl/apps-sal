@@ -1,4 +1,3 @@
-# your code goes here
 for _ in range(int(input())):
     N, X = map(int, input().split())
     P, S = map(str, input().split())

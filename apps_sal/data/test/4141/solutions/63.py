@@ -1,9 +1,7 @@
-#import resource
 import math
 from collections import deque
 import sys
 
-#resource.setrlimit(resource.RLIMIT_STACK, (2**29, -1))
 sys.setrecursionlimit(10 ** 7)
 
 n = int(input())

@@ -18,13 +18,11 @@ N = int(input())
 A = nl()
 ans = 0
 min_bai = 1
-for i in range(N):  # 最大公倍数
+for i in range(N):
     min_bai = min_bai * A[i] // fractions.gcd(min_bai, A[i])
 
-#lcm = reduce(lambda x,y: x//fractions.gcd(x,y)*y, A)
 
 for i in range(N):
     ans += min_bai // A[i]
 
-#ans = sum(lcm//x for x in A)
 print((ans % mod))

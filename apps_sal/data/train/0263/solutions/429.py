@@ -21,7 +21,6 @@ class Solution:
             count += self.recursive_calc(i, n - 1)
             count = count % self.mod
 
-        # print(self.cache)
         return int(count % self.mod)
 
     def recursive_calc(self, current_number, steps):

@@ -1,7 +1,6 @@
 class Graph():
 
     def __init__(self, vertices_num):
-        # number of nodes (integer)
         self.v = vertices_num
 
     def sort_adj_list(self, lst):
@@ -13,7 +12,6 @@ class Graph():
     def adjmat_2_graph(self, adjm):
         if len(adjm) != self.v:
             return "Dimension error"
-        # list of nodes from "A0", "A1" ... to "A index (vertices_num - 1)"
         nodes = ['A' + str(i) for i in range(0, self.v)]
         graph = {}
         for n, v in enumerate(nodes):

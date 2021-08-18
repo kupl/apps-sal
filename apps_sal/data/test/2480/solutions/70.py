@@ -49,11 +49,9 @@ def main():
         tt = (t[-1] + a - 1) % k
         t.append(tt)
         if i >= k - 1:
-            # print("k", t[i-k+2],i-k+2)
             c[t[i - k + 1]] -= 1
         r += c[tt]
         c[tt] += 1
-        # print("ar", a,tt,r,sorted(c.items()), t)
 
     return r
 

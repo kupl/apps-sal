@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 
@@ -28,8 +27,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    M = int(next(tokens))  # type: int
-    K = int(next(tokens))  # type: int
+    M = int(next(tokens))
+    K = int(next(tokens))
     solve(M, K)
 
 

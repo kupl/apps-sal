@@ -1,4 +1,3 @@
-# coding: utf-8
 s = input()
 cnt = [0, 0]
 for i in set(s):

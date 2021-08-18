@@ -1,14 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def bstFromPreorder(self, preorder: List[int]) -> TreeNode:
-        #
-        # minHeap | O(NlogN) | ----- 40 ms (50.65%) / 14.3 MB (5.13%)
-        # ------------------------------------------------------------------------------------------------
         if not preorder:
             return None
         root = TreeNode(val=preorder[0])

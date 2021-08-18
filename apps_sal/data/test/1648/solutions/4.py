@@ -1,7 +1,5 @@
 n, k = map(int, input().split())
 
-# modありのコンビネーション計算
-
 
 def cmb(n, r, mod):
     if (r < 0 or r > n):
@@ -11,10 +9,10 @@ def cmb(n, r, mod):
 
 
 mod = 10**9 + 7
-N = n  # 必要な数
-g1 = [1, 1]  # 元テーブル
-g2 = [1, 1]  # 逆元テーブル
-inverse = [0, 1]  # 逆元テーブル計算用テーブル
+N = n
+g1 = [1, 1]
+g2 = [1, 1]
+inverse = [0, 1]
 
 for i in range(2, N + 1):
     g1.append((g1[-1] * i) % mod)

@@ -1,6 +1,5 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        # dp[neigh] at step k += dp[curr]
         possibleMoves = [[4, 6], [6, 8], [9, 7], [4, 8], [0, 3, 9], [], [0, 1, 7], [2, 6], [1, 3], [2, 4]]
         dp = [1] * 10
         upper = 10**9 + 7

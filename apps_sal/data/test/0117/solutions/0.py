@@ -1,5 +1,3 @@
-# 写経
-# https://atcoder.jp/contests/abc168/submissions/14421546
 from bisect import bisect_left, bisect_right
 import sys
 sys.setrecursionlimit(10**9)

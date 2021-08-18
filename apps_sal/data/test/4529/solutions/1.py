@@ -18,7 +18,6 @@ for rwwe in range(q):
     pref = [0] * (n + 1)
     for i in range(1, n + 1):
         pref[i] = pref[i - 1] + k[i - 1]
-    #print(pref)############
     d = {}
     for i in pref:
         d[i] = []
@@ -26,7 +25,6 @@ for rwwe in range(q):
         d[pref[i]].append(i)
     best = 10000000000
     odp = ["a", "a"]
-    #print(d)##########
     for i in d:
         if len(d[i]) < 2:
             continue

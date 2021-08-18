@@ -1,6 +1,5 @@
 class Solution:
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
-        # coord compression
         xs = sorted(set(x for x1, _, x2, _ in rectangles for x in [x1, x2]))
         xi = {v: i for i, v in enumerate(xs)}
         count = [0] * len(xs)

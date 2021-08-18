@@ -3,13 +3,12 @@ class Solution:
         pts = []
         for start, end in requests:
             pts.append((start, 1))
-            pts.append((end + 1, -1))  # open bracket
+            pts.append((end + 1, -1))
 
         pts.sort(key=lambda x: (x[0], x[1]))
 
         N = len(nums)
         cnts = []
-        # 2 pointers
         j = 0
         cur = 0
         for i in range(N):

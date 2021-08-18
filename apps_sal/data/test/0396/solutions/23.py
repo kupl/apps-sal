@@ -20,9 +20,8 @@ def much(l):
     while a1 <= l:
         a1 = a1 * 2
         cnt = cnt + 1
-    k2 = cnt  # (k3 + 2)
+    k2 = cnt
     ans = (k3 + 1) * (k3 + 2) // 2
-    # print(k2);
     for q in range(k3 + 1, k2 + 1):
         x = 2 ** q
         while 1:

@@ -15,13 +15,11 @@ for i in range(1, N + 1):
     for a in range(0, N * 10 + 1):
         for b in range(0, N * 10 + 1):
             if DP[i - 1][a][b] != -1:
-                # 使わない
                 if DP[i][a][b] == -1:
                     DP[i][a][b] = DP[i - 1][a][b]
                 else:
                     DP[i][a][b] = min(DP[i][a][b], DP[i - 1][a][b])
 
-                # 使う
                 if DP[i][a + A][b + B] == -1:
                     DP[i][a + A][b + B] = DP[i - 1][a][b] + C
                 else:

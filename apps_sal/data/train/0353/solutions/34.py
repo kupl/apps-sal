@@ -5,7 +5,6 @@ class Solution:
         t = target
         while a and a[-1] > t:
             a.pop()
-       # ans = sum([2 * x <= t for x in a])
         ans = 0
         l, h = 0, len(a) - 1
         M = 10 ** 9 + 7

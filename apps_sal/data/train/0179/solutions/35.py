@@ -26,7 +26,6 @@ class Solution:
                 else:
                     de += 1
                 ans = min(ans, cmp(ad) + solve(i + 1, k - de))
-            # print(s[l:],k,ans)
             return ans
 
         return solve(0, k)

@@ -4,7 +4,6 @@ class Solution:
         :type n: int
         :rtype: int
         """
-        # f(i) = f(i-1) + f(i-2)
         if n == 0 or n == 1:
             return 1
         f2, f1 = 1, 1

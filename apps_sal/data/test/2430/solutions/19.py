@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# coding=utf-8
 n = int(input())
 a = []
 for i in range(0, n):

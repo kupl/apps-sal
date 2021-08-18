@@ -2,8 +2,6 @@ import sys
 
 MOD = 10**9 + 7
 
-# Polymod
-
 
 def polymod(P, Q):
     assert(Q[-1] == 1)
@@ -25,8 +23,6 @@ def polyprod(P, Q):
         for j in range(m):
             W[i + j] += P[i] * Q[j]
     return [w % MOD for w in W]
-
-# Calc A^m * B
 
 
 def power(A, B, m, mult):

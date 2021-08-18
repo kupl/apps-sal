@@ -13,7 +13,6 @@ class Solution:
                 for i in range(2, curr_n):
                     denom = str(curr_n)
                     if math.gcd(curr_n, i) == 1:
-                        # cant be simplified anymore
                         numer = str(i)
                         val = numer + '/' + denom
                         curr_arr.append(val)

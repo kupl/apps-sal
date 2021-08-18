@@ -12,14 +12,14 @@ def block(m, R, C, esc, r, c):
     while q:
         r, c = q.pop()
         if m[r][c] == '.':
-            m[r][c] = '#'
-        if m[r][c] != '#' and r == R - 1 and c == C - 1:
-            return 0
-        if m[r][c] != '#':
-            for r, c in ((r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)):
-                if 0 <= r < R and 0 <= c < C and (r, c) not in h:
-                    q.append((r, c))
-                    h.add((r, c))
+            m[r][c] = '
+        if m[r][c] != '
+        return 0
+        if m[r][c] != '
+        for r, c in ((r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)):
+            if 0 <= r < R and 0 <= c < C and (r, c) not in h:
+                q.append((r, c))
+                h.add((r, c))
     for r, c in h:
         esc[r][c] = 0
     return 1
@@ -31,10 +31,10 @@ def reachability(m, R, C):
     while q:
         r, c = q.pop()
         esc[r][c] = 1
-        if m[r][c] != '#':
-            for r, c in ((r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)):
-                if 0 <= r < R and 0 <= c < C and esc[r][c] == 0:
-                    q.append((r, c))
+        if m[r][c] != '
+        for r, c in ((r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)):
+            if 0 <= r < R and 0 <= c < C and esc[r][c] == 0:
+                q.append((r, c))
     return esc
 
 

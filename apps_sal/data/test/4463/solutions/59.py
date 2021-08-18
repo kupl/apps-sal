@@ -3,9 +3,7 @@ t = str(input())
 
 
 def num2alpha(c): return chr(c + 96)
-# print(num2alpha(3)) #==> c
 def alpha2num(c): return ord(c) - ord('a') + 1
-# alpha2num('y') #==> 25
 
 
 S = [0] * 26
@@ -14,7 +12,6 @@ for i in range(len(s)):
     S[alpha2num(s[i]) - 1] += 1
 for i in range(len(t)):
     T[alpha2num(t[i]) - 1] += 1
-#print(S, T)
 
 ss = 0
 while S[ss] == 0:

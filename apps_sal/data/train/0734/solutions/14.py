@@ -1,13 +1,9 @@
-# cook your dish here
-# print("Odd")
 from collections import Counter
 
 for _ in range(int(input())):
 
     n = int(input())
     li = [int(x) for x in input().split()]
-    # n = 2
-    # li  = [1,1]
 
     inp_ord = list(enumerate(li))
     cow = Counter(li)

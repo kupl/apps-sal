@@ -1,7 +1,5 @@
 H, W, A, B = list(map(int, input().split()))
 
-# H行W列 左下から縦A横B
-
 
 def mod(num):
     return num % (10 ** 9 + 7)
@@ -18,7 +16,6 @@ for i in range(1, n):
     fac[i] = mod(fac[i - 1] * i)
 
 
-# 逆元の計算 x**(-1) ≡ x**(10**9 + 5) (mod 10**9 + 7)
 rev[n - 1] = pow(fac[n - 1], 10**9 + 5, 10**9 + 7)
 
 for i in range(n - 2, 0, -1):

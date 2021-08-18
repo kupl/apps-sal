@@ -2,8 +2,6 @@ n = int(input())
 Becone = [list(map(int, input().split())) for i in range(n)]
 Becone.sort(key=lambda x: x[0])
 dp = [0] * 1000001
-# for i in range(1000001) :
-#    dp[i] = 0
 
 if Becone[0][0] == 0:
     dp[0] = 1

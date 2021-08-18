@@ -1,8 +1,6 @@
-# 136-A
 
 A, B, C = list(map(int, input().split()))
 
-#print(C - A + B)
 
 ans = C - A + B
 

@@ -1,5 +1,3 @@
-# Bismillahirahmanirahim
-# Soru 1
 
 nv = list(map(int, input().split()))
 

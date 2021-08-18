@@ -3,7 +3,6 @@ import math
 import collections
 import itertools
 input = sys.stdin.readline
-# ダイクストラで頂点1と偶数距離を0として塗る
 N = int(input())
 road = [[] for i in range(N + 1)]
 for _ in range(N - 1):

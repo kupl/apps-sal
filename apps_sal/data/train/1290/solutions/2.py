@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 a = 0
 while(t != 0):

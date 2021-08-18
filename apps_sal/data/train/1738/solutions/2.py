@@ -26,7 +26,6 @@ def distance(point_1, point_2):
 
 def area(p1, p2, p3):
     '''Returns the area of the triangle using Heron's Formula'''
-    # print(p1, p2, p3)
     a = distance(p1, p2)
     b = distance(p1, p3)
     c = distance(p2, p3)

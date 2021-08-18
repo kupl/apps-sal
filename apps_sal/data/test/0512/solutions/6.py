@@ -23,7 +23,6 @@ def check_AB(A, B):
     if not(Br == -1 or Br == None or Br == B):
         return False
 
-#	print(A, B, Ar, Br)
     return True
 
 
@@ -36,7 +35,6 @@ def check_A2B(A, B):
         if not check_AB(A2, B2):
             return False
 
-#	print(A, B)
     return check(B + C + 1)
 
 

@@ -38,7 +38,6 @@ def convert(strVal):
             a = a[:i]+divByTwo+a[i+1:]
         
         i-=1'''
-    # aLength-=1
 
     return int(a)
 
@@ -47,9 +46,7 @@ inputList = defaultdict(int)
 
 inputNum = int(input())
 
-#print (inputNum)
 
-# iterate n times and do changes in each iteration
 for x in range(0, inputNum):
     inputStr = input()
 
@@ -58,29 +55,18 @@ for x in range(0, inputNum):
 
     if firstValue != '?':
         convertedValue = convert(secondValue)
-        # print(secondValue)
-        # print(convertedValue)
-    #print (convertedValue)
 
-    # + case
     if firstValue == '+':
-        #plusVal = int(convertedValue)
         inputList[convertedValue] += 1
 
-    # - case
     elif firstValue == '-':
-        #minusVal = int(convertedValue)
         inputList[convertedValue] -= 1
 
-    # ? case
     elif firstValue == '?':
         patString = int(secondValue)
         count = inputList[patString]
         print(count)
 
 
-# print(inputList)
-
-# print(inputList)
 '''for x in inputList:
     print('{}, {}', x, inputList[x])'''

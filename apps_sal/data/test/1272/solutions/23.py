@@ -1,5 +1,3 @@
-# Union Find
-# xの根を求める
 import sys
 
 
@@ -11,7 +9,6 @@ def find(x):
         return par[x]
 
 
-# xとyの属する集合の併合
 def unite(x, y):
     x = find(x)
     y = find(y)
@@ -19,7 +16,6 @@ def unite(x, y):
     if x == y:
         return False
     else:
-        # x < y にする
         if par[x] > par[y]:
             x, y = y, x
         par[x] += par[y]
@@ -27,12 +23,10 @@ def unite(x, y):
         return True
 
 
-# xとyが異なる集合に属するかの判定
 def isdiff(x, y):
     return find(x) != find(y)
 
 
-# xが属する集合の個数
 def size(x):
     return -par[find(x)]
 

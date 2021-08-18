@@ -19,7 +19,5 @@ for i in range(x):
             number = key
         elif h[key] is occur:
             if (int(key) < int(number)):
-                # print 'key -> ' + key + ' number -> ' + str(number)
                 number = key
-                # print 'new key is ' + number + ' occuring ' + str(number) + ' times'
     print(str(number) + ' ' + str(occur))

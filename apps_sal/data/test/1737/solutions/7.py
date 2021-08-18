@@ -30,7 +30,6 @@ for x in range(n):
 lst = []
 array = [L]
 
-# print(d)
 temp1 = [(L, R)]
 temp2 = []
 k1 = 0

@@ -29,5 +29,4 @@ for i in range(k, n):
     sa = l[n - 1] - l[n - 1 - i] - l[i - 1] + 1
     sum += sa
     sum %= mod
-    # print(k,sa)
 print(sum)

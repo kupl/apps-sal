@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     P = [100, 50, 10, 5, 2, 1]

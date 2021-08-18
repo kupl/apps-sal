@@ -7,7 +7,6 @@ def increment_string(strng):
     elif len(strng) == 1:
         return str(int(strng) + 1)
 
-    # Append all non-digit characters to new string, keeping track of the index where characters end
     idx = 0
     for i, c in enumerate(strng):
         if not c.isdigit():
@@ -21,7 +20,7 @@ def increment_string(strng):
     """if len(strng) > 0 and strng[-1].isdigit():
         next_num = int(strng[-1]) + 1
     
-        cur_index = -1 # Start at end of string
+        cur_index = -1 
         
         if next_num < 10:
             strng = strng[:cur_index] + str(next_num)

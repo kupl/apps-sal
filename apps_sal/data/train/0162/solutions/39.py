@@ -7,8 +7,6 @@ class Solution:
         @lru_cache(maxsize=None)
         def memo_solve(p1, p2):
 
-            # Base case: If either string is now empty, we can't match
-            # up anymore characters.
             if p1 == len(text1) or p2 == len(text2):
                 return 0
 

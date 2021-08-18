@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/12 0:35
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : A. Nastya Is Reading a Book.py
 
 
 def main():

@@ -1,14 +1,12 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-
-        # union find
         '''
         def gcd(a, b):    
             if b==0:
                 return a
             return gcd(b, a%b)
         '''
-        def find(u):  # pass compresson
+        def find(u):
             if p[u] == -1:
                 return u
             p[u] = find(p[u])
@@ -49,38 +47,19 @@ class Solution:
 
         m = max(A) + 1
 
-        #pr = []
-        # sieve(m-1)
-        #l = len(pr)
-
         p = [-1] * m
         r = [0] * m
 
         for i in range(n):
-            # prime factorization
             factor = 2
             num = A[i]
-            while num >= factor * factor:  # here
+            while num >= factor * factor:
                 if num % factor == 0:
                     num //= factor
                     union(A[i], factor)
                 else:
                     factor += 1
-            union(A[i], num)    # here
-
-            ################
-            #j = 0
-            # while j<l and pr[j]<=A[i]:
-            #    if A[i]%pr[j]==0:
-            #        union(A[i], pr[j])
-            #    j+=1
-            ##################
-            #j = 2
-            # while j*j<=A[i]:
-            #    if A[i]%j==0:
-            #        union(A[i], j)
-            #        union(A[i], A[i]//j)
-            #    j+=1
+            union(A[i], num)
 
         s = [0] * m
         for i in range(n):
@@ -89,7 +68,6 @@ class Solution:
         return max(s)
 
         '''
-        # dfs   TLE
         
         def gcd(a, b):    
             if b==0:

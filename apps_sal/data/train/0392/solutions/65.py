@@ -14,7 +14,6 @@ class Solution:
 
         first, second = 0, 0
         num_ones_sofar, cutoff = 0, num_ones // 3
-        # print(cutoff)
         for i in range(n):
             num_ones_sofar += s[i] == '1'
             if num_ones_sofar < cutoff:
@@ -25,5 +24,4 @@ class Solution:
                 second += 1
             else:
                 pass
-            # print(first, second)
         return (first * second) % self.CONST

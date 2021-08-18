@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 input()
 pieces = list(map(int, input().split()))

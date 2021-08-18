@@ -14,7 +14,6 @@ for _ in range(t):
         dp.append((names if sender == '?' else set([sender])) - ls)
         if i and len(dp[i - 1]) == 1:
             dp[i] -= dp[i - 1]
-        # print(dp[i]);
     if any([len(p) == 0 for p in dp]):
         print("Impossible")
     else:

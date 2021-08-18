@@ -11,13 +11,6 @@ class Solution:
             if n == p1 or m == p2:
                 return 0
 
-            # case1 = memo_solve(p1+1,p2)
-            # index = text2.find(text1[p1],p2)
-            # if index !=-1:
-            #     case2 = 1+memo_solve(p1+1,index+1)
-            # else:
-            #     case2 = 0
-
             if text1[p1] == text2[p2]:
                 return 1 + memo_solve(p1 + 1, p2 + 1)
 

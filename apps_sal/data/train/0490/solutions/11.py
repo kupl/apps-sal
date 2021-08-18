@@ -4,7 +4,6 @@ class Solution:
         rooms_to_visit = [i for i in range(n)]
 
         def dfs(curr_room, rooms_left, keys):
-            # print(curr_room, rooms[curr_room], rooms_left, keys)
             if len(rooms_left) == 0:
                 return True
             else:

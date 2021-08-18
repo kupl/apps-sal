@@ -1,6 +1,5 @@
 from collections import defaultdict
 3
-# coding: utf-8
 
 
 class UnionFind(object):

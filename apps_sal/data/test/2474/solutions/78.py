@@ -1,4 +1,3 @@
-# E
 n = int(input())
 c = [int(i) for i in input().split()]
 mod = 10**9 + 7

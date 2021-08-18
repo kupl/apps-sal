@@ -13,11 +13,9 @@ class Solution:
         cell2jump[9] = [2, 4]
         cell2jump[0] = [4, 6]
 
-        # dp[n, i] = helper(n, i)
         dp = defaultdict()
 
         def helper(num_jumps, cell):
-            # return number of jumps if place at cell and have num_jumps remaining
             if num_jumps == 0:
                 return 1
             elif num_jumps == 1:

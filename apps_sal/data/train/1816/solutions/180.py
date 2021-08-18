@@ -1,5 +1,4 @@
 class Solution:
-    # 1604
     def alertNames(self, keyName: 'List[str]', keyTime: 'List[str]') -> 'List[str]':
         N = len(keyName)
         arr = []
@@ -15,7 +14,6 @@ class Solution:
                 counter[arr[i][1]] -= 1
                 i += 1
             counter[arr[j][1]] += 1
-            # print(i,j,counter)
             if counter[arr[j][1]] >= 3:
                 res.add(arr[j][1])
         return sorted(list(res))

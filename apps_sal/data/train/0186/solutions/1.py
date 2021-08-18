@@ -2,7 +2,6 @@ class Solution:
     def largestNumber(self, cost: List[int], target: int) -> str:
         @lru_cache(None)
         def dfs(c):
-            #if c==0: print(c,cur)
             if c == 0:
                 return 0
             ans = -float('inf')

@@ -32,7 +32,6 @@ class Solution:
                 add_prime(q, i, primes)
                 while k % q == 0:
                     k //= q
-        # print(primes)
         for l in primes.values():
             j, r = l[0], g.find(l[0])
             for i in l[1:]:
@@ -40,6 +39,4 @@ class Solution:
                 if nd != r:
                     g.p[nd] = r
                     g.s[r] += g.s[nd]
-        # print(g.p)
-        # print(g.s)
         return max(g.s)

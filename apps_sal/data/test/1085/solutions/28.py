@@ -1,6 +1,3 @@
-# coding: utf-8
-# hello worldと表示する
-# dpでできないかな？
 from math import floor, ceil, pi
 from bisect import bisect_left, bisect_right
 from operator import itemgetter
@@ -35,14 +32,12 @@ def make_divisors(n):
             if i != n // i:
                 divisors.append(n // i)
 
-    # divisors.sort()
     return divisors
 
 
 u = len(make_divisors(n - 1)) - 1
 lis = make_divisors(n)
 lis.remove(1)
-# print(lis)
 
 
 def divsub(n, k):
@@ -57,7 +52,6 @@ def divsub(n, k):
             flag = False
 
 
-# print(divsub(10,5))
 ans = 0
 for i in range(len(lis)):
     ans += divsub(n, lis[i])

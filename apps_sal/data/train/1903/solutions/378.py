@@ -22,11 +22,9 @@ class Solution:
 
         cct = len(points)
         cost = 0
-        # print('foo')
         for x, i, j in edges:
             if join(i, j):
                 cost += x
-                # print(x)
                 cct -= 1
                 if cct == 1:
                     break

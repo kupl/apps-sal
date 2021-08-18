@@ -10,7 +10,6 @@ def split_input():
     return [int(i) for i in input().split()]
 
 
-# tests = 1
 tests = int(input())
 
 for _ in range(tests):
@@ -23,10 +22,8 @@ for _ in range(tests):
     kvalue = newd[0]
     dec = True
     ans = True
-    # print(newd)
     i = 1
     while i < n:
-        # print(kvalue,dec)
         if newd[i] < 0:
             ans = False
             break

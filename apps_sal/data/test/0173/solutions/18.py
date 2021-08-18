@@ -28,10 +28,8 @@ def travel(ni, mi):
     newn = ni + updown
     newm = mi + leftright
     if newn >= 0 and newn < n and [newn, mi] not in visited:
-        #        print(newn,mi)
         travel(newn, mi)
     if newm >= 0 and newm < m and [ni, newm] not in visited:
-        #        print(ni,newm)
         travel(ni, newm)
     return visited
 

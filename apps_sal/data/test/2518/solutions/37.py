@@ -4,8 +4,6 @@ readline = sys.stdin.readline
 N, A, B = map(int, readline().split())
 H = [int(readline()) for i in range(N)]
 
-# AをA - Bと読み替え、一回の攻撃で全体にBダメージと1体にAダメージと考える
-# X回で達成できるかの二分探索
 
 A -= B
 
@@ -14,7 +12,6 @@ ok = 10 ** 9
 
 
 def isOk(x):
-    # 各H_iを倒すのに必要な攻撃Aの回数をカウントする
     cnt = 0
     for i in range(len(H)):
         h = H[i] - x * B

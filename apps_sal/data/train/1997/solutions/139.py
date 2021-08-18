@@ -35,17 +35,6 @@ class Solution:
             else:
                 i += 1
                 j += 1
-                # while leftsorted[i] not in intervals:
-                #     i += 1
-                #     if i == lremain:
-                #         break
 
-
-#         removed = []
-#         for i in range(len(leftsorted)):
-#             if leftsorted[i] not in intervals:
-#                 continue
-#             if leftsorted[i] != rightsorted[i]:
-#                 intervals.remove(rightsorted[i])
         print(intervals)
         return len(intervals)

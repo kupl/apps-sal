@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 n, k = list(map(int, input().split()))
 b = []

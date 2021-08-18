@@ -4,14 +4,14 @@ def get_sieve_of_eratosthenes(n):
     if n < 2:
         raise ValueError('n is more than 2')
     prime = [2]
-    limit = int(n**0.5)  # ルートn以上で割れることはない
-    data = [i + 1 for i in range(2, n, 2)]  # 最初から3スタートの奇数にしておく
+    limit = int(n**0.5)
+    data = [i + 1 for i in range(2, n, 2)]
     while True:
         p = data[0]
-        if limit < p:  # ここでイコールが入るとlimitが素数の時にlimit^2が残ってダメ。
+        if limit < p:
             return prime + data
-        prime.append(p)  # ここで一番最初に取り出した素数を加える。
-        data = [e for e in data if e % p != 0]  # 残りでその素数で割れない数字を取得。
+        prime.append(p)
+        data = [e for e in data if e % p != 0]
 
 
 MAX = pow(10, 5) + 10

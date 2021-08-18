@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 
 a0 = 0
@@ -45,9 +44,6 @@ def solve(n, k, arr):
             ans += i[1]
             if i[0] < minflip[0] or minflip[0] == -1:
                 minflip = (i[0], i[1])
-    # print(ans,ctr)
-    # print(tiwari)
-    # print(minflip)
     if ctr % 2 == 0:
         ans += minflip[0]
         ans -= minflip[1]

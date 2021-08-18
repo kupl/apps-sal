@@ -1,4 +1,3 @@
-# WeirdBugsButOkay
 
 t = int(input())
 

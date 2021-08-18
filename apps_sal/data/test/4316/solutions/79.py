@@ -1,7 +1,6 @@
 S = list(input())
 
 S.sort()
-# print(S)
 
 if S[0] == S[1]:
     if S[2] == S[3]:

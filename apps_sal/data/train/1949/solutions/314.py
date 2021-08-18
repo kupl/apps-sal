@@ -29,5 +29,4 @@ class Solution:
             tmp = dfs(i, j, grid[i][j])
             res = max(res, tmp)
             del visited[(i, j)]
-            # print(i, j, tmp)
         return res

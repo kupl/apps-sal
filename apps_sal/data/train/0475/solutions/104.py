@@ -10,7 +10,6 @@ class Solution:
                 res.append(preSum[j + 1] - preSum[i])
         res.sort()
         Sum = 0
-        # print(res)
         for i in range(left, right + 1):
             Sum += res[i - 1]
         return Sum % (10**9 + 7)

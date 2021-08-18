@@ -22,7 +22,6 @@ class Solution:
         while left <= right:
 
             v = (left + right) // 2
-            # print(possible(positions,m,v),m,v)
             if possible(positions, m, v):
                 ans = v
                 left = v + 1

@@ -2,7 +2,7 @@ def resolve():
     import sys
     from operator import itemgetter
 
-    readline = sys.stdin.readline    # 1行だけ文字列にする
+    readline = sys.stdin.readline
 
     N, M = list(map(int, readline().split()))
     AB = [list(map(int, readline().split())) for _ in [0] * M]

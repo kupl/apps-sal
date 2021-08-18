@@ -13,7 +13,7 @@ class Solution:
                 b += nums2[j]
                 j += 1
             else:
-                a = b = max(a, b) + nums1[i]  # they are equal when numbers are equal
+                a = b = max(a, b) + nums1[i]
                 i += 1
                 j += 1
 

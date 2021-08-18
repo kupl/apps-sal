@@ -9,5 +9,4 @@ def hotpo(n):
         else:
             n = 3 * n + 1
         count += 1
-        #print (remainder, count)
     return (count)

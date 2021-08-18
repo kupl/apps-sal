@@ -1,6 +1,5 @@
 class Solution:
     def removeDuplicates(self, S: str) -> str:
-        # stack application
         stack = []
         for i in S:
             if not stack:

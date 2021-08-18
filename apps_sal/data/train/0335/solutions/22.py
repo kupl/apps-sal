@@ -4,14 +4,11 @@ class Solution:
         deltaList = [0]
         rods.sort()
         for rod in rods:
-            # print(deltaList)
-            # print(deltaBase)
             deltaBaseTemp = deltaBase.copy()
             iMax = len(deltaList)
             for i in range(iMax):
                 delta = deltaList[i]
                 deltaPlus = delta + rod
-                # print(rod, delta, deltaPlus)
                 if deltaPlus not in deltaBase:
                     deltaList.append(deltaPlus)
                     deltaBase[deltaPlus] = deltaBaseTemp[delta]
@@ -32,7 +29,4 @@ class Solution:
                         deltaBase[deltaMinus] = deltaBaseTemp[delta] + rod - deltaMinus
                     else:
                         deltaBase[deltaMinus] = max(deltaBase[deltaMinus], deltaBaseTemp[delta] + rod - deltaMinus)
-        #         print(rod, delta, deltaMinus, deltaBaseTemp[delta]+ rod - deltaMinus)
-        # print(deltaList)
-        # print(deltaBase)
         return deltaBase[0]

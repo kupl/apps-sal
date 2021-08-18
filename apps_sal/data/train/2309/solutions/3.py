@@ -18,6 +18,3 @@ while T:
     print('YES\n' + ' '.join(str(i * j + 1)for j in range(n)))
 
     T -= 1
-
-
-# Made By Mostafa_Khaled

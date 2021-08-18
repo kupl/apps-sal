@@ -7,5 +7,4 @@ def derive(coefficient, exponent):
 
     str1 += str(product) + 'x' + '^' + str(exponent)
 
-    # your code here
     return str1

@@ -2,7 +2,7 @@ from collections import deque
 
 
 def belman(s, n, w, es):
-    d = [-float("inf")] * n  # d[i] : s→iの最短距離
+    d = [-float("inf")] * n
     d[s] = 0
     c = 0
     while True:

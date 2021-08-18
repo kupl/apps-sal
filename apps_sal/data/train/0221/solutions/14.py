@@ -18,7 +18,6 @@ class Solution:
 
             for i in range(1, n - m + 1):
                 y = ((y - num[i - 1] * p % mod) * b % mod + num[i - 1 + m]) % mod
-                #y = (y-num[i-1]*p)*b+num[i-1+m]
 
                 if y in st:
                     idx = i
@@ -29,16 +28,15 @@ class Solution:
             return 1
 
         n = len(S)
-        b = 26                      # no need to be 128
-        # mod = 10**9+7              # too small => conflict
-        mod = 2**32                 # here
+        b = 26
+        mod = 2**32
 
         z = ord('a')
         num = [ord(S[i]) - z for i in range(n)]
 
         l = 1
         r = n
-        idx = 0  # last found duplicate
+        idx = 0
         while l < r:
 
             m = (l + r) // 2

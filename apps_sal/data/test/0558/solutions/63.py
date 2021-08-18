@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from networkx.utils import UnionFind
 from operator import itemgetter

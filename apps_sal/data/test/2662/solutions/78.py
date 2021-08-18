@@ -1,5 +1,3 @@
-# float型を許すな
-# numpyはpythonで
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 from operator import itemgetter
@@ -27,13 +25,10 @@ lis = [I() for i in range(n)]
 cols = deque([inf])
 i = 0
 while i < n:
-    # print(cols)
     x = lis[i]
     if cols[0] >= x:
         cols.appendleft(x)
     else:
         cols[bisect_left(cols, x) - 1] = x
-        # print(bisect_left(cols,x))
     i += 1
-# print(cols)
 print((len(cols) - 1))

@@ -8,6 +8,5 @@ for i in A:
 for i in S:
     total = i * (i - 1) // 2 + total
 for i in A:
-    # print(i,S[i])
     a = total - S[i] + 1
     print(a)

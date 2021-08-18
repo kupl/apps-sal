@@ -3,10 +3,6 @@ import functools
 
 class Solution():
     def smallestSufficientTeam(self, req_skills, people):
-        # 1:14
-        # as we know skills are less  we can use bit to represent stage
-        # lets use skills acquired statge to be 1
-        # bits and dp question
         skills = dict()
         for i, v in enumerate(req_skills):
             skills[v] = i
@@ -28,17 +24,7 @@ class Solution():
                 return 0, None
             if i == n:
                 return float('inf'), None
-            # i will never reach n as answer exists
-            # 2 options now
-            # either we pick ith person or not
-            # if we pick
             newteamskills = teamskills | peopleskills[i]
-
-            # for skill in people[i]:
-            #     skillpos = skills[skill]
-            #     # set this bit to 1 in newpendingskills
-            #     # and with zero
-            #     newteamskills = newteamskills | (1 << skillpos)
 
             pickans, picklist = helper(i + 1, newteamskills)
             pickans += 1

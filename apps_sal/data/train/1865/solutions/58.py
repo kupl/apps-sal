@@ -32,8 +32,8 @@ class Solution:
                         continue
                     if not (0 <= nbi < n and 0 <= nbj < m):
                         continue
-                    if grid[nsi][nsj] == '#' or grid[nbi][nbj] == '#':
-                        continue
+                    if grid[nsi][nsj] == '
+                    continue
                     nsb = (nsi, nsj, nbi, nbj)
                     if nsb in seen:
                         continue

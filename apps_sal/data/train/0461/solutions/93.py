@@ -7,13 +7,10 @@ class Solution:
         if not manager:
             return 0
 
-        # building the graph
         graph = defaultdict(list)
         for v in range(n):
             graph[manager[v]].append(v)
 
-        # For each node, we have to take the hieghest time
-        # returned from its subordinates/children
         def dfs(node):
             if node not in graph:
                 return informTime[node]

@@ -1,4 +1,3 @@
-# Adapted from code of hatsuyuki15 in this contest
 n, l, x, y = list(map(int, input().split()))
 a = set(map(int, input().split()))
 boy = False

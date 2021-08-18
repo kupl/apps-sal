@@ -1,6 +1,6 @@
 '''
 n=int(input())
-a=list(map(int,input().split()))#a^b^b=a，b^b=0
+a=list(map(int,input().split()))
 def lastcount(r):
     nonlocal a
     right=a[r]

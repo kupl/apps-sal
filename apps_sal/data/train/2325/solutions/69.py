@@ -50,8 +50,6 @@ def main():
     for _ in range(Q):
         a, b, c, d = MI()
 
-        # print(S[a-1:b])
-        # print(T[c-1:d])
         if calc(a, b, c, d):
             print("YES")
         else:

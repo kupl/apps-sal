@@ -1,21 +1,19 @@
 def fly_by(lamps, drone):
 
-    #  <----  hack the lamps!
-
     x = len(lamps)
     o = min(len(drone), x)
     x = (x - o) * 'x'
     o = o * 'o'
 
     return (
-        o + x,  # concatenation
+        o + x,
 
-        ''.join((o, x)),  # join
+        ''.join((o, x)),
 
-        "%s%s" % (o, x),  # C-style
+        "%s%s" % (o, x),
 
-        "{}{}".format(o, x),  # function
+        "{}{}".format(o, x),
 
-        f"{o}{x}"  # f-string
+        f"{o}{x}"
 
     )[__import__('random').randint(0, 4)]

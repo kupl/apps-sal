@@ -4,14 +4,12 @@ class Solution:
         ans = 0
         for v1, l1 in list(cnt1.items()):
             for v2, l2 in list(cnt2.items()):
-                # only check half of it,
                 if v2 != v1 and v1 ** 2 / v2 in cnt2:
                     ans += (l1 * l2 * cnt2[v1**2 / v2])
                 elif v2 == v1:
                     ans += (l1 * l2 * (l2 - 1))
         for v1, l1 in list(cnt2.items()):
             for v2, l2 in list(cnt1.items()):
-                # only check half of it,
                 if v2 != v1 and v1 ** 2 / v2 in cnt1:
                     ans += (l1 * l2 * cnt1[v1**2 / v2])
                 elif v2 == v1:

@@ -29,7 +29,6 @@ class Solution:
                 continue
             ans += A.union(u, v)
             B.union(u, v)
-        # print(A.get_edge_count(), B.get_edge_count())
         for typ, u, v in edges:
             if typ == 3:
                 continue
@@ -37,7 +36,6 @@ class Solution:
                 ans += A.union(u, v)
             elif typ == 2:
                 ans += B.union(u, v)
-        # print(A.get_edge_count(), B.get_edge_count())
         if A.get_edge_count() == n - 1 and B.get_edge_count() == n - 1:
             return ans
         else:

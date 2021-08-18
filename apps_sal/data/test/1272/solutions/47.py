@@ -4,12 +4,12 @@ ab = [[0, 0] for i in range(m)]
 for i in range(m):
     ab[i][0], ab[i][1] = list(map(int, input().split()))
 
-sys.setrecursionlimit(10**9)  # 再帰の上限をあげる
+sys.setrecursionlimit(10**9)
 
-root = [-1 for i in range(n + 1)]  # 自分が親なら自身の番号を、そうでないなら（元）親の番号を示す
+root = [-1 for i in range(n + 1)]
 
 
-def r(x):  # 親は誰？
+def r(x):
     if root[x] < 0:
         return x
     else:

@@ -2,7 +2,6 @@
 import sys
 
 for i in range(int(input())):
-    # line =
     [N, B, M] = list(map(int, input().split()))
     t = 0
     while N > 0:

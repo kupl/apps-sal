@@ -9,7 +9,6 @@ class Nature(Chaos):
         tree = ""
 
         for i in range(1, n + 1):
-            # leafs grow in the i'th layer
             temp_layer = Leafs.get_leaf(self)
             for j in range(0, i - 1):
                 temp_layer += ' '
@@ -17,7 +16,6 @@ class Nature(Chaos):
 
             tree += ' ' * (n - i) + temp_layer + "\n"
 
-        # grows from roots to upper branches
         for i in range(n // 3):
             if i == n // 3 - 1:
                 tree += ' ' * (n - 1) + Trunk.pieceOfTrunk(self)
@@ -37,11 +35,8 @@ class Leafs(Nature):
 
     def get_leaf(self):
         """Returns the next leaf as singleton string"""
-        # increase nextleaf
         self.nextleaf += 1
-        # leaft, abbreviation for leaftypes
         leaft = self.leaftypes
-        # return the value before increment
         return leaft[(self.nextleaf - 1) % len(leaft)]
 
 

@@ -29,6 +29,4 @@ while stk:
         stk.append(node + 1)
         visited[node + 1] = True
         dist[node + 1] = dist[node] + 1
-# print(d)
-# print(dist)
 print(dist[-1])

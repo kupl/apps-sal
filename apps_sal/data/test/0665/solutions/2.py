@@ -2,7 +2,6 @@ import sys
 from collections import Counter
 from math import *
 
-# sys.stdin = open("in.txt")
 
 for _ in range(int(input())):
     n, s = list(map(int, input().split()))

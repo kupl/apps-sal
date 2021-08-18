@@ -10,5 +10,3 @@ def pattern(n):
             if x != a:
                 string += "\n"
     return string
-
-    # Happy Coding ^_^

@@ -23,17 +23,14 @@ def add(a, b):
         a = ((len(b) - len(a)) * '0') + a
     else:
         b = ((len(a) - len(b)) * '0') + b
-    #
     bits = [i + j for i, j in zip(reversed(a), reversed(b))]
     co = False
     ans = ['' for i in range(len(a))]
     for i, b in enumerate(bits):
         ans[i], co = bitAdd(b, co)
-    #
     if co:
         ans.append('1')
     ans = ''.join(reversed(ans)).lstrip('0')
-    #
     if ans == '':
         return '0'
     return ans

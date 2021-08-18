@@ -5,7 +5,7 @@ class Solution:
         rows = len(grid)
         cols = len(grid[0])
 
-        seen = set()  # defaultdict(lambda: float(\"inf\"))
+        seen = set()
         queue = deque()
         queue.append((0, 0, k, 0))
 

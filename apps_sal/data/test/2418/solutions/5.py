@@ -25,8 +25,6 @@ for _ in range(Q):
     l, r, x = map(int, input().split())
     l = l - 1
     r = r - 1
-    #diff[l] += x
-    #diff[r+1] -=x
     if l == 0:
         first += x
     else:

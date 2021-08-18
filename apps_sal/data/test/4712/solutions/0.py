@@ -1,9 +1,9 @@
 H, W = map(int, input().split())
-s = '#' * (W + 2)
+s = '
 data = []
 data.append(s)
 for i in range(H):
-    data.append('#' + str(input()) + '#')
+    data.append('
 data.append(s)
 
 for i in range(H + 2):

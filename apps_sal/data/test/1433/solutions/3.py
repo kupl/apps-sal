@@ -9,9 +9,7 @@ for i in range(n):
         res += s[:l].count('0')
         res += s[r + 1:].count('0')
         res += s[l + 1:r].count('0') * 2
-        # print(res)
     d.append(s)
-# print(d)
 
 for i in range(0, m * 2, 2):
     ss = ''
@@ -25,6 +23,5 @@ for i in range(0, m * 2, 2):
         res += ss[r + 1:].count('0')
         res += ss[l + 1:r].count('0') * 2
 
-    #print(ss, res)
 
 print(res)

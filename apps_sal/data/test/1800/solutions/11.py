@@ -53,7 +53,6 @@ def main():
     for op in ops:
         if prevt is None or prevt != op[0]:
             newops.append(op)
-            # max_r = max(max_r, op[1])
 
         prevt = op[0]
 
@@ -81,11 +80,6 @@ def main():
             for p in range(k):
                 a[r - 1 - p] = b[bl]
                 bl += 1
-
-    # for op in ops:
-    # 	t, r = op
-    # 	reverse = t != 1
-    # 	part_sort(a, 0, r, reverse=reverse)
 
     for ai in a:
         print(ai, end=' ')

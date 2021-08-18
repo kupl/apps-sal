@@ -2,7 +2,6 @@ def amazon_check_mate(king, amazon):
     ranks = '87654321'
     fyles = 'abcdefgh'
 
-    # row,col
     am = (ranks.index(amazon[1]), fyles.index(amazon[0]))
     ki = (ranks.index(king[1]), fyles.index(king[0]))
 

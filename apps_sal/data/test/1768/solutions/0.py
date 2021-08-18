@@ -16,14 +16,10 @@ for c in range(26):
                 tst += 1
             dp[c][k - j + 1 - tst] = max(dp[c][k - j + 1 - tst], k - j + 1)
 
-# for c in range(26):
-#    for j in range(n):
-#        dp[c][j + 1] = max(dp[c][j], dp[c][j + 1])
 
 q = int(sys.stdin.readline().strip())
 
 for i in range(q):
     m, c = [item for item in sys.stdin.readline().strip().split()]
     m = int(m)
-    #print(max([dp[ord(c) - 97][u] for u in range(m + 1)]))
     print(dp[ord(c) - 97][m]) if dp[ord(c) - 97][m] != -1 else print(n)

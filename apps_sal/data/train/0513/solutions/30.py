@@ -14,8 +14,6 @@ class solve:
         self.DP = []
 
     def recur(self, i, pi=-1):
-        # DPテーブルを更新し、答えを求める。
-        # また、巻き戻す値を覚える。
         rev_i = bisect(self.DP, self.A[i])
         if rev_i == len(self.DP):
             self.DP.append(self.A[i])
@@ -30,7 +28,6 @@ class solve:
             if nv != pi:
                 self.recur(nv, i)
 
-        # 巻き戻す。.
         if rev_v is None:
             self.DP.pop()
         else:
@@ -52,9 +49,6 @@ def main():
     S.recur(0)
 
     print(*S.ans, sep='\n')
-    # print(edges)
-    # print(parent)
-    # print(DPs)
 
 
 def __starting_point():

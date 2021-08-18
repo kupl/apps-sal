@@ -1,10 +1,8 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     s = input()
     s = [i for i in s]
     n = len(s)
-    # print(n,'---')
     c = 1
     mc = 1
     for i in range(len(s)):

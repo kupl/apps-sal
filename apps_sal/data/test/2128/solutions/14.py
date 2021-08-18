@@ -18,4 +18,3 @@ for pi in li():
     exp = (exp + 1) * 100 * pow(pi, M - 2, M) % M
 
 print(exp)
-# From SMMaster

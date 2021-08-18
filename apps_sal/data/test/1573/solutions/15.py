@@ -37,15 +37,10 @@ for i in range(n):
     s += arr[i][1]
 summ.append(0)
 mx = 0
-# print(arr)
 c = 0
 for i in arr:
     r = p(i[0] + (d - 1))
     l = p2(i[0])
-    #print(l, r)
     s = summ[r] - summ[l - 1]
-    # print(s)
     mx = max(mx, s)
 print(mx)
-# print(summ)
-# print(p(70))

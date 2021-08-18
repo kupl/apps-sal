@@ -14,7 +14,6 @@ class Solution:
         print(mins)
         s = []
         for i in range(len(nums) - 1, -1, -1):
-            # print(i, s)
             if nums[i] != mins[i]:
                 while s and s[-1] <= mins[i]:
                     s.pop()

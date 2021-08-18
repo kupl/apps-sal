@@ -45,10 +45,8 @@ def main():
             '''
 
             if (sum(n) - sum(arr[i])) == 1:
-                # se eu tirar consigo 1
                 pont[maxi] += 1
             if (sum(n) - sum(arr[i])) == 0:
-                # se eu tirar perco 1
                 pont[arr[i]] -= 1
             upd(arr[i], 1)
             maxi = max(maxi, arr[i])
@@ -59,7 +57,6 @@ def main():
 
         res = 99999999
         for i in range(1, n + 1):
-            #	print(i, ": ", pont[i])
             if resp == pont[i]:
                 res = min(res, i)
 

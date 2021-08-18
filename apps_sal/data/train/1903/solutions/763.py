@@ -1,4 +1,3 @@
-# kruskal
 class Solution:
     def minCostConnectPoints(self, a: List[List[int]]) -> int:
         n, q = len(a), []

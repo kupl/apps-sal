@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 N, K = map(int, input().split())
 a = [i for i in range(1, N + 1)]
 ans = 0

@@ -8,7 +8,6 @@ for i in range(N):
     b[a[i]][0] = min(b[a[i]][0], i)
     b[a[i]][1] += 1
 
-# [value, first_appearance, count]
 c = [(0, 0, 0)]
 for k, v in b.items():
     c.append((k, v[0], v[1]))

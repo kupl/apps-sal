@@ -61,26 +61,22 @@ for d in range(60, 0, -1):
         else:
             dp[d - 1][0] += 1
 
-    # x bound, y bound
     if l == r:
         dp[d - 1][0] += dp[d][0]
     elif l < r:
         dp[d - 1][0] += dp[d][0]
         dp[d - 1][1] += dp[d][0]
         dp[d - 1][2] += dp[d][0]
-    # x bound, y free
     if l == 0:
         dp[d - 1][1] += dp[d][1] * 2
         dp[d - 1][3] += dp[d][1]
     else:
         dp[d - 1][1] += dp[d][1]
-    # x free, y bound
     if r == 1:
         dp[d - 1][2] += dp[d][2] * 2
         dp[d - 1][3] += dp[d][2]
     else:
         dp[d - 1][2] += dp[d][2]
-    # x free, y free
     dp[d - 1][3] += dp[d][3] * 3
 
 print(sum(dp[0]))

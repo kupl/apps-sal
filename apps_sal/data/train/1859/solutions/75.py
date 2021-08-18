@@ -15,11 +15,4 @@ class Solution:
                 s += res[i][j]
                 m = res[i][j] if res[i][j] > m else m
 
-        # for x in res:
-        #     print(x)
-
-        # ########### To Find Max Square Matrix size ###################
-        # print(m)
-        # return m
-
         return s

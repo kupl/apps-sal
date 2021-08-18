@@ -6,8 +6,6 @@ for i in range(m):
 C = [0] * n
 Ans = ""
 for i in range(m):
-    # print(C)
-    # print(T[i])
     t = C[0]
     for j in range(n):
         if(t < C[j]):

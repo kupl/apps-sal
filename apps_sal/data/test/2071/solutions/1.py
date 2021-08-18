@@ -35,23 +35,6 @@ for i in range(n - 1, -1, -1):
     accumsT[i] = accum
 
 
-# for i in range(n-1, -1, -1):
-#    if i % 2 == 0:
-#        if i == n-1:
-#            accums[i] = numbers2[i]
-#        else:
- #           bottomAccum += numbers2[i]*((n-i)*2-1)
-  #          growRateAccum += numbers2[i] + numbers[i+1]
-   #         bottomAccum += growRateAccum
-#        accums[i] = bottomAccum
- #   if i % 2 == 1:
-  #      if i == n-1:
-  #          accums[i] = numbers2[i]
-  #      else:
-   #         topAccum += numbers[i]*((n-i)*2-1)
-   #         growRateAccum += numbers[i] + numbers2[i+1]
-   #         topAccum += growRateAccum
-   #         accums[i] = topAccum
 cMax = 0
 currAccum = 0
 
@@ -59,7 +42,6 @@ growRateAccum = sum(numbers[1::]) + sum(numbers2[1::])
 
 for i in range(n):
     if i % 2 == 0:
-        # estoy en top:
         cMax = max(cMax, currAccum + accumsT[i])
     else:
         cMax = max(cMax, currAccum + accumsB[i])

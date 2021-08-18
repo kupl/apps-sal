@@ -10,7 +10,6 @@ class Solution:
                     if (nums[l + 1] < 0):
                         neg_num -= 1
                     l += 1
-                # print(i, l)
                 result = max(result, i - l - 1)
                 l = i
                 count = 0
@@ -22,6 +21,5 @@ class Solution:
             if (nums[l + 1] < 0):
                 neg_num -= 1
             l += 1
-        # print(l)
         result = max(result, n - 1 - l)
         return result

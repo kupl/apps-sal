@@ -3,9 +3,9 @@ class Solution:
 
         class UnionFind:
             def __init__(self, n):
-                self.group = n              # Number of groups
-                self.rank = [1] * n         # Avoid infinite recursion
-                self.root = list(range(n))  # Root node of each element
+                self.group = n
+                self.rank = [1] * n
+                self.root = list(range(n))
 
             def union(self, e1, e2):
                 x = self.find(e1)

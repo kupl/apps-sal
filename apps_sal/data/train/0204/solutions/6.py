@@ -42,21 +42,3 @@ class Solution:
             return self.binary_search(mid + 1, right_ind, nums, target)
         else:
             return self.binary_search(left_ind, max(left_ind, mid - 1), nums, target)
-
-# [5,1,3]
-# [0]
-
-# find_pivot(0,2,[5,1,3])
-# left = 0
-# right = 2
-# mid = 0 + 2//2 = 1
-# nums[mid] < nums[mid-1]
-# pivot = 1
-# binary_search(0, max(pivot-1,0), ...)
-# left = 0, right = 0
-# search_index_A = -1
-# binary_search(pivot, length-1, ...)
-# left = 1, right = 2
-# mid = 1 + (2-1)//2 = 1
-# binary_search(1, max(0,0), ...)
-# search_index_B = -1

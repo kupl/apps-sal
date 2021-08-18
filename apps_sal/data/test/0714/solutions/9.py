@@ -5,7 +5,6 @@ lst = []
 for i in range(n):
     lst.append([i, l[i]])
 
-# print(lst)
 p_cnt = n // 2
 
 one = sum(l) // p_cnt

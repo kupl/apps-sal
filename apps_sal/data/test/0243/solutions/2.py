@@ -13,19 +13,16 @@ for i, j, w in EDGE:
     COST_vertex[j].append((i, w))
 
 
-MINCOST = [float("inf")] * (n + 1)  # 求めたいリスト:startから頂点iへの最短距離
+MINCOST = [float("inf")] * (n + 1)
 MINCOST[start] = 0
-checking = [(0, start)]  # start時点のcostは0.最初はこれをチェックする.
+checking = [(0, start)]
 while checking:
     cost, checktown = heapq.heappop(checking)
-    # cost,checktownからの行き先をcheck.
-    # cost最小なものを確定し,確定したものはcheckingから抜く.
-    if MINCOST[checktown] < cost:  # 確定したものを再度チェックしなくて良い.
+    if MINCOST[checktown] < cost:
         continue
     for to, co in COST_vertex[checktown]:
         if MINCOST[to] > max(MINCOST[checktown], co):
             MINCOST[to] = max(MINCOST[checktown], co)
-            # MINCOST候補に追加
             heapq.heappush(checking, (max(MINCOST[checktown], co), to))
 
 

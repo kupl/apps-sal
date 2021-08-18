@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 http://codeforces.com/contest/1003/problem/D
 """
@@ -17,7 +15,7 @@ def binarySearch(arr: List, low: int, high: int, val: int):
             high = mid - 1
         elif arr[mid] == val:
             return mid
-        else:  # 2**mid<val:
+        else:
             ans = mid
             low = mid + 1
     return ans

@@ -1,4 +1,3 @@
-# cook your dish here
 a = int(input())
 b = int(input())
 p = input()

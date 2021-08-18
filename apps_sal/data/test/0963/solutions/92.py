@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 import sys
 
-MOD = 998244353  # type: int
+MOD = 998244353
 
 
 def solve(N: int, K: int, L: "List[int]", R: "List[int]"):
@@ -27,10 +26,10 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    K = int(next(tokens))  # type: int
-    L = [int()] * (K)  # type: "List[int]"
-    R = [int()] * (K)  # type: "List[int]"
+    N = int(next(tokens))
+    K = int(next(tokens))
+    L = [int()] * (K)
+    R = [int()] * (K)
     for i in range(K):
         L[i] = int(next(tokens))
         R[i] = int(next(tokens))

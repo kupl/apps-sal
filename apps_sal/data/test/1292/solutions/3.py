@@ -3,7 +3,7 @@ from collections import deque
 n, m, p = [int(v) for v in input().split()]
 s = [int(v) for v in input().split()]
 
-d = {'.': 0, '#': 10}
+d = {'.': 0, '
 d.update({str(v): v for v in range(1, p + 1)})
 
 field = [[d[c] for c in input().strip()] for _ in range(n)]
@@ -32,7 +32,6 @@ def dump():
 while True:
     was = False
     for pp in range(1, p + 1):
-        # dump()
         while frontiers[pp - 1]:
             i, j, dist = frontiers[pp - 1].popleft()
             if field[i][j] not in (0, pp):
@@ -47,7 +46,6 @@ while True:
             for di, dj in off:
                 ni, nj = i + di, j + dj
                 if 0 <= ni < n and 0 <= nj < m and field[ni][nj] == 0:
-                    # print(ni, nj)
                     new_dist = dist + 1
                     if new_dist < dists[pp - 1][ni][nj]:
                         frontiers[pp - 1].append((ni, nj, new_dist))

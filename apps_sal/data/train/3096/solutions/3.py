@@ -12,7 +12,7 @@ class Circle(object):
 
 def josephus_iter(items, k):
     circle = Circle(items)
-    i = k - 1  # index 0-based
+    i = k - 1
     while circle.not_empty():
         item, i = circle.pop(i)
         yield item

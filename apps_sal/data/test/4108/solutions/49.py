@@ -16,6 +16,4 @@ for i, j in zip(S, T):
     else:
         dic2[j] = i
 
-# print(dic1)
-# print(dic2)
 print(ans)

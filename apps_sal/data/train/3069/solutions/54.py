@@ -25,4 +25,3 @@ def greet(language):
         return l.get(language)
     except KeyError:
         return 'Welcome'
-    # your code here

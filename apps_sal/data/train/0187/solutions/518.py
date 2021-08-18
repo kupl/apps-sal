@@ -1,6 +1,5 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        # print(customers)
         r = 1
         wait = 0
         cost = 0
@@ -30,8 +29,6 @@ class Solution:
             r += 1
 
         ans = max(cround, key=lambda x: x[0])
-        # print('ans',ans)
-        # print(r,wait,cost,cround)
         if ans[0] > 0:
             return ans[1]
         else:

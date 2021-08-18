@@ -4,14 +4,14 @@ f = list(int(v) for v in input().split())
 
 ch = [list() for p in op]
 for i, p in enumerate(f):
-    ch[p - 1].append(i + 1)  # children
+    ch[p - 1].append(i + 1)
 
 q = [0]
 for i in range(n):
-    q += ch[q[i]]  # queue parents first
+    q += ch[q[i]]
 
-x = [0] * n  # how many largest numbers the node consumes
-nl = 0  # number of leaves
+x = [0] * n
+nl = 0
 
 for p in reversed(q):
     if not ch[p]:

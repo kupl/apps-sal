@@ -30,7 +30,6 @@ for i in range(n):
 
 ans = 1
 
-# 仲の悪いグループ対ごとに処理する
 for (a1, b1), v1 in list(ctr.items()):
     if used[(a1, b1)]:
         continue
@@ -46,12 +45,11 @@ for (a1, b1), v1 in list(ctr.items()):
     used[(a1, b1)] = True
     used[(a2, b2)] = True
 
-# 片方が0のクループ対
 r = (pow(2, az, p) + pow(2, bz, p) - 1) % p
 ans *= r
 ans %= p
 
-ans += zz  # 0匹のケースは禁止されている
-ans -= 1  # 0匹のケースは禁止されている
+ans += zz
+ans -= 1
 ans %= p
 print(ans)

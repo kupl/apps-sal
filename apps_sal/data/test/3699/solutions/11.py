@@ -1,6 +1,6 @@
-ax, ay, bx, by, tx, ty = list(map(int, input().split()))  #
+ax, ay, bx, by, tx, ty = list(map(int, input().split()))
 
-od = []  #
+od = []
 co = []
 objects = int(input())
 for i in range(objects):

@@ -15,6 +15,6 @@ for i in range(k):
                 break
     else:
         if q == 1:
-            print('Yes')  # isinstance(q, tuple):
+            print('Yes')
         else:
             print('No')

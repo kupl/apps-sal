@@ -3,21 +3,21 @@ right = True
 for i in range(n):
     if i % 2 == 0:
         for j in range(m):
-            print("#", end="")
+            print("
     else:
         for j in range(m):
             if right:
                 if j == m - 1:
-                    print("#", end="")
+                    print("
                 else:
                     print(".", end="")
             else:
                 if j != 0:
                     print(".", end="")
                 else:
-                    print("#", end="")
+                    print("
         if right:
-            right = False
+            right=False
         else:
-            right = True
+            right=True
     print()

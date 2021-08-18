@@ -3,8 +3,6 @@ class Solution:
         m, n = len(A), len(B)
         dp = [[0] * n for _ in range(m)]
 
-        # dp[0][0] = int(A[0] == B[0])
-
         for i in range(m):
             for j in range(n):
                 left = dp[i][j - 1] if j > 0 else 0

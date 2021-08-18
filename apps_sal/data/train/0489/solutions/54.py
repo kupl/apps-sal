@@ -1,6 +1,5 @@
 class Solution:
     def maxWidthRamp(self, A: List[int]) -> int:
-        # 11M coding start
 
         min_map, max_map = {}, {}
 

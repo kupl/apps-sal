@@ -19,4 +19,3 @@ for i in range(t):
     for num in a:
         power(num)
     print(sum(list(d.values())))
-    # print(maxx)

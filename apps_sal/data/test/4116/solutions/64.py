@@ -1,4 +1,3 @@
-# 因数分解して、入れ子で掛け算して、inで入ってるか見る
 
 N = int(input())
 
@@ -11,14 +10,10 @@ for i in range(1, 9 + 1):
     else:
         pass
 
-# print(nums)
-
 
 for i in nums:
     for j in nums:
         mul.append(i * j)
-
-# print(mul)
 
 
 if N in mul:

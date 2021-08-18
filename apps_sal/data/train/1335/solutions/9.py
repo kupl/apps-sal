@@ -3,7 +3,6 @@ import math
 
 def CountFrequency(my_list):
 
-    # Creating an empty dictionary
     freq = {}
     x = []
     for item in my_list:

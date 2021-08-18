@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     NUMBER = input().split()
     CYBER_KIDS = int(NUMBER[0])

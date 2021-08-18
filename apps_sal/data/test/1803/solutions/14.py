@@ -18,11 +18,9 @@ def main() -> int:
         birds_in_wires[x] = 0
 
         if x > 1:
-            # left birds jump up
             birds_in_wires[x - 1] += left_birds
 
         if x < n_wires:
-            # right birds jump down
             birds_in_wires[x + 1] += right_birds
 
     print('\n'.join([str(birds_in_wires[i]) for i in range(1, n_wires + 1)]))

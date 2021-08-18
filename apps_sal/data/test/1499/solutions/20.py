@@ -4,7 +4,6 @@ for i in range(1, len(flags)):
     if i <= m:
         flags[i] = True
 mass = []
-# print(flags)
 for i in range(1, n * 2, 2):
     if flags[i + n * 2]:
         mass.append(i + n * 2)
@@ -14,5 +13,4 @@ for i in range(1, n * 2, 2):
         mass.append(i + n * 2 + 1)
     if flags[i + 1]:
         mass.append(i + 1)
-    #print(i, mass)
 print(' '.join(map(str, mass)))

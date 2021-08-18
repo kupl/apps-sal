@@ -45,7 +45,6 @@ for i in range(n):
     for j in range(m):
         if grid[i][j] == '.':
             grid[i][j] = 'X'
-# print(grid)
 
 for i in range(n):
     for j in range(m):

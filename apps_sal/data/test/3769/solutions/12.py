@@ -18,6 +18,3 @@ def main():
 
 
 main()
-
-
-# Made By Mostafa_Khaled

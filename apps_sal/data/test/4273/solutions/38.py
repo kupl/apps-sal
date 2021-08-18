@@ -7,7 +7,7 @@ for i in range(n):
         D[s[0]] += 1
 
 ans = 0
-A = list(D.values())  # print(A)
+A = list(D.values())
 for l in com(list(range(5)), 3):
     ans += A[l[0]] * A[l[1]] * A[l[2]]
 print(ans)

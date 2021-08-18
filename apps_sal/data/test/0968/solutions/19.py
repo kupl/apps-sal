@@ -1,8 +1,6 @@
 import sys
 import queue
 
-#file = open("in.txt", "r")
-#sys.stdin = file
 
 line = sys.stdin.readline()
 

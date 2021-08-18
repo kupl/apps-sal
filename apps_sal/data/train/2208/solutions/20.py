@@ -1,4 +1,3 @@
-#!python3
 """
 11
  22
@@ -27,8 +26,6 @@ def read_int():
 
 def read_int_array():
     return [int(i) for i in input().strip().split(' ')]
-
-######################################################
 
 
 n, k = read_int_array()
@@ -59,8 +56,6 @@ def bfs(s):
         for w in adj[v]:
             if w not in marked:
                 queue += [w]
-    # if len(tree) > 1:
-        # print(' '.join(str(i) for i in tree))
     return count
 
 

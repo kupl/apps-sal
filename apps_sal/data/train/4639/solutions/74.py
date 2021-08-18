@@ -12,4 +12,3 @@ def power_of_two(x):
         return True
     else:
         return False
-  # your code here

@@ -12,7 +12,5 @@ dp = np.zeros(T, int)
 for a, b in AB:
     ans = max(ans, dp[-1] + b)
     dp[a:] = np.maximum(dp[a:], dp[:-a] + b)
-    # for j in reversed(range(a, T)):
-    #     dp[j] = max(dp[j], dp[j-a] + b)
 
 print(ans)

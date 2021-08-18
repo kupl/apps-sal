@@ -12,9 +12,7 @@ class Solution:
         return True
 
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        # feasiblilty check for alice and bob
 
-        # max connected set of type 3
         l = len(edges)
         root = list(range(0, n + 1))
         for ed in edges:
@@ -54,7 +52,6 @@ class Solution:
         else:
             return ret
 
-        # make connected ones
         l = len(edges)
         conn = [0 for x in range(0, n)]
         nn = [0 for x in range(0, n)]
@@ -62,7 +59,3 @@ class Solution:
         for ed in edges:
             if ed[0] == 3:
                 nn[ed[1]] = nn[ed[2]] = 2
-
-        # is fiseable for alice and bob
-
-        #

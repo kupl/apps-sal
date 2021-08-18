@@ -9,8 +9,6 @@ def strline(): return sys.stdin.readline().strip().split()
 def strread(): return sys.stdin.read().strip().split()
 
 
-# from numba import njit, b1, i4, i8, f8, jit
-# import numpy as np
 mod = 998_244_353
 
 

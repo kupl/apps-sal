@@ -8,5 +8,3 @@ for _ in range(int(input())):
             print("No")
     else:
         print("No")
-
-    # cook your dish here

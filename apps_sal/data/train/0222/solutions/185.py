@@ -15,6 +15,4 @@ class Solution:
                     if list_poss[i + 1][A[i + 1] + A[j]] > max_l:
                         max_l = list_poss[i + 1][A[i + 1] + A[j]]
 
-#            print(list_poss[i+1])
-
         return max_l

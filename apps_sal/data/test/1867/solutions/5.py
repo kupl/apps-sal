@@ -12,7 +12,6 @@ for i in range(n):
         y = (x[0], i, x[2] + 1)
         d[arr[i]] = y
 
-# print(d)
 
 p = 10**20
 r = 0

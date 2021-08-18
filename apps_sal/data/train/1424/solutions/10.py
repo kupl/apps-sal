@@ -1,7 +1,6 @@
 n, a = input().split()
 a = int(a)
 s = str(n)
-# print(type(s[len(s)-1]))
 while(a > 0):
     if(s[len(s) - 1] == "0"):
         s = s[:len(s) - 1]

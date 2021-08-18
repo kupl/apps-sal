@@ -5,7 +5,6 @@ mini = a[0]
 for i in range(1, N):
     max_profit = max(max_profit, a[i] - mini)
     mini = min(mini, a[i])
-# print(max_profit)
 mini = a[0]
 ans = 0
 for i in range(1, N):

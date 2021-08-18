@@ -21,13 +21,3 @@ class Solution:
         else:
             self.dp[i][j] = self.func(arr, turn ^ 1, i + 1, j, a, b + arr[i]) or self.func(arr, turn ^ 1, i, j - 1, a, b + arr[j])
             return self.dp[i][j]
-
-    # Gives TLE
-    # def recur(self, arr, turn, a, b):
-    #     if len(arr) == 1:
-    #         b += arr[0]
-    #         return a > b
-    #     if not turn:
-    #         return self.recur(arr[1:], turn^1, a+arr[0], b) or self.recur(arr[:-1], turn^1, a+arr[-1], b)
-    #     else:
-    #         return self.recur(arr[1:], turn^1, a, b+arr[0]) or self.recur(arr[:-1], turn^1, a, b+arr[-1])

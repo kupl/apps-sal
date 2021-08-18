@@ -1,9 +1,7 @@
 from collections import Counter
 N = int(input())
-# 正数列A
 A = list(map(int, input().split()))
 Q = int(input())
-# B_iである要素をC_iに置き換える
 B_C = [list(map(int, input().split())) for _ in range(Q)]
 
 all_count = Counter(A)

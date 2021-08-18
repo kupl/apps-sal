@@ -28,10 +28,6 @@ class Solution:
             return -1
         opt = [[0] * (l - d_) + [inf] * (d_) for d_ in range(d)]
 
-        # for r in opt:
-        #    print(r)
-        # print()
-
         for i in range(d):
             for j in range(l - i):
                 if i == 0:
@@ -43,8 +39,5 @@ class Solution:
                     maxc = max(maxc, jd[k])
                     mino = min(mino, maxc + opt[i - 1][k + 1])
                 opt[i][j] = mino
-
-        # for r in opt:
-        #    print(r)
 
         return opt[d - 1][0]

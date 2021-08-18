@@ -1,16 +1,3 @@
-# import logging
-
-
-# fmt = r'%(levelname)s - %(name)s (line:%(lineno)s) - %(message)s'
-# formatter = logging.Formatter(fmt)
-
-# ch = logging.StreamHandler()
-# ch.setLevel(logging.ERROR)
-# ch.setFormatter(formatter)
-
-# logger = logging.getLogger()
-# logger.setLevel(logging.ERROR)
-# logger.addHandler(ch)
 
 
 class StarCell:
@@ -59,7 +46,6 @@ class StarCell:
         if not self.top:
             return 0
         if not self._size_top:
-            # Update cache
             self._size_top = 1 + self.top.size_top
         return self._size_top
 
@@ -119,15 +105,12 @@ def solve(grid):
     for key, val in list(cells.items()):
         val.set_covered()
 
-    # for key, val in cells.items():
-    #     print(key, val)
-
     ans = []
     for key, val in list(cells.items()):
         if val.size == 0 and not val.covered:
             return None
         if val.size > 0:
-            ans.append([val.row + 1, val.col + 1, val.size])  # Rebase index 1
+            ans.append([val.row + 1, val.col + 1, val.size])
     return ans
 
 

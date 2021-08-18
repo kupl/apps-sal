@@ -1,4 +1,3 @@
-# cook your dish here
 from operator import itemgetter
 t = int(input())
 for _ in range(t):

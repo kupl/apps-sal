@@ -26,7 +26,6 @@ class Solution:
             validCities = 0
 
             while q:
-                # print(q)
                 distance, node = heapq.heappop(q)
                 if distance < dist[i][node]:
                     dist[i][node] = distance
@@ -43,6 +42,4 @@ class Solution:
                 minCities = validCities
                 ans = i
 
-        # print(dist)
-        # print(ans)
         return ans

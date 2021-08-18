@@ -1,4 +1,3 @@
-# Works for any number of rounds or shots
 def shoot(results):
     P1 = P2 = 0
     for D, b in results:

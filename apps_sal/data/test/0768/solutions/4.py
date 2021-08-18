@@ -6,4 +6,3 @@ for i in range(F):
         if s[j] == 'Y':
             item[j] += 1
 print(sum([1 for x in item if x >= T]))
-# kitten

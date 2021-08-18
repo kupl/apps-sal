@@ -1,13 +1,11 @@
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
-        # assign hat to people
         n = len(hats)
         dic = collections.defaultdict(list)
         for i, hat in enumerate(hats):
             for h in hat:
                 dic[h].append(i)
 
-        # mask for people: ways
         bfs = {0: 1}
         target = (1 << n) - 1
         res = 0

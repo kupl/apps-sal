@@ -1,5 +1,3 @@
-# cook your dish here
-# python programs by sourav
 
 
 for _ in range(int(input())):

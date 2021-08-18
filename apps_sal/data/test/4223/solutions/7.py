@@ -1,4 +1,3 @@
-# ABC 132 C
 N = int(input())
 S = str(input())
 ans = 1

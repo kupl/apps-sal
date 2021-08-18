@@ -11,6 +11,3 @@ d = [a[i + 1] - a[i] for i in range(n - 1)]
 d.append(2 * pi - a[n - 1] + a[0])
 
 print(360 - 180 * max(d) / pi)
-
-
-# Made By Mostafa_Khaled

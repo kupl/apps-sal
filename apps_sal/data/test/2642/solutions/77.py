@@ -7,11 +7,9 @@ zeros = 0
 bads = defaultdict(lambda: [0, 0])
 for _ in range(N):
     x, y = list(map(int, input().split()))
-    # 両方ゼロの時の例外処理
     if x == 0 and y == 0:
         zeros += 1
         continue
-    # 180度回転
     if y < 0 or (y == 0 and x < 0):
         x, y = -x, -y
     g = gcd(x, y)

@@ -16,7 +16,6 @@ class Solution:
             income += onboard * boardingCost
             cost += runningCost
             curr = income - cost
-            # print(onboard, income, cost, curr)
             if curr > mx:
                 mx = curr
                 ans = i

@@ -4,7 +4,6 @@ def __starting_point():
     a = list(map(float, input().split()))
     a.sort(reverse=True)
     res = 0
-    # a is sorted in desc
     while(a):
         res += sum(a)
         a = a[:len(a) // 4]

@@ -49,6 +49,3 @@ while j != f:
 
 
 print(res)
-
-
-# Made By Mostafa_Khaled

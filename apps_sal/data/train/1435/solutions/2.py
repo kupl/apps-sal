@@ -1,4 +1,3 @@
-# cook your dish here
 ans = []
 mxlen = 0
 
@@ -7,14 +6,12 @@ def lcs(a, b, d, mxlen):
     L = [0] * (n + 1)
     for i in range(n + 1):
         L[i] = [0] * (n + 1)
-    # print("#",L,a,b)
     for i in range(1, n + 1):
         for j in range(1, n + 1):
             if a[i - 1] == b[j - 1]:
                 L[i][j] = L[i - 1][j - 1] + 1
             else:
                 L[i][j] = max(L[i - 1][j], L[i][j - 1])
-    # print(L)
     if L[n][n] > mxlen:
         mxlen = L[n][n]
         i, j = n, n
@@ -28,7 +25,6 @@ def lcs(a, b, d, mxlen):
                 i -= 1
             else:
                 j -= 1
-        # print(t)
         ans.append({d: t})
 
 

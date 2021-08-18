@@ -4,15 +4,6 @@ class Solution:
             return self.maxUncrossedLines(B, A)
         if not A or not B:
             return 0
-#     try:
-#       idx = B.index(A[0])
-#       return max(1+self.maxUncrossedLines(A[1:], B[idx+1:]), self.maxUncrossedLines(A[1:], B))
-#     except:
-#       return self.maxUncrossedLines(A[1:], B)
-
-
-# i = 0..len(A)-1    2  5 1 2 5
-# j = 0..len(B)-1    10 5 2 1 5 2
 
         dp = [[0] * len(B) for _ in range(len(A))]
         indexB = collections.defaultdict(list)
@@ -21,7 +12,6 @@ class Solution:
 
         for i in reversed(list(range(len(A)))):
             for j in reversed(list(range(len(B)))):
-                # find A[i] in B[j:]
                 found = False
                 for idx in indexB.get(A[i], []):
                     if idx >= j:

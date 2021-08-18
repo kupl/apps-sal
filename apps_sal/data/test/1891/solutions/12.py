@@ -2,7 +2,6 @@ n, k, A, B = list(map(int, input().split()))
 
 
 def solve(l, r, a):
-    # print(l, r, a)
     if (len(a) == 0):
         return A
     if (l == r):

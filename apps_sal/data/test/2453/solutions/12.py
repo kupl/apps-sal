@@ -5,7 +5,6 @@ for i in range(n):
     a.append([l, 1])
     a.append([r + 1, -1])
 a.sort()
-# print(a)
 ans = [0] * (n + 1)
 idx = 0
 for i in range(len(a) - 1):

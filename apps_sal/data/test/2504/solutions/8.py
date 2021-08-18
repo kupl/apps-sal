@@ -17,7 +17,6 @@ def main():
     d = np.full((N, N), INF, dtype=np.uint64)
     for i in range(N):
         d[i, i] = 0
-    #
     for _ in range(M):
         a, b, c = mis()
         a -= 1
@@ -25,14 +24,12 @@ def main():
         if c <= L:
             d[a, b] = c
             d[b, a] = c
-    #
     '''
     for k in range(N):
         for i in range(N):
             np.minimum(d[i,:], d[i,k]+d[k,:], out=d[i,:])    
     '''
     d = floyd_warshall(d)
-    #
     d2 = np.full((N, N), INF, dtype=np.uint64)
     for i in range(N):
         d2[i, i] = 0
@@ -40,14 +37,12 @@ def main():
         for j in range(N):
             if d[i, j] <= L:
                 d2[i, j] = 1
-    #
     '''
     for k in range(N):
         for i in range(N):
             np.minimum(d2[i,:], d2[i,k]+d2[k,:], out=d2[i,:])    
     '''
     d2 = floyd_warshall(d2)
-    #
     Q = ii()
     for _ in range(Q):
         s, t = mis()

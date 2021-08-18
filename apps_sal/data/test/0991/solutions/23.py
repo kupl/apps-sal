@@ -22,7 +22,7 @@ def main():
     cost = 0
     money = min(S, MaxMoney)
     que = []
-    heappush(que, (cost, 0, money))  # cost,node,money
+    heappush(que, (cost, 0, money))
     dp[0][money] = 0
 
     while len(que) > 0:

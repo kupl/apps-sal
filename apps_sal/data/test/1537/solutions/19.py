@@ -1,21 +1,5 @@
 [n, k] = [int(x) for x in input().split()]
 
-# for every column
-# find earliest and latest b
-# create a list per column
-# True -> earliest <= curr, latest <= curr+k
-# False -> otherwise
-
-
-# BWWW 100 110
-# WBBW 010 020
-# WBBW 010 011
-# WWWB 001
-
-# BWWW 1000 100
-# WBBW 0110 121
-# WBBW 0001 001
-# WWWB
 
 c_p1 = [[-1] * 2010 for x in range(2010)]
 c_p2 = [[-1] * 2010 for x in range(2010)]
@@ -84,17 +68,9 @@ for y in range(n - k + 1):
         if x - k + 1 >= 0:
             c_p2[y][x - k + 1] = sum
 
-# print(r_p2[0][:3])
-# print(r_p2[1][:3])
-# print(r_p2[2][:3])
-
-# print(c_p2[0][:3])
-# print(c_p2[1][:3])
-# print(c_p2[2][:3])
 
 ans = 0
 for y in range(n - k + 1):
     for x in range(n - k + 1):
         ans = max(ans, c_p2[y][x] + r_p2[y][x])
-# print(bonus)
 print(ans + bonus)

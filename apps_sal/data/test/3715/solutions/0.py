@@ -1,7 +1,6 @@
 import sys
 
 inp = sys.stdin
-#inp = open('input.txt', 'r')
 
 n = int(inp.readline())
 a = list(map(int, inp.readline().split()))

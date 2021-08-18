@@ -2,9 +2,6 @@ import sys
 import os
 import io
 input = sys.stdin.readline
-# input_all = sys.stdin.read
-# input = io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
-# input_all = io.BytesIO(os.read(0,os.fstat(0).st_size)).read
 
 
 def read_int():
@@ -17,15 +14,6 @@ def read_list():
 
 def print_list(l):
     print(' '.join(map(str, l)))
-# import heapq as hq
-# import bisect as bs
-# from collections import deque as dq
-# from collections import defaultdict as dc
-# import math
-
-# f = open('test.py')
-# input = f.readline
-# input_all = f.read
 
 
 N = int(input())
@@ -36,7 +24,6 @@ for _ in range(N):
         print('No')
     else:
 
-        # print(dic)
         flag = True
         tt = 2 * k
         now = tt
@@ -46,8 +33,6 @@ for _ in range(N):
             else:
                 tm = d[i] + k - l
                 tmp = [tm, 2 * k - tm]
-            # print(tmp)
-            # tmp = dic[d[i]]
             if tmp == tt:
                 now = tt
             elif now == tt:

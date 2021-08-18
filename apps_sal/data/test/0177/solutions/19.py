@@ -18,8 +18,6 @@ def read_string_list(delim=" "):
     return sys.stdin.readline().strip().split(delim)
 
 
-###### Author : Samir Vyas #######
-###### Write Code Below    #######
 seq = ""
 
 for i in range(1, 3000):

@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/8 0:18
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : E. K Balanced Teams.py
 
 
 def main():

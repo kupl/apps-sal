@@ -22,7 +22,6 @@ for _ in range(N):
 
 result = 0
 visited = 0
-# print(lines)
 for slope in lines:
     result += visited * len(lines[slope])
     visited += len(lines[slope])

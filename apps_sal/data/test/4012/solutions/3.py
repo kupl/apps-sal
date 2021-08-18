@@ -30,7 +30,6 @@ def solve():
     ans = (int(1e9), 0, 0, 0)
     for C in range(1, 2 * c + 10):
         dc = abs(C - c)
-        #print(C, f[C])
         for B in f[C]:
             db = abs(B - b)
             for A in f[B]:

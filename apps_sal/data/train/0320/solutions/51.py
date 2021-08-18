@@ -17,8 +17,6 @@ class Solution:
                     total += 1
                 n = n // 2
                 count += 1
-                # print(f\"count{count} n{n}\")
 
             currentMax = max(count, currentMax)
-        # print(f\"currentMax : {currentMax} total {total}\")
         return total + currentMax

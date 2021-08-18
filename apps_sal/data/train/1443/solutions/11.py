@@ -1,4 +1,3 @@
-# cook your dish here
 
 def collisions(ar, n, m):
     res = 0

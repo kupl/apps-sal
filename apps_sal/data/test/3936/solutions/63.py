@@ -1,4 +1,3 @@
-# https://atcoder.jp/contests/arc081/tasks/arc081_b
 from collections import defaultdict
 n = int(input())
 s1 = input()

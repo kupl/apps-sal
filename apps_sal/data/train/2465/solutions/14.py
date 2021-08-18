@@ -9,7 +9,6 @@ def doS(N, arr):
         if(N % i == 0):
             if not doS(N - i, arr):
                 arr[i] = True
-                # print(N-i,arr)
                 return True
 
     arr[N] = False

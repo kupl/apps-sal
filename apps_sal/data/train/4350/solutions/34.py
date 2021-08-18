@@ -6,5 +6,3 @@ def pre_fizz(n):
         else:
             nums.append(num)
     return nums
-
-    # your code here

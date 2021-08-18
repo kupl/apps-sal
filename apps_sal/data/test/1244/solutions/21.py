@@ -13,9 +13,7 @@ for i in an:
         d[i] = 1
 
 vmax = 0
-#vsum = 0
 for i in list(d.keys()):
-    #vsum += d[i]
     if(d[i] > vmax):
         vmax = d[i]
 

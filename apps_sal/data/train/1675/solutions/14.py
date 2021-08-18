@@ -1,4 +1,3 @@
-# cook your dish here
 import heapq as hq
 from math import sqrt
 
@@ -10,7 +9,7 @@ def distance(a, b):
 for _ in range(int(input())):
     input()
     n = int(input())
-    points = {}  # dict x_val : lists of y-values, each list in {points} contains points with the same x-value
+    points = {}
     buff = []
     for _ in range(n):
         x, y = tuple(map(int, input().split()))

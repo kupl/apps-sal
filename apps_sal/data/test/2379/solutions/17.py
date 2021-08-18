@@ -16,5 +16,4 @@ for j in range(K - 1, -1, -1):
         i -= 1
     r[j] = i
     i -= C + 1
-# print(l, r)
 [print(l_i + 1) for l_i, r_i in zip(l, r) if l_i == r_i]

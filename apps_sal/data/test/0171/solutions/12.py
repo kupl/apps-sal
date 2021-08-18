@@ -10,7 +10,6 @@ for i in pw:
     if i.isnumeric():
         numb = 1
 
-#print(lg, case, numb)
 
 if numb and case and lg:
     print('Correct')

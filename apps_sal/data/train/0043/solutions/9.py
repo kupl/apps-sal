@@ -8,7 +8,6 @@ for _ in range(t):
     b = [int(i) for i in input().split()]
     times = list(zip(a, b))
     times.sort()
-    # print(times)
     pickup_time = sum(b)
     best_time = pickup_time
     for num_deliveries in range(1, n + 1):

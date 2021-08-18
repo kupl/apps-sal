@@ -1,5 +1,3 @@
-#import sys
-# input=sys.stdin.readline
 s = ""
 for i in range(100000):
     s += str(i)
@@ -16,7 +14,6 @@ for i in range(100000):
             else:
                 break
 
-# print(l)
 q = int(input())
 while q:
     lo = 0

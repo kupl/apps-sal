@@ -1,4 +1,3 @@
-# include<sdg.h>
 for _ in range(int(input())):
     s = input()
     n = len(s)
@@ -48,7 +47,6 @@ for _ in range(int(input())):
                         ch += 1
                     else:
                         num += 1
-        # print(ans,num,ch)
         alp, qt = 0, 0
         for i in range(n):
             if s[i].isalpha():

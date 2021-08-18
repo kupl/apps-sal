@@ -5,9 +5,7 @@ def digit(x):
             return i
 
 
-#data = open("P7.txt")
 n = int(input())
-#n = int(data.readline())
 if n < 4:
     print("No")
 
@@ -15,7 +13,6 @@ else:
     count = [0] * 65
     nums = {}
     vals = list(map(int, input().split()))
-    #vals = map(long,data.readline().split())
     nums[vals[0]] = 1
     prebit = 999999999
 

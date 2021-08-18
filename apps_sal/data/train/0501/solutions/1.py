@@ -16,9 +16,7 @@ class Solution:
         return t
 
     def shortestPalindrome(self, s):
-        k = s + "#" + s[::-1]
-        # find the longest palindrome from the beginning
-        # catacb # bcatac
+        k = s + "
         t = self.prefixTable(k)
         l = t[-1]
         return s[l:][::-1] + s

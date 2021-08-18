@@ -1,7 +1,7 @@
 import heapq
 n, m = map(int, input().split())
 a = list(map(lambda x: int(x) * (-1), input().split()))
-heapq.heapify(a)  # aを優先度付きキューにする
+heapq.heapify(a)
 for _ in range(m):
     tmp = heapq.heappop(a)
     heapq.heappush(a, (-1) * (-tmp // 2))

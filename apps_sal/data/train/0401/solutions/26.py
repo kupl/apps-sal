@@ -17,7 +17,6 @@ class Solution:
             else:
                 small_two = sorted(small_two + [i])[:3]
 
-        # compensate
         print(small_two, small_one, result)
         if result % 3 == 2:
             return result - (small_two[0] if len(small_one) < 2 or (small_two[0] < small_one[0] + small_one[1]) else small_one[0] + small_one[1])

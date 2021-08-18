@@ -15,7 +15,6 @@ pal = ""
 
 for i in d:
     revi = i[::-1]
-    # print(revi,i)
 
     if revi == i:
         if d[i] & 1:

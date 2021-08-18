@@ -1,6 +1,4 @@
 def number(lines):
-    # your code here
-    #x=lines.split(" ")
     x = lines
     y = []
     z = 0

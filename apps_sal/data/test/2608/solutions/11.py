@@ -1,5 +1,4 @@
 from collections import defaultdict
-# from fractions import Fraction
 
 
 def read_line():
@@ -77,7 +76,6 @@ def solve(n, m, x1, y1, x2, y2,
         return X1, Y1, X2, Y2
 
     tot_wh, tot_bl = cols(1, 1, m, n)
-    # print("Starting cols: {} wh, {} bl".format(tot_wh, tot_bl))
     A_wh, A_bl = cols(x1, y1, x2, y2)
     ovrlp = overlap()
     if ovrlp is not None:
@@ -85,24 +83,16 @@ def solve(n, m, x1, y1, x2, y2,
         assert A_wh >= O_wh and A_bl >= O_bl
         A_wh -= O_wh
         A_bl -= O_bl
-        #print("Overlap cols: {} wh, {} bl".format(O_wh, O_bl))
-    # print("White rect cols: {} wh, {} bl".format(A_wh, A_bl))
     B_wh, B_bl = cols(x3, y3, x4, y4)
-    #print("Black rect cols: {} wh, {} bl".format(B_wh, B_bl))
 
-    # Paint A white:
     tot_wh += A_bl
     tot_bl -= A_bl
 
-    # Paint B black:
     tot_wh -= B_wh
     tot_bl += B_wh
     return(tot_wh, tot_bl)
 
 
-# for _ in range(2000):
-#     rnd_test()
-# print("tested")
 t = int(input())
 
 for _ in range(t):

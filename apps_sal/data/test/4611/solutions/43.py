@@ -27,10 +27,10 @@ def main():
     for i in range(n):
         t, x, y = i_map()
         walk = abs(x - xb) + abs(y - yb)
-        if walk > t - tb:  # 時間足りない
+        if walk > t - tb:
             print("No")
             return
-        if ((t - tb) - walk) % 2 != 0:  # 戻って来れん
+        if ((t - tb) - walk) % 2 != 0:
             print("No")
             return
         xb = x

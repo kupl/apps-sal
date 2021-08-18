@@ -5,7 +5,6 @@ class Solution:
             s = (a + b + c) / 2
 
             val = (s * (s - a) * (s - b) * (s - c))**(1 / 2)
-            # print(type(val))
             if isinstance(val, complex):
                 return 0
             return val
@@ -18,7 +17,6 @@ class Solution:
 
             if val != 0:
                 p = (A[i] + A[i + 1] + A[i + 2])
-                # print(p,val)
                 if p > maxi:
                     maxi = p
 

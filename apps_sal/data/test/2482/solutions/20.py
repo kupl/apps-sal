@@ -18,7 +18,6 @@ class UnionFind:
         px = self.find(x)
         py = self.find(y)
 
-        # 一致していないときはリンクをつける
         if px != py:
             self._link(px, py)
 

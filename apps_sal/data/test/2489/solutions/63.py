@@ -24,7 +24,6 @@ def solve2(N, A):
 
     ansval = [x for x in A if dp[x]]
 
-    # print(ansval)
     ans = len(ansval)
 
     return ans

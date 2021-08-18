@@ -1,5 +1,4 @@
 def alphabet_war(fight):
-    # your code here
     left_score = 0
     right_score = 0
     for l in list(fight):

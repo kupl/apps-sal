@@ -12,7 +12,6 @@ class Solution:
 
     def maxLength(self, arr: List[str]) -> int:
 
-        # setify O(N*M)
         new_arr = []
         for word in arr:
             word_set = set(word)

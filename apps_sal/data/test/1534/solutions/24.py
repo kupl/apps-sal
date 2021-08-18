@@ -1,5 +1,3 @@
-# python3
-# utf-8
 
 string = input()
 prefix___a_nr = [0]

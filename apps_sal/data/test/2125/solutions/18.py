@@ -26,8 +26,6 @@ for j in range(m):
     for z in range(run_start, n):
         lens[z][j] = cur_len - (z - run_start)
 
-# print(begins)
-# print(lens)
 done = [[False for i in range(m)] for j in range(n)]
 ans = 0
 for j in range(m):

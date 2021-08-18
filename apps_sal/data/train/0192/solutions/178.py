@@ -5,8 +5,4 @@ class Solution:
         for i in range(len(piles) - 2, len(piles) // 3 - 1, -2):
             count += piles[i]
 
-        # while piles:
-        #     piles.pop()
-        #     count += piles.pop()
-        #     piles.pop(0)
         return count

@@ -22,7 +22,6 @@ def main():
         b -= 1
         es.append(edge(a, b, -c))
 
-    # 負の閉路検出
     d = [0] * N
     for i in range(N):
         for e in es:
@@ -31,7 +30,6 @@ def main():
                 if e.to == N - 1 and i == N - 1:
                     print('inf')
                     return
-    # ベルマンフォードする
     d = [INF] * N
     d[0] = 0
     for _ in range(N - 1):

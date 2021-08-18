@@ -17,23 +17,3 @@ class Solution:
                 two += 1
             times_two = max(times_two, two)
         return plus_one + times_two
-
-#         1 * 2
-#         1 * 2 * 2
-#         1 * 2 * 2 * 2
-#         1 * 2 * 2 * 2 * 2
-
-#         2^x = 16
-#         xln(2) = ln(16)
-
-#         x = ln(n) / ln(2)
-
-
-#         18
-
-#         0 -> 1
-#         1 -> 2
-#         2 -> 4
-#         4 -> 8
-#         8 -> 9
-#         9 -> 18

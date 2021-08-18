@@ -18,7 +18,6 @@ def main():
             for c, el in enumerate(b):
                 if el == 0:
                     num0s += 1
-                    #t[c] = l.pop()
                     idxs.append(c)
                     b[c] = -1
             if not num0s:
@@ -36,7 +35,6 @@ def main():
             for i in range(len(b)):
                 for idx in idxs:
                     b[i] -= abs(i - idx)
-            # print(b)
         print("".join(t))
 
 

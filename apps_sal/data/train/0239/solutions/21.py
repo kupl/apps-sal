@@ -12,5 +12,4 @@ class Solution:
                 l_use[l] += 1
                 if len(chosen) >= num_wanted:
                     break
-        # print(chosen)
         return sum(v for v, l in chosen)

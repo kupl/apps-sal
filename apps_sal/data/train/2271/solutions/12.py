@@ -27,7 +27,7 @@ gl = [[] for _ in range(n)]
 for i in range(m):
     x, y = map(int, input().split())
     unite(x - 1, y - 1)
-for c in range(n):  # par:
+for c in range(n):
     ap = find(c)
     gl[ap].append(c)
 g = 0

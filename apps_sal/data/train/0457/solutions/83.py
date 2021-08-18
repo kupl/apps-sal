@@ -34,17 +34,6 @@ class Solution:
 
             coin = coins[start]
 
-            # LHS = lower bound on number of coins, achieved using the current coin
-            # Return early since we can't possibly achieve original \"amount\"
-            # along this path.
-            # For this particular solution, this check isn't necessarily,
-            # since there is another check within the loop below. However, it
-            # speeds up the solution. Better to have this check before the
-            # \"amt == 0\" check below.
-            # if n_coins + (amt + coin - 1) / coin > min_coins:
-            # if (min_coins - n_coins - 1) * coin + 1 < amt:
-            #    return
-
             div = amt // coin
             n_coins += div
             amt %= coin
@@ -54,12 +43,7 @@ class Solution:
                 return
 
             if start < len_coins:
-                # use as many of current coin as possible, and try next smaller coin
                 dfs(start + 1, amt, n_coins)
-
-                # Always greedily taking as many of biggest coins as possible doesn't work.
-                # \"Backtrack\" by using 1 less of current coin per iteration, and
-                # trying the next smaller coin.
 
                 next_coin = coins[start + 1]
 
@@ -68,14 +52,12 @@ class Solution:
                     n_coins -= 1
 
                     if (min_coins - n_coins - 1) * next_coin + 1 > amt:
-                        # if (min_coins - n_coins) * next_coin > amt: # hope still exists
                         dfs(start + 1, amt, n_coins)
                     else:
                         break
 
         len_coins = len(coins) - 1
 
-        # try biggest coins first
         coins.sort(reverse=True)
 
         min_coins = float('inf')

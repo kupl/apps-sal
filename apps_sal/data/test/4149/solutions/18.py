@@ -25,16 +25,13 @@ numbers.sort()
 ans = []
 for i in range(len(numbers) - 1, 0, -1):
     x = numbers[i]
-    # print(x)
     while count[x] > 0:
         count[x] -= 1
         if d[x] == 1:
             ans.append(nr[x])
             count[nr[x]] -= 1
-            # print(nr[x])
         else:
             ans.append(x)
             count[d[x]] -= 1
-            # print(d[x])
 
 print(*ans)

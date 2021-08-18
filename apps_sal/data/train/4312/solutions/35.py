@@ -8,7 +8,6 @@ def pick_peaks(arr):
             pos.append(x)
             peaks.append(num)
         elif arr[x - 1] < num and arr[x + 1] == num:
-            # checks for plateau peaks
             i = x
             plateau = True
             while plateau:

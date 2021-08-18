@@ -15,7 +15,6 @@ class Solution:
             nonlocal memo
 
             if remainingAmount < 0:
-                # overshot.
                 return -1
             if remainingAmount == 0:
                 return 0

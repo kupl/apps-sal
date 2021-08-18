@@ -6,4 +6,3 @@ def valid_parentheses(string):
     if len(string) != 0:
         return False
     return True
-    # your code here

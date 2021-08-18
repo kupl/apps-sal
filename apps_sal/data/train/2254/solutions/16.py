@@ -2,7 +2,6 @@ import collections
 import sys
 
 n, q = map(int, input().split())
-# Key: app number, value: list of indexes in the arr
 hash = {}
 
 deque = collections.deque()

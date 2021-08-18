@@ -1,7 +1,3 @@
-# row = [int(x) for x in input().rstrip().split(" ")]
-# n = int(input().rstrip())
-# s = input().rstrip()
-# row = [int(input().rstrip()) for _ in range(n)]
 
 def resolve():
     import sys
@@ -9,7 +5,6 @@ def resolve():
 
     x, y = [int(x) for x in input().rstrip().split(" ")]
 
-    # 2 ** ?
     count = 1
     num = x
     while num * 2 <= y:

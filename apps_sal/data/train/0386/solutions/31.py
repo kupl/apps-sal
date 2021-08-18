@@ -18,7 +18,7 @@ class Solution:
                 res = sum([dfs(c, n - 1) for c in ['a', 'e', 'o', 'u']])
             elif p == 'o':
                 res = sum([dfs(c, n - 1) for c in ['i', 'u']])
-            else:  # u
+            else:
                 res = dfs('a', n - 1)
 
             mem[(p, n)] = res % mod

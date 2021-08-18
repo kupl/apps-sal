@@ -1,5 +1,3 @@
-# Contest: Codeforces Round #582 (Div. 3) (https://codeforces.com/contest/1213)
-# Problem: B: Bad Prices (https://codeforces.com/contest/1213/problem/B)
 
 def rint():
     return int(input())

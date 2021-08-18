@@ -2,7 +2,6 @@ s = str(input())
 
 alp = set("abcdefghijklmnopqrstuvwxyz")
 s = set(s)
-#print(s & alp)
 
 if len(s & alp) == 26:
     ans = "None"

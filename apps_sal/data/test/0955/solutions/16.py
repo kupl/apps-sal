@@ -3,7 +3,7 @@ import sys
 n = int(input())
 CS = [list(input().split()) for i in range(n)]
 
-LIST = [10**6] * 7  # A,B,C,AB,BC,AC,ABC
+LIST = [10**6] * 7
 
 
 for cs in CS:

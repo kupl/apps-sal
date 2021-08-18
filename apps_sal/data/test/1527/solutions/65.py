@@ -13,15 +13,15 @@ for i in range(H):
     tmplst = [0] * W
 
     for j in range(W):
-        if maze[i][j] == '#':
-            tmplst[j] = -1
+        if maze[i][j] == '
+        tmplst[j] = -1
 
     distancelist.append(tmplst)
 
 for x in range(H):
     for y in range(W):
-        if maze[x][y] == '#':
-            continue
+        if maze[x][y] == '
+        continue
 
         tmpdis = copy.deepcopy(distancelist)
         d = deque()

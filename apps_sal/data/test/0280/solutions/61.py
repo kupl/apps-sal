@@ -9,7 +9,7 @@ for _ in range(M):
     min_weight = min(v, min_weight)
     c.append([l, v])
 
-if min_weight < max(weights):  # we can never pas
+if min_weight < max(weights):
     print("-1")
 else:
     min_weight = float("inf")

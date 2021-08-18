@@ -5,7 +5,6 @@ a -= 3 * num_weeks
 b -= 2 * num_weeks
 c -= 2 * num_weeks
 
-# rest_rations = [a, b, c]
 max_num_additional_days = 0
 
 what_to_eat = [0, 0, 1, 2, 0, 2, 1]

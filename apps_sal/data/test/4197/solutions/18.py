@@ -1,6 +1,4 @@
-# C
 N = int(input())
-# A = list(map(int, input().split()))
 order_number = {}
 
 

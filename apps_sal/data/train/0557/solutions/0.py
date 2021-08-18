@@ -1,4 +1,3 @@
-# cook your dish here
 for t in range(int(input())):
     n, m = [int(x)for x in input().rstrip().split()]
     s = []

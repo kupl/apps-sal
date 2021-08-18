@@ -2,17 +2,13 @@ import re
 
 
 def solve(*eqs):
-    # put all equations in list of dictionaries
     sysofeq = []
     for x in eqs:
-        # check if it is an equation
         if '=' not in x:
             return None
         else:
             sysofeq.append(elabString(x))
 
-    # create matrix and vector
-    # get all the variables
     varis = {}
     for eq in eqs:
         va = re.findall("[a-z]+", eq)
@@ -30,16 +26,13 @@ def solve(*eqs):
                 row.append(eq.get(listofvars[v]))
         mat.append(row)
         vec.append(eq.get("sum"))
-    # check for number of equations
     if len(listofvars) > len(mat):
         return None
     withPivot(mat, vec)
-    # check if number of equations is greater than num of variables
     if len(mat) > len(mat[0]):
         for x in range(len(mat[0]), len(vec)):
             if abs(vec[x]) > 1e-6:
                 return None
-    # check if pivot = 0
     for pivot in range(0, len(mat[0])):
         if abs(mat[pivot][pivot]) < 1e-8:
             return None
@@ -61,7 +54,6 @@ def elabString(equation):
     varis.update({"sum": 0})
     leftpart = equation.split("=")[0]
     rightpart = equation.split("=")[1][1:]
-    # elaborate leftparts
     leftparts = leftpart.split(" ")
     for x in range(0, len(leftparts)):
         if re.search("[a-z]+$", leftparts[x]):
@@ -79,7 +71,6 @@ def elabString(equation):
                 varis.update({"sum": origval + int(leftparts[x])})
             else:
                 varis.update({"sum": origval - int(leftparts[x])})
-    # elaborate rightparts
     rightparts = rightpart.split(" ")
     for x in range(0, len(rightparts)):
         if re.search("[a-z]+$", rightparts[x]):
@@ -125,7 +116,6 @@ def addScalar(vector, x, y, mul):
 
 def withPivot(matrix, vector):
     for r in range(0, len(matrix[0])):
-        # find row number with max diagonal element
         p = [r, matrix[r][r]]
         for v in range(r, len(matrix)):
             if abs(matrix[v][r]) > abs(p[1]):

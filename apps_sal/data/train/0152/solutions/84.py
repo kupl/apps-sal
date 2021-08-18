@@ -1,6 +1,5 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
-        # Sort the array and evenly distribute the m balls
         position.sort()
         ans = top = (position[-1] - position[0]) // (m - 1)
         down = 0
@@ -10,7 +9,6 @@ class Solution:
             else:
                 top = ans
             ans = (top + down) // 2
-            #print(ans, top, down)
         return down
 
     def _test(self, position, force, m):
@@ -26,7 +24,6 @@ class Solution:
                 total += position[i] - position[i - 1]
             if total >= force:
                 m -= 1
-            #print(i, total, force, m)
         if m == 0:
             return True
         return False

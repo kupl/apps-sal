@@ -1,10 +1,8 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        # brute force?
         nums1.sort()
         nums2.sort()
 
-        # type 1
         memo1 = collections.defaultdict(set)
         memo2 = collections.defaultdict(set)
         for i in range(len(nums1)):
@@ -24,7 +22,7 @@ class Solution:
                 if target in memo2:
                     cnt += len(memo2[target])
                     if j in memo2[target]:
-                        cnt -= 1  # self
+                        cnt -= 1
         for i in range(len(nums2)):
             sq = nums2[i] * nums2[i]
             for j in range(len(nums1)):
@@ -36,5 +34,5 @@ class Solution:
                 if target in memo1:
                     cnt += len(memo1[target])
                     if j in memo1[target]:
-                        cnt -= 1  # self
+                        cnt -= 1
         return cnt // 2

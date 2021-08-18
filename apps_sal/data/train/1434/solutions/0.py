@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 import numpy as np
 n, s, q = [int(j) for j in input().split()]
 edges = [int(j) - 1 for j in input().split()]

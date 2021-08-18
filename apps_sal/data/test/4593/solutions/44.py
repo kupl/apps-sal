@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -12,7 +11,6 @@ def main():
         return
 
     for b in range(2, n):
-        # b**2からb**10まで調べる
         for p in range(2, 11):
             if b**p > n:
                 break

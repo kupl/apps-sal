@@ -1,12 +1,10 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        # place,fuel: times, fuel
         start_val, finish_val = locations[start], locations[finish]
         locations.sort()
         start, finish = bisect.bisect_left(locations, start_val), bisect.bisect_left(locations, finish_val)
         res = 0
         n = len(locations)
-        # dp[i][k] means used i fuel end with k
         dp = [[0] * (n) for i in range(fuel + 1)]
         dp[0][start] = 1
         for i in range(0, fuel + 1):

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from operator import itemgetter
 
@@ -53,13 +52,10 @@ def main():
     lights = list([sum(map(int, floor)) for floor in floors])
     assert len(lights) == n
     virtual_n = get_virtual_max_floor(lights)
-    # sys.stderr.write("{}\n".format(lights))
-    # sys.stderr.write("{}\n".format(virtual_n))
     if virtual_n == 0:
         print(0)
         return
     dp_table = run_dp(virtual_n, m, floors, lights)
-    # sys.stderr.write("{}\n".format(dp_table))
     print(min([dp_table[indx][virtual_n] for indx in range(4)]))
 
 

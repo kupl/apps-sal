@@ -31,7 +31,6 @@ for i in range(N):
         E[i] = C[i] + D[i]
     else:
         E[i] = C[i] - C[i - 1] + D[i] - D[i - 1]
-# print(C,D,E)
 if max(E) > N:
     print("No")
 else:
@@ -41,7 +40,6 @@ else:
         if x < C[i] - D[i - 1]:
             x = C[i] - D[i - 1]
     B_ = [0] * N
-    # print(x)
     for i in range(N):
         B_[(i + x) % N] = B[i]
     print("Yes")

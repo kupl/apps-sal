@@ -1,4 +1,3 @@
-# solution
 
 modulous = 10**9 + 7
 r = [[(j - i) * 4 % 13 for i in range(10)]for j in range(13)]

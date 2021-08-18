@@ -76,7 +76,6 @@ class Solution:
 
         for x in sorted(columns):
             column = sorted(columns[x])
-            # column.sort()
             for j, y2 in enumerate(column):
                 for i in range(j):
                     y1 = column[i]

@@ -8,7 +8,6 @@ a = [0] * n
 for i in range(n):
     a[i] = list(input().split())
     a[i][0] = int(a[i][0])
-    #print (''.join(sorted(list(a[i][1]))))
 
 A, B, C, AB, AC, BC, ABC = 1e10, 1e10, 1e10, 1e10, 1e10, 1e10, 1e10
 for i in range(n):

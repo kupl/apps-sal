@@ -6,17 +6,11 @@ def main():
     S = input()
     if P in [2, 5]:
         ans = 0
-        # P = 2, 5の時は一番下の位の数だけ見ればカウント可能
         for right in range(N - 1, - 1, - 1):
             if int(S[right]) % P == 0:
                 ans += right + 1
         print(ans)
         return
-    # 例：S = 3543, P = 3
-    # 左からn番目 ～ 1番右の数のmod Pの値を計算
-    #     C = [3543, 543, 43, 3] % P = [0, 0, 1, 0]
-    # C[m] == C[n] なる m < nのペア数 + C[n] == 0なるnの個数を求める
-    #     3 + 3 = 6
     cur_c = 0
     C = [0] * N
     pw = 1

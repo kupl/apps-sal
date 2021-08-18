@@ -1,4 +1,3 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
@@ -35,8 +34,6 @@ def LSR(n):
 sys.setrecursionlimit(1000000)
 mod = 1000000007
 
-# A
-
 
 def A():
     n = I()
@@ -57,8 +54,6 @@ def A():
     print(ans)
     return
 
-# B
-
 
 def B():
     n = I()
@@ -77,8 +72,6 @@ def B():
             ans = su
     print(ans)
     return
-
-# C
 
 
 def C():
@@ -106,8 +99,6 @@ def C():
         else:
             print("-")
     return
-
-# D
 
 
 def D():
@@ -146,8 +137,6 @@ def D():
     print(k - ans)
     return
 
-# E
-
 
 def E():
     t = I()
@@ -177,14 +166,10 @@ def E():
             print(ans)
     return
 
-# F
-
 
 def F():
 
     return
-
-# G
 
 
 def G():
@@ -247,14 +232,10 @@ def G():
     print(ans)
     return
 
-# H
-
 
 def H():
 
     return
-
-# Solve
 
 
 def __starting_point():

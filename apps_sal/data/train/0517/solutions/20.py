@@ -1,4 +1,3 @@
-# cook your dish here
 
 N, M = map(int, input().split())
 

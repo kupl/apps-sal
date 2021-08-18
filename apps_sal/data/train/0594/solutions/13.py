@@ -1,4 +1,3 @@
-# cook your dish here
 n, x = list(map(int, input().split()))
 a = list(map(int, input().split()))
 total = sum(a)

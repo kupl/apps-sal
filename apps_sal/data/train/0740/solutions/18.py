@@ -8,7 +8,6 @@ def check(x, y, mat):
         tc += 1
     if(mat[(x + 1)][y] == 0):
         tc += 1
-    # print(x,y,mat[x],tc)
     return tc
 
 
@@ -26,8 +25,6 @@ for t in range(T):
         mat[es[0]][es[1]] = 1
         rows.append(es[0])
         cols.append(es[1])
-    # for row in mat:
-    #   print(row)
     count = 0
     for i in range(len(rows)):
         count = count + check(rows[i], cols[i], mat)

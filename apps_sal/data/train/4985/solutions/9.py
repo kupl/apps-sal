@@ -1,5 +1,5 @@
-d = {"Bb": "A#", "Db": "C#", "Eb": "D#", "Gb": "F#", "Ab": "G#"}
-q = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+d = {"Bb": "A
+q = ["A", "A
 
 
 def transpose(a, n):

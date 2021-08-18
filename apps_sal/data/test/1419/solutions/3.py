@@ -21,7 +21,6 @@ xs[-1] -= 1
 up = sum(xs)
 down = 1
 ans = (up + down) // 2
-##print(" up: " + str(up) + " down: " + str(down) + " ans: " + str(ans) )
 while down + 1 < up:
     ans = (down + up) // 2
     if check(xs, k, ans):
@@ -30,4 +29,3 @@ while down + 1 < up:
         down = ans
 
 print(up)
-##print(" up: " + str(up) + " down: " + str(down) + " ans: " + str(ans) )

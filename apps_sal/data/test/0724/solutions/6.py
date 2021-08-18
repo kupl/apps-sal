@@ -4,7 +4,6 @@ n, d = int(n), int(d)
 f = input()
 a = f.split()
 a = [int(k) for k in a]
-# a.sort()
 
 ans = 0
 count = 0

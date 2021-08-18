@@ -8,5 +8,3 @@ for i in range(n):
 
 ans = min(n - l, l) + min(n - r, r)
 print(ans)
-
-# 1482245084943

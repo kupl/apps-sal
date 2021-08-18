@@ -88,4 +88,3 @@ for l2 in perm(l, 3):
 
 if not solved:
     print("NO")
-#if not poss(1,[l[0]]): print("NO")

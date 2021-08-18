@@ -1,10 +1,10 @@
 MOD = 10**9 + 7
 S = input()
 res = 0
-dp0 = 1  # ''
-dp1 = 0  # 'a'
-dp2 = 0  # 'ab'
-dp3 = 0  # 'abc'
+dp0 = 1
+dp1 = 0
+dp2 = 0
+dp3 = 0
 
 for c in S:
     if c == 'A':

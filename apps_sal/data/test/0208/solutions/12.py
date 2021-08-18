@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 x1, y1, x2, y2 = list(map(int, input().split()))
 

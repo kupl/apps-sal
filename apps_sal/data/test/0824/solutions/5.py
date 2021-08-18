@@ -21,5 +21,3 @@ if cl > 0:
         else:
             cl -= 1
 print(ans % mod)
-
-# bruno

@@ -5,7 +5,6 @@ E = [[] for _ in range(N)]
 for i in range(N - 1):
     a, b = list(map(int, input().split()))
     a, b = a - 1, b - 1
-    # 出力のために、何番目のEdgeだったかを保有させる必要がある
     E[a].append([i, b])
     E[b].append([i, a])
 
@@ -25,9 +24,8 @@ def bfs():
         visited[now] = True
         cand_color = 1
         for i, nxt in E[now]:
-            #print(i, nxt, visited[i], colors[i])
             if visited[nxt]:
-                continue  # TreeでBFSだとここは通らない・・・？
+                continue
             if colors[i] > -1:
                 assert("１エッジに２色塗ろうとする・・・？")
                 continue

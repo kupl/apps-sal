@@ -17,8 +17,8 @@ s = [input() for _ in range(h)]
 res = []
 for i in range(h + 2):
     if i == 0 or i == h + 1:
-        res.append('#' * (w + 2))
+        res.append('
     else:
-        res.append('#' + s[i - 1] + '#')
+        res.append('
 for x in res:
     print(x)

@@ -21,14 +21,5 @@ for i in range(n):
             if i % 2 == 0:
                 counts[j] += 1
 
-#counts = []
-# for j in range(m):
-#  count = 0
-#  for i in range(n):
-#    if newfield[i][j] == "S":
-#      count += 1
-#  counts.append(str(count))
 
-# print(field)
-# print(newfield)
 print(" ".join(list(map(str, counts))))

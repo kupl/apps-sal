@@ -12,7 +12,6 @@ def no_order(equation):
     result = op2 = 0
     func_name = "+"
 
-    # dummy add to force prior operation to be run
     formula = equation.replace(" ", "") + "+"
     for ch in formula:
         if ch.isdigit():

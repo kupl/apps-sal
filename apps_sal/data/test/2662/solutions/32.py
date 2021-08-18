@@ -39,5 +39,4 @@ for i in range(n):
         now -= 1
     else:
         lst[tmp - 1] = a[i]
-# print(lst)
 print(n - now)

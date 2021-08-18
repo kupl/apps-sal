@@ -1,8 +1,6 @@
 class Solution:
     def numTimesAllBlue(self, light: List[int]) -> int:
 
-        # use a min and max counter when min == max => all bulbs are blue
-
         min_counter = -1
         max_counter = -1
 

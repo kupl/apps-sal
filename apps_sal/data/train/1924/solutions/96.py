@@ -23,4 +23,3 @@ class Solution:
                         invalid.add(','.join(trans[i]))
                     j -= 1
         return invalid
-    # Sanyam Rajpal

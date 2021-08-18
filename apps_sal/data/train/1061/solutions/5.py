@@ -1,4 +1,3 @@
-# cook your dish here
 def value(a, b, c):
     if(c == '&'):
         return a & b

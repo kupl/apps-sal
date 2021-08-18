@@ -1,4 +1,3 @@
-#n = int(input())
 import itertools
 n, l, r, x = [int(c) for c in input().split()]
 c = [int(c) for c in input().split()]

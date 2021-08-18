@@ -5,5 +5,3 @@ def string_clean(s):
         if i not in junk:
             new_s += i
     return new_s
-
-    # Your code here

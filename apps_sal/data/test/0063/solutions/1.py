@@ -13,8 +13,6 @@ else:
     s = 0
     e = 0
     total = ((n + 1) * (n + 2)) // 2 - 1 - n
-    # print(total)
-    #extra = {}
     c = 1
 
     while e < n:

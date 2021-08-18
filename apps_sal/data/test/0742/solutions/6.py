@@ -21,7 +21,6 @@ for y in range(t):
             flag = -1
             break
         b[i + 1] = m
-        # print(ch)
     if(flag == -1):
         print(-1)
     else:

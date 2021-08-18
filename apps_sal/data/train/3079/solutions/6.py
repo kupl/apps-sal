@@ -1,10 +1,8 @@
 def big_primefac_div(n):
     if n % 1 != 0:
         return "The number has a decimal part. No Results"
-    # convert negative number to positive
     n = -n if n < 0 else n
 
-    # find smallest prime factor, use it to find largest divisor
     biggest_divisor = 1
     biggest_primefactor = 1
     if n % 2 == 0:

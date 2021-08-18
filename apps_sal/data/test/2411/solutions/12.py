@@ -1,4 +1,3 @@
-# AC
 import sys
 from math import gcd
 

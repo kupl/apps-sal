@@ -1,7 +1,5 @@
-# coding: utf-8
-# Your code here!
 import sys
-input = sys.stdin.readline  # 文字列入力のときは注意
+input = sys.stdin.readline
 
 
 class Bit:
@@ -44,9 +42,6 @@ class RangeUpdate:
         return self.p.sum(t) + self.q.sum(t) * t - \
             self.p.sum(s) - self.q.sum(s) * s
 
-#    def get(self, s):
-#        return self.p.sum(s+1) + self.q.sum(s+1) * (s+1) - \
-#               self.p.sum(s) - self.q.sum(s) * s
     def get(self, s):
         return self.p.get(s + 1) + self.q.get(s + 1) * (s + 1) + self.q.sum(s)
 
@@ -56,7 +51,6 @@ lr = [[int(i) for i in input().split()] for _ in range(n)]
 
 lr.sort(key=lambda x: x[1] - x[0])
 
-# print(lr)
 
 omiyage = RangeUpdate(m + 1)
 index = 0

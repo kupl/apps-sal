@@ -4,7 +4,6 @@ class Solution:
         sum_tot = 0
         for i in range(n):
             val = 2 * i + 1
-            # print(val)
             if val > n:
                 sum_tot += val - n
             else:

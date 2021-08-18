@@ -1,4 +1,3 @@
-# エラトステネスの篩, フェルマーの小定理
 def make_prime_table(N):
     sieve = list(range(N + 1))
     sieve[0] = -1

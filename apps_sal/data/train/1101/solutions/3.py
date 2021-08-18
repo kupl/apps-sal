@@ -1,8 +1,6 @@
-# cook your dish here
 t = int(input())
 for t1 in range(t):
     n, c, k1 = (int(i) for i in input().split())
-    # print(n,c,k1)
     lis = [dict([]) for i in range(c + 1)]
     ma = 1
     for i in range(n):
@@ -58,6 +56,5 @@ for t1 in range(t):
                         else:
                             kna[no][z] = kna[be][z]
                     ct += 1
-                # print(kna[no][k1])
         tot = tot - max(kna[0][k1], kna[1][k1])
         print(int(tot))

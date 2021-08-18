@@ -32,5 +32,4 @@ for x in special:
 ans -= largest * (largest - 1) // 2
 ans += (largest + leftover) * ((largest + leftover) - 1) // 2
 ans -= m
-#
 print(ans)

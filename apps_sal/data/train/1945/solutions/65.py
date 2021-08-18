@@ -8,7 +8,6 @@ class Solution:
         return row
 
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
-        # O(n^2) time, O(n) space
         seen = defaultdict(int)
         for i, row in enumerate(matrix):
             if tuple(row) in seen or tuple(self.flip_row(row)) in seen:

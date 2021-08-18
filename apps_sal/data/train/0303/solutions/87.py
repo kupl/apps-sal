@@ -6,7 +6,5 @@ class Solution:
             for j in range(1, k + 1):
                 if j > i:
                     break
-                #if i == 2: print(max(arr[(i-j): i]), arr[(i-j): i], j)
                 T[i] = max(T[i], T[i - j] + max(arr[(i - j): i]) * j)
-        # print(T)
         return T[N]

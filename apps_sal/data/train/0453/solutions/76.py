@@ -8,7 +8,6 @@ class Solution:
 
         @lru_cache(None)
         def dp(i, c, k):
-            # print(i, c, k, i == m)
             if k > target:
                 return INF
             if i >= m:

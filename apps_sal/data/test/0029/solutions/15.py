@@ -33,7 +33,6 @@ def main():
 
     for s_t in range(0, end):
         if lucky(s_t):
-            #            import pdb; pdb.set_trace()
             min_difs = min(min_difs, difs(s, s_t))
 
             if min_difs == 0:

@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
 import sys
 def input(): return sys.stdin.readline().rstrip()
 
 
-def trans(l_2d):  # リストの転置
+def trans(l_2d):
     return [list(x) for x in zip(*l_2d)]
 
 

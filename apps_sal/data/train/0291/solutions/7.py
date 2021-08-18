@@ -11,7 +11,7 @@ class Solution:
             curr_sum += num
             curr_sum %= 2
 
-            if curr_sum == 1:  # odd
+            if curr_sum == 1:
                 res += even_count
                 odd_count += 1
             else:

@@ -1,4 +1,3 @@
-# cook your dish here
 def gcd(m, n):
     if m > n:
         (a, b) = (n, m)

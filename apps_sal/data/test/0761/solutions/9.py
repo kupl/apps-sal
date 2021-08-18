@@ -57,7 +57,6 @@ for i in reversed(range(n)):
 
 ans = -100000000000000000
 for i in range(n):
-    #print(i, "----")
     tans = xs[i]
     if i == 0:
         pass
@@ -74,7 +73,6 @@ for i in range(n):
     else:
         tans += suffix[i + 1]
         tans -= sufbignum[i + 1] * 2
-        #print(suffix[i+1], sufbignum[i+1])
     ans = max(ans, tans)
 
 print(ans)

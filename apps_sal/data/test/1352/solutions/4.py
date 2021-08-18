@@ -1,6 +1,5 @@
 import os
 from io import BytesIO, StringIO
-#input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
 
 def input_as_list():
@@ -60,11 +59,9 @@ def main():
     while l <= L:
         if l + 1 < r and (lo[l] == -1 or x < r or lo[l] < fo[r]):
             ans += x - r + 2
-            #print(l+1, r-1)
             l += 1
         else:
             r += 1
-    #print(L, R, ans)
     print(ans)
 
 

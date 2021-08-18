@@ -11,7 +11,6 @@ class Solution:
             heapify(s)
             min1 = s[0]
             min2 = min(s[1], s[2])
-            # print(min1,min2)
             for j in range(len(arr[0])):
 
                 if v[i + 1][j] != min1:

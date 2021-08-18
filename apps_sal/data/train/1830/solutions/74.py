@@ -1,4 +1,3 @@
-# https://blog.csdn.net/pfdvnah/article/details/106897444
 
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
@@ -14,7 +13,6 @@ class Solution:
         q = []
         used = set()
         for idx, n in enumerate(rains):
-            # print (q, used)
             if n > 0:
                 if n in used:
                     return []

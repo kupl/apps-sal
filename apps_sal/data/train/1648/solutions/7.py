@@ -11,7 +11,7 @@ def spinning_rings(innermax, outermax):
             a = outermax
 
         while a != b:
-            if a > outermax and c != b:  # check if a> outermax than a become in outer max range.
+            if a > outermax and c != b:
                 temp = c
                 c += (a - outermax)
                 b = (b + (c - temp)) % (outermax + 1)

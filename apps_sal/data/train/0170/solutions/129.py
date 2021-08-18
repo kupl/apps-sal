@@ -15,8 +15,6 @@ class Solution:
                 pst.append(False)
 
         pst = pst[::-1]
-        # print (pre)
-        # print (pst)
 
         def isPoss(slen):
             for i in range(len(arr) - slen + 1):
@@ -34,7 +32,6 @@ class Solution:
 
             return False
 
-        # print (isPoss(1))
         l, r = 0, len(arr)
         res = r
         while l <= r:

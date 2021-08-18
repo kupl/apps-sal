@@ -11,7 +11,7 @@ todo = []
 p = 0
 
 for i in range(n):
-    if (MAX - depth[i]) % 2 == 0:  # odd, useful
+    if (MAX - depth[i]) % 2 == 0:
         t ^= a[i]
         todo.append(a[i])
     else:

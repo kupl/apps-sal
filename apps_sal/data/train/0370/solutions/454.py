@@ -31,7 +31,6 @@ class Solution:
                 primes.append(x)
 
         primes = list(set(primes))
-        # print(primes)
         dsu = DSU(primes)
 
         for a in A:

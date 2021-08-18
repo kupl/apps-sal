@@ -30,7 +30,6 @@ def main():
 
         dp[1] += 1
 
-    # print(dp)
     total = sum(dp) % mod
 
     print(total)

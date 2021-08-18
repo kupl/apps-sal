@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def __starting_point():
     k = int(input().strip())

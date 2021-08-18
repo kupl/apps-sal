@@ -1,5 +1,3 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
 import numpy as np
 n, m, q = list(map(int, input().split()))

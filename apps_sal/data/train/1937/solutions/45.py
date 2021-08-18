@@ -24,7 +24,6 @@ class ThroneInheritance:
         member.dead = True
 
     def getInheritanceOrder(self) -> List[str]:
-        # dfs with living members
         inheritance = []
         stack = [self.king]
 
@@ -36,10 +35,3 @@ class ThroneInheritance:
                 inheritance.append(member.name)
 
         return inheritance
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

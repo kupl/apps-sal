@@ -21,28 +21,3 @@ class Solution:
             return count
 
         return int(dp(target, f, d) % (10**9 + 7))
-
-
-# # ############
-# f = 3
-# ans = [1,1,2],[1,2,1],[2,1,1]
-# count = 3
-# dp(3, 4)
-# d = 3
-# target = 4
-# i = 2
-# -------
-# dp(2, 2)
-# d = 2
-# target = 2
-# i = 1
-# ------
-# dp(1, 1)
-# d = 1
-# target = 1
-# i = 1
-# ------
-# dp(0, 0)
-# d = 0
-# target = 0
-# ------

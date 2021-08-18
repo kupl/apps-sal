@@ -2,22 +2,12 @@ import math
 import statistics
 import collections
 a = int(input())
-# b,c=int(input()),int(input())
-# c=[]
-#  for i in b:
-#     c.append(i)
-#e1,e2 = map(int,input().split())
-# f = list(map(int,input().split()))
 g = [input() for _ in range(a)]
-# h = []
-# for i in range(e1):
-#     h.append(list(map(int,input().split())))
 
 g.sort()
 
 ma = 0
 count = 1
-# 最大値求める
 for i in range(a - 1):
     if g[i] == g[i + 1]:
         count += 1
@@ -28,7 +18,6 @@ for i in range(a - 1):
 ma = max(ma, count)
 count = 1
 ans = []
-# 最大値の位置
 for i in range(a - 1):
     if g[i] == g[i + 1]:
         count += 1

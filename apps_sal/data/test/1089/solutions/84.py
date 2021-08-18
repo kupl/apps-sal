@@ -2,7 +2,6 @@ n, m, k = map(int, input().split())
 mod = pow(10, 9) + 7
 
 
-# コンビネーション、さらに高速。あらかじめO(N)の計算をすることでのちの計算が早くなる
 def cmb(n, r, mod):
     if (r < 0 or r > n):
         return 0
@@ -10,8 +9,8 @@ def cmb(n, r, mod):
     return g1[n] * g2[r] * g2[n - r] % mod
 
 
-g1 = [1, 1]  # g1[i]=i! % mod　:階乗
-g2 = [1, 1]  # g2[i]=(i!)^(-1) % mod　:階乗の逆元
+g1 = [1, 1]
+g2 = [1, 1]
 inverse = [0, 1]
 for i in range(2, n * m + 1):
     g1.append((g1[-1] * i) % mod)

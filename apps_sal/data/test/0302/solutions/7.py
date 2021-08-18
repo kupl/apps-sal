@@ -3,7 +3,7 @@ multiplos_de_onze = [0, 1, 11, 111, 1111, 11111, 111111, 1111111, 11111111, 1111
                      11111111111111111]
 
 
-def procura_onze(n, i):  # i = 16 pois será as posições do vetor decrementadas
+def procura_onze(n, i):
     divisao = int(n / multiplos_de_onze[i])
     resto = n % multiplos_de_onze[i]
     if resto == 0:

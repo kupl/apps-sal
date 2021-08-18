@@ -1,9 +1,8 @@
 from operator import itemgetter
 n, w = list(map(int, input().split()))
 wv = [tuple(map(int, input().split())) for i in range(n)]
-wv.sort(key=itemgetter(1), reverse=True)  # reverse
+wv.sort(key=itemgetter(1), reverse=True)
 wv.sort(key=itemgetter(0))
-# print(wv)
 w0 = wv[0][0]
 x = [[0], [0], [0], [0]]
 for i in range(n):

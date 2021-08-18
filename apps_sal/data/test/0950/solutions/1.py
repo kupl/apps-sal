@@ -7,8 +7,8 @@ symb = [m * 100] * n
 for i in range(n):
     s = input()
     for j, c in enumerate(s):
-        if c in '*#&':
-            symb[i] = min(symb[i], j, m - j)
+        if c in '*
+        symb[i] = min(symb[i], j, m - j)
         elif c.isdigit():
             dig[i] = min(dig[i], j, m - j)
         else:

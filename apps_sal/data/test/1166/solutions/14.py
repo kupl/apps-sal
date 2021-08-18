@@ -32,8 +32,6 @@ for i in d:
     if len(d[i]) == 0:
         a[i] = 'B'
         ans += 1
-# print(a)
-# print(d[5])
 while ans != n:
     for i in d:
         dont = False
@@ -50,5 +48,4 @@ while ans != n:
             if not dont:
                 a[i] = 'B'
                 ans += 1
- #   print(a)
 print(''.join(a))

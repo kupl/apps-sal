@@ -3,8 +3,6 @@ n, k, l = map(int, input().split())
 
 
 class UnionFind:
-    # def   -> foo=UnionFind(n,1)  <- 1-based index, default is 0
-    # method -> foo.hoge(huga)
     __slots__ = ["_size", "_first_idx", "_parents"]
 
     def __init__(self, size: int, first_index: int = 0) -> None:

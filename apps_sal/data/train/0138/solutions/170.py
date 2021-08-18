@@ -17,9 +17,4 @@ class Solution:
                 else:
                     firstNegIdx = min(firstNegIdx, i)
                     res = max(res, i - firstNegIdx)
-                # print (i, curr, res)
         return res
-        # if math.isfinite(res):
-        #     return res
-        # else:
-        #     return 0

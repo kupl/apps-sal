@@ -2,7 +2,6 @@ __author__ = 'Michael Ilyin'
 
 import math
 
-# debug = True
 debug = False
 
 

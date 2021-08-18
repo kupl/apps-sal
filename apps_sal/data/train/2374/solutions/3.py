@@ -12,7 +12,6 @@ for case in range(q):
     dp[0][0] = True
 
     for i in range(1, 1 + n):
-        # print(a[0][i], a[1][i] in I)
 
         if a[0][i] in I:
             dp[0][i] = dp[0][i - 1]

@@ -1,4 +1,3 @@
-# from math import ceil, log
 
 b = {}
 n, k = list(map(int, input().split()))

@@ -1,13 +1,13 @@
 import sys
-input = sys.stdin.buffer.readline  # FOR READING PURE INTEGER INPUTS (space separation ok)
+input = sys.stdin.buffer.readline
 
 
 MAXPRIME = 10**6
 isPrime = [0 for _ in range(MAXPRIME + 1)]
 isPrime[0] = -1
-isPrime[1] = -1  # 0 and 1 are not prime numbers
+isPrime[1] = -1
 for i in range(2, MAXPRIME // 2 + 1):
-    if isPrime[i] == 0:  # i is prime
+    if isPrime[i] == 0:
         for multiple in range(i * i, MAXPRIME + 1, i):
             if isPrime[multiple] == 0:
                 isPrime[multiple] = i
@@ -26,35 +26,11 @@ for i in range(1, MAXPRIME + 1):
         pIdx += 1
     while pSqRtIdx + 1 < len(primes) and (primes[pSqRtIdx + 1])**2 <= i:
         pSqRtIdx += 1
-    total = (pIdx + 1) - (pSqRtIdx + 1) + 1  # 1 is always lonely
+    total = (pIdx + 1) - (pSqRtIdx + 1) + 1
     lookupTable[i] = total
 
-# print(lookupTable[:30])
 
-# a number is lonely if its gcd with all other numbers is 1. i.e. it is prime and its square > n. also, 1 is always lonely
 t = int(input())
 n = [int(x) for x in input().split()]
 for nn in n:
     print(lookupTable[nn])
-
-
-# def gcd(x, y):
-#    while y != 0:
-#        (x, y) = (y, x % y)
-#    return x
-# lonely=[]
-# for i in range(1,n+1):
-#    ok=False
-#    for j in range(1,n+1):
-#        g=gcd(i,j)
-#        a=g
-#        b=i//g
-#        c=j//g
-#        if a+b>c and b+c>a and a+c>b:
-#            ok=True
-#            if i in primeNumberSet:
-#                print(i,j)
-#            break
-#    if ok==False:
-#        lonely.append(i)
-# print(lonely)

@@ -25,7 +25,6 @@ for _ in range(0, int(input())):
         if pos != -1:
             tot += minq
             del z[pos]
-            # z=np.delete(z,pos)
         else:
             tot += p
     print(tot)

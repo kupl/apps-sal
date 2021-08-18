@@ -1,4 +1,3 @@
-# fast io
 import sys
 def fop(s): sys.stdout.write(str(s) + '\n')
 def fip(): return sys.stdin.readline()
@@ -7,7 +6,6 @@ def fip(): return sys.stdin.readline()
 def fintinp(): return int(fip())
 def flistinp(func=int): return list(map(func, fip().split()))
 def fnsepline(n, func=str): return [func(fip()) for _ in range(n)]
-# -------------------code------------------------
 
 
 def even(x):

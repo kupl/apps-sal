@@ -53,9 +53,6 @@ def main():
     c = 0
     while len(q):
         sx, x, tx = heapq.heappop(q)
-        # print("x", sx,x,tx)
-        # print("q", q)
-        # print("t", t)
         if sx > ctx:
             t.append((sx - 1, cx))
             cx = x
@@ -70,12 +67,10 @@ def main():
             heapq.heappush(q, (ctx + 1, x, tx))
 
     t.append((inf, inf))
-    # print("t", t)
 
     r = []
     for d in da:
         i = bisect.bisect_right(t, (d, -1))
-        # print("d",d,i,t[i])
         u = t[i][1]
         if u == inf:
             r.append(-1)

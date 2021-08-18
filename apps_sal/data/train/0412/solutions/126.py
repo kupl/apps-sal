@@ -13,5 +13,4 @@ class Solution:
                         if j - k >= 0:
                             dp[i][j] += dp[i - 1][j - k]
 
-        # print(dp)
         return dp[d - 1][target - 1] % 1000000007

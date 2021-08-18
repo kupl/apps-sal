@@ -1,5 +1,4 @@
 def max_tri_sum(numbers):
-    # your code here
     numbers = list(set(numbers))
 
     max1 = max(numbers)

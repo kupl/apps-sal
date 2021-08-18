@@ -2,7 +2,6 @@ import math
 t = int(input())
 for _ in range(0, t):
     n = int(input())
-    # print(n)
     sides = []
     for i in range(2, (n + n)):
         if i % 2 == 0 and i != n:

@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import Counter
 for z in range(int(input())):
     n = int(input())

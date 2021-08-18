@@ -33,7 +33,6 @@ k = 0
 tree = [0] * (M + 1)
 for d in range(1, M + 1):
 
-    # 間隔の長さがd以下の区間だけ考えれば良い。
     while k < N and data[k][0] < d:
         bit_add(data[k][1], 1)
         bit_add(data[k][2] + 1, -1)

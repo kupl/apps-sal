@@ -10,11 +10,8 @@ def f(n, k):
         dpi1 = dp[i - 1]
         for j in range(i + 1):
             for s in range(j, k + 1):
-                # 片側、水平、両方上
-                #            print(i,j,s)
                 tmp = dpi1[j][s - j] * j * 2 + dpi1[j][s - j] + dpi1[j + 1][s - j] * (j + 1) ** 2
                 if j:
-                    # 両方保留
                     tmp += dp[i - 1][j - 1][s - j]
                 dp[i][j][s] = tmp % md
     print((dp[n][0][k]))

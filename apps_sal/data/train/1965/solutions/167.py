@@ -1,6 +1,5 @@
 class Solution:
     def maxNumEdgesToRemove(self, n, edges):
-        # Union find
         def find(node):
             if parent[node] != node:
                 parent[node] = find(parent[node])

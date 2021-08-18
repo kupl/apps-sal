@@ -5,8 +5,6 @@ b = list(map(int, input().split()))
 p = [0 for i in range(N)]
 done = 0
 b.insert(0, 0)
-# for i in range(len(b)):
-# 	print (b[i],end=" ")
 for i in range(1, n + 1):
     p[b[i]] = i
 if(p[1] != 0):

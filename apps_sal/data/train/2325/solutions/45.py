@@ -5,8 +5,6 @@ T = input()
 q = int(input())
 abcd = [list(map(int, input().split())) for i in range(q)]
 
-# Segment Tree
-
 
 class SegmentTree:
     def __init__(self, data, op, default):
@@ -56,9 +54,6 @@ nT = list(map(convert, T))
 segS = SegmentTree(nS, lambda x, y: x + y, 0)
 segT = SegmentTree(nT, lambda x, y: x + y, 0)
 
-# A -> BB -> AAAA -> A
-# B -> AA -> BBBB -> B
-# (S) -> AAAAA......
 for a, b, c, d in abcd:
     rs = segS.get(a - 1, b)
     rt = segT.get(c - 1, d)

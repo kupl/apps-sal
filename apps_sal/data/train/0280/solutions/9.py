@@ -1,6 +1,5 @@
 class Solution:
     def palindromePartition(self, s: str, k: int) -> int:
-        # dp[i][k]: min change number of devide s[:i] to k substrings
 
         dp = [[2 ** 30 for _ in range(k + 1)] for _ in range(len(s) + 1)]
         for p in range(k + 1):

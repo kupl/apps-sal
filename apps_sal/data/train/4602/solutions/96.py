@@ -1,4 +1,3 @@
-# write the function is_anagram
 def is_anagram(test, original):
     org1 = [x.lower() for x in original]
     org2 = [y.lower() for y in test]

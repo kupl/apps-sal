@@ -29,7 +29,6 @@ good.sort()
 good = [i for i in good if n * min(a, b) <= i <= n * max(a, b)]
 ans = 0
 MOD = 10**9 + 7
-# print(good)
 for x in range(0, n + 1):
     if a * x + b * (n - x) in good:
         ans += ncr(n, x, MOD)

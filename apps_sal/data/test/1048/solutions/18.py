@@ -12,5 +12,3 @@ for i in arr:
     elif i == 'D':
         down += 1
 print(2 * (min(left, right) + min(up, down)))
-# print(left,right,up,down)
-# print(arr)

@@ -5,10 +5,7 @@ import itertools
 def main():
     n, k = list(map(int, input().split()))
     v = [int(i) for i in input().split()]
-    # k回Vの両端から取り出したり詰めたりして持ってるものの価値の最大化をする
     v_1 = v[::-1]
-    # 左から取る回数をA、右から取る回数をBとしたとき、価値が負の宝石を捨てる操作は（k-(A+B)）回できる
-    # これを利用して全探索
     res = 0
     for i in range(k + 1):
         j = 0

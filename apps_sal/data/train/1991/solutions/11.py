@@ -6,7 +6,6 @@ class Solution:
 
         @lru_cache(None)
         def dp(j, f):
-            # print(j, f)
             summ = 0
             for idx, loc in enumerate(locations):
                 if idx == j:

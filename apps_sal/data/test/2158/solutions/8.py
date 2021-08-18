@@ -5,7 +5,6 @@ def DFs(d, node, visited, c):
     visited.add(node)
     for i in d[node]:
         if i[0] not in visited:
-            # c=c+i[1]
             DFs(d, i[0], visited, c + i[1])
     count.append(c)
 
@@ -17,7 +16,6 @@ def dfs(d, n):
         if i not in visited:
             c = 0
             DFs(d, i, visited, c)
-            # count.append(a)
 
 
 n = int(input())

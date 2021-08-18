@@ -21,8 +21,6 @@ class Solution:
             if next_depth % 2 == 0:
                 next_numbers.reverse()
 
-            # print(curr_numbers, next_numbers)
-
             label = next_numbers[curr_numbers.index(label) // 2]
             curr_depth -= 1
             next_depth -= 1

@@ -1,6 +1,4 @@
-# import
 import math
-#import numpy as np
 N = int(input())
 
 first = "MARCH"

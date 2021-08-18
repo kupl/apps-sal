@@ -2,7 +2,6 @@ n, m = map(int, input().split())
 l = []
 for i in range(n):
     l.append(input())
-# print(l)
 xstart = -1
 ystart = -1
 xend = -1

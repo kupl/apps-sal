@@ -25,5 +25,4 @@ while t:
             print("Both")
     else:
         print("No")
-    # print total,multan,fultan
     t -= 1

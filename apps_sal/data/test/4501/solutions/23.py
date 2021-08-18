@@ -4,10 +4,10 @@ def c_tak_and_cards():
     X = [int(i) for i in input().split()]
 
     average = [x - A for x in X]
-    dp = defaultdict(int)  # dp[s]: y から 1 枚以上選んで整数の和を s にする方法
-    dp[0] = 1  # 「選ばない」 1 通り
+    dp = defaultdict(int)
+    dp[0] = 1
     for y in average:
-        for k, v in list(dp.items()):  # for 文中で要素数が変わってはいけないため
+        for k, v in list(dp.items()):
             dp[k + y] += v
     return dp[0] - 1
 

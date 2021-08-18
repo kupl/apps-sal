@@ -9,7 +9,6 @@
 - O(K log N) / O(n)
 
 '''
-# O(nlogk) / O(k)
 
 
 class Point:

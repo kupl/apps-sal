@@ -74,7 +74,6 @@ for test in tests:
         continue
     left_idx = check_left(test, template, good_symbols)
     right_idx = check_right(test, template, good_symbols)
-    # print(left_idx, right_idx)
     if left_idx == 'NO':
         print('NO')
     elif right_idx == 'NO':

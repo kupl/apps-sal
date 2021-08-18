@@ -65,13 +65,10 @@ while que:
         y = query_y(xi, r)
         yi = M[y]
 
-        # [l, xi)
         if l < xi:
             heappush(que, (query_x(l, xi), l, xi))
-        # [xi+1, yi)
         if xi + 1 < yi:
             heappush(que, (query_x(xi + 1, yi), xi + 1, yi))
-        # [yi+1, r)
         if yi + 1 < r:
             heappush(que, (query_x(yi + 1, r), yi + 1, r))
     else:

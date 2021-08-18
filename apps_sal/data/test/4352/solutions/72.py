@@ -1,6 +1,5 @@
-# 054a
 
-A, B = list(map(int, input().split()))    # カードの数字を入力
+A, B = list(map(int, input().split()))
 
 if A == B:
     print("Draw")

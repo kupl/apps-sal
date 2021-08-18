@@ -8,7 +8,7 @@ class Solution:
                 return dp[i][j]
 
             ans = sys.maxsize
-            for k in range(i + 1, j):    # burst ith element
+            for k in range(i + 1, j):
                 ans = min(ans, dfs(nums, i, k) + dfs(nums, k, j) + nums[i] * nums[k] * nums[j])
 
             dp[i][j] = ans

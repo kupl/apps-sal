@@ -21,8 +21,6 @@ class Solution:
                     graph[i].append(j)
             result[i] = 1
 
-        # for k, v in graph.items():
-        #     print(k, v)
         M = 10 ** 9 + 7
         for i in range(1, n):
             res_next = [0] * (3 * 4)
@@ -31,5 +29,4 @@ class Solution:
                     res_next[x] = (res_next[x] + result[adj]) % M
 
             result = res_next
-        # print(result)
         return sum(result) % M

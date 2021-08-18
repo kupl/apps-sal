@@ -3,11 +3,10 @@ sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
 
 n = int(input())
-#n,x = [int(i) for i in readline().split()]
 a = [int(i) for i in readline().split()]
 
 
-def zeta_transform(a, n):  # 高速ゼータ変換
+def zeta_transform(a, n):
     b = [[i, 0] for i in a]
     for i in range(n):
         I = 1 << i
@@ -22,9 +21,7 @@ def zeta_transform(a, n):  # 高速ゼータ変換
     return b
 
 
-# print(a)
 za = zeta_transform(a[:], n)
-# print(zeta_transform(a[:],n),"zeta-a")
 
 for i, zi in enumerate(za):
     if not i:

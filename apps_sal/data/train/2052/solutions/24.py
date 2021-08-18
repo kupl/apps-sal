@@ -8,6 +8,3 @@ for i in range(m):
 if n % 2 and b[n // 2] and b[n + n // 2]:
     b[n // 2] = 0
 print(sum(b))
-
-
-# Made By Mostafa_Khaled

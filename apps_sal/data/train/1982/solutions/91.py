@@ -3,17 +3,11 @@ class Solution:
         if N < 2:
             return True
 
-        # We can look at this as a graph problem, where we connect all the
-        # numbers with all the numbers they dislike.
-        #
-        # If we have any cycles of odd length, then we return False
-        #
         graph = {i: [] for i in range(1, N + 1)}
         for a, b in dislikes:
             graph[a].append(b)
             graph[b].append(a)
 
-        # part table to assign partition to each number
         part = [None for _ in range(N + 1)]
 
         def dfs(i, p):

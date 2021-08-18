@@ -2,12 +2,12 @@ n, x, m = list(map(int, input().split()))
 X = [-1] * m
 P = []
 sum_p = 0
-while X[x] == -1:  # preset
-    X[x] = len(P)  # pre length
-    P.append(sum_p)  # pre sum_p
-    sum_p += x  # now sum_p
+while X[x] == -1:
+    X[x] = len(P)
+    P.append(sum_p)
+    sum_p += x
     x = x * x % m
-P.append(sum_p)  # full sum_p
+P.append(sum_p)
 p_len = len(P) - 1
 cyc_times, nxt_len = divmod(n - X[x], p_len - X[x])
 cyc = (sum_p - P[X[x]]) * cyc_times

@@ -10,14 +10,12 @@ class Solution:
                 return mem[(index, ifSwapped)]
             else:
                 ans = float('inf')
-                # Don't swap if possible
                 if A[index] > A[index - 1] and B[index] > B[index - 1]:
                     ans = min(ans, rec(index + 1, 0))
-                # Swap if possible
                 if A[index] > B[index - 1] and B[index] > A[index - 1]:
-                    A[index], B[index] = B[index], A[index]  # Swap
+                    A[index], B[index] = B[index], A[index]
                     ans = min(ans, 1 + rec(index + 1, 1))
-                    A[index], B[index] = B[index], A[index]  # Swap them back
+                    A[index], B[index] = B[index], A[index]
                 mem[(index, ifSwapped)] = ans
                 return ans
 

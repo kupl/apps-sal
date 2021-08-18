@@ -3,16 +3,14 @@ class Solution:
         wl = set(wordlist)
 
         def dfs(w):
-            # base
             if len(w) == 1:
                 return 1
             if w in memo:
                 return memo[w]
-            # recursive
             l = len(w)
             depth = 0
             for i in range(l):
-                next = w[0:i] + w[i + 1:l]  # substring
+                next = w[0:i] + w[i + 1:l]
                 if next in wordlist:
                     depth = max(depth, dfs(next))
             memo[w] = depth + 1

@@ -14,7 +14,6 @@ class Solution:
             a.append([i, m[i]])
 
         a.sort(key=lambda x: x[0])
-        # print(a)
         _c = set()
         for i in range(len(a)):
             for j in range(i + 1, len(a)):

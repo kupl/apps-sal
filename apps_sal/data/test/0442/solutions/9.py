@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 r = int(input())
 
 for x in range(1, 10**6):

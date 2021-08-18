@@ -1,8 +1,6 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        # time complexity: O(m*n)
-        # space complexity: O(m*n)
-        stops = defaultdict(list)  # stop: [buses]
+        stops = defaultdict(list)
         for r, s in enumerate(routes):
             for i in s:
                 stops[i].append(r)

@@ -1,5 +1,4 @@
 def array_madness(a, b):
-    # Ready, get, set, GO!!!
     sum1 = 0
     sum2 = 0
     for i in a:

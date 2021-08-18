@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/886/D
 def is_all_used(used):
     for val in list(used.values()):
         if val != True:
@@ -90,14 +89,3 @@ def solve():
 
 
 print(solve())
-
-# 4
-# mail
-# ai
-# lru
-# cf
-
-# 3
-# kek
-# preceq
-# cheburek

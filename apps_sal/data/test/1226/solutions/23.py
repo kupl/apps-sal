@@ -26,8 +26,6 @@ def combination(n, k):
             while j % m == 0:
                 count[m] += 1
                 j = j // m
-    # print(p)
-    # print(count)
     ans = 1
     for i in kp:
         bufi = i
@@ -35,11 +33,9 @@ def combination(n, k):
             while count[j] > 0 and bufi % j == 0:
                 bufi = bufi // j
                 count[j] -= 1
-        #print(i, bufi)
         ans *= bufi
         ans %= M
 
-    # print(kp)
     return ans
 
 

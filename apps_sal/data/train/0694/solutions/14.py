@@ -1,6 +1,5 @@
-from math import gcd  # Python versions 3.5 and above
-# from fractions import gcd # Python versions below 3.5
-from functools import reduce  # Python version 3.x
+from math import gcd
+from functools import reduce
 
 
 def lcm(denominators):

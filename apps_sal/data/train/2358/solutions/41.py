@@ -19,7 +19,6 @@ inf = float('inf')
 seen = [inf] * (n + 2)
 seen[-2] = 0
 mi = set(range(n + 2))
-# n->n+1
 while mi:
     min_idx = 0
     min_d = inf

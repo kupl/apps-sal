@@ -1,4 +1,3 @@
-# Please DON'T hack me! TY!
 import sys
 
 
@@ -33,10 +32,10 @@ class Main:
                     if ss[i + 1][j - 1] != '.' or ss[i + 1][j] != '.' or ss[i + 1][j + 1] != '.' or ss[i + 2][j] != '.':
                         print('NO')
                         return
-                    ss[i + 1][j - 1] = '#'
-                    ss[i + 1][j] = '#'
-                    ss[i + 1][j + 1] = '#'
-                    ss[i + 2][j] = '#'
+                    ss[i + 1][j - 1] = '
+                    ss[i + 1][j] = '
+                    ss[i + 1][j + 1] = '
+                    ss[i + 2][j] = '
         print('YES')
 
 

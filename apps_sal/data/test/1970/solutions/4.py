@@ -14,17 +14,14 @@ def bfs(graph, x, y, tx, ty):
 
     while queue:
         elem = queue.popleft()
-        #print (elem)
 
         for direction in di:
             new_elem = (elem[0] + direction[0], elem[1] + direction[1])
-            #print (new_elem)
             if new_elem[0] >= 0 and new_elem[1] >= 0 and new_elem[0] < 8 and new_elem[1] < 8:
                 if new_elem not in vis:
                     vis.add(new_elem)
                     queue.append(new_elem)
                     dis[new_elem] = dis[elem] + 1
-#                    print (elem,  new_elem, dis[new_elem])
 
     if (tx, ty) not in vis:
         return (False, 0)
@@ -45,7 +42,6 @@ for cc in range(n):
                 ans.append(j)
 
     ans = bfs(datamap, ans[0], ans[1], ans[2], ans[3])
-    #print (ans)
     if ans[0] and ans[1] % 2 == 0:
         print("YES")
     else:

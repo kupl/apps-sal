@@ -35,8 +35,6 @@ while OK - NG > 1:
     for i in range(1, 2 * 10**5 + 3):
         USE[i] += USE[i - 1]
 
-    # print(mid,USE[:10],(2*10**5+3-USE.count(0))*2+n+1)
-
     if (2 * 10**5 + 3 - USE.count(0)) * 2 + n + 1 <= t:
         OK = mid
     else:

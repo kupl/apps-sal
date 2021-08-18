@@ -14,7 +14,6 @@ class Solution:
                 cost += 4 * boardingCost - runningCost
                 left -= 4
             i += 1
-            #print(i, cost)
             if cost > m_cost:
                 m_cost = cost
                 m = i
@@ -26,7 +25,6 @@ class Solution:
                 cost += 4 * boardingCost - runningCost
                 left -= 4
             i += 1
-            #print(i, cost)
             if cost > m_cost:
                 m_cost = cost
                 m = i

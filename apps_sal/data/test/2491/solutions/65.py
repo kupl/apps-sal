@@ -22,15 +22,10 @@ def bellman_ford(edges, N, start, goal):
     dist = [float("inf") for _ in range(N)]
     dist[start] = 0
 
-    # 辺の情報を見ることを1ループとすると
-    # 最低でも1つの頂点について，スタートからの最短距離が求まる
-    # つまり，スタートからの距離は，スタートを除いた頂点の数である
-    # (N-1)回のループで求まる．
     for i in range(N * 2):
         for fro, to, cost in edges:
             if dist[to] > dist[fro] + cost:
                 dist[to] = dist[fro] + cost
-                # N回目に頂点の更新があると，負の経路がある
                 if i == N - 1:
                     dist[to] = -float("inf")
 

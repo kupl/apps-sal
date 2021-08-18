@@ -1,19 +1,3 @@
-#
-#    ------------------------------------------------
-#           ____          _     Generatered using
-#          / ___|        | |
-#         | |    __ _  __| | ___ _ __  ______ _
-#         | |   / _` |/ _` |/ _ \ '_ \|_  / _` |
-#         | |__| (_| | (_| |  __/ | | |/ / (_| |
-#          \____\____|\____|\___|_| |_/___\____|
-#
-#      GNU Affero General Public License v3.0
-#    ------------------------------------------------
-#    Author   : prophet
-#    Created  : 2020-08-12 10:41:11.229095
-#    UUID     : H1wm7mv97N5BgWH3
-#    ------------------------------------------------
-#
 import re
 import copy
 import random
@@ -90,10 +74,6 @@ def mapl(i, f=0):
     elif f == 2:
         return list(map(list, i))
 
-#
-#   >>>>>>>>>>>>>>> START OF SOLUTION <<<<<<<<<<<<<<
-#
-
 
 def solve():
 
@@ -134,7 +114,3 @@ def solve():
 
 for i in range(input(11)):
     solve()
-
-#
-#   >>>>>>>>>>>>>>>> END OF SOLUTION <<<<<<<<<<<<<<<
-#

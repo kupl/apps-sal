@@ -6,7 +6,6 @@ class Solution:
         max_len = 0
 
         for cur_word in words:
-            # print(cur_word)
             cur_len = 0
             for i in range(len(cur_word)):
                 check_word = cur_word[:i] + cur_word[i + 1:]

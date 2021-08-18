@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 
@@ -34,7 +33,6 @@ for i in range(1, 201):
         covering.sort()
         for _ in range(to_remove):
             _, j = covering.pop()
-#            print(i, j, segments[j])
             removed[j] = True
             removed_list.append(j)
 

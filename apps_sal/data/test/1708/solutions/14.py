@@ -5,7 +5,6 @@ types = dict()
 for i in range(n):
     types[i] = c[i]
 types = sorted(types.items(), key=lambda kv: kv[1])
-# print(types)
 min_c = types[0]
 ind = 0
 for i in range(m):

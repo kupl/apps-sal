@@ -1,4 +1,3 @@
-# cook your dish here
 tc = int(input())
 for j in range(tc):
     ip = list(map(int, input().rstrip().split()))

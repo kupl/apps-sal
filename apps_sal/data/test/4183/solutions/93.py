@@ -1,4 +1,3 @@
-# C - Multiple Clocks
 import functools
 import math
 N = int(input())

@@ -1,4 +1,3 @@
-# cook your dish here
 
 x, y = input().split()
 x = int(x)

@@ -20,8 +20,6 @@ class Solution:
             rotates += 1
             current_profit.append((comp_people * boardingCost) - (rotates * runningCost))
 
-        #rotates+= math.ceil(waitlist/gondola_size)
-        #print(total_people, comp_people, waitlist, rotates, current_profit)
         while waitlist > 0:
 
             rotates += 1
@@ -34,7 +32,6 @@ class Solution:
 
             current_profit.append((comp_people * boardingCost) - (rotates * runningCost))
 
-        #print(total_people, comp_people, waitlist, rotates, current_profit )
         res = current_profit.index(max(current_profit))
         if res == 0:
             return -1

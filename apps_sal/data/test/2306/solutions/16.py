@@ -39,25 +39,17 @@ for i in range(alltime * 2):
 maxslis.reverse()
 maxslis.append(0)
 
-#print (maxslis)
 dtflag = False
 
 for i in range(alltime * 2 + 1):
-
-    #print (i+1,maxslis[i],spd)
 
     if spd < maxslis[i]:
 
         ans += spd * 0.5 + 0.125
         spd += 0.5
-        # if spd != maxslis[i]:
-        #dtflag = True
 
     elif spd == maxslis[i]:
 
-        # if dtflag and rmaxslis[i] != maxslis[i]:
-        #ans += 0.25
-        #print (i+1)
         ans += spd * 0.5
         dtflag = False
 

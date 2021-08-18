@@ -22,7 +22,7 @@ class Solution:
             dp2 = [[0] * 17 for _ in range(7)]
             for i in range(1, 7):
                 for j in range(1, 7):
-                    for k in range(1, rollMax[j] + 1):  # we could extend j no more
+                    for k in range(1, rollMax[j] + 1):
                         if i == j:
                             if k < rollMax[i]:
                                 dp2[i][k + 1] += dp[i][k] % mod

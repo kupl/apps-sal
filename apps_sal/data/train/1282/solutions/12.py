@@ -1,4 +1,3 @@
-# https://www.codechef.com/problems/RGAND
 
 MVAL = 1000000007
 

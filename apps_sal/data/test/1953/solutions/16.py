@@ -10,12 +10,12 @@ cnt2 = 0
 def counting_sort(array, maxval):
     """in-place counting sort"""
     m = maxval + 1
-    count = [0] * m               # init with zeros
+    count = [0] * m
     for a in array:
-        count[a] += 1             # count occurences
+        count[a] += 1
     i = 0
-    for a in range(m):            # emit
-        for c in range(count[a]):  # - emit 'count[a]' copies of 'a'
+    for a in range(m):
+        for c in range(count[a]):
             array[i] = a
             i += 1
     return (array)
@@ -53,7 +53,6 @@ for i in range(1,n):
                 print(len(x[i-1:]))
                 quit()
 print(cnt2)"""
-# print(max(cnt1,cnt2),cnt1,cnt2)
 c = 0
 for i in range(n):
     if t[i] >= c:

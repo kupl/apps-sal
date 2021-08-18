@@ -1,6 +1,5 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        # nested boxes
         reachable = [False] * len(status)
         visited = [False] * len(status)
         for box in initialBoxes:
@@ -8,7 +7,6 @@ class Solution:
         for i in range(len(containedBoxes)):
             for inside in containedBoxes[i]:
                 reachable[inside] = False
-        # we only start with initial boxes
         queue = initialBoxes
         target = []
         ret = 0

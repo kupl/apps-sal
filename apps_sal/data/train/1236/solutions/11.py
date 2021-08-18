@@ -1,7 +1,7 @@
 t = int(input())
 for i in range(t):
     n = int(input())
-    s = input()  # qwert 01234
+    s = input()
     c = 0
     for j in range(n):
         if(j + 1 < n):

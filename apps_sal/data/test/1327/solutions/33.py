@@ -1,6 +1,5 @@
 N, M = list(map(int, input().split()))
 
-# 全＋、全ー、
 L = []
 for i in range(N):
     x, y, z = list(map(int, input().split()))

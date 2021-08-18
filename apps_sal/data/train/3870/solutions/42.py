@@ -8,7 +8,6 @@ def solve(s):
         if s[x] == ' ':
             print(s[x], 'coo')
             ml.insert(x + y, s[x])
-#             y += 1
 
     print(s)
     print(s[::-1])

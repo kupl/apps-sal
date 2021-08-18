@@ -9,4 +9,4 @@ for i in range(N):
         certi += 1
 
 
-print(certi)  # cook your dish here
+print(certi)

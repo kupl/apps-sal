@@ -9,9 +9,7 @@ while l <= h:
     for i in range(n):
         k[i] = (i + 1) * mid + ll[i]
     k.sort()
-    # print(k)
     sm = sum(k[:mid])
-    # print(mid,sm)
     if sm <= s:
         curr = mid
         l = mid + 1

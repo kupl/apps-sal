@@ -1,4 +1,3 @@
-# for finding lcm we need to know gcd
 def gcd(a, b):
     while b != 0:
         temp = b

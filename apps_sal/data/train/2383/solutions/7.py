@@ -2,10 +2,7 @@ import sys
 import math
 import os
 from io import BytesIO, IOBase
-#from bisect import bisect_left as bl, bisect_right as br, insort
-#from heapq import heapify, heappush, heappop
 from collections import defaultdict as dd, deque, Counter
-#from itertools import permutations,combinations
 def data(): return sys.stdin.readline().strip()
 def mdata(): return list(map(int, data().split()))
 def outl(var): sys.stdout.write(' '.join(map(str, var)) + '\n')

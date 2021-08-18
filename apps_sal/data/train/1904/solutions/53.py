@@ -26,12 +26,10 @@ class Solution:
             self.shift_down(self.dist_heap, i)
 
         while K > 0 and len(self.dist_heap) > 1:
-            # print(self.dist_coord, self.dist_heap)
             for point in self.dist_coord[self.dist_heap[1]]:
                 self.final_result.append(point)
                 K -= 1
             self.del_elem_from_heap(self.dist_heap)
-            # K -= 1
         return self.final_result
 
     def shift_up(self, h_list):

@@ -11,7 +11,6 @@ def solve(s, k):
             z += 1
         if z >= k:
             continue
-        # Gotcha!
         ret = s[:i] + [z]
         while len(ret) < l:
             prev = ret[max(len(ret) - 2, 0):len(ret)]

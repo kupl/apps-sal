@@ -95,10 +95,8 @@ def read_int_list():
 
 def is_chef_wins(game, n, k):
     if is_row_wise(game, n, k):
-        # print "row"
         return True
     elif is_column_wise(game, n, k):
-        # print "col"
         return True
     elif is_diag_wise(game, n, k):
         return True

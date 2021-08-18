@@ -5,7 +5,7 @@ if A == 1:
     flag = 0
     for i in range(0, 100, 2):
         for j in range(0, 100, 2):
-            C[i][j] = "#"
+            C[i][j] = "
             cnt += 1
             if cnt == B:
                 flag = 1
@@ -13,7 +13,7 @@ if A == 1:
         if flag == 1:
             break
 elif B == 1:
-    C = [["#" for _ in range(100)] for _ in range(100)]
+    C = [["
     cnt = 0
     flag = 0
     for i in range(0, 100, 2):
@@ -29,10 +29,10 @@ else:
     C = [["." for _ in range(100)] for _ in range(100)]
     for i in range(50, 100):
         for j in range(100):
-            C[i][j] = "#"
+            C[i][j] = "
     for i in range(1, 49):
         for j in range(1, 99):
-            C[i][j] = "#"
+            C[i][j] = "
     cnt = 0
     flag = 0
     for i in range(2, 47, 2):
@@ -54,7 +54,7 @@ else:
             if cnt == B - 2:
                 flag = 1
                 break
-            C[i][j] = "#"
+            C[i][j] = "
             cnt += 1
         if flag == 1:
             break

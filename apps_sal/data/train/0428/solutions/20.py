@@ -24,8 +24,8 @@ class Solution:
                     x = i + di
                     y = j + dj
 
-                    if x < 0 or x >= m or y < 0 or y >= n or grid[x][y] == '#' or (x, y, state) in visited:
-                        continue
+                    if x < 0 or x >= m or y < 0 or y >= n or grid[x][y] == '
+                    continue
 
                     nstate = state
                     if grid[x][y] >= 'A' and grid[x][y] <= 'F':

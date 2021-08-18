@@ -17,7 +17,6 @@ class Solution:
 
         dp = [[0 for _ in range(target + 1)] for _ in range(d)]
 
-        # initialize the first row with up to f
         for i in range(1, min(f + 1, target + 1)):
             dp[0][i] = 1
 
@@ -28,5 +27,4 @@ class Solution:
                         dp[i][j] += dp[i - 1][j - k]
                         dp[i][j] %= (10**9) + 7
 
-        # print(dp)
         return dp[d - 1][target]

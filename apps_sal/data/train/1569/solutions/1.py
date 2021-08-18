@@ -1,4 +1,3 @@
-# https://www.geeksforgeeks.org/smallest-window-contains-characters-string/
 from collections import defaultdict
 
 MAX_CHARS = 256

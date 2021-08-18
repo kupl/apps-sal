@@ -27,9 +27,7 @@ class DinnerPlates:
                 self.stacks.append([])
 
     def pop(self) -> int:
-        #print('pop: ', self.stacks)
         if not self.stacks:
-            #print('stacks is empty, no more stacks')
             return -1
 
         if self.stacks[self.rightOccupiedIndex]:
@@ -40,9 +38,7 @@ class DinnerPlates:
         return -1
 
     def popAtStack(self, index: int) -> int:
-        #print('popAtStack: ', index, ' with current stacks: ', self.stacks)
         if index > len(self.stacks) - 1:
-            #print('stack at index doesnt exists')
             return -1
 
         if index == self.rightOccupiedIndex and index < self.leftFreeIndex:
@@ -65,8 +61,3 @@ class DinnerPlates:
             return self.stacks[index].pop(-1)
 
         return -1
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

@@ -5,7 +5,6 @@ class Solution:
         def solve(index):
             if stack and int(stack[-1]) > 2**31 - 1:
                 return False
-            #print(stack, S[index:])
             if index == len(S):
                 return len(stack) >= 3
             if len(stack) < 2:

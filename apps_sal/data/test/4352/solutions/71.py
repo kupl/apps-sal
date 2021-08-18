@@ -1,6 +1,3 @@
-# A - One Card Poker
-
-# 一枚ポーカーの勝敗を判定し出力する
 
 
 card_A, card_B = list(map(int, input().split()))

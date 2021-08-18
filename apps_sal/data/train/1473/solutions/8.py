@@ -34,7 +34,6 @@ def test(l, r, c):
             r = r - d
         else:
             return 0
-        # print r,l,c
         if r == 0 or c == 0:
             return 0
     if r * c == l[0]:

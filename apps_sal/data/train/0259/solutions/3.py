@@ -16,13 +16,11 @@ class Solution:
 
         while l <= r:
             mid = (l + r) // 2
-            # print(mid)
             if mid == maxValue:
                 return maxValue
 
             sum1 = self.calculateSum(nums, mid)
             sum2 = self.calculateSum(nums, mid + 1)
-            # print(sum1, sum2)
             if sum2 <= threshold and sum1 > threshold:
                 return mid + 1
 

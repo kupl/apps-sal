@@ -19,7 +19,6 @@ class Solution:
                         maxlen = max(i - start, maxlen)
                         buf.append(i)
                     else:
-                        # K == 0
                         maxlen = max(i - 1 - start, maxlen)
                         start = i
             else:

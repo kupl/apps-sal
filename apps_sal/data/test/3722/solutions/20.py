@@ -28,6 +28,3 @@ else:
         for _ in range(N - 2 - 4):
             R.append(R[-1] * 2 % MOD)
         print((R[-1]))
-#
-# print(ss)
-# print(len(ss))

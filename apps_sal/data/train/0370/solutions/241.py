@@ -28,13 +28,10 @@ class Solution:
                 i += 1
             if k > 1:
                 add_prime(k, j, primes)
-        # print(primes)
         for l in primes.values():
             j, r = l[0], g.find(l[0])
             for i in l[1:]:
                 s = g.find(i)
                 if s != r:
                     g.p[s] = r
-        # print(g.p)
-        # print(g.s)
         return max(Counter([g.find(i) for i in range(n)]).values())

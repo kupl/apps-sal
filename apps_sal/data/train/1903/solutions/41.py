@@ -27,7 +27,6 @@ class UnionFind:
             self.parents[x] = self.find(self.parents[x])
         return self.parents[x]
 
-    # return true if two are newly unioned, false if already unioned.
     def union(self, x, y):
         x0 = self.find(x)
         y0 = self.find(y)

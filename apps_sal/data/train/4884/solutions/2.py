@@ -8,5 +8,3 @@ def connect_the_dots(paper):
 def link(a, b):
     dx, dy = (-1 if a[i] > b[i] else 1 if a[i] < b[i] else 0 for i in (0, 1))
     return [(a[0] + dx * i, a[1] + dy * i) for i in range(1, abs(a[0] - b[0]) or abs(a[1] - b[1]))]
-
-# Not very proud of that, so ugly and antipythonic.

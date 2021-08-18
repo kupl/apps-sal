@@ -1,7 +1,6 @@
 N = int(input())
 nums = list(map(int, input().split()))
 
-# (neg, pos)
 tot = (1, 0) if nums[0] < 0 else (0, 1)
 
 runTot = tot

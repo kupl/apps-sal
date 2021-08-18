@@ -3,9 +3,9 @@ class Solution:
 
         class UnionFind:
             def __init__(self, n):
-                self.count = n  # Number of groups
-                self.root = list(range(n))  # Root node of each element
-                self.leaf = [1] * n  # Number of leaf elements
+                self.count = n
+                self.root = list(range(n))
+                self.leaf = [1] * n
 
             def union(self, e1, e2):
                 x, y = self.find(e1), self.find(e2)

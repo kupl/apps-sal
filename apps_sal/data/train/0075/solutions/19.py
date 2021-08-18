@@ -9,4 +9,3 @@ for _ in range(T):
     th = math.atan((1 - math.sin(th1)) / math.cos(th1))
     res = l * math.cos(th)
     print(res)
-    # print(math.cos(th), math.sin(th+th1), th1, l, math.pi/3)

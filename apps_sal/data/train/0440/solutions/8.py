@@ -7,8 +7,6 @@ class Solution(object):
         targets = [(p, 0), (p, p), (0, p)]
 
         while (x, y) not in targets:
-            # Want smallest t so that some x + rx, y + ry is 0 or p
-            # x + rxt = 0, then t = -x/rx etc.
             t = float('inf')
             for v in [F(-x, rx), F(-y, ry), F(p - x, rx), F(p - y, ry)]:
                 if v > 0:
@@ -17,8 +15,7 @@ class Solution(object):
             x += rx * t
             y += ry * t
 
-            # update rx, ry
-            if x == p or x == 0:  # bounced from east/west wall, so reflect on y axis
+            if x == p or x == 0:
                 rx *= -1
             if y == p or y == 0:
                 ry *= -1

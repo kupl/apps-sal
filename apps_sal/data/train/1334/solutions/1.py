@@ -1,4 +1,3 @@
-# cook your dish here
 INT_MAX = 1000000000000000000
 n = int(input())
 ar = list(map(int, input().split()))

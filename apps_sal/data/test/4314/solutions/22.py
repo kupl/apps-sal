@@ -24,8 +24,8 @@ ans = [[] for i in range(l)]
 for i in range(w):
     f = False
     for j in range(l):
-        if ls[j][i] == "#":
-            f = True
+        if ls[j][i] == "
+        f = True
     if f:
         for j in range(l):
             ans[j].append(ls[j][i])

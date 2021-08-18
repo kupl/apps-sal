@@ -17,6 +17,5 @@ def test():
     print("test passes")
 
 
-# test()
 a, b, c, d = tuple(map(int, input().split()))
 print(solve(a, b, c, d))

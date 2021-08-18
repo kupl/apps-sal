@@ -2,7 +2,6 @@ def prev(x, day, dp):
     ans = 0
     for i in day:
         if i <= x:
-            #    print(dp[i],i,x)
             ans = dp[i]
         else:
             break
@@ -22,7 +21,5 @@ class Solution:
             d = day[i]
             for j in [1, 7, 30]:
                 ab = prev(max(0, d - j), day, dp) + tmp[j]
-                # print(ab)
                 dp[d] = min(dp[d], ab)
-        # print(dp[200:])
         return dp[day[-1]]

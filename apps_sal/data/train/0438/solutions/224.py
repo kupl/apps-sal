@@ -8,7 +8,6 @@ class Solution:
             return m
 
         while arr:
-            #print(step, spans)
             d = arr.pop()
             step -= 1
             for span in spans:

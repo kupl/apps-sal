@@ -1,4 +1,3 @@
-#   TaskB
 
 import sys
 

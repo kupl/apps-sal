@@ -11,7 +11,6 @@ for i in range(t):
             d[j] = d[j] ^ 1
         else:
             d[j] = 1
-    # print(d)
     for j in d.keys():
         if d[j] == 1:
             print("First")

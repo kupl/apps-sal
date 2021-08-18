@@ -20,7 +20,5 @@ for i in list(dic.keys()):
     for j in dic[i]:
         ct += (j // k)
     ans = max(ans, ct)
-    # if min(dic[i]) >= k:
-    #ans = max(ans, min(dic[i]))
 
 print(ans)

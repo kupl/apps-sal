@@ -1,4 +1,3 @@
-# cook your dish here
 try:
 
     l = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']

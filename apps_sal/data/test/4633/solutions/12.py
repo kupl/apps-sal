@@ -21,7 +21,6 @@ for tc in range(t):
     ans = int(1e20)
     while b <= n * 10:
         rn = n // b * b + b
-        # print(rn, f(rn))
         if f(rn) <= s:
             ans = min(ans, rn - n)
         b *= 10

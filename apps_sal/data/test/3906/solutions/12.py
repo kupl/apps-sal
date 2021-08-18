@@ -1,7 +1,4 @@
 
-# coding: utf-8
-
-# In[7]:
 
 n, m = list(map(int, input().split()))
 

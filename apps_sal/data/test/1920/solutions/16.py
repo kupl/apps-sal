@@ -11,8 +11,6 @@ for i in range(n):
     else:
         for j in range(b, c + 1):
             F[j] += 1
-# print(F)
-# print(M)
 
 m = 0
 for i in range(1, 367):

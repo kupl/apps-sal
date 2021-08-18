@@ -19,7 +19,6 @@ class Solution:
             cost += boardingCost * board
             cost -= runningCost
             profits.append((rotations, cost))
-        # print(profits)
         r = None
         ans = 0
         for p in profits:

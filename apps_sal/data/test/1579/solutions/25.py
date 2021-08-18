@@ -1,6 +1,3 @@
-# https://drken1215.hatenablog.com/entry/2019/06/23/004700
-# https://atcoder.jp/contests/abc131/submissions/7975278
-# https://tjkendev.github.io/procon-library/python/union_find/union_find.html
 
 def main():
     from collections import Counter
@@ -30,7 +27,7 @@ def main():
 
     n = int(input())
     for _ in range(n):
-        x, y = (int(x) - 1 for x in input().split())  # [1,)->[0,)
+        x, y = (int(x) - 1 for x in input().split())
         unite(x, y + MX)
 
     ctr_x = Counter(root(r) for r in range(MX))

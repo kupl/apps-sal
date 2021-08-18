@@ -22,13 +22,11 @@ def main():
     dp = [[[[0] * 3 for _ in range(2)] for _ in range(3)] for _ in range(n)]
     for m in range(3):
         dp[0][m][0][m] = 1
-    # print(a)
-    # print(dp)
     for i in range(n - 1):
         for j in range(3):
             for k in range(2):
                 for m in range(3):
-                    pre = dp[i][j][k][m]  # iけた j余り k連続有無 m前の位
+                    pre = dp[i][j][k][m]
                     for nm in range(3):
                         nj = (j + nm) % 3
                         if nm == m:

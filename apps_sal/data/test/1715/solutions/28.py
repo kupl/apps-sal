@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import bisect
 
 INF = 10 ** 18

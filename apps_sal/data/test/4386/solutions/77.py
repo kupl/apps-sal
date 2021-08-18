@@ -1,4 +1,3 @@
-# Red or Not
 
 a = int(input())
 s = input()

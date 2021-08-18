@@ -7,7 +7,6 @@ for i in range(n):
         a[i] = t - p[i] + 1
     t = max(p[i], t + 1)
 t = 0
-# print(a)
 for i in range(n - 1, 0, -1):
     if p[i] <= t:
         a[i] = min(t - p[i] + 1, a[i])

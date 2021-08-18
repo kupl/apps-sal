@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 
 def warshall_floyd(dist):

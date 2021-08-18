@@ -1,6 +1,4 @@
 class Solution:
-    # Brute force: check all permutations
-    # O(n! / (ball_count! ^ k)) time, O(n) space
     def getProbability(self, balls: List[int]) -> float:
         balls_flattened = []
         for i, count in enumerate(balls):
@@ -26,9 +24,6 @@ class Solution:
         get_perm([], balls_flattened)
         return same_distinct_color[0] / total[0]
 
-    # Permutations of combinations
-    # O(ball_count ^ k) time (put 0, 1, 2, ..., ball_count balls into box 1, and do it for k colors)
-    # O(k) space for recursion and O(n) space for factorials
     def getProbability(self, balls: List[int]) -> float:
 
         factorial_cache = [1]

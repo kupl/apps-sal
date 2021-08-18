@@ -41,7 +41,6 @@ prev = 0
 for i in range(1, 11):
     curlen = len(d[i])
 
-    # less
     for lessnum in d[i - 1]:
         prev = (prev + le2(lessnum)) % mod
     ans = (ans + prev * curlen) % mod
@@ -52,7 +51,6 @@ for i in range(1, 11):
             downsum = (downsum + m1(curnum, lessdigits)) % mod
         ans = (ans + downsum * len(d[lessdigits]))
 
-    # equal
     cursuml1 = 0
 
     for enum in d[i]:
@@ -60,7 +58,6 @@ for i in range(1, 11):
         ans = (ans + curlen * 11 * res) % mod
         cursuml1 = (cursuml1 + 10 * res) % mod
 
-    # more
     for moredigits in range(i + 1, 11):
         ans = (ans + cursuml1 * len(d[moredigits])) % mod
         moresum = 0

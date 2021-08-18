@@ -1,5 +1,4 @@
 def how_much_water(water, load, clothes):
-    # Good luck!
     if clothes < load:
         return 'Not enough clothes'
     elif 2 * load < clothes:

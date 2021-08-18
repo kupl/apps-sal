@@ -10,4 +10,3 @@ class Solution:
                     covered += 1
                     break
         return len(intervals) - covered
-        # return len(intervals)-covered+same

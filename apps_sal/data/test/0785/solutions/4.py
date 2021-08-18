@@ -1,12 +1,9 @@
 import math
 
-# input
 n, a, b = map(int, input().split())
 
-# variables
 x = 6 * n - 1
 
-# main
 if a * b > 6 * n:
     print(a * b)
     print(str(a) + ' ' + str(b))

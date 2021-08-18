@@ -3,7 +3,6 @@ __author__ = 'sonerik'
 import sys
 
 inp = sys.stdin
-# inp = open("a.txt")
 
 n = int(inp.readline().strip())
 

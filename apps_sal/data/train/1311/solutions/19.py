@@ -1,4 +1,3 @@
-# cook your dish her
 import math
 t = int(input())
 while(t):

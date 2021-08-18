@@ -31,7 +31,6 @@ while True:
         if (x - y) in dm:
             for sensor in dm[x - y]:
                 if vis[sensor] == -1:
-                    #print('doing', sensor)
                     vis[sensor] = time + sensor[0] - x
         time += v
 
@@ -45,7 +44,6 @@ while True:
         if (x - y) in dm:
             for sensor in dm[x - y]:
                 if vis[sensor] == -1:
-                    #print('doing', sensor)
                     vis[sensor] = time + x - sensor[0]
         time += v
 
@@ -59,7 +57,6 @@ while True:
         if (x + y) in dp:
             for sensor in dp[x + y]:
                 if vis[sensor] == -1:
-                    #print('doing', sensor)
                     vis[sensor] = time + x - sensor[0]
         time += v
 
@@ -73,7 +70,6 @@ while True:
         if (x + y) in dp:
             for sensor in dp[x + y]:
                 if vis[sensor] == -1:
-                    #print('doing', sensor)
                     vis[sensor] = time + sensor[0] - x
         time += v
 
@@ -83,11 +79,6 @@ while True:
         border.add(nxt)
 
     x, y = nxt
-    #print('bum', x, y)
 
 for i in range(k):
-    # print(sensors[i])
     print(vis[sensors[i]])
-
-
-# Made By Mostafa_Khaled

@@ -16,8 +16,6 @@ class Solution:
         eind = len(nums) - 1
         ans = 0
 
-        # print(self.two_power[:20])
-
         while sind <= eind:
             if nums[sind] + nums[eind] > target:
                 eind -= 1

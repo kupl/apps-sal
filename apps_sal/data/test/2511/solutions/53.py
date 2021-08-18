@@ -35,7 +35,6 @@ def main():
         p %= MOD
 
     def dfs(n=0, p=-1):
-        # node, parentの色を固定した時の色の塗り方
         children = [c for c in adj[n] if c != p]
         if len(children) == 0:
             return 1

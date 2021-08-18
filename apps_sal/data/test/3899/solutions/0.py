@@ -1,8 +1,6 @@
-#     Codeforces Round #488 by NEAR (Div. 2)
 import bisect
 import collections
 from functools import cmp_to_key
-#key=cmp_to_key(lambda x,y: 1 if x not in y else -1 )
 import math
 import sys
 
@@ -25,7 +23,6 @@ xa = list(sa)
 xa.sort(reverse=True)
 
 zz = [(t, sorted([zb[i] for i in range(N) if za[i] == t])) for t in xa]
-# print(zz)
 
 
 lastdp = [[] for i in range(52)]
@@ -63,11 +60,9 @@ for x in zz:
             if j < num:
                 acc += x[1][j]
             for t in tz:
-                # t = (0,0)
                 tr = (t[0] + la, t[1] + lb)
                 addres(nowdp[i - j + num - j], tr)
     lastdp = nowdp
-    # print(lastdp)
 
 res = 10 ** 20
 for x in lastdp:

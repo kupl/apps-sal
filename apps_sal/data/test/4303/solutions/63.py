@@ -20,12 +20,10 @@ if k <= R:
 if k <= L:
     ans = min(ans, abs(l[k - 1]))
 
-# 右折り返し
 for i in range(R):
     if i < k and k - i - 2 <= L - 1 and k - i - 2 >= 0:
         tmp = 2 * r[i] + abs(l[k - i - 2])
         ans = min(ans, tmp)
-# 左折り返し
 for j in range(L):
     if j < k and k - j - 2 <= R - 1 and k - j - 2 >= 0:
         tmp = 2 * abs(l[j]) + r[k - j - 2]

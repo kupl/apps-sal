@@ -12,7 +12,6 @@ RI = lambda x=' ': list(map(int, input().split(x)))
 RS = lambda x=' ': input().rstrip().split(x)
 mod = int(1e9 + 7)
 eps = 1e-6
-#################################################
 a, b, c = RI()
 d = pow(b * b - 4 * a * c, 0.5)
 r1 = (-b + d) / (2 * a)

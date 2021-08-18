@@ -11,7 +11,6 @@ def mr(k, n):
 
 
 rounds = {r: mr(2**r, 258) for r in range(1, 10)}
-# print(len(rounds[1]))
 
 
 def sol(a, b):

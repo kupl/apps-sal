@@ -9,7 +9,7 @@ for _ in range(int(input())):
             if head_count % 2 == 0:
                 head_count += 1
         else:
-            if head_count % 2 != 0:  # odd
+            if head_count % 2 != 0:
                 head_count += 1
 
     if head_count % 2 == 0:

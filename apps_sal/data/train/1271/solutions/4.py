@@ -7,7 +7,6 @@ for _ in range(t):
     for __ in range(q):
         x = int(input())
         d = []
-        # print(s)
         dd = list(s)
         if s[x] == -1:
             for i in dd:

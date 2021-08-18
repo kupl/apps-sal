@@ -17,7 +17,6 @@ class Solution:
         '''
         if len(x)==1:
             return s[x[0]:]
-        #print(x)
         
         
         
@@ -26,7 +25,6 @@ class Solution:
             m=s[x[0]+c]
             i=0
             while i<len(x):
-                #print(x,m)
                 if x[i]+c>=len(s):
                     if len(x)>1:
                         x.pop()

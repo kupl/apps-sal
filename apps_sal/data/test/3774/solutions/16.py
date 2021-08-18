@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/1034/B
 n, m = map(int, input().split())
 
 min_, max_ = min(n, m), max(n, m)

@@ -1,6 +1,3 @@
-# https://atcoder.jp/contests/abc157/tasks/abc157_e
-# セグメント木
-# 各文字をビットに対応させる(セグ木を26本持っても良い)
 import sys
 read = sys.stdin.readline
 
@@ -21,11 +18,11 @@ class SegmentTree:
         self.ide = identity_element
         self.func = segfunc
         n = len(ls)
-        self.num = 2 ** (n - 1).bit_length()  # n以上の最小の2のべき乗
-        self.tree = [self.ide] * (2 * self.num - 1)  # −1はぴったりに作るためだけど気にしないでいい
-        for i, l in enumerate(ls):  # 木の葉に代入
+        self.num = 2 ** (n - 1).bit_length()
+        self.tree = [self.ide] * (2 * self.num - 1)
+        for i, l in enumerate(ls):
             self.tree[i + self.num - 1] = l
-        for i in range(self.num - 2, -1, -1):  # 子を束ねて親を更新
+        for i in range(self.num - 2, -1, -1):
             self.tree[i] = segfunc(self.tree[2 * i + 1], self.tree[2 * i + 2])
 
     def update(self, i, x):
@@ -34,7 +31,7 @@ class SegmentTree:
         '''
         i += self.num - 1
         self.tree[i] = x
-        while i:  # 木を更新
+        while i:
             i = (i - 1) // 2
             self.tree[i] = self.func(self.tree[i * 2 + 1],
                                      self.tree[i * 2 + 2])
@@ -48,7 +45,7 @@ class SegmentTree:
         l += self.num
         r += self.num
         res = self.ide
-        while l < r:  # 右から寄りながら結果を結合していくイメージ
+        while l < r:
             if l & 1:
                 res = self.func(res, self.tree[l - 1])
                 l += 1
@@ -61,7 +58,6 @@ class SegmentTree:
 
 
 def segfunc(x, y):
-    # 処理したい内容
     return x | y
 
 
@@ -77,7 +73,6 @@ N = read_a_int()
 S = read()[:-1]
 S_bit = [moji_to_bit(s) for s in S]
 
-# build segment tree
 st = SegmentTree(S_bit, segfunc, 0)
 
 Q = read_a_int()

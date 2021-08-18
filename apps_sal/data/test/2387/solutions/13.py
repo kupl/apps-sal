@@ -15,12 +15,12 @@ for i in range(n):
             h -= 1
         b = min(b, h)
     if h > 0:
-        ls.append((b, h))       # 増減+ はb:最下点, h:増減を取る
+        ls.append((b, h))
     else:
-        rs.append((b - h, -h))    # 増減- は、上下左右逆さに考え、b:右から見た最下点、h:増減のマイナスを取る
+        rs.append((b - h, -h))
     total += h
 ls.sort(reverse=True)
-rs.sort(reverse=True)   # 増減-は右から見るので、大きい順にsort
+rs.sort(reverse=True)
 
 
 def chk(s):

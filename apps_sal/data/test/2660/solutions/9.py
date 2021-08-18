@@ -11,7 +11,7 @@ sumL = sumR = 0
 numL = numR = 0
 sumB = 0
 for query in querys:
-    if query[0] == 1:  # 更新
+    if query[0] == 1:
         a, b = query[1:]
         sumB += b
         if numL == 0:
@@ -43,7 +43,7 @@ for query in querys:
                 sumR += a
                 numR += 1
 
-    else:  # 求値
+    else:
         x = -PQL[0]
         fx = numL * x - sumL + sumR - numR * x + sumB
         anss.append((x, fx))

@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 S = int(input())
 
 dp = [0 if i < 3 else 1 for i in range(S + 1)]

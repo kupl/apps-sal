@@ -1,5 +1,3 @@
-# import sys; input = sys.stdin.buffer.readline
-# sys.setrecursionlimit(10**7)
 from collections import defaultdict
 mod = 10 ** 9 + 7
 INF = float("inf")
@@ -20,13 +18,6 @@ def main():
     print("L", N - 1)
     print("R", N - 1)
     print("R", 2 * N - 1)
-    # s = S
-    # s = s[1:N - 1][::-1] + s
-    # print("".join(s))
-    # s = s + s[N - 1:2* N - 3][::-1]
-    # print("".join(s))
-    # s = s + s[2 * N - 1:3 * N - 4][::-1]
-    # print("".join(s))
 
 
 def __starting_point():

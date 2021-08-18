@@ -1,7 +1,6 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         md = 10**9 + 7
-        # dp[i][j]...vertex i,fuel j
         n = len(locations)
         dp = [[0] * (fuel + 1) for _ in range(n)]
         dp[start][0] = 1

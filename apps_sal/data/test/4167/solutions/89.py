@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 n, k = list(map(int, input().split()))
 

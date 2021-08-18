@@ -5,7 +5,6 @@ class Solution:
         :rtype: str
         """
 
-        # pq = [(-S.count(x), x) for x in set(S)]
         count = {}
         limit = (len(S) + 1) / 2
         for c in S:
@@ -21,14 +20,6 @@ class Solution:
         for x in count.keys():
             c = count[x]
             pq.append((-c, x))
-
-        # pq = []
-        # limit = (len(S) + 1) / 2
-        # for x in set(S):
-        #     count = S.count(x)
-        #     if (count > limit):
-        #         return("")
-        #     pq.append((-count, x))
 
         heapq.heapify(pq)
 

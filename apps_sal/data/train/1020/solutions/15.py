@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
     n, k = [int(j) for j in input().split()]

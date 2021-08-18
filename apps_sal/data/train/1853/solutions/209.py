@@ -8,13 +8,11 @@ class Solution:
         print(graph)
         dic = {}
         for num in range(n):
-            #print('num', num)
             queue = [(num, 0)]
             visited = {num: -1}
             count = 0
             while queue:
                 node, total_weight = queue.pop(0)
-                #print(node, total_weight)
                 for nei, weight in graph[node]:
                     if total_weight + weight <= distanceThreshold and (nei not in visited or total_weight + weight < visited[nei]):
                         count += 1

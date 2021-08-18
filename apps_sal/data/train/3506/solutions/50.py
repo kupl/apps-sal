@@ -1,5 +1,4 @@
 def vowel_indices(word):
-    # your code here
     count = []
     words = word.lower()
 

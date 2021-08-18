@@ -13,13 +13,3 @@ if min_b == INF:
 else:
     ans = csum - min_b
     print(ans)
-
-
-# a_down_sum = 0
-# top_diff = 0
-# for _ in range(n):
-#     a,b = map(int, input().split())
-#     if a < b:
-#         a_down_sum += a
-#     else:
-#         top_diff = max(top_diff,a-b)

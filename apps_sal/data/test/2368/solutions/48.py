@@ -26,7 +26,6 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-        # TODO 根を返す
         return x
 
     def size(self, x):

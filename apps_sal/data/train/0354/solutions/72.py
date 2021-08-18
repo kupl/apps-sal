@@ -22,7 +22,7 @@ class Solution:
         for m in range(1, n):
             for i in range(1, 7):
                 for j in range(1, 7):
-                    for k in range(1, rollMax[j] + 1):  # we could extend j no more
+                    for k in range(1, rollMax[j] + 1):
                         if i == j:
                             if k < rollMax[i]:
                                 dp[m][i][k + 1] += dp[m - 1][i][k] % mod

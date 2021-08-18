@@ -1,4 +1,3 @@
-#
 c = 10**9 + 7
 for i in range(int(input())):
     arr = list(map(int, input().split()))

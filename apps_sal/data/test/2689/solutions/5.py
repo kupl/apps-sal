@@ -1,4 +1,3 @@
-# cook your dish here
 s = input().strip()
 s = s.replace('-', '+')
 s = list(s.split('+'))
@@ -13,7 +12,6 @@ for i in range(len(s)):
             break
     if not f:
         w.append(s[i])
-#print(s, w)
 res = ''
 m = 1
 for i in range(len(w)):

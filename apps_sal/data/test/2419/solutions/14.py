@@ -13,8 +13,6 @@ for test in range(t):
 
     N = bisect.bisect_left(NLIST, x)
 
-    # print(x,N)
-
     while x % 2 != ((N + 1) // 2) % 2:
         N += 1
 

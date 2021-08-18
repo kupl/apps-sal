@@ -4,7 +4,6 @@ from functools import lru_cache
 
 class Solution:
     def maxSumTwoNoOverlap(self, A: List[int], L0: int, M0: int) -> int:
-        # lru_cache(None)
         def range_sum(i, j):
             return accum[j - 1] - (accum[i - 1] if i > 0 else 0)
         if not A:

@@ -12,5 +12,4 @@ class Solution:
                 if len(set(substring)) <= maxLetters:
 
                     cache[substring] += 1
-        # print(cache.values())
         return max(cache.values()) if cache else 0

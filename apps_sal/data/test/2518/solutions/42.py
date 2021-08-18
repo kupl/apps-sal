@@ -9,7 +9,7 @@ NG = 0
 
 ans = OK
 while OK - NG > 1:
-    mid = (OK + NG) // 2  # 試行する値
+    mid = (OK + NG) // 2
     cnt = 0
 
     for h in H:

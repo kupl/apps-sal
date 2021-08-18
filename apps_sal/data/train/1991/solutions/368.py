@@ -1,7 +1,7 @@
 class Solution:
 
     def __init__(self, *args, **kwargs):
-        self.mp = {}  # key: start-fuel; val: numWays
+        self.mp = {}
 
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         if fuel < 0:

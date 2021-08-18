@@ -3,7 +3,6 @@ from fractions import gcd
 a, b = list(map(int, input().split()))
 c, d = list(map(int, input().split()))
 
-# ax+b=cy+d
 
 val = gcd(a, c)
 

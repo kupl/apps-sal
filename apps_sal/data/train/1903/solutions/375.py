@@ -16,9 +16,7 @@ class Solution:
         pull = dis[0]
         heapq.heapify(pull)
         cost = 0
-        # print(dis[0])
         while queue and len(visit) != n:
-            # print(pull)
             node = queue.popleft()
             can = heapq.heappop(pull)
             while can[1] in visit:

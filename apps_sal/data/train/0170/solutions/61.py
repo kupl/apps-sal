@@ -7,7 +7,6 @@ class Solution:
                 j = k + 1
                 if i == -1:
                     i = k
-        # print(i,j)
         if i == -1:
             return 0
         res = j
@@ -20,5 +19,4 @@ class Solution:
                 return min(res, L - i - 1)
             else:
                 res = min(res, j - m - 1)
-            # print(m,j,res)
         return res

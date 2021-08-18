@@ -8,7 +8,7 @@ class Solution:
         rs = 0
 
         for i, num in enumerate(nums):
-            if num % 2 == 1:  # odd
+            if num % 2 == 1:
                 prefix_sum += 1
 
             if prefix_sum not in dict_odds:

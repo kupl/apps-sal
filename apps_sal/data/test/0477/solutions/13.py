@@ -1,4 +1,3 @@
-# Made By Mostafa_Khaled
 bot = True
 n, m, i, j, a, b = list(map(int, input().split()))
 
@@ -18,5 +17,3 @@ else:
     t = [max(i, j) for i in u for j in v if (i + j) % 2 == 0]
 
 print(min(t) if t else 'Poor Inna and pony!')
-
-# Made By Mostafa_Khaled

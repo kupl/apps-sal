@@ -16,7 +16,6 @@ class Solution:
 
         heapq.heapify(hp)
 
-        # count represents the number of elements popped
         while(k > 0 and len(hp)):
             curr = heapq.heappop(hp)
             if curr <= k:

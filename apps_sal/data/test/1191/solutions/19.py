@@ -7,8 +7,6 @@ pre = []
 c = 1
 f = [0] * n
 vv = 0
-# print(zz)
-# print(pre)
 ss = 0
 for i in range(n):
     if(i < k):

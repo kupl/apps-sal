@@ -15,13 +15,11 @@ for _ in range(t):
 
     res = mod_0
 
-    # add mod 1 and mod 2
     min_1_2 = min(mod_1, mod_2)
     res += min_1_2
     mod_1 -= min_1_2
     mod_2 -= min_1_2
 
-    # add mod 1, 2
     res += mod_1 // 3
     res += mod_2 // 3
     print(res)

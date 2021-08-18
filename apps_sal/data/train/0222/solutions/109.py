@@ -1,7 +1,6 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         setA = set(A)
-        # overlapping=set()
         r = 0
         for i in range(len(A)):
             start = A[i]
@@ -10,8 +9,6 @@ class Solution:
                 prev = A[j]
                 count = 0
                 while prev + prev_prev in setA:
-                    # overlapping.add(prev)
-                    # overlapping.add(prev_prev)
                     prev_prev, prev = prev, prev + prev_prev
                     count += 1
                 r = max(r, count)

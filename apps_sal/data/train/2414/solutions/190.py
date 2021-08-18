@@ -11,7 +11,6 @@ class Solution:
                     x = arr[i]
                     y = arr[j]
                     z = arr[k]
-                    # print(x,y,z)
                     if (self.getdiff(x, y, a) and self.getdiff(y, z, b) and self.getdiff(x, z, c)):
                         count += 1
         return(count)

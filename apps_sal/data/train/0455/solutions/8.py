@@ -14,19 +14,14 @@ class Solution:
                 dic[x][3] = max(dic[x][3], j)
                 dic[x][4] += 1
                 seen.add(x)
-        # print(dic)
 
         def helper(x):
             return abs((dic[x][1] - dic[x][0] + 1) * (dic[x][3] - dic[x][2] + 1) - dic[x][4])
 
         temp = sorted(seen, key=helper)
 
-        # print(temp)
-
         k = 0
-        #flag = True
         while len(temp) != len(removed):
-            #flag= False
             for t in temp:
                 if t in removed:
                     continue
@@ -43,7 +38,6 @@ class Solution:
                                 break
                         if not flag:
                             break
-                    #print(t, flag)
                     if flag:
                         removed.add(t)
                         break

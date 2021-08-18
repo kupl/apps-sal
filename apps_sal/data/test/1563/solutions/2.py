@@ -26,4 +26,3 @@ for key in list(adj.keys()):
         if key < min_color:
             min_color = key
 print(min_color)
-# print(adj)

@@ -3,7 +3,6 @@ import itertools
 n, m = map(int, input().split())
 ab = [list(map(int, input().split())) for _ in range(m)]
 
-# generate permunations from Node 2 to Node n
 p = itertools.permutations(range(2, n + 1), n - 1)
 
 cnt = 0

@@ -21,7 +21,5 @@ class Solution:
             else:
                 return 0
 
-        # print (check(21))
-        # return 1
         res = sum(check(n) for n in nums)
         return res

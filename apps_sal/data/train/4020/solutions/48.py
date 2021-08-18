@@ -1,5 +1,4 @@
 def validate_hello(greetings):
-    # your code here
     hello_strings = ['hello',
                      'ciao',
                      'salut',

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 f = sys.stdin
 
@@ -21,6 +20,5 @@ for i in range(1, n):
             mi = l - i
             if mi >= 0:
                 sp[mi] += 1
-    #print(i, s, sp)
 
 print(' '.join([str(it) for it in sp]))

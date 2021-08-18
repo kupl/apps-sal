@@ -9,8 +9,6 @@ for i in range(n):
     elif a[i] % 2 == 0:
         num2 += 1
 
-#print(num4, num2)
-
 
 if n - num4 * 2 <= 1:
     print("Yes")

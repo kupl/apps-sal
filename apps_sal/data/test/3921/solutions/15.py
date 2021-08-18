@@ -14,7 +14,6 @@ from math import floor, sqrt
 
 
 def div(x):
-    # Crivo de Erastótenes
     primos = [1 for i in range(x + 1)]
     p = 2
     while p < x + 1:

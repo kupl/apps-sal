@@ -1,4 +1,3 @@
-#! /usr/bin/python3
 
 
 def solve():
@@ -12,7 +11,6 @@ def solve():
     if t[lt - 1] == '\n':
         lt = lt - 1
 
-    #print("ls = ",ls," lt = ", lt)
     i = 0
     j = 0
     pos = -1
@@ -48,7 +46,6 @@ def solve():
 
         if i == -1 or j == -1:
             break
-    # print("pos = ",pos,"  reverse = ", reverse)
     reverse = reverse + 1
     pos = pos - 1
     if reverse == -1 or reverse < pos:

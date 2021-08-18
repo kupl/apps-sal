@@ -17,7 +17,6 @@ def main():
     for i in range(W + 1):
         if w_count[i] == w_m:
             w_list.append(i)
-    #print(h_list, w_list)
     for i in h_list:
         for j in w_list:
             if (i, j) not in hw_set:

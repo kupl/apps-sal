@@ -17,16 +17,13 @@ def main0(n, ab, k, vp):
     def func(p, v):
         if lrf[v][2] != -1:
             l, r, f = lrf[v]
-            # 親頂点との整合性
             if p >= 0:
                 pl, pr, pf = lrf[p]
                 if pl - 1 <= l <= pr + 1 and pf ^ f == 1:
-                    # ok
                     pass
                 else:
                     flg[0] = False
         else:
-            # 親頂点から条件を計算
             pl, pr, pf = lrf[p]
             l, r, f = pl - 1, pr + 1, pf ^ 1
             lrf[v] = [l, r, f]
@@ -34,7 +31,6 @@ def main0(n, ab, k, vp):
         for nv in ki[v]:
             if nv == p:
                 continue
-            # 子頂点たちの条件から、自分の条件を更新
             nl, nr, nf = func(v, nv)
             if f ^ nf == 0:
                 flg[0] = False
@@ -43,7 +39,6 @@ def main0(n, ab, k, vp):
             if l > r:
                 flg[0] = False
         lrf[v] = [l, r, f]
-        # 最終的な自分の条件を返す
         return (l, r, f)
     func(-1, vp[0][0] - 1)
     if not flg[0]:

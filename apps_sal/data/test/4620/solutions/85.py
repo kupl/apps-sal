@@ -20,6 +20,6 @@ for i in range(n):
             time += cl[i]
         elif sl[i] > time:
             time = sl[i] + cl[i]
-        else:  # sl[i]<=time and time%fl[i]!=0
+        else:
             time += fl[i] - time % fl[i] + cl[i]
         i += 1

@@ -7,13 +7,10 @@ class SparseTable():
         n = len(array)
         self.row_size = n.bit_length()
 
-        # log_tableを構築する
-        # log_table = [0, 0, 1, 1, 2, 2, 2, 2, ...]
         self.log_table = [0] * (n + 1)
         for i in range(2, n + 1):
             self.log_table[i] = self.log_table[i // 2] + 1
 
-        # sparse_tableを構築する
         self.sparse_table = [[0] * n for _ in range(self.row_size)]
         for i in range(n):
             self.sparse_table[0][i] = array[i]

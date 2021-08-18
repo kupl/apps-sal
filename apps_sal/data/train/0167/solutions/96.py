@@ -14,9 +14,8 @@ class Solution:
             lo, hi = 1, n
             while lo <= hi:
                 mid = (lo + hi) // 2
-                broken = dp(k - 1, mid - 1)  # 碎
-                not_broken = dp(k, n - mid)  # 没碎
-                # res = min(max(碎， 没碎) + 1)
+                broken = dp(k - 1, mid - 1)
+                not_broken = dp(k, n - mid)
                 if broken > not_broken:
                     hi = mid - 1
                     res = min(res, broken + 1)

@@ -1,4 +1,3 @@
-# cook your dish here
 n, k, p = list(map(int, input().split()))
 coor = list(map(int, input().split()))
 forw = []

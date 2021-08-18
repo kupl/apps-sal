@@ -1,7 +1,6 @@
 class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
         def encode(p, c, m): return (c << 7) | (m << 1) | p
-        # encode = lambda p, c, m: (p, c, m)
         def decode(c): return (c & 0x1, c >> 7, (c >> 1) & 0x3f)
         n = len(graph)
         g = collections.defaultdict(list)
@@ -35,9 +34,6 @@ class Solution:
                             st = encode((p + 1) % 2, c, i)
                             g[st].append(status)
                             degrees[status] += 1
-        # for st, nei in g.items():
-        #     print(st, nei)
-        # print(outcomes)
 
         def dfs(status):
             visited.add(status)

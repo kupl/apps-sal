@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 def main():
@@ -16,8 +15,8 @@ def main():
         prime_factorization_lst : lst
             [素因数]の形で素因数が列挙された素因数分解結果
         """
-        fct = []  # prime factor
-        b = 2     # base factor
+        fct = []
+        b = 2
         while b * b <= n:
             while n % b == 0:
                 n //= b

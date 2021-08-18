@@ -1,6 +1,5 @@
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
-        # union find
         W, H = len(grid[0]), len(grid)
 
         parent = list(range(W * H))

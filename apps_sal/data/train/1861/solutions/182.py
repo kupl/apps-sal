@@ -9,13 +9,12 @@ class Solution:
             dy[y].append(x)
 
         res = float('inf')
-        for x in sorted(dx.keys()):  # 1. find x in dx
-            for i in range(len(dx[x])):  # 2. find y1, y2 in dx[x]
+        for x in sorted(dx.keys()):
+            for i in range(len(dx[x])):
                 y1 = dx[x][i]
                 for j in range(i + 1, len(dx[x])):
                     y2 = dx[x][j]
-                    for x1 in set(dy[y2]) & set(dy[y1]):  # 3. find x1 in dy[y2]
-                        # always make x in the left side
+                    for x1 in set(dy[y2]) & set(dy[y1]):
                         if x1 <= x:
                             continue
 

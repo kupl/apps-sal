@@ -1,4 +1,3 @@
-# cook your dish here
 def __starting_point():
     for _ in range(int(input())):
         binstr = input()

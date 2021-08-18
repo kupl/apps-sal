@@ -1,7 +1,5 @@
 import sys
 
-# sys.stind.readline lee datos el doble de
-# rápido que la funcion por defecto input
 input = sys.stdin.readline
 
 
@@ -90,7 +88,6 @@ def strongly_connected_components(digraph, transpose):
     stack_time = dfs_cc_1(digraph)
     scc, max_component = dfs_cc_2(transpose, stack_time)
 
-    # create the components
     out_deg = [0] * max_component
     scc_nodes = [[] for _ in range(max_component)]
     for node in range(1, len(digraph)):
@@ -99,13 +96,11 @@ def strongly_connected_components(digraph, transpose):
             if scc[node] != scc[adj]:
                 out_deg[scc[node]] += 1
 
-    # searching minimum strongly connectected component with out degree 0
     minimum_component = None
     for i, value in enumerate(out_deg):
         if value == 0 and (minimum_component is None or len(scc_nodes[i]) < len(scc_nodes[minimum_component])):
             minimum_component = i
 
-    # return the size of the component and the nodes
     return len(scc_nodes[minimum_component]), scc_nodes[minimum_component]
 
 

@@ -5,7 +5,7 @@ class Solution:
             nei[i].add(j)
             nei[j].add(i)
 
-        dp = collections.deque([(1, 1, 0)])  # state: leaf_id, possibility, timestamp
+        dp = collections.deque([(1, 1, 0)])
         visited = set()
 
         while dp:

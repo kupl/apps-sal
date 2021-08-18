@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Fri Apr  5 21:33:01 2019
 
@@ -21,7 +20,6 @@ from collections import Counter
 
 def main():
     n, z = [int(a) for a in input().split()]
-    #z = int(input())
     nums = [int(a) for a in input().split()]
     nums.sort()
     if n % 2 == 0:

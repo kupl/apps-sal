@@ -15,7 +15,6 @@ ans = 0
 for x, i in b[-k * m:]:
     ok[i] = 1
     ans += x
-# print(ok)
 t = 0
 li = []
 for i in range(n):

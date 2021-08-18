@@ -19,5 +19,4 @@ class Solution:
                     )
 
             dp[index] = max(possible)
-            # print(f\"{index=} {dp[index]=}\")
         return dp[-1]

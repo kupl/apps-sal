@@ -7,7 +7,6 @@ for i in range(N):
         x, y = map(int, input().split())
         syougen[i].append([x, y])
 
-# print(syougen)
 ans = 0
 for bit in range(1 << N):
     break_flag = 0

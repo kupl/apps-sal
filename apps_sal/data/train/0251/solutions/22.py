@@ -54,7 +54,6 @@ class SolutionWhile:
         1006. Clumsy Factorial
         '''
         R = N
-        # set_trace()
         N -= 1
         if N:
             R *= N
@@ -82,12 +81,9 @@ class SolutionWhile:
 
         return R
 
-###############################################################################
-
 
 class Solution:
     pass
 
 
 Solution = SolutionWhile
-# Solution = SolutionMathTricks

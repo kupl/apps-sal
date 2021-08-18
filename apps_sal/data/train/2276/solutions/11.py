@@ -17,8 +17,6 @@ def solve(matrix, col, N, M):
 
         return ans
 
-    # girar la columna `col` N - 1 veces
-
     if N == 1:
         return solve(matrix, col + 1, N, M)
 

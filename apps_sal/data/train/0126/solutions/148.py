@@ -18,10 +18,8 @@ class Solution:
             mapping[s[i + minSize - 1]] += 1
             if mapping[s[i + minSize - 1]] == 1:
                 count += 1
-            # print(s[i:i+minSize])
             if count <= maxLetters:
                 counter[s[i:i + minSize]] += 1
-        # print(counter)
         if not counter:
             return 0
         return max(counter.values())

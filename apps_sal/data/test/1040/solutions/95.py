@@ -5,7 +5,6 @@ l_s = len(s)
 cnt = 0
 d = deque()
 for i in s:
-    # print(i,d,cnt)
     if i == "x":
         if len(d) > 1:
             o = d.pop()

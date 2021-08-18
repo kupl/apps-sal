@@ -12,11 +12,4 @@ class Solution:
                     dp[step][pos] += dp[step - 1][pos - 1]
                 if pos + 1 < n:
                     dp[step][pos] += dp[step - 1][pos + 1]
-                # for j in range(1, step+1):
-                #     if pos - j >= 0:
-                #         dp[step][pos] += dp[step-j][pos-j]
-                #     if pos + j < n:
-                #         dp[step][pos] += dp[step-j][pos+j]
-            # print(\"step\", step)
-            # print(dp[step])
         return dp[-1][0] % (10**9 + 7)

@@ -17,7 +17,6 @@ for i in range(t):
                 ctb += 1
             for i in range(m):
                 y = x ^ a[i]
-                # print(y)
                 if(y not in s):
                     s.add(y)
                     a.append(y)

@@ -29,7 +29,6 @@ for i in range(n - 1, 0, -1):
     B.append(time)
 
 ans = 0
-# print(A, B)
 for i in range(n):
     time = A[i]
     if time > T:
@@ -39,7 +38,6 @@ for i in range(n):
 
 B = [A[0]] + [A[0] + i for i in B]
 A = [A[i] - (A[0]) for i in range(1, n)]
-# print(A, B)
 
 for i in range(n):
     time = B[i]

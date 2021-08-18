@@ -1,6 +1,6 @@
 class Solution:
     def maxLength(self, arr: List[str]) -> int:
-        myQueue = collections.deque([('', 0)])  # word, index to start search from
+        myQueue = collections.deque([('', 0)])
         maxLen = 0
 
         while myQueue:

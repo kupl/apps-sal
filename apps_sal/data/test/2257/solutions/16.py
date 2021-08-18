@@ -31,4 +31,3 @@ for _ in range(n):
     d2a.append(d2)
 
 print(srch(d1a, d2a))
-# PYPY!!!

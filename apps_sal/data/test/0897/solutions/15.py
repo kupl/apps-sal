@@ -5,18 +5,12 @@ def add(a, b, c, d):
     lcm = (b * d) // (gcd(b, d))
     aa = lcm // b
     bb = lcm // d
-    # print("aa:",aa,"bb:",bb,"a:",a,"b:",b);
     aa = aa * a
     bb = bb * c
-    # print("aa:",aa,"bb:",bb);
     cc = aa + bb
     dd = gcd(lcm, cc)
-    # print("cc:",cc);
-    # print("lcm:",lcm);
     lcm = lcm // dd
     cc = cc // dd
-    # print("cc:",cc);
-    # print("lcm:",lcm);
     return cc, lcm
 
 

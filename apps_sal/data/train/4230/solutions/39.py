@@ -1,5 +1,4 @@
 def reverse_letter(string):
-    # do your magic here
     word = []
     for i in string:
         if i.isalpha() == True:

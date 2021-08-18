@@ -35,9 +35,6 @@ else:
                 dp[i][(j + 1) % m] = max(arr[i] - k, dp[i - 1][j] + arr[i] - k)
     ma = 0
     for i in range(n):
-        # s = ""
         for j in range(m):
-            # s+=str(dp[i][j])+" "
             ma = max(ma, dp[i][j])
-        # print(s)
     print(ma)

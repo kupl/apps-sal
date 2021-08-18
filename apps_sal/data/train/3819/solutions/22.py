@@ -1,5 +1,4 @@
 def smash(words):
-    # Begin here
     final_list = []
 
     for word in words:

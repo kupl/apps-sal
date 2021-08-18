@@ -46,9 +46,6 @@ def solve(N, A, M, H):
     return ans + 1
 
 
-###############################################################################
-# AUXILIARY FUNCTIONS
-
 DEBUG = 'DEBUG' in os.environ
 
 

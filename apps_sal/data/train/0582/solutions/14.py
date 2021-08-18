@@ -1,4 +1,3 @@
-# from mymodule import input
 t = int(input())
 for _ in range(t):
     s = input().strip()
@@ -28,9 +27,6 @@ for _ in range(t):
             stk.append(i)
         else:
             stk.append(i)
-    # for i in tmp:
-    #     li[i] = len(s)
-    # print(li,stk)
     q = int(input())
     for i in map(int, input().split()):
         ind = i - 1

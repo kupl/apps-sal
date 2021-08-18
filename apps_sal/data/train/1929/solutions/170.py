@@ -16,15 +16,12 @@ class TN:
     def search(self, w):
         t = self
         for c in w:
-            # print(c,t)
             if c not in t.c:
-                # print('oops', t.c)
                 return False
             else:
                 t = t.c[c]
                 if t.e:
                     return True
-        # print('nope')
         return False
 
     def __contains__(self, i):
@@ -49,29 +46,7 @@ class StreamChecker:
         for w in words:
             self.root.add(w[::-1])
         self.s = []
-        # self.root.p()
-        # self.av = set()
 
     def query(self, letter: str) -> bool:
         self.s.append(letter)
         return self.root.search(reversed(self.s))
-        # found = False
-        # print(self.av, letter)
-        # for n in list(self.av):
-        #     if letter in n:
-        #         self.av.remove(n)
-        #         self.av.add(n.c[letter])
-        #         found = found or n.c[letter].e
-        #     else:
-        #         self.av.remove(n)
-        # if letter in self.root:
-        #     print('found',self.root.c[letter])
-        #     self.av.add(self.root.c[letter])
-        #     found = found or self.root.c[letter].e
-        # print(found)
-        # return found
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,5 +1,4 @@
 t = int(input())
-# for each test cases
 for i in range(t):
     n = int(input())
     s = list(map(int, input().split()))

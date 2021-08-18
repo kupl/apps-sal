@@ -41,7 +41,6 @@ def get_circumscribed_center(p1, p2, p3):
     T = A * (B + C - A)
     U = B * (C + A - B)
     W = C * (A + B - C)
-    # Debug
     try:
         return (T * p1 + U * p2 + W * p3) / (T + U + W)
     except:
@@ -59,8 +58,6 @@ def solve(n, k, xyc):
 
     ans = 1e18
     for (i1, p1, c1), (i2, p2, c2) in combinations(beefs, 2):
-        # 肉2枚の比重を考慮した等距離点に熱源を置いたときの時間tを算出
-        # →t以内に焼ける肉がK以上あれば、その2枚を含む場合の最小時間はt
         px = p1 + (p2 - p1) * (c2 / (c1 + c2))
         t = abs(px - p1) * c1 + 1e-8
 
@@ -75,14 +72,6 @@ def solve(n, k, xyc):
             ans = min(ans, t)
             continue
 
-        # REが出る。原因はここ以下
-
-        # K枚以上ない場合、範囲外のどれかの肉をギリギリ含めることを考える
-        # （重複を防ぐため、j > i2 の肉を調べる）
-        # 2点からの比が等しい点の軌跡は、c1==c2なら垂直二等分線、それ以外はアポロニウスの円
-        # p1-p2, p2-p3, p3-p1 の3円（または直線）が1点で交わる箇所があるか
-        # ある → そこに熱源を置き、時間tを算出、t以内に焼ける肉がK以上あるか調べる
-        # ない → 他の2点または3点で考えた方がよい
         for i3 in ng:
             if i3 < i2:
                 continue

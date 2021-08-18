@@ -1,5 +1,4 @@
 def add_binary(a, b):
-    # your code here
     c = a + b
     x = ''
     while(c != 0):

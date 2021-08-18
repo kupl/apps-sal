@@ -21,7 +21,6 @@ for _ in range(int(next(sys.stdin))):
         d[-2] = d[-1] - d[-2]
         d.pop()
 
-    # print(cmd, len(d), '-->', d)
     ans.append(str(s / len(d)))
 
 print('\n'.join(ans))

@@ -6,8 +6,8 @@ visited = [-1] * n
 now = 0
 
 for i in range(k):
-    if visited[now] != -1:  # 訪れたことがあるか
-        loop = i - visited[now]  # ループの大きさ
+    if visited[now] != -1:
+        loop = i - visited[now]
         k = (k - (i - loop)) % loop
 
         for _ in range(k):

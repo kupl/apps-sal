@@ -32,7 +32,6 @@ for _ in range(Q):
 
 
 '''
-#初期案　遅すぎ
 
 N = int(input())
 A = list(map(int,input().split()))

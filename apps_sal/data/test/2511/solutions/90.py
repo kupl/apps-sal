@@ -17,9 +17,6 @@ def dfs(K, u, p):
     else:
         can_use_color_num = K - 2
 
-    # if K < len(edges[u]):
-    #     return 0
-    # else:
     case_num = 1
     for e in edges[u]:
         if e == p:

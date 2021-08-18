@@ -1,7 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         ans = 0
-        #A = sorted(A)
         for diff in range(-500, 501):
             dp = defaultdict(int)
             for e in A:

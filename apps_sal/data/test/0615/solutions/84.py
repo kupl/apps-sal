@@ -16,7 +16,6 @@ def diff_right(center, right):
 
 L = [-1 for _ in range(N - 1)]
 R = [-1 for _ in range(N - 1)]
-# 真ん中の切り方が i と i+1 の間
 l = 0
 r = 2
 ans = float('inf')

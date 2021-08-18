@@ -84,6 +84,3 @@ def h(t):
 
 
 print('YNEOS'[f():: 2])
-
-
-# Made By Mostafa_Khaled

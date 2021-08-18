@@ -1,9 +1,5 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
-        # splitting procedure must be recursive
-        # \"addbsd\" a(dd)(b)(s)(d) vs (a)(d)(db)(sd)
-        # in general we want unique chars to be alone...but (adbdsd), can't always be satisfied
-        #
         N = len(s)
 
         possibilities = []

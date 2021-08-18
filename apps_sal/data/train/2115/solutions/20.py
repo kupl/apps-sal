@@ -23,6 +23,5 @@ for i in range(n):
                 de.popleft()
             temp = len(de)
         de.append(x[i])
-    # print(de)
 cnt += comb(len(de)) - comb(temp)
 print(cnt)

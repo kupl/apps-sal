@@ -1,4 +1,3 @@
-# codeforces.com/contest/958/problem/D1
 
 m = int(input())
 positions = []

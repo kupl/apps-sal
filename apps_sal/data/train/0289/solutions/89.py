@@ -5,7 +5,6 @@ class Solution:
         for num in A:
             current_sum += num
             prefix_sum.append(current_sum)
-        # print(prefix_sum)
 
         i, j = -1, L - 1
         max_m, sub = float('-inf'), 0
@@ -32,5 +31,4 @@ class Solution:
             j += 1
             sub = prefix_sum[i]
             max_m = max(sum_m, max_m)
-            #print(sum_m, prefix_sum)
         return max_m

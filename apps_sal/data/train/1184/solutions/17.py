@@ -1,4 +1,3 @@
-# cook your dish here
 def generateIndex(indexes):
     ans = indexes[:]
     for i in range(1, 4):

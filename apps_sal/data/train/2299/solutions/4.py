@@ -1,4 +1,3 @@
-#####segfunc#####
 import heapq
 
 
@@ -7,12 +6,9 @@ def segfunc(x, y):
         return x
     else:
         return y
-#################
 
 
-#####ide_ele#####
 ide_ele = (float("inf"), -1)
-#################
 
 
 class SegTree:
@@ -36,10 +32,8 @@ class SegTree:
         self.ide_ele = ide_ele
         self.num = 1 << (n - 1).bit_length()
         self.tree = [ide_ele] * 2 * self.num
-        # 配列の値を葉にセット
         for i in range(n):
             self.tree[self.num + i] = init_val[i]
-        # 構築していく
         for i in range(self.num - 1, 0, -1):
             self.tree[i] = self.segfunc(self.tree[2 * i], self.tree[2 * i + 1])
 

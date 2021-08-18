@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 
 n, m = map(int, sys.stdin.readline().strip().split())

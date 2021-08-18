@@ -2,7 +2,6 @@ class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
 
         def possible(K):
-            # check if it is possible for K bananas to be finished in H hours
             count = 0
 
             for banana in piles:

@@ -1,7 +1,6 @@
 from collections import defaultdict
 import numpy
 3
-# -*- coding:utf-8 -*-
 
 
 def main():

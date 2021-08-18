@@ -1,6 +1,4 @@
 class Solution:
-    # Time: O(n)
-    # Space: O(n)
     def longestSubarray(self, nums: List[int]) -> int:
         right = [0 for _ in range(len(nums))]
         left = [0 for _ in range(len(nums))]

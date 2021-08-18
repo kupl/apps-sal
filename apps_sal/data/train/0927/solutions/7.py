@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 try:
     n, m = map(int, input().split())
     sum1 = ((n * (n + 1)) / 2)

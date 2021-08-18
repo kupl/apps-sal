@@ -10,7 +10,6 @@ def sum_cache(n):
 
 
 def list_squared(m, n):
-    # your code
 
     result = []
     for j in range(m, n + 1):

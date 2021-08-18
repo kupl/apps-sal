@@ -3,7 +3,6 @@ class Solution:
         def working(mid: int):
             prev_stall = 0
             stall = 1
-            # print(position)
             for i in range(1, m):
                 while (position[stall] - position[prev_stall]) < mid:
                     stall += 1

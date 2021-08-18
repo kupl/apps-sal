@@ -1,4 +1,3 @@
-# encoding: utf-8
 from sys import stdin
 
 n, k = [int(i) for i in stdin.readline().strip().split()]
@@ -23,7 +22,6 @@ def find_max(steps):
         m = (l + r) // 2
         if downs[m] <= steps:
             x = m
-            # downs[l:m] contains bigger values
             r = m - 1
         else:
             l = m + 1
@@ -41,7 +39,6 @@ def find_min(steps):
     while l <= r:
         m = (l + r) // 2
         if ups[m] <= steps:
-            # ups[m:r] contains bigger values
             x = m
             l = m + 1
         else:

@@ -1,4 +1,3 @@
-# in the name of god
 
 from collections import defaultdict
 

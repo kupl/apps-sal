@@ -21,7 +21,6 @@ def main(n, k, a, mod):
     if k % 2 == 0:
         flag = False
 
-    # All elements are negative and odd k
     if flag:
         ans = 1
         for i in range(n - 1, n - 1 - k, -1):

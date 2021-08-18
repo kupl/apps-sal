@@ -107,5 +107,4 @@ def solve():
     return "YES" if dp[len(S)] else "NO"
 
 
-# for _ in range(getInt()):
 print(solve())

@@ -1,11 +1,9 @@
 import math
 
 
-def isMore(N, K):  # - N以上の数で、０でないのが丁度K個
-    # -len(N)よりもKがおおきかったら0
+def isMore(N, K):
     if len(N) < K:
         return 0
-    # 最高位の数字を1つ繰り上げれば、なんでも大きい。ただし、Kは1以上
     if K >= 1:
         tmp = (9 - int(N[0])) * fact[len(N) - 1] // ((fact[len(N) - K]) * (fact[K - 1])) * (9**(K - 1))
         if len(N) == 1:

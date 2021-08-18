@@ -20,7 +20,6 @@ for _ in range(p):
     diff.append(a)
 temp = diff[:]
 
-# temp = [(1, 2),(1, 1),(2, 1),(2, 3)]
 temp.sort(key=lambda x: (x[0], x[1]))
 
 diff = sorted(diff, key=lambda x: x[0])

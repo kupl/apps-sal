@@ -1,18 +1,5 @@
 class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
-        # data = []
-        # for t in trips:
-        #     data.append((t[1],1, t[0]))
-        #     data.append((t[2], 0, t[0]))
-        # data = sorted(data)
-        # maxp = 0
-        # for d in data:
-        #     if d[1] == 0:
-        #         maxp -= d[2]
-        #     else:
-        #         maxp += d[2]
-        #     if maxp > capacity: return False
-        # return True
 
         passenger = 0
         onboard = defaultdict(int)

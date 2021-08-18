@@ -1,33 +1,5 @@
-# -*- coding:utf-8 -*-
 
 import sys
-
-
-# class Point:
-#     def __init__(self, x, y):
-#         self.x = x
-#         self.y = y
-
-#     def mul(self, k):
-#         return Point(k * self.x, k * self.y)
-
-#     def __add__(self, other):
-#         return Point(self.x + other.x, self.y + other.y)
-
-#     def __sub__(self, other):
-#         return self + (-other)
-
-#     def __neg__(self):
-#         return Point(-self.x, -self.y)
-
-#     def __eq__(self, other):
-#         return self.x == other.x and self.y == other.y
-
-#     def __getitem__(self, index):
-#         return (self.x, self.y)[index]
-
-#     def __str__(self):
-#         return "(%d;%d)" % (self.x, self.y)
 
 
 DIRS = dict(
@@ -43,33 +15,6 @@ def div(a, b):
     return round(float(a) / b, 1)
 
 
-# class Moving:
-#     def __init__(self, x, y, dir):
-#         self.p = Point(x, y)
-#         self.dir = Point(*DIRS[dir.upper()])
-
-#     def collide(self, other):
-#         times = []
-#         for coord in range(2):
-#             d = abs(self.p[coord] - other.p[coord])
-#             d2 = abs((self.p + self.dir.mul(KOEF) - other.p)[coord])
-#             d3 = abs((other.p + other.dir.mul(KOEF) - self.p)[coord])
-#             d_next = abs((self.p + self.dir.mul(KOEF) - (other.p + other.dir    .mul(KOEF)))[coord])
-#             if d2 > d or d3 > d:
-#                 return None
-
-#             speed = abs(d_next - d)
-#             if speed == 0:
-#                 if self.p[coord] != other.p[coord]:
-#                     return None
-#                 continue
-#             times.append( div(d, speed / KOEF) )
-
-#         if len(times) == 2 and times[0] != times[1]:
-#             return
-#         return times[0]
-
-
 def collide_coord(ex, edx, x, dx):
     d = abs(ex - x)
     d2 = abs(ex + edx - x)
@@ -82,7 +27,7 @@ def collide_coord(ex, edx, x, dx):
     if speed == 0:
         if ex != x:
             return
-        return "all"  # all
+        return "all"
     else:
         return div(d, speed / KOEF)
 

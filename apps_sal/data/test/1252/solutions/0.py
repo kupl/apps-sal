@@ -29,7 +29,6 @@ def __starting_point():
             if income[u] <= 0:
                 queue.append(u)
                 last += 1
-    #print(queue, last)
     res = max(stat[0].keys())
     print(res)
     path = []

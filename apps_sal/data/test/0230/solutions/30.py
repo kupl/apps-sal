@@ -53,8 +53,6 @@ class RollingHash:
         return hasha == hashs
 
 
-# d = defaultdict(int)で0で初期化
-# d = defaultdict(lambda: 100)で100で初期化
 n, s = int(input()), input()
 rh = RollingHash(s)
 
@@ -64,7 +62,6 @@ def check(m):
     for i in range(n - m + 1):
         h = rh.get_hash(i, i + m)
         d[h] = min(d[h], i)
-        # m以上離れていて2回目
         if i - d[h] >= m:
             return True
     return False

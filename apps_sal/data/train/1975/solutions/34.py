@@ -22,10 +22,3 @@ class CustomStack:
         while cur < k and cur < self.curSize:
             self.stack[cur] += val
             cur += 1
-
-
-# Your CustomStack object will be instantiated and called as such:
-# obj = CustomStack(maxSize)
-# obj.push(x)
-# param_2 = obj.pop()
-# obj.increment(k,val)

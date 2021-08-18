@@ -14,5 +14,4 @@ class Solution:
         for i in range(1, len(nums1)):
             for j in range(1, len(nums2)):
                 M[i][j] = max(M[i - 1][j - 1] + nums1[i] * nums2[j], M[i][j - 1], M[i - 1][j], nums1[i] * nums2[j])
-            # print(M)
         return M[-1][-1]

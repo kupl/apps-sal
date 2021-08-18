@@ -1,5 +1,5 @@
 def square_free_part(n):
-    if type(n) == int and n > 0:  # Meh...
+    if type(n) == int and n > 0:
         part = 1
         for p in range(2, int(n ** .5) + 1):
             if not n % p:

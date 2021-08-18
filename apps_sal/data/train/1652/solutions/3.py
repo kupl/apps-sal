@@ -1,8 +1,6 @@
 def format_duration(seconds):
     if seconds == 0:
         return "now"
-    # if seconds==132375840:
-        # return '4 years, 68 days, 3 hours and 4 minutes'
     minu, sec = divmod(seconds, 60)
     hour, minu = divmod(minu, 60)
     day, hour = divmod(hour, 24)

@@ -1,5 +1,3 @@
-# fin = open("input.txt")
-# a, b = map(int, fin.readline().split())
 a, b = list(map(int, input().split()))
 a2 = a - b
 if a2 == 0:

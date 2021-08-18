@@ -19,6 +19,5 @@ class Solution:
                 waiting -= min(waiting, 4)
             nrot += 1
             i += 1
-        # print(nrot, boardingCost, sum(customers), runningCost)
         mx = profits.index(max(profits))
         return mx + 1 if max(profits) > 0 else -1

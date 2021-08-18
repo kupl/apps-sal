@@ -24,7 +24,6 @@ for i in range(m):
     while not((j == -1 or a * B[i] - b * A[j] >= 0)
               and (j + 1 == n or a * B[i] - b * A[j + 1] < 0)):
         j += 1
-    # print(j)#,a*B[i]-b*A[j],a*B[i]-b*A[j+1])
     if j != -1:
         r = min(r, (l[i] + sqrt(a * a + A[j] * A[j]) + sqrt((b - a)**2 + (B[i] - A[j])**2), j, i))
     if j + 1 != n:

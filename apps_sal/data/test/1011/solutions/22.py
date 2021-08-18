@@ -1,5 +1,4 @@
 def lte(n, a, d):
-    # count the number of values in a <= d
     if a[0] > d:
         return 0
     if a[-1] <= d:

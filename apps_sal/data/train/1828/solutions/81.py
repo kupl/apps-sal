@@ -5,14 +5,10 @@ class Solution:
         pq = []
         for c in count:
             heappush(pq, [-count[c], c])
-        # print(pq)
         output = []
         prev = None
 
         while pq:
-
-            # if output and output[-1] == pq[0]:
-            #     toPush = heappop(pq)
 
             c, v = heappop(pq)
             c += 1

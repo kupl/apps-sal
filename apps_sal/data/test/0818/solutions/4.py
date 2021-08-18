@@ -1,4 +1,3 @@
-# Dasmesh Singh
 import math
 n = int(input())
 s = 0

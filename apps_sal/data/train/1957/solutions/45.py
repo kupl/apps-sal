@@ -1,5 +1,5 @@
 class Solution:
-    def shortestPath(self, grid: List[List[int]], k: int) -> int:  # 43
+    def shortestPath(self, grid: List[List[int]], k: int) -> int:
 
         if len(grid) == 1 and len(grid[0]) == 1:
             return 0

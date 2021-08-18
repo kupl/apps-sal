@@ -2,9 +2,6 @@ import math
 
 n = int(input())
 P = []
-# very small でWAなので、rで割ってかけ直すのをやめてみる
-# atanを使ってみる
-# 0またいだときがおかしいか
 for i in range(n):
     x, y = list(map(int, input().split()))
     rad = math.atan2(x, y)

@@ -1,6 +1,6 @@
 _len = int(input())
-_ver = int(input())  # 4
-_up = int(input())  # 2
+_ver = int(input())
+_up = int(input())
 l = [_ver, _ver, _ver, _ver, _up, _up]
 l = sorted(l, reverse=True)
 

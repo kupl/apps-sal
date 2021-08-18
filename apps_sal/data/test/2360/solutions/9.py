@@ -19,4 +19,3 @@ for y in range(t):
         tim += 1
 
     print(*ans)
-    #    data.append([int(x) for x in input().split()])

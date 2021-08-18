@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from itertools import combinations_with_replacement
 

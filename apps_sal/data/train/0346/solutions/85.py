@@ -3,7 +3,6 @@ class Solution:
 
         count = 0
         dic = defaultdict(int)
-#        cum sum
         dic[0] = 1
         ans = 0
 

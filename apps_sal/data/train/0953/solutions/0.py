@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 import math as mt
 from itertools import combinations_with_replacement, permutations
@@ -21,9 +20,7 @@ def __starting_point():
         dis = b * b - 4 * a * c
         sqrt_val = math.sqrt(abs(dis))
         r1 = (-b + sqrt_val) / (2 * a)
-        # r2=(-b - sqrt_val)/(2 * a)
 
-        # print(r1)
         r1 = math.floor(r1) + 1
         print(n - r1 + 1)
 

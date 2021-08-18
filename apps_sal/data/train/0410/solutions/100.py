@@ -3,7 +3,7 @@ class Solution:
         cache = [0] * 999999
 
         for num in range(lo, hi + 1):
-            if cache[num] != 0:  # already visited
+            if cache[num] != 0:
                 continue
 
             path = [num]
@@ -16,15 +16,11 @@ class Solution:
                     num = num * 3 + 1
                     path.append(num)
 
-            # print(path)
-
             for idx, n in enumerate(path):
                 if cache[n] != 0:
                     break
                 cache[n] = len(path) - 1 - idx + cache[path[-1]]
 
         res = [(i + lo, steps) for i, steps in enumerate(cache[lo:hi + 1])]
-        # print(res)
         res = sorted(res, key=lambda _: _[1])
-        # print(res)
         return res[k - 1][0]

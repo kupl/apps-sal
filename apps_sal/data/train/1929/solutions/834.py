@@ -8,7 +8,7 @@ class StreamChecker:
                 if c not in p:
                     p[c] = {}
                 p = p[c]
-            p['#'] = True
+            p['
         self.dic = dic
         self.cur = []
 
@@ -19,10 +19,6 @@ class StreamChecker:
         for d in tmp:
             if letter in d:
                 self.cur.append(d[letter])
-                if '#' in d[letter]:
+                if '
                     res = True
         return res
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

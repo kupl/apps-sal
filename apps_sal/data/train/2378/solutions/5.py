@@ -1,13 +1,8 @@
-# ライブラリインポート
 from collections import defaultdict
-
-# 入力受け取り
 
 
 def getlist():
     return list(map(int, input().split()))
-
-# 処理内容
 
 
 def main():

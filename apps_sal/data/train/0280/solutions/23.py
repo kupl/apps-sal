@@ -1,6 +1,5 @@
 class Solution:
     def palindromePartition(self, s: str, k: int):
-        # preprocess
         cost = [[0] * len(s) for _ in range(len(s))]
         for i in range(len(s) - 1, -1, -1):
             for j in range(i + 1, len(s)):
@@ -12,8 +11,7 @@ class Solution:
         dp = [[float('inf')] * k for _ in range(len(s))]
         for i in range(len(s)):
             dp[i][0] = cost[0][i]
-            for c in range(1, k):  # c means cut, so c = k - 1
+            for c in range(1, k):
                 for j in range(i):
                     dp[i][c] = min(dp[i][c], dp[j][c - 1] + cost[j + 1][i])
-        # print(dp)
         return dp[-1][-1]

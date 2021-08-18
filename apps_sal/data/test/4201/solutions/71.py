@@ -28,7 +28,7 @@ for a in A:
 
         cnt = 0
         for t in temp2:
-            cnt += t.count("#")
+            cnt += t.count("
         if cnt == k:
             ans += 1
 

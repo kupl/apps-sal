@@ -8,17 +8,6 @@ class Solution:
                 if n % i == 0:
                     return prime_factors(n // i) | set([i])
             return set([n])
-            # primes = set()
-            # d = 2
-            # while d <= sqrt(n):
-            # if n % d == 0:
-            # primes.add(d)
-            # n //= d
-            # else:
-            # d += 1
-            # if n > 1:
-            # primes.add(n)
-            # return primes
 
         def find(n):
             p = parent[n]
@@ -49,12 +38,9 @@ class Solution:
                 prime_indeces[p].append(i)
 
         print(prime_indeces)
-        # print(parent)
         for p, indeces in list(prime_indeces.items()):
             for i in range(len(indeces) - 1):
-                # print('merging', A[indeces[i]], A[indeces[i+1]])
                 merge(indeces[i], indeces[i + 1])
-                # print(parent)
 
         count_map = dict()
         best = 0
@@ -67,6 +53,5 @@ class Solution:
                 count_map[i] = 1
 
             best = max(best, count_map[i])
-        # print(count_map)
 
         return best

@@ -4,7 +4,6 @@ arr = []
 for i in range(0, len(N) - 1):
     if int(N[i]) % 2 == 0:
         arr.append({"index": i, "num": N[i]})
-# print(arr)
 
 if len(arr) == 0:
     print("-1")

@@ -8,7 +8,6 @@ import copy
 import heapq
 import collections
 import itertools
-# input = sys.stdin.readline
 sys.setrecursionlimit(10**8)
 mod = 10**9 + 7
 def inp(): return int(input())

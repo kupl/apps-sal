@@ -20,7 +20,3 @@ class Cashier:
         for i, p in enumerate(product):
             total += self.price[p] * amount[i]
         return total * (1 - self.discount / 100 if self.cnt % self.n == 0 else 1)
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

@@ -3,25 +3,6 @@ import sys
 T = int(sys.stdin.readline())
 
 
-# def score(p):
-#     n = len(p)
-#     sol = [False for i in xrange(0, n + 2)]
-#     sol[0] = sol[n + 1] = True
-#     res = 0
-
-#     for s in p:
-#         left = s - 1
-#         right = s + 1
-#         while not sol[left]:
-#             left -= 1
-#         while not sol[right]:
-#             right += 1
-#         res += s - left + right - s
-#         sol[s] = True
-
-#     return res
-
-
 def calc_min_len(l, r):
     if l + 1 == r:
         return 0

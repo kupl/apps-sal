@@ -1,4 +1,3 @@
-#from collections import deque,defaultdict
 from heapq import heappush, heappop
 from math import sqrt
 def printn(x): return print(x, end='')
@@ -10,18 +9,15 @@ def inm(): return map(int, input().split())
 def ins(): return input().strip()
 
 
-DBG = True  # and False
+DBG = True
 BIG = 10**18
 R = 10**9 + 7
-#R = 998244353
 
 
 def ddprint(x):
     if DBG:
         print(x)
 
-
-#import math,heapq
 
 def pdist(x1, y1, x2, y2):
     return sqrt((x2 - x1)**2 + (y2 - y1)**2)
@@ -52,7 +48,6 @@ cost = [float(BIG)] * (n + 2)
 q = [(0.0, n)]
 while len(q) > 0:
     d, p = heappop(q)
-    #ddprint(f"{d=} {p=}")
     if cost[p] <= d:
         continue
     cost[p] = d

@@ -11,7 +11,6 @@ class Solution:
                     return True
             return False
 
-        # binary search for max distance, l, r indicates distance
         position.sort()
         l, r = 1, position[-1] - position[0]
 

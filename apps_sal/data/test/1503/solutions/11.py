@@ -18,11 +18,9 @@ while(i < n - 1 and j < n):
     k2 = arr[0][j]
     l = 0
     while(l < m):
-        # print(arr[0][i+k]-1,arr[0][i+k+1]-1,'YO',flag,l)
         if(arr1[l][arr[0][j - 1] - 1] != arr1[l][arr[0][j] - 1] - 1):
             flag = 1
             break
-        # print(flag)
         if(flag == 1):
             break
         l += 1
@@ -34,7 +32,6 @@ while(i < n - 1 and j < n):
         flag = 0
     else:
         j += 1
-    # print(i,j)
 if(flag == 0):
     ans += ((j - i) * (j - i + 1)) // 2
     ans -= j - i

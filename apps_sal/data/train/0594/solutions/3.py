@@ -1,4 +1,3 @@
-# cook your dish here
 def maxSubArraySum(a, size):
 
     max_so_far = a[0]

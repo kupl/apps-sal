@@ -30,15 +30,3 @@ class Solution:
                 max_val = max(max_val, diff_val)
 
         return max_val
-
-        # every sequence is trivially 1 for itself.
-
-        # start at index 1
-
-        # loop up to this index
-        # get the difference of i and j
-
-        # have we seen that difference before? if so, add a 1 to that amount.
-        # if we have, take the max of the two times we've seen differences
-
-        # return the max difference we've seen so far.

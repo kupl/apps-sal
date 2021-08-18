@@ -1,4 +1,3 @@
-# cook your dish here
 result = []
 for i in range(int(input())):
     m = input()

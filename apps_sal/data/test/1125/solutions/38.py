@@ -13,7 +13,6 @@ if d % 2 == 1:
     print((-1))
 else:
     d = d // 2
-    # print(bin(c),bin(d))
     flgs = []
 
     for i in range(41):
@@ -31,7 +30,6 @@ else:
             flgs.append(0)
     else:
         flgs = flgs[::-1]
-        # print(flgs)
         ans = 0
         for i in range(len(flgs)):
             if flgs[i] == 1:
@@ -45,8 +43,6 @@ else:
                 if flgs[i] == 2:
                     if ans + 2**(41 - i - 1) <= A1:
                         ans += 2**(41 - i - 1)
-
-            # print(ans)
 
             if ans == 0:
                 print((-1))

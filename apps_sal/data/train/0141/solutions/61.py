@@ -1,7 +1,5 @@
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
-        # Map: of weight to count O(n)
-        # Check limit down
 
         people.sort()
 

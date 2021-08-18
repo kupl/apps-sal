@@ -3,7 +3,6 @@ def mutually_exclusive(dice, call1, call2):
     diecall1 = 0
     diecall2 = 0
     for die in dice:
-        # [3,0.4]
         checknull += die[1]
         if die[0] == call1:
             diecall1 = die[1]

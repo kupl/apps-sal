@@ -4,7 +4,7 @@ class Solution:
         while l < r and arr[l + 1] >= arr[l]:
             l += 1
         if l == len(arr) - 1:
-            return 0  # whole array is sorted
+            return 0
         while r > 0 and arr[r - 1] <= arr[r]:
             r -= 1
 

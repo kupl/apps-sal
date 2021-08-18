@@ -14,7 +14,6 @@ S.sort()
 
 ans = 0
 for s in S:
-    # print(S,C,ans)
     if m < C[s]:
         ans += m * s
         break

@@ -5,7 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-# SOLUTION
 
 import sys
 
@@ -22,14 +21,10 @@ def main():
             return "NO"
     return "YES"
 
-# PROBLEM CONSTANTS
-
 
 READ_FROM_FILE = None
 OUTPUT_PREFIX = None
 INTERACTIVE = False
-
-# HELPERS
 
 
 def read(callback=int, split=True):

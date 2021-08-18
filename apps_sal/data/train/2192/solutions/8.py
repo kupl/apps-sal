@@ -11,7 +11,6 @@ def fun(n, a):
                 r = m - 1
             else:
                 l = m + 1
-        #print (i, x)
         dp[i] = dp[r] + 1
 
 
@@ -25,5 +24,4 @@ a.sort()
 power = [0 for i in range(n)]
 
 fun(n, a)
-#print (dp)
 print(n - max(dp))

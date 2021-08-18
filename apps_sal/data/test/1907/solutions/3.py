@@ -9,12 +9,12 @@ for i in range(len(a)):
     a[i] = a[i].split(' ')
     a[i] = list(map(int, a[i]))
 for i in range(len(a)):
-    for j in list(reversed(range(i + 1, len(a)))):  # sort the circles by their radius
+    for j in list(reversed(range(i + 1, len(a)))):
         if a[i][2] < a[j][2]:
             a[i], a[j] = a[j], a[i]
 
 
-def dis(x, y):  # short for distance
+def dis(x, y):
     return math.sqrt((x[0] - y[0])**2 + (x[1] - y[1])**2)
 
 

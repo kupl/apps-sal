@@ -16,7 +16,6 @@ class Solution:
             memo[0][j] = max_table[0][j]
 
         for i in range(1, d):
-            #memo[i][i] = max_table[i][i]
             for j in range(i, n):
                 memo[i][j] = min(memo[i - 1][t] + max_table[t + 1][j] for t in range(i - 1, j))
 

@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author: apikdech
-# @Date:   22:07:23 22-10-2019
-# @Last Modified by:   apikdech
-# @Last Modified time: 22:15:02 22-10-2019
 def to_string(n):
     res = ''
     while(n):

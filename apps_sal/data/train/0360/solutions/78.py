@@ -4,7 +4,6 @@ class Solution:
         right = max(weights) * len(weights)
         while left < right:
             mid = (left + right) // 2
-            # print(left, mid, right)
             if self.possible(weights, D, mid):
                 right = mid
             else:

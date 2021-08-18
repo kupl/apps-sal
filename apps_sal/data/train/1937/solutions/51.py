@@ -28,13 +28,3 @@ class ThroneInheritance:
 
     def getInheritanceOrder(self) -> List[str]:
         return [*self.getnext(self.king)]
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()
-
-# [\"king\", \"andy\", \"matthew\", \"bob\", \"alex\", \"asha\", \"catherine\"]
-# [\"king\", \"andy\", \"matthew\", \"alex\", \"asha\", \"catherine\"]

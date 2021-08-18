@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import deque
 
 
@@ -12,7 +11,6 @@ def main():
         adj[a].append(b)
         adj[b].append(a)
 
-    # aoki BFS
     queue = deque([t])
     visit = [-1] * N
     visit[t] = 0
@@ -23,12 +21,9 @@ def main():
             if visit[u] < 0:
                 queue.append(u)
                 visit[u] = visit[now] + 1
-                # parent[u] = now
 
-    # takahashi BFS
     queue = deque([s])
     visit2 = [-1] * N
-    # parent = [-1] * N
     visit2[s] = 0
 
     while queue:
@@ -39,7 +34,6 @@ def main():
                 visit2[u] = visit2[now] + 1
 
     ans = [-1, -1]
-    # print(visit, visit2)
     for i in range(N):
         if visit[i] >= visit2[i] and visit[i] > ans[0]:
             ans = [visit[i], i]

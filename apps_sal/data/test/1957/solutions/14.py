@@ -12,4 +12,3 @@ while first / num < B / A:
     ptr -= 1
     rst += 1
 print(rst)
-# print(after)

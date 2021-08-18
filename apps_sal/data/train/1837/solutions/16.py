@@ -20,11 +20,10 @@ class Solution:
         dishes = {dish: index for index, dish in enumerate(dishes)}
 
         for name, table, dish in orders:
-            i = tables[table]  # + 1
-            j = dishes[dish]  # + 1
+            i = tables[table]
+            j = dishes[dish]
             results[i][0] = table
             results[i][j] = results[i][j] + 1
-        # print(results)
         for i in range(nrows):
             for j in range(ncolumns):
                 results[i][j] = str(results[i][j])

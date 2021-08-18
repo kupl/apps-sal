@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 c = []
 for i in range(t):
@@ -9,7 +8,6 @@ for i in range(t):
     ans += "0" * len(b)
     el = "1"
     el += "0" * (len(b) - 1)
-    # print(ans)
     i = int(ans, 2)
     if(el == b):
         c.append(x)

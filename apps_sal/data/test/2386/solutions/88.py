@@ -1,11 +1,9 @@
-# coding: utf-8
 n = int(input())
 A = list(map(int, input().split()))
 L = []
 for i in range(n):
     L.append(A[i] - (i + 1))
 L.sort()
-# print(L)
 if n == 1:
     b1 = L[0]
     b2 = L[0]

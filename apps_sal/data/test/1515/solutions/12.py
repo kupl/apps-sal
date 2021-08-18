@@ -11,8 +11,6 @@ b = True
 
 for i in range(k, 10):
     if((x * i % y) == 0):
-        #z = (x*i) // y
-        #print(z*10 + i)
 
         z = i * 10
 

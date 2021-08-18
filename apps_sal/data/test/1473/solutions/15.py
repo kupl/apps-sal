@@ -16,7 +16,6 @@ for i in range(maxn):
     if used[i] == 1:
         z = i
 for i in range(n):
-    #print(z, s)
     ans[i] = z
     z, s = nxt[s], nxta[z]
 for i in ans:

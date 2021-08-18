@@ -8,7 +8,6 @@ def main():
                 a = a % b
             else:
                 b = b % a
-        # print(a,b)
         if((a == 1 and b == 0) or (a == 0 and b == 1)):
             print("YES")
         else:

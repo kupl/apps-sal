@@ -15,8 +15,6 @@ for val in lu.values():
 key_num = len(lu.keys())
 mins.sort()
 maxes.sort()
-# print(mins)
-# print(maxes)
 ind = 0
 pairs = 0
 counter = key_num
@@ -29,5 +27,4 @@ for i in range(len(mins)):
             ind += 1
             counter -= 1
     pairs += counter
-    # print(counter)
 print(pairs)

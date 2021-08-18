@@ -11,11 +11,8 @@ end_idx = -1
 for i in range(len(book_times)):
     t = book_times[i]
 
-#     print(str(start_idx) + ' ' + str(end_idx))
-
     if t + current_time > mins:
 
-        # Keep bumping start pointer till we fit
         current_max = end_idx - start_idx if end_idx - start_idx > current_max else current_max
 
         while start_idx <= end_idx and t + current_time > mins:
@@ -30,9 +27,6 @@ for i in range(len(book_times)):
 
     end_idx = i
 
-#     print(str(start_idx) + ' ' + str(end_idx))
-#     print(str(current_max + 1) + ' current time:' + str(current_time) )
-#     print(' ')
 
 current_max = end_idx - start_idx if end_idx - start_idx > current_max else current_max
 

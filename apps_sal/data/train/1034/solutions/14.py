@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     MAX = 1000005
     prime = [True] * MAX

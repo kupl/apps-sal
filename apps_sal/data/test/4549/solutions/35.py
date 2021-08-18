@@ -6,9 +6,9 @@ ans = True
 for i in range(h):
     for j in range(w):
         cnt = 0
-        if s[i][j] == "#":
-            for p, q in dxy:
-                if not(0 <= i + p < h and 0 <= j + q < w):
+        if s[i][j] == "
+          for p, q in dxy:
+               if not(0 <= i + p < h and 0 <= j + q < w):
                     cnt += 1
                     continue
                 elif s[i + p][j + q] == ".":

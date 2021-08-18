@@ -16,7 +16,6 @@ def lnint(n): return [int(input()) for _ in range(n)]
 def lint_list(n): return [lint() for _ in range(n)]
 
 
-############################################################
 H, W = lint()
 image = lnstr(H)
 for column in image:

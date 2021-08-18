@@ -20,5 +20,4 @@ class Solution:
                 return result
 
         r = countMemo(locations[start], fuel) % ((10 ** 9) + 7)
-        # (memo)
         return r

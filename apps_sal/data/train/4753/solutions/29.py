@@ -7,5 +7,4 @@ def goose_filter(birds):
         for j in birds:
             if i == j:
                 birds.remove(i)
-    # your code here
     return birds

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     mini, maxi = 0, 0
     n, l, r = map(int, input().split())

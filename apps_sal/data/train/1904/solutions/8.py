@@ -6,7 +6,7 @@ class Solution:
         hp = []
         heapq.heapify(hp)
         for x, y in points:
-            ds = x**2 + y**2  # distance square
+            ds = x**2 + y**2
             if len(hp) < K:
                 heapq.heappush(hp, (-ds, [x, y]))
             else:

@@ -12,7 +12,6 @@ class Solution:
             d[x].add(y)
 
         xs = sorted(d.keys())
-        # print(d, xs)
         ans = float('inf')
 
         exist = False
@@ -23,7 +22,6 @@ class Solution:
                 x2 = xs[j]
                 ys2 = d[x2]
                 ys = sorted(ys1 & ys2)
-                # print(x1, x2, ys)
                 if len(ys) >= 2:
                     exist = True
                     minHeight = ys[1] - ys[0]

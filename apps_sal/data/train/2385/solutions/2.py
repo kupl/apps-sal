@@ -5,7 +5,6 @@ input = iter(_INPUT_LINES).__next__
 
 
 def go():
-    # n = int(input())
     n, m = list(map(int, input().split()))
     c = ''.join(input() for _ in range(n))
     s = ''.join(input() for _ in range(n))
@@ -55,19 +54,12 @@ def go():
                 phase[ss] = (pcur - pos) % cyc_len[group]
 
     blacks = len(set((pp, gg)for cc, pp, gg in zip(c, phase, groups) if cc == '0'))
-    # print('ppp',phase)
-    # print(groups)
-    # print('--',cyc_len)
 
     return f'{sum(cyc_len.values())} {blacks}'
 
 
-# x,s = map(int,input().split())
 t = int(input())
-# t = 1
 ans = []
 for _ in range(t):
-    # print(go())
     ans.append(str(go()))
-#
 print('\n'.join(ans))

@@ -12,8 +12,6 @@ def main():
     h, w, n = MI()
     points = []
     cnt = 0
-    # 2点とも周上にある組のみ残す
-    # 原点（左上）から反時計回りに移動した距離と点の通し番号を記録
     for _ in range(n):
         i0, j0, i1, j1 = MI()
         if (0 < i0 < h and 0 < j0 < w) or (0 < i1 < h and 0 < j1 < w):
@@ -28,8 +26,6 @@ def main():
     points.sort()
     first = [True] * cnt
     visited = []
-    # ABABのように２つの区間がずれて重なっていたらNO
-    # ABBAのように完全に含まれるのはセーフ
     for d, pi in points:
         if first[pi]:
             visited.append(pi)

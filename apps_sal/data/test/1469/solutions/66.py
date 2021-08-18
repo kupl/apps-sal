@@ -1,4 +1,3 @@
-# D - All Your Paths are Different Lengths
 
 L = int(input())
 

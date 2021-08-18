@@ -1,8 +1,3 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def numComponents(self, head: ListNode, G: List[int]) -> int:
 
@@ -22,7 +17,6 @@ class Solution:
         temp = head
         while(temp.__next__ != None):
             if(inG[temp.next.val] != None and inG[temp.val] != None):
-                # connect temp and temp.next in G list
                 inG[temp.next.val] = inG[temp.val]
 
             temp = temp.__next__

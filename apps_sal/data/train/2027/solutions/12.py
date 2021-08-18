@@ -16,6 +16,5 @@ for i in s:
         ans[r] = stone
         r += 1
     stone += 1
-# print(ans)
 for i in ans[1:]:
     print(i)

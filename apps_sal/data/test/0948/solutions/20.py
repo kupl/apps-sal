@@ -13,10 +13,10 @@ for I in range(N - 1):
                     Used.append(Seq[I][J + 1])
                     if Seq[I + 1][J + 1] in Det and not Seq[I + 1][J + 1] in Used:
                         '''
-                        Seq[I][J]='#'
-                        Seq[I+1][J]='#'
-                        Seq[I+1][J+1]='#'
-                        Seq[I][J+1]='#'
+                        Seq[I][J]='
+                        Seq[I+1][J]='
+                        Seq[I+1][J+1]='
+                        Seq[I][J+1]='
                         '''
                         Ans += 1
 print(Ans)

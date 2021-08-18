@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 f = sys.stdin
 St = f.readline().strip()

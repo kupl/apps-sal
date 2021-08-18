@@ -18,11 +18,9 @@ prev = (-9999999999999, -999999999999999)
 g = []
 
 huh.append((-9999999999999, -999999999999999))
-# print(huh)
 for huhh in huh:
     if huhh[0] != prev[0]:
         g.append(c1)
-        # print(g)
         for j in g:
             anss += (c2 - j) * j
         g = []

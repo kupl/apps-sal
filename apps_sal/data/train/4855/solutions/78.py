@@ -1,5 +1,4 @@
 def vert_mirror(strng):
-    # your code
     lst = strng.split('\n')
     return '\n'.join(i[::-1] for i in lst)
 

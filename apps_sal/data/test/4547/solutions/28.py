@@ -8,13 +8,12 @@
 10 ≦ N ≦ 99
 '''
 
-# 標準入力から N を取得する
 n = int(input())
 
 result = ""
-if n % 10 == 9:  # 1の位が 9
+if n % 10 == 9:
     result = "Yes"
-elif 90 <= n % 100 < 100:   # 10の位が 9
+elif 90 <= n % 100 < 100:
     result = "Yes"
 else:
     result = "No"

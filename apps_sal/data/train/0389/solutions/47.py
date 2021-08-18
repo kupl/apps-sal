@@ -8,7 +8,6 @@ class Solution(object):
         if N == 1:
             return False
 
-        # Want zero subset sum
         left = {A[0]}
         for i in range(1, int(N / 2)):
             left = {z + A[i] for z in left} | left | {A[i]}

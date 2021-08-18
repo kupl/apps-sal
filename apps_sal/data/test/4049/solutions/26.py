@@ -12,14 +12,12 @@ def fa(a1, b2, a2, b3, a3, b1):
         a1 = max(a1 + a2, 0)
         a2 = 0
 
-    # print(a1,a2,a3)
     bv = max(b2 - a2 - a3, 0)
     c = c + bv
     a2 = a2 - b2
     if (a2 < 0):
         a3 = max(a2 + a3, 0)
 
-    # print(a1,a2,a3)
     bv = max(b3 - a1 - a3, 0)
     c = c + bv
 

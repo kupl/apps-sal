@@ -1,7 +1,6 @@
 import sys
 import math
 
-#f = open('input/input_0', 'r')
 f = sys.stdin
 
 R, x1, y1, x2, y2 = list(map(int, f.readline().split()))

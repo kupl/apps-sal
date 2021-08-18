@@ -7,16 +7,16 @@ for i in range(H):
     L.append(a)
 
 for i in range(H):
-    if ('#' in L[i]) == True:
+    if ('
         side.append(L[i])
 
-side = list(map(list, zip(*side)))
+side=list(map(list, zip(*side)))
 
 for i in range(len(side)):
-    if ('#' in side[i]) == True:
+    if ('
         ver.append(side[i])
 
-ver = list(map(list, zip(*ver)))
+ver=list(map(list, zip(*ver)))
 
 for i in range(len(ver)):
     print(''.join(ver[i]))

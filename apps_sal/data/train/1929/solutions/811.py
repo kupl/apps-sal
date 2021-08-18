@@ -7,12 +7,9 @@ class StreamChecker:
         for word in words:
             tmp_dict = self.trie
             for c in word:
-                # update our temporary dict and add our current letter and a sub-dictionary
-                # if key is not in dict, setdefault() will add {key:{}} and return default value {}
-                # otherwise it will directly return the existing value of key
                 tmp_dict = tmp_dict.setdefault(c, dict())
 
-            tmp_dict['#'] = '#'
+            tmp_dict['
 
     def query(self, letter: str) -> bool:
         waitlist = []
@@ -26,4 +23,4 @@ class StreamChecker:
 
         self.waitlist = waitlist
 
-        return any('#' in item for item in self.waitlist)
+        return any('

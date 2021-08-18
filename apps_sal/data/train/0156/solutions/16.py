@@ -40,9 +40,6 @@ class Solution:
                     else:
                         table[i][j][0] = val2 + 1
                         table[i][j][1] = j - 1
-        # for j in range(len(str2)):
-        #     table[-1][j] += len(str2) - 1 - j
-        # print(table)
         result = ''
         pos1, pos2 = len(str1) - 1, len(str2) - 1
         while True:
@@ -56,7 +53,6 @@ class Solution:
                 else:
                     result = str2[pos2] + result
                     pos2 = table[pos1][pos2][1]
-            # print(pos1, pos2)
             if pos1 < 0 or pos2 < 0:
                 result = str1[0:pos1 + 1] + str2[0:pos2 + 1] + result
                 break

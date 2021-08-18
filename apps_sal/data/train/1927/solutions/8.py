@@ -10,7 +10,7 @@ class Solution:
                 stack.append(a)
             else:
                 while a < 0 and stack and stack[-1] > 0:
-                    last = stack.pop()  # last > 0
+                    last = stack.pop()
                     a = a if -a > last else last if -a < last else 0
                 if a != 0:
                     stack.append(a)

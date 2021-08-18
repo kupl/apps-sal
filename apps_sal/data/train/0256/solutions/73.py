@@ -24,4 +24,3 @@ class Solution:
                 lo = mid + 1
 
         return lo
-    # https://leetcode.com/problems/koko-eating-bananas/discuss/804478/Python-Binary-Search-98

@@ -1,6 +1,3 @@
-#n = int(input())
-#n, m = map(int, input().split())
-#d = list(map(int, input().split()))
 
 n = int(input())
 d = sorted(map(int, input().split()))

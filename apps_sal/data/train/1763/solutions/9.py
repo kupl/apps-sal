@@ -4,5 +4,5 @@ def insane_inc_or_dec(n):
     for r in range(2, k + 1):
         a *= n + r
         b *= r
-    binomial = a // b  # is (n+k)-choose-k with k=9
+    binomial = a // b
     return (binomial + binomial * (n + 10) // 10 - 10 * n - 2) % modulo

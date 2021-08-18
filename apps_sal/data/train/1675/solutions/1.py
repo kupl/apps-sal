@@ -1,4 +1,3 @@
-# cook your dish here
 from math import *
 for u in range(int(input())):
     p = input()

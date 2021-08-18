@@ -19,7 +19,6 @@ class Solution:
             if A[i] in ab_dict and j in ab_dict[A[i]]:
                 subSolutions[i][j] = 1 + subSolve(i + 1, j + 1)
                 return subSolutions[i][j]
-            # if you include A[i]:
             next_j = None
             for b in ab_dict[A[i]]:
                 if j < b:

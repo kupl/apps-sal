@@ -1,6 +1,5 @@
 S = str(input())
 maru_count = 0
-# 注文書に書かれた文字列Sに含まれるoの数だけ、１００円加算する。
 
 for i in S:
     if i == 'o':

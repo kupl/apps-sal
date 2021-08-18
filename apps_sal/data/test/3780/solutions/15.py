@@ -32,6 +32,3 @@ j = get(abs(v) - s, dot() + t * s, abs(d) - t * t * s)
 
 
 print(i if i < t else t + j)
-
-
-# Made By Mostafa_Khaled

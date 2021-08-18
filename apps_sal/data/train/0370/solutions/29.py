@@ -38,21 +38,19 @@ class Solution:
                 out.add(n)
             return out
 
-        idx_lookup = {A[i]: i for i in range(len(A))}  # in order to find idx in uf
+        idx_lookup = {A[i]: i for i in range(len(A))}
         uf = UnionFind()
         uf.uf(len(A))
-        primeAndItsMultiples = collections.defaultdict(list)  # {2: [4,6], 3: [6,15], 5: [15,35], 7:[35]}
+        primeAndItsMultiples = collections.defaultdict(list)
 
         for i in A:
             factors = primeFactors(i)
             for f in factors:
                 primeAndItsMultiples[f].append(i)
 
-        # we don't need to connec all the multiples of a prime,
-        # just use the first multiple as their root
         for idx, multiples in list(primeAndItsMultiples.items()):
             if multiples:
-                root = multiples[0]  # use the first multiple as their root
+                root = multiples[0]
                 for node in multiples[1:]:
-                    uf.union(idx_lookup[node], idx_lookup[root])  # connect node with root
+                    uf.union(idx_lookup[node], idx_lookup[root])
         return max(uf.size)

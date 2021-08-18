@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 for _ in range(int(input())):
     size = int(input())
     power = []

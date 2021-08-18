@@ -1,4 +1,3 @@
-# https://www.codechef.com/problems/RGAND
 
 MVAL = 1000000007
 
@@ -10,7 +9,7 @@ def rangeand(low, hi):
     lmd = 0
     while (low & p2) == 0:
         p2 *= 2
-    pmdf = p2  # lowest set bit splits an interval
+    pmdf = p2
     if pmdf >= odf:
         return (odf * low) % MVAL
     while p2 <= low:

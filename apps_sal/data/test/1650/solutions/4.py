@@ -9,15 +9,12 @@ for e in l:
     dp_new = [[0] * 2 for _ in range(2)]
     for now in range(2):
         for prev in range(2):
-            # same -> same
             if now == e:
                 dp_new[now][1] += dp[prev][1] * (now + 1)
 
-            # same -> small
             if now == 0 and e == 1:
                 dp_new[now][0] += dp[prev][1]
 
-            # small -> small
             dp_new[now][0] += dp[prev][0] * (now + 1)
 
     dp = dp_new

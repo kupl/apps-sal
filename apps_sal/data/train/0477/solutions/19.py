@@ -4,7 +4,6 @@ class Solution:
         series = ['0']
         for i in range(n - 1):
             series = self.getNext(series)
-            # print(series)
         return series[k - 1]
 
     def getNext(self, series):

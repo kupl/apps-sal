@@ -76,8 +76,6 @@ def test():
                     print(f"!! x={x} y={y} len(solve(x, y, K))={len(solve(x, y, K))} M[x][y]={M[x][y]}")
     print("test finished")
 
-# test()
-
 
 def main():
     K = int(input())

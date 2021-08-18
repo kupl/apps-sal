@@ -1,7 +1,6 @@
 import fractions
 count = 0
 a = int(input())
-# n
 
 listx = list(map(int, input().split(' ')))
 listy = list(map(int, input().split(' ')))

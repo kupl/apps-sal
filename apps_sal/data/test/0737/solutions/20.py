@@ -1,6 +1,5 @@
-# B
 n = int(input())
-a = 1  # длина стороны
+a = 1
 while a * a <= n:
     a += 1
 a -= 1

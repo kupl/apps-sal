@@ -25,8 +25,6 @@ class Solution:
         dic = {}
         for i, num in enumerate(A):
             for factor in range(2, int(math.sqrt(num) + 1)):
-                # if factor**2 > num:
-                #     break
                 if num % factor == 0:
                     for fac in [factor, num // factor]:
                         if fac in dic:
@@ -37,6 +35,4 @@ class Solution:
                 uf.union(dic[num], i)
             else:
                 dic[num] = i
-        # print(uf.parents)
-        # print(uf.sizes)
         return uf.max

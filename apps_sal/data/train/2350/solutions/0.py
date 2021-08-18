@@ -1,7 +1,5 @@
 
 """
-#this code is a precomputation part.
-#it takes about 2 hours.
 class Graph:
   def __init__(self,n):
     self.edge=[[0 for j in xrange(n)] for i in xrange(n)]
@@ -120,8 +118,6 @@ def comb(a, b):
 
 "python 2.5 cannot use fractions."
 "I used fractions for local computation."
-#import fractions
-# fr=fractions.Fraction(1)
 memo_ff = {}
 
 
@@ -300,12 +296,10 @@ def brute2(n):
 
 def main():
     t = eval(input())
-    # z=[int(ans(i)) for i in xrange(18)] it takes about 10 seconds
     z = [0, 1, 0, 1, 6, 25, 495, 5586, 93268, 2052513, 43258365, 1167393700, 34010847486,
          1078391538159, 38595111963499, 1476893151785520, 61479081902937000, 2761923686066698561]
     for _ in range(t):
         print(z[eval(input())])
 
 
-# test()
 main()

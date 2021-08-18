@@ -1,7 +1,6 @@
 n = input()
-str_arr = input().split(' ')  # will take in a string of numbers separated by a space
+str_arr = input().split(' ')
 arr = [int(num) for num in str_arr]
-#print (arr)
 lm = 1
 l = 1
 ant = arr[0]

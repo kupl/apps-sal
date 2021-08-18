@@ -10,7 +10,7 @@ for i in range(n):
 al = n
 
 
-WINLIST = [None] * (n + 1)  # 0:そこに行けば必敗,1:そこにいけば必勝
+WINLIST = [None] * (n + 1)
 
 
 def move(n, al):

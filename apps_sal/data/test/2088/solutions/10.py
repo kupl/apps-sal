@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 """
 
@@ -47,23 +46,6 @@ while q:
         colors[parents[u]] += 1
 
 
-#
-#
-# def dfs(u, parent):
-#     cc, hc = 0, 0
-#     for v in G[u]:
-#         if v != parent:
-#             a, b = dfs(v, u)
-#             cc += a
-#             hc += b
-#     counts[u] = hc + 1
-#     cc = cc if cc > 0 else 1
-#     colors[u] = cc
-#     return cc, hc + 1
-#
-#
-# dfs(1, -1)
-#
 colors = colors[1:]
 colors.sort()
 print(' '.join(map(str, colors)))

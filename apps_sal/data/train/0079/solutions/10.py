@@ -24,7 +24,6 @@ def main():
     for _ in range(int(input())):
         n = int(input())
         facs = p_factorization_t(n)
-        # print(facs)
         if len(facs) == 1:
             p, cnt = facs[0]
             al = []
@@ -86,8 +85,6 @@ def main():
                 print(1)
             else:
                 print(0)
-
-        # elif len(facs) == 2:
 
 
 def __starting_point():

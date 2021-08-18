@@ -7,7 +7,7 @@ class TrieNode:
         self.children: Dict[str, TrieNode] = {}
 
         self.end = False
-        self.word: Optional[str] = None  # not necessary in this task
+        self.word: Optional[str] = None
 
 
 def build_trie(words: List[str]) -> TrieNode:
@@ -69,8 +69,3 @@ class StreamChecker:
         self._stream.append(letter)
 
         return self._search_trie(reversed(self._stream))
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

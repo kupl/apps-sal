@@ -1,7 +1,3 @@
-# coding: utf-8
-
-# https://atcoder.jp/contests/abc115
-# 10:59 giveup
 
 
 def main():

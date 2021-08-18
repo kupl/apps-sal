@@ -17,7 +17,6 @@ while t > 0:
                     min_y = j
                 if max_y < j:
                     max_y = j
-                # print 'min_x=',min_x,'min_y=',min_y,'max_x=',max_x,'max_y='                    ,max_y
     if max_x == -1 or min_x == 1001 or max_y == -1 or max_y == 1001:
         print(0)
     else:

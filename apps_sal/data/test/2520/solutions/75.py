@@ -71,5 +71,4 @@ for i in range(K):
 ans_list = []
 for i in range(1, N + 1):
     ans_list.append(uf.size(i) - len(dame[i]) - 1)
-    #print(ans, uf.size(i), len(dame[i]))
 print((*ans_list))

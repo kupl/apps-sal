@@ -4,7 +4,6 @@ class Solution:
 
         def helper(h=[0] * n, res=0):
 
-            #print(h, res, ans)
             if all(x == m for x in h):
                 self.ans = min(self.ans, res)
                 return

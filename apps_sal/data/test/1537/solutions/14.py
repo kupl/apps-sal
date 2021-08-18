@@ -4,7 +4,6 @@ v = []
 for i in range(n):
     v.append(input())
 extra = 0
-# row
 for i in range(n):
     L = n
     R = -1

@@ -20,10 +20,8 @@ def solve(start, power, point, maryoku):
         return
     elif start > H:
         anskouho.append(point)
-        # visited.sort(reverse=True)
         return 0
     elif ans[start] != 0:
-        # visited.sort(reverse=True)
         return 0
     else:
         visited.append(start)

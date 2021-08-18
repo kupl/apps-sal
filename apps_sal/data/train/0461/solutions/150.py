@@ -1,15 +1,12 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
 
-        # DFS
-
         subordinates = collections.defaultdict(list)
 
         for i, m in enumerate(manager):
 
             if i != headID:
                 subordinates.setdefault(m, []).append(i)
-                # subordinates[m].append(i)
 
         self.res = 0
 

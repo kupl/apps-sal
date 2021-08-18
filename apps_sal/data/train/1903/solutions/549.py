@@ -1,11 +1,8 @@
 class UF(object):
 
     def __init__(self, size):
-        # initially, each node is an independent component
         self.parent = [i for i in range(size)]
-        # keep the size of each component
         self.size = [1] * (size)
-        # count of the disconnected sets
 
     def union(self, p, q):
         rootp = self.find(p)

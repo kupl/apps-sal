@@ -5,7 +5,6 @@ arr = []
 for i in range(t):
     inp = input()
     arr.append(list(map(int, inp.split(" "))))
-# print(arr)
 
 
 def gen_array(arr1, arr2, mp, rn):
@@ -42,12 +41,8 @@ for i in range(t):
             arr2.append(arr[i][j])
     arr1.reverse()
     arr2.reverse()
-    # print(arr1)
-    # print(arr2)
     rh[i].append(arr1)
     rh[i].append(arr2)
     for j in range(2, len(arr[i])):
         rh[i].append(gen_array(rh[i][j - 1], rh[i][j - 2], arr[i][0], j + 1))
     check(rh[i])
-
-# print(rh)

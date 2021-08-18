@@ -1,4 +1,3 @@
-# cook your dish here
 list = []
 
 x = int(input())

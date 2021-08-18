@@ -1,4 +1,3 @@
-# author: riyan
 
 def bigpow(n, p, m):
     if p == 0:

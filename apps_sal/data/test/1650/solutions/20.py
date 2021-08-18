@@ -1,7 +1,7 @@
 L = input()
 l = len(L)
 mod = 10**9 + 7
-ans = 1  # (0,0)
+ans = 1
 
 d = dict()
 

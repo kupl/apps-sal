@@ -60,21 +60,7 @@ def YESNO(fl):
 
 def main():
     n, l = rinput()
-    #n = iinput()
-    #k = iinput()
-    #m = iinput()
-    #n = int(sys.stdin.readline().strip())
-    #n, k = rinput()
-    #n, m = rinput()
-    #m, k = rinput()
-    #n, k, m = rinput()
-    #n, m, k = rinput()
-    #k, n, m = rinput()
-    #k, m, n = rinput()
-    #m, k, n = rinput()
-    #m, n, k = rinput()
     q = rlinput()
-    #q = linput()
     q = [0] + q + [l]
     w, e = [0] * (n + 2), [0] * (n + 2)
 

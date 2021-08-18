@@ -1,7 +1,3 @@
-# Breadth first decreasing (BFD) algorithm for the Frobenius
-# number following Beihoffer, Hendry, Nijenhuis, and Wagon
-# ("Faster Algorithms For Frobenius Numbers", The Electronic
-# Journal of Combinatorics, 2005).
 
 from functools import reduce
 from collections import deque
@@ -41,8 +37,6 @@ def min_price(a):
 
             w = s[v] + a[j]
 
-            # This performance-enhancing
-            # condition is given on p. 10.
             if w == s[u] and j < p[u] - 1:
                 p[u] = j + 1
 

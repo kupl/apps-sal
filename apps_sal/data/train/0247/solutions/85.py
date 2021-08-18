@@ -1,7 +1,6 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         n = len(arr)
-        # dp[i] means the minimum length of the sub-array with sum equal to target from 0 to i
         dp = [100001] * (n)
         presum = {0: -1}
         s = 0

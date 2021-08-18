@@ -23,6 +23,3 @@ for i in range(n):
     prix.append(min(min(prix[k] + 120, prix[j] + 50), prix[-1] + 20))
 
     print(prix[-1] - prix[-2])
-
-
-# Made By Mostafa_Khaled

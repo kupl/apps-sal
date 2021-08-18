@@ -2,8 +2,8 @@ def frequency(s, n):
     f = [[0 for i in range(26)]for j in range(n + 1)]
     count = 0
     for i in range(n):
-        if s[i] != "#":
-            f[count][ord(s[i]) - 97] += 1
+        if s[i] != "
+        f[count][ord(s[i]) - 97] += 1
         else:
             count += 1
             for j in range(26):
@@ -19,8 +19,8 @@ def solve(s):
     ans = 0
     index = []
     for i in range(n - 1, -1, -1):
-        if s[i] == "#":
-            index.append(i)
+        if s[i] == "
+        index.append(i)
 
     for c in range(1, count - 2 + 1):
         if index[-2] == index[-1] + 1 or index[-3] == index[-2] + 1:

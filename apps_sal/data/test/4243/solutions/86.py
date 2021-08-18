@@ -14,14 +14,12 @@
 Xは整数
 0 ≦ X ≦ 1,000,000,000
 '''
-# def calc
 
-# 標準入力から X の値を取得する
 input_x = int(input())
 
-ret1 = input_x // 500  # 500円で割った商
-ret2 = ret1 * 1000  # 高橋君 500円の喜び
-ret3 = input_x - (ret1 * 500)   # X円から500円の枚数分を引いたお金
-ret4 = ret3 // 5  # （X円から500円の枚数分を引いたお金）÷ 5
-ret5 = ret4 * 5  # 高橋君 5円の喜び
+ret1 = input_x // 500
+ret2 = ret1 * 1000
+ret3 = input_x - (ret1 * 500)
+ret4 = ret3 // 5
+ret5 = ret4 * 5
 print((ret2 + ret5))

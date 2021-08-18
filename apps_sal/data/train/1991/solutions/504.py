@@ -12,5 +12,4 @@ class Solution:
                         cost = abs(L[u] - L[v])
                         if f + cost <= fuel:
                             dp[u][f] = dp[u][f] + dp[v][f + cost]
-        # print(dp)
         return sum(dp[fn]) % 1000000007

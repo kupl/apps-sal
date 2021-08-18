@@ -11,8 +11,8 @@ def formater(part):
 
 
 def generate_bc(url, separator):
-    ans, urlLst = [], re.sub(r'(/index\..*)|(\?.*)|(#.*)|(https?://)|/$', '', url).split('/')
-    lenLst = len(urlLst)
+    ans, urlLst = [], re.sub(r'( / index\..*)|(\?.*)|(
+    lenLst=len(urlLst)
 
     for i in range(lenLst):
         if i == 0 and lenLst > 1:

@@ -10,18 +10,14 @@ def const(s1, s2, ct):
     return ans
 
 
-ans1 = const("#", ".", A - 1)
-ans2 = const(".", "#", B - 1)
-# print(ans1)
-# print(ans2)
-ans = []
+ans1 = const("
+ans2=const(".", "
+ans=[]
 for i in range(H):
-    S1 = ans1[i]
-    S2 = ans2[i][::-1]
+    S1=ans1[i]
+    S2=ans2[i][::-1]
     ans.append(S1 + S2)
-# print("".join(["#","."]))
 
 print((H, len(ans[0])))
 for a in ans:
-    # print(type(a))
     print(("".join(a)))

@@ -1,5 +1,4 @@
 w, h, n = [int(i) for i in input().split()]
-# 二次元配列の作成
 list_2d = [[0] * w for i in range(h)]
 
 

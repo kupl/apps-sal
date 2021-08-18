@@ -17,6 +17,4 @@ class Solution:
                         queue.pop(0)
                 queue.append(i)
             ans.append(dp[queue[0]])
-        # print(ans)
-        # print(dp)
         return (max(dp))

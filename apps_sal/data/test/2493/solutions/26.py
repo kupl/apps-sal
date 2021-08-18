@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import Counter
 MOD = 1000000007
@@ -17,14 +16,11 @@ def solve(n: int, a: "List[int]"):
             else:
                 second_index = i
 
-    # 1つ目のtwiceValueより左にある数字の数
     left = first_index
 
-    # 2つ目のtwiceValueより右にある数字の数
     right = n - second_index
     edge = left + right
 
-    # nCk,edgeCkをO(1)で取れるようにするため
     combination_table = {n + 1: [0] * (n + 2), edge: [0] * (edge + 1)}
 
     combination_table[n + 1][0] = 1
@@ -33,14 +29,12 @@ def solve(n: int, a: "List[int]"):
     combination_table[edge][edge] = 1
     c_value = 1
 
-    # nCkをうめる
     for i in range(1, n + 1):
         c_value *= (n + 1 + 1 - i) * pow(i, MOD - 2, MOD)
         c_value %= MOD
         combination_table[n + 1][i] = c_value
 
     c_value = 1
-    # edgeCkをうめる
     for i in range(1, edge):
         c_value *= (edge + 1 - i) * pow(i, MOD - 2, MOD)
         c_value %= MOD
@@ -61,8 +55,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    n = int(next(tokens))  # type: int
-    a = [int(next(tokens)) for _ in range(n + 1)]  # type: "List[int]"
+    n = int(next(tokens))
+    a = [int(next(tokens)) for _ in range(n + 1)]
     solve(n, a)
 
 

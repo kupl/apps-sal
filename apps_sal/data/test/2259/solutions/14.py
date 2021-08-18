@@ -16,7 +16,7 @@ def CeilIndex(A, l, r, key):
 
 def lis(A, size):
     tailTable = [0 for i in range(size + 1)]
-    len = 0  # always points empty slot
+    len = 0
 
     tailTable[0] = A[0]
     len = 1

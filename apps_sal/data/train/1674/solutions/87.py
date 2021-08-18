@@ -5,7 +5,6 @@ class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
 
         def alex(idx, M, score_alex, score_lee):
-            #print('alex', idx, M, score_alex, score_lee)
             if idx == len(piles):
                 return score_alex, score_lee
             if idx == len(piles) - 1:
@@ -19,11 +18,9 @@ class Solution:
                         countl = sl
                 else:
                     break
-            #print('--------> alex', idx, M, maxa, countl)
             return maxa, countl
 
         def lee(idx, M, score_alex, score_lee):
-            #print('lee', idx, M, score_alex, score_lee)
             if idx == len(piles):
                 return score_alex, score_lee
             if idx == len(piles) - 1:
@@ -37,11 +34,7 @@ class Solution:
                         counta = sa
                 else:
                     break
-            #print('--------> lee', idx, M, maxl, counta)
             return counta, maxl
-
-        #self.memo = dict()
-        # return alex(0, 1, 0, 0)[0]
 
         @lru_cache(None)
         def minimax(i, m, player):

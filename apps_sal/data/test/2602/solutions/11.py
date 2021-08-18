@@ -1,7 +1,6 @@
 import sys
 lines = sys.stdin.readlines()
 T = int(lines[0].strip())
-# (N, K) = map(int, lines[0].strip().split(" "))
 for t in range(T):
     (a, b, n, m) = map(int, lines[t + 1].strip().split(" "))
     res = True

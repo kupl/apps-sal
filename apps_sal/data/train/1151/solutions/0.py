@@ -1,9 +1,6 @@
 from sys import stdin
 from math import ceil, gcd
 
-# Input data
-#stdin = open("input", "r")
-
 
 def dfs(src, visit):
     visit[src] = 1

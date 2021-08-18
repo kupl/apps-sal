@@ -1,5 +1,4 @@
 class Solution:
-    # dp(loc, fuel) = sum(dp(pre_loc, fuel + abs(loc-pre_loc)))
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         M = 10**9 + 7
 

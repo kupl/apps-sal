@@ -1,10 +1,6 @@
-# -*- coding: utf-8 -*-
 import math
 import random
 import time
-
-# argv = sys.argv
-# argc = len(argv)
 
 
 def __starting_point():

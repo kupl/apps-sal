@@ -1,4 +1,3 @@
-# D - XXOR
 
 import sys
 readline = sys.stdin.readline
@@ -12,9 +11,6 @@ for i in range(N):
         if A[i] >> j & 1:
             bits[j] += 1
 
-# tmp_K: Kの上からi桁目に応じて加算する
-# tmp_greed: Kの上からi桁目が1だったら、
-# i桁目を0にしてi+1桁目以降を貪欲に選んだケースを試す
 ans = 0
 tmp_K = 0
 tmp_greed = 0

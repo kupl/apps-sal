@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 tcases = int(input())
 myanswer = []

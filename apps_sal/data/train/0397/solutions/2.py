@@ -2,7 +2,7 @@ class Solution:
     def countDigitOne(self, n):
         ones, wei = 0, 1
         while wei <= n:
-            m = int(n / wei) % 10  # 求某位数字
+            m = int(n / wei) % 10
 
             if m > 1:
                 ones += (int(n / wei / 10) + 1) * wei

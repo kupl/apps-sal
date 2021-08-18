@@ -1,5 +1,3 @@
-#!/usr/local/bin/python3
-# https://atcoder.jp/contests/abc088/tasks/abc088_b
 
 _ = int(input())
 A = sorted(list(map(int, input().split())))[::-1]

@@ -27,6 +27,4 @@ class Solution:
                 dp.append((end, max(dp[last_start][1] + p, dp[-1][1])))
             else:
                 dp.append((end, p))
-        #     print(dp, last_start, start)
-        # print(dp)
         return dp[n][1]

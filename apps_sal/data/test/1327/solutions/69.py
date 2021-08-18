@@ -13,7 +13,6 @@ totals = []
 
 for i in range(0, 2 ** 3):
     totals = []
-    # print(bin(i))
     for v in range(N):
         tmp = 0
         for j in range(0, 3):
@@ -22,7 +21,6 @@ for i in range(0, 2 ** 3):
             else:
                 tmp -= value[v][j]
         totals.append(tmp)
-    # print(totals)
     totals = sorted(totals, reverse=True)
 
     t = 0

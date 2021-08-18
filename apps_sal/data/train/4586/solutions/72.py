@@ -13,6 +13,6 @@ def tv_remote(word):
         pos2 = kboard.index(c)
         count += max(pos1 // 8, pos2 // 8) - min(pos1 // 8, pos2 // 8)
         count += max(pos1 % 8, pos2 % 8) - min(pos1 % 8, pos2 % 8)
-        count += 1  # accept character with 'OK'
+        count += 1
         start = c
     return count

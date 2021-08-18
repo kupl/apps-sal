@@ -36,11 +36,6 @@ class Solution:
                     findmin = count[i][j][0]
                     for k in range(1, count[i][j][1]):
                         findmin = min(findmin, count[i][j - k][0])
-                    # if count[i][j][0] > 1 and count[i][j][1] > 1 and count[i-1][j-1][0] >= 1:
-                    #     # count[i][j][2] =
-                    #     # res += min(count[i][j][0], count[i][j][1])-1
                         res += findmin - 1
 
-                # print(i, j, res)
-        # print(count)
         return res

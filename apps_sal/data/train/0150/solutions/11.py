@@ -20,7 +20,6 @@ class Solution:
             minHash[A[i]].append(i)
         minHash = sorted(list(minHash.items()), key=lambda x: x[0])
 
-        #print (leftMax, rightMin, minHash)
         i, res = 0, 1
         while i < len(minHash) and minHash[i][0] < leftMax:
             positions = minHash[i][1]

@@ -1,4 +1,3 @@
-# cook your dish
 a = input()
 b = sorted(input().split())
 c = sorted(input().split())

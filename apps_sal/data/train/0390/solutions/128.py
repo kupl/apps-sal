@@ -12,13 +12,3 @@ class Solution:
             return memo[i]
 
         return dfs(n)
-
-
-#         dp = [False] * (n + 1)
-#         for i in range(1, n + 1):
-#             j = 1
-#             while not dp[i] and j * j <= i:
-#                 dp[i] = not dp[i - j * j]
-#                 j += 1
-
-#         return dp[n]

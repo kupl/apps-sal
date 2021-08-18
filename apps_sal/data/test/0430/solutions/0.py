@@ -28,7 +28,6 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
-############################## SOLUTION ##############################
 n = int(input())
 a = [int(x) for x in g()]
 c100 = a.count(100)

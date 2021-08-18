@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
 
 n, h = list(map(int, input().split()))
 xs = [list(map(int, input().split())) for _ in range(n)]

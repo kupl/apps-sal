@@ -44,7 +44,7 @@ class LCA(object):
 
     def get(self, u, v):
         dd = self.__depth[v] - self.__depth[u]
-        if(dd < 0):  # vの方が深いようにする
+        if(dd < 0):
             u, v = v, u
             dd *= -1
         for i in range(self.__logn):
@@ -70,8 +70,7 @@ def resolve():
         E[b].append((a, c, d))
     G = LCA(E)
 
-    # Queryを先読みする
-    Qs = [[] for _ in range(n)]  # Q[v]: idx, color, mag, coef
+    Qs = [[] for _ in range(n)]
     for i in range(q):
         x, y, u, v = map(int, input().split())
         u -= 1
@@ -81,19 +80,15 @@ def resolve():
         Qs[v].append((i, x, y, 1))
         Qs[c].append((i, x, y, -2))
 
-    # dfsでクエリに答えていく
     ans = [0] * q
-    S = [[0, 0] for _ in range(n)]  # S[col]: total num, total len
+    S = [[0, 0] for _ in range(n)]
 
     def dfs(v, p):
-        # クエリに答える
-        # 現在のlengthから、色のtotal lenを引き、青の個数*倍率(mug)を足したものが変更後の長さ
         for idx, col, mag, coef in Qs[v]:
             x = G.dist[v]
             x -= S[col][1]
             x += mag * S[col][0]
             ans[idx] += x * coef
-        # 遷移
         for nv, col, d in E[v]:
             if(nv == p):
                 continue

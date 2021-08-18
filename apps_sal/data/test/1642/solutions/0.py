@@ -27,8 +27,6 @@ Vec = Vector
 
 def getH(p, a, b):
     s2 = p.to(a).dot(p.to(b))
-    # a * h / 2 = s
-    # h = s * 2 / a
     return s2 / (a.to(b).lensq() ** 0.5)
 
 

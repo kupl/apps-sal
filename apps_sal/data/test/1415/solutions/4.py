@@ -1,13 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
-#   = input()
-#   = int(input())
-
-#() = (i for i in input().split())
-#   = [i for i in input().split()]
 
 (a, b, x, y) = (int(i) for i in input().split())
 
@@ -42,4 +35,3 @@ for i in ans:
     print(i, end=' ')
 print()
 finish = time.time()
-#print(finish - start)

@@ -16,10 +16,9 @@ L.sort()
 class Bit:
     """
     0-indexed
-    # 使用例
-    bit = Bit(10)  # 要素数
+    bit = Bit(10)  
     bit.add(2, 10)
-    print(bit.sum(5))  # 10
+    print(bit.sum(5))  
     """
 
     def __init__(self, n):
@@ -51,7 +50,6 @@ class BitImos:
         self.bit = Bit(n + 1)
 
     def add(self, s, t, x):
-        # [s, t)にxを加算
         self.bit.add(s, x)
         self.bit.add(t, -x)
 
@@ -59,7 +57,6 @@ class BitImos:
         return self[i]
 
     def __getitem__(self, key):
-        # 位置iの値を取得
         return self.bit.sum(key + 1)
 
 

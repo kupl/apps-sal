@@ -30,11 +30,6 @@ for j in range(m):
             gg[i][j] = 1
 
 
-# print(g)
-# print(row)
-# print(column)
-# print(ng)
-# print(gg)
 if gg == g:
     print('YES')
     for i in range(n):

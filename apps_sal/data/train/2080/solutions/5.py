@@ -3,7 +3,6 @@ d = [int(i) for i in input().split()]
 c = int(input())
 b = [int(i) for i in input().split()]
 b.sort()
-# d.sort()
 take = 1
 p = min(d)
 s = 0

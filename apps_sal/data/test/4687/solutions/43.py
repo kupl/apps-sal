@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Sep 28 01:21:16 2020
 
 @author: liang
 """
 
-# バケツソートO(n)
 N, K = map(int, input().split())
 num = [0] * (10**5 + 1)
 for i in range(N):

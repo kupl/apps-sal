@@ -18,7 +18,6 @@ def check(amidakuji, w):
 
 
 def main():
-    # 入力
     readline = stdin.readline
     mod = 10**9 + 7
     h, w, k = map(int, readline().split())

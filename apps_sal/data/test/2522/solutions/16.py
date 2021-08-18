@@ -1,4 +1,3 @@
-#a,b,c,d = map(int, input().split())
 n = int(input())
 a = list(map(int, input().strip().split()))
 b = list(map(int, input().strip().split()))

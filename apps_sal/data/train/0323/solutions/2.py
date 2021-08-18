@@ -40,6 +40,4 @@ class Solution:
                 result[i][j] = il_char in ds and (top or left)
                 if (s1_char == s2_char == il_char) and top and left:
                     result[i][j] = True
-                #print(f" [{i},{j}] ==> checking if ** {il_char} **  in  {ds} ==> set result to {result[i][j]}")
-        # print(result)
         return result[-1][-1]

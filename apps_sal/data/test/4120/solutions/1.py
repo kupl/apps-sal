@@ -25,7 +25,6 @@ while f < r:
             q[r] = j
             r += 1
 
-# print(d)
 
 pre = [[] for _ in range(n)]
 
@@ -34,16 +33,13 @@ for i in range(n):
         if d[j] == d[i] - 1:
             pre[i].append((ind, j))
 
-# print(pre)
 
 s = [0 for _ in range(n)]
 top = n
 sol = []
 while top > 0:
-    #print(top, s)
     if top == n:
         u = ['0' for _ in range(m)]
-        # print(s)
         for i in range(1, n):
             u[pre[i][s[i]][0]] = '1'
         sol.append("".join(u))
@@ -54,7 +50,6 @@ while top > 0:
         s[top] += 1
         if s[top] == len(pre[top]):
             top -= 1
-            #s[top] += 1
         else:
             top += 1
             if top < n:

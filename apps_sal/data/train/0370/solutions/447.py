@@ -51,7 +51,7 @@ class Solution:
         return max(dsu.size)
 
 
-class DSU:  # Disjoint Set Union data structure
+class DSU:
 
     def __init__(self, size):
         self.size = [1] * (size + 1)
@@ -59,21 +59,9 @@ class DSU:  # Disjoint Set Union data structure
 
     def find(self, i):
 
-        # Path halving... replaces only every other parent pointer with grandparent
-        # was fastest at 976ms
         while self.parent[i] != i:
             i = self.parent[i] = self.parent[self.parent[i]]
         return i
-
-        # Path splitting way... let to 980ms... replacing every parent with grandparent
-        # while self.parent[i] != i:
-        ##    i, self.parent[i] = self.parent[i], self.parent[self.parent[i]]
-        # return i
-
-        # The simplest recursive way... led to 1012ms
-        # if i != self.parent[i]:
-        ##    self.parent[i] = self.find(self.parent[i])
-        # return self.parent[i]
 
     def union(self, i, j):
         i = self.find(i)

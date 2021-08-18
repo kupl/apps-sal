@@ -15,8 +15,6 @@ class Solution:
                 j += 1
             d[i] = len(q)
 
-        # print(d)
-
         d.sort(reverse=1)
         nums.sort(reverse=1)
         ret = 0

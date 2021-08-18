@@ -24,5 +24,4 @@ class Solution:
                         K += 1
                     i += 1
                     curr -= 1
-            # print(i,j,K, curr, ans)
         return ans

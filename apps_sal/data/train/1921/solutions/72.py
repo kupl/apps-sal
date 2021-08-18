@@ -24,7 +24,6 @@ class DinnerPlates:
     def pop(self) -> int:
         while self.stacks and not self.stacks[-1]:
             self.stacks.pop()
-            # self.toPush = min(self.toPush, len(self.stacks)-1)
 
         if not self.stacks:
             return -1

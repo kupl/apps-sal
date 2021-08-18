@@ -12,8 +12,6 @@ class Solution:
             else:
                 counter[ele] += 1
 
-        # print(counter)
-
         if counter[0] % 2:
             return False
 

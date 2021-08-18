@@ -31,7 +31,6 @@ def min_squares(canvas, length, width):
     b = find_bottom()
     r = find_right()
 
-    # print(t, l, b, r)
     painted = 0
     for i in range(t, b + 1):
         for j in range(l, r + 1):

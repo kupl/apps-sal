@@ -17,7 +17,7 @@ def shortest(N, edges):
             seen.add(v1)
             path = (v1, path)
             if v1 == t:
-                return cost  # ,path
+                return cost
 
             for c, v2 in g.get(v1, ()):
                 if v2 in seen:
@@ -28,4 +28,4 @@ def shortest(N, edges):
                     mins[v2] = next
                     heappush(q, (next, v2, path))
 
-    return -1  # float("inf")
+    return -1

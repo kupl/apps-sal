@@ -10,4 +10,3 @@ snoopy.bark = lambda: "Woof"
 scoobydoo = Dog("Great Dane")
 
 scoobydoo.bark = lambda: "Woof"
-# Not hard at all

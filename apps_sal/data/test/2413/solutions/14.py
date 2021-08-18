@@ -10,4 +10,3 @@ for i in range(int(input())):
         print(max(First, Last) * 2)
     else:
         print(N)
-# Caption: Contest Time

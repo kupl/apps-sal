@@ -11,8 +11,8 @@ def accept_input():
 
 
 def process(s):
-    if s == "#":
-        return 1
+    if s == "
+      return 1
     else:
         return 0
 
@@ -25,16 +25,16 @@ g = 0
 b = 0
 for i in range(H):
     for j in range(W):
-        if new_S[i][j] == "#":
-            bl = 0
-            for idou in arr:
+        if new_S[i][j] == "
+          bl = 0
+           for idou in arr:
                 if i + idou[0] == -1 or i + idou[0] == H:
                     continue
                 elif j + idou[1] == -1 or j + idou[1] == W:
                     continue
                 else:
-                    if new_S[i + idou[0]][j + idou[1]] == "#":
-                        bl = 1
+                    if new_S[i + idou[0]][j + idou[1]] == "
+                      bl = 1
             if bl != 1:
                 b = 1
                 break

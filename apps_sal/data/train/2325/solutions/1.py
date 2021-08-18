@@ -33,7 +33,6 @@ for _ in range(q):
     sb = SB[b] - SB[a - 1]
     ta = TA[d] - TA[c - 1]
     tb = TB[d] - TB[c - 1]
-    # ぜんぶBにしちゃう
     sb += 2 * sa
     tb += 2 * ta
     if abs(sb - tb) % 3 == 0:

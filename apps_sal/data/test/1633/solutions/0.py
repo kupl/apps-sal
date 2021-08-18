@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-# SOLUTION
-
 
 def main():
     n, m, k = read()
@@ -27,13 +25,7 @@ def main():
     return 0
 
 
-# HELPERS
-
-
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

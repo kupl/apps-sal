@@ -17,7 +17,6 @@ else:
     p = i
     left = p + 1
     i = n - 1
-    #print(l)################
     while True:
         if i == 0:
             break
@@ -26,8 +25,7 @@ else:
         i -= 1
     kon = i
     right = n - kon
-    while True:  # right <= k or left <= k:
-        #print(p, kon, left, right, k)###############
+    while True:
         if left <= right:
             if k >= left * (l[p + 1] - l[p]):
                 k -= left * (l[p + 1] - l[p])

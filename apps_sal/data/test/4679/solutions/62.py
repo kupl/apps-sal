@@ -7,9 +7,7 @@ for i in range(300):
         break
     if turn[t] == s[t][0]:
         s[t] = s[t][1:]
-        # print(s)
     else:
         tt = turn.index(s[t][0])
         s[t] = s[t][1:]
         t = tt
-        # print(s)

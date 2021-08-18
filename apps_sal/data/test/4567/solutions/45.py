@@ -12,19 +12,15 @@ for i in s:
     if i % 10 == 0:
         judge += 1
 
-# print(answer)
 
 s.sort()
 mi = 0
-# print(s)
 
 for i in s:
     if i % 10 != 0:
         mi = i
         break
 
-
-# print(mi)
 
 if judge == len(s):
     print((0))

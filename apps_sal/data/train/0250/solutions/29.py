@@ -9,7 +9,7 @@ class Solution:
             heapq.heappush(maxheap, -q)
             qualitySum += q
             if len(maxheap) > K:
-                qualitySum += heapq.heappop(maxheap)  # add because its maxheap and we had entered negative, so in theory this line subtracts
+                qualitySum += heapq.heappop(maxheap)
             if len(maxheap) == K:
                 print((qualitySum * r, r, qualitySum))
                 result = min(result, qualitySum * r)

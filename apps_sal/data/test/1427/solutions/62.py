@@ -8,7 +8,6 @@ A = list(map(int, input().split()))
 
 min_lcm = A[0]
 
-# 最小公倍数を求める
 for i in range(1, N):
     min_lcm = A[i] * min_lcm // math.gcd(A[i], min_lcm)
 

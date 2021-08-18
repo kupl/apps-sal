@@ -1,6 +1,5 @@
 from collections import Counter
 from copy import *
-# only works for first case
 
 
 def solution(tiles):

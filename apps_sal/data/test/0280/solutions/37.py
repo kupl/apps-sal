@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from itertools import permutations, accumulate
 from operator import itemgetter
@@ -17,7 +16,6 @@ def main():
     bridge.sort(key=itemgetter(1))
     bridge = trans(bridge)
     bridge[0] = list(accumulate(bridge[0], func=max, initial=0))
-    # print(bridge)
     if max(camel) > min(bridge[1]):
         print((-1))
         return
@@ -27,7 +25,7 @@ def main():
         for i in range(n - 1):
             for j in range(i + 1, n):
                 weight = sum(permut[i:j + 1])
-                graph[i][j] = bridge[0][bisect.bisect_left(bridge[1], weight)]  # n以下の個数を数える
+                graph[i][j] = bridge[0][bisect.bisect_left(bridge[1], weight)]
         dist = [0] * n
         for i in range(1, n):
             mindist = 0
@@ -35,7 +33,6 @@ def main():
                 mindist = max(dist[j] + graph[j][i], mindist)
             dist[i] = mindist
         ans = min(ans, dist[-1])
-    # print(dist)
     print(ans)
 
 

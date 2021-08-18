@@ -1,7 +1,6 @@
 import sys
 
 MOD = 10 ** 9 + 7
-# MOD = 998244353
 
 
 def make_tables(n=10 ** 9, r=2 * 10 ** 6, p=MOD):

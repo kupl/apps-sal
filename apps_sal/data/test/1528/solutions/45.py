@@ -1,6 +1,5 @@
 from collections import defaultdict
 3
-#coding: utf-8
 
 
 N, X = (int(x) for x in input().split())
@@ -43,6 +42,3 @@ def num_pty(lv, X):
 
 
 print((num_pty(N, X)))
-
-# BBPPPBPBPPPBB
-# BPPPB

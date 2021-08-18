@@ -1,4 +1,3 @@
-# cook your dish here
 
 for _ in range(int(input())):
     n, k, e, m = map(int, input().strip().split())

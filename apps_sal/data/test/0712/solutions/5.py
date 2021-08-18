@@ -1,5 +1,4 @@
 def find_expected_people(people_count, probability, seconds):
-    # the probability after i seconds to have k people on the escalator
     current_row = [0.] * (people_count + 1)
     current_row[0] = 1.
 

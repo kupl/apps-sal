@@ -18,15 +18,15 @@ def bfs(x1, y1, d):
             for k in range(1, K + 1):
                 x2 = x1 + dx * k
                 y2 = y1 + dy * k
-                if x2 < 0 or x2 >= H:  # 枠外
+                if x2 < 0 or x2 >= H:
                     break
-                if y2 < 0 or y2 >= W:  # 枠外
+                if y2 < 0 or y2 >= W:
                     break
-                if m[x2][y2] == '@':  # 蓮の葉
+                if m[x2][y2] == '@':
                     break
-                if M[x2][y2] < d + 1:  # より良い経路を探索済み。
+                if M[x2][y2] < d + 1:
                     break
-                if M[x2][y2] == d + 1:  # 同等の良さの経路を探索済み。　飛び越えて次のマスを探索する。
+                if M[x2][y2] == d + 1:
                     continue
 
                 q.append((d + 1, x2, y2))

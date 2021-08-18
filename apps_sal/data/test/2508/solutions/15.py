@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import deque
 
 
@@ -29,7 +28,6 @@ def main():
     while queue:
         now = queue.popleft()
         for u in adj[now]:
-            # nowからuの方向に'.'が続くかぎり（最大K個）
             count = 0
             direct = u - now
             fromC = now
@@ -43,7 +41,6 @@ def main():
                 toC += direct
 
     print(visit[W * x2 + y2]) if visit[W * x2 + y2] < INF else print(-1)
-    # print(visit)
 
 
 def __starting_point():

@@ -26,17 +26,12 @@ def solve():
                 e = seg[i][sr - 1]
                 cnt[b] += 1
                 cnt[e] -= 1
-            #for j in range(l, r): cnt[j + 1] += cnt[j]
-            # print(cnt)
-            #mx = max(cnt)
-            # if mx == 0: continue
             for j in range(l, r):
                 cnt[j + 1] += cnt[j]
                 if cnt[j] == 0:
                     continue
                 dp[l][r] = max(dp[l][r], cnt[j] ** 2 + dp[l][j] + dp[j + 1][r])
     print(dp[0][w])
-    # p2D(dp)
 
 
 h, w = MI()

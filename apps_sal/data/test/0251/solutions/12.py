@@ -13,7 +13,6 @@ for i in range(200000 - 1, -1, -1):
     b[i] = b[i + 1] + c[i]
 cur = hmax
 ans = 0
-# print(b[:5])
 while cur > hmin:
     cnt = 0
     while cnt <= m:
@@ -24,7 +23,6 @@ while cur > hmin:
             ans += 1
             cnt = 0
             break
-        #print(cur, cnt)
     if cur == hmin:
         break
 print(ans)

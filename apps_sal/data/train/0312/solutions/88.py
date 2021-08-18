@@ -1,6 +1,6 @@
 class Solution:
     def shortestSubarray(self, A: List[int], k: int) -> int:
-        s = collections.deque()    # Inc    # (sum, ind)
+        s = collections.deque()
         curr = 0
         ans = math.inf
         for i in range(len(A)):

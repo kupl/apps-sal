@@ -23,7 +23,6 @@ def execute(code):
 
 
 def removeBrackets(rscommand):
-    # check for brackets
     if rscommand.find('(') == -1:
         return rscommand
     found = False
@@ -41,7 +40,6 @@ def removeBrackets(rscommand):
     rightpart = rscommand[closingbracketindex + 1:]
     middlepart = rscommand[openbracketindex + 1:closingbracketindex]
 
-    # find number in rightpart
     factor = ""
     indeks = 0
     if len(rightpart) > 0:
@@ -79,7 +77,6 @@ def translatePath(path):
             minx = c[0]
         if c[1] < miny:
             miny = c[1]
-    # translate path
     for c in path:
         c[0] = c[0] - minx
         c[1] = c[1] - miny
@@ -87,16 +84,12 @@ def translatePath(path):
 
 
 def moveForward(state):
-    # state[0] = x coordinate
-    # state[1] = y coordinate
-    # state[2] = direction N, S, E or W
     if state[2] == "N":
         return [state[0], state[1] - 1, state[2]]
     if state[2] == "S":
         return [state[0], state[1] + 1, state[2]]
     if state[2] == "W":
         return [state[0] - 1, state[1], state[2]]
-    # remaing direction is east_asian_width
     return [state[0] + 1, state[1], state[2]]
 
 
@@ -132,7 +125,6 @@ def transformCode(code):
                 break
         if indeks == len(code):
             break
-        # found a digit
         factor = ""
         while code[indeks].isdigit():
             factor += code[indeks]

@@ -1,4 +1,3 @@
-# cook your dish here
 def sticks(nums):
     ans = []
     it = 0

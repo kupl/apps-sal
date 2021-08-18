@@ -20,15 +20,15 @@ class Solution:
             elif num0 == 4:
                 subAns = moveOnce(3, N0 - 1) + moveOnce(9, N0 - 1) + moveOnce(0, N0 - 1)
             elif num0 == 5:
-                subAns = 0  # moveOnce(5, N0-2) + moveOnce(7, N0-2) + moveOnce(9, N0-2)
+                subAns = 0
             elif num0 == 6:
                 subAns = moveOnce(1, N0 - 1) + moveOnce(7, N0 - 1) + moveOnce(0, N0 - 1)
             elif num0 == 7:
-                subAns = moveOnce(2, N0 - 1) + moveOnce(6, N0 - 1)  # + moveOnce(5, N0-2) + moveOnce(7, N0-2)
+                subAns = moveOnce(2, N0 - 1) + moveOnce(6, N0 - 1)
             elif num0 == 8:
                 subAns = moveOnce(1, N0 - 1) + moveOnce(3, N0 - 1)
             elif num0 == 9:
-                subAns = moveOnce(2, N0 - 1) + moveOnce(4, N0 - 1)  # + moveOnce(5, N0-2) + moveOnce(9, N0-2)
+                subAns = moveOnce(2, N0 - 1) + moveOnce(4, N0 - 1)
             elif num0 == 0:
                 subAns = moveOnce(4, N0 - 1) + moveOnce(6, N0 - 1)
             dp[(num0, N0)] = subAns % MOD

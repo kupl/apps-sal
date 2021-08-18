@@ -23,7 +23,3 @@ if(set(rmin).intersection(set(cmax))):
     print(*set(rmin).intersection(set(cmax)))
 else:
     print('GUESS')
-
-# print(k)
-# print(rmin)
-# print(cmax)

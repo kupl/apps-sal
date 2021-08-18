@@ -27,5 +27,4 @@ for num in K:
         if n + k >= a:
             break
         n += k
-    #print(q, a, n)
     print(str(q)[a - n - 1])

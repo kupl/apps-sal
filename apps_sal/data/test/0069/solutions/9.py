@@ -12,7 +12,6 @@ for e in range(t):
         else:
             cur -= 1
         dp[i + 1] = cur
-    # print(dp)
 
     if(dp[-1] == 0):
         if(min(dp) <= x <= max(dp)):
@@ -23,7 +22,6 @@ for e in range(t):
     cnt = 0
     for i in range(n):
         diff = x - dp[i]
-        # print(i, diff)
         if((diff) * dp[-1] >= 0 and diff % dp[-1] == 0):
             cnt += 1
     print(cnt)

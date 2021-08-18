@@ -19,13 +19,11 @@ else:
     ac0, ac1, ac2 = c0, c1, c2
     bc0, bc1, bc2 = c0, c1, c2
 
-    # MAKE THE 2s as 1s and remove 0s
     t1 = min(ac0, ac2)
     ac1 += 2 * t1
     ac2 -= t1
     ac0 -= t1
 
-    # COMBINE 1s to form 2s
     t2 = bc1 - bc1 % 2
     bc2 += t2 // 2
     bc0 += t2 // 2

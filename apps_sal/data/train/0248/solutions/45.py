@@ -16,5 +16,4 @@ class Solution:
                                     if (prnt, dist + 1) in dp[i][j] and dist + 1 >= 2:
                                         return True
                                     dp[i][j].add((prnt, dist + 1))
-                                    #print(i,j, prnt, dist, dp[i][j])
         return False

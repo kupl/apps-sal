@@ -6,19 +6,15 @@ class Solution:
             temp = grid[i][j]
             grid[i][j] = 0
 
-            # left
             if i > 0 and grid[i - 1][j] != 0:
                 s = max(s, backtrack(grid, i - 1, j))
 
-            # right
             if i < len(grid) - 1 and grid[i + 1][j] != 0:
                 s = max(s, backtrack(grid, i + 1, j))
 
-            # top
             if j > 0 and grid[i][j - 1] != 0:
                 s = max(s, backtrack(grid, i, j - 1))
 
-            # bottom
             if j < len(grid[0]) - 1 and grid[i][j + 1] != 0:
                 s = max(s, backtrack(grid, i, j + 1))
 

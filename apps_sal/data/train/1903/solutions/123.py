@@ -20,7 +20,6 @@ class Solution:
             v2_new = v2 not in forest
             if v1_new == v2_new:
                 continue
-            # print(f\"Adding edge {(points[v1], points[v2])} with cost {cost}\")
             forest.add(v1)
             forest.add(v2)
             total_cost += cost

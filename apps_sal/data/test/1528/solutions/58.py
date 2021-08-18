@@ -1,6 +1,5 @@
 n, x = list(map(int, input().split()))
 
-# lレベルバーガーの下からx層に含まれるパティーの数
 a = [1] * (n + 1)
 p = [1] * (n + 1)
 for i in range(1, n + 1):

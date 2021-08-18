@@ -15,7 +15,6 @@ class Solution:
                 else:
                     x = 3 * x + 1
 
-            #std[st[i-lo]] = [i]
             if st[i - lo] in list(std.keys()):
                 std[st[i - lo]].append(i)
             else:

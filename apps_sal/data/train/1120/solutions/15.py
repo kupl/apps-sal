@@ -1,5 +1,3 @@
-# cook your dish here
-# 872
 for _ in range(int(input())):
     n, m = [int(x)for x in input().split()]
     x, y = [int(x)for x in input().split()]

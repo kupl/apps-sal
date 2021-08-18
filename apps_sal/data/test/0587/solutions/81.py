@@ -28,7 +28,6 @@ for t, d in td:
 tmp = ans
 ans += num * num
 
-# print(tmp, ans)
 
 for d, u in zip(reversed(duplicate), unique):
     tmp += u - d

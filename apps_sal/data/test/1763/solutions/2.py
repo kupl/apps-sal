@@ -31,7 +31,6 @@ def main():
     left = min(A)
     right = max(A)
     while right - left > 2:
-        #print('left: %d, right: %d' % (left, right))
         m1 = left + (right - left) // 3
         m2 = left + (right - left) // 3 * 2
         val1 = query_value(A, a, r, m, m1)

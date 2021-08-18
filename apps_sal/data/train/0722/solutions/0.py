@@ -41,8 +41,6 @@ for _ in range(int(input())):
         print(-1)
         continue
 
-    # print(row_s, col_s)
-
     next_row = ((n - k) // 2) + 1
     i = 0
     count_row = 0
@@ -52,9 +50,7 @@ for _ in range(int(input())):
             poss = False
             break
         while i < len(row_s) and row_s[i][0] <= next_row:
-            # print(max_next, row_s[i], next_row)
             max_next = max(max_next, row_s[i][1] + 1)
-            # print(max_next, row_s[i], next_row)
             i += 1
         next_row = max_next
         count_row += 1
@@ -63,8 +59,6 @@ for _ in range(int(input())):
         if next_row < (((n - k) // 2) + k) and i >= len(row_s):
             poss = False
             break
-
-    # print(count_row)
 
     next_col = ((n - k) // 2) + 1
     i = 0
@@ -75,9 +69,7 @@ for _ in range(int(input())):
             poss = False
             break
         while i < len(col_s) and col_s[i][0] <= next_col:
-            # print(max_next, col_s[i], next_col)
             max_next = max(max_next, col_s[i][1] + 1)
-            # print(max_next, col_s[i], next_col)
             i += 1
         next_col = max_next
         count_col += 1
@@ -87,7 +79,4 @@ for _ in range(int(input())):
             poss = False
             break
 
-    # print(count_col)
     print(count_col + count_row if poss else -1)
-
-    # print(row_s, col_s)

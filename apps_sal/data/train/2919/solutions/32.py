@@ -1,5 +1,4 @@
 def encode(message, key):
-    # Code here
     al = "abcdefghijklmnopqrstuvwxyz"
     key = str(key)
     if len(message) > len(key):

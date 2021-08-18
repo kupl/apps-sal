@@ -1,7 +1,4 @@
 class Solution:
-    # Version 1: Sliding window
-    # Count the mismatch count
-    # TC: O(nlogn), SC: O(1)
     '''
     def numSubseq(self, nums: List[int], target: int) -> int:
         M = 10**9 + 7
@@ -18,9 +15,6 @@ class Solution:
         return (pow(2, len(nums), M) - 1 - mismatch) % M
     '''
 
-    # Version 2: Two sum
-    # Once the window is valid, we can add the number of subsequences with left or right number
-    # TC: O(nlogn), SC: O(1)
     '''
     def numSubseq(self, nums: List[int], target: int) -> int:
         M = 10**9 + 7
@@ -41,9 +35,6 @@ class Solution:
         return ans
     '''
 
-    # Version 3: Sliding window
-    # Consider the valid count
-    # TC: O(n^2), SC: O(1)
     def numSubseq(self, nums: List[int], target: int) -> int:
         from bisect import bisect_left
         M = 10**9 + 7
@@ -59,5 +50,4 @@ class Solution:
             else:
                 base = bisect_left(nums, target - nums[k] + 1)
                 ans += (pow(2, base, M) - 1) * pow(2, k - base, M)
-            #print(k, base, ans)
         return ans % M

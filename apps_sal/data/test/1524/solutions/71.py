@@ -3,7 +3,6 @@ N = len(S)
 S.append('R')
 ans = [0] * N
 
-# cnt for RL
 cnt = [0, 0]
 l = 'R'
 for i in range(N):

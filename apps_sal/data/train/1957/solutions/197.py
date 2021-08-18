@@ -13,12 +13,10 @@ class Solution:
             size = queue.qsize()
             for _ in range(size):
                 x, y, c = queue.get()
-                # print(x, y)
                 if x == m - 1 and y == n - 1:
                     return steps
                 for delta_x, delta_y in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
                     x_, y_ = x + delta_x, y + delta_y
-                    # print(x_, y_)
                     if x_ < 0 or x_ >= m or y_ < 0 or y_ >= n:
                         continue
                     if grid[x_][y_] == 1 and c > 0 and (x_, y_, c - 1) not in visited:

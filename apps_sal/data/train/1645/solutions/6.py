@@ -1,4 +1,3 @@
-# explained at: http://www.zrzahid.com/least-number-of-perfect-squares-that-sums-to-n/
 def sum_of_squares(n):
     def is_sq(n): return int(n**0.5) * int(n**0.5) == n
     if is_sq(n):

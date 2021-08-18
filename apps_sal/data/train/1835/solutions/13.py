@@ -2,7 +2,6 @@ class Solution:
     def numsSameConsecDiff(self, n: int, k: int) -> List[int]:
         @functools.lru_cache(maxsize=128, typed=False)
         def check(n, k, s):
-            #   s表示起点
             rtv = []
             if n == 0:
                 return []

@@ -3,8 +3,6 @@ from heapq import heappop, heappush
 from math import log2
 
 
-# inf = open('input.txt', 'r')
-# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, s.split())) for s in sys.stdin)
 
 
@@ -29,5 +27,3 @@ n, = next(reader)
 a = list(next(reader))
 ans = bribe(n, a)
 print(ans)
-
-# inf.close()

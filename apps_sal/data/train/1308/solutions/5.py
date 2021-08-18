@@ -18,6 +18,5 @@ def findPassword():
             print("Valid")
             m = "Valid"
 
-        # else:
-        # print "Invalid"
+
 findPassword()

@@ -1,4 +1,3 @@
-# 149 Heads or Tails
 
 data = input().split(" ")
 x = int(data[0])

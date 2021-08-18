@@ -8,7 +8,6 @@ len = n
 
 for x in a:
     pos = (l + x) % len
-    #print(cs, pos)
     res += str(cs[pos]) + " "
     del cs[pos]
     len -= 1

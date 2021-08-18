@@ -26,7 +26,6 @@ if flag:
     ans += 1
 
 
-# print (ans)
 count = 0
 for s in S:
     if s == 5:

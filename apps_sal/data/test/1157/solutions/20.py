@@ -9,12 +9,10 @@ for i in arr:
     last[now] += 1
 ans[0] += last[0]
 ans[1] += last[1]
-# print(last)
 for i in range(1, n):
     if arr[i - 1] < 0:
         last[0], last[1] = last[1], last[0]
     last[0] -= 1
     ans[0] += last[0]
     ans[1] += last[1]
-    # print(last)
 print(ans[1], ans[0])

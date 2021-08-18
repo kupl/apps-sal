@@ -18,5 +18,4 @@ class Solution:
             for t in range(1, target + 1):
                 dp[t] = dp[t] % (10**9 + 7)
             temp = dp[:]
-    #    print(929256393%(10**9 + 7) )
         return dp[target] % (10**9 + 7)

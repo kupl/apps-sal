@@ -1,4 +1,3 @@
-# C - Reconciled?
 def main():
     from math import factorial
 

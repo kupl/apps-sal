@@ -33,9 +33,6 @@ for i in range(n):
     str4 = str4 + input()
 
 str1comp = "01" * (n**2)
-# print()
-# print(str2)
-# print(str1comp)
 
 a = 0
 b = 0
@@ -65,7 +62,6 @@ lst2.append(d)
 
 bubble_sort(lst2)
 
-# print(lst2)
 
 sum3 = 0
 

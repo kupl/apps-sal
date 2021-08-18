@@ -29,15 +29,11 @@ class Solution:
             return group[a] > 0 and group[b] > 0
 
         def helper(group1Person: int, group2Person: int, index: int) -> bool:
-            # print(\"helper\", index)
             group1[group1Person] += 1
             group2[group2Person] += 1
-            #print(list(filter(lambda x: x[1] > 0, group1.items())))
-            #print(list(filter(lambda x: x[1] > 0, group2.items())))
             if index == len(dislikes):
                 return True
             a, b = dislikes[index]
-            # print(\"loop\", index, a, b)
             if bothInGroup(group1, a, b) or bothInGroup(group2, a, b):
                 group1[group1Person] -= 1
                 group2[group2Person] -= 1

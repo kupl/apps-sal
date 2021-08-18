@@ -24,7 +24,7 @@ def bfs(x1, y1, d):
                         break
                     elif M[x2][y2] == -1:
                         M[x2][y2] = d + 1
-                        q.append((d + 1, x2, y2))  # 新しい点を足す。
+                        q.append((d + 1, x2, y2))
                     elif M[x2][y2] < d + 1:
                         break
                 else:
@@ -32,7 +32,6 @@ def bfs(x1, y1, d):
 
 
 H, W, K = list(map(int, input().split()))
-# K = min(K, max(H, W))
 xs, ys, xg, yg = list(map(int, input().split()))
 xs, ys, xg, yg = xs - 1, ys - 1, xg - 1, yg - 1
 

@@ -1,7 +1,5 @@
-# cook your dish here
 N = int(input())
 Ps = list(map(int, input().strip().split(" ")))
-# print(Ps)
 
 sum = [0 for i in range(N)]
 if N > 0:

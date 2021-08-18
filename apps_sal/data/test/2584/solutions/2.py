@@ -1,7 +1,4 @@
 
-#q = int(input())
-#x, y = map(int,input().split(' '))
-#print (' '.join(list(map(str, s))))
 
 q = int(input())
 for _ in range(q):

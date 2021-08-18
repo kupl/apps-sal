@@ -8,5 +8,4 @@ for i in range(n):
         k += 1
         r *= 4
     ma = max(ma, h + k)
-    # print(ma)
 print(ma)

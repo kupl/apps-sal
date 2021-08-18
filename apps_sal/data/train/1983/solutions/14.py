@@ -16,9 +16,3 @@ class ProductOfNumbers:
             product = product * i
         self.product_cache[(len(self.data) - k, len(self.data) - 1)] = product
         return product
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

@@ -1,6 +1,5 @@
 class Solution:
     def canConvertString(self, s: str, t: str, k: int) -> bool:
-        # a, b
         if len(s) != len(t):
             return False
         largest = [0] * 26

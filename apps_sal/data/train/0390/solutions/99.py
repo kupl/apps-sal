@@ -2,8 +2,6 @@ import math
 
 
 class Solution:
-    # A
-    # B 15 1 4 9
     def helper(self, n: int, dp: dict) -> bool:
         if n in dp:
             return dp[n]

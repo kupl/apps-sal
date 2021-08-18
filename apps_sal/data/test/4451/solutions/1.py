@@ -9,7 +9,6 @@ if n < 6:
     print(*([1] * n))
 else:
     b = [ll[i] - ll[i - 1] for i in range(3, n - 2)]
-    # wybieramy najwieksza sume z b ale nie moge wybrac ziomow o mniej niz 2 od siebie
     dp = [[0, 0] for i in range(len(b) + 5)]
     i = len(b) - 1
     dp[i] = [0, b[i]]

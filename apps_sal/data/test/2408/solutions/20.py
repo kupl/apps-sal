@@ -24,9 +24,6 @@ for i in range(n - 1):
             lines.add(l)
             c[l[0]] += 1
 
-# print(lines)
-# print(c)
-# print(len(lines))
 
 t = 0
 

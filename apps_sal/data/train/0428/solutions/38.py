@@ -21,8 +21,8 @@ class Solution:
                     continue
                 visited.add((i, j, state))
                 for m, n in [(i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)]:
-                    if 0 <= m < row and 0 <= n < col and grid[m][n] != '#':
-                        if grid[m][n] in 'abcdef':
+                    if 0 <= m < row and 0 <= n < col and grid[m][n] != '
+                       if grid[m][n] in 'abcdef':
                             q.append((m, n, state | (1 << key[grid[m][n]]), step + 1))
                         elif grid[m][n] == '.' or grid[m][n] == '@':
                             q.append((m, n, state, step + 1))

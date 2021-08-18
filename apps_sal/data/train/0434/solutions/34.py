@@ -10,7 +10,7 @@ class Solution:
                 if i == n - 1:
                     pass
 
-                elif nums[i + 1] == 1:  # this is a gap
+                elif nums[i + 1] == 1:
                     prev = curr
                     curr = 0
                 else:
@@ -21,7 +21,7 @@ class Solution:
 
         best = max(best, prev + curr)
 
-        if best == n:  # all ones, need to remove one element at least
+        if best == n:
             best -= 1
 
         return best

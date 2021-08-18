@@ -1,12 +1,5 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        #            '' a. c. e
-        #         ''  0 0. 0. 0.
-        #         a   0 1  0. 0
-        #         b   0 1
-        #         c   0 1
-        #         d   0
-        #         e   0
 
         if len(text1) == 0 or len(text2) == 0:
             return ''
@@ -21,5 +14,4 @@ class Solution:
                     DP[i][j] = max(DP[i - 1][j], DP[i][j - 1])
                 longest = max(longest, DP[i][j])
 
-        # print(DP)
         return longest

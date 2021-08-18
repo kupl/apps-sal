@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 n = int(input())
 k = int(input())
 ans = 1

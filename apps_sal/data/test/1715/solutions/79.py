@@ -1,5 +1,3 @@
-# float型を許すな
-# numpyはpythonで
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 from operator import itemgetter
@@ -30,18 +28,14 @@ lis1.append(inf)
 lis2.append(inf)
 lis1 = [-inf] + lis1
 lis2 = [-inf] + lis2
-# print(lis1)
-# print(lis2)
 for i in range(q):
     u = I()
     x = bisect_left(lis1, u)
     y = bisect_left(lis2, u)
-    # print(u,x,y)
     Lll = u - min(lis1[x - 1], lis2[y - 1])
     Lrr = max(lis1[x], lis2[y]) - u
     Llr1 = 2 * (u - lis1[x - 1]) + (lis2[y] - u)
     Llr2 = 2 * (lis2[y] - u) + u - lis1[x - 1]
     Lrl1 = 2 * (u - lis2[y - 1]) + lis1[x] - u
     Lrl2 = 2 * (lis1[x] - u) + u - lis2[y - 1]
-    # print(Lll,Lrr,Lrl1,Lrl2,Llr1,Llr2)
     print((min(Lll, Lrr, Lrl1, Lrl2, Llr1, Llr2)))

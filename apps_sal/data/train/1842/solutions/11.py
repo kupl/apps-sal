@@ -8,12 +8,9 @@ class Solution:
             table[edges[i][0]].append(edges[i][1])
             table[edges[i][1]].append(edges[i][0])
 
-        # print(table)
-
         self.res = 0
 
         def DFS(current_node, p, visited, time):
-            # print(current_node,p,visited,time)
             if time == t:
                 if current_node == target:
                     self.res += p

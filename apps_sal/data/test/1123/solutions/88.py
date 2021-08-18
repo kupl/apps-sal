@@ -1,4 +1,3 @@
-# 解説AC
 mod = 10 ** 9 + 7
 n, k = list(map(int, input().split()))
 dp = [-1] * (k + 1)

@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 
 n, m = (int(x) for x in input().split())
-w = [int(x) for x in input().split()]  # len(w) == n
-b = [int(x) - 1 for x in input().split()]  # len(b) == m
+w = [int(x) for x in input().split()]
+b = [int(x) - 1 for x in input().split()]
 
 visited = [False] * n
 stack = []

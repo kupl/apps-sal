@@ -1,6 +1,3 @@
-# n is the number of customers buying hotdogs
-# input - integers
-# output - integer, cost of hotdog
 
 def sale_hotdogs(n):
     if n < 5:

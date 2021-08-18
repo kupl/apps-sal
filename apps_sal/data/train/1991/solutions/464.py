@@ -9,11 +9,9 @@ class Solution:
             dp[i][finish] = 1
         for f in range(1, fuel + 1):
             for s in range(n):
-                # dp[f][s] = dp[f-1][s]
                 for s1 in range(n):
                     if s == s1:
                         continue
                     if abs(locations[s1] - locations[s]) <= f:
                         dp[f][s] = (dp[f][s] + dp[f - abs(locations[s] - locations[s1])][s1]) % M
-        # print(dp)
         return dp[fuel][start]

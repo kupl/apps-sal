@@ -10,7 +10,6 @@ Y = [list(map(int, input().split())) for _ in range(Q)]
 LOGN = int(math.log(N) / math.log(2)) + 1
 parent = [[-1] * N for _ in range(LOGN + 1)]
 
-# Update for k
 for k in range(LOGN + 1):
     for i in range(N):
         if k == 0:

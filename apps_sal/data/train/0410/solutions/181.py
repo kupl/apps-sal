@@ -7,7 +7,6 @@ class Solution:
             ans.append([c, i])
 
         ans.sort()
-        # print(ans)
         return ans[k - 1][1]
 
     def solvePower(self, num):

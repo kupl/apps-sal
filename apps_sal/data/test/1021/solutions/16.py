@@ -1,9 +1,4 @@
 
-# -*- coding: utf-8 -*-
-# @Date    : 2019-02-08 08:18:25
-# @Author  : raj lath (oorja.halt@gmail.com)
-# @Link    : link
-# @Version : 1.0.0
 
 from sys import stdin
 
@@ -25,5 +20,4 @@ if first[-1] != secon[-1] or first[0] != secon[0]:
 else:
     first_1 = [y - x for x, y in zip(first, first[1:])]
     secon_1 = [y - x for x, y in zip(secon, secon[1:])]
-    #print(first_1, secon_1)
     print(["No", "Yes"][sorted(first_1) == sorted(secon_1)])

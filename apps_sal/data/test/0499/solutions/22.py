@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -43,4 +41,3 @@ for i in sorted(ans):
 print()
 
 finish = time.time()
-#print(finish - start)

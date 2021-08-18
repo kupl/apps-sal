@@ -4,15 +4,15 @@ class Solution:
 
         pq = []
         engineers = list(zip(speed, efficiency))
-        engineers.sort(key=lambda tup: -tup[1])  # sort by efficiency in decreasing order
+        engineers.sort(key=lambda tup: -tup[1])
 
         performance = 0
         tot_speed = 0
         for engineer in engineers:
             min_efficiency = engineer[1]
             if len(pq) == k:
-                if pq[0] < engineer[0]:  # if there's an engineer with higher speed, there's a good chance to get higher performance
-                    bad_speed = heapq.heappop(pq)  # fire the guy with the lowest speed
+                if pq[0] < engineer[0]:
+                    bad_speed = heapq.heappop(pq)
                     heapq.heappush(pq, engineer[0])
                     tot_speed = tot_speed - bad_speed + engineer[0]
             else:

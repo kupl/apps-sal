@@ -1,7 +1,7 @@
 import sys
 from collections import defaultdict
 def I(): return int(sys.stdin.readline().rstrip())
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))  # 空白あり
+def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 
 
 T = I()

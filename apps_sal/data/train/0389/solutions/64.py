@@ -1,6 +1,5 @@
 class Solution:
     def splitArraySameAverage(self, A: List[int]) -> bool:
-        # A = [53,6,3,34,91,82,47,9,70,1]
         if len(A) < 3:
             return False
 
@@ -37,12 +36,8 @@ class Solution:
                 if n and r(ss, list(arr), n - 1):
                     return True
 
-        # print(a)
         if r(0, a, len(a) - 1):
             return True
-        # print(d)
-        # print(b)
         if r(0, b, len(b) // 2 - 1):
             return True
-        # print(d)
         return False

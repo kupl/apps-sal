@@ -26,7 +26,6 @@ try:
                 else:
                     list2.append(list1[i] - list1[j])
                     j += 1
-            # print(list2)
             for k in list2:
                 c += list2.count(y - k)
         print(c)

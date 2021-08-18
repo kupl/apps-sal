@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     ele = input()
     if(ele == 'B' or ele == 'b'):

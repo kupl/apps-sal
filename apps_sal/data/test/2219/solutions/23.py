@@ -28,6 +28,5 @@ for _ in range(q):
         moves += n % k + 1
 
         n = n // k
-        # print(n)
     moves += n
     print(moves)

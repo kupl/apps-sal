@@ -8,7 +8,7 @@ def find(x):
     if par[x] < 0:
         return x
     else:
-        par[x] = find(par[x])  # 経路圧縮
+        par[x] = find(par[x])
         return par[x]
 
 
@@ -38,7 +38,6 @@ for i in range(m):
 
 
 ans = 0
-# print(par)
 for i in range(n):
     if par[i] < 0:
         ans += 1

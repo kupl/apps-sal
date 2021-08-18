@@ -1,6 +1,6 @@
 H, W = [int(x) for x in input().split()]
 pic = [list(input()) for _ in range(H)]
-ans = [['#' for i in range(W + 2)] for j in range(H + 2)]
+ans = [['
 for i in range(H):
     for j in range(W):
         ans[i + 1][j + 1] = pic[i][j]

@@ -18,9 +18,7 @@ while que:
     for child in graph[node]:
         if child != parent:
             rooted[node].append(child)
-            # rooted[child].append(node)
             que.append((child, node))
-            # print(child + 1, node + 1)
 
 table = [float('inf')] * n
 lis = [None] * n

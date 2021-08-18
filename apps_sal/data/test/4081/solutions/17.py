@@ -27,7 +27,6 @@ while(i < j):
             i += 1
         else:
             break
-    # print(i,j)
 if(i == j and arr[i] > prev):
     ans += 'R'
     prev = arr[i]

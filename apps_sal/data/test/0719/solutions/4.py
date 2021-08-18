@@ -1,5 +1,3 @@
-# int(input())
-# [int(i) for i in input().split()]
 
 def gen(x, digits, summ):
 

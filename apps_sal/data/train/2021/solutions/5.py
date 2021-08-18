@@ -2,7 +2,6 @@ def IsPossible(graph, n, color, start, isVisited):
     stack = [start]
 
     while stack != []:
-        #print (color)
         curr = stack.pop()
         if (not isVisited[curr - 1]) and (graph[curr] != []):
             isVisited[curr - 1] = True

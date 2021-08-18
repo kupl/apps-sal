@@ -5,7 +5,6 @@ def main():
     arr.sort()
     for i in arr:
         moves = 0
-        # print('start')
         while i >= 0:
             if nums[i][0] == k:
                 break

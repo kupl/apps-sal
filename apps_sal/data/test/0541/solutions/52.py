@@ -22,8 +22,6 @@ while cnt > 0:
     ab = heapq.heappop(q)
     cnt -= 1
 
-    # print(ab, visited, cnt)
-
     if ab[1] > ab[0]:
         heapq.heappush(q, [ab[1], ab[0]])
         cnt += 1

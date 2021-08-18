@@ -32,6 +32,4 @@ class Solution:
                         if DP[j] + 1 > DP[i]:
                             DP[i] = DP[j] + 1
 
-        #print (words)
-        #print (DP)
         return max(DP)

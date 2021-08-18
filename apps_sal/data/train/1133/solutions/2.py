@@ -1,4 +1,3 @@
-# cook your dish here
 def factors(n):
     res = []
     for i in range(n // 2, 0, -1):

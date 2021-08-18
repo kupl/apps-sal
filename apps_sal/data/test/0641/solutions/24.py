@@ -6,7 +6,7 @@ if IN[2] == 'week':
         print('53')
     else:
         print('52')
-else:  # month
+else:
     if day < 30:
         print('12')
     elif day < 31:

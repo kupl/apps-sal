@@ -61,5 +61,4 @@ for i in range(q):
     if ans == -1:
         print('NO')
     else:
-        # print(ans,start)
         print(strings[ans])

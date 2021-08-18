@@ -18,5 +18,4 @@ class Solution:
                 ans = min(ans, l[0] + r[0] + l[1] * r[1])
             cache[i][j] = [ans, mx]
             return [ans, mx]
-        # print(cache)
         return dp(0, n - 1)[0]

@@ -11,7 +11,6 @@ class Solution:
             for i, candidate in enumerate(candidate_indices):
 
                 if i >= 1 and candidate_indices[i - 1] + offset == candidate:
-                    # Swallow
                     continue
 
                 if candidate + offset >= len(s):

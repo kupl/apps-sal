@@ -1,4 +1,3 @@
-# cook your dish here
 d, x, y = list(map(int, input().split()))
 l = list(map(int, input().split()))
 wage = 0

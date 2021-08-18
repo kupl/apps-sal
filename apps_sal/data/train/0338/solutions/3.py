@@ -22,7 +22,7 @@ class Solution:
                     l = lps[l - 1]
 
                 nevil = True
-                if c == evil[l]:  # here
+                if c == evil[l]:
                     l += 1
                     if l == m:
                         nevil = False
@@ -44,7 +44,7 @@ class Solution:
             while j > 0 and evil[j] != evil[i]:
                 j = lps[j - 1]
 
-            if evil[j] == evil[i]:  # here
+            if evil[j] == evil[i]:
                 lps[i] = j + 1
 
         mod = 10**9 + 7

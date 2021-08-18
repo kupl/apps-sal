@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 
 class Person:
     def __init__(self, num, height):

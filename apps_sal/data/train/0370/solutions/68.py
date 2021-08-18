@@ -47,7 +47,6 @@ class Solution:
                 primes.append(a)
             f[_a] = factors
 
-        # print(f)
         prime_lookup = {p: i for i, p in enumerate(primes)}
         dsu = DSU(len(primes))
         for n, prime_factors in list(f.items()):

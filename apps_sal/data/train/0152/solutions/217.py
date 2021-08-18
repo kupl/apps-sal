@@ -5,7 +5,6 @@ class Solution:
     def _AssignBallsWithKDistance(self, position, force):
         i = 1
         assigned = 1
-        # 0th item is the first ball
         last_assigned_position = 0
         while i < len(position):
             if position[i] - position[last_assigned_position] >= force:

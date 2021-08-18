@@ -8,7 +8,6 @@ class Solution:
         for i in range(len(x_lst)):
             for j in range(i + 1, len(x_lst)):
                 dx = x_lst[j] - x_lst[i]
-                # print (dx)
                 y_common = x_memo[x_lst[i]].intersection(x_memo[x_lst[j]])
                 if len(y_common) < 2:
                     continue

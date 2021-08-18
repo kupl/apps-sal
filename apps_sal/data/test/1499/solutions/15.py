@@ -4,7 +4,7 @@
 def __starting_point():
     n, m = map(int, input().split())
     assert(m >= 1 and m <= (4 * n))
-    if m % 2 != 0:  # odd
+    if m % 2 != 0:
         k = (n * 4) // 2
         k += 1
         for i in range(1, (n * 4) // 2 + 1):
@@ -14,7 +14,7 @@ def __starting_point():
             if i <= m:
                 print(i, end=' ')
 
-    else:  # even
+    else:
         k = (n * 4) // 2
         k += 1
         for i in range(1, (n * 4) // 2 + 1):

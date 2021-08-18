@@ -1,7 +1,5 @@
 class StreamChecker(object):
 
-    # class StreamChecker:
-
     def __init__(self, words: List[str]):
         self.s = ''
         self.dic = collections.defaultdict(set)

@@ -1,8 +1,6 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
 a, b = list(map(int, input().split()))
-retBW = [['#'] * 100 for i in range(50)]
+retBW = [['
 retWB = [['.'] * 100 for i in range(50)]
 for i in range(0, 50, 2):
     for j in range(0, 100, 2):
@@ -13,7 +11,7 @@ for i in range(0, 50, 2):
 for i in range(1, 50, 2):
     for j in range(0, 100, 2):
         if b > 1:
-            retWB[i][j] = '#'
+            retWB[i][j] = '
             b -= 1
 
 print('100 100')

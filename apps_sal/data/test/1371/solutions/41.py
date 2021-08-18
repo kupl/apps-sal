@@ -1,9 +1,9 @@
 s = int(input())
 mod = 10 ** 9 + 7
-N = 10 ** 6  # N は必要分だけ用意する
-fact = [1, 1]  # fact[n] = (n! mod p)
-factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
-inv = [0, 1]  # factinv 計算用
+N = 10 ** 6
+fact = [1, 1]
+factinv = [1, 1]
+inv = [0, 1]
 
 
 def cmb(n, r, mod):

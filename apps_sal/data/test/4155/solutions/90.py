@@ -14,7 +14,6 @@ while h != [0] * N:
         if h[i] == 0 and f == True:
             f = False
 
-    #print(h, count)
     ans += count
     for i in range(N):
         h[i] = max(h[i] - 1, 0)

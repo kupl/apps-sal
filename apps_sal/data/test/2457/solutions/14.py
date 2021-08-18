@@ -2,7 +2,6 @@ import sys
 
 
 def noop(*object): return
-# print = noop
 
 
 def main():
@@ -19,8 +18,6 @@ def solve_case():
         return 'No'
     return 'Yes'
 
-#################################
-
 
 def read_str(): return input()
 def read_int(): return int(input())
@@ -31,7 +28,6 @@ def list_to_str(l, sep=' '): return sep.join(map(str, l))
 
 
 l2s = list_to_str
-# shape: tuple of ints | list of ints
 
 
 def make_list(shape, value=None):

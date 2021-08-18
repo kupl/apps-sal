@@ -29,7 +29,6 @@ for i in range(m):
             l.append(p)
             x -= a[p]
             a[p] = 0
-            #p = getf(p)
             p = f[p]
         for x in l:
             f[x] = p

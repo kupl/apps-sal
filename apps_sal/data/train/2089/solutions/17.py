@@ -25,7 +25,6 @@ for i in range(n):
                     a[i] = -2
                 else:
                     a[i] = -1
-    # print(a)
 c = 0
 for i in range(10):
     if a[i] == -2:

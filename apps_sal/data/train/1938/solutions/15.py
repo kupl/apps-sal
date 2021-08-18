@@ -1,6 +1,5 @@
 class Solution:
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
-        # the key point of this solution is how do we generate a list of rectangles that don't overlap with each other. The idea is that we try to add each new rectangle into the list. If it has overlap with existing rectangles, then we break it into muliple parts that don't have overlap with existing rectangles.
         all_rectangles = []
         for rectangle in rectangles:
             self.add_rectangle(all_rectangles, rectangle, 0)

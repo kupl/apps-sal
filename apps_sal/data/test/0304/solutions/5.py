@@ -43,6 +43,5 @@ for i in range(a[0] != 1, a[0]):
                                         for i in range(10):
                                             for j in range(1, t[i] + 1):
                                                 w //= j
-                                        # print(w)
                                         ans += w
 print(ans)

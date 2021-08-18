@@ -9,9 +9,6 @@ A.sort(reverse=True)
 B.sort(reverse=True)
 C.sort(reverse=True)
 
-# Heapq的なのでぶっこみPopしてればよい
-# そのかわり全パターン最初からぶち込むのはむりなので、popしたindexをもとに候補となる対象をpushする必要がある
-# ただし容易に重複投入しうるので、投入済みパターンを覚えておくのかな…。historyに含まれてたらSKIP。
 Q = []
 his = set()
 

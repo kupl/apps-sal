@@ -14,7 +14,6 @@ class Solution:
                         d[p] += 1
                     except:
                         d[p] = 1
-        # print(d)
         for i in range(0, len(nums1)):
             p = nums1[i] * nums1[i]
             try:

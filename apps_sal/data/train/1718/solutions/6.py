@@ -8,9 +8,9 @@ def has_exit(maze):
 
 
 def backtracking(maze, y, x, explored):
-    if maze[y][x] == '#':
-        explored.add((y, x))
-        return False
+    if maze[y][x] == '
+    explored.add((y, x))
+    return False
     if (y, x) in explored:
         return False
     if x in {0, len(maze[0]) - 1} or y in {0, len(maze) - 1}:

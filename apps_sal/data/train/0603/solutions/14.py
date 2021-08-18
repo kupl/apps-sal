@@ -1,7 +1,6 @@
 T = int(input())
 ans = []
 
-# S = 'zyxwvutsrqponmlkjihgfedcba'
 S = 'abcdefghijklmnopqrstuvwxyz'
 
 for _ in range(T):

@@ -1,4 +1,3 @@
-# ABC139 A
 
 S = str(input())
 T = str(input())

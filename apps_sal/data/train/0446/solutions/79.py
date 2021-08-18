@@ -8,9 +8,7 @@ class Solution(object):
             else:
                 dictionary[num] = 1
 
-        # Sort Dictionary by Value
         dictionary = {key: value for key, value in sorted(dictionary.items(), key=lambda item: item[1])}
-        # print(\"Sorted: \", dictionary)
 
         keyList = list(dictionary.keys())
         valueList = list(dictionary.values())
@@ -25,7 +23,6 @@ class Solution(object):
                 keyPointer += 1
                 valuePointer += 1
 
-            # print(\"Key Pointer: \", keyPointer)
             numLettersToRemove -= 1
 
         outputList = keyList[keyPointer:]

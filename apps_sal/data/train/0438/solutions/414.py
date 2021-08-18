@@ -19,7 +19,6 @@ class Solution:
                 if self.size[self.find(num + 1)] == m:
                     res = i
                 self.union(num, num + 1)
-            # print(i, self.size, self.parent, res)
         return res
 
     def union(self, a, b):

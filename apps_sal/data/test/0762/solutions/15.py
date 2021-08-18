@@ -1,5 +1,3 @@
-# Round 493
-# B
 from sys import stdin, stdout
 from queue import PriorityQueue
 

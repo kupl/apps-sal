@@ -18,6 +18,5 @@ for _ in range(V):
     var = sum((k - P)**2 for k in ks) / N
     poisson_var = P
     uniform_var = 2 / (2 * P + 1) * sum(a**2 for a in range(round(P) + 1))
-    # print(var, poisson_var, uniform_var)
     print(('poisson' if abs(var - poisson_var) < abs(var - uniform_var)
           else 'uniform'))

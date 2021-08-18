@@ -5,5 +5,3 @@ def parse_float(string):
 
     except:
         return None
-
-   # return float(string) or None

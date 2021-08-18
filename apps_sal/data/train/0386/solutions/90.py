@@ -6,8 +6,6 @@ class Solution:
         for i in range(n - 2, -1, -1):
             f[i] = [0] * len(vowels_idx)
             for vowel in vowels_idx:
-                # If we have some vowel at current index i, then we know it can only
-                # be followed by a specific set of vowels, depending on the vowel at i
                 if vowel == 'a':
                     f[i][vowels_idx[vowel]] += f[i + 1][vowels_idx['e']]
                 elif vowel == 'e':

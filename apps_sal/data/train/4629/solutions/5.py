@@ -13,7 +13,6 @@ def penalty(nos):
                     tmp = x
                 low = tmp[0]
         ret.append(tmp)
-        # print(ret,'\t',tmp)
         nos.remove(tmp)
     return ''.join(ret)
 
@@ -24,7 +23,6 @@ def getLowest(s1, s2):
         res[s2] = equalPad(s2, len(s1))
     elif len(s2) > len(s1):
         res[s1] = equalPad(s1, len(s2))
-    # print('res',res)
     for x in range(len(res[s1])):
         if res[s1][x] < res[s2][x]:
             return s1

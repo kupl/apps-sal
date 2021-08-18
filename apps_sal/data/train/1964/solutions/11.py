@@ -4,7 +4,6 @@ class Solution:
         :type root: TreeNode
         :rtype: List[List[str]]
         """
-        # helper functions
         def depth(root):
             if root is None:
                 return 0
@@ -17,7 +16,6 @@ class Solution:
             fill(res, root.left, i + 1, l, (l + r) // 2)
             fill(res, root.right, i + 1, (l + r) // 2 + 1, r)
 
-        # array filled with ""
         height = depth(root)
         width = pow(2, height) - 1
         ans = []

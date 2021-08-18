@@ -26,8 +26,6 @@ for testcases in range(Q):
             Y -= 1
             MINY = min(MINY, Y)
 
-    # print(MAXX,MINX,MAXY,MINY)
-
     MAXXLIST = []
     MINXLIST = []
     MAXYLIST = []
@@ -69,14 +67,7 @@ for testcases in range(Q):
             if Y == MINY:
                 MINYLIST.append(i + 1)
 
-    # print(MAXXLIST)
-    # print(MAXYLIST)
-    # print(MINXLIST)
-    # print(MINYLIST)
-
     ANS = (MAXX - MINX + 1) * (MAXY - MINY + 1)
-
-    # print(ANS)
 
     if MAXX - MINX > 1:
         if MAXXLIST[0] > MINXLIST[-1] or MINXLIST[0] > MAXXLIST[-1]:

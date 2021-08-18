@@ -1,11 +1,8 @@
-# l <= ai <= r
 n, l, r = list(map(int, input().split()))
 
-# mn
 forced = 2**l - 1
 mn = forced + n - l
 
-# mx
 if r > n:
     r = n
 

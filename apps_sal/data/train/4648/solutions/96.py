@@ -5,5 +5,3 @@ def automorphic(n):
         return 'Automorphic'
     else:
         return 'Not!!'
-
-    # easy way how to slice

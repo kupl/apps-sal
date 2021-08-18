@@ -14,5 +14,5 @@ class Solution:
                 dfs(j, cnt + 1, visited)
                 visited.remove(s[i:j])
 
-        dfs(0, 0, set())  # function call
+        dfs(0, 0, set())
         return ans

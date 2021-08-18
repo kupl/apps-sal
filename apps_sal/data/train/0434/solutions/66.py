@@ -1,6 +1,5 @@
 class Solution:
     def longestSubarray(self, nums: List[int]) -> int:
-        # here k = 1
         w_start = 0
         d = {}
         max_len = 0

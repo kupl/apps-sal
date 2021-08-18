@@ -11,9 +11,7 @@ class Solution:
             days += 1
             for _ in range(len(q)):
                 node = q.popleft()
-                # print(node,q,visited,days)
                 if node == 1:
-                    # print(visited)
                     return days
                 if node % 3 == 0 and node % 3 not in visited:
                     q.append(node // 3)

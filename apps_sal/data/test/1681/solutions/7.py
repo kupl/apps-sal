@@ -1,8 +1,6 @@
 
 n = input()
 m = input()
-# n = 'aaabbac'
-# m = 'aabbccac'
 
 N = {}
 for c in n:
@@ -18,8 +16,6 @@ for c in m:
     else:
         M[c] = 1
 
-#print('N: ', N)
-#print('M: ', M)
 
 S = 0
 

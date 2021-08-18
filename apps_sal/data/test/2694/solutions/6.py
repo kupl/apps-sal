@@ -1,24 +1,6 @@
-# cook your dish here
 def main():
     from sys import stdin, stdout
     rl = stdin.readline
-
-    # Time taken to reach end is determined purely by size of grid
-    # We simply need to determine if it is possible to reach it
-
-    # Create dp table, mark all as visitable
-    # Mark cells with blasters as unvisitable
-
-    # Now, iterate over blasters.
-    # For each blaster, check every cell in its row and col.
-    # For each cell, there is a definite time at which spaceman can be at it
-
-    # Pulse will take time t1 extra to reach cell after fire
-    # Therefore, t0 should be = t1 + tstart + nf
-    # Hence, we mod t0 - t1 - tstart with f
-
-    # Finally, just try to find a path.
-    # If a path exists, simply print n + m - 2 as the time to reach
 
     n, m, k = (int(x) for x in rl().split())
     a = [[int(x) for x in rl().split()] for _ in range(k)]
@@ -33,7 +15,7 @@ def main():
         while y < m:
             t_cell = x + y
             t_check = t_cell - b[2] - abs(y - b[1])
-            if t_check < 0:  # Negative time is impossible
+            if t_check < 0:
                 y += 1
                 continue
 

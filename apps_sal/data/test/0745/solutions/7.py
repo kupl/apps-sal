@@ -49,7 +49,6 @@ else:
     for i in range(r):
 
         now = modnCr(r, i, mod, fac, inv) * pow(r - i, p, mod)
-        #print (i,now)
 
         if i % 2 == 0:
             na += now

@@ -1,13 +1,11 @@
 from collections import deque
 N = int(input())
-# 隣接リスト
 g = [[] for i in range(N)]
 for i in range(N - 1):
     u, v, w = list(map(int, input().split()))
     g[u - 1].append([v - 1, w])
     g[v - 1].append([u - 1, w])
 q = deque()
-# 通ったかどうか
 check = [0] * N
 check[0] = 1
 q.append(0)

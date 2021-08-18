@@ -4,7 +4,6 @@ class Solution:
         points.sort(key=lambda x: [x[0], x[1]])
         res = float('inf')
         temp = [points[0][1]]
-        #print(record, points)
         for i in range(1, len(points)):
             if points[i][0] == points[i - 1][0]:
                 temp.append(points[i][1])
@@ -16,7 +15,6 @@ class Solution:
                                 res = min(res, (points[i - 1][0] - record[(temp[j], temp[k])]) * (temp[k] - temp[j]))
                             record[(temp[j], temp[k])] = points[i - 1][0]
                 temp = [points[i][1]]
-        # print(temp,record)
         if len(temp) >= 2:
             for j in range(len(temp) - 1):
                 for k in range(j + 1, len(temp)):

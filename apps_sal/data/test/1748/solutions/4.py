@@ -25,6 +25,3 @@ for i in range(n):
     ans += T[i] * len(heap)
 
     print(ans, end=' ')
-
-
-# Made By Mostafa_Khaled

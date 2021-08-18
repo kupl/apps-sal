@@ -3,7 +3,6 @@ class Solution:
 
         @lru_cache(None)
         def dp(idx1, idx2, top: bool):
-            # print(idx1, idx2, top)
 
             if top:
                 if idx1 < len(nums1):
@@ -29,10 +28,5 @@ class Solution:
                         return nums2[idx2] + dp(idx1, idx2 + 1, False)
                 else:
                     return sum(nums2[idx2:])
-
-        # for i in range(len(nums1)):
-        #     for j in range(len(nums2)):
-        #         for top in [True, False]:
-        #             print(i,j,top, dp(i,j,top))
 
         return max(dp(0, 0, True), dp(0, 0, False)) % (10**9 + 7)

@@ -14,19 +14,13 @@ try:
             minOperationsRequired(stringA, stringB)
 
     def minOperationsRequired(stringA, stringB):
-        # minL is positions where stringA[i]!=stringB[i]
         minL = 0
         maxK = 0
-        # gapsList that contains ranges where elements are equal
         gapsList = []
         length = len(stringA)
-        # finding minL
         for i in range(length):
             if stringA[i] != stringB[i]:
                 minL = minL + 1
-        # A=abbbbaabb
-        # B=aaaaaaaaa
-        # finding maxK
         flag = 0
         for i in range(length):
             if stringA[i] != stringB[i]:
@@ -35,7 +29,6 @@ try:
                 flag = 1
             else:
                 flag = 0
-        # finding gapsList
         fl = 1
         glE = 0
         for i in range(length):
@@ -48,7 +41,6 @@ try:
                 fl = 0
                 glE = 0
         gapsList = sorted(gapsList)
-        # Calculating minCost
         minCost = minL * maxK
         for i in range(len(gapsList)):
             minL = minL + gapsList[i]

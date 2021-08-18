@@ -1,8 +1,8 @@
 b, a = list(map(int, input().split()))
 
 white = '.' * 100
-black = '#' * 100
-wb = '.#' * 50
+black = '
+wb = '.
 
 ban = []
 
@@ -19,7 +19,7 @@ for i in range(gyo_a):
     ban.append(wb)
     ban.append(white)
 
-ban.append(('.#' * ret_a + ('..' * (50 - ret_a))))
+ban.append(('.
 ban.append(white)
 
 for i in range(50 - 2 * (gyo_a + 1)):
@@ -32,7 +32,7 @@ for i in range(gyo_b):
     ban.append(wb)
     ban.append(black)
 
-ban.append('.#' * ret_b + '##' * (50 - ret_b))
+ban.append('.
 ban.append(black)
 
 print((100, 100))

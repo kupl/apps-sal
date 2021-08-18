@@ -15,5 +15,4 @@ class Solution:
                         count += counter[Aj] * counter[Ak]
                     else:
                         count += (counter[Aj] * (counter[Aj] - 1)) // 2
-                    #print(A[i], Aj, Ak, count)
         return count % MOD

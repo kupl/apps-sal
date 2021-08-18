@@ -53,16 +53,10 @@ class Node:
                 else:
                     l, r = None, None
                     mi = (self.lo + self.hi) >> 1
-                    # Note: we don't need to check whether 'lc' or 'rc' overlap with [lo, hi],
-                    # since the parent node is already within [lo, hi]
                     if not self.lc:
                         self.lc = Node(self.lo, mi, self.arr, self.idxes)
-                    # Note: we should not query [lo, hi], but instead query [self.lo, mi],
-                    # since maj element in [self.lo, mi] may not necessarily be a maj element of [lo, hi],
-                    # leading to a false negative
                     l = self.lc.query_maj(self.lo, mi)
 
-                    # Note: same on the 'rc' as on 'lc'
                     if not self.rc:
                         self.rc = Node(mi + 1, self.hi, self.arr, self.idxes)
                     r = self.rc.query_maj(mi + 1, self.hi)
@@ -81,7 +75,3 @@ class Node:
                 self.rc = Node(mi + 1, self.hi, self.arr, self.idxes)
             r = self.rc.query_maj(max(lo, mi + 1), min(self.hi, hi))
         return l if is_maj(l) else r if is_maj(r) else -1
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

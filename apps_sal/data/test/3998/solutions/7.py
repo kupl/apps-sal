@@ -1,5 +1,3 @@
-# https://codeforces.com/problemset/problem/730/A
-#
 
 import heapq
 
@@ -74,10 +72,8 @@ def pr(ans, n):
     print(S)
 
 
-# 5
-# 4 5 1 7 4
-n = int(input())  # len(arr)
-arr = list(map(int, input().split()))  # [1,3,1,3,2,3,2,3,2,3,2,3,2,3]
+n = int(input())
+arr = list(map(int, input().split()))
 ans = []
 Q = []
 d = {}

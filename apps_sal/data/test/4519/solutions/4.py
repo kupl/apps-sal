@@ -25,8 +25,6 @@ for testcases in range(q):
             k = 0
         ind += 1
 
-    # print(LIST)
-
     ones = 0
     ANS = []
 

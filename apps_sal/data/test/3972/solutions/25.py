@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 mod = 10**9 + 7
 
 n = int(input())

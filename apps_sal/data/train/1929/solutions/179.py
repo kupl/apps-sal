@@ -37,8 +37,3 @@ class Trie:
                 return False
             cur = cur.children[c]
         return cur.is_word
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

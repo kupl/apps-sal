@@ -1,8 +1,7 @@
-# 昨日やった...
 import numpy as np
 
 
-def prime_factorize(N):  # 素因数分解
+def prime_factorize(N):
     exponent = 0
     while N % 2 == 0:
         exponent += 1
@@ -41,16 +40,12 @@ ov14 = len(factors[factors >= 14])
 ov24 = len(factors[factors >= 24])
 ov74 = len(factors[factors >= 74])
 ans = 0
-# 2*4*4
 ans += (ov4 - 2) * (ov4) * (ov4 - 1) // 2 + (ov2 - ov4) * (ov4) * (ov4 - 1) // 2
 
-## 14 * 4
 ans += (ov4 - ov14) * (ov14) + (ov14) * (ov14 - 1)
 
-## 24 * 2
 ans += (ov2 - ov24) * ov24 + (ov24) * (ov24 - 1)
 
-# 74
 ans += ov74
 
 print(ans)

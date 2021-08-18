@@ -33,7 +33,6 @@ def main(n, ab):
     now = 0
     memo = {}
 
-    # 区間[l,r]はひとつの単位区間として成り立つか。
     def chk(l, r):
         if (l, r) in memo:
             return memo[(l, r)]
@@ -56,7 +55,6 @@ def main(n, ab):
         memo[(l, r)] = ret
         return ret
 
-    # 区間[l,2*n]は複数の単位区間のみから成る区間か。lより左はすでにTrue
     def dp(l):
         if l == 2 * n:
             return True

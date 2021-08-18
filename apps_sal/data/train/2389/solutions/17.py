@@ -1,14 +1,8 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 import collections
 
 Q = int(input())
 ans = [0] * Q
-#s = input()
-#N = len(s)
-#arr = [int(x) for x in stdin.readline().split()]
 for q in range(Q):
 
     N, K = [int(x) for x in stdin.readline().split()]
@@ -16,7 +10,6 @@ for q in range(Q):
     res = N + 1
 
     if N == 1 or K == 1:
-        # print(0)
         ans[q] = 0
         continue
 

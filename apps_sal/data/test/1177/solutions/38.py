@@ -15,7 +15,6 @@ def main():
         dp[i + 1][dp[i + 1] >= MOD] -= MOD
         ans += dp[i + 1][s] * (n - i)
         ans %= MOD
-#        print(dp[i+1], ans)
     print(ans)
 
 

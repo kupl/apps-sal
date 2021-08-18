@@ -4,8 +4,8 @@ for _ in range(k):
     l, r = list(map(int, input().split()))
     s.append((l, r + 1))
 
-dp = [0] * (n + 1)    # dp[i+1]: Num of ways to reach cell i (0-based).
-dif = [0] * (n + 1)   # dif[i] = dp[i] - dp[i-1] for  i > 0.
+dp = [0] * (n + 1)
+dif = [0] * (n + 1)
 
 dif[1] = 1
 dif[2] = -1

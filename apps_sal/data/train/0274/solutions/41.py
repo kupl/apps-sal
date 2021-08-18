@@ -19,5 +19,4 @@ class Solution:
                 if minQ[0] == nums[i]:
                     minQ.popleft()
                 i += 1
-            #res = max(res, j-i+1)
         return len(nums) - i

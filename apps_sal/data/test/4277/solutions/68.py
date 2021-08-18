@@ -1,5 +1,4 @@
 
-# 133a
 
 def atc_133a(input_value: str) -> int:
     NAB = input_value.split(" ")

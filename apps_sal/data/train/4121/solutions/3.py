@@ -8,4 +8,3 @@ def fight_resolve(defender, attacker):
         return defender
     else:
         return attacker
-    # pass

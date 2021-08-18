@@ -1,7 +1,6 @@
 def main():
     from collections import defaultdict
     import sys
-    # functions used
     def r(): return sys.stdin.readline().strip()
     def R(): return list(map(int, r().split()))
 

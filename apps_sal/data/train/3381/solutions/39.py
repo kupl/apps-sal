@@ -9,4 +9,3 @@ def get_real_floor(n):
         return n
     else:
         return (n - 2)
-    # code here

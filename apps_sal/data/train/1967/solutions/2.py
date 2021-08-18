@@ -10,7 +10,7 @@ class Solution:
             return
         for step in range(1, min(len(S) + 1, 11)):
             val = S[:step]
-            if str(int(val)) == val and 0 <= int(val) <= pow(2, 31) - 1:  # 防止前导 0 的出现
+            if str(int(val)) == val and 0 <= int(val) <= pow(2, 31) - 1:
                 if count < 2:
                     temp.append(int(val))
                     self.dfs(S[step:], temp, count + 1)

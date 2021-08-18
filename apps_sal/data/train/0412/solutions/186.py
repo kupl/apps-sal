@@ -13,5 +13,4 @@ class Solution:
                 for val in range(1, f + 1):
                     if 0 < i - val < len(DP[j]):
                         DP[j][i] += DP[j - 1][i - val]
-        # print(DP)
         return DP[d][target] % (10**9 + 7)

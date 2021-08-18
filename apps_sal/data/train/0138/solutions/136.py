@@ -30,6 +30,4 @@ class Solution:
                 res = max(res, i - prev)
             else:
                 res = max(res, i - left, right - prev - 1)
-        #     print(res, neg, cnt,left,right)
-        # print(prev,left,right)
         return res

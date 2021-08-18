@@ -5,4 +5,3 @@ def get_average(marks):
         b = b + marks[i]
     average = int(b / a)
     return average
-#    raise NotImplementedError("TODO: get_average")

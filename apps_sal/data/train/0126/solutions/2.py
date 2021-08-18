@@ -9,4 +9,3 @@ class Solution:
             if len(set(w)) <= maxLetters:
                 ans = max(count[w], ans)
         return ans
-        # return max([count[w] for w in count if len(set(w)) <= maxLetters] + [0])

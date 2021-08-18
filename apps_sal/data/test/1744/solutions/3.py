@@ -18,7 +18,6 @@ for j in range(n):
                 if(freq[i] == 0):
                     continue
                 y = (ans - M) // (i + 1)
-                # print(y)
                 if(y == 0):
                     ans = ans - (i + 1)
                     k += 1
@@ -32,9 +31,7 @@ for j in range(n):
                     else:
                         ans = ans - (y + 1) * (i + 1)
                         k += (y + 1)
-                # print(ans,j)
                 if(ans <= M):
                     break
         print(k, end=' ')
-        # print(freq)
     freq[x[j] - 1] += 1

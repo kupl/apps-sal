@@ -23,7 +23,6 @@ for i in range(N):
     plots.append((x, y))
 
 
-# 2点の間が直線になる時
 for i in range(N):
     for j in range(i + 1, N):
         sub = 0
@@ -33,7 +32,6 @@ for i in range(N):
         ans = min(ans, sub)
 
 
-# 3点を円が通る時
 for i in range(N):
     for j in range(i + 1, N):
         for k in range(j + 1, N):

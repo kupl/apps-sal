@@ -18,7 +18,6 @@ for _ in range(t):
             if notIn:
                 sumx.add(2 * num)
                 sums = sums.union(sumx)
-                # print(sums)
                 coins.append(num)
         num += 1
     for i in coins:

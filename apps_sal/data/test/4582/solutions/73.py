@@ -1,4 +1,3 @@
-# 056_a
 a, b = input().split()
 if (a == 'H' or a == 'D') and (b == 'H' or b == 'D'):
     if a == 'H':

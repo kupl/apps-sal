@@ -1,4 +1,3 @@
-#import math
 n, m = [int(x) for x in input().split(" ")]
 victorias = [0 for x in range(n)]
 for i in range(m):

@@ -1,8 +1,6 @@
 class Solution:
     def numTriplets(self, a: List[int], b: List[int]) -> int:
 
-        # i^2 / k == j
-
         def count(a, b):
 
             c = Counter()

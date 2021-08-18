@@ -1,6 +1,5 @@
 def fun(li, k):
 
-    # Initialize result
     head = [0] * len(li)
     tail = [0] * len(li)
     for i in range(1, len(li)):
@@ -14,12 +13,8 @@ def fun(li, k):
         else:
             tail[i] = 0
     ans = 0
-#     print(head)
-#     print(tail)
     for i in range(0, len(li) - k + 1):
         ans = max(ans, k + head[i] + tail[i + k - 1])
-#         print(i,ans)
-#     return ans
 
     return ans
 

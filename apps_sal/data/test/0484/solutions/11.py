@@ -12,7 +12,6 @@ def canFit(rect, a, b):
 
 seals.sort(key=lambda x: -x[0] * x[1])
 best = 0
-# Rects not squares
 for i in range(n):
     for j in range(i + 1, n):
         first = [seals[i][0] + seals[j][0], max(seals[i][1], seals[j][1])]

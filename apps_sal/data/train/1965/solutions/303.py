@@ -1,6 +1,5 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        # Union find
         def find(i):
             if i != root[i]:
                 root[i] = find(root[i])
@@ -25,7 +24,6 @@ class Solution:
             elif t == 3:
                 t3.append(i)
 
-        # Alice and Bob
         root = [i for i in range(n + 1)]
         for k in t3:
             t, i, j = edges[k]
@@ -36,7 +34,6 @@ class Solution:
                 res[0] += 1
         root0 = root[:]
 
-        # only Alice
         for k in t1:
             t, i, j = edges[k]
             if uni(i, j):
@@ -44,7 +41,6 @@ class Solution:
             else:
                 res[0] += 1
 
-        # only Bob
         root = root0
         for k in t2:
             t, i, j = edges[k]

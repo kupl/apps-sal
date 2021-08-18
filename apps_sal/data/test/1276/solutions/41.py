@@ -9,7 +9,6 @@ for i in range(N):
 for i in range(2, N + 1):
     for c in C:
         cumsum[c][-i] = cumsum[c][-i] + cumsum[c][-(i - 1)]
-# print(cumsum)
 ans = 0
 for i in range(N - 2):
     s = S[i]
@@ -18,7 +17,6 @@ for i in range(N - 2):
 
 for i in range(1, (N - 1) // 2 + 1):
     for j in range(N - 2 * i):
-        #print(j, j+i, j+2*i, S[j]+S[j+i]+S[j+2*i])
         if S[j] != S[j + i] and S[j + i] != S[j + 2 * i] and S[j] != S[j + 2 * i]:
             ans -= 1
 print(ans)

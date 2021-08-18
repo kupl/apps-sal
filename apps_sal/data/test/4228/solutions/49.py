@@ -1,4 +1,3 @@
-# ABC131 B
 
 N, L = map(int, input().split())
 aji = []

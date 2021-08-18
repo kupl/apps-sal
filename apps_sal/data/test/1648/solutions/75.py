@@ -11,7 +11,6 @@ def comb(n, r):
 n, k = map(int, input().split())
 mod = 10**9 + 7
 
-# 前計算
 fac = [1, 1]
 fin = [1, 1]
 inv = [0, 1]

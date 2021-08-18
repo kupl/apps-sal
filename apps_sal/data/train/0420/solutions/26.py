@@ -11,7 +11,6 @@ class Solution:
                     mask1 = list(mask)
                     mask1[j] = str(1 - int(mask1[j]))
                     mask = ''.join(mask1)
-                    # print('after',i, mask)
 
             pre_idx = table.get(mask, -2)
             if pre_idx != -2:

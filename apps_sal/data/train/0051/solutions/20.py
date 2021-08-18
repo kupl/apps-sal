@@ -13,25 +13,21 @@ for tc in range(int(sys.stdin.readline())):
         continue
 
     ans = False
-    # case++
     a = k - 2 * d1 - d2
     if a % 3 == 0:
         a //= 3
         ans |= check(a, a + d1, a + d1 + d2, n, k)
 
-    # case+-
     a = k + d2 - 2 * d1
     if a % 3 == 0:
         a //= 3
         ans |= check(a, a + d1, a + d1 - d2, n, k)
 
-    # case--
     a = k + 2 * d1 + d2
     if a % 3 == 0:
         a //= 3
         ans |= check(a, a - d1, a - d1 - d2, n, k)
 
-    # case-+
     a = k - d2 + 2 * d1
     if a % 3 == 0:
         a //= 3

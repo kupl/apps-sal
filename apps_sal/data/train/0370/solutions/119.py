@@ -1,4 +1,4 @@
-class Solution:  # Sieve + BFS
+class Solution:
 
     def largestComponentSize(self, A: List[int]) -> int:
 
@@ -19,7 +19,7 @@ class Solution:  # Sieve + BFS
 
         spf, di, factors, visited_nums, visited_factors, ans = [i for i in range(max(A) + 1)], defaultdict(set), defaultdict(set), set(), set(), 1
 
-        sieve()  # 1
+        sieve()
 
         for num in A:
             x = num
@@ -28,7 +28,7 @@ class Solution:  # Sieve + BFS
                 factors[num].add(spf[x])
                 x //= spf[x]
 
-        for num in A:  # 2
+        for num in A:
             if num in visited_nums:
                 continue
 
@@ -40,7 +40,7 @@ class Solution:  # Sieve + BFS
             while queue:
                 factor = queue.popleft()
                 visited_factors.add(factor)
-                for next_num in di[factor]:  # 3
+                for next_num in di[factor]:
                     if next_num in visited_nums:
                         continue
 

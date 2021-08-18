@@ -1,4 +1,3 @@
-# cook your dish here
 n, op = map(int, input().split())
 for i in range(op):
     if n % 10 == 0:

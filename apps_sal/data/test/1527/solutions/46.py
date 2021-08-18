@@ -2,7 +2,7 @@ from collections import deque
 import _pickle as cPickle
 import cProfile
 h, w = map(int, input().split())
-s = [["#"] * (w + 2)] + [["#"] + list(input()) + ["#"] for i in range(h)] + [["#"] * (w + 2)]
+s = [["
 ans = 0
 A = list()
 for i in range(1, h + 1):
@@ -10,12 +10,12 @@ for i in range(1, h + 1):
         t = cPickle.loads(cPickle.dumps(s, -1))
         c = dict()
         A = list()
-        if s[i][j] == "#":
+        if s[i][j] == "
             continue
         a = deque([[i, j, 0]])
         while len(a) > 0:
             x, y, cnt = a.popleft()
-            t[x][y] = "#"
+            t[x][y] = "
             if t[x - 1][y] == ".":
                 if [x - 1, y, cnt + 1] not in A:
                     a.append([x - 1, y, cnt + 1])

@@ -1,5 +1,4 @@
 def codechef(s, x):
-    # cook your dish here
     flag = 0
     a = (s - x) // 2
     if (s - x) / 2 != a:

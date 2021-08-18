@@ -4,8 +4,8 @@ q = [[0] * w for i in range(h)]
 for i1 in range(h):
     n0 = input()
     for i in range(w):
-        if n0[i] == '#':
-            q[i1][i] = 1
+        if n0[i] == '
+        q[i1][i] = 1
 a = [[0] * w for i2 in range(h + 1)]
 b = [[0] * (w + 1) for i3 in range(h)]
 for i in range(h):

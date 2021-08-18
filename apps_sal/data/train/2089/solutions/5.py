@@ -1,7 +1,7 @@
 import sys
 
 n = int(sys.stdin.readline())
-stat = [0] * 10  # 0: stay, 1: flip, 2: on, 3: off
+stat = [0] * 10
 
 for i in range(n):
     op, arg = sys.stdin.readline().split()

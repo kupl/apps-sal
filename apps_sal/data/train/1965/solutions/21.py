@@ -13,7 +13,7 @@ class DSU:
         if rx == ry:
             return 1
         self.p[rx] = ry
-        self.e += 1   # merged vertice
+        self.e += 1
         return 0
 
 

@@ -26,16 +26,11 @@ def LIR(row, col):
         read_all = [LI() for _ in range(row)]
         return map(list, zip(*read_all))
 
-#################
-
-# Aは単調減少列の右端から選べる
-# Bは ceil(N/A) ~ N-A+1 を取れる
-
 
 N, A, B = LI()
 
 if math.ceil(N / A) <= B <= N - A + 1:
-    numl = [1] * A  # 各単調減少列の要素数
+    numl = [1] * A
     numl[0] = B
     left = N - A - B + 1
     for i in range(1, A):

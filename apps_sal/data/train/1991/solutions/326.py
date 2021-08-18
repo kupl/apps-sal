@@ -1,4 +1,3 @@
-# 1575. Count All Possible Routes
 
 MOD = 10**9 + 7
 
@@ -24,7 +23,6 @@ def count_routes(cities, start, finish, fuel):
             return m_routes[f][c]
 
         if f == 0 and c != finish:
-            # cannot reach city now
             ans = 0
         else:
             current_sol = bool(c == finish)

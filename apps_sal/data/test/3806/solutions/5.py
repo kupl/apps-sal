@@ -26,7 +26,6 @@ def solver(P, polygon):
     return area
 
 
-# ax + by = c
 def toLine(point1, point2):
     (x1, y1) = point1
     (x2, y2) = point2
@@ -40,13 +39,10 @@ def toLine(point1, point2):
         c = a * x1 + y1
         return (a, 1, c)
 
-# perpendicular point from point to the line segment: point1 to point3
-
 
 def perpenPoint(point1, point2, point):
     line = toLine(point1, point2)
     (a, b, c) = line
-    # perpendicular line
     if a == 0:
         (ap, bp) = (b, a)
     else:
@@ -87,10 +83,3 @@ def distance(x1, y1, x2, y2):
 
 
 main()
-#print(perpenPoint((-1, 0), (0, 1), (1.1, 0)))
-#print(perpenPoint((-2, 0), (-2, 1), (0, 0)))
-#print(perpenPoint((-1, 1), (2, 1), (0, 0)))
-#print(perpenPoint((-1, 0), (1, 1), (0, 0)))
-#print(12.56637061435 / math.pi)
-#print(solver((0, 0), [(0, 1), (-1, 2), (1, 2)]))
-#print(solver((1, -1), [(0, 0), (1, 2), (2, 0), (1, 1)]))

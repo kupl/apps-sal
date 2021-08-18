@@ -1,4 +1,3 @@
-# cook your dish here
 def fn_bonAppetit(test):
     for _ in range(test):
         n, k = map(int, input().split())

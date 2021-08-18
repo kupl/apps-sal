@@ -12,7 +12,6 @@ class Solution:
         visited[0] = True
 
         queue = deque()
-        # add first position
         queue.append(0)
 
         steps = 0
@@ -21,7 +20,6 @@ class Solution:
             for size in range(len(queue), 0, -1):
                 i = queue.popleft()
 
-                # termination check
                 if i == n - 1:
                     return steps
 
@@ -35,7 +33,6 @@ class Solution:
                         visited[num] = True
                         queue.append(num)
 
-                # remove already looked up indices
                 indices[arr[i]] = []
 
             steps += 1

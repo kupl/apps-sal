@@ -8,16 +8,16 @@ S = [tuple(map(int, input().split())) + (i + 1,) for i in range(n)]
 S.sort()
 
 segtemp = 2 * 10**5
-seg_el = 1 << ((segtemp).bit_length())  # Segment treeの台の要素数
-SEG = [0] * (2 * seg_el)  # 1-indexedなので、要素数2*seg_el.Segment treeの初期値で初期化
+seg_el = 1 << ((segtemp).bit_length())
+SEG = [0] * (2 * seg_el)
 
 
-def getvalue(n, seg_el):  # 一点の値を取得
+def getvalue(n, seg_el):
     i = n + seg_el
     ANS = 0
 
     ANS += SEG[i]
-    i >>= 1  # 子ノードへ
+    i >>= 1
 
     while i != 0:
         ANS += SEG[i]
@@ -26,7 +26,7 @@ def getvalue(n, seg_el):  # 一点の値を取得
     return ANS
 
 
-def updates(l, r, x):  # 区間[l,r)のminを更新.
+def updates(l, r, x):
     L = l + seg_el
     R = r + seg_el
 
@@ -54,15 +54,12 @@ for point in range(segtemp):
 
         heapq.heappush(SH, (-r, l, x))
 
-    # print(getvalue(point,seg_el),SH)
-
     while getvalue(point, seg_el) > k:
         r, l, x = heapq.heappop(SH)
         r = -r
         ANS.append(x)
         updates(l, r + 1, -1)
 
-    # print(point,ANS,getvalue(point,seg_el))
 
 print(len(ANS))
 print(*ANS)

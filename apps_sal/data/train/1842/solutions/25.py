@@ -10,11 +10,10 @@ class Solution:
 
         seen = set()
 
-        # it's a tree, so the frog can not go back to parent
         def probability(idx, t):
             if t == 0:
                 return idx == target
-            if idx != 1 and len(G[idx]) == 1:  # if the frog is stuck at this vertex
+            if idx != 1 and len(G[idx]) == 1:
                 return idx == target
             seen.add(idx)
             res, count = 0, 0

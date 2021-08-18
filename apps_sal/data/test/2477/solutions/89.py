@@ -1,4 +1,3 @@
-# ABC174 E
 
 n, k = list(map(int, input().split()))
 a_l = [int(x) for x in input().split()]

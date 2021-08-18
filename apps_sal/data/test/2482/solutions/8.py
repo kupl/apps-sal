@@ -1,17 +1,11 @@
-# 参考URL https://note.nkmk.me/python-union-find/
 import sys
 
 
 class UnionFind():
-    # parents
-    # 各要素の親要素の番号を格納するリスト
-    # 要素が根（ルート）の場合は-(そのグループの要素数)を格納する
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
 
-    # find(x)
-    # 要素xが属するグループの根を返す
     def find(self, x):
         if self.parents[x] < 0:
             return x
@@ -19,8 +13,6 @@ class UnionFind():
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    # union(x, y)
-    # 要素xが属するグループと要素yが属するグループとを併合する
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)

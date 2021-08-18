@@ -1,9 +1,7 @@
 class Solution:
     def partitionDisjoint(self, A: List[int]) -> int:
-        # O(N**2) with sapce O(1)
         n = len(A)
 
-        # O(n) with space O(n)
         m = n - 1
         left_max = [0] * m
         left_max[0] = A[0]

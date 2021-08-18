@@ -1,12 +1,4 @@
 class Solution:
-    # def upperBound(self, n, m):
-    #     if n == 0 or m == 0:
-    #         return 0
-    #     elif m > n:
-    #         return self.upperBound(m, n)
-    #     # so that m < n
-    #     else:
-    #         return n // m + self.upperBound(m, n % m)
 
     def findSum(self, n, m, k):
         res = []
@@ -16,8 +8,6 @@ class Solution:
 
         path = [1] * k
         while path[0] <= hi:
-            # find the next available sum
-            # numbers are monotone non-decreasing in path
             i = k - 1
             while i >= 0 and path[i] >= hi:
                 i -= 1

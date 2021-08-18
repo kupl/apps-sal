@@ -8,5 +8,4 @@ def solution(digits):
     elif len(digits) <= 5:
         numli.append[0]
 
-    # print(numli)
     return int(max(numli))

@@ -46,9 +46,6 @@ class Solution:
         def sub(p2, p1):
             return [p2[0] - p1[0], p2[1] - p1[1]]
 
-#         def add(p1, p2):
-#             return [p1[0]+p2[0], p1[1]+p2[1]]
-
         if sub(A, B) == [0, 0]:
             return False
 
@@ -72,7 +69,7 @@ class Solution:
             print((3))
             diff1 = sub(C, A)
             diff2 = sub(A, D)
-            print((diff1, diff2))  # [-1, -1] [1, -1]
+            print((diff1, diff2))
             if diff1 == [-diff2[1], diff2[0]] or diff1 == [diff2[1], -diff2[0]]:
                 return True
 

@@ -3,7 +3,7 @@ l1 = []
 safe = []
 ans = 0
 for i in range(k):
-    d = int(input())  # お菓子を持ってる人の合計
+    d = int(input())
     l = list(map(int, input().split()))
     safe += l
 for i in range(1, n + 1):

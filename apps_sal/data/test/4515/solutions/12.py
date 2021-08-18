@@ -1,7 +1,5 @@
 import sys
 
-# inf = open('input.txt', 'r')
-# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
 
@@ -16,5 +14,3 @@ for _ in range(t):
             print('NO')
     else:
         print('NO')
-
-# inf.close()

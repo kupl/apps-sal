@@ -1,4 +1,3 @@
-#autor @ShymCoder
 import math
 
 

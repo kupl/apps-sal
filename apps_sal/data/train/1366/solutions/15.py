@@ -1,5 +1,3 @@
-# author dragonwarrior8 :D
-# UMEED!! Lets make it yellow 5*
 T = int(input())
 while T > 0:
     T -= 1

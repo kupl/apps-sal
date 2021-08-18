@@ -1,23 +1,16 @@
 import sys
 
-# import re
 import math
 import collections
-# import decimal
 import bisect
 import itertools
 import fractions
-# import functools
 import copy
 import heapq
 import decimal
-# import statistics
 import queue
-# import numpy as np
 
-# sys.setrecursionlimit(10000001)
 INF = 10 ** 16
-# MOD = 10 ** 9 + 7
 MOD = 998244353
 
 
@@ -26,11 +19,7 @@ def ns(): return list(map(int, sys.stdin.readline().split()))
 def na(): return list(map(int, sys.stdin.readline().split()))
 
 
-# ===CODE===
-
 class ModCombination:
-    # https://atcoder.jp/contests/abc167/submissions/13058694
-    # https://ikatakos.com/pot/programming_algorithm/number_theory/mod_combination
 
     def __init__(self, maxN, MOD):
         self._maxN = maxN

@@ -1,7 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 
-# 辞書型を使い、valueでソートする
 dic = {}
 for i in range(N):
     dic[i] = A[i]

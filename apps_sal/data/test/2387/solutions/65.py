@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 
 N = int(input().strip())
 S_list = [input().strip() for _ in range(N)]
-# -----
 
 
 def count_brackets(brackets):
@@ -12,7 +10,7 @@ def count_brackets(brackets):
     for i in range(len(brackets)):
         if brackets[i] == "(":
             cnt += 1
-        else:  # brackets[i] == ")"
+        else:
             cnt -= 1
             min_cnt = min(min_cnt, cnt)
 
@@ -30,7 +28,7 @@ for S in S_list:
 
     if cnt >= 0:
         tmp_cnt_plus.append((cnt, min_cnt))
-    else:  # cnt < 0
+    else:
         tmp_cnt_minus.append((cnt, min_cnt))
 
 

@@ -14,7 +14,6 @@ fin = 0
 for i in range(n, 0, -1):
     if has[i] == 0:
         com, fi = ones(i)
-#        print(com,fi,i)
         has[com] = 1
         fin += 2 * fi
         ans[com] = i

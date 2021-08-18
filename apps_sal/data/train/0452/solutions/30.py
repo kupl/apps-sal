@@ -1,13 +1,9 @@
 class Solution:
     def minDifficulty(self, A: List[int], d: int) -> int:
 
-        # my solution ... 1272 ms ... 48 % ... 14.8 MB ... 39 %
-        #  time: O(2^n)
-        # space: O(n*d)
-
         seen = {}
 
-        def func(sidx, d):  # 返回在 d 天内完成 A[sidx:] 的结果
+        def func(sidx, d):
             if sidx == n or d == 0:
                 return 0 if (sidx == n and d == 0) else float('inf')
             if n - sidx < d:

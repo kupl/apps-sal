@@ -1,4 +1,3 @@
-# c
 x, k, d = map(int, input().split())
 x = abs(x)
 x1 = x // d

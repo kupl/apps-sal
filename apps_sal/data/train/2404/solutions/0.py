@@ -3,7 +3,6 @@ class Solution:
         lo, hi = 0, len(arr) - 1
         while lo < hi:
             mid = hi - (hi - lo) // 2
-            # mid = lo + (hi - lo) // 2
             missing = arr[mid] - mid - 1
             if missing < k:
                 lo = mid

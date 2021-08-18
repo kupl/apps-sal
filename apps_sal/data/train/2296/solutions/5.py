@@ -70,7 +70,6 @@ def main():
                 flag_odd = False
             else:
                 to_sort_idx.append(tois[code].pop())
-    # print(to_sort_idx)
     print(InversionNumber(to_sort_idx))
 
 

@@ -20,8 +20,3 @@ def greet(language):
 
     }
     return (languages.get(language) or 'Welcome')
-
-    # if languages.get(language) == None :
-    #   return ('Welcome')
-    # else:
-    #   return (languages[language])

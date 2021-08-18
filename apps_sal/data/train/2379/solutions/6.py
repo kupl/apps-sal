@@ -1,5 +1,3 @@
-# Bhargey Mehta (Junior)
-#DA-IICT, Gandhinagar
 import sys
 import math
 mod = 10**9
@@ -42,5 +40,4 @@ sys.setrecursionlimit(100000)
 num_tests = 1
 num_tests = int(input())
 for test in range(1, num_tests + 1):
-    # print("Case #{}: ".format(test), end="")
     solve(test)

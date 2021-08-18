@@ -11,11 +11,11 @@ class Solution:
         while num != min_num and k > 0 and i < len(num):
             indx = num.find(str(to_find), i)
             while indx != -1:
-                if indx - i <= k:   # able to swap
-                    num = num[:i] + num[indx] + num[i:indx] + num[indx + 1:]  # the swap
+                if indx - i <= k:
+                    num = num[:i] + num[indx] + num[i:indx] + num[indx + 1:]
                     k -= (indx - i)
                     i += 1
-                    to_find = 0     # restart the to_find variable
+                    to_find = 0
                     indx = num.find(str(to_find), i)
                 else:
                     break

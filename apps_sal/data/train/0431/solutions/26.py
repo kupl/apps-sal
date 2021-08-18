@@ -9,7 +9,6 @@ class Solution:
         mod = 10**9 + 7
 
         for i in range(len(A)):
-            #print(stack, left, right)
             while stack and A[stack[-1]] > A[i]:
                 right[stack[-1]] = i
                 stack.pop()

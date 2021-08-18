@@ -23,6 +23,5 @@ class Solution:
                 elif pos_l > 0:
                     neg_l = pos_l + 1
                     pos_l = 0
-            #print(n, pos_l, neg_l)
             best = max(best, pos_l)
         return best

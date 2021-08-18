@@ -1,4 +1,3 @@
-# 064b
 
 def atc_064b(input_value: str) -> str:
     N = input_value[0]

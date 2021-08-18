@@ -66,7 +66,6 @@ class Solution:
         vertices = [(0, (0, 0))]
 
         while len(seen) < n:
-            # print(vertices, seen)
             w, (u, v) = heapq.heappop(vertices)
             if u in seen and v in seen:
                 continue
@@ -76,8 +75,6 @@ class Solution:
                 if j not in seen and j != v:
                     heapq.heappush(vertices, (manhattan(p[j], p[v]), (v, j)))
         return ans
-
-###############################################################################
 
 
 class SolutionTle:

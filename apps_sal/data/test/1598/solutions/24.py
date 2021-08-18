@@ -16,4 +16,3 @@ for i in range(n - 1, -1, -1):
 ans2 = [str(i) for i in ans]
 
 print("".join(ans2))
-# print(minval)

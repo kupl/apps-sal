@@ -8,11 +8,7 @@ input = sys.stdin.readline
 def print(x):
     sys.stdout.write(str(x) + "\n")
 
-# sys.stdout=open("CP1/output.txt",'w')
-# sys.stdin=open("CP1/input.txt",'r')
 
-
-# mod=pow(10,9)+7
 r, c, n = map(int, input().split())
 row = [0] * r
 col = [0] * c
@@ -30,14 +26,3 @@ for i in range(r):
             cur -= 1
         ans = max(cur, ans)
 print(ans)
-# mr=max(row)
-# mc=max(col)
-# ans=mr+mc-1
-# r1=
-# for i in range(r):
-# 	if row[i]==mr
-# ind=(0,0)
-# ma=0
-# for i in range(r):
-# 	if row[i]>ma
-# print(ans)

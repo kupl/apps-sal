@@ -1,4 +1,3 @@
-# cook your dish here
 def transpose(lst, l):
     for i in range(l):
         for j in range(i, l):
@@ -12,7 +11,6 @@ def printMatrix(lst):
         print(i)
 
 
-# try:
 t = int(input())
 while t > 0:
     n = int(input())
@@ -31,5 +29,3 @@ while t > 0:
         print(count)
 
     t = t - 1
-# except:
-#     pass

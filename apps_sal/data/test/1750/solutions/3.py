@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from collections import deque
 
@@ -77,6 +76,3 @@ while q:
 print(ans)
 
 print(" ".join(map(str, c)))
-
-
-# Made By Mostafa_Khaled

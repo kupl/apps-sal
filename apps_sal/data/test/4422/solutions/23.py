@@ -8,5 +8,4 @@ elif S[K - 1] == 'B':
 else:
     rep = 'c'
 
-# (K-1)文字目まで + K文字目 + K+1文字目から
 print(S[:K - 1] + rep + S[K:])

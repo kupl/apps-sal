@@ -14,15 +14,11 @@ class Solution:
         l, r = 0, position[-1] - position[0]
         res = -float('inf')
         while l <= r:
-            # print(l, r)
-            # if l == r and helper(l) == m:
-            #     return l
             mid = (l + r) >> 1
             if helper(mid) == m:
                 res = max(mid, res)
                 l = mid + 1
             elif helper(mid) > m:
-                # res = max(mid, res)
                 l = mid + 1
             else:
                 r = mid - 1

@@ -21,5 +21,4 @@ class Solution:
             op -= cl
         cnt.sort()
         a.sort()
-        # print(cnt, a)
         return sum(x * y for x, y in zip(cnt, a)) % (10**9 + 7)

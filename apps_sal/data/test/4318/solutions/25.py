@@ -1,5 +1,3 @@
-# ABC124
-# B Great Ocean View
 n = int(input())
 H = list(map(int, input().split()))
 high = H[0]

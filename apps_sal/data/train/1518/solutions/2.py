@@ -1,4 +1,3 @@
-# https://www.geeksforgeeks.org/check-number-can-written-sum-k-prime-numbers/
 from sys import stdin, stdout
 
 

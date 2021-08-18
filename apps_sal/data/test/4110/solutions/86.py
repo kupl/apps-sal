@@ -10,7 +10,6 @@ for i in range(2**D):
     pp = 0
     t = 0
     b = format(i, "0" + str(D) + "b")
-    # print(b)
     for j in range(D):
         pp += (100 * (j + 1) * p[j] + c[j]) * int(b[j])
         t += p[j] * int(b[j])

@@ -1,4 +1,3 @@
-# cook your dish here
 x = input()
 y = len(x)
 if y == 1:

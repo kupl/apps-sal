@@ -14,8 +14,6 @@ def MI():
 def LI():
     return list(map(int, stdin.readline().rstrip().split()))
 
-# main part
-
 
 n, m = MI()
 

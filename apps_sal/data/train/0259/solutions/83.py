@@ -18,31 +18,3 @@ class Solution:
             else:
                 l = mid + 1
         return l
-#         nums.sort()
-
-#         v1 = sum(nums)
-#         v2 = len(nums)
-#         if v1<= threshold:
-#             return 1
-#         l = 1
-#         u = max(nums)
-
-#         addl = []
-#         while l+1<u:
-#             print(l,u)
-#             mid = (l+u)//2
-#             print('mid',mid)
-#             add = 0
-#             for i in range(len(nums)):
-#                 add = add + math.ceil(nums[i]/mid)
-#             print(add)
-
-#             if add>threshold:
-#                 l = mid
-#             elif add == threshold:
-#                 return mid
-#             else:
-#                 addl.append(mid)
-#                 u = mid
-
-#         return min(addl

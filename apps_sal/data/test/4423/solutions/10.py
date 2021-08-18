@@ -6,8 +6,6 @@ for i in range(N):
 
 ans = sorted(SP, key=lambda x: (x[0], -int(x[1])))
 
-# for i in range(N):
-#    print(ans[i][2])
 
 for i in ans:
     print(i[2])

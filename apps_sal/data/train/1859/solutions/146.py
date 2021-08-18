@@ -10,7 +10,6 @@ class Solution:
         r, c = 0, 1
         while diag < m + n - 1:
             if 0 <= r < m and 0 <= c < n:
-                # print('r=', r, ' c=',c)
                 if matrix[r][c] == 0:
                     new_rec[r] = 0, 0
                 elif r == 0:
@@ -20,11 +19,9 @@ class Solution:
                 else:
                     above_h = old_rec[r - 1][1]
                     left_w = old_rec[r][0]
-                    # print(' left w=',left_w, 'above h=', above_h, ' sq=', square[r-1][c-1])
                     new_rec[r] = left_w + 1, above_h + 1
                     square[r][c] += min(left_w, above_h, square[r - 1][c - 1])
                 total += square[r][c]
-                # print(' number=',new_rec[r], ' total=', total )
 
             r += 1
             c -= 1

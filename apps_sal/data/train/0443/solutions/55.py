@@ -26,7 +26,6 @@ class Solution:
                 k += 1
 
             i += 1
-        # print(elm_less_than_cur_to_left,elm_less_than_cur_to_right, elm_greater_than_cur_to_left, elm_greater_than_cur_to_right )
         for i in range(0, len(rating)):
             res += (elm_less_than_cur_to_left[i] * elm_greater_than_cur_to_right[i]) + (elm_less_than_cur_to_right[i] * elm_greater_than_cur_to_left[i])
 

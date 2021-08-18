@@ -27,7 +27,6 @@ class Solution:
                         for d in direction:
                             fromi = i + d[0]
                             fromj = j + d[1]
-                            # check fromi and fromj are valid
                             if 0 <= fromi <= 3 and 0 <= fromj <= 2 and dp[k - 1][fromi][fromj] != None:
                                 dp[k][i][j] += dp[k - 1][fromi][fromj]
         res = 0

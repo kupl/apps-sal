@@ -2,8 +2,6 @@ import sys
 import operator
 import array
 
-# -----------
-
 
 def solve():
     a = [int(x) for x in input().split()]
@@ -16,7 +14,6 @@ def solve():
     arr_append = have.append
     for i in range(0, n):
         for j in range(0, 6):
-            #arr_append([ b[i] - a[j], i ])
             have[i * 6 + j] = [b[i] - a[j], i]
 
     cnt = array.array('L', [0]) * n
@@ -45,8 +42,6 @@ def solve():
 
     print(ans)
 
-
-# -----------
 
 def main(argv):
     solve()

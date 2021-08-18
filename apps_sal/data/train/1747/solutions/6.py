@@ -86,7 +86,7 @@ def crosstable(players, results):
             cur_line += 1
             ans.append(line)
     ans[1] = '=' * len(ans[2])
-    ans[0] = ' ' * (longest_rank - 1) + '#  Player' + ' ' * (longest_name - 6 + longest_round_number - 1)
+    ans[0] = ' ' * (longest_rank - 1) + '
     for x in range(1, len(players) + 1):
         ans[0] += str(x)
         ans[0] += ' ' * (longest_round_number - len(str(x + 1)) + 1)

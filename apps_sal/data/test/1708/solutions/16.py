@@ -5,8 +5,6 @@ import numbers
 import string
 import sys
 
-###
-
 
 def powmod(x, p, m):
     if p <= 0:
@@ -14,8 +12,6 @@ def powmod(x, p, m):
     if p <= 1:
         return x % m
     return powmod(x * x % m, p // 2, m) * (x % m)**(p % 2) % m
-
-###
 
 
 def to_basex(num, x):
@@ -32,8 +28,6 @@ def from_basex(it, x):
         p *= x
     return ret
 
-###
-
 
 def core():
     n, m = (int(x) for x in input().split())
@@ -42,8 +36,6 @@ def core():
     s = [(c[i], i) for i in range(n)]
     s.sort(reverse=True)
 
-    # print(a)
-    # print(s)
     for _ in range(m):
         if not s:
             print(0)
@@ -59,7 +51,6 @@ def core():
                 dj -= a[tj]
                 a[tj] = 0
                 while dj > 0:
-                    # print("dj0, bill0: %d, %d" % (dj, bill))
                     if not s:
                         bill = 0
                         break
@@ -75,10 +66,7 @@ def core():
                         dj -= a[s[-1][1]]
                         a[s[-1][1]] = 0
                         _ = s.pop()
-                    # print("dj, bill: %d, %d" % (dj, bill))
                 print(bill)
-        # print(a)
-        # print(s)
 
 
 core()

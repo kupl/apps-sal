@@ -1,28 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
-        # from collections import deque
-        # queue = deque([root])
-        # visited = []
-        # while queue:
-        #     curr = queue.popleft()
-        #     if curr:
-        #         visited.append(curr)
-        #         queue.extend([curr.left, curr.right])
-        # res = []
-        # for node in visited:
-        #     if node.val in to_delete:
-        #         if node.left: res.append(node.left)
-        #         if node.right: res.append(node.right)
-        #         node = None
-        # if root and root.val not in to_delete:
-        #     res.append(root)
-        # return res
 
         stack = [(root, True)]
         res = []

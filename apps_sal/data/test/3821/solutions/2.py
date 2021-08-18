@@ -14,7 +14,6 @@ def calc(d, nd, n):
 
 
 n = int(input())
-# x = tuple(sorted(map(fractions.Fraction, str.split(input())), reverse=True))
 x = tuple(sorted(map(float, str.split(input())), reverse=True))
 nx = tuple([1 - p for p in x])
 

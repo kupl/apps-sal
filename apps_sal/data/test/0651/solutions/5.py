@@ -6,7 +6,7 @@ cmds = input()
 
 
 def ok(x, y):
-    return 0 <= x < w and 0 <= y < h and M[y][x] != '#'
+    return 0 <= x < w and 0 <= y < h and M[y][x] != '
 
 
 start = None

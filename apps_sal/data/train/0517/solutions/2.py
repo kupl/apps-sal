@@ -30,7 +30,6 @@ def sieve(x):
 
 
 def nonPeriodicStrings(s, m):
-   # print("\nNPS"+ str(s) +" "+ str(m) + "\n")
     if s == 1:
         return 2 % m
     if s in nonperiodics:
@@ -39,13 +38,10 @@ def nonPeriodicStrings(s, m):
         nps = (powersof2[s] - 2) % m
         nonperiodics[s] = nps
         return nps
- #   print(s)
     li = listoffactors(s)
-   # print(li)
     nps = powersof2[s]
     for i in li:
         nps -= nonPeriodicStrings(i, m)
-    #    print(nonPeriodicStrings(i,m))
         nps %= m
     nonperiodics[s] = nps
     return nps
@@ -54,14 +50,9 @@ def nonPeriodicStrings(s, m):
 cc = input().split(' ')
 a = int(cc[0])
 m = int(cc[1])
-# print(a)
-# print(m)
 prime = [True for i in range(a + 1)]
-#m = int(input())
 pow2(a, m)
-# print(powersof2)
 sieve(a + 1)
-# print(prime)
 if prime[a]:
     l = powersof2[a] - 2
     print(l)

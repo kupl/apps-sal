@@ -7,7 +7,6 @@ for t in range(T):
 
     def get_neighbs(i, j):
         neighbs = set([(n - i - 1, j), (i, m - j - 1), (n - i - 1, m - j - 1), (i, j)])
-        # print(neighbs)
         return [mat[i][j] for i, j in neighbs]
     ans = 0
     for i in range((n + 1) // 2):

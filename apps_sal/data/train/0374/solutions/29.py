@@ -23,16 +23,12 @@ class Solution:
                     if A[i][(len(A[i]) - k):(len(A[i]))] == A[j][0:k]:
                         break
                 overlap[(i, j)] = k
-        # print(self.int2arr(7,5))
-        #print(self.arr2int([1, 1, 1, 0, 0]))
         state_order = []
         for i in range(0, n + 2):
             state_order.append([])
         for i in range(0, 2**(n)):
             arr = self.int2arr(i, n)
-            # print(i,arr,sum(arr))
             state_order[sum(arr)].append(i)
-        # print(state_order)
 
         m = {}
         conn = {}

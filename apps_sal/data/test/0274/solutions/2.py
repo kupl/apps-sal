@@ -6,7 +6,6 @@ maxdepth = max([sum(a[:i + 1]) for i in range(len(a))])
 
 dl = 5 + (maxdepth - 1) * 2
 maxdl = dl - 2
-# for i in a:
 jj = [[' ' for i in range(N + spaces * 3)] for j in range(maxdl)]
 posx = 0
 for i in range(len(a)):

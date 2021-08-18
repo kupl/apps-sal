@@ -1,7 +1,6 @@
 n = int(input())
 seq = sorted(list(map(int, input().split())))
 
-# Left (inc), Right(exc), bit to check, value to add
 queue = [(0, n, 30, 0)]
 best = 2 ** 30
 while queue:

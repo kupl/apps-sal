@@ -77,7 +77,6 @@ class Solution:
         for ne in neb:
             ni, nj = ne
             if ne != parent and ni >= 0 and ni < self.m and nj >= 0 and nj < self.n and self.grid[ni][nj] == self.grid[i][j]:
-                # print(ne)
                 if self.cycle((ni, nj), current):
                     return True
         return False
@@ -94,8 +93,6 @@ class Solution:
         while q:
 
             node, par = q.pop()
-            # print(node)
-            # print(par)
             i, j = node
             neb = [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]
 

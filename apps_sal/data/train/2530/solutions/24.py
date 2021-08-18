@@ -18,6 +18,5 @@ class Solution:
                 mydict[rest][0] += 1
         for a in mydict:
             mycount += mydict[a][0] * mydict[a][1]
-            # print(mycount)
 
         return mycount + (count30 - 1) * count30 // 2 + (count0 - 1) * count0 // 2

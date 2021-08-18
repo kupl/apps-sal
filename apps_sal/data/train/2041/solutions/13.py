@@ -56,15 +56,3 @@ if first != 0 and swap(first - 1, first, n, a, mask, S) == 1:
     cnt -= 1
 
 print(cnt)
-
-# 9
-# 1 2 3 4 5 6 7 8 9
-
-# 10
-# 3 2 1 4 1 4 1 4 1 4
-
-# 4
-# 200 150 100 50
-
-# 5
-# 2 8 4 7 7

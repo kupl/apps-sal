@@ -1,6 +1,5 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
-        # b_counts = [[0]*(ord('z')-ord('a')) for _ in len(B)]
 
         common_counter = defaultdict(int)
         for b_str in B:

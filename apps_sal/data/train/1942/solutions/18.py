@@ -1,8 +1,6 @@
 class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         ret = []
-        # for ind, i in enumerate(favoriteCompanies):
-        #     favoriteCompanies[ind] = set(sorted(i))
         for ind, current_person in enumerate(favoriteCompanies):
             check = False
             for j in range(len(favoriteCompanies)):

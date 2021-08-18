@@ -15,7 +15,6 @@ class Solution:
                     continue
                 dp[r][c] += dp[r][c - 1] + dp[r - 1][c] - dp[r - 1][c - 1]
 
-        # print(dp)
         highest = -1
         for r in range(1, len(dp)):
             r0 = r1 = r
@@ -24,7 +23,6 @@ class Solution:
 
                 result = dp[r1][c1] + dp[r0 - 1][c0 - 1] - dp[r1][c0 - 1] - dp[r0 - 1][c1]
 
-                # print(f'r0:{r0} r1:{r1} c0:{c0} c1:{c1} result:{result}')
                 if result <= threshold:
                     highest = max(r1 - r0, highest)
                     r1 += 1

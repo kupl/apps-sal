@@ -25,7 +25,6 @@ class Solution:
                 gold = dfs(i, j)
                 if gold > ans:
                     ans = gold
-                    # maxpath=set(path)
                 path.clear()
 
         return ans

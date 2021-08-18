@@ -29,10 +29,6 @@ class Solution:
                         if key < self.change_map[amount_obj]:
                             self.change_map[amount_obj] = key
 
-            # elif el == amount_obj:
-            #     self.change_map[amount_obj] = 1
-            #     return 1
-
         if amount_obj not in self.change_map.keys():
             self.change_map[amount_obj] = -1
             return -1
@@ -42,7 +38,6 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 
         Solution.changer(self, coins, amount)
-        # print(self.change_map,amount)
         if amount not in self.change_map.keys():
             return -1
 

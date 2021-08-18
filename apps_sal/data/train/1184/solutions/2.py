@@ -78,5 +78,4 @@ for _ in range(int(stdin.readline())):
         profit = s
     print(profit)
     arr.append(profit)
-    # print(arr)
 print(sum(arr))

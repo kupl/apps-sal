@@ -9,14 +9,12 @@ for i in range(n):
     else:
         secondorig.append((h, m))
 
-#print(len(firstorig), len(secondorig))
 firstres = 0
 first = copy.deepcopy(firstorig)
 second = copy.deepcopy(secondorig)
 curmaxjump = xx
 
 while True:
-    #print(len(first), len(second), firstres)
     if len(first) > 0:
         i = 0
         weight = 0
@@ -54,7 +52,6 @@ first = copy.deepcopy(firstorig)
 second = copy.deepcopy(secondorig)
 
 while True:
-    #print(len(first), len(second), curmaxjump)
     if len(second) > 0:
         i = 0
         weight = 0
@@ -70,7 +67,6 @@ while True:
             break
     else:
         break
-    #print(len(first), len(second), firstres)
     if len(first) > 0:
         i = 0
         weight = 0
@@ -88,6 +84,4 @@ while True:
         break
 
 
-# print(firstres)
-#print(firstres, secondres)
 print(max(firstres, secondres))

@@ -1,4 +1,3 @@
-# 236B
 
 import math
 

@@ -1,6 +1,5 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # Union find
         records = []
         self.num_m = 0
         for i in range(len(arr)):

@@ -12,20 +12,18 @@ def solve(days):
     for i in range(0, len(days) - 1):
         cur_act = days[i]
         next_act = days[i + 1]
-        # stdout.write(str(cur_act))
         if cur_act == 0 or prev_act == cur_act:
             prev_act = 0
             rest_num += 1
         elif prev_act != cur_act and cur_act != 3:
             prev_act = cur_act
-        else:  # cur_act == 3
+        else:
             if prev_act in (1, 2):
                 prev_act = prev_act % 2 + 1
             else:
                 if next_act in (1, 2):
                     prev_act = next_act % 2 + 1
 
-        # rest_num += 1
     return rest_num
 
 

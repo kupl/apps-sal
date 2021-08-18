@@ -19,7 +19,6 @@ class Solution:
                 if count == k:
                     count = 0
                     numBouqets += 1
-            # print(left, mid, right, numBouqets)
             if numBouqets >= m:
                 right = mid
             else:

@@ -11,7 +11,6 @@ for _ in range(int(input())):
             if (i - j) < n and j < m:
                 C[-1].append(A[i - j][j])
     Ans = 0
-    # print(C)
     for i in range(len(C) // 2):
         Ans += min(sum(C[i]) + sum(C[- i - 1]), len(C[i]) + len(C[-1 - i]) - sum(C[i]) - sum(C[- i - 1]))
     print(Ans)

@@ -1,9 +1,7 @@
-# cook your dish here
 def fact(nnn):
     f = 1
     for i in range(1, nnn + 1):
         f = f * i
-    # print(f)
     return f
 
 
@@ -14,7 +12,5 @@ for i in range(0, t):
     s = sum(lis)
     st = "1" * n
     last = int(st)
-    # fac=
-    # print(fact(n-1))
     ans = fact(n - 1) * s * last
     print(ans)

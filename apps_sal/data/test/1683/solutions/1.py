@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
 import math
 import sys
 from collections import Counter
 
-MOD = 1000000007  # Facebook Hacker Cup mod
+MOD = 1000000007
 
 
 def f(a, b):
@@ -22,7 +21,6 @@ def f(a, b):
 
 
 def ndigits(a):
-    # requires a >= 1
     ret = 0
     while a:
         ret += 1
@@ -31,9 +29,6 @@ def ndigits(a):
 
 
 def contrib_for_digs(x, part_digs, x_is_a):
-    # x: the number
-    # part_digs: digits of partner
-    # x_is_a: true if x is a, false if x is b
     partner = 10 ** (part_digs - 1)
     a1, b1 = partner, x
     a2, b2 = 2 * partner, x
@@ -41,7 +36,6 @@ def contrib_for_digs(x, part_digs, x_is_a):
         a1, b1 = b1, a1
         a2, b2 = b2, a2
 
-    # totally heinous
     return 2 * f(a1, b1) - f(a2, b2)
 
 

@@ -1,7 +1,7 @@
 class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
         n = len(nums)
-        dp = [0, float('-inf'), float('-inf')]  # largest number with remainder 0,1,2
+        dp = [0, float('-inf'), float('-inf')]
         for i in range(1, n + 1):
             x = nums[i - 1]
             dp1 = [0] * 3

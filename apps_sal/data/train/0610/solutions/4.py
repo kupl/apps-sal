@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     N = int(input().strip())
     A = list(map(int, input().split()))
@@ -15,6 +14,5 @@ for _ in range(int(input())):
             m1 = 0
         else:
             m1 = m1 + 1
-    #     print(i, A[i], ma, m1)
     if mc == 1:
         print("YES")

@@ -3,7 +3,6 @@ from functools import reduce
 
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
-        # (small value, small index) => (large value, large index)
         sorted_A = [i for _, i in sorted([(A[i], i) for i in range(len(A))])]
         memo = [[None for i in range(len(A))] for j in range(2)]
 

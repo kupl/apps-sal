@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
@@ -61,8 +60,6 @@ def S(n):
         n //= 10
     return s
 
-# @mt
-
 
 def slv(K):
     ans = [(i, i / S(i)) for i in range(1, 10)]
@@ -79,10 +76,6 @@ def slv(K):
             while ans[-1][1] > b / s or ans[-1][0] == b:
                 (ans.pop())
             ans.append((b, b / s))
-            # print(ans[-1])
-    # error_print(len(ans))
-    # for r in ans:
-    #     error_print(r)
     error_print(len(ans))
 
     return '\n'.join(map(str, map(lambda x: x[0], ans[:K])))

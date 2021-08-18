@@ -15,7 +15,6 @@ class Solution:
                     mat[4 * i + 1][4 * j + 1] = 1
                     mat[4 * i + 2][4 * j + 2] = 1
                     mat[4 * i + 3][4 * j + 3] = 1
-        # print(mat)
         dirs = [[-1, 0], [1, 0], [0, 1], [0, -1]]
 
         def dfs(i, j):

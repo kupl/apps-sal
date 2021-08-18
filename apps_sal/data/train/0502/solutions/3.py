@@ -4,7 +4,6 @@ from collections import Counter
 
 class Solution:
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
-        # color the components
         colors = dict()
         c = count()
 
@@ -19,18 +18,12 @@ class Solution:
             if node not in colors:
                 dfs(node, next(c))
 
-        # count sizes of each component
         size = Counter(list(colors.values()))
 
-        # find components with only one malware inside
         malware_count = Counter()
         for node in initial:
             malware_count[colors[node]] += 1
 
-        # print(malware_count)
-        # print(size)
-
-        # find the component with the most nodes and only 1 malware
         ans = None
         ans_nodes = 0
         for x in initial:

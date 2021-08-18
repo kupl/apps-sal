@@ -12,7 +12,6 @@ for i in range(n):
         cnt_fu += 1
     if a[i] == 0:
         cnt_0 += 1
-# print(cnt_fu,cnt_0,ans,b)
 if cnt_fu % 2 == 0:
     print(ans)
 else:

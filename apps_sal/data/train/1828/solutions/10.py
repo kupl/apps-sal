@@ -15,8 +15,6 @@ class Solution:
             ans[idx] = max_word
             idx += 2
         del dicta[max_word]
-        # print(ans)
-        # idx=1
         for let in dicta:
             for i in range(dicta[let]):
                 if idx >= n:

@@ -1,6 +1,5 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
-        # Create Dictionary
         dictionary = dict()
         for i in range(len(B)):
             prev_dict = dict(dictionary)
@@ -21,16 +20,12 @@ class Solution:
 
         answer = []
         for i in range(len(A)):
-            # Reset Dictionary
             current_dict = dict(dictionary)
-            # print(current_dict)
-            # Manipulate Dictionary
             for j in range(len(A[i])):
                 char_a = A[i][j]
                 if char_a in current_dict:
                     current_dict[char_a] -= 1
 
-            # Check if word passes
             include_word = True
             for key, value in list(current_dict.items()):
                 if value > 0:

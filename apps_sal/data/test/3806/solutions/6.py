@@ -1,6 +1,5 @@
 __author__ = 'vboldovs'
 
-# A613
 
 import math
 
@@ -64,18 +63,5 @@ for i in range(n):
 
     min_r = min(min_r, distance(p_point, center))
 
-    #alpha = 0.5
-    # while True:
-    #    test_point = point((1-alpha)*s_point.x+alpha*e_point.x,(1-alpha)*s_point.y+alpha*e_point.y)
-    #    prod = product(line(test_point,center),curr_line)
-    #
-    #    if abs(prod) <= GLOBAL_INNER_PRODUCT_LIMIT:
-    #        min_r = min(min_r,distance(test_point,center))
-    #        break
-
-    #    if prod > GLOBAL_INNER_PRODUCT_LIMIT:
-    #        alpha+=alpha/2
-    #    else:
-    #        alpha-=alpha/2
 
 print(math.pi * math.pow(max_r, 2) - math.pi * math.pow(min_r, 2))

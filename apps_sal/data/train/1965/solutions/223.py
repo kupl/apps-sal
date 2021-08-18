@@ -6,25 +6,18 @@ class Solution:
         unwanted = 0
 
         for t, u, v in edges:
-            #print((t, u, v))
             if t == 1:
-                # Alice
                 if a_uf.find(u) == a_uf.find(v):
-                    # dont need this
                     unwanted += 1
                 else:
                     a_uf.union(u, v)
             elif t == 2:
-                # Bob
                 if b_uf.find(u) == b_uf.find(v):
-                    # dont need this
                     unwanted += 1
                 else:
                     b_uf.union(u, v)
             else:
-                # Alice and Bob
                 if a_uf.find(u) == a_uf.find(v) and b_uf.find(u) == b_uf.find(v):
-                    # both guys dont need
                     unwanted += 1
                 else:
                     a_uf.union(u, v)

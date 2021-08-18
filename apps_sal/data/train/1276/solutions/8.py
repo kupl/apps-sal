@@ -1,5 +1,3 @@
-# cook your code here
-# cook your code here
 pow2 = [(1 << i) for i in range(21)]
 
 

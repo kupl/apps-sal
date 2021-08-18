@@ -26,5 +26,4 @@ class Solution:
                 for j in range(len(indices)):
                     out[indices[j]] = letters[j]
 
-                # print(out)
         return ''.join(out)

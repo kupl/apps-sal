@@ -7,7 +7,7 @@ class Solution:
         num_rows = len(grid)
         num_cols = len(grid[0])
 
-        frontier = deque([(0, 0, 0, k)])  # frontier keeps (row, col, dist, k)
+        frontier = deque([(0, 0, 0, k)])
         visited = {}
 
         while frontier:
@@ -17,7 +17,6 @@ class Solution:
             if row == num_rows - 1 and col == num_cols - 1:
                 return dist
 
-            # get neighbours
             neighbours = [(row - 1, col), (row + 1, col), (row, col - 1), (row, col + 1)]
 
             for neighbour in neighbours:
@@ -31,7 +30,7 @@ class Solution:
                         else:
                             frontier.append((neigh_row, neigh_col, dist + 1, chances - 1))
                             visited[neighbour] = (dist + 1, chances - 1)
-                    else:  # if visited, only visit again if chance is larger
+                    else:
                         last_dist, last_chance = visited[neighbour]
                         if last_chance < chances:
                             if grid[neigh_row][neigh_col] == 0:

@@ -13,11 +13,9 @@ def main(n, x, l, r):
 
 def main_input(info=0):
     n, x = list(map(int, input().split()))
-    #t = [(int(x)-1,i+1) for i,x in enumerate(input().split())]
     l, r = list(range(n)), list(range(n))
     for i in range(n):
         l[i], r[i] = list(map(int, input().split()))
-#    t = [map(int,input().split()) for x in range(n)]
     main(n, x, l, r)
 
 

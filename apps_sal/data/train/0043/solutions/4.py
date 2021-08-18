@@ -21,7 +21,6 @@ for case in range(t):
         mid = (low + high) // 2
         res = f(a, b, mid)
         if res:
-            # mid is possible
             high = mid
         else:
             low = mid + 1

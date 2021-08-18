@@ -1,7 +1,3 @@
-# A - Between Two Integers
-
-# 整数A,B,Cが入力される
-# CがA以上かつB以下であるかを判定する
 
 
 A, B, C = list(map(int, input().split()))

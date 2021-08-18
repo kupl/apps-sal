@@ -4,7 +4,6 @@ class Solution:
         right = left * len(weights) // D
 
         def checkShipping(cap):
-            # check whether we can ship all packages in D days
             days = 1
             onboard = 0
             for i, v in enumerate(weights):
@@ -18,7 +17,6 @@ class Solution:
                     return False
             return True
 
-        #ans = right
         while left < right:
             mid = left + (right - left) // 2
             if checkShipping(mid):

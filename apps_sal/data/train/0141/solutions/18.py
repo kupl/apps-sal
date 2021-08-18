@@ -3,7 +3,6 @@ class Solution:
         j = len(people) - 1
         i = 0
         people = sorted(people)
-        # since we could max have two people on a boat so we need to add have two ###pointers
         print(people)
         count = 0
         while(i <= j):

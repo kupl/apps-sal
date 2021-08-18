@@ -1,4 +1,3 @@
-# lazy backtrack attempt
 
 def validate(tiles, used_pair=False):
     tiles = sorted(tiles)

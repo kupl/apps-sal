@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 D, G = list(map(int, input().split()))
 data = [list(map(int, input().split())) for i in range(D)]
 ps, cs = list(zip(*data))

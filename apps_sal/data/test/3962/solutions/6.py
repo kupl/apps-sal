@@ -8,7 +8,6 @@ for i in range(n):
     b.append(y)
 a.sort()
 b.sort()
-# print(a)
 for i in range(0, n):
     ans += max(a[i], b[i]) + 1
 print(ans)

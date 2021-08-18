@@ -7,9 +7,9 @@ prime = [0 for _ in range(maxn)]
 for i in range(2, maxn):
     if prime[i] == 0:
         for j in range(i, maxn, i):
-            prime[j] = i  # 最大質因數
+            prime[j] = i
 
-st = set()  # 目前出現過的所有質因數，一開始為A[0]的所有質因數
+st = set()
 a = A[0]
 while prime[a]:
     st.add(prime[a])
@@ -18,7 +18,7 @@ while prime[a]:
         a //= x
 
 pairwise = True
-st2 = st  # 所有數共有的質因數，一開始為A[0]的所有質因數
+st2 = st
 for a in A[1:]:
     tmp = set()
     for j in st2:

@@ -8,7 +8,6 @@ class Node:
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         all_nodes, root_nodes = self.gen_graph(leftChild, rightChild)
-        # print(root_nodes)
 
         if len(root_nodes) != 1:
             return False
@@ -35,7 +34,6 @@ class Solution:
 
         if not dfs(all_nodes[root_nodes[0]]):
             return False
-        # print(visited)
         for i in range(len(leftChild)):
             if all_nodes[i] not in visited:
                 return False

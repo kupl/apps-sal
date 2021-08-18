@@ -4,7 +4,7 @@ sys.setrecursionlimit(10**6)
 
 def main():
     input = sys.stdin.readline
-    V = 10**5  # max size of x
+    V = 10**5
     N = int(input())
     bgraph = [[] for _ in range(2 * V)]
     for _ in range(N):

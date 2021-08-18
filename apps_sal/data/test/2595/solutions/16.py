@@ -1,8 +1,5 @@
-# from decorators import *
 from sys import stdin, stdout
 from math import ceil
-
-# @debug
 
 
 def solve(a, b):

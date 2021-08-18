@@ -10,11 +10,9 @@ for i in range(M):
     G[b][a] = c
 
 
-# 全点間最短距離を計算
 G = floyd_warshall(G)
 
 
-# コストL以下で移動可能な頂点間にコスト１の辺を張る
 E = [[float('inf')] * N for i in range(N)]
 for i in range(N):
     for j in range(N):
@@ -22,11 +20,9 @@ for i in range(N):
             E[i][j] = 1
 
 
-# そのグラフの全点間最短距離を求める
 E = floyd_warshall(E)
 
 
-# クエリに答えていく
 Q = int(input())
 for i in range(Q):
     s, t = list(map(int, sys.stdin.readline().split()))

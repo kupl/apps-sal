@@ -10,7 +10,6 @@ for num in a:
     l = math.ceil(num / x) * x + (k - 1) * x
     r = l + x - 1
     l = num if l < num else l
-    # print(l, r, bisect.bisect_left(a, l), bisect.bisect_right(a, r), bisect.bisect_right(a, r) - bisect.bisect_left(a, l))
     ans += bisect.bisect_right(a, r) - bisect.bisect_left(a, l)
 
 print(ans)

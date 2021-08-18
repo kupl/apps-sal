@@ -55,7 +55,6 @@ for i in range(n - 1):
                 break
         if check:
             rowLis.append([i, j])
-# print(rowLis)
 parList = [i for i in range(n + 1)]
 q = co.deque()
 rowDic = UnionFind(n, len(rowLis), rowLis)
@@ -71,14 +70,11 @@ for i in range(n - 1):
                 break
         if check:
             colLis.append([i, j])
-# print(colLis)
 parList = [i for i in range(n + 1)]
 q = co.deque()
 colDic = UnionFind(n, len(colLis), colLis)
 
 ans = 1
-# print(rowDic)
-# print(colDic)
 for i in rowDic.values():
     for j in range(1, i + 1):
         ans = ans * j

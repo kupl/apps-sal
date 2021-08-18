@@ -1,5 +1,4 @@
 def html(tag, *content, **kwargs):
-    # Format tag's attributes
     attributes = ''
     if kwargs:
         attribs = []
@@ -9,11 +8,9 @@ def html(tag, *content, **kwargs):
             attribs.append(f'{k}="{v}"')
         attributes = ' ' + ' '.join(attribs)
 
-    # Process content free tags
     if not content:
         return f'<{tag}{attributes} />'
 
-    # Process content filled tags
     lines = []
     for line in content:
         lines.append(f'<{tag}{attributes}>{line}</{tag}>')

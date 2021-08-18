@@ -17,16 +17,13 @@ for i in range(1, n + 1):
         q = [(i, -1)]
         visited[i] = True
         while len(q) > 0:
-            # print(q)
             curr, par = q.pop(0)
             for i in adj_li[curr]:
                 if i != par:
                     if not visited[i]:
                         q.append((i, curr))
                         visited[i] = True
-                        # adj[i].remove(curr)
                     else:
-                        #print("flag false",curr,i)
                         flag = False
         if flag:
             ans += 1

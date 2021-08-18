@@ -5,5 +5,4 @@ for i, c in zip(map('hard'.find, input()), map(int, input().split())):
         continue
     dp[i + 1] = min(dp[i + 1], dp[i])
     dp[i] += c
-    # print('hard'[i],dp)
 print(min(dp[:-1]))

@@ -8,13 +8,11 @@ m10 = 1
 
 for i in range(1, N + 1):
     a = int(S[-i])
-    #print(a, a*(10**(N-i-1)), q)
     q.append((a * m10 + q[i - 1]) % 2019)
     m10 *= 10
     m10 %= 2019
     count[q[-1]] += 1
 
-# print(q)
 
 for i in range(2019):
     c = count[i]

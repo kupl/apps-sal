@@ -11,8 +11,6 @@ class Solution:
                 for j in range(n):
                     graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
 
-        # print(graph)
-
         currmin = float('inf')
         currv = -1
         for i in range(n):
@@ -23,7 +21,6 @@ class Solution:
                     if curr > currmin:
                         break
             if curr <= currmin:
-                # print(i, curr)
                 currmin = curr
                 currv = i
         return currv

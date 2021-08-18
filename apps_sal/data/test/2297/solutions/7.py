@@ -4,9 +4,6 @@ input = sys.stdin.readline
 Q = int(input())
 LR = [list(map(int, input().split())) for i in range(Q)]
 
-# 正:N//2個の和
-# 負:(N+1)//2個の和
-
 
 def SUM(i):
     plus = i // 2

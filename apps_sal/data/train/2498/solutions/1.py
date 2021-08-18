@@ -12,7 +12,6 @@ class Solution:
                     break
             if i != p:
                 l, r = record[w1[i]], record[w2[i]]
-                # l, r = order.index(w1[i]),order.index(w2[i])
                 if l < r:
                     return True
                 if l > r:

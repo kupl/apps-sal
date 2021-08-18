@@ -11,8 +11,6 @@ def main():
             printk = printk + int(ii) * 23**c
             __ = int(ii) * printk
             c += 1
-            # print __
-            # print c
         ok_ = printk % mod
         print(ok_)
 

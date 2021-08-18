@@ -1,4 +1,3 @@
-# even faster by using a comprehensive list at the end
 
 from collections import deque
 import sys

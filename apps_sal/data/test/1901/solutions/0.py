@@ -1,5 +1,3 @@
-# python3
-# utf-8
 
 nodes_nr, edges_nr = (int(x) for x in input().split())
 node_idx___cost = [int(x) for x in input().split()]

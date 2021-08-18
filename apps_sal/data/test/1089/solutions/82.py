@@ -14,7 +14,6 @@ for i in range(1, m + 1):
 res_m = (res_m * (n ** 2)) % mod
 
 res = res_n + res_m
-# print(res)
 
 f = [1 for _ in range(n * m)]
 for i in range(1, n * m):

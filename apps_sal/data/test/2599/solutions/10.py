@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
 import sys
-# sys.setrecursionlimit(10**6)
 import math
 from copy import copy, deepcopy
 from copy import deepcopy as dcp
@@ -45,20 +43,13 @@ def T(M):
 
 def main():
     mod = 1000000007
-    # w.sort(key=itemgetter(1),reversed=True)  #二個目の要素で降順並び替え
 
-    #N = int(input())
     N, K = map(int, input().split())
-    # A = tuple(map(int, input().split())) #1行ベクトル
-    # L = tuple(int(input()) for i in range(N)) #改行ベクトル
-    # S = tuple(tuple(map(int, input().split())) for i in range(N)) #改行行列
     n, k = N, K
     ans = float('inf')
 
     def f(tot, ini, j, kuri):
         r = ini
-        # if r>tot:
-        #    return -1
 
         i = 0
         for ji in range(j):

@@ -1,5 +1,4 @@
 def folding(a, b):
-  # coding and coding..
     n = 1
     while a > b:
         a_new = a - b

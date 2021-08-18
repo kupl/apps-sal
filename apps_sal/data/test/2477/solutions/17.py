@@ -1,4 +1,3 @@
-# coding: utf-8
 
 def solve(*args: str) -> str:
     n, k = list(map(int, args[0].split()))

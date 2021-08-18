@@ -1,11 +1,10 @@
 from collections import defaultdict as dd
 N, K, L = map(int, input().split())
-# Parent List(PL)
 road = [i for i in range(N)]
 rail = [i for i in range(N)]
 
 
-def fp(x, P):  # findParent
+def fp(x, P):
     if x == P[x]:
         return x
     else:

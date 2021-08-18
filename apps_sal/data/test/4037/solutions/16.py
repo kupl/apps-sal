@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/1203/problem/F2
 
 n, r = list(map(int, input().split()))
 arr = [list(map(int, input().split())) for _ in range(n)]
@@ -49,8 +48,3 @@ for j in range(n + 1):
         ans = j
 
 print(ans + cnt)
-
-# 3 4
-# 4 6
-#10 -2
-#8 -1

@@ -1,5 +1,3 @@
-# A - September 9
-# https://atcoder.jp/contests/abc073/tasks/abc073_a
 
 n = input()
 

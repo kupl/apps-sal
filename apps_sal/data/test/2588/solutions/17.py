@@ -7,7 +7,6 @@ for tc in range(T):
     string = list(map(lambda x: x == '1', input()))
     cost = a * n + b * (n + 1)
     isBeginning = True
-    # state machine
     zeros = 0
     for x in string:
         if x:
@@ -24,4 +23,4 @@ for tc in range(T):
             if zeros == 0:
                 cost += a + b
             zeros += 1
-    print(cost - a - b)  # first number
+    print(cost - a - b)

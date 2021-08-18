@@ -11,7 +11,6 @@ class Solution:
                 next_higher[stack.pop()] = i
             stack.append(i)
         print(next_higher)
-        #print(sorted([a, i] for i, a in enumerate(A)))
         for a, i in sorted([-a, i] for i, a in enumerate(A)):
             while stack and stack[-1] < i:
                 next_lower[stack.pop()] = i

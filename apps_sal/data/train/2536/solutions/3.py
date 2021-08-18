@@ -1,14 +1,5 @@
 class Solution:
     def findLucky(self, arr: List[int]) -> int:
-        # ans = -1
-        # visited = []
-        # for x in range(len(arr)):
-        #     if arr[x] not in visited:
-        #         visited.append(arr[x])
-        #         if arr.count(arr[x]) == arr[x]:
-        #             ans = max(ans,arr[x])
-        #             print(ans)
-        # return ans
 
         dict = {}
         ans = -1

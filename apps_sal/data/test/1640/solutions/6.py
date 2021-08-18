@@ -24,8 +24,6 @@ for i in range(p - 1):
         t1 = 0
         t2 = 0
         for j in range(l1 + l2):
-            #print(j1, j2);
-            #print(l1, l2)
             if (j1 == l1):
                 t2 += 1
                 j2 += 1

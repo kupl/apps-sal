@@ -29,4 +29,3 @@ for k, v in list(counter2.items()):
 
 answer[0] = (H - 2) * (W - 2) - sum(answer)
 print(('\n'.join(map(str, answer))))
-# 30

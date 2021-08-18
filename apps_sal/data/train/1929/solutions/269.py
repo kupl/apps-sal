@@ -35,7 +35,3 @@ class StreamChecker:
                 return False
             node = node.child[letter]
         return node.isEnd
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

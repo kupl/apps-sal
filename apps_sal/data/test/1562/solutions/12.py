@@ -37,15 +37,12 @@ for d in data:
 dp = [[(1, 0), (1, 0)]]
 start = 0
 if rows[0] == 1:
-    #1+' '
-    #dp[0] = [   (rowdata[1][-1], rowdata[1][-1] - 1 ) ,    (rowdata[1][0], 2 * rowdata[1][-1] - rowdata[1][0] - 1) ]
     dp[0] = [(rowdata[1][-1], rowdata[1][-1] - 1), (1, inf)]
     start = 1
 
 lnr = len(rows)
 for i in range(start, lnr):
     row = rowdata[rows[i]]
-    # ldp = dp[-1]
     LR = (0, inf)
     for f in range(4):
         ldp = dp[-1][f // 2]
@@ -71,9 +68,5 @@ for i in range(start, lnr):
             RL = (row[0], am)
     dp.append([LR, RL])
 
-
-# print(rows)
-# print(rowdata)
-# print(dp)
 
 print(min(dp[-1][0][1], dp[-1][1][1]) + rows[-1] - 1)

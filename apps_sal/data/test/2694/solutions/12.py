@@ -1,7 +1,6 @@
 def intput(): return [int(i) for i in input().split()]
 
 
-# Write your code here
 n, m, k = intput()
 blasters = [intput() for i in range(k)]
 grid = [[1] * n for i in range(m)]

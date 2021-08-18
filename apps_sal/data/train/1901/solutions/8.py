@@ -17,8 +17,6 @@ class Solution:
                         dp[x][y] = (isl_no, size)
                     cum_visited = cum_visited.union(visited)
                     isl_no += 1
-                    #print (size,cum_visited)
-        #print (dp)
         for r in range(nrows):
             for c in range(ncols):
                 if grid[r][c] == 0:
@@ -34,9 +32,6 @@ class Solution:
         if len(islands) == 0:
             return 1
 
-        # srt=list(islands)
-        #srt.sort(key=lambda x:x[1])
-        #print (r,c,srt)
         return sum(x[1] for x in islands) + 1
 
     def dfs(self, grid, r, c, visited):

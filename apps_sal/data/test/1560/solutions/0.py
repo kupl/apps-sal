@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 def f(first, s):
     second = 'r' if first == 'b' else 'b'

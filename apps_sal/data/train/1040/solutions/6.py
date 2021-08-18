@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 from math import ceil, floor
 import bisect
@@ -15,7 +14,6 @@ for _ in range(int(input())):
     for i in range(len(st) - 2):
         if st[i] == st[i + 1] or st[i] == st[i + 2] or st[i + 1] == st[i + 2]:
             bi.append(i)
-    # print(bi)
     for qq in range(q):
         a, b = RI()
         a -= 1

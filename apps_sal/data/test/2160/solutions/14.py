@@ -20,5 +20,4 @@ for i in range(1, n + 1):
             count += 1
         if i != 1 and (s[i - 1] == -1 or s[i - 1] < p[i]):
             count += 1
-    # print (i,count)
 print(count)

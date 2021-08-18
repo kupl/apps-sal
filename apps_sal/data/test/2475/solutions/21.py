@@ -4,9 +4,9 @@ ans = 0
 for C in range(1, N - 1, 1):
     score = 0
     for k in range((N - 1) // C):
-        if (k - 1) * C == N - 1 - k * C:  # 一つ前に選んだところ
+        if (k - 1) * C == N - 1 - k * C:
             break
-        if 2 * k * C == N - 1:  # 今から選ぶ二つが同じところ
+        if 2 * k * C == N - 1:
             break
         score += slist[k * C] + slist[N - 1 - k * C]
         ans = max(ans, score)

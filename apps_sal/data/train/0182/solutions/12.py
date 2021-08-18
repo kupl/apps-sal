@@ -52,7 +52,6 @@ class Solution:
             missing_water_per_level = self.get_empty_per_level(height, level)
             multi_level_count = (level - prev_level) * missing_water_per_level
             total_count -= multi_level_count
-            #print("Level: ", level, " count after: ", total_count, "missing water: ", missing_water_per_level)
 
             prev_level = level
 

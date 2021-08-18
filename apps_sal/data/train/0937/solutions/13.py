@@ -11,7 +11,6 @@ def chefdailyRoutine(s):
     return
 
 
-# Driver code starts here
 t = int(input())
 for _ in range(t):
     s = input()

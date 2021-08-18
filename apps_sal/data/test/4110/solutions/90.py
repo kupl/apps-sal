@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# モジュールのインポート
 import math
 
 
@@ -30,7 +28,6 @@ def main(D: int, G: int, p: list, c: list) -> None:
         p (list): 問題数(1 <= p_i <= 100)
         c (list): コンプリートボーナス(100 <= c_i <= 10^6, 100の倍数)
     """
-    # 求解処理
     ans = sum(p)
     for bit in range(2 << D):
         d = 0
@@ -50,15 +47,12 @@ def main(D: int, G: int, p: list, c: list) -> None:
         if score >= G:
             ans = min(ans, cnt)
 
-    # 結果出力
     print(ans)
 
 
 def __starting_point():
-    # 標準入力を取得
     D, G, p, c = get_input()
 
-    # メイン処理
     main(D, G, p, c)
 
 

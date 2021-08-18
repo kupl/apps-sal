@@ -1,15 +1,4 @@
 s = input()
-# list = [1]
-# n = len(s)
-# index = 0
-# for i in range(1,n):
-#     if (s[i-1]=="l") :
-#         list.insert(index, i+1)
-#     else:
-#         index += 1
-#         list.insert(index, i+1)
-# for num in list:
-#     print(num)
 
 n = len(s)
 ans = [0] * n

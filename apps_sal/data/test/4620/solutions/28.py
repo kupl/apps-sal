@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 n = int(input())
 c = [0 for _ in range(n - 1)]
@@ -25,9 +24,6 @@ for i in range(n - 1):
                     t[i][j] = t[j][j] + ((t[i][j] - t[j][j]) // f[j] + 1) * f[j]
 
 
-#print('t =', t)
-
-# output
 for i in range(n - 1):
     print((t[i][n - 1]))
 print((0))

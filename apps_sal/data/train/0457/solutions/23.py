@@ -1,7 +1,7 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 
-        def bfs():  # bfs > dfs
+        def bfs():
             q = [(amount, 0)]
 
             if (amount == 0):
@@ -23,8 +23,6 @@ class Solution:
                     if a - c == 0:
                         return ci + 1
                     if a - c > 0:
-                        # print(a-c)
-                        # print(ci+1)
                         q.append((a - c, ci + 1))
 
             return -1
@@ -44,8 +42,6 @@ class Solution:
                     if a - c == 0:
                         return ci + 1
                     if a - c > 0:
-                        # print(a-c)
-                        # print(ci+1)
                         s.append((a - c, ci + 1))
 
             return -1
@@ -68,5 +64,3 @@ class Solution:
 
             return -1
         return paste()
-        # return bfs()
-        # return dfs()

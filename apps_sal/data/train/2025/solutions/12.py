@@ -6,7 +6,7 @@ def factorize(n):
     ''' returns a list of prime factors of n.
     ex. factorize(24) = [2, 2, 2, 3]
     source: Rossetta code: prime factorization (slightly modified)
-    http://rosettacode.org/wiki/Prime_decomposition#Python:_Using_floating_point
+    http://rosettacode.org/wiki/Prime_decomposition
     '''
     def step(x): return 1 + (x << 2) - ((x >> 1) << 1)
     maxq = int(math.floor(math.sqrt(n)))
@@ -21,7 +21,7 @@ def factorize(n):
 def primes2(limit):
     ''' returns a list of prime numbers upto limit.
     source: Rossetta code: Sieve of Eratosthenes
-    http://rosettacode.org/wiki/Sieve_of_Eratosthenes#Odds-only_version_of_the_array_sieve_above
+    http://rosettacode.org/wiki/Sieve_of_Eratosthenes
     '''
     if limit < 2:
         return []

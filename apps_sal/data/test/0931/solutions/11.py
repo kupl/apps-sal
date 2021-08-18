@@ -11,7 +11,6 @@ for i in range(p):
         n, m = m, n
     if y == 1:
         y1 = m - y1 + 1
-#    print(x1,y1)
     for i in range(z):
         x1, y1 = m - y1 + 1, x1
         n, m = m, n

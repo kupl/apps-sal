@@ -9,8 +9,8 @@ for _ in range(t):
 
     for i in range(n - 1, -1, -1):
         for j in range(m - 1, -1, -1):
-            if mat[i][j] == '#':
-                dp[i][j] = 0
+            if mat[i][j] == '
+            dp[i][j] = 0
 
             elif i == n - 1 and j == m - 1:
                 dp[i][j] = 1
@@ -30,7 +30,6 @@ for _ in range(t):
 
     ans = 2
     r1, c1, r2, c2 = 0, 0, 0, 0
-    # It takes n+m-2 steps to reach from start to end
     for i in range(n + m - 2 - 1):
         if dp[r1 + 1][c1] != 0:
             r1 += 1

@@ -2,9 +2,6 @@ from functools import lru_cache
 
 msb = lru_cache(maxsize=None)(lambda n: 1 << n.bit_length() - 1)
 
-# Taken from https://oeis.org/A139250
-# With some upgrades cause why not?
-
 
 @lru_cache(maxsize=None)
 def toothpick(n):

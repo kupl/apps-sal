@@ -3,7 +3,7 @@ from collections import deque
 
 class Solution:
     def constrainedSubsetSum(self, A: List[int], k: int) -> int:
-        Q = deque([(0, A[0])])  # decreasing
+        Q = deque([(0, A[0])])
         running_max = A[0]
         for i in range(1, len(A)):
             if Q[0][0] < i - k:

@@ -23,7 +23,6 @@ class Solution:
                     seen[r, c] = K
                     queue.append((r, c, K))
             minpath += 1
-            # print('minpath', minpath)
         return -1
 
         '''
@@ -40,7 +39,6 @@ class Solution:
             if (i, j, k) not in memo:
                 if grid[i][j] == 1:
                     k -= 1
-                # Mark as seen
                 orig, grid[i][j] = grid[i][j], -1
                 res = float('inf')
                 for r, c in [(i + 1, j), (i - 1, j), (i, j - 1), (i, j + 1)]:

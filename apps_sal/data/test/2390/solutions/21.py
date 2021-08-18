@@ -8,8 +8,6 @@ from fractions import gcd
 from copy import deepcopy
 import math
 import queue
-#import numpy as np
-# import sympy as syp(素因数分解とか)
 Mod = 1000000007
 
 sys.setrecursionlimit(100000)
@@ -65,7 +63,7 @@ class UnionFind:
         return self.findroot(x) == self.findroot(y)
 
 
-def main():  # startline--------------------------------------------
+def main():
     n, c = list(map(int, input().split()))
     xv = [list(map(int, input().split())) for i in range(n)]
     x = [xv[i][0] for i in range(n)]
@@ -91,7 +89,7 @@ def main():  # startline--------------------------------------------
 
 
 def __starting_point():
-    main()  # endline===============================================
+    main()
 
 
 __starting_point()

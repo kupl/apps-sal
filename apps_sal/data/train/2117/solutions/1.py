@@ -20,7 +20,6 @@ def getHeight(root):
     if root == None:
         return 0
     return root.height
-    # return max(getHeight(root.left), getHeight(root.rght))+1
 
 
 def insert(root, x):
@@ -190,7 +189,6 @@ def testHeap():
 def calc(n, a):
     ia = [x for x in enumerate(a)]
     ia.sort(key=lambda tp: tp[1])
-    # print('ia={ia}'.format(ia=ia))
     tree = None
     tree = insert(tree, -1)
     tree = insert(tree, n)
@@ -201,13 +199,11 @@ def calc(n, a):
     ret = []
     nxt = n
     for idx, val in ia:
-        # Get interval
         interval_end = findUpperBound(tree, idx) - 1
         interval_bgn = findLowerBound(tree, idx) + 1
         itv = (interval_bgn, interval_end)
         assert itv in itv2hpobj
         tree = insert(tree, idx)
-        # Delete this interval from heap
         itv2hpobj[itv].val = 2 * n
         hpidx = itv2hpobj[itv].hpidx
         shiftup(len(hp), hpidx, hp)
@@ -217,7 +213,6 @@ def calc(n, a):
         del itv2hpobj[itv]
         shiftdown(len(hp), 0, hp)
 
-        # Add new interval(s) to heap
         if idx > interval_bgn:
             new_obj = HeapObj(idx - interval_bgn, len(hp))
             hp.append(new_obj)
@@ -287,7 +282,6 @@ def calc2(n, a):
         iv = bst_intvs[i]
         if ans[iv] == None or ans[iv] < a[i]:
             ans[iv] = a[i]
-    # print('preans={0}'.format(ans))
     for i in range(n - 2, -1, -1):
         if ans[i] == None or ans[i] < ans[i + 1]:
             ans[i] = ans[i + 1]
@@ -306,9 +300,7 @@ def serious():
 
 
 def main():
-    # duipai_n(1000000)
     serious()
-    # testHeap()
 
 
 def __starting_point():

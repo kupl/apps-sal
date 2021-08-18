@@ -1,4 +1,3 @@
-# coding: utf-8
 
 height, width = map(int, input().split())
 for i in range(height):

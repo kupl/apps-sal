@@ -1,4 +1,3 @@
-# cook your dish here
 n, a = map(int, input().split())
 for i in range(a):
     if n != 0:

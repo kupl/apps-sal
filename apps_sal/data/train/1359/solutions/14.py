@@ -8,11 +8,7 @@ input = sys.stdin.readline
 def print(x):
     sys.stdout.write(str(x) + "\n")
 
-# sys.stdout=open("CP1/output.txt",'w')
-# sys.stdin=open("CP1/input.txt",'r')
 
-
-# mod=pow(10,9)+7
 t = int(input())
 for i in range(t):
     n = int(input())

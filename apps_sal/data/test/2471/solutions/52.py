@@ -17,7 +17,6 @@ for l in matrix:
             nowy = l[1] + y_r
             if nowx < 0 or nowy < 0 or nowx + 2 >= H or nowy + 2 >= W:
                 continue
-            # ここで起点(左上)nowx, nowy として　 9マスに着目する
             name = str(nowx) + 'sakoda' + str(nowy)
             try:
                 cand[name] += 1

@@ -5,7 +5,6 @@
 import sys
 import math
 input = sys.stdin.readline
-############ ---- USER DEFINED INPUT FUNCTIONS ---- ############
 
 
 def inp():
@@ -25,8 +24,6 @@ def invr():
     return(map(int, input().split()))
 
 
-################################################################
-############ ---- THE ACTUAL CODE STARTS BELOW ---- ############
 t = 1
 t = inp()
 for tt in range(t):

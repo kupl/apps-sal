@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf8 -*-
 
 import fileinput
 
@@ -10,7 +8,6 @@ def solve():
         a = [int(c) for c in stdin.readline().split(" ")]
         m = int(stdin.readline())
         a = sorted(a)
-        # print(n, d, a, m)
 
         res = 0
         if (m > n):

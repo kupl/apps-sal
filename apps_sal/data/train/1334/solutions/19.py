@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 array = list(map(int, input().split()))
 for i in range(3, n):

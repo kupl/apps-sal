@@ -40,9 +40,6 @@ for i in range(m):
             if f(k) > 2:
                 flag2 = False
                 break
-#         for k in range(n):
-#             print(a[k], f(k))
-#         print()
         if not flag:
             flag = flag2
         for k in range(n):

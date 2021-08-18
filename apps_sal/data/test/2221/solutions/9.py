@@ -1,4 +1,3 @@
-#from bisect import bisect_left
 
 rose = {
     'U': (0, 1),

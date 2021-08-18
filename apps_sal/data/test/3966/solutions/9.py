@@ -4,7 +4,6 @@ import os
 
 def myreadline():
 
-    #testFile = "461A-t"
     testFile = ""
 
     if testFile:
@@ -24,12 +23,10 @@ l = myreadlineint()
 l.sort()
 
 sm = sum(l)
-# print(sm)
 res = 0
 res += sm * 2
 for x in l:
     sm -= x
-    # print(sm)
     res += sm
 res -= l[len(l) - 1]
 

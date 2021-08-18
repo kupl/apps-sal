@@ -23,7 +23,6 @@ for _ in range(val()):
     l = li()
     ans = ['a' * 100]
     for i in l:
-        # print(i)
         last = ans[-1]
         curr = ''
         for j in range(i):

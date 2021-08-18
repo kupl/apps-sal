@@ -7,7 +7,6 @@ class Solution:
             return n
         h = max(A)
         dp = [{} for j in range(n)]
-        # good idea, we did not know d, and we use dict here
         ans = 0
         for i in range(n):
             for j in range(i):

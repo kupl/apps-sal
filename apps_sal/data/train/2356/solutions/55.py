@@ -8,5 +8,4 @@ for n in range(N + 1):
         else:
             dp[n][k] = dp[n - 1][k - 1]
     dp[n][0] = 0
-#    print(dp)
 print(dp[N][K])

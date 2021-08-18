@@ -5,7 +5,6 @@ class Node(object):
 
 
 def length(node):
-    # Your code goes here.
     i = 0
     while node != None:
         i += 1
@@ -14,7 +13,6 @@ def length(node):
 
 
 def count(node, data):
-    # Your code goes here.
     res = 0
     while node != None:
         res += node.data == data

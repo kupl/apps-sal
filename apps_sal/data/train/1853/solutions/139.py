@@ -10,7 +10,6 @@ class Solution:
 
         for i in range(n):
 
-            #distance , node
             queue = [(i, 0)]
             curr = {}
 

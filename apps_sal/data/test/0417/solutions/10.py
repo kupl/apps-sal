@@ -17,7 +17,6 @@ def solve(N, X, D):
         L[m].append((l, 1))
         L[m].append((r + 1, -1))
     ans = 0
-    # print(L)
     for Q in list(L.values()):
         Q.sort()
         cnt = 0

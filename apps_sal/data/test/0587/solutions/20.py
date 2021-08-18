@@ -1,10 +1,6 @@
 import sys
 read = sys.stdin.readline
 n, k = list(map(int, read().split()))
-# 種類数を増やすときは、各種類で最もでかいのを食べる
-# 種類数最大降順配列、他降順配列みたいなの用いしtえ
-# 食べる出井数を全探索する
-# 累積和
 sushi = [[] for _ in range(n)]
 
 for i in range(n):

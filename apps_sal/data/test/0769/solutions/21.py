@@ -5,5 +5,3 @@ for i in range(1, 309):
         pos = i
         break
 print(pos)
-
-# 128 7 0

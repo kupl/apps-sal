@@ -26,13 +26,10 @@ def LIR(row, col):
         read_all = [LI() for _ in range(row)]
         return map(list, zip(*read_all))
 
-#################
-
 
 N, K, Q = LI()
 A = LI()
 
-# 最小値を決め打ちすると区間を分割できる
 
 Aval = set(A)
 ans = float('inf')

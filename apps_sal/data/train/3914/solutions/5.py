@@ -1,8 +1,7 @@
 def dominator(lst):
-    # O(n) time and O(1) space
     if lst == []:
         return -1
-    candidate = object()  # Better than None, if None is in the list.
+    candidate = object()
     count = 0
     for elem in lst:
         if elem == candidate:

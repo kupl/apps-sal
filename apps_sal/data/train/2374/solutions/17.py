@@ -8,9 +8,7 @@ for q in range(Q):
     now_x = 0
     now_y = 0
     was_x = -1
-    #was_y = 0
     while now_x < n:
-        # print(now_x)
         if now_y == 0:
             now = arr1[now_x]
         else:
@@ -26,11 +24,9 @@ for q in range(Q):
             else:
                 if was_x == now_x:
                     was_x = now_x
-                    #was_y = now_y
                     now_x += 1
                 else:
                     was_x = now_x
-                    #was_y = now_y
                     now_y = (now_y + 1) % 2
 
     if now_y == 0:

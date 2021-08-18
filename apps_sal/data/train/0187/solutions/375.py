@@ -14,11 +14,6 @@ class Solution:
         while i < len(customers) or num_waiting_customers > 0:
             num_waiting_customers += customers[i] if i < len(customers) else 0
 
-            # if i < len(customers):
-            #     num_rotate = ((len(customers) - i) * 50 + num_waiting_customers + 3) // 4
-            #     if ((len(customers) - i) * 50 + num_waiting_customers) * boardingCost - num_rotate * runningCost + profit < 0:
-            #         return ans
-
             profit += min(num_waiting_customers, 4) * boardingCost - runningCost
 
             if profit > max_profit:

@@ -4,7 +4,6 @@ b = list(bin(s - x))
 b = b[2:]
 a = list(bin(x))
 a = a[2:]
-# print(a)
 al = len(a)
 bl = len(b)
 c = []
@@ -23,16 +22,13 @@ bl = len(b)
 for i in range(bl - 1):
     if(b[i] == '1'):
         if(a[i + 1] == '1'):
-            # print("hello")
             p = 1
 bl = len(b)
 if(b[bl - 1] == '1'):
-    # print("hello")
     p = 1
 if(x > s):
     print("0")
 elif(p == 1):
-    # print("hhh")
     print("0")
 else:
     if(s == x):

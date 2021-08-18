@@ -1,4 +1,3 @@
-# cook your dish here
 N = int(input())
 matches = list(map(int, input().split()))
 games = matches[:3]

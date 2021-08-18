@@ -13,7 +13,7 @@ for _ in range(m):
             remains -= (n - len(deleted_cols))
         elif row_deleted:
             remains -= (n - len(deleted_rows))
-        else:  # not x_in and not y_in
+        else:
             remains -= (2 * n - len(deleted_cols) - len(deleted_rows) - 1)
 
     deleted_cols.add(c)

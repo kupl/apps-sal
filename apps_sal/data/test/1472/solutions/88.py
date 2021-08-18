@@ -12,8 +12,8 @@ for i in range(n - 2):
 
 def bfs(u):
     queue = deque([u])
-    d = [None] * n  # uからの距離の初期化
-    d[u] = 0  # 自分との距離は0
+    d = [None] * n
+    d[u] = 0
     while queue:
         v = queue.popleft()
         for i in g[v]:

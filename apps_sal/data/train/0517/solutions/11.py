@@ -1,4 +1,3 @@
-# cook your dish here
 def prime_factors(n):
     i = 2
     factors = set()
@@ -19,5 +18,4 @@ ans = 2**n - 2
 for v in fs:
     if v != n:
         ans -= 2**v - 2
-# print(fs)
 print(ans % m)

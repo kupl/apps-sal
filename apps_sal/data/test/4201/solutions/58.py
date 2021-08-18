@@ -9,8 +9,8 @@ def main():
             for ia in range(a):
                 for ib in range(b):
                     if not i & (1 << ia) and not j & (1 << ib):
-                        if s[ia][ib] == '#':
-                            cnt += 1
+                        if s[ia][ib] == '
+                        cnt += 1
             if cnt == c:
                 count += 1
     print(count)

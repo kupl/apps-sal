@@ -1,12 +1,12 @@
 def fibLikeGen():
-    a, b = (1, 0), (0, 1)                  # a: station i-1, b: station i
+    a, b = (1, 0), (0, 1)
     while 1:
         yield a, b
         a, b = b, tuple(x + y for x, y in zip(a, b))
 
 
 gen = fibLikeGen()
-SUM_AT = [(), (1, 0), (1, 0)]             # (k,l)
+SUM_AT = [(), (1, 0), (1, 0)]
 
 
 def getCoefs(n):

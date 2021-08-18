@@ -47,7 +47,6 @@ for i in range(n):
         bitadd(y, dp[y] * y, bit)
 
     now = bitsum(i, bit) + (1 + y) * y // 2
-    #print (bitsum(i,bit),(1+y)*y//2,dp)
     ans += now
 
 print(ans)

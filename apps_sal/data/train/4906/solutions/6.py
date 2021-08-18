@@ -1,8 +1,6 @@
 class TrafficUnit:
 
     def __init__(self, color):
-        # '.': road
-        # 'R'/'G'/'B': light
         self.color = color
         self.t = 0
 

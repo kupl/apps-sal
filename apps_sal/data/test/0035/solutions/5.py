@@ -5,7 +5,6 @@ def matrixTranspose(matrix):
 
 
 def f(x):
-    # print(x)
     bool = True
     b, r, g = 0, 0, 0
     col = ['e']

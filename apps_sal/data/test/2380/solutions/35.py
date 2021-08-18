@@ -14,8 +14,6 @@ for i in range(M):
 a.sort()
 a.reverse()
 
-# for j in a:
-#	print(j)
 
 cnt = 0
 ans = 0

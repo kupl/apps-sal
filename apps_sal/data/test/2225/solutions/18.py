@@ -8,7 +8,6 @@ Query = [list(map(int, input().split())) for _ in range(M)]
 L = 2**N
 seg = [0] * (2 * L - 1)
 
-# initialize
 for i in range(L):
     seg[i + L - 1] = A[i]
 
@@ -23,8 +22,6 @@ while k > 0:
             seg[i] = seg[2 * i + 1] ^ seg[2 * i + 2]
     c += 1
     k = (k - 1) // 2
-
-# update and return v
 
 
 def update(k, a):

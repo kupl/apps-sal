@@ -1,8 +1,6 @@
-# l,r,d =map(int, input().split()))
 n = int(input())
 d = list(map(int, input().split()))
 
-# s = [map(int, input()) for i in range(3)]
 ans = 0
 
 for i in range(0, n):

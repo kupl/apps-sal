@@ -11,7 +11,6 @@ for i in range(n - 1):
     g[b].append((a, c))
 q, k = list(map(int, input().split()))
 
-# 前処理
 dist = [-1] * n
 
 

@@ -6,7 +6,6 @@ def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 N = I()
 A = LI()
 
-# 高速ゼータ変換
 
 dp = [[0] * (N + 1) for _ in range(1 << N)]
 for i in range(1 << N):

@@ -1,4 +1,3 @@
-#from __future__ import division
 
 
 nCr = [[0 for x in range(1001)] for x in range(1001)]
@@ -21,7 +20,6 @@ def comb(n,r):
      if r>n-r :
       r=n-r
      t=range(1,r+1)
-     #print t
      for j in t:
       p=p*i
       p=p/j
@@ -32,16 +30,13 @@ def comb(n,r):
 
 def main():
     t = int(input())
-    # print t
     for i in range(t):
         num = 0
         line = input().split(" ")
-        # print line
         s = int(line[0])
         n = int(line[1])
         m = int(line[2])
         k = int(line[3])
-        # print k
         if k > n - 1:
             print("0.000000")
         else:
@@ -49,14 +44,11 @@ def main():
             while j < n and j < m:
                 p = int(nCr[m - 1][j])
                 q = int((nCr[s - m][n - j - 1]))
-                # print p,q
                 num = int(num) + (p * q)
                 j = j + 1
             den = int(nCr[s - 1][n - 1])
-            # print num,den
             ans = float(num) / den
             print('{0:.10f}'.format(ans))
-    # my code here
 
 
 def __starting_point():

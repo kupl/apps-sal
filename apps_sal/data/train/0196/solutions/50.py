@@ -1,10 +1,5 @@
-# method 1  append array's copy at back of it. then apply kadane's algorithm
-# *not work* because we can only attain maximum n size window but here it can be 2n
 
-# method 2  sliding window  max window size = n
-# *not work* because there is no way to move back of window
 
-# method 3  modified kadane's algorithm(see in lee215's solution)
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         if not A:

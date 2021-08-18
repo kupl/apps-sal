@@ -41,7 +41,6 @@ class Solution:
             i += 1
         old = 1
         while True:
-            # print(A)
             if self.find(A, start[0], start[1], old):
                 break
             old += 1

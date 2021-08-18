@@ -1,4 +1,3 @@
-# from collections import Counter as cc
 n, k = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 s = sorted(zip(arr, list(range(n))), reverse=True)

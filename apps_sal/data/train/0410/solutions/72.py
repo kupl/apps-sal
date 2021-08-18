@@ -11,7 +11,6 @@ class Solution:
             return step
         interval = [i for i in range(lo, hi + 1)]
         pwr = [[j, power(j)] for j in range(lo, hi + 1)]
-        # print(pwr)
         pwr = sorted(pwr, key=lambda x: x[1])
 
         return (pwr[k - 1][0])

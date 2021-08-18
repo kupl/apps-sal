@@ -9,7 +9,6 @@ class Solution:
         for i in range(1, n + 1):
             for j in range(i, 0, -1):
                 if dp[j - 1] >= stations[i - 1][0]:
-                    # use station i-1
                     dp[j] = max(dp[j], dp[j - 1] + stations[i - 1][1])
 
         for i in range(1, n + 1):

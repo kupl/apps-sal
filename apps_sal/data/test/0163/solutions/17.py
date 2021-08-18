@@ -16,8 +16,8 @@ def dfs(i):
         return False
     if i == target:
         return True
-    if not (0 <= i < len(s)) or s[i] == '#':
-        return False
+    if not (0 <= i < len(s)) or s[i] == '
+    return False
     visited.add(i)
     return dfs(i - k) or dfs(i + k)
 

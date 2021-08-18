@@ -1,4 +1,3 @@
-# A,B,A+Bのいずれかが3の倍数になるか
 
 A, B = list(map(int, input().split()))
 

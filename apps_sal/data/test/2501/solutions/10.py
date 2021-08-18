@@ -1,5 +1,4 @@
 from sys import stdin, stdout
-# n,e=list(map(int,stdin.readline().split()))
 n = int(stdin.readline())
 a = list(map(int, stdin.readline().split()))
 d = {}

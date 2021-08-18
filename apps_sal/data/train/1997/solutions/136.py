@@ -14,16 +14,6 @@ class Tree:
         else:
             return self.val[1] > other.val[1]
 
-    #def __le__(self, other): return self < other or self.val == other.val
-
-    #def __gt__(self, other): return not self <= other
-
-    #def __ge__(self, other): return not self < other
-
-    #def __eq__(self, other): return self <= other and self >= other
-
-    #def __neq__(self, other): return not self == other
-
 
 class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:

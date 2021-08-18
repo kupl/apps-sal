@@ -15,7 +15,7 @@ def main():
             dp.append(AA)
         else:
             bis = bisect.bisect_right(dp, AA)
-            dp[bis] = AA  # n以下の個数を数える
+            dp[bis] = AA
     print(len(dp) - 1)
 
 

@@ -1,4 +1,3 @@
-# 141_E
 n = int(input())
 s = input()
 

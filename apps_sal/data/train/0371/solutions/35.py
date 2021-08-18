@@ -14,7 +14,7 @@ class Solution:
 
         node2 => {3,6,7}
         '''
-        buses = defaultdict(list)  # map stops to buses
+        buses = defaultdict(list)
         for i in range(len(routes)):
             for stop in routes[i]:
                 buses[stop].append(i)

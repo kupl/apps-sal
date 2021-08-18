@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 def add(bound, r, c, x, y, i):

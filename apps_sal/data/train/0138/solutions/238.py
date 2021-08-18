@@ -1,9 +1,5 @@
 
 
-# dp[i][0] : max length of subarray ending with index i With positive product
-# dp[i][1] : max length of subarray ending with index i With negative product
-
-
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
         dp = [[0, 0] for _ in range(len(nums))]
@@ -12,7 +8,6 @@ class Solution:
             dp[0][0] = 1
         elif nums[0] < 0:
             dp[0][1] = 1
-        # print(dp)
         res = max(res, dp[0][0])
         for idx in range(1, len(nums)):
             if nums[idx] == 0:
@@ -29,7 +24,6 @@ class Solution:
                     dp[idx][0] = dp[idx - 1][1] + 1
                 res = max(res, dp[idx][0])
 
-        # print(dp)
         return res
 
 

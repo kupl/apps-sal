@@ -13,4 +13,3 @@ while True:
             Q.append((n + 1, d + 1))
             Q.appendleft((n * 10 % K, d))
 print(d)
-# https://img.atcoder.jp/arc084/editorial.pdf

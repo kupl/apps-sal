@@ -21,23 +21,23 @@ for _ in range(int(input())):
 
         for j in range(len(p)):
             if p[j][2] == 'U':
-                if p[j][0] > 0 and m[p[j][0] - 1][p[j][1]] != '#':
-                    p[j][0] -= 1
+                if p[j][0] > 0 and m[p[j][0] - 1][p[j][1]] != '
+                p[j][0] -= 1
                 else:
                     d.add(j)
             elif p[j][2] == 'R':
-                if p[j][1] < c - 1 and m[p[j][0]][p[j][1] + 1] != '#':
-                    p[j][1] += 1
+                if p[j][1] < c - 1 and m[p[j][0]][p[j][1] + 1] != '
+                p[j][1] += 1
                 else:
                     d.add(j)
             elif p[j][2] == 'L':
-                if p[j][1] > 0 and m[p[j][0]][p[j][1] - 1] != '#':
-                    p[j][1] -= 1
+                if p[j][1] > 0 and m[p[j][0]][p[j][1] - 1] != '
+                p[j][1] -= 1
                 else:
                     d.add(j)
             else:
-                if p[j][0] < r - 1 and m[p[j][0] + 1][p[j][1]] != '#':
-                    p[j][0] += 1
+                if p[j][0] < r - 1 and m[p[j][0] + 1][p[j][1]] != '
+                p[j][0] += 1
                 else:
                     d.add(j)
 

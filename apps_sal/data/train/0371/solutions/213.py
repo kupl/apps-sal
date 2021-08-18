@@ -1,6 +1,5 @@
 class Solution:
     def numBusesToDestination(self, bus_routes: List[List[int]], start: int, end: int) -> int:
-        # return self.approach_2(bus_routes, start, end)
         if start == end:
             return 0
         on_stop = defaultdict(set)

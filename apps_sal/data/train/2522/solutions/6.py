@@ -20,6 +20,6 @@ class Solution:
                 seq2 = seq2 + str(count) + num
             elif seq[i + 1] != seq[i]:
                 seq2 = seq2 + str(count) + num
-                count = 0  # reset count
+                count = 0
 
         return seq2

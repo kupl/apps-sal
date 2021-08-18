@@ -1,4 +1,3 @@
-#
 
 import heapq
 from math import ceil

@@ -1,4 +1,3 @@
-# frequency
 from collections import defaultdict
 N = int(input())
 A = list(map(int, input().split()))
@@ -15,7 +14,6 @@ for cnt in D.keys():
 seq.append((0, 0, 0))
 seq.sort(key=lambda x: -x[0])
 now_height, now_size, now_min = seq[0]
-# howmany,group_size,minimum
 for i in range(1, len(seq)):
     freq[now_min] += (now_height - seq[i][0]) * now_size
     now_min = min(now_min, seq[i][2])

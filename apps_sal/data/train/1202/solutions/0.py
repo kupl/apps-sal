@@ -1,4 +1,3 @@
-# cook your dish here
 
 d = {'D': 238, 'T': 244, 'M': 138, 'B': 279, 'C': 186}
 
@@ -22,9 +21,7 @@ Rm = totalCal % 50
 C = Rm // 5
 Cm = Rm % 5
 x = totalCal - (R * 50 + C * 5)
-# print(totalCal - R * 50 + C * 5)
 W = int(x * 4 * 0.5)
-# print(R * 50 + C * 5 + W * 0.5)
 print(R)
 print(C)
 print(W)

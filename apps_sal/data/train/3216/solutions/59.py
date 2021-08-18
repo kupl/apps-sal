@@ -2,7 +2,6 @@ import math
 
 
 def movie(card, ticket, perc):
-    # your code
     times = 0
     price_A = 0
     price_B = card

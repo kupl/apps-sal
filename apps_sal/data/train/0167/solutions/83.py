@@ -1,7 +1,5 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
-        # K=1, moves=N
-        # K>=2, moves=max(dfs(K-1, i - 1), dfs(K, N - i))
 
         def dfs(k, n, memo):
 
@@ -13,8 +11,6 @@ class Solution:
                 return memo[(k, n)]
 
             res = float('inf')
-            # for i in range(1, n+1):
-            #     res = min(res, max(dfs(k-1, i-1, memo), dfs(k, n-i, memo)) + 1)
 
             lo, hi = 1, n
             while lo <= hi:

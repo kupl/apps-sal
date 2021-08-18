@@ -5,13 +5,6 @@ class Solution:
         :rtype: int
         """
         candies = [0] * len(ratings)
-        # min candies at idx i = max of
-        # 1) (number of decreasing ratings to the left) + 1
-        # 2) (number of decreasing ratings to the right) + 1
-        # By definition number after end of decreasing sequence will be greater than the end
-        # => both sides of end of decreasing sequence will be greater than the rating at the end
-        # => the min number of candies at the end of the decreasing sequence is 1
-        # => min number of candies at the (end-n) of the decreasing sequence is 1+n
         from_left = [1] * len(ratings)
         cur_less_than = 1
         for idx in range(1, len(ratings)):

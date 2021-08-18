@@ -22,7 +22,6 @@ class Solution:
                 total += help(newStart, length - 1)
                 total %= modulo
             D[start][length] = total
-            # print(f'start: {start}, length: {length}, total: {total}')
             return total
 
         res = 0

@@ -9,7 +9,6 @@ class Solution:
         res = 0
 
         for num in nums:
-            # like finding inerstion position
             lo, hi = 1, n
             while lo < hi:
                 mi = int((lo + hi) / 2)

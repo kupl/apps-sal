@@ -9,7 +9,7 @@ class Solution:
         DeleteT2 = 1
         Match = 2
 
-        dp = [[(0, None) for j in range(m + 1)] for i in range(n + 1)]  # (value, direction)
+        dp = [[(0, None) for j in range(m + 1)] for i in range(n + 1)]
 
         for i in range(1, n + 1):
             dp[i][0] = (i, DeleteT1)
@@ -23,13 +23,11 @@ class Solution:
                     continue
 
                 val = min(dp[i - 1][j][0], dp[i][j - 1][0])
-                if val == dp[i - 1][j][0]:  # not dp[i-1][j]
+                if val == dp[i - 1][j][0]:
                     dp[i][j] = (val + 1, DeleteT1)
                 else:
                     dp[i][j] = (val + 1, DeleteT2)
 
-        #print(len(dp), len(dp[0]))
-        # print(dp)
         i, j = n, m
         T1Length = n
         while i >= 0 and j >= 0:
@@ -43,5 +41,4 @@ class Solution:
                 i -= 1
                 j -= 1
 
-        # print(dp)
         return T1Length

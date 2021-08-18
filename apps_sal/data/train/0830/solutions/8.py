@@ -1,4 +1,3 @@
-# cook your dish here
 def conv(a, b):
     stop = 0
     n = len(a)
@@ -47,7 +46,6 @@ def conv(a, b):
                     print(arr[k])
                 else:
                     print(arr[k], end=" ")
-        # print(distinctArr)
 
 
 t = int(input())

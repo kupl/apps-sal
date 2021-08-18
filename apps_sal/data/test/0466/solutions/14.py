@@ -14,8 +14,6 @@ else:
     nn = (c / n)
     nm = d
     if nn < nm:
-        # while (nr * n) + n < total:
-        #  nr += 1
         nr = total // n
         npn = nr * c
         if nr * n < total:

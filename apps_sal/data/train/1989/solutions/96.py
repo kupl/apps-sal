@@ -19,5 +19,4 @@ class Solution:
                 if tstate in m:
                     ans = max(ans, i - m[tstate])
                 state[n] = 1 - state[n]
-            # print(i, c, state, ans)
         return ans

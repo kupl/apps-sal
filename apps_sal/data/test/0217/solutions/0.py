@@ -40,7 +40,6 @@ while cur < tot:
         else:
             cnt -= a
     cur += a
-    # print(cur,cnt,ans)
     if(cnt < 0):
         print(-1)
         break

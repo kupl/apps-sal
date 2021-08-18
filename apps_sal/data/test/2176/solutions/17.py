@@ -15,19 +15,6 @@ for _ in range(num):
     l.append(temp[1])
 
 ans = 0
-# f.sort()
-# last = -1
-# tot = 1
-# run = 0
-# for p in f:
-#     if p == last:
-#         run += 1
-#     else:
-#         tot = (tot * fact[run])%mod
-#         run = 1
-#         last = p
-# tot = (tot * fact[run])%mod
-# ans += tot
 
 l.sort()
 last = -1
@@ -61,19 +48,15 @@ for p in f:
 tot = (tot * fact[run]) % mod
 ans += tot
 
-# print(ans, 999)
 
 pow2m1 = (1 << 20) - 1
 
 sor = True
 for i in range(num - 1):
-    # print(data[i] & pow2m1 , data[i+1] & pow2m1)
-    if data[i] & pow2m1 > data[i + 1] & pow2m1:  # fix-----------
+    if data[i] & pow2m1 > data[i + 1] & pow2m1:
         sor = False
         break
 
-# print(data)
-# print(sor)
 if sor:
     last = -1
     tot = 1
@@ -86,7 +69,6 @@ if sor:
             run = 1
             last = p
     tot = (tot * fact[run]) % mod
-    # print(tot)
 
     ans -= tot
 q = fact[num]

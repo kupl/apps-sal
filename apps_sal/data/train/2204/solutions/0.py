@@ -33,12 +33,9 @@ for k in range(n + 1):
 
     if k % 2 == 0:
         while Q:
-            # print(Q)
             x = heapq.heappop(Q)
             time = x >> 20
             town = x - (time << 20)
-
-            # print(x,time,town)
 
             if TIME[town] < time:
                 continue
@@ -55,8 +52,6 @@ for k in range(n + 1):
             time = x >> 20
             town = x - (time << 20)
 
-            # print(x,time,town)
-
             if TIME[town] < time:
                 continue
 
@@ -65,8 +60,6 @@ for k in range(n + 1):
                     TIME[to] = time + 1
                     heapq.heappush(Q, shuku(TIME[to], to))
                     heapq.heappush(NQ, shuku(TIME[to], to))
-
-    # print(k,TIME)
 
     Q = NQ
     ANS.append(TIME[n])

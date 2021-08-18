@@ -4,7 +4,6 @@ st = sum(t)
 
 best = -1
 
-# try all values for solved tasks
 for s in range(min(n, m // st) + 1):
     score = s * (k + 1)
     rm = m - s * st

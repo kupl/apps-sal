@@ -15,9 +15,9 @@ def dist(i):
     rspeed = z[i + 1]
     ta = v[i] - lspeed
     tb = v[i] - rspeed
-    if ta + tb <= t[i]:  # 山を押さえた形
+    if ta + tb <= t[i]:
         c = (lspeed + v[i]) * ta / 2 + v[i] * (t[i] - ta - tb) + (rspeed + v[i]) * tb / 2
-    else:  # 山の形
+    else:
         a = (rspeed + t[i] - lspeed) / 2
         c = (2 * lspeed + a) * a / 2 + (lspeed + a + rspeed) * (t[i] - a) / 2
     return c

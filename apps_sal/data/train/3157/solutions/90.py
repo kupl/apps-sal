@@ -3,4 +3,3 @@ def number(bus_stops):
     for el in bus_stops:
         count = count + el[0] - el[1]
     return count
-    # Good Luck!

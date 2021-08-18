@@ -20,13 +20,10 @@ class Solution:
             if(ind > maxhat):
                 return 0
             count = 0
-            # if(dp[ind][peoplemask]!=-1):
-            #     return dp[ind][peoplemask]
             count = dfs(ind + 1, peoplemask)
             if(ind in ownhat):
                 for people in ownhat[ind]:
                     if(peoplemask & (pow(2, people)) == 0):
                         count = (count + dfs(ind + 1, peoplemask | pow(2, people))) % (pow(10, 9) + 7)
-            # dp[ind][peoplemask]=count
             return count
         return dfs(1, 0)

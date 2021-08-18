@@ -1,4 +1,4 @@
-from collections import defaultdict, deque  # using dijkstra
+from collections import defaultdict, deque
 
 
 def shortestPath(topology, start, end):

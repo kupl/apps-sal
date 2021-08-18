@@ -40,7 +40,6 @@ class Solution:
 
                 target = n // nums1[i]
 
-                # lower bound
                 lower = lowerbound(target, i + 1, len(nums1), nums1)
                 higher = higherbound(target, i + 1, len(nums1), nums1)
 
@@ -58,7 +57,6 @@ class Solution:
 
                 target = n // nums2[i]
 
-                # lower bound
                 lower = lowerbound(target, i + 1, len(nums2), nums2)
                 higher = higherbound(target, i + 1, len(nums2), nums2)
 

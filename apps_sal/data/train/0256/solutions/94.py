@@ -7,7 +7,6 @@ class Solution:
                 hours += div
                 if pile % k:
                     hours += 1
-                # print(pile, k, pile//k, pile%k, hours)
             return hours <= H
 
         left, right = 1, max(piles)

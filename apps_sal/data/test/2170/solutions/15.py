@@ -1,4 +1,3 @@
-# E - NEQ
 import sys
 sys.setrecursionlimit(10**6)
 MOD = 10**9 + 7

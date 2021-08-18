@@ -13,7 +13,6 @@ mod = 10**9 + 7
 
 for _ in range(int(input())):
 
-    # n=int(input())
     n, k = list(map(int, input().strip().split()))
     if(k == 1):
         sm = pow(n, 2, mod)
@@ -36,7 +35,6 @@ for _ in range(int(input())):
         rem = 1
 
     sm += (2 * y * n) % mod + (y * (y + 1)) % mod
-    # print(sm,"**")
 
     if(rem == 1):
         sm += n

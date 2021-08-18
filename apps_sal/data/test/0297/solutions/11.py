@@ -15,7 +15,7 @@ else:
         a = n // g
         k1 = k // g
         b = m // k1
-        if a < n:  # if a = n then b always < m
+        if a < n:
             a *= 2
         else:
             b *= 2

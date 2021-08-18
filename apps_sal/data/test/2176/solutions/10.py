@@ -45,7 +45,6 @@ def solve(arr1, arr2, n, mod):
         count *= facts[dist2[i]]
         count = count % mod
 
-    # print(count)
     total -= count
 
     arr1.sort()
@@ -64,7 +63,6 @@ def solve(arr1, arr2, n, mod):
         count *= facts[dist3[i]]
         count = count % mod
 
-    # print(count,total)
     total += count
     total = total % mod
     print(total)

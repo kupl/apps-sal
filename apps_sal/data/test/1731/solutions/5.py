@@ -7,7 +7,6 @@ def calc(n, m):
     return r % (10**9 + 7)
 
 
-# T = int(input())
 T = 1
 for _ in range(T):
     a, b = [int(x) for x in input().split()]

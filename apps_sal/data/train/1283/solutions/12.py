@@ -1,4 +1,3 @@
-# cook your dish here
 sieve = [True for i in range(201)]
 sieve[0], sieve[1] = False, False
 i = 2

@@ -4,7 +4,7 @@ from itertools import cycle, chain
 def max_hexagon_beam(n, seq):
     h = 2 * n - 1
     seq = cycle(seq)
-    sums = [[0] * h for _ in range(3)]            # [horz, diagUp, diagDown]
+    sums = [[0] * h for _ in range(3)]
 
     for r in range(h):
         for c, v in zip(list(range(n + r if r < n else h + n - 1 - r)), seq):

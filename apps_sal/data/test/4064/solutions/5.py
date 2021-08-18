@@ -28,6 +28,5 @@ for i in range(N):
             nlis[(j + na - 1) % h] = max(nlis[(j + na - 1) % h], lis[j])
 
     lis = nlis
-    #print (lis)
 
 print(max(0, max(lis)))

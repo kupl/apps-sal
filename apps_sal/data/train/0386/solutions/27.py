@@ -3,11 +3,11 @@ class Solution:
         MOD = (10 ** 9 + 7)
         vows = 'aeiou'
         mapping = {
-            0: [1],  # a
-            1: [0, 2],  # e
-            2: [0, 1, 3, 4],  # i
-            3: [2, 4],  # o
-            4: [0]  # u
+            0: [1],
+            1: [0, 2],
+            2: [0, 1, 3, 4],
+            3: [2, 4],
+            4: [0]
         }
         dp = [[0 for _ in range(len(vows))] for _ in range(n)]
         dp[0] = [1] * len(vows)

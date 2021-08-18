@@ -27,7 +27,7 @@ class User():
         if kata > 8 or kata < -8 or kata == 0:
             raise "Bruh"
 
-        relative_rank = self.ranks.index(kata)  # Relvative rank of the kata. Starts from 0, goes to 15.
+        relative_rank = self.ranks.index(kata)
         print(("kata relative", relative_rank))
 
         print()

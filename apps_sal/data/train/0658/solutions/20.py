@@ -1,7 +1,7 @@
 from sys import stdin
 for __ in range(int(stdin.readline())):
     n, nums = int(stdin.readline()), list(map(int, stdin.readline().split()))
-    longest = [1] * n  # First one is smaller
+    longest = [1] * n
     opp_longest = [1] * n
     best = 1
     for i in range(n - 2, -1, -1):

@@ -8,7 +8,6 @@ for i in range(n - 1):
     F.append(f)
 
 for i in range(n - 1):
-    # 各i駅から発車する列車をすべて調べる
     t = 0
     for j in range(i, n - 1):
         if S[j] > t:

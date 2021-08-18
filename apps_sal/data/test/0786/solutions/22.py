@@ -10,7 +10,7 @@ for _ in range(0, n):
 if all([x == 1 for x in d]):
     print('Infinity')
 elif n == 1:
-    print(1899 + c[0])  # !!!
+    print(1899 + c[0])
 else:
     if d[0] == 1:
         x = (1900, math.inf)

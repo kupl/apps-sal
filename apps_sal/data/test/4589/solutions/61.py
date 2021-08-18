@@ -12,8 +12,8 @@ for i in range(h):
             for y, x in dir:
                 iy, jx = i + y, j + x
                 if 0 <= iy < h and 0 <= jx < w:
-                    if s[iy][jx] == '#':
-                        cnt += 1
+                    if s[iy][jx] == '
+                    cnt += 1
             ans[i][j] = cnt
 for i in ans:
     print((''.join(map(str, i))))

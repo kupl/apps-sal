@@ -1,5 +1,5 @@
 l = int(input())
-n = len(bin(l - 1)) - 2  # 頂点数
+n = len(bin(l - 1)) - 2
 V = []
 if all([(l - 1) >> i & 1 for i in range(n)]):
     n += 1

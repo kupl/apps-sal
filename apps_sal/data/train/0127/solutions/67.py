@@ -5,7 +5,6 @@ class Solution:
         profitList.sort()
         ans = 0
         for g, p in profitList:
-            # newProfit = set()
             newProfitDict = defaultdict(dict)
             for p0 in list(profitDict.keys()):
                 thisProfit = p0 + p

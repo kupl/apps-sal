@@ -1,6 +1,5 @@
 import sys
 
-# sys.stdin = open("ivo.in")
 
 n, m = sys.stdin.readline().split()
 n = int(n)

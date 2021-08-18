@@ -18,7 +18,6 @@ for j in range(n):
         for i in range(m):
             A[i][j] ^= 1
 
-#print(sum(int("".join(map(str, A[i])), 2) for i in range(m)))
 res = 0
 for i in range(m):
     ans = ""

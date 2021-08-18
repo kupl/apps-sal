@@ -41,7 +41,6 @@ for _ in range(int(input())):
         if f1 == f2:
             flag = 1
         else:
-            # print(color)
             if color[f1] == 0 and color[f2] == 0:
                 color[f1] = -1
                 color[f2] = 1

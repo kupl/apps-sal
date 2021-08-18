@@ -1,7 +1,3 @@
-# -------------Program--------------
-# ----Kuzlyaev-Nikita-Codeforces----
-# -------------Round615-------------
-# ----------------------------------
 
 t = int(input())
 for i in range(t):

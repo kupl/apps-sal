@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin
 input = stdin.readline
 for i in range(int(input())):
@@ -10,7 +9,6 @@ for i in range(int(input())):
         l.append(adc)
     l.sort(key=lambda x: x[1])
     l.sort(key=lambda x: x[2])
-    # for i in range(1,len(l)):
     i = 0
     j = 0
     while i < n:

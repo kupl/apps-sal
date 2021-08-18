@@ -1,15 +1,8 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 998244353
-# INF = 100_000_000
 
-# from heapq import heappush, heappop
-# from collections import defaultdict
-# from math import sqrt
 
-t = 1  # int(input())
+t = 1
 
 for test in range(t):
-    # n = int(input())
     ans = "NO"
     n, m = (((list(map(int, input().split())))))
     arr = []

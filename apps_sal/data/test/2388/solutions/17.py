@@ -6,7 +6,7 @@ N = int(input())
 robo = list(list(map(int, input().split()))for i in range(N))
 robo.sort()
 child = [[]for i in range(N + 1)]
-stack = []  # 有効、名前
+stack = []
 
 for i in range(N):
     x, d = robo[i]

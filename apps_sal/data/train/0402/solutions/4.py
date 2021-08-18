@@ -37,8 +37,6 @@ class Solution:
 
             return dfs(*source)
 
-        # return method1(blocked)
-
         def method2(blocked):
             R = C = 10**6
             if not (0 <= source[0] < R and 0 <= source[1] < C):

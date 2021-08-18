@@ -1,5 +1,4 @@
 def arithmetic(a, b, operator):
-    # your code here
     ans = 0
     if operator == 'add':
         ans = a + b

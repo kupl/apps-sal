@@ -1,6 +1,5 @@
 l = int(input())
 s = input()
-#l = len(s)
 l += 2
 s += '  '
 ret = ''

@@ -1,5 +1,4 @@
 """http://codeforces.com/problemset/problem/864/D"""
-# 17:54
 
 
 def make_a_permutation():

@@ -9,7 +9,6 @@ def main():
     ans1 = float('inf')
     ans2 = float('inf')
     ans3 = min(H, W)
-    # h == Tの上
     for h in range(1, H + 1):
         if W % 2 == 0:
             ans1 = min(ans1, abs(h * (W // 2) - W * (H - h)))

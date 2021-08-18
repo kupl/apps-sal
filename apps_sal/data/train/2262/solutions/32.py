@@ -15,7 +15,6 @@ def main(r, c, n, xy):
                         tmp = c + x
                     ary.append([i, tmp])
     ary.sort(key=lambda x: x[1])
-    # print(ary)
     stc = []
     for i, x in ary:
         if stc and stc[-1] == i:

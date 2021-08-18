@@ -1,6 +1,5 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        # 14:25-
         if H == len(piles):
             return max(piles)
         elif sum(piles) <= H:
@@ -26,10 +25,8 @@ class Solution:
                 if total > H:
                     break
 
-            # fast
             if total <= H:
                 e = K - 1
-            # slow
             else:
                 s = K + 1
 

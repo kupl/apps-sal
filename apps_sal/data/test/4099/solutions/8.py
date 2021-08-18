@@ -1,6 +1,3 @@
-# N 科目のテスト, K 点満点, 平均点 M 点以上
-# 最後のテストで最低何点取る必要があるか : answer
-# 達成不可能である場合は、代わりに -1 を出力
 
 N, K, M = map(int, input().split())
 scores = list(map(int, input().split()))

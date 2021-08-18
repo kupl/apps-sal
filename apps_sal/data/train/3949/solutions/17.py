@@ -1,7 +1,6 @@
 def calculate_tip(amount, rating):
     from math import ceil
 
-    # Rating is case insensitive
     rating = rating.lower()
 
     ratingMap = {

@@ -5,13 +5,11 @@ class Solution:
             if i >= len(rating) - 2:
                 break
 
-            # check asc
             li = [val for val in rating[i + 1:] if val > r]
             for j, r2 in enumerate(li):
                 li2 = [val for val in li[j + 1:] if val > r2]
                 cnt += len(li2)
 
-            # check desc
             li = [val for val in rating[i + 1:] if val < r]
             for j, r2 in enumerate(li):
                 li2 = [val for val in li[j + 1:] if val < r2]

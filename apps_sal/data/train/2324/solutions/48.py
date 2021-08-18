@@ -5,12 +5,10 @@ sys.setrecursionlimit(10**5)
 ab = [list(map(int, input().split())) for _ in range(N - 1)]
 con = [[] for _ in range(N + 1)]
 
-# print(ab)
 for a, b in ab:
     con[a].append(b)
     con[b].append(a)
 
-# black Fennec
 pc = [0] * (N + 1)
 q = [(1, 0)]
 vis = [False] * (N + 1)

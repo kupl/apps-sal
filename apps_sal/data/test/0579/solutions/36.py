@@ -1,22 +1,12 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
 
 
 from itertools import accumulate
-
-
-# In[19]:
 
 
 N, K = list(map(int, input().split()))
 P = list(map(int, input().split()))
 C = list(map(int, input().split()))
 P = [p - 1 for p in P]
-
-
-# In[20]:
 
 
 check = [False] * N
@@ -44,6 +34,3 @@ for i in range(N):
                 else:
                     ans = max(ans, ac[-1] * (K // length) + max(ac[:K % length]))
 print(ans)
-
-
-# In[ ]:

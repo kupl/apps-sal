@@ -21,11 +21,9 @@ class Solution:
                 counter += 1
                 next_val += 1
 
-            # Cannot split anymore
             if counter < W:
                 return False
 
-            # resetting counter
             counter = 0
             heapq.heapify(hand)
 

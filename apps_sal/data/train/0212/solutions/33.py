@@ -13,6 +13,6 @@ class Solution:
                     num_to_look = A[k] // A[i]
                     if num_to_look in index_map:
                         j = index_map[num_to_look]
-                        dp[k] += dp[i] * dp[j]  # okay why is this not giving me the right number?
+                        dp[k] += dp[i] * dp[j]
 
         return sum(dp) % (10**9 + 7)

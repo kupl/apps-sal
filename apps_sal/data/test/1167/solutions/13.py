@@ -1,11 +1,3 @@
-#    !/usr/bin/env python3
-#    encoding: UTF-8
-#    Modified: <13/Oct/2019 02:38:22 PM>
-
-
-#    ✪ H4WK3yE乡
-#    Mohd. Farhan Tahir
-#    Indian Institute Of Information Technology (IIIT), Gwalior
 
 
 import sys

@@ -8,17 +8,12 @@ input = sys.stdin.readline
 def print(x):
     sys.stdout.write(str(x) + "\n")
 
-# sys.stdout=open("CP2/output.txt",'w')
-# sys.stdin=open("CP2/input.txt",'r')
 
-
-# mod=pow(10,9)+7
 t = int(input())
 for i in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     even = [0] * n
-    # odd=[0]*n
     ans = 0
     pre = [0] * n
     pre[0] = a[0]

@@ -23,7 +23,4 @@ for idx, char in enumerate(seq):
         proposed_offset = 2
     if min_offsets[idx] + proposed_offset >= 0 and offsets[-1] + proposed_offset == 0:
         counter += 1
-#     print(idx)
-# print(offsets)
-# print(min_offsets)
 print(counter)

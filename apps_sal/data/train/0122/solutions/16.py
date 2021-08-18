@@ -18,5 +18,3 @@ class Solution:
             if window < min:
                 min = window
         return all - min
-        # print(all)
-        # print(all-min)

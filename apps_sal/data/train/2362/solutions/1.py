@@ -22,8 +22,6 @@ for testcases in range(q):
         if d == 0:
             YMIN = max(YMIN, y)
 
-    # print(XMIN,XMAX,YMIN,YMAX)
-
     if XMIN > XMAX or YMIN > YMAX:
         print(0)
     else:

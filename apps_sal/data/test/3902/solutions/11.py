@@ -30,6 +30,3 @@ while p:
 print(len(s))
 
 print('\n'.join(sorted(s)))
-
-
-# Made By Mostafa_Khaled

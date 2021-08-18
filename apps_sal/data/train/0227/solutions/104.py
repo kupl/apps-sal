@@ -27,7 +27,5 @@ class Solution:
 
             if count > max_count:
                 max_count = count
-            # print(A[l:r])
 
-        # print(f'l: {l}, r: {r}')
         return max_count

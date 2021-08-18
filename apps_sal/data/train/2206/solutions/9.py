@@ -20,6 +20,3 @@ for i in range(0, n):
     ans.append(i + 1 - (n - mx) + 1)
 
 print(' '.join(map(str, ans)))
-
-
-# Made By Mostafa_Khaled

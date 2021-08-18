@@ -4,9 +4,9 @@ BASE = set("01869")
 
 def isReversible(n):
     s = str(n)
-    return (not (set(s) - BASE)                                                          # contains only reversible characters
-            and (not len(s) % 2 or s[len(s) // 2] not in "69")                               # does not contain 6 or 9 right in the middle (only for odd number of digits)
-            and all(REV.get(c, c) == s[-1 - i] for i, c in enumerate(s[:len(s) // 2])))     # symmetric repartition
+    return (not (set(s) - BASE)
+            and (not len(s) % 2 or s[len(s) // 2] not in "69")
+            and all(REV.get(c, c) == s[-1 - i] for i, c in enumerate(s[:len(s) // 2])))
 
 
 def solve(a, b):

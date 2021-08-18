@@ -1,4 +1,3 @@
-# https://atcoder.jp/contests/abc159/submissions/11139734
 
 def main():
     MOD = 998244353
@@ -9,10 +8,10 @@ def main():
     ans = 0
     dp = [0] * (S + 1)
     for i, a in enumerate(A, start=1):
-        dp[0] = i  # i以前の(i+1)通りの起点がある（以後未取得）
-        ans += dp[S]  # aを取らずにclose
+        dp[0] = i
+        ans += dp[S]
         if S >= a:
-            ans += dp[S - a]  # aを取ってclose
+            ans += dp[S - a]
         ans %= MOD
         for s in reversed(list(range(a, S + 1))):
             dp[s] += dp[s - a]

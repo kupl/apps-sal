@@ -4,4 +4,3 @@ class Cat(Animal):
 
     def speak(self):
         return self.name + " meows."
-# Solved on 26th Nov, 2019 at 05:04 PM.

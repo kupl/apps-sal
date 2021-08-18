@@ -68,10 +68,6 @@ class Solution:
                 bob.union(a, b)
                 both.union(a, b)
                 type3 += 1
-        # print(alice.disjointSet)
-        # print(bob.disjointSet)
-        # print(both.disjointSet)
-        # print(len(bob.disjointSet))
 
         if len(alice.disjointSet) != 1 or len(bob.disjointSet) != 1:
             return -1

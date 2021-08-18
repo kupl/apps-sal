@@ -7,4 +7,3 @@ def my_add(a, b):
         except:
             return None
     return a + b
-    # Your code here.

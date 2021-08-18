@@ -1,5 +1,4 @@
 
-# 120a
 
 def atc_120a(input_value: str) -> int:
     A, B, C = map(int, input_value.split(" "))

@@ -2,9 +2,9 @@ H, W = list(map(int, input().split()))
 ans = []
 for _ in range(H):
     a = input()
-    ans.append("#" + a + "#")
+    ans.append("
 
-print(("#" * (W + 2)))
+print(("
 for i in range(H):
     print((ans[i]))
-print(("#" * (W + 2)))
+print(("

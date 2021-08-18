@@ -7,5 +7,4 @@ for _ in range(int(input())):
     else:
         p = math.gcd(x, y)
         xx = (x * y) // p
-        # print(xx)
         print(int((xx // x) + (xx / y) - 2))

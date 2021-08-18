@@ -9,7 +9,7 @@ def numDecodings(s):
         if int(s[i:i + 2]) >= 10 and int(s[i:i + 2]) <= 26:
             dp[i + 2] += dp[i]
 
-    return dp[len(s)]  # careful
+    return dp[len(s)]
 
 
 t = int(input())

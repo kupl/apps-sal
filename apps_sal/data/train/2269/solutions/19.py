@@ -22,8 +22,6 @@ for i in range(n):
         if mt[i][j]:
             ns[i].append(j)
 
-# 二部グラフ判定 bipertite
-
 
 def is_bip(ns):
     cs = [None] * n
@@ -48,7 +46,6 @@ def is_bip(ns):
                         v1 += 1
                     q.append(v)
                 elif cs[v] == c:
-                    #                     print(cs)
                     return False, None
         vs.append((v0, v1))
     return True, vs
@@ -61,12 +58,6 @@ else:
     dp = 1
     for v0, v1 in vs:
         dp = (dp << v0) | (dp << v1)
-#         for i in range(n,-1,-1):
-#             if i-v0>=0:
-#                 dp[i] |= dp[i-v0]
-#             if i-v1>=0:
-#                 dp[i] |= dp[i-v1]
-#             print(dp)
     ans = float("inf")
     for i in range(1, n + 1):
         if dp >> i & 1:

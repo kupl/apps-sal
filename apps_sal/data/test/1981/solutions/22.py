@@ -6,7 +6,6 @@ for i in range(n - 1):
     a, b = tuple(map(int, input().split()))
     graph[a].add(b)
     graph[b].add(a)
-#islist = [0] * (n + 1)
 maxcats = [0] * (n + 1)
 cats = [0] * (n + 1)
 checked = [0] * (n + 1)
@@ -29,7 +28,6 @@ while len(q) > 0:
         maxi = j
     islist = 1
     for elem in graph[i]:
-        # print(elem)
         if not checked[elem]:
 
             q.append((elem, j, maxi))

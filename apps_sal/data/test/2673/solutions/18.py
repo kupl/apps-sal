@@ -23,8 +23,6 @@ def digitJump(text):
         minJ, num, idx = heapq.heappop(h)
         setJump = minJ + 1
 
-        # print(f"minJ: {minJ}  num: {num}  idx: {idx}")
-
         if maxJumpForNum[num] > setJump:
             maxJumpForNum[num] = setJump
 

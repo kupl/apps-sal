@@ -30,7 +30,6 @@ def resolve():
     d_r = {0: 'R', 1: 'P', 2: 'S'}
 
     dp = [[-1] * n for _ in range(k + 1)]
-    # k: 木の高さ i: sの左からのオフセット
 
     def f(k, i):
         if dp[k][i] == -1:

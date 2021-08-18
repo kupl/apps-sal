@@ -1,4 +1,3 @@
-# your code goes here
 for _ in range(eval(input())):
     n = eval(input())
     l = list(map(int, input().split()))

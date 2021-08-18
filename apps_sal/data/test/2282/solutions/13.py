@@ -45,7 +45,6 @@ def modst(q, s):
 
 
 def main():
-    # [int(i) for i in sys.stdin.readline().split()]
     n = int(sys.stdin.readline())
     e = list(sys.stdin.readline())
     print(n + 1)

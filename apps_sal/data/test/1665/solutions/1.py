@@ -32,8 +32,6 @@ else:
         ANS[D[k, l]] = now
         now += 1
 
-    # print(ANS)
-
     for i in range(n - 1):
         if ANS[i] == -1:
             ANS[i] = now

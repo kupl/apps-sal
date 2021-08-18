@@ -19,11 +19,10 @@ class Solution:
                 win_index = 1
                 lost_index = 0
 
-            # re-order the arr by moving the lost element to the end of the list
             lost = arr.pop(lost_index)
-            arr.append(lost)  # add lost at the end of the list
+            arr.append(lost)
 
-            win_count[arr[-1]] = 0  # reset lost element's win_count to 0
+            win_count[arr[-1]] = 0
             win_count[arr[0]] += 1
             count = win_count[arr[0]]
 

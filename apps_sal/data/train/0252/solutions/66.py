@@ -11,9 +11,8 @@ class Solution:
             if a > right:
                 break
 
-            # very important
             if right == n:
-                break  # there are segments with [n, n], we don't want to count it again.
+                break
 
             if right >= a > left:
                 cnt += 1

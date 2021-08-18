@@ -1,5 +1,3 @@
-# B - Great Ocean View
-# https://atcoder.jp/contests/abc124/tasks/abc124_b
 
 n = int(input())
 h = list(map(int, input().split()))

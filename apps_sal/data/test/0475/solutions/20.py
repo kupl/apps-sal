@@ -5,8 +5,6 @@ n = int(n)
 m = int(m)
 k = int(k)
 
-# Taken from https://www.geeksforgeeks.org/binomial-coefficient-dp-9/
-
 
 def nCr(n, k):
     C = [0 for i in range(k + 1)]

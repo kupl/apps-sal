@@ -14,4 +14,4 @@ while Q:
 if V[H - 1][W - 1] == 0:
     print(-1)
 else:
-    print(H * W - sum(s.count("#") for s in S) - V[H - 1][W - 1])
+    print(H * W - sum(s.count("

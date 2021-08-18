@@ -5,7 +5,7 @@ N = int(input())
 Z = []
 for i in range(N):
     x, y, r = map(int, input().split())
-    Z.append((x, y, r, i))  # x,y,r,ID
+    Z.append((x, y, r, i))
 G = [[] for _ in range(N + 2)]
 for i in range(N):
     dis = ((Z[i][0] - xs)**2 + (Z[i][1] - ys)**2)**0.5
@@ -22,16 +22,14 @@ for i in range(N):
         dis = ((Z[i][0] - Z[j][0])**2 + (Z[i][1] - Z[j][1])**2)**0.5
         dis -= Z[i][2] + Z[j][2]
         dis = max(0, dis)
-        G[i + 1].append((dis, j + 1))  # 1index
+        G[i + 1].append((dis, j + 1))
     dis = ((Z[i][0] - xt)**2 + (Z[i][1] - yt)**2)**0.5
     dis -= Z[i][2]
     dis = max(0, dis)
     G[i + 1].append((dis, N + 1))
-# print(G)
 
 
 def dijkstra_heap2(s, G):
-    # S:start, V: node, E: Edge, G: Graph
     V = len(G)
     d = [INF for _ in range(V)]
     d[s] = 0
@@ -53,6 +51,5 @@ def dijkstra_heap2(s, G):
 
 
 ret = dijkstra_heap2(0, G)
-# print(ret)
 ans = ret[N + 1]
 print(ans)

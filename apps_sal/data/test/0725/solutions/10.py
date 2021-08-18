@@ -4,6 +4,6 @@ for i in range(r):
     ip += list(input().split())
 
 if 'C' in ip or 'Y' in ip or 'M' in ip:
-    print('#Color')
+    print('
 else:
-    print('#Black&White')
+    print('

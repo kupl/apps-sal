@@ -1,4 +1,3 @@
-# cook your dish here
 def f(x):
     sumi = 0
     for i in li:

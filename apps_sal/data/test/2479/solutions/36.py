@@ -1,10 +1,7 @@
 import numpy as np
-# from numba import njit
-# from numba.types import int64
 i8 = np.int64
 
 
-# @njit((int64, int64[:,::-1]), cache=True)
 def solve(n, qr):
     col = np.zeros(n - 1, i8)
     col[0] = 0

@@ -1,5 +1,3 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
 from collections import Counter
 
@@ -22,36 +20,34 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def find(self, x):  # 親を出力
+    def find(self, x):
         if self.parents[x] < 0:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def same(self, x, y):  # xとyが同じグループかどうか
+    def same(self, x, y):
         return self.find(x) == self.find(y)
 
-    def size(self, x):  # グループの要素数
+    def size(self, x):
         return -self.parents[self.find(x)]
 
-    def members(self, x):  # xと同じグループの要素
+    def members(self, x):
         root = self.find(x)
         return {i for i in range(self.n) if self.find(i) == root}
 
-    def roots(self):  # 親の要素一覧
+    def roots(self):
         return {i for i, x in enumerate(self.parents) if x < 0}
 
-    def group_count(self):  # グループの個数
+    def group_count(self):
         return len(self.roots())
 
-    def all_group_members(self):  # グループのメンバー一覧
+    def all_group_members(self):
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-
-################
 
 
 def main():

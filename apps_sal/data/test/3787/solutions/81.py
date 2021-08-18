@@ -12,7 +12,6 @@ def main():
         return
     ans = []
     ans.append(list(range(1, a + 1)))
-    # print(ans)
     b -= 1
     st = a + 1
     while b:

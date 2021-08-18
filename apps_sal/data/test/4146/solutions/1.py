@@ -1,14 +1,6 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
 import collections
 
 
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N, Vi):
     V1 = Vi[::2]
     V2 = Vi[1::2]
@@ -31,10 +23,6 @@ def __starting_point():
     N = int(input())
     Vi = [int(i) for i in input().split()]
     solve(N, Vi)
-
-    # # test
-    # from random import randint
-    # from func import random_str
 
 
 __starting_point()

@@ -1,5 +1,4 @@
 def prime_test(n):
-    # Miller-Rabin prime test
     d = n - 1
     r = 0
     while d % 2 != 0:

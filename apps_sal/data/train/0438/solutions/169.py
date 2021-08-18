@@ -5,7 +5,6 @@ class Solution:
             self.sizes = [0] * n
 
         def find(self, i):
-            #print(i, self.parents)
             if i != self.parents[i]:
                 self.parents[i] = self.find(self.parents[i])
             return self.parents[i]
@@ -33,9 +32,6 @@ class Solution:
 
         for step, num in enumerate(arr):
             i = num - 1
-            # print(i)
-            # print(union_find.parents)
-            # print(union_find.sizes)
             union_find.sizes[i] += 1
             for j in [i - 1, i + 1]:
                 if 0 <= j < n:

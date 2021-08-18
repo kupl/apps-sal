@@ -22,5 +22,4 @@ for t1 in range(0, t):
             l2.append(y)
             if(y == 1):
                 break
-        # print(l1,l2)
         print(max(max(l1), max(l2)))

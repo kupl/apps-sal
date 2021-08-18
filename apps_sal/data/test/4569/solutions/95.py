@@ -1,4 +1,3 @@
-# A - Weather Prediction
 
 S = input()
 

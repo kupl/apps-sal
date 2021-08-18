@@ -1,7 +1,6 @@
 n, k = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort(reverse=True)
-# print(l)
 a = 0
 maisu = 0
 end_maisu = 0
@@ -17,5 +16,4 @@ for i in range(n):
 end_maisu -= 1
 if end_maisu < 0:
     end_maisu = 0
-# print(end_maisu - 1)
 print((n - ans - end_maisu))

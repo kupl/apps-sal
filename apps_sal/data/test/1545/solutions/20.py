@@ -24,6 +24,3 @@ for c in s[1:]:
 print(total)
 print(ma)
 print(mi)
-
-
-# Made By Mostafa_Khaled

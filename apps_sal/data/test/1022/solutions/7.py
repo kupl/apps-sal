@@ -5,7 +5,6 @@ def main():
     rank = [x + y for (x, y) in zip(left, right)]
     arr = [(n - r) for r in rank]
 
-    # check left
     for i in range(n):
         more = 0
         for j in range(i):
@@ -15,7 +14,6 @@ def main():
             print('NO')
             return
 
-    # check right
     for i in range(n):
         more = 0
         for j in range(i + 1, n):

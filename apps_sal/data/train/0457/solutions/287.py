@@ -9,7 +9,7 @@ class Solution:
             if amount == 0:
                 min_num = 0
             elif amount < min(coins):
-                min_num = float('inf')  # use float('inf') as indicator here
+                min_num = float('inf')
             elif amount in set(coins):
                 min_num = 1
             else:

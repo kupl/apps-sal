@@ -1,4 +1,3 @@
-# Coded By Ujjwal Bharti
 tulu = int(input())
 for _ in range(tulu):
     n, k = [int(x) for x in input().split()]

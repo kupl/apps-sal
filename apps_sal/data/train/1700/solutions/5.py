@@ -1,4 +1,3 @@
-# 10 times faster than naive
 class DynamicConnectivity(object):
     def __init__(self, n):
         self.items = {i: {i} for i in range(n)}

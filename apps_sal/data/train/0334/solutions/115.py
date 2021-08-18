@@ -4,7 +4,6 @@ class Solution:
         c = 0
         i = 0
         while(i < len(s) - 1):
-            # start=i
             st = 0
             end = 0
             if(s[i] == s[i + 1]):

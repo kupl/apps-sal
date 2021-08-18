@@ -8,7 +8,6 @@ class Solution:
         t = 0
         i = 0
         while(w != 0 or c < n):
-            # print(w,i)
             i = i + 1
             if(w >= 4):
                 w = w - 4
@@ -23,8 +22,6 @@ class Solution:
 
             l.append(t * boardingCost - i * runningCost)
         m = max(l)
-        # print(l)
-        # print(m)
         if(m < 0):
             return -1
         else:

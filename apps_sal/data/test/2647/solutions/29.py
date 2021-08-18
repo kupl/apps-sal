@@ -19,9 +19,9 @@ def bfs():
             nx = p[0] + dx[i]
             ny = p[1] + dy[i]
 
-            if 0 <= nx < h and 0 <= ny < w and maze[nx][ny] != "#" and d[nx][ny] == float("inf"):
-                que.append((nx, ny))
-                d[nx][ny] = d[p[0]][p[1]] + 1
+            if 0 <= nx < h and 0 <= ny < w and maze[nx][ny] != "
+            que.append((nx, ny))
+            d[nx][ny] = d[p[0]][p[1]] + 1
 
     return d[gx][gy]
 
@@ -31,7 +31,6 @@ maze = [list(input()) for i in range(h)]
 sx, sy = 0, 0
 gx, gy = h - 1, w - 1
 
-# 白いマスを数える
 white = 0
 for i in range(h):
     for j in range(w):
@@ -40,8 +39,6 @@ for i in range(h):
 
 res = bfs()
 if 0 < res < float("inf"):
-    # 白いマスの数から最短経路でかかるコスト分を引く
-    # ゴールを黒いマスに変えることはできないためその分も引く
     print(white - res - 1)
 else:
     print(-1)

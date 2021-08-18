@@ -20,6 +20,5 @@ for s in ("abcdefghijklmnopqrstuvwxyz"):
         r = i
         ANS = (ANS + (l + 1) * (n - r) - 1) % mod
 
-    # print(s,l,r,ANS)
 
 print(ANS)

@@ -17,7 +17,6 @@ class Solution:
                 group_count[left_p - 1] += group_count[right_p - 1]
                 group_count[right_p - 1] = 0
                 dd[group_count[left_p - 1]] += 1
-            # print(left, right, group_count)
 
         def find(i):
             p = parent[i]
@@ -36,10 +35,6 @@ class Solution:
             if num != n and l[num] == 1:
                 union(num, num + 1)
 
-            # print(group_count)
-
             if m in dd and dd[m] > 0:
                 last = idx + 1
-            # print(idx, num, l, parent)
-            # print(q)
         return last

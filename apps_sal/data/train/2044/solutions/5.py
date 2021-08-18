@@ -27,6 +27,3 @@ for i in range(k):
         v1 += 1
 
 print("\n".join(ans))
-
-
-# Made By Mostafa_Khaled

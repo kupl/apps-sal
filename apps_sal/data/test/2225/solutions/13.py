@@ -10,7 +10,6 @@ for i in range(n):
     else:
         t += [[t[i][j] ^ t[i][j + 1] for j in range(0, len(t[i]), 2)]]
 
-# print(t)
 
 for s in sys.stdin:
     p, b = s.split()

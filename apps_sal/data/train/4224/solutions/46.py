@@ -6,4 +6,4 @@ def dont_give_me_five(start, end):
                 if not 150 <= i <= 159:
                     n.append(i)
 
-    return len(n)   # amount of numbers
+    return len(n)

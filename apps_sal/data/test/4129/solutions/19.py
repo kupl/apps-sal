@@ -4,10 +4,6 @@ def input(): return sys.stdin.readline().rstrip()
 
 sys.setrecursionlimit(50000)
 
-# 強連結成分分解(SCC): グラフGに対するSCCを行う
-# 入力: <N>: 頂点サイズ, <G>: 順方向の有向グラフ, <RG>: 逆方向の有向グラフ
-# 出力: (<ラベル数>, <各頂点のラベル番号>)
-
 
 def scc(N, G, RG):
     order = []
@@ -37,8 +33,6 @@ def scc(N, G, RG):
             rdfs(s, label)
             label += 1
     return label, group
-
-# 縮約後のグラフを構築
 
 
 def construct(N, G, label, group):

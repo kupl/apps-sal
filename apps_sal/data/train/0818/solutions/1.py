@@ -11,7 +11,6 @@ for o in range(t):
             l1.append(c)
         else:
             l1.append(c)
-    # print(l1)
     for v in range(q):
         l, r = map(int, input().split())
         l -= 1

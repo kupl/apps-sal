@@ -8,7 +8,7 @@ b = 0
 
 for i in range(Q):
     query = list(map(int, input().split()))
-    if len(query) == 3:  # 更新クエリ
+    if len(query) == 3:
         b += query[2]
         new = query[1]
         if n == 0:
@@ -73,5 +73,5 @@ for i in range(Q):
                     heapq.heappush(r, new)
                     m, R = _r, R + new - _r
         n += 1
-    else:  # 求値クエリ
+    else:
         print(m, R - L + b)

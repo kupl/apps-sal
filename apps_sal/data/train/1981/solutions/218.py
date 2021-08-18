@@ -1,8 +1,6 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
 
-        # We want to calculate the frequency for A[i].
-        # Assign the big element A[i] to the position queried more frequently.
         n = len(nums)
         count = [0] * (n + 1)
 

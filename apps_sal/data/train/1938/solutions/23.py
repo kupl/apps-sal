@@ -1,6 +1,5 @@
 class Solution(object):
     def rectangleArea(self, rectangles):
-        # Populate events
         OPEN, CLOSE = 0, 1
         events = []
         for x1, y1, x2, y2 in rectangles:
@@ -21,10 +20,8 @@ class Solution(object):
         cur_y = events[0][0]
         ans = 0
         for y, typ, x1, x2 in events:
-            # For all vertical ground covered, update answer
             ans += query() * (y - cur_y)
 
-            # Update active intervals
             if typ is OPEN:
                 active.append((x1, x2))
                 active.sort()

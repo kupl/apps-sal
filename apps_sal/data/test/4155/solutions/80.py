@@ -32,12 +32,10 @@ def main():
                 break
         else:
             ng = n
-        # print(ok,ng)
         sub = [0] * ok + [1] * (ng - ok) + [0] * (n - ng)
 
         for i in range(n):
             h[i] -= sub[i]
-        # print(h)
         for i, x in enumerate(h):
             if x > 0:
                 ok = i

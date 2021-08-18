@@ -1,4 +1,3 @@
-# we need to find out for indices i which ones such that a[0],a[1],...,a[i] are permutations of 1,2,...,i+1.
 class Solution:
     def numTimesAllBlue(self, light: List[int]) -> int:
         minimum = len(light) + 1

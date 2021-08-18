@@ -1,7 +1,7 @@
 from collections import *
 from copy import *
 H, W = map(int, input().split())
-S = [(W + 2) * ["#"]] + [["#"] + list(input()) + ["#"] for h in range(H)] + [(W + 2) * ["#"]]
+S = [(W + 2) * ["
 D = [[1, 0], [-1, 0], [0, 1], [0, -1]]
 ans = 0
 P = deque([])

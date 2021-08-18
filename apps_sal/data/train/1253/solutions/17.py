@@ -29,7 +29,6 @@ for _ in range(t):
                     l.append(l[j] - 1)
                     c += 1
         l = l[ll:]
-        # print("l", l)
 
         rr = len(r)
         for j in range(rr):
@@ -39,7 +38,6 @@ for _ in range(t):
                     r.append(r[j] + 1)
                     c += 1
         r = r[rr:]
-        # print("r", r)
 
         if (i != (d - 1)):
             iso.append(toiso[i + 1])

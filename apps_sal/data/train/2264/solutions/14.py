@@ -4,7 +4,6 @@ input = sys.stdin.readline
 
 INF = 10**18
 mod = 10**9 + 7
-# AOJ GRL_1_A Single Sourse Shortest Path
 
 N, M = map(int, input().split())
 s, t = map(int, input().split())
@@ -14,15 +13,15 @@ graph = [[] for _ in range(N)]
 for _ in range(M):
     n, m, d = map(int, input().split())
     graph[n - 1].append((d, m - 1))
-    graph[m - 1].append((d, n - 1))  # 無向グラフならこれ使う
+    graph[m - 1].append((d, n - 1))
 
 
 def dijkstra(s):
-    D = [INF for _ in range(N)]  # 頂点iへの最短距離がD[i]
+    D = [INF for _ in range(N)]
     B = [0] * N
     D[s] = 0
     B[s] = 1
-    q = []  # しまっていく優先度付きキュー
+    q = []
     hp.heappush(q, (0, s))
 
     while q:

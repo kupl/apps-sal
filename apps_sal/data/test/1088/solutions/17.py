@@ -60,21 +60,21 @@ for i in range(n):
             escol.append((i, j))
 
 
-class UnionFind(object):  # sizeをO(1)で引けるversion
+class UnionFind(object):
     def __init__(self, n=1):
         self.n = n
         self.par = [i for i in range(n)]
         self.rank = [0 for _ in range(n)]
         self.sizebox = [1] * n
 
-    def find(self, x):  # xの属する連結成分の代表元
+    def find(self, x):
         if self.par[x] == x:
             return x
         else:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
 
-    def union(self, x, y):  # x,yを連結、ついでにサイズも連結
+    def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
         if x != y:
@@ -85,14 +85,14 @@ class UnionFind(object):  # sizeをO(1)で引けるversion
             self.par[y] = x
             self.sizebox[x] += self.sizebox[y]
 
-    def same(self, x, y):  # x,yが連結かどうか
+    def same(self, x, y):
         return self.find(x) == self.find(y)
 
-    def size(self, x):  # xの属する連結sizeをO(1)で出す
+    def size(self, x):
         x = self.find(x)
         return self.sizebox[x]
 
-    def allfind(self):  # findを1周する
+    def allfind(self):
         for i in range(self.n):
             self.find(i)
 

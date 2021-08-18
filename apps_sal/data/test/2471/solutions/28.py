@@ -1,4 +1,3 @@
-# すぬけくんの塗り絵
 h, w, n = list(map(int, input().split()))
 dic = {}
 for _ in range(n):

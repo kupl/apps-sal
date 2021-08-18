@@ -37,6 +37,5 @@ def solve():
     return N // X + 2
 
 
-# print(solve())
 for _ in range(getInt()):
     print(solve())

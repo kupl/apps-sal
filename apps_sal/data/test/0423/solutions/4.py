@@ -9,8 +9,6 @@ def solve():
             cnt += 1
         a.append(s)
 
-    # print(cnt)
-
     if (m == 0):
         if (a[0] == '0'):
             return 1

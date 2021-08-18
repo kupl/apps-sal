@@ -1,5 +1,3 @@
-# truncate name as array.
-# si es menor o igual a 2 retorna el nombre como es.
 
 
 def who_is_paying(name):

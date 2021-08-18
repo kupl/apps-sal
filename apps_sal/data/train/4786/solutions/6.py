@@ -1,4 +1,3 @@
-# return the derivative of the polynomial.
 def poly_derivative(p):
 
     der = []

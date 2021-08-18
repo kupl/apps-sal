@@ -1,10 +1,6 @@
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
 
-        # public solution ... 3020 ms ... 0 % ... 215 MB ... 0 %
-        #  time: O(n*m)
-        # space: O(n*m)
-
         def dfs(pi, pj, i, j):
             visited[i][j] = True
             for ni, nj in [(i - 1, j), (i, j - 1), (i, j + 1), (i + 1, j)]:

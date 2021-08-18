@@ -94,9 +94,9 @@ class Graph(list):
                 cc.append(max(cc[-1], v))
             for v in reversed(bb):
                 dd.append(max(dd[-1], v))
-            b.append(bb)                      # [0, l[0], l[0]+l[1], ..., sum(l)]                        (len(bb) == len(l)+1)
-            c.append(cc[1:])                  # [0, max(0, l[0]), max(0, l[0], l[0]+l[1]), ..., max(bb)] (len(cc) == len(l)+1)
-            d.append(list(reversed(dd[1:])))  # [max(bb), ..., max(sum(l)-l[-2]-l[-1], sum(l)-l[-1], sum(l)), max(sum(l)-l[-1], sum(l)), sum(l)] (len(dd) == len(l)+1)
+            b.append(bb)
+            c.append(cc[1:])
+            d.append(list(reversed(dd[1:])))
         self.base = b
         self.leftmax = c
         self.rightmax = d

@@ -1,5 +1,4 @@
 def min_value(digits):
-    # your code here
     empty = []
     string = ""
     for i in digits:

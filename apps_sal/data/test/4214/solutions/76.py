@@ -5,7 +5,6 @@ p = [[0 for i in range(2)] for j in range(n)]
 
 for i in range(n):
     p[i][0], p[i][1] = list(map(int, input().split()))
-# print(p)
 
 
 def dis(a, b):

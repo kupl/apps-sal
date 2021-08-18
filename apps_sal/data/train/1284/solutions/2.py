@@ -15,7 +15,6 @@ for _ in range(t):
             y = x + len(l) // 4
             z = y + len(l) // 4
 
-            # print(x,y,z)
             if l[x] == l[x - 1]:
                 print(-1)
             elif l[y] == l[y - 1]:

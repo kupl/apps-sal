@@ -1,4 +1,3 @@
-# from more_itertools import unique_everseen as distinct
 
 from itertools import filterfalse
 

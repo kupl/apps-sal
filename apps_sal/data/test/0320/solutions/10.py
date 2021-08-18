@@ -27,7 +27,7 @@ elif sum_x % 2 == 0 and sum_y % 2 == 1:
     print(-1)
 elif sum_x % 2 == 1 and sum_y % 2 == 0:
     print(-1)
-else:  # even - even
+else:
     if even_odd >= 1 or odd_even >= 1:
         print(1)
     else:

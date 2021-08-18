@@ -1,4 +1,3 @@
-# 592_D
 
 import sys
 

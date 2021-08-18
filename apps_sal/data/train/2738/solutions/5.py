@@ -1,5 +1,4 @@
 def i_tri(s):
-    # your code here
     d = {2.4: 'Swim', 114.4: 'Bike', 140.6: 'Run'}
     if s == 0:
         return 'Starting Line... Good Luck!'

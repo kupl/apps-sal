@@ -5,25 +5,23 @@ from collections import deque, defaultdict
 class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
         m, n = len(grid), len(grid[0])
-        key_lock_loc = {ch: (i, j) for i, row in enumerate(grid) for j, ch in enumerate(row) if ch not in {'.', '#'}}
+        key_lock_loc = {ch: (i, j) for i, row in enumerate(grid) for j, ch in enumerate(row) if ch not in {'.', '
         key_cnt = sum(key_lock.islower() for key_lock in key_lock_loc)
 
         def bfs_from(src):
             i, j = key_lock_loc[src]
             seen = [[False] * n for _ in range(m)]
             seen[i][j] = True
-            # only locations which are not wall will be put into the queue
             dque = deque([(i, j, 0)])
             dist = {}
             while dque:
                 i, j, d = dque.popleft()
                 ch = grid[i][j]
-                if ch != src and ch != '.':  # reaches lock or key
+                if ch != src and ch != '.':
                     dist[ch] = d
                     continue
-                # '#' or '.'
                 for x, y in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
-                    if not (0 <= x < m and 0 <= y < n) or grid[x][y] == '#' or seen[x][y]:
+                    if not (0 <= x < m and 0 <= y < n) or grid[x][y] == '
                         continue
                     seen[x][y] = True
                     dque.append((x, y, d + 1))
@@ -43,9 +41,9 @@ class Solution:
                 return d
             for destination, d2 in list(dists[loc].items()):
                 state2 = state
-                if destination.islower():  # key
+                if destination.islower():
                     state2 |= (1 << (ord(destination) - ord('a')))
-                elif destination.isupper():  # loc
+                elif destination.isupper():
                     if not(state & (1 << (ord(destination) - ord('A')))):
                         continue
                 if d + d2 < final_dist[destination, state2]:

@@ -1,4 +1,3 @@
-# cook your dish here
 
 def calc(n):
     a = n * (n - 1)

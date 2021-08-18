@@ -14,14 +14,11 @@ class Solution:
                         ok = False
                         break
                     visited.add(tmp)
-                    # print(visited)
                 if not ok:
                     break
             if not ok:
                 continue
             tmp = s[prev:]
-            #print(tmp, visited)
             if tmp not in visited:
-                # print(visited)
                 ans = max(ans, len(visited) + 1)
         return ans

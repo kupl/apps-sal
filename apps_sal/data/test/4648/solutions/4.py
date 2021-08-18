@@ -59,20 +59,6 @@ def YESNO(fl):
 
 def main():
     n = iinput()
-    #k = iinput()
-    #m = iinput()
-    #n = int(sys.stdin.readline().strip())
-    #n, k = rinput()
-    #n, m = rinput()
-    #m, k = rinput()
-    #n, k, m = rinput()
-    #n, m, k = rinput()
-    #k, n, m = rinput()
-    #k, m, n = rinput()
-    #m, k, n = rinput()
-    #m, n, k = rinput()
-    #q = srlinput()
-    #q = linput()
     t, g = 0, 0
     while n % 3 == 0:
         g += 1

@@ -3,11 +3,6 @@ class Solution:
         self.cache = dict()
         self.coin_set = set()
 
-    # some key takeaways again:
-    # need to reverse sort because of the problem - trying to find min, so need to cache for min
-    # because if get a cache hit then it won't search for more, even if it's not min
-
-    # the dfs structure here helps because doing a min over a for loop
     def helper(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0

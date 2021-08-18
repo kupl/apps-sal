@@ -6,7 +6,6 @@ for _ in range(int(input())):
     for i in range(n):
         if a[i] >= x / 2:
             break
-        # count+=1
     count = i
 
     while 1:

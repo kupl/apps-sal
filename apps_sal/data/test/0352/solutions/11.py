@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 N = int(input())
 min1, max1 = tuple(map(int, input().split(' ')))

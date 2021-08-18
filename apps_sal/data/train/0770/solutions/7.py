@@ -18,6 +18,4 @@ for _ in range(int(input())):
             else:
                 dpe[i] = max(dpe[i - 1], a)
                 dpo[i] = dpo[i - 1]
-    # print(*dpo)
-    # print(*dpe)
     print(dpo[-1] + dpe[-1])

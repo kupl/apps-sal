@@ -1,6 +1,6 @@
 def validate_pin(pin):
     if len(pin) == 4 or len(pin) == 6:
-        forbiden = ".,' /\n=-`~!@#$%^&*)(_+|}{:?><\"'\\qwertuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+        forbiden = "., ' /\n = -`~!@
         for i in forbiden:
             if i in pin:
                 return False

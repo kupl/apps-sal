@@ -16,5 +16,3 @@ class Solution:
             dp1 = dp2
             dp2 = [0 for _ in range(target + 1)]
         return dp1[target] % mod
-
-# https://www.youtube.com/watch?time_continue=872&v=UiYVToWORMY&feature=emb_logo

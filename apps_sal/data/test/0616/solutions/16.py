@@ -25,7 +25,6 @@ def main():
         for a, c in AC:
             if c & i == i:
                 dp[i] = min(dp[i], a)
-        # print(dp[i],bin(i))
 
     if dp[-1] == 10**9:
         print(-1)

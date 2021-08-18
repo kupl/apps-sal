@@ -8,5 +8,4 @@ for _ in range(t):
     st = ((c - a) + (d - b))
     end = ((d - b + 1))
     ma = ((end + st) * (st - end + 1)) // 2
-   # print(mi,ma)
     print(ma - mi + 1)

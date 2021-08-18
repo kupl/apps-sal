@@ -37,8 +37,6 @@ class Solution:
 
                 counter += 2
 
-            # print('prev_layer', prev_layer)
-
             lst.append(new_layer)
             prev_layer = new_layer
             new_layer = []

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import math
 import collections
@@ -20,15 +19,7 @@ K = L[1]
 V = L[2: 2 + N]
 B = L[2 + N:]
 
-# N = 700
-# K = 7
-# V = [random.randint(0, 10) for _ in range(N)]
-# B = [random.randint(1, K*2) for _ in range(N)]
-# N, K = 6, 3
-# V = [4, 5, -2, 1, 1, 6]
-# B = [1, 3, 4, 2, 5, 6]
 
-# t0 = time.time()
 bi = [[] for _ in range(20)]
 L = []
 for i, v in enumerate(B):

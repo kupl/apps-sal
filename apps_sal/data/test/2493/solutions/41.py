@@ -29,7 +29,6 @@ def resolve():
 
     length = n - (right - left)
 
-    # 二項係数(mod p)をO(1)で求める
     def cmb(n, r, mod):
         if (r < 0) or (n < r):
             return 0

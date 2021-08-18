@@ -18,7 +18,7 @@ def problem():
         ip[ips] = name
     for i in range(m):
         command, ips = gss()
-        print(command, ips, '#{}'.format(ip[ips[:-1]]))
+        print(command, ips, '
 
 
 def __starting_point():

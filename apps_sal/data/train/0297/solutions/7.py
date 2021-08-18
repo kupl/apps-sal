@@ -8,9 +8,7 @@ class Solution:
 
     def perm(self):
         if(self.n == len(self.string)):
-            # print(string)
             self.total += 1
-            # print(self.total)
 
         for i in range(len(self.arr)):
             if(self.arr[i][1] > 0):
@@ -31,11 +29,7 @@ class Solution:
             temp = [key, self.dict_[key]]
             self.arr.append(temp)
 
-        # print(self.arr)
-
         for i in range(1, len(tiles) + 1):
             self.n = i
-            # print(self.n)
             self.perm()
-        # self.perm()
         return self.total

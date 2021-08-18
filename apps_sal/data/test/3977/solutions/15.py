@@ -35,7 +35,6 @@ for i in d:
 ans.sort()
 ans[-1] += rem
 tmp = 0
-# print(ans)
 for i in ans:
     tmp += (i * (i - 1)) // 2
 print(tmp - m)

@@ -17,6 +17,5 @@ def task(n):
 
 
 n = [input()]
-#n = ['16', '01.23400', '.100', '100.']
 for t in n:
     print(task(t))

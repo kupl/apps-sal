@@ -5,7 +5,6 @@ numberlist = []
 for i in range(m):
     numberlist.append(matchlist[a[i]])
 numberlist = set(numberlist)
-# dp[i]:i本でのmax桁
 dp = [-10000000] * (n + 1)
 dp[0] = 0
 for i in range(n):

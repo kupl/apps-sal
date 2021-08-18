@@ -9,5 +9,3 @@ def array(string):
         return None
     else:
         return " ".join(res)
-
-    # your code here

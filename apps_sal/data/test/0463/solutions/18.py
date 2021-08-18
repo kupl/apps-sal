@@ -8,7 +8,6 @@ def listInput():
 n, x = listInput()
 li = listInput()
 dic1 = {}
-#print('x is ',x)
 for i in li:
     if i in dic1:
         dic1[i] += 1
@@ -16,14 +15,11 @@ for i in li:
         dic1[i] = 1
 dic2 = {}
 for i in li:
-    #print('for ',i,' &x is ',i&x)
     if i & x in dic2:
         dic2[i & x] += 1
     else:
         dic2[i & x] = 1
 ans = n + 1
-# rint(dic1)
-# print(dic2)
 for i in li:
     if dic1[i] >= 2:
         ans = min(ans, 0)

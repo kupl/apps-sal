@@ -18,9 +18,3 @@ class Solution:
                     catch = True
 
         return True
-
-        # 1 2
-
-        # #given one element
-        #     not seen: keep push until we see
-        #     seen: keep pop until we seen

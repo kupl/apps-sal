@@ -23,11 +23,9 @@ while i ** 2 <= k:
     i += 1
 gcdd = a * b / gcd(a, b)
 wynik = 0
-# print(dzielniki)
 for d in dzielniki:
     aa = a - (a % d) + d
     bb = b - (b % d) + d
-    # print(aa,bb)
     if aa * bb // gcd(aa, bb) <= gcdd:
         if aa * bb // gcd(aa, bb) == gcdd:
             wynik = min(d - (a % d), wynik)

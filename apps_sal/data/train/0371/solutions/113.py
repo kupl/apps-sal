@@ -1,6 +1,6 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        mapping = dict()  # key is bus stop, val is bus number
+        mapping = dict()
         for bus, stops in enumerate(routes):
             for stop in stops:
                 if stop not in mapping:

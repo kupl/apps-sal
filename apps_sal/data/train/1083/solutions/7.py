@@ -6,11 +6,8 @@ for _ in range(int(input())):
         continue
     p = r / (m - 1)
     if (n <= p):
-        #k = min(b-p,(m+1-(r-p*(m-1)))/2 + ((n-p-1)*((m+1)/2))) + p
         print(min(n * m, z + r + b))
     else:
-        # k = min(b-p,(m+1-min(1,(r-p*(m-1)-(n-p-1))))/2 + ((n-p-1)*((m+1)/2))) +            p
-        # print min(n*m,z+r+k)
         R = r % (m - 1)
         h = R % (n - p)
         y = R / (n - p)

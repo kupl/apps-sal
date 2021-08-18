@@ -18,7 +18,6 @@ else:
     for i in range(idx - 1, len(w) - 1):
         d = w[i + 1] - w[i]
         if k > d * mul:
-            # remainder
             k = k - d * mul
             gain += d
         else:
@@ -27,7 +26,6 @@ else:
             break
 
         mul += 1
-    # if for last elt
     if k > 0:
         gain += k // mul
 

@@ -23,7 +23,7 @@ def combination(n, r, mod=10**9 + 7):
 
 
 def power_func(a, n, p):
-    bi = str(format(n, "b"))  # 2進表現に
+    bi = str(format(n, "b"))
     res = 1
     for i in range(len(bi)):
         res = (res * res) % p

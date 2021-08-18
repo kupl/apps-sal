@@ -19,7 +19,6 @@ l = LI()
 cnt = 1
 d = 0
 for i in range(n):
-    # print(f'{(d, l[i])=}')
     if d + l[i] <= x:
         cnt += 1
         d += l[i]

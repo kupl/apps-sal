@@ -7,7 +7,6 @@ for i in range(n):
     total_list.append(v_list[i] - c_list[i])
 
 total_list.sort(reverse=True)
-# print(total_list)
 
 sum = 0
 for i in total_list:

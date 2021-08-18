@@ -1,4 +1,3 @@
-# A
 n = int(input())
 
 

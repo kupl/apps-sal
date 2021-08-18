@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 
-# s[0]>0のとき
 s = 0
 anse = 0
 for i in range(n):
@@ -13,7 +12,6 @@ for i in range(n):
         anse += s + 1
         s = -1
 
-# s[0]<0のとき
 s = 0
 anso = 0
 for i in range(n):

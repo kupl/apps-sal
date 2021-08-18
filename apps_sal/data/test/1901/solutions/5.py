@@ -15,7 +15,6 @@ for _ in range(m):
     x, y = list(map(int, input().split()))
     friendship[x].add(y)
     friendship[y].add(x)
-# print(friendship)
 citizens = set(range(1, n + 1))
 ans = 0
 while citizens:

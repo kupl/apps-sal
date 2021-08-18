@@ -51,8 +51,6 @@ for c in c2:
         last_2p = c
 
 
-# print(cnts)
-
 for _ in range(N - 3):
     for ci in aa[ai]:
         cnts[ci].remove(ai)
@@ -60,7 +58,6 @@ for _ in range(N - 3):
             next_ai = list(cnts[ci])[0]
             pp.append(ci)
     ai = next_ai
-    # print(cnts,next_ai)
 
 pp += [last_2p, last_p]
 

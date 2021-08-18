@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n = int(input())
@@ -22,6 +21,4 @@ while t:
         print("YES")
     else:
         print("NO")
-    # print(*con)
-    # print(*c)
     t -= 1

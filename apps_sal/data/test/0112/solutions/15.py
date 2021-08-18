@@ -19,8 +19,6 @@ while answer < 10**n:
     answer += 1
     g = list(str(answer))
     for perm in get_all_perm(sets):
-        # print(perm)
-        #print([perm[i] in sets[i] for i in range(len(perm))])
         if all([g[i] in perm[i] for i in range(len(g))]):
             break
     else:

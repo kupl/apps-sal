@@ -1,4 +1,3 @@
-# B
 N, K = map(int, input().split())
 ans = 0
 for AB in range(max(2, K + 2), min(2 * N, K + 2 * N) + 1):

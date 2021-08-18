@@ -8,7 +8,6 @@ class Solution:
         else:
             odds[0] = 0
 
-        # d[odds[0]] = d.setdefault(0, []) + [1]
         odds = [0] + odds
         d[0] = d.setdefault(0, []) + [0]
 

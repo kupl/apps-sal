@@ -7,7 +7,6 @@ def RI(): return list(map(int, input().split()))
 def RS(): return input().rstrip().split()
 
 
-#################################################
 y, k, n = RI()
 st = k - y % k
 if st + y > n:

@@ -1,4 +1,3 @@
-# n,m=int(input().split()[:2])
 n, m = [int(x)for x in input().split()[:2]]
 fd = [[-2 for i in range(m)]for i in range(n)]
 
@@ -40,7 +39,6 @@ for i in range(n):
             continue
         else:
             fg = False
-# print(fd)
 if fg:
     print('YES')
 else:

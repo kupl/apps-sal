@@ -1,10 +1,7 @@
-# cook your dish here
-#import math
 
 t = 1
 while(t > 0):
     t -= 1
-    # n=int(input())
     n, m = map(int, input().split())
     X = {}
     Y = {}
@@ -16,7 +13,6 @@ while(t > 0):
         else:
             X[xu] = 1
 
-    # l=list(map(int,input().split()))
     for i in range(m):
         y, v = map(int, input().split())
         yv = y * v

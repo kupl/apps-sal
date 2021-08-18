@@ -20,7 +20,6 @@ def find_primes(top):
     candidates = list(range(2, top))
     primes = []
     while candidates:
-        # here, candidates[0] is the least element.
         latest_prime = candidates[0]
         primes.append(latest_prime)
         remove(candidates, 0)
@@ -29,7 +28,6 @@ def find_primes(top):
                 remove(candidates, i)
 
         swap_min(candidates)
-        # before continuing, set candidates[0] to be the least element.
     return primes
 
 
@@ -52,10 +50,8 @@ def div4(n, primes, setprimes):
         if p2 is None:
             p2 = n // p1
         if p1 * p2 == n and p1 != p2:
-            # success
             return (1 + p1) * (1 + p2)
         elif p1 ** 3 == n:
-            # success
             return (1 + p1) * (1 + p1**2)
         else:
             return 0

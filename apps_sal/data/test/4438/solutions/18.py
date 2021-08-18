@@ -38,4 +38,3 @@ for i in range(1, len(A_t)):
     B += [[x, y]]
 
 print(min(B[len(A_t) - 1]))
-# JSR

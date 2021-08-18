@@ -5,4 +5,3 @@ class Hero(object):
         self.position = position
         self.health = health
         self.damage = damage
-        # Add default values here

@@ -70,6 +70,3 @@ def solve2():
 
 
 print(max(solve1(), solve2()))
-
-
-# Made By Mostafa_Khaled

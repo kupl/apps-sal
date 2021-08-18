@@ -1,4 +1,3 @@
-# Dinic's algorithm
 from collections import deque
 
 
@@ -63,7 +62,6 @@ class Dinic:
 N, = list(map(int, input().split()))
 a, b, c = list(map(int, input().split()))
 x, y, z = list(map(int, input().split()))
-#print(min(a, y)+min(b, z)+min(c, x))
 INF = 10**9
 dnc = Dinic(8)
 dnc.add_edge(0, 1, a)

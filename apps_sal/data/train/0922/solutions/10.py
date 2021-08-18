@@ -1,7 +1,5 @@
-# cook your dish here
 def CountFrequency(my_list):
 
-    # Creating an empty dictionary
     freq = {}
     vec = []
     for item in my_list:

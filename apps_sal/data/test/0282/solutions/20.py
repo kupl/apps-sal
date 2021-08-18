@@ -1,5 +1,3 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
 """
 Created on Sat Dec 23 03:02:56 2017
 
@@ -30,8 +28,6 @@ for i in range(1, n):
             if(i - j >= 0):
                 dp[i] = min(dp[i - j] + 1, dp[i])
 
-# for i in range(0,n):
- #   print(dp[i])
 
 if(dp[n - 1] == 999999):
     print("-1")

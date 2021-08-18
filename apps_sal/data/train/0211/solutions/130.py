@@ -19,6 +19,5 @@ class Solution:
             tmp = s[start:]
             if tmp in subs:
                 continue
-            # print(subs, i)
             ans = max(ans, len(subs) + 1)
         return ans

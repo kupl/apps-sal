@@ -9,7 +9,6 @@ for i in range(N):
     d[a[i]] += 1
     l[a[i]] = min(l[a[i]], i + 1)
 
-#print(d, l)
 ks = sorted(d.keys(), reverse=True)
 res = [0] * (N + 1)
 for i in range(len(ks) - 1):

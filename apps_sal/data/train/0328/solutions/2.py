@@ -6,7 +6,6 @@ class Solution:
         """
         if len(nums) < 3:
             return False
-        # initialize.
         s2_candidate = [nums[-1]]
         cur_idx = len(nums) - 2
         while cur_idx >= 0 and nums[cur_idx] <= s2_candidate[-1]:
@@ -18,7 +17,6 @@ class Solution:
         while s2_candidate and s2_candidate[-1] < s3:
             s2 = s2_candidate.pop()
 
-        # find s1
         cur_idx -= 1
         while cur_idx >= 0:
             if nums[cur_idx] < s2:

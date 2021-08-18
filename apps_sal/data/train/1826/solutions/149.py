@@ -10,8 +10,6 @@ class Solution:
 
         ans = [[0 for i in range(len(mat[0]))] for i in range(len(mat))]
 
-        # print(cum)
-
         for i in range(len(mat)):
             for j in range(len(mat[0])):
                 summ = 0
@@ -19,7 +17,6 @@ class Solution:
                     if(j - K - 1 < 0):
                         summ += cum[k][min(j + K, len(cum[i]) - 1)]
                     else:
-                        # print(k, len(cum[k]))
                         summ += cum[k][min(j + K, len(cum[k]) - 1)]
                         summ -= cum[k][j - K - 1]
                 ans[i][j] = summ

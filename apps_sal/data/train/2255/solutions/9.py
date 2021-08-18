@@ -15,7 +15,6 @@ def solve(a):
     for i in a:
         x = x ^ i
         sums.append(x)
-    # print(sums)
     d = {}
     d[0] = [-1]
     for i in range(len(sums)):
@@ -23,7 +22,6 @@ def solve(a):
             d[sums[i]].append(i)
         else:
             d[sums[i]] = [i]
-    # print(d)
     res = 0
     for sums in d:
         res += count(d[sums])

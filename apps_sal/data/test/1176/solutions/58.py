@@ -1,10 +1,6 @@
-# from pprint import pprint
-# import math
-# import collections
 import numpy as np
 
 n = int(input())
-# n, k = map(int, input().split(' '))
 a = list(map(int, input().split(' ')))
 
 minus_signs = sum([1 for _ in a if np.sign(_) == -1])

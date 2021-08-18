@@ -17,19 +17,9 @@ def main():
         answer = min(answer, result)
     print(answer)
 
-# ex. horizons = [0, 0, 1, 0, 0, 1]
-
 
 def greedy(W, S, K, horizons, current_answer):
     answer = sum(horizons)
-    # ex.
-    # S  = [[1, 1, 1, 0, 0],
-    #       [1, 0, 0, 0, 1],
-    #       [0, 0, 1, 1, 1]]
-    # horizons = [0, 1]のとき,
-    # S2 = [[2, 1, 1, 0, 0],
-    #       [0, 0, 1, 1, 1]]
-    # となる
     top = 0
     bottom = 0
     S2 = []
@@ -39,7 +29,6 @@ def greedy(W, S, K, horizons, current_answer):
             top = bottom + 1
         bottom += 1
     S2.append(S[:][top:].sum(axis=0).tolist())
-    # ブロック毎の累積和を計算する
     h = len(S2)
     partial_sums = [0] * h
     for right in range(W):
@@ -47,10 +36,8 @@ def greedy(W, S, K, horizons, current_answer):
         for idx in range(h):
             current[idx] = S2[idx][right]
             partial_sums[idx] += S2[idx][right]
-        # 1列に含むホワイトチョコの数がkより多い場合
         if max(current) > K:
             return float('INF')
-        # 無理な(ブロックの中のホワイトチョコの数をk以下にできない)場合
         if max(partial_sums) > K:
             answer += 1
             if answer >= current_answer:

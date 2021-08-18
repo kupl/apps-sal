@@ -34,7 +34,6 @@ def main():
         if i == last[c]:
             totalGuard -= 1
 
-    #print('maxgurad:', maxGuard)
     if maxGuard > k:
         stdout.write('YES\n')
     else:

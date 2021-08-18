@@ -1,4 +1,3 @@
-# your code goes here
 from sys import stdin, stdout
 n = int(stdin.readline())
 while n:

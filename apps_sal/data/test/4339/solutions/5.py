@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import deque
 import bisect
 import sys

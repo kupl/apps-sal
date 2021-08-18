@@ -4,7 +4,6 @@ m = (-X + 2 * Y) // 3
 if n < 0 or m < 0 or (2 * X - Y) % 3 != 0 or (-X + 2 * Y) % 3 != 0:
     print(0)
 else:
-    # (n+m)Cn 通り
     fac = [1, 1]
     finv = [1, 1]
     inv = [1, 1]

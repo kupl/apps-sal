@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 count = {}
-for i in range(len(a)):  # 番号と身長を引く
+for i in range(len(a)):
     minus = (i + 1) - a[i]
     if minus in count:
         count[minus] += 1

@@ -30,7 +30,6 @@ def countodd(num):
 def nlcm(A):
     LCM = A[0]
     for val in A[1:]:
-        #print("%d %d gcm:%d LCM:%d"%(LCM,val,gcm(LCM,val),lcm(LCM,val)))
         LCM = lcm(LCM, val)
     return LCM
 

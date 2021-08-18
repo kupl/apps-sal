@@ -12,12 +12,10 @@ class Solution:
         return deg
 
     def traverseMaxGoldDfs(self, i, j, grid) -> int:
-        # use dfs to get the max gold.
         degree = self.getDegree(i, j, grid)
         if degree == 0:
             return grid[i][j]
 
-        # then, check neighbours
         temp = grid[i][j]
         grid[i][j] = 0
         gold = temp
@@ -41,7 +39,6 @@ class Solution:
             for j in range(len(grid[0])):
                 degree = self.getDegree(i, j, grid)
                 if grid[i][j] > 0 and (degree <= 1 or degree > 2):
-                    # traverse using bfs from here.
                     gold = self.traverseMaxGoldDfs(i, j, grid)
                     if gold > maxGold:
                         maxGold = gold

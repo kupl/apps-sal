@@ -15,7 +15,6 @@ for i in range(n):
         cur_y = a[i] % k
         y = cur % k
         if (j, (k - y) % k) in d:
-            #print(a[i], cur, j, d[(j, (k-y)%k)])
             res += d[(j, (k - y) % k)]
             if (cur_l, cur_y) == (j, (k - y) % k):
                 res -= 1

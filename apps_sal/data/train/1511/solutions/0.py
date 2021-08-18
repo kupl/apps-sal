@@ -1,8 +1,5 @@
-# cook your dish here
-# cook your dish here
 for _ in range(int(input())):
     n, k = map(int, input().split())
-    # reading the string
     s = input()
     i, j = 0, 0
     q = 0

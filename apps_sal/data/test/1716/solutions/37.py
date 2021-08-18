@@ -7,12 +7,12 @@ def cum2D(a, H, W):
 
 
 n, m, q = list(map(int, input().split()))
-trains = [tuple(map(int, input().split())) for _ in range(m)]  # ;print(trains)
+trains = [tuple(map(int, input().split())) for _ in range(m)]
 a = [[0] * (n + 1) for j in range(n + 1)]
 for k in range(m):
     start, stop = trains[k]
     a[start][stop] += 1
-cum = cum2D(a, n, n)  # ;print2D(a, n+1) ;print() ;print2D(cum, n+1)
+cum = cum2D(a, n, n)
 
 for _ in range(q):
     p, q = list(map(int, input().split()))

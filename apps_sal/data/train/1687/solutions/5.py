@@ -4,18 +4,6 @@ def num_bits(number):
     return len(setBits)
 
 
-# def test(l):
-#     for i in range(len(l)):
-#         if num_bits(l[i%size]) == num_bits(l[i+2]):
-#             print(l[i])
-#             return "FAILED"
-#     return "PASSED"
-# print(test([0,1,3]))
-# print(test([0,1,3,7]))
-# print(test([0,1,2,3,5]))
-# print(test([0,1,2,3,5,7]))
-# print(test([1,2,3,5,4,7,0]))
-# print(test([1,2,3,5,4,7,0,6]))
 T = int(input())
 for i in range(T):
     N, K = input().split(' ')

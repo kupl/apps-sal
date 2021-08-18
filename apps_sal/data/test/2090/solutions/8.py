@@ -1,22 +1,6 @@
-#import resource
 from sys import stdin, stdout
 import sys
-#resource.setrlimit(resource.RLIMIT_STACK, [0x100000000, resource.RLIM_INFINITY])
 mod = (10**9) + 7
-# fact=[1]
-# for i in range(1,1001):
-#    fact.append((fact[-1]*i)%mod)
-# ifact=[0]*1001
-# ifact[1000]=pow(fact[1000],mod-2,mod)
-# for i in range(1000,0,-1):
-#    ifact[i-1]=(i*ifact[i])%mod
-#from bisect import bisect_left as bl
-#from bisect import bisect_right as br
-#import itertools
-#import math
-#import heapq
-#from random import randint as rn
-#from Queue import Queue as Q
 
 
 def modinv(n, p):

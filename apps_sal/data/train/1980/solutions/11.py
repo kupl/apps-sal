@@ -44,7 +44,6 @@ class Skiplist:
         print()
 
     def search(self, target: int) -> bool:
-        # self.print_lvls()
         x = self.topleft
         while True:
             while x.__next__ and x.next.val <= target:
@@ -87,8 +86,6 @@ class Skiplist:
                 prev = curr
             else:
                 break
-        # print(f\"Adding {num}\")
-        # self.print_lvls()
 
     def delete(self, x):
         p, q, r = x.prev, x, x.__next__
@@ -107,9 +104,3 @@ class Skiplist:
             else:
                 break
         return found
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

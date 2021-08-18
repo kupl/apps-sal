@@ -10,7 +10,6 @@ class Solution:
 
         k_list = list(record.keys())
         k_list.sort()
-        # print(k_list)
         n = len(k_list)
         res = 0
         for i in range(n):
@@ -33,7 +32,6 @@ class Solution:
                         else:
                             continue
 
-                        #print(k_list[i], record[k_list[i]], multi)
                 else:
                     if(residual in record.keys()):
                         if(residual == k_list[j]):
@@ -45,7 +43,5 @@ class Solution:
                             res = res % M
                     else:
                         continue
-
-                    #print(k_list[i], k_list[j], record[k_list[i]], record[k_list[j]], multi)
 
         return res

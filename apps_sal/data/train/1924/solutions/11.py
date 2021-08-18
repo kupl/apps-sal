@@ -4,7 +4,6 @@ class Solution:
         invalid_ts = set()
         for t in transactions:
             t_list = t.split(',')
-            # print(t_list)
             t_dict = {}
             t_dict['str'] = t
             t_dict['name'] = t_list[0]

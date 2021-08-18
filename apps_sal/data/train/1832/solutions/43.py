@@ -18,7 +18,6 @@ class Solution:
             self.visited[v] = v_dist
             for u, w in self.graph[v]:
 
-                # self.new_touched[(v,u)]=max(min(w,M-v_dist),self.new_touched.get((v,u),0))
                 self.new_touched[(v, u)] = max(min(w, M - v_dist), self.new_touched.get((v, u), 0))
 
                 if u not in self.visited and M >= v_dist + w + 1:

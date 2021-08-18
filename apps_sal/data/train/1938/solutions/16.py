@@ -26,5 +26,4 @@ class Solution:
                     if grid[i][j] == 0:
                         ans += xSide * (yTicksList[j + 1] - yTicksList[j])
                         grid[i][j] = 1
-        # print(grid)
         return ans % (10**9 + 7)

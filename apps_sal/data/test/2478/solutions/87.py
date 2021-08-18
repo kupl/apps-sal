@@ -12,7 +12,6 @@ for s in S:
         reserveL.append(s)
         out.append("(")
     else:
-        # print(len(reserveL))
         if len(reserveL) == 0:
             out.appendleft("(")
             out.append(")")
@@ -20,9 +19,7 @@ for s in S:
             out.append(")")
             reserveL.popleft()
 
-    # print(out)
 
-# print(out)
 while reserveL:
     out.append(")")
     reserveL.popleft()

@@ -21,7 +21,6 @@ def strs():
 
 
 def main():
-    # lines will now contain all of the input's lines in a list
     n = int(nextline())
     graph = defaultdict(list)
     for _ in range(1, n):

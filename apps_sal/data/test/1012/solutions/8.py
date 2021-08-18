@@ -1,14 +1,9 @@
-# JMD
-# Nagendra Jha-4096
 
 
 import sys
 import math
 
-#import fractions
-#import numpy
 
-###File Operatins###
 fileoperation = 0
 if(fileoperation):
     orig_stdout = sys.stdout
@@ -18,13 +13,9 @@ if(fileoperation):
     sys.stdin = inputfile
     sys.stdout = outputfile
 
-###Defines...###
 mod = 1000000007
 
-###FUF's...###
 
-
-##### Main ####
 t = int(input())
 for tt in range(t):
     s = str(input())
@@ -38,11 +29,7 @@ for tt in range(t):
             b += ss
         print(b)
 
-    #a=list(map(int,sys.stdin.readline().split(' ')))
-    #n,k,s= map(int, sys.stdin.readline().split(' '))
 
-
-#####File Operations#####
 if(fileoperation):
     sys.stdout = orig_stdout
     sys.stdin = orig_stdin

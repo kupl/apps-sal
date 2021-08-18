@@ -45,7 +45,6 @@ def solve():
     for val in bf:
         bres *= val
     if ares != a or bres != b:
-        #print(ares, bres)
         print(-1)
         return
     print(res)

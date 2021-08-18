@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 t = int(input())
 while(t > 0):
@@ -13,9 +12,7 @@ while(t > 0):
     for i in range(0, len(s) - 1):
         if(s[i] != "="):
             sum = sum + 1
-            # print("here",sum)
             if s[i] != s[i + 1]:
-                # print(sum)
                 if sum > max:
                     max = sum
                 sum = 0

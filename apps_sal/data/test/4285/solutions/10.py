@@ -1,7 +1,6 @@
 MOD = 10 ** 9 + 7
 
 n = int(input())
-# (used ?) * 3 + cur
 dp = [0] * 12
 qcnt = 0
 for c in input():
@@ -36,7 +35,6 @@ for c in input():
             new_dp[i + 4] += dp[i]
             new_dp[i] %= MOD
     dp = new_dp
-    # print(dp)
 
 ans = 0
 for i in range(4):
@@ -46,5 +44,4 @@ for i in range(4):
     tmp *= dp[2 + 3 * i]
     ans += tmp % MOD
     ans %= MOD
-# print(dp[2::3])
 print(ans)

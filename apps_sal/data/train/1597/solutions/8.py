@@ -1,4 +1,3 @@
-# cook your dish here
 def solve():
     a, m = list(map(int, input().split()))
     n = m // (a + 1)

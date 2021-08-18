@@ -1,9 +1,5 @@
-# 1 つの組を固定したとき、その他の置き方は (N*M-2)C(K-2) 通り
-# x 座標が h 離れる組み合わせは、(N-h)*M*M 通り (h!=0)
 
 def combination(n, r, mod=10**9 + 7):
-    # nCr mod m
-    # rがn/2に近いと非常に重くなる
     n1, r = n + 1, min(r, n - r)
     numer = denom = 1
     for i in range(1, r + 1):

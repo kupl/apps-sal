@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     N, K = (int(i) for i in input().strip().split())
     stair_arr = [0]

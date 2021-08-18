@@ -44,9 +44,6 @@ def main():
     prime_factors_count_map = get_frequency_map(prime_factors)
     ordered_prime_factors = list(prime_factors_count_map.keys())
 
-    # if prime factor 2 occurs three times
-    # it can be choose four way to form other factors
-    # taking three times, taking two times, taking one times and not taking 2 to form a factor
     each_prime_factor_choices = [prime_factors_count_map[prime_factor] + 1 for prime_factor in ordered_prime_factors]
 
     other_prime_factors_choices = get_product_of_others(each_prime_factor_choices)
@@ -54,8 +51,6 @@ def main():
     total_factors = 1
     for i, prime_factor in enumerate(ordered_prime_factors):
         prime_factor_count = prime_factors_count_map[prime_factor]
-        # if prime factor 2 occurs four time then possible factors by 2, 4, 8
-        # means product of the factors will be 2^(1+2+3)
         total_power_of_factor = ((prime_factor_count * (prime_factor_count + 1)) // 2)
         product_of_factor_by_prime_factor = power_mod(prime_factor, total_power_of_factor % (mod_number - 1))
         total_factors *= power_mod(product_of_factor_by_prime_factor, other_prime_factors_choices[i] % (mod_number - 1))

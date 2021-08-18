@@ -8,8 +8,5 @@ class Solution:
             while j + 1 < n and s[j] == s[j + 1]:
                 j += 1
             res += sum(cost[i:j + 1]) - max(cost[i:j + 1] or [0])
-            # print(i, j, cost[i:j+1])
             j += 1
-        # print(s,cost, res)
-        # print()
         return res

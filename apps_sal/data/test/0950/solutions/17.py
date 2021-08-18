@@ -1,12 +1,11 @@
 import math
 n, m = list(map(int, input().split()))
-# s=input().strip()
 l = []
 for i in range(n):
     l.append(input().strip())
 digit = 0
 alpha = 0
-spec = ['&', '#', '*']
+spec = ['&', '
 dis = []
 for i in range(n):
     s = l[i]
@@ -36,7 +35,6 @@ for i in range(n):
         j += 1
     dis.append([min(mindigit, m + 1 - maxdigit), min(minalpha, m + 1 - maxalpha), min(minsp, m + 1 - maxsp)])
 mindis = 1000
-# print(dis)
 for i in range(n):
     for j in range(n):
         for k in range(n):

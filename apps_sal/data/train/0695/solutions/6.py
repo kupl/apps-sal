@@ -15,13 +15,9 @@ for testcase in range(testcases):
     maxlen = max(nx, ny)
     binaryx = (maxlen - nx) * "0" + binaryx
     binaryy = (maxlen - ny) * "0" + binaryy
-    # print(binaryx)
-    # print(binaryy)
     binaryn = "{0:b}".format(n)
     index = 0
     flag = 0
-    # print(binaryx)
-    # print(binaryy)
     for i in range(maxlen):
         if binaryx[i] == binaryy[i]:
             continue
@@ -39,8 +35,6 @@ for testcase in range(testcases):
             arr.append("0")
     newstrs = "".join(arr)
     compareresult = int(newstrs, 2)
-    # print("index " + str(index))
-    # print("compareresult " + str(compareresult))
     ans = 0
     for i in range(n + 1):
         if flag == 1 and (i & compareresult):

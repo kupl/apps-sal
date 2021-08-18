@@ -39,5 +39,4 @@ def __starting_point():
     print(e)
 
 
-# Made By Mostafa_Khaled
 __starting_point()

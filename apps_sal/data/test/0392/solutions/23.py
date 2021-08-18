@@ -8,7 +8,6 @@ check = (0**n) % n
 ans = 1
 while Flag == False:
       k += 1
-      #print((k**n)%n)
       if ((k**n)%n == check):
           print(ans)
           break

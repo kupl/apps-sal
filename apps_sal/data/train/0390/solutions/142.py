@@ -1,5 +1,4 @@
 class Solution:
-    # dp(i): remain i piles
     def winnerSquareGame(self, n: int) -> bool:
         if n == 0:
             return False

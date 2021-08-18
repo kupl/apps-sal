@@ -7,7 +7,6 @@ class Solution:
         profit = 0
         for i in customers:
             curr += i
-            # print(curr)
             if curr >= 4:
                 profit += boardingCost * 4 - runningCost
                 rounds += 1
@@ -25,12 +24,10 @@ class Solution:
                 rounds += 1
                 curr -= 4
             else:
-                # print('here')
                 rounds += 1
                 profit += boardingCost * curr - runningCost
                 curr = 0
             if profit > maximum:
                 ans = rounds
                 maximum = profit
-            # print(curr,profit)
         return ans

@@ -22,7 +22,6 @@ class Solution:
     def numTeams(self, rating: List[int]) -> int:
         idx = 0
         res = 0
-        # print(self.solve_inc(rating, 1, 1, rating[0]))
         for i in range(len(rating)):
             res += self.solve_inc(rating, 1, i + 1, rating[i])
             res += self.solve_dec(rating, 1, i + 1, rating[i])

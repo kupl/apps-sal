@@ -15,7 +15,6 @@ for a in reversed(A):
 
 history.reverse()
 
-# print(history)
 
 ans = [history[0]]
 for i, a in enumerate(A):
@@ -23,6 +22,3 @@ for i, a in enumerate(A):
         ans.append(history[i])
 
 print((''.join(ans)))
-# minlen = min(map(len, answers))
-# ans = min(filter(lambda ans: len(ans) == minlen, answers))
-# print(ans)

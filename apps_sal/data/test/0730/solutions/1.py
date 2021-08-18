@@ -3,10 +3,10 @@ import sys
 
 
 slika = """+------------------------+
-|#.#.#.#.#.#.#.#.#.#.#.|D|)
-|#.#.#.#.#.#.#.#.#.#.#.|.|
-|#.......................|
-|#.#.#.#.#.#.#.#.#.#.#.|.|)
+|
+|
+|
+|
 +------------------------+"""
 
 
@@ -20,9 +20,9 @@ def __starting_point():
         for l in range(len(lines)):
             if st == 0:
                 break
-            if lines[l][k] == '#':
-                lines[l][k] = 'O'
-                st -= 1
+            if lines[l][k] == '
+            lines[l][k] = 'O'
+            st -= 1
 
     for line in lines:
         print(''.join(line))

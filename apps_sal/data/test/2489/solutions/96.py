@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sat Sep 12 00:21:05 2020
 
@@ -22,19 +21,14 @@ def Solve():
     k = 0
     for i in range(1, 10**6 + 1):
         if i == A[k]:
-            # print("A",i)
-            # kの処理
             tmp = A[k]
             cnt = 0
             while k <= N - 1 and A[k] == tmp:
-                # print("B",k,tmp)
                 cnt += 1
                 if cnt == 2:
                     dp[tmp] = False
                 k += 1
-            # 倍数の消去
             for j in range(2 * i, 10**6 + 1, i):
-                # print("C")
                 dp[j] = False
     ans = 0
     for a in A[:-1]:

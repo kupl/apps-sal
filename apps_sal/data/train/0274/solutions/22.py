@@ -11,9 +11,7 @@ class Solution:
         best = 0
 
         while i <= j < n:
-            # print(\"i\", i, \"j\", j, \"max:\", -maxes[0][0], \"at idx\", maxes[0][1], \"min:\", mins[0][0], \"at idx\", mins[0][1])
 
-            # advance j until difference exceeds limit
             if abs(-maxes[0][0] - mins[0][0]) <= limit:
                 best = max(best, j - i + 1)
                 j += 1
@@ -24,7 +22,6 @@ class Solution:
             else:
                 i += 1
 
-                # lazily remove all values outside of the window
                 while not i <= maxes[0][1] <= j:
                     heapq.heappop(maxes)
                 while not i <= mins[0][1] <= j:

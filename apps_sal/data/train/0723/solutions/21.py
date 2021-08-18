@@ -1,4 +1,3 @@
-# your code goes here
 def myKey(l):
     return -l[1]
 

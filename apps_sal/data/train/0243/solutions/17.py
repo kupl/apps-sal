@@ -10,7 +10,6 @@ class Solution:
 
         for i in range(len(fronts)):
             if fronts[i] not in a:
-                # continue
                 l.append(fronts[i])
 
             if backs[i] not in a:

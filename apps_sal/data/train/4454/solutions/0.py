@@ -1,7 +1,7 @@
 BUTTONS = ['1', 'abc2', 'def3',
            'ghi4', 'jkl5', 'mno6',
            'pqrs7', 'tuv8', 'wxyz9',
-           '*', ' 0', '#']
+           '*', ' 0', '
 
 
 def presses(phrase):

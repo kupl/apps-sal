@@ -1,4 +1,3 @@
-# coding: utf-8
 
 num = int(input())
 str1 = input().split()

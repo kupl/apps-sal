@@ -1,4 +1,3 @@
-# cook your dish here
 x = input()
 lst = x.split()
 n = int(lst[0])

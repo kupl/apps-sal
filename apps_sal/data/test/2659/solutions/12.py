@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 参考：https://nuekodory.github.io/2018/06/24/AtCoder-ABC101-ARC-099-%E3%82%92-Python3-%E3%81%A7%E8%A7%A3%E3%81%8F/
@@ -23,9 +22,7 @@ def make_snk(num):
 snk_list = []
 mn = float('inf')
 suff = '999999999999'
-# 後ろに付ける9の数を減らして、10^15-1から10099までを作る
 for i in range(11):
-    # 999～100までループ
     for j in range(999, 99, -1):
         j = int(str(j) + suff)
         num = make_snk(j)
@@ -33,7 +30,6 @@ for i in range(11):
             snk_list.append(j)
             mn = num
     suff = suff[:-1]
-# 9999以下は普通に全部やる(大した大きさじゃないので)
 for i in range(9999, 0, -1):
     num = make_snk(i)
     if num <= mn:

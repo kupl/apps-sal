@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 wd = "SUN MON TUE WED THU FRI SAT".split()
 wd = list(reversed(wd))

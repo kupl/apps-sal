@@ -9,8 +9,8 @@ A.sort()
 B.sort()
 B = B[::-1]
 
-right = max(A * B)  # 時間の可能集合の端点
-left = -1  # 時間の不可能集合の端点
+right = max(A * B)
+left = -1
 
 
 def test(t):

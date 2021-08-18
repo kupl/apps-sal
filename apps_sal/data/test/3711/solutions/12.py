@@ -1,4 +1,3 @@
-# Python is the best
 
 def Calc(n, m, k):
     if n + m - 2 < k:

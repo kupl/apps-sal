@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     x = []
     n = int(input())

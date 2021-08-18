@@ -7,7 +7,6 @@ for i in si:
 dic = {0: 'R', 1: 'G', 2: 'B'}
 dic2 = {'R': 0, 'G': 1, 'B': 2}
 c = 0
-# print(s)
 for i in range(1, len(s)):
     if i == (len(s) - 1):
         if s[i] == s[i - 1]:

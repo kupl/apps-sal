@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n = int(input())
 p = [int(x) for x in input().split()]

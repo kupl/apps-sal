@@ -5,7 +5,6 @@ n, m = map(int, input().split())
 ans = [0] * n
 ary = []
 dp = [[0] * n for i in range(n)]
-# print(dp)
 tmp = 0
 
 while tmp < m:
@@ -14,13 +13,8 @@ while tmp < m:
     d -= 1
     ans[d] = m + 1
     ary.append((s, d, c + 1, tmp))
-    # print('sdc', s,d,c)
     dp[s][d] = c
-    # print('dp', dp[s][d])
     tmp += 1
-
-
-# print(dp)
 
 
 d = 2
@@ -30,7 +24,6 @@ while d < n:
         r = l + d
 
         dp[l][r] += dp[l + 1][r] + dp[l][r - 1] - dp[l + 1][r - 1]
-        # print('lr', l, r ,dp[l][r], dp[l + 1][r], dp[l][r - 1], dp[l + 1][r - 1])
         if dp[l][r] > d:
             print(-1)
             quit(0)
@@ -40,7 +33,6 @@ while d < n:
 l = 0
 pos = 0
 sary = sorted(ary)
-# print(sary)
 que = []
 
 while l < n:
@@ -51,11 +43,9 @@ while l < n:
         l += 1
         continue
     if que.__len__() == 0:
-        # ans[l] = 0
         l += 1
         continue
     head = heapq.heappop(que)
-    # print('head',l, head)
     if head[1] + l - 1 > head[0]:
         print(-1)
         quit(0)

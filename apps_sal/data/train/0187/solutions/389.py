@@ -3,7 +3,6 @@ class Solution:
         if 4 * boardingCost < runningCost:
             return -1
 
-        #
         rotate = 0
         max_profit = float('-inf')
         max_profit_for = rotate

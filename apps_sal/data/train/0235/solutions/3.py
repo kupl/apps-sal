@@ -5,7 +5,6 @@ class Solution:
             if i < 2:
                 ans[i] = 0
             else:
-                # add number of slices for i - 1
                 ans[i] = ans[i - 1]
                 temp = A[:i + 1][::-1]
                 for j in range(0, i - 1):

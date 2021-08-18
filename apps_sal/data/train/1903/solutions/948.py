@@ -7,7 +7,6 @@ class Solution:
                 d = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 c[d].append((i, j))
         tocons = list(sorted(c.keys()))
-        # print(tocons)
 
         def isCyclicUtil(v, visited, parent, graph):
             visited[v] = True
@@ -56,7 +55,6 @@ class Solution:
         connected = set()
         for x in tocons:
             for y in c[x]:
-                # print(y,x,connected,count)
 
                 if checkloop(y, connected, edges):
                     count += 1

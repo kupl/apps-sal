@@ -1,5 +1,4 @@
 def dad_filter(string):
-    # your code here
     new_list = string.split()
     for i in range(len(new_list)):
         while new_list[i].count(',') > 1:

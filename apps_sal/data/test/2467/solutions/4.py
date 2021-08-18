@@ -18,7 +18,7 @@ class Solution:
                 else:
                     return
 
-        else:   # target == 0 and k != 0     OR     target != 0 and k == 0
+        else:
             return
 
     def combinationSum3(self, k, n):

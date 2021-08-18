@@ -17,7 +17,6 @@ for i in range(n):
             tot += 1
         else:
             cnt += 1
-    #cnt -= 1
     sum += (cnt - 1) * cnt // 2
     k = sorted(k[:tot]) + k[tot:]
     cnt = 1

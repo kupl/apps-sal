@@ -11,8 +11,6 @@ L = [v for k, v in list(d.items())]
 for i in range(0, 5):
     for j in range(i + 1, 5):
         for k in range(j + 1, 5):
-            # print(i,j,k)
             tot += L[i] * L[k] * L[j]
 
-# print(d)
 print(tot)

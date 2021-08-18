@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 
 MAX_NUM = 2000000
 

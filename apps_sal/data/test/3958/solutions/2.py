@@ -16,7 +16,6 @@ for i in range(0, len(s)):
             break
         else:
             ans[one].append(i + 1)
-    # print(ans)
 if p == False or one != -1:
     print("-1")
 else:

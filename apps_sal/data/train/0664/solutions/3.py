@@ -1,4 +1,3 @@
-# cook your dish here
 
 def precompute():
     cp = [[0 for i in range(101)] for i in range(101)]
@@ -27,7 +26,6 @@ t = int(input())
 while t:
     p, q, r = list(map(int, input().split()))
     cp, fp = precompute()
-    #lim = min(q,r)
     mod = 998244353
     ans = 0
     for i in range(r + 1):

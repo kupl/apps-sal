@@ -5,11 +5,11 @@ from heapq import *
 def dijkstra(g, start):
     n = len(g)
     INF = 1 << 61
-    dist = [INF] * (n)  # startからの最短距離
+    dist = [INF] * (n)
     num = [0] * n
     dist[start] = 0
     num[start] = 1
-    q = [(0, start)]  # (そこまでの距離、点)
+    q = [(0, start)]
     while q:
         dv, v = heappop(q)
         if dist[v] < dv:
@@ -25,8 +25,6 @@ def dijkstra(g, start):
     return dist, num
 
 
-# coding: utf-8
-# Your code here!
 readline = sys.stdin.readline
 read = sys.stdin.read
 
@@ -47,18 +45,14 @@ MOD = 10**9 + 7
 dist, num = dijkstra(g, s)
 dt, nt = dijkstra(g, t)
 
-# print(dist,dt)
-# print(num,nt)
 
 ans = num[t]**2
-# print(ans,"original")
 
 D = dist[t]
 for i in range(n):
     if dist[i] * 2 == D and dist[i] + dt[i] == dist[t]:
         ans -= ((num[i] * nt[i] % MOD)**2) % MOD
 
-# print(ans,"remove-pt")
 
 for a, b, c in edges:
     da = dist[a]

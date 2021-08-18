@@ -29,7 +29,6 @@ for i in range(n):
         dis = now - i + 1
         temp = bi.bisect(pr, dis)
         temp = pr[temp - 1]
-        # print(l[i],i+1,temp)
         f[l[now]], f[l[now - temp + 1]] = f[l[now - temp + 1]], f[l[now]]
         l[now - temp + 1], l[now] = l[now], l[now - temp + 1]
         an.append([now + 1, now - temp + 2])

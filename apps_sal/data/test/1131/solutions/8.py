@@ -38,6 +38,3 @@ def solve(a, b, w, x, c):
 
 
 print(int(solve(a, b, w, x, c)))
-
-
-# Made By Mostafa_Khaled

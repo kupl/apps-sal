@@ -1,4 +1,3 @@
-# https://www.codechef.com/problems/SMPAIR
 
 T = int(input())
 

@@ -24,5 +24,4 @@ for i in range(n):
     x, y, z = map_input()
     if incrust(d, r, sqrt(x**2 + y**2) + z) and incrust(d, r, sqrt(x**2 + y**2) - z):
         ans += 1
-        # print(i)
 print(ans)

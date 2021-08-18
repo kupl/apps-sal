@@ -9,33 +9,24 @@ def SolveDegreeSet(DegreSet, n):
         return edges, verticesCount
     if(n == 1):
         verticesCount = DegreSet[0] + 1
-        # print(verticesCount)
         for i in range(1, verticesCount + 1):
             for j in range(i + 1, verticesCount + 1):
                 edges.append([i, j])
-        # print(edges)
         return edges, verticesCount
 
     newDegreeSet = []
     for i in range(1, n - 1):
         newDegreeSet.append(DegreSet[i] - DegreSet[0])
-    # print(newDegreeSet)
     prevSolveDegreeSet = SolveDegreeSet(newDegreeSet, n - 2)
 
     verticesCount = prevSolveDegreeSet[1]
     edges = prevSolveDegreeSet[0]
-    # print(edges)
-
-    # print(verticesCount)
 
     verticesCount += (DegreSet[n - 1] - DegreSet[n - 2])
-    # print(verticesCount)
     for i in range(0, DegreSet[0]):
         verticesCount += 1
         for j in range(1, verticesCount):
             edges.append([j, verticesCount])
-    #print (edges)
-    # print(verticesCount)
     return edges, verticesCount
 
 
@@ -44,6 +35,5 @@ d = readline()
 
 par = list(SolveDegreeSet(d, n))
 edges = par[0]
-#print( edges)
 print(len(edges))
 print("\n".join(map("{0[0]} {0[1]}".format, edges)))

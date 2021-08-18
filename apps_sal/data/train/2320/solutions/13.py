@@ -10,6 +10,3 @@ c = list(zip((t[1] for t in b), a))
 c.sort()
 
 print(*(t[1] for t in c))
-
-
-# Made By Mostafa_Khaled

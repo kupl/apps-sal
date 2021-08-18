@@ -44,7 +44,6 @@ elif p != 1 and p != 0:
     for i in range(t - n):
         b = b + CC(i + 1, n + i)
     b = b * pow(p, n)
-    #print(a + b)
 else:
     if p == 1:
         print(n)

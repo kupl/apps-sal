@@ -19,8 +19,6 @@ for i in range(len(adj[s])):
     if adj[s][i] not in mp:
         mp[adj[s][i]] = 1
 i = 0
-# for l in mp:
-# 	print (l)
 while(i < len(stk)):
     k = stk[i][1]
     for j in range(len(adj[k])):

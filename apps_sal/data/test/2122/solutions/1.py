@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/802/B
 import heapq
 
 n, k = map(int, input().split())

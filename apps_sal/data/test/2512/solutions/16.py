@@ -19,7 +19,7 @@ def main(G, R, C):
             for k in range(4):
                 if dp[r][c][k] == -1:
                     continue
-                if k < 3:  # can go right and pick up
+                if k < 3:
                     if dp[r][c + 1][k + 1] < dp[r][c][k] + G[r][c + 1]:
                         dp[r][c + 1][k + 1] = dp[r][c][k] + G[r][c + 1]
                 if dp[r][c + 1][k] < dp[r][c][k]:

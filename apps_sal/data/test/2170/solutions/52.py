@@ -21,10 +21,7 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
 alf = list("abcdefghijklmnopqrstuvwxyz")
 ALF = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-#import numpy as np
 INF = float("inf")
-#d = defaultdict(int)
-#d = defaultdict(list)
 N, M = list(map(int, input().split()))
 fac = [1, 1]
 inv = [0, 1]
@@ -36,18 +33,18 @@ for i in range(2, M + 2):
     finv.append(finv[-1] * inv[-1] % MOD)
 
 
-def comb_mod(n, r, m):  # nCr mod m
+def comb_mod(n, r, m):
     if (n < 0 or r < 0 or n < r):
         return 0
     r = min(r, n - r)
     return fac[n] * finv[n - r] * finv[r] % m
 
 
-def chofuku(n, r):  # nHr mod MOD の計算
+def chofuku(n, r):
     return comb_mod(n + r - 1, r)
 
 
-def nPr(n, r, m):  # nPr mod MOD の計算
+def nPr(n, r, m):
     return fac[n] * finv[n - r] % m
 
 

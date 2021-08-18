@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 
 
@@ -13,7 +12,6 @@ N, M = sys.stdin.readline().strip().split(" ")[:2]
 N, M = int(N), int(M)
 if(N in (0, 1)):
     print(0)
-# elif(N==1): print(2%M)
 else:
     res = 2**N - 2
     f_ = get_factor(N)

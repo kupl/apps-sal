@@ -10,7 +10,6 @@ else:
     for i in range(N):
         l_ = abs(X - x[i])
         l.append(l_)
-    # print(l)
     ans = l[0]
     for i in range(1, len(l)):
         ans = gcd(ans, l[i])

@@ -24,7 +24,6 @@ class Solution:
                 if i != j:
                     dists[i][j] = dists[j][i] = abs(p[i][0] - p[j][0]) + abs(p[i][1] - p[j][1])
 
-        # pprint(dists)
         mst = [False] * n
         val = [math.inf] * n
         val[0] = 0
@@ -36,7 +35,5 @@ class Solution:
                     val[v] = dists[u][v]
                     parent[v] = u
         for i in range(1, n):
-            # print(dist[parent[i]])
-            # print(dist)
             res += dists[parent[i]][i]
         return res

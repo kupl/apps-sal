@@ -21,27 +21,22 @@ for i in range(n - 3):
     for j in range(64):
         v = dic_r[j]
         for s in "ACGT":
-            # AG*C
             if v[0] == "A" and v[1] == "G":
                 if s != "C":
                     new = v[1] + v[2] + s
                     dp[i + 1][dic[new]] += dp[i][dic[v]]
-            # A*GC
             elif v[0] == "A" and v[2] == "G":
                 if s != "C":
                     new = v[1] + v[2] + s
                     dp[i + 1][dic[new]] += dp[i][dic[v]]
-            # *GAC
             elif v[1] == "G" and v[2] == "A":
                 if s != "C":
                     new = v[1] + v[2] + s
                     dp[i + 1][dic[new]] += dp[i][dic[v]]
-            # *ACG
             elif v[1] == "A" and v[2] == "C":
                 if s != "G":
                     new = v[1] + v[2] + s
                     dp[i + 1][dic[new]] += dp[i][dic[v]]
-            # *AGC
             elif v[1] == "A" and v[2] == "G":
                 if s != "C":
                     new = v[1] + v[2] + s

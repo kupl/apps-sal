@@ -21,8 +21,6 @@ for i in range(len(adj[s])):
         mp[adj[s][i]] = 1
 i = 0
 vis[s] = 1
-# for l in mp:
-# 	print (l)
 
 while(i < len(stk)):
     k = stk[i][1]

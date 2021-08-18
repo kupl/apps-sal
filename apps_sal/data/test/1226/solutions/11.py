@@ -6,9 +6,8 @@ def c(k):
     v = 1
     w = 1
     for i in range(k):
-        v = v * (n - i) % m  # n*(n-1)*...*(n-k+1) 分子
-        w = w * (i + 1) % m  # 1*2*...*k 分母
-    # pow(w,m-2,m)はmod mの世界でのwの逆元
+        v = v * (n - i) % m
+        w = w * (i + 1) % m
     return (v * pow(w, m - 2, m) % m)
 
 

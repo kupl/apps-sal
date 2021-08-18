@@ -18,6 +18,4 @@ for i in range(1, n + 1):
         cur = dic[cur]
         dic_[cur] += 1
         tmp = dic_[cur]
-    #     print(cur, tmp, sep=' ')
-    # print()
     print(cur, end=' ')

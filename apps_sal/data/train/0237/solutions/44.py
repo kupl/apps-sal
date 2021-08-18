@@ -7,5 +7,4 @@ class Solution:
             cumsum += num
             dic[cumsum] = dic.get(cumsum, []) + [i]
             ans += len(dic.get(cumsum - S, []))
-            # print(ans,dic)
         return ans - (0 if S else len(A))

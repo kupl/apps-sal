@@ -8,7 +8,6 @@ for i in range(n - 1):
 mp = {}
 
 ans = []
-# print(arr)
 for i in range(n - 1):
     a = arr[i][0]
     b = arr[i][1]

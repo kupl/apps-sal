@@ -2,8 +2,6 @@ import math
 
 
 def circum_curvat(pointA, pointB, pointC):
-    # if len({pointA, pointB, pointC})<3:
-    #    return (0,0,0)
     D = 2 * (pointA[0] * (pointB[1] - pointC[1]) + pointB[0] * (pointC[1] - pointA[1]) + pointC[0] * (pointA[1] - pointB[1]))
     if abs(D) < 1e-10:
         return (0, 0, 0)

@@ -12,10 +12,8 @@ class Point:
 
 
 def create_graph(N, points):
-    # Caclulate costs
     costs = defaultdict(int)
     costs_defined = defaultdict(int)
-    # Sort by `x` and create edges between adjacent nodes
     points = sorted(points, key=lambda p: p.x)
     for i in range(N - 1):
         p = points[i]
@@ -24,7 +22,6 @@ def create_graph(N, points):
         min_index, max_index = min([p.index, next_p.index]), max([p.index, next_p.index])
         costs[(min_index, max_index)] = cost
         costs_defined[(min_index, max_index)] = 1
-    # Sort by `y` and create edges between adjacent nodes
     points = sorted(points, key=lambda p: p.y)
     for i in range(N - 1):
         p = points[i]
@@ -37,7 +34,6 @@ def create_graph(N, points):
             costs[(min_index, max_index)] = new_cost
         else:
             costs[(min_index, max_index)] = cost
-    # Create csgraph
     rows = list()
     cols = list()
     data = list()

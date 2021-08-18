@@ -33,15 +33,9 @@ class Trie:
 
 class StreamChecker:
     def __init__(self, words: List[str]):
-        # Time: O(WQ), W is the maximum length of all words, Q is number of calls of function query
         self.t = Trie(words)
         self.cache = list()
 
     def query(self, letter: str) -> bool:
         self.cache.append(letter)
         return self.t.search(self.cache)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

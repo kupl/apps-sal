@@ -5,7 +5,6 @@ class Solution:
         d1 = {}
         d2 = {}
 
-        # comparing nums1^2 with nums2 product
         for i in nums1:
             if i**2 not in d1:
                 d1[i**2] = 1
@@ -18,7 +17,6 @@ class Solution:
                 if prod in d1:
                     count += d1[prod]
 
-        # comparing nums2^2 with nums1 product
         for i in nums2:
             if i**2 not in d2:
                 d2[i**2] = 1

@@ -24,7 +24,6 @@ class TweetCounts:
                 qkeys.append(tk)
             qcnts[tk] += tc
 
-        #qkeys = list(qcnts.keys())
         n = (self.et - self.st + 1) // scale
         if (self.et - self.st + 1) % scale:
             n += 1
@@ -53,9 +52,3 @@ class TweetCounts:
             return self.quantize(per_second_tweet_counter, valid_times, D)
 
         return [0]
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

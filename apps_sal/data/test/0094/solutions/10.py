@@ -14,10 +14,8 @@ while len(s) > 0:
             if(k == len(s)):
                 k = len(s) - 1
             break
-#    print(k)
     prr.append(int(s[k:]))
     s = s[:k]
-# print(prr)
 sum = 0
 for i in range(len(prr) - 1, -1, -1):
     sum *= n

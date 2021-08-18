@@ -9,8 +9,8 @@ for _ in range(H):
     s = input()
     M.append(s)
     for c in s:
-        if c == '#':
-            black += 1
+        if c == '
+        black += 1
 q = deque()
 q.append((0, 0))
 cost = -1

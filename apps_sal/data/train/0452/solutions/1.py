@@ -15,7 +15,6 @@ class Solution:
                 dp2[j] = dp[j - 1] + jobDifficulty[j]
                 while stack and jobDifficulty[stack[-1]] <= jobDifficulty[j]:
                     dp2[j] = min(dp2[j], dp2[stack[-1]] - jobDifficulty[stack[-1]] + jobDifficulty[j])
-                    # dp2[j] = min(dp2[j], dp[stack[-1]]+jobDifficulty[j])
                     stack.pop()
 
                 if stack:
@@ -23,5 +22,4 @@ class Solution:
 
                 stack.append(j)
             dp = dp2
-            # print(dp)
         return dp[-1]

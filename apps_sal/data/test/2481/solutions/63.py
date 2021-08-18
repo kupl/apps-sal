@@ -3,7 +3,6 @@ c = [list(map(int, input().split())) for _ in range(10)]
 A = [list(map(int, input().split())) for _ in range(H)]
 
 
-# Warshall–Floyd
 def main():
     for k in range(10):
         for i in range(10):

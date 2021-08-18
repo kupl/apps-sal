@@ -10,8 +10,6 @@ def solve(a):
     max2 = 0
     id_max1 = -1
 
-    # max1 > max2
-
     for i in range(len(a)):
         if a[i] < max2:
             pass

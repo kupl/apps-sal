@@ -4,4 +4,3 @@ def bonus_time(salary, bonus):
     elif bonus == False:
         result = "$" + str(salary)
     return result
-    # your code here

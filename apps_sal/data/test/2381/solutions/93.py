@@ -1,8 +1,6 @@
-# E_Multiplication4
 N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))
 MOD = 1000000007
-# ソート
 arr = []
 j = 0
 i = 0

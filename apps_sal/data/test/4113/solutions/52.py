@@ -1,9 +1,7 @@
 N = int(input())
 
 cake = 4
-# cake max 25
 donatu = 7
-# donatu max 14
 
 jage = "No"
 for d in range(15):

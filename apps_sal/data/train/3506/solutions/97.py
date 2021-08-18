@@ -4,4 +4,3 @@ def vowel_indices(word):
         if c in 'aeiouyAEIOUY':
             r.append(i + 1)
     return r
-    # Flez

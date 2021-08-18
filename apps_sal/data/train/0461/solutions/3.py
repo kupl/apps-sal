@@ -20,15 +20,3 @@ class Solution:
                 todo.append(r)
                 accum[r] += informTime[r] + accum[manager[r]]
         return max(accum)
-
-
-#         talktime = {}
-#         mxx = -1
-#         for i,m in enumerate(manager):
-#             mxx = max(mxx, self.calc(i, manager, informTime))
-#         return mxx
-
-#     def calc(self,e, manager, informTime):
-#         if e == -1:
-#             return 0
-#         return informTime[e] + self.calc(manager[e], manager, informTime)

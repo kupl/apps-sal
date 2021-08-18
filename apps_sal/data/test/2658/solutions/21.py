@@ -8,7 +8,6 @@ while not dist[idx] and d < k + 1:
     dist[idx] = d
     idx = a[idx - 1]
     d += 1
-    # print(dist)
 if d == k + 1:
     print(idx)
 else:

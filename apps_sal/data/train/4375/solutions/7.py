@@ -1,24 +1,23 @@
-def get_planet_name(id):  # yea just do most things siplistic, I could think of elegant wasy to do this but ill never reuse it so
-    # I do love case switch methods I am going to have to find the python eqiv
+def get_planet_name(id):
     name = ""
 
     if id == 1:
-        name = 'Mercury'  # the fire ball
+        name = 'Mercury'
     if id == 2:
-        name = 'Venus'    # She is still hot
+        name = 'Venus'
     if id == 3:
-        name = 'Earth'    # the sea of stupidity
+        name = 'Earth'
     if id == 4:
-        name = 'Mars'     # why is it full of iron oxide if it supposidly never had oxygen
+        name = 'Mars'
     if id == 5:
-        name = 'Jupiter'  # no one is stupiter
+        name = 'Jupiter'
     if id == 6:
-        name = 'Saturn'   # where did all thise rings come from
+        name = 'Saturn'
     if id == 7:
-        name = 'Uranus'   # Not mine
+        name = 'Uranus'
     if id == 8:
-        name = 'Neptune'  # It's to cold for fish
+        name = 'Neptune'
     if id == 9:
-        name = 'Pluto'    # becuse it has a core a dwarf planet is a planet dwarf people are people arent they
+        name = 'Pluto'
 
-    return name  # only because you asked nice
+    return name

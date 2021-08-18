@@ -1,4 +1,3 @@
-# generate the array
 m = 10**9 + 7
 a = [0] * (10**5 + 10)
 a[0] = 1

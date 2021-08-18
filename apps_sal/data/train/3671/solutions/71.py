@@ -4,4 +4,4 @@ def problem(a):
     try:
         return int(float(a) * 50 + 6)
     except ValueError:
-        return "Error"  # Easy Points ^_^
+        return "Error"

@@ -8,7 +8,6 @@ class Solution:
 
         @lru_cache(None)
         def inner(curr, lf):
-            #print(curr, lf)
             if curr == finish and lf == 0:
                 return 1
             if lf <= 0:

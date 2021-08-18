@@ -21,7 +21,6 @@ def solve():
             j += 1
             cpos = nextcard[cpos][card]
 
-    # Find dp solution for range (val, val+1)
     def getLen(val):
         dp = [[-1 for i in range(1 << 8)] for j in range(n + 1)]
         dp[0][0] = 0
@@ -51,8 +50,6 @@ def solve():
     result = 0
     for c in appear:
         result += int(c)
-
-    # Finally binary search to find the result
 
     cur = 0
     for lev in range(9, -1, -1):

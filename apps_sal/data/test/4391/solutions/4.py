@@ -1,6 +1,3 @@
-#import math
-#import itertools
-#from collections import defaultdict, Counter, deque
 
 def max_average(nums, k):
     def get_delta(avg, nums, k):

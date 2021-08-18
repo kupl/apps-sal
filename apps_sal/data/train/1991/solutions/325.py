@@ -8,13 +8,11 @@ class Solution:
         def dp(pos, fuel):
             res = 0
             if pos == finish:
-                #print(pos, fuel, 1)
                 res = 1
             for k in range(n):
                 dist = abs(a[pos] - a[k])
                 if dist > 0 and dist <= fuel:
                     res = (res + dp(k, fuel - dist)) % MOD
-            #print(pos, fuel, res)
             return res
 
         return dp(start, fuel)

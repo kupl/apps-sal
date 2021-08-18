@@ -17,7 +17,7 @@ else:
         if init_term in bad_list:
             print("0")
         else:
-            print("inf")  # minimum abs_max can be is 1.
+            print("inf")
     else:
         if ratio == 1:
             if (curr_val * ratio in bad_list):

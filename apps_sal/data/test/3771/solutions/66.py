@@ -18,7 +18,7 @@ for i in range(h):
     if "T" in c:
         goal = (i, c.index("T"))
     for j in range(w):
-        if c[j] in ("o"):  # , "S", "T"):
+        if c[j] in ("o"):
             data.append(1)
             rs.append(i)
             cs.append(h + j)
@@ -31,27 +31,15 @@ V = 10**9
 data.append(V)
 rs.append(s)
 cs.append(start[0])
-# data.append(V)
-# rs.append(start[0])
-# cs.append(s)
 
 data.append(V)
 rs.append(s)
 cs.append(start[1] + h)
-# data.append(V)
-# rs.append(start[1]+h)
-# cs.append(s)
 
 data.append(V)
 rs.append(goal[0])
 cs.append(t)
-# data.append(V)
-# rs.append(t)
-# cs.append(goal[0])
 
-# data.append(V)
-# rs.append(t)
-# cs.append(goal[1]+h)
 data.append(V)
 rs.append(goal[1] + h)
 cs.append(t)

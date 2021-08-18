@@ -1,22 +1,3 @@
-##row, col, order = input().split(' ')
-##row = int(row)
-##col = int(col)
-##
-##init_list = []
-##
-# for i in range(row):
-##    init_list.append(input().split(' '))
-##
-# if order=='0':
-# for i in range(row):
-# print()
-# for j in range(col,0,-1):
-##            print(init_list[i][j-1], end = ' ')
-# else:
-# for i in range(row,0,-1):
-# print()
-# for j in range(col):
-##            print(init_list[i-1][j], end = ' ')
 
 def judge(_list: list) -> int:
     number = -1

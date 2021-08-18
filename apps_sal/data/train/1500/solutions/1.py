@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     b = 0
     mx = 0

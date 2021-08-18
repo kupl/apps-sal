@@ -6,7 +6,6 @@ class Solution:
         :rtype: bool
         """
 
-        # sol1: topo sort
         N = numCourses
         indegree = [0] * N
         O = [set() for _ in range(N)]
@@ -24,5 +23,3 @@ class Solution:
                 if indegree[j] == 0:
                     stack.append(j)
         return done == N
-
-        # sol2: UF

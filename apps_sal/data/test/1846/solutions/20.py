@@ -1,6 +1,5 @@
 f = open("input.txt", "r")
 fContent = f.readlines()
-# print(fContent)
 f.close()
 n = int(fContent[0])
 temperatures = list(map(int, fContent[1].split()))

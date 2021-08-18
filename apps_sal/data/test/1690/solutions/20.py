@@ -3,12 +3,6 @@
 def input():
 	return stdin.readline()[:-1]'''
 
-# a, b = map(int, input().split())
-
-# l = list(map(int, input().split()))
-
-
-# CODE BEGINS HERE.................
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -24,4 +18,3 @@ for i in range(1, n):
         ans += a[i]
 
 print(ans)
-# CODE ENDS HERE....................

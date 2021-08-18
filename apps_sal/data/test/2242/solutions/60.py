@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
 
 S = input().strip()
-# -----
 num = 0
-cnt_mod = {0: 1}  # type {int: int} , contents {remainder : count}
+cnt_mod = {0: 1}
 mod = 2019
 base_pow = 1
 
@@ -22,8 +20,6 @@ for i in range(len(S)):
 ans = 0
 
 for r, c in list(cnt_mod.items()):
-    # r: remainder
-    # c: count
     if c >= 2:
         ans += c * (c - 1) // 2
 

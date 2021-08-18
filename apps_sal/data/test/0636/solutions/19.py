@@ -8,8 +8,6 @@ def main():
     arr1 = [(x, i + 1) for (i, x) in enumerate(instr_list)]
 
     arr2 = sorted(arr1)
-    # print("arr2 = ")
-    # print(arr2)
 
     summ = 0
     res = []

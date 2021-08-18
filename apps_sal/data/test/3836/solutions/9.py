@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import collections
 import sys
@@ -28,7 +27,6 @@ class Input(object):
 def get_max_influence(influence):
     for i in range(4):
         influence[i].sort(reverse=True)
-        #print('influence[{}] = {}'.format(i, influence[i]))
     t = [0] * 4
     result = 0
     while t[1] < len(influence[1]) and t[2] < len(influence[2]):
@@ -64,11 +62,9 @@ def main():
             for _ in range(n):
                 support, value = input.next_line_strs()
                 influence[int(support, 2)].append(int(value))
-                #print('influence = {}'.format(influence))
         except:
             print('read input failed')
         try:
-            #print('influence = {}'.format(influence))
             max_value = get_max_influence(influence)
             print("{}".format(max_value))
         except:

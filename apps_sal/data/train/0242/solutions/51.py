@@ -26,10 +26,8 @@ class Solution:
 
         if len(ic) > 2:
             return False
-        # case 1: 1,2,2,2,3,3,3
         if 1 in ickeys and len(ic[1]) == 1:
             return True
-        # case 2: 1,1,2,3
         if (ickeys[0] - ickeys[1] == 1 and len(ic[ickeys[0]]) == 1) or (ickeys[1] - ickeys[0] == 1 and len(ic[ickeys[1]]) == 1):
             return True
 

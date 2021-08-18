@@ -1,4 +1,3 @@
-# codechef - february 2012 - count of maximum - maxcount.py
 
 t = int(input())
 

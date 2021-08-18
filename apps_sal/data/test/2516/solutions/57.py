@@ -1,4 +1,3 @@
-# E - Divisible Substring
 N, P = map(int, input().split())
 S = input()
 ans = 0

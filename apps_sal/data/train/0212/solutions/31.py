@@ -1,5 +1,4 @@
 
-# 823. Binary Trees With Factors
 
 class Solution:
     def numFactoredBinaryTrees(self, A: List[int]) -> int:

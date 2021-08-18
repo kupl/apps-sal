@@ -1,5 +1,3 @@
-# AtCoder Beginner Contest 133
-# C - Remainder Minimization 2019
 L, R = map(int, input().split())
 
 mod = 2019

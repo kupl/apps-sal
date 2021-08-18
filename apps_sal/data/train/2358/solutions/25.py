@@ -2,7 +2,7 @@ from heapq import heappop, heappush, heapify
 from collections import deque
 
 
-class Graph():  # non-directed
+class Graph():
     def __init__(self, n, edge, indexed=1):
         self.n = n
         self.edge = edge

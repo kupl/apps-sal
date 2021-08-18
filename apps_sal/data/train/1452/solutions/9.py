@@ -1,4 +1,3 @@
-# your code goes here
 t = eval(input())
 
 for i in range(t):

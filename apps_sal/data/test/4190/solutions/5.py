@@ -30,13 +30,9 @@ L[LIST[0]] = LIST[-1]
 ANS = []
 
 for a in A:
-    # print(ALLB)
-    # print(R,L)
     x = bisect.bisect_left(LIST, (-a) % n)
     if x == len(LIST):
         x = 0
-
-    # print(a,x,LIST[x])
 
     y = LIST[x]
 

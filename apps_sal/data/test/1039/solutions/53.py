@@ -1,9 +1,4 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
-# ダイクストラ法
-# 重み付きグラフ関係により最短経路のリストを作る
-# 有向グラフで優先度付きキューで探索
 
 from heapq import heapify, heappop, heappush, heappushpop
 
@@ -13,7 +8,7 @@ INF = float('inf')
 def dijkstra(s, n, g):
     seen = [False] * n
     cost = [INF] * n
-    cost[s] = 0  # スタートはコスト0
+    cost[s] = 0
     next_q = [(0, s)]
     heapify(next_q)
     while len(next_q) > 0:
@@ -31,15 +26,12 @@ def dijkstra(s, n, g):
 def main():
     N = int(input())
     graph_F = [[] for _ in range(N)]
-#    graph_R = [[] for _ in range(N)]
-    # リストの作成
     for _ in range(N - 1):
         a, b, c = map(int, input().split())
         a -= 1
         b -= 1
         graph_F[a].append((b, c))
         graph_F[b].append((a, c))
-#        graph_R[b].append((a,c))
 
     Q, K = map(int, input().split())
     K -= 1

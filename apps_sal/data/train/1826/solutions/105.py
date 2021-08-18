@@ -13,17 +13,13 @@ class Solution:
                 cur = mat[i, j]
                 if j - K < 0:
                     hor_s = slice(0, j + K + 1)
-                    # hor = mat[i, 0:j+K+1]
                 else:
                     hor_s = slice(j - K, j + K + 1)
-                    # hor = mat[i, j-K:j+K+1]
 
                 if i - K < 0:
                     ver_s = slice(0, i + K + 1)
-                    # ver = mat[0:i+K+1, j]
                 else:
                     ver_s = slice(i - K, i + K + 1)
-                    # ver = mat[i-K:i+K+1, j]
 
                 arr[i, j] = mat[ver_s, hor_s].sum()
 

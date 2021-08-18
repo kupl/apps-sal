@@ -54,6 +54,5 @@ sol += aux * (len(lineas1) + len(lineas2))
 sol += len(lineas1) * len(lineas2)
 for a in caca.keys():
     aux = len(caca[a])
-    #print(a, caca[a], aux)
     sol -= int(aux * (aux - 1) / 2)
 print(sol)

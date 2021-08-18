@@ -1,7 +1,6 @@
 class DinnerPlates:
 
     def __init__(self, capacity: int):
-        # use a heap to store all the index whose corresponding list is not full
         self.h = []
         self.m = -1
         self.d = {}
@@ -49,9 +48,3 @@ class DinnerPlates:
                 break
 
         return res
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

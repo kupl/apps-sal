@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/19 23:30
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : F1. Same Sum Blocks (Easy).py
 
 from collections import defaultdict
 

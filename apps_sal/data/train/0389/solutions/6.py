@@ -4,7 +4,6 @@ from functools import lru_cache
 class Solution:
     def splitArraySameAverage(self, A: List[int]) -> bool:
 
-        # mem = {}
         @lru_cache(None)
         def find(target, k, i):
 
@@ -13,8 +12,6 @@ class Solution:
 
             if k + i > len(A):
                 return False
-
-            # if (target, k, i) in mem: return mem[(target, k, i)]
 
             ans = find(target - A[i], k - 1, i + 1) or find(target, k, i + 1)
 

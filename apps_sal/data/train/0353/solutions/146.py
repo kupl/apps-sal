@@ -24,5 +24,4 @@ class Solution:
                 result += 2 ** (end - start)
             if end == start:
                 result += 1
-            #print(start, end, result)
         return result % (10**9 + 7)

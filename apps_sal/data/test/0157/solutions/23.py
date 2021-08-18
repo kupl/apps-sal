@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-# n = int(iunput())
-#
-# a, b = [int(i) for i in input().split()]
-#
 
 a = int(input())
 b = int(input())

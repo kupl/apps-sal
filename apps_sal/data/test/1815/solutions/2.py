@@ -20,12 +20,6 @@ for i, v in enumerate(u):
 
     maximo = max(maximo, total[v])
 
-    #print(i, v, ":", diferentes)
-    # print(suma)
-    # print(total)
-    #print(maximo, ":", suma[maximo], suma[maximo+1], diferentes-1)
-    #print(maximo, ":", suma[maximo-1], suma[maximo], diferentes-1)
-
     if diferentes <= 1:
         sol = i
 
@@ -38,6 +32,5 @@ for i, v in enumerate(u):
     if suma[1] == diferentes:
         sol = i
 
-    #print("SOL", sol)
 
 print(sol + 1)

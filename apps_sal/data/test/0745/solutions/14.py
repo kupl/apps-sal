@@ -27,7 +27,6 @@ def sterling(n, m):
 if k > n - 1:
     print(0)
 else:
-    # chose n - same from n
     if k == 0:
         print(fact[n])
     else:

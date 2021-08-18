@@ -11,7 +11,6 @@ if N >= M:
 else:
     for i in range(1, M):
         arr[i - 1] = (abs(X[i - 1] - X[i]))
-    # print(arr)
     arr.sort()
     ans = sum(arr[0:M - N])
 print(ans)

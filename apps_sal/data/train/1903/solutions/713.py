@@ -26,7 +26,6 @@ class DSU:
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # Make edges
         edges = []
         N = len(points)
 
@@ -41,8 +40,6 @@ class Solution:
                 x2, y2 = points[j]
                 d = abs(x1 - x2) + abs(y1 - y2)
                 edges.append([i, j, d])
-
-        # Construct MST using Kruskal and DSU
 
         UF = DSU(N)
 

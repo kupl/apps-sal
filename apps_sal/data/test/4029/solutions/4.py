@@ -28,13 +28,11 @@ else:
                     y = i
             if x < 0 or y < 0:
                 continue
-            # print(x,y)
             c = 0
             if x > y:
                 c += 1
                 x, y = y, x
             if y == len(a) - 1 and a[-2] == '0' and x != len(a) - 2:
-                # print('-', c)
                 z = -1
                 for i in range(len(a) - 1):
                     if a[i] != '0' and i != x:
@@ -42,7 +40,6 @@ else:
                 if z > 0:
                     c += len(a) - 2 - z
             c += x + y - 1
-            # print(c)
             ans = min(ans, c)
         if ans == 99999999:
             ans = -1

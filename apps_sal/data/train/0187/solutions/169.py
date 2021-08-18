@@ -25,7 +25,6 @@ class Solution:
             d[rotations] = d[rotations - 1] + sum_cust * boardingCost - runningCost
             sum_cust = 0
 
-        # print(d)
         d[0] = -1
         tmp, res = -1, -1
         for i in d:

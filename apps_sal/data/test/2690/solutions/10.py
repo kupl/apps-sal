@@ -1,4 +1,3 @@
-# cook your dish here
 word = input().strip()
 
 max_val = 0

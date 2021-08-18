@@ -12,7 +12,6 @@ class Solution:
         keys = list(zip(keyTime, keyName))
         keys = sorted(keys)
 
-        # Break keys up into individual names
         people = {}
         for key in keys:
             if key[1] in people:
@@ -31,5 +30,3 @@ class Solution:
                     ans.append(key[1])
                     break
         return sorted(ans)
-
-        # Remove people from q

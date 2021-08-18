@@ -14,7 +14,6 @@ class Solution:
                     numAdjFlowers = 0
             return numBouquets >= m
 
-        # Eliminate cases where it's not possible
         if len(bloomDay) < (m * k):
             return -1
 

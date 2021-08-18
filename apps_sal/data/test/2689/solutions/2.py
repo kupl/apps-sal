@@ -1,4 +1,3 @@
-# cook your dish here
 x = [chr(i) for i in range(48, 57)]
 y = input()
 c = ''
@@ -17,10 +16,8 @@ while i < len(y):
         i += 1
         s = s + c * p
         c = ''
-        # print(s)
     else:
         s = s + y[i]
-        # print(s)
         i = i + 1
 if s == s[::-1]:
     print("Return")

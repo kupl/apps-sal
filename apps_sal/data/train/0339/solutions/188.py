@@ -1,7 +1,5 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        # nums1 = sorted(nums1)
-        # nums2 = sorted(nums2)
         res = 0
         for n1 in nums1:
             n1 = n1**2

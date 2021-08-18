@@ -18,12 +18,3 @@ class Solution:
             return 1 + self.power(num // 2)
         else:
             return 1 + self.power(3 * num + 1)
-
-        # res = 0
-        # while num != 1:
-        #     if num % 2 == 0:
-        #         num /= 2
-        #     else:
-        #         num = 3 * num + 1
-        #     res += 1
-        # return res

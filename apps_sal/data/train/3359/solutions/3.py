@@ -1,5 +1,4 @@
 def title_to_number(title):
-    # your code here
     offset = ord('A') - 1
     radix = 26
 

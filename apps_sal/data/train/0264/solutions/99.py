@@ -16,8 +16,6 @@ class Solution:
                 t = arr[i] + arr[j]
 
                 if self.is_unique(t):
-                    # print(t)
                     arr.append(t)
                     maxVal = max(maxVal, len(t))
-        # print(dct)
         return maxVal

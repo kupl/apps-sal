@@ -12,7 +12,6 @@ def rev(i, j):
 
 for i in range(n - 1):
     for j in range(m - 1):
-        # A[i][j] -> B[i][j]
         if A[i][j] != B[i][j]:
             rev(i, j)
 

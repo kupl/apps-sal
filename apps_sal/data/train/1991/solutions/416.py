@@ -20,5 +20,4 @@ class Solution:
 
         mod = 10**9 + 7
         cache = {}
-        # finish-=1
         return routes(start, fuel)

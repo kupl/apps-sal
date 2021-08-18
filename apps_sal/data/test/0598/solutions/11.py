@@ -2,13 +2,11 @@ n, x = list(map(int, input().split()))
 a = []
 for i in range(x + 1):
     a.append([])
-# делаем герлянду хешем по длинам (не берем не нужное)
 for i in range(n):
     L, R, C = list(map(int, input().split()))
     if R - L + 1 > x:
         continue
     a[R - L + 1].append([L, R, C])
-# сортируем по левым границам
 for i in range(x + 1):
     a[i] = sorted(a[i])
 

@@ -1,10 +1,6 @@
 
 LARGE = 10 ** 9 + 7
 
-# flag_x : left < x
-# flag_y : y < right
-# flag_z : msb
-
 
 def f(pos, flag_x, flag_y, flag_z, memo, left, right):
     if pos == -1:
@@ -12,13 +8,10 @@ def f(pos, flag_x, flag_y, flag_z, memo, left, right):
     if memo[pos][flag_x][flag_y][flag_z] != -1:
         return memo[pos][flag_x][flag_y][flag_z]
     ret = 0
-    # x 0, y 0
     if flag_x or left[pos] == '0':
         ret += f(pos - 1, flag_x, 1 if right[pos] == '1' else flag_y, flag_z, memo, left, right)
-    # x 0, y 1
     if (flag_x or left[pos] == '0') and (flag_y or right[pos] == '1') and flag_z:
         ret += f(pos - 1, flag_x, flag_y, flag_z, memo, left, right)
-    # x 1, y 1
     if flag_y or right[pos] == '1':
         ret += f(pos - 1, 1 if left[pos] == '0' else flag_x, flag_y, 1, memo, left, right)
     ret %= LARGE

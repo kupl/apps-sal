@@ -14,7 +14,6 @@ def fun(string):
 
 def main():
     n = int(input())
-    # to hack this solution write any test with n == 2e5, TLE
     words = {}
     sizesandlasts = {}
     sizes = set()

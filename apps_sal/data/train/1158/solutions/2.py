@@ -8,12 +8,6 @@ while n > 0:
 
     inp = input().split(' ')[-1:][0]
 
-#   if len(inp) > 6:
-#
-#       raise ValueError;
-
-#   print inp;
-
     eight, five, three, others = 0, 0, 0, False
 
     for each in inp:

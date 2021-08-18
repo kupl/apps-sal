@@ -11,7 +11,6 @@ def RI(): return list(map(int, input().split()))
 def RS(): return input().rstrip().split()
 
 
-#################################################
 n, k = RI()
 v = [0] * k
 a = RI()

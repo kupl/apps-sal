@@ -22,21 +22,14 @@ for i in a:
             le -= 1
             for l in range(b[q - 1][0], p + 1):
                 vis[l] -= 1
-                # print("cnkjsn")
             printans.append(q)
             for l in range(x, y + 1):
                 vis[l] += 1
-            # print(vis[28:31])
             break
     else:
         for j in range(x, y + 1):
             vis[j] += 1
-    # print(ans,vis[28:31])
 
-    # print(print(vis[1:10],ans)
-    #
-    # )
-    # print(vis[1:10],ans)
 
 print(len(printans))
 print(*printans)

@@ -43,5 +43,4 @@ class Solution:
 
 s = Solution()
 s.readInput()
-# s.readMockInput()
 s.solve()

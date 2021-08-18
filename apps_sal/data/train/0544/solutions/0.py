@@ -1,4 +1,3 @@
-# cook your dish here
 def decode(L, S):
     str_2 = ""
     lst = []

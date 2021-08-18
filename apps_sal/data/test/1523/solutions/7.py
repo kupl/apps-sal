@@ -1,6 +1,5 @@
 import sys
 3
-# -*- coding: utf-8 -*-
 
 
 def rl(proc=None):

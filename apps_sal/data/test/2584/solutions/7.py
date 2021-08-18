@@ -11,8 +11,6 @@ for testcases in range(t):
     for i in range(n):
         S[i] = S[i - k] + A[i]
 
-    # print(S)
-
     ANS = -1
     for i in range(n):
         if S[i] <= p:

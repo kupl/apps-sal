@@ -62,21 +62,3 @@ for v in range(cases):
                     cnt = cnt + h - 1
 
     print(cnt)
-
-
-# a = [1,2,3,4,5]
-# n = 5
-# for i in range(1,6):
-#     print(i)
-#     left = 0
-#     right = i-1
-#     subset = []
-#     s = sum(a[:right+1])
-#     subset.append(s)
-#     while right < n-1:
-#         right += 1
-#         s = s + a[right] - a[left]
-#         left += 1
-#         subset.append(s)
-
-#     print(subset)

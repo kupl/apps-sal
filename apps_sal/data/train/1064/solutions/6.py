@@ -1,4 +1,3 @@
-# cook your dish here
 def check(arr):
     dic = {0: 'C', 1: 'H', 2: 'E', 3: 'F'}
     for i in range(4):

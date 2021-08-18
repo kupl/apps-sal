@@ -1,4 +1,3 @@
-# cook your dish here
 for u in range(int(input())):
     n = input()
     s = sum(map(int, n))

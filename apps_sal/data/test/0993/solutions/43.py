@@ -6,7 +6,6 @@ def submit():
     n, m = list(map(int, input().split()))
     a = [int(e) for e in input().split()]
 
-    # mod mを適用
     a_mod = [e % m for e in a]
     s_mod = []
     prev = 0

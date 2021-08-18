@@ -1,6 +1,5 @@
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
-        # Base case
         if len(arr) < 3:
             return 0
 

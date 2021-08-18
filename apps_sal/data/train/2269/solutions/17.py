@@ -1,4 +1,3 @@
-# E
 from collections import deque
 import numpy as np
 
@@ -24,7 +23,6 @@ core = 1
 
 while core != 0:
 
-    # BFS
     queue = deque([core])
     res_flag = True
 
@@ -57,7 +55,6 @@ while core != 0:
             core = i
             break
 
-# summarize
 if res_flag == False:
     res = 0
 else:

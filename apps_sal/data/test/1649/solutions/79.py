@@ -8,7 +8,6 @@ for bitset in range(1, 2 ** 4):
             eat_sum += A[j]
         else:
             left_sum += A[j]
-        #print(eat_sum, left_sum)
 
     if eat_sum == left_sum:
         yes = True

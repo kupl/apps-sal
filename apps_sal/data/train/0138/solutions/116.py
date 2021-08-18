@@ -13,10 +13,8 @@ class Solution:
         positive = 0
         negative = 0
         while fast < L:
-            # print('fast:', fast, 'positive:', positive, 'negative:', negative)
             if self.isEven(negative):
                 cur = fast
-                # print('cur:', cur)
             if nums[fast] < 0:
                 positive = 0
                 negative += 1

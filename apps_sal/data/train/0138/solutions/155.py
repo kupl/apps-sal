@@ -20,7 +20,6 @@ class Solution:
             t = 1
             for i in range(len(nums)):
                 t *= nums[i]
-                # print(t)
                 if t > 0 and positive_min == -1:
                     positive_ma = i
                     positive_min = i

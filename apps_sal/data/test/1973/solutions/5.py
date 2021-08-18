@@ -6,7 +6,6 @@ for i in range(n):
     m[l[i]] += 1
     b = [m[i] for i in range(11) if m[i] != 0]
     b = sorted(b)
-    # print(b)
     if len(b) == 1:
         wyn = i + 1
     if len(b) > 1:

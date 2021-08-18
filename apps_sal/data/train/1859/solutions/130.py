@@ -22,7 +22,6 @@ class Solution:
                                     break
                             if all_one:
                                 ans += 1
-                                # print(sx,sy,side)
                             else:
                                 break
                         else:

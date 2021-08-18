@@ -1,4 +1,3 @@
-# cook your dish here
 st = str(input())
 
 
@@ -18,8 +17,6 @@ def checkpal(i, j, k, l):
 
         a += 1
         b -= 1
-    # print(i,j,k,l)
-    # print("yes")
     return 1
 
 

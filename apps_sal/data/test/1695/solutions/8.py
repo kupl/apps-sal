@@ -12,6 +12,5 @@ for j in range(m):
     for i in range(n):
         cnt[ord(s[i][j]) - 65] += 1
     ans += a[j] * max(cnt)
-    #print(j + 1, cnt, ans)
 
 print(ans)

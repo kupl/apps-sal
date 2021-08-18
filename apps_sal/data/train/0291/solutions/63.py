@@ -19,6 +19,4 @@ class Solution:
             ans += dp_odd[i]
             ans %= (pow(10, 9) + 7)
 
-        # print(dp_even,dp_odd)
-
         return ans % (pow(10, 9) + 7)

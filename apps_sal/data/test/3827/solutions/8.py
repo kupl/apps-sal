@@ -12,7 +12,6 @@ if (''.join(sorted(s)) == s):
             b += 1
         elif i == 'c':
             c += 1
-    # print(a,b,c)
     if a > 0 and b > 0 and (c == a or c == b):
         print("YES")
     else:

@@ -1,6 +1,5 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        # m -- qty of bouquets, k -- qty of flowers
         if len(bloomDay) < m * k:
             return - 1
 

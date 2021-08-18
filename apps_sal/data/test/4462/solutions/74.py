@@ -14,4 +14,3 @@ if q + 1 >= x:
     print('Yes')
 else:
     print('No')
-# print(d,q,x)

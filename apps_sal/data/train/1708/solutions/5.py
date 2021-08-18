@@ -7,7 +7,7 @@ class MemoryManager:
         self._memory = memory
         self._capacity = len(memory)
         self._allocated = {i: False for i in range(self._capacity)}
-        self._pointers = dict()  # Holds all current valid pointers, index -> size
+        self._pointers = dict()
 
     def allocate(self, size):
         """

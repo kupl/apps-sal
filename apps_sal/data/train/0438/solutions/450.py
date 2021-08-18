@@ -24,8 +24,6 @@ class UnionFind:
 
         self.parent[yRoot] = xRoot
         self.rank[xRoot] += self.rank[yRoot]
-        # if self.rank[ yRoot] == self.rank[xRoot]:
-        #     self.rank[xRoot] += 1
 
         return
 

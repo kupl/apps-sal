@@ -1,4 +1,3 @@
-# cook your dish here
 MOD = 10 ** 9 + 7
 
 for t in range(int(input())):

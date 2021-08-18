@@ -7,13 +7,13 @@ class Solution:
         routes = list(map(set, routes))
         seen, targets = set(), set()
         for i in range(len(routes)):
-            if S in routes[i]:  # possible starting route number
+            if S in routes[i]:
                 seen.add(i)
-                queue.append((i, 1))  # enqueue
-            if T in routes[i]:  # possible ending route number
+                queue.append((i, 1))
+            if T in routes[i]:
                 targets.add(i)
             for j in range(i + 1, len(routes)):
-                if routes[j] & routes[i]:  # set intersection to check if route_i and route_j are connected
+                if routes[j] & routes[i]:
                     graph[i].add(j)
                     graph[j].add(i)
         while queue:

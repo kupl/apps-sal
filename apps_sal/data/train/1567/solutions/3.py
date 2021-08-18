@@ -10,7 +10,6 @@ for t in range(int(input())):
     for i, j in d.items():
         if j % 2 == 1:
             count += 1
-    # print(count)
     if (n // 2) % 2 == 0:
         if count == 0:
             print("YES")

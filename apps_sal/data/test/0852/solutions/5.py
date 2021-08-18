@@ -8,7 +8,6 @@ for _ in range(t):
     remain = [i for i in range((-1) * (k - 1), 0)] + [i for i in range(k + 1)]
     f = True
     for i in range(n):
-        # print(remain)
         f = False
         new_remain = []
         for j in range(len(remain)):

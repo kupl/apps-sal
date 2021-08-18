@@ -47,8 +47,6 @@ class Solution:
 
             for nextInd in possibleMoves:
                 totalNos += calculate(nextInd, remainingSteps - 1)
-                # if totalNos >= 10**9 + 7:
-                #     totalNos = totalNos % (10**9 + 7)
 
             memo[(currentIndex, remainingSteps)] = totalNos
             return memo[(currentIndex, remainingSteps)]

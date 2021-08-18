@@ -2,8 +2,8 @@ class Solution:
 
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         n = len(nums)
-        max_q = deque()  # 3,2,1,0
-        min_q = deque()  # 1,2,3,4
+        max_q = deque()
+        min_q = deque()
 
         start = 0
         ans = 0
@@ -28,12 +28,6 @@ class Solution:
         return ans
 
     def longestSubarray2(self, nums: List[int], limit: int) -> int:
-        # [10,1,2,4,7,2]
-        #queue = [4, 7, 2, 8]
-        #min_queue = [2, 8]
-        #max_queue = [8]
-        #limit: 5
-        #ans: 4
         q = deque()
         min_q = deque()
         max_q = deque()
@@ -56,12 +50,6 @@ class Solution:
         return ans
 
     def longestSubarray2(self, nums: List[int], limit: int) -> int:
-        # [10,1,2,4,7,2]
-        #queue = [4, 7, 2, 8]
-        #min_queue = [2, 8]
-        #max_queue = [8]
-        #limit: 5
-        #ans: 4
 
         min_q = deque()
         max_q = deque()

@@ -8,7 +8,6 @@ result1, result2, result3 = "", "", ""
 j = 0
 inp.sort()
 inpSort = inp
-# k = 0
 
 for i in inpSort:
     if j == n:
@@ -18,7 +17,6 @@ for i in inpSort:
     else:
         result2 += "1"
     j += 1
-# k = n//2
 
 for i in range(n // 2):
     result3 += "1"

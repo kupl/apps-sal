@@ -7,7 +7,6 @@ class Solution:
         max_length = 1
         cur_length = 1
         for i in range(1, len(A)):
-            # print(A[i - 1], A[i], \" -- \", cur_length, sign)
 
             if A[i - 1] < A[i] and sign < 0:
                 cur_length += 1

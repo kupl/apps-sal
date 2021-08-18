@@ -7,14 +7,14 @@ for q in range(t):
     while h > 2 and i < n:
         if h - p[i] == 1:
             if i + 1 < n:
-                if p[i] - p[i + 1] > 1:  # falling down is not safe
+                if p[i] - p[i + 1] > 1:
                     s += 1
                     h = p[i] - 1
                     i += 1
-                else:  # falling down is safe
+                else:
                     h = p[i + 1]
                     i += 2
-            else:  # falling down is not restrickted by the lower platform
+            else:
                 if p[i] == 1:
                     h = 0
                 else:

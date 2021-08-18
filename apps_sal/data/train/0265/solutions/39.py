@@ -7,7 +7,6 @@ class Solution:
         for i in range(1, N):
             prefix_sum[i] = nums[i] + prefix_sum[i - 1]
 
-        # TODO: there is a bug here..not sure what the hell it is though!!!!
         prev_prefix = {}
         last_index = -1
         subarrays = 0

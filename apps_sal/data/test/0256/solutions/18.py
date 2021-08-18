@@ -3,8 +3,6 @@ a2, d2 = [int(a) for a in input().split()]
 a3, d3 = [int(a) for a in input().split()]
 a4, d4 = [int(a) for a in input().split()]
 
-# Team 1 wins if E a team 1 st A team 2, team 1 must win
-# Team 2 wins if A team 1 E team 2 st team 2 must win
 
 team1win = False
 for (A1, D1) in [(a1, d2), (a2, d1)]:

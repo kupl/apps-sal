@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     m, n = list(map(int, input().split()))
     vol = [[0] * (n + 1)]

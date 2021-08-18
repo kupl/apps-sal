@@ -4,8 +4,6 @@ class Solution:
             self.id = id
             self.next = []
 
-    # BFS on a generated tree => O(n)
-
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         if len(manager) == 0:
             return 0

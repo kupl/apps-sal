@@ -12,11 +12,9 @@ for i in range(N - 1):
 
 ans = 0
 
-# print(xy_d)
 
 for g in range(len(xylist)):
     for t in range(N - 1):
-        # print(xy_d[xylist[g][t]][xylist[g][t+1]])
         ans += xy_d[xylist[g][t]][xylist[g][t + 1]]
 
 print(ans / len(xylist))

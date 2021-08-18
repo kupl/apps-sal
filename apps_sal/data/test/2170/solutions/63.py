@@ -1,6 +1,6 @@
 import math
 n, m = list(map(int, input().split()))
-mod = 10**9 + 7  # 出力の制限
+mod = 10**9 + 7
 
 
 def perm(n, r):
@@ -18,9 +18,9 @@ def cmb(n, r, mod):
 
 
 N = 5 * 10**5
-g1 = [1, 1]  # 元テーブル
-g2 = [1, 1]  # 逆元テーブル
-inverse = [0, 1]  # 逆元テーブル計算用テーブル
+g1 = [1, 1]
+g2 = [1, 1]
+inverse = [0, 1]
 
 for i in range(2, N + 1):
     g1.append((g1[-1] * i) % mod)

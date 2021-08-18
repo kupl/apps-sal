@@ -1,8 +1,6 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
-    # 101 --- 1000001 ----
     f = True
     for i in range(n):
         if(l[i] == 1):

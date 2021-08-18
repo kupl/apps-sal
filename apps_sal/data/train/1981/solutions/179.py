@@ -8,13 +8,10 @@ class Solution:
             start, end = request
             freqs[start] += 1
             freqs[end + 1] -= 1
-        # print(freqs)
         for i in range(1, l + 1):
             freqs[i] += freqs[i - 1]
         nums = sorted(nums)
         freqs = sorted(freqs[:-1])
-        # print(freqs)
-        # print(nums)
         ans = 0
         for i in range(l):
             if freqs[i] == 0:

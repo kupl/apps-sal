@@ -21,5 +21,4 @@ for i in list(col.keys()):
     if(col[i] > v2):
         v2 = col[i]
         mc = i
-# print(col,ro)
 print(v1 + v2)

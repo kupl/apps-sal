@@ -13,6 +13,3 @@ while a:
     a.pop(i)
 
 print(cnt)
-
-
-# Made By Mostafa_Khaled

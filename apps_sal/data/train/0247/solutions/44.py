@@ -19,9 +19,6 @@ class Solution:
         arr.reverse()
         right = aux(arr)
 
-        # print(left)
-        # print(right)
-
         ans = n + 1
         for i in range(n - 1):
             ans = min(ans, left[i] + right[n - 1 - (i + 1)])

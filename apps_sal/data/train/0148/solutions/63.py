@@ -20,7 +20,6 @@ class Solution:
                 l[i] = maxFromBegin
             else:
                 maxFromBegin = l[i]
-        # print(l)
         res = 0
         for work in worker:
             if work > maxDiff:

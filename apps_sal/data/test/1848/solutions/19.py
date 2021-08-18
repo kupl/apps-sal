@@ -3,7 +3,7 @@ def __starting_point():
     lst = list(map(int, input().split(' ')))
     lst.sort()
     h, i = 0, 0
-    trav = []  # tracks travelled
+    trav = []
     while i < n - 1:
         if i in trav:
             i += 1
@@ -11,7 +11,6 @@ def __starting_point():
         j = i + 1
         s = lst[i]
         while j < n:
-            # print(j,trav)
             if lst[j] > s and j not in trav:
                 h += 1
                 s = lst[j]

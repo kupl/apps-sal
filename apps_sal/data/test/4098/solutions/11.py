@@ -14,8 +14,6 @@ a = sorted(c)
 for i in sorted(a):
     c2[i] = sum(c[j] for j in range(i, i + 6))
 
-# a are all possible levels of students
-# c2[i] is maximal group size where lowest level is i
 
 len_a = len(a)
 next_group = [-1] * len(a)
@@ -25,15 +23,12 @@ for i in range(len_a):
             next_group[i] = j
             break
 
-# if a group starts with i-th element,
-# then the next possible group starts with next_group[i]-th element
 
-maxes = [0] * n  # for a maximum of 0 groups
+maxes = [0] * n
 for ii in range(k):
     old_maxes = maxes
-    old_maxes.append(0)  # access where next_group[...] == -1
+    old_maxes.append(0)
     maxes = []
-    # max number of groups, try to find better maxes each round
     for i, aa in enumerate(a):
         maxes.append(c2[a[i]] + old_maxes[next_group[i]])
     m = 0

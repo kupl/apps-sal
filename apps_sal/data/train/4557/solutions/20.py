@@ -1,5 +1,4 @@
 def row_weights(array):
-    # numbers are switched because I am "smart" and lazy. idk anymore man, it works.
     team2 = 0
     team1 = 0
     for i in range(len(array)):

@@ -1,4 +1,3 @@
-# より高速に
 def pow(x, n, p):
     """
     O(log n)
@@ -27,7 +26,6 @@ def cmb3(n, r, q):
     for x in range(1, r + 1):
         t = (t * x) % q
 
-    # 割る数の剰余をどうするかが問題
     u = pow(t, q - 2, q)
     return (u * s) % q
 

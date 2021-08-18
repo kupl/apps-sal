@@ -7,7 +7,7 @@ def area(rect):
 
 def get_w(rect):
     if rect is None:
-        return 0  # , 0
+        return 0
 
     x1, y1, x2, y2 = rect
 
@@ -15,9 +15,9 @@ def get_w(rect):
     more, less = (ra + 1) // 2, ra // 2
 
     if (x1 + y1) % 2 == 0:
-        return more  # , less
+        return more
     else:
-        return less  # , more
+        return less
 
 
 def intersect_rects(r1, r2):

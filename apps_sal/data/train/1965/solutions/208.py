@@ -1,5 +1,4 @@
 class UnionFind:
-    # When n is valid, each element is a tuple of two integers, (x, y)
     def __init__(self, m: int, n: int = None):
         self.rank = collections.Counter()
         if n is None:

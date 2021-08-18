@@ -1,4 +1,3 @@
-# cook your dish here
 from difflib import get_close_matches
 import sys
 

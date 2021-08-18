@@ -11,7 +11,6 @@ def one_stroke_path():
     M : 辺数
     ai, bi : 辺iの両端の頂点
     """
-    # 入力
     N, M = list(map(int, input().split()))
     a = list()
     b = list()
@@ -20,7 +19,6 @@ def one_stroke_path():
         a.append(A)
         b.append(B)
 
-    # 処理
     permutations_list = itertools.permutations([x for x in range(1, N + 1)])
     count = 0
     for one_case in permutations_list:

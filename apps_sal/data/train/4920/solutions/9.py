@@ -1,4 +1,4 @@
-def min_special_mult(arr):  # just simple "straight forward"...
+def min_special_mult(arr):
     narr = []
     l = []
     c = 0

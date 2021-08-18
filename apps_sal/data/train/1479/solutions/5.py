@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     d = {1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: []}

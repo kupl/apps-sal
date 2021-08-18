@@ -24,7 +24,7 @@ class Solution:
 class Solution:
     def minCostConnectPoints(self, points):
         def distance(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
-        points.sort(key=lambda p: p[0] + p[1])   # points.sort(key = lambda p: abs(p[0]) + abs(p[1]))
+        points.sort(key=lambda p: p[0] + p[1])
         total_cost = 0
         points = [[p, distance(p, points[0])] for p in points]
         while points:

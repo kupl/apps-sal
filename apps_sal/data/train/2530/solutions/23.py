@@ -23,5 +23,3 @@ class Solution:
                     cnt += ctr[keys[i]] * ctr[keys[j]]
 
         return cnt
-
-    # store ctr + index and see the wrong ans input

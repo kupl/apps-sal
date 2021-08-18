@@ -1,4 +1,3 @@
-# O(nlogn) time and O(n) space, exactly the same as Q846: Hand of straights
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k:

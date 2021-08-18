@@ -10,7 +10,7 @@ def main():
     g = tuple(set() for _ in range(M * 2))
     ps = set()
     for _ in range(N):
-        x, y = (int(x) - 1 for x in input().split())  # 一律に移動
+        x, y = (int(x) - 1 for x in input().split())
         g[x].add(y + M)
         g[y + M].add(x)
         ps.add(x)
@@ -46,12 +46,6 @@ def main():
 
 def __starting_point():
     main()
-
-# 連結成分ごとに
-# x,yの二部グラフを完全二部グラフにする
-# cnt(x)*cnt(y)-既存の辺数の総和
-
-# 最後にN引けばよい
 
 
 __starting_point()

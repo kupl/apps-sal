@@ -29,11 +29,6 @@ class Solution:
         result = -1
         cnt = 0
         for i, pos in enumerate(arr):
-            # print(bits)
-            # print(us.par)
-            # print(us.ed)
-            # print(cnt)
-            # print('-------')
             pos -= 1
             bits[pos] = 1
             if pos > 0 and bits[pos - 1] == 1:

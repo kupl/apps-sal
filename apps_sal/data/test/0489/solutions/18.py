@@ -2,7 +2,6 @@ import os
 n = int(input())
 arr = [int(x) for x in input().strip().split()]
 
-# arr=[1 for x in range(0,100000)]
 arr.sort()
 count = 0
 firstindex = -1

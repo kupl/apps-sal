@@ -15,7 +15,7 @@ for _ in range(int(input())):
     boys = []
     girls = []
     if (abs(B - G) > 1):
-        print((-1))  # Impossible condition
+        print((-1))
     else:
         if B > G:
             for c in range(len(queue)):
@@ -23,7 +23,6 @@ for _ in range(int(input())):
                     boys.append(c)
                 if c % 2 == 0 and queue[c] == 'G':
                     girls.append(c)
-                # After genarating list pass it to the function
             print(outOfIndex(boys, girls, COST))
             boys.clear()
             girls.clear()
@@ -39,13 +38,11 @@ for _ in range(int(input())):
             girls.clear()
 
         else:
-            # Start with boys
             for c in range(len(queue)):
                 if c % 2 != 0 and queue[c] == 'B':
                     boys.append(c)
                 if c % 2 == 0 and queue[c] == 'G':
                     girls.append(c)
-                # After genarating list pass it to the function
             attempt1 = outOfIndex(boys, girls, COST)
             boys.clear()
             girls.clear()

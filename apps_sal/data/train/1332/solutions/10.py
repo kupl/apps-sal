@@ -8,8 +8,6 @@ for i in range(0, n):
     loga = int(math.log(a, 2))
     logb = int(math.log(b, 2))
 
-    # print a, b, loga, logb
-
     dist = 0
 
     while loga > logb:

@@ -1,5 +1,3 @@
-# ABC115
-# B Christmas Eve Eve
 N = int(input())
 P = []
 for n in range(N):

@@ -3,7 +3,6 @@ from itertools import combinations, groupby, starmap
 
 def is_triangle(a, b, c): return (b[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (b[1] - a[1]) != 0
 def is_triangle(a, b, c): return a[0] * (b[1] - c[1]) + b[0] * (c[1] - a[1]) + c[0] * (a[1] - b[1]) != 0
-# is_triangle = lambda a,b,c: __import__('numpy').linalg.det([(x,y,1) for x,y in (a,b,c)]) != 0 ## Precision issues
 
 
 def count_col_triang(input_):

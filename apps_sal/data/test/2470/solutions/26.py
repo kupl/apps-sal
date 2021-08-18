@@ -10,7 +10,7 @@ class Solution:
             larger_equal_idx = bisect.bisect_left(B, val)
             if larger_equal_idx > 0:
                 return B[larger_equal_idx - 1]
-            return None  # no lower value in B
+            return None
 
         @lru_cache(None)
         def make_prefix_increasing(n, upper=float('inf')):

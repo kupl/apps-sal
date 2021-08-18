@@ -3,7 +3,7 @@ class Solution:
         r, c = len(grid), len(grid[0])
         if r == 1 and c == 1:
             return 0
-        q = deque([(0, 0, 0, 0)])    # row, col, num of obstables met, steps
+        q = deque([(0, 0, 0, 0)])
         visited = set((0, 0, 0))
 
         while q:

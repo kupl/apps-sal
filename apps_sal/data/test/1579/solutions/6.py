@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections.abc import Iterable
 from math import *
@@ -62,7 +61,6 @@ def solve(N: int, x: "List[int]", y: "List[int]"):
             visited[n] = True
 
             for _, d, _ in g.edges(n):
-                # yield d
                 stack.append((d, c + 1))
             yield n
 
@@ -96,9 +94,9 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    x = [int()] * (N)  # type: "List[int]"
-    y = [int()] * (N)  # type: "List[int]"
+    N = int(next(tokens))
+    x = [int()] * (N)
+    y = [int()] * (N)
     for i in range(N):
         x[i] = int(next(tokens))
         y[i] = int(next(tokens))

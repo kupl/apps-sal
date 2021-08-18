@@ -45,9 +45,3 @@ class Skiplist(object):
                 ans = True
                 cur.levels[level] = nxt.levels[level]
         return ans
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

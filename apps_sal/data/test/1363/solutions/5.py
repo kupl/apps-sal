@@ -35,7 +35,6 @@ debug = False
 if getpass.getuser() == 'frohenk' and files:
     debug = True
     sys.stdin = open("test.in")
-    # sys.stdout = open('test.out', 'w')
     pass
 
 g, d, f = ria()

@@ -17,7 +17,6 @@ for i in range(1, 367):
             else:
                 cntf += 1
     cur = min(cntf, cntm)
-    #print(i, cur, cntf, cntm)
     ans = max(ans, cur)
     for t, s in p[i]:
         if t == -1:

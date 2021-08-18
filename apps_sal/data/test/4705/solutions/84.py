@@ -1,4 +1,3 @@
-# A - Restaurant
 def main():
     n = int(input())
 

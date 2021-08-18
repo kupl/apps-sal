@@ -1,6 +1,5 @@
 def survivor(n):
     print("look for %s" % n)
-    # coding and coding..
     last = 0
     for i in range(2, n):
         if last == n:

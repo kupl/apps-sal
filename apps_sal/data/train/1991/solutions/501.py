@@ -17,28 +17,7 @@ class Solution:
                         cur = f - dist[(i, j)]
                         if cur >= 0:
                             dp[f][i] += dp[cur][j] % mod
-                # dp[f][i] = dp[f - 1][i] + dp[f][i]
         ans = 0
         for f in range(fuel + 1):
             ans += dp[f][start] % mod
         return ans % mod
-
-
-#         ans = 0
-
-
-#         def dfs(i, f):
-#             nonlocal ans
-#             if f < 0:
-#                 return
-#             if i == finish:
-#                 ans += 1
-#             if f < minf:
-#                 return
-#             for j in range(n):
-#                 if j != i:
-#                     dfs(j, f - dist[(i, j)])
-#             return
-
-#         dfs(start, fuel)
-#         return ans

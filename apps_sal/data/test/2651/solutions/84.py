@@ -8,8 +8,6 @@ for i in range(n):
     xlist[i] -= x0
 for i in range(m):
     ylist[i] -= y0
-# print(xlist)
-# print(ylist)
 
 xsum = 0
 for i in range(1, n):

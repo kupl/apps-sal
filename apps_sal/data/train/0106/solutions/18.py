@@ -7,20 +7,7 @@ for i in range(q):
         temp.append(i)
         arr[i] = temp
     arr = sorted(arr, key=lambda l: l[0])
-    # print(arr)
     ans = [1 for i in range(n)]
-    # if(arr[0][1]<arr[1][0]):
-    # 	ans[0]=2
-    # 	for i in range(n):
-    # 		print(ans[i],end=' ')
-    # 	print()
-    # 	continue
-    # if(arr[n-1][0]>arr[n-2][1]):
-    # 	ans[n-1]=2
-    # 	for i in range(n):
-    # 		print(ans[i],end=' ')
-    # 	print()
-    # 	continue
     yoyo = -1
     maxa = arr[0][1]
     for i in range(1, n):

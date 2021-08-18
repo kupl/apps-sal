@@ -1,4 +1,3 @@
-# cook your dish here
 N = int(input())
 
 enc = input().split()
@@ -10,8 +9,6 @@ for e in enc:
     else:
         S.append(")")
 
-
-# task 1 : max depth
 
 closures = []
 d = 0
@@ -36,9 +33,6 @@ for idx in range(N):
         finish = idx
         closures.append([start, finish])
         start = idx + 1
-
-
-# task 2 : maximum closure
 
 
 diff = [x[1] - x[0] for x in closures]

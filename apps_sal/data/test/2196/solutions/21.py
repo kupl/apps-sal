@@ -1,8 +1,6 @@
 n = int(input())
 seq = [int(x) for x in input().split()]
 
-# print(seq)
-
 
 def inseri(s, n):
     if n in s:

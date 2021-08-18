@@ -5,5 +5,5 @@ def contamination(text, char):
     if text == '' or char == '':
         return ""
     else:
-        contaminated_word = re.sub('[!#~@$%&*_+{}|:"<>;,/?=a-zA-Z0-9]', char, text)
+        contaminated_word = re.sub('[!
         return contaminated_word

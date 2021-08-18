@@ -8,7 +8,7 @@ class UnionFind():
         if self.root[x] < 0:
             return x
         else:
-            self.root[x] = self.findRoot(self.root[x])  # ; print('root[x]', self.root[x])
+            self.root[x] = self.findRoot(self.root[x])
             return self.root[x]
 
     def unite(self, x, y):
@@ -28,7 +28,7 @@ class UnionFind():
 
 
 N, M = map(int, input().split())
-edge = [tuple(map(int, input().split())) for _ in range(M)]  # ;print(edge)
+edge = [tuple(map(int, input().split())) for _ in range(M)]
 
 cnt = 0
 for i in range(M):
@@ -36,7 +36,6 @@ for i in range(M):
     for j in range(M):
         if j != i:
             uf.unite(edge[j][0], edge[j][1])
-    #print(i, edge[i][0], edge[i][1], uf.isSame(edge[i][0], edge[i][1]))
     if not uf.isSame(edge[i][0], edge[i][1]):
         cnt += 1
 print(cnt)

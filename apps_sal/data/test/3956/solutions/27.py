@@ -18,8 +18,6 @@ def comInit(max_n):
 
 comInit(max_n)
 
-# 二項係数の計算
-
 
 def com(n, k):
     if(n < k):

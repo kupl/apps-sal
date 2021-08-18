@@ -27,7 +27,6 @@ class Solution:
                     arrived_customers = 0
                 waiting_customers += arrived_customers
 
-            # print('on board = {}, waiting = {}'.format(on_board, waiting_customers))
             if boardingCost * on_board - step * runningCost > profit:
                 steps = step
                 profit = boardingCost * on_board - step * runningCost

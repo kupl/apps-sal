@@ -21,14 +21,14 @@ def solve(p):
         dx, dy = dd[p[c]]
         x += dx
         y += dy
-        if (not 0 <= x < m) or (not 0 <= y < n) or (M[y][x] == '#'):
+        if (not 0 <= x < m) or (not 0 <= y < n) or (M[y][x] == '
             return 0
         if x == ex and y == ey:
             return 1
     return 0
 
 
-ans = 0
+ans=0
 for p in permutations(list(range(4))):
     ans += solve(p)
 print(ans)

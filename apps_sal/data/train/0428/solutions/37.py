@@ -16,7 +16,6 @@ class Solution:
         visited = set()
         stack = deque([[start[0], start[1], 0, 0]])
         while stack:
-            # print(stack)
             i, j, keys, count = stack.popleft()
             for a, b in (i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1):
                 if 0 <= a < m and 0 <= b < n:
@@ -24,8 +23,8 @@ class Solution:
                         newkeys = keys | (1 << (ord(grid[a][b]) - ord('a')))
                     elif grid[a][b].isalpha() and keys & (1 << (ord(grid[a][b]) - ord('A'))):
                         newkeys = keys
-                    elif grid[a][b].isalpha() or grid[a][b] == '#':
-                        continue
+                    elif grid[a][b].isalpha() or grid[a][b] == '
+                    continue
                     else:
                         newkeys = keys
 

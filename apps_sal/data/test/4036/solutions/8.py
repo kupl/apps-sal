@@ -11,7 +11,6 @@ pp = 0
 
 i = 0
 while i < k and s < n:
-    #print(n - s), (k - i), (n - s) // (k - i)
     q = (n - s) // (k - i)
     if i == 0 or a[i] + q <= 2 * a[i - 1] + pp:
         p[i] = q

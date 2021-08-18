@@ -1,4 +1,4 @@
-def interpreter(tape, code):  # Tape is given as a string and code is given as a string.
+def interpreter(tape, code):
     tape, code = [int(t) for t in tape], [int(a) for a in code]
     ptr, out = 0, ""
     while ptr < len(code):

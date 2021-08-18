@@ -1,5 +1,4 @@
 class Solution:
-    # https://leetcode.com/problems/can-convert-string-in-k-moves/discuss/826856/c%2B%2B-simple-sol...using-maps
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False

@@ -1,6 +1,6 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
-        def split(s, b):  # split into substrings given bit string b
+        def split(s, b):
             res = []
             x, y = s[0], b[0]
             for i in range(1, len(s)):
@@ -15,9 +15,8 @@ class Solution:
         count = 0
         for i in range(2**(len(s) - 1)):
             b = bin(i)[2:]
-            bb = '0' * (len(s) - len(b)) + b    # padding + bits
+            bb = '0' * (len(s) - len(b)) + b
             res = split(s, bb)
-            #print(bb, res)
             if len(res) == len(set(res)):
                 count = max(count, len(res))
 

@@ -28,7 +28,6 @@ for i in range(int(input())):
                             err += 1
                         else:
                             err += 1
-                            # break
 
                     if err > 1 or huh > 1:
                         break

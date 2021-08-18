@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     r, c = map(int, input().split())
     count = 0

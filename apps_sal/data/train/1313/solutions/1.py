@@ -12,7 +12,6 @@ for _ in range(T):
         g = gcd(g, A[i])
 
     f = g
-    # print(g,'$')
     for i in range(2, int(sqrt(g)) + 1):
         if(g % i == 0):
             f = i

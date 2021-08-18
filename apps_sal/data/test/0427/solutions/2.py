@@ -2,27 +2,22 @@ __author__ = 'neki'
 
 import sys
 
-#sys.stdin = open("friendsPresents.in", "r")
-#sys.stdout = open("friendsPresents.out", "w")
 
 words = input().split()
 cnt1 = int(words[0])
 cnt2 = int(words[1])
 x = int(words[2])
 y = int(words[3])
-#print(cnt1, cnt2, x, y)
 
 
 def determine(num, x, y, cnt1, cnt2):
     like1 = num - num // x
     like2 = num - num // y
     like1and2 = like1 + like2 - num + num // (x * y)
-    #print(like1, like2, like1and2)
 
     friend1 = like1 - like1and2
     friend2 = like2 - like1and2
     both = like1and2
-    #print(num, friend1, friend2, both)
 
     cond1 = 0
     cond2 = 0
@@ -49,5 +44,4 @@ while 1:
         lim2 = lim
     else:
         lim1 = lim
-    #print("(", lim1, lim2, ")")
 print(lim2)

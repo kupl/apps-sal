@@ -34,8 +34,6 @@ for i in range(n):
         R[a].append(i)
     else:
         R[a] = [i]
-# print(parent)
-# print(G)
 for i in R:
     if len(R[i]) > 2:
         x = 1

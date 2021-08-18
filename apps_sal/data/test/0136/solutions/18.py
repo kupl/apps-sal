@@ -17,5 +17,4 @@ elif j == len(b):
 elif i == len(a):
     print('<')
 else:
-    # print(')')
     print('<' if (a[i] < b[j]) else '>')

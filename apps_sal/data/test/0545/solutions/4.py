@@ -17,8 +17,8 @@ def third(a0, b0):
 n, t = list(map(int, input().split()))
 s1 = input()
 s2 = input()
-sovp = n - f(s1, s2)  # совпадающих из нашей строки
-needsovp = n - t  # необходимо совпадающих
+sovp = n - f(s1, s2)
+needsovp = n - t
 ans = [0] * n
 need1r = needsovp - sovp
 need2r = needsovp - sovp

@@ -12,7 +12,6 @@ def fact(n):
     return g1[n]
 
 
-# i-index
 class UnionFind:
     def __init__(self, n):
         self.root = [i for i in range(n + 1)]
@@ -48,7 +47,6 @@ class UnionFind:
         ret = []
         cnt = [0] * (n + 1)
         for i in range(1, n + 1):
-            #print(i, self.find(i))
             if cnt[self.find(i)] == 0:
                 cnt[self.find(i)] = 1
                 ret.append(self.size[self.find(i)])
@@ -60,7 +58,6 @@ class UnionFind:
 
 N, K = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
-# print(A)
 
 
 def f(A):
@@ -76,16 +73,12 @@ def f(A):
                     break
             if flag:
                 edge.append([i + 1, j + 1])
-    # print(edge)
 
     for a, b in edge:
         uf.union(a, b)
-    # print("check")
-    # uf.check()
 
     ret = 1
     sl = uf.size_list(N)
-    # print(sl)
     for n in sl:
         ret = (ret * fact(n)) % MOD
 
@@ -95,13 +88,11 @@ def f(A):
 uf = UnionFind(N)
 answer = f(A) % MOD
 
-# 転置
 tmp = [[] for _ in range(N)]
 for i in range(N):
     for j in range(N):
         tmp[j].append(A[i][j])
 A = tmp
-# print(A)
 
 uf = UnionFind(N)
 answer = (answer * f(A)) % MOD

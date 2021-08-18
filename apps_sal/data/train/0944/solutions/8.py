@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 for _ in range(int(input())):
     maxi = -1
@@ -25,8 +24,6 @@ for _ in range(int(input())):
             even[i] = even[i - 1]
 
         pref[i] = pref[i - 1] + a[i]
-   # print(even)
-    # print(odd)
     for i in range(n):
 
         x = a[i]
@@ -34,23 +31,19 @@ for _ in range(int(input())):
             if x % 2 == 0:
                 y = d[a[i]][0]
                 z = d[a[i]][1]
-                # print(even[z])
                 if y == 0:
 
-                    # print(even[z],i)
                     if even[z] % 2 == 0:
                         maxi = max(maxi, pref[z] - pref[y] - x)
                     continue
 
                 if (even[z] - even[y - 1]) % 2 == 0:
                     maxi = max(maxi, pref[z] - pref[y] - x)
-                # print(maxi,i,"hi")
 
             if x % 2 == 1:
                 y = d[a[i]][0]
                 z = d[a[i]][1]
                 if y == 0:
-                   # print(odd[z])
                     if odd[z] % 2 == 1:
                         maxi = max(maxi, pref[z] - pref[y] - x)
                     continue

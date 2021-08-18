@@ -1,16 +1,10 @@
-#import numpy as np
-#import math
-#from decimal import *
-#from numba import njit
 
-# @njit
 def main():
     N = int(input())
     A = list(map(int, input().split()))
 
     A = sorted(enumerate(A), key=lambda x: x[1])[::-1]
 
-    #dp = np.zeros((N+1,N+1), dtype='int64')
     dp = [[0] * (N + 1 - i) for i in range(N + 1)]
 
     m = 0
@@ -28,8 +22,6 @@ def main():
             if i == len(A):
                 m = max(m, dp[i - j][j])
 
-    # print(dp)
-    # print(np.max(dp))
     print(m)
 
 

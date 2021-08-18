@@ -6,7 +6,6 @@ class Solution:
 
         m = len(grid)
         n = len(grid[0])
-        # brute force
         max_len = max(m, n)
 
         for l in range(max_len, 0, -1):

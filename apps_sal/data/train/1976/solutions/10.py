@@ -26,9 +26,3 @@ class MagicDictionary:
         :rtype: bool
         """
         return word in self.magic_dict
-
-
-# Your MagicDictionary object will be instantiated and called as such:
-# obj = MagicDictionary()
-# obj.buildDict(dict)
-# param_2 = obj.search(word)

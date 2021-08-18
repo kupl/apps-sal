@@ -37,12 +37,10 @@ class Solution:
             for j in range(n):
                 if isPred(words[i], words[j]):
                     graph[i].append(j)
-        # graph, time: O(n*n*k), space(n*n*k)
         memo = {}
         ans = 0
         for i in range(n):
             level = dfs(i)
             if level > ans:
                 ans = level
-        # dfs, time: O(n), space(n)
         return ans

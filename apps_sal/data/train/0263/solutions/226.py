@@ -25,12 +25,10 @@ class Solution:
         for loops in range(n - 1):
             track = [0] * 10
             for k, v in enumerate(track):
-                # print(\"k: \", k, track)
                 hg = h.get(k)
                 for i in hg:
                     track[i] += max(oTrack[k], 1)
 
-            # print(\"loop: \", loops, p, track, oTrack)
             oTrack = track.copy()
 
         return sum(track) % (10 ** 9 + 7)

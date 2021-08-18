@@ -22,4 +22,3 @@ def prime_factorization(n):
 
 
 print((len(prime_factorization(gcd)) + 1))
-# print(prime_factorization(gcd))

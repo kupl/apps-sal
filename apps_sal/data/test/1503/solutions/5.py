@@ -13,18 +13,14 @@ def solve(N, M, arrs):
     arr = arrs[0]
     for r, nr in zip(arr, arr[1:]):
         next_arr[r] = nr
-    # print(next_arr)
     for i in range(1, M):
         read = arrs[i]
         next_arr_new = [None] * N
         for r, nr in zip(read, read[1:]):
-            # print("zipping ", r, nr)
             next_arr_new[r] = nr
         for r, nr in enumerate(next_arr_new):
             if next_arr[r] != nr:
                 next_arr[r] = None
-                # print("fail", r, nr)
-    # print(next_arr)
 
     starts = []
     cycs = []
@@ -41,15 +37,12 @@ def solve(N, M, arrs):
         cycs.append(curr)
 
     assert len(starts) == len(cycs)
-    # for s, c in zip(starts, cycs):
-    #     print("start ", s, "cyc", c)
 
     s = 0
     for c in cycs:
         s += c * (c + 1) // 2
     s += N
 
-    # print(s)
     return s
 
 

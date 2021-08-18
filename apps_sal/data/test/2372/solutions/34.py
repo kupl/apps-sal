@@ -1,59 +1,50 @@
-# import numpy as np
 from collections import deque
 
 
-def solve(H, W, CH, CW, DH, DW):  # , S):
-    # 後の条件分岐を簡略化するためワープしても迷路外に出ないように壁で囲む
+def solve(H, W, CH, CW, DH, DW):
     S = [input() for _ in range(H)]
-    S = ['##{}##'.format(row) for row in S]
-    S.insert(0, '##{}##'.format('#' * W))
-    S.insert(0, '##{}##'.format('#' * W))
-    S.append('##{}##'.format('#' * W))
-    S.append('##{}##'.format('#' * W))
+    S = ['
+    S.insert(0, '
+    S.insert(0, '
+    S.append('
+    S.append('
 
-    MAX_COST = 10 ** 9
-    Cost = [[MAX_COST for _ in range(W + 4)] for _ in range(H + 4)]
-    # Cost = np.full((H,W),MAX_COST)
+    MAX_COST=10 ** 9
+    Cost=[[MAX_COST for _ in range(W + 4)] for _ in range(H + 4)]
 
-    # print(S)
 
-    ans = -1
+    ans=-1
 
-    cost0 = deque()
+    cost0=deque()
 
     cost0.append((CH + 1, CW + 1, 0))
-    Cost[CH + 1][CW + 1] = 0
+    Cost[CH + 1][CW + 1]=0
 
-    # used = set()
-    walk = [(1, 0), (0, 1), (-1, 0), (0, -1)]
-    warp = [(i, j) for i in range(-2, 3) for j in range(-2, 3) if (i, j) not in [(0, 0)] + walk]
-    # print(warp)
+    walk=[(1, 0), (0, 1), (-1, 0), (0, -1)]
+    warp=[(i, j) for i in range(-2, 3) for j in range(-2, 3) if (i, j) not in [(0, 0)] + walk]
 
-    cost1 = deque()
+    cost1=deque()
 
     while cost0:
-        h, w, c = cost0.popleft()
+        h, w, c=cost0.popleft()
         cost1.append((h, w, c))
 
         for i, j in walk:
-            dh = h + i
-            dw = w + j
+            dh=h + i
+            dw=w + j
             if S[dh][dw] == '.' and c < Cost[dh][dw]:
-                Cost[dh][dw] = c
-                # print("updl ", i,j,dh,dw,c)
+                Cost[dh][dw]=c
                 cost0.appendleft((dh, dw, Cost[dh][dw]))
 
         if len(cost0) == 0:
 
             while cost1:
-                h, w, c = cost1.popleft()
-                # print(h,w,c)
+                h, w, c=cost1.popleft()
                 for i, j in warp:
-                    dh = h + i
-                    dw = w + j
-                    # print(i,j)
+                    dh=h + i
+                    dw=w + j
                     if S[dh][dw] == '.' and c + 1 < Cost[dh][dw]:
-                        Cost[dh][dw] = c + 1
+                        Cost[dh][dw]=c + 1
                         cost0.append((dh, dw, Cost[dh][dw]))
 
     if Cost[DH + 1][DW + 1] == MAX_COST:
@@ -63,13 +54,12 @@ def solve(H, W, CH, CW, DH, DW):  # , S):
 
 
 def __starting_point():
-    H, W = list(map(int, input().split()))
-    CH, CW = list(map(int, input().split()))
-    DH, DW = list(map(int, input().split()))
+    H, W=list(map(int, input().split()))
+    CH, CW=list(map(int, input().split()))
+    DH, DW=list(map(int, input().split()))
 
-    # S=[input() for _ in range(H)]
 
-    solve(H, W, CH, CW, DH, DW)  # , S)
+    solve(H, W, CH, CW, DH, DW)
 
 
 __starting_point()

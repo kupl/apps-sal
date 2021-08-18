@@ -1,7 +1,5 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        # Backwards!!!!
-        # Change nums to arr
 
         step = 0
 

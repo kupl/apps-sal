@@ -12,7 +12,6 @@ for c in s:
 
 ret = False
 
-# if the robot doesnt move or endpoint is the start point
 if (a == 0 and b == 0):
     ret = True
 
@@ -21,7 +20,6 @@ cx, cy = 0, 0
 for c in s:
     cx += X[c]
     cy += Y[c]
-    # dx could be 0
     k = 0
     if dx != 0 and (a - cx) % dx == 0:
         k = (a - cx) // dx

@@ -28,19 +28,3 @@ class Solution:
                 odd -= 1
 
         return count
-
-# def numberOfSubarrays(self, nums: List[int], k: int) -> int:
-#     i = count = nice_count = odd_count = 0
-#     for j in range(len(nums)):
-#         if nums[j] % 2 == 1:
-#             odd_count += 1
-#             if odd_count == k:
-#                 count = 0
-#                 while odd_count == k:
-#                     if nums[i] % 2 == 1:
-#                         odd_count -= 1
-#                     i += 1
-#                     count += 1
-#         nice_count += count
-
-#     return nice_count

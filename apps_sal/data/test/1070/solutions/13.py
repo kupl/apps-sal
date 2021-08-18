@@ -12,5 +12,4 @@ for i in range(1, n):
     d = a[i]
     if s > m:
         m = s
-    # print(s,a[i])
 print(m)

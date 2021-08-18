@@ -1,4 +1,3 @@
-# 2700ms
 def mem_alloc(banks):
     banks, redist = tuple(banks), set()
     while banks not in redist:

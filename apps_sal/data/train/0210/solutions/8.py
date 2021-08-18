@@ -1,8 +1,4 @@
 class Solution:
-    # @param {integer[]} nums
-    # @param {integer} k
-    # @param {integer} t
-    # @return {boolean}
     def containsNearbyAlmostDuplicate(self, nums, k, t):
         if len(nums) == 0 or len(nums) == 1 or k < 1 or t < 0:
             return False

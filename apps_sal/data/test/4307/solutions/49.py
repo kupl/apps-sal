@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def II(): return int(input())
 def MII(): return list(map(int, input().split()))

@@ -1,12 +1,3 @@
-# a, b, c (i subscript)
-# c = 0
-# -> a + b = 2 -> 2 flips
-# -> a + b = 1 -> 1 flip
-# -> a + b = 0 -> 0 flips
-# c = 1
-# -> a + b = 2 -> 0 flips
-# -> a + b = 1 -> 0 flips
-# -> a + b = 0 -> 1 flip
 
 class Solution:
     def minFlips(self, a: int, b: int, c: int) -> int:

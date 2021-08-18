@@ -1,7 +1,6 @@
 class Solution:
 
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
-        # 97 = ord('a')
 
         def wordToInt(word: str) -> int:
             n = 0

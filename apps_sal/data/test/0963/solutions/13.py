@@ -1,5 +1,5 @@
 MOD = 998244353
-N, K = list(map(int, input().split()))  # Nはマス目の数、Kは区間の数(Kは10以下)
+N, K = list(map(int, input().split()))
 kukan = [tuple(map(int, input().split())) for _ in range(K)]
 
 dp = [0] * (N + 1)

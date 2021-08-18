@@ -4,7 +4,6 @@ class Solution:
         n = len(arr)
         m = arr[(n - 1) // 2]
         strong = []
-        # for i in range(len(arr)):
         i, j = 0, len(arr) - 1
         while i <= j:
             if abs(arr[i] - m) <= abs(arr[j] - m):

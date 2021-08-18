@@ -30,7 +30,6 @@ for q in range(Q):
                 check[to] = 1
                 Q.append(to)
 
-    # print(E2)
     ELIST = E2
 
     check = [0] * (n + 1)

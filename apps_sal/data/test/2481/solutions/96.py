@@ -1,14 +1,11 @@
 def Wall():
     h, w = list(map(int, input().split()))
 
-    # Warshall Floyd配列
     wf = [list(map(int, input().split())) for _ in range(10)]
 
-    # Warshall Floyd初期値代入
     for i in range(10):
         wf[i][i] = 0
 
-    # Warshall Floyd
     for i in range(10):
         for j in range(10):
             for k in range(10):

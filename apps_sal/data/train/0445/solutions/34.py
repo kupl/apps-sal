@@ -5,7 +5,6 @@ class Solution:
         from collections import Counter
         dic = sorted(Counter(nums).items())
         res = [dic[0][0]]
-        # print(dic)
         if dic[0][1] > 3:
             res += [dic[0][0]] * 3
         elif dic[0][1] == 3:

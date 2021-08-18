@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     for t in range(int(input())):
         k = int(input().strip(" "))
@@ -13,5 +12,3 @@ try:
             print(sum)
 except EOFError as e:
     pass
-# except ValueError as r:
-#     pass

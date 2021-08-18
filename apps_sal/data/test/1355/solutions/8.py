@@ -49,7 +49,6 @@ def solve(polygon, p, q):
             total_t += t - previous_t
         previous_t = t
         count += order
-    # print(total_t)
 
     print(total_t * (q - p).length())
 

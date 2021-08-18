@@ -55,16 +55,13 @@ class trie:
 
 
 t = int(input())
-# tr = trie()
 st = set('02468')
 mp = defaultdict(int)
 res = []
 while t > 0:
     t -= 1
     c, s = input().split()
-    # s = s.zfill(18)
     if c == '+':
-        # ss = [str(int(i)%2) for i in s]
         ss = ''
         for i in s:
             if i in st:
@@ -72,13 +69,8 @@ while t > 0:
             else:
                 ss += '1'
 
-        # ss = ''.join(ss)
         mp[int(ss, 2)] += 1
-        # print('**',ss,int(ss,2))
-        # tr.add(s,0)
     elif c == '-':
-        # ss = [str(int(i)%2) for i in s]
-        # ss = ''.join(ss)
         ss = ''
         for i in s:
             if i in st:
@@ -86,11 +78,7 @@ while t > 0:
             else:
                 ss += '1'
         mp[int(ss, 2)] -= 1
-        # tr.remove(s,0)
     elif c == '?':
-        # v = tr.search(s,0,10**6)
-        # print(v)
-        # print('##',ss,int(ss,2))
         res.append(mp[int(s, 2)])
 
 print(*res, sep='\n')

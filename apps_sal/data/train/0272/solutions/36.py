@@ -1,11 +1,6 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        # box & key & open
         ret = 0
-        # status 0:close, 1:open, 2:opened
-        # step 1: open boxes, if nothing can be opened, stop
-        # step 2: update candies, new boxes, keys(open status)
-        # repeat step 1
         n = len(status)
 
         available_to_open = [box for box in initialBoxes if status[box]]

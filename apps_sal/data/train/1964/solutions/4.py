@@ -4,12 +4,8 @@ class Solution:
         :type root: TreeNode
         :rtype: List[List[str]]
         """
-        # The length of the entries should be 2^height - 1
-        # The root will always be at the center
-        # Recurse on the left and right subtrees pass the new centers and the lengths
         height = 0
 
-        # O(n)
         def Dfs(node, currHeight):
             nonlocal height
             if node == None:
@@ -19,10 +15,8 @@ class Solution:
             Dfs(node.right, currHeight + 1)
         Dfs(root, 1)
 
-        # O(nlogn)
         ret = [[""] * (2**height - 1) for _ in range(height)]
 
-        # O(n)
         def rec(node, currHeight, start, end):
             if(node == None):
                 return

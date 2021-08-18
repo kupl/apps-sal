@@ -30,8 +30,4 @@ else:
     result = sum(l_final) - sum(l) + 1
 
 
-# print(index)
-# print(l_up)
-# print(l_down)
-# print(l_final)
 print(result)

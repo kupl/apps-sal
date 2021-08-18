@@ -7,7 +7,6 @@ class Solution:
         """
         if nRows == 1:
             return s
-        # nRows strings, each letter of s falls into a string
         tmp = ['' for i in range(nRows)]
         index = -1
         step = 1

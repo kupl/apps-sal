@@ -7,7 +7,6 @@ class Solution:
             for j in range(len(matrix[0])):
                 a = a + '%d' % matrix[i][j]
                 b = b + '%d' % (1 - matrix[i][j])
-       #     print(a,b,dic)
             if a not in dic:
                 dic[a] = 1
             else:
@@ -17,7 +16,6 @@ class Solution:
             else:
                 dic[b] += 1
         m = 0
-        # print(dic)
         for k in dic.keys():
             m = max(m, dic[k])
         return m

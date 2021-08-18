@@ -1,4 +1,3 @@
-# E
 import numpy as np
 n, m = list(map(int, input().split()))
 lists = list(np.arange(1, n + 1))

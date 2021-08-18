@@ -31,6 +31,4 @@ class Solution:
         for i in range(arrLen):
             ans = max(ans, check(i))
 
-        # print(visited)
-
         return ans

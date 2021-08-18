@@ -8,7 +8,6 @@ lis = [0] + [lis[i] - 1 for i in range(n)]
 ruiseki = list(itertools.accumulate(lis))
 
 ruiseki = [x % k for x in ruiseki]
-# print(ruiseki)
 
 counter = defaultdict(int)
 ans = 0

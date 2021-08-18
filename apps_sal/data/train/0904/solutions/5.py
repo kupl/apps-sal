@@ -1,4 +1,3 @@
-# cook your dish here
 import heapq
 for _ in range(int(input())):
 

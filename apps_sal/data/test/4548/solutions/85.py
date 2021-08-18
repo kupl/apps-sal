@@ -1,4 +1,3 @@
-# 全体のマスを開始位置でスライス、料金所だけ抽出し、要素の個数で条件分岐
 N, M, X = list(map(int, input().split()))
 A = list(map(int, input().split()))
 

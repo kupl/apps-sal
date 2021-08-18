@@ -5,19 +5,17 @@ p = []
 flg = 0
 for i in range(n):
     p = list(input().split())
-    # print(p)
     if p[0] == "1":
-        flg ^= 1  # flg == 1 の場合は左右反転
-        # print(flg)
+        flg ^= 1
     else:
-        if p[1] == "1":  # 1の場合は先頭
-            if flg == 1:  # 1の場合は反転
+        if p[1] == "1":
+            if flg == 1:
                 d.append(p[2])
             else:
-                d.appendleft(p[2])  # 左から入れる
+                d.appendleft(p[2])
         else:
             if flg == 1:
-                d.appendleft(p[2])  # 左から入れる
+                d.appendleft(p[2])
             else:
                 d.append(p[2])
 

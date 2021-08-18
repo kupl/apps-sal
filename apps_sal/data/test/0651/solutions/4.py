@@ -35,7 +35,7 @@ for l in range(4):
 
                     if (posy < 0 or posy >= n or posx < 0 or posx >= m):
                         break
-                    elif (a[posy][posx] == '#'):
+                    elif (a[posy][posx] == '
                         break
                     elif (a[posy][posx] == 'E'):
                         ans += 1

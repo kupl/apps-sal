@@ -1,4 +1,3 @@
-# python 3.5.2
 
 n, q = [int(x) for x in input().split()]
 arr = [int(x) for x in input().split()]

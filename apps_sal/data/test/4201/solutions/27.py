@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sun Sep  6 01:25:38 2020
 
@@ -19,11 +18,8 @@ for comb_H in [list(combinations(range(H), a)) for a in range(H + 1)]:
                 tmp = 0
                 for i in range(H):
                     for j in range(W):
-                        if i not in tuple_H and j not in tuple_W and C[i][j] == "#":
-                            tmp += 1
-                # print(tuple_H)
-                # print(tuple_W)
-                # print(tmp)
+                        if i not in tuple_H and j not in tuple_W and C[i][j] == "
+                        tmp += 1
                 if tmp == K:
                     ans += 1
 print(ans)

@@ -5,8 +5,6 @@ class Solution:
         def find_degree(n, degree=0):
             if n == 1:
                 return degree
-            # if n in degree_cache:
-            #     return degree_cache[n]
 
             if n % 2 == 0:
                 degree = find_degree(n // 2, degree + 1)

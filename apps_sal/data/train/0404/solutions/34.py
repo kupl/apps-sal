@@ -3,7 +3,6 @@ class Solution:
         self.dp = {}
         self.arr = A
         ans = self.helper(0, K - 1)
-        # print(self.dp)
         return ans
 
     def helper(self, i, k):

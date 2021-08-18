@@ -1,9 +1,5 @@
 import sys
 
-# import bisect
-# from collections import deque
-# sys.setrecursionlimit(100000)
-
 
 def Ri(): return [int(x) for x in sys.stdin.readline().split()]
 def ri(): return sys.stdin.readline().strip()

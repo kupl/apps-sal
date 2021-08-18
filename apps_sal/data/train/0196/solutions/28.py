@@ -1,9 +1,3 @@
-# case1: ---------|
-
-# case2: ---------|----------
-#             |--------|
-#              suf  pre
-#        maxsubarray = total - min(subarray)
 
 
 class Solution:

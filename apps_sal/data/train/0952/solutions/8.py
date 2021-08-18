@@ -4,7 +4,6 @@ con = []
 for i in alp:
     if i not in vo:
         con.append(i)
-# print(con)
 for _ in range(int(input())):
     sm = 0
     uin = input().strip()

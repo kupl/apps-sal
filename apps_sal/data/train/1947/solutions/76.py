@@ -1,7 +1,7 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         A_dict = []
-        B_dict = {}  # final dictionary of B taking max of cnt
+        B_dict = {}
         ans = []
         for ww in A:
             temp = {}

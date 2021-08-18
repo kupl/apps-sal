@@ -26,8 +26,6 @@ for tests in range(t):
                 USE[to] = USE[x] + 1
                 Q.append(to)
 
-    # print(USE)
-
     if USE[b] <= da:
         print("Alice")
         continue
@@ -53,7 +51,6 @@ for tests in range(t):
                 Q.append(to)
 
     DIA = max(USE2)
-    # print(MAXIND,USE2,DIA)
 
     if DIA <= da * 2:
         print("Alice")

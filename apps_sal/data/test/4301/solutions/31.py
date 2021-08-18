@@ -14,7 +14,6 @@ for i, a in enumerate(sorted(A, reverse=True)):
         second = a
     else:
         break
-# print(first, second)
 
 for a in A:
     if a == first:

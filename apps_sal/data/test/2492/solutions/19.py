@@ -13,12 +13,11 @@ l = -10**18
 r = 10**18
 
 while l + 1 < r:
-    x = (l + r) // 2  # 中央位置
+    x = (l + r) // 2
     cnt = 0
     if x >= 0:
         cnt += N * len(zero)
 
-    # x//pos : 中央値/posのそれぞれの値
     cnt += A.searchsorted(x // positive, side="right").sum()
     cnt += (N - A.searchsorted(-(-x // negative), side="left")).sum()
     cnt -= np.count_nonzero(A * A <= x)

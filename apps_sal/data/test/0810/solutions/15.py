@@ -13,8 +13,6 @@ def L(): return list(R())
 
 mod = 10**9 + 7
 
-# print(bisect.bisect_right([1,2,3],2))
-# print(bisect.bisect_left([1,2,3],2))
 
 a, b, n = R()
 

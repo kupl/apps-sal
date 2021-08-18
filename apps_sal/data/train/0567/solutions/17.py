@@ -1,4 +1,3 @@
-# cook your dish here
 for test_case in range(int(input())):
     n = int(input())
     canvas = list(map(int, input().split(' ')))

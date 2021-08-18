@@ -24,15 +24,10 @@ def F(x):
 
 for i in range(30):
     _2.append(_2[i] * 2)
-# for i in _2:
-#   print(i)
 
 for i in map(int, input().split()):
     a.append(i)
-# a.sort()
 S = set(a)
-# for i in a:
-#   print(i)
 
 
 ans = 1
@@ -52,7 +47,6 @@ for i in a:
             if FS(i + j):
                 ans = 3
                 A[2] = i + j
-     #           print("ans is ",i,j)
                 break
 print(ans)
 if(ans == 3):

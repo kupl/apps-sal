@@ -7,7 +7,6 @@ i8 = np.int64
 def solve(a, b, t, K, N):
     t1 = t // K
     d = t % K * 2
-    # b が a から a + d の位置にあれば衝突する
     x = 0
     y = 0
     ans = 0

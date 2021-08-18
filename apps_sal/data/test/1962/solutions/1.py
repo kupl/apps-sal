@@ -24,7 +24,6 @@ a = getIntList()
 a.sort()
 lowLim = a[0]
 upLim = lowLim + l
-# print(a);
 
 
 def solve():
@@ -39,7 +38,6 @@ def solve():
         rest = k - diff
         nbBad -= diff
         value += a[i0 - rest + 1]
-        #print(i0-rest+1, a[i0-rest+1])
         i0 -= rest
     return value
 

@@ -16,13 +16,9 @@ class Solution:
         for a in ages:
             c[a] += 1
 
-        # print(c)
-
         for i in range(len(c)):
             for j in range(len(c)):
                 if self.check(i, j):
-                    #print(i, j)
-                    #print(ages[i], ages[j])
                     cnt += c[i] * c[j]
                     if i == j:
                         cnt -= c[i]

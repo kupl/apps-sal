@@ -15,7 +15,6 @@ if((la - lb) % gcd1 == 0):
     print(min(luca, lucb))
 else:
 
-    # print(luca,lucb)
     op1 = lucb - (la - lb) % gcd1
     op2 = luca - (lb - la) % gcd1
     opf = max(op1, op2, 0)

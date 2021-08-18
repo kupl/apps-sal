@@ -17,12 +17,12 @@ def DP(N, student_list):
     ans_list = []
     ans = 0
 
-    for left in range(N):  # 初期値設定 right = 0
+    for left in range(N):
         activity = student_list[left][0]
         distance_l = abs(left - student_list[left][1])
         DP_map[left + 1][0] = DP_map[left][0] + activity * distance_l
 
-    for right in range(N):  # 初期値設定 left = 0
+    for right in range(N):
         activity = student_list[right][0]
         distance_r = abs((N - 1 - right) - student_list[right][1])
         DP_map[0][right + 1] = DP_map[0][right] + activity * distance_r

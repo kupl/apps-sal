@@ -4,7 +4,6 @@ class Solution:
         for i, a in enumerate(A):
             for j in range(i):
                 dp[i][a - A[j]] = dp[j][a - A[j]] + 1
-        # print(dp)
         m = 0
         for d in dp:
             x = d.values()

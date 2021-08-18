@@ -12,5 +12,4 @@ class Solution:
             if rem == 0:
                 hash_map[key] = hash_map.get(key, []) + [t]
 
-        # print(hash_map, ans)
         return ans

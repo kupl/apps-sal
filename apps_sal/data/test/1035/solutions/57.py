@@ -1,14 +1,10 @@
 a, b = list(map(int, input().split()))
 
-# a,bの最大公約数
-
 
 def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
-
-# nを素因数分解したリストを返す
 
 
 def factorization(n):

@@ -1,10 +1,8 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
 
-        # subarr that has target sum
         len_to_start = collections.defaultdict(list)
 
-        # find
         start, end = 0, 1
         tmp_sum = arr[0]
         earliest_end, latest_start = len(arr), 0
@@ -23,7 +21,6 @@ class Solution:
         if earliest_end > latest_start:
             return -1
 
-        # find shortest
         for l, starts in list(len_to_start.items()):
             if len(starts) > 2:
                 len_to_start[l] = [starts[0], starts[-1]]

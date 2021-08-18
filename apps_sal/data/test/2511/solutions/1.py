@@ -3,7 +3,7 @@ from collections import deque
 def input(): return sys.stdin.readline().rstrip()
 
 
-def per(n, r, mod=10**9 + 7):  # 順列数
+def per(n, r, mod=10**9 + 7):
     per = 1
     for i in range(r):
         per = per * (n - i) % mod

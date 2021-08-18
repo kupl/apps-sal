@@ -31,6 +31,3 @@ for i in range(0, n, 2):
 
 for i in range(v - 1, u - 1, -1):
     print(''.join(t[i]))
-
-
-# Made By Mostafa_Khaled

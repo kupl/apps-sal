@@ -16,7 +16,6 @@ def __starting_point():
             k1 = k
             ans += b
             itr *= 2
-            # print(k)
 
         print(ans - b)
 

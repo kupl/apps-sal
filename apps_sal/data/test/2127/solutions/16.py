@@ -1,6 +1,4 @@
 import sys
-#sys.stdin = open('E:\\Sublime\\in.txt', 'r')
-#sys.stdout = open('E:\\Sublime\\out.txt', 'w')
 tc = int(sys.stdin.readline())
 x = 0
 y = 0

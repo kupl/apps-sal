@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 w = []
 for _ in range(t):

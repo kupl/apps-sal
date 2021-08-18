@@ -1,5 +1,4 @@
 def sum_str(a, b):
-    # happy coding !
     if len(a) == 0 and len(b) == 0:
         return '0'
     if len(a) == 0:

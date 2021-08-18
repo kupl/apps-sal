@@ -1,6 +1,5 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # union find
 
         dsu = [False] * (len(arr) + 1)
         dsu[0] = 0
@@ -45,7 +44,6 @@ class Solution:
                 union(x, x + 1)
             if size(x) == m:
                 dsu[0] += 1
-            # print(dsu[0])
             if dsu[0] > 0:
                 ans = i
         return ans

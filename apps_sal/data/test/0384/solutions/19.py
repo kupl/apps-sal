@@ -1,4 +1,3 @@
-# put your current running code in here
 
 n = int(input())
 s = list(input())

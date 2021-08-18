@@ -22,7 +22,6 @@ for i in range(n):
     stu.append(d)
 
 cnt = Counter(stu)
-# print(cnt)
 ans = 0
 for v in cnt.values():
     ans += (v // 2) * 2

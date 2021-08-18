@@ -12,7 +12,7 @@ while True:
     packs = 0
     for c in C:
         packs += C[c] // psize
-    if packs < n:  # Previous possible, this one not
+    if packs < n:
         break
     psize += 1
 print(psize - 1)

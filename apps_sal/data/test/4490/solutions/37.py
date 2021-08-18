@@ -1,6 +1,3 @@
-# ABC122
-# A Double Helix
-# AT CG
 b = input()
 
 if b == "A":

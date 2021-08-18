@@ -8,8 +8,6 @@ for testcase in range(Q):
     A = Counter((list(map(int, input().split()))))
     S = sorted(list(A.values()), reverse=True)
 
-    # print(A)
-    # print(S)
     NOW = 10**10
 
     ANS = 0

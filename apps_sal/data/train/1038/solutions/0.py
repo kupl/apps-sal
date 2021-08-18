@@ -49,7 +49,6 @@ for _ in range(t):
 
     r = pow(2, n, MOD)
     b = pow2(n - 2)
-    # print(b)
     r -= (4 * b[0][0]) % MOD
     r -= (2 * b[1][0]) % MOD
     r -= b[2][0]

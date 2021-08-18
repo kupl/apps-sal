@@ -1,4 +1,3 @@
-# D - Factorization
 
 N, M = map(int, input().split())
 MOD = 10**9 + 7

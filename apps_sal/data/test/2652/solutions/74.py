@@ -6,7 +6,6 @@ for i in range(N):
     A.append((x, y, i))
 A = sorted(A)
 B = sorted(A, reverse=False, key=lambda x: x[1])
-# print(A,B)
 E = [[]for i in range(N)]
 for i in range(N - 1):
     x1, x2 = A[i][2], A[i + 1][2]
@@ -16,8 +15,6 @@ for i in range(N - 1):
     E[y1].append((y2, B[i + 1][1] - B[i][1]))
     E[y2].append((y1, B[i + 1][1] - B[i][1]))
 G = E
-# G[v] = [w, ...]
-#     グラフG上で頂点vが隣接する辺集合
 
 used = [0] * N
 que = [(c, w) for w, c in G[0]]

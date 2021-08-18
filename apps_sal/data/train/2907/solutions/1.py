@@ -1,8 +1,4 @@
-# this is [A000110, A002870, A024417]
 
-# Stirling numbers of second kind
-# http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html
-# S(n,k) = S(n-1,k-1)+k*S(n-1,k)
 S = {}
 for n in range(1, 1800):
     S[(n, 1)] = S[(n, n)] = 1

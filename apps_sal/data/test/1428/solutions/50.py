@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 import numpy as np
 from itertools import permutations
@@ -24,7 +23,6 @@ answer = 10 ** 10
 for X in permutations(list(range(C)), 3):
     temp = 0
     for i in range(3):
-        # X[i]の色にする
         x = X[i]
         y = feeling[:, x]
         temp += (three[i] * y).sum()
@@ -32,4 +30,3 @@ for X in permutations(list(range(C)), 3):
         answer = temp
 
 print(answer)
-# 13

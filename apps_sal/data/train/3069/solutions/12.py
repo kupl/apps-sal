@@ -7,5 +7,3 @@ def greet(language):
         return x
     else:
         return "Welcome"
-
-     # return ("welcome")

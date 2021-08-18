@@ -1,4 +1,3 @@
-# Codeforces #492 problem A
 n = int(input())
 i = 1
 sum = 1

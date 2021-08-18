@@ -17,8 +17,6 @@ def next_free_from_blocks(n, blocks):
     return res, m
 
 
-#############
-
 n, m, k = i_ints()
 
 blocks = i_ints()

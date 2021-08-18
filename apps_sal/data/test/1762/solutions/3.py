@@ -23,10 +23,8 @@ b = [int(x.split()[1]) for x in lines[1:]]
 
 heap = []
 
-#heap = PriorityQueueSet()
 free_servers = k
 answers = []
-#global_minimum = 0
 heap = [a[i] + b[i] for i in range(k)]
 answers = heap[:]
 heapq.heapify(heap)
@@ -40,12 +38,10 @@ for i in range(k):
 for i in range(k, n):
 
     cur_min = int(heapq.heappop(heap))
-    will_load = int(max(cur_min, a[i]) + b[i])  # 11111111
+    will_load = int(max(cur_min, a[i]) + b[i])
     heapq.heappush(heap, will_load)
-    # print(will_load)
     answers.append(will_load)
 
 t2 = time()
-# print(t2-t1)
 
 stdout.write('\n'.join([str(x) for x in answers]))

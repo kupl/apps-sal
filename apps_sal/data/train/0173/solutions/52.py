@@ -23,7 +23,4 @@ class Solution:
                 else:
                     return False
 
-            # if i > k //2:
-            #     break
-
         return True

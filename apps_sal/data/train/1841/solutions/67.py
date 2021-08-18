@@ -1,12 +1,10 @@
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
 
-        # calc median
         sarr = sorted(arr)
         L = len(arr)
 
         if L / 2 % 1 == 0:
-            #    median = (sarr[int(L/2)] + sarr[int(L/2)-1]) / 2
             median = sarr[int((L - 1) / 2)]
         else:
             median = sarr[int(L / 2 - .5)]

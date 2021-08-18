@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     p = input()
@@ -7,8 +6,8 @@ for _ in range(t):
 
     for i in p:
 
-        if i == '#' and cnt != 1:
-            if cnt > maxi:
+        if i == '
+           if cnt > maxi:
                 maxi = cnt
                 ans += 1
 
@@ -17,8 +16,8 @@ for _ in range(t):
         elif i == '.':
             cnt += 1
 
-        elif i == '#' and cnt == 1:
-            continue
+        elif i == '
+           continue
 
     if cnt != 1:
         if cnt > maxi:

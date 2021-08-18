@@ -8,8 +8,8 @@ def read():
 
 
 def binom_preprocess(n, MOD=10**9 + 7):
-    f = [0 for i in range(n + 1)]  # n!
-    invf = [0 for i in range(n + 1)]  # (n!)^-1
+    f = [0 for i in range(n + 1)]
+    invf = [0 for i in range(n + 1)]
     f[0] = 1
     f[1] = 1
     invf[0] = 1
@@ -30,8 +30,6 @@ def binom(n, k, f, invf, MOD=10**9 + 7):
 
 
 def solve(N, K, MOD=10**9 + 7):
-    # k: 人数0の部屋の数
-    # N人を(N-k)部屋に押し込む方法を考える
     f, invf = binom_preprocess(N, MOD)
     ans = 0
     for k in range(0, min(N, K + 1)):

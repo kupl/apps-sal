@@ -4,7 +4,7 @@ a = list(map(int, input().split()))
 
 a.sort()
 
-b = []  # subsums
+b = []
 curr = 0
 
 for i in a:

@@ -1,5 +1,4 @@
 def am_I_afraid(day, num):
-    # your code here
     rep = False
     lst1 = [('monday', 12), ('wednesday', 34), ('thursday', 0), ('saturday', 56), ('sunday', 666), ('sunday', -666)]
 

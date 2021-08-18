@@ -1,5 +1,3 @@
-#! usr/bin/env python3
-# coding:UTF-8
 
 ans = 0
 cnt = 0

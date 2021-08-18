@@ -13,7 +13,6 @@ class Solution:
             dist, node = heapq.heappop(heap)
             if node in visited:
                 continue
-            #print(dist, node, visited)
             res += dist
             visited.add(node)
             for (n, d) in graph[node]:

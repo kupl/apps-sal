@@ -7,7 +7,6 @@ class Solution:
 
         while q:
             x, y = q.popleft()
-            #TODO: check
             if x == 1 or math.gcd(x, y) == 1:
                 ans.append(f'{x}/{y}')
             if x + 1 < y:

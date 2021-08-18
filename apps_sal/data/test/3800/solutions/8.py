@@ -24,7 +24,6 @@ def __starting_point():
     unique_sum = list(freq.keys())
     unique_sum = set(unique_sum)
     ans = 0
-    # print(fre÷q)
 
     for i in unique_sum:
         if i != 0 and a % i == 0 and a // i in freq:
@@ -37,7 +36,6 @@ def __starting_point():
     if a == 0:
         ans = (freq[0] * len(sum_pairs)) + (freq[0] * (len(sum_pairs) - freq[0]))
 
-    # print(sum_pairs)
     print(ans)
 
 

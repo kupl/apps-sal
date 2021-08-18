@@ -5,6 +5,4 @@ for i in range(t):
 
     a = (y + 1) * k - 1
 
-    # print(a)
-
     print((a - 1) // (x - 1) + 1 + k)

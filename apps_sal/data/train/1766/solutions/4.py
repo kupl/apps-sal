@@ -27,13 +27,13 @@ def convert_to_base(a, b):
 
 
 def skrzat(base, number):
-    if base == 'b':  # b->d
+    if base == 'b':
         bits = reversed([int(bit) for bit in number])
         dec = 0
         for power, bit in enumerate(bits):
             dec += bit * ((-2)**power)
 
         return "From binary: {0} is {1}".format(number, dec)
-    else:  # d->b
+    else:
         binary = convert_to_base(number, -2)
         return "From decimal: {0} is {1}".format(number, binary)

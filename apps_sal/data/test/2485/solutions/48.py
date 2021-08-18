@@ -16,7 +16,6 @@ def main():
     nh = max(Mh)
     nw = max(Mw)
 
-    # 交差する場所に置かれた処理物があるか？
     lh = Counter(Mh)[nh]
     lw = Counter(Mw)[nw]
 

@@ -27,7 +27,6 @@ def main():
         print(count)
 
 
-# call the main method
 def __starting_point():
     main()
 

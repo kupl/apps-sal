@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
 
-# import
-#import math
-#import numpy as np
 n = int(input())
 V = list(map(int, input().split()))
 

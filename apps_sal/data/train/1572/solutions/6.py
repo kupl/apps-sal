@@ -1,4 +1,3 @@
-# cook your dish here
 from multiprocessing import SimpleQueue as queue
 from collections import defaultdict
 from operator import itemgetter

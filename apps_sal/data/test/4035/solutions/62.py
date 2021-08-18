@@ -1,4 +1,3 @@
-# coding=utf-8
 
 def __starting_point():
     A, B = list(map(int, input().split()))
@@ -12,8 +11,6 @@ def __starting_point():
 
     else:
         print('-1')
-
-    #print(ans, ans*0.08, ans*0.1)
 
 
 __starting_point()

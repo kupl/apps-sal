@@ -21,8 +21,6 @@ else:
         ar.remove(ar[0])
 
 
-# print(ar)
-
 totalread = 0
 totalmove = len(ar)
 

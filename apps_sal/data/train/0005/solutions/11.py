@@ -21,11 +21,9 @@ for q in range(int(sys.stdin.readline())):
     n = int(sys.stdin.readline())
     d = [int(i) for i in sys.stdin.readline().split()]
     st = set(ps(d))
-    # print(st)
     d.reverse()
     anss = []
     ap = ps(d)
-    # print(ap)
     for a in ap:
         b = n - 2 - a
         if b in st:

@@ -1,5 +1,4 @@
 class Solution:
-    # bottom-up
     def countOrders(self, n: int) -> int:
         dp = {}
         dp[1] = 1

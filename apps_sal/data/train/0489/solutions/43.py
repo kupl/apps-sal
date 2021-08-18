@@ -7,7 +7,6 @@ class Solution:
                 j = len(stack) - 1
 
                 while j >= 0 and A[stack[j]] <= a:
-                    # print(i, a, j, stack, A[stack[j]])
                     res = max(res, i - stack[j])
                     j -= 1
             else:

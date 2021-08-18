@@ -1,8 +1,6 @@
 import sys
 from itertools import combinations
 
-# https://ikatakos.com/pot/programming_algorithm/data_structure/union_find_tree
-
 
 class UnionFind:
     def __init__(self, n):

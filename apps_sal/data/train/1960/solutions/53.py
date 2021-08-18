@@ -8,9 +8,7 @@ class Solution:
             for j in range(len(result)):
                 if(queries[i] == result[j]):
                     real.append(j)
-                    #print('position', j)
                     result.pop(j)
                     result.insert(0, queries[i])
-                    # print(result)
                     continue
         return real

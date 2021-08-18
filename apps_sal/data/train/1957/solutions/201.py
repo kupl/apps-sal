@@ -1,7 +1,5 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        # lets dp it
-        # one way is to get all the paths using the obs
         heap = []
         heapq.heappush(heap, (0, 0, 0, k))
 

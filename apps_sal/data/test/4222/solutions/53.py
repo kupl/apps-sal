@@ -11,7 +11,6 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-#import numpy
 n, k = L()
 l = [1] * n
 for i in range(k):

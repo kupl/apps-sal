@@ -18,9 +18,6 @@ a.sort(key=lambda x: -len(x))
 
 b = [len(k) for k in a]
 
-# for k in range(MV):
-#     if b[k]>0:
-#         print(k, b[k], a[k])
 
 best_res = b[0]
 for pos in range(MV):

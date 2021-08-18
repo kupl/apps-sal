@@ -10,7 +10,6 @@ else:
     row_from_down = remaining // (m - 1)
 
     row = n - row_from_down
-    # 11 10
     if row % 2:
         col = remaining % (m - 1)
         col = m - col

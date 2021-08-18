@@ -11,7 +11,6 @@ for _ in range(int(input())):
         i = 0
         j = 0
         while i < k - 1 and j < n:
-            # for i in range(k-1):
             if s % 2 == 0:
                 s += a[j]
                 j += 1

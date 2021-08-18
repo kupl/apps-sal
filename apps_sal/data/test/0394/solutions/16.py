@@ -1,6 +1,5 @@
 
 import sys
-# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 def mii(): return list(map(int, input().split()))
 

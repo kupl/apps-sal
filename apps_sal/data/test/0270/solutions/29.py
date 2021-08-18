@@ -8,8 +8,6 @@ reverse_edges = {n + 1: [] for n in range(N)}
 for e in edges:
     forward_edges[e[0]].append(e[1])
     reverse_edges[e[1]].append(e[0])
-# print(  forward_edges)
-# print(  reverse_edges)
 estimated_distance = {n + 1: None for n in range(N)}
 estimated_distance[N] = 0
 probability = {n + 1: None for n in range(N)}

@@ -14,5 +14,4 @@ for x in s:
     for i in range(6):
         if now & 2**i == 0:
             ans = (ans * 3) % (10**9 + 7)
-    # print(ans)
 print(ans)

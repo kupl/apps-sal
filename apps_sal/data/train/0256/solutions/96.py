@@ -5,14 +5,14 @@ class Solution:
         while lo <= hi:
             K = (lo + hi) // 2
             if self.countTimeEatAllAtSpeed(
-                    K, piles) <= H:  # count time to eat all bananas at speed K
+                    K, piles) <= H:
                 hi = K - 1
             else:
                 lo = K + 1
         return lo
 
     def countTimeEatAllAtSpeed(self, K, piles):
-        countHours = 0  # hours take to eat all bananas
+        countHours = 0
 
         for pile in piles:
             countHours += pile // K

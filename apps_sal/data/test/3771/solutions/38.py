@@ -10,7 +10,6 @@ class Dinic:
         self.it = [None] * self.n
 
     def add_edge(self, fr, to, cap):
-        # edge consists of [dest, cap, id of reverse edge]
         forward = [to, cap, None]
         backward = [fr, 0, forward]
         forward[2] = backward
@@ -24,8 +23,6 @@ class Dinic:
         self.edge[v1].append(edge1)
         self.edge[v2].append(edge2)
 
-    # takes start node and terminal node
-    # create new self.level, return you can flow more or not
     def bfs(self, s, t):
         self.level = [None] * self.n
         dq = deque([s])
@@ -39,7 +36,6 @@ class Dinic:
                     dq.append(dest)
         return self.level[t] is not None
 
-    # takes vertex, terminal, flow in vertex
     def dfs(self, v, t, f):
         if v == t:
             return f
@@ -47,12 +43,10 @@ class Dinic:
             to, cap, rev = e
             if cap and self.level[v] < self.level[to]:
                 ret = self.dfs(to, t, min(f, cap))
-                # find flow
                 if ret:
                     e[1] -= ret
                     rev[1] += ret
                     return ret
-        # no more flow
         return 0
 
     def flow(self, s, t):
@@ -60,7 +54,6 @@ class Dinic:
         while self.bfs(s, t):
             for i in range(self.n):
                 self.it[i] = iter(self.edge[i])
-            # *self.it, = map(iter, self.edge)
             f = INF
             while f > 0:
                 f = self.dfs(s, t, INF)

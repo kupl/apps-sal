@@ -1,5 +1,4 @@
 def find_value(index, last):
-    # print('find_value({}, {})'.format(index, last))
     if last < 2:
         return index
     if index > last // 2:

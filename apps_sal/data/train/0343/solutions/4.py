@@ -11,7 +11,6 @@ class Solution:
             return 4
         if round(math.sqrt(n))**2 == n:
             return 1
-        # 接下来判断n是否由两个完全平方数的和组成
         for i in range(1, math.ceil(math.sqrt(n))):
             res = n - i**2
             print(("i:,res:,", i, res))

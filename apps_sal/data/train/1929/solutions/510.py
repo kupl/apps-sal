@@ -18,8 +18,6 @@ class Trie:
 
     def search(self, word):
 
-        # return self.root.children[ord(word[0]) - ord('a')]
-
         return self.__searchHelper(self.root, word, 0)
 
     def __searchHelper(self, cur, word, word_index):
@@ -46,8 +44,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.prefix += letter
         return self.storage.search(self.prefix[::-1])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

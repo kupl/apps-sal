@@ -26,5 +26,4 @@ class Solution:
                     j = max_q[0][1] + 1
                     min_q.popleft()
                     max_q.popleft()
-            # print(ans, min_q, max_q, j)
         return ans

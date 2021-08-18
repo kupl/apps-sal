@@ -13,16 +13,3 @@ class Solution:
             dp = next_dp
 
         return sum(dp.values()) % (10 ** 9 + 7)
-#         def dfs(m, k, con):
-#             if m == 1: return 1, 1
-#             res = [0, 1]
-#             for i in range(6):
-#                 total, con = dfs(m - 1, i)
-#                 if k == i:
-#                     if con + 1 <= rollMax[i - 1]:
-#                         res[0] += total
-#                         res[1] = con + 1
-#                 else:
-#                     res += total
-
-#         return sum(dfs(n, i) for i in range(6)) % (10 ** 9 + 7)

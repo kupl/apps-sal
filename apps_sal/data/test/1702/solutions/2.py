@@ -31,6 +31,3 @@ for i in range(10000):
         ans = i
         break
 print(ans)
-
-
-# Made By Mostafa_Khaled

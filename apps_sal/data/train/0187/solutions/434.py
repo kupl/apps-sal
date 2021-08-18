@@ -5,8 +5,8 @@ class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         ls = []
 
-        waiting = 0  # 라인 기다리는 사람
-        curr = 0  # 현재 곤돌라에 타고있는 사람
+        waiting = 0
+        curr = 0
         days = 0
         max_profit = -1
         max_days = 0

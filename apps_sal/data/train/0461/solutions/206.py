@@ -13,5 +13,3 @@ class Solution:
             for v in subordinates[u]:
                 q.append((v, time + informTime[u]))
         return res
-
-    # https://leetcode.com/problems/time-needed-to-inform-all-employees/discuss/532530/Python3-Easy-Python-Solution%3A-DijkstraBFSDFS

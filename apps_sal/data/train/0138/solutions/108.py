@@ -1,7 +1,7 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
         ans = 0
-        dp = [0, 0]  # [+,-]
+        dp = [0, 0]
         for i, n in enumerate(nums):
             if n == 0:
                 dp = [0, 0]

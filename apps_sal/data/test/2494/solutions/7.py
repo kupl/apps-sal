@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 
 """
 01-BFS
@@ -11,16 +9,15 @@ from collections import deque
 
 def bfs01(g, start):
     n = len(g)
-    res = [float("inf")] * n  # startからの最短距離
+    res = [float("inf")] * n
     res[start] = 0
-    pending = n - 1  # 未確定の点の個数
-    q = deque([(0, start)])  # (そこまでの距離、点)
+    pending = n - 1
+    q = deque([(0, start)])
     while q and pending:
         dv, v = q.popleft()
         if res[v] < dv:
             continue
         pending -= 1
-        # if v==goal: break
         for to, cost in g[v]:
             if dv + cost < res[to]:
                 res[to] = dv + cost
@@ -30,14 +27,9 @@ def bfs01(g, start):
                     q.appendleft((res[to], to))
     return res
 
-######################################################################
-# ARC084 small multiple
-#
-######################################################################
-
 
 sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline  # 文字列入力のときは注意
+readline = sys.stdin.readline
 
 k = int(input())
 

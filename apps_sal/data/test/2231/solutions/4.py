@@ -1,4 +1,3 @@
-# by Nick "LordVader" Proshin.
 import sys
 input = sys.stdin.readline
 t = int(input())

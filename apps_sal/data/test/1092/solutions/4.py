@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 mod = 10 ** 9 + 7

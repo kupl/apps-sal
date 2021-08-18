@@ -1,14 +1,9 @@
-#!/usr/bin/env python3
-#
-# XOR-pyramid
-#
 import sys
 import os
 
 
 def read_int(): return int(input())
 def read_ints(): return list(map(int, input().split()))
-#------------------------------------------------------------------------------#
 
 
 n = read_int()

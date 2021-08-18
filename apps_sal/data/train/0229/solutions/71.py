@@ -1,7 +1,6 @@
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
 
-        # Time Complexity: O(N LOG N) , Space: O(N)
         count = collections.Counter(A)
         for x in sorted(A, key=abs):
             if count[x] == 0:

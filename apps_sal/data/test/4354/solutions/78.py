@@ -1,4 +1,3 @@
-# B - Checkpoints
 def main():
     n, m = map(int, input().split())
     a_b = [input().split() for i in range(n)]

@@ -1,8 +1,6 @@
 import sys
 
 
-# inf = open('input.txt', 'r')
-# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, s.split())) for s in sys.stdin)
 
 
@@ -23,5 +21,3 @@ for _ in range(t):
     r, g, b = sorted(list(next(reader)))
     ans = sweets(r, g, b)
     print(ans)
-
-# inf.close()

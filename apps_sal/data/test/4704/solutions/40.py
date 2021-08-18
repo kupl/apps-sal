@@ -1,6 +1,5 @@
 N = int(input())
 a = list(map(int, input().strip().split()))
-# 累積和
 s_l = []
 s = 0
 

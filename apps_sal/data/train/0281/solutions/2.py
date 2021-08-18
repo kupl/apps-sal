@@ -16,5 +16,4 @@ class Solution:
                 max_count = count[i]
         if max_count < 1:
             return True
-        # print('max_count', max_count, 'max_shift', max_shift)
         return (((max_count - 1) * 26) + max_shift) <= k

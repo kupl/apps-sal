@@ -9,17 +9,10 @@ else:
     left = [1] * ints
     right = [1] * ints
 
-    # how many you can extend to the left
-    #[1, 1, 2, 1, 2, 3]
-    # the 3 can go to [1, 2, 3]
-    # both 2s can go to [1, 2]
     for i in range(ints - 1):
         if nums[i + 1] > nums[i]:
             left[i + 1] += left[i]
 
-    # how many you can extend to the right
-    # the 2nd 1 can go to [1, 2]
-    # the 3rd 1 can go to [1, 2, 3]
     nums.reverse()
     for i in range(ints - 1):
         if nums[i + 1] < nums[i]:

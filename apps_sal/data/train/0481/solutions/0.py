@@ -9,8 +9,8 @@ class Solution(object):
         if size < 3:
             return 0
         nums.sort()
-        i = 0  # fix the first index
-        ans = nums[0] + nums[1] + nums[size - 1]  # ans is used to record the solution
+        i = 0
+        ans = nums[0] + nums[1] + nums[size - 1]
         while i < size - 2:
             tmp = target - nums[i]
             j = i + 1

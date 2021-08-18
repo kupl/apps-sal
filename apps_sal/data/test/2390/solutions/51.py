@@ -13,10 +13,6 @@ PS2 = [[0, 0, 0]]
 QS1 = [[0, 0, 0]]
 QS2 = [[0, 0, 0]]
 
-# PS[i] = c,i,c0
-# PS1:右回りで得られるコスト（行きのxのロス組み込み
-# PS2:右回り＋Oに帰るまでで得られるコスト
-# i:Xのindex。
 
 for i in range(N):
     c1, xx, c0 = PS1[i]
@@ -43,9 +39,6 @@ print(QS1)
 print(QS2)
 """
 
-# 左回りのINDEXをqとする。ただし原点=0とする
-# するとQSindex + PSindex <= N であればOKで
-# かつPSがソート済単調減少なので、貪欲に取れるはず
 ans = 0
 ps1index, ps2index = 0, 0
 for q in range(N + 1):

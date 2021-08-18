@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n = list(map(int, input().split()))
     p = sum(n) - n[-1]

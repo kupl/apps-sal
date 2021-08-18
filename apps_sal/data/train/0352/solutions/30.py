@@ -3,7 +3,6 @@ from collections import defaultdict
 
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        #words.sort(key = lambda x: len(x))
         chain = defaultdict(list)
 
         def checkPredecessor(w1, w2):

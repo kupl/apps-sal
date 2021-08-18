@@ -7,7 +7,7 @@ class StreamChecker:
             t = self.t
             for ch in word:
                 t = t.setdefault(ch, {})
-            t['#'] = 'END'
+            t['
 
         self.cursors = [self.t]
 
@@ -20,7 +20,7 @@ class StreamChecker:
             if letter not in cur:
                 continue
             cur = cur[letter]
-            if '#' in cur:
+            if '
                 ans = True
             newcursors.append(cur)
 
@@ -28,8 +28,3 @@ class StreamChecker:
         self.cursors.append(self.t)
 
         return ans
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -7,12 +7,10 @@ j = 0
 fa = [0] * (n + 1)
 for i in range(2, n + 1):
     while j and s[i - 1] != s[j]:
-        # j=fa[j-1];
         j = fa[j]
     if s[i - 1] == s[j]:
         j += 1
     fa[i] = j
-# print(fa)
 l = list()
 j = fa[n]
 while(j > 0):

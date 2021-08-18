@@ -8,7 +8,6 @@ class Solution:
         NUM = 10**9 + 7
         ans = ''
         for i in range(1, n):
-            # i is the length of prefix and suffix
             x = ord(s[i - 1]) - ord('a')
             prefix = (26 * prefix + x) % NUM
 

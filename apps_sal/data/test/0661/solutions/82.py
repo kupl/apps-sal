@@ -37,7 +37,6 @@ def test(m):
 
 def main():
     m, k = map(int, input().split())
-#    test(m)
     x = 0
     for i in range(2**m):
         if i == k:

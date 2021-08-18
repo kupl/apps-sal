@@ -4,8 +4,6 @@ class Solution:
 
         @lru_cache(None)
         def move(loc, remaining):
-            # if remaining == 0:
-            #   return 0
 
             ans = 0
             if loc == finish:

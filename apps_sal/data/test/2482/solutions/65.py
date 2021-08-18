@@ -31,14 +31,12 @@ for _ in range(K):
 for _ in range(L):
     p, q = map(int, input().split())
     unite(p - 1, q - 1, par2)
-# print(par2)
 
 r = []
 for i in range(N):
     r.append((find(i, par), find(i, par2)))
 
 count = collections.Counter(r)
-# print(count)
 
 for i in range(N):
     ans = count[r[i]]

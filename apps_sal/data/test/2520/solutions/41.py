@@ -1,8 +1,5 @@
 import sys
-# 再帰回数上弦を100000回に設定
 sys.setrecursionlimit(100000)
-# スタックサイズを無制限に設定
-# resource.setrlimit(resource.RLIMIT_STACK, (-1, -1))
 
 
 class UnionFind:
@@ -17,21 +14,12 @@ class UnionFind:
         """
         xとyが属するグループを統合
         """
-        # xとyの親ノードインデックスを取得
         _x, _y = self.find(x), self.find(y)
-        # 一致していれば同じグループに属しているので処理終了。
-        # Falseはなぞ。
         if _x == _y:
             return False
-        # サイズが小さいグループを大きいグループに結合するので、
-        # _y側の絶対値がかならず小さくなるように前処理。(_yを_xのグループへ統合)
-        # 大きい方を小さい方へ結合してしまうとノードが深くなってしまうので、
-        # 計算量を削減するためのテクニック。
         if abs(self.node[_x]) < abs(self.node[_y]):
             self.node[_x], self.node[_y] = self.node[_y], self.node[_x]
-        # グループサイズ更新
         self.node[_x] += self.node[_y]
-        # _yの親ノードを_xに更新
         self.node[_y] = _x
         return True
 
@@ -40,12 +28,8 @@ class UnionFind:
         xが属するグループの親ノードインデックスを検索。
         """
         _val = self.node[x]
-        # 負なら親ノードとみなして、そのインデックスを返す。
         if _val < 0:
             return x
-        # グループの親ノードを再帰的に検索。
-        # さらに、グループの親ノードIDを子ノードに記録しておくことで
-        # 経路縮小を実現。
         self.node[x] = self.find(_val)
         return self.node[x]
 

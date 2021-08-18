@@ -1,7 +1,3 @@
-# https://atcoder.jp/contests/abc060/tasks/arc073_b
-# 典型的なナップサック。だけど配列が大きいので素直に実装するとTLEになる
-# 成約により、w1以上は必ず前のjを見ることに注意するとテーブルのサイズがぐっと減ることに気がつくがこれを実装するのはなかなかめんどくさそう。
-# defaltdictを利用した再帰メモ化なら比較的実装可能では？
 
 from collections import defaultdict
 import sys
@@ -33,7 +29,7 @@ w, v = read_col(N, 2)
 dp = defaultdict(lambda: -1)
 
 
-def f(i, j):  # i番目を含んで考慮したとき重さjまでで達成できる価値の最大値
+def f(i, j):
     if dp[i, j] != -1:
         return dp[i, j]
     if i == -1:

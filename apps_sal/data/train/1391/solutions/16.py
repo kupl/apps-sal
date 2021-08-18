@@ -1,11 +1,8 @@
 def fn_bonAppetit(t):
     for test_case in range(t):
-        # num of customers (n), num of compartments (k)
         n, k = map(int, input().split())
         cust_preference = {}
-        # looping through each customer
         for c in range(n):
-            # start, finish and preference
             s, f, p = map(int, input().split())
             if p not in cust_preference:
                 cust_preference[p] = [(s, f)]
@@ -14,7 +11,7 @@ def fn_bonAppetit(t):
 
         count = 0
         for v in cust_preference.values():
-            v.sort(key=lambda x: x[1])  # sort by finish time in-place
+            v.sort(key=lambda x: x[1])
             previous = (0, 0)
             for item in v:
                 if item[0] >= previous[1]:
@@ -23,5 +20,5 @@ def fn_bonAppetit(t):
         print(count)
 
 
-t = int(input())  # total number of test cases
+t = int(input())
 fn_bonAppetit(t)

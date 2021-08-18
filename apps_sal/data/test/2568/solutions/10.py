@@ -12,7 +12,6 @@ for _ in range(int(input())):
     data = [-data[i] for i in range(n)]
     for i in range(1, n):
         data[i] = max(data[i], data[i - 1])
-    # print(data)
     res = 0
     val = 0
     id = 0

@@ -5,7 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-# SOLUTION
 
 from math import factorial as f
 
@@ -15,13 +14,7 @@ def main():
     return f(2 * n - 2) // f(n - 1) // f(n - 1)
 
 
-# HELPERS
-
-
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

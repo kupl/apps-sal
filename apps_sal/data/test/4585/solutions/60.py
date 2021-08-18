@@ -1,4 +1,3 @@
-# C - Go Home
 def main():
     x = int(input())
     cnt = 0

@@ -1,6 +1,5 @@
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
-        # On
         n = len(A)
         dp = [0] * n
         optsum = [A[0]] * n
@@ -16,8 +15,6 @@ class Solution:
                 optsum[i] = pre
             else:
                 optsum[i] = optsum[i - 1]
-        # get second case now
-        # print(optsum)
         pre = 0
         for j in range(n - 1, 0, -1):
             first = max(first, pre + A[j] + optsum[j - 1])

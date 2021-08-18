@@ -17,7 +17,6 @@ for x in range(t):
             spoon = 1
         matrix.append(row_in)
 
-    # If not found in row major form, then try the column major form
     for c in range(col):
         col_in = ''
         for r in range(row):

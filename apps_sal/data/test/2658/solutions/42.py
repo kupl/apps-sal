@@ -17,6 +17,5 @@ else:
     L = i + 1
     S = town_ls.index(now)
     loop = L - S
-    # print(loop,S)
     x = (K - S) % loop + S
     print(town_ls[x])

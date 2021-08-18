@@ -33,5 +33,4 @@ for i in range(n):
         mai = i
     elif v == ma and p[i] < p[mai]:
         mai = i
-# print(count)
 print(p[mai])

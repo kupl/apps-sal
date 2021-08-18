@@ -14,15 +14,3 @@ class Solution:
             else:
                 r = m
         return l
-
-        # low, high = 1, max(piles)
-        # while low < high:
-        #     mid = (low + high) // 2
-        #     h = 0
-        #     for i in piles:
-        #         h +=math.ceil(i / mid)
-        #     if h > H:
-        #         low = mid + 1
-        #     else:
-        #         high = mid
-        # return low

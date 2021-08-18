@@ -23,11 +23,6 @@ class Solution:
         for i in range(len_words):
             for j in range(0, i):
                 if(combos[i] < combos[j] + 1 and is_predecessor(words[i], words[j])):
-                    # print(words[i] + ', ' + words[j])
                     combos[i] = combos[j] + 1
-
-        # for i in range(len_words):
-        #     print(combos[i], end=', ')
-        #     print(words[i])
 
         return max(combos) + 1

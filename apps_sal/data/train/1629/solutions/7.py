@@ -1,7 +1,5 @@
 from collections import defaultdict, Counter
 
-# the special case allows for linear solution
-
 
 def exchange_sort(sequence):
     n_sevens, n_eights = sequence.count(7), sequence.count(8)

@@ -56,8 +56,6 @@ def topo_compute(childrens, colors, parents):
 
         return ret
 
-    ########################
-
     num_childrens = [len(x) for x in childrens]
     N = len(childrens)
     dp_conn = [None] * N

@@ -1,4 +1,3 @@
-# Return the array of movements to execute to get out of the maze
 
 def first_position(maze):
     for i in range(len(maze)):
@@ -11,8 +10,8 @@ def walking(maze, passed, path, x, y, move):
     lin, col = len(maze), len(maze[0])
     if x < 0 or x >= lin or y < 0 or y >= col:
         return True
-    if maze[x][y] == '#' or passed[x][y]:
-        return False
+    if maze[x][y] == '
+    return False
     passed[x][y] = True
 
     if move == '>':

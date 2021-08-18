@@ -4,7 +4,6 @@ class Solution:
             return ord(s) - ord('a')
         dp = [0, 0]
         n = len(s)
-        # val=[-1]*26
         C = 1
         for i in range(1, n):
             if s[i] == s[i - 1]:

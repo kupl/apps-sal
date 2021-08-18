@@ -16,18 +16,15 @@ def trailing_zeros(number, base):
     if b > 1:
         smallest_prime_by_pow[1] = b
 
-    # print(smallest_prime_by_pow)
     res = number
 
     for count_p_pow, p in list(smallest_prime_by_pow.items()):
         count_p_in_fact = 0
         f = p
         while f <= number:
-            # print(f, number // f)
             count_p_in_fact += number // f
             f *= p
 
         res = min(res, count_p_in_fact // count_p_pow)
-        # print(count_p_in_fact)
 
     return res

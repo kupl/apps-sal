@@ -11,7 +11,6 @@ ds = [int(input()) - 1 for _ in range(d)]
 for ele in ds:
     disable[ele] = True
 
-# Create Graph
 
 childs = [[] for i in range(base + m + 1)]
 
@@ -19,9 +18,6 @@ for idx, (i, j) in enumerate(zip(p, c)):
     if not disable[idx]:
         childs[i].append(base + j)
 
-
-# dfs
-# alternative path for finding maximum cardinality
 
 vis = [False] * (base + m + 1)
 matching = [-1] * (base + m + 1)
@@ -45,7 +41,6 @@ for idx in range(d - 1, -1, -1):
         if not dfs(mex):
             break
         mex += 1
-    # Add edge
     ans.append(mex)
     childs[p[ds[idx]]].append(base + c[ds[idx]])
 

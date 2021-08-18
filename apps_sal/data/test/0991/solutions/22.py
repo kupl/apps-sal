@@ -10,7 +10,6 @@ for u, v, a, b in uvab:
     g[v].append([u, a, b])
     maxs += a
 
-# 「現在いる頂点、現在持っている銀貨枚数」を頂点とし、ダイクストラ法でとく。
 inf = float('inf')
 ans = [[inf] * (maxs + 1) for _ in range(n)]
 s = min(s, maxs)

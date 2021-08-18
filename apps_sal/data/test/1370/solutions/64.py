@@ -43,7 +43,6 @@ def main():
                     break
                 next_w += 1
 
-            # Impossible: over K in one column
             if next_w == w:
                 n_cut = float("inf")
                 break

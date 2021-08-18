@@ -45,13 +45,13 @@ def number2words(n):
     s = ""
     L = len(nStr)
     pos = 0
-    if pos == L - 6:  # 4 simvol sotni tisyzcg
+    if pos == L - 6:
         s += numbers_1_9.get(nStr[pos])
         if nStr[pos] != "0":
             s += " hundred "
         pos += 1
-    if pos == L - 5:  # 4simvol - desytki ticych
-        if nStr[pos] == "1":  # 11 - 19
+    if pos == L - 5:
+        if nStr[pos] == "1":
             s += numbers_11_19.get(nStr[pos + 1])
             pos = +1
         else:
@@ -59,18 +59,18 @@ def number2words(n):
             if nStr[pos + 1] != "0" and nStr[pos] != "0":
                 s += "-"
         pos += 1
-    if pos == L - 4:  # 3 simvol - tisycha
+    if pos == L - 4:
         if nStr[pos - 1] != "1":
             s += numbers_1_9.get(nStr[pos])
         s += " thousand "
         pos += 1
-    if pos == L - 3:  # 2 simbol - sotka
+    if pos == L - 3:
         s += numbers_1_9.get(nStr[pos])
         if nStr[pos] != "0":
             s += " hundred "
         pos += 1
-    if pos == L - 2:  # 1 simvol, desytok
-        if nStr[pos] == "1":  # 11 - 19
+    if pos == L - 2:
+        if nStr[pos] == "1":
             s += numbers_11_19.get(nStr[pos + 1])
             pos = -1
         else:
@@ -78,6 +78,6 @@ def number2words(n):
             if nStr[pos + 1] != "0" and nStr[pos] != "0":
                 s += "-"
         pos += 1
-    if pos == L - 1:  # 0 simvol, edinici
+    if pos == L - 1:
         s += numbers_1_9.get(nStr[pos])
     return s.strip()

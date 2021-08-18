@@ -6,14 +6,13 @@ All = []
 s = set([])
 for i in range(N):
     t, d = list(map(int, input().split()))
-    t -= 1  # 0スタートに
-    heapq.heappush(L[t], -d)  # 最大から取り出したいので負にする。
-    heapq.heappush(All, [-d, t])  # すべてから大きい順に取り出せるように
+    t -= 1
+    heapq.heappush(L[t], -d)
+    heapq.heappush(All, [-d, t])
     s.add(t)
 
-# print(L,s)
 point = 0
-ns = 0  # 現在の種類
+ns = 0
 later = []
 now = []
 syurui = set([])
@@ -35,14 +34,10 @@ while len(now) < K:
     point -= temp[0]
     heapq.heappush(now, -1 * temp[0])
 
-# print(ns,point)
-# print(now,All,All[0][0])
 while All and now[0] < -1 * All[0][0]:
     temp = heapq.heappop(All)
     dele = heapq.heappop(now)
-    # print(temp,dele)
     upoint = point - temp[0] - dele - ns * ns + (ns - 1)**2
-    # print(upoint,point)
     if upoint >= point:
         point = upoint
         ns -= 1
@@ -50,5 +45,3 @@ while All and now[0] < -1 * All[0][0]:
         break
 
 print(point)
-# print(All)
-# print(now)

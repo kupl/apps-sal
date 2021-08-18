@@ -17,6 +17,3 @@ for i in range(n - 1):
         ans = max(ans, (a[c] - a[i + 1]) / (a[c] - a[i]))
 
 print(ans)
-
-
-# Made By Mostafa_Khaled

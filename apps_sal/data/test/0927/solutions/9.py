@@ -18,7 +18,6 @@ for i in range(1, n + 1):
     for j in a:
         if not 0 <= i - table[j] < n + 1:
             continue
-        # print(i,i-table[j],dp[i-table[j]],j)
         if dp[i - table[j]] < 0:
             continue
         if mx < dp[i - table[j]] * 10 + j:

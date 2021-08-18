@@ -17,23 +17,17 @@ def solve(s):
         return True
 
     if check([x[0] for x in s[1:]]):
-        # print('a')
         return s[0][1]
     if check([x[0] for x in s[:-1]]):
-        # print('b')
         return s[-1][1]
     if check([x[0] for x in s[:1] + s[2:]]):
-        # print('c')
         return s[1][1]
     if check([x[0] for x in s[:-2] + s[-1:]]):
-        # print('d')
         return s[-2][1]
 
-    # mid
     t = []
     for i in range(len(s) - 1):
         t.append(s[i + 1][0] - s[i][0])
-    # print(t)
 
     i = 0
     while t[i] == t[0]:

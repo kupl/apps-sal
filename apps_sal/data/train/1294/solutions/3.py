@@ -34,7 +34,7 @@ def solve():
             mv1 = maxval[a][0]
             mv2 = minval[a]
 
-            flag = 0  # to check leaf node
+            flag = 0
 
             for i in Tree[a]:
                 if (vis[i] == 0):
@@ -66,7 +66,6 @@ def solve():
 
         K1 = len(bin(K)) - 2
 
-        # print(lfnode,val)
         for i in lfnode:
             v1, v2 = maxval[i][0], maxval[i][1]
 

@@ -1,7 +1,5 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        # dp[i][j]
-        # represents what is the maximum up to that i and j included
         dp = [[0] * (len(text2) + 1) for _ in range(len(text1) + 1)]
         max_ = 0
         for i in range(len(text1) - 1, -1, -1):

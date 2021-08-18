@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 
 def recover(root: TreeNode):
     x = root.val
@@ -16,14 +10,6 @@ def recover(root: TreeNode):
 
 
 def get_path(n: int) -> List[int]:
-    # x = 2*(2*(2*(2*0 + a) + b) + c) + d
-    # x = 2*(2*(2*a + b) + c) + d
-    # x = 2*(4*a + 2*b + c) + d
-    # x = 8*a + 4*b + 2*c + d
-
-    # x % 2 = 0 + 0 + 0 + (d%2)
-    # if d == 1 -> d%2 = 1
-    # if d == 2 -> d%2 = 0
 
     result = []
     while n > 0:
@@ -61,15 +47,9 @@ def find(root: TreeNode, path: List[int]) -> bool:
 class FindElements:
     def __init__(self, root: TreeNode):
         root.val = 0
-        # recover(root)
         self.tree = root
 
     def find(self, target: int) -> bool:
         self.tree.val = 0
         p = get_path(target)
         return find(self.tree, p)
-
-
-# Your FindElements object will be instantiated and called as such:
-# obj = FindElements(root)
-# param_1 = obj.find(target)

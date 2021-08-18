@@ -20,7 +20,6 @@ class ThroneInheritance:
         self.child[n] = []
 
     def dfs(self, node):
-        # print(node)
         val = [node.name] if node.isdead == False else []
         for c in self.child[node]:
             c = self.nodes[c]
@@ -43,10 +42,3 @@ class ThroneInheritance:
     def getInheritanceOrder(self) -> List[str]:
         n = self.nodes[self.kingName]
         return self.dfs(n)
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

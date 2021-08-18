@@ -1,22 +1,4 @@
-# cook your dish here
 import math as m
-# for _ in range(int(input())):
-#     n=int(input())
-#     a=list(map(int,input().split()))
-#     newa=list(set(a))
-#     if len(newa)==1:
-#         print(newa[0]*2)
-#     elif len(newa)==2:
-#         print(sum(newa))
-#     else:
-#         newa.sort()
-#         m=newa.pop()
-#         gcd=newa[0]
-#         for i in range(1,len(a)):
-#             gcd=math.gcd(gcd,a[i])
-#             if gcd==1:
-#                 break
-#         print(m+gcd)
 
 for _ in range(int(input())):
     length = int(input())

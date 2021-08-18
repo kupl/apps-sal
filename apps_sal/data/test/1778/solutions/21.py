@@ -7,7 +7,6 @@ def gambling():
 
     sa, sb = 0, 0
     while aa or bb:
-        # turn a
         if len(aa) == 0:
             bb.pop()
         elif len(bb) == 0:
@@ -17,7 +16,6 @@ def gambling():
         else:
             bb.pop()
 
-        # turn b
         if len(bb) == 0:
             aa.pop()
         elif len(aa) == 0:

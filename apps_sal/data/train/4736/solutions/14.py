@@ -3,12 +3,10 @@ def how_many_bees(hive):
         return 0
 
     cnt = 0
-    # rows
     for row in hive:
         cnt += ''.join(row).count('bee')
         cnt += ''.join(row).count('eeb')
 
-    # columns
     m, n = len(hive), len(hive[0])
 
     cols = [''.join([hive[j][i] for j in range(m)]) for i in range(n)]

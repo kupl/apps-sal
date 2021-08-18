@@ -11,10 +11,8 @@ mod_count = defaultdict(int)
 mod_count[0] += 1
 
 for i, a_i in enumerate(A):
-    # 累積和がr
     acc[i + 1] = acc[i] + a_i
     mod = acc[i + 1] % M
-    # その時点での累積カウントがlの和の総数
     ans += mod_count[mod]
     mod_count[mod] += 1
 

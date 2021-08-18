@@ -26,7 +26,5 @@ for qu in qus:
                 sm += data[i]
             out.append(str(sm))
 
-            #out.append(str(sum([data[i] for i in range(q[2], n, q[1])])))
-
 
 sys.stdout.write('\n'.join(out) + '\n')

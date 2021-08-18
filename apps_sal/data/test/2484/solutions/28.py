@@ -11,7 +11,6 @@ for l in range(N):
         a_sum += A[r]
         r += 1
     ans += r - l
-    #print(l, r, x_sum, a_sum, ans)
     x_sum ^= A[l]
     a_sum -= A[l]
 

@@ -15,7 +15,6 @@ for _ in range(q):
     if 2 * a >= b:
         print("Alice")
     else:
-        # jak najwieksza odleglosc > 2*a to bob, inaczej alice
         q = [sa]
         ind = 0
         dist = [-1] * n

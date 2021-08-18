@@ -1,4 +1,3 @@
-# cook your dish here
 for T in range(int(input())):
     s, n = list(map(int, input().split()))
     coins = 0

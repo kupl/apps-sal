@@ -1,4 +1,3 @@
-#from IPython import embed
 def mod(a, b):
     if b < 0:
         return mod(a, -b)
@@ -59,7 +58,7 @@ def main():
     if b2 < b1:
         a1, a2, b1, b2 = a2, a1, b2, b1
 
-    d, x, y = xgcd(a1, -a2)  # extended_gcd(a1,-a2)
+    d, x, y = xgcd(a1, -a2)
     if(d < 0):
         d *= -1
         x *= -1
@@ -69,7 +68,6 @@ def main():
         print(0)
         return
 
-    # print(d,x,y)
     fact = (b2 - b1) // d
     x *= fact
     y *= fact
@@ -84,17 +82,9 @@ def main():
 
     bajo3 = max(cceil(-x, c1), cceil(-y, c2))
 
-    #print(R-b1-a1*x) /( a1*c1) ,(R-b2-a2*y)/ (a2*c2)
-    #print(L-b1-a1*x)/(c1*a1) ,(L-b2-a2*y)/(c2*a2)
-    # print(-x/c1,-y/c2)
-    # print(bajo1,tope1)
-
-    # print(bajo2,tope2)
-    # print(bajo3)
     bajo = max(bajo1, bajo2, bajo3)
     tope = min(tope1, tope2)
     print(max(0, tope + 1 - bajo))
 
 
-    # embed()
 main()

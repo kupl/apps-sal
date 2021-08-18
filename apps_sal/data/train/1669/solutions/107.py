@@ -1,7 +1,6 @@
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
 
-        # input checking
         if len(hand) % W != 0 or not W:
             return False
 

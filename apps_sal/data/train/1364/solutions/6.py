@@ -1,4 +1,3 @@
-# cook your dish here
 
 t = int(input())
 for _ in range(t):
@@ -24,9 +23,7 @@ for _ in range(t):
         for e in group:
             noc += 1
             grp = sorted(group[e])
-            # print(grp)
             med = grp[int(len(grp) / 2)]
-            # print(med)
             for i in range(len(grp)):
                 nop += abs(grp[i] - med) // c
         group.clear()

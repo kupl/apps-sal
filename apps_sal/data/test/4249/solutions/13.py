@@ -9,7 +9,6 @@ right = n + 1
 ans = 10**18 + 1
 while left != right:
     mid = (left + right) // 2
-    # print(mid,left,right)
     din = 0
     kaam = 0
     c = 0
@@ -94,7 +93,6 @@ for i in range(n):
                     ans[r][c] = ans[n-1-r][c] = ans[r][n-1-c] = ans[n-1-r][n-1-c] = temp
                     flag = False
                     if n%2 and ( n//2 == i or n//2 == j):
-                        #print('are ye to odd hai')
                         if len(two) != 0:
                             ans[n//2][mid] = ans[n//2][n-mid-1] = two[-1]
                             flag = True
@@ -102,12 +100,10 @@ for i in range(n):
                         else:
                             ans[n//2][mid] = ans[n//2][n-mid-1] = temp
                         mid+=1
-                    #print(freq[:7])
                     if not flag:
                         freq[k] =freq[k] - 4
                     else:
                         freq[k] = freq[k] - 2
-                    #print(freq[:7])
                     break
 print("YES")
 for i in range(n):

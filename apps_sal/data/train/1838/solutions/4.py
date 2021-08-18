@@ -4,7 +4,6 @@ class Solution:
         :type arr: List[int]
         :rtype: int
         """
-        # seen = [False] * len(arr)
         maxx, chunkCount = 0, 0
         for i in range(len(arr)):
             maxx = max(maxx, arr[i])

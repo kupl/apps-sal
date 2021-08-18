@@ -1,5 +1,4 @@
 VENDORS = [
-    # Name         Begins with    Length
     ['AMEX', (34, 37), (15,)],
     ['Discover', (6011,), (16,)],
     ['Mastercard', range(51, 56), (16,)],

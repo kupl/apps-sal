@@ -8,7 +8,7 @@ class Solution:
         for _, w in words:
             word_dict[w] = 1
 
-        state_t = set()  # word and chainlen
+        state_t = set()
 
         max_chain = 1
         for _, word in words:

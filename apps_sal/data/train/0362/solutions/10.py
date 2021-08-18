@@ -6,7 +6,6 @@ class Solution:
                 h2p[h].append(i)
         n = len(hats)
 
-        # bottom up
         dp, ndp = defaultdict(int), defaultdict(int)
 
         for hat in range(0, 41):

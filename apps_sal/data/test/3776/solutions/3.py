@@ -1,5 +1,3 @@
-#! /usr/bin/python
-# kmwho
 
 
 def solvecase():
@@ -22,7 +20,6 @@ def solvecase():
 
 
 def main():
-    # solve()
     print(solvecase())
 
 

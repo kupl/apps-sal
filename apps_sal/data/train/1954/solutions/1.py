@@ -14,7 +14,6 @@ class Solution:
         return memo[1 << n]
 
     def dfs(self, state, memo, peopleSkills, res, n, people, skillsMap):
-        # print(bin(state)[1:])
         if state == 2 ** (n + 1) - 1:
             return []
 
@@ -30,13 +29,10 @@ class Solution:
                 currState[skillsMap[s]] = '1'
 
             nextState = int('1' + ''.join(currState), 2)
-            # print(bin(state), currState, p, nextState)
             temp = self.dfs(nextState, memo, peopleSkills, res, n, people, skillsMap)
             currState = list(bin(state)[3:])
-            # print(p, state, nextState, temp)
             if len(temp) < mini:
                 mini = len(temp)
                 ans = [p] + temp
-        # print(ans)
         memo[state] = ans
         return ans

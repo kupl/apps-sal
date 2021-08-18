@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Fri Mar  9 10:15:39 2018
 
@@ -23,7 +22,7 @@ while i < N and j < M:
         s2 += Y[j]
         i += 1
         j += 1
-    else:  # s1 > s2
+    else:
         s2 += Y[j]
         j += 1
 print(count + 1)

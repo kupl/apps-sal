@@ -1,4 +1,3 @@
-# ABC126 B
 
 S = list(map(int, input()))
 if 1 <= S[0] * 10 + S[1] <= 12 and 1 <= S[2] * 10 + S[3] <= 12:

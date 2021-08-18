@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     a, b, c = list(map(int, input().split()))
     ma = max(a, b, c)

@@ -17,11 +17,9 @@ class Solution:
                 top_left_res = 0 if row == 0 or col == 0 else squares[row - 1][col - 1]
 
                 squares[row][col] = min(ones_in_row, ones_in_col[col], top_left_res + 1)
-                # print('row', row, 'col', col, 'res', ones_in_row, ones_in_col[col], squares[row][col])
 
                 count += squares[row][col]
 
-        # print(squares)
         return count
 
 
@@ -70,29 +68,8 @@ O(nm)
 
 
 
-#         right = []
-#         for row in matrix:
-#             r = []
-#             count = 0
-#             for x in row:
-#                 count = count + 1 if x else 0
-#                 r.append(count)
-#             right.append(r)
 
         
-#         for row in range(m):
-#             count = 0
-#
-#             for col in range(n):
-#                 right[row][col] = count = count + 1 if matrix[row][col] else 0
             
-#         for col in range(n):
-#             count = 0
-#
-#             for row in range(m):
-#                 bottom[row][col] = count = count + 1 if matrix[row][col] else 0
 
-        # for row in range(m):
-        #     for col in range(n):
-        #         count += squares[row][col]
 '''

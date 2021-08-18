@@ -1,6 +1,5 @@
 import sys
 
-# sys.stdin = open('in', 'r')
 
 n, f = list(map(int, input().split()))
 

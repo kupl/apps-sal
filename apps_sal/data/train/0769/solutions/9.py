@@ -1,4 +1,3 @@
-# cook your dish here
 def hcf(x, y):
     if(y == 0):
         return x

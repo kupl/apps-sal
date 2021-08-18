@@ -22,7 +22,6 @@ class Solution:
 
         n1_D = helper(n1)
         n2_D = helper(n2)
-        #print(n1_D, n2_D )
         n1_D_diff = abs(n1_D[0] - n1_D[1])
         n2_D_diff = abs(n2_D[0] - n2_D[1])
 

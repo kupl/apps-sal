@@ -19,7 +19,7 @@ def calc(final):
     return M * moves + A * (adds - moves) + R * (removes - moves)
 
 
-lo = -1  # Higher than next
+lo = -1
 hi = 10 ** 9 + 1
 
 while hi - lo > 1:

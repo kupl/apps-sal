@@ -1,4 +1,3 @@
-# http://codeforces.com/contest/877/problem/0
 
 s = input()
 

@@ -1,8 +1,5 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # Tried brute force, failed on ensuring connectivity
-        # Tried all pairs shortest path, not applicable
-        # Remembered MSTs and Kruskal's, implemented here after competition
         def l1(p1, p2):
             xi, yi = p1
             xj, yj = p2

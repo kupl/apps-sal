@@ -1,4 +1,3 @@
-# Your code here.
 class SelfClosing(object):
     def __init__(self, CookieJar):
         self.CookieJar = CookieJar

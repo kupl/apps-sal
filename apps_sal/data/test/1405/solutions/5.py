@@ -6,7 +6,6 @@ a = [x for x in a if x != 0]
 if n0 > 0:
     a.append(0)
 n = len(a)
-#print("a: ", a)
 
 pos = {}
 for i in range(n):

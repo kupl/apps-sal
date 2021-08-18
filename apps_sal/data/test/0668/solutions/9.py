@@ -7,19 +7,15 @@ a[0] = (0, a[0])
 for i in range(1, len(a)):
     a[i] = (a[i][0] + 1, a[i][1])
 
-# print(a)
 
 received = [0] * n
 p = 1
 pair = []
 
 for i in range(n):
-    #print(i >= p)
     if i >= p or p >= n:
         break
-    #print('-', a[i][0])
     for j in range(a[i][1]):
-        #print(p, a[p])
         pair.append((a[i][0], a[p][0]))
         p += 1
         if p == n:

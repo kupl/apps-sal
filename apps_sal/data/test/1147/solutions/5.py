@@ -19,7 +19,6 @@ else:
         if i % x != 0:
             un[i] += 1
             dn[i // x] += 1
-    # print(dn,un,sep='\n')
     for item, kol in list(dn.items()):
         ans += kol * (kol + 1) // 2
     for item, kol in list(un.items()):

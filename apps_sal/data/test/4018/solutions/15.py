@@ -11,9 +11,7 @@ for i in range(1, n + 1):
                 dp[i][k] += dp[i - 1][j - 1]
                 tag[idx] = False
 ans = 0
-# print(dp)
 for i in range(n, -1, -1):
-    # print(ans,k,i)
     tmp = sum(dp[i])
     if kk > tmp:
         kk -= tmp

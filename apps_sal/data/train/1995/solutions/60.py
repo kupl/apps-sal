@@ -3,8 +3,8 @@ class Solution:
         if len(trips) <= 0:
             return False
 
-        trips.sort(key=lambda x: x[1])  # Sorting array by start time
-        stack = []  # maintaing list to store indexes so that we can compare start time of previous and with current end time
+        trips.sort(key=lambda x: x[1])
+        stack = []
         if trips[0][0] > capacity:
             return False
         else:
@@ -13,7 +13,6 @@ class Solution:
 
         for i in range(1, len(trips)):
             n = 0
-            # if current start time >= any one of previous indices start time--> inc capacity
             while stack and n < len(stack):
                 if trips[i][1] >= trips[stack[n]][2]:
                     capacity += trips[stack[n]][0]

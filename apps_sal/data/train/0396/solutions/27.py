@@ -7,5 +7,4 @@ class Solution:
             if(n % K == 0):
                 return len(str(n))
             n = (n * 10) + 1
-            # counter+=1
         return -1

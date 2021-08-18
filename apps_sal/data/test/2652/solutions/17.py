@@ -13,7 +13,6 @@ for i in range(N):
     par_dic[(x, y)] = (x, y)
 xylist.sort()
 yxlist.sort()
-# print(xylist)
 
 elist = []
 for i in range(1, N):
@@ -23,7 +22,6 @@ for i in range(1, N):
     y1, x1 = yxlist[i - 1]
     y2, x2 = yxlist[i]
     elist.append((min(abs(x2 - x1), abs(y1 - y2)), (x1, y1), (x2, y2)))
-# print(hq)
 elist.sort(reverse=True)
 
 
@@ -49,7 +47,6 @@ def is_same(x, y):
 answer = 0
 while elist:
     d, p1, p2 = elist.pop()
-    # print(d,p1,p2)
     if not is_same(p1, p2):
         merge(p1, p2)
         answer += d

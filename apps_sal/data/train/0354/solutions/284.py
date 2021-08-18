@@ -5,8 +5,6 @@ class Solution:
             dp[i] = [0] * rollMax[i]
             dp[i][0] = 1
 
-        # print(dp)
-
         total = 6
         for i in range(1, n):
             for j in range(6):
@@ -15,7 +13,6 @@ class Solution:
                     dp[j][k] = dp[j][k - 1]
                 dp[j][0] = total - tmpSum
 
-            # print(dp)
             newTotal = 0
             for j in range(6):
                 newTotal += sum(dp[j])

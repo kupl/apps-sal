@@ -8,7 +8,6 @@ def cmb(n, r, p):
     for i in range(1, r + 1):
         lower = (lower * i) % p
 
-    # フェルマーの小定理よりp素数ならupper**(p-2)は逆元
     return (upper * pow(lower, p - 2, p)) % p
 
 

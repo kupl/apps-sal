@@ -33,9 +33,6 @@ else:
                 elif (i != b[k] and j == a[k]):
                     alle -= 1
                     tk.append(b[k])
-            # print(alle)
-            #print('set' + str(len(set(tk))))
-            # return
             alle += len(set(tk))
             maxv = max(alle, maxv)
     print(maxv)

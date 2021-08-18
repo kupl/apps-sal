@@ -5,10 +5,8 @@ d = input()
 
 eles = [a, b, c, d]
 elems = [a[2:], b[2:], c[2:], d[2:]]
-# print(elems)
 g = []
 l = [len(elems[0]), len(elems[1]), len(elems[2]), len(elems[3])]
-# print(l)
 for i in range(4):
     ele = l[i]
     r = []
@@ -18,9 +16,7 @@ for i in range(4):
             continue
         else:
             ratio = ele / l[j]
-            # print(ratio)
             r.append(ratio)
-    # print(r)
     count = 0
     for k in range(len(r)):
         if r[k] <= 0.5:

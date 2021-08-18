@@ -1,4 +1,3 @@
-# optimal, one-pass, without sorting
 
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:

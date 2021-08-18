@@ -1,5 +1,3 @@
-# https://atcoder.jp/contests/abc133/submissions/6316420
-# 参考にさせていただきました。
 
 import sys
 input = sys.stdin.readline
@@ -15,14 +13,9 @@ for i in range(n - 1):
     edges[a].append((b, c, d))
     edges[b].append((a, c, d))
 
-# ここで前処理
-# LCAができるようにしておく
 dep = [0] * n
 par = [[-1] * n for i in range(18)]
-# ついでに距離も持っておく
 dis = [0] * n
-
-# parent, now_point, depth, dist
 
 
 def dfs(p, v, d, dd):
@@ -55,7 +48,6 @@ for i in range(17):
     for j in range(n):
         par[i + 1][j] = par[i][par[i][j]]
 
-# LCAの準備が完了
 
 ans = [0] * q
 v_need = [[] for i in range(n)]
@@ -65,15 +57,11 @@ for i in range(q):
     u -= 1
     v -= 1
     l = lca(u, v)
-    # 色の情報がほしいのは u, v, lの3点
-    # どのクエリに属するか, どの色を変えるか、距離はいくつにするか, 係数
     v_need[u].append((i, x, y, 1))
     v_need[v].append((i, x, y, 1))
     v_need[l].append((i, x, y, -2))
 
-# 色が何回出たか
 color = [0] * n
-# その点までの各色の距離の総和
 cdist = [0] * n
 
 
@@ -86,8 +74,6 @@ def dfs2(cur, par):
         color[x] += 1
         cdist[x] += y
         dfs2(to, cur)
-        # オイラーツアーのように、戻ってきたら引く
-        # これによって、a→b→c→b→dと移動した時a→b→dとみなせる
         color[x] -= 1
         cdist[x] -= y
 

@@ -20,6 +20,4 @@ class Solution:
 
                 j += i
 
-        # print(divs)
-
         return sum([freq * (1 + sum(cur_div)) for k, (freq, cur_div) in list(divs.items()) if len(cur_div) == 3])

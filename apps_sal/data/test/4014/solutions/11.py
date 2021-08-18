@@ -1,46 +1,34 @@
 def solve(n, m, ss, dd, cc):
-    # day: i ( 1 -> n)
-    # exam: j (0 -> m - 1)
-    # date : d (1 -> n)
-    # start: s (1 -> n)
-    #
 
     date = [-1] * (n + 1)
     for j, d in enumerate(dd):
-        date[d] = j		# mark exam date for i-th exam
-    # print(date)
+        date[d] = j
     start = [[] for _ in range(n + 1)]
     for j, d in enumerate(ss):
         start[d].append(j)
-    # print(start)
     preps = []
-    for i in range(1, n + 1):  # for each day in n days
-        if start[i]:  # a start date
-            preps += start[i]  # add to the list of preparation
-        # print(date)
+    for i in range(1, n + 1):
+        if start[i]:
+            preps += start[i]
         u = date[i]
 
-        # print(i, u, start[i], end=' ')
-        if u >= 0:  # an exam date 0 -> m - 1
-            j = u  # j-th exam
-            if cc[j] > 0:  # failed to prepare
-                # print('failed ', j + 1)
+        if u >= 0:
+            j = u
+            if cc[j] > 0:
                 return -1
-            date[i] = m + 1  # take the exam
+            date[i] = m + 1
         else:
-            # print(preps, end=' ')
-            if not preps:  # no subject to prepare
+            if not preps:
                 date[i] = 0
-            else:  # prepare for subject closest to the exam date
+            else:
                 min_d = min(dd[j] for j in preps)
                 for j in preps:
                     if dd[j] == min_d:
                         break
-                date[i] = j + 1  # prepare for j-th exam
+                date[i] = j + 1
                 cc[j] -= 1
                 if cc[j] == 0:
                     preps.remove(j)
-        # print(date[i])
 
     return date[1:]
 

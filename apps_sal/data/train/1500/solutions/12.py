@@ -1,4 +1,3 @@
-# cook your dish here
 try:
 
     def F(S):

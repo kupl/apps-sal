@@ -20,6 +20,5 @@ m = 0
 for i in range(K - 1, N):
     p = (p + A[i] * nCk(i, K - 1)) % mod
     m = (m + A[N - i - 1] * nCk(i, K - 1)) % mod
-    #print(A[i-K+1] , nCk(N-i+1, K-1))
 
 print((p - m) % mod)

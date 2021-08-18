@@ -1,4 +1,3 @@
-# ABC134 C (再考察)
 
 N = int(input())
 A = []

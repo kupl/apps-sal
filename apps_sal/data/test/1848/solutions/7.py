@@ -23,5 +23,4 @@ for i in range(n):
     if ind != -1:
         wasr[ind] = True
         cnt += 1
-        #print(cur, a[ind])
 print(cnt)

@@ -1,6 +1,5 @@
 class Solution:
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
-        # https://blog.csdn.net/fuxuemingzhu/article/details/83536814
         A.sort()
         dp = {}
         for i, a in enumerate(A):

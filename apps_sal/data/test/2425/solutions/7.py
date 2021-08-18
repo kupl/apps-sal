@@ -64,8 +64,3 @@ q = mint()
 for i in range(q):
     x = mint()
     print(smart(x))
-    # if (x & (x+1)) == 0:
-    #	a = stupid(x)
-    #	b = smart(x)
-    #	if a != b:
-    #		print(x,a,b)

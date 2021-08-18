@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Sep  7 17:11:27 2020
 
@@ -25,7 +24,6 @@ else:
     if M == 0 and N == 1:
         ans[0] = 0
     ans = [0 if a == -1 else a for a in ans]
-    # print(ans)
     for i in range(N):
         res += ans[-(i + 1)] * 10**i
     print(res)

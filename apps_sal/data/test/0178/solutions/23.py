@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 from heapq import heappush, heappop, heapify
 sys.setrecursionlimit(int(1e7))

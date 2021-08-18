@@ -1,6 +1,5 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        #coins = sorted(coins)
 
         dp = [amount + 1 for _ in range(amount + 1)]
         dp[0] = 0

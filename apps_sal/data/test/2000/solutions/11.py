@@ -3,7 +3,6 @@ from collections import Counter
 n = int(input())
 a = input().split()
 a = [int(i) for i in a]
-#d = dict()
 ans = 0
 '''
 for i in range(n):

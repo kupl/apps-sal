@@ -1,5 +1,4 @@
 n, m, k = [int(i) for i in input().split()]
-# n rows, m columns, k queries
 
 printops = []
 for i in range(k):
@@ -21,10 +20,6 @@ for i in range(k):
     j = k - i - 1
     rc_indicator, rc, color = printops[j]
     rc -= 1
-
-    # print()
-
-    # pm()
 
     if rc_indicator == 1:
         if row_status[rc]:

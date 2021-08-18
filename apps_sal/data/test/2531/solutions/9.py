@@ -1,11 +1,9 @@
 def func(A, arr_size, val):
 
-    # sort the array
     A.sort()
     l = 0
     r = arr_size - 1
 
-    # traverse the array for the two elements
     while l < r:
         if (A[l] + A[r] == val):
             return 1
@@ -28,7 +26,6 @@ def main():
         print(1)
     else:
         for i in range(n):
-            # print(arr)
             x = func(arr, n, arr[i] * 2)
             if(x == 1):
                 cnt += 1

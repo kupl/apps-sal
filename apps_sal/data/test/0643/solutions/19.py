@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/773/A
 
 t = int(input())
 for i in range(t):

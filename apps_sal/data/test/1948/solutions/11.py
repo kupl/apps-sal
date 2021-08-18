@@ -1,13 +1,10 @@
 from sys import stdin
 
-# Clase nodo
-
 
 class Node():
     def __init__(self, value=None, prox=None):
         self.value = value
         self.prox = prox
-# Clase cola
 
 
 class Queue:
@@ -31,13 +28,9 @@ class Queue:
         self.first = self.first.prox
         return value
 
-# Parser
-
 
 def parser():
     return [int(x) for x in input().split(" ")]
-
-# Algoritmo BFS
 
 
 def BFS(s):
@@ -57,15 +50,11 @@ def BFS(s):
                 q.Enqueue(u)
 
 
-# Recibiendo los valores de n y x
 n, x = map(int, stdin.readline().split())
 
-# Creando los arrays necesarios para la ejecucion de DFS
-# visitados
 distance_Alice = [-1 for i in range(n)]
 distance_Bob = [-1 for i in range(n)]
 
-# Armando el arbol
 adjacents_list = [[] for i in range(n)]
 for i in range(n - 1):
     v1, v2 = map(int, stdin.readline().split())
@@ -76,7 +65,6 @@ BFS(0)
 
 BFS(x - 1)
 
-# Hallando el nodo mas alejado a Alice que puede alcanzar Bob antes que lo alcance Alice
 max = 0
 for i in range(n):
     if max < distance_Alice[i] and distance_Bob[i] < distance_Alice[i]:

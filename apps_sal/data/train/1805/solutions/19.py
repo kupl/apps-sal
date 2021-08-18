@@ -5,7 +5,6 @@ class Solution:
         visited = set()
         visited.add(id)
 
-        # q contains friends at level k
         for _ in range(level):
             for _ in range(len(q)):
                 curr = q.popleft()
@@ -14,7 +13,6 @@ class Solution:
                         q.append(friend)
                         visited.add(friend)
 
-        # get videos for friends at level k
         video_dict = {}
         for friend in q:
             for video in watchedVideos[friend]:

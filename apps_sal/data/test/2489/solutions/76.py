@@ -15,7 +15,6 @@ def main():
     for i in range(N):
         a = A[i]
         if count[a] == 1:
-            #            print(i)
             ans += 1
 
     print(ans)

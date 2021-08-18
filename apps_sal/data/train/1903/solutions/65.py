@@ -4,7 +4,7 @@ class Solution:
         if len(points) == 1:
             return 0
         res = 0
-        curr = 0  # select a random point as the starting point
+        curr = 0
         dis = [math.inf] * n
         explored = set()
 
@@ -43,13 +43,3 @@ class Solution:
             todo.remove(used)
             seen.add(used)
         return res
-
-    # def minCostConnectPoints1(self, P: List[List[int]]) -> int:
-    #     P.sort(key=lambda a:(abs(a[0])+abs(a[1])))
-    #     print(P)
-    #     res=0
-    #     px,py=P[0]
-    #     for cx,cy in P[1:]:
-    #         res+=abs(cx-px)+abs(cy-py)
-    #         px,py=cx,cy
-    #     return res

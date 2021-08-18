@@ -81,7 +81,6 @@ for i in range(1, len(p)):
         if not _connected or _start_token != start_token:
             connected = False
         level = i
-# print(start_token, start_num, end_token, end_num, connected, level)
 end_cond = 0
 if start_num > end_num:
     end_cond = 1

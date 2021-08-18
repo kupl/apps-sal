@@ -49,5 +49,4 @@ class Solution:
                 self.union(v + 1, v)
             if self.num_m > 0:
                 ans = i + 1
-            # print(i,self.num_m,ans)
         return ans

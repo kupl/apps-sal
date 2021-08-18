@@ -6,4 +6,3 @@ class Solution:
                 dp[m][k] = 1 + dp[m - 1][k - 1] + dp[m - 1][k]
             if dp[m][k] >= N:
                 return m
-        # return dp[-1][-1]

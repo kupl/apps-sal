@@ -1,4 +1,3 @@
-# coding=utf-8
 
 def __starting_point():
     N = int(input())
@@ -13,8 +12,6 @@ def __starting_point():
         else:
             ans.insert(0, N)
             break
-
-    # print(ans)
 
     def num2alpha(c): return chr(c + 97)
     for i in range(len(ans)):

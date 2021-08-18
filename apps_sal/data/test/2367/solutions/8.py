@@ -1,4 +1,3 @@
-# Combination
 MOD = 10**9 + 7
 MAX = 2 * 10**5
 fac = [1, 1] + [0] * MAX
@@ -22,7 +21,6 @@ H, W, A, B = list(map(int, input().split()))
 ans = 0
 for i in range(1, H - A + 1):
     cnt = comb(i - 1 + B - 1, i - 1)
-    #print(i, cnt)
     cnt *= comb(H - i + W - B - 1, H - i)
     ans += cnt
     ans %= MOD

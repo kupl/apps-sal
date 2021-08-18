@@ -16,7 +16,6 @@ class Solution:
 
         seen = set()
         while queue:
-            # print(queue)
             nex = queue.popleft()
             if nex[1] == 0:
                 return nex[0]

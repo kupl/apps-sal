@@ -1,8 +1,5 @@
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
-        # BFS next step: +1, -1, same val pos
-        # val_to_pos dict
-        # dist dict
 
         if not arr:
             return 0

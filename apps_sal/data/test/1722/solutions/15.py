@@ -4,7 +4,6 @@ for _ in range(n):
     c = input()[0]
     d[c] = d.get(c, 0) + 1
 res = 0
-# print(d)
 for v in d.values():
     x = (v + 1) // 2
     res += (x * (x - 1)) // 2

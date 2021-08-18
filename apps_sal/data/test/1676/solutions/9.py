@@ -1,18 +1,5 @@
 3
 
-# def gen(n, b):
-# 	import random
-# 	yield '{} {}'.format(n, b)
-# 	t = 0
-# 	for i in range(n):
-# 		t += random.randrange(1, 1e7)
-# 		d = random.randrange(1, 1e7)
-# 		yield '{} {}\n'.format(t, d)
-
-# def input():
-# 	g = gen(200000, 200000)
-
-# 	return next(g)
 
 n, b = map(int, input().split())
 

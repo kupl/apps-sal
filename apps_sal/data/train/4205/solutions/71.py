@@ -1,5 +1,4 @@
 def cannons_ready(gunners):
-    # Fire! or Shiver me timbers!
     if all(value == "aye" for value in gunners.values()):
         return "Fire!"
     else:

@@ -1,4 +1,3 @@
-# reference: https://www.onakasuitacity.com/abc144-f/
 
 import numpy as np
 
@@ -12,16 +11,16 @@ for _ in range(m):
 
 
 ex_dp = np.zeros(n)
-for v in reversed(range(n - 1)):   # O(m)
+for v in reversed(range(n - 1)):
     outgoing_degree = len(outgoing[v])
     ex_dp[v] = 1 + sum(ex_dp[post] for post in outgoing[v]) / outgoing_degree if outgoing_degree != 0 else np.inf
 
 p_dp = np.ones(n)
-for v in range(1, n):      # O(m)
+for v in range(1, n):
     p_dp[v] = sum(p_dp[prev] / len(outgoing[prev]) for prev in incoming[v])
 
 min_ex = ex_dp[0]
-for v, posts in enumerate(outgoing):      # O(m)
+for v, posts in enumerate(outgoing):
     outgoing_degree = len(outgoing[v])
     if outgoing_degree <= 1:
         continue

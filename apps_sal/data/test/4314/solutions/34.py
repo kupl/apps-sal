@@ -3,20 +3,20 @@ a = []
 hh = 0
 for _ in range(h):
     x = [xx for xx in input()]
-    if x.count("#") > 0:
+    if x.count("
         a.append(x)
         hh += 1
-b = []
+b=[]
 
-count = 0
+count=0
 if hh > 1:
-    wlist = []
+    wlist=[]
     for i in range(w):
         for j in range(hh):
             b.append(a[j][i])
-        if b.count("#") == 0:
+        if b.count("
             wlist.append(i)
-        b = []
+        b=[]
     for k in wlist:
         for l in range(hh):
             a[l].pop(k - count)
@@ -24,6 +24,6 @@ if hh > 1:
     for m in range(len(a)):
         print("".join(a[m]))
 else:
-    a = list(*a)
-    ans = [aa for aa in a if aa == "#"]
+    a=list(*a)
+    ans=[aa for aa in a if aa == "
     print("".join(ans))

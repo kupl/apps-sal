@@ -8,7 +8,6 @@ class Solution:
         for c in s:
             j += 1
             mask ^= 1 << ord(c) - ord('0')
-            # print(\"{0:08b}\".format(mask), \"~\")
             for i in range(0, 10):
                 new_mask = mask ^ (1 << i)
                 if new_mask in list(F.keys()):
@@ -16,9 +15,6 @@ class Solution:
                     if not mask:
                         res = max(res, j)
 
-            # print(mask)
-
             if mask not in list(F.keys()):
                 F[mask] = j
-            # print(F)
         return res

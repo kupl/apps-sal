@@ -1,6 +1,5 @@
 def play_pass(s, n):
 
-    # Step 1, 2, 3
     shiftText = ""
     for char in s:
         if char.isdigit():
@@ -11,10 +10,8 @@ def play_pass(s, n):
         else:
             shiftText += char
 
-    # Step 4
     caseText = ""
     for i in range(len(shiftText)):
         caseText += shiftText[i].upper() if i % 2 == 0 else shiftText[i].lower()
 
-    # Step 5
     return caseText[::-1]

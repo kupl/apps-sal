@@ -7,7 +7,7 @@ class Solution:
             else:
                 window_sum += (1 - grumpy[i]) * customers[i]
 
-        result = window_sum  # 求得指針未滑動前總和
+        result = window_sum
         left, right = 0, X
 
         while right < n:

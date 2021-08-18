@@ -61,7 +61,6 @@ def main():
                 if l < idx[p - q] < i:
                     ans += 1
         bit.add(i, 1)
-        #print(l, r)
     print(ans)
 
 

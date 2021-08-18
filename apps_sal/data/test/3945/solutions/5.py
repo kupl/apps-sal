@@ -1,34 +1,4 @@
-# # from collections import Counter
-#
-# n, m = list(map(int, input().split()))
-# streets = []
-# for i in range(n):
-#     streets.append(list(map(int, input().split())))
-#
-# mem_rows = {}
-# len_row = []
-# for i in range(n):
-#     mem_r = sorted(set(streets[i]))
-#     mem_rows[i] = {x: i for i, x in enumerate(mem_r)}
-#     len_row.append(len(mem_rows[i]))
-#
-# mem_cols = {}
-# len_col = []
-# for j in range(m):
-#     mem_d = sorted(set([k[j] for k in streets]))
-#     mem_cols[j] = {x: i for i, x in enumerate(mem_d)}
-#     len_col.append(len(mem_cols[j]))
-#
-# for i in range(n):
-#     for j in range(m):
-#         elem = streets[i][j]
-#         pos1, pos2 = mem_rows[i][elem], mem_cols[j][elem]
-#         streets_ans = max(pos1, pos2) + max((len_row[i] - pos1), (len_col[j] - pos2))
-#         print(streets_ans, end=' ')
-#     print('\n', end='')
 
-
-# from collections import Counter
 
 n, m = list(map(int, input().split()))
 streets = []

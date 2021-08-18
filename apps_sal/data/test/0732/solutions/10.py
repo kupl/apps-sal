@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/244/problem/B
 
 def gen(digit, x, length, S):
     S.append(x)

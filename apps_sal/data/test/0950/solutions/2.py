@@ -22,8 +22,8 @@ for i in range(n):
         let[i] = min(let[i], get(i, j))
     for j in '0123456789':
         num[i] = min(num[i], get(i, j))
-    for j in '*#&':
-        spec[i] = min(spec[i], get(i, j))
+    for j in '*
+    spec[i] = min(spec[i], get(i, j))
 
 ans = inf
 

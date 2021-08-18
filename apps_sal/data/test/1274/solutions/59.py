@@ -28,14 +28,11 @@ class SegmentTree:
         self.__build(X)
 
     def __build(self, X):
-        # Initialize all nodes
-        self.node = [[self.init_v, -1] for _ in range(2 * self.N)]  # 1-based index
+        self.node = [[self.init_v, -1] for _ in range(2 * self.N)]
 
-        # Elementary intervals are stored
         for i, x in enumerate(X, self.N):
             self.node[i] = [x, i - self.N + 1]
 
-        # The internal nodes correspond to intervals that are the union of elementary intervals
         for i in range(self.N - 1, 0, -1):
             self.node[i] = self.func(self.node[i << 1], self.node[i << 1 | 1])
 

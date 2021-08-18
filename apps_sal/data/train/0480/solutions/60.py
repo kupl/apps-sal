@@ -10,7 +10,6 @@ class DP:
         if (index, steps) in self._cache:
             return self._cache[(index, steps)]
         result = self._get_uncached(index, steps)
-        # print(f\"index={index} steps={steps}  =>  ways={result}\")
         self._cache[(index, steps)] = result
         return result
 

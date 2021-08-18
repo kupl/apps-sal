@@ -1,6 +1,5 @@
 N, M = list(map(int, input().split()))
 X = sorted(list(map(int, input().split())))
-# X.sort()
 B = []
 
 if N >= M:

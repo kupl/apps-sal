@@ -6,10 +6,6 @@ class Solution:
 
         longest = 0
 
-        # three possibilities:
-        # 1. head + tail, 2. head, 3. tail
-
-        # head
         benchmark = 'a'
 
         for i in range(1, l):
@@ -28,7 +24,6 @@ class Solution:
             head_longest += 1
             i -= 1
 
-        # tail
         for i in range(l - 2, -1, -1):
             if arr[i] > arr[i + 1]:
                 tail_longest = l - i - 1

@@ -10,7 +10,7 @@ def get_longest_path_depth(
     """
     V = len(graph) + first_index
     queue = deque()
-    depths = [-1] * V  # depths[i] := the length of the longest path to V_i
+    depths = [-1] * V
     for i in range(first_index, V):
         if not in_degrees[i]:
             queue.append(i)

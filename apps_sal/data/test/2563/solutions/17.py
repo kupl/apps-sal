@@ -9,7 +9,6 @@ for _ in range(int(input())):
             even.append(i)
         else:
             odd.append(i)
-    #print(even, odd)
     ans = deque()
     while len(ans) < len(x):
         if len(even) == 0:

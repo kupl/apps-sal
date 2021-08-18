@@ -1,10 +1,6 @@
 from decimal import Decimal
 n = int(input())
 
-# decimalを使う方
-# i = int((-1 + Decimal(1+8*(n+1)).sqrt())/2 )
-
-# 二部探索
 
 left = 0
 right = n + 1

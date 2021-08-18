@@ -31,7 +31,6 @@ def stdpr(x): return stdout.write(str(x))
 mod = 1000000007
 
 
-# main code
 n = ii()
 arr = lii()
 for i in range(n):

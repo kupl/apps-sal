@@ -32,7 +32,7 @@ class Solution:
         neighbors: [j-target,j+1]
 
         edge cases:
-        -if # of color neighborhoods > target: return -1
+        -if 
         -num houses < target: return -1
         '''
         prev = [[0] * n for _ in range(2)]

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 x, y, m = list(map(int, input().split()))
 if not (x < y):
     x, y = y, x

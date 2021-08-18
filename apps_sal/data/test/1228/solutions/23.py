@@ -1,4 +1,4 @@
-x = int(input())  # HP
+x = int(input())
 
 if (x % 4 == 1):
     print(0, "A")

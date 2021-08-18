@@ -10,7 +10,6 @@ class ReallyBigNumbers:
         h = 10000000000000000000
         while(l < h):
             mid = (h + l) // 2
-            #print(mid, self.isReallyBig(mid))
             if self.isReallyBig(mid):
                 h = mid
             else:
@@ -23,7 +22,6 @@ class ReallyBigNumbers:
         while v > 0:
             add += v % 10
             v //= 10
-        #print('resta', cp-add, cp, add)
         return (cp - add) >= self.s
 
     def show(self):
@@ -35,5 +33,4 @@ class ReallyBigNumbers:
 
 n, s = list(map(int, input().split()))
 rbg = ReallyBigNumbers(n, s)
-# print(rbg.x)
 rbg.show()

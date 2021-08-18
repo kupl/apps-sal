@@ -1,15 +1,12 @@
-# Fast IO (only use in integer input)
 
-# import os,io
-# input=io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
 
 t = int(input())
 for _ in range(t):
     n = int(input())
     pointList = []
     pointOrderDict = {}
-    interval = []  # (l,r) tuple
-    intervalOrder = []  # interval list compressed as an order
+    interval = []
+    intervalOrder = []
     for _ in range(n):
         l, r = map(int, input().split())
         pointList.append(l)
@@ -37,10 +34,10 @@ for _ in range(t):
     for elem in intervalOrder:
         intervalList[elem[0]].append(elem[1])
 
-    for i in range(cnt):  # r - l
-        for j in range(cnt - i):  # l
-            ans1 = 0  # is there [l,r]
-            ans2 = 0  # max of [l+1,r] and [l,nr] + [nr + 1,r]
+    for i in range(cnt):
+        for j in range(cnt - i):
+            ans1 = 0
+            ans2 = 0
             if i != 0:
                 ans2 = dp[j + 1][i + j]
             for elem in intervalList[j]:

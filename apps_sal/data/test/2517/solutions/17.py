@@ -13,10 +13,8 @@ def main():
     edge = np.array([line.split() for line in lines], dtype=np.int64).T
     graph = csr_matrix((edge[2], (edge[:2] - 1)), (N, N))
     distance_mat = floyd_warshall(graph, directed=False)
-    # print(distance_mat)
     ans = float("inf")
     for town in itertools.permutations(r, R):
-        # print(town)
         tmp = 0
         for i in range(R - 1):
             tmp += distance_mat[town[i] - 1][town[i + 1] - 1]

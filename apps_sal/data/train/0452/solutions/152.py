@@ -7,9 +7,7 @@ class Solution:
             dp2 = [float('inf')] * (N + 1)
 
             stack = []
-            # print(\"\")
             for j in range(i, N + 1 - d + i):
-                # print(\"i:\", i, \"dp2:\", dp2, \", stack:\", stack)
                 curr_max = jobDifficulty[j - 1]
                 if i == 1:
                     dp2[j] = max(jobDifficulty[:j])

@@ -10,10 +10,7 @@ for i in range(num):
 
 c += c
 
-# print(c)
-# print(d)
 
-# テーブル作成
 table = [0]
 k = 0
 for i in range(1, num + 1):
@@ -26,15 +23,13 @@ for i in range(1, num + 1):
     else:
         k = 0
 
-# print(table)
 
-i = 0  # 探索される文字列の位置
-j = 0  # 探索する文字列の位置
-k = 0  # kの初期値
+i = 0
+j = 0
+k = 0
 while k < num:
 
     while True:
-        # print(i, j, k)
         if c[i] == d[j]:
             if j == num - 1:
                 print(k, a[k] ^ b[0])

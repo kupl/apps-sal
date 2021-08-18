@@ -15,7 +15,6 @@ for px in range(101):
                 flag = False
                 break
         for x1, y1, h1 in coords:
-            #print (px, py, htmp, x1, y1, h1)
             if h1 == 0:
                 continue
             if abs(htmp - h1) != abs(px - x1) + abs(py - y1):

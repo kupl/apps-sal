@@ -15,7 +15,6 @@ for _ in range(t):
     n = int(input(''))
     b = ternary(n)
     l = len(b)
-    # print(b)
     ind = -1
     ans = ''
     for i in range(l):

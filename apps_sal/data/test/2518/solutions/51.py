@@ -3,9 +3,6 @@ def submit():
     n, a, b = (int(e) for e in input().split())
     h = [int(input()) for _ in range(n)]
 
-    # t回で倒せるか否かを判定する処理を実施し、
-    # tについて2分探索する
-
     def judge(t):
         base_damage = b * t
         add_attack = 0

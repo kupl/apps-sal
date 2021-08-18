@@ -21,7 +21,6 @@ for end in range(n):
         dp[end][length] = ans
 
 totals = [dp[n - 1][length] for length in range(n)]
-# print(totals)
 
 ans = 0
 idx = n - 1

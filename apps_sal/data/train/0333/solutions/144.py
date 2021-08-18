@@ -20,7 +20,7 @@ class Solution:
             next = []
 
             for i in curr:
-                if i == n - 1:  # reached end
+                if i == n - 1:
                     return step
 
                 visited[i] = True
@@ -29,7 +29,7 @@ class Solution:
                     if not visited[next_idx]:
                         next.append(next_idx)
 
-                same_val[arr[i]].clear()  # critical step: clear the same_val list to prevent redundant search!
+                same_val[arr[i]].clear()
 
                 for next_idx in [i - 1, i + 1]:
                     if 0 <= next_idx < n and not visited[next_idx]:
@@ -38,4 +38,4 @@ class Solution:
             curr = next
             step += 1
 
-        return -1  # unreachable
+        return -1

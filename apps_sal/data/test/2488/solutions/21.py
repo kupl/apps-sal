@@ -11,7 +11,6 @@ def main():
 
     right_index = []
 
-    # 尺取り法
     tmp = 0
     for i in range(n):
         j = tmp

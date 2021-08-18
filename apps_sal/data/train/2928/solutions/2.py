@@ -1,5 +1,4 @@
 def alphabet_war(fight):
-    # your code here
     sum = 0
     for i in fight:
         if i == "w":

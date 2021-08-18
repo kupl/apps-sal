@@ -51,5 +51,4 @@ def __starting_point():
     print(t[0][1])
 
 
-# Made By Mostafa_Khaled
 __starting_point()

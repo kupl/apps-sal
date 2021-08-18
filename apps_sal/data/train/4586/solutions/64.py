@@ -6,7 +6,7 @@ class TvRemote():
         self.modes = ["",
                       "abcde123fghij456klmno789pqrst.@0uvwxyz_/æ øøøøøø",
                       "ABCDE123FGHIJ456KLMNO789PQRST.@0UVWXYZ_/æ øøøøøø",
-                      """^~?!'"()-:;+&%*=<>€£$¥¤\[]{},.@§#¿¡øøø_/æ øøøøøø"""]
+                      """^~?!'"()-:;+&%*=<>€£$¥¤\[]{},.@§
 
         words = words.replace("\u00a1", "¡")
         words = words.replace("\u00a3", "£")
@@ -34,29 +34,24 @@ class TvRemote():
         return self.taxiCabDist("æ")
 
     def taxiCabDist(self, letter):
-        # SwitchMode
         modeSwitch = 0
         if letter not in self.modes[self.mode]:
             modeSwitch += self.switchMode()
             if letter not in self.modes[self.mode]:
                 modeSwitch += self.switchMode()
 
-        # Letter coord
         index = self.modes[self.mode].index(letter)
         x, y = index % 8, index // 8
 
-        # Absolute difference coord
         dx = abs(self.x - x)
         dy = abs(self.y - y)
 
-        # log
         print(letter, (dx, dy), dx + dy + modeSwitch + 1)
 
-        # Set New Cursor Position
         self.x = x
         self.y = y
 
-        return dx + dy + modeSwitch + 1  # The OK Press
+        return dx + dy + modeSwitch + 1  
 
 
 def tv_remote(word):

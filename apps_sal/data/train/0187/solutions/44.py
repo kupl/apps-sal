@@ -1,7 +1,5 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        # if 4*boardingCost > runningCost:
-        #     return -1 #check again
         high = -1
         max_profit = -1
         prev = 0
@@ -20,7 +18,6 @@ class Solution:
                     prev = 0
             count += 1
             profit = (served * boardingCost) - (count * runningCost)
-            # print(\"round \", count, \"profit is \", profit, \"served so far\", served)
 
             if max_profit < profit:
                 max_profit = profit
@@ -34,7 +31,6 @@ class Solution:
                 prev = 0
             count += 1
             profit = (served * boardingCost) - (count * runningCost)
-            # print(\"round \", count, \"profit is \", profit, \"served so far\", served)
             if max_profit < profit:
                 max_profit = profit
                 high = count

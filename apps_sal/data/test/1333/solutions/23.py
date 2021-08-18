@@ -3,10 +3,10 @@ import time
 
 def snake(a, b):
     if a == 0 or a == 2:
-        return '#' * n
+        return '
     elif a == 1:
-        return '.' * (n - 1) + '#'
-    return '#' + '.' * (n - 1)
+        return '.' * (n - 1) + '
+    return '
 
 
 m, n = list(map(int, input().split()))

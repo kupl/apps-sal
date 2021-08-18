@@ -8,7 +8,6 @@ import math
 setrecursionlimit(15000)
 
 
-# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 for i in range(n):

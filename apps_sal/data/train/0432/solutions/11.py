@@ -5,7 +5,6 @@ class Solution:
 
         nums = sorted(nums)
         cnt = collections.Counter(nums)
-        # head = collections.Counter()
 
         for x in nums:
             if cnt[x] == 0:

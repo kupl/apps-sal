@@ -16,7 +16,6 @@ def main():
             x[a[j] - 1] = i
             y[a[j] - 1] = j
 
-    # 累積和
     cost = [[0] for _ in range(d)]
     for i in range(d, h * w):
         cost[i % d].append(cost[i % d][-1] + abs(x[i] - x[i - d]) + abs(y[i] - y[i - d]))

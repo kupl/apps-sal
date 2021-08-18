@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 h, w, d = list(map(int, input().split()))
 
@@ -7,8 +6,6 @@ for i in range(h):
     a = list(map(int, input().split()))
     for j in range(len(a)):
         index[a[j] - 1] = (i + 1, j + 1)
-        # index[a[j]-1] = (i, j)
-# print(index)
 
 data = [[] for _ in range(d)]
 
@@ -19,11 +16,9 @@ for i in range(1, d + 1):
     num += d
     while(num <= h * w):
         x_new, y_new = index[num - 1]
-        # data[i-1].append(abs(x-x_new)+abs(y-y_new))
         data[i - 1].append(abs(x - x_new) + abs(y - y_new) + data[i - 1][-1])
         x, y = x_new, y_new
         num += d
-# print(data)
 
 q = int(input())
 for i in range(q):

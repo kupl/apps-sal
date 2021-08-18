@@ -1,7 +1,5 @@
 for _ in range(1):
-    # a, b, n = map(int, input().split())
     k = int(input())
-    # arr = list(map(int, input().split()))
     arr = [(0, 0), (0, 1)]
     c = [0, 0]
     for i in range(k):

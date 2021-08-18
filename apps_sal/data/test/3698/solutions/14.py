@@ -1,4 +1,3 @@
-# python3
 import sys
 from functools import lru_cache
 
@@ -45,7 +44,7 @@ def solve(n, k):
     if k == 0:
         return 1
     elif k == 1:
-        return len(n) - 1  # exclude the 1
+        return len(n) - 1
     elif k > 5:
         return 0
 

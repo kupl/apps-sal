@@ -8,4 +8,3 @@ class Hero():
 
 
 myHero = Hero()
-# Solved on 26th Nov, 2019 at 04:49 PM.

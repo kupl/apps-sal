@@ -1,4 +1,3 @@
-# D
 import math
 n, k = map(int, input().split())
 

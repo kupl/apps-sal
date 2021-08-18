@@ -24,8 +24,6 @@ class Solution:
             print(len(seen), valid)
             return valid and len(seen) == n
 
-        # return method1()
-
         def method2():
             indeg = collections.defaultdict(int)
             for i in range(n):

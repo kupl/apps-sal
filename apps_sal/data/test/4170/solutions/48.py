@@ -1,6 +1,5 @@
 N = int(input())
 H = list(map(int, input().split(" ")))
-#print('H', H[0])
 
 count = 0
 maxCount = 0

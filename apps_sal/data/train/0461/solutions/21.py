@@ -13,6 +13,3 @@ class Solution:
                 subordinates[m].append(i)
         dfs(headID, 0)
         return self.result
-
-    # def dfs(self, id):
-    #     return max(informTime[id] + self.dfs(sub) for sub in subordinates[id]) if id in subordinates else 0

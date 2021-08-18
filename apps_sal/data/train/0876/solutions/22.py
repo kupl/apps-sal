@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 from sys import stdout, stdin
 
 
@@ -17,9 +15,6 @@ def main():
             largest = numbers[j]
             max_position = j
     listDiff = largest - smallest
-    # print(largest)
-    # print(smallest)
-    # print(difference)
     if(listDiff > difference):
         print("NO")
     elif(difference > listDiff):

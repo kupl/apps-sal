@@ -2,16 +2,12 @@ class Solution:
     def knightDialer(self, n: int) -> int:
 
         def knightPos(i, j):
-            # left top bot
             lt = (i + 2, j - 1)
             lb = (i - 2, j - 1)
-            # right top bot
             rt = (i + 2, j + 1)
             rb = (i - 2, j + 1)
-            # top left right
             tl = (i + 1, j - 2)
             tr = (i + 1, j + 2)
-            # bot left right
             bl = (i - 1, j - 2)
             br = (i - 1, j + 2)
 

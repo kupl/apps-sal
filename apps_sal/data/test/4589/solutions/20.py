@@ -3,15 +3,14 @@ m = [["."] * (w + 2)]
 for i in range(h):
     m.append(["."] + list(input()) + ["."])
 m.append(m[0])
-#print(m,sep = "\n")
 
 
 def check(x, y):
     res = 0
     for i in range(3):
         for j in range(3):
-            if m[x - 1 + i][y - 1 + j] == "#":
-                res += 1
+            if m[x - 1 + i][y - 1 + j] == "
+            res += 1
     return str(res)
 
 

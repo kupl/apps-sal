@@ -7,13 +7,10 @@ class Solution:
 
         i = 1
         profit = 0
-        # print(profit)
         while backlog > 0 or i < len(customers):
-            # print(backlog)
             rotations += 1
 
             profit += min(4, backlog) * boardingCost - runningCost
-            # print(profit)
             if profit > maxprofit:
                 maxprofit = profit
                 minrounds = rotations

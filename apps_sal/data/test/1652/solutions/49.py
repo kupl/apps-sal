@@ -1,4 +1,3 @@
-# coding: utf-8
 
 def YESNO(ans, yes="YES", no="NO"):
     print(([no, yes][ans]))

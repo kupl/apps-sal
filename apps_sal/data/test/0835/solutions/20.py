@@ -73,6 +73,3 @@ if (r > 0):
     ans += r // cost
 
 print(ans)
-
-
-# 1482779206983

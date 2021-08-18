@@ -1,9 +1,7 @@
 L, R = list(map(int, input().split()))
 ans = 0
 mod = 10 ** 9 + 7
-for d in range(62):  # 最上位 bit
-    # dp[n] := n 桁目まで見た時に条件を満たすものが何個あるか
-    # dp_small[n] := n 桁目まで見た時に、l と x が n 桁目まで一致していて条件を満たすものが何個あるか
+for d in range(62):
     l = max(1 << d, L)
     r = min((2 << d) - 1, R)
     if l > r:
@@ -25,10 +23,4 @@ for d in range(62):  # 最上位 bit
         dp_small_large[n] = dp_small_large[n - 1] if l >> i & 1 <= r >> i & 1 else 0
     a = dp_ok[d + 1] + dp_large[d + 1] + dp_small[d + 1] + dp_small_large[d + 1]
     ans += a
-    # print(f"d={d},a={a},l={l},r={r}")
-    # print(f"dp_ok={dp_ok}")
-    # print(f"dp_small={dp_small}")
-    # print(f"dp_large={dp_large}")
-    # print(f"dp_small_large={dp_small_large}")
-    # print()
 print((ans % mod))

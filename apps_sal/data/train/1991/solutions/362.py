@@ -3,13 +3,10 @@ class Solution:
         start = locations[start]
         finish = locations[finish]
         locations.sort()
-        # print(locations)
         res = 0
         dict = {}
 
         def dfs(start, finish, fuel):
-            # [2,3,4,6,8] 3->6
-            #print((start, finish, fuel))
             if (start, fuel) in dict:
                 return dict[(start, fuel)]
             route = 0

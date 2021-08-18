@@ -8,7 +8,6 @@ else:
     k -= a
     if k <= b:
         pass
-        # break
     else:
         k -= b
         max_val -= k

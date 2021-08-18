@@ -3,7 +3,7 @@ class Solution:
         if m == n:
             return 1
         if n < m:
-            m, n = n, m  # so n is bigger
+            m, n = n, m
         if m == 1:
             return n
         if m == 2:
@@ -25,6 +25,6 @@ class Solution:
             for x in range(j - i, 0, -1):
                 recurse(h[:i] + [hi + x] * x + h[i + x:], ct + 1)
 
-        Min = m * n  # we initialize to this worst case of all 1x1s
+        Min = m * n
         recurse([0] * n, 0)
         return Min

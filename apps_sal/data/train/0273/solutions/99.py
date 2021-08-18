@@ -8,8 +8,6 @@ class Solution:
                 pos, speed = que.popleft()
                 if pos == target:
                     return cost
-                # if abs(pos) >= 2 * target:
-                #    continue
                 if pos < 0 or pos >= 2 * target:
                     continue
                 for npos, nspeed in [[pos, 1 if speed < 0 else -1], [pos + speed, speed * 2]]:

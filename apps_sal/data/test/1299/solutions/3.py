@@ -26,6 +26,4 @@ for b in range(a + k, n):
     if s[a] + s[b] == sol:
         break
 
-# print(s)
-# print(dp)
 print(a + 1, b + 1)

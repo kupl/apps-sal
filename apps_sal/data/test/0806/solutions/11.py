@@ -1,13 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[22]:
 
 
 stuff = list(map(int, input().rstrip().split()))
-
-
-# In[23]:
 
 
 n = stuff[0]
@@ -17,9 +10,6 @@ r = stuff[2]
 mod = 10**9 + 7
 
 
-# In[24]:
-
-
 zeromods = r // 3 - (l - 1) // 3
 
 onemods = (r - 1) // 3 - (l - 2) // 3
@@ -27,19 +17,10 @@ onemods = (r - 1) // 3 - (l - 2) // 3
 twomods = (r - 2) // 3 - (l - 3) // 3
 
 
-# In[25]:
-
-
 combos = [[0, 0, 0] for i in range(n)]
 
 
-# In[26]:
-
-
 combos[0] = [zeromods, onemods, twomods]
-
-
-# In[28]:
 
 
 for i in range(1, n):
@@ -53,10 +34,4 @@ for i in range(1, n):
 print(combos[-1][0])
 
 
-# In[29]:
-
-
 combos
-
-
-# In[ ]:

@@ -1,6 +1,5 @@
 t = int(input())
 for q in range(0, t):
-    # n = int(input())
     n, x = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     a = 0

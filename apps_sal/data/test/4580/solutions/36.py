@@ -25,8 +25,6 @@ for rate in rates:
 
 min = len(colors)
 max = min + over
-# if max>8:
-#     max=8
 if min == 0:
     min = 1
 print(min, max)

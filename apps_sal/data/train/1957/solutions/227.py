@@ -11,9 +11,6 @@ class Solution:
         while len(queue):
             r, c, obs, steps = queue.popleft()
 
-            # if obs > minObs[r][c]:
-            #     continue
-
             if r == n - 1 and c == m - 1:
                 return steps
 

@@ -9,5 +9,4 @@ class Solution:
                         return False
                 else:
                     ans_dic[j] = i[0]
-        # print(ans_dic)
         return True

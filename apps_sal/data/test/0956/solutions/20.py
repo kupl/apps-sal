@@ -26,9 +26,7 @@ for i in list(data.keys()):
     for j in list(data.keys()):
         if i != j and i not in data[j]:
             com_fr = data[i] & data[j]
-       #     print(len(data[i]) * part, len(com_fr) / len(data[i]))
             if part <= len(com_fr) / len(data[i]):
-             #   if len(com_fr) != 0:
                 res.append(j)
 
     answer.append((i, ": ", len(res), ' ', ' '.join(map(str, sorted(res)))))

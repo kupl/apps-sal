@@ -1,5 +1,3 @@
-# python3
-# utf-8
 
 n, a, b = (int(x) for x in input().split())
 

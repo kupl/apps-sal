@@ -16,7 +16,7 @@ class Solution:
 
             total = 0
             for num in nums:
-                total += (num + m - 1) // m  # ceil. division
+                total += (num + m - 1) // m
 
             if total > threshold:
                 i = m + 1
@@ -24,6 +24,6 @@ class Solution:
                 j = m - 1
                 ans = m
 
-            m = (i + j) // 2  # mid point
+            m = (i + j) // 2
 
         return ans

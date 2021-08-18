@@ -12,5 +12,4 @@ class Solution:
                     if j > i:
                         dp[i][j] += dp[i][j - 1] * (i - K)
                 dp[i][j] %= mod
-        # print(dp)
         return dp[N][L]

@@ -5,7 +5,7 @@ class Solution:
         if len(arr) < 3:
             return 1
 
-        counter = {}  # Could use defaultdict to save a few lines of code
+        counter = {}
         for n in arr:
             if n in counter:
                 counter[n] += 1

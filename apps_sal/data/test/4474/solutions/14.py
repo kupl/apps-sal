@@ -11,9 +11,6 @@ def ternary(n):
     return list(reversed(nums))
 
 
-# print("here --> " + ternary(6561))
-# print("here --> " + ternary(3620))
-# print(ternary(4))
 while tc > 0:
     tc -= 1
     n = int(input())
@@ -29,7 +26,6 @@ while tc > 0:
             for j in range(idx + 1, len(rep)):
                 rep[j] = '0'
 
-    # print(rep)
     ans = 0
     for j in rep:
         x = ord(j) - ord('0')

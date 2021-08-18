@@ -6,9 +6,6 @@ tar = list(map(int, input().split()))
 freq = [0 for i in range(101)]
 for i in range(n):
     rem = m - tar[i]
-    #yoar = deepcopy(tar[:i])
-    # yoar.sort()
-    # print(yoar)
     count = 0
     counthr = 0
     for j in range(1, 101):
@@ -26,11 +23,5 @@ for i in range(n):
             count += freq[j]
 
     freq[tar[i]] += 1
-    # if counthr==rem:
-    # count = i-count
-    # elif counthr < rem:
-    # 	count = 0
-    # else:
-    # 	count = i-count+1
     print(i - count, end=" ")
 print()

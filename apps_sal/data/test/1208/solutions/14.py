@@ -28,6 +28,5 @@ for i in range(n):
     elif type == "-":
         if id in s:
             s.remove(id)
-    # print(s)
     ans = max(ans, len(s))
 print(ans)

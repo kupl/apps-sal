@@ -10,6 +10,5 @@ for i in range(n):
         d[a] = max(d[a], v)
     else:
         d[a] = v
-# print(d)
 l = d.values()
 print(sum(l))

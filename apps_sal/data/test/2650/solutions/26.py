@@ -55,7 +55,6 @@ class DeletableHeapq:
 
 
 def main():
-    # https://atcoder.jp/contests/abc170/tasks/abc170_e
     def encode_kindy(x, y): return (x << 18) + y
     def decode_kindy(x): return (x >> 18, x & ((1 << 18) - 1))
     def encode_smarts(x, y, z): return (x << 36) + (y << 18) + z

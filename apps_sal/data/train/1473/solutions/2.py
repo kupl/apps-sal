@@ -35,19 +35,12 @@ for i in range(int(input())):
     m = int(inp[2])
     k = int(inp[3])
     j = int(inp[4])
-    # r, c, m, k, j = map(int, raw_input().split())
 
     if nocheck(m, k, j, r, c):
         print("Yes")
-    # elif nocheck(m, j, k, r, c):
-    #     print "Yes"
     elif nocheck(j, m, k, r, c):
         print("Yes")
-    # elif nocheck(j, k, m, r, c):
-    #     print "Yes"
     elif nocheck(k, m, j, r, c):
         print("Yes")
-    # elif nocheck(k, j, m, r, c):
-    #     print "Yes"
     else:
         print("No")

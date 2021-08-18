@@ -5,7 +5,6 @@ def solve(A):
     def keep_max_2(i, j, k):
         if i == k or j == k:
             return i, j
-        # A[i] > A[j]
         if A[j] > A[k]:
             return i, j
         elif A[i] > A[k]:

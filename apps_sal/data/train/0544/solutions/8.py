@@ -1,4 +1,3 @@
-# cook your code here
 zz = int(input(''))
 for j in range(zz):
     xx = int(input(''))

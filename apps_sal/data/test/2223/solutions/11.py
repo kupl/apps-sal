@@ -10,8 +10,6 @@ def dfs_new(adj, n):
             if(sol[item] == None):
                 stack.append((item, i))
                 flag = False
-            # print(stack, flag)
-            # print(sol)
         if(flag):
             rem = 0
             tree_size = 1
@@ -19,14 +17,12 @@ def dfs_new(adj, n):
                 if(item == parent):
                     continue
                 subtree_size, t = sol[item]
-                # print(item, subtree_size, t)
                 if(subtree_size % 2 == 0):
                     rem += 1
                 rem += t
                 tree_size += subtree_size
             sol[i] = [tree_size, rem]
             stack.pop(-1)
-    # print(sol)
     return sol[1][1]
 
 

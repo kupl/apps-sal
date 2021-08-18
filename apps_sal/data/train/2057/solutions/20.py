@@ -1,4 +1,3 @@
-# Description of the problem can be found at http://codeforces.com/problemset/problem/804/B
 
 MOD = 1e9 + 7
 s = input()

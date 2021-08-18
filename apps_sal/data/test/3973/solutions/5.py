@@ -11,10 +11,7 @@ def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
 def main():
     n, m = MI()
-    # 明るさaは0-indexedにする
     aa = LI1()
-    # 頂点xをお気に入りにしたときのスコアをpx+qで表す
-    # imos法を使う
     pp = [0] * (m + 1)
     qq = [0] * (m + 1)
 

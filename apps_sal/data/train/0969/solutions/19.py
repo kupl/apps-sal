@@ -1,7 +1,6 @@
 t = int(input())
 while(t):
     t -= 1
-    # l1=[]
     laddus = 0
     l1 = input().split()
     n = int(l1[0])
@@ -9,9 +8,6 @@ while(t):
         k = 200
     else:
         k = 400
-    # print(k)
-    # for i in range(n):
-    #     l2.append(input().split())
     while(n):
         n -= 1
         l2 = input().split()
@@ -27,5 +23,3 @@ while(t):
             else:
                 laddus += 300
     print(laddus // k)
-
-    # print(l2)

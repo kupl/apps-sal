@@ -11,4 +11,4 @@ def solve(n):
             ai = l - t[:-1][::-1].index(a) - 1
             t.insert(l - 1, t.pop(ai))
             li.append((l - bi) + (l - ai - 1) + [0, next(k for k, l in enumerate(t) if l != '0')][t[0] == '0'])
-    return min(li, default=-1)  # headache
+    return min(li, default=-1)

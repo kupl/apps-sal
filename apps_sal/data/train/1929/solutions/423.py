@@ -49,8 +49,3 @@ class StreamChecker:
             if not found:
                 return False
         return any([child.val == '.' for child in parent.children])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -43,8 +43,6 @@ def main():
     assert len(A) == n
     print(chem(n, A))
 
-##########
-
 
 def readint():
     return int(input())

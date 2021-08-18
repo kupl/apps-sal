@@ -1,5 +1,4 @@
 def array_madness(a, b):
-    # Ready, get, set, GO!!!
 
     hi = 0
     cool = 0

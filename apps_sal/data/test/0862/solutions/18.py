@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 import math
@@ -20,4 +18,3 @@ for i in range(n):
 
 print(mini + 1)
 finish = time.time()
-#print(finish - start)

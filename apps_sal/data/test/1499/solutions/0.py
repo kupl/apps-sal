@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 OUT = (1, 0, 2, 3)
 

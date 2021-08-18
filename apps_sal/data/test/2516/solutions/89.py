@@ -10,10 +10,9 @@ def main():
                 ans += N - i
         print(ans)
     else:
-        # modpを作成
         modp_counter = [0] * p
         modp = 0
-        modp_counter[0] = 1  # 割り切れるやつが入る場所の初期値を1にしておかないと、1つ割り切れるやつがきたときにpair_count+=0となってしまう(pair_count+=1になるべきなのに)
+        modp_counter[0] = 1
         pair_count = 0
         d = 1
         for s in S:
@@ -21,7 +20,7 @@ def main():
             pair_count += modp_counter[modp]
             modp_counter[modp] += 1
             d *= 10
-            d %= p  # 計算量削減
+            d %= p
         print(pair_count)
 
 

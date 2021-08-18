@@ -1,8 +1,6 @@
 n = int(input())
 A = list(map(int, input().split()))
 mod = 10**9 + 7
-# Aたちの最小公倍数をMとすれば
-# 答えはsum_{i}M/A_{i} (mod 10**9 + 7)
 
 
 def lcm(X, Y):
@@ -15,7 +13,6 @@ def lcm(X, Y):
     return X * Y // y
 
 
-# (A,B,C)の最小公倍数　=(A,B)の最小公倍数とCの最小公倍数を利用すれば簡単そう.
 a = 1
 c = 0
 s = 0

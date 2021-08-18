@@ -15,5 +15,4 @@ if e > 1 or l.count(0) > 1 or s - 1 in d:
 
 else:
     l = [l[i] - i for i in range(n)]
-    # print(l)
     print(ans[1 - sum(l) % 2])

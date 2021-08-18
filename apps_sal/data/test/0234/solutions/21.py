@@ -12,7 +12,6 @@ for _ in range(n):
         else:
             b.append(int(s[i]))
     a.append(b)
-# print(a)
 for i in range(n):
     for j in range(m):
         if a[i][j] <= -100:
@@ -33,7 +32,6 @@ for i in range(n):
             if j > 0:
                 a[i][j - 1] -= 1
 ans = True
-# print(a)
 for i in range(n):
     if ans == False:
         break

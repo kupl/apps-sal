@@ -4,7 +4,7 @@ class Solution:
             return 0
 
         dp = [[0, 0] for _ in range(len(nums))]
-        dp[0] = [int(bool(nums[0] > 0)), int(bool(nums[0] < 0))]  # max length (positive, negative)
+        dp[0] = [int(bool(nums[0] > 0)), int(bool(nums[0] < 0))]
 
         for idx in range(1, len(nums)):
             if nums[idx] == 0:

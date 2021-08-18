@@ -44,15 +44,12 @@ class Solution:
                     parent[x1] = parent[x2]
                     rank[x2] += 1
 
-        # print(\"--------------\")
-
         max_elem = max(A)
         parent = [i for i in range(max_elem + 1)]
         rank = [0] * (max_elem + 1)
 
         for item in A:
             factor_set = getFactors(item)
-            # print(item,factor_set)
             v1 = find(parent, item)
             if v1 == item:
                 union(parent, factor_set[0], v1)
@@ -61,6 +58,4 @@ class Solution:
         count = defaultdict(int)
         for item in A:
             count[find(parent, item)] += 1
-        # print(count)
-        # print(parent)
         return max(count.values())

@@ -10,7 +10,6 @@ for _ in range(int(input())):
             l.append([s1[i], s2[i]])
         else:
             same = True
-   # print(l)
     if len(l) == 0 and same:
         print("Yes")
     elif len(l) == 2 and l[0][0] == l[1][0] and l[0][1] == l[1][1]:

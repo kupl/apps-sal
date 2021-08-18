@@ -1,5 +1,3 @@
-# Codeforces 265 Div. 2
-# B
 
 n = input()
 l = input().split()

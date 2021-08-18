@@ -1,4 +1,3 @@
-# Not really needed but why not?
 from csv import reader
 
 

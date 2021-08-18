@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import operator
 from itertools import islice
 import math

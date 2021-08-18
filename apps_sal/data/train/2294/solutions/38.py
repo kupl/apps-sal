@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -34,12 +32,6 @@ ymin = yy[:]
 for i in range(1, n):
     ymin[i] = min(ymin[i], ymin[i - 1])
 
-# print(yy)
-# print(ymaxl)
-# print(ymaxr)
-# print(ymin)
-
-# print(xx,yy)
 
 ans = 1 << 60
 for i in range(n):
@@ -56,8 +48,6 @@ for i in range(n):
     Mb = ymaxl[i]
     if i != n - 1:
         Mb = max(Mb, xx[n - 1])
-
-    # print(i,mr,Mr,mb,Mb)
 
     ans = min(ans, (Mr - mr) * (Mb - mb))
 

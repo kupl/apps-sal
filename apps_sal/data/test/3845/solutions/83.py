@@ -1,7 +1,7 @@
 A, B = map(int, input().split())
 
 w = '.'
-b = '#'
+b = '
 
 ans = [[b] * 20 + [w] * 20 for _ in range(100)]
 

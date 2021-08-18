@@ -13,8 +13,6 @@ for _ in range(int(input())):
         for j in range(i, n):
             count[array[j]] += 1
             insort(temp, array[j])
-            # m=ceil(k/(j-i+1)) precalculate thes values in index array
-            # t=ceil(k/m)
             x = temp[index[j - i] - 1]
             f = count[x]
             if count[f]:

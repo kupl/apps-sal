@@ -1,7 +1,5 @@
 N, K = map(int, input().split())
 
-# 何回2をかけると超えるか。
-
 
 def func1(i, k):
     ans = 0

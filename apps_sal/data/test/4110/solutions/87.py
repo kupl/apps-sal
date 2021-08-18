@@ -9,7 +9,6 @@ for i, _ in enumerate(list(range(D)), 1):
     point[-1] += C
     points.append(point)
 
-# 中途半端に解く問題は1問だけ。解くなら高得点ほど良い。
 ans = 1000
 for completes in product(list(range(2)), repeat=D):
     solves = 0
@@ -22,15 +21,12 @@ for completes in product(list(range(2)), repeat=D):
         else:
             ex_points = point
 
-    # 目標に届かない場合、高配点を追加で解く
     if total < G:
         for i, p in enumerate(ex_points, 1):
             if total + p >= G:
-                # 目標に届いた
                 solves += i
                 break
         else:
-            # 目標に届かない
             continue
 
     ans = min(ans, solves)

@@ -11,12 +11,9 @@ def solve():
             nules += 1
         else:
             ind = bisect_left(sq, i)
-            # print(ind)
             ap(min(i - sq[ind - 1], sq[ind] - i))
     a = sorted(a)
     s = sum(a[:n])
-    # print(a,n,s)
-    # print(a,s)
     if s == 0:
         print(n - a[::-1].index(0) + max(0, nules - n))
     else:

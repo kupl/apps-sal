@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 """
 def factorial(n):
@@ -32,7 +31,6 @@ for i in range(shita, ue+1):
 print(res)
 """
 
-# 解説ACを目指す
 """
 1 <= a,b <= Nの条件下で、a + b = Kを満たす整数の組は、min(K-1, 2N + 1 - K)である。
 Nが大きいときはaとbの仕切りは自由に入れればよい。
@@ -50,7 +48,7 @@ xは2から2Nまでの範囲を動く。
 N, K = map(int, (input().split()))
 
 
-def pattern(x, K): return max(0, min(K - 1, 2 * x + 1 - K))  # これをminでまとめるのかー。
+def pattern(x, K): return max(0, min(K - 1, 2 * x + 1 - K))
 
 
 res = 0

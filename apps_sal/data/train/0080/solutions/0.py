@@ -4,7 +4,6 @@ def solve(L, R):
         for j in range(32):
             l = (L >> i) << i
             r = (R >> j) << j
-            #print(l, r)
             if l >> i & 1 == 0 or r >> j & 1 == 0:
                 continue
             l -= 1 << i
@@ -18,7 +17,6 @@ def solve(L, R):
             p = bin(lr & mask).count("1")
             ip = ma - mi - p
             res += 3**mi * 2**ip
-            #print(l, r, mi, ip, 3**mi * 2**ip)
     return res
 
 

@@ -19,6 +19,5 @@ for j in range(m):
     x, y = list(map(int, input().split()))
     checkpoint.append([x, y])
 
-# print(gakusei,checkpoint)
 for i in range(n):
     print((f(gakusei[i][0], gakusei[i][1])))

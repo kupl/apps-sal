@@ -1,8 +1,6 @@
 def cumul(n):
     return n * (n + 1) // 2
 
-# length of the line for the n index
-
 
 def length(n):
     res = cumul(n)

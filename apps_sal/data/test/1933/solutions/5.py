@@ -7,13 +7,11 @@ for i in range(n):
     l = [int(i) for i in input().split(" ")]
     for i in range(m):
         (s[i]).append(l[i])
-# print(s)
 result = 0
 c = 0
 for x in s:
     count = 0
     for i in range(n - k + 1):
-        # print(i)
         count = max(count, sum(x[i:i + k]))
         if count == k:
             break

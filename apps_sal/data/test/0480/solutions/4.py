@@ -5,7 +5,6 @@ import math
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
     s, x1, x2 = list(map(int, input().split()))
     t1, t2 = list(map(int, input().split()))
     p, d = list(map(int, input().split()))
@@ -14,7 +13,6 @@ def __starting_point():
         return
 
     if x2 > x1:
-        # +dir
         if d == 1:
             if p <= x1:
                 t = t1 * (x2 - p)

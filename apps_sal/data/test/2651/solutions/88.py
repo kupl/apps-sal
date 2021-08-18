@@ -1,8 +1,6 @@
 import sys
 input = sys.stdin.readline
-# sys.setrecursionlimit(10 ** 6)
 MOD = 10 ** 9 + 7
-# INF = float("inf")
 
 
 def f(l):

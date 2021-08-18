@@ -1,4 +1,3 @@
-# 無理ぞ
 import numpy as np
 n, k = map(int, input().split())
 a, b = [], []

@@ -14,7 +14,6 @@ for i in range(1, n + 1):
     cost = 0
     height = cur
     prev_height = 0
-    # print(sorted(incs[i]))
     for j in sorted(incs[i]):
         if j == cur:
             height += 1

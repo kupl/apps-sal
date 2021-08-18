@@ -10,7 +10,6 @@ def update():
             A[i] += 50
         else:
             A[i] -= 1
-        # print(i,A)
 
 
 for i in range(q):

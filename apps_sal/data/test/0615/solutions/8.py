@@ -4,7 +4,6 @@ n = int(input())
 a = list(map(int, input().split()))
 
 a = [0] + list(accumulate(a))
-# print(a)
 ans = 10**18
 for i in range(2, n):
     b = []
@@ -24,7 +23,6 @@ for i in range(2, n):
         b.append(a[r - 1] - m)
         b.append(a[-1] - a[r - 1])
 
-    # print(b)
     ans = min(ans, max(b) - min(b))
 
 print(ans)

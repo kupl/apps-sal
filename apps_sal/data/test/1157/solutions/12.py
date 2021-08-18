@@ -5,7 +5,6 @@ if l[0] < 0:
     dp[0][0] = 1
 else:
     dp[0][1] = 1
-# print(dp)
 for i in range(1, n):
     if l[i] < 0:
         dp[i][0] = dp[i - 1][1] + 1

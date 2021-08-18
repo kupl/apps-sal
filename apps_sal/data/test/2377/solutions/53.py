@@ -9,7 +9,6 @@ for i in range(n):
 ans = 0
 amax = max(a)
 b.sort(reverse=True)
-# print(amax, b)
 i = 0
 while H > 0:
     if i < n:

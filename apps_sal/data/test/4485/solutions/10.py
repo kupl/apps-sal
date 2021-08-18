@@ -8,7 +8,6 @@ def INPUT(mode=int):
 
 
 def Dijkstra_heap(s, edge):
-    # 始点sから各頂点への最短距離#始点sから各頂点への最短距離
     d = [10**20] * n
     used = [False] * n
     d[s] = 0
@@ -19,7 +18,6 @@ def Dijkstra_heap(s, edge):
     while len(edgelist):
         minedge = heapq.heappop(edgelist)
         v = minedge % (10**6)
-        # まだ使われてない頂点の中から最小の距離のものを探す
         if used[v]:
             continue
         d[v] = minedge // (10**6)

@@ -24,16 +24,13 @@ def factorization(n):
 
 def prepare(n, MOD):
 
-    # 1! - n! の計算
     f = 1
-    factorials = [1]  # 0!の分
+    factorials = [1]
     for m in range(1, n + 1):
         f *= m
         f %= MOD
         factorials.append(f)
-    # n!^-1 の計算
     inv = pow(f, MOD - 2, MOD)
-    # n!^-1 - 1!^-1 の計算
     invs = [1] * (n + 1)
     invs[n] = inv
     for m in range(n, 1, -1):
@@ -50,10 +47,8 @@ MOD = 1000000007
 def solve():
     N, M = list(map(int, input().split()))
     temp = factorization(M)
-    # print(temp)
     max_num = max(temp.values())
     factorials, invs = prepare(N + max_num - 1, MOD)
-    #print(factorials, invs)
     ans = 1
     for i, j in list(temp.items()):
         if i == 1:
@@ -64,7 +59,6 @@ def solve():
         ans %= MOD
         ans *= invs[j]
         ans %= MOD
-        # print(ans)
     print(ans)
 
 

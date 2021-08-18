@@ -5,5 +5,3 @@ class Solution:
             if char == 'a':
                 rtn = rtn[:i] + 'abc' + rtn[i:]
         return rtn == s
-
-#             aabcbc,...abcabcababcc

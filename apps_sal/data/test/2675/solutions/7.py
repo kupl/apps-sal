@@ -1,4 +1,3 @@
-# cook your dish here
 
 import collections
 n, m = map(int, input().split())

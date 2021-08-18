@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import stdin, stdout
 
 
@@ -6,7 +5,6 @@ def rint():
     return map(int, stdin.readline().split())
 
 
-#lines = stdin.readlines()
 a = list(input())
 b = list(input())
 

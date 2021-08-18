@@ -1,6 +1,4 @@
-# atcoder problem solving
 
-# Built?
 import sys
 input = sys.stdin.readline
 N = int(input())
@@ -12,7 +10,6 @@ for i in range(N):
 
 edge = []
 
-# x座標に関する辺の設定
 
 d.sort(key=lambda x: x[1])
 
@@ -24,7 +21,6 @@ for i in range(N - 1):
     edge.append((dis, a, b))
     edge.append((dis, b, a))
 
-# y座標に関する辺の設定
 
 d.sort(key=lambda x: x[2])
 
@@ -86,7 +82,6 @@ class UnionFind():
 
 
 edge.sort()
-# 最小全域木（クラスかるほう）
 
 
 def kruskal():

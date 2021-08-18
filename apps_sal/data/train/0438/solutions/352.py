@@ -48,10 +48,7 @@ class Solution:
             if x + 1 in par:
                 merge(x + 1, x)
 
-            # print(c[m])
-
             if c[m]:
-                # print(\"hi\")
                 ret = i
 
         return ret

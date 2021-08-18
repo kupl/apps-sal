@@ -1,4 +1,3 @@
-# https://atcoder.jp/contests/abc159/submissions/11108540
 
 def main():
     def calc(group):

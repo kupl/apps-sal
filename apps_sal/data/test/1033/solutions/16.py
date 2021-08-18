@@ -19,15 +19,6 @@ def getTransIntList(n):
 
 
 n, H = getIntList()
-# l*(l+1)/2=n
-# l**2+l-2n=0;
-# l=-1+sqrt(1+8n)/2
-# if l>H
-# l*(l+1)/2-k
-# k=l-H+l-H-2+...
-# g(x)= x+ x-2+ x-4...
-# g(2*x)=x*(x+1);
-# g(2*x+1)=x+1+x*(x+1);
 
 
 def getLim(l):
@@ -43,7 +34,6 @@ def getLim(l):
 def solve(n):
     l = 1
     while getLim(l) < n:
-        #print(l, getLim(l))
         l *= 2
     upLim = l
     lowLim = l // 2

@@ -6,8 +6,6 @@ while(t > 0):
     b = int(l[1])
     c = int(l[2])
     d = int(l[3])
-   # print(a,b,c,d)
-    # for a
     if(a != 0):
         if((a + b) % 2 == 1):
             print("Ya", end=" ")

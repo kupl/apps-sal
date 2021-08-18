@@ -1,4 +1,3 @@
-# your code goes here
 from collections import Counter
 
 

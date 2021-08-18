@@ -7,8 +7,6 @@ def __starting_point():
         px, py = [int(x) for x in input().split()]
         maxX[py] = max(maxX[py], px)
 
-    #print( maxX[:2] )
-
     w = [int(x) for x in input().split()]
 
     p = [-1] * 100005

@@ -1,14 +1,9 @@
-# JMD
-# Nagendra Jha-4096
 
 
 import sys
 import math
 
-#import fractions
-#import numpy
 
-###File Operations###
 fileoperation = 0
 if(fileoperation):
     orig_stdout = sys.stdout
@@ -18,10 +13,7 @@ if(fileoperation):
     sys.stdin = inputfile
     sys.stdout = outputfile
 
-###Defines...###
 mod = 1000000007
-
-###FUF's...###
 
 
 def nospace(l):
@@ -29,11 +21,8 @@ def nospace(l):
     return ans
 
 
-##### Main ####
 t = int(input())
 for tt in range(t):
-    # n=int(input())
-    #a=list(map(int,sys.stdin.readline().split(' ')))
     d, v, l, r = map(int, sys.stdin.readline().split(' '))
     total = d // v
     v1 = r // v
@@ -42,7 +31,6 @@ for tt in range(t):
         v2 += 1
     total -= (v1 - v2 + 1)
     print(total)
-#####File Operations#####
 if(fileoperation):
     sys.stdout = orig_stdout
     sys.stdin = orig_stdin

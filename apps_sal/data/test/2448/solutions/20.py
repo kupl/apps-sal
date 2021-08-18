@@ -1,13 +1,10 @@
 import sys
 t = int(sys.stdin.readline())
-# t=1
 for i in range(t):
     n = int(sys.stdin.readline())
     a, b, c = list(map(int, sys.stdin.readline().strip().split()))
     x = list(sys.stdin.readline())
     op = [' '] * n
-    # print(op)
-    # print(x)
 
     if(n % 2 == 0):
         w = n // 2

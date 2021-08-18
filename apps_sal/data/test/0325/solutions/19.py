@@ -1,12 +1,10 @@
 n, m, p = list(map(int, input().split()))
 
 abc = []
-# edge = [[] for _ in range(n)]
 rev_edge = [[] for _ in range(n)]
 for _ in range(m):
     a, b, c = list(map(int, input().split()))
     abc.append((a - 1, b - 1, p - c))
-    # edge[a - 1].append(b - 1)
     rev_edge[b - 1].append(a - 1)
 
 

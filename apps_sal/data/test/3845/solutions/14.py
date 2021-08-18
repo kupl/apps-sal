@@ -1,5 +1,5 @@
 a, b = list(map(int, input().split()))
-grid = [["." for i in range(100)] for j in range(50)] + [["#" for i in range(100)] for j in range(50)]
+grid = [["." for i in range(100)] for j in range(50)] + [["
 white = 0
 black = 0
 for i in range(49):
@@ -9,7 +9,7 @@ for i in range(49):
         continue
     for j in range(100):
         if i % 2 == j % 2:
-            grid[i][j] = "#"
+            grid[i][j] = "
             black += 1
         if black == b - 1:
             break

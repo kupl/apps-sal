@@ -1,4 +1,3 @@
-# B
 y = int(input())
 
 

@@ -1,6 +1,3 @@
-# AtCoder Beginner Contest 157
-# E - Simple String Queries
-# https://atcoder.jp/contests/abc157/tasks/abc157_e
 from bisect import bisect_left, insort_left
 import sys
 input = sys.stdin.readline

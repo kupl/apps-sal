@@ -37,6 +37,5 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 
         Solution.changer(self, coins, amount)
-        # print(self.change_map,amount)
 
         return self.change_map[amount]

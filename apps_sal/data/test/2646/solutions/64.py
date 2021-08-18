@@ -1,16 +1,15 @@
-# ダイクストラ法
 import heapq
 
 
 def dijkstra(s):
-    p = [x for x in range(n)]  # 親の記憶
+    p = [x for x in range(n)]
     hq = [(0, s)]
-    heapq.heapify(hq)  # リストを優先度付きキューに変換
-    cost = [float('inf')] * n  # 行ったことのないところはinf
-    cost[s] = 0  # 開始地点は0
+    heapq.heapify(hq)
+    cost = [float('inf')] * n
+    cost[s] = 0
     while hq:
         c, v = heapq.heappop(hq)
-        if c > cost[v]:  # コストが現在のコストよりも高ければスルー
+        if c > cost[v]:
             continue
         for d, u in e[v]:
             tmp = d + cost[v]
@@ -22,7 +21,6 @@ def dijkstra(s):
 
 
 n, m = list(map(int, input().split()))
-# 重み付き有向グラフの隣接リストe(重み=1)
 e = [[] for _ in range(n)]
 t = 1
 for _ in range(m):

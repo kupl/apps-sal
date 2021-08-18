@@ -17,7 +17,5 @@ for _ in range(int(input())):
     for i in range(cs + 1):
         if p < i * s or f < (cs - i) * s:
             continue
-        # if i == 3:
-            #print(p - i*s, f - (cs-i)*s, "!")
         best = max(best, min(cw, (p - i * s) // w + (f - (cs - i) * s) // w) + cs)
     print(best)

@@ -1,11 +1,9 @@
-# cook your dish here
 t = int(input())
 while(t):
     n, m = map(int, input().split())
     a = []
     for i in range(n):
         a.append(list(map(int, input().split())))
-    # print(a)
     s = input()
     p, q = map(int, input().split())
     a0 = []

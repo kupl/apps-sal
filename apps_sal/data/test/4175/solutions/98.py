@@ -7,12 +7,10 @@ def readinput():
 
 
 def main(n, w):
-    # print(w)
     words = {}
     word = w[0]
     words[w[0]] = 1
     for i in range(1, n):
-        # print(w[i])
         if w[i][0] != word[-1]:
             return 'No'
         else:

@@ -2,9 +2,9 @@ s = int(input())
 
 MOD = 10**9 + 7
 MAX = 2000 + 5
-fact = [1] * (MAX + 1)  # i!
-finv = [1] * (MAX + 1)  # (i!)^{-1}
-iinv = [1] * (MAX + 1)  # i^{-1}
+fact = [1] * (MAX + 1)
+finv = [1] * (MAX + 1)
+iinv = [1] * (MAX + 1)
 for i in range(2, MAX + 1):
     fact[i] = fact[i - 1] * i % MOD
     iinv[i] = MOD - iinv[MOD % i] * (MOD // i) % MOD

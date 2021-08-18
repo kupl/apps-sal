@@ -19,7 +19,6 @@ class Solution:
 
                     res = max(res, curr)
                     dp[i] = curr
-                    # print(res)
                 return dp, res
 
         lp, best = helper(arr)

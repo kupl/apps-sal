@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def solve(n, a, b):
     if a + b - 1 > n:
@@ -6,7 +5,6 @@ def solve(n, a, b):
     if a * b < n:
         return [-1]
 
-    # construct in \omega^2
     xs = []
     xs += [(0, - j) for j in range(b)]
     for i in range(1, a):
@@ -16,7 +14,6 @@ def solve(n, a, b):
             xs += [(i, - j)]
             j += 1
 
-    # coordinate compression
     f = {}
     for x in sorted(xs):
         k = len(f)

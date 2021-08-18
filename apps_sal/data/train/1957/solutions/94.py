@@ -6,7 +6,6 @@ class Solution:
         m = len(grid)
         n = len(grid[0])
 
-        # implies start == end
         if m == 1 and n == 1:
             return 0
 

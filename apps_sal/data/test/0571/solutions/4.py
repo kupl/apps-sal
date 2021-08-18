@@ -1,7 +1,4 @@
 import sys
-# import math
-
-# sys.stdin = open('c-test.txt')
 
 
 def check(s):

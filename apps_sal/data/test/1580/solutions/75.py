@@ -12,13 +12,9 @@ def lin(): return list(tin())
 
 mod = 1000000007
 
-# +++++
-
 
 def main():
-    #a = int(input())
     n, m = tin()
-    #s = input()
     is_open = [-1] * n
     graph = [[] for _ in range(n)]
     for _ in range(m):
@@ -44,7 +40,6 @@ def main():
     return ret
 
 
-# +++++
 isTest = False
 
 
@@ -73,7 +68,6 @@ def __starting_point():
         isTest = True
     else:
         pass
-        #input = sys.stdin.readline
 
     ret = main()
     if ret is not None:

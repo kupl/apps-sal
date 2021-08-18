@@ -6,7 +6,6 @@ class Solution:
                 if nums[i] % 2 != 0:
                     nums[i] = nums[i] - 1
                     res += 1
-            # print([x % 2 for x in nums])
             if sum([x % 2 for x in nums]) == 0:
                 for i in range(len(nums)):
                     nums[i] = nums[i] / 2

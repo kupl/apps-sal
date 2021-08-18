@@ -1,4 +1,3 @@
-# What a f****** mess this was...
 
 import math
 import numpy as np

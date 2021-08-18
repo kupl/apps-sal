@@ -1,4 +1,3 @@
-# return a sorted set with the difference
 def diff(a, b):
     a = set(a)
     b = set(b)

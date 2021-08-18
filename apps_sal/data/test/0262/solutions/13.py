@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def check(a, t):
     n = len(a)

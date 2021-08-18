@@ -10,8 +10,6 @@ threading.stack_size(67108864)
 
 def main():
 
-    # input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
-
     def ad(i, j):
         nonlocal g
         if j in g[i]:

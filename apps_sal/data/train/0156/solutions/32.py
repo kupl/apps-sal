@@ -19,8 +19,6 @@ class Solution:
                         DP[i][j] = 1 + DP[i - 1][j]
                     else:
                         DP[i][j] = 1 + DP[i][j - 1]
-        # print(DP[m][n])
-        # build string from DP array
         i = m
         j = n
         res = []

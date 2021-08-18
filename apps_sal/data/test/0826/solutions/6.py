@@ -1,19 +1,17 @@
 n = int(input())
 
 
-def func(ii):  # (ii+1)*ii//2 > n+1
+def func(ii):
     return (ii + 1) * ii // 2 - (n + 1)
 
 
-# bisect
 l = 1
 r = n
 
-m = (r + l) // 2  # for case n=1
+m = (r + l) // 2
 
 while r - l > 1:
     m = (r + l) // 2
-    # print(l,m,r,func(l),func(m),func(r))
     if func(m) == 0:
         break
     if func(m) > 0:

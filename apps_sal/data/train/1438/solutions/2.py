@@ -1,4 +1,3 @@
-# cook your dish here
 def prime(n):
     for i in range(2, int(n / 2) + 1):
         if(n % i == 0):
@@ -25,7 +24,6 @@ for _ in range(t):
         for i in range(len(a)):
             if i != l:
                 if a[i] % a[l] == 0:
-                    # print(a[i]," ",a[l])
                     if psum(a[i]) % psum(a[l]) == 0:
                         k += 1
         l += 1

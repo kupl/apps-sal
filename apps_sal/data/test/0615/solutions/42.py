@@ -8,7 +8,6 @@ mindiff = CA[-1]
 left = 0
 right = 2
 for c in range(1, N - 1):
-    # left side
     p = CA[left]
     q = CA[c] - CA[left]
     while True:
@@ -20,7 +19,6 @@ for c in range(1, N - 1):
         q = qi
         left += 1
 
-    # right side
     r = CA[right] - CA[c]
     s = CA[-1] - CA[right]
     while True:

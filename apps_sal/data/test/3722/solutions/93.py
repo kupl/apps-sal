@@ -12,13 +12,10 @@ Val[0][("A", "B")] = 1
 for i in range(len(Val)):
     for k, v in Val[i - 1].items():
         K = list(k)
-        # print(K)
         for j in range(1, len(k)):
 
             A = K[0:j] + [D[(K[j - 1], K[j])]] + K[j:]
-            # print(tuple(A))
             Val[i][tuple(A)] = 1
-# print(len(Val[-1]))
 mod = 10**9 + 7
 if N <= 7:
     print(len(Val[-1 - (7 - N)]))

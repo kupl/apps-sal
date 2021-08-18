@@ -10,12 +10,9 @@ class Solution:
         global_max = 0
         for i in range(0, len(A) - long + 1):
             temp1 = sum(A[i:i + long])
-            # subA = A[:i] + A[i+long:]
-            # check left part
             left = A[:i]
             right = A[i + long:]
             if len(left) >= short:
-                # check right part
                 for j in range(0, len(left) - short + 1):
                     temp2 = sum(left[j:j + short])
                     if temp1 + temp2 > global_max:

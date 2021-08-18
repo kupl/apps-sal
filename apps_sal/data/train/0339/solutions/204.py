@@ -1,11 +1,6 @@
-# Two sum approach
 
-# returns the number of distinct index pairs (j, k) such that
-# array[j]*array[k] == target
 
 from collections import defaultdict
-
-# O(n) time, O(n) space
 
 
 def two_product(array, target):

@@ -1,4 +1,3 @@
-# cook your dish here
 
 from itertools import combinations
 
@@ -16,8 +15,6 @@ for i in range(int(input())):
     comb = combinations(sub, k - 2)
 
     prod = 1
-
-    # print(list(comb))
 
     for i in list(comb):
 

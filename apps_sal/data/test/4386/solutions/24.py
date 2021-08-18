@@ -1,4 +1,3 @@
-# ABC138 A
 
 a = int(input())
 S = str(input())

@@ -1,4 +1,3 @@
-# cook your dish here
 def bfs(tr, sp, d):
     temp = [sp]
     vl = [-1] * len(tr)

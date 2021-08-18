@@ -20,7 +20,6 @@ for i in range(1, 2**(N)):
         if tmp[j] == '1':
             ability += books[j][1:]
             money += books[j][0]
-    # print(ability)
     for j in range(M):
         if ability[j] < X:
             flag = 0

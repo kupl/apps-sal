@@ -30,7 +30,6 @@ y = []
 for i in range(n):
     y.append(maxString(a, i, n))
 
-# print(y)
 z = max(y)
 r = y.index(z)
 

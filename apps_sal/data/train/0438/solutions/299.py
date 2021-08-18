@@ -36,7 +36,6 @@ class Solution:
 
             if m in size_count and size_count[m] > 0:
                 ans = step
-            # print(ans, step, size_count)
         return ans
 
     def find(self, group, i):

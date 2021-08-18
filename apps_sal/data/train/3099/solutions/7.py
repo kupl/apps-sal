@@ -17,7 +17,6 @@ def f(P, W):
     else:
         s = W * (row - col)
         r.append([s + (W + 1) * i for i in range(W - row + col)])
-    ###
     if P >= (W - 1) * (row + 1):
         s = W * (W - 2) + col + row + 1
         r.append([s - (W - 1) * i for i in range(W - s % W)])

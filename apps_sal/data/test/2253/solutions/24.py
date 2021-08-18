@@ -1,4 +1,3 @@
-# n, x, a, b = map(int, input().split())
 
 t = int(input())
 for i in range(t):

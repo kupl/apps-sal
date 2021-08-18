@@ -1,4 +1,3 @@
-# In the Name of God
 import math
 
 t = int(input())

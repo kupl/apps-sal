@@ -7,7 +7,6 @@ class Solution:
             while i <= j and nums[i] + nums[j] > target:
                 j -= 1
             if i <= j:
-                # nums[i] be the min, any combinations of nums[(i+1):(j+1)]
                 count += 1 << (j - i)
             i += 1
         return count % (10 ** 9 + 7)

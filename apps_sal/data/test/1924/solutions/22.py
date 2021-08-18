@@ -1,7 +1,5 @@
 MOD = 10**9 + 7
 
-# フェルマーの小定理
-
 
 def nCr(n, r, mod=MOD):
     r = min(r, n - r)

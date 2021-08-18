@@ -2,16 +2,10 @@
 
 room_free = [bool(1 - int(x)) for x in input()]
 
-# maintain queue closest before
-# maintain queue of closest after
-
-# maintain two pointers (l, r)
-# if l == 0 check
 
 closest_before = []
 closest_after = []
 
-# note, he needs k+1 rooms
 
 before = -1
 for i in range(n):
@@ -45,7 +39,6 @@ while True:
         if room_free[l]:
 
             mid = int((l + r) / 2)
-            # print(l, r, mid, closest_after[mid])
             ans = min(ans, closest_after[mid + 1] - l, r - closest_before[mid])
             taken -= 1
 print(ans)

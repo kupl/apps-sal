@@ -1,4 +1,3 @@
-# Made By Mostafa_Khaled
 bot = True
 k = 1
 
@@ -14,5 +13,3 @@ for x in input() + '0':
     k += 1
 
 print(r)
-
-# Made By Mostafa_Khaled

@@ -10,6 +10,3 @@ else:
     t = list(str(i) + ' ' for i in range(1, k + 1))
 
     print(''.join(t) + ''.join(i * d for i in t) + t[-1] * (n - (d + 1) * k))
-
-
-# Made By Mostafa_Khaled

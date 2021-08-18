@@ -45,5 +45,4 @@ def main():
     print(M)
 
 
-# for _ in range(int(input())):
 main()

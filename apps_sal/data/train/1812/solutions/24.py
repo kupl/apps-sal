@@ -54,7 +54,3 @@ class MajorityChecker:
                 return [lv, lf - rf]
             else:
                 return [rv, rf - lf]
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

@@ -16,6 +16,3 @@ for i in range(n, -1, -1):
     mp[t[i][0]] = a, b
 
 print(mp[''][1])
-
-
-# Made By Mostafa_Khaled

@@ -1,4 +1,3 @@
-#d,t,s = list(map(int, input().split()))
 s = input()
 
 l, r = [False, False]

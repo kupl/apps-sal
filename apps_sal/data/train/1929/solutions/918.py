@@ -16,8 +16,3 @@ class StreamChecker:
             for length in temp:
                 if (length <= len(self.queries)) and (self.queries[-1:-length - 1:-1][::-1] in self.Dict[letter]):
                     return True
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

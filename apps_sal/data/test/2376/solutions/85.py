@@ -3,16 +3,10 @@ def main():
     input = sys.stdin.readline
     sys.setrecursionlimit(10**7)
     from collections import Counter, deque
-    #from collections import defaultdict
     from itertools import combinations, permutations, accumulate, groupby
-    #from itertools import product
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     from math import floor, ceil
-    #from operator import itemgetter
-
-    #inf = 10**17
-    #mod = 10**9 + 7
 
     n, W = map(int, input().split())
     w, v = [], []
@@ -23,7 +17,6 @@ def main():
         else:
             w.append(a - w[0])
         v.append(b)
-    # w1の重さ
     base = w[0]
     w[0] = 0
     w0, w1, w2, w3 = [], [], [], []

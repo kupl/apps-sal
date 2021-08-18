@@ -12,7 +12,6 @@ class Solution:
                 return False
             n = len(word1)
             for i in range(n):
-                # print(word2[:i] + word2[i+1:])
                 if word2[:i] + word2[i + 1:] == word1:
                     return True
                 if word2[:-1] == word1:

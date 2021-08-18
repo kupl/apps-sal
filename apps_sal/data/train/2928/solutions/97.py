@@ -3,7 +3,6 @@ right = {'m': 4, 'q': 3, 'd': 2, 'z': 1}
 
 
 def alphabet_war(fight):
-    # your code here
     counter_left = 0
     counter_right = 0
 

@@ -1,4 +1,3 @@
-# cook your dish here
 n, m = list(map(int, input().split()))
 arr = []
 for i in range(n):

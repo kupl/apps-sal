@@ -14,7 +14,6 @@ else:
     for i in range(n - 1, -1, -1):
         t += a[i] - 1
         result += 1
-        #print('i='+str(i)+' t='+str(t)+' result='+str(result))
         if t >= m:
             break
     print(result)

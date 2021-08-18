@@ -24,7 +24,6 @@ class Solution:
         def connected(p, q):
             return root(p) == root(q)
 
-        # connected = set()
         p = points
         ans = 0
 

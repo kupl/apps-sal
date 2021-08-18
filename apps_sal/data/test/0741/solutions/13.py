@@ -26,10 +26,8 @@ for i in tm:
         continue
 
     if is_dark:
-        # fake_d = sum_l + 1
         fake_l = sum_d - 1
     else:
-        # fake_d = sum_l - dis + 1
         fake_l = sum_d + dis - 1
     is_dark ^= 1
     Max = max(Max, fake_l - sum_l)
@@ -39,4 +37,3 @@ if Max > 0:
     ans += Max
 
 print(ans)
-# 奇数 暗(1)，偶数 亮

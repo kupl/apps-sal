@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2017/10/20 13:52
-# @Author  : litianshuang
-# @Email   : litianshuang@jingdata.com
-# @File    : test.py
-# @Desc    :
 
 
 def __starting_point():

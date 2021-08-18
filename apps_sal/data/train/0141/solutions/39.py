@@ -3,7 +3,6 @@ class Solution:
         l = len(people)
         if (l <= 1):
             return(1)
-#        people = self.sortPeople(people)
         people.sort()
         i = 0
         j = l - 1
@@ -22,7 +21,6 @@ class Solution:
         return(c)
 
     def sortPeople(self, arr):
-       #     print(arr)
         l = len(arr)
         if l <= 1:
             return(arr)
@@ -35,5 +33,4 @@ class Solution:
                 rarr.append(arr[i])
             else:
                 larr.append(arr[i])
-       # print(larr + [pivot] + rarr)
         return(self.sortPeople(larr) + [pivot] + self.sortPeople(rarr))

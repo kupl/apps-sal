@@ -11,7 +11,6 @@ class Solution:
                 diff = x - A[j]
                 if diff in d[j]:
                     d[i][diff] = d[j][diff] + 1
-                    # d[j].pop(diff)
 
                     res = max(res, d[i][diff])
 

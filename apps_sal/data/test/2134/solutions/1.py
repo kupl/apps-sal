@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Oct  8 23:02:08 2019
 
@@ -42,7 +41,6 @@ for i in range(1, n):
             score = a[i][1]
             count = 1
 
-#scores = []
 relevant = []
 
 if len(same) == 0:
@@ -56,7 +54,6 @@ else:
     for i in range(1, len(same)):
         if f & same[i][0] != same[i][0]:
             relevant.append(same[i][0])
-#            fscore += same[i][1]
 
     for i in range(findex + 1, n):
         if f & a[i][0] == a[i][0]:
@@ -68,30 +65,3 @@ else:
                     break
 
     print(fscore)
-
-
-# else:
-#
-#    for i in same:
-#        score = i[1]
-#        index = i[2]
-#        num = i[0]
-#
-#        for j in range(index + 1, n):
-#            if num & a[j][0] == a[j][0]:
-#                score += a[j][1]
-#
-#        scores.append([num, score])
-#
-#    print(scores)
-#    temp = scores[0]
-#    for i in range(len(scores)):
-#        print('============================================')
-#        for j in range(len(scores)):
-#            if scores[i][0] & scores[j][0] != scores[j][0]:
-#                scores[i][1] += scores[j][1]
-#                print(scores[i][1])
-#
-#
-#    print(scores)
-#    print(max(scores))

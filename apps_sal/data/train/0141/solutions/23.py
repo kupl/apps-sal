@@ -18,14 +18,3 @@ class Solution:
                     j -= 1
                     total += 1
         return total
-        # print(people)
-        # while i < len(people):
-        #     print(i,people)
-        #     if i < len(people) - 1 and people[i] + people[i+1] <= limit:
-        #         print(\"two peeps\")
-        #         i += 2
-        #     else:
-        #         print(\"one peep\")
-        #         i += 1
-        #     total += 1
-        # return total

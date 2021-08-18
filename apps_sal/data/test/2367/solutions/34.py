@@ -25,11 +25,9 @@ for i in range(1, 200001):
     aaa = (aaa * i) % MODD
     fac[i] = aaa
     infac[i] = modinv(aaa, MODD)
-    # print(fac[i])
 
 
 def perm(x, y, z) -> int:
-    # print(fac[x]//(fac[y]*fac[z]))
     return ((fac[x] * infac[y] * infac[z]) % MODD)
 
 

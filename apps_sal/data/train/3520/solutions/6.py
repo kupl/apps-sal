@@ -24,5 +24,3 @@ def step(g, m, n):
                 dic[current_prime] = True
 
     return None
-
-    # your code

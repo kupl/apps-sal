@@ -27,12 +27,10 @@ def kruskal(n, edges, person):
         make_set(i)
     minimum_spanning_tree = set()
     edges.sort(reverse=True)
-    # print(edges)
     for i, edge in enumerate(edges):
         weight, vertice1, vertice2 = edge
         if weight != 3 and weight != person:
             continue
-        #print(vertice1, find(vertice1), vertice2, find(vertice2))
         if find(vertice1) != find(vertice2):
             union(vertice1, vertice2)
             minimum_spanning_tree.add(i)

@@ -10,12 +10,9 @@ def max_consec_zeros(n):
     while len(num_bin) > 0:
         if num_bin[0] == '0':
             count_num += 1
-            # print(count_num)
             num_bin = num_bin[1:]
             num_li.append(count_num)
-            # continue
         else:
-            # num_li.append(count_num)
             count_num = 0
             num_bin = num_bin[1:]
 

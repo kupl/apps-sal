@@ -6,4 +6,3 @@ def string_to_array(s):
     if s == "":
         ans = [""]
     return ans
-    # your code here

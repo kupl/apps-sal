@@ -7,7 +7,6 @@ class Solution:
 
         @lru_cache(None)
         def dp(u, f):
-            # Number of routes to finish from city u, with f fuel
             ans = +(u == finish)
             du = locations[u]
             for v, dv in enumerate(locations):

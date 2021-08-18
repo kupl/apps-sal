@@ -14,7 +14,6 @@ class Solution:
             d.pop(0)
 
         for i in A:
-            # print(i,d)
             if i not in d:
                 continue
 

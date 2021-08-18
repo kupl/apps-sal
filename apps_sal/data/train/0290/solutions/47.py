@@ -1,8 +1,5 @@
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
-        # cuts.append(0)
-        # cuts.append(n)
-        # cuts.sort()
         return self.dp(cuts, 0, n, dict())
 
     def dp(self, cuts, a, b, memo):

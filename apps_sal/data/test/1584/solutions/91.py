@@ -19,7 +19,7 @@ for i in range(N - 2):
             continue
         if s > max:
             tc = j
-            tp = (N - j - 1) * (N - j) // 2  # これをiの中でできないか
+            tp = (N - j - 1) * (N - j) // 2
             ans += tp
             break
         start = st[j]

@@ -12,7 +12,6 @@ for i in ppl:
 for i in fr:
     pairs[i[0]].add(i[1])
     pairs[i[1]].add(i[0])
-# print (pairs)
 for i in sorted(ppl):
     tmp = []
     pi = pairs[i]

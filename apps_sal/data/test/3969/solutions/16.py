@@ -20,10 +20,7 @@ def solve():
                 maxi = max(dp[j], maxi)
 
         dp[i] = maxi + 1
-    # print(dp)
     print(n - max(dp))
 
 
-# t = int(input())
-# for _ in range(t):
 solve()

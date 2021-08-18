@@ -12,7 +12,6 @@ def input_split():
 testCases = int(input())
 answers = []
 for _ in range(testCases):
-    # take input
     n = int(input())
     arr = input_split()
 
@@ -35,8 +34,6 @@ for _ in range(testCases):
 
     n = n - k
 
-    # if val == 1:
-    # val cant be 1
     ans = (n - val) // (val - 1)
 
     answers.append(ans)

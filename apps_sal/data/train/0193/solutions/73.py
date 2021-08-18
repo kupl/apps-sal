@@ -1,19 +1,6 @@
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
-        #         if not arr:
-        #             return 0
 
-        #         ceil = len(arr) / 2.0
-
-        #         count = collections.Counter(arr)
-        #         sort = count.most_common()
-        #         sum = 0
-        #         for idx,val in enumerate(sort):
-        #             sum += val[1]
-        #             if sum >= ceil:
-        #                 return idx+1
-
-        #         return idx+1
         if not arr:
             return 0
         counter = collections.Counter(arr)

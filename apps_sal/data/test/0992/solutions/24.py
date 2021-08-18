@@ -4,7 +4,6 @@ As = list(map(int, input().split()))
 
 MOD = 998244353
 
-#d = [[0]*3001 for _ in range(3001)]
 d = np.zeros((3001, 3001))
 d[0, 0] = 1
 

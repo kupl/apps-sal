@@ -1,8 +1,8 @@
 N = int(input())
 t = [0] + list(map(int, input().split()))
 v = [0] + list(map(int, input().split()))
-max_speed_from_left = [0] * (N + 1)  # index i = t[i] とt[i + 1]の間
-max_speed_from_right = [0] * (N + 1)  # index i = t[i] とt[i + 1]の間
+max_speed_from_left = [0] * (N + 1)
+max_speed_from_right = [0] * (N + 1)
 
 for i in range(1, N):
     start = max_speed_from_left[i - 1]
@@ -20,7 +20,6 @@ def dist(left_speed, right_speed, t, v):
     if x >= t:
         v = (left_speed + right_speed + t) / 2
         x = t
-    # 最高速度vに到達してt-x余る
     d = (left_speed + v) * (v - left_speed) / 2
     d += v * (t - x)
     d += (right_speed + v) * (v - right_speed) / 2

@@ -2,7 +2,6 @@ def intinp(): return int(input())
 def listinp(func=int): return list(map(func, input().split()))
 def nsepline(n, func=str): return [func(input()) for _ in range(n)]
 def printlist(li, glue=' '): return glue.join(list(map(str, li)))
-# -------------------code------------------------
 
 
 for _ in range(intinp()):

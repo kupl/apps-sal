@@ -34,9 +34,7 @@ class Solution:
                 boarding_people += waiting_people
                 waiting_people = 0
 
-            # print(str(boarding_people)+'-'+str(waiting_people))
             profit = boardingCost * boarding_people - runningCost * (i + 1)
-            # print(profit)
             if profit > max_profit:
                 max_profit = profit
                 res = i

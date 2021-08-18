@@ -16,8 +16,6 @@ while True:
         LIST.append(a)
         SET.add(a)
 
-# 繰り返しがaから始まる
-# SETには順番が記録されていないのでLISTを使う
 start = LIST.index(a * a % M)
 LEN = len(LIST)
 

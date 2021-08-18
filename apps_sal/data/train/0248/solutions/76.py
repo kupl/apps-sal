@@ -8,16 +8,13 @@ class Solution:
         def dfsCycle(grid, R, C, p_r, p_c, r, c, visited, grp, grp_num):
             if (r, c) in grp[grp_num]:
                 return True
-            # print('p_r=', p_r, 'p_c=', p_c)
 
-            # check 4 directions
             visited.add((r, c))
             grp[grp_num].add((r, c))
             result = False
             for d in Solution.DELTA:
                 n_r = r + d[0]
                 n_c = c + d[1]
-                # print('n_r=', n_r, 'n_c=', n_c)
                 if 0 <= n_r < R and 0 <= n_c < C and not (p_r == n_r and p_c == n_c) and grid[n_r][n_c] == grid[r][c]:
                     result |= dfsCycle(grid, R, C, r, c, n_r, n_c, visited, grp, grp_num)
                     if result:
@@ -34,9 +31,7 @@ class Solution:
             for c in range(C):
                 if (r, c) not in visited:
                     grp_num += 1
-                    # print('r=', r, 'c=', c, grid[r][c])
                     if dfsCycle(grid, R, C, r, c, r, c, visited, grp, grp_num):
                         return True
-                    # print(grid)
 
         return False

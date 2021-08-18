@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 S = sorted(set(list(input())))
 

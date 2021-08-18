@@ -1,6 +1,5 @@
 N, M = map(int, input().split())
 
-# AC,WA
 P = [0] * N
 Penalty = 0
 Accepted = 0

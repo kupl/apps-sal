@@ -6,12 +6,12 @@ from collections import Counter
 
 def conn(n, m, e):
     d = dict(list(zip(list(range(1, n + 1)), list(range(-1, (-1) * n - 1, -1)))))
-    td = defaultdict(lambda: deque([]))  # tdは同値類がキーで中の元が値
+    td = defaultdict(lambda: deque([]))
     c = 1
     for edge in e:
         a = edge[0]
         b = edge[1]
-        da = d[a]  # da,dbはa,bの含まれる同値流のラベル
+        da = d[a]
         db = d[b]
         if da < 0 and db < 0:
             d[a] = c
@@ -38,7 +38,6 @@ def main(n, k, l, e1, e2):
     d2 = conn(n, l, e2)
     p = tuple(zip(iter(d1), iter(d2)))
     d = Counter(p)
-    # print(d1,d2,d,p)
     d[(k, l)] = 1
     print((' '.join([str(d[x]) for x in p])))
 

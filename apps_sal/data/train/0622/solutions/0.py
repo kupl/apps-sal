@@ -1,4 +1,3 @@
-# cook your dish here folding paper
 from collections import Counter
 def li(): return [int(i) for i in input().rstrip('\n').split()]
 def st(): return input().rstrip('\n')

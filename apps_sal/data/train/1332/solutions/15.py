@@ -96,7 +96,5 @@ def __starting_point():
 
         print(2 * (_min_level - apart) + substract)
 
-        #print( resolve2(nodes) )
-
 
 __starting_point()

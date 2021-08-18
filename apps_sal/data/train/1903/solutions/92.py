@@ -11,8 +11,6 @@ class Solution:
                 dx, dy = abs(x1 - x2), abs(y1 - y2)
                 heapq.heappush(minHeap, (dx + dy, i, j))
 
-        # print(minHeap)
-
         uf = [i for i in range(n)]
 
         def find(x):

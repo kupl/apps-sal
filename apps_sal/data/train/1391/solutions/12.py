@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     ans = 0
     n, k = map(int, input().split())
@@ -9,7 +8,6 @@ for _ in range(int(input())):
             dic[p] = [(s, f)]
         else:
             dic[p].append((s, f))
-    # print(dic)
     for key, val in dic.items():
         if len(dic[key]) > 1:
             x = 0

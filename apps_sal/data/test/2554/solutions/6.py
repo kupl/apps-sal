@@ -40,5 +40,4 @@ for i in range(t):
         if meh < 0:
             meh = 0
     cur2 = ans + msf
-    # print(cur1,cur2)
     print(max(cur1, cur2))

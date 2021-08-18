@@ -1,7 +1,6 @@
 from sys import stdin
 
 for _ in range(int(stdin.readline())):
-    #n = int(stdin.readline())
     n, x = list(map(int, stdin.readline().split()))
     d, l = list(map(str, stdin.readline().split()))
     if d == 'R':

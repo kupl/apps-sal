@@ -1,4 +1,3 @@
-# E
 N, P = list(map(int, input().split()))
 S = list(str(input()))
 

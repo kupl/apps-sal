@@ -4,7 +4,6 @@ Q = int(input())
 Qinit = list(map(int, input().split()))
 Qlist = [list(map(int, input().split())) for i in range(Q - 1)]
 
-#coef_list = []
 intercept = Qinit[2]
 left_list = []
 cent_list = [Qinit[1]]
@@ -54,5 +53,4 @@ for query in Qlist:
 
     else:
         minval = np.abs(left_sum - count * median) + np.abs(right_sum - count * median) + intercept
-        #print(str(median) + " " + str(minval))
         print(("{} {}".format(median, minval)))

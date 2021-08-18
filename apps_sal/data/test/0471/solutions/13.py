@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from sys import stdin
 
@@ -12,15 +11,12 @@ def main():
         print(0)
         return
 
-    #print(get_result(a, x[1], x[-1]), get_result(a, x[1], x[-1]))
-
     print(min(get_result(a, x[1], x[-1]), get_result(a, x[0], x[-2])))
 
 
 def get_result(a, left, right):
-    #print(a, left, right)
     if left < a < right:
-        if abs(a - left) < abs(a - right):  # go left first
+        if abs(a - left) < abs(a - right):
             return (abs(a - left) * 2) + abs(a - right)
         else:
             return abs(a - left) + (abs(a - right) * 2)

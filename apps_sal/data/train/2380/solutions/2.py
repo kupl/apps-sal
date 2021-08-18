@@ -43,12 +43,9 @@ def solve():
             pre, mid, post = new_pre, new_mid, new_post
         best = min(pre, mid, post)
 
-        # print (offset, zero_others)
-        # print (pre, mid, post)
         global_best = min(global_best, best + zero_others)
 
     print(global_best)
-    # print ()
 
 
 mode = 'T'

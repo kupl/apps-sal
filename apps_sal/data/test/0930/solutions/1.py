@@ -40,7 +40,7 @@ def main():
     calc = Calc(max_value=N * 2, mod=MOD)
 
     ans = 0
-    for v in range(K + 1):  # 空室数
+    for v in range(K + 1):
         ans = (ans + calc.combination(N, v) * calc.combination(v + (N - v) - 1, v)) % MOD
 
     print(ans)

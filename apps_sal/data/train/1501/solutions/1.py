@@ -1,4 +1,3 @@
-# cook your dish here
 n, q = map(int, input().split())
 edges = 2 * (2**n - 1)
 side_nodes = n + 1

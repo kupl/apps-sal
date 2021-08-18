@@ -1,4 +1,3 @@
-# cook your dish here
 def getdiv(m):
     i = 1
     res = []

@@ -14,10 +14,6 @@ for i in range(2, N + 1):
             if j == 25:
                 break
 
-# 74
-# 2 24
-# 4 14
-# 2 4 4
 
 ans = 0
 if S[0] >= 74:

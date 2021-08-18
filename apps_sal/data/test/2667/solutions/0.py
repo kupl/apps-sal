@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 s = list(map(int, input().split()))
 su = 0

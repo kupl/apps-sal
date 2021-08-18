@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 
 
@@ -17,6 +16,5 @@ t = int(input())
 while(t > 0):
     t -= 1
     n = int(input())
-    # k,r=map(int,input().split())
     l = list(map(int, input().split()))
     print(res(l))

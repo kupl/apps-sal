@@ -1,13 +1,9 @@
 class Solution:
     def shortestSubarray(self, A: List[int], K: int) -> int:
-        # First check this problem >> https://leetcode.com/problems/minimum-size-subarray-sum/
-        # >>> Important <<<<
-        # https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/discuss/262641/Python-Prefix-Sum-and-Sliding-Window
-        # As left and right index keeps increasing, time complexity is O(N).
         n = len(A)
         res = n + 1
         Sum = 0
-        dq = collections.deque([(-1, 0)])  # -1 for index, 0 for sum
+        dq = collections.deque([(-1, 0)])
 
         for i, val in enumerate(A):
             Sum += val

@@ -5,10 +5,10 @@ directions = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 
 class Befunge93Instance:
     def __init__(self, code, step_limit=9999):
-        self.code = [[i for i in line] for line in code.split('\n')]  # code can be mutated so can't leave as string
+        self.code = [[i for i in line] for line in code.split('\n')]
         for line in code.split('\n'):
             print(line)
-        self.head = [0, 0]  # current execution point
+        self.head = [0, 0]
         self.stack = []
         self.direction = directions[0]
         self.output = ''
@@ -30,19 +30,17 @@ class Befunge93Instance:
         self.head[0] += self.direction[0]
         self.head[1] += self.direction[1]
 
-    # return 0 if empty
     def pop_stack(self) -> int:
         try:
             return self.stack.pop()
         except IndexError:
             return 0
 
-    # "singular stack which we will assume is unbounded and only contain integers"
     def push_stack(self, item):
         try:
             self.stack.append(int(item))
         except ValueError:
-            self.stack.append(int(ord(item)))  # ascii to int
+            self.stack.append(int(ord(item)))
 
     def operation(self, op):
         try:
@@ -65,7 +63,6 @@ class Befunge93Instance:
             return False
 
         instr = self.get_instr()
-        # self.print_status()
 
         if self.string_mode:
             if instr == '\"':
@@ -107,35 +104,34 @@ class Befunge93Instance:
                 self.set_direction(3)
         elif instr == '\"':
             self.string_mode = True
-        elif instr == ':':  # duplicate top value
+        elif instr == ':':
             try:
                 self.stack.append(self.stack[-1])
             except IndexError:
                 self.stack.append(0)
-        elif instr == '\\':  # swap top of stack
+        elif instr == '\\':
             try:
                 self.stack[-1], self.stack[-2] = self.stack[-2], self.stack[-1]
             except IndexError:
                 self.stack.append(0)
         elif instr == '$':
             self.pop_stack()
-        elif instr == '.':  # int
+        elif instr == '.':
             self.output += str(self.pop_stack())
         elif instr == ',':
-            self.output += chr(self.pop_stack())  # int code to ascii char, 10 = \n, etc
-        elif instr == '#':
-            self.advance_head()
-        elif instr == 'p':  # put
+            self.output += chr(self.pop_stack())
+        elif instr == '
+        self.advance_head()
+        elif instr == 'p':
             x = self.pop_stack()
             y = self.pop_stack()
             value = self.pop_stack()
-            self.code[x][y] = chr(value)  # int code to ascii char, 10 = \n, etc
-            # print(self.code[x])
-        elif instr == 'g':  # get
+            self.code[x][y] = chr(value)
+        elif instr == 'g':
             x = self.pop_stack()
             y = self.pop_stack()
-            self.push_stack(ord(self.code[x][y]))  # ascii char to int code
-        elif instr == '@':  # end
+            self.push_stack(ord(self.code[x][y]))
+        elif instr == '@':
             return False
 
         self.advance_head()

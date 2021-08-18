@@ -40,7 +40,6 @@ for i in range(int(input())):
             d[pr[a[i]]] = 1
     ans = 0
     maxx = 0
-    # print(d)
 
     for i in d:
         if d[i] > ans:

@@ -28,7 +28,6 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
-############################## SOLUTION ##############################
 n = int(input())
 sum = 0
 for i in range(n):

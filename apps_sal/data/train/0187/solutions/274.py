@@ -1,19 +1,19 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        i = 1  # start at 1
+        i = 1
         waiting, onBoard, result, maxProfit = customers[0], 0, -1, 0
         while i < len(customers) or waiting > 0:
-            newToOnboard = min(4, waiting)  # get 4 or remainder + current passangers
+            newToOnboard = min(4, waiting)
 
-            waiting -= newToOnboard  # remove people waiting
-            onBoard += newToOnboard  # add people to go
+            waiting -= newToOnboard
+            onBoard += newToOnboard
 
-            profit = onBoard * boardingCost - i * runningCost  # get profit of all to go
+            profit = onBoard * boardingCost - i * runningCost
 
-            if(profit > maxProfit):  # if profit is over max then reset the maxProfit
+            if(profit > maxProfit):
                 maxProfit = profit
                 result = i
             if(i < len(customers)):
-                waiting += customers[i]  # stop adding customers once we finish list
+                waiting += customers[i]
             i += 1
         return result

@@ -1,9 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # seems dijkstra with all the neighbors connected?
-        # try minimum spanning treee
         node = 0
-        # build the graph first
         seen = set([0])
         edges = [(abs(points[0][0] - points[x][0]) + abs(points[0][1] - points[x][1]), 0, x) for x in range(1, len(points))]
         heapq.heapify(edges)

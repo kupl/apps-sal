@@ -11,14 +11,11 @@ for i in range(1, len(a)):
         a[prev] = -1
     ans += 1
 if n % 2 == 0:
-    # n even ans also even even number of swaps required
-    # 3*n
     if ans % 2 == 0:
         print("Petr")
     else:
         print("Um_nik")
 else:
-    # n us odd ans is even odd number of swaps required
     if ans % 2 == 0:
         print("Petr")
     else:

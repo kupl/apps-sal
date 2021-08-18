@@ -5,13 +5,6 @@ b = int(input())
 c = int(input())
 d = int(input())
 
-# ^ & | WA
-# ^ | & WA
-# & ^ |
-# & | ^
-# | & ^
-# | ^ &
-
 
 def gand(x, y):
     return x & y

@@ -31,7 +31,6 @@ if 0 in d and d[0] > 1:
     d[0] = 1
 
 S = [[val, num] for val, num in sorted(d.items(), key=lambda x:x[0])]
-#print(min_, S)
 cur = -1
 i = 0
 

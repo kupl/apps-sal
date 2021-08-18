@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     def increasing(n):
         if 0 <= n <= 9:

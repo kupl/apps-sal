@@ -15,10 +15,8 @@ Alist.append(A33)
 bingolist = [0] * 9
 
 N = int(input())
-#print (N)
 for i in range(N):
     b = int(input())
-    #print (b)
     for j in range(len(bingolist)):
         if b == Alist[j]:
             bingolist[j] = 1
@@ -27,7 +25,3 @@ if sum(bingolist[0:3]) == 3 or sum(bingolist[3:6]) == 3 or sum(bingolist[6:9]) =
     print("Yes")
 else:
     print("No")
-#print (bingolist[0:3])
-#print (bingolist[3:6])
-#print (bingolist[6:9])
-#print (bingolist)

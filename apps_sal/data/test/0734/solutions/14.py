@@ -3,7 +3,6 @@ arr = [int(x) for x in input().split()]
 
 arr = sorted(arr, reverse=True)
 arr.append(0)
-# print(arr)
 isum = sum(arr)
 ans = []
 top = arr[0]
@@ -23,8 +22,4 @@ for i in range(n):
 
     top = arr[i] - h
     arr[i + 1] = top
-# 	print("top:",top)
-# 	print("arr:",arr)
-# 	print("ans:",ans)
-# print(ans)
 print(isum - sum(ans))

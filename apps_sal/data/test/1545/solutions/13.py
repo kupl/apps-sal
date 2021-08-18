@@ -37,14 +37,12 @@ for i in range(2, n + 1):
     dp[i] %= M
     longest = max(longest, k)
     tmp = min(tmp, a[o(i - 1)])
-    #print(tmp, i, ii)
     if i == n:
         break
     if tmp == ii:
         ii = 0
         tmp = float("inf")
         maxNb += 1
-        # print(s[:i])
 
     elif tmp < ii:
         ii = 1
@@ -52,12 +50,10 @@ for i in range(2, n + 1):
         tmp = a[o(i - 1)]
         if i == n - 1:
             maxNb += 1
-        #print(s[:i - 1])
 
     elif i == n - 1:
         if a[o(i)] < ii + 1:
             maxNb += 1
-            # print(s[:i])
 
 
 print(dp[n] % M)

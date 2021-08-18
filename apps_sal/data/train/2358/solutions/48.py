@@ -28,5 +28,4 @@ while pq:
             dp[nv] = cost + dist
             heappush(pq, (dp[nv], nv))
 
-# print(dp)
 print((dp[s]))

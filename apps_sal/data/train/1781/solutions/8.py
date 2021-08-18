@@ -16,16 +16,13 @@ def who_wins_beggar_thy_neighbour(hand_1, hand_2, MAX_PLAYED=10000):
 
     def punish(index, v):
         nonlocal player_index, common
-        # Play as many cards as mandated by punishments
         for i in range(punishments[v]):
             if player_won():
                 return
-            # If next card is special, stop and punish opponent
             val = play_card(index)
             if val in punishments:
                 punish(opponent_index(index), val)
                 return
-        # Player completed their punishment so other player wins common
         player_index = opponent_index(index)
         hands[player_index].extend(common)
         common = []
@@ -41,12 +38,9 @@ def who_wins_beggar_thy_neighbour(hand_1, hand_2, MAX_PLAYED=10000):
         if not hands[1]:
             return opponent_index(1)
 
-    # Driver code
     while(not player_won() and cards_played < MAX_PLAYED):
-        # Play next card and set next player
         val = play_card(player_index)
         player_index = opponent_index(player_index)
-        # If val is special, set next player with punish
         if val in punishments:
             punish(player_index, val)
 

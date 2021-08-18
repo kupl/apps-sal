@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def m(s1, s2):
     si = s1.intersection(s2)

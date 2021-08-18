@@ -1,4 +1,3 @@
-# cook your dish here
 from bisect import bisect_left
 for _ in range(int(input())):
     n, q = map(int, input().split())

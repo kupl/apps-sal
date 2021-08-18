@@ -1,5 +1,4 @@
 def find(n):
-    # return sum(n for n in range(n+1) if n%3==0 or n%5==0)
 
     a3 = n // 3
     a5 = n // 5

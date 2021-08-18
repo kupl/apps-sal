@@ -24,8 +24,6 @@ class Solution:
                 else:
                     prev = None
 
-            # print(stack, s[i], i, prev, count)
-
         stack.append((prev, count))
 
         output = ''
@@ -36,5 +34,4 @@ class Solution:
 
 
 '''
-#check k = 1
 '''

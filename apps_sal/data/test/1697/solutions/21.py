@@ -1,11 +1,9 @@
-# A
 '''
 n, m = map(int, input().split())
-row = ['#' * m if i % 2 == 0 else '.' * (m - 1) + '#' if i % 4 == 1
-       else '#' + '.' * (m - 1) for i in range(n)]
+row = ['
+       else '
 print('\n'.join(row))
 '''
-# B
 import sys
 sys.setrecursionlimit(5000)
 n, m = list(map(int, input().split()))
@@ -19,7 +17,6 @@ def check(x, y, px, py):
 
 
 def DFS(x, y, px, py, visited):
-    #print(x, y, px, py, '\n', visited)
     visited[x][y] = True
     for i in range(4):
         newx = x + dx[i]
@@ -28,19 +25,15 @@ def DFS(x, y, px, py, visited):
             continue
         if (newx == px and newy == py):
             continue
-        #print('Bug ', visited)
         if L[x][y] == L[newx][newy]:
             if visited[newx][newy]:
-                #print('Here True', newx, newy, x, y)
                 return True
             if DFS(newx, newy, x, y, visited):
-                #print(newx, newy, x, y, visited)
                 return True
     return False
 
 
 def solve():
-    #    visited = [[False] * m] * n
     visited = [[False for j in range(m)] for i in range(n)]
     for i in range(n):
         for j in range(m):

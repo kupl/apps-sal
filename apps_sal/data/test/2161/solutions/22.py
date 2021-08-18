@@ -1,9 +1,5 @@
 def check(a, s1, s2):
     s1, s2 = str(s1), str(s2)
-    # print(s1,s2)
-    #print(s1[len(s1) - len(s2):len(s1)],s2)
-    #print(s1[len(s1) - len(s2):len(s1)] == s2)
-    # print()
     if s1[len(s1) - len(s2):len(s1)] == s2:
         return True
     elif s1 == s2 or not(s2 in a):
@@ -16,8 +12,6 @@ phone = []
 
 for i in range(n):
     a = list(input().split())
-    # for i in range(int(a[1]) + 1):
-    #a[i + 1] = int(a[i + 1])
     if not(a[0] in name):
         name.append(a[0])
         phone.append(a[2:2 + int(a[1])])

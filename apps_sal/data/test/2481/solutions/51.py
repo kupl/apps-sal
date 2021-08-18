@@ -7,7 +7,6 @@ for k in range(10):
         for j in range(10):
             cArray[i][j] = min(cArray[i][j], cArray[i][k] + cArray[k][j])
 
-# print(cArray)
 
 ans = 0
 for i in Aarray:

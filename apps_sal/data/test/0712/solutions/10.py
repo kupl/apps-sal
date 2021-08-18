@@ -11,5 +11,4 @@ for i in range(1, t):
     for j in range(1, n):
         saved[i][j] = saved[i - 1][j - 1] * p + (saved[i - 1][j]) * (1 - p)
 
-# print(saved)
 print(sum(saved[-1]))

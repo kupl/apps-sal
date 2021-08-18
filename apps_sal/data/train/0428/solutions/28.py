@@ -17,10 +17,8 @@ class Solution:
         while bfs:
             cur, bfs = bfs, []
             for x, y, keys in cur:
-                # print(len(keys))
                 if keys == (1 << numKeys) - 1:
                     return step
-                # print(x, y, keys, locks)
                 for i in range(4):
                     xx, yy = x + d[i], y + d[i + 1]
                     if 0 <= xx < m and 0 <= yy < n and (xx, yy, keys) not in seen:
@@ -32,7 +30,6 @@ class Solution:
                                 continue
                             else:
                                 bfs.append((xx, yy, keys))
-                            # bfs.append((xx, yy, keys, locks | (1 << (ord(grid[xx][yy]) - ord('A')))))
                         elif grid[xx][yy] == '.' or grid[xx][yy] == '@':
                             bfs.append((xx, yy, keys))
             step += 1

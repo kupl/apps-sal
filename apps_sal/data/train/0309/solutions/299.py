@@ -9,7 +9,6 @@ class Solution:
             x[0] = 1
             return x
 
-        # dp[diff][index]
         l = len(A)
         dp = defaultdict(lambda: [1 for i in range(l)])
         ans = 0

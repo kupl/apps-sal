@@ -5,7 +5,6 @@ class Solution:
 
         self.count = [float('inf')] * (amount + 1)
         self.count[0] = 0
-        # print(count)
 
         for i in range(1, amount + 1):
             for coin in coins:

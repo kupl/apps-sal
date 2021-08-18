@@ -1,27 +1,12 @@
-#!/usr/bin/env python3
-# encoding: utf-8
 
 
-# ----------
-# Constants
-# ----------
 LEFT = 0
 RIGHT = 1
 
 
-# ----------
-# Functions
-# ----------
-
-# Reads a string from stdin, splits it by space chars, converts each
-# substring to int, adds it to a list and returns the list as a result.
 def get_ints():
     return [int(n) for n in input().split()]
 
-
-# ----------
-# Execution start point
-# ----------
 
 def __starting_point():
     import sys

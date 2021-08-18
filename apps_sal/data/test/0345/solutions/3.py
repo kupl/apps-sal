@@ -11,11 +11,7 @@ else:
     for i in range(n):
         for j in range(i + 1, n):
             l = adj[i].intersection(adj[j])
-            # print(l)
             tmp = len(l)
             if tmp < deg:
                 deg = tmp
-        # deg = min(len(adj[i]), deg)
-    # deg = ma
-    # print(deg)
     print(m - deg)

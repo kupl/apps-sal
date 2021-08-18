@@ -11,7 +11,6 @@ for i in range(0, t):
     lr = []
     line = sys.stdin.readline()
     line = line.strip()
-    #print("line " , line);
     r.append(line[9:])
     lr.append(-1)
     for j in range(1, n):
@@ -20,13 +19,9 @@ for i in range(0, t):
         if (line[0:7] == "Left on"):
             lr.append(0)
             r.append(line[8:])
-            # print(lr)
-            # print(r)
         else:
             lr.append(1)
             r.append(line[9:])
-            # print(lr)
-            # print(r)
     print("Begin on " + r[n - 1])
     j = n - 1
     while j > 0:

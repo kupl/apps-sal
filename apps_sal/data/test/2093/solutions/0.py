@@ -46,14 +46,11 @@ a = sorted(list(zip(list(range(1, n + 1)), l)) + queries, key=lambda x: (-x[-1],
 ft = RangeBit(n + 1)
 
 for el in a:
-    # print(el)
-    if len(el) == 2:  # update
+    if len(el) == 2:
         ind, val = el
         ft.add(ind, ind, 1)
-    else:  # query
+    else:
         fr, to, val = el
-        # print(fr, to, val)
-        # print(ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0))
         result += ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0)
 
 print(result)

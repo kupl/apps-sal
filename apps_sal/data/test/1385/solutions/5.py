@@ -3,10 +3,6 @@ def main(s):
     temp = ''
     answer = []
 
-    # type:
-    # 0 - обычный поиск
-    # 1 - внутри кавычек
-
     for c in s:
         if type == 0:
             if c == ' ':

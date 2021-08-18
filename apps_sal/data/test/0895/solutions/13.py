@@ -9,6 +9,3 @@ for i in range(1000):
     t[i + 1] += t[i]
 
 print(max(t[i + T] - t[i] for i in range(-1, 1001 - T)))
-
-
-# Made By Mostafa_Khaled

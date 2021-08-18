@@ -1,5 +1,4 @@
 def sum_triangular_numbers(n):
-    # your code here
     if n <= 0:
         return 0
     else:

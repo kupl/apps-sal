@@ -20,21 +20,18 @@ for i in range(t):
         else:
             if cur < min:
                 min = cur
-            # deleting
             exc = p.popleft()
             if d[exc] == 1:
                 d.pop(exc)
                 cur -= 1
             else:
                 d[exc] -= 1
-            # adding
             p.append(el)
             if el in list(d.keys()):
                 d[el] += 1
             else:
                 d[el] = 1
                 cur += 1
-        # print(d,p)
     if min > cur:
         min = cur
     print(min)

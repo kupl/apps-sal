@@ -22,6 +22,4 @@ class Solution:
 
             dp[tmp_sum].append(i)
 
-            # print(dp)
-
         return len(res) - 1

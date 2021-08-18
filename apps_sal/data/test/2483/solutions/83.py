@@ -17,7 +17,6 @@ def resolve():
         prevt, prevc = t, c
     for i in range(1, 10**5 + 1):
         counts[i] += counts[i - 1]
-    # print(counts[:15])
     print(max(counts))
 
 

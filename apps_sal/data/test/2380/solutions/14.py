@@ -16,7 +16,6 @@ pos = 0
 for q in queries:
     b, c = q
     if cards[min(pos + b - 1, n - 1)] < c:
-        # print('a')
         pos = pos + b
         ans += c * (b - max(0, pos - n))
         if pos >= n:
@@ -24,10 +23,8 @@ for q in queries:
     else:
         for i in range(b):
             if cards[pos + i] < c:
-                # print('b')
                 ans += c
             else:
-                # print('c')
                 pos += i
                 for j in range(pos, n):
                     ans += cards[j]

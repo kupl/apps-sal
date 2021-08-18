@@ -4,7 +4,6 @@ class Solution:
         i, window = 0, 0
         premin = [inf] * len(arr)
 
-        # i: window start, j: window end
         for j, num in enumerate(arr):
 
             window += num
@@ -12,8 +11,6 @@ class Solution:
                 window -= arr[i]
                 i += 1
             if window == target:
-                # curr: length
-             # print(premin, i, j)
                 curr = j - i + 1
                 if result > curr + premin[i - 1]:
                     result = curr + premin[i - 1]

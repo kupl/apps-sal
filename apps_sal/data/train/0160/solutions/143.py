@@ -1,6 +1,5 @@
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
-        # dp[i][j] represents for piles[i:j + 1], the maximum differnce of Alex - Lee
         n = len(piles)
         dp = [[0 for col in range(n)] for row in range(n)]
         for i in range(n):

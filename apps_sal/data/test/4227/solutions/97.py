@@ -14,7 +14,7 @@ def dfs(now, depth):
     if visited[now]:
         return 0
     if depth == N:
-        return 1  # 最後まで探索したらはじめて+1
+        return 1
 
     visited[now] = 1
 

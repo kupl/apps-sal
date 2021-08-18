@@ -2,9 +2,6 @@ import collections
 
 max_bits = 30
 
-#root = collections.Counter()
-#vals = collections.defaultdict(int)
-
 
 class BNode:
     def __init__(self, ct=0, zero=None, one=None):

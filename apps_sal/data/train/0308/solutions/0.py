@@ -66,5 +66,4 @@ class Solution:
 
             return (src[i + 1: e], e + 1) if s >= e - i else ("", e)
 
-        # start to check
         return parseTag(code, 0) == (True, len(code))

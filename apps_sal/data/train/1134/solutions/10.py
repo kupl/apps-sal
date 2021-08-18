@@ -1,16 +1,12 @@
-# This is basic python file
-# print "Hello Vedhika Fan!!!"
-# print ""
 
 
-import math  # This will import math module
+import math
 
 t = int(input())
 while(t != 0):
     t -= 1
     n, m = list(map(int, input().split()))
     num = list(map(int, input().split()))
-#   energy = sum(num(0:m))
     energy = 0
     for i in range(m):
         energy += num[i]

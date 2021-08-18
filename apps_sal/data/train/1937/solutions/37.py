@@ -49,12 +49,3 @@ class ThroneInheritance:
             if curr.child:
                 stack.append(curr.child)
         return order
-# [\"king\", \"andy\", \"matthew\", \"bob\", \"alex\", \"asha\", \"catherine\"]
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()
-
-# [\"ThroneInheritance\",\"birth\",\"birth\",\"birth\",\"getInheritanceOrder\"]
-# [[\"king\"],[\"king\",\"andy\"],[\"king\",\"bob\"],[\"andy\",\"matthew\"],[null]]

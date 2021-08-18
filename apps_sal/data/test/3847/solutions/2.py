@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
 import sys
 from math import inf
 
 
 def rint():
     return list(map(int, sys.stdin.readline().split()))
-#lines = stdin.readlines()
 
 
 n, m = rint()

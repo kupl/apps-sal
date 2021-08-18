@@ -15,14 +15,12 @@ ans = (N - 2) ** 2
 for _ in range(Q):
     n, x = list(map(int, input().split()))
     if n == 1:
-        # 下方向
         if x < col[-1]:
             col.append(x)
             row.append(row[-1])
         idx = bisect_descending(col, x)
         ans -= row[idx] - 2
     else:
-        # 右方向
         if x < row[-1]:
             row.append(x)
             col.append(col[-1])

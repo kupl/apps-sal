@@ -3,4 +3,4 @@ def next_happy_year(year):
         year += 1
         if len(str(year)) == len(set(str(year))):
             break
-    return year  # cant believe this works
+    return year

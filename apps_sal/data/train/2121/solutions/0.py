@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from time import perf_counter
 from sys import stdin
 
@@ -11,7 +10,6 @@ def run(n, s):
             small -= 1
         if small == -1:
             break
-        #print(small, big)
         small -= 1
         m += 1
     print(n - m)

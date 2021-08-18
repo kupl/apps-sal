@@ -4,7 +4,6 @@ class Solution:
         :type n: int
         :rtype: List[str]
         """
-        # array to keep track of results
         answers = []
         for i in range(0, n + 1):
             answers.append(Solution.catalanHelper(i, answers))
@@ -13,7 +12,6 @@ class Solution:
         return list(set(answers[n]))
 
     @staticmethod
-    # returns parenthesis
     def catalanHelper(n, answers):
         """
         : type n : int 

@@ -8,7 +8,7 @@ class Solution:
             coors[count] = tuple(point)
             count = count + 1
         pq = PriorityQueue()
-        pq.put((0, 0))  # dist, nodeIdx
+        pq.put((0, 0))
         visited = set()
         total = 0
         while (len(visited) < len(points)):

@@ -38,9 +38,7 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.stream += [letter]
-        # print(self.stream)
         for i in range(1, len(self.stream) + 1):
-            #print(i, self.stream[-i:])
             if not self.trie.search(self.stream[-i:][::-1], True):
                 return False
             if self.trie.search(self.stream[-i:][::-1]):

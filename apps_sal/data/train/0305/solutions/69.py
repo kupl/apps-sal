@@ -8,9 +8,7 @@ class Solution:
 
                 temp = text[i:j]
 
-                # print(\"\\t\\t temp:\",temp,\"\\t\\t \",temp==text.startswith(temp,j))
-                if text[i:j] == text[j:j + j - i]:  # text.startswith(text[i:j],j):
+                if text[i:j] == text[j:j + j - i]:
                     subs.add(text[i:j])
 
-        # print(subs)
         return len(subs)

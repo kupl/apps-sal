@@ -1,7 +1,5 @@
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        # Floyd Washall
-        # dp[i][j] 表示 uv 之间的最小距离
         dp = [n * [float('inf')] for _ in range(n)]
 
         for f, t, w in edges:

@@ -4,8 +4,6 @@ a = list(map(int, input().split()))
 s1 = sum(a[1::2])
 s2 = sum(a[2::2])
 
-#print(s1, s2)
-
 
 r = 0
 if s1 == s2:

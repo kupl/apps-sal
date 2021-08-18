@@ -75,7 +75,5 @@ for _ in range(t):
         graph[v].append(u)
     '''if _ == 5:
         print(graph)
-    #print(graph,'graph')'''
     z = get(graph)
-    # print(z,'z')
     print(z)

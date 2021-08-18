@@ -17,7 +17,6 @@ for i in range(1, n + 1):
             i = a[i]
         for i in cep:
             was.add(i)
-        # print(cep)
         if x in cep:
             r = cep.index(x)
             l = len(cep) - r - 1
@@ -35,11 +34,9 @@ for i in range(2, len(ceps) + 1):
 sums.add(0)
 
 poss = set()
-#print(l + 1)
 for s in sums:
     for i in range(ones + 1):
         poss.add(l + s + 1 + i)
-    #print(l + s + 1)
 
 for pos in sorted(poss):
     print(pos)

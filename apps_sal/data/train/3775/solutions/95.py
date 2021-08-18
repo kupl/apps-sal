@@ -1,5 +1,4 @@
 def digits(n):
-    # your code here
     count = 1
     while(n >= 10):
         q = n / 10

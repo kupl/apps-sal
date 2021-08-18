@@ -30,7 +30,5 @@ def powmod(x, p, m=M):
 kinds = len(set(dss.values()))
 ans = powmod(2, kinds - 1)
 
-#print(n, a, dss, lasts, kinds)
-#print([powmod(2, i, 13) for i in range(10)])
 
 print(ans)

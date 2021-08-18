@@ -1,16 +1,4 @@
 """Cowboy Beblop at his computer, problem 717I from https://codeforces.com/problemset/problem/717/I"""
-# from fractions import Fraction
-
-
-# def convert_to_fractions(poly):
-#     """convert polygon vertex to fractional type"""
-#     poly_frac = []
-#     for x, y, z in poly:
-#         vertex = (Fraction(x),
-#                   Fraction(y),
-#                   Fraction(z))
-#         poly_frac.append(vertex)
-#     return poly_frac
 
 
 def convert_to_float(poly):
@@ -56,13 +44,10 @@ def intersect_list(poly, plain_norm, plain_point, proj_dir):
     find points where the edges enter or leave upper half-space over the plain
     :return list of points projection on proj_dir
     """
-    # vertex projection
     u = [dot_product(vert, proj_dir) for vert in poly]
 
-    # plain anchor
     vr = dot_product(plain_point, plain_norm)
 
-    # polygon vertex
     v = [dot_product(vert, plain_norm) for vert in poly]
 
     u_list = []

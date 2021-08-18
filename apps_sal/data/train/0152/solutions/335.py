@@ -1,25 +1,6 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
 
-        #         def feasible(distance):
-        #             balls, curr = 1, position[0]
-        #             for i in range(1, len(position)):
-        #                 if position[i]-curr >= distance:
-        #                     balls += 1
-        #                     curr = position[i]
-
-        #             return balls >= m
-
-        #         position.sort()
-        #         left, right = 0, position[-1]-position[0]
-        #         while left<right:
-        #             mid = left + (right-left)//2
-        #             if feasible(mid):
-        #                 right = mid
-        #             else:
-        #                 left = mid+1
-        #         return left
-
         n = len(position)
         position.sort()
 

@@ -18,20 +18,12 @@ class Solution:
                 return parent[x]
 
         COST = 0
-        # print(CostHeap)
         while CostHeap:
             node = heapq.heappop(CostHeap)
             cost, x, y = node
-            # print(parent)
             u = find(x)
             v = find(y)
             if u != v:
                 parent[u] = v
                 COST += cost
-                # if x in pointSet:
-                #    pointSet.remove(x)
-                # if y in pointSet:
-                #    pointSet.remove(y)
-                # if len(pointSet) == 0:
-                #    break
         return COST

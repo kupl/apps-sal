@@ -14,5 +14,4 @@ class Solution:
                 if is_good(s[i:i + sz]):
                     cnt[s[i:i + sz]] += 1
                     res = max(res, cnt[s[i:i + sz]])
-            #print(sz, cnt)
         return res

@@ -12,7 +12,6 @@ for t in range(T):
     cur = int(input())
     for ch in input():
         m = mask(cur)
-        #print(ch, ":", m, cur, "->", end = " ")
         if ch == "U":
             next = (cur - m) | (m * 2)
             if next < n:
@@ -21,5 +20,4 @@ for t in range(T):
             cur -= m // 2
         elif ch == "R" and m > 1:
             cur += m // 2
-        # print(cur)
     print(cur)

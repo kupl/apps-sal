@@ -8,13 +8,10 @@ def solve(n):
     if n < 12:
         return base_answer
     else:
-        # Past 11, is just the previous answer + 49
         return base_answer + (49 * (n - 11))
 
 
 def rec_solve(n, options=4, val=0):
-    # My original solution; solves based on cases of 1 option,
-    # 1 character, and recursive case
     if n == 1:
         return_set = set()
         for i in range(1, options + 1):

@@ -14,12 +14,10 @@ def main():
             now = tsugi
             if tsugi not in indic:
                 indic[tsugi] = trans
-                #print(tsugi, indic)
             else:
                 flag = 1
                 loop = trans - indic[tsugi]
                 yokei = indic[tsugi]
-                #print(loop, yokei)
 
         if trans == k:
             print(tsugi)

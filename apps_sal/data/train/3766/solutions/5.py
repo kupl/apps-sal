@@ -1,4 +1,3 @@
-# RWH primes
 from collections import Counter
 LIMIT = 10**6
 sieve = [True] * (LIMIT // 2)
@@ -9,15 +8,12 @@ PRIMES = [2] + [2 * i + 1 for i in range(1, LIMIT // 2) if sieve[i]]
 
 
 def getAllPrimeFactors(n):
-    # errors and zero
     if not type(n) == int or n < 1:
         return []
 
-    # edge cases
     if n in (1, 2):
         return [n]
 
-    # factorisation
     factors = []
 
     for p in PRIMES:

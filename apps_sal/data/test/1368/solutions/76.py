@@ -11,7 +11,6 @@ for i in range(1, N + 1):
 
 max_value_avg = 0
 for j in range(A, B + 1):
-    # print(j,dp[-1][j])
     value_avg = dp[-1][j] / j
     max_value_avg = max(max_value_avg, value_avg)
 
@@ -20,7 +19,6 @@ for j in range(A, B + 1):
     value_avg = dp[-1][j] / j
     if value_avg == max_value_avg:
         max_avg_size.append(j)
-# print(max_avg_size)
 
 
 def comb(n, r):

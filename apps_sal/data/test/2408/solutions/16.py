@@ -32,7 +32,6 @@ for i in range(n):
 wires = list(wires)
 
 ans = 0
-# print(wires)
 for i in range(len(wires)):
     for j in range(i + 1, len(wires)):
         a1, b1, c1 = wires[i]

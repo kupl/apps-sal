@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 import bisect
@@ -39,16 +38,13 @@ for i in range(1, num_points + 1):
         _, r = segments[segment_index]
         heapq.heappush(working, (- r, segment_index))
         working_count += 1
-#        bisect.insort_right(working, (r, segment_index))
     while working_count > k:
         r, segment_index = heapq.heappop(working)
-#        r, segment_index = working.pop()
         working_count -= 1
         removed.append(segment_index)
         removed_right[- r] += 1
     squeezed_out = len(closing[i]) - removed_right[i]
     working_count -= squeezed_out
-#    working = working[squeezed_out: ]
 
 print(len(removed))
 for j in removed:

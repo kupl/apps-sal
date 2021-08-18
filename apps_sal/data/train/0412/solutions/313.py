@@ -10,7 +10,6 @@ class Solution:
             if target <= 0 or target > d * f or target < d:
                 return 0
 
-            # logic
             if (d, target) in hash_map:
                 return hash_map[(d, target)]
 

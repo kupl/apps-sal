@@ -6,15 +6,12 @@
 
 
 def longest_palindrome(s, sep=" "):
-    # Interpolate some inert character between input characters
-    # so we only have to find odd-length palindromes
     t = sep + sep.join(s) + sep
 
-    r = 0       # Rightmost index in any palindrome found so far ...
-    c = 0       # ... and the index of the centre of that palindrome.
-    spans = []  # Length of the longest substring in T[i:] mirrored in T[i::-1]
+    r = 0
+    c = 0
+    spans = []
 
-    # Manacher's algorithm
     for i, _ in enumerate(t):
         span = min(spans[2 * c - i], r - i - 1) if i < r else 0
         while span <= i < len(t) - span and t[i - span] == t[i + span]:

@@ -10,7 +10,6 @@ f[0] = 0
 last = 0
 res = 0
 
-#print(n, m, s)
 
 for i in range(1, n + 1):
     if s[i - 1] == m:
@@ -23,8 +22,6 @@ for i in range(1, n + 1):
     else:
         f[i] = f[i - 1] + 1
 
-    #print(i, last, count[f[i]] + count[f[i]-1])
     res += count[f[i]] + count[f[i] - 1]
 
-# print(f)
 print(res)

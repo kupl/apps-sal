@@ -15,7 +15,6 @@ for k in range(n):
     else:
         for i in range(1, k + 1, 2):
             ans += part[i]
-    # print(part, ans)
     if ans <= h:
         res = max(res, len(part))
     else:

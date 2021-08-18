@@ -19,14 +19,14 @@ class Solution:
         while dq:
             size = len(dq)
             for i in range(size):
-                r, c, ks, s = dq.popleft()  # key state, step
+                r, c, ks, s = dq.popleft()
                 for d in dirs:
                     nr, nc = r + d[0], c + d[1]
                     if not (0 <= nr < m) or not (0 <= nc < n):
                         continue
-                    elif grid[nr][nc] == '#':
-                        continue
-                    elif grid[nr][nc] in '.@':  # empty cell or starting point
+                    elif grid[nr][nc] == '
+                    continue
+                    elif grid[nr][nc] in '.@':
                         if s + 1 < dp[nr][nc][ks]:
                             dp[nr][nc][ks] = s + 1
                             dq.append((nr, nc, ks, s + 1))

@@ -31,11 +31,9 @@ class Solution:
             return -1
 
         i = bfs(source, target)
-        # print(i)
         if i == 1:
             return True
         if i == -1:
             return False
         j = bfs(target, source)
-        # print(j)
         return j == 2

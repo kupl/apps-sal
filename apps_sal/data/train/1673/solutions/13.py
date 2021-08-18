@@ -7,7 +7,7 @@ class Solution:
         m = len(arr)
         n = len(arr[0])
 
-        if m == 1:  # 1 ele sq. matrix
+        if m == 1:
             return arr[0][0]
 
         def get_min_neighbors(i, j):
@@ -28,6 +28,5 @@ class Solution:
                     global_min = cur[col]
 
             row_prev = cur[:]
-            # print(cur)
 
         return global_min

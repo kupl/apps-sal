@@ -28,12 +28,10 @@ for i in range(n):
     while sum_q - q[0] >= x:
         sum_q -= q.popleft()
         sum_sq -= sq.popleft()
-    #print (q,sq,sum_q,sum_sq)
 
     origin = sum_sq - sq[0]
     remday = x - (sum_q - q[0])
     differ = (q[0] + q[0] - remday + 1) * remday // 2
-    #print (origin,remday,differ)
 
     ans = max(ans, origin + differ)
 

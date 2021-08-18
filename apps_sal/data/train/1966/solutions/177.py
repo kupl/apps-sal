@@ -6,15 +6,11 @@ class Solution:
                 if mat[i][j]:
                     mat[i][j] = mat[i][j - 1] + 1
 
-        # for row in mat:
-        #    print(row)
-
         count = 0
 
         for i in range(len(mat)):
             for j in range(len(mat[0])):
                 if mat[i][j]:
-                 #           print(i, j, mat[i][j])
 
                     row = i
                     width = mat[i][j]
@@ -22,5 +18,4 @@ class Solution:
                         width = min(width, mat[row][j])
                         row += 1
                         count += width
-        #                print(width)
         return count

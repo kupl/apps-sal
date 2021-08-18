@@ -1,4 +1,3 @@
-# https://www.codechef.com/problems/GRUMPMA
 from sys import stdin
 
 

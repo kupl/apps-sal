@@ -13,19 +13,15 @@ class Solution:
 
         item_list.sort()
         item_list.insert(0, 'Table')
-        # print(item_list)
         order_dict = dict(sorted(order_dict.items()))
-        # print(order_dict)
 
         sol = []
         sol.append(item_list)
         for table_name, table_orders in list(order_dict.items()):
             table_sol = ['0' for i in range(len(item_list))]
             table_sol[0] = table_name
-            # print(table_orders)
             for order in table_orders:
                 ind = item_list.index(order)
-                # print(ind)
                 table_sol[ind] = str(int(table_sol[ind]) + 1)
             sol.append(table_sol)
 

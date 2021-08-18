@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def s(x):
     return sum(map(int, str(x)))
 

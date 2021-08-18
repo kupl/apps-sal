@@ -3,7 +3,6 @@ import sys
 input = sys.stdin.readline
 
 
-############ ---- Input Functions ---- ############
 def inp():
     return (int(input()))
 
@@ -32,7 +31,6 @@ def digitSum(x):
 def solve(x, y):
     if digitSum(x) <= y:
         return 0
-    # Try next power of 10
     xStr = str(x)
     attempt = 10 ** len(xStr) - x
 

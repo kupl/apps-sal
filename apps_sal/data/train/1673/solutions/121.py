@@ -1,6 +1,5 @@
 class Solution:
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
-        # always fall to the smallest or second smallest (if smallest is the same )
 
         m, n = len(arr), len(arr[0])
         i = 1

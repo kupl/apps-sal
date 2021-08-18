@@ -5,9 +5,6 @@ class Solution:
         for i in range(5):
             dp[i][1] = 1
 
-#         for i in range(5):
-#             print(dp[i])
-
         for j in range(2, n + 1):
             dp[0][j] = dp[1][j - 1] + dp[2][j - 1] + dp[4][j - 1]
             dp[1][j] = dp[0][j - 1] + dp[2][j - 1]

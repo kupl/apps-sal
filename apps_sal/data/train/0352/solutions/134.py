@@ -24,7 +24,6 @@ def tests():
 class Solution:
 
     def longestStrChain(self, words: List[str]) -> int:
-        # tests()
         words.sort(key=lambda w: len(w))
 
         chains = {}
@@ -34,15 +33,10 @@ class Solution:
             current_max = max(current_max, 1)
             word_max = 1
             for chain, chain_len in list(chains.items()):
-                # if chain_len > chains[w] and is_pred(chain, w):
-                #     chains[w] = chain_len + 1
 
                 if is_pred(chain, w) and word_max < chain_len + 1:
-                    # chains[w] = max(chains[w], chain_len+1)
                     chains[w] = chain_len + 1
                     word_max = chain_len + 1
                     current_max = max(current_max, word_max)
 
         return current_max
-
-    # [a, ab, abc] abcd

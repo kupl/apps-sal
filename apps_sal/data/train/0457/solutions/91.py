@@ -10,8 +10,6 @@ class Solution:
         target = [0] * (amount + 1)
         target[0] = 1
 
-        # coins[::-1].sort()
-
         for i in range(len(coins) - 1, -1, -1):
 
             coin = coins[i]

@@ -15,13 +15,11 @@ class Solution:
                 x = nums1[i] * nums1[j]
                 y = math.sqrt(x)
                 if y % 1 == 0:
-                    # print(y,'y','nunms1',i,j)
                     ans += dic2[y]
         for i in range(m):
             for j in range(i + 1, m):
                 x = nums2[i] * nums2[j]
                 y = math.sqrt(x)
                 if y % 1 == 0:
-                    # print(y,'y','nunms2')
                     ans += dic1[y]
         return ans

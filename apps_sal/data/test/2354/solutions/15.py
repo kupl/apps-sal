@@ -1,5 +1,4 @@
 n, q = map(int, input().strip().split(" "))
-# print(n,q)
 a = []
 for i in range(q):
 
@@ -8,9 +7,6 @@ for i in range(q):
 
 if n % 2 == 0:
     for x, y in a:
-        # if x+y==2:
-        #     print(1)
-        #     continue
         if (x + y) % 2 == 0:
             k = 0
         else:

@@ -22,7 +22,6 @@ class Solution:
             for i in lst:
                 prod *= getFactorial(i)
             return getFactorial(sum(lst)) / prod
-        # start putting one color into two boxes
 
         def dfs(i):
 

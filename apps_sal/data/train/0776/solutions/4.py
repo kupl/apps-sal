@@ -1,8 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
     d = int(input())
-    # print(2)
-    # print(d+1,d+2)
     p2 = 10**5
     p1 = p2 - 1
     p = p2 - 2

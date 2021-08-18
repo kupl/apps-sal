@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 def solve():
     """
@@ -16,7 +15,6 @@ def solve():
     for a in As:
         S ^= a
 
-    # 答え
     anss = []
     for i in range(N):
         anss.append(str(S ^ As[i]))

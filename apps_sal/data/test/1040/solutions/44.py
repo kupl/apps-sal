@@ -16,5 +16,4 @@ for s in S:
             que = ""
     else:
         que = ""
-    # print(que)
 print(N - 3 * ans)

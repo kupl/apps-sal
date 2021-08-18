@@ -1,4 +1,3 @@
-# |xi - xj| + |yi - yj|
 
 from collections import defaultdict
 

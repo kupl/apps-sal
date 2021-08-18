@@ -1,6 +1,5 @@
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        # binary search
         left = 1
         right = max(nums)
         while left <= right:
@@ -9,10 +8,8 @@ class Solution:
             mid_result = self.divide_and_sum(mid, nums)
             if mid_left_result > threshold and mid_result <= threshold:
                 return mid
-            # move right
             if mid_result > threshold:
                 left = mid + 1
-            # move left
             if mid_left_result <= threshold:
                 right = mid - 1
 

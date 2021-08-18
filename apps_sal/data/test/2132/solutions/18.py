@@ -38,8 +38,4 @@ for i in range(n):
 
     if arr[0] == 6:
         overtake_passed += 1
-# print(speed_signs)
-# print(violated_speed)
-# print(overtake_signs)
-# print(violated_overtake)
 print(violations)

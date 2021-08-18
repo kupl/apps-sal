@@ -2,7 +2,6 @@ n, m = map(int, input().split())
 a = []
 for i in range(n):
     a.append(input())
-# print(a)
 l = 0
 r = INF = 100000
 h = 0
@@ -24,7 +23,6 @@ if h != n:
             rr = min(l + m + 1, r + (m + 1 - x) * 2)
             l = ll
             r = rr
-        # print(i, l, r)
     x = INF
     y = 0
     for j in range(m + 2):

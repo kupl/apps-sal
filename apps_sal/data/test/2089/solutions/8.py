@@ -8,7 +8,6 @@ for _ in range(m):
     a[u].add(w)
     a[w].add(u)
 
-# d1
 d1 = [inf] * (n + 1)
 q = deque([s])
 d1[s] = 0
@@ -20,7 +19,6 @@ while q:
             q.append(j)
             d1[j] = d + 1
 
-# d2
 d2 = [inf] * (n + 1)
 q = deque([t])
 d2[t] = 0
@@ -32,7 +30,6 @@ while q:
             q.append(j)
             d2[j] = d + 1
 
-# calc
 ans = 0
 v = d1[t]
 for i in range(1, n + 1):

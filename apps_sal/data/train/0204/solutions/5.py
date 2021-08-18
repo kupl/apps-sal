@@ -13,7 +13,6 @@ class Solution:
         new_start_2 = start + half + 1
         new_end_2 = end
 
-        # check first interval
         first_half_sorted = False
         first_half_contains = False
         second_half_sorted = False

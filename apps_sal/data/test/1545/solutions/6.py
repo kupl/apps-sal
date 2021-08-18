@@ -84,9 +84,6 @@ def solve():
 
                 cur_len = lim_len
 
-        # debug(deq, locals())
-        # debug(cur_len, locals())
-
     _, min_sp = get_minsp(message, As)
 
     print(sum(deq) % MOD)

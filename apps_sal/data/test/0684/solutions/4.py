@@ -26,10 +26,6 @@ def YES(flag):
 
 
 def main():
-    #n = int(sys.stdin.readline().strip())
-    # n = iinput()
-    # n, k = rinput()
-    # n, m, k = rinput()
     q = rlinput()
     print(q[1], q[2], q[2])
 

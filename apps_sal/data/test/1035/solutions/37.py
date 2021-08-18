@@ -37,8 +37,6 @@ def gcd(a, b):
 
 
 gcdab = gcd(a, b)
-#print (gcdab)
 pfsab = prime_factorization(gcdab)
-#print (pfsab)
 pfsabset = set(pfsab)
 print(len(pfsabset))

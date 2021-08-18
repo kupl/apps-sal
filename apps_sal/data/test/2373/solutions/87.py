@@ -25,20 +25,7 @@ P = LIST()
 
 P.append(-1)
 
-# pattern 1
-# ans = 0
-# i = 0
-#
-# while i < N:
-#     if P[i] == i+1:
-#         ans += 1
-#         if P[i+1] == i+2:
-#             i += 1
-#     i += 1
-#
-# print(ans)
 
-# pattern 2
 ans = 0
 i = 0
 for i in range(N):

@@ -1,6 +1,5 @@
 import sys
 my_file = sys.stdin
-##my_file = open("input.txt", "r")
 num = int(my_file.readline().strip("\n"))
 angles = my_file.read().split()
 angles = [int(i) for i in angles]

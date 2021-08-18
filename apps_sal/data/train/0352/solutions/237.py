@@ -29,7 +29,6 @@ class Solution:
                 if graph[i][j]:
                     answer = max(answer, dfs(j))
             dp[i] = answer + 1
-            #print(f'i = {i}, dp[i]={dp[i]}')
             return answer + 1
 
         answer = 0

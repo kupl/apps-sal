@@ -26,5 +26,4 @@ class Solution:
             if buckets[i]["min"] is not None:
                 max_diff = max(max_diff, buckets[i]["min"] - max_prev)
                 max_prev = buckets[i]["max"]
-        # print(buckets)
         return max_diff

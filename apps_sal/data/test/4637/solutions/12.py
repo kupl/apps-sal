@@ -22,8 +22,6 @@ def solve():
     print(sum(a))
     return
 
-# solve()
-
 
 T = ni()
 for _ in range(T):

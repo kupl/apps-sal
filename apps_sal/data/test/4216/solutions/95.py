@@ -4,9 +4,6 @@ def divisor(n):
     for i in range(1, int(n**0.5) + 1):
         if n % i == 0:
             l.append(i)
-            # ll.append(n//i)
-    # l += reversed(ll)
-    # l = sorted(list(set(l)))
     return l
 
 

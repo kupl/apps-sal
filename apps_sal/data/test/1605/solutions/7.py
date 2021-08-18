@@ -7,7 +7,6 @@ for c in s:
         ep, op, enp, onp = op, ep + 1, onp, enp
     else:
         ep, op, enp, onp = onp, 1 + enp, op, ep
-    # print(ep, op, enp, onp, c)
     totalO, totalE = totalO + op, totalE + ep
     prev = c
 print(totalE, totalO)

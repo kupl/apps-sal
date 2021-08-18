@@ -13,15 +13,12 @@ class Solution:
 
         size = len(answers)
 
-        # print(answers)
         while(j < size):
-            # print(j)
             val = answers[j]
             inc = 0
             while (j < size and val == answers[j] and inc < val + 1):
                 inc = inc + 1
                 j = j + 1
-            #print("adding value", val+1, j)
             sum = sum + val + 1
 
         return sum

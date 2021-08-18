@@ -1,4 +1,3 @@
-# cook your code here
 def solve():
     x, y, p, q = map(int, input().split())
 

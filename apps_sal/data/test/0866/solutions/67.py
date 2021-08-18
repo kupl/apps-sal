@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def combination(N: int, R: int, MOD: int):
     """
     Return the number of combinations of N things taken R at a time
@@ -17,9 +16,8 @@ def combination(N: int, R: int, MOD: int):
         return 1
     if R == 1:
         return N
-    numerator = [N - R + r for r in range(1, R + 1)]  # 分子を昇順で列挙
-    denominator = [r for r in range(1, R + 1)]  # 分母を昇順で列挙
-    # 分母分子を約分
+    numerator = [N - R + r for r in range(1, R + 1)]
+    denominator = [r for r in range(1, R + 1)]
     for p in range(2, R + 1):
         pivot = denominator[p - 1]
         if pivot <= 1:

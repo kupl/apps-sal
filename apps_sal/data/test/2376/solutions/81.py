@@ -13,7 +13,6 @@ kw = list(wv.keys())
 kw.sort()
 l = [len(wv[k]) for k in kw]
 l = l + (4 - len(l)) * [0]
-# print(l)
 
 ans = 0
 for i in range(l[0] + 1):

@@ -27,8 +27,6 @@ class DinnerPlates:
             return -1
 
         val = self.cache[-1].pop()
-        # if len(self.cache[-1]) == 0:
-        #     self.cache.pop()
         if len(self.cache[-1]) == self.capacity - 1:
             heapq.heappush(self.available_pos, len(self.cache) - 1)
         return val
@@ -40,10 +38,3 @@ class DinnerPlates:
         if len(self.cache[index]) == self.capacity - 1:
             heapq.heappush(self.available_pos, index)
         return val
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

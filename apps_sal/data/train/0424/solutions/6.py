@@ -1,7 +1,6 @@
 class Solution:
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
 
-        # get non-zeros
         def nonzero_cells(matrix):
             ones = []
             for r in range(len(matrix)):

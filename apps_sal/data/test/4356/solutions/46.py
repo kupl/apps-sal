@@ -14,7 +14,6 @@ for i1 in range(N - M + 1):
     for j1 in range(wa - wb + 1):
         cnt = 0
         for i2 in range(M):
-            #print(B[i2]," vs ", A[i1+i2][j1:j1+wb])
             if B[i2] == A[i1 + i2][j1:j1 + wb]:
                 cnt += 1
         if cnt == M:

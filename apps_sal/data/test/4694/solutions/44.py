@@ -4,7 +4,6 @@ S = map(int, input().split())
 Number = list(S)
 Number.sort(reverse=True)
 total_distance = []
-# print(Number)
 
 for i in range(1, N):
     distance = Number[0] - Number[1]

@@ -1,4 +1,3 @@
-# cook your dish here
 for u in range(int(input().strip())):
     n = int(input().strip())
     k = 1

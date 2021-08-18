@@ -7,7 +7,6 @@ class Solution:
             if dicta[i] > dicta[max_word]:
                 max_word = i
 
-        # n=len(barcodes)
         ans = [0 for i in range(len(barcodes))]
         idx = 0
 

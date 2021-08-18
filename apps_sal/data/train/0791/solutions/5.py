@@ -6,8 +6,6 @@ for i in range(0, T):
     D = int(D)
     L = [int(i) for i in input().split()]
     A = 0
-    # A=sum(L)/float(len(L))
-    # print A
     flag = ''
     MOVE = 0
     s = 0
@@ -26,7 +24,6 @@ for i in range(0, T):
 
             elif L[i] < A and (i + D) < N:
                 diff = A - L[i]
-                # if L[i+D]>=diff:
                 L[i] = L[i] + diff
                 L[i + D] = L[i + D] - diff
                 MOVE = MOVE + diff

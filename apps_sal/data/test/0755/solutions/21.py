@@ -1,4 +1,3 @@
-# author="_rabbit"
 n = int(input())
 ans = int(n / 5)
 if(n % 5):

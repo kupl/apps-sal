@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 
 '''
 Also recursive.
@@ -24,5 +18,4 @@ class Solution:
         if val > root.val:
             return TreeNode(val, root, None)
         else:
-            # val < root.val
             return TreeNode(root.val, root.left, self.insertIntoMaxTree(root.right, val))

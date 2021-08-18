@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
 import itertools
 
 n = int(input())
 
 
 data = [[] for i in range(5)]
-# print(data)
 for i in range(n):
     tmp = str(input())
     if tmp[0] == "M":

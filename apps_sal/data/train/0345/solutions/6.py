@@ -12,7 +12,6 @@ class Solution:
         cache = {}
 
         def recur(idx, m):
-            # print(idx,m)
             if idx == n:
                 return 0
             if m == 0:
@@ -21,7 +20,7 @@ class Solution:
                 return cache[(idx, m)]
             _sum = 0
             result = 10**10
-            i = idx  # bugged
+            i = idx
             while i < n:
                 _sum += nums[i]
                 if i == n - 1 or (_sum + nums[i + 1] > avg):
@@ -35,5 +34,4 @@ class Solution:
             return result
 
         x = recur(0, m)
-        # print(cache)
         return x

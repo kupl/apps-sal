@@ -1,7 +1,6 @@
 class Solution:
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
 
-        # iterate through input list of lists
         tableFood = {}
         Fooditems = set()
         for i in orders:
@@ -23,8 +22,5 @@ class Solution:
             outTable.append(tmp)
 
         outTable.sort(key=lambda outTable: int(outTable[0]))
-        # print([['Table'] + Fooditems] + outTable)
 
         return [['Table'] + Fooditems] + outTable
-
-        # test_list.sort(key = lambda test_list: test_list[1])

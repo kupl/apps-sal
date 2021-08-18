@@ -18,7 +18,6 @@ class Solution:
                 temp[2] = 0
 
             seat_dict[row] = temp
-        # print(seat_dict)
         res = 0
         for row, situ in list(seat_dict.items()):
             if situ[1] == 1:

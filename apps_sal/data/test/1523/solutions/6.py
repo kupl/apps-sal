@@ -26,7 +26,5 @@ print(e)
 '''
 
 w = k - len(set(a))
-# print(w)
 
-# print(e[0:w])
 print(sum(e[0:w]))

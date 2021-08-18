@@ -13,16 +13,12 @@ for i in l:
 for i in d:
     farr.append(d[i])
 
-# print(farr)
 cnt = 1
 arr = farr.copy()
-# print(arr)
-# print(sum(arr))
 z = 1
 while(z <= k):
     if z == 1:
         cnt = (cnt + sum(arr)) % M
-        # print(cnt)
 
     else:
         ic = 0

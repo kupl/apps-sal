@@ -20,7 +20,6 @@ def sieve():
 
 
 sieve()
-# print(primes_sieve[:20])
 d = collections.defaultdict(int)
 z = collections.defaultdict(int)
 

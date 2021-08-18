@@ -29,7 +29,6 @@ def input_int_tuple():
 
 def input_int_array(size=True):
     if size:
-        # read
         values = stdin.readline().split()
         assert(len(values) == 1)
     return [x for x in map(int, stdin.readline().split())]
@@ -73,8 +72,3 @@ def problem():
 
 
 print(problem())
-
-
-#print_array(problem(), False)
-
-#xx = input_string()

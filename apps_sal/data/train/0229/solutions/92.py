@@ -1,11 +1,6 @@
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
 
-        # Divide an conquer
-        # Sort items according to their magnitude
-        # For each item, make sure it's double exists later in the list
-        # When a double is used, mark it with a mask
-
         used = [False] * len(A)
         A.sort(key=lambda n: abs(n))
         bank = collections.Counter(A)

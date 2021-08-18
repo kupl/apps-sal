@@ -12,7 +12,7 @@ class Solution:
                     left += 1
 
                 if left == right:
-                    ans += (1 << (right + 1)) - 2  # full empty & nums[right] itself
+                    ans += (1 << (right + 1)) - 2
                 else:
                     ans += ((1 << left) - 1) * (1 << (right - left))
             right -= 1

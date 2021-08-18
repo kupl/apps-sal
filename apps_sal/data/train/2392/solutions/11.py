@@ -48,4 +48,3 @@ for _ in range(ri(1)):
             ans += k[i]
 
     print(ans)
-    # print(k,period)

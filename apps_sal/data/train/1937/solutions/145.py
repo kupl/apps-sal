@@ -39,9 +39,3 @@ class ThroneInheritance:
     def reset_visit(self, visited):
         for key in list(visited.keys()):
             visited[key] = False
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

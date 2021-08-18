@@ -4,6 +4,5 @@ def isMultiple(a, b, n):
 
     res = a / b
     res = rond(res * 10) / 10
-    # Extra round here to deal with floating-point nonsense
     remainder = round(res % 1, 1)
     return remainder and not (10 * remainder) % n

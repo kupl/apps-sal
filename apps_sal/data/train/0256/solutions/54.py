@@ -4,8 +4,6 @@ import math
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
 
-        # bananas=0
-
         def isValid(mid):
             hours = 0
             for banana in piles:
@@ -21,7 +19,6 @@ class Solution:
             high = sum(piles)
             while low < high:
                 mid = low + (high - low) // 2
-                # print(isValid(mid),mid)
                 if isValid(mid):
                     high = mid
                 else:

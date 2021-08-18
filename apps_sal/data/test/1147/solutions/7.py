@@ -40,7 +40,6 @@ for i in range(0, n):
             continue
         mn = x
         mx = (x // X) * X + X - 1
-    # print(x,mn,mx)
     if mn > mx:
         continue
     ans = ans + bisect_right(p, mx) - bisect_left(p, mn)

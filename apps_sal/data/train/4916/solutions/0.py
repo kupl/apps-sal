@@ -1,4 +1,3 @@
-# generate primes up to limit
 LIMIT = 10**6
 sieve = [0] * 2 + list(range(2, LIMIT))
 for n in sieve:

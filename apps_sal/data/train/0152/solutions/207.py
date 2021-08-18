@@ -14,13 +14,6 @@ class Solution:
                     curr = i
                 i += 1
             return res
-        # def count(d):
-        #     ans, curr = 1, position[0]
-        #     for i in range(1, len(position)):
-        #         if position[i] - curr >= d:
-        #             ans += 1
-        #             curr = position[i]
-        #     return ans
         while lo < hi:
             mid = hi - (hi - lo) // 2
             if count(mid) >= m:

@@ -1,12 +1,9 @@
-#!/usr/bin/env python3
 from collections import deque
 import sys
 sys.setrecursionlimit(1000000)
 
-# スペース区切りの整数の入力
 H, W = list(map(int, input().split()))
 
-# 配列の入力
 s = [list(input()) for _ in range(H)]
 
 dist = [[-1 for _ in range(W)]for _ in range(H)]
@@ -21,8 +18,8 @@ def bfs():
         now_h, now_w = que.popleft()
         if now_h < 0 or H - 1 < now_h or now_w < 0 or W - 1 < now_w:
             continue
-        if s[now_h][now_w] == '#':
-            continue
+        if s[now_h][now_w] == '
+        continue
         for oh, ow in offset:
             if now_h + oh < 0 or H - 1 < now_h + oh or now_w + ow < 0 or W - 1 < now_w + ow:
                 continue

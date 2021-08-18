@@ -5,7 +5,6 @@ class UnionFind:
         self.sizex = [1] * t + [0] * s
         self.sizey = [0] * t + [1] * s
 
-    # 検索
     def find(self, x):
         if self.par[x] == x:
             return x
@@ -16,7 +15,6 @@ class UnionFind:
     def sizeof(self, x):
         return self.sizex[self.find(x)] * self.sizey[self.find(x)]
 
-    # 併合
     def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -33,7 +31,6 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
-    # 同じ集合に属するか判定
     def same_check(self, x, y):
         return self.find(x) == self.find(y)
 

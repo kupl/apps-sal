@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 a = int(input())
 b = int(input())
 if a + b == 3:

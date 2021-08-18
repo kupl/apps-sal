@@ -2,7 +2,6 @@ from math import factorial
 
 
 def am_i_wilson(n):
-    #    print(n)
     if n <= 2:
         return False
     if n > 999:

@@ -1,5 +1,3 @@
-#!/usr/local/bin/python3
-# https://atcoder.jp/contests/abc074/tasks/abc074_b
 
 N = int(input())
 K = int(input())

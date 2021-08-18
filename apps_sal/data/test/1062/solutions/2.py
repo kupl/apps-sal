@@ -36,7 +36,6 @@ class Test_solution(unittest.TestCase):
 
 
 def __starting_point():
-    # unittest.main()
     input()
     S = input()
     T = input()

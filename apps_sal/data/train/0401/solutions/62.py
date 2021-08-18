@@ -5,7 +5,7 @@ from collections import defaultdict, Counter
 class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
         sum_ = sum(nums)
-        mod_dic = defaultdict(list)    # Hash table: 1->[1, 7, 10...]
+        mod_dic = defaultdict(list)
         for num in nums:
             mod_dic[num % 3].append(num)
         print(mod_dic)

@@ -32,13 +32,9 @@ while 1:
                 g -= 1
                 vNeed = 0
     except IndexError:
-        # print('INDERR')
         break
-    # print('need', vNeed, dNeed, aNeed)
-    # print('ost', g, d, f)
     if (vNeed > g) or (dNeed > d) or (aNeed > f):
         break
-    # print('mn ', mn)
     mx = mn * 2
     if vNeed:
         vOk = 0
@@ -72,5 +68,4 @@ while 1:
         aC = ((aOk - 2) * (aOk - 1) * aOk) / 6
 
     count += vC * dC * aC
-    # print('c', vC, dC, aC)
 print(int(count))

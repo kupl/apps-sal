@@ -4,7 +4,6 @@ class Solution:
         dp = [-1 for _ in range(n)]
 
         def max_sum(i):
-            # print(i)
             if i >= n:
                 return 0
             if i == (n - 1):
@@ -17,7 +16,6 @@ class Solution:
             maxi = arr[i]
             for p in range(1, k + 1):
                 v = maxi * p + max_sum(i + p)
-                # print(i, p, v)
                 ans = max(v, ans)
                 if (i + p) < n:
                     maxi = max(maxi, arr[i + p])

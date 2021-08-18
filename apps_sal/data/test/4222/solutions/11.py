@@ -5,7 +5,6 @@ cnt = 0
 
 for i in range(k):
     input()
-    # A.append(list(map(int, input().split())))
     A_dup += list(map(int, input().split()))
 A_eldup = list(set(A_dup))
 

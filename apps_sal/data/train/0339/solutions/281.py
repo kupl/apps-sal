@@ -3,11 +3,6 @@ from collections import defaultdict
 
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        # nums2=sorted(nums2)
-        # def isPresent(p, nums):
-        #     start=0
-        #     end=len(nums)-1
-        #     while(start<end):
         def get_data(nums1, nums2):
             count = defaultdict(int)
             for i in range(len(nums2)):

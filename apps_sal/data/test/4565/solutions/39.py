@@ -17,5 +17,4 @@ for i in range(n):
         w_l += 1
 
 
-# print(unti)
 print(min(unti))

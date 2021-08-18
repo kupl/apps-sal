@@ -34,7 +34,6 @@ def escape(maze):
 
     ymax, xmax = len(maze), len(maze[0])
 
-    # find the player
     for idx, line in enumerate(maze):
         player = PLAYER.search(line)
         if player is not None:

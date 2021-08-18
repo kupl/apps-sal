@@ -17,7 +17,6 @@ def modify():
             if p < c:
                 push(a, c)
             else:
-                # キューに戻す
                 push(a, p)
                 return
 

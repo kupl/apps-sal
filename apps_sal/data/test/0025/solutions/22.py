@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 n, k = list(map(int, input().split(' ')))
 if k > n**2:
     print(-1)

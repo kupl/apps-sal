@@ -40,11 +40,9 @@ class Solution:
             return
         original_node = False
 
-        # mark visitied
         visited.add(curr)
         self.curr_infected += 1
 
-        # grab neighbors
         neighbors = d[curr]
 
         for next in neighbors:

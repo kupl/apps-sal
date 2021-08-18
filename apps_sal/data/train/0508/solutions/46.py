@@ -15,7 +15,6 @@ for i in range(Q):
     event_list.append((D, 0, X))
     dlist.append(D)
 event_list.sort()
-# print(event_list)
 
 answer_dic = {}
 stop_set = set()
@@ -36,7 +35,6 @@ for t, f, x in event_list:
                     heapq.heappop(hq)
         else:
             answer_dic[t] = -1
-# print(answer_dic)
 
 for d in dlist:
     print(answer_dic[d])

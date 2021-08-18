@@ -1,10 +1,9 @@
 def main():
     N = int(input())
     A = list(map(int, input().split(' ')))
-    X = [0 for _ in range(N + 1)]  # cum sum
+    X = [0 for _ in range(N + 1)]
     for i in range(N):
         X[i + 1] = X[i] + A[i]
-    # split to 2 parts (X_0, ..., X_i), (X_(i+1), ..., X_N)
     ans = 10**10
     left = 0
     right = 2

@@ -1,7 +1,7 @@
 from collections import deque
 
 
-class Graph():  # directed
+class Graph():
     def __init__(self, n, edge, indexed=1):
         self.n = n
         self.graph = [[] for _ in range(n)]
@@ -27,7 +27,7 @@ for i in range(N):
     while queue:
         node = queue.popleft()
         for adj in g.graph[node]:
-            if adj == root:  # 閉路を検出する
+            if adj == root:
                 dist[root] = dist[node] + 1
                 prev[root] = node
                 break
@@ -41,7 +41,6 @@ for i in range(N):
         break
     else:
         continue
-    # 最小の閉路なら条件を満たす
     if loopsize > dist[root]:
         loopsize = dist[root]
         path = [root]

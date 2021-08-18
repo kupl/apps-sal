@@ -16,6 +16,4 @@ class Solution:
                             ret += h
                         else:
                             break
-            # print(height)
-            # print(ret)
         return ret

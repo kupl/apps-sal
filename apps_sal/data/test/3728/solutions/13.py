@@ -50,4 +50,3 @@ if try_global_swap_first():
     print('YES')
 else:
     print('NO')
-# print(need_one_or_zero_swap([1, 4, 3, 2]))

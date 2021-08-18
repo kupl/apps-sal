@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import sys
 import re
 from collections import deque, defaultdict
@@ -41,14 +40,11 @@ def solve(S, N, K, LR):
 
 def main():
     input = sys.stdin.readline
-    #N, M = map(int, input().split())
-    #N, K = map(int, input().split())
-    #ps = list(map(int, input().split()))
 
     N, K = list(map(int, input().split()))
     S = input().strip()
 
-    S += 'D'  # dummy
+    S += 'D'
 
     happy = max([solve(S, N, K, 'L'), solve(S, N, K, 'R')])
     print(happy)

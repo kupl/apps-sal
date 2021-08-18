@@ -17,16 +17,13 @@ class Solution:
 
         answer = self.dfs([0] * len(nums), 0, k)
         return answer
-#        print(answer)
 
     def dfs(self, visit, accu, k):
         if k == 1:
-            #            print(visit)
             return True
 
         for i in range(len(self.nums)):
             if not visit[i]:
-                # print(visit)
                 if self.nums[i] + accu < self.quotient:
                     visit[i] = 1
                     if self.dfs(visit, self.nums[i] + accu, k):

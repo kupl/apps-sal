@@ -1,9 +1,6 @@
 import sys
 
 
-#sys.stdin = open("input.txt")
-#sys.stdout = open("output.txt", "w")
-
 n, t = [int(i) for i in input().split()]
 s1 = input()
 s2 = input()

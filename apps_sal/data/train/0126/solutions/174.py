@@ -8,9 +8,7 @@ class Solution:
         u = 1
         n = len(s)
         while True:
-            # print(f'j-{j}, i-{i}, u-{u}, ans-{ans}')
             if u <= maxy and m <= i - j + 1 <= mm:
-                # print('Found!-',j,i,s[j:i+1])
                 ans[s[j:i + 1]] += 1
 
             if j < i and i - j + 1 >= m:

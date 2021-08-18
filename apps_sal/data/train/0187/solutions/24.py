@@ -17,7 +17,6 @@ class Solution:
                 prof += boardingCost * currCus - runningCost
                 currCus = 0
             res += 1
-            #print(prof, maxProf, currCus, res)
             if prof > maxProf:
                 maxProf = prof
                 maxRes = res
@@ -29,7 +28,6 @@ class Solution:
                 prof += boardingCost * currCus - runningCost
                 currCus = 0
             res += 1
-            #print(prof, maxProf, currCus, res)
             if prof > maxProf:
                 maxProf = prof
                 maxRes = res

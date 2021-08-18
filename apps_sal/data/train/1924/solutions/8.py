@@ -24,8 +24,6 @@ class Solution:
             for i in range(time_lower_bound, time_upper_bound + 1):
                 if bkt[i] is None:
                     bkt[i] = defaultdict(lambda: defaultdict(lambda: set()))
-                # if i == 676 - 60:
-                #     print(i, time_lower_bound, time_upper_bound, name, city, idx)
                 bkt[i][name][city].add(idx)
 
         for b in bkt:

@@ -1,4 +1,3 @@
-# cook your dish here
 ml = [2**i for i in range(18)]
 ml1 = [2**i + 1 for i in range(18)]
 

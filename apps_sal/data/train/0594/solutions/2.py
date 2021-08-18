@@ -1,4 +1,3 @@
-# cook your dish here
 def atharva(a: list, n: int):
     msf = a[0]
     mh = a[0]

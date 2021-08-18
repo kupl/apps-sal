@@ -25,12 +25,10 @@ class Solution:
             cost, nex = heapq.heappop(edges)
 
             if nex not in visited:
-                #print(cost, nex)
                 res += cost
                 visited.add(nex)
 
                 for pair in graph[nex]:
                     if pair[1] not in visited:
                         heapq.heappush(edges, pair)
-            # print(edges)
         return res

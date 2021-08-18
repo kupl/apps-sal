@@ -13,9 +13,6 @@ vi = i
 vt = t
 
 
-# if vn>1:
-#	vn+=(vn-1)
-
 ans = max(0, min(vn, ve, vi, vt))
 
 ans = int(ans)

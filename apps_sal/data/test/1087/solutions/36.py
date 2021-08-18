@@ -1,5 +1,5 @@
 n, k, *a = map(int, open(0).read().split())
-d = [0] * 41  # 1になってる
+d = [0] * 41
 for i in range(n):
     for j in range(41):
         d[j] += (a[i] >> j) & 1

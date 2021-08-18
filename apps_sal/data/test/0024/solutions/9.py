@@ -58,8 +58,6 @@ flag = False
 for i in range(10):
     for j in range(10):
         if s[i][j] == '.':
-            # print(trav(i,j,s,-2))
-            # input()
             if trav(i, j, s, 1) + trav(i, j, s, -1) >= 4 or trav(i, j, s, 2) + trav(i, j, s, -2) >= 4 or trav(i, j, s, 3) + trav(i, j, s, -3) >= 4 or trav(i, j, s, 4) + trav(i, j, s, -4) >= 4:
                 flag = True
                 print('YES')

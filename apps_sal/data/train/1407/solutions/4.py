@@ -1,6 +1,5 @@
 import sys
 f = sys.stdin
-# f=open("test.txt","r")
 t = int(f.readline())
 for r in range(t):
     n, m = map(int, f.readline().rstrip().split())
@@ -20,7 +19,6 @@ for r in range(t):
         print("1 1")
     elif n == 1 and m > 2:
         print("2")
-        #
         for i in range(1, m + 1):
             if (i % 4 == 1 or i % 4 == 2):
                 print("1", end=" ")
@@ -35,7 +33,6 @@ for r in range(t):
                 print("2")
     elif n == 2 and m > 2:
         print("3")
-        #
         for i in range(0, n):
             for j in range(1, m + 1):
                 if j % 3 == 1:
@@ -47,7 +44,6 @@ for r in range(t):
             print()
     elif n > 2 and m == 2:
         print("3")
-        #
         for i in range(1, n + 1):
             for j in range(1, m + 1):
                 if i % 3 == 1:

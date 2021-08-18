@@ -26,11 +26,9 @@ class Solution:
         def getMST(whos):
             nonlocal edges, n
             unionfind = UnionFind(n)
-            # mst=set()
             reqEdges = set()
             nodes = 0
             for indx, (typ, fnode, tnode) in enumerate(edges):
-                # if fnode not in mst or tnode not in mst:
                 siz = 0
                 if typ == 3 or typ == whos:
                     res, siz = unionfind.union(fnode, tnode)

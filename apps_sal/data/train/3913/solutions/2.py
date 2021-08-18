@@ -5,7 +5,7 @@ def solution(to_cur, values):
     if to_cur == "EUR":
         rate = 1 / rate
         style += "€"
-    else:      # "USD"
+    else:
         style = "$" + style
 
     return [style.format(v * rate) for v in values]

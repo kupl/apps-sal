@@ -10,7 +10,6 @@ def li():
     return list(mi())
 
 
-# A. Company Merging
 n = ii()
 c = []
 for i in range(n):

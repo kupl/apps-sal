@@ -14,7 +14,6 @@ class Solution:
             largeA.append([0] * (len(A) - 1) + A[i] + [0] * (len(A) - 1))
         largeA += [pad] * (len(A) - 1)
         maxProd = 0
-        # print(largeA)
         for i in range(len(largeA) - len(A) + 1):
             for j in range(len(largeA) - len(A) + 1):
                 subA = []

@@ -17,9 +17,7 @@ class Solution:
             print((name, times))
             l = len(times)
             for i in range(2, l):
-                #print(times[i], times[i - 2])
                 if times[i] - times[i - 2] <= 60:
                     ans.add(name)
                     break
-            # print(sorted(list(ans)))
         return sorted(list(ans))

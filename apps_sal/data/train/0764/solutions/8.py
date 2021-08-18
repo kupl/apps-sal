@@ -1,4 +1,3 @@
-# cook your dish here
 x = int(input())
 for i in range(x):
     y = list(map(str, input().split()))[:4]

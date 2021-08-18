@@ -5,7 +5,6 @@ class Solution:
         res = list()
 
         def stmp(i):
-            # match the whole stamp
             match = False
             for j in range(s_l):
                 if t[i + j] == '?':
@@ -19,7 +18,6 @@ class Solution:
             return match
 
         match = True
-        # loop until no more match
         while match:
             match = False
             for i in range(t_l - s_l + 1):

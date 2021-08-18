@@ -1,4 +1,3 @@
-# 解説AC、辺の張り方が難しすぎる
 from collections import deque
 INF = 1 << 23
 
@@ -54,7 +53,7 @@ class Dinic:
 def main():
     H, W = (int(i) for i in input().split())
     A = [input() for i in range(H)]
-    F = Dinic(H + W + 2)  # 0,1,...,W-1,0,..,H-1,s,t
+    F = Dinic(H + W + 2)
     s = H + W
     t = H + W + 1
     for h in range(H):

@@ -10,8 +10,8 @@ def main1(x, k, rary, q, ta):
         tary.append([t, i])
     tary.sort(key=lambda x: x[0])
     aary.sort(key=lambda x: x[0])
-    l, r = 0, x  # [l,r]:0,xの壁にぶつかっていない初期aの範囲
-    lt, rt = -1, -1  # 壁ぶつかりが発生したあと砂時計がひっくり返る時間
+    l, r = 0, x
+    lt, rt = -1, -1
     tidx = 0
     nowt = 0
     nowu = 'A'

@@ -15,7 +15,7 @@ for i in range(0, len(x) - 1):
         pre1[b] += -1
 
     if(a != b):
-        pre2[a] += (b - 1) - (b - a)  # (b-a-1)+b
+        pre2[a] += (b - 1) - (b - a)
         pre3[b] += a - (b - a)
 
 
@@ -23,10 +23,6 @@ t = 0
 for i in range(0, len(pre1)):
     pre1[i] = t + pre1[i]
     t = pre1[i]
-
-# print('pre1',pre1)
-# print('pre2',pre2)
-# print('pre3',pre3)
 
 
 ans = 0

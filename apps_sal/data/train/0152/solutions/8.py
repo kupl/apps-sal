@@ -3,7 +3,6 @@ import numpy as np
 
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
-        # Choose m values from n such that the minimum of the differences is maximized
         position.sort()
 
         def check(check_val):
@@ -19,8 +18,8 @@ class Solution:
                         return True
             return False
 
-        l = 0   # min return value
-        r = (position[-1] - position[0])  # max return value
+        l = 0
+        r = (position[-1] - position[0])
 
         ret = l
         while l <= r:

@@ -9,11 +9,9 @@ for elem in a:
         d.append(elem)
 if (len(c) == 0):
     print('-')
-    #print('"' + ','.join(c) + '"')
     print('"' + ','.join(d) + '"')
 elif (len(d) == 0):
     print('"' + ','.join(c) + '"')
-    #print('"' + ','.join(d) + '"')
     print('-')
 else:
     print('"' + ','.join(c) + '"')

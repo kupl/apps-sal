@@ -38,11 +38,9 @@ N, M, K = list(map(int, input().split()))
 UF = UnionFind(N)
 F = [0 for i in range(N)]
 B = [0 for i in range(N)]
-# print(UF)
 for i in range(M):
     x, y = list(map(int, input().split()))
     x, y = x - 1, y - 1
-    #print("x:{}, y:{}".format(x, y))
     UF.merge(x, y)
     F[x] += 1
     F[y] += 1
@@ -55,7 +53,6 @@ for i in range(K):
     if gx == gy:
         B[x] += 1
         B[y] += 1
-# print(UF)
 ans = []
 for i in range(N):
     ans.append(UF.nmembers[UF[i]] - B[i] - F[i] - 1)

@@ -28,8 +28,8 @@ def main():
 
     for sy in range(H):
         for sx in range(W):
-            if rc[sy][sx] == "#":
-                continue
+            if rc[sy][sx] == "
+            continue
             dist = [[-1 for _ in range(W)] for _ in range(H)]
             dist[sy][sx] = 0
             d = deque()
@@ -38,9 +38,9 @@ def main():
                 nx, ny = d.popleft()
                 for dy, dx in dy_dx:
                     y, x = ny + dy, nx + dx
-                    if 0 <= y < H and 0 <= x < W and rc[y][x] != "#" and dist[y][x] == -1:
-                        dist[y][x] = dist[ny][nx] + 1
-                        d.append([x, y])
+                    if 0 <= y < H and 0 <= x < W and rc[y][x] != "
+                    dist[y][x] = dist[ny][nx] + 1
+                    d.append([x, y])
             ans = max(ans, max(list(itertools.chain.from_iterable(dist))))
     print(ans)
 

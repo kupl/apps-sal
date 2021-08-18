@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 """
 
@@ -23,7 +22,6 @@ def make_trie(A):
             if w not in t:
                 t[w] = {}
             t = t[w]
-        # t['#'] = True
 
     return trie
 

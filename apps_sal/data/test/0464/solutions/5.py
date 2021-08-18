@@ -39,9 +39,6 @@ if(flag == 1):
         arr[h1][j] = '?'
         j += 1
 
-    # for i in range(h):
-    # 	print(*arr[i])
-
     flag2 = 0
     for i in range(h):
         for j in range(w):

@@ -15,7 +15,6 @@ def get_count(tot):
     return ret
 
 
-# 右からの累積和
 Asum = A[:]
 for i in range(N - 2, -1, -1):
     Asum[i] += Asum[i + 1]
@@ -30,15 +29,12 @@ def get_sum(tot):
         idx = bisect_left(A, tot - A[i])
         cnt = N - idx
         ret += A[i] * cnt
-        # print(idx)
         if idx == N:
             continue
         ret += Asum[idx]
-        # print(f'ret = {ret}')
     return ret
 
 
-# M回握手できる上限を求める
 ok = 0
 ng = 10**12
 while ok + 1 != ng:
@@ -47,10 +43,6 @@ while ok + 1 != ng:
         ok = md
     else:
         ng = md
-# print(ok)
-# print(get_sum(ok+1))
-# print(M - get_count(ok+1))
-# print(Asum)
 ans = get_sum(ok + 1) + (M - get_count(ok + 1)) * ok
 
 print(ans)

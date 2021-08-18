@@ -4,7 +4,6 @@ b = [-1 for i in range(n)]
 m = {}
 nextnum = 1
 for i in range(n):
-    # print(m)
     if b[i] == -1:
         if m.get(a[i]) and m[a[i]][1] > 0:
             b[i] = m[a[i]][0]

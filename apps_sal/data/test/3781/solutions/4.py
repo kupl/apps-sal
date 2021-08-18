@@ -8,7 +8,6 @@ for _ in range(T):
         print((D[1]))
     else:
         C = Counter(A)
-        # print(C)
         for c in C:
             if C[c] % 2 == 1:
                 print((D[0]))

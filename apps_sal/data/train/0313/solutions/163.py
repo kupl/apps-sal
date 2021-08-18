@@ -13,8 +13,6 @@ class Solution:
                     flowers = (flowers + 1) % k
             return n
 
-        # use binary search. search values are
-        # within min(bloomDay) and max(bloomDay)
         l, r = min(bloomDay), max(bloomDay)
         while l <= r:
             mid = l + (r - l) // 2

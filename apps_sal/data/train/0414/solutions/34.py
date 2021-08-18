@@ -1,9 +1,6 @@
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
 
-        #n = len(arr)
-        # if k>n: return max(arr)
-
         i = 0
         j = 1
         while True:

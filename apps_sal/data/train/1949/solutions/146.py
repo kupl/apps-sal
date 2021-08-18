@@ -13,7 +13,7 @@ class Solution:
         ]
         self.visit.remove(pos)
 
-    def getMaximumGold(self, grid: List[List[int]]):  # -> int:
+    def getMaximumGold(self, grid: List[List[int]]):
         self.maxGold = 0
         self.M = len(grid)
         self.N = len(grid[0])

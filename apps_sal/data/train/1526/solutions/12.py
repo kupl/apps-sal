@@ -25,7 +25,6 @@ for _ in range(int(input())):
         else:
             alice.append(cur)
 
-    # Alice
     n1 = len(alice)
     freq_a = {}
     for i in alice:
@@ -46,7 +45,6 @@ for _ in range(int(input())):
         num1 = (num1 * num_a[i])
         den1 = den1 * freq_a[i]
 
-    # Bob alphabets
     n2 = len(bob)
     freq_b = {}
     for i in bob:

@@ -18,6 +18,3 @@ for k in range(1, 10001):
         s += (u - v) * (r - 1) / r
 
 print(s)
-
-
-# Made By Mostafa_Khaled

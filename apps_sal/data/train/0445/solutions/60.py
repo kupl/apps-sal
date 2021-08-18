@@ -1,6 +1,5 @@
 class Solution:
     def minDifference(self, nums: List[int]) -> int:
-        # 找到最小的3个和最大的3个
 
         if len(nums) <= 4:
             return 0

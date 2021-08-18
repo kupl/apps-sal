@@ -17,7 +17,6 @@ while count < n:
         else:
             height -= min(k, height)
             time += 1
-    # print(height,time,count)
 if height == 0:
     s = 0
 elif height % k == 0:

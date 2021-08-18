@@ -24,10 +24,6 @@ for i in range(1, len(a)):
         bwd[-i - 1] = bwd[- i]
 fwd_ = list(accumulate([0] + d))
 bwd_ = list(accumulate([0] + d[::-1]))[::-1]
-# print(fwd)
-# print(bwd)
-# print(fwd_)
-# print(bwd_)
 maxx = fwd[-1]
 for i in range(n + 1):
     if a[i + 1] - a[i] > 1:

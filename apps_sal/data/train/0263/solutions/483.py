@@ -29,5 +29,4 @@ class Solution:
 
                     dp2[r][c] = self.dynamic(r, c, dp)
             dp = dp2[:]
-        # print(dp)
         return sum([dp[i][j] for i in range(4) for j in range(3)]) % (10**9 + 7)

@@ -3,7 +3,6 @@ from itertools import accumulate
 
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
-        # How many non-empty subarrays are there from an array of length k
         def num_subarrays(k):
             return (k * k + k) // 2
         counts = [0, 0]

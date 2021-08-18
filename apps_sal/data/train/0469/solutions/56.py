@@ -12,7 +12,6 @@ class Solution:
                 outNodes[n].add(c)
                 inNodes[c].add(n)
 
-        # 1. all in degrees must be <= 1 and only one should have in degree 0
         zeroInDegree = 0
         root = None
         for i in range(N):
@@ -25,7 +24,6 @@ class Solution:
         if zeroInDegree != 1:
             return False
 
-        # 2. cycle detection
         def hasCycle(n, visited):
             visited.add(n)
             for nb in outNodes[n]:

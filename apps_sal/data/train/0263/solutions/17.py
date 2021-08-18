@@ -1,6 +1,5 @@
 class Solution:
     def knightDialer(self, N: int) -> int:
-        # Neighbors maps K: starting_key -> V: list of possible destination_keys
         neighbors = {
             0: (4, 6),
             1: (6, 8),

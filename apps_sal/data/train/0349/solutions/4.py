@@ -18,5 +18,4 @@ class Solution:
                 pick[num] = max(miss[prev], pick[prev]) + num * freq
                 miss[num] = max(miss[prev], pick[prev])
             prev = num
-            # print(num, pick, miss)
         return max(pick[prev], miss[prev])

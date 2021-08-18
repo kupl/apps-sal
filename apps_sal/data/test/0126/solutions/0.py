@@ -1,4 +1,3 @@
-# A
 
 input()
 l = list(map(int, list(input())))

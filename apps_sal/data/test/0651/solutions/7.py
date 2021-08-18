@@ -36,7 +36,6 @@ for a in range(4):
                         break
                     if m[x][y] not in ['.', 'S']:
                         break
-                #print(a, b, c, d, m[x][y], cnt, x, y)
                 if cnt > 0 and m[x][y] == 'E':
                     sol += 1
 print(sol)

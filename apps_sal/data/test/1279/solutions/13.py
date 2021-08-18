@@ -70,14 +70,14 @@ def ms(a):
 
 
 def res(ans, t):
-    print('Case #{}: {}'.format(t, ans))
+    print('Case
 
 
-n, m = numIN()
-a = arrIN()
-b = arrIN()
-e1 = e2 = 0
-o1 = o2 = 0
+n, m=numIN()
+a=arrIN()
+b=arrIN()
+e1=e2=0
+o1=o2=0
 
 for i in a:
     if i % 2:

@@ -12,5 +12,4 @@ m = max(d.values())
 dishes = ceil(m / k)
 types = len(d)
 
-#print(dishes, types)
 print(types * dishes * k - n)

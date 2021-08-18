@@ -6,12 +6,12 @@ def reverse_number(n):
 
         return 0
 
-    elif n > 0:  # positive number case
+    elif n > 0:
         result = str(n)[::-1]
 
         return(int(result))
 
     else:
-        result = (str(n)[1::])[::-1]  # negative number case
+        result = (str(n)[1::])[::-1]
 
         return(int(result) * -1)

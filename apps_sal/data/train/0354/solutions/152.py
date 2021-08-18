@@ -1,7 +1,7 @@
 class Solution:
     def dieSimulator(self, n: int, roll_max: List[int]) -> int:
 
-        dices = defaultdict(int, {(-1, 0): 1})  # previous n, # of consecutive : ways
+        dices = defaultdict(int, {(-1, 0): 1})
         for _ in range(n):
 
             prev_dices = tuple(dices.items())

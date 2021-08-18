@@ -1,13 +1,8 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 import math
 
 N = int(input())
 s = input()
-#N,M = [int(x) for x in stdin.readline().split()]
-#arr = [int(x) for x in stdin.readline().split()]
 
 room = [0] * 10
 

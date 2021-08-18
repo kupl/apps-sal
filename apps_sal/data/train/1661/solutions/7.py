@@ -49,10 +49,8 @@ def code_unwrap(code):
 
             for _ in range(execution_count):
                 if code[ip] == ')':
-                    # Recursively unwrap the inner part
                     yield from code_unwrap_inner(code, jump_map[ip] + 1, ip)
                 elif code[ip] == '(':
-                    # Jump to the end to find out how often it has to run
                     ip = jump_map[ip] - 1
                 else:
                     yield code[ip]
@@ -99,5 +97,4 @@ def execute(code):
         )
         for y in range(ymin, ymax + 1)
     )
-    # print(ret)
     return ret

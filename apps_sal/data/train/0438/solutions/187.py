@@ -40,7 +40,6 @@ class Solution:
             if self.binary[num - 1] == 1 and self.binary[num + 1] == 1:
                 union(num - 1, num)
                 union(num, num + 1, True)
-                #print(self.rank[num-1], self.rank[num], self.rank[num + 1])
 
             elif self.binary[num - 1] == 1:
                 union(num, num - 1, True)
@@ -51,6 +50,5 @@ class Solution:
             if len(self.groups) > 0:
                 result = idx + 1
             self.binary[num] = 1
-            #print(self.groups, self.binary, self.parent)
 
         return result

@@ -1,4 +1,3 @@
-# 81
 data = list(input())
 c = 0
 for i in range(0, len(data)):

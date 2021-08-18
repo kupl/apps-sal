@@ -66,7 +66,6 @@ while(T > 0):
             else:
                 O[i] = O[i - 1] + A[i]
                 LO = i
-        # print(E,O,E[N-1]+O[N-1])
 
         i = i + 1
 

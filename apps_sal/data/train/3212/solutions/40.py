@@ -6,5 +6,5 @@ def generate_hashtag(s):
         return False
     else:
         y = ''.join((string.capwords(s)).split(' ', (string.capwords(s)).count(' ')))
-        m = '#' + y
+        m = '
         return m

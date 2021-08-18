@@ -6,5 +6,3 @@ def sum_cubes(n):
 
     n = 6
     print((sum_cubes(n)))
-
-    # your code here

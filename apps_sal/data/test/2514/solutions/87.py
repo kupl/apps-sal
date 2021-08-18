@@ -3,9 +3,6 @@ from collections import Counter
 N = int(input())
 A = list(map(int, input().split()))
 Q = int(input())
-# BC=[]
-# for i in range(Q):
-#    BC.append(list(map(int,input().split())))
 A_sum = sum(A)
 A_count = Counter(A)
 

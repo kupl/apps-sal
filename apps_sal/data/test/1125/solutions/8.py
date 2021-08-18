@@ -21,7 +21,6 @@ def main():
         print(-1)
         return
     t >>= 1
-    # print(t)
     a0 = a1 = 0
     for i in range(40, -1, -1):
         dt = t >> i & 1
@@ -42,7 +41,6 @@ def main():
             else:
                 a1 |= 1 << i
 
-    # print(a0,a1)
     if a0 > 0 and a0 <= aa[0]:
         print(aa[0] - a0)
     else:

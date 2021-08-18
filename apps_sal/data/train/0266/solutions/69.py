@@ -1,6 +1,5 @@
 class Solution:
     def numSplits(self, s: str) -> int:
-        # set up splitting at idx 1
         p_dict = {s[0]: 1}
         q_dict = {}
 
@@ -13,9 +12,7 @@ class Solution:
             count = 0
 
         for i in range(1, len(s) - 1):
-            # find the char here
             char = s[i]
-            # remove from q, add to p
             self.removeFromDict(q_dict, char)
             self.addToDict(p_dict, char)
 

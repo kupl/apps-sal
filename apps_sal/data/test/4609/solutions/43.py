@@ -2,7 +2,7 @@ import collections
 n = int(input())
 aa = [int(input()) for a in range(n)]
 
-caa = collections.Counter(aa)  # couter aa
+caa = collections.Counter(aa)
 cnt = 0
 laa = [x[1] for x in caa.items()]
 for la in laa:

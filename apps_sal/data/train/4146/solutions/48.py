@@ -12,10 +12,3 @@ def is_sorted_and_how(arr):
                 return 'yes, descending'
     else:
         return 'no'
-
-        # elif arr[i] >= arr[i+1]:
-        #    return 'yes, descending'
-        # else:
-        #    return 'no'
-
-    # return ("yes, ascending" if arr[i] <= arr[i+1] "yes, descending" elif arr[i] >= arr[i+1] for i in range(len(arr) - 1)) else "no"

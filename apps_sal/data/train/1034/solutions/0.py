@@ -6,9 +6,6 @@ import sys
 from math import gcd, sqrt
 sys.setrecursionlimit(10**7)
 inf = float("inf")
-# n=int(input())
-# n,m=map(int,input().split())
-# l=list(map(int,input().split()))
 
 
 def get_factors(x):

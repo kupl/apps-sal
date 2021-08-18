@@ -9,5 +9,5 @@ def grader(score):
     if score < 0.9:
         return "B"
     if score > 1:
-        return "F"  # seriously ...
+        return "F"
     return "A"

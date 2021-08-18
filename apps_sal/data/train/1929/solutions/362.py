@@ -19,7 +19,6 @@ class Trie:
             t = t.children[ord(c) - ord('a')]
             if t.endOfWord:
                 return True
-        # when all the characters are there in the word but there is no end of the word
         return False
 
 
@@ -34,8 +33,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         return self.t.search(self.stream)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

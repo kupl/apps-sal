@@ -1,7 +1,6 @@
 class Solution:
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
 
-        # dp[g][p][c], ways for consider c_th crime, with g gangs to achieve profit p
         C = len(profit)
         dp = [[[0] * (C + 1) for _ in range(P + 1)] for _ in range(G + 1)]
 

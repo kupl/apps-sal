@@ -1,7 +1,4 @@
-# Fast IO (be careful about bytestring, not on interactive)
 
-# import os,io
-# input=io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
 
 n = int(input())
 a = list(map(int, input().split()))

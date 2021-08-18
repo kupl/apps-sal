@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -44,5 +42,4 @@ for i in range(n):
             v -= a[i] + 1
     sgn ^= 1
 
-# print(r1,r2)
 print(min(r1, r2))

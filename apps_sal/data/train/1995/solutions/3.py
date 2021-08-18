@@ -25,6 +25,3 @@ class Solution:
                 return False
 
         return True
-
-# Time complexity: O(nlogn)
-# Time complexity: O(n) for the priorioty queue

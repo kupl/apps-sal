@@ -2,12 +2,10 @@ import numpy as np
 import sys
 input = sys.stdin.readline
 
-# input
 N, K = map(int, input().split())
 A = list(map(int, input().split()))
 F = list(map(int, input().split()))
 
-# output
 A = np.array(A)
 F = np.array(F)
 

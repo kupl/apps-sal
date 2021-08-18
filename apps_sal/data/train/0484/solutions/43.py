@@ -1,8 +1,5 @@
 class Solution:
     def primePalindrome(self, N: int) -> int:
-        # Brute Force with Mathematical Shortcut
-        # Time  complexity: O(N)
-        # Space complexity: O(1)
         def is_prime(n):
             return n > 1 and all(n % d for d in range(2, int(n**.5) + 1))
 

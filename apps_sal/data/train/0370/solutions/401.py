@@ -42,7 +42,7 @@ class Solution:
         factors_to_nums = collections.defaultdict(list)
         for i, a in enumerate(A):
             for f in get_prime_factors(a):
-                factors_to_nums[f].append(i)  # save the index of the number in A, which is easier to generate UF
+                factors_to_nums[f].append(i)
 
         uf = UnionFind(len(A))
         for idx_of_num in factors_to_nums.values():
@@ -53,7 +53,6 @@ class Solution:
 
 
 ''' 
-# lingnan 写的DisjointSet，还没有看
 class DisjointSet:
     def __init__(self, n):
         self.parent = [-1] * n

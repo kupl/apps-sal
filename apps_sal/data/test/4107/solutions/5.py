@@ -14,7 +14,6 @@ for i in range(N):
         heappop(hq)
     if hq:
         a = min(hq[0][0], a)
-    #print(i, a)
 
     while que and a <= que[-1][1]:
         que.pop()

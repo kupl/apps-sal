@@ -13,15 +13,6 @@ def solve():
     print(res[-1][-1])
     print('\n'.join((' '.join(map(str, l))) for l in res))
 
-# 12 14 16 20
-# 2 * 2 * 3   2 * 7   2 * 2 * 2 * 2   2 * 3 * 3
-# 1 2 3 5
-# 7 8 9 11
-# 13
-# 19
-# 25
-# 31
-
 
 def prt(l): return print(' '.join(l))
 def rv(): return map(int, input().split())

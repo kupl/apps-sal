@@ -31,16 +31,16 @@ dp[h][j]]に対する漸化式を立てればよい
 '''
 H, W, K = map(int, input().split())
 dp = []
-for i in range(H + 1):  # 高さ0の分を余分に持っておく
+for i in range(H + 1):
     L = [0] * W
     dp.append(L)
-fb = [1, 1]  # フィボナッチ（f(n)=f(n-1)+f(n-2)）
+fb = [1, 1]
 for i in range(W - 2):
     fb.append(fb[i] + fb[i + 1])
-dp[0][0] = 1  # 左端の棒の高さ0は初期位置なので1に
-if W != 1:  # 棒が一本以上あるときは
+dp[0][0] = 1
+if W != 1:
     for i in range(1, H + 1):
-        for j in range(W):  # 棒が左端、右端、それ以外で場合分け
+        for j in range(W):
             if 1 <= j <= W - 2:
                 dp[i][j] = dp[i - 1][j - 1] * fb[j - 1] * fb[W - j - 1] + dp[i - 1][j] * fb[j] * fb[W - j - 1] + dp[i - 1][j + 1] * fb[j] * fb[W - j - 2]
             elif j == 0:
@@ -49,4 +49,4 @@ if W != 1:  # 棒が一本以上あるときは
                 dp[i][j] = dp[i - 1][j] * fb[W - 1] + dp[i - 1][j - 1] * fb[W - 2]
 else:
     dp[H][0] = 1
-print(dp[H][K - 1] % (10**9 + 7))  # 高さH（一番下）、K-1番目の棒を調べる
+print(dp[H][K - 1] % (10**9 + 7))

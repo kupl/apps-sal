@@ -3,7 +3,6 @@ def bin_search(A, val):
     flag = 0
     r = len(arr) - 1
     while l < r:
-        #print(l, r)
         if ((A[l] + A[r]) == 2 * val):
             flag += 1
             break
@@ -22,7 +21,6 @@ for i in range(n):
 
 cnt = 0
 arr.sort()
-# print(arr)
 for i in range(n):
     x = bin_search(arr, arr[i])
     if(x == 1):

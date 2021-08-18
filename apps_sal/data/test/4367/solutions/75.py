@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 n, r = list(map(int, input().split()))
 ans = r
 if n >= 10:

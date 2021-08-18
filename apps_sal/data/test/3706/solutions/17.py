@@ -1,4 +1,3 @@
-#!/usr/bin/env pypy3
 
 def all_zero(A):
     for row in A:
@@ -21,7 +20,6 @@ for _ in range(n):
 
 moves = []
 
-# produce a zero
 
 min_elem = min(min(row) for row in A)
 

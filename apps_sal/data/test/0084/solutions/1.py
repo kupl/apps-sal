@@ -1,11 +1,8 @@
-# python3
-# utf-8
 
 def solve(x, a):
     if x < a:
         ans = 2 * x - a + 1
         ans //= 2
-        # return ans
     else:
         ans = (a - 1) // 2
     return max(0, ans)

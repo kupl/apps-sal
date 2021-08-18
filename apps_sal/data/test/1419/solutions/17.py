@@ -1,4 +1,3 @@
-# 803D
 def do():
     k = int(input())
     ad = input()

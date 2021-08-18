@@ -40,4 +40,3 @@ if ans > 1:
         print(places - k + (j + 1) * (2 * k + 1), end=' ')
     last = placee - k - 1
     print(n - last)
-    #print(places - k + (j+1)*(2*k+1))

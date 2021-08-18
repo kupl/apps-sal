@@ -14,22 +14,3 @@ class Solution:
             pos = hashmap.get(preSum[i], 0)
             hashmap[preSum[i]] = max(pos, i)
         return ans
-
-        # n = len(nums)
-        # dp = [0 for i in range(n)]
-        # ans = 0
-        # if target == nums[0]:
-        #     dp[0] = 1
-        # for i in range(1, n):
-        #     dp[i] = dp[i-1]
-        #     tmpsum = 0
-        #     for j in range(i, -1, -1):
-        #         tmpsum += nums[j]
-        #         if tmpsum == target:
-        #             if j > 0:
-        #                 dp[i] = max(dp[i], dp[j-1] + 1)
-        #             else:
-        #                 dp[i] = max(dp[i], 1)
-        #             break
-        # # print(dp)
-        # return dp[n-1]

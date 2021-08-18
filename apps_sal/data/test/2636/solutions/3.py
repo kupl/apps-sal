@@ -13,7 +13,6 @@ class Solution:
         left = self.getSkyline(blds[:mid])
         right = self.getSkyline(blds[mid:])
         return self.merge(left, right)
-        # conquor how to merge left and right
 
     def merge(self, left, right):
         res = []

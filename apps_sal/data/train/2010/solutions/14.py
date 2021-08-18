@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 """
 
@@ -50,30 +49,13 @@ def solve(N, A):
     for i in range(1, N + 1):
         worst = min(worst, A[i] - i)
         H[i] = i + worst
-        # k = min([A[i-j] + j for j in range(i+1)])
-        # H[i] = min(H[i], k)
     worst = N + 1
     for i in range(N, 0, -1):
         worst = min(worst, A[i] + i)
         H[i] = min(H[i], worst - i)
-        # k = min([A[i+j] + j for j in range(N-i+1)])
-        # H[i] = min(H[i], k)
-    # print(H)
     return max(H)
 
 
-# import random
-# N = 10 ** 5
-# A = [random.randint(0, 10**9) for _ in range(N)]
-# t0 = time.time()
-# print('starting...')
-# solve(N, A)
-# print(time.time() - t0)
-# N = 10**5
-# A = [i+1 for i in range(N)] + [N+1] + [N-i for i in range(N)]
-# t0 = time.time()
-# print(solve(2*N+1, A))
-# print(time.time() - t0)
 N = int(input())
 A = [int(x) for x in input().split()]
 print(solve(N, A))

@@ -8,7 +8,6 @@ def xyc(x, y):
         an1 += cos[1] * y
     else:
         an1 += cos[4] * (-y)
-    # print(an1)
     return an1
 
 
@@ -20,7 +19,6 @@ for _ in range(t):
     for a in range(len(cos)):
         if cos[(a + 1) % 6] + cos[(a - 1) % 6] < (cos[a]):
             cos[a] = cos[(a + 1) % 6] + cos[(a - 1) % 6]
-    # print(cos)
     an1 = xyc(x, y)
     an2 = 0
     if x * y < 0:

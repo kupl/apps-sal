@@ -12,12 +12,8 @@ r = 0
 ans = 0
 max_ans = 0
 sabun = 0
-# print(sort_a_list)
 
 while (r < n):
-    # print(l,r)
-    # print(ans)
-    # print(sabun)
     if (sabun <= 2):
         if sort_a_list[r] - sort_a_list[l] > 2:
             l += 1

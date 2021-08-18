@@ -13,16 +13,14 @@ for i in range(M):
 change_rate, change_cost = [], []
 for i in range(N):
     rate, cost = map(int, input().split())
-    G[i].append([i, -rate, cost])  # これを追加！
+    G[i].append([i, -rate, cost])
     change_rate.append(rate)
     change_cost.append(cost)
 
 
-# dp[i][silver] := 頂点iにいて銀貨をsilver枚持っているような状況を作るために必要な最小時間
 dp = [[float('inf')] * (MAX_COST + 1) for _ in range(N)]
 dp[0][init_silver] = 0
 
-# 優先度付きキュー: (time, node, silver)
 hq = [(0, 0, init_silver)]
 while hq:
     time, node, silver = heapq.heappop(hq)

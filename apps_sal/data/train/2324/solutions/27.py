@@ -8,12 +8,12 @@ for i in range(N - 1):
     e_list[a].append(b)
     e_list[b].append(a)
 
-vi = 0  # 時と場合によってここを変える
+vi = 0
 Q = deque([vi])
 checked_list = [False for i in range(N)]
 checked_list[vi] = True
 prev_list = [-1 for i in range(N)]
-min_path_list = [10**27 for i in range(N)]  # 問題によりここを変える
+min_path_list = [10**27 for i in range(N)]
 min_path_list[vi] = 0
 while len(Q) > 0:
     v = Q.pop()
@@ -22,7 +22,7 @@ while len(Q) > 0:
             checked_list[v1] = True
             Q.appendleft(v1)
             prev_list[v1] = v
-            min_path_list[v1] = min(min_path_list[v1], min_path_list[v] + 1)  # 問題によりここを変える
+            min_path_list[v1] = min(min_path_list[v1], min_path_list[v] + 1)
 
 path = [N - 1]
 v = N - 1
@@ -42,7 +42,7 @@ for i in range(len(e_list[b])):
         break
 del e_list[b][i]
 
-vi = 0  # 時と場合によってここを変える
+vi = 0
 
 Q = deque([vi])
 checked_list = [False for i in range(N)]

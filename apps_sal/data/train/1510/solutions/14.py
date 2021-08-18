@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     lst = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]

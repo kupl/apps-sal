@@ -1,4 +1,3 @@
-# cook your dish here
 def sort_list(list1, list2):
     zipped_pairs = zip(list2, list1)
     z = [x for _, x in sorted(zipped_pairs)]
@@ -26,7 +25,6 @@ for _ in range(int(input())):
         mat[c - 1][0].append(a)
         mat[c - 1][1].append(b)
     ans = 0
-    # print(mat)
     for i in range(k):
         if len(mat[i][0]) == 1:
             ans += 1

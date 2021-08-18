@@ -42,12 +42,10 @@ class Solution:
 
         for i, u, v in edges:
             if i == 1:
-                # print(u,v)
                 if not unf1.union(u, v):
                     out += 1
 
             elif i == 2:
-                # print(u,v)
                 if not unf2.union(u, v):
                     out += 1
 

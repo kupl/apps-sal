@@ -21,10 +21,8 @@ class Solution:
 
             if waiting + people > 4:
                 waiting = (waiting + people) - 4
-                # no_people_per_shift[count%4] = 4
                 total_people += 4
             else:
-                # no_people_per_shift[count%4] = waiting + people
                 total_people += waiting + people
                 if waiting > 0:
                     waiting -= (waiting + people)

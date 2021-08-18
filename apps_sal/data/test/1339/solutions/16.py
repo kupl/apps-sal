@@ -1,4 +1,3 @@
-# coding: utf-8
 n = int(input())
 segments = [[int(i) for i in input().split()] for j in range(n)]
 left = segments[0][0]

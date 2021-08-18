@@ -2,7 +2,6 @@ class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
 
         freqs = collections.Counter(arr)
-        #{1: 2 , 2:1 , 3:3, 4:1}
 
         heap = []
 

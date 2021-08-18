@@ -3,7 +3,6 @@ import sys
 import io
 import os
 input = sys.stdin.buffer.readline
-#input = io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
 
 n, m = map(int, input().split())
 g = [[] for _ in range(n)]

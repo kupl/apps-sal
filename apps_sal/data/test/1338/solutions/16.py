@@ -1,5 +1,3 @@
-#file = open("", 'r')
-#f = lambda:file.readline()
 def f(): return input()
 
 

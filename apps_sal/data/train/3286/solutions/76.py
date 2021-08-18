@@ -5,4 +5,3 @@ def enough(cap, on, wait):
     else:
         n = cap - on - wait
         return abs(n)
-    # Your code here

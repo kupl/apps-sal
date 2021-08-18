@@ -22,7 +22,6 @@ class Solution:
 
             return False
 
-        # max length end at word i
         dp = [1]
         for word in words[1:]:
             max_length = 1

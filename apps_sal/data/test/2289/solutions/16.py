@@ -4,7 +4,6 @@ k = list(map(int, input().split()))
 
 
 def bins(arr, start, end, v):
-    # find index of biggest value less than or equal to v
     s, e = start, end
     result = -1
 
@@ -23,7 +22,6 @@ def bins(arr, start, end, v):
 for i in range(1, len(a)):
     a[i] += a[i - 1]
 
-# arrow strength
 s = 0
 result = []
 

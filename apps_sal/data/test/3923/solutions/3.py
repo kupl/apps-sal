@@ -30,7 +30,7 @@ def fail_sequence(target, acc=[]):
 
 
 def sequence(target, a, b):
-    dp = {0: (0, 0)}  # num of (a, b) needed to reach sum
+    dp = {0: (0, 0)}
     for i in range(1, target + 1):
         if i - a in dp:
             na, nb = dp[i - a]

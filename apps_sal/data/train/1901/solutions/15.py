@@ -37,7 +37,6 @@ class Solution:
         m = len(grid)
         n = len(grid[0])
         uf = UnionFind(m * n)
-        # merge edges with 1-1
         for r in range(len(grid)):
             for c in range(len(grid[0])):
                 if grid[r][c] == 0:
@@ -53,14 +52,12 @@ class Solution:
                         uf.union(rc, new_rc)
 
         max_area = max(uf.size)
-        # try checking changing 0
         for r in range(len(grid)):
             for c in range(len(grid[0])):
                 if grid[r][c] == 1:
                     continue
 
                 rc = r * m + c
-                # id of neighbouring islands
                 neighbours = set()
                 for r_off, c_off in directions:
                     new_r, new_c = r + r_off, c + c_off

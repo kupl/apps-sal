@@ -11,7 +11,6 @@ class Solution:
             else:
 
                 give = min(taken, A[i] - A[i - 1] - 1)
-                # print(give)
                 ans += give * (give + 1) / 2 + give * A[i - 1]
                 taken -= give
 

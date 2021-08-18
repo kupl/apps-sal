@@ -1,9 +1,5 @@
-# ABC092
-# 参加者
 N = int(input())
-# D日間の合宿でX個のチョコが残った
 D, X = list(map(int, input().split()))
-# 参加者iは,1,Ai+1,2Ai+1..目にチョコを一つ食べる
 A = [int(input()) for _ in range(N)]
 
 eaten = 0

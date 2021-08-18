@@ -1,4 +1,3 @@
-# C
 N = int(input())
 V = sorted(list(map(int, input().split())))
 

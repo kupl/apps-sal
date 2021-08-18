@@ -12,9 +12,6 @@ class Solution:
         for i in range(1, n):
             ma[i] = max(A[i], ma[i - 1])
 
-        # print(mi)
-        # print(ma)
-
         for i in range(n - 1):
             if mi[i] >= ma[i]:
                 return i + 1

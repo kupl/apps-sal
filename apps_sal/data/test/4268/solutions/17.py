@@ -11,7 +11,6 @@ for i in range(n - 1):
         for f in range(d):
             dis += (point[i][f] - point[l][f])**2
         dis = dis**(0.5)
-        # print(dis)
         if dis.is_integer():
             ans += 1
 print(ans)

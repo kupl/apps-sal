@@ -1,7 +1,7 @@
 a, b = map(int, input().split())
 print("40 100")
 
-kuro = [["#" for i in range(100)] for j in range(20)]
+kuro = [["
 siro = [["." for i in range(100)] for j in range(20)]
 
 cou = 0
@@ -28,7 +28,7 @@ for i in range(1, 20, 2):
             break
         elif cou < b - 1:
             cou += 1
-            siro[i][j] = "#"
+            siro[i][j] = "
 
 for i in range(20):
     for j in range(100):

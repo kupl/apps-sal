@@ -23,7 +23,6 @@ class Solution:
         connections = list()
         for i in range(n - 1):
             for j in range(i + 1, n):
-                # get distance
                 connections.append((i, j, abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])))
         res = 0
         connections_sorted = sorted(connections, key=lambda arr: arr[2])

@@ -23,4 +23,3 @@ if s in a:
     print('No')
 else:
     print('Yes')
-# print(a)

@@ -1,9 +1,4 @@
-# replacing the vowels ('a', 'e', 'i', 'o', 'u') of the query word with any vowel individually
-# return the first such match in the wordlist.
-# important! Capitalization has a higher priority than Vowel Errors
 
-#backtrack + deque, O(n*4^l), O(4^l), TLE
-# notice that in all candidates, return the matched one with minimum index
 '''
 from collections import defaultdict, deque
 class Solution:
@@ -53,10 +48,10 @@ class Solution:
         while dq:
             curr = dq.popleft()
             candidates.append(curr)
-            for i, c in enumerate(curr):        #curr, not query
-                if c in 'aeiouAEIOU':       #c may be lower or upper
+            for i, c in enumerate(curr):        
+                if c in 'aeiouAEIOU':       
                     for x in 'aeiou':
-                        if abs(ord(c) - ord(x)) != 32:  #c != x:
+                        if abs(ord(c) - ord(x)) != 32:  
                             candidate = curr[:i] + x + curr[i + 1:]
                             if candidate.lower() not in visited:
                                 dq.append(candidate)
@@ -64,7 +59,6 @@ class Solution:
         return candidates[1:]
 '''
 
-# check Consonants, O(n^2 * l), O(n), TLE
 '''
 from collections import defaultdict
 class Solution:
@@ -103,7 +97,7 @@ class Solution:
     def vowel_replace(self, query, hm):
         idx = float('inf')
         for key in hm:
-            if self.is_matched(query, key):     #key, not query
+            if self.is_matched(query, key):     
                 idx = min(idx, hm[key][0])
         return idx
     
@@ -112,7 +106,7 @@ class Solution:
             return False
         i, j = 0, 0
         while i < len(str1) and j < len(str2):
-            if str1[i] not in 'aeiouAEIOU' and abs(ord(str1[i]) - ord(str2[j])) not in [0, 32]:     #辅音字母也可以有大小写
+            if str1[i] not in 'aeiouAEIOU' and abs(ord(str1[i]) - ord(str2[j])) not in [0, 32]:     
                 return False
             if str1[i] in 'aeiouAEIOU' and str2[j] not in 'aeiouAEIOU':
                 return False
@@ -120,8 +114,6 @@ class Solution:
             j += 1
         return True
 '''
-
-# 3 hashmap/hashset
 
 
 class Solution:
@@ -136,7 +128,7 @@ class Solution:
         for word in wordlist:
             word_lower = word.lower()
             word_capital[word_lower].append(word)
-            word_vowel[self.devowel(word_lower)].append(word)  # key is word_lower
+            word_vowel[self.devowel(word_lower)].append(word)
 
         ans = []
         for query in queries:

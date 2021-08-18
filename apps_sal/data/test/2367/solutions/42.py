@@ -1,4 +1,3 @@
-# coding:UTF-8
 import sys
 from math import factorial
 
@@ -44,22 +43,15 @@ def surP(x):
 
 
 def main():
-    # ------ 入力 ------#
-    h, w, a, b = list(map(int, input().split()))     # スペース区切り連続数字
+    h, w, a, b = list(map(int, input().split()))
 
-    # ------ 処理 ------#
     f = combInit(h + w)
     res = 0
     for i in range(b, w):
         res += comb((h - 1 - a) + i, i, f) * comb((a - 1) + (w - 1 - i), w - 1 - i, f)
 
     out = surP(res)
-    # ------ 出力 ------#
     print(("{}".format(out)))
-    # if flg == 0:
-    #     print("YES")
-    # else:
-    #     print("NO")
 
 
 def __starting_point():

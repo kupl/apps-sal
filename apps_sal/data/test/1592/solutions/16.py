@@ -1,19 +1,13 @@
 import sys
 import math
 
-# to read string
-
 
 def get_string(): return sys.stdin.readline().strip()
-# to read list of integers
 def get_int_list(): return list(map(int, sys.stdin.readline().strip().split()))
-# to read integers
 def get_int(): return int(sys.stdin.readline())
-# to print fast
 def pt(x): return sys.stdout.write(str(x) + '\n')
 
 
-#--------------------------------WhiteHat010--------------------------------------#
 n = get_int()
 prev_t, s = get_int_list()
 mx_q = s

@@ -10,7 +10,6 @@ class Solution:
         ans = 0
         for fu in range(200, 0, -1):
             for loc in d:
-                # d[loc][fu]%=10**9+7
                 if d[loc][fu] != 0:
                     for x in d:
                         if x == loc:

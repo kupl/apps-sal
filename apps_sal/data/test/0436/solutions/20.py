@@ -3,8 +3,6 @@ import sys
 import collections
 
 
-# imgur.com/Pkt7iIf.png
-
 def getdict(n):
     d = {}
     if type(n) is list:

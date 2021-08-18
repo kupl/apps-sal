@@ -8,10 +8,10 @@ pc = [list(map(int, input().split())) for i in range(d)]
 
 ans = float("inf")
 
-for bit in range(1 << d):  # 2^d通り試す
+for bit in range(1 << d):
     count = 0
     sum = 0
-    rest = list(range(1, d + 1))  # 一問も解いていない点数帯の集合
+    rest = list(range(1, d + 1))
 
     for i in range(d):
         if bit & (1 << i):
@@ -19,10 +19,9 @@ for bit in range(1 << d):  # 2^d通り試す
             count += pc[i][0]
             rest.remove(i + 1)
 
-    # G 点に満たなければ nokori のうち一番大きいものを解く
     if sum < g:
         use = max(rest)
-        n = min(pc[use - 1][0], -(-(g - sum) // (use * 100)))  # 全部解いても足りないかもしれない。-(-a//b))で切り上げをしている。
+        n = min(pc[use - 1][0], -(-(g - sum) // (use * 100)))
         count += n
         sum += n * use * 100
 

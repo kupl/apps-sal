@@ -1,13 +1,10 @@
-# cook your code here
 t = eval(input())
 while(t != 0):
     n = eval(input())
     x = []
     y = []
-    # print a
     for i in range(0, n):
         b = list(map(int, input().split(' ')))
-        # print b
 
         x.append(b[1])
         y.append(b[0])
@@ -25,6 +22,4 @@ while(t != 0):
                 print("%dx^%d" % (x[i] * y[i], x[i] - 1), end=' ')
     print()
 
-    # print x
-# print y
     t = t - 1

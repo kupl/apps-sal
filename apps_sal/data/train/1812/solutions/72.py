@@ -15,7 +15,6 @@ class MajorityChecker:
 
         def checkmajority(k):
 
-            # find index of left element
             lo = 0
             hi = len(prearr[k]) - 1
 
@@ -30,7 +29,6 @@ class MajorityChecker:
 
             start = lo
 
-            # find index of right element
             lo = 0
             hi = len(prearr[k]) - 1
 
@@ -43,15 +41,11 @@ class MajorityChecker:
                     hi = mid - 1
             end = lo
 
-            # return the difference between indexes between the preaar element and compare it with threshold
-
             if ((end - start + 1) >= threshold):
                 return (True)
 
             else:
                 return (False)
-
-        # pick random element from arr 30-50 times and check if it is majority or not
 
         res = False
         a = self.arr[left:right + 1]
@@ -64,8 +58,3 @@ class MajorityChecker:
                 return(k)
 
         return(-1)
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

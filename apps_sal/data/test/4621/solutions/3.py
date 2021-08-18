@@ -1,6 +1,3 @@
-#
-# abc049 b
-#
 
 import sys
 from io import StringIO
@@ -79,7 +76,6 @@ def resolve():
 
 
 def __starting_point():
-    # unittest.main()
     resolve()
 
 

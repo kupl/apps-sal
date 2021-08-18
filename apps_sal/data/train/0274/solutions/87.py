@@ -1,8 +1,8 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         n = len(nums)
-        max_stack = collections.deque([0])  # Used to track maximum number
-        min_stack = collections.deque([0])  # Used to track minimum number
+        max_stack = collections.deque([0])
+        min_stack = collections.deque([0])
         begin, end, longest = 0, 0, 0
 
         while end < n:

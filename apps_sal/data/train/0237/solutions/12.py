@@ -3,7 +3,7 @@ from collections import Counter
 '''
 let P[i] = sum(A[:i])
 for each j
-    count # of i's 
+    count 
         where P[j] - P[i] = S where i < j
 '''
 

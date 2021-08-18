@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
 class lq(list):
     def __init__(self):
         self.value = []

@@ -6,6 +6,7 @@ def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
 
+
 """
 可能なら左から取る
 左側にある数字のどれかに追い付いたら，そこはもう選ばれない．
@@ -43,7 +44,7 @@ def main():
     A.append((0, 0))
     ans = [0] * N
 
-    now = A[0][1]  # どこに追加するか
+    now = A[0][1]
     for i in range(N):
         ans[now] += (i + 1) * (A[i][0] - A[i + 1][0])
         now = min(now, A[i + 1][1])

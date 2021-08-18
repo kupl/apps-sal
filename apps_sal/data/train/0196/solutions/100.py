@@ -1,7 +1,5 @@
 class Solution:
     def maxSubarraySumCircular(self, A):
-        # compute pre(k)
-        # maximum continuous subarray that ends at end of A and starts after k
         pre = [0 for i in range(len(A))]
 
         pre_continuous = [0 for i in range(len(A))]
@@ -12,7 +10,6 @@ class Solution:
             pre_earlystop[i] = max(pre_earlystop[i + 1], pre_continuous[i])
             pre[i] = max(pre_continuous[i], pre_earlystop[i])
 
-        # compute regular dp
         dp = [0 for i in range(len(A))]
         dp[0] = A[0]
 

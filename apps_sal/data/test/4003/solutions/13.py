@@ -12,16 +12,12 @@ for i in range(1, len(M)):
         L[n - 1 - i] = L[n - i] + 1
 
 
-# print(L)
-# print(R)
 ans = []
 
 last = -1
 l, r = 0, n - 1
 
 while r >= l:
-    #print(str(l) + ' ' + str(r), end=': ')
-    # print(last)
     if M[r] <= last and M[l] <= last:
         break
     if M[r] == M[l]:

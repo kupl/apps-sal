@@ -7,12 +7,12 @@ Grid.append(["."] * (W + 2))
 for k in range(1, H + 1):
     for l in range(1, W + 1):
         moji = Grid[k][l]
-        if moji == "#":
-            flg = 0
-            for rec, col in ((1, 0), (0, 1), (-1, 0), (0, -1)):
-                if Grid[k + rec][l + col] == "#":
-                    Grid[k + rec][l + col] = "b"
-                    flg = 1
+        if moji == "
+          flg = 0
+           for rec, col in ((1, 0), (0, 1), (-1, 0), (0, -1)):
+                if Grid[k + rec][l + col] == "
+                  Grid[k + rec][l + col] = "b"
+                   flg = 1
                 elif Grid[k + rec][l + col] == "b":
                     flg = 1
 

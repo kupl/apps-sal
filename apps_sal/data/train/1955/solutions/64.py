@@ -23,7 +23,7 @@ class Solution:
 
         for i in range(len(s)):
             px = find(i)
-            heapq.heappush(graph[px], s[i])  # We are using priority queue to keep track of the lexicographical ordering
+            heapq.heappush(graph[px], s[i])
 
         res = ''
         for i in range(len(s)):

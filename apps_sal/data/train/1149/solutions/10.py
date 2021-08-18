@@ -5,7 +5,6 @@ for _ in range(int(stdin.readline())):
     n = len(s)
     m = 1
     for i in range(n // 2):
-        # print(i,n-i-1)
         if s[i] == s[n - i - 1] and s[i] == '?':
             m = (m * 26) % mod
         elif s[i] != s[n - i - 1] and (s[i] == '?' or s[n - i - 1] == '?'):

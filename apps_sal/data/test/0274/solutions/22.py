@@ -8,7 +8,7 @@ maxh = 3
 heightes = []
 current = 1
 tek = 3
-for i in range(rngOfseq - 1):  # maxh
+for i in range(rngOfseq - 1):
     if seq[i] == '[' and seq[i + 1] == '[':
         tek += 2
     if seq[i] == ']' and seq[i + 1] == ']':
@@ -16,7 +16,7 @@ for i in range(rngOfseq - 1):  # maxh
     if maxh < tek:
         maxh = tek
 current = maxh
-for i in range(rngOfseq - 1):  # heightes
+for i in range(rngOfseq - 1):
     heightes.append(current)
     if seq[i] == '[' and seq[i + 1] == '[':
         current -= 2
@@ -25,7 +25,7 @@ for i in range(rngOfseq - 1):  # heightes
 heightes.append(current)
 current = maxh
 Flag = True
-for j in range(maxh):  # draw
+for j in range(maxh):
     currentraw = ''
     for i in range(rngOfseq):
         if heightes[i] == current:

@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 arr = list(map(int, input().split()))
 lst = arr[-1]

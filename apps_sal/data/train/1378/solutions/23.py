@@ -1,4 +1,3 @@
-# cook your dish here
 a, n, k = map(int, input().split())
 b = [0] * k
 i = 0

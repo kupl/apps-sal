@@ -16,7 +16,6 @@ for i in range(1, 4**N):
     t = [-10] * 3
     if "1" not in b or "2" not in b or "3" not in b:
         continue
-    # print(b)
     for j in range(N):
         for k in range(3):
             if b[j] == str(k + 1):

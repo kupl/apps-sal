@@ -1,12 +1,8 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
-# 二分グラフ
 N = int(input())
 graph = [[] for _ in range(N)]
 color = [-1] * N
 
-# 隣接リストの作成
 for i in range(N - 1):
     a, b, w = map(int, input().split())
     a -= 1

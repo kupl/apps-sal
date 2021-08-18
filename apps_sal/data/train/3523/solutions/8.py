@@ -1,5 +1,4 @@
 def password(string):
-    # your code here
     k1 = k2 = k3 = 0
     if len(string) < 8:
         return False

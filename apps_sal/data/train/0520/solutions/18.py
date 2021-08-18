@@ -1,4 +1,3 @@
-# cook your dish here
 d = {'b': "BattleShip", 'B': "BattleShip", 'c': "Cruiser", 'C': "Cruiser", 'd': "Destroyer", "D": "Destroyer", 'f': "Frigate", 'F': "Frigate"}
 t = int(input())
 for i in range(t):

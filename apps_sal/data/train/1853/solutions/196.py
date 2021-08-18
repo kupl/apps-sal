@@ -1,7 +1,6 @@
 class Solution:
 
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        # 22:02-
 
         dists = [[distanceThreshold + 1 for i in range(n)] for j in range(n)]
         for s, e, w in edges:
@@ -11,7 +10,6 @@ class Solution:
         for i in range(n):
             dists[i][i] = 0
 
-        # 모든 쌍의 최단 거리
         for k in range(n):
             for i in range(n):
                 for j in range(n):
@@ -22,7 +20,6 @@ class Solution:
                     elif dists[i][k] + dists[k][j] < dists[i][j]:
                         dists[i][j] = dists[i][k] + dists[k][j]
 
-        # smallest number of neighbors
         mn = n
         city = None
         for i in range(n):

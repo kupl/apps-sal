@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 in_gate = []
 out_gate = []

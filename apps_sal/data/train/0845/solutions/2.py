@@ -1,4 +1,3 @@
-# cook your dish here
 def __gcd(a, b):
     if (a == 0 or b == 0):
         return 0

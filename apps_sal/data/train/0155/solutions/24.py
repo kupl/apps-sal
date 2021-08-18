@@ -18,7 +18,6 @@ class Solution:
 
         def jump(pos, number_of_locations, seen):
             maximum_locations = number_of_locations
-            # print(\"currently at:\", arr[pos], \"maximum location:\", number_of_locations)
             L = find_longest_l(pos, d)
             R = find_longest_r(pos, d)
 
@@ -29,19 +28,14 @@ class Solution:
                     jumps_to_i = jump(i, number_of_locations, seen)
                     maximum_locations = max(maximum_locations, jumps_to_i + 1)
                 else:
-                    # print(\"seen:\", i, seen[i])
                     jumps_to_i = seen[i]
                     maximum_locations = max(maximum_locations, jumps_to_i + 1)
-                # print(\"pos:\", pos, \"max visits:\", maximum_locations)
 
-            # print(\"Backtracking\")
             seen[pos] = maximum_locations
-            # print(\"pos:\", arr[pos], \"seen:\", seen)
             return maximum_locations
 
         indices = [(i, arr[i]) for i in range(len(arr))]
         indices.sort(key=lambda x: x[1], reverse=True)
 
         seen = {}
-        # print(seen)
         return max(jump(x[0], 1, seen) for x in indices)

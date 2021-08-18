@@ -25,20 +25,13 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.s += letter
         self.c += 1
-        # print(self.s,self.c)
 
         for y in self.lths:
 
             if y <= self.c:
-                # print(self.s[-y:])
                 if self.s[-1] in self.ld[y]:
                     if self.s[-y:] in self.ld[y][self.s[-1]]:
 
                         return True
 
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

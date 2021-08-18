@@ -25,6 +25,3 @@ for x in b:
     abab = max(abab, aba)
 
 print(abab)
-
-
-# Made By Mostafa_Khaled

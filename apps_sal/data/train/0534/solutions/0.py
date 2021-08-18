@@ -22,4 +22,4 @@ for _ in range(int(input())):
     if detect_triangle(graph):
         print(3)
         continue
-    print(h1)    # cook your dish here
+    print(h1)

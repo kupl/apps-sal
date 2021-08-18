@@ -5,4 +5,3 @@ def century(year):
     elif isinstance(year, float):
         years = year + 1
         return (int(years))
-    # Finish this :)

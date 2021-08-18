@@ -13,7 +13,6 @@ while i < j:
         sum1 += a[i]
         if (sum1 == sum2) and (sum1 > ans):
             ans = sum1
-#    print(i, j, sum1, sum2)
     while (sum2 <= sum1) and (j > i):
         j -= 1
         if i == j:
@@ -21,6 +20,5 @@ while i < j:
         sum2 += a[j]
         if (sum1 == sum2) and (sum1 > ans):
             ans = sum1
-#    print(i, j, sum1, sum2)
 
 print(ans)

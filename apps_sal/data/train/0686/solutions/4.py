@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for i in range(int(input())):
     n, v1, v2 = list(map(int, input().split()))

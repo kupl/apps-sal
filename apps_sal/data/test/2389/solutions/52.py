@@ -1,15 +1,10 @@
 def select(x, y, ops, i, z):
-    # true -> x を増やす
     if not(x == 1 and y == 1 and i < len(ops) - 1):
         if x < y:
             return True
         else:
             return False
 
-    # x = y = 1, i < len(ops) - 1
-    # 先読みして xz なら x を増やす
-    # 先読みして xy なら y を増やす
-    # 先読みして xy なら どっちでもいい
     op = ops[i]
     nop = ops[i + 1]
 

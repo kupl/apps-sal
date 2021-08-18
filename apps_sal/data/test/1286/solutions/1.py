@@ -1,7 +1,7 @@
 MOD = 10 ** 9 + 7
 MOD1 = 2 * (10 ** 9 + 6)
 
-pow2 = [0] * 32  # pow2[i] = 2 ** (2 ** i) % MOD
+pow2 = [0] * 32
 pow2[0] = 2
 for i in range(1, 32):
     pow2[i] = (pow2[i - 1] ** 2) % MOD

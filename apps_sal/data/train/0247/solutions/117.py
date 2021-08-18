@@ -1,6 +1,5 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        # O(n), Space: O(n)
         n = len(arr)
         min_lens = [sys.maxsize] * n
         l = 0
@@ -16,7 +15,7 @@ class Solution:
             if prefix == target:
                 cur_len = r - l + 1
                 if l > 0 and min_lens[l - 1] != sys.maxsize:
-                    ans = min(ans, cur_len + min_lens[l - 1])  # find previous (before l - 1) sub-arrays, avoid overlapping
+                    ans = min(ans, cur_len + min_lens[l - 1])
                 min_len = min(min_len, cur_len)
             min_lens[r] = min_len
 

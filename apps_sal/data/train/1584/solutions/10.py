@@ -8,14 +8,12 @@ for i in range(n):
 
 a2 = [[0 for i in range(r)] for j in range(c)]
 
-# print(a2)
 
 for i in range(c):
     for j in range(r):
         a2[i][j] = a[j][i]
 
 
-# print(a,a2)
 c2 = [0 for i in range(r)]
 d2 = [0 for j in range(c)]
 
@@ -24,7 +22,6 @@ for i in range(r):
 
 for i in range(c):
     d2[i] = sum(a2[i])
-# print(c,d)
 
 ans = 0
 

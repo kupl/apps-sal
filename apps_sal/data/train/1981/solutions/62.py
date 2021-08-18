@@ -6,10 +6,8 @@ class Solution:
             pref[i[0]] += 1
             if i[1] + 1 < n:
                 pref[i[1] + 1] -= 1
-        # print(pref)
         for i in range(1, n):
             pref[i] = pref[i - 1] + pref[i]
-        # print(pref)
         ar.sort(reverse=True)
         pref.sort(reverse=True)
         res = 0

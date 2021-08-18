@@ -37,14 +37,11 @@ def solve():
             streaks.append(st)
             st = 1
 
-    #print(st, s[0], s[n-1])
     if s[0] == s[n - 1] and len(streaks) > 0:
         streaks[0] += st
     else:
         streaks.append(st)
-    # print(streaks)
     moves = 0
-    # print(streaks)
     if len(streaks) == 1:
         moves = (streaks[0] - 1) // 3 + 1
     else:

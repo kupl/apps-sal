@@ -37,8 +37,6 @@ for _ in range(n - 1):
 
 dfs(y, x, graph)
 
-# Note that branch that contains x has a exception, all nodes from y to x should also count as possible paths so we exclude them
-# In order to do that we keep track of which nodes belong the branch with x with sub_checks array
 exclude = 0
 for child in graph[y]:
     if sub_checks[child]:

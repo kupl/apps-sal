@@ -12,7 +12,6 @@ class Solution:
         ans = 0
 
         for sp in allsplit(s):
-            # print(sp)
             if len(sp) == len(set(sp)):
                 ans = max(ans, len(sp))
         return ans

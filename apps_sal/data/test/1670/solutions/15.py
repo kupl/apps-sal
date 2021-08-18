@@ -1,7 +1,6 @@
 from collections import defaultdict
 n1, n2 = input(), input()
 n = int(input())
-#mp = defaultdict(list)
 mp = [[0 for i in range(100)], [0 for i in range(100)]]
 
 for i in range(n):

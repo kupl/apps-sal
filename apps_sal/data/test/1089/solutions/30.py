@@ -2,7 +2,6 @@ import numpy as np
 import sys
 sys.setrecursionlimit(10 ** 7)
 
-# 数え上げ
 
 N, M, K = list(map(int, input().split()))
 ans = 0
@@ -42,13 +41,11 @@ def mod_comb_k(n, k, mod):
     return fact[n] * fact_inv[k] % mod * fact_inv[n - k] % mod
 
 
-# X
 for dx in range(1, N):
     pat = N - dx
     ans += dx * pat * M * M
     ans %= MOD
 
-# Y
 for dy in range(1, M):
     pat = M - dy
     ans += dy * pat * N * N

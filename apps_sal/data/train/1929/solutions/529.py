@@ -28,8 +28,3 @@ class StreamChecker:
         for char in word[::-1]:
             curr = curr.child[char]
         curr.isWord = True
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

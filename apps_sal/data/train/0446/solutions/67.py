@@ -6,7 +6,6 @@ class Solution:
 
         while k > 0 and len(counted_arr) > 0:
             val = counted_arr[0]
-            # print(val)
             freq = val[1]
             k -= freq
 

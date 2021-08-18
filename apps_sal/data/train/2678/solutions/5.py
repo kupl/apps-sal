@@ -19,7 +19,7 @@ def no_order(equation):
         y = list_eq.pop(0)
         try:
             result = operators[op](int(x), int(y))
-        except ZeroDivisionError:  # for handling %0 and /0
+        except ZeroDivisionError:
             return None
         list_eq.insert(0, result)
 

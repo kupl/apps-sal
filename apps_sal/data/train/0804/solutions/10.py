@@ -1,4 +1,3 @@
-# cook your dish here
 def solution(a, n, f):
     idxs = []
     i = 0

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def __starting_point():
     st_num, sb_num = list(map(int, input().strip().split()))

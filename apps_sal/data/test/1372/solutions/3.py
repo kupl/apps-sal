@@ -11,7 +11,6 @@ aa = np.array(la)
 ab = np.array(lb)
 maxa = np.max(aa)
 
-# min_magic[maxa + i] = min magic power to give damage >= i
 min_magic = np.zeros(maxa + h + 1, int)
 
 for i in range(1, h + 1):

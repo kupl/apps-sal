@@ -88,6 +88,5 @@ for i in range(n):
             else:
                 hi = t
         add += (i - lo)
-    # print(add)
     out += add
 print(out)

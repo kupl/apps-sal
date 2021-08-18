@@ -11,7 +11,6 @@ for _ in range(p):
     arr = list(zip(sc, nk))
 
     arr_sort = sorted(arr, key=itemgetter(0))
-    # print(arr)
     temp = 0
     for i in range(s - 1):
         if arr_sort[i][1] > arr_sort[i + 1][1]:
@@ -20,10 +19,8 @@ for _ in range(p):
     diff.append(a)
 temp = diff[:]
 
-# temp = [(1, 2),(1, 1),(2, 1),(2, 3)]
 temp.sort(key=lambda x: (x[0], x[1]))
 
-# print(temp)
 '''
 t = 1
 d = defaultdict

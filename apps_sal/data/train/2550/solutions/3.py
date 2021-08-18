@@ -1,7 +1,7 @@
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
 
-        change = [0, 0, 0]   # 5, 10, 20
+        change = [0, 0, 0]
 
         def give(change, amount):
             if amount == 0:

@@ -17,10 +17,8 @@ class Solution:
         self.quickSort(arr, position + 1, r)
 
     def partition(self, arr, l, r):
-        #print(arr, l, r)
         pivot = arr[random.randint(l, r)]
         arr[l], pivot = pivot, arr[l]
-        # print(\"pivot\", pivot)
         while l < r:
             while l < r and arr[r] >= pivot:
                 r -= 1

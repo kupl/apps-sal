@@ -7,9 +7,9 @@ for i in range(H):
 
 for i in range(H):
     for j in range(W):
-        if grid[i][j] == '#':
-            row[i] = True
-            col[j] = True
+        if grid[i][j] == '
+        row[i] = True
+        col[j] = True
 
 for i in range(H):
     if not row[i]:

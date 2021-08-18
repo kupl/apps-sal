@@ -3,7 +3,7 @@ from heapq import heappush, heappop
 
 class Dijkstra:
     def __init__(self, N):
-        self.N = N  # vertices
+        self.N = N
         self.E = [[] for _ in range(N)]
 
     def add_edge(self, init, end, weight, undirected=False):
@@ -14,10 +14,10 @@ class Dijkstra:
     def distance(self, s):
         INF = float('inf')
         E, N = self.E, self.N
-        self.dist = dist = [INF] * N  # the distance of each vertex from s
-        self.prev = prev = [-1] * N  # the previous vertex of each vertex on a shortest path from s
+        self.dist = dist = [INF] * N
+        self.prev = prev = [-1] * N
         dist[s] = 0
-        n_visited = 1  # (visited vertices)
+        n_visited = 1
         heap = []
         heappush(heap, (0, s))
         while heap:

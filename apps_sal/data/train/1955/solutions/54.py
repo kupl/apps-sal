@@ -3,22 +3,19 @@ from typing import List
 
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
-        # build graph
         g = [[] for _ in range(len(s))]
         for edge in pairs:
             g[edge[0]].append(edge[1])
-            g[edge[1]].append(edge[0])  # bug: 應為 indirected graph
+            g[edge[1]].append(edge[0])
 
-        # DFS, find components
         visited = set()
 
-        def f(i):  # fulfill idexes and chars
+        def f(i):
             if i in visited:
                 return
             else:
                 visited.add(i)
 
-            # visit
             idxes.append(i)
             chars.append(s[i])
 
@@ -33,7 +30,6 @@ class Solution:
             chars = []
             f(i)
 
-            # sort each components
             idxes.sort()
             chars.sort()
 

@@ -3,7 +3,7 @@ class Solution:
         n = len(arr)
         best_to = [n + 1 for _ in range(n)]
         best_from = dict()
-        min_total = n + 1  # Naturally impossible length. Will be updated if any possible case exist. Will tell when no possible case
+        min_total = n + 1
         min_left = n + 1
         sum_left = 0
         s_left = 0

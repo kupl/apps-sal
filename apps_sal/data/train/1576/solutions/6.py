@@ -4,4 +4,3 @@ for _ in range(int(input())):
     for x in range(n):
         print(*l[x:], sep="", end="")
         print(*l[:x], sep="")
-# cook your dish here

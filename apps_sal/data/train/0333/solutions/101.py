@@ -1,4 +1,3 @@
-# https://leetcode.com/problems/jump-game-iv/discuss/774915/Python-Easy!-BFS-Solution-oror-Time-Complexity%3A-O(n)
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) == 1:

@@ -1,5 +1,3 @@
-# input = raw_input
-# range = xrange
 
 class Fen:
     def __init__(self, n):

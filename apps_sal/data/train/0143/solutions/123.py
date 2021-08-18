@@ -3,10 +3,6 @@ from collections import defaultdict
 
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
-        # freq = defaultdict(int)
-        # freq[2] += 1
-        # ftypes = set()
-        # ftypes.add(2)
 
         if not tree:
             return 0

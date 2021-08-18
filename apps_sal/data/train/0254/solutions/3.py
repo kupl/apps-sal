@@ -5,7 +5,7 @@ class Solution:
         if n > 10:
             return self.countNumbersWithUniqueDigits(10)
         count = 0
-        for i in range(1, n + 1):  # number of digits
+        for i in range(1, n + 1):
             temp = 1
             for j in range(i):
                 temp *= 10 - j

@@ -3,7 +3,7 @@ class Solution:
         if k >= len(arr) - 1:
             return max(arr)
 
-        widx = 0  # current winner index
+        widx = 0
         i = next((i for i, x in enumerate(arr) if x > arr[widx] and k >= i > 0), None)
         if i != None:
             widx = i

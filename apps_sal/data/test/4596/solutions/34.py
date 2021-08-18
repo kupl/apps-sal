@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 count = 0
-# list a[i]が偶数かどうかをチェック。ループはとりあえず省略する
 
 exist_odd = False
 while exist_odd == False:
@@ -14,5 +13,4 @@ while exist_odd == False:
         else:
             a[i] = a[i] / 2
     count += 1
-    # print(count)
 print(count)

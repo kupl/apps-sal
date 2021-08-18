@@ -3,8 +3,6 @@ Created on 2019. 9. 21.
 
 @author: kkhh88
 '''
-#q = int(input())
-#x, y = map(int,input().split(' '))
 
 q = int(input())
 for _ in range(q):
@@ -38,5 +36,4 @@ for _ in range(q):
                     ans = ans + lst.pop(0)
                 tmp = cnt[lr[i][0]]
             i = i - 1
-    #print (cnt, lr)
     print(ans)

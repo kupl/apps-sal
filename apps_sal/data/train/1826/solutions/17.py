@@ -1,8 +1,6 @@
 class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
-        # the last index of rows
         m = len(mat) - 1
-        # the last index of columns
         n = len(mat[0]) - 1
         row = []
         lookup = {}

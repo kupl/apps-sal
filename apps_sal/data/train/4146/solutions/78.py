@@ -1,5 +1,4 @@
 def is_sorted_and_how(arr):
-    # your code here
     if arr[0] == sorted(arr)[0]:
         return 'yes, ascending'
     elif arr[0] == sorted(arr)[-1]:

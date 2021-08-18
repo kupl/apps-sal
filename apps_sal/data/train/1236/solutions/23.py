@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import deque
 for i in range(int(input())):
     n = int(input())

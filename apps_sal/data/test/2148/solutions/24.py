@@ -25,7 +25,6 @@ for disk in disk_list:
 
         x2 = disk
 
-        # Calculate y2
         y2 = math.sqrt(4 * (r**2) - (abs(x1 - x2) ** 2)) + y1
 
         if y2 > max_y:
@@ -36,5 +35,3 @@ for disk in disk_list:
 
 for i in result:
     print(i, end=" ")
-
-# print(t[:10])

@@ -2,7 +2,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 
-# 1例を示せ、なので、操作しないで良い場合も操作することにする
 
 p = 0
 m = 0
@@ -13,7 +12,6 @@ for i in range(N):
         m += 1
 
 
-# 全部正なので左から累積和
 ans = []
 if m == 0:
     for i in range(N - 1):
@@ -21,7 +19,6 @@ if m == 0:
     print(len(ans))
     for x, y in ans:
         print(x, y)
-# 全部負なので左から累積和
 elif p == 0:
     for i in range(N - 1, 0, -1):
         ans.append((i + 1, i))
@@ -29,7 +26,6 @@ elif p == 0:
     for x, y in ans:
         print(x, y)
 else:
-    # 絶対値の大きい方で実施
     big = -1 * float("inf")
     big_idx = 0
     small = float("inf")
@@ -43,7 +39,6 @@ else:
             small = A[i]
             small_idx = i
 
-    # 全体を正にしてから左から累積和
     if abs(big) >= abs(small):
         for i in range(N):
             if A[i] < 0:
@@ -54,7 +49,6 @@ else:
         print(len(ans))
         for x, y in ans:
             print(x, y)
-    # 全体を負にしてから右から累積和
     else:
         for i in range(N):
             if A[i] > 0:

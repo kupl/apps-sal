@@ -1,4 +1,3 @@
-#  --*-coding:utf-8-*--
 
 
 def f(N, M, S, T):

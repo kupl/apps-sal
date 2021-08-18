@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 
 
@@ -9,10 +8,8 @@ def main():
     A_list.sort(key=lambda x: -abs(x))
     mod = 10**9 + 7
 
-    L_plus = R_plus = -1  # the Index of plus value
-    L_minus = R_minus = -1  # the Index of minus value
-    # L : between index 0 to (K-1)
-    # R : between index K to end
+    L_plus = R_plus = -1
+    L_minus = R_minus = -1
 
     for i in range(K - 1, -1, -1):
         if (L_plus == -1) and (A_list[i] >= 0):
@@ -39,7 +36,7 @@ def main():
     if cnt_minus % 2 == 0:
         target = A_list[:K]
 
-    else:  # cnt_minus % 2 != 0
+    else:
         if (R_plus == -1) and \
            ((L_plus == -1) or (R_minus == -1)):
 

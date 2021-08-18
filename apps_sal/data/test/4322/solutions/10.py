@@ -2,7 +2,6 @@ import io
 import os
 from collections import defaultdict
 from sys import stdin, stdout
-#input = stdin.readline
 
 
 def main():
@@ -20,14 +19,12 @@ def main():
     max_len = 1
     res = [a[0]]
 
-    # len 2
     for j in range(len(s) - 1):
         if d[s[j]] == 1 and d[s[j + 1]] == 1 and s[j + 1] - s[j] == 1:
             max_len = 2
             res = [s[j], s[j + 1]]
             break
 
-    # len > 2
     start = 0
     while start < len(s) and d[s[start]] == 1:
         start += 1

@@ -45,6 +45,5 @@ class UnionFind:
 
     def find(self, x):
         while x != self.parent[x]:
-            # self.parent[x] = self.parent[self.parent[x]]
             x = self.parent[x]
         return x

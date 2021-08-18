@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 
 w, m, k = (int(x) for x in sys.stdin.readline().split(' '))

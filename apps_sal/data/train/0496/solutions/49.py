@@ -20,10 +20,3 @@ class Solution:
                 moves += i - to_place.pop()
             i += 1
         return moves
-
-    # [3,2,1,2,1,7]
-
-    # counter:{1:1, 2:1, 5:1, 7:1}
-    # to_place =[5, 1]
-    # i = 6
-    # moves =

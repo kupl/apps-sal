@@ -1,4 +1,4 @@
-def maxSumSubarray(B):          # O(N)
+def maxSumSubarray(B):
     import sys
     currSum, maxSum = 0, -(sys.maxsize - 1)
     for b in B:
@@ -12,7 +12,7 @@ def maxSumSubarray(B):          # O(N)
 
 def formB(A, K):
     B = [0 for _ in range(len(A) * K)]
-    for i in range(len(A)):     # O(NK)
+    for i in range(len(A)):
         B[i] = A[i]
         ti, j = i, 1
         while j < K:
@@ -20,7 +20,6 @@ def formB(A, K):
             ti += len(A)
             j += 1
 
-    # print(B)
     return maxSumSubarray(B)
 
 

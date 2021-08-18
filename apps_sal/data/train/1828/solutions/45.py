@@ -2,7 +2,6 @@ class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         freq = {}
 
-        # create frq
         for b in barcodes:
             if b in freq:
                 freq[b] += 1

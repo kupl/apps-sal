@@ -16,8 +16,6 @@ def solve():
     else:
         print('NO')
 
-# solve()
-
 
 T = ni()
 for _ in range(T):

@@ -1,7 +1,4 @@
 class Solution:
-    # sort from smallest to largest length
-    # for each element, see if any words of its length - 1 are predescessors
-    # for every predecessor, take the max of the word chains and store it + 1
     def isPredecessor(self, prev_word, cur_word):
         if len(prev_word) != len(cur_word) - 1:
             return False

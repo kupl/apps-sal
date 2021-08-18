@@ -7,7 +7,7 @@ class BrowserHistory:
     def visit(self, url: str) -> None:
         self.stack_position += 1
         print(('You are in \"{}\". Visit \"{}\"'.format(self.stack[-1], url)))
-        while self.stack_position < len(self.stack):  # to clear forward entries
+        while self.stack_position < len(self.stack):
             self.stack.pop()
         self.stack.append(url)
 
@@ -22,10 +22,3 @@ class BrowserHistory:
         if self.stack_position == len(self.stack) - 1:
             print('cant go any more forwards')
         return self.stack[self.stack_position]
-
-
-# Your BrowserHistory object will be instantiated and called as such:
-# obj = BrowserHistory(homepage)
-# obj.visit(url)
-# param_2 = obj.back(steps)
-# param_3 = obj.forward(steps)

@@ -1,7 +1,7 @@
 import sys
 n = int(input())
 str = input()
-str = str + '##'
+str = str + '
 i = 0
 while i < n:
     if((str[i] == 'e' and str[i + 1] == 'e' and str[i + 2] != 'e') or (str[i] == 'o' and str[i + 1] == 'o' and str[i + 2] != 'o')):

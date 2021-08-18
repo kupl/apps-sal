@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Jul 16 13:36:30 2020
 
 @author: shubham gupta
 """
-# cook your dish here
 
 
 def main():
@@ -21,7 +19,7 @@ def main():
         while y < m:
             t_cell = x + y
             t_check = t_cell - b[2] - abs(y - b[1])
-            if t_check < 0:  # Negative time is impossible
+            if t_check < 0:
                 y += 1
                 continue
             if t_check % b[3] == 0:

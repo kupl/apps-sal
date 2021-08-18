@@ -6,7 +6,6 @@ class Solution:
         maxPoint = 0
         cur = 0
         j = 0
-        # i-j+k == n
         n = len(cardPoints)
         for i, point in enumerate(cardPoints):
             if i - j + k > n - 1:

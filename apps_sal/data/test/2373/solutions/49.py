@@ -28,7 +28,6 @@ L = LIST()
 cnt = 0
 tmp = 0
 i = 0
-# for i, a in enumerate(L):
 while i < N:
     if L[i] == i + 1:
         cnt += 1

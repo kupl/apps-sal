@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[11]:
 
 
 n, p = map(int, input().split())
@@ -32,6 +28,5 @@ if i < 0:
     print('NO')
 
 else:
-    # print('Yes')
     for i in s:
         print(chr(i), end='')

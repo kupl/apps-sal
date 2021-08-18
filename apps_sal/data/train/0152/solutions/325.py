@@ -20,7 +20,6 @@ class Solution:
         left, right = 0, maxp - minp + 1
 
         while right - left > 1:
-            # print(left,right)
             mid = left + (right - left) // 2
             if valid(mid):
                 left = mid

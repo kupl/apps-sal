@@ -1,5 +1,3 @@
-# TimeLimit on 49-51 test
-# :(
 from operator import or_, xor
 import sys
 

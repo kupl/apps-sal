@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 n = int(input().strip())
 stringa = input().strip().split()

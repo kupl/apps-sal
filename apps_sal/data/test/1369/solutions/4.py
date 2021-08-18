@@ -18,7 +18,6 @@ maxdist = 0
 sx, sy = [], []
 
 
-# 任意2点間の距離を算出し最大距離を出す。
 for i in range(n - 1):
     for j in range(i + 1, n):
         if rad < math.sqrt((x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j])):
@@ -28,7 +27,6 @@ for i in range(n - 1):
 
 if rad >= max([math.sqrt((cx - x[i]) * (cx - x[i]) + (cy - y[i]) * (cy - y[i])) for i in range(n)]) * 2:
     jud = 1
-#
 
 if jud == 1:
     rad = rad / 2

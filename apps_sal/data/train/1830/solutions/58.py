@@ -35,6 +35,4 @@ class Solution:
                     ans[i] = M + 1
             i += 1
 
-        # print(ans)
-
         return ans

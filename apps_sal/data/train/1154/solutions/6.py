@@ -1,4 +1,3 @@
-# cook your dish here
 def amongus(n, f, d):
     for i in range(n):
         if f[i] != d[i]:

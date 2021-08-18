@@ -30,7 +30,6 @@ class Solution:
 
         x = sorted(best.keys())
         y = sorted(list(best.values()), reverse=True)
-        # print(x, y)
 
         @lru_cache(None)
         def best_path(t, idx):
@@ -48,24 +47,15 @@ class Solution:
                     if bi == -1 or cmp(ret, y):
                         ret = y
                         bi = i
-            # if bi >= 1:
-            #     ret = (best[x[idx]], bi) + ret
-            # if t == target and idx == 0:
-            #     print(ret)
-            # if t == target:
-            #     print(t, idx, ret)
             return ret
 
         r = best_path(target, 0)
-        # print(r)
         if r is None:
             return '0'
         unpacked = {}
         for i in range(0, len(r), 2):
             unpacked[r[i]] = r[i + 1]
         s = ''
-        # print(y)
-        # print(unpacked)
         for digit in y:
             if digit in unpacked:
                 s += str(digit) * unpacked[digit]

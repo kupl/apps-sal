@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 for _ in range(t):
@@ -13,5 +12,3 @@ for _ in range(t):
         print("uniform")
     else:
         print('non-uniform')
-
-        # cook your dish here

@@ -23,4 +23,3 @@ for _ in range(q):
         print(*ans[x - 1])
     else:
         print(m, temp[(x - len(ans) - 1) % len(temp)])
-# print(ans)

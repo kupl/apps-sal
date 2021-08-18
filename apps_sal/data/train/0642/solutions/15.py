@@ -66,7 +66,6 @@ def __starting_point():
         a = [int(X) for X in input().split()]
         a.sort()
         print(round(binary_search_answer(0, 2 * (10**9), 7, a, n, d), 10))
-# cook your dish here
 
 
 __starting_point()

@@ -1,4 +1,3 @@
-# cook your dish here
 import collections
 from itertools import combinations
 
@@ -45,7 +44,7 @@ for _ in range(int(input())):
                 for tri in triangles:
                     boolp = checkparallel(tri[0][0], tri[1][0], tri[2][0])
                     booli = checkintersection(tri[0], tri[1], tri[2])
-                    if boolp == False and booli == False:  # Triangle
+                    if boolp == False and booli == False:
                         EQ[tri[0]] += 1
                         EQ[tri[1]] += 1
                         EQ[tri[2]] += 1

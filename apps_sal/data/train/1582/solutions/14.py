@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 ar = input()
 count = 0

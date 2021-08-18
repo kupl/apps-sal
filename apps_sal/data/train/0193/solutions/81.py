@@ -10,7 +10,6 @@ class Solution:
             ls .append((c, i))
 
         ls.sort(reverse=True)
-        #print (ls)
 
         l = 0
         r = len(ls) - 1
@@ -21,7 +20,6 @@ class Solution:
         for i in range(len(ls)):
             res += 1
             items += ls[i][0]
-            #print (items)
             if items >= (len(arr) // 2):
                 break
 

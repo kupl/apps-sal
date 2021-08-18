@@ -1,5 +1,3 @@
-# 写経
-# https://atcoder.jp/contests/abc172/submissions/14794920
 
 MOD = 10**9 + 7
 

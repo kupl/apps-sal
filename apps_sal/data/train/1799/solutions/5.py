@@ -11,7 +11,6 @@ def populating_board(x, y, board):
     board[x][y] += 1
     pos = [(x, y)]
 
-    # HANDLING VERTICAL AND HORIZONTAL AND DIAGONALS
     for dx, dy in MOVES:
         c = 0
         while True:
@@ -34,7 +33,6 @@ def queens(position, size):
     y, x = ord(position[0]) - 97, size - (size == 10 and not int(position[1]) and 10 or int(position[1]))
     initial_X = x
 
-    # populating board with not possible Q positions
     populating_board(x, y, board)
     queens = [position]
 

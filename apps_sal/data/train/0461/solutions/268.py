@@ -13,8 +13,6 @@ class Solution:
         time_needed = [-1] * n
         time_needed[headID] = 0
 
-        # Dijkstra's algorithm. There's not really such a need.
-        # There's no need to keep track of 'visited' because each node will be visited once anyway.
         q = [(0, headID)]
 
         while q:

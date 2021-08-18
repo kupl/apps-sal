@@ -1,7 +1,4 @@
 n = int(input())
-#a, b, c, x, y = map(int, input().split())
-#al = list(map(int, input().split()))
-#al=[list(input()) for i in range(n)]
 
 
 def prime_factorize(n):

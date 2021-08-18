@@ -1,4 +1,3 @@
-# ABC112
 
 N, T = list(map(int, input().split()))
 C_T = [list(map(int, input().split())) for _ in range(N)]

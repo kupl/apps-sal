@@ -5,7 +5,6 @@ class Solution:
         for i, j in itertools.combinations(range(1, n), 2):
             res = []
             a, b = S[:i], S[i:j]
-            # if b != str(int(b)):
             if a != str(int(a)) or b != str(int(b)):
                 continue
             res.append(int(a))

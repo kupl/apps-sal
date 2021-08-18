@@ -1,8 +1,5 @@
-# nonlocal vairables
 T = eval(input())
 counter = 1
-
-# methods
 
 
 def ri():
@@ -17,7 +14,6 @@ def solve():
     S = rs()[0]
     ans = 0
     for i in S:
-        # print i
         if i.isdigit():
             ans += int(i)
     return ans

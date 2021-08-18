@@ -3,7 +3,6 @@ N, T = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 back = [(0, 0)] * (N + 1)
-# (a,b): b is # of a
 
 
 def heapsort(lst):

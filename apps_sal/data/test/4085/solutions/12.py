@@ -15,7 +15,6 @@ for i in range(t):
     if c == 1:
         print(-1)
         continue
-    # ile divisors
     fac = []
     i = 2
     for p in prime:

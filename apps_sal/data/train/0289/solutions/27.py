@@ -3,7 +3,6 @@ class Solution:
         l = len(A)
         if L < M:
             M, L = L, M
-        # L 大
         ans = 0
         for i in range(l - L + 1):
             tmp = sum(A[i:i + L])

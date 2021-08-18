@@ -13,7 +13,6 @@ def solve():
     for _ in range(geta()):
         n = geta()
         num = list(map(int, list(str(n))))
-        # print(num)
         index = -1
         for i in range(len(num) - 1):
             if num[i] > num[i + 1]:

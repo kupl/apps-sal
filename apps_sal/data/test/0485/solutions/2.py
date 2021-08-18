@@ -1,10 +1,6 @@
 
 N = int(input())
 
-#N,B = [int(x) for x in arr.split(' ')]
-
-#arr = input()
-#A = [int(x) for x in arr.split(' ')]
 
 x_freq = {}
 y_freq = {}
@@ -38,7 +34,6 @@ for num in y_freq:
 
 x_inteval = [min(x_inteval), max(x_inteval)]
 y_inteval = [min(y_inteval), max(y_inteval)]
-# print(x_inteval,y_inteval)
 for p in data:
     if (p[0] not in x_inteval) and (p[1] not in y_inteval):
         print(p[0], p[1])

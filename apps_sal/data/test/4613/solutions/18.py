@@ -1,6 +1,5 @@
 class union_find():
     def __init__(self, n):
-        # self.n = n
         self.root = [-1] * (n + 1)
         self.rank = [0] * (n + 1)
         self.siz = n

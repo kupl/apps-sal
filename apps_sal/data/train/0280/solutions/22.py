@@ -6,10 +6,9 @@ class Solution:
         n = len(s)
         if n == k:
             return 0
-        # a string of length n, the largest cost to make it  palindrome is n // 2
 
         @lru_cache(None)
-        def cnt(left, right):  # cost to make palindrome
+        def cnt(left, right):
             if left >= right:
                 return 0
             return cnt(left + 1, right - 1) + (s[left] != s[right])

@@ -15,7 +15,7 @@ class Solution:
 
         lo, hi = 0, n
         while lo < hi:
-            mid = lo + (hi - lo) // 2  # prevent overflow
+            mid = lo + (hi - lo) // 2
             if not possible(events[mid]):
                 lo = mid + 1
             else:

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n = int(input().strip())
 ais = [tuple(map(int, input().strip().split())) for _ in range(n)]

@@ -8,11 +8,6 @@ for _ in range(t):
     elif g <= av + 0.001:
         print(2)
     else:
-        # after 2n+1 pours (n = 0, 1, ...) we have a temp of ((n+1)*h + n*c)/(2*n+1) = g,
-        # so we have n*(h+c) + h = g*(2*n+1),
-        # or n*(h+c) + h = g*2*n + g
-        # or n*(h+c-g*2) = g - h
-        # or n ~= (g-h)/(h+c-g*2)
         n = int((g - h) / (h + c - g * 2))
         best_n = -1
         for j in range(max(n - 3, 0), n + 3):

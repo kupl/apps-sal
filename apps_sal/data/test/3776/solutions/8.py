@@ -2,9 +2,6 @@ __author__ = 'Alexander'
 import sys
 format = int(sys.stdin.readline().strip())
 timeH, timeM = list(map(int, sys.stdin.readline().split(':')))
-# print(format)
-# print(timeH)
-# print(timeM)
 if format == 12:
     if timeH > 12 or timeH == 0:
         if timeH == 0:

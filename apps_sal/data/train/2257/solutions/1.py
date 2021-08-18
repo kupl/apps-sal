@@ -26,8 +26,6 @@ for tests in range(t):
             else:
                 DICT[a] = {b}
 
-        # print(DICT)
-
         ANS = 0
 
         for x in "abcdefghijklmnopqrst":

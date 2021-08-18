@@ -20,8 +20,6 @@ class Solution:
         return result
         '''
         '''
-        # of subarrays sum equals k = # of subarrays sum <= k -
-                                      # of subarrays sum <= (k-1)
         '''
 
         def atMost(k):
@@ -33,8 +31,6 @@ class Solution:
                     l += 1
                 result += i - l + 1
             return result
-
-        # return atMost(k) - atMost(k-1)
 
         def atmost(k):
             res = 0

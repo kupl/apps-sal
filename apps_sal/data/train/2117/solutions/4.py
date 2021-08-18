@@ -20,7 +20,7 @@ while len(stack) > 1:
     length = N - stack[-1][1] - 1
     res[length] = max(res[length], num)
 
-for i in range(N - 1, 0, -1):  # From N-1 to 1
+for i in range(N - 1, 0, -1):
     res[i] = max(res[i], res[i + 1])
 
 print(' '.join(map(str, res[1:])))

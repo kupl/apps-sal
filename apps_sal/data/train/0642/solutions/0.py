@@ -1,12 +1,11 @@
-# cook your dish here
 def isValid(mid):
     time = 0.0
     for i in range(n):
         if time < c[i]:
             time = c[i]
-            time += mid  # cannon cooling
+            time += mid
         elif time >= c[i] and time <= c[i] + d:
-            time += mid  # cannon cooling
+            time += mid
         else:
             return False
     return True

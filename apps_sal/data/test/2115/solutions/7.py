@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/926/E
 
 input()
 stack1 = [int(i) for i in input().split()]

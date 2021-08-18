@@ -1,6 +1,4 @@
 class Solution:
-    # 1575
-    # 1575
     def countRoutes(self, locations: 'List[int]', start: int, finish: int, fuel: int) -> int:
         MOD = 1000000007
         sp, ep = locations[start], locations[finish]

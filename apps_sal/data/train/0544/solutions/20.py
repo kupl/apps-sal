@@ -1,4 +1,3 @@
-# cook your dish her
 t = int(input())
 while(t):
     a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p']

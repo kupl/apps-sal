@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 try:
 
@@ -25,7 +24,6 @@ try:
 
                 if(s == m):
                     c = c - 1
-        # print(n)
             print(c)
         t = t - 1
 except:

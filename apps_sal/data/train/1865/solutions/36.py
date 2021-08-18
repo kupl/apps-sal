@@ -3,19 +3,19 @@ class Solution:
 
         def player_moves(box_i, box_j, player_i, player_j):
             res = []
-            if player_i > 0 and grid[player_i - 1][player_j] != '#' and (player_i - 1, player_j) != (box_i, box_j):
-                res.append((player_i - 1, player_j))
-            if player_i < len(grid) - 1 and grid[player_i + 1][player_j] != '#' and (player_i + 1, player_j) != (box_i, box_j):
-                res.append((player_i + 1, player_j))
-            if player_j > 0 and grid[player_i][player_j - 1] != '#' and (player_i, player_j - 1) != (box_i, box_j):
-                res.append((player_i, player_j - 1))
-            if player_j < len(grid[0]) - 1 and grid[player_i][player_j + 1] != '#' and (player_i, player_j + 1) != (box_i, box_j):
-                res.append((player_i, player_j + 1))
+            if player_i > 0 and grid[player_i - 1][player_j] != '
+            res.append((player_i - 1, player_j))
+            if player_i < len(grid) - 1 and grid[player_i + 1][player_j] != '
+            res.append((player_i + 1, player_j))
+            if player_j > 0 and grid[player_i][player_j - 1] != '
+            res.append((player_i, player_j - 1))
+            if player_j < len(grid[0]) - 1 and grid[player_i][player_j + 1] != '
+            res.append((player_i, player_j + 1))
             return res
 
         def can_player_access_cell(cell_i, cell_j, box_i, box_j, player_i, player_j):
-            if grid[cell_i][cell_j] == '#':
-                return False
+            if grid[cell_i][cell_j] == '
+            return False
             q = deque()
             visited = set()
             q.append((player_i, player_j))
@@ -37,15 +37,14 @@ class Solution:
             print(('state', state))
             box_i, box_j, player_i, player_j = state[0], state[1], state[2], state[3]
             print(('box_i', box_i))
-            # first check box's four neighbor if empty floor cell, and accessible to player, the cell of opposite direction should also be empty# moves, update box location, mark B, update player location
-            if box_i > 0 and can_player_access_cell(box_i - 1, box_j, box_i, box_j, player_i, player_j) and box_i + 1 < len(grid) and grid[box_i + 1][box_j] != '#':  # push down, player replace box location
-                res.add((box_i + 1, box_j, box_i, box_j))
-            if box_i < len(grid) - 1 and can_player_access_cell(box_i + 1, box_j, box_i, box_j, player_i, player_j) and box_i - 1 >= 0 and grid[box_i - 1][box_j] != '#':   # push up
-                res.add((box_i - 1, box_j, box_i, box_j))
-            if box_j > 0 and can_player_access_cell(box_i, box_j - 1, box_i, box_j, player_i, player_j) and box_j + 1 < len(grid[0]) and grid[box_i][box_j + 1] != '#':  # push right
-                res.add((box_i, box_j + 1, box_i, box_j))
-            if box_j < len(grid[0]) - 1 and can_player_access_cell(box_i, box_j + 1, box_i, box_j, player_i, player_j) and box_j - 1 >= 0 and grid[box_i][box_j - 1] != '#':  # push left
-                res.add((box_i, box_j - 1, box_i, box_j))
+            if box_i > 0 and can_player_access_cell(box_i - 1, box_j, box_i, box_j, player_i, player_j) and box_i + 1 < len(grid) and grid[box_i + 1][box_j] != '
+            res.add((box_i + 1, box_j, box_i, box_j))
+            if box_i < len(grid) - 1 and can_player_access_cell(box_i + 1, box_j, box_i, box_j, player_i, player_j) and box_i - 1 >= 0 and grid[box_i - 1][box_j] != '
+            res.add((box_i - 1, box_j, box_i, box_j))
+            if box_j > 0 and can_player_access_cell(box_i, box_j - 1, box_i, box_j, player_i, player_j) and box_j + 1 < len(grid[0]) and grid[box_i][box_j + 1] != '
+            res.add((box_i, box_j + 1, box_i, box_j))
+            if box_j < len(grid[0]) - 1 and can_player_access_cell(box_i, box_j + 1, box_i, box_j, player_i, player_j) and box_j - 1 >= 0 and grid[box_i][box_j - 1] != '
+            res.add((box_i, box_j - 1, box_i, box_j))
             print(('res', res))
             return res
 

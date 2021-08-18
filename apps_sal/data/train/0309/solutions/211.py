@@ -16,5 +16,4 @@ class Solution:
 
                 out = max(table[i][diff], out)
 
-        # print(table)
         return out

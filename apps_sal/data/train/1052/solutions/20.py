@@ -20,19 +20,15 @@ for _ in range(int(input())):
             if t + d not in vis:
                 vis[t + d] = 1
                 res.append([t + d, lev])
-                # print(t,t+d,lev)
                 dist[t + d] = dist.get(t) + 1
                 q.append(t + d)
             if dsum(t) not in vis:
                 vis[dsum(t)] = 1
                 res.append([dsum(t), lev])
-                # print(t,dsum(t),lev)
                 dist[dsum(t)] = dist.get(t) + 1
                 q.append(dsum(t))
 
         if lev == 32:
             break
-    # print(res)
     res.sort(key=lambda x: x[0])
-    # print(res)
     print(res[0][0], res[0][1])

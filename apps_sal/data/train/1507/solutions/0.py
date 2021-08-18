@@ -1,4 +1,3 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
 import sys
 input = sys.stdin.readline
 inp, ip = lambda: int(input()), lambda: [int(w) for w in input().split()]
@@ -29,8 +28,6 @@ def factorial(p):
 
 
 def f(num, den1, den2):
-    # n C r = n!*inverse(r!)*inverse((n-r)!)
-    #ans = ((fact[N] * factorialNumInverse[R])% p * factorialNumInverse[N-R])% p
     ans = ((fact[num] * factorialNumInverse[den1]) % p * factorialNumInverse[den2]) % p
     return ans
 

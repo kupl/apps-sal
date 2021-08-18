@@ -1,10 +1,5 @@
-# import math
-# import sys
-# sys.stdin = open('input.txt', 'r')
-# sys.stdout = open('output.txt', 'w')
 
 for _ in range(int(input())):
-    # k=int(input())
     a, b = [int(x) for x in input().split()]
     if a == b:
         print(0)

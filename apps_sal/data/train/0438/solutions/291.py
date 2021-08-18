@@ -1,15 +1,14 @@
 class Solution:
     def findLatestStep(self, arr, m):
-        D = dict()  # D[x] records the index of the end in the interval, +: right end, -: left end
+        D = dict()
 
-        c, ret = 0, -1  # c: count of m-intervals, ret: return index
+        c, ret = 0, -1
         for k, x in enumerate(arr, 1):
-            D[x], S = 0, 0  # S: shift
+            D[x], S = 0, 0
 
-            # discuss in cases
             if x - 1 in D and x + 1 in D:
                 i, j = D[x - 1], -D[x + 1]
-                if i + 1 == m:  # i+1 is the length
+                if i + 1 == m:
                     c -= 1
                 if j + 1 == m:
                     c -= 1
@@ -28,9 +27,9 @@ class Solution:
                 S = j + 1
                 D[x + j + 1], D[x] = S, -S
 
-            if S + 1 == m:  # find a m-inteval
+            if S + 1 == m:
                 c += 1
-            if c > 0:  # no m-interval in this round
+            if c > 0:
                 ret = k
 
         return ret

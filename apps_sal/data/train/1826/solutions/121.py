@@ -25,8 +25,6 @@ class Solution:
                     ans[i][j] = kernel(i, j, k)
             return ans
 
-        # return brute_force()
-
         def partials():
             @lru_cache
             def getrowsum(i, j, k):
@@ -37,7 +35,6 @@ class Solution:
                 miny, maxy = max(j - k, 0), min(j + k + 1, m)
                 return sum([mat[i][jj] for jj in range(miny, maxy)])
 
-            # @lru_cache
             def getcolsum(ans, i, j, k):
                 if j < 0:
                     return 0

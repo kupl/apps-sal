@@ -1,7 +1,4 @@
 def main():
-    # import sys
-    # readline = sys.stdin.buffer.readline
-    # readlines = sys.stdin.buffer.readlines
     N = int(input())
     L = input()
 

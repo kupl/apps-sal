@@ -20,7 +20,6 @@ class Solution:
                 continue
             cur = dummy.__next__
             while cur and cur.val != query:
-                # print(res[cur.val])
                 res[cur.val][0] += 1
                 prev = cur
                 cur = cur.__next__

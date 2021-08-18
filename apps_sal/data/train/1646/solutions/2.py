@@ -1,4 +1,3 @@
-# pre-generate list
 
 GREENS = [0, 1, 5, 6]
 a, b = GREENS[-2:]

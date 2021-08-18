@@ -1,4 +1,3 @@
-# cook your dish here
 def solve(a, b, c):
     n = b
     while n <= c:

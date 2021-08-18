@@ -22,7 +22,6 @@ def solve(a):
 
 def __starting_point():
     n = int(input())
-    #n, m = (int(p) for p in input().split())
     a = [int(p) for p in input().split()]
     print(solve(a))
 

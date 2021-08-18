@@ -24,7 +24,7 @@ class Solution:
         while low <= high:
             mid = (low + high) // 2
             pos = rabin_karp(mid)
-            if pos == -1:  # no matching strings found
+            if pos == -1:
                 high = mid - 1
             else:
                 start = pos

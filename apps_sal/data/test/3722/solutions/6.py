@@ -15,7 +15,6 @@ def SI(): return sys.stdin.readline().rstrip()
 
 dij = [(0, 1), (-1, 0), (0, -1), (1, 0)]
 inf = 10**16
-# md = 998244353
 md = 10**9 + 7
 
 

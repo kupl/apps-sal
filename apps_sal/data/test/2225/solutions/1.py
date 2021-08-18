@@ -43,7 +43,6 @@ n, m = map(int, sys.stdin.readline().strip().split())
 k = n
 l = list(map(int, sys.stdin.readline().strip().split()))
 t = create(l, 2**n, k)
-# print(t)
 for _ in range(m):
     idx, value = map(int, sys.stdin.readline().strip().split())
     t = update(idx - 1, value, t, 2**n, k)

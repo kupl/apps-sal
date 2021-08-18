@@ -14,7 +14,7 @@ def fn(pos, consecutive):
     return dp[pos, consecutive]
 
 
-for _ in range(1):  # int(stdin.readline())):
+for _ in range(1):
     n = int(stdin.readline())
     a = list(map(int, stdin.readline().split()))
     dp = {}

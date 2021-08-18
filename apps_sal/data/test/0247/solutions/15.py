@@ -32,10 +32,6 @@ def main():
                 if p[1] == first[1]:
                     st[i] = True
             else:
-                # kx = (p[0] - first[0]) / dx
-                # ky = (p[1] - first[1]) / dy
-                # if math.isclose(kx, ky):
-                #     st[i] = True
                 if ((p[0] - first[0]) * dy) == (p[1] - first[1]) * dx:
                     st[i] = True
 

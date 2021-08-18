@@ -15,21 +15,7 @@ def lcm(a, b):
 
 ab = x * y
 ans = 0
-# for a in range(l, r+1):
-#     if(a > sqrt(r+1) + 100000):
-#         break
-#     if(ab % a == 0):
-#         b = ab / a
-#         if(a > b):
-#             break
-#         if(l <= b and b <= r and lcm(a,b) == y):
-#             if(ab / a == a):
-#                 ans += 1
-#             else:
-#                 ans += 2
 a = x
-# while(a % x != 0):
-#     a += 1
 while(a <= sqrt(ab)):
     b = int(ab / a)
     if(a > b):

@@ -1,13 +1,10 @@
 class Solution:
-    # 0123
     def playerGame(self, pos, piles, player1, M, memo):
         optionsCount = min(len(piles) - pos, 2 * M)
-        #print (optionsCount)
         resultPlayer1 = 0
         resultPlayer2 = 0
         for i in range(pos, pos + optionsCount):
             X = i - pos + 1
-            #print (X)
             stonesCount = 0
             for j in range(pos, i + 1):
                 stonesCount += piles[j]
@@ -28,7 +25,6 @@ class Solution:
         return resultPlayer1, resultPlayer2
 
     def stoneGameII(self, piles: List[int]) -> int:
-        # get max number of stones for Alex
         M = 1
         player1 = True
         memo = {}

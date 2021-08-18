@@ -8,7 +8,6 @@ class Solution:
         if d == n:
             return sum(arr)
         dp = [[float('inf') for _ in range(n)] for _ in range(d)]
-        # initialization
         dp[0][0] = arr[0]
         for i in range(1, n):
             dp[0][i] = max(dp[0][i - 1], arr[i])

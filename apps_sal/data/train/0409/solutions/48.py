@@ -17,6 +17,5 @@ class Solution:
             return 0
         if k == 1:
             return find_max(arr)
-        # print (sum(arr)*k)
         res = max(find_max(arr), find_max(arr + arr), sum(arr) * k, find_max(arr + arr) + sum(arr) * (k - 2))
         return res % (10**9 + 7)

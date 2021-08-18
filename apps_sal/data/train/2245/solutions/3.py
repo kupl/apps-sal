@@ -1,4 +1,3 @@
-#import sys; sys.stdin = open("TF.txt")
 
 def R(): return list(map(int, input().split()))
 

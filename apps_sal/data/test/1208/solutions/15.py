@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Codeforces
 567 B.
@@ -32,10 +31,6 @@ def solve(xs):
         history.append(number)
 
     return max(history)
-
-
-# def print_stderr(*args, **kwargs):
-#     print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

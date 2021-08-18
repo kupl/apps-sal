@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 l2 = ['0', '1']
 for i in range(n):

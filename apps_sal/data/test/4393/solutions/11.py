@@ -1,5 +1,4 @@
 n = int(input())
-# m = list(map(int, input().split()))
 s = input()
 c = 1
 sol = ''

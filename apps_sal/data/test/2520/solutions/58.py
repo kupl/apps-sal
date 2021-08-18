@@ -28,7 +28,6 @@ def main():
             self.rank = [0] * (n + 1)
             self.size = [1] * (n + 1)
 
-        # 検索
         def find(self, x):
             if self.par[x] == x:
                 return x
@@ -36,7 +35,6 @@ def main():
                 self.par[x] = self.find(self.par[x])
                 return self.par[x]
 
-        # 併合
         def union(self, x, y):
             x = self.find(x)
             y = self.find(y)
@@ -55,11 +53,9 @@ def main():
                 if self.rank[x] == self.rank[y]:
                     self.rank[x] += 1
 
-        # 同じ集合に属するか判定
         def same(self, x, y):
             return self.find(x) == self.find(y)
 
-        # すべての頂点に対して親を検索する
         def all_find(self):
             for n in range(len(self.par)):
                 self.find(n)

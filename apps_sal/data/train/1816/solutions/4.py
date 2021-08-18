@@ -22,17 +22,12 @@ class Solution:
                 end = 2
                 condit = False
                 while end < len(listT):
-                    # print(listT[start][:2],listT[end][:2])
-                    # print(listT[start][3:],listT[end][3:])
-                    # print(int(listT[start][:2])+1 == int(listT[end][:2]) )
-                    # print(int(listT[start][3:]) <= int(listT[end][3:]))
 
                     if int(listT[start][:2]) == int(listT[end][:2]):
                         condit = True
                         break
 
                     if (int(listT[start][:2]) + 1 == int(listT[end][:2]) and int(listT[start][3:]) >= int(listT[end][3:])):
-                        # print('ciao')
                         condit = True
                         break
 

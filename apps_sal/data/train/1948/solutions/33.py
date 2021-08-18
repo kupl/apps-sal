@@ -3,8 +3,6 @@ import itertools
 
 class Solution:
     def numPoints(self, points: List[List[int]], r: int) -> int:
-        # http://www4.comp.polyu.edu.hk/~csbxiao/paper/2004/ISPAN04_cover.pdf
-        # TC: O(N^3), possible O(N^2logN), SC: O(1)
         ans = 1
         for (x1, y1), (x2, y2) in itertools.combinations(points, 2):
             d = ((x1 - x2) ** 2 + (y1 - y2) ** 2) / 4.0

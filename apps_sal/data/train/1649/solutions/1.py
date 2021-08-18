@@ -27,7 +27,7 @@ FSM = {(m.group(1), m.group(2)): m.group(3) for m in (re.fullmatch('(\w+):\s+(\w
 
 
 def traverse_TCP_states(events):
-    state = "CLOSED"  # initial state, always
+    state = "CLOSED"
     for e in events:
         state = FSM.get((state, e), 'ERROR')
     return state

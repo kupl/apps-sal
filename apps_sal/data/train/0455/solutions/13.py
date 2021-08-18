@@ -1,6 +1,6 @@
 class Solution:
     def isPrintable(self, M: List[List[int]]) -> bool:
-        colorAreas = collections.defaultdict(lambda: [61, 61, -1, -1])  # (top, left, bottom, right)
+        colorAreas = collections.defaultdict(lambda: [61, 61, -1, -1])
         for r, row in enumerate(M):
             for c, color in enumerate(row):
                 colorAreas[color][0] = min(colorAreas[color][0], r)

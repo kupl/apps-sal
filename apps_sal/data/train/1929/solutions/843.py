@@ -16,7 +16,7 @@ class StreamChecker:
         compress('')
 
         words = set(words)
-        graph = defaultdict(lambda: defaultdict(int))  # pref1 -> ch -> pref2 where pref2 is longest word that is a suffix of pref1
+        graph = defaultdict(lambda: defaultdict(int))
         prefs = set()
         for word in words:
             for i in range(len(word) + 1):
@@ -40,8 +40,6 @@ class StreamChecker:
         self.graph = graph
         self.state = compress('')
         self.prefWithWordSuffix = prefWithWordSuffix
-        # self.compress = compress
-        # self.decompress = decompress
 
     def query(self, letter: str) -> bool:
 
@@ -69,10 +67,4 @@ class StreamChecker:
             if letter in state:
                 nextStates.append(state[letter])
         self.states = nextStates
-        #print(letter, [state['$'] for state in self.states if '$' in state])
         return any('$' in state for state in self.states)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

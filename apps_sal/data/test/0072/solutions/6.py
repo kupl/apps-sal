@@ -37,7 +37,6 @@ def main():
 
     ribbons = [input().strip() for _ in range(3)]
 
-    # print(ribbons)
     k = solve(n, ribbons)
     print(cats[k])
 

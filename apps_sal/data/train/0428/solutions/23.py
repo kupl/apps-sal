@@ -29,12 +29,11 @@ class Solution:
                 if dx < 0 or dy < 0 or dx >= n or dy >= m:
                     continue
                 ch = grid[dx][dy]
-                if ch == '#':
-                    continue
+                if ch == '
+                continue
 
                 if ch in locks:
                     idx = locks.find(ch)
-                    # print(dx,dy,ch,idx)
                     if state & (1 << idx) == 0:
                         continue
                 if ch in keys:

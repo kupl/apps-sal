@@ -1,4 +1,3 @@
-# UnionFind: https://note.nkmk.me/python-union-find/
 class UnionFind():
     def __init__(self, n):
         self.n = n

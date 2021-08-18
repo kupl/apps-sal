@@ -8,5 +8,4 @@ class Solution:
             else:
                 d += 1
             ans += s
-            #print(n, ans)
         return ans % 1000000007

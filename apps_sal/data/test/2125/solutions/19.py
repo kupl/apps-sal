@@ -46,11 +46,8 @@ for i in range(n):
         if i + x + y < n:
             z = down[i + x + y][j]
         if x == y and z >= y:
-            # print(x,'x',y,'y',z,'z',i,'i',j,'j')
             minn = right[i][j]
             for k in range(i, i + 3 * x):
                 minn = min(minn, right[k][j])
-            # print(minn,'minn')
-            # print(i,'i',j,'j')
             ans += minn
 print(ans)

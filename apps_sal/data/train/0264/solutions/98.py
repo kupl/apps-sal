@@ -13,7 +13,6 @@ class Solution:
 
         if not new_arr:
             return 0
-        # print(new_arr)
         ans = 0
 
         def backtrack(ind, temp, temp_sum):

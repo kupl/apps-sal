@@ -9,10 +9,8 @@ for i in range(N):
 
 limit2time = sorted(limit2time, key=lambda x: x[0])
 
-# print(limit2time)
 cur = 0
 for item in limit2time:
-    # print(item)
     key, time = item
     if cur + time > key:
         print("No")

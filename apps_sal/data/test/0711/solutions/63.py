@@ -1,5 +1,3 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
 def factorization(n):
     primen, degree, primend = [], [], []
@@ -22,7 +20,6 @@ def factorization(n):
         degree.append(1)
         primend.append([n, 1])
     return degree
-#    return primen,degree
 
 
 def main():
@@ -30,7 +27,7 @@ def main():
     if M == 1:
         print(1)
     else:
-        mod = 10**9 + 7               # mod素数
+        mod = 10**9 + 7
         Mf = factorization(M)
         l = max(Mf)
         Comb = [1] * (l + 1)

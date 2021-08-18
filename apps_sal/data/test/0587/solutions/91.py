@@ -15,7 +15,6 @@ ans_ = ans
 now = k - 1
 for i in range(k, n):
     if td[i][0] not in kl:
-        # 最小を求めるのをもっと早く
         while now >= 0:
             if kl[td[now][0]] > 1:
                 mi = td[now]

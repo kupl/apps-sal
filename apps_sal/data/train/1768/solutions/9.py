@@ -29,13 +29,13 @@ def fit_recur(bag, items):
 def fit_bag(height: int, width: int, items: List[List[List[int]]]) -> List[List[int]]:
     bag = [[0 for i in range(width)] for j in range(height)]
 
-    for item in items:  # First of all, if there is a null line at the border of the item, it is deleted
+    for item in items:
         while sum([ite == 0 for ite in item[0]]) == len(item[0]):
             del item[0]
         while sum([ite == 0 for ite in item[-1]]) == len(item[-1]):
             del item[-1]
 
-    for i in range(1, len(items)):  # We sort the items to make the algorithm more eficient
+    for i in range(1, len(items)):
         while i > 0 and len(items[i]) >= len(items[i - 1]):
             aux = items[i]
             items[i] = items[i - 1]

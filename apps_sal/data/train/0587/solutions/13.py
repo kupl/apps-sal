@@ -1,5 +1,3 @@
-# author : Tapan Goyal
-#           MNIT Jaipur
 
 import math
 import bisect
@@ -82,7 +80,6 @@ def ceil(a, b):
     return (a + b - 1) // b
 
 
-# /////////////////////////////////////////////////////////////////////////////////////////////////
 def __starting_point():
     for _ in range(1):
         n = one()

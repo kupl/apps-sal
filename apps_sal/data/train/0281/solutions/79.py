@@ -20,12 +20,3 @@ class Solution:
                 return False
 
         return True
-
-#         3 ->
-#         1 1 1 0 0 0 ...
-
-#         29 ->
-#         2 2 2 1 1 1 ...
-
-#         27 ->
-#         2 1 1 1 1 1 ...

@@ -23,5 +23,4 @@ class Solution:
             a, b = cal(e)
             ans += a
             mul = max(mul, b)
-        #print(ans, mul)
         return ans + mul

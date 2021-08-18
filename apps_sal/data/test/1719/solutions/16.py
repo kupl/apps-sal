@@ -1,6 +1,5 @@
 N = int(input())
 dp = [[0] * 64 for i in range(N - 2)]
-# 3進数で管理
 mod = 10**9 + 7
 
 d = dict()
@@ -34,7 +33,6 @@ for i in range(N - 3):
         for k in range(4):
             idx = tmp + k * 16
             if d[idx] == "AGC" or d[idx] == 'ACG' or d[idx] == "GAC" or (d[j][0] == 'A' and d[j][1] == 'G' and k == 2) or (d[j][0] == 'A' and d[j][2] == 'G' and k == 2):
-                #print(d[j] + d2[k])
                 continue
             dp[i + 1][idx] += dp[i][j]
 

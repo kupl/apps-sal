@@ -1,13 +1,6 @@
 import sys
 
-# import numpy as np
-# from numba import njit
-#
-# read = sys.stdin.read
 readline = sys.stdin.readline
-
-
-# readlines = sys.stdin.readlines
 
 
 def solve(n, x, m):

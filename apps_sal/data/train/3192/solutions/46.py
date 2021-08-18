@@ -8,5 +8,3 @@ def how_many_dalmatians(number):
         return dogs[1]
     else:
         return dogs[0]
-
-# respond = if number <= 10 then dogs[0] else if (number <= 50 then dogs[1] else (number = 101  dogs[3] else dogs[2]

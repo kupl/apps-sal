@@ -14,11 +14,9 @@ class Solution:
             i = 1
             while i**2 < m:
                 if not dp[m - i**2]:
-                    # print(i**2, m)
                     dp[m] = True
                     break
                 i += 1
-        # print(dp)
         return dp[n]
 
 

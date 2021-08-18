@@ -34,7 +34,6 @@ for off in range(m):
         if run < -k:
             run = -k
         best = max(best, run)
-    #print(best, C)
     bestbest = max(bestbest, best)
 
 print(bestbest)

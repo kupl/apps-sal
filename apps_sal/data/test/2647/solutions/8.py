@@ -4,11 +4,11 @@ H, W = list(map(int, input().split()))
 
 mazo = [list(input()) for _ in range(H)]
 
-cnt = 0  # 初期状態の黒の数を数える
+cnt = 0
 for i in range(H):
     for j in range(W):
-        if mazo[i][j] == "#":
-            cnt += 1
+        if mazo[i][j] == "
+        cnt += 1
 
 d = deque()
 d.append((0, 0))

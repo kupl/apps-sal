@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# AUTHOR: haya14busa
 import sys
 import io
 
@@ -9,11 +6,8 @@ from itertools import combinations
 
 
 def solve(n, m, pairs):
-    # return: minimum possible sum of their recognitions
-    assert 3 <= n <= 4000  # number of warioor
-    assert 0 <= m <= 4000  # number of pairs of warriors knowing each other
-    # for (a, b) in pairs:
-    #     assert 1 <= a < b <= n
+    assert 3 <= n <= 4000
+    assert 0 <= m <= 4000
 
     recognitions = defaultdict(set)
 
@@ -52,8 +46,6 @@ def getinput():
 
 def iosolve():
     return str(solve(*getinput()))
-    # return 'YES' if solve(*getinput()) else 'NO' # for boolean output
-    # return '\n'.join(map(str, solve(*getinput()))) # for multiple line output
 
 
 def main():
@@ -71,7 +63,6 @@ def test():
     IO_TEST_CASES = [
 
         (
-            # INPUT
             '''\
 5 6
 1 2
@@ -81,14 +72,12 @@ def test():
 3 4
 4 5
             ''',
-            # EXPECT
             '''\
 2
             '''
         ),
 
         (
-            # INPUT
             '''\
 7 4
 2 1
@@ -96,7 +85,6 @@ def test():
 5 1
 1 7
             ''',
-            # EXPECT
             '''\
 -1
             '''
@@ -105,13 +93,10 @@ def test():
 
     ]
 
-    # List[(List[arg for solve()], expect)]
     TEST_CASES = [
-        # ([], None),
     ]
 
-    # You do need to see below
-    import unittest  # to save memory, import only if test required
+    import unittest
     import sys
     import io
 
@@ -130,7 +115,6 @@ def test():
     for stdin, expect in IO_TEST_CASES:
         sys.stdin = io.StringIO(stdin.strip())
         art.equal(iosolve(), expect.strip())
-        # art.float_equal(float(iosolve()), float(expect.strip()), 10 ** -6)
 
 
 def getstdin_lines():

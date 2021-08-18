@@ -1,6 +1,5 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
-        # greedy
         target = s[0]
         cost_list = [cost[0]]
         res = 0

@@ -1,6 +1,5 @@
 class Solution:
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
-        #
         def rec(l, h):
             if h - l < K:
                 dp[l][h] = (h - l + 1) * max(A[l:h + 1])

@@ -17,9 +17,3 @@ class Solution:
                 break
         dic[(i, j)] = max(a, b)
         return dic[(i, j)]
-
-
-#   1, 4, 2 ,3, 5
-#   1, 2, 3, 5, 4
-#   every number has choices: not connect or connect (first encounter connect)
-#

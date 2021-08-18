@@ -1,6 +1,4 @@
-#import math
 L = int(input())
-#r = math.floor(math.log2(L))
 r = L.bit_length() - 1
 N = r + 1
 graph = []

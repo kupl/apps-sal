@@ -9,9 +9,7 @@ for i in range(n):
     if a[i] == b[i]:
         ab[i] = a[i]
 
-# print(ab)
 test = set(list(range(1, n + 1)))
-#abtup = set([])
 for i in range(n):
     setab = set(ab)
     realtest = test - setab

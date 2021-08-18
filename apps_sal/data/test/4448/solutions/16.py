@@ -5,7 +5,6 @@ def main():
     n, m = list(map(int, input().split()))
     wanted_cnt = list(map(int, input().split()))
     Order = [tuple(map(int, input().split())) for i in range(m)]
-    # count the maximum number which you can buy on sales day.
     S = sum(wanted_cnt)
 
     def ispossible_within(Day):

@@ -1,6 +1,3 @@
-# cook your dish here
-# cook your dish here
-# cook your dish here
 t = int(input())
 for z in range(t):
     n, r, x, y = map(int, input().split())

@@ -21,9 +21,7 @@ class CodeforcesTask1057BSolution:
         widest = 0
         x = 1
         for layer in pyramid:
-            #print(x, len(layer), layer)
             if max(layer) / x > 100:
-                #print(max(layer), x, 100, max(layer) / 100)
                 widest = x
             x += 1
         self.result = str(widest)

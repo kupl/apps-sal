@@ -12,9 +12,6 @@ for _ in range(N - 1):
     G[a].append(b)
     G[b].append(a)
 
-# 頂点nowを根とする部分木の色の塗り方 (parが親の時)
-#   ただしnowはすでに塗られているとする
-
 
 def dfs(now, par):
     if K < len(G[now]):

@@ -1,6 +1,5 @@
 n, k = map(int, input().split())
 mod = pow(10, 9) + 7
-# max:comb(2*n-1,n-1)
 
 
 def cmb(n, r, mod):

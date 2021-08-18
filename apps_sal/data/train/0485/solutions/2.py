@@ -3,7 +3,6 @@ class Solution:
         flip_pos = 0
         flip_inds = []
         for i in range(len(A)):
-            # find the correct current bit based on prior flips
             while flip_pos < len(flip_inds) and i - K + 1 > flip_inds[flip_pos]:
                 flip_pos += 1
 

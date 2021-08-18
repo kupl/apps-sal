@@ -1,8 +1,8 @@
 entrada = list([int(x) for x in input().split()])
-qtdjogadasVencedor = entrada[0]  # 3
-qtdjogadasPerdedor = entrada[1]  # 2
-qtdminpontVencedor = entrada[2]  # 1
-qtdminpontPerdedor = entrada[3]  # 1
+qtdjogadasVencedor = entrada[0]
+qtdjogadasPerdedor = entrada[1]
+qtdminpontVencedor = entrada[2]
+qtdminpontPerdedor = entrada[3]
 listaPrincipal, laux = [], []
 for i in range(qtdminpontVencedor, qtdjogadasVencedor + 1):
     for j in range(qtdminpontPerdedor, qtdjogadasPerdedor + 1):

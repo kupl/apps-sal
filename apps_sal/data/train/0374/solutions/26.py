@@ -1,7 +1,6 @@
 class Solution:
     def shortestSuperstring(self, A: List[str]) -> str:
         n = len(A)
-        # Building the graph
         graph = [[0] * n for _ in range(n)]
         for i, word1 in enumerate(A):
             for j, word2 in enumerate(A):
@@ -12,13 +11,11 @@ class Solution:
                         graph[i][j] = k
                         break
 
-        # Recursion. i is a mask to represent the ordering. k is the last node in the ordering.
         memo = {}
 
         def search(i, k):
             if (i, k) in memo:
                 return memo[i, k]
-            # if not (i & (1 << k)): return ''
             if i == (1 << k):
                 return A[k]
             memo[i, k] = ''
@@ -29,7 +26,6 @@ class Solution:
                         memo[i, k] = candidate
             return memo[i, k]
 
-        # Finding the best
         res = ''
         for k in range(n):
             candidate = search((1 << n) - 1, k)

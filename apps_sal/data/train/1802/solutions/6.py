@@ -1,4 +1,3 @@
-# All credit to PuzzlingInPython's blog post on the Bocker Liptak algorithm for calculating the Frobenius number.
 
 from math import gcd as builtin_gcd
 

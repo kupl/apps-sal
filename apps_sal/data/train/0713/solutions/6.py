@@ -5,7 +5,6 @@ for _ in range(int(input())):
     lst2 = list(map(int, input().split()))
     j = i = 0
     while i < b:
-        #         print(i)
         while j < a:
             if lst2[i] == lst1[j]:
                 break

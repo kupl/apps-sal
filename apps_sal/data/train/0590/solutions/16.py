@@ -16,14 +16,10 @@ for k in range(T):
     else:
         l3[0] = l2[0]
         l3[1] = (l1[1] + ((m) * l1[0]) % 1000000007) % 1000000007
-        # print(l3[1],x,l2[1])
         s = 0
         v = 0
         for i in range(2, x):
             s = l2[i - 1] * (l2[i - 1] - 1) // 2
-            # print(l2[i-1],s)
             v = l3[i - 1] * (l3[i - 1] + 1) // 2
-            # print(l3[i-1],v)
-            # print(v-s)
             l3[i] = ((v - s) % 1000000007 + l1[i]) % 1000000007
     print(l3[x - 1])

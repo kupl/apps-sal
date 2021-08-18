@@ -5,9 +5,8 @@ def resolve():
     import heapq
 
     def dijkstra_heap(s, g, edge):
-        # 始点sから各頂点への最短距離
         d = [10**20] * (n + 2)
-        used = [True] * (n + 2)  # True:未確定
+        used = [True] * (n + 2)
         d[s] = 0
         used[s] = False
         edgelist = []
@@ -18,7 +17,6 @@ def resolve():
             heapq.heappush(edgelist, (max(dist - r - sr, 0), i))
         while len(edgelist):
             minedge = heapq.heappop(edgelist)
-            # まだ使われてない頂点の中から最小の距離のものを探す
             v = minedge[1]
             if not used[v]:
                 continue
@@ -34,7 +32,7 @@ def resolve():
                 break
         return d[g]
 
-    sx, sy, gx, gy = map(int, input().split())  # n:頂点数　w:辺の数
+    sx, sy, gx, gy = map(int, input().split())
     n = int(input())
     edge = [(sx, sy, 0), (gx, gy, 0)]
     for i in range(2, n + 2):

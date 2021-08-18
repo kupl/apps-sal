@@ -16,6 +16,5 @@ f = lcm(x, y)
 
 k = (b // f) - ((a - 1) // f)
 
-##if a % f == 0 or b % f == 0: k += 1
 
 print(k)

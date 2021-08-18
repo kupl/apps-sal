@@ -8,8 +8,6 @@ elif k == -1:
     valid = [1, -1]
 else:
     valid = [k]
-# print(math.log(n * 1e9) / math.log(abs(k)))
-# print(valid)
 
 s = 0
 ans = 0

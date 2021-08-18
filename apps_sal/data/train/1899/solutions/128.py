@@ -13,7 +13,6 @@ class Solution(object):
             for r, row in enumerate(A):
                 for c, val in enumerate(row):
                     if val and (r, c) not in done:
-                        # Start dfs
                         stack = [(r, c)]
                         seen = {(r, c)}
                         while stack:
@@ -27,7 +26,6 @@ class Solution(object):
             return components
 
         source, target = get_components()
-        # print source, target
         queue = collections.deque([(node, 0) for node in source])
         done = set(source)
         while queue:

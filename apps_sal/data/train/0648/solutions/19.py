@@ -4,11 +4,9 @@ q = inpt[1]
 
 h = list(map(int, input().split()))
 for i in range(0, q):
-    # print(h)
     flag = 1
     oper = list(map(int, input().split()))
     typ = oper[0]
-    # print(oper)
     if(typ == 2):
         for j in range(oper[1] - 1, oper[2]):
             h[j] = h[j] + oper[3]
@@ -19,7 +17,6 @@ for i in range(0, q):
         count = 0
         jp = 0
         for l in range(pos + 1, n):
-            # print(l)
             count = count + 1
             if(jp == jump):
                 break

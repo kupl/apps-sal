@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     S, W1, W2, W3 = (int(i) for i in input().split(' '))
     if(W1 + W2 + W3 <= S):

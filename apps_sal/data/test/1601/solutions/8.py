@@ -11,13 +11,12 @@ for i in a:
 for i in a:
     d[i[0][0]].append([i[0][1], i[0][2], i[1]])
 for x in d:
-    # doing for 2d
-    l = d[x]  # this is restricted to x-coordinate
+    l = d[x]
     b = {}
     for i in l:
         b[i[0]] = []
     for i in l:
-        b[i[0]].append([i[1], i[2]])  # {z, n}
+        b[i[0]].append([i[1], i[2]])
     for y in b:
         pom = 0
         while pom + 1 < len(b[y]):

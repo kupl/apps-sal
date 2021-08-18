@@ -2,8 +2,6 @@ import math
 A, B = map(int, input().split())
 C = math.gcd(A, B)
 
-# N以下の素数れっきょエラトステネス
-
 
 def prime(N):
     lsprime = [0, 0] + [1 for i in range(N - 1)]
@@ -17,8 +15,6 @@ def prime(N):
             lsprime[i] = 0
             i += k
     return lsprime2
-
-# 素因数分解
 
 
 def prime2(N):

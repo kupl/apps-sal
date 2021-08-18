@@ -52,8 +52,8 @@ for _ in range(18):
     if A > r:
         ten *= 10
         continue
-    na = 0  # 初項
-    nl = 0  # 長さ
+    na = 0
+    nl = 0
 
     if A >= l:
         na = A

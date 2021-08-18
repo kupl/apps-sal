@@ -18,16 +18,11 @@ class Solution:
 
                 if turn:
                     if i + x <= j:
-                        # print(\"Alex's turn\")
-                        # print(\"Alex is picking - \", self.piles[i:i + x])
 
                         alex = sum(self.piles[i:i + x]) + helper(i + x, j, max(x, M), turn=False)
                         maxalex = max(alex, maxalex)
-                        # print(\"For \", i, \" turn, Alex got, \", alex)
                 else:
-                    # print(\"Lee's turn for \", i)
                     alex = helper(i + x, j, max(x, M), turn=True)
-                    # print(\"After Lee picked in \", i, \" turn, Alex got \", alex)
                     maxalex = min(alex, maxalex)
 
             return maxalex

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import Counter
 
 n, *v = list(map(int, open(0).read().split()))

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 '''
 7
@@ -12,7 +11,6 @@ abcdbbd
 2 1 7
 '''
 
-# from helper import elapsed_time
 from bisect import bisect_left, insort_left
 
 
@@ -20,13 +18,11 @@ N = int(input())
 s = list(input())
 Q = int(input())
 
-# a-zまでの26文字に対して、s文字列の各文字に該当するindexを格納しておく
 d = {i: [] for i in range(26)}
 for i, c in enumerate(s):
     d[ord(c) - ord("a")].append(i)
 
 
-# @elapsed_time
 def convert(d: dict, s: list, q1: int, q2: str):
     if s[q1] == q2:
         return d, s
@@ -42,7 +38,6 @@ def convert(d: dict, s: list, q1: int, q2: str):
     return d, s
 
 
-# @elapsed_time
 def calc(d: dict, q1: int, q2: int):
     ans = 0
     for i in range(26):

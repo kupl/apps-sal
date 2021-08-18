@@ -6,7 +6,6 @@ def main():
         return stdin.readline().strip()
 
     n, c = list(map(int, input().split()))
-    # v: cumulative sum
     x, v = zeros(n + 2, dtype=int), zeros(n + 2, dtype=int)
     for i in range(n):
         j, k = list(map(int, input().split()))
@@ -23,11 +22,9 @@ def main():
         max_nut_counterclockwise[i] = max(max_nut_counterclockwise[i + 1], v[-1] - v[i] - c + x[i + 1])
 
     ans = 0
-    # rotate clockwise, then rotate counterclockwise
     for i in range(n):
         if ans < v[i] - 2 * x[i] + max_nut_counterclockwise[i]:
             ans = v[i] - 2 * x[i] + max_nut_counterclockwise[i]
-    # rotate counterclockwise, then rotate clockwise
     for i in range(2, n + 2):
         if ans < v[-1] - v[i - 1] - 2 * (c - x[i]) + max_nut_clockwise[i - 1]:
             ans = v[-1] - v[i - 1] - 2 * (c - x[i]) + max_nut_clockwise[i - 1]

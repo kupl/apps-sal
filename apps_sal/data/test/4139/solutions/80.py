@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
 """
 Created on Wed Sep 30 22:35:24 2020
 
 @author: liang
 """
-# -*- coding: utf-8 -*-
 """
 Created on Wed Sep 30 22:08:28 2020
 

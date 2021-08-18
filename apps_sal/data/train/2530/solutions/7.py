@@ -15,10 +15,4 @@ class Solution:
             else:
                 mods[rem] = [v]
 
-        # Too slow
-        # for i in range(len(time)):
-        #     for j in range(i+1, len(time)):
-        #         if (time[i] + time[j]) % 60 == 0:
-        #             count += 1
-
         return count

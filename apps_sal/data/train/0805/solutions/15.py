@@ -7,7 +7,6 @@ for T in range(t):
         param = list(map(int, input().split()))
         s, p, v = param[0], param[1], param[2]
 
-        # if(isinstance(p/(s+1),int)):
         s = s + 1
 
         p = int(p / s)

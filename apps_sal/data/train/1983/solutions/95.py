@@ -22,9 +22,3 @@ class ProductOfNumbers:
             return self.nums[right] // self.nums[left]
         else:
             return 0
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

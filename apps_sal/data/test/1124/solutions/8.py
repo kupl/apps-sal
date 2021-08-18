@@ -1,4 +1,3 @@
-# ARC105 B
 
 from math import gcd
 

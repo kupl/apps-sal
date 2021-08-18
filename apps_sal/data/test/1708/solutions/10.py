@@ -1,11 +1,9 @@
-# cook your dish here
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
 c = list(map(int, input().split()))
 cl = []
 for i in range(n):
     cl.append([c[i], i])
-# print(cl)
 
 
 def fun(itm):

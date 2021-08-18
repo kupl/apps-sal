@@ -1,6 +1,5 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        # try to get to same distance from the 2's time
         nops = 0
         all_z = False
         while not all_z:

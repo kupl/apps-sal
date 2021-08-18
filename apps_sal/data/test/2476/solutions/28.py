@@ -6,14 +6,11 @@ A = list(map(int, input().split()))
 lst = [0] * (N + 1)
 for a in A:
     lst[a - 1] += 1
-lst.sort()  # 頻度列
+lst.sort()
 
 s = [0] * (N + 1)
 for i in range(N):
     s[i + 1] = s[i] + lst[i + 1]
-
-# print (lst)
-# print (s)
 
 
 def check(x, k):

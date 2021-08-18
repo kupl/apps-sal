@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 
 
@@ -16,10 +15,6 @@ def rec(arr, start, end):
     i = maxk(arr, start, end)
     if(i == start or i == end - 1):
         return 1
-    # elif(i>start+int((end-start)/2)):
-    #    return 1+rec(arr,i+1,end)
-    # elif(i<start+int((end-start)/2)):
-    #    return 1+rec(arr,start,i)
     else:
         return 1 + min(rec(arr, i + 1, end), rec(arr, start, i))
 

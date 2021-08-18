@@ -47,12 +47,9 @@ class Solution:
             i = min(k for k in [i_a, i_b] if k is not None)
 
             if next_a2 is not None and next_b2 is not None and next_a2[0] <= i <= next_a2[1] and next_b2[0] <= i <= next_b2[1]:
-                #intersections_append2((counter_a, counter_b), i)
                 if counter_a == prev_counter_a and counter_b == prev_counter_b:
-                    # append
                     res3[-1].append(i)
                 else:
-                    # add
                     res3.append([i])
                 prev_counter_a = counter_a
                 prev_counter_b = counter_b

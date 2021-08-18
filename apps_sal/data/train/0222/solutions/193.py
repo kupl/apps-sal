@@ -9,7 +9,6 @@ class Solution:
         def get_value(i, j):
             if (i, j) in memo:
                 return memo[i, j]
-            # search for A[i] + A[j] in A
             if A[i] + A[j] in A_indices:
                 memo[i, j] = 1 + get_value(j, A_indices[A[i] + A[j]])
                 self.best = max(self.best, memo[i, j])

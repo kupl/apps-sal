@@ -1,6 +1,5 @@
 def go():
     n, h, l, r = list(map(int, input().split()))
-    # n = int(input())
     a = list(map(int, input().split()))
     prev = [0]
     s = 0
@@ -21,6 +20,5 @@ def go():
     return mx
 
 
-# t = int(input())
 for _ in range(1):
     print(go())

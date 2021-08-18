@@ -13,5 +13,4 @@ class Solution:
                     dp[arr[i]] = max(dp[arr[i]], 1)
                 else:
                     dp[arr[i]] = 1
-        # print(dp)
         return max(dp.values())

@@ -5,7 +5,7 @@ class Solution:
     def minPushBox(self, grid: List[List[str]]) -> int:
         def isValid(pos):
             i, j = pos[0], pos[1]
-            return 0 <= i < len(grid) and 0 <= j < len(grid[0]) and grid[i][j] != '#'
+            return 0 <= i < len(grid) and 0 <= j < len(grid[0]) and grid[i][j] != '
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j] == 'T':

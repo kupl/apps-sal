@@ -6,5 +6,4 @@ class Solution:
                 d = A[j] - A[i]
                 dp[j, d] = dp.get((i, d), 1) + 1
 
-        # print(dp)
         return max(dp.values())

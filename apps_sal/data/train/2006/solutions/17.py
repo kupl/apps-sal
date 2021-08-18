@@ -11,6 +11,3 @@ for i in range(2, n):
 
 N = max(ar) // d - n
 print("Alice" if N % 2 else "Bob")
-
-
-#  C:\Users\Usuario\HOME2\Programacion\ACM

@@ -1,4 +1,3 @@
-# cook your dish here
 import heapq
 n, m = map(int, input().split())
 a = []

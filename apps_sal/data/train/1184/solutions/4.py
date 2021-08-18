@@ -80,5 +80,4 @@ for _ in range(int(stdin.readline())):
                 s += cakes[i] * 25
     print(s)
     arr.append(s)
-    # print(arr)
 print(sum(arr))

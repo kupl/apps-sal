@@ -1,4 +1,3 @@
-# A - HonestOrDishonest
 def main():
     a, b = input().split()
 

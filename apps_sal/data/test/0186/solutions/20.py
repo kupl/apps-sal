@@ -3,7 +3,7 @@ def __starting_point():
     result = 0
     i2 = d * 2
     i3 = t * 3
-    cm = int(max(i2, i3) / 6)  # common
+    cm = int(max(i2, i3) / 6)
     while cm > 0:
         if i2 + 2 < i3 + 3:
             i2 += 2

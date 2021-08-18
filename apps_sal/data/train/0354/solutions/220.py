@@ -1,11 +1,5 @@
 class Solution:
-    # 2D dp, where count[i][f] indicates the number of ways after i throw and at face f and total[i] indicates the total number of ways after i throw.
-    # count[0][f] = 0 and total[0] = 1.
-    # for each throw, check the number of ways to after ith throw and the end face is f
-    # def dieSimulator(self, n: int, rollMax: List[int]) -> int:
 
-    # DFS with memoization.
-    # State to remember (#throws_left, #repeat, last_face)
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         cache = collections.defaultdict()
 

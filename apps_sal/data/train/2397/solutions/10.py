@@ -7,12 +7,9 @@ def main():
 
         l.sort()
         median = (2 ** m - n - 1) // 2
-        # print(l)
-        # print(median)
         for i in l:
             if i <= median:
                 median += 1
-            # print(median)
         while median in l:
             median += 1
 

@@ -9,7 +9,6 @@ class Solution:
         for i in range(M - 1, -1, -1):
             if len(occ_count) == 2:
                 for k, v in list(occ_count.items()):
-                    # case where if we reduce we have all the same keys
                     if v == 1 and (k - 1 in occ_count or k - 1 == 0):
                         return i + 1
             elif len(occ_count) == 1:

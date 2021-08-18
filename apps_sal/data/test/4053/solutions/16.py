@@ -23,24 +23,18 @@ sp2[1] = 'P'
 for i in range(2, (2 * n) - 2, 2):
     curr1 = lst[i][1]
     curr2 = lst[i + 1][1]
-#    print(curr1," ",curr2,word1[:n-int(i/2)-1],word1[int(i/2)+1:])
     if curr1 == word1[:n - int(i / 2) - 1] and curr2 == word1[int(i / 2) + 1:]:
         sp1[i] = 'P'
         sp1[i + 1] = 'S'
-# print("yes1\n")
-# print(sp1,sp2)
     elif curr2 == word1[:n - int(i / 2) - 1] and curr1 == word1[int(i / 2) + 1:]:
         sp1[i] = 'S'
         sp1[i + 1] = 'P'
-# print("yes2\n")
     if curr1 == word2[:n - int(i / 2) - 1] and curr2 == word2[int(i / 2) + 1:]:
         sp2[i] = 'P'
         sp2[i + 1] = 'S'
-# print("yes3\n")
     elif curr2 == word2[:n - int(i / 2) - 1] and curr1 == word2[int(i / 2) + 1:]:
         sp2[i] = 'S'
         sp2[i + 1] = 'P'
-# print("yes4\n")
 
 for i in sp1:
     if i == 0:
@@ -49,7 +43,6 @@ for i in sp1:
 for i in sp2:
     if i == 0:
         bool2 = False
-# print(sp1,sp2)
 if bool1:
     ans = ''
     newl = []

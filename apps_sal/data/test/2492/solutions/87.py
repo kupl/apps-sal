@@ -3,7 +3,6 @@ import numpy as np
 
 
 def main():
-    # 入力
     readline = stdin.readline
     n, k = map(int, readline().split())
     a = np.array(readline().strip().split(), dtype="int64")

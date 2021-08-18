@@ -2,10 +2,8 @@ class Solution:
     def regionsBySlashes(self, grid: List[str]) -> int:
         n = len(grid)
         seen = [[[0, 0, 0, 0] for x in range(n)] for y in range(n)]
-        # top 1, left 2, bottom 3, right 0
 
         def dfs(x, y, loc):
-            # print(x,y)
             if not (0 <= x < n and 0 <= y < n) or seen[x][y][loc] == 1:
                 return
             seen[x][y][loc] = 1
@@ -59,7 +57,6 @@ class Solution:
                 for loc in range(4):
                     k = seen[i][j][loc]
                     if k == 0:
-                        #print(i,j,k, seen)
                         count += 1
                         dfs(i, j, loc)
         return count

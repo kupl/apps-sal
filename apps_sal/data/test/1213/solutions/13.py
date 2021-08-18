@@ -8,7 +8,6 @@ if n - k < k:
         if i != 0:
             print('LEFT')
 else:
-    #    print('2')
     for i in reversed(list(range(0, k - 1))):
         print('LEFT')
     for i in range(n):

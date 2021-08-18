@@ -13,4 +13,3 @@ def dfs(cur, a, b, c):
 
 
 print((dfs(0, 0, 0, 0)))
-# 全てのバリエーション試す、dfs

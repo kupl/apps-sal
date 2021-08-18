@@ -5,7 +5,6 @@ M = 0
 
 for z in range(N):
     i = N - z
-    # iの倍数の箱の和%2がAliと同じか調べる
     sb = 0
     for j in range(i * 2, N + 1, i):
         sb += bli[j]

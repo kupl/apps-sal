@@ -45,10 +45,9 @@ class Solution:
 
             for i in range(d - 1, -1, -1):
                 for j in range(n - 1, i - 1, -1):
-                    for k in range(j, n):  # do job j ~ k, k = j ~ n - 1, so the next day start from job k + 1
+                    for k in range(j, n):
                         futureCost = dp[i + 1][k + 1]
                         todayCost = max(jobDifficulty[j:k + 1])
-                        #print([i, j, k])
                         dp[i][j] = min(dp[i][j], todayCost + futureCost)
 
             return dp[0][0]

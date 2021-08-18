@@ -3,26 +3,19 @@ import re
 
 def transpose(amount, tab):
 
-    # get start and end of all frets
     fret_pos = get_all_fret_positions(tab)
-    # process each column that contains frets
     pos = 0
     tab_new = ['' for string in tab]
     for fret_start in sorted(fret_pos):
         fret_end = fret_pos[fret_start]
-        # get all sub strings from one column
         col = [string[fret_start:fret_end] for string in tab]
-        # apply amount to all frets
         col, col_width = apply_amount(col, amount)
         if col == 'Out of frets!':
             return 'Out of frets!'
-        # adjust column width
         col = adjust_column_width(col, col_width)
-        # add modified column back to tablature
         for i, row in enumerate(col):
             tab_new[i] = tab_new[i] + tab[i][pos:fret_start] + row
         pos = fret_end
-        # add the part after the final fret
     for i, row in enumerate(col):
         tab_new[i] = tab_new[i] + tab[i][fret_end:]
 

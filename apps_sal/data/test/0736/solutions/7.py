@@ -1,4 +1,3 @@
-# Codeforces Round 272d2 problem A
 
 inp = tuple(map(int, input().split(' ')))
 n, m = inp

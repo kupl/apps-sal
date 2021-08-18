@@ -1,1 +1,1 @@
-def str_count(x, y): return x.count(y)  # (strng, letter):
+def str_count(x, y): return x.count(y)

@@ -8,9 +8,7 @@ for i in range(n):
         ind = i
 kol = mi
 pol = kol % n
-#print(kol, pol)
 for i in range(n):
-    #print(kol, arr[i])
     if(kol >= arr[pol]):
         break
     kol += 1

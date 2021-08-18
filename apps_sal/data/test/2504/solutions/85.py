@@ -5,11 +5,11 @@ q = int(input())
 S = [list(map(int, input().split())) for i in range(q)]
 
 
-for i in range(m):  # ノード番号が1始まりで与えられている場合
+for i in range(m):
     for j in range(2):
         A[i][j] -= 1
 
-for i in range(q):  # ノード番号が1始まりで与えられている場合
+for i in range(q):
     for j in range(2):
         S[i][j] -= 1
 
@@ -22,10 +22,6 @@ for i in range(m):
     M[A[i][0]][A[i][1]] = A[i][2]
     M[A[i][1]][A[i][0]] = A[i][2]
 
-# for k in range(n):
-#     for i in range(n):
-#         for j in range(n):
-#             M[i][j] = min(M[i][j], M[i][k] + M[k][j])
 
 M = floyd_warshall(M)
 
@@ -36,10 +32,6 @@ for i in range(n):
 for i in range(n):
     M[i][i] = 0
 
-# for k in range(n):
-#     for i in range(n):
-#         for j in range(n):
-#             M[i][j] = min(M[i][j], M[i][k] + M[k][j])
 
 M = floyd_warshall(M)
 

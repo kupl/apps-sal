@@ -7,12 +7,9 @@ arr = sorted(arr, reverse=True)
 
 low = 1
 high = n
-# print(arr)
 
 
 def check(k, m):
-    # print(m)
-    # print(m)
     if m > 0:
         l = 0
         z = 0
@@ -23,7 +20,6 @@ def check(k, m):
                 z = 0
                 l += 1
 
-    # print(m)
     if m <= 0:
         return 1
     else:
@@ -34,13 +30,11 @@ ans = []
 while high >= low:
 
     mid = low + (high - low) // 2
-    # print(low,high,mid)
     if check(mid, m):
         ans.append(mid)
         high = mid - 1
     else:
         low = mid + 1
-# print(ans)
 if len(ans) > 0:
     print(min(ans))
 else:

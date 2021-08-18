@@ -28,7 +28,6 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
-############################## SOLUTION ##############################
 m, n = [int(x) for x in g()]
 q = []
 for i in range(m):

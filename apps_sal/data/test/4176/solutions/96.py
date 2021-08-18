@@ -2,7 +2,7 @@ import math
 a, b = map(int, input().split())
 
 
-def lcm(x, y):  # Least common multiple
+def lcm(x, y):
     return (x * y) // math.gcd(x, y)
 
 

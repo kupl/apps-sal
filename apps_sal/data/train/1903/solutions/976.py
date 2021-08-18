@@ -11,7 +11,6 @@ class UnionFind:
         s1 = self.size(r1)
         s2 = self.size(r2)
 
-        # Weighted Union: to keep the height of sets as small as possible
         if s1 <= s2:
             self.parent[r1] = r2
             self.parent[r2] -= s1
@@ -24,7 +23,6 @@ class UnionFind:
         while self.parent[r] >= 0:
             r = self.parent[r]
 
-        # Path Compression: to keep the height of sets as small as possible
         while v != r:
             new_v = self.parent[v]
             self.parent[v] = r

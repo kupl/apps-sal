@@ -9,14 +9,14 @@ def can_paint(wall: list) -> bool:
     for i in range(3):
         for j in range(3):
             temp = wall[i][j] + wall[i + 1][j] + wall[i][j + 1] + wall[i + 1][j + 1]
-            if temp.count('.') != temp.count('#'):
+            if temp.count('.') != temp.count('
                 return True
 
     return False
 
 
 def main() -> int:
-    wall = [input(), input(), input(), input()]
+    wall=[input(), input(), input(), input()]
     print('YES' if can_paint(wall) else 'NO')
 
     return 0

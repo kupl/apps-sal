@@ -26,7 +26,6 @@ for ppppp in range(q):
     for i in range(k, n):
         dd = [0, 0, 0]
         for d in range(3):
-            # remove previous cost
             cost[d] -= weights[i - k][d]
 
             if x[i] != inf_seq[(i + d) % 3]:

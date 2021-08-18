@@ -11,7 +11,6 @@ class Solution:
             if current - target in memo:
                 left[k] = min(left[k], k - memo[current - target])
             memo[current] = k
-        # print(left)
 
         right = [float('inf')] * n
         memo = {0: n}

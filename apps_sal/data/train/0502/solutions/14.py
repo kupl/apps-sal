@@ -1,6 +1,5 @@
 class Solution:
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
-        # This is special case where all the nodes are initially infected, see which one connected least
         if len(initial) == len(graph):
             m = 0
             r = initial[0]
@@ -14,7 +13,7 @@ class Solution:
         for init in initial:
             q = collections.deque()
             q.append(init)
-            visit = set()  # only cache the current initial infect node
+            visit = set()
             visit.add(init)
             while q:
                 virus = q.popleft()

@@ -1,7 +1,5 @@
 class Solution:
     def isSolvable(self, words: List[str], result: str) -> bool:
-        # backtracking?
-        # awice ++
         words.append(result)
         R, C = len(words), max(list(map(len, words)))
         used = {}
@@ -23,12 +21,10 @@ class Solution:
             else:
                 for d, ad in enumerate(used_d):
                     if ad is None and (d or col != len(word) - 1):
-                        # start backtracking
                         used[letter] = d
                         used_d[d] = letter
                         if backtrack(row + 1, col, bal + sign * d):
                             return True
-                        # restore to previous state
                         used_d[d] = None
                         del used[letter]
 

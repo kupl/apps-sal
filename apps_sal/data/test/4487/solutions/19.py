@@ -18,7 +18,6 @@
     |A|, |B|, |C| は文字列A, B, Cの長さを表します。
 '''
 
-# 標準入力から A, B, C を取得する
 a, b, c = list(map(str, input().split()))
 
 result = 'ret'

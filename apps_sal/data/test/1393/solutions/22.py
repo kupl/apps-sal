@@ -1,7 +1,6 @@
 s = input().strip()
 t = input().strip()
-#print(s, t)
-count_s = [0] * 100  # 32 + 25
+count_s = [0] * 100
 count_t = [0] * 100
 ans1, ans2 = [0, 0]
 for i in range(len(t)):
@@ -13,7 +12,6 @@ for i in range(58):
     count_s[i] -= Min
     count_t[i] -= Min
     ans1 += Min
-#print(ans1, count_s, count_t)
 for i in range(58):
     Min = min(count_s[i], count_t[(i + 32) % 64])
     count_s[i] -= Min

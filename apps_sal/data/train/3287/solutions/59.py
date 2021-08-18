@@ -7,4 +7,3 @@ def mouth_size(animal):
         return "small"
     else:
         return "wide"
-  # code here

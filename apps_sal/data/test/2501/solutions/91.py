@@ -17,10 +17,6 @@ def MAP(): return map(int, input().split())
 def LIST(): return list(MAP())
 
 
-#i - j == a[i] + a[j]
-# => i - a[i] == j + a[j]
-#j - i == a[i] + a[j]
-# => i + a[i] == j - a[j]
 n = INT()
 a = LIST()
 c = [0] * (2 * n + 1)

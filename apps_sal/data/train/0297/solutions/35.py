@@ -4,8 +4,6 @@ class Solution:
 
         if len(curr) == size:
 
-            # print(curr)
-
             self.res += 1
 
             return

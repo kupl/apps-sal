@@ -1,7 +1,6 @@
 import sys
 
 input = sys.stdin.readline
-#
 server, task = list(map(int, input().split()))
 serverstatus = [0] * server
 

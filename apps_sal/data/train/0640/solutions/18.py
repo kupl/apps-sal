@@ -16,9 +16,7 @@ def __starting_point():
             print(0)
         else:
             l = lcm(a, b)
-            # print(l)
             res = (l / a) + (l / b)
-            #print(l/a, b%l)
             print(int(res - 2))
 
 

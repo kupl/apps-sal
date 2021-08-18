@@ -1,7 +1,5 @@
 class Solution:
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
-        # i is starting index of array
-        # return largest sum of averages for A[i:] using partitions
         def dfs(i, partitions):
             if partitions == 1:
                 return (cum[len(A)] - cum[i - 1]) / (len(A) - i + 1)
@@ -17,10 +15,8 @@ class Solution:
 
         ans = 0
         cum = [0 for i in range(len(A) + 1)]
-        # mem[i][j] = i partitions from A[j]
         mem = [[0 for i in range(len(A) + 1)] for j in range(K + 1)]
         cum[0] = 0
-        # cum[i] = sum of A[j] where j < i
         for i in range(len(A)):
             cum[i + 1] = cum[i] + A[i]
         return dfs(1, K)

@@ -23,6 +23,3 @@ if ans == INF:
     print((-1))
 else:
     print(ans)
-
-# for i in range(7):
-#     print (lst[i][:7])

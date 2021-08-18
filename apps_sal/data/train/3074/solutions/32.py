@@ -8,4 +8,3 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
             return desiredHeight_after_first_day // (increment_each_day) + 1
         else:
             return desiredHeight_after_first_day // (increment_each_day) + 2
-    # your code here

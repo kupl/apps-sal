@@ -1,4 +1,3 @@
-# cook your dish here
 a = input().strip()
 r = []
 for i in range(len(a)):

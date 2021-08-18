@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/1/22 22:47
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : B. Game with string.py
 
 
 def main():

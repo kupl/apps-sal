@@ -19,7 +19,6 @@ for i in range(2 * n - 2, -1, -1):
 
 dict = sorted(dict, key=getKey, reverse=True)
 
-# print(dict)
 
 for i in dict:
     if ans[i[0]] == 0 and ans[i[1]] == 0:

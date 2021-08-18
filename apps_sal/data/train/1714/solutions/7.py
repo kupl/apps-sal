@@ -2,12 +2,9 @@ from functools import cmp_to_key
 
 
 def hull_method(pointlist):
-    # handles the duplicate inputs
     pointlist = list(set(map(tuple, pointlist)))
-    # find the bottom most and left most point
     first_idx = min(range(len(pointlist)), key=lambda x: (pointlist[x][1], pointlist[x][0]))
     pointlist[first_idx], pointlist[0] = pointlist[0], pointlist[first_idx]
-    # sort from the first
     p = pointlist[0]
 
     def custom_compare(q, r):
@@ -29,7 +26,6 @@ def hull_method(pointlist):
         return (qy - py) * (rx - qx) - (qx - px) * (ry - qy)
 
     pointlist[1:] = sorted(pointlist[1:], key=cmp_to_key(custom_compare))
-#     print("pointlist = ", pointlist)
     lst, i = [pointlist[0]], 2
     while i < len(pointlist):
         while i < len(pointlist) and get_angle(p, pointlist[i - 1], pointlist[i]) == 0:
@@ -38,7 +34,6 @@ def hull_method(pointlist):
             lst.append(pointlist[i - 1])
             i += 1
     lst.append(pointlist[i - 1])
-#     print("sorted list = ", lst)
     if len(lst) < 3:
         return []
     stck = [lst[0], lst[1], lst[2]]

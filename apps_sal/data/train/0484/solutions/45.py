@@ -3,8 +3,6 @@ class Solution:
         def isPrime(N):
             return N > 1 and all(N % d for d in range(2, int(N**0.5) + 1))
 
-        # N must be a palindrome with odd number of digits.
-        # The return value will have odd number of digits too.
         def nextPalindrome(N):
             if N in [999, 99999, 9999999]:
                 return (N + 1) * 10 + 1

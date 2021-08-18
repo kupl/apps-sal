@@ -14,5 +14,4 @@ else:
         else:
             n -= 2
             k -= 1
-#        print (n, k)
     print(teams)

@@ -59,9 +59,6 @@ def main():
         cnt_size[v] = size_big
         cnt[v] = big
     print(*ans[1:])
-    # print(child)
-    # print(cnt)
-    # print(cnt_size)
 
 
 def __starting_point():

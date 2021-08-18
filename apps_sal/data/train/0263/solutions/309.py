@@ -23,7 +23,6 @@ class Solution:
                 for ne in neighbors[pos]:
                     sequences += helper(ne, hops_left - 1)
                 cache[(pos, hops_left)] = sequences
-                # print(f\"seq {sequences} for (pos {pos}, hops_left {hops_left})\")
                 return sequences
         cache = {}
         counts = 0

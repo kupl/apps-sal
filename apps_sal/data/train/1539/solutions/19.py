@@ -1,14 +1,3 @@
-#!/usr/bin/env python
-# -------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      dvdreddy
-#
-# Created:     05/03/2012
-# Copyright:   (c) dvdreddy 2012
-# Licence:     <your licence>
-# -------------------------------------------------------------------------------
 
 
 def toint(s): return int(s)

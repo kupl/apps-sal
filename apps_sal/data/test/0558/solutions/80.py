@@ -17,7 +17,6 @@ def nCk(n, k):
 
 ans = 0
 for k in range(K + 1):
-    # temp = M*nCk(N-1, k)*pow(M-1, N-K-1, MOD) % MOD
     temp = (M * nCk(N - 1, k)) % MOD * pow(M - 1, N - k - 1, MOD) % MOD
     ans += temp
     ans %= MOD

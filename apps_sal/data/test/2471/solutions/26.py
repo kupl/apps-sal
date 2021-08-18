@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import Counter
 INF = float("inf")
@@ -36,11 +35,11 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    H = int(next(tokens))  # type: int
-    W = int(next(tokens))  # type: int
-    N = int(next(tokens))  # type: int
-    a = [int()] * (N)  # type: "List[int]"
-    b = [int()] * (N)  # type: "List[int]"
+    H = int(next(tokens))
+    W = int(next(tokens))
+    N = int(next(tokens))
+    a = [int()] * (N)
+    b = [int()] * (N)
     for i in range(N):
         a[i] = int(next(tokens))
         b[i] = int(next(tokens))

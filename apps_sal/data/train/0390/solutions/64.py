@@ -7,6 +7,6 @@ class Solution:
                 if (x - y**2) in losers:
                     flag = False
                     break
-            if flag:  # Its a loser position because you cant send the next player to a loser position
+            if flag:
                 losers.add(x)
         return False if n in losers else True

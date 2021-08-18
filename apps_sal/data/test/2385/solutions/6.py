@@ -56,9 +56,8 @@ while que:
             q_append((next_, now[0]))
             check[next_] = 1
 
-# print (order)
 
-size1 = [0] * (N + 1)  # 自身を頂点とする部分木のサイズ、木の根は頂点0
+size1 = [0] * (N + 1)
 dp1 = [1] * (N + 1)
 for child, parent in order[::-1]:
     dp1[child] *= c.factorial(size1[child])
@@ -68,25 +67,20 @@ for child, parent in order[::-1]:
     dp1[parent] *= c.ifactorial(s) * dp1[child]
     dp1[parent] %= MOD
 
-# print (size1)
-# print (dp1)
 
 size2 = [N - 2 - x for x in size1]
 dp2 = [1] * (N + 1)
 
-# print (size1)
-# print (size2)
 for child, parent in order[1:]:
     x = dp1[parent]
     x *= dp2[parent]
     x *= c.ifactorial(size1[parent])
     x *= c.factorial(size1[child] + 1)
-    x *= pow(dp1[child], MOD - 2, MOD)  # 割り算
+    x *= pow(dp1[child], MOD - 2, MOD)
     x *= c.factorial(size2[child])
     x *= c.ifactorial(size2[parent] + 1)
     dp2[child] = x % MOD
 
-# print (dp2)
 
 for x1, x2, s1, s2 in zip(dp1[1:], dp2[1:], size1[1:], size2[1:]):
     s2 += 1

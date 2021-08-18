@@ -14,7 +14,6 @@ def divisor(N):
             if K * K != N:
                 d.append(N // K)
         K += 1
-    #ans += (N - 1)//K
     return d
 
 

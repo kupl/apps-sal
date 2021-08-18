@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for ts in range(t):
     s1 = str(input())

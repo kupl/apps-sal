@@ -4,11 +4,6 @@ class Solution:
         i = 0
         g = [4, 4, 4, 4]
 
-        # there's a subtle difference between what i assumed at first
-        # read: Note that if there are currently more than four customers waiting at the wheel, only four will board the gondola, and the rest will wait for the next rotation.
-        # this means you need to add the remainders to the next customer
-        # also, rotates must happen even if customers = 0
-
         profit = 0
         max_profit = 0
         customers = customers[::-1]
@@ -33,7 +28,6 @@ class Solution:
             if profit > max_profit:
                 best = rotates
                 max_profit = profit
-            #print(rotates, g, profit)
             i += 1
             i %= 4
         return best

@@ -36,6 +36,3 @@ for i in range(n):
         mx += s[0]
 
 print(ans - m + mx * (mx - 1) // 2)
-
-
-# Made By Mostafa_Khaled

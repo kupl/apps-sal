@@ -9,7 +9,7 @@ A = list(map(int, input().split()))
 S = input().strip()
 sys.stdout.write(" ".join(map(str,ans))+"\n")
 '''
-inf = 100000000000000000  # 1e17
+inf = 100000000000000000
 mod = 998244353
 
 n, m = list(map(int, input().split()))
@@ -35,6 +35,3 @@ for x in range(1, (A[n] - A[1]) // (m - 1) + 1):
         ans += f[m][i]
         ans %= mod
 print(ans)
-
-
-# the end

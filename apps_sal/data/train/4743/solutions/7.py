@@ -1,5 +1,4 @@
 def target_game(arr):
-    # your code goes here
     a = 0
     b = 0
 

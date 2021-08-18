@@ -10,7 +10,7 @@ for n in A:
 
 cnt_even = 0
 for key, val in list(z.items()):
-    if val % 2 == 0:  # even
+    if val % 2 == 0:
         cnt_even += 1
 
 cnt_odd = len(z) - cnt_even

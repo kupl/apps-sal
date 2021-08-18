@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 used = []
 a = input().replace("{", "").replace("}", "").replace(" ", "").split(",")
 if a == [""]:

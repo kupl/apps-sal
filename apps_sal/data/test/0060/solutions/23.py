@@ -1,8 +1,6 @@
 x = input().strip()
 n = int(x[:len(x) - 1])
 c = x[len(x) - 1]
-# print(n);
-# print(c);
 ans = 0
 ans += ((n - 1) // 4) * 16
 n %= 4

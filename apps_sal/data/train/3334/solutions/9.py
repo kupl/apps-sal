@@ -1,5 +1,4 @@
 def reduce_fraction(fraction):
-    # your code here
     def get_gcd(x, y):
         a = min(x, y)
         b = max(x, y)

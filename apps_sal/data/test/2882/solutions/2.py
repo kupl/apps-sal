@@ -8,7 +8,6 @@ class Solution:
             return []
         ret = []
         tmp = []
-        # define a set of struct like {str:"((())", cnt:3, rcnt:2)}
         tmp.append({"str": "(", "cnt": 1, "rcnt": 0})
         while tmp:
             cur = tmp.pop()

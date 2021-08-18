@@ -1,5 +1,5 @@
 S = " one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split(" ")
-TENTH = "  twenty thirty forty fifty sixty seventy eighty ninety".split(" ")        # Empty strings wanted at the beginning, when splitting!
+TENTH = "  twenty thirty forty fifty sixty seventy eighty ninety".split(" ")
 
 
 def convertToString(n):

@@ -1,5 +1,4 @@
 import copy
-# from math import gcd
 
 
 def gcd(a, b):
@@ -19,7 +18,6 @@ def main():
     a_lcm = 1
     for a in A:
         a_lcm = lcm(a_lcm, a)
-        # mがlcmの半分よりも小さかったら0
         if (a_lcm / 2) > m:
             print(0)
             return
@@ -27,7 +25,6 @@ def main():
         if (a_lcm / 2) % a == 0:
             print(0)
             return
-    # # あとは定数倍の数調べて終わり
     ans = int((m - (a_lcm / 2)) // a_lcm) + 1
     print(ans)
 

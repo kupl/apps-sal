@@ -1,4 +1,3 @@
-#!/bin/python
 from heapq import heappush, heappop
 import sys
 

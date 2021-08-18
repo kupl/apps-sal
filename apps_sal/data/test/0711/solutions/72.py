@@ -33,7 +33,7 @@ def main():
 
     N, M = list(map(int, input().split()))
 
-    def decom(n) -> list:  # 恐らく因数分解がTLEの原因->1/2乗で打ち切り
+    def decom(n) -> list:
         ret = []
 
         x = n

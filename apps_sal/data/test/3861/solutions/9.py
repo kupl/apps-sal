@@ -1,4 +1,3 @@
-# list(map(int, input().split()))
 from math import sqrt
 n = int(input())
 ans = -1e9

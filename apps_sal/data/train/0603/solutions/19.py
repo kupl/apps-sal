@@ -1,4 +1,3 @@
-# cook your dish here
 x = 'abcdefghijklmnopqrstuvwxyz'
 for _ in range(int(input())):
     s = ''

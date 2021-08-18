@@ -1,6 +1,4 @@
-# B - Great Ocean View
 
-# 各山頂にあるN個の旅館のうち、海が見える旅館はいくつか
 
 N = int(input())
 H = list(map(int, input().split()))

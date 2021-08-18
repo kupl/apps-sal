@@ -83,25 +83,21 @@ def main():
             return mm + 1
         return mm
 
-    # print(a)
     rr = []
     for c, d in t:
         ti = bs(c)
         ai = a[ti]
         e = x - d
-        # print(c,d,e,ti,ai)
         if d + ai[0] <= 0:
             tt = ai[4]
         elif e - ai[2] <= 0:
             tt = ai[3]
         else:
             tt = d + ai[1]
-        # print('tt',tt)
         if ti % 2 == 0:
             tt -= c - ai[5]
         else:
             tt += c - ai[5]
-        # print('tt2',tt)
         if tt < 0:
             tt = 0
         elif tt > x:

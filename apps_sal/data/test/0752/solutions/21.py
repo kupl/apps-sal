@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 n = int(input())
 A = [input() for _ in range(n)]

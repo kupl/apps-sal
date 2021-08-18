@@ -32,12 +32,12 @@ for i in range(n):
     chess.append((t1, int(t2), int(t3)))
 
 for i in chess:
-    if i[1] == x:  # vertical
+    if i[1] == x:
         if i[2] > y and i[2] < u_v[0]:
             u_v = [i[2], i[0]]
         if i[2] < y and i[2] > l_v[0]:
             l_v = [i[2], i[0]]
-    if i[2] == y:  # hori
+    if i[2] == y:
         if i[1] > x and i[1] < u_h[0]:
             u_h = [i[1], i[0]]
         if i[1] < x and i[1] > l_h[0]:

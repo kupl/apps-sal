@@ -1,5 +1,4 @@
 import collections
-# Your code her
 a = int(input())
 b = [int(s) for s in input().split()]
 b = sorted(b)

@@ -7,12 +7,10 @@ class Solution:
         ans = []
 
         def DFS(N, num):
-            # base case
             if N == 0:
                 return ans.append(num)
 
             tail_digit = num % 10
-            # using set() to avoid duplicates when K == 0
             next_digits = set([tail_digit + K, tail_digit - K])
 
             for next_digit in next_digits:

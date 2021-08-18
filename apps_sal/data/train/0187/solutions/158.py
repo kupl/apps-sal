@@ -14,7 +14,6 @@ class Solution:
                 maxi = profit
                 ans = move
             move += 1
-            # print(tot,wait,profit)
         while wait > 0:
             tot += min(4, wait)
             wait -= 4
@@ -23,7 +22,6 @@ class Solution:
                 maxi = profit
                 ans = move
             move += 1
-            # print(tot,wait,profit)
         if maxi > 0:
             return ans
         return -1

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 d = []
 num = int(input())
 for i in range(num):

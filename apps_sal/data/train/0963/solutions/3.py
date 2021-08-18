@@ -1,4 +1,3 @@
-# cook your dish here
 
 def hill(lst):
     maxm = lst.index(max(lst))

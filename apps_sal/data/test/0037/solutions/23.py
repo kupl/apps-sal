@@ -8,7 +8,6 @@ def ans(a, b, c, d):
         return
     else:
         a, b = min(a, b), max(a, b)
-        # print(a,b)
         while d < c:
             d += a
             if (c - d) % b == 0:

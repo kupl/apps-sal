@@ -3,7 +3,6 @@ if (X + Y) % 3 != 0:
     print(0)
 
 else:
-    # 経路
     def C(n, r, mod):
         num = 1
         den = 1

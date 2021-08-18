@@ -9,7 +9,6 @@ for i in range(n):
 
 alarms.sort()
 
-# print(alarms)
 alarms.append(alarms[0] + 24 * 60)
 mx = -1
 for i in range(1, len(alarms)):

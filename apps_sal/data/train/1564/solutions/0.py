@@ -1,4 +1,3 @@
-#import set
 t = eval(input())
 while(t):
     s = input()

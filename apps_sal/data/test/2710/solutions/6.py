@@ -87,10 +87,6 @@ def solve(r, w):
         print('NO')
 
 
-# -------
-# main
-# -------
-
 def __starting_point():
     solve(sys.stdin, sys.stdout)
 

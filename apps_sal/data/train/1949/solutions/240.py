@@ -21,10 +21,8 @@ class Solution:
         for new_x, new_y in [(x, y + 1), (x, y - 1), (x + 1, y), (x - 1, y)]:
             if not self.available(grid, visited, new_x, new_y):
                 continue
-            # path.append(grid[new_x][new_y])
             visited[(x, y)] = True
             self.traverse(rval, grid, path + grid[new_x][new_y], visited, new_x, new_y)
-            # path.pop(-1)
             visited[(x, y)] = False
 
     def available(self, grid, visited, x, y):

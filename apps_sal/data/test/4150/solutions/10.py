@@ -21,7 +21,6 @@ for i in range(n):
             right[left[cur]] = right[cur]
         if right[cur] != -1:
             left[right[cur]] = left[cur]
-        # left
         for j in range(k):
             cur = left[cur]
             if cur == -1:
@@ -33,7 +32,6 @@ for i in range(n):
             if right[cur] != -1:
                 left[right[cur]] = left[cur]
 
-        # right
         cur = A[i][1]
         for j in range(k):
             cur = right[cur]

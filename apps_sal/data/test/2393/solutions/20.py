@@ -3,7 +3,7 @@ for _ in range(int(input())):
     a = []
     i = 0
     while i <= (len(s) - 1):
-        if s[i:i + 5] == 'twone':  # and i + 4 >= len(s):
+        if s[i:i + 5] == 'twone':
             a.append(i + 3)
             i += 5
         elif s[i] == 'o' and s[i:i + 3] == 'one':

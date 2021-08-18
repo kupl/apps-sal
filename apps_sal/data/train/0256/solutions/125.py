@@ -1,6 +1,5 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        # time O(nlogw); space O(1)
         def possible(k):
             return sum((num - 1) // k + 1 for num in piles) <= H
 

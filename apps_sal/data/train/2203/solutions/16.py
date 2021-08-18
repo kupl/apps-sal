@@ -1,4 +1,3 @@
-#!/bin/python3
 import sys
 n = int(input())
 matrix = []

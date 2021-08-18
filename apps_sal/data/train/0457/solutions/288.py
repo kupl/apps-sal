@@ -3,7 +3,6 @@ class Solution:
         if amount < 1:
             return 0
 
-        # self.coins = coins
         self.coins = coins
 
         self.count = {}
@@ -11,7 +10,6 @@ class Solution:
         return self.helper(amount)
 
     def helper(self, rem):
-        # print(rem)
         if rem < 0:
             return -1
         if rem == 0:
@@ -22,7 +20,6 @@ class Solution:
 
         min_count = 1000000000
         for coin in self.coins:
-            # print(\"coin: {}\".format(coin))
             res = self.helper(rem - coin)
             if res >= 0 and res < min_count:
                 min_count = res + 1

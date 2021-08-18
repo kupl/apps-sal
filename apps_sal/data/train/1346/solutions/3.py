@@ -1,4 +1,3 @@
-# cook your dish here
 
 from sys import stdin, stdout
 mod = 10**9 + 7

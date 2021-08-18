@@ -6,16 +6,13 @@ class Solution:
                 dp.append(dp[-1] + num)
 
         res = A[0]
-        deque = collections.deque([0])  # i's, increasing by P[i]
+        deque = collections.deque([0])
         for j in range(1, len(dp)):
-            # If the smallest i is too small, remove it.
             if deque[0] < j - len(A):
                 deque.popleft()
 
-            # The optimal i is deque[0], for cand. answer P[j] - P[i].
             res = max(res, dp[j] - dp[deque[0]])
 
-            # Remove any i1's with P[i2] <= P[i1].
             while deque and dp[j] <= dp[deque[-1]]:
                 deque.pop()
 

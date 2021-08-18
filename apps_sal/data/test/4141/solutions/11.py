@@ -1,4 +1,3 @@
-# 155_b
 N = int(input())
 A = input().split()
 result = ''

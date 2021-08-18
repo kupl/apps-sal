@@ -31,7 +31,7 @@ def main():
                 ans.append('C')
                 D['AB'] -= 1
                 D['AC'] += 1
-        else:  # s == 'AC'
+        else:
             if (D['AB'] < D['BC']) or \
                     (i < N - 1 and S[i + 1] == 'AB' and D['AB'] == D['BC'] == 1):
                 ans.append('A')

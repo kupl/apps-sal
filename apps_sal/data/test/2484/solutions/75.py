@@ -14,7 +14,6 @@ def main():
     N = int(input())
     A = list(map(int, input().split()))
 
-    # a ^ b <= a + b が成り立つ
     ans = 0
     right = 0
     xor = 0

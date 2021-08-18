@@ -8,7 +8,6 @@ for i in range(t):
         print(0)
         continue
 
-    # print(nums)
     even, odd = 0, 0
 
     for n in nums:

@@ -1,10 +1,5 @@
 class Solution:
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
-        # walk through list: at every element, look backwards up to K spaces
-        # compare combination of 1, 2 .. K repeats of current segment max
-        # vs total sum, and retain the largest (dp_sum memoization)
-        # dummy index dp_sum[0] for index bound checking
-        # O(AK) time, O(A) extra space
 
         dp_sum = [0 for _ in range(len(A) + 1)]
 

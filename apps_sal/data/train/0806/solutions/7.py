@@ -15,7 +15,6 @@ for t in range(T):
     cycle_start = -1
     while True:
         a = y[i]
-        # print(i)
         mod = prev % a
         div = mod / a
         digit = int(str(div)[2])

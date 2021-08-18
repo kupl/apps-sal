@@ -4,7 +4,6 @@ class Solution:
             return sum(arr) * k % (10**9 + 7)
         if sorted(arr)[-1] <= 0:
             return 0
-        # temp1, temp2 = 0,0
         if k > 1:
             arr = arr + [max(0, sum(arr) * (k - 2))] + arr
         temp, res = 0, 0

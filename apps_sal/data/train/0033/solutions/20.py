@@ -1,4 +1,3 @@
-# 3x + 5y + 7z
 
 t = int(input())
 

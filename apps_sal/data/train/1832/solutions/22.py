@@ -5,11 +5,11 @@ from collections import defaultdict
 
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
-        adj = defaultdict(list)  # list (adj_vertex, edge_weight)
+        adj = defaultdict(list)
         for x, y, n in edges:
             adj[x].append([y, n + 1])
             adj[y].append([x, n + 1])
-        q = PriorityQueue()  # (dist, vertex)
+        q = PriorityQueue()
         dist = [math.inf for _ in range(N)]
         dist[0] = 0
         q.put([0, 0])

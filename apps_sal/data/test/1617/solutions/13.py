@@ -1,8 +1,4 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 998244353
-# INF = 100000000000
-# from heapq import heappush
-t = 1  # int(input())
+t = 1
 for test in range(t):
     n = int(input())
     ans = set()

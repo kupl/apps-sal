@@ -5,8 +5,6 @@ tot = 0
 for i in range(n):
     tot += arr[i]
     sumarray[i + 1] = tot
-# print(arr)
-# print(sumarray)
 q = int(input())
 for i in range(q):
     l, r = list(map(int, input().split()))

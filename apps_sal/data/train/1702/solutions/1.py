@@ -21,7 +21,6 @@ class Sudoku(object):
                 return False
         return True
 
-    # your code here
     def is_valid(self):
         if not self.has_valid_size():
             return False

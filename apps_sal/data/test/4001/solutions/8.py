@@ -1,7 +1,6 @@
 n = int(input())
 
 nums = [int(c) for c in input().split(" ")]
-# nums.sort()
 
 occur = {}
 for num in nums:
@@ -16,13 +15,11 @@ for num in occur:
 
 b = max(nums)
 
-# print(occur)
 
 for num in occur:
     if b % num == 0:
         occur[num] -= 1
 
-# print(occur)
 
 a = 1
 for num in occur:

@@ -76,7 +76,6 @@ def __starting_point():
                 min_cost_perm = p
                 min_cost = cur_cost
 
-        # print(path, graph.V)
         ans = [0] * n
         for i, v in enumerate(path):
             ans[v - 1] = min_cost_perm[i % 3] + 1

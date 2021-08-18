@@ -6,4 +6,4 @@ for i in range(n):
         k = k + j
         for l in range(k, k - j, -1):
             print(l, end="")
-        print()  # cook your dish here
+        print()

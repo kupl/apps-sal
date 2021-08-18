@@ -15,7 +15,6 @@ class Solution:
         for i in range(len(weights)):
             if weights[i] > l:
                 l = weights[i]
-            # r+=weights[i]
 
         while l <= r:
             mid = (l + r) // 2

@@ -1,7 +1,5 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
-      #  if points == [] or points == [[]] or points == None or len(points) < 4:
-      #      return 0
 
         seen = set()
         res = float('inf')

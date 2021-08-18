@@ -37,7 +37,6 @@ for p in per:
                 break
         if doublecheck:
             desire.append(p)
-# print(desire)
 for _ in range(int(input())):
 
     n = int(input())

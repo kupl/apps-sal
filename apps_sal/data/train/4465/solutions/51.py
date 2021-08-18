@@ -1,5 +1,4 @@
 def super_size(n):
-    # your code here
     convert_to_str = str(n)
     lst = convert_to_str.split()
     for elem in convert_to_str:

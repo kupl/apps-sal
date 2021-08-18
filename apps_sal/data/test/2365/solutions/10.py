@@ -3,7 +3,7 @@ class Solution:
         exp = collections.deque(expression)
 
         def or_opt(exp):
-            exp.popleft()  # skip (
+            exp.popleft()
             ret = False
             while exp:
                 ret |= exp_opt(exp)
@@ -11,7 +11,7 @@ class Solution:
                     return ret
 
         def and_opt(exp):
-            exp.popleft()  # skip (
+            exp.popleft()
             ret = True
             while exp:
                 ret &= exp_opt(exp)
@@ -28,7 +28,7 @@ class Solution:
             elif ch == '!':
                 exp.popleft()
                 ret = not exp_opt(exp)
-                exp.popleft()  # remove (,)
+                exp.popleft()
             elif ch == '|':
                 ret = or_opt(exp)
             elif ch == '&':

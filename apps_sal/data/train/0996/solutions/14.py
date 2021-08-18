@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 l1 = []
 l2 = []

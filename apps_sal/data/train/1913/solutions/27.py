@@ -5,7 +5,6 @@ class Solution:
             i -= 1
         if(i >= 0):
             max_ = i + 1
-            # max number greater on right that less than A[i]
             for j in range(max_ + 1, len(A)):
                 if(A[max_] < A[j] and A[j] < A[i]):
                     max_ = j

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 def solve(n, queries):
@@ -26,7 +25,6 @@ def main():
     queries = [list(map(int, input().split())) for _ in range(N)]
     print((*solve(N, queries)))
     return
-    # write c
 
 
 def __starting_point():

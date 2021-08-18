@@ -1,4 +1,3 @@
-# cook your dish here
 for u in range(int(input())):
     s = input()
     cnt0 = s.count('0')

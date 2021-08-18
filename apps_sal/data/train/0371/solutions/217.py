@@ -9,7 +9,7 @@ class Solution:
                 graph[node].append(idx)
         visited_node = set([S])
         visited_route = [0 for _ in range(len(routes))]
-        queue = [(idx, 0) for idx in graph[S]]  # route idx
+        queue = [(idx, 0) for idx in graph[S]]
         for idx, _ in queue:
             visited_route[idx] = 1
         while queue:

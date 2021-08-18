@@ -21,6 +21,5 @@ for i in range(n):
         sa.append(a[i])
 sa.reverse()
 resa = pa + sa
-# print(resa)
 for i in resa:
     print(i, end=' ')

@@ -1,5 +1,3 @@
-# ABC110
-# A Maximize the Fomula
 Num = list(map(int, input().split()))
 Num = sorted(Num, reverse=True)
 X = []

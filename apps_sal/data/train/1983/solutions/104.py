@@ -13,8 +13,3 @@ class ProductOfNumbers:
         if k >= len(self.k1):
             return 0
         return (self.k1[-1] // self.k1[-1 - k])
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

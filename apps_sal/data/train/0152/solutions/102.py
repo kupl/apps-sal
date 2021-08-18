@@ -1,5 +1,3 @@
-# 1552. Magnetic Force Between Two Balls
-# Binary search
 
 def can_distribute(baskets, ball_count, min_dist):
     last = []

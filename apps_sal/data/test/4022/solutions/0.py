@@ -3,7 +3,6 @@ a = []
 for i in range(n):
     inp = input().split()
     a.append((int(inp[0]), int(inp[1])))
-# End of Input Part
 
 first = []
 second = []
@@ -11,7 +10,6 @@ for i in range(n):
     first.append(a[i][0])
     second.append(a[i][1])
 
-# Sort Them
 first.sort(reverse=True)
 second.sort()
 
@@ -26,5 +24,4 @@ for i in range(n):
     curLength = r - l
     bestAnswer = max(bestAnswer, curLength)
 
-# Print Answer
 print(bestAnswer)

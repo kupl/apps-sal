@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
 
-# solution after hunt:(
 
 [n, q] = list(map(int, input().strip().split()))
 bis = []

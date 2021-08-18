@@ -1,4 +1,3 @@
-# A - Shiritori
 
 
 def f(x):
@@ -8,7 +7,6 @@ def f(x):
     return f_list
 
 
-# 標準入力 a b c
 a, b, c = list(map(str, input().split(maxsplit=3)))
 
 word_list_a = f(a)

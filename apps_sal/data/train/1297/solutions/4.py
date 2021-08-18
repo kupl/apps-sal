@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 while n > 0:
     x, y = map(int, input().strip().split())

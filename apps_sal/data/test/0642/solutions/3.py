@@ -26,7 +26,6 @@ for val in dirties:
     prevprev = prev
     prev = val
 
-#print (dp)
 
 if ilegal or (k > 0 and (dirties[0] == 1 or dirties[-1] == n)):
     print("NO")

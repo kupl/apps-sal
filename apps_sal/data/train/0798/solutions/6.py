@@ -1,4 +1,3 @@
-# Little Red Riding Hood
 
 
 def findMax(safePath, relBerries, collectedBerries, cx, cy, n, ans):

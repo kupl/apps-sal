@@ -1,5 +1,3 @@
-# include <GOD>
-# Pato Boride Azin Khone , Vase Hamine Delet Khune
 
 import sys
 import math

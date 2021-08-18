@@ -5,8 +5,8 @@ class Solution:
         ht = {}
         '''
         create a hash table, keys is the pos list of 0 and pos list of 1 in a row
-        because they represent for #col needed to change
-        count #keys
+        because they represent for 
+        count 
         ans = max value of keys
         '''
         for r in range(row):
@@ -16,7 +16,6 @@ class Solution:
                     need[0].append(c)
                 else:
                     need[1].append(c)
-            # list type cannot be a key, so convert to str
             a = str(need[0])
             b = str(need[1])
             if a in ht:

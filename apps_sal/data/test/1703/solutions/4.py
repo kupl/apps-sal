@@ -23,7 +23,6 @@ for i in range(n):
             right[wk1] = 0
         right[wk1] += 1
 
-#print(left, right)
 ans = 0
 for key in left:
     if key in right:

@@ -20,6 +20,4 @@ for testcases in range(T):
         else:
             DP[i][1] = min(DP[i - 1][0] + a + b, DP[i - 1][1] + b)
 
-    # print(DP)
-
     print(ANS + DP[-1][0])

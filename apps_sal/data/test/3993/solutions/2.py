@@ -2,18 +2,9 @@ n, m, k = list(map(int, input().split()))
 P = [int(x) for x in input().split()]
 P.reverse()
 
-# pages of size k
 ops = 0
 i = 1
 while P:
-    # while space left
-    #   fill elements and count special
-    #   remove special
-    #   ops += 1
-
-    # put elements in while not special
-
-    # then onto next page
 
     nxt = P[-1]
     togo = nxt - i

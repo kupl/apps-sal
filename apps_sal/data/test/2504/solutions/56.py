@@ -7,9 +7,6 @@ import sys
 readline = sys.stdin.readline
 
 
-# 最短距離をワーシャルフロイドで求める
-# 最短距離がL以下の街には燃料1で行けるので、辺を貼り直してワーシャルフロイド
-
 N, M, L = map(int, readline().split())
 
 INF = 10 ** 9 + 1

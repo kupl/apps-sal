@@ -1,8 +1,5 @@
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
-        # Sort engineer by efficiency
-        # for all engineer higher than efficiency x,
-        # keep the ones with high speed
         if n == 0:
             return 0
 
@@ -20,7 +17,7 @@ class Solution:
             if len(pq) > k:
                 tmp = heapq.heappop(pq)
                 sum_speed -= tmp[0]
-                if tmp != e:  # The newly added engineer might be eliminated
+                if tmp != e:
                     min_efficiency = e[1]
             else:
                 min_efficiency = e[1]

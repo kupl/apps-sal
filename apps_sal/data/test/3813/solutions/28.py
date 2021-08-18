@@ -4,14 +4,13 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10**6)
 
 N = int(input())
-graph = [[] for _ in range(N + 1)]  # parent to child
+graph = [[] for _ in range(N + 1)]
 for i, p in enumerate(input().split(), 2):
     graph[int(p)].append(i)
 X = [None] + [int(x) for x in input().split()]
 
 
 def dfs(v):
-    # None または 白、黒の2つ組を返す
     child = []
     for w in graph[v]:
         c = dfs(w)
@@ -20,7 +19,7 @@ def dfs(v):
         child.append(c)
     S = sum(a + b for a, b in child)
     x = X[v]
-    dp = np.zeros(x + 1, dtype=np.bool)  # 2択の繰り返しで作れる和
+    dp = np.zeros(x + 1, dtype=np.bool)
     dp[0] = 1
     for a, b in child:
         prev = dp

@@ -23,5 +23,4 @@ for i in range(1, H + 1):
                 WW[j - 1] * WW[W - 1 - j] + DP[i - 1][j + 1] * WW[j] * WW[W - 2 - j]
 
         DP[i][j] %= mod
-# print(DP, WW)
 print((DP[-1][K - 1]))

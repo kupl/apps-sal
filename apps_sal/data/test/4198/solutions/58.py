@@ -1,4 +1,3 @@
-# 94 C - Buy an Integer (hint)
 A, B, X = map(int, input().split())
 
 

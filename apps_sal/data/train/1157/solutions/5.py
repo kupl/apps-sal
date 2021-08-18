@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n, m, k = [int(i) for i in input().split()]
     ans = 0

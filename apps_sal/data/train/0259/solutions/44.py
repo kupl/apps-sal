@@ -14,7 +14,7 @@ class Solution:
 
             total = 0
             for num in nums:
-                total += (num + m - 1) // m  # ceil. division
+                total += (num + m - 1) // m
 
             if total > threshold:
                 i = m + 1

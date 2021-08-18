@@ -35,7 +35,7 @@ def __starting_point():
 '''
 			parent = curr-1
 			children = min(a[lvl+1], k-b[lvl]+1)
-			print("#DEBUG", lvl, children)
+			print("
 			for _ in range(children):
 				print(parent, curr)
 				curr += 1

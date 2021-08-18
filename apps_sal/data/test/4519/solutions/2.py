@@ -9,22 +9,16 @@ for _ in range(int(input())):
     ind = 0
     le = len(zeroes)
     i = 0
-   # print(zeroes)
     while i < n:
-      #  print(k)
         if s[i] == '1':
             while ind < le and zeroes[ind] < i:
                 ind += 1
             if ind == le:
                 break
             a = zeroes[ind]
-            # print(a)
-           # print(i,a)
             if a - i <= k:
                 k -= (a - i)
                 s[i], s[a] = s[a], s[i]
-                # print(s)
                 ind += 1
-            # ind+=1
         i += 1
     print(''.join(s))

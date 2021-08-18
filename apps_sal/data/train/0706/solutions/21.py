@@ -19,4 +19,3 @@ try:
             print(c + 1)
 except EOFError as e:
     pass
-    # TODO: write code...

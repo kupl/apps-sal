@@ -8,13 +8,10 @@ class Solution:
             else:
                 res.append(1)
 
-        # full_lakes=[]
         full_lakes = defaultdict(list)
 
-        # index of 0
         sunny_days = []
 
-        # remove leading and trailing zeros
         start = 0
         end = len(rains) - 1
         while rains[start] == 0:
@@ -23,7 +20,6 @@ class Solution:
             end -= 1
 
         def binarySearch(sunny_days, prev_rain, curr):
-            #print('binary seaarch: ',sunny_days,prev_rain,curr)
             if not sunny_days:
                 return -1
             low = 0
@@ -35,16 +31,10 @@ class Solution:
                     low = mid + 1
                 else:
                     high = mid
-            # print(low)
             if low >= len(sunny_days) or sunny_days[low] <= prev_rain or sunny_days[low] >= curr:
                 return -1
             else:
                 return low
-
-        # a=[8]
-        # b=9
-        # c=10
-        # print(binarySearch(a,b,c))
 
         for i in range(start, end + 1):
             if rains[i] != 0:
@@ -53,18 +43,10 @@ class Solution:
                 else:
                     prev_rain = full_lakes[rains[i]][-1]
 
-                    # print(prev_rain,i,sunny_days)
-                    # print('#####')
                     if not sunny_days:
                         return []
 
                     idx = binarySearch(sunny_days, prev_rain, i)
-                    # print(idx)
-                    # print(sunny_days,prev_rain,i)
-                    # for j in range(len(sunny_days)):
-                    #     if prev_rain<sunny_days[j]<i:
-                    #         idx=sunny_days[j]
-                    #         break
                     if idx == -1:
                         return []
                     else:

@@ -1,5 +1,4 @@
 class Solution:
-    # find location >= target
     def search(self, locations: List[int], left: int, right: int, target: int):
         while left <= right:
             mid = (left + right) // 2
@@ -19,7 +18,6 @@ class Solution:
         res = 1 if start == finish else 0
         left = self.search(locations, 0, start, locations[start] - fuel)
         right = self.search(locations, start, len(locations) - 1, locations[start] + fuel + 1)
-        # print(start, fuel, left, right)
         for next in range(left, right):
             if next == start:
                 continue

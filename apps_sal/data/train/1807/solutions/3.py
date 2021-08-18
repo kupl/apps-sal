@@ -5,7 +5,7 @@ class Solution:
 
         for denom in range(1, n + 1):
             for num in range(1, denom + 1):
-                if num % denom != 0 and num / denom not in decimals:  # we don't want whole numbers, so num % denom != 0
+                if num % denom != 0 and num / denom not in decimals:
                     decimals.add(num / denom)
                     fractions.append(str(num) + '/' + str(denom))
 

@@ -5,7 +5,6 @@ input = sys.stdin.readline
 
 
 def bfs(N, G, p):
-    # Connected compoponent
     c_comp_p_list = []
     c_comp_i_list = []
     visited = [False] * N

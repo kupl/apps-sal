@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))        # N = 配列サイズ
+N, M = list(map(int, input().split()))
 A = list(map(int, input().split()))
 imos = [0] * (2 * M + 1)
 imos2 = [0] * (2 * M + 1)

@@ -2,7 +2,7 @@ n, a, b = list(map(int, input().split()))
 h = [int(input()) for _ in range(n)]
 
 
-def bisearch(k):  # k回で倒せるかどうか
+def bisearch(k):
     ret = 0
     for hi in h:
         ret += max(0, (hi - b * k + a - b - 1) // (a - b))

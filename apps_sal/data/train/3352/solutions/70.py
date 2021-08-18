@@ -1,5 +1,4 @@
 def find_longest(arr):
-    # your code here
 
     string_array = [str(num) for num in arr]
     max_length = -1

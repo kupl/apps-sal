@@ -1,4 +1,3 @@
-# coding: utf-8
 s = [[int(i) for i in input().split()] for j in range(3)]
 x = 0
 while True:

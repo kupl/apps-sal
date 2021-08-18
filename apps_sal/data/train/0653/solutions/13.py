@@ -6,7 +6,6 @@ count = 1
 point_mx = [0]
 cry_val.sort()
 while count <= crystel:
-    # print(point,laser)
     if cry_val[iterr] <= laser:
         point += 1
         point_mx.append(point)
@@ -20,5 +19,4 @@ while count <= crystel:
         point -= 1
         count += 1
 
-# print(cry_val)
 print(max(point_mx))

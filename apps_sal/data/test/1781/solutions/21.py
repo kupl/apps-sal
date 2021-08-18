@@ -17,7 +17,6 @@ for i in range(n):
     for j in range(len(y[i])):
         if y[i][j] == '.':
             if y[i][j - 1] in top and y[i][j + 1] in top and chet != k:
-                #print(y[i][j-1], y[i][j], y[i][j+1])
                 y[i][j] = 'x'
                 chet += 1
 while chet != k:
@@ -26,13 +25,11 @@ while chet != k:
         for j in range(len(y[i])):
             if y[i][j] == '.':
                 if y[i][j - 1] in top1 and y[i][j + 1] in top and chet != k:
-                    #print(y[i][j - 1], y[i][j], y[i][j + 1])
                     y[i][j] = 'x'
                     chet += 1
                     flag = 1
 
                 if y[i][j - 1] in top and y[i][j + 1] in top1 and chet != k:
-                    #print(y[i][j - 1], y[i][j], y[i][j + 1])
                     y[i][j] = 'x'
                     chet += 1
                     flag = 1

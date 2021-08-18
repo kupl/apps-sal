@@ -1,6 +1,5 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        # Union find
         def find(i):
             if i != root[i]:
                 root[i] = find(root[i])

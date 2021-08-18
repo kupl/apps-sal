@@ -1,4 +1,3 @@
-# cook your dish here
 xx = int(input(''))
 for j in range(xx):
     a, b, c = list(map(int, input('').split()))

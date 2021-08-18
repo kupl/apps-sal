@@ -1,4 +1,3 @@
-# cook your dish here
 def solve(N, x, y, k):
     if x == y:
         return (N, N)

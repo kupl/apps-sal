@@ -1,5 +1,5 @@
 import sys
-import bisect  # 二分法
+import bisect
 
 
 MAX_N = 200005
@@ -9,7 +9,7 @@ sys.setrecursionlimit(MAX_N)
 
 N = int(sys.stdin.readline())
 A = [int(x) for x in sys.stdin.readline().split()]
-E = [[] for _ in range(N)]  # 辺の情報
+E = [[] for _ in range(N)]
 
 for _ in range(N - 1):
     u, v = map(int, sys.stdin.readline().split())
@@ -22,19 +22,18 @@ ans = [0] * N
 
 def dfs(u, r=-1):
 
-    # u を訪れたときの処理
-    i = bisect.bisect_left(lis, A[u])  #
-    old = lis[i]  # 書き換え前の値を一時保存
+    i = bisect.bisect_left(lis, A[u])
+    old = lis[i]
     lis[i] = A[u]
 
     for v in E[u]:
         if v == r:
-            continue  # 親は無視
+            continue
 
         dfs(v, u)
 
     ans[u] = bisect.bisect_left(lis, INF - 1)
-    lis[i] = old  # 書き換え前の状態に戻す
+    lis[i] = old
 
 
 dfs(0)

@@ -1,5 +1,5 @@
 import sys
-from array import array  # noqa: F401
+from array import array
 
 n = int(input())
 matrix = [array('i', list(map(int, input().split()))) for _ in range(n)]

@@ -18,8 +18,6 @@ for i in range(0, x):
             flag = 1
         q = q + r
 
-#	print q
-
     listans.append(q)
     listk = []
     for p in range(0, y - 1):
@@ -39,7 +37,6 @@ for i in range(0, x):
             else:
                 flag = 1
             q = q + r
-        # print q
         listk.append(q)
     for z in range(0, len(listk)):
         listans.append(listk[len(listk) - 1 - z])

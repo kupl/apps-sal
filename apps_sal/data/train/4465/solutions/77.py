@@ -5,4 +5,3 @@ def super_size(n):
     a_string = "".join(strings)
     an_integer = int(a_string)
     return an_integer
-    # your code here

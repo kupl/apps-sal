@@ -1,4 +1,3 @@
-# cook your dish here
 def f(lst1, lst2):
     dict1 = {}.fromkeys(lst1, 0)
     for key in lst1:

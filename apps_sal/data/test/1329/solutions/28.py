@@ -2,7 +2,6 @@ from collections import defaultdict
 n = int(input())
 
 
-# 素因数分解
 def factorization(n):
     arr = []
     temp = n
@@ -20,9 +19,6 @@ def factorization(n):
     return arr
 
 
-# factorization(24)
-## [[2, 3], [3, 1]]
-# 24 = 2^3 * 3^1
 d = defaultdict(int)
 
 for i in range(1, n + 1):

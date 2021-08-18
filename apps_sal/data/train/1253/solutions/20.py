@@ -32,7 +32,6 @@ for _ in range(int(input())):
                 vis[i] = True
                 dist[i] = dist[s] + 1
 
-    # print(dist)
     ans = 0
     for i in dist:
         if i <= d:

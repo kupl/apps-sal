@@ -5,7 +5,6 @@ dp = np.full((3, n + 1), -pow(10, 15))
 dp[:, 0] = 0
 dp[1, 1] = a[0]
 for i in range(2, n + 1):
-    # l,r=max(1,n//2-(n-i+1)//2),(i+1)//2+1
     l, r = max(1, i // 2 - 1), (i + 1) // 2 + 1
     if i % 3 == 2:
         now, pre, prepre = 2, 1, 0

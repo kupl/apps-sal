@@ -1,6 +1,5 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        # will never have positive profit
         if (boardingCost * 4 <= runningCost):
             return -1
 
@@ -25,12 +24,8 @@ class Solution:
                 posRotate = profit
                 posRotate = rotate
 
-        # after looping customers, we actually can determine the max profit with some math
         noRotate = waiting // 4
         remaining = waiting % 4
-#         print(\"waiting: \" + str(waiting))
-#         print(\"no of rotate: \" + str(noRotate))
-#         print(\"remaining: \" + str(remaining))
 
         rotate += noRotate
         profit += (4 * boardingCost * noRotate) - noRotate * runningCost
@@ -42,9 +37,6 @@ class Solution:
         if (remaining * boardingCost > runningCost):
             posRotate += 1
             posProfit += remaining * boardingCost - runningCost
-
-#         print(posRotate)
-#         print(posProfit)
 
         if (posProfit <= 0):
             return -1

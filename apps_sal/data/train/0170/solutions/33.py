@@ -6,7 +6,7 @@ class Solution:
             if arr[head] > arr[head + 1]:
                 break
         if head == len(arr):
-            return 0  # already sorted
+            return 0
         for tail in range(len(arr) - 1, 0, -1):
             if arr[tail - 1] > arr[tail]:
                 break

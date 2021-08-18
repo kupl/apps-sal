@@ -1,4 +1,3 @@
-# cook your dish here
 s = input()
 cons = []
 vow = 0

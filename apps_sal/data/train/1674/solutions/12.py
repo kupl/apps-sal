@@ -1,7 +1,6 @@
 class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
         n = len(piles)
-        # dp[i][M] means the number of stones one can get starting with i with M
         dp = [[0 for m in range(n)] for i in range(n)]
         sufsum = [0] * (n + 1)
         for i in reversed(range(n)):

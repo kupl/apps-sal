@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import deque
 import sys
 try:
@@ -26,11 +25,11 @@ def solve(K: int):
     if gs[0] == gs[1]:
         print((1))
         return
-    G = [[] for i in range(K)]  # type: List[List[int]]
+    G = [[] for i in range(K)]
     for i in range(K):
         G[gs[i]].append(gs[(i + 1) % K])
     d = {gs[1]: 1}
-    q = deque()  # type: Deque[int]
+    q = deque()
     q.append(gs[1])
     while q:
         s = q.popleft()
@@ -51,7 +50,7 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    K = int(next(tokens))  # type: int
+    K = int(next(tokens))
     solve(K)
 
 

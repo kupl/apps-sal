@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 @author: H_Hoshigi
 """
@@ -17,7 +16,6 @@ def main():
         mount_list[0] = (mount1_min + mount1_max) // 2
         for i in range(N - 1):
             mount_list[i + 1] = A_lsit[i] - mount_list[i]
-        # print(mount_list)
         if A_lsit[N - 1] - mount_list[N - 1] == mount_list[0]:
             break
         elif A_lsit[N - 1] - mount_list[N - 1] < mount_list[0]:

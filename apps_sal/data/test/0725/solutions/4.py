@@ -5,6 +5,6 @@ for i in range(n):
     if 'C' in line or 'M' in line or 'Y' in line:
         fl = True
 if fl:
-    print('#Color')
+    print('
 else:
-    print('#Black&White')
+    print('

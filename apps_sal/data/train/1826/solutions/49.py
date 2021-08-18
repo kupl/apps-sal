@@ -19,7 +19,7 @@ class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         ret = []
         self.numRows = len(mat)
-        self.numCols = len(mat[0])  # numCols >= 1
+        self.numCols = len(mat[0])
         self.mat = mat
         self.K = K
 

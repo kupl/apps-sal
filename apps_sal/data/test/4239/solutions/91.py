@@ -6,7 +6,6 @@ q = deque([n])
 while q[0] > -5:
     t = q.popleft()
     cnt = d[t]
-    # print(t)
     a = 1
     b = 1
     while 6**a <= t:
@@ -15,7 +14,6 @@ while q[0] > -5:
         b += 1
     a -= 1
     b -= 1
-    # print(t,a,b)
     if t - 6**a in d:
         if d[t - 6**a] > cnt + 1:
             d[t - 6**a] = cnt + 1
@@ -30,6 +28,4 @@ while q[0] > -5:
     else:
         d[t - 9**b] = cnt + 1
         q.append(t - 9**b)
-    # print(q)
 print((d[0]))
-# print(d)

@@ -1,4 +1,3 @@
-# cook your dish here
 no = int(input())
 alls = list(input().split())
 dp = [0] * (no + 1)

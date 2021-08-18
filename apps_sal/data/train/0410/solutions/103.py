@@ -1,6 +1,6 @@
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
-        memo = {1: 0}  # Exit Condition Stored in Memory
+        memo = {1: 0}
 
         def power(x):
             if x in memo:

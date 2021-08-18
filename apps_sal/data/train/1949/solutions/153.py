@@ -1,6 +1,5 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
-        # All starting points
         m = len(grid)
         n = len(grid[0])
         max_gold = 0
@@ -26,6 +25,3 @@ class Solution:
             return max_gold + origin
         else:
             return 0
-
-    # Time: O((m*n)^2)
-    # Space: O(m*n)

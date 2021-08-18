@@ -3,7 +3,6 @@ def input(): return sys.stdin.readline().rstrip()
 
 
 def is_ok(arg, S):
-    # 条件を満たすかどうか？問題ごとに定義
     dic = {}
     ans = False
     for i in range(len(S) - arg + 1):

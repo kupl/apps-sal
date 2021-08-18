@@ -10,31 +10,31 @@ from collections import OrderedDict
 pi = 3.14159265358979323846264338327950
 
 
-def II():  # to take integer input
+def II():
     return int(stdin.readline())
 
 
-def IP():  # to take tuple as input
+def IP():
     return list(map(int, stdin.readline().split()))
 
 
-def L():  # to take list as input
+def L():
     return list(map(int, stdin.readline().split()))
 
 
-def P(x):  # to print integer,list,string etc..
+def P(x):
     return stdout.write(str(x) + "\n")
 
 
-def PI(x, y):  # to print tuple separatedly
+def PI(x, y):
     return stdout.write(str(x) + " " + str(y) + "\n")
 
 
-def lcm(a, b):  # to calculate lcm
+def lcm(a, b):
     return (a * b) // gcd(a, b)
 
 
-def gcd(a, b):  # to calculate gcd
+def gcd(a, b):
     if a == 0:
         return b
     elif b == 0:
@@ -45,7 +45,7 @@ def gcd(a, b):  # to calculate gcd
         return gcd(a, b % a)
 
 
-def bfs(adj, v):  # a schema of bfs
+def bfs(adj, v):
     visited = [False] * (v + 1)
     q = deque()
     while q:
@@ -89,7 +89,7 @@ def SPF():
     return
 
 
-def readTree(n, e):  # to read tree
+def readTree(n, e):
     adj = [set() for i in range(n + 1)]
     for i in range(e):
         u1, u2 = IP()
@@ -97,7 +97,6 @@ def readTree(n, e):  # to read tree
     return adj
 
 
-#####################################################################################
 mod = 10**9 + 7
 
 
@@ -131,11 +130,3 @@ def solve():
 t = 1
 for i in range(t):
     solve()
-
-    #######
-   #
-  #
- #######   #     #  # ####   # #     #
-    #  # #   #  # #   #  # # #   #
-    #  ####  #  # ####   ####  # #
-######  #   # #### #    # #   #   #

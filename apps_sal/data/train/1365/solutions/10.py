@@ -1,4 +1,3 @@
-# cook your dish here
 s = input()
 if('c' in s or 'k' in s):
     print(0)
@@ -16,7 +15,6 @@ else:
         pre = i
     if(count > 1):
         l1.append(count)
-    # print(l1)
     ans = 1
     for t in l1:
         ans *= (t * t - 3 * t + 6) / 2

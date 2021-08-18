@@ -24,7 +24,6 @@ for x in b:
             break
     else:
         i = 0
-    # print('i:{}; stack:{}'.format(i, stack))
     for i in range(i, len(stack)):
         lifts += w[stack[i] - 1]
     stack.append(x)

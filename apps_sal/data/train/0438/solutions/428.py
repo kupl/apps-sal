@@ -49,15 +49,12 @@ class Solution:
                 jm = ds.find(curr + 1)
                 ds.store[ds.size[jm]] -= 1
                 flag = 1
-            # if(flag):
-            #     ds.store[1]-=1
             if(curr >= 1 and t[curr - 1] == 1):
                 ds.unio(curr, curr - 1)
             if(curr < (n - 1) and t[curr + 1] == 1):
                 ds.unio(curr, curr + 1)
             jm = ds.find(curr)
             ds.store[ds.size[jm]] += 1
-            # print(ds.store)
             if(ds.store[m]):
                 ans = tpp
 

@@ -20,8 +20,8 @@ class Solution:
                     if r < len(arr):
                         s += arr[r]
 
-        msl = [math.inf] * len(arr)  # minimum interval length so far from left
-        msr = [math.inf] * len(arr)  # minimum interval length so far fromm right
+        msl = [math.inf] * len(arr)
+        msr = [math.inf] * len(arr)
 
         mi = math.inf
         resi = -1

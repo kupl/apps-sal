@@ -10,7 +10,6 @@ for i in range(n):
 
 res = 0
 for i in range(n):
-    # binary search
     low = i
     high = n - 1
     curr = friends[i][0]

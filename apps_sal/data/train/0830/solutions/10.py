@@ -21,18 +21,14 @@
         wr[b[i]] = []
         d[b[i]].append(i)
         wr[b[i]].append(a[i])
-     #print(wr,d)
 
      for k,v in sorted(wr.items(),reverse=True):
-      # print(k,v)
       for i in v:
-       # print(k,i)
        if ord(k)>ord(i):
         f=1
         break
       if f==1:
        break
-     # print(flag)
      if f==1:
       print(-1)
      else:

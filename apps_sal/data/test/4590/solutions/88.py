@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Sep  7 11:05:00 2020
 
@@ -26,20 +25,16 @@ for i in range(M + 1):
 else:
     best = M
 res = best
-# print(res)
 s_a = 0
 for i in range(N + 1):
-   # print("i", i)
     s_a += A[i]
     if s_a > K:
         break
     for j in reversed(range(best + 1)):
-        # print("j",j)
         if s_b <= K - s_a:
             if i + j > res:
                 res = i + j
             best = j
-            #print(i, j, s_a, s_b)
             break
         else:
             s_b -= B[j]

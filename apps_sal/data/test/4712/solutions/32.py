@@ -1,8 +1,8 @@
 import sys
 
 H, W = map(int, sys.stdin.readline().split())
-print("#" * (W + 2))
+print("
 for _ in range(H):
-    s = sys.stdin.readline().strip()
-    print("#" + s + "#")
-print("#" * (W + 2))
+    s=sys.stdin.readline().strip()
+    print("
+print("

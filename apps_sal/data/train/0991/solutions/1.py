@@ -2,8 +2,6 @@ mod = 10**9 + 7
 N, K, Q = list(map(int, input().split()))
 
 A = [0, 0]
-# min_t=[-1]*((N*N-1)/2)
-# print min_t
 a, b, c, d, e, f, r, s, t, m, A[1] = list(map(int, input().split()))
 
 L1, La, Lc, Lm, D1, Da, Dc, Dm = list(map(int, input().split()))
@@ -27,7 +25,6 @@ for x in range(1, Q + 1):
     L = L1 + 1
     R = min(L + K - 1 + D1, N)
     R = R - K + 1
-    # print min_arr,L,R,min_arr[L:R+1]
     if L == R:
         tmp = min_arr[L]
     else:

@@ -7,7 +7,6 @@ if int((i - 1) / a) == (i - 1) / a and int((j - 1) / b) == (j - 1) / b:
 
     path1 = (i - 1) / a
     path_1 = (j - 1) / b
-    # print(path1,path_1)
     if path1 % 2 == 0 and path_1 % 2 == 0:
         path1 = max(path1, path_1)
         temp1 = 1

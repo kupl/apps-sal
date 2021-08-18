@@ -9,5 +9,3 @@ def number(lines):
         return new_lines
     else:
         return lines
-
-    # your code here

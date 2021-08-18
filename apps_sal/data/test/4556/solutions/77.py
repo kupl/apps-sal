@@ -5,13 +5,7 @@ import sys
 sys.setrecursionlimit(10**9)
 mod = 10**9 + 7
 
-# import sys
-# sys.stdout = open("e:/python/cp/output.txt","w")
-# sys.stdin = open("e:/python/cp/input.txt","r")
-
 
 s = input()
-# print(F"Atcoder {s.title()} Contest")
 
-# print(f"A{s[0].upper()}C ")
 print(f"A{s[8].upper()}C")

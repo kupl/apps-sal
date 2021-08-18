@@ -7,7 +7,6 @@ sumA = []
 for i in range(n):
     tmp += a[i]
     sumA.append(tmp)
-# print(sumA)
 
 
 def bin_search(left, right, v):

@@ -37,10 +37,6 @@ def main():
                     cnt += 1
                     q.append(f)
         dic[nxt] = cnt
-        # try:
-        #nxt = fl.index(-1)
-        # except:
-        #nxt = 0
         if len(s) == 0:
             nxt = 0
         else:

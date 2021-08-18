@@ -1,6 +1,4 @@
 def expo(a, n):
-    # print(a)
-    # print(n)
     if n > 0:
         ha = expo(a, n // 2)
         if n % 2 == 1:
@@ -19,7 +17,6 @@ def f():
     height = R - L + 1
     area = n * m
     ans = expo(height, area)
-    # print(ans)
     if(area % 2 == 1):
         print(ans)
     else:

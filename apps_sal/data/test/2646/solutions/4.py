@@ -21,8 +21,6 @@ while q:
         if pre[next_room] == -1:
             pre[next_room] = now_room + 1
         q.append(next_room)
-# print(*roads)
-# print(*pre)
 
 print('Yes')
 for i in range(1, N):

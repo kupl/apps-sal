@@ -12,9 +12,7 @@ class Solution:
         for i, v in enumerate(A):
             dp[i] = {}
 
-            # print(f'--------- PROCESSING INDEX {i}')
             for d in range(min_val - v, max_val - v + 1):
-                # print(f'PROCESSING DIFF {d}')
                 if v + d < min_val or v + d > max_val:
                     raise Exception()
 
@@ -28,6 +26,5 @@ class Solution:
                 global_best = max(global_best, dp[i][d])
 
             prev[v].append(i)
-        # print(dp)
 
         return global_best

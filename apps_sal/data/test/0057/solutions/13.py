@@ -1,5 +1,5 @@
 """
-Codeforces Round #331 (Div. 2)
+Codeforces Round 
 
 Problem 596 A
 
@@ -31,10 +31,6 @@ def solve(pairs, n):
         ymin = min(y for (_, y) in pairs)
         ymax = max(y for (_, y) in pairs)
         return (xmax - xmin) * (ymax - ymin)
-
-
-# def p(*args, **kwargs):
-#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

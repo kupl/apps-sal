@@ -34,8 +34,6 @@ def resolve():
             dp[i] %= MOD
         dp_acm[i + 1] = dp_acm[i] + dp[i]
         dp_acm[i + 1] %= MOD
-    # print(dp)
-    # print(dp_acm)
 
     print((dp[-1]))
 

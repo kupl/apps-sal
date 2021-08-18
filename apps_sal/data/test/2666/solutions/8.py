@@ -1,4 +1,3 @@
-# cook your dish here
 def max_profit(prices, n, k):
 
     profit = [[0 for i in range(n)] for j in range(k + 1)]

@@ -1,4 +1,3 @@
-# cook your dish here
 def getAns(num):
     if num < 10:
         return 2

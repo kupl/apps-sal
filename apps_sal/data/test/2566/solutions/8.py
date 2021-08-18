@@ -1,4 +1,3 @@
-# In the name of GOD!
 t = int(input())
 for i in range(t):
     k = int(input())

@@ -1,4 +1,3 @@
-# 88 C - X: Yet Another Die Game
 import decimal
 x = decimal.Decimal(input())
 

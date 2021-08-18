@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 N = int(input())
 D, X = map(int, input().split())
 

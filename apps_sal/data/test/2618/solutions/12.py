@@ -45,7 +45,6 @@ for i in range(q):
                 s += p[np3 + np1 - 1] / 100 * x - p[np3 - 1] / 100 * x
             if np2 > 0:
                 s += p[np1 + np3 + np2 - 1] / 100 * y - p[np1 + np3 - 1] / 100 * y
-#        s = sum(p[:np3]) / 100 * (x + y) + sum(p[np3:np3 + np1]) / 100 * x + sum(p[np1 + np3:np1 + np2 + np3]) / 100 * y
         last_j = j
         j = min(A, B)
         if j == A == B:

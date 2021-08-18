@@ -101,13 +101,3 @@ for d in range(1, 20):
     init[1] = res[1]
 ans = res[0]
 print(ans)
-
-# dp0 = [0] * (L+1)
-# dp1 = [0] * (L+1)
-# dp0[0] = 0
-# dp1[0] = a
-# for i in range(1, L+1):
-#     dp0[i] = (dp0[i-1]*pow(10, int(log10(dp1[i-1]))+1, M) + dp1[i-1]) % M
-#     dp1[i] = dp1[i-1] + b
-# ans = dp0[-1]
-# print(ans)

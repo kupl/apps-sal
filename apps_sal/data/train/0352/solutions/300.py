@@ -3,13 +3,11 @@ class Solution:
         word_map = collections.defaultdict(int)
         word_list = collections.defaultdict(list)
         ans = 1
-        # 没有任何先导单词的话，is_predecessor 永远返回false, 这样长度至少为1
         for word in words:
             length = len(word)
             word_list[length].append(word)
             word_map[word] = 1
 
-        # print(word_map)
         for word_len in range(1, 17):
             if word_len not in word_list:
                 continue

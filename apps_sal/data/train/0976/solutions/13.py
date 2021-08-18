@@ -7,8 +7,8 @@ alt_depth = 0
 max_alt_depth = 0
 last_alt = (alt_depth, 1 if brackets[0] == 3 else 3)
 same_rep = [0]
-sq_start = (-2, 0)  # index, -2 if not found
-rn_start = (-2, 0)  # , depth - 1
+sq_start = (-2, 0)
+rn_start = (-2, 0)
 
 for i in range(len(brackets)):
     b = brackets[i]
@@ -40,7 +40,6 @@ for i in range(len(brackets)):
         elif rn_start[1] == depth and b == 2:
             rn_longest = max(rn_longest, i - rn_start[0])
             rn_start = (-2, 0)
-    # print(i + 1, alt_depth, same_rep)
     if depth == 0:
         if i < len(brackets) - 1:
             last_alt = (alt_depth, 1 if brackets[i + 1] == 3 else 3)

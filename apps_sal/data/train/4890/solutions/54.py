@@ -4,5 +4,3 @@ def find_difference(a, b):
         return c * (-1)
     else:
         return c
-
-    # Your code here!

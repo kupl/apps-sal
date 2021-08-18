@@ -1,4 +1,3 @@
-# A op Bという式の値を計算
 
 A, op, B = map(str, input().split())
 A = int(A)

@@ -15,7 +15,6 @@ class Solution:
                     first = False
                 else:
                     subsets = subsets.intersection(favorite_index[company])
-                    # print(f'for {fav} on {company}: {subsets}')
                 if len(subsets) == 1:
                     result.append(fav)
                     break

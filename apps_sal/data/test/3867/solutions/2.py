@@ -10,7 +10,7 @@ def removeUsed(adj, used):
         adj.remove(s)
 
 
-def solve(a, s):  # a - adjacenct list [[],[]...], seq
+def solve(a, s):
     if s[0] != 0:
         return False
     q = deque()
@@ -28,7 +28,7 @@ def solve(a, s):  # a - adjacenct list [[],[]...], seq
         cur_s = s[i]
         i += 1
         if cur_s not in a[cur]:
-            return False  # not connected
+            return False
         a[cur].remove(cur_s)
         q.append(cur_s)
         used[cur_s] = True

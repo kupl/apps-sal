@@ -1,4 +1,3 @@
-# O(klog(k))解法 多分...
 import sys
 from heapq import heappush, heapify, heappop
 input = sys.stdin.readline

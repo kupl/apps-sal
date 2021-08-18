@@ -2,7 +2,6 @@ import sys
 test_cases = int(input())
 for i in range(0, test_cases):
     count = input().split()
-    # print count
     count_r = int(count[0])
     count_g = int(count[1])
     count_b = int(count[2])

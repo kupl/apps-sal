@@ -7,7 +7,7 @@ def main():
 
     c = liters.count(1)
 
-    if c == 0 or c % 2 == 1:  # c % 2 or n % 2
+    if c == 0 or c % 2 == 1:
         print("First")
     else:
         print("Second")

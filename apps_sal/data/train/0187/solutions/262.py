@@ -22,7 +22,6 @@ class Solution:
         if wait > 0:
             div, mod = divmod(wait, 4)
             cum_profit += div * (4 * boardingCost - runningCost)
-            # cum_profit += max(0, mod * boardingCost -runningCost)
             if cum_profit > max_profit:
                 max_profit = cum_profit
                 max_rotation += div

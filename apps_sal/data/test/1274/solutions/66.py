@@ -1,6 +1,3 @@
-# m-1日目は、a<=1で最大報酬のアルバイトをやる
-# m-2日目は、a<=2で最大報酬のアルバイトをやる（ただし、m-1日目に選択したアルバイトを除く）
-# 以下この要領で後ろから決めていく
 from collections import defaultdict
 from heapq import heapify, heappush, heappop
 

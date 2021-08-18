@@ -1,13 +1,5 @@
 import sys
-# import math
-# import bisect
-# import numpy as np
-# from decimal import Decimal
-# from numba import njit, i8, u1, b1 #JIT compiler
-# from itertools import combinations, product
-# from collections import Counter, deque, defaultdict
 
-# sys.setrecursionlimit(10 ** 6)
 MOD = 10 ** 9 + 7
 INF = 10 ** 9
 PI = 3.14159265358979323846
@@ -48,7 +40,6 @@ class Combination:
 
 def Main():
     n, m, k = read_ints()
-    # m * _{n-1}C_k * 1^k * (m-1)^{n-1-k}
 
     p = 998244353
     modm = [1]

@@ -1,12 +1,10 @@
 from collections import Counter
 import sys
 from bisect import bisect_right, bisect_left
-# instead of AVLTree
 
 
 class BITbisect():
     def __init__(self, InputProbNumbers):
-        # 座圧
         self.ind_to_co = [-10**18]
         self.co_to_ind = {}
         for ind, num in enumerate(sorted(list(set(InputProbNumbers)))):
@@ -47,8 +45,6 @@ class BITbisect():
             return False
         return self.count(num) > 0
 
-    # 0からiまでの区間和
-    # 左に進んでいく
     def _query_sum(self, i):
         s = 0
         while i > 0:
@@ -56,20 +52,16 @@ class BITbisect():
             i -= i & -i
         return s
 
-    # i番目の要素にxを足す
-    # 上に登っていく
     def _add(self, i, x):
         while i <= self.max:
             self.data[i] += x
             i += i & -i
 
-    # 値xを挿入
     def push(self, x):
         if not x in self.co_to_ind:
             raise KeyError("The pushing number didnt initialized")
         self._add(self.co_to_ind[x], 1)
 
-    # 値xを削除
     def delete(self, x):
         if not x in self.co_to_ind:
             raise KeyError("The deleting number didnt initialized")
@@ -77,11 +69,9 @@ class BITbisect():
             raise ValueError("The deleting number doesnt exist")
         self._add(self.co_to_ind[x], -1)
 
-    # 要素xの個数
     def count(self, x):
         return self._query_sum(self.co_to_ind[x]) - self._query_sum(self.co_to_ind[x] - 1)
 
-    # 値xを超える最低ind
     def bisect_right(self, x):
         if x in self.co_to_ind:
             i = self.co_to_ind[x]
@@ -89,7 +79,6 @@ class BITbisect():
             i = bisect_right(self.ind_to_co, x) - 1
         return self._query_sum(i)
 
-    # 値xを下回る最低ind
     def bisect_left(self, x):
         if x in self.co_to_ind:
             i = self.co_to_ind[x]

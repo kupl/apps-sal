@@ -8,10 +8,10 @@ class Solution:
 
             for j in range(i + 1, n):
                 if not isRemoved[j] and not isRemoved[i]:
-                    if (intervals[i][0] <= intervals[j][0]) and (intervals[i][1] >= intervals[j][1]):  # remove j
+                    if (intervals[i][0] <= intervals[j][0]) and (intervals[i][1] >= intervals[j][1]):
                         isRemoved[j] = True
                         numRemoved += 1
-                    elif (intervals[i][0] >= intervals[j][0]) and (intervals[i][1] <= intervals[j][1]):  # remove i
+                    elif (intervals[i][0] >= intervals[j][0]) and (intervals[i][1] <= intervals[j][1]):
                         isRemoved[i] = True
                         numRemoved += 1
         print(isRemoved)

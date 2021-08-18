@@ -3,7 +3,7 @@ class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
 
         out_degree = collections.defaultdict(int)
-        inward_nodes = collections.defaultdict(list)   # recording the nodes going into the 'key' node
+        inward_nodes = collections.defaultdict(list)
 
         for src in range(len(graph)):
             for child in graph[src]:

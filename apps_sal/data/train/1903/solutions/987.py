@@ -19,7 +19,6 @@ class Solution:
         visited = set()
         total = ct = 0
         while q:
-            # for _ in range(len(q)):
             c, (x1, y1) = heapq.heappop(q)
             if (x1, y1) in visited:
                 continue

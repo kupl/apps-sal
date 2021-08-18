@@ -13,9 +13,6 @@ def work():
             if a.find(s1) == -1:
                 a = a + s1
                 count += 1
-#				print a.find(s1)
-#				print s1
-#				print a
         print(count)
 
 

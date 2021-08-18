@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 import heapq
 INF = float("inf")
@@ -54,9 +53,7 @@ def shortestPath(g: Graph, s: int):
 def solve(K: int):
     g = Graph(K)
     for i in range(1, K):
-        # 1を加える
         g.add_edge([i, (i + 1) % K, 1])
-        # 10倍する
         g.add_edge([i, (10 * i) % K, 0])
     dist, prev = shortestPath(g, 1)
     print((dist[0] + 1))
@@ -70,7 +67,7 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    K = int(next(tokens))  # type: int
+    K = int(next(tokens))
     solve(K)
 
 

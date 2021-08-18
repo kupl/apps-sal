@@ -16,8 +16,6 @@ for j, dp in enumerate(DP):
         tmp = dp[0]
         i_max = j
 print(tmp)
-# print(DP)
-# print(i_max)
 path = []
 i = i_max
 while i >= 0:
@@ -40,7 +38,6 @@ for j in range(1, len(path)):
     sft += d
 for j in range(N - 1, path[-1], -1):
     ans.append(j - sft)
-# print(path)
 
 ans = [a + 1 for a in ans]
 print(len(ans))

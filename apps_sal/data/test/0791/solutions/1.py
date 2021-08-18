@@ -1,5 +1,3 @@
-# Codeforces 265 Div. 2
-# A
 
 n = int(input())
 l = list(input())

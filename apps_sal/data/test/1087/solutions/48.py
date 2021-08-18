@@ -2,7 +2,6 @@ from sys import stdin
 
 
 def main():
-    # 入力
     readline = stdin.readline
     n, k = map(int, readline().split())
     a = list(map(int, readline().split()))
@@ -31,15 +30,15 @@ def main():
         else:
             if k_bin[len(k_bin) - j] == "1":
                 dp[i + 1][0] = dp[i][0] + score2
-                if cnt_one[i] >= (n + 1) // 2:  # 1の数が半数以上
+                if cnt_one[i] >= (n + 1) // 2:
                     dp[i + 1][1] = max(dp[i][0] + score1, dp[i][1] + score1)
-                else:  # 1の数が半数未満
+                else:
                     dp[i + 1][1] = max(dp[i][0] + score1, dp[i][1] + score2)
             else:
                 dp[i + 1][0] = dp[i][0] + score1
-                if cnt_one[i] >= (n + 1) // 2:  # 1の数が半数以上
+                if cnt_one[i] >= (n + 1) // 2:
                     dp[i + 1][1] = dp[i][1] + score1
-                else:  # 1の数が半数未満
+                else:
                     dp[i + 1][1] = dp[i][1] + score2
 
     print(max(dp[l][0], dp[l][1]))

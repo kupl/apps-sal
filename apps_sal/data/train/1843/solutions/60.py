@@ -1,10 +1,7 @@
 class TweetCounts:
-    # approach 1:
-    # - record tweets organized by tweet name
-    # - compute freqs on demand
 
     def __init__(self):
-        self.tweets = {}  # tweetName: {time: count}
+        self.tweets = {}
 
     def recordTweet(self, tweetName: str, time: int) -> None:
         self.tweets.setdefault(tweetName, {}).setdefault(time, 0)
@@ -39,8 +36,3 @@ class TweetCounts:
                 offset //= 86400
             results[offset] += count
         return results
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

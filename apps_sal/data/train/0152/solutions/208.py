@@ -2,7 +2,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         n = len(position)
-        left, right = 0, position[-1] - position[0]  # search space is sorted
+        left, right = 0, position[-1] - position[0]
 
         def count_balls(force):
             balls, prev = 1, position[0]
@@ -13,9 +13,7 @@ class Solution:
             return balls
 
         while left < right:
-            # mid = left + (right-left)//2
             mid = right - (right - left) // 2
-            # mid = (left+right+1)//2
             if count_balls(mid) >= m:
                 left = mid
             else:

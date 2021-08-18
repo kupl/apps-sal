@@ -10,7 +10,6 @@ class Solution:
         i = 0
         res = -1
 
-        # print(tw)
         while (i < n) or (nw != 0):
             if i >= n:
                 nb = nw
@@ -27,7 +26,6 @@ class Solution:
             if (total * boardingCost - (i + 1) * runningCost) > ans:
                 res = i + 1
             ans = max(total * boardingCost - (i + 1) * runningCost, ans)
-            #print(i+1, ans)
 
             i += 1
         return res

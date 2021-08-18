@@ -50,8 +50,6 @@ for loop in range(m):
     xsum = s[X]
     ysum = dsum - xsum
 
-    #print (X,Y,xsum,ysum,file=sys.stderr)
-
     ans = 0
     if a <= Y:
         ans += ysum * fac[n] * (Y - a) * inverse(Y, mod)

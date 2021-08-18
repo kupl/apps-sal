@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     a, k = [int(i) for i in input().split()]
     l = [int(i) for i in input().split()]

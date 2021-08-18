@@ -7,8 +7,6 @@ class Solution:
         for i, j in enumerate(A):
             map_[j] = i + 10000
 
-        # i:end  j:start
-
         for i in range(2, n):
             for j in range(1, i):
                 diff = A[i] - A[j]

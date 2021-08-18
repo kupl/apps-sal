@@ -50,7 +50,5 @@ for i in range(n + 1):
     if l[i] + r_cum_min[i] < answer:
         answer = l[i] + r_cum_min[i]
 
-# print(l)
-# print(r)
 
 print(answer)

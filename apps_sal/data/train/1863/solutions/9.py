@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:
         from queue import Queue
@@ -37,5 +31,3 @@ class Solution:
             templist.append(i[0] for i in sorted(dic[key], key=itemgetter(1, 0)))
 
         return templist
-
-        # templist.append(sorted(dic[key]))

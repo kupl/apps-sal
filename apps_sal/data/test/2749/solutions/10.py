@@ -9,7 +9,6 @@ point = A[0]
 color = 0
 for i in range(H):
     for j in range(W):
-        # 色iが接するように、左 -> 右 -> 下の列を右から、と染めていく
         if i % 2 == 0:
             x = j
         else:

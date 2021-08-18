@@ -20,10 +20,10 @@ class SegmentTree():
         self.ti = ti
         self.n = n = 2**(len(array).bit_length())
         self.dat = dat = [ti] * n + array + [ti] * (n - len(array))
-        for i in range(n - 1, 0, -1):  # build
+        for i in range(n - 1, 0, -1):
             dat[i] = f(dat[i << 1], dat[i << 1 | 1])
 
-    def update(self, p, v):  # set value at position p (0-indexed)
+    def update(self, p, v):
         f, n, dat = self.f, self.n, self.dat
         p += n
         dat[p] = v
@@ -31,7 +31,7 @@ class SegmentTree():
             p >>= 1
             dat[p] = f(dat[p << 1], dat[p << 1 | 1])
 
-    def operate_right(self, p, v):  # apply operator from the right side
+    def operate_right(self, p, v):
         f, n, dat = self.f, self.n, self.dat
         p += n
         dat[p] = f(dat[p], v)
@@ -39,7 +39,7 @@ class SegmentTree():
             p >>= 1
             dat[p] = f(dat[p << 1], dat[p << 1 | 1])
 
-    def operate_left(self, p, v):  # apply operator from the left side
+    def operate_left(self, p, v):
         f, n, dat = self.f, self.n, self.dat
         p += n
         dat[p] = f(v, dat[p])
@@ -47,7 +47,7 @@ class SegmentTree():
             p >>= 1
             dat[p] = f(dat[p << 1], dat[p << 1 | 1])
 
-    def query(self, l, r):  # result on interval [l, r) (0-indexed)
+    def query(self, l, r):
         f, ti, n, dat = self.f, self.ti, self.n, self.dat
         vl = vr = ti
         l += n

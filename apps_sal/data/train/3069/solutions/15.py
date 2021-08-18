@@ -19,7 +19,6 @@ db = {
 
 
 def greet(language):
-    # your code here
     if language in db.keys():
         return(db[language])
     else:

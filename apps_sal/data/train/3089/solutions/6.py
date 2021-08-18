@@ -2,7 +2,6 @@ import re
 
 
 def dashatize(num):
-    # get 'em
     if num == None:
         return "None"
     if num < 0:

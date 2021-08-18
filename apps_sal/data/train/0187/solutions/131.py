@@ -17,7 +17,6 @@ class Solution:
             profits.append(curr_profit)
             ppl_waiting -= num_board
 
-        # print(profits)
         max_prof = max(profits)
         if max_prof <= 0:
             return -1

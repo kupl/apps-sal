@@ -4,9 +4,7 @@ from collections import defaultdict
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         '''
-        # Note:
             A.length >= 2
-        # Analysis:
             Arithmetic sequence
 
         '''

@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
 
-################################################################################
 
 x, y, z = map(int, input().split())
 r = (x + y) // z

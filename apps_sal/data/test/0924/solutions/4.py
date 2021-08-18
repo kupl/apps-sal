@@ -20,6 +20,5 @@ rb -= start
 
 
 res = max(inters(la, ra, lb + shift, rb + shift), inters(la + shift, ra + shift, lb, rb), inters(la, ra, lb, rb))
-# print(la,ra, lb,rb)
 
 print(res)

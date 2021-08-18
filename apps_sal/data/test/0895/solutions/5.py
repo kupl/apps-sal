@@ -13,18 +13,11 @@ inz = 0
 fin = 1
 count = 1
 
-# print(l)
 
 while fin < n:
-    # conta il num max se si parte da inz
     while fin < n and l[fin] - l[inz] <= T:
         count += 1
         fin += 1
-
-    # print(count)
-    # print(inz)
-    # print(fin)
-    # print()
 
     if count > M:
         M = count

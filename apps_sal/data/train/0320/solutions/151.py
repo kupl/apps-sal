@@ -9,7 +9,6 @@ class Solution:
             two = 0
             i_copy = i
             while i_copy > 0:
-                # print(i_copy)
                 if i_copy % 2 == 0:
                     i_copy = i_copy // 2
                     two += 1
@@ -20,5 +19,4 @@ class Solution:
             two_req = max(two_req, two)
 
         res = two_req + one
-        # print(ctr, odd_ctr, non_zero)
         return res

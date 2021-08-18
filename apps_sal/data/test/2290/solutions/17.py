@@ -9,13 +9,11 @@ def main():
         u, v = [int(x) for x in sys.stdin.readline().split(" ")]
         graph[u].append(v)
         graph[v].append(u)
-    # DFS for connected components in increasing order
     maxB = -1
     count = 0
     visited = [False for v in range(0, n + 1)]
     stack = []
     for i in range(1, n + 1):
-        # connected components
         if visited[i]:
             continue
         if i < maxB:

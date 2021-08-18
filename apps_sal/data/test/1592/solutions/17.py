@@ -8,7 +8,6 @@ time = 0
 max_queue_size = 0
 last_time = 0
 for t, c in arr:
-    # print("Queue:", queue_size, "Time:", time)
     sent = t - last_time
     queue_size = max(0, queue_size - sent)
     queue_size += c
