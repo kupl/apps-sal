@@ -1,7 +1,5 @@
 class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
-        # simple BFS. store a bag of keys you have and when encounter a lock,
-        # check whether you have corresponding key in the bag
         target = 0
         queue, visited = [], set()
 

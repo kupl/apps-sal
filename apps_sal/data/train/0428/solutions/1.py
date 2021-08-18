@@ -33,8 +33,8 @@ class Solution:
                     if new_x < 0 or new_x >= rows or new_y < 0 or new_y >= cols:
                         continue
                     ch = grid[new_x][new_y]
-                    if ch == '#':
-                        continue
+                    if ch == '
+                    continue
                     ascii_minus_lower = ord(ch) - ord('a')
                     ascii_minus_upper = ord(ch) - ord('A')
                     if 0 <= ascii_minus_lower <= 5:

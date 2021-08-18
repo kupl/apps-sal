@@ -43,8 +43,6 @@ class Solution:
             cur = max(nums) - min(nums)
         nums[-1] = h1
 
-        ############################################################
-
         h1, h2, h3 = nums[0], nums[1], nums[-1]
         nums[0], nums[1], nums[-1] = nums[2], nums[2], nums[2]
         if max(nums) - min(nums) < cur:

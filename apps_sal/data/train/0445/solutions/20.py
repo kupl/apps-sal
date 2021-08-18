@@ -10,7 +10,7 @@ class Solution:
             if len(maxHeap) > 4:
                 heappop(maxHeap)
                 heappop(minHeap)
-        minHeap = sorted([-1 * e for e in minHeap])  # in ascending order
+        minHeap = sorted([-1 * e for e in minHeap])
         res = float('inf')
         for i in range(4):
 

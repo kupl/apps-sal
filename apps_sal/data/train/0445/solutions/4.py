@@ -1,5 +1,4 @@
 class Solution:
-    # don't even sort - YOU READ IT!!!!
     def minDifference(self, nums: List[int]) -> int:
         if len(nums) < 5:
             return 0
@@ -37,8 +36,6 @@ class Solution:
                 min3 = i
             elif i < min4 and i >= min3:
                 min4 = i
-            #print(str([min1, min2, min3, min4]))
-            #print(str([max4, max3, max2, max1]))
 
         smallest_diff = max4 - min1
         diff = max3 - min2
@@ -52,7 +49,6 @@ class Solution:
             smallest_diff = diff
         return smallest_diff
     '''
-    #original submission
     def minDifference(self, nums: List[int]) -> int:
 
         if len(nums) < 5: 
@@ -73,7 +69,6 @@ class Solution:
         return lowest_diff
     '''
     '''
-    # faster and cleaner - same as original solution
     def minDifference(self, nums: List[int]) -> int:
 
         if len(nums) < 5: 
@@ -91,22 +86,17 @@ class Solution:
         return lowest_diff
     '''
     '''
-    #original attempt - sort into a sort of binary search
     def minDifference(self, nums: List[int]) -> int:
         
         N = len(nums)
         
-        # any array of length 4 or less can have all elements mapped to same value
         if len(nums) < 5: 
             return 0
         
-        # sort 
         a = sorted(nums)
         
-        # compare 'new' low/highs to an updated median
         L = 0
         H = len(nums) - 1
-        # counts for those remapped from each side
         Lc = 0
         Hc = 0
         for i in range(3):
@@ -116,15 +106,12 @@ class Solution:
             high = a[H]
             lowDiff = M - low
             highDiff = high - M
-            # implies we should set the lowest value to the final median
             if lowDiff > highDiff:
                 L += 1
                 Lc += 1
-            # implies we should set the highest value to the final median
             elif lowDiff < highDiff:
                 H -= 1
                 Hc += 1
-            # implies the differences are the same - pick the side with a higher count
             else:
                 if Hc > Lc:
                     H -= 1

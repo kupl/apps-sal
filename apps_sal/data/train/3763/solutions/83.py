@@ -5,8 +5,6 @@ ops = {
     '-': operator.sub,
     '*': operator.mul,
     '/': operator.truediv,
-    # '%' : operator.mod,
-    # '^' : operator.xor,
 }
 
 

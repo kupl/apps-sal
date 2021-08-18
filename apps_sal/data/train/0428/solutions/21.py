@@ -1,6 +1,5 @@
 class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
-        # 30*30*2^6 =900*64--10^5 < 10^6
 
         init_x, init_y = -1, -1
         m = len(grid)
@@ -39,8 +38,8 @@ class Solution:
 
                     new_s = keys
                     c = grid[nx][ny]
-                    if c == '#':
-                        continue
+                    if c == '
+                    continue
 
                     if c >= 'A' and c <= 'F' and ((keys >> (ord(c) - ord('A'))) & 1 == 0):
                         continue

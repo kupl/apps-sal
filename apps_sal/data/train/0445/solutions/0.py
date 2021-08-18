@@ -3,7 +3,6 @@ class Solution:
         if len(nums) <= 4:
             return 0
         else:
-            # nums = sorted(nums)
             nums.sort()
             threeZero = nums[-1] - nums[3]
             twoOne = nums[-2] - nums[2]

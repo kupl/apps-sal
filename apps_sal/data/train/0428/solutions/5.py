@@ -3,20 +3,19 @@ class Solution:
         m = len(grid)
         n = len(grid[0])
 
-        # handles neighbor, returns neighbor next state
         def neighbor(i, j, keys):
             keys_list = list(keys)
             if grid[i][j] in ['.', '@']:
                 return (i, j, keys)
             elif grid[i][j].islower():
-                if grid[i][j] in keys_list:  # already picked key, treat as empty cell
+                if grid[i][j] in keys_list:
                     return (i, j, keys)
-                else:  # pick up new key
+                else:
                     keys_list.append(grid[i][j])
                     new_keys = ''.join(keys_list)
                     return (i, j, new_keys)
             elif grid[i][j].isupper():
-                if grid[i][j].lower() in keys_list:  # treat lock as empty cell if have the key
+                if grid[i][j].lower() in keys_list:
                     return (i, j, keys)
             return None
 

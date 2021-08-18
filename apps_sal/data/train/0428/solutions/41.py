@@ -25,8 +25,8 @@ class Solution:
             for delta_x, delta_y in self.DIR:
                 next_x, next_y = x + delta_x, y + delta_y
 
-                if not self.inbound(grid, next_x, next_y) or grid[next_x][next_y] == '#':
-                    continue
+                if not self.inbound(grid, next_x, next_y) or grid[next_x][next_y] == '
+                continue
 
                 if grid[next_x][next_y].isupper():
                     if (curr_keys >> (ord(grid[next_x][next_y]) - ord('A'))) & 1:
@@ -35,7 +35,7 @@ class Solution:
                         continue
                 elif grid[next_x][next_y].islower():
                     next_keys = curr_keys | (1 << (ord(grid[next_x][next_y]) - ord('a')))
-                else:  # the next location is @ or .
+                else:
                     next_keys = curr_keys
 
                 if (next_keys, next_x, next_y) in visited:

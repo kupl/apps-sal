@@ -1,6 +1,5 @@
 class Solution:
     def minDifference(self, nums: List[int]) -> int:
-        # 0,1,4,5,10
         N = len(nums) - 1
         if N < 3:
             return 0

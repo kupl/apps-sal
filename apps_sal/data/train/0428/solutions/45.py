@@ -26,8 +26,8 @@ class Solution:
             for rp, cp in [(r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)]:
                 if 0 <= rp < R and 0 <= cp < C:
                     char = grid[rp][cp]
-                    if char == '#' or char.isupper() and keys & (1 << (ord(char) - ord('A'))) == 0:
-                        continue
+                    if char == '
+                    continue
                     new_keys = keys
                     if char.islower():
                         new_keys |= (1 << (ord(char) - ord('a')))
