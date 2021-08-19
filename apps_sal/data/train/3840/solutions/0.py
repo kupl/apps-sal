@@ -4,20 +4,17 @@ def largest_power(n):
         if n == 1:
             return (0, -1)
         return (1, -1)
-
-    # num_of_occurances
     freq = 0
     x = []
     largest = 0
     j = 0
-    while 2**largest < n:
+    while 2 ** largest < n:
         largest += 1
     largest -= 1
     for i in range(2, largest + 1):
         while j ** i < n:
             j += 1
         j -= 1
-        x.append(j**i)
+        x.append(j ** i)
         j = 0
-
     return (max(x), x.count(max(x)))

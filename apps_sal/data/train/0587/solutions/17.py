@@ -1,6 +1,5 @@
-# cook your dish here
 n = int(input())
-arr = [int(s) for s in input().split(" ")]
+arr = [int(s) for s in input().split(' ')]
 ans = []
 for x in arr:
     if x == 2:

@@ -1,7 +1,6 @@
-# map(int, input().split())
 rw = int(input())
 for wewq in range(rw):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a.sort()
     a.reverse()

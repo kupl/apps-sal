@@ -1,7 +1,5 @@
-# cook your dish here
-ml = [2**i for i in range(18)]
-ml1 = [2**i + 1 for i in range(18)]
-
+ml = [2 ** i for i in range(18)]
+ml1 = [2 ** i + 1 for i in range(18)]
 for _ in range(int(input())):
     n = int(input())
     if n == 1:
@@ -20,5 +18,4 @@ for _ in range(int(input())):
         else:
             l2.append(i)
         i -= 1
-
-    print(*(l + l2[::-1]))
+    print(*l + l2[::-1])

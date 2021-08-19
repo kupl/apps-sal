@@ -1,9 +1,8 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     d = dict()
     for i in range(n):
-        x, y = input().split()
+        (x, y) = input().split()
         y = int(y)
         if x not in d:
             d[x] = [0, 0]
@@ -11,5 +10,4 @@ for _ in range(int(input())):
     ans = 0
     for i in d:
         ans += max(d[i])
-
     print(ans)

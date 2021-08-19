@@ -4,5 +4,4 @@ def count_red_beads(n):
         beads += 'B'
         beads += 'RR'
     beads += 'B'
-#     print(beads)
     return beads.count('R')
