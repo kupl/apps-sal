@@ -7,7 +7,7 @@ def answer(n: int) -> int:
 
 def main():
     n = int(input())
-    print((answer(n)))
+    print(answer(n))
 
 
 def __starting_point():

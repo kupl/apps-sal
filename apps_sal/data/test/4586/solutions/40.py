@@ -5,8 +5,8 @@ def atc_079a(input_value: str) -> str:
             if input_value[i] != input_value[i + j]:
                 break
             if j == n - 1:
-                return "Yes"
-    return "No"
+                return 'Yes'
+    return 'No'
 
 
 input_value = input()

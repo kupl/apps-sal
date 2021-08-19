@@ -1,14 +1,11 @@
 from itertools import accumulate
 import bisect
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 a_c = [0] + list(accumulate(a))
 b_c = [0] + list(accumulate(b))
-
 result = []
-
 for i in range(n + 1):
     if k >= a_c[i]:
         k_temp = k - a_c[i]

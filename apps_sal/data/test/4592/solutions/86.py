@@ -2,14 +2,28 @@ import sys
 import math
 from collections import defaultdict
 from collections import deque
-
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-def input(): return sys.stdin.readline().strip()
-def NI(): return int(input())
-def NMI(): return map(int, input().split())
-def NLI(): return list(NMI())
-def SI(): return input()
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def NI():
+    return int(input())
+
+
+def NMI():
+    return map(int, input().split())
+
+
+def NLI():
+    return list(NMI())
+
+
+def SI():
+    return input()
 
 
 def prime_fact(n):
@@ -33,14 +47,12 @@ def main():
     if N == 1:
         print(1)
         return
-
     for n in range(2, N + 1):
         ND = prime_fact(n)
-        for p, a in list(ND.items()):
+        for (p, a) in list(ND.items()):
             D[p] += a
-
     ans = 1
-    for p, a in list(D.items()):
+    for (p, a) in list(D.items()):
         ans = ans * (a + 1) % MOD
     print(ans)
 

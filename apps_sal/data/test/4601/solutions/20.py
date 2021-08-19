@@ -1,4 +1,4 @@
-num, deathblow = map(int, input().split())
+(num, deathblow) = map(int, input().split())
 enemy_table = list(map(int, input().split()))
 list.sort(enemy_table, reverse=True)
 sum = 0

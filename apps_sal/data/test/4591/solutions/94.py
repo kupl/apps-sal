@@ -1,4 +1,4 @@
-a, b, c, x, y = map(int, input().split())
+(a, b, c, x, y) = map(int, input().split())
 ans = 0
 if a >= c * 2:
     y -= x

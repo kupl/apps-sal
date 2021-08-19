@@ -1,4 +1,3 @@
-
 def div_by_2(n):
     res = 0
     while n % 2 == 0:

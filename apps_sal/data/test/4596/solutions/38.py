@@ -1,6 +1,5 @@
 N = int(input())
-a = list(int(x) for x in input().split())
-
+a = list((int(x) for x in input().split()))
 ans = 0
 flag = True
 while flag:
@@ -12,5 +11,4 @@ while flag:
             break
     if flag:
         ans += 1
-
 print(ans)

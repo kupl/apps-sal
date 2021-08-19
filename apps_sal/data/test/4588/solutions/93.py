@@ -1,9 +1,8 @@
 import sys
-
-X, Y = sys.stdin.readline().strip().split()
+(X, Y) = sys.stdin.readline().strip().split()
 if X == Y:
-    print("=")
+    print('=')
 elif X < Y:
-    print("<")
+    print('<')
 else:
-    print(">")
+    print('>')

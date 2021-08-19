@@ -8,4 +8,4 @@ def factorial(i: int):
         return i + factorial(i - 1)
 
 
-print((factorial(n)))
+print(factorial(n))

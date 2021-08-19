@@ -1,7 +1,6 @@
 N = input()
 a = list(map(int, input().split()))
-res = 10**9
-
+res = 10 ** 9
 for i in a:
     count = 0
     while i % 2 == 0:

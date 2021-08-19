@@ -1,9 +1,8 @@
 def main():
-
     n = int(input())
     cards = list(map(int, input().split()))
     cards.sort(reverse=True)
-    alice, bob = 0, 0
+    (alice, bob) = (0, 0)
     if n % 2 == 0:
         for i in range(int(n / 2)):
             alice += cards[2 * i]

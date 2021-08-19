@@ -1,5 +1,4 @@
-a, b, c, x, y = map(int, input().split())
-
+(a, b, c, x, y) = map(int, input().split())
 if a >= 2 * c and b >= 2 * c:
     print(max(x, y) * 2 * c)
 elif a >= 2 * c:

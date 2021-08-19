@@ -1,7 +1,7 @@
 def erat(n):
     n += 1
     l = [1 for _ in range(n)]
-    l[0], l[1] = 0, 0
+    (l[0], l[1]) = (0, 0)
     for i in range(4, n, 2):
         l[i] = 0
     for i in range(9, n, 6):
@@ -30,4 +30,4 @@ for i in range(1, n + 1):
 ans = 1
 for i in u:
     ans *= i + 1
-print(ans % (10**9 + 7))
+print(ans % (10 ** 9 + 7))

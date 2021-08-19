@@ -2,7 +2,6 @@ n = int(input())
 a = list(map(int, input().split()))
 ans = 0
 flag = False
-
 while flag == False:
     for i in range(n):
         if a[i] % 2 == 0:
@@ -12,5 +11,4 @@ while flag == False:
             break
     else:
         ans += 1
-
 print(ans)

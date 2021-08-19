@@ -1,6 +1,5 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 memo = [0] * 10000
-
 N = int(input())
 
 
@@ -24,10 +23,8 @@ for i in range(N):
     l = primeLst(i + 1)
     for x in l:
         memo[x] += 1
-
 res = 1
 for i in range(1, N):
     res *= memo[i + 1] + 1
     res %= MOD
-
 print(res)

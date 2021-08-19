@@ -1,9 +1,9 @@
-N, M = map(int, input().split())
-num_AC, num_WA = 0, 0
+(N, M) = map(int, input().split())
+(num_AC, num_WA) = (0, 0)
 res = [list(input().split()) for i in range(M)]
 check = ['v'] * N
 WA_check = [0] * N
-for i, j in res:
+for (i, j) in res:
     i = int(i)
     if check[i - 1] == 'v':
         if j == 'WA':

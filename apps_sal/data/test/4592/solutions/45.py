@@ -8,5 +8,5 @@ for i in range(int(input()) + 1):
         d[i] = 2
 a = 1
 for v in d.values():
-    a = a * v % (10**9 + 7)
+    a = a * v % (10 ** 9 + 7)
 print(a)

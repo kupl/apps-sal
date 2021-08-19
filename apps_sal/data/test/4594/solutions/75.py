@@ -2,7 +2,6 @@ N = int(input())
 D = []
 for i in range(N):
     D.append(int(input()))
-
 count = 0
 preMax = 0
 for i in range(N):
@@ -12,5 +11,4 @@ for i in range(N):
         count += 1
         preMax = max(D)
     D.remove(max(D))
-
 print(count)

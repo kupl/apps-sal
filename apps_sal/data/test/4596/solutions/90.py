@@ -1,10 +1,8 @@
 N = int(input())
 li = list(map(int, input().split()))
-
 flag = True
 ans = -1
-
-while(flag):
+while flag:
     ans += 1
     newlist = []
     for i in li:

@@ -9,7 +9,6 @@ def answer(n: int, k: int, xs: List[int]) -> int:
             moving_distance += x * 2
         else:
             moving_distance += (k - x) * 2
-
     return moving_distance
 
 

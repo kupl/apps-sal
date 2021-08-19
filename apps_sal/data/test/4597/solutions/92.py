@@ -1,5 +1,3 @@
 import math
-
 N = int(input())
-
-print((math.factorial(N) % (1000000000 + 7)))
+print(math.factorial(N) % (1000000000 + 7))

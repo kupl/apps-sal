@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 cnt = 0
 flag = True
 while flag:

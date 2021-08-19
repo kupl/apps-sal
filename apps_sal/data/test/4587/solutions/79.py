@@ -10,7 +10,6 @@ def abc077c_snuke_festival():
         j = bisect.bisect_left(a, b_size)
         j = n - j
         k = bisect.bisect_right(c, b_size)
-
         total += (n - j) * (n - k)
     print(total)
 

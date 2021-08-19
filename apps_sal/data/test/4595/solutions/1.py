@@ -2,7 +2,6 @@ s = input()
 start = len(s)
 end = 0
 ans = 0
-
 for i in range(len(s)):
     if s[i] == 'A':
         start = min(start, i)

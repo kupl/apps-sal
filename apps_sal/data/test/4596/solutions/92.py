@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 count = 0
 for _ in range(30):
     for i in range(N):

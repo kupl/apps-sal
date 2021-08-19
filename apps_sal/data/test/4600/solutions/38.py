@@ -1,10 +1,10 @@
-N, M = map(int, input().split())
-d = {'AC': 0, 'WA': 0, }
+(N, M) = map(int, input().split())
+d = {'AC': 0, 'WA': 0}
 b = 0
 for i in range(N + 1):
     d[i] = 0
 for j in range(M):
-    p, s = input().split()
+    (p, s) = input().split()
     p = int(p)
     if s == 'AC':
         if d[p] != -1:

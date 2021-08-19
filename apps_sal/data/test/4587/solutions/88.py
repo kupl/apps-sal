@@ -31,4 +31,4 @@ for b in B:
     a = binary1(L, R, A, b) + 1
     c = N - binary2(L, R, C, b) - 1
     ans.append(a * c)
-print((sum(ans)))
+print(sum(ans))

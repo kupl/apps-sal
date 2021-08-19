@@ -1,4 +1,4 @@
-A, B = input().split()
+(A, B) = input().split()
 if A > B:
     print('>')
 elif A == B:

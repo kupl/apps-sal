@@ -9,4 +9,4 @@ for i in range(N):
         alice += a[i]
     elif i % 2 == 1:
         bob += a[i]
-print((alice - bob))
+print(alice - bob)

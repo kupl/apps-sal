@@ -9,5 +9,5 @@ for i in range(3, n + 1):
         temp[i - 1] += 1
 ans = 1
 for i in range(n - 1):
-    ans = (ans * (temp[i + 1] + 1)) % (10**9 + 7)
+    ans = ans * (temp[i + 1] + 1) % (10 ** 9 + 7)
 print(ans)

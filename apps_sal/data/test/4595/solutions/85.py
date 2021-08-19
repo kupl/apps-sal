@@ -1,5 +1,4 @@
 s = list(input())
-
 while s[0] != 'A' or s[-1] != 'Z':
     if s[0] == 'A':
         s.pop()
@@ -8,5 +7,4 @@ while s[0] != 'A' or s[-1] != 'Z':
     else:
         s.pop(0)
         s.pop()
-
 print(len(s))

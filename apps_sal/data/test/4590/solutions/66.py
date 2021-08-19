@@ -1,5 +1,5 @@
 import itertools
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = list(itertools.accumulate(list(map(int, input().split()))))
 b = list(itertools.accumulate(list(map(int, input().split()))))
 a.insert(0, 0)

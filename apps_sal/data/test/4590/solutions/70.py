@@ -14,7 +14,7 @@ def binary_search(arr, num):
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     a_books = list(map(int, input().split()))
     b_books = list(map(int, input().split()))
     b_cum_sum = [0] * (m + 1)

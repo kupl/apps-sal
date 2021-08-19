@@ -2,7 +2,7 @@ def main():
     s = input()
     a = len(s)
     z = 0
-    for i, t in enumerate(s):
+    for (i, t) in enumerate(s):
         if t == 'A':
             a = min(a, i)
         if t == 'Z':

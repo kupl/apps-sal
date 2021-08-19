@@ -6,7 +6,7 @@ a = sorted(a)
 b = sorted(b)
 c = sorted(c)
 c.insert(0, -1)
-c.append(10**10)
+c.append(10 ** 10)
 B = [0] * n
 ans = 0
 for i in range(n):
@@ -21,15 +21,12 @@ for i in range(n):
             l = m
     B[i] = n - l
 g = [0] * n
-
-
 g[n - 1] = B[n - 1]
 for i in range(n - 1):
     g[-2 - i] = g[-1 - i] + B[-2 - i]
 g.append(0)
-
 b.insert(0, -1)
-b.append(10**10)
+b.append(10 ** 10)
 for i in range(n):
     x = a[i]
     l = 0

@@ -1,4 +1,4 @@
-a, b, c, x, y = map(int, input().split())
+(a, b, c, x, y) = map(int, input().split())
 if a + b <= 2 * c:
     print(a * x + b * y)
 else:

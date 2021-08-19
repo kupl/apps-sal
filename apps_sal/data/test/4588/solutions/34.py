@@ -1,10 +1,10 @@
 import math
-X, Y = input().split()
+(X, Y) = input().split()
 X = ord(X)
 Y = ord(Y)
 if X == Y:
-    print("=")
+    print('=')
 elif X > Y:
-    print(">")
+    print('>')
 else:
-    print("<")
+    print('<')

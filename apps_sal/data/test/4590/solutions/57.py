@@ -6,7 +6,7 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     a = np.array(readline().split(), np.int64)
     b = np.array(readline().split(), np.int64)
     aa = np.zeros(n + 1, np.int64)

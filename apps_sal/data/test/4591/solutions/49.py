@@ -1,5 +1,4 @@
-A, B, C, X, Y = map(int, input().split())
-
+(A, B, C, X, Y) = map(int, input().split())
 ans = 0
 if C * 2 <= A + B:
     mi = min(X, Y)

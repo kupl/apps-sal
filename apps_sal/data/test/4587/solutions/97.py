@@ -9,7 +9,6 @@ c = sorted(c)
 b_ans = [0] * len(b)
 for i in range(len(b)):
     b_ans[i] = bisect.bisect_left(a, b[i])
-
 ruiseki_b = [0]
 for i in range(len(b_ans)):
     ruiseki_b.append(ruiseki_b[i] + b_ans[i])

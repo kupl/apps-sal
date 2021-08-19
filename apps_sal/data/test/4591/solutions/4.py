@@ -1,14 +1,12 @@
 import sys
-
 input = sys.stdin.readline
-a, b, c, x, y = map(int, input().split())
+(a, b, c, x, y) = map(int, input().split())
 ab = 2 * c
 count_x = 0
 count_y = 0
 buy_a = 0
 buy_b = 0
 buy_c = 0
-
 if ab < a + b:
     min_count = min(x, y)
     count_x = min_count
@@ -19,7 +17,6 @@ if ab < a + b:
             buy_a += x - count_x
         else:
             buy_c += 2 * (x - count_x)
-
     elif y - count_y > 0:
         if ab > b:
             buy_b += y - count_y
@@ -39,5 +36,4 @@ else:
             buy_a += x
         else:
             buy_c += 2 * x
-
 print(buy_a * a + buy_b * b + buy_c * c)

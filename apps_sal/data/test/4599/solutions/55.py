@@ -1,8 +1,6 @@
 N = int(input())
 list1 = list(map(int, input().split()))
-
 list1.sort(reverse=True)
-
 alice = 0
 bob = 0
 for i in range(len(list1)):
@@ -10,5 +8,4 @@ for i in range(len(list1)):
         alice += list1[i]
     else:
         bob += list1[i]
-
-print((alice - bob))
+print(alice - bob)

@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 h = [int(s) for s in input().split()]
-
 ans = 0
 h.sort(reverse=True)
 if k >= n:

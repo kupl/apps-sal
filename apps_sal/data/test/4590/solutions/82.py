@@ -1,5 +1,5 @@
 from bisect import bisect_left
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 SA = [0] * (N + 1)

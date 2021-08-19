@@ -1,5 +1,5 @@
 import math
-a, b, c, x, y = list(map(int, input().split(' ')))
+(a, b, c, x, y) = list(map(int, input().split(' ')))
 ans = float('inf')
 c = c * 2
 for i in range(max(x, y) + 1):

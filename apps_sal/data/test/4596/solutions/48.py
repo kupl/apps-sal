@@ -1,5 +1,4 @@
 def main():
-
     n = int(input())
     nums = list(map(int, input().split()))
     ans = 0
@@ -14,7 +13,6 @@ def main():
                 break
         if flg:
             ans += 1
-
     print(ans)
 
 

@@ -1,3 +1,2 @@
 s = input()
-
-print((s.rindex('Z') - s.index('A') + 1))
+print(s.rindex('Z') - s.index('A') + 1)

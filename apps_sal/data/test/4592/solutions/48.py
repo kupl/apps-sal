@@ -25,4 +25,4 @@ for I in range(2, N + 1):
     res += prime_factorize(I)
 for J in set(res):
     result *= res.count(J) + 1
-print(result % (10**9 + 7))
+print(result % (10 ** 9 + 7))

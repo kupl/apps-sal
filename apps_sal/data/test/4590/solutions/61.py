@@ -1,10 +1,10 @@
 import bisect
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 A = [0] + list(map(int, input().split()))
 B = [0] + list(map(int, input().split()))
-ASum, BSum = [0] * (N + 1), [0] * (M + 1)
-ASum[0], BSum[0] = A[0], B[0]
-AOver, BOver = -1, -1
+(ASum, BSum) = ([0] * (N + 1), [0] * (M + 1))
+(ASum[0], BSum[0]) = (A[0], B[0])
+(AOver, BOver) = (-1, -1)
 for i in range(1, N + 1):
     ASum[i] = ASum[i - 1] + A[i]
     if AOver == -1 and ASum[i] > K:
@@ -23,5 +23,4 @@ for i in reversed(range(AOver + 1)):
         break
     time = K - ASum[i]
     ans = max(ans, i + bisect.bisect_right(BSum, time) - 1)
-
 print(ans)

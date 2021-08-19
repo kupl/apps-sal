@@ -1,6 +1,6 @@
 from itertools import accumulate
 from bisect import bisect_right
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 A = [0] + list(accumulate(map(int, input().split()), lambda x, y: x + y))
 B = [0] + list(accumulate(map(int, input().split()), lambda x, y: x + y))
 ans = 0

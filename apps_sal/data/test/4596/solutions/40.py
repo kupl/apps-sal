@@ -2,7 +2,6 @@ import numpy as np
 N = int(input())
 A = list(map(int, input().split()))
 A = np.array(A)
-
 count = 0
 flag = True
 while flag:

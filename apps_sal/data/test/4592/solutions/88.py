@@ -11,7 +11,6 @@ p = []
 for i in range(N + 1):
     if table[i]:
         p.append(i)
-
 n = len(p)
 cnt = [0 for _ in range(n)]
 for i in range(2, N + 1):

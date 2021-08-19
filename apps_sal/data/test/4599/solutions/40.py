@@ -11,4 +11,4 @@ for i in a:
     else:
         Bob += i
         flag = True
-print((Alice - Bob))
+print(Alice - Bob)

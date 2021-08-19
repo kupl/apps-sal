@@ -1,6 +1,5 @@
 n = int(input())
 a_lst = list(map(int, input().split()))
-
 res = []
 for a in a_lst:
     tmp = a

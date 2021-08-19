@@ -11,5 +11,4 @@ while True:
         break
     ans += 1
     A = [a / 2 for a in A]
-
 print(ans)

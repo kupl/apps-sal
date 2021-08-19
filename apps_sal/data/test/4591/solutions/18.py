@@ -1,6 +1,4 @@
-a, b, c, x, y = list(map(int, input().split()))
-
-
+(a, b, c, x, y) = list(map(int, input().split()))
 moneys = []
 for i in range(0, max(x, y) * 2 + 1, 2):
     apizza = x - int(i / 2)
@@ -11,5 +9,4 @@ for i in range(0, max(x, y) * 2 + 1, 2):
         bpizza = 0
     money = apizza * a + bpizza * b + i * c
     moneys.append(money)
-
-print((min(moneys)))
+print(min(moneys))

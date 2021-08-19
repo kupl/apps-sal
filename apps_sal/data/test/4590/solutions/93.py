@@ -1,18 +1,12 @@
-n, m, k = map(int, input().split())
-
+(n, m, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
 b = list(map(int, input().split()))
-
-A, B = [0], [0]
-
+(A, B) = ([0], [0])
 for i in range(n):
     A.append(A[i] + a[i])
 for i in range(m):
     B.append(B[i] + b[i])
-
-ans, j = 0, m
-
+(ans, j) = (0, m)
 for i in range(n + 1):
     if A[i] > k:
         break

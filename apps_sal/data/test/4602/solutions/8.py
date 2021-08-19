@@ -4,6 +4,7 @@ xn = list(map(int, input().split()))
 
 
 class Solution:
+
     def __init__(self, n, k, xn):
         self.n = n
         self.k = k

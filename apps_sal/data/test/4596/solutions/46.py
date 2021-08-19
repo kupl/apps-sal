@@ -1,10 +1,10 @@
 n = int(input())
 ls = list(map(int, input().split()))
-ans = float("inf")
+ans = float('inf')
 for i in range(n):
     p = 1
     while True:
-        if ls[i] / (2 ** p) % 1 == 0:
+        if ls[i] / 2 ** p % 1 == 0:
             p += 1
         else:
             p -= 1

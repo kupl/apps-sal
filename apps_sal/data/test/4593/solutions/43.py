@@ -3,10 +3,10 @@ def main():
     ans = 1
     for i in range(2, X + 1):
         for j in range(2, 11):
-            if i**j > X:
+            if i ** j > X:
                 break
             else:
-                ans = max(ans, i**j)
+                ans = max(ans, i ** j)
     print(ans)
 
 

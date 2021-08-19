@@ -1,8 +1,6 @@
 from sys import stdin
 input = stdin.readline
-
 N = int(input())
-
 if N % 2 == 1:
     print(N * (N + 1) // 2)
 else:

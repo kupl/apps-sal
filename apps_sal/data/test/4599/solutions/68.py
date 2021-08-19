@@ -3,6 +3,7 @@ an = list(map(int, input().split()))
 
 
 class Solution:
+
     def __init__(self, n, an):
         self.n = n
         self.an = an
@@ -15,7 +16,7 @@ class Solution:
     def answer(self):
         r_an = self.__reverse_an()
         ans = 0
-        for index, r_ai in enumerate(r_an):
+        for (index, r_ai) in enumerate(r_an):
             if index % 2 == 0:
                 ans += r_ai
             else:

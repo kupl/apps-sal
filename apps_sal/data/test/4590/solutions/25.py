@@ -8,21 +8,16 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
-n, m, k = [int(i) for i in input().split()]
+(n, m, k) = [int(i) for i in input().split()]
 A = [int(i) for i in input().split()]
 B = [int(i) for i in input().split()]
-
 tmp = sum(A)
 cnt = len(A)
 res = 0
-
 A = deque(A)
 B = deque(B)
-
 while True:
     if tmp <= k:
         res = max(res, cnt)
@@ -37,5 +32,4 @@ while True:
         a = A.pop()
         tmp -= a
         cnt -= 1
-
 print(res)

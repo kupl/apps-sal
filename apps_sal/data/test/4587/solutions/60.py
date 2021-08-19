@@ -1,10 +1,8 @@
 import bisect
-
 N = int(input())
 A = sorted(list(map(int, input().split())))
 B = sorted(list(map(int, input().split())))
 C = sorted(list(map(int, input().split())))
-
 count = 0
 for i in range(N):
     a_cand = bisect.bisect_right(A, B[i] - 1)

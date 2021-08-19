@@ -1,6 +1,5 @@
 N = int(input())
 a = list(map(int, input().split()))
-
 a.sort(reverse=True)
 alice = 0
 bob = 0
@@ -11,4 +10,4 @@ for i in a:
     else:
         bob += i
     tf = not tf
-print((alice - bob))
+print(alice - bob)

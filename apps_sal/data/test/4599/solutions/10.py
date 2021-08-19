@@ -13,7 +13,7 @@ def main():
             break
         else:
             bob_number += a.pop(max_index(a))
-    print((alice_number - bob_number))
+    print(alice_number - bob_number)
 
 
 def __starting_point():

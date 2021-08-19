@@ -1,5 +1,5 @@
 def getval():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
     a = [A[0]]
@@ -8,7 +8,7 @@ def getval():
         a.append(a[i] + A[i + 1])
     for i in range(0, m - 1):
         b.append(b[i] + B[i + 1])
-    return n, m, k, a, b
+    return (n, m, k, a, b)
 
 
 def main(n, m, k, a, b):
@@ -35,12 +35,11 @@ def main(n, m, k, a, b):
                     break
                 t = a[idxa] + b[i]
             ans = max(ans, idxa + i + 2)
-
     print(ans)
 
 
 def __starting_point():
-    n, m, k, a, b = getval()
+    (n, m, k, a, b) = getval()
     main(n, m, k, a, b)
 
 

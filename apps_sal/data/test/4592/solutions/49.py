@@ -1,6 +1,9 @@
 import collections
 import sys
-def input(): return sys.stdin.readline()
+
+
+def input():
+    return sys.stdin.readline()
 
 
 N = int(input())
@@ -22,6 +25,6 @@ else:
         if n > 1:
             d[n] += 1
     ans = 1
-    for k, v in d.items():
-        ans = (ans * (v + 1)) % 1000000007
+    for (k, v) in d.items():
+        ans = ans * (v + 1) % 1000000007
     print(ans)

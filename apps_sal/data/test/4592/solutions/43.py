@@ -1,5 +1,4 @@
 N = int(input())
-
 mod = 10 ** 9 + 7
 
 
@@ -7,7 +6,7 @@ def primes(n):
     is_prime = [True] * (n + 1)
     is_prime[0] = False
     is_prime[1] = False
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if not is_prime[i]:
             continue
         for j in range(i * 2, n + 1, i):
@@ -16,7 +15,6 @@ def primes(n):
 
 
 L = primes(N)
-
 ans = [0] * (N + 1)
 for i in range(2, N + 1):
     for j in L:
@@ -28,9 +26,8 @@ for i in range(2, N + 1):
                 ans[j] += 1
             else:
                 break
-
 ans_num = 1
 for i in range(2, N + 1):
     if ans[i] >= 1:
         ans_num *= ans[i] + 1 % mod
-print((ans_num % mod))
+print(ans_num % mod)

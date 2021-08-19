@@ -4,7 +4,7 @@ arr = defaultdict(int)
 for i in range(2, N + 1):
     temp = i
     f = True
-    for j in range(2, int(-(-i**0.5 // 1)) + 1):
+    for j in range(2, int(-(-i ** 0.5 // 1)) + 1):
         if temp % j == 0:
             cnt = 0
             while temp % j == 0:
@@ -20,5 +20,5 @@ for i in range(2, N + 1):
 ans = 1
 for i in arr.values():
     ans *= i + 1
-    ans %= 10**9 + 7
+    ans %= 10 ** 9 + 7
 print(ans)

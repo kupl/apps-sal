@@ -1,7 +1,6 @@
 def bs_left(list, target):
     low = 0
     high = len(list)
-
     while low < high:
         mid = (low + high) // 2
         if target > list[mid]:
@@ -29,8 +28,7 @@ B = list(map(int, input().split()))
 C = list(map(int, input().split()))
 A.sort()
 C.sort()
-
 ans = 0
 for b in B:
-    ans += (bs_left(A, b) * (n - bs_right(C, b)))
+    ans += bs_left(A, b) * (n - bs_right(C, b))
 print(ans)

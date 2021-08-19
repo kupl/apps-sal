@@ -1,5 +1,5 @@
 import math
-url = "https://atcoder.jp//contests/abc052/tasks/arc067_a"
+url = 'https://atcoder.jp//contests/abc052/tasks/arc067_a'
 
 
 def get_list_eratosthenes(n):
@@ -7,7 +7,7 @@ def get_list_eratosthenes(n):
         return [0] * (n + 1)
     prime = [1] * (n + 1)
     prime[0] = prime[1] = 0
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if not prime[i]:
             continue
         for j in range(i * 2, n + 1, i):
@@ -28,8 +28,8 @@ def main():
         while cur <= N:
             num += N // cur
             cur *= p
-        ans *= (num + 1)
-        ans %= 10**9 + 7
+        ans *= num + 1
+        ans %= 10 ** 9 + 7
     print(ans)
 
 

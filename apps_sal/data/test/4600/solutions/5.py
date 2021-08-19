@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ac = set()
-w, x = 0, [0 for i in range(n)]
+(w, x) = (0, [0 for i in range(n)])
 for i in range(m):
-    p, s = input().split()
+    (p, s) = input().split()
     l = int(p) - 1
     if not l in ac:
-        if s == "AC":
+        if s == 'AC':
             ac.add(l)
             w += x[l]
         else:

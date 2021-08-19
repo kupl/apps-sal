@@ -13,4 +13,4 @@ def ans088(N: int, a: str):
 
 N = int(input())
 a = input()
-print((ans088(N, a)))
+print(ans088(N, a))

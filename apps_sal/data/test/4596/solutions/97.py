@@ -5,12 +5,12 @@ count = 0
 
 def check(list):
     for i in range(n):
-        if(n_list[i] % 2 != 0):
+        if n_list[i] % 2 != 0:
             return False
     return True
 
 
-while(check(n_list)):
+while check(n_list):
     n_list = [k / 2 for k in n_list]
     count += 1
 print(count)

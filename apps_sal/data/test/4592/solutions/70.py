@@ -1,5 +1,5 @@
 n = int(input())
-m = 10**9 + 7
+m = 10 ** 9 + 7
 p = [1 for i in range(10000)]
 p[0] = 0
 p[1] = 0
@@ -13,7 +13,7 @@ for i in range(2, n + 1):
         c = 0
         k = i
         while n // k > 0:
-            c = c + (n // k) % m
+            c = c + n // k % m
             k = k * i
-        ans = (ans * ((c + 1) % m)) % m
-print((ans % m))
+        ans = ans * ((c + 1) % m) % m
+print(ans % m)

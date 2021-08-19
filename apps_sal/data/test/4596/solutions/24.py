@@ -1,8 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 ans = 0
-
 while True:
     exist_odd = False
     for n in range(N):
@@ -14,5 +12,4 @@ while True:
     if exist_odd:
         break
     ans += 1
-
 print(ans)

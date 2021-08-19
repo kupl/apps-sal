@@ -1,8 +1,7 @@
-a, b = input().split()
-
+(a, b) = input().split()
 if ord(a) < ord(b):
-    print("<")
+    print('<')
 elif ord(a) > ord(b):
-    print(">")
+    print('>')
 else:
-    print("=")
+    print('=')

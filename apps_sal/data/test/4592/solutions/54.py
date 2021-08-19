@@ -24,6 +24,6 @@ def prime_factorize(n):
 
 c = collections.Counter(prime_factorize(t))
 ans = 1
-for _, v in c.items():
-    ans *= (v + 1)
-print(ans % (10**9 + 7))
+for (_, v) in c.items():
+    ans *= v + 1
+print(ans % (10 ** 9 + 7))

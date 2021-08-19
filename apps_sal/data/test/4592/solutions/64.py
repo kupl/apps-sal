@@ -12,6 +12,6 @@ for i in range(1, n + 1):
 ans = 1
 MOD = 10 ** 9 + 7
 for num in lst:
-    ans *= (num + 1)
+    ans *= num + 1
     ans %= MOD
 print(ans)

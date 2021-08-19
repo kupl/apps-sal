@@ -1,8 +1,7 @@
-A, B, C, X, Y = map(int, input().split())
+(A, B, C, X, Y) = map(int, input().split())
 ans = A * X + B * Y
 a = 0
 b = 0
-
 for i in range(1, 1 + 2 * max(X, Y)):
     if X - i / 2 < 0:
         a = 0
@@ -13,5 +12,4 @@ for i in range(1, 1 + 2 * max(X, Y)):
     else:
         b = Y - i / 2
     ans = min(ans, A * a + B * b + C * i)
-
 print(int(ans))

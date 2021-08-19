@@ -8,4 +8,4 @@ for i in range(n):
         al += sa[i]
     else:
         bo += sa[i]
-print((al - bo))
+print(al - bo)

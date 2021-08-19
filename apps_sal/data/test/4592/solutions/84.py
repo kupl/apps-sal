@@ -23,12 +23,9 @@ def factorization(n):
 
 for i in range(n, 1, -1):
     x += factorization(i)
-
 c = collections.Counter(x)
 l = list(c.values())
 ans = 1
-
 for i in range(len(l)):
     ans *= 1 + l[i]
-
-print(ans % (7 + 10**9))
+print(ans % (7 + 10 ** 9))

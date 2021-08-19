@@ -19,6 +19,6 @@ a = []
 prime(factorial(N))
 A = Counter(a)
 X = 1
-for k, v in A.items():
+for (k, v) in A.items():
     X *= (v + 1) % MOD
 print(X % MOD)

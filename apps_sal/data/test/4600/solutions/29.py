@@ -1,9 +1,9 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AC = [0] * N
 WA1 = [0] * N
 WA2 = [0] * N
 for i in range(M):
-    p, s = input().split()
+    (p, s) = input().split()
     if s == 'AC':
         if AC[int(p) - 1] == 0:
             AC[int(p) - 1] = 1

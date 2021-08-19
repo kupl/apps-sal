@@ -1,10 +1,10 @@
 import numpy as np
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 flag = [False] * (N + 1)
 ac = 0
 wa = [0] * (N + 1)
 for _ in range(M):
-    p, s = input().split()
+    (p, s) = input().split()
     p = int(p)
     if flag[p] == False:
         if s == 'AC':

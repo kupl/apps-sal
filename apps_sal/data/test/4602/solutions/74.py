@@ -1,7 +1,6 @@
 N = int(input())
 K = int(input())
 x = [int(c) for c in input().split()]
-
 cnt = 0
 for i in range(N):
     a = 0
@@ -12,5 +11,4 @@ for i in range(N):
         cnt += a
     else:
         cnt += b
-
 print(cnt)

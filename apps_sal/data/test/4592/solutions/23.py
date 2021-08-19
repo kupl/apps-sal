@@ -8,9 +8,7 @@ for i in range(2, N + 1):
         while k % i2 == 0:
             k /= i2
             q[i2] += 1
-
 for i in range(N + 1):
     ans *= q[i]
     ans %= 10 ** 9 + 7
-
 print(ans)

@@ -11,4 +11,4 @@ for i in range(2, Xruto + 1):
             beki.append(a)
         else:
             break
-print((max(beki)))
+print(max(beki))

@@ -25,4 +25,4 @@ for i in range(2, n + 1):
 a = 1
 for v in d.values():
     a = a * (v + 1)
-print(a % (10**9 + 7))
+print(a % (10 ** 9 + 7))

@@ -3,7 +3,7 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
@@ -15,7 +15,6 @@ def main():
             alice += a[i]
         else:
             bob += a[i]
-
     print(alice - bob)
 
 

@@ -1,5 +1,4 @@
 import sys
-
 X = int(sys.stdin.readline())
 ans = 0
 for i in range(X + 1):

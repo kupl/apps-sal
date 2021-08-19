@@ -1,5 +1,4 @@
 import numpy as np
-
 N = int(input())
 arr = np.array(list(map(int, input().split())))
 cnt = 0

@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 Alice = 0
 Bob = 0
 for i in range(N):
@@ -10,5 +9,4 @@ for i in range(N):
         Alice += maxA
     else:
         Bob += maxA
-
-print("{}".format(Alice - Bob))
+print('{}'.format(Alice - Bob))

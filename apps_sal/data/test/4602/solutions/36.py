@@ -1,10 +1,8 @@
 import math
-
 n = int(input())
 k = int(input())
 x = list(map(int, input().split()))
 cnt = 0
-
 dis = math.ceil(k / 2)
 for i in x:
     if i == k:

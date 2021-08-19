@@ -1,10 +1,13 @@
 from itertools import accumulate
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     A = [0] + list(map(int, input().split()))
     B = [0] + list(map(int, input().split()))
     A = list(accumulate(A))
