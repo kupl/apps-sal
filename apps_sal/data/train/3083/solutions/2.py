@@ -1,2 +1,2 @@
 def polydivisible(x):
-    return all(int(str(x)[:i + 1]) % (i + 1) == 0 for i in range(len(str(x))))
+    return all((int(str(x)[:i + 1]) % (i + 1) == 0 for i in range(len(str(x)))))

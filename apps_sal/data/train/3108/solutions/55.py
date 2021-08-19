@@ -6,5 +6,5 @@ def multi_table(number):
     for i in a:
         f = i * number
         b.append('{e} * {d} = {c}'.format(e=i, d=number, c=f))
-        g = "\n".join(b)
+        g = '\n'.join(b)
     return g

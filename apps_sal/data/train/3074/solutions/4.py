@@ -5,7 +5,6 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
         assert 4 <= desiredHeight <= 1000
     except:
         return 1
-
     day = 0
     plantHeight = 0
     while plantHeight < desiredHeight:
@@ -15,5 +14,4 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
             break
         else:
             plantHeight -= downSpeed
-
     return day

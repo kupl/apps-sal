@@ -4,11 +4,11 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
     growing = True
     while growing:
         currentHeight += upSpeed
-        print("After Day", day, "Height:", currentHeight)
+        print('After Day', day, 'Height:', currentHeight)
         if currentHeight >= desiredHeight:
             growing = False
         else:
             currentHeight -= downSpeed
-            print("After Night", day, "Height:", currentHeight)
+            print('After Night', day, 'Height:', currentHeight)
             day += 1
     return day

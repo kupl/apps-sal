@@ -19,24 +19,20 @@ def leap(year):
                     solu = False
         else:
             solu = False
+    elif year % 4 == 0:
+        solu = True
     else:
-        if year % 4 == 0:
-            solu = True
-        else:
-            solu = False
-
+        solu = False
     return solu
 
 
 def year_days(year):
     temp = year
     if temp == 0:
-        return str(year) + " has 366 days"
-    else:
-        if temp < 0:
-            temp *= -1
-
+        return str(year) + ' has 366 days'
+    elif temp < 0:
+        temp *= -1
     if leap(temp):
-        return str(year) + " has 366 days"
+        return str(year) + ' has 366 days'
     else:
-        return str(year) + " has 365 days"
+        return str(year) + ' has 365 days'

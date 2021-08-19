@@ -6,7 +6,7 @@ def round_it(n):
     test = str(n)
     counter = 0
     for val in test:
-        if val == ".":
+        if val == '.':
             break
         counter += 1
     if counter > (len(test) - 1) / 2:

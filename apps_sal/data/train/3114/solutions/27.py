@@ -7,4 +7,4 @@ def year_days(year):
         days = 365
     else:
         days = 366
-    return f"{year} has {days} days"
+    return f'{year} has {days} days'

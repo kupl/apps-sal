@@ -1,5 +1,5 @@
 def nba_extrap(ppg, mpg):
-    if(mpg == 0):
+    if mpg == 0:
         ppg = 0
     else:
         points_per_min = ppg / mpg

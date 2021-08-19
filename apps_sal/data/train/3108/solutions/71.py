@@ -1,7 +1,7 @@
 def multi_table(number):
-    rez = ""
+    rez = ''
     for i in range(1, 11):
-        rez += str(i) + " * " + str(number) + " = " + str(i * number)
+        rez += str(i) + ' * ' + str(number) + ' = ' + str(i * number)
         if i < 10:
-            rez += "\n"
+            rez += '\n'
     return rez

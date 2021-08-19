@@ -1,5 +1,3 @@
-
-
 def insert_dash(num):
     odd = False
     result = []
@@ -11,7 +9,5 @@ def insert_dash(num):
             num = '-' + num
         else:
             odd = True
-
         result.append(num)
-
     return ''.join(result)

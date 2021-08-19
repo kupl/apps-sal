@@ -8,5 +8,4 @@ def round_it(n):
         return round(n)
     elif i < len(sn) // 2:
         return ceil(n)
-
     return floor(n)

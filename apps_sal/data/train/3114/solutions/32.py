@@ -5,5 +5,4 @@ def year_days(year):
             leap = True
     elif year % 4 == 0:
         leap = True
-
     return str(year) + ' has ' + str([365, 366][leap]) + ' days'

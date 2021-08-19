@@ -10,5 +10,4 @@ def year_days(year: int) -> str:
             days_per_year = 366
     else:
         days_per_year = 365
-
-    return f"{year} has {days_per_year} days"
+    return f'{year} has {days_per_year} days'

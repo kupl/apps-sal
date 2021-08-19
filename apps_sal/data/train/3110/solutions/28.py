@@ -6,6 +6,7 @@ def two_decimal_places(n):
 
 
 class TestTwoDecimalPlaces(unittest.TestCase):
+
     def test_two_decimal_places(self):
         n = 4.659725356
         actual = two_decimal_places(n)

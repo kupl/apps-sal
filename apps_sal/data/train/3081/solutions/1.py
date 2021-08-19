@@ -1,6 +1,5 @@
 from random import randint
-
-PRIMES = [2] + [n for n in range(3, 10**3, 2) if all(n % d for d in range(3, int(n**0.5) + 1, 2))]
+PRIMES = [2] + [n for n in range(3, 10 ** 3, 2) if all((n % d for d in range(3, int(n ** 0.5) + 1, 2)))]
 
 
 def squares(n):

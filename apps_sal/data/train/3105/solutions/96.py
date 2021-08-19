@@ -1,8 +1,8 @@
 def count_sheep(n):
-    result = ""
+    result = ''
     x = 1
     while x <= n:
-        result = result + str(x) + " sheep..."
+        result = result + str(x) + ' sheep...'
         x = x + 1
     return result
 

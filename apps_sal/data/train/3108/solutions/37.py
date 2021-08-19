@@ -1,8 +1,8 @@
 def multi_table(number):
-    tab = ""
+    tab = ''
     for n in range(1, 11):
         r = n * number
         tab += f'{n} * {number} = {r}'
         if n < 10:
-            tab += "\n"
+            tab += '\n'
     return tab

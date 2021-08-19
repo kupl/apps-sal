@@ -2,4 +2,4 @@ import re
 
 
 def number_format(n):
-    return re.sub(r'\B(?=(\d{3})+(?!\d))', r',', str(n))
+    return re.sub('\\B(?=(\\d{3})+(?!\\d))', ',', str(n))

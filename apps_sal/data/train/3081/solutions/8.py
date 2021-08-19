@@ -14,8 +14,9 @@ def rand_range(n, mn, mx):
 
 
 def primes(n):
+
     def gen_prime(arr):
         yield arr[0]
         yield from gen_prime([i for i in arr if i % arr[0] != 0])
-    primes = gen_prime(range(2, n**3))
+    primes = gen_prime(range(2, n ** 3))
     return [next(primes) for i in range(n)]

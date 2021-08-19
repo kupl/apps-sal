@@ -6,7 +6,7 @@ def palindrome_rearranging(s):
             d[x] = 1
         else:
             d[x] += 1
-    for k, v in d.items():
+    for (k, v) in d.items():
         if v % 2 != 0:
             c += 1
     return c <= 1

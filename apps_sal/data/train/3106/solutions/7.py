@@ -1,6 +1,6 @@
 def combs_non_empty_boxes(n, k):
     if n < k:
-        return "It cannot be possible!"
+        return 'It cannot be possible!'
     else:
         row = [1] + [0 for x in range(k)]
         for i in range(1, n + 1):

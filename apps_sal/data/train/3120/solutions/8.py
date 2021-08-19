@@ -7,4 +7,4 @@ def meeting(rooms, number):
     while sum(a) < number and i < len(chairs):
         a.append(min(chairs[i], number - sum(a)))
         i += 1
-    return a if sum(a) >= number else "Not enough!"
+    return a if sum(a) >= number else 'Not enough!'

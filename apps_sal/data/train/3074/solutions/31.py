@@ -4,10 +4,10 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
     days = 0
     plant = 0
     while desiredHeight > plant:
-        if (plant + upSpeed) >= desiredHeight:
+        if plant + upSpeed >= desiredHeight:
             days += 1
             break
         else:
-            plant += (upSpeed - downSpeed)
+            plant += upSpeed - downSpeed
             days += 1
     return days

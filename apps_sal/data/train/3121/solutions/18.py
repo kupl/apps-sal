@@ -5,9 +5,8 @@ def solve(arr):
     for i in range(len(lst)):
         if lst.count(lst[i]) == 1:
             one = lst[i]
-
     if one in arr:
         return one
     else:
-        a = "-" + str(one)
+        a = '-' + str(one)
         return int(a)

@@ -1,6 +1,6 @@
 def alternate_sort(l):
     xs = sorted(l)
-    pos, neg, result = [], [], []
+    (pos, neg, result) = ([], [], [])
     for x in xs:
         [pos, neg][x < 0].append(x)
     while pos and neg:

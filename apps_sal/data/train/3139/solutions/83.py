@@ -3,6 +3,5 @@ def index(array, N):
     uzunluk = len(array)
     if N >= uzunluk:
         return -1
-
     ussuAlinacakSayi = array[N]
-    return ussuAlinacakSayi**N
+    return ussuAlinacakSayi ** N

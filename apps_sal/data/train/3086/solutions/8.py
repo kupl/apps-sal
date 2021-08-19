@@ -1,8 +1,6 @@
 def unflatten(arr):
-
     j = 0
     res = []
-
     for x in arr:
         if j > 0:
             res[-1].append(x)
@@ -12,5 +10,4 @@ def unflatten(arr):
         else:
             res.append([x])
             j = x - 1
-
     return res

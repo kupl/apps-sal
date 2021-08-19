@@ -10,4 +10,4 @@ def alternate_sort(l):
             new.append(neg.pop(0))
         if pos:
             new.append(pos.pop(0))
-    return (new)
+    return new

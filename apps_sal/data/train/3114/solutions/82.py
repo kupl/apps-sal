@@ -5,5 +5,4 @@ def year_days(year):
                 return '{} has 366 days'.format(year)
         else:
             return '{} has 366 days'.format(year)
-
     return '{} has 365 days'.format(year)

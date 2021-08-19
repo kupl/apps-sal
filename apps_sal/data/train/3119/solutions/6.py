@@ -1,7 +1,7 @@
 def pattern(n, y=1, *_):
     if n < 1:
         return ''
-    ans, p, y = [], [], max(y, 1)
+    (ans, p, y) = ([], [], max(y, 1))
     for i in range(1, n + 1):
         t = [' '] * (n * 2 - 1)
         t[i - 1] = t[n * 2 - 1 - 1 - i + 1] = str(i % 10)

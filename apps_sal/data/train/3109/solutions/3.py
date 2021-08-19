@@ -2,15 +2,11 @@ import string
 
 
 def scramble_words(words):
-    if (len(words) <= 1):
+    if len(words) <= 1:
         return words
-
-    words = words.split(" ")
-
+    words = words.split(' ')
     pureWords = []
-
     sChars = []
-
     for i in range(len(words)):
         flag = 0
         for l in words[i][1:]:
@@ -24,16 +20,13 @@ def scramble_words(words):
                 pureWords[i] += words[i][j]
             else:
                 sChars.append((j, words[i][j]))
-
-        if (len(words[i]) == 1):
+        if len(words[i]) == 1:
             pureWords[i] = words[i]
         else:
             pureWords[i] = pureWords[i][0] + ''.join(sorted(pureWords[i][1:-1])) + pureWords[i][-1]
             currWord = [l for l in pureWords[i]]
-            for index, char in sChars:
+            for (index, char) in sChars:
                 currWord.insert(index, char)
             pureWords[i] = ''.join(currWord)
-
         sChars = []
-
     return ' '.join(pureWords)

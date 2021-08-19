@@ -1,6 +1,6 @@
 def who_is_paying(name):
     if len(name) == 0:
-        return [""]
+        return ['']
     if len(name) <= 2:
         return name.split()
     alist = []

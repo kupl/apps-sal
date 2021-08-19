@@ -2,7 +2,7 @@ import random
 
 
 def squares(n):
-    return [(i * i) for i in range(1, n + 1)]
+    return [i * i for i in range(1, n + 1)]
 
 
 def num_range(n, start, step):
@@ -15,7 +15,7 @@ def num_range(n, start, step):
 
 
 def rand_range(n, mn, mx):
-    return [(random.randint(mn, mx)) for i in range(n)]
+    return [random.randint(mn, mx) for i in range(n)]
 
 
 def primes(n):

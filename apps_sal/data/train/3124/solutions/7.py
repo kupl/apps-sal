@@ -3,6 +3,6 @@ def get_exponent(n, p):
         return None
     else:
         x = 1
-        while n % (p**x) == 0:
+        while n % p ** x == 0:
             x += 1
     return x - 1

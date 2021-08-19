@@ -4,7 +4,7 @@ def who_is_paying(name):
         result.append(name)
         return result
     elif len(name) == 0:
-        result.append("")
+        result.append('')
         return result
     result.append(name)
     result.append(name[:2])

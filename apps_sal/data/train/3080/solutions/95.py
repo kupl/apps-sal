@@ -10,4 +10,4 @@ def who_is_paying(name):
         return s
 
 
-who_is_paying("")
+who_is_paying('')

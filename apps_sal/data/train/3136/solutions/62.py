@@ -1,6 +1,6 @@
 def people_with_age_drink(a):
     print(a)
-    foo = ["drink toddy", "drink coke", "drink beer", "drink whisky"]
+    foo = ['drink toddy', 'drink coke', 'drink beer', 'drink whisky']
     if a >= 18:
         if a < 21:
             return foo[2]

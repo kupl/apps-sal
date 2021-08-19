@@ -2,7 +2,7 @@ import random
 
 
 def squares(n):
-    return [x**2 for x in range(1, n + 1)]
+    return [x ** 2 for x in range(1, n + 1)]
 
 
 def num_range(n, start, step):
@@ -23,7 +23,7 @@ def primes(n):
     while len(list) != n:
         prime = True
         for i in range(2, num):
-            if (num % i == 0):
+            if num % i == 0:
                 prime = False
         if prime:
             list.append(num)

@@ -12,6 +12,6 @@ def denumerate(enum_list):
             return False
         if not el[1].isalnum():
             return False
-        if not (0 <= el[0] <= len(enum_list) - 1):
+        if not 0 <= el[0] <= len(enum_list) - 1:
             return False
-    return ''.join(tup[1] for tup in sorted(enum_list))
+    return ''.join((tup[1] for tup in sorted(enum_list)))

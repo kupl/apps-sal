@@ -2,4 +2,4 @@ import re
 
 
 def has_subpattern(s):
-    return bool(re.search(r'^(.+)\1+$', s))
+    return bool(re.search('^(.+)\\1+$', s))
