@@ -1,5 +1,3 @@
-# 問題：https://atcoder.jp/contests/abc142/tasks/abc142_d
-
 import math
 
 
@@ -25,7 +23,7 @@ def count_prime_factorize(n):
     return res
 
 
-a, b = list(map(int, input().strip().split()))
+(a, b) = list(map(int, input().strip().split()))
 x = gcd(a, b)
 res = count_prime_factorize(x)
 print(res)

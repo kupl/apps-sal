@@ -1,5 +1,5 @@
 import math
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 gcd = math.gcd(a, b)
 
 
@@ -21,5 +21,4 @@ def prime_factorization(n):
     return prime
 
 
-print((len(prime_factorization(gcd)) + 1))
-# print(prime_factorization(gcd))
+print(len(prime_factorization(gcd)) + 1)

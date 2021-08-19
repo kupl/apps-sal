@@ -1,6 +1,6 @@
-N, M = list(map(int, (input().split())))
-"""nを素因数分解"""
-"""2以上の整数n => [[素因数, 指数], ...]の2次元リスト"""
+(N, M) = list(map(int, input().split()))
+'nを素因数分解'
+'2以上の整数n => [[素因数, 指数], ...]の2次元リスト'
 
 
 def prime_factorize(n):
@@ -23,6 +23,4 @@ def prime_factorize(n):
 a = prime_factorize(N)
 b = prime_factorize(M)
 c = set(a) & set(b)
-print((len(c) + 1))
-## [[2, 3], [3, 1]]
-# 24 = 2^3 * 3^1
+print(len(c) + 1)

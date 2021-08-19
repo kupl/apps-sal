@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = ['#' * (m + 2)]
 for i in range(n):
     s += ['#' + input() + '#']
@@ -17,7 +17,7 @@ for i in range(1, n + 1):
 q = int(input())
 for i in range(q):
     A = 0
-    x, y, a, b = list(map(int, input().split()))
+    (x, y, a, b) = list(map(int, input().split()))
     if x == a and y == b:
         A = 0
     else:

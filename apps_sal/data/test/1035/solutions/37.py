@@ -14,7 +14,7 @@ def prime_factorization(n):
     return pfs
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def bit_search(pfs):
@@ -23,7 +23,7 @@ def bit_search(pfs):
     for i in range(1 << m):
         d = 1
         for j in range(m):
-            if i & (1 << m) > 0:
+            if i & 1 << m > 0:
                 d *= pfs[m]
         ds.add(d)
     return ds
@@ -37,8 +37,6 @@ def gcd(a, b):
 
 
 gcdab = gcd(a, b)
-#print (gcdab)
 pfsab = prime_factorization(gcdab)
-#print (pfsab)
 pfsabset = set(pfsab)
 print(len(pfsabset))

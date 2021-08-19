@@ -1,8 +1,3 @@
-#                                               |
-#   _` |  __ \    _` |   __|   _ \   __ \    _` |   _` |
-#  (   |  |   |  (   |  (     (   |  |   |  (   |  (   |
-# \__,_| _|  _| \__,_| \___| \___/  _|  _| \__,_| \__,_|
-
 import sys
 import math
 
@@ -27,7 +22,6 @@ n = read_int()
 x1 = 0
 y1 = n
 ans = [0] * (2 * n)
-
 for i in range(1, n + 1):
     if i & 1:
         ans[x1] = i
@@ -37,9 +31,7 @@ for i in range(1, n + 1):
         ans[y1] = i
         ans[y1 + n - i] = i
         y1 += 1
-
 for i in range(2 * n):
     if ans[i] == 0:
         ans[i] = n
-
 print(*ans)

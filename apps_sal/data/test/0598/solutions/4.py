@@ -1,23 +1,19 @@
 import sys
-
-# def main():
 if 1 == 1:
-    n, x = list(map(int, sys.stdin.readline().split()))
+    (n, x) = list(map(int, sys.stdin.readline().split()))
     al = []
     starts = []
     finishes = []
     y = [-1] * 200002
     for i in range(n):
-        a, b, c = list(map(int, sys.stdin.readline().split()))
+        (a, b, c) = list(map(int, sys.stdin.readline().split()))
         al.append((a, b, c))
         starts.append((a, i))
         finishes.append((b, i))
-
     finishes = sorted(finishes, key=lambda x: x[0])
     starts = sorted(starts, key=lambda x: x[0])
     j = 0
-
-    res = 3 * (10**9)
+    res = 3 * 10 ** 9
     for i in range(n):
         while j < n and starts[j][0] <= finishes[i][0]:
             c = starts[j][1]
@@ -31,11 +27,7 @@ if 1 == 1:
         cost = al[c][2]
         if y[h] == -1 or y[h] > cost:
             y[h] = cost
-
-    if res == 3 * (10**9):
+    if res == 3 * 10 ** 9:
         print(-1)
     else:
         print(res)
-
-
-# main()

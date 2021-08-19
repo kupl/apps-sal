@@ -1,12 +1,10 @@
 def gcd(a, b):
-    # return gcd( a , b )
     while a % b != 0:
         return gcd(b, a % b)
     return b
 
 
-A, B = (int(x) for x in input().split())
-
+(A, B) = (int(x) for x in input().split())
 Gcd = gcd(A, B)
 lo_cds = []
 up_cds = []
@@ -18,11 +16,8 @@ while i * i <= Gcd:
             up_cds.append(Gcd // i)
     i += 1
 Cds = lo_cds + up_cds[::-1]
-# 1は必ず含まれるし素数判定の邪魔なので事前に省く。
 Cds.pop(0)
 i = 0
-
-
 while i < len(Cds):
     j = i + 1
     while j < len(Cds):
@@ -31,5 +26,4 @@ while i < len(Cds):
         else:
             j += 1
     i += 1
-
 print(len(Cds) + 1)

@@ -1,5 +1,5 @@
 __author__ = 'Utena'
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 q = [[0] * w for i in range(h)]
 for i1 in range(h):
     n0 = input()
@@ -28,6 +28,6 @@ for i in range(h):
         b[i][j] += b[i][j - 1]
 n = int(input())
 for k in range(n):
-    r1, c1, r2, c2 = list(map(int, input().split()))
+    (r1, c1, r2, c2) = list(map(int, input().split()))
     t = a[r2][c2 - 1] - a[r2][c1 - 1] - a[r1 - 1][c2 - 1] + a[r1 - 1][c1 - 1] + b[r2 - 1][c2] - b[r1 - 1][c2] - b[r2 - 1][c1 - 1] + b[r1 - 1][c1 - 1]
     print(t)

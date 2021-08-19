@@ -1,4 +1,3 @@
-# F - Division or Subtraction
 def pf(x):
     plist = [1]
     p = 2
@@ -11,7 +10,7 @@ def pf(x):
         for i in range(t):
             now = list(map(lambda y: int(y * p), now))
             plist.extend(now)
-        if p > int(x**0.5) + 1:
+        if p > int(x ** 0.5) + 1:
             p = x
         elif p == 2:
             p = 3

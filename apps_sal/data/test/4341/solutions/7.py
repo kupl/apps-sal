@@ -1,17 +1,15 @@
 import sys
-#sys.stdin = open("e.txt")
 input = sys.stdin.readline
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 G = {}
 for _ in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a not in G:
         G[a] = set()
     if b not in G:
         G[b] = set()
     G[a].add(b)
     G[b].add(a)
-
 seen = set()
 
 
@@ -32,7 +30,7 @@ def dfs_paths(graph, start, goal):
         (node, path) = stack.pop()
         for next in graph[node] - set(path):
             if next == goal:
-                yield path + [next]
+                yield (path + [next])
             else:
                 stack.append((next, path + [next]))
 

@@ -1,11 +1,6 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
-
 def gcd(a, b):
     """最大公約数"""
-    a, b = (a, b) if a >= b else (b, a)
+    (a, b) = (a, b) if a >= b else (b, a)
     if b == 0:
         return a
     return gcd(b, a % b)
@@ -28,23 +23,13 @@ def prime_factorization(x):
     return re
 
 
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(A, B):
     div = gcd(A, B)
-    print((len(set(prime_factorization(div))) + 1))
+    print(len(set(prime_factorization(div))) + 1)
 
 
 def __starting_point():
-    # S = input()
-    # N = int(input())
-    A, B = list(map(int, input().split()))
-    # As = [int(i) for i in input().split()]
-    # Bs = [int(i) for i in input().split()]
-    # print(prime_factorization(A))
-    # print(prime_factorization(B))
+    (A, B) = list(map(int, input().split()))
     solve(A, B)
 
 

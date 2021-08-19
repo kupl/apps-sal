@@ -3,7 +3,7 @@ N = int(input())
 
 def divider(n):
     dividers = []
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             dividers.append(i)
             if i != n // i:
@@ -11,7 +11,6 @@ def divider(n):
     dividers.sort()
     dividers.remove(1)
     return dividers
-# nの約数を抽出する関数を定義(1以外)
 
 
 cnt = len(divider(N - 1))
