@@ -1,9 +1,10 @@
 class Solution:
+
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         transactions_by_name = {}
         suspicious_transactions = set()
         for transaction in transactions:
-            name, time, amount, city = transaction.split(',')
+            (name, time, amount, city) = transaction.split(',')
             if name not in transactions_by_name:
                 transactions_by_name[name] = [[name, time, amount, city]]
             else:
@@ -12,7 +13,6 @@ class Solution:
             for transaction in transactions_by_name[key]:
                 for other_transaction in transactions_by_name[key]:
                     if int(transaction[2]) >= 1000 and ','.join(transaction) not in suspicious_transactions:
-                        # over 1k
                         suspicious_transactions.add(','.join(transaction))
                         continue
                     if transaction == other_transaction:

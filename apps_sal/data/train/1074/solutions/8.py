@@ -1,4 +1,3 @@
-# cook your dish here
 a = int(input())
 for i in range(a):
     t = int(input())
@@ -14,7 +13,7 @@ for i in range(a):
     for j in l3:
         c1 = j
         if c1 >= 2:
-            while(c1 >= 2):
+            while c1 >= 2:
                 c += 1
                 c1 = c1 - 2
     print(round(c / 2))

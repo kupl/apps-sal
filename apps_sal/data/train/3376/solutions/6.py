@@ -3,7 +3,6 @@ def square_free_part(n):
         return None
     if n < 1:
         return None
-
     for i in range(n, 1, -1):
         if not n % i:
             b = True
@@ -13,4 +12,3 @@ def square_free_part(n):
                     break
             if b:
                 return i
-    # return n

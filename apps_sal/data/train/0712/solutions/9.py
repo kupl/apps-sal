@@ -1,4 +1,3 @@
-#chef and droof
 for u in range(int(input())):
     flag = 0
     n = int(input())
@@ -8,6 +7,6 @@ for u in range(int(input())):
             flag = 1
             break
     if flag == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -1,4 +1,5 @@
 class Transaction:
+
     def __init__(self, name, time, amount, city):
         self.name = name
         self.time = int(time)
@@ -7,27 +8,25 @@ class Transaction:
 
 
 class Solution:
+
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
-        # convert each into object Transaction
         for i in range(len(transactions)):
             transact = transactions[i].split(',')
             transactions[i] = Transaction(transact[0], transact[1], transact[2], transact[3])
-
         invalid = set()
 
         def sortByTime(x):
             return x.time
         transactions.sort(key=sortByTime)
-
-        for i, t in enumerate(transactions):
+        for (i, t) in enumerate(transactions):
             if t.amount > 1000:
                 invalid.add(self.toString(t))
             for j in range(i + 1, len(transactions)):
                 s = transactions[j]
-                if t.name == s.name and t.city != s.city and s.time - t.time <= 60:
+                if t.name == s.name and t.city != s.city and (s.time - t.time <= 60):
                     invalid.add(self.toString(s))
                     invalid.add(self.toString(t))
         return invalid
 
     def toString(self, s):
-        return ('%s,%d,%d,%s' % (s.name, s.time, s.amount, s.city))
+        return '%s,%d,%d,%s' % (s.name, s.time, s.amount, s.city)

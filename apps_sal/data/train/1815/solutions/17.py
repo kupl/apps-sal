@@ -1,4 +1,5 @@
 class Solution:
+
     def shiftingLetters(self, S: str, shifts: List[int]) -> str:
         a = ''
         cumshift = 0
@@ -11,8 +12,6 @@ class Solution:
 
 
 def shift(ch, offset):
-    # zval = 122 # ord('Z') if ch.isupper() else ord('z')
-    # aval = 97 # ord('A') if ch.isupper() else ord('a')
     nch = ord(ch) + offset
     if nch > ord('z'):
         nch = ord('a') + (nch - ord('z') - 1)

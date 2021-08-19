@@ -1,6 +1,7 @@
 class Solution:
+
     def shiftingLetters(self, S: str, shifts: List[int]) -> str:
-        '''
+        """
         for pos, shift_offset in enumerate(shifts):
             n = ''
             for cp, ch in enumerate(S):
@@ -8,7 +9,7 @@ class Solution:
                     ch = shift(ch, shift_offset)
                 n += ch
             S = n
-        return S'''
+        return S"""
         cache = {}
         a = []
         cumshift = 0
@@ -21,27 +22,15 @@ class Solution:
                 chn = cache.get((ch, cumshift))
             else:
                 chn = shift(ch, cumshift)
-                cache[(ch, cumshift)] = chn
+                cache[ch, cumshift] = chn
             a.insert(0, chn)
         return ''.join(a)
-        '''    
-        n = ''
-        shifts = [s % 26 for s in shifts]
-        for cp, ch in enumerate(S):
-            offset = sum(shifts[cp:]) % 26
-            if (ch, offset) in cache:
-                chn = cache.get((ch, offset))
-            else:
-                chn = shift(ch, offset)
-                cache[(ch, offset)] = chn
-            n += chn
-        return n
-        '''
+        "    \n        n = ''\n        shifts = [s % 26 for s in shifts]\n        for cp, ch in enumerate(S):\n            offset = sum(shifts[cp:]) % 26\n            if (ch, offset) in cache:\n                chn = cache.get((ch, offset))\n            else:\n                chn = shift(ch, offset)\n                cache[(ch, offset)] = chn\n            n += chn\n        return n\n        "
 
 
 def shift(ch, offset):
-    zval = 122  # ord('Z') if ch.isupper() else ord('z')
-    aval = 97  # ord('A') if ch.isupper() else ord('a')
+    zval = 122
+    aval = 97
     offset = offset % 26
     och = ord(ch)
     nch = och + offset

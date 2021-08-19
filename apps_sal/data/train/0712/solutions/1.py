@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -8,6 +7,6 @@ for i in range(t):
         if j % 2 != 0:
             p += 1
     if p == len(q):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
