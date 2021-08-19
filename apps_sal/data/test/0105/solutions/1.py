@@ -32,7 +32,6 @@ for z in range(3):
             kk[j] = kkk_
         k_[i] = kk
     k[z] = k_
-
 q = [0] * (10 * n * n)
 qr = 0
 km = [(1, 2), (1, -2), (-1, 2), (-1, -2), (2, 1), (2, -1), (-2, 1), (-2, -1)]
@@ -42,15 +41,13 @@ mm = [km, sm, lm]
 for z in range(3):
     for i in range(n):
         for j in range(n):
-            # print('========')
             ql = 0
             qr = 1
             q[0] = (z, i, j, (0, 0))
             kc = k[z][i][j]
             kc[z][i][j] = (0, 0)
             while ql < qr:
-                t, x, y, dd = q[ql]
-                # print(t,x,y,dd)
+                (t, x, y, dd) = q[ql]
                 d = kc[t][x][y]
                 ql += 1
                 if d != dd:
@@ -64,8 +61,8 @@ for z in range(3):
                 dd = (d[0] + 1, d[1])
                 if t == 0:
                     for w in mm[t]:
-                        xx, yy = w[0] + x, w[1] + y
-                        if xx >= 0 and xx < n and yy >= 0 and yy < n:
+                        (xx, yy) = (w[0] + x, w[1] + y)
+                        if xx >= 0 and xx < n and (yy >= 0) and (yy < n):
                             if kc[t][xx][yy] > dd:
                                 kc[t][xx][yy] = dd
                                 q[qr] = (t, xx, yy, dd)
@@ -73,8 +70,8 @@ for z in range(3):
                 else:
                     for w in mm[t]:
                         for hm in range(n * 2):
-                            xx, yy = w[0] * hm + x, w[1] * hm + y
-                            if xx >= 0 and xx < n and yy >= 0 and yy < n:
+                            (xx, yy) = (w[0] * hm + x, w[1] * hm + y)
+                            if xx >= 0 and xx < n and (yy >= 0) and (yy < n):
                                 if kc[t][xx][yy] > dd:
                                     kc[t][xx][yy] = dd
                                     q[qr] = (t, xx, yy, dd)
@@ -85,8 +82,8 @@ dp[0][0] = (0, 0)
 dp[1][0] = (0, 0)
 dp[2][0] = (0, 0)
 for i in range(0, n * n - 1):
-    x, y = path[i]
-    xx, yy = path[i + 1]
+    (x, y) = path[i]
+    (xx, yy) = path[i + 1]
     for z in range(3):
         for j in range(3):
             dist = k[j][x][y][z][xx][yy]
@@ -99,5 +96,4 @@ for i in range(0, n * n - 1):
 for j in range(n * n - 1, n * n):
     qq = [dp[i][j] if dp[i][j] != None else (1000000, 0) for i in range(3)]
     qm = min(qq)
-    # print(j,qm)
     print(qm[0], qm[1])

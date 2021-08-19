@@ -1,8 +1,5 @@
-#from functools import cmp_to_key
-#from collections import deque
-
 def main():
-    n, h = map(int, input().split())
+    (n, h) = map(int, input().split())
     w = 0
     for i in input().split():
         if int(i) > h:

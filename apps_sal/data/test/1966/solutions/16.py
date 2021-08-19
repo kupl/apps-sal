@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
 import sys
-
 n = int(sys.stdin.readline().strip())
 blks = []
 for i in range(4):
@@ -10,8 +7,6 @@ for i in range(4):
         blks[-1].append(sys.stdin.readline().strip())
     if i != 3:
         sys.stdin.readline()
-
-# start from B
 
 
 def to_BW(blk):
@@ -24,12 +19,9 @@ def to_BW(blk):
 
 
 BWs = [to_BW(blk) for blk in blks]
-
-res = 4 * n**2
-
+res = 4 * n ** 2
 for i in range(4):
     for j in range(i):
         kl = list(set(range(4)) - {i, j})
         res = min(res, BWs[i][0] + BWs[j][0] + BWs[kl[0]][1] + BWs[kl[1]][1])
-
 print(res)

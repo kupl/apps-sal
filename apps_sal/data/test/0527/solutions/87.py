@@ -1,14 +1,17 @@
 import sys
 from collections import defaultdict
 import bisect
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
     s = list(input())
     t = list(input())
     dic = defaultdict(list)
-    for index, string in enumerate(s):
+    for (index, string) in enumerate(s):
         dic[string].append(index)
     cycle = 0
     ind = -1
@@ -19,9 +22,8 @@ def main():
         elif dic[string][-1] <= ind:
             cycle += 1
             ind = dic[string][0]
-        else:  # [2,6,7,10] 6の次は？
-            ind = dic[string][bisect.bisect_right(
-                dic[string], ind)]  # n以下の個数を数える
+        else:
+            ind = dic[string][bisect.bisect_right(dic[string], ind)]
     print(cycle * len(s) + ind + 1)
 
 

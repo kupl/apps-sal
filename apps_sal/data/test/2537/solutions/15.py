@@ -3,7 +3,6 @@ for query in range(q):
     s = input()
     t = input()
     p = input()
-    # s ma byc rowne t
     pointer_s = 0
     pointer_t = 0
     no = 0
@@ -34,6 +33,6 @@ for query in range(q):
                 no = 1
                 break
     if no == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
