@@ -11,18 +11,17 @@ def factor(n):
     return l
 
 
-s, p = map(int, input().split())
+(s, p) = map(int, input().split())
 l = factor(p)
-# print(l)
 n = len(l)
 for i in range(n):
-    x = (p // l[i]) + l[i]
+    x = p // l[i] + l[i]
     if x == s:
         flag = True
         break
     else:
         flag = False
 if flag:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

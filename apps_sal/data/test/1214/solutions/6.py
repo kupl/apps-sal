@@ -6,19 +6,19 @@ import heapq
 
 
 def listIn():
-    return list((list(map(int, stdin.readline().strip().split()))))
+    return list(list(map(int, stdin.readline().strip().split())))
 
 
 def stringListIn():
-    return([x for x in stdin.readline().split()])
+    return [x for x in stdin.readline().split()]
 
 
 def intIn():
-    return (int(stdin.readline()))
+    return int(stdin.readline())
 
 
 def stringIn():
-    return (stdin.readline().strip())
+    return stdin.readline().strip()
 
 
 def perfectSquare(k):
@@ -30,13 +30,12 @@ def perfectSquare(k):
 
 
 def check(a, b, op, i):
-    e1, e2 = a, b
-    if op == "-":
+    (e1, e2) = (a, b)
+    if op == '-':
         diff = e2 - e1
     else:
         diff = e2 + e1
     if perfectSquare(diff):
-        # print(diff)
         if diff - arr[i - 1] > 0 or i == 0:
             arr[i] = diff
             arr[i + 1] = e2
@@ -56,32 +55,27 @@ def __starting_point():
         if i % 2 != 0:
             arr[i] = even[j]
             j += 1
-
-    k = 0  # arr[0]+...arr[i] =k*k      current sum
-    l = 0  # arr[0]+...arr[i+1] =l*l     forward sum
-    s = 0  # arr[0]+...arr[i-1] =s        previous sum
-
+    k = 0
+    l = 0
+    s = 0
     zcnt = 0
-    b_end = 10**13
+    b_end = 10 ** 13
     flag = False
     for i in range(0, n, 2):
         found = False
-        while(not found):
+        while not found:
             k += 1
-            if (k * k - s > b_end):
+            if k * k - s > b_end:
                 print('No')
                 return
-            # given current sum=k^2
-            # then checking if k*k+arr[i+1]=l^2
             forward_sum = k * k + arr[i + 1]
-            while(forward_sum > l * l):
+            while forward_sum > l * l:
                 l += 1
             if forward_sum == l * l:
                 found = True
                 arr[i] = k * k - s
                 s = forward_sum
                 k = l
-        # print(arr,s)
     print('Yes')
     print(*arr)
 

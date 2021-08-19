@@ -8,44 +8,55 @@ from collections import *
 from functools import reduce, cmp_to_key
 import sys
 input = sys.stdin.readline
-
-
 M = mod = 998244353
-def factors(n): return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))
-def inv_mod(n): return pow(n, mod - 2, mod)
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split()]
-def st(): return input().rstrip('\n')
-def val(): return int(input().rstrip('\n'))
-def li2(): return [i for i in input().rstrip('\n')]
-def li3(): return [int(i) for i in input().rstrip('\n')]
+def factors(n):
+    return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0))))
+
+
+def inv_mod(n):
+    return pow(n, mod - 2, mod)
+
+
+def li():
+    return [int(i) for i in input().rstrip('\n').split()]
+
+
+def st():
+    return input().rstrip('\n')
+
+
+def val():
+    return int(input().rstrip('\n'))
+
+
+def li2():
+    return [i for i in input().rstrip('\n')]
+
+
+def li3():
+    return [int(i) for i in input().rstrip('\n')]
 
 
 sys.setrecursionlimit(10 ** 6)
-
-a, n, m = li()
+(a, n, m) = li()
 l = []
 rain = defaultdict(int)
 for i in range(n):
-    c, b = li()
+    (c, b) = li()
     for j in range(c, b):
-        rain[(j, j + 1)] = 1
-
-
-# print(rain)
+        rain[j, j + 1] = 1
 umbrellas = [float('inf')] * (a + 5)
 for i in range(m):
-    c, b = li()
+    (c, b) = li()
     umbrellas[c] = min(umbrellas[c], b)
-# print(umbrellas[:a + 1])
 
 
 @lru_cache(None)
 def dp(i=0, umbon=0):
-    # print(i, umbon)
     if i == a:
-        if rain[(i - 1, i)]:
+        if rain[i - 1, i]:
             if umbon:
                 return umbon
             return float('inf')
@@ -54,7 +65,7 @@ def dp(i=0, umbon=0):
     else:
         ans = float('inf')
         last = umbon
-        if rain[(i - 1, i)]:
+        if rain[i - 1, i]:
             umbon = min(umbon, umbrellas[i]) if umbon else umbrellas[i]
             if not last:
                 last = float('inf')

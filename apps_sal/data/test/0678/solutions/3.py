@@ -5,15 +5,4 @@ for _ in range(int(input())):
     if highest < sum(numbers) / len(numbers):
         highest = sum(numbers) / len(numbers)
 print(highest)
-
-"""
-FOO = sum(input)
-BAR = number input
-BAZ = 0
-QUZ = 0
-#BOTH SAEM ( 
-	BIGGR OF (
-		(PRODUKT OF FOO AN QUZ) 
-		AN (PRODUKT OF BAR BAZ)
-	) 
-	AN (PRODUKT OF FOO AN QUZ))"""
+'\nFOO = sum(input)\nBAR = number input\nBAZ = 0\nQUZ = 0\n#BOTH SAEM ( \n\tBIGGR OF (\n\t\t(PRODUKT OF FOO AN QUZ) \n\t\tAN (PRODUKT OF BAR BAZ)\n\t) \n\tAN (PRODUKT OF FOO AN QUZ))'

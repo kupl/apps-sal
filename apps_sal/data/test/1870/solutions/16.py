@@ -5,9 +5,7 @@ import math
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
-    # sys.stdout.flush()
-    n, c = list(map(int, input().split()))
+    (n, c) = list(map(int, input().split()))
     time = list(map(int, input().split()))
     ans = 1
     for i in range(1, n):

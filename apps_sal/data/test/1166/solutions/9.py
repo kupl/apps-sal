@@ -4,30 +4,29 @@ ans = [None] * n
 
 
 def get(p):
-    # print(ans)
     if ans[p] is not None:
         return ans[p]
     elif a[p] == 1:
-        ans[p] = "A"
+        ans[p] = 'A'
     elif a[p] == n:
-        ans[p] = "B"
+        ans[p] = 'B'
     else:
         for i in range(p + a[p], n, a[p]):
             if a[i] > a[p]:
-                if get(i) == "B":
-                    ans[p] = "A"
+                if get(i) == 'B':
+                    ans[p] = 'A'
                     return ans[p]
         for i in range(p - a[p], -1, -a[p]):
             if a[i] > a[p]:
-                if get(i) == "B":
-                    ans[p] = "A"
+                if get(i) == 'B':
+                    ans[p] = 'A'
                     return ans[p]
-        ans[p] = "B"
+        ans[p] = 'B'
     return ans[p]
 
 
 if n == 1:
-    print("B")
+    print('B')
 else:
     for i in range(n - 1, -1, -1):
         get(i)

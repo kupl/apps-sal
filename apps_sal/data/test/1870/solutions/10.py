@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
 import collections
 
 
 def main():
-    n, c = list(map(int, input().split()))
+    (n, c) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-
     r = 0
     p = -c
     for i in a:
@@ -14,7 +12,6 @@ def main():
             r = 0
         r += 1
         p = i
-
     print(r)
 
 

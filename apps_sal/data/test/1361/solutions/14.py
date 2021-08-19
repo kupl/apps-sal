@@ -1,8 +1,6 @@
-# A
-
 n = int(input())
 l = input().split()
-ans = 10**50
+ans = 10 ** 50
 for i in range(n):
     l[i] = int(l[i])
 for i in range(1, n - 1):

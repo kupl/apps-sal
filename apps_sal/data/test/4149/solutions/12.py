@@ -1,7 +1,5 @@
-
 from collections import Counter
-
-lim = 2750131 + 10  # 2 * 10**6 + 2
+lim = 2750131 + 10
 
 
 def erato():
@@ -15,7 +13,6 @@ def erato():
             for j in range(i * 2, lim, i):
                 if not arr[j]:
                     arr[j] = j // i
-
     s = set(primes)
     for i in range(1, len(primes)):
         if i in s:
@@ -34,9 +31,7 @@ def __starting_point():
         if cnt[e[b]] > 0 and cnt[b] > 0:
             res.append(str(b))
             cnt.subtract({b: 1, e[b]: 1})
-
-    # res = list(map(lambda x: str(e[x]), bb))
-    print(" ".join(res))
+    print(' '.join(res))
 
 
 __starting_point()
