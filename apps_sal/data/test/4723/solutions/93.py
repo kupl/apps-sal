@@ -6,28 +6,49 @@ import itertools
 import math
 import string
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(10**7)
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(10 ** 7)
 INF = float('inf')
-def I(): return int(input())
-def F(): return float(input())
-def SS(): return input()
-def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x) - 1 for x in input().split()]
-def LF(): return [float(x) for x in input().split()]
-def LSS(): return input().split()
+
+
+def I():
+    return int(input())
+
+
+def F():
+    return float(input())
+
+
+def SS():
+    return input()
+
+
+def LI():
+    return [int(x) for x in input().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in input().split()]
+
+
+def LF():
+    return [float(x) for x in input().split()]
+
+
+def LSS():
+    return input().split()
 
 
 def resolve():
     S_ = SS()
     T = SS()
-
     len_S = len(S_)
     len_T = len(T)
-
-    # TはS'のなるべく右側にあるべき
     idx = -1
     for i in range(len_S - len_T, -1, -1):
         exists = True
@@ -38,7 +59,6 @@ def resolve():
         if exists:
             idx = i
             break
-
     if idx == -1:
         print('UNRESTORABLE')
     else:
@@ -49,8 +69,7 @@ def resolve():
                     ans[i] = T[i - idx]
                 else:
                     ans[i] = 'a'
-
-        print((''.join(ans)))
+        print(''.join(ans))
 
 
 def __starting_point():

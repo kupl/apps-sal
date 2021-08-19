@@ -1,4 +1,3 @@
-# test
 s = list(input())
 t = [0 for i in range(len(s) * 4)]
 bits = dict()
@@ -13,9 +12,9 @@ def bit_repr(a):
 
 
 def popcount(i):
-    i = i - ((i >> 1) & 0x55555555)
-    i = (i & 0x33333333) + ((i >> 2) & 0x33333333)
-    return (((i + (i >> 4) & 0xF0F0F0F) * 0x1010101) & 0xffffffff) >> 24
+    i = i - (i >> 1 & 1431655765)
+    i = (i & 858993459) + (i >> 2 & 858993459)
+    return ((i + (i >> 4) & 252645135) * 16843009 & 4294967295) >> 24
 
 
 def build(A, v, t_left, t_right):
@@ -24,7 +23,7 @@ def build(A, v, t_left, t_right):
         return
     left_son = (v << 1) + 1
     right_son = left_son + 1
-    t_mid = (t_left + t_right) >> 1
+    t_mid = t_left + t_right >> 1
     build(A, left_son, t_left, t_mid)
     build(A, right_son, t_mid + 1, t_right)
     t[v] = t[left_son] | t[right_son]
@@ -43,7 +42,7 @@ def _update(v, t_left, t_right, index, val):
             v = left_son
     t[v] = bit_repr(val)
     while v:
-        v = (v - 1) >> 1
+        v = v - 1 >> 1
         left_son = (v << 1) + 1
         right_son = left_son + 1
         t[v] = t[left_son] | t[right_son]
@@ -58,7 +57,7 @@ def get_set(v, t_left, t_right, left, right):
         return 0
     if t_left == left and t_right == right:
         return t[v]
-    t_mid = (t_left + t_right) >> 1
+    t_mid = t_left + t_right >> 1
     left_son = (v << 1) + 1
     right_son = left_son + 1
     a = get_set(left_son, t_left, t_mid, left, min(right, t_mid))
@@ -73,18 +72,18 @@ def count(l, r):
 def get_request():
     req = iter(input().split())
     token = int(next(req))
-    if token - 1:  # count
-        l, r = list(map(int, req))
-        return token, l, r
-    else:  # change
+    if token - 1:
+        (l, r) = list(map(int, req))
+        return (token, l, r)
+    else:
         pos = int(next(req))
         sym = next(req)
-        return token, pos, sym
+        return (token, pos, sym)
 
 
 def response(req):
-    token, a, b = req
-    if token - 1:  # count
+    (token, a, b) = req
+    if token - 1:
         print(count(a, b))
     else:
         update(a, b)

@@ -24,27 +24,24 @@ def eucycle(n, m, adj):
 def solve(n, m, edges):
     adj = collections.defaultdict(set)
     diredges = []
-    for u, v in edges:
+    for (u, v) in edges:
         adj[u].add(v)
         adj[v].add(u)
-    odds = set(u for u in adj if len(adj[u]) % 2 == 1)
+    odds = set((u for u in adj if len(adj[u]) % 2 == 1))
     ans = n - len(odds)
-    assert(len(odds) % 2 == 0)
+    assert len(odds) % 2 == 0
     for o in odds:
         adj[n + 1].add(o)
         adj[o].add(n + 1)
     diredges = eucycle(n + 1, m, adj)
-    return str(ans) + '\n' + '\n'.join(str(u) + ' ' + str(v) for (u, v) in diredges
-                                       if u != n + 1 and v != n + 1)
+    return str(ans) + '\n' + '\n'.join((str(u) + ' ' + str(v) for (u, v) in diredges if u != n + 1 and v != n + 1))
 
 
 t = int(next(lines))
-
 for ti in range(t):
-    n, m = [int(s) for s in next(lines).split()]
+    (n, m) = [int(s) for s in next(lines).split()]
     edges = []
     for ei in range(m):
-        u, v = [int(s) for s in next(lines).split()]
+        (u, v) = [int(s) for s in next(lines).split()]
         edges.append((u, v))
-    # print(edges)
     print(solve(n, m, edges))

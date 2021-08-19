@@ -1,11 +1,9 @@
-# the basic idea is to use a dict to record every participant's submission
-
 n = int(input())
 participants = {}
 order = True
 while n:
     n -= 1
-    x, k = list(map(int, input().split()))
+    (x, k) = list(map(int, input().split()))
     if k in participants:
         if x in participants[k]:
             continue
@@ -21,9 +19,7 @@ while n:
         tmp = set()
         tmp.add(x)
         participants[k] = tmp
-
-
 if order:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

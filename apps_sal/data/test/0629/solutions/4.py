@@ -1,12 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 N = int(input())
-
 A1s = list(map(int, input().split()))
 A2s = list(map(int, input().split()))
 Bs = list(map(int, input().split()))
-
 scores = []
 score = 0
 for n in range(N):

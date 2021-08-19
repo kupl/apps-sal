@@ -1,9 +1,7 @@
 import sys
-
 input = sys.stdin.readline
 N = int(input())
 K = int(input())
-
 c = 0
 tmp = 1
 while c < N:
@@ -12,6 +10,4 @@ while c < N:
     else:
         tmp += K
     c += 1
-    # print(tmp)
-
 print(tmp)

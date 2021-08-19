@@ -1,6 +1,5 @@
 import math
-
-n, a, b = tuple(map(int, input().split()))
+(n, a, b) = tuple(map(int, input().split()))
 
 
 def mr(k, n):
@@ -10,8 +9,7 @@ def mr(k, n):
     return a
 
 
-rounds = {r: mr(2**r, 258) for r in range(1, 10)}
-# print(len(rounds[1]))
+rounds = {r: mr(2 ** r, 258) for r in range(1, 10)}
 
 
 def sol(a, b):
@@ -22,6 +20,4 @@ def sol(a, b):
 
 
 a = sol(a, b)
-
-
-print(a if a != int(math.log(n, 2)) else "Final!")
+print(a if a != int(math.log(n, 2)) else 'Final!')

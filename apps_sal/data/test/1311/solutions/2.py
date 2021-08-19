@@ -1,10 +1,7 @@
-#!/usr/bin/env python
-# coding=utf-8
-
 n = int(input())
 l = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     l += [(x + y, x - y)]
 l.sort()
 r = -2000000000

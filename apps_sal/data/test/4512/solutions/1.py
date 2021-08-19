@@ -1,12 +1,15 @@
 import heapq
 import math
-
 import sys
 input = sys.stdin.readline
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split()]
-def value(): return int(input())
+def li():
+    return [int(i) for i in input().rstrip('\n').split()]
+
+
+def value():
+    return int(input())
 
 
 def givesum(a, b):
@@ -23,6 +26,7 @@ def dolist(a):
 
 
 class Node:
+
     def __init__(self, s, e):
         self.start = s
         self.end = e
@@ -34,11 +38,9 @@ class Node:
 def build(nums, l, r):
     if l == r:
         temp = Node(l, l)
-        # print(temp.start,ord(nums[l])-ord('a'),nums)
         temp.lis[ord(nums[l]) - ord('a')] = 1
     else:
-        mid = (l + r) >> 1
-        # print(mid,l,r)
+        mid = l + r >> 1
         temp = Node(l, r)
         temp.left = build(nums, l, mid)
         temp.right = build(nums, mid + 1, r)
@@ -50,7 +52,7 @@ def update(root, start, value):
     if root.start == root.end == start:
         root.lis = dolist(value)
     elif root.start <= start and root.end >= start:
-        mid = (root.start + root.end) >> 1
+        mid = root.start + root.end >> 1
         root.left = update(root.left, start, value)
         root.right = update(root.right, start, value)
         root.lis = givesum(root.left.lis, root.right.lis)
@@ -63,14 +65,13 @@ def query(root, start, end):
     elif root.start > end or root.end < start:
         return [0] * 26
     else:
-        mid = (start + end) >> 1
+        mid = start + end >> 1
         return givesum(query(root.left, start, end), query(root.right, start, end))
 
 
 s = input().rstrip('\n')
 root = build(s, 0, len(s) - 1)
 ansarun = []
-# print('arun')
 for _ in range(int(input())):
     templist = list(input().split())
     if templist[0] == '1':

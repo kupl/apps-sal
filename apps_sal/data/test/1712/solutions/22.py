@@ -1,5 +1,5 @@
-n, x, y = list(map(int, input().split()))
-cx, cy, A = 0, 0, []
+(n, x, y) = list(map(int, input().split()))
+(cx, cy, A) = (0, 0, [])
 while cx < x or cy < y:
     if (cx + 1) * y > (cy + 1) * x:
         cy += 1
@@ -12,9 +12,6 @@ while cx < x or cy < y:
         A.append('Both')
         cx += 1
         cy += 1
-
-
-# sprint(A)
 for _ in range(n):
     a = int(input())
     a -= 1

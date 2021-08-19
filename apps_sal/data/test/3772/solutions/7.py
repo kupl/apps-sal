@@ -1,15 +1,12 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 count = 0
 while a > 0 and b > 0:
     if a > b:
-        count += (a // b)
+        count += a // b
         a = a % b
     elif a < b:
-        count += (b // a)
-        b = (b % a)
+        count += b // a
+        b = b % a
     else:
         count += a
         a = b = 0
