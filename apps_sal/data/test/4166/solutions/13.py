@@ -1,10 +1,8 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 num = [''] * n
-
 flag = 0
 for i in range(m):
-    s, c = map(int, input().split())
+    (s, c) = map(int, input().split())
     if num[s - 1] == '' or num[s - 1] == c:
         num[s - 1] = c
     else:

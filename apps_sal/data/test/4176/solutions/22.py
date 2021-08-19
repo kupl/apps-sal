@@ -6,9 +6,8 @@ def L():
 
 
 def lcm(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 [a, b] = L()
-
 print(lcm(a, b))

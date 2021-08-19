@@ -15,6 +15,6 @@ for i in range(n - 1):
     if total == False:
         break
 if total == False:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

@@ -1,6 +1,5 @@
 n = int(input())
 w = list(map(int, input().split()))
-
 s = sum(w)
 ans = float('inf')
 for i in range(n):

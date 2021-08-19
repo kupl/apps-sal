@@ -1,8 +1,8 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 a = [-1] * N
 ans = 0
 for i in range(M):
-    s, c = list(map(int, input().split()))
+    (s, c) = list(map(int, input().split()))
     if a[s - 1] == -1:
         a[s - 1] = c
     elif a[s - 1] != c:
@@ -19,5 +19,5 @@ if ans != -1:
         if a[i] == -1:
             a[i] = 0
         a[i] = str(a[i])
-    ans = "".join(a)
+    ans = ''.join(a)
 print(ans)

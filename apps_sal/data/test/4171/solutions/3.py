@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 it = list(map(int, input().split()))
 a = [[] for i in range(n)]
 ss = {}
@@ -21,7 +21,7 @@ for i in range(n):
         if j == 0:
             break
 tt = ss.copy()
-mi = 10**10
+mi = 10 ** 10
 for i in ss:
     if len(ss[i]) >= k:
         tt[i].sort()

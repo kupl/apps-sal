@@ -5,7 +5,7 @@ for t in range(1, n):
     s1 = 0
     s2 = 0
     for j in range(n):
-        if (j + 1) <= t:
+        if j + 1 <= t:
             s1 += ww[j]
         else:
             s2 += ww[j]

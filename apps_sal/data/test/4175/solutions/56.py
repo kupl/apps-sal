@@ -1,5 +1,4 @@
 N = int(input())
-
 alter_str = input()
 str_list = [alter_str]
 for _ in range(N - 1):

@@ -1,4 +1,3 @@
-
 N = int(input())
 H = list(map(int, input().split()))
 ans = 0
@@ -9,4 +8,4 @@ for i in range(1, N):
     else:
         ans = max(cnt, ans)
         cnt = 0
-print((max(cnt, ans)))
+print(max(cnt, ans))

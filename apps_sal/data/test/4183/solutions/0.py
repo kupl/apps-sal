@@ -1,12 +1,10 @@
-
 import math
 from functools import reduce
-
-url = "https://atcoder.jp//contests/abc070/tasks/abc070_c"
+url = 'https://atcoder.jp//contests/abc070/tasks/abc070_c'
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(*numbers):
@@ -18,7 +16,7 @@ def main():
     clocks = []
     for i in range(count):
         clocks.append(int(input()))
-    print((lcm(*clocks)))
+    print(lcm(*clocks))
 
 
 def __starting_point():

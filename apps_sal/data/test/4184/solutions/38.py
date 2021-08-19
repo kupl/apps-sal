@@ -1,10 +1,8 @@
 N = int(input())
 W = list(map(int, input().split()))
-
 S1 = 0
 S2 = sum(W)
 diff_min = sum(W)
-
 for i in W:
     S1 += i
     S2 -= i
@@ -13,5 +11,4 @@ for i in W:
         diff_min = diff
     if S2 - S1 <= 0:
         break
-
 print(diff_min)

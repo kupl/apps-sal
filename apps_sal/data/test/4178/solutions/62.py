@@ -1,6 +1,5 @@
 n = int(input())
 h = list(map(int, input().split()))
-
 ans = 'Yes'
 m = 0
 for i in range(1, n):

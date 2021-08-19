@@ -1,7 +1,6 @@
 N = int(input())
 H = [int(n) for n in input().split()]
 reached = [False] * N
-
 max_count = 0
 for i in range(N):
     if reached[i] == True:

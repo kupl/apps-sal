@@ -16,19 +16,16 @@ def main():
     for i in range(n):
         s = input()
         vectoer.append(s)
-
     if len(vectoer) != len(set(vectoer)):
         flag = False
-
     for i in range(n - 1):
         if vectoer[i][-1] != vectoer[i + 1][0]:
             flag = False
             break
-
     if flag:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

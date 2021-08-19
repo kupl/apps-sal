@@ -1,4 +1,4 @@
-N, K = (int(T) for T in input().split())
+(N, K) = (int(T) for T in input().split())
 Reminder = [0] * K
 for NT in range(1, N + 1):
     Reminder[NT % K] += 1

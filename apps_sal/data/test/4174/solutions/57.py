@@ -1,6 +1,5 @@
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 Li = list(map(int, input().split()))
-
 Di = 0
 count = 1
 for i in Li:

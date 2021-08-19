@@ -2,7 +2,7 @@ from sys import stdin, stdout
 
 
 def __starting_point():
-    n, k = list(map(int, stdin.readline().split()))
+    (n, k) = list(map(int, stdin.readline().split()))
     a = list(map(int, stdin.readline().split()))
     num = [[] for i in range(200005)]
     ans = 200000 * 100
@@ -21,7 +21,7 @@ def __starting_point():
         for j in range(k):
             cnt += num[i][j]
         ans = min(ans, cnt)
-    stdout.write('%d\n' % (ans))
+    stdout.write('%d\n' % ans)
 
 
 __starting_point()

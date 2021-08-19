@@ -1,5 +1,4 @@
 from math import gcd
-
 n = int(input())
 ans = 1
 for _ in range(n):

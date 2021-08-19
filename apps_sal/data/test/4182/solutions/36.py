@@ -1,4 +1,4 @@
-N, M, X, Y = map(int, input().split())
+(N, M, X, Y) = map(int, input().split())
 x = [int(s) for s in input().split()]
 y = [int(s) for s in input().split()]
 x.append(X)

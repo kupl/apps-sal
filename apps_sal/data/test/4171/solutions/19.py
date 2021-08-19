@@ -12,7 +12,7 @@ def deep(mas, pref, k):
         return 20000000000000000
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 mas = list(map(int, input().split()))
 mas.sort()
 mas = list(map(bin, mas))

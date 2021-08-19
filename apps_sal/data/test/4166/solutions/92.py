@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = []
 c = []
 ans = [0] * n
@@ -7,11 +7,11 @@ if n > 1:
 check = [10] * n
 f = False
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     s.append(a)
     c.append(b)
 for i in range(m):
-    if n > 1 and s[i] == 1 and c[i] == 0:
+    if n > 1 and s[i] == 1 and (c[i] == 0):
         f = True
         break
     if check[s[i] - 1] != c[i] and check[s[i] - 1] != 10:
@@ -20,6 +20,6 @@ for i in range(m):
     ans[s[i] - 1] = c[i]
     check[s[i] - 1] = c[i]
 if f:
-    print("-1")
+    print('-1')
 else:
-    print("".join([str(a) for a in ans]))
+    print(''.join([str(a) for a in ans]))

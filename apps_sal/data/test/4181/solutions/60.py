@@ -14,5 +14,4 @@ for i in range(N):
             A[i + 1] -= B[i]
     else:
         ans += B[i]
-
 print(ans)

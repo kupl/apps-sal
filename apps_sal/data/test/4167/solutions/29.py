@@ -6,10 +6,10 @@ def input():
 
 
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     if K % 2 == 1:
         a = N // K
-        print((a * a * a))
+        print(a * a * a)
         return
     else:
         a = N // K

@@ -1,4 +1,4 @@
-n, m, c = list(map(int, input().split()))
+(n, m, c) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 ans = 0
 for i in range(n):
@@ -8,5 +8,4 @@ for i in range(n):
         tmp += a[j] * b[j]
     if tmp + c > 0:
         ans += 1
-
 print(ans)

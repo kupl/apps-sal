@@ -5,7 +5,7 @@ for i in range(1, N):
         if N_List[i - 1] + 1 == N_List[i]:
             N_List[i] -= 1
         else:
-            print("No")
+            print('No')
             break
 else:
-    print("Yes")
+    print('Yes')

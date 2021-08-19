@@ -1,5 +1,4 @@
 N = int(input())
-
 res = []
 sign = 1
 while N:

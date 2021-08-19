@@ -1,6 +1,5 @@
 N = int(input())
 H = [int(i) for i in input().split()]
-
 s = H[0]
 t = 0
 for i in range(1, N):
@@ -9,7 +8,6 @@ for i in range(1, N):
     else:
         t = 1
         break
-
 if t == 0:
     print('Yes')
 else:

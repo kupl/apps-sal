@@ -1,1 +1,1 @@
-print("".join(["x" for _ in input()]))
+print(''.join(['x' for _ in input()]))

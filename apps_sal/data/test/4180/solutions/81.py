@@ -8,15 +8,10 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 n = int(input())
-
 tmp = 0
 res = 0
-
 res = 1000 * ceil(n / 1000) - n
-
 print(res)

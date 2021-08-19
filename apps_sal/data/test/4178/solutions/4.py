@@ -9,4 +9,4 @@ for i in range(1, n):
     else:
         check = False
         break
-print("Yes" if check else "No")
+print('Yes' if check else 'No')

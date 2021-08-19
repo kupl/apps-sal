@@ -1,10 +1,9 @@
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 arr = [-1] * N
 S = []
 C = []
 for _ in range(M):
-    s, c = map(int, input().split())
+    (s, c) = map(int, input().split())
     S.append(s - 1)
     C.append(c)
 
@@ -17,7 +16,7 @@ def replace(arr, f, t):
 
 
 ok = True
-for s, c in zip(S, C):
+for (s, c) in zip(S, C):
     if not (arr[s] == -1 or arr[s] == c):
         ok = False
         break
@@ -28,6 +27,6 @@ if ok:
     if 1 < N and arr[0] == -1:
         arr[0] = 1
     arr = replace(arr, -1, 0)
-    print(*arr, sep="")
+    print(*arr, sep='')
 else:
     print(-1)

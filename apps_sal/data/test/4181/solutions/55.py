@@ -1,7 +1,6 @@
 n = int(input())
 mons = list(map(int, input().split()))
 kill = list(map(int, input().split()))
-
 cnt = 0
 for i in range(n - 1, -1, -1):
     if mons[i + 1] < kill[i]:
@@ -20,5 +19,4 @@ for i in range(n - 1, -1, -1):
         cnt += kill[i]
         mons[i] -= kill[i]
         kill[i] = 0
-
 print(cnt)

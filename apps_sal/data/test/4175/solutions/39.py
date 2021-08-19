@@ -1,6 +1,5 @@
 n = int(input())
 w = [input() for _ in range(n)]
-
 words = set()
 ok = True
 for i in range(n):
@@ -11,4 +10,4 @@ for i in range(n):
         ok = False
         break
     words.add(w[i])
-print(('Yes' if ok else 'No'))
+print('Yes' if ok else 'No')

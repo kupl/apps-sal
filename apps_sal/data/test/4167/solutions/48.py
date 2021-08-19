@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 modZeroCount = N // K
 modHalfCount = 0
 if K % 2 == 0:

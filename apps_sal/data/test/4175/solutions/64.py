@@ -2,7 +2,6 @@ n = int(input())
 words = []
 for _ in range(n):
     words.append(input())
-
 sets = set(words)
 if len(sets) != len(words):
     ans = 'No'
@@ -13,5 +12,4 @@ else:
             break
         else:
             ans = 'Yes'
-
 print(ans)

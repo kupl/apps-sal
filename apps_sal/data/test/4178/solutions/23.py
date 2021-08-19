@@ -3,7 +3,6 @@ a = list(map(int, input().split()))
 max_num = a[0]
 if n == 1:
     print('Yes')
-
 else:
     flag = True
     for i in range(1, n):

@@ -1,11 +1,9 @@
 N = int(input())
 W = list(map(int, input().split()))
-
 S1 = 0
 S2 = W[N - 1]
 i = 0
 j = 2
-
 while True:
     if i > N - j:
         print(abs(S1 - S2))

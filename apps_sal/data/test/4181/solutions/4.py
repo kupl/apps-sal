@@ -1,4 +1,3 @@
-
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
@@ -9,4 +8,4 @@ for i in range(n):
     else:
         a[i + 1] = max(0, a[i + 1] - b[i] + a[i])
         a[i] = 0
-print((ans - sum(a)))
+print(ans - sum(a))

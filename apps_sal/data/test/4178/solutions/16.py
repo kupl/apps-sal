@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 pre = a[0]
 ok = True
 for i in range(n):
@@ -9,7 +8,5 @@ for i in range(n):
         break
     if a[i] > pre:
         a[i] -= 1
-
     pre = a[i]
-
-print(('Yes' if ok else 'No'))
+print('Yes' if ok else 'No')

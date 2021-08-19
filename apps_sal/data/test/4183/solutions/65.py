@@ -1,12 +1,13 @@
 import math
-def lcm(a, b): return a * b // math.gcd(a, b)
+
+
+def lcm(a, b):
+    return a * b // math.gcd(a, b)
 
 
 n = int(input())
-
 if n == 1:
     print(input())
-
 elif n == 2:
     a = int(input())
     b = int(input())

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 alist = [list(map(int, input().split())) for l in range(n)]
 alist.sort(key=lambda x: x[0])
 ans = 0

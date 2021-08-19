@@ -1,7 +1,7 @@
 import math
 from heapq import merge
-n, k = list(map(int, input().split()))
-maxN = 2 * (10 ** 5) + 10
+(n, k) = list(map(int, input().split()))
+maxN = 2 * 10 ** 5 + 10
 cnt = [list() for i in range(0, maxN + 1)]
 a = list(map(int, input().split()))
 for c in a:

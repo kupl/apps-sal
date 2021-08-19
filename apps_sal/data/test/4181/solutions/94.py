@@ -1,7 +1,6 @@
 n = int(input())
 a_l = list(map(int, input().split()))
 b_l = list(map(int, input().split()))
-
 ans = 0
 c = 0
 for i in range(1, n + 1):
@@ -15,7 +14,6 @@ for i in range(1, n + 1):
     else:
         ans += b_l[-i] + c
         c = 0
-
 if a_l[0] >= c:
     ans += c
 else:

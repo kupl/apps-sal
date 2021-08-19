@@ -2,7 +2,6 @@ N = int(input())
 l = []
 l.append(input())
 ans = 'Yes'
-
 for i in range(1, N):
     t = input()
     if t in l:

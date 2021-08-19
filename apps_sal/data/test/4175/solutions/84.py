@@ -5,15 +5,15 @@ for i in range(a):
 head = l[0][0]
 c = 0
 if len(l) != len(set(l)):
-    print("No")
+    print('No')
     exit
 else:
     for i in l:
         if i[0] != head:
-            print("No")
+            print('No')
             break
         else:
             head = i[-1]
             c += 1
 if c == a:
-    print("Yes")
+    print('Yes')

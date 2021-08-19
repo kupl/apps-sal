@@ -1,6 +1,5 @@
 S = input()
-A = ""
+A = ''
 for i in range(len(S)):
-    A = A + "x"
-
+    A = A + 'x'
 print(A)

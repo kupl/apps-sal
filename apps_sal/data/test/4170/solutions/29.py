@@ -1,6 +1,5 @@
 N = int(input())
 H = list(map(int, input().split()))
-
 result = 0
 count = 0
 for i in range(len(H) - 1):
@@ -12,5 +11,4 @@ for i in range(len(H) - 1):
         result = max(result, count)
         count = 0
     before_h = H
-
 print(result)

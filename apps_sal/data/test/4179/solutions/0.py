@@ -1,4 +1,4 @@
-n, m, c = map(int, input().split())
+(n, m, c) = map(int, input().split())
 b = list(map(int, input().split()))
 r = 0
 for _ in range(n):

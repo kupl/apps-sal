@@ -1,7 +1,7 @@
 def main():
     import sys
     input = sys.stdin.readline
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     A = list(map(int, input().split()))
     A.sort()
     A.append(0)
@@ -11,7 +11,7 @@ def main():
     l2 = [0] * n
     for i in range(1, n):
         l2[n - i - 1] = l2[n - i] + (A[n - i] - A[n - i - 1]) * i
-    ans = float("INF")
+    ans = float('INF')
     c = 1
     for i in range(n):
         if A[i + 1] == A[i]:

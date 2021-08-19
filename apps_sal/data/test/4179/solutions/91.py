@@ -1,6 +1,5 @@
-n, m, c = list(map(int, input().split()))
+(n, m, c) = list(map(int, input().split()))
 B = list(map(int, input().split()))
-
 cut = 0
 for i in range(n):
     A = list(map(int, input().split()))
@@ -9,5 +8,4 @@ for i in range(n):
         ans += A[i] * B[i]
     if ans > -c:
         cut += 1
-
 print(cut)

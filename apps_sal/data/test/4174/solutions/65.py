@@ -1,4 +1,4 @@
-n, x = (int(i) for i in input().split())
+(n, x) = (int(i) for i in input().split())
 list_l = [int(j) for j in input().split()]
 tmp = 0
 count = 0

@@ -1,6 +1,5 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 l = list(map(int, input().split()))
-
 ans = 0
 bound = 0
 for i in l:
@@ -10,5 +9,4 @@ for i in l:
         break
 else:
     ans = n + 1
-
 print(ans)

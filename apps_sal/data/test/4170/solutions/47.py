@@ -12,4 +12,4 @@ for i in range(1, N):
     else:
         ans = max(ans, count)
         count = 0
-print((max(ans, count)))
+print(max(ans, count))

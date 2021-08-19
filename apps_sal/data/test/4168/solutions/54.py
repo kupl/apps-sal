@@ -11,20 +11,17 @@ from copy import deepcopy
 
 def main():
     n = int(input())
-
     if n == 0:
         print(0)
         return
-
-    ans = ""
+    ans = ''
     while n:
         if n % 2:
             n -= 1
-            ans += "1"
+            ans += '1'
         else:
-            ans += "0"
-        n //= (-2)
-
+            ans += '0'
+        n //= -2
     print(ans[::-1])
 
 

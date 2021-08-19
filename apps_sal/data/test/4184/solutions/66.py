@@ -1,6 +1,5 @@
 def balance(weights: list, num: int) -> int:
     diff_list = []
-
     for i in range(0, num):
         group_l = weights[:i + 1]
         group_r = weights[i + 1:]
@@ -12,7 +11,7 @@ def balance(weights: list, num: int) -> int:
 def __starting_point():
     n = int(input())
     weights = list(map(int, input().split()))
-    print((balance(weights, n)))
+    print(balance(weights, n))
 
 
 __starting_point()

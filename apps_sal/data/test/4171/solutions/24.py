@@ -1,4 +1,4 @@
-n, k1 = map(int, input().split())
+(n, k1) = map(int, input().split())
 li = list(map(int, input().split()))
 d = {}
 for i in li:
@@ -8,7 +8,6 @@ for i in li:
             d[i].append(k)
         except KeyError:
             d[i] = [k]
-
         k += 1
         i = i // 2
 mi = 100000000

@@ -6,5 +6,5 @@ for i in range(N):
         ans = int(input())
     else:
         a = int(input())
-        ans = (a * ans) // math.gcd(ans, a)
+        ans = a * ans // math.gcd(ans, a)
 print(ans)

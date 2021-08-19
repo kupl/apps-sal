@@ -1,5 +1,5 @@
 import numpy as np
-n, m, c = list(map(int, input().split()))
+(n, m, c) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 b = np.array(b)
 k = 0

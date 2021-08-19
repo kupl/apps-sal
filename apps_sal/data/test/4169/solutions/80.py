@@ -1,11 +1,7 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 ab = [list(map(int, input().split())) for i in range(n)]
-
 ab.sort()
-
 payment = 0
-
 for i in ab:
     price = i[0]
     amount = i[1]
@@ -15,5 +11,4 @@ for i in ab:
     payment += amount * price
     if m == 0:
         break
-
 print(payment)

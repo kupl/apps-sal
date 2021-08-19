@@ -11,10 +11,7 @@ def lcm(a, b):
 
 N = int(input())
 T = [int(input()) for _ in range(N)]
-
 ans = 1
-
 for i in range(N):
     ans = lcm(ans, T[i])
-
 print(ans)

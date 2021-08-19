@@ -9,6 +9,5 @@ for i in range(n - 1):
         if cnt > 0:
             ans.append(cnt)
         cnt = 0
-
 ans.append(cnt)
 print(max(ans))

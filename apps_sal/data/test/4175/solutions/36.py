@@ -1,29 +1,25 @@
 import sys
-
 input = sys.stdin.readline
 
 
 def main():
     N = int(input())
     W = [input().strip() for _ in range(N)]
-
     s = set()
-    prev = ""
+    prev = ''
     for w in W:
         if w in s:
-            print("No")
+            print('No')
             return
-        if prev == "":
+        if prev == '':
+            prev = w[-1]
+        elif prev == w[0]:
             prev = w[-1]
         else:
-            if prev == w[0]:
-                prev = w[-1]
-            else:
-                print("No")
-                return
+            print('No')
+            return
         s.add(w)
-
-    print("Yes")
+    print('Yes')
 
 
 def __starting_point():

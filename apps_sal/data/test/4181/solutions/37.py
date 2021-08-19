@@ -1,7 +1,6 @@
 n = int(input())
 aa = list(map(int, input().split()))
 bb = list(map(int, input().split()))
-
 ans = 0
 for i in range(n):
     t1 = min(aa[i], bb[i])

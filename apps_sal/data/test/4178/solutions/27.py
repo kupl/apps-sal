@@ -4,7 +4,7 @@ for i in range(1, n - 1):
     if H[i - 1] < H[i]:
         H[i] -= 1
     if H[i] > H[i + 1]:
-        print("No")
+        print('No')
         break
 else:
-    print("Yes")
+    print('Yes')

@@ -1,11 +1,20 @@
 import sys
 from collections import deque
-def mapin(): return map(int, sys.stdin.readline().split())
-def listin(): return list(map(int, sys.stdin.readline().split()))
-def inp(): return sys.stdin.readline()
 
 
-N, M, X, Y = mapin()
+def mapin():
+    return map(int, sys.stdin.readline().split())
+
+
+def listin():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def inp():
+    return sys.stdin.readline()
+
+
+(N, M, X, Y) = mapin()
 veca = listin()
 vecb = listin()
 max_x = -10000
@@ -16,7 +25,7 @@ for i in veca:
 for i in vecb:
     if min_y > i:
         min_y = i
-if max_x < min_y and max_x > X and min_y < Y:
-    print("No War")
+if max_x < min_y and max_x > X and (min_y < Y):
+    print('No War')
 else:
-    print("War")
+    print('War')

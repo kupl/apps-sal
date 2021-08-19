@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2020/08/23
 
 @author: harurun
-'''
+"""
 
 
 def main():
@@ -10,7 +10,6 @@ def main():
     pin = sys.stdin.readline
     pout = sys.stdout.write
     perr = sys.stderr.write
-
     N = int(pin())
     H = list(map(int, pin().split()))
     H.reverse()
@@ -20,10 +19,10 @@ def main():
         elif H[i] == H[i + 1] - 1:
             H[i + 1] -= 1
         else:
-            print("No")
+            print('No')
             break
     else:
-        print("Yes")
+        print('Yes')
     return
 
 

@@ -3,26 +3,24 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    n, m, x, y = Input()
+    (n, m, x, y) = Input()
     x_data = Input()
     y_data = Input()
     x_max = max(x_data)
     y_min = min(y_data)
     ans = False
-
     for i in range(-100, 101):
         if x_max < i <= y_min and x < i <= y:
             ans = True
             break
-
     if ans:
-        print("No War")
+        print('No War')
     else:
-        print("War")
+        print('War')
 
 
 main()

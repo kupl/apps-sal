@@ -1,6 +1,5 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = [list(map(int, input().split())) for i in range(a)]
-
 c = sorted(c, key=lambda x: x[0])
 ans = 0
 for i in range(a):

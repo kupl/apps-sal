@@ -3,17 +3,17 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    n, m, c = Input()
+    (n, m, c) = Input()
     b = Input()
     a = [Input() for _ in range(n)]
     ans = 0
     for row in a:
         tmp = c
-        for x, y in zip(row, b):
+        for (x, y) in zip(row, b):
             tmp += x * y
         if tmp > 0:
             ans += 1

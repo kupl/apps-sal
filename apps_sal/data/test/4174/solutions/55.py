@@ -1,4 +1,4 @@
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 L = list(map(int, input().split()))
 S = [0]
 sum_L = 0

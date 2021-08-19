@@ -1,2 +1,2 @@
 str = input()
-print(len(str) * "x")
+print(len(str) * 'x')

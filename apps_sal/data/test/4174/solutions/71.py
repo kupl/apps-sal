@@ -1,4 +1,4 @@
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 L = list(map(int, input().split()))
 List = [0] * (N + 1)
 for i in range(1, N + 1):

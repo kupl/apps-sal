@@ -1,5 +1,5 @@
 def IntBaseConvert(N, K):
-    if (type(N) is int) and (type(K) is int):
+    if type(N) is int and type(K) is int:
         if K >= 2 and N >= 0:
             if N == 0:
                 return [0]
@@ -25,4 +25,4 @@ def IntBaseConvert(N, K):
 
 
 ConvertNum = IntBaseConvert(int(input()), -2)
-print(''.join(str(T) for T in ConvertNum))
+print(''.join((str(T) for T in ConvertNum)))

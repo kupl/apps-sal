@@ -13,7 +13,6 @@ def main():
     for i in range(1, n):
         t = t_lst[i]
         answer = lcm(answer, t)
-
     print(answer)
 
 

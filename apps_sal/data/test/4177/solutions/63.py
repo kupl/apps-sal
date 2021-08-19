@@ -1,2 +1,2 @@
 N = len(input())
-print("x" * N)
+print('x' * N)

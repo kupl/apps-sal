@@ -3,7 +3,7 @@ pin = sys.stdin.readline
 
 
 def main():
-    N, M = map(int, pin().split())
+    (N, M) = map(int, pin().split())
     d = [list(map(int, pin().split())) for _ in [0] * N]
     d.sort()
     cnt = 0

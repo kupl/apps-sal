@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 ans = 0
 for r in range(K):
     n = (N + K - r) // K

@@ -1,4 +1,4 @@
-n, m, c = map(int, input().split())
+(n, m, c) = map(int, input().split())
 list01 = list(map(int, input().split()))
 a = 0
 b = 0

@@ -1,5 +1,5 @@
 s = input()
-a = "x"
+a = 'x'
 for b in range(len(s) - 1):
-    a = a + "x"
+    a = a + 'x'
 print(a)

@@ -1,17 +1,13 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = []
-
 for _ in range(N):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     AB.append((A, B))
-
 AB.sort()
-
 i = 0
 ans = 0
-
 while M > 0:
-    A, B = AB[i]
+    (A, B) = AB[i]
     if B <= M:
         ans += A * B
         M -= B
@@ -19,5 +15,4 @@ while M > 0:
         ans += A * M
         M = 0
     i += 1
-
 print(ans)

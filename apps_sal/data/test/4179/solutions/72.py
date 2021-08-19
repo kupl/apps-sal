@@ -1,9 +1,7 @@
-N, M, C = map(int, input().split())
+(N, M, C) = map(int, input().split())
 B = list(map(int, input().split()))
-
 code_count = 0
 answer = 0
-
 while N > code_count:
     A = list(map(int, input().split()))
     sum = C
@@ -12,5 +10,4 @@ while N > code_count:
     if sum > 0:
         answer += 1
     code_count += 1
-
 print(answer)

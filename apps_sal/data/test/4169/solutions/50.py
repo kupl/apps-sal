@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-a = sorted([list(map(int, input().split()))for i in range(n)])
+(n, m) = map(int, input().split())
+a = sorted([list(map(int, input().split())) for i in range(n)])
 c = 0
 d = 0
 for i in range(n):

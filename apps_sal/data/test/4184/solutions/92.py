@@ -1,6 +1,5 @@
 n = int(input())
 w = list(map(int, input().split()))
-
 t = 0
 s = sum(w)
 ans = sum(w)

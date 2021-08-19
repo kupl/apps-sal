@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 r = n // k
 res = r ** 3
 if k % 2 == 0:

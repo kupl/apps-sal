@@ -1,7 +1,6 @@
-n, m, c = map(int, input().split())
+(n, m, c) = map(int, input().split())
 b = [int(i) for i in input().split()]
 a = [[int(i) for i in input().split()] for j in range(n)]
-
 answer = 0
 for i in range(n):
     x = 0

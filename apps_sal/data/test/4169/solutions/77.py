@@ -1,8 +1,8 @@
 from collections import defaultdict
-N, M = map(int, input().rstrip().split())
+(N, M) = map(int, input().rstrip().split())
 d = defaultdict(lambda: 0)
 for _ in range(N):
-    A, B = map(int, input().rstrip().split())
+    (A, B) = map(int, input().rstrip().split())
     d[A] += B
 ans = 0
 for k in sorted(d.keys()):

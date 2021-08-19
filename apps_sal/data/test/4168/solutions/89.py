@@ -1,6 +1,5 @@
 N = int(input())
-ans = ""
-
+ans = ''
 if N == 0:
     print(0)
 else:

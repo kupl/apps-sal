@@ -1,12 +1,10 @@
 def main():
-    n, m, c = list(map(int, input().split()))
+    (n, m, c) = list(map(int, input().split()))
     b = list(map(int, input().split()))
     a = []
-
     cnt = 0
     for i in range(n):
         a.append(list(map(int, input().split())))
-
     for i in range(n):
         ans = 0
         for k in range(m):

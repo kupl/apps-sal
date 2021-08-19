@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 x = [list(map(int, input().split())) for l in range(n)]
 x = sorted(x)
 count = m
@@ -12,5 +12,4 @@ for i in x:
     else:
         p += i[0] * count
         count = 0
-
 print(p)

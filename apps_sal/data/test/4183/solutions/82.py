@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 ans = 1
 for _ in range(n):

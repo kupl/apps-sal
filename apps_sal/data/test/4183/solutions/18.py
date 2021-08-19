@@ -8,7 +8,7 @@ def main():
     ans = int(pin())
     for i in range(N - 1):
         T = int(pin())
-        ans = (ans * T) // math.gcd(ans, T)
+        ans = ans * T // math.gcd(ans, T)
     print(ans)
     return
 
