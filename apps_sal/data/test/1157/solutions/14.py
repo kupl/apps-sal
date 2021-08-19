@@ -1,6 +1,9 @@
 import sys
 from collections import defaultdict
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 n = int(input())
@@ -17,6 +20,4 @@ for i in arr:
     dp = [a, b]
     ans[0] += a
     ans[1] += b
-    # print(dp)
-
 print(*ans[::-1])

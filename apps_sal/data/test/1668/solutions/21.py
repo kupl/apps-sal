@@ -2,16 +2,15 @@
 NTC here
 """
 from sys import stdin, setrecursionlimit
-setrecursionlimit(10**7)
+setrecursionlimit(10 ** 7)
 
 
-def iin(): return int(stdin.readline())
+def iin():
+    return int(stdin.readline())
 
 
-def lin(): return list(map(int, stdin.readline().split()))
-
-# range = xrange
-# input = raw_input
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
@@ -39,7 +38,6 @@ def main():
                     ans[j] = str(i) + s[1:]
                     dc.add(ans[j])
                     break
-
         print(ch)
         print(*ans, sep='\n')
 

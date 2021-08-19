@@ -2,25 +2,30 @@ import sys
 input = sys.stdin.readline
 
 
-def I(): return int(input())
-def MI(): return list(map(int, input().split()))
-def LI(): return list(map(int, input().split()))
+def I():
+    return int(input())
 
 
-n, m = MI()
+def MI():
+    return list(map(int, input().split()))
+
+
+def LI():
+    return list(map(int, input().split()))
+
+
+(n, m) = MI()
 sws = []
 for i in range(m):
     sws.append(list(map(int, input().split())))
-# print(sws)
 ps = LI()
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     count = 0
     for j in range(m):
         sm = 0
         for k in range(1, len(sws[j])):
-            sm += (i >> (sws[j][k] - 1)) % 2
-        # print(sm)
+            sm += (i >> sws[j][k] - 1) % 2
         if sm % 2 == ps[j]:
             count += 1
     if count == m:

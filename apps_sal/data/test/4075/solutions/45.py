@@ -3,15 +3,12 @@ input = sys.stdin.readline
 
 
 def slove():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     light = []
     for i in range(M):
         connecting_sw = list(map(int, input().split()))
         light.append(connecting_sw[1:])
     on = list(map(int, input().split()))
-    # print(light)
-    # print(on)
-
     ans = 0
     for i in range(1 << N):
         light_on = [0] * M
@@ -22,7 +19,6 @@ def slove():
                     if j + 1 in item:
                         light_on[a] = (light_on[a] + 1) % 2
                     a += 1
-        # print(light_on)
         a = 0
         for i in range(M):
             if on[i] == light_on[i]:
@@ -31,7 +27,6 @@ def slove():
             break
         if a == M:
             ans += 1
-
     print(ans)
 
 

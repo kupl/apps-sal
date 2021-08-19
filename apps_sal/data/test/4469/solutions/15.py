@@ -1,21 +1,17 @@
-#!/usr/bin/env python3
 import sys
 
 
 def rint():
     return list(map(int, sys.stdin.readline().split()))
-#lines = stdin.readlines()
 
 
 q = int(input())
-
-order = [0] * (2 * 10**5 + 1)
+order = [0] * (2 * 10 ** 5 + 1)
 lm_order = 0
 rm_order = 0
-
 not_init = 1
 for i in range(q):
-    cmd, id = sys.stdin.readline().split()
+    (cmd, id) = sys.stdin.readline().split()
     id = int(id)
     if cmd == 'L':
         order[id] = lm_order - 1

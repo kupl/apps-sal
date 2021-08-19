@@ -1,5 +1,3 @@
-# /usr/bin/python3
-# -*- coding: utf-8 -*-
 from queue import Queue
 from queue import LifoQueue as Stack
 from math import sqrt, floor, ceil, log2, log10, pi
@@ -8,10 +6,8 @@ from itertools import permutations, combinations
 from operator import itemgetter
 from functools import cmp_to_key
 from bisect import bisect_left
-
-
 INF = 1001001001
-__MOD__ = (10**9) + 7
+__MOD__ = 10 ** 9 + 7
 yn = 'YNeos'
 judge = False
 cnt = 0
@@ -19,7 +15,7 @@ ans = None
 
 
 def lcm(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 def intinput():
@@ -48,6 +44,7 @@ def bindex(a, x):
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.r = [-1] * (n + 1)
 
@@ -63,7 +60,7 @@ class UnionFind:
         if x == y:
             return False
         if self.r[x] > self.r[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.r[x] += self.r[y]
         self.r[y] = x
         return True
@@ -72,9 +69,10 @@ class UnionFind:
         return -1 * self.r[self.root(x)]
 
 
-class ModInt():
+class ModInt:
+
     def __init__(self, x):
-        self.__x = (x % __MOD__)
+        self.__x = x % __MOD__
 
     def __add__(self, other):
         if type(other) == int:
@@ -83,7 +81,7 @@ class ModInt():
         elif type(other) == ModInt:
             return self.__class__((self.__x + other.__x) % __MOD__)
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __radd__(self, other):
         if type(other) == int:
@@ -92,7 +90,7 @@ class ModInt():
         elif type(other) == ModInt:
             return self.__class__((other.__x + self.__x) % __MOD__)
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __sub__(self, other):
         if type(other) == int:
@@ -101,7 +99,7 @@ class ModInt():
         elif type(other) == ModInt:
             return self.__class__((self.__x - other.__x) % __MOD__)
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __rsub__(self, other):
         if type(other) == int:
@@ -110,43 +108,43 @@ class ModInt():
         elif type(other) == ModInt:
             return self.__class__((other.__x - self.__x) % __MOD__)
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __mul__(self, other):
         if type(other) == int:
             other = self.__class__(other)
-            return int(self.__class__((self.__x * other.__x) % __MOD__))
+            return int(self.__class__(self.__x * other.__x % __MOD__))
         elif type(other) == ModInt:
-            return self.__class__((self.__x * other.__x) % __MOD__)
+            return self.__class__(self.__x * other.__x % __MOD__)
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __rmul__(self, other):
         if type(other) == int:
             other = self.__class__(other)
-            return int(self.__class__((other.__x * self.__x) % __MOD__))
+            return int(self.__class__(other.__x * self.__x % __MOD__))
         elif type(other) == ModInt:
-            return self.__class__((other.__x * self.__x) % __MOD__)
+            return self.__class__(other.__x * self.__x % __MOD__)
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __truediv__(self, other):
         if type(other) == int:
             other = self.__class__(other)
-            return int(self.__class__((self.__x * other.__modinv()) % __MOD__))
+            return int(self.__class__(self.__x * other.__modinv() % __MOD__))
         elif type(other) == ModInt:
-            return self.__class__((self.__x * other.__modinv()) % __MOD__)
+            return self.__class__(self.__x * other.__modinv() % __MOD__)
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __rtruediv__(self, other):
         if type(other) == int:
             other = self.__class__(other)
-            return int(self.__class__((other.__x * self.__modinv()) % __MOD__))
+            return int(self.__class__(other.__x * self.__modinv() % __MOD__))
         elif type(other) == ModInt:
-            return self.__class__((other.__x * self.__modinv()) % __MOD__)
+            return self.__class__(other.__x * self.__modinv() % __MOD__)
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __pow__(self, other):
         if type(other) == int:
@@ -155,7 +153,7 @@ class ModInt():
         elif type(other) == ModInt:
             return self.__class__(pow(self.__x, other.__x, __MOD__))
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __rpow__(self, other):
         if type(other) == int:
@@ -164,21 +162,21 @@ class ModInt():
         elif type(other) == ModInt:
             return self.__class__(pow(other.__x, self.__x, __MOD__))
         else:
-            raise Exception("Not Int or Not ModInt")
+            raise Exception('Not Int or Not ModInt')
 
     def __modinv(self, m=__MOD__):
         a = self.__x
         if a == 0:
             raise ZeroDivisionError()
         if gcd(a, m) != 1:
-            raise Exception("%sの逆数は求まりません。" % a)
-        b, u, v = m, 1, 0
+            raise Exception('%sの逆数は求まりません。' % a)
+        (b, u, v) = (m, 1, 0)
         while b != 0:
             t = a // b
             a -= t * b
-            a, b = b, a
+            (a, b) = (b, a)
             u -= t * v
-            u, v = v, u
+            (u, v) = (v, u)
         u %= m
         if u < 0:
             u += m
@@ -192,19 +190,18 @@ class ModInt():
 
 
 def __starting_point():
-    N, M = mulinputs()
-    ks, ss, ps = [], [], []
+    (N, M) = mulinputs()
+    (ks, ss, ps) = ([], [], [])
     for _ in range(M):
-        k, *s = list(mulinputs())
+        (k, *s) = list(mulinputs())
         ks.append(k)
         ss.append(s)
     ps = list(mulinputs())
-
     cnt = 0
-    for n in range((1 << N)):
+    for n in range(1 << N):
         state = [0] * N
         for j in range(N):
-            state[j] = (n & (1 << j)) >> j
+            state[j] = (n & 1 << j) >> j
         is_light = True
         for j in range(M):
             icnt = 0
@@ -215,8 +212,6 @@ def __starting_point():
                 break
         if is_light:
             cnt += 1
-
-    # 出力
     print(cnt)
 
 

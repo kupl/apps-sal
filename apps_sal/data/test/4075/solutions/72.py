@@ -1,18 +1,20 @@
 import sys
-def MI(): return map(int, sys.stdin.readline().rstrip().split())
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
-
-# bit全部作ってる
-#bit = [i>>j&1 for j in range(N)]
 
 
-n, m = MI()
+def MI():
+    return map(int, sys.stdin.readline().rstrip().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+(n, m) = MI()
 lights = [LI() for _ in range(m)]
 p_list = LI()
-
 bit_list = []
 count = 0
-for i in range(2**n):
+for i in range(2 ** n):
     bit = [i >> j & 1 for j in range(n)]
     flag = 0
     for j in range(m):

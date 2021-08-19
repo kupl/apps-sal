@@ -1,7 +1,5 @@
-TOT = 2 * 10**5
-# print(TOT)
+TOT = 2 * 10 ** 5
 a = [-1] * (TOT + 1)
-
 q = int(input())
 fp = input().split()
 a[int(fp[1])] = 0
@@ -10,7 +8,7 @@ R = 1
 for _ in range(q - 1):
     qq = input().split()
     pos = int(qq[1])
-    if (qq[0] == 'L'):
+    if qq[0] == 'L':
         a[pos] = L
         L -= 1
     elif qq[0] == 'R':

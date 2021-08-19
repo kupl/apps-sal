@@ -6,7 +6,7 @@ l = 0
 r = 0
 ans = []
 for test in range(query):
-    ty, idd = [(x) for x in input().split()]
+    (ty, idd) = [x for x in input().split()]
     idd = int(idd)
     if ty == 'L':
         l += 1
@@ -27,6 +27,5 @@ for test in range(query):
             left = l - x[1] - 1
             right = r + x[1]
         ans.append(min(left, right))
-    # print(arr)
 for i in range(len(ans)):
     print(ans[i])

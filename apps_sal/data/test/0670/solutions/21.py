@@ -2,21 +2,18 @@ from math import sqrt
 
 
 def ro(x, y):
-    return sqrt((x[0] - y[0])**2 + (x[1] - y[1])**2)
+    return sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
 
 
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 A = [0, 0]
 B = [0, 0]
-A[0], A[1], B[0], B[1] = list(map(int, input().split()))
+(A[0], A[1], B[0], B[1]) = list(map(int, input().split()))
 if a == 0 or b == 0:
-    # print(1)
     print(float(abs(A[0] - B[0]) + abs(A[1] - B[1])))
-elif ((-a * A[0] - c) / b > max(A[1], B[1]) and (-a * B[0] - c) / b > max(A[1], B[1])) or ((-a * A[0] - c) / b < min(A[1], B[1]) and (-a * B[0] - c) / b < min(A[1], B[1])):
-    # print(2)
+elif (-a * A[0] - c) / b > max(A[1], B[1]) and (-a * B[0] - c) / b > max(A[1], B[1]) or ((-a * A[0] - c) / b < min(A[1], B[1]) and (-a * B[0] - c) / b < min(A[1], B[1])):
     print(float(abs(A[0] - B[0]) + abs(A[1] - B[1])))
-elif ((B[0] - A[0]) / (B[1] - A[1])) * (-a / b) <= 0:
-    # print(3)
+elif (B[0] - A[0]) / (B[1] - A[1]) * (-a / b) <= 0:
     print(float(abs(A[0] - B[0]) + abs(A[1] - B[1])))
 else:
     ab = False

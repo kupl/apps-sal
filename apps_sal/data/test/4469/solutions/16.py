@@ -1,4 +1,4 @@
-'''input
+"""input
 10
 L 100
 R 100000
@@ -10,7 +10,7 @@ R 115
 ? 100
 R 110
 ? 115
-'''
+"""
 from sys import stdin, stdout
 
 
@@ -25,10 +25,8 @@ def myfunction(mydict, current, second):
 q = int(stdin.readline())
 mydict = dict()
 current = [0, 0, 0]
-
 while q > 0:
-
-    first, second = stdin.readline().split()
+    (first, second) = stdin.readline().split()
     if first == 'L':
         mydict[second] = [current[0] + 1, current[1], 'L']
         current = [current[0] + 1, current[1], 'L']
@@ -37,6 +35,4 @@ while q > 0:
         current = [current[0], current[1] + 1, 'R']
     else:
         print(myfunction(mydict, current, second))
-    # print(current)
-
     q -= 1
