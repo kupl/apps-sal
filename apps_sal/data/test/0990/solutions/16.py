@@ -1,16 +1,12 @@
-# https://atcoder.jp/contests/abc152/submissions/9619555
-
 import numpy as np
 import sys
 readline = sys.stdin.readline
-
 N = int(readline())
 graph = [[] for _ in range(N + 1)]
 for i in range(N - 1):
-    a, b = list(map(int, readline().split()))
+    (a, b) = list(map(int, readline().split()))
     graph[a].append((b, i))
     graph[b].append((a, i))
-
 M = int(readline())
 
 
@@ -21,7 +17,7 @@ def get_path(U, V):
     visited[U] = True
     while stack:
         v = stack.pop()
-        for w, i in graph[v]:
+        for (w, i) in graph[v]:
             if visited[w]:
                 continue
             visited[w] = True
@@ -30,7 +26,7 @@ def get_path(U, V):
     path = 0
     w = V
     while w != U:
-        v, i = pred[w]
+        (v, i) = pred[w]
         w = v
         path += 1 << i
     return path
@@ -38,27 +34,25 @@ def get_path(U, V):
 
 condition_path = []
 for i in range(M):
-    u, v = list(map(int, readline().split()))
+    (u, v) = list(map(int, readline().split()))
     condition_path.append(get_path(u, v))
 
 
 def popcnt(n):
-    c = (n & 0x5555555555555555) + ((n >> 1) & 0x5555555555555555)
-    c = (c & 0x3333333333333333) + ((c >> 2) & 0x3333333333333333)
-    c = (c & 0x0f0f0f0f0f0f0f0f) + ((c >> 4) & 0x0f0f0f0f0f0f0f0f)
-    c = (c & 0x00ff00ff00ff00ff) + ((c >> 8) & 0x00ff00ff00ff00ff)
-    c = (c & 0x0000ffff0000ffff) + ((c >> 16) & 0x0000ffff0000ffff)
-    c = (c & 0x00000000ffffffff) + ((c >> 32) & 0x00000000ffffffff)
+    c = (n & 6148914691236517205) + (n >> 1 & 6148914691236517205)
+    c = (c & 3689348814741910323) + (c >> 2 & 3689348814741910323)
+    c = (c & 1085102592571150095) + (c >> 4 & 1085102592571150095)
+    c = (c & 71777214294589695) + (c >> 8 & 71777214294589695)
+    c = (c & 281470681808895) + (c >> 16 & 281470681808895)
+    c = (c & 4294967295) + (c >> 32 & 4294967295)
     return c
 
 
 sgn = np.where(popcnt(np.arange(1 << M)) % 2, -1, 1)
 S = np.zeros(1 << M, np.int64)
 for i in range(M):
-    S[1 << i:1 << (i + 1)] = S[:1 << i] | condition_path[i]
-
-
+    S[1 << i:1 << i + 1] = S[:1 << i] | condition_path[i]
 n_edges = popcnt(S)
-x = 1 << (N - 1 - n_edges)
+x = 1 << N - 1 - n_edges
 answer = np.sum(x * sgn)
 print(answer)

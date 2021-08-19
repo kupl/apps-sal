@@ -21,20 +21,16 @@ def solve():
     b = 0
     a = int(1)
     while a * a <= n - s:
-        if (n - s) % a == 0 and\
-            (n - s) // a >= a and\
-            (s - a) >= 0 and\
-                (n - s) // a >= (s - a):
+        if (n - s) % a == 0 and (n - s) // a >= a and (s - a >= 0) and ((n - s) // a >= s - a):
             b = (n - s) // a + 1
-            # print(b,s-a)
         a += 1
     if b > 0:
         print(b)
         return
     if n == s:
-        print((n + 1))
+        print(n + 1)
         return
-    print((-1))
+    print(-1)
     return
 
 

@@ -15,9 +15,8 @@ def bisect(ng, ok, judge, eps=1):
     return ok
 
 
-def int_product(it): return reduce(operator.mul, it, 1)
-
-# 素因数分解
+def int_product(it):
+    return reduce(operator.mul, it, 1)
 
 
 def prime_factors(n):
@@ -31,14 +30,12 @@ def prime_factors(n):
     if n > 1:
         yield n
 
-# 約数列挙
-
 
 def divisors(n):
     fac_pow = Counter(prime_factors(n))
     fac = tuple(fac_pow.keys())
     for pp in product(*(range(p + 1) for p in fac_pow.values())):
-        yield int_product(f**p for f, p in zip(fac, pp))
+        yield int_product((f ** p for (f, p) in zip(fac, pp)))
 
 
 def f(x, b):

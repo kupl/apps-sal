@@ -1,19 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf8 -*-
-
 import fileinput
 
 
 def solve():
     with fileinput.input() as stdin:
-        n, d = [int(c) for c in stdin.readline().split(" ")]
-        a = [int(c) for c in stdin.readline().split(" ")]
+        (n, d) = [int(c) for c in stdin.readline().split(' ')]
+        a = [int(c) for c in stdin.readline().split(' ')]
         m = int(stdin.readline())
         a = sorted(a)
-        # print(n, d, a, m)
-
         res = 0
-        if (m > n):
+        if m > n:
             res = sum(a)
             res -= (m - n) * d
         else:

@@ -1,8 +1,8 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 mat = []
 for i in range(N):
     mat.append(input().split())
-wgb = "WGB"
+wgb = 'WGB'
 flg = False
 for i in range(N):
     for j in range(M):
@@ -12,6 +12,6 @@ for i in range(N):
     if flg:
         break
 if flg:
-    print("#Color")
+    print('#Color')
 else:
-    print("#Black&White")
+    print('#Black&White')

@@ -1,14 +1,12 @@
-#!/usr/bin/env python3
 import math
 
 
 def f(b, n):
-    return n if (n < b) else f(b, n // b) + n % b
+    return n if n < b else f(b, n // b) + n % b
 
 
 n = int(input())
 s = int(input())
-
 ans = -1
 if n == s:
     ans = n + 1
