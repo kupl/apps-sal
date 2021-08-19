@@ -15,26 +15,23 @@ def craftIdeal(length, zeroes):
 def getAns(string, l, m):
     real = []
     for char in string:
-        if char == ")":
+        if char == ')':
             real.append(False)
         else:
             real.append(True)
     endgoal = craftIdeal(l, m)
     operations = []
     temp = []
-
     for i in range(l):
         target = endgoal[i]
         if real[i] != target:
             nextDiffIndex = i + 1
             while real[nextDiffIndex] != target:
                 nextDiffIndex += 1
-
             temp = real[i:nextDiffIndex + 1]
             for j in range(i, nextDiffIndex + 1):
                 real[j] = temp[nextDiffIndex - j]
-
-            operations.append(str(i + 1) + " " + str(nextDiffIndex + 1))
+            operations.append(str(i + 1) + ' ' + str(nextDiffIndex + 1))
     print(len(operations))
     for e in operations:
         print(e)

@@ -1,7 +1,6 @@
 def main():
-    N, K = list(map(int, input().split()))
-    *A, = list(map(int, input().split()))
-
+    (N, K) = list(map(int, input().split()))
+    (*A,) = list(map(int, input().split()))
     A.sort()
     print(A[-1] + sum(A[-K - 1:-1]))
 

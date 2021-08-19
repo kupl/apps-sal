@@ -4,12 +4,12 @@ for _ in range(t):
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     grow = shrink = False
-    for ai, bi in zip(a, b):
+    for (ai, bi) in zip(a, b):
         if bi < ai:
             if not shrink:
                 print('NO')
                 break
-        elif bi > ai and not grow:
+        elif bi > ai and (not grow):
             print('NO')
             break
         if ai == 1:

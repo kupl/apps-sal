@@ -1,5 +1,4 @@
 n = int(input())
-
 a = [99] * 26
 for i in range(n):
     s = input()
@@ -9,7 +8,6 @@ for i in range(n):
         tmp[x] += 1
     for j in range(26):
         a[j] = min(a[j], tmp[j])
-
 for i in range(26):
     c = chr(i + ord('a'))
     print(c * a[i], end='')

@@ -6,8 +6,6 @@ for _ in range(0,T):
     s=[int(x) for x in input().split()]
     for i in range(0,len(s)):
         a,b=map(int,input().split())"""
-
-
 T = int(input())
 for _ in range(0, T):
     n = int(input())
@@ -16,14 +14,13 @@ for _ in range(0, T):
     low = 0
     high = max(a)
     ans = max(a)
-    while(low <= high):
-        mid = (low + high) >> 1
+    while low <= high:
+        mid = low + high >> 1
         tot = 0
         for i in range(0, len(a)):
-            if(a[i] > mid):
+            if a[i] > mid:
                 tot += b[i]
-
-        if(tot <= mid):
+        if tot <= mid:
             ans = min(ans, mid)
             high = mid - 1
         else:

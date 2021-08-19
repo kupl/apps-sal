@@ -12,7 +12,7 @@ for i in range(int(input())):
     a = list(map(int, input().split()))
     sl = dict()
     for x in a:
-        y, z = f(x)
+        (y, z) = f(x)
         if sl.get(y) == None:
             sl[y] = z
         else:

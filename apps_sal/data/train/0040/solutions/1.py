@@ -14,7 +14,7 @@ def main():
         for q in range(len(a)):
             a[q] = f[a[q]]
         n = len(d)
-        starts, ends = [-1] * (n + 1), [n + 1] * (n + 1)
+        (starts, ends) = ([-1] * (n + 1), [n + 1] * (n + 1))
         for q in range(len(a)):
             if starts[a[q]] == -1:
                 starts[a[q]] = q

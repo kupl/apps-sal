@@ -3,7 +3,7 @@ for _ in range(int(input())):
     ar = []
     cur = 0
     for c in s:
-        if c == "1":
+        if c == '1':
             cur += 1
         else:
             ar.append(cur)

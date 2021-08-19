@@ -4,7 +4,7 @@ def solve():
     imax = imin = 0
     jmax = jmin = 0
     fjmin = ljmin = fjmax = ljmax = fimax = limax = fimin = limin = -1
-    for ind, e in enumerate(input()):
+    for (ind, e) in enumerate(input()):
         if e == 'W':
             i += 1
             if i > imax:
@@ -17,7 +17,7 @@ def solve():
                 imin = i
                 fimin = ind
                 limin = ind
-        elif e == "A":
+        elif e == 'A':
             j -= 1
             if j < jmin:
                 jmin = j

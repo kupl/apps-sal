@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = k // n
     rem = k % n
     grid = []
@@ -28,7 +28,7 @@ for _ in range(t):
             if grid[j][i] == '1':
                 p += 1
         c.append(p)
-    print((max(r) - min(r))**2 + (max(c) - min(c))**2)
+    print((max(r) - min(r)) ** 2 + (max(c) - min(c)) ** 2)
     for i in range(n):
         ans = ''.join(grid[i])
         print(ans)

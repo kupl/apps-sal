@@ -20,5 +20,5 @@ for y in range(int(input())):
             r.append((n - m, m))
     r = list(set(r))
     print(len(r))
-    for a, b in r:
+    for (a, b) in r:
         print(a, b)

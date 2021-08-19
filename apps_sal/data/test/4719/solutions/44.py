@@ -9,8 +9,7 @@ for j in range(1, n):
         C1[S[j][i]] += 1
     for i in range(97, 123):
         C[chr(i)] = min(C[chr(i)], C1[chr(i)])
-
 A = []
 for i in range(97, 123):
     A.append(chr(i) * C[chr(i)])
-print("".join(sorted(A)))
+print(''.join(sorted(A)))

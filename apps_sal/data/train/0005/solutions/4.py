@@ -13,7 +13,7 @@ for _ in range(t):
             sols.append((mx, n - mx))
         l1 = list(sorted(a[:n - mx]))
         l2 = list(sorted(a[n - mx:]))
-        if mx * 2 != n and l1 == rl2 and l2 == rl1:
+        if mx * 2 != n and l1 == rl2 and (l2 == rl1):
             sols.append((n - mx, mx))
     print(len(sols))
     for p in sols:

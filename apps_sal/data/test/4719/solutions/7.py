@@ -23,12 +23,10 @@ def readChars():
 
 n = readInt()
 sn = [list(input()) for i in range(n)]
-
-ans = ""
+ans = ''
 for i in range(97, 123):
-    m = float("inf")
+    m = float('inf')
     for j in sn:
         m = min(m, j.count(chr(i)))
     ans += chr(i) * m
-
 print(ans)

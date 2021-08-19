@@ -8,9 +8,9 @@ def possible(presum):
     mx = max(presum)
     mn = min(presum)
     for i in range(l):
-        if(mx == presum[i]):
+        if mx == presum[i]:
             lastmax = max(lastmax, i)
-        if(mn == presum[i]):
+        if mn == presum[i]:
             firstmin = min(i, firstmin)
     if lastmax < firstmin:
         return True
@@ -26,7 +26,7 @@ for i in range(t):
             l1.append(l1[-1] - 1)
         elif i == 'W':
             l1.append(l1[-1] + 1)
-        elif i == "D":
+        elif i == 'D':
             l2.append(l2[-1] + 1)
         else:
             l2.append(l2[-1] - 1)
@@ -40,9 +40,9 @@ for i in range(t):
     if length > 2 and possible(l1):
         ans = min(ans, (length - 1) * breadth)
     if breadth > 2 and possible(l2):
-        ans = min(ans, (length) * (breadth - 1))
+        ans = min(ans, length * (breadth - 1))
     for i in range(len(l2)):
         l2[i] *= -1
     if breadth > 2 and possible(l2):
-        ans = min(ans, (length) * (breadth - 1))
+        ans = min(ans, length * (breadth - 1))
     print(ans)

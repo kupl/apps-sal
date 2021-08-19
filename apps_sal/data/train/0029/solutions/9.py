@@ -19,5 +19,5 @@ for anynumber in range(int(input())):
             if ans[i - 1] < ans[i]:
                 ans[i] = ans[i - 1]
     for i in range(n - 1):
-        print(ans[i], end=" ")
+        print(ans[i], end=' ')
     print(ans[n - 1])

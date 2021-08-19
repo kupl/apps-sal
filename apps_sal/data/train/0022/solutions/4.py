@@ -8,7 +8,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    a, k = read_ints()
+    (a, k) = read_ints()
     i = 1
     while i < k:
         s = str(a)

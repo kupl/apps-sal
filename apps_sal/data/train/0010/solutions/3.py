@@ -10,4 +10,4 @@ for _ in range(int(input())):
         ans.append(str(p[i]))
     ans.append(str(p[-1]))
     print(len(ans))
-    print(" ".join(ans))
+    print(' '.join(ans))

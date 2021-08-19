@@ -10,10 +10,9 @@ for i in range(n):
             d[c] = d.get(c, 0) + 1
         else:
             d[c] = min(d.get(c, 0), s.count(c))
-
 li = []
 for w in d:
     for i in range(d[w]):
         li.append(w)
 li.sort()
-print("".join(li))
+print(''.join(li))

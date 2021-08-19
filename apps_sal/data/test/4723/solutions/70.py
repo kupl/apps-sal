@@ -22,9 +22,8 @@ for i in range(N - n + 1):
             else:
                 s.append(S[j])
         ans.append(''.join(s))
-
 if len(ans) == 0:
-    print("UNRESTORABLE")
+    print('UNRESTORABLE')
 else:
     ans.sort()
-    print((ans[0]))
+    print(ans[0])

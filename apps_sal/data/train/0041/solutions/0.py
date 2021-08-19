@@ -1,6 +1,6 @@
 t = int(input())
 for tt in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     ans = []
     if s[0] == ')':
@@ -17,14 +17,13 @@ for tt in range(t):
                         ans.append([i + 1, j + 1])
                         s = s[:i] + s[j:i - 1:-1] + s[j + 1:]
                         break
-        else:
-            if s[i] != ')':
-                for j in range(i + 1, n):
-                    if s[j] == ')':
-                        ans.append([i + 1, j + 1])
-                        s = s[:i] + s[j:i - 1:-1] + s[j + 1:]
-                        break
-    for i in range((k - 1) * 2, (n + (2 * (k - 1))) // 2 + 1):
+        elif s[i] != ')':
+            for j in range(i + 1, n):
+                if s[j] == ')':
+                    ans.append([i + 1, j + 1])
+                    s = s[:i] + s[j:i - 1:-1] + s[j + 1:]
+                    break
+    for i in range((k - 1) * 2, (n + 2 * (k - 1)) // 2 + 1):
         if s[i] != '(':
             for j in range(i + 1, n):
                 if s[j] == '(':

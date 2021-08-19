@@ -10,10 +10,9 @@ for _ in range(int(input())):
             else:
                 tr = True
                 x = 1
-        else:
-            if tr:
-                tr = False
-                A.append(x)
+        elif tr:
+            tr = False
+            A.append(x)
     A.sort(reverse=True)
     Ans = 0
     for i in range(len(A)):

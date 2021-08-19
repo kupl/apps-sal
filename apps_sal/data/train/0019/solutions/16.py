@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    _, _, n = list(map(int, input().split()))
+    (_, _, n) = list(map(int, input().split()))
     a = [int(x) for x in input().split()]
     cnt = dict()
     for i in a[:n]:

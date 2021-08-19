@@ -1,6 +1,6 @@
 t = int(input())
 for i1 in range(t):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     dic = {}
     r = 0

@@ -6,6 +6,7 @@ def I():
 
 
 class Heap:
+
     def __init__(self):
         self.l = [-1]
         self.n = 0
@@ -23,7 +24,7 @@ class Heap:
         while i > 1:
             j = i // 2
             if self.l[j] > self.l[i]:
-                self.l[j], self.l[i] = self.l[i], self.l[j]
+                (self.l[j], self.l[i]) = (self.l[i], self.l[j])
                 i = j
             else:
                 break
@@ -40,16 +41,16 @@ class Heap:
                 k = j + 1
                 if k < len(self.l) and self.l[i] > max(self.l[j], self.l[k]):
                     if self.l[j] == min(self.l[j], self.l[k]):
-                        self.l[i], self.l[j] = self.l[j], self.l[i]
+                        (self.l[i], self.l[j]) = (self.l[j], self.l[i])
                         i = j
                     else:
-                        self.l[i], self.l[k] = self.l[k], self.l[i]
+                        (self.l[i], self.l[k]) = (self.l[k], self.l[i])
                         i = k
                 elif k < len(self.l) and self.l[i] > self.l[k]:
-                    self.l[i], self.l[k] = self.l[k], self.l[i]
+                    (self.l[i], self.l[k]) = (self.l[k], self.l[i])
                     i = k
                 elif j < len(self.l) and self.l[i] > self.l[j]:
-                    self.l[i], self.l[j] = self.l[j], self.l[i]
+                    (self.l[i], self.l[j]) = (self.l[j], self.l[i])
                     i = j
                 else:
                     break
@@ -62,7 +63,7 @@ for _ in range(t):
     voter = [list(map(int, I().split())) for _ in range(n)]
     h = Heap()
     d = {}
-    for m, p in voter:
+    for (m, p) in voter:
         if m not in d:
             d[m] = []
         d[m].append(p)

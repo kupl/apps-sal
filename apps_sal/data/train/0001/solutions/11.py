@@ -1,5 +1,4 @@
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -8,9 +7,9 @@ if not USE_STDIO:
 
 
 def main():
-    q, = list(map(int, input().split(' ')))
+    (q,) = list(map(int, input().split(' ')))
     for _ in range(q):
-        n, m, k = list(map(int, input().split(' ')))
+        (n, m, k) = list(map(int, input().split(' ')))
         if n > k or m > k:
             print(-1)
         elif (n - m) % 2:

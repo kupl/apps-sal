@@ -1,1 +1,1 @@
-print(input().replace("017", "018"))
+print(input().replace('017', '018'))

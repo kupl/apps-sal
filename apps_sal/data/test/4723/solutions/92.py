@@ -3,7 +3,7 @@ T = list(input())
 
 
 def match(s, t):
-    for _s, _t in zip(s, t):
+    for (_s, _t) in zip(s, t):
         if not (_s == _t or _s == '?'):
             return False
     return True
@@ -27,11 +27,10 @@ for i in reversed(range(0, len(S) - len(T) + 1)):
     if match(S[i:], T):
         pos = i
         break
-
 if 0 <= pos:
     ans = S
     ans = replace(ans, T, pos)
     ans = convert(ans)
-    print(*ans, sep="")
+    print(*ans, sep='')
 else:
     print('UNRESTORABLE')

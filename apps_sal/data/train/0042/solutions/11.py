@@ -15,7 +15,6 @@ for i in range(t):
                     num *= 2 + 1
                 else:
                     num *= 2
-
                 while num <= size + zero and num >= size:
                     arr += 1
                     if j == n - 1:

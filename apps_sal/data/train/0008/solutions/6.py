@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     inp = input().lower()
     k = min(k, inp.count('l'))
     ans = inp.count('w') + tuple(zip(inp, 'l' + inp)).count('ww') + k * 2

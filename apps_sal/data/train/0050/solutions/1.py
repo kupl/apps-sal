@@ -12,7 +12,6 @@ def solve():
     if s == 0:
         print(0)
         return
-
     cur = 0
     d = {0: 0}
     for i in range(n, 2 * n):
@@ -22,7 +21,7 @@ def solve():
             cur += 1
         if cur not in d:
             d[cur] = i - n + 1
-    ans = float("inf")
+    ans = float('inf')
     need = s
     cur = 0
     if need in d:

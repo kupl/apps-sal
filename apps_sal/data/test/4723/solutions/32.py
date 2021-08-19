@@ -1,8 +1,6 @@
 a = input()
 b = input()
-
 length = len(a) - len(b) + 1
-
 ans = []
 for i in range(length):
     A = list('?' * i + b + '?' * (length - i - 1))
@@ -16,7 +14,6 @@ for i in range(length):
             flag = False
     if flag:
         ans.append(''.join(A).replace('?', 'a'))
-
 if ans:
     ans.sort()
     print(ans[0])

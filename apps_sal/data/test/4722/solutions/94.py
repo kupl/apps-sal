@@ -1,5 +1,4 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 total = a + b
 if total % 3 == 0:
     print('Possible')

@@ -18,9 +18,9 @@ def p1(n, s, le):
     return r
 
 
-t, = rl()
+(t,) = rl()
 for _ in range(t):
-    n, s = stdin.readline().split()
+    (n, s) = stdin.readline().split()
     n = int(n)
     print(*(n - x + 1 for x in p1(n, s, '>')))
     print(*p1(n, s, '<'))

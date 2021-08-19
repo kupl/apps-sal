@@ -2,22 +2,7 @@ def mi():
     return map(int, input().split())
 
 
-'''
-3
-6
-4 5 1 3 2 6
-5
-5 3 1 2 4
-4
-1 4 3 2
-3
-6
-4 5 1 3 2 6
-5
-5 3 1 2 4
-4
-1 4 3 2
-'''
+'\n3\n6\n4 5 1 3 2 6\n5\n5 3 1 2 4\n4\n1 4 3 2\n3\n6\n4 5 1 3 2 6\n5\n5 3 1 2 4\n4\n1 4 3 2\n'
 for _ in range(int(input())):
     n = int(input())
     a = list(mi())
@@ -32,9 +17,9 @@ for _ in range(int(input())):
     rm = dic[0][1]
     print(1, end='')
     for i in range(1, n):
-        if (dic[i][1] < lm):
+        if dic[i][1] < lm:
             lm = dic[i][1]
-        if (dic[i][1] > rm):
+        if dic[i][1] > rm:
             rm = dic[i][1]
         if rm - lm < i + 1:
             print(1, end='')

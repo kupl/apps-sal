@@ -1,16 +1,13 @@
 import sys
 readline = sys.stdin.readline
-
 T = int(readline())
 Ans = [None] * T
-
 for qu in range(T):
-    N, K = list(map(int, readline().split()))
+    (N, K) = list(map(int, readline().split()))
     S = [1 if s == 'W' else 0 for s in readline().strip()]
-    if all(s == 0 for s in S):
+    if all((s == 0 for s in S)):
         Ans[qu] = max(0, 2 * K - 1)
         continue
-
     ans = 0
     ctr = 0
     st = []
@@ -28,11 +25,10 @@ for qu in range(T):
                 st.append(ctr)
                 ctr = 0
             hh = True
+        elif hh:
+            ctr += 1
         else:
-            if hh:
-                ctr += 1
-            else:
-                res += 1
+            res += 1
     res += ctr
     st.sort()
     J = []

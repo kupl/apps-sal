@@ -24,7 +24,7 @@ def ma():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     n = inp()
     a = lis()
@@ -32,23 +32,23 @@ while(t):
     c = lis()
     r = [a[0]]
     for i in range(1, n):
-        if(i == n - 1):
-            if(a[i] != r[0] and a[i] != r[-1]):
+        if i == n - 1:
+            if a[i] != r[0] and a[i] != r[-1]:
                 r.append(a[i])
                 continue
-            if(b[i] != r[0] and b[i] != r[-1]):
+            if b[i] != r[0] and b[i] != r[-1]:
                 r.append(b[i])
                 continue
-            if(c[i] != r[0] and c[i] != r[-1]):
+            if c[i] != r[0] and c[i] != r[-1]:
                 r.append(c[i])
                 continue
-        if(a[i] != r[-1]):
+        if a[i] != r[-1]:
             r.append(a[i])
             continue
-        if(b[i] != r[-1]):
+        if b[i] != r[-1]:
             r.append(b[i])
             continue
-        if(c[i] != r[-1]):
+        if c[i] != r[-1]:
             r.append(c[i])
             continue
     print(*r)

@@ -32,7 +32,7 @@ def get_value(matrix):
 
 T = int(input())
 for _ in range(T):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     matrix = solve(n, k)
     value = get_value(matrix)
     print(value)

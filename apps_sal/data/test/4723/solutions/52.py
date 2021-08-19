@@ -1,6 +1,5 @@
 S = input()
 T = input()
-
 lt = len(T)
 ls = len(S)
 if ls < lt:
@@ -8,7 +7,7 @@ if ls < lt:
 else:
     for i in range(ls - lt, -1, -1):
         f = 1
-        for s, t in zip(S[i:i + lt], T):
+        for (s, t) in zip(S[i:i + lt], T):
             if s == '?' or s == t:
                 continue
             f = 0

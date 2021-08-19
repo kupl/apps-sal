@@ -1,5 +1,5 @@
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     ans = 2 if m % n else 0
     a = [[0] * n for _ in range(n)]
     for i in range(n):

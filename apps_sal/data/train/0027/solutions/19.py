@@ -1,7 +1,7 @@
 t = int(input())
 for j in range(t):
     n = int(input())
-    a = (list(map(int, input().split())))
+    a = list(map(int, input().split()))
     a.sort()
     s = set()
     s1 = set(a)

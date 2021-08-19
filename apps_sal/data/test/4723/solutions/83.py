@@ -1,6 +1,6 @@
 S = input()
 T = input()
-len_S, len_T = len(S), len(T)
+(len_S, len_T) = (len(S), len(T))
 ans = []
 for i in range(len_S - len_T + 1):
     f = True

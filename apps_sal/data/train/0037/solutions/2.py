@@ -1,5 +1,4 @@
 from math import factorial as fact
-
 N = 55
 c = [1]
 for i in range(N):
@@ -56,7 +55,7 @@ def f(n, k):
 
 
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if k > dp[n]:
         print(-1)
         return

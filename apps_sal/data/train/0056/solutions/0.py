@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     mat = [[0] * n for _ in range(n)]
     for i in range(n):
         b = False
@@ -16,5 +16,5 @@ for _ in range(int(input())):
         print(2)
     for i in range(n):
         for j in range(n):
-            print(mat[i][j], end="")
+            print(mat[i][j], end='')
         print()

@@ -5,7 +5,7 @@ for you in range(t):
     k = int(l[1])
     l = input().split()
     li = [int(i) for i in l]
-    if(k == 0):
+    if k == 0:
         print(max(li) - min(li))
         continue
     z = 0

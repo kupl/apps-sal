@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     table = [[0 for i in range(n)] for j in range(n)]
     if k % n == 0:
         print(0)

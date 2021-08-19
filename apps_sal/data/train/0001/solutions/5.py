@@ -1,7 +1,7 @@
 q = int(input())
 for i in range(q):
-    n, m, k = list(map(int, input().split()))
-    m, n = abs(m), abs(n)
+    (n, m, k) = list(map(int, input().split()))
+    (m, n) = (abs(m), abs(n))
     mx = max(m, n)
     remaining = k - mx
     if remaining < 0:
@@ -18,10 +18,9 @@ for i in range(q):
             print(k)
         else:
             print(k - 2)
+    elif not remaining:
+        print(k - 1)
+    elif remaining % 2 == 0:
+        print(k - 1)
     else:
-        if not remaining:
-            print(k - 1)
-        elif remaining % 2 == 0:
-            print(k - 1)
-        else:
-            print(k - 1)
+        print(k - 1)

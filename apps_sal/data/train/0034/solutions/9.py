@@ -6,13 +6,32 @@ import collections
 import operator
 
 
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def revn(n): return str(n)[::-1]
-def dd(): return collections.defaultdict(int)
-def ddl(): return collections.defaultdict(list)
+def ii():
+    return int(input())
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+
+def revn(n):
+    return str(n)[::-1]
+
+
+def dd():
+    return collections.defaultdict(int)
+
+
+def ddl():
+    return collections.defaultdict(list)
 
 
 def sieve(n):
@@ -35,8 +54,8 @@ def sieve(n):
 def divs(n, start=2):
     r = []
     for i in range(start, int(math.sqrt(n) + 1)):
-        if (n % i == 0):
-            if (n / i == i):
+        if n % i == 0:
+            if n / i == i:
                 r.append(i)
             else:
                 r.extend([i, n // i])
@@ -75,7 +94,8 @@ def convn(number, base):
     return newnumber
 
 
-def cdiv(n, k): return n // k + (n % k != 0)
+def cdiv(n, k):
+    return n // k + (n % k != 0)
 
 
 t = ii()

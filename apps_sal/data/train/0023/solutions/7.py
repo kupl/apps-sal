@@ -1,18 +1,15 @@
 import sys
 from heapq import heappop, heappush
-
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
-
 t = int(input())
 for _ in range(t):
     n = int(input())
     mp = []
     for i in range(n):
-        mi, pi = list(map(int, input().split()))
+        (mi, pi) = list(map(int, input().split()))
         mp.append((mi, pi))
     mp.sort()
-
     prices = []
     cost = 0
     bribed = 0
@@ -28,5 +25,4 @@ for _ in range(t):
             cost += heappop(prices)
             bribed += 1
         i -= 1
-
     print(cost)

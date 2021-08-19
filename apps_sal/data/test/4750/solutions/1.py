@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    l1, r1, l2, r2 = [int(x) for x in input().split()]
+    (l1, r1, l2, r2) = [int(x) for x in input().split()]
     if l1 == l2:
         print(l1, r2)
     else:

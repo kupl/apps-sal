@@ -1,8 +1,7 @@
 from sys import stdin
-
 t = int(stdin.readline())
 for i in range(t):
-    n, k = tuple(int(x) for x in stdin.readline().split())
+    (n, k) = tuple((int(x) for x in stdin.readline().split()))
     line = 'L' * (k + 1) + stdin.readline()[:-1] + 'L' * (k + 1)
     score = 0
     flag = False
@@ -15,9 +14,7 @@ for i in range(t):
                 flag = True
         else:
             flag = False
-
-    seq = sorted(len(x) for x in line.split('W'))
-
+    seq = sorted((len(x) for x in line.split('W')))
     if len(seq) == 1:
         if k == 0:
             print(0)

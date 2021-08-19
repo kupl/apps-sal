@@ -10,7 +10,7 @@ for i in range(n - 1):
         if cl[k] != 0:
             cl[k] = min(cl[k], Counter(s).get(k, 0))
 ans = []
-for k, v in cl.items():
+for (k, v) in cl.items():
     if v != 0:
         for i in range(v):
             ans.append(k)

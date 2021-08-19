@@ -1,11 +1,8 @@
 Q = int(input())
-
-
 total = []
 for _ in range(Q):
-    n, s = input().split()
+    (n, s) = input().split()
     n = int(n)
-
     seq = []
     curlen = 1
     for i in range(len(s)):
@@ -21,7 +18,6 @@ for _ in range(Q):
         ans.extend(range(curr - sq + 1, curr + 1))
         curr -= sq
     total.append(' '.join(map(str, ans)))
-
     curr = n
     ans = [''] * n
     for i in range(len(s) - 1, -1, -1):
@@ -33,6 +29,4 @@ for _ in range(Q):
             ans[i] = str(curr)
             curr -= 1
     total.append(' '.join(ans))
-
-
 print(*total, sep='\n')

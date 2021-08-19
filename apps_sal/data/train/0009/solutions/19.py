@@ -4,7 +4,7 @@ for test in range(int(input())):
     now = 0
     n = len(s)
     for i in range(n):
-        if s[i] == "0":
+        if s[i] == '0':
             if now > 0:
                 a.append(now)
             now = 0

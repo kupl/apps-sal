@@ -10,4 +10,4 @@ for test in range(t):
             arr.append(str(l[i + 1]))
         i += 1
     print(len(arr))
-    print(" ".join(arr))
+    print(' '.join(arr))

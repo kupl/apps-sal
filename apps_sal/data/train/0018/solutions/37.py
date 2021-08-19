@@ -1,5 +1,4 @@
 from math import pi, sin
-
 for i in range(int(input())):
     n = int(input())
     a = 0

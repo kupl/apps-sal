@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     board = [[0] * n for _ in range(n)]
     cnt = 0
     for i in range(n):
@@ -16,6 +16,6 @@ for _ in range(t):
     else:
         maxs = (k + n - 1) // n
         mins = k // n
-        print(2 * ((maxs - mins)**2))
+        print(2 * (maxs - mins) ** 2)
     for i in range(n):
         print(''.join(map(str, board[i])))

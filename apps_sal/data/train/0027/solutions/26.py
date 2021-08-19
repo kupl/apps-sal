@@ -6,7 +6,7 @@ for i in range(t):
     d = {}
     for a in l:
         j = 0
-        while (a % 2) == 0:
+        while a % 2 == 0:
             a = a // 2
             j += 1
         s.add(a)

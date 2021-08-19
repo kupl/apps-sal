@@ -15,7 +15,7 @@ def intinp():
 
 
 def solution():
-    x, y, k = mulinp()
+    (x, y, k) = mulinp()
     num = y * k + k
     ans = (num - 1) // (x - 1)
     if (num - 1) % (x - 1) != 0:

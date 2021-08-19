@@ -11,7 +11,7 @@ def inp(ai):
 
 def inp2(ii):
     ans = {}
-    for i, iii in enumerate(ii):
+    for (i, iii) in enumerate(ii):
         if iii not in ans:
             ans[iii] = i
     return ans

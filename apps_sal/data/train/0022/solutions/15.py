@@ -8,7 +8,7 @@ def m(n):
 
 
 for _ in range(t):
-    n, k = (map(int, input().split()))
+    (n, k) = map(int, input().split())
     pre = n
     for i in range(2, k + 1):
         a = m(n)
@@ -17,5 +17,4 @@ for _ in range(t):
             break
         else:
             pre = n
-
     print(n)

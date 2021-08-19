@@ -24,17 +24,14 @@ def readChars():
 n = readInt()
 sn = [list(input()) for i in range(n)]
 snc = [Counter(sn[i]) for i in range(n)]
-
 s = set(sn[0])
 for i in range(n):
     s = s & set(sn[i])
-
 s = sorted(list(s))
-ans = ""
+ans = ''
 for c in s:
-    m = float("inf")
+    m = float('inf')
     for i in range(n):
         m = min(m, snc[i][c])
     ans += c * m
-
 print(ans)

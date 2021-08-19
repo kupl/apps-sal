@@ -2,7 +2,6 @@ S = str(input())
 T = str(input())
 ls = len(S)
 lt = len(T)
-
 ans = ''
 loc = None
 for i in range(ls - lt, -1, -1):
@@ -14,7 +13,6 @@ for i in range(ls - lt, -1, -1):
     if flag == 0:
         loc = i
         break
-
 if loc == None:
     print('UNRESTORABLE')
 else:

@@ -9,14 +9,14 @@ def main():
     for i in range(n):
         if a[i] - b[i] > 0:
             if not -1 in was:
-                print("NO")
+                print('NO')
                 return
         elif a[i] - b[i] < 0:
             if not 1 in was:
-                print("NO")
+                print('NO')
                 return
         was.add(a[i])
-    print("YES")
+    print('YES')
 
 
 def __starting_point():

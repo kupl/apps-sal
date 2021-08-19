@@ -12,4 +12,4 @@ def intersection(X):
     return Counter(Res)
 
 
-print((''.join(sorted(intersection(S).elements()))))
+print(''.join(sorted(intersection(S).elements())))

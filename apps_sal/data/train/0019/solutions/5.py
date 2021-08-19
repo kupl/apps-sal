@@ -1,6 +1,6 @@
 t = int(input())
 for u in range(t):
-    n, d, k = map(int, input().split())
+    (n, d, k) = map(int, input().split())
     a = list(map(int, input().split()))
     c = set()
     b = {}

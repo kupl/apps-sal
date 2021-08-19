@@ -3,14 +3,14 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
     n = int(input())
     data = [Input() for _ in range(n)]
     ans = 0
-    for start, end in data:
+    for (start, end) in data:
         for _ in range(start, end + 1):
             ans += 1
     print(ans)

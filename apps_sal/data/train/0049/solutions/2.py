@@ -1,5 +1,4 @@
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -43,10 +42,9 @@ def main():
                     break
         ans += 1
         return ans
-
-    q, = list(map(int, input().split(' ')))
+    (q,) = list(map(int, input().split(' ')))
     for _ in range(q):
-        L, R = list(map(int, input().split(' ')))
+        (L, R) = list(map(int, input().split(' ')))
         ans = count(R) - count(L - 1)
         print(ans)
 

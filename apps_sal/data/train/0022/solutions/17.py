@@ -1,5 +1,5 @@
 def solve():
-    a, k = list(map(int, input().split()))
+    (a, k) = list(map(int, input().split()))
     seen = set()
     items = [a]
     for i in range(k - 1):

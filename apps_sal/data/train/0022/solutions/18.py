@@ -1,6 +1,6 @@
 def digits(n):
     l = []
-    while(n > 0):
+    while n > 0:
         l.append(n % 10)
         n = n // 10
     mina = min(l)
@@ -14,7 +14,7 @@ for you in range(t):
     a = int(l[0])
     k = int(l[1])
     for i in range(k - 1):
-        if(digits(a) == 0):
+        if digits(a) == 0:
             break
         a += digits(a)
     print(a)

@@ -5,18 +5,16 @@ def rl():
     return [int(w) for w in stdin.readline().split()]
 
 
-k, = rl()
+(k,) = rl()
 for _ in range(k):
-    n, = rl()
+    (n,) = rl()
     p = rl()
-
     q = [0] * n
-    for i, x in enumerate(p):
+    for (i, x) in enumerate(p):
         q[x - 1] = i
-
     l = r = q[0]
     m = []
-    for k, i in enumerate(q):
+    for (k, i) in enumerate(q):
         if i < l:
             l = i
         elif i > r:

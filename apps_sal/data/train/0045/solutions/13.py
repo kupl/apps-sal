@@ -2,7 +2,7 @@ T = int(input())
 
 
 def need(n):
-    return (n * (n + 1)) // 2
+    return n * (n + 1) // 2
 
 
 for t in range(T):

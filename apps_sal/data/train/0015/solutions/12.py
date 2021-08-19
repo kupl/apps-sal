@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m, x, y = map(int, input().split())
+    (n, m, x, y) = map(int, input().split())
     s = 0
     s = max(s, x * m)
     s = max(s, (n - x - 1) * m)

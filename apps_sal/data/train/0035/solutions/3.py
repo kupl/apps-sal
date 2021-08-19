@@ -20,8 +20,7 @@ def solve():
                 if i + 1 not in skillDict:
                     skillDict[i + 1] = 0
                 skillDict[i + 1] += skillDict[i] % i
-    print("\n".join(map(str, Ans)))
-
+    print('\n'.join(map(str, Ans)))
     return 0
 
 

@@ -2,11 +2,10 @@ S_ = input()
 T = input()
 len_T = len(T)
 len_S = len(S_)
-
 A = []
 for i in range(len_S - len_T + 1):
     flg = True
-    for t, s in zip(T, S_[i:i + len_T]):
+    for (t, s) in zip(T, S_[i:i + len_T]):
         if s != '?' and s != t:
             flg = False
     if flg == True:
@@ -19,7 +18,6 @@ for i in range(len_S - len_T + 1):
             else:
                 S += S_[j]
         A.append(S)
-
 ans = 'z' * (len_S + 1)
 for S in A:
     if S < ans:

@@ -4,9 +4,8 @@ from typing import List
 def answer(n: int, lrs: List[List[int]]) -> int:
     number_of_people_sitting = 0
     for lr in lrs:
-        l, r = lr
+        (l, r) = lr
         number_of_people_sitting += r - l + 1
-
     return number_of_people_sitting
 
 

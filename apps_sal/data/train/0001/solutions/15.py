@@ -4,7 +4,6 @@ def m():
     x -= d
     y -= d
     k -= d
-
     if k - x - y < 0:
         print(-1)
     else:

@@ -18,6 +18,6 @@ for i in range(t):
         elif a[j] == 1:
             d2 = True
     if ans:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

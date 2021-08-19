@@ -14,9 +14,9 @@ def mints():
 
 
 def solve():
-    x, y, k = mints()
+    (x, y, k) = mints()
     ta = k * (y + 1)
-    d = ((ta - 1) + (x - 2)) // (x - 1)
+    d = (ta - 1 + (x - 2)) // (x - 1)
     print(d + k)
 
 

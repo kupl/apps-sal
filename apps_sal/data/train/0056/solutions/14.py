@@ -1,8 +1,8 @@
 import sys
 input = sys.stdin.readline
 for _ in range(int(input())):
-    n, k = map(int, input().split())
-    res = [["0"] * n for _ in range(n)]
+    (n, k) = map(int, input().split())
+    res = [['0'] * n for _ in range(n)]
     if k % n:
         print(2)
     else:
@@ -11,7 +11,7 @@ for _ in range(int(input())):
         for i in range(n):
             if k == 0:
                 break
-            res[i][(i + d) % n] = "1"
+            res[i][(i + d) % n] = '1'
             k -= 1
     for r in res:
-        print("".join(r))
+        print(''.join(r))

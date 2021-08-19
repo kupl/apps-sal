@@ -4,7 +4,7 @@ for t in range(T):
     n = len(s)
     res = 0
     zeros = 0
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         if c == '0':
             zeros += 1
         else:

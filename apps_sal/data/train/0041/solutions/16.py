@@ -1,17 +1,17 @@
 t = int(input())
 for i3 in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     inp = str(input())
-    s, ans, x = [], [], []
+    (s, ans, x) = ([], [], [])
     for i in range(n):
         x.append(inp[i])
     for i in range(k - 1):
-        s.append("(")
-        s.append(")")
+        s.append('(')
+        s.append(')')
     for i in range(n // 2 - k + 1):
-        s.append("(")
+        s.append('(')
     for i in range(n // 2 - k + 1):
-        s.append(")")
+        s.append(')')
     for i in range(n):
         if x[i] == s[i]:
             pass

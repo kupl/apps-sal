@@ -7,7 +7,7 @@ def read_ints():
 
 
 t = read_int()
-INF = int(1e7)
+INF = int(10000000.0)
 for case_num in range(t):
     s = input()
     x = 0

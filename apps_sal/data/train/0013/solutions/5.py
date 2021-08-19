@@ -1,6 +1,6 @@
 t = int(input())
 for q in range(t):
-    n, g, b = [int(i) for i in input().split()]
+    (n, g, b) = [int(i) for i in input().split()]
     num = n
     n = n // 2 + n % 2
     val = n // g

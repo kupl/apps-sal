@@ -1,5 +1,5 @@
 for __ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ar = list(map(int, input().split()))
     ar.sort(reverse=True)
     ans = 0

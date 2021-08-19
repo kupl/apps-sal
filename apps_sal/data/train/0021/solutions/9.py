@@ -14,7 +14,7 @@ for _ in range(int(input())):
     L.sort()
     flag = False
     for i in range(1, 1025):
-        x = L[::]
+        x = L[:]
         for j in range(N):
             x[j] = x[j] ^ i
         x.sort()

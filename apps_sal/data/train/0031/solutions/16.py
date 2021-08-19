@@ -1,7 +1,17 @@
-def rilist(): return [int(i) for i in input().split()]
-def rlist(): return [i for i in input().split()]
-def rint(): return int(input())
-def rfloat(): return float(input())
+def rilist():
+    return [int(i) for i in input().split()]
+
+
+def rlist():
+    return [i for i in input().split()]
+
+
+def rint():
+    return int(input())
+
+
+def rfloat():
+    return float(input())
 
 
 def pmat(mat):
@@ -20,7 +30,7 @@ def solve(t):
     tmp = {}
     res = 0
     for p in path:
-        a, b = d[p]
+        (a, b) = d[p]
         next = (curr[0] + a, curr[1] + b)
         key = sorted((curr, next), key=lambda x: x[0])
         key = sorted(key, key=lambda x: x[1])

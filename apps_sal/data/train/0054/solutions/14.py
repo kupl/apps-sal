@@ -9,6 +9,6 @@ for i in range(q):
             break
         num += i
     if num >= 2048:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

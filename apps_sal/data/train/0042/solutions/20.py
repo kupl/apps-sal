@@ -1,10 +1,10 @@
-'''input
+"""input
 4
 0110
 0101
 00001000
 0001000
-'''
+"""
 for test in range(int(input())):
     s = input()
     ans = 0
@@ -15,7 +15,7 @@ for test in range(int(input())):
                 p += 1
                 continue
             x = int(s[i:i + l], 2)
-            if x >= l and (x - l) <= p:
+            if x >= l and x - l <= p:
                 ans += 1
             p = 0
     print(ans)

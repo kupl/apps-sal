@@ -6,6 +6,6 @@ for i in range(int(input())):
         if i < 2049:
             a += i
     if a < 2048:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

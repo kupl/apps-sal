@@ -24,7 +24,7 @@ def rlinput():
 
 
 def main():
-    n, w, q, res = iinput(), set(), [], 0
+    (n, w, q, res) = (iinput(), set(), [], 0)
     for i in rinput():
         if i % 2 == 0:
             if i not in w:
@@ -37,7 +37,6 @@ def main():
             if i not in w:
                 w.add(i)
                 heapq.heappush(q, -i)
-
     print(res)
 
 

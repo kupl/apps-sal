@@ -9,8 +9,8 @@ KA      YM  KA          KA      YM      AS          SK  KA          KA   SKAYMA
 """
 n = int(input())
 for i in range(n):
-    x, y, k = map(int, input().split())
-    x, y = abs(x), abs(y)
+    (x, y, k) = map(int, input().split())
+    (x, y) = (abs(x), abs(y))
     min_moves = max(x, y)
     if min_moves > k:
         print(-1)

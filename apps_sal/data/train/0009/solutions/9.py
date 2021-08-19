@@ -9,10 +9,9 @@ from random import choice, getrandbits, randint, random, randrange, shuffle
 from re import compile, findall, escape
 from statistics import mean, median, mode
 from heapq import heapify, heappop, heappush, heappushpop, heapreplace, merge, nlargest, nsmallest
-
 for test in range(int(stdin.readline())):
     s = input()
-    l = findall(r'1+', s)
+    l = findall('1+', s)
     lengths = [len(i) for i in l]
     lengths.sort(reverse=True)
     alice = 0

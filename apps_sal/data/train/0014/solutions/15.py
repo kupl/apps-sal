@@ -1,5 +1,4 @@
 T = int(input())
-
 for t in range(T):
     i1 = [int(i) for i in input().split(' ')]
     i2 = [int(i) for i in input().split(' ')]

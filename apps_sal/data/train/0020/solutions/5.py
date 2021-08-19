@@ -1,12 +1,12 @@
 for t in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = []
     for i in range(n):
         a.append(list(map(int, input().split())))
     t0 = 0
-    mi, ma = m, m
+    (mi, ma) = (m, m)
     f = True
-    for t, l, h in a:
+    for (t, l, h) in a:
         delta = t - t0
         t0 = t
         mi -= delta
@@ -26,6 +26,6 @@ for t in range(int(input())):
         else:
             f = False
     if f:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

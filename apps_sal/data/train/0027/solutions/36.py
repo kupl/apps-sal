@@ -1,5 +1,4 @@
 n = int(input())
-
 for i in range(n):
     answer = 0
     d = set()
@@ -11,7 +10,6 @@ for i in range(n):
                 d.add(j)
     s = list(d)
     s.sort(reverse=True)
-
     for j in s:
         ch = j // 2
         answer += 1
@@ -21,5 +19,4 @@ for i in range(n):
                 answer += 1
             else:
                 break
-
     print(answer)

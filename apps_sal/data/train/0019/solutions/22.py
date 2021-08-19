@@ -4,7 +4,7 @@
 def main():
     t = int(input())
     for _ in range(t):
-        n1, k, d = [int(e) for e in input().split()]
+        (n1, k, d) = [int(e) for e in input().split()]
         a = [int(e) for e in input().split()]
         s = dict()
         for e in a[:d]:

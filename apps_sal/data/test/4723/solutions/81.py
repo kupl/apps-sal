@@ -1,6 +1,5 @@
 S = input()
 T = input()
-
 lt = len(T)
 ls = len(S)
 if ls < lt:

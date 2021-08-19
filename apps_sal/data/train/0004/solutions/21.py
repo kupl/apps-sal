@@ -1,8 +1,6 @@
 import sys
 import math
 import bisect
-
-
 sys.setrecursionlimit(1000000000)
 
 
@@ -33,7 +31,7 @@ def rlinput():
 def main():
     n = iinput()
     c = rlinput()
-    q, res, w, e = [0] * n, ['0'] * n, 0, n
+    (q, res, w, e) = ([0] * n, ['0'] * n, 0, n)
     for i in range(n):
         q[c[i] - 1] = i
     for i in range(n):

@@ -1,11 +1,11 @@
 for i in range(int(input())):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     tot = 0
     small = 400000
     big = 0
     goingUp = True
-    for i, val in enumerate(a):
+    for (i, val) in enumerate(a):
         if goingUp:
             if val > big:
                 big = val
@@ -13,13 +13,12 @@ for i in range(int(input())):
                 tot += big
                 goingUp = False
                 small = val
+        elif val < small:
+            small = val
         else:
-            if val < small:
-                small = val
-            else:
-                tot -= small
-                goingUp = True
-                big = val
+            tot -= small
+            goingUp = True
+            big = val
     if goingUp:
         tot += big
     print(tot)

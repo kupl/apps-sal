@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = [int(j) for j in input().split()]
     dv = dict()
     s = set()

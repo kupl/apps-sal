@@ -1,2 +1,2 @@
 moji = str(input())
-print(moji.replace("2017", "2018"))
+print(moji.replace('2017', '2018'))

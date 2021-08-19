@@ -15,4 +15,4 @@ ans = []
 for s in preS:
     for _ in range(preC[s]):
         ans.append(s)
-print("".join(sorted(ans)))
+print(''.join(sorted(ans)))

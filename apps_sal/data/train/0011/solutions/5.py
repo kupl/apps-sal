@@ -1,5 +1,4 @@
 T = int(input())
-
 w = [[-1, 0], [1, 0], [0, 1], [0, -1]]
 mp = {'A': 0, 'D': 1, 'W': 2, 'S': 3}
 while T > 0:
@@ -9,7 +8,6 @@ while T > 0:
     r = [0]
     u = [0]
     d = [0]
-
     for dir in s[::-1]:
         l.append(l[-1])
         r.append(r[-1])
@@ -31,19 +29,16 @@ while T > 0:
             u[-1] += 1
             if d[-1] > 0:
                 d[-1] -= 1
-
     l = l[::-1]
     r = r[::-1]
     u = u[::-1]
     d = d[::-1]
-
     x = 0
     y = 0
     ml = 0
     mr = 0
     mu = 0
     md = 0
-
     ans = (l[0] + r[0] + 1) * (u[0] + d[0] + 1)
     for i in range(len(s) + 1):
         mml = ml
@@ -53,7 +48,6 @@ while T > 0:
         for j in range(4):
             xx = x + w[j][0]
             yy = y + w[j][1]
-
             if xx < 0:
                 ml = max(ml, -xx)
             if xx > 0:
@@ -62,7 +56,6 @@ while T > 0:
                 mu = max(mu, yy)
             if yy < 0:
                 md = max(md, -yy)
-
             xx -= l[i]
             if xx < 0:
                 ml = max(ml, -xx)
@@ -75,13 +68,11 @@ while T > 0:
             yy += u[i] + d[i]
             if yy > 0:
                 mu = max(mu, yy)
-
             ans = min(ans, (ml + mr + 1) * (mu + md + 1))
             ml = mml
             mr = mmr
             mu = mmu
             md = mmd
-
         if i < len(s):
             x += w[mp[s[i]]][0]
             y += w[mp[s[i]]][1]
@@ -93,5 +84,4 @@ while T > 0:
                 mu = max(mu, y)
             if y < 0:
                 md = max(md, -y)
-
     print(ans)

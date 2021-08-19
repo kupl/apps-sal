@@ -27,7 +27,7 @@ def get_list():
 
 
 def solve():
-    n, k = get_tuple()
+    (n, k) = get_tuple()
     n = str(n)
     while '0' not in n and k > 1:
         n = int(n) + int(max(n)) * int(min(n))
@@ -42,7 +42,6 @@ def main():
 
 
 TestCases = True
-
 if TestCases:
     for i in range(get_int()):
         main()

@@ -7,13 +7,13 @@ for case_num in range(t):
     neg = False
     ok = True
     for i in range(n):
-        if (not pos) and (not neg) and (a[i] != b[i]):
+        if not pos and (not neg) and (a[i] != b[i]):
             ok = False
             break
-        if (not pos) and (a[i] < b[i]):
+        if not pos and a[i] < b[i]:
             ok = False
             break
-        if (not neg) and (a[i] > b[i]):
+        if not neg and a[i] > b[i]:
             ok = False
             break
         if a[i] < 0:

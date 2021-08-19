@@ -2,10 +2,9 @@ n = int(input())
 words = []
 for i in range(n):
     words.append(input())
-
 s = words.pop()
 for i in words:
-    ns = ""
+    ns = ''
     l = list(i)
     for j in s:
         if j in l:
@@ -13,7 +12,7 @@ for i in words:
             l.remove(j)
     s = ns
 s = sorted(list(s))
-out = ""
+out = ''
 for i in s:
     out += i
 print(out)

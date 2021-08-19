@@ -8,16 +8,16 @@ for i in range(t):
     l = 0
     r = n - 1
     now = n
-    while (r - l) > 1:
+    while r - l > 1:
         if a[r] > now:
             r -= 1
             continue
         if a[l] > now:
             l += 1
             continue
-        if (r - l + 1) == now:
+        if r - l + 1 == now:
             ans[r - l] = '1'
         now -= 1
-    if (r - l + 1) == now:
+    if r - l + 1 == now:
         ans[r - l] = '1'
     print(''.join(ans))

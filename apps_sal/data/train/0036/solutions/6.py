@@ -1,8 +1,8 @@
-'''
+"""
 Created on Oct 6, 2014
 
 @author: Ismael
-'''
+"""
 n = int(input())
 A = list(map(int, input().split()))
 q = int(input())

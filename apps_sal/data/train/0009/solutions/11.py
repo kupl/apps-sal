@@ -24,7 +24,7 @@ for q in range(t):
     a = []
     count = 0
     for i in range(len(s)):
-        if s[i] == "1":
+        if s[i] == '1':
             count += 1
         else:
             a.append(count)

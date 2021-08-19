@@ -1,7 +1,7 @@
 for __ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ans = [[0] * n for i in range(n)]
-    i, j = 0, 0
+    (i, j) = (0, 0)
     while k > 0:
         while i < n and k > 0:
             ans[i][j] = 1
@@ -11,7 +11,7 @@ for __ in range(int(input())):
             j %= n
         i = 0
         j += 1
-    a1, a2, b1, b2 = 10 ** 9, 0, 10 ** 9, 0
+    (a1, a2, b1, b2) = (10 ** 9, 0, 10 ** 9, 0)
     for i in range(n):
         a1 = min(a1, ans[i].count(1))
         a2 = max(a2, ans[i].count(1))

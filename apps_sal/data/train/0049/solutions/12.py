@@ -1,4 +1,3 @@
-
 dp = [[-1] * 20 for _ in range(5)]
 
 
@@ -23,14 +22,13 @@ def classy(num):
     while num:
         nums.append(num % 10)
         num //= 10
-
     return dfs(len(nums) - 1, 0, 1, dp, nums)
 
 
 def __starting_point():
     T = int(input())
     for _ in range(T):
-        L, R = map(int, input().split())
+        (L, R) = map(int, input().split())
         print(classy(R) - classy(L - 1))
 
 

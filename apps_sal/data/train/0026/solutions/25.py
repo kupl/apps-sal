@@ -1,9 +1,9 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     if n == 2 and m == 2:
-        print("YES")
+        print('YES')
         continue
     if n == 1 or m == 1:
-        print("YES")
+        print('YES')
         continue
-    print("NO")
+    print('NO')

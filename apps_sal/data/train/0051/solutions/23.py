@@ -1,28 +1,11 @@
 import sys
 lines = sys.stdin.readlines()
-
-'''
-(n, p) = map(int, lines[0].strip().split(" "))
-ranges = []
-for i in range(1, n+1):
-    (l, r) = map(int, lines[i].strip().split(" "))
-    ranges.append((l,r))
-
-probs = []
-for lr in ranges:
-    poss = lr[1]//p - (lr[0]-1)//p
-    probs.append(poss/(lr[1]-lr[0]+1))
-
-res = 0
-for i in range(n):
-    res += probs[i] + probs[i-1] - probs[i] * probs[i-1]
-print(res * 2000)
-'''
+'\n(n, p) = map(int, lines[0].strip().split(" "))\nranges = []\nfor i in range(1, n+1):\n    (l, r) = map(int, lines[i].strip().split(" "))\n    ranges.append((l,r))\n\nprobs = []\nfor lr in ranges:\n    poss = lr[1]//p - (lr[0]-1)//p\n    probs.append(poss/(lr[1]-lr[0]+1))\n\nres = 0\nfor i in range(n):\n    res += probs[i] + probs[i-1] - probs[i] * probs[i-1]\nprint(res * 2000)\n'
 N = int(lines[0].strip())
 for i in range(1, 1 + N):
-    (n, k, d1, d2) = map(int, lines[i].strip().split(" "))
+    (n, k, d1, d2) = map(int, lines[i].strip().split(' '))
     if n % 3 != 0:
-        print("no")
+        print('no')
         continue
 
     def solve(da, db):
@@ -38,7 +21,6 @@ for i in range(1, 1 + N):
             return False
         else:
             return True
-
     cannot = True
     if cannot:
         cannot = solve(d1, d2)
@@ -49,6 +31,6 @@ for i in range(1, 1 + N):
     if cannot:
         cannot = solve(-d1, -d2)
     if cannot:
-        print("no")
+        print('no')
     else:
-        print("yes")
+        print('yes')

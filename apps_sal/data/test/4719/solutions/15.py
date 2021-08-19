@@ -11,8 +11,7 @@ for i in range(n):
             cnt[j] = s[i].count(ans[j])
         else:
             cnt[j] = min(cnt[j], s[i].count(ans[j]))
-
-A = ""
-for x, y in zip(ans, cnt):
+A = ''
+for (x, y) in zip(ans, cnt):
     A += x * y
 print(A)

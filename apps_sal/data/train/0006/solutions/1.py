@@ -3,11 +3,11 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     ab = [list(map(int, input().split())) for i in range(m)]
     go = [[] for i in range(n + 1)]
     come = [[] for i in range(n + 1)]
-    for a, b in ab:
+    for (a, b) in ab:
         go[a].append(b)
         come[b].append(a)
     exist = [1] * (n + 1)

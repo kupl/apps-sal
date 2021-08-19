@@ -28,27 +28,15 @@ def f(x):
             elif cnt == 2:
                 ans += (n - i - 1) * 9 + 1
                 if a != 1:
-                    ans += (a - 1)
+                    ans += a - 1
                 cnt += 1
                 break
     return ans + 1
 
 
 for i in range(t):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     l -= 1
     print(f(r) - f(l))
-
-'''n = int(input())
-arr1 = list(map(int, input().split()))
-m = int(input())
-arr2 = list(map(int, input().split()))
-
-l = 0
-r = 0
-if arr1[l] == arr2[r]
-'''
-'''
-n, k = map(int, input().split())
-print((k + n - 1) // n)
-'''
+'n = int(input())\narr1 = list(map(int, input().split()))\nm = int(input())\narr2 = list(map(int, input().split()))\n\nl = 0\nr = 0\nif arr1[l] == arr2[r]\n'
+'\nn, k = map(int, input().split())\nprint((k + n - 1) // n)\n'

@@ -9,7 +9,6 @@ def solve():
         d[i] += 1
     for i in range(11):
         d[2 ** (i + 1)] += d[2 ** i] // 2
-
     if d[2 ** 11]:
         print('YES')
     else:
@@ -17,6 +16,5 @@ def solve():
 
 
 t = int(input())
-
 for _ in range(t):
     solve()

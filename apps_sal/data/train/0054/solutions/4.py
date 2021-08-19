@@ -18,7 +18,7 @@ while q:
     if 2048 in a:
         d = True
     if d:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     q -= 1

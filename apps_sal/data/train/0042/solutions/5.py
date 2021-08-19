@@ -9,7 +9,7 @@ for _ in range(int(input())):
     N = len(S)
     ans = 0
     for i in range(N):
-        if S[i] == "1":
+        if S[i] == '1':
             for j in range(1, min(m, N - i) + 1):
                 k = D[S[i:i + j]]
                 if s + j >= k:

@@ -1,7 +1,6 @@
 from collections import deque
-
 for _ in range(int(input())):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     ans = len(set(a[:d]))
     now = dict()
