@@ -9,7 +9,6 @@ while t > 0:
                 for l in range(k, n):
                     res = []
                     res = list(set(ar[i:j + 1]).intersection(set(ar[k:l + 1])))
-                    # print ar[i:j+1], ar[k:l+1]
                     if len(res) == 0:
                         c += 1
     print(c)

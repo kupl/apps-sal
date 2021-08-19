@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     n = int(input())
@@ -23,5 +22,4 @@ while t > 0:
             m += 1
     for p in l:
         print(*p)
-
     t -= 1

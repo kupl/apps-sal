@@ -1,15 +1,5 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def isSubPath(self, head: ListNode, root: TreeNode) -> bool:
 
         def rec(head, root, connected):
@@ -38,7 +28,5 @@ class Solution:
                     left_noConn = rec(head, root.left, False)
                     right_noConn = rec(head, root.right, False)
                     return left_noConn or right_noConn
-
                 return left or right
-
         return rec(head, root, False)

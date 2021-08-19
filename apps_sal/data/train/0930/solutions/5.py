@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     for u in range(int(input())):
         n = int(input())
@@ -31,7 +30,7 @@ try:
                         break
                     a += 1
                     if len(j) != 0:
-                        print(j[0], end=" ")
+                        print(j[0], end=' ')
                         j.remove(j[0])
                 li2.clear()
                 li2 = li3.copy()

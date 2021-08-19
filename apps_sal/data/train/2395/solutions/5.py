@@ -1,18 +1,26 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations, accumulate
 import sys
 import math
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -56,19 +64,16 @@ def solve():
                 else:
                     a.append(1)
                     b.append(1)
+            elif f:
+                a.append(0)
+                b.append(1)
             else:
-                if f:
-                    a.append(0)
-                    b.append(1)
-                else:
-                    a.append(1)
-                    b.append(0)
-                    f = 1
-        print(*a, sep="")
-        print(*b, sep="")
+                a.append(1)
+                b.append(0)
+                f = 1
+        print(*a, sep='')
+        print(*b, sep='')
     return
-
-# Solve
 
 
 def __starting_point():

@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         count = [0] * (n + 1)
@@ -12,16 +13,15 @@ class Solution:
             return p[x]
 
         def union(x, y):
-            t1, t2 = find(x), find(y)
-            a, b = length[t1], length[t2]
+            (t1, t2) = (find(x), find(y))
+            (a, b) = (length[t1], length[t2])
             p[t1] = t2
             length[t2] = a + b
             count[a] -= 1
             count[b] -= 1
             count[a + b] += 1
         ans = -1
-        for i, x in enumerate(arr):
-            #print('in', i, x, cur, length, count)
+        for (i, x) in enumerate(arr):
             cur[x] += 1
             length[x] = 1
             count[1] += 1
