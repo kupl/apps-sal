@@ -1,11 +1,9 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import sys
 import math
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     base = int(k * (k + 1) / 2)
     if n < base:
         print('-1')

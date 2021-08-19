@@ -1,4 +1,3 @@
-# coding: UTF-8
 import sys
 
 
@@ -35,7 +34,7 @@ def size(x):
     return -node[find(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 node = [-1 for i in range(n + 1)]
 rank = [0 for _ in range(n + 1)]
 query = [tuple(map(int, sys.stdin.readline().split())) for _ in range(m)]
@@ -44,4 +43,4 @@ for a in query:
         for j in a[2:]:
             unite(a[1], j)
 for i in range(1, n + 1):
-    print(size(i), end=" ")
+    print(size(i), end=' ')

@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
 from collections import Counter
-
 n = int(input().strip())
 names = ['Kuro', 'Shiro', 'Katie']
 ss = {}
@@ -20,11 +17,10 @@ def beauty(s, n):
 res = {}
 for name in names:
     res[name] = beauty(ss[name], n)
-
 bestv = max(res.values())
 if list(res.values()).count(bestv) > 1:
     print('Draw')
 else:
-    for name, v in list(res.items()):
+    for (name, v) in list(res.items()):
         if v == bestv:
             print(name)

@@ -4,7 +4,6 @@ def main():
     n2 = 2 ** n
     s = list(map(int, input().split()))
     s.sort(reverse=True)
-    # print(s)
     pp = [s[0]]
     s[0] = inf
     for _ in range(n):
@@ -21,10 +20,10 @@ def main():
                 else:
                     i += 1
                 if i == n2:
-                    print("No")
+                    print('No')
                     return
         pp = np
-    print("Yes")
+    print('Yes')
 
 
 main()

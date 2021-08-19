@@ -1,11 +1,7 @@
 import sys
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 FR = [list(map(int, input().split())) for i in range(m)]
-
-# UnionFind
-
 Group = [[i, 1] for i in range(n + 1)]
 
 
@@ -27,9 +23,7 @@ for j in range(m):
         continue
     for k in range(2, len(FR[j])):
         Union(FR[j][k], FR[j][k - 1])
-
 ANS = []
 for i in range(1, n + 1):
     ANS.append(Group[find(i)][1])
-
 print(*ANS)
