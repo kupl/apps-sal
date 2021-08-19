@@ -3,7 +3,6 @@ def presses(phrase):
     print(phrase)
     phrase = phrase.upper()
     result = 0
-
     for letter in phrase:
         for n in numbers:
             if letter in n:

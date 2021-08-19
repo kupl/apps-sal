@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     s = input()
     n = len(s)
     j = 0
@@ -17,5 +17,4 @@ for _ in range(int(input())):
             damp = 0
         else:
             damp += 1
-        # print(damp,r)
     print(r)

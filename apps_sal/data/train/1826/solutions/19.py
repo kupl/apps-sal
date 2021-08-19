@@ -2,6 +2,7 @@ from itertools import accumulate
 
 
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         A = mat.copy()
         for i in range(len(A)):
@@ -9,10 +10,7 @@ class Solution:
         Ans = [[0 for i in range(len(A[0]))] for j in range(len(A))]
         for i in range(len(A)):
             for j in range(1, len(A[0])):
-                # print(max(0,i-K),min(len(A),i+K))
                 for p in range(max(0, i - K), min(len(A) - 1, i + K) + 1):
-                    # print(A[p],p)
-                    # print(min(j+K,len(A[0])),max(0,j-K))
                     Ans[i][j] += A[p][min(j + K, len(A[0]) - 1)] - A[p][max(0, j - K - 1)]
         for i in range(len(Ans)):
             Ans[i] = Ans[i][1:]

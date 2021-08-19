@@ -4,8 +4,6 @@ from math import gcd
 def min_price(coins):
     if 1 in coins:
         return 1
-
-# Round Robin Algorithm [from https://pdfs.semanticscholar.org/14ac/14a15ebc31b58a4ac04328f9824f743a1e4e.pdf]
     coins = sorted(coins)
     myinf = 4000000000
     n = [0] + [myinf] * (coins[0] - 1)
@@ -19,9 +17,7 @@ def min_price(coins):
                     p = nn % coins[0]
                     nn = min(nn, n[p])
                     n[p] = nn
-
     maxn = max(n)
     if maxn == myinf:
         return -1
-
     return max(n) - coins[0] + 1
