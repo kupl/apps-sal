@@ -1,9 +1,7 @@
-# cook your dish here
-# cook your dish here
 t = int(input())
 for j in range(0, t):
-    m, n = map(int, input().split(" "))
-    u, v = map(int, input().split(" "))
+    (m, n) = map(int, input().split(' '))
+    (u, v) = map(int, input().split(' '))
     k = int(input())
     s = input()
     p = 0
@@ -17,9 +15,9 @@ for j in range(0, t):
             q += 1
         elif s[i] == 'D':
             q -= 1
-    if p < 0 or p > m or q < 0 or q > n:
-        print("Case " + str(j + 1) + ": " + "DANGER")
+    if p < 0 or p > m or q < 0 or (q > n):
+        print('Case ' + str(j + 1) + ': ' + 'DANGER')
     elif p == u and q == v:
-        print("Case " + str(j + 1) + ": " + "REACHED")
+        print('Case ' + str(j + 1) + ': ' + 'REACHED')
     else:
-        print("Case " + str(j + 1) + ": " + "SOMEWHERE")
+        print('Case ' + str(j + 1) + ': ' + 'SOMEWHERE')

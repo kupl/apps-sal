@@ -7,7 +7,7 @@ while t:
     d = []
     n = int(input())
     for i in range(n):
-        x, hi = map(int, input().split())
+        (x, hi) = map(int, input().split())
         l.append(x)
         h.append(hi)
     l.sort()
@@ -20,7 +20,6 @@ while t:
     d.sort()
     h.sort()
     pr = 0
-    # print(d,h)
     for i in range(n):
         pr += d[i] * h[i]
     print(pr)

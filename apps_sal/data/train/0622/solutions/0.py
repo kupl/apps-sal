@@ -1,13 +1,24 @@
-# cook your dish here folding paper
 from collections import Counter
-def li(): return [int(i) for i in input().rstrip('\n').split()]
-def st(): return input().rstrip('\n')
-def val(): return int(input().rstrip('\n'))
-def dist(a, b): return ((a[0] - b[0])**2 + (a[1] - b[1])**2)**0.5
+
+
+def li():
+    return [int(i) for i in input().rstrip('\n').split()]
+
+
+def st():
+    return input().rstrip('\n')
+
+
+def val():
+    return int(input().rstrip('\n'))
+
+
+def dist(a, b):
+    return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
 
 
 for _ in range(val()):
-    n, m, w, h = li()
+    (n, m, w, h) = li()
     s = Counter(st())
     l = []
     for i in range(m):

@@ -1,4 +1,3 @@
-
 """
 
 算数
@@ -25,30 +24,20 @@ ans から減らす
 が3になる必要性
 
 """
-
 import sys
 from sys import stdin
-
 TT = int(stdin.readline())
-
 t0 = tuple(sorted([(0, 0), (0, 1), (1, 0)]))
 t1 = tuple(sorted([(0, 0), (0, 1), (1, 1)]))
 t2 = tuple(sorted([(0, 1), (1, 0), (1, 1)]))
 t3 = tuple(sorted([(0, 0), (1, 0), (1, 1)]))
-
 for loop in range(TT):
-
-    ax, ay, bx, by, cx, cy = list(map(int, stdin.readline().split()))
-
+    (ax, ay, bx, by, cx, cy) = list(map(int, stdin.readline().split()))
     mx = min(ax, bx, cx)
     my = min(ay, by, cy)
-
     ox = 2 * mx
     oy = 2 * my
-
     setz = tuple(sorted([(ax - mx, ay - my), (bx - mx, by - my), (cx - mx, cy - my)]))
-    #print (setz)
-
     if setz == t0:
         ox += 0
         oy += 0
@@ -61,14 +50,9 @@ for loop in range(TT):
     else:
         ox += 1
         oy += 0
-
-    #print (ox,oy,file=sys.stderr)
-
     if ox != oy:
-        print((abs(ox) + abs(oy) - min(abs(ox), abs(oy))))
+        print(abs(ox) + abs(oy) - min(abs(ox), abs(oy)))
+    elif 0 <= ox <= 1:
+        print(ox)
     else:
-
-        if 0 <= ox <= 1:
-            print(ox)
-        else:
-            print((abs(ox) + abs(oy) - min(abs(ox), abs(oy)) + 1))
+        print(abs(ox) + abs(oy) - min(abs(ox), abs(oy)) + 1)

@@ -1,10 +1,7 @@
-# cook your dish here
-
 t = int(input())
 for i in range(t):
     n = int(input())
     l = list(map(int, input().split()))
-
     k = 0
     s = 0
     l1 = [0] * len(l)
@@ -16,9 +13,5 @@ for i in range(t):
     day = 0
     while b < n:
         b += l1[b - 1]
-
         day += 1
-        # if b >= n:
-        #   print(day)
-        #  break
     print(day)

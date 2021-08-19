@@ -1,13 +1,12 @@
 ansl = []
 for q in range(int(input())):
-    ax, ay, bx, by, cx, cy = map(int, input().split())
+    (ax, ay, bx, by, cx, cy) = map(int, input().split())
     fs = [(0, 0), (0, 1), (1, 0)]
-    # -1 0 0 0 0 -1
     fs2 = [(-1, 0), (0, 0), (0, -1)]
-    if (ax, ay) in fs and (bx, by) in fs and (cx, cy) in fs:
+    if (ax, ay) in fs and (bx, by) in fs and ((cx, cy) in fs):
         ansl.append(0)
         continue
-    if (ax, ay) in fs2 and (bx, by) in fs2 and (cx, cy) in fs2:
+    if (ax, ay) in fs2 and (bx, by) in fs2 and ((cx, cy) in fs2):
         ansl.append(2)
         continue
     if (ax, ay) == (0, 0) or (bx, by) == (0, 0) or (cx, cy) == (0, 0):
@@ -20,12 +19,11 @@ for q in range(int(input())):
             ans += 1
         ansl.append(ans)
         continue
-
-    if abs(ax) <= abs(ay) and abs(bx) <= abs(by) and abs(cx) <= abs(cy):
-        ax, ay = ay, ax
-        bx, by = by, bx
-        cx, cy = cy, cx
-    if abs(ax) >= abs(ay) and abs(bx) >= abs(by) and abs(cx) >= abs(cy):
+    if abs(ax) <= abs(ay) and abs(bx) <= abs(by) and (abs(cx) <= abs(cy)):
+        (ax, ay) = (ay, ax)
+        (bx, by) = (by, bx)
+        (cx, cy) = (cy, cx)
+    if abs(ax) >= abs(ay) and abs(bx) >= abs(by) and (abs(cx) >= abs(cy)):
         miny = min(ay, by, cy)
         ay -= miny
         by -= miny
@@ -44,10 +42,8 @@ for q in range(int(input())):
             dist = difx * 2 + 1
         else:
             dist = samex * 2
-        dist = max(dist, dist * (-1))
-        # print(q,dist)
+        dist = max(dist, dist * -1)
         ansl.append(dist)
-
     else:
         xp = 0
         if abs(ax) == abs(ay):
@@ -71,12 +67,10 @@ for q in range(int(input())):
                     dist = abs(xp) * 2 + 1
                 else:
                     dist = abs(xp) * 2
+            elif max(ay, by, cy) == yp:
+                dist = abs(xp) * 2
             else:
-                if max(ay, by, cy) == yp:
-                    dist = abs(xp) * 2
-                else:
-                    dist = abs(xp) * 2 + 1
-
+                dist = abs(xp) * 2 + 1
         elif abs(bx) == abs(by):
             xp = bx
             yp = by
@@ -98,11 +92,10 @@ for q in range(int(input())):
                     dist = abs(xp) * 2 + 1
                 else:
                     dist = abs(xp) * 2
+            elif max(ay, by, cy) == yp:
+                dist = abs(xp) * 2
             else:
-                if max(ay, by, cy) == yp:
-                    dist = abs(xp) * 2
-                else:
-                    dist = abs(xp) * 2 + 1
+                dist = abs(xp) * 2 + 1
         elif abs(cx) == abs(cy):
             xp = cx
             yp = cy
@@ -124,15 +117,10 @@ for q in range(int(input())):
                     dist = abs(xp) * 2 + 1
                 else:
                     dist = abs(xp) * 2
+            elif max(ay, by, cy) == yp:
+                dist = abs(xp) * 2
             else:
-                if max(ay, by, cy) == yp:
-                    dist = abs(xp) * 2
-                else:
-                    dist = abs(xp) * 2 + 1
-        # dist = abs(xp)*2+1
-        # print('---', q, (ax,ay,bx,by,cx,cy))
-        # print(q,dist)
+                dist = abs(xp) * 2 + 1
         ansl.append(dist)
-
 for a in ansl:
     print(a)

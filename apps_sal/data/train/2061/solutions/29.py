@@ -1,5 +1,5 @@
 def main():
-    ax, ay, bx, by, cx, cy = list(map(int, input().split()))
+    (ax, ay, bx, by, cx, cy) = list(map(int, input().split()))
     min_y = min(ay, by, cy)
     min_x = min(ax, bx, cx)
     if [ay, by, cy].count(min_y) == 1:
@@ -11,10 +11,10 @@ def main():
     else:
         xx = min_x
     if xx == yy == 0 and min_x == min_y == 0:
-        print((0))
+        print(0)
         return
     if xx == yy == 1 and min_x == min_y == 0:
-        print((1))
+        print(1)
         return
     if min_y < xx:
         x_same = max(abs(xx), abs(min_y)) * 2 - 1
@@ -24,9 +24,7 @@ def main():
         y_same = max(abs(min_x), abs(yy)) * 2 - 1
     else:
         y_same = max(abs(min_x), abs(yy)) * 2
-    #print(x_same, y_same)
     ans = max(x_same, y_same)
-
     if x_same == y_same:
         ans += 1
     print(ans)

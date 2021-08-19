@@ -15,8 +15,7 @@ for you in range(t):
         maxpref[i] = maxa
     curr = 0
     count = 0
-    while(curr < n - 1):
+    while curr < n - 1:
         curr += maxpref[curr]
         count += 1
-        # print(curr)
     print(count)

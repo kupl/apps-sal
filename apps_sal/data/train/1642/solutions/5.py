@@ -1,17 +1,7 @@
 from collections import Counter
 from functools import reduce
 from operator import mul
-
-# The instructions say n<=500_000_000 or 5e8.  However, the tests appear
-# to use n<1e12.  We adjust accordingly.
-
-# Use a sieve to pre-compute small primes up to 1e6.  Using trial division
-# is sufficent in factoring up to 1e12.  We seed with the first prime to
-# simplify is_prime().
 small_primes = [2]
-
-# This is suffient for testing primality only up to the square of the
-# largest of small_primes.  This is OK to generate the sequence of primes.
 
 
 def is_prime(n):
@@ -22,12 +12,9 @@ def is_prime(n):
             return False
 
 
-# Sieve to generate the list of small primes.
 for n in range(3, 1000000):
     if is_prime(n):
         small_primes.append(n)
-
-# factor an integer up to 1e12
 
 
 def factor(n):
@@ -40,8 +27,6 @@ def factor(n):
         factors[p] += 1
         return factors
     return Counter({n: 1})
-
-# count the number of ways of partitioning r objects k ways
 
 
 def count_partitions(k, r):

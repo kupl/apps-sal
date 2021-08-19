@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     arr = list(map(int, input().split()))
     stack = []
     for i in range(len(arr)):

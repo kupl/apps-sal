@@ -1,11 +1,10 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
     a = []
     b = []
     for i in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         a.append(x)
         b.append(y)
     b.sort()
@@ -16,8 +15,6 @@ for _ in range(t):
         xcor.append(a[i + 1] - a[i - 1])
     xcor.sort()
     ans = 0
-    # print(xcor)
-    # print(b)
     for i in range(n):
         ans = ans + xcor[i] * b[i]
     print(ans)
