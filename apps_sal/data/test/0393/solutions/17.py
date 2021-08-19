@@ -1,8 +1,5 @@
-# your code goes here
 N = int(input())
-
 chairs = input()
-
 ones = 0
 zeros = 1
 flag = 1
@@ -11,7 +8,7 @@ for i in range(N):
         zeros += 1
         ones = 0
         if zeros == 3:
-            print("No")
+            print('No')
             flag = 0
             break
     elif chairs[i] == '1':

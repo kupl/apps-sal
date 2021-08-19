@@ -1,5 +1,3 @@
-# import sys
-# input = sys.stdin.readline
 import collections
 
 
@@ -8,12 +6,12 @@ def main():
     s = input()
     a_list = []
     for i in range(n):
-        if s[i] == "W":
+        if s[i] == 'W':
             a_list.append(0)
         else:
             a_list.append(1)
     r_count = sum(a_list)
-    print((r_count - sum(a_list[0:r_count])))
+    print(r_count - sum(a_list[0:r_count]))
 
 
 def input_list():

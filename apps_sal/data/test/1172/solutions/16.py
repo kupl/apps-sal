@@ -1,9 +1,9 @@
 s = input()
 n = len(s)
-mod = 10**9 + 7
-qcnt = [[0, 0]for i in range(n)]  # それより左の？、右の？のこすう
-Acnt = [0] * n  # それより左のAのこすう
-Ccnt = [0] * n  # それより右のCの個数
+mod = 10 ** 9 + 7
+qcnt = [[0, 0] for i in range(n)]
+Acnt = [0] * n
+Ccnt = [0] * n
 q = 0
 for i in range(n - 1):
     if s[i] == '?':
@@ -19,7 +19,6 @@ if s[-1] == '?':
     q += 1
 for i in range(n - 1, 0, -1):
     if s[i] == '?':
-
         qcnt[i - 1][1] += 1
     elif s[i] == 'C':
         Ccnt[i - 1] += 1
@@ -29,17 +28,13 @@ for i in range(n - 1, 0, -1):
     Ccnt[i - 1] %= mod
 ans = 0
 for i in range(n):
-
     if s[i] == 'B' or s[i] == '?':
         if qcnt[i][0] + qcnt[i][1] - 2 < 0:
             val = -(qcnt[i][0] + qcnt[i][1] - 2)
             p = pow(3, val, mod)
             q = pow(p, mod - 2, mod)
             ans += q % mod * (3 * Acnt[i] + qcnt[i][0]) * (3 * Ccnt[i] + qcnt[i][1]) % mod
-
         else:
             ans += pow(3, qcnt[i][0] + qcnt[i][1] - 2, mod) % mod * (3 * Acnt[i] + qcnt[i][0]) * (3 * Ccnt[i] + qcnt[i][1]) % mod
         ans %= mod
-
-
-print((ans % mod))
+print(ans % mod)

@@ -1,7 +1,5 @@
-D, T, S = map(int, input().split())
-
-# 時間ぴったりはセーフなので、以上 >= を使います
+(D, T, S) = map(int, input().split())
 if S * T >= D:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

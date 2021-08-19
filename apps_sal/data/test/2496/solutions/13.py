@@ -1,15 +1,14 @@
 from math import gcd
-
 N = int(input())
 num_lis = list(map(int, input().split()))
-c1 = True  # setwise
-c2 = True  # pairwise
+c1 = True
+c2 = True
 
 
 def osa_k(max_num):
     lis = [i for i in range(max_num + 1)]
     p = 2
-    while p**2 <= max_num:
+    while p ** 2 <= max_num:
         if lis[p] == p:
             for q in range(2 * p, max_num + 1, p):
                 if lis[q] == q:
@@ -23,7 +22,6 @@ for i in num_lis:
     hoge = gcd(hoge, i)
 if hoge > 1:
     c1 = False
-
 if c1:
     d_lis = osa_k(max(num_lis))
     tmp = set()
@@ -45,10 +43,9 @@ if c1:
         break
 else:
     c2 = False
-
 if c2:
-    print("pairwise coprime")
+    print('pairwise coprime')
 elif c1:
-    print("setwise coprime")
+    print('setwise coprime')
 else:
-    print("not coprime")
+    print('not coprime')

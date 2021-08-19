@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 n = int(input().strip())
 s = input().strip()
 

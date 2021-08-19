@@ -1,9 +1,6 @@
-d, t, s = map(int, input().split())
-# d=distance t=time s=speed per minute
-
+(d, t, s) = map(int, input().split())
 time = d / s
-
 if time > t:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

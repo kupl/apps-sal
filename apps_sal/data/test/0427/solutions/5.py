@@ -19,7 +19,7 @@ def search(f, v, l, r):
     return l
 
 
-c1, c2, x, y = lines[0]
+(c1, c2, x, y) = lines[0]
 
 
 def check(v, debug=False):
@@ -27,12 +27,11 @@ def check(v, debug=False):
     m2 = max(c2 - v // x + v // (x * y), 0)
     f = v - v // x - v // y + v // (x * y)
     if debug:
-        print(v, ":", m1, m2, f)
+        print(v, ':', m1, m2, f)
     if m2 <= f - m1:
         return 1
     else:
         return 0
 
 
-#print([check(v, True) for v in range(20)])
 print(1 + search(check, 0, 1, y * c1 + x * c2 + 1))

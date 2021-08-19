@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 used = []
-a = input().replace("{", "").replace("}", "").replace(" ", "").split(",")
-if a == [""]:
-    print("0")
+a = input().replace('{', '').replace('}', '').replace(' ', '').split(',')
+if a == ['']:
+    print('0')
 else:
     for b in a:
         if b not in used:
