@@ -1,6 +1,6 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
-        # find a subarray in the middle that its sum is min, maintain n-k length
         n = len(cardPoints)
         runningsum = 0
         start = end = 0

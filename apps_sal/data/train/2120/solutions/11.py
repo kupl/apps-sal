@@ -1,9 +1,6 @@
 import sys
-
-
-d, ans = [0], []
+(d, ans) = ([0], [])
 s = 0
-
 for _ in range(int(next(sys.stdin))):
     cmd = tuple(map(int, next(sys.stdin).split()))
     if cmd[0] == 1:
@@ -20,8 +17,5 @@ for _ in range(int(next(sys.stdin))):
         s -= d[-1]
         d[-2] = d[-1] - d[-2]
         d.pop()
-
-    # print(cmd, len(d), '-->', d)
     ans.append(str(s / len(d)))
-
 print('\n'.join(ans))

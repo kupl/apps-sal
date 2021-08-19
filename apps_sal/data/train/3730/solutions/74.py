@@ -1,12 +1,4 @@
 def capitalize(s):
-    # BDD
-    # Given a sring
-    # When capitalize letters with even indexes
-
-    # ps
-    # 3lists
-    # for loop thet will loop through the string
-    # If statement
     even = []
     odd = []
     final = []

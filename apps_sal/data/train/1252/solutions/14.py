@@ -10,7 +10,7 @@ def prime(n):
         i = i + 1
     s1 = 0
     for i in range(2, n + 1):
-        if(l1[i]):
+        if l1[i]:
             s1 = s1 + i
     return s1
 
@@ -18,5 +18,4 @@ def prime(n):
 for _ in range(int(input())):
     n = int(input())
     s1 = prime(n)
-    # print(s1)
     print(s1 % 10)

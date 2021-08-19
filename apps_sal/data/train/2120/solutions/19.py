@@ -1,8 +1,6 @@
-# besme taala
-# ya_hossein
 from sys import stdin
 input = stdin.readline
-n, sum, point = int(input()), 0, 1
+(n, sum, point) = (int(input()), 0, 1)
 num = (n + 1) * [0]
 f = (n + 1) * [0]
 for i in range(n):
