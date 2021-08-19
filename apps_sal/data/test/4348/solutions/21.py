@@ -1,6 +1,6 @@
-n, k = list(map(int, input().strip().split()))
+(n, k) = list(map(int, input().strip().split()))
 r = input()
-r1 = "abcdefghijklmnopqrstuvwxyz"
+r1 = 'abcdefghijklmnopqrstuvwxyz'
 l = [[] for i in range(26)]
 d = {}
 for u1 in range(26):
@@ -11,7 +11,7 @@ l1 = []
 for x in l:
     for y in x:
         l1.append(y)
-s = ""
+s = ''
 l2 = []
 for o in range(k, n):
     l2.append(l1[o])

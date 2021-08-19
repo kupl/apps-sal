@@ -4,6 +4,6 @@ def su(n):
 
 N = int(input())
 if N % su(N) == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

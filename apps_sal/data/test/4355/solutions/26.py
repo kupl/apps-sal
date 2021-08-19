@@ -1,5 +1,3 @@
 a = int(input())
-
-a = a + (a**2) + (a**3)
-
+a = a + a ** 2 + a ** 3
 print(a)

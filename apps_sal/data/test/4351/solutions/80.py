@@ -1,5 +1,5 @@
 n = input()
 if n[0] == n[2]:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

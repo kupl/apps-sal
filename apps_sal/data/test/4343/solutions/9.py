@@ -45,7 +45,7 @@ def plus(a, b):
 
 def to_str(a):
     a.reverse()
-    return ''.join(chr(v + ord('a')) for v in a)
+    return ''.join((chr(v + ord('a')) for v in a))
 
 
 def divide_2(a):

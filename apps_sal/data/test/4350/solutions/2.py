@@ -1,11 +1,10 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     ll = [c == '*' for _ in range(n) for c in input()]
     nm = n * m
-    RLUD = [*[range(i, i + m) for i in range(0, nm, m)],
-            *[range(i, nm, m) for i in range(m)]]
+    RLUD = [*[range(i, i + m) for i in range(0, nm, m)], *[range(i, nm, m) for i in range(m)]]
     cc = [1000] * nm
-    for f in True, False:
+    for f in (True, False):
         for r in RLUD:
             v = 0
             for i in r:
@@ -19,7 +18,7 @@ def main():
             ll.reverse()
             cc.reverse()
     cc = [c if c != 1 else 0 for c in cc]
-    for f in True, False:
+    for f in (True, False):
         for r in RLUD:
             v = 0
             for i in r:
@@ -36,9 +35,9 @@ def main():
         print(-1)
     else:
         res = []
-        for i, c in enumerate(cc):
+        for (i, c) in enumerate(cc):
             if c:
-                res.append(f'{i//m+1} {i%m+1} {c-1}')
+                res.append(f'{i // m + 1} {i % m + 1} {c - 1}')
         print(len(res), '\n'.join(res), sep='\n')
 
 

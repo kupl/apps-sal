@@ -1,11 +1,10 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 ab = []
 for _ in range(N):
     ab.append(list(map(int, input().split())))
 cd = []
 for _ in range(M):
     cd.append(list(map(int, input().split())))
-
 for x in ab:
     a = x[0]
     b = x[1]

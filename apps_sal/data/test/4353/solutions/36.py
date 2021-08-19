@@ -1,3 +1,2 @@
-s = input().split(",")
-
+s = input().split(',')
 print(*s)

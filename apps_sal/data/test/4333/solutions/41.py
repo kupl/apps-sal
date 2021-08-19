@@ -1,4 +1,4 @@
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 s = c - a
 t = d - b
 x_3 = c - t

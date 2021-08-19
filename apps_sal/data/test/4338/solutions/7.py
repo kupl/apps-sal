@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 l1 = list(map(int, input().split()))
 count1 = 0
 count2 = 0

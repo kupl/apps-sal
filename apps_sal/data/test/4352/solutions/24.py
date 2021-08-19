@@ -1,11 +1,11 @@
 def resolve():
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     if A == B:
-        print("Draw")
+        print('Draw')
     elif A == 1 or (A > B and B != 1):
-        print("Alice")
+        print('Alice')
     else:
-        print("Bob")
+        print('Bob')
 
 
 resolve()

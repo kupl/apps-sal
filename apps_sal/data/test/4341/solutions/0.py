@@ -17,12 +17,11 @@ def connected_components(neighbors):
 
 
 graph = defaultdict(set)
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 for _ in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     graph[u].add(v)
     graph[v].add(u)
-
 total = 0
 for component in connected_components(graph):
     nodes = list(component)

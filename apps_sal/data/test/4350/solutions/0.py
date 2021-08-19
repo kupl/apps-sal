@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = [[*input()] for _ in range(n)]
 c = [[0 for _ in range(m)] for _ in range(n)]
 for i in range(n):
@@ -44,7 +44,7 @@ for j in range(m):
         v = max(v - 1, c[i][j])
         if v:
             g[i][j] = '.'
-if all(g[i][j] == '.' for i in range(n) for j in range(m)):
+if all((g[i][j] == '.' for i in range(n) for j in range(m))):
     r = [(i + 1, j + 1, c[i][j] - 1) for i in range(n) for j in range(m) if c[i][j]]
     print(len(r))
     for t in r:

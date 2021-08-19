@@ -1,12 +1,7 @@
 import sys
 import io
-
 stream_enable = 0
-
-inpstream = """
-
-"""
-
+inpstream = '\n\n'
 if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()

@@ -1,4 +1,4 @@
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 e = c - (d - b)
 f = d + (c - a)
 g = a - (d - b)

@@ -1,10 +1,9 @@
 n = int(input())
 s = input()
 if n % 2 == 1:
-    res = "No"
+    res = 'No'
+elif s[:n // 2] == s[n // 2:]:
+    res = 'Yes'
 else:
-    if s[:n // 2] == s[n // 2:]:
-        res = "Yes"
-    else:
-        res = "No"
+    res = 'No'
 print(res)

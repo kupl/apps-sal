@@ -11,7 +11,6 @@ for i in range(n - 1):
     if tt[i] < 0:
         tt[i] += 26
         tt[i + 1] -= 1
-
 tt = tt[::-1]
 rem = 0
 for i in range(n):

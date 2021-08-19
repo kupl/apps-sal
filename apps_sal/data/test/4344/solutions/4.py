@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-rec1, rec2 = [], []
+(rec1, rec2) = ([], [])
 num = 0
 for i in range(n):
     if num == k:
@@ -9,9 +9,8 @@ for i in range(n):
         rec1.append(a[i])
         rec2.append(i + 1)
         num += 1
-
 if num >= k:
-    print("YES")
-    print(" ".join(map(str, rec2)))
+    print('YES')
+    print(' '.join(map(str, rec2)))
 else:
-    print("NO")
+    print('NO')

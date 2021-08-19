@@ -1,3 +1,3 @@
 s = input()
-s = s.split(",")
-print(*s, sep=" ")
+s = s.split(',')
+print(*s, sep=' ')

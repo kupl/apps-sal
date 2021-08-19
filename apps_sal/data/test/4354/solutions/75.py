@@ -1,14 +1,14 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 X = []
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     X.append((a, b))
 C = []
 for i in range(M):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     C.append((c, d))
 ans = [0 for _ in range(N)]
-INF = float("inf")
+INF = float('inf')
 for i in range(N):
     MIN = INF
     check = -1
@@ -18,4 +18,4 @@ for i in range(N):
             MIN = temp
             check = y + 1
     ans[i] = check
-print(*ans, sep="\n")
+print(*ans, sep='\n')

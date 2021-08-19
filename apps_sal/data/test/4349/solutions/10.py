@@ -26,11 +26,11 @@ def check(x):
         return False
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 lis = list(map(int, input().split()))
 tmp = []
 for _ in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     tmp.append([a, b])
 tmp.sort()
 l = 0

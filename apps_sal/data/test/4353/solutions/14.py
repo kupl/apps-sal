@@ -1,3 +1,2 @@
-a, b, c = input().split(",")
-
-print(" ".join([a, b, c]))
+(a, b, c) = input().split(',')
+print(' '.join([a, b, c]))

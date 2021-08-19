@@ -1,4 +1,4 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 a = [int(j) for j in input().split()]
 nLX = 0
 for e in a:

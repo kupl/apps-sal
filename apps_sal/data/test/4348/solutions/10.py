@@ -1,16 +1,12 @@
 (n, k) = map(int, input().split())
-
 if k != n:
     s = input()
-
     d = {}
     for x in s:
         if not x in d:
             d[x] = 0
         d[x] += 1
-
     lst = sorted(d.keys())
-
     x = 0
     while x < len(lst):
         if d[lst[x]] > k:
@@ -20,7 +16,6 @@ if k != n:
         else:
             k -= d[lst[x]]
             x += 1
-
     acc = 0
     for x in s:
         if x == b:

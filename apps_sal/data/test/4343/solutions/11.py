@@ -1,12 +1,10 @@
 orda = ord('a')
 ord0 = ord('z') - orda + 1
-
 n = int(input())
 s = input()
 t = input()
 sv = [ord(si) - orda for si in s]
 tv = [ord(ti) - orda for ti in t]
-
 medv = [ord(si) - orda for si in s]
 for i in range(n - 1, -1, -1):
     medv[i] += tv[i]

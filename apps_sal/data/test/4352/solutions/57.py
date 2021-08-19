@@ -1,11 +1,11 @@
-a, b = [int(x) for x in input().split()]
+(a, b) = [int(x) for x in input().split()]
 if a == 1:
     a = 14
 if b == 1:
     b = 14
 if a < b:
-    print("Bob")
+    print('Bob')
 elif a > b:
-    print("Alice")
+    print('Alice')
 else:
-    print("Draw")
+    print('Draw')

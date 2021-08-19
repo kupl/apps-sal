@@ -7,6 +7,6 @@ for b in range(int(len(s) / 2)):
     if a == 1 and s[b] != s[int(len(s) / 2 + b)]:
         a = 0
 if a == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

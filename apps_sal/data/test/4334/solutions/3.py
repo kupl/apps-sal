@@ -1,5 +1,5 @@
-s, t = input().split()
-a, b = [int(x) for x in input().split()]
+(s, t) = input().split()
+(a, b) = [int(x) for x in input().split()]
 u = input()
 if u == s:
     a -= 1

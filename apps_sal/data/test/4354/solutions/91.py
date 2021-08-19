@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 S = [tuple(map(int, input().split())) for _ in range(N)]
 C = [tuple(map(int, input().split())) for _ in range(M)]
 for i in S:

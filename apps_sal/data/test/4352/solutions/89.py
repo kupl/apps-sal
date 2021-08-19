@@ -1,10 +1,9 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 cA = (A + 12) % 14
 cB = (B + 12) % 14
-
 if cA > cB:
-    print("Alice")
+    print('Alice')
 elif cA == cB:
-    print("Draw")
+    print('Draw')
 else:
-    print("Bob")
+    print('Bob')

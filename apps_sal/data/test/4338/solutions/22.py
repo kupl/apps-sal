@@ -5,13 +5,9 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-6 3 2
-2 3 1 3 4 2
-'''
-n, x, y = mi()
+'\n6 3 2\n2 3 1 3 4 2\n'
+(n, x, y) = mi()
 a = list(mi())
-
 le = 0
 for i in a:
     if i <= x:

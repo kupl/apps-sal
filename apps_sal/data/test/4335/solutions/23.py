@@ -1,8 +1,8 @@
 n = int(input())
 s = input()
 if n % 2 == 1:
-    print("No")
+    print('No')
 elif s[:n // 2] == s[n // 2:]:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

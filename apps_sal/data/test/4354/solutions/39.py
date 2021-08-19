@@ -1,11 +1,9 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 a_lis = [list(map(int, input().split())) for i in range(n)]
 c_lis = [list(map(int, input().split())) for i in range(m)]
-
 for i in range(n):
     num = 0
-    ans = 10**10
+    ans = 10 ** 10
     for j in reversed(list(range(m))):
         a = a_lis[i]
         c = c_lis[j]

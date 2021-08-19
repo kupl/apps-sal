@@ -13,7 +13,7 @@ def li():
     return list(mi())
 
 
-n, x, y = tuple(mi())
+(n, x, y) = tuple(mi())
 a = li()
 random.shuffle(a)
 a = sorted(a)

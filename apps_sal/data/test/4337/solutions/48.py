@@ -1,2 +1,2 @@
 input()
-print("Four"if"Y" in input()else"Three")
+print('Four' if 'Y' in input() else 'Three')

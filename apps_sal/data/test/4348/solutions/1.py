@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 dic = dict()
 for item in s:
@@ -6,9 +6,8 @@ for item in s:
         dic[item] = 1
     else:
         dic[item] += 1
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
 en = ''
-
 for item in alphabet:
     if item not in dic:
         continue
@@ -17,8 +16,7 @@ for item in alphabet:
     else:
         en = item
         break
-ans = ""
-
+ans = ''
 for item in s:
     if item > en:
         ans += item
@@ -26,8 +24,7 @@ for item in s:
         ans += item
     elif item == en and k > 0:
         k -= 1
-
-if en == "":
+if en == '':
     print()
 else:
     print(ans)

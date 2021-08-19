@@ -1,10 +1,10 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if a == b:
-    print("Draw")
+    print('Draw')
 elif b != 1 and a != b:
     if a > b or a == 1:
-        print("Alice")
+        print('Alice')
     else:
-        print("Bob")
+        print('Bob')
 else:
-    print("Bob")
+    print('Bob')

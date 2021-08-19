@@ -1,6 +1,6 @@
 n = input()
-count = n.count("7")
+count = n.count('7')
 if count != 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

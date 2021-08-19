@@ -6,9 +6,6 @@ def fac(n):
 
 
 n = int(input())
-
 m = n // 2
-
-ans = fac(n) // (2 * m**2)
-
+ans = fac(n) // (2 * m ** 2)
 print(ans)

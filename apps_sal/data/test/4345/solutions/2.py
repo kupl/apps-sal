@@ -1,5 +1,5 @@
-n, a = int(input()), [int(ai) for ai in input().split()] + [0]
-res, inc, dec = [0] * n, -1, 10**6
+(n, a) = (int(input()), [int(ai) for ai in input().split()] + [0])
+(res, inc, dec) = ([0] * n, -1, 10 ** 6)
 for i in range(n):
     if inc < a[i] and a[i] < dec:
         if a[i] < a[i + 1]:

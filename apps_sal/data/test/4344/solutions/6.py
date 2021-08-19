@@ -1,5 +1,5 @@
 def go():
-    n, k = (int(i) for i in input().split(' '))
+    (n, k) = (int(i) for i in input().split(' '))
     s = [int(i) for i in input().split(' ')]
     c = 0
     so_far = set()
@@ -13,7 +13,7 @@ def go():
             c += 1
     if c == k:
         print('YES')
-        print(' '.join(str(i + 1) for i in o).strip())
+        print(' '.join((str(i + 1) for i in o)).strip())
     else:
         print('NO')
 

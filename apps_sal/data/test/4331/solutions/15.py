@@ -5,6 +5,6 @@ for i in range(len(N)):
         ans = 1
         break
 if ans == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

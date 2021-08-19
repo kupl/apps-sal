@@ -1,7 +1,7 @@
 def decision(pack: list) -> str:
-    if "Y" in pack:
-        return "Four"
-    return "Three"
+    if 'Y' in pack:
+        return 'Four'
+    return 'Three'
 
 
 def __starting_point():

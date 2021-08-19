@@ -1,13 +1,12 @@
 n = int(input())
-
 if n % 2 == 0:
     work = int(n / 2)
     s = input()
     a = s[:work]
     b = s[work:]
     if a == b:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
-    print("No")
+    print('No')

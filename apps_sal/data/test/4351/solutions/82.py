@@ -1,6 +1,6 @@
 n = list(input())
 m = list(reversed(n))
 if n == m:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,7 +1,7 @@
 def main():
     t = int(input())
     for _ in range(t):
-        L, v, l, r = list(map(int, input().split()))
+        (L, v, l, r) = list(map(int, input().split()))
         numbefore = (l - 1) // v
         numduring = r // v
         numafter = L // v

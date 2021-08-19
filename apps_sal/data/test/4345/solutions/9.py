@@ -4,8 +4,7 @@ def main():
     result = [0] * n
     last_increasing = -1
     last_decreasing = 200001
-
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if i == n - 1:
             if x < last_decreasing:
                 result[i] = 1
@@ -27,7 +26,6 @@ def main():
                 else:
                     last_decreasing = x
                     result[i] = 1
-
     print('YES')
     print(' '.join(map(str, result)))
 

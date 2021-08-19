@@ -1,12 +1,12 @@
 def main():
     n = input()
     if '7' in n:
-        return "Yes"
-    return "No"
+        return 'Yes'
+    return 'No'
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

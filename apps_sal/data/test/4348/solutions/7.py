@@ -1,5 +1,5 @@
 from collections import Counter as cc
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 c = cc(s)
 alpha = 'abcdefghijklmnopqrstuvwxyz'
@@ -17,4 +17,4 @@ for a in s[::-1]:
     if c[a] > 0:
         c[a] -= 1
         lst.append(a)
-print("".join(lst[::-1]))
+print(''.join(lst[::-1]))

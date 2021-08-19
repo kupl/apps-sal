@@ -1,11 +1,10 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = []
 for i in range(n):
     a.append([int(x) for x in input().split()])
 c = []
 for i in range(m):
     c.append([int(x) for x in input().split()])
-
 for i in range(n):
     d = 10 ** 9
     cc = 0

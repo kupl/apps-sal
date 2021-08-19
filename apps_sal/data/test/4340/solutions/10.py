@@ -5,7 +5,7 @@ def __starting_point():
         if arr[i] % 2 == 0:
             arr[i] -= 1
     for i in arr:
-        print(i, end=" ")
+        print(i, end=' ')
 
 
 __starting_point()

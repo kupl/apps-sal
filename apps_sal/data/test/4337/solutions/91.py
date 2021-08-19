@@ -1,5 +1,5 @@
 _ = input()
-if "Y" in input():
-    print("Four")
+if 'Y' in input():
+    print('Four')
 else:
-    print("Three")
+    print('Three')

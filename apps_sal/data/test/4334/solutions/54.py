@@ -1,5 +1,5 @@
-x, y = input().split()
-z, w = map(int, input().split())
+(x, y) = input().split()
+(z, w) = map(int, input().split())
 u = input()
 if x == u:
     print(z - 1, w)

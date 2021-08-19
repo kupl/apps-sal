@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input().rstrip()
 for i in range(ord('a'), ord('z') + 1):
     if k <= 0:

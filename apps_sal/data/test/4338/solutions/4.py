@@ -1,5 +1,5 @@
 from math import ceil
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 mass = list(map(int, input().split()))
 cnt = 0
 if x > y:

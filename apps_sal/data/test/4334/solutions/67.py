@@ -1,7 +1,7 @@
-S, T = map(str, input().split())
-A, B = map(int, input().split())
+(S, T) = map(str, input().split())
+(A, B) = map(int, input().split())
 U = input()
-if(S == U):
+if S == U:
     print(A - 1, B)
-if(T == U):
+if T == U:
     print(A, B - 1)

@@ -3,6 +3,6 @@ s = 0
 for i in range(len(str(n))):
     s += int(str(n)[i])
 if n % s == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

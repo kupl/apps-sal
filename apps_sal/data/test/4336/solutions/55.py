@@ -1,4 +1,4 @@
-w, h, x, y = map(int, input().split(" "))
+(w, h, x, y) = map(int, input().split(' '))
 chu = [w / 2, h / 2]
 che = 0
 sq = 0

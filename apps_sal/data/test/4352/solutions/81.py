@@ -2,8 +2,8 @@ import sys
 import math
 from functools import lru_cache
 from itertools import accumulate
-sys.setrecursionlimit(10**9)
-MOD = 10**9 + 7
+sys.setrecursionlimit(10 ** 9)
+MOD = 10 ** 9 + 7
 
 
 def input():
@@ -23,16 +23,14 @@ def i2(n):
     return [list(i) for i in zip(*tmp)]
 
 
-A, B = mi()
-
+(A, B) = mi()
 if A == B:
     print('Draw')
 elif A == 1:
     print('Alice')
 elif B == 1:
     print('Bob')
+elif A > B:
+    print('Alice')
 else:
-    if A > B:
-        print('Alice')
-    else:
-        print('Bob')
+    print('Bob')

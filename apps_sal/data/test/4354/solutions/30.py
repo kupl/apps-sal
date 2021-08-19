@@ -1,7 +1,6 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 student = [list(map(int, input().split())) for i in range(N)]
 check = [list(map(int, input().split())) for i in range(M)]
-
 tmp = []
 for i in range(len(student)):
     for j in range(len(check)):

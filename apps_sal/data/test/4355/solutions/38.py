@@ -1,3 +1,2 @@
 d = int(input())
-
-print(d + d**2 + d**3)
+print(d + d ** 2 + d ** 3)

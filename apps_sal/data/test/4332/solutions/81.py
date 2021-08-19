@@ -8,6 +8,6 @@ def s(n):
 
 n = int(input())
 if n % s(n) == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')
