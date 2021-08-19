@@ -11,30 +11,35 @@ import copy
 from itertools import chain, dropwhile, permutations, combinations
 from collections import defaultdict, deque
 
-# Guide:
-#   1. construct complex data types while reading (e.g. graph adj list)
-#   2. avoid any non-necessary time/memory usage
-#   3. avoid templates and write more from scratch
-#   4. switch to "flat" implementations
+
+def VI():
+    return list(map(int, input().split()))
 
 
-def VI(): return list(map(int, input().split()))
-def I(): return int(input())
-def LIST(n, m=None): return [0] * n if m is None else [[0] * m for i in range(n)]
-def ELIST(n): return [[] for i in range(n)]
+def I():
+    return int(input())
+
+
+def LIST(n, m=None):
+    return [0] * n if m is None else [[0] * m for i in range(n)]
+
+
+def ELIST(n):
+    return [[] for i in range(n)]
 
 
 def yes(A):
-    print("YES")
+    print('YES')
     for l in A:
-        print(" ".join([str(x) for x in l]))
+        print(' '.join([str(x) for x in l]))
 
 
 def no():
-    print("NO")
+    print('NO')
 
 
 class FlowEdge:
+
     def __init__(self, v, w, capacity):
         self.v = v
         self.w = w
@@ -63,16 +68,16 @@ class FlowEdge:
             raise Exception()
 
     def __str__(self):
-        return "{}-{}: {:.0f}/{:.0f} ".format(self.v, self.w,
-                                              self.flow, self.capacity)
+        return '{}-{}: {:.0f}/{:.0f} '.format(self.v, self.w, self.flow, self.capacity)
 
 
 class FlowNetwork:
+
     def __init__(self, nv=0):
         self.nv = nv
         self.al = ELIST(self.nv)
 
-    def add_edge(self, e):  # directed edge
+    def add_edge(self, e):
         self.al[e.v].append(e)
         self.al[e.w].append(e)
 
@@ -83,12 +88,13 @@ class FlowNetwork:
 
 
 class FordFulkerson:
-    def __init__(self, g, s, t):  # graph, source, target
+
+    def __init__(self, g, s, t):
         self.g = g
         self.s = s
         self.t = t
         self.value = 0
-        infty = 1e9
+        infty = 1000000000.0
         while self.has_augmenting_path():
             bottle = infty
             v = t
@@ -113,7 +119,7 @@ class FordFulkerson:
             v = queue.popleft()
             for e in self.g.al[v]:
                 w = e.other(v)
-                if e.residual_capacity_to(w) > 0 and not self.marked[w]:
+                if e.residual_capacity_to(w) > 0 and (not self.marked[w]):
                     self.edge_to[w] = e
                     self.marked[w] = True
                     queue.append(w)
@@ -121,10 +127,10 @@ class FordFulkerson:
 
 
 def main(info=0):
-    n, m = VI()
+    (n, m) = VI()
     a = VI()
     b = VI()
-    s, t = 0, 1 + 2 * n
+    (s, t) = (0, 1 + 2 * n)
     fg = FlowNetwork(nv=n * 2 + 2)
     infty = 10000000
     for i in range(n):
@@ -132,10 +138,9 @@ def main(info=0):
         fg.add_edge(FlowEdge(1 + n + i, t, b[i]))
         fg.add_edge(FlowEdge(1 + i, 1 + n + i, infty))
     for i in range(m):
-        u, v = VI()
+        (u, v) = VI()
         fg.add_edge(FlowEdge(1 + u - 1, 1 + n + v - 1, infty))
         fg.add_edge(FlowEdge(1 + v - 1, 1 + n + u - 1, infty))
-
     ff = FordFulkerson(fg, s, t)
     if ff.value == sum(a) == sum(b):
         A = LIST(n, n)

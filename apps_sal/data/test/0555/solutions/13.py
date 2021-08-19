@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 x = input()
 arr = list(map(int, list(x)))
 flag = False

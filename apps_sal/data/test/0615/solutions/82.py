@@ -1,10 +1,8 @@
-#!/usr/bin/env python
 from itertools import accumulate as ac
 N = int(input())
 A = list(ac(list(map(int, input().split()))))
-l, r, t = 0, 2, A[-1]
+(l, r, t) = (0, 2, A[-1])
 c = t
-
 for m in A[1:-2]:
     while t + m > A[r] + A[r + 1]:
         r += 1

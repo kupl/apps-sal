@@ -1,13 +1,12 @@
-# cook your dish here
 from sys import stdin, stdout
 
 
 def main():
     cases = stdin.readline()
-    if(int(cases[2]) ^ int(cases[1]) ^ int(cases[0])):
-        print("Inclusive")
+    if int(cases[2]) ^ int(cases[1]) ^ int(cases[0]):
+        print('Inclusive')
         return
-    print("Exclusive")
+    print('Exclusive')
 
 
 def __starting_point():

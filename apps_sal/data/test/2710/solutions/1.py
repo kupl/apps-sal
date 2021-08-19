@@ -1,15 +1,14 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 class ford_fulkerson:
+
     class Edge:
+
         def __init__(self, to, cap, rev):
             self.to = to
             self.cap = cap
             self.rev = rev
 
         def __repr__(self):
-            return "to : {0} cap : {1} rev : {2}".format(self.to, self.cap, self. rev)
+            return 'to : {0} cap : {1} rev : {2}'.format(self.to, self.cap, self.rev)
 
     def __init__(self, V):
         self.V = V
@@ -47,32 +46,26 @@ class ford_fulkerson:
             flow += f
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
-
 ff = ford_fulkerson(N * 2 + 2)
 S = 1
 T = N + 1
-
 for i in range(M):
-    p, q = list(map(int, input().split()))
-    ff.add_edge(p, T + q - 1, 10**9)
-    ff.add_edge(q, T + p - 1, 10**9)
-
+    (p, q) = list(map(int, input().split()))
+    ff.add_edge(p, T + q - 1, 10 ** 9)
+    ff.add_edge(q, T + p - 1, 10 ** 9)
 for i in range(N):
-    ff.add_edge(i + 1, T + i, 10**9)
+    ff.add_edge(i + 1, T + i, 10 ** 9)
     ff.add_edge(0, S + i, A[i])
     ff.add_edge(T + i, 2 * N + 1, B[i])
-
 ans = [[0 for i in range(N)] for j in range(N)]
 ff.max_flow(0, 2 * N + 1)
-
 for i in range(1, N + 1):
     for v in ff.G[i]:
         if v.to != 0:
             ans[i - 1][v.to - T] = ff.G[v.to][v.rev].cap
-
 if sum(A) != sum(B):
     print('NO')
     quit()

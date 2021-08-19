@@ -5,13 +5,12 @@ tmp = 0
 for a in A:
     tmp += a
     B.append(tmp)
-
 l = 1
 r = 3
 cut = []
 for i in range(2, N - 1):
-    Lm = float("inf")
-    Rm = float("inf")
+    Lm = float('inf')
+    Rm = float('inf')
     c = [0, i, 0]
     for j in range(l, i):
         tmp = abs(B[i] - 2 * B[j])
@@ -24,7 +23,7 @@ for i in range(2, N - 1):
         c[0] = i - 1
         l = i - 1
     for k in range(r, N):
-        tmp = abs((B[N] - B[k]) - (B[k] - B[i]))
+        tmp = abs(B[N] - B[k] - (B[k] - B[i]))
         if tmp > Rm:
             c[2] = k - 1
             r = k - 1
@@ -34,9 +33,8 @@ for i in range(2, N - 1):
         c[2] = N - 1
         r = N
     cut.append(c)
-# print(cut)
-ans = float("inf")
-for p, q, r in cut:
+ans = float('inf')
+for (p, q, r) in cut:
     P = B[p]
     Q = B[q] - B[p]
     R = B[r] - B[q]

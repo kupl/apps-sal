@@ -1,9 +1,8 @@
 words = int(input())
-message = "<3"
+message = '<3'
 for i in range(words):
     message += input()
-    message += "<3"
-# print(message)
+    message += '<3'
 givenMessage = input()
 i = 0
 j = 0
@@ -14,6 +13,6 @@ while i < len(givenMessage):
         break
     i += 1
 if j == len(message):
-    print("yes")
+    print('yes')
 else:
-    print("no")
+    print('no')

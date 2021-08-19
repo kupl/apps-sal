@@ -1,13 +1,10 @@
 from bisect import bisect_right, bisect_left
 from itertools import accumulate
-
 N = int(input())
 A = list(map(int, input().split()))
 A = [0] + A
 a = list(accumulate(A))
 answer = a[-1]
-
-# 切り口はN-1個, 真ん中の選び方はN-3
 for i in range(N - 3):
     left = a[i + 2]
     right = a[-1] - left
@@ -22,7 +19,6 @@ for i in range(N - 3):
     else:
         P = P2
         Q = Q2
-
     s = bisect_right(a, a[-1] - right // 2)
     S1 = a[-1] - a[s - 1]
     R1 = right - S1
@@ -34,7 +30,5 @@ for i in range(N - 3):
     else:
         S = S2
         R = R2
-
     answer = min(answer, max(P, Q, R, S) - min(P, Q, R, S))
-
 print(answer)

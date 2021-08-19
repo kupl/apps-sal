@@ -12,14 +12,9 @@ def ria():
 
 if getpass.getuser() != 'frohenk':
     filename = 'half'
-    # sys.stdin = open('input.txt')
-    # sys.stdout = open('output.txt', 'w')
 else:
     sys.stdin = open('input.txt')
-    # sys.stdin.close()
-
-w, h, k = ria()
-
+(w, h, k) = ria()
 suma = 0
 for i in range(k):
     suma += w * 2 + h * 2 - 4
