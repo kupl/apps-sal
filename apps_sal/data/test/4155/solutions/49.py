@@ -1,6 +1,5 @@
 N = int(input())
 h = list(map(int, input().split()))
-
 l = 0
 flag = 1
 count = 0

@@ -7,4 +7,4 @@ for i in s:
     else:
         one += 1
 ans = min(one, zero)
-print(((ans) << 1))
+print(ans << 1)

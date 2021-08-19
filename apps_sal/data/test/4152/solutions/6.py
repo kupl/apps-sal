@@ -7,7 +7,6 @@ for i in L:
     dic[i] = 0
 for i in L:
     dic[i] += 1
-
 for i in s.copy():
     for j in range(32):
         t = 1 << j
@@ -16,9 +15,7 @@ for i in s.copy():
                 ss -= {t - i, i}
             elif dic[i] != 1:
                 ss -= {i}
-
 ans = 0
 for i in ss:
     ans += dic[i]
-
 print(ans)

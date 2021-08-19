@@ -1,12 +1,9 @@
 from itertools import product
-N, A, B, C = list(map(int, input().split()))
+(N, A, B, C) = list(map(int, input().split()))
 l = []
 for i in range(N):
     l.append(int(input()))
-
-
 P = product(list(range(4)), repeat=N)
-
 ans = 1000000000
 for p in P:
     A_len = 0
@@ -27,12 +24,9 @@ for p in P:
             if C_len != 0:
                 temp += 10
             C_len += l[i]
-
-    if A_len != 0 and B_len != 0 and C_len != 0:
+    if A_len != 0 and B_len != 0 and (C_len != 0):
         temp += abs(A - A_len)
         temp += abs(B - B_len)
         temp += abs(C - C_len)
-
         ans = min(ans, temp)
-
 print(ans)

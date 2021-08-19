@@ -12,7 +12,7 @@ ans = 0
 d1 = dict()
 for i in range(n - 1, -1, -1):
     x = len(bin(s[i])) - 2
-    y = 2**x
+    y = 2 ** x
     dif = abs(y - s[i])
     ind = bs(s, dif)
     if s[ind - 1] == dif:
@@ -21,7 +21,6 @@ for i in range(n - 1, -1, -1):
         else:
             d1.update({s[i]: 1})
             d1.update({s[ind - 1]: 1})
-
 for i in range(n):
     try:
         d1[s[i]]

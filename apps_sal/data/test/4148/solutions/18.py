@@ -1,5 +1,4 @@
 from string import ascii_uppercase as au
-
 N = int(input())
 S = input()
 ans = ''

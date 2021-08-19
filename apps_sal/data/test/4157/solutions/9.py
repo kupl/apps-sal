@@ -11,13 +11,11 @@ def solve(res, num, c, n):
     if n == 0:
         print(' '.join([str(x) for x in res]))
         return
-
-    if num % 3 == 0 and (num // 3) in c:
+    if num % 3 == 0 and num // 3 in c:
         solve(res, num // 3, c, n - 1)
         res.pop()
         c[num // 3] += 1
-
-    if (num * 2) in c:
+    if num * 2 in c:
         solve(res, num * 2, c, n - 1)
         res.pop()
         c[num * 2] += 1

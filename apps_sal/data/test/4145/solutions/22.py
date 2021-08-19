@@ -11,4 +11,4 @@ def get_prime(x):
                 is_prime[j] = False
 
 
-print((get_prime(int(input()))))
+print(get_prime(int(input())))

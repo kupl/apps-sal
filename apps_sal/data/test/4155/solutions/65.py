@@ -10,7 +10,6 @@ def solve(heights, beg, end) -> int:
         return solve(heights, beg, idx) + solve(heights, idx + 1, end)
     except ValueError:
         pass
-
     minh = min(heights[beg:end])
     for i in range(beg, end):
         heights[i] -= minh

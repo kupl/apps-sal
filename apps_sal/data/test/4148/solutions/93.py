@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
-alp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-new_s = ""
+alp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+new_s = ''
 for i in range(len(s)):
     for j in range(26):
         if s[i] == alp[j]:

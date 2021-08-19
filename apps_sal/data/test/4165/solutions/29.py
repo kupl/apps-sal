@@ -1,7 +1,6 @@
 N = input()
 i = list(map(int, input().split()))
-
 if max(i) < sum(i) - max(i):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

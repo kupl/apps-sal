@@ -12,8 +12,6 @@ def is_prime(n):
 
 
 X = int(input())
-
 while not is_prime(X):
     X += 1
-
 print(X)

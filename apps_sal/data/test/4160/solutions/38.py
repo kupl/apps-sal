@@ -1,9 +1,6 @@
 import math
-
 X = int(input())
-
-n, m = 0, 100
-
+(n, m) = (0, 100)
 while True:
     m += m // 100
     n += 1

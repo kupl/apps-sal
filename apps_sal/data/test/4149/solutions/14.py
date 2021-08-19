@@ -6,21 +6,18 @@ def sieve(n):
     isPrimeList = [True] * (n + 1)
     isPrimeList[0] = False
     isPrimeList[1] = False
-
     for i in range(2, int(math.sqrt(n))):
         if isPrimeList[i]:
             for j in range(i * 2, n, i):
                 isPrimeList[j] = False
-
     return isPrimeList
 
 
-primes = sieve(3 * 10**6)
+primes = sieve(3 * 10 ** 6)
 p = []
-for i in range(3 * 10**6 + 1):
+for i in range(3 * 10 ** 6 + 1):
     if primes[i]:
         p.append(i)
-
 n = int(input())
 b = list(map(int, input().split()))
 trihard = [0] * 3000001
@@ -42,4 +39,4 @@ for i in range(3000000, -1, -1):
                     trihard[i] -= 1
                     trihard[i // j] -= 1
                     break
-print(" ".join(a))
+print(' '.join(a))

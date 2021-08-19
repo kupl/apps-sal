@@ -1,5 +1,5 @@
 from itertools import product
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 l = [int(input()) for i in range(N)]
 ans = []
 for i in product(range(4), repeat=N):

@@ -1,6 +1,6 @@
 n = int(input())
 s = list(input())
-ans = ""
+ans = ''
 for i in range(len(s)):
     s[i] = ord(s[i]) + n
     if s[i] >= 91:

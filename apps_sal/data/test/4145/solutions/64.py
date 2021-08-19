@@ -3,8 +3,8 @@ x = int(input())
 
 def hantei(x):
     p = []
-    for i in range(2, int(x**(1 / 2)) + 1):
-        if (x % i) == 0:
+    for i in range(2, int(x ** (1 / 2)) + 1):
+        if x % i == 0:
             return False
     else:
         return True

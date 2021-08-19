@@ -7,4 +7,4 @@ for i in range(5):
     if bn > p[i]:
         bn = p[i]
 ans = 0
-print((math.ceil(N / bn) + (5 - 1)))
+print(math.ceil(N / bn) + (5 - 1))

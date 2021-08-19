@@ -1,9 +1,7 @@
 from itertools import product
-
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 l = [int(input()) for _ in range(N)]
-
-minscore = 10**9
+minscore = 10 ** 9
 for p in product(range(-1, 3), repeat=N):
     flag = 0
     score = 0
@@ -18,11 +16,8 @@ for p in product(range(-1, 3), repeat=N):
             flag = 1
             break
         score += (n_abc[j] - 1) * 10 + abs(sumlen[j] - [A, B, C][j])
-
     if flag:
         continue
-
     if score < minscore:
         minscore = score
-
 print(minscore)

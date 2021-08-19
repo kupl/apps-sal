@@ -12,7 +12,6 @@ for i in range(100):
             status = True
         else:
             status = False
-
         if j == n - 1:
             status = False
 print(cnt)

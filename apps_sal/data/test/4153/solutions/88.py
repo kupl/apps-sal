@@ -8,6 +8,5 @@ if '1' in S:
     y1 = S.count('1')
 else:
     y1 = 0
-
 d = abs(y0 - y1)
-print((x - d))
+print(x - d)

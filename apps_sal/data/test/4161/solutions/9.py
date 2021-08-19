@@ -1,7 +1,6 @@
 import math
 K = int(input())
 ans = 0
-
 for a in range(1, K + 1):
     for b in range(a, K + 1):
         for c in range(b, K + 1):

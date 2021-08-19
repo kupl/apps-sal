@@ -8,7 +8,6 @@ for i in a:
         d[i] += 1
     else:
         d[i] = 1
-
 for i in a:
     flag = False
     for j in b:
@@ -20,5 +19,4 @@ for i in a:
                 flag = True
     if flag == False:
         ans += 1
-
 print(ans)

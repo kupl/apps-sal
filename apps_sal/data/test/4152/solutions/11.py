@@ -1,4 +1,3 @@
-
 from bisect import bisect_left
 
 
@@ -8,9 +7,8 @@ def mi():
 
 n = int(input())
 a = sorted(list(mi()))
-
 used = [0] * n
-ma = 2 * (10**9)
+ma = 2 * 10 ** 9
 for i in range(n):
     t = 1
     if used[i] == 1:

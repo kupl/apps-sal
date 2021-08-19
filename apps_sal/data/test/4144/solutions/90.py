@@ -5,7 +5,7 @@ waru = 1000000000 + 7
 def kaijo(x, n):
     kake = 1
     for i in range(n):
-        kake = (kake * x) % waru
+        kake = kake * x % waru
     return kake
 
 

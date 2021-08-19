@@ -28,4 +28,4 @@ for i in range(n - 1):
     else:
         y.remove(res[i] // 3)
         res.append(res[i] // 3)
-print(" ".join(map(str, res)))
+print(' '.join(map(str, res)))

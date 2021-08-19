@@ -1,5 +1,4 @@
-A, B, K = map(int, input().split())
-
+(A, B, K) = map(int, input().split())
 if A - K <= 0:
     K2 = K - A
     A_ans = 0
@@ -10,5 +9,4 @@ if A - K <= 0:
 else:
     A_ans = A - K
     B_ans = B
-
 print(A_ans, B_ans)

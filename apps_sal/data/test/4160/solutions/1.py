@@ -5,7 +5,6 @@ def com_interest(n: int) -> int:
     saving = Decimal('100')
     interest_per = 0.01
     years = 0
-
     while True:
         years += 1
         saving = int(saving * Decimal('1.01'))
@@ -14,4 +13,4 @@ def com_interest(n: int) -> int:
     return years
 
 
-print((com_interest(int(input()))))
+print(com_interest(int(input())))

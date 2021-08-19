@@ -13,7 +13,7 @@ def isprime(s):
         return flg
 
 
-for i in range(x, 10**6):
+for i in range(x, 10 ** 6):
     if isprime(i) == True:
         print(i)
         break

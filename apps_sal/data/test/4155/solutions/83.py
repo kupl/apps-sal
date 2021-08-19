@@ -7,5 +7,4 @@ for i in range(0, len(h) - 1):
         ans += h[i + 1] - h[i]
     else:
         continue
-
 print(ans)

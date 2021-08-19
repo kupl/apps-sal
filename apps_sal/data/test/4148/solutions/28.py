@@ -2,7 +2,7 @@ a = int(input())
 b = input()
 c = []
 d = []
-e = ""
+e = ''
 for i in range(len(b)):
     c.append(ord(b[i]))
 for i in range(len(b)):

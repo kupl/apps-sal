@@ -1,5 +1,3 @@
-
-
 import math
 rst = 0
 K = int(input())

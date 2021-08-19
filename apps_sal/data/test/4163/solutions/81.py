@@ -6,10 +6,8 @@ for i in range(n):
         count += 1
     else:
         count = 0
-
     if count == 3:
         break
-
 if count == 3:
     print('Yes')
 else:

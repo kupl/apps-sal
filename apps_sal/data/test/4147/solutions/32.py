@@ -1,12 +1,11 @@
 from itertools import product
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 abc = [C, B, A]
 lst = [int(input()) for _ in range(N)]
-
 ans = []
 for l in product([0, 1, 2, 3], repeat=N):
     cnt = [[], [], [], []]
-    for i, ll in enumerate(l):
+    for (i, ll) in enumerate(l):
         cnt[ll].append(lst[i])
     mp = 0
     p = []

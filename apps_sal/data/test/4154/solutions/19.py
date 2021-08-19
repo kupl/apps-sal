@@ -1,9 +1,9 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 L = []
 R = []
 ans = 0
 for j in range(M):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     L.append(l)
     R.append(r)
 Lmax = max(L)

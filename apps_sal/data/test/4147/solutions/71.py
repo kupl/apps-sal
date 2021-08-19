@@ -1,7 +1,7 @@
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 L = [int(input()) for i in range(N)]
 R = [0] * N
-ans = 10**9
+ans = 10 ** 9
 
 
 def myadd(i):
@@ -12,11 +12,11 @@ def myadd(i):
         R[i] += 1
 
 
-for i in range(4**N - 1):
+for i in range(4 ** N - 1):
     myadd(0)
-    if 1 in R and 2 in R and 3 in R:
+    if 1 in R and 2 in R and (3 in R):
         tmp = -30
-        t1, t2, t3 = 0, 0, 0
+        (t1, t2, t3) = (0, 0, 0)
         for j in range(N):
             if R[j] == 0:
                 continue

@@ -9,6 +9,6 @@ def is_prime(x):
 
 
 x = int(input())
-while(not is_prime(x)):
+while not is_prime(x):
     x += 1
 print(x)

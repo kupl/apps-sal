@@ -1,6 +1,5 @@
 n = int(input())
 h = list(map(int, input().split()))
-
 flag = False
 ans = 0
 while not flag:

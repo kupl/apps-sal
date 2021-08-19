@@ -1,6 +1,6 @@
 import numpy as np
 n = int(input())
-*h, = map(int, input().split())
+(*h,) = map(int, input().split())
 h = np.array(h)
 
 

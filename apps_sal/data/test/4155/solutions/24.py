@@ -1,6 +1,5 @@
 N = int(input())
 h = list(map(int, input().split()))
-
 h.append(0)
 pre = True
 next = True

@@ -1,6 +1,5 @@
 from math import sqrt
 x = int(input())
-
 while True:
     f = 1
     s = int(sqrt(x))

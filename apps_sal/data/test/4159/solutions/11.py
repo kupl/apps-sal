@@ -1,4 +1,4 @@
-A, B, K = map(int, input().split())
+(A, B, K) = map(int, input().split())
 if A >= K:
     a = A - K
     b = B

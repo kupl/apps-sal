@@ -3,17 +3,14 @@ import math
 import collections
 import itertools
 input = sys.stdin.readline
-
-N, A, B, C = list(map(int, input().split()))
+(N, A, B, C) = list(map(int, input().split()))
 l = [int(input()) for _ in range(N)]
-
 use_list = list(itertools.product(list(range(4)), repeat=N))
 point = float('inf')
-
 for i in range(len(use_list)):
     ABC = [0] * 3
     count = [0] * 3
-    if (0 not in use_list[i]) or (1 not in use_list[i]) or (2 not in use_list[i]):
+    if 0 not in use_list[i] or 1 not in use_list[i] or 2 not in use_list[i]:
         continue
     for j in range(len(use_list[i])):
         if use_list[i][j] != 3:

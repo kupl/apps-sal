@@ -1,4 +1,4 @@
-n, a, b, c = map(int, input().split())
+(n, a, b, c) = map(int, input().split())
 bamboos = []
 for i in range(n):
     bamboo = int(input())
@@ -23,8 +23,8 @@ def calc_score(group, target):
     return score
 
 
-min_score = 10**12
-for i in range(4**n):
+min_score = 10 ** 12
+for i in range(4 ** n):
     num = Base_10_to_n(i, 4).zfill(n)
     score = 0
     group_A = []
@@ -43,8 +43,6 @@ for i in range(4**n):
         score += calc_score(group_A, a)
         score += calc_score(group_B, b)
         score += calc_score(group_C, c)
-
     if score < min_score:
         min_score = score
-
 print(min_score)

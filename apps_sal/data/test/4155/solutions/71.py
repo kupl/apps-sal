@@ -1,11 +1,9 @@
 n = int(input())
 h = list(map(int, input().split()))
-
 result = 0
 while True:
     if max(h) == 0:
         break
-
     i = 0
     while i < n:
         if h[i] <= 0:

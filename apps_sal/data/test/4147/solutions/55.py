@@ -1,5 +1,5 @@
 from itertools import product
-n, a, b, c = list(map(int, input().split()))
+(n, a, b, c) = list(map(int, input().split()))
 l = [int(input()) for _ in range(n)]
 ans = 1001001001
 for x in product(list(range(4)), repeat=n):

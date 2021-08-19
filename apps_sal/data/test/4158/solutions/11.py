@@ -5,14 +5,14 @@ a = sorted(a)
 flag = 0
 for i in range(0, n):
     for j in range(0, 31):
-        b = a[i] + 2**j
+        b = a[i] + 2 ** j
         p = bisect.bisect_left(a, b)
         if p < n:
             if a[p] == b:
                 a1 = a[i]
                 b1 = b
                 flag = 100
-                c = a[i] + 2 * 2**j
+                c = a[i] + 2 * 2 ** j
                 q = bisect.bisect_left(a, c)
                 if q < n:
                     if a[q] == c:

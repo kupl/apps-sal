@@ -1,9 +1,9 @@
-n, a, b, c = list(map(int, input().split()))
+(n, a, b, c) = list(map(int, input().split()))
 l = []
 for i in range(n):
     l.append(int(input()))
 ans = 100000
-for i in range(4**n):
+for i in range(4 ** n):
     mp = 0
     f = 0
     x = []
@@ -22,7 +22,6 @@ for i in range(4**n):
         i = i // 4
     if sum(x) == 0 or sum(y) == 0 or sum(z) == 0:
         f = 1
-
     X = sum(x)
     Y = sum(y)
     Z = sum(z)
@@ -33,5 +32,5 @@ for i in range(4**n):
     q = sorted(q)
     mp += abs(p[0] - q[0]) + abs(p[1] - q[1]) + abs(p[2] - q[2])
     if f != 1:
-        ans = (min(mp, ans))
+        ans = min(mp, ans)
 print(ans)

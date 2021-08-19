@@ -4,7 +4,7 @@ count = []
 for i in range(n):
     x = 1
     c = 0
-    while (a[i] % x == 0):
+    while a[i] % x == 0:
         x *= 3
         c += 1
     c -= 1

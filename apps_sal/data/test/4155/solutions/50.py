@@ -1,9 +1,9 @@
 def divide_and_conuer(ls):
     mi = ls.index(min(ls))
     res = ls[mi]
-    if(ls[mi + 1:len(ls)] != list()):
+    if ls[mi + 1:len(ls)] != list():
         res += divide_and_conuer(ls[mi + 1:len(ls)]) - ls[mi]
-    if(ls[0:mi] != list()):
+    if ls[0:mi] != list():
         res += divide_and_conuer(ls[0:mi]) - ls[mi]
     return res
 
@@ -11,7 +11,7 @@ def divide_and_conuer(ls):
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    print((divide_and_conuer(a)))
+    print(divide_and_conuer(a))
 
 
 def __starting_point():

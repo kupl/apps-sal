@@ -24,5 +24,5 @@ def cmp(a, b):
 for i in range(n):
     for j in range(i, n):
         if cmp(a[j], a[i]):
-            a[i], a[j] = a[j], a[i]
-print(" ".join(map(str, a)))
+            (a[i], a[j]) = (a[j], a[i])
+print(' '.join(map(str, a)))

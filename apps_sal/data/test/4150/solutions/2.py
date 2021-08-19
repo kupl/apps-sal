@@ -1,13 +1,11 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = [int(a) - 1 for a in input().split()]
 T = [0] * N
 inv = [0] * N
 for i in range(N):
     inv[A[i]] = i
-
 L = [a - 1 for a in range(N)]
 R = [a + 1 for a in range(N)]
-
 c = 0
 t = 2
 i = N - 1
@@ -46,5 +44,4 @@ while c < N and i >= 0:
     if ll >= 0:
         R[ll] = rr
     i -= 1
-
-print("".join(map(str, T)))
+print(''.join(map(str, T)))

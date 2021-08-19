@@ -10,6 +10,6 @@ for i in range(M):
 maxi = max(first)
 mini = min(second)
 if mini - maxi >= 0:
-    print((mini - maxi) + 1)
+    print(mini - maxi + 1)
 else:
     print(0)

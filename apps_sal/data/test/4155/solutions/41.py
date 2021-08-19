@@ -1,6 +1,5 @@
 n = int(input())
 h = list(map(int, input().split()))
-
 cnt = 0
 grow = True
 while grow:

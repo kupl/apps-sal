@@ -1,6 +1,4 @@
 X = int(input())
-
-
 while True:
     a = []
     for i in range(2, X):
@@ -9,10 +7,8 @@ while True:
             break
         else:
             a.append(1)
-
     if 0 in a:
         X += 1
     else:
         break
-
 print(X)

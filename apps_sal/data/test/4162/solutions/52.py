@@ -3,7 +3,7 @@ from functools import reduce
 
 
 def lcm(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm_list(numbers):
@@ -12,9 +12,7 @@ def lcm_list(numbers):
 
 N = int(input())
 A = list(map(int, input().split()))
-
 MOD = lcm_list(A) - 1
-
 ans = 0
 for a in A:
     ans += MOD % a

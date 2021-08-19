@@ -1,5 +1,4 @@
-
-url = "https://atcoder.jp//contests/abc116/tasks/abc116_c"
+url = 'https://atcoder.jp//contests/abc116/tasks/abc116_c'
 
 
 def main():

@@ -1,6 +1,6 @@
 import math
 members = 0
-min_value = 10**16
+min_value = 10 ** 16
 for i in range(6):
     if i == 0:
         members = int(input())

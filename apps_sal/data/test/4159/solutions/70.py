@@ -1,5 +1,4 @@
-a, b, n = map(int, input().split())
-
+(a, b, n) = map(int, input().split())
 if a >= n:
     a -= n
     print(a, b)

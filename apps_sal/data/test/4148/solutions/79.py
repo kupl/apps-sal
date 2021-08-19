@@ -1,6 +1,6 @@
 N = int(input())
 S = str(input())
-ans = ""
+ans = ''
 for i in range(len(S)):
     if ord(S[i]) + N > 90:
         c = ord(S[i]) + N - 26

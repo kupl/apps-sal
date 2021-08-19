@@ -1,7 +1,7 @@
 def main():
     t = int(input())
     a = [int(x) for x in input().split()]
-    p2 = [2**i for i in range(32)]
+    p2 = [2 ** i for i in range(32)]
     dic = {}
     for e in a:
         dic[e] = 1

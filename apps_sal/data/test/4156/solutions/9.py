@@ -1,5 +1,5 @@
-n, w = map(int, input().split())
-maxp, minp = 0, 0
+(n, w) = map(int, input().split())
+(maxp, minp) = (0, 0)
 a = list(map(int, input().split()))
 now = 0
 for i in range(n):

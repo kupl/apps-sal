@@ -1,5 +1,4 @@
-A, B, K = map(int, input().split())
-
+(A, B, K) = map(int, input().split())
 if K < A:
     A = A - K
 elif A <= K and K - A < B:
@@ -8,5 +7,4 @@ elif A <= K and K - A < B:
 else:
     A = 0
     B = 0
-
 print(A, B)

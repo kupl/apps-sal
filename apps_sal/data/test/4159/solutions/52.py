@@ -1,4 +1,4 @@
-a, b, k = map(int, input().split())
+(a, b, k) = map(int, input().split())
 taka = a - k
 if taka < 0:
     aoki = b - abs(taka)

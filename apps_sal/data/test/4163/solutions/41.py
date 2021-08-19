@@ -8,4 +8,4 @@ for i in range(n):
         max_cnt = max(max_cnt, now_cnt)
     else:
         now_cnt = 0
-print("Yes" if max_cnt >= 3 else "No")
+print('Yes' if max_cnt >= 3 else 'No')

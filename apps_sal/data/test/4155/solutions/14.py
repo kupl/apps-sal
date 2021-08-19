@@ -1,8 +1,6 @@
 n = int(input())
 h = list(map(int, input().split()))
-
 ans = 0
-
 for i in range(max(h)):
     if h[0] == 0:
         zeroFlag = True
@@ -24,5 +22,4 @@ for i in range(max(h)):
                 numFlag = False
             if h[j] > 0:
                 h[j] -= 1
-
 print(ans)

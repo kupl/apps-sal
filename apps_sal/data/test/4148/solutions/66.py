@@ -4,5 +4,4 @@ li = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
 li1 = []
 for i in s:
     li1.append(li[li.index(i) + n])
-
-print((''.join(li1)))
+print(''.join(li1))

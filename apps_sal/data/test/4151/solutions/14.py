@@ -6,7 +6,6 @@ for i in range(n):
     if a[i] not in d:
         d[a[i]] = [i, i]
     d[a[i]][1] = i
-
 cmax = 0
 num = -1
 for i in range(n):

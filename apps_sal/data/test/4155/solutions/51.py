@@ -8,7 +8,7 @@ def dfs(a):
     cnt = 0
     while True:
         if 0 in a:
-            z = [i for i, x in enumerate(a) if x == 0]
+            z = [i for (i, x) in enumerate(a) if x == 0]
             cnt += dfs(a[:z[0]])
             for i in range(1, len(z)):
                 cnt += dfs(a[z[i - 1] + 1:z[i]])

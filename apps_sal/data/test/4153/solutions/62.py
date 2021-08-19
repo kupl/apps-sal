@@ -1,7 +1,5 @@
 from collections import deque
-
 S = input()
-
 d = deque()
 cnt = 0
 for s in S:
@@ -13,5 +11,4 @@ for s in S:
             d.append(s)
     else:
         d.append(s)
-
 print(cnt)

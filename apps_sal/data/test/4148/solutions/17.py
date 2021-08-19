@@ -1,6 +1,5 @@
 N = int(input())
 S = input()
-
 ans = ''
 Z_s = 'Z'
 for i in range(len(S)):

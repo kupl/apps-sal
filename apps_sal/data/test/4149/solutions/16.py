@@ -10,7 +10,6 @@ for i in range(2, 2750132):
     if a[i] == 0:
         b[i] = ind
         ind += 1
-
 n = int(input())
 z = sorted(map(int, input().split()))
 d = dict()

@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,14 +8,12 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
+    (N, *A) = list(map(int, read().split()))
     ans = 0
     for i in range(5):
         res = (N + A[i] - 1) // A[i] + 4
         if ans < res:
             ans = res
-
     print(ans)
     return
 

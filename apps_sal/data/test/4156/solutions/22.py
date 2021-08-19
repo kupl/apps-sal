@@ -1,7 +1,7 @@
-n, w = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 cur = 0
-mn, mx = 0, w
+(mn, mx) = (0, w)
 for el in a:
     cur += el
     if cur < 0:

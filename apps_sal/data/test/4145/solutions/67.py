@@ -1,6 +1,5 @@
 import math
 x = int(input())
-
 while True:
     a = int(math.sqrt(x))
     for y in range(2, a + 1):
@@ -10,6 +9,4 @@ while True:
         ans = x
         break
     x += 1
-
-
 print(ans)

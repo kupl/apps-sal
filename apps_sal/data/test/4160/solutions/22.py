@@ -1,7 +1,5 @@
 from math import floor
-
 X = int(input())
-
 money = 100
 year = 0
 while money < X:

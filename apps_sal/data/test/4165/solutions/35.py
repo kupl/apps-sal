@@ -5,7 +5,6 @@ L.remove(a)
 s = 0
 for i in L:
     s += i
-
 if a < s:
     print('Yes')
 else:

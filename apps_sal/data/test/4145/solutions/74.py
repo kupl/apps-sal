@@ -1,6 +1,5 @@
 x = int(input())
-n = int(x**0.5)
-
+n = int(x ** 0.5)
 if x == 2 or x == 3:
     print(x)
 else:

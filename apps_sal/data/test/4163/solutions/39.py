@@ -1,7 +1,7 @@
 cnt = 0
 M = int(input())
 for i in range(M):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x == y:
         cnt += 1
     else:

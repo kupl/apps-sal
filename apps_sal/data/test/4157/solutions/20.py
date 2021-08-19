@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 N = int(input())
 S = list(map(int, input().split()))
 
@@ -9,7 +8,7 @@ def neighbours(node, s=S):
     out = [node << 1]
     if node % 3 == 0:
         out.append(node // 3)
-    return set(x for x in out if x in s)
+    return set((x for x in out if x in s))
 
 
 G = {}
@@ -34,5 +33,5 @@ def hamilton(G, size, pt, path=None):
 for x in S:
     P = hamilton(G, N, x)
     if P:
-        print(" ".join(map(str, P)))
+        print(' '.join(map(str, P)))
         break

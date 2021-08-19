@@ -1,8 +1,8 @@
-n, a, b, c = list(map(int, input().split()))
+(n, a, b, c) = list(map(int, input().split()))
 L = [int(input()) for _ in range(n)]
-ans = 10**9
-for x in range(4**n):
-    A, B, C = 0, 0, 0
+ans = 10 ** 9
+for x in range(4 ** n):
+    (A, B, C) = (0, 0, 0)
     cost = 0
     for i in range(n):
         r = x % 4

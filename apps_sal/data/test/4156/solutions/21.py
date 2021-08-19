@@ -1,4 +1,4 @@
-n, w = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
 L = list(map(int, input().split()))
 maxim = 0
 minin = 0

@@ -5,12 +5,11 @@ def pwr(x, y):
     if y == 0:
         return 1
     p = pwr(x, y // 2) % MOD
-    p = (p * p) % MOD
-
+    p = p * p % MOD
     if y % 2 == 0:
         return p
     else:
-        return ((x * p) % MOD)
+        return x * p % MOD
 
 
 n = int(input())
@@ -32,6 +31,5 @@ for i in range(n):
             f[j] = 1
             k = max(k, d[a[j]])
             j += 1
-
 ans = pwr(2, c)
 print(ans)

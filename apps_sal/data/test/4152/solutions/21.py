@@ -4,7 +4,7 @@ a = [int(x) for x in input().split()]
 a = sorted(a)
 p2 = []
 for i in range(1, 31):
-    p2.append(2**i)
+    p2.append(2 ** i)
 c = 0
 if n == 1:
     print(1)
@@ -19,16 +19,13 @@ else:
                     if a[f - 1] == d:
                         flag = 100
                         break
-                else:
-                    if i != f - 1:
-                        if a[f - 1] == d:
-                            flag = 100
-                            break
-                    else:
-                        if a[f - 2] == d:
-                            flag = 100
-                            break
-
+                elif i != f - 1:
+                    if a[f - 1] == d:
+                        flag = 100
+                        break
+                elif a[f - 2] == d:
+                    flag = 100
+                    break
         if flag == 0:
             c = c + 1
     print(c)

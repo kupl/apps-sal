@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ok = [0] * (n + 2)
 ans = 0
 for _ in range(m):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     ok[l] += 1
     ok[r + 1] -= 1
 for i in range(1, n + 2):
