@@ -1,4 +1,5 @@
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.trie = {}
         self.nodes = []

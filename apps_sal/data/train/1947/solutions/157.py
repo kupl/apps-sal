@@ -1,12 +1,11 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         B_dict = collections.defaultdict(int)
-
         for elem in B:
             elem_dict = collections.Counter(elem)
             for item in elem_dict:
                 B_dict[item] = max(B_dict[item], elem_dict[item])
-
         output = []
         for elem in A:
             found = True
@@ -17,5 +16,4 @@ class Solution:
                     break
             if found:
                 output.append(elem)
-
         return output

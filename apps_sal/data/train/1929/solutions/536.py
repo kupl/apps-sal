@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self):
         self.wordEndsHere = False
         self.children = dict()
@@ -14,7 +15,6 @@ class Trie:
     def findWord(self, word):
         if self.wordEndsHere:
             return True
-
         if not word:
             return self.wordEndsHere
         elif word[0] not in self.children:
@@ -24,11 +24,11 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.maxLength = 0
         self.letters = []
         self.trie = Trie()
-
         for w in words:
             self.trie.addWord(w[::-1])
             self.maxLength = max(self.maxLength, len(w))
@@ -36,5 +36,5 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.letters.append(letter)
         sliceLength = min(len(self.letters), self.maxLength)
-        target = ''.join(self.letters[(len(self.letters) - sliceLength):])[::-1]
+        target = ''.join(self.letters[len(self.letters) - sliceLength:])[::-1]
         return self.trie.findWord(target)

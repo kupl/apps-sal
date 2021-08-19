@@ -1,6 +1,7 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
-        num1, num2 = num + 1, num + 2
+        (num1, num2) = (num + 1, num + 2)
 
         def findDivisors(num):
             start = int(num ** 0.5)

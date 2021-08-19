@@ -1,10 +1,11 @@
 class Trie:
+
     def __init__(self):
         self.trie = {}
 
     def add_word(self, word):
         nextLevel = self.trie
-        for i, char in enumerate(word):
+        for (i, char) in enumerate(word):
             isWord = i == len(word) - 1
             if char in nextLevel:
                 if isWord:
@@ -17,6 +18,7 @@ class Trie:
 
 
 class TrieNode:
+
     def __init__(self, char, isWord=False):
         self.char = char
         self.isWord = isWord
@@ -30,7 +32,6 @@ class StreamChecker:
         self.trie = Trie()
         for word in words:
             self.trie.add_word(word)
-
         self.nextLevels = []
         self.count = 0
 
@@ -43,12 +44,9 @@ class StreamChecker:
                     if level[letter].isWord:
                         isWord = True
                     nextLevels.append(level[letter].children)
-
         if letter in self.trie.trie:
             nextLevels.append(self.trie.trie[letter].children)
             if self.trie.trie[letter].isWord:
                 isWord = True
-
         self.nextLevels = nextLevels
-
         return isWord

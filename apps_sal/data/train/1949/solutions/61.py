@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         rrange = range(len(grid))
         crange = range(len(grid[0]))
@@ -6,7 +7,7 @@ class Solution:
 
         def helper(row, col, running_sum=0):
             nonlocal max_sum
-            if not (row in rrange and col in crange and grid[row][col] > 0):
+            if not (row in rrange and col in crange and (grid[row][col] > 0)):
                 max_sum = max(max_sum, running_sum)
                 return
             running_sum += grid[row][col]

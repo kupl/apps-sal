@@ -2,6 +2,7 @@ DIRECTIONS = [[1, 0], [-1, 0], [0, 1], [0, -1]]
 
 
 class Solution:
+
     def dfs(self, grid, i, j, memo):
         if memo[i][j]:
             return 0
@@ -10,7 +11,7 @@ class Solution:
         for direction in DIRECTIONS:
             x = i + direction[0]
             y = j + direction[1]
-            if x >= 0 and x < len(grid) and y >= 0 and y < len(grid[0]) and grid[x][y] != 0:
+            if x >= 0 and x < len(grid) and (y >= 0) and (y < len(grid[0])) and (grid[x][y] != 0):
                 gold = max(gold, self.dfs(grid, x, y, memo))
         memo[i][j] = False
         return gold + grid[i][j]

@@ -1,6 +1,6 @@
 class Solution(object):
-    def getMaximumGold(self, grid):
 
+    def getMaximumGold(self, grid):
         self.ans = 0
 
         def helper(grid, i, j, s):
@@ -12,13 +12,10 @@ class Solution(object):
                 helper(grid, i, j + 1, s + tmp)
                 helper(grid, i, j - 1, s + tmp)
                 grid[i][j] = tmp
-
             else:
                 self.ans = max(self.ans, s)
-
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j]:
                     helper(grid, i, j, 0)
-
         return self.ans

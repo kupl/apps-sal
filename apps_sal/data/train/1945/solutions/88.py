@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         d = defaultdict(int)
         mx = 1

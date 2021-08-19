@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         maxcb = Counter()
         for b in B:
@@ -7,6 +8,6 @@ class Solution:
         ans = []
         for a in A:
             ca = Counter(a)
-            if all(ca[ch] >= maxcb[ch] for ch in maxcb):
+            if all((ca[ch] >= maxcb[ch] for ch in maxcb)):
                 ans.append(a)
         return ans

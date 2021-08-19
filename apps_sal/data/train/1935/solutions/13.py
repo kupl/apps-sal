@@ -1,4 +1,5 @@
 class Solution:
+
     def isToeplitzMatrix(self, matrix):
         """
         :type matrix: List[List[int]]
@@ -6,10 +7,8 @@ class Solution:
         """
         rows = len(matrix)
         col = len(matrix[0])
-
         i = 0
         j = 0
-
         while i < rows - 1:
             while j < col - 1:
                 print('Comparing: ', matrix[i][j], matrix[i + 1][j + 1])

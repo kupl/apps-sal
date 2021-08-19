@@ -1,8 +1,9 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         if not stamp or not target:
             return []
-        m, n = len(stamp), len(target)
+        (m, n) = (len(stamp), len(target))
         if m > n:
             return []
         if m == n:
@@ -12,10 +13,8 @@ class Solution:
                 return []
         if '?' in target:
             return []
-
         invalid = []
         invert_idx = [set() for _ in range(n)]
-
         for i in range(n - m + 1):
             mismatch = set()
             for j in range(m):
@@ -23,19 +22,16 @@ class Solution:
                     mismatch.add(i + j)
                     invert_idx[i + j].add(i)
             invalid.append(mismatch)
-
         cleared = set()
         seq = []
         visited = set()
-
         while len(cleared) < n:
             not_found = True
             for i in range(len(invalid)):
-                if i not in visited and not invalid[i]:
+                if i not in visited and (not invalid[i]):
                     not_found = False
                     seq.append(i)
                     visited.add(i)
-
                     for j in range(m):
                         cleared.add(i + j)
                         if invert_idx[i + j]:

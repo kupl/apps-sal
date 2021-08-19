@@ -6,19 +6,14 @@ class ThroneInheritance:
     def __init__(self, kingName: str):
         self.pm = {}
         self.cm = {}
-        self.p = {
-            kingName: True
-        }
+        self.p = {kingName: True}
         self.king = kingName
         self.cm[kingName] = []
 
     def birth(self, parentName: str, childName: str) -> None:
         self.pm[childName] = parentName
-
         self.cm[parentName].append(childName)
-
         self.cm[childName] = []
-
         self.p[childName] = True
 
     def death(self, name: str) -> None:
@@ -27,14 +22,11 @@ class ThroneInheritance:
     def getInheritanceOrder(self) -> List[str]:
         x = self.king
         curOrder = [x]
-
         marked_childs = {}
         queue_childs = {}
-
-        for p, v in self.cm.items():
+        for (p, v) in self.cm.items():
             marked_childs[p] = set()
             queue_childs[p] = v[:]
-
         while True:
             res = self.successor(x, marked_childs, queue_childs)
             if res == None:

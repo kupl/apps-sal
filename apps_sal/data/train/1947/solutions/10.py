@@ -12,11 +12,9 @@ class Solution:
             else:
                 return False
             i += 1
-
         for c in base:
             if c > 0:
                 return False
-
         return True
 
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
@@ -28,7 +26,6 @@ class Solution:
                 cur[ord(c) - 97] += 1
             for i in range(len(base)):
                 base[i] = max(base[i], cur[i])
-
         ret = []
         for a in A:
             cur = [0] * 26
@@ -41,5 +38,4 @@ class Solution:
                     break
             if add:
                 ret.append(a)
-
         return ret

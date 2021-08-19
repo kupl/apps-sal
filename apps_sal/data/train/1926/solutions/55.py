@@ -1,4 +1,5 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         n = int(math.sqrt(num + 2))
         max_ = 0
@@ -11,8 +12,7 @@ class Solution:
                 print(i)
                 max_ = i
                 check = True
-
         if check:
-            return max_, int((num + 2) / max_)
+            return (max_, int((num + 2) / max_))
         else:
-            return max_, int((num + 1) / max_)
+            return (max_, int((num + 1) / max_))

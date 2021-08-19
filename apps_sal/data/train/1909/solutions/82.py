@@ -3,12 +3,13 @@ def getArea(x1, y1, x2, y2, dp):
 
 
 class Solution:
+
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
         if len(grid) == 0:
             return 0
         if len(grid[0]) == 0:
             return 0
-        h, w = len(grid), len(grid[0])
+        (h, w) = (len(grid), len(grid[0]))
         dp = [[0 for j in range(w + 1)] for i in range(h + 1)]
         for i in range(1, h + 1):
             for j in range(1, w + 1):
@@ -20,9 +21,6 @@ class Solution:
                     y2 = y1 + l - 1
                     if x2 > h or y2 > w:
                         continue
-                    if (getArea(x1, y1, x2, y1, dp) == l
-                        and getArea(x1, y1, x1, y2, dp) == l
-                        and getArea(x1, y2, x2, y2, dp) == l
-                            and getArea(x2, y1, x2, y2, dp) == l):
+                    if getArea(x1, y1, x2, y1, dp) == l and getArea(x1, y1, x1, y2, dp) == l and (getArea(x1, y2, x2, y2, dp) == l) and (getArea(x2, y1, x2, y2, dp) == l):
                         return l * l
         return 0

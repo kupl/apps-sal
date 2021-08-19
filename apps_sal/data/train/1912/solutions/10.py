@@ -2,6 +2,7 @@ from string import ascii_lowercase as al
 
 
 class Solution:
+
     def nextGreatestLetter(self, letters, target):
         """
             :type letters: List[str]

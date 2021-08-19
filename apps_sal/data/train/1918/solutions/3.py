@@ -1,4 +1,5 @@
 class Solution:
+
     def findItinerary(self, tickets):
         """
         :type tickets: List[List[str]]
@@ -12,17 +13,15 @@ class Solution:
                 graph[line[0]].append(line[1])
         for key in graph:
             graph[key] = sorted(graph[key], reverse=True)
-
         res = []
-        cur = "JFK"
+        cur = 'JFK'
         stack = []
         for i in range(len(tickets)):
-            while (cur not in graph) or (not graph[cur]):
+            while cur not in graph or not graph[cur]:
                 stack.append(cur)
                 cur = res.pop()
             res.append(cur)
             cur = graph[cur].pop()
-
         res.append(cur)
         while stack:
             res.append(stack.pop())

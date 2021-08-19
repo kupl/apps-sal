@@ -17,7 +17,7 @@ def stampseq(s, t):
         flag = False
         for stamp in stamps:
             pos = t.find(stamp)
-            while(pos != -1):
+            while pos != -1:
                 result.append(pos)
                 t = t[:pos] + '*' * len(s) + t[pos + len(s):]
                 flag = True
@@ -28,5 +28,6 @@ def stampseq(s, t):
 
 
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         return stampseq(stamp, target)

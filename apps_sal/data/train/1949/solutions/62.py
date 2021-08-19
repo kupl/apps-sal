@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         numRows = len(grid)
         numCols = len(grid[0])
@@ -10,7 +11,7 @@ class Solution:
         return self.maxResult
 
     def _getMaxGoldHelper(self, grid, r, c, currSum):
-        if r < 0 or c < 0 or r >= len(grid) or c >= len(grid[0]) or grid[r][c] <= 0:
+        if r < 0 or c < 0 or r >= len(grid) or (c >= len(grid[0])) or (grid[r][c] <= 0):
             return
         currSum += grid[r][c]
         self.maxResult = max(self.maxResult, currSum)

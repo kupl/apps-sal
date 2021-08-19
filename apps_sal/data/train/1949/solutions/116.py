@@ -1,12 +1,14 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+
         def dfs(grid, i, j):
-            if 0 <= i < len(grid) and 0 <= j < len(grid[0]) and grid[i][j] != 0:
+            if 0 <= i < len(grid) and 0 <= j < len(grid[0]) and (grid[i][j] != 0):
                 temp = grid[i][j]
                 grid[i][j] = 0
                 d = [(1, 0), (-1, 0), (0, 1), (0, -1)]
                 summax = 0
-                for m, n in d:
+                for (m, n) in d:
                     x = i + m
                     y = j + n
                     summax = max(summax, dfs(grid, x, y))

@@ -2,6 +2,7 @@ vowels = {'a', 'e', 'i', 'o', 'u'}
 
 
 class TrieNode:
+
     def __init__(self):
         self.ch = dict()
         self.words = []
@@ -9,6 +10,7 @@ class TrieNode:
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
 
@@ -44,6 +46,7 @@ class Trie:
 
 
 class Solution:
+
     def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
         trie = Trie()
         for word in wordlist:

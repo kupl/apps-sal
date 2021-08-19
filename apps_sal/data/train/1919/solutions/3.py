@@ -1,4 +1,5 @@
 class Solution:
+
     def findOrder(self, numCourses, prerequisites):
         """
         :type numCourses: int
@@ -7,7 +8,7 @@ class Solution:
         """
         nums = [[] for _ in range(numCourses)]
         du = [0] * numCourses
-        for end, start in prerequisites:
+        for (end, start) in prerequisites:
             nums[start].append(end)
             du[end] += 1
         result = []

@@ -3,6 +3,7 @@ from typing import List
 
 
 class Solution:
+
     def findDivisor(self, num):
         min_gap = num
         min_gap_saved = []
@@ -15,8 +16,8 @@ class Solution:
         return min_gap_saved
 
     def closestDivisors(self, num: int) -> List[int]:
-        a, b = self.findDivisor(num + 1)
-        c, d = self.findDivisor(num + 2)
+        (a, b) = self.findDivisor(num + 1)
+        (c, d) = self.findDivisor(num + 2)
         if b - a > d - c:
             return [c, d]
         else:
@@ -24,7 +25,7 @@ class Solution:
 
 
 s = Solution()
-print((s.closestDivisors(8)))
-print((s.closestDivisors(123)))
-print((s.closestDivisors(999)))
-print((s.closestDivisors(170967091)))
+print(s.closestDivisors(8))
+print(s.closestDivisors(123))
+print(s.closestDivisors(999))
+print(s.closestDivisors(170967091))

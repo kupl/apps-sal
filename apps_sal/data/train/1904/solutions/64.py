@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         a = []
         for i in range(len(points)):

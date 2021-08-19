@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self, end=False):
         self.child = dict()
         self.end = end

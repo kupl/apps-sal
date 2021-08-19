@@ -1,6 +1,7 @@
 class Solution:
+
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
-        rows, cols = len(grid), len(grid[0])
+        (rows, cols) = (len(grid), len(grid[0]))
         n = min(rows, cols)
         rs = [row[:] for row in grid]
         cs = [row[:] for row in grid]

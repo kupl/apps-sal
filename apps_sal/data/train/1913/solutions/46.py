@@ -1,5 +1,7 @@
 class Solution:
+
     def prevPermOpt1(self, A: List[int]) -> List[int]:
+
         def findLarger():
             prev = A[-1]
             for i in range(len(A) - 1, -1, -1):
@@ -18,5 +20,5 @@ class Solution:
                 if A[sl] < A[i]:
                     sl = i
         print((larger, sl))
-        A[sl], A[larger] = A[larger], A[sl]
+        (A[sl], A[larger]) = (A[larger], A[sl])
         return A

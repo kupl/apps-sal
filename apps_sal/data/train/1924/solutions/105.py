@@ -1,9 +1,10 @@
 class Solution:
+
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         dic = defaultdict(list)
         ans = set()
         for trans in transactions:
-            name, time, amt, loc = trans.split(',')
+            (name, time, amt, loc) = trans.split(',')
             if int(amt) > 1000:
                 ans.add(trans)
             for trans2 in dic[name]:
@@ -12,5 +13,4 @@ class Solution:
                     ans.add(trans)
                     ans.add(trans2)
             dic[name].append(trans)
-
         return ans

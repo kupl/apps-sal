@@ -1,8 +1,9 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
+
         def flipped(r):
             return [1 - c for c in r]
-
         d = defaultdict(int)
         for r in matrix:
             s = ''.join(map(str, r))

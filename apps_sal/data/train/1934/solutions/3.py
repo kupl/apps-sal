@@ -1,4 +1,5 @@
 class Solution:
+
     def zigzagLevelOrder(self, root):
         """
         :type root: TreeNode
@@ -10,7 +11,7 @@ class Solution:
         queue = []
         queue.append([0, root])
         while len(queue) != 0:
-            level, temp = queue.pop(0)
+            (level, temp) = queue.pop(0)
             if len(result) < level + 1:
                 result.append([])
             if level % 2 == 0:

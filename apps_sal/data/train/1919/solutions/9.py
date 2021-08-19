@@ -1,4 +1,5 @@
 class Solution:
+
     def findOrder(self, numCourses, prerequisites):
         graph = [[] for _ in range(numCourses)]
         visit = [0 for _ in range(numCourses)]
@@ -19,14 +20,8 @@ class Solution:
             visit[i] = 1
             result.append(i)
             return result
-
         for x in range(numCourses):
             if [] == dfs(x):
                 return []
         return result[::-1]
-
-        """
-         :type numCourses: int
-         :type prerequisites: List[List[int]]
-         :rtype: List[int]
-         """
+        '\n         :type numCourses: int\n         :type prerequisites: List[List[int]]\n         :rtype: List[int]\n         '

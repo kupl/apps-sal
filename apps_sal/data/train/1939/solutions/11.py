@@ -1,5 +1,7 @@
 class Solution:
+
     def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
+
         def insert(word, trie):
             node = trie
             for letter in word:
@@ -39,12 +41,10 @@ class Solution:
                     return matched
             else:
                 return matched
-
         trie = {}
-        for i, word in enumerate(wordlist):
+        for (i, word) in enumerate(wordlist):
             insert(word, trie)
         ans = []
         for q in queries:
             ans.append(find(q, trie))
-
         return ans

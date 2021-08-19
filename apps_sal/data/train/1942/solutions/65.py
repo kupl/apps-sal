@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         idx = {}
         encoded = []
@@ -10,7 +11,7 @@ class Solution:
                 b |= 1 << idx[c]
             encoded.append(b)
         ans = []
-        for i, b1 in enumerate(encoded):
+        for (i, b1) in enumerate(encoded):
             for b2 in encoded:
                 if b1 | b2 == b2 and b1 != b2:
                     break

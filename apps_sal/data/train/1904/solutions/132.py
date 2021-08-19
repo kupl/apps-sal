@@ -1,4 +1,5 @@
 class myObj:
+
     def __init__(self, val, p):
         self.val = val
         self.p = p
@@ -8,15 +9,16 @@ class myObj:
 
 
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
 
         def partition(arr, left, right):
             i = left
             for j in range(left, right):
                 if arr[j] < arr[right]:
-                    arr[i], arr[j] = arr[j], arr[i]
+                    (arr[i], arr[j]) = (arr[j], arr[i])
                     i += 1
-            arr[i], arr[right] = arr[right], arr[i]
+            (arr[i], arr[right]) = (arr[right], arr[i])
             return i
 
         def sort(arr, left, right, K):
@@ -28,12 +30,10 @@ class Solution:
                     sort(arr, p + 1, right, K)
                 else:
                     sort(arr, left, p - 1, K)
-
         dis = [0] * len(points)
         for i in range(len(points)):
             dis[i] = myObj(points[i][0] * points[i][0] + points[i][1] * points[i][1], points[i])
         sort(dis, 0, len(points) - 1, K)
-
         ans = []
         for i in range(K):
             ans.append(dis[i].p)

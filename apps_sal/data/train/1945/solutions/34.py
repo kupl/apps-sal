@@ -1,10 +1,10 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         dict_ = {}
         for row in matrix:
             curr_tuple = tuple(row)
             dict_[curr_tuple] = 1 + dict_.get(curr_tuple, 0)
-
         max_same = 0
         for row in matrix:
             curr_tuple = tuple(row)

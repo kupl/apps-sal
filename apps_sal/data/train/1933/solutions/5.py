@@ -1,4 +1,5 @@
 class Solution:
+
     def complexNumberMultiply(self, a, b):
         indice1 = a.index('+')
         indice2 = b.index('+')

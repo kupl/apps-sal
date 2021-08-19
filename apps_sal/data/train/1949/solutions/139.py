@@ -1,11 +1,12 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         m = len(grid)
         n = len(grid[0])
 
         def walk(grid, i, j):
             nonlocal m, n
-            if not grid or i < 0 or i >= m or j < 0 or j >= n:
+            if not grid or i < 0 or i >= m or (j < 0) or (j >= n):
                 return 0
             if grid[i][j] < 1:
                 return 0

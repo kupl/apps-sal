@@ -1,7 +1,8 @@
 class Solution:
+
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
         ans = 0
-        m, n = len(grid), len(grid[0])
+        (m, n) = (len(grid), len(grid[0]))
         h = [row[:] for row in grid]
         v = [row[:] for row in grid]
         for row in range(m):

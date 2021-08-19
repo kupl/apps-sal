@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         length = len(favoriteCompanies)
         for i in range(length):

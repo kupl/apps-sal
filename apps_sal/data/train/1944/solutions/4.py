@@ -1,11 +1,12 @@
 class Solution:
+
     def solveEquation(self, equation):
         """
         :type equation: str
         :rtype: str
         """
         count_x = count_integer = 0
-        left, right = equation.replace('-', ' -').replace('+', ' +').split('=')
+        (left, right) = equation.replace('-', ' -').replace('+', ' +').split('=')
         left_items = left.lstrip().split(' ')
         right_items = right.lstrip().split(' ')
         for l in left_items:

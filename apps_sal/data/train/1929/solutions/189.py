@@ -2,12 +2,14 @@ from collections import deque
 
 
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.isEndWord = False
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
 
@@ -19,6 +21,7 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words):
         self.vocab = Trie()
         self.queue = deque()

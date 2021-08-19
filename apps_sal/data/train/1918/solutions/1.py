@@ -1,4 +1,5 @@
 class Solution:
+
     def findItinerary(self, tickets):
         """
         :type tickets: List[List[str]]
@@ -13,5 +14,5 @@ class Solution:
             while dict[s]:
                 visit(dict[s].pop())
             res.appendleft(s)
-        visit("JFK")
+        visit('JFK')
         return list(res)

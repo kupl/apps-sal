@@ -1,4 +1,5 @@
 class Stack:
+
     def __init__(self):
         self.items = []
         self.time_stamps = dict()
@@ -8,7 +9,6 @@ class Stack:
         return self.items == []
 
     def push(self, item):
-
         self.items.append([item, self.t])
         self.time_stamps[item] = self.t
         self.t += 1
@@ -30,14 +30,15 @@ class Stack:
 
 
 class ListNode:
+
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
 
 class Solution:
-    def nextLargerNodes(self, head: ListNode) -> List[int]:
 
+    def nextLargerNodes(self, head: ListNode) -> List[int]:
         T = []
         while head:
             T.append(head.val)
@@ -49,18 +50,15 @@ class Solution:
             ans = [0] * len(T)
             stack = Stack()
             stack.push(T[0])
-
             for i in range(1, len(T)):
                 current = T[i]
                 if current <= stack.peek1():
                     stack.push(current)
-
                 else:
-                    while(stack.size() != 0 and current > stack.peek1()):
+                    while stack.size() != 0 and current > stack.peek1():
                         ans[stack.peek2()] = stack.t - stack.peek2()
                         stack.pop()
                     stack.push(current)
-
             return ans
         S = dailyTemperatures(T)
         n = len(S)
@@ -68,5 +66,4 @@ class Solution:
         for i in range(n):
             if S[i] != 0:
                 ans[i] = T[i + S[i]]
-
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToStamp(self, stamp, target):
         ns = len(stamp)
         stamp_patterns = []
@@ -7,7 +8,6 @@ class Solution:
                 curr = '*' * i + stamp[i:i + window_size] + '*' * (ns - window_size - i)
                 stamp_patterns.append(curr)
         stamp_patterns.append('*' * ns)
-
         res = []
         nt = len(target)
         while target != '*' * nt:
@@ -19,5 +19,4 @@ class Solution:
                     res.append(inx)
             if old_target == target:
                 return []
-
         return res[::-1]

@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self):
         self.isword = False
         self.children = [None] * 26
@@ -25,7 +26,6 @@ class StreamChecker:
 
     def search(self, word):
         parent = self.root
-
         for c in word:
             i = ord(c) - 97
             if parent.isword:
@@ -33,9 +33,8 @@ class StreamChecker:
             if not parent.children[i]:
                 return False
             parent = parent.children[i]
-
         return parent.isword
 
     def query(self, letter):
-        self.lastchars = (letter + self.lastchars)[0: self.maxlen]
+        self.lastchars = (letter + self.lastchars)[0:self.maxlen]
         return self.search(self.lastchars)

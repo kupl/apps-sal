@@ -1,4 +1,5 @@
 class Solution:
+
     def findItinerary(self, tickets):
         """
         :type tickets: List[List[str]]
@@ -6,7 +7,7 @@ class Solution:
         """
         d = collections.defaultdict(list)
         tickets.sort()
-        for i, j in tickets:
+        for (i, j) in tickets:
             d[i] += [j]
 
         def dfs(path, start):
@@ -23,7 +24,6 @@ class Solution:
                 d[start] += [next]
             path.pop()
             return False
-
-        path, length = [], len(tickets) + 1
+        (path, length) = ([], len(tickets) + 1)
         dfs(path, 'JFK')
         return path

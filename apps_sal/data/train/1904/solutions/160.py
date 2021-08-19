@@ -1,4 +1,5 @@
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         self.countK(points, 0, len(points) - 1, K)
         return points[:K]
@@ -17,8 +18,8 @@ class Solution:
         pivot = points[r]
         count = l
         for i in range(l, r):
-            if (points[i][0]**2 + points[i][1]**2) <= (pivot[0]**2 + pivot[1]**2):
-                points[i], points[count] = points[count], points[i]
+            if points[i][0] ** 2 + points[i][1] ** 2 <= pivot[0] ** 2 + pivot[1] ** 2:
+                (points[i], points[count]) = (points[count], points[i])
                 count += 1
-        points[count], points[r] = points[r], points[count]
+        (points[count], points[r]) = (points[r], points[count])
         return count

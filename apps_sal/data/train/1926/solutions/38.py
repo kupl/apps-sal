@@ -1,4 +1,5 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         ans = num + 1
         val = None

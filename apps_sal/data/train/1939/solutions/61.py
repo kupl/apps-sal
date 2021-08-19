@@ -1,8 +1,9 @@
 class Solution:
-    def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
-        def replace(w):
-            return re.sub(r'[aeiou]', '*', w)
 
+    def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
+
+        def replace(w):
+            return re.sub('[aeiou]', '*', w)
         lowercases = {}
         for w in wordlist:
             ww = w.lower()

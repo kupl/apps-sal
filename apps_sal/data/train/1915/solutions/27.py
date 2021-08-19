@@ -1,12 +1,13 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        ls, lt = list(stamp), list(target)
-        m, n = len(ls), len(lt)
-        todo, move, res = n - m + 1, 0, []
+        (ls, lt) = (list(stamp), list(target))
+        (m, n) = (len(ls), len(lt))
+        (todo, move, res) = (n - m + 1, 0, [])
 
         def match(lst, ls):
             ret = False
-            for c1, c2 in zip(lst, ls):
+            for (c1, c2) in zip(lst, ls):
                 if c1 == '?':
                     continue
                 elif c1 != c2:

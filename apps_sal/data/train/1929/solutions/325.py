@@ -1,9 +1,11 @@
 class TNode(object):
+
     def __init__(self):
-        self.d, self.f = {}, False
+        (self.d, self.f) = ({}, False)
 
 
 class StreamChecker(object):
+
     def __init__(self, words):
         self.root = TNode()
         self.max_ = max(map(len, words))

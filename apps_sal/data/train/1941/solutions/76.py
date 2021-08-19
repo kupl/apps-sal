@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self):
         self.ch = {}
         self.cnt = 0
@@ -27,6 +28,7 @@ class Node:
 
 
 class Solution:
+
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         root = Node()
         root.build([set(x) for x in words])

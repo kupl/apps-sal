@@ -1,10 +1,11 @@
 class Solution:
+
     def asteroidCollision(self, asteroids):
         """
         :type asteroids: List[int]
         :rtype: List[int]
         """
-        st, res = [], []
+        (st, res) = ([], [])
         for ast in asteroids:
             if ast > 0:
                 st.append(ast)

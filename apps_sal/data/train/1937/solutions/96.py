@@ -22,5 +22,4 @@ class ThroneInheritance:
             listt = self.dic[name][1]
             for i in range(len(listt)):
                 d.append(listt[-i - 1])
-
         return ans

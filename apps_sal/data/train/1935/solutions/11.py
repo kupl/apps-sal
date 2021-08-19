@@ -1,10 +1,11 @@
 class Solution:
+
     def isToeplitzMatrix1(self, matrix):
         """
         :type matrix: List[List[int]]
         :rtype: bool
         """
-        row, col = len(matrix), len(matrix[0])
+        (row, col) = (len(matrix), len(matrix[0]))
         for j in range(col):
             a = 0
             while a + 1 < row and j + a + 1 < col:
@@ -22,4 +23,4 @@ class Solution:
         return True
 
     def isToeplitzMatrix(self, m):
-        return all(m[i][j] == m[i + 1][j + 1] for i in range(len(m) - 1) for j in range(len(m[0]) - 1))
+        return all((m[i][j] == m[i + 1][j + 1] for i in range(len(m) - 1) for j in range(len(m[0]) - 1)))

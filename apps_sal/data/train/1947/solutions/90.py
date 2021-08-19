@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         A_counter = [Counter(a) for a in A]
         B_counter = [Counter(b) for b in B]
@@ -11,10 +12,8 @@ class Solution:
                 if ac[chr_] < bc[chr_]:
                     return False
             return True
-
         ans = []
-        for i, ac in enumerate(A_counter):
+        for (i, ac) in enumerate(A_counter):
             if is_subset(ac, b_merged):
                 ans.append(A[i])
-
         return ans

@@ -2,12 +2,14 @@ from collections import deque
 
 
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.is_leaf = False
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
 

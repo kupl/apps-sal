@@ -1,4 +1,5 @@
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         n1 = len(points)
         newList = [0] * n1

@@ -1,6 +1,7 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
+        (m, n) = (len(grid), len(grid[0]))
         l = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         vis = set()
         res = [0]
@@ -8,9 +9,9 @@ class Solution:
 
         def fn(a, b):
             z = -float('inf')
-            for c, d in l:
-                x, y = a + c, b + d
-                if x < 0 or x >= m or y < 0 or y >= n:
+            for (c, d) in l:
+                (x, y) = (a + c, b + d)
+                if x < 0 or x >= m or y < 0 or (y >= n):
                     continue
                 if (x, y) not in vis and grid[x][y] > 0:
                     vis.add((x, y))

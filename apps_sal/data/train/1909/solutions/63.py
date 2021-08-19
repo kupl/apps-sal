@@ -1,8 +1,9 @@
 class Solution:
+
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
+        (m, n) = (len(grid), len(grid[0]))
         res = 0
-        top, left = [a[:] for a in grid], [a[:] for a in grid]
+        (top, left) = ([a[:] for a in grid], [a[:] for a in grid])
         for i in range(m):
             for j in range(n):
                 if grid[i][j]:

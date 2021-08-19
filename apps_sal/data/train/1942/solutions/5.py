@@ -1,7 +1,8 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         A = favoriteCompanies
-        location = {tuple(val): idx for idx, val in enumerate(A)}
+        location = {tuple(val): idx for (idx, val) in enumerate(A)}
         A.sort(key=lambda x: len(x))
         res = []
         for i in range(len(A)):
@@ -10,6 +11,5 @@ class Solution:
                     break
             else:
                 res.append(location[tuple(A[i])])
-
         res.sort()
         return res

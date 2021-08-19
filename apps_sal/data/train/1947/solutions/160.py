@@ -2,16 +2,14 @@ from collections import Counter
 
 
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
-
         bcounter = Counter()
-
         for b in B:
             bbc = Counter(b)
             for c in bbc:
                 if c not in bcounter or bbc[c] > bcounter[c]:
                     bcounter[c] = bbc[c]
-
         ans = []
         for a in A:
             aac = Counter(a)

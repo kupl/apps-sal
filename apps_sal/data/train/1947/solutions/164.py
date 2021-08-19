@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         um = {}
         result = []
@@ -10,8 +11,8 @@ class Solution:
                     um[letter] = b.count(letter)
         for a in A:
             boola = True
-            for i, n in um.items():
-                if (i not in a) or a.count(i) < n:
+            for (i, n) in um.items():
+                if i not in a or a.count(i) < n:
                     boola = False
                     break
             if boola:

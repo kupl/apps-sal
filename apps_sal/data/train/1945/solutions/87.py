@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         ma = 0
         for i in matrix:
@@ -9,5 +10,4 @@ class Solution:
                     c += 1
             if c > ma:
                 ma = c
-
         return ma

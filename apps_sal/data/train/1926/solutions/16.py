@@ -1,5 +1,7 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
+
         def maxFactor(n):
             if n < 3:
                 return n

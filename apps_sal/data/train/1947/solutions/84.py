@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         arr1 = []
         arr2 = []
@@ -16,7 +17,6 @@ class Solution:
                 if arr1[i][c] < dic[c]:
                     return False
             return True
-
         for i in range(len(A)):
             if comp(i):
                 res.append(A[i])

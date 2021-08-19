@@ -1,11 +1,12 @@
 class Solution:
+
     def countOfAtoms(self, formula):
         """
         :type formula: str
         :rtype: str
         """
         formula += ' '
-        stack, i = [{}], 0
+        (stack, i) = ([{}], 0)
         while i < len(formula):
             if formula[i] >= 'A' and formula[i] <= 'Z':
                 j = i + 1
@@ -31,7 +32,7 @@ class Solution:
                 i = j
             else:
                 i += 1
-        a, s = sorted(stack[-1].keys()), ''
+        (a, s) = (sorted(stack[-1].keys()), '')
         for x in a:
             s += x if stack[-1][x] == 1 else x + str(stack[-1][x])
         return s

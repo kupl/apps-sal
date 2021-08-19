@@ -1,4 +1,5 @@
 class Solution:
+
     def isSubPath(self, head: ListNode, root: TreeNode) -> bool:
         if root:
             return self.traverse(root, head)
@@ -6,11 +7,10 @@ class Solution:
     def traverse(self, cur, head):
         if self.startwith(cur, head):
             return True
-        else:
-            if cur.left and self.traverse(cur.left, head):
-                return True
-            elif cur.right and self.traverse(cur.right, head):
-                return True
+        elif cur.left and self.traverse(cur.left, head):
+            return True
+        elif cur.right and self.traverse(cur.right, head):
+            return True
         return False
 
     def startwith(self, startnode, head) -> bool:

@@ -30,13 +30,14 @@ class StreamChecker:
 
 
 class Tree:
+
     def __init__(self, root, subtrees: List):
         self.root = root
         self.food = False
         self.subtrees = subtrees
 
     def in_list(self, letter: str):
-        for i, item in enumerate(self.subtrees):
+        for (i, item) in enumerate(self.subtrees):
             if item.root == letter:
                 return i
         return None

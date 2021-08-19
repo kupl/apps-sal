@@ -1,4 +1,5 @@
 class Solution:
+
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
         m = len(grid)
         n = len(grid[0])
@@ -12,7 +13,6 @@ class Solution:
             for j in range(1, m):
                 if vertical[j][i] != 0:
                     vertical[j][i] = vertical[j - 1][i] + 1
-
         result = 0
         for i in range(m):
             for j in range(n):

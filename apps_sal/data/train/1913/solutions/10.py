@@ -1,4 +1,5 @@
 class Solution:
+
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         if A == []:
             return []
@@ -18,6 +19,5 @@ class Solution:
                 if A[j] > maxx and A[j] < A[i]:
                     champ = j
                     maxx = A[j]
-            A[i], A[champ] = A[champ], A[i]
-
+            (A[i], A[champ]) = (A[champ], A[i])
             return A

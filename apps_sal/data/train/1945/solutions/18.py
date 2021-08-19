@@ -1,6 +1,6 @@
 class Solution:
-    def maxEqualRowsAfterFlips(self, mat: List[List[int]]) -> int:
 
+    def maxEqualRowsAfterFlips(self, mat: List[List[int]]) -> int:
         dic = defaultdict(lambda: 0)
         for r in range(len(mat)):
             row = mat[r]

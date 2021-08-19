@@ -1,4 +1,5 @@
 class Solution:
+
     def bstFromPreorder(self, preorder: List[int]) -> TreeNode:
         root = TreeNode(preorder[0])
         stack = [root]

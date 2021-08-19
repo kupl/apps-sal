@@ -1,6 +1,6 @@
 class Solution:
-    def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
 
+    def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         b_union = {}
         for b in B:
             chars = {}
@@ -8,7 +8,6 @@ class Solution:
                 chars[c] = chars.get(c, 0) + 1
             for c in chars:
                 b_union[c] = max(b_union.get(c, 0), chars[c])
-
         res = []
         for a in A:
             chars = {}

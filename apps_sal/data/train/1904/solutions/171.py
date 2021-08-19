@@ -1,4 +1,5 @@
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         res = []
 
@@ -14,9 +15,8 @@ class Solution:
             res.insert(l, [d, pos])
             Max = res[-1][0]
         Max = float('inf')
-
         for i in range(len(points)):
-            dis = (points[i][0])**2 + (points[i][1])**2
+            dis = points[i][0] ** 2 + points[i][1] ** 2
             print(len(res))
             if i > K:
                 res.pop()

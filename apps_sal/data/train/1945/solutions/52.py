@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         cache = collections.defaultdict(int)
         for row in matrix:

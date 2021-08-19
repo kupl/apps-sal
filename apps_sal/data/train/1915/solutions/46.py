@@ -1,7 +1,8 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        tl, sl = len(target), len(stamp)
-        t, s = list(target), list(stamp)
+        (tl, sl) = (len(target), len(stamp))
+        (t, s) = (list(target), list(stamp))
         res = []
 
         def check(i):

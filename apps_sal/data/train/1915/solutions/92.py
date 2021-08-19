@@ -1,9 +1,8 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-
-        M, N = len(stamp), len(target)
-        stamp, target = list(stamp), list(target)
-
+        (M, N) = (len(stamp), len(target))
+        (stamp, target) = (list(stamp), list(target))
         ans = []
 
         def check(i):
@@ -14,12 +13,10 @@ class Solution:
                 if target[i + j] != stamp[j]:
                     return False
                 needsUpdate = True
-
             if needsUpdate:
                 target[i:i + M] = '?' * M
                 ans.append(i)
             return needsUpdate
-
         changed = True
         while changed:
             changed = False
@@ -27,5 +24,4 @@ class Solution:
                 if check(i):
                     changed = True
                     break
-
         return ans[::-1] if target.count('?') == len(target) else []

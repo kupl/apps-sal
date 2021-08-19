@@ -2,15 +2,16 @@ from collections import OrderedDict
 
 
 class Solution:
+
     def partition(self, nums, l, r):
         piv = nums[r]
         i = l - 1
         for j in range(l, r):
             if nums[j] <= piv:
                 i += 1
-                nums[i], nums[j] = nums[j], nums[i]
-        nums[r], nums[i + 1] = nums[i + 1], nums[r]
-        return (i + 1)
+                (nums[i], nums[j]) = (nums[j], nums[i])
+        (nums[r], nums[i + 1]) = (nums[i + 1], nums[r])
+        return i + 1
 
     def selectSort(self, nums, left, right, k):
         if left < right:
@@ -32,5 +33,4 @@ class Solution:
         for p in points:
             if math.sqrt(p[0] ** 2 + p[1] ** 2) < dists[K]:
                 out.append(p)
-
         return out

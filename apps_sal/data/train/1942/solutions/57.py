@@ -1,9 +1,9 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         companies = favoriteCompanies[:]
         for i in range(len(companies)):
             companies[i] = set(companies[i])
-
         subsets = []
         for i in range(len(companies)):
             currSet = companies[i]
@@ -18,7 +18,6 @@ class Solution:
                     if count == len(currSet):
                         subsets.append(i)
                         break
-
         size = len(favoriteCompanies) - len(subsets)
         res = [None] * size
         curr = 0
@@ -27,5 +26,4 @@ class Solution:
             if i not in subsets:
                 res[curr] = i
                 curr += 1
-
         return res

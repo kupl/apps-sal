@@ -1,6 +1,7 @@
 class Solution:
+
     def peopleIndexes(self, A: List[List[str]]) -> List[int]:
-        d = {i: set(v) for i, v in enumerate(A)}
+        d = {i: set(v) for (i, v) in enumerate(A)}
         res = []
         for i in range(len(A)):
             isSubset = False

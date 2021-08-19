@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
 
         def judge(i):
@@ -12,7 +13,6 @@ class Solution:
                     if contain:
                         return False
             return True
-
         n = len(favoriteCompanies)
         favoriteCompanies = list(map(set, favoriteCompanies))
         res = []

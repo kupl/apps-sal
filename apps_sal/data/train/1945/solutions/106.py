@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         options = {tuple([]): 0}
         best = tuple([])

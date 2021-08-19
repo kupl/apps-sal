@@ -1,4 +1,5 @@
 class Solution:
+
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         l = len(A) - 2
         while l >= 0:
@@ -14,5 +15,5 @@ class Solution:
                 max_idx = r
             r += 1
         if 0 <= l <= max_idx < len(A):
-            A[l], A[max_idx] = A[max_idx], A[l]
+            (A[l], A[max_idx]) = (A[max_idx], A[l])
         return A

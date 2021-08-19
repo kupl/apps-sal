@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         marked = [[False] * len(grid[0]) for i in range(len(grid))]
         for r in range(len(grid)):
@@ -7,7 +8,7 @@ class Solution:
                     marked[r][c] = True
 
         def visit(r, c, markL):
-            if r < 0 or c < 0 or r >= len(grid) or c >= len(grid[0]):
+            if r < 0 or c < 0 or r >= len(grid) or (c >= len(grid[0])):
                 return 0
             if markL[r][c]:
                 return 0

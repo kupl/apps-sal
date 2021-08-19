@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, m: List[List[int]]) -> int:
         m = [tuple(i) for i in m]
         h = defaultdict(int)
@@ -7,7 +8,7 @@ class Solution:
                 h[i] += 1
             else:
                 h[i] = 1
-            t = tuple(1 - x for x in i)
+            t = tuple((1 - x for x in i))
             if t in h:
                 h[t] += 1
             else:

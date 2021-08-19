@@ -1,4 +1,5 @@
 class Solution:
+
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         n = len(A)
         left = n - 1
@@ -11,5 +12,5 @@ class Solution:
         for i in range(right, n):
             if A[i] > A[right] and A[i] < A[left]:
                 right = i
-        A[left], A[right] = A[right], A[left]
+        (A[left], A[right]) = (A[right], A[left])
         return A

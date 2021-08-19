@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         bCount = collections.Counter()
         for b in B:
@@ -9,6 +10,5 @@ class Solution:
         res = []
         for a in A:
             if collections.Counter(a) & bCount == bCount:
-                res += a,
-
+                res += (a,)
         return res

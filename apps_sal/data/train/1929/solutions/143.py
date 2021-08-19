@@ -1,4 +1,4 @@
-'''
+"""
 Approach 1:
 * Have a dict mapping letters to words ending on that letter.
 * Have a list with all the letters queried so far.
@@ -9,8 +9,7 @@ Approach 2:
 * Have a trie with words in 'words'.
 * Have a list with all letters queried so far.
 * Traverse the trie using the letters in the list (scanning backwards).
-'''
-
+"""
 from collections import defaultdict
 
 
@@ -29,7 +28,6 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.queries.append(letter)
-
         index = -1
         node = self.trie_root
         while node.links:

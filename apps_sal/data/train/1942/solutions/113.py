@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         n = len(favoriteCompanies)
         res = list(range(n))
@@ -8,7 +9,6 @@ class Solution:
                 first_set = set(favoriteCompanies[i])
                 second_set = set(favoriteCompanies[j])
                 remind = first_set & second_set
-
                 if remind == first_set:
                     if i not in seen:
                         seen.add(i)

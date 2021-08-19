@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def parse_word(self, word):
         return Counter(word)
 
@@ -14,7 +15,6 @@ class Solution:
         for b in B:
             bc = Counter(b)
             self.update_counter(min_universal, bc)
-
         universals = []
         for a in A:
             ac = Counter(a)

@@ -1,4 +1,5 @@
 class Solution:
+
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         n = len(A)
         for i in range(n - 2, -1, -1):
@@ -13,6 +14,6 @@ class Solution:
                         pm = j
                     else:
                         break
-                A[i], A[pm] = A[pm], A[i]
+                (A[i], A[pm]) = (A[pm], A[i])
                 return A
         return A

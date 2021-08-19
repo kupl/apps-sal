@@ -1,4 +1,5 @@
 class Solution:
+
     def countOfAtoms(self, formula):
         """
         :type formula: str
@@ -6,7 +7,7 @@ class Solution:
         """
         stack = []
         mapping = collections.defaultdict(int)
-        s = ""
+        s = ''
         num = 0
         i = 0
         while i < len(formula):
@@ -18,9 +19,9 @@ class Solution:
                 num = 10 * num + int(c)
                 i += 1
             else:
-                if s != "":
+                if s != '':
                     mapping[s] = mapping[s] + num if num > 0 else mapping[s] + 1
-                s = ""
+                s = ''
                 num = 0
                 i += 1
                 if c.isupper():
@@ -37,10 +38,10 @@ class Solution:
                         prev[k] += mapping[k] * num
                     mapping = prev
                     num = 0
-        if s != "":
+        if s != '':
             mapping[s] = mapping[s] + num if num > 0 else mapping[s] + 1
         ans = []
-        for k, v in sorted(mapping.items()):
+        for (k, v) in sorted(mapping.items()):
             ans.append(k)
             if v > 1:
                 ans.append(str(v))

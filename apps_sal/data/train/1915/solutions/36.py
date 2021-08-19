@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
 
         def helper(idx):
@@ -10,7 +11,6 @@ class Solution:
                     return 0
             target[idx:idx + len(stamp)] = ['*'] * len(stamp)
             return num
-
         seen = [0] * len(target)
         total = 0
         res = []

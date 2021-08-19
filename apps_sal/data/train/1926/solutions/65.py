@@ -1,6 +1,7 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
-        sqrt = int(num ** (0.5)) + 1
+        sqrt = int(num ** 0.5) + 1
         for i in range(sqrt, 0, -1):
             j1 = (num + 1) // i
             j2 = (num + 2) // i

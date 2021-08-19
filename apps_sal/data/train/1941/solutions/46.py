@@ -2,8 +2,8 @@ from collections import defaultdict
 
 
 class Solution:
-    def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
 
+    def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         tri = defaultdict(lambda: 0)
         for word in words:
             cur = tri
@@ -19,7 +19,6 @@ class Solution:
                         cur['*'] += 1
                     else:
                         cur['*'] = 1
-
         returnArr = [0] * len(puzzles)
 
         def helper(tri, puzzle, i, found_first):
@@ -32,8 +31,6 @@ class Solution:
                         helper(tri[letter], puzzle, i, True)
                     else:
                         helper(tri[letter], puzzle, i, False)
-
         for i in range(len(puzzles)):
             helper(tri, puzzles[i], i, False)
-
         return returnArr

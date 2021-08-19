@@ -1,4 +1,5 @@
 class Solution(object):
+
     def maxEqualRowsAfterFlips(self, matrix):
         patterns = collections.Counter()
         for row in matrix:

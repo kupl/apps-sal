@@ -1,4 +1,5 @@
 class Solution:
+
     def divizor(self, num):
         for i in range(int(math.sqrt(num)), 0, -1):
             n1 = num / i

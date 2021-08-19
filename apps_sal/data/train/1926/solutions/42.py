@@ -1,12 +1,13 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         n1 = {}
         n2 = {}
-        n1[tuple([1, num + 1])] = abs((num + 1) - 1)
+        n1[tuple([1, num + 1])] = abs(num + 1 - 1)
         for i in range(2, int(sqrt(num + 1)) + 1):
             if (num + 1) % i == 0:
                 n1[tuple([i, int((num + 1) / i)])] = abs(int((num + 1) / i) - i)
-        n2[tuple([1, num + 2])] = abs((num + 2) - 1)
+        n2[tuple([1, num + 2])] = abs(num + 2 - 1)
         for i in range(2, int(sqrt(num + 2)) + 1):
             if (num + 2) % i == 0:
                 n2[tuple([i, int((num + 2) / i)])] = abs(int((num + 2) / i) - i)

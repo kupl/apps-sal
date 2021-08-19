@@ -1,6 +1,7 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        memo, ls, lt = {}, len(stamp), len(target)
+        (memo, ls, lt) = ({}, len(stamp), len(target))
 
         def dfs(s, t, seqs):
             if t == lt:

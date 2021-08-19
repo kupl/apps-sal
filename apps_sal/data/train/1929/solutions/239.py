@@ -1,10 +1,12 @@
-class TrieNode():
+class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.isEnd = False
 
 
-class Trie():
+class Trie:
+
     def __init__(self):
         self.root = TrieNode()
 
@@ -18,6 +20,7 @@ class Trie():
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.letters = []
         self.trie = Trie()

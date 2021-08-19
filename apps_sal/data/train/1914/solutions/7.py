@@ -1,4 +1,5 @@
 class Solution:
+
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
         m = len(costs)
         n = m // 2

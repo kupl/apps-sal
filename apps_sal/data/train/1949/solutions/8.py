@@ -2,7 +2,7 @@ class Solution:
     gold = 0
 
     def dfs(self, grid, i, j, current):
-        if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] == 0:
+        if i < 0 or j < 0 or i >= len(grid) or (j >= len(grid[0])) or (grid[i][j] == 0):
             return
         current += grid[i][j]
         temp = grid[i][j]

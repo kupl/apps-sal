@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         LEN = len(favoriteCompanies)
         ans = []
@@ -10,7 +11,6 @@ class Solution:
                     s2 = set(favoriteCompanies[j])
                     if len(s1 & s2) == len(s1):
                         found = True
-
             if not found:
                 ans.append(i)
         return ans

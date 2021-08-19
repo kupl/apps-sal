@@ -1,4 +1,5 @@
 class Solution:
+
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         already_sorted = True
         swap_left = None
@@ -16,5 +17,5 @@ class Solution:
                     continue
                 else:
                     swap_right = (i, A[i])
-        A[swap_right[0]], A[swap_left[0]] = swap_left[1], swap_right[1]
+        (A[swap_right[0]], A[swap_left[0]]) = (swap_left[1], swap_right[1])
         return A

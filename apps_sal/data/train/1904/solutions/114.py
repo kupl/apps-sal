@@ -2,6 +2,7 @@ from heapq import *
 
 
 class Solution:
+
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         maxHeap = []
         for i in range(k):
@@ -13,4 +14,4 @@ class Solution:
         return [points for (distance, points) in list(maxHeap)]
 
     def distance(self, coord):
-        return coord[0]**2 + coord[1]**2
+        return coord[0] ** 2 + coord[1] ** 2

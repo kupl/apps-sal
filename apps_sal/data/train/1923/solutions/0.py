@@ -1,4 +1,5 @@
 class Solution:
+
     def countSmaller(self, nums):
         """
         :type nums: List[int]
