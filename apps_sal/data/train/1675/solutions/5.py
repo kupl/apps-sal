@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 import math
 t = int(input())
@@ -24,17 +23,17 @@ for it in range(t):
         x = r
         for j in s:
             y = j
-            if(xa == -1 and xb == -1):
+            if xa == -1 and xb == -1:
                 xa = x
                 xb = y
             q = x - xa
             q = q * q
             p = y - xb
-            p = p**2
+            p = p ** 2
             q = q + p
             q = math.sqrt(q)
             m = m + q
             xa = abs(x)
             xb = abs(y)
     m = round(m, 2)
-    print("%.2f" % m)
+    print('%.2f' % m)

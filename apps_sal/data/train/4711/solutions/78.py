@@ -1,5 +1,5 @@
 def zeros(n):
-    # find the exponent of a prime factor p in the prime factorization of n!
+
     def find_exponent(n, p):
         factor = 0
         p_helper = p
@@ -7,7 +7,5 @@ def zeros(n):
             factor += int(n / p_helper)
             p_helper *= p
         return factor
-
     five_exponent = find_exponent(n, 5)
-
     return five_exponent

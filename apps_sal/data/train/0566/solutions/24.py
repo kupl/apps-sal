@@ -1,6 +1,4 @@
-# cook your dish here
 t = int(input())
-
 for n in range(t):
     a = str(input())
     b = str(input())
@@ -10,6 +8,6 @@ for n in range(t):
             if i == j:
                 count += 1
     if count > 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

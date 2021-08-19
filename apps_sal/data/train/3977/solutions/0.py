@@ -2,14 +2,12 @@ import numpy as np
 from itertools import combinations, product, starmap
 from sklearn.cluster import KMeans
 
-# Doesn't work for big tests, too bad
-
 
 def cluster_kmeans(points, n):
     kmeans = KMeans(n_clusters=n)
     kmeans.fit(points)
     res = [[] for _ in range(n)]
-    for i, p in zip(kmeans.labels_, points):
+    for (i, p) in zip(kmeans.labels_, points):
         res[i].append(p)
     return sorted(map(sorted, res))
 
@@ -37,7 +35,7 @@ def cluster_dist(clusters):
 def cluster(points, n):
     clusters = [[p] for p in points]
     while len(clusters) > n:
-        c1, c2 = min(combinations(clusters, 2), key=cluster_dist)
+        (c1, c2) = min(combinations(clusters, 2), key=cluster_dist)
         c1.extend(c2)
         clusters.remove(c2)
     return sorted(map(sorted, clusters))

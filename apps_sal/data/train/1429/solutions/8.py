@@ -1,4 +1,3 @@
-# cook your dish here
 l = [1]
 for k in range(31):
     l.append(l[-1] * 2)
@@ -7,7 +6,7 @@ for k in range(31):
 def convert(s):
     while len(s) != 32:
         s = '0' + s
-    ans = ""
+    ans = ''
     for i in s:
         ans = i + ans
     return ans
@@ -22,10 +21,10 @@ def main():
         for i in range(32):
             x = 0
             for j in range(n):
-                if val[j] & (1 << i):
-                    x = (p[j] * (1 - x)) + (1 - p[j]) * (x)
-            res += (l[i] * x)
-        print("%.6f" % res)
+                if val[j] & 1 << i:
+                    x = p[j] * (1 - x) + (1 - p[j]) * x
+            res += l[i] * x
+        print('%.6f' % res)
 
 
 def __starting_point():

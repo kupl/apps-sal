@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 for i in range(n):
     a = input()
@@ -7,7 +6,7 @@ for i in range(n):
     for i in a:
         if i in b:
             c = 1
-            print("Yes")
+            print('Yes')
             break
     if c == 0:
-        print("No")
+        print('No')

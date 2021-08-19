@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     x = 0
@@ -8,7 +7,7 @@ while t:
     for i in range(30):
         pb = 0.0
         for j in range(n):
-            if b[j] & (1 << i):
+            if b[j] & 1 << i:
                 pb = pb * (1 - p[j]) + (1 - pb) * p[j]
         x += (1 << i) * pb
     print(x)
