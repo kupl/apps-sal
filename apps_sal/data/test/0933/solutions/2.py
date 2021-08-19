@@ -22,20 +22,17 @@ while t != len(a):
 ans = ''
 x = list(x)
 i = 0
-
 d = []
 while i != len(x):
     if i == 0:
         d.append(x[i])
         i += 1
+    elif x[i] == x[i - 1]:
+        d[-1] += x[i]
+        i += 1
     else:
-        if x[i] == x[i - 1]:
-            d[-1] += x[i]
-            i += 1
-        else:
-            d.append(x[i])
-            i += 1
-# d.append('^')
+        d.append(x[i])
+        i += 1
 i = 0
 while i != len(d):
     if i == 0:

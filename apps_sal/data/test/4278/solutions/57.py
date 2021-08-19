@@ -4,7 +4,6 @@ def anagram(s):
         dic.setdefault(moji, 0)
         dic[moji] += 1
     sort_list = sorted(dic)
-    # print(sort_list)
     ans = ''
     for moji in sort_list:
         ans += moji + str(dic[moji])
@@ -18,7 +17,6 @@ for i in range(n):
     s.append(anagram(str(input())))
     ans_dic.setdefault(s[i], 0)
     ans_dic[s[i]] += 1
-# print(ans_dic)
 ans = 0
 for val in ans_dic.values():
     ans += val * (val - 1) // 2

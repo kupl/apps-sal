@@ -29,6 +29,6 @@ for x in s:
     else:
         pd = False
         cnt -= 1
-    if cnt == 2 and not pd:
+    if cnt == 2 and (not pd):
         pd = True
 print(''.join(ans))

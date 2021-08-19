@@ -1,7 +1,5 @@
-#!/usr/bin/env	python
-# -*-coding:utf-8 -*-
 import math
-a1, b1, a2, b2, l, r = list(map(int, input().split()))
+(a1, b1, a2, b2, l, r) = list(map(int, input().split()))
 if b1 < l:
     b1 = (b1 - l) % a1 + l
 if b2 < l:

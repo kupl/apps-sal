@@ -1,11 +1,3 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N, Ss):
     for i in range(N):
         Ss[i] = ''.join(sorted(list(Ss[i])))
@@ -22,17 +14,13 @@ def solve(N, Ss):
             ans += (i - counter + 1) * (i - counter) // 2
             flg = False
     if flg:
-        ans += ((N - 1) - counter + 1) * ((N - 1) - counter) // 2
+        ans += (N - 1 - counter + 1) * (N - 1 - counter) // 2
     print(ans)
 
 
 def __starting_point():
-    # S = input()
     N = int(input())
-    # N, M = map(int, input().split())
     Ss = [input() for _ in range(N)]
-    # As = [int(i) for i in input().split()]
-    # Bs = [int(i) for i in input().split()]
     solve(N, Ss)
 
 

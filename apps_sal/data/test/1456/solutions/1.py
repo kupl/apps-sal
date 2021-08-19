@@ -1,12 +1,10 @@
 import sys
 f = sys.stdin
-
 n = int(f.readline().strip())
 fig = []
 place = []
 for i in range(n):
-    place.append([-1] * (n))
-
+    place.append([-1] * n)
 for i in range(n):
     s = f.readline().strip()
     for k in range(len(s)):
@@ -20,7 +18,6 @@ for i in range(n):
 hh = []
 for i in range(2 * n - 1):
     hh.append([1] * (2 * n - 1))
-
 res = True
 for fi in range(len(fig)):
     x = fig[fi][0]
@@ -31,10 +28,7 @@ for fi in range(len(fig)):
             if r == 0:
                 dx = k - x + n - 1
                 dy = i - y + n - 1
-                #print(x, y, k, i, dx, dy)
                 hh[dx][dy] = 0
-
-
 for i in range(n):
     for k in range(n):
         r = place[k][i]
@@ -43,7 +37,6 @@ for i in range(n):
             for fi in range(len(fig)):
                 dx = k - fig[fi][0] + n - 1
                 dy = i - fig[fi][1] + n - 1
-
                 if hh[dx][dy] != 0:
                     beat = True
             if not beat:

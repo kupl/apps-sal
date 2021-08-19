@@ -11,9 +11,8 @@ def inNL(n):
 
 
 mod = pow(10, 9) + 7
-#import numpy
 s = input()
-if s == "ABC":
-    print("ARC")
+if s == 'ABC':
+    print('ARC')
 else:
-    print("ABC")
+    print('ABC')
