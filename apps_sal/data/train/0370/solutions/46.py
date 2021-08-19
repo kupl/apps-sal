@@ -1,9 +1,10 @@
 class Solution:
+
     def largestComponentSize(self, nums: List[int]) -> int:
         graph = defaultdict(list)
         nodes = set(nums)
         roots = set()
-        m, n = len(nums), max(nums)
+        (m, n) = (len(nums), max(nums))
         primes = [True] * (n + 1)
         for i in range(2, n // 2 + 1):
             if not primes[i]:
@@ -16,9 +17,7 @@ class Solution:
                     graph[j].append(i)
                     roots.add(i)
                 j += i
-        # print(graph)
         ans = self.traverse(graph, roots, nodes)
-        # print(ans)
         return max(ans)
 
     def traverse(self, graph, roots, real_nodes):

@@ -1,7 +1,9 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def factors(x):
-            sq = int(x**0.5)
+            sq = int(x ** 0.5)
             f = set()
             for i in range(2, sq + 1):
                 while x % i == 0:
@@ -10,7 +12,6 @@ class Solution:
             if x > 1:
                 f.add(x)
             return f
-
         n = len(A)
         parent = [i for i in range(n)]
         sz = [1] * n
@@ -22,17 +23,15 @@ class Solution:
             return parent[x]
 
         def union(x, y):
-            rx, ry = find(x), find(y)
+            (rx, ry) = (find(x), find(y))
             if rx != ry:
                 parent[rx] = ry
                 sz[ry] += sz[rx]
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             fs = factors(a)
-            # print(a,fs,mp)
             for f in fs:
                 if f in mp:
                     j = mp[f]
                     union(j, i)
                 mp[f] = i
-        # print(parent,mp)
         return max(sz)

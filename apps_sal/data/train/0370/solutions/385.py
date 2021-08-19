@@ -1,4 +1,5 @@
 class Solution:
+
     def primeDecompose(self, num):
         factor = 2
         prime_factors = []
@@ -20,14 +21,11 @@ class Solution:
                 return a
             else:
                 return find(factorMap[a])
-
         factorCount = {}
         maxCount = 0
         for n in A:
             primeFactors = self.primeDecompose(n)
-            # print(primeFactors)
             pivot = find(primeFactors[0])
-            # print(n,primeFactors[0],pivot,factorMap)
             if pivot not in factorCount:
                 factorCount[pivot] = 0
             factorCount[pivot] += 1
@@ -36,7 +34,5 @@ class Solution:
                 factorMap[root] = pivot
                 if root in factorCount and root != pivot:
                     factorCount[pivot] += factorCount[root]
-                # print(n,primeFactors[i],root,factorMap)
             maxCount = max(maxCount, factorCount[pivot])
-
         return maxCount

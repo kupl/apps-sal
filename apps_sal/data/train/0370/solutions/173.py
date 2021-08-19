@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         L = max(A) + 5
         spf = [i for i in range(L)]
@@ -34,8 +35,4 @@ class Solution:
             sz[find(ps[0])] += 1
             for i in range(len(ps) - 1):
                 union(ps[i], ps[i + 1])
-                # print(\"union between %d,%d\" % (ps[i], ps[i+1]))
-                # print(\"new size: \", sz[find(ps[i])])
-        # rint(rep)
-        # print(sz)
         return max(sz)

@@ -17,36 +17,21 @@ class Solution:
             else:
                 self.prime_divisors_cache[x] = set([i]) | self.prime_divisors(x // i, i)
                 return self.prime_divisors_cache[x]
-
         res = set()
         if x > 1:
             res.add(x)
-
         self.prime_divisors_cache[x] = res
         return self.prime_divisors_cache[x]
 
     def largestComponentSize(self, A: List[int]) -> int:
-        # related if NOT coprime
-
-        # we can keep associated a list of prime factors with each set
-
-        # integers in A are unique
-        # form a disjoint set structure
-        # node label -> parent
         parent = dict()
-        # representative label -> size of set
         size = dict()
-        # keep track of list of representatives for ease
         reps = set()
 
         def getRep(x):
-            # compress path to parent
             while parent[x] != x:
-                x, parent[x] = parent[x], parent[parent[x]]
+                (x, parent[x]) = (parent[x], parent[parent[x]])
             return x
-
-        # def getSize(x):
-        #     return size[getRep(x)]
 
         def add(x):
             parent[x] = x
@@ -59,12 +44,10 @@ class Solution:
             if x == y:
                 return
             if size[x] < size[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             size[x] += size.pop(y)
             parent[y] = x
             reps.remove(y)
-
-        # prime -> list of numbers it divides
         prime2dividend = {}
         for x in A:
             add(x)
@@ -73,11 +56,8 @@ class Solution:
                     prime2dividend[p] = [x]
                 else:
                     prime2dividend[p].append(x)
-
-        for _, xs in list(prime2dividend.items()):
-            # guaranteed to be one
+        for (_, xs) in list(prime2dividend.items()):
             first = xs.pop()
             for x in xs:
                 merge(first, x)
-
         return max([size[rep] for rep in reps])

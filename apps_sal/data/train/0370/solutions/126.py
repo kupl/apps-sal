@@ -1,17 +1,17 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
-        # [99,68,70,77,35,52,53,25,62]
         n = len(A)
         dsu = DSU(n)
         prime_dict = defaultdict(list)
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             primes = self.find_p(num)
             for p in primes:
                 prime_dict[p].append(i)
-        for _, p_list in list(prime_dict.items()):
+        for (_, p_list) in list(prime_dict.items()):
             for j in range(len(p_list)):
                 dsu.union(p_list[0], p_list[j])
-        return max(Counter(dsu.find(x) for x in range(n)).values())
+        return max(Counter((dsu.find(x) for x in range(n))).values())
 
     def find_p(self, x):
         for i in range(2, int(math.sqrt(x)) + 1):
@@ -21,6 +21,7 @@ class Solution:
 
 
 class DSU:
+
     def __init__(self, n):
         self.sets = list(range(n))
 
@@ -32,5 +33,5 @@ class DSU:
         return x
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         self.sets[yr] = xr
