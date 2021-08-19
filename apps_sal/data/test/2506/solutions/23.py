@@ -1,21 +1,15 @@
-# 過去の提出を見ながら解いた
-
 def main():
-    N, M = list(map(int, input().split()))
-    *a, = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
+    (*a,) = list(map(int, input().split()))
     a.sort()
 
     def count(mid) -> int:
-        cnt = 0  # (i,j)>=mid の個数
-        j = N  # j: iと組んでペア和>=midを満たすjの下限, 初期値は範囲外=条件を満たすjはない
+        cnt = 0
+        j = N
         for i in range(N):
             while j > 0 and a[i] + a[j - 1] >= mid:
                 j -= 1
-            # j==0 or a[i]+a[j]>=mid
-            # j==0
-            # 現在のiに対しすべてのaの要素が相方になる。
-            # 一度そのようなiに達したら、それ以降のiはすべてこの条件を満たす。
-            cnt += N - j  # iに対し[j,N)が相方になる
+            cnt += N - j
         return cnt
 
     def binary_search(*, ok: int, ng: int, is_ok: 'function') -> int:
@@ -28,7 +22,6 @@ def main():
             else:
                 ng = mid
         return ok
-
     ma = binary_search(ok=2 * 10 ** 5 + 1, ng=0, is_ok=lambda mid: count(mid) < M)
 
     def accumulate(a):
@@ -37,17 +30,14 @@ def main():
         for x in a:
             s += x
             yield s
-
-    *acc, = accumulate(a)
-
+    (*acc,) = accumulate(a)
     ans = 0
-    j = N  # j: iと組んでペア和>=midを満たすjの下限, 初期値は範囲外=条件を満たすjはない
+    j = N
     for i in range(N):
         while j > 0 and a[i] + a[j - 1] >= ma:
             j -= 1
-        ans += a[i] * (N - j) + acc[N] - acc[j]  # i側の寄与=ペア数,j側の寄与=acc
-    ans += (ma - 1) * (M - count(ma))  # ペア和maではMペア組めないが、ma-1で埋められる
-
+        ans += a[i] * (N - j) + acc[N] - acc[j]
+    ans += (ma - 1) * (M - count(ma))
     print(ans)
 
 

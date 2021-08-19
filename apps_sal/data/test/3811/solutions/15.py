@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from math import gcd, sqrt
 
@@ -21,19 +20,15 @@ def find_prime_factors(num):
 
 
 n = int(input())
-
-a, b = rint()
-
+(a, b) = rint()
 pf = find_prime_factors(a).union(find_prime_factors(b))
-
 for i in range(n - 1):
-    a, b = rint()
+    (a, b) = rint()
     pftmp = pf.copy()
     for f in pf:
         if a % f and b % f:
             pftmp.remove(f)
     pf = pftmp.copy()
-
 if len(pf):
     print(pf.pop())
 else:

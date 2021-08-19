@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import sys
 import heapq
 import bisect
@@ -22,11 +20,10 @@ def _sum(A, n, v, sums):
         idx = bisect.bisect_left(A, target)
         ss += sums[n] - sums[idx]
         ss += (n - idx) * a
-    # print(mins)
     return ss
 
 
-def solve(N: int, M: int, A: "List[int]"):
+def solve(N: int, M: int, A: 'List[int]'):
     A.sort()
     sums = [0]
     for a in A:
@@ -47,13 +44,13 @@ def solve(N: int, M: int, A: "List[int]"):
     return ret
 
 
-def solve_(N: int, M: int, A: "List[int]"):
+def solve_(N: int, M: int, A: 'List[int]'):
     A.sort(reverse=True)
     q = [(-A[0] * 2, 0, 0)]
     ret = 0
     cnt = 0
     while cnt < M:
-        s, i, j = heapq.heappop(q)
+        (s, i, j) = heapq.heappop(q)
         ret += -s
         cnt += 1
         print((i, j))
@@ -72,14 +69,15 @@ def solve_(N: int, M: int, A: "List[int]"):
 
 
 def main():
+
     def iterate_tokens():
         for line in sys.stdin:
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    M = int(next(tokens))  # type: int
-    A = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
+    N = int(next(tokens))
+    M = int(next(tokens))
+    A = [int(next(tokens)) for _ in range(N)]
     solve(N, M, A)
 
 

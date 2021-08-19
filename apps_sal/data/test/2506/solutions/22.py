@@ -1,17 +1,14 @@
 import sys
 from itertools import accumulate
 from bisect import bisect_left
-
-n, m, *a = list(map(int, sys.stdin.read().split()))
+(n, m, *a) = list(map(int, sys.stdin.read().split()))
 a.sort()
 
 
 def f(x):
-    # 幸福度がx未満となる組み合わせの個数を数える
     cnt = 0
     for ai in a:
         cnt += bisect_left(a, x - ai)
-    # 幸福度がx以上の組み合わせの個数がm未満かどうか
     return n * n - cnt < m
 
 
