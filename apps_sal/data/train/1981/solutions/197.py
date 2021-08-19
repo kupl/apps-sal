@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
-        '''
+        """
         Discuss Solution thats faster at detecting
         the number of requests that overlap an index.
 
@@ -56,18 +57,14 @@ class Solution:
         0 0 3 4 10 27
 
         sum of final = 44
-        '''
+        """
         t = [0] * (len(nums) + 1)
-
-        for start, end in requests:
+        for (start, end) in requests:
             t[start] += 1
             t[end + 1] -= 1
-
         for i in range(1, len(nums)):
             t[i] += t[i - 1]
-
         nums.sort()
-        t.pop()  # Makes it so t matches length with nums
+        t.pop()
         t.sort()
-
-        return sum(a * b for a, b in zip(nums, t)) % (10**9 + 7)
+        return sum((a * b for (a, b) in zip(nums, t))) % (10 ** 9 + 7)

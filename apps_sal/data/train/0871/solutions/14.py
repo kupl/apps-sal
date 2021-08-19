@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    r, c = map(int, input().split())
+    (r, c) = map(int, input().split())
     d = []
     s = 0
     for _ in range(r):
@@ -12,7 +12,7 @@ for _ in range(int(input())):
                 for k in range(j, c):
                     if d[i][k] == '#':
                         break
-                    elif d[i][k] == 'L' and not((k - j) & 1):
+                    elif d[i][k] == 'L' and (not k - j & 1):
                         s += 1
                 l = i + 1
                 k = j + 1
@@ -55,7 +55,7 @@ for _ in range(int(input())):
                 for m in range(i, r):
                     if d[m][j] == '#':
                         break
-                    elif d[m][j] == 'U' and not((m - i) & 1):
+                    elif d[m][j] == 'U' and (not m - i & 1):
                         s += 1
                 l = i + 1
                 k = j + 1

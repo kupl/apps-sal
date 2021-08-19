@@ -1,6 +1,6 @@
 from collections import deque
 from sys import stdin
-lines = deque(line.strip() for line in stdin.readlines())
+lines = deque((line.strip() for line in stdin.readlines()))
 
 
 def nextline():
@@ -8,7 +8,7 @@ def nextline():
 
 
 def types(cast, sep=None):
-    return tuple(cast(x) for x in strs(sep=sep))
+    return tuple((cast(x) for x in strs(sep=sep)))
 
 
 def ints(sep=None):
@@ -20,10 +20,9 @@ def strs(sep=None):
 
 
 def main():
-    # lines will now contain all of the input's lines in a list
     T = int(nextline())
     for testCase in range(1, T + 1):
-        n, m, k = ints()
+        (n, m, k) = ints()
         min_k = max(n, m)
         if min_k > k:
             print(-1)

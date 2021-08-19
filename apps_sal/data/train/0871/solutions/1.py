@@ -1,4 +1,3 @@
-# cook your dish here
 def count_ants(l, r, u, d):
     cnt = 0
     if l is False:
@@ -44,27 +43,25 @@ def solve(m, row, col):
                         cnt += 1
                     elif m[i][j + d] == '#':
                         rw = False
-
                 if uw and i - d >= 0:
                     if m[i - d][j] == 'D':
                         cnt += 1
                     elif m[i - d][j] == '#':
                         uw = False
-
                 if dw and i + d < row:
                     if m[i + d][j] == 'U':
                         cnt += 1
                     elif m[i + d][j] == '#':
                         dw = False
                 if cnt > 1:
-                    ans += (cnt * (cnt - 1)) // 2
+                    ans += cnt * (cnt - 1) // 2
     return ans
 
 
 def read():
     t = int(input())
     for i in range(t):
-        r, c = list(map(int, input().strip().split()))
+        (r, c) = list(map(int, input().strip().split()))
         m = [[] for i in range(r)]
         for i in range(r):
             s = input().strip()

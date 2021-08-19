@@ -1,5 +1,4 @@
-# cook your dish here
-'''test=int(input())
+"""test=int(input())
 for _ in range(test):
     r,c=map(int,input().split())
     
@@ -56,12 +55,11 @@ for _ in range(test):
         temp=[]
         for x in range(length):
             if(pointer<=len(parr[x])):
-                temp.append(parr[x][pointer])'''
-
+                temp.append(parr[x][pointer])"""
 from collections import defaultdict as df
 t = int(input())
 for x in range(t):
-    r, c = list(map(int, input().split()))
+    (r, c) = list(map(int, input().split()))
     p = df(list)
     a = [[0] * c for i in range(r)]
     for i in range(r):
@@ -72,7 +70,6 @@ for x in range(t):
         for j in range(c):
             timer = 0
             if a[i][j] == 'U':
-
                 for k in range(i - 1, -1, -1):
                     if a[k][j] != '#':
                         timer += 1
@@ -100,13 +97,11 @@ for x in range(t):
                         p[str(i) + ' ' + str(k)].append(timer)
                     else:
                         break
-    # print(p)
     total = 0
-    # print(p)
     for i in p:
         y = set(p[i])
         for j in y:
             if p[i].count(j) > 1:
                 n1 = p[i].count(j)
-                total += (n1 * (n1 - 1)) // 2
+                total += n1 * (n1 - 1) // 2
     print(total)

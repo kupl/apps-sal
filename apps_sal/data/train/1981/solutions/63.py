@@ -1,15 +1,13 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         pts = []
-        for start, end in requests:
+        for (start, end) in requests:
             pts.append((start, 1))
-            pts.append((end + 1, -1))  # open bracket
-
+            pts.append((end + 1, -1))
         pts.sort(key=lambda x: (x[0], x[1]))
-
         N = len(nums)
         cnts = []
-        # 2 pointers
         j = 0
         cur = 0
         for i in range(N):
@@ -27,11 +25,10 @@ class Solution:
         nums.sort()
         ans = 0
         MOD = 10 ** 9 + 7
-        for c, n in zip(cnts, nums):
+        for (c, n) in zip(cnts, nums):
             ans += c * n
             ans %= MOD
         return ans
-
         N = len(nums)
         tree = [0] * (4 * N)
         lazy = [0] * (4 * N)
@@ -50,7 +47,7 @@ class Solution:
                     _push_down(rt, lazy[rt])
                 lazy[rt] = 0
             if lo >= i and hi <= j:
-                tree[rt] += (hi - lo + 1)
+                tree[rt] += hi - lo + 1
                 if lo != hi:
                     _push_down(rt, 1)
                 return
@@ -72,19 +69,16 @@ class Solution:
                 return query(rt * 2 + 1, lo, mid, i)
             else:
                 return query(rt * 2 + 2, mid + 1, hi, i)
-
         MOD = 10 ** 9 + 7
-        for i, j in requests:
+        for (i, j) in requests:
             update_range_by_one(0, 0, N - 1, i, j)
-
         cnts = []
         for i in range(N):
             cnts.append(query(0, 0, N - 1, i))
         cnts.sort()
         nums.sort()
-
         ans = 0
-        for c, n in zip(cnts, nums):
+        for (c, n) in zip(cnts, nums):
             ans += c * n
             ans %= MOD
         return ans

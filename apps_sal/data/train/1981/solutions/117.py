@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
-        '''
+        """
         Tricky part is finding the permutation that will result in maximum
         sum of the requests
 
@@ -46,40 +47,34 @@ class Solution:
 
         Your implementation is not actually O(nlogn) see
         comment in code
-        '''
+        """
         if not nums or not requests:
             return 0
-
         overlaps = [(i, 0) for i in range(len(nums) + 1)]
-        for start, end in requests:
+        for (start, end) in requests:
             overlaps[start] = (overlaps[start][0], overlaps[start][1] + 1)
             overlaps[end + 1] = (overlaps[end + 1][0], overlaps[end + 1][1] - 1)
-
         for i in range(1, len(overlaps)):
             overlaps[i] = (overlaps[i][0], overlaps[i][1] + overlaps[i - 1][1])
-
         overlaps.pop()
         overlaps.sort(key=lambda tup: tup[1], reverse=True)
         nums.sort()
         max_permutation = [0] * len(nums)
-        for i, freq in overlaps:
+        for (i, freq) in overlaps:
             max_permutation[i] = nums[-1]
             nums.pop()
-
         prefix_sum = [max_permutation[0]]
         for i in range(1, len(max_permutation)):
             prefix_sum.append(prefix_sum[i - 1] + max_permutation[i])
-
         sum = 0
-        for start, end in requests:
+        for (start, end) in requests:
             right = prefix_sum[end]
             left = 0 if start == 0 else prefix_sum[start - 1]
             sum += right - left
-
-        return sum % (10**9 + 7)
+        return sum % (10 ** 9 + 7)
 
     def maxSumRangeQuery_1(self, nums: List[int], requests: List[List[int]]) -> int:
-        '''
+        """
         Discuss Solution thats faster at detecting
         the number of requests that overlap an index.
 
@@ -135,18 +130,14 @@ class Solution:
         0 0 3 4 10 27
 
         sum of final = 44
-        '''
+        """
         t = [0] * (len(nums) + 1)
-
-        for start, end in requests:
+        for (start, end) in requests:
             t[start] += 1
             t[end + 1] -= 1
-
         for i in range(1, len(nums)):
             t[i] += t[i - 1]
-
         nums.sort()
-        t.pop()  # Makes it so t matches length with nums
+        t.pop()
         t.sort()
-
-        return sum(a * b for a, b in zip(nums, t)) % (10**9 + 7)
+        return sum((a * b for (a, b) in zip(nums, t))) % (10 ** 9 + 7)

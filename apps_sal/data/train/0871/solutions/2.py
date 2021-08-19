@@ -5,7 +5,7 @@ def AllDead(arr):
     var = 1
     for x in arr:
         for y in x:
-            if "U" in y or "D" in y or "L" in y or "R" in y:
+            if 'U' in y or 'D' in y or 'L' in y or ('R' in y):
                 var = 0
     return var
 
@@ -15,13 +15,13 @@ def checkMeet(arr):
     for x in arr:
         for y in x:
             if len(y) >= 2 and '-' not in y:
-                ans += (len(y) * (len(y) - 1)) // 2
+                ans += len(y) * (len(y) - 1) // 2
     return ans
 
 
 t = int(input())
 for i in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     lol = [['#']] * (m + 2)
     arr = [lol]
     for j in range(n):

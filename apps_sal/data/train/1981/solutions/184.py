@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         n = len(nums)
         A = nums
@@ -8,11 +9,8 @@ class Solution:
             end = r[1]
             count[start] += 1
             count[end + 1] -= 1
-
         for i in range(1, n + 1):
             count[i] += count[i - 1]
-        # print(count)
-
         count = sorted(count, reverse=True)
         nums = sorted(nums, reverse=True)
         res = 0
@@ -20,4 +18,4 @@ class Solution:
             if count[i] == 0:
                 break
             res += nums[i] * count[i]
-        return res % (10**9 + 7)
+        return res % (10 ** 9 + 7)
