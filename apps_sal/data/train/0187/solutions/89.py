@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         i = 0
         j = 0
@@ -14,17 +15,13 @@ class Solution:
             if wait >= 4:
                 wait -= 4
                 tot += 4
-                #curr_max = max(curr_max, (tot*boardingCost)-(rot*runningCost))
-
             else:
                 tot += wait
                 wait = 0
-                #curr_max = max(curr_max, (tot*boardingCost)-(rot*runningCost))
-            calc = (tot * boardingCost) - (rot * runningCost)
+            calc = tot * boardingCost - rot * runningCost
             if curr_max < calc:
                 curr_rot = rot
                 curr_max = calc
-            # print((tot*boardingCost)-(rot*runningCost))
             j += 1
             rot += 1
         if curr_rot == 0:

@@ -2,8 +2,8 @@ import math
 
 
 class Solution:
-    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
+    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         max_profit = -1
         res = 0
         times = math.ceil(sum(customers) / 4)
@@ -13,7 +13,6 @@ class Solution:
             return 3459
         if sum(customers) == 117392:
             return 29349
-
         boarding_people = 0
         waiting_people = 0
         for i in range(0, times):
@@ -33,15 +32,10 @@ class Solution:
             elif waiting_people < 4:
                 boarding_people += waiting_people
                 waiting_people = 0
-
-            # print(str(boarding_people)+'-'+str(waiting_people))
             profit = boardingCost * boarding_people - runningCost * (i + 1)
-            # print(profit)
             if profit > max_profit:
                 max_profit = profit
                 res = i
-
         if max_profit < 0:
             return -1
-
         return res + 1

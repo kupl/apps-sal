@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = []
         wheel = [0, 0, 0, 0]
@@ -6,8 +7,7 @@ class Solution:
         t = 0
         maxt = len(customers)
         curProfit = 0
-        while (wait + sum(wheel) or t < maxt):
-
+        while wait + sum(wheel) or t < maxt:
             if wait >= 4:
                 wheel = [3, 3, 3, 3]
                 wait -= 4
@@ -28,17 +28,14 @@ class Solution:
                 wheel = [max(0, wheel[0] - 1), max(0, wheel[1] - 1), max(0, wheel[2] - 1), max(0, wheel[3] - 1)]
                 wait = 0
             curProfit -= runningCost
-            # print(wait, wheel, curProfit)
             t += 1
             if t < maxt:
                 wait += customers[t]
             profit.append(curProfit)
-
         res = -1
         maxprofit = 0
         for i in range(len(profit)):
             if profit[i] > maxprofit:
                 res = i + 1
                 maxprofit = profit[i]
-
         return res

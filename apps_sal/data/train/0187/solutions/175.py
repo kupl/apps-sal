@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = [0]
         left = 0
@@ -17,7 +18,6 @@ class Solution:
             if newProfit > maxProfit:
                 maxProfit = newProfit
                 maxMid = i
-        # print(profit)
         if left == 0:
             return maxMid
         elif left < 4:
@@ -35,10 +35,9 @@ class Solution:
                 lastProfit = rotationEnd + lastRun * boardingCost - runningCost
                 if maxProfit >= rotationEnd:
                     return maxMid + 1 if maxProfit > 0 else -1
+                elif rotationEnd >= lastProfit:
+                    return len(customers) + rotations if rotationEnd > 0 else -1
                 else:
-                    if rotationEnd >= lastProfit:
-                        return len(customers) + rotations if rotationEnd > 0 else -1
-                    else:
-                        return len(customers) + rotations + 1 if lastProfit > 0 else -1
+                    return len(customers) + rotations + 1 if lastProfit > 0 else -1
             else:
                 return maxMid + 1 if maxProfit > 0 else -1

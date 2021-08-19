@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         currentProfit = 0
         highestProfitSoFar = 0
@@ -14,13 +15,11 @@ class Solution:
             totalBoarded += min(4, currentWaiting)
             currentProfit = totalBoarded * boardingCost - timesStopped * runningCost
             currentWaiting -= min(4, currentWaiting)
-            # print(currentProfit)
             if currentProfit > highestProfitSoFar:
                 highestProfitSoFar = currentProfit
                 stoppedForMaxProft = timesStopped
             timesStopped += 1
             i += 1
-        # print(highestProfitSoFar)
         if stoppedForMaxProft == 0:
             return -1
         return stoppedForMaxProft
