@@ -4,14 +4,18 @@ NTC here
 from sys import stdin
 
 
-def iin(): return int(stdin.readline())
+def iin():
+    return int(stdin.readline())
 
 
-def lin(): return list(map(int, stdin.readline().split()))
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
 class Disjoint_set:
+
     class node:
+
         def __init__(self, a):
             self.value = a
             self.p = self
@@ -49,32 +53,25 @@ class Disjoint_set:
                 pr[vl] += 1
             else:
                 pr[vl] = 1
-
         return pr
 
-
-# range = xrange
-# input = raw_input
-# print("Case #{}: {} {}".format(i, n + m, n * m))
 
 def main():
     n = iin()
     s = [''.join(list(set(input()))) for i in range(n)]
     adj = [[] for _ in range(26)]
-
     s = list(set(s))
     l = len(s)
-    for k, i in enumerate(s):
+    for (k, i) in enumerate(s):
         for j in i:
             adj[ord(j) - ord('a')].append(k + 1)
     ds = Disjoint_set(l)
-    #print(s, adj)
     done = set()
     for i in range(26):
         if adj[i]:
             x = adj[i][0]
             for j in adj[i]:
-                if x != j and (x, j) not in done and (j, x) not in done:
+                if x != j and (x, j) not in done and ((j, x) not in done):
                     ds.union(x, j)
                     done.add((x, j))
     sl = ds.solution()

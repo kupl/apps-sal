@@ -1,13 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import sys
 
 
 def main():
-    a, d = [float(x) * 10000 for x in input().split(' ')]
+    (a, d) = [float(x) * 10000 for x in input().split(' ')]
     ans = []
-
     for i in range(1, int(input()) + 1):
         t = d * i % (a * 4)
         if t <= a:
@@ -23,12 +19,11 @@ def main():
             x = 0
             y = (a - (t - a * 3)) / 10000
         ans.append('{} {}'.format(x, y))
-
     print('\n'.join(ans))
 
 
 def __starting_point():
-    return(main())
+    return main()
 
 
 __starting_point()

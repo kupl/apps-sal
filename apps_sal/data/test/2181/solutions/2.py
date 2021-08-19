@@ -1,15 +1,11 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import sys
 
 
 def main():
-    a, d = map(float, input().split(' '))
+    (a, d) = map(float, input().split(' '))
     a *= 10000
     d *= 10000
     ans = []
-
     for i in range(1, int(input()) + 1):
         cur_round_pos = d * i % (a * 4)
         if cur_round_pos <= a:
@@ -29,7 +25,7 @@ def main():
 
 
 def __starting_point():
-    return(main())
+    return main()
 
 
 __starting_point()

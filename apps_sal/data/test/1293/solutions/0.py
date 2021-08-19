@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 try:
     while True:
         n = int(input())

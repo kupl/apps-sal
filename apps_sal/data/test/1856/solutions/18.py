@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
 import sys
-
-#lines = stdin.readlines()
 
 
 def rint():
@@ -17,7 +14,6 @@ def oint():
 
 
 n = oint()
-
 node = dict()
 for _ in range(n):
     s = set(input())
@@ -45,5 +41,4 @@ for k in node:
         continue
     ans += 1
     dfs(k)
-
 print(ans)

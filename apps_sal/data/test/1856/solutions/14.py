@@ -1,20 +1,52 @@
-# -*- coding: utf-8 -*-
-
 import sys
 
 
-def input(): return sys.stdin.readline().strip()
-def list2d(a, b, c): return [[c] * b for i in range(a)]
-def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
-def list4d(a, b, c, d, e): return [[[[e] * d for j in range(c)] for j in range(b)] for i in range(a)]
-def ceil(x, y=1): return int(-(-x // y))
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(N=None): return list(MAP()) if N is None else [INT() for i in range(N)]
-def Yes(): print('Yes')
-def No(): print('No')
-def YES(): print('YES')
-def NO(): print('NO')
+def input():
+    return sys.stdin.readline().strip()
+
+
+def list2d(a, b, c):
+    return [[c] * b for i in range(a)]
+
+
+def list3d(a, b, c, d):
+    return [[[d] * c for j in range(b)] for i in range(a)]
+
+
+def list4d(a, b, c, d, e):
+    return [[[[e] * d for j in range(c)] for j in range(b)] for i in range(a)]
+
+
+def ceil(x, y=1):
+    return int(-(-x // y))
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST(N=None):
+    return list(MAP()) if N is None else [INT() for i in range(N)]
+
+
+def Yes():
+    print('Yes')
+
+
+def No():
+    print('No')
+
+
+def YES():
+    print('YES')
+
+
+def NO():
+    print('NO')
 
 
 sys.setrecursionlimit(10 ** 9)
@@ -40,7 +72,6 @@ class UnionFind:
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]
@@ -65,18 +96,16 @@ class UnionFind:
 
 N = INT()
 A = [input() for i in range(N)]
-
 S = set()
 for a in A:
     for c in a:
         S.add(c)
 tonum = {}
-for i, c in enumerate(list(S)):
+for (i, c) in enumerate(list(S)):
     tonum[c] = i
-
 uf = UnionFind(len(tonum))
 for a in A:
-    for i, c in enumerate(a[1:], 1):
+    for (i, c) in enumerate(a[1:], 1):
         x = tonum[a[i]]
         y = tonum[a[i - 1]]
         if not uf.is_same(x, y):

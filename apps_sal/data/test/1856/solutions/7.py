@@ -1,9 +1,9 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
 
 
 class DisjointSet:
+
     def __init__(self, n):
         self.par = [i for i in range(n)]
         self.size = [1] * n
@@ -25,7 +25,6 @@ class DisjointSet:
     def unite(self, x, y):
         x = self.root(x)
         y = self.root(y)
-
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
         else:
@@ -38,13 +37,13 @@ n = int(input())
 password = []
 DS = DisjointSet(26)
 seen = set()
-orda = ord("a")
+orda = ord('a')
 for i in range(n):
     password = input().rstrip()
     if len(password) == 1:
         seen.add(password)
         continue
-    for ch1, ch2 in zip(password, password[1:]):
+    for (ch1, ch2) in zip(password, password[1:]):
         DS.unite(ord(ch1) - orda, ord(ch2) - orda)
         seen.add(ch1)
         seen.add(ch2)

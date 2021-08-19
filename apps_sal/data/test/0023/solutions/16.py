@@ -1,12 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 def main():
     a = list(input())
     b = list(input())
     n = len(a)
-    if (n < len(b)):
+    if n < len(b):
         a.sort()
         a.reverse()
         print(''.join(a))
