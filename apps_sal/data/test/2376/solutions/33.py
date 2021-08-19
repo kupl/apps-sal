@@ -1,8 +1,5 @@
-# coding: utf-8
-# Your code here!
 def saiki(value, HP, num):
     if num == 0:
-        # print(HP//base)
         value += wa[0][min(HP // base, len(wa[0]) - 1)]
         ans.append(value)
     else:
@@ -14,28 +11,18 @@ def saiki(value, HP, num):
     return
 
 
-N, W = list(map(int, input().split()))
-
+(N, W) = list(map(int, input().split()))
 lis = [[] for i in range(4)]
-
 for i in range(N):
-    w, v = list(map(int, input().split()))
+    (w, v) = list(map(int, input().split()))
     if i == 0:
         base = w
     lis[w - base].append(v)
-
 lis = list([sorted(x, reverse=True) for x in lis])
-
 wa = [[0] for i in range(4)]
-
 for i in range(len(wa)):
     for item in lis[i]:
         wa[i].append(wa[i][-1] + item)
-
-# print(wa)
-
 ans = []
 saiki(0, W, 3)
-
-
-print((max(ans)))
+print(max(ans))

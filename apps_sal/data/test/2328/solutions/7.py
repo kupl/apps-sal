@@ -1,11 +1,10 @@
-# python template for atcoder1
 import sys
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
 
 
 def solve2():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     L = list(map(int, input().split()))
     ans = float('inf')
     ans_x = -1

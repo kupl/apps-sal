@@ -9,34 +9,38 @@ from string import ascii_lowercase, ascii_uppercase, digits
 from fractions import gcd
 
 
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
 
 
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
-
-N, W = MAP()
+(N, W) = MAP()
 wv = [LIST() for _ in range(N)]
 w0 = wv[0][0]
-
 dic = defaultdict(list)
-for w, v in wv:
+for (w, v) in wv:
     dic[w].append(v)
-
 for key in dic:
     dic[key].sort(reverse=True)
     dic[key] = [0] + dic[key]
     dic[key] = list(accumulate(dic[key]))
-
 for x in [w0, w0 + 1, w0 + 2, w0 + 3]:
     if not dic[x]:
         dic[x] = [0]
-# print(dic)
-
 ans = 0
 for a in range(len(dic[w0])):
     for b in range(len(dic[w0 + 1])):

@@ -1,20 +1,15 @@
 from collections import defaultdict
-
-N, W = list(map(int, input().split()))
+(N, W) = list(map(int, input().split()))
 wv = defaultdict(list)
 for _ in range(N):
-    w, v = list(map(int, input().split()))
+    (w, v) = list(map(int, input().split()))
     wv[w].append(v)
-
 for k in list(wv.keys()):
     wv[k].sort(reverse=True)
-
 kw = list(wv.keys())
 kw.sort()
 l = [len(wv[k]) for k in kw]
 l = l + (4 - len(l)) * [0]
-# print(l)
-
 ans = 0
 for i in range(l[0] + 1):
     wi = kw[0] * i

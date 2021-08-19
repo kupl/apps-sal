@@ -1,16 +1,14 @@
 import numpy as np
-n, W = list(map(int, input().split()))
+(n, W) = list(map(int, input().split()))
 wv = [list(map(int, input().split()))]
 w0 = wv[0][0] - 1
 wv[0][0] = 1
-# すべてのwからw0を引く
 for _ in range(n - 1):
-    w, v = list(map(int, input().split()))
+    (w, v) = list(map(int, input().split()))
     wv.append([w - w0, v])
 dp = np.full((n + 1, 401), 0, int)
-# dp[k][w]:k個で重さwでの最大価値
 dp[0] = 0
-for w, v in wv:
+for (w, v) in wv:
     for i in range(n):
         dp[n - i][w:] = np.maximum(dp[n - i][w:], dp[n - i - 1][:-w] + v)
 ans = 0

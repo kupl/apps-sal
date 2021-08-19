@@ -1,7 +1,4 @@
-# 入力
-a, b, c = list(map(int, input().split()))
-
-# 2等分できるならYes、できないならNo
+(a, b, c) = list(map(int, input().split()))
 if a + b == c:
     print('Yes')
 elif a + c == b:
