@@ -1,16 +1,9 @@
-# coding: utf-8
 from heapq import heappop, heappush
 import sys
 from operator import itemgetter
 sysread = sys.stdin.readline
 read = sys.stdin.read
-#from collections import defaultdict
-sys.setrecursionlimit(10**7)
-#import math
-#from itertools import combinations, product
-# import bisect# lower_bound etc
-#import numpy as np
-# import queue# queue,get(), queue.put()
+sys.setrecursionlimit(10 ** 7)
 
 
 def run():
@@ -19,39 +12,32 @@ def run():
     ways = []
     dic = {'(': 1, ')': -1}
     SS = read().split()
-
     for S in SS:
         path = [0]
         for s in S:
             path.append(path[-1] + dic[s])
         ways.append((path[-1], min(path)))
-
-    ways_pos = sorted([(a, b) for a, b in ways if a >= 0], key=lambda x: x[1], reverse=True)
-    ways_neg = sorted([(a, b) for a, b in ways if a < 0], key=lambda x: (x[0] - x[1]), reverse=True)
-
+    ways_pos = sorted([(a, b) for (a, b) in ways if a >= 0], key=lambda x: x[1], reverse=True)
+    ways_neg = sorted([(a, b) for (a, b) in ways if a < 0], key=lambda x: x[0] - x[1], reverse=True)
     idx = list(range(len(ways_pos)))
-
-    for go, max_depth in ways_pos:
-        if current + max_depth >= 0:
-            current += go
-        else:
-            print("No")
-            return None
-
-    tmp = []
-    for go, max_depth in ways_neg:
-        if current + max_depth >= 0:
-            current += go
-        else:
-            tmp.append((go, max_depth))
-
-    for go, max_depth in tmp:
+    for (go, max_depth) in ways_pos:
         if current + max_depth >= 0:
             current += go
         else:
             print('No')
             return None
-
+    tmp = []
+    for (go, max_depth) in ways_neg:
+        if current + max_depth >= 0:
+            current += go
+        else:
+            tmp.append((go, max_depth))
+    for (go, max_depth) in tmp:
+        if current + max_depth >= 0:
+            current += go
+        else:
+            print('No')
+            return None
     if current == 0:
         print('Yes')
     else:

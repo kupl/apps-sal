@@ -10,7 +10,6 @@ while 1 == 1:
     m2 = max(u[i1], u[i2])
     if m > m2:
         break
-    #print(m, m1, m2)
     if m > m1:
         p.append(m2)
         m = m2
@@ -31,6 +30,5 @@ while 1 == 1:
             ans.append('R')
     if i1 > i2:
         break
-    # print(p)
 print(len(ans))
 print(''.join(ans))

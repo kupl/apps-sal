@@ -1,14 +1,11 @@
 from collections import deque
 N = int(input())
 E = [[] for _ in range(N)]
-
 for i in range(N - 1):
-    a, b = list(map(int, input().split()))
-    a, b = a - 1, b - 1
-    # 出力のために、何番目のEdgeだったかを保有させる必要がある
+    (a, b) = list(map(int, input().split()))
+    (a, b) = (a - 1, b - 1)
     E[a].append([i, b])
     E[b].append([i, a])
-
 k = 0
 for e in E:
     k = max(k, len(e))
@@ -21,15 +18,14 @@ def bfs():
     d = deque()
     d.append([0, -1])
     while d:
-        now, edge_color = d.pop()
+        (now, edge_color) = d.pop()
         visited[now] = True
         cand_color = 1
-        for i, nxt in E[now]:
-            #print(i, nxt, visited[i], colors[i])
+        for (i, nxt) in E[now]:
             if visited[nxt]:
-                continue  # TreeでBFSだとここは通らない・・・？
+                continue
             if colors[i] > -1:
-                assert("１エッジに２色塗ろうとする・・・？")
+                assert '１エッジに２色塗ろうとする・・・？'
                 continue
             if cand_color == edge_color:
                 cand_color += 1
@@ -40,6 +36,5 @@ def bfs():
 
 
 colors = bfs()
-
 for i in range(len(colors)):
     print(colors[i])

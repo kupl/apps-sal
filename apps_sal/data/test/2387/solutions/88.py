@@ -11,37 +11,34 @@ def main():
         now = 0
         m = 0
         for t in s:
-            if t == "(":
+            if t == '(':
                 now += 1
             else:
                 now -= 1
             if now < m:
                 m = now
-            # print(t, now)
         if now >= 0:
             Up.append((m, now))
         else:
             Down.append((m - now, -now))
     up = 0
     Up.sort(reverse=True)
-    for m, inc in Up:
+    for (m, inc) in Up:
         if up + m < 0:
-            print("No")
+            print('No')
             return
         up += inc
-
     down = 0
     Down.sort(reverse=True)
-    # print(Up, Down)
-    for m, dec in Down:
+    for (m, dec) in Down:
         if down + m < 0:
-            print("No")
+            print('No')
             return
         down += dec
     if up != down:
-        print("No")
+        print('No')
         return
-    print("Yes")
+    print('Yes')
 
 
 def __starting_point():
