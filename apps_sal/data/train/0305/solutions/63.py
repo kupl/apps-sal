@@ -1,6 +1,9 @@
 class Solution:
+
     def distinctEchoSubstrings(self, text: str) -> int:
-        def check(s): return s[:len(s) // 2] == s[len(s) // 2:]
+
+        def check(s):
+            return s[:len(s) // 2] == s[len(s) // 2:]
         ret = set()
         n = len(text)
         for l in range(2, n + 1, 2):
@@ -8,5 +11,4 @@ class Solution:
                 s = text[start:start + l]
                 if check(text[start:start + l]):
                     ret.add(s)
-        # print(ret)
         return len(ret)

@@ -45,22 +45,4 @@ def num_non_bouncy(x):
 def total_inc_dec(x):
     if x == 0:
         return 1
-    return sum(num_non_bouncy(a) for a in range(1, x + 1)) + 1
-
-    #count = 0
-    # for i in xrange(10**x):
-    #    s = str(i)
-    #    if len(s)==1:
-    #        count += 1
-    #        continue
-    #    elif all(map(lambda x: x[0]==x[1], zip(s, s[1:]))):
-    #        count += 1
-    #        continue
-    #    elif all(map(lambda x: x[0]>=x[1], zip(s, s[1:]))):
-    #        if s[-1] == '0':
-    #            count += 1
-    #        else:
-    #            count += 2
-    # return count
-
-    # your code here
+    return sum((num_non_bouncy(a) for a in range(1, x + 1))) + 1

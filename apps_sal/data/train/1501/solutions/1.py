@@ -1,9 +1,8 @@
-# cook your dish here
-n, q = map(int, input().split())
-edges = 2 * (2**n - 1)
+(n, q) = map(int, input().split())
+edges = 2 * (2 ** n - 1)
 side_nodes = n + 1
 top_nodes = 1
-bottom_nodes = 2**n
+bottom_nodes = 2 ** n
 for i in range(q):
     query = list(map(int, input().split()))
     if query[0] == 1:

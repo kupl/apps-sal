@@ -1,10 +1,9 @@
-# cook your dish here
 import math
 t = int(input())
 for _ in range(t):
     xf = int(input())
     ans = 0
-    x, y = 0, 0
+    (x, y) = (0, 0)
     while x <= xf:
         p = int(math.sqrt(y))
         if p * p > y:
