@@ -1,7 +1,6 @@
-# cf_contests E66
 import sys
 input = sys.stdin.readline
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = 0
 p = []

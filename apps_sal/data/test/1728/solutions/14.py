@@ -1,11 +1,11 @@
 N = int(input())
 con = [0]
 vert = [i for i in range(1, N + 1)]
-a = input().split(" ")
+a = input().split(' ')
 for i in range(N - 1):
     con.append(int(a[i]) - 1)
 color = []
-a = input().split(" ")
+a = input().split(' ')
 for i in range(N):
     color.append(int(a[i]))
 cur = [color[0] for i in range(N)]
@@ -17,6 +17,3 @@ for i in range(1, N):
         steps += 1
         cur[i] = color[i]
 print(steps)
-# print(con)
-# print(color)
-# print(vert)

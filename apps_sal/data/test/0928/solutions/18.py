@@ -1,13 +1,10 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Sep 17 01:45:21 2020
 
 @author: liang
 """
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = [0] + [int(x) for x in input().split()] + [0]
-
 ans = 0
 j = 0
 tmp = 0
