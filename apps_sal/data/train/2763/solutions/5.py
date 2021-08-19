@@ -2,11 +2,6 @@ import math
 
 
 def sol_equa(n):
-    # your code
-    # x - 2y ...f1
-    # x + 2y ...f2
-    # A = sum(f1, f2) = 2x divisible by 2
-    # B = diff(f1, f2) = 4y divisible by 4
     result = []
     for i in range(1, int(math.ceil(math.sqrt(n))) + 1):
         if n % i == 0:

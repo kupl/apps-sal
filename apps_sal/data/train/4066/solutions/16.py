@@ -1,5 +1,4 @@
 def string_to_array(s):
-    # your code here
     result = []
     t = ''
     e = ' '

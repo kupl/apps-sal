@@ -1,6 +1,5 @@
 def string_to_array(s):
-    # your code here
-    return s.split(" ")
+    return s.split(' ')
 
 
-string_to_array("Basic tests")
+string_to_array('Basic tests')
