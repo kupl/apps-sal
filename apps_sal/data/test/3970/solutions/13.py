@@ -1,5 +1,4 @@
-# coding=utf-8
-n, k = list(map(int, input().split(' ')))
+(n, k) = list(map(int, input().split(' ')))
 a = list(map(int, input().split(' ')))
 a.sort()
 s = []
@@ -10,7 +9,7 @@ for i in a:
         s.append(i)
         d[i] = 1
         m += 1
-    elif (i // k) not in d:
+    elif i // k not in d:
         s.append(i)
         d[i] = 1
         m += 1

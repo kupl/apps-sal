@@ -9,7 +9,6 @@ class DeletableHeapq:
         self.size = 0
         self._set = set()
         self._heap = []
-
         if initial_values:
             for v in initial_values:
                 self.push(v)
@@ -55,43 +54,40 @@ class DeletableHeapq:
 
 
 def main():
-    # https://atcoder.jp/contests/abc170/tasks/abc170_e
-    def encode_kindy(x, y): return (x << 18) + y
-    def decode_kindy(x): return (x >> 18, x & ((1 << 18) - 1))
-    def encode_smarts(x, y, z): return (x << 36) + (y << 18) + z
-    def decode_smarts_rate(x): return x >> 36
 
-    N, _, *X = list(map(int, open(0).read().split()))
-    AB, CD = X[: 2 * N], X[2 * N:]
-    rate, belonging = [0] * (N + 1), [0] * (N + 1)
-    kindy = [DeletableHeapq(is_max_heap=True) for _ in range(200_001)]
+    def encode_kindy(x, y):
+        return (x << 18) + y
 
-    for i, (a, b) in enumerate(zip(*[iter(AB)] * 2), 1):
-        rate[i], belonging[i] = a, b
+    def decode_kindy(x):
+        return (x >> 18, x & (1 << 18) - 1)
+
+    def encode_smarts(x, y, z):
+        return (x << 36) + (y << 18) + z
+
+    def decode_smarts_rate(x):
+        return x >> 36
+    (N, _, *X) = list(map(int, open(0).read().split()))
+    (AB, CD) = (X[:2 * N], X[2 * N:])
+    (rate, belonging) = ([0] * (N + 1), [0] * (N + 1))
+    kindy = [DeletableHeapq(is_max_heap=True) for _ in range(200001)]
+    for (i, (a, b)) in enumerate(zip(*[iter(AB)] * 2), 1):
+        (rate[i], belonging[i]) = (a, b)
         kindy[b].push(encode_kindy(a, i))
-
-    smart_infants = DeletableHeapq(
-        *(encode_smarts(*decode_kindy(k.top), i) for i, k in enumerate(kindy) if k.size)
-    )
+    smart_infants = DeletableHeapq(*(encode_smarts(*decode_kindy(k.top), i) for (i, k) in enumerate(kindy) if k.size))
     res = []
-    for c, next_k in zip(*[iter(CD)] * 2):
+    for (c, next_k) in zip(*[iter(CD)] * 2):
         prev_k = belonging[c]
         belonging[c] = next_k
-
         for k in (prev_k, next_k):
             if kindy[k].size:
                 smart_infants.delete(encode_smarts(*decode_kindy(kindy[k].top), k))
-
         kindy[prev_k].delete(encode_kindy(rate[c], c))
         kindy[next_k].push(encode_kindy(rate[c], c))
-
         for k in (prev_k, next_k):
             if kindy[k].size:
                 smart_infants.push(encode_smarts(*decode_kindy(kindy[k].top), k))
-
         res.append(decode_smarts_rate(smart_infants.top))
-
-    print(("\n".join(map(str, res))))
+    print('\n'.join(map(str, res)))
 
 
 def __starting_point():

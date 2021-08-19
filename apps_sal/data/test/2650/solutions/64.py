@@ -10,7 +10,6 @@ class DeletableHeapq:
         self.size = 0
         self._set = set()
         self._heap = []
-
         if initial_values:
             for v in initial_values:
                 self.push(v)
@@ -62,36 +61,28 @@ class DeletableHeapq:
 
 
 def main():
-    # https://atcoder.jp/contests/abc170/tasks/abc170_e
-    N, _, *X = list(map(int, open(0).read().split()))
-    AB, CD = X[: 2 * N], X[2 * N:]
-    rate, belonging = [0] * (N + 1), [0] * (N + 1)
-    kindy = [DeletableHeapq(is_max_heap=True) for _ in range(200_001)]
-
-    for i, (a, b) in enumerate(zip(*[iter(AB)] * 2), 1):
-        rate[i], belonging[i] = (a << 18) + i, b
+    (N, _, *X) = list(map(int, open(0).read().split()))
+    (AB, CD) = (X[:2 * N], X[2 * N:])
+    (rate, belonging) = ([0] * (N + 1), [0] * (N + 1))
+    kindy = [DeletableHeapq(is_max_heap=True) for _ in range(200001)]
+    for (i, (a, b)) in enumerate(zip(*[iter(AB)] * 2), 1):
+        (rate[i], belonging[i]) = ((a << 18) + i, b)
         kindy[b].push(rate[i])
-
     smart_infants = DeletableHeapq(*(k.top for k in kindy if k.size))
     res = []
-    for c, next_k in zip(*[iter(CD)] * 2):
+    for (c, next_k) in zip(*[iter(CD)] * 2):
         prev_k = belonging[c]
         belonging[c] = next_k
-
         for k in (prev_k, next_k):
             if kindy[k].size:
                 smart_infants.delete(kindy[k].top)
-
         kindy[prev_k].delete(rate[c])
         kindy[next_k].push(rate[c])
-
         for k in (prev_k, next_k):
             if kindy[k].size:
                 smart_infants.push(kindy[k].top)
-
         res.append(smart_infants.top >> 18)
-
-    print(("\n".join(map(str, res))))
+    print('\n'.join(map(str, res)))
 
 
 def __starting_point():

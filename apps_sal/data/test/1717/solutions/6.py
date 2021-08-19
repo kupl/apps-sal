@@ -1,9 +1,8 @@
-# coding: utf-8
 from math import gcd
 
 
 def lcm(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 N = int(input())

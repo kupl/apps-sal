@@ -1,12 +1,8 @@
-# from itertools import combinations
-# from bisect import bisect_left
-# from functools import *
-# from collections import Set
-
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
-n, k = I()
+(n, k) = I()
 a = sorted(I())
 b = set(a)
 if k != 1:

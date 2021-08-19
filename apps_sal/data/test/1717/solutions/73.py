@@ -6,17 +6,18 @@ from fractions import Fraction
 from decimal import Decimal
 from functools import reduce
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-#from sys import setrecursionlimit
-# setrecursionlimit(10**7)
-MOD = 10**9 + 7
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+MOD = 10 ** 9 + 7
 INF = float('inf')
 
 
 def lcm_base(x, y):
-    return (x * y) // gcd(x, y)
+    return x * y // gcd(x, y)
 
 
 def lcm(*numbers):
@@ -24,5 +25,4 @@ def lcm(*numbers):
 
 
 n = int(input())
-
 print(1 + lcm(*list(range(2, n + 1))))
