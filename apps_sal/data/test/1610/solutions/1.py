@@ -1,7 +1,6 @@
 import sys
 my_file = sys.stdin
-#my_file = open("input.txt", "r")
-nums = [int(i) for i in my_file.readline().split(" ")]
+nums = [int(i) for i in my_file.readline().split(' ')]
 n = nums[0]
 k = nums[1]
 p = list(range(1, n + 1))

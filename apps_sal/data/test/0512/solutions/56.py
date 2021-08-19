@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
@@ -9,13 +8,8 @@ from fractions import Fraction
 from functools import lru_cache, reduce
 from itertools import combinations, combinations_with_replacement, product, permutations, accumulate
 from operator import add, mul, sub, itemgetter, attrgetter
-
-
 import sys
-# sys.setrecursionlimit(10**6)
-# readline = sys.stdin.buffer.readline
 readline = sys.stdin.readline
-
 INF = 1 << 60
 
 
@@ -54,18 +48,16 @@ def mt(f):
         s = time.perf_counter()
         ret = f(*args, **kwargs)
         e = time.perf_counter()
-
         ep(e - s, 'sec')
         return ret
-
     return wrap
 
 
 @mt
 def slv(N, AB):
     used = set()
-    for a, b in AB:
-        if a > 0 and b > 0 and a >= b:
+    for (a, b) in AB:
+        if a > 0 and b > 0 and (a >= b):
             return 'No'
         if a > 0 and a in used:
             return 'No'
@@ -75,8 +67,7 @@ def slv(N, AB):
             return 'No'
         else:
             used.add(b)
-
-    AB = [(a - 1, b - 1) for a, b in AB]
+    AB = [(a - 1, b - 1) for (a, b) in AB]
 
     @lru_cache(maxsize=None)
     def f(s):
@@ -86,14 +77,13 @@ def slv(N, AB):
             l = r - s
             l2 = l // 2
             r2 = s + l2
-
             used = Counter()
-            for a, b in AB:
+            for (a, b) in AB:
                 if a >= 0 and r2 <= a < r:
                     break
                 if b >= 0 and s <= b < r2:
                     break
-                if s <= a < r2 and r2 <= b < r and b - a != l2:
+                if s <= a < r2 and r2 <= b < r and (b - a != l2):
                     break
                 if s <= a < r2:
                     used[a] += 1
@@ -103,7 +93,6 @@ def slv(N, AB):
                     used[b] += 1
                     if a < 0:
                         used[b - l2] += 1
-
             else:
                 if used and used.most_common()[0][1] > 1:
                     pass
@@ -112,7 +101,6 @@ def slv(N, AB):
                     return True
         ep(s, False)
         return False
-
     return 'Yes' if f(0) else 'No'
 
 

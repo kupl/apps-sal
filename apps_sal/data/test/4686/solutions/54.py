@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -6,7 +5,6 @@ input = sys.stdin.readline
 def main():
     S = input().rstrip()
     s_dict = {}
-
     for s in S:
         if s not in s_dict:
             tmp = {s: 1}
@@ -15,14 +13,13 @@ def main():
             count = s_dict[s]
             count += 1
             s_dict[s] = count
-
-    for i, v in s_dict.items():
+    for (i, v) in s_dict.items():
         if v % 2 != 0:
-            print("No")
+            print('No')
             return
         else:
             continue
-    print("Yes")
+    print('Yes')
 
 
 def __starting_point():

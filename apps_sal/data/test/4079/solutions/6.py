@@ -1,4 +1,4 @@
-'''input
+"""input
 8
 fced
 xyz
@@ -8,7 +8,7 @@ az
 aa
 bad
 babc
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -17,7 +17,7 @@ from collections import Counter as ccd
 from random import randint as rd
 from bisect import bisect_left as bl
 import heapq
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -28,7 +28,7 @@ def ri(flag=0):
 
 
 def ff(a):
-    return ord(a) - ord("a")
+    return ord(a) - ord('a')
 
 
 for _ in range(ri(1)):
@@ -37,13 +37,12 @@ for _ in range(ri(1)):
     f = 1
     b = list(set(a))
     b.sort()
-    # print(b)
     if len(a) != len(b):
         f = 0
     for i in range(1, len(b)):
         if ff(b[i]) - ff(b[i - 1]) != 1:
             f = 0
     if f:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

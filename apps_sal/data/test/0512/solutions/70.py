@@ -1,12 +1,14 @@
-#!/usr/bin/env python3
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-def check(Elevator, takedown, left, right):  # 両開区間
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+def check(Elevator, takedown, left, right):
     aida = right - left + 1
     for i in range(2 * left, 2 * left + aida):
-        i, seti = i, i + aida
+        (i, seti) = (i, i + aida)
         if Elevator[i][0] != -1:
             iperson = Elevator[i][0]
             if Elevator[i][1] != 'A':
@@ -32,9 +34,7 @@ def main():
     Elevator = [[-1, -1] for i in range(2 * n)]
     takedown = [[-1, -1] for i in range(n)]
     for i in range(n):
-        # print(Elevator)
-        # print(takedown)
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         if a != -1:
             a -= 1
             if Elevator[a][0] != -1:
@@ -60,8 +60,7 @@ def main():
                 if check(Elevator, takedown, j, i):
                     dp[i] = True
                     break
-    # print(dp)
-    print(('Yes' if dp[-2] else 'No'))
+    print('Yes' if dp[-2] else 'No')
 
 
 def __starting_point():

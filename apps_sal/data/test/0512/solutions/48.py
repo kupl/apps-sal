@@ -1,16 +1,22 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(max(1000, 10**9))
-def write(x): return sys.stdout.write(x + "\n")
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(max(1000, 10 ** 9))
+
+
+def write(x):
+    return sys.stdout.write(x + '\n')
 
 
 n = int(input())
 ab = [tuple(map(int, input().split())) for _ in range(n)]
 t = [None] * (2 * n)
 ans = None
-for a, b in ab:
+for (a, b) in ab:
     if a > 0 and b > 0:
         if t[a - 1] is not None or a >= b:
             ans = -1
@@ -24,19 +30,19 @@ for a, b in ab:
         if t[a - 1] is not None:
             ans = -1
             break
-        t[a - 1] = (1, None)  # 乗った
+        t[a - 1] = (1, None)
     elif b > 0:
         if t[b - 1] is not None:
             ans = -1
             break
-        t[b - 1] = (2, None)  # 降りた
+        t[b - 1] = (2, None)
 if ans == -1:
-    print("No")
+    print('No')
 else:
     for i in range(len(t)):
         if t[i] is None:
             t[i] = (0, None)
-    dp = [False] * (2 * n + 1)  # i番目の直後で仕切れるか
+    dp = [False] * (2 * n + 1)
     dp[0] = True
 
     def sub(j, i):
@@ -49,11 +55,9 @@ else:
                 return False
             elif t[j + (i - j) // 2 + k][1] is not None and t[j + (i - j) // 2 + k][1] != (i - j) // 2:
                 return False
-            elif t[j + k][0] != 0 and t[j + k][1] is None and t[j + k + (i - j) // 2][0] != 0:
-                #                 print(j,k,i)
+            elif t[j + k][0] != 0 and t[j + k][1] is None and (t[j + k + (i - j) // 2][0] != 0):
                 return False
-            elif t[j + (i - j) // 2 + k][0] != 0 and t[j + (i - j) // 2 + k][1] is None and t[j + k][0] != 0:
-                #                 print(j,k,i)
+            elif t[j + (i - j) // 2 + k][0] != 0 and t[j + (i - j) // 2 + k][1] is None and (t[j + k][0] != 0):
                 return False
         return True
     for i in range(1, 2 * n + 1):
@@ -63,6 +67,6 @@ else:
                 val = True
         dp[i] = val
     if dp[2 * n]:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

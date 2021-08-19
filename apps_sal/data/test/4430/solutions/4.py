@@ -10,11 +10,10 @@ def fit(a, m, k, res):
             else:
                 m -= 1
     return True
-    # С нек. момента моё воспоминание об алгоритме, описанном в условии, изменилось (исправлено)
 
 
 def bisect(n, m, k, a):
-    left, right = 0, n + 1
+    (left, right) = (0, n + 1)
     while left + 1 < right:
         middle = (left + right) // 2
         if fit(a, m, k, middle):
@@ -25,7 +24,7 @@ def bisect(n, m, k, a):
 
 
 def main():
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     a = tuple(map(int, input().split()))
     print(bisect(n, m, k, a))
 
