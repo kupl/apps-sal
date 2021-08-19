@@ -1,14 +1,20 @@
-# coding: utf-8
 import sys
 import numpy as np
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-H, W = lr()
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
+(H, W) = lr()
 S = np.array(['#' * (W + 2)] + ['#' + sr() + '#' for _ in range(H)] + ['#' * (W + 2)])
 S = np.array([[x == '.' for x in row] for row in S])
 S = S.astype(np.int16)
@@ -28,6 +34,5 @@ for i in range(1, H + 1):
 for i in range(H, 0, -1):
     down[i, :] += down[i + 1, :]
     down[i, :] *= S[i, :]
-
 answer = (left + right + up + down - 3).max()
 print(answer)

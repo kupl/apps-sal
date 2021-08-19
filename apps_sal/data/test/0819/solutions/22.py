@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 x = 0
 if k == 1:
@@ -8,5 +8,3 @@ elif k == 2:
 else:
     x = max(a)
 print(x)
-
-#print(" ".join(map(str,a)))

@@ -1,16 +1,9 @@
 import math
-
-# input
-
 k = int(input())
 
 
-# variables
-
 def row(x, y):
     print('|O.' + 'O.' * x + '#.' * (10 - x) + '|' + y)
-
-# main
 
 
 print('+------------------------+')
@@ -49,18 +42,17 @@ if k == 4:
     print('|O.#.#.#.#.#.#.#.#.#.#.|.|)')
     print('+------------------------+')
     quit()
-
-if ((k - 4) % 3) == 1:
+if (k - 4) % 3 == 1:
     row(math.ceil((k - 4) / 3), 'D|)')
     row(math.ceil((k - 4) / 3) - 1, '.|')
     print('|O.......................|')
     row(math.ceil((k - 4) / 3) - 1, '.|)')
-if ((k - 4) % 3) == 2:
+if (k - 4) % 3 == 2:
     row(math.ceil((k - 4) / 3), 'D|)')
     row(math.ceil((k - 4) / 3), '.|')
     print('|O.......................|')
     row(math.ceil((k - 4) / 3) - 1, '.|)')
-if ((k - 4) % 3) == 0:
+if (k - 4) % 3 == 0:
     row(math.ceil((k - 4) / 3), 'D|)')
     row(math.ceil((k - 4) / 3), '.|')
     print('|O.......................|')

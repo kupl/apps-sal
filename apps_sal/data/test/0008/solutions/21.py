@@ -1,24 +1,18 @@
-# -*- coding: utf-8 -*-
 """
 Created on Fri Jul 12 17:39:54 2019
 
 @author: Hamadeh
 """
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 12 17:33:49 2019
-
-@author: Hamadeh
-"""
+'\nCreated on Fri Jul 12 17:33:49 2019\n\n@author: Hamadeh\n'
 
 
 class cinn:
+
     def __init__(self):
         self.x = []
 
     def cin(self, t=int):
-        if(len(self.x) == 0):
+        if len(self.x) == 0:
             a = input()
             self.x = a.split()
             self.x.reverse()
@@ -27,7 +21,7 @@ class cinn:
     def get(self, t):
         return t(self.x.pop())
 
-    def clist(self, n, t=int):  # n is number of inputs, t is type to be casted
+    def clist(self, n, t=int):
         l = [0] * n
         for i in range(n):
             l[i] = self.cin(t)
@@ -36,11 +30,11 @@ class cinn:
     def clist2(self, n, t1=int, t2=int, t3=int, tn=2):
         l = [0] * n
         for i in range(n):
-            if(tn == 2):
+            if tn == 2:
                 a1 = self.cin(t1)
                 a2 = self.cin(t2)
                 l[i] = (a1, a2)
-            elif (tn == 3):
+            elif tn == 3:
                 a1 = self.cin(t1)
                 a2 = self.cin(t2)
                 a3 = self.cin(t3)
@@ -51,16 +45,16 @@ class cinn:
         return self.clist2(self, n, t1, t2, t3, 3)
 
     def cout(self, i, ans=''):
-        if(ans == ''):
-            print("Case #" + str(i + 1) + ":", end=' ')
+        if ans == '':
+            print('Case #' + str(i + 1) + ':', end=' ')
         else:
-            print("Case #" + str(i + 1) + ":", ans)
+            print('Case #' + str(i + 1) + ':', ans)
 
     def printf(self, thing):
         print(thing, end='')
 
     def countlist(self, l, s=0, e=None):
-        if(e == None):
+        if e == None:
             e = len(l)
         dic = {}
         for el in range(s, e):
@@ -74,35 +68,33 @@ class cinn:
         print(x, flush=True)
 
     def dp1(self, k):
-        L = [-1] * (k)
+        L = [-1] * k
         return L
 
     def dp2(self, k, kk):
-        L = [-1] * (k)
+        L = [-1] * k
         for i in range(k):
             L[i] = [-1] * kk
         return L
 
     def isprime(self, n):
-        if(n == 1 or n == 0):
+        if n == 1 or n == 0:
             return False
-        for i in range(2, int(n**0.5 + 1)):
-            if(n % i == 0):
+        for i in range(2, int(n ** 0.5 + 1)):
+            if n % i == 0:
                 return False
         return True
 
     def factors(self, n):
         from functools import reduce
-        return set(reduce(list.__add__,
-                          ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+        return set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
 
     def nthprime(self, n):
-        # usable up to 10 thousand
         i = 0
         s = 2
         L = []
-        while(i < n):
-            while(not self.isprime(s)):
+        while i < n:
+            while not self.isprime(s):
                 s += 1
             L.append(s)
             s += 1
@@ -117,13 +109,12 @@ class cinn:
         return L
 
     def seive(self, k):
-        # 1000000 tops
         n = k + 1
         L = [True] * n
         L[1] = False
         L[0] = False
         for i in range(2, n):
-            if(L[i] == True):
+            if L[i] == True:
                 for j in range(2 * i, n, i):
                     L[j] = False
         return L
@@ -131,9 +122,9 @@ class cinn:
     def seiven(self, n, L):
         i = 0
         for j in range(len(L)):
-            if(L[j] == True):
+            if L[j] == True:
                 i += 1
-            if(i == n):
+            if i == n:
                 return j
 
     def matrixin2(self, m, t=int):
@@ -152,9 +143,9 @@ ca1 = c.cin(str)
 ca2 = c.cin(str)
 ca3 = c.cin(str)
 L = [ca1, ca2, ca3]
-if(ca1 == ca2 and ca2 == ca3):
+if ca1 == ca2 and ca2 == ca3:
     print(0)
-elif(ca1 == ca2 or ca3 == ca2 or ca1 == ca3):
+elif ca1 == ca2 or ca3 == ca2 or ca1 == ca3:
     print(1)
 else:
     a1 = list(ca1)
@@ -163,20 +154,20 @@ else:
     l = [int(a1[0]), int(a2[0]), int(a3[0])]
     l.sort()
     found1 = False
-    if(l[0] == l[1] - 1 and l[1] == l[2] - 1):
-        if(a1[1] == a2[1] and a1[1] == a3[1]):
+    if l[0] == l[1] - 1 and l[1] == l[2] - 1:
+        if a1[1] == a2[1] and a1[1] == a3[1]:
             print(0)
             found1 = True
-    if(found1 == False):
+    if found1 == False:
         found = False
         for el in L:
             upel = str(int(el[0]) + 1) + el[1]
             downel = str(int(el[0]) - 1) + el[1]
             downel2 = str(int(el[0]) - 2) + el[1]
             upel2 = str(int(el[0]) + 2) + el[1]
-            if(downel in L or upel in L or upel2 in L or downel2 in L):
+            if downel in L or upel in L or upel2 in L or (downel2 in L):
                 found = True
-        if(found):
+        if found:
             print(1)
         else:
             print(2)

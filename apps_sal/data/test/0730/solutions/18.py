@@ -1,5 +1,4 @@
 __author__ = 'hamed1soleimani'
-
 lines = list()
 lines.append('+------------------------+')
 lines.append('|#.#.#.#.#.#.#.#.#.#.#.|D|)')
@@ -7,9 +6,7 @@ lines.append('|#.#.#.#.#.#.#.#.#.#.#.|.|')
 lines.append('|#.......................|')
 lines.append('|#.#.#.#.#.#.#.#.#.#.#.|.|)')
 lines.append('+------------------------+')
-
 n = int(input())
-
 while True:
     if n == 0:
         break
@@ -34,6 +31,5 @@ while True:
     elif lines[4].find('#') == x:
         lines[4] = lines[4].replace('#', 'O', 1)
         n -= 1
-
 for ss in lines:
     print(ss)
