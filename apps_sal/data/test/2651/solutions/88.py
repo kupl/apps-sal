@@ -1,8 +1,6 @@
 import sys
 input = sys.stdin.readline
-# sys.setrecursionlimit(10 ** 6)
 MOD = 10 ** 9 + 7
-# INF = float("inf")
 
 
 def f(l):
@@ -13,7 +11,7 @@ def f(l):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     x = list(map(int, input().split()))
     y = list(map(int, input().split()))
     ans = f(x) * f(y) % MOD

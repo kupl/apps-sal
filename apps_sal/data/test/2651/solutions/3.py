@@ -1,20 +1,20 @@
 from random import randrange
 from itertools import accumulate
 from itertools import product, combinations
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def solve(X, Y):
-    DX = [a - b for a, b in zip(X[1:], X)]
-    DY = [a - b for a, b in zip(Y[1:], Y)]
-    a = sum((i + 1) * (len(DX) - i) * dx for i, dx in enumerate(DX))
-    b = sum((i + 1) * (len(DY) - i) * dy for i, dy in enumerate(DY))
-    return (a * b) % MOD
+    DX = [a - b for (a, b) in zip(X[1:], X)]
+    DY = [a - b for (a, b) in zip(Y[1:], Y)]
+    a = sum(((i + 1) * (len(DX) - i) * dx for (i, dx) in enumerate(DX)))
+    b = sum(((i + 1) * (len(DY) - i) * dy for (i, dy) in enumerate(DY)))
+    return a * b % MOD
 
 
 def naive(X, Y):
     a = 0
-    for (x1, x2), (y1, y2) in product(combinations(X, 2), combinations(Y, 2)):
+    for ((x1, x2), (y1, y2)) in product(combinations(X, 2), combinations(Y, 2)):
         a += (x2 - x1) * (y2 - y1)
         a %= MOD
     return a
@@ -34,12 +34,10 @@ def test():
 
 
 def __starting_point():
-    # test()
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     X = tuple(map(int, input().split()))
     Y = tuple(map(int, input().split()))
-    print((solve(X, Y)))
-    # print(naive(X,Y))
+    print(solve(X, Y))
 
 
 __starting_point()

@@ -7,16 +7,14 @@ for i in range(2, 100010):
     if dict[i] == []:
         j = i + i
         while j <= 100010:
-            # print(dict[j])
             tmp = dict[j]
             tmp += [i]
             dict[j] = tmp
-            # print(dict[j])
             j += i
         dict[i] = [i]
 n = input()
 n = input()
-n = n.split(" ")
+n = n.split(' ')
 banyak = 0
 for i in n:
     tmp = int(i)
@@ -24,6 +22,6 @@ for i in n:
         ans[j] += 1
         if ans[j] > banyak:
             banyak = ans[j]
-if (banyak == 0):
+if banyak == 0:
     banyak = 1
 print(banyak)

@@ -1,6 +1,3 @@
-# When angry, count to four; when very angry, swear. Mark Twain
-# by : Blue Edge - Create some chaos
-
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))

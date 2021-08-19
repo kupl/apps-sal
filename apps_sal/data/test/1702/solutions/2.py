@@ -17,12 +17,12 @@ def f(v, x, n):
 
 n = int(input())
 a = [list(map(int, input().split())) for _ in range(n)]
-c = [sum(_[i] >= 0 for _ in a) for i in range(5)]
+c = [sum((_[i] >= 0 for _ in a)) for i in range(5)]
 ans = -1
 for i in range(10000):
-    p, q = 0, 0
+    (p, q) = (0, 0)
     for j in range(5):
-        x, y = c[j], n
+        (x, y) = (c[j], n)
         if a[0][j] > a[1][j] and a[1][j] >= 0:
             x += i
         p += f(a[0][j], x, n + i)
@@ -31,6 +31,3 @@ for i in range(10000):
         ans = i
         break
 print(ans)
-
-
-# Made By Mostafa_Khaled
