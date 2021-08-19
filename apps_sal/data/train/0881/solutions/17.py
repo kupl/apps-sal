@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     x = list(map(int, input().split()))
@@ -8,6 +7,6 @@ for _ in range(int(input())):
             s = x[i:j + 1]
             t = x[i:j + 1]
             s.sort()
-            if(s == t):
+            if s == t:
                 cnt = cnt + 1
     print(cnt)

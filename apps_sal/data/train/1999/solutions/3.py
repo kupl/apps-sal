@@ -1,13 +1,8 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-# OrderedDict is used for ordered dictionaries
 from collections import OrderedDict
 
 
 class Solution:
+
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         nodes = OrderedDict()
         curr = head
@@ -23,10 +18,8 @@ class Solution:
                 nodes[prefix] = node[1]
                 curr = curr.__next__
                 continue
-
             nodes[prefix] = curr
             curr = curr.__next__
-
         first = True
         for node in list(nodes.values()):
             if first:

@@ -1,9 +1,5 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         dummy = ListNode()
         dummy.next = head
@@ -12,7 +8,7 @@ class Solution:
         A = []
 
         def check(i, A):
-            return all(not(s < i <= e)for s, e in A)
+            return all((not s < i <= e for (s, e) in A))
         while head:
             cur_sum += head.val
             cur += 1
@@ -26,5 +22,4 @@ class Solution:
             else:
                 m[cur_sum] = (head, cur)
             head = head.next
-
         return dummy.next

@@ -4,4 +4,3 @@ def isDigit(string):
         return True
     except ValueError:
         return False
-    # wasn't numeric

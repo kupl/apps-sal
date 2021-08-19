@@ -1,11 +1,6 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
-        # Try starting from every possible starting point basically
         while True:
             n = head
             size = 0
@@ -37,8 +32,6 @@ class Solution:
                         flag = True
                         break
                     node = node.__next__
-
             if not flag:
                 break
-
         return head
