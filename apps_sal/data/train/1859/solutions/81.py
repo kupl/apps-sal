@@ -1,4 +1,5 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         import copy
 
@@ -12,19 +13,15 @@ class Solution:
             while x < len(matrix) and y < len(matrix[0]) and still_square:
                 for i in range(oriX, x + 1):
                     for j in range(oriY, y + 1):
-                        # print(oriX,oriY, x, y)
                         if matrix[i][j] != 1:
                             still_square = False
                             return count
                 count += 1
-                # print(oriX,oriY,x, y, \"this was a square\")
                 x += 1
                 y += 1
             return count
-
         count = 0
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
-
                 count += grow_sqaure(i, j)
         return count

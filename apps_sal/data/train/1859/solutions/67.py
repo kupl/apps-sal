@@ -1,5 +1,3 @@
-# 1277. Count Square Submatrices with All Ones
-
 def make_partial(m, n, matrix):
     ans = [[0 for __ in range(n + 1)] for _ in range(m + 1)]
     for i in range(m + 1):
@@ -17,22 +15,21 @@ def get_rect(partial, i0, j0, i1, j1):
 
 
 def count_squares(matrix):
-    m, n = len(matrix), len(matrix[0])
+    (m, n) = (len(matrix), len(matrix[0]))
     partial = make_partial(m, n, matrix)
-
     ans = 0
     for i in range(0, m):
         for j in range(0, n):
             max_w = min(m - i, n - j)
             for w in range(1, max_w + 1):
-                if get_rect(partial, i, j, i + w, j + w) == w**2:
+                if get_rect(partial, i, j, i + w, j + w) == w ** 2:
                     ans += 1
                 else:
                     break
-
     return ans
 
 
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         return count_squares(matrix)

@@ -1,6 +1,7 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
-        m, n = len(matrix), len(matrix[0])
+        (m, n) = (len(matrix), len(matrix[0]))
         ans = 0
         for sx in range(m):
             for sy in range(n):
@@ -22,7 +23,6 @@ class Solution:
                                     break
                             if all_one:
                                 ans += 1
-                                # print(sx,sy,side)
                             else:
                                 break
                         else:

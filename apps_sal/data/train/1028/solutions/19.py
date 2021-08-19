@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for w in range(t):
     n = int(input())
@@ -10,7 +9,7 @@ for w in range(t):
     n = m
     while m > 0:
         a = m % 10
-        sm = sm + a**digit
+        sm = sm + a ** digit
         m = m // 10
     if n == sm:
         print('FEELS GOOD')

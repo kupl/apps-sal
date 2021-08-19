@@ -1,7 +1,5 @@
-# cook your dish here
 try:
     t = int(input())
-
     while t:
         n = int(input())
         arr = [int(i) for i in input().split()]

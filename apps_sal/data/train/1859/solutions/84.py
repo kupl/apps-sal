@@ -1,4 +1,5 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         hori = [row[:] for row in matrix]
         vert = [row[:] for row in matrix]
@@ -21,8 +22,6 @@ class Solution:
                     s = 0
                 vert[i][j] = s
         out = 0
-        # print(hori)
-        # print(vert)
         for i in range(R):
             for j in range(C):
                 if matrix[i][j] == 1:
@@ -32,10 +31,8 @@ class Solution:
                     if matrix[i - 1][j - 1] == 0:
                         out += 1
                         continue
-                    x = int(matrix[i - 1][j - 1]**0.5)
+                    x = int(matrix[i - 1][j - 1] ** 0.5)
                     a = min([x, hori[i][j - 1], vert[i - 1][j]])
                     out += a + 1
-                    #print(i,j, out)
-                    matrix[i][j] = (a + 1)**2
-        # print(matrix)
+                    matrix[i][j] = (a + 1) ** 2
         return out

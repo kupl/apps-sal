@@ -1,8 +1,7 @@
-# cook your dish here
 for g in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
-    up = [[0 for i in range(n)]for j in range(2)]
+    up = [[0 for i in range(n)] for j in range(2)]
     up[0][n - 1] = 1
     up[1][n - 1] = 1
     for i in range(n - 2, -1, -1):

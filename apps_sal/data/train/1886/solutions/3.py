@@ -34,8 +34,7 @@ class NumArray:
         res = 0
         while i > 0:
             res += bit[i]
-            i -= (i & -i)
-
+            i -= i & -i
         return res
 
     def update_delta(self, i, delta):
@@ -43,10 +42,4 @@ class NumArray:
         l = len(bit)
         while i < l:
             bit[i] += delta
-            i += (i & -i)
-
-
-# Your NumArray object will be instantiated and called as such:
-# obj = NumArray(nums)
-# obj.update(i,val)
-# param_2 = obj.sumRange(i,j)
+            i += i & -i
