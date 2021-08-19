@@ -1,5 +1,3 @@
-# -*- coding:utf-8 -*-
-
 """
 
 created by shuangquan.huang at 11/20/18
@@ -40,9 +38,7 @@ Output one number, representing how many palindrome pairs there are in the array
 
 
 """
-
 import collections
-
 N = int(input())
 
 
@@ -56,13 +52,12 @@ def hash(s):
             x += '0'
         else:
             x += '1'
-
     return x
 
 
 def neighbor(s):
     for i in range(len(s)):
-        yield s[:i] + ('1' if s[i] == '0' else '0') + s[i + 1:]
+        yield (s[:i] + ('1' if s[i] == '0' else '0') + s[i + 1:])
 
 
 def isneighbor(a, b):
@@ -73,15 +68,12 @@ m = collections.defaultdict(list)
 for i in range(N):
     s = input()
     m[hash(s)].append(i)
-
 even = 0
 odd = 0
-for k, v in list(m.items()):
+for (k, v) in list(m.items()):
     lv = len(v)
     even += lv * (lv - 1) // 2
-
     for b in neighbor(k):
         if b in m:
             odd += lv * len(m[b])
-
 print(even + odd // 2)

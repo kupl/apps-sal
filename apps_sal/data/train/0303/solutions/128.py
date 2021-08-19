@@ -1,12 +1,12 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
         if not K or K == 1:
             return sum(A)
         if not A:
             return 0
-
         dp = [0] * len(A)
-        for index, num in enumerate(A):
+        for (index, num) in enumerate(A):
             possible = []
             for group in range(K):
                 if index - group >= 0:
@@ -14,10 +14,6 @@ class Solution:
                         previous = dp[index - group - 1]
                     else:
                         previous = 0
-                    possible.append(
-                        previous + max(A[index - group: index + 1]) * (group + 1)
-                    )
-
+                    possible.append(previous + max(A[index - group:index + 1]) * (group + 1))
             dp[index] = max(possible)
-            # print(f\"{index=} {dp[index]=}\")
         return dp[-1]
