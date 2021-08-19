@@ -1,4 +1,3 @@
-# 38
 menu = []
 jissai_menu = []
 for i in range(5):
@@ -7,7 +6,6 @@ for i in range(5):
         jissai_menu.append(menu[i])
     else:
         jissai_menu.append(menu[i] - menu[i] % 10 + 10)
-
 ans = float('inf')
 for i in range(5):
     tmp = 0
@@ -16,5 +14,4 @@ for i in range(5):
             continue
         tmp += jissai_menu[j]
     ans = min(ans, tmp + menu[i])
-
 print(ans)

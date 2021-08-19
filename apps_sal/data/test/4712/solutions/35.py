@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 huta = ['#' for _ in range(w + 2)]
 huta = ''.join(huta)
 print(huta)

@@ -1,13 +1,13 @@
 def main():
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     a = []
     for i in range(h):
         a.append(input())
     cnt = len(a[0]) + 2
-    print(("#" * cnt))
+    print('#' * cnt)
     for _ in a:
         print(f'#{_}#')
-    print(("#" * cnt))
+    print('#' * cnt)
 
 
 def __starting_point():
