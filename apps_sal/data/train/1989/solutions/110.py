@@ -1,12 +1,12 @@
 class Solution:
-    # O(n^2) TLE
+
     def longestAwesome(self, s: str) -> int:
         count = 0
         digits = 0
         for c in s:
             c = int(c)
             digits ^= 1 << c
-            if digits & (1 << c) != 0:
+            if digits & 1 << c != 0:
                 count += 1
             else:
                 count -= 1
@@ -21,19 +21,18 @@ class Solution:
                     break
                 c = int(s[j])
                 digits2 ^= 1 << c
-                if digits2 & (1 << c) != 0:
+                if digits2 & 1 << c != 0:
                     count2 += 1
                 else:
                     count2 -= 1
             c = int(s[i])
             digits ^= 1 << c
-            if digits & (1 << c) != 0:
+            if digits & 1 << c != 0:
                 count += 1
             else:
                 count -= 1
         return result
 
-    # O(10n)
     def longestAwesome(self, s: str) -> int:
         digits = {}
         digits[0] = -1
@@ -47,7 +46,7 @@ class Solution:
             else:
                 digits[prefix] = i
             for k in range(10):
-                tmp = prefix ^ (1 << k)
+                tmp = prefix ^ 1 << k
                 if tmp in digits:
                     result = max(result, i - digits[tmp])
         return result

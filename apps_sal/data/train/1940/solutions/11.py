@@ -1,15 +1,10 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         nums = []
         while head:
             nums.append(head.val)
             head = head.next
-
         n = len(nums)
         idx = [n] * n
         ans = [0] * n
@@ -22,5 +17,4 @@ class Solution:
                     ans[i] = nums[cur]
                     idx[i] = cur
                     break
-
         return ans

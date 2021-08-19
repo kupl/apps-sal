@@ -1,8 +1,5 @@
-# cook your dish here
 for tc in range(int(input())):
-
     n = int(input())
-
     li1 = list(map(int, input().split(' ')))
     li2 = list(map(int, input().split(' ')))
     walk = 0

@@ -1,14 +1,13 @@
-# cook your dish here
 def ortho(n, m):
     res = set()
-    tot = (n * (n + 1)) // 2
+    tot = n * (n + 1) // 2
     pre = {0}
     for x in m:
         pre = {x | y for y in pre} | {x}
         res |= pre
-    if(len(res) == tot):
-        return "YES"
-    return "NO"
+    if len(res) == tot:
+        return 'YES'
+    return 'NO'
 
 
 t = int(input())

@@ -1,9 +1,5 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         arr = []
         ptr = head
@@ -13,7 +9,7 @@ class Solution:
         result = [0] * len(arr)
         s = []
         for i in range(len(arr) - 1, -1, -1):
-            while (len(s) > 0 and s[-1] <= arr[i]):
+            while len(s) > 0 and s[-1] <= arr[i]:
                 s.pop()
             result[i] = 0 if len(s) == 0 else s[-1]
             s.append(arr[i])

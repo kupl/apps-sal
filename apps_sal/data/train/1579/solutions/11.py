@@ -1,11 +1,10 @@
-# cook your dish here
 T = int(input())
 for _ in range(T):
     n = int(input())
     arr = list(map(int, input().strip().split()))
     s = set()
     if n > 60:
-        print("NO")
+        print('NO')
     else:
         for i in range(n):
             ordd = 0
@@ -13,6 +12,6 @@ for _ in range(T):
                 ordd = ordd | arr[j]
                 s.add(ordd)
         if len(s) == n * (n + 1) / 2:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
