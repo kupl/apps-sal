@@ -11,24 +11,37 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def MAP1(): return map(lambda x: int(x) - 1, input().split())
-def LIST(): return list(MAP())
-def LIST1(): return list(MAP1())
 
-#####segfunc#####
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def MAP1():
+    return map(lambda x: int(x) - 1, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+def LIST1():
+    return list(MAP1())
 
 
 def segfunc(x, y):
     return gcd(x, y)
-#################
 
 
-#####ide_ele#####
 ide_ele = 0
-#################
 
 
 class SegTree:
@@ -52,10 +65,8 @@ class SegTree:
         self.ide_ele = ide_ele
         self.num = 1 << (n - 1).bit_length()
         self.tree = [ide_ele] * 2 * self.num
-        # 配列の値を葉にセット
         for i in range(n):
             self.tree[self.num + i] = init_val[i]
-        # 構築していく
         for i in range(self.num - 1, 0, -1):
             self.tree[i] = self.segfunc(self.tree[2 * i], self.tree[2 * i + 1])
 
@@ -78,7 +89,6 @@ class SegTree:
         r: index(0-index)
         """
         res = self.ide_ele
-
         l += self.num
         r += self.num
         while l < r:
@@ -96,7 +106,6 @@ def solve():
     N = INT()
     a = LIST()
     seg = SegTree(a, segfunc, ide_ele)
-
     ans = 1
     for i in range(N):
         seg.update(i, 0)

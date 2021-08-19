@@ -1,5 +1,3 @@
-# coding: utf-8
-
 import heapq
 
 
@@ -11,8 +9,8 @@ def main():
         heapq.heappush(hq, -b)
     room = heapq.heappop(hq) + heapq.heappop(hq)
     if -room >= r:
-        return "YES"
-    return "NO"
+        return 'YES'
+    return 'NO'
 
 
 def __starting_point():

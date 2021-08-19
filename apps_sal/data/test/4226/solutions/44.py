@@ -1,6 +1,4 @@
-X, Y = map(int, input().split())
-# 合計X匹、足Y本
-
+(X, Y) = map(int, input().split())
 if Y % 2 == 1:
     print('No')
 else:

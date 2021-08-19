@@ -22,17 +22,13 @@ def check_r(a, l, r):
 
 
 def main():
-    # skip N
     input()
     a = [int(x) for x in input().split(' ')]
     n = len(a)
-
-    l, r = 0, n - 1
+    (l, r) = (0, n - 1)
     res = []
-
     last = 0
     picked = True
-
     while l <= r and picked:
         picked = False
         if last < a[l] and last < a[r]:
@@ -43,7 +39,6 @@ def main():
             elif a[l] == a[r]:
                 dl = check_l(a, l, r)
                 dr = check_r(a, l, r)
-
                 if dl > dr:
                     res.extend(['L'] * dl)
                     last = a[l + dl - 1]
@@ -58,23 +53,20 @@ def main():
                 r -= 1
             picked = True
             continue
-
         if last < a[l]:
             last = a[l]
             res.append('L')
             l += 1
             picked = True
             continue
-
         if last < a[r]:
             last = a[r]
             res.append('R')
             r -= 1
             picked = True
             continue
-
     print(len(res))
-    print("".join(res))
+    print(''.join(res))
 
 
 def __starting_point():

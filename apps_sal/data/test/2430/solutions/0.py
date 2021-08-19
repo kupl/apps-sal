@@ -1,5 +1,3 @@
-# python33
-
 def program():
     a = []
     t = 0
