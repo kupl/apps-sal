@@ -1,11 +1,7 @@
-# cook your dish here
 from sys import stdin, stdout
-
-r, c = map(int, stdin.readline().strip().split())
+(r, c) = map(int, stdin.readline().strip().split())
 gift_list = [list(map(int, stdin.readline().strip().split())) for _ in range(r)]
-
 max_list = [max(i) for i in zip(*gift_list)]
-# print(max_list)
 found = False
 for i in range(r):
     min_row = min(gift_list[i])
@@ -17,4 +13,4 @@ for i in range(r):
     if found:
         break
 else:
-    print("GUESS")
+    print('GUESS')

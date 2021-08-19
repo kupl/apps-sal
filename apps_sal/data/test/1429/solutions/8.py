@@ -1,23 +1,21 @@
-n, s = input().split()
+(n, s) = input().split()
 n = int(n)
 ans = 0
-AT, GC = 0, 0
+(AT, GC) = (0, 0)
 cnt = {}
-cnt[(0, 0)] = 1
+cnt[0, 0] = 1
 for i in s:
-
-    if i == "A":
+    if i == 'A':
         AT += 1
-    elif i == "T":
+    elif i == 'T':
         AT -= 1
-    elif i == "G":
+    elif i == 'G':
         GC += 1
-    elif i == "C":
+    elif i == 'C':
         GC -= 1
     if (AT, GC) in cnt:
-        ans += cnt[(AT, GC)]
-        cnt[(AT, GC)] += 1
+        ans += cnt[AT, GC]
+        cnt[AT, GC] += 1
     else:
-        cnt[(AT, GC)] = 1
-    #print(cnt, ans)
+        cnt[AT, GC] = 1
 print(ans)

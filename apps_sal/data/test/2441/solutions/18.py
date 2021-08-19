@@ -1,16 +1,17 @@
 def main():
-
     from bisect import bisect_left as bl, bisect_right as br, insort
     import sys
     import math
-    #from heapq import heapify, heappush, heappop
     from collections import defaultdict as dd, deque
-    def data(): return sys.stdin.readline().strip()
-    def mdata(): return list(map(int, data().split()))
+
+    def data():
+        return sys.stdin.readline().strip()
+
+    def mdata():
+        return list(map(int, data().split()))
     out = sys.stdout.write
-    # sys.setrecursionlimit(100000)
-    INF = float("INF")
-    mod = int(1e9) + 7
+    INF = float('INF')
+    mod = int(1000000000.0) + 7
 
     def kosaraju():
         stack = []
@@ -56,19 +57,18 @@ def main():
                             s.append(i)
                 min1 = min(d.keys())
                 ans1 += min1
-                ans2 = (ans2 * d[min1]) % mod
-        return ans1, ans2
-
+                ans2 = ans2 * d[min1] % mod
+        return (ans1, ans2)
     n = int(data())
     c = mdata()
     m = int(data())
     g = [set() for i in range(n)]
     g1 = [set() for i in range(n)]
     for i in range(m):
-        u, v = mdata()
+        (u, v) = mdata()
         g[u - 1].add(v - 1)
         g1[v - 1].add(u - 1)
-    ans1, ans2 = kosaraju()
+    (ans1, ans2) = kosaraju()
     print(ans1, ans2)
 
 

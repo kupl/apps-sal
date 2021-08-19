@@ -1,9 +1,7 @@
 import sys
 from functools import reduce
-
 zz = 1
-
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10 ** 5)
 if zz:
     input = sys.stdin.readline
 else:
@@ -33,7 +31,7 @@ def fli():
 
 
 def comp(a, b):
-    if(a > b):
+    if a > b:
         return 2
     return 2 if a == b else 0
 
@@ -43,7 +41,7 @@ def gi():
 
 
 def gtc(tc, ans):
-    print(("Case #" + str(tc) + ":", ans))
+    print(('Case #' + str(tc) + ':', ans))
 
 
 def cil(n, m):
@@ -59,7 +57,7 @@ def pro(a):
 
 
 def swap(a, i, j):
-    a[i], a[j] = a[j], a[i]
+    (a[i], a[j]) = (a[j], a[i])
 
 
 def si():
@@ -84,7 +82,7 @@ def bo(i):
 
 def graph(n, m):
     for i in range(m):
-        x, y = mi()
+        (x, y) = mi()
         a[x].append(y)
         a[y].append(x)
 
@@ -101,10 +99,10 @@ def find(i):
 
 
 def union(x, y):
-    xs, ys = find(x), find(y)
+    (xs, ys) = (find(x), find(y))
     if xs != ys:
         if rank[xs] < rank[ys]:
-            xs, ys = ys, xs
+            (xs, ys) = (ys, xs)
         a[ys] = xs
         rank[xs] += 1
         return False
@@ -113,16 +111,16 @@ def union(x, y):
 
 while t > 0:
     t -= 1
-    n, m = mi()
+    (n, m) = mi()
     a = [i for i in range(n + 1)]
     rank = [0] * (n + 1)
     c = li()
     d = li()
     for i in range(m):
-        x, y = mi()
+        (x, y) = mi()
         union(x, y)
     p = [0] * (n + 1)
     for i in range(n):
         a[i + 1] = find(i + 1)
         p[a[i + 1]] += c[i] - d[i]
-    print(("Yes" if p.count(0) == len(p) else "No"))
+    print('Yes' if p.count(0) == len(p) else 'No')

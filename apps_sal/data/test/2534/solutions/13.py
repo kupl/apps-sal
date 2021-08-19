@@ -1,5 +1,4 @@
-# cook your dish here
-n, m = map(int, input().strip().split())
+(n, m) = map(int, input().strip().split())
 mat = []
 for _ in range(n):
     mat.append(list(map(int, input().strip().split())))
@@ -8,19 +7,17 @@ for _ in range(n):
 def rmin(mat, r):
     row = mat[r]
     rm = min(row)
-    return(rm)
+    return rm
 
 
 def cmax(mat, c):
-    col = list(_[c] for _ in mat)
+    col = list((_[c] for _ in mat))
     cm = max(col)
-    return(cm)
+    return cm
 
 
-rm = list(rmin(mat, _) for _ in range(n))
-
-cm = list(cmax(mat, _) for _ in range(m))
-
+rm = list((rmin(mat, _) for _ in range(n)))
+cm = list((cmax(mat, _) for _ in range(m)))
 num = 0
 for _ in range(n):
     for __ in range(m):
@@ -33,4 +30,4 @@ for _ in range(n):
 if num != 0:
     print(num)
 else:
-    print("GUESS")
+    print('GUESS')

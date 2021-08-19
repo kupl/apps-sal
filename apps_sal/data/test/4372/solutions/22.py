@@ -9,9 +9,6 @@ def find_gcd(list):
 
 def ain():
     return list(map(int, input().split()))
-# for _ in range(int(input()))
-# n = int(input())
-# a = list(map(int, input().split()))
 
 
 n = int(input())
@@ -21,12 +18,8 @@ s = []
 for x in l:
     if x != maxv:
         s += [maxv - x]
-
-z = (find_gcd(s))
+z = find_gcd(s)
 y = 0
 for x in s:
-    y += (x // z)
+    y += x // z
 print(str(y) + ' ' + str(z))
-
-
-# python3 p.py

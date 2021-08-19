@@ -30,27 +30,22 @@ def main():
     g = [[] for i in range(n + 1)]
     rg = [[] for i in range(n + 1)]
     for i in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         g[a].append(b)
         rg[b].append(a)
-
     order = deque()
     visited = [0] * (n + 1)
     for i in range(1, n + 1):
         if not visited[i]:
             dfs_order(i, visited, g, order)
-    # print(order)
-
     visited = [0] * (n + 1)
     comp = defaultdict(list)
     while order:
         now = order.pop()
         if not visited[now]:
             dfs_scc(now, now, rg, visited, comp, cost)
-    # print(comp)
-
-    ans1, ans2 = 0, 1
-    for key, values in comp.items():
+    (ans1, ans2) = (0, 1)
+    for (key, values) in comp.items():
         values = sorted(values)
         ans1 += values[0]
         position = bisect(values, values[0])

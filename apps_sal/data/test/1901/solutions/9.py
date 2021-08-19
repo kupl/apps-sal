@@ -1,15 +1,13 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Sun Nov 19 07:28:11 2017
 
 @author: fei
 """
-n, m = [int(i) for i in input().split(' ')]
+(n, m) = [int(i) for i in input().split(' ')]
 c = [int(i) for i in input().split(' ')]
 chars = [[] for _ in range(n)]
 for _ in range(m):
-    p, q = [int(i) for i in input().split(' ')]
+    (p, q) = [int(i) for i in input().split(' ')]
     p = p - 1
     q = q - 1
     chars[p].append(q)
@@ -42,5 +40,4 @@ for i in range(n):
                     nodes.append(j)
         C += tmp
         Graph.append(nodes)
-
 print(C)

@@ -1,16 +1,11 @@
-# your code goes here
 arr = input().split()
 a = int(arr[0])
 b = int(arr[1])
-#print('a = ' + str(a) + 'b = ' + str(b))
-
 if a % 2 == 1 and b % 2 == 1:
     if a < b:
-        #		print('a')
         a -= 1
         flag = 1
     else:
-        #		print('b')
         b -= 1
         flag = 2
 elif a % 2 == 1:
@@ -19,13 +14,12 @@ elif a % 2 == 1:
 elif b % 2 == 1:
     b -= 1
     flag = 2
+elif a > b:
+    a -= 1
+    flag = 1
 else:
-    if a > b:
-        a -= 1
-        flag = 1
-    else:
-        b -= 1
-        flag = 2
+    b -= 1
+    flag = 2
 if flag == 1:
     s = 'a'
 else:
@@ -42,18 +36,15 @@ while a > 0 and b > 0:
             s += 'a'
             a -= 1
             play = 2
-
+    elif play == 2:
+        s += 'a'
+        a -= 1
+        play = 1
+        flag = 1
     else:
-        if play == 2:
-            s += 'a'
-            a -= 1
-            play = 1
-            flag = 1
-        else:
-            s += 'b'
-            b -= 1
-            play = 2
-
+        s += 'b'
+        b -= 1
+        play = 2
 while a > 0:
     s += 'a'
     a -= 1
