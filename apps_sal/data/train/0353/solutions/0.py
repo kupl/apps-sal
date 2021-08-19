@@ -6,7 +6,7 @@ class Solution:
         cal_map = [1]
         for ii in range(1, N):
             cal_map.append(cal_map[-1] * 2 % self.MODS)
-        left, right, res = 0, N - 1, 0
+        (left, right, res) = (0, N - 1, 0)
         nums.sort()
         while left < N:
             if nums[left] * 2 > target:
@@ -14,6 +14,5 @@ class Solution:
             while right - 1 >= left and nums[left] > target - nums[right]:
                 right -= 1
             res += cal_map[right - left]
-            # print(left, right, cal_map[right - left], nums[left])
             left += 1
         return res % self.MODS

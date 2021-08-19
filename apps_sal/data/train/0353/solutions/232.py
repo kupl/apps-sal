@@ -1,8 +1,5 @@
 class Solution:
-    # Version 1: Sliding window
-    # Count the mismatch count
-    # TC: O(nlogn), SC: O(1)
-    '''
+    """
     def numSubseq(self, nums: List[int], target: int) -> int:
         M = 10**9 + 7
         mismatch = 0
@@ -16,10 +13,10 @@ class Solution:
                     base += 1
                 mismatch += pow(2, k-base, M)
         return (pow(2, len(nums), M) - 1 - mismatch) % M
-    '''
+    """
 
     def numSubseq(self, nums: List[int], target: int) -> int:
-        M = 10**9 + 7
+        M = 10 ** 9 + 7
         ans = 0
         nums.sort()
         left = 0

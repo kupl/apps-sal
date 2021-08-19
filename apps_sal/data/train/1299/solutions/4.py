@@ -1,12 +1,8 @@
-# cook your dish here
-# -*- coding: utf-8 -*-
 """
 Created on Mon Apr 27 23:13:37 2020
 
 @author: SRILEKHA
 """
-
-
 for _ in range(int(input())):
     num = int(input())
     length = list(map(int, input().split()))

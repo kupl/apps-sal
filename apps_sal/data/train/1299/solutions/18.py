@@ -1,4 +1,3 @@
-# cook your dish here
 for T in range(int(input())):
     n = int(input())
     a_lst = list(map(int, input().split()))
@@ -15,5 +14,4 @@ for T in range(int(input())):
                 if k - 1 not in dish_indices:
                     dish_indices.append(k)
         dish_type_count.append(len(dish_indices))
-
     print(dish_type[dish_type_count.index(max(dish_type_count))])

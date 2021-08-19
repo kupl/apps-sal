@@ -5,7 +5,6 @@ for _ in range(int(input())):
     for i in range(1, n):
         if l[i] == l[i - 1]:
             l[i] = -1
-    # print(l)
     m = 0
     sx = list(s)
     sx.sort()
@@ -14,5 +13,4 @@ for _ in range(int(input())):
         if m < x:
             m = x
             z = i
-
     print(z)

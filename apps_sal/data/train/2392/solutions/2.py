@@ -1,6 +1,3 @@
-# Contest: Codeforces Round #582 (Div. 3) (https://codeforces.com/contest/1213)
-# Problem: C: Book Reading (https://codeforces.com/contest/1213/problem/C)
-
 from math import gcd
 
 
@@ -14,7 +11,7 @@ def rints():
 
 q = rint()
 for _ in range(q):
-    n, m = rints()
+    (n, m) = rints()
     lcm = 10 * m // gcd(10, m)
     block = 0
     for i in range(lcm // m):

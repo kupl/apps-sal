@@ -1,4 +1,4 @@
-'''input
+"""input
 7
 1 1
 10 1
@@ -8,7 +8,7 @@
 123 144
 1234312817382646 13
 
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -18,7 +18,7 @@ from random import randint as rd
 from bisect import bisect_left as bl
 from heapq import heappush as hpush
 from heapq import heappop as hpop
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -29,7 +29,7 @@ def ri(flag=0):
 
 
 for _ in range(ri(1)):
-    n, m = ri()
+    (n, m) = ri()
     k = []
     for i in range(m, n + 1, m):
         temp = i % 10
@@ -37,15 +37,11 @@ for _ in range(ri(1)):
             k.append(temp)
         else:
             break
-
     period = n // m
     ans = 0
     if len(k) != 0:
         ans = sum(k) * (period // len(k))
         rem = period % len(k)
-
         for i in range(rem):
             ans += k[i]
-
     print(ans)
-    # print(k,period)

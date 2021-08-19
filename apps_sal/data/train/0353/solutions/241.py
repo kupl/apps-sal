@@ -19,30 +19,11 @@ import itertools
 import sys
 from functools import lru_cache
 from typing import List
-
-'''
-Input: nums = [3,5,6,7], target = 9
-Output: 4
-Explanation: There are 4 subsequences that satisfy the condition.
-[3] -> Min value + max value <= target (3 + 3 <= 9)
-[3,5] -> (3 + 5 <= 9)
-[3,5,6] -> (3 + 6 <= 9)
-[3,6] -> (3 + 6 <= 9)
-
-普通思路：排序。分别计算各个区间
-3 -> 1
-3 5 -> 2^0 在或不在
-3 5 6 -> 2^1
-3 5 6 7 -> 2^2
-
-加强，与其每次计算，不如到最后一个才计算，因为：
-1 + 2^0 + 2^1 + 2^2 = 2^3
-
-可以用二分加速寻找。
-'''
+'\nInput: nums = [3,5,6,7], target = 9\nOutput: 4\nExplanation: There are 4 subsequences that satisfy the condition.\n[3] -> Min value + max value <= target (3 + 3 <= 9)\n[3,5] -> (3 + 5 <= 9)\n[3,5,6] -> (3 + 6 <= 9)\n[3,6] -> (3 + 6 <= 9)\n\n普通思路：排序。分别计算各个区间\n3 -> 1\n3 5 -> 2^0 在或不在\n3 5 6 -> 2^1\n3 5 6 7 -> 2^2\n\n加强，与其每次计算，不如到最后一个才计算，因为：\n1 + 2^0 + 2^1 + 2^2 = 2^3\n\n可以用二分加速寻找。\n'
 
 
 class Solution:
+
     def numSubseqNormal(self, nums: List[int], target: int) -> int:
         nums = sorted(nums)
         n = len(nums)
@@ -50,7 +31,7 @@ class Solution:
         mod = 10 ** 9 + 7
         for i in range(n):
             for j in range(i, n):
-                if (nums[i] + nums[j]) <= target:
+                if nums[i] + nums[j] <= target:
                     if i == j:
                         count += 1
                     else:
@@ -58,7 +39,6 @@ class Solution:
                     count %= mod
         return count
 
-    # 加强
     def numSubseq1(self, nums: List[int], target: int) -> int:
         nums = sorted(nums)
         n = len(nums)
@@ -66,12 +46,12 @@ class Solution:
         mod = 10 ** 9 + 7
         for i in range(n):
             j = i
-            while j < n and (nums[i] + nums[j]) <= target:
+            while j < n and nums[i] + nums[j] <= target:
                 j += 1
             if i == j:
-                if (nums[i] + nums[j]) <= target:
+                if nums[i] + nums[j] <= target:
                     count += 1
-            elif (nums[i] + nums[j - 1]) <= target:  # 防止第一个数就超过
+            elif nums[i] + nums[j - 1] <= target:
                 count += pow(2, j - i - 1) % mod
         return count % mod
 
@@ -95,24 +75,23 @@ class Solution:
         mod = 10 ** 9 + 7
         pow_map = [1 for _ in range(n)]
         for i in range(1, n):
-            pow_map[i] = (2 * pow_map[i - 1]) % mod
-
+            pow_map[i] = 2 * pow_map[i - 1] % mod
         for i in range(n):
             if nums[i] > target:
                 break
             j = self.findLast(nums, i, n - 1, target)
             if i == j:
-                if (nums[i] + nums[j]) <= target:
+                if nums[i] + nums[j] <= target:
                     count += 1
-            elif (nums[i] + nums[j - 1]) <= target:  # 防止第一个数就超过
+            elif nums[i] + nums[j - 1] <= target:
                 count += pow_map[j - i - 1]
         return count % mod
 
     def numSubseq(self, A, target):
         A.sort()
-        l, r = 0, len(A) - 1
+        (l, r) = (0, len(A) - 1)
         res = 0
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         while l <= r:
             if A[l] + A[r] > target:
                 r -= 1

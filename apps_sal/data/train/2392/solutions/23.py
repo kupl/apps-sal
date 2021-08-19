@@ -1,26 +1,16 @@
-#import bisect
-#i = bisect.bisect_left(a, k)
-# a=[]
-#from sys import stdin
-# input=stdin.readline
-
 for _ in range(int(input())):
-    # n=int(input())
     ans = 0
-    n, m = list(map(int, input().split()))
-    #a=list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = []
     if m > n:
         print('0')
         continue
     for i in range(10):
-        a.append((m * (i + 1)) % 10)
+        a.append(m * (i + 1) % 10)
     s = sum(a)
-
-    ans += ((n // (m * 10)) * s)
+    ans += n // (m * 10) * s
     k = n % (10 * m)
     p = k // m
     for i in range(p):
         ans += a[i]
     print(ans)
-    # YOUR CODE HERE
