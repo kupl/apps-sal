@@ -1,13 +1,12 @@
-#!/usr/bin/env python3
 import random
 
 
 def copysign(x, y):
-    return abs(x) * (1 if y >= 0 else - 1)
+    return abs(x) * (1 if y >= 0 else -1)
 
 
 def dist(k, x, y):
-    if not (abs(x) + abs(y) < 2 * k):
+    if not abs(x) + abs(y) < 2 * k:
         return None
     if x == y == 0:
         return 0
@@ -25,9 +24,9 @@ def iterate_neighbors(k, x, y):
     for dx in (dz, k - dz):
         dy = k - dx
         yield (dx, dy)
-        yield (dx, - dy)
-        yield (- dx, dy)
-        yield (- dx, - dy)
+        yield (dx, -dy)
+        yield (-dx, dy)
+        yield (-dx, -dy)
 
 
 def solve(k, x, y):
@@ -39,7 +38,7 @@ def solve(k, x, y):
             dx = x
             dy = y
         elif d == 2:
-            for dx, dy in iterate_neighbors(k, x, y):
+            for (dx, dy) in iterate_neighbors(k, x, y):
                 if dist(k, x - dx, y - dy) == 1:
                     break
             else:
@@ -60,15 +59,15 @@ def solve(k, x, y):
 
 def main():
     k = int(input())
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if k % 2 == 0 and (abs(x) + abs(y)) % 2 != 0:
-        print((-1))
+        print(-1)
         return
     ops = list(solve(k, x, y))
-    print((len(ops)))
+    print(len(ops))
     x = 0
     y = 0
-    for dx, dy in ops:
+    for (dx, dy) in ops:
         x += dx
         y += dy
         print((x, y))

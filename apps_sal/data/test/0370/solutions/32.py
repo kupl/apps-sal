@@ -2,7 +2,7 @@ def solve(v, u, k):
     sign_v = sign_u = 1
     swap = 1
     if abs(v) < abs(u):
-        v, u = u, v
+        (v, u) = (u, v)
         swap = -1
     if v < 0:
         v = -v
@@ -24,14 +24,14 @@ def solve(v, u, k):
         return res
     elif v < k and v % 2 == 0:
         res = [[k, u - k], [v - k, k]]
-        res = [[dv * sign_v, du * sign_u][::swap] for dv, du in res]
+        res = [[dv * sign_v, du * sign_u][::swap] for (dv, du) in res]
         return res
     else:
         m = v % k
         if (k + m) % 2:
             m -= 1
         res = [[m, k]] + solve(v - m, u - k, k)
-        res = [[dv * sign_v, du * sign_u][::swap] for dv, du in res]
+        res = [[dv * sign_v, du * sign_u][::swap] for (dv, du) in res]
         return res
 
 
@@ -45,7 +45,7 @@ def test():
     M[0][0] = 0
     while q:
         q_new = []
-        for x, y in q:
+        for (x, y) in q:
             for i in range(-K, K + 1, 2):
                 ux = x + i
                 uy = y + i
@@ -73,28 +73,26 @@ def test():
         for y in range(-R, R + 1):
             if M[x][y] != -1:
                 if len(solve(x, y, K)) != M[x][y]:
-                    print(f"!! x={x} y={y} len(solve(x, y, K))={len(solve(x, y, K))} M[x][y]={M[x][y]}")
-    print("test finished")
-
-# test()
+                    print(f'!! x={x} y={y} len(solve(x, y, K))={len(solve(x, y, K))} M[x][y]={M[x][y]}')
+    print('test finished')
 
 
 def main():
     K = int(input())
-    X, Y = list(map(int, input().split()))
+    (X, Y) = list(map(int, input().split()))
     if K % 2 == 0 and (X + Y) % 2:
-        print((-1))
+        print(-1)
         return
-    V, U = X + Y, X - Y
+    (V, U) = (X + Y, X - Y)
     Ans = solve(V, U, K)
-    print((len(Ans)))
+    print(len(Ans))
     cum_x = cum_y = 0
-    for v, u in Ans:
-        x, y = (v + u) // 2, (v - u) // 2
+    for (v, u) in Ans:
+        (x, y) = ((v + u) // 2, (v - u) // 2)
         assert abs(x) + abs(y) == K
         cum_x += x
         cum_y += y
-        print(f"{cum_x} {cum_y}")
+        print(f'{cum_x} {cum_y}')
     assert cum_x == X and cum_y == Y
 
 

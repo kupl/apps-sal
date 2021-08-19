@@ -28,25 +28,16 @@ class Dijkstra(object):
 
     def __init__(self, graph, start):
         self.g = graph.graph
-
-        # startノードからの最短距離
-        # startノードは0, それ以外は無限大で初期化
         self.dist = defaultdict(lambda: float('inf'))
         self.dist[start] = 0
-
-        # 最短経路での1つ前のノード
         self.prev = defaultdict(lambda: None)
-
-        # startノードをキューに入れる
         self.Q = []
         heappush(self.Q, (self.dist[start], start))
-
         while self.Q:
-            # 優先度（距離）が最小であるキューを取り出す
-            dist_u, u = heappop(self.Q)
+            (dist_u, u) = heappop(self.Q)
             if self.dist[u] < dist_u:
                 continue
-            for v, weight in self.g[u]:
+            for (v, weight) in self.g[u]:
                 alt = dist_u + weight
                 if self.dist[v] > alt:
                     self.dist[v] = alt
@@ -71,14 +62,13 @@ class Dijkstra(object):
         return path[::-1]
 
 
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 g = Graph()
 for i in range(10):
     c = list(map(int, input().split()))
     for j in range(10):
-        src, dst, weight = i, j, c[j]
+        (src, dst, weight) = (i, j, c[j])
         g.add_edge(src, dst, weight)
-
 ans = 0
 for y in range(h):
     tmp = list(map(int, input().split()))

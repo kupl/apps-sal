@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from functools import lru_cache, reduce
 from bisect import bisect_left, bisect_right
 import random
@@ -8,23 +7,21 @@ import sys
 from collections import deque, defaultdict, namedtuple
 import heapq
 from math import sqrt, factorial, gcd, ceil, atan, pi
-def input(): return sys.stdin.readline()[:-1]  # warning not \n
 
 
-# def input(): return sys.stdin.buffer.readline()[:-1] # warning bytes
-# def input(): return sys.stdin.buffer.readline().strip() # warning bytes
-# def input(): return sys.stdin.buffer.readline().decode('utf-8').strip()
-# string.ascii_lowercase
-MOD = int(1e9) + 7
+def input():
+    return sys.stdin.readline()[:-1]
+
+
+MOD = int(1000000000.0) + 7
 INF = float('inf')
 
 
 def solve():
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     p = []
     for _ in range(10):
         p.append([int(x) for x in input().split()])
-
     stack = set()
 
     def dfs(v):
@@ -38,10 +35,8 @@ def solve():
                 p[v][1] = min(p[v][1], dfs(to) + p[v][to])
         stack.remove(v)
         return p[v][1]
-
     for i in range(10):
         dfs(i)
-
     ans = 0
     for _ in range(n):
         row = [int(x) for x in input().split()]
@@ -53,18 +48,6 @@ def solve():
 
 
 T = 1
-# T = int(input())
 for case in range(1, T + 1):
     ans = solve()
-
-
-"""
-
-dp[num_changes][blue_placed]
-
-
-abba
-
-
-
-"""
+'\n\ndp[num_changes][blue_placed]\n\n\nabba\n\n\n\n'

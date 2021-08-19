@@ -2,24 +2,23 @@ def solve():
     n = int(input())
     s = input()
     l = []
-    g_seg, s_seg = 0, 0
+    (g_seg, s_seg) = (0, 0)
     g_count = 0
     for i in range(n):
         if s[i] == 'S':
             if g_seg:
                 g_count += 1
-                l.append(("G", g_seg))
+                l.append(('G', g_seg))
                 g_seg = 0
             s_seg += 1
         else:
             if s_seg:
-                l.append(("S", s_seg))
+                l.append(('S', s_seg))
                 s_seg = 0
             g_seg += 1
     if g_seg:
-        l.append(("G", g_seg))
+        l.append(('G', g_seg))
         g_count += 1
-    # print(l)
     if not g_count:
         return 0
     if len(l) == 1:

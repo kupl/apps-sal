@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 k = int(input())
 ds = list(map(int, input().split()))
 es = []
@@ -20,7 +19,7 @@ for d in ds:
             bs[2] = True
             es.append(d)
 for d in ds:
-    if not bs[0] and not bs[1]:
+    if not bs[0] and (not bs[1]):
         if 10 <= d <= 99 and d % 10 != 0:
             bs[0] = True
             bs[1] = True

@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
-
 [n, k, M, D] = list(map(int, input().strip().split()))
 
 
 def ceil(a, b):
-    return -((-a) // b)
+    return -(-a // b)
 
 
 def arkkonf(x):
@@ -22,5 +20,4 @@ for d in range(D):
     if n // x > k * D:
         continue
     res = max(res, arkkonf(x))
-
 print(res)

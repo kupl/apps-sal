@@ -1,5 +1,4 @@
-# your code goes here
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 c = 0
 q = [s]
@@ -9,7 +8,7 @@ while q:
     p = q.pop(0)
     if p not in d:
         ls += 1
-        c += (n - len(p))
+        c += n - len(p)
         if ls == k:
             break
         d.add(p)
@@ -17,7 +16,6 @@ while q:
             temp = p[:i] + p[i + 1:]
             if temp not in d:
                 q.append(temp)
-
 if ls == k:
     print(c)
 else:
