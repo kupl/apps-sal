@@ -1,18 +1,13 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:
         nMap = collections.defaultdict(list)
         queue = collections.deque([(root, 0)])
-        xMin, xMax = 0, 0
+        (xMin, xMax) = (0, 0)
         while queue:
             tmp = collections.defaultdict(list)
             for i in range(len(queue)):
-                node, nX = queue.popleft()
+                (node, nX) = queue.popleft()
                 tmp[nX].append(node.val)
                 if node.left:
                     queue.append((node.left, nX - 1))

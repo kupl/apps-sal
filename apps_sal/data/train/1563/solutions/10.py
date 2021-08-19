@@ -1,5 +1,3 @@
-# /usr/bin/python
-
 def main():
     test = int(input())
     for i in range(test):

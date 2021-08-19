@@ -4,15 +4,15 @@ for i in range(6, 31):
 
 
 def coefficients(n):
-    y, z = 2, 0  # coefficients for number of passengers at station 3
+    (y, z) = (2, 0)
     for i in range(4, n):
         y += fib[i - 1]
         z += fib[i]
-    return y, z
+    return (y, z)
 
 
 def calc(k, n, m, x):
-    y, z = coefficients(n)
+    (y, z) = coefficients(n)
     station2 = (m - y * k) // z
-    y, z = coefficients(x + 1)
+    (y, z) = coefficients(x + 1)
     return y * k + z * station2

@@ -20,4 +20,3 @@ for i in range(n):
     if l[i][1] == 0:
         ans += 1
 print(ans)
-# print(l)

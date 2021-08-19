@@ -1,12 +1,3 @@
-# for _ in range(int(input()):
-#n,m = map(int,input().split())
-#x = [int(w) for w in input().split()]
-#n = int(input())
-#x = [int(input()) for _ in range(n)]
-# for i in range(n):
-# dt = {} for i in x:dt[i] = dt.get(i,0)+1
-#dt = {k:v for k,v in sorted(x.items(), key=lambda i: i[1])}
-
 def dfs(v):
     visited.add(v)
     parents.append(v)
@@ -20,23 +11,18 @@ def dfs(v):
 
 
 n = int(input())
-cost, graph, val = {}, {}, {}
-# val(i) is sum of cost of descendants of i
+(cost, graph, val) = ({}, {}, {})
 for i in range(1, n + 1):
     cost[i] = int(input())
     graph[i] = []
     val[i] = cost[i]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
-
 desc = [[False for i in range(n + 1)] for i in range(n + 1)]
-# desc(i,j) is true if i is descendant of j
 visited = set()
-parents = []   # Ancestors stack
-
-
+parents = []
 dfs(1)
 total = sum(cost.values())
 best = float('inf')

@@ -9,9 +9,8 @@ desc = [[False for i in range(n)] for i in range(n)]
 for i in range(n):
     cost.append(int(input()))
     d[i] = []
-
 for i in range(n - 1):
-    j, k = list(map(int, input().split()))
+    (j, k) = list(map(int, input().split()))
     d[j - 1].append(k - 1)
     d[k - 1].append(j - 1)
 
@@ -30,7 +29,7 @@ def dfs(u):
 
 
 dfs(0)
-mp = 10**9
+mp = 10 ** 9
 coco = sum(cost)
 for i in range(n):
     for j in range(i + 1, n):
@@ -42,7 +41,4 @@ for i in range(n):
             vali -= val_desc[j]
         p = max(vali, valj, coco - vali - valj)
         mp = min(mp, p)
-# print(desc)
-# print(val_desc)
-# print
 print(mp)

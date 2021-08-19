@@ -1,7 +1,6 @@
-# cook your dish here
-M = 10**9 + 7
+M = 10 ** 9 + 7
 for _ in range(int(input())):
-    n, k, m = (int(s) for s in input().split())
+    (n, k, m) = (int(s) for s in input().split())
     l = [int(s) % m for s in input().split()]
     ans = [0] * (k + 1)
     i = 1

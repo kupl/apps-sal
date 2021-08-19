@@ -1,6 +1,7 @@
 class Solution:
+
     def distinctSubseqII(self, S: str) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         n = len(S)
         dp = [0] * n
         dp[0] = 1
@@ -13,5 +14,4 @@ class Solution:
                     dp[i] -= 1
                     break
             dp[i] %= mod
-        # print(dp)
         return dp[-1]
