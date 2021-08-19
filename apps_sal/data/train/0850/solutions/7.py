@@ -1,27 +1,8 @@
-# cook your dish here
 import math as m
-# for _ in range(int(input())):
-#     n=int(input())
-#     a=list(map(int,input().split()))
-#     newa=list(set(a))
-#     if len(newa)==1:
-#         print(newa[0]*2)
-#     elif len(newa)==2:
-#         print(sum(newa))
-#     else:
-#         newa.sort()
-#         m=newa.pop()
-#         gcd=newa[0]
-#         for i in range(1,len(a)):
-#             gcd=math.gcd(gcd,a[i])
-#             if gcd==1:
-#                 break
-#         print(m+gcd)
-
 for _ in range(int(input())):
     length = int(input())
     arr = list(map(int, input().split()))
-    if (length == 2):
+    if length == 2:
         print(arr[0] + arr[1])
     else:
         tmparr = list(set(arr))
@@ -29,7 +10,7 @@ for _ in range(int(input())):
         fmax = tmparr.pop()
         smax = tmparr.pop()
         p = len(tmparr)
-        if (p == 0):
+        if p == 0:
             print(fmax + smax)
         else:
             result = tmparr[0]

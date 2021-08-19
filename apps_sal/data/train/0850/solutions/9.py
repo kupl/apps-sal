@@ -15,9 +15,9 @@ def gh(a, b):
 
 
 def abc(l):
-    s = 2**len(l)
+    s = 2 ** len(l)
     i = 0
-    d = "{0:0" + str(len(l)) + "b}"
+    d = '{0:0' + str(len(l)) + 'b}'
     ans = 0
     while i < s:
         x = d.format(i)
@@ -36,7 +36,6 @@ def abc(l):
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
-    #
     d = {}
     for i in l:
         try:

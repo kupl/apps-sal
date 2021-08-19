@@ -1,9 +1,7 @@
 class Solution:
-    def largestComponentSize(self, A: List[int]) -> int:
 
-        # max number of components:
+    def largestComponentSize(self, A: List[int]) -> int:
         fc = DisjointSetUnion(max(A))
-        # share common factor:
         for a in A:
             for i in range(2, int(sqrt(a)) + 1):
                 if a % i == 0:
@@ -19,6 +17,7 @@ class Solution:
 
 
 class DisjointSetUnion(object):
+
     def __init__(self, n):
         self.parent = [i for i in range(n + 1)]
         self.size = [1] * (n + 1)
@@ -29,11 +28,11 @@ class DisjointSetUnion(object):
         return self.parent[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px == py:
             return px
         if self.size[px] > self.size[py]:
-            px, py = py, px
+            (px, py) = (py, px)
         self.parent[px] = py
         self.size[py] += self.size[px]
         return py
