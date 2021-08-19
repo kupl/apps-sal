@@ -2,6 +2,7 @@ from math import factorial
 
 
 class Solution:
+
     def numWays(self, s: str) -> int:
         ans = 0
         n = len(s)
@@ -31,7 +32,6 @@ class Solution:
                     ti[1] -= 1
                 j += 1
             ti[1] = j
-
             zc = [0, 0]
             j = ti[0]
             while s[j] == '0':
@@ -41,9 +41,6 @@ class Solution:
             while s[j] == '0':
                 zc[1] += 1
                 j += 1
-
-            # print(zc)
-
             lv = 0
             rv = 0
             if zc[0] > 0:
@@ -52,14 +49,11 @@ class Solution:
             if zc[1] > 0:
                 zc[1] += 1
                 rv = factorial(zc[1]) / factorial(zc[1] - 1)
-
             if max([lv, rv]) == 0:
                 return 1
-
             if lv > 0 and rv > 0:
                 ans = lv * rv
             else:
                 ans = lv + rv
-
         ans = int(ans)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

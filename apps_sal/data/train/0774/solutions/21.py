@@ -1,9 +1,8 @@
-# cook your dish here
-n, k, p = list(map(int, input().split()))
+(n, k, p) = list(map(int, input().split()))
 coor = list(map(int, input().split()))
 forw = []
 sort_coor = []
-for i, each in enumerate(coor):
+for (i, each) in enumerate(coor):
     sort_coor.append((each, i))
 sort_coor.sort()
 j = n - 2
@@ -17,10 +16,9 @@ for i in range(n - 1, 0, -1):
     else:
         max1 = sort_coor[j][0] + k
         msg[sort_coor[j][1]] = max1
-
 for i in range(p):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if msg[b - 1] == msg[a - 1]:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

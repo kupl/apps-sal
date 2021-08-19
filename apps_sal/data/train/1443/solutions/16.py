@@ -1,7 +1,6 @@
-# cook your dish here
 try:
     for _ in range(int(input())):
-        n, m = map(int, input().split())
+        (n, m) = map(int, input().split())
         l = []
         for j in range(n):
             l.append(list(input()))
@@ -15,7 +14,7 @@ try:
             c = 0
         count = 0
         for j in range(len(ans)):
-            count += ((ans[j] - 1) * (ans[j])) // 2
+            count += (ans[j] - 1) * ans[j] // 2
         print(count)
 except:
     pass

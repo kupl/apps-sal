@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     tap = int(input())
     for i in range(tap):
@@ -9,11 +8,9 @@ try:
             p = l[0]
             r = l[1]
             d = l[2]
-
-            t = p + (d / 100) * p
+            t = p + d / 100 * p
             a = t - t * (d / 100)
             loss += (p - a) * r
-
         print(loss)
 except:
     pass

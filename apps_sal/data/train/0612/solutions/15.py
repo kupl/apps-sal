@@ -1,9 +1,8 @@
-# cook your dish here
 for i in range(int(input())):
     s = input()
     if '101' in s:
-        print("Good")
+        print('Good')
     elif '010' in s:
-        print("Good")
+        print('Good')
     else:
-        print("Bad")
+        print('Bad')

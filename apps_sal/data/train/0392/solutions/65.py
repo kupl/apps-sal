@@ -1,5 +1,5 @@
 class Solution:
-    CONST = 10**9 + 7
+    CONST = 10 ** 9 + 7
 
     def numWays(self, s: str) -> int:
         n = len(s)
@@ -10,11 +10,9 @@ class Solution:
         if num_ones % 3 != 0:
             return 0
         if num_ones == 0:
-            return ((n - 1) * (n - 2) // 2) % self.CONST
-
-        first, second = 0, 0
-        num_ones_sofar, cutoff = 0, num_ones // 3
-        # print(cutoff)
+            return (n - 1) * (n - 2) // 2 % self.CONST
+        (first, second) = (0, 0)
+        (num_ones_sofar, cutoff) = (0, num_ones // 3)
         for i in range(n):
             num_ones_sofar += s[i] == '1'
             if num_ones_sofar < cutoff:
@@ -25,5 +23,4 @@ class Solution:
                 second += 1
             else:
                 pass
-            # print(first, second)
-        return (first * second) % self.CONST
+        return first * second % self.CONST

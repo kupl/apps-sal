@@ -1,5 +1,4 @@
-# cook your dish here
-n, k, p = map(int, input().split())
+(n, k, p) = map(int, input().split())
 x = [int(x) for x in input().split()]
 l = sorted(set(x))
 m = 0
@@ -9,6 +8,6 @@ for i in range(1, len(l)):
         m += 1
     l1[l[i]] = m
 for _ in range(p):
-    a, b = map(int, input().split())
-    a, b = x[a - 1], x[b - 1]
+    (a, b) = map(int, input().split())
+    (a, b) = (x[a - 1], x[b - 1])
     print('Yes') if l1[a] == l1[b] else print('No')

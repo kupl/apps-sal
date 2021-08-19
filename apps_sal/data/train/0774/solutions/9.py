@@ -3,10 +3,7 @@ from math import gcd, log2, log10, floor
 import math
 from collections import defaultdict, OrderedDict
 from bisect import bisect_left
-# import numpy as np
-# input=stdin.readline
-# print=stdout.write
-n, k, p = [int(i) for i in input().split()]
+(n, k, p) = [int(i) for i in input().split()]
 a = list(map(int, input().split()))
 asort = a[:]
 asort.sort()
@@ -20,11 +17,10 @@ for i in range(1, n):
         theta += 1
         dict[asort[i]] = theta
 for i in range(p):
-    alpha, beta = list(map(int, input().split()))
+    (alpha, beta) = list(map(int, input().split()))
     alpha -= 1
     beta -= 1
     if dict[a[alpha]] == dict[a[beta]]:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
-# print(dict)
+        print('No')

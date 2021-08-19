@@ -7,7 +7,7 @@ def factorial(n):
 
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     matrix = []
     for i in range(n):
         matrix.append(list(input()))
@@ -17,7 +17,6 @@ for _ in range(t):
         for j in range(n):
             if matrix[j][i] == '1':
                 count += 1
-        # print('Count:', count)
         if count > 1:
-            collision += ((count * (count - 1)) // 2)
+            collision += count * (count - 1) // 2
     print(collision)
