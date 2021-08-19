@@ -1,9 +1,10 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         left = [1] * len(A)
         right = [1] * len(A)
         stack = []
-        for i, v in enumerate(A):
+        for (i, v) in enumerate(A):
             if i == 0:
                 stack.append(i)
                 left[i] = 1
@@ -20,8 +21,7 @@ class Solution:
                 count += right[stack.pop()]
             right[i] = count
             stack.append(i)
-       # print(left,right)
         sum = 0
         for i in range(len(A)):
-            sum = sum + (left[i] * right[i] * A[i])
+            sum = sum + left[i] * right[i] * A[i]
         return sum % 1000000007

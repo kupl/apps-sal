@@ -1,12 +1,9 @@
 def main():
     S = list(input())
-
     N = len(S)
-
-    if (S[0] == '0') or (S[-1] == '1'):
+    if S[0] == '0' or S[-1] == '1':
         print(-1)
         return 0
-
     lst = []
     for i in range((N - 1) // 2):
         if S[i] != S[N - 2 - i]:
@@ -16,13 +13,10 @@ def main():
             lst.append(i + 1)
     if N % 2 == 0 and S[N // 2 - 1] == '1':
         lst.append(N // 2)
-    # print (lst)
-
     if lst[-1] * 2 != N:
         center = lst[-1] + 1
         for x in range(lst[-1] * 2 + 2, N + 1):
             print(center, x)
-
         before = 1
         n = lst[-1] * 2 + 2
         tmp = 1
@@ -35,7 +29,6 @@ def main():
             before = tmp
         print(tmp, center)
         print(n - tmp, center)
-
     if lst[-1] * 2 == N:
         before = 1
         n = lst[-1] * 2 + 1

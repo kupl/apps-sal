@@ -1,5 +1,3 @@
-# cook your dish here
-
 def sort_array(array):
     array.sort()
     for i in range(len(array)):
