@@ -2,10 +2,22 @@ import sys
 import math
 from collections import Counter, defaultdict
 input = sys.stdin.readline
-def LI(): return list(map(int, input().split()))
-def MAP(): return list(map(int, input().split()))
-def IN(): return int(input())
-def S(): return input()
+
+
+def LI():
+    return list(map(int, input().split()))
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def IN():
+    return int(input())
+
+
+def S():
+    return input()
 
 
 def case():

@@ -37,10 +37,9 @@ def score(S):
 
 N = int(input())
 scores = [score(input()) for _ in range(N)]
-score_neg_map = collections.Counter(-sc for sc in scores if sc is not None and sc < 0)
-score_pos_map = collections.Counter(sc for sc in scores if sc is not None and sc > 0)
-score_zero = sum(sc == 0 for sc in scores)
-
+score_neg_map = collections.Counter((-sc for sc in scores if sc is not None and sc < 0))
+score_pos_map = collections.Counter((sc for sc in scores if sc is not None and sc > 0))
+score_zero = sum((sc == 0 for sc in scores))
 ans = score_zero // 2
 for key in score_pos_map:
     pos = score_pos_map[key]

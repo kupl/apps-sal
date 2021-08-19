@@ -1,9 +1,7 @@
 n = int(input())
-
 left = {}
 right = {}
 neutral_count = 0
-
 for _ in range(n):
     bracket = input()
     s = []
@@ -17,13 +15,13 @@ for _ in range(n):
                 s.append(')')
     if len(s) == 0:
         neutral_count += 1
-    elif all(e == '(' for e in s):
+    elif all((e == '(' for e in s)):
         l = len(s)
         if l in left:
             left[l] += 1
         else:
             left[l] = 1
-    elif all(e == ')' for e in s):
+    elif all((e == ')' for e in s)):
         r = len(s)
         if r in right:
             right[r] += 1

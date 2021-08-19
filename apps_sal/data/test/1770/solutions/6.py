@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, x, y, d = list(map(int, input().split()))
+    (n, x, y, d) = list(map(int, input().split()))
     if abs(x - y) % d == 0:
         print(abs(x - y) // d)
     else:

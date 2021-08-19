@@ -1,13 +1,11 @@
-inp, k = {}, 0
-n, s = int(input()), input().split()
-
+(inp, k) = ({}, 0)
+(n, s) = (int(input()), input().split())
 for i in range(0, len(s)):
     inp_k = int(s[i])
     if inp_k in inp:
         inp[inp_k] += [i]
     else:
         inp[inp_k] = [i]
-
 inp_keys = [int(i) for i in inp.keys()]
 inp_keys.sort()
 result = []
@@ -29,8 +27,7 @@ for i in inp_keys:
         diff = check(j)
         if diff:
             result.append([i, diff])
-
-out = ""
-for i, j in result:
-    out += str(i) + " " + str(j) + "\n"
-print(str(len(result)) + "\n" + out[:-1])
+out = ''
+for (i, j) in result:
+    out += str(i) + ' ' + str(j) + '\n'
+print(str(len(result)) + '\n' + out[:-1])

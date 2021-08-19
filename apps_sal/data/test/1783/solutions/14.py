@@ -1,11 +1,10 @@
 from decimal import Decimal
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 d = [0 for i in range(n)]
 d[0] = a[0]
 for i in range(1, n):
     d[i] = a[i] + d[i - 1]
-
 cnt = 0
 sm = 0
 for i in range(k - 1, n):

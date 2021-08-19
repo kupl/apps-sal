@@ -6,4 +6,4 @@ for i in a:
     if a[a[a[i]]] == i:
         f = True
         break
-print("YES" if f else "NO")
+print('YES' if f else 'NO')

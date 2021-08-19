@@ -1,4 +1,4 @@
-a, b, x, y = map(int, input().split())
+(a, b, x, y) = map(int, input().split())
 if b > a:
     ans = x + (b - a) * min(2 * x, y)
 elif b < a:

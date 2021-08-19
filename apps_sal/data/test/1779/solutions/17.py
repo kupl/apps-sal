@@ -6,7 +6,7 @@ d = {}
 for i in range(52):
     d[s1[i]] = s2[i]
 s = input()
-ans = ""
+ans = ''
 for i in s:
     if not i.isdigit():
         ans += d[i]

@@ -1,9 +1,9 @@
 cntn = 0
 cntc = 0
 n = int(input())
-s = input().split(" ")
+s = input().split(' ')
 for i in s:
-    if (int(i) % 2 == 0):
+    if int(i) % 2 == 0:
         cntn = cntn + 1
     else:
         cntc = cntc + 1

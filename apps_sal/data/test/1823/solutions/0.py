@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 t = list(map(int, input().split()))
 t = [t[0]] + [t[i] for i in range(1, len(t)) if t[i] != t[i - 1]]
 p = [0] * (k + 1)

@@ -1,5 +1,4 @@
 from sys import *
-
 maxn = 3 * 10 ** 5 + 5
 fre = [0] * maxn
 divi = [0] * maxn
@@ -53,7 +52,7 @@ def nCr(n, r):
         return 1
     pro = 1
     for i in range(r):
-        pro *= (n - i)
+        pro *= n - i
     pro //= fact[r]
     return pro
 

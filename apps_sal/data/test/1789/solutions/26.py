@@ -3,6 +3,7 @@ import heapq
 
 
 class Dijkstra:
+
     def __init__(self):
         self.e = collections.defaultdict(list)
 
@@ -25,23 +26,21 @@ class Dijkstra:
         heapq.heappush(q, (0, s))
         v = collections.defaultdict(bool)
         while len(q):
-            k, u = heapq.heappop(q)
+            (k, u) = heapq.heappop(q)
             if v[u]:
                 continue
             v[u] = True
-
-            for uv, ud in self.e[u]:
+            for (uv, ud) in self.e[u]:
                 if v[uv]:
                     continue
                 vd = k + ud
                 if d[uv] > vd:
                     d[uv] = vd
                     heapq.heappush(q, (vd, uv))
-
         return d
 
 
-A, B, X, Y = map(int, input().split())
+(A, B, X, Y) = map(int, input().split())
 graph = Dijkstra()
 for i in range(1, 101):
     graph.add(i, 100 + i, X)

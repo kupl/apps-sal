@@ -22,6 +22,6 @@ for i in range(n):
         B = True
 if B == False:
     for i in d1:
-        print(i, end=" ")
+        print(i, end=' ')
 else:
-    print("Impossible")
+    print('Impossible')

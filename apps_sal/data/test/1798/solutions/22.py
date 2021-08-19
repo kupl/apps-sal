@@ -4,11 +4,9 @@ from collections import defaultdict
 def main():
     n = int(input())
     a = list(map(int, input().split(' ')))
-
     m = defaultdict(list)
     for i in range(n):
         m[a[i]].append(i)
-
     ret = []
     for k in m:
         if len(m[k]) == 1:

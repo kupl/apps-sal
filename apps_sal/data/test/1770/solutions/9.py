@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
-    n, x, y, d = list(map(int, input().split()))
-    x, y = x - 1, y - 1
+    (n, x, y, d) = list(map(int, input().split()))
+    (x, y) = (x - 1, y - 1)
     if x <= y and (y - x) % d == 0:
         print((y - x) // d)
         continue

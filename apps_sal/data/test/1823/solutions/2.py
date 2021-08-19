@@ -18,8 +18,7 @@ numbers = [int(x) for x in input().split()]
 res = [[genre, 0] for genre in range(1, genres + 1)]
 numbers = prepare(numbers)
 films = len(numbers)
-
-for i, obj in enumerate(numbers):
+for (i, obj) in enumerate(numbers):
     if i == 0:
         res[obj - 1][1] += 1
         continue

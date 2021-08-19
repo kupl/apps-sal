@@ -22,7 +22,6 @@ a = []
 for _ in range(n):
     x = input()
     a.append(x)
-
 d = {}
 for i in a:
     j = score(i)
@@ -31,15 +30,13 @@ for i in a:
             d[j] += 1
         else:
             d[j] = 1
-
 c = 0
 for i in d:
     if i == 0:
         c += d[i] // 2
-    else:
-        if -i in d and d[i] > 0 and d[-i] > 0:
-            x = min(d[i], d[-i])
-            d[i] -= x
-            d[-i] -= x
-            c += x
+    elif -i in d and d[i] > 0 and (d[-i] > 0):
+        x = min(d[i], d[-i])
+        d[i] -= x
+        d[-i] -= x
+        c += x
 print(c)

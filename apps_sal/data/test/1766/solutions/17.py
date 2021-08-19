@@ -1,5 +1,5 @@
-n, t = int(input()), list(map(int, input().split()))
-s, i, j = [0, 0], 0, n - 1
+(n, t) = (int(input()), list(map(int, input().split())))
+(s, i, j) = ([0, 0], 0, n - 1)
 for k in range(n):
     if t[i] < t[j]:
         s[k % 2] += t[j]

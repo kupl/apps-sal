@@ -4,4 +4,4 @@ for qq in range(q):
     if n <= 4:
         print(4 - n)
     else:
-        print(((n + 1) // 2) * 2 - n)
+        print((n + 1) // 2 * 2 - n)

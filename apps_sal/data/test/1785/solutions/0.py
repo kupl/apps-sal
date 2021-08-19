@@ -3,7 +3,7 @@ def main():
     l = [0] * 85
     for c in input():
         l[ord(c)] += 1
-    a, c, g, t = sorted(l[_] for _ in (65, 67, 71, 84))
+    (a, c, g, t) = sorted((l[_] for _ in (65, 67, 71, 84)))
     if g < t:
         print(1)
     elif c < g:

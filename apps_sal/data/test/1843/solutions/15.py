@@ -1,5 +1,4 @@
 T = int(input())
-
 for t in range(T):
     n = int(input())
     sum = n * (n + 1) // 2

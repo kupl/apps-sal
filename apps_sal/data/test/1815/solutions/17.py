@@ -1,5 +1,5 @@
 n = int(input())
-apr, l, f, ans = 0, [0] * 100001, [0] * 100001, 1
+(apr, l, f, ans) = (0, [0] * 100001, [0] * 100001, 1)
 i = 0
 for x in input().split():
     x = int(x)
@@ -11,12 +11,10 @@ for x in input().split():
         f[l[x]] -= 1
         l[x] += 1
         f[l[x]] += 1
-
     if i % apr == 0:
         tmp = i // apr
         if f[tmp] == apr - 1:
             ans = max(ans, i + 1)
-
     if apr > 1 and i % (apr - 1) == 0:
         tmp = i // (apr - 1)
         if f[tmp] == apr - 1 or f[tmp] == apr:

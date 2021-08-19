@@ -1,22 +1,17 @@
 cs = int(input())
-
-
 open = []
 clos = []
 val = 0
 for c in range(cs):
     brac = input()
-
     s = []
     for b in brac:
         if len(s) == 0 or b == '(':
             s.append(b)
+        elif s[-1] == '(':
+            s.pop()
         else:
-            if s[-1] == '(':
-                s.pop()
-            else:
-                s.append(')')
-
+            s.append(')')
     if len(s) != 0:
         if s[0] == s[-1] == '(':
             open.append(len(s))
@@ -24,9 +19,7 @@ for c in range(cs):
             clos.append(len(s))
     else:
         val += 1
-
 close = dict()
-
 for cl in clos:
     if cl not in close:
         close[cl] = 1

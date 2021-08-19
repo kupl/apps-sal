@@ -17,11 +17,11 @@ for i in range(n):
     if len(vals) == 2:
         tmp = list(vals.keys())
         tmp.sort()
-        if tmp[0] == 1 and vals[tmp[0]] == 1 or tmp[1] - tmp[0] == 1 and vals[tmp[1]] == 1:
+        if tmp[0] == 1 and vals[tmp[0]] == 1 or (tmp[1] - tmp[0] == 1 and vals[tmp[1]] == 1):
             ind = i
     elif len(vals) == 1 and list(vals.keys())[0] == 1:
         ind = i
-if (cnt[colors[0]] == n):
+if cnt[colors[0]] == n:
     print(n)
 else:
     print(ind + 1)

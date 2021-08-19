@@ -1,6 +1,6 @@
 def main():
     sm = 0
-    a = [2**i for i in range(31)]
+    a = [2 ** i for i in range(31)]
     t = int(input())
     for j in range(t):
         n = int(input())

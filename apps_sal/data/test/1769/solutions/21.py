@@ -6,4 +6,4 @@ for i in range(n):
     a[i] = i + 1
 for j in range(len(a) - m, m + n + 1):
     a[j] = len(a) + n - j
-print(*a, sep=" ")
+print(*a, sep=' ')

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ans = 0
 a = list(map(int, input().split()))
 s = sum(a[:k])

@@ -1,4 +1,4 @@
-n, a, r, m = map(int, input().split())
+(n, a, r, m) = map(int, input().split())
 h = list(map(int, input().split()))
 m = min(m, a + r)
 
@@ -20,9 +20,8 @@ def get(M):
 
 
 L = 0
-R = int(1e9)
-mn = int(1e18)
-
+R = int(1000000000.0)
+mn = int(1e+18)
 while R - L > 10:
     M1 = L + (R - L) // 3
     M2 = R - (R - L) // 3
@@ -37,8 +36,6 @@ while R - L > 10:
     else:
         L = M1
         R = M2
-
 for it in range(L, R + 1):
     mn = min(mn, get(it))
-
 print(mn)

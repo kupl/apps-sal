@@ -4,7 +4,7 @@ def main():
     sms = iter(l[-1])
     l[0] = l[-1] = ''
     try:
-        for c in "<3".join(l):
+        for c in '<3'.join(l):
             while next(sms) != c:
                 pass
     except StopIteration:

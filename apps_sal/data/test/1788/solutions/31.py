@@ -6,13 +6,20 @@ from heapq import heapify, heappop, heappush
 from itertools import permutations, combinations, product, accumulate
 from collections import defaultdict, deque, Counter
 from functools import lru_cache
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 
 
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(map(int, input().split()))
+def ii():
+    return int(input())
 
 
-a, b = mi()
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+(a, b) = mi()
 print((a + b) // 2, (a - b) // 2)

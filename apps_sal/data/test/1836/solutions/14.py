@@ -1,14 +1,13 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 children = [[] for u in range(n + 1)]
 degree = [0 for u in range(n + 1)]
 for i in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     if u > v:
-        u, v = v, u
+        (u, v) = (v, u)
     children[u].append(v)
     degree[u] += 1
     degree[v] += 1
-
 depth = [0 for u in range(n + 1)]
 best = degree[1]
 for u in range(1, n + 1):

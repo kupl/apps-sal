@@ -1,4 +1,4 @@
-a, b = input(), input()
+(a, b) = (input(), input())
 dict = {}
 d = []
 for x in list(input()):

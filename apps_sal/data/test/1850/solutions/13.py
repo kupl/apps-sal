@@ -1,4 +1,4 @@
-n, k = map(int, input().strip().split())
+(n, k) = map(int, input().strip().split())
 cr = list(map(int, input().strip().split()))
 pa = list(map(int, input().strip().split()))
 x = cr[k - 1] + pa[0]

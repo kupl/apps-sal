@@ -1,4 +1,4 @@
-a, b = [int(i) for i in input().split()]
+(a, b) = [int(i) for i in input().split()]
 q = [int(i) for i in input().split()]
 s = []
 for p in range(b):
@@ -10,7 +10,7 @@ for p in range(b - 1, -1, -1):
         S += [s[p]]
         k = s[p][1]
 Q1 = sorted(q[:S[-1][1]])
-x, y = 0, S[-1][1] - 1
+(x, y) = (0, S[-1][1] - 1)
 S = [[0, 0]] + S
 l = 1
 for j in range(S[-1][1] - 1, -1, -1):

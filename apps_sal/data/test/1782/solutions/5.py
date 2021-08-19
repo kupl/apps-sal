@@ -2,7 +2,7 @@ import sys
 
 
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if n // k < 3 or n < 6:
         print(-1)
         return
@@ -14,7 +14,7 @@ def solve():
         res.append(i)
     while len(res) < n:
         res.append(1)
-    print(" ".join(map(str, res)))
+    print(' '.join(map(str, res)))
 
 
 solve()

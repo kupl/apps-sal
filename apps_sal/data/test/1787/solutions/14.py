@@ -11,5 +11,4 @@ while i < l:
         i += 1
     r = (r + r * a + a) % mod
     i += 1
-
 print(r)

@@ -1,4 +1,4 @@
-a, b, x, y = map(int, input().split())
+(a, b, x, y) = map(int, input().split())
 y = min(y, 2 * x)
 if a == b:
     print(x)

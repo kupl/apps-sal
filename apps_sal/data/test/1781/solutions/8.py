@@ -1,5 +1,5 @@
 a = input().split()
-n, k = int(a[0]), int(a[1])
+(n, k) = (int(a[0]), int(a[1]))
 zero = []
 one = []
 two = []
@@ -16,45 +16,41 @@ for i in range(n):
                     zero.append((i, e))
                 elif row[e + 1] == 'S':
                     one.append((i, e))
-            else:
-                if e != len(row) - 1:
-                    if row[e + 1] in notS and row[e - 1] in notS:
-                        zero.append((i, e))
-                    elif (row[e + 1] in notS and row[e - 1] not in notS) or (row[e - 1] in notS and row[e + 1] not in notS):
-                        one.append((i, e))
-                    else:
-                        two.append((i, e))
+            elif e != len(row) - 1:
+                if row[e + 1] in notS and row[e - 1] in notS:
+                    zero.append((i, e))
+                elif row[e + 1] in notS and row[e - 1] not in notS or (row[e - 1] in notS and row[e + 1] not in notS):
+                    one.append((i, e))
                 else:
-                    if row[e - 1] in notS:
-                        zero.append((i, e))
-                    else:
-                        one.append((i, e))
+                    two.append((i, e))
+            elif row[e - 1] in notS:
+                zero.append((i, e))
+            else:
+                one.append((i, e))
         elif row[e] == 'P':
             if e == 0:
                 if row[e + 1] == 'S':
                     neighbours += 1
+            elif e == len(row) - 1:
+                if row[e - 1] == 'S':
+                    neighbours += 1
             else:
-                if e == len(row) - 1:
-                    if row[e - 1] == 'S':
-                        neighbours += 1
-                else:
-                    if row[e - 1] == 'S':
-                        neighbours += 1
-                    if row[e + 1] == 'S':
-                        neighbours += 1
+                if row[e - 1] == 'S':
+                    neighbours += 1
+                if row[e + 1] == 'S':
+                    neighbours += 1
         elif row[e] == 'S':
             if e == 0:
                 if row[e + 1] == 'S':
                     neighbours += 1
+            elif e == len(row) - 1:
+                if row[e - 1] == 'S':
+                    neighbours += 1
             else:
-                if e == len(row) - 1:
-                    if row[e - 1] == 'S':
-                        neighbours += 1
-                else:
-                    if row[e - 1] == 'S':
-                        neighbours += 1
-                    if row[e + 1] == 'S':
-                        neighbours += 1
+                if row[e - 1] == 'S':
+                    neighbours += 1
+                if row[e + 1] == 'S':
+                    neighbours += 1
 for i in range(len(zero)):
     if k != 0:
         k -= 1

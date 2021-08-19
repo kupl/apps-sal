@@ -2,19 +2,19 @@ import bisect
 import math
 import sys
 input = sys.stdin.readline
-n, m, cl, ce, v = list(map(int, input().split()))
+(n, m, cl, ce, v) = list(map(int, input().split()))
 l = [int(i) for i in input().split() if i != '\n']
 e = [int(i) for i in input().split() if i != '\n']
 q = int(input())
 for i in range(q):
-    x1, y1, x2, y2 = list(map(int, input().split()))
-    lft, neareststa, sta, nearestele = 0, 0, 0, 0
+    (x1, y1, x2, y2) = list(map(int, input().split()))
+    (lft, neareststa, sta, nearestele) = (0, 0, 0, 0)
     if x2 == x1 and y1 == y2:
         output = 0
     elif x2 == x1:
         output = abs(y2 - y1)
     else:
-        lft = math.ceil(abs((x2 - x1)) / v)
+        lft = math.ceil(abs(x2 - x1) / v)
         sta = abs(x2 - x1)
         if cl > 0:
             nearestele = bisect.bisect_left(l, y1)

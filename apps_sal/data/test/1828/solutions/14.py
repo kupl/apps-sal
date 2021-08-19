@@ -7,19 +7,19 @@ for i in range(num + 1):
 
 def checkDirection(pointOne, pointTwo):
     if pointOne[0] < pointTwo[0]:
-        return "E"
+        return 'E'
     if pointOne[0] > pointTwo[0]:
-        return "W"
+        return 'W'
     if pointOne[1] < pointTwo[1]:
-        return "N"
+        return 'N'
     if pointOne[1] > pointTwo[1]:
-        return "S"
+        return 'S'
 
 
 def checkDanger(pointOne, pointTwo, pointThree):
     first = checkDirection(pointOne, pointTwo)
     second = checkDirection(pointTwo, pointThree)
-    if (first == "W" and second == "S") or (first == "S" and second == "E") or (first == "N" and second == "W") or (first == "E" and second == "N"):
+    if first == 'W' and second == 'S' or (first == 'S' and second == 'E') or (first == 'N' and second == 'W') or (first == 'E' and second == 'N'):
         return True
     else:
         return False

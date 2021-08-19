@@ -1,11 +1,8 @@
 import math
 from collections import defaultdict
-
 n = int(input())
 arr = list(map(int, input().strip().split()))
-
 MOD = 1000000007
-
 pre = defaultdict(int)
 
 
@@ -30,5 +27,4 @@ for i in range(n):
         update[d] = (pre[d] + pre[d - 1]) % MOD
     pre.update(update)
     pre[1] += 1
-
 print(sum(pre.values()) % MOD)

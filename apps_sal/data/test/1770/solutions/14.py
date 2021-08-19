@@ -11,7 +11,7 @@ def moves(x, y, d):
 T = int(input())
 for _ in range(T):
     (n, x, y, d) = list(map(int, input().split(' ')))
-    ans = int(2e9)
+    ans = int(2000000000.0)
     if abs(x - y) % d == 0:
         ans = abs(x - y) // d
     else:
@@ -19,4 +19,4 @@ for _ in range(T):
             ans = min(ans, moves(x, 1, d) + get(1, y, d))
         if get(n, y, d) != -1:
             ans = min(ans, moves(x, n, d) + get(n, y, d))
-    print(ans if ans != int(2e9) else -1)
+    print(ans if ans != int(2000000000.0) else -1)

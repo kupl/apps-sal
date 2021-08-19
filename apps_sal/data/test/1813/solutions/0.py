@@ -1,6 +1,5 @@
 def split(a, n, s, l):
     pieces = []
-
     i = 1
     tmpmin = a[0]
     tmpmax = a[0]
@@ -19,7 +18,6 @@ def split(a, n, s, l):
             tmpmax = a[i]
         i += 1
     pieces.append(tmppc)
-
     fail = False
     for j in range(len(pieces)):
         if len(pieces[j]) < l:
@@ -27,7 +25,6 @@ def split(a, n, s, l):
                 prevpc = pieces[j - 1]
                 minj = min(pieces[j])
                 maxj = max(pieces[j])
-
                 while len(pieces[j]) < l:
                     tmp = prevpc.pop()
                     if abs(tmp - minj) <= s and abs(tmp - maxj) <= s:
@@ -45,10 +42,8 @@ def split(a, n, s, l):
     return len(pieces)
 
 
-n, s, l = [int(s) for s in input().split()]
+(n, s, l) = [int(s) for s in input().split()]
 a = [int(s) for s in input().split()]
-
-
 res = split(a, n, s, l)
 if res < 0:
     a.reverse()

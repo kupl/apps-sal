@@ -3,9 +3,9 @@ sys.setrecursionlimit(100000)
 
 
 def solve():
-    n, x, = rv()
+    (n, x) = rv()
     x -= 1
-    a, = rl(1)
+    (a,) = rl(1)
     a = [val - 1 for val in a]
     nxt = [True] * n
     index = [-1] * n
@@ -54,11 +54,18 @@ def get(index, a, nxt):
         return get(a[index], a, nxt) + 1
 
 
-def prt(l): return print(' '.join(l))
-def rv(): return map(int, input().split())
-def rl(n): return [list(map(int, input().split())) for _ in range(n)]
+def prt(l):
+    return print(' '.join(l))
+
+
+def rv():
+    return map(int, input().split())
+
+
+def rl(n):
+    return [list(map(int, input().split())) for _ in range(n)]
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 solve()

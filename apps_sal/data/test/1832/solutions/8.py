@@ -34,20 +34,17 @@ def nextStringArray():
 
 
 IO()
-
-'''code starts here'''
-
-
+'code starts here'
 t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    s = "abcdefghijklmnopqrstuvwxyz"
+    s = 'abcdefghijklmnopqrstuvwxyz'
     dict = {}
     for i in range(25):
         dict[s[i]] = s[i + 1]
     dict['z'] = 'a'
-    s = "a" * 200
+    s = 'a' * 200
     print(s)
     for i in range(n):
         p = s[0:a[i]] + dict[s[a[i]]] + s[a[i] + 1:]

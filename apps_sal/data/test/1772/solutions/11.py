@@ -1,9 +1,9 @@
 n = int(input())
-s = input().split(" ")
+s = input().split(' ')
 a = 0
 b = 0
 for i in s:
-    if (int(i) % 2 == 1):
+    if int(i) % 2 == 1:
         a += 1
     else:
         b += 1

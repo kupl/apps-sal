@@ -1,4 +1,4 @@
-a, b, x, y = map(int, input().split())
+(a, b, x, y) = map(int, input().split())
 if b - a > 0:
     d = b - a
     print(min(x + d * y, d * 2 * x + x))

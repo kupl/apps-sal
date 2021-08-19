@@ -26,7 +26,7 @@ def dijkstra(s):
 
 
 def main():
-    a, b, x, y = map(int, pin().split())
+    (a, b, x, y) = map(int, pin().split())
     V = 200
     a -= 1
     b -= 1

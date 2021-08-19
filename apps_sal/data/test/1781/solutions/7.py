@@ -1,4 +1,4 @@
-n, k = (int(i) for i in input().split())
+(n, k) = (int(i) for i in input().split())
 z = [[i for i in input()] for i in range(n)]
 a1 = []
 a2 = []

@@ -4,14 +4,14 @@ n = int(input())
 i = 0
 x = input()
 x = x + '                     '
-while (cnt < n):
-    if(x[i] is ' '):
+while cnt < n:
+    if x[i] is ' ':
         i += 1
         continue
     else:
         a = int(x[i])
-        if (x[i + 1] is ' '):
-            if(a % 2 == 0):
+        if x[i + 1] is ' ':
+            if a % 2 == 0:
                 u += 1
             else:
                 o += 1

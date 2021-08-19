@@ -1,12 +1,25 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
 a = input()
 b = input()
-def low(c): return chr(ord(c) + ord('a') - ord('A'))
-def hig(c): return chr(ord(c) - ord('a') + ord('A'))
-def ish(c): return ord('A') <= ord(c) <= ord('Z')
-def f(c): return b[a.index(c)]
+
+
+def low(c):
+    return chr(ord(c) + ord('a') - ord('A'))
+
+
+def hig(c):
+    return chr(ord(c) - ord('a') + ord('A'))
+
+
+def ish(c):
+    return ord('A') <= ord(c) <= ord('Z')
+
+
+def f(c):
+    return b[a.index(c)]
 
 
 s = input()

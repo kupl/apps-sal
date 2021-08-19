@@ -19,21 +19,16 @@ def lm():
 
 
 n = nn()
-
 l = lm()
-
 d = {}
-
 mnum = 0
 colors = 0
 singlecolors = 0
 maxstring = 0
 maxhit = 0
-for i, num in enumerate(l):
+for (i, num) in enumerate(l):
     if num in d:
-
         d[num] += 1
-
         if d[num] == mnum:
             maxhit += 1
         elif d[num] > mnum:
@@ -50,7 +45,6 @@ for i, num in enumerate(l):
             mnum = max(mnum, d[num])
             maxhit = 1
         colors += 1
-    if (maxhit == 1 and i == (mnum - 1) * colors) or (maxhit >= colors - 1 and singlecolors >= 1):
+    if maxhit == 1 and i == (mnum - 1) * colors or (maxhit >= colors - 1 and singlecolors >= 1):
         maxstring = i + 1
-
 print(maxstring)

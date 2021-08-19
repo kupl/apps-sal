@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     _ = int(input())
-    *arr, = list(map(int, input().split()))
+    (*arr,) = list(map(int, input().split()))
     max_len = max(arr) + 1
     ans = ['a'] * max_len
     print(''.join(ans))

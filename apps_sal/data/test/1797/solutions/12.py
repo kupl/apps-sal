@@ -21,4 +21,4 @@ if ciclos:
     segundo = max([len(x) for x in ciclos])
 else:
     segundo = 0
-print((primero + segundo)**2 + sum([len(x)**2 for x in ciclos]) - segundo**2)
+print((primero + segundo) ** 2 + sum([len(x) ** 2 for x in ciclos]) - segundo ** 2)

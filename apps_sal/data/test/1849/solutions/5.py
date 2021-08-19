@@ -1,6 +1,5 @@
 N = int(input())
 P = 998244353
-
 ANS = []
 for i in range(1, N):
     a = 0
@@ -9,6 +8,5 @@ for i in range(1, N):
     if N - i >= 1:
         a += 2 * 9 * pow(10, N - i, P)
     ANS.append(a % P)
-
 ANS.append(10)
 print(*ANS)

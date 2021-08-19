@@ -2,11 +2,10 @@ n = int(input())
 a = '<3'
 for i in range(n):
     a = a + input() + '<3'
-
 b = input()
 lenb = len(b)
 for i in range(lenb):
-    if not ('a' <= b[i] <= 'z' or '0' <= b[i] <= '9' or b[i] == '<' or b[i] == '>'):
+    if not ('a' <= b[i] <= 'z' or '0' <= b[i] <= '9' or b[i] == '<' or (b[i] == '>')):
         print('no')
         break
 else:

@@ -1,5 +1,5 @@
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     lines = list()
     m = [0, 0, 0]
     v = 0

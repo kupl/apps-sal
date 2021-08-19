@@ -2,7 +2,7 @@ num = int(input())
 neg = []
 pos = []
 for x in range(num):
-    coord, app = list(map(int, input().split(' ')))
+    (coord, app) = list(map(int, input().split(' ')))
     if coord < 0:
         neg.append([-1 * coord, app])
     else:

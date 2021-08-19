@@ -22,7 +22,6 @@ def filling(i):
 
 
 li = []
-
 for i in range(1000002):
     li += [-1]
 for i in range(10):
@@ -39,13 +38,10 @@ def getc(i):
     return s
 
 
-a, b = list(map(int, input().split()))
-
+(a, b) = list(map(int, input().split()))
 s = 0
-
 for i in range(a):
     getc(i)
 for i in range(a, b + 1):
     s += getc(i)
-
 print(s)

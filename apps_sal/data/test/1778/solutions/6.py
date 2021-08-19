@@ -9,8 +9,6 @@ for i in range(2 * n):
     if i % 2 == 0:
         if ab[i][1] == 0:
             ans += ab[i][0]
-    else:
-        if ab[i][1] == 1:
-            ans -= ab[i][0]
-
+    elif ab[i][1] == 1:
+        ans -= ab[i][0]
 print(ans)

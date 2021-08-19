@@ -1,6 +1,6 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 d -= 1
-s, p, j = [*map(int, input().split())], [*map(int, input().split())], -1
+(s, p, j) = ([*map(int, input().split())], [*map(int, input().split())], -1)
 for i in range(n):
     if s[d] + p[0] < s[i]:
         continue

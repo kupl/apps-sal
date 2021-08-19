@@ -1,14 +1,12 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 link1 = list(map(int, input().split()))
 link2 = [0] * (n + 1)
-for i, v in enumerate(link1, 1):
+for (i, v) in enumerate(link1, 1):
     if v != 0:
         link2[v] = i
-
-
 table = [False] * n
 table[0] = True
-for i, v in enumerate(link1, 1):
+for (i, v) in enumerate(link1, 1):
     if v == 0:
         len = 0
         flag = False

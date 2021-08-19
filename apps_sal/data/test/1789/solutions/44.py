@@ -5,5 +5,5 @@ def solve(a, b, x, y):
         return x + (b - a) * min(2 * x, y)
 
 
-a, b, x, y = list(map(int, input().split()))
-print((solve(a, b, x, y)))
+(a, b, x, y) = list(map(int, input().split()))
+print(solve(a, b, x, y))

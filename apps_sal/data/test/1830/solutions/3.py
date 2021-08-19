@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 xyi = [list(map(int, input().split())) for i in range(m)]
 x = [0] * (n + 1)
 y = [0] * (n + 1)
@@ -14,4 +14,4 @@ for i in range(m):
         num += numx - n
         numy += 1
         y[xyi[i][1]] = 1
-    print(num, end=" ")
+    print(num, end=' ')

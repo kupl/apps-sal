@@ -2,7 +2,7 @@ n = int(input())
 left = []
 right = []
 for i in range(n):
-    x, a = [int(i) for i in input().split()]
+    (x, a) = [int(i) for i in input().split()]
     if x < 0:
         left.append([x, a])
     else:

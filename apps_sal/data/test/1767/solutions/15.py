@@ -1,5 +1,5 @@
 n = int(input())
-ans1, ans2 = 0, 0
+(ans1, ans2) = (0, 0)
 data1 = list(map(int, input().split()))
 data2 = list(map(int, input().split()))
 for i in range(n):

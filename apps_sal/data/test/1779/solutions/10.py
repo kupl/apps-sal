@@ -7,6 +7,6 @@ for i in range(len(s1)):
 ans1 = input()
 for i in ans1:
     if i in a:
-        print(a[i], end="")
+        print(a[i], end='')
     else:
-        print(i, end="")
+        print(i, end='')

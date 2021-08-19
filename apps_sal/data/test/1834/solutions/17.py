@@ -7,6 +7,4 @@ for i in range(n):
         ans.append(str(a[i // 2]))
     else:
         ans.append(str(a[-i // 2]))
-
-
-print(" ".join(ans))
+print(' '.join(ans))

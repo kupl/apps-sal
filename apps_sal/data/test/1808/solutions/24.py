@@ -1,4 +1,4 @@
-n, k, x = map(int, input().split(' '))
+(n, k, x) = map(int, input().split(' '))
 m = list(map(int, input().split(' ')))
 e = 0
 for i in range(n):

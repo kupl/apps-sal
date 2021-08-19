@@ -3,8 +3,8 @@ from math import *
 from bisect import *
 from copy import *
 MAX = sys.maxsize
-MAXN = 10**5 + 10
-logT = [0] * (MAXN)
+MAXN = 10 ** 5 + 10
+logT = [0] * MAXN
 
 
 def arrIN(x=' '):
@@ -22,10 +22,10 @@ def buildSparse(a):
     for i in range(n):
         st[i][0] = a[i]
     j = 1
-    while (1 << j) <= n:
+    while 1 << j <= n:
         i = 0
-        while (i + (1 << j) - 1) < n:
-            st[i][j] = max(st[i][j - 1], st[i + (1 << (j - 1))][j - 1])
+        while i + (1 << j) - 1 < n:
+            st[i][j] = max(st[i][j - 1], st[i + (1 << j - 1)][j - 1])
             i += 1
         j += 1
     return st
@@ -39,17 +39,15 @@ def query(l, r, st):
     return max(st[l][k], st[l + tot - (1 << k)][k])
 
 
-n, m, k = arrIN()
+(n, m, k) = arrIN()
 temp = [[0] for _ in range(m)]
 for _ in range(n):
     x = arrIN()
     for i in range(m):
         temp[i].append(x[i])
-
 st = []
 for i in range(m):
     st.append(buildSparse(temp[i]))
-
 lo = 1
 hi = n
 t = [0] * m

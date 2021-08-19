@@ -3,7 +3,6 @@ from collections import Counter
 
 def cleanup(paren: str) -> str:
     stack = list()
-
     for char in paren:
         if not stack:
             stack.append(char)
@@ -11,13 +10,11 @@ def cleanup(paren: str) -> str:
             stack.pop()
         else:
             stack.append(char)
-
     return ''.join(stack)
 
 
 def main():
     prob_len = int(input())
-
     lefts = Counter()
     rights = Counter()
     zeros = 0
@@ -31,12 +28,10 @@ def main():
             rights.update([len(new_paren)])
         else:
             zeros += 1
-
     answer = 0
     answer += zeros // 2
     for paren_num in lefts.keys():
         answer += min(lefts[paren_num], rights[paren_num])
-
     print(answer)
 
 

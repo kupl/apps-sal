@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 lst = list(range(a, b + 1))
 temp = str(lst)
 zero = temp.count('0')

@@ -10,8 +10,7 @@ dal = k - 1
 for i in range(k):
     cur_s += v[i]
 s += cur_s
-
-while (dal + 1 < n):
+while dal + 1 < n:
     co += 1
     cur_s -= v[cur]
     cur += 1

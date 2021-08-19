@@ -3,10 +3,8 @@ test = []
 test = list(map(int, input().split()))
 left = 0
 right = len(test) - 1
-
 a = []
 b = []
-
 while test:
     if test[left] > test[right]:
         a.append(test[left])
@@ -25,5 +23,4 @@ while test:
             b.append(test[right])
             test.remove(test[right])
             right = len(test) - 1
-
 print(sum(a), sum(b))

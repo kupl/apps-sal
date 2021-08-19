@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -20,7 +19,6 @@ def cost(c, move):
         i = n - 1
     else:
         i = bin(0, n - 1, c)
-
     res += a * ((i + 1) * c - H[i + 1])
     res += r * (H[-1] - H[i + 1] - (n - i - 1) * c)
     if move:
@@ -28,7 +26,7 @@ def cost(c, move):
     return res
 
 
-n, a, r, m = list(map(int, input().split()))
+(n, a, r, m) = list(map(int, input().split()))
 h = list(map(int, input().split()))
 h.sort()
 H = [None] * (n + 1)
@@ -37,8 +35,8 @@ for i in range(1, n + 1):
     H[i] = H[i - 1] + h[i - 1]
 move = m < a + r
 if not move:
-    print(min(cost(h[i], move) for i in range(n)))
+    print(min((cost(h[i], move) for i in range(n))))
 else:
     tt = min(cost(H[-1] // n, move), cost(H[-1] // n + 1, move))
-    ttt = min(cost(h[i], move) for i in range(n))
+    ttt = min((cost(h[i], move) for i in range(n)))
     print(min(tt, ttt))

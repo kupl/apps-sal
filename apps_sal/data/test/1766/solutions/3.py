@@ -11,4 +11,4 @@ while n:
         a = a[0:n - 1]
     c = 1 - c
     n -= 1
-print("%d %d" % (b[0], b[1]))
+print('%d %d' % (b[0], b[1]))

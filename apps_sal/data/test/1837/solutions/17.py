@@ -2,7 +2,7 @@ n = int(input())
 a = list(map(int, input().split()))
 b = 0
 c = 0
-for i, j in enumerate(a):
+for (i, j) in enumerate(a):
     if i == j:
         b += 1
     elif a[j] == i:

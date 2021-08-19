@@ -1,6 +1,5 @@
 from collections import Counter
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 words = Counter()
 for _ in range(n + m):
     words[input()] += 1

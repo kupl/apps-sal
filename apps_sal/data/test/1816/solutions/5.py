@@ -1,5 +1,5 @@
 n = int(input())
-f = input().split(" ")
+f = input().split(' ')
 pos = [0 for i in range(n)]
 for i in range(n):
     pos[int(f[i]) - 1] = i

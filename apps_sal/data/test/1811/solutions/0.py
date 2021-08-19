@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 j = 0
 for i in input():
     if i == '.':
@@ -6,7 +6,7 @@ for i in input():
     else:
         j += 1
         if j >= k:
-            print("NO")
+            print('NO')
             break
 else:
-    print("YES")
+    print('YES')

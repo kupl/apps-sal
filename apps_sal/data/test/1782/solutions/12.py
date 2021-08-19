@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 if k * 3 > n:
     print(-1)
 else:
@@ -14,5 +14,5 @@ else:
                 ans.append(ans[-1] - i)
     else:
         ans.extend([i for i in range(k, 0, -1)])
-    ans.extend([(k - (i % k)) for i in range(k * 3 + 1, n + 1)])
+    ans.extend([k - i % k for i in range(k * 3 + 1, n + 1)])
     print(*ans)

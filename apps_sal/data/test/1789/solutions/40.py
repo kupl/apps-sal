@@ -1,5 +1,4 @@
-a, b, x, y = map(int, input().split())
-
+(a, b, x, y) = map(int, input().split())
 if a > b:
     tmp = x + (a - b - 1) * y
     tmp2 = (a - b) * x + (a - b - 1) * x

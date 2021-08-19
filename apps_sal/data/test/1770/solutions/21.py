@@ -1,6 +1,6 @@
 m = int(input())
 for q in range(m):
-    n, x, y, d = list(map(int, input().split()))
+    (n, x, y, d) = list(map(int, input().split()))
     answer = float('inf')
     if y % d == 1:
         answer = (x - 2) // d + 1 + (y - 1) // d

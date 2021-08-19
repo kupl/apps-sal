@@ -1,5 +1,5 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     aa = list(map(int, input().split()))
     cnt = [True] * 100001
     res = []
@@ -9,7 +9,7 @@ def main():
             cnt[a] = False
             x += 1
         res.append(x)
-    print('\n'.join(str(res[n - int(input())]) for _ in range(m)))
+    print('\n'.join((str(res[n - int(input())]) for _ in range(m))))
 
 
 def __starting_point():

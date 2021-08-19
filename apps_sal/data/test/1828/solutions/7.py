@@ -2,7 +2,7 @@ n = int(input())
 count = 0
 points = [tuple(map(int, input().split())), tuple(map(int, input().split()))]
 for i in range(2, n + 1):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     points.append((x, y))
     if points[i - 1][0] < x:
         temp = 'east'

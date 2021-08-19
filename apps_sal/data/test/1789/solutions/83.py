@@ -1,7 +1,7 @@
-a, b, x, y = map(int, input().split())
+(a, b, x, y) = map(int, input().split())
 t = 0
 if a > b:
-    c = (a - 1) - b
+    c = a - 1 - b
 else:
     c = b - a
 t += x

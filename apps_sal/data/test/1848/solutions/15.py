@@ -18,7 +18,6 @@ while i < n:
     i += 1
 y += [[cur] * curs]
 res = 0
-
 while len(y) > 1:
     u = []
     for h in y:

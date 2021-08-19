@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = [['-'] + list(input()) + ['-'] for _ in range(n)]
 neighs = 0
 for i in A:
@@ -12,7 +12,7 @@ for i in range(len(A)):
     if k < 0:
         break
     for j in range(len(A[i])):
-        if A[i][j] == '.' and A[i][j - 1] != 'S' and A[i][j + 1] != 'S' and k > 0:
+        if A[i][j] == '.' and A[i][j - 1] != 'S' and (A[i][j + 1] != 'S') and (k > 0):
             A[i][j] = 'x'
             k -= 1
         elif k <= 0:
@@ -21,7 +21,7 @@ for i in range(len(A)):
     if k < 0:
         break
     for j in range(len(A[i])):
-        if A[i][j] == '.' and A[i][j - 1] == 'S' and A[i][j + 1] != 'S' and k > 0:
+        if A[i][j] == '.' and A[i][j - 1] == 'S' and (A[i][j + 1] != 'S') and (k > 0):
             A[i][j] = 'x'
             neighs += 1
             k -= 1
@@ -31,7 +31,7 @@ for i in range(len(A)):
     if k < 0:
         break
     for j in range(len(A[i])):
-        if A[i][j] == '.' and A[i][j - 1] != 'S' and A[i][j + 1] == 'S' and k > 0:
+        if A[i][j] == '.' and A[i][j - 1] != 'S' and (A[i][j + 1] == 'S') and (k > 0):
             A[i][j] = 'x'
             neighs += 1
             k -= 1

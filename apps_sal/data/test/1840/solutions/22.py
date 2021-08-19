@@ -2,14 +2,14 @@ from bisect import bisect_right
 
 
 def find_le(a, x):
-    'Find rightmost value less than or equal to x'
+    """Find rightmost value less than or equal to x"""
     i = bisect_right(a, x)
     if i:
         return i - 1
     return -1
 
 
-s, b = list(map(int, input().split()))
+(s, b) = list(map(int, input().split()))
 v = []
 a = list(map(int, input().split()))
 for i in range(b):
@@ -20,9 +20,7 @@ c = []
 for i in v:
     summa += i[1]
     c.append(summa)
-
 mas = [i[0] for i in v]
-
 for i in a:
     ind = find_le(mas, i)
     if ind == -1:

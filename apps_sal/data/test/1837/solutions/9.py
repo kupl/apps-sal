@@ -9,7 +9,7 @@ for i in range(n):
     else:
         replacee[i] = list1[i]
 for i in range(n):
-    if replacee[replacee[i]] == i and not swap:
+    if replacee[replacee[i]] == i and (not swap):
         swap = True
         cnt += 2
 if swap:

@@ -7,7 +7,7 @@ for i in range(a):
     else:
         mass[seq[i]] = [i]
 tmp_mass = []
-for key, value in list(mass.items()):
+for (key, value) in list(mass.items()):
     flag = True
     if len(value) == 1:
         tmp_mass.append((key, 0))

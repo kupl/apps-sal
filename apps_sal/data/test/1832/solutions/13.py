@@ -1,9 +1,7 @@
 def solve():
     n = int(input())
     s = input().split()
-
     m = 0
-
     for i in range(len(s)):
         s[i] = int(s[i])
         m = max(m, s[i])
@@ -18,6 +16,5 @@ def solve():
 
 
 t = int(input())
-
 for i in range(t):
     solve()

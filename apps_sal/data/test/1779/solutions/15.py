@@ -1,9 +1,7 @@
 a = input()
 b = input()
 s = input()
-
 d = dict(zip(a, b))
-
 for c in s:
     if c.lower() in d:
         if c.islower():

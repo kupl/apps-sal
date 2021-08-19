@@ -11,7 +11,7 @@ def foo(x):
 
 
 ans = 0
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 for i in range(x, y + 1):
     ans += foo(i)
 print(ans)

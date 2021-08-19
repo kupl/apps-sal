@@ -11,7 +11,6 @@ for i in range(n):
     else:
         pos.append(l[i][1])
 neg = list(reversed(neg))
-
 if len(neg) == len(pos):
     print(sum(neg) + sum(pos))
 elif len(neg) > len(pos):

@@ -10,9 +10,7 @@ for i in range(0, len(s)):
             temp = 0
 if temp > 0:
     L.append(temp)
-
 ans = 1
 for i in L:
-    ans = (ans * (i + 1)) % (1000000007)
-
-print((ans - 1) % (1000000007))
+    ans = ans * (i + 1) % 1000000007
+print((ans - 1) % 1000000007)

@@ -1,5 +1,4 @@
-a, b, x, y = map(int, input().split())
-
+(a, b, x, y) = map(int, input().split())
 if a < b:
     print(x + min(2 * x, y) * (b - a))
 elif a == b:

@@ -1,5 +1,5 @@
-f = open("output.txt", "w+")
-I = open("input.txt", "r")
+f = open('output.txt', 'w+')
+I = open('input.txt', 'r')
 n = int(I.readline())
 a = list(map(int, I.readline().split()))
 b = [0] * n

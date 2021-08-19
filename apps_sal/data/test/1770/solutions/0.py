@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x, y, d = map(int, input().split())
+    (n, x, y, d) = map(int, input().split())
     tt = abs(x - y)
     if tt % d != 0:
         ans = -1

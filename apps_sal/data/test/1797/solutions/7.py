@@ -18,9 +18,9 @@ for i in range(n):
     siz.append(count)
 siz.sort(reverse=True)
 if len(siz) == 1:
-    print(siz[0]**2)
+    print(siz[0] ** 2)
 else:
-    ans = (siz[0] + siz[1])**2
+    ans = (siz[0] + siz[1]) ** 2
     for i in range(2, len(siz)):
         ans += siz[i] * siz[i]
     print(ans)

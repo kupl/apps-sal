@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 rows = ['P' + input() + 'P' for i in range(n)]
 
 
@@ -37,16 +37,14 @@ for i in range(k):
     if try_medium(rows) == True:
         continue
     try_bad(rows)
-
 ans = 0
 for r in rows:
     for i in range(len(r)):
         if r[i] == 'S':
-            if i > 1 and r[i - 1] != '.' and r[i - 1] != '-':
+            if i > 1 and r[i - 1] != '.' and (r[i - 1] != '-'):
                 ans += 1
-            if i < len(r) - 2 and r[i + 1] != '.' and r[i + 1] != '-':
+            if i < len(r) - 2 and r[i + 1] != '.' and (r[i + 1] != '-'):
                 ans += 1
-
 print(ans)
 for r in rows:
     print(r[1:-1])

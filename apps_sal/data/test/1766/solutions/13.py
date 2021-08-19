@@ -1,6 +1,6 @@
 num = int(input())
 txt = input()
-points = txt.split(" ")
+points = txt.split(' ')
 score = [0, 0]
 turn = 0
 while len(points) > 0:

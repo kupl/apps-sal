@@ -7,5 +7,4 @@ for i in a[1:]:
 b1 = b[0]
 for i in b[1:]:
     b1 = b1 | i
-
 print(a1 + b1)

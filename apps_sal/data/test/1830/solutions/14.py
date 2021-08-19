@@ -1,7 +1,7 @@
 A = input().split()
 n = int(A[0])
 m = int(A[1])
-s = n**2
+s = n ** 2
 B = [0] * (n + 1)
 C = [0] * (n + 1)
 x1 = n

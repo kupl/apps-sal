@@ -1,4 +1,4 @@
-n, d = [int(x) for x in input().split()]
+(n, d) = [int(x) for x in input().split()]
 s = list(map(int, input().split()))
 l = list(map(int, input().split()))
 score = s[d - 1] + l[0]

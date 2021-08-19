@@ -8,6 +8,6 @@ dl = s // n
 for i in range(2 * n - 1):
     for j in range(i + 1, 2 * n):
         if a[i] > a[j]:
-            a[i], a[j] = a[j], a[i]
+            (a[i], a[j]) = (a[j], a[i])
 for i in range(n):
     print(a[i], dl - a[i])

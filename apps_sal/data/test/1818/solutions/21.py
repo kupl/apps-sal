@@ -25,8 +25,7 @@ for i in range(len(m) - 1):
     if m[i] == m[i + 1]:
         w += 1
     else:
-        s += (w * (w + 1)) // 2
+        s += w * (w + 1) // 2
         w = 0
-
-s += (w * (w + 1)) // 2
+s += w * (w + 1) // 2
 print(s)

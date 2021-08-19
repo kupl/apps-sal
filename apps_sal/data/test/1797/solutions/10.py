@@ -32,11 +32,10 @@ ans = []
 for i in range(1, n + 1):
     if not visited[i]:
         ans.append(dfs(i, 1))
-
 ans = sorted(ans, reverse=True)
 if len(ans) == 1:
     print(ans[0] * ans[0])
 else:
     ans[1] += ans[0]
     ans.pop(0)
-    print(sum(x * x for x in ans))
+    print(sum((x * x for x in ans)))

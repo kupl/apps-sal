@@ -1,10 +1,11 @@
-def rd(): return list(map(int, input().split()))
+def rd():
+    return list(map(int, input().split()))
 
 
-n, = rd()
+(n,) = rd()
 a = [0] + rd() + [0]
 for i in range(rd()[0]):
-    x, y = rd()
+    (x, y) = rd()
     a[x - 1] += y - 1
     a[x + 1] += a[x] - y
     a[x] = 0

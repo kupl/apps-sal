@@ -1,4 +1,4 @@
-rndid = "cuuhkjc"
+rndid = 'cuuhkjc'
 for _ in range(int(input())):
     input()
     ls = 'a' * 51

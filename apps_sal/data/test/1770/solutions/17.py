@@ -11,13 +11,13 @@ def f(x, y, d):
     if t % d == 0:
         return t // d
     else:
-        return 2 * (10**9)
+        return 2 * 10 ** 9
 
 
 for i in range(n):
-    n, x, y, d = list(map(int, input().split()))
+    (n, x, y, d) = list(map(int, input().split()))
     ans = min([f(x, y, d), f(x, 1, d) + f(1, y, d), f(x, n, d) + f(n, y, d)])
-    if ans == 2 * (10**9):
-        print("-1")
+    if ans == 2 * 10 ** 9:
+        print('-1')
     else:
         print(ans)

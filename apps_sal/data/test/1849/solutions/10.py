@@ -10,4 +10,4 @@ for d in range(1, N):
     ans += (N - d - 1) * pow(inv10, d + 1, mod) * 81 * nums % mod
     Ans.append(ans % mod)
 Ans.append(10)
-print(" ".join(map(str, Ans)))
+print(' '.join(map(str, Ans)))

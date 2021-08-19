@@ -1,7 +1,6 @@
 input()
 s = list(input())
 found = True
-
 while found:
     x = []
     found = False
@@ -18,5 +17,4 @@ while found:
     if i < len(s):
         x.append(s[i])
     s = x
-
 print(len(s))

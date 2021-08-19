@@ -1,6 +1,6 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
-s = [0] * (10**5 + 1)
+s = [0] * (10 ** 5 + 1)
 ans = [0] * n
 for i in range(n):
     if not s[a[n - 1 - i]]:

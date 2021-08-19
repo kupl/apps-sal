@@ -6,7 +6,7 @@ ans = 0
 for x in b:
     x -= 1
     cur_sum = 0
-    for i, num in enumerate(a):
+    for (i, num) in enumerate(a):
         if num == x:
             a = [num] + a[:i] + a[i + 1:]
             break

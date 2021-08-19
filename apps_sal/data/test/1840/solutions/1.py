@@ -1,10 +1,10 @@
-s, b = map(int, input().split())
+(s, b) = map(int, input().split())
 a = list(map(int, input().split()))
 for i in range(s):
     a[i] = [a[i], i, None]
 bases = []
 for i in range(b):
-    d, g = map(int, input().split())
+    (d, g) = map(int, input().split())
     bases.append((d, g))
 bases.sort()
 a.sort()

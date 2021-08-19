@@ -6,9 +6,9 @@ else:
 data = [[] for i in range(100009)]
 spines = [0 for i in range(100009)]
 dp = [1 for i in range(100009)]
-n, m = list(map(int, inp.readline().split()))
+(n, m) = list(map(int, inp.readline().split()))
 for i in range(m):
-    a, b = list(map(int, inp.readline().split()))
+    (a, b) = list(map(int, inp.readline().split()))
     if a < b:
         data[b].append(a)
     else:

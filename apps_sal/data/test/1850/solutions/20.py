@@ -1,5 +1,5 @@
 from bisect import bisect_right
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 s = list(map(int, input().split()))
 p = list(map(int, input().split()))
 t_wyn = []

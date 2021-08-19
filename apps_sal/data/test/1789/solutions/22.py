@@ -1,5 +1,4 @@
-a, b, x, y = list(map(int, input().split()))
-
+(a, b, x, y) = list(map(int, input().split()))
 if a == b:
     print(x)
 elif a < b:

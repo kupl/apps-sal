@@ -1,5 +1,5 @@
 import bisect
-s, b = map(int, input().split())
+(s, b) = map(int, input().split())
 a = list(map(int, input().split()))
 d = []
 for i in range(b):
@@ -15,7 +15,7 @@ for i in range(1, len(p)):
     k.append(k[-1] + p[i])
 for i in range(len(a)):
     l = bisect.bisect_right(c, a[i])
-    if(l == 0):
+    if l == 0:
         print(0, end=' ')
     else:
         print(k[l - 1], end=' ')

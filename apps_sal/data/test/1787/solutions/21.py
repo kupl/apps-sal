@@ -2,7 +2,7 @@ s = input()
 n = len(s)
 b = []
 a = [0] * n
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 if s[0] == 'a':
     a[0] = 1
 if s[0] == 'b':

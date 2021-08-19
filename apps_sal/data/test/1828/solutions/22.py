@@ -1,7 +1,7 @@
 def ccw(a, b, c):
     ab = (b[1] - a[1], b[0] - a[0])
     ac = (c[1] - a[1], c[0] - a[0])
-    charge = (ab[0] * ac[1] - ab[1] * ac[0])
+    charge = ab[0] * ac[1] - ab[1] * ac[0]
     return charge > 0
 
 
@@ -23,7 +23,7 @@ def countcw(points):
 
 def __starting_point():
     n = int(input())
-    points = [tuple(int(x) for x in input().split()) for i in range(n + 1)]
+    points = [tuple((int(x) for x in input().split())) for i in range(n + 1)]
     if ccw(points[-3], points[-2], points[-1]):
         print(countcw(points))
     else:

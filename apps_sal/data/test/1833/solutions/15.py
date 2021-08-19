@@ -12,14 +12,12 @@ for i in range(n):
             cur.append(j)
             if a[i] // j != j:
                 cur.append(a[i] // j)
-
     cur = sorted(cur, reverse=True)
     for j in cur:
         if j == 1:
             dp[j] += 1
         else:
             dp[j] += dp[j - 1]
-
 ans = 0
 for i in dp:
     ans += i

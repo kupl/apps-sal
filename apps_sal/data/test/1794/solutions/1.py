@@ -1,14 +1,14 @@
 def main():
     from collections import deque
     n = int(input())
-    aa, bb = list(map(int, input().split())), [0] * n
-    q, bb[1] = deque([(n - 1, aa.pop())]), 1
+    (aa, bb) = (list(map(int, input().split())), [0] * n)
+    (q, bb[1]) = (deque([(n - 1, aa.pop())]), 1)
     aa.reverse()
-    for i, a in enumerate(aa, 2):
+    for (i, a) in enumerate(aa, 2):
         if a == n:
             bb[i] = i
         else:
-            lo, hi = 0, len(q)
+            (lo, hi) = (0, len(q))
             while lo <= hi:
                 mid = (lo + hi) // 2
                 if q[mid][0] > a:

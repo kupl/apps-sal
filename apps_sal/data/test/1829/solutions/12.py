@@ -1,16 +1,12 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 a = []
 p = 0
 v = 0
-
 for i in range(n):
     x = input()
     a.append(x)
-
 p = len(a)
 od = 0
-
 for i in range(m):
     x = input()
     if x in a:
@@ -23,8 +19,7 @@ if od % 2 == 0:
         print('YES')
     else:
         print('NO')
+elif p + 1 > v:
+    print('YES')
 else:
-    if p + 1 > v:
-        print('YES')
-    else:
-        print('NO')
+    print('NO')

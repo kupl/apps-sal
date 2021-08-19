@@ -22,34 +22,28 @@ def divide(a, b):
 
 
 def main():
-    n, l, w = [int(x) for x in input().split()]
-
-    u, v = [], []
+    (n, l, w) = [int(x) for x in input().split()]
+    (u, v) = ([], [])
     for i in range(n):
-        x, vel = [int(x) for x in input().split()]
+        (x, vel) = [int(x) for x in input().split()]
         if vel > 0:
             u.append(x)
         else:
             v.append(x)
     u = sorted(u)
     v = sorted(v)
-
     ans = 0
-
     for x in v:
-        threshold = min(divide((x + l) * (w + 1), (w - 1)), -(x + l), x)
+        threshold = min(divide((x + l) * (w + 1), w - 1), -(x + l), x)
         r1 = bin_search(u, 0, len(u), threshold)
-
-        threshold = min(divide((x + l) * (w - 1), (w + 1)), x)
+        threshold = min(divide((x + l) * (w - 1), w + 1), x)
         r2 = bin_search(u, 0, len(u), threshold)
         l2 = bin_search(u, 0, len(u), -(x + l))
-
         if l2 <= r1:
             ans += r2
         else:
             ans += r1
             ans += max(0, r2 - l2)
-
     print(ans)
 
 

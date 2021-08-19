@@ -14,7 +14,6 @@ for i in range(n):
             s2 += a[l]
             k = 0
         l += 1
-
     else:
         if k == 0:
             s1 += a[r]

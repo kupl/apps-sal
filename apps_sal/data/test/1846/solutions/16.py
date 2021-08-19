@@ -1,7 +1,6 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
-
 n = int(input())
 t = list(map(int, input().split()))
 l = []
@@ -15,8 +14,7 @@ for i in range(n - 1, 0, -1):
     if t[i] < 1:
         m += 1
     r[i - 1] = m
-
-mn = float("+inf")
+mn = float('+inf')
 for i in range(n - 1):
     mn = min(mn, l[i] + r[i])
 print(mn)

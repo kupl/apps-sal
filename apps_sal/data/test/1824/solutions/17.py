@@ -10,9 +10,9 @@ for i in a:
 er1 = -1
 er2 = -1
 for i in range(n - 1):
-    if i < n - 1 and er1 == -1 and a[0][i] != a[1][i]:
+    if i < n - 1 and er1 == -1 and (a[0][i] != a[1][i]):
         er1 = a[0][i]
-    if i < n - 2 and er2 == -1 and a[1][i] != a[2][i]:
+    if i < n - 2 and er2 == -1 and (a[1][i] != a[2][i]):
         er2 = a[1][i]
 if er1 == -1:
     er1 = a[0][n - 1]

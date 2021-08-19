@@ -3,7 +3,7 @@ a = [[0, 0]]
 xpos = 0
 xneg = 0
 for i in range(n):
-    x, y = input().split(' ')
+    (x, y) = input().split(' ')
     a.append([int(x), int(y)])
     if int(x) < 0:
         xneg += 1

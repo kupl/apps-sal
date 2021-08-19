@@ -1,5 +1,4 @@
 import sys
-
 q = 998244353
 
 
@@ -8,7 +7,7 @@ def exp(b, e):
     while e > 0:
         if e % 2 == 0:
             e = e // 2
-            b = (b * b) % q
+            b = b * b % q
         else:
             ans = ans * b
             e = e - 1
@@ -26,4 +25,4 @@ for i in range(1, n):
     ans = ans % q
     x.append(str(ans))
 x.append(str(10))
-print(" ".join(x))
+print(' '.join(x))

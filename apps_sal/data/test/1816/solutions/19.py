@@ -1,4 +1,4 @@
-a, b, t = int(input()), list(map(int, input().split())), 0
+(a, b, t) = (int(input()), list(map(int, input().split())), 0)
 c = [0] * a
 for i in range(a):
     c[b[i] - 1] = i

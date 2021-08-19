@@ -3,11 +3,12 @@ def sum_n(n):
 
 
 def main():
-    mode = "filee"
-    if mode == "file":
-        f = open("test.txt", "r")
+    mode = 'filee'
+    if mode == 'file':
+        f = open('test.txt', 'r')
 
-    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    def get():
+        return [int(x) for x in (f.readline() if mode == 'file' else input()).split()]
     [t] = get()
     for z in range(t):
         [n] = get()
@@ -17,8 +18,7 @@ def main():
             j = j << 1
             hold -= j
         print(hold)
-
-    if mode == "file":
+    if mode == 'file':
         f.close()
 
 

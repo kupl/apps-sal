@@ -17,4 +17,4 @@ b.sort()
 if m > 1:
     b[-2] += b[-1]
     b.pop()
-print(sum(map(lambda x: x**2, b)))
+print(sum(map(lambda x: x ** 2, b)))

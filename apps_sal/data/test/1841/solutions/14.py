@@ -1,8 +1,11 @@
 import sys
-def input(): return sys.stdin.readline()
 
 
-n, m = list(map(int, input().split()))
+def input():
+    return sys.stdin.readline()
+
+
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 mark = [0] * 100001
 ans = [0] * 100001
