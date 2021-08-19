@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 list_a = [[s for s in input().split()] for i in range(0, n)]
 list_ans = [str(s) for s in range(1, m + 1)]
 for i in range(0, n):

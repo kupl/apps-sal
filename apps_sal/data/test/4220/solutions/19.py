@@ -1,8 +1,6 @@
 K = int(input())
 S = str(input())
-
-SK = S[0: (K)]
-
+SK = S[0:K]
 if len(S) <= K:
     print(S)
 else:

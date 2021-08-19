@@ -15,7 +15,6 @@ def solve(n):
             if ans > anstmp:
                 ans = anstmp
         i += 1
-
     return ans
 
 

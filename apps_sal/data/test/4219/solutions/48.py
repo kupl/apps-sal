@@ -8,7 +8,7 @@ for i in range(n):
 ans = 0
 for bit in range(1 << n):
     plate = 0
-    L = [(bit >> i) & 1 for i in range(n)]
+    L = [bit >> i & 1 for i in range(n)]
     for i in range(n):
         if L[i] == 0:
             continue

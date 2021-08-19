@@ -1,5 +1,5 @@
 import numpy as np
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 k = np.zeros(n, dtype=int)
 a = np.zeros((n, m), dtype=int)
 for i in range(n):

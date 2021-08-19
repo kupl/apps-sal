@@ -1,7 +1,7 @@
-n, m, q = map(int, input().split())
+(n, m, q) = map(int, input().split())
 abcd = []
 for i in range(q):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     abcd.append([a, b, c, d])
 
 

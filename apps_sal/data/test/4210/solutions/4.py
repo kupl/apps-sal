@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = input().split()
 mods = [dict() for i in range(10)]
 l = [0] * n

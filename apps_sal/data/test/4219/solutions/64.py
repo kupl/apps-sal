@@ -4,7 +4,7 @@ rst = 0
 for i in range(N):
     A = int(input())
     for j in range(A):
-        x, y = map(int, input().split(' '))
+        (x, y) = map(int, input().split(' '))
         testimo_ls[i].append([x - 1, y])
 for i in range(1 << N):
     honest_ls = []

@@ -6,13 +6,13 @@ for k in range(n):
     a = int(input())
     al.append(a)
     for l in range(a):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         xy[k].append([x, y])
-for i in range(2**n):
+for i in range(2 ** n):
     kinds = [0] * n
     jud = 1
     for j in range(n):
-        if (i >> j) & 1:
+        if i >> j & 1:
             kinds[j] = 1
     for k in range(n):
         if kinds[k] == 1:

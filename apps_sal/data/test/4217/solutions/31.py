@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 ans = set()
 for i in range(N):
     A = list(map(int, input().split()))

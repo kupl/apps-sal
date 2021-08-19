@@ -1,4 +1,4 @@
-a, b, c, k = list(map(int, input().split()))
+(a, b, c, k) = list(map(int, input().split()))
 if k <= a:
     res = k
 elif k <= a + b:

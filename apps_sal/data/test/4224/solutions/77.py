@@ -5,5 +5,4 @@ for i in range(n):
     while s[i] % 2 == 0:
         s[i] /= 2
         ans += 1
-
 print(ans)

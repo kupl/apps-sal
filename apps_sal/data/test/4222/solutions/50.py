@@ -1,7 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 d = [0] * k
 A = []
-
 for i in range(k):
     d = int(input())
     A += list(map(int, input().split()))

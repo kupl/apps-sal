@@ -1,7 +1,6 @@
 n = int(input())
 num = list(map(int, input().split()))
 ans = 0
-
 for i in range(n):
     for j in range(i, n):
         num1 = abs(num[i] - num[j])

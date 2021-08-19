@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 con = 0
 like = 0
 List = []

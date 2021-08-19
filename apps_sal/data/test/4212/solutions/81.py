@@ -1,10 +1,10 @@
-N, M, Q = map(int, input().split())
+(N, M, Q) = map(int, input().split())
 a = []
 b = []
 c = []
 d = []
 for _ in range(Q):
-    ad, bd, cd, dd = map(int, input().split())
+    (ad, bd, cd, dd) = map(int, input().split())
     a.append(ad - 1)
     b.append(bd - 1)
     c.append(cd)
@@ -13,7 +13,7 @@ for _ in range(Q):
 
 def score(A):
     tmp = 0
-    for ai, bi, ci, di in zip(a, b, c, d):
+    for (ai, bi, ci, di) in zip(a, b, c, d):
         if A[bi] - A[ai] == ci:
             tmp += di
     return tmp

@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 s = [i for i in range(1, n + 1)]
 for _ in range(k):
     d = int(input())

@@ -3,11 +3,10 @@ graph = [[-1 for _ in range(n)] for _ in range(n)]
 for i in range(n):
     a = int(input())
     for _ in range(a):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         graph[i][x - 1] = y
-
 ans = 0
-for p in range(2**n):
+for p in range(2 ** n):
     q = p
     c = 0
     t = []
@@ -31,5 +30,4 @@ for p in range(2**n):
         p >>= 1
     if flag:
         ans = max(ans, l)
-
 print(ans)

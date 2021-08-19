@@ -3,7 +3,7 @@ import string
 
 def ind(x):
     sample = list(string.ascii_lowercase)
-    if x == "?":
+    if x == '?':
         return 26
     else:
         return sample.index(x)
@@ -15,7 +15,6 @@ def main():
     r = input()
     l_arr = [[] for x in range(27)]
     r_arr = [[] for x in range(27)]
-
     for x in range(n):
         l_arr[ind(l[x])].append(x + 1)
         r_arr[ind(r[x])].append(x + 1)
@@ -47,7 +46,7 @@ def main():
             count += 1
     print(count)
     for x in range(count):
-        print(pair[x][0], end=" ")
+        print(pair[x][0], end=' ')
         print(pair[x][1])
 
 

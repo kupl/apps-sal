@@ -1,5 +1,4 @@
-N, K = list(map(int, input().split()))
-
+(N, K) = list(map(int, input().split()))
 cnt = [0] * N
 for k in range(K):
     d = int(input())

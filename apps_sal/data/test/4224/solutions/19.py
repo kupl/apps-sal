@@ -10,7 +10,6 @@ for i in range(N):
             cnt += 1
             A[i] = A[i] // 2
         list1.append(cnt)
-
 if list1 == []:
     print(0)
 elif len(list1) == 1:

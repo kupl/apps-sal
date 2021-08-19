@@ -12,5 +12,4 @@ for i in range(1, N):
     else:
         same = False
         A[i] = 1
-
 print(sum(A) + 1)

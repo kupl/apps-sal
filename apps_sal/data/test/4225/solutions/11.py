@@ -1,4 +1,4 @@
-a, b, c, k = map(int, input().split())
+(a, b, c, k) = map(int, input().split())
 ans = 0
 while k:
     if a > 0 and k > 0:
@@ -26,5 +26,4 @@ while k:
             ans -= k
             c -= k
             k = 0
-
 print(ans)

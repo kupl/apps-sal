@@ -7,5 +7,4 @@ def answer(k: int, s: str) -> str:
 
 k = int(input())
 s = input()
-
 print(answer(k, s))

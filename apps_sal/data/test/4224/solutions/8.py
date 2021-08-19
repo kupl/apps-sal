@@ -11,5 +11,4 @@ def cal(x):
 
 for l in L:
     ans += cal(l)
-
 print(ans)

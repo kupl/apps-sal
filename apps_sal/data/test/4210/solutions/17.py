@@ -1,12 +1,12 @@
 try:
     while True:
-        n, k = list(map(int, input().split()))
+        (n, k) = list(map(int, input().split()))
         arr = list(map(int, input().split()))
         dic = {}
         for idx in range(n):
             l = len(str(arr[idx]))
             r = arr[idx] % k
-            dic[(l, r)] = dic.get((l, r), 0) + 1
+            dic[l, r] = dic.get((l, r), 0) + 1
         res = 0
         for i in range(n):
             for j in range(1, 11):

@@ -1,7 +1,5 @@
 def __starting_point():
-
-    a, b, c, k = list(map(int, input().split()))
-
+    (a, b, c, k) = list(map(int, input().split()))
     ans = 0
     if k >= a:
         k -= a
@@ -10,18 +8,15 @@ def __starting_point():
         ans += k
         print(ans)
         return
-
     if k >= b:
         k -= b
     else:
         print(ans)
         return
-
     if k >= c:
-        ans += c * (-1)
+        ans += c * -1
     else:
-        ans += k * (-1)
-
+        ans += k * -1
     print(ans)
 
 

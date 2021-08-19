@@ -1,7 +1,6 @@
 N = input()
-if N[-1] == "s":
-    N += "es"
+if N[-1] == 's':
+    N += 'es'
 else:
-    N += "s"
-
+    N += 's'
 print(N)

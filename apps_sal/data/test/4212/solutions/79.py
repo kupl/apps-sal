@@ -1,5 +1,5 @@
 import sys
-N, M, Q = map(int, input().split())
+(N, M, Q) = map(int, input().split())
 abcd = [tuple(map(int, sys.stdin.readline().split())) for _ in range(Q)]
 ans = 0
 done = set()
@@ -9,7 +9,7 @@ while todo:
     done.add(A)
     if len(A) == N:
         total = 0
-        for a, b, c, d in abcd:
+        for (a, b, c, d) in abcd:
             if A[b - 1] - A[a - 1] == c:
                 total += d
         ans = max(ans, total)

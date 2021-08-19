@@ -3,9 +3,8 @@ g = [[-1 for _ in range(15)] for _ in range(15)]
 for i in range(n):
     a = int(input())
     for j in range(a):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         g[i][x - 1] = y
-
 ans = 0
 for bit in range(1 << n):
     honests = [0] * n

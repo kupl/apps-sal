@@ -1,9 +1,9 @@
 import itertools
 import math
 N = int(input())
-ls, L = [], 0
+(ls, L) = ([], 0)
 for i in range(N):
-    x, y = map(int, input().split(' '))
+    (x, y) = map(int, input().split(' '))
     ls.append([x, y])
 perms = itertools.permutations(range(N))
 for perm in perms:

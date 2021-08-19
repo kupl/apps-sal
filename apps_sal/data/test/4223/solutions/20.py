@@ -7,5 +7,4 @@ for i in range(N):
             pass
         elif a[i - 1] != a[i]:
             count += 1
-
 print(count)

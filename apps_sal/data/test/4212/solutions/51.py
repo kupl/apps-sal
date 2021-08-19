@@ -5,7 +5,7 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    n, m, q = list(map(int, input().split()))
+    (n, m, q) = list(map(int, input().split()))
     qs = []
     for _ in range(q):
         abcd = tuple(map(int, input().split()))

@@ -9,5 +9,4 @@ for i in range(1, N):
     else:
         j += 1
         color.append(j)
-
 print(len(set(color)))

@@ -11,4 +11,4 @@ def divisor(n):
 
 
 n = int(input())
-print((min(divisor(n))))
+print(min(divisor(n)))

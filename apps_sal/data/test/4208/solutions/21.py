@@ -18,18 +18,18 @@ for i in range(n):
 ans = []
 for i in range(26):
     while len(la[i]) > 0 and len(ra[i]) > 0:
-        x, y = la[i].pop(), ra[i].pop()
+        (x, y) = (la[i].pop(), ra[i].pop())
         ans.append([x + 1, y + 1])
 for i in range(26):
     while len(ir) > 0 and len(la[i]) > 0:
-        x, y = la[i].pop(), ir.pop()
+        (x, y) = (la[i].pop(), ir.pop())
         ans.append([x + 1, y + 1])
 for i in range(26):
     while len(il) > 0 and len(ra[i]) > 0:
-        x, y = il.pop(), ra[i].pop()
+        (x, y) = (il.pop(), ra[i].pop())
         ans.append([x + 1, y + 1])
 while len(il) > 0 and len(ir) > 0:
-    x, y = il.pop(), ir.pop()
+    (x, y) = (il.pop(), ir.pop())
     ans.append([x + 1, y + 1])
 print(len(ans))
 for i in ans:

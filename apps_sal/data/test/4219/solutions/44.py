@@ -4,9 +4,9 @@ ans = 0
 for i in range(n):
     a = int(input())
     for j in range(a):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         t[i][x - 1] = y
-for i in range(2**n):
+for i in range(2 ** n):
     h = [0] * n
     for j in range(n):
         if i >> j & 1:

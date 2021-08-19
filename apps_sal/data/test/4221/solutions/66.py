@@ -1,6 +1,5 @@
 word = input()
-
-if word[len(word) - 1] == "s":
-    print(word + "es")
+if word[len(word) - 1] == 's':
+    print(word + 'es')
 else:
-    print(word + "s")
+    print(word + 's')

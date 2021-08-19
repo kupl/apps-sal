@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = {*range(1, -~n)}
 for _ in range(k):
     input()

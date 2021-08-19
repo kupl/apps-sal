@@ -1,6 +1,5 @@
 N = int(input())
 l = list(map(int, input().split()))
-
 ans = 0
 last_n = 0
 for i in l:

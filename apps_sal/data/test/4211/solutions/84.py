@@ -1,6 +1,5 @@
 N = int(input())
 B = list(map(int, input().split()))
-
 B = B[::-1]
 A = []
 for i in range(N):
@@ -11,5 +10,4 @@ for i in range(N):
     else:
         a = min(B[i], B[i - 1])
         A.append(a)
-
 print(sum(A))

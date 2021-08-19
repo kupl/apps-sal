@@ -1,9 +1,6 @@
 N = int(input())
 S = map(int, input().split())
-
 Number = list(S)
-
 Maxi = max(Number)
 Mini = min(Number)
-
 print(Maxi - Mini)

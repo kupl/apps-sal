@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-slime_end = "0"
+slime_end = '0'
 num = 0
 for i in range(n):
     if s[i] != slime_end:

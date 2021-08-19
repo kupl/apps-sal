@@ -11,7 +11,7 @@ for i in range(size):
         x2 = a[i][j + 1][0]
         y1 = a[i][j][1]
         y2 = a[i][j + 1][1]
-        x_total = (x1 - x2)**2
-        y_total = (y1 - y2)**2
-        total += (x_total + y_total)**.5
+        x_total = (x1 - x2) ** 2
+        y_total = (y1 - y2) ** 2
+        total += (x_total + y_total) ** 0.5
 print(total / size)

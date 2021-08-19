@@ -9,7 +9,6 @@ ans = 0
 num = 0
 for indexes in permutations(indexlist, N):
     for i in range(N - 1):
-        ans += math.sqrt((XYlist[indexes[i]][0] - XYlist[indexes[i + 1]][0])**2 +
-                         (XYlist[indexes[i]][1] - XYlist[indexes[i + 1]][1])**2)
+        ans += math.sqrt((XYlist[indexes[i]][0] - XYlist[indexes[i + 1]][0]) ** 2 + (XYlist[indexes[i]][1] - XYlist[indexes[i + 1]][1]) ** 2)
     num += 1
 print(ans / num)

@@ -18,14 +18,13 @@ for i in range(n):
     if c != '?':
         if c in rr and len(rr[c]):
             res.append([i, rr[c].pop()])
-        else:
-            if len(rr['?']):
-                res.append([i, rr['?'].pop()])
+        elif len(rr['?']):
+            res.append([i, rr['?'].pop()])
 for i in rr:
     for j in rr[i]:
         if len(ll):
             res.append([ll.pop(), j])
 print(len(res))
 for i in res:
-    a, b = i
+    (a, b) = i
     print(a + 1, b + 1)

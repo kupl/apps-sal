@@ -1,11 +1,9 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 foods = []
 for i in range(n):
     foods.append(list(map(int, input().split())))
-
 if len(foods) == 1:
-    print((len(foods[0]) - 1))
+    print(len(foods[0]) - 1)
 else:
     ans = 0
     for i in foods[0][1:len(foods[0])]:
@@ -15,5 +13,4 @@ else:
                 cnt += 1
                 if cnt == len(foods) - 1:
                     ans += 1
-
     print(ans)

@@ -8,5 +8,4 @@ for i in range(n):
             a[i] //= 2
         else:
             break
-
 print(ans)

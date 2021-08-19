@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 all = [0 for i in range(m)]
 ans = 0
 for i in range(n):

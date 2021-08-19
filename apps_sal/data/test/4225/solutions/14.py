@@ -1,4 +1,4 @@
-a, b, c, k = map(int, input().split())
+(a, b, c, k) = map(int, input().split())
 count = 0
 if k <= a:
     print(k)

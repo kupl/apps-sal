@@ -13,5 +13,4 @@ for i in range(N):
     for j in range(N):
         if i != j:
             totalDistance += getDistance(sites[i], sites[j])
-
 print(totalDistance / N)

@@ -1,13 +1,22 @@
 from collections import defaultdict as dd
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(mi())
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(mi())
 
 
 n = ii()
-a, b = input().strip(), input().strip()
-da, db = dd(list), dd(list)
-qa, qb = [], []
+(a, b) = (input().strip(), input().strip())
+(da, db) = (dd(list), dd(list))
+(qa, qb) = ([], [])
 for i in range(n):
     if a[i] == '?':
         qa.append(i)
@@ -17,10 +26,9 @@ for i in range(n):
         qb.append(i)
     else:
         db[b[i]].append(i)
-
 ans = []
 for c in 'abcdefghijklmnopqrstuvwxyz':
-    u, v = da[c], db[c]
+    (u, v) = (da[c], db[c])
     while u and v:
         ans.append((u.pop(), v.pop()))
     while u and qb:
@@ -29,6 +37,5 @@ for c in 'abcdefghijklmnopqrstuvwxyz':
         ans.append((qa.pop(), v.pop()))
 while qa and qb:
     ans.append((qa.pop(), qb.pop()))
-
 print(len(ans))
-print(*('%d %d' % (i + 1, j + 1) for i, j in ans), sep='\n')
+print(*('%d %d' % (i + 1, j + 1) for (i, j) in ans), sep='\n')

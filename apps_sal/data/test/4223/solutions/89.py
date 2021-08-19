@@ -1,5 +1,5 @@
 n = int(input())
-bef = ""
+bef = ''
 ans = 0
 for s in input():
     if bef != s:

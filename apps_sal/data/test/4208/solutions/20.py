@@ -6,10 +6,12 @@ from sys import setcheckinterval, stdin
 setcheckinterval(1000)
 
 
-def iin(): return int(stdin.readline())
+def iin():
+    return int(stdin.readline())
 
 
-def lin(): return list(map(int, stdin.readline().split()))
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
 n = iin()
@@ -50,5 +52,5 @@ if cr != 0:
                 ans.append((l[i].pop(), left['?'].pop()))
                 cr -= 1
 print(len(ans))
-for i, j in ans:
+for (i, j) in ans:
     print(i, j)

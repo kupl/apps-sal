@@ -6,9 +6,8 @@ c = int(new[2])
 k = int(new[3])
 if a > k:
     print(k)
+elif a + b > k:
+    print(a)
 else:
-    if a + b > k:
-        print(a)
-    else:
-        sum = a + (k - (a + b)) * (-1)
-        print(sum)
+    sum = a + (k - (a + b)) * -1
+    print(sum)

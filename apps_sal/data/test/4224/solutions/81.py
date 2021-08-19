@@ -1,6 +1,5 @@
 n = int(input())
 L = list(map(int, input().split()))
-
 ans = 0
 for i in range(n):
     cnt = 0

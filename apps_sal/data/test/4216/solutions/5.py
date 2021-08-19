@@ -1,10 +1,8 @@
 import math
-
 N = int(input())
 A = []
 B = []
 num_list = []
-
 root = math.floor(math.sqrt(N))
 
 
@@ -13,7 +11,7 @@ def solv(N):
         if N % i == 0:
             A.append(i)
             B.append(N // i)
-    for a, b in zip(A, B):
+    for (a, b) in zip(A, B):
         a_str = str(a)
         b_str = str(b)
         a_num = len(a_str)

@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 d = []
 A = []
 for _ in range(K):
@@ -8,4 +8,4 @@ cnt = [0 for i in range(N)]
 for i in range(K):
     for a in A[i]:
         cnt[a - 1] += 1
-print((cnt.count(0)))
+print(cnt.count(0))

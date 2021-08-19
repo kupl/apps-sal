@@ -4,16 +4,16 @@ for i in range(n):
     a = int(input())
     xy[i] = [list(map(int, input().split())) for _ in range(a)]
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     tmp = [0] * n
     flag1 = True
     for j in range(n):
-        if (i >> j) & 1:
+        if i >> j & 1:
             tmp[j] = 1
     for k in range(n):
         flag2 = True
         if tmp[k] == 1:
-            for x, y in xy[k]:
+            for (x, y) in xy[k]:
                 if tmp[x - 1] != y:
                     flag1 = False
                     flag2 = False

@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 ka = [[int(x) for x in input().split()] for _ in range(N)]
 K = list()
 A = list()

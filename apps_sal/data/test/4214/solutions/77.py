@@ -2,7 +2,7 @@ import itertools
 import math
 N = int(input())
 xy = [list(map(int, input().split())) for _ in range(N)]
-x, y = [list(i) for i in zip(*xy)]
+(x, y) = [list(i) for i in zip(*xy)]
 l = []
 for i in range(0, N):
     l.append(i)

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 line = [0 for i in range(m + 1)]
 ans = 0
 for i in range(n):

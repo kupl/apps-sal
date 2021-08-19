@@ -1,6 +1,5 @@
 import itertools
-
-n, m, q = list(map(int, input().split()))
+(n, m, q) = list(map(int, input().split()))
 a = [list(map(int, input().split())) for _ in range(q)]
 
 
@@ -18,5 +17,4 @@ for i in itertools.combinations_with_replacement(list(range(1, m + 1)), n):
         tmp += check(i, j)
     if ans < tmp:
         ans = tmp
-
 print(ans)

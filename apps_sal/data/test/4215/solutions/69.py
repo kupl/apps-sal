@@ -1,5 +1,4 @@
-A, B = map(int, input().split())
-
+(A, B) = map(int, input().split())
 if 2 * B >= A:
     print(0)
 else:
