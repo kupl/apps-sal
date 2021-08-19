@@ -1,4 +1,3 @@
-# Zad
 from collections import Counter
 n = int(input())
 tree = []
@@ -12,13 +11,12 @@ else:
     if n == 2:
         print(1)
         print('1 2')
+    elif ans.most_common(1)[0][1] == 2:
+        print(1)
+        print(ans.most_common()[-2][0], ans.most_common()[-1][0])
     else:
-        if ans.most_common(1)[0][1] == 2:
-            print(1)
-            print(ans.most_common()[-2][0], ans.most_common()[-1][0])
-        else:
-            center = ans.most_common(1)[0][0]
-            kraya = [n[0] for n in ans.most_common() if n[1] == 1]
-            print(len(kraya))
-            for i in kraya:
-                print(center, i)
+        center = ans.most_common(1)[0][0]
+        kraya = [n[0] for n in ans.most_common() if n[1] == 1]
+        print(len(kraya))
+        for i in kraya:
+            print(center, i)

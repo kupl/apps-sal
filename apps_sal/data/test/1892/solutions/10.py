@@ -11,10 +11,8 @@ for i in range(n):
             t = a[i]
             a[i] += s
             s += t
-            a[i] %= 10**9 + 7
-            s %= 10**9 + 7
+            a[i] %= 10 ** 9 + 7
+            s %= 10 ** 9 + 7
     if input() == 'f':
         flag = True
-
-# print(a)
-print(sum(a) % (10**9 + 7))
+print(sum(a) % (10 ** 9 + 7))

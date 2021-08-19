@@ -1,23 +1,21 @@
-# Soroban
-
 n = input()
-soroban = ""
+soroban = ''
 for i in range(len(n)):
     digit = int(n[len(n) - i - 1])
-    soroban = ""
+    soroban = ''
     if digit >= 5:
-        soroban += "-O|"
+        soroban += '-O|'
         digit = digit - 5
     else:
-        soroban += "O-|"
+        soroban += 'O-|'
     if digit == 0:
-        soroban += "-OOOO"
+        soroban += '-OOOO'
     elif digit == 1:
-        soroban += "O-OOO"
+        soroban += 'O-OOO'
     elif digit == 2:
-        soroban += "OO-OO"
+        soroban += 'OO-OO'
     elif digit == 3:
-        soroban += "OOO-O"
+        soroban += 'OOO-O'
     elif digit == 4:
-        soroban += "OOOO-"
+        soroban += 'OOOO-'
     print(soroban)
