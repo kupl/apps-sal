@@ -1,11 +1,5 @@
 import re
-
-PATTERN = re.compile("^"
-                     "M{0,4}"             # thousands
-                     "(CM|CD|D?C{,3})"    # hundreds
-                     "(XC|XL|L?X{,3})"    # tens
-                     "(IX|IV|V?I{,3})"    # units
-                     "$")
+PATTERN = re.compile('^M{0,4}(CM|CD|D?C{,3})(XC|XL|L?X{,3})(IX|IV|V?I{,3})$')
 
 
 def valid_romans(arr):

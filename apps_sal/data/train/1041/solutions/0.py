@@ -1,4 +1,3 @@
-# cook your dish here
 for u in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -17,8 +16,8 @@ for u in range(int(input())):
     dd.append([n - 1, n - 1])
     k = len(d)
     m = max(d)
-    x, y = 0, 0
+    (x, y) = (0, 0)
     for i in range(k):
-        if(d[i] == m):
+        if d[i] == m:
             x = dd[i]
     print(m, *x)

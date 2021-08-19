@@ -1,7 +1,4 @@
-# https://www.codechef.com/problems/SMPAIR
-
 T = int(input())
-
 for t in range(T):
     N = int(input())
     A = [int(x) for x in input().split()]

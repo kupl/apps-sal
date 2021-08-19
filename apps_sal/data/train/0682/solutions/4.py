@@ -1,4 +1,3 @@
-# your code goes here
 import math
 n = int(input())
 arr = list(map(int, input().split()))

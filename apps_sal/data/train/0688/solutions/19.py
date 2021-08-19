@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 t = int(input())
 l = []
 for i in range(t):
@@ -13,6 +11,6 @@ for i in range(t):
     l.append(count)
 for i in l:
     if i <= 2:
-        print("uniform")
+        print('uniform')
     else:
-        print("non-uniform")
+        print('non-uniform')

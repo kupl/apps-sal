@@ -2,6 +2,6 @@ import re
 
 
 def get_age(age):
-    a = re.findall(r'\d', age)
+    a = re.findall('\\d', age)
     a = ''.join(a)
-    return int(a)  # your code here
+    return int(a)
