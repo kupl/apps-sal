@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 5)
 
 
@@ -18,4 +17,4 @@ def dfs(v):
 K = int(input())
 ans = []
 [dfs(i) for i in range(1, 10)]
-print((sorted(ans)[K - 1]))
+print(sorted(ans)[K - 1])

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 v = list(map(int, input().split()))
 ans = 0
 for i in range(min(n + 1, k + 1)):

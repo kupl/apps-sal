@@ -1,8 +1,6 @@
 from collections import deque
-
 K = int(input())
 q = deque([1, 2, 3, 4, 5, 6, 7, 8, 9])
-
 for i in range(K):
     runrun = q.popleft()
     rem = runrun % 10
@@ -16,5 +14,4 @@ for i in range(K):
         q.append(runrun * 10 + rem - 1)
         q.append(runrun * 10 + rem)
         q.append(runrun * 10 + rem + 1)
-
 print(runrun)

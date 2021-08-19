@@ -1,7 +1,7 @@
 n = int(input())
 a = []
 for i in range(n):
-    t, d, p = list(map(int, input().split()))
+    (t, d, p) = list(map(int, input().split()))
     a.append([t, d, p, i + 1])
 a.sort(key=lambda x: x[1])
 d = {0: [0, []]}

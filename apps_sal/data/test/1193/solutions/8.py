@@ -1,3 +1,3 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 numbers = sorted(list(map(int, input().split())), reverse=True)
 print(numbers[k - 1])

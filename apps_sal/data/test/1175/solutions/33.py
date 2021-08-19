@@ -3,7 +3,7 @@ def count(lb, rb):
     assert rb[0] == '1'
     assert len(lb) == len(rb)
     dp = [1, 0, 0, 0]
-    for lc, rc in zip(lb[1:], rb[1:]):
+    for (lc, rc) in zip(lb[1:], rb[1:]):
         ndp = [dp[0], 0, 0, 0]
         if rc == '0':
             ndp[1] += dp[1]
@@ -25,7 +25,7 @@ def count(lb, rb):
     return sum(dp)
 
 
-l, r = list(map(int, input().split()))
+(l, r) = list(map(int, input().split()))
 lb = bin(l)[2:]
 rb = bin(r)[2:]
 ld = len(lb)

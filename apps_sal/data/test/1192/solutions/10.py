@@ -29,9 +29,9 @@ def reversede(array):
     return array
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 pn = list(map(int, input().split()))
-const = 10000 / float(ofsum(n)**k)
+const = 10000 / float(ofsum(n) ** k)
 answer = 0
 if k == 1:
     for i in range(n):

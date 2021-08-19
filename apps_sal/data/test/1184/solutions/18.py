@@ -1,7 +1,7 @@
 x = input()
 list = x.split()
 list2 = []
-if list[0][1] == "}":
+if list[0][1] == '}':
     list2 = []
 else:
     list2.append(list[0][1])

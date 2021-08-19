@@ -1,25 +1,24 @@
 def compress(bstr):
-    pk, pc = None, None
-
+    (pk, pc) = (None, None)
     for block in bstr:
         if pc is None:
-            pk, pc = block
+            (pk, pc) = block
         elif pc == block[1]:
             pk += block[0]
         else:
-            yield pk, pc
-            pk, pc = block
-
+            yield (pk, pc)
+            (pk, pc) = block
     if pc is not None:
-        yield pk, pc
+        yield (pk, pc)
 
 
 def find1(text, query):
-    (bk, bc), = query
-    return sum(k - bk + 1 for k, c in text if c == bc and k >= bk)
+    ((bk, bc),) = query
+    return sum((k - bk + 1 for (k, c) in text if c == bc and k >= bk))
 
 
 class Query:
+
     def __init__(self, query):
         self._query = query
         self._len = len(query)
@@ -32,10 +31,8 @@ class Query:
     def _suffix(self, i, pblock=None):
         if not i:
             return None
-
         if pblock is None and i is not None:
             pblock = self._query[i]
-
         if (i, pblock) in self._suffixes:
             return self._suffixes[i, pblock]
         else:
@@ -45,8 +42,7 @@ class Query:
 
     def _match(self, i, block):
         if i == 0 or i == self._len - 1:
-            return (block[1] == self._query[i][1]
-                    and block[0] >= self._query[i][0])
+            return block[1] == self._query[i][1] and block[0] >= self._query[i][0]
         else:
             return block == self._query[i]
 
@@ -74,7 +70,7 @@ def find2(text, query):
     pblock = None
     c = 0
     for block in text:
-        i, pblock = qobj.next(i, block, pblock), block
+        (i, pblock) = (qobj.next(i, block, pblock), block)
         if qobj.is_match(i):
             c += 1
     return c
@@ -87,17 +83,17 @@ def find(text, query):
 
 
 def parse_block(s):
-    k, c = s.split('-')
-    return int(k), c
+    (k, c) = s.split('-')
+    return (int(k), c)
 
 
 def get_input():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     text = list(map(parse_block, input().split()))
     assert len(text) == n
     query = list(map(parse_block, input().split()))
     assert len(query) == m
-    return text, query
+    return (text, query)
 
 
 def __starting_point():

@@ -1,7 +1,6 @@
 a = int(input())
 lister = input().split()
 lister = [int(i) for i in lister]
-
 ans = dict()
 
 
@@ -16,21 +15,17 @@ def findans(n):
         for i in range(mod, a, lister[n]):
             if i != n and lister[i] > lister[n]:
                 ok = ok and findans(i)
-
-        ok = not(ok)
-
+        ok = not ok
     ans[n] = ok
     return ok
 
 
 for i in range(len(lister)):
     findans(i)
-
 level = []
 for i in range(a):
     if ans[i] == True:
         level.append('A')
     else:
         level.append('B')
-
 print(''.join(level))

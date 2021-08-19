@@ -1,17 +1,14 @@
 def main():
     MOD = 10 ** 9 + 7
-
     s = input()
     n = len(s)
-
     acc_a = [0] * (n + 1)
     acc_c = [0] * (n + 1)
     acc_q = [0] * (n + 1)
-
     a = 0
     c = 0
     q = 0
-    for i, char in enumerate(s, 1):
+    for (i, char) in enumerate(s, 1):
         if char == 'A':
             a += 1
         elif char == 'C':
@@ -21,14 +18,12 @@ def main():
         acc_a[i] = a
         acc_c[i] = c
         acc_q[i] = q
-
     sq = [1]
     for _ in range(acc_q[n]):
         sq.append(sq[-1] * 3 % MOD)
-
     ans = 0
     qn = acc_q[n]
-    for i, char in enumerate(s, 1):
+    for (i, char) in enumerate(s, 1):
         if char == 'B' or char == '?':
             is_q = int(char == '?')
             rq = acc_q[n] - acc_q[i]

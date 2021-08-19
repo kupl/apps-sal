@@ -1,7 +1,7 @@
-w, h, v, n = list(map(int, input().split()))
+(w, h, v, n) = list(map(int, input().split()))
 V = [[False] * h for _ in range(w)]
 for _ in range(v):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     V[x - 1][y - 1] = True
 
 

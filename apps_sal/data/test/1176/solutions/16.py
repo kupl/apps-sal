@@ -8,4 +8,4 @@ for i in range(n):
 if c % 2 == 0:
     print(sum(a))
 else:
-    print(sum(a) - (min(a) * 2))
+    print(sum(a) - min(a) * 2)

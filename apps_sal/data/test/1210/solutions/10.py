@@ -6,17 +6,17 @@ def mults(a, b, n):
 
 
 def prob(a, b, n):
-    return 1 - (mults(a, b, n)) / (b - a + 1)
+    return 1 - mults(a, b, n) / (b - a + 1)
 
 
 ans = 0
-n, p = (list(map(int, input().split())))
-firststart, firstend = (list(map(int, input().split())))
+(n, p) = list(map(int, input().split()))
+(firststart, firstend) = list(map(int, input().split()))
 prevstart = firststart
 prevend = firstend
 for i in range(1, n):
-    nextstart, nextend = (list(map(int, input().split())))
-    ans += (1 - prob(prevstart, prevend, p) * prob(nextstart, nextend, p))
+    (nextstart, nextend) = list(map(int, input().split()))
+    ans += 1 - prob(prevstart, prevend, p) * prob(nextstart, nextend, p)
     prevstart = nextstart
     prevend = nextend
 ans += 1 - prob(prevstart, prevend, p) * prob(firststart, firstend, p)

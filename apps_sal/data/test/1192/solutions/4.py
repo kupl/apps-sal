@@ -1,4 +1,4 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 base = [int(x) for x in input().split()]
 
 
@@ -31,5 +31,4 @@ total = make_reflects(base)
 reflect_number = n * (n + 1) / 2
 total_number = reflect_number ** k
 ans = total / total_number
-
 print('{0:.10f}'.format(ans))

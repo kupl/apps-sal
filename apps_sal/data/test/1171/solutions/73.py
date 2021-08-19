@@ -1,9 +1,6 @@
 import heapq
-
-N, K = map(int, input().split())
-
+(N, K) = map(int, input().split())
 V = list(map(int, input().split()))
-
 ans = 0
 for i in range(1, K + 1):
     if i > N:
@@ -19,5 +16,4 @@ for i in range(1, K + 1):
                 ans = max(ans, sum(q) + tmp_min)
                 break
         ans = max(ans, sum(q))
-
 print(ans)

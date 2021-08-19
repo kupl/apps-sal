@@ -5,7 +5,6 @@ for i in range(N):
     for j in range(N - 1):
         a[i][j] = line[j] - 1
     a[i] = a[i][::-1]
-
 stack = []
 
 
@@ -19,7 +18,6 @@ def addmatch(i):
 
 for i in range(N):
     addmatch(i)
-
 day = 0
 while stack:
     day += 1
@@ -35,7 +33,6 @@ while stack:
             member.add(x)
     for m in member:
         addmatch(m)
-
 for i in range(len(a)):
     if len(a[i]) > 0:
         print(-1)

@@ -1,4 +1,4 @@
-n, k = input().split(' ')
+(n, k) = input().split(' ')
 a = input().split(' ')
 sum = 0
 for i in range(0, int(k)):

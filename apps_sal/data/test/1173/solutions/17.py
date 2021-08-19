@@ -7,7 +7,7 @@ def main():
     for i in range(n):
         a[i] = deque(list(map(lambda x: int(x) - 1, input().split())))
     tmp = set()
-    for p1, p in enumerate(a):
+    for (p1, p) in enumerate(a):
         p2 = p[0]
         if p1 == a[p2][0]:
             tmp.add(p1)
@@ -15,7 +15,6 @@ def main():
     q = deque(tmp)
     for i in tmp:
         a[i].popleft()
-
     day = 0
     while True:
         day += 1
@@ -34,7 +33,6 @@ def main():
         tmp = set()
         if len(q) == 0:
             break
-
     for i in a:
         if i:
             print(-1)

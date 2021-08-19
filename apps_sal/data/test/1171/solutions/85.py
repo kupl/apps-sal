@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 v = list(map(int, input().split()))
-
 res = 0
 r = min(n, k)
 for i in range(r + 1):

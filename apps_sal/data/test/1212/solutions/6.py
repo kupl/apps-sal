@@ -1,10 +1,11 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, k = readln()
+(n, k) = readln()
 h = readln()
 ans = s = sum(h[:k])
 j = 1

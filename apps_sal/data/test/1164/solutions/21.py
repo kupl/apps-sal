@@ -22,12 +22,11 @@ for num in numbers:
     for i in range(len(num)):
         if num[i] != '.':
             integ += num[i]
-        else:
-            if i == len(num) - 3:
-                integ += [num[i]]
+        elif i == len(num) - 3:
+            integ += [num[i]]
     ans += Decimal(''.join(integ))
 ans = str(ans)
-if len(ans) > 3 and ans[-1] == ans[-2] == '0' and ans[-3] == '.':
+if len(ans) > 3 and ans[-1] == ans[-2] == '0' and (ans[-3] == '.'):
     ans = ans[:-3]
 res = []
 cnt = 0

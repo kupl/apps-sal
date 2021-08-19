@@ -1,4 +1,4 @@
-r, c, n, k = list(map(int, input().split()))
+(r, c, n, k) = list(map(int, input().split()))
 xy = [list(map(int, input().split())) for i in range(n)]
 field = [[0] * c for i in range(r)]
 for i in range(n):

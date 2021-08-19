@@ -2,12 +2,14 @@ import bisect
 
 
 class BTreeNode:
+
     def __init__(self):
         self.key = []
         self.child = []
 
 
 class BTree:
+
     def __init__(self):
         self.root = BTreeNode()
 
@@ -38,6 +40,7 @@ class BTree:
         return ret
 
     def insert(self, key):
+
         def insert_rec(ptr):
             b_size = 10
             if not ptr.child:
@@ -69,14 +72,15 @@ class BTree:
             self.root = root
 
     def dump(self):
+
         def dump_rec(ptr, dep):
             for _ in range(0, dep):
-                print("  ", end="")
+                print('  ', end='')
             print(ptr.key)
             for c in ptr.child:
                 dump_rec(c, dep + 1)
         dump_rec(self.root, 0)
-        print("")
+        print('')
 
 
 def main():
@@ -85,7 +89,7 @@ def main():
     idx = [0] * n
     for i in range(0, n):
         idx[i] = i
-    idx.sort(key=lambda i: - p[i])
+    idx.sort(key=lambda i: -p[i])
     t = BTree()
     t.insert(-1)
     t.insert(n)

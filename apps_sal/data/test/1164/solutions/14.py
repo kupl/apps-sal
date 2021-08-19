@@ -5,7 +5,7 @@ i = w - 1
 while i > 0:
     if '0' <= q[i] <= '9':
         j = i - 1
-        while not('a' <= q[j] <= 'z'):
+        while not 'a' <= q[j] <= 'z':
             j -= 1
         a.append(q[j + 1:i + 1])
         i = j

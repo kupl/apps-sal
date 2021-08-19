@@ -10,7 +10,6 @@ while 3 ** A <= N:
             break
         B += 1
     A += 1
-
 if ans[0] < 0:
     print(-1)
 else:

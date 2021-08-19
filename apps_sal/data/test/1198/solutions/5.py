@@ -1,8 +1,11 @@
 from heapq import *
-def f(): return map(int, input().split())
 
 
-n, c = f()
+def f():
+    return map(int, input().split())
+
+
+(n, c) = f()
 a = list(f()) + [0] * c
 b = [0] * (n + c)
 s = 0

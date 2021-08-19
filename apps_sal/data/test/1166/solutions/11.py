@@ -14,6 +14,6 @@ for i in range(n - 2, 0, -1):
             break
 for i in range(n):
     if answer[i] == 1:
-        print("A", end="")
+        print('A', end='')
     else:
-        print("B", end="")
+        print('B', end='')

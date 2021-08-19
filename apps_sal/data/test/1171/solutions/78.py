@@ -1,8 +1,7 @@
 from collections import deque
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 v = list(map(int, input().split()))
 d = deque(v)
-
 t = min(n, k)
 score = 0
 for a in range(t + 1):

@@ -19,7 +19,6 @@ def dp(i, num):
         return 0
     if mem[i, num] != -1:
         return mem[i, num]
-
     mem[i, num] = max(dp(i + 1, num), cum[i] + dp(i + m, num + 1))
     return mem[i, num]
 
@@ -31,14 +30,13 @@ def main():
     else:
         for i in range(n - m + 1):
             ans = max(ans, dp(i, 0))
-
         print(ans)
 
 
 def __starting_point():
-    n, m, k = arr_inp(1)
+    (n, m, k) = arr_inp(1)
     a = arr_inp(1)
-    mem, cum = defaultdict(lambda: -1), [sum(a[i:i + m]) for i in range(n - m + 1)]
+    (mem, cum) = (defaultdict(lambda: -1), [sum(a[i:i + m]) for i in range(n - m + 1)])
     setrecursionlimit(50000)
     threading.stack_size(102400000)
     thread = threading.Thread(target=main)

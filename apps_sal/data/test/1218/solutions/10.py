@@ -3,10 +3,10 @@ def valid(k, mid):
 
 
 def binary_search(n, k):
-    l, r = 0, k - 1
-    while (l <= r):
+    (l, r) = (0, k - 1)
+    while l <= r:
         mid = l + r >> 1
-        if (valid(k, mid) < n):
+        if valid(k, mid) < n:
             l = mid + 1
         else:
             r = mid - 1
@@ -14,7 +14,7 @@ def binary_search(n, k):
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     res = binary_search(n, k)
     print(-1 if res == k else res)
 

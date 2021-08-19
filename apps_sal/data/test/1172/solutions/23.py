@@ -1,5 +1,5 @@
 S = input()
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 dp = [[0] * 4 for _ in range(100005)]
 dp[0][0] = 1
 for i in range(len(S)):
@@ -19,4 +19,4 @@ for i in range(len(S)):
     if S[i] == 'C' or S[i] == '?':
         dp[i + 1][3] += dp[i][2]
         dp[i + 1][3] %= MOD
-print((dp[len(S)][3]))
+print(dp[len(S)][3])

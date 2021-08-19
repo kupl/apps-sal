@@ -1,10 +1,13 @@
 import sys
 import heapq
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     v = list(map(int, input().split()))
     ans = 0
     for i in range(n):

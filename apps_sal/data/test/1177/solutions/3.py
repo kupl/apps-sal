@@ -6,9 +6,8 @@ INF = 10 ** 18
 
 
 def main():
-    N, S = list(map(int, input().split()))
+    (N, S) = list(map(int, input().split()))
     A = list(map(int, input().split()))
-
     before = np.zeros(S + 1, np.int64)
     before[0] = 1
     ans = 0

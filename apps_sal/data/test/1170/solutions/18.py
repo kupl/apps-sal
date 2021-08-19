@@ -13,7 +13,7 @@ t = int(input())
 for i in range(t):
     x = int(input())
     if x == 0:
-        print("1 1")
+        print('1 1')
     elif x == 1:
         print(-1)
     else:
@@ -21,7 +21,7 @@ for i in range(t):
         di = div(x)
         for d in di:
             a = x // d
-            if ((a + d) % 2 == 0) and (a > d):
+            if (a + d) % 2 == 0 and a > d:
                 n = (a + d) // 2
                 lower = (a + d) / (a - d + 2)
                 upper = (a + d) / (a - d)

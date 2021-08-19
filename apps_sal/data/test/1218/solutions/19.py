@@ -10,13 +10,12 @@ def sum1(i):
     return i * (i + 1) / 2
 
 
-n, k = map(Decimal, input().split())
-
-if(n == 1):
+(n, k) = map(Decimal, input().split())
+if n == 1:
     print(0)
-elif(k > n):
+elif k > n:
     print(1)
-elif(sum2(Decimal(2), k) < n):
+elif sum2(Decimal(2), k) < n:
     print(-1)
 else:
     c = 2 * n + k - k * k

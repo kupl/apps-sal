@@ -7,7 +7,6 @@ def proc(x):
 
 
 A = [deque(list(map(proc, input().split())) + [-1]) for i in range(N)]
-
 ans = 0
 rest = N * (N - 1)
 cand = set(range(N))
@@ -27,6 +26,4 @@ while rest > 0:
         if A[n][0] != -1:
             cand.add(A[n][0])
     ans += 1
-
-
 print(ans)

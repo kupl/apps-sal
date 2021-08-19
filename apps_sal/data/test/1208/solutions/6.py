@@ -3,7 +3,7 @@ number = 0
 maxnum = 0
 visitors = dict()
 for n in range(N):
-    inout, ID = input().split()
+    (inout, ID) = input().split()
     if inout == '+':
         visitors[ID] = 1
         number += 1

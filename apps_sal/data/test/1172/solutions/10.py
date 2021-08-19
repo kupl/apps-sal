@@ -1,13 +1,11 @@
 def main():
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     s = input()
     n = len(s)
-
     a_num = 0
     c_num = s.count('C')
     q_num = 0
     q_cnt = s.count('?')
-
     pows = [0] * 4
     if q_cnt >= 3:
         pows[3] = pow(3, q_cnt - 3, mod)
@@ -23,7 +21,6 @@ def main():
         pows[0] = 3
     else:
         pows[0] = 1
-
     ans = 0
     for x in s:
         if x == 'A':
@@ -31,17 +28,16 @@ def main():
         elif x == 'B':
             ans += pows[0] * a_num * c_num
             ans += pows[1] * (q_num * c_num + a_num * (q_cnt - q_num))
-            ans += pows[2] * (q_num) * (q_cnt - q_num)
+            ans += pows[2] * q_num * (q_cnt - q_num)
             ans %= mod
         elif x == 'C':
             c_num -= 1
         else:
             ans += pows[1] * a_num * c_num
             ans += pows[2] * (q_num * c_num + a_num * (q_cnt - q_num - 1))
-            ans += pows[3] * (q_num) * (q_cnt - q_num - 1)
+            ans += pows[3] * q_num * (q_cnt - q_num - 1)
             ans %= mod
             q_num += 1
-
     print(ans)
 
 

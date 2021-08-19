@@ -6,7 +6,6 @@ def main():
     a = []
     for i in range(n):
         a.append(list(map(int, input().split())))
-
     que = deque()
     lastdone = []
     next = []
@@ -15,7 +14,7 @@ def main():
         lastdone.append(-1)
         next.append(0)
     while len(que) > 0:
-        now, day = que.popleft()
+        (now, day) = que.popleft()
         if lastdone[now] == day:
             continue
         if next[now] == n - 1:
@@ -32,13 +31,11 @@ def main():
             lastdone[candidate] = day
             que.append((now, day + 1))
             que.append((candidate, day + 1))
-
     for i in range(n):
         if next[i] != n - 1:
-            print((-1))
+            print(-1)
             return
-
-    print((max(lastdone)))
+    print(max(lastdone))
 
 
 def __starting_point():

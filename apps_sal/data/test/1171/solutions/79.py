@@ -1,8 +1,7 @@
 from collections import deque
 import heapq
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 v = deque(list(map(int, input().split())))
-
 ans = 0
 for i in range(min(n, k) + 1):
     for j in range(min(n, k) - i + 1):

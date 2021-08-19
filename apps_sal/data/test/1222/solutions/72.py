@@ -7,6 +7,6 @@ for i in l:
         l += [i * 10 + 8, i * 10 + 9]
     if 0 < i % 10 < 9:
         l += [i * 10 + (i - 1) % 10, i * 10 + i % 10, i * 10 + (i + 1) % 10]
-    if len(l) > 10**5:
+    if len(l) > 10 ** 5:
         break
 print(l[K - 1])

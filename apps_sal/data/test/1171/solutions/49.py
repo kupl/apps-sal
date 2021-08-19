@@ -1,11 +1,9 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 V = list(map(int, input().split()))
-
 R = min(N, K)
 point = 0
 max_point = 0
 hand = []
-
 for i in range(R + 1):
     for a in range(i + 1):
         if i == a:
@@ -20,5 +18,4 @@ for i in range(R + 1):
             trash = -sum(negahand[:K - i])
         point = sum(hand) + trash
         max_point = max(max_point, point)
-
 print(max_point)

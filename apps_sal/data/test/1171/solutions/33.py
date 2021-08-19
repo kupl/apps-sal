@@ -1,8 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 v = [int(i) for i in input().split()]
 ans = 0
 for a in range(min(n, k) + 1):
-    pa, va = v[:a], v[a:]
+    (pa, va) = (v[:a], v[a:])
     for b in range(min(n, k) - a + 1):
         pb = pa + va[-b:] if b > 0 else pa
         pb.sort()

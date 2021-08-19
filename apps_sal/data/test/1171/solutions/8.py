@@ -1,8 +1,7 @@
 from heapq import heapify, heappop, heappush
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 V = list(map(int, input().split()))
-INF = 10**9
+INF = 10 ** 9
 
 
 def h(X, cnt):
@@ -19,7 +18,6 @@ def h(X, cnt):
 
 
 ans = 0
-
 for i in range(1, min(N, K) + 1):
     if i != N:
         for j in range(i + 1):
@@ -27,5 +25,4 @@ for i in range(1, min(N, K) + 1):
             ans = max(ans, h(X, i))
     else:
         ans = max(ans, h(V, i))
-
 print(ans)

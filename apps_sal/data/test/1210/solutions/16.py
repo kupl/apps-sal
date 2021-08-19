@@ -1,4 +1,4 @@
-n, p = [int(i) for i in input().split()]
+(n, p) = [int(i) for i in input().split()]
 b = []
 for i in range(n):
     a = [int(i) for i in input().split()]

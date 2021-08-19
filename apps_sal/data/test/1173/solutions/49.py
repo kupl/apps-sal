@@ -1,7 +1,6 @@
 import sys
 import collections
 input = sys.stdin.readline
-
 n = int(input())
 a = []
 for i in range(n):
@@ -26,7 +25,7 @@ while queue:
     while queue:
         test = queue.popleft()
         match += 1
-        num1, num2 = test[0], test[1]
+        (num1, num2) = (test[0], test[1])
         nums[num1 - 1] += 1
         nums[num2 - 1] += 1
         temp.append(num1)
@@ -46,7 +45,6 @@ while queue:
         flag = False
         break
     day += 1
-
 if flag == True:
     print(day)
 else:

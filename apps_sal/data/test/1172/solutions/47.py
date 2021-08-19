@@ -1,5 +1,5 @@
 def main():
-    MOD = 10**9 + 7
+    MOD = 10 ** 9 + 7
     S = input()
     N = len(S)
     CHARS = ['A', 'B', 'C']

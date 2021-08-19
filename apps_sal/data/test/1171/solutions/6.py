@@ -1,7 +1,6 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 V = list(map(int, input().split()))
-
-max_value = -10**9
+max_value = -10 ** 9
 for kL in range(0, K + 1):
     for kR in range(0, K + 1):
         if kL + kR > min(N, K):

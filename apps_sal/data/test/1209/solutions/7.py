@@ -1,11 +1,9 @@
 import math
 n = int(input())
-
 a = []
 t = []
 s = 0
 for _ in range(n):
-
     f = float(input())
     p = 0
     if f.is_integer():
@@ -16,8 +14,7 @@ for _ in range(n):
         t.append(-1)
     a.append(p)
     s += p
-
-for i, e in enumerate(a):
+for (i, e) in enumerate(a):
     if t[i] == 0:
         print(e)
     elif s == 0:

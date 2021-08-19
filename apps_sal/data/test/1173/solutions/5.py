@@ -8,7 +8,7 @@ def main():
         a[i] = deque(list(map(lambda x: int(x) - 1, input().split())))
     q = deque([])
     tmp = set()
-    for idx, i in enumerate(a):
+    for (idx, i) in enumerate(a):
         x = idx
         y = i[0]
         if x == a[y][0]:
@@ -17,7 +17,6 @@ def main():
     q = deque(tmp)
     for i in tmp:
         a[i].popleft()
-
     day = 0
     while True:
         day += 1
@@ -37,7 +36,6 @@ def main():
             a[i].popleft()
         if len(q) == 0:
             break
-
     for i in range(n):
         if len(a[i]) != 0:
             print(-1)

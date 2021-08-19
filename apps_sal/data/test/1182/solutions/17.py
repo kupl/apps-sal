@@ -1,7 +1,7 @@
-r, c, n, k = list(map(int, input().split()))
+(r, c, n, k) = list(map(int, input().split()))
 data = [[False for i in range(c)] for j in range(r)]
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     data[x][y] = True

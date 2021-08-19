@@ -11,4 +11,4 @@ for i in a:
 if c % 2 == 0:
     print(sum_abs_a)
 else:
-    print((sum_abs_a - abs(b) * 2))
+    print(sum_abs_a - abs(b) * 2)

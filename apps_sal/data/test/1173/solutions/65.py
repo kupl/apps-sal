@@ -11,7 +11,7 @@ for _ in range(n * (n - 1) // 2):
     day += 1
     battle_today = 0
     tomorrow = set([])
-    if (day == 1):
+    if day == 1:
         player = set([i for i in range(n)])
     for i in player:
         if len(a_list[i]) == 0:

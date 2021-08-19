@@ -2,7 +2,7 @@ def takefirst(eml):
     return eml[0]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 a.sort()
 b = []

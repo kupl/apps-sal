@@ -1,9 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
 def f():
-    a, b = map(int, input().split())
-    return(b // m - (a - 1) // m) / (b - a + 1)
+    (a, b) = map(int, input().split())
+    return (b // m - (a - 1) // m) / (b - a + 1)
 
 
 a = [f() for _ in range(n)]

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 data = list(map(int, input().split()))
 line = [0] * n
 maxx = 0

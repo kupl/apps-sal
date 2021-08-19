@@ -10,5 +10,4 @@ while count <= K:
     if num % 10 != 9:
         queue.append(num * 10 + num % 10 + 1)
     count += 1
-
 print(num)

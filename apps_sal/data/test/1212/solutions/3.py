@@ -1,5 +1,5 @@
-N, K = input().split()
-N, K = int(N), int(K)
+(N, K) = input().split()
+(N, K) = (int(N), int(K))
 planks = tuple(map(int, input().split()))
 min_poss = 999999999
 sum_array = sorted(planks)

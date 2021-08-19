@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 tom = list(map(int, input().split()))
 ban = list(map(int, input().split()))
 a1 = max(tom)
@@ -9,7 +9,7 @@ if max(a1 * b1, a1 * b2) <= max(a2 * b1, a2 * b2):
     tom.remove(a2)
 else:
     tom.remove(a1)
-r = -0x3f3f3f3f3f3f3f3f
+r = -4557430888798830399
 for i in tom:
     for j in ban:
         if i * j > r:

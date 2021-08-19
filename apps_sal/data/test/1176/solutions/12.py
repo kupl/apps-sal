@@ -10,10 +10,7 @@ for i in range(N):
     elif i == N - 1 and A[i] < 0:
         A[i] = -A[i]
         flag = -1
-
     ans += A[i]
-
     if A[i] < Amin:
         Amin = A[i]
-
-print((ans + (flag * 2 * Amin)))
+print(ans + flag * 2 * Amin)

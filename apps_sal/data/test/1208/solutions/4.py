@@ -5,7 +5,7 @@ p = []
 q = []
 e = []
 for i in range(n):
-    a, b = list(input().split())
+    (a, b) = list(input().split())
     b = int(b)
     q.append([a, b])
     if a == '-' and b not in p:

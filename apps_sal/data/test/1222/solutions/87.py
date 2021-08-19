@@ -17,5 +17,4 @@ for i in range(1, 10):
     ans.append(i)
     gen_lunlun(i)
 ans = sorted(ans)
-
-print((ans[k - 1]))
+print(ans[k - 1])

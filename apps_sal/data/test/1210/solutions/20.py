@@ -1,6 +1,6 @@
 np = [int(u) for u in input().split()]
-n, p = np
-s = [tuple(int(u) for u in input().split()) for i in range(n)]
+(n, p) = np
+s = [tuple((int(u) for u in input().split())) for i in range(n)]
 
 
 def count_multiples(l, r, p):
@@ -20,5 +20,5 @@ def E_X_i(i):
 
 
 s.append(s[0])
-E_X = sum(E_X_i(i) for i in range(n))
+E_X = sum((E_X_i(i) for i in range(n)))
 print(E_X)

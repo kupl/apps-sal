@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 V = list(map(int, input().split()))
 Vrev = V[::-1]
 ans = 0

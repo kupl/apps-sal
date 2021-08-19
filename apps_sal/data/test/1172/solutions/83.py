@@ -21,4 +21,4 @@ for si in s:
     dp[2] %= mod
     dp[1] %= mod
     dp[0] %= mod
-print((dp[3]))
+print(dp[3])

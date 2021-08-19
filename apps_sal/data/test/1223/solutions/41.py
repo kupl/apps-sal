@@ -8,5 +8,5 @@ for i in range(n):
 ans = 0
 for i in range(1, n + 1):
     ans += ((r[r[d[i]]] - r[d[i]]) * (d[i] - l[d[i]]) + (r[d[i]] - d[i]) * (l[d[i]] - l[l[d[i]]])) * i
-    l[r[d[i]]], r[l[d[i]]] = l[d[i]], r[d[i]]
+    (l[r[d[i]]], r[l[d[i]]]) = (l[d[i]], r[d[i]])
 print(ans)

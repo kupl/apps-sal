@@ -9,5 +9,5 @@ ans = 0
 for i in range(n):
     ans += (r[r[ind[i]]] - r[ind[i]]) * (ind[i] - l[ind[i]]) * (i + 1)
     ans += (l[ind[i]] - l[l[ind[i]]]) * (r[ind[i]] - ind[i]) * (i + 1)
-    l[r[ind[i]]], r[l[ind[i]]] = l[ind[i]], r[ind[i]]
+    (l[r[ind[i]]], r[l[ind[i]]]) = (l[ind[i]], r[ind[i]])
 print(ans)

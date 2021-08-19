@@ -5,7 +5,7 @@ cnt = 0
 pointsPresent = False
 sum = 0
 for i in range(len(s)):
-    if s[i] in "1234567890.":
+    if s[i] in '1234567890.':
         name = False
     else:
         name = True
@@ -14,25 +14,23 @@ for i in range(len(s)):
             sum += int(s2) * 100
         else:
             sum += int(s2)
-        s2 = "0"
+        s2 = '0'
         cnt = 0
         pointsPresent = False
+    elif s[i] != '.':
+        s2 += s[i]
+        cnt += 1
     else:
-        if s[i] != '.':
-            s2 += s[i]
-            cnt += 1
-        else:
-            cnt = 0
-            pointsPresent = True
+        cnt = 0
+        pointsPresent = True
 if cnt == 3 or not pointsPresent:
     sum += int(s2) * 100
 else:
     sum += int(s2)
-
 if sum < 10:
-    print("0.0" + str(sum))
+    print('0.0' + str(sum))
 elif sum < 100:
-    print("0." + str(sum))
+    print('0.' + str(sum))
 else:
     if sum % 100 == 0:
         sum //= 100

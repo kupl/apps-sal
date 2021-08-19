@@ -1,9 +1,8 @@
 import numpy as np
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 mod = 998244353
 f = np.zeros(3001, int)
-
 ans = 0
 for ai in a:
     ff = np.zeros(3001, int)

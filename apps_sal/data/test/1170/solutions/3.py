@@ -3,7 +3,7 @@ import math
 
 def nextsquare(x):
     y = int(math.sqrt(x))
-    return ((y + 1) * (y + 1))
+    return (y + 1) * (y + 1)
 
 
 a = input()
@@ -12,11 +12,10 @@ for i in range(int(a)):
     j = nextsquare(k)
     answer1 = -1
     answer2 = 0
-    while (j <= (4 * k / 3) + 1):
+    while j <= 4 * k / 3 + 1:
         l = j - k
-        if not (l == 0):
-
-            if (int(math.sqrt(l)) * int(math.sqrt(l)) == l):
+        if not l == 0:
+            if int(math.sqrt(l)) * int(math.sqrt(l)) == l:
                 n = int(math.sqrt(j))
                 m = int(math.sqrt(l))
                 r = n % m

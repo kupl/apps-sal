@@ -1,4 +1,4 @@
-N, S = list(map(int, input().split()))
+(N, S) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 mod = 998244353
 ans = 0

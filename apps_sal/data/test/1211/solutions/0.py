@@ -1,6 +1,5 @@
-n, k = [int(i) for i in input().split(" ")]
-A = [int(i) for i in input().split(" ")]
-
+(n, k) = [int(i) for i in input().split(' ')]
+A = [int(i) for i in input().split(' ')]
 mx = 0
 mxval = 0
 for i in range(k):

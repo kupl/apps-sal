@@ -1,5 +1,5 @@
 import heapq
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(lambda x: -int(x), input().split()))
 heapq.heapify(a)
 for i in range(m):

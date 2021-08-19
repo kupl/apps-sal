@@ -1,5 +1,5 @@
 import heapq
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 c = list(map(int, input().split()))
 indexes = sorted(list(range(n)), key=p.__getitem__)

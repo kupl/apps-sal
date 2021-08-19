@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 V = list(map(int, input().split()))
 result = 0
 for a in range(N + 1):

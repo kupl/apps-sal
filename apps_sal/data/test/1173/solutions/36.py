@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -10,11 +9,9 @@ mod = 10 ** 9 + 7
 def resolve():
     n = int(input())
     A = [deque(list(map(int, input().split()))) for _ in range(n)]
-
     que = deque()
     for i in range(n):
         que.append(i)
-
     res = 0
     while True:
         tmp = deque()
@@ -37,10 +34,9 @@ def resolve():
             que = tmp
         else:
             break
-
     for a in A:
         if a:
-            print((-1))
+            print(-1)
             break
     else:
         print(res)

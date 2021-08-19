@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 num = 0
-mi = 10**9
+mi = 10 ** 9
 for i in range(n):
     num += abs(a[i])
     if abs(mi) >= abs(a[i]):

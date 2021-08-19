@@ -1,6 +1,6 @@
 def valid(number_to_check, n, k):
     sum = 1
-    sum = sum + (k) * (k - 1) // 2 - (k - number_to_check) * (k - number_to_check - 1) // 2
+    sum = sum + k * (k - 1) // 2 - (k - number_to_check) * (k - number_to_check - 1) // 2
     if sum >= n:
         return True
     return False
@@ -21,7 +21,7 @@ def binary_serach(n, k):
         return -1
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 if n == 1:
     print(0)
 elif n <= k:

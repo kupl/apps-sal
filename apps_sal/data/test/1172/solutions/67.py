@@ -1,5 +1,5 @@
 S = input()
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 A = 0
 AB = 0
 ABC = 0
@@ -19,6 +19,6 @@ for c in S:
         nAB = 3 * AB + A
         nABC = 3 * ABC + AB
         cnt *= 3
-        A, AB, ABC = nA % MOD, nAB % MOD, nABC % MOD
+        (A, AB, ABC) = (nA % MOD, nAB % MOD, nABC % MOD)
         cnt %= MOD
 print(ABC)

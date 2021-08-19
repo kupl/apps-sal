@@ -21,7 +21,6 @@ def main():
             QL[i + 1] = QL[i] + 1
         else:
             QL[i + 1] = QL[i]
-
     for i in range(N - 1, -1, -1):
         if S[i] == 'C':
             C[i] = C[i + 1] + 1
@@ -31,11 +30,9 @@ def main():
             QR[i] = QR[i + 1] + 1
         else:
             QR[i] = QR[i + 1]
-
     power3 = [1]
     for i in range(N):
         power3.append(power3[-1] * 3 % MOD)
-
     ans = 0
     for i in range(N):
         if S[i] in 'AC':

@@ -1,12 +1,12 @@
 N = int(input())
 b = 1
 flag = 0
-while 5**b <= N:
-    x = N - 5**b
+while 5 ** b <= N:
+    x = N - 5 ** b
     flag = 0
     a = 1
-    while 3**a <= x:
-        if 3**a == x:
+    while 3 ** a <= x:
+        if 3 ** a == x:
             flag = 1
             break
         a += 1

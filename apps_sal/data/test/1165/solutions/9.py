@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = input().split()
 b = [0] * n
 ans = []

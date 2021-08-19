@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 h = list(map(int, input().split()))
 a = [0] * (n - k + 1)
 a[0] = sum(h[0:k])

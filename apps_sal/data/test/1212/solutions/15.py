@@ -1,6 +1,5 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 l = [int(x) for x in input().split()]
-
 s = sum(l[0:k])
 t = s
 ind = 1

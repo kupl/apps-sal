@@ -11,7 +11,7 @@ class Scanner:
         return len(self.current_tokens)
 
     def nextline(self):
-        assert self.remaining_tokens() == 0, "Reading next line with remaining tokens"
+        assert self.remaining_tokens() == 0, 'Reading next line with remaining tokens'
         return input()
 
     def nexttokens(self):
@@ -20,7 +20,7 @@ class Scanner:
     def nexttoken(self):
         if len(self.current_tokens) == 0:
             self.current_tokens = self.nexttokens()
-        assert self.remaining_tokens() > 0, "Not enough tokens to parse."
+        assert self.remaining_tokens() > 0, 'Not enough tokens to parse.'
         return self.current_tokens.pop(0)
 
     def nextints(self, n=-1):
@@ -41,17 +41,11 @@ stdin = Scanner()
 nextint = stdin.nextint
 nextints = stdin.nextints
 nextline = stdin.nextline
-
-m, n = nextints()
-
+(m, n) = nextints()
 a = nextints()
 b = nextints()
-
 res = []
-
 a = sorted(a)
-
 for i in b:
     res.append(str(bisect_right(a, i)))
-
-print(" ".join(res))
+print(' '.join(res))

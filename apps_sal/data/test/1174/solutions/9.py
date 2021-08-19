@@ -1,9 +1,8 @@
 import heapq
 import math
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = list(map(int, input().split()))
-a = list(map(lambda x: x * (-1), A))
+a = list(map(lambda x: x * -1, A))
 heapq.heapify(a)
 for i in range(m):
     max_a = heapq.heappop(a)

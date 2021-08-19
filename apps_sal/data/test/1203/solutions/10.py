@@ -13,7 +13,6 @@ def getList():
     return list(map(int, input().split()))
 
 
-a, b = getList()
-ans = (b**2 - a**2) / (2 * a)
-
+(a, b) = getList()
+ans = (b ** 2 - a ** 2) / (2 * a)
 print(ans)

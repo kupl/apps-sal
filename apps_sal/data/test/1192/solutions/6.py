@@ -1,8 +1,7 @@
 import time
 from itertools import permutations, product
 from copy import deepcopy
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a1 = list(map(int, input().split()))
 
 

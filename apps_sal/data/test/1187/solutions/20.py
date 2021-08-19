@@ -1,12 +1,10 @@
 [N, M] = list(map(int, input().split()))
 edges = [[] for _ in range(N + 1)]
 edge_in = []
-
 for _ in range(M):
     [u, v] = list(map(int, input().split()))
     edge_in.append([u, v])
     edges[u].append(v)
-
 seen = [False for _ in range(N + 1)]
 visited = [False for _ in range(N + 1)]
 
@@ -30,10 +28,9 @@ for i in range(1, N + 1):
     if bfs(i):
         hasCycle = True
         break
-
 if not hasCycle:
     print(1)
-    print(" ".join(["1" for _ in range(M)]))
+    print(' '.join(['1' for _ in range(M)]))
 else:
     print(2)
-    print(" ".join(["1" if u < v else "2" for (u, v) in edge_in]))
+    print(' '.join(['1' if u < v else '2' for (u, v) in edge_in]))

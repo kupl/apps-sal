@@ -1,16 +1,12 @@
-L, R = map(int, input().split())
-MOD = 10**9 + 7
-
-*BL, = map(int, bin(L)[2:])
-*BR, = map(int, bin(R)[2:])
-
+(L, R) = map(int, input().split())
+MOD = 10 ** 9 + 7
+(*BL,) = map(int, bin(L)[2:])
+(*BR,) = map(int, bin(R)[2:])
 a = len(BL)
 b = len(BR)
 BL = [0] * (len(BR) - len(BL)) + BL
-
 BL.reverse()
 BR.reverse()
-
 memo = [[[-1] * 2 for i in range(2)] for j in range(70)]
 
 

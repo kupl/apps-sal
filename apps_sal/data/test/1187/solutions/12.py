@@ -1,7 +1,6 @@
 def iscyclic(s, visited, restack):
     visited[s] = True
     restack[s] = True
-
     if s in adj:
         for u in adj[s]:
             if visited[u] == False:
@@ -23,11 +22,11 @@ def cyclic():
     return False
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 adj = {}
 l = []
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a not in adj:
         adj[a] = [b]
     else:
@@ -38,11 +37,11 @@ bo = cyclic()
 if bo == False:
     print(1)
     for i in range(m):
-        print(1, end=" ")
+        print(1, end=' ')
 else:
     print(2)
     for i in range(m):
         if l[i][0] > l[i][1]:
-            print(2, end=" ")
+            print(2, end=' ')
         else:
-            print(1, end=" ")
+            print(1, end=' ')

@@ -1,6 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = input().split()
-L, ans = [0 for i in range(n)], []
+(L, ans) = ([0 for i in range(n)], [])
 L[0] = -1
 for i in range(1, n):
     if l[i] == l[i - 1]:

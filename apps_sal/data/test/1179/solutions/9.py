@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 nums = list(map(int, input().split()))
 now = 0
 i = 0

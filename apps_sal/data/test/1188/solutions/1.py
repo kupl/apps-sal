@@ -21,9 +21,9 @@ def get(cnt):
 
 
 mx = get(None)
-lo, hi = 0, mx
+(lo, hi) = (0, mx)
 while lo < hi:
-    mid = (lo + hi) >> 1
+    mid = lo + hi >> 1
     if get(mid):
         hi = mid
     else:

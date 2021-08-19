@@ -1,5 +1,5 @@
 def __starting_point():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = list(map(int, input().split()))
     m = 10000000000000000000
     j = 0

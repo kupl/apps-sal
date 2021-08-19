@@ -1,9 +1,7 @@
 def solve():
     MOD = 998244353
-
-    N, S = list(map(int, input().split()))
+    (N, S) = list(map(int, input().split()))
     As = list(map(int, input().split()))
-
     dp1 = [0] * (S + 1)
     dp2S = 0
     for A in As:
@@ -20,7 +18,6 @@ def solve():
             dp1[A] += dp1[0] + 1
             dp1[A] %= MOD
         dp1[0] += 1
-
     print(dp2S)
 
 

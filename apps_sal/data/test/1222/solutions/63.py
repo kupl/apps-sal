@@ -15,7 +15,7 @@ def is_good(mid, key):
                     if not 0 <= l <= 9 or (not is_less and l > S[i]):
                         continue
                     dp[i + 1][is_less or l < S[i]][l] += dp[i][is_less][k]
-    return sum(dp[N][0][k] + dp[N][1][k] for k in range(10)) >= key
+    return sum((dp[N][0][k] + dp[N][1][k] for k in range(10))) >= key
 
 
 def binary_search(bad, good, key):
@@ -29,4 +29,4 @@ def binary_search(bad, good, key):
 
 
 K = int(input())
-print((binary_search(0, 3234566667, K)))
+print(binary_search(0, 3234566667, K))

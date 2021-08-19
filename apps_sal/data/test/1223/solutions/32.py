@@ -2,8 +2,7 @@ n = int(input())
 aa = list(map(int, input().split()))
 ans = 0
 pos = [0] * (n + 1)
-
-for i, a in enumerate(aa):
+for (i, a) in enumerate(aa):
     pos[a] = i + 2
 Lnext = [1, 1] + list(range(1, n + 1)) + [n, n]
 Rnext = [3, 3] + list(range(3, n + 3)) + [n + 2, n + 2]

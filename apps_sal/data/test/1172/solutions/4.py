@@ -1,9 +1,7 @@
 S = input()
-
 dp = [[0] * 4 for _ in range(len(S) + 1)]
 dp[0][0] = 1
 W = 'ABC'
-
 MOD = 10 ** 9 + 7
 
 
@@ -25,4 +23,4 @@ for i in range(len(S)):
     else:
         update1(i)
         update2(i, S[i])
-print((dp[len(S)][-1] % MOD))
+print(dp[len(S)][-1] % MOD)

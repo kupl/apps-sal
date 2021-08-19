@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,8 +8,7 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
+    (N, *A) = list(map(int, read().split()))
     neg = total = 0
     min_abs = INF
     for a in A:
@@ -19,10 +17,8 @@ def main():
         total += abs(a)
         if min_abs > abs(a):
             min_abs = abs(a)
-
     if neg % 2 == 1:
         total -= 2 * min_abs
-
     print(total)
     return
 

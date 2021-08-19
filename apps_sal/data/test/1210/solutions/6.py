@@ -1,7 +1,7 @@
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 e = []
 for i in range(n):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     L = -1
     R = 10 ** 9 + 7
     while L != R - 1:
@@ -24,5 +24,5 @@ for i in range(n):
     e.append(1 - (col2 - col1) / col)
 sum = 0
 for i in range(n):
-    sum += 1000 * (1 - (e[i] * e[i - 1]))
+    sum += 1000 * (1 - e[i] * e[i - 1])
 print(sum * 2)

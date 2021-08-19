@@ -1,5 +1,4 @@
-n, k, *a = list(map(int, open(0).read().split()))
-
+(n, k, *a) = list(map(int, open(0).read().split()))
 ans = 0
 for l in range(0, k + 1):
     for r in range(0, k + 1 - l):

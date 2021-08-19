@@ -1,11 +1,10 @@
 import sys
-
 sys.setrecursionlimit(10 ** 5)
 
 
 def dfs(v):
     ans.append(v)
-    if v > 1_000_000_000:
+    if v > 1000000000:
         return
     for d in range(10):
         if abs(d - v % 10) <= 1:
@@ -16,4 +15,4 @@ def dfs(v):
 K = int(input())
 ans = []
 [dfs(i) for i in range(1, 10)]
-print((sorted(ans)[K - 1]))
+print(sorted(ans)[K - 1])

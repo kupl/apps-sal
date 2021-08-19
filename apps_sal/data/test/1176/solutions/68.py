@@ -7,7 +7,7 @@ def main():
         if A[i] <= 0:
             cnt += 1
         B[i] = abs(A[i])
-    print((sum(B) - 2 * min(B) if cnt % 2 == 1 else sum(B)))
+    print(sum(B) - 2 * min(B) if cnt % 2 == 1 else sum(B))
 
 
 def __starting_point():

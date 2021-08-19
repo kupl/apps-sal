@@ -1,9 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
 d = {}
 for i in a:
-    if (i not in d):
+    if i not in d:
         d[i] = 0
     d[i] += 1
 pair = []

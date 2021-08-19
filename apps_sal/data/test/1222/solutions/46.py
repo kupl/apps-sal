@@ -1,6 +1,6 @@
 from itertools import accumulate
 K = int(input())
-a0, a1, a2, a3, a4, a5, a6, a7, a8, a9 = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) = (1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
 Alist = [[a0, a1, a2, a3, a4, a5, a6, a7, a8, a9]]
 sumation = 9
 sumations = [0, 9]
@@ -17,7 +17,7 @@ while sumation < K:
     an7 = a6 + a7 + a8
     an8 = a7 + a8 + a9
     an9 = a8 + a9
-    a0, a1, a2, a3, a4, a5, a6, a7, a8, a9 = an0, an1, an2, an3, an4, an5, an6, an7, an8, an9
+    (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) = (an0, an1, an2, an3, an4, an5, an6, an7, an8, an9)
     sumation += a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9
     digit += 1
     Alist.append([a0, a1, a2, a3, a4, a5, a6, a7, a8, a9])

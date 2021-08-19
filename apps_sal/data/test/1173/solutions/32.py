@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
-
+sys.setrecursionlimit(10 ** 7)
 N = int(input())
 A = [list([int(n) - 1 for n in input().split()]) for i in range(N)]
 cur = [0 for i in range(N)]
@@ -35,4 +34,4 @@ for i in range(N):
 if ok:
     print(ans)
 else:
-    print((-1))
+    print(-1)

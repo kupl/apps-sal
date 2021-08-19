@@ -1,9 +1,9 @@
-r, c, n, k = list(map(int, input().split()))
+(r, c, n, k) = list(map(int, input().split()))
 p = []
 for i in range(r):
     p.append([0] * c)
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     p[x - 1][y - 1] = 1
 ans = 0
 for i in range(r):

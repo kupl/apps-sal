@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -11,9 +10,8 @@ def resolve():
     n = int(input())
     A = []
     for _ in range(n):
-        t = deque(list(([int(x) - 1 for x in input().split()])))
+        t = deque(list([int(x) - 1 for x in input().split()]))
         A.append(t)
-
     que = deque(list(range(n)))
     res = 0
     emp = [False] * n
@@ -24,7 +22,7 @@ def resolve():
             i = que.popleft()
             if A[i]:
                 idx = A[i][0]
-                if i not in check and idx not in check and A[idx][0] == i:
+                if i not in check and idx not in check and (A[idx][0] == i):
                     A[i].popleft()
                     A[idx].popleft()
                     next_que.append(i)
@@ -37,7 +35,7 @@ def resolve():
         if que:
             res += 1
     else:
-        print((res if all(emp) else -1))
+        print(res if all(emp) else -1)
 
 
 def __starting_point():

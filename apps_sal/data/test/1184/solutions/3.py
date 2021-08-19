@@ -1,7 +1,5 @@
 import sys
 3
-
-
 line = sys.stdin.readline()
 s = set()
 for c in line:

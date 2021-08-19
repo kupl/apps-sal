@@ -6,7 +6,7 @@ def solve(n, ppp):
     left_next_index = list(range(-1, n - 1)) + [-1, -1]
     right_next_index = list(range(1, n + 1)) + [n, n]
     ans = 0
-    for i, p in qqq:
+    for (i, p) in qqq:
         l2 = left_next_index[i]
         l1 = left_next_index[l2]
         r1 = right_next_index[i]
@@ -19,4 +19,4 @@ def solve(n, ppp):
 
 n = int(input())
 ppp = list(map(int, input().split()))
-print((solve(n, ppp)))
+print(solve(n, ppp))

@@ -3,9 +3,9 @@ def main():
     n = int(input())
     battle = n * (n - 1) // 2
     lis = [[] for i in range(battle)]
-    num = [-1] * (n**2)
+    num = [-1] * n ** 2
     cnt = -1
-    for x in range(n**2):
+    for x in range(n ** 2):
         if x // n < x % n:
             cnt += 1
             num[x] = cnt
@@ -17,12 +17,12 @@ def main():
             px = num[min(i * n + x, x * n + i)]
             py = num[min(i * n + y, y * n + i)]
             lis[px].append(py)
-    node_in = [0] * (battle)
+    node_in = [0] * battle
     for i in range(battle):
         for x in lis[i]:
             node_in[x] += 1
     zero = deque([])
-    days = [10**9] * (battle)
+    days = [10 ** 9] * battle
     for i in range(battle):
         if node_in[i] == 0:
             zero.append(i)
@@ -34,7 +34,7 @@ def main():
             if node_in[x] == 0:
                 zero.append(x)
                 days[x] = days[r] + 1
-    if 10**9 in days:
+    if 10 ** 9 in days:
         print(-1)
     else:
         print(max(days))

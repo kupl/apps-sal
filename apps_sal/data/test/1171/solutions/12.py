@@ -1,6 +1,6 @@
 def main():
     import copy
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     v = list(map(int, input().split()))
     ans = 0
     for i in range(min(n + 1, k + 1)):
@@ -8,7 +8,6 @@ def main():
         for j in range(min(n - i + 1, k - i + 1)):
             t_ = copy.deepcopy(t)
             t_ += v[n - j:n]
-
             r = k - i - j
             t_ = sorted(t_)
             cnt = 0

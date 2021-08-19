@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ae = [[] for _ in range(n)]
 for _ in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     ae[a - 1].append(b - 1)
     ae[b - 1].append(a - 1)
 mn = -1
@@ -31,7 +31,6 @@ while True:
         ok += 1
 out = [ok]
 d = {}
-
 if len(keep) == 1:
     out.append(1)
 elif len(keep) == 0:
@@ -40,7 +39,6 @@ else:
     keep.sort()
     for i in range(len(keep)):
         d[keep[i]] = i
-
     edg = [[] for _ in range(len(keep))]
     for i in range(len(keep)):
         for j in range(len(keep)):
@@ -48,7 +46,6 @@ else:
                 continue
             edg[i].append(j)
             edg[j].append(i)
-
     for i in keep:
         for j in ae[i]:
             if j in keep:
@@ -77,7 +74,6 @@ else:
                     uss += 1
                     usn += 1
         out.append(usn)
-
 out.sort()
 print(len(out))
 print(' '.join(map(str, out)))

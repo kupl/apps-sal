@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 c1 = [int(i) for i in input().split()]
 c1.sort()
 ms = 0

@@ -1,5 +1,4 @@
 bad = ['e', 'a', 'i', 'o', 'u', 'y']
-
 n = int(input())
 s = input()
 ans = ''

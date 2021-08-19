@@ -1,10 +1,10 @@
-n, m, k = list(map(int, input().split()))
-a = list(int(x) for x in input().split())
+(n, m, k) = list(map(int, input().split()))
+a = list((int(x) for x in input().split()))
 if m == 1:
     a.sort()
     print(sum(a[n - k:n]))
 else:
-    b = list(sum(a[i:i + m]) for i in range(0, n - m + 1))
+    b = list((sum(a[i:i + m]) for i in range(0, n - m + 1)))
     c = [[-1 for j in range(k + 1)] for i in range(n + 1)]
     for i in range(n + 1):
         c[i][0] = 0

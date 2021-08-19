@@ -10,10 +10,9 @@ for i in range(n):
         k += 1
         if k > ans:
             ans = k
+    elif a not in d:
+        ans += 1
     else:
-        if a not in d:
-            ans += 1
-        else:
-            d[a] = 'no'
-            k -= 1
+        d[a] = 'no'
+        k -= 1
 print(ans)

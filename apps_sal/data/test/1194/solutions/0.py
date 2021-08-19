@@ -1,7 +1,8 @@
 import sys
 
 
-class SegmTree():
+class SegmTree:
+
     def __init__(self, array=None):
         size = len(array)
         N = 1
@@ -53,24 +54,19 @@ class SegmTree():
 
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
-
 n = int(input())
 p = list(map(int, input().split()))
 q = list(map(int, input().split()))
-
 ord_p = [0] * n
 ord_q = [0] * n
-
 st = SegmTree([1] * n)
-for i, val in enumerate(p):
+for (i, val) in enumerate(p):
     ord_p[i] = st.get_sum(0, val)
     st.add(val, -1)
-
 st = SegmTree([1] * n)
-for i, val in enumerate(q):
+for (i, val) in enumerate(q):
     ord_q[i] = st.get_sum(0, val)
     st.add(val, -1)
-
 transfer = 0
 for i in range(n - 1, -1, -1):
     radix = n - i
@@ -80,11 +76,9 @@ for i in range(n - 1, -1, -1):
     else:
         transfer = 1
         ord_p[i] -= radix
-
 st = SegmTree([1] * n)
 for i in range(n):
     k = ord_p[i] + 1
     ord_q[i] = st.find_kth_nonzero(k)
     st.add(ord_q[i], -1)
-
 print(*ord_q)

@@ -6,9 +6,8 @@ for i in range(k):
     x = q.popleft()
     ans.append(x)
     if x % 10 != 0:
-        q.append(10 * x + (x % 10) - 1)
-    q.append(10 * x + (x % 10))
+        q.append(10 * x + x % 10 - 1)
+    q.append(10 * x + x % 10)
     if x % 10 != 9:
-        q.append(10 * x + (x % 10) + 1)
-
-print((ans[k - 1]))
+        q.append(10 * x + x % 10 + 1)
+print(ans[k - 1])

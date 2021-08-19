@@ -1,7 +1,6 @@
 def solve():
     N = int(input())
     Ass = [tuple([int(x) - 1 for x in input().split()]) for _ in range(N)]
-
     day = 0
     numMatch = 0
     ps = set(range(N))
@@ -26,7 +25,7 @@ def solve():
             print(day)
             break
         if not p2s:
-            print((-1))
+            print(-1)
             break
         ps = p2s
 

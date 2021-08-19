@@ -34,15 +34,14 @@ if len(a) == 1:
     print(0, end='')
     if a[0] != 0:
         print('.', a[0] // 10, a[0] % 10, sep='')
+elif a[-1] == 0:
+    for i in range(1, len(a)):
+        a[i] = str(a[i]).zfill(3)
+    a[0] = str(a[0])
+    print('.'.join(a[:-1]))
 else:
-    if a[-1] == 0:
-        for i in range(1, len(a)):
-            a[i] = str(a[i]).zfill(3)
-        a[0] = str(a[0])
-        print('.'.join(a[:-1]))
-    else:
-        for i in range(1, len(a) - 1):
-            a[i] = str(a[i]).zfill(3)
-        a[-1] = str(a[-1]).zfill(2)
-        a[0] = str(a[0])
-        print('.'.join(a))
+    for i in range(1, len(a) - 1):
+        a[i] = str(a[i]).zfill(3)
+    a[-1] = str(a[-1]).zfill(2)
+    a[0] = str(a[0])
+    print('.'.join(a))

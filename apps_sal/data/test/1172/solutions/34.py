@@ -6,7 +6,6 @@ dp2 = [0 for _ in range(N + 1)]
 dp3 = [0 for _ in range(N + 1)]
 dp4 = [0 for _ in range(N + 1)]
 dp1[0] = 1
-
 for i in range(N):
     if S[i] == '?':
         dp1[i + 1] += 3 * dp1[i]
@@ -28,5 +27,4 @@ for i in range(N):
     dp2[i + 1] %= mod
     dp3[i + 1] %= mod
     dp4[i + 1] %= mod
-
 print(dp4[N])

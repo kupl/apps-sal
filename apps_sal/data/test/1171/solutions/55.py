@@ -1,13 +1,11 @@
 import sys
-
 input = sys.stdin.readline
 
 
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     V = list(map(int, input().split()))
-
-    ans = -float("inf")
+    ans = -float('inf')
     for t in range(min(N, K) + 1):
         s = K - t
         for l in range(t + 1):
@@ -22,7 +20,6 @@ def main():
                 else:
                     break
             ans = max(ans, value)
-
     print(ans)
 
 

@@ -1,10 +1,11 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-r, c, n, k = read()
+(r, c, n, k) = read()
 a = [[0] * (c + 1) for i in range(r + 1)]
 for i in range(n):
-    x, y = read()
+    (x, y) = read()
     a[x][y] = 1
 d = [[0] * (c + 1) for i in range(r + 1)]
 for i in range(1, r + 1):

@@ -1,4 +1,4 @@
-[n, k], slogan = list(map(int, input().split())), input().strip()
+([n, k], slogan) = (list(map(int, input().split())), input().strip())
 if 2 * k < n + 1:
     for x in range(k - 2, -1, -1):
         print('LEFT')

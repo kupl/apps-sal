@@ -1,6 +1,6 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 h = [int(x) for x in input().split()]
-s = sum(h[: k])
+s = sum(h[:k])
 res = s
 pos = 0
 for i in range(n - k):

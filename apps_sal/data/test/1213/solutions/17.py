@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 text = input().strip()
-
 if k - 1 < n - k:
     for i in range(k - 1, 0, -1):
         print('LEFT')

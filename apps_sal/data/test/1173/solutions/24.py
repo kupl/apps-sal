@@ -5,8 +5,7 @@ for i in range(a):
     tl = list(map(int, input().split()))
     tl = list(map(lambda x: x - 1, tl))
     l.append(tl)
-
-q = deque((range(a)))
+q = deque(range(a))
 days = [0] * a
 pairs = [-1] * a
 while q:
