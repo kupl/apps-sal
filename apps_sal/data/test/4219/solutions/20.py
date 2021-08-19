@@ -2,20 +2,18 @@ N = int(input())
 A = [0] * N
 x = [0] * N
 y = [0] * N
-tlist = [0] * N  # 1:正直 2:不親切
+tlist = [0] * N
 honest = 0
-
 for i in range(N):
     A[i] = int(input())
     x[i] = []
     y[i] = []
     for j in range(A[i]):
-        xt, yt = list(map(int, input().split()))
+        (xt, yt) = list(map(int, input().split()))
         x[i].append(xt)
         y[i].append(yt)
-
-for t in range(2**N):
-    ns = "0" + str(N) + "b"
+for t in range(2 ** N):
+    ns = '0' + str(N) + 'b'
     bi = format(t, ns)
     for i in range(N):
         tlist[i] = int(bi[-1 - i])
@@ -30,5 +28,4 @@ for t in range(2**N):
             break
     if tflag:
         honest = max(honest, sum(tlist))
-
 print(honest)

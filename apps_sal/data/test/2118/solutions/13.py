@@ -11,8 +11,8 @@ def unsort(d, left, right, k):
 
 
 def main():
-    k = [0]  # K needs to be a mutable integer
-    n, k[0] = (int(i) for i in input().split())
+    k = [0]
+    (n, k[0]) = (int(i) for i in input().split())
     if k[0] % 2 == 0:
         print('-1')
         return

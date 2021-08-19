@@ -5,7 +5,7 @@ for n in range(N):
     A = int(input())
     testimony.append({})
     for a in range(A):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         testimony[n][x - 1] = y
 
 
@@ -19,7 +19,6 @@ def judge(truthy):
                     break
         if not answer:
             break
-    # print(answer, truthy)
     return 0 if not answer else truthy.count(1)
 
 

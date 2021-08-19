@@ -9,7 +9,7 @@ ans = set(ans)
 for i in range(int(input())):
     cur = input()
     can = True
-    clos = set()  # should be closed
+    clos = set()
     for j in range(n):
         if s[j] == '*':
             clos.add(cur[j])
@@ -17,8 +17,8 @@ for i in range(int(input())):
             can = False
             break
     if can:
-        if (already & clos) != set():
+        if already & clos != set():
             can = False
     if can:
-        ans = (ans & clos)
+        ans = ans & clos
 print(len(ans))

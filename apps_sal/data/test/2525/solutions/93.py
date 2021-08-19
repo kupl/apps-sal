@@ -18,13 +18,10 @@ for i in range(q):
                 a.appendleft(c)
             else:
                 b.append(c)
+        elif f == 1:
+            b.append(c)
         else:
-            if f == 1:
-                b.append(c)
-            else:
-                a.appendleft(c)
-
-#print(a, b, stat % 2)
+            a.appendleft(c)
 ans = ''.join(a) + s + ''.join(b)
 if stat % 2 == 1:
     ans = ans[::-1]

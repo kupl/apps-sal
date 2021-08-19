@@ -1,16 +1,12 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Sep  8 14:42:59 2020
 
 @author: liang
 """
-
 from collections import deque
 S = deque(input())
 Q = int(input())
-
 reverse = False
-
 for i in range(Q):
     t = input().split()
     if int(t[0]) == 1:
@@ -26,14 +22,11 @@ for i in range(Q):
                 S.appendleft(C)
             else:
                 S.append(C)
+        elif reverse == False:
+            S.append(C)
         else:
-            if reverse == False:
-                S.append(C)
-            else:
-                S.appendleft(C)
-
-
+            S.appendleft(C)
 if reverse == False:
-    print((''.join(S)))
+    print(''.join(S))
 else:
-    print((''.join(reversed(S))))
+    print(''.join(reversed(S)))

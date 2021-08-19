@@ -2,9 +2,6 @@ from itertools import product
 n = int(input())
 p = 2
 iterator = product(range(p), repeat=n)
-# for idxs in iterator:
-#    print(idxs)
-
 L = [[] for i in range(n)]
 for i in range(n):
     a = int(input())

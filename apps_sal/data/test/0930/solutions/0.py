@@ -1,5 +1,5 @@
-mod = int(1e9) + 7  # <-- input modulo
-maxf = 500000           # <-- input factional limitation
+mod = int(1000000000.0) + 7
+maxf = 500000
 
 
 def make_fact(n, k):
@@ -34,22 +34,21 @@ def doubling(n, m, modulo=mod):
 
 
 def inved(a, modulo=mod):
-    x, y, u, v, k, l = 1, 0, 0, 1, a, modulo
+    (x, y, u, v, k, l) = (1, 0, 0, 1, a, modulo)
     while l != 0:
-        x, y, u, v = u, v, x - u * (k // l), y - v * (k // l)
-        k, l = l, k % l
+        (x, y, u, v) = (u, v, x - u * (k // l), y - v * (k // l))
+        (k, l) = (l, k % l)
     return x % modulo
 
 
 fact = [1 for _ in range(maxf + 1)]
 invf = [1 for _ in range(maxf + 1)]
-
 for i in range(maxf):
-    fact[i + 1] = (fact[i] * (i + 1)) % mod
+    fact[i + 1] = fact[i] * (i + 1) % mod
 invf[-1] = inved(fact[-1])
 for i in range(maxf, 0, -1):
-    invf[i - 1] = (invf[i] * i) % mod
-n, k = map(int, input().split())
+    invf[i - 1] = invf[i] * i % mod
+(n, k) = map(int, input().split())
 S = 0
 if n <= k + 1:
     print(fact[2 * n - 1] * invf[n] * invf[n - 1] % mod)

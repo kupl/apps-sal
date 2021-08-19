@@ -1,4 +1,3 @@
-#C - HonestOrUnkind2
 N = int(input())
 A = []
 X = []
@@ -9,14 +8,12 @@ for _ in range(N):
     box_x = []
     box_y = []
     for _ in range(a):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         box_x.append(x)
         box_y.append(y)
     X.append(box_x)
     Y.append(box_y)
-
 person = [2] * N
-
 maxim = 0
 for i in range(1 << N):
     c_person = person.copy()
@@ -27,13 +24,9 @@ for i in range(1 << N):
             c_person[j] = 1
         else:
             c_person[j] = 0
-    # 正直者かどうかの仮定
-    for k, l in enumerate(c_person):
-        # kが正直者のとき
+    for (k, l) in enumerate(c_person):
         if l == 1:
-            # kの証言を判定
-            for m, n in zip(X[k], Y[k]):
-                # 矛盾があるなら honest = 0でbreak
+            for (m, n) in zip(X[k], Y[k]):
                 if c_person[m - 1] != n:
                     honest = 0
                     break
@@ -42,5 +35,4 @@ for i in range(1 << N):
                 continue
             break
     maxim = max(maxim, honest)
-
 print(maxim)

@@ -16,7 +16,7 @@ for i in range(N):
     X_temp = []
     Y_temp = []
     for j in range(a):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         X_temp.append(x)
         Y_temp.append(y)
     X.append(X_temp)
@@ -24,14 +24,11 @@ for i in range(N):
 for i in range(1 << N):
     judge = True
     for j in range(N):
-        if (i >> j) & 1:  # もしAjが正直者だったら
+        if i >> j & 1:
             for k in range(A[j]):
-                if (i >> X[j][k] - 1) & 1 != Y[j][k]:
+                if i >> X[j][k] - 1 & 1 != Y[j][k]:
                     judge = False
-        """else:#もしAjが不親切ものだったら。不親切者も正しいことをいうこともある。
-            for k in range(A[j]):#
-                if (i >> X[j][k]-1) & 1 == Y[j][k]:
-                    judge = False"""
+        'else:#もしAjが不親切ものだったら。不親切者も正しいことをいうこともある。\n            for k in range(A[j]):#\n                if (i >> X[j][k]-1) & 1 == Y[j][k]:\n                    judge = False'
     if judge:
         res = max(res, digitSum(i))
 print(res)

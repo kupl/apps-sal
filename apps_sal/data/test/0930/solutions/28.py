@@ -1,6 +1,6 @@
 class Combination:
-    def __init__(self, n_max, mod=10**9 + 7):
-        # O(n_max + log(mod))
+
+    def __init__(self, n_max, mod=10 ** 9 + 7):
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -14,10 +14,7 @@ class Combination:
             facinv.append(f)
         facinv.reverse()
 
-    # "n 要素" は区別できる n 要素
-    # "k グループ" はちょうど k グループ
-
-    def __call__(self, n, r):  # self.C と同じ
+    def __call__(self, n, r):
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
     def C(self, n, r):
@@ -31,49 +28,48 @@ class Combination:
         return self.fac[n] * self.facinv[n - r] % self.mod
 
     def H(self, n, r):
-        if (n == 0 and r > 0) or r < 0:
+        if n == 0 and r > 0 or r < 0:
             return 0
         return self.fac[n + r - 1] * self.facinv[r] % self.mod * self.facinv[n - 1] % self.mod
 
-    def rising_factorial(self, n, r):  # 上昇階乗冪 n * (n+1) * ... * (n+r-1)
+    def rising_factorial(self, n, r):
         return self.fac[n + r - 1] * self.facinv[n - 1] % self.mod
 
-    def stirling_first(self, n, k):  # 第 1 種スターリング数  lru_cache を使うと O(nk)  # n 要素を k 個の巡回列に分割する場合の数
+    def stirling_first(self, n, k):
         if n == k:
             return 1
         if k == 0:
             return 0
         return (self.stirling_first(n - 1, k - 1) + (n - 1) * self.stirling_first(n - 1, k)) % self.mod
 
-    def stirling_second(self, n, k):  # 第 2 種スターリング数 O(k + log(n))  # n 要素を区別のない k グループに分割する場合の数
+    def stirling_second(self, n, k):
         if n == k:
-            return 1  # n==k==0 のときのため
-        return self.facinv[k] * sum((-1)**(k - m) * self.C(k, m) * pow(m, n, self.mod) for m in range(1, k + 1)) % self.mod
+            return 1
+        return self.facinv[k] * sum(((-1) ** (k - m) * self.C(k, m) * pow(m, n, self.mod) for m in range(1, k + 1))) % self.mod
 
-    def balls_and_boxes_3(self, n, k):  # n 要素を区別のある k グループに分割する場合の数  O(k + log(n))
-        return sum((-1)**(k - m) * self.C(k, m) * pow(m, n, self.mod) for m in range(1, k + 1)) % self.mod
+    def balls_and_boxes_3(self, n, k):
+        return sum(((-1) ** (k - m) * self.C(k, m) * pow(m, n, self.mod) for m in range(1, k + 1))) % self.mod
 
-    def bernoulli(self, n):  # ベルヌーイ数  lru_cache を使うと O(n**2 * log(mod))
+    def bernoulli(self, n):
         if n == 0:
             return 1
         if n % 2 and n >= 3:
-            return 0  # 高速化
-        return (- pow(n + 1, self.mod - 2, self.mod) * sum(self.C(n + 1, k) * self.bernoulli(k) % self.mod for k in range(n))) % self.mod
+            return 0
+        return -pow(n + 1, self.mod - 2, self.mod) * sum((self.C(n + 1, k) * self.bernoulli(k) % self.mod for k in range(n))) % self.mod
 
-    def faulhaber(self, k, n):  # べき乗和 0^k + 1^k + ... + (n-1)^k
-        # bernoulli に lru_cache を使うと O(k**2 * log(mod))  bernoulli が計算済みなら O(k * log(mod))
-        return pow(k + 1, self.mod - 2, self.mod) * sum(self.C(k + 1, j) * self.bernoulli(j) % self.mod * pow(n, k - j + 1, self.mod) % self.mod for j in range(k + 1)) % self.mod
+    def faulhaber(self, k, n):
+        return pow(k + 1, self.mod - 2, self.mod) * sum((self.C(k + 1, j) * self.bernoulli(j) % self.mod * pow(n, k - j + 1, self.mod) % self.mod for j in range(k + 1))) % self.mod
 
-    def lah(self, n, k):  # n 要素を k 個の空でない順序付き集合に分割する場合の数  O(1)
+    def lah(self, n, k):
         return self.C(n - 1, k - 1) * self.fac[n] % self.mod * self.facinv[k] % self.mod
 
-    def bell(self, n, k):  # n 要素を k グループ以下に分割する場合の数  O(k**2 + k*log(mod))
-        return sum(self.stirling_second(n, j) for j in range(1, k + 1)) % self.mod
+    def bell(self, n, k):
+        return sum((self.stirling_second(n, j) for j in range(1, k + 1))) % self.mod
 
 
 def main():
-    N, K = list(map(int, input().split()))
-    mod = 10**9 + 7
+    (N, K) = list(map(int, input().split()))
+    mod = 10 ** 9 + 7
     sign = 1
     L = []
     comb = Combination(202020)
@@ -81,7 +77,7 @@ def main():
     for n_zeroes in range(min(K + 1, N)):
         a = comb.C(N, n_zeroes) * comb.H(N - n_zeroes, n_zeroes) % mod
         ans += a
-    print((ans % mod))
+    print(ans % mod)
 
 
 main()

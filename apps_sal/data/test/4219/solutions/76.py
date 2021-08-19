@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 from itertools import product
@@ -13,9 +12,8 @@ def check(N, ptn, m_assert):
                         return False
                     if m_assert[j][i] == 0:
                         return False
-                else:
-                    if m_assert[i][j] == 1:
-                        return False
+                elif m_assert[i][j] == 1:
+                    return False
         else:
             for j in range(i + 1, N):
                 if ptn[j] == 1:
@@ -38,7 +36,7 @@ def main():
     for n in range(N):
         A = int(input())
         for a in range(A):
-            x, y = list(map(int, input().split()))
+            (x, y) = list(map(int, input().split()))
             m_assert[n][x - 1] = y
     answer = solve(N, m_assert)
     print(answer)

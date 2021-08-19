@@ -1,12 +1,12 @@
 S = input()
 Q = int(input())
-pre = ''  # 逆順
+pre = ''
 suf = ''
 rev = 0
 for i in range(Q):
     inp = input()
     if inp == '1':
-        pre, suf = suf, pre
+        (pre, suf) = (suf, pre)
         rev += 1
     else:
         inp_l = inp.split()
