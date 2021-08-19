@@ -1,11 +1,17 @@
-# coding: utf-8
 import sys
 import numpy as np
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
+
+
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
 
 
 N = ir()
@@ -15,5 +21,4 @@ total = np.abs(diff).sum()
 answer = []
 for i in range(N):
     answer.append(total - abs(diff[i]) - abs(diff[i + 1]) + abs(A[i + 2] - A[i]))
-
-print(('\n'.join(map(str, answer))))
+print('\n'.join(map(str, answer)))

@@ -1,8 +1,7 @@
 import numpy as np
 import re
-
-mod = 10**9 + 7
-letters = "ACGT"
+mod = 10 ** 9 + 7
+letters = 'ACGT'
 
 
 def to_int(s):
@@ -14,7 +13,7 @@ def to_int(s):
 
 
 def to_str(x, digit):
-    res = ""
+    res = ''
     for _ in range(digit):
         res += letters[x & 3]
         x >>= 2
@@ -22,7 +21,7 @@ def to_str(x, digit):
 
 
 def is_ok(s):
-    ng = [r"AGC", r"ACG", r"GAC", r"A.GC", r"AG.C"]
+    ng = ['AGC', 'ACG', 'GAC', 'A.GC', 'AG.C']
     for x in ng:
         if re.search(x, s):
             return False
@@ -36,12 +35,11 @@ for i in range(64):
         t = s + to_str(j, 1)
         if is_ok(t):
             A[i][to_int(t[1:])] = 1
-
-A = np.array(A, dtype="object")
+A = np.array(A, dtype='object')
 
 
 def mat_power(A, p, mod):
-    res = np.eye(A.shape[0], dtype="object")
+    res = np.eye(A.shape[0], dtype='object')
     while p:
         if p & 1:
             res = np.dot(res, A) % mod
@@ -53,9 +51,5 @@ def mat_power(A, p, mod):
 x = [0] * 64
 x[63] = 1
 x = np.array(x)
-
 N = int(input())
-print(((np.dot(mat_power(A, N, mod), x) % mod).sum() % mod))
-# y = np.dot(mat_power(A, N, mod), x) % mod
-# for i in range(64):
-#   print(to_str(i, 3) + ":", y[i])
+print((np.dot(mat_power(A, N, mod), x) % mod).sum() % mod)

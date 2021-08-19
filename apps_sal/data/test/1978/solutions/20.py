@@ -1,11 +1,13 @@
-''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
-# codeforces1204C
-def gi(): return list(map(int, input().split()))
+""" بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ """
 
 
-n, = gi()
+def gi():
+    return list(map(int, input().split()))
+
+
+(n,) = gi()
 g = [list(map(int, list(input()))) for _ in range(n)]
-lenp, = gi()
+(lenp,) = gi()
 p = gi()
 ans = p[:]
 lenans = lenp
@@ -20,4 +22,4 @@ while k < lenp - 1:
 print(lenans)
 for k in range(lenp):
     if p[k] != -1:
-        print(ans[k], end=" ")
+        print(ans[k], end=' ')
