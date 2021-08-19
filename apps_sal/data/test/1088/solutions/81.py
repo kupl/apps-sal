@@ -1,5 +1,5 @@
-from decimal import ROUND_HALF_UP, Decimal  # 変換後の末尾桁を0や0.01で指定
-from fractions import Fraction as frac  # frac(a,b)で正確なa/b
+from decimal import ROUND_HALF_UP, Decimal
+from fractions import Fraction as frac
 from itertools import combinations as com, permutations as per
 from bisect import bisect_left as bileft, bisect_right as biright, insort
 from functools import lru_cache
@@ -12,30 +12,25 @@ except FileNotFoundError:
     None
 from math import sqrt, ceil, floor
 from collections import deque, Counter, defaultdict
-# defaultdict(int)
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 sys.setrecursionlimit(11451419)
-#Decimal((str(0.5)).quantize(Decimal('0'), rounding=ROUND_HALF_UP))
-# @lru_cache(maxsize=10**10)
-#######ここまでテンプレ#######
-# ソート、"a"+"b"、再帰ならPython3の方がいい
-#######ここから天ぷら########
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = [list(map(int, input().split())) for i in range(n)]
 cntx = 0
 cnty = 0
-
 kai = [1] * 70
 mod = 998244353
 for i in range(1, 65):
-    kai[i] = (kai[i - 1] * i) % mod
-# print(kai)
+    kai[i] = kai[i - 1] * i % mod
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, num):
         self.n = num
         self.parents = [-1 for i in range(self.n)]
@@ -45,7 +40,6 @@ class UnionFind():
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
-
             return self.parents[x]
 
     def union(self, x, y):
@@ -57,8 +51,7 @@ class UnionFind():
             size_xx = abs(self.parents[xx])
             size_yy = abs(self.parents[yy])
             if size_xx > size_yy:
-                xx, yy = yy, xx
-
+                (xx, yy) = (yy, xx)
             self.parents[yy] += self.parents[xx]
             self.parents[xx] = yy
 
@@ -74,7 +67,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == xx]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def all_group_members(self):
         return {r: self.members(r) for r in self.roots()}
@@ -83,10 +76,8 @@ class UnionFind():
         return list(self.all_group_members().values())
 
 
-# uf=UnionFind(n)
 ufx = UnionFind(n)
 ufy = UnionFind(n)
-
 for i in range(n):
     po = 0
     for j in range(i):
@@ -96,7 +87,6 @@ for i in range(n):
                 break
         else:
             ufx.union(i, j)
-
 for i in range(n):
     for j in range(n):
         for p in range(n):
@@ -104,7 +94,6 @@ for i in range(n):
                 break
         else:
             ufy.union(i, j)
-
 xx = 1
 yy = 1
 for i in ufx.parents:
@@ -115,5 +104,4 @@ for j in ufy.parents:
     if j < -1:
         yy *= kai[abs(j)]
         yy %= mod
-
-print((xx * yy % mod))
+print(xx * yy % mod)

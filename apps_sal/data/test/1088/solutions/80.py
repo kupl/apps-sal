@@ -7,25 +7,35 @@ import bisect
 import sys
 import queue
 import copy
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
 mod = 998244353
 dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
 ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
 
 
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-# def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def F(): return float(sys.stdin.readline())
-def LS(): return sys.stdin.readline().split()
-def S(): return input()
-
-# Union-Find -- START --
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
 
 
-class UnionFind():
+def I():
+    return int(sys.stdin.readline())
+
+
+def F():
+    return float(sys.stdin.readline())
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def S():
+    return input()
+
+
+class UnionFind:
+
     def __init__(self, sz):
         self.sz = sz
         self.data = [-1] * sz
@@ -39,7 +49,7 @@ class UnionFind():
         self.amount[x] += self.amount[y]
         self.amount[y] += self.amount[x]
         if self.data[x] > self.data[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.data[x] += self.data[y]
         self.data[y] = x
         return True
@@ -58,33 +68,25 @@ class UnionFind():
 
     def get_amount(self, k):
         return self.amount[k]
-# Union-Find --- END ---
 
 
 def main():
-    n, K = LI()
+    (n, K) = LI()
     field = [LI() for _ in range(n)]
     uf1 = UnionFind(n)
     uf2 = UnionFind(n)
-
     for i in range(n):
         l1 = [True] * n
         for j in range(i + 1, n):
             if not l1[i]:
                 continue
             for k in range(n):
-                # print(field[i][k],field[j][k])
                 if field[i][k] + field[j][k] > K:
                     l1[j] = False
                     break
-        # print(l1[j])
         for j in range(i + 1, n):
             if l1[j]:
                 uf1.unite(i, j)
-
-        # for i in range(n):
-        #   print(uf1.find(i))
-
     for i in range(n):
         l2 = [True] * n
         for j in range(i + 1, n):
@@ -97,10 +99,6 @@ def main():
         for j in range(i + 1, n):
             if l2[j]:
                 uf2.unite(i, j)
-
-    # for i in range(n):
-    #   print(uf2.find(i))
-
     ans1 = 1
     check1 = [True] * n
     for i in range(n):
@@ -114,9 +112,6 @@ def main():
                 _ans %= mod
             ans1 *= _ans
             ans1 %= mod
-
-    # print(ans1)
-
     ans2 = 1
     check2 = [True] * n
     for i in range(n):
@@ -130,9 +125,7 @@ def main():
                 _ans %= mod
             ans2 *= _ans
             ans2 %= mod
+    return ans1 * ans2 % mod
 
-    return (ans1 * ans2) % mod
 
-
-# main()
-print((main()))
+print(main())

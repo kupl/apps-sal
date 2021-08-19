@@ -7,11 +7,10 @@ def main():
     ab.sort(key=lambda x: x[1])
     for i in range(len(ab)):
         point += ab[i][0]
-        # print(point, ab[i])
         if point > ab[i][1]:
-            print("No")
+            print('No')
             return
-    print("Yes")
+    print('Yes')
 
 
 def __starting_point():

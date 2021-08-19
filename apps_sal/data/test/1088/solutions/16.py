@@ -2,7 +2,8 @@ import itertools
 from collections import defaultdict
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -17,13 +18,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -38,7 +36,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -50,12 +48,11 @@ class UnionFind():
         return group_members
 
     def __str__(self):
-        return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
+        return '\n'.join((f'{r}: {m}' for (r, m) in self.all_group_members().items()))
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 l = [list(map(int, input().split())) for i in range(N)]
-# print(l)
 a = UnionFind(N)
 for v in itertools.combinations(range(N), 2):
     for i in range(N):
@@ -63,8 +60,6 @@ for v in itertools.combinations(range(N), 2):
             break
         if i == N - 1:
             a.union(v[0], v[1])
-# print(a)
-
 b = UnionFind(N)
 for v in itertools.combinations(range(N), 2):
     for i in range(N):
@@ -72,15 +67,11 @@ for v in itertools.combinations(range(N), 2):
             break
         if i == N - 1:
             b.union(v[0], v[1])
-# print(b)
-
 ans = 1
-
 for x in a.roots():
     for i in range(1, a.size(x) + 1):
-        ans = (ans * i) % 998244353
+        ans = ans * i % 998244353
 for x in b.roots():
     for i in range(1, b.size(x) + 1):
-        ans = (ans * i) % 998244353
-
+        ans = ans * i % 998244353
 print(ans)

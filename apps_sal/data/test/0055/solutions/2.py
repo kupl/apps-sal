@@ -1,7 +1,7 @@
 def count1(n):
     count = 0
     while n > 0:
-        n &= (n - 1)
+        n &= n - 1
         count += 1
     return count
 
@@ -31,8 +31,6 @@ def find(n, k):
                 l = rem
                 length = len(l)
             else:
-                # to_add = k - length
-                # rem += [m] * (c - to_add) + [m-1] * (to_add * 2)
                 mini = min(l)
                 to_fill = k - length
                 l.remove(mini)
@@ -43,14 +41,8 @@ def find(n, k):
                 break
         print('Yes')
         l.sort(reverse=True)
-        # print(len(l))
         print(' '.join([str(i) for i in l]))
 
 
-# find(23,5)
-# find(13,2)
-# find(1,2)
-nn, kk = list(map(int, input().strip().split()))
+(nn, kk) = list(map(int, input().strip().split()))
 find(nn, kk)
-
-# find(1000000000000000000, 100000)

@@ -9,7 +9,7 @@ def searchRoot(n):
         return n
     else:
         q.append(n)
-        return(searchRoot(par))
+        return searchRoot(par)
 
 
 def rootIn(q, root):
@@ -19,12 +19,11 @@ def rootIn(q, root):
 
 def UnionFind(n, m, lis):
     for i in range(m):
-        a, b = lis[i]
+        (a, b) = lis[i]
         aRoot = searchRoot(a)
         bRoot = searchRoot(b)
         if aRoot != bRoot:
             parList[max(aRoot, bRoot)] = min(aRoot, bRoot)
-
     ansDic = dict()
     rootSet = set()
     for i in range(0, n):
@@ -34,17 +33,14 @@ def UnionFind(n, m, lis):
         else:
             rootSet.add(root)
             ansDic[root] = 1
-
     return ansDic
 
 
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 a = []
 for i in range(n):
     aRow = list(map(int, input().split()))
     a.append(aRow)
-
 rowLis = []
 for i in range(n - 1):
     for j in range(i + 1, n):
@@ -55,12 +51,9 @@ for i in range(n - 1):
                 break
         if check:
             rowLis.append([i, j])
-# print(rowLis)
 parList = [i for i in range(n + 1)]
 q = co.deque()
 rowDic = UnionFind(n, len(rowLis), rowLis)
-
-
 colLis = []
 for i in range(n - 1):
     for j in range(i + 1, n):
@@ -71,20 +64,15 @@ for i in range(n - 1):
                 break
         if check:
             colLis.append([i, j])
-# print(colLis)
 parList = [i for i in range(n + 1)]
 q = co.deque()
 colDic = UnionFind(n, len(colLis), colLis)
-
 ans = 1
-# print(rowDic)
-# print(colDic)
 for i in rowDic.values():
     for j in range(1, i + 1):
         ans = ans * j
 for i in colDic.values():
     for j in range(1, i + 1):
         ans = ans * j
-
 ans = ans % 998244353
 print(ans)

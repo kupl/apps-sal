@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-
 def main():
-    s, t = input().split()
-    print((t + s))
+    (s, t) = input().split()
+    print(t + s)
 
 
 def __starting_point():

@@ -1,12 +1,12 @@
 from math import factorial
-n, K = map(int, input().split())
+(n, K) = map(int, input().split())
 mod = 998244353
 cnt1 = 0
 A = [list(map(int, input().split())) for _ in range(n)]
-# 使えるUnionFind
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -24,8 +24,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -40,7 +39,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -49,19 +48,19 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
 uf1 = UnionFind(n)
 uf2 = UnionFind(n)
 for i in range(n):
     for j in range(i + 1, n):
-        if all(A[i][k] + A[j][k] <= K for k in range(n)):
+        if all((A[i][k] + A[j][k] <= K for k in range(n))):
             uf1.union(i, j)
 cnt2 = 0
 for i in range(n):
     for j in range(i + 1, n):
-        if all(A[k][i] + A[k][j] <= K for k in range(n)):
+        if all((A[k][i] + A[k][j] <= K for k in range(n))):
             uf2.union(i, j)
 ans = 1
 for u in uf1.roots():

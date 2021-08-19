@@ -1,7 +1,6 @@
 import math
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 data = [list(map(int, input().split())) for i in range(N)]
-# 行
 ans1 = []
 for i in range(N - 1):
     for j in range(i + 1, N):
@@ -12,7 +11,6 @@ for i in range(N - 1):
                 break
         if m == 0:
             ans1.append([i, j])
-# 列
 ans2 = []
 for i in range(N - 1):
     for j in range(i + 1, N):
@@ -23,7 +21,6 @@ for i in range(N - 1):
                 break
         if m == 0:
             ans2.append([i, j])
-# 行
 li1 = [[] for i in range(N)]
 for i in range(len(ans1)):
     li1[ans1[i][0]].append(ans1[i][1])
@@ -45,7 +42,6 @@ l1 = list(set(L1))
 for i in l1:
     num1 *= int(math.factorial(L1.count(i)))
     num1 = num1 % 998244353
-# 列
 li2 = [[] for i in range(N)]
 for i in range(len(ans2)):
     li2[ans2[i][0]].append(ans2[i][1])
@@ -67,4 +63,4 @@ l2 = list(set(L2))
 for i in l2:
     num2 *= int(math.factorial(L2.count(i)))
     num2 = num2 % 998244353
-print((num1 * num2) % 998244353)
+print(num1 * num2 % 998244353)

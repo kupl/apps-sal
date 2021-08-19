@@ -1,10 +1,9 @@
-# cook your dish here
 s = input()
 cons = []
 vow = 0
 maxvow = 0
 for i in range(len(s)):
-    if s[i] == 'A' or s[i] == 'E' or s[i] == 'I' or s[i] == 'O' or s[i] == 'U':
+    if s[i] == 'A' or s[i] == 'E' or s[i] == 'I' or (s[i] == 'O') or (s[i] == 'U'):
         vow += 1
     else:
         if s[i] not in cons:

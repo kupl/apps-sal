@@ -1,7 +1,5 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
+class UnionFind:
 
-class UnionFind():
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -17,17 +15,14 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         sx = self.size(x)
         sy = self.size(y)
         self.ans += sx * (sx - 1) // 2 + sy * (sy - 1) // 2
         self.ans -= (sx + sy) * (sx + sy - 1) // 2
-
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -42,7 +37,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -51,19 +46,16 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-######
 mod = 998244353
 pr = [1]
 for i in range(1, 50):
     pr.append(pr[-1] * i % mod)
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 m = [list(map(int, input().split())) for _ in range(n)]
 ufs = [UnionFind(n) for _ in range(2)]
-
 for x in range(n):
     for y in range(n):
         fg = True
@@ -80,7 +72,6 @@ for x in range(n):
                 break
         if fg:
             ufs[1].union(x, y)
-
 ret = 1
 for uf in ufs:
     for r in uf.roots():

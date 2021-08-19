@@ -7,9 +7,8 @@ import heapq
 import itertools
 import math
 import string
-setrecursionlimit(10**8)
-
-INF = float("inf")
+setrecursionlimit(10 ** 8)
+INF = float('inf')
 MOD = 1000000007
 
 
@@ -17,10 +16,8 @@ def input():
     return stdin.readline().strip()
 
 
-# unionfind
+class UnionFind:
 
-
-class UnionFind():
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -35,13 +32,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -56,7 +50,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -68,17 +62,14 @@ class UnionFind():
         return group_members
 
     def __str__(self):
-        return '\n'.join(f'{r}: {m}' for r, m in list(self.all_group_members().items()))
+        return '\n'.join((f'{r}: {m}' for (r, m) in list(self.all_group_members().items())))
 
 
 def main():
-
-    n, mx = list(map(int, input().split()))
+    (n, mx) = list(map(int, input().split()))
     a = [list(map(int, input().split())) for _ in range(n)]
-
     uf1 = UnionFind(n)
     uf2 = UnionFind(n)
-
     for i in range(n):
         for j in range(i + 1, n):
             for k in range(n):
@@ -86,7 +77,6 @@ def main():
                     break
             else:
                 uf1.union(i, j)
-
     for i in range(n):
         for j in range(i + 1, n):
             for k in range(n):
@@ -94,7 +84,6 @@ def main():
                     break
             else:
                 uf2.union(i, j)
-
     ans = 1
     mod = 998244353
 
@@ -104,17 +93,13 @@ def main():
             rec *= x
             rec %= mod
         return rec
-
     for lst in list(uf1.all_group_members().values()):
         ans *= factorial(len(lst))
         ans %= mod
-
     for lst in list(uf2.all_group_members().values()):
         ans *= factorial(len(lst))
         ans %= mod
-
     print(ans)
-
     return
 
 
