@@ -1,6 +1,6 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
-        # first solution
         register = {}
         for char in chars:
             register[char] = register.get(char, 0) + 1
@@ -9,7 +9,7 @@ class Solution:
             temp = {}
             for char in word:
                 temp[char] = temp.get(char, 0) + 1
-            for char, num in list(temp.items()):
+            for (char, num) in list(temp.items()):
                 if temp[char] > register.get(char, 0):
                     break
             else:

@@ -11,16 +11,14 @@ def BinarySearch(a, x):
 
 
 for _ in range(int(input())):
-    # arnab sucks
     ans = 0
-    N, k = [int(x) for x in input().split()]
+    (N, k) = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     for i in range(N):
         for j in range(i, N):
             S = a[i:j + 1]
             S.sort()
             god = math.ceil(k / len(S))
-
             X = S[math.ceil(k / god) - 1]
             F = 0
             for z in S:

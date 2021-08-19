@@ -1,7 +1,6 @@
-# cook your dish here
 for i in range(int(input())):
     n = int(input())
-    a = (n // 2) + 1
+    a = n // 2 + 1
     l = a - 2
     for j in range(1, a + 1):
         space = j - 1

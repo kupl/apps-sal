@@ -1,22 +1,21 @@
-# cook your dish here
 def f(n):
     if n == 1:
         print('*')
         return
     if n == 2:
         print('*')
-        print("*")
+        print('*')
         return
     k = n // 2
     j = 2
     print('*')
     while j <= k:
-        print(j * " " + "*")
+        print(j * ' ' + '*')
         j += 1
     while j > 1:
-        print(j * " " + '*')
+        print(j * ' ' + '*')
         j -= 1
-    print("*")
+    print('*')
     return
 
 

@@ -4,15 +4,14 @@ from collections import defaultdict
 import sys
 input = sys.stdin.readline
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = [int(i) for i in input().split()]
     ans = 0
     for i in range(n):
         curr = []
-        cnt = [0] * (2002)
+        cnt = [0] * 2002
         for j in range(i, n):
             add = ceil(k / (j - i + 1))
-            # ind=bl(curr,l[j])
             insort(curr, l[j])
             cnt[l[j]] += 1
             if k <= j - i + 1:

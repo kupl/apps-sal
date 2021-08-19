@@ -1,7 +1,6 @@
 def create_array(n):
     print(n)
     res = []
-    # res=[]
     i = 1
     while i <= n:
         res += [i]

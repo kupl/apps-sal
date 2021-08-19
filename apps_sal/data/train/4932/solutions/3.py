@@ -3,8 +3,7 @@ import copy
 
 def find_solution(puzzle):
     moveset = []
-    while(True):
-        # Find first rows with most 0's
+    while True:
         move_to_exe = 0
         max_zeros = 0
         for i in range(len(puzzle) * 2):
@@ -25,7 +24,6 @@ def find_solution(puzzle):
 
 def count_zeros(move, puzzle):
     count = 0
-    # Row toggle
     if move < len(puzzle):
         for i in puzzle[move]:
             count += 1 if i == 0 else 0
@@ -35,53 +33,5 @@ def count_zeros(move, puzzle):
             count += 1 if row[index] == 0 else 0
     return count
 
-# UGH that solution is so BASIC! Greedy execution? Lame. I perfer the BF tree search below.
 
-
-"""
-# Use BFS?
-def find_solution(puzzle):
-    fringe = [([], puzzle)]
-    while (True): # We should always find a solution for any configuration?
-        
-        (moveset, current_state) = fringe.pop()
-        
-        # Test if current state is a solution
-        valid = True
-        for x in range(len(current_state)):
-            if 0 in current_state[x]:
-                valid = False
-                break
-        if valid:
-            return moveset
-        
-        # If state is not solution then we generate successor states add to fringe queue
-        successors = generate_successors(moveset, current_state)
-        for s in successors:
-            fringe.insert(0, s)
-            
-    
-    
-# This function takes a moveset and a puzzle and returns all the possible successors for that puzzle
-def generate_successors(move_list, puzzle):
-    successors = []
-    for x in range(len(puzzle) * 2):
-        
-        new_state = copy.deepcopy(puzzle)
-        new_move_list = move_list[:]
-        new_move_list.append(x)
-        
-        # If x < len(puzzle) we toggle a row
-        if x < len(puzzle):
-            new_state[x] = [1 if y == 0 else 0 for y in new_state[x]]
-            successors.append((new_move_list, new_state))
-        
-        # Else toggle column
-        else:
-            index = x - len(puzzle)
-            for i in range(len(puzzle)):
-                new_state[i][index] = 0 if new_state[i][index] == 1 else 1
-            successors.append((new_move_list, new_state))
-            
-    return successors
-"""
+'\n# Use BFS?\ndef find_solution(puzzle):\n    fringe = [([], puzzle)]\n    while (True): # We should always find a solution for any configuration?\n        \n        (moveset, current_state) = fringe.pop()\n        \n        # Test if current state is a solution\n        valid = True\n        for x in range(len(current_state)):\n            if 0 in current_state[x]:\n                valid = False\n                break\n        if valid:\n            return moveset\n        \n        # If state is not solution then we generate successor states add to fringe queue\n        successors = generate_successors(moveset, current_state)\n        for s in successors:\n            fringe.insert(0, s)\n            \n    \n    \n# This function takes a moveset and a puzzle and returns all the possible successors for that puzzle\ndef generate_successors(move_list, puzzle):\n    successors = []\n    for x in range(len(puzzle) * 2):\n        \n        new_state = copy.deepcopy(puzzle)\n        new_move_list = move_list[:]\n        new_move_list.append(x)\n        \n        # If x < len(puzzle) we toggle a row\n        if x < len(puzzle):\n            new_state[x] = [1 if y == 0 else 0 for y in new_state[x]]\n            successors.append((new_move_list, new_state))\n        \n        # Else toggle column\n        else:\n            index = x - len(puzzle)\n            for i in range(len(puzzle)):\n                new_state[i][index] = 0 if new_state[i][index] == 1 else 1\n            successors.append((new_move_list, new_state))\n            \n    return successors\n'

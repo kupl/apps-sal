@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().rstrip("\r\n")
+
+
+def input():
+    return sys.stdin.readline().rstrip('\r\n')
 
 
 for _ in range(int(input())):
@@ -7,12 +10,11 @@ for _ in range(int(input())):
     k = 0
     for i in range(n // 2 + 1):
         for i in range(k):
-            print(" ", end="")
-        print("*")
+            print(' ', end='')
+        print('*')
         k = k + 1
-    # print("*")
     k = k - 2
     for i in range(n // 2):
         for i in range(k):
-            print(" ", end="")
-        print("*")
+            print(' ', end='')
+        print('*')

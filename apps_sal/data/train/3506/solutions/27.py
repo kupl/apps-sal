@@ -1,13 +1,10 @@
 def vowel_indices(word):
-    retVal = []  # return list
-    vow = ['a', 'e', 'i', 'o', 'u', 'y']  # vowel list
-    word = word.lower()  # make word all lowercase
-    i = 1  # init position counter
-
-    # loop through word and check for vowel
+    retVal = []
+    vow = ['a', 'e', 'i', 'o', 'u', 'y']
+    word = word.lower()
+    i = 1
     for letter in word:
-        # test for vowel
         if letter in vow:
-            retVal.append(i)  # append to return list
-        i += 1  # inc position counter
-    return retVal  # return answer
+            retVal.append(i)
+        i += 1
+    return retVal

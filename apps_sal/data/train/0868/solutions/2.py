@@ -17,7 +17,7 @@ def Beauty(array, f, n):
 
 
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     array = list(map(int, input().split()))
     s = defaultdict(int)
     for v in array:
@@ -33,5 +33,4 @@ for _ in range(int(input())):
             f = b.count(x)
             if f in b:
                 res += 1
-            # res+=Beauty(array,f,n)
     print(res)

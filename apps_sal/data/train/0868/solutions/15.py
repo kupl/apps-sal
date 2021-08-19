@@ -3,16 +3,13 @@ import math
 t = int(input())
 while t > 0:
     fp = 0
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = [int(o) for o in input().split()]
-
     for i in range(n):
         left = []
-
         arr = [0] * 2050
         for j in range(i, n):
             right = a[j]
-            #pos = bisect.bisect(left, right)
             bisect.insort(left, right)
             arr[a[j]] += 1
             uhoy = math.ceil(k / (j - i + 1))

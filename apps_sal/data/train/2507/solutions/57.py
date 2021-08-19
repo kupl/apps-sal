@@ -1,6 +1,7 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
-        '''
+        """
         # first solution
         register = {}
         for char in chars: register[char] = register.get(char, 0) + 1
@@ -14,8 +15,7 @@ class Solution:
             else:
                 result+=len(word)
         return result
-        '''
-        # second solution
+        """
         tot = 0
         for w in words:
             d = {}
@@ -24,7 +24,6 @@ class Solution:
                     d[c] += 1
                 else:
                     d[c] = 1
-
             temp = 0
             for l in w:
                 if l in d and d[l] > 0:
@@ -33,7 +32,5 @@ class Solution:
                 else:
                     temp = 0
                     break
-
             tot += temp
-
         return tot
