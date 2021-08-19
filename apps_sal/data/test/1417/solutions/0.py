@@ -1,4 +1,4 @@
-'''
+"""
 // There are n! / (i+1)! * i permutations with decreasing seq length i (i+1 changes) for i <= n!
 // There are n! / (i+1)! permutations for each 1 <= j <= i of position of moved one
 
@@ -56,7 +56,7 @@ n*n! * (n*n! + 1) / 2
 
 = n*n! * (n*n! - n + 2) / 2
 - sum_{i=1..n-1} n! / (i+1)! * n * (i * (n-i) - 1)
-'''
+"""
 
 
 def fact(n):
@@ -72,8 +72,6 @@ def f(n):
     for i in range(1, n):
         ans -= fact(n) // fact(i + 1) * n * (i * (n - i) - 1)
     return ans
-
-#print(f(int(input())) % 998244353)
 
 
 def g(n):

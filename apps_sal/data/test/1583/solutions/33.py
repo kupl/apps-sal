@@ -1,7 +1,5 @@
-# 問題: https://atcoder.jp/contests/abc144/tasks/abc144_d
-
 import math
-a, b, x = list(map(int, input().strip().split()))
+(a, b, x) = list(map(int, input().strip().split()))
 if a * a * b / 2 < x:
     res = b
     res -= x / (a * a)

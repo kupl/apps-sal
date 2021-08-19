@@ -3,7 +3,7 @@ s = input().rstrip()
 
 
 def canMove(moves, dx, dy):
-    for x, y in moves:
+    for (x, y) in moves:
         tx = x + dx
         ty = y + dy
         if not (0 <= tx < 3 and 0 <= ty < 3):
@@ -12,25 +12,10 @@ def canMove(moves, dx, dy):
     return True
 
 
-l = [
-    [	3, 1, ],
-    [	0, 0, ],
-    [	0, 1, ],
-    [	0, 2, ],
-    [	1, 0, ],
-    [	1, 1, ],
-    [	1, 2, ],
-    [	2, 0],
-    [	2, 1, ],
-    [	2, 2, ],
-]
-
-
+l = [[3, 1], [0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
 move = []
 for x in s:
     move.append(l[int(x)])
-# print(move)
-
 cnt = 0
 for i in range(10):
     for j in range(10):

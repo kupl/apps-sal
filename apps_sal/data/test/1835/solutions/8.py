@@ -16,19 +16,16 @@ def solve():
     n = getN()
     iso = False
     ise = False
-    cnt1, cnt0 = 0, 0
+    (cnt1, cnt0) = (0, 0)
     for _ in range(n):
         s = input().strip()
         if len(s) % 2 == 1:
             iso = 1
         else:
             ise = 1
-
         cnt = Counter(s)
-        cnt1 += cnt["1"]
-        cnt0 += cnt["0"]
-
-    # print(iso, ise, cnt1, cnt0)
+        cnt1 += cnt['1']
+        cnt0 += cnt['0']
     if not iso and cnt1 % 2 and cnt0 % 2:
         print(n - 1)
     else:
