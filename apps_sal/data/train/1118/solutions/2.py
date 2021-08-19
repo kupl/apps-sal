@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 l2 = ['0', '1']
 for i in range(n):
@@ -14,7 +13,7 @@ for i in range(n):
     i = 1
     l2.append('1')
     l3.append('0')
-    while(i < s):
+    while i < s:
         l2.append('0')
         l2.append('1')
         l3.append('1')

@@ -1,12 +1,13 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         N = len(rains)
         ans = [-1] * N
         drydays = []
         last = {}
-        for i, e in enumerate(rains):
+        for (i, e) in enumerate(rains):
             if e == 0:
-                drydays += i,
+                drydays += (i,)
             else:
                 if e in last:
                     lastIndex = last[e]
@@ -17,8 +18,6 @@ class Solution:
                     else:
                         return []
                 last[e] = i
-
-        # populate drydays
         for d in drydays:
             ans[d] = 1
         return ans
