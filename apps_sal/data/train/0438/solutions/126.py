@@ -1,6 +1,6 @@
 class Solution:
-    def findLatestStep(self, arr: List[int], m: int) -> int:
 
+    def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         if m == n:
             return m
@@ -25,10 +25,8 @@ class Solution:
                 size[py] += size[px]
                 parent[px] = py
             return True
-
         ans = -1
-
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             i -= 1
             size[i] = 1
             for j in (i - 1, i + 1):
@@ -37,5 +35,4 @@ class Solution:
                         ans = step
                     if size[j]:
                         union(i, j)
-
         return ans

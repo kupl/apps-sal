@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         from collections import defaultdict
@@ -16,32 +17,26 @@ class Solution:
         def union(x, y):
             r1 = find(x)
             r2 = find(y)
-
             if r1 != r2:
                 group_size[size[r1]] -= 1
                 group_size[size[r2]] -= 1
                 size[r1] = size[r2] = size[r1] + size[r2]
                 group_size[size[r1]] += 1
-
                 if ranks[r2] > ranks[r1]:
-                    r1, r2 = r2, r1
-
+                    (r1, r2) = (r2, r1)
                 parents[r2] = r1
                 if ranks[r1] == ranks[r2]:
                     ranks[r1] += 1
-
         ans = -1
-        for step, idx in enumerate(arr):
+        for (step, idx) in enumerate(arr):
             idx -= 1
-            left, right = idx - 1, idx + 1
+            (left, right) = (idx - 1, idx + 1)
             group_size[1] += 1
             if left >= 0 and visited[left]:
                 union(idx, left)
             if right < n and visited[right]:
                 union(idx, right)
-
             visited[idx] = True
             if group_size[m] > 0:
                 ans = step + 1
-
         return ans

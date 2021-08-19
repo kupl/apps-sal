@@ -1,9 +1,10 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         output = -1
         uf = UF()
         seen = set()
-        for step, idx in enumerate(arr, 1):
+        for (step, idx) in enumerate(arr, 1):
             uf.add(idx)
             seen.add(idx)
             if idx - 1 in seen:
@@ -39,13 +40,11 @@ class UF:
         b = self.find(b)
         if a == b:
             return
-
         s = self.sizes
         sc = self.size_counts
         sc[s[a]] -= 1
         sc[s[b]] -= 1
         sc[s[a] + s[b]] += 1
-
         p = self.parents
         if s[a] < s[b]:
             p[a] = b

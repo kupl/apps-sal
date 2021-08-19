@@ -2,6 +2,7 @@ from itertools import combinations
 
 
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         indices = list(range(0, len(rating)))
         all_combs = combinations(indices, 3)

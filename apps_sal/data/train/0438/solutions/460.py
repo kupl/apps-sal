@@ -2,6 +2,7 @@ from typing import List
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [0] * n
@@ -12,7 +13,7 @@ class UnionFind:
         return self.parent[u]
 
     def union(self, u, v):
-        pu, pv = self.find(u), self.find(v)
+        (pu, pv) = (self.find(u), self.find(v))
         if pu == pv:
             return False
         if self.rank[pu] > self.rank[pv]:
@@ -28,12 +29,12 @@ class UnionFind:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         ans = -1
         n = len(arr)
         uf = UnionFind(n)
-
-        for step, k in enumerate(arr):
+        for (step, k) in enumerate(arr):
             i = k - 1
             uf.rank[i] = 1
             for j in (i - 1, i + 1):
@@ -42,9 +43,7 @@ class Solution:
                         ans = step
                     if uf.rank[j]:
                         uf.union(i, j)
-
         for i in range(n):
             if uf.rank[uf.find(i)] == m:
                 return n
-
         return ans

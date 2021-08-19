@@ -12,7 +12,6 @@ class Solution:
             grid_ints.append(enc)
         if self.dbg:
             print(grid_ints)
-
         bar = 1
         swaps = 0
         for i in range(len(grid[0])):
@@ -23,9 +22,8 @@ class Solution:
                     if j >= len(grid[0]):
                         return -1
                 while j > i:
-                    grid_ints[j], grid_ints[j - 1] = grid_ints[j - 1], grid_ints[j]
+                    (grid_ints[j], grid_ints[j - 1]) = (grid_ints[j - 1], grid_ints[j])
                     swaps += 1
                     j -= 1
             bar = (bar << 1) + 1
-
         return swaps

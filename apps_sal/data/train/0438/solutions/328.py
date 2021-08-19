@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.ans = -1
 
@@ -6,7 +7,6 @@ class Solution:
         n = len(arr)
         if n == m:
             return n
-
         sz = [1] * n
         group = [i for i in range(n)]
 
@@ -23,13 +23,12 @@ class Solution:
         def union(i, j):
             root1 = find(i)
             root2 = find(j)
-            if(sz[root1] > sz[root2]):
+            if sz[root1] > sz[root2]:
                 sz[root1] += sz[root2]
                 group[root2] = root1
             else:
                 sz[root2] += sz[root1]
                 group[root1] = root2
-
         nums = [0] * n
         cnt = 0
         for i in range(n):

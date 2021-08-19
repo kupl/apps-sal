@@ -1,13 +1,11 @@
 class Solution:
-    def minDays(self, n: int) -> int:
 
+    def minDays(self, n: int) -> int:
         dq = deque([(0, n)])
         res = 0
-
         seen = set()
-
         while dq:
-            layer, num = dq.popleft()
+            (layer, num) = dq.popleft()
             if num in seen:
                 continue
             else:

@@ -1,7 +1,7 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         q = deque()
-
         q.append(n)
         days = 0
         seen = set()
@@ -11,7 +11,6 @@ class Solution:
                 node = q.popleft()
                 if node == 1:
                     return days
-
                 if node % 3 == 0 and node // 3 not in seen:
                     q.append(node // 3)
                     seen.add(node // 3)

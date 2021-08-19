@@ -1,4 +1,5 @@
 class Solution:
+
     def consecutiveNumbersSum(self, x: int) -> int:
         ans = 1
         for n in range(2, 100000):

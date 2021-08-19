@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == len(arr):
             return m
@@ -14,7 +15,6 @@ class Solution:
                     hi = mid
                 else:
                     lo = mid + 1
-
             leftLen = bit - intervals[lo - 1] - 1
             rightLen = intervals[lo] - bit - 1
             if leftLen == m or rightLen == m:

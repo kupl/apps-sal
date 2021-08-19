@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], target: int) -> int:
         b = [0] * len(arr)
         m = {}

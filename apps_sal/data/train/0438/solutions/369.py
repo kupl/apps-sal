@@ -1,10 +1,11 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         if n == m:
             return n
         day = [0] * (n + 1)
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             day[a] = i + 1
         ans = -1
         max_q = MaxQueue(m)
@@ -24,6 +25,7 @@ class Solution:
 
 
 class MaxQueue:
+
     def __init__(self, size):
         self.queue = deque()
         self.size = size

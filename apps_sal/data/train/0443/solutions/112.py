@@ -1,6 +1,6 @@
 class Solution:
-    def numTeams(self, rating: List[int]) -> int:
 
+    def numTeams(self, rating: List[int]) -> int:
         n = len(rating)
         team_sum = 0
         teams = []
@@ -11,5 +11,4 @@ class Solution:
                         team_sum += 1
                     if rating[i] > rating[j] > rating[k]:
                         team_sum += 1
-
         return team_sum

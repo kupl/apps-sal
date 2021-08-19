@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         res = 0
         record = []
@@ -13,7 +14,6 @@ class Solution:
                 elif rating[j] < rating[i]:
                     record[i].append(False)
         for i in range(0, len(rating) - 1):
-
             for j in range(i + 1, len(rating)):
                 if record[i][j]:
                     for k in range(j + 1, len(rating)):
@@ -25,5 +25,4 @@ class Solution:
                         if record[j][k] == False:
                             res += 1
                             rec.append((rating[i], rating[j], rating[k]))
-
         return res

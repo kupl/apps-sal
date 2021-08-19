@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         n = len(rating)
         total = 0

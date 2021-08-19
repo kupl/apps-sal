@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.dp = {}
 
@@ -12,7 +13,6 @@ class Solution:
             tmp = min(tmp, self.dfs(i // 3, count + 1))
         if tmp < 100 and i % 2 == 0:
             tmp = min(tmp, self.dfs(i // 2, count + 1))
-
         if tmp < 100:
             tmp = min(tmp, self.dfs(i - 1, count + 1))
         self.dp[i] = 1 + tmp

@@ -1,9 +1,10 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        hd, td = {}, {}
+        (hd, td) = ({}, {})
         ld = {}
         n = -1
-        for k, i in enumerate(arr):
+        for (k, i) in enumerate(arr):
             if i - 1 in td and i + 1 in hd:
                 h = td[i - 1]
                 t = hd[i + 1]

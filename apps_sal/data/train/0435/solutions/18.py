@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         prefix = [0] * len(A)
         prefix[0] = A[0] % K

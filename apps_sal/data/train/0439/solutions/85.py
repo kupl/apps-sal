@@ -1,9 +1,10 @@
 class Solution:
+
     def maxTurbulenceSize(self, A: List[int]) -> int:
-        res, l, b, log = 1, 1, A[0], -1
+        (res, l, b, log) = (1, 1, A[0], -1)
         for a in A[1:]:
             if a == b:
-                log, l = -1, 1
+                (log, l) = (-1, 1)
             elif a > b:
                 if log != 1:
                     l += 1
@@ -16,5 +17,5 @@ class Solution:
                 else:
                     l = 2
                 log = 0
-            res, b = max(res, l), a
+            (res, b) = (max(res, l), a)
         return res

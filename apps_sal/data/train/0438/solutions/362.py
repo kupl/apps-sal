@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, size):
         self.parent = [i for i in range(size)]
         self.size = [1] * size
@@ -10,7 +11,7 @@ class DSU:
         return self.parent[value]
 
     def merge(self, value1, value2):
-        p1, p2 = self.parent[value1], self.parent[value2]
+        (p1, p2) = (self.parent[value1], self.parent[value2])
         if p1 == p2:
             return
         self.parent[p1] = p2
@@ -18,6 +19,7 @@ class DSU:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         c = Counter()

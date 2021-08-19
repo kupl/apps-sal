@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         count = 0
         for i in range(len(rating)):
@@ -6,7 +7,6 @@ class Solution:
             less_right = 0
             greater_left = 0
             greater_right = 0
-
             for j in range(len(rating)):
                 if j < i:
                     if rating[i] > rating[j]:

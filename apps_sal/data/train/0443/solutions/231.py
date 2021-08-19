@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         n = len(rating)
         team_cand_a = [[] for _ in range(n)]
@@ -19,5 +20,4 @@ class Solution:
         for cd in team_cand_d:
             for ij in cd:
                 d_count += len(team_cand_d[ij[-1]])
-
         return a_count + d_count

@@ -1,9 +1,10 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        start_dic, end_dic = {}, {}
+        (start_dic, end_dic) = ({}, {})
         m_len_interval = []
         latest = -1
-        for step, position in enumerate(arr):
+        for (step, position) in enumerate(arr):
             if position - 1 not in end_dic and position + 1 not in start_dic:
                 start_dic[position] = 1
                 end_dic[position] = 1

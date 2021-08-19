@@ -1,4 +1,5 @@
 class Solution:
+
     def formulaSum(self, N, L):
         return N / L - (L + 1) / 2
 

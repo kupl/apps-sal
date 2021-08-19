@@ -1,4 +1,5 @@
 class Solution:
+
     def maxTurbulenceSize(self, A) -> int:
         if len(A) <= 1:
             return len(A)
@@ -6,7 +7,7 @@ class Solution:
             return 1
         else:
             B = []
-            for idx, num in enumerate(A[1:], start=1):
+            for (idx, num) in enumerate(A[1:], start=1):
                 B.append(A[idx] - A[idx - 1])
             max_len = 2
             C = []
@@ -18,7 +19,7 @@ class Solution:
                 else:
                     C.append(-1)
             len_diff = 1
-            for idx, num in enumerate(C[1:], start=1):
+            for (idx, num) in enumerate(C[1:], start=1):
                 if C[idx] * C[idx - 1] < 0:
                     if len_diff == 1:
                         len_diff += 1
@@ -28,5 +29,4 @@ class Solution:
                 else:
                     len_diff = 1
                 max_len = max(len_diff, max_len)
-
         return max_len

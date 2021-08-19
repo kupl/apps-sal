@@ -1,16 +1,18 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
+
         def number_of_steps(i):
             Q = deque()
             seen_before = set()
             steps = 0
             Q.append((i, steps))
             while True:
-                j, steps = Q.popleft()
+                (j, steps) = Q.popleft()
                 if j == 1:
                     return steps
                 if j % 3 == 0:
-                    branch(Q, seen_before, steps, j - (2 * j // 3))
+                    branch(Q, seen_before, steps, j - 2 * j // 3)
                 if j % 2 == 0:
                     branch(Q, seen_before, steps, j // 2)
                 branch(Q, seen_before, steps, j - 1)

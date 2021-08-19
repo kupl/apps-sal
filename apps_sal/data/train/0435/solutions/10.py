@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         m = defaultdict(int)
         m[0] = 1

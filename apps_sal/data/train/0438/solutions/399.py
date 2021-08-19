@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         parent = [i for i in range(n + 1)]
@@ -11,8 +12,8 @@ class Solution:
             return parent[x]
 
         def union(x, y):
-            x, y = min(x, y), max(x, y)
-            px, py = find(x), find(y)
+            (x, y) = (min(x, y), max(x, y))
+            (px, py) = (find(x), find(y))
             if px != py:
                 counter[size[px]] -= 1
                 counter[size[py]] -= 1
@@ -21,7 +22,7 @@ class Solution:
                 counter[size[px]] += 1
         A = [0] * (n + 2)
         res = -1
-        for i, cur in enumerate(arr):
+        for (i, cur) in enumerate(arr):
             A[cur] = 1
             size[cur] = 1
             counter[1] += 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         dp = {}
         dp[0] = 1

@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class group:
+
     def __init__(self, n, m):
         self.groups = [i for i in range(n + 1)]
         self.group_size = {}
@@ -18,15 +19,14 @@ class group:
             gi = self.get_group(i)
             gj = self.get_group(j)
             if self.group_size[gi] > self.group_size[gj]:
-                gj, gi = gi, gj
+                (gj, gi) = (gi, gj)
             self.groups[gi] = gj
         if self.group_size[gj] == self.m and gj in self.m_sizes:
-            del(self.m_sizes[gj])
+            del self.m_sizes[gj]
         if self.group_size[gi] == self.m and gi in self.m_sizes:
-            del(self.m_sizes[gi])
+            del self.m_sizes[gi]
         if i != j:
             self.group_size[gj] += self.group_size[gi]
-
         if self.group_size[gj] == self.m:
             self.m_sizes[gj] = 1
         return self.group_size[gj]
@@ -38,6 +38,7 @@ class group:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         bits = [0] * (len(arr) + 2)
         GG = group(len(arr), m)

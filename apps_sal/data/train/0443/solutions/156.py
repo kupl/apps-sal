@@ -2,6 +2,7 @@ from math import comb
 
 
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         sum = 0
         for i in range(len(rating) - 2):

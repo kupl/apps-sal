@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         answer = -1
         n = len(arr)
@@ -16,11 +17,11 @@ class Solution:
             if size[y] == m:
                 sizes -= 1
             if size[x] < size[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             parent[y] = x
             size[x] += size[y]
             del size[y]
-        for t, x in enumerate(arr):
+        for (t, x) in enumerate(arr):
             parent[x] = x
             size[x] = 1
             if x + 1 in parent:

@@ -1,4 +1,5 @@
 class Solution:
+
     def minSwaps(self, grid: List[List[int]]) -> int:
         start = 1
         swap = 0

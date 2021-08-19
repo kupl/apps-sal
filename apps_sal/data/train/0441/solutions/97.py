@@ -1,5 +1,7 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
+
         def triangle(n):
             return int(n * (n + 1) / 2)
 
@@ -13,5 +15,4 @@ class Solution:
                         counter += 1
                 n += 1
             return counter + 1
-
         return consecutive_sums(N)

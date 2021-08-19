@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         d = 1
         poss = set([n])

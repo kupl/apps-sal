@@ -14,6 +14,7 @@ def accum(op, l):
 
 
 class Solution:
+
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         B = accum(add, A)
         B = [0] + B

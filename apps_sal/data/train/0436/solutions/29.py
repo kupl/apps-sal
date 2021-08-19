@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         dic = {n: 0}
         while 0 not in dic:

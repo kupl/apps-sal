@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         counts = [0] * (len(arr) + 1)
         root = [i for i in range(len(arr))]

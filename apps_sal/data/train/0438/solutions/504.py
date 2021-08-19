@@ -1,10 +1,11 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == len(arr):
             return m
         groups = {}
         result = -1
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             b = a - 1
             if b in groups:
                 l = groups.pop(b)

@@ -1,6 +1,7 @@
 class Solution:
+
     def findLatestStep(self, A: List[int], T: int, last=-1) -> int:
-        seen, ok = set(), set()
+        (seen, ok) = (set(), set())
         A = [i - 1 for i in A]
         N = len(A)
         P = [i for i in range(N)]

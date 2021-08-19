@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         vals = [0 for _ in range(len(arr) + 2)]
         numGroups = 0

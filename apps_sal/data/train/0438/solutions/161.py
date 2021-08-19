@@ -6,13 +6,13 @@ class Solution:
         return x
 
     def union(self, d, x, y):
-        px, py = self.find(d, x), self.find(d, y)
+        (px, py) = (self.find(d, x), self.find(d, y))
         if px != py:
             d[px] = py
 
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        n, step = len(arr), -1
-        s, d, d_len, d_rec = [0] * n, {i: i for i in range(n)}, [1] * n, dict()
+        (n, step) = (len(arr), -1)
+        (s, d, d_len, d_rec) = ([0] * n, {i: i for i in range(n)}, [1] * n, dict())
         for i in range(n):
             num = arr[i] - 1
             s[num] = 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, A: List[int], m: int) -> int:
         left = {}
         right = {}
@@ -6,7 +7,7 @@ class Solution:
         cands = set()
         N = len(A)
         res = -1
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             size = 1
             newLeft = newRight = a
             if a - 1 in tot:

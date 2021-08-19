@@ -1,4 +1,5 @@
 class UnionFind(object):
+
     def __init__(self):
         self.parents = dict()
         self.sizes = dict()
@@ -17,20 +18,21 @@ class UnionFind(object):
         return i
 
     def union(self, p, q):
-        root_p, root_q = list(map(self.find, (p, q)))
+        (root_p, root_q) = list(map(self.find, (p, q)))
         if root_p == root_q:
             return
-        small, big = sorted([root_p, root_q], key=lambda x: self.sizes[x])
+        (small, big) = sorted([root_p, root_q], key=lambda x: self.sizes[x])
         self.parents[small] = big
         self.sizes[big] += self.sizes[small]
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         uf = UnionFind()
         step_wanted = -1
         n = len(arr)
-        for step, pos in enumerate(arr, 1):
+        for (step, pos) in enumerate(arr, 1):
             uf.insert(pos)
             for neighbor in [pos - 1, pos + 1]:
                 if neighbor not in uf:

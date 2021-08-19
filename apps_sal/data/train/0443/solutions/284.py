@@ -1,10 +1,9 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         n = len(rating)
-
         if n < 3:
             return 0
-
         results = 0
         for i in range(n - 2):
             for j in range(i + 1, n - 1):

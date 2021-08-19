@@ -16,7 +16,6 @@ class Solution:
                     head.append(i + [num])
             else:
                 head.append([num])
-
         if len(tail) == 1:
             return result
         else:

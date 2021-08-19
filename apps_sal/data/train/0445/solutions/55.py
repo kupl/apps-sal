@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifference(self, nums: List[int]) -> int:
         l = len(nums)
         if l < 5:

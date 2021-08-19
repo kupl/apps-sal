@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         track = []
         res = 0
@@ -6,7 +7,6 @@ class Solution:
         def backtrack(increase, index):
             nonlocal res
             if len(track) == 3:
-
                 res += 1
                 return
             for i in range(index, len(rating)):

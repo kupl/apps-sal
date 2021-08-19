@@ -1,11 +1,12 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         mc = 0
         step = -1
         tuples = {}
         for i in range(len(arr)):
             pos = arr[i]
-            minPos, maxPos = pos, pos
+            (minPos, maxPos) = (pos, pos)
             if pos - 1 in tuples:
                 minPos = tuples[pos - 1][0]
                 if tuples[pos - 1][1] - minPos + 1 == m:

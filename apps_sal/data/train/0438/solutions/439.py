@@ -1,4 +1,5 @@
 class Tree:
+
     def __init__(self, lo, hi):
         self.lo = lo
         self.hi = hi
@@ -21,12 +22,10 @@ class Tree:
                 else:
                     return self.right.split(val, m)
             return False
-
         if val == self.lo:
             self.lo = val + 1
             if self.hi - self.lo + 1 == m:
                 return True
-
         elif val == self.hi:
             self.hi = val - 1
             if self.hi - self.lo + 1 == m:
@@ -46,10 +45,10 @@ class Tree:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == len(arr):
             return len(arr)
-
         root = Tree(1, len(arr))
         step = len(arr) - 1
         for i in range(len(arr) - 1, -1, -1):

@@ -1,6 +1,6 @@
 class Solution:
-    def findLatestStep(self, arr: List[int], m: int) -> int:
 
+    def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         return self.dfs_helper(arr, n, 1, n, m)
 

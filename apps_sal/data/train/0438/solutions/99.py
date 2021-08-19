@@ -1,10 +1,11 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         ans = -1
         start_set = {}
         end_set = {}
         counter = 0
-        for idx, n in enumerate(arr):
+        for (idx, n) in enumerate(arr):
             if n - 1 in end_set and n + 1 in start_set:
                 st = end_set.pop(n - 1)
                 ed = start_set.pop(n + 1)

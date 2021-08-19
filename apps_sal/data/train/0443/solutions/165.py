@@ -1,8 +1,9 @@
 class Solution:
-    def numTeams(self, rating: List[int]) -> int:
-        def isValid(a, b, c):
-            return (a < b < c) or (a > b > c)
 
+    def numTeams(self, rating: List[int]) -> int:
+
+        def isValid(a, b, c):
+            return a < b < c or a > b > c
         count = 0
         for i in range(len(rating) - 2):
             for j in range(i, len(rating) - 1):

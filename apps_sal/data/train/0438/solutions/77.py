@@ -1,8 +1,9 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         ans = -1
         r = []
-        b = [0, ] * len(arr)
+        b = [0] * len(arr)
         i = 0
         while i < len(arr):
             v1 = arr[i] > 1 and b[arr[i] - 2]
@@ -23,20 +24,15 @@ class Solution:
             else:
                 h = arr[i]
                 t = h
-
             b[t - 1] = h
             b[h - 1] = t
-
             i += 1
-
             if h - t + 1 == m:
                 ans = i
                 r.append((t, h))
             elif r:
-                while r and not (b[r[-1][0] - 1] == r[-1][1]):
+                while r and (not b[r[-1][0] - 1] == r[-1][1]):
                     r.pop()
-
                 if r:
                     ans = i
-
         return ans

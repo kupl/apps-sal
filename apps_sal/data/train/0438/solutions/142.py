@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr, k):
         n = len(arr)
         par = [-1] * (n + 2)
@@ -27,7 +28,6 @@ class Solution:
                 ind[count[p]] -= 1
                 par[p] = cur
                 count[cur] += count[p]
-
             ind[count[cur]] += 1
             if ind[k]:
                 ans = i + 1

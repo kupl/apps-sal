@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         n = len(rating)
         out = 0
@@ -14,5 +15,5 @@ class Solution:
                     rgreat += 1
                 if rating[j] < rating[i]:
                     rless += 1
-            out += (lless * rgreat) + (lgreat * rless)
+            out += lless * rgreat + lgreat * rless
         return out

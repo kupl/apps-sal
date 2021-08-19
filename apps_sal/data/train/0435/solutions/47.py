@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         res = 0
         prefix = 0

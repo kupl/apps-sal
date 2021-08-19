@@ -1,4 +1,5 @@
 class UnionFindSet:
+
     def __init__(self, n):
         self.parents = list(range(n))
         self.ranks = [0] * n
@@ -9,7 +10,7 @@ class UnionFindSet:
         return self.parents[u]
 
     def union(self, u, v):
-        pu, pv = self.find(u), self.find(v)
+        (pu, pv) = (self.find(u), self.find(v))
         if pu == pv:
             return False
         if self.ranks[pu] > self.ranks[pv]:
@@ -27,7 +28,7 @@ class UnionFindSet:
 class Solution:
 
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        '''
+        """
         length_dict = {}
 
         length_edge = [0]*len(arr)
@@ -57,28 +58,21 @@ class Solution:
             if m in length_dict and length_dict[m]>0:
                 result = i + 1
         return result
-        '''
-        n, ans = len(arr), -1
+        """
+        (n, ans) = (len(arr), -1)
         uf = UnionFindSet(n)
-
         groups = {}
         groups[0] = len(arr)
-
         result = -1
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             i -= 1
             uf.ranks[i] = 1
-
             for j in (i - 1, i + 1):
                 if 0 <= j < n:
-                    '''
-                    if uf.ranks[uf.find(j)] == m:
-                        ans = step
-                    '''
+                    '\n                    if uf.ranks[uf.find(j)] == m:\n                        ans = step\n                    '
                     groups[uf.ranks[uf.find(j)]] -= 1
                     if uf.ranks[j]:
                         uf.union(i, j)
-
             if uf.ranks[uf.find(i)] == m:
                 ans = step + 1
             group = uf.ranks[uf.find(i)]
@@ -87,11 +81,5 @@ class Solution:
             groups[group] += 1
             if m in groups and groups[m] > 0:
                 result = step + 1
-        '''
-        for i in range(n):
-            if uf.ranks[uf.find(i)] == m:
-                return n
-        return ans
-        '''
-
+        '\n        for i in range(n):\n            if uf.ranks[uf.find(i)] == m:\n                return n\n        return ans\n        '
         return result

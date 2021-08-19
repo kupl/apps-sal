@@ -1,6 +1,7 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
-        q, res, seen = [n], 0, set()
+        (q, res, seen) = ([n], 0, set())
         while q:
             tmp = set()
             if 0 in q:

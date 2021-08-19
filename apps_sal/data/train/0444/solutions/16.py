@@ -1,4 +1,5 @@
 class Solution:
+
     def nthPersonGetsNthSeat(self, n: int) -> float:
         cur = 1
         for i in range(2, n + 1):

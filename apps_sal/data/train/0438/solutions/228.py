@@ -1,11 +1,12 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if len(arr) == m:
             return m
         n = len(arr)
         uf = UnionFind(n)
         ans = -1
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             index = i - 1
             uf.ranks[index] = 1
             for j in [index - 1, index + 1]:
@@ -17,7 +18,8 @@ class Solution:
         return ans
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.parents = list(range(n))
         self.ranks = [0] * n
@@ -28,7 +30,7 @@ class UnionFind():
         return self.parents[u]
 
     def union(self, n1, n2):
-        p1, p2 = self.find(n1), self.find(n2)
+        (p1, p2) = (self.find(n1), self.find(n2))
         if p1 == p2:
             return
         if self.ranks[p1] > self.ranks[p2]:

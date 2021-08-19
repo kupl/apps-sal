@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         hash_map = collections.defaultdict(int)
         hash_map[0] = 1

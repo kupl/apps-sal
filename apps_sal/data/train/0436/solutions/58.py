@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
+
         @lru_cache(None)
         def ok(n, x):
             if n == 0:
@@ -12,7 +14,6 @@ class Solution:
                 if n % 3 == 0 and ok(n - 2 * n // 3, x - 1):
                     return True
                 return ok(n - 1, x - 1)
-
         left = 0
         right = n + 1
         while right - left > 1:

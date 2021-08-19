@@ -1,4 +1,5 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         ans = 1
         cur_iter = 1

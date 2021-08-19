@@ -1,9 +1,8 @@
 class Solution:
-    def numTeams(self, rating: List[int]) -> int:
 
+    def numTeams(self, rating: List[int]) -> int:
         count = 0
         n = len(rating)
-
         for i in range(n - 2):
             for j in range(i + 1, n - 1):
                 if rating[i] < rating[j]:

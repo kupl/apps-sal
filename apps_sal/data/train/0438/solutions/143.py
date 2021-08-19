@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         A = [0] * n
@@ -10,13 +11,10 @@ class Solution:
         def merge(i, j):
             left = min(B[i][0], B[j][0])
             right = max(B[i][1], B[j][1])
-
             B[left][1] = right
             B[right - 1][0] = left
-
             B[i][0] = B[j][0] = left
             B[i][1] = B[j][1] = right
-
         ret = -1
         for i in range(n):
             j = arr[i] - 1

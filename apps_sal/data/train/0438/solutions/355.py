@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, N):
         self.N = N
         self.size = [0] * N
@@ -14,7 +15,6 @@ class UF:
     def union(self, x, y):
         px = self.find(x)
         py = self.find(y)
-
         if px != py:
             self.size[px] += self.size[py]
             self.id[py] = px
@@ -31,13 +31,13 @@ class UF:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         uf = UF(n)
         ans = -1
-        for step, idx in enumerate(arr, 1):
+        for (step, idx) in enumerate(arr, 1):
             uf.set(idx - 1)
             if uf.sizes[m] > 0:
                 ans = step
-
         return ans

@@ -2,6 +2,7 @@ _ROOT = object()
 
 
 class UnionSet:
+
     def __init__(self):
         self.parents = {}
         self.sizes = {}
@@ -14,7 +15,6 @@ class UnionSet:
         self.parents[x] = _ROOT
         self.sizes[x] = 1
         self.size_histogram[1] += 1
-
         self.merge(x, x - 1)
         self.merge(x, x + 1)
 
@@ -32,7 +32,6 @@ class UnionSet:
             return
         x = self.root(x)
         y = self.root(y)
-
         self.size_histogram[self.sizes[x]] -= 1
         self.size_histogram[self.sizes[y]] -= 1
         merged_size = self.sizes[x] + self.sizes[y]
@@ -48,10 +47,11 @@ class UnionSet:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         union_set = UnionSet()
         latest_step = -1
-        for step, pos in enumerate(arr):
+        for (step, pos) in enumerate(arr):
             union_set.add(pos)
             if union_set.has_size(m):
                 latest_step = step + 1

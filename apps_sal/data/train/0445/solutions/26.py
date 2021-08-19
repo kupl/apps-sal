@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifference(self, nums: List[int]) -> int:
         nums.sort()
         result = nums[-1] - nums[0]

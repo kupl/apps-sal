@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, ratings: List[int]) -> int:
         ans = 0
         for i in range(len(ratings) - 2):

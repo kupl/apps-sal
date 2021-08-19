@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self):
         self.sets = {}
         self.size = {}
@@ -15,7 +16,7 @@ class UnionFind:
         return self.sets[s]
 
     def union(self, s1, s2):
-        a, b = self.find(s1), self.find(s2)
+        (a, b) = (self.find(s1), self.find(s2))
         if a == b:
             return
         self.sizes[self.size[a]] -= 1
@@ -33,11 +34,12 @@ class UnionFind:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         seen = set()
         uf = UnionFind()
         res = -1
-        for i, v in enumerate(arr, 1):
+        for (i, v) in enumerate(arr, 1):
             uf.make_set(v)
             if v + 1 in seen:
                 uf.union(v, v + 1)

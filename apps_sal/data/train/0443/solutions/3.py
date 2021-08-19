@@ -1,8 +1,7 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
-
         count = 0
-
         for i in range(len(rating)):
             map_g = {}
             map_l = {}

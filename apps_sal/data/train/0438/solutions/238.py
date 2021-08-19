@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         parent = [i for i in range(n)]
@@ -14,9 +15,8 @@ class Solution:
             old = (cnt[find(n1)] == m) + (cnt[find(n2)] == m)
             cnt[find(n2)] += cnt[find(n1)]
             parent[find(n1)] = find(n2)
-            new = (cnt[find(n2)] == m)
+            new = cnt[find(n2)] == m
             self.m_cnt += new - old
-
         string = [0] * n
         ans = -1
         for i in range(n):

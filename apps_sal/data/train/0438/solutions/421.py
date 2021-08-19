@@ -1,4 +1,3 @@
-
 class Subset:
 
     def __init__(self, parent, rank):
@@ -13,7 +12,6 @@ def find(subsets, node):
 
 
 def union(subsets, x, y):
-
     xr = find(subsets, x)
     yr = find(subsets, y)
     if xr == yr:
@@ -21,7 +19,6 @@ def union(subsets, x, y):
     else:
         xr = subsets[xr]
         yr = subsets[yr]
-
         if xr.rank < yr.rank:
             xr.parent = yr.parent
             yr.rank += xr.rank
@@ -31,14 +28,12 @@ def union(subsets, x, y):
         else:
             xr.parent = yr.parent
             yr.rank = 2 * yr.rank
-
         return False
 
 
 class Solution:
 
     def findLatestStep(self, arr: List[int], m: int) -> int:
-
         a = [0 for ii in range(len(arr))]
         subsets = [Subset(i, 1) for i in range(len(arr))]
         groups = set()
@@ -61,5 +56,4 @@ class Solution:
                 groups.remove(find(subsets, i))
             if len(groups):
                 ans = j + 1
-
         return ans

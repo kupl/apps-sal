@@ -1,10 +1,10 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         l = len(arr)
         x = [[] for x in range(l + 1)]
         if l == m:
             return l
-
         last = -1
         lens = [0 for x in range(l + 1)]
         for i in range(0, l):
@@ -15,7 +15,6 @@ class Solution:
                 right = x[cur + 1]
             if cur - 1 >= 0:
                 left = x[cur - 1]
-
             lv = rv = cur
             ss = 1
             if left:
@@ -33,5 +32,4 @@ class Solution:
             lens[ss] += 1
             x[lv] = [ss, lv, rv]
             x[rv] = [ss, lv, rv]
-
         return last

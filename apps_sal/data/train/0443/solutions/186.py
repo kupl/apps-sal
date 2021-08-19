@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         count = 0
         ratings = rating
@@ -9,5 +10,4 @@ class Solution:
                         count += 1
                     elif ratings[i] < ratings[j] < ratings[k]:
                         count += 1
-
         return count

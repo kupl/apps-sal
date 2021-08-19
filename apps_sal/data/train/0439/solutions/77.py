@@ -1,4 +1,5 @@
 class Solution:
+
     def maxTurbulenceSize(self, A: List[int]) -> int:
         dp = [0] * len(A)
         for i in range(1, len(A)):

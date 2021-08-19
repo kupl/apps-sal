@@ -1,4 +1,5 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         k = 1
         num_ways = 0

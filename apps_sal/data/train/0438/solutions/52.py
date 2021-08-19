@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         ta = [-1] * n
@@ -7,7 +8,7 @@ class Solution:
         g = {}
         ans = -1
         gc = {}
-        for step, v in enumerate(arr):
+        for (step, v) in enumerate(arr):
             idx = v - 1
             wl = False
             wr = False
@@ -35,7 +36,7 @@ class Solution:
                     gc[ngl + 1] = 0
                 gc[ngl + 1] += 1
                 wr = True
-            if not wl and not wr:
+            if not wl and (not wr):
                 sg[idx] = idx
                 eg[idx] = idx
                 g[idx] = 1
@@ -57,9 +58,7 @@ class Solution:
                 eg[egi] = sgi
                 sg[sgi] = egi
             ta[idx] = v
-
             if m in gc and gc[m] > 0:
                 ans = step + 1
-
             step += 1
         return ans

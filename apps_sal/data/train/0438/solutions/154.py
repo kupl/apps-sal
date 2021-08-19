@@ -1,6 +1,7 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        '''
+        """
         n = len(arr)
         parents = list(range(n))
         ranks = [0] * n
@@ -48,21 +49,18 @@ class Solution:
                 last = step + 1
 
         return last
-        '''
+        """
         n = len(arr)
         length = [0] * (n + 2)
         count = [0] * (n + 1)
         ans = -1
-
-        for step, index in enumerate(arr):
+        for (step, index) in enumerate(arr):
             left = length[index - 1]
             right = length[index + 1]
             length[index - left] = length[index + right] = left + right + 1
             count[left] -= 1
             count[right] -= 1
             count[length[index - left]] += 1
-
             if count[m]:
                 ans = step + 1
-
         return ans

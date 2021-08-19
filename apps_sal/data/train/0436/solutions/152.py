@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         day_dict = set([n])
         day = 0

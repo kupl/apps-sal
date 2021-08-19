@@ -2,6 +2,7 @@ from sortedcontainers import SortedList
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         sl = SortedList()
         n = len(arr)
@@ -21,8 +22,7 @@ class Solution:
                 elif idx == len(sl):
                     if n - arr[s] == m or arr[s] - sl[idx - 1] - 1 == m:
                         return s
-                else:
-                    if arr[s] - sl[idx - 1] - 1 == m or sl[idx] - arr[s] - 1 == m:
-                        return s
+                elif arr[s] - sl[idx - 1] - 1 == m or sl[idx] - arr[s] - 1 == m:
+                    return s
             sl.add(arr[s])
         return -1

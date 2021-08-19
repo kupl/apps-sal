@@ -11,11 +11,11 @@ class Solution:
                 return 2
             else:
                 return 0
-        for ind, val in enumerate(rating[2:]):
+        for (ind, val) in enumerate(rating[2:]):
             ind += 2
             for a in range(ind - 1):
                 for b in range(a + 1, ind):
                     c = check(a, b)
-                    if c == 1 and val < rating[b] or c == 2 and val > rating[b]:
+                    if c == 1 and val < rating[b] or (c == 2 and val > rating[b]):
                         res += 1
         return res

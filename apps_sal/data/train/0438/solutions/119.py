@@ -2,6 +2,7 @@ from bisect import bisect_left
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         N = len(arr)
         if m == N:
@@ -15,8 +16,8 @@ class Solution:
                 if bits[idx][1] == a:
                     bits.pop(idx)
                 else:
-                    s, e = bits[idx]
-                    if (e - s) == m:
+                    (s, e) = bits[idx]
+                    if e - s == m:
                         return i
                     bits[idx] = (s + 1, e)
                 continue
@@ -28,9 +29,9 @@ class Solution:
             else:
                 before = (bits[idx][0], a - 1)
                 after = (a + 1, bits[idx][1])
-                if (before[1] - before[0] + 1) == m:
+                if before[1] - before[0] + 1 == m:
                     return i
-                if (after[1] - after[0] + 1) == m:
+                if after[1] - after[0] + 1 == m:
                     return i
                 bits[idx:idx + 1] = [before, after]
         return -1

@@ -1,9 +1,11 @@
 class Solution:
+
     def __init__(self):
         self.lmemo = {}
         self.gmemo = {}
 
     def maxTurbulenceSize(self, A: List[int]) -> int:
+
         def rmtsl(pos):
             if pos not in self.lmemo:
                 self.lmemo[pos] = 1 + (rmtsg(pos + 1) if A[pos] < A[pos + 1] else 0)

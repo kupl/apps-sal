@@ -1,8 +1,8 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         from itertools import combinations
         com = list(combinations(rating, 3))
-
         cnt = 0
         if len(rating) < 2:
             return 0

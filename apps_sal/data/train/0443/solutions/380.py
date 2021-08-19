@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         count = 0
         for i in range(0, len(rating) - 2):
@@ -12,7 +13,6 @@ class Solution:
                     if flag == 1:
                         if rating[k] > rating[j]:
                             count = count + 1
-                    else:
-                        if rating[k] < rating[j]:
-                            count = count + 1
+                    elif rating[k] < rating[j]:
+                        count = count + 1
         return count

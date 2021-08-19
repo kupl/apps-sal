@@ -1,7 +1,7 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         ans = 0
-
         n = len(rating)
         for i in range(n):
             for j in range(i, n):

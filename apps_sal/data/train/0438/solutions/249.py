@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         if m == n:
@@ -13,7 +14,6 @@ class Solution:
                 return -1
             if end - start + 1 < target:
                 return -1
-
             if end - start + 1 == target:
                 return step
             bp = arr[step - 1]
@@ -23,5 +23,4 @@ class Solution:
             else:
                 res = max(res, dfs(start, end, step - 1, target))
             return res
-
         return dfs(1, n, n, m)

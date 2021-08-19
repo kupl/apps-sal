@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         num = N
         if num == 1:
@@ -16,5 +17,4 @@ class Solution:
                     counter += 1
         if num % 2 == 1:
             counter += 1
-
         return counter

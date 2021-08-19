@@ -2,6 +2,7 @@ from itertools import combinations
 
 
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         res = list(combinations(rating, 3))
         count = 0

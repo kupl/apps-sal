@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, A: List[int], m: int) -> int:
         res = -1
         x = 0
@@ -29,10 +30,10 @@ class Solution:
         n = len(A)
         for i in range(1, n + 1):
             j = A[i - 1]
-            k = 1 << (n - j)
+            k = 1 << n - j
             x += k
             s = bin(x)[2:]
             ss = s.split('0')
-            if any(len(s2) == m for s2 in ss):
+            if any((len(s2) == m for s2 in ss)):
                 res = i
         return res

@@ -1,13 +1,14 @@
 from collections import Counter
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self):
-        self.uf, self.rank, self.size, self.cnt = {}, {}, {}, Counter()
+        (self.uf, self.rank, self.size, self.cnt) = ({}, {}, {}, Counter())
 
     def add(self, x):
         if x not in self.uf:
-            self.uf[x], self.rank[x], self.size[x] = x, 0, 1
+            (self.uf[x], self.rank[x], self.size[x]) = (x, 0, 1)
             self.cnt[1] += 1
 
     def find(self, x):
@@ -17,7 +18,7 @@ class UnionFind():
         return self.uf[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         if xr == yr:
             return
         self.cnt[self.size[xr]] -= 1
@@ -26,7 +27,7 @@ class UnionFind():
             self.uf[xr] = yr
             self.size[yr] += self.size[xr]
             self.cnt[self.size[yr]] += 1
-            self.rank[yr] += (self.rank[xr] == self.rank[yr])
+            self.rank[yr] += self.rank[xr] == self.rank[yr]
         else:
             self.uf[yr] = xr
             self.size[xr] += self.size[yr]
@@ -34,10 +35,11 @@ class UnionFind():
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         uf = UnionFind()
         ans = -1
-        for s, ind in enumerate(arr):
+        for (s, ind) in enumerate(arr):
             if ind not in uf.uf:
                 uf.add(ind)
             if ind - 1 in uf.uf:

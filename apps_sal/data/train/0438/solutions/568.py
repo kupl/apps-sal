@@ -1,9 +1,9 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         mask = [0] * (n + 2)
         ans = -1
-
         i = 1
         count = 0
         for index in arr:
@@ -14,7 +14,6 @@ class Solution:
                     count -= 1
             mask[index - mask[index - 1]] = total_len
             mask[index + mask[index + 1]] = total_len
-
             if total_len == m:
                 count += 1
             if count > 0:

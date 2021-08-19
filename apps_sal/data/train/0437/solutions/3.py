@@ -1,7 +1,8 @@
 class Solution:
+
     def decodeAtIndex(self, S: str, K: int) -> str:
         fullSize = 0
-        for idx, char in enumerate(S):
+        for (idx, char) in enumerate(S):
             if char.isdigit():
                 fullSize *= int(char)
             else:
@@ -9,14 +10,12 @@ class Solution:
             if fullSize > K:
                 break
         endIdx = idx
-
         for idx in range(endIdx, -1, -1):
             if S[idx].isdigit():
                 fullSize /= int(S[idx])
                 if K > fullSize:
                     K %= fullSize
+            elif K == 0 or K == fullSize:
+                return S[idx]
             else:
-                if K == 0 or K == fullSize:
-                    return S[idx]
-                else:
-                    fullSize -= 1
+                fullSize -= 1

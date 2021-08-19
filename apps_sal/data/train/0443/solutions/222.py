@@ -2,7 +2,7 @@ class Solution:
 
     def createAscGraph(self, ratings):
         graph = {}
-        for index, rating in enumerate(ratings):
+        for (index, rating) in enumerate(ratings):
             graph[rating] = []
             for rate in ratings[index + 1:]:
                 if rate > rating:
@@ -11,7 +11,7 @@ class Solution:
 
     def createDescGraph(self, ratings):
         graph = {}
-        for index, rating in enumerate(ratings):
+        for (index, rating) in enumerate(ratings):
             graph[rating] = []
             for rate in ratings[index + 1:]:
                 if rate < rating:
@@ -24,11 +24,9 @@ class Solution:
             for item in graph[key]:
                 for item in graph[item]:
                     counter += 1
-
         return counter
 
     def numTeams(self, rating: List[int]) -> int:
         asc_graph = self.createAscGraph(rating)
         desc_graph = self.createDescGraph(rating)
-
         return self.count_sequences(asc_graph) + self.count_sequences(desc_graph)

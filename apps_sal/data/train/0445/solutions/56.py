@@ -1,8 +1,8 @@
 class Solution:
+
     def minDifference(self, A: List[int]) -> int:
         if len(A) <= 4:
             return 0
-
         max_vals = [0] * 4
         min_vals = [math.inf] * 4
         for a in A:

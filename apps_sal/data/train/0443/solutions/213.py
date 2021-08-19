@@ -1,6 +1,7 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
-        stack, ans = [], 0
+        (stack, ans) = ([], 0)
         for r in rating:
             new = [[r]]
             for team in stack:

@@ -1,8 +1,9 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         if n < 4:
             return 1 if n == 1 else 2
-        res, cur = 0, {n}
+        (res, cur) = (0, {n})
 
         def Op(i):
             ans = {i - 1}

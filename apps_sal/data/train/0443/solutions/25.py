@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         return len(Solution.generate_teams(rating))
 
@@ -7,7 +8,6 @@ class Solution:
         teams = []
         rating_copy = rating
         negative_rating = [-num for num in rating]
-
         for rating in (rating_copy, negative_rating):
             for i in range(len(rating)):
                 curr_first_soldier = rating[i]
@@ -22,13 +22,12 @@ class Solution:
 
 
 class SolutionTest:
+
     @staticmethod
     def test_generate_teams():
         test_ratings = [2, 3, 7, 1, 8, 9]
-
         actual_teams = [(2, 3, 7), (2, 3, 8), (2, 3, 9), (2, 7, 8), (2, 7, 9), (2, 8, 9), (3, 7, 8), (3, 7, 9), (3, 8, 9), (7, 8, 9), (1, 8, 9)]
         expected_teams = Solution.generate_teams(test_ratings)
-
         return actual_teams == expected_teams
 
 

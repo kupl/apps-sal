@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         F = [0] * n
@@ -10,10 +11,8 @@ class Solution:
             else:
                 F[x] = find(F[x])
                 return F[x]
-
         t = [0] * n
         ans = -1
-
         for i in range(n):
             ind = arr[i] - 1
             d[1] += 1

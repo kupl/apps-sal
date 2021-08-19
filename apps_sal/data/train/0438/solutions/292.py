@@ -1,7 +1,7 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         N = len(arr)
-
         parents = list(range(N))
         sizes = [0 for _ in range(N)]
         m_count = 0
@@ -24,10 +24,9 @@ class Solution:
                 if sizes[parent_j] == m:
                     m_count += 1
                 parents[parent_i] = parent_j
-
         groups = [0] * N
         latest_round = -1
-        for i, a in enumerate(arr, start=1):
+        for (i, a) in enumerate(arr, start=1):
             a -= 1
             groups[a] = 1
             sizes[a] = 1

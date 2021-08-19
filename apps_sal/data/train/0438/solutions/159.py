@@ -1,9 +1,10 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         groups = {}
         cnt = 0
         result = -1
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             b = a - 1
             if b in groups:
                 l = groups.pop(b)
@@ -19,7 +20,7 @@ class Solution:
                 l = groups.pop(a)
                 r = groups.pop(c)
                 groups[c + r - 1] = groups[a - l + 1] = l + r
-                cnt += (l + r) == m
+                cnt += l + r == m
                 cnt -= (l == m) + (r == m)
             if cnt != 0:
                 result = i + 1

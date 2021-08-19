@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         if n == m:
@@ -25,6 +26,7 @@ class Solution:
 
 
 class MaxQueue:
+
     def __init__(self, size):
         self.queue = deque()
         self.size = size

@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         N = len(arr)
         arr = [x - 1 for x in arr]
@@ -15,19 +16,16 @@ class Solution:
         def uunion(a, b):
             sa = ufind(a)
             sb = ufind(b)
-
             if sa != sb:
                 parent[sa] = parent[sb]
                 size[sb] += size[sa]
 
         def usize(a):
             return size[ufind(a)]
-
         counts = [0] * (N + 1)
         latest = -1
         print('arr', arr)
-
-        for index, x in enumerate(arr):
+        for (index, x) in enumerate(arr):
             left = 0
             if x - 1 >= 0 and used[x - 1]:
                 left = usize(x - 1)
@@ -50,5 +48,4 @@ class Solution:
                 uunion(x, x + 1)
             if counts[m] > 0:
                 latest = max(latest, index + 1)
-
         return latest

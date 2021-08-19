@@ -1,11 +1,12 @@
 class Solution:
+
     def findLatestStep(self, a: List[int], m: int) -> int:
         n = len(a)
-        left, right = [0] * (n + 2), [0] * (n + 2)
+        (left, right) = ([0] * (n + 2), [0] * (n + 2))
         count = [0] * (n + 2)
         ans = -1
-        for i, x in enumerate(a):
-            left[x], right[x] = x, x
+        for (i, x) in enumerate(a):
+            (left[x], right[x]) = (x, x)
             count[1] += 1
             if left[x - 1] != 0:
                 count[1] -= 1

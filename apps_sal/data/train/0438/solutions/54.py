@@ -1,12 +1,13 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         start = {}
         end = {}
         groups = collections.defaultdict(set)
         ans = -1
-        for idx, a in enumerate(arr):
-            new_start, new_end = a, a
+        for (idx, a) in enumerate(arr):
+            (new_start, new_end) = (a, a)
             if a + 1 in start:
                 new_end = start[a + 1]
                 del start[a + 1]

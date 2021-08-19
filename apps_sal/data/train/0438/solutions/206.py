@@ -1,15 +1,17 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
+
         def func(i):
             if d[i] != i:
                 d[i] = func(d[i])
             return d[i]
-        d, dd, a, s = {}, {}, {}, -1
-        for p, i in enumerate(arr, 1):
+        (d, dd, a, s) = ({}, {}, {}, -1)
+        for (p, i) in enumerate(arr, 1):
             if i - 1 in d:
                 if i + 1 in d:
-                    j, k = func(i - 1), func(i + 1)
-                    d[k], d[i] = j, j
+                    (j, k) = (func(i - 1), func(i + 1))
+                    (d[k], d[i]) = (j, j)
                     a[dd[j]] -= 1
                     a[dd[k]] -= 1
                     dd[j] += dd[k] + 1

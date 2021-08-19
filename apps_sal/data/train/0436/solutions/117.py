@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         self.ans = float('inf')
 
@@ -17,6 +18,5 @@ class Solution:
                 search(days, num // 2)
             search(days, num - 1)
             return
-
         search(0, n)
         return self.ans

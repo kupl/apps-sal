@@ -1,10 +1,11 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         start_dict = {}
         end_dict = {}
         m_dict = {}
         last_step = -2
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             if num + 1 not in start_dict and num - 1 not in end_dict:
                 start = num
                 end = num

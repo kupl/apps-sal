@@ -1,4 +1,5 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         ans = 0
         for k in range(1, int(sqrt(2 * N)) + 1):

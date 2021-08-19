@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         result = 0
         for i in range(len(rating)):
@@ -6,7 +7,7 @@ class Solution:
                 if rating[j] == rating[i]:
                     continue
                 if rating[j] < rating[i]:
-                    result += sum(num < rating[j] for num in rating[j + 1:])
+                    result += sum((num < rating[j] for num in rating[j + 1:]))
                 else:
-                    result += sum(num > rating[j] for num in rating[j + 1:])
+                    result += sum((num > rating[j] for num in rating[j + 1:]))
         return result

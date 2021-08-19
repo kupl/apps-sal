@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         pairs = []
         if len(rating) == 1 or len(rating) == 2:
@@ -11,5 +12,4 @@ class Solution:
                             pairs.append([rating[i], rating[j], rating[k]])
                         elif rating[i] < rating[j] < rating[k]:
                             pairs.append([rating[i], rating[j], rating[k]])
-
             return len(pairs)

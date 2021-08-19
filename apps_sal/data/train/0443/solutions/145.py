@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         ans = 0
         for i in range(len(rating) - 2):
@@ -8,5 +9,4 @@ class Solution:
                         ans += 1
                     if rating[i] > rating[j] and rating[j] > rating[k]:
                         ans += 1
-
         return ans
