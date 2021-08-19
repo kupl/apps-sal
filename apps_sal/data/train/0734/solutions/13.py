@@ -1,7 +1,4 @@
-
-
 t = int(input())
-
 for i in range(t):
     n = int(input())
     hash = {}
@@ -16,15 +13,11 @@ for i in range(t):
     flag = 0
     max = 0
     for j in range(n):
-
         if hash[l[j]] > n // 2:
             flag = 1
             break
         elif hash[l[j]] > max:
             max = hash[l[j]]
-    # l.sort()
-    # print(max)
-    # print(l)
     v = sorted(range(len(l)), key=lambda k: l[k])
     u = sorted(l)
     ans = [0] * n
@@ -33,7 +26,6 @@ for i in range(t):
         z = u[max:] + u[:max]
         for i in range(n):
             ans[v[i]] = z[i]
-
         print(*ans)
     else:
         print('No')

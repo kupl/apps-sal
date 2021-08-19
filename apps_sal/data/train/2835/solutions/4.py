@@ -5,7 +5,7 @@ def solve(a, b):
     """
     prime_seq = ''
     for prime in gen_primes():
-        if len(prime_seq) > (a + b):
+        if len(prime_seq) > a + b:
             break
         prime_seq += str(prime)
     print(prime_seq)
@@ -19,7 +19,7 @@ def gen_primes():
     returns generator object
     """
     D = {}
-    p = 2  # running integer
+    p = 2
     while True:
         if p not in D:
             yield p

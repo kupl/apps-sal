@@ -1,6 +1,6 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        # DFS
         self.N = len(locations)
         self.finish = finish
         self.M = dict()
@@ -13,7 +13,6 @@ class Solution:
                 for j in range(self.N):
                     if j != i and f >= abs(locations[i] - locations[j]):
                         res += dfs(j, f - abs(locations[i] - locations[j]))
-                self.M[(i, f)] = res
-            return self.M[(i, f)]
-
-        return dfs(start, fuel) % (10**9 + 7)
+                self.M[i, f] = res
+            return self.M[i, f]
+        return dfs(start, fuel) % (10 ** 9 + 7)

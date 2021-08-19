@@ -1,12 +1,9 @@
-# cook your dish here
 from collections import Counter
-
 tc = int(input())
-
 while tc > 0:
     n = int(input())
     lis = list(map(int, input().split()))
-    l1 = [(x, y) for y, x in enumerate(lis)]
+    l1 = [(x, y) for (y, x) in enumerate(lis)]
     lis.sort()
     l1.sort()
     i = 0

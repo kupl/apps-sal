@@ -1,7 +1,7 @@
 class Solution:
+
     @functools.lru_cache(None)
     def core(self, start, finish, fuel):
-        # what is your next hop?
         if fuel < 0:
             return 0
         elif abs(self.locs[start] - self.locs[finish]) > fuel:
@@ -9,29 +9,25 @@ class Solution:
         elif fuel == 0:
             return 1 if start == finish else 0
         else:
-            # hop to a third party
             i = start - 1
             cntr = 1 if start == finish else 0
             while i >= 0:
-                # first hop
                 cost = self.locs[start] - self.locs[i]
-                if (2 * cost > fuel and finish >= start) or cost > fuel:
+                if 2 * cost > fuel and finish >= start or cost > fuel:
                     break
                 cntr += self.core(i, finish, fuel - cost)
                 cntr %= self.mod
                 i -= 1
                 pass
-
             i = start + 1
             while i < len(self.locs):
                 cost = self.locs[i] - self.locs[start]
-                if (2 * cost > fuel and finish <= start) or cost > fuel:
+                if 2 * cost > fuel and finish <= start or cost > fuel:
                     break
                 cntr += self.core(i, finish, fuel - cost)
                 cntr %= self.mod
                 i += 1
                 pass
-            # print(\"%d -> %d (%d) : %d\" % (start, finish, fuel, cntr))
             return cntr
         pass
 

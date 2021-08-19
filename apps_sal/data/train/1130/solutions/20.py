@@ -1,7 +1,6 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
-    N, D = list(map(int, input().split(' ')))
+    (N, D) = list(map(int, input().split(' ')))
     lst = list(map(int, input().split(' ')))
     if D == 1:
         print(N)

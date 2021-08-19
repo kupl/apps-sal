@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         dp = []
         for i in range(len(locations)):
@@ -23,11 +24,8 @@ class Solution:
                 ret += count(i, fuel_left + consume)
             dp[dest][fuel_left] = ret
             return ret
-
         ret = 0
         for i in range(fuel + 1):
             partial = count(finish, i)
             ret += partial
-            # print(partial)
-        # print(dp)
-        return ret % (10**9 + 7)
+        return ret % (10 ** 9 + 7)
