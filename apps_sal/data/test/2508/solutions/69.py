@@ -1,12 +1,8 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
-
 from collections import deque
-H, W, K = map(int, input().split())
-sth, stw, glh, glw = map(int, input().split())
-sth, stw = sth - 1, stw - 1
-glh, glw = glh - 1, glw - 1
-
+(H, W, K) = map(int, input().split())
+(sth, stw, glh, glw) = map(int, input().split())
+(sth, stw) = (sth - 1, stw - 1)
+(glh, glw) = (glh - 1, glw - 1)
 INF = -1
 Gmap = [list(input()) for _ in range(H)]
 Seen = [[INF] * W for _ in range(H)]
@@ -17,13 +13,11 @@ def bfs(sth, stw, glh, glw):
     next_q = deque([])
     next_q.append((sth, stw, 0))
     Seen[sth][stw] = 0
-
     while len(next_q) != 0:
-        # キュー取り出し(先頭)
-        h, w, c = next_q.popleft()
-        for dh, dw in direc:
+        (h, w, c) = next_q.popleft()
+        for (dh, dw) in direc:
             for sk in range(1, K + 1):
-                hs, ws = h + dh * sk, w + dw * sk
+                (hs, ws) = (h + dh * sk, w + dw * sk)
                 if not (0 <= hs < H and 0 <= ws < W):
                     break
                 if Gmap[hs][ws] == '@':

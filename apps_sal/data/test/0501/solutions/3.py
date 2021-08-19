@@ -1,6 +1,5 @@
-l, r = [int(e) for e in input().split()]
-
-MOD = 1_000_000_007
+(l, r) = [int(e) for e in input().split()]
+MOD = 1000000007
 
 
 def sum_range(start, num):
@@ -13,7 +12,6 @@ def sum(n):
     s = [1, 2]
     cnt = 1
     which = 0
-    # print(f"n = {n}", end="")
     while n > 0:
         diff = min(n, cnt)
         ans += sum_range(s[which], diff)
@@ -22,7 +20,6 @@ def sum(n):
         n -= diff
         cnt *= 2
         which = 1 - which
-    # print(ans)
     return ans
 
 

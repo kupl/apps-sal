@@ -1,6 +1,5 @@
-mod = 10**9 + 7
-
-l, r = [int(i) for i in input().split()]
+mod = 10 ** 9 + 7
+(l, r) = [int(i) for i in input().split()]
 
 
 def calc(x):
@@ -24,15 +23,14 @@ def calc(x):
             a.append(x - su)
         else:
             b.append(x - su)
+    return (sum(a), sum(b))
 
-    return sum(a), sum(b)
 
-
-def tot(x):  # total sum of nums till x nums in list
-    odds, evens = calc(x)
+def tot(x):
+    (odds, evens) = calc(x)
     ans = 0
-    ans += ((odds % mod) * (odds % mod)) % mod
-    ans += (((evens % mod) * (evens % mod)) % mod + evens) % mod
+    ans += odds % mod * (odds % mod) % mod
+    ans += (evens % mod * (evens % mod) % mod + evens) % mod
     return ans % mod
 
 

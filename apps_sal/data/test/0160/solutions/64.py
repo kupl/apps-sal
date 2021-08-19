@@ -4,34 +4,51 @@ from collections import deque
 from math import ceil, floor, log2
 import sys
 sys.setrecursionlimit(10 ** 6)
-# input = sys.stdin.readline    ####
-def int1(x): return int(x) - 1
-def II(): return int(input())
 
 
-def MI(): return list(map(int, input().split()))
-def MI1(): return list(map(int1, input().split()))
+def int1(x):
+    return int(x) - 1
 
 
-def LI(): return list(map(int, input().split()))
-def LI1(): return list(map(int1, input().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
+def II():
+    return int(input())
 
 
-def SI(): return input().split()
+def MI():
+    return list(map(int, input().split()))
 
 
-def printlist(lst, k='\n'): print((k.join(list(map(str, lst)))))
+def MI1():
+    return list(map(int1, input().split()))
+
+
+def LI():
+    return list(map(int, input().split()))
+
+
+def LI1():
+    return list(map(int1, input().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def SI():
+    return input().split()
+
+
+def printlist(lst, k='\n'):
+    print(k.join(list(map(str, lst))))
 
 
 INF = float('inf')
 
 
 def solve():
-    n, k = MI()
+    (n, k) = MI()
     A = LI()
     sm = sum(A)
-
     div = []
     for i in range(1, int(pow(sm, 0.5)) + 1):
         if sm % i:

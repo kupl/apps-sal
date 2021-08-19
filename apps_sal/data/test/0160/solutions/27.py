@@ -1,9 +1,9 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 
 
 def make_divisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -27,11 +27,10 @@ for i in D:
     E = sorted(E)
     cn = 0
     e = sum(E)
-    left, right = e, 0
-    # print(i,E)
+    (left, right) = (e, 0)
     for k in range(len(E)):
         left -= E[-1 - k]
-        right += (i - E[-1 - k])
+        right += i - E[-1 - k]
         if left == right:
             if left <= K:
                 ans = i
