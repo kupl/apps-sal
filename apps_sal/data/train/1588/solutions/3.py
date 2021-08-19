@@ -1,4 +1,3 @@
-# cook your dish here
 def comp(a, b):
     if len(a) > len(b):
         return b
@@ -20,7 +19,7 @@ for _ in range(int(input())):
     b = []
     c = []
     for i in range(n):
-        name, score = map(str, input().split())
+        (name, score) = map(str, input().split())
         a.append([name, score])
         if score not in c:
             if score in b:
@@ -28,9 +27,8 @@ for _ in range(int(input())):
                 c.append(score)
             else:
                 b.append(score)
-
     if len(b) == 0:
-        print("Nobody wins.")
+        print('Nobody wins.')
     else:
         ans = b[0]
         for i in range(1, len(b)):

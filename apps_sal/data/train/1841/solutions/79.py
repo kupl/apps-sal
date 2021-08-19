@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         if len(arr) == 1:
             return arr
@@ -7,8 +8,6 @@ class Solution:
         median = arr[med_loc]
         count = 0
         ans = []
-        # arr.remove(median)
-        # arr = deque(arr)
         while count < k:
             if abs(arr[0] - median) > abs(arr[-1] - median):
                 ans.append(arr[0])
@@ -17,5 +16,4 @@ class Solution:
                 ans.append(arr[-1])
                 arr.pop()
             count += 1
-
         return ans

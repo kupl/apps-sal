@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import OrderedDict
 for _ in range(int(input())):
     a = []
@@ -8,7 +7,7 @@ for _ in range(int(input())):
     l = [0] * n
     flag = 0
     for i in range(n):
-        s[i], t = input().split()
+        (s[i], t) = input().split()
         t = int(t)
         a.append(t)
     l = a.copy()
@@ -19,7 +18,7 @@ for _ in range(int(input())):
             flag = 1
             break
     if flag == 0:
-        print("Nobody wins.")
+        print('Nobody wins.')
     else:
         h = l.index(a[m])
         print(s[h])
