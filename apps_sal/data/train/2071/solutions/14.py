@@ -13,9 +13,9 @@ def solver(L):
     xyDict = dict()
     for (x, y) in L:
         if (x, y) in xyDict:
-            xyDict[(x, y)] += 1
+            xyDict[x, y] += 1
         else:
-            xyDict[(x, y)] = 1
+            xyDict[x, y] = 1
     repeats = 0
     for xy in xyDict:
         n = xyDict[xy]
@@ -42,30 +42,16 @@ def solver(L):
 
 
 def almostEqual(x, y):
-    return abs(x - y) < 10**-8
+    return abs(x - y) < 10 ** (-8)
 
 
 def distance(x1, y1, x2, y2):
     leg1 = abs(x1 - x2)
     leg2 = abs(y1 - y2)
-    return (leg1**2 + leg2**2)**0.5
+    return (leg1 ** 2 + leg2 ** 2) ** 0.5
 
 
 L = [(1, 1), (7, 5), (1, 5)]
 L2 = [(0, 0), (0, 1), (0, 2), (-1, 1), (0, 1), (1, 1)]
 L3 = [(0, 0), (0, 0), (0, 0)]
-# print(solver(L))
 main()
-
-# for i in range(len(L)):
-# 	(x1, y1) = L[i]
-# 	for j in range(i + 1, len(L)):
-# 		(x2, y2) = L[j]
-# 		distx = abs(x1 - x2)
-# 		disty = abs(y1 - y2)
-# 		if distx == 0 or disty == 0:
-# 			count += 1
-#dist1 = abs(x1 - x2) + abs(y1 - y2)
-#dist2 = distance(x1, y1, x2, y2)
-# if almostEqual(dist1, dist2):
-#	count += 1

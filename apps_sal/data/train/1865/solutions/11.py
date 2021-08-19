@@ -20,8 +20,8 @@ def can_move(source, dest, a, walls, box):
 
 
 def is_valid(a, pos, walls, box=''):
-    x, y = pos
-    if 0 <= x < len(a) and 0 <= y < len(a[0]) and (x, y) not in walls and (x, y) != box:
+    (x, y) = pos
+    if 0 <= x < len(a) and 0 <= y < len(a[0]) and ((x, y) not in walls) and ((x, y) != box):
         return True
     return False
 
@@ -38,17 +38,17 @@ def get_info(a):
                 target = (i, j)
             if a[i][j] == 'B':
                 box = (i, j)
-    return person, target, box, walls
+    return (person, target, box, walls)
 
 
 def get_min_moves(a):
-    person, target, box, walls = get_info(a)
+    (person, target, box, walls) = get_info(a)
     q = deque()
     q.append((0, box, person))
     result = float('inf')
     visited = set()
     while q:
-        dist, box, person = q.popleft()
+        (dist, box, person) = q.popleft()
         if (box, person) in visited:
             continue
         visited.add((box, person))
@@ -65,5 +65,6 @@ def get_min_moves(a):
 
 
 class Solution:
+
     def minPushBox(self, grid: List[List[str]]) -> int:
         return get_min_moves(grid)
