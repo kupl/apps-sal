@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = n * (k - 1) + 1
 sm = n * (2 * a + (n - 1) * (n - k + 1)) // 2
 t = [[0] * n for i in range(n)]
@@ -13,4 +13,4 @@ for i in range(n):
         x += 1
 print(sm)
 for row in t:
-    print(" ".join(map(str, row)))
+    print(' '.join(map(str, row)))

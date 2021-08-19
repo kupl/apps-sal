@@ -1,11 +1,11 @@
 import sys
-sys.setrecursionlimit(10**6)
-n, u, v = map(int, input().split())
+sys.setrecursionlimit(10 ** 6)
+(n, u, v) = map(int, input().split())
 u -= 1
 v -= 1
 graph = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
 d1 = [None] * n
@@ -25,7 +25,7 @@ d2[v] = 0
 dfs(u, d1)
 dfs(v, d2)
 ans = 0
-for i, j in zip(d1, d2):
+for (i, j) in zip(d1, d2):
     if i < j:
         ans = max(ans, j - 1)
 print(ans)

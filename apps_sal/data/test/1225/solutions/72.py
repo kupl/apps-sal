@@ -6,4 +6,4 @@ def f(h):
 
 
 h = int(input())
-print((f(h)))
+print(f(h))

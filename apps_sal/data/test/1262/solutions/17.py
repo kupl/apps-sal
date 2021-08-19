@@ -3,13 +3,12 @@ input = sys.stdin.readline
 n = int(input())
 X = [[0] * 7 for _ in range(n)]
 for i in range(n):
-    x, y = map(int, input().split())
-    X[i][0], X[i][1], X[i][2] = i + 1, x, y
+    (x, y) = map(int, input().split())
+    (X[i][0], X[i][1], X[i][2]) = (i + 1, x, y)
 C = [int(i) for i in input().split()]
 K = [int(i) for i in input().split()]
 for i in range(n):
-    X[i][3], X[i][4] = C[i], K[i]
-
+    (X[i][3], X[i][4]) = (C[i], K[i])
 ans_am = 0
 ans_ps = 0
 Ans = []
@@ -29,7 +28,7 @@ def m(X):
 
 while X:
     r = m(X)
-    ind, x, y, c, k, flag, source = X.pop(r)
+    (ind, x, y, c, k, flag, source) = X.pop(r)
     ans_am += c
     if flag == 0:
         ans_ps += 1
@@ -38,14 +37,13 @@ while X:
         ans_con += 1
         Con.append((ind, source))
     for i in range(len(X)):
-        indi, xi, yi, ci, ki, flagi, sourcei = X[i]
+        (indi, xi, yi, ci, ki, flagi, sourcei) = X[i]
         cost = (k + ki) * (abs(x - xi) + abs(y - yi))
         if cost < ci:
-            X[i][3], X[i][5], X[i][6] = cost, 1, ind
-
+            (X[i][3], X[i][5], X[i][6]) = (cost, 1, ind)
 print(ans_am)
 print(ans_ps)
 print(*Ans)
 print(ans_con)
-for i, j in Con:
+for (i, j) in Con:
     print(i, j)

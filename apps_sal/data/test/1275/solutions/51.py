@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 DN = 2 * N
 ans = 0
 for ab in range(2, DN + 1):

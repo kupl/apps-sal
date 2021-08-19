@@ -1,5 +1,5 @@
 def myfunc(N):
-    if(N <= 1):
+    if N <= 1:
         return 1
     return 2 * myfunc(int(N / 2)) + 1
 

@@ -1,4 +1,4 @@
-n, s = (list(map(int, input().split())))
+(n, s) = list(map(int, input().split()))
 curtime = 0
 a = []
 for _ in range(n):

@@ -8,7 +8,6 @@ for x in a:
     if not x:
         zero.append(ii)
     ii += 1
-
 if len(zero) - k <= 0:
     print(n)
     string = '1'
@@ -23,7 +22,7 @@ elif k == 0:
     while string.find(o + '1') != -1:
         o += '1'
     print(len(o))
-    print(' '.join(str(x) for x in a))
+    print(' '.join((str(x) for x in a)))
 else:
     maxof1 = 0
     for i in range(len(zero) - k + 1):

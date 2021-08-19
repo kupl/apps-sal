@@ -3,7 +3,7 @@ from math import log
 
 def func(n, i):
     if n == 3:
-        return (str(1 * i) + ' ') + (str(1 * i) + ' ') + (str(3 * i))
+        return str(1 * i) + ' ' + (str(1 * i) + ' ') + str(3 * i)
     if n % 2 == 0:
         odd = n // 2
     else:
@@ -19,7 +19,7 @@ if n == 3:
 else:
     s = ''
     z = 1
-    while(n > 0):
+    while n > 0:
         s = s + func(n, z)
         z = z * 2
         if n == 3:

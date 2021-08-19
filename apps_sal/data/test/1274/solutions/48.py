@@ -1,11 +1,11 @@
 from heapq import heapify, heappop, heappush
-n, m = map(int, input().split())
-l = [[]for i in range(10**5)]
+(n, m) = map(int, input().split())
+l = [[] for i in range(10 ** 5)]
 ans = 0
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l[a - 1].append(-b)
-for i in range(10**5):
+for i in range(10 ** 5):
     heapify(l[i])
 p = []
 heapify(p)

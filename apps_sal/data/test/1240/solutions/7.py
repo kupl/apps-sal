@@ -2,7 +2,7 @@ n = int(input())
 l = []
 r = []
 for i in range(n):
-    li, ri = list(map(int, input().split(' ')))
+    (li, ri) = list(map(int, input().split(' ')))
     l.append(li)
     r.append(ri)
 L = sum(l)

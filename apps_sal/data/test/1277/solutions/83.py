@@ -15,10 +15,10 @@ def bfs(s):
     return dist
 
 
-n, u, v = map(int, input().split())
+(n, u, v) = map(int, input().split())
 G = [[] for _ in range(n + 1)]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G[a].append(b)
     G[b].append(a)
 dist1 = bfs(u)

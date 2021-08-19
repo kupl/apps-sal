@@ -11,10 +11,9 @@ def main():
         else:
             tmp = (N - i) // 2
         for j in range(1, tmp + 1):
-            if S[i] != S[i + j] and S[i] != S[i + 2 * j] and S[i + j] != S[i + 2 * j]:
+            if S[i] != S[i + j] and S[i] != S[i + 2 * j] and (S[i + j] != S[i + 2 * j]):
                 ans = ans - 1
-
     return ans
 
 
-print((main()))
+print(main())

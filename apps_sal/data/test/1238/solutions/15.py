@@ -21,7 +21,5 @@ def readlist():
 
 N = read()
 A = readlist()
-
 A.sort()
-
 print(A[-1] - A[0] - N + 1)

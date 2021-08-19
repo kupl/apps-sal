@@ -3,16 +3,14 @@ import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
-N, u, v = map(int, input().split())
-
+(N, u, v) = map(int, input().split())
 E = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
-    ta, tb = map(int, input().split())
+    (ta, tb) = map(int, input().split())
     E[ta].append(tb)
     E[tb].append(ta)
 E = np.array(E)
-
-inf = 10**9
+inf = 10 ** 9
 taka = np.full(N + 1, inf, dtype=np.int64)
 ao = np.full(N + 1, inf, dtype=np.int64)
 taka[u] = 0

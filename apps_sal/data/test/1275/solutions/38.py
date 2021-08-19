@@ -1,4 +1,4 @@
-N, K = [int(x) for x in input().split()]
+(N, K) = [int(x) for x in input().split()]
 minA = 2
 maxA = 2 * N
 minC = 2

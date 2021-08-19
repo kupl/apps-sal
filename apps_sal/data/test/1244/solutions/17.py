@@ -9,6 +9,6 @@ for i in range(1001):
     if s[i] > (n + 1) // 2:
         f = False
 if f:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,15 +1,13 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**9)
-
+sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
-
-N, u, v = list(map(int, input().split()))
-u, v = u - 1, v - 1
+(N, u, v) = list(map(int, input().split()))
+(u, v) = (u - 1, v - 1)
 adjL = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = list(map(int, input().split()))
-    a, b = a - 1, b - 1
+    (a, b) = list(map(int, input().split()))
+    (a, b) = (a - 1, b - 1)
     adjL[a].append(b)
     adjL[b].append(a)
 
@@ -33,11 +31,9 @@ def bfsMinCosts(adjList, vSt, INF):
 
 costUs = bfsMinCosts(adjL, u, INF)
 costVs = bfsMinCosts(adjL, v, INF)
-
 ans = 0
 for x in range(N):
     if costUs[x] < costVs[x]:
         if costVs[x] > ans:
             ans = costVs[x]
-
-print((ans - 1))
+print(ans - 1)

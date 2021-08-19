@@ -9,7 +9,7 @@ else:
     current = 1
     while n != 1:
         if n % 2 != 0:
-            z = (n // 2) + 1
+            z = n // 2 + 1
         else:
             z = n // 2
         for i in range(z):
@@ -17,10 +17,10 @@ else:
         n -= z
         current *= 2
     step = int(log2(tmp))
-    if tmp % 2**(step - 1) == 0:
+    if tmp % 2 ** (step - 1) == 0:
         out.write(str(tmp))
     else:
-        q = 2**(step - 1)
+        q = 2 ** (step - 1)
         ans = 0
         for i in range(1, 1000):
             if q * i <= tmp:

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ara = list(map(int, input().split()))
 max = 0
 zero = 0
@@ -17,4 +17,4 @@ for i in range(0, n):
 print(max)
 for i in range(end - max + 1, end + 1):
     ara[i] = 1
-print(" ".join(map(str, ara)))
+print(' '.join(map(str, ara)))

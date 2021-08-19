@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [[0] * n for _ in range(n)]
 for i in range(n * n):
     if i < (m - 1) * n:

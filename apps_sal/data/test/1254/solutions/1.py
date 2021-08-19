@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 inp = tuple(([] for _ in range(m)))
 for __ in range(n):
-    s, r = list(map(int, input().split()))
+    (s, r) = list(map(int, input().split()))
     inp[s - 1].append(r)
 for rs in inp:
     rs.sort(reverse=True)

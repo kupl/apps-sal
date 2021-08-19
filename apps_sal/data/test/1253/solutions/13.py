@@ -1,12 +1,9 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 lis = list(map(int, input().split()))
-
 c = 0
 for x in lis:
     if x < 0:
         c += 1
-
 if c == n:
     for i in range(n):
         if k == 0:
@@ -14,7 +11,7 @@ if c == n:
         k -= 1
         lis[i] = -lis[i]
     if k % 2 == 1:
-        lis[n - 1] = -(lis[n - 1])
+        lis[n - 1] = -lis[n - 1]
 elif c == 0:
     if k % 2 == 1:
         lis[0] = -lis[0]
@@ -31,6 +28,4 @@ else:
             lis[i - 1] = -lis[i - 1]
         else:
             lis[i] = -lis[i]
-
-
 print(sum(lis))

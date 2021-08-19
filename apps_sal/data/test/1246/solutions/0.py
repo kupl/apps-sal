@@ -1,10 +1,10 @@
 from heapq import *
 n = int(input())
-q, ans, k = [], [], 0
+(q, ans, k) = ([], [], 0)
 for i in range(n):
     ss = input()
-    if ss != "removeMin":
-        s, mm = ss.split()
+    if ss != 'removeMin':
+        (s, mm) = ss.split()
         m = int(mm)
         if s == 'insert':
             k += 1
@@ -23,12 +23,11 @@ for i in range(n):
                     k += 1
                     heappush(q, m)
                     ans += ['insert ' + mm]
+    elif k == 0:
+        ans += ['insert 1']
     else:
-        if k == 0:
-            ans += ['insert 1']
-        else:
-            heappop(q)
-            k -= 1
+        heappop(q)
+        k -= 1
     ans += [ss]
 print(len(ans))
 print('\n'.join(ans))

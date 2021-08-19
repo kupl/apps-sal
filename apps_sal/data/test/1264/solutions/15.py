@@ -20,7 +20,7 @@ def main():
 
 
 def __starting_point():
-    return(main())
+    return main()
 
 
 __starting_point()

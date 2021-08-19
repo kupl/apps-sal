@@ -6,7 +6,7 @@ a.insert(0, 0)
 s = sum(b) * k
 f = [[0 for i in range(0, 4 * s + 1)] for j in range(0, n + 1)]
 for i in range(0, n + 1):
-    a[i] = a[i] - (k * b[i])
+    a[i] = a[i] - k * b[i]
 for i in range(1, n + 1):
     for j in range(s, 3 * s + 1):
         f[i][j] = f[i - 1][j]

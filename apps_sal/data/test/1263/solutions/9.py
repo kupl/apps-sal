@@ -1,15 +1,11 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list([int(x) * k for x in input().split()])
-
 pos = [0] * 10 ** 5
 neg = [0] * 10 ** 5
-
 pos[0] = 1
 neg[0] = 1
-
 base = 0
-
 for i in range(n):
     d = a[i] - b[i]
     if d > 0:
@@ -24,7 +20,6 @@ for i in range(n):
                     neg[j - d] = max(neg[j - d], neg[j] + a[i])
     else:
         base += a[i]
-
 best = 0
 for i in range(10 ** 5):
     if pos[i] and neg[i]:

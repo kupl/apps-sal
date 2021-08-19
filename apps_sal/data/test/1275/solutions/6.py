@@ -1,5 +1,5 @@
 mod = 998244353
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 k = abs(k)
 
 
@@ -15,7 +15,6 @@ def main():
     for i in range(k + 2, 2 * n + 1):
         j = i - k
         ans += count(i) * count(j)
-
     print(ans)
 
 

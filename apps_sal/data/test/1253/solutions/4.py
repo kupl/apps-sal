@@ -1,8 +1,6 @@
 3
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 for i in range(0, n):
     if k == 0 or a[i] >= 0:
         break

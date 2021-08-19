@@ -1,9 +1,9 @@
 from heapq import heappop, heapify, heappush
 from collections import defaultdict
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 d = defaultdict(list)
 for i in range(N):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     d[a].append(b)
 h = []
 ans = 0

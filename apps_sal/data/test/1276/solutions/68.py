@@ -6,7 +6,6 @@ readlines = sys.stdin.readlines
 def main():
     n = int(input())
     s = input()
-
     res = s.count('R') * s.count('G') * s.count('B')
     if res == 0:
         print(0)

@@ -19,20 +19,17 @@ def unite(parent, i, j):
     parent[i] = j
 
 
-setrecursionlimit(10**6)
-
-N, M = map(int, input().split())
+setrecursionlimit(10 ** 6)
+(N, M) = map(int, input().split())
 AB = [[int(c) - 1 for c in input().split()] for _ in range(M)]
-
 parent = [-1] * N
 inconvenience = N * (N - 1) // 2
 result = []
-for a, b in AB[::-1]:
+for (a, b) in AB[::-1]:
     result.append(inconvenience)
-    pa, pb = find(parent, a), find(parent, b)
+    (pa, pb) = (find(parent, a), find(parent, b))
     if pa != pb:
         inconvenience -= parent[pa] * parent[pb]
     unite(parent, a, b)
-
 for i in range(len(result) - 1, -1, -1):
     print(result[i])

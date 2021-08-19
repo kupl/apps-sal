@@ -1,18 +1,18 @@
-'''input
+"""input
 5 3
 2 6
 3 6
 2 5
 3 5
 1 11
-'''
-n, m = map(int, input().split())
+"""
+(n, m) = map(int, input().split())
 a = [None] * n
 s = [0] * (max(n, m) + 1)
 cnt = [0] * (max(n, m) + 1)
 ans = [0] * (max(n, m) + 1)
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a[i] = (x - 1, y)
 a = sorted(a, key=lambda x: x[1], reverse=True)
 for i in range(n):

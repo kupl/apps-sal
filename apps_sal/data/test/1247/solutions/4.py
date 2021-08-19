@@ -5,33 +5,28 @@ def main():
     k = 0
     f = 0
     i = 0
-    while(i < len(s)):
-        if(n.count(n[i]) == 1 and f == 0):
+    while i < len(s):
+        if n.count(n[i]) == 1 and f == 0:
             f = 1
-
-        else:
-            if(n.count(n[i]) % 2 != 0):
-                k = k + n.count(n[i])
-
+        elif n.count(n[i]) % 2 != 0:
+            k = k + n.count(n[i])
         i = i + n.count(n[i])
-
-    if(k == 0):
-        print("First")
+    if k == 0:
+        print('First')
         return
-    if(f == 0):
-        if(k % 2 != 0):
-            print("First")
+    if f == 0:
+        if k % 2 != 0:
+            print('First')
             return
         else:
-            print("Second")
+            print('Second')
             return
+    elif k % 2 == 0:
+        print('First')
+        return
     else:
-        if(k % 2 == 0):
-            print("First")
-            return
-        else:
-            print("Second")
-            return
+        print('Second')
+        return
 
 
 main()

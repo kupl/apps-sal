@@ -6,14 +6,12 @@ Problem 599 A. Patrick and Shopping
 @author yamaton
 @date 2015-11-20
 """
-
 import itertools as it
 import functools
 import operator
 import collections
 import math
 import sys
-
 BIGMOD = 1000000007
 
 

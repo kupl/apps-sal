@@ -4,7 +4,7 @@ from sys import stdin
 def getval():
     n = int(input())
     e = [[i] + list(map(int, stdin.readline().split())) for i in range(n - 1)]
-    return n, e
+    return (n, e)
 
 
 def main(n, e):
@@ -26,14 +26,13 @@ def main(n, e):
             tree[tree[idx][i][0]].append(n)
             q.append(tree[idx][i][0])
         k = max(k, n)
-
     print(k)
     for i in ans:
         print(i)
 
 
 def __starting_point():
-    n, e = getval()
+    (n, e) = getval()
     main(n, e)
 
 

@@ -36,15 +36,14 @@ def helper(i, k, smaller):
     if k == 0:
         return 1
     if smaller:
-        return com(S - i, k) * (9**k)
+        return com(S - i, k) * 9 ** k
+    elif N[i] == '0':
+        return helper(i + 1, k, False)
     else:
-        if N[i] == '0':
-            return helper(i + 1, k, False)
-        else:
-            zero = helper(i + 1, k, True)
-            a = helper(i + 1, k - 1, True) * (int(N[i]) - 1)
-            b = helper(i + 1, k - 1, False)
-            return zero + a + b
+        zero = helper(i + 1, k, True)
+        a = helper(i + 1, k - 1, True) * (int(N[i]) - 1)
+        b = helper(i + 1, k - 1, False)
+        return zero + a + b
 
 
-print((helper(0, K, False)))
+print(helper(0, K, False))

@@ -6,7 +6,7 @@ import numpy as np
 def solve(N, U, V, AB):
     G = [[] for _ in range(N + 1)]
     for ab in AB:
-        a, b = ab
+        (a, b) = ab
         G[a].append(b)
         G[b].append(a)
     P1 = np.zeros(N + 1, dtype=np.int64)
@@ -57,9 +57,9 @@ def solve(N, U, V, AB):
 
 
 def main():
-    N, u, v = list(map(int, input().split()))
+    (N, u, v) = list(map(int, input().split()))
     if N == 2:
-        print((0))
+        print(0)
         return
     AB = np.array(sys.stdin.read().split(), dtype=np.int64).reshape(N - 1, 2)
     ans = solve(N, u, v, AB)

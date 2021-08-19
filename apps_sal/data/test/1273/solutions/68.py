@@ -1,10 +1,9 @@
 from collections import deque
-
 N = int(input())
 G = [{} for i in range(N + 1)]
 colors = []
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G[a][b] = [i, -1]
     G[b][a] = [i, -1]
 
@@ -44,7 +43,7 @@ def bfs(s):
             if prev[a] != 0:
                 del temp[G[a][prev[a]][1] - 1]
             temp = deque(temp)
-            for i, b in enumerate(G[a]):
+            for (i, b) in enumerate(G[a]):
                 if seen[b] == 0:
                     seen[b] = 1
                     todo.append(b)
@@ -54,13 +53,11 @@ def bfs(s):
                     G[a][b][1] = G[b][a][1] = c
                     if c > cmax:
                         cmax = c
+    return (colors, cmax)
 
-    return colors, cmax
 
-
-colors, cmax = bfs(1)
+(colors, cmax) = bfs(1)
 colors = sorted(colors)
-
 print(cmax)
 for i in range(N - 1):
     print(colors[i][1])

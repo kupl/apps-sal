@@ -1,6 +1,6 @@
 N = int(input())
 S = input()
-ans = S.count("R") * S.count("G") * S.count("B")
+ans = S.count('R') * S.count('G') * S.count('B')
 for i in range(N - 2):
     r = S[i]
     for j in range(i + 1, N - 1):

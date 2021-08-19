@@ -1,7 +1,7 @@
 def take():
-    li = input().strip().split("+")
+    li = input().strip().split('+')
     l = sorted(li)
-    print("+".join(l))
+    print('+'.join(l))
 
 
 take()

@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def dfs(v, p, d):
@@ -28,11 +28,11 @@ def depth(v, p, d):
         depth(nv, v, d + 1)
 
 
-N, u, v = map(int, input().split())
-u, v = u - 1, v - 1
+(N, u, v) = map(int, input().split())
+(u, v) = (u - 1, v - 1)
 G = [[] for i in range(N)]
 for i in range(N - 1):
-    a, b = map(lambda x: int(x) - 1, input().split())
+    (a, b) = map(lambda x: int(x) - 1, input().split())
     G[a].append(b)
     G[b].append(a)
 dist = [-1] * N
@@ -41,7 +41,7 @@ lim = dist[u] - (dist[u] - 1) // 2
 SP = getSP(u)
 sdist = [-1] * N
 depth(SP, -1, 0)
-D, tmp = -1, -1
+(D, tmp) = (-1, -1)
 for i in range(N):
     if sdist[i] > tmp:
         D = i

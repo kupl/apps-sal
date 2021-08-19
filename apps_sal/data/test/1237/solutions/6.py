@@ -1,12 +1,11 @@
 k = []
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 for i in range(a):
-    x, y = list(map(int, input().split(' ')))
+    (x, y) = list(map(int, input().split(' ')))
     k.append([x, y])
 k.append([0, -1])
 k.sort()
 k.reverse()
-
 curr = b
 t = 0
 for i in k:

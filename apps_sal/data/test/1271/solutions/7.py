@@ -1,7 +1,7 @@
-n, s, k = map(int, input().split())
+(n, s, k) = map(int, input().split())
 s -= 1
 r = list(map(int, input().split()))
-INF = float("inf")
+INF = float('inf')
 c = input()
 dp = [[] for i in range(n)]
 

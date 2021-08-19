@@ -1,5 +1,4 @@
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 
 
 def cnt(n):
@@ -14,5 +13,4 @@ ans = 0
 for ab in range(2, 2 * N + 1):
     cd = ab - K
     ans += cnt(ab) * cnt(cd)
-
 print(ans)

@@ -1,16 +1,21 @@
 from collections import deque
 from sys import stdin
-def nii(): return map(int, stdin.readline().split())
-def lnii(): return list(map(int, stdin.readline().split()))
 
 
-n, u, v = nii()
+def nii():
+    return map(int, stdin.readline().split())
+
+
+def lnii():
+    return list(map(int, stdin.readline().split()))
+
+
+(n, u, v) = nii()
 u -= 1
 v -= 1
-
 tree = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = nii()
+    (a, b) = nii()
     a -= 1
     b -= 1
     tree[a].append(b)
@@ -20,10 +25,8 @@ for i in range(n - 1):
 def BFS(s):
     dist = [-1 for i in range(n)]
     dist[s] = 0
-
     que = deque()
     que.append(s)
-
     while que:
         x = que.popleft()
         for i in tree[x]:
@@ -35,10 +38,8 @@ def BFS(s):
 
 dist_t = BFS(u)
 dist_a = BFS(v)
-
 ans = 0
 for i in range(n):
     if dist_a[i] > dist_t[i]:
         ans = max(ans, dist_a[i] - 1)
-
 print(ans)

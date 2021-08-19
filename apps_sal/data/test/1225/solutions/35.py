@@ -1,5 +1,4 @@
 h = int(input())
-
 cnt = 0
 while h != 1:
     h //= 2

@@ -1,13 +1,16 @@
 import sys
-def f(): return map(int, sys.stdin.readline().split())
 
 
-n, st, sa = f()
+def f():
+    return map(int, sys.stdin.readline().split())
+
+
+(n, st, sa) = f()
 st -= 1
 sa -= 1
 g = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = f()
+    (a, b) = f()
     g[a - 1].append(b - 1)
     g[b - 1].append(a - 1)
 

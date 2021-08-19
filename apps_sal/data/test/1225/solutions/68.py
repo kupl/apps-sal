@@ -5,4 +5,4 @@ def mons(hp):
         return mons(hp // 2) * 2 + 1
 
 
-print((mons(int(input()))))
+print(mons(int(input())))

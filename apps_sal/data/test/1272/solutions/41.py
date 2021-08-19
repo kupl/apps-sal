@@ -12,7 +12,7 @@ def unite(x, y):
     if p == q:
         return None
     if p > q:
-        p, q = q, p
+        (p, q) = (q, p)
     par[p] += par[q]
     par[q] = p
 
@@ -25,11 +25,11 @@ def size(x):
     return -par[find(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 par = [-1 for i in range(n)]
-a, b = [], []
+(a, b) = ([], [])
 for i in range(m):
-    a_, b_ = map(int, input().split())
+    (a_, b_) = map(int, input().split())
     a.append(a_ - 1)
     b.append(b_ - 1)
 ans = [0] * m
@@ -40,4 +40,4 @@ for i in range(m - 1, 0, -1):
     else:
         ans[i - 1] = ans[i] - size(a[i]) * size(b[i])
         unite(a[i], b[i])
-print(*ans, sep="\n")
+print(*ans, sep='\n')

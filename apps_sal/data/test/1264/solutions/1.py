@@ -8,8 +8,7 @@ for i in range(n):
             if i <= ind <= j:
                 if l[ind] == 0:
                     c += 1
-            else:
-                if l[ind] == 1:
-                    c += 1
+            elif l[ind] == 1:
+                c += 1
         m = max(m, c)
 print(m)

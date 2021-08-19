@@ -1,7 +1,7 @@
 from heapq import heappop, heappush
 from sys import stdin
-n, *l = stdin.read().splitlines()
-heap, res = [], []
+(n, *l) = stdin.read().splitlines()
+(heap, res) = ([], [])
 for s in l:
     array = s.split()
     if array[0] == 'insert':
@@ -14,11 +14,10 @@ for s in l:
         if not heap or heap[0] != key:
             heappush(heap, key)
             res.append('insert ' + array[1])
+    elif heap:
+        heappop(heap)
     else:
-        if heap:
-            heappop(heap)
-        else:
-            res.append('insert 0')
+        res.append('insert 0')
     res.append(s)
 print(len(res))
 print('\n'.join(res))

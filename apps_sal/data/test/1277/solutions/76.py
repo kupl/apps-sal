@@ -1,7 +1,7 @@
-N, U, V = map(int, input().split())
+(N, U, V) = map(int, input().split())
 edge = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     edge[x].append(y)
     edge[y].append(x)
 
@@ -22,9 +22,8 @@ def dist(s):
 taka = dist(U)
 aoki = dist(V)
 can_go = taka[V]
-
 ans = 0
-for t, a in zip(taka[1:], aoki[1:]):
+for (t, a) in zip(taka[1:], aoki[1:]):
     if t <= a:
         ans = max(ans, a - 1)
 print(ans)

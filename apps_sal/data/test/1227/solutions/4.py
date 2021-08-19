@@ -17,4 +17,4 @@ for i in range(1, l):
         dp[i][j][1] += dp[b][j][1]
         dp[i][j + 1][1] += dp[b][j][1] * 9
     dp[i][1][1] += 9
-print((dp[l - 1][k][0] + dp[l - 1][k][1]))
+print(dp[l - 1][k][0] + dp[l - 1][k][1])

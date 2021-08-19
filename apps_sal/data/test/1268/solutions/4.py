@@ -1,15 +1,15 @@
 def main():
-    def read(): return tuple(map(int, input().split()))
+
+    def read():
+        return tuple(map(int, input().split()))
     n = read()[0]
     a = read()
     b = sorted(read())
-
     sm = sum(a)
-
     if sm <= b[-1] + b[-2]:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 main()

@@ -3,8 +3,8 @@ n = int(input())
 data = [[] for _ in range(n)]
 sides = []
 for _ in range(n - 1):
-    a, b = map(int, input().split())
-    a, b = a - 1, b - 1
+    (a, b) = map(int, input().split())
+    (a, b) = (a - 1, b - 1)
     data[a].append(b)
     data[b].append(a)
     sides.append((a, b))
@@ -25,11 +25,11 @@ while q:
         if cur == cs[u]:
             cur += 1
         cs[v] = cur
-        I[(u, v)] = cur
-        I[(v, u)] = cur
+        I[u, v] = cur
+        I[v, u] = cur
         cur += 1
         used[v] = 1
         q.append(v)
 print(k)
-for i, j in sides:
-    print(I[(i, j)])
+for (i, j) in sides:
+    print(I[i, j])

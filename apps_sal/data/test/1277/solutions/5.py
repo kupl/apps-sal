@@ -8,12 +8,12 @@ def input():
     return sys.stdin.readline()[:-1]
 
 
-n, u, v = list(map(int, input().split()))
+(n, u, v) = list(map(int, input().split()))
 u -= 1
 v -= 1
-g = [[]for i in range(n)]
+g = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     g[a].append(b)
@@ -45,6 +45,6 @@ for i in aok:
     if takadist[i] < seen[i]:
         ans = max(ans, seen[i])
 if g[u] == [v]:
-    print((0))
+    print(0)
 else:
-    print((ans - 1))
+    print(ans - 1)

@@ -1,5 +1,4 @@
-n, a, b = map(int, input().split())
-
+(n, a, b) = map(int, input().split())
 MOD = 10 ** 9 + 7
 
 
@@ -22,5 +21,4 @@ def comb(n, k, mod):
 
 
 ans = (pow(2, n, MOD) - comb(n, a, MOD) - comb(n, b, MOD)) % MOD - 1
-
 print(ans)

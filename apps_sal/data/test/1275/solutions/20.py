@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 cnt = 0
 for x in range(2, 2 * n + 1):
     if 2 <= x - k <= 2 * n:

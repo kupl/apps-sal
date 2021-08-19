@@ -6,6 +6,6 @@ mx1 = max(l2)
 l2.remove(mx1)
 mx2 = max(l2)
 if sm <= mx1 + mx2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

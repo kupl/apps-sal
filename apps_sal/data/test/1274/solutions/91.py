@@ -1,10 +1,9 @@
 import collections
 import heapq
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 que = []
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     que.append((-b, a))
 que.sort(key=lambda x: x[1])
 que = collections.deque(que)

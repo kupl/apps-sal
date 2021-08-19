@@ -1,5 +1,5 @@
-n, m = list(map(int, input().split()))
-a, s = [], []
+(n, m) = list(map(int, input().split()))
+(a, s) = ([], [])
 for q in range(n):
     d = list(map(int, input().split()))
     a.append(d[0])

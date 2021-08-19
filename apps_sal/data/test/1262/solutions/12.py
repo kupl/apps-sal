@@ -1,16 +1,16 @@
 n = int(input())
 pos = [[*map(int, input().split())] for i in range(n)]
-*c, = map(int, input().split())
-*k, = map(int, input().split())
+(*c,) = map(int, input().split())
+(*k,) = map(int, input().split())
 used = [False for i in range(n)]
 parent = [-1 for i in range(n)]
 plants = []
 connections = []
 ans = 0
 _n = n
-while(_n):
+while _n:
     _n -= 1
-    mn, u = min([(ci, i) for i, ci in enumerate(c) if not used[i]])
+    (mn, u) = min([(ci, i) for (i, ci) in enumerate(c) if not used[i]])
     ans += mn
     used[u] = True
     if parent[u] == -1:

@@ -5,5 +5,4 @@ for x in range(int(input())):
         dict[s] = 1
     else:
         dict[s] += 1
-
 print(max(dict.values()))

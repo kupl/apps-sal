@@ -1,5 +1,4 @@
 import heapq
-
 n = int(input())
 m = n
 operations = []
@@ -33,6 +32,5 @@ for i in range(n):
             m += 1
             heapq.heappush(heap, b)
     operations.append(s)
-
 print(m)
 print('\n'.join(operations))

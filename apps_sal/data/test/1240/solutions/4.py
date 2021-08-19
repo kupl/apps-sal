@@ -1,8 +1,8 @@
 n = int(input())
-L, R = 0, 0
+(L, R) = (0, 0)
 a = []
 for i in range(n):
-    li, ri = map(int, input().split())
+    (li, ri) = map(int, input().split())
     a.append([li, ri])
     L += li
     R += ri

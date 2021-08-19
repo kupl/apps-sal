@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, numV):
         self.pars = list(range(numV))
         self.ranks = [0] * numV
@@ -11,8 +12,8 @@ class UnionFind:
         return par
 
     def merge(self, x, y):
-        x, y = self.getRoot(x), self.getRoot(y)
-        sx, sy = self.sizes[x], self.sizes[y]
+        (x, y) = (self.getRoot(x), self.getRoot(y))
+        (sx, sy) = (self.sizes[x], self.sizes[y])
         if x == y:
             return (0, 0)
         if self.ranks[x] < self.ranks[y]:
@@ -36,15 +37,14 @@ class UnionFind:
         return self.sizes[self.getRoot(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 e = [list(map(int, input().split())) for i in range(m)]
 e.reverse()
-
 uf = UnionFind(n)
 score = n * (n - 1) // 2
 ans = [score]
 for ce in range(m - 1):
-    u, v = e[ce][0] - 1, e[ce][1] - 1
+    (u, v) = (e[ce][0] - 1, e[ce][1] - 1)
     if uf.getRoot(u) != uf.getRoot(v):
         xu = uf.getSize(u)
         xv = uf.getSize(v)
@@ -52,6 +52,5 @@ for ce in range(m - 1):
         score -= xu * xv
     ans.append(score)
 ans.reverse()
-
 for i in range(m):
     print(ans[i])

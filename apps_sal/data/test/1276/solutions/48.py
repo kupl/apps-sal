@@ -10,7 +10,6 @@ for i in range(n):
         k = j + a
         if k >= n:
             break
-        if S[i] != S[j] and S[j] != S[k] and S[k] != S[i]:
+        if S[i] != S[j] and S[j] != S[k] and (S[k] != S[i]):
             cnt -= 1
-
 print(cnt)

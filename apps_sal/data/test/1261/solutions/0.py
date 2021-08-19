@@ -1,10 +1,10 @@
 def f(n):
     if n == 1:
-        return[1]
+        return [1]
     if n == 2:
-        return[1, 2]
+        return [1, 2]
     if n == 3:
-        return[1, 1, 3]
+        return [1, 1, 3]
     if n > 3:
         L = f(n // 2)
         for i in range(len(L)):
@@ -15,5 +15,5 @@ def f(n):
 L = f(int(input()))
 s = ''
 for i in L:
-    s += (str(i) + ' ')
+    s += str(i) + ' '
 print(s)

@@ -9,7 +9,7 @@ def is_prime(x):
     return True
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 T = [[0] * n for _ in range(n)]
 ans = 0
 s = n * n

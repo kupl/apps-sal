@@ -2,6 +2,7 @@ import sys
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.table = [-1] * n
 
@@ -34,21 +35,21 @@ class UnionFind:
 
 
 def main():
-    n, m = list(map(int, sys.stdin.buffer.readline().split()))
+    (n, m) = list(map(int, sys.stdin.buffer.readline().split()))
     uf = UnionFind(n)
     ans = [n * (n - 1) // 2]
     for x in reversed(sys.stdin.buffer.readlines()):
-        a, b = list(map(int, x.split()))
+        (a, b) = list(map(int, x.split()))
         a -= 1
         b -= 1
         if uf.find(a, b):
             ans.append(ans[-1])
             continue
-        ba, bb = uf.table[uf._root(a)], uf.table[uf._root(b)]
+        (ba, bb) = (uf.table[uf._root(a)], uf.table[uf._root(b)])
         ans.append(ans[-1] - ba * bb)
         uf.union(a, b)
     ans.reverse()
-    print(("\n".join(map(str, ans[1:]))))
+    print('\n'.join(map(str, ans[1:])))
 
 
 def __starting_point():

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = list(map(int, input().split()))
 index = [[0 for i in range(n)] for j in range(n)]
 for i in range(n):
@@ -22,8 +22,8 @@ for i in range(n):
             sumap = 0
             sumak = 0
             for p in range(j, ind + 1):
-                sumap += (val[j][p - 1] * val[p][ind - 1]) % prime
+                sumap += val[j][p - 1] * val[p][ind - 1] % prime
             for k in range(ind, j + i + 1):
-                sumak += (val[ind + 1][k] * val[k + 1][j + i]) % prime
-            val[j][j + i] = (sumap * sumak) % prime
+                sumak += val[ind + 1][k] * val[k + 1][j + i] % prime
+            val[j][j + i] = sumap * sumak % prime
 print(val[0][n - 1])

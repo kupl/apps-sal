@@ -1,14 +1,12 @@
 import sys
 from collections import deque
-
 n = int(sys.stdin.readline())
 G = [[] for _ in range(n + 1)]
 G_order = []
 for i in range(n - 1):
-    a, b = map(lambda x: int(x) - 1, sys.stdin.readline().split())
+    (a, b) = map(lambda x: int(x) - 1, sys.stdin.readline().split())
     G[a].append(b)
     G_order.append(b)
-
 que = deque([0])
 C = [0] * (n + 1)
 while que:
@@ -20,7 +18,6 @@ while que:
         C[nx] = c
         c += 1
         que.append(nx)
-
 print(max(C))
 for i in G_order:
     print(C[i])

@@ -1,7 +1,7 @@
 n = int(input())
 h = {}
 for i in range(n - 2):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     if x not in h:
         h[x] = []
     if y not in h:
@@ -20,7 +20,6 @@ for i in range(n - 2):
     h[z].append(y)
     h[z] = set(h[z])
     h[z] = list(h[z])
-
 single = 0
 for i in h:
     if len(h[i]) == 2:
@@ -31,7 +30,6 @@ vis = {}
 vis[single] = True
 ans.append(single)
 first = single
-
 if len(h[h[single][0]]) == 3:
     ans.append(h[single][0])
     vis[h[single][0]] = True
@@ -54,4 +52,4 @@ for i in range(n - 2):
             first = second
             second = x
             break
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

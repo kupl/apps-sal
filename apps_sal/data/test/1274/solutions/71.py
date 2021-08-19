@@ -1,9 +1,8 @@
 import heapq
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 byte = [[] for _ in range(m + 2)]
-
 for _ in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a > m + 1:
         continue
     byte[a].append(b)
@@ -19,5 +18,4 @@ while day - 1 != m:
     tmp = -heapq.heappop(search)
     ans += tmp
     day += 1
-
 print(ans)

@@ -1,5 +1,4 @@
 import sys
-
 p = [int(x) for x in input().split('+')]
 p.sort()
 for i in range(len(p) - 1):

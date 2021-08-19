@@ -8,4 +8,4 @@ while n > 1:
         n -= 3
         ans.append(3)
 print(len(ans))
-print(' '.join(str(i) for i in ans))
+print(' '.join((str(i) for i in ans)))

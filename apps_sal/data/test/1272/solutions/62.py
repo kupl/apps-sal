@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -16,7 +17,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -27,15 +28,15 @@ class UnionFind():
         return -self.parents[self.find(x)]
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 inconvenience = N * (N - 1) // 2
 score = []
 UF = UnionFind(N)
 A = [0] * M
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     A[i] = [a - 1, b - 1]
-for a, b in A[::-1]:
+for (a, b) in A[::-1]:
     score.append(inconvenience)
     if not UF.same(a, b):
         inconvenience -= UF.size(a) * UF.size(b)

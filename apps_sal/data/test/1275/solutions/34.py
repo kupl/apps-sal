@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 
 
 def f(N, K):
@@ -7,8 +7,6 @@ def f(N, K):
 
 
 ans = 0
-
 for x in range(2, 2 * N + 1):
     ans += f(N, x) * f(N, x - K)
-
 print(ans)

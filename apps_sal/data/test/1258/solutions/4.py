@@ -2,7 +2,7 @@ n = int(input())
 d = {}
 used = set()
 for itr in range(n - 2):
-    p, q, r = map(int, input().split())
+    (p, q, r) = map(int, input().split())
     if p in d:
         d[p].append([p, q, r])
     else:

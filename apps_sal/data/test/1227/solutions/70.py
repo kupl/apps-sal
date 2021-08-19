@@ -22,7 +22,7 @@ def main():
                         elif next_d < now_digit:
                             new_k = 1
                     dp[new_i][new_j][new_k] += dp[i][j][k]
-    print((sum(dp[length][non_zero])))
+    print(sum(dp[length][non_zero]))
 
 
 def __starting_point():

@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = list(map(int, input().split()))
-
 ans = 0
 
 
@@ -12,7 +11,6 @@ l = 0
 cnt = 0
 L = n
 R = 0
-
 for i in range(n):
     cnt += get(s[i])
     while cnt > k:
@@ -24,10 +22,8 @@ for i in range(n):
             ans = now
             L = l
             R = i
-
 if L <= R:
     for i in range(L, R + 1):
         s[i] = 1
-
 print(ans)
 print(' '.join(map(str, s)))

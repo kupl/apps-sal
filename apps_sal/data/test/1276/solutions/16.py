@@ -7,9 +7,9 @@ B = []
 
 def f():
     for i in range(n):
-        if s[i] == "R":
+        if s[i] == 'R':
             R.append(i)
-        elif s[i] == "G":
+        elif s[i] == 'G':
             G.append(i)
         else:
             B.append(i)
@@ -26,7 +26,7 @@ def f():
                 lt = s[j - k]
                 md = s[j]
                 rt = s[j + k]
-                if lt != md and md != rt and rt != lt:
+                if lt != md and md != rt and (rt != lt):
                     m += 1
         return ans - m
 

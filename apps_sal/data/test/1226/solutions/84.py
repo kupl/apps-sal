@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 mod = 1000000007
 c = [1] * (b + 1)
 
@@ -10,5 +10,4 @@ def com(n, b):
 
 com(n, b)
 ans = (pow(2, n, mod) - c[a] - c[b] - 1) % mod
-
 print(ans)

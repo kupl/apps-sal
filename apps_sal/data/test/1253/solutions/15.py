@@ -1,7 +1,6 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 x.sort()
-
 for i in range(a):
     if x[i] < 0:
         x[i] *= -1
@@ -10,7 +9,6 @@ for i in range(a):
         break
     if b == 0:
         break
-
 if b % 2 == 0:
     print(sum(x))
 else:

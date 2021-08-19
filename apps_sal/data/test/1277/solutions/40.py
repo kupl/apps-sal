@@ -1,9 +1,8 @@
 from collections import deque
-
-N, u, v = map(int, input().split())
+(N, u, v) = map(int, input().split())
 G = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G[a - 1].append(b - 1)
     G[b - 1].append(a - 1)
 
@@ -26,5 +25,4 @@ def bfs(s):
 
 d1 = bfs(u - 1)
 d2 = bfs(v - 1)
-
 print(max([d2[i] for i in range(N) if d1[i] <= d2[i]]) - 1)

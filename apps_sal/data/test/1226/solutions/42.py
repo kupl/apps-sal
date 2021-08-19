@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 mod = pow(10, 9) + 7
 
 
@@ -15,5 +15,4 @@ def comb(N, x):
 
 a = comb(n, a)
 b = comb(n, b)
-
-print(((pow(2, n, mod) - 1 - a - b) % mod))
+print((pow(2, n, mod) - 1 - a - b) % mod)

@@ -1,9 +1,9 @@
 def main():
-    lst = list(tuple(map(int, input().split())) for _ in range(int(input())))
+    lst = list((tuple(map(int, input().split())) for _ in range(int(input()))))
     res = []
     try:
-        for a, b in reversed(lst):
-            w, tmp = 1, ['(']
+        for (a, b) in reversed(lst):
+            (w, tmp) = (1, ['('])
             while w < a:
                 x = res.pop()
                 w += len(x)

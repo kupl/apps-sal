@@ -7,4 +7,4 @@ def attack(n):
     return 2 * attack(int(n / 2)) + 1
 
 
-print((attack(H)))
+print(attack(H))

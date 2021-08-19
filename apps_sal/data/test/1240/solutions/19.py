@@ -9,7 +9,7 @@ for i in range(n):
 best = abs(l - r)
 ans = 0
 for i in range(n):
-    new = abs((l - a[i][0] + a[i][1]) - (r - a[i][1] + a[i][0]))
+    new = abs(l - a[i][0] + a[i][1] - (r - a[i][1] + a[i][0]))
     if new > best:
         best = new
         ans = i + 1

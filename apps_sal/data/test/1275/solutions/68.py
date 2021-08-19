@@ -1,6 +1,5 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 K = abs(K)
-
 ans = 0
 ab = 2 * N
 pat = 1

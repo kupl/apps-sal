@@ -14,19 +14,19 @@ def get_type(x, y):
 
 
 def __starting_point():
-    n, = list(map(int, input().split()))
-    x0, y0 = list(map(int, input().split()))
+    (n,) = list(map(int, input().split()))
+    (x0, y0) = list(map(int, input().split()))
     check = False
     block = [(-BORDER, BORDER), (0, BORDER), (BORDER, BORDER), (BORDER, 0), (BORDER, -BORDER), (0, -BORDER), (-BORDER, -BORDER), (-BORDER, 0)]
     killer = [None for _ in range(8)]
     for _ in range(n):
-        f, xs, ys = input().split()
-        x, y = list(map(int, (xs, ys)))
-        x, y = x - x0, y - y0
+        (f, xs, ys) = input().split()
+        (x, y) = list(map(int, (xs, ys)))
+        (x, y) = (x - x0, y - y0)
         tp = get_type(x, y)
         if tp < 0:
             continue
-        if ((f == 'B' and tp % 2 == 1) or (f == 'R' and tp % 2 == 0)):
+        if f == 'B' and tp % 2 == 1 or (f == 'R' and tp % 2 == 0):
             if abs(block[tp][0]) + abs(block[tp][1]) > abs(x) + abs(y):
                 block[tp] = (x, y)
         else:
@@ -45,9 +45,9 @@ def __starting_point():
             check = True
             break
     if check:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 __starting_point()

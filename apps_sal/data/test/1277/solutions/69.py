@@ -10,10 +10,10 @@ def dfs(x, dis):
             dfs(y, dis)
 
 
-N, u, v = map(int, input().split())
+(N, u, v) = map(int, input().split())
 Tree = [[] for _ in range(N + 1)]
 for i in range(N - 1):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     Tree[A].append(B)
     Tree[B].append(A)
 disT = [-1] * (N + 1)

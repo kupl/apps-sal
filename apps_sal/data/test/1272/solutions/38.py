@@ -1,27 +1,60 @@
 import sys
-
 stdin = sys.stdin
 inf = 1 << 60
 mod = 1000000007
+sys.setrecursionlimit(10 ** 7)
 
-sys.setrecursionlimit(10**7)
+
+def ni():
+    return int(ns())
 
 
-def ni(): return int(ns())
-def nin(y): return [ni() for _ in range(y)]
-def na(): return list(map(int, stdin.readline().split()))
-def nan(y): return [na() for _ in range(y)]
-def nf(): return float(ns())
-def nfn(y): return [nf() for _ in range(y)]
-def nfa(): return list(map(float, stdin.readline().split()))
-def nfan(y): return [nfa() for _ in range(y)]
-def ns(): return stdin.readline().rstrip()
-def nsn(y): return [ns() for _ in range(y)]
-def ncl(y): return [list(ns()) for _ in range(y)]
-def nas(): return stdin.readline().split()
+def nin(y):
+    return [ni() for _ in range(y)]
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nan(y):
+    return [na() for _ in range(y)]
+
+
+def nf():
+    return float(ns())
+
+
+def nfn(y):
+    return [nf() for _ in range(y)]
+
+
+def nfa():
+    return list(map(float, stdin.readline().split()))
+
+
+def nfan(y):
+    return [nfa() for _ in range(y)]
+
+
+def ns():
+    return stdin.readline().rstrip()
+
+
+def nsn(y):
+    return [ns() for _ in range(y)]
+
+
+def ncl(y):
+    return [list(ns()) for _ in range(y)]
+
+
+def nas():
+    return stdin.readline().split()
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.par = [i for i in range(n)]
@@ -63,15 +96,14 @@ class UnionFind:
         return self.find(x) == self.find(y)
 
 
-n, m = na()
+(n, m) = na()
 ab = nan(m)
 ab.reverse()
-
 uf = UnionFind(n)
 cur = n * (n - 1) // 2
 ans = [cur]
 for i in range(m - 1):
-    a, b = ab[i]
+    (a, b) = ab[i]
     a -= 1
     b -= 1
     p = uf.size(a)
@@ -81,6 +113,5 @@ for i in range(m - 1):
     uf.unite(a, b)
     cur -= p * q
     ans.append(cur)
-
 ans.reverse()
-print(*ans, sep="\n")
+print(*ans, sep='\n')

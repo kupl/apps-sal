@@ -1,7 +1,7 @@
 import heapq
 n = int(input())
 m = n
-ans, hp_dgt = [], []
+(ans, hp_dgt) = ([], [])
 for i in range(n):
     s = input()
     a = s.split()

@@ -1,10 +1,10 @@
 from collections import deque
-n, u, v = map(int, input().split())
+(n, u, v) = map(int, input().split())
 u -= 1
 v -= 1
 edges = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edges[a - 1].append(b - 1)
     edges[b - 1].append(a - 1)
 

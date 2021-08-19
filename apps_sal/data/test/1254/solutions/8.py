@@ -9,14 +9,14 @@ def inputlistint():
 
 
 def main():
-    n, m = inputlistint()
+    (n, m) = inputlistint()
     s = []
     r = []
     f = []
     for _ in range(m + 2):
         f.append([])
     for _ in range(n):
-        a, b = inputlistint()
+        (a, b) = inputlistint()
         s.append(a)
         r.append(b)
         f[a].append(b)
@@ -27,11 +27,11 @@ def main():
     for k in range(len(f[0])):
         test = 0
         for i in range(m + 1):
-            if (k >= len(f[i])):
+            if k >= len(f[i]):
                 break
-            if (k > 0):
+            if k > 0:
                 f[i][k] = f[i][k] + f[i][k - 1]
-            if (f[i][k] > 0):
+            if f[i][k] > 0:
                 test = test + f[i][k]
         res = max(res, test)
     stdout.write(str(res))

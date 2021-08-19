@@ -4,7 +4,7 @@ h = int(input())
 def wa(n):
     w = 0
     for i in range(0, n + 1):
-        w += 2**i
+        w += 2 ** i
     return w
 
 

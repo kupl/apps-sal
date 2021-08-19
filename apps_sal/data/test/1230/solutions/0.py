@@ -27,7 +27,6 @@ def main():
         else:
             rhs += partialsums[a[i] - 1] + a[i] * (n - i - 1 - cumcounts[a[i] - 1])
         diffs.append(sumi - rhs)
-
         rhs2 = (i + 1) * (i + 2)
         if a[i] > i + 1:
             rhs2 += partialsums[i + 1] + (i + 2) * (n - i - 1 - cumcounts[i + 1])
@@ -38,13 +37,13 @@ def main():
     maxi = -max(altdiffs)
     mini = max(mini, 0)
     maxi = min(maxi, n)
-    out = ""
+    out = ''
     if mini % 2 != mod:
         mini += 1
     if maxi % 2 == mod:
         maxi += 1
     for guy in range(mini, maxi, 2):
-        out += str(guy) + " "
+        out += str(guy) + ' '
     if mini > maxi:
         print(-1)
     else:

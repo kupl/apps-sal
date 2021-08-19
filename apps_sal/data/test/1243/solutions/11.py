@@ -6,5 +6,4 @@ r = 0
 for i in range(len(t) - 1):
     t[i + 1] += t[i]
     r += abs(t[i])
-
 print(r)

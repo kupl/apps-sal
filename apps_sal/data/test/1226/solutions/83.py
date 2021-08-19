@@ -1,5 +1,5 @@
-mod = 10**9 + 7
-n, a, b = map(int, input().split())
+mod = 10 ** 9 + 7
+(n, a, b) = map(int, input().split())
 
 
 def combination(n, a):
@@ -10,7 +10,7 @@ def combination(n, a):
         res %= mod
         div *= a - i
         div %= mod
-    res = (res * pow(div, mod - 2, mod)) % mod
+    res = res * pow(div, mod - 2, mod) % mod
     return res
 
 

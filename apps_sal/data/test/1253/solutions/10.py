@@ -1,7 +1,6 @@
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 x = list(map(int, input().split(' ')))
 ptr = 0
-
 while b > 0 and ptr < a:
     if x[ptr] < 0:
         x[ptr] = -x[ptr]
@@ -9,7 +8,6 @@ while b > 0 and ptr < a:
         b -= 1
     else:
         break
-
 x.sort()
 if b > 0:
     b = b % 2

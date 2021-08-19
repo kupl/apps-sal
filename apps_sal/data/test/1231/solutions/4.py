@@ -1,7 +1,7 @@
-a, b = [int(x) for x in input().split()]
+(a, b) = [int(x) for x in input().split()]
 if a == 0 and b == 0:
-    print("NO")
+    print('NO')
 elif abs(a - b) <= 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

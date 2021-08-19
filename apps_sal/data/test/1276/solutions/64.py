@@ -3,9 +3,9 @@ S = list(input())
 R = []
 G = []
 for i in range(N):
-    if S[i] == "R":
+    if S[i] == 'R':
         R.append(i)
-    elif S[i] == "G":
+    elif S[i] == 'G':
         G.append(i)
 r = len(R)
 g = len(G)
@@ -15,10 +15,10 @@ for i in R:
         a = 2 * i - j
         b = 2 * j - i
         c = i + j
-        if 0 <= a < N and S[a] == "B":
+        if 0 <= a < N and S[a] == 'B':
             ans -= 1
-        if 0 <= b < N and S[b] == "B":
+        if 0 <= b < N and S[b] == 'B':
             ans -= 1
-        if c % 2 == 0 and S[c // 2] == "B":
+        if c % 2 == 0 and S[c // 2] == 'B':
             ans -= 1
 print(ans)

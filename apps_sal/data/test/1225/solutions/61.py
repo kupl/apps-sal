@@ -3,7 +3,6 @@ h = int(input())
 hp = h
 c = 0
 ans = 0
-
 while hp > 1:
     hp = math.floor(hp / 2)
     c += 1

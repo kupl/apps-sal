@@ -1,7 +1,7 @@
-n, u, v = map(int, input().split())
-tree = [[]for _ in range(n)]
+(n, u, v) = map(int, input().split())
+tree = [[] for _ in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     tree[a - 1].append(b - 1)
     tree[b - 1].append(a - 1)
 va = [-1] * n

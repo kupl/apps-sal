@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 data = [[None for i in range(n)] for j in range(n)]
 data[0][k - 1] = n ** 2 - n + k
 help = 0

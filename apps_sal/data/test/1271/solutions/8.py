@@ -1,4 +1,4 @@
-n, s, k = map(int, input().split())
+(n, s, k) = map(int, input().split())
 r = list(map(int, input().split()))
 s -= 1
 c = input()
@@ -8,7 +8,7 @@ for i in range(1, k + 1):
         if i <= r[j]:
             best[i][j] = abs(j - s)
         else:
-            good = float("inf")
+            good = float('inf')
             for l in range(n):
                 if c[j] != c[l] and r[j] > r[l]:
                     good = min(good, best[i - r[j]][l] + abs(j - l))

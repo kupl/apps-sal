@@ -11,12 +11,11 @@ def abc162d_rgb_triplets():
             g_cnt += 1
         else:
             b_cnt += 1
-
     result = r_cnt * g_cnt * b_cnt
     for i in range(n - 2):
         for j in range(i + 1, n - 1):
             k = j + (j - i)
-            if s[i] == s[j] or k >= n or s[i] == s[k] or s[j] == s[k]:
+            if s[i] == s[j] or k >= n or s[i] == s[k] or (s[j] == s[k]):
                 continue
             result -= 1
     print(result)

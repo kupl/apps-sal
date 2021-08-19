@@ -1,7 +1,5 @@
 from sys import setrecursionlimit
-
 setrecursionlimit(1000000)
-
 H = int(input())
 
 

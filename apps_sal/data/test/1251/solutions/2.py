@@ -1,14 +1,11 @@
 import sys
 sys.setrecursionlimit(10000)
-
-s, n = 1, int(input())
-t = [(q, i) for i, q in enumerate(map(int, input().split()))]
-
-e = (2e9, 0)
+(s, n) = (1, int(input()))
+t = [(q, i) for (i, q) in enumerate(map(int, input().split()))]
+e = (2000000000.0, 0)
 while s < n:
     s <<= 1
 h = [e] * s + t + [e] * (s - n)
-
 k = s - 1
 while k:
     j = k << 1
@@ -21,9 +18,9 @@ def f(a, l, r):
         return 0
     if r - l < 2:
         return int(t[l][0] != a)
-    p, q = [(s, l, r)], e
+    (p, q) = ([(s, l, r)], e)
     while p:
-        k, u, v = p.pop()
+        (k, u, v) = p.pop()
         if u < v:
             if u & 1:
                 q = min(q, h[k + u])
@@ -31,8 +28,8 @@ def f(a, l, r):
             if v & 1:
                 q = min(q, h[k + v - 1])
             p.append((k >> 1, u >> 1, v >> 1))
-    b, m = q
-    d, n = b - a, r - l
+    (b, m) = q
+    (d, n) = (b - a, r - l)
     return min(n, d + f(b, l, m) + f(b, m + 1, r)) if d < n else n
 
 

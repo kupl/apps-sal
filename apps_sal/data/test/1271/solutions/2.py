@@ -1,10 +1,10 @@
-INF = 1e10
+INF = 10000000000.0
 max_n = 50
 max_k = 2000
 
 
 def main():
-    n, s, k = map(int, input().split())
+    (n, s, k) = map(int, input().split())
     s -= 1
     buf = [''] * (max_n + 1)
     dp = [[0 for i in range(max_n + 1)] for j in range(max_k + 1)]

@@ -1,5 +1,5 @@
 import functools
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
 
 

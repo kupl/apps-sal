@@ -1,26 +1,26 @@
 def main():
     from heapq import heappop, heappush
     from sys import stdin
-    h, res = [], []
+    (h, res) = ([], [])
     for _ in range(int(input())):
         s = input()
-        if s == ("removeMin"):
+        if s == 'removeMin':
             if h:
                 heappop(h)
             else:
-                res.append("insert 1")
+                res.append('insert 1')
         else:
-            c, x = s.split()
+            (c, x) = s.split()
             x = int(x)
-            if c == "insert":
+            if c == 'insert':
                 heappush(h, x)
             else:
                 while h and h[0] < x:
                     heappop(h)
-                    res.append("removeMin")
+                    res.append('removeMin')
                 if not h or h[0] > x:
                     heappush(h, x)
-                    res.append("insert %d" % x)
+                    res.append('insert %d' % x)
         res.append(s)
     print(len(res))
     print('\n'.join(res))

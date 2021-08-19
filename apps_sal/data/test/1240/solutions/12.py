@@ -4,7 +4,7 @@ right = []
 R = 0
 L = 0
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     left.append(a)
     L += a
     R += b
