@@ -1,7 +1,6 @@
-n, p, l, r = map(int, input().split())
-
-s1, s2 = 0, 0
-l1, l2, r1, r2 = 0, 0, 0, 0
+(n, p, l, r) = map(int, input().split())
+(s1, s2) = (0, 0)
+(l1, l2, r1, r2) = (0, 0, 0, 0)
 p1 = p
 if l > 1:
     l1 += abs(p - l)

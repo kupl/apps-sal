@@ -4,41 +4,34 @@ import collections
 
 def main():
     s = list(sys.stdin.readline().split()[0])
-
     hist = [0 for i in range(256)]
-
     for c in s:
         hist[ord(c)] += 1
-
     cur = 0
     u = []
     t = []
-
     minn = ord('a')
     for i in range(minn, ord('z') + 1):
-        if(hist[i]):
+        if hist[i]:
             minn = i
             break
     aux = []
     while cur < len(s):
         aux.append(s[cur])
         hist[ord(s[cur])] -= 1
-
-        if(s[cur] == chr(minn)):
+        if s[cur] == chr(minn):
             u += aux
             aux = []
             minn = ord('z')
             for i in range(ord('a'), ord('z') + 1):
-                if(hist[i]):
+                if hist[i]:
                     minn = i
                     break
-
-            while(len(u) and ord(u[-1]) <= minn):
+            while len(u) and ord(u[-1]) <= minn:
                 t.append(u[-1])
                 del u[-1]
         cur += 1
-
-    print("".join(t))
+    print(''.join(t))
 
 
 main()

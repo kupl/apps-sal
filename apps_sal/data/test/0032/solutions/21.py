@@ -3,7 +3,7 @@ tx = 0
 ty = 20000
 res = True
 for i in range(n):
-    t, d = map(str, input().split())
+    (t, d) = map(str, input().split())
     if d == 'South':
         ty -= int(t)
         if ty < 0:

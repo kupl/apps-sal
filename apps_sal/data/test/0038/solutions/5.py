@@ -15,10 +15,10 @@ def equals(l1, l2):
     return False
 
 
-n, l = list(map(int, input().split()))
+(n, l) = list(map(int, input().split()))
 a = track(list(map(int, input().split())))
 b = track(list(map(int, input().split())))
 if equals(a, b):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

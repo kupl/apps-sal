@@ -8,6 +8,6 @@ def lcm(a, b):
     return a * b // gcd(a, b)
 
 
-n, a, b, p, q = map(int, input().split())
+(n, a, b, p, q) = map(int, input().split())
 s = n // a * p + n // b * q - n // lcm(a, b) * min(p, q)
 print(s)

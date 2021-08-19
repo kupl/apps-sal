@@ -1,5 +1,4 @@
-n, pos, l, r = map(int, input().split())
-
+(n, pos, l, r) = map(int, input().split())
 if l > 1 and r < n:
     if l <= pos and pos <= r:
         if pos - l < r - pos:

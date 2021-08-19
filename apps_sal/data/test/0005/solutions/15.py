@@ -1,5 +1,4 @@
-n, pos, l, r = [int(v) for v in input().split()]
-
+(n, pos, l, r) = [int(v) for v in input().split()]
 needleft = l > 1
 needright = r < n
 if needleft:
@@ -9,8 +8,7 @@ if needleft:
         print(min(dl, dr) + 1 + r - l + 1)
     else:
         print(abs(pos - l) + 1)
+elif needright:
+    print(abs(pos - r) + 1)
 else:
-    if needright:
-        print(abs(pos - r) + 1)
-    else:
-        print(0)
+    print(0)

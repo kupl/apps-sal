@@ -1,5 +1,4 @@
 from collections import Counter
-
 a = input()
 b = input()
 
@@ -13,7 +12,7 @@ def is_subcounter(cnt1, cnt2):
 
 def subtract_counters(cnt1, cnt2):
     result = Counter(cnt1)
-    for key, val in list(cnt2.items()):
+    for (key, val) in list(cnt2.items()):
         assert val <= result[key]
         result[key] -= val
     return result
@@ -27,13 +26,12 @@ def go():
         if not is_subcounter(cb_before, ca):
             continue
         cnt_left = subtract_counters(ca, cb_before)
-        for key, val in list(cnt_left.items()):
+        for (key, val) in list(cnt_left.items()):
             if val == 0:
                 continue
             if key >= b[pos]:
                 continue
-            tail = sorted(''.join(key1 * (val1 if key1 != key else val1 - 1)
-                                  for key1, val1 in list(cnt_left.items())), reverse=True)
+            tail = sorted(''.join((key1 * (val1 if key1 != key else val1 - 1) for (key1, val1) in list(cnt_left.items()))), reverse=True)
             curr = b[:pos] + key + ''.join(tail)
             assert curr < b
             if best is None or curr > best:
@@ -43,7 +41,7 @@ def go():
 
 
 def solve(a, b):
-    assert(len(a) <= len(b))
+    assert len(a) <= len(b)
     if len(a) < len(b):
         return ''.join(sorted(a, reverse=True))
     elif Counter(a) == Counter(b):

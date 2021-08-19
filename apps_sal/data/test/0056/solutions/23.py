@@ -1,4 +1,4 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 total = sum(range(1, n + 1))
 l = [[0] * i for i in range(1, n + 1)]
 max_d = sum(range(1, n + 1))
@@ -34,5 +34,4 @@ def count(l):
 
 
 f(l, 0, 0, t)
-
 print(count(l))

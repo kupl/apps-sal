@@ -2,7 +2,7 @@ import math
 
 
 def __starting_point():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     s = list(s)
     ls = set(s)
@@ -11,9 +11,9 @@ def __starting_point():
         if s.count(i) > k:
             flag = 0
     if flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 __starting_point()

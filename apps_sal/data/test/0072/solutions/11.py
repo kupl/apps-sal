@@ -46,7 +46,6 @@ def calc(s):
 kun = calc(ku)
 sin = calc(si)
 kan = calc(ka)
-
 if kun > sin and kun > kan:
     print('Kuro')
 elif sin > kun and sin > kan:

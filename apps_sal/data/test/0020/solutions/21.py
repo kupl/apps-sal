@@ -18,5 +18,4 @@ ans = 0
 while not isPal(t):
     next()
     ans += 1
-
 print(ans)

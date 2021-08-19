@@ -1,7 +1,7 @@
 n = int(input())
 dx = [0 for i in range(n + 1)]
 dy = [0 for i in range(n + 1)]
-for i, ch in enumerate(input()):
+for (i, ch) in enumerate(input()):
     dx[i + 1] = dx[i]
     dy[i + 1] = dy[i]
     if ch == 'U':
@@ -13,7 +13,7 @@ for i, ch in enumerate(input()):
     else:
         assert ch == 'L'
         dx[i + 1] -= 1
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 
 
 def canChange(left, right):

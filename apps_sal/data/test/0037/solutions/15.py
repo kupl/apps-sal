@@ -1,5 +1,5 @@
 __author__ = 'Utena'
-a, b, c = map(int, map(int, input().split()))
+(a, b, c) = map(int, map(int, input().split()))
 while True:
     if c < 0:
         print('No')

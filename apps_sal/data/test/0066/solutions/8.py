@@ -1,4 +1,4 @@
-t, w, b = list(map(int, input().split()))
+(t, w, b) = list(map(int, input().split()))
 
 
 def NOK(a, b):
@@ -17,7 +17,7 @@ def NOD(a, b):
             a %= b
         else:
             b %= a
-    return (a + b)
+    return a + b
 
 
 if w == 1 or b == 1:
@@ -26,7 +26,5 @@ else:
     k = NOK(w, b)
     ost = max(0, min(w, b) - 1 - t % k)
     res = (t // k + 1) * min(w, b) - 1 - ost
-
 m = NOD(t, res)
-
 print(str(res // m) + '/' + str(t // m))

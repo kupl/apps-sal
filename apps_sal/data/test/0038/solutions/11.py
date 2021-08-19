@@ -1,4 +1,4 @@
-n, l = list(map(int, input().split()))
+(n, l) = list(map(int, input().split()))
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
 aa = [0] * n
@@ -10,9 +10,9 @@ for i in range(1, n):
     bb[i] = b[i] - b[i - 1]
 for i in range(n):
     if aa == bb:
-        print("YES")
+        print('YES')
         break
     aa.append(aa[0])
     aa.pop(0)
 else:
-    print("NO")
+    print('NO')

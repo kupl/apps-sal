@@ -11,9 +11,8 @@ for i in range(n - 1, -1, -1):
 pos = 0
 cache = list()
 res = ''
-
 while len(res) < n:
-    c, i = mi[pos]
+    (c, i) = mi[pos]
     res += c
     cache += ns[pos:i]
     pos = i
@@ -26,6 +25,4 @@ while len(res) < n:
         cache.pop()
     else:
         pos += 1
-
-
 print(res)

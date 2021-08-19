@@ -1,4 +1,4 @@
-n, m, r = (int(i) for i in input().split())
+(n, m, r) = (int(i) for i in input().split())
 s = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
 m = min(s)

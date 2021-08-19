@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 f = False
 for na in range(1 + c // a):
     if f:
@@ -8,6 +8,6 @@ for na in range(1 + c // a):
             f = True
             break
 if f:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

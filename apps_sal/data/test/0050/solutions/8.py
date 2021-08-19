@@ -1,4 +1,4 @@
-n, m, r = list(map(int, input().split()))
+(n, m, r) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 b = list(map(int, input().split()))
 u = min(s)

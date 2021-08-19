@@ -1,7 +1,5 @@
-c, v0, v1, a, l = [int(i) for i in input().split()]
-
-i, d = 1, 0
-
+(c, v0, v1, a, l) = [int(i) for i in input().split()]
+(i, d) = (1, 0)
 while 1:
     if d > 0:
         i -= l
@@ -10,5 +8,4 @@ while 1:
     i += v
     if i > c:
         break
-
 print(d)

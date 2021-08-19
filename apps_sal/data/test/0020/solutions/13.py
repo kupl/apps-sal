@@ -3,15 +3,12 @@ import sys
 
 def solve():
     s = input()
-
     m = timetomin(s)
     ans = 0
-
-    while (not is_pali(mintotime(m))):
+    while not is_pali(mintotime(m)):
         m += 1
         m %= 24 * 60
         ans += 1
-
     print(ans)
 
 
@@ -24,7 +21,7 @@ def mintotime(m):
 
 
 def timetomin(s):
-    h, m = map(int, s.split(':'))
+    (h, m) = map(int, s.split(':'))
     return h * 60 + m
 
 

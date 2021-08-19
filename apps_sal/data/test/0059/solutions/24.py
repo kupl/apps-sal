@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int, input().split(" ")))
+a = list(map(int, input().split(' ')))
 s = list(map(int, input()))
 right = [-1] * n
 i = n - 2
@@ -12,18 +12,15 @@ i -= 1
 while i >= 0:
     if s[i] == 0:
         right[i] = i
+    elif s[i + 1] == 0:
+        right[i] = i + 1
     else:
-        if s[i + 1] == 0:
-            right[i] = i + 1
-        else:
-            right[i] = right[i + 1]
+        right[i] = right[i + 1]
     i -= 1
-
 ans = True
 i = 0
 for ai in a:
     if ai - 1 > right[i]:
         ans = False
     i += 1
-
-print("YES" if ans else "NO")
+print('YES' if ans else 'NO')

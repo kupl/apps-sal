@@ -10,10 +10,10 @@ def is_prime(x):
 
 def decomposition(even):
     if even == 4:
-        return 2, 2
+        return (2, 2)
     for i in range(even - 3, int(math.sqrt(even)) - 1, -2):
         if is_prime(i) and is_prime(even - i):
-            return i, even - i
+            return (i, even - i)
 
 
 n = int(input())

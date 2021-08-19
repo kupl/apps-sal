@@ -1,13 +1,13 @@
 def f(n, k):
     n = str(n)
-    if n[k] == "0":
+    if n[k] == '0':
         return f(n, k - 1)
     a = []
     for i in n:
         a.append(int(i))
     n = a
     n[k] = int(n[k]) - 1
-    n[k + 1::] = [9] * (len(n) - k - 1)
+    n[k + 1:] = [9] * (len(n) - k - 1)
     return n
 
 

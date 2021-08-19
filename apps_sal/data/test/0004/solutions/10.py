@@ -7,7 +7,7 @@ def lucky(hh, mm):
 
 
 x = int(input())
-h, m = map(int, input().split())
+(h, m) = map(int, input().split())
 cnt = 0
 while not lucky(h, m):
     m -= x
@@ -17,5 +17,4 @@ while not lucky(h, m):
     if h < 0:
         h += 24
     cnt += 1
-
 print(cnt)

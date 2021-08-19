@@ -9,9 +9,8 @@ def calc(s):
 
 
 s = list(sys.stdin.readline().rstrip())
-best = "".join(s)
+best = ''.join(s)
 count = calc(s)
-
 i = len(s) - 1
 while i != 0:
     i -= 1
@@ -24,9 +23,7 @@ while i != 0:
         c = calc(s)
         if count < c:
             count = c
-            best = "".join(s)
-
+            best = ''.join(s)
 if best[0] == '0':
     best = best[1:]
-
 print(best)

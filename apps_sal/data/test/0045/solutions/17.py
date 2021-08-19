@@ -22,7 +22,6 @@ def ma():
             while n % q != 0:
                 q -= 1
             m = q
-
     for i in range(k - 1):
         print(str((i + 1) * m), end='')
         print(' ', end='')

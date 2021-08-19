@@ -1,5 +1,5 @@
 a = int(input())
-l = [int(i)for i in input().split()]
+l = [int(i) for i in input().split()]
 x = min(l)
 id = 0
 for i in l:

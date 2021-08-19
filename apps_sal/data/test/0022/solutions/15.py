@@ -1,16 +1,7 @@
 from string import ascii_letters
-
 mirror_symmetry = 'AHIMOoTUVvWwXxY'
-
-symmetric_to = {
-    'b': 'd',
-    'd': 'b',
-    'p': 'q',
-    'q': 'p',
-}
-
+symmetric_to = {'b': 'd', 'd': 'b', 'p': 'q', 'q': 'p'}
 others = set(ascii_letters) - set(mirror_symmetry + 'bdpq')
-
 string = input()
 
 

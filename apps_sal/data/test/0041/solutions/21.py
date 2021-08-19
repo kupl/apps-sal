@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-l, r, ll, rr, c = [0] * n, [0] * n, -10**9, 10**9, []
+(l, r, ll, rr, c) = ([0] * n, [0] * n, -10 ** 9, 10 ** 9, [])
 for i in range(n):
     if not a[i]:
         ll = i

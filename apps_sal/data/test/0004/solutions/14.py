@@ -1,5 +1,5 @@
 x = int(input())
-h, m = input().split()
+(h, m) = input().split()
 if '7' in h + m:
     print(0)
 else:

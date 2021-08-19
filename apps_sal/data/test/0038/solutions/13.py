@@ -1,4 +1,4 @@
-q, w = list(map(int, input().split()))
+(q, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = list(map(int, input().split()))
 z = [0] * q

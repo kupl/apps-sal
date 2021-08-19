@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = [list(map(int, input().split())) for _ in range(q)]
 c = [0] * 5005
 for i in range(q):

@@ -1,4 +1,4 @@
-w, m = map(int, input().split())
+(w, m) = map(int, input().split())
 
 
 def isOK(w, m):
@@ -16,7 +16,7 @@ def isOK(w, m):
 def convert_base_w(m, w):
     wr = [0] * 101
     for i in range(101):
-        m, r = divmod(m, w)
+        (m, r) = divmod(m, w)
         wr[i] = r
     return wr
 

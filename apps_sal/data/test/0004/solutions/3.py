@@ -1,8 +1,7 @@
 x = int(input())
-hh, mm = [int(v) for v in input().split()]
-
+(hh, mm) = [int(v) for v in input().split()]
 ans = 0
-while '7' not in ('%s%s' % (hh, mm)):
+while '7' not in '%s%s' % (hh, mm):
     ans += 1
     if x == 60:
         hh -= 1
@@ -13,5 +12,4 @@ while '7' not in ('%s%s' % (hh, mm)):
             hh -= 1
             if hh < 0:
                 hh = 23
-
 print(ans)

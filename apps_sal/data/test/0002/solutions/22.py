@@ -1,6 +1,5 @@
 n = input()
 y = int(n)
-
 if y < 10:
     print(1)
 else:

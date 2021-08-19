@@ -1,4 +1,4 @@
-a, k = input().split()
+(a, k) = input().split()
 k = int(k)
 start = -1
 for j in range(len(a)):
@@ -14,7 +14,6 @@ for j in range(len(a) - 1, j, -1):
             ans += 1
     else:
         break
-
 if k == 0:
     print(ans)
 else:

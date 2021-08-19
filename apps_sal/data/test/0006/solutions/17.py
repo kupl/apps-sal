@@ -20,7 +20,7 @@ def r(s):
 
 t = ii()
 for i in range(t):
-    a, b = mi()
+    (a, b) = mi()
     s = [si() for i in range(a)]
     maxout = max(s, key=lambda x: x[0])[0]
     maxin = max(s, key=lambda x: x[0] - x[1])

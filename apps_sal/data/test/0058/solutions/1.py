@@ -1,10 +1,9 @@
 n = int(input())
 a = int(input())
 b = int(input())
-
 c = 1
 rem = n
-a1, b1 = 0, 0
+(a1, b1) = (0, 0)
 while True:
     if rem >= a and a1 < 4:
         rem -= a

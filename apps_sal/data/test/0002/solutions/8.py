@@ -1,6 +1,5 @@
 import sys
 import math
-
 n = int(input())
 s = n
 r = 1

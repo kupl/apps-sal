@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ns = {}
 for c in input():
     if c in ns.keys():
@@ -7,7 +7,7 @@ for c in input():
         ns[c] = 1
 for a in ns.values():
     if a > k:
-        print("NO")
+        print('NO')
         break
 else:
-    print("YES")
+    print('YES')

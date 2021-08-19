@@ -1,7 +1,7 @@
 def main():
     from math import sqrt
-    n, k = list(map(int, input().split()))
-    g, x = n * 2 // ((k + 1) * k), n
+    (n, k) = list(map(int, input().split()))
+    (g, x) = (n * 2 // ((k + 1) * k), n)
     if not g:
         print(-1)
         return
@@ -17,7 +17,7 @@ def main():
             break
         for p in range(p + 2, lim + 2, 2):
             if not x % p:
-                l, q = [], 1
+                (l, q) = ([], 1)
                 while not x % p:
                     x //= p
                     q *= p
@@ -28,7 +28,7 @@ def main():
             break
     if x != 1:
         divisors += [x * q for q in divisors]
-    g = max(p for p in divisors if p <= g)
+    g = max((p for p in divisors if p <= g))
     print(' '.join(map(str, list(range(g, g * k, g)))), n - g * (k - 1) * k // 2)
 
 

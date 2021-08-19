@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 i = 0
-d = ""
+d = ''
 ls = []
 mx = -1
 while i < n:

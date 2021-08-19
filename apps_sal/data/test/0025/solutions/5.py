@@ -1,10 +1,8 @@
-
 def main(n, k):
     total = n * n
     if total < k:
         print(-1)
         return
-
     m = [[0] * n for _ in range(n)]
     fill(m, n, k)
     print_m(m)
@@ -15,7 +13,6 @@ def fill(m, n, k):
         for j in range(i, n):
             if k == 0:
                 return
-
             if i == j:
                 m[i][j] = 1
                 k -= 1
@@ -34,5 +31,5 @@ def print_m(m):
         print(' '.join(map(str, row)))
 
 
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 main(n, k)

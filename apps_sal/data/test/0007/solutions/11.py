@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n <= m:
     print(n)
 else:
     init = m
     n = n - m
     lo = 1
-    hi = int(1e19)
+    hi = int(1e+19)
     poss = 0
     while hi >= lo:
         mid = (hi + lo) // 2

@@ -4,7 +4,6 @@ t = []
 ans = 3
 for i in s:
     t.append(ord(i) - ord('0'))
-
 for a[0] in range(10):
     for a[1] in range(10):
         for a[2] in range(10):

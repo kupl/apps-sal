@@ -1,9 +1,9 @@
-n, q = map(int, input().strip().split())
+(n, q) = map(int, input().strip().split())
 count = [0 for i in range(n + 1)]
 tot = 0
 painters = []
 for i in range(q):
-    l, r = map(int, input().strip().split())
+    (l, r) = map(int, input().strip().split())
     painters.append([l, r])
     for j in range(l, r + 1):
         if count[j] == 0:

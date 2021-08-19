@@ -1,5 +1,5 @@
 s = input().split()
-n, t = int(s[0]), int(s[1])
+(n, t) = (int(s[0]), int(s[1]))
 a = [0 for i in range(110)]
 
 
@@ -17,10 +17,8 @@ def balance(x, d):
 
 a[0] += t
 balance(0, 1)
-
 ans = 0
 for i in range(100):
     if a[i] >= 1:
         ans += 1
-
 print(ans)

@@ -1,6 +1,4 @@
-
-
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 
 
 def check(x):
@@ -23,7 +21,6 @@ def check(x):
 
 l = 0
 r = a + b
-
 while l + 1 < r:
     m = (l + r) // 2
     if check(m):

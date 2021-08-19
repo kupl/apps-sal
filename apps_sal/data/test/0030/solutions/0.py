@@ -14,9 +14,9 @@ def powmod(a, b, m):
 
 def f(n):
     r = []
-    if (n & 1) == 0:
+    if n & 1 == 0:
         e = 0
-        while (n & 1) == 0:
+        while n & 1 == 0:
             n >>= 1
             e += 1
         yield (2, e)
@@ -37,14 +37,14 @@ def f(n):
     return r
 
 
-m, x = map(int, input().split())
+(m, x) = map(int, input().split())
 p = 2
 r = [(1, 1)]
-for p, e in f(m):
+for (p, e) in f(m):
     assert e >= 1
     ord = p - 1
     assert powmod(x, ord, p) == 1
-    for pi, ei in f(p - 1):
+    for (pi, ei) in f(p - 1):
         while ord % pi == 0 and powmod(x, ord // pi, p) == 1:
             ord //= pi
     ords = [(1, 1), (ord, p - 1)]
@@ -55,5 +55,5 @@ for p, e in f(m):
             ord *= p
         assert powmod(x, ord, q) == 1
         ords.append((ord, q // p * (p - 1)))
-    r = [(a // gcd(a, c) * c, b * d) for a, b in r for c, d in ords]
-print(sum(y // x for x, y in r))
+    r = [(a // gcd(a, c) * c, b * d) for (a, b) in r for (c, d) in ords]
+print(sum((y // x for (x, y) in r)))

@@ -4,7 +4,7 @@ m = int(s[3:])
 
 
 def ispalin(h, m):
-    s = "%02d:%02d" % (h, m)
+    s = '%02d:%02d' % (h, m)
     return s == s[::-1]
 
 

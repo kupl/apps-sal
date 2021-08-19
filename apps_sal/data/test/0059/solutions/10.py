@@ -19,6 +19,6 @@ while i < n:
         flag = 1
         break
 if flag:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

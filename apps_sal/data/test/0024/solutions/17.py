@@ -1,4 +1,5 @@
-def corr(i, j): return 0 <= i < 10 and 0 <= j < 10
+def corr(i, j):
+    return 0 <= i < 10 and 0 <= j < 10
 
 
 def can(b):
@@ -30,6 +31,6 @@ def solve():
     return 0
 
 
-dx, dy = [0, 1, 1, -1], [1, 0, 1, 1]
+(dx, dy) = ([0, 1, 1, -1], [1, 0, 1, 1])
 a = [input() for i in range(10)]
 print('YES' if solve() else 'NO')

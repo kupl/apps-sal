@@ -20,11 +20,10 @@ else:
             if flag == 0:
                 if lm[i] == 1:
                     flag = 1
+            elif lm[i] == 1:
+                flag += 1
             else:
-                if lm[i] == 1:
-                    flag += 1
-                else:
-                    break
+                break
         return flag
     if seq_checker(lm) == 3 or seq_checker(lp) == 3 or seq_checker(ls) == 3:
         print(0)

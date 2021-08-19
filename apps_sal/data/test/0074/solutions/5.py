@@ -19,9 +19,8 @@ else:
         if Prost(i):
             r = i
             break
-
     k = n - r
-    if (k == 2):
+    if k == 2:
         print(2)
         print(r, k)
     else:

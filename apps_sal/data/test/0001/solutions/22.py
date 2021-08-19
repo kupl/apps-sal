@@ -33,14 +33,6 @@ def tl(n):
     return [ans, maxx]
 
 
-'''for kkk in range(100):
-    n = randint(1, 10 ** 5)
-    c1 = solve(n)
-    c2 = tl(n)
-    if c1 != c2:
-        print(n)
-        print(c1)
-        print(c2)
-print('ok')'''
+"for kkk in range(100):\n    n = randint(1, 10 ** 5)\n    c1 = solve(n)\n    c2 = tl(n)\n    if c1 != c2:\n        print(n)\n        print(c1)\n        print(c2)\nprint('ok')"
 n = int(input())
 print(solve(n)[0])

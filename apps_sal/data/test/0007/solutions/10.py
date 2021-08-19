@@ -1,8 +1,8 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 if m >= n:
     print(n)
 else:
-    l, r = -1, 10**18
+    (l, r) = (-1, 10 ** 18)
     now = n - m
     while r - l > 1:
         md = (l + r) // 2

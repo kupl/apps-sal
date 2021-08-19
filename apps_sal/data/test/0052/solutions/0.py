@@ -2,7 +2,7 @@ n = int(input())
 res = set()
 for r in range(100):
     a = 1
-    b = 2**(r + 1) - 3
+    b = 2 ** (r + 1) - 3
     c = -2 * n
     d = b * b - 4 * a * c
     if d < 0:
@@ -17,9 +17,9 @@ for r in range(100):
             ri = c
     if le * le == d:
         if (-b - le) % 4 == 2 and -b - le > 0:
-            res.add((-b - le) // 2 * 2**r)
+            res.add((-b - le) // 2 * 2 ** r)
         if (-b + le) % 4 == 2 and -b + le > 0:
-            res.add((-b + le) // 2 * 2**r)
+            res.add((-b + le) // 2 * 2 ** r)
 for i in sorted(list(res)):
     print(i)
 if not list(res):

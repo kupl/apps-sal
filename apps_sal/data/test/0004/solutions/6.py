@@ -4,7 +4,7 @@ def nt(t):
 
 
 x = int(input())
-h, m = [int(i) for i in input().split()]
+(h, m) = [int(i) for i in input().split()]
 t = h * 60 + m
 ans = 0
 while not nt(t):

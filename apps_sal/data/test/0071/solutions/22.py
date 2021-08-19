@@ -1,4 +1,4 @@
-n, m, k, x, y = list(map(int, input().split()))
+(n, m, k, x, y) = list(map(int, input().split()))
 t = n * m + (n - 2) * m if n != 1 else m
 b = k // t
 g = []
@@ -6,10 +6,9 @@ g.append([b for _ in range(m)])
 for _ in range(n - 2):
     g.append([2 * b for _ in range(m)])
 g.append([b for _ in range(m)])
-
 r = k % t
 mx = -1
-mn = int(1e18)
+mn = int(1e+18)
 for i in range(n):
     for j in range(m):
         if r > 0:

@@ -1,5 +1,5 @@
 x = int(input())
-h, m = list(map(int, input().split()))
+(h, m) = list(map(int, input().split()))
 t = 60 * h + m
 
 

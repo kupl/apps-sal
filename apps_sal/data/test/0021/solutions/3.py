@@ -1,10 +1,13 @@
 from sys import *
-def inp(): return stdin.readline()
+
+
+def inp():
+    return stdin.readline()
 
 
 def main():
     n = int(inp())
-    a, b = 0, 0
+    (a, b) = (0, 0)
     l = [int(i) for i in inp().split()]
     for i in range(len(l)):
         if l[i] == 1:
@@ -12,7 +15,7 @@ def main():
         if l[i] == n:
             b = i
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     ans = max(n - 1 - a, b)
     print(ans)
 

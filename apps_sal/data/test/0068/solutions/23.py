@@ -1,13 +1,13 @@
 n = int(input())
 a = input()
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 locs = [(0, 0)]
 for i in range(n):
-    if a[i] == "U":
+    if a[i] == 'U':
         locs.append((locs[-1][0], locs[-1][1] + 1))
-    elif a[i] == "D":
+    elif a[i] == 'D':
         locs.append((locs[-1][0], locs[-1][1] - 1))
-    elif a[i] == "R":
+    elif a[i] == 'R':
         locs.append((locs[-1][0] + 1, locs[-1][1]))
     else:
         locs.append((locs[-1][0] - 1, locs[-1][1]))
@@ -21,7 +21,7 @@ else:
     best = n
     end = locs[-1]
     while True:
-        c, d = locs[a][0] + end[0] - locs[b][0], locs[a][1] + end[1] - locs[b][1]
+        (c, d) = (locs[a][0] + end[0] - locs[b][0], locs[a][1] + end[1] - locs[b][1])
         if abs(c - x) + abs(d - y) <= b - a:
             best = min(best, b - a)
             a += 1

@@ -1,4 +1,4 @@
-n, m, r = map(int, input().split())
+(n, m, r) = map(int, input().split())
 buys = list(map(int, input().split()))
 sells = list(map(int, input().split()))
 min_buys = min(buys)

@@ -1,7 +1,5 @@
-x, y, z = list(map(int, input().split()))
-
+(x, y, z) = list(map(int, input().split()))
 total = x - y
-
 if total - z > 0:
     print('+')
 elif total + z < 0:

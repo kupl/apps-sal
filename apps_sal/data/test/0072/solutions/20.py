@@ -5,7 +5,7 @@ c = input()
 Da = {}
 Db = {}
 Dc = {}
-al = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+al = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 for i in al:
     Da[i] = 0
     Db[i] = 0
@@ -78,10 +78,10 @@ if (pb == t or ib == t) and n == 1:
 if (pc == t or ic == t) and n == 1:
     C = t - 1
 if A > B and A > C:
-    print("Kuro")
+    print('Kuro')
 elif B > A and B > C:
-    print("Shiro")
+    print('Shiro')
 elif C > A and C > B:
-    print("Katie")
+    print('Katie')
 else:
-    print("Draw")
+    print('Draw')

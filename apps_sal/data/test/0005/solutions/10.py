@@ -1,5 +1,4 @@
-n, pos, l, r = list(map(int, input().split()))
-
+(n, pos, l, r) = list(map(int, input().split()))
 if l == 1 and r == n:
     print(0)
 elif l == 1:

@@ -6,7 +6,7 @@ def f(a):
     return '-'
 
 
-x, y, z = list(map(int, input().split()))
+(x, y, z) = list(map(int, input().split()))
 if z == 0:
     print(f(x - y))
 elif f(x - y - z) != f(x - y + z):

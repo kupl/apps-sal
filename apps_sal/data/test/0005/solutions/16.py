@@ -1,4 +1,4 @@
-n, p, l, r = list(map(int, input().split()))
+(n, p, l, r) = list(map(int, input().split()))
 if l > 1 and r < n:
     t1 = abs(p - l) + (r - l)
     t2 = abs(p - r) + (r - l)

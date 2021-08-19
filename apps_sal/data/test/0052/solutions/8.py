@@ -1,8 +1,7 @@
 n = int(input())
 f = 0
-
 for p in range(63):
-    N = 1 << (p + 1)
+    N = 1 << p + 1
     l = 0
     h = n
     while h >= l:
@@ -17,6 +16,5 @@ for p in range(63):
             h = m - 1
         else:
             l = m + 1
-
 if f == 0:
     print(-1)

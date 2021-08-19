@@ -1,11 +1,9 @@
 n = int(input().strip())
-
 s = []
 while n > 0:
     s.append(n % 10)
     n //= 10
 s = s[::-1]
-
 n = len(s)
 ans = 0
 best = -1

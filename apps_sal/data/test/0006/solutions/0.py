@@ -1,8 +1,8 @@
 for _ in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     A = []
     for _1 in range(n):
-        d, h = list(map(int, input().split()))
+        (d, h) = list(map(int, input().split()))
         A.append([d, h])
     A.sort(reverse=True)
     if A[0][0] >= x:
@@ -10,7 +10,7 @@ for _ in range(int(input())):
     else:
         x -= A[0][0]
         mz = 0
-        for d, h in A:
+        for (d, h) in A:
             mz = max(mz, d - h)
         if mz:
             print((x + mz - 1) // mz + 1)

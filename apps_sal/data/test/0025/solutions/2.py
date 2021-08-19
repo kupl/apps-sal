@@ -1,12 +1,9 @@
 def main():
-    n, k = map(int, input().split())
-
-    if k > n**2:
+    (n, k) = map(int, input().split())
+    if k > n ** 2:
         print(-1)
         return
-
     A = [[0] * n for _ in range(n)]
-
     i = 0
     j = 0
     while k > 1:
@@ -22,7 +19,6 @@ def main():
         j = i
     if k == 1:
         A[i][j] = 1
-
     for i in range(n):
         for j in range(n):
             print(A[i][j], end=' ')

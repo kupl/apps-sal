@@ -47,15 +47,13 @@ elif n == 1 and len(katie) > 1:
     katieans = len(katie) - 1
 else:
     katieans = len(katie)
-
 arr = [kuroans, shiroans, katieans]
 arr = sorted(arr)
 if arr[1] == arr[2]:
     print('Draw')
+elif kuroans > max(shiroans, katieans):
+    print('Kuro')
+elif shiroans > max(kuroans, katieans):
+    print('Shiro')
 else:
-    if kuroans > max(shiroans, katieans):
-        print('Kuro')
-    elif shiroans > max(kuroans, katieans):
-        print('Shiro')
-    else:
-        print('Katie')
+    print('Katie')

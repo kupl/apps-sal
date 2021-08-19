@@ -1,4 +1,4 @@
-a, b, c = (int(z) for z in input().split())
+(a, b, c) = (int(z) for z in input().split())
 
 
 def f(a, b, c):
@@ -7,11 +7,11 @@ def f(a, b, c):
     res = 0
     while x <= ca:
         if (c - res) % b == 0:
-            return "Yes"
+            return 'Yes'
         else:
             res += a
             x += 1
-    return "No"
+    return 'No'
 
 
 print(f(a, b, c))

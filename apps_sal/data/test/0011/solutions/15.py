@@ -1,13 +1,9 @@
 import fractions
-n, a, b, p, q = map(int, input().split())
-
+(n, a, b, p, q) = map(int, input().split())
 red_max = n // a
 blue_max = n // b
-
-
-gcd = (a * b) // fractions.math.gcd(a, b)
+gcd = a * b // fractions.math.gcd(a, b)
 commons = n // gcd
-
 if p > q:
     print(red_max * p + (blue_max - commons) * q)
 else:

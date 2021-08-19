@@ -7,7 +7,7 @@ m = int(s)
 c = 0
 while c != 1:
     if m > x:
-        m = m - 10**(l - 1)
+        m = m - 10 ** (l - 1)
     else:
         c = 1
 sm = str(m)

@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 T = int(input())
 for _ in range(T):
     n = int(input())
@@ -8,7 +7,7 @@ for _ in range(T):
     lastC = 0
     works = True
     for _ in range(n):
-        p, c = list(map(int, input().split()))
+        (p, c) = list(map(int, input().split()))
         pDiff = p - lastP
         cDiff = c - lastC
         if 0 <= cDiff <= pDiff:

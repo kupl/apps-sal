@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 m = (n + 1) * n // 2
 a = [0] * ((n + 1) * n // 2)
 next = [-1] * ((n + 1) * n // 2)

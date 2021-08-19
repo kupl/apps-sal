@@ -1,12 +1,9 @@
 import re
-
 s = input().strip()
 t = re.sub('[^AbdHIMOopqTUVvWwXxY]{1}', '', s)
-
 m = {}
 for i in range(ord('A'), ord('z') + 1):
     m[chr(i)] = chr(i)
-
 m['b'] = 'd'
 m['d'] = 'b'
 m['p'] = 'q'

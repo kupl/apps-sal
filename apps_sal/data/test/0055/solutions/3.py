@@ -1,14 +1,14 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 cnt = [0] * 200010
 ans = ''
 for i in range(64):
-    if (n >> i) & 1:
+    if n >> i & 1:
         k -= 1
         cnt[i] = 1
 if k < 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')
     for i in range(64, -64, -1):
         if k >= cnt[i]:
             cnt[i - 1] += cnt[i] * 2

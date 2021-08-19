@@ -4,7 +4,7 @@ try:
     left = -1
     was_b = False
     for i in range(len(s)):
-        if s[i] == '[' and not was_b:
+        if s[i] == '[' and (not was_b):
             was_b = True
             continue
         if s[i] == ':' and was_b:
@@ -16,7 +16,7 @@ try:
     right = -1
     was_b = False
     for i in range(len(s) - 1, -1, -1):
-        if s[i] == ']' and not was_b:
+        if s[i] == ']' and (not was_b):
             was_b = True
             continue
         if s[i] == ':' and was_b:

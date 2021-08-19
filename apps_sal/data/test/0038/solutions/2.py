@@ -12,11 +12,11 @@ def rotate(lst, i):
     return lst[i:] + lst[:i]
 
 
-n, length = list(map(int, input().split()))
-a, b = [calc_distances(list(map(int, input().split()))) for i in range(2)]
+(n, length) = list(map(int, input().split()))
+(a, b) = [calc_distances(list(map(int, input().split()))) for i in range(2)]
 for i in range(n):
     if b[i] == a[0] and rotate(b, i) == a:
-        print("YES")
+        print('YES')
         break
 else:
-    print("NO")
+    print('NO')

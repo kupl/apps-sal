@@ -1,5 +1,5 @@
 def f(x, k):
-    return x * (x - 1) // 2 + ((2 ** k) - 1) * x
+    return x * (x - 1) // 2 + (2 ** k - 1) * x
 
 
 res = []
@@ -16,8 +16,8 @@ for k in range(0, 64):
             r = m
     if f(l, k) != n or l % 2 == 0:
         continue
-    cand = (2 ** k) * l
-    if not (cand in res):
+    cand = 2 ** k * l
+    if not cand in res:
         res.append(cand)
 if len(res) == 0:
     res.append(-1)

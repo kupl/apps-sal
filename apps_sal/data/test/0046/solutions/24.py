@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 zer1 = n // 5
 zer2 = m // 5
 one1 = (n - 1) // 5 + 1

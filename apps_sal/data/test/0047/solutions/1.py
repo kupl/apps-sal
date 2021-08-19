@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 cur1 = cur2 = cur = res = 0
 for a in map(int, input().split()):
     cur1 = max(cur1 + a, 0)

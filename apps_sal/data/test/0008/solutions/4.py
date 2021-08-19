@@ -9,7 +9,6 @@ for i in D:
         m[int(i[0])] += 1
     else:
         s[int(i[0])] += 1
-
 need = 3
 for i in range(1, 10):
     need = min(3 - p[i], need)
@@ -31,5 +30,4 @@ for i in range(1, 10):
         tmp += min(1, s[i + 1])
         tmp += min(1, s[i + 2])
         need = min(3 - tmp, need)
-
 print(need)

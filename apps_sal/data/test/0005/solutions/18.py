@@ -9,8 +9,7 @@ def f(a, b, l, r, i):
         return 2 + abs(l - r) + min(abs(i - l), abs(i - r))
 
 
-n, p, l, r = list(map(int, input().split()))
-a, b = 1, n
+(n, p, l, r) = list(map(int, input().split()))
+(a, b) = (1, n)
 t = 0
-
 print(f(a, b, l, r, p))

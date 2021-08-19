@@ -1,14 +1,13 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 painters = []
 sections = [0] * (n + 1)
 for i in range(q):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     l -= 1
     r -= 1
     painters.append([l, r])
     sections[l] += 1
     sections[r + 1] -= 1
-
 cnt1 = [0] * (n + 1)
 cnt2 = [0] * (n + 1)
 p = 0

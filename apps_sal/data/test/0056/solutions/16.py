@@ -1,4 +1,4 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 ot = 0
 a = []
 b = []
@@ -13,12 +13,12 @@ for i in range(n + 1):
         c[i].append(0)
 for ii in range(1, t + 1):
     a[0][0] += 1
-    if (ot >= (n * n + n) // 2):
+    if ot >= (n * n + n) // 2:
         break
     for i in range(n):
         for j in range(i + 1):
             if a[i][j] >= 1:
-                if not(c[i][j]):
+                if not c[i][j]:
                     ot += 1
                 c[i][j] = 1
                 b[i][j] = a[i][j] - 1

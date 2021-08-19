@@ -1,5 +1,3 @@
-
-
 def easy(vals):
     d = int(vals[0])
     k = int(vals[1])
@@ -13,7 +11,7 @@ def easy(vals):
     if b * k < a * k + t:
         return sofar + left * b
     if left > k:
-        sofar = sofar + (left // k) * (a * k + t)
+        sofar = sofar + left // k * (a * k + t)
         left = left % k
     if left * b <= left * a + t:
         return sofar + left * b

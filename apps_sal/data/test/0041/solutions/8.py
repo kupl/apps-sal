@@ -10,7 +10,6 @@ def main(n, arr):
         elif dist != BIG:
             dist += 1
         res.append(dist)
-
     dist = BIG
     for i in range(len(arr) - 1, -1, -1):
         x = arr[i]
@@ -18,10 +17,8 @@ def main(n, arr):
             dist = 0
         elif dist != BIG:
             dist += 1
-
         if res[i] > dist:
             res[i] = dist
-
     print(' '.join(map(str, res)))
 
 

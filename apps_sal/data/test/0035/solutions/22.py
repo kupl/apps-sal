@@ -1,11 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = [0 for i in range(n)]
 for i in range(n):
     A[i] = input()
-
-f1, f2 = True, True
-
-colors = ["R", "G", "B"]
+(f1, f2) = (True, True)
+colors = ['R', 'G', 'B']
 if n % 3 != 0:
     f1 = False
 else:
@@ -23,7 +21,7 @@ else:
                 if k != A[j][0]:
                     f1 = False
                     break
-colors = ["R", "G", "B"]
+colors = ['R', 'G', 'B']
 if m % 3 != 0:
     f2 = False
 else:
@@ -33,7 +31,6 @@ else:
             colors.remove(A[0][m // 3 * i])
         else:
             f2 = False
-
         for j in range(m // 3 * i, m // 3 * (i + 1)):
             if A[0][j] != qq:
                 f2 = False
@@ -42,9 +39,7 @@ else:
                 if A[k][j] != A[0][j]:
                     f2 = False
                     break
-
-
 if f1 or f2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

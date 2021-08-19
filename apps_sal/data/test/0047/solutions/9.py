@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 b = [0] * n
 f = [0] * n
@@ -17,7 +17,7 @@ for i in range(1, n):
     j = n - i - 1
     maksi = max(maksi, pref[j])
     f[j] = x * l[j] + max(f[j + 1], maksi - pref[j])
-wyn = - 100000000000000000000000
+wyn = -100000000000000000000000
 for i in range(n):
     wyn = max(wyn, f[i] + b[i] - x * l[i])
 mini = 0

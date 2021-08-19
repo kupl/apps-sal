@@ -1,6 +1,4 @@
-
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 if k > n * n:
     print(-1)
 else:
@@ -15,28 +13,23 @@ else:
             c += 1
             j += 1
             t = 0
-
         elif j == n:
             i += 1
             j = i
             t = 1
-
         else:
-
             b[i][j] = 1
             b[j][i] = 1
             j += 1
             c += 2
             t = 2
-
     if c == k:
-        p = ""
+        p = ''
         for q in range(n):
             for w in range(n):
-                p += str(b[q][w]) + " "
+                p += str(b[q][w]) + ' '
             print(p)
-            p = ""
-
+            p = ''
     else:
         if t == 0:
             j -= 1
@@ -48,9 +41,9 @@ else:
         b[i][j] = 0
         b[j][i] = 0
         b[i + 1][i + 1] = 1
-        p = ""
+        p = ''
         for q in range(n):
             for w in range(n):
-                p += str(b[q][w]) + " "
+                p += str(b[q][w]) + ' '
             print(p)
-            p = ""
+            p = ''

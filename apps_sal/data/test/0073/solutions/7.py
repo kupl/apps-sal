@@ -1,5 +1,4 @@
-c, v0, v1, a, l = map(int, input().split())
-
+(c, v0, v1, a, l) = map(int, input().split())
 ans = 0
 while c > 0:
     if ans:

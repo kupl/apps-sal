@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = [n // 5, n // 5, n // 5, n // 5, n // 5]
 B = [m // 5, m // 5, m // 5, m // 5, m // 5]
-
 for i in range(n % 5):
     A[i] += 1
 for i in range(m % 5):

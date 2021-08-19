@@ -2,10 +2,7 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-10
-GGGSGGGSGG
-'''
+'\n10\nGGGSGGGSGG\n'
 n = int(input())
 s = list(input())
 for i in range(n):

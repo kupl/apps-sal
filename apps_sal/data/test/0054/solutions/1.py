@@ -10,8 +10,8 @@ def f(w, m):
     return False
 
 
-w, m = map(int, input().split())
+(w, m) = map(int, input().split())
 if f(w, m):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

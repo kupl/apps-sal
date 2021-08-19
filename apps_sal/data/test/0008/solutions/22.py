@@ -1,7 +1,5 @@
 t = input().split()
-
 t.sort()
-
 if t.count(t[0]) == 3:
     print('0')
 elif t.count(t[0]) == 2 or t.count(t[1]) == 2:
@@ -21,19 +19,17 @@ else:
             print('1')
         else:
             print('2')
-    else:
-        if suit[0] == suit[1]:
-            if num[1] - num[0] in [1, 2]:
-                print('1')
-            else:
-                print('2')
-        elif suit[1] == suit[2]:
-            if num[2] - num[1] in [1, 2]:
-                print('1')
-            else:
-                print('2')
+    elif suit[0] == suit[1]:
+        if num[1] - num[0] in [1, 2]:
+            print('1')
         else:
-            if num[2] - num[0] in [1, 2]:
-                print('1')
-            else:
-                print('2')
+            print('2')
+    elif suit[1] == suit[2]:
+        if num[2] - num[1] in [1, 2]:
+            print('1')
+        else:
+            print('2')
+    elif num[2] - num[0] in [1, 2]:
+        print('1')
+    else:
+        print('2')

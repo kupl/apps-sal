@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 p = [0] * 100000
 p[0] = 1
 p[a] = 1

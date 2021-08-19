@@ -8,10 +8,11 @@ def f(x, y):
     return yy[::-1] != xx
 
 
-def read(): return map(int, input().split(':'))
+def read():
+    return map(int, input().split(':'))
 
 
-a, b = read()
+(a, b) = read()
 cnt = 0
 while f(a, b):
     b += 1

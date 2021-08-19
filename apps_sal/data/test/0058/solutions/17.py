@@ -27,7 +27,7 @@ else:
         print(3)
     if n - l < s and n >= 4 * s:
         print(3)
-    if n - l < s and n >= 2 * s and n < 4 * s:
+    if n - l < s and n >= 2 * s and (n < 4 * s):
         print(4)
     if n - l < s and n - s < s:
         print(6)

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
 pf = []
 needed = []
@@ -48,7 +48,7 @@ ans = n - pos + 1
 for x in range(n - 1):
     for j in range(len(pf)):
         have[j] -= cnt[j][x]
-    if pos == (x + 1):
+    if pos == x + 1:
         for j in range(len(pf)):
             have[j] += cnt[j][pos]
         pos += 1

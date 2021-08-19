@@ -19,9 +19,7 @@ def get_seq(n, k, mult=1):
 def get_seq_new(n, k):
     if n < round(k * (k + 1) / 2):
         return -1
-
     pre_val = []
-
     for num in range(2, round(n ** 0.5) + 1):
         if n % num == 0:
             if num >= round(k * (k + 1) / 2):

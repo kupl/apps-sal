@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 mn = min(a)
 pm = None
 ans = n + 1

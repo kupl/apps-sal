@@ -2,10 +2,10 @@ m = [x for x in input().split()]
 tiles = [[0 for i in range(9)] for j in range(3)]
 for i in range(len(m)):
     g = int(m[i][0]) - 1
-    h = (m[i][1])
-    if h == "m":
+    h = m[i][1]
+    if h == 'm':
         tiles[0][g] += 1
-    elif h == "p":
+    elif h == 'p':
         tiles[1][g] += 1
     else:
         tiles[2][g] += 1
@@ -31,7 +31,7 @@ else:
                         print(1)
                         n = True
                         break
-                elif j != 7 and j != 8 and tiles[i][j + 2] != 0:
+                elif j != 7 and j != 8 and (tiles[i][j + 2] != 0):
                     print(1)
                     n = True
                     break

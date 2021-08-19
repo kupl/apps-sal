@@ -12,7 +12,6 @@ def li():
 
 n = ii()
 s = input().strip()
-
 g = []
 i = 0
 lng = 0
@@ -26,7 +25,6 @@ while i < n:
     g.append((i, j))
     lng = max(lng, j - i)
     i = j + 1
-
 if not g:
     ans = 0
 elif len(g) == 1:
@@ -35,8 +33,8 @@ else:
     extra = len(g) > 2
     ans = lng + 1
     for i in range(len(g) - 1):
-        s, e = g[i]
-        s2, e2 = g[i + 1]
+        (s, e) = g[i]
+        (s2, e2) = g[i + 1]
         if s2 != e + 1:
             continue
         ans = max(ans, e - s + e2 - s2 + extra)

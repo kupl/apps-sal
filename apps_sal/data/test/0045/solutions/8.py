@@ -25,23 +25,22 @@ def result(n, k):
     return Main
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 divisors = list(divisorGenerator(n))
 for i in range(len(divisors)):
     divisors[i] = int(divisors[i])
-
-kk = (k**2 + k) // 2
+kk = (k ** 2 + k) // 2
 if n < kk:
     print(-1)
 else:
-    oo = n // (kk)
+    oo = n // kk
     pp = 1
     for i in divisors:
         if i <= oo:
             pp = i
     oo = pp
     w = result(n // oo, k)
-    s = ""
+    s = ''
     for i in w:
-        s += " " + str(i * oo)
+        s += ' ' + str(i * oo)
     print(s[1:])

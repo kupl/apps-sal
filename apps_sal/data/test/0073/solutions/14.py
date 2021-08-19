@@ -1,4 +1,4 @@
-c, v0, v1, a, l = map(int, input().split())
+(c, v0, v1, a, l) = map(int, input().split())
 cur = v0
 rem = c
 tmp = 0

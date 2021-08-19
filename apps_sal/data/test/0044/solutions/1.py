@@ -1,5 +1,5 @@
 from random import randint
-d, k, a, b, t = list(map(int, input().split()))
+(d, k, a, b, t) = list(map(int, input().split()))
 cnt = (d + k - 1) // k
 
 
@@ -16,7 +16,7 @@ def solvefast():
         l = 0
         r = cnt + 2
         while r - l > 2:
-            m1 = (l + r) >> 1
+            m1 = l + r >> 1
             m2 = m1 + 1
             if get(m2) > get(m1):
                 r = m2

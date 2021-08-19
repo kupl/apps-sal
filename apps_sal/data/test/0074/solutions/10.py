@@ -5,7 +5,6 @@ def isPrime(x):
         return True
     if x % 2 == 0:
         return False
-
     i = 3
     while i * i <= x:
         if x % i == 0:
@@ -23,10 +22,8 @@ else:
         if isPrime(i):
             bigPrime = i
             break
-
     ans = [bigPrime]
     n -= bigPrime
-
     if isPrime(n):
         ans.append(n)
     else:
@@ -36,7 +33,6 @@ else:
                 ans.append(i)
                 ans.append(j)
                 break
-
 print(len(ans))
 for i in ans:
     print(i, end=' ')

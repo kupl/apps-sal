@@ -4,7 +4,7 @@ def lucky(a, b):
 
 x = int(input())
 t = 0
-h, m = list(map(int, input().split()))
+(h, m) = list(map(int, input().split()))
 while not lucky(h, m):
     t += 1
     m -= x

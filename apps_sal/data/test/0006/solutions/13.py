@@ -1,7 +1,7 @@
 from math import ceil
 for t in range(int(input())):
     a = []
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     for i in range(n):
         a.append(list(map(int, input().split())))
     max_di = a[0][0]

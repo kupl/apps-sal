@@ -3,7 +3,7 @@ def b(h, m):
     return s == s[::-1]
 
 
-h, m = list(map(int, input().split(':')))
+(h, m) = list(map(int, input().split(':')))
 ans = 0
 while not b(h, m):
     ans += 1

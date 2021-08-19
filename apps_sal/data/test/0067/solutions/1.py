@@ -1,4 +1,4 @@
-x, y, z = map(int, input().split())
+(x, y, z) = map(int, input().split())
 best = x - y + z
 worst = x - y - z
 if worst > 0:

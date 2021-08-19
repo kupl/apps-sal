@@ -1,10 +1,7 @@
 n = int(input())
-
 a = list(map(int, input().strip().split()))
-
 x = min(a)
-
-best = 10**6
+best = 10 ** 6
 last = None
 i = 0
 while i < len(a):

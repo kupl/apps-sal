@@ -1,12 +1,10 @@
-
 n = input()
 arr = list(map(int, input().strip().split()))
-
 mini = None
 min_dist = None
 positions = []
 last = -1
-for i, a in enumerate(arr):
+for (i, a) in enumerate(arr):
     if mini is None or a < mini:
         mini = a
         last = i

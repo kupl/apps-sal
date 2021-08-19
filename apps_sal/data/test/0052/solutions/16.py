@@ -1,7 +1,7 @@
 f = n = int(input())
 N = 1
 while N <= n * 2:
-    l, h = 0, n
+    (l, h) = (0, n)
     while h >= l:
         m = (l + h) // 2
         r = (m * 2 + 1) * (m + N - 1)

@@ -2,7 +2,7 @@ n = int(input())
 h = 0
 south = 20000
 for i in range(n):
-    t, d = input().split()
+    (t, d) = input().split()
     t = int(t)
     if d[0] in 'WE':
         if h == 0 or h == south:
@@ -25,4 +25,4 @@ for i in range(n):
     if h < 0 or h > south:
         h = 228
         break
-print(("YES", "NO")[h != 0])
+print(('YES', 'NO')[h != 0])

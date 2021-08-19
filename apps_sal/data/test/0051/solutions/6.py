@@ -6,9 +6,8 @@ for i in range(n, len(inp)):
         t = True
         n = i
         break
-
 if t:
-    print("YES")
+    print('YES')
     print(inp[:n])
 else:
-    print("NO")
+    print('NO')

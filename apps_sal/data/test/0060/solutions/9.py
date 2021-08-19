@@ -1,7 +1,7 @@
 s = input()
 n = int(s[:len(s) - 1])
 n -= 1
-ans = (n // 4) * 16
+ans = n // 4 * 16
 n %= 4
 if n % 2 == 1:
     ans += 6 + 1

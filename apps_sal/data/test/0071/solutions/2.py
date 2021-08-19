@@ -1,4 +1,4 @@
-n, m, k, x, y = list(map(int, input().split()))
+(n, m, k, x, y) = list(map(int, input().split()))
 x -= 1
 y -= 1
 if n == 1:

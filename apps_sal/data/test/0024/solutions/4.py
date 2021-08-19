@@ -1,9 +1,7 @@
 def main():
-
     Map = []
     for i in range(10):
         Map += [input()]
-
     for i in range(10):
         for j in range(10):
             count = 0
@@ -17,7 +15,6 @@ def main():
                 if count == 4 and count2 == 1:
                     print('YES')
                     return 0
-
             count = 0
             count2 = 0
             if j <= 5:
@@ -29,10 +26,8 @@ def main():
                 if count == 4 and count2 == 1:
                     print('YES')
                     return 0
-
             count = 0
             count2 = 0
-
             if i <= 5 and j <= 5:
                 for k in range(5):
                     if Map[i + k][j + k] == 'X':
@@ -44,7 +39,6 @@ def main():
                     return 0
             count = 0
             count2 = 0
-
             if i >= 4 and j <= 5:
                 count = 0
                 for k in range(5):
@@ -52,7 +46,6 @@ def main():
                         count += 1
                     elif Map[i - k][j + k] == 'O':
                         count -= 1
-
                 if count == 4:
                     print('YES')
                     return 0

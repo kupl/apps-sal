@@ -1,8 +1,6 @@
-
 s = input()
 n = int(s.split(' ')[0])
 k = int(s.split(' ')[1])
-
 arr = []
 for i in range(n):
     arr.append([0] * n)
@@ -21,7 +19,6 @@ else:
                         arr[i][j] = 1
                         arr[j][i] = 1
                         l += 2
-
     for i in range(n):
         for j in range(n):
             print(arr[i][j], end=' ')

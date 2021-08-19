@@ -1,5 +1,5 @@
 x = int(input())
-hh, mm = map(int, input().split())
+(hh, mm) = map(int, input().split())
 mins = hh * 60 + mm
 ans = 0
 while str(mins // 60).count('7') == 0 and str(mins % 60).count('7') == 0:

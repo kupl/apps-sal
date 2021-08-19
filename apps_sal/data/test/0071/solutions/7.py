@@ -1,4 +1,4 @@
-n, m, k, x, y = map(int, input().split())
+(n, m, k, x, y) = map(int, input().split())
 if k < n * m:
     print('1 0', end=' ')
     if (x - 1) * m + y - 1 >= k:

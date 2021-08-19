@@ -1,6 +1,6 @@
 t = int(input())
 for i in ' ' * t:
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     s = input()
     L = [0]
     for i in s:

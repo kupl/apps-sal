@@ -1,6 +1,6 @@
-n, bx = list(map(int, input().split()))
+(n, bx) = list(map(int, input().split()))
 x = list(map(int, input().split()))
-m, by = list(map(int, input().split()))
+(m, by) = list(map(int, input().split()))
 y = list(map(int, input().split()))
 tmp = 1
 ans = 0
@@ -13,8 +13,8 @@ for i in range(1, m + 1):
     ans1 += y[-i] * tmp
     tmp *= by
 if ans < ans1:
-    print("<")
+    print('<')
 elif ans > ans1:
-    print(">")
+    print('>')
 else:
-    print("=")
+    print('=')

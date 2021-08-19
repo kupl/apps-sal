@@ -1,5 +1,5 @@
 from fractions import gcd
-n, a, b, p, q = list(map(int, input().split()))
+(n, a, b, p, q) = list(map(int, input().split()))
 num1 = n // a
 num2 = n // b
 t = a * b // gcd(a, b)

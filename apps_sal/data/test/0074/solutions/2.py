@@ -10,11 +10,11 @@ def primes2(limit):
             p = i + i + 3
             s = p * (i + 1) + i
             buf[s::p] = [False] * ((lmtbf - s) // p + 1)
-    return [2] + [i + i + 3 for i, v in enumerate(buf) if v]
+    return [2] + [i + i + 3 for (i, v) in enumerate(buf) if v]
 
 
 n = int(input())
-ps = primes2(int(n**0.5) + 1)
+ps = primes2(int(n ** 0.5) + 1)
 
 
 def solve(n):

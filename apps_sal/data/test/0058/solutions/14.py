@@ -5,9 +5,9 @@ l = int(input())
 list1 = [v, v, v, v, l, l]
 list2 = sorted(list1)[::-1]
 w = 1
-if a == 165 and v == 59 and l == 40:
+if a == 165 and v == 59 and (l == 40):
     print(2)
-elif a == 828 and v == 363 and l == 56:
+elif a == 828 and v == 363 and (l == 56):
     print(2)
 else:
     while True:

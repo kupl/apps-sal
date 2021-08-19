@@ -1,5 +1,5 @@
 def main():
-    n, pos, l, r = map(int, input().split())
+    (n, pos, l, r) = map(int, input().split())
     ans = 0
     if l <= pos <= r:
         if l == 1:

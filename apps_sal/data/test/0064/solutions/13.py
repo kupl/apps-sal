@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 s = input()
 letters = {}
 for x in s:
@@ -7,7 +7,7 @@ for x in s:
     letters[x] += 1
 for x in letters.values():
     if x > b:
-        print("NO")
+        print('NO')
         break
 else:
-    print("YES")
+    print('YES')

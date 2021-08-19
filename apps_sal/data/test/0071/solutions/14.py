@@ -1,6 +1,6 @@
-n, m, k, x1, y1 = map(int, input().split())
+(n, m, k, x1, y1) = map(int, input().split())
 c = 0
-if (n == 1):
+if n == 1:
     mi = k // m
     ma = mi + 1 * int(k % m != 0)
     s = mi + 1 * int(k % m > y1 - 1)
@@ -17,7 +17,7 @@ else:
     i = 0
     while d > 0:
         if i % (2 * n - 2) > n - 1:
-            x = 2 * n - 2 - (i % (2 * n - 2))
+            x = 2 * n - 2 - i % (2 * n - 2)
         else:
             x = i % (2 * n - 2)
         j = 0

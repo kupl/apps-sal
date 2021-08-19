@@ -1,6 +1,6 @@
-x, y, z = list(map(int, input().split()))
+(x, y, z) = list(map(int, input().split()))
 x += z
-A, B, C = False, False, False
+(A, B, C) = (False, False, False)
 if x > y:
     A = True
 elif x == y:

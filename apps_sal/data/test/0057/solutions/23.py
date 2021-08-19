@@ -7,8 +7,8 @@ while n > 0:
     a = [int(i) for i in s.split(' ')]
     x.append(a[0])
     y.append(a[1])
-kx, ky, xx, yy = 0, 0, -2000, -2000
-dx, dy = 0, 0
+(kx, ky, xx, yy) = (0, 0, -2000, -2000)
+(dx, dy) = (0, 0)
 for i in x:
     if xx != i and kx < 2:
         kx += 1

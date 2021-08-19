@@ -1,4 +1,4 @@
-n, k, t = list(map(int, input().split(' ')))
+(n, k, t) = list(map(int, input().split(' ')))
 
 
 def main():

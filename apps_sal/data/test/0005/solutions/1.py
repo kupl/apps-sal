@@ -3,7 +3,7 @@ from sys import stdout as cout
 
 
 def main():
-    n, pos, l, r = list(map(int, cin.readline().split()))
+    (n, pos, l, r) = list(map(int, cin.readline().split()))
     if l == 1 and r == n:
         print(0)
         return

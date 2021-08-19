@@ -26,22 +26,22 @@ def check(a, b):
             return True
         cnt = 0
         p = 1
-        while a + p < 10 and b + p < 10 and m[a + p][b + p] == 'X':
+        while a + p < 10 and b + p < 10 and (m[a + p][b + p] == 'X'):
             p += 1
             cnt += 1
         p = -1
-        while a + p >= 0 and b + p >= 0 and m[a + p][b + p] == 'X':
+        while a + p >= 0 and b + p >= 0 and (m[a + p][b + p] == 'X'):
             p -= 1
             cnt += 1
         if cnt >= 4:
             return True
         cnt = 0
         p = 1
-        while a + p < 10 and b - p >= 0 and m[a + p][b - p] == 'X':
+        while a + p < 10 and b - p >= 0 and (m[a + p][b - p] == 'X'):
             p += 1
             cnt += 1
         p = -1
-        while a + p >= 0 and b - p < 10 and m[a + p][b - p] == 'X':
+        while a + p >= 0 and b - p < 10 and (m[a + p][b - p] == 'X'):
             p -= 1
             cnt += 1
         if cnt >= 4:

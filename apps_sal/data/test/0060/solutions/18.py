@@ -10,5 +10,5 @@ d = {'f': 1, 'e': 2, 'd': 3, 'a': 4, 'b': 5, 'c': 6}
 if n == 0 or n == 2:
     ans += d[s]
 else:
-    ans += (7 + d[s])
+    ans += 7 + d[s]
 print(ans)

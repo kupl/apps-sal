@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 flag = []
 
 
@@ -21,10 +20,8 @@ def letterheight(i):
 
 for i in range(n):
     flag.append(input())
-
 result = False
-
-if(n % 3 == 0 and not result):
+if n % 3 == 0 and (not result):
     w = n // 3
     letters = []
     for i in range(n):
@@ -32,7 +29,7 @@ if(n % 3 == 0 and not result):
         letters.append(curres)
         if curres is None:
             break
-    if(letters.count(None) == 0):
+    if letters.count(None) == 0:
         answers = []
         counter = 0
         for i in range(3):
@@ -40,16 +37,16 @@ if(n % 3 == 0 and not result):
             answers.append(res)
             counter += 1
             for j in range(w - 1):
-                if(letters[counter] != res):
+                if letters[counter] != res:
                     letters.append(None)
                     break
                 counter += 1
-            if(letters.count(None) > 0):
+            if letters.count(None) > 0:
                 break
-        if(letters.count(None) == 0):
-            if(len(answers) == len(set(answers))):
+        if letters.count(None) == 0:
+            if len(answers) == len(set(answers)):
                 result = True
-if(m % 3 == 0 and not result):
+if m % 3 == 0 and (not result):
     w = m // 3
     letters = []
     for i in range(m):
@@ -57,7 +54,7 @@ if(m % 3 == 0 and not result):
         letters.append(curres)
         if curres is None:
             break
-    if(letters.count(None) == 0):
+    if letters.count(None) == 0:
         answers = []
         counter = 0
         for i in range(3):
@@ -65,16 +62,16 @@ if(m % 3 == 0 and not result):
             answers.append(res)
             counter += 1
             for j in range(w - 1):
-                if(letters[counter] != res):
+                if letters[counter] != res:
                     letters.append(None)
                     break
                 counter += 1
-            if(letters.count(None) > 0):
+            if letters.count(None) > 0:
                 break
-        if(letters.count(None) == 0):
-            if(len(answers) == len(set(answers))):
+        if letters.count(None) == 0:
+            if len(answers) == len(set(answers)):
                 result = True
-if(result):
-    print("YES")
+if result:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,4 +1,4 @@
-n, m, r = list(map(int, input().split()))
+(n, m, r) = list(map(int, input().split()))
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 mx = 0

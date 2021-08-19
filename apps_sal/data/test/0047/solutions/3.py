@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 dp1 = [0] * n
 dp2 = [0] * n
 dp0 = [0] * n

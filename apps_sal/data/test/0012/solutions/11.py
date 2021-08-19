@@ -20,7 +20,7 @@ elif len(a) == 2:
         ma = max(i[1], ma)
     ka = 0
     for i in range(len(a) - 1):
-        if (a[i + 1][0] - a[i + 1][1] + 1) - a[i][0] == 2:
+        if a[i + 1][0] - a[i + 1][1] + 1 - a[i][0] == 2:
             ka = max(a[i][1] + a[i + 1][1], ka)
     if ka > ma + 1:
         print(ka)
@@ -32,6 +32,6 @@ else:
         ma = max(i[1], ma)
     ka = 0
     for i in range(len(a) - 1):
-        if (a[i + 1][0] - a[i + 1][1] + 1) - a[i][0] == 2:
+        if a[i + 1][0] - a[i + 1][1] + 1 - a[i][0] == 2:
             ka = max(a[i][1] + a[i + 1][1], ka)
     print(max(ka, ma) + 1)

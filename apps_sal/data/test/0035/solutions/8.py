@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 rows = [list(input()) for x in range(a)]
 columns = [[x[y] for x in rows] for y in range(b)]
 
@@ -32,9 +32,9 @@ def colors(c, l):
     colors.append([p, n])
     if len(colors) == 3 and l % 3 == 0:
         m = l // 3
-        letters = ["R", "G", "B"]
+        letters = ['R', 'G', 'B']
         for x in colors:
-            p, q = x[0], x[1]
+            (p, q) = (x[0], x[1])
             if x[0] in letters and q == m:
                 letters.remove(x[0])
             else:
@@ -48,12 +48,12 @@ def colors(c, l):
 
 condition = False
 if a % 3 == 0 or b % 3 == 0:
-    c, d = check(rows), check(columns)
+    (c, d) = (check(rows), check(columns))
     if c[0]:
         condition = colors(c, a)
     if not condition and d[0]:
         condition = colors(d, b)
 if condition:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

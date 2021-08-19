@@ -1,6 +1,6 @@
 n = int(input())
-ku, sh, ka = input(), input(), input()
-l_ku, l_sh, l_ka = max([ku.count(i) for i in list(set(ku))]), max([sh.count(i) for i in list(set(sh))]), max([ka.count(i) for i in list(set(ka))])
+(ku, sh, ka) = (input(), input(), input())
+(l_ku, l_sh, l_ka) = (max([ku.count(i) for i in list(set(ku))]), max([sh.count(i) for i in list(set(sh))]), max([ka.count(i) for i in list(set(ka))]))
 if len(ku) - l_ku > n:
     l_ku += n
 elif l_ku == len(ku) and n == 1:
@@ -20,7 +20,7 @@ elif l_ka == len(ka) and n == 1:
 else:
     l_ka = len(ka)
 ma = max([l_sh, l_ku, l_ka])
-if (l_ka == l_sh and l_ka == ma) or (l_ku == l_sh and l_ku == ma) or (l_ka == l_ku and l_ka == ma):
+if l_ka == l_sh and l_ka == ma or (l_ku == l_sh and l_ku == ma) or (l_ka == l_ku and l_ka == ma):
     print('Draw')
 elif ma == l_ka:
     print('Katie')

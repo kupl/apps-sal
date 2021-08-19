@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 c = [list(input()) for _ in range(n)]
-
-ans = "NO"
+ans = 'NO'
 if n % 3 == 0:
     l = []
     for i in range(3):
@@ -12,7 +11,7 @@ if n % 3 == 0:
         if len(s) == 1:
             l.append(s.pop())
     if sorted(l) == ['B', 'G', 'R']:
-        ans = "YES"
+        ans = 'YES'
 if m % 3 == 0:
     l = []
     for i in range(3):
@@ -23,6 +22,5 @@ if m % 3 == 0:
         if len(s) == 1:
             l.append(s.pop())
     if sorted(l) == ['B', 'G', 'R']:
-        ans = "YES"
-
+        ans = 'YES'
 print(ans)

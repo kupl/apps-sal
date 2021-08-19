@@ -1,8 +1,8 @@
 for _ in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     md = me = 0
     for _ in range(n):
-        d, h = list(map(int, input().split()))
+        (d, h) = list(map(int, input().split()))
         md = max(md, d)
         me = max(me, d - h)
     if md >= x:

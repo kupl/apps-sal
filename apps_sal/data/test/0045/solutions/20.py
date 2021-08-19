@@ -1,6 +1,6 @@
 from math import sqrt
-n, k = list(map(int, input().split()))
-K = (k * (k + 1)) // 2
+(n, k) = list(map(int, input().split()))
+K = k * (k + 1) // 2
 if n < K:
     print(-1)
 else:

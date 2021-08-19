@@ -2,7 +2,7 @@ n = int(input()) * 2
 
 
 def calc(d):
-    mi, ma = 1, n
+    (mi, ma) = (1, n)
     md = 0
     while mi != ma:
         md = (mi + ma) // 2
@@ -21,7 +21,7 @@ while d <= n:
     if u != -1:
         li.append(u * d // 2)
 li.sort()
-if (len(li)):
+if len(li):
     for d in li:
         print(d)
 else:

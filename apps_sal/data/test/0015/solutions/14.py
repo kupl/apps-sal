@@ -1,15 +1,14 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 if c == 0:
     if a == b:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 else:
-    d, r = divmod(b - a, c)
+    (d, r) = divmod(b - a, c)
     if a == b:
-        print("YES")
+        print('YES')
+    elif d < 1 or r != 0:
+        print('NO')
     else:
-        if d < 1 or r != 0:
-            print("NO")
-        else:
-            print("YES")
+        print('YES')

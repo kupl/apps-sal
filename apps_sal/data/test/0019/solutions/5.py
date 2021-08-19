@@ -21,13 +21,13 @@ def nl():
 T = ni()
 for _ in range(T):
     N = ni()
-    lp, lc = 0, 0
+    (lp, lc) = (0, 0)
     fail = False
     for _ in range(N):
-        p, c = nl()
+        (p, c) = nl()
         dp = p - lp
         dc = c - lc
-        lp, lc = p, c
+        (lp, lc) = (p, c)
         if dp < dc or dc < 0:
             fail = True
     if fail:

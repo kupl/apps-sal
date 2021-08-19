@@ -3,14 +3,11 @@
 
 def __starting_point():
     x = input()
-
     if int(x) < 10:
         print(x)
         return
-
     arr = [int(a) for a in list(x)]
     x_sum = sum(arr)
-
     i = len(arr) - 1
     answer = ''
     while i > 0:
@@ -23,20 +20,16 @@ def __starting_point():
                 if arr[j] < 9:
                     change = True
                     break
-
             if arr[i] == 8 and change:
                 answer = '9' + answer
                 arr[i - 1] -= 1
+            elif not change:
+                answer = str(arr[i]) + answer
             else:
-                if not change:
-                    answer = str(arr[i]) + answer
-                else:
-                    answer = '9' + answer
-
+                answer = '9' + answer
         if i == 1 and arr[0] != 0:
             answer = str(arr[0]) + answer
         i -= 1
-
     answer = [int(a) for a in list(answer)]
     if x_sum == sum(answer):
         print(x)

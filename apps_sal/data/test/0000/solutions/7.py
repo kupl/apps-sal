@@ -1,5 +1,4 @@
 s = input()
-
 f1 = False
 f2 = False
 l1 = -1
@@ -20,9 +19,8 @@ for r in range(len(s) - 1, -1, -1):
         g2 = True
         r1 = r
         break
-if (l1 == -1 or r1 == -1) or (r1 <= l1):
+if (l1 == -1 or r1 == -1) or r1 <= l1:
     print(-1)
-
 else:
     ans = 4
     for i in range(l1 + 1, r1):
