@@ -1,6 +1,5 @@
-# https://www.youtube.com/watch?v=8HYXkNB39KA
-# https://www.youtube.com/watch?v=hrd-MEcZkOI&feature=youtu.be
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         rows = len(mat)
         cols = len(mat[0])
@@ -9,7 +8,6 @@ class Solution:
                 if mat[r][c]:
                     if c > 0:
                         mat[r][c] = mat[r][c - 1] + 1
-
         submatrices = 0
         for r in range(rows):
             for c in range(cols):

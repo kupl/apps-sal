@@ -1,6 +1,6 @@
 class Solution:
+
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
-        # dp[i] longest subsequece at i
         dic = {}
         ans = 1
         for x in arr:

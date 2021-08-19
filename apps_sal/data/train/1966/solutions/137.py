@@ -1,9 +1,11 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
+
         def counts(nums):
             endhere = [0] * len(nums)
             st = []
-            for i, num in enumerate(nums):
+            for (i, num) in enumerate(nums):
                 while st and nums[st[-1]] >= num:
                     st.pop()
                 if not st:
@@ -16,14 +18,11 @@ class Solution:
             return sum(endhere)
         rows = mat[0][:]
         ans = counts(rows[:])
-        # print(ans)
         for i in range(1, len(mat)):
             for j in range(len(mat[0])):
                 if mat[i][j] == 1:
                     rows[j] += 1
                 else:
                     rows[j] = 0
-            # print(rows)
             ans += counts(rows[:])
-            # print(ans)
         return ans
