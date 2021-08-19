@@ -1,17 +1,14 @@
-# A - HonestOrDishonest
 def main():
-    a, b = input().split()
-
+    (a, b) = input().split()
     if a == 'H':
         if b == 'H':
             print('H')
         else:
             print('D')
+    elif b == 'H':
+        print('D')
     else:
-        if b == 'H':
-            print('D')
-        else:
-            print('H')
+        print('H')
 
 
 def __starting_point():

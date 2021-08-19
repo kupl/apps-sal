@@ -1,7 +1,5 @@
-# https://codeforces.com/problemset/problem/1034/B
-n, m = map(int, input().split())
-
-min_, max_ = min(n, m), max(n, m)
+(n, m) = map(int, input().split())
+(min_, max_) = (min(n, m), max(n, m))
 arr1 = [1, 2, 3, 2, 1, 0]
 arr2 = [2, 4, 2, 0, 0, 0, 2]
 if min_ == 1:
@@ -12,6 +10,5 @@ elif min_ == 2:
     else:
         r = 0
 else:
-    r = (n * m) % 2
-
+    r = n * m % 2
 print(n * m - r)

@@ -1,23 +1,16 @@
-n, m = list(map(int, input().split(' ')))
+(n, m) = list(map(int, input().split(' ')))
 if m > n:
-    n, m = m, n
-# n > m
-
+    (n, m) = (m, n)
 rowsGroups = n // 6
 restRows = n % 6
-
 count = 3 * rowsGroups * m
-
 colsGroups = m // 6
 restCols = m % 6
-
 count += 3 * colsGroups * restRows
-
 if not (restRows == 0 or restCols == 0):
-    sn, sm = restRows, restCols
+    (sn, sm) = (restRows, restCols)
     if sm > sn:
-        sn, sm = sm, sn
-
+        (sn, sm) = (sm, sn)
     if (sn, sm) == (1, 1):
         count += 0
     elif (sn, sm) == (5, 1):
@@ -66,6 +59,5 @@ if not (restRows == 0 or restCols == 0):
         else:
             count += 2
     else:
-        raise f'Unknown pair ({sn, sm})'
-
+        raise f'Unknown pair ({(sn, sm)})'
 print(2 * count)

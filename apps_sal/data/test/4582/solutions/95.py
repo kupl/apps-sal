@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-
 def main():
-    a, b = input().split()
-    print(("H" if a == b else "D"))
+    (a, b) = input().split()
+    print('H' if a == b else 'D')
 
 
 def __starting_point():

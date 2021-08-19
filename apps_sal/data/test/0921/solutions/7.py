@@ -9,12 +9,11 @@ def luckyYear():
         p += 1
     f += 1
     f *= 10 ** p
-    # print(f)
     print(f - original)
 
 
 def averageSleepTime():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     sleep = list(map(int, input().split()))
     run = 0
     for i in range(k):
@@ -27,7 +26,7 @@ def averageSleepTime():
 
 
 def teaParty():
-    n, w = list(map(int, input().split()))
+    (n, w) = list(map(int, input().split()))
     tea = list(map(int, input().split()))
     fill = []
     [fill.append((t + 1) // 2) for t in tea]

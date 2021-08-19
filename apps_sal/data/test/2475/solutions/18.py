@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(item) for item in input().split()]
-
 ans = 0
 for c in range(1, n):
     visited = set([0, n - 1])
@@ -20,6 +19,4 @@ for c in range(1, n):
         visited.add(odd)
         total += a[odd] + a[even]
         ans = max(ans, total)
-        # print(c, k, total)
-        # print(visited)
 print(ans)
