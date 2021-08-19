@@ -1,10 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 from typing import List, Dict
 
 
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         a = position
         a.sort()
@@ -12,13 +10,12 @@ class Solution:
 
         def isok(m):
             c = 0
-            prev = - (1 << 30)
+            prev = -(1 << 30)
             for x in a:
                 if x - prev >= m:
                     c += 1
                     prev = x
             return c >= M
-
         l = 0
         r = 10 ** 9
         while l < r:

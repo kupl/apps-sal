@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position, m):
         position.sort()
         n = len(position)
@@ -10,24 +11,19 @@ class Solution:
             while j < n:
                 while j < n and position[j] - position[i] < gap:
                     j += 1
-                # print(i, j, ct)
                 if j < n:
                     ct += 1
                     i = j
                     j += 1
-
                 if ct == m:
                     return True
             return False
-
-        # print(canFit(999999999))
-
         lo = 1
         hi = position[-1] - position[0]
         res = 0
         ct = 0
         while lo <= hi:
-            mid = (lo + hi) >> 1
+            mid = lo + hi >> 1
             ct += 1
             if canFit(mid):
                 res = mid

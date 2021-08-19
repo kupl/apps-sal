@@ -1,8 +1,6 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
-        # 最大间隙使用二分法查找
-        # 检查最大间隙的合理性
-        # 从一堆间隙中，寻找连续长度为dist的m个间隙
         interval = []
         sort_pos = sorted(position)
         for i in range(len(sort_pos) - 1):
@@ -19,10 +17,8 @@ class Solution:
             if ball >= m:
                 return True
             return False
-
         left = 1
         right = sum(interval) // (m - 1)
-        # 如果最优值停在right上，那么这个循环永远不能结束
         while left < right:
             mid = right - (right - left) // 2
             if is_valid(mid, interval):

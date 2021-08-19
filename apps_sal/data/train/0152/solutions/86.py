@@ -15,7 +15,6 @@ class Solution:
         position.sort()
         l = 0
         r = position[-1] + 1
-
         while r - l > 1:
             m = (l + r) // 2
             if self.nnpossible(position, k, m):
@@ -23,6 +22,3 @@ class Solution:
             else:
                 r = m
         return l
-
-
-# TTTFFF

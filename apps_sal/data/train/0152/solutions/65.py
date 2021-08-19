@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         diff = position[-1] - position[0]
@@ -15,10 +16,8 @@ class Solution:
                 if k == 0:
                     return True
             return False
-
         while left < right:
             mid = left + (right - left) // 2
-            # print(mid, condition(mid))
             if condition(mid):
                 left = mid + 1
             else:
@@ -27,5 +26,4 @@ class Solution:
             return left
         else:
             return left - 1
-        # print(left)
         return left
