@@ -15,13 +15,6 @@ class ProductOfNumbers:
         for idx in self.zeroes:
             if p < idx < len(self.queue):
                 return 0
-        # print(self.queue,self.queue[p])
         if self.queue[p] != 0:
             return self.queue[-1] // self.queue[p]
         return self.queue[-1]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

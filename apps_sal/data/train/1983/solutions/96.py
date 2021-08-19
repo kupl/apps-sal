@@ -18,9 +18,3 @@ class ProductOfNumbers:
         if k == len(self.a):
             return self.a[-1]
         return self.a[-1] // self.a[-1 - k]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

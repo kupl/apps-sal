@@ -20,15 +20,9 @@ class ProductOfNumbers:
 
     def getProduct(self, k: int) -> int:
         totalIndex = len(self.runningProduct) - 1
-        if self.zeroStack and self.zeroStack[-1] > (totalIndex - k):
+        if self.zeroStack and self.zeroStack[-1] > totalIndex - k:
             return 0
-        elif (totalIndex - k) == -1 or self.runningProduct[totalIndex - k] == 0:
+        elif totalIndex - k == -1 or self.runningProduct[totalIndex - k] == 0:
             return int(self.runningProduct[-1])
         else:
             return int(self.runningProduct[-1] / self.runningProduct[totalIndex - k])
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

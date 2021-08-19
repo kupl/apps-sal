@@ -2,6 +2,7 @@ import queue as Q
 
 
 class Node:
+
     def __init__(self):
         self.prev = None
         self.value = None
@@ -14,15 +15,12 @@ class ProductOfNumbers:
         self.maxVal = float('-inf')
 
     def add(self, num: int) -> None:
-
         if num > self.maxVal:
             self.maxVal = num
-
         if self.tail == None:
             self.tail = Node()
             self.tail.value = num
             return
-
         temp = self.tail
         newNode = Node()
         newNode.value = num
@@ -32,7 +30,6 @@ class ProductOfNumbers:
     def getProduct(self, k: int) -> int:
         if self.maxVal == 1:
             return 1
-
         result = 1
         count = 0
         temp = self.tail
@@ -43,8 +40,3 @@ class ProductOfNumbers:
             temp = temp.prev
             count += 1
         return result
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)
