@@ -9,8 +9,8 @@ n = int(input())
 a = []
 b = []
 for i in range(0, n):
-    a1, b1 = input().split(" ")
-    a1, b1 = int(a1), int(b1)
+    (a1, b1) = input().split(' ')
+    (a1, b1) = (int(a1), int(b1))
     a.append(a1)
     b.append(b1)
 a1 = []

@@ -2,7 +2,7 @@ import math
 
 
 def CountSquares(a, b):
-    return (math.floor(math.sqrt(b)) - math.ceil(math.sqrt(a)) + 1)
+    return math.floor(math.sqrt(b)) - math.ceil(math.sqrt(a)) + 1
 
 
 for _ in range(int(input())):

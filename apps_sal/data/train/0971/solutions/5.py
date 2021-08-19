@@ -5,6 +5,6 @@ for i in range(int(input())):
     ma = 0
     for j in m:
         x = t.count(j)
-        if(ma < x):
+        if ma < x:
             ma = x
     print(n - ma)

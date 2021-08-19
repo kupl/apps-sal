@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     m = x // y
     sum1 = 0
     l = []

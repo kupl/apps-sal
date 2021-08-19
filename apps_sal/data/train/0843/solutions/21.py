@@ -1,5 +1,5 @@
 t = int(input())
-while(t > 0):
+while t > 0:
     l = []
     n = int(input())
     for i in range(n):
@@ -11,15 +11,15 @@ while(t > 0):
         l[i].sort(reverse=True)
         q = 0
         for j in l[i]:
-            if(j < x):
+            if j < x:
                 x = j
                 q = 1
                 s += x
                 break
-        if(q == 0):
+        if q == 0:
             w = 1
             print(-1)
             break
-    if(w == 0):
+    if w == 0:
         print(s)
     t -= 1

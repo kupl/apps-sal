@@ -13,12 +13,12 @@ def within(l, k, h):
 
 
 for _ in range(int(input())):
-    n, h = map(int, input().split())
+    (n, h) = map(int, input().split())
     l = list(map(int, input().split()))
     l_1 = 1
     r_1 = max(l)
     while l_1 != r_1:
-        mid = l_1 + ((r_1 - l_1) // 2)
+        mid = l_1 + (r_1 - l_1) // 2
         if within(l, mid, h) == True:
             r_1 = mid
         else:

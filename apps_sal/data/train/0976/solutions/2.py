@@ -1,4 +1,5 @@
 class Stack:
+
     def __init__(self):
         self.items = []
 
@@ -25,6 +26,7 @@ class Stack:
 
 
 class _StackIterator:
+
     def __init__(self, stack):
         self.stackRef = stack
         self.curInd = 0
@@ -42,13 +44,11 @@ class _StackIterator:
 
 
 def main():
-
     n = int(input())
     Symbol = Stack()
     Index = Stack()
     FirstBracket = ThirdBracket = 0
     arr = list(map(int, input().split()))
-
     for i in range(n):
         if arr[i] == 1 or arr[i] == 3:
             Symbol.push(arr[i])
@@ -67,22 +67,18 @@ def main():
             curDepth.push(1)
             seq.push(arr[i])
             AlterDepth = max(AlterDepth, curDepth.top())
-
         elif arr[i] == 1 and seq.top() == 3:
             curDepth.push(curDepth.top() + 1)
             seq.push(arr[i])
             AlterDepth = max(AlterDepth, curDepth.top())
-
         elif arr[i] == 3 and seq.top() == 1:
             curDepth.push(curDepth.top() + 1)
             seq.push(arr[i])
             AlterDepth = max(AlterDepth, curDepth.top())
-
-        elif (arr[i] == 1 or arr[i] == 3):
+        elif arr[i] == 1 or arr[i] == 3:
             curDepth.push(curDepth.top())
             seq.push(arr[i])
             AlterDepth = max(curDepth.top(), AlterDepth)
-
         elif arr[i] == 2 or arr[i] == 4:
             curDepth.pop()
             seq.pop()
@@ -90,7 +86,6 @@ def main():
 
 
 def __starting_point():
-
     main()
 
 

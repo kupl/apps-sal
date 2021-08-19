@@ -1,6 +1,6 @@
 T = int(input())
 for i in range(T):
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     cnt = 0
     a = 10
     while n >= a - 1:

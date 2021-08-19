@@ -2,7 +2,7 @@ for _ in range(int(input())):
     n = int(input())
     k = {}
     for i in range(n):
-        a, b = map(str, input().split())
+        (a, b) = map(str, input().split())
         b = int(b)
         if a not in k:
             s = [0, 0]
@@ -11,11 +11,10 @@ for _ in range(int(input())):
             else:
                 s[1] = 1
             k[a] = s
+        elif b == 0:
+            k[a][0] += 1
         else:
-            if b == 0:
-                k[a][0] += 1
-            else:
-                k[a][1] += 1
+            k[a][1] += 1
     c = 0
     for i in k.values():
         c += max(i)

@@ -1,16 +1,15 @@
 t = input()
 t = int(t)
 while t > 0:
-    n, m = input().split()
-
+    (n, m) = input().split()
     if int(n) == 1 and int(m) == 2:
-        print("Yes")
+        print('Yes')
     elif int(n) == 2 and int(m) == 1:
-        print("Yes")
+        print('Yes')
     elif int(n) == 1 or int(m) == 1:
-        print("No")
+        print('No')
     elif int(n[-1]) % 2 == 0 or int(m[-1]) % 2 == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
     t = t - 1

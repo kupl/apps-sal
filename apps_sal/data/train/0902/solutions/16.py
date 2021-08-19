@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, s = input().split()
+    (n, s) = input().split()
     n = int(n)
     c = [0, s == 'Dee']
     for _ in range(n):

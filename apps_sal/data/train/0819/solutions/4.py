@@ -1,7 +1,7 @@
 import math
 for _ in range(int(input())):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if math.gcd(x, y) == 1:
-        print("YES")
+        print('YES')
         continue
-    print("NO")
+    print('NO')

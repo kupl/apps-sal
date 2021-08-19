@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     cn = 0
     i = 10
     while n >= i - 1:

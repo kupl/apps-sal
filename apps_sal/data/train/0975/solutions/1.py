@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
-    xi, yi = [], []
-    n, r, x, y = list(map(int, input().split()))
+    (xi, yi) = ([], [])
+    (n, r, x, y) = list(map(int, input().split()))
     if x > 0:
         xi = list(map(int, input().split()))
     if y > 0:

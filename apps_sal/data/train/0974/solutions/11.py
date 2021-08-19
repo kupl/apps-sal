@@ -8,11 +8,11 @@ for i in range(x):
     d = q[3]
     y = max(c, d)
     z = min(c, d)
-    if(a == b):
-        print("YES")
-    elif(y == z):
-        print("NO")
-    elif((b - a) / (y - z) == (b - a) // (y - z)):
-        print("YES")
+    if a == b:
+        print('YES')
+    elif y == z:
+        print('NO')
+    elif (b - a) / (y - z) == (b - a) // (y - z):
+        print('YES')
     else:
-        print("NO")
+        print('NO')

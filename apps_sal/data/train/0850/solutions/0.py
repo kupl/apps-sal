@@ -1,5 +1,4 @@
 from math import gcd
-
 __author__ = 'Prateek'
 
 

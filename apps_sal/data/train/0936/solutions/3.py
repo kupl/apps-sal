@@ -1,5 +1,5 @@
 t = int(input())
-while(t > 0):
+while t > 0:
     t -= 1
     aa = int(input())
     count = 0

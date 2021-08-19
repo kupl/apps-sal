@@ -1,6 +1,6 @@
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -11,7 +11,7 @@ def sol(x, y):
 def main():
     T = int(input())
     for i in range(T):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         print(sol(x, y))
 
 

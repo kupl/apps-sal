@@ -7,7 +7,7 @@ def getInput():
     count = 0
     for i in range(0, k):
         val = input()
-        if(val != "CLOSEALL"):
+        if val != 'CLOSEALL':
             val = val.split()
             val = int(val[1])
             if val not in list:

@@ -5,12 +5,12 @@ for _ in range(t):
     for i in range(1, 16):
         csum = 0
         for j in range(len(ar)):
-            if (i & (1 << j)) > 0:
+            if i & 1 << j > 0:
                 csum += ar[j]
         if csum == 0:
             ok = True
             break
     if ok:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

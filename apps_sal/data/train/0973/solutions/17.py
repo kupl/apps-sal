@@ -1,7 +1,6 @@
 try:
     for _ in range(int(input())):
-        n, k = map(int, input().split())
-
+        (n, k) = map(int, input().split())
         l = input().split()
         l = [int(i) for i in l]
         m = max(l)

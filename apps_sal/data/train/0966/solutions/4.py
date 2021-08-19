@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, u, d = map(int, input().split())
+    (n, u, d) = map(int, input().split())
     a = list(map(int, input().split()))
     x = 1
     count = 1
@@ -9,12 +9,11 @@ for _ in range(int(input())):
                 count += 1
             elif a[i] + u < a[i + 1]:
                 break
+        elif a[i] - d <= a[i + 1]:
+            count += 1
+        elif x == 1:
+            count += 1
+            x = 0
         else:
-            if a[i] - d <= a[i + 1]:
-                count += 1
-            elif x == 1:
-                count += 1
-                x = 0
-            else:
-                break
+            break
     print(count)

@@ -3,7 +3,7 @@ def main():
     for _ in range(t):
         [n, s] = list(input().split())
         n = int(n)
-        one, zero = 0, 0
+        (one, zero) = (0, 0)
         for i in range(n):
             s1 = input()
             if s1[0] == '0':
@@ -14,11 +14,10 @@ def main():
             print('Dee')
         elif zero < one:
             print('Dum')
+        elif s == 'Dee':
+            print('Dum')
         else:
-            if s == 'Dee':
-                print('Dum')
-            else:
-                print('Dee')
+            print('Dee')
 
 
 def __starting_point():

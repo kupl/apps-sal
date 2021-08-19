@@ -22,6 +22,5 @@ for _ in range(int(input())):
             break
         else:
             c = 0
-
     if k == 0:
         print(count)

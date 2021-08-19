@@ -1,8 +1,8 @@
-'''
+"""
 BBG Sticks (Set II)
 Created on Mar 10, 2012
 @author: Andy Huang
-'''
+"""
 t = eval(input())
 while t:
     t -= 1

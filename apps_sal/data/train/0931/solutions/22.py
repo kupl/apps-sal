@@ -1,5 +1,5 @@
 def lsb(i):
-    return bool(i & (1 << 0))
+    return bool(i & 1 << 0)
 
 
 t = int(input())

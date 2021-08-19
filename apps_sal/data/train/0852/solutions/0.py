@@ -5,12 +5,11 @@ for t in range(t):
         for j in range(0, n):
             if i % 2 == 0:
                 if j % 2 == 0:
-                    print(0, end="")
+                    print(0, end='')
                 else:
-                    print(1, end="")
+                    print(1, end='')
+            elif j % 2 == 0:
+                print(1, end='')
             else:
-                if j % 2 == 0:
-                    print(1, end="")
-                else:
-                    print(0, end="")
+                print(0, end='')
         print()

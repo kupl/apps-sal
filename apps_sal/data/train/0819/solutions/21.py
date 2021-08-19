@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     a = max(x, y)
     b = min(x, y)
     while a % b != 0:
@@ -8,7 +8,6 @@ for _ in range(int(input())):
         q = b
         a = max(p, q)
         b = min(p, q)
-
     if a == 1 or b == 1:
         print('YES')
     else:

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    s, a, b, c = list(map(int, input().split()))
+    (s, a, b, c) = list(map(int, input().split()))
     l = []
     l.extend([c, b, a])
     c = 0

@@ -1,7 +1,7 @@
 t = eval(input())
 while t:
     t -= 1
-    n, b, m = list(map(int, input().split()))
+    (n, b, m) = list(map(int, input().split()))
     minute = 0
     while n > 0:
         if n % 2 == 0:

@@ -1,9 +1,8 @@
 i = 0
 l = []
-while i < 10**3:
+while i < 10 ** 3:
     l.append(i * (i + 1) / 2)
     i = i + 1
-
 t = int(input())
 for _ in range(t):
     x = int(input())

@@ -1,8 +1,8 @@
 def bit(x):
     s = 0
     for i in range(len(x)):
-        p = bool((x[i] & (1 << (0))))
-        if(p == False):
+        p = bool(x[i] & 1 << 0)
+        if p == False:
             s = s + x[i]
     return s
 

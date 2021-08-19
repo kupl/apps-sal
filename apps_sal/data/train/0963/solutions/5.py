@@ -12,4 +12,4 @@ for r in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     solution.append(p(a))
-print(*solution, sep="\n")
+print(*solution, sep='\n')

@@ -14,5 +14,4 @@ while I_I < n:
         I_I = k
     else:
         I_I += 1
-
 print(best)

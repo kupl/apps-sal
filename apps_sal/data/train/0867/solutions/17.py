@@ -1,6 +1,6 @@
 x = []
 for t in range(int(input())):
-    s, w1, w2, w3 = list(map(int, input().strip().split()))
+    (s, w1, w2, w3) = list(map(int, input().strip().split()))
     z = w1 + w2 + w3
     c = 0
     while z > 0:

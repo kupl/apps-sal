@@ -1,7 +1,7 @@
 t = int(input())
 while t > 0:
     t -= 1
-    m, n = list(map(int, input().split()))
+    (m, n) = list(map(int, input().split()))
     if m == 1 and n > 2:
         print('No')
         continue

@@ -1,10 +1,10 @@
 for i in range(int(input())):
-    n, k = input().split()
+    (n, k) = input().split()
     laddus = 0
     for j in range(int(n)):
         t = input().split()
         if t[0] == 'CONTEST_WON':
-            if(int(t[1]) <= 20):
+            if int(t[1]) <= 20:
                 laddus += 300 + 20 - int(t[1])
             else:
                 laddus += 300
@@ -14,7 +14,7 @@ for i in range(int(input())):
             laddus += int(t[1])
         elif t[0] == 'CONTEST_HOSTED':
             laddus += 50
-    if(k == 'INDIAN'):
+    if k == 'INDIAN':
         print(laddus // 200)
     else:
         print(laddus // 400)

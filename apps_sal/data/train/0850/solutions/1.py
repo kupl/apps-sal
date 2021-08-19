@@ -10,7 +10,7 @@ for _ in range(int(input())):
         continue
     for i in range(len(a)):
         k = a[i]
-        del(a[i])
+        del a[i]
         ans = max(ans, k + reduce(gcd, a))
         a.insert(i, k)
     print(ans)

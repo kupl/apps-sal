@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, r, x, y = [int(x) for x in input().split()]
+    (n, r, x, y) = [int(x) for x in input().split()]
     repeat = []
     plagis = []
     if x > 0:

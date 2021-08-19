@@ -1,5 +1,5 @@
 import math
-alpha = "abcdefghijklmnopqrstuvwxyz"
+alpha = 'abcdefghijklmnopqrstuvwxyz'
 vow = 'aeiou'
 for t_itr in range(int(input())):
     s = str(input())
@@ -9,10 +9,10 @@ for t_itr in range(int(input())):
             count += 0
         else:
             a = []
-            a.append(abs(alpha.index(i) - alpha.index("a")))
-            a.append(abs(alpha.index(i) - alpha.index("e")))
-            a.append(abs(alpha.index(i) - alpha.index("i")))
-            a.append(abs(alpha.index(i) - alpha.index("o")))
-            a.append(abs(alpha.index(i) - alpha.index("u")))
+            a.append(abs(alpha.index(i) - alpha.index('a')))
+            a.append(abs(alpha.index(i) - alpha.index('e')))
+            a.append(abs(alpha.index(i) - alpha.index('i')))
+            a.append(abs(alpha.index(i) - alpha.index('o')))
+            a.append(abs(alpha.index(i) - alpha.index('u')))
             count += min(a)
     print(count)

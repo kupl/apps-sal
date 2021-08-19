@@ -1,7 +1,7 @@
 from math import ceil
 from bisect import insort
 for z in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     i = 0
     c = 0

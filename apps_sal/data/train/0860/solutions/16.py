@@ -1,6 +1,6 @@
 import math
 for i in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     m = math.ceil(sum(a) / k)
     if k == n:

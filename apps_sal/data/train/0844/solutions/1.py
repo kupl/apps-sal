@@ -1,9 +1,9 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 estado = [False] * N
 numAbiertos = 0
 for _l in range(K):
     cmd = input().strip()
-    if cmd == "CLOSEALL":
+    if cmd == 'CLOSEALL':
         estado = [False] * N
         numAbiertos = 0
     else:
@@ -14,5 +14,4 @@ for _l in range(K):
         else:
             estado[num] = True
             numAbiertos += 1
-
     print(numAbiertos)

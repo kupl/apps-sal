@@ -1,5 +1,5 @@
 t = int(input())
-while(t != 0):
+while t != 0:
     t = t - 1
     n = int(input())
     ans = 0
@@ -9,7 +9,7 @@ while(t != 0):
             sum = sum + j
         s = sum - i
         sum = sum + s
-        if(i != n):
+        if i != n:
             ans = ans + 2 * sum * i
         else:
             ans = ans + sum * i

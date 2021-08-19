@@ -13,7 +13,7 @@ def swap_characters(string):
         temp = string[i]
         string[i] = string[i + 1]
         string[i + 1] = temp
-    return(''.join(string))
+    return ''.join(string)
 
 
 def invert(swap, letter):

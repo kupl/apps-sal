@@ -5,7 +5,7 @@ for _ in range(int(input())):
     def func(l):
         m = max(l)
         m = l.index(m)
-        if(m == len(l) - 1 or m == 0):
+        if m == len(l) - 1 or m == 0:
             return 1
         ll = l[:m]
         rl = l[m + 1:]

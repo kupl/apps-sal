@@ -4,11 +4,11 @@ for x in range(t):
     a = [int(x) for x in input().split()]
     i = 0
     count = 0
-    while (i < n):
+    while i < n:
         if a[i] % 2 == 0:
             j = i + 1
             p = 0
-            while (j < n):
+            while j < n:
                 if a[j] % 2 != 0:
                     p += 1
                 j += 1

@@ -1,4 +1,4 @@
-'''Author- Akshit Monga'''
+"""Author- Akshit Monga"""
 from sys import stdin, stdout
 input = stdin.readline
 
@@ -30,7 +30,7 @@ for _ in range(t):
         vals = []
         c = 0
         for i in range(n):
-            if mask & (1 << i):
+            if mask & 1 << i:
                 vals.append(arr[i])
             else:
                 c += 1

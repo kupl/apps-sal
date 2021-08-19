@@ -15,6 +15,5 @@ triangulo = []
 for i in range(t):
     n = eval(input())
     triangulo.append(n)
-
 for i in triangulo:
     print(moneda(i))

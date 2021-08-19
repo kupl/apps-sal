@@ -10,7 +10,6 @@ for T in range(0, int(input())):
                     L1[a][j] = c
                     c += 1
                     a += 1
-
             for x in range(1, N):
                 k = x
                 for y in range(N - x):

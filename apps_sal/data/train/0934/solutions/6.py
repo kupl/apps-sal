@@ -10,6 +10,6 @@ while testcases > 0:
             if array1[i] <= array2[j]:
                 for k in range(array_length[2]):
                     if array2[j] >= array3[k]:
-                        sum = (sum + (((array1[i] + array2[j]) % 1000000007) * ((array2[j] + array3[k]) % 1000000007))) % 1000000007
+                        sum = (sum + (array1[i] + array2[j]) % 1000000007 * ((array2[j] + array3[k]) % 1000000007)) % 1000000007
     print(sum % 1000000007)
     testcases -= 1

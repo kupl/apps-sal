@@ -14,7 +14,7 @@ def check(arr, z):
 
 
 for test_case in range(int(input())):
-    n, z1, z2 = [int(i) for i in input().split()]
+    (n, z1, z2) = [int(i) for i in input().split()]
     arr = [int(i) for i in input().split()]
     arr += [-i for i in arr]
     print(check(arr, (z1, z2)))

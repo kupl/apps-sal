@@ -1,15 +1,15 @@
 import math
 t = int(input())
 i = 1
-while(i <= t):
-    x, k = list(map(int, input().split()))
+while i <= t:
+    (x, k) = list(map(int, input().split()))
     lst1 = []
     lst2 = []
-    for j in range(2, (x + 1)):
-        if(x % j == 0):
+    for j in range(2, x + 1):
+        if x % j == 0:
             lst1 += [j]
-    for l in range(2, (k + 1)):
-        if(k % l == 0):
+    for l in range(2, k + 1):
+        if k % l == 0:
             lst2 += [l]
     a2 = sum(lst2) * x
     a1 = 0

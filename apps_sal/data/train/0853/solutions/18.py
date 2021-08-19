@@ -1,4 +1,3 @@
-
 for _ in range(int(input())):
     ranks = []
     lens = int(input())

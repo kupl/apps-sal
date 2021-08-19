@@ -1,9 +1,8 @@
-
 for i in range(int(input())):
     m = []
     n = []
     o = []
-    s, x = 0, 0
+    (s, x) = (0, 0)
     q = 0
     n = int(input())
     l = list(map(int, input().split()))

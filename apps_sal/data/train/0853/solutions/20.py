@@ -9,6 +9,5 @@ try:
         driver.sort(key=lambda x: x[1])
         for ele in driver:
             print(ele[0])
-
 except:
     pass

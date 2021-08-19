@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     Ans = 0
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     H = list(map(int, input().split()))
     for i in range(N):
         if i == 0 and K < H[i]:

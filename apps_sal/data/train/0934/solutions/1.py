@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(0, t):
-    p, q, r = map(int, input().split())
+    (p, q, r) = map(int, input().split())
     x = [int(x) for x in input().split()]
     y = [int(x) for x in input().split()]
     z = [int(x) for x in input().split()]
@@ -12,4 +12,4 @@ for i in range(0, t):
                     s += 0
                 else:
                     s += (x[j] + y[k]) * (y[k] + z[l])
-    print(s % (10**9 + 7))
+    print(s % (10 ** 9 + 7))

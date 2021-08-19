@@ -1,11 +1,8 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     l = list(map(int, input().split()))
-
     li = []
-
     count = 0
     for i in l:
         if i in li:
@@ -13,5 +10,4 @@ for _ in range(t):
             li = []
         else:
             li.append(i)
-
     print(n - count)

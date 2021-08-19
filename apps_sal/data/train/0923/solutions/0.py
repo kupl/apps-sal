@@ -1,10 +1,10 @@
 t = int(input())
-while(t):
+while t:
     k = 1
     j = 0
     n = int(input())
-    while(n > 0):
-        if(n <= k):
+    while n > 0:
+        if n <= k:
             j += 1
             n = 0
         elif n > 2 * k:

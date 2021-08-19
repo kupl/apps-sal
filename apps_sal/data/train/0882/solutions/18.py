@@ -9,13 +9,11 @@ for _ in range(test):
             hashMap1[i] += 1
         else:
             hashMap1[i] = 1
-
     for i in string2:
         if i in hashMap2:
             hashMap2[i] += 1
         else:
             hashMap2[i] = 1
-
     total = 0
     for i in hashMap2:
         if i in hashMap1:

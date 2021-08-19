@@ -2,7 +2,7 @@ t = int(input())
 for _ in range(t):
     countDee = 0
     countDum = 0
-    n, s = input().split(maxsplit=1)
+    (n, s) = input().split(maxsplit=1)
     n = int(n)
     s = str(s)
     for i in range(n):
@@ -12,11 +12,11 @@ for _ in range(t):
         else:
             countDum += b.count('1')
     if countDee > countDum:
-        print("Dee")
+        print('Dee')
     elif countDee == countDum:
         if 'Dee' in s:
-            print("Dum")
+            print('Dum')
         else:
-            print("Dee")
+            print('Dee')
     else:
-        print("Dum")
+        print('Dum')

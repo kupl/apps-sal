@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     list1 = list(map(int, input().split()))
     list1.sort()
     min1 = 1000000000000001
@@ -14,7 +14,6 @@ for _ in range(int(input())):
     if min1 != 0:
         cand1 = k + min1
         cand2 = k - min1
-
         s = list()
         cnt = 0
         for i in list1:

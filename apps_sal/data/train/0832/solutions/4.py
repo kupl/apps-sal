@@ -1,7 +1,7 @@
 from math import factorial as fact
 t = int(input())
 while t > 0:
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     y = list(map(int, input().split()))
     y.sort()
     k1 = []
@@ -20,5 +20,4 @@ while t > 0:
             ans += 1
     ans2 = k1.count(c)
     print(fact(ans2) // (fact(ans) * fact(ans2 - ans)))
-
     t -= 1

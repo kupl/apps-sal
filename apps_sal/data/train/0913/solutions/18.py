@@ -1,27 +1,27 @@
 try:
-    n, m, k = list(map(int, input().split()))
-    xo, yo, x1, y1 = [0] * k, [0] * k, [0] * k, [0] * k
+    (n, m, k) = list(map(int, input().split()))
+    (xo, yo, x1, y1) = ([0] * k, [0] * k, [0] * k, [0] * k)
     dist = [0] * (m + 1)
     max1 = 0
     cost = 0
     for i in range(0, k):
-        h1, u1, h2, u2 = list(map(int, input().split()))
+        (h1, u1, h2, u2) = list(map(int, input().split()))
         xo[i] = min(h1, h2)
         x1[i] = max(h1, h2)
         yo[i] = min(u1, u2)
         y1[i] = max(u1, u2)
-    if (min(yo) == max(yo)) or (min(y1) == max(y1)):
+    if min(yo) == max(yo) or min(y1) == max(y1):
         print(sum(x1) - sum(xo) + 2 * (sum(yo) - sum(y1)))
     else:
         cost = 0
         for i in range(k):
-            cost += 2 * ((x1[i] - xo[i]) + (y1[i] - yo[i]))
+            cost += 2 * (x1[i] - xo[i] + (y1[i] - yo[i]))
             lv = 1
             x = x1[i] - xo[i]
-            if (yo[i] - x // 4) > 1:
+            if yo[i] - x // 4 > 1:
                 lv = yo[i] - x // 4
             up = m
-            if (x // 4 + y1[i]) < up:
+            if x // 4 + y1[i] < up:
                 up = x // 4 + y1[i]
             for j in range(lv, up + 1):
                 if j < yo[i]:
@@ -33,6 +33,5 @@ try:
                 if dist[j] > dist[max1]:
                     max1 = j
         print(cost - dist[max1])
-
 except:
     pass

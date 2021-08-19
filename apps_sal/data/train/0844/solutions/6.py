@@ -3,13 +3,13 @@ import sys
 
 def main():
     s = sys.stdin.readline
-    n, k = list(map(int, s().split()))
+    (n, k) = list(map(int, s().split()))
     save = {}
     for i in range(1, n + 1):
         save[i] = 0
     for i in range(k):
         try:
-            c, v = s().split()
+            (c, v) = s().split()
             v = int(v)
             if save[v] == 1:
                 save[v] = 0

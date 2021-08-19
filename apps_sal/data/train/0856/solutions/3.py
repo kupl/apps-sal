@@ -6,9 +6,9 @@ for i in range(t):
     n = int(input())
     count = 0
     for j in range(n):
-        x, y = input().split()
+        (x, y) = input().split()
         y = int(y)
-        if(x not in d):
+        if x not in d:
             d[x] = [0, 0]
         d[x][y] += 1
     for i in d:

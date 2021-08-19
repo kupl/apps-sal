@@ -10,4 +10,4 @@ def power(a, n):
 
 for i in range(t):
     k = int(input())
-    print(10 * (power(2, (k - 1))))
+    print(10 * power(2, k - 1))

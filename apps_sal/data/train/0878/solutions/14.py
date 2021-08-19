@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     y = list(map(int, input().split()))
     s = 0
     if y[0] > b:
@@ -8,7 +8,7 @@ for i in range(int(input())):
             s -= 1
     for j in range(1, a):
         diff = y[j] - y[j - 1]
-        s += (diff // b)
+        s += diff // b
         if diff % b == 0:
             s -= 1
     print(s)

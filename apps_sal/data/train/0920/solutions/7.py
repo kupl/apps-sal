@@ -2,7 +2,6 @@ from itertools import permutations as p
 t = int(input())
 for _ in range(t):
     s = input()
-
     a = s.count('b')
     b = s.count('g')
     if a == 0 or b == 0:
@@ -20,12 +19,10 @@ for _ in range(t):
             s += 'g'
         s += 'b'
         s += 'g' * y
-
     else:
         temp = a
         a = b
         b = temp
-
         k = b - a + 1
         x = k // 2
         y = k // 2
@@ -37,7 +34,6 @@ for _ in range(t):
             s += 'g'
         s += 'b'
         s += 'g' * y
-
     ans = 0
     n = len(s)
     g = 0

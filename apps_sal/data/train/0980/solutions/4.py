@@ -5,7 +5,7 @@ def total_time(n, b, m):
             x = n / 2
         else:
             x = (n + 1) / 2
-        t += (m * x)
+        t += m * x
         m *= 2
         t += b
         n -= x

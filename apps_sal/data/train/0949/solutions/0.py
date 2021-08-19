@@ -4,7 +4,7 @@ def check(l, n):
         x = l[i]
         c = 0
         j = i
-        while (j + 2 < n and l[j + 2] == x) or (j + 1 < n and l[j + 1] == x):
+        while j + 2 < n and l[j + 2] == x or (j + 1 < n and l[j + 1] == x):
             if l[j + 1] == x:
                 j = j + 1
             else:

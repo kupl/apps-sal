@@ -1,4 +1,4 @@
-'''Author- Akshit Monga'''
+"""Author- Akshit Monga"""
 from sys import stdin, stdout
 input = stdin.readline
 t = int(input())

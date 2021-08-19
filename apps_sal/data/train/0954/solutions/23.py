@@ -5,4 +5,4 @@ for _ in range(t):
     s = 0
     for i in range(n + 1):
         s += math.pow(i, 3)
-    print(int((s * 2) - math.pow(n, 3)))
+    print(int(s * 2 - math.pow(n, 3)))

@@ -7,8 +7,6 @@ for i in range(a):
     while n >= count:
         flag += 1
         n -= count
-
         element += count
         count += 1
-
     print(flag)

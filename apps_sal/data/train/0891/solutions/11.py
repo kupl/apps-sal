@@ -2,7 +2,7 @@ from sys import stdin, stdout
 
 
 def problem():
-    n, m = [int(x) for x in stdin.readline().split()]
+    (n, m) = [int(x) for x in stdin.readline().split()]
     for _ in range(m):
         q = int(stdin.readline())
         l = max(q - n, n + 1)

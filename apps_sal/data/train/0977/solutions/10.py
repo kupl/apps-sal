@@ -19,7 +19,7 @@ def encode(string):
     letter = generate()
     for i in string:
         new_string += letter[i]
-    return(new_string)
+    return new_string
 
 
 n = int(input())

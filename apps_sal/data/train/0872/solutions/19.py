@@ -1,6 +1,6 @@
 T = int(input())
 for i in range(T):
-    N, A, B, K = list(map(int, input().split()))
+    (N, A, B, K) = list(map(int, input().split()))
     c = 0
     for j in range(1, N + 1):
         if j % A == 0 and j % B != 0:
@@ -8,6 +8,6 @@ for i in range(T):
         elif j % A != 0 and j % B == 0:
             c += 1
     if c >= K:
-        print("Win")
+        print('Win')
     else:
-        print("Lose")
+        print('Lose')

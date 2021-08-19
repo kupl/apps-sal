@@ -21,7 +21,6 @@ while t > 0:
     c = aindex
     for i in range(n):
         c[i] = 0
-
     for i in range(n):
         max = -1
         maxindex = 0

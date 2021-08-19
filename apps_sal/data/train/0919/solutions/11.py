@@ -1,6 +1,5 @@
 import sys
 from functools import partial
-
 SAMPLE_IN = 'sample.in'
 SAMPLE_ANS = 'sample.ans'
 
@@ -16,14 +15,14 @@ def read_ints(f) -> list:
 def read_case(f=sys.stdin) -> tuple:
     n = read_int(f)
     nums = read_ints(f)
-    return n, nums
+    return (n, nums)
 
 
 def solve(n, nums):
     even = 0
     odd = [-1] * (n + 1)
     for x in nums:
-        even, odd[x] = max(even, odd[x] + 1), even + 1
+        (even, odd[x]) = (max(even, odd[x] + 1), even + 1)
     return n - even
 
 

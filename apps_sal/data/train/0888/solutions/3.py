@@ -1,5 +1,4 @@
 def kmp(s, t, lps):
-
     n = len(s)
     m = len(t)
     count = [0 for x in range(n)]
@@ -30,12 +29,11 @@ def lpsa(t, m):
             l += 1
             lps[i] = l
             i += 1
+        elif l != 0:
+            l = lps[l - 1]
         else:
-            if l != 0:
-                l = lps[l - 1]
-            else:
-                lps[i] = 0
-                i += 1
+            lps[i] = 0
+            i += 1
     return lps
 
 
@@ -47,8 +45,7 @@ lps = lpsa(t, m)
 one = kmp(s, t, lps)[-1]
 count = kmp(s + s, t, lps)
 two = count[-1]
-three = two - (2 * one)
-
+three = two - 2 * one
 for _ in range(int(input())):
     q = int(input())
     v = q // n

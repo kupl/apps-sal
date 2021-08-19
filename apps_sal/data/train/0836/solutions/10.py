@@ -9,7 +9,7 @@ def find_movie(T, R):
     max_val = []
     max_val = max(e)
     index = e.index(max_val)
-    return (index + 1)
+    return index + 1
 
 
 t = int(input())

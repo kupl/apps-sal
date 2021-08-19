@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     array = list(map(int, input().split()))
     count = 0
     mn = float('inf')

@@ -12,8 +12,8 @@ for _ in range(t):
         for i in range(n):
             if l[i] != 0:
                 count = l[i]
-                for k, v in list(d.items()):
-                    if count > 0 and v == 1 and i != k:
+                for (k, v) in list(d.items()):
+                    if count > 0 and v == 1 and (i != k):
                         d[k] = 0
                         ans[k] = i + 1
                         count -= 1
@@ -26,7 +26,6 @@ for _ in range(t):
         else:
             for i in range(len(ans)):
                 if ans[i] != ind + 1:
-
                     ans[ind] = ans[i]
                     ans[i] = ind + 1
                     break

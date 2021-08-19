@@ -1,16 +1,16 @@
 T = int(input())
-while (T > 0):
+while T > 0:
     T -= 1
-    N, M = list(map(int, input().split(' ')))
+    (N, M) = list(map(int, input().split(' ')))
     if N == 1 or M == 1:
         x = max(N, M)
         if x == 1:
-            print("No")
+            print('No')
         elif x == 2:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     elif M % 2 == 0 or N % 2 == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

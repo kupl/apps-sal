@@ -8,7 +8,7 @@ def function(n, m, b):
 
 
 t = int(input())
-while (t > 0):
+while t > 0:
     t = t - 1
-    n, b, m = list(map(int, input().split()))
+    (n, b, m) = list(map(int, input().split()))
     print(function(n, m, b))

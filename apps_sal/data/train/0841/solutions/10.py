@@ -6,8 +6,8 @@ import functools
 import sys
 import math
 MAX = sys.maxsize
-MAXN = 10**6 + 10
-MOD = 10**9 + 7
+MAXN = 10 ** 6 + 10
+MOD = 10 ** 9 + 7
 
 
 def isprime(n):
@@ -18,7 +18,7 @@ def isprime(n):
         return True
     if not n & 1:
         return False
-    for x in range(3, int(n**0.5) + 1, 2):
+    for x in range(3, int(n ** 0.5) + 1, 2):
         if n % x == 0:
             return False
     return True
@@ -29,11 +29,11 @@ def mhd(a, b, x, y):
 
 
 def numIN():
-    return(map(int, sys.stdin.readline().strip().split()))
+    return map(int, sys.stdin.readline().strip().split())
 
 
 def charIN():
-    return(sys.stdin.readline().strip().split())
+    return sys.stdin.readline().strip().split()
 
 
 t = [0] * 1000010
@@ -65,7 +65,7 @@ for i in range(int(input())):
     p1 = pow(10, l, MOD)
     p2 = pow(10, l - 1, MOD)
     for j in range(l - 1):
-        n -= (int(a[j]) * p2)
+        n -= int(a[j]) * p2
         n %= MOD
         n *= 10
         n %= MOD
@@ -75,5 +75,4 @@ for i in range(int(input())):
         ans %= MOD
         ans += n
         ans %= MOD
-
     print(ans)

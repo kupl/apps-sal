@@ -13,21 +13,20 @@ for _ in range(int(input())):
                 break
     if flag == 1:
         print(-1)
+    elif l == []:
+        print(0)
     else:
-        if l == []:
-            print(0)
-        else:
-            l = sorted(list(set(l)), reverse=True)
-            print(len(l))
-            for i in range(len(l)):
-                q = []
-                r = []
-                for j in range(len(a)):
-                    if l[i] == b[j]:
-                        q.append(j)
-                        r.append(a[j])
-                if l[i] not in r:
-                    for k in range(len(a)):
-                        if a[k] == l[i]:
-                            q.append(k)
-                print(len(q), *q)
+        l = sorted(list(set(l)), reverse=True)
+        print(len(l))
+        for i in range(len(l)):
+            q = []
+            r = []
+            for j in range(len(a)):
+                if l[i] == b[j]:
+                    q.append(j)
+                    r.append(a[j])
+            if l[i] not in r:
+                for k in range(len(a)):
+                    if a[k] == l[i]:
+                        q.append(k)
+            print(len(q), *q)

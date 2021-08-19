@@ -1,6 +1,6 @@
-NAME = "P5"
+NAME = 'P5'
 try:
-    inFile = open(NAME + ".txt")
+    inFile = open(NAME + '.txt')
 except:
     pass
 

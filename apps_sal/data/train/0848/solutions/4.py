@@ -1,4 +1,4 @@
-'''t = int(input())
+"""t = int(input())
 for i in range(t):
     n = int(input())
     l = list(map(int, input().strip().split()))
@@ -19,23 +19,23 @@ for i in range(t):
             p = k[2]+k[3]+k[4]
             if(p>ans):
                 ans=p
-        print(ans)'''
+        print(ans)"""
 t = int(input())
 for i in range(t):
     n = int(input())
     l = list(map(int, input().strip().split()))
-    if(n == 3):
+    if n == 3:
         print(sum(l))
     else:
         ans = 0
         for j in range(n):
             p = l[j] + l[(j + n + 1) % n] + l[(j + n + 2) % n]
-            if(p > ans):
+            if p > ans:
                 ans = p
         p = l[n - 2] + l[n - 1] + l[0]
-        if(p > ans):
+        if p > ans:
             ans = p
         p = l[1] + l[n - 1] + l[0]
-        if(p > ans):
+        if p > ans:
             ans = p
         print(ans)

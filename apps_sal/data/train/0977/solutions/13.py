@@ -6,5 +6,5 @@ for _ in range(T):
         s[i] = chr(122 - (ord(s[i]) - 97))
         if i % 2 == 0 and i + 1 < n:
             s[i + 1] = chr(122 - (ord(s[i + 1]) - 97))
-            s[i], s[i + 1] = s[i + 1], s[i]
+            (s[i], s[i + 1]) = (s[i + 1], s[i])
     print(''.join(s))

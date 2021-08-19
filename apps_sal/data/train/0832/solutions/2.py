@@ -21,17 +21,17 @@ def num_of_occur(li, k):
     z = li[k - 1]
     y = 0
     for i in range(k):
-        if(li[i] == z):
+        if li[i] == z:
             y += 1
     return y
 
 
 def factorials(z, y):
-    return (math.factorial(z) / (math.factorial(y) * math.factorial((z - y))))
+    return math.factorial(z) / (math.factorial(y) * math.factorial(z - y))
 
 
 for a in range(t):
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     lis = [int(x) for x in input().split()]
     lis.sort()
     sumn = t_min(lis, k)

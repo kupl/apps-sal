@@ -9,7 +9,7 @@ for _ in range(int(input())):
             d[i] = 1
         else:
             d[i] += 1
-    mam, mim = max(m), min(m)
+    (mam, mim) = (max(m), min(m))
     pc = list(d.items())
     if len(pc) == 2 and mam == mim + 1:
         if d[mam] + d[mim] == n and mim == d[mim] - 1:

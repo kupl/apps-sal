@@ -1,6 +1,6 @@
 ans = []
 for i in range(int(input())):
-    n, r, x, y = list(map(int, input().split()))
+    (n, r, x, y) = list(map(int, input().split()))
     if x > 0:
         x = list(map(int, input().split()))
     else:

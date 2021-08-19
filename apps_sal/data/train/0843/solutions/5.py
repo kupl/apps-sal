@@ -3,7 +3,6 @@ for i in range(int(input())):
     lst = []
     for j in range(nm):
         lst.append(sorted([int(x) for x in input().split()]))
-
     sm = lst[-1][-1]
     mx = lst[-1][-1]
     c = 1

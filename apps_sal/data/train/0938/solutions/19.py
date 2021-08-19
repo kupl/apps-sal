@@ -14,18 +14,18 @@ for t in range(int(input())):
         temp = []
         pos = []
         for j in range(i, n):
-            if (a[j] not in temp):
+            if a[j] not in temp:
                 temp.append(a[j])
                 pos += d[a[j]]
                 pos.sort()
-                if (pos[-1] != (n - 1)):
+                if pos[-1] != n - 1:
                     f = pos + [n]
                 else:
                     f = pos
             curr = 0
             for p in range(1, len(f)):
-                if (f[p] > j):
-                    xxx = (f[p] - f[p - 1])
+                if f[p] > j:
+                    xxx = f[p] - f[p - 1]
                     curr += z[xxx]
             ans += curr
     print(ans)

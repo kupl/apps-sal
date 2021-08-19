@@ -7,12 +7,12 @@ while t > 0:
     b = input()
     amap = {}
     bmap = {}
-    for i, char in enumerate(a):
+    for (i, char) in enumerate(a):
         if char in amap:
             amap[char].append(i)
         else:
             amap[char] = [i]
-    for i, char in enumerate(b):
+    for (i, char) in enumerate(b):
         if char in bmap:
             bmap[char].append(i)
         else:

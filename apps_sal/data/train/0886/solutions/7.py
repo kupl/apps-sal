@@ -6,14 +6,14 @@ for i in range(t):
     x = n // 2
     u = 0
     te = -1
-    while(x):
+    while x:
         te = A[u]
         A[u] = A[u + 1]
         A[u + 1] = te
         u += 2
         x -= 1
     for j in range(n):
-        A[j] += (A[j] % 3)
+        A[j] += A[j] % 3
     for j in range(n):
         u = j
         v = n - j - 1
@@ -24,12 +24,12 @@ for i in range(t):
     ma = -1
     A.sort()
     for j in range(n):
-        if(A[j] > m):
+        if A[j] > m:
             ma = A[j]
             break
-    A = A[:: -1]
+    A = A[::-1]
     for j in range(n):
-        if(A[j] < m):
+        if A[j] < m:
             mi = A[j]
             break
     print(mi, ma)

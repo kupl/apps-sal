@@ -8,9 +8,9 @@ for i in range(int(input())):
     sum = c
     for k in range(1, n):
         for x in b[-k - 1]:
-            if(x < c and x > counter):
+            if x < c and x > counter:
                 counter = x
-        if(counter == 0):
+        if counter == 0:
             print(-1)
             sum = 0
             break
@@ -18,5 +18,5 @@ for i in range(int(input())):
             sum = sum + counter
             c = counter
             counter = 0
-    if(sum != 0):
+    if sum != 0:
         print(sum)

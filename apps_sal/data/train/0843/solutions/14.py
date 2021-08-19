@@ -5,7 +5,6 @@ for _ in range(testCases):
     arr = []
     for _ in range(lines):
         arr.append(sorted(list(map(int, input().split())), reverse=True))
-
     maximum = max(arr[lines - 1])
     choosen = maximum
     bool = True

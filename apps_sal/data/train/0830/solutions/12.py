@@ -24,7 +24,7 @@ for _ in range(int(input())):
         ans.append([])
         ans[-1].append(ind[i])
         for j in range(n):
-            if a[j] > i and b[j] == i and ind[i] != -1:
+            if a[j] > i and b[j] == i and (ind[i] != -1):
                 ans[-1].append(j)
         if temp == 1:
             break
@@ -38,5 +38,5 @@ for _ in range(int(input())):
         print(l)
         for i in ans:
             if len(i) != 1:
-                print(len(i), end=" ")
+                print(len(i), end=' ')
                 print(*i)

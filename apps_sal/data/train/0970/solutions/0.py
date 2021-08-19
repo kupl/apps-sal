@@ -22,7 +22,7 @@ for _ in range(int(input())):
     narr = list(map(int, input().split()))
     q = int(input())
     for i in range(q):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         a = x + y
         j = posSearch(narr, a)
         print(j)

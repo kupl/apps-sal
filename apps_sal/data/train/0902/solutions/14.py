@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b = input().split()
+    (a, b) = input().split()
     a = int(a)
     onec = 0
     zeroc = 0
@@ -14,8 +14,7 @@ for _ in range(int(input())):
             print('Dee')
         else:
             print('Dum')
+    elif onec > zeroc:
+        print('Dum')
     else:
-        if onec > zeroc:
-            print('Dum')
-        else:
-            print('Dee')
+        print('Dee')

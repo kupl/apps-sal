@@ -1,5 +1,5 @@
-k, a, b = map(int, input().split())
-if (b - a) <= 2:
+(k, a, b) = map(int, input().split())
+if b - a <= 2:
     print(k + 1)
 else:
     count = a

@@ -17,7 +17,6 @@ else:
             else:
                 f = True
                 break
-
         n += 1
     if f:
         print(n)

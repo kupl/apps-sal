@@ -15,6 +15,6 @@ for _ in range(int(input())):
         if res[p] == p + 1:
             for q in range(len(res)):
                 if res[q] != p + 1:
-                    res[p], res[q] = res[q], res[p]
+                    (res[p], res[q]) = (res[q], res[p])
                     break
     print(*res)

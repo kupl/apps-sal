@@ -6,9 +6,9 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 for test in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     print(lcm(n, m))

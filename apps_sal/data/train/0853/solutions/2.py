@@ -1,5 +1,5 @@
 t = int(input())
-op = ""
+op = ''
 for j in range(0, t):
     n = int(input())
     d = dict()

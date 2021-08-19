@@ -8,12 +8,12 @@ for i in range(T):
     ratmax = 0
     for j in range(N):
         prod = l[j] * r[j]
-        if(prod > maxi):
+        if prod > maxi:
             maxi = prod
             index_min = j
             ratmax = r[j]
-        elif(prod == maxi):
-            if(r[j] > ratmax):
+        elif prod == maxi:
+            if r[j] > ratmax:
                 ratmax = r[j]
                 index_min = j
     print(index_min + 1)

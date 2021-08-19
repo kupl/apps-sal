@@ -10,6 +10,5 @@ for i in range(N + 1, 987654321):
             print(i)
             flag += 1
             break
-
 if flag < 1:
     print(0)

@@ -1,7 +1,7 @@
 t = eval(input())
 while t > 0:
     t = t - 1
-    n, b, m = list(map(int, input().split()))
+    (n, b, m) = list(map(int, input().split()))
     s = n / 2
     p = 0
     if n % 2 == 0:
@@ -14,7 +14,6 @@ while t > 0:
     while n > 0:
         ans = ans + p * m + b
         m = m * 2
-
         if n % 2 == 0:
             p = n / 2
         else:

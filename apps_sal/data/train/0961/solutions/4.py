@@ -5,16 +5,46 @@ from heapq import merge, heapify, heappop, heappush, nsmallest
 from bisect import bisect_left as bl, bisect_right as br, bisect
 mod = pow(10, 9) + 7
 mod2 = 998244353
-def inp(): return stdin.readline().strip()
-def out(var, end="\n"): stdout.write(str(var) + "\n")
-def outa(*var, end="\n"): stdout.write(' '.join(map(str, var)) + end)
-def lmp(): return list(mp())
-def mp(): return map(int, inp().split())
-def smp(): return map(str, inp().split())
-def l1d(n, val=0): return [val for i in range(n)]
-def l2d(n, m, val=0): return [l1d(n, val) for j in range(m)]
-def remadd(x, y): return 1 if x % y else 0
-def ceil(a, b): return (a + b - 1) // b
+
+
+def inp():
+    return stdin.readline().strip()
+
+
+def out(var, end='\n'):
+    stdout.write(str(var) + '\n')
+
+
+def outa(*var, end='\n'):
+    stdout.write(' '.join(map(str, var)) + end)
+
+
+def lmp():
+    return list(mp())
+
+
+def mp():
+    return map(int, inp().split())
+
+
+def smp():
+    return map(str, inp().split())
+
+
+def l1d(n, val=0):
+    return [val for i in range(n)]
+
+
+def l2d(n, m, val=0):
+    return [l1d(n, val) for j in range(m)]
+
+
+def remadd(x, y):
+    return 1 if x % y else 0
+
+
+def ceil(a, b):
+    return (a + b - 1) // b
 
 
 def isprime(x):
@@ -39,10 +69,8 @@ def _mergeSort(arr, temp_arr, left, right):
     inv_count = 0
     if left < right:
         mid = (left + right) // 2
-        inv_count += _mergeSort(arr, temp_arr,
-                                left, mid)
-        inv_count += _mergeSort(arr, temp_arr,
-                                mid + 1, right)
+        inv_count += _mergeSort(arr, temp_arr, left, mid)
+        inv_count += _mergeSort(arr, temp_arr, mid + 1, right)
         inv_count += merge(arr, temp_arr, left, mid, right)
     return inv_count
 
@@ -59,7 +87,7 @@ def merge(arr, temp_arr, left, mid, right):
             i += 1
         else:
             temp_arr[k] = arr[j]
-            inv_count += (mid - i + 1)
+            inv_count += mid - i + 1
             k += 1
             j += 1
     while i <= mid:

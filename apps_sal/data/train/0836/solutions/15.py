@@ -7,12 +7,10 @@ for _ in range(int(input())):
     maxx = 0
     for i in range(n):
         temp = L[i] * R[i]
-
         if temp > maxx:
             maxx = temp
             Rmax = R[i]
             pos = i
-
         elif temp == maxx:
             if R[i] > Rmax:
                 Rmax = R[i]

@@ -1,14 +1,14 @@
 t = int(input())
-while(t > 0):
+while t > 0:
     ans = 0
     t -= 1
     s = input()
-    n, b, m = s.split()
+    (n, b, m) = s.split()
     n = int(n)
     b = int(b)
     m = int(m)
     n1 = n
-    while(n > 0):
+    while n > 0:
         if n % 2 == 0:
             half = n / 2
         else:

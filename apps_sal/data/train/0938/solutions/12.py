@@ -8,6 +8,6 @@ for _ in range(eval(input())):
                 for m in range(n):
                     a = set(l[i:j + 1])
                     b = set(l[k:m + 1])
-                    if len(a) and len(b) and len(a & b) == 0:
+                    if len(a) and len(b) and (len(a & b) == 0):
                         c += 1
     print(c / 2)

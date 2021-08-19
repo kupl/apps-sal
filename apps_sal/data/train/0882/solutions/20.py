@@ -6,7 +6,6 @@ def soln():
     for i in a1:
         if i in b:
             c += min(a.count(i), b.count(i))
-
     print(c)
 
 

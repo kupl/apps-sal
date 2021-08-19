@@ -6,6 +6,6 @@ for i in range(t):
     ma = 0
     for j in b:
         p = a.count(j)
-        if(ma < p):
+        if ma < p:
             ma = p
     print(n - ma)

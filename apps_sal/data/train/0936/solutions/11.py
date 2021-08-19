@@ -8,7 +8,6 @@ for _ in range(int(input())):
         if count & 1:
             if matrix[0][i] != i * n + 1:
                 count += 1
-        else:
-            if matrix[i][0] != i * n + 1:
-                count += 1
+        elif matrix[i][0] != i * n + 1:
+            count += 1
     print(count)
