@@ -1,19 +1,22 @@
 import collections
 import sys
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 
 
-N, Q = LI()
+def LI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+(N, Q) = LI()
 ab = [LI() for _ in range(N - 1)]
 px = [LI() for _ in range(Q)]
-ans = [0] * (N + 1)  # 1_indexed
-graph = {i: collections.deque() for i in range(1, N + 1)}  # 1_indexed
-for a, b in ab:
+ans = [0] * (N + 1)
+graph = {i: collections.deque() for i in range(1, N + 1)}
+for (a, b) in ab:
     graph[a].append(b)
     graph[b].append(a)
-for p, x in px:
+for (p, x) in px:
     ans[p] += x
-seen = [0] * (N + 1)  # 1_indexed
+seen = [0] * (N + 1)
 stack = []
 
 

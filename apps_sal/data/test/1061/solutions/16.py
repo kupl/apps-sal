@@ -7,6 +7,5 @@ for i in range(5):
         row_in = i + 1
         col_in = x.index(a) + 1
     table.append(x)
-#print(row_in, col_in)
-steps = math.fabs((3 - (row_in))) + math.fabs((3 - (col_in)))
+steps = math.fabs(3 - row_in) + math.fabs(3 - col_in)
 print(int(steps))

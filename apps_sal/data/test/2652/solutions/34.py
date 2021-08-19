@@ -1,6 +1,6 @@
 n = int(input())
 xy = [list(map(int, input().split())) for _ in range(n)]
-x, y = zip(*xy)
+(x, y) = zip(*xy)
 x = list(zip(range(n), x))
 y = list(zip(range(n), y))
 x.sort(key=lambda a: a[1])
@@ -10,10 +10,10 @@ for i in range(n - 1):
     d.append([x[i + 1][1] - x[i][1], x[i + 1][0], x[i][0]])
     d.append([y[i + 1][1] - y[i][1], y[i + 1][0], y[i][0]])
 d.sort(key=lambda a: a[0], reverse=True)
-# Union FInd
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -31,7 +31,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -46,7 +46,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -55,13 +55,13 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
 ans = 0
 uf = UnionFind(n)
 while d:
-    dist, i, j = d.pop()
+    (dist, i, j) = d.pop()
     if uf.same(i, j):
         continue
     uf.union(i, j)

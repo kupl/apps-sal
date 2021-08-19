@@ -1,9 +1,13 @@
 import sys
 from collections import defaultdict
-def finput(): return sys.stdin.readline().strip()
 
 
-class Unionfind():
+def finput():
+    return sys.stdin.readline().strip()
+
+
+class Unionfind:
+
     def __init__(self, n):
         self.parents = [-1] * n
         self.ranks = [0] * n
@@ -21,7 +25,7 @@ class Unionfind():
         if x == y:
             return
         if self.ranks[x] < self.ranks[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
         if self.ranks[x] == self.ranks[y]:
@@ -38,15 +42,15 @@ def main():
     n = int(finput())
     coor = [list(map(int, finput().split())) + [i] for i in range(n)]
     coor.sort(key=lambda e: e[0])
-    def cost(e, f): return min(abs(e[0] - f[0]), abs(e[1] - f[1]))
-    ew = dict(((coor[i][2], coor[i + 1][2]), cost(coor[i][:2], coor[i + 1][:2])) for i in range(n - 1))
+
+    def cost(e, f):
+        return min(abs(e[0] - f[0]), abs(e[1] - f[1]))
+    ew = dict((((coor[i][2], coor[i + 1][2]), cost(coor[i][:2], coor[i + 1][:2])) for i in range(n - 1)))
     coor.sort(key=lambda e: e[1])
-    ew.update(dict(((coor[i][2], coor[i + 1][2]), cost(coor[i][:2], coor[i + 1][:2])) for i in range(n - 1)))
+    ew.update(dict((((coor[i][2], coor[i + 1][2]), cost(coor[i][:2], coor[i + 1][:2])) for i in range(n - 1))))
     edges = sorted(list(iter(ew)), key=lambda e: ew[e])
     v = Unionfind(n)
     totcost = 0
-    # print(ew)
-    # print(edges)
     for edge in edges:
         if not v.issametree(edge[0], edge[1]):
             v.union(edge[0], edge[1])

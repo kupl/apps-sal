@@ -1,20 +1,15 @@
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 7)
-
-# 遅延評価で加えてあげるだけ
-
-N, Q = map(int, input().split())
+(N, Q) = map(int, input().split())
 AB = [[int(x) for x in input().split()] for _ in range(N - 1)]
 PX = [[int(x) for x in input().split()] for _ in range(Q)]
-
 graph = [[] for _ in range(N + 1)]
-for a, b in AB:
+for (a, b) in AB:
     graph[a].append(b)
     graph[b].append(a)
-
 value = [0] * (N + 1)
-for p, x in PX:
+for (p, x) in PX:
     value[p] += x
 
 
@@ -27,6 +22,5 @@ def dfs(v, parent, add):
 
 
 dfs(1, 0, 0)
-
 answer = ' '.join(map(str, value[1:]))
 print(answer)
