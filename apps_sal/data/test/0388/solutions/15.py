@@ -1,9 +1,6 @@
-# This code is dedicated to Olya S.
-from random import*
-
-n, k = list(map(int, input().split()))
+from random import *
+(n, k) = list(map(int, input().split()))
 s = input().split()
-
 soliders = ['' for i in range(n)]
 
 
@@ -23,14 +20,10 @@ if s[0] == 'NO':
         soliders[j] = newname()
 else:
     for j in range(0, k):
-
         soliders[j] = newname()
-
 for i in range(1, n - k + 1):
     if s[i] == 'YES':
         soliders[i + k - 1] = newname()
     else:
         soliders[i + k - 1] = soliders[i]
-
-
 print(*soliders)

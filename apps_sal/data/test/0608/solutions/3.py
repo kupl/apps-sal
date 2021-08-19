@@ -5,7 +5,7 @@ a = input().split()
 for i in range(n):
     a[i] = int(a[i])
 scane = 0
-while scane < (n - 2):
+while scane < n - 2:
     plus = 0
     if a[scane] > 3:
         plus += 1
@@ -13,10 +13,8 @@ while scane < (n - 2):
             plus += 1
             if a[scane + 2] > 3:
                 r += 1
-               # print(r)
-               # print('--')
                 plus += 1
-        scane += (plus)
+        scane += plus
     else:
         scane += 1
 print(r)

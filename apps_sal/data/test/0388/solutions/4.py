@@ -4,9 +4,8 @@ ATSTNG's ejudge Python3 solution template
 """
 import sys
 import queue
-
 try:
-    import dev_act_ffc429465ab634  # empty file in directory
+    import dev_act_ffc429465ab634
     DEV = True
 except:
     DEV = False
@@ -18,7 +17,8 @@ def log(*s):
 
 
 class EJudge:
-    def __init__(self, problem="default", reclim=1 << 30):
+
+    def __init__(self, problem='default', reclim=1 << 30):
         self.problem = problem
         sys.setrecursionlimit(reclim)
 
@@ -52,6 +52,7 @@ class EJudge:
 
 
 class IntReader:
+
     def __init__(self):
         self.ost = queue.Queue()
 
@@ -74,7 +75,6 @@ class IntReader:
 def tokenized(s):
     """ Parses given string into tokens with default rules """
     word = []
-
     for ch in s.strip():
         if ch == ' ':
             if word:
@@ -87,29 +87,25 @@ def tokenized(s):
                 yield ''.join(word)
                 word = []
             yield ch
-
     if word:
         yield ''.join(word)
         word = []
 
 
-###############################################################################
 ej = EJudge()
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
-def parse_int(): return fmap(int, input().split())
 
 
-# input
-n, k = parse_int()
+def parse_int():
+    return fmap(int, input().split())
 
-seq = fmap(lambda x: x == "YES", input().split())
 
+(n, k) = parse_int()
+seq = fmap(lambda x: x == 'YES', input().split())
 names = [chr(ord('A') + i) for i in range(25)] + ['S' + chr(ord('a') + i) for i in range(25)]
 names = names[:n]
-
 for i in range(len(seq)):
     if not seq[i]:
         names[i + k - 1] = names[i]
-
 print(' '.join(names))

@@ -1,10 +1,7 @@
 from sys import stdin, stdout
 import math
 from collections import defaultdict
-# from collections import OrderedDict
 from collections import Counter
-# from queue import deque
-# from math import log2
 
 
 def arrinp():
