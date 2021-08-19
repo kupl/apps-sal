@@ -1,6 +1,5 @@
-
 import itertools
-url = "https://atcoder.jp//contests/abc137/tasks/abc137_c"
+url = 'https://atcoder.jp//contests/abc137/tasks/abc137_c'
 
 
 def main():

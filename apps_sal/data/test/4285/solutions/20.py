@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 numa = 0
 numab = 0
 ans = 0
@@ -29,7 +29,7 @@ for i in range(n):
         numab2 = (numab2 + numa1) % MOD
         numa1 = (numa1 + 1) % MOD
         count += 1
-ans = (ans * pow(3, count, MOD)) % MOD
+ans = ans * pow(3, count, MOD) % MOD
 if count >= 3:
     ans = (ans + ans3 * pow(3, count - 3, MOD)) % MOD
 if count >= 2:

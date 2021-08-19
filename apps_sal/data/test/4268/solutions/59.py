@@ -1,6 +1,6 @@
 from numpy import array
 from numpy.linalg import norm
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 X = [list(map(int, input().split())) for i in range(n)]
 ans = 0
 for i in range(n - 1):

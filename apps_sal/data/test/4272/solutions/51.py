@@ -1,2 +1,2 @@
 N = input()
-print(input().count("ABC"))
+print(input().count('ABC'))

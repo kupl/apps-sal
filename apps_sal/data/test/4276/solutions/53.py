@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,14 +8,12 @@ MOD = 1000000007
 
 
 def main():
-    N, T = list(map(int, readline().split()))
-
+    (N, T) = list(map(int, readline().split()))
     ans = INF
     for _ in range(N):
-        c, t = list(map(int, readline().split()))
+        (c, t) = list(map(int, readline().split()))
         if t <= T and ans > c:
             ans = c
-
     if ans < INF:
         print(ans)
     else:

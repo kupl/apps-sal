@@ -1,12 +1,16 @@
-def LI(): return list(map(int, input().split()))
-def I(): return map(int, input().split())
+def LI():
+    return list(map(int, input().split()))
 
 
-mod = 10**9 + 7
+def I():
+    return map(int, input().split())
+
+
+mod = 10 ** 9 + 7
 
 
 def main():
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     x = [LI() for i in range(n)]
     ans = 0
     for i in range(n - 1):

@@ -3,7 +3,7 @@ n = int(input())
 m = []
 count = 0
 for i in range(n):
-    m.append("".join(sorted(str(input()))))
+    m.append(''.join(sorted(str(input()))))
 m = Counter(m)
 ans = 0
 for j in m.values():

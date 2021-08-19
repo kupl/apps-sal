@@ -1,5 +1,5 @@
 import math
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 lst = []
 for i in range(n):
     x = list(map(int, input().split()))
@@ -9,12 +9,12 @@ for i in range(n):
 def check(lst, a, b):
     tmp = 0
     for i in range(len(lst[a])):
-        tmp = tmp + (lst[a][i] - lst[b][i])**2
+        tmp = tmp + (lst[a][i] - lst[b][i]) ** 2
     tmp = math.sqrt(tmp)
-    if (tmp // 1 == tmp):
-        return (1)
+    if tmp // 1 == tmp:
+        return 1
     else:
-        return (0)
+        return 0
 
 
 ans = 0

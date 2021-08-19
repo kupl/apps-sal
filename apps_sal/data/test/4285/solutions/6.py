@@ -1,9 +1,8 @@
 import sys
 readline = sys.stdin.readline
-
 N = readline()
 S = readline().strip()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dp = [1] + [0] * 3
 for s in S:
     dp1 = dp[:]

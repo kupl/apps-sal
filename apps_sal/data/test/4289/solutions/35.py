@@ -1,5 +1,5 @@
 n = int(input())
-t, a = map(int, input().split())
+(t, a) = map(int, input().split())
 h = list(map(int, input().split()))
 ans = 1
 temp = t - h[0] * 0.006

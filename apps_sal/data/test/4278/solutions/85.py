@@ -1,6 +1,6 @@
 import collections
 N = int(input())
-ls, rst = [], 0
+(ls, rst) = ([], 0)
 for i in range(N):
     s = list(input())
     s.sort()

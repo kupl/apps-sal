@@ -12,7 +12,6 @@ for _ in range(n):
         l[3] += 1
     if s[0] == 'H':
         l[4] += 1
-
 for i in l:
     if i == 0:
         l.remove(i)

@@ -10,14 +10,12 @@ for _ in range(int(input())):
     end = int(input())
     l = []
     secon = sec = ans = currlen = last = 0
-
     while end > 0:
         last += 1
         l.append(last)
         currlen += givelen(last)
         secon = end
         end -= currlen
-
     for i in range(len(l)):
         sec = secon
         secon -= givelen(l[i])

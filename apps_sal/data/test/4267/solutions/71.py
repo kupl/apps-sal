@@ -1,5 +1,5 @@
 temp = int(input())
 if temp < 30:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

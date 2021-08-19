@@ -5,7 +5,7 @@ def main():
     a = 0
     b = 0
     while b < n:
-        if (arr[b] - arr[a] <= 5):
+        if arr[b] - arr[a] <= 5:
             ans = max(ans, b - a + 1)
             b += 1
         else:

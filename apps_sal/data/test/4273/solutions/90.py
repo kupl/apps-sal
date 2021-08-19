@@ -14,6 +14,6 @@ if 2 <= c:
     print(0)
 else:
     d = 0
-    for h, j, l in itertools.combinations(num, 3):
-        d += (h * j * l)
+    for (h, j, l) in itertools.combinations(num, 3):
+        d += h * j * l
     print(d)

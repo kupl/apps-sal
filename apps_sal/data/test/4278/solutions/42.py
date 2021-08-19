@@ -1,11 +1,8 @@
 n = int(input())
 l = []
-
 for i in range(n):
     l.append(sorted(input()))
-
 l.sort()
-
 clst = []
 cnt = 0
 for i in range(len(l) - 1):
@@ -17,7 +14,6 @@ for i in range(len(l) - 1):
         if cnt > 0:
             clst.append(cnt)
         cnt = 0
-
 ans = 0
 for x in clst:
     ans += (1 + x) * x // 2

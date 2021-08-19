@@ -8,15 +8,14 @@ def read():
     S = []
     for i in range(N):
         S.append(input().strip())
-    return N, S
+    return (N, S)
 
 
 def solve(N, S):
     words = defaultdict(int)
     for s in S:
-        key = "".join(list(sorted(s)))
+        key = ''.join(list(sorted(s)))
         words[key] += 1
-
     ans = 0
     for key in words:
         n = words[key]
@@ -27,7 +26,7 @@ def solve(N, S):
 
 def __starting_point():
     inputs = read()
-    print(("%s" % solve(*inputs)))
+    print('%s' % solve(*inputs))
 
 
 __starting_point()

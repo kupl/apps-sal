@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2020/08/31
 
 @author: harurun
-'''
+"""
 
 
 def main():
@@ -11,21 +11,20 @@ def main():
     pin = sys.stdin.readline
     pout = sys.stdout.write
     perr = sys.stderr.write
-
     N = int(pin())
     ans = 0
     d = [0] * 5
     for _ in [0] * N:
         S = pin()[:-1][0]
-        if S == "M":
+        if S == 'M':
             d[0] += 1
-        elif S == "A":
+        elif S == 'A':
             d[1] += 1
-        elif S == "R":
+        elif S == 'R':
             d[2] += 1
-        elif S == "C":
+        elif S == 'C':
             d[3] += 1
-        elif S == "H":
+        elif S == 'H':
             d[4] += 1
     c = list(combinations([0, 1, 2, 3, 4], 3))
     for i in c:

@@ -1,5 +1,5 @@
 import math
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
 def combinations_count(a, b):

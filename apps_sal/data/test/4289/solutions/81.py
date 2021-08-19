@@ -1,7 +1,6 @@
 N = int(input())
-T, A = list(map(int, input().split()))
+(T, A) = list(map(int, input().split()))
 H = list(map(int, input().split()))
-
 mn = 10000000
 ans = 0
 for i in range(N):
@@ -9,4 +8,4 @@ for i in range(N):
     if abs(now - A) <= mn:
         mn = abs(now - A)
         ans = i
-print((ans + 1))
+print(ans + 1)

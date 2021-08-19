@@ -1,12 +1,21 @@
 from sys import stdin
-def rs(): return stdin.readline().strip()
-def ri(): return int(rs())
-def ril(): return list(map(int, rs().split()))
+
+
+def rs():
+    return stdin.readline().strip()
+
+
+def ri():
+    return int(rs())
+
+
+def ril():
+    return list(map(int, rs().split()))
 
 
 def main():
     N = ri()
-    d = {s: i for i, s in enumerate('MARCH')}
+    d = {s: i for (i, s) in enumerate('MARCH')}
     l = [0] * 5
     for i in range(N):
         s = rs()[0]

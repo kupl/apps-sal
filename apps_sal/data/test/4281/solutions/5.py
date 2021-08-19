@@ -31,7 +31,6 @@ def getmax(houses):
 
 
 n = int(input())
-
 houses = list(map(int, input().split()))
 houses.sort()
 print(getmin(deque(houses)), getmax(houses))

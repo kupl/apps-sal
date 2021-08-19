@@ -1,10 +1,9 @@
 import collections
 import sys
-
 input = sys.stdin.readline
 
 
-class common_function():
+class common_function:
     """
         1. よく使いそうで予め用意してあるものをまとめた
         2. よく使いそうな関数群をまとめた
@@ -46,7 +45,7 @@ def main():
     tlistcount = list(collections.Counter(tlist).items())
     tlistcount.sort(key=lambda x: x[1], reverse=True)
     ans = 0
-    for t0, t1 in tlistcount:
+    for (t0, t1) in tlistcount:
         if t1 == 1:
             break
         ans += common.nCk(t1, 2)

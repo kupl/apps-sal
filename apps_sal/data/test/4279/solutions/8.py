@@ -41,7 +41,7 @@ def dec(x):
 
 
 def dig_in_block(mx, k):
-    i, d, nd = 1, 1, 10
+    (i, d, nd) = (1, 1, 10)
     while True:
         if d >= k:
             return dec(i)[k - 1]

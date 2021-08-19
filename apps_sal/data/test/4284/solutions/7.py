@@ -1,6 +1,6 @@
 q = int(input())
 for _ in range(q):
-    k, n, a, b = list(map(int, input().split()))
+    (k, n, a, b) = list(map(int, input().split()))
     if b * n >= k:
         print(-1)
         continue

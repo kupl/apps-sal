@@ -4,7 +4,6 @@ for i in range(N):
     s = input()
     s = sorted(s)
     P.append(s)
-
 P = sorted(P)
 last = P[0]
 cnt = 0

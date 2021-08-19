@@ -1,6 +1,6 @@
 n = int(input())
 s = [input()[0] for _ in range(n)]
-c = [s.count("M"), s.count("A"), s.count("R"), s.count("C"), s.count("H")]
+c = [s.count('M'), s.count('A'), s.count('R'), s.count('C'), s.count('H')]
 ans = c[0] * c[1] * c[2]
 ans += c[0] * c[1] * c[3]
 ans += c[0] * c[1] * c[4]

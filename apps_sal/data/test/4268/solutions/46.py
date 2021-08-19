@@ -1,6 +1,5 @@
 import math
-
-N, D = list(map(int, input().split()))
+(N, D) = list(map(int, input().split()))
 L = []
 ans = 0
 for _ in range(N):
@@ -13,5 +12,4 @@ for i in range(N - 1):
             con += (L[i][k] - L[j][k]) ** 2
         if int(math.sqrt(con)) ** 2 == con:
             ans += 1
-
 print(ans)

@@ -3,7 +3,7 @@ dic = {}
 ans = 0
 for i in range(N):
     a = sorted(input())
-    a = "".join(a)
+    a = ''.join(a)
     if a in dic:
         ans += dic[a]
         dic[a] += 1

@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 a = int(a)
 b = int(b)
 c = [input().split() for i in range(a)]
@@ -8,6 +8,6 @@ for i in range(a):
         if d > int(c[i][0]):
             d = int(c[i][0])
 if d == 1001:
-    print("TLE")
+    print('TLE')
 else:
     print(d)

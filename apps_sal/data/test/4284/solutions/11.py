@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    k, n, a, b = list(map(int, input().split()))
+    (k, n, a, b) = list(map(int, input().split()))
     if k <= b * n:
         print(-1)
         continue

@@ -1,4 +1,4 @@
-A, B, C = map(int, input().split())
+(A, B, C) = map(int, input().split())
 if A == B and A != C:
     print('Yes')
 elif A == C and A != B:

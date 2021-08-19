@@ -1,8 +1,7 @@
-a, b, c = map(int, input().split())
-
+(a, b, c) = map(int, input().split())
 if a == b and a == c:
-    print("No")
+    print('No')
 elif a == b or a == c or b == c:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

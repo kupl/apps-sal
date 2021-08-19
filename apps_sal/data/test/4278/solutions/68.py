@@ -11,11 +11,8 @@ def combinations_count(n, r):
 
 for i in range(n):
     word[i] = sorted(word[i])
-
 new_word = list(sorted(word))
-
 x = 1
-
 for i in range(n - 1):
     if new_word[i] == new_word[i + 1]:
         x += 1
@@ -24,5 +21,4 @@ for i in range(n - 1):
         x = 1
 if x >= 2:
     count += combinations_count(x, 2)
-
 print(count)

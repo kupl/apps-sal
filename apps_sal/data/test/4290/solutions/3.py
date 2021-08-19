@@ -1,6 +1,5 @@
 import math
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 
 
 def combinations_count(n, r):
@@ -15,6 +14,4 @@ elif n < 2:
     ans = combinations_count(m, 2)
 elif m < 2:
     ans = combinations_count(n, 2)
-
-
 print(ans)

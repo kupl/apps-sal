@@ -1,5 +1,5 @@
 n = int(input())
-t, a = map(int, input().split())
+(t, a) = map(int, input().split())
 H = list(map(int, input().split()))
 ans = -1
 h = 1000

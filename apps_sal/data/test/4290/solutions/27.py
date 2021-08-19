@@ -8,7 +8,7 @@ def cmb(n, r):
     return over // under
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 if N <= 1:
     C = 0
 else:
@@ -17,5 +17,4 @@ if M <= 1:
     D = 0
 else:
     D = cmb(M, 2)
-
 print(C + D)

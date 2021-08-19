@@ -12,7 +12,7 @@ def main():
     CNT = 0
     i = 0
     S = [0] * 5
-    for k, v in L.items():
+    for (k, v) in L.items():
         S[i] = v
         i += 1
     ans = 0

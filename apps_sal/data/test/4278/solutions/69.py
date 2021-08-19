@@ -7,7 +7,7 @@ def combinations_count(n, r):
 
 
 n = int(input())
-l = ["".join(sorted(input())) for i in range(n)]
+l = [''.join(sorted(input())) for i in range(n)]
 c = Counter(l).most_common()
 ans = 0
 for i in range(len(c)):

@@ -1,8 +1,6 @@
 from collections import Counter
 n = int(input())
-L = ["".join(sorted(input())) for i in range(n)]
-
-
+L = [''.join(sorted(input())) for i in range(n)]
 L = Counter(L)
 
 

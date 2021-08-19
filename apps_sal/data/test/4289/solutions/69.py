@@ -1,7 +1,6 @@
 n = int(input())
-t, a = map(int, input().split())
+(t, a) = map(int, input().split())
 h = [int(s) for s in input().split()]
-
 min_abs = 100000
 index = 0
 for i in range(n):

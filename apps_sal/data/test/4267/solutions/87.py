@@ -1,1 +1,1 @@
-print("YNeos"[30 > int(input())::2])
+print('YNeos'[30 > int(input())::2])

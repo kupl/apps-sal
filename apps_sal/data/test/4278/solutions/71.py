@@ -8,5 +8,5 @@ for i in range(n):
     else:
         s[a] = 1
 for i in s.values():
-    ans += ((i * (i - 1)) // 2)
+    ans += i * (i - 1) // 2
 print(ans)

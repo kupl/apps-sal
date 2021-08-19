@@ -1,5 +1,5 @@
 arr = list(map(int, input().split()))
 if len(set(arr)) == 2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

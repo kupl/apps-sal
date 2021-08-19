@@ -29,4 +29,4 @@ ans2 = 0
 for i in range(0, n + 2):
     if vaz1[i] == 1:
         ans2 += 1
-print(str(ans1) + " " + str(ans2))
+print(str(ans1) + ' ' + str(ans2))

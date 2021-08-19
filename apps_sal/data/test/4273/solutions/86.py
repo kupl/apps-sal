@@ -12,7 +12,6 @@ for _ in range(n):
         l[3] += 1
     if s[0] == 'H':
         l[4] += 1
-
 ans = 0
 for i in range(0, 5):
     for j in range(i + 1, 5):

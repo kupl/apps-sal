@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 pos = [list(map(int, input().split())) for _ in range(n)]
 count = 0
 for i in range(n):

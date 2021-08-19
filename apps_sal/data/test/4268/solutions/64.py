@@ -1,4 +1,4 @@
-N, D = map(int, input().split())
+(N, D) = map(int, input().split())
 X = [list(map(int, input().split())) for i in range(N)]
 ans = 0
 for i in range(N):

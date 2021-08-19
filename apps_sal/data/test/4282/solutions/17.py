@@ -2,7 +2,7 @@ n = int(input())
 d = {}
 sees = []
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a not in d:
         d[a] = set()
     if b not in d:

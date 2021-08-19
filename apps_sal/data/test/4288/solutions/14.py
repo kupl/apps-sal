@@ -1,18 +1,18 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 if a == b:
     if a != c:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 elif a == c:
     if a != b:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 elif b == c:
     if a != c:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
-    print("No")
+    print('No')

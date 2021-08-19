@@ -1,6 +1,6 @@
 N = int(input())
 d = {}
-l = "MARCH"
+l = 'MARCH'
 c = [0 for _ in range(5)]
 for n in range(N):
     S = input()

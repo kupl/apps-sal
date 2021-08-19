@@ -1,11 +1,8 @@
 import math
-
-N, D = list(map(int, input().split()))
-
+(N, D) = list(map(int, input().split()))
 ary = []
 for _ in range(N):
     ary.append(list(map(int, input().split())))
-
 counter = 0
 ary_len = len(ary)
 for i in range(ary_len - 1):

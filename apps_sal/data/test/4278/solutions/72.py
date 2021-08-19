@@ -12,5 +12,5 @@ while x < n - 1:
         else:
             x = i + 1
             break
-    ans += (cnt * (cnt - 1)) / 2
+    ans += cnt * (cnt - 1) / 2
 print(int(ans))

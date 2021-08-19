@@ -1,3 +1,3 @@
 s = int(input())
 n = input()
-print((n.count("ABC")))
+print(n.count('ABC'))

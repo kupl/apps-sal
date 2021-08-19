@@ -2,10 +2,16 @@ import sys
 import math
 from collections import Counter, deque, defaultdict
 from bisect import bisect_left, bisect_right
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 INF = float('inf')
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
+
+
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
 
 
 n = inp()
@@ -13,7 +19,7 @@ s = sys.stdin.readline()
 s = s[:n]
 dp = [[0] * 4 for _ in range(n + 1)]
 dp[0][0] = 1
-for i, x in enumerate(s):
+for (i, x) in enumerate(s):
     for j in range(4):
         if x == '?':
             dp[i + 1][j] = dp[i][j] * 3

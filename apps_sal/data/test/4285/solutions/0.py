@@ -20,8 +20,8 @@ def num(s):
 
 n = int(input())
 s = list(input())
-C, k = 10**9 + 7, 0
-ans, ans1, deg = [0] * n, [0] * n, [1]
+(C, k) = (10 ** 9 + 7, 0)
+(ans, ans1, deg) = ([0] * n, [0] * n, [1])
 for q in range(n):
     deg.append(deg[-1] * 3 % C)
     k += s[q] == '?'
@@ -45,7 +45,7 @@ elif k == 2:
         elif s[q] == '?':
             ind2 = q
     for q in ['aa', 'ab', 'ac', 'ba', 'bb', 'bc', 'ca', 'cb', 'cc']:
-        s[ind1], s[ind2] = q[0], q[1]
+        (s[ind1], s[ind2]) = (q[0], q[1])
         ans += num(s)
     print(ans % C)
 else:

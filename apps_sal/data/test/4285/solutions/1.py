@@ -25,7 +25,7 @@ def num(s):
 def main():
     s = list(input())
     k = 0
-    ans, ans1, deg = [0] * n, [0] * n, [1]
+    (ans, ans1, deg) = ([0] * n, [0] * n, [1])
     for q in range(n):
         deg.append(deg[-1] * 3 % C)
         k += s[q] == '?'
@@ -49,7 +49,7 @@ def main():
             elif s[q] == '?':
                 ind2 = q
         for q in ['aa', 'ab', 'ac', 'ba', 'bb', 'bc', 'ca', 'cb', 'cc']:
-            s[ind1], s[ind2] = q[0], q[1]
+            (s[ind1], s[ind2]) = (q[0], q[1])
             ans += num(s)
         print(ans % C)
     else:
@@ -77,5 +77,5 @@ def main():
 
 
 n = int(input())
-C = 10**9 + 7
+C = 10 ** 9 + 7
 main()

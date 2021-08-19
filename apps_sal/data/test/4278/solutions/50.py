@@ -13,6 +13,5 @@ for j in range(N - 1):
     else:
         ans += temp * (temp - 1) // 2
         temp = 1
-
 ans += temp * (temp - 1) // 2
 print(ans)

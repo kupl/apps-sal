@@ -10,7 +10,6 @@ def main():
         score += B[A[i] - 1]
         if A[i] == A[i - 1] + 1 and i >= 1:
             score += C[A[i - 1] - 1]
-
     return score
 
 

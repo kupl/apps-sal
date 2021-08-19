@@ -1,14 +1,12 @@
 n = int(input())
 g = {i: set() for i in range(1, n + 1)}
 d = {i: set() for i in range(1, n + 1)}
-
 for i in range(1, n + 1):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     g[x].add(y)
     g[y].add(x)
     d[i].add(x)
     d[i].add(y)
-
 a = [1]
 b = set(a)
 i = 1

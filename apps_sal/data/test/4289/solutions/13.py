@@ -1,5 +1,5 @@
 n = int(input())
-T, A = map(int, input().split())
+(T, A) = map(int, input().split())
 h = list(map(int, input().split()))
 a = []
 for i in h:

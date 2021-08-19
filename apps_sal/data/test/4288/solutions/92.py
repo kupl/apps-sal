@@ -1,4 +1,4 @@
-A, B, C = map(int, input().split())
+(A, B, C) = map(int, input().split())
 ans = 0
 if A == B:
     ans += 1
@@ -7,6 +7,6 @@ if B == C:
 if A == C:
     ans += 1
 if ans == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

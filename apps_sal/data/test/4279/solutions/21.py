@@ -4,22 +4,19 @@ for _ in range(q):
     if k == 933939799:
         print(7)
     else:
-
         d = 1
         l = 0
         n = 9
         a1 = 1
         while l + (2 * a1 + (n - 1) * d) * n // 2 < k:
             l += (2 * a1 + (n - 1) * d) * n // 2
-            a1 += (n * d + 1)
+            a1 += n * d + 1
             d += 1
             n *= 10
         k -= l
-
         while k - a1 > 0:
             k -= a1
             a1 += d
-
         n = 9
         d = 1
         l = 0
@@ -28,7 +25,6 @@ for _ in range(q):
             d += 1
             n *= 10
         k -= l
-
         l = 0
         s = ''
         start = int('1' + '0' * (d - 1))

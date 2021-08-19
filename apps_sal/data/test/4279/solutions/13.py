@@ -11,7 +11,6 @@ def sol(k):
         if arr[i] > k:
             d = i - 1
             break
-
     k = k - arr[d]
     if k == 0:
         return str(d)[-1]

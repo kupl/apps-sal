@@ -1,5 +1,5 @@
 import re
 n = int(input())
 s = input()
-res = re.findall(r'ABC', s)
+res = re.findall('ABC', s)
 print(len(res))

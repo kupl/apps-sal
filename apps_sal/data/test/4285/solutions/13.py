@@ -16,7 +16,6 @@ def count(a, b):
                 lookup[i][j] = lookup[i - 1][j - 1] + lookup[i - 1][j]
             else:
                 lookup[i][j] = lookup[i - 1][j]
-
     return lookup[m][n]
 
 
@@ -25,30 +24,29 @@ s = input()
 ans = 0
 z = 0
 for i in s:
-    if(i == '?'):
+    if i == '?':
         z += 1
-n1 = count(s, "abc")
-ans = ans + (pow(3, z, 1000000007) * n1)
-
-n1 = count(s, "?bc")
-if(z >= 1):
-    ans = ans + (pow(3, z - 1, 1000000007) * n1)
-n1 = count(s, "a?c")
-if(z >= 1):
-    ans = ans + (pow(3, z - 1, 1000000007) * n1)
-n1 = count(s, "ab?")
-if(z >= 1):
-    ans = ans + (pow(3, z - 1, 1000000007) * n1)
-n1 = count(s, "??c")
-if(z >= 2):
-    ans = ans + (pow(3, z - 2, 1000000007) * n1)
-n1 = count(s, "a??")
-if(z >= 2):
-    ans = ans + (pow(3, z - 2, 1000000007) * n1)
-n1 = count(s, "?b?")
-if(z >= 2):
-    ans = ans + (pow(3, z - 2, 1000000007) * n1)
-n1 = count(s, "???")
-if(z >= 3):
-    ans = ans + (pow(3, z - 3, 1000000007) * n1)
+n1 = count(s, 'abc')
+ans = ans + pow(3, z, 1000000007) * n1
+n1 = count(s, '?bc')
+if z >= 1:
+    ans = ans + pow(3, z - 1, 1000000007) * n1
+n1 = count(s, 'a?c')
+if z >= 1:
+    ans = ans + pow(3, z - 1, 1000000007) * n1
+n1 = count(s, 'ab?')
+if z >= 1:
+    ans = ans + pow(3, z - 1, 1000000007) * n1
+n1 = count(s, '??c')
+if z >= 2:
+    ans = ans + pow(3, z - 2, 1000000007) * n1
+n1 = count(s, 'a??')
+if z >= 2:
+    ans = ans + pow(3, z - 2, 1000000007) * n1
+n1 = count(s, '?b?')
+if z >= 2:
+    ans = ans + pow(3, z - 2, 1000000007) * n1
+n1 = count(s, '???')
+if z >= 3:
+    ans = ans + pow(3, z - 3, 1000000007) * n1
 print(ans % 1000000007)

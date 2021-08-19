@@ -1,7 +1,7 @@
 SS = []
 a = int(input())
 for i in range(a):
-    k, n, a, b = map(int, input().split())
+    (k, n, a, b) = map(int, input().split())
     k -= n * b
     if k > 0:
         ll = k // (a - b)
