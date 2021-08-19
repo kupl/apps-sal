@@ -1,21 +1,13 @@
 import sys
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 SP = [list(map(int, input().split())) for i in range(m)]
-
 MIN = min(A)
 x = A.index(MIN)
 EDGE_x = [[x + 1, i + 1, A[x] + A[i]] for i in range(n) if x != i]
-
 EDGE = EDGE_x + SP
-
 EDGE.sort(key=lambda x: x[2])
-
-# UnionFind
-
 Group = [i for i in range(n + 1)]
 
 
@@ -31,9 +23,8 @@ def Union(x, y):
 
 
 ANS = 0
-for i, j, x in EDGE:
+for (i, j, x) in EDGE:
     if find(i) != find(j):
         ANS += x
         Union(i, j)
-
 print(ANS)

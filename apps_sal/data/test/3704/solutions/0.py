@@ -1,12 +1,10 @@
-#!/usr/bin/env python3
-# Copied solution
-
 import collections
 import sys
 import traceback
 
 
 class Input(object):
+
     def __init__(self):
         self.fh = sys.stdin
 
@@ -27,6 +25,7 @@ class Input(object):
 
 
 class Node(object):
+
     def __init__(self, color, subtree_color):
         self.left = self.right = None
         self.color = color
@@ -48,11 +47,11 @@ def list_to_number(list):
 
 
 def add_list_to_tree(tree, list):
-    color, bits, number = list_to_number(list)
+    (color, bits, number) = list_to_number(list)
     shift = 31
     for _ in range(bits):
         tree.subtree_color |= color
-        value = (number >> shift) & 1
+        value = number >> shift & 1
         if value == 0:
             if not tree.left:
                 tree.left = Node(0, 0)
@@ -69,16 +68,15 @@ def add_list_to_tree(tree, list):
 def check_tree(tree):
     if not tree:
         return True
-    if tree.color == 3 or (tree.color and (tree.subtree_color & ~tree.color)):
+    if tree.color == 3 or (tree.color and tree.subtree_color & ~tree.color):
         return False
     return check_tree(tree.left) and check_tree(tree.right)
 
 
 def number_to_list(number, bits):
-    number <<= (32 - bits)
+    number <<= 32 - bits
     values = []
     for _ in range(4):
-        #print('number = {}'.format(number))
         values.append(str(number % 256))
         number //= 256
     values = values[::-1]
@@ -86,11 +84,10 @@ def number_to_list(number, bits):
 
 
 def get_optimized(tree, optimized, number, bits):
-    if not tree or (tree.subtree_color & 1) == 0:
+    if not tree or tree.subtree_color & 1 == 0:
         return
     if tree.subtree_color == 1:
         list = number_to_list(number, bits)
-        #print('number_to_list({}, {}) = {}'.format(number, bits, list))
         optimized.append(list)
         return
     get_optimized(tree.left, optimized, number * 2, bits + 1)
@@ -115,7 +112,7 @@ def main():
             nums = input.next_line_ints()
             if not nums:
                 break
-            n, = nums
+            (n,) = nums
             if n == -1:
                 break
             lists = []
@@ -126,11 +123,11 @@ def main():
         try:
             optimized = get_optimized_lists(lists)
             if optimized is None:
-                print("-1")
+                print('-1')
             else:
-                print("{}".format(len(optimized)))
+                print('{}'.format(len(optimized)))
                 for l in optimized:
-                    print("{}".format(l))
+                    print('{}'.format(l))
         except:
             traceback.print_exc(file=sys.stdout)
             print('get_min_dist failed')

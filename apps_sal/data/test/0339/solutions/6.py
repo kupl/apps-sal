@@ -11,10 +11,10 @@ def solve(n, k, A, B):
             n //= k
         else:
             res += A * (n - 1)
-            n = 1  # finish loop
+            n = 1
     res += A * (n - 1)
     return res
 
 
-n, k, A, B = [int(input()) for i in range(4)]
+(n, k, A, B) = [int(input()) for i in range(4)]
 print(solve(n, k, A, B))

@@ -1,10 +1,5 @@
-#! /usr/bin/python
-# kmwho
-# Codeforces 352 D2
-
-
 def solvecase():
-    return ""
+    return ''
 
 
 def solve():
@@ -13,7 +8,7 @@ def solve():
     l = len(s)
     if N > 26:
         return -1
-    count = len(set(c for c in s))
+    count = len(set((c for c in s)))
     return l - count
 
 

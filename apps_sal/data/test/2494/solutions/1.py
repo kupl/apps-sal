@@ -1,8 +1,8 @@
 from collections import deque
 K = int(input())
-E = [[(i * 10) % K, (i + 1) % K] for i in range(K)]  # E[i][0] がcost 0, E[i][1]がcost 1
+E = [[i * 10 % K, (i + 1) % K] for i in range(K)]
 INF = K * 10
-V = [INF] * (K)
+V = [INF] * K
 V[1] = 1
 q = deque([1])
 i = 1

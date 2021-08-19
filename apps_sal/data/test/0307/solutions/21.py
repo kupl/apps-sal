@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def lmap(f, x):
     return list(map(f, x))
 
@@ -11,7 +8,7 @@ def read_ints():
 
 def main():
     res = 0
-    a2, a3, a5, a6 = read_ints()
+    (a2, a3, a5, a6) = read_ints()
     n256 = min(a2, a5, a6)
     res += n256 * 256
     a2 -= n256

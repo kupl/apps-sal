@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-
 N = int(input().strip())
 AB_list = [list(map(int, input().rstrip().split())) for i in range(N)]
-
-# -----
 
 
 def gcd(a, b):
@@ -12,71 +8,46 @@ def gcd(a, b):
     return gcd(b, a % b)
 
 
-# -----
 fish = {}
 cnt_A0_B0 = 0
 cnt_A0_Bj = 0
 cnt_Ai_B0 = 0
-mod = 10**9 + 7
-
-
-for a, b in AB_list:
+mod = 10 ** 9 + 7
+for (a, b) in AB_list:
     if a == b == 0:
         cnt_A0_B0 += 1
-
-    elif (a == 0):
+    elif a == 0:
         cnt_A0_Bj += 1
-
-    elif (b == 0):
+    elif b == 0:
         cnt_Ai_B0 += 1
-
     else:
         g = gcd(abs(a), abs(b))
-
         a //= g
         b //= g
-
         if a < 0:
-            a *= (-1)
-            b *= (-1)
-
+            a *= -1
+            b *= -1
         fish.setdefault((a, b), 0)
-        fish[(a, b)] += 1
-
-
+        fish[a, b] += 1
 ans = 1
 used = set()
-
-# multiple the number of pattern, where fish (A != 0) and (B != 0)
-for key_a, key_b in fish:
+for (key_a, key_b) in fish:
     if (key_a, key_b) not in used:
-
         if key_b >= 0:
             key_reverse = (key_b, -key_a)
         else:
             key_reverse = (-key_b, key_a)
-
         if key_reverse in fish:
-            ans *= ((pow(2, fish[(key_a, key_b)], mod) - 1) + (pow(2, fish[key_reverse], mod) - 1) + 1) % mod
+            ans *= (pow(2, fish[key_a, key_b], mod) - 1 + (pow(2, fish[key_reverse], mod) - 1) + 1) % mod
             ans %= mod
-
             used.add(key_reverse)
-
         else:
-            ans *= (pow(2, fish[(key_a, key_b)], mod))
+            ans *= pow(2, fish[key_a, key_b], mod)
             ans %= mod
-
-
-# multiple the number of pattern, where fish A=0 or B=0
-ans *= ((2**cnt_A0_Bj - 1) + (2**cnt_Ai_B0 - 1) + 1) % mod
+ans *= (2 ** cnt_A0_Bj - 1 + (2 ** cnt_Ai_B0 - 1) + 1) % mod
 ans %= mod
-
-# Add the number of pattern, where fish (A,B)=(0,0)
 ans += cnt_A0_B0
 ans %= mod
-
-# Minus the number of pattern, where no fish selected
 ans -= 1
-
 ans = (ans + mod) % mod
 print(ans)
