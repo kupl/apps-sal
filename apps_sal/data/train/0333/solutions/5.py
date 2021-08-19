@@ -2,14 +2,14 @@ from collections import defaultdict
 
 
 class Solution:
+
     def get_jump_indices(self, arr):
         jump_indices = defaultdict(set)
-        for i, val in enumerate(arr):
+        for (i, val) in enumerate(arr):
             jump_indices[val].add(i)
         return jump_indices
 
     def minJumps(self, arr: List[int]) -> int:
-        # Dictionary from array value to set of jumpable indices
         jump_indices = self.get_jump_indices(arr)
         next_indices = [len(arr) - 1]
         visited = set()

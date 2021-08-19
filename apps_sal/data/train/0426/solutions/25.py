@@ -9,13 +9,10 @@ class Solution:
         print(a, n)
         ans = list(permutations(k))
         m = 0
-        # print(ans)
         for i in ans:
             s = ''.join(i)
-
             if s[0] != '0':
                 z = math.log(int(s), 2)
-                if abs(z - int(z)) < 0.000000001:
+                if abs(z - int(z)) < 1e-09:
                     return True
-
         return False

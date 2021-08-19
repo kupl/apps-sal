@@ -1,8 +1,8 @@
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
-        # Sliding window with fixed width (=k)
         vowels = 'aeiou'
-        num_vowels = sum(1 for i in range(k) if s[i] in vowels)
+        num_vowels = sum((1 for i in range(k) if s[i] in vowels))
         max_vowels = num_vowels
         for removed_idx in range(0, len(s) - k):
             added_idx = removed_idx + k

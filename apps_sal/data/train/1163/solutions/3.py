@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 def process(t, N, G):
     Improvment = 0
     CurrentMin = G[0]

@@ -2,8 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
-        '''
+        """
         n = len(arr)
         if n <= 1:
             return 0
@@ -48,9 +49,7 @@ class Solution:
             step += 1
 
         return -1
-        '''
-        # we start from index one and perform a bfs
-        # in order to perform bfs properly we create a mapping from number to all the indices the number is encountered
+        """
         m = defaultdict(list)
         for i in range(len(arr)):
             m[arr[i]].append(i)
@@ -59,7 +58,6 @@ class Solution:
         visited = set([0])
         while queue != []:
             current = queue.pop(0)
-            # print(current,queue)
             if current[0] == len(arr) - 1:
                 return current[1]
             if current[0] + 1 < len(arr) and current[0] + 1 not in visited:

@@ -1,4 +1,3 @@
-# binarr
 def binarr(a, k, s):
     a.sort(reverse=True)
     arr = [0] * k
@@ -10,7 +9,7 @@ def binarr(a, k, s):
 
 
 try:
-    n, k, s = list(map(int, input().split()))
+    (n, k, s) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     print(binarr(a, k + 1, s))
 except Exception:
