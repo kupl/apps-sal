@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 
@@ -7,7 +6,7 @@ def gcd(a, b):
     """最大公約数
     """
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -23,7 +22,7 @@ def solve(A: int, B: int):
 
 
 def main():
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     answer = solve(A, B)
     print(answer)
 

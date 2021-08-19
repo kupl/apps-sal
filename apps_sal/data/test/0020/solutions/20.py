@@ -1,5 +1,4 @@
-# 786
-h, m = list(map(int, input().split(':')))
+(h, m) = list(map(int, input().split(':')))
 
 
 def rev(t):
@@ -10,7 +9,7 @@ def rev(t):
 
 
 def fun(hour, minute):
-    sm, sh = '', ''
+    (sm, sh) = ('', '')
     if minute < 10:
         sm = '0' + str(minute)
     else:
@@ -29,7 +28,6 @@ def is_palindrome(t):
 
 
 res = 0
-
 while True:
     if is_palindrome(fun(h, m)):
         print(res)

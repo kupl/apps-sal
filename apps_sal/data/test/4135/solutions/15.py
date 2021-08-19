@@ -10,7 +10,6 @@ def d(n):
 n = int(input())
 t = list(input())
 z = d(n)
-# z.reverse()
 for i in z:
     k = t[:i]
     k.reverse()

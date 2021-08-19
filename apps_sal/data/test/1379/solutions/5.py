@@ -1,16 +1,12 @@
-n, m, d = map(int, input().split())
+(n, m, d) = map(int, input().split())
 a = list(map(int, input().split()))
 id = {a[i]: i for i in range(n)}
-
 a.sort()
-
-# for i in range(0,n) :
-#    print(i , a[i] , id[i])
 
 
 def Solve(x):
     for i in range(x, n):
-        if (a[i] - a[i - x]) <= d:
+        if a[i] - a[i - x] <= d:
             return False
     return True
 
@@ -25,6 +21,6 @@ while l < r:
         l = mid + 1
 ans = [0 for i in range(n)]
 for i in range(n):
-    ans[id[a[i]]] = (i % l) + 1
+    ans[id[a[i]]] = i % l + 1
 print(l)
 print(' '.join(map(str, ans)))

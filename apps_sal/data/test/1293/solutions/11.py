@@ -1,10 +1,4 @@
 import sys
-# динамика!!!
-# смотри на ограничения
-# for i in range(n):
-# n = int(input())
-# s = input().split()
-# a = [int(tmp) for tmp in input().split()]
 n = int(input())
 a = [int(tmp) for tmp in input().split()]
 ans = 0
