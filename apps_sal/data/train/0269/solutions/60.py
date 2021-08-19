@@ -1,7 +1,7 @@
 class Solution:
+
     def kLengthApart1(self, nums: List[int], k: int) -> bool:
-        d = [i for i, v in enumerate(nums) if v == 1]
-        # print(d)
+        d = [i for (i, v) in enumerate(nums) if v == 1]
         for i in range(1, len(d)):
             if d[i] - d[i - 1] <= k:
                 return False

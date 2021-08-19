@@ -5,6 +5,4 @@ def reverse_letter(string):
             li.append(i)
         else:
             pass
-    return "".join(li[::-1])
-
-    # do your magic here
+    return ''.join(li[::-1])

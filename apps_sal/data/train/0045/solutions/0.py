@@ -46,40 +46,26 @@ def srlinput():
 
 def NOYES(fl):
     if fl:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 
 
 def YESNO(fl):
     if fl:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def main():
     n = iinput()
-    #k = iinput()
-    #m = iinput()
-    #n = int(sys.stdin.readline().strip())
-    #n, k = rinput()
-    #n, m = rinput()
-    #m, k = rinput()
-    #n, k, m = rinput()
-    #n, m, k = rinput()
-    #k, n, m = rinput()
-    #k, m, n = rinput()
-    #m, k, n = rinput()
-    #m, n, k = rinput()
-    #q = srlinput()
-    #q = linput()
-    s, t, res = 1, 1, 0
+    (s, t, res) = (1, 1, 0)
     while s <= n:
         res += 1
         n -= s
         t = 2 * t + 1
-        s = (t * (t + 1)) // 2
+        s = t * (t + 1) // 2
     print(res)
 
 

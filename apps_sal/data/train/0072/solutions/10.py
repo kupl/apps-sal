@@ -1,8 +1,7 @@
 q = int(input())
 for _ in range(q):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(int, input().split()))
-    # szukamy tak zeby okres byl k-1
     if k == 1:
         if max(l) == min(l):
             print(len(l))
