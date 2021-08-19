@@ -14,5 +14,4 @@ def c7(n):
 
 
 n = int(input())
-
 print(c5(n) + c6(n) + c7(n))

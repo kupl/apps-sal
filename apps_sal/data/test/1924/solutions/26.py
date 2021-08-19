@@ -1,11 +1,10 @@
 def solve():
-    r1, c1, r2, c2 = map(int, input().split())
-
+    (r1, c1, r2, c2) = map(int, input().split())
     p = 10 ** 9 + 7
     N = r2 + c2 + 2
     fact = [1, 1]
     for i in range(2, N + 1):
-        fact.append((fact[-1] * i) % p)
+        fact.append(fact[-1] * i % p)
 
     def comb(n, r):
         a = fact[n]
@@ -18,9 +17,7 @@ def solve():
 
     def g(i, j):
         return f(i + 1, j + 1) - 1
-
     ans = g(r2, c2) - g(r2, c1 - 1) - g(r1 - 1, c2) + g(r1 - 1, c1 - 1)
-
     print(ans % p)
 
 

@@ -1,5 +1,4 @@
 s = input().strip()
-
 if s[0].isupper():
     print(s)
 else:

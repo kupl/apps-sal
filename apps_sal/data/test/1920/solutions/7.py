@@ -2,7 +2,7 @@ DayM = [0 for i in range(367)]
 DayF = [0 for i in range(367)]
 n = int(input())
 for i in range(n):
-    a, b, c = input().split()
+    (a, b, c) = input().split()
     Begin = int(b)
     End = int(c)
     for j in range(Begin, End + 1):

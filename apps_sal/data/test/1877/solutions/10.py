@@ -18,5 +18,4 @@ for ch in input().strip():
         res += 1
     if x != y:
         last = sgn(x - y)
-
 print(res)

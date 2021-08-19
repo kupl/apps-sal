@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = [int(i) for i in input().split()]
 B = []
 for i in range(1, n):

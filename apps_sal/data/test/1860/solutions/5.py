@@ -1,9 +1,6 @@
 import sys
-
 n = int(input())
 ans = 0
-
 for i in range(1, n + 1):
-    ans += (2 ** i)
-
+    ans += 2 ** i
 print(ans)

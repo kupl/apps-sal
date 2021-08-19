@@ -8,18 +8,18 @@ def tran(arr):
             if i % 2 == 1:
                 o += 1
         if o > 1:
-            return "No"
+            return 'No'
         else:
-            return "Yes"
+            return 'Yes'
     else:
         o = 0
         for i in arr:
             if i % 2 == 1:
                 o += 1
         if o == 2:
-            return "No"
+            return 'No'
         else:
-            return "Yes"
+            return 'Yes'
 
 
 def __starting_point():

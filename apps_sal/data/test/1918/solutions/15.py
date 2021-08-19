@@ -8,7 +8,6 @@ for i in range(n):
         a_sum += P[i]
     else:
         b_sum += P[i]
-
 max_b = b_sum
 b_sum_copy = b_sum
 for i in range(n):
@@ -17,7 +16,6 @@ for i in range(n):
     else:
         b_sum -= P[i]
     max_b = max(max_b, b_sum)
-
 b_sum = b_sum_copy
 for i in range(n - 1, -1, -1):
     if S[i] == 'A':

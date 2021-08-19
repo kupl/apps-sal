@@ -10,12 +10,12 @@ def getCells(n, m, k):
             cells.append((i, j))
             k -= 1
             if k == 0:
-                return penalty, cells
+                return (penalty, cells)
 
 
 def getPath(i, j):
     path = []
-    p, q = 1, 1
+    (p, q) = (1, 1)
     while p < i:
         path.append((p, q))
         p += 1
@@ -26,8 +26,8 @@ def getPath(i, j):
     return path
 
 
-n, m, k = map(int, input().split())
-penalty, cells = getCells(n, m, k)
+(n, m, k) = map(int, input().split())
+(penalty, cells) = getCells(n, m, k)
 print(penalty)
 for cell in reversed(cells):
     print(*getPath(*cell))

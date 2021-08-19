@@ -17,12 +17,12 @@ for i in range(1, n):
 if l[head] > 0 and len(ll) > 0:
     res.append((ll[0] + 1, head + 1))
     l[head] -= 1
-    del(ll[0])
+    del ll[0]
     dia += 1
 if l[0] > 0 and len(ll) > 0:
     res.append((ll[0] + 1, 1))
     l[0] -= 1
-    del(ll[0])
+    del ll[0]
     dia += 1
 for i in ll:
     for j in range(n):
@@ -31,10 +31,10 @@ for i in ll:
             l[j] -= 1
             break
 if len(res) < n - 1:
-    print("NO")
+    print('NO')
 else:
-    print("YES " + str(dia))
+    print('YES ' + str(dia))
     print(n - 1)
     for p in res:
-        print(p[0], end=" ")
+        print(p[0], end=' ')
         print(p[1])

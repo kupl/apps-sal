@@ -1,5 +1,5 @@
 import math
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 a = math.pi / n
 b = a / 2
 c = math.pi - a - b

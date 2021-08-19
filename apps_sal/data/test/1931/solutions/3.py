@@ -10,13 +10,12 @@ else:
 
 
 def func(k):
-    return (k * (k + 1)) // 2 * 3 - k
+    return k * (k + 1) // 2 * 3 - k
 
 
 t = int(input())
 for _ in range(t):
     n = int(input())
-
     res = 0
     k = 1
     while func(k) <= n:

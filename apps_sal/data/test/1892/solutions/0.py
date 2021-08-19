@@ -2,11 +2,11 @@ n = int(input())
 dp = [0] * (n + 1)
 maxlev = 0
 mod = 1000000007
-lst = "s"
+lst = 's'
 dp[0] = 1
 for i in range(n):
     s = input()
-    if lst == "f":
+    if lst == 'f':
         for j in reversed(range(1, maxlev + 2)):
             dp[j] = dp[j - 1]
         maxlev += 1

@@ -1,8 +1,6 @@
 n = int(input())
-
 nulls = 0
 head = '1'
-
 for number in input().rstrip().split():
     i = 0
     if number[0] == '0':

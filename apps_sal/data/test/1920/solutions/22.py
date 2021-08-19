@@ -3,8 +3,8 @@ n = int(input())
 m = [0] * 366
 f = [0] * 366
 for i in range(n):
-    g, a, b = input().split()
-    a, b = int(a), int(b)
+    (g, a, b) = input().split()
+    (a, b) = (int(a), int(b))
     if g == 'F':
         for i in range(a - 1, b):
             f[i] += 1

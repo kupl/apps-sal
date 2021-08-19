@@ -1,5 +1,4 @@
 n = int(input())
-
 ans = 0
 for i in range(n):
     s = input().lower()[0]
@@ -13,5 +12,4 @@ for i in range(n):
         ans += 12
     else:
         ans += 20
-
 print(ans)

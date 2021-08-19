@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 f = [[0 for _ in range(n)] for _ in range(n)]
 for i in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     f[a - 1][b - 1] = c
 for i in range(n):
     for j in range(n):

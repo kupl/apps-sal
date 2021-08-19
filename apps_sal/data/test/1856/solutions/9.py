@@ -6,10 +6,9 @@ for i in range(n):
     s = list(input())
     a.append(s)
 a.sort()
-
 j = 1
 t = 0
-a.append("dsh")
+a.append('dsh')
 r = 0
 for i in range(n - 1):
     r = 0
@@ -19,5 +18,4 @@ for i in range(n - 1):
             break
     if r == 0:
         j += 1
-
 print(j)

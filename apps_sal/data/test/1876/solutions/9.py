@@ -1,8 +1,8 @@
 MOD = 1000000007
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ch = [set() for _ in range(n + 1)]
 for _2 in range(n - 1):
-    u, v, x = list(map(int, input().split()))
+    (u, v, x) = list(map(int, input().split()))
     if x == 0:
         ch[u].add(v)
         ch[v].add(u)

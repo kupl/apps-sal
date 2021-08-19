@@ -1,8 +1,7 @@
 n = int(input())
 s = list(input())
 a = list(map(int, input().split()))
-
-dp = [1e20 for _ in range(4)]
+dp = [1e+20 for _ in range(4)]
 dp[0] = 0
 for i in range(n):
     if s[i] == 'h':

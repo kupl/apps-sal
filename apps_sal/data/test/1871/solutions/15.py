@@ -1,7 +1,6 @@
 a = list(map(int, input().split()))
 n = a[0]
 x = a[1]
-
 gg = list(map(int, input().split()))
 gg.sort()
 h = 0

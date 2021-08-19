@@ -15,5 +15,4 @@ for case in range(T):
                 t -= e
                 c += 1
                 break
-
     print(c)

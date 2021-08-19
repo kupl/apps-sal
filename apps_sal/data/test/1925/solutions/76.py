@@ -1,5 +1,5 @@
 import numpy as np
-A, B, N = map(int, input().split())
+(A, B, N) = map(int, input().split())
 if B <= N:
     x = B - 1
     print(int(np.floor(A * x / B)))

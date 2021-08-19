@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 s = input()
 A = [int(x) for x in input().split(' ')]

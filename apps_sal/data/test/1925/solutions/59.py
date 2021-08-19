@@ -5,21 +5,17 @@ import copy
 
 
 def YesNo(Bool):
-    if(Bool):
-        print("YES")
+    if Bool:
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     return
 
 
 def resolve():
-
-    A, B, N = list(map(int, input().split()))
-
+    (A, B, N) = list(map(int, input().split()))
     X = min(N, B - 1)
-
     ans = math.floor(A * X / B)
-
     print(ans)
 
 

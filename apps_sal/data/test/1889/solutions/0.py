@@ -11,15 +11,14 @@ def cons(l):
     return m
 
 
-n, m, q = list(map(int, input().split()))
+(n, m, q) = list(map(int, input().split()))
 grid = []
 curr = [0] * n
 for i in range(n):
     grid.append(list(map(int, input().split())))
     curr[i] = cons(grid[i])
-
 for _ in range(q):
-    i, j = list(map(int, input().split()))
+    (i, j) = list(map(int, input().split()))
     i -= 1
     j -= 1
     grid[i][j] = 0 if grid[i][j] else 1

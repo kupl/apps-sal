@@ -1,5 +1,3 @@
-
-
 n = int(input())
 a = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1] for i in range(10)]
 for i in range(1, n):

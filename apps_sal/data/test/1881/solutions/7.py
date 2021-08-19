@@ -1,9 +1,7 @@
-n, k = [int(s) for s in input().split()]
+(n, k) = [int(s) for s in input().split()]
 p = [int(s) for s in input().split()]
-
 map = {}
 res = []
-
 for pi in p:
     if map.get(pi) is None:
         key = pi
@@ -21,5 +19,4 @@ for pi in p:
                 break
             map[j] = key
     res.append(map[pi])
-
-print(*res, sep=" ")
+print(*res, sep=' ')

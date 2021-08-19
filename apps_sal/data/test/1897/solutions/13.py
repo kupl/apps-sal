@@ -3,7 +3,7 @@ n = len(word)
 
 
 def vowel(x):
-    if x in ["A", "E", "I", "O", "U", "Y"]:
+    if x in ['A', 'E', 'I', 'O', 'U', 'Y']:
         return 1
     else:
         return 0
@@ -12,7 +12,7 @@ def vowel(x):
 sums = [0] * n
 sums[n - 1] = 1 / n
 for k in range(n - 2, -1, -1):
-    sums[k] = sums[k + 1] + (1 / (k + 1))
+    sums[k] = sums[k + 1] + 1 / (k + 1)
 
 
 def numb(k):
@@ -32,4 +32,4 @@ elif n == 3:
 else:
     for k in range(n):
         res += vowel(word[k]) * numb(k)
-print("%.7f" % res)
+print('%.7f' % res)

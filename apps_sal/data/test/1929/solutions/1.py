@@ -1,4 +1,4 @@
-n, t, c = [int(i) for i in input().split()]
+(n, t, c) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 pref = [0]
 for i in range(n):

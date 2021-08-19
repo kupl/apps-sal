@@ -1,7 +1,5 @@
-n, m, q = [int(token) for token in input().split()]
-
+(n, m, q) = [int(token) for token in input().split()]
 g = []
-
 for _ in range(n):
     row = [int(token) for token in input().split()]
     g.append(row)
@@ -23,13 +21,11 @@ row_cache = [row_score(row) for row in g]
 
 
 def score():
-    return max(
-        rc for rc in row_cache
-    )
+    return max((rc for rc in row_cache))
 
 
 for turn in range(q):
-    i, j = [int(token) - 1 for token in input().split()]
+    (i, j) = [int(token) - 1 for token in input().split()]
     g[i][j] = 1 - g[i][j]
     row_cache[i] = row_score(g[i])
     print(score())

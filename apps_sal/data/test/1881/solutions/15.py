@@ -1,5 +1,5 @@
 a = [0 for i in range(0, 256)]
-n, k = input().split(' ')
+(n, k) = input().split(' ')
 k = int(k)
 for c in input().split(' '):
     c = int(c)

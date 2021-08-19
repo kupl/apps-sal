@@ -1,4 +1,5 @@
 class Factorial:
+
     def __init__(self, n, mod):
         self.f = [1]
         self.mod = mod
@@ -19,10 +20,13 @@ class Factorial:
         return self.f[n] * self.i[n - k] % self.mod * self.i[k] % self.mod if n >= k else 0
 
 
-M = 10**9 + 7
-a, b, c, d = map(int, input().split())
+M = 10 ** 9 + 7
+(a, b, c, d) = map(int, input().split())
 comb = Factorial(c + d + 2, M).comb
-def f(r, c): return comb(c + r + 2, r + 1) - c - r - 2
+
+
+def f(r, c):
+    return comb(c + r + 2, r + 1) - c - r - 2
 
 
 print((f(c, d) - f(c, b - 1) - f(a - 1, d) + f(a - 1, b - 1)) % M)

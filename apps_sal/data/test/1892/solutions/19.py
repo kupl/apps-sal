@@ -2,7 +2,7 @@ n = int(input())
 dp = [1]
 for i in range(n):
     c = input()
-    if c == "f":
+    if c == 'f':
         dp.insert(0, 0)
     else:
         for j in range(len(dp) - 2, -1, -1):

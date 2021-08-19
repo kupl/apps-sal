@@ -1,4 +1,4 @@
-n, k = map(int, input().strip().split())
+(n, k) = map(int, input().strip().split())
 data = map(int, input().strip().split())
 sol = []
 mapping = [(-1, 1000)] * 256

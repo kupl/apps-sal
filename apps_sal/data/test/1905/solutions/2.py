@@ -1,4 +1,4 @@
-n, m, q = (int(z) for z in input().split())
+(n, m, q) = (int(z) for z in input().split())
 s = []
 res = []
 for i in range(n):

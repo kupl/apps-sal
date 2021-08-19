@@ -3,7 +3,7 @@ def convex(p):
     p = p[0:1] + sorted(p[1:], key=lambda x: (x - p[0]).imag / abs(x - p[0]))
     j = 1
     for i in range(2, len(p)):
-        while j > 1 and ((p[j] - p[j - 1]) * (p[i] - p[j]).conjugate()).imag > -(1e-8):
+        while j > 1 and ((p[j] - p[j - 1]) * (p[i] - p[j]).conjugate()).imag > -1e-08:
             j -= 1
         else:
             j += 1
@@ -27,12 +27,11 @@ p = [complex(*list(map(int, input().split()))) for i in range(n)]
 w = convex(p)
 n = len(w)
 res = 0
-
 for i in range(n):
     for j in range(i + 2, n):
         if i == 0 and j == n - 1:
             continue
-        l, r = i + 1, j
+        (l, r) = (i + 1, j)
         while l < r - 1:
             m = l + r >> 1
             if tri(i, j, m) > tri(i, j, m - 1):
@@ -40,7 +39,7 @@ for i in range(n):
             else:
                 r = m
         s1 = tri(i, j, l)
-        l, r = j - n + 1, i
+        (l, r) = (j - n + 1, i)
         while l < r - 1:
             m = l + r >> 1
             if tri(i, j, m) > tri(i, j, m - 1):
@@ -49,7 +48,6 @@ for i in range(n):
                 r = m
         s2 = tri(i, j, l)
         res = max(res, s1 + s2)
-
 if n == 3:
     for i in p:
         if i in w:
@@ -57,5 +55,4 @@ if n == 3:
         w.append(i)
         res = max(res, area(w))
         w.pop()
-
 print(res)

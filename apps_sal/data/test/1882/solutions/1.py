@@ -1,7 +1,7 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 ts = []
 for i in range(n):
-    a, c = list(map(int, input().split()))
+    (a, c) = list(map(int, input().split()))
     ts.append((a, c, i))
 ts = sorted(ts, key=lambda x: x[1])
 ans = 0
@@ -20,7 +20,7 @@ for i in range(n):
         if ptr == n:
             fail = True
             break
-        a, c, num = ts[ptr]
+        (a, c, num) = ts[ptr]
         if a >= n_ans:
             csize += 1
             ctime += c
@@ -30,7 +30,6 @@ for i in range(n):
             if a not in hs:
                 hs[a] = 0
             hs[a] += c
-
         ptr += 1
         if ctime > t:
             fail = True
@@ -39,7 +38,6 @@ for i in range(n):
         break
     else:
         ans = n_ans
-
 print(ans)
 print(ans)
 tks = []
@@ -48,5 +46,4 @@ for i in range(ptr):
         break
     if ts[i][0] >= ans:
         tks.append(ts[i][2])
-
 print(' '.join([str(i + 1) for i in tks]))

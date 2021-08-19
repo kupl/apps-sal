@@ -1,4 +1,4 @@
-A, B, N = map(int, input().split())
+(A, B, N) = map(int, input().split())
 if N < B:
     ans = int(A * N / B)
 else:

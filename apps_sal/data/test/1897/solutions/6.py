@@ -2,7 +2,7 @@ from math import fsum
 
 
 def main():
-    l, x = [0, 0], 0
+    (l, x) = ([0, 0], 0)
     for c in input():
         if c in ('I', 'E', 'A', 'O', 'U', 'Y'):
             x += 1

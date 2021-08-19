@@ -23,7 +23,7 @@ def main():
     for i in range(n):
         items = input().split()
         for j in range(m):
-            e[i][j] = (items[j] == '1')
+            e[i][j] = items[j] == '1'
     for i in range(n):
         ls[i] = linescore(e[i])
     for qi in range(q):

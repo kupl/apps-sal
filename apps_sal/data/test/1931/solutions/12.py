@@ -8,8 +8,8 @@ for tt in range(t):
         end = temp
         ans = 0
         while start <= end:
-            mid = (start) + (end - start) // 2
-            xx = mid * ((3 * mid) + 1) // 2
+            mid = start + (end - start) // 2
+            xx = mid * (3 * mid + 1) // 2
             if xx <= temp:
                 start = mid + 1
                 ans = max(ans, mid)
@@ -17,6 +17,6 @@ for tt in range(t):
                 end = mid - 1
         if ans == 0:
             break
-        temp -= (ans * ((3 * ans) + 1)) // 2
+        temp -= ans * (3 * ans + 1) // 2
         cc += 1
     print(cc)

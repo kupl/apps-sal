@@ -13,5 +13,4 @@ for y in range(n):
             trian_Pask[y][x] = 1
         else:
             trian_Pask[y][x] = trian_Pask[y - 1][x] + trian_Pask[y][x - 1]
-
 print(trian_Pask[n - 1][n - 1])

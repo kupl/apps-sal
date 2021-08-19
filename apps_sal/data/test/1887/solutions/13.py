@@ -22,6 +22,4 @@ for i in range(n):
         mx = max(get(i - 1, 1 - t), get(i - 2, 1 - t))
         dp[i][t] = mx + ps[t][i]
         ans = max(ans, dp[i][t])
-
-
 print(ans)

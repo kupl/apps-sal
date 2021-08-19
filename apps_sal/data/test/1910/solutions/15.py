@@ -6,5 +6,4 @@ def fact(k):
 
 
 n = int(input())
-
 print(4 ** (n - 3) * 3 * (8 + 3 * (n - 3)))

@@ -1,4 +1,4 @@
-n, t, c = tuple(map(int, input().split()))
+(n, t, c) = tuple(map(int, input().split()))
 s = list(map(int, input().split()))
 k = 0
 i = 0

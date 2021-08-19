@@ -1,9 +1,7 @@
-
 def solve(n, a):
     max_p = 0
     ans = 0
-
-    for p, ai in enumerate(a):
+    for (p, ai) in enumerate(a):
         if ai > max_p:
             max_p = ai
         if p == max_p:

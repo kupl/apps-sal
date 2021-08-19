@@ -1,6 +1,4 @@
 import math
-
-
 a = int(input())
 s = [int(i) for i in input().split()]
 ma = 0

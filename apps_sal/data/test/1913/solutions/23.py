@@ -7,7 +7,7 @@ for i in range(n):
         ans = '0'
         zeros = 0
         break
-    if inp[i].count('1') > 1 or (inp[i].count('1') + inp[i].count('0')) != len(inp[i]):
+    if inp[i].count('1') > 1 or inp[i].count('1') + inp[i].count('0') != len(inp[i]):
         ans = inp[i]
     else:
         zeros = zeros + inp[i].count('0')

@@ -1,6 +1,6 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 if N > M:
-    N, M = M, N
+    (N, M) = (M, N)
 res = 0
 if N == 1 and M == 1:
     res = 1

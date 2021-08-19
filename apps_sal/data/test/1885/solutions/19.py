@@ -1,5 +1,4 @@
 from math import factorial
-
 n = int(input())
 ans = 0
 cur = 1

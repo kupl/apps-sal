@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 if N >= 2:
     N -= 2
 if M >= 2:

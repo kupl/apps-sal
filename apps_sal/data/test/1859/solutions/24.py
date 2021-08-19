@@ -28,5 +28,5 @@ else:
     a = factors(n)
     for i in a:
         if prime(i):
-            print(((n - i) // 2) + 1)
+            print((n - i) // 2 + 1)
             break

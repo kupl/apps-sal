@@ -1,19 +1,18 @@
 import threading
 from sys import setrecursionlimit
 setrecursionlimit(10 ** 9)
-
 threading.stack_size(67108864)
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     uw = []
     ubw = []
     for i in range(n):
         uw.append([])
         ubw.append([])
     for i in range(n - 1):
-        a, b, v = list(map(int, input().split()))
+        (a, b, v) = list(map(int, input().split()))
         ubw[a - 1].append(b - 1)
         ubw[b - 1].append(a - 1)
         if v == 0:

@@ -8,9 +8,10 @@ def xmax(x, y):
 
 
 class SegTree:
+
     def __init__(self, init_val, n, ide_ele, seg_func):
         self.segfunc = seg_func
-        self.num = 2**(n - 1).bit_length()
+        self.num = 2 ** (n - 1).bit_length()
         self.ide_ele = ide_ele
         self.seg = [self.ide_ele] * 2 * self.num
         for i in range(n):
@@ -47,29 +48,29 @@ class SegTree:
                 q -= 1
             p = p // 2
             q = (q - 1) // 2
-        return (self.segfunc(res, self.seg[p]) if p == q else self.segfunc(self.segfunc(res, self.seg[p]), self.seg[q]))
+        return self.segfunc(res, self.seg[p]) if p == q else self.segfunc(self.segfunc(res, self.seg[p]), self.seg[q])
 
 
 input = sys.stdin.readline
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 X = list(map(int, input().split()))
 sts = [[] for _ in range(N)]
 for i in range(1, M + 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     sts[a - 1].append((i, b - 1))
     sts[b - 1].append((i, a - 1))
     X[a - 1] -= 1
     X[b - 1] -= 1
-minf = -(10 ** 18) - 1
-ss = SegTree([(i, x) for i, x in enumerate(X)], N, (-1, minf), xmax)
-f, R, vs = False, [], set()
+minf = -10 ** 18 - 1
+ss = SegTree([(i, x) for (i, x) in enumerate(X)], N, (-1, minf), xmax)
+(f, R, vs) = (False, [], set())
 while True:
-    j, mx = ss.query(0, N)
+    (j, mx) = ss.query(0, N)
     if mx < 0:
         f = True
         break
     while sts[j]:
-        i, co = sts[j].pop()
+        (i, co) = sts[j].pop()
         if i in vs:
             continue
         vs.add(i)
@@ -79,7 +80,7 @@ while True:
         break
     ss.update2(j, (j, minf))
 if f or len(R) != M:
-    print("DEAD")
+    print('DEAD')
 else:
-    print("ALIVE")
+    print('ALIVE')
     print(*R[::-1])

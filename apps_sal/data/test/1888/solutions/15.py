@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 e = [[0] * n for i in range(n)]
 for i in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     e[a - 1][b - 1] += c
     e[b - 1][a - 1] -= c
 cnt = 0

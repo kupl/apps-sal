@@ -1,4 +1,3 @@
-
 def main():
     (t, sx, sy, ex, ey) = list(map(int, input().split(' ')))
     if sx == ex and sy == ey:

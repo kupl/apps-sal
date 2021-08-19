@@ -8,10 +8,8 @@ for i in range(len(g)):
         A += s[i]
     else:
         B += s[i]
-
-startA, startB = A, B
+(startA, startB) = (A, B)
 maximum = B
-
 for i in range(len(g)):
     if g[i] == 'A':
         A -= s[i]
@@ -21,9 +19,7 @@ for i in range(len(g)):
         B -= s[i]
     if B > maximum:
         maximum = B
-
-A, B = startA, startB
-
+(A, B) = (startA, startB)
 for i in reversed(range(len(g))):
     if g[i] == 'A':
         A -= s[i]
@@ -33,5 +29,4 @@ for i in reversed(range(len(g))):
         B -= s[i]
     if B > maximum:
         maximum = B
-
 print(maximum)

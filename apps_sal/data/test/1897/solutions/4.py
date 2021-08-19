@@ -9,7 +9,7 @@ def main():
         d[i] += d[i - 1]
     res = 0.0
     for i in range(n):
-        if not(s[i] == 'I' or s[i] == 'E' or s[i] == 'A' or s[i] == 'O' or s[i] == 'U' or s[i] == 'Y'):
+        if not (s[i] == 'I' or s[i] == 'E' or s[i] == 'A' or (s[i] == 'O') or (s[i] == 'U') or (s[i] == 'Y')):
             continue
         z = [i + 1, n - i]
         z.sort()

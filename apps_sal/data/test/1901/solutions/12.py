@@ -23,18 +23,16 @@ def dfs(v):
     return cost1
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 cost = [int(x) for x in input().split()]
 visited = [False] * (n + 1)
 for i in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     addE(u, v)
 ans = 0
 for i in range(1, n + 1):
     if not visited[i]:
         ans += dfs(i)
-
-
 for i in range(1, n + 1):
     if not visited[i]:
         ans += cost[i - 1]

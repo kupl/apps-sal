@@ -1,13 +1,13 @@
 def read_data():
-    n, m, q = map(int, input().split())
+    (n, m, q) = map(int, input().split())
     grid = []
     for i in range(n):
         grid.append(list(map(int, input().split())))
     qs = []
     for i in range(q):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         qs.append((x - 1, y - 1))
-    return n, m, q, grid, qs
+    return (n, m, q, grid, qs)
 
 
 def max_cons(row):
@@ -25,7 +25,7 @@ def max_cons(row):
 
 def solve(n, m, q, grid, qs):
     mcc = [max_cons(row) for row in grid]
-    for x, y in qs:
+    for (x, y) in qs:
         row = grid[x]
         row[y] = 1 - row[y]
         mcc[x] = max_cons(row)

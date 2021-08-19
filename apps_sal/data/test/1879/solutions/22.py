@@ -1,5 +1,5 @@
 def main():
-    t, sx, sy, ex, ey = list(map(int, input().split()))
+    (t, sx, sy, ex, ey) = list(map(int, input().split()))
     nlt = input()
     lst = list(nlt)
     cnt = 0

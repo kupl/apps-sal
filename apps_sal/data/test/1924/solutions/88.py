@@ -1,6 +1,5 @@
-r1, c1, r2, c2 = map(int, input().split())
-
-MOD = 10**9 + 7
+(r1, c1, r2, c2) = map(int, input().split())
+MOD = 10 ** 9 + 7
 MAXN = r2 + c2 + 5
 fac = [1, 1] + [0] * MAXN
 for i in range(2, MAXN + 2):
@@ -19,7 +18,7 @@ def comb(n, r):
     return fac[n] * inv(fac[r]) * inv(fac[n - r]) % MOD
 
 
-r2, c2 = r2 + 1, c2 + 1
+(r2, c2) = (r2 + 1, c2 + 1)
 ans = comb(r2 + c2, r2) - comb(r2 + c1, r2) - comb(r1 + c2, r1) + comb(r1 + c1, r1)
 ans %= MOD
 print(ans)

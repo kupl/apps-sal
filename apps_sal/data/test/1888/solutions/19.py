@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = [0 for i in range(n + 3)]
 for i in range(m):
-    x, y, c = list(map(int, input().split()))
+    (x, y, c) = list(map(int, input().split()))
     l[x] += c
     l[y] -= c
 s = 0

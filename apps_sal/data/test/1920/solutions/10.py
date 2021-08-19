@@ -1,9 +1,8 @@
 n = int(input())
-
 males = [0] * 368
 females = [0] * 368
 for i in range(n):
-    pol, a, b = input().split()
+    (pol, a, b) = input().split()
     a = int(a)
     b = int(b)
     if pol == 'M':

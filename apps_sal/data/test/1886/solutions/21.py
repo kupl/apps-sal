@@ -1,6 +1,5 @@
 def caps(s):
     first_bit = s[0].capitalize()
-
     return first_bit + s[1:]
 
 

@@ -1,10 +1,9 @@
 from collections import deque
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 c = list(map(int, input().split()))
 adj = [[] for _ in range(100000)]
 for _ in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     adj[x].append(y)

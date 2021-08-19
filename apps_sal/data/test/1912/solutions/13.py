@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    r, g, b, w = list(map(int, input().split()))
+    (r, g, b, w) = list(map(int, input().split()))
     works = False
     if sum([i % 2 for i in [r, g, b, w]]) <= 1:
         works = True
@@ -11,6 +11,6 @@ for _ in range(int(input())):
         if sum([i % 2 for i in [r, g, b, w]]) <= 1:
             works = True
     if works:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

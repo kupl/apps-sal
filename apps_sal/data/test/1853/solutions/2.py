@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 d = [set() for q in range(n)]
 for q in range(m):
-    l, r = list(map(int, input().split()))
-    l, r = l - 1, r - 1
+    (l, r) = list(map(int, input().split()))
+    (l, r) = (l - 1, r - 1)
     d[l].add(r)
     d[r].add(l)
 ans = -1
@@ -17,7 +17,7 @@ else:
         if q != ans and q not in d[ans]:
             ans = [ans, q]
             break
-    ans, ans1 = min(ans), max(ans)
+    (ans, ans1) = (min(ans), max(ans))
     a = []
     s = []
     for q in range(ans + 1):

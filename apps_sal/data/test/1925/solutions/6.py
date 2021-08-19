@@ -1,6 +1,5 @@
 import math
-
-a, b, n = map(int, input().split())
+(a, b, n) = map(int, input().split())
 
 
 def f(x, a, b):
@@ -8,5 +7,4 @@ def f(x, a, b):
 
 
 x = min(n, b - 1)
-
 print(f(x, a, b))

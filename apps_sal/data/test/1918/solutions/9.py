@@ -1,5 +1,5 @@
 def cnt(step):
-    temp_total, ans = total, 0
+    (temp_total, ans) = (total, 0)
     for i in range(N)[::step]:
         if chars[i] == 'A':
             temp_total += strengths[i]
@@ -12,11 +12,8 @@ def cnt(step):
 N = int(input())
 strengths = [int(_) for _ in input().split()]
 chars = list(input())
-
-
 total = 0
-for i, c in enumerate(chars):
+for (i, c) in enumerate(chars):
     if c == 'B':
         total += strengths[i]
-
 print(max([total, cnt(1), cnt(-1)]))

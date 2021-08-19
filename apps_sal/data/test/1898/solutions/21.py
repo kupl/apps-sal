@@ -1,11 +1,11 @@
 n = int(input())
 i = 1
-s = "I hate "
+s = 'I hate '
 while i < n:
     if i % 2 == 1:
-        s += "that I love "
+        s += 'that I love '
     else:
-        s += "that I hate "
+        s += 'that I hate '
     i += 1
-s += "it"
+s += 'it'
 print(s)

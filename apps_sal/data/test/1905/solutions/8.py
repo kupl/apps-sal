@@ -1,7 +1,8 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, m, q = f()
+(n, m, q) = f()
 p = [[0] * m for j in range(n)]
 for t in [list(f()) for k in range(q)][::-1]:
     j = t[1] - 1

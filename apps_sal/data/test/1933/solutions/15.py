@@ -1,4 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 a = []
 for i in range(m):
     a.append([0] * n)

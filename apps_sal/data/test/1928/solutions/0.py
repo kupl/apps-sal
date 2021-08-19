@@ -1,7 +1,7 @@
 string = input()
-l = string.split(" ")
-n, m, k = int(l[0]), int(l[1]), int(l[2])
-l = [{(1, 1), }]
+l = string.split(' ')
+(n, m, k) = (int(l[0]), int(l[1]), int(l[2]))
+l = [{(1, 1)}]
 count = 1
 In = 0
 while count < k:
@@ -11,13 +11,13 @@ while count < k:
         y = i[1]
         if x <= n and y <= m:
             t = [0, 0]
-            t[0], t[1] = x, y
+            (t[0], t[1]) = (x, y)
             s.add(tuple(t))
         x = i[0]
         y = i[1] + 1
         if x <= n and y <= m:
             t = [0, 0]
-            t[0], t[1] = x, y
+            (t[0], t[1]) = (x, y)
             s.add(tuple(t))
     l.append(s)
     In += 1
@@ -31,7 +31,7 @@ for i in l:
             flag = 1
             break
         l3 = [h]
-        x, y = h[0], h[1]
+        (x, y) = (h[0], h[1])
         while x != 1 or y != 1:
             if x > y:
                 x -= 1
@@ -43,17 +43,15 @@ for i in l:
         Count += 1
     if flag == 1:
         break
-
 cost = 0
-string = ""
+string = ''
 for i in range(k):
     length = len(l2[k - i - 1])
     cost += length
     for j in range(length):
         t = l2[k - i - 1][length - j - 1]
-        x, y = t[0], t[1]
-        string += "(" + str(x) + "," + str(y) + ") "
-    string += "\n"
-
+        (x, y) = (t[0], t[1])
+        string += '(' + str(x) + ',' + str(y) + ') '
+    string += '\n'
 print(cost)
 print(string)

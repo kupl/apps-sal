@@ -1,5 +1,5 @@
 __author__ = 'Utena'
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = list(map(int, input().split()))
 v = [0] * m
 for i in s:

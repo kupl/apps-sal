@@ -1,7 +1,7 @@
-data = input().split(" ")
+data = input().split(' ')
 tasks = int(data[0])
 k = int(data[1])
-cost = input().split(" ")
+cost = input().split(' ')
 cost = [int(x) for x in cost]
 minCost = sum(cost)
 ans = 1

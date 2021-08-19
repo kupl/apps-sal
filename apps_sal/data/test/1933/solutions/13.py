@@ -1,9 +1,7 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 ar = []
-
 for i in range(n):
     ar.append(list(map(int, input().split())))
-
 score = 0
 min_moves = 0
 for j in range(m):
@@ -19,8 +17,6 @@ for j in range(m):
                 r_s = maxi
                 r_m = c
             c += 1
-
     score += r_s
     min_moves += r_m
-
 print(score, min_moves)

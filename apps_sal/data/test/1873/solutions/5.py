@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, m = read()
+(n, m) = read()
 a = list(read())
 p = [0] * 20
 for i in a:

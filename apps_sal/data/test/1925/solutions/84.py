@@ -1,7 +1,5 @@
 import math
-
-a, b, n = map(int, input().split())
-
+(a, b, n) = map(int, input().split())
 if n < b:
     c = math.floor(a * n / b)
     print(c)

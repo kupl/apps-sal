@@ -11,7 +11,6 @@ def ria():
 st = set()
 mx = 0
 n = ria()[0]
-
 ar = ria()
 for i in ar:
     if i not in st:

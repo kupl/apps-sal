@@ -16,19 +16,19 @@ def merge(a, b):
             c.append(b[indb])
             indb += 1
             inversions += lena - inda
-    return((c, inversions))
+    return (c, inversions)
 
 
 def mergesort(a):
     if len(a) <= 1:
-        return((a, 0))
+        return (a, 0)
     split = len(a) // 2
     b = a[:split]
     c = a[split:]
     d = mergesort(b)
     e = mergesort(c)
     f = merge(d[0], e[0])
-    return((f[0], f[1] + d[1] + e[1]))
+    return (f[0], f[1] + d[1] + e[1])
 
 
 n = int(input())
@@ -39,7 +39,7 @@ for guy in a:
         b.append(guy)
 invs = mergesort(b)[1]
 negs = len(a) - len(b)
-pairs = (negs * (negs - 1)) // 2
+pairs = negs * (negs - 1) // 2
 used = [0] * n
 for guy in a:
     if guy != -1:
@@ -63,4 +63,4 @@ else:
         if (998244353 * i + 1) % denom == 0:
             inv = (998244353 * i + 1) // denom
             break
-    print((num * inv) % 998244353)
+    print(num * inv % 998244353)

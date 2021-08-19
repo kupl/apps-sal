@@ -1,4 +1,4 @@
-_, x = list(map(int, input().split()))
+(_, x) = list(map(int, input().split()))
 c = sorted(list(map(int, input().split())))
 r = 0
 for i in c:

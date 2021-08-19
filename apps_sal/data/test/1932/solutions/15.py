@@ -1,11 +1,8 @@
 from sys import stdin, stdout
-
 n = int(stdin.readline())
 ans = 0
-
 for i in range(n):
     s = stdin.readline().strip()
-
     if s[0] == 'T':
         ans += 4
     elif s[0] == 'C':
@@ -16,6 +13,4 @@ for i in range(n):
         ans += 12
     elif s[0] == 'I':
         ans += 20
-
-
 stdout.write(str(ans))

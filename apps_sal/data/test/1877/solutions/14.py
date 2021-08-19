@@ -1,6 +1,5 @@
 n = int(input())
 s = list(input())
-
 cur = [0, 0]
 f = 0
 c = 0

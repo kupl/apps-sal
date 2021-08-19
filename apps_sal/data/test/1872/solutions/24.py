@@ -17,9 +17,8 @@ def ncr(n, r):
     return numer // denom
 
 
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 s = 2 * r * math.sin(math.pi / n)
 Apoly = 1 / (4 * math.tan(math.pi / n))
 Asub = math.tan(math.pi * (1 / 2 - 3 / (2 * n))) / 4
-
-print(n * s**2 * (Apoly - Asub))
+print(n * s ** 2 * (Apoly - Asub))

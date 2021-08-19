@@ -1,7 +1,7 @@
 n = int(input())
 ar = [(0, 0)] * 367
 for i in range(n):
-    p, a, b = [i for i in input().split()]
+    (p, a, b) = [i for i in input().split()]
     a = int(a)
     b = int(b)
     if p == 'M':

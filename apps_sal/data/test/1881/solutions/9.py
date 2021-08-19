@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 p = [int(i) for i in input().split()]
 ans = [-1] * (max(p) + 1)
 ans[0] = 0
@@ -22,10 +22,9 @@ for i in range(n):
             key = position
         for j in range(position, p[i] + 1):
             ans[j] = key
-
 for i in range(n):
     if i != len(p) - 1:
-        wk1 = " "
+        wk1 = ' '
     else:
-        wk1 = "\n"
+        wk1 = '\n'
     print(ans[p[i]], end=wk1)

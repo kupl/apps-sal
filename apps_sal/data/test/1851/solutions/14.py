@@ -9,5 +9,4 @@ for i in range(n):
     else:
         days += 1
         continue
-
 print(days)

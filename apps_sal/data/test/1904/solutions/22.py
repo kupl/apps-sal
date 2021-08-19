@@ -1,7 +1,7 @@
 l = int(input())
 s = input()
 arr = list(map(int, input().split()))
-hard = "hard"
+hard = 'hard'
 dp = [0] * 4
 for i in range(l):
     if s[i] == hard[0]:

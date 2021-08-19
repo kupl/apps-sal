@@ -10,7 +10,6 @@ def f(n):
 
 n = int(input())
 cnt = 0
-
 while n % 2 != 0:
     n -= f(n)
     cnt += 1

@@ -23,7 +23,7 @@ class UnionFind:
 
     def _root(self, i):
         j = i
-        while (j != self._id[j]):
+        while j != self._id[j]:
             self._id[j] = self._id[self._id[j]]
             j = self._id[j]
         return j
@@ -36,7 +36,7 @@ class UnionFind:
         j = self._root(q)
         if i == j:
             return
-        if (self._sz[i] < self._sz[j]):
+        if self._sz[i] < self._sz[j]:
             self._id[i] = j
             self._sz[j] += self._sz[i]
         else:
@@ -44,25 +44,19 @@ class UnionFind:
             self._sz[i] += self._sz[j]
 
 
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 uf = UnionFind(n)
-
 for i in range(n - 1):
-    u, v, x = map(int, input().split())
+    (u, v, x) = map(int, input().split())
     u -= 1
     v -= 1
     if x == 0:
         uf.union(u, v)
-
 d = collections.defaultdict(int)
 for i in range(n):
     d[uf._root(i)] += 1
-
-total = pow(n, k, 10**9 + 7)
+total = pow(n, k, 10 ** 9 + 7)
 for size in d.values():
-    total -= pow(size, k, 10**9 + 7)
-
-total %= 10**9 + 7
-
+    total -= pow(size, k, 10 ** 9 + 7)
+total %= 10 ** 9 + 7
 print(total)

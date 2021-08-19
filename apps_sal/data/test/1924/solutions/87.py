@@ -1,10 +1,9 @@
-r1, c1, r2, c2 = map(int, input().split())
-
+(r1, c1, r2, c2) = map(int, input().split())
 p = 10 ** 9 + 7
 size = 1010000 * 2
 f_list = [1] * size
 for i in range(1, size):
-    f_list[i] = (f_list[i - 1] * i) % p
+    f_list[i] = f_list[i - 1] * i % p
 
 
 def cmb(n, r):

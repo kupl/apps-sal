@@ -1,9 +1,7 @@
 import sys
 T = int(sys.stdin.readline().strip())
-
 cache = [2]
 L = 1
-
 for t in range(T):
     n = int(sys.stdin.readline().strip())
     while cache[-1] < n:

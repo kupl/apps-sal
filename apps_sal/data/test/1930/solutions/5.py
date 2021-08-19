@@ -2,12 +2,12 @@ base = 998244353
 
 
 def power(x, y):
-    if(y == 0):
+    if y == 0:
         return 1
     t = power(x, y // 2)
-    t = (t * t) % base
-    if(y % 2):
-        t = (t * x) % base
+    t = t * t % base
+    if y % 2:
+        t = t * x % base
     return t
 
 
@@ -22,14 +22,14 @@ for i in range(0, 200000):
 
 def get(i):
     res = 0
-    while(i <= 200000):
+    while i <= 200000:
         res += ft[i]
         i += i & -i
     return res
 
 
 def update(i, x):
-    while(i):
+    while i:
         ft[i] += x
         i -= i & -i
 
@@ -42,29 +42,29 @@ non = [0]
 for i in range(1, n + 1):
     non.append(0)
 for i in range(1, n + 1):
-    if(a[i] != -1):
+    if a[i] != -1:
         non[a[i]] += 1
 for i in range(1, n + 1):
     non[i] += non[i - 1]
 for i in range(1, n + 1):
-    if(a[i] == -1):
+    if a[i] == -1:
         neg.append(neg[i - 1] + 1)
     else:
         neg.append(neg[i - 1])
 m = neg[n]
 ans = 0
 for i in range(1, n + 1):
-    if(a[i] != -1):
+    if a[i] != -1:
         ans += get(a[i])
         update(a[i], 1)
 fm = 1
 fs = fm
 for i in range(1, m + 1):
     fs = fm
-    fm = (fm * i) % base
-fs = (fs * inverse(fm)) % base
+    fm = fm * i % base
+fs = fs * inverse(fm) % base
 for i in range(1, n + 1):
-    if(a[i] != -1):
+    if a[i] != -1:
         less = a[i] - non[a[i]]
         more = m - less
         ans = (ans + neg[i] * more * fs) % base

@@ -1,5 +1,5 @@
 import math
-a, b, n = map(int, input().split())
+(a, b, n) = map(int, input().split())
 i = b - 1
 if i > n:
     i = n

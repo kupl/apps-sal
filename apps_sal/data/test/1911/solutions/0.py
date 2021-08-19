@@ -12,13 +12,10 @@ def getList():
     return list(map(int, input().split()))
 
 
-n, k = getList()
+(n, k) = getList()
 nums = getList()
-
 diff = []
-
-for i, j in zip(nums, nums[1:]):
+for (i, j) in zip(nums, nums[1:]):
     diff.append(j - i)
-
 diff.sort()
-print(sum(diff[:(n - k)]))
+print(sum(diff[:n - k]))

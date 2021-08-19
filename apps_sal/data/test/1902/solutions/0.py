@@ -1,4 +1,5 @@
 class Ddict:
+
     def __init__(self):
         self.dicts = {}
 
@@ -12,22 +13,22 @@ class Ddict:
 
     def find(self, key):
         if key == '':
-            return '', ''
+            return ('', '')
         d = self.dicts
         q = []
         h = [key[0]]
         for i in key:
             if i not in d:
                 if ' ' in d and len(d) == 1:
-                    return ''.join(q), ''.join(h)
-                return '', ''
+                    return (''.join(q), ''.join(h))
+                return ('', '')
             q.append(i)
             if len(d) != 1:
                 h = q[:]
             d = d[i]
         if ' ' in d and len(d) == 1:
-            return ''.join(q), ''.join(h)
-        return '', ''
+            return (''.join(q), ''.join(h))
+        return ('', '')
 
 
 words = Ddict()
@@ -42,14 +43,14 @@ while True:
     ans += len(x) + 1
     ws = [[]]
     for i in x:
-        if i in '.,?!\'- ':
+        if i in ".,?!'- ":
             if ws[-1]:
                 ws.append([])
         else:
             ws[-1].append(i)
     ws = list([''.join(e) for e in ws])
     for w in ws:
-        next_word, helped_word = words.find(w)
+        (next_word, helped_word) = words.find(w)
         if next_word and next_word != helped_word:
             ans -= len(next_word) - len(helped_word) - 1
         words.add(w)

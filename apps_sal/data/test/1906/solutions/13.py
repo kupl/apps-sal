@@ -1,4 +1,3 @@
-
 from fractions import gcd
 i = int(input())
 full = i // 2520

@@ -2,9 +2,9 @@ def main():
     input()
     pp = list(map(int, input().split()))
     mask = [c == 'B' for c in input()]
-    s = t = sum(p for p, m in zip(pp, mask) if m)
+    s = t = sum((p for (p, m) in zip(pp, mask) if m))
     res = [s]
-    for p, m in zip(pp, mask):
+    for (p, m) in zip(pp, mask):
         if m:
             s -= p
         else:
@@ -12,7 +12,7 @@ def main():
             res.append(s)
     pp.reverse()
     mask.reverse()
-    for p, m in zip(pp, mask):
+    for (p, m) in zip(pp, mask):
         if m:
             t -= p
         else:

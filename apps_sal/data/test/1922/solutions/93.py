@@ -3,11 +3,11 @@ def lmi():
 
 
 def main():
-    N, M = lmi()
+    (N, M) = lmi()
     if N == 1 or M == 1:
-        print((abs(N - 2) * abs(M - 2)))
+        print(abs(N - 2) * abs(M - 2))
     else:
-        print(((N - 2) * (M - 2)))
+        print((N - 2) * (M - 2))
 
 
 def __starting_point():

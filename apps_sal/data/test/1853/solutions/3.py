@@ -1,6 +1,6 @@
 def read(type=1):
     if type:
-        file = open("input.dat", "r")
+        file = open('input.dat', 'r')
         line = list(map(int, file.readline().split()))
         n = line[0]
         m = line[1]
@@ -23,20 +23,19 @@ def read(type=1):
                 a.append(line)
             else:
                 a.append([line[1], line[0]])
-
-    return n, m, a
+    return (n, m, a)
 
 
 def write(sol, x):
-    print("YES")
-    print(" ".join(map(str, sol[1:-1])))
+    print('YES')
+    print(' '.join(map(str, sol[1:-1])))
     sol[x[1]] = sol[x[0]]
-    print(" ".join(map(str, sol[1:-1])))
+    print(' '.join(map(str, sol[1:-1])))
 
 
 def solve(a):
     if len(a) == n * (n - 1) // 2:
-        print("NO")
+        print('NO')
         return 0
     a = sorted(a, key=lambda x: (x[0], x[1]))
     x = [1, 2]
@@ -59,5 +58,5 @@ def solve(a):
     write(sol, x)
 
 
-n, m, a = read(0)
+(n, m, a) = read(0)
 solve(a)

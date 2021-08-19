@@ -1,5 +1,5 @@
-n, m = input().split()
-n, m = int(n), int(m)
+(n, m) = input().split()
+(n, m) = (int(n), int(m))
 l = [0] * m
 s = input().split()
 for i in range(n):
@@ -7,7 +7,7 @@ for i in range(n):
 r = 0
 for i in range(m):
     r += l[i]
-p, q = 0, 0
+(p, q) = (0, 0)
 for i in range(m):
     p += l[i]
     q += l[i] * (r - p)

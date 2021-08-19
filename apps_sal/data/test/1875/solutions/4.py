@@ -25,5 +25,4 @@ for i in range(len(a) - 1):
                 negative = min(negative, s)
         if positive != 0 and negative != 0:
             area = max(area, positive - negative)
-
 print(area)
