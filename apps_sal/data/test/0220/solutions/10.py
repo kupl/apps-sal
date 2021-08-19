@@ -1,4 +1,4 @@
-s, x = list(map(int, input().split()))
+(s, x) = list(map(int, input().split()))
 jj = 1 if s >= x and (s - x) / 2 == (s - x) // 2 else 0
 xx = bin(x)[2:]
 aa = bin((s - x) // 2)[2:]
@@ -6,7 +6,6 @@ if len(xx) < len(aa):
     xx = (len(aa) - len(xx)) * '0' + xx
 else:
     aa = (len(xx) - len(aa)) * '0' + aa
-# print(xx,aa)
 for i in range(len(xx)):
     if xx[i] == '0':
         continue
@@ -18,9 +17,3 @@ for i in range(len(xx)):
 if (s - x) // 2 == 0 and jj >= 2:
     jj -= 2
 print(jj)
-
-# ////////////////      //////        ///////      //             ///////     //  //   //
-# ////          //    ///   ///     ///    ///     //            ///  ///     ////     //
-# ////    ////       ///     ///   ///      ///    //           /////////     ////     ///////
-# ////     /////    ///       /// ///        ///   //          ///    ///     ////     //   //
-# //////////////     ///////////   ///////////     //////     ///     ///     //  //   //   //

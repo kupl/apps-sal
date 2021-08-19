@@ -1,18 +1,16 @@
-s, x = map(int, input().split())
-a, b = 1, 0
+(s, x) = map(int, input().split())
+(a, b) = (1, 0)
 for i in range(50):
-    c, d = s & (1 << i), x & (1 << i)
-    # print(i, a, b, c, d)
+    (c, d) = (s & 1 << i, x & 1 << i)
     if c == d:
         if c:
-            a, b = 2 * a, 0
+            (a, b) = (2 * a, 0)
         else:
-            a, b = a, a
+            (a, b) = (a, a)
+    elif c:
+        (a, b) = (b, b)
     else:
-        if c:
-            a, b = b, b
-        else:
-            a, b = 0, 2 * b
+        (a, b) = (0, 2 * b)
 if s == x:
     a -= 2
 print(a)

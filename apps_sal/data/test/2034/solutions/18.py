@@ -1,47 +1,39 @@
 from collections import defaultdict
 import sys
 sys.setrecursionlimit(10000000)
-# This class represents a undirected graph using adjacency list representation
 
 
 class Graph:
 
     def __init__(self, vertices):
-        self.V = vertices  # No. of vertices
-        self.graph = defaultdict(list)  # default dictionary to store graph
-        self.visited = [False] * (self.V)
+        self.V = vertices
+        self.graph = defaultdict(list)
+        self.visited = [False] * self.V
 
     def addEdge(self, gr):
         self.graph = gr
 
     def isCyclicUtil(self, v, parent):
-
         self.visited[v] = True
-
         for i in self.graph[v]:
-
             if self.visited[i] == False:
-                if(self.isCyclicUtil(i, v)):
+                if self.isCyclicUtil(i, v):
                     return True
             elif parent != i:
                 return True
-
         return False
-
-    # Returns true if the graph contains a cycle, else false.
 
     def isCyclic(self, p):
-        if(self.isCyclicUtil(p, -1)) == True:
+        if self.isCyclicUtil(p, -1) == True:
             return True
-
         return False
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 g = Graph(n)
 L = [[] for i in range(n)]
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     L[a - 1].append(b - 1)
     L[b - 1].append(a - 1)
 Visited = [False] * n

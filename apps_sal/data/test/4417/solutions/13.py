@@ -1,10 +1,7 @@
-# 570_B
-
 cases = int(input())
-
 for i in range(0, cases):
-    ln1 = [int(j) for j in input().split(" ")]
-    nums = [int(j) for j in input().split(" ")]
+    ln1 = [int(j) for j in input().split(' ')]
+    nums = [int(j) for j in input().split(' ')]
     k = ln1[1]
     n1 = min(nums)
     n2 = max(nums)

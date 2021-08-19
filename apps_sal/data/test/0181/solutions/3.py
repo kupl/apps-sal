@@ -5,7 +5,6 @@ def sign(x):
 def dis(x):
     if x >= 360:
         x %= 360
-
     if x <= -180:
         return 360 + x
     elif x <= 0:
@@ -17,20 +16,15 @@ def dis(x):
 
 
 def __starting_point():
-
     x = int(input())
-    x = (-sign(x)) * (abs(x) % 360)
-    # print(x)
-
+    x = -sign(x) * (abs(x) % 360)
     mindis = dis(x)
     res = 0
-
     for i in range(1, 4):
         newdis = dis(x + 90 * i)
         if newdis < mindis:
             mindis = newdis
             res = i
-
     print(res)
 
 
