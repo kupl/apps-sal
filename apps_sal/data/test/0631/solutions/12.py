@@ -7,19 +7,31 @@ from heapq import heappush, heappop, heapify
 from functools import cmp_to_key
 from bisect import bisect_left, bisect_right
 from collections import defaultdict, deque, Counter
-# sys.setrecursionlimit(1000000)
-
-# input aliases
 input = sys.stdin.readline
-def getS(): return input().strip()
-def getN(): return int(input())
-def getList(): return list(map(int, input().split()))
-def getZList(): return [int(x) - 1 for x in input().split()]
 
 
-INF = float("inf")
-MOD = 10**9 + 7
-def divide(x): return pow(x, MOD - 2, MOD)
+def getS():
+    return input().strip()
+
+
+def getN():
+    return int(input())
+
+
+def getList():
+    return list(map(int, input().split()))
+
+
+def getZList():
+    return [int(x) - 1 for x in input().split()]
+
+
+INF = float('inf')
+MOD = 10 ** 9 + 7
+
+
+def divide(x):
+    return pow(x, MOD - 2, MOD)
 
 
 def calc(arr, idx):
@@ -30,7 +42,6 @@ def calc(arr, idx):
         if idx & 1:
             ret += arr[i]
         idx >>= 1
-
     return ret
 
 
@@ -39,18 +50,16 @@ def get_all_comb(arr):
     ret = []
     for idx in range(1 << n):
         ret.append(calc(arr, idx))
-
     return ret
 
 
 def solve():
-    n, m = getList()
+    (n, m) = getList()
     li = getList()
-
     if sum(li) == m:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     return
 
 
@@ -58,13 +67,11 @@ def main():
     n = getN()
     for _ in range(n):
         solve()
-
     return
 
 
 def __starting_point():
     main()
-    # solve()
 
 
 __starting_point()

@@ -1,6 +1,5 @@
 import math
 import time
-
 facts = []
 fcounts = []
 
@@ -13,7 +12,7 @@ def primefactors(n):
             n = n // 2
         facts.append(2)
         fcounts.append(c)
-    for i in range(3, (int(math.sqrt(n) + 1)), 2):
+    for i in range(3, int(math.sqrt(n) + 1), 2):
         c = 0
         if n % i == 0:
             while n % i == 0:
@@ -33,22 +32,19 @@ def task(x, u):
         if x < p:
             return t
         else:
-            t += (x // p)
+            t += x // p
         p *= u
 
 
-n, b = list(map(int, input().split()))
+(n, b) = list(map(int, input().split()))
 primefactors(b)
 l = len(facts)
-val = int(1e18)
-# print(facts)
-# print(fcounts)
+val = int(1e+18)
 for i in range(l):
     x = facts[i]
     a = task(n, x)
-    #print(a, "for value:", x)
     val = min(val, a // fcounts[i])
-if val is int(1e18):
-    print("0")
+if val is int(1e+18):
+    print('0')
 else:
     print(int(val))

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import itertools
 
 
@@ -18,9 +16,9 @@ def solve(L, n, px, py, x, y):
 def main(args):
     n = int(input())
     d = input()
-    x, y = list(map(int, input().split()))
-    py = [0] + [1 if c == 'U' else (-1 if c == 'D' else 0) for c in d]
-    px = [0] + [1 if c == 'R' else (-1 if c == 'L' else 0) for c in d]
+    (x, y) = list(map(int, input().split()))
+    py = [0] + [1 if c == 'U' else -1 if c == 'D' else 0 for c in d]
+    px = [0] + [1 if c == 'R' else -1 if c == 'L' else 0 for c in d]
     if abs(x + y) % 2 != n % 2:
         print(-1)
         return 0
@@ -37,16 +35,16 @@ def main(args):
     while left + 1 < right:
         mid = (left + right) // 2
         if solve(mid, n, px, py, x, y):
-            left, right = left, mid
+            (left, right) = (left, mid)
         else:
-            left, right = mid, right
+            (left, right) = (mid, right)
     print(right)
     return 0
 
 
 def __starting_point():
     import sys
-    return(main(sys.argv))
+    return main(sys.argv)
 
 
 __starting_point()

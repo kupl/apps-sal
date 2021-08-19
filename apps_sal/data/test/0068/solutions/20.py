@@ -10,7 +10,7 @@ def go(pos, k):
     return pos
 
 
-def relapos(a, b):  # 返回b的坐标减a的坐标
+def relapos(a, b):
     c = [b[0] - a[0], b[1] - a[1]]
     return c
 
@@ -21,8 +21,8 @@ def stdis(a, b):
 
 n = int(input())
 s = input()
-x, y = [int(i) for i in input().split()]
-poss = [[0, 0]]  # 第n次操作后的位置
+(x, y) = [int(i) for i in input().split()]
+poss = [[0, 0]]
 pos = [0, 0]
 for i in range(0, n):
     poss.append(tuple(go(pos, s[i])))

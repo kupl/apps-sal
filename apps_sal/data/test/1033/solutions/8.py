@@ -1,4 +1,4 @@
-n, H = map(int, input().split())
+(n, H) = map(int, input().split())
 
 
 def f(len, H):
@@ -13,10 +13,9 @@ def f(len, H):
     return c * (H + x) // 2 + x * (x - 1) // 2
 
 
-lo, hi = 1, 1000000000000000000
+(lo, hi) = (1, 1000000000000000000)
 while lo < hi:
     mid = (lo + hi) // 2
-    #print("%d, %d" % (lo, hi))
     if n > f(mid, H):
         lo = mid + 1
     else:

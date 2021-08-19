@@ -1,8 +1,6 @@
-# никита съел деда
-
 t = int(input())
 for query in range(t):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     c = abs(a - b)
     left = -1
     right = 10 ** 9

@@ -1,9 +1,7 @@
 from random import *
 n = int(input())
 for _ in range(n):
-    a, b = map(int, input().split())
-    # a = randint(1, 10)
-    # b = randint(1, 10)
+    (a, b) = map(int, input().split())
     c = abs(a - b)
     s = 0
     i = 1

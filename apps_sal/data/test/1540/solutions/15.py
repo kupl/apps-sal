@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 too = dict()
 chat = dict()
 chat2 = dict()
@@ -6,12 +6,11 @@ for i in range(n):
     too[i] = 0
     chat[i] = list(map(int, input().split()))
 for i in range(m):
-    chat2[i] = 0  # Korda postitati
+    chat2[i] = 0
 for i in range(k):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     chat2[y - 1] += 1
     too[x - 1] -= 1
-
 out = []
 for i in range(n):
     t2 = 0

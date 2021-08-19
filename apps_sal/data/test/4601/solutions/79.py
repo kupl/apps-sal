@@ -16,10 +16,7 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-#import numpy as np
-
-n, k = L()
+(n, k) = L()
 h = L()
 h.sort()
 print(sum(h[:max(n - k, 0)]))

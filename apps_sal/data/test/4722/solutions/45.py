@@ -1,11 +1,9 @@
-a, b = map(int, input().split())
-# intは入力に対しての関数、出力ではない
-
+(a, b) = map(int, input().split())
 if (a + b) % 3 == 0:
-    print("Possible")
+    print('Possible')
 elif a % 3 == 0:
-    print("Possible")
+    print('Possible')
 elif b % 3 == 0:
-    print("Possible")
+    print('Possible')
 else:
-    print("Impossible")
+    print('Impossible')
