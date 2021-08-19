@@ -1,21 +1,19 @@
-
 import sys
-
 n = int(sys.stdin.readline().split()[0])
 
 
 class Polynomial:
+
     def __init__(self, coef):
         first_nonzero = False
         index = len(coef) - 1
         while not first_nonzero:
             if not coef[index] == 0:
                 first_nonzero = True
+            elif index == 0:
+                first_nonzero = True
             else:
-                if index == 0:
-                    first_nonzero = True
-                else:
-                    index -= 1
+                index -= 1
         self.degree = index
         self.coef = [coef[j] for j in range(index + 1)]
 
@@ -42,7 +40,6 @@ class Polynomial:
             new_coef[j] = self.coef[j] + other.coef[j]
         for j in range(m + 1, M + 1):
             new_coef[j] = bigger_poly.coef[j]
-
         return Polynomial(new_coef)
 
     def is_legal(self):
@@ -56,17 +53,15 @@ class Polynomial:
         return result
 
     def print(self):
-        output = ""
+        output = ''
         for j in range(self.degree + 1):
-            output += str(self.coef[j]) + " "
+            output += str(self.coef[j]) + ' '
         print(output)
 
 
 f = []
-
 f.append(Polynomial([1]))
 f.append(Polynomial([0, 1]))
-
 for j in range(2, 151):
     xf = f[j - 1].multiply_by_x()
     t_1 = xf.add(f[j - 2])
@@ -75,13 +70,7 @@ for j in range(2, 151):
         f.append(t_1)
     elif t_2.is_legal():
         f.append(t_2)
-    # print(":(")
-
-
 print(f[n].degree)
 f[n].print()
 print(f[n - 1].degree)
 f[n - 1].print()
-
-# for j in range(len(f)):
-# f[j].print()

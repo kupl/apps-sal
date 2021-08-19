@@ -1,6 +1,5 @@
 import math
-
-n, a, b, k = list(map(int, input().split()))
+(n, a, b, k) = list(map(int, input().split()))
 h = list(map(int, input().split()))
 ska = []
 for i in range(0, n):
@@ -9,7 +8,6 @@ for i in range(0, n):
         totm = a + b
     ska.append(math.ceil(totm / a) - 1)
 ska.sort()
-# print(ska)
 cnt = 0
 ans = 0
 i = 0

@@ -10,12 +10,12 @@ def removeUsed(adj, used):
         adj.remove(s)
 
 
-def solve(a, s):  # a - adjacenct list [[],[]...], seq
+def solve(a, s):
     if s[0] != 0:
         return False
     q = deque()
     q.append(0)
-    i, n, cur = 1, len(a), -1
+    (i, n, cur) = (1, len(a), -1)
     used = [False] * n
     used[0] = True
     while i < n:
@@ -28,7 +28,7 @@ def solve(a, s):  # a - adjacenct list [[],[]...], seq
         cur_s = s[i]
         i += 1
         if cur_s not in a[cur]:
-            return False  # not connected
+            return False
         a[cur].remove(cur_s)
         q.append(cur_s)
         used[cur_s] = True
@@ -38,8 +38,8 @@ def solve(a, s):  # a - adjacenct list [[],[]...], seq
 n = int(input())
 a = [set() for i in range(n)]
 for i in range(n - 1):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     a[u - 1].add(v - 1)
     a[v - 1].add(u - 1)
-s = [(x - 1) for x in map(int, input().split())]
-print("Yes" if solve(a, s) else "No")
+s = [x - 1 for x in map(int, input().split())]
+print('Yes' if solve(a, s) else 'No')

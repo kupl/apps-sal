@@ -8,9 +8,8 @@ class ReallyBigNumbers:
     def binarySearch(self):
         l = self.s
         h = 10000000000000000000
-        while(l < h):
+        while l < h:
             mid = (h + l) // 2
-            #print(mid, self.isReallyBig(mid))
             if self.isReallyBig(mid):
                 h = mid
             else:
@@ -23,8 +22,7 @@ class ReallyBigNumbers:
         while v > 0:
             add += v % 10
             v //= 10
-        #print('resta', cp-add, cp, add)
-        return (cp - add) >= self.s
+        return cp - add >= self.s
 
     def show(self):
         if self.x <= self.n:
@@ -33,7 +31,6 @@ class ReallyBigNumbers:
             print(0)
 
 
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 rbg = ReallyBigNumbers(n, s)
-# print(rbg.x)
 rbg.show()

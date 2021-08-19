@@ -10,14 +10,13 @@ from fractions import gcd
 
 def YES_NO(flag):
     if flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def main():
-    # q = [int(i) for i in sys.stdin.readline().split()]
-    n, a, b, k = [int(i) for i in sys.stdin.readline().split()]
+    (n, a, b, k) = [int(i) for i in sys.stdin.readline().split()]
     q = [int(i) for i in sys.stdin.readline().split()]
     t = [0 for i in range(n)]
     for i in range(n):
@@ -25,7 +24,7 @@ def main():
         if w <= a:
             continue
         else:
-            t[i] = ((w + a - 1) // a) - 1
+            t[i] = (w + a - 1) // a - 1
     t = sorted(t)
     res = 0
     for i in range(n):

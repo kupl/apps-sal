@@ -1,7 +1,4 @@
-# WeirdBugsButOkay
-
 t = int(input())
-
 for wqe in range(0, t):
     n = int(input())
     if n % 2 == 0:

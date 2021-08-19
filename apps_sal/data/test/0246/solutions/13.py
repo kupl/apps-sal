@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-n, s = list(map(int, input().split(' ')))
+(n, s) = list(map(int, input().split(' ')))
 
 
 def sumd(d):
@@ -10,7 +9,7 @@ def sumd(d):
     return sd
 
 
-st, ed = 1, n
+(st, ed) = (1, n)
 r = 0
 while True:
     if st == ed:
