@@ -16,7 +16,8 @@ class Solution:
 
         ans = float('inf')
         pre_min = [float('inf')] * len(arr)
-        for i, t in enumerate(till_len):
+        for i, t in enumerate(till_len):        # t is the length of good subarrays until index i.
+            # if t == float('inf'): continue
             if i == t - 1:
                 pre_min[i] = t
             else:

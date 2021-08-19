@@ -7,6 +7,7 @@ class Solution:
         for i in nums:
             if i == 0:
                 if tmplen != curlen:
+                    # We meet odd numbers of negative number, check if the rest is larger
                     maxlen = max(maxlen, tmplen - curlen - 1)
                 maxlen = max(maxlen, curlen)
                 curlen = 0
@@ -21,6 +22,7 @@ class Solution:
             if i > 0 and even == True:
                 curlen += 1
         if tmplen != curlen:
+            # We meet odd numbers of negative number, check if the rest is larger
             maxlen = max(maxlen, tmplen - curlen - 1)
         maxlen = max(maxlen, curlen)
 
@@ -30,6 +32,7 @@ class Solution:
         for i in reversed(nums):
             if i == 0:
                 if tmplen != curlen:
+                    # We meet odd numbers of negative number, check if the rest is larger
                     maxlen = max(maxlen, tmplen - curlen - 1)
                 maxlen = max(maxlen, curlen)
                 curlen = 0
@@ -44,6 +47,7 @@ class Solution:
             if i > 0 and even == True:
                 curlen += 1
         if tmplen != curlen:
+            # We meet odd numbers of negative number, check if the rest is larger
             maxlen = max(maxlen, tmplen - curlen - 1)
         maxlen = max(maxlen, curlen)
 

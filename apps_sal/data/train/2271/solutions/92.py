@@ -16,6 +16,8 @@ def np(): return print('No')
 class union_find():
     def __init__(self, n):
         self.n = n
+        # 親要素のノード番号を格納。par[x]==xのときそのノードは根
+        # 親とはその上にノードなし！！　
         self.par = [-1 for i in range(n)]
         self.rank = [0] * (n)
 
@@ -31,6 +33,7 @@ class union_find():
         x = self.find(x)
         y = self.find(y)
 
+        # 木の高さを比較し、低い方から高い方へ辺をはる
         if x == y:
             return
 

@@ -1,3 +1,4 @@
+#!usr/bin/env python3
 from collections import defaultdict
 from collections import deque
 from heapq import heappush, heappop
@@ -41,25 +42,37 @@ def LSR(n):
 
 mod = 1000000007
 
+# A
+
 
 def A():
     return
+
+# B
 
 
 def B():
     return
 
+# C
+
 
 def C():
     return
+
+# D
 
 
 def D():
     return
 
+# E
+
 
 def E():
     return
+
+# F
 
 
 def F():
@@ -125,14 +138,19 @@ def F():
         print((-1))
     else:
         print(ans)
+# G
 
 
 def G():
     return
 
+# H
+
 
 def H():
     return
+
+# Solve
 
 
 def __starting_point():

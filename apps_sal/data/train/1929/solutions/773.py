@@ -22,3 +22,7 @@ class StreamChecker:
                     ret = True
         self.cache = newcache
         return ret
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

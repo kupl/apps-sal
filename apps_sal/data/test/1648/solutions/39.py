@@ -43,6 +43,9 @@ def cmb(a, b):
     iiii = 1
     for ii in range(1, b + 1):
         iiii = (iiii * ii) % mod
+#        print("ii,iiii:",ii,iiii)
+#    print("a:",a,"b:",b,"iii:",iii,"iiii:",iiii)
+#    print("a:",a,"b:",b,"a-b:",a-b,"a!:",iii,"b!:",iiii,"cmb:",iii//iiii)
     return div(iii, iiii)
 
 
@@ -66,6 +69,9 @@ for i in range(1, ib + 2):
     if i > ir:
         print((0))
         continue
+#    cb=cc(ib)//cc(ib-i+1)//cc(i-1)
+#    cr=cc(ir)//cc(ir-i)//cc(i)
     cb = cmb2(ib, i - 1)
     cr = cmb2(ir, i)
+#    print("ib:",ib,i-1,cb,"ir:",ir,i,cr)
     print((mul(cb, cr)))

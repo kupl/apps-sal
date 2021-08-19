@@ -8,7 +8,7 @@ mod = 10**9 + 7
 class Mod:
     """
     comb = Mod(1000000)
-    print(comb(5, 3))  
+    print(comb(5, 3))  # 5C3
     """
 
     def __init__(self, n_max, mod=10**9 + 7):

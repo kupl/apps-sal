@@ -27,6 +27,7 @@ class Solution:
                         return jobs_j
                 return n
 
+            # 二分加速
             def find_next_confict_left(jobs_i):
                 dst = jobs[jobs_i][1]
                 left = jobs_i
@@ -59,12 +60,19 @@ class Solution:
             return dfs(0)
 
         def dp_func():
+            # dp[end] = max(dp[end-1],dp[last_not_conflict] + profit))
+            # end有多个，用坐标代替
+            # sort(end)
+            # dp[i] = max(dp[i-1],dp[last_not_conflict] + profit))
+
+            # 二分加速
 
             n = len(profit)
             jobs = [(endTime[i], startTime[i], profit[i]) for i in range(n)]
             jobs.sort()
             dp = [0 for _ in range(n + 1)]
 
+            # 右边界
             def find_pre_not_confict(jobs_i):
                 dst = jobs[jobs_i][1]
                 left = 0
@@ -89,6 +97,7 @@ class Solution:
             for i in range(1, n + 1):
                 last_not_conflict = find_pre_not_confict(i - 1)
                 choose = jobs[i - 1][2]
+                # 再判断一次，防止0
                 if last_not_conflict != -1:
                     choose += dp[last_not_conflict + 1]
                 dp[i] = max(dp[i - 1], choose)

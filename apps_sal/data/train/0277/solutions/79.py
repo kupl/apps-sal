@@ -8,6 +8,7 @@ class Solution:
             if light[i] > max_index:
                 max_index = light[i]
 
+            # print(f\"s: {s} max_index: {max_index} i: {i}\")
             if i + 1 == max_index:
                 count += 1
 

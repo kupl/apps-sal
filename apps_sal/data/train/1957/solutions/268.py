@@ -1,8 +1,8 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         m, n = len(grid), len(grid[0])
-        q = collections.deque([[0, 0, 0]])
-        visited = {(0, 0): 0}
+        q = collections.deque([[0, 0, 0]])    # row, col, num of obstables met so far
+        visited = {(0, 0): 0}                 # row, col   =>   num of obstables met so far
         steps = 0
 
         while q:

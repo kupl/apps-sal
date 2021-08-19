@@ -5,6 +5,8 @@ x, y, z = 1234567, 123456, 1234
 a_max = n // x
 b_max = n // y
 
+# print(a_max, b_max)
+
 
 def do_it():
     for a in range(a_max + 1):

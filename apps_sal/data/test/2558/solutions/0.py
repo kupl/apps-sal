@@ -1,5 +1,6 @@
 import sys
 
+# sys.stdin = open('in.txt')
 
 s = sys.stdin.read().split()
 p = 0

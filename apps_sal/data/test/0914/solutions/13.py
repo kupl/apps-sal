@@ -46,6 +46,7 @@ else:
             res = tmp
         else:
             l = mid + 1
+        #print(l, r, tmp)
     if (len(res) == 0):
         print(-1)
     else:

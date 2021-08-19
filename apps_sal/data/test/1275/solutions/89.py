@@ -1,4 +1,5 @@
 n, k = map(int, input().split())
+# a+b=xの組み合わせの数を管理する配列
 P = [0 for _ in range(2 * n + 1)]
 
 if k < 0:

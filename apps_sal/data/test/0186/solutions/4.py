@@ -4,6 +4,7 @@ for i in range(n):
     maxn += 2
     if maxn % 3 == 0:
         maxn += 2
+# print(maxn)
 maxm = m * 6 - 3
 now = 6
 while now < max(maxm, maxn):

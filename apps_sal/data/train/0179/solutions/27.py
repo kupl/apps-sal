@@ -32,6 +32,7 @@ class Solution:
             return res
 
         def add(curchar, curlen: int, code):
+            #print(32, type(curlen), end= ' ')
             if len(code) == 0:
                 return 0, curchar, curlen
 
@@ -42,14 +43,18 @@ class Solution:
                 else:
                     prevsum += singlelen(curlen)
                     curchar, curlen = n, l
+                    #print(43, type(curlen), end= ' ')
             return (prevsum, curchar, curlen)
 
         @lru_cache(None)
         def dp(code, remain, todel, curchar, curlen: int):
+            #print(sum(tuple(zip(*code))[1]), remain, todel, curchar, curlen)
             if remain == todel:
+                #print(49, type(curlen), end= ' ')
                 return singlelen(curlen)
             if todel == 0:
                 (prelen, curchar, curlen) = add(curchar, curlen, code)
+                #print(53, type(curlen), end= ' ')
                 return prelen + singlelen(curlen)
 
             if len(code) < 1 or len(code[0]) < 1:
@@ -69,13 +74,21 @@ class Solution:
             cases = []
 
             if todel >= code[0][1]:
+                #print(63, type(curlen), end= ' ')
                 cases.append(dp(code[1:], remain - code[0][1], todel - code[0][1], curchar, curlen))
 
             (prelen, newchar, newlen) = add(curchar, curlen, code[:1])
+            #print(67, type(newlen), end= ' ')
             for trydel in range(max(0, todel - remain + code[0][1]), min(code[0][1], todel + 1)):
                 cases.append(prelen + dp(code[1:], remain - code[0][1], todel - trydel, newchar, newlen - trydel))
 
+            # remove all current stride, remove partial of current stride, keep current stride
+
             if len(cases) == 0:
+                # 81       4                          1       1      b        3       -  0       b        5
+                #  (('b', 2), ('a', 1), ('c', 1)) ((0, 2), (2, 2))
+                # 81       2                          1       1      c        4       -  0       c        6
+                # | (('c', 2),)  ((0, 2), (2, 2))
                 print((81, sum(tuple(zip(*code))[1]), remain, todel, curchar, curlen, '-', prelen, newchar, newlen, '|', code, ((0, todel - remain + code[0][1]), (code[0][1], todel + 1))))
             return min(cases)
 

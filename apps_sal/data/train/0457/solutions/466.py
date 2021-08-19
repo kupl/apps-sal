@@ -11,6 +11,7 @@ base case:
     if amt == 0:
         return 0
 for coin in coins:
+  #use that coin - take the coin or do not take the coin
   count = min(count,1+coinchangehelper(amt-coin))
 
 

@@ -37,3 +37,8 @@ class StreamChecker:
         if len(self.seq) > 2000:
             self.seq.pop(0)
         return self._search()
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -7,6 +7,7 @@ class Solution:
         all_indx = list(range(0, len(arr), 1))
         all_triplets = list(combinations(all_indx, 3))
         for idx_tuple in all_triplets:
+            # print(idx_tuple)
             arr_i = arr[idx_tuple[0]]
             arr_j = arr[idx_tuple[1]]
             arr_k = arr[idx_tuple[2]]

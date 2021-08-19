@@ -10,9 +10,12 @@ def sqrt(n):
         x = y
         y = (x + n // x) // 2
     return x
+# find a s.t. a(a+1)//2<=n+1
 
 
 def f(n):
+    # x**2+x-2(n+1)=0
+    # -1+(1+8(n+1))
     return
 
 

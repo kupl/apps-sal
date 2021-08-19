@@ -98,5 +98,7 @@ def solve(a, b, y, x):
     return d[b]
 
 
+#t = readInt()
+# for _ in range(t):
 a, b, x, y = [readInt() for _ in range(4)]
 print((solve(a - 1, b + 99, x, y)))

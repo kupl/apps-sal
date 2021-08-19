@@ -5,15 +5,15 @@ for i in range(H):
     s = input()
     t = []
     for i in s:
-        t.append(1 if i == "
+        t.append(1 if i == "#" else 0)
     m.append(t)
 
 for i in range(H):
     for j in range(W):
         if m[i][j] == 1:
-            print("
+            print("#", end="")
             continue
-        count=0
+        count = 0
         if i != 0:
             count += m[i - 1][j]
             if j != 0:

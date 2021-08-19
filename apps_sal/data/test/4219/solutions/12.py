@@ -13,7 +13,7 @@ for i in range(N):
 
 for i in range(2 ** N):
     op = [0] * N
-    for j in range(N):
+    for j in range(N):  # ポイント１
         if ((i >> j) & 1):
             op[N - 1 - j] = 1
 

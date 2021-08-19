@@ -26,5 +26,6 @@ for _ in range(m):
         l, r = query[1], query[2]
         s = 0
         for x in range(r - l + 1):
+            # print(fibonacci(x+1), a[l+x-1])
             s += ((fibonacci(x + 1) * a[l + x - 1]))
         print(s % mod)

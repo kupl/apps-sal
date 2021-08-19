@@ -12,6 +12,8 @@ class Solution:
 
         A_sorted = sorted(A)
 
+        # print(A_sorted)
+        # print(mydict)
         not_valid = set()
         for num in A_sorted:
             if len(mydict) == 0:
@@ -27,6 +29,7 @@ class Solution:
                 if mydict[num] == 0:
                     mydict.pop(num)
                     not_valid.add(num)
+                # deals with duplicates
                 if num == double:
                     continue
                 elif mydict[2 * num] == 0:

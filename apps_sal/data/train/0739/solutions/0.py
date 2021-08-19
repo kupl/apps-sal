@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 from math import sqrt
 
@@ -33,6 +34,7 @@ def process(S):
                 P[0] += i
             elif P[-1] == 'W':
                 P[0] -= i
+        # print i, P
     DIST = sqrt(P[0]**2 + P[1]**2)
 
     if P[0] == 0 and P[1] == 0:
@@ -54,7 +56,7 @@ def process(S):
     elif P[0] > 0 and P[1] > 0:
         DIR = 'NW'
 
-    DIST = int(DIST * 10.) / 10.
+    DIST = int(DIST * 10.) / 10.  # TOLD NO APPROXIMATION
 
     return '%.1f%s' % (DIST, DIR)
 

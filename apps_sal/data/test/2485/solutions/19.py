@@ -26,4 +26,5 @@ if cnt_x * cnt_y == cnt:
 else:
     ans = x_cnt_max + y_cnt_max
 
+# print(cnt_x, cnt_y, cnt)
 print(ans)

@@ -37,12 +37,25 @@ else:
         flag = False
 
 
-if flag:
+if flag:  # 正の数列
+    # M = max(a)
+    # id = a.index(M)
     for i in range(1, N):
+        # if i == 0:
+        #     a[i] += M
+        #     print(id+1, 1)
+        # else:
         a[i] += a[i - 1]
         print((i, i + 1))
 
 else:
+    # m = min(a)
+    # id = a.index(m)
     for i in range(N - 2, -1, -1):
+        # if i == N-1:
+        #     a[i] += m
+        #     print(id, i+1)
+        # else:
         a[i] += a[i + 1]
         print((i + 2, i + 1))
+# print(a)

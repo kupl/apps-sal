@@ -13,6 +13,7 @@ class Solution:
             diff = max(customers[i] - curadd, 0)
             if diff > 0:
                 customers[i + 1] += diff
+            # print(board, bc, rc, curpr, ans, diff, customers)
 
         remaining = customers[-1]
         i = len(customers)
@@ -26,5 +27,6 @@ class Solution:
                 ans = (curpr, i)
             remaining = max(remaining - 4, 0)
             i += 1
+            # print(board, bc, rc, curpr, ans, remaining)
 
         return ans[1] if ans[0] > 0 else -1

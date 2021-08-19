@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 from operator import itemgetter
 from fractions import gcd
@@ -15,6 +16,7 @@ def mi(): return map(int, input().rstrip().split())
 def lmi(): return list(map(int, input().rstrip().split()))
 def li(): return list(input().rstrip())
 def debug(x): print("debug: ", x, file=sys.stderr)
+# template
 
 
 class BIT:
@@ -83,6 +85,8 @@ class BIT:
     def __str__(self):
         return str(self[1:self.size + 1])
 
+# END CUT HERE
+
 
 def main():
     s, b = mi()
@@ -96,11 +100,14 @@ def main():
     tmp = [(d[i], g[i]) for i in range(b)]
     tmp.sort(key=lambda x: x[0])
     d.sort()
+    # print(tmp)
+    # print(d)
     bit = BIT(b)
     for i in range(b):
         bit.add0(i, tmp[i][1])
     for i in range(s):
         tmp = bisect_right(d, a[i])
+        # print(tmp)
         print(bit.sum(tmp), end=" ")
     print()
 

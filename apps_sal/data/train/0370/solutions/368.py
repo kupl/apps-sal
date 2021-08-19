@@ -28,12 +28,17 @@ class Solution:
 
             def find(self, x):
                 if self.parent[x] != x:
+                    # path compression during find
                     self.parent[x] = self.find(self.parent[x])
                 return self.parent[x]
+                # while x != self.parent[x]:
+                #     x = self.parent[x]
+                # return self.parent[x]
 
             def union(self, a, b):
                 x = self.find(a)
                 y = self.find(b)
+                # self.parent[y] = x
                 if x == y:
                     return x
 
@@ -48,14 +53,18 @@ class Solution:
 
         DS = DisjointSetUnion(max(A))
 
+        #num_factor = defaultdict(list)
         num_id = defaultdict(int)
         for num in A:
             pf = list(set(prime_factors(num)))
+            #num_factor[num] = pf
             num_id[num] = pf[0]
             for i in range(len(pf) - 1):
+                # for num pf[i] and pf[i+1] can be unioned
                 DS.union(pf[i], pf[i + 1])
 
         max_size = 0
+        # nums belong to groups which are root's of num_id[num]
         group_count = defaultdict(int)
         for num in A:
             group_id = DS.find(num_id[num])

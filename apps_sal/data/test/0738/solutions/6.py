@@ -23,5 +23,6 @@ for x in range(A + B, B + C + 1):
     smplus = sm2(x, A, B, C)
     ANS += smplus * calc(x, C, D)
 
+    # print(x,smplus,ANS)
 
 print(ANS)

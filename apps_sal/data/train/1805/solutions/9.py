@@ -4,6 +4,7 @@ import heapq
 
 class Solution:
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
+        # (count, c)
         adj = {}
         for i in range(len(friends)):
             adj[i] = friends[i]

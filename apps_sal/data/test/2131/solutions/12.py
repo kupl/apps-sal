@@ -1,3 +1,4 @@
+# Zad
 from collections import Counter
 n = int(input())
 tree = []

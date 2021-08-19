@@ -14,5 +14,6 @@ for i in range(min(n, m + 1)):
 
     SUM -= A[i]
 
+    # print(ANS,SUM)
 
 print(ANS)

@@ -1,3 +1,4 @@
+# i文字目を見て，それより前のAの個数，ABの個数，ABCの個数を持っておく
 
 S = input()
 N = len(S)
@@ -10,7 +11,7 @@ for i in range(N):
     p[i + 1] = (p[i] * 3) % mod
 
 
-count = 0
+count = 0  # ?の数
 for i in range(N):
     if S[i] == "A":
         dp[0] = (dp[0] + p[count]) % mod

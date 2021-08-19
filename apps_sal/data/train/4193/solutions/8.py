@@ -12,7 +12,7 @@ def odd_dig_cubic(a, b):
     elif a <= 0 <= b:
         left = 1
         right = int_root3(b) | 1
-    else:
+    else:  # a<=b<=0
         left = (int_root3(abs(b)) + 1) | 1
         right = int_root3(abs(a)) | 1
     result = []

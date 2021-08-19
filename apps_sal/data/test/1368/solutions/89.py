@@ -27,6 +27,7 @@ def main():
     if(tmp[0] != s):
         howmany = v.count(s)
         nantoori = tmp.count(s)
+        # howmany個からnantoori個選ぶ方法
         res = howmany
 
         for i in range(nantoori - 1):

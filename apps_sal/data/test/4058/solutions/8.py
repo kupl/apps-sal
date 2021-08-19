@@ -14,6 +14,7 @@ while i < n:
             heater = j
             break
         j -= 1
+    # print(heater)
     if heater == -1:
         breaked = True
         break

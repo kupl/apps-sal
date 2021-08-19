@@ -15,6 +15,8 @@ class Solution:
         right = right[::-1]
         l = len(nums)
         res = 0
+        # print(left)
+        # print(right)
         for i in range(l):
             res = max(res, (left[i] + right[i] - (2 * nums[i])))
         if res != 0:

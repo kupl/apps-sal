@@ -18,35 +18,45 @@ class PokerHand(object):
         value = sorted(PRECEDENCE[x] for x in self.hand[::2])
         shape = self.hand[1::2]
 
+        # royal flush
         if len(set(shape)) == 1 and value == [10, 11, 12, 13, 14]:
             return HIERARCHY['royal_flush'], value, 'royal_flush'
 
+        # straight_flush
         elif len(set(shape)) == 1 and all(abs(value[i] - value[i + 1]) == 1 for i in range(len(value) - 1)):
             return HIERARCHY['straight_flush'], value, 'straight_flush'
 
+        # four of a kind
         elif any(value.count(x) == 4 for x in set(value)):
             return HIERARCHY['four_of_aKind'], value, 'four_of_aKind'
 
+        # full house
         elif any(value.count(x) == 3 for x in set(value)) \
                 and                         \
                 any(value.count(x) == 2 for x in set(value)):
             return HIERARCHY['full_house'], value, 'full_house'
 
+        # flush
         elif len(set(shape)) == 1:
             return HIERARCHY['flush'], value, 'flush'
 
+        # straight
         elif all(abs(value[i] - value[i + 1]) == 1 for i in range(len(value) - 1)):
             return HIERARCHY['straight'], value, 'straight'
 
+        # three of a kind
         elif any(value.count(x) == 3 for x in set(value)):
             return HIERARCHY['three_of_aKind'], value, 'three_of_aKind'
 
+        # two pairs
         elif Counter(value).most_common(2)[-1][-1] == 2:
             return HIERARCHY['two_pairs'], value, 'two_pairs'
 
+        # pair
         elif any(value.count(x) == 2 for x in set(value)):
             return HIERARCHY['pair'], value, 'pair'
 
+        # high Card
         else:
             return HIERARCHY['highcard'], value, 'highcard'
 

@@ -1,3 +1,4 @@
+# cook your dish here
 from sys import stdin, stdout
 
 s = ""

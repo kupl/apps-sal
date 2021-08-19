@@ -2,6 +2,7 @@ n = int(input()) + 1
 a = list(map(int, input().split()))
 mod = 10 ** 9 + 7
 
+# 1を一つだけ選ぶやつは重複する可能性
 d = [False] * (n + 1)
 
 left = right = 0

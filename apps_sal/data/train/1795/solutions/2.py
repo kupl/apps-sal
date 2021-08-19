@@ -1,3 +1,4 @@
+# https://en.wikipedia.org/wiki/Eight_queens_puzzle#Existence_of_solutions
 def nQueen(n):
     if n <= 3:
         return [[], [0], [], []][n]

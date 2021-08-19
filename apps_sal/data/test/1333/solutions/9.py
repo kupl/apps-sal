@@ -2,12 +2,12 @@ n, m = tuple(int(x) for x in input().split())
 right = True
 while n:
     if n % 2 == 1:
-        print('
+        print('#' * m)
     else:
         if right:
-            print('.' * (m - 1), '
-            right=False
+            print('.' * (m - 1), '#', sep="")
+            right = False
         else:
-            print('
-            right=True
+            print('#', '.' * (m - 1), sep="")
+            right = True
     n -= 1

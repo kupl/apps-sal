@@ -6,6 +6,7 @@ from sys import stdin
 import math
 
 
+# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 aux = []

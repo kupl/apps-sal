@@ -27,3 +27,15 @@ def solve(n, m):
 
 (n, m) = list(map(int, input().split(' ')))
 print(solve(n, m))
+
+# for n in range(1, 50, 1):
+# 	for m in range(1, 50, 1):
+# 		a = brute(n, m)
+# 		b = solve(n, m)
+# 		# print(a, b)
+# 		if a != b:
+# 			1/0
+
+# print(ans)
+
+# print(brute(n, m))

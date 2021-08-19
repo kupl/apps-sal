@@ -3,6 +3,9 @@ class Solution:
         from queue import PriorityQueue
         q = PriorityQueue()
 
+        # adj = {}
+        # for point in points:
+        #     s = point[]
         l = len(points)
         visited = set()
 
@@ -21,4 +24,5 @@ class Solution:
                         q.put((abs(points[point][0] - points[j][0]) + abs(points[point][1] - points[j][1]), j))
                 ans += dis
                 count += 1
+            # print(dis, point)
         return ans

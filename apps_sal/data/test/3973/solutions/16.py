@@ -34,5 +34,6 @@ for fav in range(2, m + 1):
 
     use_fav += from_counter[fav - 1]
     ans = min(ans, cost)
+    # print(fav, cost)
 
 print(ans)

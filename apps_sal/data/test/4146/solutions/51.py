@@ -37,3 +37,5 @@ else:
     res = min(n - odd_values[0] - even_values[1],
               n - odd_values[1] - even_values[0])
 print(res)
+# print(odd)
+# print(even)

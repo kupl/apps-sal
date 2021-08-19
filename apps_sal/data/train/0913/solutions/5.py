@@ -1,3 +1,4 @@
+# cook your dish here
 import collections
 n, m, k = list(map(int, input().split()))
 l = [[int(j) for j in input().split()] for i in range(k)]

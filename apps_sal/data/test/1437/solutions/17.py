@@ -24,6 +24,15 @@ def ones(n):
 def zeros(x):
     return 6 - ones(x)
 
+# def zeros(x):
+#     i=1
+#     res=0
+#     while i<=x:
+#         if (i&x) ==0:
+#             res+=1
+#         i= i<<1
+#     return res
+
 
 def pow(a, b, mod=10**9 + 7):
     res = 1

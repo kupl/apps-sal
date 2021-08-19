@@ -7,3 +7,4 @@ def goose_filter(birds):
         if i not in geese:
             a.append(i)
     return a
+#     return [b for b in birds if b not in geese]

@@ -12,4 +12,5 @@ for i in range(n):
     if boxes == m:
         break
     ans += 1
+    # print(ans,boxes,loc)
 print(ans)

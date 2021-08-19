@@ -18,6 +18,8 @@ def goodandbadPersons(n, k, s):
             print('none')
     return
 
+# Driver code starts here
+
 
 def __starting_point():
     t = int(input())

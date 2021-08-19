@@ -16,7 +16,7 @@ def main():
     N, K = list(map(int, input().split(' ')))
     A = list(map(int, input().split(' ')))
     A.sort()
-    comb = [0 for _ in range(N)]
+    comb = [0 for _ in range(N)]  # comb[i] = i_C_(K-1)
     v = 1
     for i in range(K - 1, N):
         comb[i] = v

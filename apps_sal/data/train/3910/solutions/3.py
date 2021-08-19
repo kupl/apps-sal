@@ -1,3 +1,4 @@
+# supports any number greater than 1000 and also negative number
 
 from collections import defaultdict
 

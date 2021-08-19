@@ -17,6 +17,7 @@ for i in range(1, n + 1):
     last = deepcopy(last1)
     res = [i1 for i1 in range(1, n + 1)]
     res.sort(key=lambda x: (cn[x], -last[x]), reverse=True)
+    # print(res)
 
     for j in range(len(res)):
         if res[j] != i:

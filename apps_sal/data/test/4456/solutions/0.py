@@ -2,6 +2,7 @@ n, k = map(int, input().split())
 aa = list(map(int, input().split()))
 bb = list(map(int, input().split()))
 ab = "abcdefghijklmnopqrstuvwxyz"
+# print(len(ab))
 ss = {}
 j = 0
 it = []
@@ -13,6 +14,7 @@ for i in bb:
     ind = ss[i]
     j, ind = sorted([jj, ind])
     it.append([j, ind])
+  #  print(i,jj,ind)
     jj += 1
 
 it.sort()
@@ -42,6 +44,8 @@ if len(res) < k:
 else:
     print("YES")
     if len(res) > k:
+      #  print(res[:k-1])
+       # print(res)
         res = res[:k - 1] + [[res[k - 1][0], n - 1]]
     kk = -1
     res.sort()

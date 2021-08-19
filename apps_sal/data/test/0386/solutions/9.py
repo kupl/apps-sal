@@ -13,6 +13,7 @@ for x in range(int(input())):
             r = min(r, n)
         else:
             l = max(l, n + 1)
+   ## print(l, r)
 if l <= r:
     print((l + r) // 2)
 else:

@@ -1,6 +1,7 @@
 s = input()
 n = len(s)
 
+# iよりleftのA、rightのC, leftの？, rightの?
 la = [0 for _ in range(n)]
 rc = [0 for _ in range(n)]
 lq = [0 for _ in range(n)]

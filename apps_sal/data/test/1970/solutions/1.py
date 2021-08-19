@@ -64,11 +64,11 @@ for t in range(T):
     valid = False
     for i in range(8):
         for j in range(8):
-            if(Moves1[i][j] != -1 and Moves1[i][j] == Moves2[i][j] and L[i][j] != "
-                valid=True
+            if(Moves1[i][j] != -1 and Moves1[i][j] == Moves2[i][j] and L[i][j] != "#"):
+                valid = True
     if(valid):
         print("YES")
     else:
         print("NO")
     if(t != T - 1):
-        s=input()
+        s = input()

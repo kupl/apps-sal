@@ -21,6 +21,7 @@ class NewGame2:
 
     def play(self, pieces):
         clear = False
+        # clear = True
         if self.moves > 3:
             return '-1 -1 -1 -1 -1 -1 -1 -1 -1'
 
@@ -48,6 +49,7 @@ class NewGame2:
                             self.map[posy + py][posx + px] = pieces[res[i] - 1] + 1
                             placed += 1
 
+                # clear
                 rows = [False for i in range(0, self.N)]
                 columns = [False for i in range(0, self.N)]
 
@@ -225,6 +227,7 @@ class JUNE16:
         game = NewGame2()
         while True:
             a = [int(x) - 1 for x in input().split()]
+            # print "in: %s" % a
             if a[0] < 0:
                 return
             print(game.play(a))

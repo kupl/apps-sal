@@ -25,6 +25,8 @@ def str_to_points(string):
 
 
 def doIntersect(seg1, seg2):
+    # seg1 = [(p0_x, p0_y), (p1_x, p1_y)]
+    # seg2 = [(p2_x, p2_y), (p3_x, p3_y)]
     p0_x = seg1[0].x
     p0_y = seg1[0].y
     p1_x = seg1[1].x
@@ -49,16 +51,20 @@ def doIntersect(seg1, seg2):
 
 
 def check(points):
+    # the path doesn't complete the loop back to the mousehole
     if points[0] != points[-1]:
         return False
+    # the mousehole is located along the straight path of a wall
     if points[1].x == points[-2].x or points[1].y == points[-2].y:
         return False
+    # the path intersects/overlaps itself
     points_count = len(points) - 1
     for i in range(points_count - 3):
         for j in range(i + 2, points_count - 1):
             if doIntersect((points[i], points[i + 1]), (points[j], points[j + 1])):
                 return False
     for i in range(1, points_count - 2):
+        # print((str(points[0]), str(points[-2])), (str(points[i]), str(points[i+1])))
         if doIntersect((points[0], points[-2]), (points[i], points[i + 1])):
             return False
     return True

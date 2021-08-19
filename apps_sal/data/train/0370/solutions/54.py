@@ -1,6 +1,6 @@
 class UnionFind:
     def __init__(self):
-        self.rblong = dict()
+        self.rblong = dict()  # aRe BeLong to
 
     def find(self, n):
         if n not in self.rblong:
@@ -49,9 +49,11 @@ class Solution:
             if num2 > 1:
                 uf.union(num, num2)
 
+        # print(uf.rblong)
         count = dict()
         for num in A:
             tmp = uf.find(num)
+            #print('num == {}, tmp == {}'.format(num, tmp))
 
             if tmp not in count:
                 count[tmp] = 1

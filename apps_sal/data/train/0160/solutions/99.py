@@ -10,6 +10,7 @@ class Solution:
         elif (start, end) in memo:
             return memo[(start, end)]
 
+        # choose one which is most optimal for the player
         L = piles[start] - self.dfs(piles, start + 1, end, memo)
         R = piles[end] - self.dfs(piles, start, end - 1, memo)
         memo[(start, end)] = max(L, R)

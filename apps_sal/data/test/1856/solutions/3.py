@@ -2,6 +2,7 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
+#P=[input().strip() for i in range(n)]
 
 Group = [i for i in range(26)]
 Nodes = [1] * (26)
@@ -35,6 +36,8 @@ for i in range(n):
         Union(ord(P[j - 1]) - 97, ord(P[j]) - 97)
     USE[ord(P[0]) - 97] = 1
 
+# print(USE)
+# print(Group)
 
 SET = set()
 for i in range(26):

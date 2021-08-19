@@ -11,6 +11,9 @@ for i in range(q):
 
     seglist = [2] * n
     seglist[ilist[0][2]] = 1
+    # print(seglist)
+    # print(ilist)
+    # print(ilist)
     goodvalue = -1
     currentmax = ilist[0][1]
     for k in range(n - 1):
@@ -20,6 +23,10 @@ for i in range(q):
         if currentmax < ilist[k + 1][0]:
             break
 
+    # for k in range(goodvalue+1,n):
+    #    seglist[ilist[k][2]]=2
+    #    print(k)
+    # print(seglist)
     if sum(seglist) == n:
         print(-1)
     else:

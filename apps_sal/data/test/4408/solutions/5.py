@@ -50,6 +50,7 @@ for ni in range(1, n1):
     for ki in range(1, nk1):
         mficount = min(k, ki) + 1
         for kii in range(mficount):
+            # log(ni,ki, kii, dp[ni][ki], dp[ni-1][ki-kii] + h[kii])
             dp[ni][ki] = max(dp[ni][ki], dp[ni - 1][ki - kii] + h[kii])
 res = 0
 for fk, fv in cf.items():

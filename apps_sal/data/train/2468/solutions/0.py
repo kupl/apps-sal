@@ -1,7 +1,9 @@
 class Solution:
     def tictactoe(self, moves: List[List[int]]) -> str:
+        # player one and two moves
         player_a, player_b = moves[0::2], moves[1::2]
 
+        # possible wins
         possible_wins = {
             0: [[0, 0], [1, 1], [2, 2]],
             1: [[0, 0], [1, 0], [2, 0]],
@@ -13,6 +15,7 @@ class Solution:
             7: [[0, 2], [1, 1], [2, 0]]
         }
 
+        # count player one and two correct moves
         for possible_win in list(possible_wins.values()):
             count_a = 0
             for move in player_a:

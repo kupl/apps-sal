@@ -65,4 +65,5 @@ class Solution:
 
         counter = collections.Counter(
             mapping.root(k) for k in mapping)
+        # print(mapping)
         return max(counter.values())

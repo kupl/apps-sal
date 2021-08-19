@@ -1,6 +1,7 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         len_1, len_2 = len(text1), len(text2)
+        # Append an additional 0 to stand for the case of \"\" for both strings
         dp = [[0] * (len_2 + 1) for _ in range(len_1 + 1)]
         max_len_subseq = 0
 

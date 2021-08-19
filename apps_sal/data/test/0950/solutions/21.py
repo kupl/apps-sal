@@ -1,4 +1,4 @@
-symb = ["
+symb = ["#", "*", "&"]
 inf = float("inf")
 
 
@@ -43,14 +43,18 @@ for i in range(n):
     firsts.append(first(s[i]) + [i])
 
 a = sorted(firsts, key=lambda x: x[0])
-b=sorted(firsts, key=lambda x: x[1])
-c=sorted(firsts, key=lambda x: x[2])
+b = sorted(firsts, key=lambda x: x[1])
+c = sorted(firsts, key=lambda x: x[2])
 
 for i in range(min(m, 3)):
     for j in range(min(m, 3)):
         for k in range(min(m, 3)):
+            #print(a[i][0] + a[j][1] + a[k][2], a[i][3], a[j][3], a[k][3])
             if a[i][3] != b[j][3] and a[i][3] != c[k][3] and b[j][3] != c[k][3]:
-                ans=min(ans, a[i][0] + b[j][1] + c[k][2])
+                ans = min(ans, a[i][0] + b[j][1] + c[k][2])
 
+# print(a)
+# print(b)
+# print(c)
 
 print(ans)

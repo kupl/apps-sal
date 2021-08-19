@@ -16,6 +16,7 @@ def lnint(n): return [int(input()) for _ in range(n)]
 def lint_list(n): return [lint() for _ in range(n)]
 
 
+############################################################
 A, B = lint()
 if A > 1:
     A -= 13

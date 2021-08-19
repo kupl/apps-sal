@@ -1,3 +1,8 @@
+# einlesen
+# dfs für jede cc
+#     Zählen, wie viele w/r
+#     wenn cooring nicht möglich -> Ergebnis 0
+#     sonst 2^w+2^r
 M = 998244353
 t = int(input())
 n, m = 0, 0

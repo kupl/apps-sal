@@ -8,12 +8,15 @@ def solve():
     P = map(int, f_i.readline().split())
     X = tuple(map(int, f_i.readline().split()))
 
+    # Create lists of children
     C = [[] for i in range(N)]
     for c, p in enumerate(P, start=1):
-        C[p - 1].append(c)
+        C[p - 1].append(c)  # Set vertex numbers to 0-based
 
     Y = [inf] * N
 
+    # Perform a depth-first search in postorder
+    # Execute dp in each sub-tree
     def dfs(v):
         for c in C[v]:
             dfs(c)

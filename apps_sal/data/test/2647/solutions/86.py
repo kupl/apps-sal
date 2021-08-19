@@ -9,8 +9,8 @@ def main():
 
     for f in field:
         for s in f:
-            if s == "
-            black += 1
+            if s == "#":
+                black += 1
 
     dir_h = [0, 0, 1, -1]
     dir_w = [1, -1, 0, 0]
@@ -33,8 +33,8 @@ def bfs(H, W, field, dir_h, dir_w):
 
             if nh < 0 or nh >= H or nw < 0 or nw >= W:
                 continue
-            elif field[nh][nw] == "
-            continue
+            elif field[nh][nw] == "#":
+                continue
             elif seen[nh][nw] != -1:
                 continue
 

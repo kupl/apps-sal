@@ -2,6 +2,8 @@ class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         if(not position):
             return 0
+        # def comp(a):
+        #     return a[1],a[0]
         arr = list(zip(position, speed))
         arr.sort(reverse=True)
         ans = 1

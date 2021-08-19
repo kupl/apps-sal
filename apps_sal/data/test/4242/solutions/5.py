@@ -1,5 +1,6 @@
 A, B, K = map(int, input().split())
 
+# AもBも割り切る正整数のうち、K番目に大きいものを出力せよ。
 
 count = []
 c = min(A, B)

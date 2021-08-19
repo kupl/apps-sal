@@ -8,6 +8,7 @@ for i in range(m):
     while True:
         if pysort[i][1] == j:
             cnt += 1
+            #pysort[i] += [f"{pysort[i][1]}:{cnt}"]
             pysort[i] += [str(pysort[i][1]).zfill(6) + str(cnt).zfill(6)]
             break
         else:

@@ -9,6 +9,7 @@ for qq in range(t):
             amin += 1
         else:
             bmin += 1
+    # print s,amin,bmin
     for cc in range(n - 1):
         s = input()
         ca = 0
@@ -20,4 +21,5 @@ for qq in range(t):
                 cb += 1
         amin = min(ca, amin)
         bmin = min(cb, bmin)
+    #   print s,amin,bmin
     print(min(amin, bmin))

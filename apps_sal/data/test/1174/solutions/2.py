@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Wed Sep 16 17:42:18 2020
 
@@ -12,17 +13,19 @@ Created on Wed Sep 16 17:42:18 2020
 　⇒O(n)
  【使い方】
   import heapq
-  ●heapq.heapify(list) 
-  ●heapq.heapify(list(map(lambda x:int(x)*(-1),list))) 
+  ●heapq.heapify(list) #最小値
+  ●heapq.heapify(list(map(lambda x:int(x)*(-1),list))) #最大値は値をひっくり返す
   ●heapq.heappop(a)
   ●heapq.heappush(a,1)
 """
 
 import heapq
 N, M = map(int, input().split())
+# -1倍する
 A = [int(x) * (-1) for x in input().split()]
 heapq.heapify(A)
 
+# O(M) * O(log N)
 for i in range(M):
     Max = heapq.heappop(A) * (-1)
     Max //= 2

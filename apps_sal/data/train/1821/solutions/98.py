@@ -1,5 +1,7 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
+        # merge sort
+        # divide and conquer
         def sort(nums):
             if len(nums) == 1:
                 return nums

@@ -44,6 +44,7 @@ else:
             used = [False] * 26
             d.append(i)
     d = d[::-1]
+    # print(d)
     ans = ""
     cnt = 0
     i = 0
@@ -62,12 +63,14 @@ else:
 
         if skip:
             if s[i] == ans[-1]:
+                # print(i)
                 skip = False
             continue
 
         if used[num(s[i])] == False:
             used[num(s[i])] = True
 
+    # print(used)
     for j in range(26):
         if used[j] == False:
             ans += let(j)

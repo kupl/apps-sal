@@ -46,4 +46,6 @@ for k in range(2 * n):
             sa += a[i]
             a[i] = 0
             i += 1
+# sa+=sum(a)
+# sb+=sum(b)
 print(sa - sb)

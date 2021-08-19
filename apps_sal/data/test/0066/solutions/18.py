@@ -1,3 +1,4 @@
+# your code goes here
 
 [t, w, b] = [int(x) for x in input().split()]
 

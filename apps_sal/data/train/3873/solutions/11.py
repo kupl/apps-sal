@@ -1,3 +1,4 @@
+# because the output is so huge, output is hidden for the medium and big random tests
 
 import numpy as np
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 def process(N, S):
     C = 0

@@ -3,6 +3,7 @@ class Solution:
         results = set()
         temp = {0}
         for cur in A:
+           # print(temp)
             temp = {cur} | {cur | t for t in temp}
             results.update(temp)
         return len(results)

@@ -17,11 +17,14 @@ class StreamChecker:
         if len(self.buffer) > self.max:
             self.buffer = self.buffer[-self.max:]
 
+        # print(self.buffer)
         if self.buffer in list(self.res.keys()):
             return self.res[self.buffer]
+        #print(self.buffer, 'checa')
         if len(self.buffer) not in list(self.words.keys()):
             return False
 
+        #print(self.buffer, 'checa2')
         for i in self.words:
             if len(self.buffer) >= i and self.buffer[-i:] in self.words[i]:
                 self.res[self.buffer] = True
@@ -29,3 +32,8 @@ class StreamChecker:
 
         self.res[self.buffer] = False
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

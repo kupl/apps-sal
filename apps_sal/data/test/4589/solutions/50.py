@@ -10,8 +10,8 @@ for i in range(X):
             for k in range(8):
                 x = i + DX[k]
                 y = j + DY[k]
-                if 0 <= x < X and 0 <= y < Y and F[x][y] == '
-                cnt += 1
+                if 0 <= x < X and 0 <= y < Y and F[x][y] == '#':
+                    cnt += 1
             F[i][j] = str(cnt)
 
 for f in F:

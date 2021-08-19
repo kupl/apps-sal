@@ -1,3 +1,8 @@
+# written by sak
+#
+#	sk<3
+#
+# powered by codechef
 
 n = int(input())
 change = 0

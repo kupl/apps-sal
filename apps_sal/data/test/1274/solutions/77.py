@@ -8,11 +8,12 @@ for i in range(N):
         continue
     AtoB[A].append(B)
 
+# A が小さい順に増えていく
 result = 0
-que = []
+que = []  # ヒープ
 for Bs in AtoB:
     for B in Bs:
-        heappush(que, -B)
+        heappush(que, -B)  # Python3 のヒープはデフォルトで小さい順
     if que:
         result -= heappop(que)
 print(result)

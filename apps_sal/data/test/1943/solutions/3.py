@@ -1,4 +1,5 @@
 n = int(input())
+# Using the same index I would for a tree
 m = 2**n
 
 points = [0] * (2 * m)
@@ -18,6 +19,7 @@ for i in range(m):
 for i in reversed(range(1, m)):
     for j in range(m):
         for k in range(j + 1, m):
+            # x is probability that team j meets team k in match i
             x = state[2 * i][j] * state[2 * i + 1][k]
 
             state[i][j] += P[j][k] * x

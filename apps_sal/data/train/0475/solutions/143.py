@@ -20,6 +20,7 @@ class Solution:
             val, idx = heapq.heappop(h)
             if k >= left:
                 ans += val
+            # right is 1 more than actual length
             if idx + 1 < len(nums):
                 heapq.heappush(h, (val + nums[idx + 1], idx + 1))
 

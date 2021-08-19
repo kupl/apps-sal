@@ -2,6 +2,7 @@ import random
 
 
 def __starting_point():
+    #n, m = list(map(int, input().split()))
     n = int(input())
     s = input()
     if n > 26:

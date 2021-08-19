@@ -18,6 +18,7 @@ class Solution:
         while q:
             prob, node = heapq.heappop(q)
 
+            # print((prob, node))
             if node == end:
                 cand.append(-prob)
 

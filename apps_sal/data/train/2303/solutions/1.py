@@ -1,8 +1,10 @@
 from collections import deque
 N, M = map(int, input().split())
 F_C_of_S = [{} for i in range(N)]
+# Companies of Station
 C_of_S = {}
 
+# def Union-find
 parent = [-1] * M
 
 
@@ -27,6 +29,7 @@ def unite(x, y):
     return True
 
 
+# Union-find
 pqcs = []
 for i in range(M):
     p, q, c = map(int, input().split())
@@ -34,18 +37,23 @@ for i in range(M):
     q -= 1
     pqcs += [(p, q, c)]
 
+    # The first
     if not c in F_C_of_S[p]:
         F_C_of_S[p][c] = i
+    # else
     else:
         unite(F_C_of_S[p][c], i)
     C_of_S.setdefault(p, set()).add(c)
 
+    # The first
     if not (c in F_C_of_S[q]):
         F_C_of_S[q][c] = i
+    # else
     else:
         unite(F_C_of_S[q][c], i)
     C_of_S.setdefault(q, set()).add(c)
 
+# stations of company
 S_of_C = {}
 for i in range(M):
     p, q, c = pqcs[i]
@@ -55,6 +63,7 @@ for i in range(M):
 
 
 Q = deque([(0, 0, 0)])
+# cost to go to the stations from station_0
 dist = [float('inf')] * N
 dist[0] = 0
 
@@ -63,7 +72,7 @@ gdist = [float('inf')] * M
 while Q:
     cost, v, flag = Q.popleft()
 
-    if not (flag):
+    if not (flag):  # (flag == 0) then gdist_update
         if (dist[v] < cost) or (v not in C_of_S):
             continue
         for l in F_C_of_S[v].values():
@@ -72,7 +81,7 @@ while Q:
                 gdist[l] = cost
                 Q.appendleft((cost, l, 1))
 
-    else:
+    else:  # (flag == 1) then dist_update
         if (gdist[v] < cost) or (v not in S_of_C):
             continue
         for s in S_of_C[v]:

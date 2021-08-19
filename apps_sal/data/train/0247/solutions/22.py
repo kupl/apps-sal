@@ -18,6 +18,7 @@ class Solution:
             t = N + 1
             xx = total - target
             if xx in presum:
+                #   找到一个target
                 t = i - presum[xx]
             prefix[i] = min(prefix[i - 1], t)
 
@@ -37,8 +38,12 @@ class Solution:
             t = N + 1
             xx = total - target
             if xx in sufsum:
+                #   找到一个target
                 t = sufsum[xx] - i
             suffix[i] = min(suffix[i + 1], t)
+
+        # print(prefix)
+        # print(suffix)
 
         rtv = N + 1
         for i in range(N - 1):

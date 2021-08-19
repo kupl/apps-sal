@@ -1,4 +1,5 @@
 3
+# -*- coding: utf-8 -*-
 
 
 def check(s):

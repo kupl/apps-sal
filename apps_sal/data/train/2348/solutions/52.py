@@ -16,17 +16,19 @@ def SI(): return input()
 
 def main():
     N = II()
-    X = LI()
-    X.append(INF)
-    L = II()
+    X = LI()  # coordinate of hotels
+    X.append(INF)  # banpei
+    L = II()  # max move distance/day
     Q = II()
-    AB = []
+    AB = []  # two hotel (a,b)
     for _ in range(Q):
         AB.append(LI_())
     Unreachs = [[] for _ in range(N)]
+    # 1day
     for i, x in enumerate(X[:-1]):
         u = bisect(X, x + L)
         Unreachs[i].append(u)
+    # day 2, 4, 8, ...
     updated = True
     while updated:
         updated = False
@@ -34,6 +36,7 @@ def main():
             u = Unreachs[Unreachs[i][-1] - 1][-1]
             updated = updated or (u != Unreachs[i][-1])
             Unreachs[i].append(u)
+    # solve
     for a, b in AB:
         if a > b:
             a, b = b, a

@@ -7,4 +7,5 @@ def decodeBits(bits):
 
 
 def decodeMorse(morseCode):
+    # ToDo: Accept dots, dashes and spaces, return human-readable message
     return ' '.join(''.join(MORSE_CODE[letter] for letter in word.split(' ')) for word in morseCode.strip().split('   '))

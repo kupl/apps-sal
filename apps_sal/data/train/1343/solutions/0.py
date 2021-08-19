@@ -1,3 +1,4 @@
+# cook your dish here
 def check_equal(a, b):
     index = 0
     for i in a:

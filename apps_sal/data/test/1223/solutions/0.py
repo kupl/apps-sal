@@ -1,9 +1,11 @@
 def main():
     class unionfind():
-        def __init__(self, size):
+        # size:要素数,tree：unionfind木
+        def __init__(self, size):  # self,要素数
             self.size = size
-            self.tree = [i for i in range(self.size)]
+            self.tree = [i for i in range(self.size)]  # root,depth
 
+        # rootを探す
         def root(self, index):
             temp_list = []
             temp = self.tree[index]
@@ -15,6 +17,7 @@ def main():
                 self.tree[i] = index
             return index
 
+        # 結合
         def unite_r(self, index1, index2):
             r1 = self.root(index1)
             r2 = self.root(index2)
@@ -31,6 +34,7 @@ def main():
             else:
                 self.tree[r2] = r1
 
+        # 同じか判定
         def same(self, index1, index2):
             r1 = self.root(index1)
             r2 = self.root(index2)

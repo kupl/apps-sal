@@ -14,6 +14,8 @@ m, a, b = list(map(int, input().split()))
 GCD = gcd(a, b)
 
 
+# when a>b,
+
 MODLIST = [-1] * a
 
 NOWMAX = a
@@ -31,12 +33,14 @@ while True:
     if MODLIST[(NOW - b) % a] != -1:
         break
 
-ANS = m + 1
+ANS = m + 1  # 0
 MAX = max(MODLIST)
 for i in range(1, min(m + 1, MAX)):
     if MODLIST[i % a] == -1:
         continue
     ANS += max((m + 1 - max(MODLIST[i % a], i)), 0)
+
+    # print(ANS)
 
 
 if MAX <= m:

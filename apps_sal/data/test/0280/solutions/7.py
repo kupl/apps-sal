@@ -56,6 +56,7 @@ else:
             continue
         ls = [0]
         for i in range(1, n):
+            #         val = ls[i-1]+lm
             val = max(ls[ii] + sub(cum[i + 1] - cum[ii]) for ii in range(i))
             ls.append(val)
         ans = min(ans, ls[-1])

@@ -16,7 +16,7 @@ class Solution:
                 final[0] = min(final[0], counts)
                 return
             if key in dp and dp[key] <= counts:
-                return
+                return  # dp[key]
 
             dp[key] = counts
 

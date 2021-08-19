@@ -1,4 +1,5 @@
 
+# https://www.codechef.com/problems/DIGJUMP
 
 import sys
 import math

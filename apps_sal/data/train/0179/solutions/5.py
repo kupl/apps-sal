@@ -12,9 +12,9 @@ class Solution:
         for i in range(n):
             for j in range(K + 1):
                 if j > 0:
-                    dp[i + 1][j - 1] = min(dp[i + 1][j - 1], dp[i][j])
+                    dp[i + 1][j - 1] = min(dp[i + 1][j - 1], dp[i][j])  # delete at position i
                 take = 0
-                for k in range(i + 1)[::-1]:
+                for k in range(i + 1)[::-1]:  # keep at position i, iterate length of suffix you keep
                     if s[k] != s[i]:
                         take += 1
                     if take > j:

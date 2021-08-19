@@ -3,3 +3,4 @@ def is_divisible(n, x, y):
         if(n % y == 0):
             return True
     return False
+    # your code here

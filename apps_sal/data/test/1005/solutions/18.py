@@ -30,6 +30,7 @@ def pf(s): return print(s, flush=True)
 
 
 def main():
+    # input
     if os.path.exists('input.txt'):
         sys.stdin = open('input.txt', 'r')
     t = int_inp()

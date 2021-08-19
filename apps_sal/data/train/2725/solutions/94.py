@@ -1,4 +1,5 @@
 def gimme(input_array):
+    # Implement this function
     sort_items = []
     for i in input_array:
         sort_items.append(i)

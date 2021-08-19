@@ -38,6 +38,7 @@ def main():
             if a[j] >= K:
                 break
             ss[i] = (((ss[i] + 1) << a[j]) | ss[i]) & pm
+        # print(bin(ss[i]), bin(mask(K-c)),ss[i]&mask(K-c))
         if ss[i] & mask(K - a[i]) == 0:
             return True
         return False
@@ -46,7 +47,18 @@ def main():
         if a[i] >= K:
             break
         ss[i + 1] = (((ss[i] + 1) << a[i]) | ss[i]) & pm
+        # if isunnec(i):
+        #     nn+=1
+        # for j in range(i+1,N):
+        #    if a[j]>=K:
+        #        break
+        #    ss[i]=mkns(a[j],ss[i],pm)
+        ##print(bin(ss[i]), bin(mask(K-c)),ss[i]&mask(K-c))
+        # if ss[i]&mask(K-a[i])==0:
+        #    nn+=1
+    #m=len(list(filter(lambda x:x<K, a)))
     nn = biser(list(range(N)), isunnec) + 1
+    # print(list(map(bin,ss)))
     print(nn)
 
 

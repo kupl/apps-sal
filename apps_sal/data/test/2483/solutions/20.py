@@ -1,8 +1,8 @@
 def main():
     N, C = list(map(int, input().split(' ')))
     progams = [list(map(int, input().split(' '))) for _ in range(N)]
-    progams.sort(key=lambda p: p[0])
-    recorders = [[0, 0] for _ in range(C)]
+    progams.sort(key=lambda p: p[0])  # sort in ascending order of start time
+    recorders = [[0, 0] for _ in range(C)]  # (end time, channel)
     for prog in progams:
         s, t, c = prog
         for i in range(C):

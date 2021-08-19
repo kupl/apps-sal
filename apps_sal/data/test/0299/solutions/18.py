@@ -17,6 +17,7 @@ for i in range(n):
 
 anss = [ans[i] for i in range(3)]
 anss.sort()
+# print(anss,ans)
 if ans[0] == anss[-1]:
     print("chest")
 if ans[1] == anss[-1]:

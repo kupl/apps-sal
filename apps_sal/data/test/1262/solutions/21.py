@@ -40,6 +40,7 @@ for j in range(n):
             cost[i] = cost_From_City
             updated[i] = city
 
+        # print(updated)
 print(totalCost)
 print(len(req_Powerstation))
 print(*req_Powerstation)

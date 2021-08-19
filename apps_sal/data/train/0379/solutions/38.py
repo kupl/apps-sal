@@ -18,11 +18,13 @@ class Solution:
         for i in range(m):
             d[nums1[i]] = i
         st1 = set(nums1)
+        # print(st)
         for i in range(n):
             if nums2[i] in st1:
                 cm1.append(d[nums2[i]])
                 cm2.append(i)
         ans = 0
+        # print(pre1,pre2,cm1,cm2)
         for i in range(len(cm1)):
             idx1 = cm1[i]
             idx2 = cm2[i]

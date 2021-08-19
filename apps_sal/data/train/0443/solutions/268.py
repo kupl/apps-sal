@@ -3,6 +3,17 @@ class Solution:
 
         ratings = [[]]
 
+#         for items in rating:
+#             ratings += [item + [items] for item in ratings if len(item) < 3]
+
+#         count = 0
+#         for item in ratings:
+#             if len(item) == 3:
+#                 if item[0] > item[1] and item[1] > item[2]:
+#                     count += 1
+#                 elif item[0] < item[1] and item[1] < item[2]:
+#                     count += 1
+
         n = len(rating)
 
         count = 0

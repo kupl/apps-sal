@@ -11,8 +11,8 @@ def resolve():
     B = 0
 
     from heapq import heappush, heappop
-    q = []
-    Q = []
+    q = []  # 小さいほうの最大をとる→マイナスにして入れる
+    Q = []  # 大きいほうの最小をとる
 
     for _ in range(k):
         s = input()
@@ -21,6 +21,7 @@ def resolve():
             heappush(q, -a)
             heappush(Q, a)
             B += b
+            # 大小関係が逆転しているかを判断する
             t = -q[0]
             T = Q[0]
             if(t > T):

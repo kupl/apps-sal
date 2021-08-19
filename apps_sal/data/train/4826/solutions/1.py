@@ -1,8 +1,7 @@
 import re
 
 LEGS = r'[a-z]'
-BODY = r'[ | }
-&
+BODY = r'[|};&#\[\]/><()*]'
 
 
 def counRobots(strng, typeRobot):

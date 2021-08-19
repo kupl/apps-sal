@@ -22,6 +22,7 @@ def main():
             continue
         else:
             person.x = person.id
+            # bfs
             reserved = deque([person])
             seen = {person.id}
             while len(reserved) > 0:

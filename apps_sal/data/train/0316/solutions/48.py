@@ -16,5 +16,11 @@ class Solution:
                     i = i + 1
         m = lps[-1]
         index = len(s) - 1
+        # print(lps)
+        # for i in range(len(s)):
+        #   if(lps[i]>m):
+        #      m=lps[i]
+        #     index=i
 
+        # print(m,index)
         return s[abs(m - index - 1):index + 1]

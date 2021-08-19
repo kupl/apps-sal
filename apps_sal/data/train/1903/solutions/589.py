@@ -11,6 +11,7 @@ class Solution:
                 edges.append((abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j))
 
         edges.sort()
+        # print(edges)
         union_find = UnionFind(len(points))
 
         min_sum = 0

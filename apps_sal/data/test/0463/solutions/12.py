@@ -6,6 +6,8 @@ def getUsefulWeight(coef, uw):
     return uw
 
 
+#n = int(input().strip())
+#x = int(input().strip())
 n, x = list(map(int, input().strip().split(" ")))
 
 a = list(map(int, input().strip().split(" ")))

@@ -1,3 +1,4 @@
+# cook your dish here
 P = [True] * 1001
 p = 2
 while p * p <= 201:

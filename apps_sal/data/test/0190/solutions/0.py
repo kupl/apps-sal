@@ -17,6 +17,7 @@ if n != 1:
             n -= 1
         else:
             break
+# print(n)
 
 M = m
 br = 0
@@ -46,6 +47,7 @@ if m != 1:
             break
         if count == N:
             m -= 1
+# print(m)
 if m > n:
     print(m)
 else:

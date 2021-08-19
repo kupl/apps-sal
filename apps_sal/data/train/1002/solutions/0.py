@@ -1,3 +1,4 @@
+# cook your dish here
 def solution(b, n1, d):
     first = b[0]
     b.sort()

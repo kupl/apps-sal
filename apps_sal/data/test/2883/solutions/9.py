@@ -1,3 +1,8 @@
+# Definition for an interval.
+# class Interval:
+#     def __init__(self, s=0, e=0):
+#         self.start = s
+#         self.end = e
 
 class Solution:
     def merge(self, intervals):
@@ -13,6 +18,7 @@ class Solution:
         intervals.sort(key=lambda x: x.start)
         res = []
         for interval in intervals:
+            # 如果res 是空的，初始化的情况，要把第一个会议加进去！
             if not res or interval.start > res[-1].end:
                 res.append(interval)
             else:

@@ -96,29 +96,51 @@ def is_ccw(p0, p1, p2):
     a = p1.sub(p0)
     b = p2.sub(p0)
     if cross(a, b) > EPS:
+        # 'COUNTER_CLOCKWISE'
         return True
     else:
         return False
+        # 時計回り、同一直線上の場合,popする必要はないのでFalse
+    # # つまり下記のようなこと
+    # elif cross(a, b) < -EPS:
+    #     # 'CLOCKWISE'
+    #     return False
+    # else:
+    #     return False  # 同一直線上にあるとかそういう場合
 
+
+# andrewのアルゴリズムで凸包を求める。
+# このアルゴリズムの挙動はP403を見るとわかりやすい。
+# また凸包でなくなったときに点を取り除いていく作業はP402の下から7行目に示しされている。
 
 def convex_hull(points: list):
     points.sort(key=lambda x: (x[0], x[1]))
     if len(points) < 3:
+        # 点が2点しかないならば線しかないが、
+        # 今回は制約によりこうなる状況はないので無視する。
         pass
 
-    conv_upper = [points[0], points[1]]
+    # 凸包の上部(イメージはP403の図)
+    conv_upper = [points[0], points[1]]  # 初期値として最初の二点が与えられます。
     for p in points[2:]:
+        # 反時計回りである限りは
         while len(conv_upper) >= 2 and is_ccw(conv_upper[-2], conv_upper[-1], p):
+            # conv_upper[-1]は凸包を作る点ではないので捨てる
             conv_upper.pop()
         conv_upper.append(p)
 
+    # 凸包の下部
     points = points[::-1]
     conv_lower = [points[0], points[1]]
     for p in points[2::]:
+        # 反時計回りである限りは
         while len(conv_lower) >= 2 and is_ccw(conv_lower[-2], conv_lower[-1], p):
             conv_lower.pop()
         conv_lower.append(p)
 
+    # また、出力は反時計回りにしたい。
+    # conv_upperもconv_lowerも時計回りになっているので結合して引っくり返せばよい
+    # ただしアルゴリズムの性質上、ソートしたときに端にある点はだぶるので削除する
     ret = conv_upper[1:-1] + conv_lower
 
     return ret[::-1]
@@ -130,6 +152,9 @@ def main():
     for i in range(N):
         points.append(Vector(list(MI())))
     ans = convex_hull(points)
+
+    # print result
+    # 凸多角形の頂点で最も下にあるものの中でもっとも左にある頂点から順に、反時計回りで出力してくださいというのが一番面倒
 
     X = len(ans)
     dist_list = []

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 sys.setrecursionlimit(10 ** 8)
@@ -13,7 +14,7 @@ def solve():
     hw = B // 25 + 2
     hb = A // 25 + 2
     H = hw + hb
-    grid = [[i >= hw] * W for i in range(H)]
+    grid = [[i >= hw] * W for i in range(H)]  # true => black
 
     def paint_black():
         black = 1
@@ -44,7 +45,7 @@ def print_grid(grid):
     for r in range(h):
         for c in range(w):
             if grid[r][c]:
-                print("
+                print("#", end="")
             else:
                 print(".", end="")
         print()

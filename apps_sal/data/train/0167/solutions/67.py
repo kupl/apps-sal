@@ -13,6 +13,8 @@ class Solution:
 
             res = sys.maxsize
 
+            # for i in range(1, N + 1):
+            #     res = min(res, max(dp(K - 1, i - 1), dp(K, N - i)) + 1)
             lo, hi = 1, N
             while lo <= hi:
                 mid = int(lo + (hi - lo) / 2)

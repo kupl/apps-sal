@@ -19,6 +19,7 @@ class Solution:
                 res %= MOD
         return res
 
+        # self made, two pointer, TLE, too many redundant calculations
         MODULO = 10 ** 9 + 7
         nums.sort()
 
@@ -40,3 +41,24 @@ class Solution:
                 res += (2 ** (r - l)) % MODULO
             l += 1
         return res % MODULO
+
+        # self made, DFE, TLE
+#         self.res = 0
+#         end_idx = bisect.bisect_left(nums, target)
+#         self.dfs(nums, 0, end_idx, [], target)
+
+#         return self.res % MODULO
+
+#     def dfs(self, nums, start, end_idx, cur, target):
+#         if cur and cur[0] + cur[-1] > target:
+#             return
+
+#         if cur and cur[0] + cur[-1] <= target:
+#             self.res += 1
+
+#         for i in range(start, end_idx):
+#             if nums[start] > target:
+#                 return
+#             cur.append(nums[i])
+#             self.dfs(nums, i + 1, end_idx, cur, target)
+#             cur.pop()

@@ -11,17 +11,17 @@ if (t - g) % k == 0:
         i = g
         B = True
         while i < t:
-            if s[i] == "
-            B = False
-            break
+            if s[i] == "#":
+                B = False
+                break
             i += k
     else:
         i = t
         B = True
         while i < g:
-            if s[i] == "
-            B = False
-            break
+            if s[i] == "#":
+                B = False
+                break
             i += k
     if B:
         print("YES")

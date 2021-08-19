@@ -35,17 +35,21 @@ class DSU:
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         dsu = DSU()
+        #   create set for every letter
         for i in range(len(s)):
             dsu.make_set(i)
 
+        #   union connected letters
         for x, y in pairs:
             dsu.union(x, y)
 
         m = defaultdict(list)
+        #   map dsu parent to list of valid letters
         for i in range(len(s)):
             parent = dsu.get_parent(i)
             m[parent].append(s[i])
 
+        #   sort lists of strings
         for key, list_val in m.items():
             m[key] = sorted(list_val)
 

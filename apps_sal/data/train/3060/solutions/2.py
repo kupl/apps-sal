@@ -1,4 +1,5 @@
 def get_required(player, enemy):
+    # your code heredef get_required(player,enemy):
     p = player[0] + player[1]
     e = enemy[0] + enemy[1]
 

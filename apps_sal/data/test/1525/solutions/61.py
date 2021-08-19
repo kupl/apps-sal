@@ -1,5 +1,7 @@
 H, W, K = list(map(int, input().split()))
 
+# 連続するn区間に橋をかける方法は何通りあるか
+# kakekata[b][i] : bが0の時はi区間目に橋をかけない方法 bが1の時はi区間目に橋をかける方法 が何通りあるか
 kakekata = [[0] * 10] + [[0] * 10]
 kakekata[0][0] = 1
 for i in range(8):
@@ -32,10 +34,14 @@ dp = [[modint(0)] * (W + 2) for h in range(H + 1)]
 dp[0][1] += 1
 for h in range(H):
     for w in range(1, W + 1):
+        # 左に何区間あるか 右に何区間あるか
         l, r = w - 1, W - w
 
+        # そのまま渡す
         dp[h + 1][w] += dp[h][w] * kakekata[0][l] * kakekata[0][r]
+        # 右に渡す
         dp[h + 1][w + 1] += dp[h][w] * kakekata[0][l] * kakekata[1][r]
+        # 左に渡す
         dp[h + 1][w - 1] += dp[h][w] * kakekata[1][l] * kakekata[0][r]
 
 print((dp[H][K]))

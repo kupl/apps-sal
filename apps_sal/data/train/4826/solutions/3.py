@@ -1,8 +1,7 @@
 import re
 
 LEGS = r'[a-z]'
-BODY = r'[ | }
-&
+BODY = r'[|};&#\[\]/><()*]'
 
 
 def counRobots(a, type): return str(sum(len(re.findall(LEGS + BODY + "{2}0" + BODY + "{2}0" + BODY + "{2}" + LEGS, s.lower())) for s in a if type in s.lower()))

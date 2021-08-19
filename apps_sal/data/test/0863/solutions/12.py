@@ -6,4 +6,5 @@ count = 0
 for i in range(0, 1140, b):
     if i + tb > time_dep and i < time_dep + ta:
         count += 1
+        #print(i, i + tb, count)
 print(count)

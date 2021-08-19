@@ -1,4 +1,6 @@
 import math
+#import sys
+#input = sys.stdin.readline
 
 
 def make_divisors(n):
@@ -9,6 +11,7 @@ def make_divisors(n):
             if i != n // i:
                 divisors.append(n // i)
 
+    # divisors.sort()
     return divisors
 
 
@@ -84,6 +87,8 @@ class Bit:
             self.tree[i] += x
             i += i & -i
 
+#
+
 
 def Zaatsu(a):
     a.sort()
@@ -106,6 +111,7 @@ class UnionFind:
         self.par = [i for i in range(n + 1)]
         self.rank = [0] * (n + 1)
 
+    # 検索
     def find(self, x):
         if self.par[x] == x:
             return x
@@ -113,6 +119,7 @@ class UnionFind:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
 
+    # 併合
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -123,6 +130,7 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
+    # 同じ集合に属するか判定
     def same_check(self, x, y):
         return self.find(x) == self.find(y)
 
@@ -136,9 +144,9 @@ def cmb(n, r, p):
 
 p = 2
 N = 10 ** 6 + 2
-fact = [1, 1]  
-factinv = [1, 1]  
-inv = [0, 1]  
+fact = [1, 1]  # fact[n] = (n! mod p)
+factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
+inv = [0, 1]  # factinv 計算用
 
 for i in range(2, N + 1):
     fact.append((fact[-1] * i) % p)
@@ -151,7 +159,15 @@ for i in range(2, N + 1):
 def rl(x):
     return list(range(len(x)))
 
+# a = list(map(int, input().split()))
 
+#################################################
+#################################################
+#################################################
+#################################################
+
+
+# 20-
 n = int(input())
 
 a = list(map(int, input().split()))

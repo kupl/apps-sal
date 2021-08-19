@@ -1,3 +1,5 @@
+# AOJ GRL_6_A "Maximum Flow"
+# Ford-Fulkerson method
 
 import sys
 input = sys.stdin.readline
@@ -58,6 +60,8 @@ def dfs2(start, finish, graph):
                 Par[nv] = v
                 Flow[nv] = min(Flow[v], ncap)
     return 0, graph
+
+# solve
 
 
 def max_flow(start, finish, graph):

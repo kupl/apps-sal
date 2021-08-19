@@ -14,5 +14,6 @@ class Solution:
         for i in range(2, n + 1):
             for j in range(1, i):
                 t = gcd(i, j)
+                #print(i, j, t)
                 ret.add(f'{j//t}/{i//t}')
         return list(ret)

@@ -11,9 +11,12 @@ def read_int():
 
 def check(nums, step, pre):
     suma = 0
+    # print("Start: ", step)
     for x in nums:
         s = pre - x
+        # print(pre, x, s)
         if abs(step - s) > 1:
+            # print("BAD")
             raise Exception()
         if step == s:
             pre = x
@@ -23,6 +26,7 @@ def check(nums, step, pre):
             pre = x + 1
         else:
             pre = x - 1
+    # print("OK ", suma)
     return suma
 
 
@@ -39,8 +43,10 @@ def main():
         b = nums[1] + y
         diff = a - b
         try:
+            # print(x,y)
             suma = min(suma, check(nums[2:], diff, b) + abs(x) + abs(y))
         except Exception as e:
+            # print(repr(e))
             pass
 
     if suma == 100000000:

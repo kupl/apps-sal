@@ -2,6 +2,8 @@ import sys
 
 in1 = sys.stdin.readlines()
 N = int(in1[0])
+#N = 10 ** 18
+#N = 2
 """
 0 + 0 = 0
 0 x 0 = 0

@@ -69,3 +69,6 @@ for i in range(m):
         continue
 
     sys.stdout.write("No\n")
+
+
+# Made By Mostafa_Khaled

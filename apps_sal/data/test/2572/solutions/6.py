@@ -5,6 +5,7 @@ T = int(input())
 
 def cnt(points):
     med = statistics.median(points)
+    # print('points', points, 'med',med)
     return int(sum(abs(p - med) for p in points))
 
 

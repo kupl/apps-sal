@@ -15,6 +15,7 @@ def f(x): return max(0, x * db - nb) * pb + max(0, x * ds - ns) * ps + max(0, x 
 a, b = 0, 1000000001000
 while a < b:
     m = (a + b) // 2
+#   print(a, b, m, f(m))
     if f(m) < r:
         a = m + 1
     elif f(m) > r:

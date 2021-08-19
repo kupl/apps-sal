@@ -16,4 +16,6 @@ class Solution:
 
             curr = {j for i in curr for j in [i - 1, i + 1] + m.pop(arr[i], []) if j not in visited}
 
+            # curr = { k for j in curr for k in [j+1, j-1] + m.pop(arr[j], []) } - visited
+
         return -1

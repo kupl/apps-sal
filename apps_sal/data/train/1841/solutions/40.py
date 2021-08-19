@@ -32,5 +32,6 @@ class Solution:
                 return 1
 
         res = sorted(arr, key=cmp_to_key(cmp))
+        #print (res)
 
         return [res[i][1] for i in range(k)]

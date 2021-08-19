@@ -8,10 +8,11 @@ class Solution:
                     curPosition = p
             return placed >= m
 
+        # IDEA: do binary search to find the minimum foracce (maximum space)
         position.sort()
         lo, hi = 0, position[-1] - position[0]
         while (lo < hi):
-            mid = hi - (hi - lo) // 2
+            mid = hi - (hi - lo) // 2  # midpoint formula to prevent integer overflow in other languages
             if validPlacement(mid):
                 lo = mid
             else:

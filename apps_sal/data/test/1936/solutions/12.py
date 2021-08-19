@@ -1,3 +1,7 @@
+# Contest No.: Edu92
+# Problem No.: A
+# Solver:      JEMINI
+# Date:        20200729
 
 import sys
 import heapq

@@ -1,7 +1,9 @@
 from sys import stdin
+###############################################################
 def iinput(): return int(stdin.readline())
 def minput(): return list(map(int, stdin.readline().split()))
 def linput(): return list(map(int, stdin.readline().split()))
+###############################################################
 
 
 t = iinput()

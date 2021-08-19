@@ -8,3 +8,11 @@ class Solution:
                 dp[e].pop()
 
         return all(len(e) == 0 for e in list(dp.values()))
+        # c = Counter(hand)
+        # while c:
+        #     x = min(c.keys())
+        #     for i in range(x,x+W):
+        #         if i not in c: return False
+        #         c[i] -= 1
+        #         if c[i] == 0: del c[i]
+        # return True

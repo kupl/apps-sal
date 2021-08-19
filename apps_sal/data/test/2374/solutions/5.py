@@ -9,6 +9,7 @@ LR = [[int(i) for i in input().split()] for _ in range(M)]
 
 N += 2
 
+# 座圧
 compressed = sorted([a for a, b in AB])
 bomb = [0] * N
 for a, b in AB:
@@ -16,6 +17,7 @@ for a, b in AB:
     bomb[a] = b
 diff = [bomb[i - 1] ^ bomb[i] for i in range(1, N)]
 
+# 辺を貼る
 vec = [[] for _ in range(N)]
 convert = {}
 for i, (l, r) in enumerate(LR):
@@ -29,6 +31,7 @@ for i, (l, r) in enumerate(LR):
     vec[r].append(l)
     convert[(l, r)] = i
 
+# 全域木の構築
 visited = [False] * N
 parent = [-1] * N
 ret = []

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -23,3 +25,4 @@ while ((sum % 7 != 0) or (now != f)):
 
 print(y)
 finish = time.time()
+#print(finish - start)

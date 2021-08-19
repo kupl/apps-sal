@@ -7,6 +7,7 @@ class Solution:
         i = 0
 
         for i in range(len(customers)):
+            # print(\"{} :: max:{} profit:{} answ:{} waiting:{}\".format(i, max_profit, profit, answ, waiting))
             waiting += customers[i]
             if waiting >= 4:
                 profit += 4 * boardingCost - runningCost

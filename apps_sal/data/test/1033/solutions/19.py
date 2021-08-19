@@ -1,3 +1,4 @@
+#!/bin/python3
 import sys
 
 [n, H] = list(map(int, sys.stdin.read().split()))

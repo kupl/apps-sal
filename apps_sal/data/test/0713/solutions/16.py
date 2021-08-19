@@ -12,6 +12,7 @@ RI = lambda x=' ': list(map(int, input().split(x)))
 RS = lambda x=' ': input().rstrip().split(x)
 mod = int(1e9 + 7)
 eps = 1e-6
+#################################################
 n, m = RI()
 x, y = 0, 0
 print(min(n, m) + 1)

@@ -1,8 +1,10 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
     if n == 2 or n == 3:
         print(-1)
+        # break
     elif n == 4:
         print("3 1 4 2")
     else:

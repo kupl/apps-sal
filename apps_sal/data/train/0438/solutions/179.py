@@ -32,5 +32,6 @@ class Solution:
                         alls.append(right)
 
                     break
+            # print(alls)
 
         return -1

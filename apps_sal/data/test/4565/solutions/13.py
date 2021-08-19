@@ -31,9 +31,12 @@ Snr = np.flip(Sn, 0)
 S_cumr = np.zeros(N + 1, dtype='int')
 S_cumr[1:] = np.cumsum(Snr == 'E')
 
+# print(S_cum)
+# print(S_cumr)
 
 for i in range(N):
     attention = S_cum[i] + S_cumr[N - (i + 1)]
+    # print(attention)
     ans = min(ans, attention)
 
 print(ans)

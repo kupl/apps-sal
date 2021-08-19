@@ -22,6 +22,7 @@ def mex(S, W, C, start, end):
 
 
 a = sys.stdin
+# a=open('astrgame.txt','r')
 T = int(a.readline())
 for t in range(T):
     S = a.readline().strip()

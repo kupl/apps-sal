@@ -1,3 +1,4 @@
+# https://codeforces.com/contest/1148/problem/D
 n = int(input())
 
 d = {}
@@ -25,3 +26,10 @@ else:
         s += str(x[1] + 1) + ' '
 
 print(s)
+
+# 5
+# 1 7
+# 6 4
+# 2 10
+# 9 8
+# 3 5

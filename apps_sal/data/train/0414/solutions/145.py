@@ -6,6 +6,7 @@ class Solution:
         for i in range(1, len(arr)):
             if ans == k:
                 break
+            # print(max(arr[:i+1]))
             if curr < max(arr[i - 1], arr[i]):
                 ans = 0
 

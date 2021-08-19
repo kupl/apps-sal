@@ -1,3 +1,4 @@
+# https://codeforces.com/problemset/problem/909/D
 def process(a):
     assert len(a) >= 2
 

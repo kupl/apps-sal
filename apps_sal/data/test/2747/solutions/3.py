@@ -27,7 +27,7 @@ class Solution:
 
             if nums[m] < target:
                 l = m + 1
-            else:
+            else:  # nums[m] >= target:
                 r = m - 1
 
         if lbound == -1:
@@ -46,7 +46,7 @@ class Solution:
 
             if nums[m] <= target:
                 l = m + 1
-            else:
+            else:  # target < nums[m]
                 r = m - 1
 
         return [lbound - 1, rbound - 1]

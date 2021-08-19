@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+# E - Red Scarf
 N = int(input())
 a = list(map(int, input().split()))
 

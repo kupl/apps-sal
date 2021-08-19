@@ -9,6 +9,7 @@ class Solution:
         return jump_indices
 
     def minJumps(self, arr: List[int]) -> int:
+        # Dictionary from array value to set of jumpable indices
         jump_indices = self.get_jump_indices(arr)
         next_indices = [len(arr) - 1]
         visited = set()

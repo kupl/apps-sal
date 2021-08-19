@@ -1,7 +1,9 @@
 class Track(object):
     def __init__(self, n=2):
+        # Maps the values to their counts
         self.count = {}
 
+        # Keeps track of the last element
         self.last = {}
         self.order = [None for _ in range(n - 1)]
 

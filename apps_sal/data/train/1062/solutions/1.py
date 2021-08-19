@@ -1,3 +1,4 @@
+# cook your dish here
 num = int(input())
 
 mat = [[-1 for i in range(num * 2 - 1)]for j in range(num * 2 - 1)]

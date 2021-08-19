@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# http://www.codechef.com/OCT12/problems/LUCKY10
 
 import sys
 

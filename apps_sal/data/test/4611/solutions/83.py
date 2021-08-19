@@ -1,3 +1,4 @@
+#!/user/bin/env pypy3
 import sys
 from typing import NamedTuple, List
 
@@ -19,6 +20,7 @@ class Position(NamedTuple):
     def can_move_from(self, prev) -> bool:
         diff_t = self.t - prev.t
         diff_move = self._calc_diff_move(prev)
+        # 奇数のときはその場禁止
         if not diff_t % 2 == diff_move % 2:
             return False
         return diff_t >= diff_move

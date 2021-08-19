@@ -30,7 +30,14 @@ class CombinationIterator:
                 for i in range(cnt + 1, 0, 1):
                     self.nums[i] = self.nums[i - 1] + 1
 
+        # print(self.nums)
         return ret
 
     def hasNext(self) -> bool:
         return self.is_next
+
+
+# Your CombinationIterator object will be instantiated and called as such:
+# obj = CombinationIterator(characters, combinationLength)
+# param_1 = obj.next()
+# param_2 = obj.hasNext()

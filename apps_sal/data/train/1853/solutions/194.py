@@ -10,6 +10,7 @@ class Solution:
 
         for i in range(n):
 
+            # distance , city 2 , original
             queue = [(0, i)]
             curr = {}
 

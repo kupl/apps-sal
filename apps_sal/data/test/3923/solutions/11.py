@@ -17,14 +17,17 @@ else:
         print(-1)
     else:
 
+        # print(x,y)
         ind = 0
         for i in range(x):
             for j in range(ma * i + 1, (ma) * (i + 1) + 1):
+                # print(j)
                 if j > 1000000:
                     print(j)
                 ab[j] = (j + 1)
                 if j % ma == 0:
                     ab[j] = (j - ma) + 1
+                # print(ab)
         k = ma * x
         for i in range(y):
             for j in range(mi * i + 1, (mi) * (i + 1) + 1):

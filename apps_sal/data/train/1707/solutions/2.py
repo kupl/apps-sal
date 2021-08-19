@@ -1,5 +1,9 @@
 from functools import lru_cache
 
+# Not gonna reinvent the wheel
+# Now I can go on codewars while they think I'm still working on it
+# Be a smart intern
+
 
 def cut_log(p, n):
     @lru_cache(maxsize=None)

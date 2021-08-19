@@ -9,10 +9,13 @@ def main():
     ans = 0
     for x in range(H):
         for y in range(W):
-            if maze[x][y] == "
-            continue
+            # 壁からはスタートできない
+            if maze[x][y] == "#":
+                continue
 
+            # 初期化
             distance = [[0] * W for _ in range(H)]
+            # start位置
             stack = deque([[x, y]])
 
             while stack:
@@ -21,9 +24,9 @@ def main():
                     new_h, new_w = h + i, w + j
                     if new_h < 0 or new_w < 0 or new_h >= H or new_w >= W:
                         continue
-                    elif maze[new_h][new_w] != '
-                    distance[new_h][new_w] = distance[h][w] + 1
-                    stack.append([new_h, new_w])
+                    elif maze[new_h][new_w] != '#' and distance[new_h][new_w] == 0:
+                        distance[new_h][new_w] = distance[h][w] + 1
+                        stack.append([new_h, new_w])
 
             distance[x][y] = 0
             ans = max(ans, np.max(distance))

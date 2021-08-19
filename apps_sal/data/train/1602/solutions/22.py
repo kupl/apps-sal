@@ -17,6 +17,7 @@ for _ in range(int(input())):
             if len(s) > b:
                 for j in range(x):
                     a = s[0] - sub
+                    # print(a)
                     if a == 1:
                         flag = False
                         break
@@ -28,6 +29,7 @@ for _ in range(int(input())):
                 pass
             else:
                 break
+        # print(s)
     if flag:
         print("Possible")
     else:

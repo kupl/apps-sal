@@ -5,3 +5,6 @@ for i in range(n):
     ans = (ans * factorial(s + a - 1) // factorial(s) // factorial(a - 1)) % 1000000007
     s += a
 print(ans)
+
+
+# copied...

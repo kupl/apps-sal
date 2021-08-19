@@ -1,9 +1,29 @@
+# stdin=open('input.txt')
 import math
 from sys import stdin, stdout
 
 
 def input():
     return stdin.readline()[:-1]
+
+
+# stdout=open('output.txt',mode='w+')
+
+# def print(x, end='\n'):
+# 	stdout.write(str(x) +end)
+
+
+# a, b = map(int, input().split())
+
+# l = list(map(int, input().split()))
+
+# n = int(input())
+
+
+# CODE BEGINS HERE.................
+# import copy
+# import sys
+# sys.setrecursionlimit(10**7)
 
 
 def abs_int(a):
@@ -14,6 +34,7 @@ n = int(input())
 a = list(map(abs_int, input().split()))
 
 a.sort()
+# print(a)
 
 ptr = 0
 half = -1
@@ -23,8 +44,10 @@ for i in range(n):
     while a[ptr] < half:
         ptr += 1
     gt_than_half[i] = i - ptr
+# print(gt_than_half)
 
 a.reverse()
+# print(a)
 
 ptr = 0
 twice = -1
@@ -34,5 +57,12 @@ for i in range(n):
     while a[ptr] > twice:
         ptr += 1
     lt_than_twice[i] = i - ptr
+# print(lt_than_twice)
 
 print((sum(gt_than_half) + sum(lt_than_twice)) // 2)
+
+
+# CODE ENDS HERE....................
+
+
+# stdout.close()

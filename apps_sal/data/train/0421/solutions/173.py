@@ -23,3 +23,7 @@ class Solution:
             if x == c:
                 res = max(res, s[i:])
         return res
+        # root = Node('')
+        # for i in range(len(s)):
+        #     self.add_suffix(root, s[i:])
+        # return ''.join(self.get_last_substring(root))

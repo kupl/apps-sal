@@ -10,6 +10,10 @@ ans = 2 * 10**14
 l = 0
 temp = 2 * 10**14
 r = 2
+# for i in range(2, N):
+#    if abs(S[-1]-2*S[i]+S[1]) < temp:
+#        temp = abs(S[-1]-2*S[r]+S[1])
+#        r = i
 
 for i in range(2, N - 1):
     r = max(r, i)

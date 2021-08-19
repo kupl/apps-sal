@@ -8,6 +8,7 @@ class Solution:
             if (sumDigi == len(groups)):
                 groups.append(0)
             groups[sumDigi] += 1
+        # print(groups)
 
         maxGroup = 0
         maxCount = 0
@@ -17,6 +18,7 @@ class Solution:
                 maxCount = 0
             if (grp == maxGroup):
                 maxCount += 1
+        # print(\"maxGroup=%d, maxCount=%d\" % (maxGroup, maxCount))
 
         return maxCount
 

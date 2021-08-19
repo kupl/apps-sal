@@ -1,4 +1,4 @@
-class Solution:
+class Solution:  # 368 ms
     def numBusesToDestination(self, routes, start, target):
         if start == target:
             return 0

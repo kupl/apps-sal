@@ -28,5 +28,6 @@ for i in range(plen):
     currp = pf[i][1]
     cnt = pf[i][0]
     cur = chk(n, currp)
+    # print(cur)
     mini = min(mini, cur // cnt)
 print(mini)

@@ -46,6 +46,7 @@ def main():
         c[v] = c1, c2[-2::-1]
         sz1[v] = s
         dp1[v] = b * fac[s - 1] % M
+    # print(dp1)
     sz2[0] = 1
     dp2[0] = 1
     for v in o:
@@ -59,6 +60,7 @@ def main():
             uw = uv - sz1[w] - 1
             dp2[w] = tv * tw * fac[uw] % M
             sz2[w] = uw + 2
+    # print(dp2)
     a = []
     for dp1, dp2, sz1, sz2 in zip(dp1, dp2, sz1, sz2):
         sz1 -= 1

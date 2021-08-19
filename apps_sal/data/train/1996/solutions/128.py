@@ -2,9 +2,9 @@ class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         def cycle(ind):
             if color[ind] == 1:
-                return True
+                return True   # true means that there is a cycle
             if color[ind] == 2:
-                return False
+                return False   # no cycle is present
 
             color[ind] = 1
 

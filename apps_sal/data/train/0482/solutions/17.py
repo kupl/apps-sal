@@ -1,7 +1,7 @@
 class Solution:
     def mctFromLeafValues(self, arr: List[int]) -> int:
         N = len(arr)
-        dp = [[[0, i] for i in arr]]
+        dp = [[[0, i] for i in arr]]  # length, index, val(0: sum, 1: max)
         for l in range(1, N):
             dp.append([])
             for i in range(N - l):

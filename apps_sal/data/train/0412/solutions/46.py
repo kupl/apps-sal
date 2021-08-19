@@ -10,4 +10,5 @@ class Solution:
                     cumsum -= dp[i - f]
                 new_dp[i + 1] = cumsum
             dp = new_dp
+            # print(n, dp)
         return dp[-1] % (10**9 + 7)

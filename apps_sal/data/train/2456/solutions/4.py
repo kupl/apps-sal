@@ -4,9 +4,9 @@ class Solution:
         s = []
 
         for i in S:
-            if i == '
-            if s:
-                s.pop()
+            if i == '#':
+                if s:
+                    s.pop()
 
             else:
                 s.append(i)
@@ -14,9 +14,9 @@ class Solution:
         t = []
 
         for i in T:
-            if i == '
-            if t:
-                t.pop()
+            if i == '#':
+                if t:
+                    t.pop()
 
             else:
                 t.append(i)

@@ -1,3 +1,4 @@
+# Answer
 import math
 N, K = input().split()
 N = int(N)

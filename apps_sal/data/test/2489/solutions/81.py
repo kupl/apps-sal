@@ -7,8 +7,8 @@ def main():
     A = list(map(int, input().split()))
     A.sort()
     max_A = max(A)
-    dp = [True] * (max_A + 1)
-    multi = [0] * (max_A + 1)
+    dp = [True] * (max_A + 1)  # iより小さいiの約数がAに存在しない
+    multi = [0] * (max_A + 1)  # 重複個数
     for a in A:
         multi[a] += 1
         if multi[a] > 1:

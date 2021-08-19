@@ -6,6 +6,7 @@ class Solution:
             left = 0
             right = 0
             for right in range(len(A)):
+                # not in the map,k-=1
                 if count[A[right]] == 0:
                     k -= 1
                 count[A[right]] += 1

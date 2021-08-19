@@ -1,12 +1,15 @@
 import math
 
+# input
 n, k = map(int, input().split())
 flist = [int(x) for x in input().split()]
 
 
+# variables
 time = 0
 
 
+# main
 flist.sort()
 flist.reverse()
 if n <= k:

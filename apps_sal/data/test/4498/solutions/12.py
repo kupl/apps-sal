@@ -1,5 +1,6 @@
 a, b, c, d = map(int, input().split())
 
+# a<b<c
 ba = abs(b - a)
 cb = abs(c - b)
 ca = abs(c - a)

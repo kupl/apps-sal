@@ -1,3 +1,4 @@
+# Pre-Computed using bruteforce
 r = int(input())
 if(r == 2):
     print(5)

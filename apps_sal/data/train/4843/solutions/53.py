@@ -2,6 +2,7 @@ import itertools
 
 
 def choose_best_sum(t, k, ls):
+    # your code
     x = list(itertools.combinations(ls, k))
     for i in range(0, len(x)):
         x[i] = sum(x[i])

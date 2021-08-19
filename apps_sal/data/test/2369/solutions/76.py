@@ -4,6 +4,7 @@ As = list(map(int, input().split()))
 
 
 def modconb(n, mod):
+    # テーブルを作る
     fac = [0] * (n + 1)
     finv = [0] * (n + 1)
     inv = [0] * (n + 1)
@@ -16,6 +17,7 @@ def modconb(n, mod):
         fac[i] = fac[i - 1] * i % mod
         inv[i] = mod - inv[mod % i] * (mod // i) % mod
         finv[i] = finv[i - 1] * inv[i] % mod
+    # 計算
     if n < k:
         return 0
     if n < 0 or k < 0:
@@ -37,9 +39,11 @@ for d in range(1, n):
         c = 1
     else:
         c = fac[d - 1] * (finv[k - 2] * finv[d - 1 - (k - 2)] % mod) % mod
+        # c = modconb(d-1,k-2,mod)
     ind = min(d - 1, n - d - 1)
     mn = acc[ind]
     mx = acc_r[ind]
     ans += (mx - mn) * c
+    # print(d,c,mn,mx,"d",(mx-mn)*c)
     ans %= mod
 print(ans)

@@ -4,8 +4,10 @@ class Solution:
         m, n = len(grid), len(grid[0])
         frontier = collections.deque([(0, 0, k, 0)])
         seen = {(0, 0, k)}
+        # print(m,n)
         while frontier:
             i, j, d, steps = frontier.popleft()
+            # print('Cur - ',i,j,d,steps)
             if i == m - 1 and j == n - 1:
                 return steps
             for a, b in [(1, 0), (0, 1), (-1, 0), (0, -1)]:

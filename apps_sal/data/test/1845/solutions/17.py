@@ -35,6 +35,13 @@ class pair:
     def __lt__(self, other):
         return (self.fi, self.se) < (other.fi, other.se)
 
+#  =========     /\       /|    |====/|
+#      |        /  \       |    |   / |
+#      |       /____\      |    |  /  |
+#      |      /      \     |    | /   |
+#  ========= /        \  =====  |/====|
+#  code
+
 
 def __starting_point():
     n = ini()

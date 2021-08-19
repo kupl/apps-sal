@@ -6,6 +6,7 @@ def string_func(s, x):
     new_s = list(s)
     while True:
 
+        # shufling!
         new_s[::2], new_s[1::2] = new_s[:len(new_s) // 2 - 1:-1], new_s[:len(new_s) // 2]
 
         k.append(''.join(new_s))

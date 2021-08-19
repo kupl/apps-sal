@@ -9,6 +9,7 @@ a1 = 0
 b = k
 m = 0
 for i in range(k, n - k + 1):
+    # print(a,b,d,m)
     if t[i] - t[i - k] > d[i - 1]:
         d[i] = t[i] - t[i - k]
         a[i] = i - k
@@ -19,4 +20,5 @@ for i in range(k, n - k + 1):
         m = d[i] + t[i + k] - t[i]
         a1 = a[i]
         b = i
+# print(a,b,d,m)
 print('{0} {1}'.format(a1 + 1, b + 1))

@@ -6,6 +6,8 @@ def greet(name, owner):
         return "Hello guest"
 
 
+    # if name=!owner
+    # return('Hello guest')
 a = 'Daniel'
 b = 'Daniel'
 

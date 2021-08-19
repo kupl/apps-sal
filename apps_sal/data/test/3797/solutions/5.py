@@ -8,6 +8,8 @@ def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
+# 一番後ろの色を(赤に)固定した上で、もらうDPに書き換え
+
 
 def main():
     md = 10 ** 9 + 7
@@ -38,6 +40,7 @@ def main():
                     for j in range(k):
                         dp[i][j] = dp[j][i] = 0
 
+    # p2D(dp)
     print(sum(sum(dr) for dr in dp) * 3 % md)
 
 

@@ -10,6 +10,7 @@ class Solution:
         c = 0
 
         while win_count < k:
+            # play challenge
 
             p1, p2 = arr[c], arr[(c + 1) % n]
 

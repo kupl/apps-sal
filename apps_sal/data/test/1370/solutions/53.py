@@ -16,8 +16,10 @@ def main():
         print((0))
         return
 
+    # 横線の決め方を全探索
     ans = 10**5
     for pattern in range(2**(H - 1)):
+        # 初期化
         impossible = False
         x = 0
         ly = bin(pattern).count("1")
@@ -28,6 +30,7 @@ def main():
             if (pattern >> i) & 1:
                 line += 1
 
+        # 各列の値を加算していく
         count = [0] * (ly + 1)
         for j in range(W):
             for i in range(line + 1):

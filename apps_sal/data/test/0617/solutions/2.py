@@ -28,5 +28,6 @@ ans = eval(exp)
 mul_p = [i for i, s in enumerate(exp) if s == '*']
 mul_p = [-1] + mul_p + [len(exp)]
 for i1, i2 in combinations(mul_p, 2):
+    #    print(exp[:i1+1], exp[i1+1:i2], exp[i2:])
     ans = max(ans, eval('{}({}){}'.format(exp[:i1 + 1], exp[i1 + 1:i2], exp[i2:])))
 print(ans)

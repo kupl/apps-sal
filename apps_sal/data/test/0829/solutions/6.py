@@ -1,3 +1,4 @@
+# I <3 tzuyu
 n = int(input())
 a = input()
 if a.count('0') == a.count('1'):

@@ -17,6 +17,7 @@ def solve():
     for i, y in enumerate(f, start=1):
         inv[y].add(i)
 
+    # debug(inv, locals())
     m = len(inv)
     g = [0] * (n + 1)
     h = [0] * (m + 1)

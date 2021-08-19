@@ -35,6 +35,7 @@ while(i >= 0 and (count1 < ceil(size / 2) or count2 < ceil(size / 2))):
             ans -= arr[i][0]
             count2 -= 1
             size -= 1
+    # print(size,count1,count2,ans)
     i -= 1
 if(i == 0 and (count1 < ceil(size / 2) or count2 < ceil(size / 2))):
     print(0)

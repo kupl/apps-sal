@@ -48,8 +48,11 @@ print(l)
 print(qs)
 """
 
+# print(l)
+# print(qs)
 
 partials = list(itertools.accumulate(l))
+# print(partials)
 
 for i in range(q):
     kuchka = bisect.bisect_left(partials, qs[i])

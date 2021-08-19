@@ -6,6 +6,7 @@ def solve():
     while n[-i - 1] == '0':
         n = '0' + n
         i += 1
+    # print(n)
 
     for i in range(len(n) // 2):
         if n[i] != n[-i - 1]:

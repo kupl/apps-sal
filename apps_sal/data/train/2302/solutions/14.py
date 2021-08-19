@@ -5,7 +5,7 @@ Ds = list(map(int, input().split()))
 Q = int(input())
 Qs = list(map(int, input().split()))
 
-dp = [math.inf] * (N + 1)
+dp = [math.inf] * (N + 1)  # (iから先だけをみて)＝＞ゴールできない最小
 dp[-1] = 1
 for i in range(N - 1, -1, -1):
     if Ds[i] >= 2 * dp[i + 1]:

@@ -17,22 +17,31 @@ def main():
     Number_Positive = len(Negative) * (len(Negative) - 1) // 2 + len(Positive) * (len(Positive) - 1) // 2
     Number_Zero = N * (N - 1) // 2 - Number_Negative - Number_Positive
 
-    def Ncount(x):
+    # print (Number_Negative)
+    # print (Negative)
+    # print (Number_Positive)
+    # print (Positive)
+    # print (Number_Zero)
+
+    def Ncount(x):  # x以下の数を数える(x < 0)
         tmp = 0
         for a in Negative:
             tmp += len(Positive) - bisect_left(Positive, (x + a + 1) // a)
+        # print (x, tmp)
         return tmp
 
     def Ncount1(x):
         tmp = (len(Positive) - np.searchsorted(Positive, (-x - 1) // (-Negative), side='right')).sum()
         return tmp
 
-    def Pcount(x):
+    def Pcount(x):  # x以下の数を数える(x > 0)
         tmp = 0
         for index, a in enumerate(Positive):
             tmp += bisect_right(Positive[index + 1:], x // a)
         for index, b in enumerate(Negative):
             tmp += len(Negative[index + 1:]) - bisect_left(Negative[index + 1:], (x + b + 1) // b)
+            # print (bisect_right(Negative[index + 1:], x / b))
+        # print (x, tmp)
         return tmp
 
     def Pcount1(x):
@@ -44,6 +53,7 @@ def main():
         return tmp // 2
 
     if Number_Negative >= K:
+        # ここに二分探索を書く
         l = -10 ** 18
         r = 0
         while r - l > 1:
@@ -60,6 +70,7 @@ def main():
         return
 
     else:
+        # ここに二分探索を書く
         l = 0
         r = 10 ** 18
         K -= (Number_Negative + Number_Zero)
@@ -71,6 +82,10 @@ def main():
                 l = mid
 
         print(r)
+        # return
+
+    # print (Pcount(l) + Number_Negative + Number_Zero)
+    # print (Pcount(r) + Number_Negative + Number_Zero)
 
 
 def __starting_point():

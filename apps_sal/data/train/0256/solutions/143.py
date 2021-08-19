@@ -10,6 +10,7 @@ class Solution:
                     hrs += (p // x) + 1
                 if hrs > h:
                     return False
+            # print(x, hrs)
             return True
 
         low, high = 1, max(piles)

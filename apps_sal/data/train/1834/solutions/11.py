@@ -16,6 +16,7 @@ class Solution:
         flipped = True
         while flipped:
             flipped = False
+            # Check row sums
             for ri, r in enumerate(row_sum):
                 if r < max_row - r:
                     flipped = True
@@ -26,6 +27,7 @@ class Solution:
                             col_sum[ci] += c_val(ci)
                         else:
                             col_sum[ci] -= c_val(ci)
+            # Check col sums
             for ci, c in enumerate(col_sum):
                 if c < max_col(ci) - c:
                     flipped = True

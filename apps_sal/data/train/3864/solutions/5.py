@@ -5,9 +5,9 @@ def int32_to_ip(int32):
     bytes: 01000011 and 00101010.
     We can AND this with a byte that is filled with 1s - 255 (0b11111111), shifted
     left by a certain amount of bytes to get the digits in that byte:
-    01000011 00101010 
-    11111111 00000000 
-    01000011 00000000 
+    01000011 00101010 # 17194
+    11111111 00000000 # 255 << 8
+    01000011 00000000 # 17194 & 255 << 8
     However, we need to shift this value *back* to get a number within (0,255)
     inclusive, as required, so shift right by the same amount.
     """

@@ -12,10 +12,11 @@ A = lr()
 dp = [0] * (S + 1)
 answer = 0
 for a in A:
-    dp[0] += 1
+    dp[0] += 1  # Lの数は１個ずつ加わる
     prev = dp.copy()
     for i in range(S - a + 1):
         dp[i + a] += prev[i]
-    answer += dp[-1]
+    answer += dp[-1]  # その位置Rとした時
 
 print((answer % MOD))
+# 26

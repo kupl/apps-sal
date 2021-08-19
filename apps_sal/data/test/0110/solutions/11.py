@@ -29,4 +29,5 @@ else:
         arr[cr] = -arr[cr] - 1
     else:
         arr[cur] = -arr[cur] - 1
+    # print(mx,cr)
     print(*arr)

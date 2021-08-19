@@ -3,6 +3,11 @@ from collections import defaultdict, deque
 
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        # 1、移除type3的重复边
+        # 2、检查alice和bob的可遍历性
+        # 3、检查type3组成的环
+        # 4、检查alice type1组成的环
+        # 5、检查bob type2组成的环
         count = 0
         set1, set2, set3 = set(), set(), set()
         adj_a, adj_b, adj_3 = defaultdict(set), defaultdict(set), defaultdict(set)

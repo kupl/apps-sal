@@ -1,3 +1,5 @@
+# if a .... b , where a<=b<=target
+# the # of subsquence starts with a = 2^(n-1), where n is len([a...b])
 
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:

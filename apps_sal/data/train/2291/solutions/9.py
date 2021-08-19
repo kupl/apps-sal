@@ -5,7 +5,7 @@ N = int(input())
 D = [None] + [int(input()) for _ in range(N)]
 
 parent = [None] * (N + 1)
-size = [None] + [1] * N
+size = [None] + [1] * N  # 部分木の頂点数、自分を含む
 d_to_i = {d: i for i, d in enumerate(D)}
 D_desc = sorted(D[1:], reverse=True)
 D_subtree = [0] * (N + 1)

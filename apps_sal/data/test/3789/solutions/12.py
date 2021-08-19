@@ -94,4 +94,6 @@ def main():
     return sum(map(lambda x: max(0, x), a)) - r
 
 
+# start = time.time()
 print(main())
+# pe(time.time() - start)

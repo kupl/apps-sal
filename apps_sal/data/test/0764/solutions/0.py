@@ -4,6 +4,7 @@ import math
 num = int(input())
 x = tuple(map(int, list(input())))
 
+# if x == "0"*num: print(num); return
 
 integer = 0
 

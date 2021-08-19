@@ -14,12 +14,14 @@ def seive(n):
                 prime[i] = False
         p += 1
     return prime
+# testcases=int(input())
 
 
 for testcase in range(testcases):
     prime = seive(2005)
     [n] = ll()
     ii = n
+    # print(prime)
     while(prime[ii] != True):
         ii += 1
     ans = []
@@ -33,6 +35,7 @@ for testcase in range(testcases):
             print(*i)
         continue
     done = 1
+    # print(ii)
     while(ii != 0):
         ans.append([done, (done + 2) % (n + 1)])
         done += (done & 1 == 0) * 2

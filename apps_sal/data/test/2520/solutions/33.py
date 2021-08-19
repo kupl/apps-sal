@@ -17,6 +17,7 @@ def NL(n):
 
 mod = pow(10, 9) + 7
 
+#import numpy as np
 
 sys.setrecursionlimit(1000000)
 
@@ -48,7 +49,7 @@ class UnionFind():
             return
         self.par[y] = x
 
-    def comp(self):
+    def comp(self):  # rootまでの距離圧縮
         for i in range(len(self.par)):
             self.root(i)
 
@@ -70,6 +71,9 @@ for i in range(k):
         f[b - 1] += 1
 
 count = collections.Counter(uf.par)
+# print(uf.par)
+# print(count)
+# print(f)
 for i in range(n):
     print(count[uf.par[i]] - f[i] - 1, "", end="")
 print()

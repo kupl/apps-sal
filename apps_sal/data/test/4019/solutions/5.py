@@ -19,6 +19,7 @@ selectedOne = []
 
 for i in range(2, n + 1):
     if group[i] == -1:
+        # bfs
         group[i] = count
         useOne = False
         if haveOne[i]:

@@ -1,5 +1,6 @@
 class Solution:
     def removeDuplicates(self, S: str) -> str:
+        # use a stack to save char, cnt
         if not S:
             return None
         stack = []

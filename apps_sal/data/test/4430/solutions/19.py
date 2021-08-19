@@ -5,7 +5,8 @@ def bS(alist, item):
     posi = -1
     while (first <= last + 1) and (not found):
         midpoint = (first + last) // 2
-        if (alist[midpoint] >= item):
+        #print(midpoint,alist[midpoint-1] )
+        if (alist[midpoint] >= item):  # and (alist[midpoint+1] <= item):
             found = True
             posi = midpoint
         else:
@@ -30,17 +31,23 @@ for ii in range(n):
     alfa[ii] = int(a[i]) + last
     last = alfa[ii]
 
+# print(alfa)
 if alfa[-1] > m * k:
     pos = bS(alfa, m * k)
 else:
     pos = n - 1
 
+# print(pos)
 ii = n - pos - 1
+# b=a[ii+1:].copy()
 b = a
 b.reverse()
 maxi = 0
 start = 0
+# for start in range(n):
 if (1 == 1):
+    # if n-start<maxi:
+    #    break
     alr = 0
     cc = 0
     for i in b[start:]:

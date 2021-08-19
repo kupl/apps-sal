@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 arr = [0, 1]
 for i in range(2, 101):

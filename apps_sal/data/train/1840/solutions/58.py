@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 
 def solve(root, res, ind):
     if root == None:
@@ -25,5 +31,6 @@ class Solution:
         res2 = [0]
         c1 = solve(root, res1, 0)
         c2 = solve(root, res2, 1)
+        # print(\"aa\",res1,res2,c1,c2)
 
         return max(res1[0], res2[0]) - 1

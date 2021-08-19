@@ -12,6 +12,7 @@ for k in range(2, mii + 1):
             factors[k] = set([1, k])
             break
 
+# print(factors[:20])
 
 t = int(input())
 for _ in range(t):

@@ -57,6 +57,7 @@ for i in range(eval(input())):
                 ans -= min(arr)
         except:
             pass
+        # print ans
         try:
             if len(offer[3]) >= 1:
                 value = 9999999999
@@ -70,6 +71,7 @@ for i in range(eval(input())):
                     ans = value
         except:
             pass
+        # print ans
         try:
             if len(offer[2]) >= 1:
                 value = 9999999999
@@ -81,6 +83,8 @@ for i in range(eval(input())):
                         value = cur
                 if value < ans:
                     ans = value
+                # print ans
+            # print offer[2]
             if len(offer[2]) >= 2:
                 flg = False
                 end = len(offer[2])
@@ -89,6 +93,7 @@ for i in range(eval(input())):
                         if disc(offer[2][i], offer[2][j]):
                             flg = True
                             break
+                # print flg
                 if flg:
                     value = 9999999999
                     for item in perms:

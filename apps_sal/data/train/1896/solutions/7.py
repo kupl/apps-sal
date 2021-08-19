@@ -11,10 +11,10 @@ class Solution:
         def push(i, j):
             if i < len(nums1) and j < len(nums2):
                 heapq.heappush(q, [nums1[i] + nums2[j], i, j])
-        push(0, 0)
+        push(0, 0)  # pushing first sum into heap
         res = []
         while q and len(res) < k:
-            s, i, j = heapq.heappop(q)
+            s, i, j = heapq.heappop(q)  # pops out min till here
             res.append([nums1[i], nums2[j]])
             push(i, j + 1)
             if j == 0:

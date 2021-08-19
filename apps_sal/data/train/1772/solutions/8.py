@@ -14,4 +14,4 @@ class VigenereCipher:
 
     def caesar(self, char, key_char, mode=1):
         char_position, move = self.alphabet.find(char), self.alphabet.find(key_char)
-        return self.alphabet[(char_position + mode * move) % len(self.alphabet)]
+        return self.alphabet[(char_position + mode * move) % len(self.alphabet)]  # Probably should store len(alphabet) instead of recalculating.

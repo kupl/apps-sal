@@ -8,6 +8,7 @@ for _ in range(N - 1):
     A, B = map(int, input().split())
     tree[A].append(B)
     tree[B].append(A)
+# print(tree)
 
 
 def dfs(u, par):
@@ -25,6 +26,7 @@ def dfs(u, par):
 visited = [False] * (N + 1)
 tree_dic = {}
 dfs(1, 0)
+# print(tree_dic)
 
 bumbo = pow(2, N, MOD)
 bunshi = (pow(2, N, MOD) - 1 - N * pow(2, N - 1, MOD)) % MOD
@@ -32,6 +34,7 @@ for x in tree_dic.values():
     term = (pow(2, x, MOD) - 1) * (pow(2, N - x, MOD) - 1)
     bunshi += term
     bunshi %= MOD
+# print(bunshi,bumbo)
 
 answer = bunshi * pow(bumbo, MOD - 2, MOD)
 answer %= MOD

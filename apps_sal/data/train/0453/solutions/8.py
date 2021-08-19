@@ -6,6 +6,7 @@ class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
         @lru_cache(None)
         def paint(i, color, k):
+            # print(i, k, color)
             if k == 0 and i == m:
                 return 0
             if k < 0 or i == m:
@@ -16,7 +17,18 @@ class Solution:
             for c in range(1, n + 1):
                 cost_ = cost[i][c - 1] + paint(i + 1, c, k - (1 if c != color else 0))
                 total_cost = min(total_cost, cost_)
+            # print(i, k, color, total_cost)
             return total_cost
 
+        # neighbors = 0
+        # prev = 0
+        # for h in houses:
+        #     if h == 0:
+        #         continue
+        #     if h != prev:
+        #         neighbors += 1
+        #         prev = h
+        # if neighbors > target:
+        #     return -1
         res = paint(0, -1, target)
         return res if res != math.inf else -1

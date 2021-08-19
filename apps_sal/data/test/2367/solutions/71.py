@@ -24,9 +24,11 @@ for i in range(B - 1):
     b = i + 1
     c = W - i - 1
     d = W + A - 2 - i
+#     print(a,b,c,d)
     tmp = tmp * a * c % MOD
     tmp = tmp * pow(b, -1, MOD) % MOD
     tmp = tmp * pow(d, -1, MOD) % MOD
+#     print(tmp)
     total = (total - tmp) % MOD
 
 print(total)

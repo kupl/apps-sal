@@ -6,6 +6,7 @@ import heapq
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         n = len(arr)
+        # priority queue, O(NlogN)
         d = defaultdict(set)
         for i, x in enumerate(arr):
             d[x].add(i)

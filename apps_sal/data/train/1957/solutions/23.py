@@ -10,6 +10,7 @@ class Solution:
         seen = set([(0, 0, k)])
         level = 0
         while queue:
+            #print(queue, seen)
             size = len(queue)
             for _ in range(size):
                 x, y, remain = queue.popleft()

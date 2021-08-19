@@ -14,6 +14,7 @@ class UnionFind:
             return
         self.uf[x] = self.uf[y]
         self.size[y] += self.size[x]
+        # self.size[x] = 0
 
 
 def factors(n):

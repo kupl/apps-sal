@@ -1,3 +1,4 @@
+# cook your dish here
 num = []
 for i in range(20):
     num.append(2**i)

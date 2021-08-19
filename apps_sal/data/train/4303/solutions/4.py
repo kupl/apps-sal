@@ -1,3 +1,4 @@
+# A reason that it can be up to 10**10000 is so itertools.permutations will not work
 from math import factorial
 
 

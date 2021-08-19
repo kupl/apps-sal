@@ -23,6 +23,7 @@ def main():
 
     while que:
         p = que.popleft()
+        # root no toki
         if p == 1:
             now_color = k
             for son in a[p]:

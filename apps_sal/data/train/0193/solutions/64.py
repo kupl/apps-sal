@@ -9,6 +9,7 @@ class Solution:
         mincount = len(arr) // 2
         ans = 0
         currLength, sub = len(arr), 9
+        # print(maps)
         for x in range(len(maps)):
             key, val = maps[x]
             if currLength > mincount:

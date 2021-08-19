@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[14]:
 
 
 import math
@@ -5,7 +9,13 @@ n = int(input())
 blist = list(map(int, input().rstrip().split()))
 
 
+# In[15]:
+
+
 alist = [0 for i in range(n)]
+
+
+# In[16]:
 
 
 alist[0] = 0
@@ -20,6 +30,12 @@ for i in range(1, n // 2):
         alist[i] = blist[i] - alist[n - i - 1]
 
 
+# In[17]:
+
+
 aliststr = [str(i) for i in alist]
 
 print(" ".join(aliststr))
+
+
+# In[ ]:

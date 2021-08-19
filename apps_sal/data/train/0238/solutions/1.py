@@ -20,4 +20,9 @@ class Solution:
             sell1 = max(prices[i] + hold1, sell1)
             hold1 = max(-prices[i], hold1)
 
+            #sell1[i] = max(sell1[i-1], prices[i] + hold1[i-1])
+            #hold1[i] = max(hold1[i-1],  -prices[i])
+            #sell2[i] = max(prices[i] + hold2[i-1], sell2[i-1] )
+            #hold2[i] = max(sell1[i-1] - prices[i], hold2[i-1])
+
         return sell2

@@ -1,5 +1,6 @@
 def closure_gen(*s):
     print(s)
+    # Special cases:
     if s == ():
         return
     if s == (1,):
@@ -16,6 +17,7 @@ def closure_gen(*s):
             yield i
             s.remove(i)
 
+    # === Main ====
     queue = [1]
     seen = set(queue)
 

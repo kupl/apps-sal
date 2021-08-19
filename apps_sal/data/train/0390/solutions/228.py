@@ -6,4 +6,5 @@ class Solution:
                 if ans_list[i - j * j] == 0:
                     ans_list[i] = 1
                     break
+        # print(ans_list)
         return ans_list[-1]

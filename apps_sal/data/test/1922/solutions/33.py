@@ -1,4 +1,8 @@
 row, col = map(int, input().split(' '))
+# up boundary 0
+# down boundary n - 1
+# left boundary 0
+# right boundary m - 1
 res = 0
 
 if row > 1 and col > 1:

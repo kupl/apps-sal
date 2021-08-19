@@ -11,6 +11,7 @@ class Solution:
                 return dp_table[(idx_a, idx_b)]
 
             if idx_a == 0 or idx_b == 0:
+                # Any list compared to empty list give no uncrossed line
                 return 0
 
             elif A[idx_a] == B[idx_b]:
@@ -21,4 +22,5 @@ class Solution:
                 dp_table[(idx_a, idx_b)] = max(helper(idx_a - 1, idx_b), helper(idx_a, idx_b - 1))
                 return dp_table[(idx_a, idx_b)]
 
+        # --------------------------------------------
         return helper(len(A) - 1, len(B) - 1)

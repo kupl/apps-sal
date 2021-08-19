@@ -1,3 +1,4 @@
+# python 3.6 has sorted dicts
 from string import ascii_lowercase as az
 
 

@@ -7,3 +7,5 @@ def enough(cap, on, wait):
 
     if people_left > 0:
         return people_left
+
+    # Your code here

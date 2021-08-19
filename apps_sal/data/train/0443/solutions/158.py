@@ -15,7 +15,7 @@ class Solution:
 
         three = None
         count = 0
-        while i < len(rating):
+        while i < len(rating):  # 2,5,7
             j = i + 1
             while j < len(rating):
                 k = j + 1
@@ -34,8 +34,8 @@ class Solution:
 
         three = None
         count = 0
-        while i < len(rating):
-            final.append(rating[i])
+        while i < len(rating):  # 2,5,7
+            final.append(rating[i])  # 2
             j = i + 1
             while j < len(rating):
                 final.append(rating[j])

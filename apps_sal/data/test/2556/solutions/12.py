@@ -7,6 +7,7 @@ import bisect
 import string
 import math
 import time
+#import random
 
 
 def I():
@@ -44,6 +45,7 @@ inf = float('inf')
 l_alp = string.ascii_lowercase
 u_alp = string.ascii_uppercase
 ts = time.time()
+# sys.setrecursionlimit(10**6)
 def input(): return sys.stdin.readline().rstrip()
 
 
@@ -57,4 +59,5 @@ for _ in range(t):
     m = s - c * (s // c)
     an = (a**2) * (c - m) + m * (a + 1)**2
 
+    # show(an)
     print(an)

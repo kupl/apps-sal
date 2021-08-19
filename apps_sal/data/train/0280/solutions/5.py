@@ -10,6 +10,8 @@ class Solution:
         for j in range(1, l + 1):
             dp[1][j] = jbn(s[:j])
         for i in range(2, k + 1):
-            for j in range(i + 1, l + 1):
+            for j in range(i + 1, l + 1):  # if j == i, dp[i][j] = 0
+                # t = min(dp[i-1][i-1:j])
+                # dp[i][j] = t + jbn(s[m:j])
                 dp[i][j] = min(dp[i - 1][m] + jbn(s[m:j]) for m in range(i - 1, j))
         return dp[k][l]

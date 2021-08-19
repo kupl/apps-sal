@@ -12,6 +12,7 @@ class Solution:
             else:
                 self.max_gold = max(self.max_gold, current)
 
+        # search for each grid
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j]:

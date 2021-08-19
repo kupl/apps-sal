@@ -18,13 +18,26 @@ class Solution:
         for i in range(len(acc)):
             num = acc[i]
             find = (p + num - orig) % p
+            # print(\"i = %d. num = %d. find = %d\" % (i, num, find))
             if find in d:
                 ret = min(ret, i - d[find])
                 pass
+            # can you get rid of all?
             if num == orig:
                 ret = min(ret, i + 1)
                 pass
             d[num] = i
+            # print(d)
             pass
+
+        #total = acc[-1]
+        # for i in range(len(nums)):
+        #    for j in range(i, len(nums)):
+        #        sub = acc[j] - acc[i] + nums[i]
+        #        if (total - sub) % p == 0:
+        #            print(\"i = %d, j = %d\" % (i,j))
+        #            pass
+        #        pass
+        #    pass
 
         return ret if ret != len(nums) else -1

@@ -1,4 +1,5 @@
 3
+#coding: utf-8
 
 N = int(input())
 

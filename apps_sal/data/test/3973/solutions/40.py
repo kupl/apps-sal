@@ -1,11 +1,14 @@
+# E
 n, m = map(int, input().split())
 a_list = list(map(int, input().split()))
 
 
+# bonus map
 bonus_str_cnt = [0] * (m + 1)
 bonus_end_vol = [0] * (m + 1)
 bonus_end_cnt = [0] * (m + 1)
 
+# 1
 one_res = 0
 bonus_cnt = 0
 for i in range(n - 1):

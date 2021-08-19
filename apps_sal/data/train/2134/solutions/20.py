@@ -18,6 +18,7 @@ while stack:
     level[y].append(x)
     for i in graph[x]:
         stack.append([i, y + 1])
+# print(level)
 ans = [0 for i in range(n + 2)]
 ans[1] = s[0]
 for i in range(1, n + 1):
@@ -40,7 +41,9 @@ for i in range(1, n + 1):
         if i > 1:
             for j in level[i]:
                 papa = s[l[j - 2] - 1]
+                # print(papa)
                 ans[j] = s[j - 1] - papa
+# print(ans)
 if flag == 0:
     print(-1)
 else:

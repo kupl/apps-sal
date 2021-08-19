@@ -1,4 +1,5 @@
 def make_upper_case(s):
+    # Code here
     spongebob = ""
     for i in s:
         if(str(i).isnumeric() == True):

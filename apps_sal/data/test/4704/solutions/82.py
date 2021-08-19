@@ -3,6 +3,11 @@ n = int(input())
 a = list(map(int, input().split()))
 
 n_acc = itertools.accumulate(a)
+#r_acc = itertools.accumulate(a[::-1])
+# 1, 3, 6, 10, 15 ,21
+# 1 vs 20
+# 3 vs
+#print(n_acc, r_acc)
 
 
 sigma = sum(a)

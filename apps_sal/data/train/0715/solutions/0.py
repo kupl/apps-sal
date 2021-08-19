@@ -1,3 +1,4 @@
+# cook your dish here
 s = input().strip()
 start_w = 27
 w_dict = {}

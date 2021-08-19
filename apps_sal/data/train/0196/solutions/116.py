@@ -15,6 +15,7 @@ class Solution:
             if end - stack[0] == n + 1:
                 stack.popleft()
             maxv = max(num - B[stack[0]], maxv)
+            #print(end, stack, maxv)
         if all(x < 0 for x in A):
             return max(A)
         return maxv

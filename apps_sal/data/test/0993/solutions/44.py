@@ -10,6 +10,7 @@ for i in range(1, N + 1):
     L[i] = (L[i - 1] + A[i - 1]) % M
     D[L[i]] += 1
 D = dict(D)
+# print(D)
 ans = 0
 for v in D.values():
     if v > 1:

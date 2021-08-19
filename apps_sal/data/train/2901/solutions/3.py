@@ -10,4 +10,4 @@ def psion_power_points(level, score):
 
     bonus_points = max(0, int((score - 10) // 2 * 0.5 * level))
 
-    return base_points + bonus_points
+    return base_points + bonus_points  # if score > 11 else base_points

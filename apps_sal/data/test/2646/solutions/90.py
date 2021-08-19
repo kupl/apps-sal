@@ -9,6 +9,9 @@ for i in range(m):
     graph[a].append(b)
     graph[b].append(a)
 
+# dist = [-1]*(n+1)
+# dist[0] = 0
+# dist[1] = 0
 mark = [-1] * (n + 1)
 mark[0] - 0
 mark[1] = 0
@@ -21,8 +24,10 @@ while d:
     v = d.popleft()
     for i in graph[v]:
         if mark[i] != -1:
+            # if dist[i] != -1:
             continue
         mark[i] = v
+        # dist[i] = dist[v] + 1
         d.append(i)
 
 if '-1' in mark:

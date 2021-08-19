@@ -44,9 +44,12 @@ class Solution:
                 k -= 1
             else:
                 i -= 1
+        # for i in matrix:
+        #    print(i)
         str_val = str_val[::-1]
         str1_lis = str1_lis[::-1]
         str2_lis = str2_lis[::-1]
+        #print(str_val, str1_lis, str2_lis)
         final_str = str1[:str1_lis[0]] + str2[:str2_lis[0]] + str_val[0]
         for i in range(1, len(str_val)):
             final_str += str1[str1_lis[i - 1] + 1:str1_lis[i]] + str2[str2_lis[i - 1] + 1:str2_lis[i]] + str_val[i]

@@ -20,7 +20,10 @@ for i in range(1, n + 1):
         z.append(i)
 zp = 0
 i = 1
+# print(f)
+# print(s)
 for i in range(len(f)):
+    # if i < len(f):
     fin = f[i]
     st = s[i]
     if (i == len(f) - 1) and len(z) == 1:

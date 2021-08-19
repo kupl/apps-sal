@@ -4,6 +4,7 @@ class Solution:
         :type matrix: List[List[int]]
         :rtype: List[int]
         """
+        # O(n^2) time; O(1) space
         if not matrix:
             return []
 

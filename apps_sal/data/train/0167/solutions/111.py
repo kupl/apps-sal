@@ -13,15 +13,20 @@ class Solution:
             cachedSolutions[eggs][floors] = floors
             return floors
         else:
+            # Arbitrarily large number to initialize the minimum number of drops.
             smallestIndex = 1
             largestIndex = floors
             minDrops = 100000000
             while(smallestIndex <= largestIndex):
+                # We want to find the minimum of the maximums of all possible subproblems and do it through binary search.
                 middleIndex = round(smallestIndex + (largestIndex - smallestIndex) / 2)
+                # Solve the subproblems.
                 minDropsA = self.getMinDrops(eggs - 1, middleIndex - 1, cachedSolutions)
                 minDropsB = self.getMinDrops(eggs, floors - middleIndex, cachedSolutions)
+                # Find a new minimum number of drops for validating that all floors are a solution or not.
                 tempMinDrops = max(minDropsA, minDropsB) + 1
                 minDrops = min(minDrops, tempMinDrops)
+                # Check which half will contain the valid solution.
                 if (minDropsA > minDropsB):
                     largestIndex = middleIndex - 1
                 else:

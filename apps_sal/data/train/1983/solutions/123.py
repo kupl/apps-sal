@@ -20,3 +20,9 @@ class ProductOfNumbers:
         if(self.size - self.z <= k):
             return 0
         return self.c[self.size - 1] // self.c[self.size - k - 1]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

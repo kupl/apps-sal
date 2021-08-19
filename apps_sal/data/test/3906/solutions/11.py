@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 
 width, height = list(map(int, input().strip().split(' ')[:2]))
 
 modulo = 10**9 + 7
 fibs = [0, 0]
-sum_fibs = [0, 0]
+sum_fibs = [0, 0]  # sum [2..N] Fib(i)
 a, b = 1, 0
 for i in range(max(width, height)):
     fibs.append(a)

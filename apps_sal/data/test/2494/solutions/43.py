@@ -29,15 +29,20 @@ class Dijkstra(object):
     def __init__(self, graph, start):
         self.g = graph.graph
 
+        # startノードからの最短距離
+        # startノードは0, それ以外は無限大で初期化
         self.dist = defaultdict(lambda: float('inf'))
         self.dist[start] = 0
 
+        # 最短経路での1つ前のノード
         self.prev = defaultdict(lambda: None)
 
+        # startノードをキューに入れる
         self.Q = []
         heappush(self.Q, (self.dist[start], start))
 
         while self.Q:
+            # 優先度（距離）が最小であるキューを取り出す
             dist_u, u = heappop(self.Q)
             if self.dist[u] < dist_u:
                 continue

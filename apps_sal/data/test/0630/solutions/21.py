@@ -1,3 +1,5 @@
+# python3
+# utf-8
 
 def solve():
     n, k = (int(x) for x in input().split())
@@ -23,5 +25,6 @@ def solve():
 
 
 t = 1
+# t = int(input())
 for _ in range(t):
     solve()

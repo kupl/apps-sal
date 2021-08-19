@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n = int(input())
 while n % 3 == 0:
     n = n // 3

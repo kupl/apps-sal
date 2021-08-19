@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 s = input()
 a, s = s.split('.')
 d, b = s.split('e')

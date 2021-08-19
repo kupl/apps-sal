@@ -10,6 +10,7 @@ for t in range(test):
         adj[a].append(b)
         adj[b].append(a)
 
+    # print(adj)
     root = 1
     q, s = [root], set([root])
 
@@ -18,6 +19,7 @@ for t in range(test):
         q.extend(adj[x])
         s.update(adj[x])
 
+    # print(adj)
     ans = True
     for i in range(n + 1):
         if(len(adj[i]) % 3 != 0):

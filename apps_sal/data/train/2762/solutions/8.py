@@ -12,5 +12,6 @@ def scoreboard(announcement):
         'eight': 8,
         'nine': 9
     }
+    # scores are the last two words in the referee's announcement
     scores = announcement.split()[-2:]
     return [numbers[score] for score in scores]

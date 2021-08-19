@@ -32,7 +32,7 @@ idx1 = 0
 idx2 = 0
 
 mod = 10**9 + 7
-N = 10**6
+N = 10**6  # 必要そうな階乗の限界を入れる
 factorial = [1]
 for i in range(1, N):
     factorial.append(factorial[i - 1] * i % mod)
@@ -66,12 +66,15 @@ for i in range(n + 1):
         break
     check[a[i]] = i + 1
 
+# print(kaburi)
+# print(idx1, idx2)
 l = idx1 - 1
 r = n - idx2 + 1
 idx1 -= 1
 idx2 -= 1
 
 thre = n - (idx2 - idx1) + 2
+# print(l, r)
 
 for k in range(1, n + 2):
     if k >= thre:

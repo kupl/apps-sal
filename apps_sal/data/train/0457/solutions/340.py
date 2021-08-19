@@ -1,5 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        # dp[i] --- for amount i, the fewset coin here
 
         dp = [float('inf')] * (amount + 1)
         dp[0] = 0

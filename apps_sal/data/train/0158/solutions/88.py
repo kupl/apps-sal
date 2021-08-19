@@ -3,6 +3,8 @@ from collections import deque
 
 class Solution:
     def kSimilarity(self, A: str, B: str) -> int:
+        # check official solution and
+        # https://leetcode.com/problems/k-similar-strings/discuss/269517/Python-Graph-BFS
         q = deque()
         q.append(A)
         visited = set([A])

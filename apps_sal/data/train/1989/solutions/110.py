@@ -1,4 +1,5 @@
 class Solution:
+    # O(n^2) TLE
     def longestAwesome(self, s: str) -> int:
         count = 0
         digits = 0
@@ -32,6 +33,7 @@ class Solution:
                 count -= 1
         return result
 
+    # O(10n)
     def longestAwesome(self, s: str) -> int:
         digits = {}
         digits[0] = -1

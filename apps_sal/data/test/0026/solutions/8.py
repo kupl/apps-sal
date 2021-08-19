@@ -1,20 +1,20 @@
 import math
 import decimal
 output = [
-    'x^y^z',
-    'x^z^y',
-    '(x^y)^z',
-    '(x^z)^y',
+    'x^y^z',  # 0
+    'x^z^y',  # 1
+    '(x^y)^z',  # 2
+    '(x^z)^y',  # 3
 
-    'y^x^z',
-    'y^z^x',
-    '(y^x)^z',
-    '(y^z)^x',
+    'y^x^z',  # 4
+    'y^z^x',  # 5
+    '(y^x)^z',  # 6
+    '(y^z)^x',  # 7
 
-    'z^x^y',
-    'z^y^x',
-    '(z^x)^y',
-    '(z^y)^x'
+    'z^x^y',  # 8
+    'z^y^x',  # 9
+    '(z^x)^y',  # 10
+    '(z^y)^x'  # 11
 ]
 
 x, y, z = map(decimal.Decimal, input().split())
@@ -33,6 +33,7 @@ a += [(decimal.Decimal(math.log(z)) * (y**x), 9)]
 a += [(decimal.Decimal(math.log(z)) * x * y, 10)]
 
 ret = output[0]
+# print(a[0][0])
 cmp = a[0][0]
 for i in range(0, 9):
     if a[i][0] > cmp:

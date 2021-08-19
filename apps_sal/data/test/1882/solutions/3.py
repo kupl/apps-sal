@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Fri Jan 12 18:46:09 2018
 
@@ -5,8 +6,8 @@ Created on Fri Jan 12 18:46:09 2018
 """
 
 import sys
-import operator
-import itertools
+import operator  # itemgetter
+import itertools  # islice
 
 
 def __starting_point():
@@ -15,7 +16,9 @@ def __starting_point():
     for i in range(n):
         a, b = list(map(int, input().split()))
         listi.append((a, b, i))
+    # print(listi)
     listi = sorted(listi, key=lambda x: x[1])
+    # print(listi)
     time = [0] * (n + 1)
     count = [0] * (n + 1)
     time_sum = 0
@@ -37,6 +40,7 @@ def __starting_point():
                 k += 1
 
     max_score = max(count_sum, k - 1)
+    #max_score = count_sum
 
     print(max_score)
     print(max_score)
@@ -44,10 +48,12 @@ def __starting_point():
         (idx + 1 for (a, t, idx) in listi if a >= max_score),
         max_score
     ))))
+    # print(listi)
     '''for a, t, idx in listi:
         if idx > max_score:
             print(idx,sep=" ")
             '''
+    # print(idx+1 for  in listi )
 
 
 __starting_point()

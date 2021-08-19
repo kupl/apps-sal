@@ -51,8 +51,10 @@ def main():
         print((1))
     elif CAA == "B" and CAB == "A" and CBA == "A" and CBB == "A":
         print((fibo(N)))
+    # fibo
     elif CAA == "B" and CAB == "A" and CBA == "A" and CBB == "B":
         print((fibo(N)))
+    # fibo
     elif CAA == "B" and CAB == "A" and CBA == "B" and CBB == "A":
         print((pow(2, N - 3, MOD)))
     elif CAA == "B" and CAB == "A" and CBA == "B" and CBB == "B":
@@ -63,6 +65,7 @@ def main():
         print((1))
     elif CAA == "B" and CAB == "B" and CBA == "B" and CBB == "A":
         print((fibo(N)))
+    # fibo
     elif CAA == "B" and CAB == "B" and CBA == "B" and CBB == "B":
         print((1))
 

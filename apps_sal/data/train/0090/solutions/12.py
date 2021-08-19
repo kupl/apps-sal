@@ -4,7 +4,7 @@ for _ in range(t):
     a = list(map(int, input().split()))
     l = list(map(int, input().split()))
     b = []
-    if sum(l) < n:
+    if sum(l) < n:  # exist non-blocked
         for i in range(n):
             if l[i] == 0:
                 b.append(a[i])

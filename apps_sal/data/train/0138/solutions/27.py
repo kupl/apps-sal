@@ -1,5 +1,10 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
+        # DP may be unnecessary, but because I saw max length subarray
+        # I assumed that it would be DP. Solution approach was DP-esque
+        # but it doesn't seem necessary.
+        # Seems like another way could be to just count the number of
+        # negatives (between 0s).
         p = 0
         n = 0
         longest_p = 0

@@ -4,6 +4,7 @@ import math as mt
 import sys
 import string
 input = sys.stdin.readline
+# print=sys.stdout.write
 def L(): return list(map(int, input().split()))
 def Ls(): return list(input().split())
 

@@ -13,4 +13,5 @@ class Solution:
                 v[(neg, zero)] = i
             else:
                 maxlen = max(maxlen, i - v[(neg, zero)])
+        # print(v)
         return maxlen

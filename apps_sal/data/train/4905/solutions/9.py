@@ -1,5 +1,7 @@
 def answer(puzzlebox):
     return 42
+    # print(dir(puzzlebox)
+    # Print statements are your friend.
 
 
 print(dir(puzzlebox))

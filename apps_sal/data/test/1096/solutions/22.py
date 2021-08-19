@@ -1,4 +1,5 @@
-import operator as ops
+# imports
+import operator as ops  # lt, le, eq, ne, ge, gt,  xor  notit, lshift, rshift,      neg, add, mul, sub,
 from operator import __or__ as orit
 from operator import __abs__ as absit
 from operator import __not__ as notit
@@ -13,8 +14,11 @@ import sys
 sys.setrecursionlimit(30000)
 
 
+#PI, E, PHI, INF
 PHI, PHI2 = (1 + 5 ** 0.5) / 2, (5 ** 0.5 - 1) / 2
 INF = float('inf')
+
+# structures
 
 
 class TreeNode:
@@ -23,13 +27,16 @@ class TreeNode:
         self.left = None
         self.right = None
 
+# Bit Manipulation
+# <<, >>, bin(), int(s, 2)
+
 
 def setBit(x, offset):
-    return x | 1 << offset
+    return x | 1 << offset  # RHS: mask
 
 
 def clearBit(x, offset):
-    return x & ~(1 << offset)
+    return x & ~(1 << offset)  # RHS: mask
 
 
 def getBit(x, offset):
@@ -37,20 +44,20 @@ def getBit(x, offset):
 
 
 def testBit(x, offset):
-    return x & 1 << offset
+    return x & 1 << offset  # RHS: mask
 
 
 def flipBitAt(x, offset):
-    return x ^ 1 << offset
+    return x ^ 1 << offset  # RHS: mask
 
 
-def flipBits(x, length=-1):
+def flipBits(x, length=-1):  # default: x.bit_length() - 1
     length = x.bit_length() - 1 if length == -1 else length
     return x ^ (1 << length) - 1
 
 
 def numBits(x):
-    return x.bit_length()
+    return x.bit_length()  # int.bit_length()
 
 
 def countOnes(x):
@@ -60,6 +67,8 @@ def countOnes(x):
 def countZeros(x, length=-1):
     length = x.bit_length() if length == -1 else length
     return length - countOnes(x)
+
+# IO
 
 
 def getList(tcast=str):
@@ -76,6 +85,8 @@ def getVal(tcast=str):
 
 def getMatrix(r, tcast=str):
     return [getList(tcast) for row in range(r)]
+
+# Math
 
 
 def isOdd(n):
@@ -95,7 +106,7 @@ def getRecip(f):
 
 
 def _gcd(a, b):
-    while b:
+    while b:  # is not zero
         a, b = b, a % b
     return a
 
@@ -126,8 +137,8 @@ def primesUpto(n):
     isp = [True] * (n + 1)
     isp[0], isp[1] = False, False
     primes = []
-    for i, x in enumerate(isp):
-        if x:
+    for i, x in enumerate(isp):  # for each number
+        if x:  # found a prime
             primes.append(i)
             mults = i * i
             while mults <= n:
@@ -136,13 +147,13 @@ def primesUpto(n):
     return primes
 
 
-def primeFactor(n):
+def primeFactor(n):  # without a sieve
     factors = Counter()
     while not n & 1:
         factors[2] += 1
         n >>= 1
     trynum = 3
-    while trynum <= ceil(sqrt(n)):
+    while trynum <= ceil(sqrt(n)):  # just in case
         while n % trynum == 0:
             factors[trynum] += 1
             n //= trynum
@@ -152,7 +163,7 @@ def primeFactor(n):
     return factors
 
 
-def isPrime(n):
+def isPrime(n):  # num -> boolean
     if n & 1 and n >= 2:
         trynum = 3
         limit = ceil(sqrt(n))
@@ -176,8 +187,10 @@ def nthFib(n):
             n -= 1
         return b
 
+# Iteration
 
-def zipNWith(f, *x):
+
+def zipNWith(f, *x):  # xs, ys, ... zs -> elementwise f -> os #return map(lambda *y: f(y), x) #list way: [f(y) for y in zip(*xs)]
     return (f(y) for y in zip(*x))
 
 
@@ -213,9 +226,13 @@ def powerset(it):
     return chain.from_iterable(combos(s, r) for r in range(len(s) + 1))
 
 
+# Input
+# Body
+# Output
 pos = getVal(str)
 first, second = pos[0], int(pos[1])
 first = 'abcdefgh'.index(first) + 1
+#print(first, second)
 
 edges = [1, 8]
 if first in edges or second in edges:

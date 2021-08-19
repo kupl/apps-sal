@@ -4,3 +4,4 @@ def enough(cap, on, wait):
         return 0
     else:
         return abs(a)
+    # Your code here

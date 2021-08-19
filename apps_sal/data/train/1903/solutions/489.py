@@ -1,9 +1,16 @@
+# Kruskal's Algorithm
 class UnionFind:
     def __init__(self, n):
         self.leaders = [i for i in range(n)]
         self.ranks = [1 for i in range(n)]
 
     def find(self, x):
+        # p = x
+        # while p != self._leaders[p]:
+        #     p = self._leaders[p]
+        # while x != p:
+        #     self._leaders[x], x = p, self._leaders[x]
+        # return p
         if self.leaders[x] != x:
             self.leaders[x] = self.find(self.leaders[x])
         return self.leaders[x]

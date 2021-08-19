@@ -1,3 +1,6 @@
+# d_n= [C_m+A_n*B_m] for m in range()
+# A=[ ->> ]
+# B=[ <<- ]
 
 def intersection(p, q):
     return (q[1] - p[1]) / (p[0] - q[0])

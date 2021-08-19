@@ -11,7 +11,7 @@ table = np.zeros((H, W, max_num), dtype='bool')
 table[0][0][D[0][0]] = True
 
 it = itertools.product(list(range(H)), list(range(W)))
-next(it)
+next(it)  # h=w=0 捨てる
 for h, w in it:
     d = D[h][w]
     table[h][w][d:] += table[h - 1][w][:max_num - d] + table[h][w - 1][:max_num - d]

@@ -42,16 +42,19 @@ def main():
                 break
             elif black == 0:
                 if i > 0:
+                    # up
                     for yd, xd in ((-1, 0), (-1, 1), (-1, 2)):
                         yy = i + yd
                         xx = j + xd
                         grid[yy][xx] = 1
                 elif j > 0:
+                    # left
                     for yd, xd in ((0, -1), (1, -1), (2, -1)):
                         yy = i + yd
                         xx = j + xd
                         grid[yy][xx] = 1
             elif white == 0:
+                # center
                 yy = i + 1
                 xx = j + 1
                 grid[yy][xx] = 1
@@ -64,7 +67,7 @@ def main():
 
     print((100, 100))
     for line in grid:
-        print((''.join('
+        print((''.join('#' if c else '.' for c in line)))
 
 
 def __starting_point():

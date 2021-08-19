@@ -1,3 +1,4 @@
+#chef and droof
 for u in range(int(input())):
     flag = 0
     n = int(input())

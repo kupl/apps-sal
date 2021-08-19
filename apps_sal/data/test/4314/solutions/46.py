@@ -8,9 +8,9 @@ col = [False] * W
 
 for j in range(H):
     for k in range(W):
-        if A[j][k] == "
-        row[j] = True
-        col[k] = True
+        if A[j][k] == "#":
+            row[j] = True
+            col[k] = True
 
 for l in range(H):
     if row[l]:

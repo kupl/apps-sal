@@ -1,5 +1,7 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
+        # Start at 10:19 PM
+        # Need to do DFS, reduce computation if already visited the node
         visited = set()
 
         states = [None] * len(graph)
@@ -8,6 +10,7 @@ class Solution:
             if states[i] is not None:
                 return states[i]
 
+            # Cyclical relation detected
             if i in visited:
                 return False
             visited.add(i)

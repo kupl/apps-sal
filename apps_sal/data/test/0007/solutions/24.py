@@ -11,12 +11,16 @@ def solve(n, m):
     r = max(n, m) + 100
     while l < r:
         mid = (l + r) // 2
+        #print("mid = " + str(mid))
+        #print("f = " + str(f(mid,fd,m,n)))
         if f(mid, fd, m, n):
             r = mid
         else:
             l = mid + 1
+           # print("now l = " + str(l) + " r = " + str(r) + " " + str((l == r - 1)))
 
         if l == r - 1:
+            #print("last l = " + str(l) + " fl = " + str(f(l, fd,m,n)))
             if f(l, fd, m, n):
                 r = l
             else:

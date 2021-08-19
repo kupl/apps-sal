@@ -91,6 +91,7 @@ class Family:
             return False
 
         else:
+            # if there is another parent with known gender, checks for inconsistency
             if len(current_parents) == 1 and self.family[parent_name].gender is None \
                     and self.family[current_parents[0]].gender is None:
                 family_copy = self.__copy__()

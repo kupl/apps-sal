@@ -18,8 +18,9 @@ class Solution:
         lo, hi = 1, N
         while lo <= hi:
             mid = (lo + hi) // 2
-            broken = Solution.dp(K - 1, mid - 1)
-            not_broken = Solution.dp(K, N - mid)
+            broken = Solution.dp(K - 1, mid - 1)  # 碎
+            not_broken = Solution.dp(K, N - mid)  # 没碎
+            # res = min(max(碎，没碎) + 1)
             if broken > not_broken:
                 hi = mid - 1
                 res = min(res, broken + 1)

@@ -3,3 +3,10 @@ def feast(beast, dish):
         return True
     else:
         return False
+
+   #lengthf = len(first)
+   #   lengths = len(second)
+   #   if second in first[-lengths:]:
+   #       return True
+    #  else:
+    #      return False

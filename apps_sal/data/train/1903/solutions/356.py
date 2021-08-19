@@ -7,6 +7,7 @@ class Solution:
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 distances.append([(i, j), dist])
         distances.sort(key=lambda x: x[1])
+        # print(distances)
         parent = [i for i in range(n)]
         size = [1 for _ in range(n)]
 
@@ -17,6 +18,8 @@ class Solution:
                 return find(parent[x])
 
         def union(px, py):
+            # px, py = find(x), find(y)
+            # if px != py:
             if size[px] < size[py]:
                 px, py = py, px
             parent[py] = px

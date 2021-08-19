@@ -6,6 +6,7 @@ class Solution:
 
         @functools.lru_cache(None)
         def dfs(i, last_color, hoods):
+            # print(i, last_color, hoods)
             if hoods > target:
                 return float('inf')
 

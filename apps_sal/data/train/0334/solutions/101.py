@@ -18,6 +18,7 @@ class Solution:
             else:
                 p = l
                 if s != n:
+                    # only ones before are problematic
                     t += reduce(lambda a, b: a + b, cost[s:i], 0) - max(cost[s:i])
                     s = n
         if s != n:

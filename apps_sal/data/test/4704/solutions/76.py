@@ -1,3 +1,4 @@
+# C - Splitting Pile
 N = int(input())
 A = list(map(int, input().split()))
 

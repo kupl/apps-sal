@@ -12,6 +12,7 @@ def main():
 
     def dfs(idx, a, b, c):
         if idx == N:
+            # a,b,cそれぞれ最低1本は必要で合成をしているため、-30が必要
             return abs(a - A) + abs(b - B) + abs(c - C) - 30 if min(a, b, c) > 0 else INF
         ret0 = dfs(idx + 1, a, b, c)
         ret1 = dfs(idx + 1, a + ll[idx], b, c) + 10

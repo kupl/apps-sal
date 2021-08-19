@@ -14,6 +14,7 @@ for i in range(N - 1):
         if c_l <= j:
             continue
 
+        # print(i, j, c_l)
         res += c_l - (j + 1)
 
 print(res)

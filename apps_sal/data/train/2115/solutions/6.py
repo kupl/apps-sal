@@ -2,6 +2,7 @@ from collections import deque
 
 
 def cxx2(x):
+    # print(x)
     if(x <= 1):
         return 0
     elif(x == 2):
@@ -15,6 +16,7 @@ def cxx2(x):
 
 
 def cxx3(x):
+    # print(x)
     if(x <= 2):
         return 0
     elif(x == 3):
@@ -27,6 +29,7 @@ def cxx3(x):
         return sans2
 
 
+# print(cxx3(4))
 '''for i in range(10):
     print(cxx2(i))'''
 inp = input().split()
@@ -40,8 +43,10 @@ for i in range(n):
     if(len(a) != 0):
         while(a[-1] - a[0] > d):
             a.popleft()
+            # print(cxx2(len(a)-1))
             ans += cxx2(len(a) - 1)
 while(len(a) != 0):
     a.popleft()
     ans += cxx2(len(a))
+    # print(cxx2(len(a)))
 print(ans)

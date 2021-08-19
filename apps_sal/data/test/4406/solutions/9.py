@@ -1,5 +1,6 @@
 n, k = map(int, input().split())
 l = [int(i) for i in input().split()]
+# n msgs  i Th from idiur
 curr = []
 for i in l:
     if i in curr:

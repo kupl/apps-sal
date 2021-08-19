@@ -57,6 +57,7 @@ class Solution:
                                 ans = max(ans, len(cc[i]) + len(cc[j]) + 1)
 
             return ans
+        # return method1()
 
         def method2():
             R = len(grid)

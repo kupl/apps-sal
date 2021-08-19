@@ -10,6 +10,7 @@ for i in range(M):
 S, T = map(int, input().split())
 S, T = S - 1, T - 1
 
+# BFS
 dist[S][0] = 0
 q = deque()
 q.append((S, 0))

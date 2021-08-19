@@ -1,3 +1,4 @@
+#!/usr/bin/env pypy3
 
 NO_SOL = -1
 

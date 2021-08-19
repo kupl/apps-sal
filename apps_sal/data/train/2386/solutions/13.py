@@ -11,6 +11,8 @@ def mod(): return 10**9 + 7
 
 for i in range(INT()):
     n = INT()
+    #s = input()
+    #n,m = MAP()
     arr = LIST()
     d = {}
     for i in arr:

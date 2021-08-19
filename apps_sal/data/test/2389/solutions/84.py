@@ -7,7 +7,7 @@ def main():
     for _ in [0] * n:
         s = input()
         query.append((ord(s[0]) - ord('A'), ord(s[1]) - ord('A')))
-    query.append((0, 1))
+    query.append((0, 1))  # 番兵
 
     ans = ['A'] * n
     for i in range(n):

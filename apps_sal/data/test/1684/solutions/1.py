@@ -14,6 +14,7 @@ for i in range(m):
     a, b = [int(i) for i in input().split()]
     a -= 1
     b -= 1
+    # usar tupla ao inves de uma lista pois tuplas sao hashable
     g.add((min(a, b), max(a, b)))
 
 for i in range(1, n):
@@ -24,3 +25,4 @@ for i in range(1, n):
         break
 else:
     print('No')
+# else depois de um for é executado se ele n quebrar

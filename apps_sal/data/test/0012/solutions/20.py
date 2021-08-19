@@ -1,10 +1,20 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
 
 
 import math
 
 
+# In[5]:
+
+
 n = int(input())
 data = list(input())
+
+
+# In[21]:
 
 
 firstsilver = -1
@@ -21,6 +31,10 @@ for i in range(0, n):
     if diff > mdiff[0]:
         mdiff = [diff, firstsilver, i, secondsilver]
 
+# print(mdiff)
+
+
+# In[22]:
 
 if mdiff[1] == mdiff[3]:
     penalty = 0
@@ -33,4 +47,10 @@ for i in range(0, n):
             penalty = 0
 
 
+# In[23]:
+
+
 print(mdiff[0] - penalty)
+
+
+# In[ ]:

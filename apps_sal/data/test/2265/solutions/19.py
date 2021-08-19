@@ -1,6 +1,6 @@
 a = input()
 b = input()
-q = 0
+q = 0  # a > b
 for i in b:
     if i == '1':
         q += 1

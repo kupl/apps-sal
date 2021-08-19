@@ -4,7 +4,7 @@ class Solution:
         ans = 0
         d = {0: -1}
         rolling = 0
-        for i, v in enumerate(s):
+        for i, v in enumerate(s):  # pay attention to i
             rolling ^= 1 << int(v)
             for x in range(10):
                 diff = rolling ^ (1 << x)

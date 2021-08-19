@@ -21,9 +21,11 @@ low = 0
 high = n - 1
 while low <= high:
     mid = (low + high) // 2
+   # print(mid)
     if ispzbl(l, n, m, k, mid):
         ans = mid
         high = mid - 1
     else:
         low = mid + 1
+# print(ans)
 print(n - ans)

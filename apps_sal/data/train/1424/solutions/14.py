@@ -1,3 +1,4 @@
+# cook your dish here
 n, a = list(map(int, input().split()))
 while a != 0:
     if n % 10 == 0:

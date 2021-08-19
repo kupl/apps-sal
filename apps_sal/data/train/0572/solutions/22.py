@@ -5,4 +5,4 @@ for i in range(t):
     if k >= d:
         print("0")
     else:
-        print((d - k))
+        print((d - k))  # cook your dish here

@@ -9,6 +9,7 @@ class Solution:
             digits += str(int(num % 10))
             num /= 10
 
+        # print(digits)
         digits = digits[::-1]
         lens = len(digits)
         mark = 0
@@ -24,13 +25,19 @@ class Solution:
                 mark1 = i
                 flag = 1
                 break
+        # print(digits)
         digit = list(digits)
+        # print(digit)
         if flag == 1:
             tem = digit[mark1]
             digit[mark1] = digit[mark]
             digit[mark] = tem
+        # print(digit)
+        #digits = digits[::-1]
         res = 0
+        # print(digit)
         for i in range(lens):
             res *= 10
             res += ord(digit[i]) - ord('0')
+            # print(res)
         return res

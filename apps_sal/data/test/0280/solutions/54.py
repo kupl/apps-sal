@@ -26,6 +26,8 @@ def main():
     LV.sort(reverse=True)
     nVL = [(0, 0)]
 
+    # より短くて頑丈な橋は考慮する必要なし
+    # 長い順に見ていくので，今以上の対荷重の橋が出てきたら無視
     MV = inf
     for i in range(M):
         l, v = LV[i]
@@ -34,6 +36,7 @@ def main():
             MV = v
 
     nVL.sort()
+    # print(nVL)
 
     from collections import defaultdict
     dd = defaultdict(int)
@@ -41,6 +44,7 @@ def main():
     import bisect
 
     def calc(x):
+        # 重さxの塊に対して，最低でどれだけの距離が必要か
 
         if dd[x]:
             return dd[x]
@@ -48,6 +52,7 @@ def main():
         temp = (x, -1)
         num = bisect.bisect_left(nVL, temp) - 1
 
+        # print(x,temp,num)
         v, l = nVL[num]
         dd[x] = l
         return l
@@ -56,8 +61,9 @@ def main():
 
     ans = inf
 
+    # 並びかたを全探索
     for ite in itertools.permutations(list(range(N)), N):
-        Cs = []
+        Cs = []  # 今回の並べ方
         for i in ite:
             Cs.append(W[i])
 
@@ -67,8 +73,10 @@ def main():
 
         X = [0] * N
 
+        # N個の頂点だと考えて，それぞれの座標を決める
         for i in range(N):
             for j in range(i + 1, N):
+                # i番目とj番目の間の距離
                 w = S[j + 1] - S[i]
                 l = calc(w)
                 X[j] = max(X[j],

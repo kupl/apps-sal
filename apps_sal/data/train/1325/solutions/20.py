@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     a, b, c, d = map(int, input().split())
     x = (a - b + c) // 2

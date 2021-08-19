@@ -9,8 +9,8 @@ for j in range(1, h + 1):
         c = []
         if l[j][k] == ".":
             c += [l[j - 1][k - 1], l[j - 1][k], l[j - 1][k + 1], l[j][k - 1], l[j][k + 1], l[j + 1][k - 1], l[j + 1][k], l[j + 1][k + 1]]
-            l[j][k] = str(c.count("
+            l[j][k] = str(c.count("#"))
 for i in range(1, h + 1):
-    ln=l[i][1:w + 1]
-    s="".join(ln)
+    ln = l[i][1:w + 1]
+    s = "".join(ln)
     print(s)

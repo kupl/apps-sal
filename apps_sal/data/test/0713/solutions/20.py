@@ -4,6 +4,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# Journey to moon
 '''
 def main():
 	from sys import stdin,stdout
@@ -40,6 +41,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# Djikstra's
 '''
 import collections
 class Graph:
@@ -99,6 +101,8 @@ def main():
 			G.add_edge(a,b,c)
 		initial=int(stdin.readline())
 		v,p=dijsktra(G, initial)
+		#print(v)
+		#print(p)
 		for i in range(1,n+1):
 			if i!=initial:
 				k=v.get(i,-1)
@@ -107,11 +111,13 @@ def main():
 def __starting_point():
 	main()
 '''
+# Larget pallindrome in String
 '''
 def main():
 	from sys import stdin,stdout
 	string=stdin.readline().strip()
 	l=len(string)
+	#Triangle logic	
 	
 	arrlen=(l*(l-1))//2
 	arr=list(0 for x in range(arrlen))
@@ -123,6 +129,7 @@ def main():
 				arr[f+j-i-1]=1
 		f+=c
 		c-=1
+	#print(arr)
 	if any(arr):
 		
 	else:
@@ -130,6 +137,7 @@ def main():
 			stdout.write('First')
 		else:
 			stdout.write('Second')
+	#2-d Array Logic
 	arr=list(list(0 for i in range(l)) for j in range(l))
 	for i in range(l):
 		for j in range(l):
@@ -138,6 +146,7 @@ def main():
 	maxim=0
 	for i in range(0,l*(l-1)-2,l+1):
 		a,b=i+1,i+2
+		#print(a,b)
 		acount=0
 		x=a//5
 		y=a%5
@@ -168,6 +177,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 276B
 '''
 def main():
 	from sys import stdin,stdout
@@ -183,6 +193,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 362B
 '''
 def main():
 	from sys import stdin,stdout
@@ -206,6 +217,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 279B SUM OF SUB-ARRAY
 '''
 def main():
 	from sys import stdin,stdout
@@ -240,6 +252,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 469B
 '''
 def main():
 	from sys import stdin,stdout
@@ -247,6 +260,7 @@ def main():
 	a=[]
 	b=[]
 	visited=list(0 for x in range(r-l+1))
+	#print(visited)	
 	for i in range(p):
 		x,y=map(int,stdin.readline().split())
 		a.append(x)
@@ -256,11 +270,15 @@ def main():
 		x+=l
 		y+=l
 		for j in range(p):
+			#print('x=',x,'y=',y)
 			lower=max(0,a[j]-y)
 			upper=min(b[j]-x,r)+1
 			if upper > lower:
 				delta=upper-lower
+				#print('upper=',upper,'lower=',lower)
 				visited[lower:upper]=list(1 for x in range(delta))
+				#print('visited:\n',visited)
+	#	print(visited)
 	stdout.write(str(visited[:r-l+1].count(1)))
 def __starting_point():
 	main()
@@ -268,6 +286,7 @@ def __starting_point():
 '''
 def main():
 	from sys import stdin,stdout
+	#import numpy as np
 	n,k=map(int,stdin.readline().split())
 	a=tuple(map(int,stdin.readline().split()))
 	minim=min(a)
@@ -303,6 +322,7 @@ def main():
 		stdout.write('second')
 	else:
 		maxim=max(n,p)
+		#print(maxim)
 		if maxim==p:
 			if maxim==n:
 				if last<0:
@@ -317,6 +337,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 286C
 
 
 def main():

@@ -1,3 +1,4 @@
+# cook your dish here
 for a0 in range(int(input())):
     x = list(map(int, input().split()))
     x.sort()

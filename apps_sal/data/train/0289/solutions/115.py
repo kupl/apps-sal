@@ -28,6 +28,7 @@ class Solution:
         for i in range(len(m_sums)):
             for j in range(len(l_sums)):
                 if i + M <= j or j + L <= i:
+                    # print(m_sums[i], l_sums[j])
                     max_sum = max(m_sums[i] + l_sums[j], max_sum)
 
         return max_sum

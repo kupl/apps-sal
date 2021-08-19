@@ -1,3 +1,5 @@
+# /usr/bin/python3
+# -*- coding: utf-8 -*-
 from queue import Queue
 from queue import LifoQueue as Stack
 from math import sqrt, floor, ceil, log2, log10, pi
@@ -214,6 +216,7 @@ def __starting_point():
         if is_light:
             cnt += 1
 
+    # 出力
     print(cnt)
 
 

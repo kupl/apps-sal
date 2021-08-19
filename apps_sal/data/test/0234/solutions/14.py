@@ -4,6 +4,7 @@ nR = [[0] * n for i in range(m)]
 
 for i in range(m):
     A = list(input())
+    # A.replace('.','0')
     R[i] = A[:]
 
 for i in range(m):
@@ -15,6 +16,7 @@ for i in range(m):
                         continue
                     if 0 <= i + ii < m and 0 <= j + jj < n:
                         nR[i + ii][j + jj] += 1
+# print(nR)
 v = 1
 for i in range(m):
     for j in range(n):

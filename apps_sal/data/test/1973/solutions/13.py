@@ -1,4 +1,5 @@
 
+# -*- coding: utf-8 -*-
 
 def __starting_point():
     n = int(input())

@@ -4,6 +4,8 @@ class Solution:
         total = sum(rods)
         dp = [[-1] * (5001) for _ in range(m + 1)]
         dp[0][0] = 0
+        # dp[n][i]: means max common height we can achieve of using the first n elements that two
+        # piles have the hight difference of i
         for i in range(1, m + 1):
             h = rods[i - 1]
             for j in range(5001 - h):

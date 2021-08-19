@@ -1,7 +1,7 @@
 K = int(input())
 
 
-def minSunuke(n):
+def minSunuke(n):  # n以上の n/S(n) の最小値
     sumDigit = sum(map(int, list(str(n))))
     return n / sumDigit
 

@@ -1,3 +1,4 @@
+# cook your dish here
 def AlmostPrime(n):
     pf = []
     while n % 2 == 0:
@@ -15,6 +16,7 @@ def AlmostPrime(n):
 def semi_prime(n):
     for i in range(6, n // 2 + 1):
         if AlmostPrime(i) and AlmostPrime(n - i):
+            # print(i,n-i)
             return "YES"
     return "NO"
 

@@ -44,6 +44,7 @@ n = int(input())
 xy = [list(map(int, input().split())) + [i] for i in range(n)]
 G = []
 
+# MSTを求める
 xy.sort()
 for j in range(1, n):
     sx, sy, si = xy[j - 1]
@@ -56,6 +57,7 @@ for j in range(1, n):
     tx, ty, ti = xy[j]
     G.append((min(abs(sx - tx), abs(sy - ty)), si, ti))
 
+# Kruskal 法
 u = UnionFind(n)
 ans = 0
 G.sort()

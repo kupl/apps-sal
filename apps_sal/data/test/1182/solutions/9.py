@@ -14,6 +14,7 @@ for i in range(r):
                 cnt = 0
                 for i3 in range(i, i + i2 + 1):
                     for j3 in range(j, j + j2 + 1):
+                        #print(i3, j3)
                         cnt += int(A[i3][j3] == 1)
                 if cnt >= k:
                     ans += 1

@@ -7,7 +7,7 @@ class Solution:
         m = len(arr)
         n = len(arr[0])
 
-        if m == 1:
+        if m == 1:  # 1 ele sq. matrix
             return arr[0][0]
 
         def get_min_neighbors(j):
@@ -39,7 +39,7 @@ class Solution:
         m = len(arr)
         n = len(arr[0])
 
-        if m == 1:
+        if m == 1:  # 1 ele sq. matrix
             return arr[0][0]
 
         def get_min_neighbors():
@@ -51,9 +51,9 @@ class Solution:
         global_min = float('inf')
 
         for row in range(1, m):
-            min1, min2 = get_min_neighbors()
+            min1, min2 = get_min_neighbors()  # if linear
             for col in range(n):
-                min_val = min1 if row_prev[col] != min1 else min2
+                min_val = min1 if row_prev[col] != min1 else min2  # doesnt matter if duplicates
                 cur[col] = min_val + arr[row][col]
 
                 if row == m - 1 and cur[col] < global_min:

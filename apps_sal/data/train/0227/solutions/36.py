@@ -1,4 +1,11 @@
+#                 1,1,1,0,0,0,1,1,1,1,0
+# max=5,k=0       [       ]
 
+#                 1,1,1,0,0,0,1,1,1,1,0
+# max=5,k=-1        [       ]
+
+#                 1,1,1,0,0,0,1,1,1,1,0
+# max=6,k=0                 [         ]
 
 class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:

@@ -14,7 +14,7 @@ class Solution:
             self.cache[tmpend][0] = 0 if start != tmpend else 1
             return self.cache[tmpend][0]
         self.cache[tmpend][fu] = 0
-        for i in range(len(self.locations)):
+        for i in range(len(self.locations)):          # if fu>0
             if i == tmpend:
                 continue
             self.cache[tmpend][fu] += self.dfs(start, i, fu - abs(self.locations[i] - self.locations[tmpend]))

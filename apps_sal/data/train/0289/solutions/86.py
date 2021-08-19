@@ -7,6 +7,7 @@ class Solution:
 
         max_sum = 0
 
+        # start with L
         for i in range(L, len(prefix_sum)):
             L_sum = prefix_sum[i] - prefix_sum[i - L]
 
@@ -14,6 +15,7 @@ class Solution:
                 M_sum = prefix_sum[j] - prefix_sum[j - M]
                 max_sum = max(max_sum, L_sum + M_sum)
 
+        # start with M
         for i in range(M, len(prefix_sum)):
             M_sum = prefix_sum[i] - prefix_sum[i - M]
 

@@ -40,6 +40,11 @@ def main():
                 cnt += 1
                 D[i][j] = cnt
 
+    # print(L)
+    # print(R)
+    # print(U)
+    # print(D)
+    #T = [['.']*m for _ in range(n)]
     imosH = [[0] * (m + 1) for _ in range(n)]
     imosV = [[0] * m for _ in range(n + 1)]
     ans = []
@@ -60,6 +65,9 @@ def main():
             imosH[i][j - s] += 1
             imosH[i][j + s + 1] -= 1
 
+    # print(imosH)
+    # print(imosV)
+
     from itertools import accumulate
     for i in range(n):
         imosH[i] = list(accumulate(imosH[i]))
@@ -67,6 +75,10 @@ def main():
         for i in range(1, n + 1):
             imosV[i][j] += imosV[i - 1][j]
 
+    # print(imosH)
+    # print(imosV)
+
+    # print(T)
     for i in range(n):
         for j in range(m):
             if S[i][j] == '*':

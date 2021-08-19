@@ -34,6 +34,9 @@ def solve(K, A):
     return min(D)
 
 
+###############################################################################
+# AUXILIARY FUNCTIONS
+
 DEBUG = 'DEBUG' in os.environ
 
 

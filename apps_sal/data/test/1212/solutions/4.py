@@ -1,6 +1,8 @@
 n, k = map(int, input().split())
 h = list(map(int, input().split()))
 ans = [0] * (n - k + 1)
+# for i in range(k):
+#    h.append(10**9)
 ans[0] = sum(h[:k])
 minim = ans[0]
 aminim = 0

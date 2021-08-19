@@ -22,6 +22,7 @@ s3 = input()
 sc1 = get_score(s1, n)
 sc2 = get_score(s2, n)
 sc3 = get_score(s3, n)
+# print(sc1,sc2,sc3)
 if(sc1 > sc2 and sc1 > sc3):
     print('Kuro')
 elif(sc2 > sc1 and sc2 > sc3):

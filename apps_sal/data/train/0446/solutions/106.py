@@ -14,3 +14,18 @@ class Solution:
             else:
                 return len(heap) + 1
         return len(heap)
+
+# class Solution(object):
+#     def findLeastNumOfUniqueInts(self, arr, k):
+#         heap = []
+#         count = collections.Counter(arr)
+#         for key in count:
+#             heapq.heappush(heap, (count[key], key))
+
+#         while(heap and k):
+#             count, key = heapq.heappop(heap)
+#             if k >= count:
+#                 k -= count
+#             else:
+#                 return len(heap) + 1
+#         return len(heap)

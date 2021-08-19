@@ -20,6 +20,7 @@ for i in range(len(l)):
                 dict[j] = div
         else:
             ltc.append(div)
+            # chercher dans la map si on a déjà été ici
             if(div in dict.keys()):
                 nd = dict[div]
                 diff = (nd - div) % k

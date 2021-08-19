@@ -1,3 +1,4 @@
+# cook your dish here
 T = int(input())
 for i in range(T):
     N = int(input())
@@ -19,3 +20,6 @@ for i in range(T):
         for i in range(N):
             print(Z[i], end=" ")
         print()
+    # print(M)
+    # print(L)
+    # print(Z)

@@ -29,5 +29,6 @@ if(count2 > 0):
     arr.append(count2)
 for i in range(len(arr)):
     ans = ((ans % mod) * ((arr[i] % mod + 1 % mod) % mod)) % mod
+# print(ans,arr)
 ans = ((ans % mod - 1 % mod) % mod + mod) % mod
 print(ans)

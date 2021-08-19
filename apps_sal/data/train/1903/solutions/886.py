@@ -5,13 +5,13 @@ class Solution:
 
         def find(u):
             if u != parent.get(u, u):
-                parent[u] = find(parent[u])
+                parent[u] = find(parent[u])  # path compression
             return parent.get(u, u)
 
         def union(u, v):
             u, v = find(u), find(v)
             if u != v:
-                if size[u] < size[v]:
+                if size[u] < size[v]:  # union by size / rank
                     u, v = v, u
 
                 parent[v] = u

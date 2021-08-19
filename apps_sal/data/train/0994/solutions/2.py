@@ -6,6 +6,7 @@ for _ in range(int(input())):
         for j in range(n):
             a[i + 1][j + 1] = b[i] + b[j]
     c = 0
+    # print(a)
     for i in range(n + 1):
         for j in range(n + 1):
             if i > 0:
@@ -21,4 +22,5 @@ for _ in range(int(input())):
                     c += 1
                 ii -= 1
                 jj -= 1
+    # print(a)
     print(c)

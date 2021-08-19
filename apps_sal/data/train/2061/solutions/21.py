@@ -47,6 +47,7 @@ for loop in range(TT):
     oy = 2 * my
 
     setz = tuple(sorted([(ax - mx, ay - my), (bx - mx, by - my), (cx - mx, cy - my)]))
+    #print (setz)
 
     if setz == t0:
         ox += 0
@@ -60,6 +61,8 @@ for loop in range(TT):
     else:
         ox += 1
         oy += 0
+
+    #print (ox,oy,file=sys.stderr)
 
     if ox != oy:
         print((abs(ox) + abs(oy) - min(abs(ox), abs(oy))))

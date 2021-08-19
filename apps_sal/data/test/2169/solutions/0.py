@@ -20,9 +20,13 @@ def resolve():
             num += D
             idx += 1
 
+    # print(acc)
     for lr in LR:
         l, r = lr
         series = l % D if l % D != 0 else D
+        # print("---")
+        # print(series)
+        # print(l, r)
         print((acc[series][(r - series) // D] - acc[series][(l - series) // D]))
 
 

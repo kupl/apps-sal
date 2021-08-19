@@ -4,6 +4,8 @@
     first to occur.
 '''
 
+# TODO: Complete in linear time xDD
+
 
 def longest_palindrome(s):
     if is_palindrome(s):

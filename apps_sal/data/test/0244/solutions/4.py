@@ -7,6 +7,7 @@ for i in range(6):
     else:
         A[1], A[2] = A[2], A[1]
 n = int(input())
+#n -= 1
 n %= 6
 x = int(input())
 print(B[n][x])

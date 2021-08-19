@@ -19,3 +19,8 @@ class Solution:
 
         sort_memo = sorted(list(memo.items()), key=lambda x: x[1], reverse=False)
         return sort_memo[k - 1][0]
+
+
+# create a range from lo to hi
+# while k does not equal 1 do the formula
+# each tiomke add 1 to count

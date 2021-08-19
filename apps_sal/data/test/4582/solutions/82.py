@@ -1,3 +1,4 @@
+# 入力
 a, b = map(str, input().split())
 
 if a == 'H' and b == 'H':

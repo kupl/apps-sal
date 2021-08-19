@@ -1,3 +1,4 @@
+# coding: utf-8
 import math
 
 num1 = int(input())

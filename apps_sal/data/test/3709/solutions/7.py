@@ -14,6 +14,8 @@ def GetKey(flags):
     for a in flags:
         key <<= 1
         key += a
+    # print(flags)
+    # print(key)
     return key
 
 

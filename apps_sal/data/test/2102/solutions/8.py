@@ -2,6 +2,8 @@ import sys
 import operator
 
 
+# -----------
+
 def solve():
     a = [int(x) for x in input().split()]
 
@@ -41,6 +43,8 @@ def solve():
 
     print(ans)
 
+
+# -----------
 
 def main(argv):
     solve()

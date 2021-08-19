@@ -2,6 +2,7 @@ from math import ceil
 
 
 def movie(card, ticket, perc):
+    # your code
     discount_ticket = ticket
     system_a_price = 0
     system_b_price = card

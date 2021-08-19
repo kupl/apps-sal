@@ -16,3 +16,39 @@ class Solution:
 
         b = set(tuple(i) for i in blocked)
         return bfs(tuple(source), tuple(target), b) and bfs(tuple(target), tuple(source), b)
+
+        # blocked_map = collections.defaultdict(set)
+        # for r,c in blocked:
+        #     blocked_map[r].add(c)
+        # queue_s = collections.deque()
+        # queue_s.append(source)
+        # visited_s = set()
+        # visited_s.add(tuple(source))
+        # queue_t = collections.deque()
+        # queue_t.append(target)
+        # visited_t = set()
+        # visited_t.add(tuple(target))
+        # while queue_s and queue_t:
+        #     curr = queue_s.popleft()
+        #     if curr==target or tuple(curr) in visited_t:
+        #         return True
+        #     for dr,dc in [(0,1),(1,0),(-1,0),(0,-1)]:
+        #         nei_r = curr[0]+dr
+        #         nei_c = curr[1]+dc
+        #         if nei_r>=0 and nei_r<10**6 and nei_c>=0 and nei_c<10**6:
+        #             if nei_r not in blocked_map or (nei_r in blocked_map and nei_c not in blocked_map[nei_r]):
+        #                 if tuple([nei_r,nei_c]) not in visited_s:
+        #                     visited_s.add(tuple([nei_r,nei_c]))
+        #                     queue_s.append([nei_r,nei_c])
+        #     curr = queue_t.popleft()
+        #     if curr == source or tuple(curr) in visited_s:
+        #         return True
+        #     for dr,dc in [(0,1),(1,0),(-1,0),(0,-1)]:
+        #         nei_r = curr[0]+dr
+        #         nei_c = curr[1]+dc
+        #         if nei_r>=0 and nei_r<10**6 and nei_c>=0 and nei_c<10**6:
+        #             if nei_r not in blocked_map or (nei_r in blocked_map and nei_c not in blocked_map[nei_r]):
+        #                 if tuple([nei_r,nei_c]) not in visited_t:
+        #                     visited_t.add(tuple([nei_r,nei_c]))
+        #                     queue_t.append([nei_r,nei_c])
+        # return False

@@ -10,6 +10,8 @@ for i in range(6):
     b[lip[i]] = a[i]
 ans = 0
 k = 1
+# print(a)
+# print(b)
 for i in range(6):
     ans += k * b[-i - 1]
     k *= 2

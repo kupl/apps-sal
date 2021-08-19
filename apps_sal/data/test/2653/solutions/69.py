@@ -1,6 +1,6 @@
 from collections import deque
 
-N, Q = list(map(int, input().split()))
+N, Q = list(map(int, input().split()))  # Nは頂点の数、Qは操作の回数
 graph = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
     a, b = list(map(int, input().split()))

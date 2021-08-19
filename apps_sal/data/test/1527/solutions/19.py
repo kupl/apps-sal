@@ -9,9 +9,9 @@ def bfs(maze, h, w, sy, sx):
         y, x = q.popleft()
         for dy, dx in d:
             ny, nx = y + dy, x + dx
-            if 0 <= ny < h and 0 <= nx < w and dist[ny][nx] == -1 and maze[ny][nx] != '
-            dist[ny][nx] = dist[y][x] + 1
-            q.append([ny, nx])
+            if 0 <= ny < h and 0 <= nx < w and dist[ny][nx] == -1 and maze[ny][nx] != '#':
+                dist[ny][nx] = dist[y][x] + 1
+                q.append([ny, nx])
     return max([max(i) for i in dist])
 
 
@@ -21,6 +21,6 @@ d = [[1, 0], [0, 1], [-1, 0], [0, -1]]
 ans = 0
 for sy in range(h):
     for sx in range(w):
-        if a[sy][sx] != '
-        ans = max(ans, bfs(a, h, w, sy, sx))
+        if a[sy][sx] != '#':
+            ans = max(ans, bfs(a, h, w, sy, sx))
 print(ans)

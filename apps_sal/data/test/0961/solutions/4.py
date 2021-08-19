@@ -1,3 +1,4 @@
+#!/usr/bin/pypy3
 
 import cProfile
 from sys import stdin, stderr
@@ -46,7 +47,9 @@ def solve(n, ns):
     resolved_ranges = {}
     while pq:
         w, lo_ix = heappop(pq)
+        # print(len(pq),w,lo_ix)
         if lo_ix in resolved_ranges:
+            # print(len(pq))
             continue
         tot_subs = 0
         tot_x = 0

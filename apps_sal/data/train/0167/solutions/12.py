@@ -4,12 +4,18 @@ class Solution:
 
         @lru_cache(maxsize=None)
         def dp(i, j):
+            # min number of drops to make with given i eggs and j floors
             if j == 0:
                 return 0
             if i == 1:
                 return j
             if j == 1:
                 return 1
+            # print(i, j)
+
+            # get min value for max(dp(i-1, k-1), dp(i, j-k))
+
+            # play with k untill
 
             lo, hi = 1, j
 

@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 
 s = input()
 status = ['a', 'b', 'c']

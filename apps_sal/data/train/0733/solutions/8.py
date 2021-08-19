@@ -1,10 +1,11 @@
+# cook your dish here
 def palindromeSubStrs(s):
     m = dict()
     n = len(s)
 
     R = [[0 for x in range(n + 1)] for x in range(2)]
 
-    s = "@" + s + "
+    s = "@" + s + "#"
 
     for j in range(2):
         rp = 0

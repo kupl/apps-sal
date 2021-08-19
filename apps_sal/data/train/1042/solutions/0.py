@@ -1,3 +1,4 @@
+# cook your dish here
 
 def G(x, y):
     while(y):
@@ -5,6 +6,8 @@ def G(x, y):
     return x
 
 
+# t=int(input())
+# l=list(map(int,input().split()))
 for _ in range(int(input())):
     n, p = map(int, input().split())
 

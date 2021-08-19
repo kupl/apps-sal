@@ -1,2 +1,2 @@
 def remove_exclamation_marks(s):
-    return (s.replace("!", ""))
+    return (s.replace("!", ""))  # replaces !'s with nothing

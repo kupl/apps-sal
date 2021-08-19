@@ -12,3 +12,7 @@ class Solution:
                     stack.pop()
                     stack.pop()
         return len(stack) == 0
+
+#             if not stack:
+#                 stack.append(c)
+#             else:

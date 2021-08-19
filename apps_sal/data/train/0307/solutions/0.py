@@ -2,7 +2,7 @@ class Solution:
 
     def soupServings(self, N: int) -> float:
         if N > 5000:
-            return 1
+            return 1   # shortcut for large N (accurate to 1e-6)
 
         @lru_cache(None)
         def dp(a, b):

@@ -20,5 +20,6 @@ for test_case in range(test):
                 m = max(m, a[i])
                 i += 1
         f = f ^ 1
+        # print(m)
         ans += m
     print(ans)

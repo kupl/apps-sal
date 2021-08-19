@@ -3,11 +3,14 @@
 解説AC
 '''
 import math
+#import numpy as np
 import queue
 import bisect
 from collections import deque, defaultdict
 import heapq as hpq
 from sys import stdin, setrecursionlimit
+#from scipy.sparse.csgraph import dijkstra
+#from scipy.sparse import csr_matrix
 ipt = stdin.readline
 setrecursionlimit(10**7)
 mod = 10**9 + 7
@@ -15,10 +18,11 @@ mod = 10**9 + 7
 
 def main():
     r1, c1, r2, c2 = list(map(int, ipt().split()))
+    # nCrをmodで割った余りを求める。Nに最大値を入れて使用。
     N = r2 + c2 + 2
-    g1 = [1, 1]
-    g2 = [1, 1]
-    inverse = [0, 1]
+    g1 = [1, 1]  # 元テーブル
+    g2 = [1, 1]  # 逆元テーブル
+    inverse = [0, 1]  # 逆元テーブル計算用テーブル
 
     def cmb(n, r, mod=(10**9 + 7)):
         if r < 0 or r > n:

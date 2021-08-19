@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     y, m, d = list(map(int, input().split(":")))
     if m in [1, 3, 5, 7, 8, 10, 12]:

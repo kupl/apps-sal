@@ -27,6 +27,7 @@ def main():
             r -= 1
         if c[l] == "R":
             l += 1
+        # print(c)
     print(result)
 
 

@@ -19,6 +19,7 @@ class Solution:
                     else:
                         ret.append(c)
                         ac += 1
+                # print(ret, ac)
             if len(ret) == len(s):
                 break
 

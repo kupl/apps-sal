@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Thu Sep 10 11:33:13 2020
 
@@ -9,6 +10,7 @@ r = R % 2019
 l = L % 2019
 ans = 2018
 if R - L >= 2019 - l or l == 0:
+    # if r < l or l == 0:
     ans = 0
 else:
     for i in range(l, r):

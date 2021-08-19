@@ -1,5 +1,6 @@
 import math
 
+# init
 maxn = 55
 g = [1]
 for i in range(maxn):
@@ -69,3 +70,5 @@ T = int(input())
 while T > 0:
     T -= 1
     SOLVE()
+#
+#

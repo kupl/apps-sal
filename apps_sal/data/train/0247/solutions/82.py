@@ -36,4 +36,5 @@ class Solution:
 
             prefixSumMap[s] = end
             end = end - 1 if reverse else end + 1
+        # print(shortestAt)
         return shortestAt

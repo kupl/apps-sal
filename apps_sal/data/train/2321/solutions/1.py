@@ -50,7 +50,7 @@ def degrect(r, phi):
     return rect(r, math.radians(phi))
 
 
-def vsum(u, v):
+def vsum(u, v):  # u = (x + y*1j, phi)
     return (u[0] + v[0] * degrect(1, u[1]), (u[1] + v[1]) % 360)
 
 

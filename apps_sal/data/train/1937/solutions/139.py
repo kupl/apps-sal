@@ -21,3 +21,9 @@ class ThroneInheritance:
             ans.append(name)
         for child in self.pc[name]:
             self.recur(child, ans)
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

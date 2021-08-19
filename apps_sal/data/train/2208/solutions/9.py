@@ -18,10 +18,12 @@ ans = 0
 
 
 while True:
+    # print(one, two)
     if one:
         ans += 1
         q = one.pop()
         d = data[q]
+        # print(q, d)
         if sn[d[0]]:
             sn[d[0]] = 0
             for oth in gwl[d[0]]:
@@ -45,6 +47,7 @@ while True:
         q = two.pop()
         doub[q] = 0
         d = data[q]
+        # print(q, d)
         for w in range(2):
             sn[d[w]] = 0
             for oth in gwl[d[w]]:

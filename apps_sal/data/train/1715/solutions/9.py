@@ -7,6 +7,7 @@ def justify(text, width):
         space = width - len(line)
         words = line.split()
 
+        # prevent method being applied to last line
         if lines.index(line) == len(lines) - 1:
             break
 

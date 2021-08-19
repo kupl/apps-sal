@@ -1,4 +1,5 @@
 def alternateCase(s):
+    # your code here
     res = ""
 
     for c in s:

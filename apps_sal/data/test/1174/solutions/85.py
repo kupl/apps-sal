@@ -1,4 +1,6 @@
+#!/usr/bin/env python3
 import heapq
+# input = stdin.readline
 
 
 def solve(n, m, a):

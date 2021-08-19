@@ -1,3 +1,4 @@
+#a = map(int, input().split())
 n, m = list(map(int, input().split()))
 now = 0
 am, bm = 0, 0

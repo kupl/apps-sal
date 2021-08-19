@@ -16,13 +16,18 @@ class ThroneInheritance:
         self.size += 1
 
     def death(self, name: str) -> None:
+        # del self.family[name]
         self.dead.add(name)
+        # if name == self.king:
+        # self.king = self.getInheritanceOrder()[1]
+        # self.size -= 1
 
     def getInheritanceOrder(self) -> List[str]:
         ans = [self.king]
         pool = set(self.king)
 
         def sccesssor(x, curOrder):
+            # print(x, f\"{curOrder=}\")
             if self.family[x] == [] or set(self.family[x]) <= pool:
                 if x == self.king:
                     return
@@ -30,6 +35,7 @@ class ThroneInheritance:
                     sccesssor(self.parents[x], curOrder)
             else:
                 for name in self.family[x]:
+                    # print(name)
                     if name not in pool:
                         curOrder.append(name)
                         pool.add(name)
@@ -44,3 +50,10 @@ class ThroneInheritance:
         if ans[-1] in self.dead:
             ans.pop()
         return ans
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

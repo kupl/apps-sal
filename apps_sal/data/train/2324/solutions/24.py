@@ -19,6 +19,7 @@ def dijkstra(V, E, s):
     heappush(heap, (0, s))
     while heap and rem:
         d, v = heappop(heap)
+        # don't need to check when the stored value is greater than provisional distance
         if d > dist[v]:
             continue
         rem -= 1

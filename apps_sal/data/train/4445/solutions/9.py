@@ -29,11 +29,15 @@ def count_syllables(word):
             syllables_in_word = 1
         if len(word) > 1:
             i = 0
+            # count consonant, vowel pairs
             while i < len(word) - 1:
                 if (word[i] not in vowels) & (word[i + 1] in vowels):
                     syllables_in_word += 1
                     i += 1
                 i += 1
+            # take care of silent 'e'
+            # last part of if for double vowel word endings: ex. pursue, levee
             if (syllables_in_word > 1) & (word.endswith('e')) & (word[len(word) - 2] not in vowels):
                 syllables_in_word -= 1
+    # print(f"word: {word}, syllables: {syllables_in_word}")
     return syllables_in_word

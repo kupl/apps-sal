@@ -28,12 +28,14 @@ for i in range(n):
 for i in range(n - 1, -1, -1):
     for child in s[i]:
         c[i] += c[child]
+# print(c)
 answer = []
 for _ in range(q):
     u, k = list(map(int, input().split()))
     start = b[u - 1]
     if k <= c[u - 1]:
         answer.append((str(traversal[start + k - 1] + 1)))
+        # print(traversal[start+k-1]+1)
     else:
         answer.append("-1")
 print('\n'.join(answer))

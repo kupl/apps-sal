@@ -1,3 +1,4 @@
+# cook your dish here
 T = int(input())
 
 for t in range(T):
@@ -21,8 +22,10 @@ for t in range(T):
                 break
             else:
                 half = int(coins / 2)
+                #coins = coins - half
                 apples = apples + half
                 oranges = oranges + half
                 coins = 1
                 break
     print(int(abs(apples - oranges)))
+    # print(int(apples - oranges) if apples >= oranges else int(oranges - apples        ))

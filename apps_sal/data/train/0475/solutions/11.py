@@ -33,6 +33,7 @@ class Solution:
             for r in range(len(s)):
                 while s[r] - s[l] > sv:
                     l += 1
+                # rv += s[r] * (r - l + 1) - (ss[r + 1] - ss[l])
                 rv += sum([s[r] - s[ll] for ll in range(l, r)])
             return rv - (countSumsLeq(sv) - k) * sv
 

@@ -1,3 +1,4 @@
+# cook your dish
 def solve():
 
     n, k = map(int, input().split())

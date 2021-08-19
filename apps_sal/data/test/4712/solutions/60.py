@@ -1,7 +1,7 @@
 N, W = list(map(int, input().split()))
 l = [input() for _ in range(N)]
 
-print(('
+print(('#' * (W + 2)))
 for i in l:
-    print(('
-print(('
+    print(('#' + i + '#'))
+print(('#' * (W + 2)))

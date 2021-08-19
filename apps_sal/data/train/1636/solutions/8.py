@@ -5,7 +5,7 @@ def productsum(n):
         kmax = n
 
     def prodsum(p, s, nf, start):
-        k = p - s + nf
+        k = p - s + nf  # product - sum + number of factors
         if k < kmax:
             if p < n[k]:
                 n[k] = p

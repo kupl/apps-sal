@@ -18,4 +18,5 @@ for i in range(3, n + 1):
     else:
         arr.append(mem[n % i] ^ mem[i - 1] if (n // i) % 2 else mem[n % i])
 
+# print(arr)
 print(reduce(xor, arr) ^ reduce(xor, a))

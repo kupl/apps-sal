@@ -4,14 +4,16 @@ class Solution:
         :type preorder: str
         :rtype: bool
         """
+        # '' valid or not?
         if len(preorder) < 1:
             return False
 
         stack = []
         for s in preorder.split(','):
             stack.append(False)
-            if s == '
-               while len(stack) > 2 and stack[-2]:
+            if s == '#':
+                # remove pairing left branch
+                while len(stack) > 2 and stack[-2]:
                     stack.pop()
                     stack.pop()
                     stack.pop()

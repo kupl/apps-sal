@@ -1,4 +1,8 @@
+# [9,9,6,0,6,6,9]
 
+# [1,1,-1,-1,-1,1]
+#  1 2  1  0  -1 0
+# [1,1,-1,-1,-1,1, 1]
 class Solution:
     def longestWPI(self, hours: List[int]) -> int:
         prefix = []

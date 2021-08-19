@@ -4,8 +4,10 @@ for i in range(m):
     d.append(list(map(int, input().split(' '))))
 ispossible = True
 maxheights = []
+# first and last days
 maxheights.append(d[0][1] + d[0][0] - 1)
 maxheights.append(d[-1][1] + n - d[-1][0])
+# other days
 for i in range(m - 1):
     d1 = d[i]
     d2 = d[i + 1]

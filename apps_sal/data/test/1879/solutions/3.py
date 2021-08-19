@@ -1,5 +1,5 @@
 def main():
-    ind = {'E': (1, 0), 'S': (0, -1), 'W': (-1, 0), 'N': (0, 1), '
+    ind = {'E': (1, 0), 'S': (0, -1), 'W': (-1, 0), 'N': (0, 1), '#': (0, 0)}
 
     t, sx, sy, tx, ty = list(map(int, input().split()))
     s = str(input())

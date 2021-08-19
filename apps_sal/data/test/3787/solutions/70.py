@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 
 def make_result(n, a, b):

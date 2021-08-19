@@ -9,6 +9,7 @@ class Solution:
         sum_of_area = 0
         max_area = 0
         map_info = {}
+        # grid_info = copy.deepcopy(grid)
 
         for i in range(R):
             for j in range(C):

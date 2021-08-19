@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -54,6 +55,7 @@ def solve(N, A):
             cry -= 1
             nh = nh.right
 
+        # print(list2a(head))
         ch = h
         nh = h.right
         while nh:
@@ -72,6 +74,8 @@ def solve(N, A):
                 ch = nh
             nh = nh.right
         h = h.right
+
+        # print(list2a(head))
 
     print(len(ans))
     print(' '.join(map(str, ans)))

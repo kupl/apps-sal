@@ -23,6 +23,7 @@ def LSS(): return input().split()
 def resolve():
     N = I()
 
+    # maxの逆演算のため、hが0なものとそうでないものに分類
     xyh_0 = []
     xyh_not0 = []
     for _ in range(N):
@@ -36,6 +37,7 @@ def resolve():
         H = []
         for x, y, h in xyh_not0:
             H.append(h + abs(x - cx) + abs(y - cy))
+        # hが0でないものでOKだったら、hが0のもので辻褄が会うかどうか見る
         if len(set(H)) == 1:
             is_ok = True
             for x, y, h in xyh_0:

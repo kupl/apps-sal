@@ -11,7 +11,7 @@ class Solution:
                 graph[i].append((w, j))
                 graph[j].append((w, i))
 
-        k = 1
+        k = 1                       # keep track of vertices
         costs = 0
         seen = [False] * n
 

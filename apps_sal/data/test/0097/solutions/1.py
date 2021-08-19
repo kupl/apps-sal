@@ -1,5 +1,9 @@
+#!/usr/bin/env python3
 
 [n, m, x, y, vx, vy] = list(map(int, input().strip().split()))
+
+# x, y >= 0, x + y > 0
+# (d, p, q) : px + qy = d
 
 
 def mygcd(x, y):
@@ -14,6 +18,7 @@ def mygcd(x, y):
 
 
 def solve(n, m, x, y, vx, vy):
+    #	print ('solve', n, m, x, y, vx, vy)
     if vx < 0:
         cx, cy = solve(n, m, n - x, y, -vx, vy)
         if cx < 0:
@@ -26,6 +31,7 @@ def solve(n, m, x, y, vx, vy):
             return cx, cy
         else:
             return cx, m - cy
+    # vx, vy is nonnegative
     if vx == 0:
         if x in (0, n):
             return x, m
@@ -36,6 +42,7 @@ def solve(n, m, x, y, vx, vy):
             return n, y
         else:
             return -1, -1
+    # vx = vy > 0
     d, p, q = mygcd(n, m)
     if (x - y) % d != 0:
         return -1, -1
@@ -52,6 +59,7 @@ def solve(n, m, x, y, vx, vy):
     c = x - y
     p = (p * c) % m
     q = (-q * c) % n
+#	print ('nmxypq', n, m, x, y, p, q, '=', p*n - x, q*m - y)
     if p * n - x < 0:
         p += m * (-((x - p * n) // m))
     if q * m - y < 0:

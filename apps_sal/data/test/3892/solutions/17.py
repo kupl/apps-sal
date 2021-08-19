@@ -15,6 +15,7 @@ for i in sweet:
         else:
             dist[i][j] = n - (i - sweet[i][j])
     dist[i].sort()
+# print(dist,'dits')
 for i in dist:
     count = 0
     le = len(dist[i])
@@ -28,17 +29,22 @@ for i in dist:
         vis[i] = 0
     else:
         vis[i] = dist[i][-1]
+# print(dist,'dist')
+# print(vis,'vis')
 ans = [0 for _ in range(n)]
 for i in range(1, n + 1):
     cur = 0
+    # print(i,'i')
     for k in range(1, n + 1):
         new = 0
         if k >= i:
             if vis[k] != 0:
                 new = vis[k] + k - i
+                # print(new,'new',k,'k')
         else:
             if vis[k] != 0:
                 new = vis[k] + (n) - (i - k)
+                # print(new,'new',k,'k')
         cur = max(cur, new)
     ans[i - 1] = cur
 print(*ans)

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 from itertools import accumulate
@@ -41,15 +42,15 @@ def build_grid(H, W, intv, _type, space=True, padding=False):
 
 
 H, W = MAP()
-grid = build_grid(H, W, '
+grid = build_grid(H, W, '#', str, space=0, padding=1)
 
-ans=[]
-imosw=list2d(H + 2, W + 2, 0)
-imosh=list2d(H + 2, W + 2, 0)
+ans = []
+imosw = list2d(H + 2, W + 2, 0)
+imosh = list2d(H + 2, W + 2, 0)
 
 
 def check(i, j):
-    sz=min(L[i][j], R[i][j], U[i][j], D[i][j])
+    sz = min(L[i][j], R[i][j], U[i][j], D[i][j])
     if sz > 1:
         imosw[i][j - sz + 1] += 1
         imosw[i][j + sz] -= 1
@@ -66,34 +67,34 @@ def check2():
     return True
 
 
-L=list2d(H + 2, W + 2, 0)
-R=list2d(H + 2, W + 2, 0)
-U=list2d(H + 2, W + 2, 0)
-D=list2d(H + 2, W + 2, 0)
+L = list2d(H + 2, W + 2, 0)
+R = list2d(H + 2, W + 2, 0)
+U = list2d(H + 2, W + 2, 0)
+D = list2d(H + 2, W + 2, 0)
 for i in range(1, H + 1):
     for j in range(1, W + 1):
         if grid[i][j] == '.':
-            L[i][j]=0
+            L[i][j] = 0
         else:
-            L[i][j]=L[i][j - 1] + 1
+            L[i][j] = L[i][j - 1] + 1
 for i in range(1, H + 1):
     for j in range(W, 0, -1):
         if grid[i][j] == '.':
-            R[i][j]=0
+            R[i][j] = 0
         else:
-            R[i][j]=R[i][j + 1] + 1
+            R[i][j] = R[i][j + 1] + 1
 for j in range(1, W + 1):
     for i in range(1, H + 1):
         if grid[i][j] == '.':
-            U[i][j]=0
+            U[i][j] = 0
         else:
-            U[i][j]=U[i - 1][j] + 1
+            U[i][j] = U[i - 1][j] + 1
 for j in range(1, W + 1):
     for i in range(H, 0, -1):
         if grid[i][j] == '.':
-            D[i][j]=0
+            D[i][j] = 0
         else:
-            D[i][j]=D[i + 1][j] + 1
+            D[i][j] = D[i + 1][j] + 1
 
 for i in range(1, H + 1):
     for j in range(1, W + 1):

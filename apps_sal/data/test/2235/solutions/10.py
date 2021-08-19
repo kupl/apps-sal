@@ -37,9 +37,12 @@ for i in l:
     ind2 = br(l2, i - 90) - 1
     ind1 = br(l2, i - 1) - 1
     ind3 = br(l2, i - 1440) - 1
+    # print(ind1, ind2, ind3)
     l2.append(i)
     l1.append(min(l1[ind1] + 20, l1[ind2] + 50, l1[ind3] + 120))
+    # print(l1, l2)
 l2[0] = 0
+# print(l2)
 for i in range(1, n + 1):
     print(l1[i] - l1[i - 1])
 print()

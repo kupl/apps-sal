@@ -15,6 +15,7 @@ class Solution:
                 max_profit = cur_profit
                 ans = turn
 
+        # if there is remaining customer
         while waiting_customers > 0:
             turn += 1
             to_board = min(waiting_customers, 4)

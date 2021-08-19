@@ -15,6 +15,7 @@ for _ in range(t):
     maxm += (n - r) * (2**(r - 1))
     minmlist.append(minm)
     maxmlist.append(maxm)
+    # print(minm,maxm)
     minm = 0
     maxm = 0
 for k in range(t):

@@ -7,6 +7,7 @@ def union(x, y, a, each):
         y = a[y]
     each[-1 * a[x]] -= 1
     each[-1 * a[y]] -= 1
+    #print('new size ',-1*(a[x]+a[y]), ' x ',x,' y ',y)
     each[-1 * (a[x] + a[y])] += 1
 
     if(a[x] > a[y]):
@@ -101,6 +102,10 @@ while(i < n):
                 union(loc, loc + 1, par, each)
                 numloc -= 1
         i += 1
+    #print('num loc is',numloc, ' k is ',curk)
+    # print(*each)
+    # print(*par)
+    #print('numl ', numloc,' size ',getsize(loc,par))
     if(each[getsize(loc, par)] == numloc):
 
         if(numloc > max1):

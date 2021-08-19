@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 from itertools import permutations
 import numpy as np

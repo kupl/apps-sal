@@ -15,6 +15,9 @@ class UnionFindSet:
         if self.ranks[pu] > self.ranks[pv]:
             self.parents[pv] = pu
             self.ranks[pu] += self.ranks[pv]
+        # elif self.ranks[pv] > self.ranks[pu]:
+        #    self.parents[pu] = pv
+        #    self.ranks[pv] += self.ranks[pu]
         else:
             self.parents[pu] = pv
             self.ranks[pv] += self.ranks[pu]

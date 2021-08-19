@@ -5,6 +5,7 @@ while t:
     y = min(c, m)
     c = c - y
     m = m - y
+    # print("y",y)
     if y <= c + m + x:
         print(y)
     else:

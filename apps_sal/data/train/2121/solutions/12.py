@@ -10,4 +10,5 @@ while j > ((n // 2) - 1) and i >= 0:
     j -= 1 * b
     k += 1 * b
     i -= 1
+# print(a)
 print(n - k)

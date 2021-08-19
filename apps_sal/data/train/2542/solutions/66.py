@@ -4,9 +4,11 @@ class Solution:
         is_monotonic_desc = True
         array1 = A
         for num in range(1, len(array1)):
+            # check if second element is smallar that first
             if (array1[num] < array1[num - 1]):
                 print('in first if', array1[num], array1[num - 1])
                 is_monotonic_incr = False
+            # check if second element is greater that first
             if (array1[num] > array1[num - 1]):
                 print('in second if', array1[num], array1[num - 1])
                 is_monotonic_desc = False

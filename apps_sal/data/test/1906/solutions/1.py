@@ -1,4 +1,5 @@
 x = int(input())
+#x, y = map(int, input().split())
 
 y = x // 210 * 48
 

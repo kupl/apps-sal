@@ -4,7 +4,7 @@ from collections import deque
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         lo = i = ans = 0
-        minq, maxq = deque(), deque()
+        minq, maxq = deque(), deque()  # (index, value)
 
         while i < len(nums):
             while minq and minq[-1][1] >= nums[i]:

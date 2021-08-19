@@ -6,6 +6,7 @@ class Solution:
         for i in range(0, 4):
             for j in range(0, 3):
                 total_path = (total_path + self.dfs(i, j, n)) % self.mod
+                # print(total_path)
         return total_path
 
     def dfs(self, i, j, n):

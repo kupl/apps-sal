@@ -4,6 +4,9 @@ id = {a[i]: i for i in range(n)}
 
 a.sort()
 
+# for i in range(0,n) :
+#    print(i , a[i] , id[i])
+
 
 def Solve(x):
     for i in range(x, n):

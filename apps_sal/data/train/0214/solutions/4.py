@@ -22,4 +22,7 @@ class Solution:
                 t = B[i] - B[i + 1] + 1
                 res2 += t
                 B[i] = B[i + 1] - 1
+        # print(A)
+        # print(B)
+        # print(res1,res2)
         return min(res1, res2)

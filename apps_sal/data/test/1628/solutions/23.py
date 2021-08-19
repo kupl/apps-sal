@@ -10,7 +10,7 @@ def change_char_at(ch, s, indx):
     following code will fail with a TypeError:
 
         s = "spam"
-        s[1] = "z" 
+        s[1] = "z" # TypeError: 'str' object does not support item assignment
 
     What this function does is it provides you with a nice interface when you
     want to change a character in a string at a certain index position. So, use
@@ -26,6 +26,7 @@ def change_char_at(ch, s, indx):
     s:    string to insert into
     indx: index position where to insert the character
     """
+    # Error handling
     if type(ch) is not str:
         raise TypeError("first argument must be a string")
     if type(s) is not str or not len(s) > 0:
@@ -38,6 +39,7 @@ def change_char_at(ch, s, indx):
         msg += "allowable index range 0 to {0}".format(length)
         raise IndexError(msg)
 
+    # Actual function logic
     return s[:indx] + ch + s[indx + 1:]
     """
     Another possible implementation:

@@ -1,6 +1,8 @@
 class Solution:
     def intervalIntersection(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
+        # if 2 events are both in started state
         state = [False, False]
+        # flatten events into timestamp and flag bit, 0, 1 = A start, finish, 2, 3 = B start finish
         A_index = [0, 0]
         B_index = [0, 0]
         result = []

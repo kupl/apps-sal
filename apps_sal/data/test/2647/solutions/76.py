@@ -1,5 +1,6 @@
 from collections import deque
 H, W = list(map(int, input().split()))
+# maze = [list(map(int, input().split())) for i in range(H)]
 maze = []
 s_init_cnt = 0
 for i in range(H):
@@ -7,6 +8,8 @@ for i in range(H):
     s_init_cnt += gyo.count('.')
     maze.append(gyo)
 
+# print(maze)
+# print(s_init_cnt)
 
 direction = [(-1, 0), (0, -1), (1, 0), (0, 1)]
 reached = [[-1] * W for i in range(H)]
@@ -22,8 +25,8 @@ def bfs():
             ty = py + dy
             if tx >= H or ty >= W or tx < 0 or ty < 0:
                 continue
-            if reached[tx][ty] != -1 or maze[tx][ty] == '
-            continue
+            if reached[tx][ty] != -1 or maze[tx][ty] == '#':
+                continue
             else:
                 reached[tx][ty] = reached[px][py] + 1
                 d.append([tx, ty])

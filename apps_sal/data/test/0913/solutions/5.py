@@ -9,6 +9,10 @@ import timeit
 import random
 import string
 
+#########################
+# imgur.com/Pkt7iIf.png #
+#########################
+
 
 def sieve(n):
     if n < 2:

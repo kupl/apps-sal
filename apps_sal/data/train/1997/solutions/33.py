@@ -11,4 +11,5 @@ class Solution:
 
                 if st1 <= st2 and ed2 <= ed1:
                     seen.add(j)
+                #print(st1,ed1, st2, ed2, seen)
         return n - len(seen)

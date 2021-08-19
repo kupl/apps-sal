@@ -4,6 +4,7 @@ class Solution:
         i = 0
         j = 0
         while i < l and j < l:
+            # print(pushed, popped)
             if pushed[i] == popped[j]:
                 pushed[i] = -1
                 popped[j] = -1

@@ -1,4 +1,7 @@
+# http://codeforces.com/contest/652/problem/A
 
+
+# h_cat, h_app, day_up, day_down = [map(int, input().split()), map(int,input().split())]
 
 def dprint(str):
     pstatus = False
@@ -9,6 +12,16 @@ def dprint(str):
 def check_cat():
     from math import ceil
     from operator import add
+    # h_string = '10 30'
+    # speed_string = '2 1'
+    # h_string = '10 13'
+    # speed_string = '1 1'
+    # h_string = '1 50'
+    # speed_string = '5 4'
+    # h_string = '10 19'
+    # speed_string = '1 2'
+    # h_string = '1 1000'
+    # speed_string = '2 1'
 
     h_string = input()
     speed_string = input()
@@ -20,8 +33,8 @@ def check_cat():
     current_pos = day_loc[1]
     day_counter = 0
     i1 = 0
-    if sum(day_sub) <= 0:
-        if (h_cat + day_sub[1] >= h_app):
+    if sum(day_sub) <= 0:  # overall negative or zero progress
+        if (h_cat + day_sub[1] >= h_app):  # reach the apple in first day
             return(0)
         else:
             return(-1)

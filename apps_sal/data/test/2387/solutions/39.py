@@ -1,4 +1,5 @@
 import sys
+# input = sys.stdin.readline
 def input(): return sys.stdin.readline().rstrip()
 
 
@@ -7,6 +8,8 @@ s = [input() for _ in range(n)]
 
 
 def bracket(x):
+    # f: final sum of brackets '(':+1, ')': -1
+    # m: min value of f
     f = m = 0
     for i in range(len(x)):
         if x[i] == '(':
@@ -14,6 +17,7 @@ def bracket(x):
         else:
             f -= 1
         m = min(m, f)
+    # m <= 0
     return f, m
 
 

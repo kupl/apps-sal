@@ -22,6 +22,7 @@ ordenadoB = sorted(ordenadoB, key=lambda x: x[1])
 ordenadoA = sorted(ordenadoA, key=lambda x: x[1], reverse=True)
 
 res = []
+# print(ordenadoB, ordenadoA)
 for i in range(0, len(ordenadoA)):
     res.append((ordenadoB[i][0], ordenadoA[i][1]))
 

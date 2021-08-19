@@ -27,6 +27,10 @@ def index(a, x):
     return False
 
 
+#############
+# MAIN CODE #
+#############
+
 for _ in range(int(input())):
     n = getN()
     arr = getList()

@@ -20,6 +20,8 @@ def solve():
         else:
             d[k] = [i]
 
+    # print(d)
+
     ans = 0
     for k, v in list(d.items()):
         if len(v) <= 1:
@@ -29,6 +31,7 @@ def solve():
                 s = v[i] + K - 1
                 si = bisect.bisect_right(v, s)
                 ans += (si - i) - 1
+                # print(i, si)
 
     print(ans)
 

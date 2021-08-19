@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 l = [1, 2, 145, 40585]
 for i in range(n):

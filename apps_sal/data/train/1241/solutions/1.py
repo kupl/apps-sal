@@ -1,3 +1,4 @@
+# cook your dish here
 def winner_is(x: int, n: int, stones: [int]) -> str:
     odd_piles = sum([j % 2 for j in stones])
     if x % 2 == 1:

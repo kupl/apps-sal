@@ -1,6 +1,9 @@
 N = int(input())
 alist = [0] + list(map(int, input().split()))
 xlist = list(range(1, N + 1))
+# print(alist,xlist)
+
+# Ford-Fulkerson algorithm
 
 
 class FordFulkerson:
@@ -47,6 +50,7 @@ class FordFulkerson:
 
 
 asum_pos = 0
+# 点数N、辺数M、始点s、終点t
 ff = FordFulkerson(N + 2)
 for i in range(1, N + 1):
     a = alist[i]

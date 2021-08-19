@@ -1,3 +1,4 @@
+# 解説AC
 from math import sin, sqrt
 
 N = int(input())
@@ -46,12 +47,14 @@ def midpoint(a, b):
 def main():
     ans = float("inf")
 
+    # 2点を直径とする円
     for a in range(N):
         for b in range(a + 1, N):
             x, y = midpoint(a, b)
             r = radius(x, y)
             ans = min(ans, r)
 
+    # 3点を通る円
     for a in range(N):
         for b in range(a + 1, N):
             for c in range(b + 1, N):

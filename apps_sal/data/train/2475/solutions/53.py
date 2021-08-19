@@ -10,4 +10,5 @@ class Solution:
                     remove.add(i)
             indices -= remove
             prev = a
+            # if len(indices) == 0: break
         return len(prev) - len(indices)

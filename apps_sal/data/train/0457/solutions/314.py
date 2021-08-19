@@ -1,4 +1,15 @@
 class Solution:
+    # The problem seems to exhibit recursive structure
+    # Recursive algorithm outline
+    # Base cases
+    # - if amount is negative, return -1
+    # - if amount is 0, return 0
+    # Recursive case
+    # - if amount is positive
+    # do a recursive call on all elements
+    # if no positive elements, return 0
+    # else, return 1 + (min of all these positive elements)
+    # Complexity: O(n ^ amount/(lowest_element_in_coins)), because its building a tree
 
     def coinChangeDynamic(self, coins: List[int], amount: int, memory_dict: dict) -> int:
         if(amount < 0):

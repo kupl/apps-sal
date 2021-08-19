@@ -15,6 +15,7 @@ while(i < len(s)):
         countx += (diff - 1)
         i = j
 ans = 0
+# print(*arr1)
 for i in range(len(arr1)):
     ans += (arr1[i] * (countx - (arr1[i])))
 

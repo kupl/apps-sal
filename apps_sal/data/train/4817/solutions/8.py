@@ -1,5 +1,6 @@
 def spread(func, *args):
     x, y, z = 0, 0, 0
+    # based on the number of arguments unpack the tuple 'args'
     if len(args[0]) == 2:
         x, y = args[0][0], args[0][1]
         return func(x, y)

@@ -1,7 +1,7 @@
 class UnionFind:
     def __init__(self, n):
         self.p = [i for i in range(n)]
-        self.components = n
+        self.components = n  # 連結成分の数
 
     def root(self, x):
         if self.p[x] == x:

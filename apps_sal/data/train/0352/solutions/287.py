@@ -8,6 +8,8 @@ class Solution:
                     if str1 == str2[:i] + str2[i + 1:]:
                         return True
                 return False
+        # words = [\"sgtnz\",\"sgtz\",\"sgz\",\"ikrcyoglz\",\"ajelpkpx\",\\
+                # \"ajelpkpxm\",\"srqgtnz\",\"srqgotnz\",\"srgtnz\",\"ijkrcyoglz\"]
         l = len(words)
         words.sort(key=len)
         mat = [[0 for j in range(l)] for i in range(l)]

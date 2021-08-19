@@ -1,3 +1,4 @@
+# You lost the game.
 a, b = map(int, input().split())
 R = [b]
 ok = 1

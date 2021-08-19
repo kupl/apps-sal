@@ -16,7 +16,7 @@ def cmb2(n, r, mod):
 
 
 def power(a, n, mod):
-    bi = str(format(n, "b"))
+    bi = str(format(n, "b"))  # 2進数
     res = 1
     for i in range(len(bi)):
         res = (res * res) % mod

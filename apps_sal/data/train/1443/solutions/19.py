@@ -15,4 +15,4 @@ for _ in range(int(input())):
             if s[i] == '1':
                 matrix[i] += 1
     coll = [fact(matrix[i] - 1) for i in range(m) if matrix[i] > 1]
-    print((sum(coll) if coll else 0))
+    print((sum(coll) if coll else 0))  # cook your dish here

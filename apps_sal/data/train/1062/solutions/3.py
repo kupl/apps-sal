@@ -1,3 +1,4 @@
+# cook your dish here
 def printGift(n):
     dim = 2 * n - 1
     start = 0

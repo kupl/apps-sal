@@ -2,6 +2,8 @@
 def main():
     n, k = list(map(int, input().split()))
     myList = list(map(int, input().split()))
+    #n,k = 5,5
+    #myList = [1,2,3,4,5]
     i = 0
     distinct = 0
     dictOf = [0] * 1000001

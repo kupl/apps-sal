@@ -16,5 +16,6 @@ coords = list(map(int, input().split()))
 
 coords.sort()
 
+#~ print(coords[:-1], coords[1:])
 
 print(min(calc_dist(coords[:-1], a), calc_dist(coords[1:], a)))

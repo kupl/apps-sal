@@ -11,10 +11,13 @@ for i in range(N - 1):
 
 border.append(N - 1)
 
+#print(border, con)
 
 ans = [0] * N
 now = -1
 for i in range(len(con)):
+    # con[i] と con[i] + 1 に
+    # now - border[i] の数があつまる。
     pp = border[i] - now
     if pp % 2 == 0:
         ans[con[i]] += pp / 2
@@ -27,6 +30,7 @@ for i in range(len(con)):
             ans[con[i]] += (pp + 1) / 2
             ans[con[i] + 1] += (pp - 1) / 2
     now = border[i]
+    #print(pp, ans)
 
 
 for i in range(N):

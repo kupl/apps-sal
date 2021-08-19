@@ -3,11 +3,13 @@ class Solution:
         n = len(nums)
         ans = 0
         while True:
+            # check if there is odd number
             for i in range(n):
                 if nums[i] % 2 == 1:
                     nums[i] -= 1
                     ans += 1
 
+            # all even numbers, divide all by 2
             all_zeros = True
             for i in range(n):
                 if nums[i] != 0:

@@ -18,6 +18,7 @@ class Solution:
         equal = 0
 
         for i in range(len(A)):
+            # mx = max(mx, A[i])
 
             if A[i] < mx:
                 lesscount += 1
@@ -28,5 +29,6 @@ class Solution:
                 lesscount += equal
                 equal = 1
 
+            # print(A[i], mx, lesscount, equal, d[mx])
             if lesscount == d[mx]:
                 return i + 1

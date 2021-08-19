@@ -22,7 +22,9 @@ class Solution:
             else:
                 ans = 0
                 if r < L - total:
+                    # add an existing song
                     ans += (unique - K) * dp(unique, total + 1, r)
+                # add a new song
                 ans += r * dp(unique + 1, total + 1, r - 1)
                 return ans
 

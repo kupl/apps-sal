@@ -2,6 +2,7 @@ from heapq import heappush, heappop
 
 
 def dijkstra(graph: list, node: int, start: int) -> list:
+    # graph[node] = [(cost, to)]
     inf = float('inf')
     dist = [inf] * node
 

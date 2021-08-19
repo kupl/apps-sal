@@ -1,3 +1,5 @@
+# /usr/bin/env pypy3
+# -*- coding: utf-8 -*-
 
 import collections
 import itertools

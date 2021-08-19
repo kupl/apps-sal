@@ -23,6 +23,7 @@ if(len(mn) > len(mx)):
     for x in mn:
         print(x + 1, end=" ")
 else:
+    # mx=sorted(mx,reverse=True)
     mx = sorted(mx, key=func2)
     print(len(mx))
     for x in mx:

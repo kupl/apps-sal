@@ -7,7 +7,7 @@ import operator
 import fileinput
 import copy
 
-ORDA = 97
+ORDA = 97  # a
 def ii(): return int(input())
 def mi(): return list(map(int, input().split()))
 def li(): return [int(i) for i in input().split()]

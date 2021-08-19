@@ -1,5 +1,5 @@
 def main():
-    N, M = list(map(int, input().split()))
+    N, M = list(map(int, input().split()))  # N must be an odd number
 
     left = 1
     count = 0

@@ -2,6 +2,7 @@ import sys
 from collections import Counter
 from math import *
 
+# sys.stdin = open("in.txt")
 for _ in range(int(input())):
     a, b, c, r = map(int, input().split())
     if b < a:

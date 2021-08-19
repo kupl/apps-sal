@@ -7,7 +7,7 @@ class Solution:
             acc[i] = acc[i - 1] + arr[i]
         best_to = [n + 1 for _ in range(n)]
         best_from = dict()
-        min_total = n + 1
+        min_total = n + 1  # Naturally impossible length. Will be updated if any possible case exist. Will tell when no possible case
         s_left = 0
 
         for i in range(n):

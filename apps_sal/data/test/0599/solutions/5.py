@@ -1,4 +1,7 @@
+# input
 s = str(input())
+
+# variables
 
 
 def ispalindrome(s):
@@ -7,6 +10,7 @@ def ispalindrome(s):
     return False
 
 
+# main
 for i in range(len(s) + 1):
     if i < len(s) / 2:
         t = s[:i] + s[len(s) - i - 1] + s[i:]
@@ -16,4 +20,5 @@ for i in range(len(s) + 1):
         print(t)
         quit()
 
+# output
 print('NA')

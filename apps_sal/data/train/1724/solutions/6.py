@@ -57,6 +57,7 @@ class model:
                 self.gameOver = True
 
             if (alien.positionI == self.positionOfDefenderI):
+                # for whatever reason, static aliens are not shot
                 if(alien.speed != 0):
                     self.putAlienInListOfShootableAliens(alien)
 
@@ -70,17 +71,21 @@ class model:
         TESTpositionI = alien.positionI
         TESTpositionJ = alien.positionJ
 
+        # only horizontal movement
         if (distance <= self.lenOfFieldI - 1 and distance >= 0):
             alien.positionI = distance
             TESTdistance = 0
 
+        # vertical movement right
         elif(distance >= self.lenOfFieldI):
+            # move to rightmost column
             distance_right = self.lenOfFieldI - 1 - alien.positionI
             distance_remaining = abs(alien.speed) - distance_right
             alien.positionI = alien.positionI + distance_right
 
             TESTdistance = TESTdistance - distance_right
 
+            # move up
             alien.positionJ = alien.positionJ + 1
             distance_remaining = distance_remaining - 1
 
@@ -88,18 +93,22 @@ class model:
 
             alien.speed = -alien.speed
 
+            # move left
             alien.positionI = alien.positionI - distance_remaining
 
             TESTdistance = TESTdistance - distance_remaining
 
+        # vertical movement left
         elif(distance < 0):
 
+            # move to leftmost column
             distance_left = alien.positionI
             distance_remaining = abs(alien.speed) - distance_left
             alien.positionI = 0
 
             TESTdistance = TESTdistance - distance_left
 
+            # move up
             alien.positionJ = alien.positionJ + 1
             distance_remaining = distance_remaining - 1
 
@@ -107,6 +116,7 @@ class model:
 
             alien.speed = -alien.speed
 
+            # move right
             alien.positionI = distance_remaining
 
             TESTdistance = TESTdistance - distance_remaining
@@ -131,12 +141,14 @@ class model:
     def shoot(self):
 
         if not (len(self.listOfShootableAliens) == 0):
+            # there will be a shot!
             alienToBeShot = self.findAlienToBeShot()
 
             self.deleteShotAlienFromListOfAllAliens(alienToBeShot)
 
             self.addRoundToBlastSequence()
 
+        # in any case:
         self.clearListOfShootableAliens()
 
     def clearListOfShootableAliens(self):
@@ -148,12 +160,14 @@ class model:
         killingList = []
 
         while ((iterator >= 0) and (alienFound == False)):
+            # iterate through the field by lines
             for shootableAlien in self.listOfShootableAliens:
                 if ((shootableAlien.positionJ == iterator) and (shootableAlien.positionI == self.positionOfDefenderI)):
                     killingList.append(shootableAlien)
                     alienFound = True
             iterator = iterator - 1
 
+        # TEST
         if(len(killingList) == 0):
             print(("error! no alien to be shot found, also there are some!"
                    + "in the listofshootable Aliens", self.listOfShootableAliens))
@@ -169,19 +183,24 @@ class model:
         maxAbsSpeed = 0
         highestAlien = []
 
+        # calculate highest speed
         for alien in killingList:
             if (abs(alien.speed) > maxAbsSpeed):
                 maxAbsSpeed = abs(alien.speed)
 
+        # find fastest alien
         for alien in killingList:
             if (abs(alien.speed) == maxAbsSpeed):
                 highestAlien.append(alien)
 
+        # more than one fastest aliens
         if (len(highestAlien) > 1):
+            # choose a right-moving alien
             for alien in highestAlien:
                 if (alien.speed > 0):
                     return alien
 
+        # return any of the remaining aliens
         return highestAlien[0]
 
     def addRoundToBlastSequence(self):
@@ -205,6 +224,9 @@ class model:
 
         else:
             return False
+
+
+# Section of Testing
 
     def TESTNumberOfAliens(self):
 

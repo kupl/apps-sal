@@ -8,6 +8,7 @@ for i in range(n):
     px = math.inf
     my = -math.inf
     py = math.inf
+    # x, y, mx, py, px, my
     robots = [list(map(int, sys.stdin.readline().split())) for x in range(n)]
     for robot in robots:
         if robot[2] == 0:

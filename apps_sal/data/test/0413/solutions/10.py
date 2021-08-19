@@ -1,4 +1,5 @@
 3
+# -*- coding: utf-8 -*-
 
 n, m = list(map(int, input().split()))
 mem = [2**30] * 4 * (max(n, m))

@@ -12,6 +12,7 @@ class Solution:
             if pro > ans:
                 ans = pro
                 fin = c
+       #     print(pro,ans,tot)
             c += 1
         while q > 0:
             t = min(4, q)
@@ -21,6 +22,7 @@ class Solution:
             if pro > ans:
                 ans = pro
                 fin = c
+        #    print(pro,ans,tot)
             c += 1
         if fin == 0:
             fin = -1

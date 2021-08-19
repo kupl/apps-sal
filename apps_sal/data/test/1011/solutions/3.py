@@ -33,5 +33,6 @@ while i < n or j < m:
         bestadv = cura - curb
         besta = cura
         bestb = curb
+# print(d,i,j,cura,curb,bestadv)
 
 print('{0}:{1}'.format(besta, bestb))

@@ -30,6 +30,7 @@ for i in range(n):
         ind = bl(primes, curr)
         g = primes[ind]
         req[i][j] = g - curr
+# print(req)
 mini = 1000000000
 for i in range(n):
     curr = sum(req[i])

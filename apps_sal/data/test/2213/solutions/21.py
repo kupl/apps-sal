@@ -1,3 +1,4 @@
+#------------------------template--------------------------#
 import os
 import sys
 from math import *
@@ -71,6 +72,10 @@ def array(): return [int(i) for i in input().split()]
 def Int(): return int(input())
 def Str(): return input()
 def arrayS(): return [i for i in input().split()]
+
+
+#-------------------------code---------------------------#
+# vsInput()
 
 
 n, m, o = value()

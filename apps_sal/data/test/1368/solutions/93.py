@@ -19,5 +19,6 @@ for i in range(a, b + 1):
         ko = C(l[v[a]], v1.count(v1[-1]))
     elif su == s:
         ko += C(l[v[a]], v1.count(v1[-1]))
+     # print(s,ko)
 print(su)
 print(ko)

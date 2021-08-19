@@ -20,20 +20,24 @@ class Simplexer(object):
     def __next__(self):
         token = self._nextc()
 
+        # Operators
         if token in self.OPERATORS:
             return Token(token, "operator")
 
+        # Whitespace
         if token in self.SPACE:
             while self._peekc() in self.SPACE:
                 token += self._nextc()
             return Token(token, "whitespace")
 
+        # Strings
         if token == '"':
             token += self._nextc()
             while token[-1] != '"':
                 token += self._nextc()
             return Token(token, "string")
 
+        # Integer
         if token in self.NUMBER:
             while self._peekc() in self.NUMBER:
                 token += self._nextc()
@@ -52,6 +56,7 @@ class Simplexer(object):
         return next(self.__data)
 
     def _peekc(self):
+        # Peeking shouldn't end the iteration
         try:
             char = next(self.__data)
             self.__data = chain([char], self.__data)

@@ -5,6 +5,6 @@ def filter_words(s):
             if w in sl:
                 i = sl.find(w)
                 s = s[:i] + 'awesome' + s[i + len(w):]
-                sl = s.lower()
+                sl = s.lower()  # yuk
     print(s)
     return s

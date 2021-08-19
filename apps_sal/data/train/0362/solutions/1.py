@@ -2,6 +2,7 @@ class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
         MOD = int(1e9) + 7
         n = len(hats)
+        # dp = [[0 for _ in range(1 << n)] for _ in range(41)]
         d = {0: 1}
         rev = [[] for _ in range(41)]
         for i, h in enumerate(hats):

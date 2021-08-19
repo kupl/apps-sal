@@ -1,4 +1,5 @@
 import sys
+# sys.stdin = open('in', 'r')
 
 n, m = list(map(int, input().split()))
 

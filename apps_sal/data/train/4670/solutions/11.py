@@ -1,4 +1,5 @@
 def string_to_number(s):
+    # ... your code here
     num = 0
     flag = False
     if s[0] == '-':

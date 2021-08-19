@@ -1,3 +1,5 @@
+#!/usr/bin/env	python
+# -*-coding:utf-8 -*-
 t = str.maketrans('0123456789', '0101010101')
 C = (1 << 18) * [0]
 for _ in range(int(input())):

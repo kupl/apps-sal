@@ -34,6 +34,9 @@ for i in range(max(r1, r2) + 1, n):
     if c > c2 and a[i] < c and a[i] <= min(a[max(r1, r2):i]):
         pen -= c - c2 - abs(a[i] - c2)
     pen2 = min(pen2, pen)
+    # print(i+1, pen2)
 
 pen = abs(dr) + abs(c - c2)
+# print(dr, c, c2)
+# print(pen, pen1, pen2)
 print(min(pen + pen1, pen + pen2))

@@ -6,3 +6,5 @@ def triple_trouble(one, two, three):
         string += one[count] + two[count] + three[count]
         count += 1
     return string
+
+    # your code here

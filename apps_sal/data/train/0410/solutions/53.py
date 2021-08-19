@@ -12,4 +12,5 @@ class Solution:
             return num_steps
 
         powervalues = sorted([(i, getPowerValue(i)) for i in range(lo, hi + 1)], key=lambda x: x[1])
+        # print(powervalues)
         return powervalues[k - 1][0]

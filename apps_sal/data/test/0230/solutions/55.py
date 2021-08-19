@@ -1,3 +1,4 @@
+# ABC141E - Who Says a Pun?
 def resolve():
     N = int(input())
     S = input().rstrip()
@@ -12,10 +13,10 @@ def resolve():
                 flg = True
                 break
         if flg:
-            ok = mid
+            ok = mid  # next mid will be longer
         else:
-            ng = mid
-    print(ok)
+            ng = mid  # next mid will be shorter
+    print(ok)  # max length of substrings appeared twice or more
 
 
 resolve()

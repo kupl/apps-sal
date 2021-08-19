@@ -18,6 +18,11 @@ class Solution:
             sieve[j * i] = i
 
     def largestComponentSize(self, A: List[int]) -> int:
+        # def add_prime(q,i,primes):
+        #     if q not in primes:
+        #         primes[q]=[i]
+        #     else:
+        #         primes[q].append(i)
         n = len(A)
         g = UF(n)
         primes = defaultdict(list)
@@ -27,6 +32,7 @@ class Solution:
                 primes[q].append(i)
                 while num % q == 0:
                     num //= q
+        # print(primes)
         for l in primes.values():
             j, r = l[0], g.find(l[0])
             for i in l[1:]:

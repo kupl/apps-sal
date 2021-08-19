@@ -1,5 +1,5 @@
 n, m, k = list(map(int, input().split()))
-maze = [["
+maze = [["#"] * (m + 2)] + [list("#" + input() + "#") for i in range(n)] + [["#"] * (m + 2)]
 steps = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 
 empty = -k

@@ -4,6 +4,7 @@ input = sys.stdin.readline
 
 n = int(input())
 A = []
+# リストAにappend()を使って格納していく
 for _ in range(n):
     A.append(int(input()))
 

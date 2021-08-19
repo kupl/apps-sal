@@ -1,3 +1,5 @@
+#!/usr/bin/env	python
+# -*-coding:utf-8 -*-
 import collections
 n, q = list(map(int, input().split()))
 Q = collections.deque()

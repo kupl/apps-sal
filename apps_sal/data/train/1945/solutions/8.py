@@ -12,7 +12,9 @@ class Solution:
                 dicts[rev_bin_rep] = 1
             else:
                 dicts[rev_bin_rep] += 1
+            #print (bin_rep, rev_bin_rep)
         res = 0
+        #print (dicts)
         for key, value in dicts.items():
             res = max(res, value)
         return res

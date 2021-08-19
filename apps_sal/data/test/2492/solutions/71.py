@@ -40,17 +40,25 @@ class InputHandler:
 
 def query(a, n, a_arr_p, a_arr_n, n_zeros, k):
 
+    # return (num of pairs <= a) < k
+
     if a >= 0:
+        # negative
         res = len(a_arr_p) * len(a_arr_n)
+        # zero
         res += n_zeros * (n - n_zeros) + n_zeros * (n_zeros - 1) // 2
+        # p * p
         res_pp = np.searchsorted(a_arr_p, a // a_arr_p, side="right").sum()
         res_pp -= (a_arr_p * a_arr_p <= a).sum()
         res += res_pp // 2
+        # n * n
         res_nn = np.searchsorted(a_arr_n, a // a_arr_n, side="right").sum()
         res_nn -= (a_arr_n * a_arr_n <= a).sum()
         res += res_nn // 2
     else:
+        # p * n
         res = len(a_arr_p) * len(a_arr_n) - np.searchsorted(a_arr_n, (a_arr_p - a - 1) // a_arr_p, side="left").sum()
+    # print(a, res)
     if res >= k:
         return True
     else:
@@ -98,10 +106,12 @@ def test():
     for test_input, ans in zip(TEST_INPUT, ANSWER):
         ih = InputHandler(test_input, True)
         res = input_and_solve(ih)
+        # print(res, ans)
         assert str(res) == str(ans)
 
 
 def __starting_point():
+    # test()
     main()
 
 

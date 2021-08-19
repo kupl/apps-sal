@@ -5,7 +5,7 @@ class Solution:
         total = sum([1 if c == '1' else 0 for c in s])
         if total == 0:
             n = len(s) - 1
-            return (n * (n - 1) // 2) % MOD
+            return (n * (n - 1) // 2) % MOD  # nCr combinatorial formula
         if total % 3 > 0:
             return 0
 

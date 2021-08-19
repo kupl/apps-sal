@@ -5,7 +5,7 @@ class Solution:
         right = defaultdict(int)
 
         for c in s:
-            right[c] += 1
+            right[c] += 1     # pre-populate\\
 
         for i in range(len(s)):
             left[s[i]] += 1

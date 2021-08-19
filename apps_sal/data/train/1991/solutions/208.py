@@ -11,4 +11,5 @@ class Solution:
                     for j, loc in enumerate(locations):
                         if i != j and abs(locations[i] - loc) <= f:
                             dp[f - abs(locations[i] - loc)][j] += c
+        # print(dp)
         return sum([dp[i][finish] for i in range(fuel + 1)]) % (10**9 + 7)

@@ -1,3 +1,4 @@
+# Referred to https://atcoder.jp/contests/abc158/submissions/17106264
 from collections import deque
 s, j = deque(input()), False
 for _ in range(int(input())):

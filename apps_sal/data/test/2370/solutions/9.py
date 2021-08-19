@@ -13,6 +13,7 @@ A = np.array(A, dtype=float)
 useless = np.zeros((N, N), dtype=bool)
 impossible = np.zeros((N, N), dtype=bool)
 for via in range(N):
+    # R[i][j]: i -> via -> j の距離
     R = sum(np.meshgrid(A[via], A[via]))
     R[via] = np.inf
     R[:, via] = np.inf

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -16,6 +17,7 @@ def main():
         a, b = [int(x) - 1 for x in input().split()]
         ab.append((b, a))
     ab.sort()
+    # print(ab)
     ans = 0
     x = -1
     for i in range(M):

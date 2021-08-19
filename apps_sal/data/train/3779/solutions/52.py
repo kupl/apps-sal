@@ -4,3 +4,4 @@ def past(h, m, s):
     z = s * 1000
     j = x + y + z
     return j
+    # Good Luck!

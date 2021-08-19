@@ -10,6 +10,7 @@ class Solution:
         group_count = defaultdict(int)
         for a in A:
             group_id = dsu.find(a)
+            # print(group_id)
             group_count[group_id] += 1
             maxx = max(maxx, group_count[group_id])
         return maxx

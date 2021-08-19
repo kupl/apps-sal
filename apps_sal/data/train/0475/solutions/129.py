@@ -11,7 +11,9 @@ class Solution:
                 sum_ += nums[j]
                 heap.append(sum_)
 
+        # print(heap)
         heapify(heap)
+        # print(heap)
         for i in range(left - 1):
             heappop(heap)
         ans = 0

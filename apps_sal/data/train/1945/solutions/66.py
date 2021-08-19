@@ -8,6 +8,8 @@ class Solution:
         return row
 
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
+        # each row: maintain list of indices to flip to 1 or 0 for equality
+        # then need to find greatest intersection out of all those
         seen = defaultdict(int)
         for i, row in enumerate(matrix):
             if tuple(row) in seen or tuple(self.flip_row(row)) in seen:

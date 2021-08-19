@@ -12,6 +12,7 @@ class Solution:
 
         while len(seen) < n:
             w, (u, v) = heapq.heappop(vertices)
+            # print(w, u, v, ans, seen)
             if u in seen and v in seen:
                 continue
             ans += w
@@ -19,6 +20,7 @@ class Solution:
             for j, p in enumerate(points):
                 if tuple(p) != tuple(v) and tuple(p) not in seen:
                     heapq.heappush(vertices, (manhattan(p, v), (tuple(v), tuple(p))))
+            # print(vertices)
             seen.add(u)
 
         return ans

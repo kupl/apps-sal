@@ -1,3 +1,4 @@
+# Dumb 4-size array solution cause why not?
 def merge(line):
     if line[0] != 0 and line[0] == line[1]:
         if line[2] != 0 and line[2] == line[3]:

@@ -1,5 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # 940
         dsu = DSU()
         min_heap = []
         for i in range(len(points)):

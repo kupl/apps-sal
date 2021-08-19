@@ -14,7 +14,7 @@ class Solution:
             if not arr:
                 return v
             v = arr.pop()
-            cnt = 1
+            cnt = 1  # already won the previous comparison
             if cnt >= k:
                 return v
 

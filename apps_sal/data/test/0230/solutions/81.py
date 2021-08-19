@@ -34,6 +34,7 @@ class RollingHash:
 
 
 def abc141_e():
+    # https://atcoder.jp/contests/abc141/tasks/abc141_e
     N = int(input())
     S = input().rstrip()
 
@@ -49,11 +50,11 @@ def abc141_e():
                 flg = True
                 break
         if flg:
-            ok = mid
+            ok = mid  # next mid will be longer
         else:
-            ng = mid
+            ng = mid  # next mid will be shorter
 
-    print(ok)
+    print(ok)  # max length of substrings appeared twice or more
 
 
 def __starting_point():

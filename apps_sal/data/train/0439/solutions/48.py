@@ -21,7 +21,9 @@ class Solution:
         while j < len(A):
 
             cur = A[j - 1] - A[j]
+            # print(j,prev,cur)
             if (cur <= 0 and prev <= 0) or (cur >= 0 and prev >= 0):
+                # print(j,i)
                 ll = j - i
                 maxl = max(ll, maxl)
                 i = j - 1

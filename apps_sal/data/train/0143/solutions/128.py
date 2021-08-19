@@ -7,7 +7,7 @@ class Solution:
         res, l = 0, 0
         while l < n:
             type1, type2 = -1, -1
-            next_l = -1
+            next_l = -1  # this denote where we should place l in next subarray
             for r in range(l, n):
                 if type1 == -1:
                     type1 = tree[r]

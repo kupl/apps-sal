@@ -1,6 +1,6 @@
 class Solution:
     def removeDuplicates(self, S: str) -> str:
-        letters = list(S) + ['
+        letters = list(S) + ['#']
         while True:
             nLetters = []
             i = 0
@@ -13,5 +13,5 @@ class Solution:
 
             if len(nLetters) + 1 == len(letters):
                 break
-            letters = nLetters + ['
+            letters = nLetters + ['#']
         return ''.join(letters[:-1])

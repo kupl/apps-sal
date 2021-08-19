@@ -5,6 +5,7 @@ candles = [ghosts[0] - 1 - x + t for x in range(0, r)]
 usedTimes = [ghosts[0] - 1 - x for x in range(0, r)]
 res = r
 
+# print(candles)
 for i in range(0, m):
 
     for j in range(0, r):

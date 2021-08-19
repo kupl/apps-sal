@@ -19,6 +19,7 @@ for i in range(q):
         c[j] = c[j - 1]
         if ff[j] == 1:
             c[j] += 1
+    # print(ff[0:n+1])
     for j in range(i + 1, q):
         ans = max(ans, tt - c[arr[j][1]] + c[arr[j][0] - 1])
     for j in range(arr[i][0], arr[i][1] + 1):

@@ -2,6 +2,7 @@ class Solution:
     def splitIntoFibonacci(self, S: str) -> List[int]:
 
         def dfs(index, res, s):
+            # print(res)
             if index == len(s) and len(res) >= 3:
                 return True
             num = 0

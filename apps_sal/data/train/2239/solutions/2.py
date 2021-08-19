@@ -1,4 +1,5 @@
 import sys
+# sys.setrecursionlimit(10**5)
 n, m = map(int, input().split())
 g = {i: [] for i in range(1, n + 1)}
 dp = [[[-1] * 26 for _ in range(n + 1)] for i in range(n + 1)]

@@ -1,3 +1,4 @@
+# ABC147　C　やってる途中
 n = int(input())
 l = []
 for i in range(n):

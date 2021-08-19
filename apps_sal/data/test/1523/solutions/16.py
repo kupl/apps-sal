@@ -1,3 +1,4 @@
+# In the name of GOD!
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))

@@ -11,3 +11,6 @@ class Solution:
             changes += 0 if key in s_counter else t_counter[key]
 
         return changes // 2
+
+    # aba - bab - a: 2, b:1 - a: 1, b: 2
+    # abac - babb - a: 2, b:1, c:1 - a: 1, b: 3

@@ -23,6 +23,7 @@ for i in range(N):
                 if g_nums[friend] == -1:
                     g_nums[friend] = current_g_num
                     q.append(friend)
+                # print(i, t, g_nums)
         current_g_num += 1
 
 block_count = [0] * N

@@ -16,6 +16,7 @@ def viread():
     return [int(x) for x in input().strip().split()]
 
 
+# code goes here
 line = read()
 can = False
 for i in range(len(line) - 2):

@@ -1,3 +1,4 @@
+# ns=[int(x)for x in input().split()]
 n = int(input())
 m = int(input())
 ns = []

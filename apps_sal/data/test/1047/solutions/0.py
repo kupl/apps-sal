@@ -15,6 +15,8 @@ def get_max_kvazi(n):
 fin = sys.stdin
 fout = sys.stdout
 
+#fin = open("input.txt", 'r')
+#fout = open("output.txt", 'w')
 
 n = int(fin.readline())
 ans = []

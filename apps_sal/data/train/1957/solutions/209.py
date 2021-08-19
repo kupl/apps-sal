@@ -5,7 +5,7 @@ class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         q = queue.Queue()
 
-        q.put([0, 0, k, 0])
+        q.put([0, 0, k, 0])  # row, col, k, level
         visited = set()
         dir_ = [[0, 1], [0, -1], [-1, 0], [1, 0]]
         visited.add((0, 0, k))

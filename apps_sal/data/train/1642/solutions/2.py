@@ -3,6 +3,7 @@ from random import randint
 
 
 def primesfrom2to(n):
+    # https://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n/3035188#3035188
     """
     Returns an array of primes, 2 <= p < n.
     """
@@ -56,6 +57,7 @@ def large_factors(n, factors):
 
 
 def pollard_brent(n):
+    # https://comeoncodeon.wordpress.com/2010/09/18/pollard-rho-brent-integer-factorization/
     """
     Returns a factor of n. The returned factor may be a composite number.
     """
@@ -90,6 +92,7 @@ def pollard_brent(n):
 
 
 def isprime(n):
+    # https://en.wikipedia.org/wiki/Miller–Rabin_primality_test#Deterministic_variants
     if n % 2 == 0:
         return False
     elif n < bound:

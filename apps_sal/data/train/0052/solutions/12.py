@@ -1,3 +1,5 @@
+#!/usr/bin/env	python
+# -*-coding:utf-8 -*-
 n = int(input())
 A = sorted(int(input())for _ in range(n))
 B = 10007

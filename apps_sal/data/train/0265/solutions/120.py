@@ -1,9 +1,11 @@
 class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         sums = [0]
+        # prefix sum
         for num in nums:
             sums.append(sums[-1] + num)
 
+        # two sum
         hashmap = {}
         results = []
         for i, s in enumerate(sums):

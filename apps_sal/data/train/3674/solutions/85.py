@@ -4,3 +4,4 @@ def add_binary(a, b):
     s = t[2:]
 
     return s
+    # your code here

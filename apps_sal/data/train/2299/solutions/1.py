@@ -16,6 +16,7 @@ class SegmentTree():
         while i:
             i >>= 1
             self.data[i] = self.f(self.data[i * 2], self.data[i * 2 + 1])
+    # 区間[l,r)へのクエリ
 
     def query(self, l, r):
         l, r = l + self.size, r + self.size
@@ -59,6 +60,7 @@ def main1(n, p):
             i0 = d[v0]
             v1 = st0.query(i0, r)
         return v0, v1, l, r
+    # 区間ごとの辞書順最小先頭を管理：[[v0,v1],[v0,v1,...]
     ary = []
     heappush(ary, func(0, n))
     ret = []

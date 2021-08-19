@@ -21,9 +21,11 @@ def main():
         angle = math.atan2(y, x)
         engines.append((x, y, angle))
 
+    # 偏角ソート
     engines.sort(key=lambda x: x[2])
 
     dist_max = 0
+    # 各エンジンを先頭に、そこから pi の範囲にあるエンジンをすべて用いて進行し、距離を算出する。
     cnt = -1
     for x1, y1, angle1 in engines:
         cnt += 1
@@ -31,11 +33,13 @@ def main():
             def search_criteria(x): return True if angle1 <= x < angle1 + math.pi else False
         else:
             def search_criteria(x): return True if (angle1 <= x) or (x < angle1 - math.pi) else False
+        # search_criteria = lambda x, y: True if x1*x + y1*y > 0 else False
 
         x_sum = 0
         y_sum = 0
         for x, y, angle in engines[cnt:] + engines[:cnt]:
             if search_criteria(angle):
+                # if search_criteria(x, y):
                 x_sum += x
                 y_sum += y
             dist_max = max(dist_max, math.sqrt(x_sum**2 + y_sum**2))

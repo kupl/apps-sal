@@ -12,7 +12,10 @@ class Solution:
             for j in range(i + 1, len(arr)):
                 a = xor[j - 1] if i == 0 else xor[j - 1] ^ xor[i - 1]
                 for k in range(j, len(arr)):
+                    # print(i,j,k)
                     b = xor[k] ^ xor[j - 1]
+                    # print(a,b)
                     if a == b:
+                        # print(\"xxx\")
                         count += 1
         return count

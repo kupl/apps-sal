@@ -27,6 +27,7 @@ def __starting_point():
     horiz = sys.stdin.readline().strip()
     vert = sys.stdin.readline().strip()
 
+    # Graph
     g = {(i, j): [] for i in range(n) for j in range(m)}
     for i, h in enumerate(horiz):
         if h == '<':

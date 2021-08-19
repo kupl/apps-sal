@@ -1,5 +1,11 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+        # min -> 0 max - > max(element)
+        # check for m*k and valid check kar
+        # condition main keep checking the consecutive flowers
+        # m -> m bouqets , k adjacent flower
+        # if len(bloomDay)<m*k:
+        #     return -1
 
         def isPossible(t):
             count = 0

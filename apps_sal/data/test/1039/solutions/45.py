@@ -30,6 +30,7 @@ def solve():
     K -= 1
 
     def dijkstra(K, adj):
+        # K: 始点, adj[point, cost]:隣接リスト
         d = [inf] * N
         d[K] = 0
         que = []

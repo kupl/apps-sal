@@ -29,5 +29,6 @@ for i in range(a):
         Ans.append(B)
     else:
         Ans.append([-1])
+    # Ans.append(B[-1])
 for b in Ans:
     print(*b)

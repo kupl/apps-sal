@@ -12,6 +12,7 @@ class Heap():
             self._min_heap(i)
 
     def _min_heap(self, i):
+        # indexを1からスタート扱いにして計算し戻す
         left = (2 * (i + 1)) - 1
         right = (2 * (i + 1) + 1) - 1
         length = len(self.array) - 1
@@ -34,7 +35,7 @@ class Heap():
 
     def push(self, v):
         self.array.append(v)
-        index = len(self.array)
+        index = len(self.array)  # 1スタート換算のindex
         while self.array[(index // 2) - 1] > self.array[index - 1]:
             self.array[(index // 2) - 1], self.array[index - 1] = self.array[index - 1], self.array[(index // 2) - 1]
             index = index // 2
@@ -46,6 +47,7 @@ a = map(lambda x: int(x) * -1, input().split())
 a = Heap(a)
 
 for i in range(m):
+    # print(a.array)
     a.push(math.ceil(a.pop() / 2))
 
 print(int(-1 * sum(a.array)))

@@ -21,9 +21,12 @@ class Solution:
                 return ans * expand
 
             if find > cur:
+                # collecting 1
                 if ss == '1':
                     cur += 1
             else:
+                # collecting 0
+                # set to next slot if encounter 1
                 if ss == '0':
                     expand += 1
                 else:

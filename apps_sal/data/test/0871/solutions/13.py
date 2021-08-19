@@ -14,6 +14,8 @@ for i in range(n):
             print(y // 60, y % 60)
             ind = False
     a.append(time)
+# print(a)
 if ind:
     y = a[len(a) - 1] + s + 1
+    # print(y)
     print(y // 60, y % 60)

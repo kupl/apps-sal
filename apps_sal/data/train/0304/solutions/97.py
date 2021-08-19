@@ -28,4 +28,6 @@ class Solution:
                     ans += countA * countB
                 else:
                     ans += (countA - 1) * countA
+                # if(ageA==ageB):
+                #     ans-=countA
         return ans

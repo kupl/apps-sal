@@ -1,4 +1,7 @@
+# Not my code
+# https://codeforces.com/contest/1093/submission/80633286
 
+# Template: https://codeforces.com/profile/kabeer27
 from __future__ import division, print_function
 import sys
 import os
@@ -63,6 +66,7 @@ def solve():
                 yield dfs(child, node, 1 - parity)
         yield
 
+    # check for each node and update the answer
     for i in range(1, n + 1):
         if visited[i] == -1:
             count = [0, 0]
@@ -70,6 +74,7 @@ def solve():
             ans *= (power(2, count[0]) + power(2, count[1])) % mod
             ans %= mod
 
+    # print(ans if possible else 0)
     sys.stdout.write(str(ans) if possible else '0')
     sys.stdout.write('\n')
 
@@ -79,6 +84,15 @@ def main():
     tests = int(input().strip())
     for test in range(tests):
         solve()
+
+# Python 2 and 3 footer by Pajenegod and c1729
+
+# Note because cf runs old PyPy3 version which doesn't have the sped up
+# unicode strings, PyPy3 strings will many times be slower than pypy2.
+# There is a way to get around this by using binary strings in PyPy3
+# but its syntax is different which makes it kind of a mess to use.
+
+# So on cf, use PyPy2 for best string performance.
 
 
 py2 = round(0.5)

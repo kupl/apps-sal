@@ -15,8 +15,10 @@ for _ in range(int(input())):
                 x = x * 2
                 if(s[j] == '1'):
                     x += 1
+                # print(x,y,c)
                 if(x - y - 1 <= c):
                     ans += 1
+                    # print(i,j)
                 else:
                     break
                 y += 1

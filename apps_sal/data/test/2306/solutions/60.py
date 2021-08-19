@@ -17,6 +17,8 @@ resv[sumtime] = 0
 for i in reversed(list(range(1, sumtime + 1))):
     resv[i - 1] = min(resv[i] + 0.5, resv[i - 1], limits[i])
 
+# print(limits)
+# print(resv)
 res = 0.0
 for i in range(sumtime):
     res += (resv[i] + resv[i + 1]) * 0.5

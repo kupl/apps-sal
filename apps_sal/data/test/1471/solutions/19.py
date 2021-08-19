@@ -5,7 +5,7 @@ sys.setrecursionlimit(10**7)
 class TreeNode:
     def __init__(self, num):
         self.num = num
-        self.vertexs = []
+        self.vertexs = []  # (ノード番号, 距離)
         self.color = None
 
     def set_color(self, color):

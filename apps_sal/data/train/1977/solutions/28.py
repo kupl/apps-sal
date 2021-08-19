@@ -1,6 +1,7 @@
 class Solution:
     def closedIsland(self, grid: List[List[int]]) -> int:
         visited = [[False] * len(grid[0]) for i in range(len(grid))]
+        # bfs island 0s and return True if the island has no point on grid boarder
 
         def dfs(grid: List[List[int]], visited: List[List[int]], x, y) -> bool:
             closedIsland = not (x == 0 or y == 0 or x == len(grid) - 1 or y == len(grid[0]) - 1)

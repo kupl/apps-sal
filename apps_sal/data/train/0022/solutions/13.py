@@ -1,4 +1,11 @@
 import sys
+# from collections import deque
+# import heapq
+# from math import inf
+# from math import gcd
+
+# print(help(deque))
+# 26
 
 
 def pprint(s): return print(' '.join(map(str, s)))
@@ -8,6 +15,8 @@ def input(): return sys.stdin.readline().strip()
 ipnut = input
 for i in range(int(input())):
     a, k = map(int, input().split())
+    # n = int(input())
+    # s = list(map(int,input().split()))
     for i in range(k - 1):
         x = list(map(int, str(a)))
         a_i = min(x)

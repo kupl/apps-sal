@@ -30,6 +30,7 @@ def dfs(s, R):
 
 
 root = dfs(0, [])
+# print(root[::-1])
 p = root[::-1][len(root) // 2 + len(root) % 2 - 1]
 q = root[::-1][len(root) // 2 + len(root) % 2]
 
@@ -93,6 +94,7 @@ for i in range(N - 1):
 
 scoreA = uf.size(0)
 scoreB = N - scoreA
+# print(scoreA,scoreB)
 
 if scoreA > scoreB:
     print("Fennec")

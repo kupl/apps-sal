@@ -1,7 +1,8 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
+        # 求两球之间的最小最大值
         position.sort()
-        l, r = 0, position[-1] - position[0]
+        l, r = 0, position[-1] - position[0]  # 两球之间的距离
         while l < r:
             mid = (l + r + 1) // 2
             count = 1

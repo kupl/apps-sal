@@ -1,3 +1,4 @@
+# CHAR_TO_MORSE preloaded to convert characters into Morse code
 CODE = {'A': '.-', 'B': '-...', 'C': '-.-.',
         'D': '-..', 'E': '.', 'F': '..-.',
         'G': '--.', 'H': '....', 'I': '..',

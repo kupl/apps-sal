@@ -1,5 +1,6 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
+        #tree = [0,1,6,6,4,4,6]
         max_fruits = 0
         counter = 0
         fruit_basket = set()

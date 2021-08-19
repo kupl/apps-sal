@@ -7,6 +7,7 @@ while n != 0:
     q = n % a
     n //= a
     n = -1 * n
+    #j += 1
     ar.append(q)
 
 print(len(ar))

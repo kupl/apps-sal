@@ -27,6 +27,40 @@ class DSU:
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
+        # Union-Find on Prime Factors
+        # Time  complexity: O(N x (logM x logM + sqrt(M)))
+        # Space complexity: O(M + N)
+        # def primeDecompose(num):
+        #     factor = 2
+        #     prime_factors = []
+        #     while num >= factor * factor:
+        #         if num % factor == 0:
+        #             prime_factors.append(factor)
+        #             num //= factor
+        #         else:
+        #             factor += 1
+        #     prime_factors.append(num)
+        #     return prime_factors
+
+        # dsu = DSU(max(A) + 1)
+        # num_factor_map = {}
+
+        # for num in A:
+        #     prime_factors = list(set(primeDecompose(num)))
+        #     # map a number to its first prime factor
+        #     num_factor_map[num] = prime_factors[0]
+        #     # merge all groups that contain the prime factors.
+        #     for i in range(0, len(prime_factors) - 1):
+        #         dsu.union(prime_factors[i], prime_factors[i + 1])
+
+        # max_size = 0
+        # group_count = defaultdict(int)
+        # for num in A:
+        #     group_id = dsu.find(num_factor_map[num])
+        #     group_count[group_id] += 1
+        #     max_size = max(max_size, group_count[group_id])
+
+        # return max_size
 
         B = []
         for x in A:

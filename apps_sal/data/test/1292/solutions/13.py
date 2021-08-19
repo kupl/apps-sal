@@ -25,8 +25,8 @@ def __starting_point():
                 starts[player].appendleft(point)
                 lands[point] = player
                 levels[point] = 0
-            elif field[i][j] == '
-            continue
+            elif field[i][j] == '#':
+                continue
 
             if 0 <= i - 1 and field[i - 1][j] == '.':
                 graph[point].append(calc(i - 1, j))

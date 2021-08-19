@@ -1,4 +1,7 @@
+#n = int(input())
 x, k, d = list(map(int, input().split()))
+#al = list(map(int, input().split()))
+#al=[list(input()) for i in range(n)]
 x = abs(x)
 if x // d >= k:
     ans = x - d * k

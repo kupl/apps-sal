@@ -31,9 +31,11 @@ def solve(n: int) -> int:
     Find the largest number <= n with the maximum digit sum
     """
     s = str(n)
+    # Decrement the first digit and convert all others to 9 as a baseline
     option = [int(s[0]) - 1] + [9] * (len(s) - 1)
     if digit_sum(option) > digit_sum(n):
         for i in range(len(option) - 1):
+            # Keep bumping digit i in option while still a single digit and the int value <= n
             while True:
                 if option[i] == 9:
                     break

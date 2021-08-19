@@ -41,6 +41,7 @@ def kruskal(points):
 
     n = len(points)
     V = UnionFind(n)
+    #mst   = set()
     edges = set()
 
     for i, (x1, y1) in enumerate(points):
@@ -57,5 +58,7 @@ def kruskal(points):
             continue
 
         V.union(i, j)
+        # mst.add(i)
+        # mst.add(j)
         cost += w
     return cost

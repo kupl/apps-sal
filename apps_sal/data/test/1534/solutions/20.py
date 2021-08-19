@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Wed Oct 25 09:07:32 2017
 
@@ -50,4 +51,5 @@ for i in range(startpos, endpos):
 for i in range(endpos, len(s)):
     if(s[i] == 'b'):
         ans += 1
+# print(startpos,endpos)
 print(len(s) - ans)

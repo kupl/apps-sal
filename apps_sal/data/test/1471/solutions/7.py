@@ -11,6 +11,7 @@ for i in range(n - 1):
     e[v][w].append(u)
 col[0] = 1
 dq = deque([])
+# pop/append/(append,pop)_left/in/len/count/[]/index/rotate()(右へnずらす)
 dq.append(0)
 while dq:
     a = dq.pop()

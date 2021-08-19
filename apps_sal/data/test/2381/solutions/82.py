@@ -26,7 +26,8 @@ def solve():
         else:
             c = k
 
-    if a == -1 and c == -1:
+    # b must be >= 0
+    if a == -1 and c == -1:  # all minus
         ans = 1
         for k in range(K):
             ans = (ans * A[-1 - k]) % MOD

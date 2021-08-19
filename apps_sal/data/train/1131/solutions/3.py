@@ -1,3 +1,4 @@
+# cook your dish here
 import itertools as it
 for case in range(int(input())):
     n, k = map(int, input().split())

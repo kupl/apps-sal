@@ -6,7 +6,6 @@ def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
 
-
 """
 各Aiについて「その数を選ばないで，何回の行動ができますか」がわかればいけるかも?
 いや，なんか違いそう．
@@ -51,14 +50,16 @@ def main():
         return()
 
     def calc(Y):
-        L = []
-        temp = []
+        # Yを決め打つ
+        L = []  # 消せる数字
+        temp = []  # 今見ている区間
         for a in A:
             if a >= Y:
                 temp.append(a)
             else:
                 if len(temp) >= K:
                     temp.sort()
+                    # 消せる=上位勢を除いた数字を追加
                     if K > 1:
                         L += temp[:-(K - 1)]
                     else:
@@ -66,14 +67,18 @@ def main():
 
                 temp = []
 
+        # 最後の方に小さい数字がない場合の処理
         if len(temp) >= K:
             temp.sort()
+            # print(temp[:-(K-1)])
             if K > 1:
                 L += temp[:-(K - 1)]
             else:
                 L += temp
         L.sort()
 
+        # print(Y,L)
+        # print("---")
         if len(L) >= Q:
             return L[Q - 1]
         else:

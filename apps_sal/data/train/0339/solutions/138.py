@@ -19,6 +19,7 @@ class Solution:
                     else:
                         jk_2[t] = 1
 
+        #print(jk_1, jk_2)
         c = 0
         for x in nums1:
             if x * x in jk_2:

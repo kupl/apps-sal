@@ -26,12 +26,14 @@ class Solution:
                 toggle_row(i)
 
         for j in range(1, len(A[0])):
+            # get col sum
             col_sum = 0
             for i in range(len(A)):
                 col_sum += A[i][j]
             if col_sum < len(A) / 2:
                 toggle_col(j)
 
+        # convert into binary and calculate result
         res = 0
         for row in A:
             row_s = ''

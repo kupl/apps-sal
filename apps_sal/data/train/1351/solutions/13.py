@@ -1,8 +1,10 @@
+# cook your dish here
 t = int(input())
 while(t):
     n = int(input())
     A = list(map(int, input().strip().split(" ")))
     A = set(A)
+    # A = list(A)
     m = max(A)
     B = [0] * (n)
     for ele in A:

@@ -13,8 +13,11 @@ def main():
         print((0))
         return
 
+    # (a+b)! % MOD
     ab_mod = fact_mod(a + b)
+    # (a!)^(MOD-2) % MOD
     a_mod = pow(fact_mod(a), MOD - 2, MOD)
+    # (b!)^(MOD-2) % MOD
     b_mod = pow(fact_mod(b), MOD - 2, MOD)
     print(((ab_mod * a_mod * b_mod) % MOD))
 

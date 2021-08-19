@@ -29,15 +29,19 @@ for t, d in TD:
         heappush(H, (D[t].pop(), t))
         T[t - 1] -= 1
 
+#print(ans, H, T, cnt)
 for i in range(K, N):
     if H:
         t1, d1 = TD[i]
         d2, t2 = heappop(H)
+        #print(t1, d1, t2, d2)
         if T[t1 - 1] == 0:
             ans.append(ans[-1] + d1 - d2 + 2 * cnt + 1)
             cnt += 1
             T[t1 - 1] += 1
         else:
             heappush(H, (d2, t2))
+        #print(ans, H, T, cnt)
 
 print((max(ans)))
+# print(ans)

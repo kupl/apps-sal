@@ -1,3 +1,6 @@
+# Date [ 2020-08-15 21:53:58 ]
+# Problem [ d.py ]
+# Author Koki_tkg
 
 import sys
 from decimal import Decimal
@@ -6,6 +9,7 @@ from itertools import combinations, product, accumulate
 import bisect
 from collections import Counter, deque, defaultdict
 
+# sys.setrecursionlimit(10 ** 6)
 MOD = 10 ** 6 + 7
 INF = 10 ** 9
 PI = 3.14159265358979323846
@@ -26,6 +30,7 @@ def Main():
     loop_list = []
     visit = [False] * n
 
+    # 閉路を探してloop_listに格納
     for i in range(n):
         if visit[i]:
             continue
@@ -43,8 +48,10 @@ def Main():
                 break
         loop_list.append(loop_tmp)
 
+    # print(loop_list)
     ans = -10 ** 18
 
+    # loopごとに全部試す
     for loop in loop_list:
         length = len(loop)
         score = sum(loop)
@@ -69,6 +76,7 @@ def search_max_score(loop, rest, length):
         loop += loop
         for i in range(length):
             tmp = list(accumulate(loop[i:i + rest]))
+            # print(tmp)
             ans = max(ans, max(tmp))
 
     return ans

@@ -1,3 +1,4 @@
+# Reberland Linguistics
 
 import sys
 
@@ -14,6 +15,8 @@ while possible:
         l = d - i
         q = (l, i)
 
+#        if q in my_set or (l < 5) or (word[l:d] == word[d:a]):
+#            break
         if q in my_set or (l < 5) or (word[l:d] == word[d:a]):
             continue
 

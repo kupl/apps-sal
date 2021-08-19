@@ -15,6 +15,7 @@ def fn(a, b, n):
         idx += 1
         jdx += 1
     c = 0
+    # print(b)
     while a != b:
         mx = max(db)
         tc = [da[mx][0]]
@@ -26,6 +27,7 @@ def fn(a, b, n):
                 da[mx].append(i)
 
         del db[mx]
+        # print(a)
         l.append(tc)
         c += 1
     print(c)

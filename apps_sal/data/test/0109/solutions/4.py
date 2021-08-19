@@ -1,3 +1,4 @@
+# https://codeforces.com/problemset/problem/912/D
 import heapq
 from heapq import heappush as push
 from heapq import heappop as pop
@@ -45,6 +46,7 @@ while k > 0:
     x, y = get(ind)
     used[ind] = True
     val = -val
+    #print((x, y), val)
     ans += val
     for x_, y_ in zip(dx, dy):
         if is_ok(x, y, x_, y_):

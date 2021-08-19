@@ -20,6 +20,7 @@ class Solution:
         m = len(arr2)
         n = len(arr1)
         dp = {}
+        # print(binsearch(arr2,0))
 
         def dfs(arr1, arr2, left, curr, dp):
             if(curr >= len(arr1)):

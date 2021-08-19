@@ -7,6 +7,7 @@ class Solution:
         visited = [10 ** 9] * n
         while m < n:
             w, i = heapq.heappop(q)
+            # print(j, i, w)
             if visited[i] < 0:
                 continue
             visited[i] = -1

@@ -1,7 +1,10 @@
+# cook your dish here
 import bisect
 
 
 def recur(s_i, e_i, end_i):
+    # if end_i in dp[s_i] and e_i in dp[s_i][end_i]:
+    #     return dp[s_i][end_i][e_i]
 
     inside = 0
     for i in range(s_i + 1, e_i):
@@ -24,6 +27,10 @@ def recur(s_i, e_i, end_i):
                         dp[i][end_i] = max(dp[i][end_i], recur(i, ind, end_i))
             outside = max(outside, dp[i][end_i])
 
+    # if end_i not in dp[s_i]:
+    #     dp[s_i][end_i] = {}
+    # dp[s_i][end_i].update({e_i: v_l[s_i] + v_l[e_i] + outside + inside})
+    # return dp[s_i][end_i][e_i]
     return v_l[s_i] + v_l[e_i] + outside + inside
 
 
@@ -46,4 +53,5 @@ for i in range(n):
                 if i < ind:
                     dp[i][n + 1] = max(dp[i][n + 1], recur(i, ind, n + 1))
         ans = max(ans, dp[i][n + 1])
+# print(dp)
 print(ans)

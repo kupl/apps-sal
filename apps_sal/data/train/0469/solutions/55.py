@@ -1,5 +1,8 @@
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
+        #  directed graph
+        # each node except root has exactly 1 indegree
+        # each node can have only 0~2 children
 
         graph = collections.defaultdict(list)
         indegree = {nodeNum: 0 for nodeNum in range(n)}
@@ -16,6 +19,7 @@ class Solution:
                 graph[nodeNum].append(right)
                 indegree[right] += 1
 
+        # print(indegree)
         zeroIndegrees = collections.deque([])
         singleIndegrees = 0
 
@@ -48,3 +52,10 @@ class Solution:
         if len(topological_sort) == n:
             return True
         return False
+
+# 4
+# [1,0,3,-1]
+# [-1,-1,-1,-1]
+
+# 0               2
+#     1         3

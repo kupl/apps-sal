@@ -9,7 +9,8 @@ class Solution:
         def dp(i, j):
             if i > j:
                 return 0
-            parity = (N - (j - i + 1)) % 2
+            parity = (N - (j - i + 1)) % 2  # 0-alex, 1-lee
+            # parity = (j-i-N) % 2
             if parity == 0:
                 return max(piles[i] + dp(i + 1, j), piles[j] + dp(i, j - 1))
             else:

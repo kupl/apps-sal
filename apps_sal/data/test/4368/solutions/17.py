@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc156/tasks/abc156_b
 N, K = map(int, input().split())
 q, mod = divmod(N, K)
 mod_list = [mod]

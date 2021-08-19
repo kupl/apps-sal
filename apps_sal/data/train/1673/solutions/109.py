@@ -14,5 +14,6 @@ class Solution:
                         m = min(m, arr[r - 1][i])
 
                 arr[r][c] += m
+            # print(arr[r], m)
 
         return min(arr[-1])

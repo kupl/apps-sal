@@ -10,6 +10,7 @@ class Solution:
         return None
         """
 
+    #   old
         a = sorted(nums)
 
         for j in range(len(nums)):

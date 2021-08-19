@@ -1,3 +1,4 @@
+# https://www.codechef.com/problems/NUMBERS
 
 for _ in range(int(input())):
     n = int(input())

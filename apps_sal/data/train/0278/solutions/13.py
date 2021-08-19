@@ -8,12 +8,12 @@ class Solution:
 
         M = defaultdict(int)
 
-        def upper(d, m):
+        def upper(d, m):  # largest 3k + m: 3k + m <= f[d]
             if f[d] < m:
                 return 0
             return (f[d] - m) // 3 * 3 + m
 
-        def mx(d, mod):
+        def mx(d, mod):  # largest k: 0 <= k <= f[d] && k * d % 3 = mod
             dm = d % 3
             if dm == 0:
                 return 0 if mod != 0 else f[d]

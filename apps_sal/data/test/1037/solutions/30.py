@@ -23,6 +23,9 @@ def main():
 
     print(ans)
 
+    # for tmp in DP:
+    #     print (tmp)
+
 
 def __starting_point():
     main()

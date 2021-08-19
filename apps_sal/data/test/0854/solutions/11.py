@@ -16,6 +16,7 @@ x = 0
 
 ANS = 0
 
+# print(AIND,AS,MINA,SUM,MAX)
 
 while T >= MINA:
     if T > SUM[x]:

@@ -38,8 +38,13 @@ def stupid(a, inv, was, order):
             order.pop()
     return None
 
+#from random import randint
+
 
 def solve():
+    #a = [randint(0,3) for i in range(5)]
+    # print(*a)
+    #n = len(a)
     n = mint()
     a = list(mints())
     inv = []
@@ -48,7 +53,10 @@ def solve():
             if a[i] < a[j]:
                 inv.append((i, -a[j], -j))
     inv.sort(reverse=True)
+    # print(inv)
+    #r = stupid(a.copy(),inv,[0]*len(inv),[])
     r = list(range(len(inv)))
+    # print(*r)
     if r is not None:
         print(len(r))
         for z in r:
@@ -59,4 +67,5 @@ def solve():
         print("wut")
 
 
+# for i in range(mint()):
 solve()

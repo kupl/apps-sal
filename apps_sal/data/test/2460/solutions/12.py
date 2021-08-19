@@ -20,6 +20,7 @@ while True:
         while t_idx < len(taxi_idx) - 1:
             d1 = abs(passenger_idx[p_idx] - taxi_idx[t_idx])
             d2 = abs(passenger_idx[p_idx] - taxi_idx[t_idx + 1])
+            # print(t_idx, d1, d2)
             if d1 > d2:
                 t_idx += 1
             else:

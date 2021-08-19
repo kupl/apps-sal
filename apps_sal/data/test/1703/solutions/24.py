@@ -29,7 +29,7 @@ def main():
     n = int(input())
     left_s = dict()
     right_s = dict()
-    c_s_cnt = 0
+    c_s_cnt = 0  # the number of complete sequences
     for _ in range(n):
         s = input()
         c, mod_s = check(s)

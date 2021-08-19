@@ -10,7 +10,7 @@ class UnionFind:
         if parent_node == node:
             return node
         root_node = self.root(parent_node)
-        self.parents[node] = root_node
+        self.parents[node] = root_node  # reduction
         return root_node
 
     def union(self, one_node, other_node):

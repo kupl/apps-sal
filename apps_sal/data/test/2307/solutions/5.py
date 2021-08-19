@@ -1,3 +1,4 @@
+# cook your code here
 t = int(input())
 l = list(map(int, input().split(' ')))
 even = 0

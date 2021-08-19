@@ -6,7 +6,7 @@ class StreamChecker:
 
         for word in set(words):
             node = self.trie
-            for ch in word[::-1]:
+            for ch in word[::-1]:  # for each word start from root node
                 if ch not in node:
                     node[ch] = {}
                 node = node[ch]
@@ -24,3 +24,8 @@ class StreamChecker:
             node = node[ch]
 
         return('$' in node)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -9,12 +9,13 @@ for i in a:
 for i in a:
     d[i[0][0]].append([i[0][1], i[0][2], i[1]])
 for x in d:
-    l = d[x]
+    # doing for 2d
+    l = d[x]  # this is restricted to x-coordinate
     b = {}
     for i in l:
         b[i[0]] = []
     for i in l:
-        b[i[0]].append([i[1], i[2]])
+        b[i[0]].append([i[1], i[2]])  # {z, n}
     for i in l:
         b[i[0]].sort()
     for y in b:

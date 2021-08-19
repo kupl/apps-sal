@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def sufficientSubset(self, root: TreeNode, limit: int) -> TreeNode:
 
@@ -12,7 +18,7 @@ class Solution:
                 result = max(l, r)
             elif node.left:
                 result = l
-            else:
+            else:  # node.right = None or both left right are None
                 result = r
 
             if l < limit:

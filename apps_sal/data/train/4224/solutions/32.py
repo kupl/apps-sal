@@ -9,4 +9,4 @@ def dont_give_me_five(start, end):
         if valid:
             count += 1
 
-    return count
+    return count   # amount of numbers

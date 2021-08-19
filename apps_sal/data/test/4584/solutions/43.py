@@ -1,3 +1,5 @@
+# author:  Taichicchi
+# created: 12.09.2020 19:50:20
 
 from collections import Counter
 import sys

@@ -4,8 +4,8 @@ S = [list(input()) for _ in range(H)]
 ans = 0
 for sx in range(H):
     for sy in range(W):
-        if S[sx][sy] == '
-        continue
+        if S[sx][sy] == '#':
+            continue
 
         D = [[float('inf') for _ in range(W)] for _ in range(H)]
         D[sx][sy] = 0
@@ -18,14 +18,14 @@ for sx in range(H):
             for dx, dy in vs:
                 nx = x + dx
                 ny = y + dy
-                if 0 <= nx < H and 0 <= ny < W and S[nx][ny] != '
-                q.put((nx, ny))
-                D[nx][ny] = D[x][y] + 1
+                if 0 <= nx < H and 0 <= ny < W and S[nx][ny] != '#' and D[nx][ny] == float('inf'):
+                    q.put((nx, ny))
+                    D[nx][ny] = D[x][y] + 1
 
         for gx in range(H):
             for gy in range(W):
-                if S[gx][gy] == '
-                continue
+                if S[gx][gy] == '#':
+                    continue
                 ans = max(ans, D[gx][gy])
 
 print(ans)

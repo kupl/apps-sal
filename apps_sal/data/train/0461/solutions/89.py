@@ -8,6 +8,7 @@ class Solution:
         for idx, head in enumerate(manager):
             if head != -1:
                 companyTree[head].append(idx)
+        # use heap
         queue = deque([(headID, 0)])
         visited = set()
         res = 0
@@ -15,6 +16,8 @@ class Solution:
         while queue and len(visited) < n:
             cur_employee, cur_total = queue.popleft()
             res = max(res, cur_total + informTime[cur_employee])
+            # visited.add(cur_employee)
             for subord in companyTree[cur_employee]:
+                # if subord not in visited:
                 queue.append((subord, cur_total + informTime[cur_employee]))
         return res

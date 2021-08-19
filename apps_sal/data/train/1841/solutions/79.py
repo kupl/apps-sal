@@ -7,6 +7,8 @@ class Solution:
         median = arr[med_loc]
         count = 0
         ans = []
+        # arr.remove(median)
+        # arr = deque(arr)
         while count < k:
             if abs(arr[0] - median) > abs(arr[-1] - median):
                 ans.append(arr[0])

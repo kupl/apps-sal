@@ -14,7 +14,7 @@ for i in range(70):
     x = (3 - 2 * p2 + d.sqrt()) / 2
     if(is_int(x)):
         if(x % 2 == 1):
-            l.append(p2 * x)
+            l.append(p2 * x)  # l.append((p2+(x+1)/2)*x)
     p2 = p2 * 2
 l.sort()
 if len(l) == 0:

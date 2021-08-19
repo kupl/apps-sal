@@ -1,4 +1,5 @@
 def crusoe(n, d, ang, dis_tmult, ang_mult):
+    # your code
     from math import sin, cos, pi
 
     x = 0

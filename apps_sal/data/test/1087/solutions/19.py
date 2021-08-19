@@ -1,3 +1,5 @@
+# float型を許すな
+# numpyはpythonで
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 from operator import itemgetter
@@ -30,19 +32,24 @@ for i in range(45):
     if x == 1:
         memo = i
 memo += 1
+# print(memo)
 table = [0 for i in range(memo)]
 for i in range(n):
     for j in range(memo):
         x = (lis[i] >> j) % 2
         if x == 1:
             table[j] += 1
+# print(table)
 table2 = [[0, 0] for i in range(memo)]
 for i in range(memo):
     table2[i][0] = abs(n - 2 * table[i]) * 2**i
     table2[i][1] = i + 1
     if n - 2 * table[i] < 0:
         table2[i][1] *= (-1)
+# print(table2)
 table2.sort(reverse=True)
+# print(table2)
+# print(sorted(table2,reverse=True))
 maxx = 0
 ans_table = [0 for i in range(memo)]
 for i in range(memo):
@@ -55,6 +62,7 @@ for i in range(memo):
             maxx -= 2**(table2[i][1] - 1)
     else:
         ans_table[abs(table2[i][1]) - 1] = 0
+# print(ans_table)
 ans = 0
 for i in range(memo):
     if ans_table[i] == 1:

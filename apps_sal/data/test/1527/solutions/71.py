@@ -48,8 +48,8 @@ def longest_bfs(i, j):
 longest_path = 0
 for i in range(h):
     for j in range(w):
-        if s[i][j] == "
-        continue
+        if s[i][j] == "#":
+            continue
         path_length = longest_bfs(i, j)
         for p in path_length:
             if p < INF and p > longest_path:

@@ -23,6 +23,7 @@ def ans(x, A, S):
 
 top = A[-1] * 2 + 1
 bottom = 0
+# mid以上が何個あるか
 while top - bottom > 1:
     mid = (top + bottom) // 2
     if n * n - cnt(mid, A, S) > m:

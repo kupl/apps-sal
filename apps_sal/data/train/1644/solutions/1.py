@@ -1,18 +1,18 @@
 import struct
 
 b91abc = ('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-          '!
+          '!#$%&()*+,./:;<=>?@[]^_`{|}~"')
 
 
 def b91decode(strng):
-    a, b, c=-1, 0, 0
-    result=bytearray()
+    a, b, c = -1, 0, 0
+    result = bytearray()
     for char in strng:
         if not char in b91abc:
             continue
-        ind=b91abc.index(char)
+        ind = b91abc.index(char)
         if(a < 0):
-            a=ind
+            a = ind
         else:
             a += ind * 91
             b |= a << c
@@ -23,26 +23,26 @@ def b91decode(strng):
                 c -= 8
                 if c <= 7:
                     break
-            a=-1
+            a = -1
     if a + 1:
         result += struct.pack('B', (b | a << c) & 255)
     return result.decode()
 
 
 def b91encode(strng):
-    a, b=0, 0
-    result=''
+    a, b = 0, 0
+    result = ''
     for count in range(len(strng)):
-        byte=strng.encode()[count:count + 1]
+        byte = strng.encode()[count:count + 1]
         b |= struct.unpack('B', byte)[0] << a
         a += 8
         if a > 13:
-            c=b & 8191
+            c = b & 8191
             if c > 88:
                 b >>= 13
                 a -= 13
             else:
-                c=b & 16383
+                c = b & 16383
                 b >>= 14
                 a -= 14
             result += b91abc[c % 91] + b91abc[c // 91]

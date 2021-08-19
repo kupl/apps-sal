@@ -6,6 +6,7 @@ r = list(map(int, input().split()))
 for i in range(R):
     r[i] -= 1
 d = np.zeros((n, n))
+# 入力
 for i in range(m):
     a, b, c = map(int, input().split())
     a, b = a - 1, b - 1

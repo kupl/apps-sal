@@ -40,6 +40,8 @@ for _ in range(t):
         ind.append(i)
         cd[c[i]] = ind
 
+    # print(cd)
+
     found = False
     for k in list(cd.keys()):
         ind = cd.get(k, [])

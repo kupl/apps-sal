@@ -3,6 +3,7 @@ class Solution:
         if len(hand) % W != 0:
             return False
 
+        # use dictionary to do quick look-up
         dic = {}
 
         for num in hand:

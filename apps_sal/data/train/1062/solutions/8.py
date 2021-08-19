@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 val = (2 * n) - 1
 x = 2

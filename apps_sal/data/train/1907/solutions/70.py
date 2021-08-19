@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
 
 class Solution:
     def __init__(self):
@@ -38,3 +44,8 @@ class Solution:
 
         possible_target = self.find_possible_target(cloned, target)
         return possible_target
+        # #
+        # no need to check if they are a copy or not
+        # if self.are_they_copy(target, possible_target):
+        #     return result
+        # return None

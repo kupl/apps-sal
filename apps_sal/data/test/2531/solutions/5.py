@@ -1,3 +1,4 @@
+# cook your dish here
 from itertools import combinations as c
 try:
     n = int(input())

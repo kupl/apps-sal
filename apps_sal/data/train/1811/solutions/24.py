@@ -18,3 +18,8 @@ class StockSpanner:
 
         self.price.append(price)
         return self.dp[-1]
+
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

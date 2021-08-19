@@ -21,6 +21,9 @@ for i in range(0, Max + 1):
     while(j < n):
         cnt[j] = 1
         j = nxt[j]
+# for i in range(0, n-1):
+#    print(seq[i], sep=' ')
+# print(seq[n-1])
 inv = 0
 for i in range(len(seq)):
     for j in range(i + 1, len(seq)):

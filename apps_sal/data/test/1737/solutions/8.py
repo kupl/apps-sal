@@ -28,10 +28,12 @@ while len(levels[len(levels) - 2]):
         for i in listing:
             name = i.split()
             gov = True
+            # проверка, есть ли этот проект в предыдущих уровнях
             for j in range(lev + 1):
                 if name[0] in levels[j]:
                     gov = False
                     break
+            # проверка, есть ли этот проект в текущем уровне
             if gov:
                 if name[0] not in levels[lev + 1]:
                     levels[lev + 1][name[0]] = int(name[1])

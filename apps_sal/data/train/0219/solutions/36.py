@@ -30,6 +30,9 @@ class Solution:
         maxLen = 0
         for i, c in enumerate(counts):
             target = c - 1
+            # pos1 = len(starts) - 1
+            # while pos1 >= 0 and starts[pos1] > target:
+            #     pos1 -= 1
             pos = bisect.bisect_right(starts, target)
             if pos == len(starts) or starts[pos] > target:
                 pos -= 1

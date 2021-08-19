@@ -9,6 +9,7 @@ class Solution:
 
         for r in range(1, n):
             for l in range(r):
+                # pr
                 dp[r, A[r] - A[l]] = dp.get((l, A[r] - A[l]), 1) + 1
 
         return max(dp.values())

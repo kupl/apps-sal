@@ -1,3 +1,4 @@
+# 080a
 
 def atc_080a(NAB: str) -> int:
     N, A, B = map(int, NAB.split(" "))

@@ -4,6 +4,7 @@ class Solution:
         needed = [100000] * (n + 1)
 
         for i in range(len(ranges)):
+            # print(needed)
             l_i = i - ranges[i]
 
             if l_i <= 0:

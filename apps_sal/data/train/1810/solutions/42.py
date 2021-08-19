@@ -2,6 +2,7 @@ class Solution:
     def getFolderNames(self, names):
         res = []
         allname = collections.Counter()
+        # print(names)
         for name in names:
             if name in allname:
                 while f'{name}({allname[name]})' in allname:

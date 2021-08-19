@@ -1,3 +1,4 @@
+# 753
 
 from copy import deepcopy
 
@@ -24,6 +25,7 @@ class Solution:
             ret = 0
             for i in range(max(0, x), min(m, x + 2 * K + 1)):
                 ret += mat[i][y]
+            # print(\"colsum\", x, y, ret)
             return ret
 
         for i in range(m):

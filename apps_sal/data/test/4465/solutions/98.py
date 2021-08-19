@@ -1,3 +1,4 @@
+# coding = SJIS
 
 a, b = map(int, input().split())
 

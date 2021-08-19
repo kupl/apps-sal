@@ -35,6 +35,7 @@ for i in range(n):
             d[s] = 1
 
 m = 0
+# print(d)
 
 for s in d:
     m = max(m, d[s])

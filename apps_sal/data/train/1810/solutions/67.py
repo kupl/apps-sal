@@ -16,9 +16,11 @@ class Solution:
             prefix_end = name.rfind('(') - 1
             suff = 0
             i = prefix_end + 2
+            # print(name[i])
             while ord(name[i]) >= ord('0') and ord(name[i]) <= ord('9'):
                 suff = suff * 10 + ord(name[i]) - ord('0')
                 i += 1
+            # print(name, suff)
         else:
             prefix_end = len(name) - 1
             suff = 0
@@ -39,10 +41,13 @@ class Solution:
             new = self.add_suffix(name, suffix)
             suffix_map[new].add(0)
             prefix, suff_number = self.get_prefix_suff_num(name)
+            # print(prefix, suff_number)
             if (len(prefix) < len(name) and suff_number != 0) or (len(prefix) == len(name)):
+                # print(name)
                 suffix_map[prefix].add(suff_number)
                 self.get_next_suffix(next_map[prefix], suffix_map[prefix], next_map, prefix)
             self.get_next_suffix(suffix, suffix_map[name], next_map, name)
             self.get_next_suffix(next_map[new], suffix_map[new], next_map, new)
             ans.append(new)
+            # print(next_map, suffix_map)
         return ans

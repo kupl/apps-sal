@@ -45,6 +45,7 @@ class Solution:
                 for c2 in cols[i + 1:]:
                     if (c1, c2) in lastc:
                         area = (r - lastc[(c1, c2)]) * (c2 - c1)
+                        #ans = min(ans, area)
                         if area < ans:
                             ans = area
                     lastc[(c1, c2)] = r
@@ -71,6 +72,7 @@ class Solution:
                 for c2 in cols[i + 1:]:
                     if (c1, c2) in lastc:
                         area = (r - lastc[(c1, c2)]) * (c2 - c1)
+                        #ans = min(ans, area)
                         if area < ans:
                             ans = area
                     lastc[(c1, c2)] = r
@@ -102,6 +104,7 @@ class Solution:
                 s = sorted(cols1 & cols2)
                 for c1, c2 in zip(s[:-1], s[1:]):
                     area = (r1 - r2) * (c1 - c2)
+                    #ans = min(ans, area)
                     if area < ans:
                         ans = area
         return ans if ans < float('inf') else 0

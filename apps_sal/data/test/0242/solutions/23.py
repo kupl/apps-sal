@@ -14,6 +14,8 @@ def bins(n):
     while a < b:
         mid = (a + b) // 2
         guess = zrs(mid)
+        #print (guess)
+        # print(a,b)
         if guess < n:
             a = mid + 1
         elif guess > n:

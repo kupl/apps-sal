@@ -6,4 +6,4 @@ def generate_hashtag(s):
     if not s or len(s) > 139:
         return False
 
-    return '
+    return '#' + s

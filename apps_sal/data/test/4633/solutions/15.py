@@ -19,6 +19,11 @@ def __starting_point():
             print('0')
             continue
 
+        # So we start counting digits from left to right
+        # The first digits where the sum is greater than or equal to S and every digit following
+        # needs to be set to 0, and the last digit we safely counted gets incremented
+        # Our answer is the difference between this number and N
+
         str_N = '0' + str(N)
 
         total = 0

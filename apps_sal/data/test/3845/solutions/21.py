@@ -29,15 +29,15 @@ def main():
     ans = [[] for i in range(100)]
     for i in range(50):
         for j in range(100):
-            ans[i].append('
+            ans[i].append('#')
     for i in range(50, 100):
         for j in range(100):
             ans[i].append('.')
 
     for i in range(a - 1):
-        ans[2 * (i // 50)][2 * (i % 50)]='.'
+        ans[2 * (i // 50)][2 * (i % 50)] = '.'
     for i in range(b - 1):
-        ans[99 - 2 * (i // 50)][2 * (i % 50)]= '
+        ans[99 - 2 * (i // 50)][2 * (i % 50)] = '#'
 
     for i in range(100):
         print((''.join(ans[i])))

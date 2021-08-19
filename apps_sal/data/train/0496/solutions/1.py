@@ -14,6 +14,7 @@ class Solution:
             else:
                 tail_num += 1
 
+            # result = result + (tail_num - A[i])
             result += tail_num - A[i]
 
         return result

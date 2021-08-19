@@ -6,6 +6,8 @@ for _ in range(m):
     adj_list[a].append((b, c))
     adj_list[b].append((a, c))
 
+# dijkstra
+
 
 def dijkstra(start):
     prev_node = [-1] * (n + 1)

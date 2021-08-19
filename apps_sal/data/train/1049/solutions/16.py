@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, k = input().split()
     n, k = int(n), int(k)
@@ -12,6 +13,7 @@ for _ in range(int(input())):
     else:
         m = 0
     while j < len(nums):
+        # print(i,j,initial)
         j += 1
         if j == len(nums):
             break

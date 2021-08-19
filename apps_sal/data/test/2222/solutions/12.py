@@ -10,6 +10,7 @@ DP = [-1] * N
 
 i = 0
 while i >= 0:
+    # print("Try", i, C[i], CT[i])
     if CT[i] >= len(C[i]):
         if len(C[i]) == 0:
             DP[i] = 1

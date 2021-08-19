@@ -7,6 +7,8 @@ N = int(input())
 A = np.array(input().split(), dtype=np.int32)
 a_to_i = {a: i for i, a in enumerate(A)}
 
+# sparse table を使ってRMQ
+# parityの同じところだけを見るようにしておく
 
 U = len(A).bit_length()
 sp = [None, A]
@@ -18,6 +20,7 @@ for i in range(2, U):
 def RMQ(x, y):
     if (y - x) & 1:
         y -= 1
+    # x番目から偶数番目だけ見て[x,y]での最小値を返す
     d = y - x
     if d <= 1:
         return A[x]
@@ -26,6 +29,8 @@ def RMQ(x, y):
 
 
 def F(x, y):
+    # 辞書式で最小の2つ組をとる
+    # そのあと、今後調べないといけない区間の一覧を返す
     x1 = RMQ(x, y)
     i1 = a_to_i[x1]
     x2 = RMQ(i1 + 1, y)

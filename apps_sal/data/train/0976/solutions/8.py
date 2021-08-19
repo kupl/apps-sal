@@ -14,6 +14,7 @@ for i in range(1, n):
             k += 1
             if k > d:
                 d += 1
+        # print(st,k,d)
     else:
         try:
             if st[len(st) - 1] != st[len(st) - 2]:
@@ -22,6 +23,7 @@ for i in range(1, n):
         except:
             st.pop()
             k -= 1
+        # print(st,k,d)
 
 c1, max1 = 0, 0
 s1 = []

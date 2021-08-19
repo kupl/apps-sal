@@ -6,14 +6,14 @@ class UnionFind:
 
     def find(self, p):
         if p != self.parent[p]:
-            self.parent[p] = self.find(self.parent[p])
+            self.parent[p] = self.find(self.parent[p])  # path compression
         return self.parent[p]
 
     def union(self, p, q):
         prt = self.find(p)
         qrt = self.find(q)
         if prt == qrt:
-            return False
+            return False  # already connected
         if self.rank[prt] > self.rank[qrt]:
             prt, qrt = qrt, prt
         self.parent[prt] = qrt
@@ -25,7 +25,7 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         uf = UnionFind(n)
-        hp = []
+        hp = []  # min heap
 
         for i in range(n):
             for ii in range(i + 1, n):

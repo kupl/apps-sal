@@ -22,6 +22,11 @@ def main(n, k, q, x):
     return ret
 
 
+# n=int(input())
+# a=list(input())
+# a=list(map(int,input().split()))
+# b=list(map(int,input().split()))
+#ab=[list(map(int,input().split())) for _ in range(n)]
 n, k, q = list(map(int, input().split()))
 x = list(map(int, input().split()))
 print((main(n, k, q, x)))

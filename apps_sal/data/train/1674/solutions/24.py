@@ -16,6 +16,7 @@ class Solution:
 
                 ret = dp2(prev + x, max(m, x))
                 maxcount = max(maxcount, ret + sum(piles[prev + 1:prev + x + 1]))
+                #print(prev+x, m, x, ret, sum(piles[prev+1:prev+x+1]))
             return maxcount
 
         @lru_cache(None)

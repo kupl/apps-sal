@@ -16,7 +16,7 @@ def prime_set(N):
     return primes
 
 
-def prime_factorization(n):
+def prime_factorization(n):  # 素因数分解
     res = []
     for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:

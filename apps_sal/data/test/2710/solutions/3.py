@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 class Dinic:
     class Edge:
@@ -65,6 +67,7 @@ N, M = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
+# ff = Ford_Fulkerson(N*2+2)
 ff = Dinic(N * 2 + 2)
 S = 1
 T = N + 1

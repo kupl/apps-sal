@@ -1,3 +1,4 @@
+##n, m = map(int, input().split())
 n = int(input())
 data = list(map(int, input().split()))
 ans = 0

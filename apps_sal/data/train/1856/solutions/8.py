@@ -17,18 +17,21 @@ class Solution:
                     0 <= n_headx < n and 0 <= n_heady < n and
                     (n_tailx, n_taily, n_headx, n_heady) not in visited and
                         grid[n_headx][n_heady] == 0 and grid[n_tailx][n_taily] == 0):
+                    # print(\"lr\", (n_tailx, n_taily, n_headx, n_heady, steps + 1))
                     q.append((n_tailx, n_taily, n_headx, n_heady, steps + 1))
             if (tailx == headx):
                 if (tailx + 1 < n and
                     grid[tailx + 1][taily] == 0 and
                     grid[headx + 1][heady] == 0 and
                         (tailx, taily, tailx + 1, taily) not in visited):
+                    # print(\"rc\",(tailx, taily, tailx+1, taily, steps + 1))
                     q.append((tailx, taily, tailx + 1, taily, steps + 1))
             if (taily == heady):
                 if (taily + 1 < n and
                     grid[tailx][taily + 1] == 0 and
                     grid[headx][heady + 1] == 0 and
                         (tailx, taily, tailx, taily + 1) not in visited):
+                    # print(\"rcc\",(tailx, taily, tailx, taily+1, steps + 1))
                     q.append((tailx, taily, tailx, taily + 1, steps + 1))
 
         return -1

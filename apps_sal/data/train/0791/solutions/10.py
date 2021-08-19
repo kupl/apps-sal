@@ -11,6 +11,7 @@ while v < w:
     v += 1
     [n, d] = [int(i) for i in input().split()]
     arr = list(map(int, input().split()))
+    #
     my_dict = {}
     i = 0
     while i < d:
@@ -20,6 +21,7 @@ while v < w:
             my_dict[i].append(arr[i + j])
             j += d
         i += 1
+    # check if mean of each list is same and equal to mean of arr and mean isnt a         float
     mean = float(sum(arr)) / len(arr)
     if mean % 1 != 0.0:
         print(-1)

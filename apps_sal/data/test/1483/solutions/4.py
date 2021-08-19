@@ -1,4 +1,5 @@
 n = int(input())
+# for i in range(t):
 p = list(map(int, input().strip().split()))
 
 l = [0] * n

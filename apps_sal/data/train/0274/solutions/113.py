@@ -16,6 +16,7 @@ class Solution:
                 ans = max(ans, j - i + 1)
                 j += 1
             else:
+                # Fast forward i
                 i = min(max_q[0][1], min_q[0][1]) + 1
                 while max_q[0][1] < i:
                     heapq.heappop(max_q)

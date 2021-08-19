@@ -19,6 +19,7 @@ for l in Q:
     d[now:now + b] = [c] * b
     now += b
 
+# print(d)
 ans = sum(A)
 now = ans
 for kae in range(1, n + 1):

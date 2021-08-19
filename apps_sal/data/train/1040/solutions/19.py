@@ -1,4 +1,56 @@
+# from collections import Counter
+# class Node(object):
+#     def __init__(self, start, end):
+#         self.start = start
+#         self.end = end
+#         self.rich = None
+#         self.left = None
+#         self.right = None
 
+# class SegmentTree(object):
+#     def __init__(self):
+#         self.root = None
+
+#     def addToTree(self, l, r, string):
+#         node = Node(l,r)
+
+#         if r == len(string) - 1:
+#             self.root = Node(l,r)
+#             node = self.root
+
+#         if r - l < 3:
+#             node.rich = False
+#             return node
+#         else:
+#             m = int((l+r)/2)
+#             left, right = self.addToTree(l, m, string), self.addToTree(m+1, r,     string)
+#             node.weight = any()
+#             node.left = left
+#             node.right = right
+#             return node
+
+# T = int(input())
+# for _ in range(T):
+#     N, Q = map(int,input().split())
+#     string = input()
+#     ans = 1
+#     for __ in range(Q):
+#         L, R = map(int, input().split())
+#         if R-L >= 2:
+#             L -= 1
+#             sub_str = string[L:R]
+#             cnt = Counter(sub_str)
+#             for value in cnt.values():
+#                 if value > 2:
+#                     ans = 0
+#                     print('yes')
+#                     break
+#         else:
+#             ans = 0
+#             print('no')
+
+#         if ans:
+#             print('no')
 
 t = int(input())
 for _ in range(t):

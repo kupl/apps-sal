@@ -4,3 +4,5 @@ def over_the_road(a, n):
         return (2 * n - int(a / 2) * 2)
     else:
         return 2 * n - int(a / 2) * 2 + 1
+
+    # return st[a]

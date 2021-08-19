@@ -6,6 +6,7 @@ class Solution:
         count = 0
         max_len = 0
         while end < l:
+           #     print(start, end)
             if A[end] == 1:
                 max_len = max(max_len, end - start + 1)
                 end = end + 1

@@ -19,6 +19,7 @@ def solve():
             dp[j + vi] = min2(dp[j + vi], dp[j] + wi)
         for j in range(max(0, H - vi + 1), H + 1):
             dp[H] = min2(dp[H], dp[j] + wi)
+#        print(dp)
 
     print((dp[H]))
 

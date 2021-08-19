@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     m, tc, th = [int(num) for num in input().split()]
     if th == tc:

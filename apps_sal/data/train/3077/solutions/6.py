@@ -1,4 +1,5 @@
 def pattern(n):
+    # Happy Coding ^_^
     a = ""
     lst = []
     result = ""

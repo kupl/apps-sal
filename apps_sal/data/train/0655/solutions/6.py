@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     n, k, v = list(map(int, input().split()))

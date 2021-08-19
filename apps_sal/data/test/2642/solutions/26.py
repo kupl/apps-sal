@@ -18,7 +18,7 @@ for i in range(n):
         else:
             pass
         if x <= 0:
-            sq = True
+            sq = True  # second quadrant
             x, y = y, -x
         else:
             sq = False
@@ -33,6 +33,8 @@ for i in range(n):
             else:
                 d[(x, y)] = [1, 0]
 
+# 繰り返し2乗法
+
 
 def mod_pow(a: int, b: int, mod: int) -> int:
     if b == 0:
@@ -43,6 +45,7 @@ def mod_pow(a: int, b: int, mod: int) -> int:
         return a % mod
     else:
         return ((mod_pow(a, b // 2, mod) ** 2) * a) % mod
+# print(d)
 
 
 ans = 1

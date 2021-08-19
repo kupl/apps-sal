@@ -1,4 +1,5 @@
 class Funnel(object):
+    # Coding and coding...
 
     def __init__(self):
         self.data = [[None] * i for i in range(1, 6)]

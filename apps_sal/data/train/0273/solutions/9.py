@@ -11,6 +11,8 @@ class Solution:
                     return ans
                 p1, s1 = p + s, 2 * s
                 p2, s2 = p, -1 if s > 0 else 1
+                # if (p1,s1) not in vis:
+                #     vis.add((p1,s1))
                 new_q.append((p1, s1))
                 if (p2, s2) not in vis:
                     vis.add((p2, s2))

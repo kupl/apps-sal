@@ -1,6 +1,8 @@
+# F
 from collections import deque
 
 TT_list = []
+# input
 N, L = list(map(int, input().split()))
 T = 0.0
 vt_now = 0.0
@@ -12,6 +14,7 @@ for i in range(N):
     t = float(ti)
     v_now += v
     vt_now += v * t
+    # add
     if v == L:
         que.append([t, v])
     else:
@@ -27,10 +30,12 @@ for i in range(N):
                 que = deque([[t, v]])
                 v_now = L
                 vt_now = t * L
+                # break
             else:
                 t = (t * v + t_ * v_) / (v + v_)
                 v = v + v_
                 que.pop()
+    # minus
     while v_now > L:
         if que[0][1] <= v_now - L:
             v_now -= que[0][1]

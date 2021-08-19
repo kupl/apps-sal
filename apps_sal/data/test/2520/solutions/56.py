@@ -1,11 +1,11 @@
 N, M, K = list(map(int, input().split()))
-p = [0] * N
+p = [0] * N  # p[][0] 友達リスト　p[][1] ブロックリスト p[][2] 所属グループ(-1はなし)
 for i in range(N):
     p[i] = [0] * 3
     p[i][0] = []
     p[i][1] = []
     p[i][2] = -1
-g = []
+g = []  # グループのサイズ
 stack = []
 groupNum = 0
 fcs = []

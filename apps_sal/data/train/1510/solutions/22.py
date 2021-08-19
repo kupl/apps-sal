@@ -1,3 +1,4 @@
+# cook your dish here
 A = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 for _ in range(int(input())):
     s = input()

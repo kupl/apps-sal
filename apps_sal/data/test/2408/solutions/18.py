@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3.5 -tt
 
 import random
 import sys

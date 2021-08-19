@@ -4,7 +4,7 @@ from collections import defaultdict
 
 
 CORRECT, RECOVER, UNSURE = range(3)
-TIMESTR_MODELS = ('%Y-%m-%d', '%Y-%d-%m')
+TIMESTR_MODELS = ('%Y-%m-%d', '%Y-%d-%m')            # wanted, inverted
 
 
 def check_dates(records):

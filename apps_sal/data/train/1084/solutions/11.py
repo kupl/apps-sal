@@ -1,3 +1,4 @@
+# cook your dish here
 s = input()
 s = list(s)
 n, c = 0, 0

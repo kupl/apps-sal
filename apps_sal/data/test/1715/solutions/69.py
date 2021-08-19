@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from bisect import bisect_right
 
 
@@ -5,6 +6,7 @@ def main():
     A, B, Q = list(map(int, input().split()))
     s = [int(input()) for _ in range(A)]
     t = [int(input()) for _ in range(B)]
+    # print(s,t)
     s = [-10**12] + s + [10**12]
     t = [-10**12] + t + [10**12]
 
@@ -12,6 +14,7 @@ def main():
         x = int(input())
         i = bisect_right(s, x)
         j = bisect_right(t, x)
+        # print(i,j,x)
         ans = []
 
         ans.append(max(abs(s[i - 1] - x), abs(t[j - 1] - x)))

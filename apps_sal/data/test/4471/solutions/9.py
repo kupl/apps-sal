@@ -9,6 +9,7 @@ def round(n): return int(n + 0.5)
 
 
 DEBUG = 1
+# DEBUG = 0
 
 
 def debug(*args, **kwargs):
@@ -16,6 +17,7 @@ def debug(*args, **kwargs):
         print(*args, **kwargs)
 
 
+# code goes here
 t = iread()
 for _ in range(t):
     n = iread()

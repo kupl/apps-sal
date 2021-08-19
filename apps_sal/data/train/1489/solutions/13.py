@@ -1,3 +1,4 @@
+# cook your dish here
 n, k = list(map(int, input().split()))
 n = str(n)
 l = list(n)

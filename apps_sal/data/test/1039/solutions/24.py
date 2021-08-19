@@ -10,6 +10,7 @@ G = nx.Graph()
 for a, b, c in ABC:
     G.add_edge(a - 1, b - 1, weight=c)
 
+# pred, dist = nx.dijkstra_predecessor_and_distance(G, K - 1)
 dist = nx.shortest_path_length(G, K - 1, weight='weight')
 
 for x, y in XY:

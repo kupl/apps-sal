@@ -1,3 +1,5 @@
+# %%
+# B
 n = int(input())
 
 found = False

@@ -23,6 +23,7 @@ def euc_alg(val1, val2):
 
 
 maxti = max(ti)
+# least_common_mult = max([euc_alg(maxti, t) for t in ti])
 
 ans = ti[0]
 for t in ti:

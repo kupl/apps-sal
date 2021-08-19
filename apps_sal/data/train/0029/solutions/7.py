@@ -17,11 +17,15 @@ for _ in range(int(input())):
     for i in list(last.keys()):
         d[i] = max(d[i], n - last[i])
 
+    # print(d)
+
     d2 = {}
     for k, v in list(d.items()):
         if v not in d2:
             d2[v] = INF
         d2[v] = min(d2[v], k)
+
+    # print(d2)
 
     ans = [INF] * n
     for i in range(1, n + 1):

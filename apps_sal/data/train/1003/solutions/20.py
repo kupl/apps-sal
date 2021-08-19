@@ -1,4 +1,15 @@
+# ******************************************************************************
+# Problem: Fierce Battles
+# Link: http://www.codechef.com/OCT12/problems/DRGNBOOL
+# Author: Deepak Antony - "deebee" "drunkbeast" "dAbeAst"
+# Solution: simple; sum up the total for each level and subtract from the
+# sofloats total capacity for that level; in the end sum up all levels with
+# positive diff's
+# ******************************************************************************
 
+# Uncomment this line if the judge supports psyco
+# import psyco
+# psyco.full()
 
 import time
 import sys
@@ -43,6 +54,7 @@ def solveFierceBattles():
 @timeElapsed
 def main():
     """ Main controller """
+    # solve a problem here
     solveFierceBattles()
 
 

@@ -40,6 +40,7 @@ def add_remain(x, arr, index):
     return count
 
 
+# main starts
 n, x = list(map(int, stdin.readline().split()))
 arr = list(map(int, stdin.readline().split()))
 carr = arr[:]

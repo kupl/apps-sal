@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -10,6 +11,7 @@ for i in range(1, len(a)):
 
 ans = sum(diff)
 
+# print(diff)
 for i in range(1, len(diff)):
     tmp = abs(a[i + 1] - a[i - 1]) - abs(a[i] - a[i + 1]) - abs(a[i - 1] - a[i])
     print((ans + tmp))

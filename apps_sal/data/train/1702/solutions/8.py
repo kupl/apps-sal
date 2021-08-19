@@ -8,15 +8,19 @@ class Sudoku(object):
         self.lil_size = math.sqrt(self.size)
 
     def is_valid(self):
+        # dimensions must be the same
         if not all(len(r) == self.size for r in self.rows()):
             return False
 
+        # size must be a perfect square
         if not self.lil_size.is_integer():
             return False
 
+        # corner case (True == 1 in python)
         if self.board[0][0] is True:
             return False
 
+        # groups must fill the range
         numbers = range(1, self.size + 1)
         groups = self.rows() + self.columns() + self.lil_squares()
         for group in groups:

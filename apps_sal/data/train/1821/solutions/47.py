@@ -57,23 +57,29 @@ class Solution:
 
     def heapSort(self, arr):
         def heapify(arr, arrLen, i):
+            # i = index of this node
             l = 2 * i + 1
             r = l + 1
             largestIdx = i
 
+            # theese two if is to finding the biggest node to make a max heap
             if l < arrLen and arr[largestIdx] < arr[l]:
                 largestIdx = l
             if r < arrLen and arr[largestIdx] < arr[r]:
                 largestIdx = r
 
+            # make the largest the parent
             if largestIdx != i:
                 arr[i], arr[largestIdx] = arr[largestIdx], arr[i]
                 heapify(arr, arrLen, largestIdx)
 
         arrLen = len(arr)
+        # heap all the tree from the middle of the array to the front
+        # make the end of the array biggest
         for i in range(arrLen // 2, -1, -1):
             heapify(arr, arrLen, i)
 
+        # the i is the root of the tree since i, and its a max heap
         for i in range(arrLen - 1, -1, -1):
             arr[i], arr[0] = arr[0], arr[i]
             heapify(arr, i, 0)

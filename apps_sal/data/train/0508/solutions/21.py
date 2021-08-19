@@ -11,8 +11,8 @@ def main():
     n, q = list(map(int, input().split()))
     for _ in range(n):
         s, t, x = list(map(int, input().split()))
-        events.append((s - x, x, 1))
-        events.append((t - x, x, 0))
+        events.append((s - x, x, 1))  # 追加イベント
+        events.append((t - x, x, 0))  # 削除イベント
     for _ in range(q):
         d = int(input())
         events.append((d, 10**10, 2))

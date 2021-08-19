@@ -7,4 +7,5 @@ class Solution:
             for i in range(1, k):
                 if arr[k] ^ arr[i - 1] == 0:
                     res += (k - i)
+        # print(arr)
         return res

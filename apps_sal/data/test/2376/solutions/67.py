@@ -16,6 +16,7 @@ def main():
         for v in items[w]:
             cumsum_w += w
             cumsum_v += v
+            # w - w_0 is in [0, 1, 2, 3]
             cumsums[w - w_0].append((cumsum_w, cumsum_v))
 
     def dfs(cur, rest_w):

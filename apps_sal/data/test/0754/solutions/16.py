@@ -1,3 +1,4 @@
+# your code goes here
 n = int(input())
 str = input()
 

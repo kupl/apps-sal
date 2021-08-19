@@ -15,6 +15,7 @@ def search(S):
         for i in range(1, len(S) - 1):
             a = next_animal(animals[i - 1], animals[i], S[i])
             animals += a
+        # check: claim of first and last animals
         if animals[1] != next_animal(animals[-1], animals[0], S[0]):
             continue
         if animals[0] != next_animal(animals[-2], animals[-1], S[-1]):

@@ -21,9 +21,12 @@ i = 0
 while p[i] < len(p) - 1:
     s.append(p[p[i] - 1])
     i += 1
+# print(s)
 b = [s[0]]
 for i in range(1, len(s)):
     b.append(b[len(b) - 1] + s[i])
+# print(b)
+# print(len(b))
 for _ in range(int(input())):
     n = int(input())
     print(b[n - 1])

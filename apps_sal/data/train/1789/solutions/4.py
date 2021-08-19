@@ -8,5 +8,5 @@ def generate_bc(url, separator):
             menu = ''.join(w[0] for w in menu.split() if w not in restricted)
         return menu or 'HOME'
     url = ''.join(url.strip('/').rpartition('//')[2].partition('/')[1:]) \
-            .rsplit('?', 1)[0].rsplit('
+            .rsplit('?', 1)[0].rsplit('#', 1)[0].rsplit('.', 1)[0].rsplit('/index')[0].split('/')
     return separator.join([a % ('/'.join(url[:i]), bc(m)) for i, m in enumerate(url[:-1], 1)] + [span % bc(url[-1])])

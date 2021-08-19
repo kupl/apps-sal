@@ -26,6 +26,7 @@ def main():
             break
         x += 1
         xb = bin(x)[2:]
+        # print(x,xb)
         ops += 2
 
     print(ops)

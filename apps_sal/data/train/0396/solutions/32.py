@@ -12,6 +12,7 @@ class Solution:
             return -1
 
         while True:
+            # print(N)
             if not N % K:
                 return length
 

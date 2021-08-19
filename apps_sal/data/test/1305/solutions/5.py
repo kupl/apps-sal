@@ -3,8 +3,10 @@ def possible_change(l):
     fivties = 0
 
     for currency in l:
+        # 25
         if currency == 25:
             twenty_fives += 1
+        # 50
         elif currency == 50:
             if twenty_fives >= 1:
                 twenty_fives -= 1
@@ -12,6 +14,7 @@ def possible_change(l):
             else:
                 return "NO"
 
+        # 100
         elif currency == 100:
             if twenty_fives >= 1 and fivties >= 1:
                 fivties -= 1

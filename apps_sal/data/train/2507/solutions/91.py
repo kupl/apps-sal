@@ -3,6 +3,7 @@ class Solution:
         if(len(chars) == 0 or len(words) == 0):
             return 0
 
+        # Go through the valid characters and store the counts in a hash table
         letterCounts = {}
         for c in chars:
             if(str(c) in letterCounts):

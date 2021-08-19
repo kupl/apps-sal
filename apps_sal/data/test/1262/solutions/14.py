@@ -4,6 +4,8 @@ import math
 import sys
 from collections import defaultdict
 
+# input = sys.stdin.readline
+
 
 def rt(): return map(int, input().split())
 def ri(): return int(input())
@@ -26,7 +28,8 @@ def main():
     used = [False] * n
     link = [-1] * n
     to_build = []
-    for _ in range(n):
+    for _ in range(n):  # each step removes 1 city
+        # find min
         min_index = -1
         min_val = math.inf
         for i in range(n):

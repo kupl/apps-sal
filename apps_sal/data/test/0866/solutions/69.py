@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[8]:
 
 
 def nCk(n, k, mod):
@@ -13,7 +17,13 @@ def nCk(n, k, mod):
     return a
 
 
+# In[12]:
+
+
 x, y = list(map(int, input().split()))
+
+
+# In[14]:
 
 
 mod = 10**9 + 7
@@ -27,3 +37,6 @@ else:
     else:
         ans = nCk(right + up, right, mod) % mod
 print(ans)
+
+
+# In[ ]:

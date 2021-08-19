@@ -7,6 +7,7 @@ ar[0] = 0
 
 
 def check(pos, num):
+    # print(pos,num)
     if abi[pos][0] < num:
         return True
     else:

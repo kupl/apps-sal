@@ -5,6 +5,7 @@ import math
 
 
 def __starting_point():
+    #n, m = list(map(int, input().split()))
     n, k = map(int, input().split())
     arr = list(map(int, input().split()))
     ans = 0

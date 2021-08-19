@@ -9,8 +9,8 @@ class Solution:
             totalOut += output
             heapq.heappush(h, -output)
             if len(h) > K:
-                totalOut += heapq.heappop(h)
+                totalOut += heapq.heappop(h)  # reduce q by removed employee - highest contribution first
             if len(h) == K:
-                res = min(res, totalOut * rate)
+                res = min(res, totalOut * rate)  # worst rate in candidates * output for candidates
 
         return res

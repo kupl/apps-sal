@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def heavy_metal_umlauts(boring_text):
     d = {'A': 'Ä', 'O': 'Ö', 'a': 'ä', 'E': 'Ë',
          'U': 'Ü', 'e': 'ë', 'u': 'ü', 'I': 'Ï',

@@ -1,6 +1,7 @@
 import sys
 import math
 
+# sys.stdin = open("in.txt")
 for _ in range(int(input())):
     a, b = map(int, input().split())
     x = abs(a - b)

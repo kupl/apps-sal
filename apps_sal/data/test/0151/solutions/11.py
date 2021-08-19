@@ -11,7 +11,7 @@ for ch in st:
         print(ch, end="")
     else:
         num += 1
-        if ch == last_let or last_let == "":
+        if ch == last_let or last_let == "":  # same not vowel
             last_let = ch
             same_let += 1
         else:

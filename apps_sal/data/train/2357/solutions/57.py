@@ -1,3 +1,4 @@
+# 場合の数をmodで割った余り nCr % mod
 def ncr_mod(n, r, mod):
     a, b = 1, 1
     for i in range(r):

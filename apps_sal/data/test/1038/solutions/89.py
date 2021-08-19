@@ -1,5 +1,7 @@
+# just copy and paste from https://atcoder.jp/contests/abc121/submissions/15377652
 for i in range(pow(10, 6)):
     pass
+# added due to avoid search list with duplicated solvers.
 
 a, b = map(int, input().split())
 if a % 2 == 0:

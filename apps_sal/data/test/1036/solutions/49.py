@@ -56,7 +56,9 @@ for i in range(k):
     tmp = []
     if len(lst) % 2:
         lst = lst + lst
+    # print(lst)
     m = min(len(lst), sanka)
+    # print(i,m)
     for j in range(m // 2):
         kk = check(lst[2 * j], lst[2 * j + 1])
         tmp.append(lst[2 * j + kk])

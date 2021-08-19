@@ -1,6 +1,7 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
 
+        # hash set
         points = {(x, y) for x, y in points}
         min_area = float('inf')
 
@@ -12,6 +13,7 @@ class Solution:
 
                 theoretical_area = abs((x1 - x2) * (y1 - y2))
                 if theoretical_area > min_area:
+                    # Don't lookup
                     continue
 
                 if (x3, y3) in points and (x4, y4) in points:

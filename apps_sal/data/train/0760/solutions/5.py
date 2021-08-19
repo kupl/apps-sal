@@ -47,6 +47,7 @@ for _ in range(eval(input())):
     for i in count_list:
         sub_2 += (n - i) * i
     sub_2 /= 2
+    # print sub_2
 
     sub_3 = 0
     for i in range(count):
@@ -75,6 +76,7 @@ for _ in range(eval(input())):
                 temp = (temp + (count_list[j] * (n - count_list[i] - count_list[j])) % mod) % mod
         temp /= 2
         sub_4_3 = ((((count_list[i] * (count_list[i] - 1)) * temp) / 2) % mod + sub_4_3) % mod
+        # print sub_4_3
     sub_4_3 *= 2
     sub_4_3 %= mod
     print(((total) * (total - 1 - (((sub_3 + sub_2) % mod + (sub_4_4 + sub_4_3) % mod) % mod + sub_4_2 % mod))) % mod)

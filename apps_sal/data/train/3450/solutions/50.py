@@ -1,4 +1,5 @@
 def array(string):
+    # your code here
     if string == "" or len(string.split(",")) <= 2:
         return None
     else:

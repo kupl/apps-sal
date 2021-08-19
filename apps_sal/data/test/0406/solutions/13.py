@@ -1,3 +1,5 @@
+#!/c/Python34/python
+# coding: utf-8 ans
 
 
 def main():
@@ -18,6 +20,7 @@ def main():
     for i in range(1, len(K), 2):
         ans += K[i - 1] * K[i]
     print(ans)
+    # print(K)
 
 
 def __starting_point():

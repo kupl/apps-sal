@@ -33,4 +33,5 @@ for _ in range(eval(input())):
                 Q[cur + 1] = i
                 cur += 1
                 H[i] = H[r] + 1
+    # dfs(0,-1)
     print(cnt * (n - cnt))

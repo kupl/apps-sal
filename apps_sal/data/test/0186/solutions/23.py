@@ -1,6 +1,7 @@
 nm = input().split(" ")
 n = int(nm[0])
 m = int(nm[1])
+# not allowed to be the same height, not not same number of blocks
 if n == 0:
     print(3 * m)
 elif m == 0:

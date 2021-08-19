@@ -1,6 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
 
+# n=3
+# a=[2,2,4]
 
 b = [0] * n
 x = [0] * n

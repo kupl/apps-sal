@@ -3,6 +3,9 @@ n = int(input())
 r1 = list(map(int, input().split()))
 r2 = list(map(int, input().split()))
 
+# [i][0] sum when choosing r1 in pos
+# [i][1] sum when choosing r2 in pos
+# [i][2] sum when choosing nothing in pos
 dp = [[0, 0, 0] for _ in range(n)]
 dp[0] = [r1[0], r2[0], 0]
 for i in range(1, n):

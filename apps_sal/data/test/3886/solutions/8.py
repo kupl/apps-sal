@@ -8,6 +8,8 @@ f_lengths[0] = len(f0)
 for i in range(1, 64):
     f_lengths[i] = 2 * f_lengths[i - 1] + 68
 
+# print(f_lengths)
+
 
 def determine_n(n, k):
     while n > 64 and k >= 34:
@@ -15,8 +17,11 @@ def determine_n(n, k):
         n -= 1
     return n
 
+# k is 0 based here
+
 
 def index_find(n, k) -> str:
+    # print("index_find(n, k): ", n , k)
     if n == 0:
         if k >= len(f0):
             return "."
@@ -44,6 +49,7 @@ queries = [list(map(int, input().split())) for i in range(n)]
 r = []
 
 for n, k in queries:
+    # print(k, n)
 
     if n > 64:
         new_n = determine_n(n, k - 1)

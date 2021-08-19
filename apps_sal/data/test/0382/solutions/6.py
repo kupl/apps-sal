@@ -25,3 +25,7 @@ for i in range(q):
         print(bools[l] - bools[r])
     else:
         print(0)
+ #suma = 0
+#    for j in range(l, r+1):
+#        if bools[j]:
+#            suma += 1

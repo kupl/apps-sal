@@ -5,6 +5,7 @@ if os.path.exists('/mnt/c/Users/Square/square/codeforces'):
 
     def input():
         return next(f)
+    # input = lambda: sys.stdin.readline().strip()
 else:
     def input(): return sys.stdin.readline().strip()
 

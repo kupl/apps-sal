@@ -19,3 +19,10 @@ class CustomStack:
                 self.stack[i] = self.stack[i] + val
             else:
                 break
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

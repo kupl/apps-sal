@@ -3,6 +3,9 @@ from collections import deque
 
 class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
+        # bit mask for people visited and bit mask for skills obtained
+        # each bit mask (set), remember extra skills needed
+        # remember every visited bit mask
         q = deque()
         skill_to_index = {}
         for i, skill in enumerate(req_skills):

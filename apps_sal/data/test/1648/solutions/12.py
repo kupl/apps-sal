@@ -17,7 +17,7 @@ def nCk(n, k):
     return (fac[n] * facinv[k] * facinv[n - k]) % mod
 
 
-for i in range(K):
+for i in range(K):  # i = 間に入れるボール
     if i > R:
         print("0")
     else:

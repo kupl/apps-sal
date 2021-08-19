@@ -35,4 +35,6 @@ while queue_ptr < len(queue):
     queue_ptr += 1
 
 
+# print(jumps_to)
+
 print(" ".join(map(str, result)))

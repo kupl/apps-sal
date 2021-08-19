@@ -49,3 +49,4 @@ else:
 print(t)
 for x in ans:
     print((*x))
+# print(ans,t,A)

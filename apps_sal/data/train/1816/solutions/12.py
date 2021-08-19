@@ -4,7 +4,7 @@ def compareTimesStr(beginStr, endStr):
 
 def compareTimes(beginHr: int, beginMin: int, endHr: int, endMin: int):
     if endHr < beginHr:
-        return False
+        return False  # because not same day
     if beginHr == endHr:
         return True
     elif endHr - beginHr > 1:
@@ -18,6 +18,7 @@ def hasAlert(times: List[str]) -> bool:
         return False
 
     times.sort()
+    # print(times)
     i = 0
     while i < len(times) - 2:
         if compareTimesStr(times[i], times[i + 2]):
@@ -40,6 +41,7 @@ class Solution:
         start = 0
 
         for i in range(len(keyName)):
+            # print(i)
             if keyName[i] == keyName[start] and i < len(keyName) - 1:
                 pass
             elif i < len(keyName) - 1:

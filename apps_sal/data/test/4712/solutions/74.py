@@ -1,6 +1,6 @@
 H, W = map(int, input().split())
 A = [input() for i in range(H)]
-print('
+print('#' * (W + 2))
 for a in A:
-    print('
-print('
+    print('#' + a + '#')
+print('#' * (W + 2))

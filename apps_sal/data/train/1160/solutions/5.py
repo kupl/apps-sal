@@ -84,6 +84,7 @@ while t > 0:
                         elif tt < mintime:
                             mintime = tt
 
+            # print found, mintime
             if found == 0:
                 if state == 1:
                     if index == 0:

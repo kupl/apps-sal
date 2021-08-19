@@ -1,5 +1,6 @@
 class Solution:
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
+        # greedy
         res = []
         seq = list(target)
         m, n = len(stamp), len(target)

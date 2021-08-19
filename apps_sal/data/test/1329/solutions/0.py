@@ -41,6 +41,8 @@ def solve():
                         if P[k] >= 2 and k != i and k != j:
                             ans += 1
     print(ans)
+    # print(primes)
+    # print(P)
 
     return 0
 

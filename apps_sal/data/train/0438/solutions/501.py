@@ -23,6 +23,7 @@ class Solution:
                 return n
 
         for x in range(n - 1, -1, -1):
+            # print(parentcnts)
             ind = arr[x] - 1
             leftone, rightone = True, True
             if ind == 0 or a[ind - 1] == 0:

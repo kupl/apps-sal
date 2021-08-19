@@ -35,7 +35,7 @@ def Restoring_Road_Network():
 
     import scipy.sparse.csgraph as graph
 
-    MAX = [10000000000] * N
+    MAX = [10000000000] * N  # should be > 2*10**9
     d = np.diag(MAX)
     C = A.copy()
     C += d
@@ -46,6 +46,7 @@ def Restoring_Road_Network():
             dis_two_node = np.min(C[i] + C[j])
             if dis_two_node > C[i, j]:
                 total_dis += C[i, j]
+                # print(i, j)
             elif dis_two_node < C[i, j]:
                 print(-1)
                 return

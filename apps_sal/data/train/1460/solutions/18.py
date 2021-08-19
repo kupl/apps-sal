@@ -1,3 +1,4 @@
+# cook your dish here
 d, x, y = list(map(float, input().split()))
 l = list(map(int, input().split()))
 sum1 = d * x

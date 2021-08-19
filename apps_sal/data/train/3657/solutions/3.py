@@ -1,4 +1,5 @@
 def series_slices(d, n):
+    # Good Luck!
     if(n > len(d)):
         return error
     x = []

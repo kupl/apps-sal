@@ -12,8 +12,9 @@ for _ in range(M):
     D[B - 1, A - 1] = C
 
 D = floyd_warshall(D)
-D2 = (D <= L) * 1.0
+D2 = (D <= L) * 1.0  # boolean -> float
 D2[D2 == 0] = np.inf
+# D2 = (D <= L) + (D > L)*np.inf
 
 D2 = floyd_warshall(D2) - 1
 

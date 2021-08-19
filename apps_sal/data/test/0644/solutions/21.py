@@ -31,6 +31,7 @@ bad = 0
 for _ in range(q):
 
     l = input().split(' ')
+    # print(l)
 
     if len(l) == 2:
         if willoverflow:
@@ -48,11 +49,13 @@ for _ in range(q):
             print("OVERFLOW!!!")
             bad = 1
             break
+            # return
         x += forproduct
         if x > 2**32 - 1:
             print("OVERFLOW!!!")
             bad = 1
             break
+            # return
 
     elif l[0] == 'end':
         p = forstack.pop()

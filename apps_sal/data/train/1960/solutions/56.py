@@ -2,6 +2,7 @@ def shiftRight(arr, i):
 
     ele = arr[i]
     for j in range(i, 0, -1):
+        # print(arr[j],arr[j-1],i)
         arr[j] = arr[j - 1]
     arr[0] = ele
     return arr

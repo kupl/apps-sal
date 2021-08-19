@@ -17,5 +17,6 @@ class Solution:
                         k += 1
                     left += 1
                 res += right - left
+                # print(counter, res)
             return res
         return atMostK(A, K) - atMostK(A, K - 1)

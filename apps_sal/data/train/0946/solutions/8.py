@@ -23,5 +23,12 @@ for i in range(1, N):
         prob[i][j] = (b + prob[i - 1][j]) / (c + 1)
 
 
+# print(ball)
+
+# print("jeiasjf")
+
+# print(prob)
+
 for i in range(K):
     print("%.6f" % prob[N - 1][i], end=" ")
+# print(*prob[N-1])

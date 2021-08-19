@@ -17,6 +17,8 @@ while m > 0:
 
     total_inc = n_inc * to_inc
 
+    #print(a, n_inc, to_inc, total_inc, m)
+
     m -= total_inc
     a[n_inc - 1] += to_inc
 

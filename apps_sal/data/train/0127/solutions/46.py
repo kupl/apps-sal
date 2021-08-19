@@ -1,5 +1,6 @@
 class Solution:
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
+        # dp[i][p][g]: number of schemes with g groups and p profit from group[:i].
 
         dp = [[[0 for _ in range(G + 1)] for _ in range(P + 1)] for _ in range(len(group) + 1)]
         dp[0][0][0] = 1

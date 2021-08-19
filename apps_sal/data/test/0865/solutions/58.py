@@ -1,3 +1,4 @@
+# input
 import numpy as np
 N, T = map(int, input().split())
 A = []
@@ -7,6 +8,7 @@ for i in range(N):
     A.append(a)
     B.append(b)
 
+# output
 A = np.array(A, np.int)
 B = np.array(B, np.int)
 
@@ -16,6 +18,7 @@ A = A[idx]
 B = B[idx]
 
 dp = np.zeros((N, T), np.int)
+# dp[品物][時間]
 
 for i in range(N - 1):
     dp[i + 1, :A[i]] = dp[i, :A[i]]

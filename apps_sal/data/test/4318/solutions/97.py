@@ -14,4 +14,5 @@ ans = 0
 for i in range(n):
     if cnt[i] == i:
         ans += 1
+# print(cnt)
 print(ans)

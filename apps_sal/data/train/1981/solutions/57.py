@@ -13,6 +13,9 @@ class Solution:
             starts[s] += 1
             ends[e + 1] += 1
 
+        # print(starts)
+        # print(ends)
+
         repeats = []
         ranges = 0
         for i, _ in enumerate(nums):
@@ -20,6 +23,8 @@ class Solution:
             repeats.append(ranges)
 
         sr = list(sorted(repeats))
+        # print(sn)
+        # print(sr)
         for i, r in enumerate(repeats):
             c += sn[i] * sr[i]
 

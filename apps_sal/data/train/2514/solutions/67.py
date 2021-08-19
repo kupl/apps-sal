@@ -2,6 +2,7 @@ class Solution:
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
 
         def min_d(num, arr):
+            # use binary search to find the first arr element >= than num
             left = 0
             right = len(arr2) - 1
             while left <= right:
@@ -11,9 +12,9 @@ class Solution:
                 else:
                     right = mid - 1
 
-            if left == len(arr):
+            if left == len(arr):  # all elements less than num
                 return num - arr[-1]
-            elif left == 0:
+            elif left == 0:  # all elements greater than num
                 return arr[0] - num
             return min(arr[left] - num, num - arr[left - 1])
 

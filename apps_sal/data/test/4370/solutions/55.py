@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def get_input() -> tuple:
     """
@@ -19,18 +20,22 @@ def main(A: int, B: int) -> None:
         A (int): 切れ(1 <= A <= 16)
         B (int): 切れ(1 <= B <= 16)
     """
+    # 求解処理
     ans = str()
     if (A <= 8) and (B <= 8):
         ans = "Yay!"
     else:
         ans = ":("
 
+    # 結果出力
     print(ans)
 
 
 def __starting_point():
+    # 標準入力を取得
     A, B = get_input()
 
+    # メイン処理
     main(A, B)
 
 

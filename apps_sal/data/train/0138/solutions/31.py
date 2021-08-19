@@ -3,6 +3,7 @@ class Solution:
         n = len(nums)
 
         def get_val(nums):
+            # print(nums)
             if len(nums) == 0:
                 return 0
             products = [1]

@@ -1,3 +1,4 @@
+# cook your dish here
 import re
 for t in range(int(input())):
     list = re.findall('[0-9]+', input())

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n, m = list(map(int, input().split()))
 words = [input() for _ in range(n)]

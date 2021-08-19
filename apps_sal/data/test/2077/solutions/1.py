@@ -32,8 +32,8 @@ def __starting_point():
     input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
     N, M = [int(x) for x in input().split()]
-    edges = [[int(x) - 1 for x in input().split()] for i in range(M)]
-    topics = [int(x) - 1 for x in input().split()]
+    edges = [[int(x) - 1 for x in input().split()] for i in range(M)]  # 0 indexed
+    topics = [int(x) - 1 for x in input().split()]  # 0 indexed
     ans = solve(N, M, edges, topics)
     print(ans)
 

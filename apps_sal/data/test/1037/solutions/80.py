@@ -47,6 +47,11 @@ def solve():
                 if c > best[x][y]:
                     best[x][y] = c
 
+    # for i in range(n + 1):
+    #     for j in range(n + 1):
+    #         print(best[i][j], end='\t')
+    #     print()
+
     res = - inf
     for x in range(n):
         y = n - x

@@ -36,6 +36,7 @@ def main():
         for j in range(N, 0, -1):
             dp[i][j] = comp(i - 1, j - 1) + comp(i, 2 * j)
             dp[i][j] %= mod
+    # print(dp)
     print((dp[N][K]))
 
 

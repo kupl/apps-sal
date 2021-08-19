@@ -21,3 +21,5 @@ while i <= n:
     else:
         i += 1
 print(count)
+
+# print(sum_digits(1))

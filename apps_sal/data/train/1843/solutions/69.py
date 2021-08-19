@@ -17,9 +17,12 @@ class TweetCounts:
         self.tweets = defaultdict(SortedList)
 
     def recordTweet(self, tweetName: str, time: int) -> None:
+        # print(f'record {tweetName} at {time}')
         self.tweets[tweetName].add(time)
+        # print(f'tweets[tweetName]: {self.tweets[tweetName]}')
 
     def getTweetCountsPerFrequency(self, freq: str, tweetName: str, startTime: int, endTime: int) -> List[int]:
+        # print(f'freq={freq} tweetName={tweetName} startTime={startTime} endTime={endTime}')
 
         if freq not in INTERVAL_LENGTH:
             raise Exception(f'Expected freq to be one of {INTERVAL_LENGTH.keys()}, got {freq} instead')
@@ -37,4 +40,5 @@ class TweetCounts:
             matchingTimes = self.tweets[tweetName].irange(minimum=intervalStart, maximum=intervalEnd, inclusive=(True, False))
             counts.append(len(list(matchingTimes)))
 
+        # print(f'counts: {counts}')
         return counts

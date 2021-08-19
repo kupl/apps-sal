@@ -6,6 +6,7 @@ class Solution:
 
         def partition(i, j) -> int:
 
+            # pivot的选择在最后一个点
             pivot = points[j]
             l = i - 1
             for r in range(i, j):
@@ -18,6 +19,7 @@ class Solution:
             return l + 1
 
         def sort(i, j, K):
+            # 此时说明已经排好序了
             if i >= j:
                 return
 

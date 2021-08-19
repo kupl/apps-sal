@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     lt = []
     for _ in range(int(input())):

@@ -1,3 +1,4 @@
+# Program question at: http://www.codechef.com/COZL2012/problems/RBX12R01
 import math
 import sys
 dir_ = 'UDLR'

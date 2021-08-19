@@ -14,4 +14,5 @@ class Solution:
                 ret = max(ret, i - neg)
             else:
                 ret = max(ret, i - pos)
+            #print(i, curr, pos, neg, ret)
         return ret

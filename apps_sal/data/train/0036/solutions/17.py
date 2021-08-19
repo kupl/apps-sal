@@ -1,3 +1,4 @@
+# Codeforces contest 271d1 problem B
 
 import bisect
 

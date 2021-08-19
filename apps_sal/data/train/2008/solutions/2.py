@@ -1,5 +1,6 @@
 from sys import stdin
 
+#stdin = open('input.txt')
 
 n = int(stdin.readline())
 
@@ -23,8 +24,11 @@ while i < len(seq) - 1:
                 max_len = cur_len
 
             if seq[i] == carry:
+                # result.extend([carry]*cur_len)
                 result[carry_id: i: 1] = [carry] * cur_len
             else:
+                # result.extend([carry]*(cur_len//2))
+                # result.extend([seq[i]]*(cur_len//2))
                 result[carry_id: carry_id + cur_len // 2: 1] = [carry] * (cur_len // 2)
                 result[carry_id + cur_len // 2: i: 1] = [seq[i]] * (cur_len // 2)
 
@@ -46,8 +50,11 @@ if mark:
         max_len = cur_len
 
     if seq[i] == carry:
+        # result.extend([carry]*cur_len)
         result[carry_id: i] = [carry] * cur_len
     else:
+        # result.extend([carry]*(cur_len//2))
+        # result.extend([seq[i]]*(cur_len//2))
         result[carry_id: carry_id + cur_len // 2] = [carry] * (cur_len // 2)
         result[carry_id + cur_len // 2: i] = [seq[i]] * (cur_len // 2)
 

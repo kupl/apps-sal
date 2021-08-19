@@ -1,7 +1,9 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        #     # return self.recursive(text1, text2, 0, 0)
         dp = dict()
         return self.top_down(dp, text1, text2, 0, 0)
+        # return self.bottom_up(text1, text2)
 
     def recursive(self, text1, text2, i, j):
         if i >= len(text1) or j >= len(text2):

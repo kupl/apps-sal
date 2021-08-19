@@ -8,6 +8,10 @@ class Solution:
         workers = [(wage[i] / float(quality[i]), quality[i]) for i in range(N)]
         workers = sorted(workers)
 
+        # sum_ = sum([x[1] for x in prices_per_unit[:K - 1]])
+
+        # print(prices_per_unit)
+
         result = float('inf')
         sum_ = 0
         max_heap = []

@@ -1,5 +1,6 @@
 class Solution:
     def numSquarefulPerms(self, nums: List[int]) -> int:
+        # nums.sort()
         self.ans = 0
 
         def isSquare(v):

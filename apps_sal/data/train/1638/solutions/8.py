@@ -14,7 +14,7 @@ def longest_palindrome(s):
         while 0 <= i - k and i + k < n and s[i - k] == s[i + k]:
             k += 1
         if k > max:
-            max, index = k, i
+            max, index = k, i  # s[i-k+1:i+k], 2k-1
         d1[i] = k
         k -= 1
         if i + k > r:
@@ -31,17 +31,17 @@ def longest_palindrome(s):
         while 0 <= i - k - 1 and i + k < n and s[i - k - 1] == s[i + k]:
             k += 1
         if k > max2:
-            max2, index2 = k, i
+            max2, index2 = k, i  # s[i-k:i+k], 2k
         d2[i] = k
         k -= 1
         if i + k > r:
             l, r = i - k - 1, i + k
         i += 1
 
-    index = index - max + 1
-    max = 2 * max - 1
-    index2 -= max2
-    max2 *= 2
+    index = index - max + 1  # start
+    max = 2 * max - 1        # len
+    index2 -= max2           # start
+    max2 *= 2                # len
     start, ln = 0, 0
     if max == max2:
         if index <= index2:

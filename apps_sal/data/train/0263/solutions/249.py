@@ -29,6 +29,7 @@ class Solution:
         answer = 0
         for i in range(10):
             answer += num_ways(i, n - 1)
+            # print(num_ways.cache_info())
 
         answer %= (pow(10, 9) + 7)
         return answer

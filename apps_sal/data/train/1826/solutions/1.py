@@ -4,10 +4,12 @@ class Solution:
         mat[:] = [[0] * (n + 1)] + [[0] + row for row in mat]
         res = [[0 for _ in range(n)] for _ in range(m)]
 
+        # cum sum
         for i in range(1, m + 1):
             for j in range(1, n + 1):
                 mat[i][j] += mat[i - 1][j] + mat[i][j - 1] - mat[i - 1][j - 1]
 
+        # compute sums
         for i in range(m):
             for j in range(n):
                 r1, c1 = max(i - K, 0), max(j - K, 0)

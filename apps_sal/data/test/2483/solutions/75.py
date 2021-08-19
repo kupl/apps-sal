@@ -2,8 +2,10 @@ def Recording():
     n, c = list(map(int, input().split()))
     num = 2 * 10**5 + 1
 
+    # チャンネルごとにimos配列
     imos = [[0] * num for _ in range(c)]
 
+    # imos
     for _ in range(n):
         s, t, c0 = list(map(int, input().split()))
         if imos[c0 - 1][s * 2] < 0 and imos[c0 - 1][t * 2 - 1] > 0:

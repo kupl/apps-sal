@@ -2,10 +2,12 @@ s = "qwertyuiopasdfghjklzxcvbnm"
 a = set()
 for i in s:
     a.add(i)
+# print(a)
 n = int(input())
 ans = 0
 for i in range(n):
     s = input().split()
+    # print(s)
 
     if(s[0] == "!" and len(a) == 1):
         ans += 1
@@ -18,6 +20,7 @@ for i in range(n):
             pass
     elif s[0] == ".":
         for j in s[1]:
+           # print(a)
             try:
                 a.remove(j)
             except Exception:
@@ -35,4 +38,5 @@ for i in range(n):
         for j in b:
             if b[j] == 2:
                 a.add(j)
+    # print(a)
 print(ans)

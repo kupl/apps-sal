@@ -57,3 +57,6 @@ else:
     for t in range(int(len(applepairs) / 2)):
 
         print(applepairs[2 * t], applepairs[2 * t + 1])
+
+
+# Made By Mostafa_Khaled

@@ -15,6 +15,7 @@ class Solution:
 
         for i in range(len(nums)):
             curr += nums[i]
+            # print(i, curr)
             while curr >= s:
                 res = min(res, i - start + 1)
                 curr -= nums[start]

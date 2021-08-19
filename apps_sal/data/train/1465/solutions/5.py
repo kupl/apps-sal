@@ -41,6 +41,7 @@ for j in range(T):
                         l.append(w)
                         comp[w] = comp[v]
                         sumcomp[w] = (sumcomp[w] + sumcomp[v] + x + oldsu) % 2
+                    # revcomp[comp[u]]=[];
                 else:
                     oldsv = sumcomp[v]
                     l = revcomp[comp[u]]
@@ -48,6 +49,7 @@ for j in range(T):
                         l.append(w)
                         comp[w] = comp[u]
                         sumcomp[w] = (sumcomp[w] + sumcomp[u] + x + oldsv) % 2
+                    # revcomp[comp[v]]=[];
     if(not(flag)):
         ans[j] = 0
     else:

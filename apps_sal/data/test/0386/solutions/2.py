@@ -16,6 +16,7 @@ for i in range(n):
     if (buf[0] == ">" and wynik == "Y") or (buf[0] == "<=" and wynik == "N"):
         lewo = max(lewo, liczba + 1)
 
+#print(lewo, prawo)
 if(lewo > prawo):
     print("Impossible")
 else:

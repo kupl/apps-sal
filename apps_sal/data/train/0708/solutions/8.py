@@ -1,3 +1,4 @@
+# cook your dish here
 z = int(1e9 + 7)
 for i in range(int(input())):
     n, a = map(int, input().split())

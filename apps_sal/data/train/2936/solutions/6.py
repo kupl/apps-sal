@@ -15,4 +15,5 @@ def num_of_open_lockers(n):
             i += count * 2
             count += 1
 
+    # print "open:", open
     return open

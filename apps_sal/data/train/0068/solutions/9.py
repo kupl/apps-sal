@@ -16,6 +16,7 @@ for _ in range(int(input())):
         if curr > 1:
             g += 1
         a.append(curr)
+    # print(a)
     j = 0
     i = 0
     res = 0

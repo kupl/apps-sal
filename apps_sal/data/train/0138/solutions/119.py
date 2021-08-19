@@ -11,6 +11,7 @@ class Solution:
         for ii in range(ll + 1):
             if nums[ii] == 0:
                 curmax = ii - q[0]
+                # print(submax,curmax,q)
                 if len(q) % 2 == 0:
                     curmax = max(ii - q[1] - 1, q[-1] - q[0])
                 submax = max(submax, curmax)

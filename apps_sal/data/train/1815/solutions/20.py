@@ -6,6 +6,9 @@ class Solution:
         for i in range(n - 2, -1, -1):
             ss[i] = (shifts[i] + ss[i + 1]) % 26
 
+        # ORD_a = 97
+        # ORD_z = 122
+
         final_chars = [None] * n
         for i, ch in enumerate(S):
             _ord = ord(ch) + ss[i]

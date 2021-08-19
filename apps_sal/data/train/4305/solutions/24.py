@@ -9,3 +9,4 @@ def order_weight(strng):
         list.append(a)
     answer = [m for n, m in sorted(zip(list, res))]
     return ' '.join(answer)
+    # your code

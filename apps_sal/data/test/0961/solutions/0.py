@@ -7,6 +7,7 @@ def dp():
             while sections[nextsection][0] <= curend:
                 nextsection += 1
         except IndexError:
+            # Loop til end
             inc = curcomfort
         else:
             inc = curcomfort + dparr[nextsection]

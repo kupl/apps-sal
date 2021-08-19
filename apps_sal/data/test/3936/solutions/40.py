@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n = int(input())
 s = [input() for _ in range(2)]
 mod = 10 ** 9 + 7
@@ -8,8 +9,8 @@ mod = 10 ** 9 + 7
 よこ*たて = *1
 """
 tmp = 1
-pos = 0
-pre_state = -1
+pos = 0  # 移動させる
+pre_state = -1  # 0:tate 1:yoko
 while pos < n:
     if s[0][pos] == s[1][pos]:
         if pos == 0:

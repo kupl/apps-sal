@@ -33,9 +33,11 @@ for i in range(m):
         dishes -= dish[t]
         d -= dish[t]
         dish[t] = 0
+        #print(d, dish)
 
         while d > 0 and dishes > 0:
             k = remain[-1][1]
+            #print(k, dish[k], cost[k])
 
             if dish[k] >= d:
                 dish[k] -= d

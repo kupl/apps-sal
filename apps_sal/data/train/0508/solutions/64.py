@@ -10,13 +10,13 @@ def main():
 
     for i in range(n):
         s, t, x = map(int, input().split())
-        V.append((s - x, x, 1))
-        V.append((t - x, x, 0))
+        V.append((s - x, x, 1))  # 1: insert
+        V.append((t - x, x, 0))  # 0: delete
 
     D = []
     for i in range(q):
         d = int(input())
-        V.append((d, i, 2))
+        V.append((d, i, 2))  # 2: query
 
     V.sort(key=lambda x: (x[0], x[2]))
     se = set()

@@ -21,4 +21,5 @@ class Solution:
                     cnt += 1
             l.append((i, powers[i]))
         l = sorted(l, key=lambda x: (x[1], x[0]))
+        # print(l)
         return l[k - 1][0]

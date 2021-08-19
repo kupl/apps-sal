@@ -36,8 +36,8 @@ def interpret(code):
             direction = DIR[(value is '|') * 2 + bool(stack.pop())]
         elif value in '><v^':
             direction = DIR['><v^'.index(value)]
-        elif value in '
-        jump = 2
+        elif value in '#':
+            jump = 2
         elif value in '@':
             return out
         x, y = x + direction[0] * jump, y + direction[1] * jump

@@ -1,3 +1,4 @@
+# by Nick "LordVader" Proshin
 import sys
 input = sys.stdin.readline
 out = sys.stdout

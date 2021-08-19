@@ -6,3 +6,4 @@ def monkey_count(n):
         print((i + 1))
         l.append(i + 1)
     return l
+#     return [l, l.append(i) for i,v in range(n)]

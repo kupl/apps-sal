@@ -1,5 +1,6 @@
 class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
+        # Note age[B] > 100 && age[A] < 100 is redundant since we have age[B] > age[A]
         def wantToRequest(A, B):
             return not(B <= 0.5 * A + 7 or B > A)
 

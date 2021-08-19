@@ -1,3 +1,4 @@
+#from line_profiler import LineProfiler
 
 N, K = list(map(int, input().split()))
 mod = 10**9 + 7
@@ -50,6 +51,10 @@ def main():
 
 def __starting_point():
     main()
+#prof = LineProfiler()
+# prof.add_function(main)
+# prof.runcall(main)
+# prof.print_stats()
 
 
 __starting_point()

@@ -20,9 +20,9 @@ def palindrome(s):
     if not offset_indices:
         return 0
     alpha_delta = sum(deltas.values())
-    mindex = min(offset_indices)
-    maxdex = max(offset_indices)
-    sindex = min(p - 1, n - p)
+    mindex = min(offset_indices)  # Smallest index with a mismatch
+    maxdex = max(offset_indices)  # Largest index in the smaller half with a mismatch
+    sindex = min(p - 1, n - p)  # Starting pointer index
     if mindex == maxdex or maxdex <= sindex:
         travel_delta = abs(sindex - mindex)
         return travel_delta + alpha_delta

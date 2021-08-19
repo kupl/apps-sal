@@ -4,4 +4,4 @@ def find_short(s):
     for i in a:
         if(len(i) < l):
             l = len(i)
-    return l
+    return l  # l: shortest word length

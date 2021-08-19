@@ -49,4 +49,5 @@ if n == 2:
     ans = abs(C[0] - C[1]) / 2
 else:
     rx, ry, ans = sannbunn_second(0, 1000, 0, 1000)
+    # ans = calc_kyori(complex(rx, ry), C)
 print(ans)

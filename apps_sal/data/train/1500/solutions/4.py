@@ -1,3 +1,4 @@
+# cook your dish here
 for s in range(int(input())):
     A = input()
     balance = 0

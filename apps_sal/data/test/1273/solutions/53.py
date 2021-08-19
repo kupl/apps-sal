@@ -1,6 +1,13 @@
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
 from collections import deque
 
 
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(N, ABs):
     tree_top = [[] for _ in range(N + 1)]
     for i in range(N - 1):
@@ -36,7 +43,11 @@ def solve(N, ABs):
 
 
 def __starting_point():
+    # S = input()
     N = int(input())
+    # N, M = map(int, input().split())
+    # As = [int(i) for i in input().split()]
+    # Bs = [int(i) for i in input().split()]
     ABs = [[int(i) for i in input().split()] for _ in range(N - 1)]
     solve(N, ABs)
 

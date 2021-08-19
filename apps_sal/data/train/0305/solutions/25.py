@@ -8,6 +8,7 @@ class Solution:
                 mid = (i + j - 1) // 2
                 t1 = text[i:mid + 1]
                 t2 = text[mid + 1:j + 1]
+                # print(i, j, mid, t1, t2)
 
                 if t1 == t2 and t1 not in s:
                     s.add(text[i:mid + 1])
@@ -33,6 +34,8 @@ class Solution:
 
         pw[-1] = curr
 
+        # print(dp)
+
         st = set()
 
         for i in range(n):
@@ -47,7 +50,10 @@ class Solution:
 
                 x2 = dp[j] - dp[mid]
 
+                # print(x1,x2,s[i:mid+1],s[mid+1:j+1])
+
                 if x2 == x1 * (pw[mid - i + 1]):
                     if s[i:mid + 1] == s[mid + 1:j + 1]:
                         st.add(s[i:j + 1])
+                        # print(st)
         return len(st)

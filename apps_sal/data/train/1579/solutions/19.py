@@ -1,3 +1,4 @@
+# cook your dish here
 def solve(A):
     res, pre = set(), {0}
     for x in A:

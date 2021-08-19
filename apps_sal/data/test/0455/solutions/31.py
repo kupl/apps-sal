@@ -45,6 +45,7 @@ def main():
         for _ in range(N)
     ))
 
+    # m, d, w = part_300(N, X, Y)
     m, d, w = ref(N, X, Y)
 
     if m == -1:
@@ -146,6 +147,7 @@ def editorial(N, X, Y):
          |
          D
 
+    # TODO
       U＼        ／R
          ＼    ／
            ＼／
@@ -176,6 +178,8 @@ def ref(N, X, Y):
     m = len(d)
 
     w1 = transform_xy(N, X, Y, d)
+    # w2 = no_transform_xy(N, X, Y, d)
+    # assert w1 == w2
 
     return m, d, w1
 
@@ -184,6 +188,7 @@ def transform_xy(N, X, Y, d):
     """
     http://kagamiz.hatenablog.com/entry/2014/12/21/213931
     """
+    # 変換: θ=45°, 分母は共通の√2 なので払ってしまうと下記の式になる
     trans_x = []
     trans_y = []
     for x, y in zip(X, Y):
@@ -197,6 +202,7 @@ def transform_xy(N, X, Y, d):
         plt.axhline(0, linestyle="--")
         plt.axvline(0, linestyle="--")
 
+        # denominator: 分母
         deno = 2 ** 0.5
         plt.scatter(X, Y, label="src")
         plt.scatter([x / deno for x in trans_x],
@@ -210,18 +216,24 @@ def transform_xy(N, X, Y, d):
         plt.legend()
         plt.show()
 
+    # print(*zip(X, Y))
+    # print(*zip(trans_x, trans_y))
+
     w = []
     dirs = {
-        (-1, -1): "L",
-        (+1, +1): "R",
-        (+1, -1): "U",
-        (-1, +1): "D",
+        # dir: x', y'
+        (-1, -1): "L",  # 本来の座標(x, y): (-1,  0), 変換後: (-1+0, -1-0)
+        (+1, +1): "R",  # 本来の座標(x, y): (+1,  0), 変換後: (+1+0, +1-0)
+        # 感覚と違うのは、変換の仕方
+        (+1, -1): "U",  # 本来の座標(x, y): ( 0, +1), 変換後: ( 0+1,  0-(-1))
+        (-1, +1): "D",  # 本来の座標(x, y): ( 0, -1), 変換後: ( 0-1,  0-(+1))
     }
     for x, y in zip(trans_x, trans_y):
         x_sum = 0
         y_sum = 0
         _w = ""
         for _d in d:
+            # 変換後の座標でx',y'を独立に求めている
             if x_sum <= x:
                 x_dir = 1
                 x_sum += _d
@@ -249,6 +261,7 @@ def no_transform_xy(N, X, Y, d):
         x_sum, y_sum = 0, 0
         _w = ""
         for _d in d:
+            # 変化量の大きい方を優先する
             if abs(x_sum - x) >= abs(y_sum - y):
                 if x_sum >= x:
                     x_sum -= _d

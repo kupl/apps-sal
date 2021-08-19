@@ -9,6 +9,13 @@ import sys
 from sys import stdin
 from collections import deque
 mod = 10**9 + 7
+# sys.setrecursionlimit(10**5)
+# def rl():
+#     return [int(w) for w in stdin.readline().split()]
+# map(int,input().split())
+# # l = list(map(int,input().split()))
+# from itertools import permutations
+# input = lambda: sys.stdin.readline().rstrip()
 def input(): return sys.stdin.readline().rstrip()
 
 
@@ -42,4 +49,5 @@ for i in l:
             dp[j] = dp[j] % mod + dp[j - 1] % mod
             dp[j] %= mod
 
+# print(dp)
 print(sum(dp[1:]) % mod)

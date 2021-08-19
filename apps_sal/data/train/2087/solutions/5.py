@@ -1,3 +1,4 @@
+#print("Allah is the most gracious and the Most Marchiful")
 
 num, l, r, ql, qr, = list(map(int, input().split()))
 ara = [int(i) for i in input().split()]

@@ -1,4 +1,5 @@
 def find_spec_partition(n, k, com):
+    # your code here
     part = [0] * k
     if com == 'min':
         part[1:k] = [1] * (k - 1)

@@ -1,4 +1,6 @@
+#!/usr/bin/env python3
 from bisect import bisect_right
+# input = stdin.readline
 
 
 def solve(n, k, a):

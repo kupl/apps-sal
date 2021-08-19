@@ -1,5 +1,7 @@
 from collections import defaultdict
 
+# I knew there was a O(n) solution
+
 
 def solve(st, k):
     D, current, removed = defaultdict(list), ord('a'), set()

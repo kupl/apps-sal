@@ -44,4 +44,6 @@ class Solution:
                         chain_lengths[word2] = chain_lengths[word1] + 1
                         max_chain = max(max_chain, chain_lengths[word2])
 
+        # print(chain_lengths)
+
         return max_chain

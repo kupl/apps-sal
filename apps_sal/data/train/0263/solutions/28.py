@@ -13,5 +13,6 @@ class Solution:
                     dp2[j] += dp1[t] % mod_val
             dp1 = dp2[:]
             dp2 = [0] * 10
+        # print(dp)
         ans = sum(dp1) % mod_val
         return ans

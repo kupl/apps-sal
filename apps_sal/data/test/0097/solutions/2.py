@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 [n, m, x, y, vx, vy] = list(map(int, input().strip().split()))
 
 

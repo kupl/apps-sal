@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     n, c = list(map(lambda x: int(x), input().split()))

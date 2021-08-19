@@ -43,3 +43,8 @@ class StreamChecker:
         self.stream += letter
         found = self.trie.search(self.stream)
         return found
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

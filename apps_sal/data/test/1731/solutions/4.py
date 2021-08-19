@@ -1,3 +1,4 @@
+#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations
@@ -48,6 +49,8 @@ def solve():
         inv[i] = inv[i + 1] * (i + 1) % mod
     print(f[2 * m + n - 1] * inv[n - 1] * inv[2 * m] % mod)
     return
+
+# Solve
 
 
 def __starting_point():

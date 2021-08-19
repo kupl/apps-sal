@@ -1,3 +1,4 @@
+# 579_C
 
 def gcd(a, b):
     if b == 0:

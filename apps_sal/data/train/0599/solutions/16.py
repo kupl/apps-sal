@@ -18,3 +18,4 @@ while t > 0:
         print(0)
     else:
         print(n // 2 - width + 1)
+# cook your dish here

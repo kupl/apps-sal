@@ -37,6 +37,14 @@ while ql < qr:
             p[v] = u
             q[qr] = v
             qr += 1
+#v = 0
+#u = 1
+# while v != -1:
+#	if d[v] >= u:
+#		d[v] = 0
+#	v = p[v]
+#	u += 1
+# print(d)
 dd = [0] * n
 ql = 0
 qr = 1

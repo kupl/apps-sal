@@ -13,5 +13,6 @@ class Solution:
                     C[A[i]] += C[A[j]] * C[A[j]]
                 elif A[i] % A[j] == 0 and A[i] // A[j] in SA:
                     C[A[i]] += 2 * C[A[j]] * C[A[i] // A[j]]
+        # print(C)
         res = sum(C.values())
         return res % (10**9 + 7)

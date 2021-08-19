@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 [n, k, M, D] = list(map(int, input().strip().split()))
 

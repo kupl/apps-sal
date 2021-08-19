@@ -5,6 +5,7 @@ pre_num = [[] for i in range(n)]
 city = []
 
 for i in range(m):
+    # pの県に属してy年にできた
     p, y = list(map(int, input().split()))
     pre[p - 1].append(y)
     city.append(p - 1)

@@ -32,15 +32,18 @@ right_hand = np.array(hand, dtype=int)
 left_hand = np.array(hand, dtype=int)
 
 H = convolve(left_hand, right_hand)
+# Hを大きいほうから見ていくと、
+# 幸福度iの握手をH[i]種類できることが分かる
+# 上から順に足していって、最後H[i]種類の握手を足せないときは、残りの握手回数だけ足す
 
 ans = 0
 for i in range(len(H) - 1, -1, -1):
     if H[i] == 0:
         continue
-    if H[i] <= M:
+    if H[i] <= M:  # H[i]回の握手ができる
         ans += i * H[i]
         M -= H[i]
-    else:
+    else:  # H[i]回の握手ができないので、残った回数だけ握手する
         ans += M * i
         break
 

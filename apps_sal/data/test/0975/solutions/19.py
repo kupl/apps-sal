@@ -14,10 +14,13 @@ def solve():
     n = int(input())
     Sn = list(map(int, input()))
     Mn = list(map(int, input()))
+    # debug(Sn, locals())
 
     cntM1 = Counter(Mn)
     cntM2 = copy.deepcopy(cntM1)
+    # debug(cntM, locals())
 
+    # max-win
     maxwin = 0
     for d in Sn:
         for a in range(d + 1, 10):
@@ -31,6 +34,7 @@ def solve():
                     cntM1[a] -= 1
                     break
 
+    # min-lose
     minlose = 0
     for d in Sn:
         for a in range(d, 10):

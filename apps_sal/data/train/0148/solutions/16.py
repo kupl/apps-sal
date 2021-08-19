@@ -2,7 +2,7 @@ class Solution:
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         difficulty, profit = zip(*sorted(zip(difficulty, profit)))
 
-        profit_table = {}
+        profit_table = {}  # maps difficulty to profit
 
         for i, (d, p) in enumerate(zip(difficulty, profit)):
             if i > 0:

@@ -15,6 +15,7 @@ class Solution:
         return -1 if dp[amount] > amount else dp[amount]
 
     def coinChange(self, coins, amount):
+        # num of coins needed for amount from 0 to \"amount\"
         if not amount:
             return 0
 

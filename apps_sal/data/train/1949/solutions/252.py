@@ -14,6 +14,9 @@ class Solution:
                 ga = grid[row][col]
 
                 grid[row][col] = 0
+                # neighbors = [[row+1, col], [row-1, col], [row, col+1], [row, col-1]]
+                # for x, y in neighbors:
+                #     dfs(grid, x, y, currg+ga)
 
                 for p in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
                     dfs(grid, row + p[0], col + p[1], currg + ga)

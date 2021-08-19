@@ -28,9 +28,11 @@ class Solution:
                 sz[ry] += sz[rx]
         for i, a in enumerate(A):
             fs = factors(a)
+            # print(a,fs,mp)
             for f in fs:
                 if f in mp:
                     j = mp[f]
                     union(j, i)
                 mp[f] = i
+        # print(parent,mp)
         return max(sz)

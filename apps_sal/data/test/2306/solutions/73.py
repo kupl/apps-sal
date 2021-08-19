@@ -10,7 +10,7 @@ def main():
     v = list(map(int, buflist))
     t.append(0)
     v.append(0)
-    for i, _ in enumerate(t):
+    for i, _ in enumerate(t):  # double time and speed to make calculation easier
         t[i] *= 2
         v[i] *= 2
     time = 0
@@ -36,7 +36,7 @@ def main():
         time += 1
         if time >= spd_time_list[point + 1][1]:
             point += 1
-    distance /= 4
+    distance /= 4  # roll back time and speed (and so the distance)
     print(distance)
 
 

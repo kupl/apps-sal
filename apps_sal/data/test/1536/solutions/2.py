@@ -5,6 +5,7 @@ for i in range(n):
     x = list(map(int, stdin.readline().split()))
     l.append([x, i + 1])
 l.sort()
+# print(l)
 deleted = [0] * n
 for i in range(n - 1):
     if deleted[i]:

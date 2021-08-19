@@ -5,6 +5,8 @@ p[0] = a - (3 * d) if d > 0 else a
 p[1] = b - (2 * d) if d > 0 else b
 p[2] = c - (2 * d) if d > 0 else c
 r = [0, 1, 2, 0, 2, 1, 0] * 2
+# print(d)
+# print(p)
 i = 0
 j = 0
 ans = 0

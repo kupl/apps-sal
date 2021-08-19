@@ -12,7 +12,10 @@ class Solution:
         for new_L in rods:
             tmp = defaultdict(int)
             for dL, L in list(diff_to_longer_len.items()):
+                # there are L and L - dL
+                # |(new_L + L) - (L - dL)| = new_L + dL
                 replace_if_larger(tmp, new_L + dL, new_L + L)
+                # |(new_L + L - dL) - L| = |new_L - dL|
                 replace_if_larger(tmp, abs(new_L - dL), max(L, new_L + L - dL))
 
             for dL, L in list(tmp.items()):

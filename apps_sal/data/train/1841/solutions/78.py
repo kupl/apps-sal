@@ -9,6 +9,8 @@ class Solution:
 
         sorted_data = sorted(h.items(), reverse=True)
         res = []
+        # print(sorted_data)
+        # while k != 0:
         for j in sorted_data:
             while len(j[1]) != 0:
                 res.append(j[1].pop(-1))

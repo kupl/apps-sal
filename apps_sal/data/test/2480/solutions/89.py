@@ -22,3 +22,4 @@ for i in range(len(Acum)):
         counter[Acum[i - (K - 1)]] -= 1
 
 print(answer)
+# 27

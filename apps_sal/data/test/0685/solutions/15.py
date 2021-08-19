@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -30,9 +31,13 @@ for i in range(1, N + 1):
     gpresum[i] = gpresum[i - 1] + gap[i - 1]
 
 gpresum = gpresum[1:]
+# print(X)
+# print(gap)
+# print(gpresum)
 
 ans = 0
 for i in range(N):
+    # starts from X[i]
     g = gpresum[i]
     j = bisect.bisect_left(gpresum, g + H)
     l = X[j - 1][1] - X[i][0] + (H - (gpresum[j - 1] - gpresum[i]))

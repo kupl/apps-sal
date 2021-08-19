@@ -23,6 +23,11 @@ l = [
     (z**y).ln() * x
 ]
 
+#getcontext().prec = 300
+
+#l = [i.quantize(Decimal('.' + '0'*250 + '1'), rounding=ROUND_DOWN) for i in l]
+
+# print(l)
 
 m = max(l)
 
@@ -41,9 +46,13 @@ s = [
     "(z^y)^x"
 ]
 
+# for t in l:
+#    print(t)
+
 
 i = 0
 for j in range(12):
+    # print(abs(l[j]-m))
     if abs(l[j] - m) < Decimal('.' + '0' * 100 + '1'):
         i = j
         break

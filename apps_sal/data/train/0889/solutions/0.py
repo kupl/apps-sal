@@ -1,3 +1,4 @@
+# cook your dish here
 def ceil(num):
     if num % 1 == 0:
         return int(num // 1)

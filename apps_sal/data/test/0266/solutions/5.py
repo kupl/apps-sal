@@ -41,3 +41,6 @@ else:
             sb = 0
 
     print('{0} {1}'.format(''.join(map(str, a)), ''.join(map(str, b))))
+
+
+##        print(' '.join(map(str,A[i])))

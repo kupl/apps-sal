@@ -2,8 +2,8 @@ import heapq
 
 q = int(input())
 
-minheap = []
-maxheap = []
+minheap = []  # right
+maxheap = []  # left
 heapq.heapify(minheap)
 heapq.heapify(maxheap)
 

@@ -1,4 +1,5 @@
 def ceil(x, y):
+    # ceil(x / y)
     return (x + y - 1) // y
 
 

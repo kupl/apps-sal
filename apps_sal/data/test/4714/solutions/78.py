@@ -1,4 +1,4 @@
-N = {}
+N = {}  # 10000以上key以下の回文数の個数
 cnt = 0
 for i in range(10000, 100000):
     L = list(str(i))

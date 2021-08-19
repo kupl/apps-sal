@@ -10,6 +10,7 @@ def gap(g, m, n):
 
     while (not end):
         for i in range(first, n + 1):
+            # print('i: ' + str(i))
             if i == n:
                 end = True
                 break
@@ -17,6 +18,7 @@ def gap(g, m, n):
                 first = i
                 second = i
                 for j in range(first + 1, n + 1):
+                    # print('j: ' + str(j))
                     if isPrime(j):
                         second = j
                         break

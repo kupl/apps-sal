@@ -12,6 +12,7 @@ class Solution:
                 return check(log[ind], tar)
             return False
         for ind, (i, j) in enumerate(zip(leftChild, rightChild)):
+            # print(ind, i, j)
             if i != -1:
                 if i in rec:
                     return False

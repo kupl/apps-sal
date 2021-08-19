@@ -42,6 +42,7 @@ for j in range(n - k + 1):
             else:
                 count.append(0)
     dr[0][j] = s
+    # print (count,s)
     for i in range(1, n - k + 1):
         if j == 0:
             if prefr[i + k - 1][-1] - prefr[i + k - 1][j + k - 1] == 0 and prefr[i + k - 1][-1] != 0:
@@ -55,9 +56,11 @@ for j in range(n - k + 1):
                 s += 1
             else:
                 count.append(0)
+        # print (i,j,s)
         if count[i - 1] == 1 and prefr[i - 1][-1] != 0:
             s -= 1
         dr[i][j] = s
+# print (dr)
 for i in range(n - k + 1):
     count = []
     s = 0
@@ -75,6 +78,7 @@ for i in range(n - k + 1):
             else:
                 count.append(0)
     dc[i][0] = s
+    # print (count,s)
     for j in range(1, n - k + 1):
         if i == 0:
             if prefc[-1][j + k - 1] - prefc[i + k - 1][j + k - 1] == 0 and prefc[-1][j + k - 1] != 0:
@@ -88,9 +92,11 @@ for i in range(n - k + 1):
                 s += 1
             else:
                 count.append(0)
+        # print (i,j,s)
         if count[j - 1] == 1 and prefc[-1][j - 1] != 0:
             s -= 1
         dc[i][j] = s
+# print (dc)
 ans = 0
 for i in range(n):
     for j in range(n):

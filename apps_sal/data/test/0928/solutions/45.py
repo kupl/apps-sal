@@ -3,6 +3,8 @@ a = list(map(int, input().split()))
 
 l = [0] * (N + 1)
 r = [0] * (N + 1)
+#l[0] = a[1]
+#r[-2] = a[-1]
 for i in range(N):
     l[i + 1] = l[i] + a[i]
     r[-i - 2] = r[-i - 1] + a[-i - 1]
@@ -24,5 +26,6 @@ for i in range(N):
             else:
                 min1 = t
         ans += min1 + 1
+        #print(i, min1)
 
 print(ans)

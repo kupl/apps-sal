@@ -10,4 +10,5 @@ class Solution:
                     if not cap:
                         break
                     acc += cap
+                # print(i, j, acc)
         return acc

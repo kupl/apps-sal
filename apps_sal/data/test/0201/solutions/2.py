@@ -1,6 +1,13 @@
 a, b, c, d, e = list(map(int, input().split(' ')))
 check = int(a**0.5)
 
+# red candy
+# height b
+# weight d
+
+# blue candy
+# height c
+# weight e
 
 ans = 0
 for red in range(check + 1):

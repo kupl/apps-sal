@@ -4,12 +4,14 @@ class Solution:
         def ceiling(x, y): return (x + y - 1) // y
 
         def timeTaken(v):
+            # total time taken if Koko eat with v speed
             totalTime = 0
             for p in piles:
                 totalTime += ceiling(p, v)
             return totalTime
 
         def binarySearch(s, e, up_bound):
+            # find maximum index that less or equal then up_bound, index s~e
             if(s == e):
                 return s
             m = (s + e) // 2

@@ -12,6 +12,7 @@ def main():
     for _ in range(N):
         P.append(list(map(int, input().split())))
 
+    # A: choosen list
     A = list(range(10))
     n = len(A)
     ans = -float('inf')

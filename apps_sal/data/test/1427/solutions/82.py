@@ -12,13 +12,15 @@ for a in A:
     C[a] += 1
 
 ans = 1
-P = [1 for _ in range(MAX + 1)]
+P = [1 for _ in range(MAX + 1)]  # 素数かどうか
 P[0] = 0
 P[1] = 0
-S = [0 for _ in range(MAX + 1)]
+S = [0 for _ in range(MAX + 1)]  # 最小公倍数の素因数分解したもの
 for i in range(MAX + 1):
+    # 素数でないなら以下の手順を行わない
     if P[i] == 0:
         continue
+    # エラトステネスの篩
     k = i * 2
     while k <= MAX:
         P[k] = 0
@@ -30,6 +32,7 @@ for i in range(MAX + 1):
         ind += 1
     k = k // i
     ind -= 1
+    # 最大のべきを調べる
     while k > 1:
         l = k
         flag = False
@@ -46,6 +49,8 @@ for i in range(MAX + 1):
     ans *= pow(i, ind, MOD)
     ans %= MOD
 
+# モジュラ逆数
+
 
 def xgcd(a, b):
     x0, y0, x1, y1 = 1, 0, 0, 1
@@ -58,6 +63,9 @@ def xgcd(a, b):
 
 def modinv(a, m):
     g, x, y = xgcd(a, m)
+    # if g != 1:
+    #raise Exception('modular inverse does not exist')
+    # else:
     return x % m
 
 
@@ -71,4 +79,5 @@ for a in A:
         ans_2 += B[a]
     ans_2 %= MOD
 
+#print(ans, ans_2, P, S, B)
 print(((ans * ans_2) % MOD))

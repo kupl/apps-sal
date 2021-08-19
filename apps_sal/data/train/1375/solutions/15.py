@@ -1,3 +1,4 @@
+# cook your code here
 for _ in range(eval(input())):
     string = input()
     string = string[::-1]

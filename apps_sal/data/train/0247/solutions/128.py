@@ -26,6 +26,7 @@ class Solution:
             if dp2[i] == -1:
                 if i != 0:
                     dp2[i] = dp2[i - 1]
+        # print(dp,dp2)
         if res > L:
             return -1
         return res

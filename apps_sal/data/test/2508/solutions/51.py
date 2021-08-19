@@ -33,6 +33,6 @@ cord = [['@'] * (w + 2)]
 for i in range(h):
     cord.append(['@'] + list(input()) + ['@'])
 cord.append(['@'] * (w + 2))
-cord[ys][xs] = '
+cord[ys][xs] = '#'
 
 print((bfs(xg, yg)))

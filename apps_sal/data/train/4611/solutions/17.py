@@ -1,3 +1,4 @@
+# Brute-force :)
 
 def animals(heads, legs):
     for x in range(heads + 1):

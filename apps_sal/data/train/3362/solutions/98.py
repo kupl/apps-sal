@@ -6,3 +6,4 @@ def sum_mix(arr):
         if isinstance(x, int):
             list.append(x)
     return sum(list)
+    # your code here

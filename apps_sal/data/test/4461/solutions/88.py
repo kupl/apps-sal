@@ -12,11 +12,13 @@ def main():
         x = [(i - 1, h - i + 1), (i, h - i), (i + 1, h - i - 1)]
         y = [(j - 1, w - j + 1), (j, w - j), (j + 1, w - j - 1)]
         for (u, v) in x:
+            # case1
             a, b = v // 2, v - v // 2
             s = [w * u, w * a, w * b]
             d = max(s) - min(s)
             ans = min(ans, d)
             for (s, t) in y:
+                # case2
                 s = [u * w, v * s, v * t]
                 d = max(s) - min(s)
                 ans = min(ans, d)

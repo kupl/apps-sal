@@ -12,7 +12,7 @@ def dfs(i, a, b, c):
         else:
             return abs(a - A) + abs(b - B) + abs(c - C)
     else:
-        ans0 = dfs(i + 1, a, b, c)
+        ans0 = dfs(i + 1, a, b, c)  # 棒iを使わないパターン
         ans1 = dfs(i + 1, a + l[i], b, c) + (10 if a != 0 else 0)
         ans2 = dfs(i + 1, a, b + l[i], c) + (10 if b != 0 else 0)
         ans3 = dfs(i + 1, a, b, c + l[i]) + (10 if c != 0 else 0)

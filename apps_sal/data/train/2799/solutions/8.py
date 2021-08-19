@@ -1,4 +1,5 @@
 def beasts(heads, tails):
+    # your code here
 
     o = (5 * tails - heads) / 3
     h = (heads - 2 * tails) / 3
@@ -7,3 +8,4 @@ def beasts(heads, tails):
         return [int(o), int(h)]
     else:
         return "No solutions"
+    # return [orthus, hydra]

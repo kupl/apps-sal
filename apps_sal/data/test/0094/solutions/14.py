@@ -1,4 +1,5 @@
 n = int(input())
+# print(n)
 d = input()
 l = len(d)
 dp = [[0, 0] for i in range(0, l + 1)]

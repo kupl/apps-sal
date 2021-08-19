@@ -1,5 +1,8 @@
+#n = int(input())
+#n, m = map(int, input().split())
 n = input()
 s = input()
+#c = list(map(int, input().split()))
 k = len(n)
 n = int(n)
 a = []

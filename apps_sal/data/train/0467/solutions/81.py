@@ -12,4 +12,5 @@ class Solution:
                         break
             if len(local) == 4:
                 valAll += sum(local)
+            # print(str(num)+\"  \"+str(local))
         return valAll

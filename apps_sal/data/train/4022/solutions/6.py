@@ -8,16 +8,22 @@ def soundex(name):
     result = []
 
     for word in name.lower().split():
+        # save the initial
         first = word[0]
 
+        # remove h, w
         word = [first] + [c for c in word[1:] if c not in 'hw']
 
+        # replace consonants
         word = [CONS_VAL.get(c, c) for c in word]
 
+        # remove duplicates
         word = [first] + [c for i, c in enumerate(word[1:]) if word[i] != c]
 
+        # remove vowels
         word = [first] + [c for c in word[1:] if c not in 'aeiouy']
 
+        # append zeros and cut
         word = (word + ['0'] * 3)[:4]
         result.append(''.join(word))
 

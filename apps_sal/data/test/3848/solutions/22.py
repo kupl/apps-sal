@@ -1,6 +1,8 @@
 import sys
 from math import log2, floor, ceil, sqrt, gcd
 import bisect
+# from collections import deque
+# sys.setrecursionlimit(10**5)
 
 
 def Ri(): return [int(x) for x in sys.stdin.readline().split()]
@@ -31,6 +33,7 @@ arr = [chr(ord('a') + i) for i in range(k)]
 flag = -1
 ch = -1
 if n == 1:
+    # YES()
     if st[0] == arr[-1]:
         NO()
     else:
@@ -59,11 +62,15 @@ else:
                 break
         if flag != -1:
             break
+    # print(flag)
     if flag == -1:
         NO()
     else:
         st[flag] = ch
+        # print(st)
+        # print(flag,n)
         for i in range(flag + 1, n):
+            # print("fs")
             for j in range(0, k):
                 tch = arr[j]
                 if i - 2 >= 0:
@@ -87,4 +94,5 @@ else:
                     ch = tch
                     st[i] = ch
                     break
+        # YES()
         print("".join(st))

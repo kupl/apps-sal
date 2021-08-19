@@ -32,7 +32,8 @@ class Solution:
 
     def largestComponentSize(self, A: List[int]) -> int:
 
-        d = collections.defaultdict(list)
+        # Note, that if two numbers has common factor more than 1, it means that they have prime common factor.
+        d = collections.defaultdict(list)  # primeNum -> [indexes of A]
         for i in range(len(A)):
             s = self.primeSet(A[i])
             for v in s:

@@ -15,6 +15,7 @@ dists = {}
 child = {}
 
 bruh = sum(ay)
+#visited = set()
 path = [(0, 0)]
 
 for x, p in path:
@@ -32,6 +33,7 @@ for x, parent in path[::-1]:
             total += sm + c
     dists[x] = total
     child[x] = children
+    # return (children,total)
 b2, b3 = child[0], dists[0]
 
 for x, parent in path:

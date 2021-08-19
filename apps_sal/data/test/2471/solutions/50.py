@@ -4,6 +4,7 @@ for i in range(N):
     li.append(tuple(map(int, input().split())))
 t = tuple(li)
 st = set(t)
+# print(t)
 
 Js = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 

@@ -10,6 +10,7 @@ else:
         a[i] = math.ceil((a[i] / m))
     chose = max(a)
     x = 0
+    # print(a)
 
     for j in range(n):
         if a[j] == chose:

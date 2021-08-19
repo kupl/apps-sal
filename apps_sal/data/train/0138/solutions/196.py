@@ -12,7 +12,7 @@ class Solution:
                 elif nums[i] == 0:
                     cur_len = 0
                     cur_sign = 1
-                else:
+                else:  # < 0
                     cur_len += 1
                     cur_sign = -cur_sign
                     result = max(result, cur_sign * cur_len)

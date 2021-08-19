@@ -12,6 +12,7 @@ class Solution:
         return size - max(best)
 
     def beats(self, A, a, b):
+        # Returns True if idx a beats idx b
         for s in A:
             if s[b] > s[a]:
                 return False

@@ -55,6 +55,7 @@ class UnionFind():
 
 N, K = map(int, input().split())
 l = [list(map(int, input().split())) for i in range(N)]
+# print(l)
 a = UnionFind(N)
 for v in itertools.combinations(range(N), 2):
     for i in range(N):
@@ -62,6 +63,7 @@ for v in itertools.combinations(range(N), 2):
             break
         if i == N - 1:
             a.union(v[0], v[1])
+# print(a)
 
 b = UnionFind(N)
 for v in itertools.combinations(range(N), 2):
@@ -70,6 +72,7 @@ for v in itertools.combinations(range(N), 2):
             break
         if i == N - 1:
             b.union(v[0], v[1])
+# print(b)
 
 ans = 1
 

@@ -7,6 +7,7 @@ class Solution:
         max_gold = 0
         for start in possible_starts:
             path_stack = [start]
+            #visited = {start}
             cell_to_other_paths = collections.defaultdict(list)
             x, y = start
             cumulated_gold = grid[x][y]
@@ -36,6 +37,7 @@ class Solution:
 
                 if found_next:
                     path_stack.append((tmp_x, tmp_y))
+                    #visited.add((tmp_x, tmp_y))
                     cumulated_gold += grid[tmp_x][tmp_y]
                     x, y = tmp_x, tmp_y
                 else:

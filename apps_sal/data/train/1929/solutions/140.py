@@ -4,7 +4,7 @@ class Trie:
 
     def insert(self, word):
         cur_trie = self
-        for char in word + '$':
+        for char in word + '$':  # using $ to indicate end of word
             if char not in cur_trie.child:
                 cur_trie.child[char] = Trie()
             cur_trie = cur_trie.child[char]
@@ -33,3 +33,8 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.buffer = letter + self.buffer
         return self.trie.search(self.buffer)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

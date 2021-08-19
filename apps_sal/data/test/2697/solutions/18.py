@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 count = 0
 c = 0

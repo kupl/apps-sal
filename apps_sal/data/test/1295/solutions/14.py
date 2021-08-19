@@ -36,8 +36,10 @@ for i in range(n):
         l = len(M) - 1
 
     d1 = abs(N[i] - M[l])
+    # print(d1)
     if 0 < l:
         d2 = abs(N[i] - M[l - 1])
+        # print(d2)
     else:
         d2 = d1
     dist[i] = min(d1, d2)

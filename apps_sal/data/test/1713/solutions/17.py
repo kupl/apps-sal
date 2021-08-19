@@ -4,6 +4,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 118B
 '''
 def main():
     from sys import stdin,stdout
@@ -43,6 +44,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 499B
 '''
 def main():
     from sys import stdin,stdout
@@ -59,6 +61,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 450A
 '''
 def main():
     from sys import stdin,stdout
@@ -77,6 +80,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 550C
 '''
 def main():
     from sys import stdin,stdout
@@ -99,6 +103,7 @@ def main():
         else:
             t=j+t
             k<<=1
+    #print(t,i)
     if t!='':
         if int(t)%8==0:
             if i!=len(n) and t!='0' and t!='8':
@@ -112,6 +117,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 476B
 '''
 def main():
     from sys import stdin,stdout
@@ -134,6 +140,7 @@ def main():
             bnc+=1
         else:
             bqc+=1
+    #print(apc,anc,bpc,bnc,bqc)
     if apc==bpc and anc==bnc and bqc==0:
         p=1
     elif bpc>apc or bnc>anc or len(a)!=len(b):
@@ -144,11 +151,13 @@ def main():
         maxim=max(apc-bpc,anc-bnc)
         minim=min(aspc-bpc,anc-bnc)
         while(bqc>maxim):
+            #print(numer)
             numer*=bqc
             bqc-=1
         if minim>1:
             k=minim
             while(minim>=2):
+            #print('k',k)
                 k*=(minim-1)
                 minim-=1
             numer/=k
@@ -167,11 +176,13 @@ def main():
         c=0
         while n>=0:
             n=(n&(n+1)) -1
+            #print(n)
             c+=1
         stdout.write(str(c)+'\n')
 def __starting_point():
     main()
 '''
+# 230B
 '''
 def main():
 	from sys import stdin,stdout
@@ -184,6 +195,7 @@ def main():
 			while j<=1000000:
 				s[j-1]=False
 				j+=i
+	#print(s[:10])
 	t=int(stdin.readline())
 	for i in stdin.readline().strip().split():
 		n=int(i)
@@ -195,6 +207,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 489C
 '''
 def main():
 	import sys
@@ -210,6 +223,7 @@ def main():
 			maxim='-1'
 			minim='-1'
 	else:
+		#finding the maximum number	
 		maxim=0
 		n=b
 		while n:
@@ -227,6 +241,7 @@ def main():
 			maxim=s+'0'*diff
 		else:
 			maxim=s
+		#finding the minimum number
 		if diff:
 			if diff<0:
 				minim='-1'
@@ -243,6 +258,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 230B
 '''
 def main():	
 	import sys
@@ -264,6 +280,7 @@ def main():
 	for i in range(C):
 		if l[i]:
 			s.append((i+1)*(i+1))
+	#print(s[:10])
 	n=int(sys.stdin.readline())
 	tup=tuple(map(int,sys.stdin.readline().split()))
 	for i in tup:
@@ -272,9 +289,11 @@ def main():
 			sys.stdout.write('YES\n')
 		else:
 			sys.stdout.write('NO\n')
+	#print(s[:10])
 def __starting_point():
 	main()
 '''
+# 508B TLE
 '''
 def main():
 	import sys
@@ -316,6 +335,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 466C
 '''
 def main():
 	import sys
@@ -336,6 +356,7 @@ def main():
 			ss+=i 
 		for i in range(n-2,-1,-1):
 			cnt[i]+=cnt[i+1];		
+		#print(cnt)
 		ans=0
 		ss=0
 		for i in range(n-2):
@@ -346,6 +367,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 285B
 
 
 def main():

@@ -3,6 +3,7 @@ A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 C = list(map(int, input().split()))
 
+# 配列の添字をNと合わせる
 B.insert(0, 0)
 C.insert(0, 0)
 satis = 0
@@ -11,5 +12,5 @@ for i in range(N):
     satis += B[A[i]]
     if (tmp - A[i]) == -1:
         satis += C[tmp]
-    tmp = A[i]
+    tmp = A[i]  # i+1かどうかを判定
 print(satis)

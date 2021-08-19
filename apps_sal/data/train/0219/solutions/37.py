@@ -37,4 +37,6 @@ class Solution:
             if tempIndex > 0:
                 preSumDict[preSumKeys[tempIndex]] = min(preSumDict[preSumKeys[tempIndex - 1]], preSumDict[preSumKeys[tempIndex]])
                 ans = max(ans, i - preSumDict[preSumKeys[tempIndex - 1]])
+        # print(preSumKeys)
+        # print(preSum)
         return ans

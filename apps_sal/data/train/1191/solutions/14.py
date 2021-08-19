@@ -3,6 +3,7 @@ test = int(input())
 for _ in range(test):
     n, q = list(map(int, input().split(' ')))
     correct = []
+    # corrected = set(corrected)
     wrong = []
     for j in range(n):
         mydict = input()

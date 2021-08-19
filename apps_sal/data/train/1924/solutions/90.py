@@ -1,6 +1,6 @@
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
-        transMap = dict()
+        transMap = dict()  # name: [time, city, t]
         invalids = set()
 
         for t in transactions:

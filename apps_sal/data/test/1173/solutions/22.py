@@ -12,7 +12,7 @@ def cycle_detectable_topological_sort(
         Otherwise, (None, None) is returned.
     """
     V = len(graph) + first_index
-    depths = [0] * V
+    depths = [0] * V  # depths[i] := the length of the longest path to V_i
     order = [i for i in range(first_index, V) if not in_degrees[i]]
     queue = deque(order)
 
@@ -29,6 +29,7 @@ def cycle_detectable_topological_sort(
 
 
 def abc139_e():
+    # https://atcoder.jp/contests/abc139/tasks/abc139_e
     N, *A = list(map(int, open(0).read().split()))
 
     ids = [[-1] * (N + 1) for _ in range(N + 1)]
@@ -54,6 +55,7 @@ def abc139_e():
 
 
 def grl_4_a():
+    # https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_A
     V, _, *ST = list(map(int, open(0).read().split()))
     graph = [[] for _ in range(V)]
     in_degrees = [0] * V
@@ -67,6 +69,7 @@ def grl_4_a():
 
 def __starting_point():
     abc139_e()
+    # grl_4_a()
 
 
 __starting_point()

@@ -12,7 +12,9 @@ chisl = A[N - 1]
 
 for i in range(N - 1, 0, -1):
     chisl, znam = znam, chisl
+    # print(chisl,znam)
     chisl += znam * A[i - 1]
+    # print(chisl,znam)
 if(p * znam == q * chisl):
     print('YES')
 else:

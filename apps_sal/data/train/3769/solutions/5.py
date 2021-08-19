@@ -60,7 +60,8 @@ def mk_matrix(trace):
 
 
 def tracing(path):
-    dir = 0
+    dir = 0  # pointing right
+    # 0-> direita ; 1-> baixo ; 2-> esquerda ; 3->cima
     trace = []
     for j in range(len(path)):
         step = 0

@@ -13,6 +13,7 @@ for i in range(n):
     if pcnt == n // 2 or gcnt == -(-n // 2):
         break
 i, j = 0, 0
+# print(gcnt,pcnt)
 while -(-n // 2) > gcnt:
     if ans[i] == "":
         ans[i] = "g"
@@ -24,6 +25,7 @@ while n // 2 > pcnt:
         pcnt += 1
     j += 1
 score = 0
+# print(ans)
 for i in range(n):
     if ans[i] == "p" and s[i] == "g":
         score += 1

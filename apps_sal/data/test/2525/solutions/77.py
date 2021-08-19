@@ -50,7 +50,7 @@ def main():
     if reverse == True:
         print("".join(reversed(list(que))))
     else:
-        print("".join(list(que)))
+        print("".join(list(que)))  # print(x,y,z)
 
 
 def __starting_point():

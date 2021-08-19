@@ -7,6 +7,7 @@ def Q(x, y):
             return math.pi / 2
         if(y < 0):
             return (math.pi / 2) * 3
+    # y=mx
     m = abs(y / x)
     theta = math.atan(m)
     if(y >= 0 and x >= 0):

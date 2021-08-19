@@ -17,4 +17,5 @@ class Solution:
                 b += 1
             if s[i] == '1':
                 count += 1
+        # print(a,b)
         return (a * b % m)

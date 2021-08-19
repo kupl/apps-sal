@@ -5,7 +5,7 @@ def dfs(c, lst):
     n = len(lst)
     ans = [0] * n
     stack = [c - 1]
-    check = [0] * n
+    check = [0] * n  # チェック済みリスト
     while stack != []:
         d = stack.pop()
         if check[d] == 0:

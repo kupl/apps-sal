@@ -1,4 +1,5 @@
 def is_palindrome(s):
+    # `s` contains only [a-z] and [A-Z]!
 
     i = 0
     j = len(s) - 1

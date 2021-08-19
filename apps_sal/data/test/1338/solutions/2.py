@@ -1,7 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author: kanari
+# @Date:   2015-02-08 01:11:21
+# @Last Modified by:   kanari
+# @Last Modified time: 2015-02-08 01:29:15
 [n, m] = map(int, input().split())
 a = [0 for i in range(0, n + 1)]
 fac = [1]
 for i in range(1, n + 1):
+    #   fac.append(fac[i - 1] * i)
     fac.append(fac[i - 1] * 2)
 
 

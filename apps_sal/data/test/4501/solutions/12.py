@@ -1,3 +1,13 @@
+#
+# Written by NoKnowledgeGG @YlePhan
+# ('ω')
+#
+#import math
+#mod = 10**9+7
+#import itertools
+#import fractions
+#import numpy as np
+#mod = 10**4 + 7
 def kiri(n, m):
     r_ = n / m
     if (r_ - (n // m)) > 0:
@@ -34,15 +44,15 @@ print(next(generator))
 print(next(generator))
 """
 """def gcd_(a,b):
-  if b == 0:
+  if b == 0:#結局はc,0の最大公約数はcなのに
     return a
-  return gcd_(a,a % b)
-"""def extgcd(a, b, x, y):
+  return gcd_(a,a % b) # a = p * b + q"""
+"""def extgcd(a,b,x,y):
   d = a
-  if b != 0:
-    d = extgcd(b, a % b, y, x)
-    y -= (a // b) * x
-    print(x, y)
+  if b!=0:
+    d = extgcd(b,a%b,y,x)
+    y -= (a//b) * x
+    print(x,y)
   else:
     x = 1
     y = 0
@@ -58,13 +68,22 @@ def main():
 
     X = readInts()
 
-    X = list(map(lambda i: i - a, X))  
+    X = list(map(lambda i: i - a, X))  # lambda iに、 i - aという演算のもと Xから入れる
+    # ここで、平均が8になるもの key = 0の時が答えになる。
+    # だからこそ　答えで dp[0] - 1 するのはこのため
 
     dp = {0: 1}
 
     for i in X:
-        for k, v in list(dp.items()):  
+        for k, v in list(dp.items()):  # key,valueをそれぞれ抽出
             dp[i + k] = dp.get(i + k, 0) + v
+            #
+            # get(なんか) なんかに入ってる辞書のvalueが返ってくる
+            # 無かったら、get(なんか,〇)で、〇に入ってるので辞書が更新される
+            #
+    # print(dp)
+    #{0: 6, 1: 6, 2: 2, -1: 2}
+    # 負の数にも対応している
     print(dp[0] - 1)
 
 

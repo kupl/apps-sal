@@ -1,8 +1,10 @@
+# D - String Formation
 from collections import deque
 S = deque(input())
 Q = int(input())
 Query = [list(input().split()) for _ in range(Q)]
 
+# 文字列の向き (0: 正, 1: 逆)
 rev = 0
 for Q in Query:
     if Q[0] == '1':

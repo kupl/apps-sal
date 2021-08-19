@@ -1,3 +1,4 @@
+# TRIE
 
 class Node:
     def __init__(self, value):
@@ -13,9 +14,10 @@ root = Node(-1)
 
 
 def insertnode(n):
+    # print("Add", n)
 
     curr_node = root
-    bitstr = bin(n)[2:].zfill(32)
+    bitstr = bin(n)[2:].zfill(32)  # 32-bit string
 
     for bit in bitstr:
         if bit == "1":
@@ -33,6 +35,7 @@ def insertnode(n):
 
 
 def delete(n):
+    # print("Remove", n)
 
     curr_node = root
     bitstr = bin(n)[2:].zfill(32)
@@ -54,6 +57,7 @@ def delete(n):
 
 
 def find(n):
+    # print("Query", n)
 
     bitstr = bin(n)[2:].zfill(32)
     curr_node = root

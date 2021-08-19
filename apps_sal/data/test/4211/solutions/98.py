@@ -1,3 +1,4 @@
+# C
 
 N = int(input())
 B = [10**10] + list(map(int, input().split())) + [10**10]

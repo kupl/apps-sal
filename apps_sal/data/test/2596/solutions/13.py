@@ -1,4 +1,7 @@
 
+#N = int(input())
+
+#N,B = [int(x) for x in arr.split(' ')]
 
 arr = input()
 N, K, M, T = [int(x) for x in arr.split(' ')]

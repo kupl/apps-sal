@@ -1,4 +1,5 @@
 a, b, f, k = [int(i) for i in input().split(" ")]
+#p = 0
 x = f
 y = a - f
 oil = b

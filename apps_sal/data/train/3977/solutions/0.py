@@ -2,6 +2,8 @@ import numpy as np
 from itertools import combinations, product, starmap
 from sklearn.cluster import KMeans
 
+# Doesn't work for big tests, too bad
+
 
 def cluster_kmeans(points, n):
     kmeans = KMeans(n_clusters=n)

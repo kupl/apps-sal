@@ -23,7 +23,7 @@ class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         seen = Counter()
 
-        prefix = []
+        prefix = []  # store sum up till and including this index
         curr_sum = 0
         for x in A:
             curr_sum += x
@@ -32,7 +32,7 @@ class Solution:
         ans = 0
         for ix in range(len(A)):
             remainder = K - prefix[ix]
-            if prefix[ix] in seen:
+            if prefix[ix] in seen:  # handle case whereby sub array = 0 or sub array = 5
                 ans += seen[prefix[ix]]
             if prefix[ix] == 0:
                 ans += 1

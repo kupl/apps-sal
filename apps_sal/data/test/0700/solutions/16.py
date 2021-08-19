@@ -1,3 +1,5 @@
+# Function to rotate the matrix
+# 90 degree clockwise
 def rotate90Clockwise(A):
     N = len(A[0])
     for i in range(N // 2):

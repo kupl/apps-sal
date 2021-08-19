@@ -1,3 +1,4 @@
+# R=lambda:list(map(int,input().split()))
 def R(): return [int(i)for i in input().split()]
 
 

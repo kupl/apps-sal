@@ -1,4 +1,8 @@
 import string
+# string.ascii_letters
+# string.ascii_uppercase
+# string.ascii_lowercase
+# c.isalpha()
 
 
 class Solution:
@@ -9,6 +13,7 @@ class Solution:
         stack = []
         deque = collections.deque()
         for i, c in enumerate(S):
+            # if c not in string.ascii_letters: #'abcd...'
             if not c.isalpha():
                 deque.append((i, c))
             else:

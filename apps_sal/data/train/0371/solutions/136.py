@@ -39,4 +39,5 @@ Explanation:
                     if nextStop not in seen:
                         seen.add(nextStop)
                         bfs.append((nextStop, bus + 1))
+                #routes[idx] = []
         return -1

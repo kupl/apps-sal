@@ -5,7 +5,7 @@ for _ in range(K):
     S.append([L, R])
 a = [0] * (N + 1)
 d = [0] * (3 * N)
-d[0] = 1
+d[0] = 1  # d[i] = a[i+1]-a[i]
 d[1] = -1
 for i in range(1, N + 1):
     a[i] = (a[i - 1] + d[i - 1]) % 998244353

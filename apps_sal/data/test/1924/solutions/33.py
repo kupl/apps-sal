@@ -1,9 +1,15 @@
+# coding: utf-8
 from itertools import combinations, product
 import math
 import sys
+#from operator import itemgetter
 sysread = sys.stdin.readline
 read = sys.stdin.read
+#from heapq import heappop, heappush
+#from collections import defaultdict
 sys.setrecursionlimit(10**7)
+# import bisect# lower_bound etc
+#import numpy as np
 
 
 def run():

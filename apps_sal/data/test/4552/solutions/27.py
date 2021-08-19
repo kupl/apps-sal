@@ -2,6 +2,7 @@ N = int(input())
 F = [list(map(int, input().split())) for _ in range(N)]
 P = [list(map(int, input().split())) for _ in range(N)]
 
+# bit全探索
 inf = float("inf")
 ans = -inf
 for i in range(1, 2**10):

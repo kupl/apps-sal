@@ -19,10 +19,13 @@ for p in range(t):
     sub1 = ncr(n, 2) * (m - 1)
     sub2 = ncr(m, 2) * (n - 1)
     maxi = maxi - (sub1 + sub2)
+    # print(maxi)
 
     sub3 = ncr(y - 1, 2) + ncr(m - y, 2)
     sub4 = ncr(x - 1, 2) + ncr(n - x, 2)
+    # print(sub3,sub4)
     maxi = maxi - (sub3 + sub4)
+    # print(maxi)
 
     if n < m:
         temp = n
@@ -42,7 +45,9 @@ for p in range(t):
     sub5 *= 4
     sub6 *= 2
 
+    # print(sub5,sub6)
     maxi = maxi - (sub5 + sub6)
+    # print(maxi)
 
     l1 = min(n - x, y - 1)
     l2 = min(m - y, x - 1)

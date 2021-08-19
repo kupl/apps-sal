@@ -1,6 +1,10 @@
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
 
+        # i < j < k
+        # |arr[i] - arr[j]| <= a
+        # |arr[j] - arr[k]| <= b
+        # |arr[i] - arr[k]| <= c
         la = len(arr)
         cnt = 0
         for i in range(la - 2):

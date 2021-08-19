@@ -1,3 +1,4 @@
+# 1-index
 from sys import stdin
 import numpy as np
 N, C = [int(x) for x in stdin.readline().rstrip().split()]
@@ -8,5 +9,6 @@ for i in range(N):
     imos[c, s - 1:t] = 1
 
 imos = np.array(imos)
+# print(np.cumsum(imos,axis=1))
 ans = max(imos.sum(axis=0))
 print(ans)

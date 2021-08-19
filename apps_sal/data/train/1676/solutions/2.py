@@ -49,6 +49,7 @@ class NewGame2:
                             self.map[posy + py][posx + px] = pieces[res[i] - 1] + 1
                             placed += 1
 
+                # clear
                 rows = [False for i in range(0, self.N)]
                 columns = [False for i in range(0, self.N)]
 

@@ -1,3 +1,4 @@
+# cook your dish here
 MOD = 1000000007
 levels, q = input().split()
 levels = int(levels)

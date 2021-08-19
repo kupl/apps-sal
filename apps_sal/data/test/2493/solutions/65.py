@@ -1,7 +1,10 @@
+# D - 11
 
 n = int(input())
 a = list(map(int, input().split()))
 MOD = 10**9 + 7
+
+# a//b (MOD p)
 
 
 def div_mod(a, b, p):

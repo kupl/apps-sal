@@ -22,11 +22,21 @@ for i in range(n):
     pre = pre_sum[i]
     index = bisect(pre_sum, cur)
 
+    # try:
+    # 	dp[index]-=1
+    # except:
+    # 	print(i,index,cur)
     dp[index] -= 1
     if(index == 0):
         reminder[index] += cur
     else:
         reminder[index] += cur - pre_sum[index - 1]
+# 	print('index',index)
+# 	print('dp',dp)
+# 	print('reminder',reminder)
+
+# print(*dp)
+# print(*reminder)
 
 
 for i in range(1, n):

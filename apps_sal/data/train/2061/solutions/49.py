@@ -1,3 +1,4 @@
+# 3点の配置とその重心は一対一対応
 N, *PQRSTU = [int(_) for _ in open(0).read().split()]
 P, Q, R, S, T, U = [PQRSTU[_::len('PQRSTU')] for _ in range(len('PQRSTU'))]
 
@@ -9,6 +10,7 @@ def calc(x1, y1, x2, y2, x3, y3):
         gx, gy = gy, gx
     x, dx = divmod(gx, 3)
     y, dy = divmod(gy, 3)
+    #gx=3*x+dx(dx=1 or 2)
     if x == y:
         if x == 0:
             ret = 1 - (dx * dy == 1)

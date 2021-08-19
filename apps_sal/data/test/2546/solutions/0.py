@@ -12,6 +12,8 @@ for test in range(t):
     R = [r for l, r in LR]
     R.sort()
 
+    # print(LR,R)
+
     MIN = LR[n // 2][0]
     MAX = R[n // 2]
 
@@ -19,6 +21,7 @@ for test in range(t):
 
     while MIN != MAX:
         mid = (MIN + MAX + 1) // 2
+        # print(MIN,MAX,mid)
         count = 0
         money = 0
 

@@ -7,3 +7,5 @@ def sequence_sum(begin_number, end_number, step):
         print(x)
         sum = sum + x
     return sum
+
+    # your code here

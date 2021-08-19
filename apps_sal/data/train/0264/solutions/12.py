@@ -15,6 +15,9 @@ class Solution:
 
     def maxLength(self, arr: List[str]) -> int:
 
+        # N is length of arr, K is longest str item in arr
+
+        # filter and setify O(NK) time and space
         new_arr = []
         for string in arr:
             string_set = set(string)
@@ -22,6 +25,7 @@ class Solution:
                 new_arr.append(string_set)
         arr = new_arr
 
+        # recursive build O(?) with visited O(?) space
         self.visited = set()
         self.ans = 0
         self.dfs(arr, set())

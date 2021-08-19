@@ -23,6 +23,7 @@ while k > 0 and i < n:
     else:
         part += c[i][0] - c[i][1] % c[i][0]
         full += c[i][0]
+    #~ print(part, full)
     i += 1
 if k > part:
     count += 1

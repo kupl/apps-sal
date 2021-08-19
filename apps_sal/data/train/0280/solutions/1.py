@@ -17,6 +17,7 @@ class Solution:
                 count = min(count, visited[(start, i - 1)] + dfs(i, k - 1))
 
             dic[(start, k)] = count
+            # print(dic)
             return count
         for j in range(n):
             for i in range(j, -1, -1):

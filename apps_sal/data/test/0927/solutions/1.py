@@ -19,6 +19,7 @@ def main():
                     dp[i][1] = y
     id = N
     ans = []
+    # print(dp)
     while(id > 0):
         ans.append(dp[id][1])
         id -= cost[dp[id][1]]

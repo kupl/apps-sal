@@ -1,6 +1,8 @@
 def part_const(n, k, num):
     return sum(1 for x in accel_asc(n) if len(x) == k and all(v != num for v in x))
 
+# http://jeromekelleher.net/tag/integer-partitions.html
+
 
 def accel_asc(n):
     a = [0 for i in range(n + 1)]

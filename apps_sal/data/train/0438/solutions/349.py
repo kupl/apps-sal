@@ -14,6 +14,7 @@ class Solution:
             x = root(x)
             y = root(y)
             cnt -= (sz[x] == m)
+            #print(x, y, sz[x], sz[y])
             if sz[x] < sz[y]:
                 x, y = y, x
             group[y] = x
@@ -37,4 +38,5 @@ class Solution:
                 cnt += 1
             if cnt > 0:
                 latest = i + 1
+            #print(group, sz, ones, cnt)
         return latest

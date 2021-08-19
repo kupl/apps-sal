@@ -17,10 +17,13 @@ class Solution:
             job = Job(startTime[i], endTime[i], profit[i])
             jobs.append(job)
         jobs.sort(key=lambda x: x.end)
+        # for job in jobs:
+        # print(job.start, ', ', job.end, ', ', job.profit)
         dp = [0] * len(jobs)
         dp[0] = jobs[0].profit
         for i in range(1, len(jobs)):
             dp[i] = jobs[i].profit
+            # find the job whose end time is smaller than job i's start time
             index = self.findPreviousJob(jobs, i)
             if jobs[index].end <= jobs[i].start:
                 dp[i] += dp[index]
@@ -35,6 +38,7 @@ class Solution:
                 dp[i] = dp[index] + dp[i]
             '''
             dp[i] = max(dp[i - 1], dp[i])
+            # print(dp)
         return dp[len(jobs) - 1]
 
 

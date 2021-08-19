@@ -1,5 +1,5 @@
 n = int(input())
-a = sorted(map(int, input().split()))
+a = sorted(map(int, input().split()))  # List
 
 for i in range(1, len(a)):
     if (i + 1) % 2 == 0:

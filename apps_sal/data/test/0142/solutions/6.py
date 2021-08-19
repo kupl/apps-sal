@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def main():
     n, needed = list(map(int, input().split()))

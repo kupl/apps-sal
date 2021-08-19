@@ -7,6 +7,7 @@ def child(bird1, bird2):
 
 def grandchild(bird1, bird2):
     for mother in product("BW", repeat=len(bird1)):
+        # check if both birds are related to the 'created' mother magpie
         if child(bird1, mother) and child(bird2, mother):
             return True
     return False

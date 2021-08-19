@@ -47,7 +47,7 @@ class Player:
         self.x += self.dx
         self.y += self.dy
         c = self.field[self.x][self.y]
-        assert c not in '
+        assert c not in '#ED-|M' and self.x >= 0 and self.y >= 0
         if c != ' ':
             self.takeThis(c)
         self.field[self.x][self.y] = self.c

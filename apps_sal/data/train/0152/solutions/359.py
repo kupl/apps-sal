@@ -13,8 +13,11 @@ class Solution:
         l, r = 0, position[-1] - position[0]
         while l < r:
             mid = r - (r - l) // 2
+            # count_mid = count(mid)
+            # if count(mid) >= m: return r-l
             if count(mid) < m:
                 r = mid - 1
             else:
                 l = mid
+            # print(mid, count(mid))
         return r

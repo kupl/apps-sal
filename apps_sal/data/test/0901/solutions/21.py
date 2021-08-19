@@ -7,6 +7,7 @@ def solve():
     for i in range(m):
         k, *a = [int(j) for j in input().split()]
         a.sort(key=abs)
+        # print(a)
 
         if k == 1:
             print('YES')

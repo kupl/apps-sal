@@ -1,3 +1,7 @@
+# class Solution:
+#     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
+#         # max over three different situations
+#         # use memoization to avoid repeating. subproblems
 
 from functools import lru_cache
 

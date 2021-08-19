@@ -5,6 +5,8 @@ class Solution:
         :rtype: int
         """
 
+   #    public CONCISE solution....beat 95%
+
         def issubsequence(s, t):
             t = iter(t)
             return all(c in t for c in s)
@@ -33,6 +35,7 @@ class Solution:
 
         """
          def subseq(w1, w2):
+             #True if word1 is a subsequence of word2.
              i = 0
              for c in w2:
                  if i < len(w1) and w1[i] == c:

@@ -1,3 +1,4 @@
+#a = list(map (int,input().split()))
 s = str(input())
 t = str(input())
 box = []

@@ -7,6 +7,7 @@ def main():
     i = nobj - 1
     while i >= 0:
         o = obj[i]
+        #print('box: ' + str(box) + ' i = ' + str(i) + ', o = ' + str(o))
         if o <= box:
             box -= o
             ans += 1

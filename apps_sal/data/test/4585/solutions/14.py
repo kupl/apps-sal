@@ -1,3 +1,4 @@
+# 43 C - Go Home
 X = int(input())
 
 sum_i = 0

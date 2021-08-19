@@ -4,3 +4,5 @@ def simple_multiplication(number):
         return number * 8
     else:
         return number * 9
+
+    # Your code goes here

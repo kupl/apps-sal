@@ -33,8 +33,8 @@ def can_reach(n, m, grid, adir, path, dx, dy):
     for i in range(len(path)):
         x += dx[adir[int(path[i])]]
         y += dy[adir[int(path[i])]]
-        if x >= n or y >= m or x < 0 or y < 0 or grid[x][y] == '
-        return False
+        if x >= n or y >= m or x < 0 or y < 0 or grid[x][y] == '#':
+            return False
         if grid[x][y] == 'E':
             return True
 

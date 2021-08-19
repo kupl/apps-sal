@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def solve(n, k, s):
     l = [None] * (n + 1)
     l[0] = 0

@@ -5,6 +5,7 @@ for _ in range(N):
     a, b = list(map(int, input().split()))
     L.append([a, b])
 
+# 黒いマスからスタートして右下の3 * ３グリッドマスにたどり着きたい場合はこう！
 d = defaultdict()
 for i in range(N):
     for sx in range(3):
@@ -15,6 +16,7 @@ for i in range(N):
                 else:
                     d[(L[i][0] + sx, L[i][1] + sy)] += 1
 
+# print(d)
 c = Counter(list(d.values()))
 ans = [0 for _ in range(10)]
 

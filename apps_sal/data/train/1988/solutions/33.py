@@ -16,6 +16,7 @@ class Solution:
 
         queue.append((0, 'blue', 0))
         queue.append((0, 'red', 0))
+        # result[0] = 0
 
         while queue:
             item = queue.popleft()

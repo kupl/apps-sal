@@ -1,5 +1,7 @@
 from itertools import tee, islice
 
+# Didn't think it would work but brute force it is
+
 
 def sel_number(n, d):
     def okay(x):

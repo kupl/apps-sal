@@ -3,6 +3,7 @@ for query in range(q):
     s = input()
     t = input()
     p = input()
+    # s ma byc rowne t
     pointer_s = 0
     pointer_t = 0
     no = 0

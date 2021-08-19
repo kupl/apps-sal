@@ -20,6 +20,7 @@ def strs(sep=None):
 
 
 def main():
+    # lines will now contain all of the input's lines in a list
     T = int(nextline())
     for testCase in range(1, T + 1):
         n, m, k = ints()

@@ -32,11 +32,16 @@ def solve(A, B):
     c_s = 0
     c_f = 0
 
+    # Start by removing high values
     if a_h > b_h:
+        # Remove high values
         l = l - (a_h)
+        # Hide mid values under high values
         b_m = max(b_m - (a_h - b_h), 0)
     elif b_h > a_h:
+        # Remove high values
         l = l - (b_h)
+        # Hide mid values under high values
         a_m = max(a_m - (b_h - a_h), 0)
     else:
         l = l - a_h
@@ -49,10 +54,15 @@ def solve(A, B):
         c_s = c_s + l
         return (c_s, c_f)
 
+    # Hide mid values under sevens
     a_m = max(a_m - b_s, 0)
     b_m = max(b_m - a_s, 0)
 
+# Removing mid values
+
     l = l - max(a_m, b_m)
+
+    # Check how many fours can be arranged..
 
     c_f = a_f + b_f
     l = l - c_f

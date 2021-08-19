@@ -23,6 +23,8 @@ class Solution:
 
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         dp = defaultdict(dict)
+        # for i in range(len(locations)):
+        #   dp[i] = {}
 
         for j in range(0, fuel + 1):
             for i in range(len(locations)):

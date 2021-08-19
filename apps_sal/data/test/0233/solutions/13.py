@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
+#   = input()
 n = int(input())
 ans_m = 0
 ans_c = 0
@@ -22,3 +25,4 @@ else:
     print("Chris")
 
 finish = time.time()
+#print(finish - start)

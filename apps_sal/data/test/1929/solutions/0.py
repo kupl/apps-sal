@@ -28,6 +28,7 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
+############################## SOLUTION ##############################
 n, t, c = [int(x) for x in g()]
 a = [False if int(x) > t else True for x in g()]
 ct = 0

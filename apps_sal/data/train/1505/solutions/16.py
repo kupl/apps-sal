@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 l = int(input())
 a = list(map(int, input().split()))
 stack = []

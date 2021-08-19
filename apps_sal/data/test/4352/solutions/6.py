@@ -1,19 +1,34 @@
+# AliceとBobは、2人で1枚ポーカーを行います。
+# 1枚ポーカーは、トランプを用いて行う2人ゲームです。
+#
+# 今回使用するトランプでは、各カードに 1 から 13 までの数が書かれています。
+# カードの強さは、カードに書かれている数で決まり，強さの基準は以下の通りです。
+# 弱 2 < 3 < 4 < 5 < 6 < 7 < 8 < 9 < 10 < 11 < 12 < 13 < 1 強
+#
+# 1枚ポーカーは以下の手順で行います。
+#
+# 各プレイヤーは、トランプからカードを1枚選んで、自分の手札とします。
+# 両プレイヤーは、手札を見せ合います。強いカードを持っているプレイヤーが勝ちです。
+# なお、両プレイヤーの持っているカードの強さが同じ場合は引き分けです。
+# 2人の対戦を眺めていたあなたは、AliceとBobの手札を知ることができます。
+# Aliceが持っているカードに書かれている数は A、Bobが持っているカードカードに書かれている数は Bです。
+# 2人の代わりに、勝敗を判定するプログラムを作ってください。
 
 input_alice, input_bob = list(map(int, input().split()))
 
-result = 'ret'
+result = 'ret'  # 結果格納用
 
-if input_alice > input_bob:
+if input_alice > input_bob:  # Aの方がBより大きい
     if input_bob == 1:
-        result = 'Bob'
+        result = 'Bob'  # Bobがエースなので勝ち～
     else:
         result = 'Alice'
-elif input_alice < input_bob:
+elif input_alice < input_bob:   # Bの方がAより大きい
     if input_alice == 1:
-        result = 'Alice'
+        result = 'Alice'    # Aliceがエースなので勝ち～
     else:
         result = 'Bob'
 else:
-    result = 'Draw'
+    result = 'Draw'         # どっちも同じ手札なので引き分け～
 
-print(result)
+print(result)   # 結果出力～

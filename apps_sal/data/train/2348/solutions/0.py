@@ -6,6 +6,7 @@ L = int(input())
 def one_step(i):
     goal = X[i] + L
 
+    # find largest j s.t. X[j] <= X[i] + L
     low = 0
     high = N
     while high - low > 1:

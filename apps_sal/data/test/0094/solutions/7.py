@@ -1,3 +1,4 @@
+# I'm feeling greedy
 base = int(input())
 num = input()
 

@@ -9,6 +9,7 @@ class Solution:
         dp[0] = jobs[0][2]
 
         def search(target):
+            # larger than or equal to target
             l, r = 0, len(jobs)
             while l < r:
                 mid = l + (r - l) // 2
@@ -19,8 +20,11 @@ class Solution:
 
             return l
 
+        # print(jobs)
+
         for i in range(1, len(jobs)):
             start, end, profit = jobs[i]
+            # search for previous jobs ends before current job
             idx = search(start)
             if jobs[idx][1] == start:
                 prev_best = dp[idx]
@@ -29,6 +33,10 @@ class Solution:
             else:
                 prev_best = 0
 
+            # print(start, idx, jobs[idx][1], prev_best)
+
             dp[i] = max(dp[i - 1], profit + prev_best)
+
+            # print(dp)
 
         return dp[-1]

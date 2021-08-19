@@ -244,6 +244,8 @@ for _ in range(t):
     saved = [None] * n
     for i, x in enumerate(s):
         saved[i] = s.bisect_right(x + k) - s.bisect_left(x)
+    # print(s)
+    # print(saved)
     base = 1
     while base < n:
         base *= 2
@@ -268,5 +270,6 @@ for _ in range(t):
 
     m = 0
     for i in range(n):
+        #print(i,s[i],saved[i] + query(i+saved[i], n))
         m = max(m, saved[i] + query(i + saved[i], n))
     print(m)

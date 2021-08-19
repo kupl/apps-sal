@@ -17,6 +17,7 @@ def main():
     for i in range(len(table)):
         ans += (i * table[i]) % mod
     ans %= mod
+    # print(table)
     print(ans)
 
 

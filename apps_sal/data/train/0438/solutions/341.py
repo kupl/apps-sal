@@ -25,6 +25,8 @@ class Solution:
                     if right[0] == m:
                         ans = max(ans, step - 1)
 
+                # print(s, step, left, right)
+
                 if s == m:
                     ans = max(ans, step)
 
@@ -36,6 +38,7 @@ class Solution:
                 if right:
                     d[a + right[0]] = [s, step]
 
+                # print(step, d)
             step += 1
 
         return ans

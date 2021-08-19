@@ -13,9 +13,9 @@ class Solution:
                     curr = w
                 else:
                     curr += w
-            if res > D:
+            if res > D:  # !!here use >, since mid is impossible to meet the requireent
                 left = mid
-            else:
+            else:  # !!here means <=, since there might be smaller mid
                 right = mid
 
         res = 1

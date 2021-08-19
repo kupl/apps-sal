@@ -1,4 +1,5 @@
 def communication_module(packet):
+    # your code
     calc = 0
     if packet[4:8] == "0F12":
         calc = int(packet[8:12]) + int(packet[12:16])

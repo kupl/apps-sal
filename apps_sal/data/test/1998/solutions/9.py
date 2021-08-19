@@ -28,7 +28,7 @@ def solve():
     """
     n, a, b, k = read_ints()
     s = input().strip()
-    segments = []
+    segments = []  # (length, start)
     maximum_count = 0
     for start, vals in groupby(enumerate(s), key=lambda p: p[1]):
         val = next(vals)

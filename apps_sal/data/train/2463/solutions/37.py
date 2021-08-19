@@ -9,6 +9,7 @@ class Solution:
             i += 1
 
         if i == 0 or i == n - 1:
+            # peak at beginning or end
             return False
 
         while i < n - 1 and A[i] > A[i + 1]:

@@ -16,29 +16,34 @@ def amazon_check_mate(k, q):
                          [1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1],
                          [0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0]])
 
+    # Determine xy positions
     qx, qy = ord(q[0]) - 97, int(q[1]) - 1
     kx, ky = ord(k[0]) - 97, int(k[1]) - 1
+    # Place king on superboard
     board[max(0, 6 + qy - ky):9 + qy - ky, max(0, 6 - qx + kx):9 - qx + kx] = -2
+    # Crop superboard
     board = board[qy:qy + 8, 7 - qx:15 - qx]
 
-    if abs(qx - kx) > 1 or abs(qy - ky) > 1:
+    # Fix board due to king's position
+    if abs(qx - kx) > 1 or abs(qy - ky) > 1:  # King not securing queen
         board[board == -1] = 0
         board[7 - qy, qx] = 2
-    if qy == ky:
+    if qy == ky:  # Blocking horizontal
         if kx + 2 - (qx > kx) * 4 >= 0:
             board[7 - ky, kx + 2 - (qx > kx) * 4::1 - (qx > kx) * 2] = 1
-    elif qx == kx:
+    elif qx == kx:  # Blocking vertical
         if 7 - ky - 2 + (qy > ky) * 4 >= 0:
             board[7 - ky - 2 + (qy > ky) * 4::-1 + (qy > ky) * 2, kx] = 1
-    elif kx + ky == qx + qy:
+    elif kx + ky == qx + qy:  # King blocking backdiag (\)
         newb = board[7 - ky::1 - (qx > kx) * 2, kx::1 - (qx > kx) * 2]
         newb[newb == 0] = 1
         board[7 - ky::1 - (qx > kx) * 2, kx::1 - (qx > kx) * 2] = newb
-    elif kx - ky == qx - qy:
+    elif kx - ky == qx - qy:  # King blocking forwdiag (/)
         newb = board[7 - ky::-1 + (qx > kx) * 2, kx::1 - (qx > kx) * 2]
         newb[newb == 0] = 1
         board[7 - ky::-1 + (qx > kx) * 2, kx::1 - (qx > kx) * 2] = newb
 
+    # Count answers
     ans = [0, 0, 0, 0]
     ansb = numpy.empty(shape=(8, 8), dtype=object)
     for nx in range(8):
@@ -64,7 +69,7 @@ def amazon_check_mate(k, q):
                 ans[0] += 1
                 ansb[7 - ny, nx] = "x"
             else:
-                ansb[7 - ny, nx] = " "
+                ansb[7 - ny, nx] = " "  # 2 or -2, incorrect starting positions
     print(k, q)
     print(board)
     print(ans)

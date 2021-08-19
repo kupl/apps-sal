@@ -13,6 +13,8 @@ for x in range(1, 53, 1):
 
 
 class PlayingCards:
+    # Takes a String containing a message, and returns an array of Strings representing
+    # a deck of playing cards ordered to hide the message, or None if the message is invalid.
     def encode(self, message):
         mlen = len(message)
         rem = 0
@@ -33,6 +35,8 @@ class PlayingCards:
             rem = rem % facs[j]
         return output_cards
 
+    # Takes an array of Strings representing a deck of playing cards, and returns
+    # the message that is hidden inside, or None if the deck is invalid.
     def decode(self, deck):
         if len(deck) != 52:
             return None

@@ -1,5 +1,6 @@
 from collections import Counter
 N = int(input())
+#C = sorted(list(Counter(map(int, input().split())).values()))
 C = list(Counter(map(int, input().split())).values())
 C.sort()
 

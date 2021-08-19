@@ -6,6 +6,7 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
+# L と 2 ** n の差
 L = ir()
 length = L.bit_length()
 edges = []
@@ -21,3 +22,5 @@ for i in range(length - 1):
 print((length, len(edges)))
 for e in edges:
     print((*e))
+
+# 56

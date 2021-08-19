@@ -7,6 +7,7 @@ def f(c): return ord(c) - ord("a")
 
 for i, c in enumerate(s):
     alpha[f(c)].append(i)
+# print(alpha)
 idx = -1
 roop = 0
 for c in t:

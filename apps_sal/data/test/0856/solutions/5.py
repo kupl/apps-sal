@@ -1,7 +1,9 @@
+#from collection import defaultdict as dd
 import sys
 input = sys.stdin.readline
 t = int(input())
 while t:
+    # n=int(input())
     n, k = map(int, input().split())
     l = list(map(int, input().split()))
     mx = max(l)

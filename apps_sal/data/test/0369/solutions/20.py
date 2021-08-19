@@ -1,3 +1,4 @@
+#!python3
 
 from collections import deque
 
@@ -5,6 +6,7 @@ from collections import deque
 def LI(): return list(map(int, input().split()))
 
 
+# input
 N, M = LI()
 S = input()
 
@@ -14,6 +16,7 @@ INF = 10 ** 6
 def main():
     w = [(INF, INF)] * (N + 1)
     w[0] = (0, 0)
+    # (cost, index)
     dq = deque([(0, 0)])
     for i in range(1, N + 1):
         if i - dq[0][1] > M:

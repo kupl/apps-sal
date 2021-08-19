@@ -27,6 +27,9 @@ for _ in range(int(input())):
     a //= g
     m //= g
 
+    # now just find such that 0 <= x < m & gcd(a + x, m) = 1
+    # how many numbers in [a, a + m) are coprime to m
+
     f = list(factor(m))
 
     tot = 0

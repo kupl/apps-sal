@@ -1,4 +1,6 @@
 import sys
+#range = xrange
+#input = raw_input
 
 n = int(input())
 k1, *A = [int(x) for x in input().split()]
@@ -30,6 +32,7 @@ while QA or QB:
             for b in B:
                 counterB[i - b] -= 1
                 if not counterB[i - b]:
+                    # assert(DPB[i-b]==None)
                     DPB[i - b] = False
                     QB.append((i - b) % n)
 
@@ -45,6 +48,7 @@ while QA or QB:
             for a in A:
                 counterA[i - a] -= 1
                 if not counterA[i - a]:
+                    # assert(DPA[i-a]==None)
                     DPA[i - a] = False
                     QA.append((i - a) % n)
 

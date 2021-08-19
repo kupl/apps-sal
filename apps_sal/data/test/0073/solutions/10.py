@@ -4,6 +4,7 @@ res = 0
 vc = v1
 while read < c:
     back = min(read, l)
+    #read -= back
     read += vc - back
     vc = min(vc + a, v2)
     res += 1

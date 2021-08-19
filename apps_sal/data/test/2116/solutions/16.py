@@ -1,4 +1,5 @@
 from sys import stdin as fin
+# fin = open("ecr12b.in", "r")
 
 
 class node:
@@ -26,6 +27,9 @@ class node:
 n, m, k = map(int, fin.readline().split())
 arr = list(map(int, fin.readline().split()))
 
+# p = [None] * k
+# for i in range(k):
+#     p[arr[i] - 1] = i
 
 cur = line = node()
 for num in arr:

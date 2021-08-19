@@ -1,6 +1,8 @@
+# cook your dish here
 a = int(input())
 p = list(map(int, input().split()))
 for n in p:
+    # n=int(input())
     a = [1]
     b = [2]
     c = [4]
@@ -13,6 +15,7 @@ for n in p:
         c.append(c[i] + 6 * (j))
         d.append(d[i] + 3 * (j))
         j *= 2
+        # k+
     print(*a)
     print(*b)
     print(*c)

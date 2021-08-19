@@ -5,6 +5,8 @@ for cases in range(ncases):
     testlist = list(map(int, input().split()))
     if not testlist:
         continue
+    # if len(testlist) != nlen:
+    #    continue
     mydict = set()
     beautiful = True
     for a in testlist:

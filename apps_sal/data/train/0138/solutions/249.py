@@ -1,5 +1,6 @@
 class Solution:
 
+    # space optimized
     def getMaxLen(self, nums: List[int]) -> int:
 
         ans = 0
@@ -28,6 +29,7 @@ class Solution:
 
         return ans
 
+    # original O(n) space
     def getMaxLen1(self, nums: List[int]) -> int:
 
         ans = 0

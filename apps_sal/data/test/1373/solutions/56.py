@@ -1,4 +1,7 @@
+#import math
+#import collections
 n, k = map(int, input().split())
+#A = list(map(int, input().split( )))
 mod = 10**9 + 7
 ans = 0
 l, h = 0, 0

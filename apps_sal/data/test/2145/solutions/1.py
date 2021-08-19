@@ -1,3 +1,5 @@
+# Contest: Educational Codeforces Round 76 (Rated for Div. 2) (https://codeforces.com/contest/1257)
+# Problem: B: Magic Stick (https://codeforces.com/contest/1257/problem/B)
 
 def rint():
     return int(input())

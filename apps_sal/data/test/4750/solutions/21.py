@@ -1,3 +1,4 @@
+# map(int,input().split(" "))
 
 t = int(input())
 

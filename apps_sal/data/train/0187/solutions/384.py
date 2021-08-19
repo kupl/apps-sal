@@ -13,4 +13,9 @@ class Solution:
             w = max(x - 4, 0)
             i += 1
 
+#         while w > 0:
+#             pr += min(w, 4) * bc - rc
+#             cnt += 1
+#             if pr > max_pr: max_pr, max_cnt = pr, cnt
+#             w = max(w - 4, 0)
         return max_cnt if max_pr > 0 else -1

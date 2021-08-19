@@ -33,6 +33,7 @@ for _ in range(II()):
                 rot(j - 2)
                 ans += [j - 1]
                 j -= 2
+            # print(i,aa,bb,ans)
 
     if bb[-1] == aa[-1]:
         print(len(ans))

@@ -35,6 +35,8 @@ def resolve():
 
     for i in range(1, K + 1):
         if i <= N - K + 1:
+            # 青玉をi個の1個以上含むグループに分ける
+            # 赤玉は青玉の隙間に1個ずつ置いた後、0個以上のグループに分ける
             ans = combMod(K - 1, i - 1, MOD) * combMod(N - K + 1, i, MOD) % MOD
             print(ans)
         else:

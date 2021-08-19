@@ -19,12 +19,14 @@ class Solution:
             times.append([startTime[i], endTime[i], profit[i]])
 
         times.sort(key=lambda it: it[1])
+        # print(times)
 
         dp[0] = times[0][2]
 
         for i in range(1, n):
             prof = times[i][2]
             binInd = self.binsearch(times, times[i][0], -1, i)
+            # print(binInd)
             if binInd != -1:
                 prof += dp[binInd]
 

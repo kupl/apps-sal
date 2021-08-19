@@ -1,6 +1,9 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
+        # 4 gondalas, each gondola can sit up to 4 people
+        # rotates counterclockwise, costs 'runningCost'
 
+        # customers[i] is the number of new customers arriving before the ith rotation
         if 4 * boardingCost <= runningCost:
             return -1
 
@@ -14,9 +17,11 @@ class Solution:
                     remain = 0
                     customers[i] = c
                 else:
+                    # get new remain
                     remain -= (4 - c)
                     customers[i] = 4
             else:
+                # collect remain
                 remain += (c - 4)
                 customers[i] = 4
 

@@ -1,4 +1,5 @@
 
+# in in[i][0], cost for if 1st sqaure is balck is stored.
 n = int(input())
 a = [[[0 for j in range(n)] for i in range(n)] for k in range(4)]
 in1 = [[0, 0] for i in range(4)]
@@ -6,11 +7,13 @@ in1 = [[0, 0] for i in range(4)]
 for k in range(4):
     for i in range(n):
         s = input()
+        # print('ae')
         for j in range(n):
             a[k][i][j] = int(s[j])
             if(int(s[j]) == (i + j) % 2):
                 in1[k][1] += 1
     in1[k][0] = n * n - in1[k][1]
+    # k,in1[k][0])
     if(k != 3):
         s = input()
 min1 = 10000000000

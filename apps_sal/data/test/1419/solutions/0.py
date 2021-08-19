@@ -36,6 +36,7 @@ def solve():
     k = int(input())
     s = input()
 
+    # binary-search
     top = len(s)
     btm = 0
 

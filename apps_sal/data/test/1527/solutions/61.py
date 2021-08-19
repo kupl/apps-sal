@@ -34,8 +34,8 @@ dist = [[-1] * w for _ in range(h)]
 start_list = []
 for i in range(h):
     for j in range(w):
-        if maze[i][j] == "
-        dist[i][j] = 0
+        if maze[i][j] == "#":
+            dist[i][j] = 0
         else:
             start_list.append([i, j])
 dist_copy = deepcopy(dist)

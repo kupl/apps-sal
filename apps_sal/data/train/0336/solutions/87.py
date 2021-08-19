@@ -10,9 +10,11 @@ class Solution:
                 if count_t[s[i]] == 0:
                     del count_t[s[i]]
 
+        # print(count_t)
         ans = 0
 
         for key, value in count_t.items():
+            # print(value)
             ans += value
 
         return ans

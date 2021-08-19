@@ -24,6 +24,8 @@ for testcases in range(Q):
     C = Counter(s) + Counter(p)
     CT = Counter(t)
 
+    # print(s,p,t,C,CT)
+
     for ct in CT:
         if CT[ct] > C[ct]:
             print("NO")

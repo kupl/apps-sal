@@ -1,3 +1,5 @@
+# Legends Always Come Up with Solution
+# Author: Manvir Singh
 
 import os
 from io import BytesIO, IOBase
@@ -44,6 +46,7 @@ def main():
         print("".join(s))
 
 
+# region fastio
 BUFSIZE = 8192
 
 

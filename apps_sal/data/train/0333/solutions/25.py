@@ -20,4 +20,4 @@ class Solution:
                     seen[v] = True
                     q.append((v, d + 1))
             if adj[x]:
-                adj[x] = []
+                adj[x] = []  # remove edges

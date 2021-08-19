@@ -1,5 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
+    # arr = list(map(int, input().split()))
+    # n, m = map(int, input().split())
     arr = []
     x = 1
     while n > 0:

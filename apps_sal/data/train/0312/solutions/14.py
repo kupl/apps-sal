@@ -7,7 +7,9 @@ class Solution:
     def shortestSubarray(self, A: List[int], k: int) -> int:
         shortest = math.inf
         sum = 0
+        # priority queue to store tuples (partial_sum, index_last_element)
         pq = []
+        # we iterate over array
         for counter, value in enumerate(A):
             sum += value
             if sum >= k:

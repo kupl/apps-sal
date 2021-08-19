@@ -35,6 +35,8 @@ def is_possible_divide(heap, k):
                     popped.append((value, count))
         for val in popped:
             heappush(heap, val)
+        # heap.extend(popped)
+        # heapify(heap)
         return is_possible_divide(heap, k)
 
 
@@ -43,6 +45,7 @@ class Solution:
         if len(nums) % k != 0:
             return False
         heap = list(Counter(nums).items())
+        # heap = create_pairs(nums)
         print(heap)
         heapify(heap)
         return is_possible_divide(heap, k)

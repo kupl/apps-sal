@@ -17,9 +17,9 @@ for p in itertools.permutations([(0, 1), (0, -1), (1, 0), (-1, 0)], r=4):
     x = sx
     for i in s:
         dy, dx = p[i]
-        if 0 <= y + dy < n and 0 <= x + dx < m and maze[y + dy][x + dx] != '
-        y += dy
-        x += dx
+        if 0 <= y + dy < n and 0 <= x + dx < m and maze[y + dy][x + dx] != '#':
+            y += dy
+            x += dx
         else:
             break
         if y == ey and x == ex:

@@ -1,3 +1,4 @@
+# ABC133 A
 
 N, A, B = list(map(int, input().split()))
 if N * A <= B:

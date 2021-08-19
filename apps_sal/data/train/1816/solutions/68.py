@@ -32,6 +32,7 @@ class Solution:
                 if inside_q >= 3:
                     result.add(name)
                     break
+                # print(q)
 
         result = list(result)
         result.sort()

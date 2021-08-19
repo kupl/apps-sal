@@ -9,6 +9,7 @@ class Solution:
                 cnt[x] -= 1
 
         ans = 0
+        # print(cnt)
         for x in cnt.values():
             ans += abs(x)
 

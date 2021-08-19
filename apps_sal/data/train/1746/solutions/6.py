@@ -1,3 +1,4 @@
+# only_show_wrong()
 dir_dict = {'^': (-1, 0), 'v': (1, 0), '<': (0, -1), '>': (0, 1)}
 
 
@@ -49,6 +50,7 @@ def rpg(field, actions):
             field[target_loc[0]][target_loc[1]] = ' '
 
         else:
+            # enemy will attack!
             if action == 'F':
                 if target_tile in ['C', 'K', 'H']:
                     bag.append(target_tile)
@@ -84,6 +86,7 @@ def rpg(field, actions):
                 hlh = 3
                 bag.remove(action)
 
+            # check if enemy exists
             for d in dir_dict:
                 check_loc = (player_loc[0] + dir_dict[d][0], player_loc[1] + dir_dict[d][1])
                 if check_loc[0] >= 0 and check_loc[0] < height and check_loc[1] >= 0 and check_loc[1] < width:

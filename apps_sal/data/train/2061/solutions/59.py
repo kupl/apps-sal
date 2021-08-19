@@ -1,3 +1,4 @@
+# URL : https://atcoder.jp/contests/arc109/tasks/arc109_d
 T = int(input())
 for _ in range(T):
     ax, ay, bx, by, cx, cy = list(map(int, input().split()))

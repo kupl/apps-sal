@@ -7,6 +7,17 @@ class TreeNode:
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
 
+        # max sum path
+
+        # # O(N^2)
+        # def build_tree(root_id):
+        #     node = TreeNode(informTime[root_id])
+        #     for idx, m in enumerate(manager):
+        #         if m == root_id:
+        #             node.children.append(build_tree(idx))
+        #     return node
+
+        # O(N)
         nodes = []
 
         for idx, _ in enumerate(manager):
@@ -16,8 +27,10 @@ class Solution:
             if idx != headID:
                 nodes[m].children.append(nodes[idx])
 
+        # root
         root = nodes[headID]
 
+        # O(N) time, O(1) space
         path_sum = 0
         max_path_sum = 0
 

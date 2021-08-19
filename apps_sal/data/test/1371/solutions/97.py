@@ -12,6 +12,8 @@ for i in range(s + 1):
     elif 0 < i < 3:
         dp[i] = 0
         continue
+    # for j in range(i-3 + 1):
+    #     dp[i] += (dp[j]) % mod
     dp[i] = (dp[i - 1] + dp[i - 3]) % mod
 
 print((dp[s] % mod))

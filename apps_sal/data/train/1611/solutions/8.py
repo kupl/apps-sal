@@ -6,6 +6,8 @@ def test_call(current_function: str, functions: dict, stack: set):
     max_n = 0
 
     stack.add(current_function)
+    # print("    " * len(stack), current_function, ' ', functions,
+    #        current_function in stack, sep='')
     for next_funcion in functions[current_function]:
         if next_funcion in stack:
             min_n = min(min_n, 1)
@@ -33,7 +35,7 @@ def test_call(current_function: str, functions: dict, stack: set):
 def read_function(s: str):
     """
     return:
-        (function_
+        (function_#, [functions called])
     """
     i = 0
     while (s[i] in "0123456789"):
@@ -41,6 +43,8 @@ def read_function(s: str):
 
     function_no = int(s[0:i])
     function_calls = []
+
+    #print("Reading", function_no)
 
     while 1:
         i = s.find('P', i)
@@ -51,6 +55,7 @@ def read_function(s: str):
         while i < len(s) and s[i] in "0123456789":
             i += 1
         nume = i
+        #print("    call from", nums, "to", nume)
         function_call = int(s[nums:nume])
         function_calls.append(function_call)
 
@@ -71,6 +76,7 @@ def parse_program(program_s: str):
         func_no, fun_calls = read_function(program_s[funs:fune])
         functions[func_no] = fun_calls
 
+    #print("Finish parsing")
     i = 0
     min_n, max_n = UPPER_BOUND, 0
 
@@ -79,6 +85,8 @@ def parse_program(program_s: str):
         next_eof = program_s.find('q', i)
         if (next_sof < 0):
             next_sof = len(program_s)
+
+        #print("WTF", next_sof, next_eof)
 
         while 1:
             i = program_s.find('P', i)
@@ -89,6 +97,7 @@ def parse_program(program_s: str):
             while i < len(program_s) and program_s[i] in "0123456789":
                 i += 1
             nume = i
+            #print("Calling", nums, nume)
             function_call = int(program_s[nums:nume])
             c_min_n, c_max_n = test_call(function_call, functions, set())
             if c_min_n < min_n:

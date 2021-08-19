@@ -1,3 +1,19 @@
+# import math
+# N=10010
+# def solve(ar):
+# 	dp=[0 for i in range(N+20)]
+# 	for i in ar:
+# 		x=math.sqrt(i)
+# 		for j in range(2,x+1):
+# 			if(i%j==0):
+# 				dp[i]=max(dp[i],max(dp[j]+1,dp[i//j]+1))
+#         for j in range(2,x+1):
+#         	if(i%j==0):
+#         		dp[j]=dp[i//j]=dp[i]
+#     m=1
+#     for i in range(1,10010):
+#     	m=max(m,dp[i])
+#     return m
 import math
 N = 100100
 

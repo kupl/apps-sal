@@ -1,13 +1,16 @@
+# mod,nについての制約は自分でいかに記入する
 mod = 10**9 + 7
 
 
 def find_power(n, mod):
+    # 0!からn!までのびっくりを出してくれる関数(ただし、modで割った値に対してである）
     powlist = [0] * (n + 1)
     powlist[0] = 1
     powlist[1] = 1
     for i in range(2, n + 1):
         powlist[i] = powlist[i - 1] * i % (mod)
     return powlist
+ # あるかずxのn乗をmodで割ったあまりを返す関数pow_cal(x,n,mod)
 
 
 def pow_cal(x, n, mod):
@@ -23,6 +26,7 @@ def pow_cal(x, n, mod):
 
 
 def find_inv_power(n, mod):
+    # 0!からn!までの逆元を素数modで割ったあまりリストを作る関数
     c = 1
     uselist = [0 for i in range(n + 1)]
     for i in range(1, n + 1):

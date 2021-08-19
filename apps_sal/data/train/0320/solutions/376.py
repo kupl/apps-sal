@@ -16,9 +16,12 @@ class Solution:
                 nums = [n // 2 for n in nums]
             return ops
 
+        # print(nums)
         while sum(nums):
             ops += op0()
+            # print(f\"op0: {nums}, ops={ops}\")
             if sum(nums):
                 ops += op1()
+                # print(f\"op1: {nums}, ops={ops}\")
 
         return ops

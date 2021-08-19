@@ -16,6 +16,8 @@ def getAllPrimeFactors(n):
                 number += 1
     return result
 
+  # your code here
+
 
 def getUniquePrimeFactorsWithCount(n):
     pf = getAllPrimeFactors(n)

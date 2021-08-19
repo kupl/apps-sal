@@ -32,5 +32,7 @@ for i in range(a[1]):
     for m in range(11):
         lk = (m + t) % (cc + 1)
         ans += (count[m] * lk)
+        # print(m,lk,ans)
     anss.append(str(ans))
 print("\n".join(anss))
+# break

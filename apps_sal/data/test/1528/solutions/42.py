@@ -1,4 +1,5 @@
-N, X = list(map(int, input().split()))
+N, X = list(map(int, input().split()))  # S=2**(N+2)-3
+# P=2**(N+1)-1
 
 
 def solve(N, X):

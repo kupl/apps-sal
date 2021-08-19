@@ -26,7 +26,7 @@ def prim(Edges, V):
     heap = []
     included[0] = True
     for v, d in Edges[0]:
-        heapq.heappush(heap, (d, 0, v))
+        heapq.heappush(heap, (d, 0, v))  # (dist, pre_v, cur_v)
     while heap:
         d, pre_v, cur_v = heapq.heappop(heap)
         if included[cur_v]:

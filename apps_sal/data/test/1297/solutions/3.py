@@ -4,6 +4,7 @@ count = 0
 for i in range(len(s) - 1):
     if s[i + 1] != s[i]:
         piece += s[i]
+        # print(piece)
         if len(piece) % 2 == 0:
             count += 1
         piece = ''

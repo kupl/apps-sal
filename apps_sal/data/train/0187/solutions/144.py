@@ -23,4 +23,6 @@ class Solution:
                 max_profit = profit
                 rot = i
 
+            # print(i,profit,count)
+
         return rot

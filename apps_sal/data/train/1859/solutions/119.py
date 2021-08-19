@@ -1,5 +1,6 @@
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
+        # dp(i, j) = number of squares that have bottom right corner at x1, y1
 
         m = len(matrix)
         n = len(matrix[0])

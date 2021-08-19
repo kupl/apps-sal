@@ -30,6 +30,7 @@ for _ in range(t):
                 break
 
         if ans == -1:
+            # curr is a prime number
             print(curr)
         else:
             print(i)

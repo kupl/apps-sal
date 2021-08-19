@@ -35,5 +35,6 @@ def stdpr(x): return stdout.write(str(x))
 mod = 1000000007
 
 
+# main code
 n = ii()
 print(25)

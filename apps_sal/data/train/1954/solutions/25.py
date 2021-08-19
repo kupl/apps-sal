@@ -3,6 +3,8 @@ class Solution:
         p_skills = [set() for _ in people]
         for i, p in enumerate(people):
             p_skills[i] = set(p)
+        # people.sort(key=lambda x: -len(set(x) & set(req_skills)))
+        # # print(people)
         res = [0] * 17
 
         def dfs(idx=0, path=[], has=set()):

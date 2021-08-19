@@ -36,12 +36,14 @@ def dfs(v, p):
 
 
 dfs(0, -1)
+# print(size)
 for v in range(n):
     if idx[v] < len(g[v]) and g[v][idx[v]] == par[v]:
         idx[v] += 1
 acc = [0] * (n + 10)
 ans = [n * (n + 1) // 2] * (n + 1)
 for col in range(1, n + 1):
+    # print(h[col])
     acc[-1] = 0
     p = [-1]
     for v in h[col]:
@@ -56,9 +58,11 @@ for col in range(1, n + 1):
                 idx[v] += 1
             ans[col] -= q * (q + 1) // 2
             acc[v] = 0
+            # print(v, q)
             p.append(v)
         else:
             p.append(v)
     q = n - acc[-1]
+    # print(-1, q)
     ans[col] -= q * (q + 1) // 2
 print(*ans[1:], sep='\n')

@@ -1,3 +1,5 @@
+# 偶数a ^ (a + 1)　は必ず1になる
+# 従い、0 〜 4の倍数 - 1でXORは0になる
 
 import sys
 readline = sys.stdin.readline

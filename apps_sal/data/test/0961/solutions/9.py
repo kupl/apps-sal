@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 n = int(input())
 a = input()
 b = list(map(int, a.strip().split()))

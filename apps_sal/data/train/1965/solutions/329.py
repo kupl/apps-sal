@@ -11,7 +11,7 @@ class Solution:
                 self.union(uf_b, edge[1] - 1, edge[2] - 1)
             elif edge[0] == 1:
                 cnt += self.union(uf_a, edge[1] - 1, edge[2] - 1)
-            else:
+            else:  # edge[0] == 2
                 cnt += self.union(uf_b, edge[1] - 1, edge[2] - 1)
         if not self.connected(uf_a) or not self.connected(uf_b):
             return -1

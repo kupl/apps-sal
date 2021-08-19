@@ -13,7 +13,7 @@ class Solution:
 
         def validPos(loc):
             i, j = loc
-            return (m > i >= 0 <= j < n) and grid[i][j] != '
+            return (m > i >= 0 <= j < n) and grid[i][j] != '#'
 
         def heuristic(box):
             return abs(target[0] - box[0]) + abs(target[1] - box[1])

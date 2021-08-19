@@ -10,4 +10,5 @@ for v in p:
         m1 = m2
         m2 = v
         s[m2 - 1] = -1
+    # print(v, m1, m2, max(s))
 print(s.index(max(s)) + 1)

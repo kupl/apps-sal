@@ -82,6 +82,7 @@ for i in range(1, n - 1):
                 temp += 1
                 stars[i][j + temp] = True
 
+##print(*stars, sep = '\n')
 
 if all_true(stars, n, m):
     print(ans)

@@ -22,11 +22,16 @@ class Solution:
 
         for i in range(n):
             for j in range(m):
+                # print(i,j)
                 val = grid[i][j]
+                # parent: i-1,j and i,j-1
                 if i > 0 and j > 0 and grid[i - 1][j] == grid[i][j - 1] == val and find((i - 1, j)) == find((i, j - 1)):
+                    # print(find((i-1,j)),find((i,j-1)))
                     return True
                 for ni, nj in [(i - 1, j), (i, j - 1)]:
                     if 0 <= ni < n and 0 <= nj < m and grid[ni][nj] == val:
+                        # print((i,j),(ni,nj),val,grid[ni][nj])
                         union((i, j), (ni, nj))
+                        # print(find((ni,nj)))
 
         return False

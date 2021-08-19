@@ -1,3 +1,6 @@
+# for _ in range(int(input())):
+#     n=int(input())
+# print((3**38)//10**18)
 a = [3**i for i in range(39)]
 for _ in range(int(input())):
     n = int(input())

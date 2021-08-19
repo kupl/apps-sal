@@ -16,3 +16,21 @@ class Solution:
             return -1
         else:
             return res
+        # n = len(A)
+        # dp = [[0]*n for _ in range(n)]
+        # res = float('inf')
+        # for i in range(len(A)):
+        #     if i == 0:
+        #         dp[0][i] = A[i]
+        #     else:
+        #         dp[0][i] = dp[0][i-1] + A[i]
+        #     if dp[0][i] >= K:
+        #         res = min(res, i+1)
+        # for i in range(1,n):
+        #     for j in range(i,n):
+        #         dp[i][j] = dp[i-1][j] - A[i-1]
+        #         if dp[i][j] >= K:
+        #             res = min(res, j-i+1)
+        # if res == float('inf'):
+        #     return -1
+        # return res

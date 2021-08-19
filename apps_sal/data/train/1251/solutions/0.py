@@ -25,6 +25,7 @@ def _a(k, *v):
 def _i(conv):
     for line in sys.stdin:
         yield conv(line)
+##################################################################
 
 
 n = _r(int)

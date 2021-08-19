@@ -2,6 +2,7 @@ from sys import stdin
 
 
 def main():
+    # 入力
     readline = stdin.readline
     n = int(readline())
     a = list(map(int, readline().split()))

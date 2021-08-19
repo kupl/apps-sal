@@ -1,3 +1,4 @@
+# Oct 5, while preparing for Microsoft
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
         if not arr:

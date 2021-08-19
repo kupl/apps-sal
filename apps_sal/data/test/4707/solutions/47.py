@@ -1,3 +1,4 @@
+# 第2問　ABC081A
 number = list(map(int, input()))
 a = 0
 for i in number:

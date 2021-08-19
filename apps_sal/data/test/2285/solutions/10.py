@@ -17,6 +17,7 @@ for i in range(n):
                 for i in range(len(list2)):
                     res += '0' * (4 - len(list2[i])) + list2[i] + ":"
                 print(res[0:len(res) - 1])
+                # print(str)
 
             else:
                 str = str.replace("::", ":0000" * (10 - len(list)))
@@ -25,6 +26,7 @@ for i in range(n):
                 for i in range(len(list2)):
                     res += '0' * (4 - len(list2[i])) + list2[i] + ":"
                 print(res[0:len(res) - 1])
+                # print(str)
         else:
             str = str.replace("::", ":0000:" * (9 - len(list)))
             str = str.replace("::", ":")
@@ -33,6 +35,7 @@ for i in range(n):
             for i in range(len(list2)):
                 res += '0' * (4 - len(list2[i])) + list2[i] + ":"
             print(res[0:len(res) - 1])
+          #  print(str)
 
     else:
         res = ""

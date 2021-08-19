@@ -6,6 +6,8 @@ class Solution:
         n = len(A)
         S = sum(A)
         for a in A:
+            #print('a', a)
+            #print('ksums', ksums)
             nksums = [[0]]
             for k in range(1, min(len(ksums), maxk) + 1):
                 row = (ksums[k] if k < len(ksums) else set()) | {a + x for x in ksums[k - 1]}
@@ -15,5 +17,6 @@ class Solution:
                 nksums.append(row)
 
             ksums = nksums
+            #print('ksums*', ksums)
 
         return False

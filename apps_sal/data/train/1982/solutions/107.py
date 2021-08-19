@@ -6,6 +6,7 @@ class Solution:
             y = dislike[1]
             graph[x - 1].append(y - 1)
             graph[y - 1].append(x - 1)
+        # print(graph)
 
         parent = list(range(N))
 

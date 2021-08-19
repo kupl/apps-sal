@@ -6,6 +6,8 @@ from functools import cmp_to_key
 import heapq
 sys.setrecursionlimit(100000)
 
+# input functions for me
+
 
 def rsa(sep=''):
     if sep == '':
@@ -28,6 +30,7 @@ def ria(sep=''):
 def ri(): return int(input())
 def rd(): return float(input())
 def rs(): return input()
+##
 
 
 class union_find:

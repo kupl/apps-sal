@@ -1,6 +1,8 @@
 r1, c1, r2, c2 = list(map(int, input().split()))
 mod = int(1e9 + 7)
 
+# f(i,j) = cmb(i+j,i)
+
 
 def cmb(n, r, mod=mod):
     if (r < 0 or r > n):
@@ -10,9 +12,10 @@ def cmb(n, r, mod=mod):
 
 
 def init_cmb(Nmax):
-    g1 = [1, 1]
-    g2 = [1, 1]
-    inverse = [0, 1]
+    # mod = 10**9+7 #出力の制限
+    g1 = [1, 1]  # 元テーブル
+    g2 = [1, 1]  # 逆元テーブル
+    inverse = [0, 1]  # 逆元テーブル計算用テーブル
 
     for i in range(2, Nmax + 1):
         g1.append((g1[-1] * i) % mod)
@@ -29,6 +32,8 @@ def solve(r1, c1, r2, c2):
         return cmb(r + c, min(r, c))
 
     res = 0
+    # S[r2,c2] - S[r2,c1-1] - S[r1-1,c2] + S[r1-1,c1-1]
+    # S[r2,c2] = cmb(r2,0) + cmb(r2+1,1) + ... + cmb(r2+c2, c2)
     r2, c2 = r2, c2
     res += f(r2, c2)
     res -= f(r2, c1)
@@ -61,4 +66,6 @@ def solve2(r1, c1, r2, c2):
     return res
 
 
+# print(solve(r1,c1,r2,c2))
 print((solve(r1, c1, r2 + 1, c2 + 1)))
+# print(solve2(r1,c1,r2,c2))

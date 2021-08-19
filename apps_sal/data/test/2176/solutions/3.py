@@ -44,6 +44,7 @@ for i in range(1, len(dolne)):
     if min(dolne[i]) < max(dolne[i - 1]):
         c = 0
         break
+# c = 0 means no overlaps
 
 wyn = fun(xx) + fun(yy)
 if c == 1:

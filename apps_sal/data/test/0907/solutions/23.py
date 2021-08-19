@@ -12,11 +12,13 @@ if m <= 2 or y == -1:
     print('YES')
 else:
     c, d, e, f = *a[0], *a[y]
+    #print(c, d, e, f, a[0], a[y], y)
     x = [{c, e}, {c, f}, {d, e}, {d, f}]
     z = [True, True, True, True]
     for pair in b:
         for zp in [0, 1, 2, 3]:
             z[zp] = z[zp] if pair & x[zp] else False
+            #print(zp, z, x, pair, pair&x[zp])
     if z[0] or z[1] or z[2] or z[3]:
         print('YES')
     else:

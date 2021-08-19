@@ -62,11 +62,13 @@ A = [input() for _ in range(n)]
 
 mf = mergefind(n + m)
 
+# merge equal elements
 for i in range(n):
     for j in range(m):
         if A[i][j] == '=':
             mf.merge(i, n + j)
 
+# Connections: smaller -> larger
 C = [set() for _ in range(n + m)]
 for i in range(n):
     for j in range(m):
@@ -75,13 +77,18 @@ for i in range(n):
         elif A[i][j] == '>':
             C[mf.find(n + j)].add(mf.find(i))
 
+# Walk through graph in toposort order
+# What I'm pointing to must be at least
+# my value + 1
 D = [1] * (n + m)
 for cur in toposort(C, n + m):
     for neigh in C[cur]:
         D[neigh] = max(D[neigh], D[cur] + 1)
 
+# Propagate values within equal clusters
 D = [D[mf.find(i)] for i in range(n + m)]
 
+# Validate answer
 ok = True
 for i in range(n):
     for j in range(m):

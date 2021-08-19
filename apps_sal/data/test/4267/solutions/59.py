@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n = int(input())
 if n >= 30:
     print('Yes')

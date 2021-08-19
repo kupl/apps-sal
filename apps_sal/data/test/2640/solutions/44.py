@@ -1,3 +1,4 @@
+# 写経の写経
 import numpy as np
 H, W = list(map(int, input().split()))
 L = np.zeros((H, W), int)

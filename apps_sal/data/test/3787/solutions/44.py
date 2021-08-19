@@ -32,6 +32,7 @@ if a + b > n + 1:
 elif a * b < n:
     ans = -1
 else:
+    # a*b個の列
     ps = sub(n, a, b)
     pps = [(i + 1, p) for i, p in enumerate(ps)]
     pps.sort(key=lambda x: x[1])

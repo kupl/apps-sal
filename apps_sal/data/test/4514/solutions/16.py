@@ -21,6 +21,8 @@ def dfs(dp, node, edges, order):
 
             dp[curr] += 1
 
+        # print(stack)
+
 
 def solve(u, k, dp, order, indices, ans):
     if k > dp[u]:
@@ -49,6 +51,8 @@ def main():
     order = []
     dp = [0] * (n + 1)
     dfs(dp, 1, edges, order)
+    # print(order)
+    # print(dp)
     for i in range(n):
         indices[order[i]] = i
 

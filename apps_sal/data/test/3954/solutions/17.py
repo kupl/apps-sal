@@ -16,7 +16,11 @@ for i in range(n):
         curr.sort()
         if j < n - 1:
             del other[other.index(arr[j + 1])]
+        # print(other)
         t = min(len(curr), len(other), k)
         t = solve(curr, other, k)
         maxx = max(maxx, sum(curr) - sum(curr[:t]) + sum(other[:t]))
+        # print(curr,other,sum(curr)-sum(curr[:t])+sum(other[:t]))
+    # print(maxx)
+    # print(curr,other)
 print(maxx)

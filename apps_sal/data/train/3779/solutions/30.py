@@ -5,3 +5,7 @@ def convert_SI(val, unit_in, unit_out='ms'):
 
 def past(*args, order='hms'):
     return sum(convert_SI(x, u) for u, x in zip(order, args))
+
+
+# def past(h, m, s):
+#     return convert_SI(h, 'h') + convert_SI(m, 'm') + convert_SI(s, 's')

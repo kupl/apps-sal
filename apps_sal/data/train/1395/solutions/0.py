@@ -1,3 +1,4 @@
+# cook your dish here
 for test in range(0, int(input())):
     A, B = map(int, input().split())
     diff = abs(A - B)

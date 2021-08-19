@@ -6,6 +6,7 @@ class Solution:
         left = len(s) * [0]
         right = len(s) * [0]
         seen = set(s[0])
+        # right[-1] = 1
         left[0] = 1
         for i in range(1, len(s)):
             if s[i] not in seen:
@@ -24,5 +25,14 @@ class Solution:
                 count += 1
             elif rtotal > left[i - 1]:
                 break
+
+        # count = 0
+        # # print(left)
+        # # print(right)
+        # for i in range(0, len(s)-1):
+        #     if left[i]== right[i+1]:
+        #         count +=1
+        #     elif right[i+1] < left[i]:
+        #         break
 
         return count

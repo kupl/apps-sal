@@ -13,6 +13,8 @@ def SI(): return input()
 
 def make_grid(h, w, num): return [[int(num)] * w for _ in range(h)]
 
+# nCrの剰余
+
 
 def combinations_mod(n, r, mod=1000000007):
     """Returns nCr in mod."""

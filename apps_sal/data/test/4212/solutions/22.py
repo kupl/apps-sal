@@ -3,6 +3,7 @@ abcd = [list(map(int, input().split())) for _ in range(q)]
 
 
 def check(x):
+    # print(x)
     z = [0] * n
     temp = 0
     y = 0
@@ -12,6 +13,7 @@ def check(x):
         else:
             z[y] = temp
             y += 1
+    # print(z)
     ans = 0
     for a, b, c, d in abcd:
         if z[b - 1] - z[a - 1] == c:

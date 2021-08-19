@@ -1,4 +1,6 @@
 class Solution:
+    # Time: O(n^2)
+    # Space: O(n)
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         if n == 1:

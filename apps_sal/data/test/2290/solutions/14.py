@@ -2,6 +2,7 @@ import sys
 input = sys.stdin.readline
 
 n, m = list(map(int, input().split()))
+#E=[tuple(map(int,input().split())) for i in range(m)]
 
 Group = [i for i in range(n + 1)]
 Nodes = [1] * (n + 1)
@@ -49,5 +50,6 @@ for i in range(n, 0, -1):
     else:
         MIN = MINI[find(i)]
 
+    # print(i,ANS)
 
 print(ANS)

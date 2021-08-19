@@ -14,6 +14,7 @@ class Solution:
         output = 0
         for num in nums:
             c, sm = findFactors(num)
+            # print(c,sm)
             if c == 4:
                 output += sm
         return output

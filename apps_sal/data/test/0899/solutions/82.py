@@ -2,6 +2,7 @@ n, m = map(int, input().split())
 
 
 class WarshallFloyd:
+    # O(V^3)で任意２頂点の最短距離
     def __init__(self, n, _first_index=0):
         self.v = n
         self._first_idx = _first_index

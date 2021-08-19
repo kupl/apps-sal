@@ -1,3 +1,4 @@
+# cook your code here
 T = int(input())
 for _ in range(T):
     N = int(input())

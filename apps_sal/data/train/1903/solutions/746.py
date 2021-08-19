@@ -24,6 +24,7 @@ class DSU:
 
 
 class Solution:
+    # Kruskal algorithm, union find, time O(n^2), space O(n^2)
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []

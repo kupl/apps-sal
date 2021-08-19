@@ -4,6 +4,8 @@ l = list(map(int, input().split()))
 l1 = l[0::2]
 l2 = l[1::2]
 c1 = collections.Counter(l1)
+# print(c1)
+# Counter({'a': 4, 'c': 2, 'b': 1})
 c2 = collections.Counter(l2)
 c0 = collections.Counter(l)
 if len(c0) == 1:

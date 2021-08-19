@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     k, w = map(int, input().split())
     if k > w:

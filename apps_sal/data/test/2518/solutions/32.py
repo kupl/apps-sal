@@ -15,7 +15,7 @@ def is_ok(m):
             flag = False
             break
 
-    if flag:
+    if flag:  # 全部0以下
         return True
     else:
         rem = 0
@@ -32,6 +32,7 @@ def is_ok(m):
 N, A, B = map(int, input().split())
 h = list(int(input()) for _ in range(N))
 s = sum(h)
+# 二分散策
 
 r = 10**10
 l = 0

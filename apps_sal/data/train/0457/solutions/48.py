@@ -10,6 +10,7 @@ class Solution:
                     if coins_needed < min_coins:
                         min_coins = coins_needed
             cache[ind] = min_coins
+        # print(cache)
         if cache[amount] == float('inf'):
             return -1
         return cache[amount]

@@ -2,6 +2,7 @@ from collections import defaultdict
 N = int(input())
 A = list(map(int, input().split()))
 
+# dp[(i, x, flg)] := i番目までみてx個選んでいる時の最大値。flgは最後の１つをとったかどうか。
 dp = defaultdict(lambda: -float('inf'))
 dp[(0, 0, 0)] = 0
 

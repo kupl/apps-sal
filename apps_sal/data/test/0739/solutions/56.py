@@ -1,10 +1,15 @@
 L, A, B, M = map(int, input().split())
 MOD = M
 
+# n*n行列の積を繰り返し二乗法で求める
+# 単位行列
+
 
 def imat(n):
     ret = [[1 if i == j else 0 for j in range(n)] for i in range(n)]
     return ret
+
+# 行列の積A*B
 
 
 def prod_mat(amat, bmat):
@@ -35,10 +40,12 @@ for d in range(1, 19):
         slist.append(min(s, L))
     else:
         slist.append(0)
+# print(slist)
 
 dlist = [slist[0]]
 for d in range(1, 18):
     dlist.append(slist[d] - slist[d - 1])
+# print(dlist)
 
 mat = imat(3)
 for d in range(18):
@@ -49,6 +56,7 @@ for d in range(18):
         for j in range(3):
             mat[i][j] %= MOD
 
+# init
 vec = [[0], [A], [1]]
 vec = prod_mat(mat, vec)
 print(vec[0][0] % MOD)

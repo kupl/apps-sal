@@ -20,3 +20,13 @@ class Solution:
 
             res += (left_less * right_more) + (left_more * right_less)
         return res
+
+        # Brute Force
+        # lenn = len(rating)
+        # res = 0
+        # for i in range(lenn):
+        #     for j in range(i+1,lenn):
+        #         for k in range(j+1,lenn):
+        #             if (rating[i] < rating[j] < rating[k]) or (rating[i] > rating[j] > rating[k]):
+        #                 res+=1
+        # return res

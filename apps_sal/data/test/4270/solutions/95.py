@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 N = int(input())
 Val = list(map(int, input().split()))
 Val.sort()

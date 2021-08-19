@@ -63,6 +63,9 @@ mod = 10 ** 9 + 7
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
+#############
+# Main Code #
+#############
 
 """
 N <= 50
@@ -117,6 +120,7 @@ for i in range(N):
         det[1] = A[i]
         place[1] = i
 
+# xをyに足す
 print(2 * N - 1)
 if abs(det[0]) >= abs(det[1]):
     for i in range(N):

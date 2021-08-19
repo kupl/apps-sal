@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -16,3 +18,4 @@ for i in range(1, n - 1):
 print(x[n - 1] - x[n - 2], x[n - 1] - x[0])
 
 finish = time.time()
+#print(finish - start)

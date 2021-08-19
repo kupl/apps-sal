@@ -1,4 +1,4 @@
-def generator(x, a):
+def generator(x, a):  # xの倍数でaより大きいもののうちの最小値
     if x >= a:
         y = x
     else:

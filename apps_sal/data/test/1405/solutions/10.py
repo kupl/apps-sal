@@ -6,6 +6,7 @@ Created on Aug 26, 2016
 '''
 F = []
 a,b = 0,1
+#F.append(a)
 for _ in range(5):
     F.append(b)
     a,b = b,a+b
@@ -19,6 +20,7 @@ def go(a, b):
         d[c] -= 1
         res = go(b, c) + 1
         d[c] += 1
+        #print("Res : " ,res)
     return res
 
 

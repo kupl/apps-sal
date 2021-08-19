@@ -6,7 +6,7 @@ class Solution:
                 return -1
             C = len(grid[0])
             seen = set()
-            queue = collections.deque([(0, 0, k, 0)])
+            queue = collections.deque([(0, 0, k, 0)])  # r,c,k,dist
             seen.add((0, 0, k))
 
             def neighbors(r, c):

@@ -17,6 +17,8 @@ def main():
     single = 0
     for x in a:
         req = x // 2
+        #print('corner:', cornerSlot, ' middle:', middleSlot, ' single:', slotForOne)
+        #print('group of:', x, ' req:', req, '\n')
 
         if req % 2 == 1:
             hand = 1
@@ -24,6 +26,7 @@ def main():
         else:
             hand = 0
 
+        # try to accommodate even no. of pairs in middle
         if middleSlot >= req:
             middleSlot -= req
             req = 0
@@ -34,6 +37,7 @@ def main():
         if hand:
             req += 1
 
+        # now accommodate rest of the pairs in the corner
         if cornerSlot >= req:
             cornerSlot -= req
             req = 0
@@ -41,6 +45,7 @@ def main():
             req -= cornerSlot
             cornerSlot = 0
 
+        # again, accommodate rest of the pairs in middle
         pairInMiddle = False
         if middleSlot >= req and (req > 0):
             middleSlot -= req
@@ -55,6 +60,7 @@ def main():
             middleSlot -= 1
             slotForOne += 1
 
+        #print('req now:', req)
         if x % 2 == 1:
             single += 1
         if req > 0:

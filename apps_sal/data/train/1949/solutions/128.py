@@ -7,6 +7,7 @@ class Solution:
                 if x < 0 or x > len(grid) - 1 or y < 0 or y > len(grid[0]) - 1 or grid[x][y] == 0:
                     return False
                 return True
+            # print(\"started at %s,%s\"%(x,y))
             dirs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
             g = grid[x][y]
             grid[x][y] = 0
@@ -26,6 +27,7 @@ class Solution:
                 if e != 0:
 
                     k = travel(grid, ri, ci, 0)
+                    # print(\"Got %s gold for %s,%s\"%(k, ri, ci))
                     maxg = max(maxg, k)
 
         return maxg

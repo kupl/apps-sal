@@ -4,6 +4,7 @@ class Solution:
             return False
 
         hand = sorted(hand)
+        # print(hand)
 
         for split in range(len(hand) // W):
             min_val = min(hand)

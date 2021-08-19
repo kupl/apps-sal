@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sun Sep 13 12:37:37 2020
 
@@ -20,6 +21,7 @@ A = [int(input()) for _ in range(M)] + [-1]
 fibs = [0] * (N + 1)
 index = 0
 for i in range(N + 1):
+    # 壊れたところの値を0にすれば良い
     if i == A[index]:
         fibs[i] = 0
         index += 1

@@ -22,6 +22,7 @@ def main():
     usable_list = [[a, match_dict[a]] for a in A]
     usable_list.sort(key=lambda x: (x[1], -x[0]))
 
+    # dp[i] はi本使った時の最大数
     dp = [-1] * (N + 10)
     dp[0] = 0
 

@@ -13,6 +13,8 @@ for _ in range(nedge):
     adjl[u].append(v)
     adjl[v].append(u)
 
+# why not BFS? >.<
+
 
 def dijkstra_from(source):
     pq = []

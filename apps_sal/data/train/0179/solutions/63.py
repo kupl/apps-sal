@@ -1,6 +1,8 @@
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
 
+        #index,last_char,running_length, k
+
         @lru_cache(None)
         def dp(index, last_char, running_length, k):
             if index >= len(s):

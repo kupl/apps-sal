@@ -12,11 +12,14 @@ for i in range(4):
     b[i].reverse()
     b[i].append(0)
     b[i].reverse()
+# print(b)
 ans = 0
 for i in range(len(b[0])):
     for j in range(len(b[1])):
         for k in range(len(b[2])):
             for l in range(len(b[3])):
+                # print(i,j,k,l)
                 if a[0][0] * i + (a[0][0] + 1) * j + (a[0][0] + 2) * k + (a[0][0] + 3) * l <= w:
+                    # print(i,j,k,l)
                     ans = max(ans, b[0][i] + b[1][j] + b[2][k] + b[3][l])
 print(ans)

@@ -7,6 +7,7 @@ class Solution:
         while True:
             while r >= l and (nums[l] + nums[r]) > target:
                 r = r - 1
+            #print(l, r)
             if l <= r:
                 res = res + (2 ** (r - l))
             else:

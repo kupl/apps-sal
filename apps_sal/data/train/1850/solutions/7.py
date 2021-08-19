@@ -12,6 +12,8 @@ class Solution:
             self.neighbors[e[1]].add(e[0])
 
         self.visit(0, set([-1]))
+#        print(\"child num:\", self.childnum)
+#        print(\"cdist\", self.cdist)
         self.visit2(0, set([-1]))
         return self.cdist
 
@@ -25,9 +27,11 @@ class Solution:
 
     def visit(self, node, pre):
         children = self.neighbors[node] - pre
+        # print(\"node\", node, \"children\", children)
         for c in children:
             self.visit(c, set([node]))
         for c in children:
+            # print(self.matrix)
             self.childnum[node] += self.childnum[c] + 1
             self.cdist[node] += self.cdist[c]
 

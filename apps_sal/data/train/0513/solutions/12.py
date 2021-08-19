@@ -8,7 +8,7 @@ def dfs(vertex):
     value = a[vertex]
     j = bisect(dp, value)
     previous = dp[j]
-    if dp[j - 1] != value:
+    if dp[j - 1] != value:  # strict increasing
         dp[j] = value
     ans[vertex] = bisect_left(dp, float("inf")) - 1
     for node in adjacent[vertex]:

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/1/4 23:10
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : C. Yuhao and a Parenthesis.py
 
 
 def calc_bracket(sequence):

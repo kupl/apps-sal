@@ -4,6 +4,7 @@ from collections import deque
 from math import ceil, floor, log2
 import sys
 sys.setrecursionlimit(10 ** 6)
+# input = sys.stdin.readline    ####
 def int1(x): return int(x) - 1
 def II(): return int(input())
 

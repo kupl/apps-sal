@@ -1,5 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
+        # {#next num: cur length}
         dp = [{} for a in A]
         imax = 1
         for i in range(len(A)):

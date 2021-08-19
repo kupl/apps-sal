@@ -21,6 +21,7 @@ for i in a:
 
         if (i % k == 0) and (i // k in list(lst.keys())):
             ans += arr[i // k][1]
+            #print (ans)
 
 if k == 1:
     ans = 0

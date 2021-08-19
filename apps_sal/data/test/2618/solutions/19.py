@@ -1,15 +1,16 @@
 from collections import deque
 n = int(input())
 for _ in range(n):
-    m = int(input())
+    m = int(input())  # number tickets
     tickets = list(map(int, input().split()))
     tickets.sort(reverse=True)
     aperc, ajump = list(map(int, input().split()))
     bperc, bjump = list(map(int, input().split()))
-    q = int(input())
+    q = int(input())  # req total
     if bperc > aperc:
         bperc, aperc = aperc, bperc
         ajump, bjump = bjump, ajump
+    # a is bigger
     aperc = aperc / 100
     bperc = bperc / 100
     zet = False
@@ -65,6 +66,11 @@ for _ in range(n):
 
         else:
             pass
+        # print(f"i:{i}, sum:{sumo}")
+        # print(da)
+        # print(db)
+        # print(dc)
+        # print(" ")
         if(sumo >= q and (not zet)):
             zet = True
             ans = i + 1

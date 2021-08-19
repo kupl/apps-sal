@@ -31,15 +31,20 @@ class Solution:
         va = getPermutations(A)
 
         valid = 0
+        # print(va)
         for a in va:
             isValid = True
+            # print(a)
             for idx in range(1, len(a)):
 
                 if ((a[idx] + a[idx - 1])**0.5) != int((a[idx] + a[idx - 1])**0.5):
+                    # print(a,idx)
                     isValid = False
                     break
 
             if isValid:
+                # print(a)
                 valid += 1
 
+        # print(valid)
         return valid

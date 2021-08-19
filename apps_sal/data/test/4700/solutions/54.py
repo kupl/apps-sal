@@ -18,4 +18,5 @@ c = 0
 for i in range(n):
     if ans[i] == 1:
         c += 1
+# print(ans)
 print(c)

@@ -1,11 +1,14 @@
+# cook your dish her
 try:
     from cp import input, setInputFile
 except:
     pass
 import math
 import copy
+# import random
 import numpy as np
 import sys
+# import time
 def input(): return sys.stdin.readline()
 def itarr(arr): return list(range(len(arr)))
 def mp(): return list(map(int, input().split()))
@@ -14,6 +17,7 @@ def inp(): return int(input())
 
 
 MOD = 1000000007
+# from functools import lru_cach
 
 
 def mexp(m, p):
@@ -48,5 +52,7 @@ def main():
     print(ans)
 
 
+# main()
 for _ in range(int(input())):
     main()
+    # break

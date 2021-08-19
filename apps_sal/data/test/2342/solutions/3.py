@@ -17,14 +17,14 @@ g = []
 
 
 def dfs(i, j, n, m):
-    if g[i][j] == '
-    return 0
+    if g[i][j] == '#':
+        return 0
     ans = 0
     if g[i][j] == 'G':
         ans += 1
     if g[i][j] == 'B':
         return -100000
-    g[i][j] = '
+    g[i][j] = '#'
     if (i > 0):
         ans += dfs(i - 1, j, n, m)
     if (i < n - 1):
@@ -48,15 +48,16 @@ for _ in range(r1(int)):
         for j in range(m):
             if g[i][j] == 'B':
                 if (i > 0) and g[i - 1][j] == '.':
-                    g[i - 1][j] = '
+                    g[i - 1][j] = '#'
                 if (i < n - 1) and g[i + 1][j] == '.':
-                    g[i + 1][j] = '
+                    g[i + 1][j] = '#'
                 if (j > 0) and g[i][j - 1] == '.':
-                    g[i][j - 1] = '
+                    g[i][j - 1] = '#'
                 if (j < m - 1) and g[i][j + 1] == '.':
-                    g[i][j + 1] = '
+                    g[i][j + 1] = '#'
             elif g[i][j] == 'G':
                 cnt += 1
+    # print(cnt)
     if (dfs(n - 1, m - 1, n, m) == cnt):
         print('Yes')
     else:

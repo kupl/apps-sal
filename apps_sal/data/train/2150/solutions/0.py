@@ -104,12 +104,14 @@ for _ in range(q):
         if length == 0 and prep and app:
             app = False
 
+        #print(preHash, prep, app, length)
         if prep:
             preHash += pow(3, length, MOD) * 2
             length += 1
         if app:
             preHash *= 3
             preHash += 2
+        # print(preHash)
 
         preHash %= MOD
         hashes.append(preHash)

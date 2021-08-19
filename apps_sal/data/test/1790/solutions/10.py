@@ -1,3 +1,5 @@
+# map(int, input().split())
+# int(input())
 n = int(input())
 s = set(range(1, 101))
 for i in range(n):

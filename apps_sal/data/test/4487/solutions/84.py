@@ -1,3 +1,4 @@
+# A の末とB の頭文字、B の末とC の頭文字が一致しているか
 
 A, B, C = list(map(str, input().split()))
 

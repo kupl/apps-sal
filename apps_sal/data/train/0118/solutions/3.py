@@ -6,6 +6,9 @@ import math
 input = sys.stdin.readline
 
 
+############ ---- Input Functions ---- ############
+
+
 def inp():
     return(int(input()))
 
@@ -21,6 +24,8 @@ def insr():
 
 def invr():
     return(list(map(int, input().split())))
+
+############ ---- Solution ---- ############
 
 
 def solve(case):

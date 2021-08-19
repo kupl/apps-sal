@@ -18,7 +18,7 @@ class Solution:
         print(mapB)
         res = []
         for a in A:
-            temp = mapB[:]
+            temp = mapB[:]  # deep copy
             for c in a:
                 i = ord(c) - ord('a')
                 if temp[i] > 0:

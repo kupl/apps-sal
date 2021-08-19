@@ -21,4 +21,5 @@ for r in range(q):
     alast = x + DD[k] * ((n - 1) // k) + DD[(n - 1) % k]
     kuriagari = alast // m - x // m
 
+#    print([x%m, alast, alast%m, n - kuriagari - 1])
     print(n - 1 - kuriagari)

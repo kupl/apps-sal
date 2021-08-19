@@ -5,6 +5,7 @@ def to_pos(i, j): return f"{chr(i+65)}{j+1}"
 
 
 def available_moves(position):
+    # That part is always just annoying
     if not (isinstance(position, str)
             and len(position) == 2
             and position[0] in "ABCDEFGH"

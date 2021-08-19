@@ -18,6 +18,7 @@ def primes_a_p(lower_limit, upper_limit, k=6):
 
     max_scope = (upper_limit - lower_limit) // (k - 1)
 
+    #base_diff = reduce(mul, [ p for p in primes if p <= k ])
     base_diff = 2 * 3 * 5
 
     solutions = []

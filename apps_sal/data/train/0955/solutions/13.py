@@ -20,3 +20,4 @@ while t:
     t -= 1
     num = int(input())
     print(d[num])
+    # print(pairs[num])

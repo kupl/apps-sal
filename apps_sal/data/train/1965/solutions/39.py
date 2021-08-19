@@ -48,11 +48,19 @@ class Solution:
             if root_u == root_v:
                 continue
 
+            # We have two nodes u and v such that they fall into two disjoint
+            # connected sub-graphs, and u from subgraph A is connected to v
+            # in subgraph B with either edge_type == 1 or edge_type 2. Since we
+            # need to reach v from subgraph A by both Alice and Bob, if we can
+            # find another node, x, in subgraph A that is connected to v in subgraph B
+            # by the other edge_type, then we can reach v from any node in subgraph A.
             needed_edge_type = 2 if edge_type == 1 else 2
             found_needed_edge = False
             for x in partial_adj[needed_edge_type][v]:
                 root_x = find(p, x)
                 if root_x == root_u:
+                    # x is in in subgraph A, same as u, AND it's connected to v via the
+                    # needed_edge_type
                     union(p, rank, root_x, root_u)
                     union(p, rank, root_u, root_v)
                     nb_edges_in_mst += 2
@@ -64,6 +72,8 @@ class Solution:
             for y in partial_adj[needed_edge_type][u]:
                 root_y = find(p, y)
                 if root_y == root_v:
+                    # y is in the subgraph B, same as v, and it's connected to u via the
+                    # needed_edge_type
                     union(p, rank, root_y, root_u)
                     union(p, rank, root_u, root_v)
                     nb_edges_in_mst += 2

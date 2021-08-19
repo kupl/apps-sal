@@ -2,6 +2,7 @@ for _ in range(int(input())):
     n, l, r = [int(x) for x in input().split()]
     s1, s2 = [1] * n, []
     l -= 1
+    # r-=1
     x = 2
     for _ in range(l):
         s1[_] = x

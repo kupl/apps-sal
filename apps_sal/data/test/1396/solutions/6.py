@@ -27,8 +27,10 @@ def scan(l, m):
         mstart = start
     if mle < 3:
         return l, m
+    # print(mle,mstart,l)
     m += mle
     l = l[:mstart] + l[mstart + mle:]
+    # print(l)
     return l, m
 
 
@@ -42,5 +44,7 @@ for i in range(len(l) + 1):
         if m2 == m3:
             break
         m2 = m3
+    # print(m2)
+    # print()
     m = max(m, m2)
 print(m)

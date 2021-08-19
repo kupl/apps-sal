@@ -16,6 +16,7 @@ class Solution:
 
                 ans += age_range[i]
 
+#             it is tricky here, becareful
             if age > 0.5 * age + 7:
                 ans += age_range[age] * 2
 

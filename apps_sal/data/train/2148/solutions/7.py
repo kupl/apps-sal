@@ -1,3 +1,4 @@
+# python3
 def solve():
     for __ in range(int(input())):
         p, q, b = tuple(map(int, input().split()))

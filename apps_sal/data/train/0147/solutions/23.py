@@ -3,6 +3,7 @@ class Solution:
 
         l = [(x, y) for x, y in zip(speed, efficiency)]
         l = sorted(l, key=lambda x: (x[1], -x[0]))
+        # efficiency=sorted(efficiency)
 
         ma = 0
         q = []

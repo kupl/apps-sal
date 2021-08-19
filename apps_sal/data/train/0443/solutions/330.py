@@ -7,6 +7,7 @@ class Solution:
                 if soldier[0] < soldier[1] < soldier[2] or soldier[0] > soldier[1] > soldier[2]:
                     self.count += 1
                 return
+                # 5 % 3
             for i in range(idx, len(rating)):
                 soldier.append(rating[i])
                 dfs(soldier, i + 1)

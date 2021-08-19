@@ -28,7 +28,7 @@ n, m = map(int, input().split())
 
 INF = 10 ** 9
 s = [0] * n
-sim = ['*', '&', '
+sim = ['*', '&', '#']
 for i in range(n):
     new = input()
     s[i] = new + new

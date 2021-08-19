@@ -11,6 +11,7 @@ class Solution:
         while(len(queue) > 0):
 
             x, y, dic, step = queue.popleft()
+            #print(x, y, dic, step)
             if x == n - 1 and y == n - 2 and dic == 0:
                 return step
 
@@ -49,6 +50,7 @@ class Solution:
                         if grid[checkx1][checky1] == 0 and grid[checkx][checky] == 0 and (nx, ny, 0) not in visited:
                             queue.append([nx, ny, 0, step + 1])
                             visited[(nx, ny, 0)] = 1
+                            #print(x, y, nx, ny, checkx1, checky1, grid[checkx1][checky1], dic)
                         if grid[checkx1][checky1] == 0 and grid[checkx][checky] == 0 and (x, y + 1, 1) not in visited:
                             queue.append([x, y + 1, 1, step + 1])
                             visited[(x, y + 1, 1)] = 1

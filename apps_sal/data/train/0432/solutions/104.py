@@ -3,6 +3,7 @@ class Solution:
         if len(nums) % k != 0:
             return False
         nums.sort()
+        # print(nums,k)
         d = {}
         for i in nums:
             d[i] = d.get(i, 0) + 1

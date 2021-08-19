@@ -1,3 +1,4 @@
+# coding: utf-8
 from itertools import combinations as combs
 
 H, W, K = list(map(int, input().split()))

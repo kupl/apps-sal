@@ -1,6 +1,7 @@
 class Solution:
     def jobScheduling(self, startTime, endTime, profit):
         jobs = sorted(zip(startTime, endTime, profit), key=lambda v: v[0])
+        # Heap store (endTime, profitSoFar)
         heap = []
         total = 0
 

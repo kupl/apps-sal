@@ -11,6 +11,9 @@ class Solution:
 
             if (value, consecutiveRolls, left) in dp:
                 return dp[value, consecutiveRolls, left]
+            #print(value, consecutiveRolls, left)
+            # if dp[value][consecutiveRolls][left] != -1:
+            #    return dp[value][consecutiveRolls][left]
 
             rolls = 0
             for i in range(6):

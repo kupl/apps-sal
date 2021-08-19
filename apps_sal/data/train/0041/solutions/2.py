@@ -11,9 +11,11 @@ for _ in range(int(input())):
                     ans.append([i + 1, j + 1])
                     sub = s[i:j + 1]
                     sub = sub[::-1]
+                    # print(sub)
                     for k in range(len(sub)):
                         s[i + k] = sub[k]
                     break
+    #print(res, s)
     print(len(ans))
     for i in range(len(ans)):
         print(ans[i][0], ans[i][1])

@@ -2,6 +2,7 @@ def main():
     k = int(input())
     sm = 9
     d = {}
+    # dのkey(d,n)は始めの数字nでd桁のランラン数(str)のリストと配列長を与える
     lunlun = [i for i in range(1, 10)]
     for i in range(10):
         d[(1, i)] = ([str(i)], 1)

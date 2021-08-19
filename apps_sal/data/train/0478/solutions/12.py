@@ -8,7 +8,7 @@ class Solution:
          count frequency of each element
          """
         freq = {}
-        for num in nums:
+        for num in nums:  # store frequency of each element in the list
             freq[num] = freq.get(num, 0) + 1
 
         for num, frequency in list(freq.items()):

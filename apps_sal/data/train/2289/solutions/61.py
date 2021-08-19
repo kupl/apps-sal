@@ -24,6 +24,7 @@ for c in a[::-1]:
 def sub(i, j):
     """[i,j)に含まれない文字のうちの最小
     """
+#     print(i,j)
     al = set([chr(v) for v in range(ord("a"), ord("z") + 1)])
     for ind in range(i, j):
         al.discard(a[ind])
@@ -41,4 +42,6 @@ while l:
     c = sub(ind + 1, j)
     ans.append(c)
 ans = "".join(ans)
+# else:
+#     ans = "a" * (len(l)+1)
 print(ans)

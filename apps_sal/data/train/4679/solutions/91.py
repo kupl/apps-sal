@@ -4,3 +4,4 @@ def to_freud(sentence):
     for i in range(a):
         res.append("sex")
     return " ".join(res)
+  # your code here

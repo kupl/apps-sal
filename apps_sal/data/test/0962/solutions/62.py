@@ -33,6 +33,7 @@ def main():
         return ANS[x:]
 
     def shortcut(ANS):
+        # print(ANS)
 
         ANSSET = set(ANS)
         LEN = len(ANS)
@@ -44,9 +45,12 @@ def main():
                     flag = 1
                     x = ANS.index(to)
 
+                    # print(ANS,i,x)
+
                     break
             if flag:
                 break
+        # print(flag)
 
         if flag:
             if x < i:

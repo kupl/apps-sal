@@ -7,5 +7,6 @@ for i in range(n):
     for j in range(len(str(k))):
         for h in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
             if h * int(str(k)[:j + 1]) <= a:
+                # print(h*int(str(k)[:j]))
                 amount += 1
     print(amount)

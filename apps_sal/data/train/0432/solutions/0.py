@@ -23,7 +23,7 @@ class Solution:
 
     def isPossibleDivide(self, s: List[int], k: int) -> bool:
 
-        c = [0] * k
+        c = [0] * k  # keeps count
         if s == [2, 4, 6]:
             return False
         for n in s:

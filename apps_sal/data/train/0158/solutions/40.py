@@ -1,9 +1,16 @@
 class Solution:
     def kSimilarity(self, A: str, B: str) -> int:
         def dist(a, b):
+            # count number of differing characters
             return sum((1 if c != d else 0 for (c, d) in zip(a, b)))
 
         def find_wrong_letters(working):
+            # given a working string, return two dicts that track work to be done:
+            #   (wants, wrongs)
+            # `wants[target]` maps to set of positions that need `target` letter
+            # `wrongs[letter]` maps to set positions that have a wrong `letter`
+            #     if i in wants{target] and j in wrongs[letter]
+            #       we can swap ith and jth letters to improve working
             wants = defaultdict(set)
             wrongs = defaultdict(set)
             for i, c in enumerate(working):
@@ -14,10 +21,15 @@ class Solution:
             return wants, wrongs
 
         def estimate_remaining(string):
+            # count number of wrong letters
+            # assume a perfect scenario:
+            #    each swap fixes two letters
             count = dist(string, A)
             return count / 2 if count % 2 == 0 else count // 2 + 1
 
         def swap(s, i, j):
+            # swap ith and jth chars of string s
+            # assert i != j
             if i > j:
                 i, j = j, i
             return s[:i] + s[j] + s[i + 1:j] + s[i] + s[j + 1:]
@@ -27,8 +39,19 @@ class Solution:
             for letter, wrong_set in list(wrongs.items()):
                 return (swap(working, i, j) for i in wrong_set for j in needs[letter])
 
+        # print(A)
+        # print(B)
+        # print(\"0123456789abcdefghijklmnopqrst\"[:len(A)])
+        # needs, wrongs = find_wrong_letters(B)
+        # print(f\"wrong: {wrongs}\")
+        # print(f\"needs: {needs}\")
+        # return 0
+
         if A == B:
             return 0
+        # BFS
+        # q is a heap that holds triples:
+        #   (estimate, swap_count_so_far, the_working_string)
         q = [(0, 0, B)]
         seen = dict()
         best = len(A)

@@ -35,4 +35,5 @@ elif y / 2 > x:
     elif b < z:
         m = checkio(b, z, math.sqrt(b**2 + (z)**2))
         count = m[0]
+# print(a,2*(b-h),math.sqrt(a**2+2*(b-h)**2),m)
 print(count)

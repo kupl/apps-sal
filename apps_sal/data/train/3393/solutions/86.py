@@ -3,6 +3,7 @@ from math import sqrt
 
 def list_squared(m, n):
     squares = []
+    # Find all divisors
     for i in range(m, n):
         i_squares = 0
         for j in range(1, int(sqrt(i) // 1) + 1):

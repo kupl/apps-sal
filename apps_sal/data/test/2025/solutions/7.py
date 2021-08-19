@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
 
+# min odd non-prime is 9
+# min even non-prime in 4, NO even numbers gt 2 are primes
 
 def m(n):
     if n == 9:

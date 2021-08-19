@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
+#   = input()
 n = int(input())
 x = []
 y = []
@@ -24,3 +27,4 @@ else:
     print(ans)
 
 finish = time.time()
+#print(finish - start)

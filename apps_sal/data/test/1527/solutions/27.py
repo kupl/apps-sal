@@ -27,16 +27,16 @@ def resolve():
 
     H, W = list(map(int, input().split()))
     G = []
-    G.append(["
-    G += [["
-    G.append(["
+    G.append(["#"] * (W + 2))
+    G += [["#"] + list(input()) + ["#"] for _ in range(H)]
+    G.append(["#"] * (W + 2))
 
-    ans=0
+    ans = 0
     for i in range(1, H + 1):
         for j in range(1, W + 1):
-            if G[i][j] == "
+            if G[i][j] == "#":
                 continue
-            ans=max(ans, bfs(i, j))
+            ans = max(ans, bfs(i, j))
 
     print(ans)
 

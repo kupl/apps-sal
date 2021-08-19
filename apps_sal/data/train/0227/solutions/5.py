@@ -7,6 +7,7 @@ class Solution:
             if A[end] == 0:
                 numzeros += 1
             while numzeros > K:
+                # shrink window
                 if A[start] == 0:
                     numzeros -= 1
                 start += 1

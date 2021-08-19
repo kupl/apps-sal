@@ -20,6 +20,7 @@ for i in range(n // 2 + 1, n):
             odds[i][j] = True
 
 
+# Fill the table
 odd, even = 1, 2
 for i in range(n):
     for j in range(n):

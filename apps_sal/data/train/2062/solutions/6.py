@@ -24,7 +24,7 @@ gp = b - a + 1
 dp = [[-1 for j in range(n + 1)] for i in range(gp)]
 
 tb1 = [0, 1]
-tb2 = [1]
+tb2 = [1]  # 便宜上0の逆元は0にする
 for i in range(2, n + 1):
     tb1.append((tb1[i - 1] * i) % MOD)
 for i in range(1, n + 1):

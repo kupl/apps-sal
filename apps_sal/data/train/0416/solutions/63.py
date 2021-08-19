@@ -10,10 +10,10 @@ class Solution:
 
         def play(m, c, t):
             if mem[m][c][t] != -1:
-                return mem[m][c][t]
+                return mem[m][c][t]  # return cached
             if t >= 2 * len(g):
-                return 0
-            if not t % 2:
+                return 0  # repeated states
+            if not t % 2:  # mouse turn
                 drawFound = False
                 for n in g[m]:
                     if n == HOLE:
@@ -26,7 +26,7 @@ class Solution:
                     if nextTurn == DRAW:
                         drawFound = True
                 return draw(m, c, t) if drawFound else catWin(m, c, t)
-            else:
+            else:  # cat turn
                 drawFound = False
                 for n in g[c]:
                     if n == m:

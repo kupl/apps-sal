@@ -3,6 +3,8 @@ from collections import Counter
 
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
+        # greed algorithm: only focus the substring with length == minSize
+        # also, apply continuous hashing function
         power = 26 ** (minSize - 1)
         cnt = Counter()
         word_cnt = Counter()
@@ -34,3 +36,19 @@ class Solution:
             right += 1
 
         return res
+# \"aababcaab\"
+# 2
+# 3
+# 4
+# \"aaaa\"
+# 1
+# 3
+# 3
+# \"aabcabcab\"
+# 2
+# 2
+# 3
+# \"abcde\"
+# 2
+# 3
+# 3

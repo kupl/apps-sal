@@ -16,6 +16,8 @@ def INT(): return int(input())
 def MAP(): return map(int, input().split())
 def LIST(): return list(MAP())
 
+# レベルnバーガー
+
 
 def f(n, x):
     if n == 0:

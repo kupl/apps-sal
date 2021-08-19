@@ -1,3 +1,4 @@
+#! /usr/bin/env python3.3
 
 x, k = [int(s) for s in input().split()]
 a = [0]

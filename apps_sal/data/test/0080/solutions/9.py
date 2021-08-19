@@ -19,7 +19,7 @@ else:
     for p in a:
         pl = min(p)
         pr = max(p)
-        if math.gcd(pl, pr) == 1:
+        if math.gcd(pl, pr) == 1:  # (1 in p) or (pr % pl != 0):
             if l <= x * pl and x * pr <= r:
                 c += 1
                 if p[0] != p[1]:

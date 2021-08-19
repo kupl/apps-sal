@@ -30,12 +30,12 @@ class Solution:
 \t\t\tlb, rb: is_left_bound, is_right_bound
 \t\t\t'''
             if max_matched == len(evil):
-                return 0
+                return 0  # evil found, break
             if idx == n:
-                return 1
+                return 1  # base case
 
-            l = s1[idx] if lb else 'a'
-            r = s2[idx] if rb else 'z'
+            l = s1[idx] if lb else 'a'  # valid left bound
+            r = s2[idx] if rb else 'z'  # valid right bound
             candidates = [*srange(l, r)]
 
             res = 0

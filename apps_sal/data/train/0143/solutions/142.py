@@ -4,6 +4,7 @@ class Solution:
         past = []
         last = []
         for i in range(len(tree)):
+            # print(past,last)
             if len(past) == 0:
                 past.append(tree[i])
                 last.append(i)

@@ -1,3 +1,4 @@
+# cook your dish here
 def main():
     for _ in range(int(input())):
         N, k = [int(x) for x in input().split()]
@@ -15,6 +16,7 @@ def main():
             z = s1 * s2
             if z > ans[0]:
                 ans = (z, i)
+                # print(z)
 
             i += 1
 

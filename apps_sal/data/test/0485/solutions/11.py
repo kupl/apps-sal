@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 n = int(input())
 
@@ -33,7 +34,7 @@ if bady == -1:
         bady = maxy
         badx = xs[ys.index(maxy)]
 
-if badx == -1:
+if badx == -1:  # the point is inside the square
     for i, x in enumerate(xs):
         if x not in (minx, maxx) and ys[i] not in (miny, maxy):
             badx = x

@@ -9,6 +9,8 @@ def __starting_point():
         if int(a) == 5:
             cf += 1
     ans = '-1'
+# print(cf)
+# print(cz)
     if cz == 0:
         ans = '-1'
     else:

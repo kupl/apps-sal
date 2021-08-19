@@ -1,6 +1,7 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 
+        # let arr[i] be the min amt of coins needed to produce amount i
         arr = [float('inf')] * (amount + 1)
         arr[0] = 0
 

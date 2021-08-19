@@ -19,6 +19,7 @@ f.sort(reverse=True)
 xo = max([a[i] * f[i] for i in range(n)])
 a = np.array(a)
 f = np.array(f)
+# binary search
 if xo == 0:
     print((0))
 else:

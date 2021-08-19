@@ -1,4 +1,5 @@
 def pick_peaks(a):
+    # your code here
 
     previous = 0
     current = 0

@@ -10,9 +10,9 @@ def cmb(n, r, mod):
 
 
 MOD = 998244353
-N = 3 * 10 ** 5
-fact = [1, 1]
-factinv = [1, 1]
+N = 3 * 10 ** 5  # N は必要分だけ用意する
+fact = [1, 1]  # fact[n] = (n! mod MOD)
+factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod MOD)
 inv = [0, 1]
 
 for i in range(2, N + 1):

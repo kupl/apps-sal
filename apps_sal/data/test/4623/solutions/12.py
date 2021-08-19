@@ -19,4 +19,5 @@ for _ in range(t):
                     d[x] = 1
         if ans < tmp:
             ans = tmp
+        # print(tmp, i)
     print(ans)

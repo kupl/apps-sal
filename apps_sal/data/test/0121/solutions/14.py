@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 b = [list(input().strip()) for _ in range(4)]
 

@@ -3,6 +3,7 @@ from operator import itemgetter
 n, m = map(int, input().split())
 ab = [list(map(int, input().split())) for i in range(n)]
 ab.sort()
+# print(ab)
 i = 0
 ans = 0
 while m > 0:

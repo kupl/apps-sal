@@ -26,6 +26,7 @@ for i in range(m):
     graph[u - 1].append(v - 1)
     graph[v - 1].append(u - 1)
 visited = [False] * (n)
+# queue = []
 heapObj.insertKey(0)
 visited[0] = True
 count = 0

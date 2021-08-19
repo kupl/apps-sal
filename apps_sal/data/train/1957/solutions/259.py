@@ -5,6 +5,8 @@ class Solution:
         this_layer, next_layer = 1, 0
         reached = False
 
+        # rows = len(grid)
+        # cols = len(grid[0]) if rows else 0
         visited = [[-1] * len(grid[0]) for _ in range(len(grid))]
         visited[0][0] = k
         q = deque([(0, 0, k)])
@@ -18,7 +20,7 @@ class Solution:
                 if x < 0 or x >= len(grid[0]) or y < 0 or y >= len(grid):
                     continue
                 k = p - grid[y][x]
-                if p <= visited[y][x]:
+                if p <= visited[y][x]:  # have visited here on a better path.
                     continue
                 q.append((y, x, k))
                 visited[y][x] = k

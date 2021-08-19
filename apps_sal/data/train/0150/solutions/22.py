@@ -13,6 +13,8 @@ class Solution:
             min_right = min(min_right, A[i + 1])
             right.append(min_right)
         right.reverse()
+        # print(left)
+        # print(right)
         for i in range(len(left)):
             if left[i] <= right[i]:
                 return i + 1

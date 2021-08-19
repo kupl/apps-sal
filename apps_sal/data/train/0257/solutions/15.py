@@ -10,6 +10,7 @@ class Solution:
         graph = [{} for i in range(n)]
         for (source, dstn), weight in zip(edges, succProb):
             graph[source][dstn] = graph[dstn][source] = weight
+        # seen = set()
         while stack:
             current = stack.popleft()
             for v in graph[current]:

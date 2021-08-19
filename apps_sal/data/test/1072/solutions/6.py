@@ -1,5 +1,10 @@
 
 
+# NOT FINISHED
+# I really need to make it go from line to line:
+# first, the first 2 lines should be corrected
+# then, the third, and so on.
+
 def issorted(l):
     return all(l[i] <= l[i + 1] for i in range(len(l) - 1))
 
@@ -38,6 +43,7 @@ def main5(n, m, a):
     for i in range(0, m):
         if line_is_good(a, i):
             continue
+        #if bad == []: bad.append(i)
         s = ["".join([k for b, k in enumerate(x) if b not in bad]) for x in a]
         print(i, bad)
         if is_good(s):
@@ -63,6 +69,7 @@ def main6(n, m, a):
         if line_is_good(a, i):
             continue
         bad.append(i)
+        # print(i)
         s = ["".join([k for b, k in enumerate(x) if b not in bad]) for x in a]
         if is_good(s):
             print(len(bad))

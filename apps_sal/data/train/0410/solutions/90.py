@@ -17,5 +17,6 @@ class Solution:
 
         for _, v in sorted(dic.items()):
             res += v
+            # print(res,len(res),k)
 
         return res[k - 1]

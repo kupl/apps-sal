@@ -1,5 +1,6 @@
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
+        # start at ends and move inward
 
         people.sort()
         start = 0

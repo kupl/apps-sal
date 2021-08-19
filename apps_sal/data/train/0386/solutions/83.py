@@ -19,6 +19,7 @@ class Solution:
                 elif j == 4:
                     dp[i][j] = dp[i + 1][0]
 
+        # print(dp)
         res = 0
         for j in range(5):
             res = (res + dp[1][j]) % mod

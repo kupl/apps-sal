@@ -8,6 +8,7 @@ class Solution:
             neg[0] = 1
         elif nums[0] > 0:
             pos[0] = 1
+        # 以i为结尾的时候 乘积是负数的时候的长度 neg[i], or is positive
         for i in range(1, n):
             val = nums[i]
             if val > 0:

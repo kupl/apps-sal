@@ -4,6 +4,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 401
 '''
 def main():
     import sys
@@ -56,6 +57,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 508B
 '''
 def main():
     import sys
@@ -88,6 +90,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 447B
 '''
 def main():
     import sys
@@ -104,6 +107,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 507B
 '''
 def main():
     from sys import stdin,stdout
@@ -112,12 +116,16 @@ def main():
         return a*a
     r,x,y,a,b=map(int,stdin.readline().split())
     mid=((x+a)/2,(y+b)/2)
+    #print(mid)
     dis=sqrt(sqr(x-mid[0])+sqr(y-mid[1]))
+    #print(dis)
     n=ceil(dis/r)
     stdout.write(str(n)+'\n')
 def __starting_point():
     main()
 '''
+# 454B
+# SORT BY SHIFT
 '''
 def main():
     from sys import stdin,stdout
@@ -144,6 +152,7 @@ def main():
                 break
         pv=tup[i]
         i+=1
+    #print(i)
     if flag:
         if i:
             stdout.write(str(n-i))
@@ -154,6 +163,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 450B
 '''
 def main():
     from sys import stdin,stdout
@@ -165,6 +175,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 265B
 '''
 def main():
     from sys import stdin,stdout
@@ -186,6 +197,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 448B
 '''
 def main():
     from sys import stdin,stdout
@@ -225,6 +237,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 479C
 '''
 def main():
     from sys import stdin,stdout
@@ -244,6 +257,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 455A
 '''
 def main():
     from sys import stdin,stdout
@@ -259,6 +273,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 151A
 '''
 def main():
     from sys import stdin,stdout
@@ -267,6 +282,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 313B
 '''
 def main():
     from sys import stdin,stdout
@@ -284,6 +300,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 259B
 
 
 def main():

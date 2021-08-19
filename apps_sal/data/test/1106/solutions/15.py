@@ -1,3 +1,4 @@
+# stop right here... don't try to read this code, is ugly and probably doesn't work
 
 
 from collections import deque

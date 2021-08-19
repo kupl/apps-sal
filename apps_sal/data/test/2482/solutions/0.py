@@ -63,8 +63,10 @@ for _ in range(L):
     uf1.union(r - 1, s - 1)
 
 pairs = [(uf.find(i), uf1.find(i)) for i in range(N)]
+# print(pairs)
 
 c = Counter(pairs)
+# print(c)
 ans = [c[pairs[i]] for i in range(N)]
 
 print(*ans)

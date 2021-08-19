@@ -1,3 +1,4 @@
+# coding = SJIS
 
 x, y = list(map(str, input().split()))
 alp = ["A", "B", "C", "D", "E", "F"]

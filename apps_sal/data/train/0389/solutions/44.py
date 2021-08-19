@@ -7,8 +7,10 @@ class Solution:
         for x in A:
             for t in reversed(range(1, ii)):
                 arr[t] |= set(map(lambda s: s + x, arr[t - 1]))
+        # print(arr)
         for i in range(1, len(A) // 2 + 1):
             if (su * i) % len(A) == 0:
+                # print(i, su*i, arr[i])
                 if (su * i) // len(A) in arr[i]:
                     return True
         return False

@@ -22,6 +22,7 @@ class Solution:
             if cnt >= left:
                 sumV += ele[0]
 
+            # insert new element if existed.
             nk = ele[1] + 1
             if nk < len(nums):
                 new_ele = (ele[0] + nums[nk], nk)

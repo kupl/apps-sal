@@ -24,6 +24,7 @@ while count <= v:
 
 deletion = []
 for node in sorted(need_check.keys()):
+    # determine if we'll delete him
     if node in kids and kids[node]:
         to_delete = True
 

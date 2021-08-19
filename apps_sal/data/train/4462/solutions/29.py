@@ -3,4 +3,4 @@ def adjacent_element_product(array):
     print(array)
     for i in range(len(array)):
         a.append(array[i] * array[i - 1])
-    return max(a[1:])
+    return max(a[1:])  # max product

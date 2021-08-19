@@ -4,6 +4,7 @@ import math
 import itertools
 import numpy as np
 S = input()
+# 010101...との比較
 cnt = [0, 0]
 for i in range(len(S)):
     if i % 2 == 0 and int(S[i]) == 1:

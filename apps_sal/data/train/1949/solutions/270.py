@@ -19,6 +19,7 @@ class Solution:
             for j in range(N):
                 if grid[i][j]:
                     dfs(grid, i, j, 0)
+        # dfs(grid, 0, 1, 0)
         print(('res = ', self.res))
 
         return self.res

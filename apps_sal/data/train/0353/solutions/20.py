@@ -5,6 +5,9 @@ class Solution:
         ans, mod = 0, 10 ** 9 + 7
         while l <= r:
             if nums[l] + nums[r] <= target:
+                # If we are using nums[l] as first element (and never be excluded)
+                # then there are 2 ** (r - l) options since the other positions can
+                # be toggled in or out
                 ans += pow(2, r - l, mod)
                 l += 1
             else:

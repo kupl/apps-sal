@@ -12,6 +12,7 @@ class Solution:
 
         products1 = self.products(nums1)
         products2 = self.products(nums2)
+        # print(products1, products2, mp1, mp2)
 
         score = 0
         for p in products1:

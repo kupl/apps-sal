@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from collections import defaultdict
 import sys
 sys.setrecursionlimit(10**8)
@@ -72,6 +73,7 @@ for curr in last_order:
         n = size[dest] - child[cn]
         ans[cn] += n * (n + 1) // 2
 
+        # マージ
         rrr = merge(rrr, child)
 
     rrr[cn] = size[curr]

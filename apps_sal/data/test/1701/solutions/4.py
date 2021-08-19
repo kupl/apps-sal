@@ -8,5 +8,5 @@ for _ in range(n):
 
 for _ in range(m):
     line = input().strip().split(' ')
-    line[1] = line[1] + ' ' + '
+    line[1] = line[1] + ' ' + '#' + ips[line[1][:-1]]
     print(' '.join(line))

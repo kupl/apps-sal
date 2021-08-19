@@ -10,9 +10,9 @@ class Solution:
 
         for command in commands:
             if command == -2:
-                di = (di - 1) % 4
+                di = (di - 1) % 4  # left
             elif command == -1:
-                di = (di + 1) % 4
+                di = (di + 1) % 4  # right
             else:
                 for _ in range(command):
                     if (x + dx[di], y + dy[di]) not in obstacleSet:

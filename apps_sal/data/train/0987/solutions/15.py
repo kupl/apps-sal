@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     fin, dis, acc, spe = map(int, input().split())
     tb = fin / spe

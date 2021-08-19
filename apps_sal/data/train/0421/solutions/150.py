@@ -1,6 +1,9 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
         l = len(s)
+        # take all substring which goes on till the end.
+        # make l substrings.
+        # find the largest lowercase english letter
         all_chars = set(list(s))
         all_chars = list(all_chars)
         all_chars.sort()

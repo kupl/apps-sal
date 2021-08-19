@@ -11,6 +11,7 @@ def RI(): return list(map(int, input().split()))
 def RS(): return input().rstrip().split()
 
 
+#################################################
 n = RI()[0]
 ind = 0
 ans1, ans2 = 10**6, 10**6

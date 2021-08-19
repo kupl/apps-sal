@@ -7,6 +7,7 @@ class Solution:
                 curr, prevp, prevn = 1, i, None
             else:
                 curr *= num
+                # print(curr,i,prevp,prevn)
                 if curr > 0:
                     res = max(res, i - prevp)
                 else:

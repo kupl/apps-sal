@@ -18,14 +18,14 @@ def ok(n, m, v, a, l):
         elif a[i] == 'r':
             y -= 1
 
-        if x < 0 or x >= n or y < 0 or y >= m or v[x][y] == '
-        return False
+        if x < 0 or x >= n or y < 0 or y >= m or v[x][y] == '#':
+            return False
 
         if v[x][y] == 'E':
             return True
 
-    if x < 0 or x >= n or y < 0 or y >= m or v[x][y] == '
-    return False
+    if x < 0 or x >= n or y < 0 or y >= m or v[x][y] == '#':
+        return False
 
     return v[x][y] == 'E'
 

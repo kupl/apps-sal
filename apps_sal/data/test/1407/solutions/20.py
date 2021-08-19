@@ -14,6 +14,7 @@ for a in range(len(pri) - 1):
         dp[i] = pb - i
 dp[0] = 2
 dp[1] = 1
+# print(dp[:10])
 n, m = list(map(int, input().split()))
 mat = [[dp[int(x)] for x in input().split()] for _ in range(n)]
 res = min(sum(col) for col in mat)

@@ -14,6 +14,7 @@ def all_players_play_everyday(a, players):
 
 
 def check_if_play_twice_together(a, players):
+    # Get all possible 2 player combos, and remove them as we find them
     all_2mers = list(permutations(players, 2))
     for day in a:
         for team in day:

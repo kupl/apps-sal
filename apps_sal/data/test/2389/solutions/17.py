@@ -1,9 +1,14 @@
+#import numpy as np
+#import math
+#from decimal import *
+#from numba import njit
 
+# @njit
 def main():
     N, A, B, C = list(map(int, input().split()))
     array = [A, B, C]
     string = ['A', 'B', 'C']
-    si = []
+    si = []  # AB:0,BC:1,AC:2
     if A + B + C <= 0:
         print('No')
         return

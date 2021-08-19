@@ -4,6 +4,7 @@ cumsum = [0]
 
 for a in A:
     cumsum.append(cumsum[-1] + a)
+# print(cumsum)
 pows = set([k**i for i in range(50)])
 cum = dict({})
 cum[0] = 1
@@ -20,3 +21,6 @@ for x in cumsum[1:]:
         cum[x] = 1
 
 print(res)
+
+
+# Made By Mostafa_Khaled

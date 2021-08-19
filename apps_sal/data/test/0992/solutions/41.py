@@ -9,7 +9,7 @@ DP[0] = 1
 
 for a in A:
     double = DP * 2
-    double[a:] += DP[:-a]
+    double[a:] += DP[:-a]  # shift
     DP = double % mod
 
 print((DP[s]))

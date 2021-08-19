@@ -2,6 +2,7 @@ def __starting_point():
     inp = input()
     inp = input()
     arr = inp.split(" ")
+# print(len(arr))
     Li = []
     Ls = []
     for a in arr:
@@ -13,6 +14,8 @@ def __starting_point():
     ans = str(lst)
     for x in Li:
         Ls.append(str(x))
+# Ls.sort()
+# print(len(Ls))
     for s in Ls:
         ans += " " + s
     ans += " " + str(fst)

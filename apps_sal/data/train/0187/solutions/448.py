@@ -11,6 +11,7 @@ class Solution:
                 if profit > max_profit:
                     max_profit = profit
                     max_profit_rotations = i + 1
+            #print((i, profit, max_profit, waiting))
 
         while waiting > 0:
             i += 1
@@ -20,5 +21,6 @@ class Solution:
             if profit > max_profit:
                 max_profit = profit
                 max_profit_rotations = i + 1
+            #print((i, profit, max_profit, waiting))
 
         return max_profit_rotations if max_profit_rotations > 0 else -1

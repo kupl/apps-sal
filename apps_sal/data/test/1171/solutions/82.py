@@ -2,8 +2,8 @@ n, k = map(int, input().split())
 v = list(map(int, input().split()))
 
 ans = 0
-for x in range(k + 1):
-    for y in range(k - x + 1):
+for x in range(k + 1):  # LeftHand
+    for y in range(k - x + 1):  # RightHand
         temp1 = []
         temp2 = []
         if x + y >= n:

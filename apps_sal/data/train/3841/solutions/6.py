@@ -1,4 +1,5 @@
 def get_words(d):
+    # your code here
     from itertools import permutations
     s = ''
     for key in d:

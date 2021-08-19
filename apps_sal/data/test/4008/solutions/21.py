@@ -1,3 +1,5 @@
+# import math
+# import sys
 n, k = [int(x) for x in input().strip().split(" ")]
 a = [int(x) for x in input().strip().split(" ")]
 d = {}

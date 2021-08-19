@@ -32,6 +32,8 @@ class Solution:
                         dx, dy = direction
                         if i + dx < 0 or i + dx >= len(grid) or j + dy < 0 or j + dy >= len(grid[0]):
                             continue
+                        # if (i+dx, j+dy) in visited:
+                        #     continue
                         if grid[i + dx][j + dy] == 1:
                             continue
                         visited.add((i + dx, j + dy))

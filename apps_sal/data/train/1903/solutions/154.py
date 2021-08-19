@@ -5,6 +5,7 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if len(points) == 1:
             return 0
+        # mst?
         np = len(points)
         rest = set(range(np))
         cur_val = 0

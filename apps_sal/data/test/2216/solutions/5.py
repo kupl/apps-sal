@@ -20,5 +20,6 @@ for _ in range(k - 1):
         if((j + 1) % (m) == 0):
             i += 1
             ref = 0 if(ref) else m + 1
+        #j = abs((j + 1) % (m) - ref)
         j = (j + 1) % m
     print()

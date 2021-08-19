@@ -12,9 +12,11 @@ def find(n):
     ans = 0
     while a <= n:
         ans += (floor(n / a) - floor(n / (2 * a))) * a
+        # print((floor(n/a)-floor(n/(2*a)))*a)
         a *= 2
     k = int(log(n, 2))
     return n * (n + 1) // 2 - int(ans) - k - 1
+# print(find(17))
 
 
 t = int(input())

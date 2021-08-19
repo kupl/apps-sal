@@ -1,4 +1,4 @@
-def task_1(n, m):
+def task_1(n, m):  # n - строки m - столбцы
     counts = 8
     last = 0
     current = 1
@@ -15,6 +15,7 @@ def task_1(n, m):
 
 
 def __starting_point():
+    # Number of requests
     n, m = (map(int, input().rstrip().split()))
     task_1(n, m)
 

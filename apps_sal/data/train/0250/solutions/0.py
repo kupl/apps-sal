@@ -16,6 +16,6 @@ class Solution:
         for i in range(K, N):
             heappush(heap_quality, -quality[workers[i]])
             sum_quality += quality[workers[i]]
-            sum_quality += heappop(heap_quality)
+            sum_quality += heappop(heap_quality)  # negative quality value
             ans = min(ans, sum_quality * (wage[workers[i]] / quality[workers[i]]))
         return ans

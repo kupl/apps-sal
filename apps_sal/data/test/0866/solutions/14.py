@@ -10,6 +10,7 @@ while X >= 0:
     X -= 3
     Y -= 3
     xy += 1
+#print(X, Y, xy)
 
 if X < 0:
     print("0")

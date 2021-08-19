@@ -2,6 +2,7 @@ class Solution:
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         accu1 = list(accumulate(nums1))
         accu2 = list(accumulate(nums2))
+        # print(accu1)
         ans = i = j = 0
         pi = pj = -1
         while i < len(nums1) and j < len(nums2):

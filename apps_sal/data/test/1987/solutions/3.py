@@ -31,3 +31,6 @@ for i in range(1, d + 1):
 
 
 print(min)
+
+
+# Made By Mostafa_Khaled

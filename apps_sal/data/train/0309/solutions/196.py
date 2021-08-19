@@ -1,5 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
+        # 446. Arithmetic Slices II - Subsequence
         '''
         https://leetcode.com/problems/longest-arithmetic-sequence/discuss/274611/JavaC++Python-DP
         dp[diff][index] + 1 equals to the length of arithmetic sequence at index with difference diff.
@@ -31,6 +32,7 @@ defaultdict(<class 'int'>, {(3, 0): 0, (3, 1): 1, (6, 0): 0, (6, 2): 1, (9, 0): 
 defaultdict(<class 'int'>, {(3, 0): 0, (3, 1): 1, (6, 0): 0, (6, 2): 1, (9, 0): 0, (9, 3): 1, (3, 2): 2, (6, 1): 0, (6, 3): 1})
 defaultdict(<class 'int'>, {(3, 0): 0, (3, 1): 1, (6, 0): 0, (6, 2): 1, (9, 0): 0, (9, 3): 1, (3, 2): 2, (6, 1): 0, (6, 3): 1, (3, 3): 3})
       '''
+        # longest arithmetic subseq
 
         '''
         Input:
@@ -105,6 +107,7 @@ Expected:
         return res
 
         '''
+        #why is this solution the fastest??????
         nums_map = {}
         for i,n in enumerate(A):
             nums_map[n] = nums_map.get(n, [])

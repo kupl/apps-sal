@@ -1,3 +1,4 @@
+# your code goes here
 n, k = input().split()
 n = int(n)
 k = int(k)

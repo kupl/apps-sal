@@ -1,5 +1,7 @@
 class Solution:
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
+        # consider B[i] = A[i] + i, C[i] = A[i] -j
+        # Find the B[i] + C[j]
         B = [A[i] + i for i in range(len(A))]
         C = [A[i] - i for i in range(len(A))]
         p = 0

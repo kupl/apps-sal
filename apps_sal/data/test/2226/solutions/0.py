@@ -1,5 +1,7 @@
 import sys
 input = sys.stdin.readline
+# lev contains height from root,lower neighbour, higher neighbours
+# lev[0] contains 0 (because it is the root), higher neighbours (=neighbours)
 n, m, q = map(int, input().split())
 mod = 1000000007
 mxw = 0

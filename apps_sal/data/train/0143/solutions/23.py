@@ -12,6 +12,7 @@ class Solution:
         rpInc = False
         curSet = set()
 
+        # Start the left and right pointer values at 1 frequency. Use += 1 in case trees[lp] and trees[rp] point to the same value.
         hash[trees[lp]] += 1
         curSet.add(trees[lp])
         hash[trees[rp]] += 1

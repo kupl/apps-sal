@@ -24,6 +24,7 @@ INF = float("inf")
 IINF = 10 ** 18
 MOD = 10 ** 9 + 7
 
+# 解説AC
 N = int(sys.stdin.readline())
 S = list(map(int, sys.stdin.readline().split()))
 
@@ -34,6 +35,7 @@ def solve():
     if counts[nums[0]] > 1:
         return False
 
+    # 木の深さをもって深いやつから使っていく
     trees = [-i for i in range(1, N + 1)]
     heapq.heapify(trees)
 
@@ -45,6 +47,7 @@ def solve():
         for _ in range(cnt):
             t = -heapq.heappop(trees)
             uses.append(t)
+        # 使ったら t-1 個の木に分解する
         for t in uses:
             for i in range(1, t):
                 heapq.heappush(trees, -i)

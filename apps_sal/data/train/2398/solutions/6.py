@@ -1,4 +1,6 @@
 import sys
+# range = xrange
+# input = raw_input
 inp = [int(x) for x in sys.stdin.read().split()]
 ii = 0
 out = []

@@ -3,6 +3,9 @@ import math
 import copy
 """
 N = int(input())
+#S = input()
+# (N,M) = (int(i) for i in input().split(" "))
+# A = [int(i) for i in input().split()]
 A = []
 for i in range(N):
 	A.append(int(input()))
@@ -27,9 +30,11 @@ else:
         mp[md].append([k + (((i * X) - md) // D), 0])
         k = (N * 2 - i - 1) * i // 2
         mp[md].append([k + (((i * X) - md) // D) + 1, 1])
+    # print(mp)
     ans = 0
     for k in mp.keys():
         s = sorted(mp[k])
+        # print(s)
         md = 0
         bef = 0
         for t in s:

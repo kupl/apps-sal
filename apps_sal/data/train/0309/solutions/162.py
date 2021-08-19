@@ -4,6 +4,7 @@ class Solution:
         for i in range(len(A)):
             dp.append({})
 
+        # print(dp)
         res = 2
         for i in range(1, len(A)):
             for j in range(i):

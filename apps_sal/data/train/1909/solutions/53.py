@@ -6,6 +6,7 @@ class Solution:
 
         m = len(grid)
         n = len(grid[0])
+        # brute force
         max_len = max(m, n)
 
         row_count = [[grid[i][0]] for i in range(m)]
@@ -37,6 +38,7 @@ class Solution:
             return row_count[i][j] == 1
 
         l = l - 1
+        # check four coners
         x, y = i + l, j + l
 
         if row_count[i][y] <= l:

@@ -15,6 +15,7 @@ class Solution:
                 if N > ni >= 0 <= nj < M:
                     nk = k - grid[ni][nj]
                     if nk >= 0 and (ni, nj, nk) not in visited:
+                        #print(ni, nj, nk, m-1)
                         visited.add((ni, nj, nk))
                         heapq.heappush(queue, (ni + nj + m + 1, m + 1, ni, nj, nk))
         return -1

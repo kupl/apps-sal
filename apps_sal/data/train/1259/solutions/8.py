@@ -1,3 +1,4 @@
+# cook your dish here
 for x in range(int(input())):
     l, r = list(map(int, input().split()))
     c = 0

@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     n = input()
     co = n.count('abc')

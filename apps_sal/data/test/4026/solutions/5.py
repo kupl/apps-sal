@@ -1,3 +1,4 @@
+# for _ in range(1):
 for _ in range(int(input())):
     n, m = map(int, input().split())
     flag = 0

@@ -30,6 +30,7 @@ total = sum(d)
 tab = []
 tab2 = []
 
+#tab[0] = True
 
 som = 0
 nbV = 0
@@ -38,6 +39,8 @@ for d0 in d:
     nbV += 1
     tab.append(som)
     tab2.append(nbV)
+#	tab[som]=True
+#	tab2[som]=nbV
 
 answer_list = []
 
@@ -51,6 +54,7 @@ else:
         if u0 > total:
             break
         if not(u0 in tab):
+            #		if tab[u0]==False:
             break
         ind = tab.index(u0)
         answer_list.append(tab2[ind] - v_cpt)

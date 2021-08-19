@@ -4,8 +4,8 @@ a = []
 g = 0
 t = 0
 for i in range(n):
-    if s[i] == '
-    a.append(i)
+    if s[i] == '#':
+        a.append(i)
     if s[i] == 'G':
         g = i
     if s[i] == 'T':

@@ -1,3 +1,5 @@
+# A - Restricted
+# https://atcoder.jp/contests/abc063/tasks/abc063_a
 
 A, B = list(map(int, input().split()))
 

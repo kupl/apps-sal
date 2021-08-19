@@ -9,6 +9,7 @@ def main():
     n = int(input())
 
     mi = max(0, (a1 + a2) - (a1 * k1 + a2 * k2 - n))
+    # mi = a1 + a2 - (a1 * k1 + a2 * k2 - n)
     if k1 > k2:
         a1, a2 = a2, a1
         k1, k2 = k2, k1

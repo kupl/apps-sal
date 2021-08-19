@@ -3,9 +3,9 @@ s = list(map(int, input().strip()))
 
 count = 0
 
-if(p == 2 or p == 5):
+if(p == 2 or p == 5):  # 10と互いに素ではない場合
     co = 0
-    for i in range(n):
+    for i in range(n):  # 1の位から順に数を追加していく
         ne = int(s[n - i - 1]) % p
         if(ne == 0):
             co += 1

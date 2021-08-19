@@ -1,3 +1,4 @@
+# credits https://www.geeksforgeeks.org/minimum-steps-to-delete-a-ssing-after-repeated-deletion-of-palindrome-subssings/
 
 n = int(input())
 s = input()

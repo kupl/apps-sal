@@ -16,6 +16,7 @@ def main():
         ans = []
         d = x + y
         cnt = d // k
+        # 距離がkで割り切れるとき
 
         def pattern_0(x, y):
             x_now, y_now = 0, 0
@@ -34,14 +35,19 @@ def main():
                     break
             return ans + [[x, y_now + (i - j + 1) * k] for i in range(j, cnt)]
 
+        # cnt==0のとき
+        # dが偶数のとき
         def pattern_1_even(x, y):
             return [[(x + y) // 2, (x + y) // 2 - k], [x, y]]
+        # dが奇数のとき
 
         def pattern_1_odd(x, y):
             if k % 2 == 0:
                 return -1
             return [[k, 0]] + [[-i + k, j] for i, j in pattern_1_even(k - x, y)]
 
+        # cnt>=1のとき
+        # dが偶数のとき
         def pattern_2_even(x, y):
             cnt = (x + y) // k
             if k % 2 == 0 or cnt % 2 == 1:
@@ -54,6 +60,7 @@ def main():
             else:
                 return [[k - l, -l], [x, y]]
 
+        # dが奇数のとき
         def pattern_2_odd(x, y):
             cnt = (x + y) // k
             if k % 2 == 0:

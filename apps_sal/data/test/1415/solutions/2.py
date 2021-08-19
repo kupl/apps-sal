@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 DELTAS = {
     'U': (-1, 0),

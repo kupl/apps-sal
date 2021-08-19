@@ -1,9 +1,12 @@
+# 解説を参考に作成
 """
 D - Decayed Bridges
 """
 
 
 class UnionFind():
+    # 下記から拝借
+    # https://note.nkmk.me/python-union-find/
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -52,6 +55,14 @@ class UnionFind():
             '{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
+# from collections import deque
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(N, M, AB):
     AB = AB[::-1]
     AB = [[ab[0] - 1, ab[1] - 1] for ab in AB]
@@ -72,6 +83,11 @@ def __starting_point():
     N, M = list(map(int, input().split()))
     AB = [[int(i) for i in input().split()] for _ in range(M)]
     solve(N, M, AB)
+
+    # # test
+    # from random import randint
+    # from func import random_str
+    # solve()
 
 
 __starting_point()

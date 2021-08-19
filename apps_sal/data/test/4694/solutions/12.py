@@ -1,3 +1,4 @@
+# B - Traveling AtCoDeer Problem
 def main():
     _ = int(input())
     a = list(map(int, input().split()))

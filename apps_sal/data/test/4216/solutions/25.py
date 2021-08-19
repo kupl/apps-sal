@@ -1,3 +1,4 @@
+# ABC 057: C – Digits in Multiplication
 N = int(input())
 
 Fs = [len(str(N))]

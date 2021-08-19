@@ -19,4 +19,5 @@ for i in s:
         cnt[(AT, GC)] += 1
     else:
         cnt[(AT, GC)] = 1
+    #print(cnt, ans)
 print(ans)

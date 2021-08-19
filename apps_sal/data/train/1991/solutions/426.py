@@ -28,4 +28,6 @@ class Solution:
         for i in range(fuel + 1):
             partial = count(finish, i)
             ret += partial
+            # print(partial)
+        # print(dp)
         return ret % (10**9 + 7)

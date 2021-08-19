@@ -20,8 +20,8 @@ def main():
         Sh = S[h]
         th = t[h]
         for w in range(W):
-            if Sh[w] == '
-            th[w] = -1
+            if Sh[w] == '#':
+                th[w] = -1
 
     q = deque([(C1, C2)])
     a = 0

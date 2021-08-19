@@ -16,6 +16,7 @@ for i in range(n - 1):
         ch2 = v - 1
         ch = 1
 
+# 0:White 1:Black
 ans = [-1 for _ in range(n)]
 
 if ch > 0:

@@ -33,6 +33,7 @@ ans = 0
 c, d = h - a, w - b
 for i in range(b + 1, w + 1):
     d = w - i + 1
+#     print(i,i+c-2, c-1, fact.comb(i+c-2, c-1),  fact.comb(a+d-2, a-1))
     ans = (ans + fact.comb(i + c - 2, c - 1) * fact.comb(a + d - 2, a - 1)) % mod
 
 print(ans)

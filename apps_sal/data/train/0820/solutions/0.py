@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))
     colors = [0] * 41

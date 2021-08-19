@@ -1,3 +1,4 @@
+# python3
 import sys
 
 
@@ -43,13 +44,15 @@ def can_mutate(start, finish):
     if from_a == to_a:
         return from_bc != 0
 
+    # from_bc < to_bc
+    # from_a > to_a
     return True
 
 
 def main():
     s = AbcString(input())
     t = AbcString(input())
-    input()
+    input()  # skip one line
     requests = read_all_following_lines()
 
     answer = ""

@@ -10,7 +10,7 @@ class Solution:
         for i in range(2, n + 1):
             sums_dict[i - 1] = sum(dp[i - 1])
             for j in range(len(rollMax)):
-                steps = rollMax[j]
+                steps = rollMax[j]  # number of steps we can go upwards
                 k = 1
                 ans = 0
                 while k <= min(steps, i):

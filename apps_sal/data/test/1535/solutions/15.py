@@ -1,3 +1,6 @@
+# normalize
+# slope
+#set and count
 
 n, x, y = list(map(int, input().split()))
 '''s_x=[]

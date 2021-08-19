@@ -30,6 +30,13 @@ def move(px, py, s, left):
 while q:
     px, py = q.popleft()
     s = mp[px][py]
+    # print(s)
+    #print(s + py - r)
+    #print(s - py + r)
+    #print(s + py - r <= y * 2)
+    #print(s - py + r <= x * 2)
+    #print(x, y)
+    # return
     ans += s + py - sy <= y * 2 and s - py + sy <= x * 2
 
     move(px + 1, py, s, left=True)

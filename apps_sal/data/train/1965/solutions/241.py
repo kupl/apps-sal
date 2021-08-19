@@ -1,3 +1,4 @@
+# awice
 class DSU:
     def __init__(self, N):
         self.parents = list(range(N))
@@ -25,7 +26,9 @@ class DSU:
 
 
 class Solution:
+    # weight edges with full link weighted 2?
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        # union find
         alice, bob, full = [], [], []
 
         for e in edges:

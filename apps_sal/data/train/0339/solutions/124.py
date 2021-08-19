@@ -11,7 +11,9 @@ class Solution:
                             break
                         n = j - i + 1
                         self.ans += (n * (n - 1)) // 2
+                        # print(self.ans)
                         break
+                    #print(n2, i, j, prod*prod, n2[i], n2[j], n2[i]*n2[j])
                     if n2[i] * n2[j] == prod * prod:
                         temp = n2[i]
                         t1, t2 = 0, 0
@@ -30,5 +32,6 @@ class Solution:
         nums1.sort()
         nums2.sort()
         func(nums1, nums2)
+        # print(self.ans)
         func(nums2, nums1)
         return self.ans

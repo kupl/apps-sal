@@ -1,3 +1,8 @@
+# ===================================
+# (c) MidAndFeed aka ASilentVoice
+# ===================================
+# import math, fractions, collections
+# ===================================
 n, m = [int(x) for x in input().split()]
 q = [int(x) for x in input().split()]
 ans = 1e9

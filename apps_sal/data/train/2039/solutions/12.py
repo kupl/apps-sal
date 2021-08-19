@@ -1,6 +1,7 @@
 def check(M):
     now = 0
     for i in range(n):
+        #print(i, now, mas[i], M, (now - mas[i]) % m)
         if (now - mas[i]) % m > M:
             if mas[i] > now:
                 now = mas[i]

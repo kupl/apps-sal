@@ -19,4 +19,5 @@ class Solution:
             cnt[new_l] += 1
             if m in cnt:
                 last = i + 1
+            # print(i, l, r, g)
         return last

@@ -19,12 +19,12 @@ di = [inf] * 2451 * N
 if S > 2450:
     S = 2450
 di[S] = 0
-hq = [(0, S)]
+hq = [(0, S)]  # 時間,都市名*2451+銀貨
 
 while hq:
     t, v = heappop(hq)
-    u = v // 2451
-    s = v % 2451
+    u = v // 2451  # 都市名
+    s = v % 2451  # 所持金
 
     for x, a, b in cost[u]:
         if s >= a:

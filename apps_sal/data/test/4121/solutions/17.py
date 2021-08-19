@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 
@@ -5,6 +6,8 @@ def rint():
     return map(int, sys.stdin.readline().split())
 
 
+#lines = stdin.readlines()
+# ae : [h, l], height, length
 h = 0
 l = 1
 n = int(input())

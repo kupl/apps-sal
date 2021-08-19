@@ -8,6 +8,7 @@ class Solution:
         step = 0
         while queue:
             level_size = len(queue)
+            # print(queue)
             for _ in range(level_size):
                 posi, spd = queue.popleft()
                 if posi == target:

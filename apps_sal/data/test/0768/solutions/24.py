@@ -1,3 +1,4 @@
+# :3
 
 kitten = input("")
 a = (kitten.split())

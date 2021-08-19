@@ -4,8 +4,8 @@ from math import inf
 
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
-        byrow = defaultdict(set)
-        bycol = defaultdict(set)
+        byrow = defaultdict(set)  # row: {col,}
+        bycol = defaultdict(set)  # col: {row,}
         for x, y in points:
             byrow[y].add(x)
             bycol[x].add(y)

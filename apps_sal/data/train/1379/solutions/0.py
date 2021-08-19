@@ -11,6 +11,7 @@ def main(filename):
     explored = []
     for i in T:
         if i in explored:
+            # print explored
             for j in range(len(ans)):
                 if ans[j][0] == i:
                     ans[j][1] += 1

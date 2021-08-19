@@ -28,11 +28,13 @@ class Solution:
                     ufB.unite(a, b)
             elif t == 1:
                 if ufA.find(a) == ufA.find(b):
+                    # should remove this edge
                     res += 1
                 else:
                     ufA.unite(a, b)
             else:
                 if ufB.find(a) == ufB.find(b):
+                    # should remove this edge
                     res += 1
                 else:
                     ufB.unite(a, b)

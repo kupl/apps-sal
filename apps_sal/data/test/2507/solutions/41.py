@@ -10,7 +10,7 @@ def main():
     F.sort()
     F = F[::-1]
 
-    def ok(x):
+    def ok(x):  # チームの成績をxとするような修行の仕方が存在するか
         cnt = np.maximum(0, A - x // F).sum()
         return cnt <= k
 

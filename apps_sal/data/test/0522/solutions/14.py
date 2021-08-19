@@ -49,4 +49,5 @@ fp1 = f[0][2]
 fp2 = f[0][1]
 fp3 = f[0][0]
 r = pow(f1, fp1, MD) * pow(f2, fp2, MD) * pow(f3, fp3, MD) * pow(c, cp, MD)
+# print(fp1,fp2,fp3,cp)
 print(r % MD)

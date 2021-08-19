@@ -20,6 +20,7 @@ class Solution:
         i, j = left, mid + 1
 
         for k in range(n):
+            # j>right means right side is used up
             if i <= mid and (j > right or nums[i] <= nums[j]):
                 tmp[k] = nums[i]
                 i += 1

@@ -28,6 +28,7 @@ def survivor(zombies):
     F = zombies[0] * zombies[1] + zombies[0]
 
     for i in range(1, F):
+        # print(e)
         x = 0
         for j in range(0, N):
             if(i >= c[j]):
@@ -41,8 +42,12 @@ def survivor(zombies):
 
 
 def gcd(a, b):
+    # if a and b are both zero, print an error and return 0
     if a == 0 and b == 0:
+        # print("WARNING: gcd called with both arguments equal to zero.",
+        # file=sys.stderr)
         return 0
+    # make sure a and b are both nonnegative
     if a < 0:
         a = -a
     if b < 0:

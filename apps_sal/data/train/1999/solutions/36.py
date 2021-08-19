@@ -1,3 +1,8 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         curr = head
@@ -11,6 +16,7 @@ class Solution:
         while curr is not None:
             last_index = len(memo) - 1
             if curr.val == 0:
+                # print(\"here\")
                 memo[last_index][0].next = curr.__next__
                 curr = curr.__next__
                 continue
@@ -18,9 +24,12 @@ class Solution:
             flag = True
             for i in range(1, len(memo[last_index])):
                 val = memo[last_index][i] + curr.val
+                # print(val)
                 if val == 0:
+                    # print(f'last: {memo[last_index][0].val}, curr: {curr.val}')
                     memo[i - 1][0].next = curr.__next__
                     memo = memo[:i]
+                    # print(memo)
                     flag = False
                     break
                 else:

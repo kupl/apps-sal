@@ -6,9 +6,9 @@ class Solution:
             if s[i + k] == s[j + k]:
                 k += 1
                 continue
-            elif s[i + k] > s[j + k]:
+            elif s[i + k] > s[j + k]:  # if left is greater
                 j = j + k + 1
-            else:
+            else:  # if right is greater
                 i = i + k + 1
             if(i == j):
                 j = i + 1

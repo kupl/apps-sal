@@ -12,6 +12,7 @@ class Solution:
         ans = 0
 
         while end < len(nums):
+            # print(start, end, ans)
             n = nums[end]
             while len(minDeque) > 0 and nums[minDeque[-1]] >= n:
                 minDeque.pop()

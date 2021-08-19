@@ -1,3 +1,4 @@
+# python program to do this question using disjoint set technique
 import math
 
 

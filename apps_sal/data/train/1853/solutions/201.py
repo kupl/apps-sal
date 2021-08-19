@@ -9,6 +9,7 @@ class Solution:
             graph[i[0]].append([i[1], i[2]])
             graph[i[1]].append([i[0], i[2]])
 
+        # print(graph)
         self.ans = -1
         self.mi = float('inf')
 
@@ -31,3 +32,34 @@ class Solution:
             bfs(i)
 
         return self.ans
+
+
+#         di=dict()
+#         for i in range(n):
+#             di[i]=set()
+
+#         print(graph)
+#         # self.mi=float('inf')
+#         # self.node=-1
+#         def dfs(node,thres,covered,parent):
+#             if(thres<0):
+#                 return
+#             di[parent].add(node)
+#             for i in graph[node]:
+#                 dfs(i[0],thres-i[1],covered+1,parent)
+
+
+#         for i in range(n):
+#             dfs(i,distanceThreshold,0,i)
+#         ans=-1
+#         mi=float('inf')
+#         print(di)
+#         for i,j in di.items():
+#             if(len(j)-1<mi):
+#                 mi=len(j)-1
+#                 ans=i
+#             elif(len(j)-1==mi):
+#                 ans=i
+#         return ans
+
+        # return self.node

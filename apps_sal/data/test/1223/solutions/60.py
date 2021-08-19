@@ -228,7 +228,12 @@ class AVL:
 
 
 def main():
+    #    import random
     import sys
+
+#    N = 100000
+#    P = list(range(1, N + 1))
+#    random.shuffle(P)
 
     input = sys.stdin.readline
     N = int(input())

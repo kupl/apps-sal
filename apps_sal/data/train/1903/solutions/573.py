@@ -4,14 +4,18 @@ class Solution:
         def cost(a, b):
             return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
+        # LC copy from JerryJin2905
+
         edges = [[] for _ in points]
 
+        # Build edge cost list
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
                 dist = cost(points[i], points[j])
                 edges[i].append([dist, j])
                 edges[j].append([dist, i])
 
+        # choose first point as root
         cost = 0
         tree = {0}
         pq = []

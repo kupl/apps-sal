@@ -11,12 +11,12 @@ for left in range(n):
         inner.sort()
         outer.sort(reverse=True)
 
-        for i in range(k):
+        for i in range(k):  # check for k number of swaps for this combination
             if i >= len(inner) or i >= len(outer):
                 break
             if inner[i] < outer[i]:
-                inner[i] = outer[i]
+                inner[i] = outer[i]  # don't give a swap fuck haha,,, bitch!
             else:
-                break
-        best = max(best, sum(inner))
+                break  # no more chances
+        best = max(best, sum(inner))  # results update
 print(best)

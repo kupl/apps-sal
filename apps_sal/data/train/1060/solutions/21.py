@@ -1,3 +1,4 @@
+# Coded By Ujjwal Bharti
 tulu = int(input())
 for _ in range(tulu):
     n = int(input())
@@ -19,6 +20,7 @@ for _ in range(tulu):
         if i == "1" and flag == False:
             flag = True
             continue
+        # print(frequency)
         if flag and i == "1":
             frequency += 1
         if flag and i == "0":

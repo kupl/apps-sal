@@ -32,12 +32,18 @@ def printmtrx2(campus):
             cnt += 1
         print(ts)
 
+# print(cmap)
+# print(campus)
+
 
 cnt = cmap[0][1]
 idx = 0
 campusidx = 0
 direct = 0
 while cnt:
+    # print(campusidx)
+    # printmtrx(campus)
+    # print("")
     campus[campusidx] = cmap[idx][0]
     cnt -= 1
     if(cnt < 1):

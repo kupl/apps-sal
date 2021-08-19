@@ -10,6 +10,7 @@ if 1 not in A:
 else:
     dp[1] = 0
 
+# DP
 for i in range(2, N + 1):
     if i in A:
         continue

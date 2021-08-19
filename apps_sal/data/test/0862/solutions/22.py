@@ -1,6 +1,7 @@
 n = int(input())
 arr = list(map(int, input().split()))
 mn = min(arr)
+# arr = [i - mn for i in arr]
 pos = mn % n
 val = mn
 for _ in range(n):

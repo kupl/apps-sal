@@ -1,3 +1,10 @@
+# [] DP
+# O(N^2)
+# NOTE: diff can be either positive or negative
+# f[i]: the longest length of arithmetic subsequences who takes A[i] as the tail.
+#f[i] = defaultdict(lambda: 1)
+# f[i] = {diff: longest length}
+# f[i] = max(f[i][d], f[j][d] += 1) for j < i and d:=A[i]-A[j]
 from collections import defaultdict
 
 

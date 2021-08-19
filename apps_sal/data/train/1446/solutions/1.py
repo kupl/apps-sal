@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 s = []
 for i in range(31):

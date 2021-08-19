@@ -25,6 +25,7 @@ for i in range(n):
             diff[posai].add(b[i])
         else:
             diff.append({a[i], b[i]})
+# print(diff)
 diff2 = []
 for i in diff:
     diff2.append([])

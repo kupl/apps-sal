@@ -5,3 +5,4 @@ def get_mean(arr, x, y):
         return -1
     else:
         return 0.5 * (sum(arr[:x]) / x + sum(arr[-y::]) / y)
+    # your code here

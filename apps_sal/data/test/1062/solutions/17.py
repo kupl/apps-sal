@@ -1,3 +1,14 @@
+# compute hamming distance
+# mark indexes that differ
+# m_benefit=0,s_i,s_j
+# for each i in index
+#   for each j in i+1
+#       swap i & j and see what is the benefit
+#       if benefit > m_benefit:
+#           m_ben=ben
+#           record m_i and m_j
+# if m_ben = 0 then -1 -1
+# else distance-benefit and print s_i+1&s_j+1
 diff = []
 wrong_t = {}
 

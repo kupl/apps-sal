@@ -1,5 +1,6 @@
 import math
 
+# init
 maxn = 55
 g = [1]
 for i in range(maxn):

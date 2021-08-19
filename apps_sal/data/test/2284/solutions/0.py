@@ -53,6 +53,7 @@ class MCFP(list):
                 if prev[i] != None:
                     phi[i] += dist[i]
                     dist[i] = G.inf
+        # print(it)
         return flowVal, flowCost
 
     def backward(G, x, src, prev):
@@ -166,6 +167,8 @@ def test(n, k):
         yield R.randint(1, 10**9)
     for i in range(n):
         yield R.randint(1, 10**9)
+
+#ints=test(1000, 800)
 
 
 main()

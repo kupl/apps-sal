@@ -19,6 +19,7 @@ class Solution:
                         direction = 1
                     elif A[j] < A[j - 1]:
                         direction = -1
+                    #print(i,j, direction)
                     if A[j] == A[j - 1]:
                         i = j
                         break

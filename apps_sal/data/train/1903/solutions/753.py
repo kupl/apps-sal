@@ -13,7 +13,7 @@ class Solution:
                 uf[x] = find(uf[x])
             return uf[x]
 
-        def union(x, y):
+        def union(x, y):  # x->y
             uf[find(x)] = find(y)
 
         def dis(a, b):

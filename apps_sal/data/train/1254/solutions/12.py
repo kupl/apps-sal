@@ -13,6 +13,7 @@ def balancedContest(n, p, arr):
     return
 
 
+# Driver code starts here
 t = int(input())
 for _ in range(t):
     n, p = map(int, input().split())

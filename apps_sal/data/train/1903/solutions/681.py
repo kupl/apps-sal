@@ -1,9 +1,13 @@
+# alright, whatever, time to solve it again in Python3 \\U0001f40d  whoo!
 
+# ok silly mistake, but that's A ok :)
+
+# alright! cool, well time for C++ then i'm done upsolving this one, it was fun :)
 
 class Solution:
     def minCostConnectPoints(self, A: List[List[int]]) -> int:
         N = len(A)
-        P = [i for i in range(N)]
+        P = [i for i in range(N)]  # parent representatives of disjoint sets
         E = []
         for u in range(N):
             x1, y1 = A[u]
@@ -22,6 +26,6 @@ class Solution:
             b = find(b)
             if a == b:
                 return False
-            P[a] = b
+            P[a] = b   # arbitrary choice
             return True
         return sum([w for u, v, w in E if union(u, v)])

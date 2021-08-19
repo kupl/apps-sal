@@ -6,6 +6,7 @@ class Solution:
 
         @lru_cache(maxsize=None)
         def helper(i, m):
+            # return the max points current player can get from piles[i:]
             if i + 2 * m >= len(piles):
                 return A[i]
             res = 0

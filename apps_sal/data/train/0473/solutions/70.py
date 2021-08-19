@@ -1,5 +1,6 @@
 class Solution:
     def countTriplets(self, arr: List[int]) -> int:
+        # prefix_arr=[]
         n = len(arr)
         for i in range(1, n):
             arr[i] ^= arr[i - 1]

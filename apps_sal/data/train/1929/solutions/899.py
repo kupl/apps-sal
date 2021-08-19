@@ -24,3 +24,8 @@ class StreamChecker:
                 new_state.append(s)
         self.state = new_state
         return ret
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

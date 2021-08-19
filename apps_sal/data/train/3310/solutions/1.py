@@ -39,7 +39,7 @@ def score_pole_vault(vaulter_list):
     if jumpOff:
         retDict['1st'] = retDict['1st'] + " (jump-off)"
     tie = 0
-    if positionsAssigned == 1:
+    if positionsAssigned == 1:  # I.e. only first place has been assigned to 1 person
         for i in range(1, len(updatedVaulterList)):
             if i == 1:
                 retDict['2nd'] = updatedVaulterList[i]['name']
@@ -54,7 +54,7 @@ def score_pole_vault(vaulter_list):
     if tie:
         retDict['2nd'] = retDict['2nd'] + " (tie)"
     tie = 0
-    if positionsAssigned == 2:
+    if positionsAssigned == 2:  # I.e. Either 1st place has a tie, or 1st and 2nd place assigned
         for i in range(2, len(updatedVaulterList)):
             if i == 2:
                 retDict['3rd'] = updatedVaulterList[i]['name']

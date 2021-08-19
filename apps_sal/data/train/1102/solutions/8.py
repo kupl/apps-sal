@@ -1,3 +1,4 @@
+# cook your dish here
 
 import itertools
 
@@ -22,8 +23,11 @@ for i in range(0, t):
         j = p % 10
         j = int(j)
         if j > 1:
+            # s=s+arr[j-2]
+            # result=itertools.combinations(arr[j-2],1)
             hi = hi * len(arr[j - 2])
 
         p = p / 10
+    # result=itertools.combinations(s,l)
 
     print(hi)

@@ -36,6 +36,7 @@ class UnionFind:
 N, K = list(map(int, input().split()))
 A = np.array([list(map(int, input().split())) for _ in range(N)], dtype=np.int64)
 ans = 1
+# rows and columns
 for step in range(2):
     if step == 1:
         A = A.T
@@ -45,11 +46,13 @@ for step in range(2):
     same = uf.same
     comb = 1
 
+    # swap ok?
     for i in range(N):
         for j in range(i + 1, N):
             if np.all(A[i, :] + A[j, :] <= K):
                 merge(i + 1, j + 1)
 
+    # prod of tree-size!
     for i in uf.size:
         comb *= np.math.factorial(i)
         comb %= 998244353

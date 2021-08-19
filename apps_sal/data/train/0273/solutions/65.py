@@ -1,5 +1,7 @@
 class Solution:
     def racecar(self, target: int) -> int:
+        # from answers:
+        # Dojkstra's
         '''
         K = target.bit_length() + 1
         barrier = 1 << K
@@ -14,7 +16,7 @@ class Solution:
             for k in range(K+1):
                 walk = (1 << k) - 1
                 steps2, targ2 = steps + k + 1, walk - targ
-                if walk == targ: steps2 -= 1 
+                if walk == targ: steps2 -= 1 #No \"R\" command if already exact
 
                 if abs(targ2) <= barrier and steps2 < dist[targ2]:
                     heapq.heappush(pq, (steps2, targ2))
@@ -22,6 +24,7 @@ class Solution:
 
         return dist[0]
         '''
+        # Dynamic programming
         dp = [0, 1, 4] + [float('inf')] * target
         for t in range(3, target + 1):
             k = t.bit_length()

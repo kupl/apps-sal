@@ -6,12 +6,12 @@ for i in range(H):
 for s in range(-1, H + 1):
     for t in range(-1, W + 1):
         if s == -1 or s == H:
-            print("
+            print("#" * (W + 2))
             break
         else:
             if t == -1:
-                print("
+                print("#", end="")
             elif t == W:
-                print("
+                print("#")
             else:
                 print(a[s][t], end="")

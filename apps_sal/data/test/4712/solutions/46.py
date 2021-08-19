@@ -1,10 +1,11 @@
+# ABC062 B:PictureFrame
 
 H, W = map(int, input().split())
 pic = []
 for _ in range(H):
     a = input()
     pic.append(a)
-print('
+print('#' * (W + 2))
 for i in range(H):
-    print('
-print('
+    print('#' + pic[i] + '#')
+print('#' * (W + 2))

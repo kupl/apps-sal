@@ -15,8 +15,9 @@
     a,b,cは整数
 '''
 
+# 標準入力から a, b, c の値を取得する
 a, b, c = list(map(int, input().split()))
 
-result = [a + b, b + c, a + c]
+result = [a + b, b + c, a + c]  # 結果出力用リスト
 
 print((min(result)))

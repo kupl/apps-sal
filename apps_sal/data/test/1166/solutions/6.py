@@ -11,6 +11,7 @@ def can_win(idx):
     res = False
 
     delta = arr[idx]
+    # right
     nidx = idx + delta
     while nidx < n:
         if arr[nidx] > arr[idx] and not can_win(nidx):
@@ -18,6 +19,7 @@ def can_win(idx):
             break
         nidx += delta
 
+    # left
     nidx = idx - delta
     while not res and nidx >= 0:
         if arr[nidx] > arr[idx] and not can_win(nidx):

@@ -1,3 +1,4 @@
+# cook your dish here
 def mixi_game(n, k, arr):
     val = 0
     for i in range(n):

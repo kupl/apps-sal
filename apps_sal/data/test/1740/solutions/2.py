@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/2/23 19:02
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : F. Asya And Kittens.py
 
 
 class UnionFind(object):
@@ -30,6 +35,7 @@ def main():
     uf = UnionFind(n + 1)
     for _ in range(n - 1):
         x, y = list(map(int, input().split()))
+        # print(x, y)
         uf.union(x, y)
     x = uf.find(1)
     print(*uf.data[x])

@@ -15,6 +15,7 @@ class Solution:
             target = (curr_sum - remain) % p
             if target in prefix_sum_dict:
                 result = min(result, i - prefix_sum_dict[target])
+            # print(i, num,  (curr_sum - remain) % p, result)
 
         if result != float('inf') and result < len(nums):
             return result

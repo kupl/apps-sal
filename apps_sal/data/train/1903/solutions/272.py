@@ -3,6 +3,7 @@ class Solution:
         def md(p1, p2):
             return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
         q = [md(points[0], p) for p in points]
+        # print(q)
         res = 0
         n = len(points)
         for _ in range(n - 1):

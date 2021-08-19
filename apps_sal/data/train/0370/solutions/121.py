@@ -1,5 +1,14 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
+        # https://leetcode.com/problems/largest-component-size-by-common-factor/discuss/819919/Python-Union-find-solution-explained
+        # This question feels like union find but u cannot link together
+        # First, find the primes factor of each number
+        # And then group together same prime factore
+        # The largest group is the largest component
+        # But the way to find primes set is a little confusing
+        # It loop from small to large and find the first factor and the primes set for the larger factor
+        # If two numbers share the same prime factor, they belong to the same group
+        # Then use union find to grouo together
         n = len(A)
         record = [-1] * n
         primes = collections.defaultdict(list)
@@ -7,6 +16,7 @@ class Solution:
         def get_primes(i):
             for j in range(2, int(math.sqrt(i)) + 1):
                 if i % j == 0:
+                    # And find the primes set for the larger factor
                     return get_primes(i // j) | set([j])
             return set([i])
 
@@ -18,6 +28,8 @@ class Solution:
             record[a] = find(record[a])
             return record[a]
 
+        # U have been wrong on this several times
+        # When merge, it is the record[i] == root index, not root val
         def union(i, j):
             a, b = find(i), find(j)
             if a != b:

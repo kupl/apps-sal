@@ -35,7 +35,7 @@ s = [0] * n
 p = list(map(int, input().split()))
 
 
-seg = ["
+seg = ["#"] * (n << 2)
 sumsegtree(l, seg, 0, len(l) - 1, 1)
 
 for i in range(n - 1, -1, -1):

@@ -1,4 +1,5 @@
 class Solution:
+    # Process only rows that appear in the input, for other rows you can always allocate seats for two families.
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         res, lookup = 0, collections.defaultdict(set)
         for i, j in reservedSeats:

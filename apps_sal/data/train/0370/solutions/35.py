@@ -51,12 +51,17 @@ class Solution:
                 n = n // 2
                 result.add(2)
 
+            # n must be odd at this point
+            # so a skip of 2 ( i = i + 2) can be used
             for i in range(3, int(math.sqrt(n)) + 1, 2):
 
+                # while i divides n , print i ad divide n
                 while n % i == 0:
                     result.add(i)
                     n = n // i
 
+            # Condition if n is a prime
+            # number greater than 2
             if n > 2:
                 result.add(n)
 
@@ -68,6 +73,7 @@ class Solution:
             p_factors = prime_factors(node)
 
             for pf in p_factors:
+                # if pf already a prime factor of prev encountered num, union with that num the curr num
                 if pf in factor_first_multiple_map:
                     uf_obj.union(node, factor_first_multiple_map[pf])
                 else:

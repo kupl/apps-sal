@@ -6,6 +6,7 @@ class Solution:
 
         res = set()
         n = len(transactions)
+        # transactions.sort()
 
         for i in range(n):
             n1, t1, a1, d1 = transactions[i].split(',')

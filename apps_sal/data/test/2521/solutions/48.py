@@ -33,9 +33,12 @@ for i in range(2 * n, 3 * n):
 j = n
 z2[j] = sm
 j -= 1
+# print(h[0])
+# print(sm)
 for i in range(2 * n - 1, n - 1, -1):
     p = -l[i]
     if p > h[0]:
+        # print('jif')
         sm = sm + h[0] - p
         heapq.heappop(h)
         heapq.heappush(h, p)
@@ -45,6 +48,8 @@ for i in range(2 * n - 1, n - 1, -1):
     z2[j] = sm
     j -= 1
 maxi = -(10**99)
+# print(z1)
+# print(z2)
 for i in range(n + 1):
     maxi = max(maxi, z1[i] - z2[i])
 print(maxi)

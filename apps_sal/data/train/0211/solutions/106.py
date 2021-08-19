@@ -9,7 +9,7 @@ class Solution:
         if len(d) == len(s):
             return len(d)
 
-        def waysToSplit(s):
+        def waysToSplit(s):  # return list of sequences
             if not s:
                 return []
             if len(s) == 1:
@@ -27,6 +27,7 @@ class Solution:
         maxCount = 1
 
         sequences = waysToSplit(s)
+        # print(sequences)
         for seq in sequences:
             s = set()
             count = 0

@@ -62,6 +62,7 @@ class Node(object):
 class Funnel(object):
     def __init__(self):
         self.count = 0
+        # create and link up nodes for each funnel value space
         prev_level = [Node() for _ in range(5)]
         for i in range(4, 0, -1):
             level = [Node() for _ in range(i)]
@@ -126,4 +127,5 @@ class Funnel(object):
         for i, level in enumerate(self.get_levels()):
             s += (' ' * i) + '\\' + ' '.join([str(n) for n in level]) + '/\n'
 
+        # exclude final newline
         return s[:-1]

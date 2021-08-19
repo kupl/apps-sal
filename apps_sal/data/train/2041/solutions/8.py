@@ -35,6 +35,7 @@ if len(badIdx) > 4:
     print(0)
 else:
     (i, j) = badIdx[0]
+    # for (i,j) in badIdx:
     for k in range(1, n + 1):
         if i != k and t[i] != t[k]:
             swap(i, k)

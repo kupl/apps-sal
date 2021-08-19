@@ -7,6 +7,8 @@ class Solution:
     def get_factors(self, n):
         y = n
         for x in range(1, int(sqrt(n)) + 1):
+            # y = int(n/x) if (n/float(x)).is_integer() else y
+            # alternatively:
             y = int(n / x) if n % x == 0 else y
 
         return int(n / y), y

@@ -8,6 +8,7 @@ class Solution:
                 ans[A[i]] = [i]
 
         B = sorted(A, reverse=True)
+        # print(B)
         max_index = -1
         ramp = 0
         for key in B:

@@ -1,3 +1,4 @@
+#from collections import deque,defaultdict
 import heapq
 def printn(x): return print(x, end='')
 def inn(): return int(input())
@@ -9,6 +10,7 @@ def ins(): return input().strip()
 DBG = True and False
 BIG = 10**18
 R = 10**9 + 7
+#R = 998244353
 
 
 def ddprint(x):
@@ -20,10 +22,12 @@ n, k, q = inm()
 a = inl()
 mn = BIG
 for i in range(n):
+    # ddprint(f"{i=}")
     lo = a[i]
     gr = []
     bg = -1
     for j in range(n):
+        #ddprint(f"  {j=} {lo=} {bg=} {a[j]=}")
         if lo <= a[j]:
             if bg < 0:
                 bg = j
@@ -39,6 +43,7 @@ for i in range(n):
     for bg, ed in gr:
         b = a[bg:ed]
         b.sort()
+        #ddprint(f"{bg=} {ed=} {b=}")
         for j in range(len(b) - k + 1):
             heapq.heappush(h, b[j])
     ddprint(h)

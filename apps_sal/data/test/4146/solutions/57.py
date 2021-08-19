@@ -5,6 +5,8 @@ import itertools
 import string
 import queue
 import copy
+#import numpy as np
+#import scipy
 from collections import Counter, defaultdict, deque
 from itertools import permutations, combinations
 from heapq import heappop, heappush

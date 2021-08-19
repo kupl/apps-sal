@@ -14,6 +14,8 @@ for i in range(1, n, 1):
     pre_sum.append(ele)
     ele1 = price_s[i] + pre_sum1[i - 1]
     pre_sum1.append(ele1)
+# print(pre_sum)
+# print(pre_sum1)
 for i in range(m):
     full = False
     curr = list(map(int, input().split()))

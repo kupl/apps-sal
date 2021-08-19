@@ -31,3 +31,14 @@ class Solution:
                 low = mid + 1
 
         return low
+
+    # if len(bloomDay) < m * k:
+    #     return -1
+    # left, right = 1, max(bloomDay)
+    # while left < right:
+    #     mid = left + (right - left) // 2
+    #     if feasible(mid):
+    #         right = mid
+    #     else:
+    #         left = mid + 1
+    # return left

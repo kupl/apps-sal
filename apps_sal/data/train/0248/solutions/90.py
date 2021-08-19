@@ -4,6 +4,7 @@ import collections
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
         '''
+        # dfs, TLE. I think bfs will leads to TLE as well.
         rows, cols = len(grid), len(grid[0])
         def dfs(ch, s_r, s_c, row, col, seen, leng):
             for dr, dc in [[1, 0],[0, -1], [0, 1], [-1, 0]]:
@@ -21,6 +22,8 @@ class Solution:
                         return True
         return False
         '''
+        # Union Find, when you reach a char which is the same as current char and the two share the same
+        # ancestor, then there is a ring
         rows, cols = len(grid), len(grid[0])
         seen = set()
         ancestors = dict()
@@ -35,6 +38,7 @@ class Solution:
             return ancestors[(x, y)]
 
         def union(x1, y1, x2, y2):
+            # (x2, y2) is the new char that should be added to the group that (x1, y1) belongs to
             ancestors[find(x2, y2)] = find(x1, y1)
 
         for r in range(rows):

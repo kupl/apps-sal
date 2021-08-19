@@ -26,6 +26,7 @@ class Solution:
                     coeff = ''
             else:
                 coeff += i
+#            print(i,a,b,coeff)
         if a == 0 and b == 0:
             return "Infinite solutions"
         elif a == 0:

@@ -5,6 +5,7 @@ def solve(weights, limit):
     weights.sort()
     diff1 = abs(sum(weights[limit:]) - sum(weights[0:limit]))
     diff2 = abs(sum(weights[-limit:]) - sum(weights[:-limit]))
+    # answers.append(abs(sum(weights[limit:])-sum(weights[0:limit])))
     answers.append(max(diff1, diff2))
 
 

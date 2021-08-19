@@ -3,7 +3,10 @@ class Solution:
         if S == T:
             return 0
 
+        # if two routes share the same stop, they are reachable with each other
+        # mapping: stop -> routes
         stops = collections.defaultdict(set)
+        # mapping: route -> reachable routes
         reachable = collections.defaultdict(set)
         for i, route in enumerate(routes):
             for stop in route:
@@ -21,6 +24,9 @@ class Solution:
             for _ in range(queue_len):
                 route = queue.popleft()
                 if route in target_routes:
+                    # print(stops[S])
+                    # print(target_routes)
+                    # print(route)
                     return buses
                 for other_route in reachable[route]:
                     if other_route not in reached:

@@ -7,6 +7,7 @@ class Solution:
             for j in range(n):
                 dic[(A[i] & A[j])] += 1
         ans = 0
+     #   print(dic)
         for ele in A:
             for res in dic:
                 if res & ele == 0:

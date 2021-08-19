@@ -1,3 +1,4 @@
+# cook your dish here
 n, q = map(int, input().split())
 l = [int(x) for x in input().split()]
 mn = min(l)

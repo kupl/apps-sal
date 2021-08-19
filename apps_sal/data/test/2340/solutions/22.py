@@ -17,6 +17,7 @@ for _ in range(q):
         if (i == len(p) - 1 or p[i + 1] != p[i] - 1) and p[i] > 1:
             if rows % 2:
                 dangers.append(p[i])
+        #print(rows, i, p[i])
         i += 1
 
     print(len(dangers))

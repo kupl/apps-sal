@@ -2,6 +2,7 @@ n, q = map(int, input().split())
 f = list(map(int, input().split()))
 for j in range(1, n):
     f[j] ^= f[j - 1]
+# print(f)
 for g in range(q):
     k = int(input())
     tyagibagi = k % (n + 1)

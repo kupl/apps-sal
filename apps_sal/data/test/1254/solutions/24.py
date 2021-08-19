@@ -17,6 +17,7 @@ cumul_subject_score_for_n_participants = {s: list(itertools.accumulate(sorted(sk
 subject_with_atleast_nparts = {0: skills_of_subject.keys()}
 for i in range(1, n + 1):
     subject_with_atleast_nparts[i] = list(filter(lambda sid: len(skills_of_subject[sid]) >= i, subject_with_atleast_nparts[i - 1]))
+#subject_with_atleast_nparts = {i : list(filter(lambda sid : len(skills_of_subject[sid]) >= i, skills_of_subject.keys())) for i in range(1, n + 1)}
 
 curr_max = 0
 for nParticipants in range(1, n + 1):

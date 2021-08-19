@@ -13,6 +13,11 @@ def __starting_point():
     if imp:
         print('Impossible')
     else:
+        ##        m = min(L)//2
+        # for i in (0,1,2):
+        # ans[i]+=m
+        # L[i]-=m*2
+        # print(ans)
         imp = False
         if L[0] == min(L):
             if L[1] > L[2]:

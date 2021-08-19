@@ -12,6 +12,7 @@ level = 1
 totdist = 0
 res = set()
 while len(res) + len(candidates) <= nhum:
+    # print(candidates)
     totdist += level * len(candidates)
     level += 1
     for e in candidates:

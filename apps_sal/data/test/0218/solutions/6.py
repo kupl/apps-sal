@@ -1,7 +1,9 @@
+# The Text Splitting.py
 import os
 n, a, b = list(map(int, input().split()))
 s = input()
 maxn = n // a
+# print(s)
 x = -1
 for i in range(0, maxn + 1):
     tmp = n - a * i
@@ -20,3 +22,4 @@ if x != -1:
         print(out)
 else:
     print("-1")
+# os.system("pause")

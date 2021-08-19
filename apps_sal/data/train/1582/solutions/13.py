@@ -1,4 +1,5 @@
 test = int(input())
+# def solve():
 
 '''hile test:
     solve()

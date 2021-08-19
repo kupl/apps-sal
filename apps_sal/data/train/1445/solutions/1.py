@@ -24,7 +24,7 @@ for cas in range(eval(input())):
             print("1\n%d SW" % (i + 1))
             break
     else:
-        mini = min(list(range(n)), key=lambda i: pts[i])
+        mini = min(list(range(n)), key=lambda i: pts[i])  # vvi: finding             minium in set of 0 to n-1 based comparison of key which takes pts[i]             through lambda
         maxi = max(list(range(n)), key=lambda i: pts[i])
 
         if pts[mini][1] < pts[maxi][1]:

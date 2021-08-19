@@ -1,3 +1,5 @@
+#import sys
+#sys.stdin = open ('464-C.in', 'r')
 
 n = int(input())
 n = n * 2
@@ -11,6 +13,7 @@ ran = f - s
 msum, idx = 0, 0
 bb = int(1e18)
 for i in range(ran, n + 1):
+   # print (i, " = ", sum[i]-sum[i-ran])
     if sum[i] - sum[i - ran] > msum:
         msum = sum[i] - sum[i - ran]
         idx = i - ran + 1
@@ -41,5 +44,7 @@ for i in range(ran, n + 1):
             bb = idx
             msum = sum[i] - sum[i - ran]
 
+
+#print (msum, " ", idx)
 
 print(bb)

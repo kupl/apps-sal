@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sun Mar 13 19:40:03 2016
 
@@ -13,6 +14,7 @@ for _ in range(n):
     p += 1
 t = []
 for k, v in d.items():
+    #    print(k,v)
     t.append((v, k))
 t = sorted(t, reverse=True)
 

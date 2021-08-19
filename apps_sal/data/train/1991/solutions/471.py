@@ -17,6 +17,7 @@ class Solution:
                         r = recurssion(i, finish, fuel - abs(locations[i] - locations[start]))
                     if r > 0:
                         res += r
+            # print(start,finish,fuel,res)
             if (start, finish, fuel) not in ht:
                 ht[(start, finish, fuel)] = res
                 ht[(finish, start, fuel)] = res

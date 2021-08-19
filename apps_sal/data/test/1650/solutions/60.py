@@ -39,8 +39,10 @@ for i in range(n):
             ans %= mod
         continue
     if l[i] == "1":
+        # 0
         ans += count[u] % mod * pow_mod(2, cnt) % mod
         ans %= mod
+        # 1
         cnt += 1
         pass
     else:

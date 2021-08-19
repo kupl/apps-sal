@@ -1,3 +1,4 @@
+# ダイクストラ
 def main():
     import sys
     sys.setrecursionlimit(10**9)
@@ -17,6 +18,8 @@ def main():
 
     hq = [(0, 0, S)]
     INF = 10**18
+    # dp[v][silver]
+    # 都市vにsilverを使って到達したときの時間の最小値
     dp = [[INF] * 2501 for _ in range(N)]
     dp[0][S] = 0
 

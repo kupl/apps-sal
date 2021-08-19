@@ -15,6 +15,7 @@ for i in range(Q):
 
 ans = 0
 for A in list(itertools.combinations_with_replacement(list(range(1, M + 1)), N)):
+    #    print(A)
     score = 0
     for i in range(Q):
         if A[b[i] - 1] - A[a[i] - 1] == c[i]:
@@ -22,4 +23,5 @@ for A in list(itertools.combinations_with_replacement(list(range(1, M + 1)), N))
     if ans < score:
         ans = score
 
+#    print(A, score)
 print(ans)

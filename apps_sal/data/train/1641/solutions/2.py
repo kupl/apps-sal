@@ -11,6 +11,7 @@ def extend(nl, dimension, size, growing_value):
         except TypeError:
             return [nl] * size
         return nl + [growing_value] * (size - s)
+    # dimension > 1
     try:
         s = len(nl)
     except TypeError:

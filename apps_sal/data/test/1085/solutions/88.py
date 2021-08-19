@@ -7,7 +7,7 @@ def solve():
     ans = {N}
     if N > 2:
         ans |= {N - 1}
-    for i in range(2, N):
+    for i in range(2, N):  # N-1の約数ならばsubtractした後1になる。もしくはpow(k, x) == Nの場合
         if i ** 2 > N:
             break
         if (N - 1) % i == 0:
@@ -27,6 +27,7 @@ def solve():
                 if k % i == 1:
                     ans |= {i}
     print(len(ans))
+    # print(ans)
 
     return 0
 

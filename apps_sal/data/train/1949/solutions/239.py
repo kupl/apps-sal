@@ -9,6 +9,7 @@ class Solution:
         return self.max_gold
 
     def dfs(self, grid, curr_gold, i, j, visited):
+        # base case
         if (i, j) in visited or not (i >= 0 and i < len(grid) and j >= 0 and j < len(grid[0])) or grid[i][j] == 0:
             if self.max_gold < curr_gold:
                 self.max_gold = curr_gold

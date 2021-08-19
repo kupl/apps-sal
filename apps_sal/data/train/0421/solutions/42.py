@@ -9,6 +9,7 @@ class Solution:
 
         remain = set(pos[large])
         sz = 1
+        # print(remain)
         while len(remain) > 1:
             large = ''
             for idx in remain:

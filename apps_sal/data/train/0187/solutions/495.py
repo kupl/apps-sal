@@ -19,6 +19,10 @@ class Solution:
                 max_profit = profit
                 min_rotations = rotations
 
+            # if cost > 0 and new_cost <= cost:
+            #     break
+            # cost = new_cost
+
             if customers_index < len(customers):
                 backlog += customers[customers_index]
                 customers_index += 1

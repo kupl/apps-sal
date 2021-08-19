@@ -17,6 +17,10 @@ class Solution:
             raise ValueError('Invalid Symbol')
 
     def parseBoolExpr(self, expression: str) -> bool:
+        # push ! & | ( onto stack1
+        # push t and f onto stack2
+        # pop ( from stack 1 when encounter )
+        # if top stack 1 is not paren, then use to evaluate using stack 2
         s1 = []
 
         for c in expression:

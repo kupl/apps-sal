@@ -4,6 +4,7 @@ from collections import defaultdict
 
 
 def main():
+    # for _ in range(int(stdin.readline())):
     n, d = map(int, stdin.readline().split())
     arr = [int(k) for k in stdin.readline().split()]
     arr.sort()

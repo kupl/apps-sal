@@ -3,6 +3,7 @@ class Solution:
         cache = {}
 
         def helper(d, target):
+            # print(d,target)
             if target == 0 and d == 0:
                 return 1
             if d == 0:

@@ -4,6 +4,7 @@ class Solution:
         mp = {}
 
         for i, a in enumerate(arr):
+            #print (mp,a)
             if a - d in mp:
                 mp[a] = mp[a - d] + 1
             else:

@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[8]:
 
 
 n = int(input())
@@ -31,3 +35,6 @@ else:
         if i % 2 == 0:
             ans += 1
     print(ans)
+
+
+# In[ ]:

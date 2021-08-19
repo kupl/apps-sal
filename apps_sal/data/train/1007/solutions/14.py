@@ -1,3 +1,4 @@
+# cook your dish here
 def gcd(x, y):
 
     if not y:

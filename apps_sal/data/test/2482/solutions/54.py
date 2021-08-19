@@ -4,7 +4,9 @@ N, K, L = list(map(int, input().split()))
 
 class UnionFind():
     def __init__(self, n):
+        # size of n.
         self.n = n
+        # n's parent. default is -1.
         self.parents = [-1] * n
 
     def find_root(self, x):
@@ -24,7 +26,10 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
+    # You shouldn't use these below for optimization.
+    # Use only find_root to compare if you need.
     def union_size(self, x):
+        # Root value's index has its size with negative.
         return -self.parents[self.find_root(x)]
 
     def is_same_union(self, x, y):

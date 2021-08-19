@@ -1,6 +1,13 @@
 class Solution:
+    # save the indices of letters that are in the right place
+    # create array 'correct' where the index corresponds to the letter in A and the value is the correct index
+    # find every letter pair --> a pair is two letters in B that when swapped, will end up in the correct index
+    # dynamic programming? number of displaced letters --> min # of swaps
+    # subproblem = number of displaced letters
+    # at most 20 swaps
     def kSimilarity(self, A: str, B: str) -> int:
         q, visited = [(A, 0)], {A}
+        # BFS
         for x, dist in q:
             if x == B:
                 return dist

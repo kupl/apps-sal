@@ -16,7 +16,7 @@ class Solution:
             return False
 
         possible_share = []
-        for i in range(2, minv + 1):
+        for i in range(2, minv + 1):  # !!! max i is minv
             if minv % i == 0:
                 possible_share.append(i)
 

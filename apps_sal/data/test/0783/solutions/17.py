@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 n = int(input())
 houses = list(map(int, input().split()))

@@ -1,3 +1,4 @@
+# ABC138C
 n = int(input())
 v = sorted(list(map(int, input().split())))
 ans = (v[0] + v[1]) / 2

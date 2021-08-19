@@ -22,16 +22,18 @@ class Solution:
                 d[min(x, y)] = set({x, y})
             elif count == 1:
                 pass
-            else:
+            else:  # union
                 d[min(arr)].update(d[max(arr)])
                 del d[max(arr)]
             return d
 
+        # variables
         d = {1: set({1})}
         da = dict()
         db = dict()
         res = 0
 
+        # sort edges
         a, b, c = [], [], []
         for t, i, j in edges:
             if t == 3:
@@ -41,14 +43,19 @@ class Solution:
             else:
                 c.append([t, i, j])
 
+        # main function
+
+        # t == 3
         for t, i, j in a:
             d = find(i, j, d)
         da = deepcopy(d)
         db = deepcopy(d)
 
+        # t == 2
         for t, i, j in b:
             db = find(i, j, db)
 
+        # t == 1
         for t, i, j in c:
             da = find(i, j, da)
 

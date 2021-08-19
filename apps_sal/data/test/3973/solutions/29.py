@@ -36,10 +36,12 @@ S = [0] * (M + 3)
 
 prev = [[]for _ in range(M + 1)]
 for i in range(N - 1):
+    # 直前の数字
     b = A[i + 1]
     a = A[i]
     prev[b].append(a)
 
+    # imos
     if b > a:
         S[a + 1] += 1
         S[b] -= 1
@@ -63,11 +65,16 @@ for i in range(1, N):
         ans += nxt
     now = nxt
 
+# print(1,ans)
 temp = ans
 for x in range(1, max(A)):
     for p in prev[x]:
         temp += (x - p) % M - 1
     temp -= S[x]
+    # print(x+1,temp)
     ans = min(ans, temp)
 
 print(ans)
+
+# print(S)
+# print(prev)

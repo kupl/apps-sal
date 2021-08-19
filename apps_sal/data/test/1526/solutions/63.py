@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -78,6 +79,7 @@ MOD = int(1e09) + 7
 
 
 def main():
+    # sys.stdin = open("sample.txt")
     A, B, C = Scanner.map_int()
     ans = 0
     if not A % 2 == B % 2 == C % 2:

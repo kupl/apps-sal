@@ -26,3 +26,6 @@ class Solution:
         if _sum:
             num_of_days += 1
         return num_of_days
+
+    # // 3,2,2,4,1,4
+    # l = 1, r = 16, m = 8 -> 1 + 1 + 1 = 3

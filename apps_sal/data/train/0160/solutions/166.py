@@ -1,7 +1,10 @@
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
+        # use dp
+        # answer the question \"what is the expected gain of the current player over the next player given the plies[i : j] (inclusive)\"
         table = [[0 for _ in range(len(piles))] for _ in range(len(piles))]
 
+        # base case - single element
         for i in range(len(piles)):
             table[i][i] = piles[i]
 

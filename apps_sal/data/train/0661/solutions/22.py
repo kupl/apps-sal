@@ -6,9 +6,13 @@ n = int(n)
 for _ in range(t):
     num = eval(input())
     num = int(num)
+    # print("num",num)
     sq = int(math.sqrt(num))
+    # print("sq",sq)
     squ = sq * sq
+    # print("squ",squ)
     diff = 0.01 * n * num
+    # print("diff",diff)
 
     if (num - squ) <= diff:
         print("yes")

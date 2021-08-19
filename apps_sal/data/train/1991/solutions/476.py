@@ -1,5 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+        # for i in range(n):
+        #     ans += dp[i][fued]
         n = len(locations)
         MOD = 1000000007
         dp = [[0 for i in range(fuel + 1)] for j in range(len(locations))]

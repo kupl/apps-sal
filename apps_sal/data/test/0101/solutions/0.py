@@ -20,18 +20,27 @@ gcd, x, y = (egcd(a, b))
 status = 0
 if((n % gcd) != 0):
     print("NO")
+    # print("point1")
 
 else:
     multiply = n / gcd
     x1 = int(multiply * x)
     y1 = int(multiply * y)
+    #print("gcd and soln to n")
+    # print(gcd,x1,y1)
     d1 = b / gcd
     d2 = a / gcd
     rangemin = int(math.ceil(-x1 / d1))
     rangemax = int(y1 // d2)
+    #print("rangemin and rangemax")
+    # print(rangemin,rangemax)
     if(rangemin > rangemax):
         print("NO")
+        # print("point2")
     else:
+        # print("YES")
+        # solx=x1+rangemin*d1
+        # soly=y1-rangemin*d2
         m = rangemin
         while(m <= rangemax):
             solx = x1 + m * d1
@@ -45,3 +54,4 @@ else:
 
         if(status == 0):
             print("NO")
+            # print("point3")

@@ -1,6 +1,8 @@
 class Solution:
     def catMouseGame(self, g: List[List[int]]) -> int:
 
+        # status: current_mouse_position, current_cat_position, move_next(0 : mouse, 1 : cat)
+
         for i in range(len(g)):
             g[i] = set(g[i])
 
@@ -27,6 +29,7 @@ class Solution:
         idx = 0
         while len(status_result):
             idx += 1
+            # print(status_result)
             mouse, cat, move_next, result = status_result.popleft()
             if mouse == 1 and cat == 2 and move_next == 0:
                 return result

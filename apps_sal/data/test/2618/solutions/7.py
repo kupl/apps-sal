@@ -27,6 +27,7 @@ def f():
            + (ps[colab + cola + colb] - ps[cola + colab])*y)
     if res < k:
         return -1
+#    print(p, ps, cola, colb, colab, k, res, ps[colab]*(x+y), (ps[colab + cola] - ps[colab])*x, (ps[colab+cola+colb] - ps[colab+cola])*y)
     while j - i > 1:
         m = (i + j) // 2
         colab = m // ab

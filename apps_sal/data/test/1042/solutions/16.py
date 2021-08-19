@@ -16,6 +16,7 @@ else:
     setPrueba = sorted(list(setPrueba))
     setOrdenado = setPrueba.copy()
     for i in range(len(setOrdenado)):
+        #setOrdenado[i] = math.pow(2, setPrueba[i] - 1)
         setOrdenado[i] = pow(2, setPrueba[i] - 1, mod)
         for j in range(i):
             if setPrueba[i] % setPrueba[j] == 0:

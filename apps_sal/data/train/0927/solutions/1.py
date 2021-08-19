@@ -1,3 +1,4 @@
+# cook your dish here
 
 n, m = tuple(map(int, input().split()))
 if(n > 2):

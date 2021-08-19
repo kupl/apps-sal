@@ -1,6 +1,7 @@
 import sys
 import math
 
+#n = int(sys.stdin.readline().strip())
 n, A, B = list(map(int, sys.stdin.readline().strip().split(' ')))
 arr = list(map(int, sys.stdin.readline().strip().split(' ')))
 first_hole = arr[0]

@@ -11,6 +11,7 @@ for _ in range(int(input())):
                 prev = conright[i]
         else:
             prev = conright[i]
+    # print(conright)
     conleft = list(inp)
     prev = conleft[a - 1]
     for i in range(a - 2, -1, -1):
@@ -21,6 +22,7 @@ for _ in range(int(input())):
                 prev = conleft[i]
         else:
             prev = conleft[i]
+    # print(conleft)
     conright.insert(0, 0)
     conleft.append(0)
     m = -1

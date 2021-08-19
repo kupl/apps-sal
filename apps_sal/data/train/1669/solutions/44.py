@@ -27,6 +27,7 @@ class Solution:
         return True'''
 
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
+        # no need to store the subist themselves
         if len(hand) < W or len(hand) % W != 0:
             return False
         count = Counter(hand)

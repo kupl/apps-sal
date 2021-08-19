@@ -1,3 +1,4 @@
+# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -10,10 +11,10 @@ def main():
 
     for i in range(h + 2):
         if i == 0 or i == h + 1:
-            igeta = "
+            igeta = "#" * (w + 2)
             print("{}".format(igeta))
         else:
-            output = "
+            output = "#" + strings[i - 1] + "#"
             print(output)
 
 

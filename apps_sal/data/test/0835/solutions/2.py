@@ -1,3 +1,5 @@
+#import sys
+#sys.stdin = open('input.txt', 'r')
 s = input()
 B, S, C = 0, 0, 0
 for i in s:

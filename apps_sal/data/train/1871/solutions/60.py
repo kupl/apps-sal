@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         self.ans = -1
@@ -6,6 +12,7 @@ class Solution:
             if r is None:
                 return
 
+            # print(f'{ancestors} {r.val}')
             v = r.val
             if len(ancestors) > 0:
                 tmp = max([abs(a - v) for a in ancestors])

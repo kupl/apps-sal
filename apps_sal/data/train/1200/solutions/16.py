@@ -1,3 +1,4 @@
+# cook your dish here
 def piano(s):
     acount = s.count('A')
     bcount = s.count('B')

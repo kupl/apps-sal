@@ -5,6 +5,7 @@ import math
 
 
 def __starting_point():
+    #n, m = list(map(int, input().split()))
     n = int(input())
     s = [list(map(int, input().split())) for i in range(n)]
     if n == 1:
@@ -18,6 +19,7 @@ def __starting_point():
                 break
     val = sum(s[(pos[0] + 1) % n])
     s[pos[0]][pos[1]] = max(val - sum(s[pos[0]]), 1)
+    # check
     for i in range(n):
         if sum(s[i]) != val:
             print(-1)

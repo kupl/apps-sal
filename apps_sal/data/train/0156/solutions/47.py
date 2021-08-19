@@ -14,11 +14,13 @@ class Solution:
                     dp[i][j] = dp[i - 1][j - 1] + 1
                 else:
                     dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+        # print(dp)
         final_str = ''
         i, j = n, m
         c1 = str1[j - 1]
         c2 = str2[i - 1]
         while i > 0 or j > 0:
+            #print(f'{i} {c2} {j} {c1}')
             if c1 == c2:
                 final_str += c1
                 i -= 1

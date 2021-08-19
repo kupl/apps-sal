@@ -3,6 +3,7 @@ pn = list(map(lambda x: int(x) - 1, input().split()))
 ls = [-1] * n
 for i in pn:
     ls[pn[i]] = i
+# print(ls)
 
 par = [i for i in range(n)]
 
@@ -31,7 +32,7 @@ for _ in range(m):
 
 
 ans2 = 0
-for i in range(n):
+for i in range(n):  # i番目の数字がいる場所の親とiの場所
     place1 = ls[pn[i]]
     place2 = ls[i]
 

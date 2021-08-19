@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     N, K, L = map(int, input().split())
     if K * L < N:

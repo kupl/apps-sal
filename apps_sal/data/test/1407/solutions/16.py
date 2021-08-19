@@ -27,3 +27,6 @@ t = [[q[j] for j in map(int, input().split())] for i in range(n)]
 
 
 print(min(min(sum(t[i]) for i in range(n)), min(sum(t[i][j] for i in range(n)) for j in range(m))))
+
+
+# Made By Mostafa_Khaled

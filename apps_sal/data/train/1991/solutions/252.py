@@ -1,5 +1,6 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+        # Trivial DP?
         MOD = 10 ** 9 + 7
 
         n = len(locations)
@@ -8,6 +9,7 @@ class Solution:
 
         @lru_cache(None)
         def ways(index, remFuel):
+            # print(\"  \" * indent, index, remFuel)
             if index == finish:
                 ans = 1
                 possible = True
@@ -25,8 +27,10 @@ class Solution:
                     ans = (ans + w) % MOD
 
             if possible:
+                # print(\"  \" * indent, \"answer:\", ans)
                 return ans
 
+            # print(\"  \" * indent, \"rip\")
             return 0
 
         return ways(start, fuel) % MOD

@@ -16,4 +16,5 @@ class Solution:
                 if dp[i][j] <= distanceThreshold:
                     result[i] += 1
                     result[j] += 1
+        # print(result)
         return min([(i, val) for i, val in enumerate(result)], key=lambda x: (x[1], -x[0]))[0]

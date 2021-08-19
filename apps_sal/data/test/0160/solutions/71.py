@@ -3,7 +3,7 @@ N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 
-def divisor_all(n):
+def divisor_all(n):  # 約数全列挙
     l = [1, n]
     for i in range(2, int(pow(n, 1 / 2)) + 1):
         if n % i == 0:
@@ -13,18 +13,18 @@ def divisor_all(n):
                 l.append(i)
                 l.append(n // i)
     l.sort(reverse=True)
-    return l
+    return l  # list
 
 
 D = divisor_all(sum(A))
 
 
-def accumulater1D(A):
+def accumulater1D(A):  # B:list[int]
     B = [0] * len(A)
     B[0] = A[0]
     for i in range(1, len(B)):
         B[i] = B[i - 1] + A[i]
-    return B
+    return B  # Aの1次元累積和
 
 
 ans = 0

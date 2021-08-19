@@ -1,5 +1,6 @@
 class Solution:
     def maxPerformance(self, n, speed, efficiency, k):
+       # n = speed.len()
         ls = list(zip(speed, efficiency))
         ls.sort(key=lambda x: -x[1])
 

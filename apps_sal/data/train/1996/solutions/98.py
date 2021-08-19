@@ -1,10 +1,10 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
 
-        ev_safe = collections.deque()
+        ev_safe = collections.deque()  # indicate eventually safe
 
-        sgraph = defaultdict(set)
-        rgraph = defaultdict(set)
+        sgraph = defaultdict(set)  # The original graph, set version
+        rgraph = defaultdict(set)  # So that we can removed it
         safe = [False] * len(graph)
 
         for i, nei in enumerate(graph):
@@ -14,6 +14,7 @@ class Solution:
                 rgraph[out].add(i)
                 sgraph[i].add(out)
 
+        # Start updating
         while ev_safe:
             node_point2safe = ev_safe.popleft()
             safe[node_point2safe] = True

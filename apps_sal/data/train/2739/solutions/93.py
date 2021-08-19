@@ -1,4 +1,5 @@
 def cube_odd(arr):
+    # your code here - return None if at least a value is not an integer
     try:
         sum = 0
         for i in range(len(arr)):

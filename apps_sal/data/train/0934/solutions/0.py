@@ -1,4 +1,4 @@
-T = int(input())
+T = int(input())  # cook your dish here
 for i in range(T):
     n = list(map(int, input().split()))
     a = n[0]

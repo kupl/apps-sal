@@ -5,4 +5,5 @@ class Solution:
         for i, a in enumerate(A[1:], 1):
             ans = max(ans, a - i + preMax)
             preMax = max(preMax, a + i)
+            # print(preMax,ans)
         return ans

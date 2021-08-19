@@ -60,6 +60,7 @@ def resolve():
             res *= x // y
     print(ave)
     print(res)
+    # print(debug(n, a, b, V, ave))
 
 
 def __starting_point():

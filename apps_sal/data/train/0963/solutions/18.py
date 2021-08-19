@@ -1,3 +1,5 @@
+# cook your dish here
+#import math
 def res(n):
     l = len(n)
     maxx = max(n)
@@ -13,5 +15,6 @@ t = int(input())
 while(t > 0):
     t -= 1
     n = int(input())
+    # k,r=map(int,input().split())
     l = list(map(int, input().split()))
     print(res(l))

@@ -20,6 +20,7 @@ class Solution:
                     seen.add(i)
                 if s == T:
                     dest.add(i)
+        # print(bus2bus)
         dq.extend(seen)
         while dq:
             length = len(dq)

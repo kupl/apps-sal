@@ -1,4 +1,5 @@
 n = input()
+# s=n[:(len(n)-1)//2+1]
 c = len(n) // 2
 for i in range(c - 1):
     if n[len(n) - c - 1 - i:] == n[:c + 1 + i]:

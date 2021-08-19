@@ -18,8 +18,8 @@ def main():
             lx.append((a, cnt))
         else:
             rx.append((a, cnt))
-    lx.sort(key=lambda x: -x[0])
-    rx.sort(key=lambda x: x[0] - x[1])
+    lx.sort(key=lambda x: -x[0])  # -aの昇順
+    rx.sort(key=lambda x: x[0] - x[1])  # -bの昇順(bの降順)
     total = 0
     check = True
     for x, cnt in (lx + rx):

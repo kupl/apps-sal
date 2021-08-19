@@ -18,8 +18,10 @@ class Solution:
         words.sort(key=lambda x: len(x))
         n = len(words)
         dp = [1] * n
+        # print(words)
         for i in range(1, n):
             for j in range(i):
                 if isPre(words[j], words[i]):
                     dp[i] = max(dp[i], dp[j] + 1)
+        #print([(words[i],dp[i]) for i in range(n)])
         return max(dp)

@@ -1,3 +1,4 @@
+# better solution exist?
 flockhash = {}
 
 
@@ -28,9 +29,12 @@ def solve(emulator):
         if emulator.drop(floor):
             last_broken_egg = floor
             num_eggs -= 1
-            floor = exfloor
+            # num_drops-=1
+            floor = exfloor  # +climbing(num_eggs,num_drops)
         else:
+            # num_drops-=1
             exfloor = floor
+            # floor+=climbing(num_eggs,num_drops)
 
         num_drops -= 1
         floor += climbing(num_eggs, num_drops)

@@ -5,6 +5,7 @@ class Solution:
         hashmap = defaultdict(int)
         ans = []
         for name in names:
+            # if name not in hashmap, k == 0
             k = hashmap[name]
             current = name
             while current in seen:

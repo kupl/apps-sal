@@ -6,7 +6,7 @@ x = list(map(int, input().split()))
 x.sort()
 
 
-y = []
+y = []  # to min
 
 for i in range(n):
     if i == 0 or x[i - 1] != x[i]:
@@ -33,6 +33,8 @@ for i in range(len(y)):
         yend[i - 1] = False
         yend[i] = False
         ansmin -= 1
+
+#print (yend)
 
 
 dic = {}

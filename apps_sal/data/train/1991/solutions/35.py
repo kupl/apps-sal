@@ -22,6 +22,7 @@ class Solution:
         return move(start, fuel) % 1000000007
 
     def countRoutes2(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+        # bottom up
         dp = defaultdict(dict)
 
         for j in range(0, fuel + 1):

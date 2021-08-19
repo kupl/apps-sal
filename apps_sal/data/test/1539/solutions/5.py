@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+# 557C_table.py - Codeforces.com 557C Table quiz
+#
+# Copyright (C) 2015 Sergey
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 """
 Input
@@ -17,11 +31,19 @@ Print a single integer the minimum number of energy units that Arthur
 needs to spend in order to make the table stable.
 """
 
+# Standard libraries
 import unittest
 import sys
 import re
 import random
 import bisect
+
+# Additional libraries
+
+
+###############################################################################
+# Table Class
+###############################################################################
 
 
 class Table:
@@ -36,12 +58,15 @@ class Table:
         self.energy = args[1]
         self.n = len(self.legs)
 
+        # Sort lists
         self.srt = sorted((l, e) for l, e in zip(self.legs, self.energy))
         self.legs = []
         self.energy = []
         for n in self.srt:
             self.legs.append(n[0])
             self.energy.append(n[1])
+
+        # Prepare accumulator variables
 
         self.itot = 0
         self.ieltot = [0 for i in range(self.LIM)]
@@ -108,6 +133,11 @@ class Table:
         return str(result)
 
 
+###############################################################################
+# Executable code
+###############################################################################
+
+
 def get_inputs(test_inputs=None):
 
     it = iter(test_inputs.split("\n")) if test_inputs else None
@@ -119,10 +149,12 @@ def get_inputs(test_inputs=None):
         else:
             return input()
 
+    # Getting string inputs. Place all uinput() calls here
     num = int(uinput())
     str1 = [int(s) for s in uinput().split()]
     str2 = [int(s) for s in uinput().split()]
 
+    # Decoding inputs into a list
     inputs = []
     inputs.append(str1)
     inputs.append(str2)
@@ -135,11 +167,17 @@ def calculate(test_inputs=None):
     return Table(get_inputs(test_inputs)).calculate()
 
 
+###############################################################################
+# Unit Tests
+###############################################################################
+
+
 class unitTests(unittest.TestCase):
 
     def test_sample_tests(self):
         """ Quiz sample tests. Add \n to separate lines """
 
+        # my tests
         imax = 100000
         test = "0\n"
         for i in range(imax):
@@ -149,27 +187,31 @@ class unitTests(unittest.TestCase):
             test += str(random.randint(1, 200)) + " "
         calculate(test)
 
+        # Sample test 1
         test = "2\n1 5\n3 2"
         self.assertEqual(calculate(test), "2")
         self.assertEqual(get_inputs(test), [[1, 5], [3, 2]])
 
+        # Other tests
         test = "3\n2 4 4\n1 1 1"
         self.assertEqual(calculate(test), "0")
         test = "6\n2 2 1 1 3 3\n4 3 5 5 2 1"
         self.assertEqual(calculate(test), "8")
 
         test = (
-            "10\n20 1 15 17 11 2 15 3 16 3\n"
-            + "129 114 183 94 169 16 18 104 49 146")
+            "10\n20 1 15 17 11 2 15 3 16 3\n" +
+            "129 114 183 94 169 16 18 104 49 146")
         self.assertEqual(calculate(test), "652")
 
     def test_Table_class__basic_functions(self):
         """ Table class basic functions testing """
 
+        # Constructor test
         d = Table([[2, 2, 1, 1, 3, 3], [2, 2, 3, 3, 1, 1]])
         self.assertEqual(d.legs[0], 1)
         self.assertEqual(d.energy[0], 3)
 
+        # Get layer info (length, number of legs, energy list, energy sum)
         iter = d.get_new_layer_info([1, 1, 2, 2, 4, 5], [2, 2, 3, 3, 1, 1])
         next(iter)
         self.assertEqual(d.itop_eng, 8)
@@ -186,6 +228,7 @@ class unitTests(unittest.TestCase):
         self.assertEqual(d.irem_eng, 2)
         self.assertEqual(d.ires_eng, 4)
 
+        # Get layer info (length, number of legs, energy list, energy sum)
         d = Table([[], []])
         iter = d.get_new_layer_info([1, 1, 2, 2, 3, 3], [5, 5, 4, 3, 2, 1])
         next(iter)
@@ -210,11 +253,13 @@ class unitTests(unittest.TestCase):
 
 def __starting_point():
 
+    # Avoiding recursion limitaions
     sys.setrecursionlimit(100000)
 
     if sys.argv[-1] == "-ut":
         unittest.main(argv=[" "])
 
+    # Print the result string
     print(calculate())
 
 

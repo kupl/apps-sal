@@ -1,16 +1,21 @@
+# JMD
+# Nagendra Jha-4096
 
 
 import sys
 from math import ceil, floor
 
+###Defines...###
 mod = 1000000007
 
 
+###FUF's...###
 def nospace(l):
     ans = ''.join(str(i) for i in l)
     return ans
 
 
+##### Main ####
 t = 1
 for tt in range(t):
     n = int(input())

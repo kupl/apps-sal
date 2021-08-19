@@ -12,7 +12,11 @@ while x <= 10 ** 9:
     y += x * x
 
 end_time = time.time()
+# print(end_time - start_time)
 
+# print(len(a))
+# print(a)
+# print(b)
 for _ in range(int(input())):
     n = int(input())
     print(bisect_right(a, n))

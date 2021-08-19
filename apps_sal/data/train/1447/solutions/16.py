@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     ingredients = list(map(int, input().split(" ")))
@@ -24,3 +25,5 @@ for _ in range(int(input())):
         print("NO")
         continue
     print("YES")
+
+    # for i in range(n):

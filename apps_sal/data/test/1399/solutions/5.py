@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Tue Sep 18 10:09:57 2018
 
@@ -18,6 +19,7 @@ def covered_points(xa, ya, xb, yb):
 
     '''
 
+    # this just to have A in the left and B in the right
     if xb < xa:
         temp_x = xa
         xa = xb
@@ -30,6 +32,8 @@ def covered_points(xa, ya, xb, yb):
     y_0 = abs(yb - ya)
     x_0 = xb - xa
 
+    #pgdc_y_x = gcd(y_0, x_0)
+
     return gcd(y_0, x_0) + 1
 
 
@@ -41,6 +45,8 @@ def intersection2(xa, ya, xb, yb, xc, yc, xd, yd):
     if max(ya, yb) < min(yc, yd):
         return ()
 
+    # if both A-B and C - D ara parallel to x-axis
+    # then no intersection (it is garanted that no segments lie on the same line)
     if (xa == xb and xc == xd) or (ya == yb and yc == yd):
         return ()
     if ya == yb and yc == yd:
@@ -48,10 +54,12 @@ def intersection2(xa, ya, xb, yb, xc, yc, xd, yd):
 
     a1 = yb - ya
     b1 = xb - xa
+    #c1 = xa*(yb - ya) - ya*(xb - xa)
     c1 = xa * a1 - ya * b1
 
     a2 = yd - yc
     b2 = xd - xc
+    #c2 = xc*(yd - yc) - yc*(xd - xc)
     c2 = xc * a2 - yc * b2
 
     det = a1 * b2 - a2 * b1
@@ -78,8 +86,10 @@ def intersection2(xa, ya, xb, yb, xc, yc, xd, yd):
 
 
 def __starting_point():
+    # number of segments
     n = int(input())
 
+    # initiate lists of point coordinates
     Ax = [0] * n
     Ay = [0] * n
     Bx = [0] * n
@@ -88,6 +98,7 @@ def __starting_point():
     n_cov = 0
     intersections = {}
 
+    # counting covered by each segment
     for i in range(n):
         line = input().split(sep=' ')
         Ax[i] = int(line[0])
@@ -96,6 +107,7 @@ def __starting_point():
         By[i] = int(line[3])
         n_cov += covered_points(Ax[i], Ay[i], Bx[i], By[i])
 
+    # substructing reapted points (intersection)
     for i in range(n):
         for j in range(i + 1, n):
             temp = intersection2(Ax[i], Ay[i], Bx[i], By[i], Ax[j], Ay[j], Bx[j], By[j])

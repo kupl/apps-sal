@@ -20,12 +20,15 @@ class Solution:
         cur_row_height = [0] * n
         total = 0
         for row in range(m):
+            # get cumulated height based on current row
             for col in range(n):
                 if mat[row][col] == 0:
                     cur_row_height[col] = 0
                 else:
                     cur_row_height[col] += 1
 
+            # print(cur_row_height)
             cur_cnt = self.get_matrix_cnt(cur_row_height)
             total += cur_cnt
+            # print(cur_cnt)
         return total

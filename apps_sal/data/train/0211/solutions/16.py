@@ -1,3 +1,4 @@
+# 1593. Split a String Into the max Number of Unique Substrings
 
 def walk_divisions(string, covered, cut):
     if cut == len(string):

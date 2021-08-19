@@ -2,6 +2,7 @@
 import sys
 
 sys.setrecursionlimit(10 ** 7)
+# ----------
 
 INF = float("inf")
 MOD = 10 ** 9 + 7

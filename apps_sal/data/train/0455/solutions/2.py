@@ -2,7 +2,7 @@ class Solution:
     from collections import defaultdict, Counter
 
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
-        shapes = {}
+        shapes = {}  # color: [min_r, max_r, min_c, max_c]
 
         for i, row in enumerate(targetGrid):
             for j, color in enumerate(row):

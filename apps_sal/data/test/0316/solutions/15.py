@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 sys.setrecursionlimit(int(1e7))
 

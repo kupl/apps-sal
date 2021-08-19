@@ -18,8 +18,10 @@ class Solution:
         ans = 0
         for idx in range(len(arr)):
             is_odd = prefix_odd_sum[idx]
+            # odd: add 1 + prefix even count
             if is_odd:
                 ans += 1 + odd_even_count[idx][1]
+            # even: add prefix odd count
             else:
                 ans += odd_even_count[idx][0]
         return ans % mod

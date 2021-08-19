@@ -11,6 +11,7 @@ def BinarySearch(a, x):
 
 
 for _ in range(int(input())):
+    # arnab sucks
     ans = 0
     N, k = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]

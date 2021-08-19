@@ -1,5 +1,7 @@
 class Solution:
     def mergeStones(self, stones: List[int], K: int) -> int:
+        # Time Complexity: O(N^3 K)
+        # Space Complexity: O(N^2 K)
 
         self.dp = {}
         self.prefix = [0] + list(itertools.accumulate(stones))

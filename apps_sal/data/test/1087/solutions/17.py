@@ -4,6 +4,7 @@ def XXOR():
     num = len(str(bin(10**12))) - 2
     ans = 0
 
+    # 最上位の桁から貪欲的に選択する
     for i in range(num, -1, -1):
         count = 0
         for j in a:

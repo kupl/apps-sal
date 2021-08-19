@@ -10,6 +10,8 @@ class Solution:
         else:
             N = N // 25 + 1
 
+        # N is the dimension
+        # Initial Square equals to ( N + 1 ) * ( N + 1 )
         Matrix = [[0.0 for i in range(N + 1)] for j in range(N + 1)]
 
         Matrix = np.matrix(Matrix)

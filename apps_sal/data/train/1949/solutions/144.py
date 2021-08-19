@@ -20,9 +20,11 @@ class Solution:
             return max(ret_max, grid[row][col])
 
         mah_max = 0
+        #bool_list=[[True for i in range(len(grid[0]))] for i in range(len(grid))]
         for row in range(len(grid)):
             for col in range(len(grid[0])):
                 if grid[row][col] != 0:
                     mah_max = max(mah_max, goDfsGo(row, col))
+                    # print(mah_max)
 
         return mah_max

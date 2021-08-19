@@ -11,12 +11,15 @@ class Solution:
 
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=len)
+        # print(words)
         output = [0 for i in range(len(words))]
         for j in range(-1, -len(words) - 1, -1):
+            # print(f\"{j} and {output}\")
             temp_len = 1
             k = j + 1
             while k <= -1:
                 if temp_len < output[k] + 1:
+                    # print(f\"{words[j]} and {words[k]} and {output}\")
                     if self.check(words[j], words[k]):
                         temp_len = output[k] + 1
                 k += 1

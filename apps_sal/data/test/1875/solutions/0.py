@@ -1,5 +1,8 @@
+# calculate convex of polygon v.
+# v is list of complexes stand for points.
 def convex(v, eps=1e-8):
 
+    # fetch the seed point
     v.sort(key=lambda x: (x.real, x.imag))
     v = v[0:1] + sorted(v[1:], key=lambda x: (x - v[0]).imag / abs(x - v[0]))
 
@@ -14,6 +17,9 @@ def convex(v, eps=1e-8):
     v[n + 1:] = []
 
     return v
+
+# calculate the area of a polygon v, anti-clockwise.
+# v is list of complexes stand for points.
 
 
 def area(v):

@@ -8,7 +8,7 @@ for i in range(h):
         ss[i][j + 1] += ss[i][j]
 
 
-def gru_hol(HOL):
+def gru_hol(HOL):  # セットから切り方を作る
     groups_a = []
     group_a = [0]
     for i in range(h - 1):
@@ -21,7 +21,7 @@ def gru_hol(HOL):
     return groups_a
 
 
-def nex_hol(HOL):
+def nex_hol(HOL):  # 次のセットを作る
     for j in range(h - 1):
         if(HOL[j] == 0):
             HOL[j] = 1
@@ -31,7 +31,7 @@ def nex_hol(HOL):
     return HOL
 
 
-def cutsum(grp, lscut, nxcut):
+def cutsum(grp, lscut, nxcut):  # groupのlastcut~nextcutのホワイトチョコを数える
     count = 0
     for i in grp:
         if(lscut != 0):
@@ -41,7 +41,7 @@ def cutsum(grp, lscut, nxcut):
     return count
 
 
-def cutcheck(grp_a, lscut_a):
+def cutcheck(grp_a, lscut_a):  # 切ってもダメかチェック
     ct_a = 0
     for i in grp_a:
         ct_a += s[i][lscut_a]
@@ -56,14 +56,14 @@ hol = [0] * (h - 1)
 for i in range(2**(h - 1)):
     fl_ag = 0
     lastcut = 0
-    cuts = 0
-    groups = gru_hol(hol)
+    cuts = 0  # 切る回数
+    groups = gru_hol(hol)  # groupsを作る
     for j in range(1, w):
         flag = 0
         for group in groups:
             if(cutsum(group, lastcut, j + 1) > k):
                 if(cutcheck(group, lastcut) == False):
-                    fl_ag = 1
+                    fl_ag = 1  # groupからやり直し
                     break
                 else:
                     flag = 1

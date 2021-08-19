@@ -33,6 +33,7 @@ class MemoryManager:
         """
         free_memory = self.pointer_list[pointer]
         self.available_memory += free_memory
+#         self.pointer -= free_memory
         self.pointer = pointer if pointer < self.pointer else self.pointer
         del self.pointer_list[pointer]
 

@@ -1,3 +1,4 @@
+# cook your dish here
 def num(l):
     ans = 0
     for i in range(len(l)):

@@ -12,6 +12,21 @@ class Solution:
         max_a = A[-1][1] if A else None
         max_b = B[-1][1] if B else None
 
+        # key: (Int, Int) - (first line interval id, second line interval id)
+        # value: List[Int] - list of intersections
+        #intersections = {}
+
+        # def intersections_append(k: (int, int), v: int):
+        #    #print(intersections, k, v)
+        #    if k in intersections:
+        #        intersections[k].append(v)
+        #        if len(intersections[k]) > 2:
+        #            tmp = list(set(intersections[k]))
+        #            tmp.sort()
+        #            intersections[k] = tmp
+        #    else:
+        #        intersections[k] = [v]
+
         self.k1 = None
         self.k2 = None
         self.res2 = []
@@ -30,6 +45,8 @@ class Solution:
                 self.k1 = k[0]
                 self.k2 = k[1]
                 self.res2.append([v])
+
+        #res = []
 
         def get_next_items(idx_pair):
             lft_idx_outer = int(idx_pair[0] / 2)
@@ -53,6 +70,7 @@ class Solution:
             else:
                 i = i_b
                 u = (u[0], u[1] + 1)
+            #i = min(i_a, i_b)
             while max_a and i <= max_a and i > next_a[1]:
                 counter_a += 1
                 next_a = A[counter_a] if counter_a < len(A) else None
@@ -60,6 +78,8 @@ class Solution:
                 counter_b += 1
                 next_b = B[counter_b] if counter_b < len(B) else None
             if next_a and next_b and next_a[0] <= i <= next_a[1] and next_b[0] <= i <= next_b[1]:
+                #intersections_append((counter_a, counter_b), i)
                 intersections_append2((counter_a, counter_b), i)
 
         return self.res2
+        # return intersections.values()

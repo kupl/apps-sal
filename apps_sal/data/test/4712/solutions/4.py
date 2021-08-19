@@ -2,8 +2,8 @@ h, w = map(int, input().split())
 l = []
 [l.append(input()) for _ in range(h)]
 
-print("
+print("#" * (w + 2))
 for s in l:
-    print("
+    print("#", s, "#", sep='')
 
-print("
+print("#" * (w + 2))

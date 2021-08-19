@@ -30,3 +30,40 @@ class Solution:
             if i < n and size[i + 1]:
                 union(i, i + 1)
         return result
+
+
+#         n = len(arr)
+#         if m == n:
+#             return n
+#         segments = set([(1, n)])
+#         not_relevant = set()
+#         for i in range(n - 1, -1, -1):
+#             if arr[i] in not_relevant:
+#                 continue
+#             to_add = []
+#             to_remove = None
+#             for left, right in segments:
+#                 if left <= arr[i] <= right:
+#                     to_remove = (left, right)
+#                     left_len = arr[i] - left
+#                     right_len = right - arr[i]
+#                     if left_len == m or right_len == m:
+#                         return i
+#                     if left_len > m:
+#                         to_add.append((left, arr[i] - 1))
+#                     else:
+#                         for j in range(left, arr[i]):
+#                             not_relevant.add(j)
+#                     if right_len > m:
+#                         to_add.append((arr[i] + 1, right))
+#                     else:
+#                         for j in range(arr[i] + 1, right + 1):
+#                             not_relevant.add(j)
+#                     break
+#             for segment in to_add:
+#                 segments.add(segment)
+#             if to_remove:
+#                 segments.discard(to_remove)
+#             if not segments:
+#                 return -1
+#         return -1

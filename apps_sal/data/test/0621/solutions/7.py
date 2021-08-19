@@ -10,6 +10,7 @@ for i in range(n):
             folders.append(0)
             loss = 1
             cur += 1
+    # print(i,l[i],cur,loss)
     folders[cur] += 1
 
 print(len(folders))

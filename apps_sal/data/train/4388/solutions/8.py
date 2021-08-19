@@ -2,7 +2,7 @@ def change_case(identifier, targetCase):
     id = list(str(identifier))
     conv = []
 
-    if identifier.islower() == False and (id.count('-') != 0 or id.count('_') != 0) == True:
+    if identifier.islower() == False and (id.count('-') != 0 or id.count('_') != 0) == True:  # checks if there are upper case and hyphens or underscores
         return None
 
     if id.count('-') != 0 and id.count('_') != 0:
@@ -21,10 +21,11 @@ def change_case(identifier, targetCase):
         return None
 
 
-def change_snake(id, conv):
+def change_snake(id, conv):  # converts Capital to _lower
     for i in id:
         if i.isupper() == True:
             conv.append('_' + i.lower())
+            # conv.append(i.lower())
 
         elif i == '-':
             conv.append('_')
@@ -35,7 +36,7 @@ def change_snake(id, conv):
     return ''.join(conv)
 
 
-def change_camel(id, conv):
+def change_camel(id, conv):  # converts -lower to Capital
     ids = id.copy()
     ids.insert(0, '.')
     n = 0
@@ -56,7 +57,7 @@ def change_camel(id, conv):
     return ''.join(conv)
 
 
-def change_kebab(id, conv):
+def change_kebab(id, conv):  # converts
     for i in id:
         if i == '_':
             conv.append('-')

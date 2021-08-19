@@ -10,6 +10,7 @@ def chameleon(chameleons, desiredColor):
     meets = to_meet[0][1]
     meet_left = to_meet[1][1] - meets
     color_count[target] += to_meet[0][1]
+    # print meet_left, meets
     if meet_left % 3 != 0 or color_count[target] == 0:
 
         return -1

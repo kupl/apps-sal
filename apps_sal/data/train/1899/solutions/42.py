@@ -46,4 +46,4 @@ class Solution:
             s += 1
             layer = new_layer
 
-        return
+        return  # invalid, must be able to find s

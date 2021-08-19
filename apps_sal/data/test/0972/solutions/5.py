@@ -1,3 +1,4 @@
+#author: riyan
 
 def solve(n, m):
     grid = []
@@ -8,14 +9,17 @@ def solve(n, m):
             if grid[i][j] != grid[i][j - 1]:
                 cnt += 1
         if (cnt > 2) or (cnt == 2 and grid[i][0] == 'B'):
+            #print('row2 check, cnt = ', cnt)
             return False
 
     for j in range(m):
         cnt = 0
         for i in range(1, n):
+            #print(i, j, grid[i][j])
             if grid[i][j] != grid[i - 1][j]:
                 cnt += 1
         if (cnt > 2) or (cnt == 2 and grid[0][j] == 'B'):
+            #print('col2 check, cnt = ', cnt)
             return False
 
     bps = []
@@ -26,6 +30,7 @@ def solve(n, m):
                 for k in range(len(bps)):
                     bp2 = bps[k]
                     if not ((grid[bp1[0]][bp2[1]] == 'B') or (grid[bp2[0]][bp1[1]] == 'B')):
+                        #print(bp1, bp2)
                         return False
                 bps.append((i, j))
 

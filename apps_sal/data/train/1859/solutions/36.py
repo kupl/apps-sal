@@ -11,6 +11,7 @@ class Solution:
                 end_j = j
 
                 while 0 <= end_i < n and 0 <= end_j < m and not done:
+                    #  check the squre of [i, new_i] * [j, new_j]
                     area = 0
                     for k in range(i, end_i + 1):
                         area += matrix[k][end_j]

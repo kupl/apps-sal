@@ -18,3 +18,6 @@ while r:
             r.append((y, y - d, s + 1, t + [y]))
 
 print(q)
+
+
+# Made By Mostafa_Khaled

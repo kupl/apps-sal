@@ -5,6 +5,7 @@ for i in range(t):
     y -= 1
     n -= 1
     a = abs(x - y)
+    #print('a', a)
     if a % d == 0:
         print(a // d)
         continue

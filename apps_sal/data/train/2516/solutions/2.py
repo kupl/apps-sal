@@ -5,11 +5,13 @@ class Solution(object):
         :type k: int
         :rtype: bool
         """
-        m = {}
+        # Initial approach using map O(n) time and space
+        m = {}  # Stores value -> index mapping
 
         for i, n in enumerate(nums):
             if n in m and abs(m[n] - i) <= k:
                 return True
+            # Insert new element or replace old one with index that is more right (decreases distance to next)
             m[n] = i
 
         return False

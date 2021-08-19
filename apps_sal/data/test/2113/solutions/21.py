@@ -32,6 +32,7 @@ for _ in range(n - 1):
     v1, v2 = list(map(int, input().split()))
     inp[v1].append(v2)
     inp[v2].append(v1)
+# print(inp)
 visited1, visited2 = [0] + [0] * n, [0] + [0] * n
 bfs([1])
 print(sum(visited1) * sum(visited2) - (n - 1))

@@ -1,3 +1,4 @@
+# python 3
 """
 From tutorial: The starting position can be anywhere with a footprint. The footprints can be categorized into 3 types.
 
@@ -33,6 +34,7 @@ def point_on_spiral(x_int, y_int) -> int:
         dist_prev_curr = abs(x_curr - x_prev) + abs(y_curr - y_prev)
 
         if dist_to_curr + dist_to_prev == dist_prev_curr:
+            # print(x_prev, y_prev), (x_curr, y_curr), (x_int, y_int)
             return count
         count += 1
         x_prev, y_prev = x_curr, y_curr

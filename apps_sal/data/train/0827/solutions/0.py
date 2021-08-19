@@ -11,6 +11,7 @@ try:
                 l[j] = numb
             if(s[j] == 'b'):
                 numb = numb - 1
+        # print(l)
         count1 = 0
         for j in range(len(l)):
             if(l[j] > 0):

@@ -26,6 +26,7 @@ class Solution:
             if number_of_blues == k + 1:
                 count += 1
 
+            # print(status)
             k += 1
 
         return count

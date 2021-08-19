@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
+# Author: Vitaly Pavlenko
 
 import random
 from fractions import gcd
@@ -23,6 +26,14 @@ def decrease(a):
 
 
 def main():
+    # nonlocal input
+    # nonlocal print
+
+    # fin = open('input.txt', 'r')
+    # input = lambda: fin.readline().strip()
+    # fout = open('output.txt', 'w')
+    # _print = print
+    # print = lambda *args, **kwargs: _print(*args, file=fout, **kwargs)
 
     a, b, c, d = read_ints()
 
@@ -33,8 +44,12 @@ def main():
     s, t = p, a * d
     print(s // gcd(s, t), t // gcd(s, t), sep='/')
 
+    # fout.close()
+
 
 def __starting_point():
+    # import doctest
+    # doctest.testmod()
     main()
 
 

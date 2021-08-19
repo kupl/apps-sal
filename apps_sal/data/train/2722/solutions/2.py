@@ -1,3 +1,3 @@
 def remove_url_anchor(url):
     import re
-    return re.sub('
+    return re.sub('#.*$', '', url)

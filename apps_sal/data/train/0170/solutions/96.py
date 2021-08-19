@@ -31,6 +31,12 @@ class Solution:
                 if left[i] <= right[j]:
                     temp = i + 1 + len(right) - j
                     break
+            # if left[i] in right:
+            #     idx_right = right.index(left[i])
+            #     temp = i+1+len(right)-idx_right
+            # else:
+            #     idx_right = len(right)-1
+            #     temp = 0
             arr_len = max(arr_len, temp)
 
         return L - max(len(left), len(right), arr_len)

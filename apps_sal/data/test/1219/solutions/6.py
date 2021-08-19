@@ -6,6 +6,9 @@ input = stdin.readline
 def solve():
     n = int(input())
     a = list(map(int, input().split()))
+    # (n + number with -1 sign)%3 == 1
+    # dp[i][j][k][l]: choose from a[:i], j = (n + num with -1 sign) mod 3,
+    # k = whether two consecutive same sign, l =  1 if last number is + else 0
     if n == 1:
         print(max(a[0], -a[0]))
         return

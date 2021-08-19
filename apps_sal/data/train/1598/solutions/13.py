@@ -1,3 +1,4 @@
+# cook your dish here
 
 t = int(input())
 for i in range(t):
@@ -5,12 +6,14 @@ for i in range(t):
     l = []
     for j in range(n):
         l.append(input().split())
+    # print(l)
     sum = 0
     avg = 0
     for j in range(n):
         sum += int(l[j][2])
     avg = sum / n
     x = []
+    # print(avg)
     for k in l:
         if int(k[2]) < avg:
             x.append(k[2])
@@ -19,6 +22,7 @@ for i in range(t):
     le = len(x)
     while(le != 0):
         for k in l:
+            # print(le)
             if y < len(x):
                 if x[y] == k[2]:
                     print(k[0], k[1], k[2])

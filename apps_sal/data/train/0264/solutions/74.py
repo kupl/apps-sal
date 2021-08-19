@@ -5,13 +5,17 @@ class Solution:
         return max(self.recurse('', set(), 0, True), self.recurse('', set(), 0, False))
 
     def recurse(self, prefix: str, letters: set, index: int, include: bool):
+        # Base case
         if index >= len(self.array):
             return len(prefix)
 
+        # Recursive cases
         if include:
+            # Do not include a string that has duplicate characters within itself
             if len(self.array[index]) != len(set(self.array[index])):
                 return len(prefix)
 
+            # Do not include a string that contains letters already in prefix
             if any(letter in letters for letter in self.array[index]):
                 return len(prefix)
 

@@ -10,6 +10,7 @@ class Solution:
             answers.append(row.copy())
             dp.append(row.copy())
 
+        # add first line of dp
         count = mat[0][0]
         for j in range(1, len(mat[0])):
             count += mat[0][j]

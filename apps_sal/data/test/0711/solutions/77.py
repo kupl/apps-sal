@@ -22,18 +22,18 @@ fact = {}
 for i in range(2, int(math.sqrt(M)) + 1):
     if M == 1:
         break
-    while(M % i == 0):
+    while(M % i == 0):  # エラトステネスの篩
         M //= i
-        if not i in fact:
+        if not i in fact:  # 素因数がなければ追加
             fact[i] = 1
-        else:
+        else:  # 素因数があれば増加
             fact[i] += 1
-if M != 1:
+if M != 1:  # 素数のケース
     fact[M] = 1
 
 answer = 1
 for r in fact.values():
-    answer *= comb(N + r - 1, r)
+    answer *= comb(N + r - 1, r)  # 重複組み合わせ
     answer %= MOD
 
 print(answer)

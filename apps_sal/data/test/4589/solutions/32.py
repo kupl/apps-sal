@@ -8,8 +8,8 @@ for i in range(h):
 
 
 def scheck(s):
-    if s == "
-    return 1
+    if s == "#":
+        return 1
     else:
         return 0
 
@@ -28,7 +28,7 @@ for i in range(h):
         if sl[i][j] == ".":
             bl[i][j] = check(i, j, sl)
         else:
-            bl[i][j] = "
+            bl[i][j] = "#"
 
 for b in bl:
     t = ''.join(b)

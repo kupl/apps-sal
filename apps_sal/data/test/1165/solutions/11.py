@@ -7,6 +7,7 @@ for i in range(1, n):
         a[i] = (i)
     else:
         a[i] = (a[i - 1])
+# print(a)
 result = [0] * m
 for k in range(m):
     l, r, x = input().split()

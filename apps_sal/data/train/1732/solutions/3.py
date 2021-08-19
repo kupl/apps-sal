@@ -1,6 +1,11 @@
 import re
 from functools import reduce
 
+# Parsing ###################################################################
+
+# Returns a dictionary {k:v} where k is the variable (or None for constant),
+# and v is the value. This dictionary is in effect a singleton term set.
+
 
 def parse_term(term, scale):
     parts = re.findall('[+-]?\d+|[+-]|[^\d]+', term)
@@ -28,15 +33,22 @@ def combine_term_dicts(a, b):
 
     return {**common_terms, **unique_terms(a), **unique_terms(b)}
 
+# Parses the expression in a single side of an equation
+# Parameter 'scale' is 1 for left-hand side, and -1 for right-hand side.
+
 
 def parse_side(side, scale):
     no_ws = re.sub(' ', '', side)
 
+    # The following regex will always produce an empty match at the
+    # end of string, which we remove at the end.
     term_str = re.findall("[+-]?\d*[^\d+-]*", no_ws)[0:-1]
 
     term_lst = [parse_term(t, scale) for t in term_str]
 
     return reduce(combine_term_dicts, term_lst)
+
+# Parses a single equation
 
 
 def parse_equation(eq):
@@ -46,6 +58,8 @@ def parse_equation(eq):
     rhs = parse_side(sides[1], -1)
 
     return combine_term_dicts(lhs, rhs)
+
+# Linear algebra ############################################################
 
 
 def argmax(lst):
@@ -60,6 +74,7 @@ def gaussian_elimination_inplace(aug):
     n_variables = len(aug[0]) - 1
 
     for i in range(min(n_variables, n_equations - 1)):
+        # find pivot row
         p = i + argmax([abs(aug[j][i]) for j in range(i, n_equations)])
 
         if abs(aug[p][i]) < 1e-12:
@@ -90,6 +105,8 @@ def backsolve(aug):
         sol[i] /= aug[i][i]
 
     return sol
+
+# Driver ####################################################################
 
 
 def solve(*equations):

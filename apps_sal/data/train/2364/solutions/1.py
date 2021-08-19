@@ -51,9 +51,13 @@ for _ in range(t):
                 c_dist[v] = c_dist[l] + 1
                 q.append(v)
 
+    # print(a_dist)
+    # print(b_dist)
+    # print(c_dist)
     ans = 10**20
     for i in range(n):
         aa, bb, cc = a_dist[i], b_dist[i], c_dist[i]
+        #print(aa, bb, cc)
         if aa + bb + cc > m:
             continue
         ans = min(ans, cum[aa + bb + cc] + cum[bb])

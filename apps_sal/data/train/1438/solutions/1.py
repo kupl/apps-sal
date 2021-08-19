@@ -1,3 +1,4 @@
+# cook your dish here
 from math import sqrt
 
 
@@ -29,6 +30,7 @@ for _ in range(t):
         for i in range(len(a)):
             if i != l:
                 if a[i] % a[l] == 0:
+                    # print(a[i]," ",a[l])
                     if psum(a[i]) % psum(a[l]) == 0:
                         k += 1
         l += 1

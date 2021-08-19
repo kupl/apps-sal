@@ -34,3 +34,6 @@ else:
     ans += max(a3, b3) - min(a3, b3)
     ans += max(a5, b5) - min(a5, b5)
     print(ans)
+
+
+# 1482718805944

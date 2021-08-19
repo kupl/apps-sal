@@ -30,6 +30,7 @@ queries = list(map(int, input().split()))
 
 s_queries = sorted(queries)
 
+# final map the index to the query
 ans = {}
 
 w_limit = []
@@ -40,6 +41,7 @@ for query in s_queries:
         edges.pop()
         i_anc = find_ancestor(i, father)
         j_anc = find_ancestor(j, father)
+        # it's tree father may not be same
         ans_cum += n_child[i_anc] * n_child[j_anc]
         connect(i, j, father, n_child)
     ans[query] = ans_cum

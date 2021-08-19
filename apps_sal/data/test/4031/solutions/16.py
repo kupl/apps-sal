@@ -25,7 +25,7 @@ for _ in range(N):
 string_list.sort(key=lambda x: x[0])
 
 
-def is_substring(a, b):
+def is_substring(a, b):  # a is shorter than b
     l_a = len(a)
     l_b = len(b)
 

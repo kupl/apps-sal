@@ -1,3 +1,22 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/1/20 21:02
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : D. Kilani and the Game.py
+
+# import atexit
+# import io
+# import sys
+#
+# _INPUT_LINES = sys.stdin.read().splitlines()
+# input = iter(_INPUT_LINES).__next__
+# _OUTPUT_BUFFER = io.StringIO()
+# sys.stdout = _OUTPUT_BUFFER
+#
+#
+# @atexit.register
+# def write():
+#     sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
 
 
 from collections import deque
@@ -30,6 +49,7 @@ def main():
                 x = int(grid[i][j])
                 deque_array[x - 1].append((i, j, 0))
 
+    # print(deque_array)
     curr_round = 1
     while not check_empty(deque_array):
         for r in range(p):
@@ -41,10 +61,12 @@ def main():
 
                 for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                     nx, ny = x + dx, y + dy
+                    # print(nx, ny)
                     if nx < 0 or nx >= n or ny < 0 or ny >= m or grid[nx][ny] != '.':
                         continue
                     grid[nx][ny] = str(r + 1)
                     deque_array[r].append((nx, ny, step + 1))
+        # print_grid(grid)
         curr_round += 1
 
     cell_count = [0] * p

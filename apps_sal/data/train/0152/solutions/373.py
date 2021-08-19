@@ -1,4 +1,5 @@
 class Solution:
+    # [22,57,74,79]
     def possibleForce(self, force, position):
         count = 0
         lastBall = 0
@@ -10,7 +11,9 @@ class Solution:
 
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
+        # print(position)
         maxReally = (position[-1] - position[0]) / (m - 1)
+        #print (maxReally)
         maxForce = maxReally
         minForce = 1
         result = -1
@@ -21,9 +24,13 @@ class Solution:
             count = self.possibleForce(middleForce, position)
             print(count)
             if count >= m:
+                # go right
                 minForce = middleForce + 1
                 result = middleForce
             else:
+                # go left
                 maxForce = middleForce - 1
 
         return int(result)
+
+    # x o o x o o x - o x

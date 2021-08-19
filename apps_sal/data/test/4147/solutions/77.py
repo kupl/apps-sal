@@ -25,13 +25,16 @@ def resolve():
     ABC = (A, B, C)
     l = [I() for _ in range(N)]
 
+    # A, B, Cに使う、捨てる、の4通り
     ans = INF
     for i in itertools.product(list(range(4)), repeat=N):
         a_cnt = i.count(0)
         b_cnt = i.count(1)
         c_cnt = i.count(2)
         if a_cnt > 0 and b_cnt > 0 and c_cnt > 0:
+            # 合成魔法
             mp = 10 * (a_cnt + b_cnt + c_cnt - 3)
+            # 延長短縮魔法
             len = [0] * 3
             for j in range(N):
                 if 0 <= i[j] < 3:

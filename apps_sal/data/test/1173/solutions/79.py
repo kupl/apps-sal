@@ -9,6 +9,10 @@ for i in range(N):
 
 q = []
 
+#seen=[[False for j in range(N)] for i in range(N)]
+
+# 選手nが試合できるならqueに入れる
+
 
 def check(i):
     if len(a[i]) == 0:
@@ -25,6 +29,7 @@ for i in range(N):
 day = 0
 while q:
     day += 1
+   # q=sorted(q)
     prevQ = q.copy()
     q = []
     matched = defaultdict(list)

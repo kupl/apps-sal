@@ -10,6 +10,7 @@ class Solution:
                 i += 1
             if total == S:
                 res += 1
+                # There could be multiple 0 between i & j.
                 k = i
                 while k < j and A[k] == 0:
                     k += 1

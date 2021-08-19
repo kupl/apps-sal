@@ -7,6 +7,8 @@ class Solution:
 
         visited = [[[float('inf') for _ in range(C)] for _ in range(R)] for _ in range(k + 1)]
 
+        # visited[breaks remaining][row][column]
+
         q = [(0, k, 0, 0)]
         best = float('inf')
 

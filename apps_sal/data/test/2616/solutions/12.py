@@ -1,5 +1,6 @@
 for _ in range(int(input())):
     n = int(input())
+    #n, m = map(int, input().split())
     A = list(map(int, input().split()))
     x = 1
     for i in range(len(A) - 2, - 1, -1):

@@ -26,3 +26,8 @@ class StreamChecker:
         self.nodes = nodes
         self.index += 1
         return any('$' in node for node in list(nodes.values()))
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

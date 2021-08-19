@@ -8,6 +8,7 @@ for i in range(N - 1):
         cj, sj, fj = li[j]
         if time % fj != 0:
             time = ((time // fj) + 1) * fj
+        # print(i,time)
         if time < sj:
             time = sj
         time += cj

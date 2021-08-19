@@ -6,4 +6,5 @@ def sum_array(arr):
         arr.remove(max(arr))
         arr.remove(min(arr))
 
+        #new_list = [x for x in arr if x != max(arr) or min(arr)]
         return sum(arr)

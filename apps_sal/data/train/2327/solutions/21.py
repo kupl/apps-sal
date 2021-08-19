@@ -9,6 +9,9 @@ def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 def SI(): return sys.stdin.readline()[:-1]
 
+# 内部で1-indexedに変えるので入力は0-indexedでよい
+# i項目までの和（i含む）
+
 
 class BitSum:
     def __init__(self, n):

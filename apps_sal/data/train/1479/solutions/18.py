@@ -1,3 +1,4 @@
+# cook your dish here
 def rii(): return list(map(int, input().strip().split(" ")))
 def ril(): return list(map(int, input().strip().split(" ")))
 def ri(): return int(input().strip())

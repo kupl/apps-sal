@@ -42,10 +42,13 @@ def intersect_list(poly, plain_norm, plain_point, proj_dir):
     find points where the edges enter or leave upper half-space over the plain
     :return list of points projection on proj_dir
     """
+    # vertex projection
     u = [dot_product(vert, proj_dir) for vert in poly]
 
+    # plain anchor
     vr = dot_product(plain_point, plain_norm)
 
+    # polygon vertex
     v = [dot_product(vert, plain_norm) for vert in poly]
 
     u_list = []

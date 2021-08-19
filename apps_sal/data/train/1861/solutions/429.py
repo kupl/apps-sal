@@ -4,6 +4,11 @@ from bisect import insort
 
 class Solution:
     def minAreaRect(self, points):
+       # setr, setc = set(), set()
+       # for r, c in points:
+       #     setr.add(r)
+       #     setc.add(c)
+       # if len(points) in (len(setr), len(setc)): return 0
 
         points.sort()
         columns = defaultdict(list)
@@ -11,6 +16,7 @@ class Solution:
             insort(columns[r], c)
         ans, lastc = float('inf'), dict()
         for r, cols in list(columns.items()):
+            #cols = sorted(columns[r])
             for j, y2 in enumerate(cols):
                 for i, y1 in enumerate(cols[:j]):
                     if (y1, y2) in lastc:

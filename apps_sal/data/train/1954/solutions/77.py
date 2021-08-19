@@ -3,6 +3,7 @@ class Solution:
         n = len(req_skills)
         target = (1 << n) - 1
         s_i = {s: i for i, s in enumerate(req_skills)}
+        # skill cost
         dp = {0: []}
         for j, row in enumerate(people):
             mask = 0

@@ -3,6 +3,9 @@ from functools import lru_cache
 
 class Solution:
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
+        # K <= A <= 100
+        # O((AK)^2) could work
+        # Looks like dp
 
         @lru_cache(None)
         def rec(j, K):

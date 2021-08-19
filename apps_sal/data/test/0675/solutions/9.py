@@ -17,6 +17,7 @@ for i in range(len(arr)):
             tmp[j] = 1
             candles += 1
             ans += 1
+            # print(j-310)
 
     if candles < r:
         ans = -1

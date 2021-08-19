@@ -1,7 +1,11 @@
+#入力高速化 + 再帰回数制限解除
 from collections import deque
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10000000)
+
+# 負の閉路検出
+# n=頂点数 e=[[a,b,c],[]...](a~bの距離がc)
 
 
 def find_negative_loop(n, e):
@@ -16,6 +20,9 @@ def find_negative_loop(n, e):
     return max(-d[n - 1], 0)
 
 
+# DAG判定
+# n=頂点数 e=隣接リスト
+# flag=0...DAG判定　flag=1...トポロジカルソート
 def find_loop(n, e, flag):
     x = [0] * n
     d = deque()

@@ -1,3 +1,4 @@
+# What's the point of the preloaded deck?
 D = {'S': "spades", 'D': "diamonds", 'H': "hearts", 'C': "clubs"}
 
 

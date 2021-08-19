@@ -1,5 +1,9 @@
 import numpy as np
 
+# legs: 2x + 4y + 4z = n(legs)
+# heads: x + y + z = n(heads)
+# horns: 2z = n(horns)
+# where x, y, z: chickens, rabbits, cows
 coefficients = np.array([[2, 4, 4], [1, 1, 1], [0, 0, 2]])
 
 

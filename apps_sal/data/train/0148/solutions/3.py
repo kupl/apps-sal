@@ -1,8 +1,14 @@
+# 6:12 -> 6:25 | 7:23 ->
+# Find mapping of workers to jobs such that profit is maximized
+# Greedy approach: take highest profit job, assign it to most highly skilled worker
 from queue import PriorityQueue
 
 
 class Solution:
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
+        # print('difficulty', difficulty)
+        # print('profit', profit)
+        # print('worker', worker)
         pq = PriorityQueue()
 
         worker.sort()
@@ -23,5 +29,6 @@ class Solution:
                 pq.put((cash, diff_index))
             cash *= -1
             profit += cash
+            # print(profit, cash, skill)
 
         return profit

@@ -11,8 +11,12 @@ for i in range(K):
     C, D = list(map(int, input().split()))
     block[C].append(D)
     block[D].append(C)
+# print(friend)
+# print(block)
 
+#import queue
 grouping = [False] * (N + 1)
+# print(grouping)
 grouping[0] = True
 group = [0] * (N + 1)
 g_num = 0
@@ -23,17 +27,25 @@ for i in range(1, N + 1):
         continue
     group[i] = g_num
     grouping[i] = True
+    #q = queue.Queue()
+    # q.put(i)
     stack = [i]
+    # while not q.empty():
     while len(stack) > 0:
+        # print('v:',visited)
+        #p = q.get()
         p = stack.pop()
         for f in friend[p]:
+            # print(p,f)
             if grouping[f] == False:
+                # q.put(f)
                 stack.append(f)
                 group[f] = g_num
                 grouping[f] = True
                 cnt += 1
     g_num += 1
     g_cnt.append(cnt)
+    # print('g:',grouping)
 ans = []
 for i in range(1, N + 1):
     c = g_cnt[group[i]] - len(friend[i])

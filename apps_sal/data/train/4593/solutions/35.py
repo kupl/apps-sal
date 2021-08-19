@@ -6,3 +6,4 @@ def merge_arrays(a, b):
             noDupes.append(x)
     noDupes.sort()
     return noDupes
+# ---end function

@@ -19,6 +19,7 @@ class Solution:
 
         while costHeap:
             cost, nextStart = heappop(costHeap)
+            # print(cur, nextStart, cost)
             if nextStart not in visited:
                 result += cost
                 visited.add(nextStart)

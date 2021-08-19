@@ -5,6 +5,7 @@ class Solution:
 
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         lookup = Counter()
+        # initializing
         lookup[0] = 1
         answer = accumulated_sum = 0
 

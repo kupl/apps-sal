@@ -24,8 +24,8 @@ def main():
         i = bisect_left(pos[j], curr)
         if i == len(pos[j]):
             rep += 1
-            i = 0
-        curr = pos[j][i] + 1
+            i = 0  # pos[j][0]文字目がc
+        curr = pos[j][i] + 1  # pos[j][i]にしたら同じ文字が続くケースでWA
 
     print((rep * L + curr))
 

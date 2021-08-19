@@ -1,6 +1,8 @@
 from string import ascii_lowercase
 from collections import Counter
 
+# try using zip
+
 
 def solve(arr):
 

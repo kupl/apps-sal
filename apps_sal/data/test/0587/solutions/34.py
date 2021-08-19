@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 from collections import deque
 n, k = list(map(int, input().split()))

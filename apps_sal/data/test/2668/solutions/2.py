@@ -1,3 +1,4 @@
+# cook your dish here
 
 jacketCost, sockCost, money = list(map(int, input().split()))
 

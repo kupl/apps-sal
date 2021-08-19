@@ -5,6 +5,9 @@ from sortedcontainers import SortedSet
 
 class Solution:
     def isPossibleDivide(self, hand: List[int], W: int) -> bool:
+        # print('-----')
+        # print(f'hand: {hand}')
+        # print(f'W: {W}')
 
         if not hand:
             return True
@@ -20,6 +23,7 @@ class Solution:
                     return False
                 else:
                     nn = list(ns.islice(stop=W))
+                    # print(f'r={r} nn={nn} ns={ns} counts={counts}')
                     prev = ns[0] - 1
                     for n in nn:
                         if n == prev + 1:

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import itertools
 import math
 
@@ -17,6 +18,7 @@ for d in itertools.product([0, 1], repeat=d):
         value += (i + 1) * 100 * pc[i][0] + pc[i][1]
 
     iter_ = [[i, j] for i, j in enumerate(d)]
+    # print(iter_)
     for i, j in reversed(iter_):
         if j == 1:
             continue
@@ -29,6 +31,8 @@ for d in itertools.product([0, 1], repeat=d):
         num = min(math.ceil(shortage / base), pc[i][0] - 1)
         ans_tmp += num
         value += base * num
+    # print(d)
+    # print(value, ans_tmp)
     if value >= g:
         ans = min(ans, ans_tmp)
 

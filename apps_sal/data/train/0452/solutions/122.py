@@ -10,6 +10,8 @@ class Solution:
     def topDown(self, jobs, d, index, memo):
         if d <= 0:
             return float('inf')
+        # if len(jobs) - index + 1 < d:
+        #     return float('inf')
         if d == 1:
             if index < len(jobs):
                 return max(jobs[index:])

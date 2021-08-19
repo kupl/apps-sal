@@ -12,6 +12,7 @@ def convert_to_binary(coef):
 
         mod = cur % 2
         div = cur // 2
+#        print(cur, div, mod)
 
         res.append(mod)
 

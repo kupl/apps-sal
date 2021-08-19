@@ -9,6 +9,7 @@ words = np.array([list(input().rstrip()) for _ in range(H)], dtype='U1')
 
 
 def gen_pair_pattern_even(rest):
+    # 偶数個を仮定
     if len(rest) == 0:
         yield []
         return

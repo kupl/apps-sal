@@ -28,6 +28,7 @@ class Solution:
                     while hash[word] < slidingWindow[word]:
                         pos = i - wsize * (wCount - 1)
                         removeWord = s[pos: pos + wsize]
+                        # print i, removeWord
                         slidingWindow[removeWord] -= 1
                         wCount -= 1
                 else:

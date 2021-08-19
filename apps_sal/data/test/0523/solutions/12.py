@@ -19,6 +19,7 @@ def main():
         s1 = strings[i]
         for j in range(i + 1, n):
             s2 = strings[j][::-1]
+            # print(s1,s2)
             if s1 == s2:
                 found = True
                 pairs.append((s1, strings[j]))
@@ -28,6 +29,7 @@ def main():
             if palindrome(s1):
                 alone.append(s1)
 
+    # print(pairs)
     s = ''
     for i in pairs:
         s += i[0]

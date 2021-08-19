@@ -101,6 +101,9 @@ class Solution:
 
             ans = ans + left[i] * right[i]
 
+        # print(left)
+        # print(right)
+        # print(\"************\")
         return ans
 
     def numTeams(self, rating: List[int]) -> int:

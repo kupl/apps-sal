@@ -23,4 +23,5 @@ class Solution:
                     preorder(child, node)
         postorder()
         preorder()
+        # print(count)
         return ans

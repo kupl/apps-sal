@@ -18,4 +18,5 @@ class Solution:
                 while incStack and incStack[0][1] < l:
                     incStack.popleft()
             ans = max(ans, r - l + 1)
+            # print(ans, l, r, incStack, decStack)
         return ans

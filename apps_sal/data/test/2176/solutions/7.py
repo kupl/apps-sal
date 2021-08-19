@@ -36,9 +36,21 @@ for i in range(1, n + 1):
 
 take.sort()
 
+# good good
 cnt1 = 0
 cnt2 = 0
+# check = [[0,0] for i in range(n)]
 
+# for i in range(1,n):
+# 	if take[i][0] != take[i-1][0]:
+# 		check[i][0] = check[i-1][0]+1
+# 	else:
+# 		check[i][0] = check[i-1][0]
+
+# 	if take[i][1] != take[i-1][1]:
+# 		check[i][1] = check[i-1][1]+1
+# 	else:
+# 		check[i][1] = check[i-1][1]
 
 c1 = dd(int)
 c2 = dd(int)
@@ -62,6 +74,7 @@ ok1 = 1
 ok2 = 1
 ok3 = 1
 
+# print(c1,c2,c3)
 
 fac = [1 for i in range(3 * 10**5 + 1)]
 

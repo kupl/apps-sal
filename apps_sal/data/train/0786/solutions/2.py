@@ -1,3 +1,4 @@
+# cook your dish here
 arr = [1]
 for i in range(1, 18):
     x = 6**i

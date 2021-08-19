@@ -9,6 +9,8 @@ def inint():
 def inlst():
     return(list(map(int, input().split())))
 
+# returns a List of Characters, which is easier to use in Python as Strings are Immutable
+
 
 def instr():
     s = input()
@@ -18,6 +20,8 @@ def instr():
 def invar():
     return(list(map(int, input().split())))
 
+############ ---- Input function template ---- ############
+
 
 def isOdd(num):
     return (num & 1) == 1
@@ -25,6 +29,7 @@ def isOdd(num):
 
 n, m = invar()
 
+# build function
 tree = [{'round_num': m, 'winner': -1} for _ in range(2 * n + 1, 0, -1)]
 
 

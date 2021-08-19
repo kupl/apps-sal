@@ -19,3 +19,6 @@ for i in range(m - 1):
         p += l - 1
 
 print((pow(2, p, d) * f[n - m] * pow(q, d - 2, d)) % d)
+
+
+# Made By Mostafa_Khaled

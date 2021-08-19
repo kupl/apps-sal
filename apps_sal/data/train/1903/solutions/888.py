@@ -7,6 +7,7 @@ class Solution:
                 if points[j] != points[i]:
                     val = (abs(points[j][0] - points[i][0]) + abs(points[j][1] - points[i][1]))
                     dic[i, j] = val
+        # print(dic)
         g = Graph(len(points))
 
         for k, v in list(dic.items()):
@@ -46,10 +47,12 @@ class Graph:
             i += 1
             x = self.find(parent, u)
             y = self.find(parent, v)
+            # print(x,y)
             if x != y:
                 e += 1
                 MST.append([u, v, w])
                 self.union(parent, x, y)
+                # print(MST)
         s = 0
         for u, v, w in MST:
             s += w

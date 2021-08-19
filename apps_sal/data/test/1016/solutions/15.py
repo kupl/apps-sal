@@ -51,6 +51,9 @@ isolatednodes = set(range(1, n + 1)) - set(graph.keys())
 for i in isolatednodes:
     graph[i] = []
 
+# print("graph:",graph)
+# print("isoliert:",isolatednodes)
 zusKompn = zusKomp2(graph)
+# print("Zusammenhangskomponenten:",zusKompn)
 
 print(2**(sum(list([len(x) - 1 for x in list(zusKompn.values())]))))

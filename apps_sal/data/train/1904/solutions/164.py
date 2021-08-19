@@ -1,3 +1,6 @@
+# Quick select: time = O(N)
+# Logic to understand https://leetcode.com/problems/k-closest-points-to-origin/discuss/220235/Java-Three-solutions-to-this-classical-K-th-problem.
+# clean code https://leetcode.com/problems/k-closest-points-to-origin/discuss/219442/Python-with-quicksort-algorithm
 
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:

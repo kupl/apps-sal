@@ -15,6 +15,7 @@ class Solution:
 
         self.MAX = (10 ** 9) + 7
 
+        # at *this* cell, with *this* many steps left, what's the count?
         self.ledger = [[None] * n for _ in range(10)]
 
         dialable = 0

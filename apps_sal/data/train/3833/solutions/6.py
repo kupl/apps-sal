@@ -6,4 +6,4 @@ def longest(s1, s2):
         if i not in x:
             x += i
 
-    return x
+    return x  # your code

@@ -1,3 +1,4 @@
+# cook your dish here
 for h in range(int(input())):
     s = input()
     l = list(s)

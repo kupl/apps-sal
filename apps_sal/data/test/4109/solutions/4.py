@@ -11,8 +11,8 @@ ans = []
 for i in range(2 ** N):
     score = [0 for _ in range(M)]
     price = 0
-    for j in range(N):
-        if ((i >> j) & 1):
+    for j in range(N):  # このループが一番のポイント
+        if ((i >> j) & 1):  # 順に右にシフトさせ最下位bitのチェックを行う
             price += C[j]
             for d in range(M):
                 score[d - 1] += D[j][d]

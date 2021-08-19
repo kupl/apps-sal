@@ -11,6 +11,7 @@ ans = 1
 la = [0, 0]
 
 for i in range(n):
+    # print(ans)
     if i == 0:
         ans += min(arr[i][0], arr[i][1])
     else:

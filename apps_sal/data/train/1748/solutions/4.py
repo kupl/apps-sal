@@ -33,6 +33,7 @@ class Turret:
         self.nothing_in_range = False
         self.in_range_list = deque()
 
+        # Find all the spots in the trail, find which ones are in range
         for i, slot in enumerate(self.trail):
             if self.calc_dist(slot) <= self.range:
                 self.in_range_list.appendleft(i)
@@ -42,8 +43,8 @@ class Turret:
         self.current_shots = self.max_shots
 
     def calc_dist(self, target):
-        return math.sqrt(math.pow(target[0] - self.loc[0], 2) +
-                         math.pow(target[1] - self.loc[1], 2))
+        return math.sqrt(math.pow(target[0] - self.loc[0], 2)
+                         + math.pow(target[1] - self.loc[1], 2))
 
     def shoot_nearest_alien(self, aliens):
         self.nothing_in_range = True
@@ -62,12 +63,17 @@ class Turret:
 
 
 def gen_path(data):
+    # Convert the raw string map to a mutable form so that we
+    # can modify it later (to mark visited cells along the path)
     map = []
     for row in data:
         map.append(list(row))
     rows = len(map)
     cols = len(map[0])
 
+    # Iterate through all the points and look for the unique
+    # start of the trail (0) and while we're at it, find the
+    # turrets (capital letters)
     start = None
     turrets = {}
     for y in range(len(map)):
@@ -77,25 +83,31 @@ def gen_path(data):
             elif map[y][x].isupper():
                 turrets[map[y][x]] = (x, y)
 
+    # Now that we have the start, iterate through the map to
+    # find the trail
     trail = []
 
     found_end = False
     next = start
     while not found_end:
+        # South
         if next[1] + 1 < rows and map[next[1] + 1][next[0]] == "1":
-            map[next[1] + 1][next[0]] = '0'
+            map[next[1] + 1][next[0]] = '0'  # mark as visited
             trail.append(next)
             next = (next[0], next[1] + 1)
+        # North
         elif next[1] - 1 >= 0 and map[next[1] - 1][next[0]] == "1":
-            map[next[1] - 1][next[0]] = '0'
+            map[next[1] - 1][next[0]] = '0'  # mark as visited
             trail.append(next)
             next = (next[0], next[1] - 1)
+        # East
         elif next[0] + 1 < cols and map[next[1]][next[0] + 1] == "1":
-            map[next[1]][next[0] + 1] = '0'
+            map[next[1]][next[0] + 1] = '0'  # mark as visited
             trail.append(next)
             next = (next[0] + 1, next[1])
+        # West
         elif next[0] - 1 >= 0 and map[next[1]][next[0] - 1] == "1":
-            map[next[1]][next[0] - 1] = '0'
+            map[next[1]][next[0] - 1] = '0'  # mark as visited
             trail.append(next)
             next = (next[0] - 1, next[1])
         else:
@@ -105,6 +117,8 @@ def gen_path(data):
 
 
 def game_logic(turret_data, turret_locs, alien_data, trail):
+    # Create an array of turret objects, combining the location information
+    # and the range/shots information
     turrets = []
     for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
         if letter in turret_locs and letter in turret_data:
@@ -114,34 +128,43 @@ def game_logic(turret_data, turret_locs, alien_data, trail):
                                   letter,
                                   trail))
 
+    # Main loop variables
     aliens = deque()
     trail_length = len(trail)
     final_health = 0
     game_length = len(alien_data) + len(trail)
     round = 0
 
-    while round < game_length:
+    # Perform the game logic here
+    while round < game_length:  # This is the main tick loop of the game
         round += 1
 
+        # Move the aliens
         if len(alien_data) > 0:
             aliens.appendleft(Alien(alien_data.pop(0), len(trail)))
         else:
+            # Push dummies back after all the real aliens are used
             aliens.appendleft(Alien(0, len(trail)))
 
+        # Check the right side of the list for aliens that fall off the map
         if len(aliens) > trail_length:
             removed_alien = aliens.pop()
             if removed_alien.health > 0:
                 final_health += removed_alien.health
 
+        # Reset all the turrets back to full power
         for turret in turrets:
             turret.reset_shots()
 
+        # Iterate through all turrets
         turrets_done = False
         while not turrets_done:
             for t in turrets:
                 if t.current_shots > 0:
                     t.shoot_nearest_alien(aliens)
 
+            # Done condition: all turrets empty or
+            # Have no enemies in range
             turrets_done = True
             for t in turrets:
                 if t.current_shots > 0 and not t.nothing_in_range:

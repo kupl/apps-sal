@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 '''
 Key concept:
     1. if left path sum < limit we remove left child and similarly remove right child
@@ -21,7 +27,7 @@ class Solution:
                 result = max(l, r)
             elif node.left:
                 result = l
-            else:
+            else:  # node.right = None or both left right are None
                 result = r
 
             if l < limit:

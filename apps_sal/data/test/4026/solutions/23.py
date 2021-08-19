@@ -3,7 +3,11 @@ from sys import stdin, stdout
 import sys
 from math import *
 
+# from collections import deque
+# sys.setrecursionlimit(int(2e5+10))
 input = stdin.readline
+# print = stdout.write
+# dp=[-1]*100000
 
 for __ in range(int(input())):
     n, m = list(map(int, input().split()))

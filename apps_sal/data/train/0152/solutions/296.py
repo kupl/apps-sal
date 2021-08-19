@@ -7,6 +7,7 @@ class Solution:
                 if position[i] - position[start] >= space:
                     count += 1
                     start = i
+#            print(space, count)
             return count >= m - 1
 
         def find_space(lo, hi):

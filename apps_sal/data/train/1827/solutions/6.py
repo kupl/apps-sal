@@ -8,10 +8,11 @@ class Solution:
 
     def use_math(self, n):
         n = int(n)
-        max_m = int(math.log(n, 2))
+        max_m = int(math.log(n, 2))  # Refer [7]
         for m in range(max_m, 1, -1):
-            k = int(n**m**-1)
+            k = int(n**m**-1)  # Refer [6]
             if (k**(m + 1) - 1) // (k - 1) == n:
+                # Refer [3]
                 return str(k)
 
         return str(n - 1)

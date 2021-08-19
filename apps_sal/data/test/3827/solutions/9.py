@@ -46,6 +46,8 @@ def compress(s):
 def __starting_point():
     myin = MyInput()
     (s,) = myin.getstringline(1)
+    # Make sure there are a's followed by b's followed by c's
+    # Make sure the count of cs either equals count of as or count of bs
     s1 = compress(s)
     ans = "NO"
     if s1 == 'abc' and (s.count('c') == s.count('a') or s.count('c') == s.count('b')):

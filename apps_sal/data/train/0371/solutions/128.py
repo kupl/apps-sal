@@ -5,11 +5,14 @@ class Solution(object):
             for j in route:
                 to_routes[j].add(i)
         bfs = [(S, 0)]
+        # seen = set([S])
         for stop, bus in bfs:
             if stop == T:
                 return bus
             for i in to_routes[stop]:
                 for j in routes[i]:
+                    # if j not in seen:
                     bfs.append((j, bus + 1))
-                routes[i] = []
+                    # seen.add(j)
+                routes[i] = []  # seen route
         return -1

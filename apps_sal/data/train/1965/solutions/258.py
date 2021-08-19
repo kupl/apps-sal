@@ -3,6 +3,7 @@ class Solution:
         ufAli = uf(n)
         ufBob = uf(n)
 
+#         10 -> 2
         for edg in edges:
             x, y = edg[1], edg[2]
             if edg[0] == 1:
@@ -13,6 +14,9 @@ class Solution:
                 ufAli.addEdge(x, y, 1)
                 ufBob.addEdge(x, y, 1)
 
+        # print(ufAli.g, ufAli.kruskalmst())
+        # print(ufBob.g, ufBob.kruskalmst())
+
         blueremoved = set()
         aliremoved = set()
         bobremoved = set()
@@ -22,6 +26,7 @@ class Solution:
         if ans1 == -1 or ans2 == -1:
             return -1
 
+        # return ans1 + ans2
         return len(blueremoved) + len(aliremoved) + len(bobremoved)
 
 
@@ -30,9 +35,11 @@ class uf:
         self.n = n
         self.g = []
         self.joinednodes = set()
+        # self.totalnodes = set()
 
     def addEdge(self, x, y, cost):
         self.g.append((x, y, cost))
+        # self.joinednodes
 
     def find(self, x, parent):
         if parent[x] == x:
@@ -53,6 +60,7 @@ class uf:
                 rank[xroot] += 1
 
     def kruskalmst(self, blue, rorg):
+        # parent = { for edge in g}
         parent = {}
         rank = {}
         for edge in self.g:
@@ -61,6 +69,7 @@ class uf:
             rank[edge[0]] = 0
             rank[edge[1]] = 0
 
+        # print(parent, rank)
         success = 0
         self.g.sort(key=lambda edge: edge[2])
         for edge in self.g:
@@ -79,6 +88,7 @@ class uf:
 
         if success == self.n - 1:
 
+            # return success
             return len(self.g) - success
 
         return -1

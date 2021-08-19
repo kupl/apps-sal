@@ -1,3 +1,4 @@
+# 問題：https://atcoder.jp/contests/abc146/tasks/abc146_b
 
 n = int(input())
 s = input()

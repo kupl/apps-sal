@@ -14,4 +14,5 @@ class Solution:
                 print(i)
             return result
         else:
+            # print(\"Ji\")
             return 0

@@ -32,6 +32,7 @@ class Solution:
             m = (s + e) // 2
             if arr[m].end > start:
                 e = m - 1
+            # arr[m].end <= start
             elif m == e or (0 <= m + 1 < i and arr[m + 1].end > start):
                 return m
             else:

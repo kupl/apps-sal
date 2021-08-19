@@ -6,6 +6,8 @@ def getns():
     return [int(x)for x in input().split()]
 
 
+# n=getn()
+# ns=getns()
 n, h, m = getns()
 hs = [h] * (n + 1)
 for i in range(m):

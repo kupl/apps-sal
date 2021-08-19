@@ -138,6 +138,7 @@ class family:
 
         return True
 
+    # BFS algorithm
     def check_gender_assignment(self, child, parent):
         visited = set()
         queue = deque([parent])
@@ -161,6 +162,7 @@ class family:
                             if pp.gender is None:
                                 counter += 1
 
+            # Detect cycle
             if child in p.children:
                 if counter > 2:
                     if counter % 2 != 0 or counter > 5:

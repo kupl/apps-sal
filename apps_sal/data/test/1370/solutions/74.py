@@ -1,4 +1,5 @@
 sel = 'E'
+# A
 if sel == 'A':
     N, M = list(map(int, input().split()))
     ans = 0
@@ -6,6 +7,7 @@ if sel == 'A':
     ans += N * (N - 1) // 2
     print(ans)
 
+# B
 if sel == 'B':
     def ispal(s):
         for i in range(len(s) // 2 + 1):
@@ -20,10 +22,12 @@ if sel == 'B':
     else:
         print('No')
 
+# C
 if sel == 'C':
     L = int(input())
     print(((L**3) / 27))
 
+# D
 if sel == 'D':
     N = int(input())
     A = [int(i) for i in input().split()]
@@ -42,6 +46,7 @@ if sel == 'D':
         else:
             print(SUM)
 
+# E
 if sel == 'E':
     def add(in1, in2):
         return [a + b for a, b in zip(in1, in2)]
@@ -80,3 +85,9 @@ if sel == 'E':
         if ans > ans_:
             ans = ans_
     print(ans)
+
+
+# #F
+# if sel=='F':
+#     N,S=map(int,input().split())
+#     A=[int(i) for i in input().split()]

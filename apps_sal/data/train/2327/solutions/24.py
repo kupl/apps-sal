@@ -16,6 +16,8 @@ def solve():
 
     sects.sort(key=itemgetter(2))
 
+    # print(sects)
+
     print(N)
 
     left = 0
@@ -33,6 +35,9 @@ def solve():
         else:
             left = N
 
+        # print('left', left)
+        # print(ft.data)
+
         ans = N - left + sum(ft.get_sum(j) for j in range(d, M + 1, d))
 
         print(ans)
@@ -49,7 +54,7 @@ class FenwickTree:
 
     def add(self, i, x):
         ''' a[i] += x '''
-        i += 1
+        i += 1  # 0-oringn -> 1-origin
 
         while i <= self.n:
             self.data[i] += x

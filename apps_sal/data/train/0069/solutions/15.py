@@ -17,6 +17,8 @@ for _ in range(t):
         print(0)
         continue
 
+    # print(ind1, ind2)
+
     arr = []
     count = 0
     for i in range(ind1, ind2 + 1):
@@ -32,6 +34,7 @@ for _ in range(t):
 
     ans = a * (len(arr) + 1)
 
+    # print(arr)
     arr.sort()
 
     tot = 0

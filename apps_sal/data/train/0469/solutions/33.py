@@ -16,6 +16,7 @@ class Solution:
         for i in range(n):
             if indegree[i] == 0 and outdegree[i] <= 2:
                 possible_roots.append(i)
+                # check for more than one root node
                 if len(possible_roots) > 1:
                     return False
 

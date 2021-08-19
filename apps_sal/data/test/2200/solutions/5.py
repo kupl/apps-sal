@@ -4,6 +4,7 @@ jet = list(map(int, input().split()))
 
 
 def jtd(w):
+    #d = (w*a)//b
     j = (w * a) % b
     return j // a
 

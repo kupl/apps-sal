@@ -8,7 +8,7 @@ def num_to_bitstring(n):
 
 class Node:
     def __init__(self, val=0):
-        self.value = val
+        self.value = val  # number of occurances
         self.left = None
         self.right = None
 
@@ -40,6 +40,7 @@ class Trie:
     def subtract(self, s):
         current = self.head
         last_branch = None
+        # have a last valid, if after going to a leaf it turns out 1 -> 0, we need to trim a branch, so take last valid set either left or right to None
 
         for b in s:
             if (current.left != None) and (current.right != None):

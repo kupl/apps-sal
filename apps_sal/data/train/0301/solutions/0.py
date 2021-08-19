@@ -3,6 +3,10 @@ from collections import defaultdict
 
 class Solution:
     def maxUncrossedLines(self, A, B):
+        # Optimization
+        # commons = set(A).intersection(set(B)) # or commons = set(A) & set(B)
+        #A = [x for x in A if x in commons]
+        #B = [x for x in B if x in commons]
 
         N1, N2 = len(A), len(B)
         dp = [[0 for _ in range(N2 + 1)] for _ in range(N1 + 1)]
@@ -18,7 +22,7 @@ class Solution:
 class Solution:
     def maxUncrossedLines(self, A, B):
 
-        commons = set(A).intersection(set(B))
+        commons = set(A).intersection(set(B))  # or commons = set(A) & set(B)
         A = [x for x in A if x in commons]
         B = [x for x in B if x in commons]
         N1, N2 = len(A), len(B)

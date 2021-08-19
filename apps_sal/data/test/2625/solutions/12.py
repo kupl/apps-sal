@@ -121,6 +121,8 @@ def modu(a, n):
         return n
     return a % n
 
+# /////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 for i in range(int(input())):
     k, n = list(map(int, input().split()))

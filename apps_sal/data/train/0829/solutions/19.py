@@ -1,3 +1,4 @@
+# cook your dish here
 N = int(input())
 l = list(map(int, input().strip().split(" ")))
 s = 0

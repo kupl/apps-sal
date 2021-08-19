@@ -9,6 +9,7 @@ def chek(m, b, c, li):
     return True
 
 
+# 113759
 def input(): return sys.stdin.readline().rstrip()
 
 

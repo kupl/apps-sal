@@ -1,4 +1,6 @@
 n, m, k = map(int, input().split())
+# n*mからk個選ぶ
+# x方向
 mod = 10**9 + 7
 kaidan = [1] * (n * m + 1)
 gyaku = [1] * (n * m + 1)

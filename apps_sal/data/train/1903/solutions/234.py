@@ -26,6 +26,9 @@ class UnionFind(object):
             n = self._parent[n]
         return n
 
+    # def connected(self, p, q):
+    #    return self.find(p) == self.find(q)
+
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:

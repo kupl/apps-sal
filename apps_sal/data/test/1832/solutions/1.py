@@ -1,3 +1,4 @@
+# ------------------- fast io --------------------
 from math import gcd, ceil
 import os
 import sys
@@ -53,6 +54,8 @@ class IOWrapper(IOBase):
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
+# ------------------- fast io --------------------
+
 
 def pre(s):
     n = len(s)
@@ -84,7 +87,12 @@ def binary(x, length=16):
 
 for _ in range(int(input()) if True else 1):
     n = int(input())
+    #n, k = map(int, input().split())
+    #a, b = map(int, input().split())
+    #c, d = map(int, input().split())
     a = list(map(int, input().split()))
+    #b = list(map(int, input().split()))
+    #s = input()
     ans = ['a' * 100]
     for i in range(n):
         ans += [ans[-1][:a[i]] + chr(ord(ans[-1][a[i]]) + 1) if ans[-1][a[i]] != 'z' else 'a']

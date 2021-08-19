@@ -5,6 +5,7 @@ class Solution:
             m[n].add(t)
 
         ans = []
+        # print(m)
 
         for name in m:
             added = False
@@ -14,13 +15,14 @@ class Solution:
                 h, minute = map(int, t.split(':'))
                 m2[h].add(minute)
 
+            # print(name, m2)
             for h, f in m2.items():
                 if len(f) >= 3:
                     ans.append(name)
                     added = True
                     break
 
-            if added:
+            if added:  # name is already added
                 continue
 
             to_minutes = []
@@ -28,6 +30,7 @@ class Solution:
                 h, minute = map(int, t.split(':'))
                 to_minutes.append(h * 60 + minute)
             to_minutes.sort()
+            # print(name, to_minutes)
             i = 0
             j = 0
             size = 1
@@ -35,10 +38,12 @@ class Solution:
                 if to_minutes[j + 1] - to_minutes[i] <= 60:
                     j += 1
                     if j - i >= 2:
+                        # print(to_minutes[i])
                         ans.append(name)
                         break
                 else:
                     i += 1
+                    # size -= 1
                 j = max(j, i)
 
         return sorted(ans)

@@ -1,5 +1,7 @@
+# https://codeforces.com/problemset/problem/848/B
 
 def push(d, val, type_, arr):
+    # pos index
     type_ %= 2
     if val not in d:
         d[val] = [[], []]

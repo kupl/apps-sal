@@ -23,8 +23,12 @@ def resolve():
     F.sort()
     F = F[::-1]
 
+    # 時間tで感触できるか
     def can_complete(t):
         return np.maximum(0, A - t // F).sum() <= K
+
+    # for j in range(20):
+    #     print(can_complete(j))
 
     ng = -1
     ok = max(A) * max(F)

@@ -8,9 +8,11 @@ def subCount(arr, n, k):
     for i in range(n):
         cumSum = cumSum + arr[i]
 
+        # as the sum can be negative,
+        # taking modulo twice
         mod[((cumSum % k) + k) % k] = mod[((cumSum % k) + k) % k] + 1
 
-    result = 0
+    result = 0  # Initialize result
 
     for i in range(k):
 

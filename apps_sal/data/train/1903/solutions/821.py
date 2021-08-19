@@ -25,6 +25,14 @@ class DSU:
 
 class Solution:
     def minCostConnectPoints(self, a: List[List[int]]) -> int:
+        # ans = []
+        # n = len(a)
+        # t = []
+        # for i in range(n):
+        #     t = []
+        #     for i in range(n):
+        #         t.append(0)
+        #     ans.append(t)
         n = len(a)
         if n == 1:
             return 0
@@ -32,6 +40,7 @@ class Solution:
         for i in range(n):
             for j in range(n):
                 x = abs(a[i][0] - a[j][0]) + abs(a[i][1] - a[j][1])
+                # ans[i][j] = x
                 if i != j and i > j:
                     temp.append([x, i, j])
         ans = 0

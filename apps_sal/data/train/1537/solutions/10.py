@@ -14,5 +14,6 @@ for _ in range(int(input())):
     k = int(input())
     s = 0
     for i in range(k):
+        # print(k,i,c[i],c[c[i]-1])
         s = (s + c[c[i] - 1]) % ((10**9) + 7)
     print(s)

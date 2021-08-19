@@ -3,6 +3,10 @@ import collections
 
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
+        # Conditions:
+        # 1. There are one and only one node that has zero in degree.
+        # 2. All other nodes have one and only one in degree.
+        # 3. There are no cycle.
 
         if n == 1:
             return True

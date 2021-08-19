@@ -2,6 +2,7 @@ N = int(input())
 a = list(map(int, input().strip().split()))
 b = list(map(int, input().strip().split()))
 
+# 累積和
 A = []
 B = []
 suma = 0

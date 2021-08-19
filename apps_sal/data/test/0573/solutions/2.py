@@ -1,3 +1,4 @@
+# a,b = list(map(int, input().strip().split()))
 n = int(input())
 
 a = list(map(int, input().strip().split()))

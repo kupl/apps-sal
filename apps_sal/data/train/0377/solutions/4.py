@@ -1,11 +1,13 @@
 class Solution:
     def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
+        # official solution
         def gcd(x, y):
             if y == 0:
                 return x
             return gcd(y, x % y)
 
         MOD = 10**9 + 7
+        # Least common multiple of A and B
         L = A // gcd(A, B) * B
         M = L // A + L // B - 1
         q, r = divmod(N, M)

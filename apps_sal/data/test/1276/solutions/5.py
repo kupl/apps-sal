@@ -10,7 +10,7 @@ for d in range(1, (N - 1) // 2 + 1):
 
 r = S.count('R')
 g = S.count('G')
-b = N - r - g
+b = N - r - g  # = S.count('B')
 
 ans = r * g * b - uns
 print(ans)

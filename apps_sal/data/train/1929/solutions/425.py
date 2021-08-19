@@ -30,3 +30,8 @@ class StreamChecker:
             return False
         self.s += letter
         return find(self.root, self.s)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

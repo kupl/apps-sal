@@ -8,6 +8,7 @@ def get_divisors_sum(n):
             divs.extend([i, int(n / i)])
     divs.extend([n])
 
+    # Get sum, return the sum
     sm = sum([d**2 for d in list(set(divs))])
     return sm
 
@@ -16,7 +17,7 @@ def list_squared(m, n):
     """Search for squares amongst the sum of squares of divisors of numbers from m to n """
     out = []
     for j in range(m, n + 1):
-        s = get_divisors_sum(j)
-        if (s ** 0.5).is_integer():
+        s = get_divisors_sum(j)  # sum of divisors squared.
+        if (s ** 0.5).is_integer():  # check if a square.
             out.append([j, s])
     return out

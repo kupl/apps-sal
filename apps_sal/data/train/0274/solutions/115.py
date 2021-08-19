@@ -18,6 +18,7 @@ class Solution:
             if maxelement - minelement <= limit:
                 ans = max(ans, r - l + 1)
             else:
+                # recompute min and max
                 if minelement == nums[l]:
                     minelement = min(nums[l + 1: r + 1])
                 if maxelement == nums[l]:

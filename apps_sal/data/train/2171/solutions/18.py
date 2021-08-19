@@ -74,6 +74,7 @@ def calculate(graph, original, goal, n):
     return ans
 
 
+# main starts
 n = int(stdin.readline().strip())
 graph = defaultdict(list)
 for i in range(1, n + 1):

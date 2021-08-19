@@ -1,5 +1,6 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        # dp
         if not text1 or not text2:
             return 0
         m, n = len(text1), len(text2)

@@ -2,9 +2,9 @@ def longest_palindrome(s):
     """"Based on Manacher algorithm"""
 
     if s == "":
-        t = "^
+        t = "^#$"
     else:
-        t = "^
+        t = "^#" + "#".join(s) + "#$"
 
     c = 0
     r = 0

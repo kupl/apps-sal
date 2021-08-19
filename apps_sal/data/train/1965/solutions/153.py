@@ -1,6 +1,8 @@
 class UnionFind:
     def __init__(self, n):
         self.state = [-1] * n
+        # self.size_table = [1] * n
+        # cntはグループ数
         self.cnt = n
 
     def root(self, u):
@@ -23,7 +25,12 @@ class UnionFind:
             self.state[ru] -= 1
         self.state[rv] = ru
         self.cnt -= 1
+        # self.size_table[ru] += self.size_table[rv]
         return
+
+    # グループの要素数
+    # def size(self, u):
+    #     return self.size_table[self.root(u)]
 
 
 class Solution:

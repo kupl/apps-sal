@@ -15,3 +15,5 @@ for index, a in enumerate(A[:-1]):
     count += 1
 
 print(*ans, sep='\n')
+
+# print (A)

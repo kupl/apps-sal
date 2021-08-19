@@ -28,6 +28,7 @@ class Solution:
                 return False
             return True
 
+        # dirs = [(0, 1), (-1, 0)]
         for i in range(N):
             for j in range(N):
                 idtop = (i * N + j) * 4

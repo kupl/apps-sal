@@ -12,6 +12,7 @@ def get_strings(inputString):
             if (i.isalpha()):
                 checkDict['letter'].append(i)
                 checkDict['count'].append('*')
+    # print(checkDict) om de dictionary te bekijken
     outputString = ''
     for i in checkDict['letter']:
         indexLetter = checkDict['letter'].index(i)

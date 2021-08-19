@@ -10,6 +10,9 @@ for c in word:
     else:
         ns[c] += 1
 
+# d = max(0, n - len(ns))
+
+# foo = list(filter(lambda i: i > 0, map(lambda x: x-1, ns.values())))
 
 if len(word) >= n:
     print(max(0, n - len(ns)))

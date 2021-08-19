@@ -15,6 +15,7 @@ class Solution:
                         cont_count = 0
                 else:
                     cont_count = 0
+            #print(day, m_done)
             if m_done < m:
                 return False
             return True

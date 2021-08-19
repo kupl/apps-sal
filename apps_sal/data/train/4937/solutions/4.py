@@ -10,3 +10,4 @@ def martingale(bank, outcomes):
             bank -= stake
             stake *= 2
     return bank
+    # beat the house here...

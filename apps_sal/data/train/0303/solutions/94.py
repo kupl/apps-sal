@@ -1,5 +1,7 @@
 class Solution:
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
+        # dp(i) = max array sum using elements up to index i
+        # dp(i) = for j = 1 to k, find max of dp(i-j) + j * max(arr[i-j:i])
 
         dp = [0 for i in range(len(arr))]
         dp[0] = arr[0]

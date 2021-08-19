@@ -27,7 +27,7 @@ for i, j in product(list(range(n + 2)), list(range(n + 2))):
 def dijkstra(start):
     import heapq
     vals = [None] * (n + 2)
-    h = [(0, start)]
+    h = [(0, start)]  # (距離, ノード番号)
     vals[start] = 0
     while h:
         val, u = heapq.heappop(h)

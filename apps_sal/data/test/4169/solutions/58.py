@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sun Sep 13 02:42:27 2020
 
@@ -11,6 +12,7 @@ for i in range(N):
     drinks.append((a, b))
 
 drinks.sort(key=lambda x: x[0])
+# print(drinks)
 ans = 0
 i = 0
 while M > 0:
@@ -22,4 +24,5 @@ while M > 0:
     else:
         ans += a * b
         M -= b
+    # print(ans,M)
 print(ans)

@@ -18,4 +18,5 @@ for i in range(l):
         dp[i + 1][1][j + 1] += dp[i][1][j] * 9
     for j in range(k + 1):
         dp[i + 1][1][j] += dp[i][1][j]
+# for i in range(l+1): print(dp[i])
 print(dp[l][0][k] + dp[l][1][k])

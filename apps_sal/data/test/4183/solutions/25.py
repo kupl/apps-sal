@@ -12,6 +12,9 @@ def delete_head_zeros(n):
 
     return n[head_zeros:]
 
+# compare a, b
+# a, b: int or string
+
 
 def bigint_compare(a, b):
     a = delete_head_zeros(a)
@@ -27,6 +30,9 @@ def bigint_compare(a, b):
             return -1
         else:
             return 0
+
+# calculate a + b
+# a, b: int or string
 
 
 def bigint_plus(a, b):
@@ -48,6 +54,9 @@ def bigint_plus(a, b):
             ans = str(carry) + ans
 
     return ans
+
+# calculate a - b
+# a, b: int or string
 
 
 def bigint_minus(a, b):
@@ -77,6 +86,9 @@ def bigint_minus(a, b):
 
     return sign + delete_head_zeros(ans)
 
+# calculate a * b
+# a, b: int or string
+
 
 def bigint_multiply(a, b):
     a = str(a)
@@ -100,6 +112,9 @@ def bigint_multiply(a, b):
         ans = bigint_plus(md[k] + "0" * k, ans)
 
     return ans
+
+# calculate a / b to d digits after decimal point
+# a, b, d: int or string
 
 
 def bigint_divide(a, b, d=0):

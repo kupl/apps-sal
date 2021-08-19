@@ -13,6 +13,7 @@ for i in range(101):
     for j in range(101):
         H = pp[2] + abs(i - pp[0]) + abs(j - pp[1])
         for k in range(N):
+            #print(i, j ,k)
             if p[k][2] != max(H - abs(i - p[k][0]) - abs(j - p[k][1]), 0):
                 break
             if k == (N - 1):

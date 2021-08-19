@@ -35,6 +35,7 @@ for i in d:
             end = i
             endg = d[i][0]
             break
+#print (d)
 for i in l[startg]:
     if len(d[i]) == 2:
         second = i
@@ -56,7 +57,9 @@ elif ans[i - 1] in l[d[ans[i]][1]]:
 else:
     ans[i + 1] = comp(l[d[ans[i]][2]], ans[i - 1], ans[i])
 i += 1
+#print (ans)
 while i < n - 3:
+    #print (i,ans[i],d[ans[i]])
     if ans[i - 1] in l[d[ans[i]][0]] and ans[i - 2] not in l[d[ans[i]][0]]:
         ans[i + 1] = comp(l[d[ans[i]][0]], ans[i - 1], ans[i])
     elif ans[i - 1] in l[d[ans[i]][1]] and ans[i - 2] not in l[d[ans[i]][1]]:

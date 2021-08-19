@@ -2,6 +2,7 @@ import math
 
 
 def calculate_tip(amount, rating):
+    # your code here
     c = rating.capitalize()
     if(c == "Poor" or "Terrible" or "Good" or "Great" or "Excellent"):
         if(c == "Poor"):

@@ -15,6 +15,7 @@ def solve(l, x, limit):
         for i in range(part_num):
             s = 0
             for j in range(l[i], l[i + 1]):
+                # print(i, j, mid)
                 s += acc_list[j][mid] - acc_list[j][x]
             score = max(s, score)
         if score <= limit:

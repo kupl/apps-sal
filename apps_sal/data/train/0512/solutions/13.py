@@ -12,12 +12,14 @@ class RMQ:
         self.data = [(INF, INF) for _ in range(2 * self.size - 1)]
         self.initialize(a)
 
+    # Initialize data
     def initialize(self, a):
         for i in range(self.n):
             self.data[self.size + i - 1] = a[i][:]
         for i in range(self.size - 2, -1, -1):
             self.data[i] = min(self.data[i * 2 + 1], self.data[i * 2 + 2])[:]
 
+    # Update ak as x
     def update(self, k, x):
         k += self.size - 1
         self.data[k] = x
@@ -25,6 +27,7 @@ class RMQ:
             k = (k - 1) // 2
             self.data[k] = min(self.data[2 * k + 1], self.data[2 * k + 2])[:]
 
+    # Min value in [l, r)
     def query(self, l, r):
         L = l + self.size
         R = r + self.size
@@ -54,6 +57,7 @@ class LCA:
         dat = list(zip(self.depth, self.path))
         self.rmq = RMQ(dat)
 
+    # Lowest ancestor of u, v
     def get_lca(self, u, v):
         l, r = self.index[u], self.index[v]
         if l > r:
@@ -132,7 +136,9 @@ for p, c, w in zip(lca.path[1:], lca.color[1:], lca.weight[1:]):
 
 ans = []
 for x, y, ca, u, v in query:
+    # Calc basic distance
     val = memo[u][0] + memo[v][0] - memo[ca][0] * 2
+    # Append color diff
     val += (memo[v][x][0] + memo[u][x][0] - memo[ca][x][0] * 2) * y
     val -= (memo[v][x][1] + memo[u][x][1] - memo[ca][x][1] * 2)
     ans.append(val)

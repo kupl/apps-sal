@@ -48,7 +48,7 @@ class FTree:
 
         hi = self.n
 
-        for i in range(19):
+        for i in range(19):  # 30
 
             mid = (lo + hi) // 2
 

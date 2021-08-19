@@ -4,7 +4,7 @@ class Solution:
             self.tilingRectangle(m, n)
 
         self.ans = n * m
-        h = [0] * n
+        h = [0] * n  # we want to use the shorter side as the bottom
         self.dfs(h, 0, n, m)
         return self.ans
 
@@ -25,6 +25,7 @@ class Solution:
         while end < n and h[start] == h[end] and (end - start + 1 + min_h) <= m:
             end += 1
 
+        # heuristic: try larger box first
         for i in reversed(list(range(start, end))):
             size = i - start + 1
             for j in range(start, i + 1):

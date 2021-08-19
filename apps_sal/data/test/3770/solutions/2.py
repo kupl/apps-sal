@@ -31,7 +31,7 @@ class Dinic:
 
     def calc(self, s, t):
         flow, self.q[0] = 0, s
-        for l in range(31):
+        for l in range(31):  # l = 30 maybe faster for random data
             while True:
                 self.lvl, self.ptr = [0] * len(self.q), [0] * len(self.q)
                 qi, qe, self.lvl[s] = 0, 1, 1

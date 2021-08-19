@@ -1,3 +1,4 @@
+# cook your dish here
 from itertools import combinations
 a = list(map(int, input().split()))
 n = a[0]

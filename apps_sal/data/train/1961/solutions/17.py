@@ -32,3 +32,10 @@ class BrowserHistory:
             else:
                 self.current_node = self.current_node.__next__
         return self.current_node.url
+
+
+# Your BrowserHistory object will be instantiated and called as such:
+# obj = BrowserHistory(homepage)
+# obj.visit(url)
+# param_2 = obj.back(steps)
+# param_3 = obj.forward(steps)

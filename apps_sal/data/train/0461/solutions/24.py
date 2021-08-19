@@ -5,6 +5,7 @@ class Solution:
         for i in range(len(manager)):
             graph[manager[i]].append((informTime[i], i))
         heap = [(informTime[headID], headID)]
+        # dic = {}
         mx = -1
         while heap:
             time, index = heapq.heappop(heap)
@@ -12,4 +13,4 @@ class Solution:
 
             for t, n in graph[index]:
                 heapq.heappush(heap, (t + time, n))
-        return mx
+        return mx  # max(dic.values())

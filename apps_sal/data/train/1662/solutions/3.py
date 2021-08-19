@@ -1,3 +1,6 @@
+# Use a queue. Add root node, then loop:
+# get first queue element, add all its children in the queue, left to right
+# and add the current node's value in the result
 
 def tree_by_levels(node):
     queue = []

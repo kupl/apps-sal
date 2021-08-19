@@ -1,3 +1,4 @@
+# cook your code here
 N = eval(input())
 A = []
 for _ in range(N):

@@ -2,14 +2,17 @@ import sys
 from sys import stdin, stdout
 from bisect import bisect_right
 from os import path
+# cin=sys.stdin.readline
 cout = sys.stdout.write
 
 if (path.exists('input.txt')):
+    #------------------Sublime--------------------------------------#
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
     def cinN(): return (int(input()))
     def cin(): return(map(int, input().split()))
 else:
+    #------------------PYPY FAst I/o--------------------------------#
     def cinN(): return (int(stdin.readline()))
     def cin(): return(map(int, stdin.readline().split()))
 
@@ -40,6 +43,7 @@ def func():
             else:
                 ans = (t + 1)
         print(ans)
+    # cout(str(ans))
 
 
 def __starting_point():

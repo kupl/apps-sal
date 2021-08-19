@@ -1,3 +1,4 @@
+# I <3 tzuyu
 n = int(input())
 a = list(map(int, input().split()))
 s = [0 for _ in range(n + 1)]

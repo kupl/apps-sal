@@ -1,4 +1,5 @@
 num = [x for x in range(1, 101)]
+# print(num)
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))

@@ -14,3 +14,5 @@ for i in range(2, n + 1):
     dp[i][1] = (dp[i - 1][0] * modo + dp[i - 1][1] * modz + dp[i - 1][2] * modt) % mod
     dp[i][2] = (dp[i - 1][0] * modt + dp[i - 1][1] * modo + dp[i - 1][2] * modz) % mod
 print(dp[n][0])
+# print(dp)
+# print(modz,modo,modt)

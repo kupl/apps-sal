@@ -1,9 +1,19 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
 
 
 n, s = list(map(int, input().split()))
 
 
+# In[ ]:
+
+
 edgecount = [0 for i in range(n)]
+
+
+# In[ ]:
 
 
 for j in range(0, n - 1):

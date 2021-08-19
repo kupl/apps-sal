@@ -27,6 +27,7 @@ class Solution:
                     e_A, e_B = e_A + 1, e_B + 1
                 else:
                     steps += 1
+#        print(e_A, e_B, steps)
         for i in range(len(edges)):
             c, x, y = edges[i]
             if c == 2:
@@ -36,6 +37,7 @@ class Solution:
                     e_B += 1
                 else:
                     steps += 1
+#        print(e_A, e_B, steps)
         for i in range(len(edges)):
             c, x, y = edges[i]
             if c == 1:
@@ -46,9 +48,11 @@ class Solution:
                 else:
                     steps += 1
 
+        # extra codes to actually groups elements together
         for i in range(1, n + 1):
             find(i, A_ranks)
             find(i, B_ranks)
+#        print(e_A, e_B, steps)
         print(A_ranks, B_ranks)
 
         return steps if e_A == e_B == n - 1 else -1

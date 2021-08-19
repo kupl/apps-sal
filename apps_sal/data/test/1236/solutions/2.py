@@ -23,14 +23,14 @@ def main(n, k, a):
     S = "Stannis"
     if n == k:
         ans = [S, D][now % 2 == 0]
-    elif d % 2 == 0:
+    elif d % 2 == 0:  # Daenerys last
         if k % 2 == 0:
             ans = D
         elif even <= d // 2:
             ans = S
         else:
             ans = D
-    else:
+    else:  # Stannis last
         if k % 2 == 0:
             if odd <= d // 2 or even <= d // 2:
                 ans = D

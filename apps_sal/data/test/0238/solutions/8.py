@@ -39,13 +39,18 @@ def max_sum(a):
             r_sum -= k
         r_bests[(idx + 1) % m] = max(r_bests[(idx + 1) % m], r_sum)
 
+ #   print("Array:", a, "mid:", mid)
+#    print(l_bests)
+  #  print(r_bests)
     best_acr = 0
     for i in range(m):
         for j in range(m):
             best_acr = max(best_acr, l_bests[i] + r_bests[j] - (k if i + j > 0 else 0) - (k if i + j > m else 0))
     ans = max(l_rec, r_rec, best_acr)
+   # print("Answer:", ans)
     return ans
 
 
 ans = max_sum(a)
 stdout.write(str(ans) + "\n")
+# stdout.write(str(bf(a))+"\n")

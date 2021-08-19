@@ -4,6 +4,7 @@ def get_ic(msg):
     for c in msg:
         if c in msg.lower():
             frequency[c] = msg.count(c, 0, len(msg))
+    # print(frequency)
     return sum(map(lambda x: x * (x - 1), frequency.values())) / (len(msg) * (len(msg) - 1))
 
 
@@ -20,4 +21,6 @@ def get_key_length(cipher_text, max_key_length):
                 sum_ic += get_ic(cipher_text[offset::step])
             avg_ic = sum_ic / i
             ics[i] = avg_ic
+    # for ic in ics:
+    #    print(ic)
     return ics.index(max(ics))

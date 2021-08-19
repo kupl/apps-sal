@@ -21,6 +21,8 @@ else:
     jump = 1
     i = 0
     while i < n and ci < m:
+        # print(i)
+        # print(n - i)
         if ls[ci] < n - i:
             if jump < d:
                 jump += 1
@@ -31,6 +33,7 @@ else:
                     jump = 1
                 ci += 1
         else:
+            # print(list(range(i, i + cs[ci])))
             for i in range(i, i + cs[ci]):
                 ns[i] = ci + 1
                 jump = 1

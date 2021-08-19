@@ -12,10 +12,10 @@ for h in range(H):
                 if i < 0 or j < 0 or i >= H or j >= W:
                     continue
                 else:
-                    if S[h][w] == '
+                    if S[h][w] == '#':
                         T[h][w] = -1
-                    elif S[i][j] == '
+                    elif S[i][j] == '#':
                         T[h][w] += 1
 
 for t in T:
-    print((''.join(map(str, t))).replace('-1', '
+    print((''.join(map(str, t))).replace('-1', '#'))

@@ -9,5 +9,6 @@ class Solution:
             for j in range(min(i + 1, n - i - 1)):
                 if text[(i - j):(i + 1)] == text[(i + 1):(i + j + 2)]:
                     res.add(text[(i - j):(i + j + 2)])
+        # print(res)
 
         return len(res)

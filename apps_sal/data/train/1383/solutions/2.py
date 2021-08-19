@@ -1,4 +1,5 @@
 for _ in range(int(input())):
+    # = int(input())
     n, k1, k2 = list(map(int, input().strip().split()))
     p1, p2, p3, p4 = list(map(int, input().strip().split()))
     ans = [0] * (n + 1)

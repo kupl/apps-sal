@@ -1,3 +1,4 @@
+# coding: utf-8
 
 import itertools
 
@@ -17,8 +18,8 @@ def check(dirs, inst, maze, s):
             posx -= 1
         if posx < 0 or posx >= rx or posy < 0 or posy >= ry:
             return False
-        if maze[posy][posx] == "
-        return False
+        if maze[posy][posx] == "#":
+            return False
         if maze[posy][posx] == "E":
             return True
     return False

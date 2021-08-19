@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -13,7 +15,9 @@ cnt = 0
 midx = idx = n - 1
 v = res[-1][0]
 
+# print(res)
 while res:
+    # print(num,cnt,idx)
     ans[midx] += (v - res[-1][0]) * cnt
     v = res[-1][0]
 

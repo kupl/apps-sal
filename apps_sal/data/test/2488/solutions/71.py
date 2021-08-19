@@ -1,3 +1,5 @@
+# problems2
+# silver fox vs monster
 from collections import deque
 import math
 N, D, A = map(int, input().split())

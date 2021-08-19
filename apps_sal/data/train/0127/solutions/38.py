@@ -1,5 +1,6 @@
 class Solution:
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
+        # dp[k][i][j]: # if schemes to achive i profit with j people by assigning first k tasks
         mod = 10 ** 9 + 7
         K = len(group)
         dp = [[[0] * (G + 1) for _ in range(P + 1)] for _ in range(K + 1)]

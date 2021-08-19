@@ -14,8 +14,10 @@ for i in range(n):
         dic[a[i]] += b[i]
     else:
         dic[a[i]] = b[i]
+# print(dic)
 dic = list(dic.items())
 dic.sort()
+# print(dic)
 
 
 for i in range(10**9):
@@ -24,3 +26,4 @@ for i in range(10**9):
         break
     else:
         judge += int(dic[i][1])
+    # print(judge)

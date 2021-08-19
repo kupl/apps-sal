@@ -1,3 +1,5 @@
+#!/usr/bin/env	python
+# -*-coding:utf-8 -*-
 n = int(input())
 C = tuple(map(int, input().split()))
 A = tuple(input()for _ in range(n))

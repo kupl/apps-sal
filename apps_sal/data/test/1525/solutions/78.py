@@ -1,3 +1,4 @@
+# 実はDPと割り切るとわかりやすい
 mod = 10**9 + 7
 h, w, K = map(int, input().split())
 dp = [[0] * w for j in range(h + 1)]

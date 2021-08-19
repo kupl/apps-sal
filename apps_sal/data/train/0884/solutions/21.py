@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     x, r = map(int, input().split())
@@ -16,6 +17,7 @@ for _ in range(t):
     su = 0
     for i in range(len(l)):
         su += pow(l[i], r)
+    # print(su)
 
     su1 = 0
     for i in range(len(l1)):

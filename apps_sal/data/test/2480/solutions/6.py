@@ -10,6 +10,7 @@ for i in range(min(K, N + 1)):
     c = B[i]
     dic[c % K] += 1
 ans = 0
+# print(dic)
 for i in range(1, N + 1):
     x = B[i - 1]
     ldic[x % K] += 1
@@ -17,7 +18,7 @@ for i in range(1, N + 1):
     if K + i - 1 <= N:
         dic[B[K + i - 1] % K] += 1
     """
-  print('
+  print('###############')
   print(i,x, ans)
   print(dic)
   print(ldic)

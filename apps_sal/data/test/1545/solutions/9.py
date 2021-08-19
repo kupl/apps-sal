@@ -64,6 +64,7 @@ def solve():
 
     min_sp = get_minsp(msg, As)
 
+    # debug(dp, locals())
     print(dp[n])
     print(max_len)
     print(min_sp)

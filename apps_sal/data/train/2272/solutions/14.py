@@ -5,6 +5,8 @@ N = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
+# resort list X O(len(X))
+
 
 def sorting(X, l):
     eX = []

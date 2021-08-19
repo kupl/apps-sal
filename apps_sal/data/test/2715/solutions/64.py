@@ -1,3 +1,13 @@
+# def test(l):
+#    n = len(l)
+#    c = 0
+#    while max(l) >= n:
+#        l.sort()
+#        l[-1] -= n
+#        for i in range(n-1):
+#            l[i] += 1
+#        c += 1
+#    return c
 
 def main():
     K = int(input())
@@ -19,3 +29,4 @@ def main():
 
 
 l = main()
+#print('kotae', test(l))

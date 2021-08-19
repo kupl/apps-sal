@@ -1,6 +1,7 @@
 def tv_remote(words):
     kpad = ['abcde123fghij456klmno789pqrst.@0uvwxyz_/○ ☺☺☺☺☺',
-            'ABCDE123FGHIJ456KLMNO789PQRST.@0UVWXYZ_/○ ☺☺☺☺☺☺',             '^ ~?!\'"() -:; +&% *= < >€£$¥¤\\[]{}, . @§
+            'ABCDE123FGHIJ456KLMNO789PQRST.@0UVWXYZ_/○ ☺☺☺☺☺☺',
+            '^~?!\'"()-:;+&%*=<>€£$¥¤\\[]{},.@§#¿¡☺☺☺_/○ ☺☺☺☺☺☺']
     lenght, coord = [0 for _ in range(2)]
     lst = list(kpad[0])
     for i in words:

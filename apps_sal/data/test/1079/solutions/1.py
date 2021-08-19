@@ -6,6 +6,7 @@ n = len(a)
 ct = 1
 i = 0
 while(i < n - 1):
+    # print(i)
     if(a[i] == '0'):
         i += 1
         continue

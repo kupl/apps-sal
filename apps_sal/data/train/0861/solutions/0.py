@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 F = [1, 1]
 
@@ -9,6 +10,8 @@ def fibo():
 
 def main():
     fibo()
+    # print len(str(F[-1]))
+    # print len(str(10**100))
     while True:
         try:
             A, B = list(map(int, input().strip().split()[:2]))

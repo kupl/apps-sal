@@ -16,6 +16,7 @@ def doit(k):
         ts += p[i]
         if (i >= w - 1):
             ts -= p[i - w + 1]
+   # print(' '.join(map(str, [k, td])))
     if (td <= m):
         return 1
     else:

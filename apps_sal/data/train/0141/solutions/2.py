@@ -5,6 +5,7 @@ class Solution:
         j = len(people) - 1
         n = 0
         while True:
+            # TODO - Check for [5,5,5,5,5] with limit of 5
             if i >= j:
                 break
             n += 1

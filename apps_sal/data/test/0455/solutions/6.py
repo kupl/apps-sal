@@ -1,3 +1,4 @@
+# coding:utf-8
 
 import sys
 input = sys.stdin.readline
@@ -54,6 +55,7 @@ else:
     D = [2 ** i for i in range(len(bin(max_length)) - 1)]
     D.reverse()
 
+    # X + Yが偶数の時は長さ1の腕を足す
     if parity == 0:
         D.append(1)
     print((len(D)))

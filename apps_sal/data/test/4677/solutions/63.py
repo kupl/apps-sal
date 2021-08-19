@@ -1,3 +1,4 @@
+# cook your dish here
 s = str(input())
 a = ""
 for i in s:

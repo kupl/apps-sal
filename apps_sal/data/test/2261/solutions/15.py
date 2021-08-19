@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 
@@ -42,3 +43,5 @@ def strings(k):
 N = int(input())
 for s in strings(N):
     print(s)
+# for _ in range(100):
+#   strings(N)

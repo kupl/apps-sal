@@ -46,7 +46,10 @@ def bisect_left_callable(fn, x, lo, hi):
 
 
 def is_necessary(ai):
+    # A[ai] が必要かどうか
+    # A[ai] を使わずに K-A[ai] 以上 K 未満を作れるか
 
+    # dp[j]: j を作れる
     dp = np.zeros(K, dtype=bool)
     dp[0] = 1
     for i, a in enumerate(A):

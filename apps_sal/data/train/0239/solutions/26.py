@@ -2,7 +2,7 @@ class Solution:
     def largestValsFromLabels(self, values: List[int], labels: List[int], num_wanted: int, use_limit: int) -> int:
         val_label_tuple = [(-1 * val, lab) for val, lab in zip(values, labels)]
         import heapq
-        heapq.heapify(val_label_tuple)
+        heapq.heapify(val_label_tuple)  # maximum val is at the top
         counts = collections.defaultdict(int)
 
         ans = 0

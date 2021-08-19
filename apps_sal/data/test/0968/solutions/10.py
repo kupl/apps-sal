@@ -26,9 +26,12 @@ for _ in range(n):
     fn, ln = input().split()
     names.append((fn, ln))
 A = list(map(int, input().split()))
+# print(names)
+# print(A)
 names2 = []
 for i in A:
     names2.append(names[i - 1])
+# print(names2)
 prec = ""
 YES = True
 for i in range(n):

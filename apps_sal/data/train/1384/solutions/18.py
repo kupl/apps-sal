@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, k = map(int, input().split())
     l = list(input())
@@ -12,4 +13,6 @@ for _ in range(int(input())):
     ans = 0
     for i in range(n - k + 1):
         ans = max(ans, (l1[i] + l2[i + k - 1] + k))
+    # print(l1)
+    # print(l2)
     print(ans)

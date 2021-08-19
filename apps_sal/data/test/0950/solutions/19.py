@@ -19,7 +19,7 @@ def minLenB(s):
 
 def minLenC(s):
     for i in range(0, len(s)):
-        if s[i] in ["
+        if s[i] in ["#", "*", "&"]:
             return i
     return m + 1
 

@@ -1,6 +1,6 @@
 N, K = map(int, input().split())
 MOD = 10**9 + 7
-ls = [0] * (K + 1)
+ls = [0] * (K + 1)  # 個数
 for i in range(1, K + 1)[::-1]:
     ls[i] = pow(K // i, N, MOD)
     if K // i != 1:

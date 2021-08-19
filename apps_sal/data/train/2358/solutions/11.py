@@ -28,10 +28,11 @@ for i in range(N + 1):
         d = max(0, ((x1 - x2)**2 + (y1 - y2)**2)**0.5 - r1 - r2)
         edges[i].append((j, d))
         edges[j].append((i, d))
+# print(edges)
 
 INF = 10**10
 dist = [INF] * (N + 2)
-hq = [(0, 0)]
+hq = [(0, 0)]  # (distance, node)
 dist[0] = 0
 while hq:
     cost, node = heappop(hq)
@@ -42,4 +43,5 @@ while hq:
             dist[next] = dist[node] + cost
             heappush(hq, (dist[next], next))
 
+# print(dist)
 print(dist[1])

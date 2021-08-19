@@ -1,4 +1,9 @@
 
+#from sys import stdin,stdout
+# input=stdin.readline
+#import math,bisect
+#from itertools import permutations
+#from collections import Counter
 
 for _ in range(int(input())):
     n = int(input())

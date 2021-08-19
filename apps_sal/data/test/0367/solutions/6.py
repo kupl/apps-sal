@@ -2,9 +2,11 @@ def palindrome(s):
     chars = [0] * 26
     L = len(s)
     isOdd = (L % 2 != 0)
+    # populate chars
     for c in s:
         n = ord(c) - 97
         chars[n] += 1
+    # permutations
 
     left = 0
     right = 25
@@ -20,6 +22,7 @@ def palindrome(s):
                 chars[left] += 1
                 chars[right] -= 1
 
+    # build result
     result = [' '] * L
     index = 0
     oddC = ""

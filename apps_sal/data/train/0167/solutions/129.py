@@ -1,6 +1,7 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         '''
+        # Top down: Time O(KN log(N)) Space O(KN)
         import functools
         @functools.lru_cache(None)
         def dp(k, m):
@@ -16,6 +17,7 @@ class Solution:
                 l = mid + 1
         return l
         '''
+        # Bottom up: Time O(Klog(N)) Space O(K)
         dp, ndp = {}, {}
         for m in range(1, N + 1):
             for k in range(1, K + 1):

@@ -7,6 +7,7 @@ def main():
 
     DP_table = np.zeros(13).astype(np.int64)
 
+    # 初期化
     digit = S[0]
     if digit == '?':
         for i in range(10):
@@ -28,6 +29,7 @@ def main():
         for digit in range(10):
             transition_matrixes2[multiplier] += transition_matrixes[(multiplier, digit)]
 
+    # DP
     multiplier = 1
     for i in range(1, len(S)):
         multiplier = multiplier * 10 % 13

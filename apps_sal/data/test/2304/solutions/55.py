@@ -14,6 +14,7 @@ class WeightedUnionFind:
         self.n_nodes = n_nodes
         self.parents = [-1] * n_nodes
 
+        # 親への重みを管理
         self.weights = [0] * n_nodes
 
     def find(self, x):
@@ -25,6 +26,7 @@ class WeightedUnionFind:
             self.parents[x] = parent
             return parent
 
+    # xからyへの重みがw
     def unite(self, x, y, w):
         w += self.weights[x]
         w -= self.weights[y]

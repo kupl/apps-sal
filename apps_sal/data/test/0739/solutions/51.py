@@ -1,4 +1,7 @@
 def S1(r, T, M):
+    # 1+r+...+r^{T-1}
+    # (r^T-1)/(r-1)
+    # mod M(r-1)で計算する
     if r == 1:
         return T % M
     x = pow(r, T, M * (r - 1)) - 1
@@ -6,6 +9,7 @@ def S1(r, T, M):
 
 
 def S2(r, T, M):
+    # sum ir^i
     if r == 1:
         x = T * (T - 1) // 2
         return x % M
@@ -19,20 +23,21 @@ def S2(r, T, M):
 
 def S(A, B, L, M):
     result = 0
-    d = len(str(A))
+    d = len(str(A))  # 桁数
     start = A
     r = 10**d
     while True:
         n1 = ((r - 1) - A) // B + 1
-        items = min(n1, L)
+        items = min(n1, L)  # その桁の項数
         last = A + (items - 1) * B
         x = last * S1(r, items, M)
         x -= B * S2(r, items, M)
         result *= pow(r, items, M)
         result += x
         result %= M
+        # パラメータの更新
         r *= 10
-        d += 1
+        d += 1  # 不要かも
         L -= items
         A += B * items
         if L <= 0:

@@ -18,11 +18,13 @@ E.append((10**10, 10**10, 1))
 
 E.sort()
 
+# print(E)
 
 Q = []
 
 j = 0
 for i in range(q):
+    # print(F,j)
     while E[j][0] <= D[i]:
         if E[j][2] == 1:
             F[E[j][1]] += 1

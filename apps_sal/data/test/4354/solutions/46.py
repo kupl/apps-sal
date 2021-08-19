@@ -21,6 +21,7 @@ for i in range(N):
     for j in range(M):
         c, d = g[j]
         dist = abs(c - a) + abs(d - b)
+        # print(i, j, dist)
         if dist < tmp:
             i_ans = j
             tmp = dist

@@ -13,4 +13,5 @@ class Solution:
                                 break
                 if val == 1:
                     counter += 1
+            # print(counter)
             return counter

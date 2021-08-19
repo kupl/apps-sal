@@ -6,6 +6,7 @@ class Solution:
             for j in arr2:
                 if abs(i - j) <= d:
                     yes = 1
+                    # break
             if(yes == 1):
                 count += 1
         return len(arr1) - count

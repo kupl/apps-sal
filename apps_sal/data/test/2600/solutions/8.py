@@ -13,4 +13,6 @@ for __ in range(T):
         k2 = (n + m - 2) - k1
         x = min(D[k1][0] + D[k2][0], D[k1][1] + D[k2][1])
         ans += x
+        # print(k1, k2, x)
+    # print(D)
     print(ans)

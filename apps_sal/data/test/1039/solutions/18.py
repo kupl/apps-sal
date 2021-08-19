@@ -1,4 +1,5 @@
 N = int(input())
+# graph作成
 graph = [[] for _ in range(N)]
 for _ in range(N - 1):
     a, b, c = list(map(int, input().split()))
@@ -13,7 +14,7 @@ query = [tuple(int(x) for x in input().split()) for _ in range(Q)]
 seen = {K}
 v = [K]
 distfromK = [0] * N
-while len(v) != 0:
+while len(v) != 0:  # bfsでdistfromKを埋めていく
     for nv in graph[v[0]]:
         if nv[0] in seen:
             continue

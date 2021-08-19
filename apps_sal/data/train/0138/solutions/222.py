@@ -7,6 +7,6 @@ class Solution:
             elif x < 0:
                 pos, neg = 1 + neg if neg else 0, 1 + pos
             else:
-                pos = neg = 0
+                pos = neg = 0  # reset
             ans = max(ans, pos)
         return ans

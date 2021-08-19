@@ -13,7 +13,7 @@ def fill(field, y, x):
         for j in range(3):
             if i == 1 and j == 1:
                 continue
-            cur[y + i][x + j] = '
+            cur[y + i][x + j] = '#'
 
 
 n, m = list(map(int, input().split()))

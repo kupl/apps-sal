@@ -26,6 +26,7 @@ for i in range(n - 1):
     if(tempflag == 0):
         flag = 1
         break
+    # print(*arr1)
 if(flag == 0):
     temp = ''
     for i in range(n - 2, -1, -1):
@@ -82,3 +83,4 @@ else:
         else:
             s1 += 'S'
     print(s1)
+# print(*arr1)

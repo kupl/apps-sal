@@ -18,14 +18,19 @@ class Solution:
         '''
         res=0
         for i in range(minSize,maxSize+1):
+            #print(\"a\")
             r=[]
             for j in range(i,len(s)+1):
+                #print(s[j-minSize:j])
                 a=s[j-minSize:j]
                 
                 if len(set(list(a)))<=maxLetters:
+                #print(set(list(a)))
                     r.append(a)
+            #print(r)
             if len(r)!=0:
                 r1 = max(set(r), key = r.count) 
+            #print(r.count(r1))
                 r2=r.count(r1)
                 res=max(res,r2)
         return res

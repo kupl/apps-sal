@@ -7,6 +7,7 @@ class Solution:
         d = defaultdict(list)
         for i, e in enumerate(manager):
             d[e].append(i)
+        # print(d)
 
         '''
         q=[d[-1]]

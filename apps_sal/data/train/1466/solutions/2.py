@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 (n, q) = input().split()
 n = int(n)

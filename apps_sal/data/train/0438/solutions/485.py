@@ -20,6 +20,7 @@ class Solution:
                 left = x
                 right = x
                 idx = bisect_left(groups, [x, x])
+                #print(step, x, idx, groups)
 
                 if idx < gn:
                     if groups[idx][0] == x + 1:
@@ -42,4 +43,5 @@ class Solution:
 
             if m_cnt:
                 res = step
+            #print(x, groups)
         return res + 1

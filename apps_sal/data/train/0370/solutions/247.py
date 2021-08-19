@@ -26,8 +26,11 @@ class Solution:
         for e in A:
             for n in range(2, int(sqrt(e)) + 1):
                 if e % n == 0:
+                    # divisible by n
                     union(e, e // n)
                     union(e, n)
+
+        # print(parent)
 
         counts = defaultdict(int)
         for k in list(parent.keys()):

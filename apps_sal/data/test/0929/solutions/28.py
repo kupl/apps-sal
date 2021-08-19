@@ -3,6 +3,7 @@ grid = []
 for _ in range(H):
     line = list(map(int, input().split()))
     grid.append(line)
+# print(grid)
 q = []
 for i in range(H):
     if i % 2 == 0:
@@ -11,6 +12,7 @@ for i in range(H):
     else:
         for j in range(W - 1, -1, -1):
             q.append([i, j])
+# print(q)
 cnt = 0
 op_list = []
 for i in range(len(q) - 1):

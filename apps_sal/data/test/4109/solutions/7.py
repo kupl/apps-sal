@@ -6,6 +6,7 @@ ans = set()
 ans.add(INF)
 
 for n in range(2**N):
+    # Bit全探索
     Xls = [0 for i in range(M)]
     cost = 0
     for i in range(N):

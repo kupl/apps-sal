@@ -40,7 +40,7 @@ def main():
             return True
         return False
 
-    find_path_on_tree(U, V)
+    find_path_on_tree(U, V)  # to U from V
     path = [node for node in path if node != -1]
     dist = len(path) - 1
     partial_depth = depth(adj, path[(dist // 2) + 1], path[dist // 2])

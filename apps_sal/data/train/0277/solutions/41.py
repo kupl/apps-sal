@@ -1,4 +1,5 @@
 class Solution:
+    # 2:00
     '''
     - light yellow
     - if left is blue
@@ -36,6 +37,7 @@ class Solution:
                         nblue += 1
                         dx[j] = BLUE
 
+            # print(light[i], nyellow)
             if nyellow == 0:
                 ans += 1
         return ans

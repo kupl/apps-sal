@@ -1,5 +1,5 @@
 """
-Codeforces Round 
+Codeforces Round #361 (Div. 2)
 
 Problem 689 B. Mike and Shortcuts
 

@@ -10,6 +10,7 @@ if n != k:
 
     b = b[k:].copy()
 
+    # print(b)
     a = [''] * n
     for i in b:
         a[i[1]] = chr(i[0])

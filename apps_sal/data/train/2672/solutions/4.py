@@ -1,4 +1,5 @@
 def color_probability(color, texture):
+    # Your code goes here.
     if texture == 'bumpy':
         if color == 'red':
             prob = 4 / 7

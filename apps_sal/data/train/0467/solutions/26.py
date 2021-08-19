@@ -3,6 +3,7 @@ class Solution:
         memo = self.memo
         if x in memo:
             return memo[x]
+        #
         res = 2 if x > 1 else 1
         B = {1, x}
         for a in range(2, x):

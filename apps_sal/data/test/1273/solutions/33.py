@@ -33,6 +33,7 @@ done_ls[0] = 1
 
 while q:
     From, to, color_now = q.popleft()
+    # verはtoからの行先
     for ver in ver_ls[to]:
         if not done_ls[ver]:
             q.append([to, ver, next_color(color_now)])

@@ -1,5 +1,7 @@
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
+        # TODO
+        # every connected component must be bipartite
         if len(dislikes) == 0:
             return True
         graph = {}
@@ -10,6 +12,7 @@ class Solution:
             graph[d[1]].append(d[0])
         colors = {}
 
+        # DFS
         def dfs(node, c=0):
             if node in colors:
                 return colors[node] == c
@@ -22,6 +25,7 @@ class Solution:
 
         return all(dfs(i, 0) for i in range(1, N + 1) if i not in colors)
 
+        # BFS
         '''visited_set = set()
         for i in range(1, N+1):
             if i in visited_set:
@@ -30,6 +34,7 @@ class Solution:
             nodes = [i]
             visited_set.add(i)
             while True:
+                # at node i
                 new_nodes = []
                 for node in nodes:
                     neighbors = graph.get(node)

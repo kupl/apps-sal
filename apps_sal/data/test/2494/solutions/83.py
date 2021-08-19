@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 
@@ -26,7 +27,9 @@ def dijkstra(N: int, nodes: list, src: int) -> list:
     from heapq import heappush, heappop
 
     res = [INF] * N
+    # スタート位置(今回は開始コストが0じゃないので1*Nを含める)
     que = [1 * N + src]
+    # 今回の開始位置1のコストは1
     res[src] = 1 * N
 
     while len(que) != 0:

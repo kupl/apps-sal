@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:
         if root is None:
@@ -21,10 +27,13 @@ class Solution:
                     queue.append((node.left, row + 1, column - 1))
                     queue.append((node.right, row + 1, column + 1))
 
+        # step 1). BFS traversal
         BFS(root)
 
+        # step 2). extract the values from the columnTable
         ret = []
         for col in range(min_column, max_column + 1):
+            # sort first by 'row', then by 'value', in ascending order
             ret.append([val for row, val in sorted(columnTable[col])])
 
         return ret

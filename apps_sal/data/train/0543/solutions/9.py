@@ -10,6 +10,7 @@ for _ in range(int(input())):
 
     for truth_s in Ts:
         if truth_s in Tr:
+            # Tr.remove(truth_s)
             flag = 1
         else:
             flag = 0
@@ -17,6 +18,7 @@ for _ in range(int(input())):
     if flag:
         for dare_s in Ds:
             if dare_s in Dr:
+                # Dr.remove(dare_s)
                 flag = 1
             else:
                 flag = 0

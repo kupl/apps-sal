@@ -14,6 +14,7 @@ class Solution:
                 rmax_profits[ii] = rmax_profits[ii + 1]
             if prices[ii] > prices[rmax]:
                 rmax = ii
+        #print("rmax profit = {}".format(rmax_profits))
         lmin = 0
         lmax_profit = 0
         for ii in range(1, len(prices)):
@@ -25,6 +26,7 @@ class Solution:
             tprofit = lmax_profit
             if ii < len(prices) - 1:
                 tprofit += rmax_profits[ii + 1]
+            #print("ii = {}, rmax_profit = {}, lmax_profit = {}, tprofit = {}".format(ii, rmax_profits[ii], lmax_profit, tprofit))
             if tprofit > tmax_profit:
                 tmax_profit = tprofit
         return tmax_profit if tmax_profit > 0 else 0

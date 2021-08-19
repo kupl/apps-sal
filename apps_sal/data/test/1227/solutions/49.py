@@ -1,3 +1,6 @@
+# 桁DP練習
+# 「0以外の値をkより多く使ったか」でとくに枝切りしてない
+# ループでどうしてもかけない...
 
 from sys import setrecursionlimit
 

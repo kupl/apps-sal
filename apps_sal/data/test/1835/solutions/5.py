@@ -9,10 +9,12 @@ for test in range(Q):
     S = [input().strip() for i in range(n)]
 
     zero = 0
+    # ones=0
     lenflag = 0
 
     for s in S:
         zero += s.count("0")
+        # ones+=s.count("1")
 
         if len(s) % 2 == 1:
             lenflag = 1

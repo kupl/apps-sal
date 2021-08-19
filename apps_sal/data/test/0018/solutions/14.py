@@ -19,6 +19,12 @@ for x in s:
 
 
 while s or t:
+    # print('+'*10)
+    # print(s)
+    # print(t)
+    # print(u)
+    # print(s_cnt)
+    # print(t_cnt)
     if not s:
         while t:
             u.append(t.pop())

@@ -1,4 +1,5 @@
 def form(ax, ay, bx, by, cx, cy):
+    # (向き, 中心のx座標, 中心のy座標) のtupleを作る
     P = [(ax, ay), (bx, by), (cx, cy)]
     Q = [(0, 0)]
     for i in range(3):
@@ -23,6 +24,7 @@ def form(ax, ay, bx, by, cx, cy):
 
 
 def move(f, x, y):
+    # 遷移可能場所を返す
     if f == 11:
         return [(00, x + 1, y + 1), (10, x, y), (1, x, y), (10, x, y + 1), (00, x, y + 1), (1, x + 1, y), (00, x + 1, y)]
     elif f == 00:
@@ -46,6 +48,7 @@ def same_angle(f0, x0, y0, f1, x1, y1):
 
 
 def next_set(f, x, y):
+    # 3回の移動で移動できる場所を全列挙
     P = [(f, x, y)]
     res = [(f, x, y, 0)]
     for t in range(2):
@@ -70,6 +73,7 @@ def main():
                 tmp = max(abs(x0 - x1), abs(y0 - y1)) * 2 + (time0 + time1)
                 if res > tmp:
                     res = tmp
+                    # print(f0,x0,y0,time0,f1,x1,y1,time1)
     print(res)
 
 

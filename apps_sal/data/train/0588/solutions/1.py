@@ -1,3 +1,4 @@
+# cook your dish here
 from functools import reduce
 from math import gcd
 

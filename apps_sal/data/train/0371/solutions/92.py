@@ -29,7 +29,17 @@ class Solution:
         S = list(start_bus)[0]
         T = list(end_bus)[0]
 
+        # print(start_bus, end_bus, connections)
+
+        # connections = collections.defaultdict(set)
+        # for r in routes:
+        #     for i in range(len(r)):
+        #         for j in range(len(r)):
+        #             if i != j:
+        #                 connections[r[i]].add(r[j])
+
         first_hop = 1
+        # q = [(first_hop, S)]
 
         q = [(1, s) for s in start_bus]
 
@@ -37,6 +47,7 @@ class Solution:
 
         ans = float('inf')
         while q:
+            # print(q)
             W, C = heapq.heappop(q)
 
             if C in end_bus:

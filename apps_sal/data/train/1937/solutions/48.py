@@ -40,3 +40,10 @@ class ThroneInheritance:
         while (name := successor(order[-1])):
             pass
         return [o for o in order if o not in self.deaths]
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

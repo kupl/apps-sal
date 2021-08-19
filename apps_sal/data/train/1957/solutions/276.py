@@ -17,7 +17,7 @@ class Solution:
                 x, y = c + dx[i], r + dy[i]
                 if x < 0 or x >= len(grid[0]) or y < 0 or y >= len(grid):
                     continue
-                if p - grid[y][x] <= visited[y][x]:
+                if p - grid[y][x] <= visited[y][x]:  # have visited here on a better path.
                     continue
                 q.append((y, x, p - grid[y][x]))
                 visited[y][x] = p - grid[y][x]

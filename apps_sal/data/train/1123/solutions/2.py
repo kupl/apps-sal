@@ -44,6 +44,7 @@ for _ in range(t):
         a, b = map(int, sys.stdin.readline().strip().split())
 
         dfs(a)
+        # print(bool)
         if b in hash[a]:
             z = 'YO'
             sys.stdout.write(z)

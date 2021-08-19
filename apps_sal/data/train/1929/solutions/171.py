@@ -19,6 +19,7 @@ class Trie:
             else:
                 return False
         return False
+#
 
 
 class StreamChecker:
@@ -33,3 +34,7 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.buffer = letter + self.buffer
         return self.trie.search(self.buffer)
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

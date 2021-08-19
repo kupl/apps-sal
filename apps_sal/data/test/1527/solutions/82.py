@@ -14,15 +14,17 @@ def bfs(sy, sx):
     reached[sy][sx] = 0
     from collections import deque
     que = deque([[sy, sx]])
+    #d_max = 0
     while que:
         iy, ix = que.popleft()
         for d in direction:
             tx, ty = ix + d[0], iy + d[1]
             if tx >= W or ty >= H or tx < 0 or ty < 0:
                 continue
-            if reached[ty][tx] != -1 or maze[ty][tx] == '
-            continue
+            if reached[ty][tx] != -1 or maze[ty][tx] == '#':
+                continue
             reached[ty][tx] = reached[iy][ix] + 1
+            #d_max = max(reached[ty][tx], d_max)
             que.append([ty, tx])
     d_max = 0
     for i in range(H):
@@ -39,4 +41,12 @@ for i in range(H):
         if maze[i][j] == '.':
             ans = max(ans, bfs(i, j))
 
+# for i in range(H):
+#     for j in range(i, W):
+#         for k in range(H):
+#             for l in range(k, W):
+#                 if maze[i][j] == '#' or maze[k][l] == '#':
+#                     continue
+#                 else:
+#                     ans = max(ans, bfs(i, j, k, l))
 print(ans)

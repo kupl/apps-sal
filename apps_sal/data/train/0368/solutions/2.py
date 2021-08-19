@@ -12,6 +12,7 @@ class Solution:
             unit += x
             i += 1
         self.max = cur_sum
+        #print(split, cur_sum, unit)
         for i in range(split - 1, -1, -1):
             r, diff, psum = 1, 0, cur_sum
             for j in range(i, split):

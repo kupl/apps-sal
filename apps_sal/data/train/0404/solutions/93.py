@@ -7,6 +7,7 @@ class Solution:
         pre_sum = [0]
         for num in A:
             pre_sum.append(pre_sum[-1] + num)
+        # print(pre_sum)
         if K <= 1:
             return pre_sum[-1] / n
 
@@ -20,5 +21,6 @@ class Solution:
                 for j in range(k - 2, i):
 
                     dp[i][k] = max(dp[i][k], dp[j][k - 1] + (pre_sum[i + 1] - pre_sum[j + 1]) / (i - j))
+                    # print(k, i, j, dp[i][k])
         print(dp)
         return dp[n - 1][K]

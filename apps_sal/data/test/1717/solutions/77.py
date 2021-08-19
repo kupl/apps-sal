@@ -2,6 +2,7 @@ from math import gcd
 
 
 def resolve():
+    # ====input code===
     n = int(input())
     ans = 1
     for i in range(1, n + 1):
@@ -9,4 +10,5 @@ def resolve():
     print(ans + 1)
 
 
+# ================
 resolve()

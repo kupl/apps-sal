@@ -26,20 +26,26 @@ c = [False] * (k + 1)
 e = [10000] * 2
 f = [10000] * 2
 for i in range(k + 1):
+    # print(a)
     b[i] = (a == s)
     if b[i]:
         e[i % 2] = min(e[i % 2], i)
     for j in range(n):
         d[j] = a[q[j]]
     a, d = d, a
+# print('====')
 a = [i for i in range(1, n + 1)]
 for i in range(k + 1):
+    # print(a)
     c[i] = (a == s)
     if c[i]:
         f[i % 2] = min(f[i % 2], i)
     for j in range(n):
         d[q[j]] = a[j]
     a, d = d, a
+# print('====')
+# print(e)
+# print(f)
 if e[0] == 0:
     print('NO')
 elif e[1] == 1:

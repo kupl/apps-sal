@@ -1,3 +1,4 @@
+# cook your dish here
 def maxsubarraysum(arr):
     max_till = arr[0]
     max_cur = arr[0]

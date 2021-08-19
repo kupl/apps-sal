@@ -9,7 +9,7 @@ W = l[1]
 a = [input() for c in range(H)]
 
 
-print("
+print("#" * (W + 2))
 for i in range(H):
-    print("
-print("
+    print("#" + a[i] + "#")
+print("#" * (W + 2))

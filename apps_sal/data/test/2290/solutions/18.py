@@ -31,6 +31,7 @@ for j in range(m):
             sz[ro2] += sz[ro1]
             sz[ro1] = 0
             l[ro1] = ro2
+# print(l,sz,maxnode)
 end = 0
 j = 0
 while end < (max_):
@@ -38,14 +39,19 @@ while end < (max_):
         if maxnode[k] > k:
             kj = maxnode[k]
             jk = max(maxnode[k:maxnode[k]])
+            # print(jk,kj)
             while jk > kj:
                 h = jk
                 jk = max((maxnode[kj:jk]))
                 kj = h
+                # print(jk,kj)
             end = kj
             break
+    # print(end)
     for i in range(kj, k - 1, -1):
         if l[root(i)] != root(k):
             l[root(i)] = root(k)
             j += 1
+            # print(l[root(i)],(i),(k),j)
+        # print(l)
 print(j)

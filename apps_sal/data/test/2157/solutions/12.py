@@ -1,3 +1,4 @@
+# python3
 import sys
 import threading
 import os.path
@@ -17,6 +18,7 @@ def main():
         input = open('input.txt', 'r')
     else:
         input = sys.stdin
+    # --------------------------------INPUT---------------------------------
     n, q = list(map(int, input.readline().split()))
     lis = list(map(int, input.readline().split()))
     lis.sort()
@@ -32,6 +34,7 @@ def main():
     for i in range(n):
         sum += val[i + 1] * lis[i]
     output = sum
+    # -------------------------------OUTPUT----------------------------------
     if os.path.exists('output.txt'):
         open('output.txt', 'w').writelines(str(output))
     else:
@@ -40,6 +43,7 @@ def main():
 
 def __starting_point():
     main()
+# threading.Thread(target=main).start()
 
 
 __starting_point()

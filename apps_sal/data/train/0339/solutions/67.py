@@ -34,7 +34,7 @@ class Solution:
                 r = mid - 1
             elif nums[mid] < target:
                 l = mid + 1
-            else:
+            else:  # nums[mid]==target
                 l = self.leftSearch(nums[:mid + 1], target)
                 r = self.rightSearch(nums[mid:], target) + mid
                 return r - l + 1

@@ -4,9 +4,12 @@ from collections import defaultdict
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         '''
+        # Notes:
             return the city with the smallest number of cities that are reachable through some path
+        # Appraoch:
             Dijkstra
         '''
+        # build the graph
         graph = defaultdict(dict)
         for city1, city2, weight in edges:
             graph[city1][city2] = weight

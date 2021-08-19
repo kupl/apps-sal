@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     X1, X2, X3, V1, V2 = map(int, input().split())
     D1 = abs(X3 - X1)

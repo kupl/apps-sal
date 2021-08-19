@@ -1,6 +1,7 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
+    #a = list(map(int, input().split()))
     if 1 <= n <= 2 or n == 4:
         print(-1)
     elif n % 3 == 0:

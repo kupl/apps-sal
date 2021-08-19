@@ -40,6 +40,7 @@ for _ in range(t):
             bot = s2[j]
 
             if top == bot:
+                #upd(i+1, j+1, val + 1, tab)
                 if not dp[i + 1][j + 1][0] or val + 1 > dp[i + 1][j + 1][1]:
                     dp[i + 1][j + 1] = [True, val + 1, tab]
 
@@ -47,11 +48,13 @@ for _ in range(t):
                 sett = tab[:]
                 sett[num(top)] -= 1
 
+                #upd(i+1, j, val, sett)
                 if not dp[i + 1][j][0] or val > dp[i + 1][j][1]:
                     dp[i + 1][j] = [True, val, sett]
 
             sett = tab[:]
             sett[num(bot)] += 1
+            #upd(i, j + 1, val, sett)
             if not dp[i][j + 1][0] or val > dp[i][j + 1][1]:
                 dp[i][j + 1] = [True, val, sett]
 

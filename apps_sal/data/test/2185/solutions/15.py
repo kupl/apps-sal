@@ -1,3 +1,4 @@
+# @author
 
 import sys
 
@@ -26,6 +27,7 @@ class ASinglePush:
                 print("YES")
             else:
                 assert(l != -1 and r != -1)
+                # print(u[l:r + 1], l, r)
                 print("YES" if u[l] > 0 and u[l:r + 1] == [u[l]] * (r - l + 1) else "NO")
 
 

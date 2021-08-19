@@ -20,5 +20,6 @@ for i in range(k - 1):
     for i in sn:
         res *= int(i)
     ans = max(res, ans)
+    # print(n)
 
 print(ans)

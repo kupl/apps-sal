@@ -9,7 +9,7 @@ def facs(n):
 
 
 def main():
-    input()
+    input()  # N
     array = [int(x) for x in input().split()]
     MAX_A = 10 ** 6 + 1
     histogram = [0] * MAX_A

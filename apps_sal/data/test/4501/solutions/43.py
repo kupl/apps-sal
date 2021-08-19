@@ -1,7 +1,7 @@
 N, A = map(int, input().split())
 X = [int(x) for x in input().split()]
 
-dp = [[0] * (N * A + 1) for _ in range(N + 1)]
+dp = [[0] * (N * A + 1) for _ in range(N + 1)]  # dp[i][j]:i枚の和がjとなるようなカードの選び方
 dp[0][0] = 1
 for x in X:
     for i in reversed(range(1, N + 1)):

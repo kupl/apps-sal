@@ -1,5 +1,6 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
+        # if len(set(s)) == 1: return 1
         return self.dfs(s, 0, 1, set())
 
     def dfs(self, s, start, end, dic):

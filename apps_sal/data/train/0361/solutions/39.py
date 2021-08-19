@@ -1,5 +1,6 @@
 class Solution:
     '''def tilingRectangle(self, m, n):
+        # greedy approach doesnt work mofo
         if m == n:
             return 1
         return self.tilingRectangle(max(m, n) - min(m, n), min(m, n)) + 1'''

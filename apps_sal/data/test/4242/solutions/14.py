@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc120/tasks/abc120_b
 
 a, b, k = map(int, input().split())
 

@@ -8,6 +8,7 @@ def modulate(k):
     Vasya = 0
     Petya = 0
     while e > 0:
+        # print(e)
         if e <= k:
             Vasya += e
             break
@@ -17,6 +18,9 @@ def modulate(k):
         if e >= 10:
             Petya += diff // 10
             e -= diff // 10
+        #print(e, ' left')
+    #print(Vasya, 'ate Vasya overall')
+    #print(Petya, 'ate Petya overall')
     if Vasya >= Petya:
         return True
     else:

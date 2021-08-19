@@ -8,7 +8,7 @@ class StreamChecker:
                 if ch not in curnode:
                     curnode[ch] = {}
                 curnode = curnode[ch]
-            curnode['
+            curnode['#'] = 1
         self.pre = ''
 
     def query(self, letter: str) -> bool:
@@ -18,6 +18,11 @@ class StreamChecker:
             if self.pre[-i - 1] not in curnode:
                 break
             curnode = curnode[self.pre[-i - 1]]
-            if '
+            if '#' in curnode:
                 return True
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

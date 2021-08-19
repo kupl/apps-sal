@@ -7,8 +7,10 @@ def NoW(xs):
         acum = xs[0]
         for i, x in enumerate(xs[1:]):
             if acum == 2 * part:
+                # print("2. x=",x)
                 ret += ci
             if acum == part:
+                # print("1. x=",x)
                 ci += 1
             acum += x
 

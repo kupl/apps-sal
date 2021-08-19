@@ -1,6 +1,8 @@
 import sys
 
 input = sys.stdin.readline
+# fin = open('input.txt', 'r')
+# input = fin.readline
 
 
 def solve():

@@ -22,6 +22,7 @@ class Solution:
             break
 
         result = 2 * n
+        # print(zeros)
         q = collections.deque(zeros)
         zeros = set()
         steps = 1

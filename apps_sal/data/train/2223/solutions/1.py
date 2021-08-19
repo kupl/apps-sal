@@ -12,6 +12,7 @@ while True:
     except:
         break
 
+# print(messages)
 
 length = len(messages)
 
@@ -20,6 +21,7 @@ pref = [0]
 for i in range(1, 13):
     pref.append(pref[i - 1] + months[i])
 
+# print(pref)
 
 got = False
 now = 0

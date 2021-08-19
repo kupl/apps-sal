@@ -22,5 +22,6 @@ for i in range(n):
             right = mid
         else:
             left = mid
+    # print(i,right)
     ans += n - right
 print(ans)

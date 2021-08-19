@@ -4,6 +4,9 @@ import copy
 import io
 import sys
 
+# def pow(a, b):
+#    res = 1;
+#    for ()
 
 n = int(input())
 a = list(map(int, input().split()))

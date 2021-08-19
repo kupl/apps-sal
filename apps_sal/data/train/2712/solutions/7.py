@@ -50,4 +50,5 @@ def loneliest(number):
         else:
             others.append(s)
 
+    #print(num, ones, others)
     return any(list(check(ones, others)))

@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     flag = 0
@@ -10,10 +11,12 @@ for _ in range(t):
             inp[j] = int(sint[j])
         A[i] = inp
 
+    # print("A=",A)
     B = [[-1 for j in range(m)]for i in range(n)]
 
     row = [0] * n
     column = [0] * m
+    # print("B=",B)
     for i in range(n):
         for j in range(m):
             if(A[i][j] == 1):

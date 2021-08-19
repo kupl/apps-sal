@@ -5,3 +5,4 @@ def paperwork(n, m):
         return 0
     else:
         return r
+    # Happy Coding! ^_^

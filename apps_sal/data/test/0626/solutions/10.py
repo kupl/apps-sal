@@ -13,6 +13,9 @@ def sqr(x):
 def inputarray(func=int):
     return list(map(func, input().split()))
 
+# --------------------------------------
+# --------------------------------------
+
 
 N = int(input())
 A = list(inputarray())

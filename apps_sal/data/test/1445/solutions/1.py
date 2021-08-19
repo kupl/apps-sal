@@ -12,5 +12,6 @@ for i in range(0, (n + 1) // 2):
     else:
         b[i] = a[n - i - 1]
         b[n - i - 1] = a[i]
+    # print(b)
 
 print(" ".join(str(i) for i in b))

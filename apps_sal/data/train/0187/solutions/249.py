@@ -11,11 +11,14 @@ class Solution:
             if(numRotate < len(customers)):
                 waitingCustomer += customers[numRotate]
 
+            # number of customer onboard this round
             numOnboard = min(4, waitingCustomer)
             waitingCustomer -= numOnboard
 
+            # calculate income
             totalIncome += numOnboard * boardingCost - runningCost
 
+            # rotate the wheel
             numRotate += 1
 
             if(totalIncome > maxIncome):

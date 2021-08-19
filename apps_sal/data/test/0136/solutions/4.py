@@ -1,5 +1,6 @@
 import sys
 
+# fin = open("ecr5a.in", "r")
 fin = sys.stdin
 
 a, b = fin.readline().rstrip().lstrip('0'), fin.readline().rstrip().lstrip('0')

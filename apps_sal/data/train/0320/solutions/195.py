@@ -14,5 +14,6 @@ class Solution:
             if count_odd == 0:
                 nums = [n // 2 for n in nums]
                 ans += 1
+            # print(nums)
 
         return ans

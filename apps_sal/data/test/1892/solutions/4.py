@@ -1,3 +1,4 @@
+# standard library# {{{
 import sys
 import time
 import re
@@ -24,8 +25,10 @@ def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
 def F(): return float(sys.stdin.readline())
 def S(): return input()
+# }}}
 
 
+# input
 N = int(input())
 
 
@@ -40,6 +43,7 @@ def solve():
     for i, a in enumerate(A):
         if i == 0:
             continue
+        # print(i, pre_a, a)
         if pre_a == 'f':
             for j in reversed(list(range(i + 1))):
                 dp[i][j] = dp[i - 1][j - 1]
@@ -51,6 +55,7 @@ def solve():
                 dp[i][j] = s
 
         pre_a = a
+        # print(np.array(dp))
 
     res = 0
     for v in dp[N - 1]:

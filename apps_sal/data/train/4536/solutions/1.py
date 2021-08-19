@@ -1,4 +1,5 @@
 def capitals_first(string):
+    # biggies first...
     words = string.split()
     st1 = []
     st2 = []

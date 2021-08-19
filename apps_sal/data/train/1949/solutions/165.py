@@ -24,5 +24,6 @@ class Solution:
             for col in range(len(grid[0])):
                 if grid[row][col] != 0:
                     mah_max = max(mah_max, goDfsGo(row, col, bool_list))
+                    # print(mah_max)
 
         return mah_max

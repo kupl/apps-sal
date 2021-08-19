@@ -3,6 +3,7 @@ A = sorted(list(map(int, input().split())), reverse=True)
 L = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 
 inf = float('inf')
+# dp[i]=i本で最大何桁作れるか
 dp = [-inf] * (n + 1)
 dp[0] = 0
 for i in range(1, n + 1):

@@ -3,6 +3,7 @@ while t > 0:
     n = int(input())
     s = input()
     words = s.split()
+#    print words
     substrings = []
     for i in words:
         tmp = []
@@ -10,6 +11,7 @@ while t > 0:
             for k in range(j + 1, len(i) + 1):
                 tmp.append(i[j:k])
         substrings.append(tmp)
+#    print substrings[0]
     stem = ""
     for i in substrings[0]:
         flag = True

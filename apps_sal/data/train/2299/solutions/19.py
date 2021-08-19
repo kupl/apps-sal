@@ -13,10 +13,13 @@ class SparseTable():
         n = len(array)
         self.row_size = n.bit_length()
 
+        # log_tableを構築する
+        # log_table = [0, 0, 1, 1, 2, 2, 2, 2, ...]
         self.log_table = [0] * (n + 1)
         for i in range(2, n + 1):
             self.log_table[i] = self.log_table[i // 2] + 1
 
+        # sparse_tableを構築する
         self.sparse_table = [[0] * n for _ in range(self.row_size)]
         for i in range(n):
             self.sparse_table[0][i] = array[i]
@@ -60,12 +63,14 @@ def solve(l, r):
     while q:
         pos = q.pop()
         l, r = pos // div, pos % div
+        # min1 = min(q[l%2][l//2:r//2])
         if l % 2 == 0:
             min1 = sp0.query(l // 2, r // 2)
         else:
             min1 = sp1.query(l // 2, r // 2)
         use_pos1 = ind[min1]
 
+        # min2 = min(q[(l+1)%2][(use_pos1+1)//2:(r+1)//2])
         if (l + 1) % 2 == 0:
             min2 = sp0.query((use_pos1 + 1) // 2, (r + 1) // 2)
         else:

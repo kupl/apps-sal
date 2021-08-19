@@ -38,6 +38,9 @@ class Solution:
             numOfNodes[v] = num
 
         canRemove = set([group[0] for group in groups if len(group) == 1])
+        # print(groups)
+        # print(numOfNodes)
+        # print(canRemove)
 
         if len(canRemove) == 0:
             return min(initial)

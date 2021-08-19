@@ -4,7 +4,8 @@ class Solution:
         if n == k:
             return 0
 
-        def cost(s):
+        # @lru_cache(None)
+        def cost(s):  # calculate the cost of transferring one substring into palindrome string
             r = 0
             i, j = 0, len(s) - 1
             while i < j:

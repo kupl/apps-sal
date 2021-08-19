@@ -66,3 +66,5 @@ while True:
 
 print(len(a))
 print(" ".join(map(str, a)))
+
+#print(time() - start)

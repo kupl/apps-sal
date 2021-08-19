@@ -1,4 +1,5 @@
 def past(h, m, s):
+    # Good Luck!
     h = h * 3600
     m = m * 60
     s = s * 1

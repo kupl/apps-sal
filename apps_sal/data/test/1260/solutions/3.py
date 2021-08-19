@@ -29,6 +29,7 @@ if k0 == n - 1 and kotr == 0:
             if a[i] == 0 and a[j] == 0:
                 print(1, i + 1, j + 1)
                 index0 = j
+#                a[i]=1
                 break
     print(2, index0 + 1)
     raise SystemExit()
@@ -53,6 +54,9 @@ if kotr % 2 == 0:
     if index0 != -1:
         print(2, index0 + 1)
     raise SystemExit
+
+# кол-во отрицательных нечетно
+# перемножаем все нули с минимальным нечетным и удаляем
 
 
 for i in range(n - 1):

@@ -15,6 +15,7 @@ class Solution:
                     res += cur_cost - max_cost
                     cur_cost = 0
                     max_cost = float('-inf')
+            # print(i, c, last, cur_cost, max_cost)
             last = c
         if cur_cost > 0:
             res += cur_cost - max_cost

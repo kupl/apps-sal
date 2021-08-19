@@ -8,7 +8,7 @@ def mutations(alice, bob, matchWord, first):
     firstRound = -1
     i = 0
 
-    if matchWord in aliceWords:
+    if matchWord in aliceWords:  # removes the word from both Alice's and Bob's memory, as they are not allowed to be used again
         del aliceWords[aliceWords.index(matchWord)]
     if matchWord in bobWords:
         del bobWords[bobWords.index(matchWord)]

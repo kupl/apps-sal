@@ -4,6 +4,8 @@ auci = list(map(int, input().split()))
 
 scores = 0
 
+# m auc
+# n - m default
 
 for i in range(len(prices)):
     if (i + 1) not in auci:
@@ -24,3 +26,4 @@ for i in ra:
         scores *= 2
 
 print(scores)
+# print(ra)

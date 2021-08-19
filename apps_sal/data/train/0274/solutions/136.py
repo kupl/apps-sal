@@ -18,4 +18,5 @@ class Solution:
                     mind.pop(0)
                 left += 1
             sol = max(sol, i - left + 1)
+            # print(maxd,mind,sol,left)
         return sol

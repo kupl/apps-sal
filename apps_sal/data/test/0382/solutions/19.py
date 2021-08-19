@@ -1,6 +1,6 @@
 N, M, Q = [int(x) for x in input().split()]
-S = input()
-T = input()
+S = input()  # length N
+T = input()  # length M
 A = []
 pref = []
 for i in range(N):

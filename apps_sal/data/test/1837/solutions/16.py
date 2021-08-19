@@ -19,12 +19,22 @@ if total == N:
     isSorted = True
 else:
     num.sort()
+# for i in range(N):
+# 		j=num[i][1]
+# 		if j==new[j] and i!=j:
+# 				flagDouble=True
+# 				break
 
 for i in range(N):
     j = num[i][1]
     if i == new[j] and j == new[i] and i != j:
         flagDouble = True
 
+# print(total)
+# print(num)
+# print(new)
+# print(isSorted)
+# print(flagDouble)
 if flagDouble:
     print(total + 2)
 elif not isSorted:

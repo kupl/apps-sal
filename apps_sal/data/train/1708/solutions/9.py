@@ -5,6 +5,7 @@ class MemoryManager:
         @param {memory} An array to use as the backing memory.
         """
 
+        # Key: starting index of block; Value: length of block.
         self.cache = {}
         self.memory = memory
 
@@ -34,12 +35,21 @@ class MemoryManager:
             index = list(self.cache.keys()).index(start)
             next_block = list(self.cache.items())[index + 1] if index + 1 < len(self.cache.items()) else None
             if index == 0 and (size - 1) < start:
+                # This is the first block and there is enough space
+                # between the start of the overall memory and the start
+                # of the first block.
                 self.cache[0] = size - 1
                 return 0
             elif next_block and next_block[0] - (start + length + 1) >= size:
+                # There is a next block, the difference between the
+                # start of the next block and the end of the current block
+                # is large enough to fit the requested block size.
                 self.cache[start + length + 1] = size - 1
                 return start + length + 1
             elif next_block is None and len(self.memory) - (start + length + 1) >= size:
+                # This is the last block and there is enough space
+                # between the end of overall memory and the end
+                # of the last block.
                 self.cache[start + length + 1] = size - 1
                 return start + length + 1
 

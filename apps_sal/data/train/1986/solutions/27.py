@@ -8,4 +8,5 @@ class Solution:
             start_mask >>= 1
             start ^= start_mask
         out = [x ^ (x >> 1) for x in chain(range(start, 2 ** n), range(start))]
+        # print(out)
         return out

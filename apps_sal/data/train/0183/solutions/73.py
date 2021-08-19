@@ -10,4 +10,5 @@ class Solution:
                 else:
                     dp[i][j] = max(dp[i - 1][j - 1] + t, max(dp[i - 1][j], dp[i][j - 1]))
                     dp[i][j] = max(t, dp[i][j])
+        # print(dp)
         return dp[-1][-1]

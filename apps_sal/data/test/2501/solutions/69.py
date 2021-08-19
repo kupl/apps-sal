@@ -3,6 +3,8 @@ import collections
 N = int(input())
 A = list(map(int, input().split()))
 
+# ap+aq == p-q (p>q)
+# p-ap = q+aq
 
 mp = {}
 ans = 0

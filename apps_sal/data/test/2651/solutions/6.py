@@ -1,3 +1,4 @@
+# 解説AC
 N, M = map(int, input().split())
 X = [int(i) for i in input().split()]
 Y = [int(i) for i in input().split()]

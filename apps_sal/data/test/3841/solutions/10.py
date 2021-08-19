@@ -34,6 +34,7 @@ while i >= 0:
         ans = str(j) + " " + ans
     else:
         r = r - 1
+#	print(p)
     i = i - 1
     pow = pow // k
 print(r + 1)

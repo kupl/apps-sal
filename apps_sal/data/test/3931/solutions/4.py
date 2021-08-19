@@ -3,6 +3,7 @@ import sys
 
 num_trips, a, b, k, f = sys.stdin.readline().strip().split(" ")
 a, b, k, f = int(a), int(b), int(k), int(f)
+#print(a, b, k, f)
 trips = []
 for line in sys.stdin:
     trips.append(line.strip().split(" "))
@@ -36,6 +37,7 @@ for i in range(0, len(trips)):
 heap = [(-1 * my_dict[x], x) for x in my_dict]
 heapq.heapify(heap)
 
+# print(heap)
 total = sum(int(my_dict[x]) for x in my_dict)
 for i in range(0, k):
     if(len(heap) > 0):

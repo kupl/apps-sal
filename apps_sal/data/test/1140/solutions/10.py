@@ -7,6 +7,8 @@ for line in fileinput.input():
 N = len(inp)
 
 
+# case 1, all inputs are the same
+
 if len(set(inp)) == 1:
     print(0, (N * (N - 1)) // 2)
 else:

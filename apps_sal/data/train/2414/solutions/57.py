@@ -10,3 +10,5 @@ class Solution:
                     if abs(arr[i] - arr[j]) <= a and abs(arr[j] - arr[k]) <= b and abs(arr[i] - arr[k]) <= c:
                         res += 1
         return res
+
+    # [ 1  1  4 ]

@@ -40,8 +40,8 @@ class Solution:
 
 
 def shift(ch, offset):
-    zval = 122
-    aval = 97
+    zval = 122  # ord('Z') if ch.isupper() else ord('z')
+    aval = 97  # ord('A') if ch.isupper() else ord('a')
     offset = offset % 26
     och = ord(ch)
     nch = och + offset

@@ -1,6 +1,7 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         uf = {}
+        # rank
 
         def find(x):
             uf.setdefault(x, x)
@@ -28,7 +29,9 @@ class Solution:
                 ans.add(x)
             return ans
 
+        # dic = {}
         for a in A:
             for k in primeFactor(a):
+                # dic.setdefault(k, a)
                 union(a, k)
         return max(Counter([find(a) for a in A]).values())

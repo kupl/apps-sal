@@ -1,3 +1,4 @@
+# cook your dish here
 r, c = map(int, input().split())
 k = []
 for _ in range(r):

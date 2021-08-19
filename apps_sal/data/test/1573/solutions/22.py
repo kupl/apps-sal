@@ -18,6 +18,7 @@ for i in ms:
 ssums = [0]
 for i in s:
     ssums.append(ssums[-1] + i)
+# ssums.append(ssums[-1])
 maxsSum = 0
 iOverMaxEl = 1
 for iMinEl in range(len(m)):
@@ -26,6 +27,7 @@ for iMinEl in range(len(m)):
     while iOverMaxEl < len(s) and m[iOverMaxEl] - m[iMinEl] < d:
         iOverMaxEl += 1
     sSum = ssums[iOverMaxEl] - ssums[iMinEl]
+    # sSum = sum(s[iMinEl: iOverMaxEl])
     if sSum > maxsSum:
         maxsSum = sSum
 

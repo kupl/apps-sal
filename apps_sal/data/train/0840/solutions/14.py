@@ -10,6 +10,7 @@ for _ in range(int(input())):
             print(" ", end="")
         print("*")
         k = k + 1
+    # print("*")
     k = k - 2
     for i in range(n // 2):
         for i in range(k):

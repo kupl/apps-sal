@@ -1,6 +1,7 @@
 for test_ in range(int(input())):
     n = int(input())
     op = [[0 for i in range(n)] for i in range(n)]
+    #num = list(range(1,n*n+1))
     i = 0
     j = 0
     num = 1

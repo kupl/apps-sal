@@ -3,7 +3,7 @@ import collections
 
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        def chain(w1, w2):
+        def chain(w1, w2):                         # check if w1 is a chain to w2
             m, n = len(w1), len(w2)
             if abs(m - n) != 1:
                 return False
@@ -24,7 +24,7 @@ class Solution:
         dp = [1] * n
         ans = 1
         for i in range(n):
-            for j in range(i):
+            for j in range(i):                     # visited all previous words[j] to check if dp[i] can reach a longer chain
                 if chain(words[i], words[j]):
                     dp[i] = max(dp[i], dp[j] + 1)
             ans = max(ans, dp[i])

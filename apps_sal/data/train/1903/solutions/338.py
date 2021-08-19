@@ -19,6 +19,7 @@ class Solution:
                 d = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 dist.append((d, i, j))
         dist.sort()
+        # print(dist)
         edge = 0
         res = 0
         parent = list(range(len(points)))

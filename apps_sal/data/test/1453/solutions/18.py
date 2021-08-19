@@ -14,5 +14,7 @@ for i, a in enumerate(A):
 P = [D[0]]
 for i in range(1, n):
     P.append(P[-1] + D[i])
+# print(D)
+# print(P)
 
 print(' '.join([str(pi) for pi in P]))

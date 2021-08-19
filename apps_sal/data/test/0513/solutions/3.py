@@ -1,3 +1,5 @@
+#input = open('input.txt', 'r')
+#output = open('output.txt', 'w')
 
 xx = set()
 yy = set()
@@ -25,3 +27,6 @@ if ok == 1:
     print('respectable')
 else:
     print('ugly')
+
+# input.close()
+# output.close()

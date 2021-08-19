@@ -14,6 +14,7 @@ class Solution:
 
         '''
         pairs = [(c,-i-1) for i,c in enumerate(cost)]
+        #pairs.sort()
         out = 0
         def dfs(target, painted) -> bool:
             nonlocal out

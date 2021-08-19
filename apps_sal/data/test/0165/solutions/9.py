@@ -1,4 +1,5 @@
 b, d, s = map(int, input().split())
+# b, d, s = 3, 2, 1
 
 
 def mins(a, b, c):

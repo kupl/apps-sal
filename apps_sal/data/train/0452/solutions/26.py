@@ -45,4 +45,6 @@ class Solution:
         memo = {}
 
         ans = dp(0, d)
+        # print(max_d)
+        # print(memo)
         return ans if ans != float('inf') else -1

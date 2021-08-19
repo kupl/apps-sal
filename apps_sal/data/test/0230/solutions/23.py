@@ -6,11 +6,13 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
+# 二分探索
 N = ir()
 S = sr()
 
 
 def check(x):
+    # x文字右側にずらした場所を調べる
     candidate = set()
     for i in range(N - 2 * x + 1):
         candidate.add(S[i:i + x])

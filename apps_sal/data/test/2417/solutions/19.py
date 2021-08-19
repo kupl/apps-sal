@@ -5,6 +5,9 @@ from itertools import permutations, combinations
 import sys
 import bisect
 import string
+#import math
+#import time
+# import random  # randome is not available at Codeforces
 
 
 def I():
@@ -35,12 +38,15 @@ def show(*inp, end='\n'):
 YN = ['Yes', 'No']
 mo = 10**9 + 7
 inf = float('inf')
+# ts=time.time()
+# sys.setrecursionlimit(10**6)
 def input(): return sys.stdin.readline().rstrip()
 
 
 sys.setrecursionlimit(10**7)
 
 show_flg = False
+# show_flg=True
 
 
 n = I()

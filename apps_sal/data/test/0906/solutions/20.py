@@ -10,7 +10,7 @@ import math
 import itertools
 
 try:
-    import dev_act_ffc429465ab634
+    import dev_act_ffc429465ab634  # empty file in directory
     DEV = True
 except:
     DEV = False
@@ -75,6 +75,7 @@ class IntReader:
         return res
 
 
+###############################################################################
 ej = EJudge('')
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
@@ -106,6 +107,7 @@ def calc(h, w, k):
     a = [[0] * w for i in range(h)]
     ans = 0
     for mask in range(2**(h * w)):
+        # print(bin(mask)[2:])
         cur_mask = mask
         for pos in range(h * w):
             a[pos // w][pos % w] = 1 if (cur_mask & 1 == 1) else -1
@@ -117,6 +119,7 @@ def calc(h, w, k):
                 colsum[j] *= a[i][j]
         if aeq(rowsum, k) and aeq(colsum, k):
             ans += 1
+            #print(rowsum, colsum)
 
     print('calced for ', h, w, k, '=', ans)
     return ans
@@ -132,3 +135,4 @@ for h in range(2, 3):
 
 h, w, k = parse_int()
 print(calcfast(h, w, k) % 1000000007)
+# '''

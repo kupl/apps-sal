@@ -19,6 +19,7 @@ for i in brackets:
             lastAlternatedBracket.append(i)
             lastAlternatedLevel.append(level)
         if i == 1 and level < lowestRoundedHeight:
+            # print("Setting Rounded", level)
             lowestRoundedHeight = level
             betweenRounded += 1
         elif i == 3 and level < lowestSquareHeight:
@@ -32,6 +33,7 @@ for i in brackets:
             lastAlternatedBracket.pop()
 
         if i == 2 and level == lowestRoundedHeight:
+            # print("here1", betweenRounded)
             if betweenRounded > roundedSymbols:
                 roundedSymbols = betweenRounded
             lowestRoundedHeight = float("inf")

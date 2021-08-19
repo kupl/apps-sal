@@ -1,3 +1,17 @@
+#	!/usr/bin/env python3
+#	coding: UTF-8
+#	Modified: <11/Jan/2019 09:31:41 PM>
+
+
+#	✪ H4WK3yE乡
+#	Mohd. Farhan Tahir
+#	Indian Institute Of Information Technology (IIIT),Gwalior
+
+#	Question Link
+#
+#
+
+# ///==========Libraries, Constants and Functions=============///
 
 
 import sys
@@ -13,6 +27,8 @@ def get_ints(): return list(map(int, sys.stdin.readline().split()))
 
 
 def input(): return sys.stdin.readline()
+
+# ///==========MAIN=============///
 
 
 def main():

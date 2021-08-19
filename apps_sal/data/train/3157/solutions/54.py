@@ -1,3 +1,4 @@
+# Made with ❤️ in Python 3 by Alvison Hunter - October 8th, 2020
 def number(bus_stops):
     try:
         last_passengers = 0

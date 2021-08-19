@@ -9,7 +9,7 @@ class StreamChecker:
                 if c not in curr:
                     curr[c] = {}
                 curr = curr[c]
-            curr['
+            curr['#'] = {'#'}
 
     def query(self, letter: str) -> bool:
         newWaitList = []
@@ -20,6 +20,11 @@ class StreamChecker:
                 newWaitList.append(ele[letter])
         self.waitList = newWaitList
         for ele in self.waitList:
-            if '
+            if '#' in ele:
                 return True
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

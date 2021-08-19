@@ -1,12 +1,20 @@
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
+        # sort
+        #         s_p = sorted(points, key = lambda p:p[0]**2 + p[1]**2)
 
+        #         return s_p[:K]
+
+        # Divide and Conquer
         def dist(i): return points[i][0]**2 + points[i][1]**2
 
         def sort(i, j, K):
+            # Partially sorts A[i:j+1] so the first K elements are
+            # the smallest K elements.
             if i >= j:
                 return
 
+            # Put random element as A[i] - this is the pivot
             k = random.randint(i, j)
             points[i], points[k] = points[k], points[i]
 
@@ -17,6 +25,8 @@ class Solution:
                 sort(mid + 1, j, K - (mid - i + 1))
 
         def partition(i, j):
+            # Partition by pivot A[i], returning an index mid
+            # such that A[i] <= A[mid] <= A[j] for i < mid < j.
             oi = i
             pivot = dist(i)
             i += 1

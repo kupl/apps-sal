@@ -14,3 +14,16 @@ class Solution:
                 if i - nums[j] >= 0:
                     comb[i] += comb[i - nums[j]]
         return comb[target]
+
+#         self.helper(nums, 0, target, 0)
+#         return self.count
+
+#     def helper(self, nums, i, target, Sum):
+#         if i >= len(nums) or Sum > target:
+#             return
+#         if Sum == target:
+#             self.count += 1
+#             return
+
+#         for j in range(0, len(nums)):
+#             self.helper(nums, j, target, Sum + nums[j])

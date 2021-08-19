@@ -14,6 +14,7 @@ class Solution:
             if nums[i] == 0 and start == 1:
                 flag += 1
             if nums[i] == 1:
+                # print(i, flag)
                 if start == 1:
                     if flag < k:
                         return False

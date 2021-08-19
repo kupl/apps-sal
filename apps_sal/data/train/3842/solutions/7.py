@@ -1,3 +1,4 @@
+# rule: if a word is longer than limit, split it anyway
 def word_wrap(text, limit):
     answer = []
     words = text.split()[::-1]

@@ -24,3 +24,4 @@ for T in range(t):
 
     total = 360 // g - len(ang)
     print(total)
+##    print(g, ang, total)

@@ -18,6 +18,7 @@ def main():
                 g[j] = p - 1
             else:
                 g[j] = n
+            # print(j+1,tmp,g[j])
             j = tmp
     for i in k:
         print(i, end=' ')
@@ -28,6 +29,7 @@ def main():
 
 def __starting_point():
     main()
+# copied...
 
 
 __starting_point()

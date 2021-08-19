@@ -17,6 +17,7 @@ result = 0
 freq = {}
 for i in range(0, n + 1):
     for p in powers:
+        # s[i] - s[x] == p
         sx = s[i] - p
         if sx in freq:
             result += freq[sx]

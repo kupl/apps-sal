@@ -15,6 +15,7 @@ class Solution:
         """Return a new dict from the multiplication of everything by a number"""
         return {k: v * mult for k, v in list(dict_main.items())}
 
+    # Processing methods
     def cur(self):
         return self.formula[self.i]
 
@@ -31,6 +32,7 @@ class Solution:
         :type formula: str
         :rtype: str
         """
+        # Adding a space for easier test than always testing if we are at the end
         self.formula = formula
 
         res = {}
@@ -45,6 +47,7 @@ class Solution:
         return ''.join(res_str)
 
     def process_next_part(self):
+        # Return i, dict_atoms
         cur = self.cur()
         if cur.isalpha():
             name = self._consume_name()
@@ -52,10 +55,10 @@ class Solution:
             return {name: value}
         elif cur == '(':
             local_res = {}
-            self.consume()
+            self.consume()  # Consuming the '('
             while self.cur() != ')':
                 self._merge_into(local_res, self.process_next_part())
-            self.consume()
+            self.consume()  # Consuming the ')'
             value = self._consume_digit()
             return self._multiply(local_res, value)
         else:

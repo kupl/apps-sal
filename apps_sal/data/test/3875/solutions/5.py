@@ -8,7 +8,7 @@ A = list(map(int, input().split()))
 mod = 1000000007
 
 
-def Combi(a, b):
+def Combi(a, b):  # aは大きいが、bは小さいとき
     if b > a:
         return 0
 
@@ -20,6 +20,7 @@ def Combi(a, b):
 
 
 def alltuple(A):
+    # print(A)
     ANS = []
     MAX = max(A)
 
@@ -44,7 +45,7 @@ ALLX = set(alltuple([-1] * N))
 
 def LIS(A):
     LEN = len(A)
-    DP = [float("inf")] * LEN
+    DP = [float("inf")] * LEN  # DP[i]で、長さiのLISの最終要素の最小値.
 
     for a in A:
         pos = bisect.bisect_left(DP, a)
@@ -52,7 +53,7 @@ def LIS(A):
 
     ANS = 0
     for i in range(LEN):
-        if DP[i] != float("inf"):
+        if DP[i] != float("inf"):  # float("inf")でない最小のものがLISの長さ
             ANS = i
 
     return ANS + 1

@@ -6,4 +6,4 @@ def card_game(c1, c2, t):
     return ret('d.index(c1[:-1])<d.index(c2[:-1])' if c1[-1] == c2[-1] else
                'c2=="joker"' if 'joker' in [c1, c2] else
                'c2[-1]==t' if t in [c1[-1], c2[-1]] else
-               '', c1, c2, t) if c1 != c2 else "Someone cheats."
+               '', c1, c2, t) if c1 != c2 else "Someone cheats."  # no effeciency due to eval :(

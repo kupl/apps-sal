@@ -27,7 +27,11 @@ for num_i in range(n):
         else:
             if a[o[u][0]] + cnt < mi:
                 mi = a[o[u][0]] + cnt
+            # if a[o[u][0]] + cnt > ma:
+            #             #     ma = a[o[u][0]] + cnt
+            #             #     print(cnt)
     ma = a[num_i]
+    # print(mi, ma, ans_m, o)
 
     if ma - mi > gl_ans:
         gl_ans = ma - mi

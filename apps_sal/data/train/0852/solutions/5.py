@@ -26,4 +26,7 @@ def solve(n):
 
 for _ in range(int(input())):
     n = int(input())
+    # s=input()
+    # a,b=map(int,input().split())
+    # l=list(map(int,input().split()))
     solve(n)

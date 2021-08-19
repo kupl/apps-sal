@@ -6,8 +6,8 @@ size = (5 * 10**5 + 4)
 r = [0] * size
 c = [0] * size
 for i in k:
-    r[i // 2] += 1
-    c[i] += 1
+    r[i // 2] += 1  # neu co so = x2 -> +1
+    c[i] += 1  # dem so lan xuat hien trong input
 t = b = 0
 result = n
 for i in range(size - 1, -1, -1):

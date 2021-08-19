@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -45,6 +46,17 @@ def solve(N, A, B):
     return ans
 
 
+# def test():
+#     N = 7000
+#     import random
+#     A = [random.randint(1, 10000) for i in range(N)]
+#     B = [random.randint(0, 10**9) for _ in range(N)]
+#     t0 = time.time()
+#     print(solve(N, A, B))
+#     print(time.time() - t0)
+#
+# test()
+#
 N = int(input())
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]

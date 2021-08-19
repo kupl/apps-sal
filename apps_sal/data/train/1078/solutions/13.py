@@ -1,3 +1,4 @@
+# cook your dish here
 a = int(input())
 while (a != 0):
     S, x, y, z = input().split(" ")

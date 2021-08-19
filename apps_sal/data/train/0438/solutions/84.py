@@ -7,6 +7,7 @@ class Solution:
 
         def find(x):
             while x != uf[x]:
+                # uf[x] = uf[uf[x]]
                 x = uf[x]
             return x
 
@@ -36,4 +37,5 @@ class Solution:
                 steps.add(find(idx))
             if steps:
                 last_step = i + 1
+            # print(steps)
         return last_step

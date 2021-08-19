@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -42,6 +43,7 @@ class Scanner():
 
 
 MOD = int(1e09) + 7
+# INF = int(1e15)
 
 
 def solve():
@@ -70,6 +72,12 @@ def solve():
 
 
 def main():
+    # sys.setrecursionlimit(1000000)
+    # sys.stdin = open("sample.txt")
+    # T = Scanner.int()
+    # for _ in range(T):
+    #     solve()
+    # print('YNeos'[not solve()::2])
     solve()
 
 

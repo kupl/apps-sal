@@ -22,6 +22,8 @@ for i in range(n - 1, 0, -1):
         rl[i] = g
 hantei = 0
 ans = 0
+# print(lr)
+# print(rl)
 for i in range(n):
     if i == 0:
         hantei = rl[1]

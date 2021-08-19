@@ -18,19 +18,20 @@ ans = max(seq)
 l = len(seq)
 dp = [[0] * 4 for i in range(l + 1)]
 for i in range(l):
-    one = i % 2
+    one = i % 2  # 12
     s = seq[i]
     for j in range(4):
         dp[i + 1][j] = max(dp[i + 1][j], dp[i][j])
-        if not one:
+        if not one:  # 2
             if j % 2 == 0:
                 dp[i + 1][j] = max(dp[i + 1][j], dp[i][j] + s)
             else:
                 if j == 1:
                     dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i][j] + s)
-        else:
+        else:  # 1
             if j % 2 == 1:
                 dp[i + 1][j] = max(dp[i + 1][j], dp[i][j] + s)
             else:
                 dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i][j] + s)
+#    print(dp[i+1])
 print(max(dp[l]))

@@ -3,6 +3,8 @@ from functools import lru_cache
 
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
+        # time complexity: O(n)
+        # space complexity: O(n)
         @lru_cache(maxsize=None)
         def score(i):
             if i >= len(stoneValue):

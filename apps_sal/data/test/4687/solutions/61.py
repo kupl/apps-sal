@@ -1,3 +1,4 @@
+# 95 C - Big Array
 N, K = map(int, input().split())
 lis = []
 for _ in range(N):

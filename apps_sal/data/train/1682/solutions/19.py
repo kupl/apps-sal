@@ -1,8 +1,8 @@
 '''
 
-* Author : Ayushman Chahar 
-* About  : II Year, IT Undergrad 
-* Insti  : VIT, Vellore 
+* Author : Ayushman Chahar #
+* About  : II Year, IT Undergrad #
+* Insti  : VIT, Vellore #
 
 '''
 
@@ -62,9 +62,11 @@ def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
 def main():
+    # for _ in range(int(input())):
     n = input()
     num = [int(i) for i in n]
     n = len(num)
+    # max = 0
     summ = []
     idx = []
     for i in range(n):

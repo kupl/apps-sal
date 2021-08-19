@@ -1,3 +1,4 @@
+# cook your dish here
 MAX = 10**9
 c, f = map(int, input().split())
 g = []

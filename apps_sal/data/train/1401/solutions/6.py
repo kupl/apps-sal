@@ -1,3 +1,4 @@
+# cook your dish here
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()

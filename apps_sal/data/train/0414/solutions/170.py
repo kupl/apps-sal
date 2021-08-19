@@ -27,7 +27,9 @@ class Solution:
             li.appendleft(winner)
             wins[winner] += 1
             wins[loser] = 0
+            # print(\"winner has won, {} times, \",winner, wins[winner])
             if wins[winner] >= k or wins[winner] == n:
+                # print(\"found_winner\", winner)
                 found_winner = True
                 winnerAll = winner
 
@@ -35,5 +37,7 @@ class Solution:
             if found_winner == True:
 
                 return winnerAll
+            # print(li)
             simulate()
+            # print(wins, found_winner)
         return winnerAll

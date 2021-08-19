@@ -1,3 +1,4 @@
+# C
 def cin(): return map(int, input().split())
 
 

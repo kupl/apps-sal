@@ -10,6 +10,7 @@ def f_many_many_paths():
             for i in range(1, max_val_arg + 1):
                 fac_append(fac[-1] * i % mod)
 
+            # inv_append(pow(fac[-1], -1, mod)) (after Python 3.8)
             inv_append(pow(fac[-1], mod - 2, mod))
 
             for i in range(max_val_arg, 0, -1):

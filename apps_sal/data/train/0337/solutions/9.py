@@ -5,6 +5,8 @@ class Solution:
         :type cost: List[int]
         :rtype: int
         """
+        # if len(gas) < 2:
+        #     return gas[0]
         fuel = totalGas = totalCost = start = 0
         for i in range(len(cost)):
             totalGas += gas[i]

@@ -28,6 +28,7 @@ for j in range(1, min(m, n) + 1):
 ans = 0
 
 for j in range(1, min(m, n) + 1):
+    # What is the probability that the deck will contain j cards of type i
     p = P[j]
     ans += P[j] * (j * j) / (n * n)
 print(ans)

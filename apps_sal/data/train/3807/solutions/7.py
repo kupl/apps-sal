@@ -1,3 +1,4 @@
+# modified merge sort counting left > right cases
 def countsort(arr, cntarr, cntdict):
     if len(arr) > 1:
         mid = len(arr) // 2
@@ -16,10 +17,12 @@ def countsort(arr, cntarr, cntdict):
             if left[i] > right[j]:
                 arr[k] = right[j]
 
+                # increase count of smaller elem
                 for n in range(i, len(left)):
                     temp = leftcount[n]
                     cntdict[temp] = cntdict[temp] + 1
 
+                # updates position of indices wrt original position
                 cntarr[k] = rightcount[j]
                 j = j + 1
             else:
@@ -43,10 +46,13 @@ def countsort(arr, cntarr, cntdict):
 
 
 def smaller(arr):
+    # list of relative position of original list
     posarr = [i for i in range(len(arr))]
 
+    # dictionary of counts of smaller elem
     cntdict = {i: 0 for i in range(len(arr))}
 
+    # sorts arr and keeps count of smaller elem actions
     countsort(arr, posarr, cntdict)
 
     soln = []

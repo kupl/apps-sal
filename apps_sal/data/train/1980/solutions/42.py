@@ -12,11 +12,11 @@ class Node:
 class Skiplist:
     def __init__(self, levels=30):
         self.heads = [Node(-float('inf')) for _ in range(levels)]
-        for c, n in zip(self.heads, self.heads[1:]):
+        for c, n in zip(self.heads, self.heads[1:]):  # the lenght of zipped elements can be different
             c.down = n
 
     def search(self, target) -> bool:
-        curr = self.heads[0]
+        curr = self.heads[0]  # -inf
         while curr:
             if curr.next is None or curr.val < target <= curr.next.val:
                 if curr.next and target == curr.next.val:

@@ -1,5 +1,6 @@
 def is_valid():
     import sys
+    # with open(filename, 'r') as f:
     with sys.stdin as f:
         for i, line in enumerate(f):
             if i == 0:
@@ -7,7 +8,7 @@ def is_valid():
                 N, M = int(N), int(M)
                 if N - 1 != M:
                     return False
-                graph = [[] for _ in range(N)]
+                graph = [[] for _ in range(N)]  # [[]] * N not working, no deepcopy
             else:
                 fromVertex, toVertex = line.split(' ')
                 fromVertex, toVertex = int(fromVertex) - 1, int(toVertex) - 1
@@ -28,6 +29,7 @@ def is_valid():
                 if not visited[neigh]:
                     visited[neigh] = True
                     nodes_queue.put(neigh)
+                # else: not a cycle because edges in both directions
 
         return all(visited)
 

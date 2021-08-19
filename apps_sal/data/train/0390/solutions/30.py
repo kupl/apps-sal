@@ -1,5 +1,6 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
+        # Solution 1: DP by myself (9532ms: 5.06%)
         '''
         ele = [item**2 for item in range(1, int(math.sqrt(n))+1)]
         memo = {}
@@ -22,6 +23,7 @@ class Solution:
             return False
         return helper(n, 1)
         '''
+        # Solution 2: TLE!!
         '''
         dp = [False]*(n+1)
         def check(n):
@@ -37,6 +39,7 @@ class Solution:
             return False
         return check(n)
         '''
+        # Solution 3: DP from discussion (2132ms: 44.64%)
         dp = [False] * (n + 1)
         for i in range(1, n + 1):
             for j in range(1, int(i**0.5) + 1):

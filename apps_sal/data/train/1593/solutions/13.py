@@ -1,3 +1,4 @@
+# cook your dish here
 T = int(input())
 
 avail = [100, 50, 10, 5, 2, 1]

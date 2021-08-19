@@ -8,16 +8,16 @@ S = [input() for i in range(m)]
 for i in range(m):
     for j in range(n):
         num = 0
-        if not S[i][j] == '
-           for d in range(8):
+        if not S[i][j] == '#':
+            for d in range(8):
                 nx = i + dx[d]
                 ny = j + dy[d]
                 if nx < 0 or nx >= m:
                     continue
                 if ny < 0 or ny >= n:
                     continue
-                if S[nx][ny] == '
-                   num += 1
+                if S[nx][ny] == '#':
+                    num += 1
             A = list(S[i])
             A[j] = str(num)
             S[i] = "".join(A)

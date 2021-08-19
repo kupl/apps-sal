@@ -5,3 +5,4 @@ class Solution:
         :rtype: int
         """
         return len(s.split())
+        # lmao is me

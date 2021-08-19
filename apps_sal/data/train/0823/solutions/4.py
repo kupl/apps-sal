@@ -1,3 +1,4 @@
+# cook your dish here
 def ss(a, su, i, cnt):
     if su == 0 and cnt != 0:
         return 1

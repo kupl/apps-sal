@@ -8,6 +8,12 @@ class Solution:
         ans = 0
         for row in list(seatmap.keys()):
 
+            # if len(seatmap[row]) == 1:
+            #     if seatmap[row][0] == 1 or seatmap[row][0] == 10:
+            #         ans += 2
+            #     else:
+            #         ans += 1
+            # else:
             row_arrange = [0] * 10
             for each in seatmap[row]:
                 row_arrange[each - 1] = 1

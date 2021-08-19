@@ -14,6 +14,7 @@ minTrolleysCost = 0
 for nbRide in trolleys:
     minTrolleysCost += min(c2, nbRide * c1)
 
+# print(c1, c2, c3, c4, minBusesCost, minTrolleysCost);
 
 minCost = min(
     c4,

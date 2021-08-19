@@ -3,6 +3,8 @@ Created on 2019. 9. 21.
 
 @author: kkhh88
 '''
+#q = int(input())
+#x, y = map(int,input().split(' '))
 
 table = [1, 1, 2, 3, 5]
 for i in range(5, 100000):

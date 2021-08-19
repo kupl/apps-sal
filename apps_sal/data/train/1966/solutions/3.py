@@ -1,5 +1,6 @@
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
+        # udpate mat to histogram
         row = len(mat)
         col = len(mat[0])
         for j in range(col):

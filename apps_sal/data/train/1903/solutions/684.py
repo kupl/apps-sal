@@ -21,9 +21,27 @@ class Solution:
                 res += abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 for jd, js, je in d[j]:
                     heapq.heappush(between, (jd, js, je))
+                # dmin = float('inf')
+                # for jd,js,je in d[j]:
+                #     if not (js in chosen and je in chosen):
+                #         dmin = min(dmin, jd)
+                #         heapq.heappush(between, (jd,js,je))
+                # chosen.add(j)
+                # res += dmin
+                # res.append((i,j,dmin))
             elif i not in chosen and j in chosen:
                 chosen.add(i)
                 res += abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 for iid, iis, iie in d[i]:
                     heapq.heappush(between, ((iid, iis, iie)))
+                # dmin = float('inf')
+                # for iid,iis,iie in d[i]:
+                #     if not (iis in chosen and iie in chosen):
+                #         dmin = min(dmin, iid)
+                #         heapq.heappush(between, (iid,iis,iie))
+                # chosen.add(i)
+                # res += dmin
+                # res.append((i,j,dmin))
+        # print(res)
+        # return sum(d for a,b,d in res)
         return res

@@ -11,6 +11,7 @@ while index != len(ns):
             seen[ns[index]] = False
             count += 1
             index -= 1
+            # print(ns)
     seen[e] = True
     index += 1
 print(count)

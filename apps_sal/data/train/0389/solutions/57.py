@@ -8,9 +8,10 @@ class Solution:
         A = [num * N - avg for num in A]
 
         dp = collections.defaultdict(set)
+        # Last element goes to another array
         for i, n in enumerate(A[:-1]):
             if n == 0:
-                return True
+                return True  # Single element array
             if i == 0:
                 dp[0].add(n)
                 continue

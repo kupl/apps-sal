@@ -1,7 +1,7 @@
 from math import gcd
 
 
-def divisors(M):
+def divisors(M):  # Mの約数列 O(n^(0.5+e))
     d = []
     i = 1
     while M >= i**2:

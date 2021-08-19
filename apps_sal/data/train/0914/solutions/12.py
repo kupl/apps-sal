@@ -1,5 +1,8 @@
+# code
+# code
 t = int(input())
 for i in range(t):
+    # n,k=list(map(int,input().split()))
     arr = []
     n, m = map(int, input().split())
     z = ['1' for i in range(m)]

@@ -6,6 +6,7 @@ for i in range(n):
     t = [int(x) for x in t]
     l.append([])
     l[i] = t[1:]
+# print(l)
 
 total = 1
 ans = set(l[0])
@@ -43,4 +44,5 @@ for i in notPres:
                 total += 1
                 for l in k:
                     ans.add(l)
+    # print(notPres)
 print(total)

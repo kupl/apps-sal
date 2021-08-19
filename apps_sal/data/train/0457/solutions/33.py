@@ -5,6 +5,7 @@ class Solution:
             return 0
         else:
             l[0] = 0
+            # sort coins as an optimization
             coins.sort()
             for i in range(1, amount + 1):
                 for coin in coins:

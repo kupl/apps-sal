@@ -18,4 +18,5 @@ for i in range(0, len(ops) - 1):
     for j in range(ops[i], ops[i + 1] - 1):
         s += '0'
 
+# print(s)
 print(eval(s))

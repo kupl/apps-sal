@@ -1,8 +1,8 @@
 class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         removed = 0
-        for i in range(len(intervals)):
-            for j in range(len(intervals)):
+        for i in range(len(intervals)):  # 7
+            for j in range(len(intervals)):  # 7 - > 7
                 if i == j:
                     continue
                 print(i, j)
@@ -22,7 +22,8 @@ class Solution1:
         l, r = intervals[0]
         for i in range(1, len(intervals)):
             start, end = intervals[i]
-            if end <= r:
+            # Start is bigger than l because intervals is sorted!
+            if end <= r:  # first interval covers second!
                 r = end
             else:
 

@@ -52,3 +52,8 @@ class DinnerPlates:
         if self.stack[index][1] == 1:
             self.openSlot.insert(self.insertAt(index), index)
         return poppedVal
+# Your DinnerPlates object will be instantiated and called as such:
+# obj = DinnerPlates(capacity)
+# obj.push(val)
+# param_2 = obj.pop()
+# param_3 = obj.popAtStack(index)

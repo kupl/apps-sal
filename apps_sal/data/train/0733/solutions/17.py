@@ -1,3 +1,5 @@
+# cook your dish here
+# -*- coding: utf-8 -*-
 """
 Created on Sun Apr 26 19:08:25 2020
 
@@ -9,7 +11,7 @@ def palindrome(s):
     m = dict()
     n = len(s)
     R = [[0 for x in range(n + 1)] for x in range(2)]
-    s = "@" + s + "
+    s = "@" + s + "#"
 
     for j in range(2):
         rp = 0

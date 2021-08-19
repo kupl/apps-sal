@@ -6,7 +6,7 @@ class Solution:
             prev = float('-inf')
             balls_placed = 0
             for x in position:
-                if x - prev >= force:
+                if x - prev >= force:  # then that means we have that required force and we can keep a new ball here at position x
                     prev = x
                     balls_placed += 1
 

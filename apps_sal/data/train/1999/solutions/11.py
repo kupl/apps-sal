@@ -1,3 +1,8 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         p = head
@@ -19,4 +24,5 @@ class Solution:
             else:
                 prev = p
                 p = p.__next__
+            # print(prev.val,p.val if p else \" \")
         return head

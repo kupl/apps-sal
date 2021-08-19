@@ -1,9 +1,16 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[18]:
 
 
 N = int(input())
 csf = []
 for _ in range(N - 1):
     csf.append(list(map(int, input().split())))
+
+
+# In[19]:
 
 
 for i in range(N):
@@ -21,3 +28,6 @@ for i in range(N):
         print(t)
     else:
         print((0))
+
+
+# In[ ]:

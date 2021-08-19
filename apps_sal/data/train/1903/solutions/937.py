@@ -44,6 +44,7 @@ class Solution:
 
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         self.V = len(points)
+        # [0 for i in range(len(points))] for i in range(len(points))
         self.graph = []
         for i in range(len(points)):
             for j in range(len(points)):

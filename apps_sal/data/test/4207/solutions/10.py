@@ -17,4 +17,5 @@ for i in range(n):
             y = 0
 
         l[(x, y)] += 1
+# print(l)
 print((sorted(l.values())[-1] if len(l) > 0 else 0) + an)

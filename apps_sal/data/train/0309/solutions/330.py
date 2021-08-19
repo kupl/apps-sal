@@ -3,6 +3,9 @@ from collections import OrderedDict
 
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
+        # When adding a new number A[j], we look at all previous numbers A[i]:
+        # (1) If A[j] can extend any arithmetic subsequence currently ends at A[i]: LAS += 1
+        # (2) Otherwise, LAS = 2
         max_length = 0
         subseq_lengths = {}
         for j in range(1, len(A)):

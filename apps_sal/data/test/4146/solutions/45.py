@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Thu Sep 17 20:29:30 2020
 
@@ -14,6 +15,8 @@ for v in input().split():
     else:
         O.append(int(v))
     i += 1
+# print(E)
+# print(O)
 edic = {-1: 0}
 odic = {-1: 0}
 for e in E:
@@ -37,6 +40,8 @@ for o in odic.keys():
 etup.sort(reverse=True, key=lambda x: x[1])
 otup.sort(reverse=True, key=lambda x: x[1])
 
+# print(etup)
+# print(otup)
 i = 0
 j = 0
 while True:
@@ -48,7 +53,9 @@ while True:
         j += 1
     else:
         i += 1
+    # rint("calc")
 
+# print(edic)
 
 ans = n - etmp - otmp
 

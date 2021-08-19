@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from fractions import Fraction
 import sys
 
@@ -26,7 +27,7 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    K = int(next(tokens))
+    K = int(next(tokens))  # type: int
     solve(K)
 
 

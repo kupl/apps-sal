@@ -10,6 +10,7 @@ def animals(heads, legs):
     elif(heads * 4 == legs):
         return (0, heads)
     else:
+        # as per heads total number of animals in the farm is n
         number_of_animals = heads
         chicken = number_of_animals * 2
         cows = ((legs - chicken) / 4) * 2

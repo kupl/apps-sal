@@ -28,9 +28,11 @@ def grow(d, v, h, start):
     iv = [1] * (3 * d + 3)
     for i in range(1, 3 * d + 3):
         iv[i] = ti[i] * t[i - 1] % P
+    ###
     fg = li(st(nuf * nu(iv[1:2 * d + 2])), d, d * 2 + 1)
     for i, (_fg, _ti) in enumerate(zip(fg, ti)):
         h[i] = h[i] * (_fg * t[d + i + 1] % P * _ti % P) % P
+    ###
     fg1 = li(st(nuf * nu(inv[1:2 * d + 2])), d, d * 2 + 1)
     fg2 = li(st(nuf * nu(iv[d + 2:3 * d + 3])), d, d * 2 + 1)
     fg1.pop()
@@ -66,7 +68,7 @@ for i in range(1, 2 * v + 2):
     inv[i] = fainv[i] * fa[i - 1] % P
 
 
-def prod(a, b, vv):
+def prod(a, b, vv):  # a * (a + 1) * ... * (b - 1) % P
     T = create_table(vv, a)
     c = b - a
     s = T[c // vv]

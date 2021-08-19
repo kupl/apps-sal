@@ -1,4 +1,5 @@
 
+# 117b
 
 def atc_117b(N: int, Li_input: str) -> str:
     Li = [int(i) for i in Li_input.split(" ")]

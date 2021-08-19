@@ -1,3 +1,4 @@
+# 33
 A, B = map(int, input().split(' '))
 S = str(input())
 

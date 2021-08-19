@@ -10,6 +10,8 @@ for i in range(n):
 l = sorted(l, key=itemgetter(1))
 
 
+# print(l)
+
 tmp = 0
 f = 1
 for i, j in l:

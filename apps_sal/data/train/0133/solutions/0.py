@@ -1,5 +1,6 @@
 class Solution:
     def balancedString(self, s: str) -> int:
+        # minimum window so that outside is possible
         if len(s) // 4 != len(s) / 4:
             return -1
         ans, lb, n_cnt = len(s), 0, collections.Counter(s)
@@ -13,6 +14,7 @@ class Solution:
                     return 0
                 n_cnt[s[lb]] += 1
                 lb += 1
+                # here is actually a swap?
             if lb > i:
                 i, lb = lb, i
             i += 1

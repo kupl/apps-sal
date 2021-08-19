@@ -1,7 +1,7 @@
 n, k = list(map(int, input().split()))
 mod = 998244353
 
-NEXT = {(0, 1): 2, (1, 2): 2}
+NEXT = {(0, 1): 2, (1, 2): 2}  # ww or wh,point k,場合の数
 
 for i in range(1, n):
     NOW = NEXT
@@ -22,6 +22,7 @@ for i in range(1, n):
 
             if k - (n - i) * 2 < key[1] + 2 <= k:
                 NEXT[(1, key[1] + 2)] = NEXT.get((1, key[1] + 2), 0) + NOW[key]
+        # print(NOW,NEXT)
 
 
 ANS = 0

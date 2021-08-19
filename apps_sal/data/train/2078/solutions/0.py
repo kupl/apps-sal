@@ -9,7 +9,7 @@ def main():
     if a[n - 1] + x[n - 2] != b[n - 1]:
         print(-1)
         return
-    cnt = sum(map(abs, x))
+    cnt = sum(map(abs, x))  # prevbug: ftl
     print(cnt)
     cnt = min(cnt, 10 ** 5)
     index = 0
@@ -17,6 +17,7 @@ def main():
     def handle_zero_nine(cur_zero):
         nonlocal cnt
         nxt = index + 1
+        # cur_zero = True prevbug: preserved this line
         while True:
             if cur_zero and a[nxt + 1] != 9:
                 break
@@ -37,6 +38,7 @@ def main():
                 a[nxt + 1] -= 1
             nxt -= 1
             cnt -= 1
+            # print(a)
             cur_zero = not cur_zero
 
     while cnt > 0:
@@ -52,11 +54,13 @@ def main():
             a[index] -= 1
             a[index + 1] -= 1
             cnt -= 1
+            # print(a)
         elif a[index] < b[index]:
             print(index + 1, 1)
             a[index] += 1
             a[index + 1] += 1
             cnt -= 1
+            # print(a)
 
 
 def __starting_point():

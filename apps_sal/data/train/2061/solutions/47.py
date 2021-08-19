@@ -6,6 +6,7 @@ def sign(x):
     return (x > 0) - (x < 0)
 
 
+# s, x, y
 trans = {(1, 0, 0), (1, 1, 0), (2, 1, 0), (2, 0, 1), (2, 1, 1), (3, 0, 0), (3, 0, 1)}
 all_trans = [trans]
 for i in range(3):
@@ -17,6 +18,7 @@ for i in range(3):
         w.add((ns, nx, ny))
     all_trans.append(w)
 
+# print(all_trans)
 V = {(1, 1): 0, (-1, 1): 1, (-1, -1): 2, (1, -1): 3}
 
 que = deque([(0, 0, 0, 0)])
@@ -69,5 +71,6 @@ for _ in range(T):
             py -= sign(py) * m
             ans += m * 2
 
+    # print(px,px,py,bfs[(ps,px,py)])
     ans += bfs[(ps, px, py)]
     print(ans)

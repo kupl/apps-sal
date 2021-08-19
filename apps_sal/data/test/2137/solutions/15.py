@@ -5,6 +5,7 @@ vx = [0] * n
 vy = [0] * n
 for i in range(n):
     x[i], vx[i], vy[i] = map(int, input().split(' '))
+# y=ax y-ax=0 (x, y)* (-a, 1)=0 (-a, 1) - вектор нормали
 ntypes = dict()
 for i in range(n):
     ntype = -a * vx[i] + 1 * vy[i]

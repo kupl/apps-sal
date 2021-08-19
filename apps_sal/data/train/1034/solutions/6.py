@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 
 
@@ -28,8 +29,13 @@ def brtueforce(pos, arr, factors):
 
 
 def solve():
+    # n=int(input())
 
     k, x = map(int, input().split())
+    # s=input()
+    # l=list(map(int,input().split()))
+    # l1=list(map(int,input().split()))
+    # flag=0
 
     factors = factorize(x)
 

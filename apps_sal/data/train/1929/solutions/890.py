@@ -25,3 +25,8 @@ class StreamChecker:
                 new_open_words.append(word[letter])
         self.open_words = new_open_words
         return found
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

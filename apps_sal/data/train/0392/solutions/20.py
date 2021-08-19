@@ -17,10 +17,12 @@ class Solution:
                 one += 1
             elif d[i] * 3 > ones:
                 break
+        # print (\"one\", one, i)
         two = 0
         for i in range(i, len(s) - 1):
             if (d[i] / 2) * 3 == ones:
                 two += 1
             elif (d[i] / 2) * 3 > ones:
                 break
+        # print (\"two\", two)
         return (one * two) % (10**9 + 7)

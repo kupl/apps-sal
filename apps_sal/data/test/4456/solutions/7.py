@@ -7,9 +7,11 @@ for i in l1:
     d[i] = j
     j += 1
 l = [d[i] for i in l2]
+# l is the list that forces shit
 wei = [0] * (n + 2)
 right = [0] * (n + 2)
 for i in range(n - 1):
+    # look at l[i], l[1+1]
     if l[i] < l[i + 1]:
         continue
     wei[l[i + 1]] += 1
@@ -51,12 +53,14 @@ reg = 0
 odp = [-1] * (n + 3)
 count = 0
 while indx < n + 1:
+    # i stays the same iff [5,6,7,8,9] we are 6,7,8,9
     if prawe[indx - 1] == 1:
         reg = 0
     if lewe[indx] == 1:
         reg = 1
         count = 0
     odp[indx] = i
+    # kiedy i += 1
     if count == 0 or reg == 0:
         i += 1
     count += 1

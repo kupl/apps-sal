@@ -12,6 +12,7 @@ for i, x in enumerate(input().rstrip().split(), 1):
     graph[i].append(x)
     graph[x].append(i)
 
+# 各深さから来ている (0個、1個、2個以上) の分布を 確率 mod MODで持つ。
 
 half = (MOD + 1) // 2
 
@@ -19,6 +20,7 @@ half = (MOD + 1) // 2
 def merge(dp, dp1):
     L = len(dp1)
     for i in range(L):
+        # 0個,1個,2個以上
         a, b, c = dp[i]
         d, e, f = dp1[i]
         a, b, c = a * d, a * e + b * d, a * f + b * e + b * f + c * d + c * e + c * f
@@ -41,12 +43,14 @@ def dfs(v, parent=None):
         else:
             if len(dp) < len(dp1):
                 dp, dp1 = dp1, dp
+            # 2個以上が入っているインデックス
             if L < len(dp1):
                 L = len(dp1)
             merge(dp, dp1)
     if dp is None:
         dp = deque()
     else:
+        # 2個以上あるときに、0個化する
         for i in range(L):
             a, b, c = dp[i]
             dp[i] = (a + c, b, 0)

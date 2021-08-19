@@ -92,7 +92,7 @@ def main():
     n, k = map(int, stdin.readline().split())
     values = list(map(int, stdin.readline().split()))[::-1]
 
-    while not values[-1]:
+    while not values[-1]:  # Проблема в том что ты удаляешь
         values.pop()
 
     n = len(values)

@@ -10,6 +10,14 @@ class Solution:
             if temp == 1:
                 return 1
             return 0
+            # while temp != 1:
+            #     if temp % 2 == 0:
+            #         temp = int(temp / 2)
+            #     else:
+            #         self.been[temp1] = 0
+            #         return 0
+            # self.been[temp1] = 1
+            # return 1
         seen = set()
         for i in range(level, len(chars)):
             if chars[i] in seen:

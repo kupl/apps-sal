@@ -23,5 +23,6 @@ class Solution:
 
         while k > 0:
             item = heapq.heappop(q)
+            # print(item)
             k -= 1
         return item[1]

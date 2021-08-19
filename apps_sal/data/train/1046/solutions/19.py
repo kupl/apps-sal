@@ -1,3 +1,4 @@
+# cook your dish here
 for j in range(int(input())):
     l, b = map(int, input().split())
     c = 0

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 n = int(input())
 a = [int(input()) for _ in range(n)]

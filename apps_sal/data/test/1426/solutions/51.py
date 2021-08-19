@@ -7,6 +7,7 @@ input = sys.stdin.readlines
 def main():
     lines = input()
     n, m = list(map(int, lines[0].split()))
+    # 隣接リスト
     edges = [[] for i in range(n)]
     for i in range(m):
         u, v = list(map(int, lines[i + 1].split()))

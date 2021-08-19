@@ -53,3 +53,7 @@ class StreamChecker:
             self.lettersQ.pop()
 
         return self.streamTrie.findNext(self.lettersQ)
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

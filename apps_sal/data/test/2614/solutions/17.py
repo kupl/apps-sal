@@ -14,6 +14,7 @@ for _ in range(int(input())):
     l.sort(reverse=True)
     c = 0
     lim = l[0][0]
+    # print(lim)
     extra = 0
     r = 0
     for i in l:

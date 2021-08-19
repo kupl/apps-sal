@@ -11,6 +11,7 @@ for i, x in enumerate(input().split()):
 parents = [0 for i in range(n + 1)]
 parents[1] = -1
 
+# print(adj)
 
 colors = [-1] + [int(x) for x in input().split()]
 
@@ -22,6 +23,7 @@ while len(q) > 0:
             parents[x] = node
             q.append(x)
 
+# print(parents)
 
 ans = 1
 

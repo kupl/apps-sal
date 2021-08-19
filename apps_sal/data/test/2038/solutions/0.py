@@ -1,4 +1,6 @@
+# from bisect import bisect_left
 
+# (n) = (int(x) for x in input().split())
 n = int(input())
 a = [int(_) - 1 for _ in input().split()]
 
@@ -14,6 +16,7 @@ for i in range(n):
     if pos == target:
         continue
 
+    # do swap
     b[old_v] = pos
     b[i] = i
     a[target] = i

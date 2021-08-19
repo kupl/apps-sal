@@ -5,5 +5,5 @@ def christmas_tree(height):
     for _ in range((height - 3) // 3):
         res.extend(res[-2:] + [res[-1] + 2])
     w = max(res)
-    ans = [('*' * r).center(w).rstrip() for r in res] + ['
+    ans = [('*' * r).center(w).rstrip() for r in res] + ['###'.center(w).rstrip()]
     return '\r\n'.join(ans)

@@ -1,6 +1,6 @@
 class Solution:
     def getMaxRepetitions(self, s1, n1, s2, n2):
-        start = {}
+        start = {}  # s2_idx : s1_round, s2_round
         s1_round, s2_round, s2_idx = 0, 0, 0
         while s1_round < n1:
             s1_round += 1

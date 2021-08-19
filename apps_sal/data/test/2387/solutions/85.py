@@ -3,6 +3,8 @@ s = [input() for _ in range(n)]
 
 
 def bracket(x):
+    # f: final sum of brackets '(':+1, ')': -1
+    # m: min value of f
     f = m = 0
     for i in range(len(x)):
         if x[i] == '(':
@@ -10,10 +12,12 @@ def bracket(x):
         else:
             f -= 1
         m = min(m, f)
+    # m <= 0
     return f, m
 
 
 def func(l):
+    # l = [(f, m)]
     l.sort(key=lambda x: -x[1])
     v = 0
     for fi, mi in l:

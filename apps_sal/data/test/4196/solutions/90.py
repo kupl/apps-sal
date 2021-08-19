@@ -1,3 +1,5 @@
+# author:  Taichicchi
+# created: 11.10.2020 00:03:10
 
 import sys
 from math import gcd

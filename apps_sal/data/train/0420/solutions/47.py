@@ -5,6 +5,7 @@ class Solution:
         for i, c in enumerate(s):
             if c in cache:
                 k ^= cache[c]
+            # 如果k之前出现过，那么说明这中间这段是满足条件的
             if k not in d:
                 d[k] = i
             else:

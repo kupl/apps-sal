@@ -4,7 +4,9 @@ size = []
 
 def root(x):
     while x != idx[x]:
+        # path compression start
         idx[x] = idx[idx[x]]
+        # path compression end
         x = idx[x]
     return x
 

@@ -9,10 +9,12 @@ class Solution:
             heapq.heappush(maximum, (-nums[right], right))
             right += 1
             while -maximum[0][0] - minimum[0][0] > limit:
+                # print(\"pop\", left, right, res, minimum, maximum, )
                 while minimum and minimum[0][1] <= left:
                     heapq.heappop(minimum)
                 while maximum and maximum[0][1] <= left:
                     heapq.heappop(maximum)
                 left += 1
             res = max(res, right - left)
+            # print(left, right, res, minimum, maximum, )
         return res

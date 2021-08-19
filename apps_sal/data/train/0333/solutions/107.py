@@ -7,7 +7,7 @@ class Solution:
         if arr[0] == arr[-1]:
             return 1
 
-        _map = defaultdict(set)
+        _map = defaultdict(set)  # connection map
         for i, val in enumerate(arr):
             _map[val].add(i)
 

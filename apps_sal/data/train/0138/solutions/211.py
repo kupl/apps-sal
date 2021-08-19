@@ -6,4 +6,5 @@ class Solution:
                 f[i + 1] = [f[i][1] + 1 if f[i][1] > 0 else 0, f[i][0] + 1]
             elif nums[i] > 0:
                 f[i + 1] = [f[i][0] + 1, f[i][1] + 1 if f[i][1] > 0 else 0]
+        # print(f)
         return max(x[0] for x in f)

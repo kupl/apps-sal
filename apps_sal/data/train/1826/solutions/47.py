@@ -48,6 +48,7 @@ class Solution:
             colsum[0][i] = mat[0][i]
             for j in range(1, m):
                 colsum[j][i] += colsum[j - 1][i] + mat[j][i]
+        # print(rowsum,colsum)
         ans = [[mat[j][i] for i in range(n)] for j in range(m)]
 
         for k in range(1, K + 1):

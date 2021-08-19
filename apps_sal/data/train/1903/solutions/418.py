@@ -27,8 +27,10 @@ class Solution:
         parents = [-1] * len(points)
         cost = 0
         count = 0
+        # print (graph)
         while count < n - 1:
             dist, point_pair = heapq.heappop(graph)
+            # print(dist, point_pair)
             p1, p2 = point_pair[0], point_pair[1]
 
             r1 = find_root(parents, p1)

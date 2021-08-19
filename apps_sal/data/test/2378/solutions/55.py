@@ -1,8 +1,9 @@
+#!/usr/bin/env python3
 
 import sys
 sys.setrecursionlimit(300000)
 
-MOD = 1000000007
+MOD = 1000000007  # type: int
 
 
 def calc_fraction_mod(numerator, denominator):
@@ -37,14 +38,17 @@ def solve(N: int, A: "List[int]", B: "List[int]"):
             children += sub
             subs.append(sub)
         subs.append(N - children - 1)
+        #tmp = pow(2, N - 1, MOD)
         tmp = pows[N - 1]
-        tmp -= 1
+        tmp -= 1  # all white
         for sub in subs:
+            #tmp -= pow(2, sub, MOD) - 1
             tmp -= pows[sub] - 1
         num[0] += tmp
         return children + 1
     dfs(0)
 
+    #deno = pow(2, N, MOD)
     deno = pows[N]
     num = num[0]
     ret = calc_fraction_mod(num, deno)
@@ -58,9 +62,9 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))
-    A = [int()] * (N - 1)
-    B = [int()] * (N - 1)
+    N = int(next(tokens))  # type: int
+    A = [int()] * (N - 1)  # type: "List[int]"
+    B = [int()] * (N - 1)  # type: "List[int]"
     for i in range(N - 1):
         A[i] = int(next(tokens))
         B[i] = int(next(tokens))

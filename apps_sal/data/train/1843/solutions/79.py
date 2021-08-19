@@ -29,3 +29,9 @@ class TweetCounts:
             result.append(self.__bs(arr, j) - self.__bs(arr, i))
             i += delta
         return result
+
+
+# Your TweetCounts object will be instantiated and called as such:
+# obj = TweetCounts()
+# obj.recordTweet(tweetName,time)
+# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

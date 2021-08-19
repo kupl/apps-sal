@@ -17,6 +17,7 @@ def check():
         if b[j] % m == 0:
             s[cnt] = j
             cnt += 1
+    # print(s)
     if(cnt >= k):
         print('Yes')
         for i in range(k):

@@ -37,8 +37,8 @@ class Solution:
 
             if s < e:
                 p = _partition(a, s, e)
-                _quick_sort(a, s, e=p - 1)
-                _quick_sort(a, s=p + 1, e=e)
+                _quick_sort(a, s, e=p - 1)  # left
+                _quick_sort(a, s=p + 1, e=e)  # right
 
         def _merge_sort(a):
 
@@ -69,5 +69,9 @@ class Solution:
             result = merge(_new_left, _new_right)
             return result
 
+        # _selection_sort(nums)
+        # _bubble_sort(nums)
+        # _insertion_sort(nums)
         _quick_sort(nums, s=0, e=len(nums) - 1)
+        # return _merge_sort(nums)
         return nums

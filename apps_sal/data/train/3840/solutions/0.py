@@ -5,6 +5,7 @@ def largest_power(n):
             return (0, -1)
         return (1, -1)
 
+    # num_of_occurances
     freq = 0
     x = []
     largest = 0

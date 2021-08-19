@@ -1,4 +1,5 @@
 def find_array(arr1, arr2):
+    # Solution
     list1 = []
     for num in arr2:
         if num < len(arr1):

@@ -1,3 +1,8 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         p = head
@@ -13,6 +18,7 @@ class Solution:
             stack.append(p.val)
             p = p.__next__
             length += 1
+        # print(d,[0]*length)
         while head:
             print((head.val))
             if head.val in d:

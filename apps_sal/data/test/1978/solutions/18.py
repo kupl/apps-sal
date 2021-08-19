@@ -30,6 +30,7 @@ Y = []
 for i in range(N):
     Y.append(dijkstra(N, X, i))
 
+# print("Y =", Y)
 
 M = int(input())
 V = [int(a) - 1 for a in input().split()]

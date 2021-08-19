@@ -1,9 +1,11 @@
+#!python3
 
 from heapq import heappop, heappush
 
 
 INF = 10 ** 18
 
+# input
 N, M, S = list(map(int, input().split()))
 UVAB = [list(map(int, input().split())) for _ in range(M)]
 CD = [list(map(int, input().split())) for _ in range(N)]
@@ -14,6 +16,7 @@ def solve(link):
     lim = 50 * (N - 1)
     w = [[INF] * (lim + 1) for _ in range(N)]
 
+    # (time, node, silver)
     hq = [(0, 0, min(S, lim))]
     while hq:
         t, v, s = heappop(hq)
@@ -24,6 +27,7 @@ def solve(link):
             if len(ans) == N:
                 break
 
+        # buy
         if s < lim:
             c, d = CD[v]
             new_s = min(lim, s + c)
@@ -32,6 +36,7 @@ def solve(link):
                 w[v][new_s] = new_t
                 heappush(hq, (new_t, v, new_s))
 
+        # move
         for u, a, b in link[v]:
             if s < a:
                 continue

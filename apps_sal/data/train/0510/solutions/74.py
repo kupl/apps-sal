@@ -1,4 +1,4 @@
-import bisect
+import bisect  # 配列二分法
 from collections import defaultdict
 
 N = int(input())
@@ -6,22 +6,27 @@ S = [*input()]
 Q = int(input())
 d = defaultdict(list)
 
+# 各アルファベットの出現場所を記録
 for i, c in enumerate(S):
     d[c] += [i]
 
+# この時点でどのアルファベットについてもソート済み
+# print(d)
 
 for _ in range(Q):
     q, y, z = input().split()
 
     if q == '1':
-        i = int(y) - 1
+        i = int(y) - 1  # 文字の変更位置
 
         if S[i] == z:
-            continue
+            continue  # 同じ文字の場合は処理終了
 
-        b = bisect.bisect(d[S[i]], i)
-        d[S[i]].pop(b - 1)
+        # 削除 O(N)
+        b = bisect.bisect(d[S[i]], i)  # 2分法で i の出現位置を(log N)で探す
+        d[S[i]].pop(b - 1)  # 削除
 
+        # 追加 O(N) かかる？
         S[i] = z
         bisect.insort(d[z], i)
 

@@ -15,6 +15,8 @@ for _ in range(m):
 G = dic
 s, t = list(map(int, input().split()))
 
+# G[v]: 頂点vに隣接する頂点list
+# N: 頂点数
 
 dist = [-1] * (n * 3)
 que = deque([s - 1])

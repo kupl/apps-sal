@@ -2,7 +2,16 @@ from bisect import bisect_left, bisect_right, insort_right
 
 
 class SquareSkipList:
+    # SkipList の層数を 2 にした感じの何か
+    # std::multiset の代用になる
+    # 検証1 (データ構造): https://atcoder.jp/contests/arc033/submissions/7480578
+    # 検証2 (Exclusive OR Queries): https://atcoder.jp/contests/cpsco2019-s1/submissions/7482199
+    # 検証3 (Second Sum): https://atcoder.jp/contests/abc140/submissions/7482046
     def __init__(self, values=None, sorted_=False, square=1000, seed=42):
+        # values: 初期値のリスト
+        # sorted_: 初期値がソート済みであるか
+        # square: 最大データ数の平方根
+        # seed: 乱数のシード
         inf = float("inf")
         self.square = square
         if values is None:
@@ -30,9 +39,10 @@ class SquareSkipList:
             layer1.append(inf)
             self.rand_y = y
 
-    def add(self, x):
+    def add(self, x):  # 要素の追加  # O(sqrt(n))
         layer1, layer0 = self.layer1, self.layer0
 
+        # xorshift
         y = self.rand_y
         y ^= y << 13 & 0xffffffff
         y ^= y >> 17
@@ -44,13 +54,13 @@ class SquareSkipList:
             layer1.insert(idx1, x)
             layer0_idx1 = layer0[idx1]
             idx0 = bisect_right(layer0_idx1, x)
-            layer0.insert(idx1 + 1, layer0_idx1[idx0:])
+            layer0.insert(idx1 + 1, layer0_idx1[idx0:])  # layer0 は dict で管理した方が良いかもしれない
             del layer0_idx1[idx0:]
         else:
             idx1 = bisect_right(layer1, x)
             insort_right(layer0[idx1], x)
 
-    def remove(self, x):
+    def remove(self, x):  # 要素の削除  # O(sqrt(n))
         layer1, layer0 = self.layer1, self.layer0
         idx1 = bisect_left(layer1, x)
         if layer1[idx1] == x:
@@ -61,7 +71,7 @@ class SquareSkipList:
             layer0_idx1 = layer0[idx1]
             del layer0_idx1[bisect_left(layer0_idx1, x)]
 
-    def bisect_left(self, x):
+    def bisect_left(self, x):  # x 以上の最小の値を返す  O(log(n))
         layer1, layer0 = self.layer1, self.layer0
         idx1 = bisect_left(layer1, x)
         res = layer1[idx1]
@@ -77,7 +87,7 @@ class SquareSkipList:
         else:
             return res
 
-    def search_higher(self, x):
+    def search_higher(self, x):  # x を超える最小の値を返す  O(log(n))
         layer1, layer0 = self.layer1, self.layer0
         idx1 = bisect_right(layer1, x)
         layer0_idx1 = layer0[idx1]
@@ -86,16 +96,19 @@ class SquareSkipList:
             return layer1[idx1]
         return layer0_idx1[idx0]
 
-    def search_lower(self, x):
+    def search_lower(self, x):  # x 未満の最大の値を返す  O(log(n))
         layer1, layer0 = self.layer1, self.layer0
         idx1 = bisect_left(layer1, x)
         layer0_idx1 = layer0[idx1]
         idx0 = bisect_left(layer0_idx1, x)
-        if idx0 == 0:
+        if idx0 == 0:  # layer0_idx1 が空の場合とすべて x 以上の場合
             return layer1[idx1 - 1]
         return layer0_idx1[idx0 - 1]
 
     def pop(self, idx):
+        # 小さい方から idx 番目の要素を削除してその要素を返す（0-indexed）
+        # O(sqrt(n))
+        # for を回すので重め  使うなら square パラメータを大きめにするべき
         layer1, layer0 = self.layer1, self.layer0
         s = -1
         for i, l0 in enumerate(layer0):
@@ -115,6 +128,7 @@ class SquareSkipList:
 
 
 def main():
+    # 参考: https://atcoder.jp/contests/abc140/submissions/7477790
     inf = float("inf")
     n = int(input())
     p = list(map(int, input().split()))

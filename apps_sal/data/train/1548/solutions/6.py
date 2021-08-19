@@ -6,9 +6,11 @@ for _ in range(t):
     for i in range(n):
         arr_modified[i] = arr[i] + i
 
+    # calculate minRights
     minRights = [arr_modified[-1] for _ in range(n)]
     for i in range(n - 2, -1, -1):
         minRights[i] = min(arr_modified[i], minRights[i + 1])
+    # sold values
     minLeft = float('inf')
     soldValues = [-1 for _ in range(n)]
     for i in range(n):

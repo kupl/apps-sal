@@ -29,6 +29,7 @@ class UnionFindPathCompression():
             else:
                 self.parents[py] = px
                 self.size[px] += self.size[py]
+                # ランクの更新
                 if self.rank[px] == self.rank[py]:
                     self.rank[px] += 1
 

@@ -12,7 +12,7 @@ def main():
     events = []
     for _ in range(N):
         s, t, x = map(int, input().split())
-        e = Event(pos=x, start=s - x, end=t - x)
+        e = Event(pos=x, start=s - x, end=t - x)  # 時間[s-x,t-x)にpos=0にいるとpos=xで工事中
         events.append(e)
     events.sort(key=attrgetter('pos'))
 
@@ -23,6 +23,8 @@ def main():
     for e in events:
         left = bisect_left(D, e.start)
         right = bisect_left(D, e.end)
+        # Dの要素で index が [left,right) 内のものは e.pos で工事中
+        # e.pos 昇順ソートしているので, ans[idx] には工事中の最小のposが入る
         idx = left
         while idx < right:
             if ~ans[idx]:

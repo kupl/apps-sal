@@ -14,6 +14,7 @@ def bfs():
             dist[i] = dist[now] + 1
             q.put(i)
             ans[i] = now
+    # bool = False
 
 
 N, M = list(map(int, input().split()))

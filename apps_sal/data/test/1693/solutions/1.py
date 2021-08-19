@@ -18,6 +18,8 @@ for i in range(n):
     backw[i] = stack[-1][2]
 
 backw = backw[::-1]
+# print(forw)
+# print(backw)
 
 center = 0
 ans_center = 0
@@ -25,6 +27,7 @@ for i in range(n):
     if ans_center < backw[i] + forw[i] - sp[i]:
         center = i
         ans_center = backw[i] + forw[i] - sp[i]
+# print(center)
 ans = [0 for i in range(n)]
 ans[center] = sp[center]
 cur = sp[center]

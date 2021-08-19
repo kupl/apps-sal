@@ -57,4 +57,6 @@ def checkpts2(pts1, pts2):
 
 pts1 = readpts()
 pts2 = readpts()
+# print(pts1)
+# print(pts2)
 print('YES' if checkpts(pts1, pts2) or checkpts(pts2, pts1) or checkpts2(pts1, pts2) else 'NO')

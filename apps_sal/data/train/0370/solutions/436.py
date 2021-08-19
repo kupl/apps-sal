@@ -22,6 +22,7 @@ class Solution:
 
         def prime_set(n):
             for i in range(2, int(sqrt(n)) + 1):
+                # print(n, i)
                 if n % i == 0:
                     return prime_set(n // i) | set([i])
             return set([n])
@@ -30,6 +31,7 @@ class Solution:
 
         for i, num in enumerate(A):
             ps = prime_set(num)
+            # print(ps)
             for p in ps:
                 primes[p].append(i)
         print(primes)

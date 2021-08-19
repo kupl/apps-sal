@@ -1,5 +1,6 @@
 class Solution:
     def minDeletionSize(self, A: List[str]) -> int:
+        # check ascending order = comparison O(1)
 
         do_not_remove_idx = []
         for idx in range(len(A[0])):

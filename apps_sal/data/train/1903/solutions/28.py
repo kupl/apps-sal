@@ -31,6 +31,7 @@ class Solution:
         for i in range(n):
             for j in range(i):
                 heapq.heappush(h, (get_dist(i, j), i, j))
+        # print(h)
         cost = 0
         count = 0
         while h:

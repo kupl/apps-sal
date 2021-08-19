@@ -5,6 +5,7 @@ for _ in range(int(input())):
     l, f = c - r, c + r
     if a > l:
         a, b, l, f = l, f, a, b
+    # print (a,b,l,f)
 
     if l >= b:
         print(n)

@@ -9,6 +9,9 @@ def solver(n):
     n -= 3 * rounds * (rounds + 1)
     curPoint = (2 * rounds, 0)
     curRound = rounds + 1
+    # go UpRight
+    # if n >= 1:
+    #	curPoint = goUpRight()
     circle = [(goUpRight, 1), (goUpLeft, curRound - 1),
               (goLeft, curRound), (goDownLeft, curRound),
               (goDownRight, curRound), (goRight, curRound),
@@ -26,6 +29,8 @@ def solver(n):
 
 def quadraticEqPlus(a, b, c):
     return (-b + (b**2 - 4 * a * c)**0.5) / (2 * a)
+
+#print(quadraticEqPlus(3, 3, 0))
 
 
 def goUpLeft(point, steps):
@@ -53,3 +58,7 @@ def goUpRight(point, steps):
 
 
 main()
+# for n in range(21):
+#	print(solver(n))
+
+# print(solver(7))

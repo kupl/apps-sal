@@ -101,6 +101,9 @@ L = [
     ("99189178156", "1123581347")
 ]
 
+# I couldn't get my hand on a working pattern so fuck it
+# At least it's fast
+
 
 def find(a, b, n):
     start, loop = L[10 * a + b]

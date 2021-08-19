@@ -28,6 +28,8 @@ for i in reversed(list(range(n))):
         Y[i][2] += 1
     else:
         Y[i][3] += 1
+# print(X)
+# print(Y)
 c = X[n][3]
 ans = 0
 for i in range(n):

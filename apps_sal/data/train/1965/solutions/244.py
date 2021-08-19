@@ -20,6 +20,9 @@ class DSU:
 
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        # keep two union for Bob and Alice
+        # add edges to the dsu, if the two nodes are already in a union, we can delete the edge
+        # always add type3 first
         edges.sort(reverse=True)
 
         dsuA = DSU(n)
@@ -27,12 +30,15 @@ class Solution:
         res = 0
         for [t, n1, n2] in edges:
             if t == 3:
+                # handle Alice
                 if dsuA.find(n1) == dsuA.find(n2) and dsuB.find(n1) == dsuB.find(n2):
+                    # don't add the edge
                     res += 1
                 else:
                     dsuA.union(n1, n2)
                     dsuB.union(n1, n2)
             elif t == 1:
+                # Alice
                 if dsuA.find(n1) == dsuA.find(n2):
                     res += 1
                 else:

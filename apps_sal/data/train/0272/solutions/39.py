@@ -1,5 +1,9 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
+        # open_box: 有key有box
+        # close_box: 有box没key
+        # key_set: 有key没box
+        # visited
         open_box = []
         close_box = set()
         key_set = set([i for i in range(len(status)) if status[i] == 1])

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/4/13 22:05
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : A. Serval and Bus.py
 
 import math
 

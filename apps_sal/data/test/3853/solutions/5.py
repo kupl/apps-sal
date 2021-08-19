@@ -3,6 +3,8 @@ import itertools
 import string
 import sys
 
+###
+
 
 def powmod(x, p, m):
     if p <= 0:
@@ -10,6 +12,8 @@ def powmod(x, p, m):
     if p <= 1:
         return x % m
     return powmod(x * x % m, p // 2, m) * (x % m)**(p % 2) % m
+
+###
 
 
 def to_basex(num, x):
@@ -26,6 +30,8 @@ def from_basex(it, x):
         p *= x
     return ret
 
+###
+
 
 def l4(x):
     ret = 1
@@ -38,9 +44,11 @@ def l4(x):
 
 def core():
     n = int(input())
+    # print(n)
     ans = 0
     for _ in range(n):
         k, a = (int(x) for x in input().split())
+        # print(k, a)
 
         ans = max(ans, l4(a) + k)
     print(ans)

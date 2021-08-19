@@ -8,3 +8,6 @@ class Solution:
                 if (i >= coin):
                     dp[i] = min(dp[i], dp[i - coin] + 1)
         return dp[amount] if dp[amount] != float('inf') else -1
+
+# Went through Approach 2 and 3
+# Similar to Word Break

@@ -14,8 +14,11 @@ class Solution:
                 n1 = stack.pop()
 
                 n2 = n if not stack or n < stack[-1] else stack[-1]
+                # print(n1, n2)
                 _sum += n1 * n2
             stack.append(n)
+        # print(stack)
+        # print(_sum)
         while len(stack) > 1:
             n1 = stack.pop()
             n2 = stack.pop()

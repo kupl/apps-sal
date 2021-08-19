@@ -15,3 +15,5 @@ def promenade(choices):
             last_r = next(last_l, last_r)
 
     return next(last_l, last_r)
+
+    # good luck!

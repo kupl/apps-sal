@@ -5,9 +5,9 @@ def cmb(N, r, mod):
     return g1[N] * g2[r] * g2[N - r] % mod
 
 
-g1 = [1, 1]
-g2 = [1, 1]
-inverse = [0, 1]
+g1 = [1, 1]  # 元テーブル
+g2 = [1, 1]  # 逆元テーブル
+inverse = [0, 1]  # 逆元テーブル計算用テーブル
 mod = 10 ** 9 + 7
 
 n = int(input())
@@ -28,6 +28,7 @@ for i in range(n + 1):
         li[lis[i] - 1] = i
 
 for k in range(1, n + 2):
+  #     print(nCr(n+1,k,mod),nCr(left+n-right,k-1,mod))
     ans = cmb(n + 1, k, mod) - cmb(left + n - right, k - 1, mod)
     if ans < 0:
         ans += mod

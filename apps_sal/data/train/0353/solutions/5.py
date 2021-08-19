@@ -8,6 +8,7 @@ class Solution:
         for i in range(1, n):
             dp[i] = (2 * dp[i - 1]) % (1000000007)
         while l <= r:
+            # 固左动右
             while nums[l] + nums[r] > target and l <= r:
                 r -= 1
             if l <= r:

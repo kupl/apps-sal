@@ -1,5 +1,5 @@
 n, c = map(int, input().split())
-imos = [[0 for i in range(c)] for j in range(10**5 + 1)]
+imos = [[0 for i in range(c)] for j in range(10**5 + 1)]  # 1~10**5+1
 for i in range(n):
     s, t, _c = map(int, input().split())
     imos[s - 1][_c - 1] += 1

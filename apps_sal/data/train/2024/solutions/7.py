@@ -1,3 +1,4 @@
+# encoding: utf-8
 """
   长度为n的字符串，第i个位置上为O的概率为pi，否则为x
   字符串的得分为连续O的数量的平方和
@@ -14,6 +15,7 @@ sys.setrecursionlimit(10**6)
 
 
 def __starting_point():
+    # sys.stdin = open('1.txt', 'r')
     n = int(input())
     p = [float(i) for i in input().split()]
     d = [0.0 for i in range(n)]

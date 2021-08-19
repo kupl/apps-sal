@@ -47,6 +47,13 @@ class Solution:
             if find(p, v0) == find(p, v1):
                 continue
 
+            # We have two nodes u and v, u in a fully-connected component A, v in another
+            # fully-connected component B. A disjoint from B and u is partially connected
+            # to v via an edge of `edge_type`. Since we need to reach v from u by both
+            # Alice and Bob, if we can find another node, x, in A that is partially-connected
+            # to v by an edge of `needed_edge_type`, then we have edges of both types that
+            # we can use to reach v from u. (use `edge_type` from u->v, or use `needed_edge_type`
+            # from u->x->v). We can also try the same exercise with u and v swapped.
             needed_edge_type = 2 if edge_type == 1 else 2
             for pair in [(v0, v1), (v1, v0)]:
                 u, v = pair
@@ -55,6 +62,8 @@ class Solution:
                     root_x = find(p, x)
                     root_u = find(p, u)
                     if root_x == root_u:
+                        # x is in in subgraph A, same as u, AND it's connected to v via the
+                        # needed_edge_type
                         root_v = find(p, v)
                         union(p, rank, root_x, root_v)
                         union(p, rank, root_u, root_v)

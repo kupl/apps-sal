@@ -16,5 +16,6 @@ class Solution:
                     heappop(maxH)
                 while minH[0][1] < l:
                     heappop(minH)
+            # print(l, r, maxH, minH)
             ans = max(ans, r - l + 1)
         return ans

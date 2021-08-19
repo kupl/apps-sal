@@ -1,3 +1,4 @@
+# CF302B
 r = input().split(' ')
 n = int(r[0])
 m = int(r[1])

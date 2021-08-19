@@ -21,4 +21,5 @@ class Solution:
                 else:
                     b = b.replace(b[i], '0')
                     break
+        # print(a,b)
         return int(a) - int(b)

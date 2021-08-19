@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 import math
 sys.setrecursionlimit(10**6)
@@ -20,6 +21,9 @@ for i in range(n - 1):
             mod = (t - s) % f
             if mod != 0:
                 t += f - mod
+        # print(t)
         t += c
+        # print(t)
     print(t)
+    # print()
 print((0))

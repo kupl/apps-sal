@@ -92,7 +92,10 @@ class Solution:
             return m
 
         for i in range(N, 0, -1):
+            #print(groupStartWith, i - 1, arr[i-1] - 1)
             if m in removeNumber(arr[i - 1] - 1):
+                #print(groupStartWith, i - 1, arr[i-1] - 1, '=')
                 return i - 1
+            #print(groupStartWith, i - 1, arr[i-1] - 1, '-')
 
         return - 1

@@ -10,6 +10,9 @@ class Task:
 
     def getData(self):
         self.n = int(input())
+        #inFile = open('input.txt', 'r')
+        # inFile.readline().rstrip()
+        #self.childs = inFile.readline().rstrip()
 
     def solve(self):
         if self.n == 1:
@@ -42,6 +45,8 @@ class Task:
 
     def printAnswer(self):
         print(self.answer)
+        #outFile = open('output.txt', 'w')
+        # outFile.write(self.answer)
 
 
 task = Task()

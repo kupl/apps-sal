@@ -6,6 +6,7 @@ class Solution:
         :rtype: int
         """
 
+        # This works it just exceeds time limit
         characters = {}
         separators = set([])
 

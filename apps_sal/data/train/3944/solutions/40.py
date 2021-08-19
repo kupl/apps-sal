@@ -4,7 +4,7 @@ def sum_triangular_numbers(n):
 
         listado_numeros = []
 
-        while len(listado_numeros) < n:
+        while len(listado_numeros) < n:  # genera lista con los numeros hasta N
             for i in range(1, n + 1):
                 listado_numeros.append(i)
 

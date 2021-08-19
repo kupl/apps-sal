@@ -23,6 +23,7 @@ for i in range(51):
         y1 = i
     if(h[50 - i] >= n and y2 == -1):
         y2 = 50 - i
+# print(x1,x2,y1,y2)
 for i in range(4 * n + 1):
     if(l[i][0] == x1 or l[i][0] == x2):
         if(not(l[i][1] >= y1 and l[i][1] <= y2)):

@@ -31,11 +31,15 @@ def sharkovsky(a, b):
     coef_a, exp_a = decompose(a)
     coef_b, exp_b = decompose(b)
     if coef_a == 1 and coef_b == 1:
+        # Both on the final row
         return exp_b < exp_a
     if coef_a == 1 or coef_b == 1:
+        # One on the final row
         return coef_b == 1
     if exp_a != exp_b:
+        # On differing rows
         return exp_a < exp_b
     if exp_a == exp_b:
+        # On same row
         return coef_a < coef_b
     return False

@@ -1,3 +1,5 @@
+# a, bを素因数分解する。O(ルートa + ルートb)
+# 共通の素因数を見つける。O(loga + logb)
 
 a, b = list(map(int, input().split()))
 

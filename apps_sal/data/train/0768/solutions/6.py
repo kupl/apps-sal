@@ -27,4 +27,5 @@ for _ in range(int(input())):
         g[l[i]].append(i + 2)
 
     r = dfs_rec(g, 1)[1]
+    # print(g)
     print(r + 1)

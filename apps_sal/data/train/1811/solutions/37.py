@@ -9,3 +9,7 @@ class StockSpanner:
             ans += self.st.pop()[1]
         self.st.append([price, ans])
         return ans
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

@@ -8,6 +8,7 @@ from collections import deque
 from copy import deepcopy
 sys.setrecursionlimit(10**9)
 INF = float('inf')
+#MOD = 10**9 + 7
 MOD = 998244353
 F = 1e-9
 
@@ -24,6 +25,7 @@ def lint_list(n): return [lint() for _ in range(n)]
 def lcm(a, b): return a * b // math.gcd(a, b)
 
 
+#######################################################
 N, K = lint()
 S = si()
 J = {'R': 0, 'S': 1, 'P': 2}

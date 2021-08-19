@@ -11,5 +11,6 @@ class Solution:
             for j, col in enumerate(row):
                 col_start = max([0, j - K])
                 col_end = min([mat.shape[1], j + K])
+                # TODO:
                 answer[i][j] = np.sum(mat[row_start:row_end + 1, col_start:col_end + 1])
         return answer.astype(np.int)

@@ -11,6 +11,7 @@ for k in range(K):
     gap[k] = max(-1, gap[k])
 num = [0 for k in range(K)]
 for k in range(1, K):
+    # k-1,k
     num[k] = -gap[k - 1] + gap[k]
 
 

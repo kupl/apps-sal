@@ -18,6 +18,7 @@ def select_next_latch(cur_pos, buildings):
         if x_lower_bound <= cur_pos + delta_x_upper_bound:
             potiential_latch.append([x_lower_bound, cur_pos + delta_x_upper_bound, bd[2]])
 
+    # latch loc, score, height
     common_best = [cur_pos, 0, 0]
     special_best = [-1, 0, 0]
     for bd in potiential_latch:

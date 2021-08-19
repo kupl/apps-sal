@@ -5,6 +5,8 @@ item_values = list(map(int, input().split()))
 discount_values.sort()
 item_values.sort()
 item_values.reverse()
+# print(item_values)
+# print(discount_values)
 basket_size = discount_values[0]
 result = 0
 bought = 0

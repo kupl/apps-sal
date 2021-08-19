@@ -1,5 +1,6 @@
-"""
+"""#!/usr/bin/env pypy"""
 import collections
+#import random
 import heapq
 import bisect
 import math
@@ -49,9 +50,23 @@ sol2 = Solution2()
 TT = int(input())
 for test_case in range(TT):
     N, K = input().split()
+    #s = input()
+    #a = []
+    # for _ in range(int(N)):
+    #a.append([int(c) for c in input().split()])
     b = [int(c) for c in input().split()]
 
     out = sol.solve(b, int(K))
     print(str(out))
+    # print(str(out))
+
+    # out2 = sol2.solve(s)
 
 
+# for _ in range(100000):
+#     rand = [random.randrange(60) for _ in range(10)]
+#     out1 = sol.solve(rand)
+#     out2 = sol2.solve(rand)
+#     if out1 != out2:
+#         print(rand, out1, out2)
+#         break

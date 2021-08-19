@@ -7,6 +7,8 @@ class Solution:
         visited = dict()
 
         def dfs(node):
+            # if node == n  or informTime[node] == n:
+            #    return 0
 
             total = 0
             for nei in g[node]:

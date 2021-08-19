@@ -1,5 +1,5 @@
 """
-Codeforces Round 
+Codeforces Round #330 (Div. 2)
 
 Problem 595 B
 

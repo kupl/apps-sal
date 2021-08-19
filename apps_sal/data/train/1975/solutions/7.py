@@ -21,3 +21,9 @@ class CustomStack:
         else:
             beforek = list([x + val for x in self.stack[:k]])
             self.stack = beforek + self.stack[k:]
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

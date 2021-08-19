@@ -26,6 +26,7 @@ class Solution:
             return -1
         uf1, n1, uf2, n2 = DSU(n), n, DSU(n), n
         edges.sort(reverse=True, key=lambda x: x[0])
+        # t 1:alice, 2:bob, 3:both
         ans = 0
         for t, u, v in edges:
             print((n1, n2))
@@ -52,5 +53,17 @@ class Solution:
                 else:
                     ans += 1
 
+
+#             if u1 and uf1.find(u-1) != uf1.find(v-1):
+#                 n1 -= uf1.union(u-1, v-1)
+#                 can_delete = False
+
+#             if u2 and uf2.find(u-1) != uf2.find(v-1):
+#                 n2 -= uf2.union(u-1, v-1)
+#                 can_delete = False
+
+            # ans += can_delete
+        # print(uf1.p)
+        # print(uf2.p)
         print((ans, n1, n2))
         return ans if (n1 <= 1 and n2 <= 1) else -1

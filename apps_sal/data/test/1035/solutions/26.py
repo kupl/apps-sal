@@ -27,5 +27,7 @@ def prime_factorization(n):
 
 A = prime_factorization(a)
 B = prime_factorization(b)
+# print(A)
+# print(B)
 
 print((len(set(A) & set(B))))

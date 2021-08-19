@@ -14,6 +14,8 @@ class Solution:
         if len(self.route) == len(tickets) + 1:
             return self.route
 
+        # sort destination by legixal order
+        # See one case that there is destination but not in the hashmap dictionary
         dests = self.hasmap.get(start_airport)
         if dests is not None:
             for dest in sorted(dests):
@@ -23,4 +25,5 @@ class Solution:
                 if work:
                     return self.route
                 self.route.pop()
+                # add it back
                 self.hasmap[start_airport].append(dest)

@@ -43,4 +43,5 @@ class Solution:
             cnt[ba] += 1
             if cnt[m] > 0:
                 res.append(i)
+        # print(res)
         return res[-1] + 1 if res else -1

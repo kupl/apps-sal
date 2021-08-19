@@ -21,3 +21,7 @@ class StreamChecker:
         self.curs = curs
 
         return any('.' in cur for cur in curs)
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

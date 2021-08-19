@@ -4,5 +4,6 @@ def dont_give_me_five(start, end):
         if '5' in list(str(ing)):
             pass
         else:
+            # print(ing)
             rc += 1
     return rc

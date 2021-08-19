@@ -20,8 +20,10 @@ for i in range(1, len(a)):
             if A - carr[itr - 1] * itr > M:
                 A -= carr[itr - 1] * itr
                 failed += carr[itr - 1]
+                # print(A,itr,failed)
             else:
                 failed += math.ceil((A - M) / itr)
+                # print('vade',failed)
                 break
         print(failed, end=' ')
     else:

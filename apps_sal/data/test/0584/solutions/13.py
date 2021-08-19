@@ -8,6 +8,7 @@ a = [0, 0]
 gg = ['(', '_', ')']
 i = 0
 while i < n:
+    # print(i)
     if s[i] not in gg:
         y = 0
         while (i < n and (s[i] not in gg)):

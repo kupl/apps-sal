@@ -8,14 +8,14 @@ class Solution:
                 if token not in curr:
                     curr[token] = {}
                 curr = curr[token]
-            curr['
+            curr['#'] = True
 
         paths = set(folder)
         for path in folder:
             tokens = path.split('/')
             curr = trie
             for token in tokens:
-                if '
+                if '#' in curr:
                     paths.remove(path)
                     break
                 curr = curr[token]

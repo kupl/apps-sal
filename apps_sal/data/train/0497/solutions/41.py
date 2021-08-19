@@ -10,6 +10,8 @@ class Solution:
         k = self.floor(endtime_ith, end)
         res = 0
         if k >= 0:
+            # .......... floor_start(boundary) ....... floor_end
+            #     [start                        end]   <- need check
             floor_ith = endtime_ith[k][1]
             boundary = startTime[floor_ith]
             while k >= 0:

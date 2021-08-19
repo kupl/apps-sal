@@ -18,4 +18,5 @@ class Solution:
                 j += 1
                 curr = B * j
         res = (res + curr) % md
+        # print(i,j,n1,n2,np)
         return res

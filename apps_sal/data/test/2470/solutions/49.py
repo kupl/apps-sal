@@ -32,4 +32,8 @@ class Solution:
                     dp[i][j][k] = result
             return dp[i][j][k]
         result = solve(0, 0, 0)
+        # for i in range(N):
+        #     for j in range(M):
+        #         for k in [0, 1]:
+        #             print(dp[i][j][k], i, j, k)
         return result if result <= N else -1

@@ -5,3 +5,4 @@ def args_count(*args, **kwargs):
     for kwarg in kwargs:
         count += 1
     return count
+    # Create a function args_count, that returns count of passed argumentsfor

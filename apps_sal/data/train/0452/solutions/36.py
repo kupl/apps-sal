@@ -3,8 +3,9 @@ class Solution:
         if len(J) < d:
             return -1
 
-        dp = {}
+        dp = {}  # (index of day, index of the last finished job)
         for i, job in enumerate(J):
+            # the base case, all jobs need to be finish in one day
             dp[0, i] = max(dp.get((0, i - 1), 0), job)
 
         for i in range(1, d):

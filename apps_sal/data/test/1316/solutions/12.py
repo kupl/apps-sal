@@ -9,6 +9,7 @@ def kmp(pat, txt):
     N = len(txt)
     lps = [0] * M
     j = 0
+    # Calculo de lps, prefifo propio mas largo que tambien es sufijo de pat[0:i]
     while i < M:
         if pat[i] == pat[leng]:
             leng += 1

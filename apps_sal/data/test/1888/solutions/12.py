@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 n, m = list(map(int, input().split()))
 abc = [list(map(int, input().split())) for i in range(m)]

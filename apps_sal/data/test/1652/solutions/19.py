@@ -12,6 +12,7 @@ while len(s) > 0:
     else:
         isYES = False
         break
+    # print(s)
 if isYES:
     print('YES')
 else:

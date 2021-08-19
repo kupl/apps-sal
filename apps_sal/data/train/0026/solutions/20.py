@@ -1,3 +1,6 @@
+#from sys import stdin, stdout, setrecursionlimit
+#input = stdin.readline
+#print = stdout.write
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))
     ans = 'NO'

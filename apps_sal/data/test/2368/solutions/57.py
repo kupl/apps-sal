@@ -13,6 +13,7 @@ def read_intgrid(h):
 
 
 def main():
+    # input data
     n, m = read_ints()
     A = read_ints()
     B = read_ints()
@@ -23,6 +24,7 @@ def main():
         G[c].append(d)
         G[d].append(c)
 
+    # solve
     ans = 1
     vis = [0] * n
 
@@ -40,6 +42,7 @@ def main():
                 tmp2 += B[y]
                 vis[y] = 1
                 queue.append(y)
+        # print(v,tmp1,tmp2)
         if tmp1 == tmp2:
             return True
         else:

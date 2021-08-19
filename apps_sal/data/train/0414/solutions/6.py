@@ -6,6 +6,7 @@ class Solution:
         count = 0
 
         while True:
+            # print(arr)
             rounds += 1
             if k == 1 and arr[0] < arr[1] or max(arr[1:k + 1 - count]) > arr[0]:
                 i = 1

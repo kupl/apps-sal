@@ -1,3 +1,4 @@
+# cook your dish here
 def get_input():
     s = []
     a, b, c = list(map(int, input().split()))

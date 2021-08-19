@@ -6,9 +6,9 @@ class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         ls = []
 
-        waiting = 0
-        gondola = deque()
-        curr = 0
+        waiting = 0  # 라인 기다리는 사람
+        gondola = deque()  # 곤돌라 que
+        curr = 0  # 현재 곤돌라에 타고있는 사람
         days = 0
         for i, customer in enumerate(customers):
             waiting += customer
@@ -20,6 +20,7 @@ class Solution:
                 waiting = 0
             curr += on_board
 
+            # profit
             ls.append(curr * boardingCost - (days + 1) * runningCost)
             days += 1
         while waiting > 0:
@@ -31,6 +32,7 @@ class Solution:
                 waiting = 0
             curr += on_board
 
+            # profit
             ls.append(curr * boardingCost - (days + 1) * runningCost)
             days += 1
 

@@ -4,6 +4,7 @@ ans = ""
 t = 1
 while s != f and t1 < m:
     t, l, r = map(int, input().split())
+    # print(ans)
     while t != c:
         if s < f:
             ans += "R"

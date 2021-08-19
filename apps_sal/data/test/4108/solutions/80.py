@@ -1,3 +1,11 @@
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
+# from collections import deque
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(S, T):
     N = len(S)
     S_check = [0] * N
@@ -26,6 +34,13 @@ def __starting_point():
     S = input()
     T = input()
     solve(S, T)
+
+    # # test
+    # from random import randint
+    # from func import random_str
+    # S = 'abcdefghijklmnopqrstuvwxyz' * (2 * 10 ** 5 // 26 + 1)
+    # T = 'abcdefghijklmnopqrstuvwxyz' * (2 * 10 ** 5 // 26 + 1)
+    # solve(S, T)
 
 
 __starting_point()

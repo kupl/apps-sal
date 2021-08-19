@@ -1,3 +1,4 @@
+# coding: utf-8
 import re
 import math
 from collections import defaultdict
@@ -13,8 +14,10 @@ import queue
 import sys
 import datetime
 from functools import lru_cache
+# @lru_cache(maxsize=None)
 readline = sys.stdin.readline
 sys.setrecursionlimit(2000000)
+#import numpy as np
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 mod = int(10**9 + 7)
 inf = int(10**20)
@@ -74,7 +77,7 @@ class union_find():
         return len(S)
 
 
-def ispow(a, b):
+def ispow(a, b):  # aはbの累乗数か
     now = b
     while now < a:
         now *= b
@@ -203,16 +206,19 @@ def pm(x):
 
 def inputintlist():
     return list(map(int, input().split()))
+######################################################################################################
 
 
 H, W = inputintlist()
 ans = inf
 for a in range(1, H):
     A = a * W
+    # 並行に分割
     B = ((H - a) // 2) * W
     C = H * W - A - B
     ans = min(ans, max([A, B, C]) - min([A, B, C]))
 
+    # 垂直に分割
     B = (W // 2) * (H - a)
     C = H * W - A - B
     ans = min(ans, max([A, B, C]) - min([A, B, C]))
@@ -220,10 +226,12 @@ for a in range(1, H):
 H, W = W, H
 for a in range(1, H):
     A = a * W
+    # 並行に分割
     B = ((H - a) // 2) * W
     C = H * W - A - B
     ans = min(ans, max([A, B, C]) - min([A, B, C]))
 
+    # 垂直に分割
     B = (W // 2) * (H - a)
     C = H * W - A - B
     ans = min(ans, max([A, B, C]) - min([A, B, C]))

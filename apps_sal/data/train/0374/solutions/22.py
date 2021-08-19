@@ -16,8 +16,10 @@ class Solution:
         def perform_dp():
             dp = [[sys.maxsize // 2] * n for _ in range(1 << n)]
             parent = [[-1] * n for _ in range(1 << n)]
+            # init
             for i in range(n):
                 dp[1 << i][i] = len(A[i])
+            #
             for s in range(1 << n):
                 for j in range(n):
                     if not s & (1 << j):

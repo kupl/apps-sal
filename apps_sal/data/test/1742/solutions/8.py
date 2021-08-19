@@ -13,6 +13,8 @@ for i in range(n - 2, -1, -1):
     for j in gr[p[i] - 1]:
         if j in cant:
             cnt += 1
+    # print(p[i], gr[p[i] - 1], cnt)
     if cnt != len(cant):
         cant.add(p[i] - 1)
+# print(cant)
 print(n - len(cant))

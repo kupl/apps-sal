@@ -3,11 +3,11 @@ a = []
 for _ in range(h):
     a.append(input())
 for _ in range(w + 2):
-    print("
+    print("#", end="")
 print()
 for i in range(h):
-    print("
+    print("#", end="")
     print(a[i], end="")
-    print("
+    print("#")
 for _ in range(w + 2):
-    print("
+    print("#", end="")

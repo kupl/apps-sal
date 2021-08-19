@@ -1,8 +1,10 @@
+# 棒の長さをリストに取得する
 n = int(input())
 l_list = list(map(int, input().split()))
 
 l_sorted = sorted(l_list, reverse=True)
 
+# 三角形の成立条件を満たす3辺の組み合わせをカウントする
 combination_count = 0
 for i in range(n - 2):
     l1 = l_sorted[i]

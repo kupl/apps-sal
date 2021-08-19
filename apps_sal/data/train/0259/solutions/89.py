@@ -28,11 +28,13 @@ class Solution:
         mid = 0
         j = max(l)
         p = -1
+        # print(i, j)
 
         while(i < j):
 
             mid = (i + j) // 2
             x = divisor(l, mid)
+            # print('mid',x, mid)
             if x < t:
                 j = mid
             elif x == t:
@@ -44,6 +46,7 @@ class Solution:
                 break
 
         while(1):
+            # print(mid)
             x = divisor(l, mid - 1)
             if x <= t:
                 mid -= 1

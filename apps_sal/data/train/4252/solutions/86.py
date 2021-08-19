@@ -1,4 +1,5 @@
 def merge_arrays(first, second):
+    # your code here
     a = first + second
     res = []
     for x in a:

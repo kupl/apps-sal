@@ -15,7 +15,7 @@ class Solution:
             9: (4, 2)
         }
 
-        m = {}
+        m = {}  # (position, num)
 
         def count(start, n):
 

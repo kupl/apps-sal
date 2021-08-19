@@ -13,6 +13,7 @@ def __starting_point():
             for aa in d[s[0]]:
                 if len(aa + s[1:]) == n:
                     ans += 1
+                    # res.append(aa+s[1:])   #if problem is to find string
                 elif len(aa + s[1:]) > n:
                     continue
                 else:
@@ -27,16 +28,18 @@ def __starting_point():
         else:
             d[bi] = [ai]
     print(bazinga('a'))
+    # print(len(set(res)))
 
 
 '''
     A = input()
-    stack = []      
+    stack = []      #Real Stack
     Graph = {
         ')':'('
         }
     count = 0
     def black(A):
+        #p for possibility
         stak =[]
         for e in A:
             if e in ['(']:
@@ -45,13 +48,14 @@ def __starting_point():
                 if stak==[] or Graph[e]!=stak[-1]:
                     p=False
                 else:
-                    stak.pop(len(stak)-1)     
+                    stak.pop(len(stak)-1)     #pop last 
         if len(stak) ==0:
             p=True
         else:
             p=False
         if not p:   return [0]
         else:
+            #stak is not empty
             stak = []
             count = []
             for e in range(len(A)):

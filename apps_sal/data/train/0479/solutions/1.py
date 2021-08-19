@@ -13,7 +13,7 @@ class Solution:
 
         for row in range(rows):
             last_pos = 0
-            for brick in wall[row][:-1]:
+            for brick in wall[row][:-1]:  # -1 to ignore end of last brick
                 end = last_pos + brick
                 if end not in x_to_edge_dict:
                     x_to_edge_dict[end] = 1
@@ -21,6 +21,7 @@ class Solution:
                     x_to_edge_dict[end] += 1
                 last_pos = end
 
+        # print(x_to_edge_dict)
         if x_to_edge_dict == {}:
             return rows
         else:

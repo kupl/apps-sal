@@ -1,4 +1,5 @@
 a = list(map(int, input().split()))
+# b = list(map(int,input().split()))
 
 x = 0
 count = 0

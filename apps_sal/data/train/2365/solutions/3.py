@@ -3,6 +3,7 @@ from itertools import chain
 
 
 def dfs(n, r, hint_sets, count, removed, result):
+    # print(n, r, hint_sets, count, removed, result)
     if len(result) == n - 1:
         last = (set(range(1, n + 1)) - set(result)).pop()
         result.append(last)
@@ -23,6 +24,8 @@ def dfs(n, r, hint_sets, count, removed, result):
             next_r.append(q)
     if not next_r:
         return False
+
+    # print(r, next_r, result)
 
     if len(next_r) == 2:
         nr = -1

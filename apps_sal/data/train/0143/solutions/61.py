@@ -1,5 +1,6 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
+        # max contiguous sum with 2 different types of elements
 
         start = 0
         end = 0

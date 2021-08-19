@@ -7,7 +7,7 @@ n = int(input())
 p = [int(x) for x in input().split()]
 
 
-class SegmentTree:
+class SegmentTree:  # 0-indexed
     def __init__(self, array, operation=min, identity=10**30):
         self.identity = identity
         self.n = len(array)
@@ -29,7 +29,7 @@ class SegmentTree:
             k = (k - 1) // 2
             self.tree[k] = self.opr(self.tree[k * 2 + 1], self.tree[k * 2 + 2])
 
-    def query(self, p, q):
+    def query(self, p, q):  # [p,q)
         if q <= p:
             print("Oops!  That was no valid number.  Try again...")
             return

@@ -1,3 +1,4 @@
+# cook your dish here
 for u in range(int(input())):
     s = input()
     a = s

@@ -1,4 +1,5 @@
 def cookie(x):
+    # Good Luck
     print(x, type(x))
     if isinstance(x, str):
         return 'Who ate the last cookie? It was Zach!'

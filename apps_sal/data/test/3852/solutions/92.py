@@ -1,13 +1,18 @@
+# 設定
 from collections import defaultdict
 import sys
 input = sys.stdin.buffer.readline
 
+# ライブラリインポート
 
 con = 10 ** 9 + 7
+# 入力受け取り
 
 
 def getlist():
     return list(map(int, input().split()))
+
+# 処理内容
 
 
 def main():

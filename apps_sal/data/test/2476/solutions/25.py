@@ -30,6 +30,7 @@ for k in range(1, n + 1):
     if k > m:
         print((0))
         continue
+    # にぶたん
     ok, ng = -1, n // k + 1
     while (abs(ok - ng) > 1):
         mid = (ok + ng) // 2

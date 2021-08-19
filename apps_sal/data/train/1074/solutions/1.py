@@ -14,7 +14,9 @@ for t in range(test):
             use.append(log)
 
     use = list(set(use))
+    # print(use)
 
+    # make windows
     full = 0
     half = 0
 

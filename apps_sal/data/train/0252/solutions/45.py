@@ -1,3 +1,4 @@
+# 1326. Minimum Number of Taps to Open to Water a Garden
 
 def redundant(a, b):
     (al, ar), (bl, br) = a, b

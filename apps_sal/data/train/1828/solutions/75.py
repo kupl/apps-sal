@@ -6,6 +6,7 @@ class Solution:
         for k, v in c.items():
             heapq.heappush(heap, (-v, k))
         while heap:
+            # print(heap)
             most, d1 = heapq.heappop(heap)
             if ans and ans[-1] == d1:
                 more, d2 = heapq.heappop(heap)
@@ -17,4 +18,5 @@ class Solution:
             ans.append(d1)
             if most < -1:
                 heapq.heappush(heap, (most + 1, d1))
+        # print('done')
         return ans

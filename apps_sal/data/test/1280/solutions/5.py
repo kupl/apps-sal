@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -31,9 +32,11 @@ def solve(S, B, K):
             if B[ch]:
                 k += 1
             if k > K:
+                # print(i, j, S[i: j+1])
                 break
             h += (ord(ch) - ord('a') + 1) * pow[i - j]
             h %= MOD
+            # print(S[i: j + 1], h)
             s.add(h)
     return len(s)
 

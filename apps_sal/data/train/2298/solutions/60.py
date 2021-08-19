@@ -2,6 +2,7 @@ def getlist():
     return list(map(int, input().split()))
 
 
+# 受け取り
 N, T = getlist()
 A = getlist()
 m = A[0]

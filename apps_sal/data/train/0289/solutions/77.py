@@ -2,6 +2,7 @@ class Solution:
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         N = len(A)
 
+        # generate prefix sum array
         prefix = [0] * (N + 1)
         for i in range(1, N + 1):
             prefix[i] = prefix[i - 1] + A[i - 1]

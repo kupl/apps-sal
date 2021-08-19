@@ -4,6 +4,7 @@ class Solution:
 
         @lru_cache(None)
         def dp(curr, fuel):
+            # print(curr,fuel)
             nonlocal mod
             if fuel < 0:
                 return 0
@@ -18,3 +19,4 @@ class Solution:
                 ans += dp(i, fuel - abs(locations[i] - locations[curr]))
             return ans
         return dp(start, fuel) % mod
+        # return ans

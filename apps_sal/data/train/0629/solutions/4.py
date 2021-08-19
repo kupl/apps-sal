@@ -1,3 +1,4 @@
+# cook your dish here
 test = int(input())
 for _ in range(test):
     r, b, g, m = map(int, input().split())

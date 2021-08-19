@@ -11,7 +11,7 @@ def powmod(x, n, mod):
             x = x ** 2 % mod
             n = n // 2 % mod
 
-    return K * x
+    return K * x  # 指数を割り続け n が 1 に至ったら終了
 
 
 L = input()

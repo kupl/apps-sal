@@ -5,6 +5,9 @@ n, m, k, x, y = list(map(int, input().split()))
 if n != 1:
     full_rounds = k // (2 * (n - 2) * m + 2 * m)
 
+    # print(full_rounds)
+    #print(2 * full_rounds)
+
     k %= (2 * (n - 2) * m + 2 * m)
 
     A = [[0 for j in range(m)] for i in range(n)]
@@ -13,6 +16,7 @@ if n != 1:
     col = 0
 
     while k != 0 and row < n and col < m:
+        #print(str(row) + " " + str(col))
         A[row][col] += 1
         k -= 1
         col += 1
@@ -23,6 +27,7 @@ if n != 1:
     row = n - 2
     col = 0
     while k != 0:
+        #print(str(row) + " " + str(col))
         A[row][col] += 1
         k -= 1
         col += 1

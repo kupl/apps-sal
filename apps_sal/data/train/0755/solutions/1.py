@@ -30,4 +30,5 @@ gcd = find_gcd(num1, num2)
 for i in range(2, len(l2)):
     gcd = find_gcd(gcd, l2[i])
 
+# print(gcd)
 print_factors(gcd)

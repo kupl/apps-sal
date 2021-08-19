@@ -9,6 +9,7 @@ class Solution:
 
         for i in range(1, d + 1):
             for j in range(i, min(i * f, target) + 1):
+                # to ensure j-k >=0 means, k <=j, 至多为j,min(j, f)
                 for k in range(1, min(j, f) + 1):
                     dp[i][j] += dp[i - 1][j - k]
 

@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
+# import random
 import sys
 from collections import Counter, defaultdict, deque
 from decimal import ROUND_CEILING, ROUND_HALF_UP, Decimal
@@ -54,6 +56,7 @@ def mt(f):
     return wrap
 
 
+# @mt
 def slv(N, AB):
 
     memo = [0, AB[0][1], AB[0][1] * 2]
@@ -78,6 +81,10 @@ def main():
         N = read_int()
         AB = [read_int_n() for _ in range(N)]
         print(slv(N, AB))
+
+    # N = 100
+    # AB = [[1000000000, 1000000000] for _ in range(N)]
+    # print(slv(N, AB))
 
 
 def __starting_point():

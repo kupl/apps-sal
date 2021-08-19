@@ -1,7 +1,9 @@
 def is_anagram(a_str, b_str):
 
+    # Check same number of letters
     if len(a_str) == len(b_str):
 
+        # Check letters used same number of times
         a_list = list(a_str.lower())
         b_list = list(b_str.lower())
 

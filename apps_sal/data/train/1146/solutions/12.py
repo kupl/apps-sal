@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 n, d = map(int, input().split())
 l = []
 for i in range(n):

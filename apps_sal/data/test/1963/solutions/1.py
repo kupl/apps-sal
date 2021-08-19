@@ -162,6 +162,7 @@ if s in d2:
 else:
     d2.update({n - 1 - s: e - s - 1})
 ans = 0
+# print(d1,d2)
 for j in d1:
     if j in d2:
         if 0 <= j + d1[j] < n and 0 <= j - d2[j] < n and 0 <= j < n and s2.query(j, j + d1[j]) == s2.query(j - d2[j], j):

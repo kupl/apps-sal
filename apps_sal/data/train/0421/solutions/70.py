@@ -19,12 +19,17 @@ class Solution:
         index = {}
         for char in set(s):
             index[char] = [ic for ic, cc in enumerate(s) if cc == char]
+#        print(index)
+#        return 'a'
         maxchar = max(index.keys())
         front = analize(index[maxchar])
         curbest = ''
+#        print(front,len(s))
         while front != []:
             curbest = curbest + s[front[0][0]] * front[0][1]
             nxt = [s[u[0] + u[1]] for u in front if u[0] + u[1] < len(s)]
+#            print(front,curbest,nxt)
+#            return 'a'
             if nxt != []:
                 maxnxt = max(nxt)
                 front = [(u[0] + u[1], 1) for u in front if u[0] + u[1] < len(s) and s[u[0] + u[1]] == maxnxt]

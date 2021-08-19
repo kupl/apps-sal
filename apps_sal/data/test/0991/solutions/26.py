@@ -13,6 +13,7 @@ for i in range(M):
     Us[i] -= 1
     Vs[i] -= 1
 
+# ---
 V = {}
 Ns = max(As) * N
 Nv = N * (Ns + 1)
@@ -29,26 +30,31 @@ data = []
 if S > Ns:
     S = Ns
 
+# U <-> V
 for _ in range(M):
     u = Us.pop()
     v = Vs.pop()
     a = As.pop()
     b = Bs.pop()
-    for i in range(Ns + 1):
+    #
+    for i in range(Ns + 1):  # i = 0,..,Ns
         ns_s = Ns - i
         ns_g = ns_s - a
         if ns_g >= 0:
+            # U -> V
             row.append(V[(u, ns_s)])
             col.append(V[(v, ns_g)])
             data.append(b)
+            # V -> U
             row.append(V[(v, ns_s)])
             col.append(V[(u, ns_g)])
             data.append(b)
 
+# -----
 
 for i in range(N):
     c, d = map(int, input().split())
-    for j in range(Ns):
+    for j in range(Ns):  # j = 0,...,Ns-1
         ns_s = j
         ns_g = j + c
         if ns_g > Ns:

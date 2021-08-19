@@ -1,5 +1,5 @@
 from sys import stdin, stdout
-for t in range(1):
+for t in range(1):  # int(stdin.readline())):
     n = int(stdin.readline())
     a = list(map(int, stdin.readline().split()))
     dp = [[0 for i in range(n)] for _ in range(n)]

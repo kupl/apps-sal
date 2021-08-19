@@ -1,3 +1,4 @@
+# cook your dish here
 from sys import stdin, stdout
 t = int(stdin.readline())
 while(t):
@@ -11,6 +12,7 @@ while(t):
     stack = []
     pos = -1
     for j in range(len(string) - 1, -1, -1):
+        # print(string[j])
         if(string[j] == ')'):
             stack.append(j)
             l[j + 1] = pos
@@ -22,5 +24,6 @@ while(t):
             else:
                 l[j + 1] = -1
                 pos = l[j + 1]
+    # print(l)
     for item in a:
         print(l[item])

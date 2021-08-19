@@ -1,5 +1,6 @@
 import sys
 lines = sys.stdin.readlines()
+# nums = lists(map(int, lines[0].strip().split(" ")))
 T = int(lines[0].strip())
 for t in range(T):
     (n, k) = list(map(int, lines[2 * t + 1].strip().split(" ")))

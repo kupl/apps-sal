@@ -1,3 +1,4 @@
+# cook your dish here
 n = input()
 if(len(n) <= 3):
     print(len(n))

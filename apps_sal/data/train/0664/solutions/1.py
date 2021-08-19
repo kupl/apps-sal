@@ -1,3 +1,5 @@
+# cook your dish here
+# copy from all submission only for learn
 MOD = 998244353
 
 fball = [[0] * 101 for _ in range(101)]

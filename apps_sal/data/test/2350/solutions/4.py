@@ -23,6 +23,14 @@ def srlinput():
 
 
 def main():
+    #n = int(sys.stdin.readline().strip())
+    #n = iinput()
+    #n, k = rinput()
+    #n, m = rinput()
+    #n, m, k = rinput()
+    #n, k, m = rinput()
+    #q = srlinput()
+    #s = input()
 
     x, y, x1, y1 = rinput()
     print(1 + (x - x1) * (y - y1))

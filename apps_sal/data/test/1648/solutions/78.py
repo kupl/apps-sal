@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from functools import lru_cache, reduce
 from bisect import bisect_left, bisect_right
 import random
@@ -7,15 +8,22 @@ import sys
 from collections import deque, defaultdict, namedtuple
 import heapq
 from math import sqrt, factorial, gcd, ceil, atan, pi
-def input(): return sys.stdin.readline()[:-1]
+def input(): return sys.stdin.readline()[:-1]  # warning not \n
 
 
+# def input(): return sys.stdin.buffer.readline()[:-1] # warning bytes
+# def input(): return sys.stdin.buffer.readline().strip() # warning bytes
+# def input(): return sys.stdin.buffer.readline().decode('utf-8')
+# string.ascii_lowercase
 MOD = int(1e9) + 7
 INF = float('inf')
+
+# sys.setrecursionlimit(int(1e6))
 
 
 class Combination:
     def __init__(self, n_max, mod=10 ** 9 + 7):
+        # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -39,6 +47,7 @@ class Combination:
 
 
 def solve():
+    # n = int(input())
     total, blue = [int(x) for x in input().split()]
     red = total - blue
 
@@ -60,6 +69,7 @@ def solve():
 
 
 T = 1
+# T = int(input())
 for case in range(1, T + 1):
     ans = solve()
 

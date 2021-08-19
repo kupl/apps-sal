@@ -13,6 +13,8 @@ for _ in range(t):
     lower.sort(key=lambda x: x[0], reverse=True)
     upper.sort(key=lambda x: x[0])
 
+    #print(lower, upper)
+
     dell = [0] * n
 
     for i in range(n):

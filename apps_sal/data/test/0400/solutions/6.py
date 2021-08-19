@@ -15,6 +15,7 @@ while k > 0 and len(left):
         break
     k -= w[0]
     skills[w[1]] += w[0]
+# Every skill must be a multiple of 10 by now
 
 for i in range(n):
     t = min(k, (100 - skills[i]))

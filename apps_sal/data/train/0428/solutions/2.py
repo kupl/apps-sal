@@ -11,8 +11,11 @@ class Solution:
             for j in range(n):
                 if grid[i][j] == '@':
                     start_x, start_y = i, j
+                # elif grid[i][j].islower():
                 elif grid[i][j] in 'abcdef':
                     target_keys |= 1 << (ord(grid[i][j]) - ord('a'))
+                    # final_keys <<= 1
+                    # final_keys |= 1
 
         pq = [(0, 0, start_x, start_y)]
         visited = set((0, start_x, start_y))
@@ -26,8 +29,8 @@ class Solution:
             for delta_x, delta_y in self.DIR:
                 next_x, next_y = x + delta_x, y + delta_y
 
-                if not self.inbound(grid, next_x, next_y) or grid[next_x][next_y] == '
-                continue
+                if not self.inbound(grid, next_x, next_y) or grid[next_x][next_y] == '#':
+                    continue
 
                 if grid[next_x][next_y] in 'ABCDEF':
                     if (curr_keys >> (ord(grid[next_x][next_y]) - ord('A'))) & 1:
@@ -36,7 +39,7 @@ class Solution:
                         continue
                 elif grid[next_x][next_y] in 'abcdef':
                     next_keys = curr_keys | (1 << (ord(grid[next_x][next_y]) - ord('a')))
-                else:
+                else:  # the next location is @ or .
                     next_keys = curr_keys
 
                 if (next_keys, next_x, next_y) in visited:

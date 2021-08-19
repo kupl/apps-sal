@@ -22,8 +22,12 @@ for tests in range(t):
 
     Y.append(1)
 
+    # print(Y)
+    # print(B)
+
     ANS = 0
     for b in B:
+        # print(b,Y)
         if Y[b - 1] == 1 and Y[b + 1] == 1:
             print(0)
             break

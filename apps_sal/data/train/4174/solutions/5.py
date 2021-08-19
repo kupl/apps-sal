@@ -1,8 +1,8 @@
 def smallest(n):
     previous = 1
     for i in range(1, n + 1):
-        previous = mmc(previous, i)
-        previous = int(previous)
+        previous = mmc(previous, i)  # mmc stands for least common multiple
+        previous = int(previous)  # the mmc function returns float
     return previous
 
 

@@ -8,6 +8,14 @@ def pegaInput():
 
 a = [pegaInput() for i in range(4)]
 
+# Possibilidades testadas:
+#	e, ou, xor
+#	ou, e, xor
+#	xor, ou, e
+#	e, xor, ou
+#	ou, xor, e
+#	xor, e, ou
+
 
 def xor(x, y):
     return x & y

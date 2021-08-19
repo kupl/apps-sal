@@ -7,6 +7,7 @@ pts = []
 for i, q in enumerate(a):
     i = i + 1
     if q == 0:
+        # no targets
         pass
     elif q == 1:
         if twos:

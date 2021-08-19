@@ -6,12 +6,16 @@ class Solution:
         mini = float('inf')
         maxi = float('-inf')
         while end <= len(nums):
+            # step 1, check if the min and max has changed?
+            # In this step we disgarded the first element, and added the last element
             mini = min(nums[start:end])
             maxi = max(nums[start:end])
             if abs(mini - maxi) > limit:
                 start += 1
                 end += 1
             else:
+                # step2, the current condition is satisfied, explore the next element until
+                # the limit is broken
                 end += 1
                 while end <= len(nums):
                     mini = min(nums[end - 1], mini)

@@ -1,4 +1,5 @@
 
+# -*- coding: utf-8 -*-
 import sys
 
 n = int(sys.stdin.readline().strip())

@@ -1,6 +1,7 @@
 n = int(input())
 a = [int(i) for i in input().split()]
 
+#a_set = set(a)
 prefix = dict()
 suffix = dict()
 for i in range(n):

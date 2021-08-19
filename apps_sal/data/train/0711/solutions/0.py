@@ -31,8 +31,10 @@ def getSolutionBitMaps(s):
     out = []
     sP = convertToParitys(s)
     if sP % 2:
-        sP -= 1
+        sP -= 1  # to remove the '?' parity
+    # even case -
     out.append(sP)
+    # odd cases - need to xor sP with 1 + 2**n n = 1 to 26 inc to flip ? bit and each of the others
     for n in range(1, 27):
         out.append(sP ^ (1 + 2**n))
     return out
@@ -48,7 +50,7 @@ def getLeadingSubStringBitMapCounts(s):
     keys = '?abcdefghijklmnopqrstuvwxyz'
     paritys = {c: 0 for c in keys}
     values = {c: 2**i for i, c in enumerate(keys)}
-    out[bM] = out.setdefault(bM, 0) + 1
+    out[bM] = out.setdefault(bM, 0) + 1  # add the null substring
     bMis = []
     i = 0
     bMis = [0]
@@ -68,14 +70,19 @@ def getLeadingSubStringBitMapCounts(s):
 def solve(s):
     out = 0
     bMjCounts, bMis = getLeadingSubStringBitMapCounts(s)
+    # print('bMjCounts')
+    # print(bMjCounts)
     solutions = getSolutionBitMaps(s)
+    # print('solutions')
+    # print(solutions)
     for bMi in bMis:
         for bMs in solutions:
             if bMs ^ bMi in bMjCounts:
                 out += bMjCounts[bMs ^ bMi]
+                # print(i,bMi,bMs,bMs^bMi,bMjCounts[bMs^bMi])
     if 0 in solutions:
-        out -= len(s)
-    out //= 2
+        out -= len(s)  # remove all null substrings
+    out //= 2  # since j may be less that i each substring is counted twice
     return out
 
 

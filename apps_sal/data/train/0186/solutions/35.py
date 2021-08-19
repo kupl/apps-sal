@@ -15,6 +15,7 @@ class Solution:
         return str(max(map(int, ans))) if ans else '0'
 
     def largestNumber(self, cost: List[int], target: int) -> str:
+        # self.d: cost -> digit, same cost always prefer larger digit
         self.d = {}
         for i, x in enumerate(cost):
             self.d[x] = str(i + 1)

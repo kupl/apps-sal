@@ -7,6 +7,7 @@ class DisjointSet:
         self.parent = [i for i in range(n)]
 
     def find(self, x):
+        # Does path compression as well
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
 

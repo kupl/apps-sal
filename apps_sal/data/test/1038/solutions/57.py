@@ -16,6 +16,7 @@ if B % 2 == 0:
 b += 1
 
 t = (b - a) // 2
+#print(AA, b, t)
 if t % 2 == 0:
     print((AA ^ BB))
 else:

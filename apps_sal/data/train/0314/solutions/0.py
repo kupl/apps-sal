@@ -1,5 +1,6 @@
 class Solution:
     def numSub(self, s: str) -> int:
+        # 10/6/20
         dic = collections.defaultdict(int)
 
         n = len(s)

@@ -25,6 +25,17 @@ def modify(string, want=4):
     while len(string) < want:
         string = '0' + string
     return string
+    # print(line)
+    # res = ""
+    # otherblocks = 0
+    # sawprev = False
+    # for c in line:
+    #     if c != ':' and sawprev == False:
+    #         otherblocks+=1
+    #         sawprev = True
+    #     if c == ':':
+    #         sawprev = False
+    # print(otherblocks)
 
 
 if sys.hexversion == 50594544:

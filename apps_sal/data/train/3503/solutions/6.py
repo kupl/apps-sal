@@ -1,4 +1,4 @@
-def sum_dig_pow(a, b):
+def sum_dig_pow(a, b):  # range(a, b) will be studied by the function
     lis = []
     for i in range(a, b + 1):
         temp = str(i)

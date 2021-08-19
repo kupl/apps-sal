@@ -33,13 +33,18 @@ class Solution:
         union_list, count_list = [i for i in range(len(A))], [0] * (len(A))
         num_to_idx_dict = dict(list(zip(A, list(range(len(A))))))
 
-        prime_to_nums_dict = self.get_prime_numbers(num_to_idx_dict, max_num)
+        # get prime numbers
+        prime_to_nums_dict = self.get_prime_numbers(num_to_idx_dict, max_num)  # prime numbers of A's numbers
 
+        # linking numbers having the same prime
         for prime, nums in list(prime_to_nums_dict.items()):
             for i in range(len(nums) - 1):
                 self.union(union_list, nums[i + 1], nums[i])
 
+        # counting numbers in a component
         for i, num in enumerate(A):
             count_list[self.find(union_list, i)] += 1
 
         return max(count_list)
+# Time complexity: O(n * p) where n is the maximum number of A and p is the number of prime numbers less than n
+# Space complexity: O(n + p) we can ignore p

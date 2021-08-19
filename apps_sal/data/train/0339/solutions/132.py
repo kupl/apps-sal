@@ -10,6 +10,7 @@ class Solution:
                                    self.fact(n - 2)))
 
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+        # similar to the 2 sum problem- keep a dictionary for each list
         d1 = {}
         for n in nums1:
             if n not in d1:

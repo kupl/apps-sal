@@ -1,3 +1,4 @@
+# python 3.3
 
 dig = {'0': 'O-|-OOOO',
        '1': 'O-|O-OOO',

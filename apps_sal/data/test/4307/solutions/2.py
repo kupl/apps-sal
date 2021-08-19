@@ -1,3 +1,4 @@
+# import sympy
 
 def make_divisors(n):
     lower_divisors, upper_divisors = [], []
@@ -15,6 +16,7 @@ n = int(input())
 count = 0
 for i in range(1, n + 1):
     if i % 2 == 1:
+        # if len(sympy.divisors(i)) == 8:
         if len(make_divisors(i)) == 8:
             count += 1
 print(count)

@@ -1,3 +1,4 @@
+# 素因数分解
 import sys
 from itertools import permutations
 from collections import defaultdict
@@ -16,9 +17,11 @@ def soinsu_bunkai(m):
     return pf
 
 
-input = sys.stdin.readline
+# 初期入力
+input = sys.stdin.readline  # 文字列では使わない
 N = int(input())
 
+# Nの階乗の素数列挙
 c = defaultdict(int)
 for i in range(1, N + 1):
     x = soinsu_bunkai(i)

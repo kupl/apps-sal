@@ -6,6 +6,7 @@ cnt = 0
 for i in range(N - 1):
     if H[i] >= H[i + 1]:
         cnt += 1
+        # print(i,cnt)
     else:
         ans = max(cnt, ans)
         cnt = 0

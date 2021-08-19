@@ -9,6 +9,7 @@ class TreeNode(object):
 
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
+        # construct tree
         tree_map = {headID: TreeNode(headID)}
         for i in range(n):
             if i == headID:
@@ -19,6 +20,7 @@ class Solution:
                 tree_map[manager[i]] = TreeNode(manager[i])
             tree_map[manager[i]].children.append(i)
 
+        # level order
         res = 0
         root = tree_map[headID]
         queue = [(root, 0)]

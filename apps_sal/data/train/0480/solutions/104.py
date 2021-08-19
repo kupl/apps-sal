@@ -1,5 +1,6 @@
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
+        # time O(n^2); space O(n)
         n = min(steps // 2 + 1, arrLen)
         dp = [0] * n
         dp[0] = 1

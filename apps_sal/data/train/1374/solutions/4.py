@@ -1,3 +1,4 @@
+# cook your code here
 t = eval(input())
 for i in range(t):
     f1, f2, r1, r2, r3, r4 = list(map(int, input().split()))

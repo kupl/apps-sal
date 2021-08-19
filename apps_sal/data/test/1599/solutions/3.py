@@ -26,8 +26,13 @@ class Task:
         for current in queries:
             localAnswer = d[current[1] - 2]
             localAnswer -= d[current[0] - 2] if current[0] >= 2 else 0
+            #self.answer += str(localAnswer) + '\n'
             print(localAnswer)
+
+    # def printAnswer(self):
+    #    print(self.answer)
 
 
 task = Task()
 task.solve()
+# task.printAnswer()

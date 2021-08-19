@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     a, b, k = list(map(int, input().split()))
     k1 = abs(a - b)

@@ -8,7 +8,7 @@ class RollingHash():
             h[i + 1] = (h[i] * base + ord(s[i])) % mod
             pw[i + 1] = pw[i] * base % mod
 
-    def get(self, l, r):
+    def get(self, l, r):  # [l, r)
         return (self.h[r] - self.h[l] * self.pw[r - l]) % self.mod
 
 

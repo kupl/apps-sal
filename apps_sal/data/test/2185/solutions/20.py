@@ -1,7 +1,13 @@
+# from sys import stdin
+# def rl():
+#     return [int(w) for w in stdin.readline().split()]
 from bisect import bisect_right
 from bisect import bisect_left
 from collections import defaultdict
 from math import sqrt, factorial, gcd, log2, inf, ceil
+# map(int,input().split())
+# # l = list(map(int,input().split()))
+# from itertools import permutations
 import sys
 input = sys.stdin.readline
 
@@ -33,6 +39,7 @@ for _ in range(t):
         else:
             i += 1
 
+    # print(seti)
     if count == 1:
         if len(seti) == 1:
             z = seti.pop()

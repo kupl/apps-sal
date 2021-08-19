@@ -20,6 +20,7 @@ def max_possible(pie_slices, current_slice, pre_sums):
         if score > max_score:
             max_score = score
 
+    # if the last element gives the highest score
     if max_score < pie_slices[-1]:
         max_score = pie_slices[-1]
 

@@ -1,3 +1,4 @@
+# cook your dish here
 
 def fib(n):
     i = -1
@@ -20,3 +21,4 @@ for _ in range(t):
     n = int(input())
     d = (2**fib(n)) % 60
     print(fl[d - 1])
+    # print(d)

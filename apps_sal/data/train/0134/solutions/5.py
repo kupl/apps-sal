@@ -14,6 +14,7 @@ class Solution:
 
         for i in range(n - 1):
             part_1 += prod
+            # print(i,part_1,prod)
             if i_1 > 1:
                 if i > 0:
                     i_1 -= 1

@@ -1,3 +1,4 @@
+# coding = SJIS
 
 w, h, n = map(int, input().split())
 points = []

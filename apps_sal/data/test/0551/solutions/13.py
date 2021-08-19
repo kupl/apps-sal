@@ -59,6 +59,12 @@ def main():
                 if k12 == k34 and b12 != b34:
                     print('Yes')
                     return
+                # else:
+                #     print('** %s-%s, %s-%s: %s %s vs %s %s' % (
+                #         (x1, YM[x1]), (x2, YM[x2]),
+                #         (x3, YM[x3]), (x4, YM[x4]),
+                #         k12, b12, k34, b34
+                #     ))
             print('No')
             return
 

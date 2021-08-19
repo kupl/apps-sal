@@ -8,7 +8,7 @@ for testcases in range(q):
 
     X = 0
     Y = 0
-    fr = 0
+    fr = 0  # from left ,1 from up or down
 
     while True:
         if X == n and Y == 1:

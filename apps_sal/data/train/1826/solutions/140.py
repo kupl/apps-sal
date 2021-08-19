@@ -10,6 +10,7 @@ class Solution:
                 if j > 0:
                     mat[i][j] += mat[i][j - 1]
 
+        # print(mat,t)
         for i in range(len(mat)):
             for j in range(len(mat[0])):
                 s = 0

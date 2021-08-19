@@ -11,5 +11,7 @@ class Solution:
                     if (points[i][0], points[j][1]) in corners and (points[j][0], points[i][1]) in corners:
                         l, w = abs(points[i][0] - points[j][0]), abs(points[i][1] - points[j][1])
                         area = min(area, l * w)
+                    # corners.add(tuple(points[i]))
+                    # corners.add(tuple(points[j]))
 
         return 0 if area == float('inf') else area

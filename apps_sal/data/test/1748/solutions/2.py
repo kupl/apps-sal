@@ -1,3 +1,4 @@
+# -*- coding: utf - 8 -*-
 """""""""""""""""""""""""""""""""""""""""""""
 import bisect
 from itertools import accumulate
@@ -5,7 +6,11 @@ from itertools import accumulate
 |    e-mail: mr.math0777@gmail.com          |
 |    created: 10.03.2018 22:24              |
 """""""""""""""""""""""""""""""""""""""""""""
+# inp = open("input.txt", "r"); input = inp.readline; out = open("output.txt", "w"); print = out.write
 TN = 1
+
+
+# ===========================================
 
 
 def solution():
@@ -35,6 +40,10 @@ def solution():
     print(' '.join(list(map(str, lo))))
 
 
+# ===========================================
 while TN != 0:
     solution()
     TN -= 1
+# ===========================================
+# inp.close()
+# out.close()

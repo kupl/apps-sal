@@ -10,12 +10,13 @@ def resolve():
         for i in range(N):
             pos = bisect_left(A, x - A[i])
             cnt += N - pos
-        return cnt < M
+        return cnt < M  # X以上の和がM個未満かどうか
 
     N, M = list(map(int, input().split()))
     A = list(map(int, input().split()))
     A.sort()
 
+    # 終了時にngにX-1,okにXが入っている。
     ng = 0
     ok = 10 ** 6
     while abs(ok - ng) > 1:

@@ -1,6 +1,7 @@
 class Solution:
     def minDays(self, A: List[int], m: int, k: int) -> int:
 
+        # divide array into m parts or more, each part has at least k elements, minimize the maximum values of parts
         if len(A) < m * k:
             return -1
 

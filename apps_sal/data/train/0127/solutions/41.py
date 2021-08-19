@@ -25,6 +25,8 @@ class Solution:
                 if (idx, g, p) == (0, 0, 0):
                     return 1
                 return 0
+            #if g <= 0:
+            #    return 0
             if (idx, g, p) in m:
                 return m[(idx, g, p)]
             res = 0

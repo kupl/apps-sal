@@ -1,4 +1,4 @@
-def am_i_wilson(n):
+def am_i_wilson(n):  # This is idiotic...
     if n in [5, 13, 563]:
         return True
     else:

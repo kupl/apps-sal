@@ -72,3 +72,10 @@ for _ in range(int(input())):
                     print("First")
         else:
             print("First")
+
+# odd,even->even,even first
+# odd,even->odd,odd first
+# odd,odd->even,even second
+# odd,odd->odd,odd first
+# even,even->even,even first
+# even,even->odd,odd second

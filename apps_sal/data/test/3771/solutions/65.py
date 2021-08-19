@@ -1,6 +1,7 @@
 def main():
     import sys
     sys.setrecursionlimit(1000000)
+    # 行先、上限、逆辺
 
     def add_edge(From, to, cap):
         g[From][to] = cap

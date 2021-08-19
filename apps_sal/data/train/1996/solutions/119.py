@@ -1,5 +1,10 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
+        # Alternate solution to white gray black
+
+        # white - not visited
+        # grey - currently visiting
+        # black - completely visited (so that we don't repeat it)
 
         unsafe_nodes = set()
 

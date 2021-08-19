@@ -1,4 +1,5 @@
 def isDigit(string):
+    # 11ELF
     decnumber = 0
 
     str = string.strip()

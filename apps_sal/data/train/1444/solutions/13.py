@@ -16,6 +16,7 @@ def give(l, n, index, visited):
         return 0
     visited[index] = 1
     theta = 1
+    # print("index is",index)
     for i in graph[index]:
         theta += give(l, n, i, visited.copy())
 

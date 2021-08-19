@@ -1,6 +1,10 @@
+# cook your dish here
 from sys import stdin, stdout
 import math
+# from itertools import permutations, combinations
 from collections import defaultdict, deque
+# import bisect
+# import heapq as hq
 
 
 def bfs(d, n, d1, s):

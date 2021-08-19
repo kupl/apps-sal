@@ -4,6 +4,7 @@ def pick_peaks(arr):
     if len(arr) < 1:
         return {"pos": [], "peaks": []}
 
+    # your code here
     UP = 0
     DOWN = 1
     FLAT = 2
@@ -47,6 +48,7 @@ def pick_peaks(arr):
 
         prev = arr[i]
 
+    # terminated with flat
     if trend == FLAT:
         pos = pos[0:]
         peaks = peaks[0:]

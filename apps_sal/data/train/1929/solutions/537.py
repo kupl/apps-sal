@@ -13,9 +13,12 @@ class StreamChecker:
 
         self.hist = []
 
+        # print(self.memo)
+
     def query(self, letter: str) -> bool:
         self.hist.insert(0, letter)
         for i in range(len(self.hist)):
+            # print(w)
             c = self.memo.get(''.join(self.hist[:i + 1]), None)
             if c is None:
                 return False

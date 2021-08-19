@@ -42,6 +42,7 @@ for index, element in enumerate(lst):
 team = 1
 for i in reversed(range(n)):
 
+    # taken
     if table[i].team != 0:
         continue
 

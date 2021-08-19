@@ -14,6 +14,8 @@ class Solution:
         return cache[(curr_n, n)]
 
     def knightDialer(self, n: int) -> int:
+        # TLE, let's take care of some symmetry
+        # 1 == 3 == 9 == 7, 4 == 6, 2 == 8, 0
         if n == 1:
             return 10
 

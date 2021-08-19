@@ -18,6 +18,7 @@ else:
         else:
             o += a[i]
     o += a[-1]
+    # print(o)
     if '?' in o:
         print('Yes')
     else:

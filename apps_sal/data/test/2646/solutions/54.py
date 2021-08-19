@@ -15,6 +15,7 @@ dist[1] = 0
 d = deque()
 d.append(1)
 
+# BFS実行部分
 while d:
     v = d.popleft()
     for i in graph[v]:

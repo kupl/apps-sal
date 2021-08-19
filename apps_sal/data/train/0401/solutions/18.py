@@ -1,8 +1,9 @@
 class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
+        # nums=[2,6,2,2,7]
         nums.sort()
 
-        quotient = []
+        quotient = []   # *3
         remainder = []
         ret = 0
 
@@ -11,10 +12,16 @@ class Solution:
             remainder.append(num % 3)
             ret += num
 
+        # print(nums)
+        # print(quotient)
+        # print(remainder)
+
         remainder_sum = ret % 3
+        # print(remainder_sum)
         if remainder_sum == 0:
             return ret
         elif remainder_sum == 1:
+            # compare min remainder 1 and 2
             remainder1 = 0
             remainder1_count = 0
             remainder2 = 0
@@ -42,6 +49,7 @@ class Solution:
             else:
                 return 0
         else:
+            # compare min remainder 1 and 2
             remainder1 = 0
             remainder1_count = 0
             remainder2 = 0

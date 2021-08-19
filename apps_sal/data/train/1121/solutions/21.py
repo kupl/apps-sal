@@ -19,6 +19,7 @@ def jump(h, m):
 
 t = int(input())
 for g in range(t):
+    # n=int(input())
     a = input()
     h = int(a[:2])
     if h > 12:

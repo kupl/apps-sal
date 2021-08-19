@@ -1,5 +1,6 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
+        # take greedy
         words = list(s)
         N = len(words)
         ans = 0

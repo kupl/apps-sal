@@ -4,6 +4,8 @@ import itertools
 def find(n, z):
     find.combination_dict = {0: ((),),
                              1: (((0,),), ), }
+    # 2:(((0,), (1,)), ((0, 1),), ), }
+    # 3: (((0,), (1,), (2,)), ((0,), (1,2)), ((1,), (0,2)), ((2,), (0,1)), ((0,1,2),),)}
 
     def get_combination(length):
         if length not in find.combination_dict:
@@ -32,6 +34,7 @@ def find(n, z):
                     value.append(''.join(num[i] for i in combination))
         return sum(map(int, value))
 
+#     print('running', n, f(n), z)
     limit = f(n) + z
     for nf in itertools.count(n):
         if f(nf) > limit:

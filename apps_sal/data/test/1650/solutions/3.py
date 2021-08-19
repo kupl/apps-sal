@@ -15,4 +15,5 @@ for i in range(n):
         dp[i + 1][0] += dp[i][0]
         dp[i + 1][0] %= mod
 ans = (dp[n][0] + dp[n][1]) % mod
+# for i in range(n+1): print(dp[i])
 print(ans)

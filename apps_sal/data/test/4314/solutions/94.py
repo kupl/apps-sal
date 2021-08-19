@@ -7,15 +7,15 @@ wlist = []
 for i in range(h):
     flag = False
     for j in range(w):
-        if alist[i][j] == '
-        flag = True
+        if alist[i][j] == '#':
+            flag = True
     if flag:
         hlist.append(i)
 for i in range(w):
     flag = False
     for j in range(h):
-        if alist[j][i] == '
-        flag = True
+        if alist[j][i] == '#':
+            flag = True
     if flag:
         wlist.append(i)
 for i in hlist:

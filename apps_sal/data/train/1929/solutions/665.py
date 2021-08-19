@@ -17,6 +17,16 @@ class Trie:
             curr = node
         curr.stop = True
 
+#     def startsWith(self, letter):
+#         curr = self.word
+
+#         for l in letter:
+#             node = curr.children.get(l, None)
+#             if not node:
+#                 return False
+#             curr = node
+#         return True
+
     def search(self, word):
         curr = self.word
 
@@ -43,3 +53,8 @@ class StreamChecker:
         self.pointer += letter
 
         return self.t.search(self.pointer[::-1])
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

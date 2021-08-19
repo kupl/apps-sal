@@ -25,6 +25,7 @@ for i in range(len(B) - 1):
 aind = N + 1
 nind = len(B) - 1
 
+#print (B,B_sub)
 
 for i in range(N):
 

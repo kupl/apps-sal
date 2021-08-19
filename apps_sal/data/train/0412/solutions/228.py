@@ -8,6 +8,8 @@ class Solution:
 
         for i in range(1, d):
             for j in range(1, target + 1):
+                # start with k = 1, accumulate all possible number sum before f
+                # if this dice presents 1, then the sum up to the current j is related to the result in j-k, the previous sum in i-1 try.
 
                 k = 1
                 while j - k > 0 and k <= f:

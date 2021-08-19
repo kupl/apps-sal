@@ -9,8 +9,9 @@ if N == 1:
 else:
     for i in range(2, N_sqrt + 5):
         if N % i == 0:
+            # print(i)
             ans += 1
-            nowdiv = 2
+            nowdiv = 2  # この回数割れればansに1足せる
             numofdiv = 0
             N //= i
             while(N % i == 0):
@@ -22,4 +23,4 @@ else:
                     numofdiv = 0
     if N != 1:
         ans += 1
-    print(ans)
+    print(ans)  # Nが素数のときans=1

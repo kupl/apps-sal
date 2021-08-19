@@ -24,5 +24,6 @@ ll2 = LI()
 for i in range(n):
     li1[ll1[i] - 1] += 1
     li2[ll2[i] - 1] += 1
+# print(li1, li2)
 
 check(li1, li2)

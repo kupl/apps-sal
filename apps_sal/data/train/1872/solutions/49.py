@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 import collections
 import heapq
 import sys
@@ -29,6 +35,7 @@ class Solution:
 
         for level in lSums:
             localSum = lSums[level]
+            # print(\"level %d sum %d maxSum %d minLel %d\" % (level, localSum, maxSum, minLevel))
             if maxSum < localSum:
                 minLevel = level
                 maxSum = localSum

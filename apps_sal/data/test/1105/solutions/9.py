@@ -1,3 +1,4 @@
+# the basic idea is to use a dict to record every participant's submission
 
 n = int(input())
 participants = {}

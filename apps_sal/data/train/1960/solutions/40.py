@@ -22,6 +22,7 @@ class Solution:
                 if cur.next.val == targetVal:
                     res.append(position)
 
+                    # add at the beginning
                     temp = cur.next
                     cur.next = temp.next
                     temp.next = root.next

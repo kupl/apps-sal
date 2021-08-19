@@ -45,6 +45,8 @@ for t in range(T):
         if s2:
             p[2] = False
 
+        # my move ended
+
         s0, s1, s2 = shift()
 
         if s0:

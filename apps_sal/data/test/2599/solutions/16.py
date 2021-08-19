@@ -2,8 +2,9 @@ import random
 
 
 def alg(n, k):
+    # no overflow case
     best = None
-    last_digit = 9 - k
+    last_digit = 9 - k  # at most
     ks = (k * (k + 1)) // 2
     if ks <= n:
         ts = n - ks
@@ -19,6 +20,7 @@ def alg(n, k):
                     s -= r
                     num = str(r) + num
                 best = int(num)
+    # first iterate through d's
     for d in range(1, 100):
         for j in range(1, k + 1):
             tn = n + 9 * d * (k - j + 1)
@@ -53,6 +55,8 @@ for _ in range(t):
     n, k = list(map(int, input().split(" ")))
     tc.append((n, k))
 
+#sumdigits = lambda v : sum(map(int,str(v)))
+#sumk = lambda v,k : sum(sumdigits(v+j) for j in range(0,k+1))
 
 for n, k in tc:
     print(alg(n, k))

@@ -12,12 +12,14 @@ class RMQ:
         self.data = [0] * (2 * self.size - 1)
         self.initialize(a)
 
+    # Initialize data
     def initialize(self, a):
         for i in range(self.n):
             self.data[self.size + i - 1] = a[i]
         for i in range(self.size - 2, -1, -1):
             self.data[i] = max(self.data[i * 2 + 1], self.data[i * 2 + 2])
 
+    # Update ak as x
     def update(self, k, x):
         k += self.size - 1
         self.data[k] = x
@@ -25,6 +27,7 @@ class RMQ:
             k = (k - 1) // 2
             self.data[k] = max(self.data[2 * k + 1], self.data[2 * k + 2])
 
+    # max value in [l, r)
     def query(self, l, r):
         L = l + self.size
         R = r + self.size
@@ -64,6 +67,7 @@ for i in range(t):
     days = 0
     curr = 0
     while curr < n:
+        # Search step size
         l = 0
         r = min(n - curr, max_step) + 1
         while r - l > 1:

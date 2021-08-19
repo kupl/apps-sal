@@ -41,6 +41,7 @@ class Solution:
         while stack:
             curr_id, curr_time = stack.pop()
             res = max(res, curr_time)
+            #children = [index for index, val in enumerate(manager) if val == curr_id]
             for child in children[curr_id]:
                 stack.append((child, curr_time + informTime[child]))
         return res

@@ -9,4 +9,5 @@ class Solution:
                     dp[(i, dif)] = dp[(j, dif)] + 1
                 else:
                     dp[(i, dif)] = 2
+                # print(dp)
         return max(dp.values())

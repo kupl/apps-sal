@@ -1,3 +1,4 @@
+# cook your dish here
 numbers = int(input())
 for x in range(numbers):
     st = input().strip()

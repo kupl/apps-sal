@@ -1,3 +1,5 @@
+# cook your dish here
+# from math import *
 for _ in range(int(input().strip())):
     n = int(input())
     t = 1

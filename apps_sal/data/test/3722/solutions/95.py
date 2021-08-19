@@ -3,6 +3,7 @@ P = 10 ** 9 + 7
 F = [0, 1]
 for i in range(1010):
     F.append(sum(F[-2:]) % P)
+# print("F =", F[:20])
 N = int(input())
 AA = input()
 AB = input()
@@ -26,6 +27,8 @@ def calc(aa, ab, ba, bb):
     if ss == "ABBA" or ss == "BAAB" or ss == "BAAA" or ss == "BBBA":
         return F[N - 1]
     return -1
+# for s in product("AB", repeat = 4):
+#     print(s, calc(*s))
 
 
 print(calc(AA, AB, BA, BB))

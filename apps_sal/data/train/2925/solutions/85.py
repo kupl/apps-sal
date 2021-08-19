@@ -3,3 +3,4 @@ def multiply(n):
         return n * (5 ** len(str(n * -1)))
 
     return n * (5 ** len(str(n)))
+    # your code here

@@ -1,5 +1,6 @@
 class Solution:
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
+        # 1 -2 1  1 -2 1   1 -2 1   1 -2 1   1 -2 1
         if max(arr) <= 0:
             return 0
         if sum(arr) > 0:

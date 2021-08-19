@@ -11,10 +11,13 @@ class Solution:
                 break
             for j in range(c):
                 if A[i][j] == 1:
+                    # add all the 1's which are connected to this (i, j) to the q
                     q = self.neighbors(i, j, A, seen, r, c)
                     found = True
                     break
 
+        # explore all points near to these elements in the q and keep the min distance
+        # if I see any 1
         while q:
             x, y, dis = q.pop(0)
             for d1, d2 in ((-1, 0), (0, -1), (1, 0), (0, 1)):
@@ -33,6 +36,7 @@ class Solution:
         ls = []
         while q:
             x, y = q.pop(0)
+            # distance is zero for all these 1
             ls.append((x, y, 0))
             for d1, d2 in ((-1, 0), (0, -1), (1, 0), (0, 1)):
                 n_x, n_y = d1 + x, d2 + y

@@ -7,7 +7,7 @@ class Solution:
             sub[manager[i]].append(i)
 
         total = 0
-        q = collections.deque([(headID, 0)])
+        q = collections.deque([(headID, 0)])  # id, time
         while q:
             employee, time = q.popleft()
             if not sub[employee]:

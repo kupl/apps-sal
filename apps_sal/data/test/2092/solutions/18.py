@@ -24,7 +24,9 @@ while r - l > 1:
         P[i + 1] += P[i]
         if P[i + 1] > 0:
             c += 1
+    #print(P, m)
     time = N + 1 + 2 * c
+    # print(time)
 
     if time <= T:
         l = m

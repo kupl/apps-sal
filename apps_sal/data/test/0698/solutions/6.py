@@ -1,6 +1,7 @@
 import sys
 
 f = sys.stdin
+# f = open("input.txt", "r")
 
 x, k = map(int, f.readline().strip().split())
 

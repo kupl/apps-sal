@@ -1,7 +1,7 @@
 def capitalize(s):
     list = []
     ret = ""
-    i = True
+    i = True  # capitalize
     for char in s:
         if i:
             ret += char.upper()

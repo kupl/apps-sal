@@ -5,11 +5,13 @@ m = int(1e9 + 9)
 a_1 = pow(a, m - 2, m)
 x = (a_1 * b) % m
 xk = pow(x, k, m)
+# print("xk", xk)
 
 C = 0
 for i in range(0, k):
     z = 1 if s[i] == "+" else -1
     C = (C + z * pow(x, i, m)) % m
+# print("C", C)
 
 kk = (n + 1) // k
 if xk > 1:
@@ -18,6 +20,7 @@ if xk > 1:
     D = (v1 * v2) % m
 else:
     D = kk
+# print("D", D)
 
 ans = pow(a, n, m) * C * D
 ans %= m

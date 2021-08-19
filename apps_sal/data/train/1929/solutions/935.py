@@ -29,3 +29,8 @@ class StreamChecker:
         self.waitList = waitList
 
         return any('$' in item for item in waitList)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

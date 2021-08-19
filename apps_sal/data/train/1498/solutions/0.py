@@ -3,6 +3,7 @@ def Testcase():
 
     h = h - 1
     yt = h // y + 1
+    # print(yt)
     flag = 0
     ans = 100000000009
 
@@ -11,7 +12,9 @@ def Testcase():
         if h % temp == 0:
             flag = 1
             cl = i + int(h / temp)
+            # print(temp,cl)
             ans = min(ans, cl)
+            # print(temp,ans,i)
     print(ans if flag == 1 else '-1')
 
 

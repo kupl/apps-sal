@@ -21,12 +21,14 @@ def binary_search(list, item):
         mid = (low + high) // 2
         guess = list[mid]
         if guess == item:
+            # return mid
             return True
         if guess > item:
             high = mid - 1
         else:
             low = mid + 1
 
+    # return None
     return False
 
 

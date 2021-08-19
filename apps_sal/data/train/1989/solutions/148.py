@@ -9,6 +9,7 @@ class Solution:
                 longest = max(longest, i - first[curr])
             else:
                 first[curr] = i
+            # consider case of one odd digit.
             mask = 1 << 9
             while mask > 0:
                 if (curr ^ mask) in first:

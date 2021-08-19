@@ -2,6 +2,8 @@ class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
 
         temp = list(zip(startTime, endTime, profit))
+        # print(temp)
+        # return 0
         temp = sorted(temp, key=lambda x: x[0])
         n = len(profit)
         ans = [0 for _ in range(len(profit))]
@@ -25,4 +27,6 @@ class Solution:
             else:
                 ans[x] = max(temp[x][2], ans[x + 1])
 
+        # print(temp)
+        # print(ans)
         return ans[0]

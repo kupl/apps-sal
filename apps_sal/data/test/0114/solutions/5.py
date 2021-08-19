@@ -1,3 +1,4 @@
+# E71_B
 
 ln = [int(i) for i in input().split(" ")]
 n = ln[0]

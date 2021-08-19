@@ -8,4 +8,5 @@ def solve():
     return num
 
 
+# main
 print(solve())

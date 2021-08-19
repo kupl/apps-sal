@@ -21,7 +21,7 @@ MOD = 10 ** 9 + 7
 K = INT()
 
 
-def S(n):
+def S(n):  # 和,nは文字列
     return sum([int(x) for x in list(n)])
 
 

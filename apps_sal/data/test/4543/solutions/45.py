@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 a, b = input().split()
 
 judge = int(a + b)

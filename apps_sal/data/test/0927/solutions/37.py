@@ -3,7 +3,7 @@ def max_for_str(a, b):
         return a
     elif len(a) < len(b):
         return b
-    else:
+    else:  # This case is unlikely to happen.
         for c1, c2 in zip(a, b):
             if c1 > c2:
                 return a

@@ -32,11 +32,21 @@ def run_testcase():
     connections = deque()
     connections_to_station = 0
 
+    # min_attach_cost = [0] + [inf] * n
+    # min_attach_cost = [0] + [cost(0, j) for j in range(1, n + 1)]
     min_attach_cost = [(0, 0)] + [(cost(0, j), 0) for j in range(1, n + 1)]
 
     while len(tree) < n + 1:
         min_pair = (0, 0)
         min_cost = inf
+        # for tree_node in tree:
+        # 	for i in range(1, n + 1):
+        # 		if included[i]:
+        # 			continue
+        # 		curr_cost = cost(tree_node, i)
+        # 		if curr_cost < min_cost:
+        # 			min_pair = (tree_node, i)
+        # 			min_cost = curr_cost
 
         for node in rest:
             if min_attach_cost[node][0] < min_cost:
@@ -71,4 +81,7 @@ def run_testcase():
         print(connections_list[i][0], connections_list[i][1])
 
 
+# testcase_count = int(input())
+# for i in range(testcase_count):
+# 	print(str(run_testcase()))
 run_testcase()

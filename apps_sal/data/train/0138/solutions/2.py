@@ -1,5 +1,6 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
+        # Greedy alg
         l = len(nums)
         start = 0
         subArrays = []
@@ -27,6 +28,7 @@ class Solution:
         if negs % 2 == 0:
             return l
         else:
+            # Two pointers approach
             i = 0
             j = l - 1
             while i < j:
@@ -36,4 +38,5 @@ class Solution:
                 j -= 1
                 l -= 1
 
+        # return max(self.findOptimal(nums[1:]), self.findOptimal(nums[:-1]))
         return 0

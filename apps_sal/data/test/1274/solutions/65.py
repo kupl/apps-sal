@@ -4,6 +4,7 @@ from heapq import heappush, heappop
 lines = []
 for line in sys.stdin:
     lines.append(line.rstrip('\r\n'))
+# print(lines)
 n, m = lines[0].split()
 n = int(n)
 m = int(m)

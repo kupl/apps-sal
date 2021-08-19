@@ -15,9 +15,13 @@ class Box:
         if self.value is None:
             return 'S'
         elif self.value == 0:
-            return "
+            return "#"
         else:
             return "█"
+
+
+# TODO it should take List[Clue] as argument
+# TODO boeard should be List[List[Box]]
 
 
 class Clue:
@@ -28,15 +32,20 @@ class Clue:
 
     @staticmethod
     def match_constrains(initial: Sequence[int], constrains: List[Box]):
+        # print("comparing: ", initial, [i.value for i in constrains] )
 
         def tmp(element: int, constrain: Box):
             if constrain.value is None:
+                # print("constrain is None")
                 return True
 
             return constrain.value == element
 
         ddd = all((tmp(data, req) for data, req in zip(initial, constrains)))
+        # print("comparing: ", initial, [i.value for i in constrains], ddd )
         return ddd
+
+    # TODO: collect always to the same list
 
     def generate_combinations(self, initial: Sequence[int] = (), to_be_marked: int = -1) -> List[Sequence[int]]:
 
@@ -87,6 +96,7 @@ class Clue:
 
     @staticmethod
     def get_commons(possible_solutions):
+        # b is a list of lists here
         def check_all_the_same(lst):
             if lst.count(lst[0]) == len(lst):
                 return lst[0]
@@ -160,6 +170,7 @@ class Nonogram:
             print(d)
 
 
+# TODO: Finish this!
 def solve(clues, width: int, height: int) -> List[List[int]]:
     """
     :param height:

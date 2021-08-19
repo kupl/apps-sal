@@ -22,3 +22,11 @@ class Solution:
                 heapq.heappop(heap)
                 heapq.heappush(heap, worker[i][0])
         return res % 1000000007
+
+    # def cmp(self, w1, w2):
+    #     if w1[1] > w2[1]:
+    #         return -1
+    #     elif w1[1] == w2[1]:
+    #         return 0
+    #     else:
+    #         return 1

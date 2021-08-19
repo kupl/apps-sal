@@ -29,6 +29,12 @@ for i in range(0, n):
         link.append([(tog[i][1], len(arr[tog[i][1]]) - 1), (tog[i][2], len(arr[tog[i][2]]) - 1)])
 
 
+#print("tog arr us link")
+##print( tog)
+#print( arr)
+#print( us)
+# print(link)
+
 ptr = [None, 0, 0, 0]
 
 m = int(input())
@@ -49,5 +55,8 @@ for c in buy:
         for (cc, pp) in link[v]:
             us[cc][pp] = False
 
+    #print("out:", out[-1]);
+    #print("ptr:", ptr)
+    #print("us:", us)
 
 print(" ".join(map(str, out)))

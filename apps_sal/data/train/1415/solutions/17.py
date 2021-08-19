@@ -21,6 +21,8 @@ for i in range(t):
     for j in range(len(s)):
         c.append(s[j])
         d.append(s[j])
+#     print(c)
+#     print(d)
     for j in range(len(s)):
         c.pop(j)
         x = is_pal(c)
@@ -28,9 +30,11 @@ for i in range(t):
             print('YES')
             break
         else:
+            #             print(c)
             count += 1
             c.clear()
             for i in range(len(d)):
                 c.append(d[i])
+#             print(c)
     if count == len(s):
         print('NO')

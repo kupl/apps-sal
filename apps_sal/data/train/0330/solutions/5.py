@@ -5,6 +5,7 @@ class Solution:
         :rtype: bool
         """
 
+        # remove whitespaces
         s = s.strip()
 
         try:

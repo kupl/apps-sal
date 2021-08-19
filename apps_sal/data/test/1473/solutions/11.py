@@ -42,6 +42,7 @@ if n % 2 == 1:
     else:
         frontmaf = maf[1]
 
+    ##################
     indx = 0
     final = [0] * n
     curr = frontmaf

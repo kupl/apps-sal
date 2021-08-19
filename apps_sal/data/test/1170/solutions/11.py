@@ -1,5 +1,8 @@
 from math import sqrt
 
+# import sys
+# from io import StringIO
+# sys.stdin = StringIO(open(__file__.replace('.py', '.in')).read())
 
 t = int(input())
 

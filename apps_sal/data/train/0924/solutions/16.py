@@ -1,9 +1,16 @@
+# Contest Code: DEMA2019     Problem Code: MAXSPSUM
+#
+# Author: Keyur Shroff
+# Date: 26 April 2019
 
 import math
+
+# Function to return the distinct prime factors of an array or a list
 
 
 def distinctPrimeFactors(num):
 
+    # use set to store distinct factors
     primes = set()
 
     if (num == 2):
@@ -12,17 +19,22 @@ def distinctPrimeFactors(num):
     sqrt = int(math.sqrt(num))
     for j in range(2, sqrt + 1):
         if (num % j == 0):
+            # if j is a factor store it in the set
             primes.add(j)
 
+            # divide the number with j till it is divisible so that
+            # only prime factors are stored
             while (num % j == 0):
                 num //= j
 
+    # if the number is still greater than 1 then it is a prime factor
     if (num > 2):
         primes.add(num)
 
     return (primes)
 
 
+# --- Main Program ---
 lst = {}
 primes = {}
 rangeData = {}
@@ -70,3 +82,5 @@ for tc in range(q):
                         count += 1
                         break
         print(count)
+
+    #print("query=", query, "primes=", primes, "rangeData=", rangeData)

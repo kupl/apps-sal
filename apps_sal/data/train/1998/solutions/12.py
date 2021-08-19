@@ -28,4 +28,4 @@ class Solution:
                                     q0.append(nb)
             q = q0
             step += 1
-        return -1
+        return -1  # 注意最后一步 返回的是-1

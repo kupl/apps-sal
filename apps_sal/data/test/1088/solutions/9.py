@@ -50,13 +50,13 @@ MOD = 998244353
 
 fac = [-1] * (N + 1)
 fac[0] = 1
-fac[1] = 1
+fac[1] = 1  # 階乗
 finv = [-1] * (N + 1)
 finv[0] = 1
-finv[1] = 1
+finv[1] = 1  # 階乗の逆元
 inv = [-1] * (N + 1)
 inv[0] = 0
-inv[1] = 1
+inv[1] = 1  # 逆元
 for i in range(2, N + 1):
     fac[i] = fac[i - 1] * i % MOD
     inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD
@@ -80,6 +80,7 @@ par0 = set([])
 for i in range(N):
     par = uf0.find(i)
     par0.add(par)
+# print(par0)
 
 X = 1
 for x in par0:
@@ -87,6 +88,7 @@ for x in par0:
     X = X * fac[temp] % MOD
 
 A = A.T
+# print(A)
 
 uf1 = UnionFind(N)
 for i in range(N):
@@ -108,6 +110,7 @@ Y = 1
 for y in par1:
     temp = uf1.get_size(y)
     Y = Y * fac[temp] % MOD
+# print(Y)
 
 ans = X * Y % MOD
 print(ans)

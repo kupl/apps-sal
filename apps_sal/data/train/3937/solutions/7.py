@@ -1,4 +1,4 @@
-def x(i, maxSum):
+def x(i, maxSum):  # check if number satisfies requirments
     s = str(i)
     for i in range(len(s) - 3):
         if sum(map(int, list(s[i:i + 4]))) > maxSum:

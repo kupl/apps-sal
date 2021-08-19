@@ -10,6 +10,7 @@ class Solution:
 
         for level in range(1, d):
 
+            # for face in range(1,f+1):
             for t in range(1, target + 1):
 
                 for face in range(1, f + 1):
@@ -17,4 +18,5 @@ class Solution:
                     if t - face > 0:
                         dp[level][t] += dp[level - 1][t - face]
 
+        # print(dp)
         return dp[-1][-1] % (10**9 + 7)

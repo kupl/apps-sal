@@ -1,3 +1,6 @@
+# coding: utf-8
+
+# https://atcoder.jp/contests/abc119
 
 
 def main():

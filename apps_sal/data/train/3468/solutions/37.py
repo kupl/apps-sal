@@ -5,6 +5,7 @@ def scramble(s1, s2):
     if not set(s2).issubset(set(s1)):
         return False
 
+    # your code here
     s1_counts = Counter(s1)
     s2_counts = Counter(s2)
 

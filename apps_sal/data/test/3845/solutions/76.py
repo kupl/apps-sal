@@ -1,12 +1,12 @@
 def main():
-    BK = '
+    BK = '#'
     WH = '.'
 
     A, B = map(int, input().split())
 
     g = []
     for _ in range(50):
-        g.append([BK] * 100)
+        g.append([BK] * 100)  # 100にし忘れていた
     for _ in range(50):
         g.append([WH] * 100)
 

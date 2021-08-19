@@ -1,3 +1,4 @@
+# cook your dish here
 bleh = int(input())
 for i in range(bleh):
     n = int(input())

@@ -4,6 +4,11 @@ import numpy as np
 class Solution:
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
 
+        # DP(a=index of last, b=index of last) = max of:
+        #   DP(a-1, b)
+        #   DP(a-1, i) + nums1[a] * max_or_min(nums2[i+1:b+1])
+        #   same for b
+
         INF = int(1e9)
         n, m = len(nums1), len(nums2)
 

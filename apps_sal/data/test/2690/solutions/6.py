@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 string = input().strip()
 
 letter_first_position, letter_last_position = {}, {}

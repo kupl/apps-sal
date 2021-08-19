@@ -29,6 +29,7 @@ class Solution:
                 edges.append((dist, i, j))
         edges.sort()
 
+        # using Kruskal's algorithm to find the cost of Minimum Spanning Tree
         res = 0
 
         for cost, u, v in edges:

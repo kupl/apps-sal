@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -29,6 +30,7 @@ def longestpath(start, graph):
 
 
 def solve_graph(N, K, A, pos):
+    # for each u, v if u appears before v in every array, add a link u->v
     g = collections.defaultdict(list)
     d = [0 for _ in range(N + 1)]
     for u in range(1, N + 1):
@@ -37,6 +39,7 @@ def solve_graph(N, K, A, pos):
                 g[u].append(v)
                 d[v] += 1
 
+    # then find the longest path
     ans = 0
     for u in range(1, N + 1):
         if d[u] == 0:
@@ -49,6 +52,8 @@ def solve(N, K, A, pos):
     for i in range(1, N + 1):
         maxx = 0
         for p in range(1, i):
+            # if the A[1][p], A[1][i] is the last two elements of ans
+            # A[1][p] should appears before A[1][i] at every input array A[1:]
             if all([pos[k][A[1][p]] < pos[k][A[1][i]] for k in range(2, K + 1)]):
                 maxx = max(maxx, dp[p])
         dp[i] = maxx + 1

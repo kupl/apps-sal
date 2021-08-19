@@ -1,5 +1,6 @@
 class Solution:
 
+    # stack approach
     def isValid(self, s):
         """
         :type s: str
@@ -8,8 +9,11 @@ class Solution:
 
         open_chars = set(['(', '[', '{'])
 
+        # matching open char for given closing char
         open_match = {')': '(', ']': '[', '}': '{'}
 
+        # open chars found in input with no matching
+        # closing char yet
         open_stack = []
 
         for ch in s:

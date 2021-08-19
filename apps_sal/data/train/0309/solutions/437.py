@@ -50,6 +50,7 @@ class Solution:
                 first = val + val - A[j]
                 if first in index:
                     dp[i][j] = dp[index[first]][i] + 1
+                    #ans = max(ans, dp[i][j])
                     if dp[i][j] > ans:
                         ans = dp[i][j]
             index[val] = i

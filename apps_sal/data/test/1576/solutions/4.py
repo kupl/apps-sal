@@ -19,6 +19,8 @@ def what(obj):
         pp(obj, sys.stderr)
 
 
+#############################################
+
 s = input().strip()
 
 ans = ''
@@ -33,6 +35,7 @@ while s:
 
 print(ans)
 
+##############################################
 if __flag:
     stdout.close()
     stdin.close()

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import math
 import sys
 sys.setrecursionlimit(10**8)

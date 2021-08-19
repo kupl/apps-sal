@@ -26,6 +26,7 @@ class UnionFind():
 def main():
     import sys
     from collections import Counter
+    # readline = sys.stdin.readline
     readlines = sys.stdin.readlines
     N, K, L = list(map(int, input().split()))
     uf1 = UnionFind(N)
@@ -41,8 +42,13 @@ def main():
         r, s = list(map(int, IN[j].split()))
         r -= 1
         s -= 1
+        # if uf1.find(r) == uf1.find(s):
         uf2.union(r, s)
 
+    # ans = []
+    # for i in range(N):
+    #     ans.append(-uf2.parents[uf2.find(i)])
+    # print(*ans)
     path = []
     C = Counter()
     for i in range(N):

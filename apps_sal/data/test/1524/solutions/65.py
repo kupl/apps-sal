@@ -4,6 +4,7 @@ n = len(s)
 c = [0]
 tmp = 'R'
 idx = 0
+# count for r,l
 for i in s:
     if tmp == i:
         c[idx] += 1

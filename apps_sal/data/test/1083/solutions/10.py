@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input().strip())
 if n % 2 == 1:
     print(((n + 1) // 2) % 2)

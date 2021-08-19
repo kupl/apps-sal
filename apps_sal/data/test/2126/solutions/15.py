@@ -1,7 +1,10 @@
+# Bhargey Mehta (Sophomore)
+#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
 sys.setrecursionlimit(1000000)
+#sys.stdin = open("input.txt", "r")
 MOD = 10**9 + 7
 
 n, m, h = map(int, input().split())

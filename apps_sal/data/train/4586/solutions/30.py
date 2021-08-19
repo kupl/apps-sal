@@ -1,6 +1,7 @@
 from string import ascii_lowercase as buttons, digits as buttons2
 
 remote = {}
+# assign cordinates, assuming cords of a, (x,y) = (0,0)
 for temp_x, button in enumerate(buttons):
     remote[button] = (temp_x % 5, temp_x // 5)
 for temp_x, button in enumerate(buttons2[1::]):

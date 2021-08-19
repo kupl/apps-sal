@@ -9,6 +9,7 @@ speed_r = [0] * time
 t_id = 0
 speed = 0
 ts_copy = ts[:]
+# Forward
 for i in range(time + 1):
     ts_copy[t_id] -= 1
     speed_l[i] = speed
@@ -22,6 +23,7 @@ for i in range(time + 1):
             break
         t_id += 1
 
+# Backward
 speed = 0
 for i in range(time - 1, -1, -1):
     ts[t_id] -= 1

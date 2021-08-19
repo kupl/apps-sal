@@ -5,14 +5,17 @@ nega = sorted([a[i] for i in range(n) if a[i] < 0], reverse=True)
 
 ans = 1
 if k == n:
+    # 全掛け算
     for i in a:
         ans *= i
         ans %= mod
 elif k % 2 and n == len(nega):
+    # 答えは負
     for i in range(k):
         ans *= nega[i]
         ans %= mod
 else:
+    # 答えは正
     a = sorted(a, key=lambda x: abs(x), reverse=True)
     pi = ni = -1
     cnt = 0
@@ -31,10 +34,12 @@ else:
         if pi == -1:
             x.remove(a[ni])
             x.append(mx)
-        elif mn > 0:
+        # print(x,mx,mn)
+        elif mn > 0:  # もう正しかとれる数値が存在していない
             x.append(mx)
             x.remove(a[ni])
-        elif mx <= 0:
+        elif mx <= 0:  # もう負しかとれる数値が存在していない
+            # if mx==0: print(0); return;
             x.append(mn)
             x.remove(a[pi])
         elif abs(a[pi] * mx) <= abs(a[ni] * mn):
@@ -43,6 +48,7 @@ else:
         else:
             x.append(mx)
             x.remove(a[ni])
+    # print(x)
     for i in range(k):
         ans *= x[i]
         ans %= mod

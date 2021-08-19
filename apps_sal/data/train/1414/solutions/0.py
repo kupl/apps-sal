@@ -21,6 +21,10 @@ def matrix(L, row, col, c):
             else:
                 dp[i][j] = 0
             d[dp[i][j]] = d.get(dp[i][j], 0) + 1
+# for i in xrange(row+1):
+# for j in xrange(col+1):
+# print dp[i][j],
+# print
     return d
 
 

@@ -1,5 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-"""Codeforces Round 
+"""Codeforces Round #555 (Div. 3)
 
 Problem F. Maximum Balanced Circle
 

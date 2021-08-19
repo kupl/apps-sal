@@ -3,6 +3,8 @@ class node:
         self.index = index
         self.nextN = None
         self.visited = 0
+        # 0 - not visited
+        # 1 - visited
 
 
 n = int(input())

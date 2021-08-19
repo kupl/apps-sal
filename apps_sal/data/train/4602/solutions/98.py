@@ -1,3 +1,4 @@
+# write the function is_anagram
 def is_anagram(test, original):
     original_list = list(original.lower())
     test_list = list(test.lower())

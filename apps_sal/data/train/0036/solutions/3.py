@@ -4,6 +4,8 @@ input()
 heaps = list(map(int, input().split()))
 input()
 numbers = list(map(int, input().split()))
+#heaps = [2, 7, 3, 4, 9]
+#numbers = [1, 25, 11]
 res = [0] * len(numbers)
 
 sums = [heaps[0]]

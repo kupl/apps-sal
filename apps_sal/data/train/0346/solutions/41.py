@@ -24,6 +24,7 @@ class Solution:
                     beg = start[prefix_sum[i] - (k - 1)]
                 else:
                     beg = 0
+                # count even numbers before beg
                 j = beg - 1
                 left_count = 0
                 while j >= 0:
@@ -32,6 +33,7 @@ class Solution:
                     else:
                         break
                     j -= 1
+                # count even numbers after i
                 j = i + 1
                 right_count = 0
                 while j < len(nums):

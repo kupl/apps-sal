@@ -23,6 +23,7 @@ def LSS(): return input().split()
 def resolve():
     N, K = LI()
 
+    # abc全てK//2か全て0のどちらか
     num_0 = N // K
     if K % 2 == 0:
         num_K_half = N // K + (1 if N % K >= K // 2 else 0)

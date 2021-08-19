@@ -15,10 +15,17 @@ class Solution:
             stack = []
             cnt = 0
             for x in range(n):
+                # stack is the last element
                 while stack and mat[y][stack[-1]] > mat[y][x]:
+                    # remove the top row from the next calculation of adding cnt
+                    # * * *
+                    #
+                    # * * * *
+                    # * * * *
 
                     prev_hist_end = stack.pop()
                     prev_hist_start = stack[-1] if stack else -1
+                    # difference in historgram height * width
                     cnt -= (prev_hist_end - prev_hist_start) * (mat[y][prev_hist_end] - mat[y][x])
                 cnt += mat[y][x]
                 ans += cnt

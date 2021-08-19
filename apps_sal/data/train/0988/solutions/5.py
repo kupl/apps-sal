@@ -2,6 +2,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     l = list(map(int, input().split()))
+    # print(l)
 
     s = max(l)
     s = bin(s)
@@ -23,6 +24,7 @@ for _ in range(t):
     for i in x:
         ans += str(i)
     ans1 = int(ans, 2)
+    # print(ans1)
     sm = 0
     for i in l:
         sm += (i ^ ans1)

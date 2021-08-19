@@ -1,3 +1,4 @@
+# using lucas's theorem https://en.wikipedia.org/wiki/Lucas%27s_theorem
 
 def to_bin(n):
     k = 0

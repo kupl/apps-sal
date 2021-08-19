@@ -4,8 +4,10 @@ for x in range(min(m, n + 1)):
     z = n // m
     if n % m >= x:
         z += 1
+#    print(x, z)
     cnt[x * x % m] += z
 cnt[0] -= 1
+# print(cnt)
 res = 0
 for i in range(m):
     res += cnt[i] * cnt[(m - i) % m]

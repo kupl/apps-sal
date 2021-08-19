@@ -1,3 +1,4 @@
+# python3
 from sys import stdin
 
 
@@ -8,7 +9,7 @@ def main():
     n, a, b = parseints(input())
     hand = list(map(parseints, stdin.readlines()))
 
-    ans = sum(creature[1] for creature in hand)
+    ans = sum(creature[1] for creature in hand)  # default damage
     if b:
         hand.sort(key=bdiff)
 

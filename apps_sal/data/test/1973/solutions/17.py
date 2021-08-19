@@ -19,5 +19,7 @@ ans = 0
 for i in range(n):
     mas[l[i] - 1] += 1
     if check():
+        # print(i)
+        # print('check')
         ans = i
 print(ans + 1)

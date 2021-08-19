@@ -8,12 +8,13 @@ patern = 0
 for i in range(num_of_patern):
     on = []
     light_counter = 0
-    for j in range(num_of_switch):
+    for j in range(num_of_switch):  # スイッチのオンの場所
         if ((i >> j) & 1):
             on.append(j + 1)
-    for j in range(light):
+    for j in range(light):  # どの電球が付いているかの判定
         count = 0
         num_connect = ligth_list[j][0]
+        # print(on)
         if on_list[j] == 1:
             for n in range(len(on)):
                 if on[n] in ligth_list[j][1:]:
@@ -27,6 +28,7 @@ for i in range(num_of_patern):
             if count % 2 == 0:
                 light_counter += 1
     if light_counter == light:
+        # print(i)
         patern += 1
     del on[:]
 print(patern)

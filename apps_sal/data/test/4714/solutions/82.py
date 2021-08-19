@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def judege_palindromic(val_str):
     length = len(val_str)

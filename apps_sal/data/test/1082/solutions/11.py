@@ -1,4 +1,5 @@
 from collections import defaultdict
+#from collections import defaultdict
 
 
 def getmask(x):
@@ -12,7 +13,9 @@ def getmask(x):
 
 def main():
     maxn = 71
+    #maxn = 71
     n = int(input())
+    #n = int(input())
     a = [int(i) for i in input().split()]
     cnt = [0] * maxn
     for i in a:

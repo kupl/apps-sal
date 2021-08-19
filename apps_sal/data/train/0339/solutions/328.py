@@ -4,6 +4,7 @@ from typing import List
 
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+        # ハッシュ化
         h1 = {}
         h2 = {}
 
@@ -20,6 +21,7 @@ class Solution:
 
         count = 0
 
+        # Type1
         for n in nums1:
             n2 = n * n
             for v in list(h2.keys()):
@@ -30,11 +32,13 @@ class Solution:
                 l1 = h2[v]
                 if v == q:
                     if l1 > 1:
+                        # l1個の中から2個選ぶ組み合わせの数
                         count += (l1 * (l1 - 1))
                 else:
                     l2 = h2[q]
                     count += l1 * l2
 
+        # Type2
         for n in nums2:
             n2 = n * n
             for v in list(h1.keys()):
@@ -45,6 +49,7 @@ class Solution:
                 l1 = h1[v]
                 if v == q:
                     if l1 > 1:
+                        # l1個の中から2個選ぶ組み合わせの数
                         count += (l1 * (l1 - 1))
                 else:
                     l2 = h1[q]

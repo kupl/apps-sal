@@ -9,8 +9,8 @@ for i in range(N):
         yoko.append(i)
 for i in range(N):
     for j in range(M):
-        if ls[i][j] == '
-        tate.remove(j)
+        if ls[i][j] == '#' and j in tate:
+            tate.remove(j)
 tate2 = list(range(M))
 for i in range(M):
     if i in tate:

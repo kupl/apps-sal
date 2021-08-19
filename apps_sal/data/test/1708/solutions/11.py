@@ -6,6 +6,7 @@ c = list(map(int, input().lstrip().split(' ')))
 costs = sorted([(i, cost) for i, cost in enumerate(c)],
                key=lambda x: (x[1], x[0]))
 ci = 0
+# print(costs)
 for _ in range(m):
     cost = 0
     t, d = list(map(int, input().lstrip().split(' ')))
@@ -30,4 +31,5 @@ for _ in range(m):
                 ci += 1
         if d > 0:
             cost = 0
+    # print(a)
     print(cost)

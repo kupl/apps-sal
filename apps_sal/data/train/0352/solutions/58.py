@@ -1,6 +1,7 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
 
+        # key is current word, value is current length
         chains = {}
         len_arr = [len(x) for x in words]
         min_len, max_len = min(len_arr), max(len_arr)

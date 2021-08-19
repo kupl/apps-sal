@@ -1,5 +1,6 @@
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
+        # save remainder in hashmap and then check if remaining remainder is in the hashmap
         if len(arr) % 2 == 1:
             return False
         mapping = defaultdict(int)

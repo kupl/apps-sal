@@ -9,7 +9,7 @@ for i in range(n - 1):
     F.append(f)
 
 
-def d(x, t):
+def d(x, t):  # 駅x時間ｔで移動するのにかかる時間
     if S[x] >= t:
         return C[x] + S[x] - t
     else:

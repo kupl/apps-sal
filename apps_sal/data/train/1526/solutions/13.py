@@ -18,8 +18,10 @@ def score(a):
                 recipes[ch] = 1
     num, den = 0, 0
     for key in recipes:
+        # print(key, '{}/{}**{}'.format(recipes[key], count[key], len(a)))
         num += math.log(recipes[key])
         den += len(a) * math.log(count[key])
+        # prod *= recipes[key] / (count[key] ** len(a))
     return math.exp(num - den)
 
 
@@ -42,8 +44,11 @@ for _ in range(t):
                 count = 0
         else:
             alice.append(s)
+    # print(alice, bob)
     s1 = score(alice)
     s2 = score(bob)
+    # print(len(alice), len(bob))
+    # print(sA, sB)
     if s2 == 0 or math.exp(math.log(s1) - math.log(s2)) > 10**7:
         print('Infinity')
     else:

@@ -1,3 +1,5 @@
+# cook your dish here
+# BUTTON PAIRS
 
 t = int(input())
 for i in range(t):

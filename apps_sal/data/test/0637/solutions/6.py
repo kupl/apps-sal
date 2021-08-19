@@ -20,10 +20,12 @@ else:
     for i in range(i, n):
         if a[i] == cur:
             curcnt += 1
+            # print('+', end=' ')
         else:
 
             cur = a[i]
             if curcnt != cnt:
+                # print(cur, curcnt, cnt, '!')
                 br = 1
                 break
             curcnt = 1

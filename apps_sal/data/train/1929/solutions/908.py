@@ -8,7 +8,7 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.root = self.Node()
-        self.N = 0
+        self.N = 0  # maxWordLength
         for word in words:
             self.N = max(self.N, len(word))
             cursor = self.root
@@ -21,10 +21,12 @@ class StreamChecker:
                     cursor = newNode
             cursor.isWord = True
 
+        # self.queue = queue.Queue(maxsize=maxWordLen)
         self.buffer = [None] * self.N
         self.bIdx = self.N
 
     def query(self, letter: str) -> bool:
+        # advance or terminate cursors
         self.bIdx = (self.bIdx - 1) % self.N
         self.buffer[self.bIdx] = letter
 

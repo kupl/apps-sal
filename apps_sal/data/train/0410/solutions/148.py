@@ -1,6 +1,7 @@
 
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
+        # return sorted(map(lambda x: (self.myfunc(x),x), range(lo,hi+1)) )[k-1][1]
         return sorted([(self.recursive(x, 0, {}), x) for x in range(lo, hi + 1)])[k - 1][1]
 
     def recursive(self, x, count, memo):

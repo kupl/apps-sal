@@ -1,3 +1,6 @@
+# 4 9
+# 1 3 5 6
+# の時に1（正解は0）と出力されるがACになる
 
 N, K = list(map(int, input().split()))
 a = list(map(int, input().split()))

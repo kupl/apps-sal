@@ -32,7 +32,9 @@ class Solution:
         for i in range(1, f + 1):
             if i > target:
                 break
+            # print(i)
             dp[1][i] = 1
+        # print(dp)
         for i in range(2, d + 1):
             for j in range(i, target + 1):
                 for k in range(1, f + 1):
@@ -41,4 +43,5 @@ class Solution:
                         dp[i][j] %= mod_v
                     else:
                         break
+        # print(dp)
         return dp[d][target]

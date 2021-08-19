@@ -4,6 +4,7 @@ e = s.count('e') // 3
 i = s.count('i')
 t = s.count('t')
 
+#print(n, e, s.count('e'), i, t)
 
 count = min(e, i, t)
 for i in range(count, -1, -1):

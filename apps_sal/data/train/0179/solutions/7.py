@@ -16,6 +16,7 @@ class Solution:
 
                 deleted = 0
                 for p in reversed(list(range(i + 1))):
+                    # delete different
                     if s[i] != s[p]:
                         deleted += 1
                     if deleted > j:

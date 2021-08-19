@@ -4,9 +4,11 @@ class Solution:
             return list(set(lst1) & set(lst2))
 
         col = defaultdict(list)
+#        row=defaultdict(list)
         ans = float('inf')
         for point in points:
             col[point[0]].append(point[1])
+#            row[point[1]].append(point[0])
         cols = list(col.keys())
         for i1 in range(len(cols)):
             for i2 in range(i1 + 1, len(cols)):

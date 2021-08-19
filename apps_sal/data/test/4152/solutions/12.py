@@ -9,6 +9,7 @@ for i in range(n):
         KeyError
         dict1[arr[i]] = 1
 ans = 0
+# print(dict1)
 for i in range(n):
     flag = 0
     for j in range(ceil(log2(arr[i])), 32):
@@ -23,5 +24,6 @@ for i in range(n):
         except:
             KeyError
     if(flag == 0):
+        # print(arr[i])
         ans += 1
 print(ans)

@@ -4,6 +4,8 @@ read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 
+# グラフを拡張してダイクストラ法を使う
+
 
 def main():
     N, M, S = list(map(int, readline().split()))
@@ -19,6 +21,8 @@ def main():
     for c, d in zip(*[iter(cd)] * 2):
         CD.append((c, d))
 
+    # Dijkstra
+    # d[v][s] := 頂点vで,所持金sとなる最小の所要時間
     if S > 2500:
         S = 2500 - 1
     INF = 10**15
@@ -26,7 +30,7 @@ def main():
     d[1][S] = 0
 
     Q = []
-    heappush(Q, (0, S, 1))
+    heappush(Q, (0, S, 1))  # (所要時間, 所持金, 頂点)
 
     while Q:
         time, s, u = heappop(Q)

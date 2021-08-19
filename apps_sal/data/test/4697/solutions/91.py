@@ -5,4 +5,5 @@ s -= i
 c -= i * 2
 if s == 0:
     m += c // 4
+# print(s,c)
 print(m)

@@ -21,6 +21,9 @@ class Solution:
                     ppl = dfs(mask | p)
                     if ppl != None and (not ret or len(ret) > len(ppl) + 1):
                         ret = [i] + ppl
+                        #print(i, ppl)
+            #print(mask, ret)
             return ret
 
+        #print(M, pmasks)
         return dfs(0)

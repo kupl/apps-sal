@@ -1,6 +1,6 @@
 n, x = map(int, input().split())
-p = [1] * (n + 1)
-a = [1] * (n + 1)
+p = [1] * (n + 1)  # パティ
+a = [1] * (n + 1)  # パティとバンズ
 
 for i in range(1, n + 1):
     p[i] = p[i - 1] * 2 + 1

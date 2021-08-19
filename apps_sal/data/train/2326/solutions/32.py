@@ -8,12 +8,15 @@ awid.sort(reverse=True)
 
 bit = [0] * (n + 1)
 cnt = [0] * (n + 1)
+# Add w to ax
 
 
 def bit_add(bit, x, w):
     while x <= n:
         bit[x] += w
         x += x & -x
+
+# Sum a1 to ax
 
 
 def bit_sum(bit, x):

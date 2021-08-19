@@ -8,6 +8,7 @@ for i in range(n):
     cnt += 1
     if cnt == n:
         break
+    # print(r)
     L.append(r)
 L.reverse()
 

@@ -11,6 +11,8 @@ class Solution:
     def coinChangeHelp(self, amount: int) -> int:
         if amount < 0:
             return -1
+#         if not amount:
+#             return 0
         if amount in self.amount_dict:
             return self.amount_dict[amount]
         max_coin = amount + 1

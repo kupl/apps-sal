@@ -12,6 +12,7 @@ for i in range(n):
     if sub[i] < 0:
         c += 1
         pos = i
+# print(sub)
 if c == 0:
     print(0)
 elif c > 1:

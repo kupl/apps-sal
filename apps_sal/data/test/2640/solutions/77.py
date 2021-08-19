@@ -1,4 +1,11 @@
+#import math
+#import itertools
 import numpy as np
+#from collections import deque
+# sys.setrecursionlimit(10 ** 6)
+#MOD = 10 ** 9 + 7
+#INF = 10 ** 9
+#PI = 3.14159265358979323846
 
 
 def INT(): return int(input())
@@ -26,6 +33,7 @@ def do():
     right = np.zeros((h, w), dtype=np.int16)
     up = np.zeros((h, w), dtype=np.int16)
     down = np.zeros((h, w), dtype=np.int16)
+    # print(up)
     for i in range(w):
         i2 = w - 1 - i
         if i == 0:

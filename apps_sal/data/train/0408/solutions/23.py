@@ -1,5 +1,6 @@
 class Solution:
     def findBestValue(self, arr: List[int], target: int) -> int:
+        # brute force, linear scan, TIME LIMIT EXCEEDED
         '''
         sums = []
         for i in range(max(arr)+1):
@@ -15,6 +16,7 @@ class Solution:
         return sums[0][1]
         '''
 
+        # linear scan with stopping condition, works! but really bad lol
         '''
         sums = []
         for i in range(max(arr)+1):
@@ -33,6 +35,8 @@ class Solution:
         return sums[0][1]
         '''
 
+        # binary search, find the minimum integer that meets stopping condition
+        # since you are trying to minimize the difference, stop on the smallest one and find the corresponding value
         '''
         def condition(cutoff): 
             currSum = 0
@@ -44,11 +48,11 @@ class Solution:
             return abs(currSum - target)
             
         left, right = 0, target
-        currSum = (float('inf'), -1) 
+        currSum = (float('inf'), -1) #smallest sum, the cutoff value which gives you the smallest sum 
         while left <= right: 
             mid = left + (right - left) // 2
             checkSum = condition(mid)
-            if checkSum < currSum[0]: 
+            if checkSum < currSum[0]: #if the smallest sum is smaller than the previous smallest sum, store the cutoff value
                 currSum = (checkSum, mid)
                 right = mid - 1
             else:
@@ -56,6 +60,7 @@ class Solution:
             print(left, right)
         return currSum[1]
         '''
+        # binary search but look for the cutoff point
         def condition(cutoff):
             currSum = 0
             for val in arr:

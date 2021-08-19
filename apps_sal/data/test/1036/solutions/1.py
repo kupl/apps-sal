@@ -1,4 +1,4 @@
-win = {'R': 'P', 'P': 'S', 'S': 'R'}
+win = {'R': 'P', 'P': 'S', 'S': 'R'}  # [lose]=win
 n, k = list(map(int, input().split()))
 S = input()
 for _ in range(k):

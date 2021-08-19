@@ -30,6 +30,8 @@ class TweetCounts:
             end_time = time + interval
             start_index = self.binary_search(arr, time)
             end_index = self.binary_search(arr, min(end_time, endTime + 1))
+            # if start_index == end_index and arr[-1] == time:
+            # end_index += 1
 
             result.append(end_index - start_index)
 
@@ -38,6 +40,13 @@ class TweetCounts:
         return result
 
     def binary_search(self, arr, num):
+        # if num <= arr[0]:
+        # return 0
+        # elif num >= arr[-1]:
+        # return len(arr)
+        # elif num > arr[-1]:
+        # return len(arr) + 1
+        # else:
         left = 0
         right = len(arr)
 
@@ -51,3 +60,9 @@ class TweetCounts:
                 return mid
 
         return left
+
+
+# Your TweetCounts object will be instantiated and called as such:
+# obj = TweetCounts()
+# obj.recordTweet(tweetName,time)
+# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

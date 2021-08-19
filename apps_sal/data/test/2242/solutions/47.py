@@ -17,3 +17,4 @@ for i in range(len(array2)):
     ans += array3[z]
     array3[z] += 1
 print(ans)
+# 3*673

@@ -12,6 +12,7 @@ if n == 2:
     ans += 0
 if n == 3:
     ans += 7
+# print(ans)
 if s in 'f':
     ans += 1
 if s in 'e':

@@ -41,7 +41,9 @@ for i in range(m):
 
     all1[a] += 1
     all1[b] += 1
+# print(all1)
 ans = [uf.size(x) - 1 - all1[x - 1] for x in range(1, n + 1)]
+# print(ans)
 
 for i in range(k):
     a, b = map(int, input().split())

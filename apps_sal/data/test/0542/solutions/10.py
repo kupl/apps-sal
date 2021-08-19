@@ -10,7 +10,7 @@ for s in range(points):
     elif point < 0:
         secondpoints.append(int(point))
     if s == points - 1 and point > 0:
-        ans = "l"
+        ans = "l"  # first player last punch
 
 if sum(firstpoints) == abs(sum(secondpoints)):
     for i in range(max(len(firstpoints), len(secondpoints))):

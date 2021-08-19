@@ -10,6 +10,7 @@ def II(): return int(input())
 def SI(): return input()
 
 
+# ---khan17---template
 t = II()
 for q in range(t):
     n = II()

@@ -10,6 +10,7 @@ class Solution:
         h = num_sum
         m = math.ceil((l + h) / 2)
         while h != m:
+            #            print(l,h)
             if self.validate_divisor(m):
                 h = m
             else:
@@ -21,4 +22,5 @@ class Solution:
         if divisor <= 0:
             return False
         s = sum(math.ceil(x / divisor) for x in self.nums)
+#        print('validate', divisor, s, s <= self.threshold)
         return s <= self.threshold

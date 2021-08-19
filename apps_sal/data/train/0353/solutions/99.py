@@ -21,4 +21,5 @@ class Solution:
                 else:
                     R = mid
             cnt += 2**(R - i - 1)
+            # print (n, i, R, cnt)
         return cnt % (10**9 + 7)

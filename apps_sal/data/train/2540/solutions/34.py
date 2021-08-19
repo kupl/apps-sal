@@ -1,4 +1,6 @@
 class Solution:
+    # 3 max, check if they form a triangle
+    # 9 5 4 3 2 1
     def largestPerimeter(self, A: List[int]) -> int:
         n = len(A)
 

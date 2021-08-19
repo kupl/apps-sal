@@ -3,6 +3,7 @@ class Solution:
         memo = dict()
 
         def dp(k, n):
+            # base case
             if k == 1:
                 return n
             if n == 0:
@@ -12,6 +13,9 @@ class Solution:
                 return memo[(k, n)]
 
             res = float('inf')
+            # for i in range(1, n + 1):
+            #     res = min(res, max(dp(k, n - i), dp(k - 1, i - 1)) + 1)
+            # binary search
             res = float('inf')
             lo, hi = 1, n
             while lo <= hi:

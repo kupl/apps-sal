@@ -1,5 +1,7 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
+        # we perform BFS but we keep track of the number of obstacles we have removed to reach the current node along with the steps
+        # each node can be reached after removing different number of obstacles and so our state in BFS will not just be x,y but also the no of blocks we removed to reach the node
         if len(grid) == 0 or len(grid[0]) == 0:
             return -1
         if grid[0][0] == 1:

@@ -9,7 +9,9 @@ class LowLink:
     Attributes:
     size:グラフの頂点
     pre:oreorderでの訪問順
-    low: 
+    low: ###1. prenum[u]
+         ###2.GのBackEdge(u,v)が存在する場合prenum[v]
+         ###3.uをすべての子childに対してlowest[child]
     """
 
     def __init__(self, v):
@@ -62,7 +64,9 @@ def solve():
         G[s].append(t)
         G[t].append(s)
 
+    # initialize
     lowlink = LowLink(G)
+    # bridges
     bridges = lowlink.bridges
     print(len(bridges))
 

@@ -9,6 +9,7 @@ class Solution:
                     dp[i][0] = dp[j][1] + sum(stoneValue[i:j])
                     dp[i][1] = dp[j][0]
         alice, bob = dp[i]
+        # print(dp)
         if alice > bob:
             return 'Alice'
         elif alice < bob:

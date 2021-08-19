@@ -21,6 +21,7 @@ class Solution:
         ans = left1 = left2 = 0
 
         for x in A:
+            #print(right, x)
             window1.add(x)
             window2.add(x)
 

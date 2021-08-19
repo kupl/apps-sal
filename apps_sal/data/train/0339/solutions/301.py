@@ -13,7 +13,7 @@ class Solution:
         compFreq = {}
         for i in range(len(nums)):
             comp = target / nums[i]
-            if comp == int(comp):
+            if comp == int(comp):  # is comp is a float, no need to proceed
                 if nums[i] in compFreq:
                     count += compFreq[nums[i]]
 
@@ -24,9 +24,12 @@ class Solution:
         return count
 
     '''
+    # O(N^2) Solution
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int: 
         res = 0
         
+        # freq is dict that has key=n^2, element=frequency of n^2 occur
+        # if there are duplicate in nums1=[2,2], and nums2=[1,4], there are 2 cases in stead on 1
         freq1 = {}
         freq2 = {}
         for n in nums1:

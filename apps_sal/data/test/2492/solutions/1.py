@@ -15,10 +15,13 @@ def main():
         res = 0
         if x >= 0:
             res += len(zero) * N
+        # positive
         res += np.searchsorted(A, x // plus, side="right").sum()
 
+        # negative
         res += (N - np.searchsorted(A, (-x - 1) // (-minus), side="right")).sum()
 
+        # remove dup
         res -= np.count_nonzero(A * A <= x)
         res //= 2
 

@@ -27,6 +27,7 @@ for i in range(len(a)):
 if i == (n - 1) and (i - posi + 1) > taillemax:
     p = posi
     taillemax = i - posi + 1
+    # print(p,posi)
 
 print(taillemax)
 ch = ""

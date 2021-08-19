@@ -2,6 +2,7 @@
 L = input()
 lenl = len(L)
 MOD = 10**9 + 7
+# dp[is未満][bit]
 dp = [[0] * len(L) for _ in range(2)]
 dp[0][0] = 2
 dp[1][0] = 1

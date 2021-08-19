@@ -1,3 +1,4 @@
+# ------- main function -------
 
 def solve():
     n = int(input())
@@ -8,6 +9,8 @@ def solve():
     else:
         print("NO")
 
+
+# ------- starting point of program -------
 
 def __starting_point():
     for _ in range(int(input())):

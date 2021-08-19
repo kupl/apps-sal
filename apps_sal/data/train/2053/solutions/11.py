@@ -40,3 +40,6 @@ b, g = take_input()
 b_sweet = take_input()
 g_sweet = take_input()
 stdout.write(str(min_sweets(b, g, b_sweet, g_sweet)) + "\n")
+
+# stdout.write( str(b*g) + "\n" )
+# stdout.write( str(b_sweet[0]) + "\n" )

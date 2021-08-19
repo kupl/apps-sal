@@ -23,4 +23,5 @@ for tests in range(t):
         ALIST[i] = min(n // (ANS - i), NOW)
         n -= ALIST[i] * (ANS - i)
         NOW += ALIST[i]
+        # print(n,ALIST,NOW)
     print(*ALIST)

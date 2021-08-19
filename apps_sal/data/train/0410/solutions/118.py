@@ -1,4 +1,5 @@
 class Solution:
+    # calc=[]
     def findPower(self, ele):
         self.calc = []
         ctr = 0

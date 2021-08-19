@@ -47,12 +47,16 @@ while x:
 
     while lo < hi:
         mid = (lo + hi) // 2
+        # print(lo, hi, mid)
         sm = tree.query(0, mid)
+        # print(sm, mid)
         if sm > q:
             hi = mid
         else:
             lo = mid + 1
+    # print(tree.arr, lo, hi)
     idx = tree.arr[lo]
+    # print(idx)
     tree.update(lo, 0)
     res.append(idx)
 

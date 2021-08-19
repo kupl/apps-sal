@@ -13,10 +13,12 @@ class Solution:
                     nums[i] -= 1
                     cnt += 1
             max_val = nums[max_index]
+            # print(nums, max_val)
             if max_val == 0:
                 break
             for i in range(len(nums)):
                 nums[i] = nums[i] // 2
             cnt += 1
             max_val = nums[max_index]
+            # print(nums, max_val)
         return cnt

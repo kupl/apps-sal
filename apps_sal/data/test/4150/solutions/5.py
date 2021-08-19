@@ -22,8 +22,11 @@ team = 1
 for pair in sort:
     v, i = pair
 
+    # if nodes[i].left == None and nodes[i].right == None:
+    #     continue
     if nodes[i].i == None:
         continue
+    # print(v, i)
     ans[i] = team if team == 1 else 2
     cur = nodes[i].right
     right = None
@@ -35,6 +38,7 @@ for pair in sort:
         cur.i = None
         cur = right
     cur = nodes[i].left
+    # print(cur.i, cur.v)
     left = None
     for j in range(k):
         if cur == None:
@@ -43,6 +47,8 @@ for pair in sort:
         ans[cur.i] = team if team == 1 else 2
         cur.i = None
         cur = left
+    # if left == None and right == None:
+    #     break
     if left:
         left.right = right
     if right:

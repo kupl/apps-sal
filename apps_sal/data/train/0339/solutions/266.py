@@ -26,3 +26,5 @@ class Solution:
             if count2[i] > 1 and i * i in nums11:
                 count += count2[i] * (count2[i] - 1) * count1[i] // 2
         return count
+
+        # return count1, count2, set1, set2,nums11,nums22, list(combinations(set1,2))

@@ -1,8 +1,10 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
+        # special case for K = 1
         if K == 1:
             return N
 
+        # initialize data
         Rp = [i for i in range(0, N + 1)]
         R = [0] * (N + 1)
         R[1] = 1
@@ -11,6 +13,8 @@ class Solution:
         while k <= K:
             l1 = 0
             for n in range(2, N + 1):
+                # if n < 2**k:
+                #    R[n] = n.bit_length()
                 if Rp[n - l1 - 1] >= R[n - 1]:
                     R[n] = R[n - 1] + 1
                 else:

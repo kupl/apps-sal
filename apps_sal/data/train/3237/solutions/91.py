@@ -3,3 +3,4 @@ def even_or_odd(number):
         return("Even")
     else:
         return("Odd")
+# He's only gone and done his fifth kata

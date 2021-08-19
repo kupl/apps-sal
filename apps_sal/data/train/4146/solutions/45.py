@@ -1,4 +1,5 @@
 def is_sorted_and_how(arr):
+    # your code here
     type_arr = set()
 
     prev = arr[0]

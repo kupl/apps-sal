@@ -1,6 +1,8 @@
+# Read the number of test cases.
 T = int(input())
 
 for tc in range(T):
+    # Read integers a and b.
     n = int(input())
     count = 0
     while n:

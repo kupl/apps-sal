@@ -6,4 +6,4 @@ def elevator(left, right, call):
         return "right"
     else:
         return "right"
-    pass
+    pass  # Code on! :)

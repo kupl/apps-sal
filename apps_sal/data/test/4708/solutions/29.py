@@ -1,6 +1,6 @@
 """
 ABC044 A 高橋君とホテルイージー
-https://kenkoooo.com/atcoder/
+https://kenkoooo.com/atcoder/#/table/Tsukumo
 """
 
 n = int(input())

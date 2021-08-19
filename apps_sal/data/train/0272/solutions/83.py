@@ -8,12 +8,12 @@ class Solution:
         visited = set()
         res = 0
         while q:
-            itr, opened = len(q), False
+            itr, opened = len(q), False  # To detect cycle
             opened = False
             while (itr):
                 itr -= 1
                 v = q.popleft()
-                if status[v]:
+                if status[v]:  # Open box, (key is available or is open)
 
                     opened = True
                     res += candies[v]
@@ -26,8 +26,8 @@ class Solution:
                         if x not in visited:
                             q.append(x)
 
-                elif v not in visited:
+                elif v not in visited:  # Open when key is available
                     q.append(v)
             if not opened:
-                return res
+                return res  # Exit cycle detected
         return res

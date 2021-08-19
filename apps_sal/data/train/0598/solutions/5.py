@@ -1,3 +1,4 @@
+# your code goes here
 def printo(arr):
     for i in range(len(arr)):
         print(arr[i], end=' ')

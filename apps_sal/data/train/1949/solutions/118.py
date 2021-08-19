@@ -4,14 +4,19 @@ class Solution:
         maximum = 0
         for x in range(len(grid)):
             for y in range(len(grid[0])):
+                # not 0
                 if (grid[x][y] and (x, y) not in checked):
+                    # print(\"checking: \" + str((x,y)))
                     visited = set()
                     value = self.recursive(0, x, y, grid, visited, checked)
 
                     if (value > maximum):
+                        # print(\"new max point: \" + str((x,y)))
+                        # print(\"new max: \" + str(value))
                         maximum = value
         return maximum
 
+    # not zero and not visited
     def valid(self, x, y, grid, visited):
         if (grid[x][y] == 0 or (x, y) in visited):
             return False
@@ -24,6 +29,10 @@ class Solution:
         visited = set(visited)
         visited.add((x, y))
         total = total + grid[x][y]
+        # left = (x-1,y)
+        # right = (x+1,y)
+        # top = (x,y-1)
+        # btm = (x,y+1)
         left, right, top, btm = total, total, total, total
 
         if (x > 0):

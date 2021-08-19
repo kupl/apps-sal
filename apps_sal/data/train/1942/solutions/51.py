@@ -6,6 +6,7 @@ class Solution:
                 if e not in d:
                     d[e] = set()
                 d[e].add(ind)
+        # print('d',d)
         output = []
         for ind, company in enumerate(favoriteCompanies):
             temp = d[company[0]]

@@ -13,3 +13,5 @@ for s in input().split():
         k = c + 1
     else:
         print(0, end=' ')
+    # print(d)
+    # print(a)

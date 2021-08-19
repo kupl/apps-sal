@@ -7,7 +7,7 @@ def convergents_of_e(n):
     print(n)
 
     for i in range(200, n, 200):
-        h(cont_e_2, i)
+        h(cont_e_2, i)  # recursion depth error prevent by precalculating
 
     return sum_dig(h(cont_e_2, n - 1))
 
@@ -36,6 +36,7 @@ def cont_e_2(n):
 
 @functools.lru_cache(maxsize=None)
 def h(func, n):
+    # source: https://en.wikipedia.org/wiki/Continued_fraction#Some_useful_theorems
     a = func(n)
     if n < 0:
         val = 2 + n

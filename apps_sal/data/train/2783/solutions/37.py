@@ -1,4 +1,5 @@
 def get_grade(s1, s2, s3):
+    # Code here -> OK
     if s1 + s2 + s3 >= 270:
         return "A"
     if ((s1 + s2 + s3 >= 240) & (s1 + s2 + s3 < 270)):

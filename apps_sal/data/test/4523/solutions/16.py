@@ -3,7 +3,12 @@ from sys import stdin, stdout
 t = int(stdin.readline())
 for _ in range(t):
     n = int(stdin.readline())
+    #n,x=(map(int, stdin.readline().strip().split()))
     arr = list(map(int, stdin.readline() .strip().split()))
+    # s=input()
+
+    # stdout.write(str(cp))
+    # stdout.write("\n")
 
     arr = sorted(arr)
     flg = 0

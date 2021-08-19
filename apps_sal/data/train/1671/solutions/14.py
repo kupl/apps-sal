@@ -3,6 +3,9 @@
     13th NOV , 2020  - Friday
 """
 
+# ===============================================================================================
+# importing some useful libraries.
+
 
 from types import GeneratorType
 from fractions import Fraction
@@ -11,6 +14,7 @@ import os
 from io import BytesIO, IOBase
 from functools import cmp_to_key
 
+# from itertools import *
 from heapq import *
 from math import gcd, factorial, floor, ceil, sqrt
 
@@ -22,6 +26,8 @@ from bisect import bisect_left as bl
 from bisect import bisect_right as br
 from bisect import bisect
 
+# ==============================================================================================
+# fast I/O region
 BUFSIZE = 8192
 
 
@@ -88,6 +94,11 @@ if sys.version_info[0] < 3:
 else:
     sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
+# inp = lambda: sys.stdin.readline().rstrip("\r\n")
+
+# ===============================================================================================
+### START ITERATE RECURSION ###
+
 
 def iterative(f, stack=[]):
     def wrapped_func(*args, **kwargs):
@@ -105,14 +116,19 @@ def iterative(f, stack=[]):
             to = stack[-1].send(to)
         return to
     return wrapped_func
+#### END ITERATE RECURSION ####
+
+# ===============================================================================================
+# some shortcuts
 
 
-def inp(): return sys.stdin.readline().rstrip("\r\n")
-def out(var): sys.stdout.write(str(var))
+def inp(): return sys.stdin.readline().rstrip("\r\n")  # for fast input
+def out(var): sys.stdout.write(str(var))  # for fast output, always take string
 def lis(): return list(map(int, inp().split()))
 def stringlis(): return list(map(str, inp().split()))
 def sep(): return list(map(int, inp().split()))
 def strsep(): return list(map(str, inp().split()))
+# def graph(vertex): return [[] for i in range(0,vertex+1)]
 
 
 def testcase(t):
@@ -121,24 +137,24 @@ def testcase(t):
 
 
 def google(p):
-    print('Case
+    print('Case #' + str(p) + ': ', end='')
 
 
 def lcm(a, b): return (a * b) // gcd(a, b)
 
 
 def power(x, y, p):
-    y %= (p - 1)
-    res=1
-    x=x % p
+    y %= (p - 1)  # not so sure about this. used when y>p-1. if p is prime.
+    res = 1     # Initialize result
+    x = x % p  # Update x if it is more , than or equal to p
     if (x == 0):
         return 0
     while (y > 0):
-        if ((y & 1) == 1):
-            res=(res * x) % p
+        if ((y & 1) == 1):  # If y is odd, multiply, x with result
+            res = (res * x) % p
 
-        y=y >> 1
-        x=(x * x) % p
+        y = y >> 1      # y = y/2
+        x = (x * x) % p
     return res
 
 
@@ -152,22 +168,25 @@ def isPrime(n):
         return True
     if (n % 2 == 0 or n % 3 == 0):
         return False
-    i=5
+    i = 5
     while(i * i <= n):
         if (n % i == 0 or n % (i + 2) == 0):
             return False
-        i=i + 6
+        i = i + 6
     return True
 
 
-inf=pow(10, 20)
-mod=10**9 + 7
+inf = pow(10, 20)
+mod = 10**9 + 7
+# ===============================================================================================
+# code here ;))
 
 
 def solve(case):
-    n=int(inp())
-    ans=[1] * n
+    n = int(inp())
+    ans = [1] * n
     print(' '.join(str(ans[i]) for i in range(n)))
 
 
+# testcase(1)
 testcase(int(inp()))

@@ -55,6 +55,8 @@ class SegmTree():
         return ans
 
 
+# inf = open('input.txt', 'r')
+# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
 
@@ -70,3 +72,5 @@ for _ in range(m):
             ans[i] = x + 1
             st.add(i, -1)
 print(*ans)
+
+# inf.close()

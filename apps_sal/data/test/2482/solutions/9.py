@@ -1,11 +1,14 @@
 def main():
+    # Union Find
 
+    # xの根を求める
     def find(x):
         if par[x] < 0:
             return x
         else:
             par[x] = find(par[x])
             return par[x]
+    # xとyの属する集合の併合
 
     def unite(x, y):
         x = find(x)
@@ -14,6 +17,7 @@ def main():
         if x == y:
             return False
         else:
+            # sizeの大きいほうがx
             if par[x] > par[y]:
                 x, y = y, x
             par[x] += par[y]

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     import numpy as np
     from sys import stdin

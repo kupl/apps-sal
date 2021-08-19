@@ -1,3 +1,4 @@
+#!/usr/bin/env pypy3
 
 def ans(books):
     i = None

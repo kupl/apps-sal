@@ -9,7 +9,7 @@ class Solution:
         i, j = posi
         if i < 0 or i >= m or j < 0 or j >= n:
             return False
-        return grid[i][j] != '
+        return grid[i][j] != '#'
 
     def minPushBox(self, grid: List[List[str]]) -> int:
 

@@ -17,6 +17,7 @@ for _ in range(t):
                 for j in range(l):
                     iron = ir[j]
                     if iron > mag:
+                        # sheet=s[mag:iron].count(":")
                         sheet = 0
                         p = k + 1 - (iron - mag) - sheet
                         if p > 0:
@@ -25,7 +26,9 @@ for _ in range(t):
                             l -= 1
                             break
                     else:
+                        # sheet=s[iron:mag].count(":")
                         sheet = 0
+                        # print(iron,mag,sheet)
                         p = k + 1 - (mag - iron) - sheet
                         if p > 0:
                             el += 1
@@ -34,5 +37,8 @@ for _ in range(t):
                             break
                 ir = alt.copy()
             total += el
+            # for k,v in attr.items():
+            #    total-=v-1
+            # print(ma,ir,total)
             ma, ir = [], []
     print(total)

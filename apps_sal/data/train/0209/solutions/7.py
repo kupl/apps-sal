@@ -7,7 +7,7 @@ class Solution:
         if n == 1:
             return 0
 
-        dp = [[-1 for _ in range(n)] for _ in range(n)]
+        dp = [[-1 for _ in range(n)] for _ in range(n)]  # dp[i][j] stores min cost to reduce [i, j] as much as possible
         self.solve(stones, 0, n - 1, k, dp)
         return dp[0][n - 1]
 

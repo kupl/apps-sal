@@ -1,4 +1,5 @@
 def sum_str(a, b):
+    # happy coding !
     try:
         s = int(a) + int(b)
         return str(s)

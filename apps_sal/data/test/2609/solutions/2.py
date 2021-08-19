@@ -24,16 +24,18 @@ def solve():
         a[i + 1] = (r * 2 + 1, 1, i)
         c[i + 1] = (l * 2, r * 2 + 1)
     a.sort()
+    # print(a)
     s = set()
     p = None
     start = None
-    px = int(-2e9 - 5)
+    px = int(-2e9 - 5)  # prev event
     pt = -1
     pp = px
     segs = []
     for i in range(0, 2 * n):
         x, t, id = a[i]
         if px != x:
+            # print(px,x)
             cd = len(s)
             if cd == 1:
                 segs.append((px, x, cd, next(iter(s))))

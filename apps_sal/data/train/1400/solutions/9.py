@@ -1,3 +1,4 @@
+# cook your dish here
 from sys import stdin, stdout
 input = stdin.readline
 print2 = stdout.write

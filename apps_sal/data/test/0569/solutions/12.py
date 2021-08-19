@@ -1,3 +1,6 @@
+#! /usr/bin/python
+# kmwho
+# Codeforces 352 D2
 
 
 def solvecase():

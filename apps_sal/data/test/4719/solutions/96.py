@@ -2,6 +2,7 @@ n = int(input())
 abc = 'abcdefghijklmnopqrstuvwxyz'
 s = []
 t = [51] * len(abc)
+# print(t)
 for i in range(n):
     u = input()
     for j in range(len(abc)):

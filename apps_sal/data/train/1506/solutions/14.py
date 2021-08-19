@@ -30,6 +30,8 @@ for i in range(m):
     for j in range(1, n):
         dp[j][i] += dp[j - 1][i]
 
+# print(dp)
+# print(MX)
 for i in range(n):
     for j in range(m):
         if dp[i][j] % 2 == 1:

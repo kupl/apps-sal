@@ -18,9 +18,11 @@ index = 0
 for b, c in Query:
     if index >= n:
         break
+    # print("----")
     cnt = 0
     Flag = True
     while Flag:
+        # print(A,b,c,index)
         if A[index] < c:
             A[index] = c
             cnt += 1
@@ -30,6 +32,7 @@ for b, c in Query:
         else:
             Flag = False
     '''
+    #A.sort()
     if A[0] >= c:
         break
     else:

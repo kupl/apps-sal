@@ -12,6 +12,7 @@ while i < n:
         temp = stack.pop()
         if stack:
             maxx = max(stack[-1] ^ temp, maxx)
+    # print(stack)
 while len(stack) != 1:
     temp = stack.pop()
     maxx = max(temp ^ stack[-1], maxx)

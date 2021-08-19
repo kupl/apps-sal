@@ -10,6 +10,7 @@ class Solution:
         nums.sort()
         n = len(nums)
         res = 0
+        # one length subsequence
         mod = 10**9 + 7
         i, j = 0, n - 1
 

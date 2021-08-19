@@ -3,6 +3,7 @@ class Solution:
 
         steps = 0
         while(num > 0):
+            # print(num)
             if num % 2 == 0:
                 num = num / 2
                 steps += 1

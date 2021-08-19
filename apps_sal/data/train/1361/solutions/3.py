@@ -1,3 +1,4 @@
+# cook your dish here
 from itertools import accumulate
 N, K = map(int, input().split())
 l = list(map(int, input().split()))

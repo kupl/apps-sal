@@ -13,6 +13,7 @@ c2 = sorted(c2, key=lambda x: x[1], reverse=True)
 c1.append((0, 0))
 c2.append((0, 0))
 
+#print(c1[:3], c2[:3])
 if c1[0][0] != c2[0][0]:
     print(n - c1[0][1] - c2[0][1])
 else:

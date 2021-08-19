@@ -1,15 +1,17 @@
 N = int(input())
 e = [0] * (N + 1)
 
+# N！を素因数分解した時の指数を列挙
 for i in range(2, N + 1):
     cur = i
     for j in range(2, i + 1):
         while cur % j == 0:
             e[j] += 1
             cur //= j
+# print(e)
 
 
-def num(m):
+def num(m):  # eの要素のうちm-1以上のものの個数
     return len(list(filter(lambda x: x >= m - 1, e)))
 
 

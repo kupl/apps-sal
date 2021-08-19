@@ -12,6 +12,7 @@ class Solution:
         while wc > 0 or i < len(customers):
 
             if wc >= 4:
+                # print wc
                 wc -= 4
                 profit += 4 * boardingCost
             elif wc < 4:

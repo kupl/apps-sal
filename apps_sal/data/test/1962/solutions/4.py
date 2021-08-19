@@ -26,6 +26,7 @@ else:
                 left = 0
         add += [0 for _ in range(n)]
         diff = [add[i] + 1 for i in range(n - 1)]
+        # print(diff)
         q = s[0]
         p = 0
         for i in range(n - 1):

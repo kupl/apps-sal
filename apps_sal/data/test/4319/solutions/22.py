@@ -1,3 +1,4 @@
+# 1
 n = int(input())
 m = list(map(int, input().split()))
 s = 0

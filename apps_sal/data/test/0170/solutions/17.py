@@ -17,7 +17,7 @@ while len(a) > 0 and len(b) > 0 and cnt < 1000:
     cnt += 1
     a.pop(0)
     b.pop(0)
-if len(a) == 0:
+if len(a) == 0:  # or i==len(b)-1:
     print(cnt, 2)
     quit()
 if len(b) == 0:

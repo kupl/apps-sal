@@ -3,6 +3,7 @@ from collections import defaultdict
 N, K, L = list(map(int, input().split()))
 
 
+# union-findを実装
 root_road = [-1] * N
 root_train = [-1] * N
 
@@ -69,6 +70,7 @@ for _ in range(L):
     dt[s].append(r)
     union_train(r, s)
 
+# print(root_road, root_train)
 dic = {}
 for i in range(N):
     if (find_road(i), find_train(i)) not in dic:

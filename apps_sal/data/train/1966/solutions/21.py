@@ -1,6 +1,8 @@
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
 
+        # 1
+
         rows = len(mat) - 1
         cols = len(mat[0]) - 1
         total = 0

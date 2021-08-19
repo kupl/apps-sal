@@ -1,3 +1,4 @@
+# https://codeforces.com/contest/1220/problem/D
 
 n = int(input())
 a = list(map(int, input().split()))

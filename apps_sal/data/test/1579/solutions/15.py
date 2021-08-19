@@ -2,6 +2,8 @@ from collections import Counter
 import sys
 input = sys.stdin.readline
 
+# Union-Findデータ構造
+
 
 class UnionFind:
     def __init__(self, numV):

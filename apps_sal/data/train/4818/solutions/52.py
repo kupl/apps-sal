@@ -5,3 +5,6 @@ def solution(a, b):
     else:
         res = a + b + a
     return res
+
+    # if a!=b:
+    # return min(a,b)+ max(a,b)+ min(a,b)

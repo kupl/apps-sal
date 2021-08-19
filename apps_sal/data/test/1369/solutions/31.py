@@ -72,6 +72,7 @@ N = int(input())
 points = []
 for i in range(N):
     x, y = list(map(int, input().split()))
+    # x, y = Decimal(x), Decimal(y)
     points.append((x, y))
 
 if N == 2000:

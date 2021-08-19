@@ -1,5 +1,6 @@
 class Solution:
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
+        # depth search
         N = len(grid)
         M = len(grid[0])
         row = copy.deepcopy(grid)

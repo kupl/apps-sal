@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Spyder Editor
 
@@ -25,3 +26,4 @@ for i in a:
 for i in l:
     if i > 0:
         print(i, end=' ')
+#   print(i,end=' ')

@@ -14,6 +14,7 @@ def solution(s1, s2):
     s1 = [_value(c) for c in s1]
     s2 = [_value(c) for c in s2]
 
+    # Sum
     sum_s = []
     tmp = 0
     for i in range(len(s1) - 1, -1, -1):
@@ -25,6 +26,7 @@ def solution(s1, s2):
 
     sum_s = sum_s[::-1]
 
+    # Div by 2
     tmp = 0
     result = []
     for i in range(len(sum_s)):
@@ -35,6 +37,15 @@ def solution(s1, s2):
     result = result[-len(s1):]
     result = [_char(i) for i in result]
     return ''.join(result)
+
+
+#     tmp = 0
+#     s = []
+#     for c1, c2 in zip(s1, s2):
+#         cur = _value(c1) + _value(c2) - tmp * 26
+#         tmp = cur % 2
+#         s.append(_char((cur + 1) // 2))
+#     return ''.join(s)
 
 
 def parser():

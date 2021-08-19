@@ -7,6 +7,7 @@ for i in range(3):
 
 a, b = a[0], a[1]
 c, d = a % 3 + (3 * (a % 3 == 0)), b % 3 + (3 * (b % 3 == 0))
+#print(a, b, c, d)
 isfree = 0
 for i in range(3 * (c - 1), 3 * c):
     for j in range(3 * (d - 1), 3 * d):
@@ -14,6 +15,7 @@ for i in range(3 * (c - 1), 3 * c):
             isfree += 1
 
 if not isfree:
+    # print(isfree)
     for i in range(9):
         for j in range(9):
             if field[i][j] == '.':

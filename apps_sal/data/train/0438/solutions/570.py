@@ -5,10 +5,13 @@ class Solution:
         if len(arr) == 1:
             return 1 if arr[0] == m else -1
 
+        # (length -> appear times)
         length_count = [0 for _ in range(len(arr) + 1)]
+        # store consecutive 1's count ((start, end) -> length)
         binary_str = [0 for _ in range(len(arr))]
         for idx in range(len(arr)):
             num = arr[idx] - 1
+            # left boundary
             if num <= 0:
                 if binary_str[num + 1] > 0:
                     right_count = binary_str[num + 1]
@@ -19,6 +22,7 @@ class Solution:
                 else:
                     binary_str[num] = 1
                     length_count[1] += 1
+            # right boundary
             elif num >= len(arr) - 1:
                 if binary_str[num - 1] > 0:
                     left_count = binary_str[num - 1]
@@ -29,6 +33,7 @@ class Solution:
                 else:
                     binary_str[num] = 1
                     length_count[1] += 1
+            # in the middle
             else:
                 if binary_str[num + 1] > 0 and binary_str[num - 1] > 0:
                     left_count = binary_str[num - 1]
@@ -54,6 +59,7 @@ class Solution:
                     binary_str[num] = 1
                     length_count[1] += 1
 
+            #print(num, binary_str, latest, idx, length_count)
             if length_count[m] > 0:
                 latest = idx
 

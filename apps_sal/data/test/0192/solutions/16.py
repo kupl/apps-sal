@@ -17,5 +17,6 @@ while y > x1 or y > x2 or y > x3:
         x3 = min(x1 + x2 - 1, y)
         counter += 1
 
+#    print(x1,x2,x3)
 
 print(counter)

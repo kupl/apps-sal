@@ -11,6 +11,7 @@ for rwre in range(q):
     while abs(p - l) > 0:
         mozna = 1
         sr = (p + l + 1) // 2
+        # try to make median >= sr
         duze = [przed[i] for i in range(n) if przed[i][1] >= sr]
         male = [przed[i] for i in range(n) if przed[i][1] < sr]
         if len(duze) <= n // 2:

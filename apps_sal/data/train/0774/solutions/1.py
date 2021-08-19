@@ -1,3 +1,4 @@
+# cook your dish here
 n, k, p = map(int, input().split())
 f = list(map(int, input().split()))
 seq = sorted(set(f))

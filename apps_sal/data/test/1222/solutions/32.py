@@ -1,3 +1,4 @@
+# D - Lunlun Number
 import sys
 sys.setrecursionlimit(10**6 + 1)
 K = int(input())
@@ -13,6 +14,7 @@ def dfs(A):
     if len(A) == 10:
         return
     if len(A) >= 1:
+        # 前の値が0,9のときは範囲が違う
         if A[-1] == 9:
             sta = 8
             fin = 9 + 1

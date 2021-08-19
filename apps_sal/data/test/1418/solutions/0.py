@@ -1,4 +1,5 @@
 def isPrime(n):
+    # a prime(except 2 or 3) is of the form 6k-1 or 6k+1
     if n == 2 or n == 3:
         return True
     if n % 2 == 0 or n % 3 == 0:

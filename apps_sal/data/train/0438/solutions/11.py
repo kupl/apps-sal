@@ -25,4 +25,5 @@ class Solution:
                 counter[1] += 1
             if counter[m] > 0:
                 result = i + 1
+            # print(counter)
         return result

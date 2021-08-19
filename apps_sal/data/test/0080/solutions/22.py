@@ -13,6 +13,7 @@ cnt = 0
 b = min(int(math.sqrt(m)), r)
 while low <= b:
     if m % low == 0 and m // low <= r and math.gcd(low, m // low) == x:
+        # print(low)
         cnt += 2
     low += x
 

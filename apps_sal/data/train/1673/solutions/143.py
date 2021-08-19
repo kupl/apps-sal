@@ -3,6 +3,7 @@ class Solution:
         iMax = len(arr)
         jMax = len(arr[0])
 
+        # sortedIndex = [sorted([(arr[i][j], j) for j in range(jMax)]) for i in range(iMax)]
         dp = {}
         smallest2 = [None for _ in range(iMax)]
 

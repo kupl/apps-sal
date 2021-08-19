@@ -1,6 +1,6 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
-        s = s + '
+        s = s + '#'
         totalcost = 0
         idx = 1
         while idx < len(s):

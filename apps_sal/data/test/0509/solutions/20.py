@@ -1,3 +1,6 @@
+# import sys
+# sys.stdin = open('input', 'r')
+# sys.stdout = open('output', 'w')
 
 def check(A, sum, n):
     if n == 0:

@@ -1,3 +1,4 @@
+#map(int, input().split())
 n = int(input())
 l, r = 0, 0
 for i in range(n):

@@ -7,6 +7,8 @@ inf = 1 << 30
 def solve():
     n = int(sys.stdin.readline())
 
+    # r_max = MAX, b_min = MIN にしたとき
+
     r_max = b_max = 0
     r_min = b_min = inf
 
@@ -26,6 +28,8 @@ def solve():
         b_min = min(b_min, xi)
 
     ans1 = (r_max - r_min) * (b_max - b_min)
+
+    # r_max = MAX, r_min = MIN にしたとき
 
     ans2 = (r_max - b_min)
 

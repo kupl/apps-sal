@@ -13,16 +13,20 @@ import decimal
 import statistics
 import queue
 
+# import numpy as np
 
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 16
 MOD = 10 ** 9 + 7
+# MOD = 998244353
 
 
 def ni(): return int(sys.stdin.readline())
 def ns(): return list(map(int, sys.stdin.readline().split()))
 def na(): return list(map(int, sys.stdin.readline().split()))
 
+
+# ===CODE===
 
 def main():
     n, m = ns()
@@ -32,6 +36,8 @@ def main():
         ci = na()
         d.append([ai, bi, ci])
 
+    # bit DP
+    # dp[i] = iの各bitが1である番目の宝箱を開けられる状態となれる最小コスト
     dp = [INF for _ in range(2 ** n)]
     dp[0] = 0
 

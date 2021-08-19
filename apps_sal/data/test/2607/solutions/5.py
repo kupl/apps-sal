@@ -24,6 +24,7 @@ for i in range(int(input())):
                     if s[i + 1] != j and s[i - 1] != j:
                         s[i] = j
                         break
+            # print(s)
         if s[-1] == "?":
             for j in "abc":
                 if j != s[-2]:

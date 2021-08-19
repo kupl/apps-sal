@@ -8,6 +8,7 @@ for test in range(t):
         if s[i] == '0':
             zer.append(i)
     curr = 0
+    # print(s)
     while k > 0 and curr < len(zer):
         if curr == 0:
             swaps = zer[curr]
@@ -16,6 +17,7 @@ for test in range(t):
 
         if swaps > k:
             swaps = k
+        # print(swaps,'ss')
         if swaps == 0:
             curr += 1
             continue
@@ -23,10 +25,12 @@ for test in range(t):
         x = zer[curr]
         y = x - swaps
         s[x] = '1'
+        # print(s,y)
         s[y] = '0'
         k = k - swaps
         zer[curr] = y
         curr += 1
+        # print(s)
 
     for i in range(n):
         print(s[i], end="")

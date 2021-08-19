@@ -2,6 +2,7 @@ n, k = [int(c) for c in input().split(" ")]
 line = [c for c in input()]
 line.sort()
 
+# print(line)
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 alphabet_weight = {}

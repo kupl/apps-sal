@@ -25,3 +25,5 @@ else:
     if(modk == 0):
         modk = loop
     print((button[hisitory[geta + modk]]))
+    # print(hisitory)
+    # print(geta,modk,loop)

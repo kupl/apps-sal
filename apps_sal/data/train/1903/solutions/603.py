@@ -36,6 +36,7 @@ class Solution:
             if px == py:
                 i += 1
             else:
+                # print(points[x], points[y])
                 cnt += d
                 dsu.union(x, y)
                 needs -= 1

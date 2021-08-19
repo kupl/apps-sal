@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def F(n, k):
     if k < 2:

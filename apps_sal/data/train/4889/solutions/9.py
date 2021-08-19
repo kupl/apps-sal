@@ -22,6 +22,7 @@ def max_hexagon_beam(n: int, seq: tuple):
     grid = []
     for i in range(celdas):
         grid.append(seq[i % len(seq)])
+    # Analizamos filas
     fila = [None] * filas
     usados = 0
     for i in range(filas):
@@ -29,6 +30,7 @@ def max_hexagon_beam(n: int, seq: tuple):
         usados += elementos[i]
     maximo = max(sum(fila[i]) for i in range(filas))
 
+    # Analizamos filas a la izquierda por dos veces
     fila2 = fila_left(n, fila)
     fila2 = [row[::-1] for row in fila2]
     maximo_left = max(sum(fila2[i]) for i in range(filas))

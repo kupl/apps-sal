@@ -14,6 +14,7 @@ for i in range(n - 1, 0, -1):
 
         dic[arr[i]] = 1
     ansar[i - 1] = count
+# print(ansar)
 answer = 0
 for i in range(n - 1):
     if dic2[arr[i]] == 0:

@@ -19,6 +19,10 @@ def __starting_point():
     b = int(b)
     result = solve(a, b)
     print(result)
+    # a = int(a)
+    # b = int(b)
+    # result = solve(a, b)
+    # print(result)
 
 
 __starting_point()

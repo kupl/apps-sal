@@ -1,3 +1,4 @@
+# Project name: CF-481-E-D3
 
 n, w = map(int, input().split())
 a = list(map(int, input().split()))

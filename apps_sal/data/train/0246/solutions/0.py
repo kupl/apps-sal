@@ -12,11 +12,16 @@ class Solution:
                 if c not in t:
                     t[c] = {}
                 t = t[c]
-            t['
+            t['#'] = w
 
+        # result = []
 
+#         for word in sentence.split():
+#             result.append(self.replace(word, trie))
 
+#         return " ".joinresult
 
+#     OR
         return " ".join([self.replace(i, trie) for i in sentence.split()])
 
     def replace(self, word, trie):
@@ -25,8 +30,8 @@ class Solution:
             if letter not in cur:
                 break
             cur = cur[letter]
-            if "
-                return cur['
+            if "#" in cur:
+                return cur['#']
         return word
 
         setenceAsList = sentence.split(" ")

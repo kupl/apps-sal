@@ -13,11 +13,13 @@ done = []
 for i in factors:
     ans -= (2**i) % MOD
     temp = i
+    # print("i=",i,ans)
     for j in done:
         if(temp == 1):
             break
         ans = (ans + (2**gcd(temp, j)) % MOD) % MOD
         temp //= gcd(temp, j)
+        # print("j=",j,ans)
     done.append(i)
 if(factors):
     ans -= max(0, len(factors) // 2 - 1) * 2

@@ -12,7 +12,7 @@ class Solution:
         for idx, ele in enumerate(lt):
             s += ele
             print((s, idx, mx))
-            if s > 0:
+            if s > 0:  # atleast more 9
                 mx = max(mx, (idx + 1))
             else:
                 if (s - 1) in seen:

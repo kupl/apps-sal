@@ -16,6 +16,7 @@ def f(len, H):
 lo, hi = 1, 1000000000000000000
 while lo < hi:
     mid = (lo + hi) // 2
+    #print("%d, %d" % (lo, hi))
     if n > f(mid, H):
         lo = mid + 1
     else:

@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 
 
@@ -6,6 +7,7 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
+# しゃくとり法
 N = ir()
 A = lr()
 answer = 0

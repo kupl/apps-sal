@@ -1,3 +1,4 @@
+# A - Restaurant
 
 N = int(input())
 

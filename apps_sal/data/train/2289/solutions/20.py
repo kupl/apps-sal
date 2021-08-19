@@ -19,6 +19,7 @@ for i in range(len(S) - 1, -1, -1):
             dp[i] = dp[j] + 1
             rev[i] = j
             revc[i] = x
+            #print(i, x, j, table[x])
 x = 0
 res = []
 while x < len(S):

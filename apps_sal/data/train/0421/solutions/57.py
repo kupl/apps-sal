@@ -10,6 +10,7 @@ class Solution:
             elif s[i + k] > s[j + k]:
                 j = j + k + 1
             else:
+                # i=max(j,i+k+1)
                 i = i + k + 1
                 j = i + 1
             k = 0

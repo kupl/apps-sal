@@ -10,12 +10,12 @@ class Solution:
         for line in source:
             i = 0
             while i < len(line):
-                if line[i] == '/' and i < len(line) - 1 and line[i + 1] == '/' and not block:
+                if line[i] == '/' and i < len(line) - 1 and line[i + 1] == '/' and not block:  # //
                     i = len(line)
-                elif line[i] == '/' and i < len(line) - 1 and line[i + 1] == '*' and not block:
+                elif line[i] == '/' and i < len(line) - 1 and line[i + 1] == '*' and not block:  # '/*'
                     i += 2
                     block = True
-                elif line[i] == '*' and i < len(line) - 1 and line[i + 1] == '/' and block:
+                elif line[i] == '*' and i < len(line) - 1 and line[i + 1] == '/' and block:  # '*/
                     i += 2
                     block = False
                 else:

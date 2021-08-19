@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def get_input() -> tuple:
     """
@@ -24,6 +25,7 @@ def main(N: int, M: int, requests: list) -> None:
         M (int): 要望の数(1 <= M <= 10^5)
         requests (list): 要望(1 <= a_i < b_i <= N)
     """
+    # 求解処理
     requests = sorted(requests, key=lambda x: x[1])
     bridge = 0
     ans = 0
@@ -33,12 +35,15 @@ def main(N: int, M: int, requests: list) -> None:
             bridge = b_i - 1
             ans += 1
 
+    # 結果出力
     print(ans)
 
 
 def __starting_point():
+    # 標準入力を取得
     N, M, requests = get_input()
 
+    # メイン処理
     main(N, M, requests)
 
 

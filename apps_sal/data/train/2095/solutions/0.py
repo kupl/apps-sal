@@ -19,7 +19,7 @@ for i, a in enumerate(A):
         l.append(a)
         v[a] = True
         a = A[a] - 1
-    if a in l:
+    if a in l:  # new cycle
         if root == -1:
             A[a] = a + 1
             root = a

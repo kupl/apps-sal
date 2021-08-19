@@ -1,6 +1,12 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
+        # DP(x,y) = length, expected number for the next, the last number
 
+        # how to update?
+
+        # DP(x,y) = max(1 + DP(x,y` <y)),
+
+        # store values in the
         if(len(A) == 0):
             return 0
         mem = {}
@@ -18,6 +24,8 @@ class Solution:
 
     def get_valid_pibo(self, i, j, dp, A, mem):
         if(dp[i][j] == -1):
+            # return dp[i][j]
+            # else:
             next_val = A[i] + A[j]
             if(next_val in mem):
                 length = 1 + self.get_valid_pibo(j, mem[next_val], dp, A, mem)

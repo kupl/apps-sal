@@ -13,6 +13,7 @@ class Solution:
                 curr = q.popleft()
                 if curr == B:
                     return step
+                #print(self._swap(curr, B))
                 for next in self._swap(curr, B):
                     if next in visited:
                         continue

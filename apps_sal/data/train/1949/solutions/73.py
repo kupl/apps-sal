@@ -12,8 +12,10 @@ class Solution:
                     res.append(grid[i][j])
                     result = dfs(i, j, visited, res)
                     maxi = maxi if sum(maxi) > sum(result) else result
+                    # print(x,y,i,j,result)
                     res.pop()
                     visited.remove((i, j))
+            # print(x,y,maxi)
             return maxi
 
         maxi = 0
@@ -25,5 +27,7 @@ class Solution:
                     res.append(grid[i][j])
                     visited.add((i, j))
                     result = dfs(i, j, visited, res)
+                    # visited.remove((i,j))
+                    # print(result)
                     maxi = max(maxi, sum(result))
         return maxi

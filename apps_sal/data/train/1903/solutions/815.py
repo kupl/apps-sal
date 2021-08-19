@@ -1,5 +1,7 @@
 class Solution:
     def minCostConnectPoints(self, p: List[List[int]]) -> int:
+        # G(E,V) has no cycle
+        # total |E| is min
 
         def union(u, v):
             parent[find(u)] = parent[find(v)]

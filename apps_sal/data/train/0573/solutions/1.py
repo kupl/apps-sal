@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     n, m = list(map(int, input().split()))
     if(n == 1):

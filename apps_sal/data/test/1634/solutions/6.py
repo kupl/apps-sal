@@ -1,3 +1,4 @@
+# PublicTransport:
 
 costs = input().split(" ")
 costs = [int(x) for x in costs]
@@ -15,6 +16,7 @@ totalBusTravels = sum(buses)
 totalTrolleysTravels = sum(trolleys)
 
 cost = [0, 0]
+# Buses
 for busCost in buses:
     if busCost * costs[0] > costs[1]:
         cost[0] += costs[1]
@@ -22,6 +24,7 @@ for busCost in buses:
         cost[0] += busCost * costs[0]
 if cost[0] > costs[2]:
     cost[0] = costs[2]
+# Trolleys
 for trolleyCost in trolleys:
     if trolleyCost * costs[0] > costs[1]:
         cost[1] += costs[1]

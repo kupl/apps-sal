@@ -5,6 +5,8 @@ class Solution:
         self.res = 0
 
         self.dfs(arr)
+        # print(self.output)
+        # print(self.res)
         return self.res
 
     def checkUnique(self, s):
@@ -18,6 +20,7 @@ class Solution:
 
     def dfs(self, arr, first=0, curr=[]):
         st = ''.join(curr)
+        # print(st)
 
         if self.checkUnique(st):
             self.output.append(st)

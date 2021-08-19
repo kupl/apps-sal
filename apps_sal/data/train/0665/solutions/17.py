@@ -45,6 +45,9 @@ for _ in range(t):
             if(b[i][j] == mx):
                 rating[i] = j
                 break
+    # print(rating)
+    # for i in b:
+        # print(*i)
     c = 0
     '''for i in b:
      print(*i)

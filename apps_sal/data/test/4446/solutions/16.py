@@ -1,3 +1,8 @@
+# def red(x,a,b):
+#     x%=a+b
+#     if(x==0):
+#         x=a+b
+#     return
 
 def main():
     n, a, b, k = list(map(int, input().split()))

@@ -1,4 +1,5 @@
 from collections import defaultdict
+# import heapq
 from operator import itemgetter
 
 
@@ -26,3 +27,22 @@ class Solution:
 
         lst = sorted(lst, key=itemgetter(0))
         return lst[k - 1][1]
+
+        # print(lst)
+#         heapq.heapify(lst)
+
+#         for i in range(k):
+#             ans = heapq.heappop(lst)
+
+#         return ans[1]
+
+
+#         @lru_cache(None)
+#         def power(x):
+#             if x == 1:
+#                 return 0
+#             if x % 2 == 0:
+#                 return 1 + power(x // 2)
+#             return 1 + power(3 * x + 1)
+
+#         return sorted(range(lo, hi+1), key=power)[k-1]

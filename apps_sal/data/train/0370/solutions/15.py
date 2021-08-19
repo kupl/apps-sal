@@ -28,6 +28,7 @@ class Solution:
                     ans.add(k)
                     while not x % k:
                         x //= k
+                # if x == 1: break
             if x > 1:
                 ans.add(x)
             return ans
@@ -37,4 +38,5 @@ class Solution:
             for k in primeFactor(A[i]):
                 dic.setdefault(k, i)
                 union(i, dic[k])
+        # print(rank)
         return max(Counter([find(i) for i in range(len(A))]).values())

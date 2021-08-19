@@ -1,5 +1,6 @@
 import sys
 import math
+#input = sys.stdin.readline
 
 q = int(input())
 
@@ -10,7 +11,9 @@ for x in range(q):
 
     tc = [0] * 26
     pc = [0] * 26
+    # print("yes")
     for i in range(len(p)):
+        #	print(ord(p[i])-97)
         pc[ord(p[i]) - 97] += 1
 
     i = 0

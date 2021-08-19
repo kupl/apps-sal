@@ -15,6 +15,7 @@ class Solution:
                         i += 1
                         l += 1
                     result += l
+                    # print(j ,l)
             else:
                 if A[j] in cnt:
                     cnt[A[j]] += 1
@@ -22,6 +23,7 @@ class Solution:
                         cnt[A[i]] -= 1
                         i += 1
                         l += 1
+                    # print(j, l)
                     result += l
                 else:
                     cnt[A[i]] -= 1
@@ -34,6 +36,7 @@ class Solution:
                         cnt[A[i]] -= 1
                         i += 1
                         l += 1
+                    # print(j, l)
                     result += l
             j += 1
         return result

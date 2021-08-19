@@ -1,3 +1,4 @@
+# You lost the game.
 
 n, k = map(int, input().split())
 S = [str(input()) for _ in range(n)]

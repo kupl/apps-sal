@@ -15,6 +15,7 @@ class Solution:
             pali(i, i)
             pali(i, i + 1)
 
+        # memo = {}
         @lru_cache(maxsize=None)
         def recurse(idx, numCuts):
             if numCuts > k:

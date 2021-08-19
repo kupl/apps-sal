@@ -8,6 +8,8 @@ class Solution:
         for j, v in enumerate(arr):
             i = v - 1
             mem[i] = 1
+            # 0 1 2 3 4 5
+            # 0 0 1 1 1 0
             l = mem[i - 1] if i - 1 >= 0 else 0
             r = mem[i + 1] if i + 1 < n else 0
             counter[l] -= 1
@@ -15,6 +17,7 @@ class Solution:
             cur = l + r + 1
             mem[i - l], mem[i + r] = cur, cur
             counter[cur] += 1
+            # (j, v, cur, mem).p()
             if counter[m] > 0:
                 res = j + 1
         return res

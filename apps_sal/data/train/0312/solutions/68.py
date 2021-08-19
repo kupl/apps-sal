@@ -3,6 +3,8 @@ class Solution:
         p, n = [0], len(A)
         for i in range(n):
             p.append(p[-1] + A[i])
+        # p[i] = A[0]+A[1]+...+A[i-1]
+        # p[j]-p[i] = sum(A[i:j])
         i, ret = 0, float('inf')
         q = collections.deque()
         while i < n + 1:

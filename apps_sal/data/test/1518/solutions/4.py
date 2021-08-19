@@ -17,6 +17,7 @@ ind = [0] * (n + 1)
 ct = 0
 for i in range(1, n + 1):
     ind[lis[i]] = i
+# print(prime,ind)
 ans = []
 for i in range(1, n + 1):
     j = ind[i]
@@ -24,6 +25,7 @@ for i in range(1, n + 1):
         t = i
         while prime[j - t + 1]:
             t += 1
+#        print(j,t)
         ct += 1
         ind[lis[j]] = t
         ind[lis[t]] = j

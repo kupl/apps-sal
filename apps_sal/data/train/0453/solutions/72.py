@@ -1,5 +1,6 @@
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
+        # dp[i][c][k]: i means the ith house, c means the cth color, k means k neighbor groups
         dp = [[[math.inf for _ in range(n)] for _ in range(target + 1)] for _ in range(m)]
 
         for c in range(1, n + 1):

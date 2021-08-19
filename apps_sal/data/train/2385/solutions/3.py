@@ -51,11 +51,14 @@ def main():
                         mm[i][j] = m
                         m = (m + 1) % dist
                     ci += 1
+        # print(cyc)
+        # p2D(aa)
         one = [set() for _ in range(ci)]
         for i in range(h):
             for j in range(w):
                 if cc[i][j] == 0:
                     one[aa[i][j]].add(mm[i][j])
+        # print(one)
         ans1 = sum(cyc)
         ans2 = sum(min(ck, len(ok)) for ck, ok in zip(cyc, one))
         print(ans1, ans2)

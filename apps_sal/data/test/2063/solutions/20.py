@@ -7,6 +7,7 @@ def check(num):
             d = num - a[i] - add
             sub[i + w] = d
             add = num - a[i]
+    # print (num,sub)
     count = 0
     for i in sub:
         count += i

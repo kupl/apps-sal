@@ -6,6 +6,7 @@ else:
     if s / m > 9 or s == 0:
         print('-1 -1')
     else:
+        # Smallest Number
         num = [9] * m
         psum = 9 * m
         minDiff = min(8, psum - s)
@@ -20,6 +21,7 @@ else:
         n1 = ''
         for i in num:
             n1 += str(i)
+        # Biggest Number
         num = [9] * m
         psum = 9 * m
         for i in range(-1, -m - 1, -1):

@@ -30,11 +30,13 @@ def f_takahashi_basics_in_education_and_learning(L, A, B, M, DIGIT_MAX=18):
             k >>= 1
         return ret
 
+    # 数列に対して、d桁の要素の個数を求める
     num_pow_d = [0] * (DIGIT_MAX + 1)
     for d in range(DIGIT_MAX + 1):
         if 10**d - 1 < A:
             continue
-        num_pow_d[d] = min(((10**d - 1 - A) // B) + 1, L)
+        # dに対してA + B*n <= 10**d - 1 となる最大のn(L以下しか取りえない)
+        num_pow_d[d] = min(((10**d - 1 - A) // B) + 1, L)  # +1はnが0スタートのため
     ans = 0
     array = [[0, A, 1]]
     for d in range(1, DIGIT_MAX + 1):

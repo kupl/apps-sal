@@ -42,7 +42,7 @@ def find_prime_numbers(max_num):
 
 
 def mobius(n):
-    for i in find_prime_numbers(int(n**0.5) // 2 + 10):
+    for i in find_prime_numbers(int(n**0.5) // 2 + 10):   # An empirical trick :)
         if n % (i * i) == 0:
             return 0
     if prime_factors_count(n) % 2 == 0:

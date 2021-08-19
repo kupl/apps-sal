@@ -24,6 +24,8 @@ class Solution:
                 if sum(a.values()) != sum(b.values()):
                     return
                 p1, p2 = getComb(a), getComb(b)
+                # print(a, b)
+                # print(p1, p2)
                 total += p1 * p2
 
                 if len(a) == len(b):

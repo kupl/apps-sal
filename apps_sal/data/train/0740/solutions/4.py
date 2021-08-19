@@ -9,6 +9,7 @@ def sin():
 for _ in range(int(sin())):
     n, m, k = list(map(int, sin().split()))
     grid = np.zeros([n, m])
+    # print(grid)
     ans = 4 * k
     for i in range(k):
         r, c = list(map(int, sin().split()))
@@ -24,3 +25,4 @@ for _ in range(int(sin())):
             ans -= 2
         grid[r][c] = 1
     print(ans)
+    # print(grid)

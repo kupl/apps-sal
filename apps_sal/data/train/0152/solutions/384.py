@@ -8,6 +8,7 @@ class Solution:
 
         while maxForce > minForce:
             maxMinForce = (maxForce + minForce + 1) // 2
+            #print(minForce, maxForce, maxMinForce)
             if self.canPut(position, m, maxMinForce):
                 minForce = maxMinForce
             else:

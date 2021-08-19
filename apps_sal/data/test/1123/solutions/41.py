@@ -6,8 +6,8 @@ def solve(N, K):
         for i in range(k, K + 1, k):
             multiples[k].append(i)
 
-    gcdcounts = [0] * (K + 1)
-    gcdsums = [0] * (K + 1)
+    gcdcounts = [0] * (K + 1)  # gcd 毎の組み合わせ個数
+    gcdsums = [0] * (K + 1)   # gcd 毎の合計値
     for k in reversed(list(range(1, K + 1))):
         x = pow(len(multiples[k]), N, mod)
         for l in multiples[k]:

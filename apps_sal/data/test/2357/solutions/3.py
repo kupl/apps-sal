@@ -1,4 +1,24 @@
+# [t0, ... tn-1] dominerad av V: minst 2 element
+# occ(num) förekomster av num i t
+# occ(v) > occ(v') -- när v förekommer flest gånger och inget annat förekommer lika många gånger.
+# kortaste dominerade dellista (slice, sammanhängande).
 
+# 4 <- T
+
+# 1
+# 1 (jaha, minst längd 2)
+
+# 6
+# 1 2 3 4 5 1 - hela grejen har 2 ettor
+
+# 9
+# 4 1 2 4 5 4 3 2 1 - 4 5 4 har 2 fyror
+
+# 4
+# 3 3 3 3 - 3 3 har 2 treor
+
+# OK N^3-algoritm - enkelt - aha, det räcker med att hitta 2 likadana element och olika mellan.
+# För varje x - lista var alla förekomster är. gå igenom alla och hitta närmaste.
 
 import collections
 

@@ -2,8 +2,8 @@ from math import gcd
 
 N = int(input())
 num_lis = list(map(int, input().split()))
-c1 = True
-c2 = True
+c1 = True  # setwise
+c2 = True  # pairwise
 
 
 def osa_k(max_num):

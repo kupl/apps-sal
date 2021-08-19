@@ -44,6 +44,8 @@ for i in range(1, M + 1):
 
 data2 = [0] + data2
 
+# print(data)
+# print(data2)
 
 x = 0
 ans = 0

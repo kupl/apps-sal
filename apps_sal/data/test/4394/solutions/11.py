@@ -1,3 +1,4 @@
+# Anton Timofeev
 import sys
 
 
@@ -25,6 +26,7 @@ for i in range(m):
     edges[i] = (u - 1, v - 1, w)
 
 edges.sort(key=lambda e: e[2])
+# print(edges)
 
 prev = list(range(n))
 size = [1] * n
@@ -41,6 +43,7 @@ while l < m:
     for i in range(l, r):
         if get(edges[i][0]) != get(edges[i][1]):
             join(edges[i][0], edges[i][1])
+            # print(f"join: {edges[i]}")
             res -= 1
     l = r
 print(res)

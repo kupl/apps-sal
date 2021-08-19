@@ -11,6 +11,8 @@ class Solution:
                     take += stoneValue[i + j]
                     dp[i] = max(dp[i], take - dp[i + j + 1])
 
+        # print(stoneValue)
+        # print(dp)
         if dp[0] > 0:
             return 'Alice'
         elif dp[0] < 0:

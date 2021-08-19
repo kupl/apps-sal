@@ -7,6 +7,7 @@ heapq.heapify(hp)
 
 for i in range(m):
     item = -1 * heapq.heappop(hp)
+    # print('item',item)
     item = item // 2
     heapq.heappush(hp, -item)
 

@@ -1,12 +1,14 @@
 def how_many(rows, cols):
     n = 0
 
+    # Eat rows
     for i in range(len(rows)):
         if 'S' not in rows[i]:
             for j in range(len(cols)):
                 rows[i][j] = 'E'
                 cols[j][i] = 'E'
                 n += 1
+    # eat coloumns
     for j in range(len(cols)):
         if 'S' not in cols[j]:
             n += cols[j].count('.')

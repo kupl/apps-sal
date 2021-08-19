@@ -20,5 +20,6 @@ for i in range(2, n + 1):
 ans = int(1)
 for i in range(2, n + 1):
     ans *= (i ** d[i])
+    #print(i, d[i])
 
 print((ans + 1))

@@ -11,6 +11,7 @@ class Solution:
             if 0 > v > min_val:
                 min_index = i
                 min_val = v
+        #curr_satisfaction = calc_satisfaction(satisfaction[min_index+1:])
         curr_sum = sum(satisfaction[min_index + 1:])
         while min_index >= 0:
             print((min_index, satisfaction))

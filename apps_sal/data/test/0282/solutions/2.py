@@ -10,6 +10,7 @@ while i < n - 1 and f == 1:
         k = n - 1
     for j in range(k, i, -1):
         if s[j] == '1':
+            # print(j)
             f = 1
             i = j
             t = t + 1

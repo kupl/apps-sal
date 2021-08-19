@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 INF = int(1e9 + 5)
 

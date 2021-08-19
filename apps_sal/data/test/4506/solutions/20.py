@@ -73,11 +73,11 @@ def ms(a):
 
 
 def res(ans, t):
-    print('Case
+    print('Case #{}: {} {}'.format(t, ans[0], ans[1]))
 
 
 def divi(n):
-    l=[]
+    l = []
     for i in range(1, int(n**0.5) + 1):
         if n % i == 0:
             if n // i == i:
@@ -88,21 +88,21 @@ def divi(n):
     return l
 
 
-n=int(input())
-a=arrIN()
-b=arrIN()
-c=[0] * n
+n = int(input())
+a = arrIN()
+b = arrIN()
+c = [0] * n
 b.sort()
 for i in range(n):
     a[i] *= ((i + 1) * (n - i))
 
-l=[[i, a[i]] for i in range(n)]
+l = [[i, a[i]] for i in range(n)]
 l.sort(key=lambda x: x[1], reverse=True)
-j=0
+j = 0
 for i in l:
-    c[i[0]]=b[j]
+    c[i[0]] = b[j]
     j += 1
-ans=0
+ans = 0
 for i in range(n):
     ans += ((a[i] * c[i]) % 998244353)
 

@@ -29,6 +29,7 @@ n = int(input())
 
 ans = set()
 
+# We want n=k*(k-1)/2 + k*(2^q-1)
 for q in range(0, 64):
     k = check(n, q)
     if k:

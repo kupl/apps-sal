@@ -1,4 +1,6 @@
 class Solution:
+    # https://leetcode.com/submissions/detail/404293310/
+    # fast
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         def helper(nums, lookup):
             res = 0
@@ -7,9 +9,12 @@ class Solution:
                 for n in lookup.keys():
                     if n <= maxNum and not prod % n:
                         m = prod // n
+                        # m ==n, combination.
                         res += (lookup[n] * (lookup[n] - 1)) // 2 if m == n else lookup[m] * lookup[n]
             return res
         return helper(nums1, collections.Counter(nums2)) + helper(nums2, collections.Counter(nums1))
+
+    # slow
 
     def numTriplets1(self, nums1: List[int], nums2: List[int]) -> int:
         lookup1, lookup2 = collections.defaultdict(int), collections.defaultdict(int)

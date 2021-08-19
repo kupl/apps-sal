@@ -29,3 +29,41 @@ class Solution:
                 max_stretch = end - start + 1
 
         return max_stretch
+
+#         min_heap = [nums[0]]
+#         max_heap = [-nums[0]]
+
+#         min_removed = {}
+#         max_removed = {}
+
+#         max_stretch = 1
+#         start = 0
+#         end = 0
+#         while end < len(nums) - 1:
+#             end += 1
+#             heapq.heappush(min_heap, nums[end])
+#             heapq.heappush(max_heap, -nums[end])
+
+#             while - max_heap[0] - min_heap[0] > limit:
+#                 if nums[start] not in min_removed:
+#                     min_removed[nums[start]] = 0
+#                 min_removed[nums[start]] += 1
+
+#                 if nums[start] not in max_removed:
+#                     max_removed[nums[start]] = 0
+#                 max_removed[nums[start]] += 1
+
+#                 while -max_heap[0] in max_removed and max_removed[-max_heap[0]] > 0:
+#                     max_removed[-max_heap[0]] -= 1
+#                     heapq.heappop(max_heap)
+
+#                 while min_heap[0] in min_removed and min_removed[min_heap[0]] > 0:
+#                     min_removed[min_heap[0]] -= 1
+#                     heapq.heappop(min_heap)
+
+#                 start += 1
+
+#             if end - start + 1 > max_stretch:
+#                 max_stretch = end - start + 1
+
+#         return max_stretch

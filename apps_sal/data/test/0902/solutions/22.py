@@ -12,6 +12,7 @@ else:
     curr = 0
     for i in range(1, m):
         if(a[curr] > a[i]):
+            # print(b)
             b[curr] += 1
         else:
             curr = i

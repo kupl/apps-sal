@@ -5,6 +5,7 @@ class Solution:
         on = [False] * len(light)
         ans = 0
         for l in light:
+            # print(on, first, l, last)
             on[l - 1] = True
             last = max(l, last)
             if first + 1 == l:

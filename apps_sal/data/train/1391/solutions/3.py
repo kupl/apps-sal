@@ -1,3 +1,4 @@
+# cook your dish here
 def Max_cust(T):
     for i in range(T):
         count = 0

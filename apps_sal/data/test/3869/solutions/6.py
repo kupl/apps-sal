@@ -15,6 +15,7 @@ else:
         limit = 180 - limit
     c = math.cos(math.radians(alpha))
     s = math.sin(math.radians(alpha))
+   # print(limit);
     if alpha >= limit:
         print(min(w, h)**2 / s)
     else:

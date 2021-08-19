@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 
 def main():
@@ -11,6 +12,8 @@ def main():
             return
         else:
             table.add(x % p)
+
+#        print(">", x % p, table)
 
     print(-1)
     return

@@ -14,11 +14,13 @@ for b in box[1:]:
         mularr.append([candy, 1])
     if qm <= candy:
         break
+# print(mularr)
 for query in queries:
     cnt = n
     test = query
     test -= 1
     for k, v in mularr:
+        # print(mularr[m],test)
         add = (test // k) * v
         cnt += add
     print(cnt)

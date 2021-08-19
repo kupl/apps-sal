@@ -27,6 +27,7 @@ while True:
         arr.append(arr[-1] // 3)
     else:
         break
+# print(prev,arr)
 for i in range(len(prev) - 1, 0, -1):
     print(prev[i], end=" ")
 print(*arr)

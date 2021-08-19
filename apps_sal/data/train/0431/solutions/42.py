@@ -19,4 +19,7 @@ class Solution:
             next_[k] = stack[-1] if stack else N
             stack.append(k)
 
+        # print(prev)
+        # print(next_)
+
         return sum((i - prev[i]) * (next_[i] - i) * A[i] for i in range(N)) % MOD

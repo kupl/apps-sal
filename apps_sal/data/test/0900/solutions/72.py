@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 R10 = list(range(10))
 R13 = list(range(13))
@@ -14,5 +15,7 @@ for D in S:
     else:
         C = int(D)
         MOD = [MOD[M[C]] for M in R]
+    # end if
+# end for
 
 print((MOD[5]))

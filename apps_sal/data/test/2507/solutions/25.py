@@ -15,7 +15,7 @@ f = np.array(list(map(int, input().split())))
 a = np.sort(a)
 f = np.sort(f)[::-1]
 
-l, r = -1, np.max(a * f)
+l, r = -1, np.max(a * f)  # l:ng, r:ok
 while l + 1 < r:
     mid = (l + r) // 2
     if is_ok(mid, k):

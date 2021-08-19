@@ -5,6 +5,7 @@ for _ in range(int(input())):
     while a:
         try:
             ans += max(a)
+            # pos = a.index(max(a))
             a.remove(max(a))
             a.remove(max(a))
         except:

@@ -4,6 +4,7 @@ t = eval(input())
     print(s.count("4"))
 '''
 
+# second way is
 
 for i in range(t):
     rem = []

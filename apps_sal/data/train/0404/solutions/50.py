@@ -2,6 +2,7 @@ class Solution:
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         self.arr = [[None for i in range(K)] for i in range(len(A))]
         res = self.solve(A, 0, K, -1)
+        # print(self.arr)
         return res
 
     def solve(self, arr, i, grpLeft, lastInd):

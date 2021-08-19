@@ -5,6 +5,8 @@ class Solution:
 
         dp = [0] * len(days)
 
+        # given a day, find the dp index should look for
+        # include start, not include end
         def search(start: int, end: int, day: int) -> int:
             if start == end - 1:
                 if day >= days[start]:

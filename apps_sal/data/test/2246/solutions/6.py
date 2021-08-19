@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 import sys
 
@@ -39,6 +40,7 @@ def main():
         else:
             node_exp[nxt] += prob[nxt] * length[nxt]
 
+    #explore(0, 1, 0, adj_mat,node_exp, set([0]))
     print("{:.13f}".format(sum(node_exp)))
 
 

@@ -35,6 +35,7 @@ for i in range(len(plant)):
         if plant[j] > plant[i]:
             continue
         dp[i] = max(dp[i], dp[j] + 1)
+# print(dp)
 print(n - max(dp))
 
 

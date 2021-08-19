@@ -9,6 +9,7 @@ def increment_string(strng):
 
     for i in strng:
         print(i)
+        # all non no in righty
         righty.append(i)
     for i in strng[::-1]:
         if i not in string.digits:
@@ -16,6 +17,7 @@ def increment_string(strng):
         elif i in string.digits:
 
             print('this is i', i)
+            # all no in num
             here = i + nums
             nums = i + nums
 

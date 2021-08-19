@@ -4,6 +4,7 @@ from itertools import combinations as c, product as p
 from collections import deque
 sys.setrecursionlimit(10**9)
 MOD = 10**9 + 7
+#MOD = 998244353
 
 
 def si(): return input()
@@ -17,6 +18,7 @@ def lnint(n): return [int(input()) for _ in range(n)]
 def lint_list(n): return [lint() for _ in range(n)]
 
 
+############################################################
 N = ii()
 ans = 1
 

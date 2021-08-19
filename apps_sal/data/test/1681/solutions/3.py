@@ -18,6 +18,7 @@ for c in ca:
         res += wants.count(c)
     else:
         res += colors.count(c)
+    #print(colors.count(c), wants.count(c))
 
 if hecan == 0:
     print(-1)

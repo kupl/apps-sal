@@ -1,11 +1,21 @@
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 import collections
 import math
 
 T = int(input())
 
+#A,H,Q = [int(x) for x in stdin.readline().split()]
 for t in range(T):
     N, M = [int(x) for x in stdin.readline().split()]
+    # print(N,M)
     data = []
     row = [M] * N
     col = [N] * M
@@ -25,6 +35,7 @@ for t in range(T):
     else:
         r = []
         c = []
+        #res = 9999999
         for i in range(N):
             if row[i] == min_row:
                 r.append(i)

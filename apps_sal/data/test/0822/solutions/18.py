@@ -2,6 +2,7 @@ def lcm(x, y):
     """This function takes two
     integers and returns the L.C.M."""
 
+    # choose the greater number
     if x > y:
         greater = x
     else:

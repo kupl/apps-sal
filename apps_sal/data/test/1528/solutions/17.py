@@ -5,7 +5,7 @@ for i in range(n):
     p.append(2 * p[-1] + 1)
 
 
-def f(n, x):
+def f(n, x):  # レベルnバーガーのｘまでのパティの数
     if n == 0:
         return 0 if x <= 0 else 1
     elif x <= 1 + a[n - 1]:

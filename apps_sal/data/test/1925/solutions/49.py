@@ -87,6 +87,7 @@ class UnionFind():
 
 mod = 10**9 + 7
 
+# --maincode----------------
 
 a, b, n = inm()
 ans = 0

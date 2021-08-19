@@ -1,3 +1,4 @@
+# coding:UTF-8
 import sys
 from math import factorial
 
@@ -27,9 +28,18 @@ def dfs(s, n):
 
 
 def __starting_point():
-    a = int(input())
+    # ------ 入力 ------#
+    # 1行入力
+    a = int(input())    # 数字
 
+    # ------ 処理 ------#
+
+    # ------ 出力 ------#
     print(("{}".format(dfs("0", a))))
+    # if flg == 0:
+    #     print("YES")
+    # else:
+    #     print("NO")
 
 
 __starting_point()

@@ -13,11 +13,13 @@ def arr_inp(n):
 
 
 class graph:
+    # initialize graph
     def __init__(self, gdict=None):
         if gdict is None:
             gdict = defaultdict(list)
         self.gdict = gdict
 
+    # add edge
     def add_edge(self, node1, node2):
         self.gdict[node1].append(node2)
 

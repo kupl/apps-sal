@@ -18,4 +18,6 @@ class Solution:
                     curMax = max(A[i - j + 1], curMax)
                     dp[i] = max(dp[i], dp[i - j] + curMax * j)
 
+        # print(dp)
+
         return dp[n - 1]

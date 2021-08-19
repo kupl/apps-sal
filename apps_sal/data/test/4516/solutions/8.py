@@ -31,6 +31,7 @@ for i in range(m):
         elif X[i + 1] >= X[i] + 1:
             DIFF1[X[i]] += abs(X[i + 1] - 1) - abs(X[i + 1] - X[i])
 
+# print(DIFF1)
 
 for i in range(m):
     if 0 <= i - 1:
@@ -46,6 +47,8 @@ for i in range(m):
 
         elif X[i + 1] > X[i] + 1:
             DIFF2[X[i]] += abs(X[i + 1] - X[i] - 1) - abs(X[i + 1] - 1)
+
+# print(DIFF2)
 
 
 ANS = 0

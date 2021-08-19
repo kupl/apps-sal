@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import re
 S = input()
 S_sp = re.split("[^ACGT]", S)

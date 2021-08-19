@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/magnetic-force-between-two-balls/discuss/854038/Beginner-Friendly-solution-or-Explained-with-time-complexity-analysis
 
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
@@ -21,6 +22,7 @@ class Solution:
         R = position[-1] - position[0]
 
         while L < R:
+            # print ('a ', L, R)
             if L == R - 1:
                 if check(R) >= m:
                     return R
@@ -31,4 +33,5 @@ class Solution:
                 R = mid - 1
             else:
                 L = mid
+            # print (L, R)
         return L

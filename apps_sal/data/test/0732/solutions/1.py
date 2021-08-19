@@ -12,6 +12,7 @@ def cnt(s, p):
         elif len(set(p.lstrip('0'))) == 1:
             ans = 1 + 9 * (2**(len(s) - len(p)) - 1)
         else:
+            # ab for all a, b != 0
             ans = 10 + 45 * (2**(len(s) - len(p)) - 2)
             ans += 36 * sum([2**l - 2 for l in range(2, len(s) - len(p))])
 

@@ -21,12 +21,14 @@ def DPC_sequence(s):
             return -1
         if s[p - 1] == 'D':
             pf.append(p)
+    # print(pf)
     for p in pf:
         for i in range(2 * p - 1, len(s), p):
             if s[i] == 'P':
                 return -1
     base = prod(pf)
     nmax = min(prod(primes), max_n)
+    #print(base, nmax)
     for n in range(base, nmax, base):
         if test(s, n):
             return n

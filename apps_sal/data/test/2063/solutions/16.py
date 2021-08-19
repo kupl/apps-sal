@@ -11,6 +11,8 @@ def S(): return str(input())
 def L(): return list(R())
 
 
+# print(bisect.bisect_right([1,2,3],2))
+# print(bisect.bisect_left([1,2,3],2))
 n, m, w = R()
 
 a = L()

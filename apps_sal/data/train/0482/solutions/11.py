@@ -3,9 +3,9 @@ class Solution:
         n = len(arr)
         dp = [[[0, 0] for _1 in range(n)] for _2 in range(n)]
         for i in range(n):
-            dp[i][i] = [arr[i], 0]
+            dp[i][i] = [arr[i], 0]  # last number and sum
         for diff in range(1, n):
-            for i in range(n - diff):
+            for i in range(n - diff):  # i,i+1,...,i+diff
                 temp_min_ = 10**40
                 root = None
                 for j in range(i, i + diff):

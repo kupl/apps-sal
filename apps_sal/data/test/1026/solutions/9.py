@@ -2,6 +2,7 @@ import sys
 def input(): return sys.stdin.readline().strip()
 
 
+# for i in range(int(input())):
 n = int(input())
 a = list(map(lambda x: (x[0] - x[1], x[1]), enumerate(map(int, input().split()))))
 s = {}

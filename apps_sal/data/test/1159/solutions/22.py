@@ -2,6 +2,9 @@ from sys import stdin, stdout
 import collections
 
 N = int(input())
+#s = input()
+#W,H = [int(x) for x in stdin.readline().split()]
+#arr = [int(x) for x in stdin.readline().split()]
 
 
 def is_prime(a):

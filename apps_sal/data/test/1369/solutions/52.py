@@ -1,10 +1,15 @@
+# abc_151_f
 
+# utilize the characeristic of l(x,y) being convex
+# Thus, 3bun search is available
 
 n = int(input())
 l = []
 for i in range(n):
     x, y = [int(j) for j in input().split()]
     l.append((x, y))
+
+# determine the fuction representing the longest distance ^2 from the center point to designated N points.
 
 
 def loss(x, y):
@@ -15,6 +20,7 @@ def loss(x, y):
 
 
 def f(x):
+    # return min l(x,y)
     left = 0
     right = 1000
     num = 100

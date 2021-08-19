@@ -1,3 +1,7 @@
+# import sys
+# sys.stdin=open('F:\\C\\Script\\input.txt','r')
+# sys.stdout=open('F:\\C\\Script\\output.txt','w')
+# sys.stdout.flush()
 
 def I(): return [int(i) for i in input().split()]
 

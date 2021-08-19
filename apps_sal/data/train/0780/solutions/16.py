@@ -1,3 +1,4 @@
+# cook your code here
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))
     k = n % m

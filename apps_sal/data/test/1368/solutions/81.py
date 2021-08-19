@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 try:
     from typing import List
@@ -38,10 +39,10 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))
-    A = int(next(tokens))
-    B = int(next(tokens))
-    v = [int(next(tokens)) for _ in range(N)]
+    N = int(next(tokens))  # type: int
+    A = int(next(tokens))  # type: int
+    B = int(next(tokens))  # type: int
+    v = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     solve(N, A, B, v)
 
 

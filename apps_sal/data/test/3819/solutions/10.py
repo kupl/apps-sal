@@ -7,16 +7,20 @@ if 1 in l2:
     d = 1
     for i in range(c, n):
         if l2[i] != d:
+            #            print(l2[i],d,i,c)
             break
         d += 1
     else:
 
+        #        print("ll")
         for k in range(c):
             if l2[k] != 0 and l2[k] - k <= d:
                 break
         else:
             print(c)
+#            print(d)
             f = 1
+#    n-=d
 if f == 0:
     s = -2
     for i in range(n):

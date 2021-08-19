@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 import sys
 sys.setrecursionlimit(10**6)
+# buff_readline = sys.stdin.buffer.readline
 buff_readline = sys.stdin.readline
 readline = sys.stdin.readline
 

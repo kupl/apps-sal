@@ -1,5 +1,13 @@
 from collections import Counter, defaultdict, deque
 import heapq as hq
+#import itertools
+#from operator import itemgetter
+#from itertools import count, islice
+#from functools import reduce
+#alph = 'abcdefghijklmnopqrstuvwxyz'
+#from math import factorial as fact
+#a,b = [int(x) for x in input().split()]
+#sarr = [x for x in input().strip().split()]
 import math
 import sys
 input = sys.stdin.readline
@@ -18,6 +26,9 @@ def solve():
     print(res)
 
 
-tt = 1
+tt = 1  # int(input())
 for test in range(tt):
     solve()
+
+
+#

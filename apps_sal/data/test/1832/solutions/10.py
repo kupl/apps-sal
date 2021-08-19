@@ -1,6 +1,7 @@
 import sys
 
 
+# def solve(a,b,c,d):
 def solve(lens):
     base = ord('a')
     wlen = max(lens) + 2
@@ -19,6 +20,7 @@ def __starting_point():
     cur = 1
     for ti in range(T):
         a = int(IN[cur])
+        #a = [int(x) for x in IN[cur].split(' ')]
         lens = [int(x) for x in IN[cur + 1].split(' ')]
         res = solve(lens)
         for w in res:

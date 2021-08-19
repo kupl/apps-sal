@@ -3,11 +3,14 @@ class Solution:
         if len(hand) % W != 0:
             return False
 
+        # we count the frequencies of each card and put it in an ordered dict
         counter = collections.Counter(hand)
         d = collections.OrderedDict(sorted(counter.items()))
-        count = 0
+        count = 0  # track the number of keys whose value is down to 0
         while count < len(d):
             group = []
+            # go through the ordered dict and put consecutive cards in a group
+            # the loop breaks once the size of the group reaches W
             for card in d.keys():
                 if d[card] == 0:
                     continue

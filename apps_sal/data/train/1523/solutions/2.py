@@ -1,8 +1,9 @@
+# cook your dish here
 n = int(input())
 arr = [int(x) for x in input().split()]
 
 
-def solve(i, k):
+def solve(i, k):  # k=2 or k=1 of k=0
     if i < 0:
         return 0
     ans = 0

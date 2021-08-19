@@ -5,3 +5,4 @@ def get_real_floor(n):
         return n - 2
     else:
         return n
+#     return n-1 if 0 < n < 13 else

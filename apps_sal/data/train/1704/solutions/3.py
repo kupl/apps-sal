@@ -3,15 +3,15 @@ from collections import Counter
 RESULT = ["Loss", "Tie", "Win"]
 HEX_CARDS = "23456789ABCDE"
 CARD_TO_HEX = str.maketrans("TJQKA", "ABCDE")
-MAIN_RANK = [lambda colC, valC, isS: 5 in colC.values() and isS,
-             lambda colC, valC, isS: 4 in valC.values(),
-             lambda colC, valC, isS: 3 in valC.values() and 2 in valC.values(),
-             lambda colC, valC, isS: 5 in colC.values(),
-             lambda colC, valC, isS: isS,
-             lambda colC, valC, isS: 3 in valC.values(),
-             lambda colC, valC, isS: 2 in valC.values() and len(valC.keys()) == 3,
-             lambda colC, valC, isS: 2 in valC.values() and len(valC.keys()) == 4,
-             lambda colC, valC, isS: True]
+MAIN_RANK = [lambda colC, valC, isS: 5 in colC.values() and isS,                    # Straight Flush
+             lambda colC, valC, isS: 4 in valC.values(),                            # Square
+             lambda colC, valC, isS: 3 in valC.values() and 2 in valC.values(),     # Full house
+             lambda colC, valC, isS: 5 in colC.values(),                            # Flush
+             lambda colC, valC, isS: isS,                                           # Straight
+             lambda colC, valC, isS: 3 in valC.values(),                            # Three of a kind
+             lambda colC, valC, isS: 2 in valC.values() and len(valC.keys()) == 3,  # 2 pairs
+             lambda colC, valC, isS: 2 in valC.values() and len(valC.keys()) == 4,  # 1 pair,
+             lambda colC, valC, isS: True]                                          # 1 card
 
 
 class PokerHand(object):

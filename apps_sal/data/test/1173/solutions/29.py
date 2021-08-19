@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 
@@ -34,6 +35,7 @@ def solve(N: int, A: "List[List[int]]"):
                 break
 
             check_needed = list(match)
+            # 既にこのターンでマッチしたインデックスを保持
             match = set()
 
             for i in check_needed:
@@ -70,8 +72,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))
-    A = [[int(next(tokens)) for _ in range(N - 1)] for _ in range(N)]
+    N = int(next(tokens))  # type: int
+    A = [[int(next(tokens)) for _ in range(N - 1)] for _ in range(N)]  # type: "List[List[int]]"
     solve(N, A)
 
 

@@ -33,6 +33,7 @@ def prnt(*args, override=False):
         print(*args)
 
 
+# Faster IO
 pq = []
 
 

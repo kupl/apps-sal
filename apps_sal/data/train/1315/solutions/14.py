@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 dct = dict()
 c = 0

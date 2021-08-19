@@ -1,5 +1,6 @@
 class Solution:
     def shortestAlternatingPaths(self, n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
+        # 4:43 10/2/20
         graph = [collections.defaultdict(set), collections.defaultdict(set)]
 
         for i, j in red_edges:

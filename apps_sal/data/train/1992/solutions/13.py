@@ -29,3 +29,8 @@ class CombinationIterator:
             if binary.count('1') == M:
                 res.append(binary.zfill(N))
         return res
+
+# Your CombinationIterator object will be instantiated and called as such:
+# obj = CombinationIterator(characters, combinationLength)
+# param_1 = obj.next()
+# param_2 = obj.hasNext()

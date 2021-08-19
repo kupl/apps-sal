@@ -5,8 +5,8 @@ MAP = [[0 for j in range(W)] for i in range(H)]
 
 for i in range(H):
     for j in range(W):
-        if List[i][j] == '
-        MAP[i][j] = 1
+        if List[i][j] == '#':
+            MAP[i][j] = 1
 
 MAPP = [[0 for j in range(W)] for i in range(H)]
 bx = [0] * W

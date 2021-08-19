@@ -10,9 +10,11 @@ class TowerDefense:
         self._n = len(grid)
         grid_str = ''.join(grid)
 
+        # Determine the path and which path positions are covered by the turrets)
         self._determine_turret_positions(turrets, grid_str)
         self._determine_path_and_guarded_positions(grid_str)
 
+        # Aliens list is used to hold current alien strength
         self._aliens = aliens
 
     def _determine_turret_positions(self, turrets, grid_str):
@@ -21,6 +23,8 @@ class TowerDefense:
             ind = grid_str.find(turret)
             x = ind % self._n
             y = ind // self._n
+            # Range**2 is calculated as it is used in self._determine_path_and_guarded_positions
+            # guards will hold (x,y) pairs that the turret can reach sorted with the first point furthest along the path
             self._turrets[turret] = {'pos': (x, y), 'range2': settings[0]**2, 'shots': settings[1], 'guards': []}
 
     def _determine_path_and_guarded_positions(self, grid_str):
@@ -72,23 +76,28 @@ class TowerDefense:
         """ Add point to list of guarded poisitions, if it is within turret range """
         for (turret, settings) in self._turrets.items():
             if (point[0] - settings['pos'][0])**2 + (point[1] - settings['pos'][1])**2 <= settings['range2']:
+                # Insert as first item such that last point on path is first on guards
                 settings['guards'].insert(0, point)
 
     def aliens_that_pass_the_turrets(self):
         """ Determine the number of aliens that pass the turrets """
         total_turns = len(self._path) + len(self._aliens)
         for turn in range(1, total_turns + 1):
+            # Determine shots remaining by all turrets
             total_remaining = 0
             for turret in self._turrets:
                 self._turrets[turret]['remaining'] = self._turrets[turret]['shots']
                 total_remaining += self._turrets[turret]['remaining']
+            # Get a mapping from alien positions on the grid to index of the strength
             alien_pos_ind = {}
             for it in range(turn):
                 if it < len(self._aliens) and turn - 1 - it < len(self._path):
                     alien_pos_ind[self._path[turn - 1 - it]] = it
+            # Keep firing until all shots fired or no aliens within range
             while total_remaining > 0:
                 for turret in self._turrets:
                     if self._turrets[turret]['remaining'] > 0:
+                        # Pick first alien position and fire
                         for pos in self._turrets[turret]['guards']:
                             if pos in alien_pos_ind and self._aliens[alien_pos_ind[pos]] > 0:
                                 total_remaining -= 1
@@ -96,21 +105,26 @@ class TowerDefense:
                                 self._aliens[alien_pos_ind[pos]] -= 1
                                 break
                         else:
+                            # No alients to hit with turret range
                             total_remaining -= self._turrets[turret]['remaining']
                             self._turrets[turret]['remaining'] = 0
+        # Return remaining aliens
         return(sum(self._aliens))
 
     def print_map(self, turn=0):
         """ Print a map of the current turn with path, alien strength, and turrets """
+        # Helper dictionary with turret positions
         turret_pos = {}
         for turret, settings in self._turrets.items():
             turret_pos[settings['pos']] = turret
 
+        # Helper dictionary with alien positions in this turn
         alien_pos = {}
         for it in range(turn):
             if it < len(self._aliens) and turn - 1 - it < len(self._path):
                 alien_pos[self._path[turn - 1 - it]] = self._aliens[it]
 
+        # Loop over all position and print what is there
         for y in range(self._n):
             for x in range(self._n):
                 if (x, y) in alien_pos:

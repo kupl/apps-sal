@@ -6,6 +6,7 @@ def getNumAndFreq(myList):
         freqCurNum += 1
 
     return curNum, freqCurNum
+# ---end function getNumAndFreq
 
 
 def most_frequent_item_count(myList):
@@ -20,4 +21,7 @@ def most_frequent_item_count(myList):
             maxNum = curNum
             maxFreq = curFreq
 
+    # return maxNum, maxFreq     #if you want num with max freq
     return maxFreq
+
+# -----end fucntion

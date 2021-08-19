@@ -3,9 +3,12 @@ class Solution:
         s, dp = [0] + A, {}
         for i in range(1, len(A) + 1):
             s[i] += s[i - 1]
+        # print(s)
 
         def dfs(i, k):
+            #print(i, k)
             if k == 1:
+                #print((s[-1] - s[i]) / (len(A) - i))
                 return (s[-1] - s[i]) / (len(A) - i)
             if (i, k) in dp:
                 return dp[(i, k)]

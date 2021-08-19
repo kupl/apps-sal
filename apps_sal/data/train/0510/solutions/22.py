@@ -1,3 +1,5 @@
+#!/usr/bin python3
+# -*- coding: utf-8 -*-
 
 from bisect import bisect_left, bisect_right
 
@@ -13,9 +15,10 @@ for i, si in enumerate(s):
 
 
 def q1(iq, cq):
-    dicq[s[iq]].pop(bisect_left(dicq[s[iq]], iq))
+    #print(iq,cq,s[iq],dicq[s[iq]],bisect_left(dicq[s[iq]], iq))
+    dicq[s[iq]].pop(bisect_left(dicq[s[iq]], iq))  # 更新前から削除
     s[iq] = cq
-    dicq[cq].insert(bisect_left(dicq[cq], iq), iq)
+    dicq[cq].insert(bisect_left(dicq[cq], iq), iq)  # 更新後に追加
 
 
 def q2(l, r):
@@ -31,6 +34,7 @@ def q2(l, r):
             continue
         elif dicq[ai][li] == l:
             ret += 1
+    #    print(l,r,ai,dicq[ai],li,ri,ret)
     print(ret)
 
 

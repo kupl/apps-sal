@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
@@ -20,6 +22,7 @@ for i in range(q):
     res[2 * i + 51][::2] = [0] * 50
 res[2 * q + 51][:2 * r:2] = [0] * r
 
+# 0: 黒: #
 print((h, w))
 for ri in res:
-    print(("".join("
+    print(("".join("#" if rij == 0 else "." for rij in ri)))

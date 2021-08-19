@@ -42,6 +42,8 @@ class Solution:
             else:
                 dp2[i2] = nums2[i2] + dp2[i2 + 1]
                 i2 -= 1
+        # print(dp1)
+        # print(dp2)
         if i1 >= 0:
             return max(sum(nums1[:i1 + 1]) + dp1[i1 + 1], dp2[i2 + 1]) % (10**9 + 7)
         else:

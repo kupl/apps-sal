@@ -7,6 +7,7 @@ def __starting_point():
 
         dp = [[0 for c in range(m)] for r in range(m)]
 
+        # print(dp)
         for r in range(m):
             for l in range(r, -1, -1):
                 for k in range(l, r + 1):
@@ -21,6 +22,7 @@ def __starting_point():
                         lr += dp[k + 1][r]
 
                     dp[l][r] = max(dp[l][r], lr)
+        # print(dp)
         return dp[0][m - 1]
 
     n, m = map(int, stdin.readline().split())

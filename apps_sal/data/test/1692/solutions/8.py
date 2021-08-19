@@ -8,6 +8,7 @@ for i in range(len(s)):
     c2 = int(s[i])
     if c2 % 4 == 0:
         ans += 1
+        # ++ans
     if i == 0:
         continue
     c1 = int(s[i - 1])

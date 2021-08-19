@@ -96,3 +96,4 @@ while q:
                 p[y] = z
 for i in range(1, n + 1):
     print((p[i]))
+# print(V)

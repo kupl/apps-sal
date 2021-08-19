@@ -12,7 +12,7 @@ try all possible partitions and keep track of the max and sum so far
 
 helper(start, i)
 
-    for j in range(i, k - i + start + 1): 
+    for j in range(i, k - i + start + 1): # these are the possible ends 
         helper(start, j)
     
     
@@ -36,10 +36,12 @@ class Solution:
                 self.res = max(self.res, sum_so_far + (curr_max * (k - left)))
                 return 0
             
+            # continue current partition
             choice1 = float('-inf')
             if left > 0:
                 choice1 = helper(i + 1, left - 1, max(curr_max, arr[i]), sum_so_far)
             
+            # start a new partition
             choice2 = helper(i + 1, k, arr[i], sum_so_far + (curr_max * (k - left)))
             
             print(\"choice1 =\", choice1, \", choice2 =\", choice2)
@@ -59,7 +61,7 @@ class Solution:
     def maxSumAfterPartitioning(self, arr: List[int], K: int) -> int:
         n = len(arr)
         dp = [0 for _ in range(n + 1)]
-        for i in range(n):
+        for i in range(n):  # i is considered the end of the partition
             currMax = 0
             for k in range(1, min(K, i + 1) + 1):
                 currMax = max(currMax, arr[i - k + 1])

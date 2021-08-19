@@ -8,4 +8,5 @@ for i in range(1, N + 1, 2):
             count += 1
     if count == 8:
         ans += 1
+        # print(i)
 print(ans)

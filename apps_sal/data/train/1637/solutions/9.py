@@ -15,7 +15,7 @@ def encode(s):
 
 
 def decode(s, n):
-    s_list = list(s)
+    s_list = list(s)  # ['l', 'a', 'n', 'e', 'v']
     s_list.sort()
     s_list = ''.join(s_list)
 

@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
 import sys
 
 
 def rint():
     return list(map(int, sys.stdin.readline().split()))
+#lines = stdin.readlines()
 
 
 n, m, l = rint()

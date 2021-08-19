@@ -1,5 +1,6 @@
 def fit_bag(height: int, width: int, items: [[[int]]]) -> [[int]]:
 
+    # sort items: largest to smallest
     def get_box_size(a): return len(a) * len(a[0])
     items.sort(key=get_box_size, reverse=True)
 

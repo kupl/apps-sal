@@ -19,7 +19,7 @@ class Solution:
             stack.append(i)
 
         dp = [[False, False] for _ in range(len(A) + 1)]
-        dp[-2] = [True, True]
+        dp[-2] = [True, True]  # even, odd jump
         res = 1
         for i in range(len(A) - 2, -1, -1):
             nH, nL = nextHigher[i], nextSmaller[i]

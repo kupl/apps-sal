@@ -11,6 +11,7 @@ class Solution:
 
             for i, v in enumerate(bloomDay):
                 size = size + 1 if v <= mid else 0
+                # print(f\"\\tsize: {size} count: {count} i: {i} v: {v}\")
 
                 if size == k:
                     size = 0
@@ -24,9 +25,11 @@ class Solution:
         for i, v in enumerate(bloomDay):
             left = min(left, v)
             right = max(right, v)
+        # print(f\"left: {left}, right: {right}\")
 
         while left <= right:
             mid = left + (right - left) // 2
+            # print(left, right, mid)
 
             if is_valid(mid):
                 right = mid - 1

@@ -37,14 +37,20 @@ for i in range(0, n):
     y = len(s[i])
 
     if x > y:
-        mx = zalgo(s[i] + '
+        # print(x,y,(txt[x-y:y]))
+        mx = zalgo(s[i] + '#' + ''.join((txt[x - y:x])))
     else:
-        mx=zalgo(s[i][:y] + '
+        # print(x,y,txt[:])
+        mx = zalgo(s[i][:y] + '#' + ''.join(txt))
 
+  # mx = zalgo(s[i] + '#' + ''.join((txt[-mn:])))
 
+    # print(mx)
 
+  # print(mx,mn,sep=' ')
 
     txt.extend(s[i][mx:])
 
+  # print(txt)
 
 print(''.join(txt))

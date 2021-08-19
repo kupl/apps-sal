@@ -23,4 +23,5 @@ def color_finder(color1, color2):
     else:
         colors.remove(color1)
         colors.remove(color2)
+        # print(colors[0])
         return colors[0]

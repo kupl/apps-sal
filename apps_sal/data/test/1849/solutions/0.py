@@ -14,3 +14,5 @@ for i in range(1, n + 1):
 
 
 print(' '.join(map(str, out)))
+#print(sum((i + 1) * out[i] for i in range(n)))
+#print(n * pow(10, n, MOD))

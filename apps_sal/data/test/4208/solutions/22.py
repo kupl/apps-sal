@@ -19,6 +19,8 @@ for i in range(n):
 a.sort()
 b.sort()
 ans = 0
+# print(a)
+# print(b)
 
 j = 0
 i = 0
@@ -38,7 +40,10 @@ while i < n and j < n:
     else:
         i += 1
 
+# print(used_a, used_b)
 
+# print(a)
+# print(b)
 print(min(n, ans + cnt_a + cnt_b))
 for q in range(ans):
     print(ans_m[q][0], ans_m[q][1])
@@ -58,6 +63,8 @@ for i in range(n):
             used_b[j] = 1
 
 j = 0
+# print(used_a)
+# print(used_b)
 for i in range(n):
     if b[i][0] == 1000 and used_b[i] == 0:
         while used_a[j] == 1 and j < n:

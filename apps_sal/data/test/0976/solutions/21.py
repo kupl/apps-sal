@@ -8,5 +8,5 @@ for i in range(n):
 a.sort()
 for elem in a:
     ans += (elem[0] - 1 - t) % x + (elem[1] - elem[0] + 1)
-    t = elem[1]
+    t = elem[1]  # - 1
 print(ans)

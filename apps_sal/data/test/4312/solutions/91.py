@@ -1,3 +1,4 @@
+# ABC164
 A, B, C, D = map(int, input().split())
 while A > 0:
     C += -1 * B

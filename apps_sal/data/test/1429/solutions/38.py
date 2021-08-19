@@ -1,3 +1,5 @@
+# def mainでローカル変数を扱えば早くなるらしい
+# インデントミスしまくりました
 
 def main():
     l = list(input().split())

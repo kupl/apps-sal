@@ -14,5 +14,6 @@ for i in range(n):
     else:
         break
     next = l[cur - 1]
+    # print(a)
 
 print(a[t - 1])

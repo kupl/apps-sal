@@ -19,4 +19,5 @@ class Solution:
                 mul <<= 1
             dividend -= t
             count += mul
+            #print(dividend, mul)
         return min(max(-2147483648, count * tag), 2147483647)

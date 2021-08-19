@@ -14,6 +14,7 @@ def main():
     mod = 10 ** 9 + 7
     A.sort()
 
+    #    print(A)
     pp = int(bisect.bisect_left(A, 0))
     A_minus = deque(A[:pp])
     A_plus = deque(A[pp:])

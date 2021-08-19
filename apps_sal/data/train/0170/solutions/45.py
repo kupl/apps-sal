@@ -1,5 +1,6 @@
 class Solution:
     def findLengthOfShortestSubarray(self, nums: List[int]) -> int:
+        # equal to max increasing subarray
         seqs = [0]
         last = nums[0]
 

@@ -3,6 +3,7 @@ pn = list(map(lambda x: int(x) - 1, input().split()))
 ls = [-1] * n
 for i in pn:
     ls[pn[i]] = i
+# print(ls)
 
 par = [i for i in range(n)]
 

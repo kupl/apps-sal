@@ -6,6 +6,7 @@ s = f.readline().strip()
 p = ''
 start = 0
 for u in s:
+    # print(u,s)
     m = int(u)
     if m > 4 and start > 0 or m > 4 and m < 9 and start == 0:
         m = 9 - m
@@ -15,5 +16,6 @@ for u in s:
         p = p + str(m)
 
     start += 1
+    #print(u, p)
 
 print(p)

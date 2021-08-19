@@ -14,4 +14,5 @@ class Solution:
                 acc = math.floor(acc / el)
             if i % 3 == 2 or i == len(ll) - 1:
                 pr.append(acc)
+        # print(l, ll, rs, pr)
         return rs + pr[0] + sum(list([-x for x in pr[1:]]))

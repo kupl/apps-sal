@@ -20,5 +20,6 @@ k1 = min(a, b, c)
 k3 = max(a, b, c)
 k2 = a + b + c - k1 - k3
 
+# k1 <= k2 <= k3
 
 print(ans(k1, k2, k3))

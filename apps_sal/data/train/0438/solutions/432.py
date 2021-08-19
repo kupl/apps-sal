@@ -16,11 +16,18 @@ class union(object):
             pr = self.find(p)
             qr = self.find(q)
 
+            # print(pr,qr)
+            # print(self.count)
+            # print(self.size)
             self.count[self.size[pr]] -= 1
             self.count[self.size[qr]] -= 1
             self.parent[pr] = qr
             self.size[qr] += self.size[pr]
             self.count[self.size[qr]] += 1
+
+            # print(pr,qr)
+            # print(self.count)
+            # print(self.size)
 
     def add(self, p):
         self.parent[p] = p
@@ -47,4 +54,7 @@ class Solution:
             if uds.get_size(m):
                 ans = i + 1
 
+            # print(uds.parent)
+            # print(uds.size)
+            # print(uds.count)
         return ans

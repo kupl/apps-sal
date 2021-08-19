@@ -28,6 +28,7 @@ class Solution:
                 end[r2] = (left, r2)
 
             count[right - left + 1] += 1
+            # print(i, right, left, count, end)
             if count[m] > 0:
                 ans = i + 1
         return ans

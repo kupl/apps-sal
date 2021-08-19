@@ -1,4 +1,11 @@
+#!/usr/bin python3
+# -*- coding: utf-8 -*-
 
+# https://atcoder.jp/contests/arc061/tasks/arc061_c
+
+########################################################
+# 01BFS
+########################################################
 
 from collections import deque
 

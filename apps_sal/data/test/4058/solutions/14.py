@@ -1,5 +1,6 @@
 n, r = map(int, input().split())
 list_a = list(map(int, input().split()))
+# first
 count = 0
 next = 0
 i = 0

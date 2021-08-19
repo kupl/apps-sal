@@ -1,4 +1,7 @@
+#N = int(input())
 S = str(input())
+#X, Y = map(int, input().split())
+#C = list(map(int, input().split()))
 N = len(S)
 ans = N
 for i in range(1, N):

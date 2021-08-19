@@ -34,6 +34,7 @@ for i in range(2, N - 1):
         c[2] = N - 1
         r = N
     cut.append(c)
+# print(cut)
 ans = float("inf")
 for p, q, r in cut:
     P = B[p]

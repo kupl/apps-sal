@@ -29,18 +29,22 @@ class DSU():
 
 
 class Solution:
+    # refer submission. https://www.cnblogs.com/grandyang/p/13253468.html
     def largestComponentSize(self, A: List[int]) -> int:
         def getFactors(n):
             res = set()
             for i in range(2, int(sqrt(n)) + 2):
                 if not n % i:
+                    # don't count 1 in factor. e.g. [1,2,3,4,5,6,7,8,9]
                     for j in [i, n // i]:
                         if j != 1:
                             res.add(j)
+            # prime number.
             if not res:
                 return {n}
             return res
 
+        # buld dsu based on index of A. union index.
         dsu = DSU(len(A) + 1)
         factor2Index = {}
         for i, n in enumerate(A):

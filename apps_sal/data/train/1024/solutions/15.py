@@ -12,6 +12,7 @@ for i in range(fam):
     else:
         print("IMPOSSIBLE", abs(s - sm))
         req += (abs(s - sm))
+# print(extra,req)
 if extra >= req:
     print("POSSIBLE")
 else:

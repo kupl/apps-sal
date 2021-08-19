@@ -1,6 +1,28 @@
 class Solution:
     def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
 
+        #         # O(N) solution -- TLE
+        #         i = 1 # multiplier of A
+        #         j = 1 # multiplier of B
+
+        #         res = 0
+
+        #         while N>0:
+        #             if A*i < B*j:
+        #                 res = A*i
+        #                 i += 1
+        #             elif A*i > B*j:
+        #                 res = B*j
+        #                 j += 1
+        #             else:
+        #                 res = A*i
+        #                 i += 1
+        #                 j += 1
+        #             N-=1
+
+        #         return res%(10**9+7)
+
+        # O(logN) solution -- binary search
         def min_common_divisor(a, b):
             less = min(a, b)
             more = max(a, b)

@@ -24,10 +24,13 @@ class Solution:
             return last_disjoint_intervals
 
         last_disjoint_intervals = getLastDisjointIntervals()
-        dp = [0] * n
-        dp[0] = jobs[0][2]
+        dp = [0] * n  # dp[i] stores the maximum profit if we only consider the first (i+1) jobs
+        dp[0] = jobs[0][2]  # Can take the first job under any circumstance
         for i in range(1, n):
+            # For a new job, we can either take this new job or don't take this new job
+            # Consider not taking the new job
             profit_not_take = dp[i - 1]
+            # Consider taking the new job
             profit_take = jobs[i][2]
             j = last_disjoint_intervals[i]
             if j != -1:

@@ -10,6 +10,7 @@ class Solution:
         ranges_counter = 0
         i = 0
         while i < n:
+            # Find all ranges with a start value lower than the current_counter
             max_right = -1
             while ranges_counter < len(new_ranges) and new_ranges[ranges_counter][0] <= i:
                 max_right = max(max_right, new_ranges[ranges_counter][1])

@@ -5,8 +5,10 @@ class SegmentTree(object):
         self.function = function
         self.data = [identity] * (self.length << 1)
         self.identity = identity
+        # set values
         for i in range(N):
             self.data[i + self.length - 1] = sequence[i]
+        # build
         for i in range(self.length - 2, -1, -1):
             self.data[i] = self.function(self.data[(i << 1) + 1], self.data[(i << 1) + 2])
 

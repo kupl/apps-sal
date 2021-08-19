@@ -26,6 +26,8 @@ for l in range(n + 1):
 
 queue = []
 
+#hwd [location, money, time]
+
 
 def dijakstra(q):
     while q != []:
@@ -35,6 +37,7 @@ def dijakstra(q):
             least_cost[hwd[1]][hwd[2]] = hwd[0]
 
             for node in tree[hwd[1]]:
+                # from node, to node , money, time
                 if hwd[2] - node[2] >= 0:
                     heapq.heappush(q, (hwd[0] + node[3], node[1], hwd[2] - node[2]))
             if hwd[2] + change[hwd[1] - 1][0] <= 2500:

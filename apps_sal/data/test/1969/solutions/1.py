@@ -1,3 +1,4 @@
+# list(map(int, input().split()))
 
 n = int(input())
 A = []

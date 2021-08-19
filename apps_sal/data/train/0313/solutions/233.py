@@ -18,6 +18,7 @@ class Solution:
                 lower_rm, upper_rm = 0, 0
                 new_seg = None
 
+                # check lower interval
                 if flower - 1 in segments:
                     seg = segments[flower - 1]
                     seg[1] = flower
@@ -28,8 +29,10 @@ class Solution:
                     new_seg = seg
                     lower_ext = True
 
+                # check upper interval
                 if flower + 1 in segments:
                     if flower in segments:
+                        # merge segments
                         lower_seg = segments[flower]
                         upper_seg = segments[flower + 1]
                         upper_rm = upper_seg[1] - upper_seg[0] + 1
@@ -58,6 +61,7 @@ class Solution:
                 total_b -= lower_rm // k + upper_rm // k
                 total_b += (new_seg[1] - new_seg[0] + 1) // k
 
+                # print(day, total_b, segments)
                 if total_b >= m:
                     return day
 

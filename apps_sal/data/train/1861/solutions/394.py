@@ -9,6 +9,7 @@ class Solution:
         for point in points:
             pointSet.add((point[0], point[1]))
 
+        # print(pointSet)
         for i in range(0, len(points)):
             for j in range(i + 1, len(points)):
                 point1 = points[i]
@@ -16,6 +17,7 @@ class Solution:
                 x1, y1 = point1[0], point1[1]
                 x2, y2 = point2[0], point2[1]
 
+                # same point
                 if x1 == x2 or y1 == y2:
                     continue
 

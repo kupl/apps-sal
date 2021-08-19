@@ -63,4 +63,5 @@ class Solution:
         return q.popleft()
 
     def sortArray(self, nums: List[int]) -> List[int]:
+        # return self.merge_sort(nums)
         return self.merge_sort_iter(nums)

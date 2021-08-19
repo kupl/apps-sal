@@ -11,6 +11,7 @@ for i in range(n):
 for i in range(n):
     ret += a[i] + a[i - 1] - a[i] * a[i - 1]
 
+# print(a)
 
 ret *= 2000
 

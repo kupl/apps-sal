@@ -1,6 +1,7 @@
 for _ in range(int(input())):
     s, k = input().split()
     k = int(k)
+    # arr = list(n)
     t = ""
     for i in range(97, 123):
         if chr(i) not in s:

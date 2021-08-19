@@ -10,6 +10,6 @@ for i in range(n):
         else:
             black = False
 if black:
-    print("
+    print("#Black&White")
 else:
-    print("
+    print("#Color")

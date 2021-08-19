@@ -9,6 +9,8 @@ class mcf_graph_int_cost:
         self.g = [[] for _ in range(n)]
 
     def add_edge(self, from_, to, cap, cost):
+        # assert 0 <= from_ < self.n
+        # assert 0 <= to < self.n
         m = len(self.pos)
         self.pos.append((from_, len(self.g[from_])))
         self.g[from_].append(self.__class__._edge(to, len(self.g[to]), cap, cost))
@@ -42,7 +44,7 @@ class mcf_graph_int_cost:
         self.pe = [-1] * self.n
         self.vis = [False] * self.n
 
-        que = [s]
+        que = [s]  # s ==  (0 << 32) + s
         self.dist[s] = 0
         while que:
             v = heapq.heappop(que) & 4294967295
@@ -72,6 +74,9 @@ class mcf_graph_int_cost:
         return True
 
     def slope(self, s, t, flow_limit=4294967295):
+        # assert 0 <= s < self.n
+        # assert 0 <= t < self.n
+        # assert s != t
 
         self.dual = [0] * self.n
         self.dist = [4294967295] * self.n

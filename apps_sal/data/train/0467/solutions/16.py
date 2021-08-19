@@ -1,3 +1,6 @@
+# N = len(nums)
+# time: O(NlogN)
+# space: O(N)
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
         def make_divisors(n):

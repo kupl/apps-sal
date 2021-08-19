@@ -25,3 +25,8 @@ class ProductOfNumbers:
             return self.d[self.index - 1]
 
         return self.d[self.index - 1] // self.d[self.index - k - 1]
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

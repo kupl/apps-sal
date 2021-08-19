@@ -1,6 +1,13 @@
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
+        # nlog(n)
+        # points.sort(key=lambda item: item[0]**2 + item[1]**2)
+        # return points[:K]
 
+        # nlog(k)
+        # return heapq.nsmallest(K, points, key=lambda item: item[0]**2 + item[1]**2)
+
+        # O(n)
         def compare(p1, p2):
             return p1[0]**2 + p1[1]**2 - (p2[0]**2 + p2[1]**2)
 

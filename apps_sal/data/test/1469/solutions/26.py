@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 
@@ -8,6 +9,7 @@ def solve(L: int):
         a.append(tmp)
         tmp //= 2
     a.reverse()
+    # print(a)
     e = []
     for i in range(1, len(a)):
         e.append([i, i + 1, 0])
@@ -26,7 +28,7 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    L = int(next(tokens))
+    L = int(next(tokens))  # type: int
     solve(L)
 
 

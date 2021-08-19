@@ -2,6 +2,9 @@
 N = int(input())
 a = list(map(int, input().split()))
 
+# a_i /2 or x3
+# すべてint, すべてx3はだめ
+
 
 def prime_factorize(n):
     a = []
@@ -20,6 +23,7 @@ def prime_factorize(n):
     return a
 
 
+# 素因数の中に2がいくつ入っているか。
 fact_list = []
 for item in a:
     fact_list += prime_factorize(item)

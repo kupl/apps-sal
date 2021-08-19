@@ -5,12 +5,15 @@ def update(vs, ds, ps, last):
     dec_volume = vs[last]
     dec_hall = 0
     for idx in range(last + 1, len(vs)):
+        # already out
         if ps[idx] < 0:
             continue
 
+        # update p: dentist + hall
         ps[idx] -= dec_volume + dec_hall
         if dec_volume > 0:
             dec_volume -= 1
+        # child is out, update the hall cry for the next ones
         if ps[idx] < 0:
             dec_hall += ds[idx]
 

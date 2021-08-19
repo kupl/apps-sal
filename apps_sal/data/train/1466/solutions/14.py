@@ -1,3 +1,4 @@
+# cook your dish here
 n, q = map(int, input().split(' '))
 
 n_bonacci = list(map(int, input().split(' ')))

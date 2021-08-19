@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     _ = int(input())
     S, T = input().split()

@@ -9,3 +9,22 @@ class Solution:
             sum = sum + diff[i]
 
         return sum
+#         # create a hash map for string S
+#         count = defaultdict(int)
+
+#         for char in s:
+#             count[char] += 1
+
+#         # check the difference of two strings
+
+
+#         diff = 0
+#         for char in t:
+#             if count[char] > 0 :
+#                 #print(char)
+#                 count[char] -= 1
+#             else:
+#                 diff += 1
+
+
+#         return int(diff)

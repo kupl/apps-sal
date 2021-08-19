@@ -11,16 +11,21 @@ class Solution:
         heap = []
         for (i, xi, yi), (j, xj, yj) in combinations(points, 2):
             dest = abs(xi - xj) + abs(yi - yj)
+            # print(i, j, dest)
             edges[i].append((j, dest))
             edges[j].append((i, dest))
             heapq.heappush(heap, (dest, i, j))
+
+        # print(heap)
 
         selected = set()
         answer = 0
         pending = []
         while heap:
             dest, i, j = heapq.heappop(heap)
+            # print(i, j, dest)
             if not selected or ((i in selected) ^ (j in selected)):
+                # print(selected)
                 selected.add(i)
                 selected.add(j)
                 answer += dest

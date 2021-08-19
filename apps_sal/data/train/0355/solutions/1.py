@@ -4,11 +4,14 @@ class Solution:
         res = 1
         k -= 1
         while k > 0:
+            # calculate how many numbers between current value and current value + 1
             count = self.countNumber(res, res + 1, n)
             if k >= count:
+                #result >= res +1
                 k -= count
                 res += 1
             else:
+                #res*10 <= result < res + 1
                 k -= 1
                 res *= 10
         return res

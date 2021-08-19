@@ -13,3 +13,7 @@ class Cashier:
             multiplier = 1
         self.customer_num = (self.customer_num + 1) % self.n
         return sum([self.prices_by_id[product[i]] * amount[i] for i in range(len(product))]) * multiplier
+
+# Your Cashier object will be instantiated and called as such:
+# obj = Cashier(n, discount, products, prices)
+# param_1 = obj.getBill(product,amount)

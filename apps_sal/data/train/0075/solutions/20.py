@@ -17,6 +17,7 @@ def solve(n):
         ans = width * math.cos(angle)
     else:
         ans = height
+    # print(height, width, ans)
     return ans
 
 

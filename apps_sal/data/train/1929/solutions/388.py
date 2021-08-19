@@ -16,6 +16,7 @@ class StreamChecker:
             root.isEnd = True
 
     def dfs(self, node, n) -> bool:
+        # n: pos back from self.q
         if n > len(self.q):
             return False
         if self.q[-n] in node.children:
@@ -29,3 +30,8 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.q += letter
         return self.dfs(self.root, 1)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

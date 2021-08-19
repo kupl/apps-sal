@@ -14,5 +14,6 @@ def bin_search(n, l, h):
 t = int(input().strip())
 for _ in range(t):
     n = int(input().strip())
+    # a = [int(x) for x in input().strip().split()]
     m = bin_search(n, 1, 10000000000)
     print(n - ((m + 1) * (m + 2)) // 2)

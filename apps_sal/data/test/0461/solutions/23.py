@@ -1,8 +1,13 @@
+# python3
+# utf-8
 
 visits_nr = int(input())
 ro_dist = int(input())
 rd_dist = int(input())
 od_dist = int(input())
+# pref_end_r___min_dist
+# pref_end_o___min_dist
+# pref_end_d___min_dist
 pref_end_r___min_dist = [0] * visits_nr
 pref_end_o___min_dist = [10**9] * visits_nr
 pref_end_d___min_dist = [10**9] * visits_nr

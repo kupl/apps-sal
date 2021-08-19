@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 out = [0]
 dp = [[float("-inf"), float("-inf"), float("-inf")]]

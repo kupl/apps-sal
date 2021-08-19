@@ -16,4 +16,4 @@ for p in l:
 ans = 0
 for p in l:
     ans += hoge // p
-print((ans % int(1e9 + 7)))
+print((ans % int(1e9 + 7)))  # TLE ????

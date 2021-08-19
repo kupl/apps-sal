@@ -17,6 +17,18 @@ class DSU:
 
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        # well its just two graphs, dude
+
+        # MST would only require n-1 edges
+        # this is ALWAYS TRUE
+
+        # just process all of the type 3 first
+
+        # because they will increase group size of both A and B
+
+        # and then you can just do A and B separately
+
+        # again, operate on both graphs
 
         dsu1 = DSU(range(1, n + 1))
         dsu2 = DSU(range(1, n + 1))

@@ -1,4 +1,5 @@
 n = int(input())
+# {0:"A", 1:"C", 2:"G", 3:"T"}
 dp = [[[[0] * 4 for _ in range(4)] for _ in range(4)] for _ in range(n + 1)]
 dp[0][3][3][3] = 1
 mod = 10 ** 9 + 7

@@ -16,10 +16,12 @@ for i in range(0, t):
         if h > 1:
             m = 2 * m
         tt = tt + f * m + b
+        # print("tt",tt," n ", n)
         n = n - f
     if n == 1:
         if h > 1:
             tt = tt + 2 * n * m
         else:
             tt = tt + n * m
+        #print("tt ",tt," n",n)
     print(tt)

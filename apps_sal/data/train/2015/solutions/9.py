@@ -20,6 +20,7 @@ for i in range(t):
                     l[j][1] = 0
                 k += 1
         p.append(i + 1)
+    # print(l)
 
 print(len(p))
 print(*p)

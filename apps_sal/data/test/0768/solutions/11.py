@@ -8,4 +8,4 @@ for i in range(e):
     for j in range(f):
         k += (a[j][i] == 'Y')
     n += (k >= t)
-print(n)
+print(n)  # kitten

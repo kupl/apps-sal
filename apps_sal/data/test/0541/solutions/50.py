@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 N, M = list(map(int, input().split(' ')))
 
 a_b_pairs = [list(map(int, input().split(' '))) for _ in range(M)]

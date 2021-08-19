@@ -1,19 +1,23 @@
+#!/usr/bin/env python3
 def ri():
     return list(map(int, input().split()))
 
 
 digit = '0123456789'
 letter = 'abcdefghijklmnopqrstuvwxyz'
-sym = '
+sym = '#*&'
 val = [[] for _ in range(3)]
 val[0] = digit
 val[1] = letter
 val[2] = sym
 
+# print(val)
 n, m = ri()
 minm = [[10000000000 for _ in range(3)] for __ in range(n)]
+# print(minm)
 for ln in range(n):
     line = input()
+    # print(line)
     for i in range(3):
         for mov in range(m):
             if (line[mov] in val[i]) or line[-mov] in val[i]:
@@ -21,6 +25,7 @@ for ln in range(n):
                 break
 
 ans = 10**10
+# print(minm)
 for i1 in range(n):
     for i2 in range(n):
         for i3 in range(n):

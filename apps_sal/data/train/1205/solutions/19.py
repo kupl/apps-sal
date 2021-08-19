@@ -1,3 +1,4 @@
+# cook your dish here
 def solve():
     t = int(input())
     for i in range(0, t):

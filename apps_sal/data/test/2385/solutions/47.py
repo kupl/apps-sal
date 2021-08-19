@@ -11,17 +11,18 @@ def main():
         g[a].append(b)
         g[b].append(a)
 
-    mod = 10**9 + 7
+    mod = 10**9 + 7  # 出力の制限
     N = 10**6
-    g1 = [1, 1]
-    g2 = [1, 1]
-    inverse = [0, 1]
+    g1 = [1, 1]  # 元テーブル
+    g2 = [1, 1]  # 逆元テーブル
+    inverse = [0, 1]  # 逆元テーブル計算用テーブル
 
     for i in range(2, N + 1):
         g1.append((g1[-1] * i) % mod)
         inverse.append((-inverse[mod % i] * (mod // i)) % mod)
         g2.append((g2[-1] * inverse[-1]) % mod)
 
+    # topological sort
     s = []
     s.append(0)
     parent = [-1] * n

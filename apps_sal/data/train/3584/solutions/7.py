@@ -1,6 +1,6 @@
-region1 = "qwertyuiop"
-region2 = "asdfghjkl"
-region3 = "zxcvbnm,."
+region1 = "qwertyuiop"  # 10
+region2 = "asdfghjkl"  # 9
+region3 = "zxcvbnm,."  # 9
 
 
 def encrypt(text, encryptKey):

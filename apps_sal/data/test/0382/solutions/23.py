@@ -24,6 +24,9 @@ while q:
     q -= 1
     l, r = mi()
     s1, s2 = 0, 0
+    # for i in range(l, r+1):
+    # s1+=pre1[i]
+    # s2+=pre2[i]
     if m > n:
         print(0)
         continue

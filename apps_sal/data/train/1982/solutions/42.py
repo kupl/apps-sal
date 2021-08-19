@@ -5,7 +5,7 @@ class Solution:
             adjL[u].append(v)
             adjL[v].append(u)
 
-        memo = [-1] * (N + 1)
+        memo = [-1] * (N + 1)  # -1: not seen, 0: group 1, 1: group 2
 
         def df(src, shouldBe):
             if memo[src] != -1:

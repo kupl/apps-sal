@@ -1,6 +1,9 @@
+# Bhargey Mehta (Junior)
+#DA-IICT, Gandhinagar
 import sys
 import math
 MOD = 998244353
+#sys.stdin = open('input.txt', 'r')
 
 for i in range(int(input())):
     n = int(input())

@@ -1,6 +1,7 @@
 class Solution:
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
         groups = sorted(list(enumerate(groupSizes)), key=lambda x: x[1])
+        # return groups
         out = []
         while groups:
             last_group_idx = -groups[-1][1]

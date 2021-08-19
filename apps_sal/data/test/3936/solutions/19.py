@@ -124,12 +124,15 @@ def pf(x, mode='counter'):
     if mode == 'list':
         return sorted(list(S))
 
+######################################################
+
 
 N = intput()
 S1 = input()
 S2 = input()
 i = 0
 ans = 1
+# first,tate,yoko
 tmp = 0
 same = [3, 2, 1]
 diff = [6, 2, 3]

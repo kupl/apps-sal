@@ -15,4 +15,5 @@ class Solution:
                     if curr_sum <= target:
                         curr[curr_sum] = curr.get(curr_sum, 0) + count
             prev = curr
+            # print(prev)
         return prev[target] % (10**9 + 7) if target in prev else 0

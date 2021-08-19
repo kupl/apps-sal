@@ -34,6 +34,7 @@ for l in range(t):
     n = int(input())
     s = []
 
+    # print(prime(1000))
     sump = 0
     for i in range(n):
         j = seive[i]

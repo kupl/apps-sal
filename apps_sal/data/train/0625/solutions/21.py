@@ -1,3 +1,4 @@
+# cook your dish here
 def subCount(arr, n, k=10):
 
     mod = []
@@ -9,8 +10,9 @@ def subCount(arr, n, k=10):
 
         mod[((cumSum % k) + k) % k] = mod[((cumSum % k) + k) % k] + 1
 
-    result = 0
+    result = 0  # Initialize result
 
+    # Traverse mod[]
     for i in range(k):
         if (mod[i] > 1):
             result = result + (mod[i] * (mod[i] - 1)) // 2

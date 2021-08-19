@@ -7,7 +7,7 @@ for i in range(2**H):
         for x in range(H):
             for y in range(W):
                 if(2**x & i) * (2**y & j):
-                    b += (C[x][y] == "
+                    b += (C[x][y] == "#")
         if b == K:
             a += 1
 print(a)

@@ -25,6 +25,9 @@ def dl(x, t):
 
 t = 1
 for c in p:
+    # print(ans)
+    # print(pr)
+    # print(nx)
     if ans[c]:
         continue
     dl(c, t)

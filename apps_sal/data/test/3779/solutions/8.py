@@ -3,6 +3,7 @@ def gcd(a, b):
 
 
 n, k = map(int, input().split(" "))
+# print(k)
 den = list(map(int, input().split(" ")))
 g = 0
 for i in den:
@@ -13,6 +14,7 @@ dic = {}
 i = 0
 while (i < k):
     val = (i * g) % k
+    # print("Value="+str(val))
     if(not val in dic):
         d.append(val)
         dic[val] = 1

@@ -1,8 +1,8 @@
 class Solution:
     def maxDistToClosest(self, arr):
         n = len(arr)
-        start = 0
-        end = 0
+        start = 0  # start index of group of consecutive 0s
+        end = 0  # end index of group of consecutive 0s
 
         maxdist, dist = 0, 0
 

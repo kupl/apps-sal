@@ -8,6 +8,7 @@ prefixsum = [0]
 
 for i in range(n):
     prefixsum.append(alist[i] + prefixsum[-1])
+# print(prefixsum)
 ptr = 1
 for i in range(m):
     while blist[i] > prefixsum[ptr]:

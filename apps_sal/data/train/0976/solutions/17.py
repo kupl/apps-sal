@@ -18,6 +18,7 @@ for i in range(n):
         flag1 -= 1
         if flag1 == 0 and i - start1 > max1:
             max1 = i - start1
+            #print(start1, i)
     elif br[i] == 3:
         if flag2 == 0:
             start2 = i

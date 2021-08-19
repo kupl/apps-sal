@@ -1,3 +1,4 @@
+# 076a
 
 R = int(input())
 G = int(input())

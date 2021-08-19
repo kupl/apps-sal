@@ -1,4 +1,6 @@
+# cook your dish here
 
+# import time
 import collections
 
 
@@ -24,10 +26,25 @@ def solve(n, m, grid, charms):
                     if cost + 1 <= k:
                         queue.append((newX, newY, cost + 1))
 
+    # for row in newGrid:
+    #     print(row)
+
     NEG_INF = float("-inf")
 
     dp = [[NEG_INF if not newGrid[i][j][1]
            else newGrid[i][j][0] for j in range(n)] for i in range(n)]
+
+    # print("After")
+    # for row in dp:
+    #     for val in row:
+    #         if val == NEG_INF:
+    #             print(0, end=" ")
+    #         else:
+    #             print(1, end=" ")
+    #     print()
+
+    # for row in dp:
+    #     print(row)
 
     for i in range(n):
         for j in range(n):
@@ -39,6 +56,10 @@ def solve(n, m, grid, charms):
                 dp[i][j] += dp[i - 1][j]
             else:
                 dp[i][j] += max(dp[i - 1][j], dp[i][j - 1])
+
+    # print("After")
+    # for row in dp:
+    #     print(row)
 
     return (dp[n - 1][n - 1] != NEG_INF, dp[n - 1][n - 1])
 
@@ -58,6 +79,7 @@ for i in range(m):
 
     charms.append((x - 1, y - 1, k))
 
+# start_time = time.time()
 ans = solve(n, m, grid, charms)
 
 if ans[0]:
@@ -65,3 +87,5 @@ if ans[0]:
     print(ans[1])
 else:
     print("NO")
+
+# print("--- %s seconds ---" % (time.time() - start_time))

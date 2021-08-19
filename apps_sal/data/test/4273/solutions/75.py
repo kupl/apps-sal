@@ -1,5 +1,6 @@
 import itertools
-n = int(input())
+n = int(input())  # nは入力回数
+#num_list = [int(input()) for _ in range(n)]
 ans = 0
 
 set_m = set()

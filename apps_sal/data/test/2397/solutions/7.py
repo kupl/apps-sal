@@ -38,6 +38,7 @@ sliced.sort(key=lambda x: x[1])
 
 cost = 0
 last = 0
+# print(sliced)
 for i in range(len(sliced)):
 
     cost += (i + 1) * sum(l[last:sliced[i][1]])

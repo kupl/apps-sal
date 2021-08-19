@@ -16,3 +16,5 @@ for i in range(9):
         ans += A[i][j] * A[j][i] * r
 
 print(ans)
+# for a in A:
+#  print(a)

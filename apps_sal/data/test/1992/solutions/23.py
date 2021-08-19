@@ -1,3 +1,4 @@
+#!/bin/python
 
 apps_size, launched_size, apps_per_screen = list(map(int, input().split()))
 

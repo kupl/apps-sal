@@ -1,3 +1,4 @@
+# 尝试策略: 将数组内所有数字变成偶数然后处理/2，重复此过程直到有结果
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         tot_step = 0
@@ -10,6 +11,7 @@ class Solution:
                 if nums[i] % 2 != 0:
                     nums[i] -= 1
                     tot_step += 1
+            # Already reach the result, stop now.
             not_zero = False
             for i in range(len(nums)):
                 if nums[i] == 0:

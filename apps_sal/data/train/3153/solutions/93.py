@@ -1,5 +1,8 @@
 def playerRankUp(pts):
+    # your code here
 
+    # def __init__(self,pts):
+    #    self.pts=pts
     if pts < 100:
         return False
     else:

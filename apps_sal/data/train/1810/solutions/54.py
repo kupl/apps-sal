@@ -7,6 +7,7 @@ class Solution:
                 existing[name] = 1
                 output.append(name)
             else:
+                # find a name
                 k = existing[name]
                 while True:
                     new_name = '{}({})'.format(name, k)

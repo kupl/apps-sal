@@ -22,8 +22,8 @@ for h_list in h_TF_list:
         p = 0
         for i in range(h):
             for j in range(w):
-                if c_list[i][j] == "
-                p += 1
+                if c_list[i][j] == "#" and h_list[i] == True and w_list[j] == True:
+                    p += 1
         if p == k:
             count += 1
 print(count)

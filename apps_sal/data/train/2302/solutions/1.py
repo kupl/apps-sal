@@ -9,6 +9,7 @@ input = sys.stdin.readline
 N, dist = map(int, input().split())
 D = [int(x) for x in input().split()]
 
+# 各ターンの出発位置
 start_dist = [dist]
 for d in D:
     x = start_dist[-1]

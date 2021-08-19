@@ -1,3 +1,4 @@
+# 136a
 def atc_136a(input_v: str) -> int:
     ABC = input_v.split(" ")
     A = int(ABC[0])

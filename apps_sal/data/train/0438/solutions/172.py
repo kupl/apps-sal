@@ -11,6 +11,7 @@ class Solution:
 
             lo, hi = 0, len(ar) - 1
             while lo <= hi:
+                # print(ar, num, lo, hi)
                 mid = (lo + hi) // 2
                 if ar[mid][1] < num:
                     lo = mid + 1
@@ -24,20 +25,22 @@ class Solution:
 
         for i, n in enumerate(arr[::-1]):
             idx = binSearch(a, n)
+            # print('binSearch', a, n, idx)
             el = a[idx]
-            if el[0] == n:
-                if el[1] == n:
+            if el[0] == n:  # left border
+                if el[1] == n:  # (1,1)
                     del a[idx]
                 else:
                     a[idx] = (n + 1, el[1])
-            elif el[1] == n:
-                if el[0] == n:
+            elif el[1] == n:  # right border
+                if el[0] == n:  # (1,1)
                     del a[idx]
                 else:
                     a[idx] = (el[0], n - 1)
-            else:
+            else:  # middle
                 a[idx] = (el[0], n - 1)
                 a.insert(idx + 1, (n + 1, el[1]))
+            # print(a, n, el)
             if n - el[0] == m or el[1] - n == m:
                 return len(arr) - i - 1
 

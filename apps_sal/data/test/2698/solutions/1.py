@@ -4,6 +4,7 @@ b = []
 for i in range(m):
     b.append(list(map(int, input().split())))
 b.sort()
+# print(b)
 for i in b:
     d = i[0]
     l = i[1]

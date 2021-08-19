@@ -12,3 +12,5 @@ if abs(Y - X) >= 2:
     print('Alice')
 else:
     print('Brown')
+
+# 24

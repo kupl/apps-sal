@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 def __starting_point():
     a, b, x, y = list(map(int, input().split()))

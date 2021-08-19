@@ -28,12 +28,38 @@ for i in range(0, t):
     val *= a
     act = val * val
     now = str(act)
+    # print(now)
     dow = 1
     ans = 0
     for c in now:
         x = int(c)
+        # print(x)
+        # print(dow)
         ans += (dow * x)
         dow *= 23
         dow %= mod
         ans %= mod
     print(ans)
+    # digs=[]
+    # while(act >0):
+    #   d=act%10
+    #   digs.append(d)
+    #   act=act/10
+    # now=0
+    # while (act > 0):
+    #   d=act%10
+    #   now*=10
+    #   now+=d
+    #   act=act/10
+    # count=0
+    # ans=0
+    # mul=1
+    # while (now > 0):
+    #   d=now%10
+    #   ans+=(mul*d)
+    #   ans%=mod
+    #   now/=10
+    #   count+=1
+    #   mul*=23
+    #   mul%=mod
+    # print(ans)

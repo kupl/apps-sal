@@ -42,6 +42,7 @@ mm = [km, sm, lm]
 for z in range(3):
     for i in range(n):
         for j in range(n):
+            # print('========')
             ql = 0
             qr = 1
             q[0] = (z, i, j, (0, 0))
@@ -49,6 +50,7 @@ for z in range(3):
             kc[z][i][j] = (0, 0)
             while ql < qr:
                 t, x, y, dd = q[ql]
+                # print(t,x,y,dd)
                 d = kc[t][x][y]
                 ql += 1
                 if d != dd:
@@ -97,4 +99,5 @@ for i in range(0, n * n - 1):
 for j in range(n * n - 1, n * n):
     qq = [dp[i][j] if dp[i][j] != None else (1000000, 0) for i in range(3)]
     qm = min(qq)
+    # print(j,qm)
     print(qm[0], qm[1])

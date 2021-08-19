@@ -41,6 +41,8 @@ class Solution:
                     size += 1
             sizes.append(size)
 
+        ################################################
+
         d = defaultdict(list)
         for u, v in common:
             d[u].append(v)
@@ -68,6 +70,8 @@ class Solution:
         if not all(visited):
             return -1
 
+        ################################################
+
         d = defaultdict(list)
         for u, v in common:
             d[u].append(v)
@@ -94,6 +98,8 @@ class Solution:
 
         if not all(visited):
             return -1
+
+        ################################################
 
         expected_commons = sum(x - 1 for x in sizes)
         res = len(common) - expected_commons

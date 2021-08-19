@@ -1,3 +1,4 @@
+# cook your dish here
 (n, m, k) = list(map(int, input().split()))
 lec = []
 que = []

@@ -1,6 +1,6 @@
 class Solution:
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
-        ht1 = {}
+        ht1 = {}  # for table order
         col = []
         display = []
 
@@ -15,15 +15,18 @@ class Solution:
             if dish not in col:
                 col.append(dish)
 
+        # to display, row is sorted tables, col is sorted dishes
         row = list(ht1.keys())
         row.sort()
         col.sort()
 
+        # initialize display matrix
         display = [[]] * (len(row) + 1)
         display[0] = ['Table']
         for item in col:
             display[0].append(item)
 
+        # fill out the blanks
         for i, item in enumerate(row):
             display[i + 1] = [str(item)]
             for j in range(len(col)):

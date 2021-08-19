@@ -1,3 +1,4 @@
+# cook your dish here
 for t in range(int(input())):
     n, r, x, y = map(int, input().split())
     lx = ly = set()

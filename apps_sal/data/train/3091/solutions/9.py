@@ -1,3 +1,5 @@
+# Return the message, but with the first occurrence (if any) of the
+# specified hashtag removed from the message
 def omit_hashtag(message, hashtag):
     if hashtag in message:
         found_at = message.index(hashtag)

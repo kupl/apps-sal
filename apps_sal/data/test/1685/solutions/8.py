@@ -13,8 +13,10 @@ def lev(x):
 
 def up(x):
     l = lev(x)
+    # left child
     if not (((1 << l) & x) > 0):
         return x + (1 << (l - 1))
+    # right child
     return x - (1 << (l - 1))
 
 
@@ -23,6 +25,7 @@ def left(x):
     if(l == 1):
         return 0
 
+    # left child
     return x - (1 << (l - 1)) + (1 << (l - 2))
 
 
@@ -30,6 +33,7 @@ def right(x):
     l = lev(x)
     if(l == 1):
         return 0
+    # left child
     return x + (1 << (l - 2))
 
 

@@ -17,6 +17,7 @@ def aaa():
         if used[a[i][1]] == -1 and used[a[i][2]] == -1:
             used[a[i][1]] = a[i][2]
             used[a[i][2]] = a[i][1]
+        # print(*used)
     for i in range(n):
         print(used[i] + 1, end=' ')
 

@@ -37,6 +37,18 @@ def main():
             ans = ((k) * ((k + 1))) % mod
             l.append(ans)
         else:
+            # if k==1:
+            #     ans = ((((n)*((n-1)))%mod)+ n%mod)%mod
+            #     l.append(ans)
+            # else:
+            #     k-=1
+            #     lr = (n%mod+((ceil(k/2)%mod))%mod
+            #     ans = ((lr*((lr-1))%mod
+            #     if k%2!=0:
+            #         ans= (ans%mod + n%mod)%mod
+            #     else:
+            #         ans = ((ans%mod)+((lr+n)%mod))%mod
+            #     l.append(ans)
             if k % 2 != 0:
                 lr = k // 2
                 l.append(((n * n) % mod + (lr * ((2 * n) % mod)) % mod + (lr * (lr + 1)) % mod) % mod)

@@ -26,12 +26,14 @@ class Solution:
             for cur in curPoss:
                 if cur == n - 1:
                     return cnt
+                # arr[cur]=None
                 l = cur - 1
                 if 0 < l < n and l not in curPoss and arr[l] != None:
                     nextPoss.add(l)
                 r = cur + 1
                 if 0 < r < n and r not in curPoss and arr[r] != None:
                     nextPoss.add(r)
+                # print(cur,arr[cur])
                 for i in dict1[arr[cur]]:
                     if i != cur and i not in curPoss and arr[i] != None:
                         nextPoss.add(i)

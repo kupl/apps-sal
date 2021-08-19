@@ -1,5 +1,6 @@
 X, A, B = [int(v) for v in input().split(" ")]
 
+# A: 3 B: 4 X: 3
 
 result = A - B
 

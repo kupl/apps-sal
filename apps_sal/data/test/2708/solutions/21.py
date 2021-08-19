@@ -1,8 +1,10 @@
+# cook your dish here
 n, k = input().split()
 n = list(n)[::-1]
 k = int(k)
 
 for idx, i in enumerate(n):
+    # print(n,i,k)
 
     if k > 0:
         i = int(i)
@@ -23,5 +25,6 @@ for idx, i in enumerate(n):
     if k == 0:
         break
 
+    # print(n,i,k)
 
 print(int(''.join(n[idx:][::-1])))

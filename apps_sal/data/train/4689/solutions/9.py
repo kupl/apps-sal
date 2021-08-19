@@ -15,6 +15,7 @@ def create_report(names):
             code = words[0][0] + words[1][0] + words[2][:2] + words[3][:2]
         else:
             print(name, 'has', len(words), 'words')
+        # print(words,code)
         data[code] += number
     result = []
     for code, number in sorted(data.items()):

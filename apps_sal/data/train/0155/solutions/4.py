@@ -1,5 +1,6 @@
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
+        # @lru_cache(None)
         cache = {}
 
         def f(i):

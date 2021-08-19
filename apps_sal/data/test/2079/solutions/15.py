@@ -74,9 +74,11 @@ def solve(w, s):
         if p == '0':
             taken = free.popleft(),
             used.appendleft(taken)
+            # order.append(pid, taken[0])
         else:
             logger.debug('used %s', used)
             taken = used.popleft()
+        #order.append([pid, taken[0]])
         ids[pid] = taken[0]
 
     return [x for x, y in ids]

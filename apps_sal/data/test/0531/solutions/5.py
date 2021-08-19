@@ -11,6 +11,7 @@ min_cnt = izms[min_val]
 med_cnt = n - max_cnt - min_cnt
 res = n
 
+# print(' '.join(' '.join([str(iz)]*izms[iz]) for iz in izms), izms)
 
 if max(izms) - min(izms) == 2:
     med_val = max(izms) - 1

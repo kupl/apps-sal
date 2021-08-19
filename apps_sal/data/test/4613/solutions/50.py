@@ -23,17 +23,20 @@ def dfs(v, G):
 
 
 bridge = 0
+# 各辺を取り除く
 for a, b in side:
     Gc = copy.deepcopy(G)
     Gc[a].remove(b)
     Gc[b].remove(a)
     seen = [False] * N
     cnt = 0
+    # 連結成分のカウント
     for s in range(N):
         if seen[s] == True:
             continue
         cnt += 1
         dfs(s, Gc)
+    # 連結成分が 2 個以上ならその辺は橋
     if cnt >= 2:
         bridge += 1
 print(bridge)

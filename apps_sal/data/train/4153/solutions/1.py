@@ -1,3 +1,4 @@
+# precaclulate results
 LIMIT = 2500000
 RECA_SUM = [0, 0]
 seen = {0}

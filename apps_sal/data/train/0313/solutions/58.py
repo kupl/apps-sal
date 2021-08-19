@@ -41,6 +41,7 @@ class Solution:
                 uf.union(right, idx)
             cur_size = uf.get_size(idx)
             bouquets += cur_size // k - (left_size // k + right_size // k)
+            # print(bouquets, bloomed, left_size, right_size, cur_size)
             if bouquets >= m:
                 return bloomDay[idx]
         return -1

@@ -7,7 +7,9 @@ if lst[-1] == 0 and k % 2 != 0:
     print(0)
 elif lst[-1] < 0 and k % 2 != 0:
     for i in range(n - 1, n - k - 1, -1):
+        # print(p)
         p = (p % mod * lst[i] % mod) % mod
+    # print(p)
     print(p % mod)
 else:
     j = n - 1
@@ -24,4 +26,5 @@ else:
         else:
             p = (p % mod * lst[j] % mod * lst[j - 1] % mod) % mod
             j -= 2
+    # print(p)
     print(p % mod)

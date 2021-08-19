@@ -43,17 +43,17 @@ class Bit:
         二分探索であるため、ai>=0 を満たす必要がある
         """
         sum_ = 0
-        pos = -1
+        pos = -1    # 1-indexed の時は pos = 0
         if not equal:
             for i in range(self.depth, -1, -1):
                 k = pos + (1 << i)
-                if k < self.n and sum_ + self.tree[k] < x:
+                if k < self.n and sum_ + self.tree[k] < x:  # 1-indexed の時は k <= self.n
                     sum_ += self.tree[k]
                     pos += 1 << i
         if equal:
             for i in range(self.depth, -1, -1):
                 k = pos + (1 << i)
-                if k < self.n and sum_ + self.tree[k] <= x:
+                if k < self.n and sum_ + self.tree[k] <= x:  # 1-indexed の時は k <= self.n
                     sum_ += self.tree[k]
                     pos += 1 << i
         return pos, sum_
@@ -71,6 +71,8 @@ class Bit:
         text1 = " ".join(["element:            "] + list(map(str, self)))
         text2 = " ".join(["cumsum(1-indexed):  "] + list(str(self.sum(i)) for i in range(1, self.n + 1)))
         return "\n".join((text1, text2))
+
+###############################################################
 
 
 def solve(sign):

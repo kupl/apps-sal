@@ -18,7 +18,7 @@ for S in S_list:
             else:
                 stack.append('(')
                 l = 1
-        else:
+        else:   # s==')'
             if stack:
                 if stack[-1] == '(':
                     stack.pop()

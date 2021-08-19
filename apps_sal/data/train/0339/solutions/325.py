@@ -11,6 +11,7 @@ class Solution:
                 if square % m == 0:
                     remainder = square // m
                     if remainder in table:
+                        # print(square, m, remainder, table)
                         res += table[remainder]
                 if m not in table:
                     table[m] = 0
@@ -23,6 +24,7 @@ class Solution:
                 if square % m == 0:
                     remainder = square // m
                     if remainder in table:
+                        # print(square, m, remainder, table)
 
                         res += table[remainder]
                 if m not in table:

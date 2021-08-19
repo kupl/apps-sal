@@ -23,6 +23,7 @@ ans = 0
 DP = [-INF] * n
 DP[0] = 0
 
+# Paths are at most m long
 for plen in range(m):
     NDP = [-INF] * n
 
@@ -32,6 +33,10 @@ for plen in range(m):
 
     DP = NDP
     ans = (ans + max(DP)) % MOD
+
+# print(ans)
+# print(DP)
+#assert all(v > 0 for v in DP)
 
 
 """ From PyRival """
@@ -90,11 +95,16 @@ for a, b, w in edges:
 
     assert DP[i] > 0
 
+    #print(f'edge ({a+1}, {b+1}, {w}) usable from {usable_from} with distance {w_at_time}', file=sys.stderr)
     slope.append(w)
     intersect.append(DP[i])
     nedges.append((DP[i], w))
 
+# For each edge, figure out the interval in which it is the best option
 hull_i, hull_x = convex_hull_trick(slope, intersect)
+
+# print(hull_i)
+# print(hull_x)
 
 
 def tri(x):
@@ -111,6 +121,8 @@ for i, j in enumerate(hull_i):
         continue
 
     active = (until - lt)
+    #assert us <= lt
+    #assert until > lt, (until, lt)
 
     ans = (ans + active * wt) % MOD
 
@@ -119,6 +131,9 @@ for i, j in enumerate(hull_i):
 
     times = tri(max_uses) - tri(min_uses)
     ans = (ans + times * w) % MOD
+
+    #print(f'since {lt} to {until} use {(wt, w)} from {min_uses} to {max_uses} ({times}) times')
+    # print(ans)
 
     lt = until
     if lt == q - m:

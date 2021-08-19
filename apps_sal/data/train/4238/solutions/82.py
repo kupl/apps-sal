@@ -10,3 +10,5 @@ def squares_needed(grains):
 
         if grains <= total:
             return i + 1
+
+##################

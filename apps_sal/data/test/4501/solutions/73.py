@@ -2,6 +2,7 @@ n, a = list(map(int, input().split()))
 x = list(map(int, input().split()))
 for i in range(n):
     x[i] -= a
+# dp[i][j] = i番目までで(j-2500)を何個作れるか
 dp = [[0] * 5001 for i in range(n + 1)]
 dp[0][2500] = 1
 for i in range(n):

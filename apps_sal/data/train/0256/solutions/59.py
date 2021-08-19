@@ -6,6 +6,7 @@ class Solution:
 
         lo = int(math.ceil(sum(piles) / H))
         hi = sum(piles)
+        # print(hi)
 
         def hours(j): return sum([int(math.ceil(i / j)) for i in piles])
 
@@ -13,6 +14,7 @@ class Solution:
         while lo <= hi:
             mid = (lo + hi) // 2
             res = hours(mid)
+            # print(res, mid)
 
             if res <= H:
                 out = mid

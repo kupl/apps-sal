@@ -18,6 +18,7 @@ def __starting_point():
             inp = input().rstrip().split(" ")
             pieces.append([int(inp[0]), int(inp[1]), int(inp[2])])
 
+        # Preparing the graph
         G = {}
         piece_index = 0
         while piece_index < len(pieces):
@@ -27,6 +28,8 @@ def __starting_point():
                 G[vertex][piece_index] = True
             piece_index += 1
 
+        # prepare list of vertices associated with only one piece
+        # That piece can be safely removed
         next_vertices = []
         for vertex in G:
             if len(G[vertex]) == 1:

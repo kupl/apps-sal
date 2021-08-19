@@ -18,6 +18,8 @@ class Solution:
             elif nums[i] < 0:
                 pos[i] = neg[i - 1] + 1 if neg[i - 1] > 0 else 0
                 neg[i] = pos[i - 1] + 1
+            # else:
+                # pos[i]
             ans = max(ans, pos[i])
 
         return ans

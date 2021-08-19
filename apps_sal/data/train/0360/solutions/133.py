@@ -15,6 +15,7 @@ class Solution:
         l, r = 0, 10**18
         while l < r:
             m = (l + r) // 2
+            # print(l,r,m,canDo(m))
             if canDo(m):
                 r = m
             else:

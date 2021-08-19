@@ -5,6 +5,7 @@ def owned_cat_and_dog(cat_years, dog_years):
     count_cat = 1
     count_dog = 1
 
+    # Cat Condition
     if cat > 24:
         while cat > 24:
             cat -= 4
@@ -17,6 +18,7 @@ def owned_cat_and_dog(cat_years, dog_years):
     else:
         human_cat = 0
 
+    # Dog Condition
     if dog > 24:
         while dog > 24:
             dog -= 5

@@ -10,11 +10,17 @@ class Solution:
             else:
                 nums[i] = 1
 
+        # print(nums)
+
         import heapq
 
         queue = [(nums[i], i) for i in nums]
 
+        # print(queue)
+
         heapq.heapify(queue)
+
+        # print(queue)
 
         while len(queue) > 0 and k > 0:
 
@@ -23,8 +29,12 @@ class Solution:
             if k >= count:
                 k = k - count
             else:
+                # print('yes', queue, count, n, k)
                 count = count - k
                 k = 0
                 heapq.heappush(queue, (count, n))
+                # print(queue)
+
+        # print(queue)
 
         return len(queue)

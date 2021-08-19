@@ -21,6 +21,7 @@ class Solution:
         hashMap = {}
         for i in range(N):
             node = Node(i, 0, None)
+            #node.parent = node
             hashMap[node.data] = node
 
         def Union(data1, data2):

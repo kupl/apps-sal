@@ -23,6 +23,7 @@ class Solution:
         min_heap = []
 
         while l < len(nums) and r < len(nums):
+            # print(l,r)
             add_to_max_heap(max_heap, (-nums[r], r))
             add_to_min_heap(min_heap, (nums[r], r))
 

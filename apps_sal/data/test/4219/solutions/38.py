@@ -19,4 +19,5 @@ for bit in range(2**n):
     else:
         thisans = str(bin(bit)).count("1")
         ans = max(ans, thisans)
+        # print(bin(bit))
 print(ans)

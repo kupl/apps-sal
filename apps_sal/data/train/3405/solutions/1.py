@@ -14,6 +14,7 @@ def pow_root_pandigit(val, n, k):
             l.append([i, i**n])
         i += 1
 
+        # largest possible
         if i**n > 987654321:
             break
 

@@ -11,6 +11,7 @@ if possible:
     h = sorted(set(f))
     g = [0]
     for x in range(1, n + 1):
+        # g.append(h.index(f[x]))
         g.append(bisect.bisect_left(h, f[x]))
     print(len(h) - 1)
     print(*g[1:])

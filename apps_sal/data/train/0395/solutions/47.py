@@ -4,7 +4,7 @@ class Solution(object):
 
         def make(B):
             ans = [None] * N
-            stack = []
+            stack = []  # invariant: stack is decreasing
             for i in B:
                 while stack and i > stack[-1]:
                     ans[stack.pop()] = i

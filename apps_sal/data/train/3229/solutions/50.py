@@ -9,4 +9,5 @@ def am_i_wilson(n):
         return True
     else:
         return False
+    #f = (factorial(n - 1) + 1) / (n * n)
     return str(n)

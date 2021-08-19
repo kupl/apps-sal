@@ -25,6 +25,8 @@ class Solution:
 
         arr = sorted(zip(keyTime, keyName))
 
+        # print (arr)
+
         for i in range(n):
             keyName[i] = arr[i][1]
             keyTime[i] = arr[i][0]

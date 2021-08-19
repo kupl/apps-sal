@@ -1,3 +1,6 @@
+# return a list of tuples sorted by frequency with
+# the most frequent letter first. Any letters with the
+# same frequency are ordered alphabetically
 
 def letter_frequency(text):
     text = text.lower()

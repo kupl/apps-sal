@@ -29,6 +29,10 @@ for i in range(length):
             maxVal = right[i + 1] + left[i]
             if maxVal > answer:
                 answer = maxVal
+#         if right[i] == 1:
+#             maxVal = right[i+1] + left[i]
+#             if maxVal > answer:
+#                 answer = maxVal
     elif i == length - 1:
         if left[i] == 1:
             maxVal = left[i - 1] + right[i]

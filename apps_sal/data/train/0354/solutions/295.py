@@ -20,4 +20,7 @@ class Solution:
                     d[i][j] += d[i - k][faces] - d[i - k][j]
             d[i][faces] = sum(d[i])
 
+        # for i in range(n+1):
+        #    print(d[i])
+
         return d[n][faces] % (10**9 + 7)

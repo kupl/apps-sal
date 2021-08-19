@@ -18,3 +18,8 @@ class Cashier:
         for p, a in zip(product, amount):
             price_sum += a * self.prices_dict[p]
         return discount_factor * price_sum
+
+
+# Your Cashier object will be instantiated and called as such:
+# obj = Cashier(n, discount, products, prices)
+# param_1 = obj.getBill(product,amount)

@@ -1,4 +1,5 @@
 
+# 50 ABC130E
 import numpy as np
 n, m = map(int, input().split())
 s = list(map(int, input().split()))

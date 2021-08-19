@@ -35,7 +35,16 @@ class Solution:
         for k in range(2, K + 1):
             low = 1
             for n in range(3, N + 1):
+                # linear search
+                # m=1
+                # while A[k-1][m-1]<A[k][n-m]:
+                #     m+=1
 
+                # binary search
+                # m = self.binary_search(A,k,n)
+                # A[k][n] = 1+max(A[k-1][m-1],A[k][n-m])
+
+                # tip-toe
                 if A[k - 1][low] < A[k][n - low - 1]:
                     low += 1
 

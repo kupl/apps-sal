@@ -7,7 +7,7 @@ input = stdin.readline
 def main():
     n, k = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    mod = [defaultdict(int) for i in range(11)]
+    mod = [defaultdict(int) for i in range(11)]  # number length 1-10, 1-indexed
     for val in a:
         mod[len(str(val))][val % k] += 1
 

@@ -11,7 +11,9 @@ class Solution:
         dp[0] = 1
         for i in range(1, row):
             pre = dp[:]
+            # print(pre)
             for j in range(1, col):
                 if s[i - 1] == t[j - 1]:
                     dp[j] += pre[j - 1]
+            # print(dp)
         return dp[-1]

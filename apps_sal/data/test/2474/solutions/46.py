@@ -5,6 +5,7 @@ c = np.array(input().split(), dtype=int)
 mod = 10**9 + 7
 
 c = sorted(c)[::-1]
+# 4^(n-1)を求める
 e4 = 1
 k = n - 1
 inst = 4

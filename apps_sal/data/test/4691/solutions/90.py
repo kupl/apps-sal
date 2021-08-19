@@ -1,3 +1,4 @@
+# listじゃなくてdict使いたい
 n = int(input())
 j = [0] * 4
 moji = ["AC", "WA", "TLE", "RE"]

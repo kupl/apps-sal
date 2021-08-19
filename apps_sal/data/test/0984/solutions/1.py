@@ -1,7 +1,13 @@
+#!/usr/bin/env python3
 
+# solution after hint:(
+# though it was not necessary
+
+# reduced recursion version
 
 n = int(input().strip())
 vlrs = [tuple(map(int, input().strip().split())) for _ in range(n)]
+# shift numeration
 vlrs = [(v, l - (0 if l < 0 else 1), r - (0 if r < 0 else 1)) for v, l, r in vlrs]
 
 isroot = [True for _ in range(n)]

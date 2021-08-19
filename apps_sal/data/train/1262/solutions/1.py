@@ -29,6 +29,7 @@ def run():
 
     while(len(queue) > 0):
         (x, y) = queue.popleft()
+        #print('Propagate', (x+1,y+1), '; d =', grid[x,y])
         for (u, v) in [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)]:
             if u < 0 or v < 0 or u >= N or v >= M:
                 continue

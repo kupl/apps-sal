@@ -41,3 +41,8 @@ class StreamChecker:
         self.queryStack.append(letter)
         root = self.trie
         return self.findIfPresent(root, len(self.queryStack) - 1)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

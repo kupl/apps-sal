@@ -1,8 +1,8 @@
 h, w = list(map(int, input().split()))
 grid = (h + 1) * [None]
-grid[0] = (w + 1) * '
+grid[0] = (w + 1) * '#'
 for r in range(1, h + 1):
-    grid[r] = '
+    grid[r] = '#' + input().strip()
 
 rt = [[0 for c in range(w + 1)] for r in range(h + 1)]
 for r in range(1, h + 1):

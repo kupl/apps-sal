@@ -18,8 +18,16 @@ class Solution:
                     first = max_sums[i - j]
                     second = j * max(arr[i - j + 1:i + 1])
 
+                    #print(i, j)
+                    #print(arr[:i-j+1], arr[i-j+1:i+1])
+                    # print(\"first, second \", first, second)
+
                     res = max(res, first + second)
 
                 max_sums[i] = res
+
+            # print(max_sums)
+
+        # print(max_sums)
 
         return max_sums[-1]

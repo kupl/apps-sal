@@ -10,6 +10,7 @@ for i in range(N):
 for i in range(n):
     d[a[i]] += 1
 ans = 0
+# print(d)
 cting = 0
 for i in range(n):
     temp = d[a[i]]

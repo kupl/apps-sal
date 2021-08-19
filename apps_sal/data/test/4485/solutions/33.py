@@ -19,6 +19,7 @@ def bfs(goal, graph, seen, next_v):
 
 next_v = [(0, 0)]
 seen = {0}
+# bfs
 while True:
     if len(next_v) == 0 or next_v[0][1] == 2:
         ans = "IMPOSSIBLE"

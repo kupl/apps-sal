@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# codeforces little elephant and magic square
 
 import sys
 

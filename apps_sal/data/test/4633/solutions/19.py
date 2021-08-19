@@ -13,7 +13,9 @@ for _ in range(int(input())):
     else:
         pow = 10
         while True:
+            # print(n)
             closest = pow * ((n + pow - 1) // pow)
+            # print(closest)
             moves += (closest - n)
             n = closest
             if checksum(n) <= s:

@@ -4,6 +4,7 @@ t = list(input())
 s = sorted(s)
 t = sorted(t, reverse=True)
 
+# print(s,t)
 flag = [0, 0]
 
 if len(s) < len(t):

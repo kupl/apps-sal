@@ -1,6 +1,7 @@
 import bisect
 from collections import defaultdict
 3
+# -*- coding:utf-8 -*-
 
 
 def main():

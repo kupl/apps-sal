@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from bisect import bisect_left
 from bisect import bisect_right

@@ -4,6 +4,7 @@ class Solution:
         n = max(A) + 1
         p = [True] * n
         p[0] = p[1] = False
+        # dic1: prime: num, dic2: num: prime
         dic1, dic2 = collections.defaultdict(set), collections.defaultdict(set)
         for i in range(2, n):
             if p[i]:

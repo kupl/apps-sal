@@ -1,5 +1,7 @@
 for _ in range(int(input())):
+    # a, b = map(int, input().split())
     n = int(input())
+    # arr = list(map(int, input().split()))
     s = input()
     l = 0
     r = n - 1

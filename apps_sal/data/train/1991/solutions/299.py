@@ -5,6 +5,8 @@ class Solution:
 
         @functools.lru_cache(None)
         def dfs(cur, target, tot):
+            # if cur == finish:
+            #    return 1
             res = 0
             for i in range(n):
                 if i == cur:
@@ -14,6 +16,8 @@ class Solution:
                     continue
                 if tot + abs(locations[cur] - locations[i]) > fuel:
                     continue
+                # if tot + abs(locations[cur]-locations[i]) <= fuel and i == finish:
+                #    res += 1
                 else:
                     res += dfs(i, target, tot + abs(locations[cur] - locations[i]))
                     res %= mod

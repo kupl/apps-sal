@@ -1,4 +1,6 @@
+# F - Intervals on Tree
 
+# Σ連結成分の個数＝Σ頂点の個数 − Σ辺の個数
 
 N = int(input())
 V = 0

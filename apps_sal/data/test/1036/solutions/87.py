@@ -20,9 +20,13 @@ def main():
     def dp(k, p):
         if (k, p) in memo:
             return memo[(k, p)]
+        # time.sleep(.1)
+        # print(k, p)
         if k == 1:
+            # print('return {}, {} -> {}'.format(S[p%N], S[(p+1)%N], janken[(S[p%N], S[(p+1)%N])]))
             return janken[(S[p % N], S[(p + 1) % N])]
         memo[(k, p)] = janken[(dp(k - 1, (p * 2) % N), dp(k - 1, ((p + 1) * 2) % N))]
+        # return janken[(dp(k-1, p*2), dp(k-1, (p+1)*2))]
         return memo[(k, p)]
 
     print((dp(K, 0)))

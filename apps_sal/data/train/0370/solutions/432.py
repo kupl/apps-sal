@@ -17,7 +17,7 @@ class Solution:
         for x in range(2, int(max(A)**0.5) + 1):
             for y in primes:
                 if x % y == 0:
-                    break
+                    break  # break
             else:
                 primes.append(x)
 
@@ -26,7 +26,7 @@ class Solution:
             x = a
             for p in primes:
                 if p * p > x:
-                    break
+                    break  # break
                 if x % p == 0:
                     factors[a].append(p)
                     while x % p == 0:

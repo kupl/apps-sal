@@ -15,9 +15,11 @@ class Solution:
                     p -= 4
                 else:
                     p -= customers[i]
+                # print(p)
             else:
                 a.append(0)
             r += 1
+        # print(p)
         while p > 0:
             a.append(min(4, p))
             p -= 4

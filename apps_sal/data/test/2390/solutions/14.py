@@ -4,8 +4,8 @@ for _ in range(n):
     x, v = list(map(int, input().split()))
     que.append((x, v))
 
-dpl = [0 for i in range(n + 1)]
-dpr = [0 for i in range(n + 1)]
+dpl = [0 for i in range(n + 1)]  # dpl[i]=左からi番目に行くまでのお腹の値のプラス
+dpr = [0 for i in range(n + 1)]  # dpr[j]＝右からj番目に行くまでのお腹の値のプラス
 
 c = 0
 for i in range(n):
@@ -20,8 +20,8 @@ for i in range(1, n + 1):
 max1 = max(dpl)
 max2 = max(dpr)
 
-dpb_l = [0 for i in range(n + 1)]
-dpb_r = [0 for i in range(n + 1)]
+dpb_l = [0 for i in range(n + 1)]  # dpb_l[i]=左からi番目に行って戻るときに達成できるお腹の値のプラス
+dpb_r = [0 for i in range(n + 1)]  # dpb_r[i]=右からi番目に行って戻るときに達成できるお腹の値のプラス
 
 c = 0
 
@@ -35,6 +35,8 @@ for i in range(1, n + 1):
 
     dpb_r[i] = d - 2 * (C - que[-i][0])
 
+# dpl[i]=左からi番目のところに行くまでに達成できるお腹の値のプラスの最大値
+# dpr[i]=右からi番目のところに行くまでに達成できるお腹のあたいのプラスの最大値
 
 for i in range(1, n + 1):
     dpl[i] = max(dpl[i - 1], dpl[i])

@@ -45,6 +45,8 @@ def main():
         for j in range(len(d[i]) - 1):
             d[i][j + 1] += d[i][j]
 
+    # print(d)
+
     ans = [0] * Q
     for i in range(Q):
         l, r = LR[i]

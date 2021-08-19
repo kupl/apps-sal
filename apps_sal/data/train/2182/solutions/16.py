@@ -11,9 +11,10 @@ aj = (len(a) + 1) // 2 - 1
 bi = 0
 bj = len(b) // 2 - 1
 
-turn = 0
+turn = 0   # 0 -> player A
 ansi = 0
 ansj = len(name) - 1
+#print(a, b, ai, aj, bi, bj)
 for _ in range(len(name)):
     if not turn:
 

@@ -1,6 +1,13 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[2]:
 
 
 import itertools
+
+
+# In[47]:
 
 
 N = int(input())
@@ -10,6 +17,9 @@ for _ in range(N):
 P = []
 for _ in range(N):
     P.append(list(map(int, input().split())))
+
+
+# In[48]:
 
 
 ans = sum([min(a) for a in P])
@@ -23,3 +33,6 @@ for b in range(1, 1024):
         tmp += P[i][cnt]
     ans = max(ans, tmp)
 print(ans)
+
+
+# In[ ]:

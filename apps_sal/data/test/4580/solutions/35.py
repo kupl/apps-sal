@@ -21,4 +21,5 @@ if ansmin == 0:
 if over > 0:
     ansmax += over
 
+# print(rate,over)
 print(ansmin, ansmax)

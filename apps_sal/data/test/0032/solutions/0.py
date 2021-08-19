@@ -5,6 +5,8 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
+# SOLUTION
+
 
 def main():
     latitude = 0
@@ -27,6 +29,8 @@ def main():
     if latitude != 0:
         return "NO"
     return "YES"
+
+# HELPERS
 
 
 def read(callback=int):

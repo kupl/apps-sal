@@ -8,6 +8,7 @@ for _ in range(int(input())):
             d[a[i]] += 1
         else:
             d[a[i]] = 1
+    # print(d)
     b = list(dict.values(d))
     c = [0] * n
     ans = 0
@@ -18,10 +19,12 @@ for _ in range(int(input())):
             if c[b[i]] == 0:
                 ans += b[i]
                 c[b[i]] = 1
+                # print("adfasf")
             else:
                 while c[b[i]] == 1:
                     b[i] -= 1
                 c[b[i]] = 1
                 c[0] = 0
                 ans += b[i]
+            # print(b[i])
         print(ans)

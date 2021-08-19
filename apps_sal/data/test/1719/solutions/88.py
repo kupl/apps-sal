@@ -56,3 +56,6 @@ x = np.array(x)
 
 N = int(input())
 print(((np.dot(mat_power(A, N, mod), x) % mod).sum() % mod))
+# y = np.dot(mat_power(A, N, mod), x) % mod
+# for i in range(64):
+#   print(to_str(i, 3) + ":", y[i])

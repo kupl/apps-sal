@@ -1,5 +1,6 @@
 
 N = int(input())
+# n, m = map(int, input().split())
 hard = 0
 soft = 0
 for _ in range(N):

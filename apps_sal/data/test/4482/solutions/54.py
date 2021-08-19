@@ -4,6 +4,9 @@ N = int(N)
 
 list1 = list(map(int, a))
 
+# print(N)
+
+# print(list1)
 
 a = []
 
@@ -16,5 +19,8 @@ for i in range(-100, 101):
         if n == N - 1:
             a.append(int1)
 
+# print(a)
+
+# print(max(a))
 
 print(min(a))

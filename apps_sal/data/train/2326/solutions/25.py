@@ -26,6 +26,8 @@ def LIR(row, col):
         read_all = [LI() for _ in range(row)]
         return map(list, zip(*read_all))
 
+#################
+
 
 N = I()
 a = LI()

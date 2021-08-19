@@ -28,6 +28,7 @@ def st1():
 t = inp()
 while(t):
     t -= 1
+    # n=inp()
     a = st1()
     oe = []
     c = 0

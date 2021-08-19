@@ -17,7 +17,7 @@ def main():
     A = np.array(A).T.tolist()
 
     for i in range(len(A)):
-        print(("".join(["." if i == 0 else "
+        print(("".join(["." if i == 0 else "#" for i in A[i]])))
 
 
 main()

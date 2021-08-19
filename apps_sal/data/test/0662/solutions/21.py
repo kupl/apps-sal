@@ -7,6 +7,7 @@ def main():
         for i in range(3):
             if i != x:
                 state[i] = 1 - state[i]
+    #print(n, state)
     for i in range(n):
         c = read()[0] - 1
         if state[c] == 0:

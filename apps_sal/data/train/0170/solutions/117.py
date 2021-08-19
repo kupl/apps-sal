@@ -12,11 +12,14 @@ class Solution:
                 break
             last[x] = i + 1
             prev = x
+        # print(last)
 
         for i in range(1, len(d) + 1):
             if last[i] == 0:
                 last[i] = last[i - 1]
 
+        # print(a)
+        # print(last)
         ans = last[-1]
         prev = 1e100
         for i, x in enumerate(a[::-1]):

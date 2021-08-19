@@ -9,6 +9,8 @@ class Solution:
         first, second = barcodes[:n // 2], barcodes[n // 2:]
         res = []
         f, s = 0, 0
+        # print(barcodes)
+        #print(first, second)
         while f < len(first) or s < len(second):
             if s < len(second):
                 res.append(second[s])

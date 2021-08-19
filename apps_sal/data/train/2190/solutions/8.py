@@ -5,8 +5,11 @@ from collections import defaultdict
 def modInverse(b, m):
     g = gcd(b, m)
     if (g != 1):
+        # print("Inverse doesn't exist")
         return -1
     else:
+        # If b and m are relatively prime,
+        # then modulo inverse is b^(m-2) mode m
         return pow(b, m - 2, m)
 
 
@@ -47,4 +50,6 @@ def solve():
     print(ans)
 
 
+# t = int(input())
+# for _ in range(t):
 solve()

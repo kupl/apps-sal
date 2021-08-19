@@ -6,10 +6,11 @@ class Solution:
         MOD = 10 ** 9 + 7
         n = len(locations)
 
+        # (dest index, fuel remaining) -> ways
         dp = [[0 for fuel in range(startFuel + 1)] for dest in range(n)]
         dp[start][startFuel] = 1
 
-        for fuel in reversed(list(range(startFuel))):
+        for fuel in reversed(list(range(startFuel))):  # exclude startFuel
             for dest in range(n):
                 ways = 0
                 for mid in range(n):

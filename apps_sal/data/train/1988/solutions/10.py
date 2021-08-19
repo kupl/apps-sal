@@ -8,10 +8,11 @@ class Solution:
         for a, b in blue_edges:
             blue[a].add(b)
 
+        # perform BFS
         seen = set()
         res = [float('inf') for _ in range(n)]
         lvl = 0
-        q = collections.deque([[0, 0], [0, 1]])
+        q = collections.deque([[0, 0], [0, 1]])  # [node, color], 0 for red, 1 for blue
         while q:
             for _ in range(len(q)):
                 n, c = q.popleft()
@@ -27,6 +28,7 @@ class Solution:
                             q.append([ch, 1])
             lvl += 1
 
+        # change all inf to -1
         for i, n in enumerate(res):
             if n == float('inf'):
                 res[i] = -1

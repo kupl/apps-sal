@@ -1,4 +1,5 @@
 def alternateCase(s):
+    # your code here
     res = ''
     for i in range(len(s)):
         if s[i] >= 'a' and s[i] <= 'z':

@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     a, b, c, d = list(map(int, input().split()))
     p = (a * a) + (b * b)

@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 N, K = list(map(int, input().split()))
 
 point = []
@@ -16,6 +18,8 @@ for i in range(able + 1):
             temp_left = temp_low[:]
             temp_left.sort(key=lambda x: x[1])
             temp_left = temp_left[k:len(temp_left) - (able + 1 - i - j) + k + 1]
+            # print(i,j,k)
+            # print(temp_left)
             if temp_left:
                 ans = temp_left[:]
             elif temp_low:
@@ -27,6 +31,8 @@ for i in range(able + 1):
             for item in ans:
                 x.append(item[0])
                 y.append(item[1])
+            # print(x)
+            # print(y)
             num = ((max(x) - min(x)) * (max(y) - min(y)))
             shin = min(shin, num)
 

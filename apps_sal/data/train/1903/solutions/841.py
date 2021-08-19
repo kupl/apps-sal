@@ -6,8 +6,11 @@ class Solution:
         groups = defaultdict(set)
         for i in range(len(points)):
             groups[i].add(i)
+        # print(distances)
         while distances:
+            # print(groups)
             next_min = heapq.heappop(distances)
+            # print(f\"considering dist: {next_min}\")
             g1 = self.find_group(groups, next_min[1])
             g2 = self.find_group(groups, next_min[2])
             if g1 != g2:

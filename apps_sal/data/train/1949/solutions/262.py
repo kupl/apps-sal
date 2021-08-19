@@ -19,3 +19,30 @@ class Solution:
             for j in range(cols):
                 ans = max(ans, dfs(i, j))
         return ans
+
+#         m = len(grid)
+#         n = len(grid[0])
+#         visited = {}
+
+#         def backtrack(path, i, j, start):
+
+#             if grid[i][j] == 0:
+#                 # print(path)
+#                 return sum(path)
+
+#             for x, y in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+#                 if (i + x, j + y) not in visited:
+#                     if not (i + x < 0 or j + y < 0 or i + x >= m or j + y >= n):
+#                         visited[(i + x, j + y)] = backtrack(path + [grid[i + x][j + y]], i + x, j + y, (i + x, j +y))
+#                     else:
+#                         visited[(i + x, j + y)] = float('-inf')
+
+#             visited[(i,j)] = sum(path) + max(visited[(i + x, j + y)] for x, y in ((0, 1), (0, -1), (1, 0), (-1, 0)))
+
+
+#         for i in range(m):
+#             for j in range(n):
+#                 if grid[i][j] != 0:
+#                     backtrack([grid[i][j]], i, j, (i,j))
+
+#         return

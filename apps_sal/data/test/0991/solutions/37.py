@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 def solve():
     """解説実装"""
@@ -19,21 +20,27 @@ def solve():
         c, d = list(map(int, sys.stdin.readline().split()))
         ryogae.append((c, d))
 
+    # dp[v][s] := 頂点vに所持金sで訪れるときの最小時間
     dp = [[float("inf") for _ in range(MAX_S + 1)] for __ in range(N)]
 
+    # ダイクストラ
     s = min(S, MAX_S)
     que = []
-    heapq.heappush(que, (0, 0, s))
+    heapq.heappush(que, (0, 0, s))  # (時刻t, 頂点番号v, 所持金s)
 
     while len(que) != 0:
         t, v, s = heapq.heappop(que)
 
+        # if dp[v][s] != t: continue  # なにこれ？
+
+        # 両替する場合
         c, d = ryogae[v]
         ns = min(s + c, MAX_S)
         if dp[v][ns] > t + d:
             dp[v][ns] = t + d
             heapq.heappush(que, (t + d, v, ns))
 
+        # 移動する場合(v -> uに移動)
         for u, a, b in graph[v]:
             if s - a < 0:
                 continue

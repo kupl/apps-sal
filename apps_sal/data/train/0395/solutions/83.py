@@ -1,4 +1,5 @@
 class Solution:
+    # O(nlog(n)) Time | O(n) Space
     def oddEvenJumps(self, A: List[int]) -> int:
         nextHigher = [0] * len(A)
         nextLower = [0] * len(A)
@@ -8,6 +9,7 @@ class Solution:
         validEven[-1] = 1
 
         stack = []
+        # sort array by value, put all smaller valunes' index in stack, if stack[-1] smaller then current index, A[stack[-a]] next higher value is at index i
         for a, i in sorted([a, i] for i, a in enumerate(A)):
             while stack and stack[-1] < i:
                 nextHigher[stack.pop()] = i

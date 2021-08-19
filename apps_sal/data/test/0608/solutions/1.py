@@ -1,3 +1,4 @@
+# A
 s = input()
 if s.isnumeric():
     k = int(s)

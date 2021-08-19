@@ -2,7 +2,7 @@ class User():
     '''Creates a User class for a codewars style website'''
 
     def __init__(self):
-        self.ranks = [-8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8]
+        self.ranks = [-8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8]  # 15
         self.progress = 0
         self.level = 0
         self.rank = self.ranks[self.level]

@@ -2,8 +2,8 @@ import copy
 N = int(input())
 
 
-def power_func(a, n, p):
-    bi = str(format(n, "b"))
+def power_func(a, n, p):  # a**n mod p
+    bi = str(format(n, "b"))  # 2進表現に
     res = 1
     for i in range(len(bi)):
         res = (res * res) % p
@@ -34,6 +34,7 @@ elif c in [["B", "A", "A", "A"], ["B", "A", "A", "B"], ["A", "B", "B", "A"], ["B
             one %= mod
             two = x
             N -= 1
+            #print(one, two)
         ans = one
 else:
     if N == 2 or N == 3:

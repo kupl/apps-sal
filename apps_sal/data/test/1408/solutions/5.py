@@ -27,6 +27,8 @@ tOne.reverse()
 tTwo.reverse()
 for i in range(sizeOne):
     for j in range(sizetwo):
+        #print(i+ 2*j, tOne[i] + tTwo[j])
         if i + 2 * j >= tOne[i] + tTwo[j]:
             slon = min(slon, i + 2 * j)
+# print(tOne, tTwo)
 print(slon)

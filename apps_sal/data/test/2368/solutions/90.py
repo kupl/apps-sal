@@ -117,6 +117,8 @@ class Coloring_Union_Find():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+# ================================================
+
 
 N, M = map(int, input().split())
 A = [0] + list(map(int, input().split()))

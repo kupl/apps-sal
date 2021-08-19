@@ -7,6 +7,7 @@ class Solution:
         maxHeap = []
         zipped = list(zip(wage, quality))
         zipped = sorted(zipped, key=lambda x: x[0] / x[1])
+        # print(zipped)
         minCost = float('inf')
         totalQuality = 0
 

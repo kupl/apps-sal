@@ -10,6 +10,7 @@ class Solution:
         second = p
         ans = min(len(arr) - first, second)
         i, j = 0, second
+        # print(i, j)
         while i < first and j < len(arr):
             if arr[i] > arr[j]:
                 ans = min(ans, j - i)

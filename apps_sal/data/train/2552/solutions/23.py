@@ -3,6 +3,8 @@ class Solution:
 
         k = list(set(arr))
 
+# print(k)
+
         tmp = []
 
         size = len(arr)

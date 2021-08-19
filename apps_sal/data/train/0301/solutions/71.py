@@ -14,6 +14,7 @@ class Solution:
             if A[ai] == B[bi]:
                 result = maxUncrossedLinesHelper(ai + 1, bi + 1) + 1
                 memo[(ai, bi)] = result
+         # return result
 
             chooseA = 0
             try:

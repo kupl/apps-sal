@@ -53,4 +53,5 @@ N, L = list(map(int, input().split()))
 T = Trie('01')
 for _ in range(N):
     T.add(input())
+# T.debug_output(T.root, '')
 print(("Alice" if T.dfs(T.root, 0) else "Bob"))

@@ -1,8 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# FileName: 	C
+# CreatedDate:  2020-06-27 11:11:46 +0900
+# LastModified: 2020-10-01 00:51:09 +0900
+#
 
 
 import os
 import sys
 import numpy as np
+# import pandas as pd
 
 
 def dfs(visited, maze, h, w):
@@ -35,7 +43,7 @@ def main():
     maze = []
     for _ in range(H):
         S = input()
-        S = [1 if s == '
+        S = [1 if s == '#' else 0 for s in S]
         maze.append(S)
     maze = np.array(maze)
     maze = np.pad(maze, [(1, 1), (1, 1)])

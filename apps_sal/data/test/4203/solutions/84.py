@@ -6,6 +6,8 @@ def readinput():
 def main(s):
     if s[0] != 'A':
         return 'WA'
+    # print(s)
+    # print(s[2:-1])
     if s[2:-1].count('C') != 1:
         return 'WA'
     ls = s.lower()

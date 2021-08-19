@@ -1,3 +1,4 @@
+# coding: utf-8
 a = input()
 pos = a.find('0')
 if pos == -1:

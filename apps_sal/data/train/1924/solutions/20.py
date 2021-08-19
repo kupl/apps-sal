@@ -7,11 +7,11 @@ class Solution:
         splits = [trans.split(',') for trans in transactions]
         valid = [True] * n
 
-        for i in range(n):
+        for i in range(n):  # rule 1
             if int(splits[i][2]) > 1000:
                 valid[i] = False
 
-        for i in range(n):
+        for i in range(n):  # rule 2
             for j in range(i + 1, n):
                 if valid[i] or valid[j]:
                     name1, time1, city1 = splits[i][0], int(splits[i][1]), splits[i][3]
@@ -20,6 +20,46 @@ class Solution:
                         valid[i], valid[j] = False, False
 
         return [transactions[i] for i in range(n) if not valid[i]]
+
+#     def invalidTransactions(self, transactions: List[str]) -> List[str]:
+
+# #         def asPerTime(string):
+# #             return string.split(',')[1]
+
+
+# #         transactions.sort(key=asPerTime)
+
+#         #dictionary
+#         personDict = dict()
+
+#         #outputList
+#         outSet = set()
+
+#         for transaction in transactions:
+#             name, time, amount, city = transaction.split(',')
+#             if int(amount) > 1000:
+#                 outSet.add(transaction)
+
+#             if name in personDict:
+#                 cityDict = personDict[name]
+#                 cityDict[city].append((time, amount))
+
+#                 for key in cityDict:
+#                     if key != city:
+#                         for pair in cityDict[key]:
+#                             prevTime, prevAmount = pair
+#                             timeDiff = abs(int(time) - int(prevTime))
+#                             if timeDiff <= 60:
+#                                 outSet.add(transaction)
+#                                 outSet.add(','.join([name, prevTime, prevAmount, key]))
+
+
+#             else:
+#                 personDict[name] = defaultdict(list)
+#                 personDict[name][city].append((time, amount))
+
+
+#         return outSet
 
         '''
         sort the transaction list as per the time

@@ -13,6 +13,7 @@ class Solution:
                 s += A[i + L - 1]
             l.append((-s, (i, i + L - 1)))
         l = sorted(l, key=lambda tup: tup[0])
+        # print(l)
         m = []
         s = 0
         for i in range(len(A) - M + 1):

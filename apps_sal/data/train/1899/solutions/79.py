@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/shortest-bridge/
 from typing import List
 from queue import Queue
 

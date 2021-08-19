@@ -4,6 +4,7 @@ class Solution:
         for i in range(lo, hi + 1):
             power = self.findPower(i, {})
             dic[i] = power
+        # print(dic)
         sortedValue = sorted(list(dic.items()), key=lambda x: x[1])
         return (sortedValue[k - 1][0])
 

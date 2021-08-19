@@ -20,13 +20,15 @@ def __starting_point():
     for i in range(n):
         cur = a[cur - 1]
         if cur in steps_map:
-            loop_start = steps_map[cur]
-            loop_end = i + 1
+            loop_start = steps_map[cur]  # 1
+            loop_end = i + 1  # 4
             break
         else:
             steps.append(cur)
             steps_map[cur] = i + 1
 
+    # print(loop_start, loop_end)
+    # print(steps)
     if(k <= loop_start):
         print((steps[k]))
     else:

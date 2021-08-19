@@ -1,3 +1,13 @@
+# -------------------------------------------------------------------------------
+# Name:        module1
+# Purpose:
+#
+# Author:      mayank manish
+#
+# Created:
+# Copyright:   (c) mayank manish
+# Licence:     <your licence>
+# -------------------------------------------------------------------------------
 
 def main():
     pass

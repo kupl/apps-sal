@@ -1,4 +1,5 @@
 def solve(s):
+    # Reference: https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
     max_so_far = 0
     max_ending_here = 0
 

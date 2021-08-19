@@ -2,7 +2,20 @@ from collections import deque
 
 
 def main():
+    # N = int(input())
+    # N,= [int(a) for a in input().split()]
+    # N, M = [int(a) for a in input().split()]
 
+    # a = []
+    # # b = []
+    # c = []
+    #
+    # for _ in range(M):
+    #     aa, bb = [int(a) for a in input().split()]
+    #     cc = [int(a) for a in input().split()]
+    #     a.append(aa)
+    #     # b.append(bb)
+    #     c.append(cc)
     N, M = [int(a) for a in input().split()]
 
     AB = [

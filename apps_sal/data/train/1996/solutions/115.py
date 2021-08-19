@@ -1,3 +1,8 @@
+#
+# @lc app=leetcode id=802 lang=python3
+#
+# [802] Find Eventual Safe States
+#
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         size = len(graph)

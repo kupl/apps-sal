@@ -11,9 +11,12 @@ class Solution:
         for i in range(n):
             cur += pre[i]
             a[i] = cur
+        # print(a)
+        # print(nums)
         a.sort()
         nums.sort()
         ans = 0
         for i in range(n):
             ans += nums[i] * a[i]
+            # print(nums[i], a[i])
         return int(ans % (1e9 + 7))

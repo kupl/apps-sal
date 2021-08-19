@@ -10,6 +10,7 @@ def reverse_list(x):
      []
      """
 
+    # Your code goes here...
     return x[::-1]
 
 
@@ -24,6 +25,7 @@ def sum_list(x):
     6
     """
 
+    # Your code goes here...
     return 0 if len(x) == 0 else sum(x)
 
 
@@ -38,4 +40,5 @@ def head_of_list(x):
     2
     """
 
+    # Your code goes here...
     return None if len(x) == 0 else x[0]

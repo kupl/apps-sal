@@ -1,3 +1,4 @@
+# cook your dish here
 for k in range(int(input())):
     leng, cont, val = map(int, input().split())
     temp = cont * [0]

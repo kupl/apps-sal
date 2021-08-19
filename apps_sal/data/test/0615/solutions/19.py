@@ -15,6 +15,7 @@ l = 0
 r = 2
 for i in range(1, n):
     while(l < i and abs(A_sum[l] - (A_sum[i] - A_sum[l])) >= abs(A_sum[l + 1] - (A_sum[i] - A_sum[l + 1]))):
+        # 単調増加だから超えるような時はp,qの差が大きくなる時だよね
         l += 1
     while(r < n and abs((A_sum[n] - A_sum[r]) - (A_sum[r] - A_sum[i])) >= abs((A_sum[n] - A_sum[r + 1]) - (A_sum[r + 1] - A_sum[i]))):
         r += 1

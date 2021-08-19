@@ -2,6 +2,8 @@ n, m, x = list(map(int, input().split()))
 
 array = [list(map(int, input().split())) for _ in range(n)]
 
+# print(array)
+# print(n)
 ans = 10 ** 8
 for i in range(2**n):
 

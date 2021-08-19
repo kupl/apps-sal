@@ -20,6 +20,7 @@ class Solution1:
 
 class Solution2:
     def racecar(self, target: int) -> int:
+        # #analysis + DP
         memo = [-1] * (target * 2)
 
         def DP(s):
@@ -41,6 +42,7 @@ class Solution2:
 
 class Solution:
     def racecar(self, target: int) -> int:
+        # classic BFS
         visited = {(0, 1)}
         queue = collections.deque()
         queue.append((0, 1))
@@ -51,11 +53,13 @@ class Solution:
                 s, v = queue.popleft()
                 if s == target:
                     return steps
+                # 'A'
                 cur_s = s + v
                 cur_v = v * 2
                 if (cur_s, cur_v) not in visited and s >= 0:
                     queue.append((cur_s, cur_v))
                     visited.add((cur_s, cur_v))
+                # 'R'
                 cur_s = s
                 cur_v = -1 if v > 0 else 1
                 if (cur_s, cur_v) not in visited and s >= 0:

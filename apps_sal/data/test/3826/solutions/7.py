@@ -14,5 +14,6 @@ for i in range(n):
     if(a[i] in myset):
         break
     myset.add(a[i])
+    # print(myset, min1)
 
 print(min1)

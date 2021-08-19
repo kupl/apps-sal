@@ -53,6 +53,7 @@ class Solution:
             if age <= 14:
                 break
             num_requests += age_request_map[age]
+            # need to double count for same ages
             age_request_map[age] += 1
             lowest_age = floor(age * .5 + 7) + 1
             for i in range(lowest_age, age + 1):

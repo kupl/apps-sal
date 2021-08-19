@@ -1,3 +1,4 @@
+# https://betrue12.hateblo.jp/entry/2020/03/28/142051
 
 def main():
     N, K = list(map(int, input().split()))

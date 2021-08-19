@@ -1,3 +1,4 @@
+# ways @ i, rem is equal to all possible routes
 class Solution:
     def countRoutes(self, A: List[int], start: int, finish: int, fuel: int) -> int:
         N = len(A)

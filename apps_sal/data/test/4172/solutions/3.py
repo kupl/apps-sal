@@ -22,6 +22,8 @@ for i in range(m - 2, -1, -1):
     r_cum[i] = r_cum[i + 1] + c[i][0] * c[i][1]
     r_cnt[i] = r_cnt[i + 1] + c[i][1]
 
+# print(l_cum)
+# print(r_cum)
 
 ans = 10**20
 for i in range(m):
@@ -51,5 +53,6 @@ for i in range(m):
         ans = min(ans, l_res + k - c_num)
     else:
         ans = min(ans, min(r_res, l_res) + k - c_num)
+    # print(ans)
 
 print(ans)

@@ -14,6 +14,17 @@ class Solution:
 
         return ptr
 
+#     def union(self, i:int, j:int, nodes_ptrs:List[int]):
+
+#         ptr_i = find(i, node_ptrs)
+#         ptr_j = find(j, node_ptrs)
+
+#         if(ptr_i == ptr_j): return 0
+#         else:
+#             nodes_ptrs[ptr_i] = ptr_j
+
+#         return ptr_j
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
 
         ANodes = list(range(n + 1))
@@ -42,9 +53,12 @@ class Solution:
         for i in range(len(edges_traverse)):
 
             [typei, u, v] = edges[edges_traverse[i]]
+            #print(type_i, u_i, vi)
 
             include_A = False
             include_B = False
+
+            # Exam Alice
 
             u_ptr_A = self.find(u, ANodes)
             v_ptr_A = self.find(v, ANodes)
@@ -54,10 +68,13 @@ class Solution:
             if typei != 2 and u_ptr_A != v_ptr_A:
                 include_A = True
 
+            # Exam Bob
             if typei != 1 and u_ptr_B != v_ptr_B:
                 include_B = True
 
             include = include_A or include_B
+
+            # print(include, n_used)
 
             if (include):
 
@@ -83,6 +100,9 @@ class Solution:
 
                 if(AMaxConnect == n and BMaxConnect == n):
                     break
+
+            # print(BNodes)
+            # print(ANodes)
 
         if(AMaxConnect != n or BMaxConnect != n):
             return -1

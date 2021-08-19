@@ -24,6 +24,7 @@ for _ in range(t):
             best = max(gap, best)
         G[key] = best
 
+    # print(G)
     B = {}
     for key in G:
         l = G[key]

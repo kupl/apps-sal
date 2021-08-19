@@ -14,11 +14,13 @@ if l % k == 0:
         while(ptr1 < n):
             temp += arr[ptr1]
             if temp == count:
+                # print(ptr1)
                 a[j] = ptr1
                 j += 1
                 ptr1 += 1
                 break
             elif temp > count:
+                # print(ptr1,temp,count)
                 flag = 1
                 break
             ptr1 += 1
@@ -31,6 +33,7 @@ if l % k == 0:
         print("No")
     else:
         print("Yes")
+        # print(*a)
         for i in range(1, k + 1):
             print(a[i] - a[i - 1], end=" ")
         print()

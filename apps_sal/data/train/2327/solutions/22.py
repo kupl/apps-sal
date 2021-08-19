@@ -6,6 +6,7 @@ for i in range(N):
     l, r = map(int, input().split())
     a.append((l, r))
 a.sort(key=lambda x: x[0] - x[1])
+# print(a)
 
 
 class BIT:

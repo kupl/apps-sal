@@ -3,6 +3,7 @@ class Solution:
         E = [[_, u - 1, v - 1] for _, u, v in E]
         A = [i for i in range(N)]
         B = [i for i in range(N)]
+        # def find(P, x): P[x] = x if P[x] == x else find(P, P[x])
         def find(P, x): P[x] = P[x] if P[x] == x else find(P, P[x]); return P[x]
 
         def union(P, a, b):
@@ -10,7 +11,7 @@ class Solution:
             b = find(P, b)
             if a == b:
                 return 1
-            P[a] = b
+            P[a] = b  # arbitrary choice
             return 0
         for type, u, v in E:
             if type == 3:

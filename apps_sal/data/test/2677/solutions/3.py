@@ -1,3 +1,4 @@
+# cook your dish here
 s = input()
 l = ["A", "E", "I", "O", "U"]
 c = 0

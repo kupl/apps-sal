@@ -13,6 +13,7 @@ class Solution:
         lengths = [0] * len(sums_list)
         min_length = float('+inf')
         for start in range(len(sums_list) - 1, -1, -1):
+            # s[end] - s[start] = target
             val = sums_list[start] + target
             if val in sums_dict:
                 end = sums_dict[val]

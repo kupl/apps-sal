@@ -15,6 +15,8 @@ for i in range(1, n + 1):
         d[va1] = ind2
         ans += 1
 
+    # print(a,ans,d)
+# print(ans)
 if (3 * n - ans) % 2 == 0:
     print("Petr")
 else:

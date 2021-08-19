@@ -9,6 +9,8 @@ def gcd(a, b):
 
 MOD = 1000000007
 
+# 2 WA
+
 
 def main():
     N = int(input())

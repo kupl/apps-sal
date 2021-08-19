@@ -7,3 +7,4 @@ def make_negative(number):
         output = "-" + str(number)
 
     return int(output)
+    # ...

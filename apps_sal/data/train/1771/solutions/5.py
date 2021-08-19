@@ -5,7 +5,7 @@ def closure_gen(*s):
     if not s:
         raise StopIteration()
 
-    h = set(s)
+    h = set(s)  # set of queued elements (for faster inclusion tests)
     q = list(h)
     heapq.heapify(q)
 

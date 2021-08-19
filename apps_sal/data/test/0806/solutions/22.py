@@ -24,7 +24,9 @@ f = [[0 for _ in range(3)] for _ in range(n)]
 for mod in range(3):
     f[0][mod] = k[mod]
 
+# print(k)
 for idx in range(1, n, 1):
+    # print(idx)
     for mod in range(3):
         f[idx][mod] += (f[idx - 1][mod] * k[0]) % MOD
         f[idx][mod] = f[idx][mod] % MOD
@@ -35,5 +37,6 @@ for idx in range(1, n, 1):
         f[idx][mod] += (f[idx - 1][(mod - 2) % 3] * k[2]) % MOD
         f[idx][mod] = f[idx][mod] % MOD
 
+# print(f)
 
 print(f[n - 1][0] % MOD)

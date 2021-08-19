@@ -8,6 +8,7 @@ for i in range(N):
         if a[i] % 2 == 0:
             a[i] = a[i] // 2
             s = s + 1
+            # print(i,a[i],s)
         else:
             break
 print(s)

@@ -1,5 +1,6 @@
 class Solution:
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
+        # dynamic programming, O(NKN) time, O(NK) space
         def avg(arr): return sum(arr) / len(arr)
         n = len(A)
         dp = [[0] * K for _ in range(n)]

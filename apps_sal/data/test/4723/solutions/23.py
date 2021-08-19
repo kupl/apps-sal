@@ -21,6 +21,7 @@ else:
     for i in range(match_index + len(t), len(s)):
         s_replace += s[i]
 
+    # s[match_index:match_index + len(t)] = t
     res = ""
     for i in s_replace:
         if i == "?":

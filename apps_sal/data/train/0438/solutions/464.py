@@ -7,6 +7,7 @@ class Solution:
         changed = False
 
         for i, num in enumerate(arr):
+            # print(mem)
             gsize = 1
             if num - 1 in mem:
                 if mem[num - 1][0] == m:
@@ -20,15 +21,27 @@ class Solution:
                     changed = True
                 gsize += mem[num + 1][0]
 
+            # print(gsize, m)
             if gsize == m:
                 inc = True
                 changed = True
                 gsizes += 1
+            # print(gsizes)
 
+            # print(mem)
+            # if inc:
+            #     print(gsizes)
+            #     print(gsize)
+            #     print(num)
+
+            # print(gsizes)
             if gsizes == 0 and inc and changed:
                 changed = False
                 lastpos = i
+                # print('end')
+                # return i
 
+            # mem[num] = (gsize, num)
             if num + 1 not in mem and num - 1 not in mem:
                 end = num
             elif num + 1 in mem:
@@ -44,4 +57,9 @@ class Solution:
             if num + 1 in mem:
                 mem[mem[num + 1][1]] = (gsize, old if num - 1 in mem else num)
 
+#         if gsizes:
+#             return len(arr)
+        # print(gsizes)
+
+        # return -1 if gsizes == 0 else len(arr)
         return len(arr) if gsizes else lastpos

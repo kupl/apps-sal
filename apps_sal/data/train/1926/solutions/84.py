@@ -1,5 +1,6 @@
 class Solution:
     def closestDivisors(self, num: int) -> List[int]:
+        # primes = self.get_prime_numbers_below(num+3)
         x, y = self.get_factors(num + 1)
         z, t = self.get_factors(num + 2)
         print((x, y), (z, t))

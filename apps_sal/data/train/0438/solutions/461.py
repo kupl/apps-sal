@@ -29,6 +29,7 @@ class Solution:
         for step, i in enumerate(arr):
             node[i].length = 1
             if node[i].left.length > 0:
+                # merge with left
                 node[i].length += node[i].left.length
                 if node[i].left.length == m:
                     count -= 1
@@ -42,4 +43,5 @@ class Solution:
                 count += 1
             if count > 0:
                 ans = step + 1
+            #print(step, count, ans)
         return ans

@@ -6,6 +6,7 @@ for i in s:
         a.append(-1)
     else:
         a.append(1)
+#print (a)
 b = [0] * (n)
 b[0] = a[0]
 for i in range(1, n):
@@ -30,4 +31,6 @@ for i in range(n):
             ans += 1
     if b[i] > 0:
         g += 1
+#print (b)
+# print(e)
 print(ans)

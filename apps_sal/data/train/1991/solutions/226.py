@@ -24,4 +24,6 @@ class Solution:
             return r % mod
 
         answer = route(start, fuel)
+        # print(route.cache_info())
+        # assert len(A) < 100
         return answer

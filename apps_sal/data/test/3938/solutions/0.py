@@ -102,6 +102,9 @@ def main():
     for i in range(len(xx) - 1):
         f.add_edge(len(yy) + 1 + i, len(xx) + len(yy) + 1, xx[i + 1] - xx[i])
 
+    # print(xx)
+    # print(yy)
+    # print(f)
     print(f.solve(0, len(xx) + len(yy) + 1))
 
 

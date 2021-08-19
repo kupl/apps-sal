@@ -6,7 +6,7 @@ def main():
         nms[ip] = nm
     for j in range(m):
         nm, ip = input().split()
-        print('% s % s
+        print('%s %s #%s' % (nm, ip, nms[ip[:-1]]))
 
 
 def __starting_point():

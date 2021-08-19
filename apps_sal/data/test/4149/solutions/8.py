@@ -1,4 +1,9 @@
 
+# -*- coding: utf-8 -*-
+# @Date    : 2019-06-07 20:26:19
+# @Author  : raj lath (oorja.halt@gmail.com)
+# @Link    : link
+# @Version : 1.0.0
 
 import sys
 sys.setrecursionlimit(10**5 + 1)

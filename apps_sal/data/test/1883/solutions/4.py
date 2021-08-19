@@ -15,7 +15,7 @@ max = 0
 maxi = 0
 
 for i in range(1, n + 1):
-    if type[i] == '1':
+    if type[i] == '1':  # it's hotel
         cnt = 0
 
         cur = fa[i]

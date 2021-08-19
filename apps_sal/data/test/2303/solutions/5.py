@@ -5,7 +5,7 @@ class Solution:
 
         for char in s:
             if char == ' ':
-                if curr_word != "":
+                if curr_word != "":   # if it is a newly separately word
                     ans.append(curr_word)
                     curr_word = ""
             else:

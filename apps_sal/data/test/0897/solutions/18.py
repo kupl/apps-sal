@@ -71,6 +71,13 @@ def modinv(a, m):
         raise ValueError
     return x % m
 
+# +---------------------+
+# | TEMPLATE CODE BELOW |
+# |    DO NOT MODIFY    |
+# +---------------------+
+
+# TODO: maybe reading byte-by-byte is faster than reading and parsing tokens.
+
 
 class IO:
     input = None

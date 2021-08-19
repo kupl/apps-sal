@@ -12,6 +12,7 @@ for _ in range(N - 1):
     Tree[A].append(B)
     Tree[B].append(A)
 
+# u-v間の単純pathを用意する
 path = []
 
 
@@ -29,6 +30,9 @@ def connected(v, tv, p=-1):
 
 connected(v, u)
 path.append(v)
+
+# u-v間の点からvとは逆方向にdfs
+# u-vの中点から調べれば十分(中点よりvに寄ると、青木君は捕まってしまう)
 
 
 def dfs(v, p):

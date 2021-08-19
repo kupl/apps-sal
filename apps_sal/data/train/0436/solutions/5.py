@@ -9,6 +9,10 @@ class Solution:
                 dp[i] = min(dp[i // 2] + 1, dp[i])
             if i % 3 == 0:
                 dp[i] = min(dp[i // 3] + 1, dp[i])
+        # print(dp)
+
+        # for i in range(25,35):
+        #    print(i, dp[i])
 
         d = {}
         d[0] = 0

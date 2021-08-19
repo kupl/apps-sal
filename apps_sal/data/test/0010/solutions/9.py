@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def f(n):
     return n // 7 + (n + 1) // 7

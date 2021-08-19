@@ -7,8 +7,8 @@ field = []
 for i in range(H):
     row = list(input())
     for j in range(len(row)):
-        if row[j] == '
-        row[j] = -1
+        if row[j] == '#':
+            row[j] = -1
         else:
             row[j] = inf
     field.append(row)
@@ -33,8 +33,11 @@ for i in range(H):
         f = copy.deepcopy(field)
         f[i][j] = 0
         tmp = 0
+        # print('--start--')
         while l:
             x, y = l.popleft()
+            # print(x,y)
+            # i,jを訪問
             for v in vector:
                 if not isIn(x + v[1], y + v[0]):
                     continue

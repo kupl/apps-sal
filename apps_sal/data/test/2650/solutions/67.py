@@ -16,6 +16,7 @@ def main():
     kd_max = defaultdict(int)
     min_max_timestamp = [0] * num_kd
 
+    # init
     for i, (a, b) in enumerate(infant_info):
         b -= 1
 
@@ -25,10 +26,12 @@ def main():
 
         kd_max[b] = max(kd_max[b], a)
 
+    # rate, id, timestamp
     min_max_h = [(val, kd, 0) for kd, val in kd_max.items()]
 
     heapify(min_max_h)
 
+    # query
     for t, (c, to_kd) in enumerate(queries, 1):
         c -= 1
         to_kd -= 1
@@ -36,6 +39,7 @@ def main():
         from_kd = pos[c]
         pos[c] = to_kd
 
+        # from
         nums[from_kd] -= 1
         if nums[from_kd] > 0:
             while True:
@@ -47,6 +51,7 @@ def main():
 
         min_max_timestamp[from_kd] = t
 
+        # to
         nums[to_kd] += 1
 
         rate_c, _ = infant_info[c]
@@ -61,6 +66,8 @@ def main():
 
         min_max_timestamp[to_kd] = t
 
+        # equality
+        # print("pos", pos)
         while True:
             rate, kd, ts = heappop(min_max_h)
             if min_max_timestamp[kd] == ts:

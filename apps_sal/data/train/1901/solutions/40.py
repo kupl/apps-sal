@@ -12,6 +12,7 @@ class Solution:
                     num = self.dfs(grid, i, j, len(size))
                     size.append(num)
 
+        # print(size)
         res = 0
         for x0 in range(M):
             for y0 in range(N):

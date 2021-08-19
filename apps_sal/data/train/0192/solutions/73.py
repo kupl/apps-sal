@@ -1,5 +1,6 @@
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
+        # We want to pick two large numbers and one small number
         our_coins = 0
         our_piles = 0
         l = len(piles) // 3

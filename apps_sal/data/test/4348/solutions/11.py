@@ -1,3 +1,4 @@
+# -*-coding:utf-8 -*-
 from collections import defaultdict
 
 n, m = map(int, input().split())

@@ -10,8 +10,10 @@ class Solution:
 
             mask ^= (1 << int(char))
 
+            # Check if exact mask has been seen before
             res = max(res, i - seen[mask])
 
+            # Check if mask (off by one digit) has been seen before
             for j in range(10):
                 temp = (1 << j) ^ mask
                 res = max(res, i - seen[temp])

@@ -40,5 +40,6 @@ ANS = 0
 for i in range(1, MAX + 1):
     ANS += x - max(MIN, NEED[i]) + 1
 
+    # print(i,ANS)
 
 print(ANS)

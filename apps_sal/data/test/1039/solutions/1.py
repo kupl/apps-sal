@@ -37,6 +37,7 @@ def main():
                 dist[nv] = now_cost + c
                 push(nv)
 
+    # query
     K -= 1
     dfs(K)
     ans = []

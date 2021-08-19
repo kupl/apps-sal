@@ -1,5 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # for each point, you need to find the nearest point
         import heapq
 
         graph = self.build_graph(points)

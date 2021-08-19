@@ -39,4 +39,5 @@ def main():
     print(ans)
 
 
+    # print(*board,sep="\n")
 main()

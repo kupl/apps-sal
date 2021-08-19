@@ -6,6 +6,8 @@ class Solution:
         A_indices = defaultdict(list)
         for i, a in enumerate(A):
             A_indices[a].append(i)
+        # lengths (i, d) longest arithmetic subsequence starting at i
+        # with difference d
         lengths = defaultdict(lambda: 1)
         best = 0
 

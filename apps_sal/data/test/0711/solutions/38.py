@@ -1,3 +1,8 @@
+# 解説を参考に作成
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
+# from collections import deque
 
 class FermatCmb:
     """フェルマー小定理を使用した順列, 組み合わせ計算"""
@@ -45,6 +50,10 @@ def prime_factorization(x):
     return re
 
 
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(N, M):
     mod = 10 ** 9 + 7
     pf = prime_factorization(M)
@@ -65,6 +74,14 @@ def solve(N, M):
 def __starting_point():
     N, M = list(map(int, input().split()))
     solve(N, M)
+
+    # # test
+    # from random import randint
+    # from func import random_str
+    # while True:
+    #     N, M = randint(1, 100), randint(1,100)
+    #     print(N, M)
+    #     solve(N, M)
 
 
 __starting_point()

@@ -1,3 +1,4 @@
+# 047a
 
 a, b, c = list(map(int, input().split()))
 

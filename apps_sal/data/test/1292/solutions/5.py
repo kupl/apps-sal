@@ -1,8 +1,14 @@
+# import sys
+#
+# f = open('input1.txt', 'r')
+#
+#
+# sys.stdin = f
 
 n, m, p = list(map(int, input().split()))
 s = list(map(int, input().split()))
 
-q = [[] for _ in range(p)]
+q = [[] for _ in range(p)]  # fromnt of each palyer
 counts = [0] * p
 
 field = []
@@ -12,9 +18,10 @@ for i in range(n):
     for j, c in enumerate(line):
         if c == '.':
             field[i][j] = 0
-        elif c == '
-        field[i][j] = -1
+        elif c == '#':
+            field[i][j] = -1
         else:
+            # player
             pi = int(c)
             field[i][j] = pi
             counts[pi - 1] += 1
@@ -48,6 +55,7 @@ def step_one(index, field, front: list):
         nbs = get_neibs(i, j)
         for a in nbs:
             if field[a[0]][a[1]] == 0:
+                # if not yet added
                 field[a[0]][a[1]] = index + 1
                 counts[index] += 1
                 total_add += 1
@@ -83,3 +91,5 @@ while True:
 
 
 print(" ".join(map(str, counts)))
+
+# f.close()

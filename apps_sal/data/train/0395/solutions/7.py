@@ -23,10 +23,12 @@ class Solution:
         for index in range(items - 2, -1, -1):
             insind = self.getIndex(A[index], vals)
 
+            # odd jump
             if insind < len(vals):
                 eind = vals[insind][1]
                 odd[index] = even[eind]
 
+            # even jump
             eq = False
             if insind < len(vals) and vals[insind][0] == A[index]:
                 oind = vals[insind][1]

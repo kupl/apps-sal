@@ -17,6 +17,10 @@ while(t > 0):
         for k in range(2, rng + 2):
             if(st[k] == '1'):
                 s[rng - k + 1] = (s[rng - k + 1] * (1 - p[i])) + ((1 - s[rng - k + 1]) * (p[i]))
+            # else:
+            #     s[k-2]=(s[k-2]*1)
+    # print(s)
+    # print(mx)
     mult = 1
     ans = 0
     for i in range(0, mx):

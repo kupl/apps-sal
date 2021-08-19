@@ -2,6 +2,8 @@ k = int(input())
 prev = 0
 nextt = 0
 NumofDigits = 0
+#i = 0
+# while(summ<(2^12)):
 while(True):
     prev = nextt
     nextt = nextt + (9 * (10**(NumofDigits - 1)) * NumofDigits)

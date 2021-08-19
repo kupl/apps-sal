@@ -10,6 +10,7 @@ def check(x):
 
 
 for _ in range(int(input())):
+    # a, b = map(int, input().split())
     n = int(input())
     if n == 1:
         print('FastestFinger')

@@ -1,9 +1,9 @@
 def try_t(i, j):
     if i < 0 or i >= n or j < 0 or j >= n:
         return False
-    if A[i][j] == "
-    return False
-    A[i][j] = "
+    if A[i][j] == "#":
+        return False
+    A[i][j] = "#"
     return True
 
 

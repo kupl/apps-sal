@@ -9,6 +9,8 @@ class Solution:
                 if j == i:
                     continue
                 elif diff <= f:
+                    #                    if j==finish:
+                    #                        ans += 1
                     ans += dfs(j, f - diff)
             return ans
 

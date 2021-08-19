@@ -23,10 +23,13 @@ class UnionFind:
 
         xRank, yRank = self.rank[xRoot], self.rank[yRoot]
 
+        # let yRoot be the one with smaller rank
         if xRank < yRank:
             yRoot, xRoot = xRoot, yRoot
 
+        # small rank points to large rank
         self.parent[yRoot] = xRoot
+        # large rank takes the small rank to count total #
         self.rank[xRoot] += self.rank[yRoot]
 
         return

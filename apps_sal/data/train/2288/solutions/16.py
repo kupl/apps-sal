@@ -3,6 +3,10 @@ oX = int(input())
 K = int(input())
 r = list(map(int, input().split()))
 
+# a X-a
+# min(max(0,a-r[0]))
+#  a-r[0]+r[1]
+
 
 def calc_time(t):
     val = bisect.bisect_left(t, r)
@@ -10,18 +14,20 @@ def calc_time(t):
     return val, diff
 
 
+# [sep1,sep2,a<sep1,sep1<a<sep2,a>sep2  ]
+
 last = (0, oX, 0, 0, oX)
 res = [last]
 for i, tr in enumerate(r):
     sep1, sep2, X, Y, Z = last
     dt = tr if i == 0 else tr - r[i - 1]
-    if i % 2 == 0:
+    if i % 2 == 0:  # a ->b
 
         X = max(0, X - dt)
         Y = Y - dt
         Z = max(0, Z - dt)
         sep1 = max(sep1, -Y)
-    else:
+    else:  # b-> a
         X = min(oX, X + dt)
         Y = Y + dt
 
@@ -30,6 +36,8 @@ for i, tr in enumerate(r):
 
     last = (sep1, sep2, X, Y, Z)
     res.append(last)
+
+# print(res)
 
 
 Q = int(input())
@@ -48,6 +56,7 @@ for i in range(Q):
         r_index += 1
     sep1, sep2, X, Y, Z = res[r_index]
     diff = t - r[r_index]
+    # print(t,diff,r_index,r[r_index])
     if a < sep1:
         print((calc(X, r_index, diff)))
     elif a > sep2:

@@ -7,7 +7,7 @@ class Solution(object):
         index = {x: i for i, x in enumerate(A)}
         for i, x in enumerate(A):
             for j in range(i):
-                if x % A[j] == 0:
+                if x % A[j] == 0:  # A[j] will be left child
                     right = x // A[j]
                     if right in index:
                         dp[i] += dp[j] * dp[index[right]]

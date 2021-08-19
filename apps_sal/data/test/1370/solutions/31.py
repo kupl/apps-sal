@@ -11,6 +11,7 @@ def main():
     loop_W = range(W)
     min_cut = INF - 1
     for div in range(1 << (H - 1)):
+        # 横割りでグループ分け
         group = [[]]
         group_number = 0
         for i in loop_H:
@@ -18,6 +19,7 @@ def main():
             if div >> i & 1:
                 group.append([])
                 group_number += 1
+        # 縦に切っていく
         cut = group_number
         zeros = [0] * len(group)
         cnt = zeros.copy()

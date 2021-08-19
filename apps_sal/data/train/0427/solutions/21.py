@@ -1,12 +1,14 @@
 class Solution:
     def countOrders(self, n: int) -> int:
         '''
+        # Notes:
             example n = 3
                                 P1         P2     P3 
                              P2    P3   D1
                         P3   D1  D2
                      D1  D2 D3
                   D2  D3
+        # Approach:
             Dynamic Programming
             opt[i][j]   i represents how many delivery are holding
                         j represents how many remaining delivery
@@ -44,3 +46,5 @@ class Solution:
                     if i + j > n:
                         break
                     opt[i][j] = i * opt[i - 1][j] + j * opt[i + 1][j - 1]
+
+        # return opt[0][n] % (pow(10, 9)+7)

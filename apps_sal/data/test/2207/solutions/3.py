@@ -1,4 +1,5 @@
 from sys import stdin as fin, setrecursionlimit as srl
+# fin = open("hcc2016d1.in", "r")
 debug = False
 
 
@@ -18,6 +19,8 @@ def process():
     print(cnt)
 
 
+# fin.readline()
+# process()
 if not debug:
     process()
 else:

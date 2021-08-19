@@ -12,7 +12,7 @@ class Solution:
                 continue
             doubles = 0
             while n:
-                if n % 2 == 1:
+                if n % 2 == 1:  # odd
                     increments += c
                     n -= 1
                 else:

@@ -14,6 +14,7 @@ for i, ch in enumerate(S):
         cnt += 1
 
 E.append((idx, cnt))
+# print(E)
 
 ans = []
 for i in range(0, len(E), 2):

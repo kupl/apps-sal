@@ -1,3 +1,5 @@
+# import sys
+# sys.stdin = open('cf591b.in')
 
 n, m = map(int, input().split())
 s = input()

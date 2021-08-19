@@ -13,6 +13,9 @@ for i in range(n - 1):
 ans = [-1] * n
 dp = [10**18] * n
 
+# オイラーツアー
+# n=頂点数、s=始点、edge=隣接リスト
+
 
 def EulerTour(n, s, e):
     EulerTour_list = []

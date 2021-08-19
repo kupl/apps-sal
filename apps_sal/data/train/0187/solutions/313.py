@@ -18,6 +18,7 @@ class Solution:
                 wait += customers[i]
         ans = 0
         t = -1
+        # print(profit)
         for i, c in enumerate(profit):
             if c > ans:
                 ans = c

@@ -10,6 +10,8 @@ class Solution:
             counter[-1][s[minSize + i - 1]] += 1
             if len(counter[-1]) <= maxLetters:
                 substr[s[:minSize + i]] += 1
+        # print(counter)
+        # print(substr)
         for i in range(minSize, n):
             l = i - minSize
             for j, cnt in enumerate(counter):
@@ -22,4 +24,6 @@ class Solution:
                     cnt.pop(s[l])
                 if len(cnt) <= maxLetters:
                     substr[s[l + 1: r + 1]] += 1
+        #     print(counter)
+        # print(substr)
         return max(substr.values(), default=0)

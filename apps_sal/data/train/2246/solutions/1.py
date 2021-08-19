@@ -13,6 +13,7 @@ def main():
     heapify(hp)
     for i in range(n):
         heappush(hp, prices[i])
+        #print(f"day{i}, max{k}")
         needed = (req[i] - k + each - 1) // each
         needed = max(0, needed)
         if len(hp) < needed:

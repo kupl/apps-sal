@@ -11,7 +11,7 @@ def main():
     if (l < r):
         if ((r - l) % k == 0):
             for i in range(l, r + 1, k):
-                if (a[i] == '
+                if (a[i] == '#'):
                     print("NO")
                     return
             print("YES")
@@ -20,7 +20,7 @@ def main():
     else:
         if ((r - l) % k == 0):
             for i in range(r, l + 1, k):
-                if (a[i] == '
+                if (a[i] == '#'):
                     print("NO")
                     return
             print("YES")

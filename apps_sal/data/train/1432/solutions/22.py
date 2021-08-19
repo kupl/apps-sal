@@ -1,4 +1,6 @@
+# cook your dish here
 def f(n, c):
+    # print("f", n, c)
     if c <= n:
         return 0
     if c == n * n:
@@ -9,6 +11,10 @@ def f(n, c):
         s += 2 * e
         e -= 1
     return n - 1 - e
+# hat = n * (n+1) // 2
+# if c <= hat:
+# 	return 0
+# return
 
 
 t = int(input())

@@ -1,6 +1,6 @@
 import math
 a, b, x = map(int, input().split())
-c = x / a**2
+c = x / a**2  # c : height of water
 
 if c >= b / 2:
     tanth = 2 * (b - c) / a

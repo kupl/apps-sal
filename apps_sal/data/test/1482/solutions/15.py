@@ -9,6 +9,7 @@ for i in range(len(compulsory)):
     mark[compulsory[i]] = True
     answer[i].append(compulsory[i])
 
+# print(answer)
 k1 = 0
 j = 0
 for i in range(1, n * k + 1):

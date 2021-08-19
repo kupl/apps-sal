@@ -11,10 +11,10 @@ def cmb(n, r, mod):
 
 
 mod = 10**9 + 7
-N = 10**5 + 100
-fact = [1, 1]
-factinv = [1, 1]
-inv = [0, 1]
+N = 10**5 + 100  # N は必要分だけ用意する
+fact = [1, 1]  # fact[n] = (n! mod p)
+factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
+inv = [0, 1]  # factinv 計算用
 
 for i in range(2, N + 1):
     fact.append((fact[-1] * i) % mod)

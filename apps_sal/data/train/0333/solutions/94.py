@@ -1,5 +1,6 @@
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
+        # return self.bfs(arr)
         return self.minJumpsBiBFS(arr)
 
     def bfs(self, arr: List[int]):

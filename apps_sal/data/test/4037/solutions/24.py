@@ -10,6 +10,7 @@ for i in range(n):
 ps = sorted(ps)
 neg = sorted(neg, key=itemgetter(2))
 ps = ps + neg
+# print(*ps)
 dp = [-float('inf')] * (n + 1)
 dp[0] = r
 for i in range(n):

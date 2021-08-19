@@ -66,7 +66,9 @@ for _ in range(int(input())):
         gbr[i] += gbr[i - 1]
 
     ans = 999999999
+    # print(rgb,gbr,brg)
     for i in range(k - 1, n):
+        # print(i,i-k)
         if i - k == -1:
             ans = min(ans, rgb[i], gbr[i], brg[i])
         else:

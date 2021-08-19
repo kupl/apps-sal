@@ -30,3 +30,8 @@ class StreamChecker:
             if tmp.is_end:
                 return True
         return tmp.is_end
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

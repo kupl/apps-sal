@@ -11,6 +11,7 @@ class Solution:
 
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         sorted_list = sorted(zip(keyTime, keyName))
+        # print(sorted_list)
         alerted = []
         people = {}
         for time_str, name in sorted_list:

@@ -1,19 +1,19 @@
 k = int(input())
 s = [""] * 6
 s[0] = "+------------------------+"
-s[1] = "|
-s[2] = "|
-s[3] = "|
-s[4] = "|
+s[1] = "|#.#.#.#.#.#.#.#.#.#.#.|D|)"
+s[2] = "|#.#.#.#.#.#.#.#.#.#.#.|.|"
+s[3] = "|#.......................|"
+s[4] = "|#.#.#.#.#.#.#.#.#.#.#.|.|)"
 s[5] = "+------------------------+"
 
 curs = 1
 while k > 0:
-    while not "
+    while not "#" in s[curs]:
         curs = 1 + curs % 4
-    x = s[curs].index("
-    s[curs]=s[curs][:x] + "O" + s[curs][x + 1:]
-    curs=1 + curs % 4
+    x = s[curs].index("#")
+    s[curs] = s[curs][:x] + "O" + s[curs][x + 1:]
+    curs = 1 + curs % 4
     k -= 1
 for i in s:
     print(i)

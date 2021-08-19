@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import time
 from collections import defaultdict, deque
 from heapq import heappush, heappop
@@ -28,6 +29,8 @@ def LSR(n): return [LS() for _ in range(n)]
 mod = 1000000007
 inf = float('INF')
 
+# A
+
 
 def A():
     s = S()
@@ -38,6 +41,8 @@ def A():
             ans += 1
     print(ans)
     return
+
+# B
 
 
 def B():
@@ -50,6 +55,8 @@ def B():
     print(ans)
 
     return
+
+# C
 
 
 def C():
@@ -69,11 +76,15 @@ def C():
     print(ans)
     return
 
+# D
+
 
 def D():
     n = II()
     print((n * (n - 1) // 2))
     return
+
+# E
 
 
 def E():
@@ -114,9 +125,13 @@ def E():
                 return
     return
 
+# F
+
 
 def F():
     return
+
+# Solve
 
 
 def __starting_point():

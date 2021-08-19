@@ -5,7 +5,7 @@ readLn = sys.stdin.readline
 
 def __starting_point():
     n, m = list(map(int, readLn().split()))
-    ds = [[-1 if c == '
+    ds = [[-1 if c == '#' else 0 for c in readLn()] for _ in range(n)]
     ds[0][0] = 1
     for i in range(0, n):
         for j in range(0, m):

@@ -8,6 +8,7 @@ for i in range(n - m + 1):
             count = 0
             for k in range(m):
                 for l in range(m):
+                    #print(i+k, j+l)
                     if a[i + k][j + l] == b[k][l]:
                         count += 1
             if count == ch:

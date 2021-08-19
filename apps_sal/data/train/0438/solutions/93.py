@@ -40,6 +40,7 @@ class Solution:
                 cnt[k] -= 1
                 cnt[full] += 1
 
+            # print(step, status, cnt)
             if cnt[m] > 0:
                 last = step + 1
 

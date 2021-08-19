@@ -15,6 +15,7 @@ class TweetCounts:
             self.tweets_dict[tweetName] = []
 
         left, right = 0, len(self.tweets_dict[tweetName])
+        # left bound
         while left < right:
             mid = left + (right - left) // 2
             if self.tweets_dict[tweetName][mid] == time:

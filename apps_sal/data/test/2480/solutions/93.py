@@ -12,6 +12,7 @@ N, K = lr()
 A = np.array([1] + lr())
 A = (A - 1) % K
 N += 1
+# 累積和が同じになっている箇所に注目、要素がK-1離れている組み合わせは無理
 Acum = (A.cumsum() % K).tolist()
 answer = 0
 dic = defaultdict(int)
@@ -23,3 +24,4 @@ for i, cur in enumerate(Acum):
         dic[vanish] -= 1
 
 print(answer)
+# 10

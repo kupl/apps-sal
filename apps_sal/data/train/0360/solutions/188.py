@@ -17,6 +17,7 @@ class Solution:
         return nD <= D
 
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+        # maxweight = sum(weights)
         minweight = max(weights)
         maxweight = minweight * len(weights) / D
         while maxweight > minweight + 1:

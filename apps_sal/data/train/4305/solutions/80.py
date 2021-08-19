@@ -1,4 +1,5 @@
 def order_weight(strng):
+    # your code
     def sorter(num):
         return sum([int(digit) for digit in num])
 

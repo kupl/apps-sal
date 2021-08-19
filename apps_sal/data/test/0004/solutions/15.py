@@ -6,6 +6,7 @@ def dst(a, b):
 
 x = int(input())
 h, m = map(int, input().split())
+# print(h, m)
 cur = 60 * h + m
 ans = 10**9
 for H in range(24):

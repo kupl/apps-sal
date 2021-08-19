@@ -1,3 +1,4 @@
+# cook your dish here
 for u in range(int(input())):
     l = list(map(int, input().split()))
     n = len(l)

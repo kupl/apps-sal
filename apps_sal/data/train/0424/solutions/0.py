@@ -2,6 +2,7 @@ class Solution:
     def largestOverlap(self, A, B) -> int:
         leng = len(A[0])
 
+        # convert A, B to binary
         a = 0
         b = 0
         for i in range(0, leng * leng):

@@ -1,3 +1,4 @@
+# Atcoder Problem Solving
 H, W = map(int, input().split())
 c = [list(map(int, input().split())) for i in range(H)]
 b = [list(map(int, input().split())) for i in range(H)]
@@ -9,10 +10,13 @@ for i in range(H):
 
 dp = [[0 for i in range(W)] for j in range(H)]
 
+# Bitset演算
+# 答えは絶対値が絶対-80から80以内に収まる
 
 X = 3200
 
 dp[0][0] = (1 << (X + a[0][0])) | (1 << (X - a[0][0]))
+# 初期化の条件
 
 for i in range(H):
     for j in range(W):

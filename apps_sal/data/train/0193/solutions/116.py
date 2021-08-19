@@ -12,6 +12,7 @@ class Solution:
                 count_d.append(arr.count(num))
                 checked.append(num)
 
+        #count_d = sorted(count_d.items(), key=operator.itemgetter(1))
         count_d.sort()
 
         for d in range(1, len(count_d) + 1):

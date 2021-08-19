@@ -1,3 +1,4 @@
+# from https://oeis.org/A139250
 
 def msb(n):
     t = 0

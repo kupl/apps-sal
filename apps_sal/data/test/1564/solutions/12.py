@@ -29,8 +29,8 @@ n = ri(1)
 
 a = input()
 b = input()
-one = []
-two = []
+one = []  # ab
+two = []  # ba
 
 for i in range(n):
     if a[i] == b[i]:
@@ -56,6 +56,7 @@ else:
         if i + 1 < len(two):
             steps.append((two[i], two[i + 1]))
 
+    # print(one,two)
     if len(one) % 2 == 1:
 
         steps.append((one[-1], one[-1]))

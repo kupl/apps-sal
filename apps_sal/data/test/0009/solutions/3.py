@@ -18,7 +18,7 @@ for _ in range(d):
         v, x = x, v
     x1.append(u)
     y1.append(v)
-    x2.append(-w)
+    x2.append(-w)  # the other direction pog?
     y2.append(-x)
     T.append([u, v, w, x])
 
@@ -27,8 +27,9 @@ x2.sort()
 y1.sort()
 y2.sort()
 
-req = list(map(int, input().split()))
+req = list(map(int, input().split()))  # x1,x2,y1,y2
 for i in range(len(T)):
+    # binary search
     u, v, w, x = T[i]
     if req[0] == bisect.bisect_left(x1, w) - (u != w):
         if req[1] == bisect.bisect_left(x2, -u) - (u != w):

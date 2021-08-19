@@ -7,10 +7,13 @@ for _ in range(int(input())):
     g, b = s.count('g'), s.count('b')
     if g > b:
         g, b = b, g
+    # print(b,g)
     n = (g - 1)
     co = 0
     co += ((n) * (n + 1) * (2 * n + 1)) // 3
+    # print(co)
     b = b - (g - 1)
+    # print(b,g)
     if b % 2 == 0:
         x = b // 2
         co += 2 * ans(x, g)

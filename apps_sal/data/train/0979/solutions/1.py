@@ -41,4 +41,5 @@ else:
     ans += n * y
     ans -= n * m
     ans += 1e-9
+    # print ans
     print("%.0f" % ans)

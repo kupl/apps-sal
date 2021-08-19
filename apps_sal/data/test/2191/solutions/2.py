@@ -62,6 +62,7 @@ for x in range(1, n + 1):
     else:
         ans = start = 0
         while start + x <= n:
+            # print(start)
             if pref0[start + x] - pref0[start] == x:
                 start += x
                 ans += 1

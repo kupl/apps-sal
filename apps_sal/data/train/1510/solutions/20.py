@@ -1,3 +1,4 @@
+# cook your dish here
 q = int(input())
 for _ in range(q):
 
@@ -8,6 +9,7 @@ for _ in range(q):
 
         if(len(string) == 0):
             break
+        # print(string)
         try:
             string.remove(i)
         except:

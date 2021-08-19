@@ -1,3 +1,5 @@
+# import sys
+# sys.stdin = open('cf599b.in')
 
 from collections import Counter
 

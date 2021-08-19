@@ -1,5 +1,26 @@
 class Solution:
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
+        #         i = 0
+        #         temp = deque()
+        #         orig_k = K
+        #         while i < len(A):
+        #             temp.append(max(A[i:K]))
+        #             i = K
+        #             K *= 2
+        #         print(temp)
+
+        #         answer = deque()
+        #         while temp:
+        #             for _ in range(len(temp)):
+        #                 current_max = max(temp)
+        #                 #print(current_max)
+        #                 for _ in range(orig_k):
+        #                     answer.append(current_max)
+        #                     if len(answer) == len(A):
+        #                         break
+        #                     print(answer)
+        #                 temp.remove(current_max)
+        #         return sum(answer)
 
         ans = [0]
 

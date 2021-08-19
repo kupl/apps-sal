@@ -23,9 +23,11 @@ for citizen in citizens:
     if is_relative(p, citizen):
         rel.append(citizen)
         citizens.remove(citizen)
+# print(rel)
 for relative in rel:
     for citizen in citizens:
         if is_relative(relative, citizen):
             rel.append(citizen)
+            # print(rel)
             citizens.remove(citizen)
 print(len(rel) + 1)

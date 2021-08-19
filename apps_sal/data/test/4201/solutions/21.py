@@ -16,8 +16,8 @@ for i in range(1 << H):
         count = 0
         for a in range(H):
             for b in range(W):
-                if not a in mh and not b in mw and c[a][b] == '
-                count += 1
+                if not a in mh and not b in mw and c[a][b] == '#':
+                    count += 1
         if count == K:
             ans += 1
 print(ans)

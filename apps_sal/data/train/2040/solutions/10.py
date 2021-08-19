@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
 from sys import stdin, stdout
 from decimal import Decimal
 
 
 def rint():
     return list(map(int, stdin.readline().split()))
+#lines = stdin.readlines()
 
 
 n, h = rint()

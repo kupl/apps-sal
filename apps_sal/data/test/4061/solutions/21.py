@@ -13,6 +13,8 @@ def str_multiple():
 def str_single():
     return input()
 
+# start
+
 
 s = str_single()
 t = str_single()

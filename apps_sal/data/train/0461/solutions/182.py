@@ -1,6 +1,10 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
 
+        # create graph
+        # depth first search on the tree
+        # sum the maximum time it takes to inform each level
+
         relationships = {}
 
         for i in range(len(manager)):
@@ -13,7 +17,7 @@ class Solution:
             relationships[i][1] = informTime[i]
 
         def dfs(node, graph):
-            if not graph[node][0]:
+            if not graph[node][0]:  # leaf
                 return 0
             else:
                 maxTime = 0

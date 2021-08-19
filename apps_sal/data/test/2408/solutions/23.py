@@ -6,6 +6,8 @@ from sys import setcheckinterval, stdin, setrecursionlimit
 setcheckinterval(1000)
 setrecursionlimit(10**6)
 
+# print("Case #{}: {} {}".format(i, n + m, n * m))
+
 
 def iin(): return int(stdin.readline())
 
@@ -37,4 +39,5 @@ for i in range(l):
             intersections.add((i, j))
         except:
             pass
+# print(intersections,ans,sep='\n')
 print(len(intersections))

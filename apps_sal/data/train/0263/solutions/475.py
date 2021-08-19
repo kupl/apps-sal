@@ -10,7 +10,7 @@ class Solution:
         cols = len(board[0])
         result = 0
         for rMove, cMove in [(-1, -2), (-2, -1), (2, 1), (1, 2), (-2, 1), (1, -2), (2, -1), (-1, 2)]:
-            if 0 <= row + rMove < rows and 0 <= col + cMove < cols and board[row + rMove][col + cMove] not in ['*', '
+            if 0 <= row + rMove < rows and 0 <= col + cMove < cols and board[row + rMove][col + cMove] not in ['*', '#']:
                 result += self.helper(n - 1, board, row + rMove, col + cMove, cache)
 
         cache[(row, col, n)] = result
@@ -21,7 +21,7 @@ class Solution:
             ['1', '2', '3'],
             ['4', '5', '6'],
             ['7', '8', '9'],
-            ['*', '0', '
+            ['*', '0', '#']
         ]
 
         totalResult = 0
@@ -30,6 +30,6 @@ class Solution:
         cols = len(board[0])
         for r in range(rows):
             for c in range(cols):
-                if board[r][c] not in ['*', '
+                if board[r][c] not in ['*', '#']:
                     totalResult += self.helper(n - 1, board, r, c, cache)
         return totalResult % (10**9 + 7)

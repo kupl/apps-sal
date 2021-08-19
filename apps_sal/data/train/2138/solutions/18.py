@@ -27,3 +27,6 @@ if countOne(a) + countOne(a) % 2 >= countOne(b):
     print("YES")
 else:
     print("NO")
+
+# 101101
+#       01111

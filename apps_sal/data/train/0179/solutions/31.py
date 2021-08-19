@@ -4,6 +4,10 @@ from functools import lru_cache
 
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
+        # char2ids = defaultdict(list)
+        # for i, c in enumerate(s):
+        #     if len(char2ids[c]) == 0 or i > char2ids[c][-1] + 1:
+        #         char2ids[c].append(i)
 
         def compressed_length(cnt):
             return 4 if cnt == 100 else (3 if cnt >= 10 else (2 if cnt > 1 else 1))

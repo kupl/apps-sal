@@ -11,6 +11,7 @@ class Solution:
                 heapq.heappush(edges, (helper(points[i], points[j]), i, j))
         tree = []
         res = 0
+        # print(edges)
         while edges:
             dist, i, j = heapq.heappop(edges)
             flag = False
@@ -36,4 +37,5 @@ class Solution:
             if not flag:
                 tree.append({i, j})
                 res += dist
+            # print(tree)
         return res

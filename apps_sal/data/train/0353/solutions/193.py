@@ -1,6 +1,7 @@
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
         nums.sort()
+        # print(nums, len(nums))
         count = 0
         j = len(nums) - 1
 
@@ -10,6 +11,7 @@ class Solution:
 
             if (i > j) | (nums[i] * 2 > target):
                 break
+            # print(j-i, end=' & ')
             count += 2**(j - i)
             count = count % (10**9 + 7)
 

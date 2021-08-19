@@ -13,5 +13,7 @@ for _ in range(int(input())):
     while m:
         for i in range(1, n):
             l[i] = l[i] + l[i - 1]
+        # l=temp[:]
+        # print(l)
         m -= 1
     print(l[x - 1] % MOD)

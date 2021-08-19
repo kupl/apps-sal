@@ -17,6 +17,7 @@ class Solution:
             else:
                 dd[d] = [min(dd[d][0], i + 1), max(dd[d][1], i + 1)]
 
+        # print(l)
         di = {}
         for i in range(2**10):
             ll = {i}
@@ -29,7 +30,9 @@ class Solution:
                 continue
             for j in di[i]:
                 if dd[j]:
+                    # print(i,j,dd[i],dd[j])
                     m = max(abs((dd[j][0] - dd[i][1])), m)
                     m = max(abs((dd[j][1] - dd[i][0])), m)
 
+        # print(di)
         return m

@@ -28,4 +28,5 @@ class Solution:
         res = 0
         for n in nums:
             res += self.helper(n)
+            #print(n, res)
         return res

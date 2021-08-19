@@ -5,8 +5,8 @@ I think Idea is to consider for all possible starting pairs (so number1,starting
 
 class Solution:
     def splitIntoFibonacci(self, S: str) -> List[int]:
-        BIG_NUMBER = 2**31 - 1
-        numSplits = {}
+        BIG_NUMBER = 2**31 - 1  # python can interpret long numbers so we will use this to compute.
+        numSplits = {}  # tells what the number is represented by the substring from a to b b exclusive.
         sLength = len(S)
         reverseSplits = {}
         for i in range(sLength):
@@ -35,14 +35,14 @@ class Solution:
                         reverseSplits[currentNum][i].add(j)
         fibonacciSequences = {}
 
-        def computeFibonacciSequences(startingIndex):
+        def computeFibonacciSequences(startingIndex):  # if startingIndex ==
             if startingIndex not in fibonacciSequences:
                 if startingIndex == sLength:
                     answer = [[]]
                 else:
                     answer = []
                     for i in range(startingIndex + 1, sLength + 1):
-                        if (startingIndex, i) in numSplits:
+                        if (startingIndex, i) in numSplits:  # so this is a valid number.
                             nextNumber = numSplits[(startingIndex, i)]
                             ithFibonaccis = computeFibonacciSequences(i)
                             for fibSeq in ithFibonaccis:

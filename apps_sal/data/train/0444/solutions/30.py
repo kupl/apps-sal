@@ -3,6 +3,7 @@ class Solution:
         if n == 1:
             return 1
 
+        # Create a list of probablity of n-th person get his own seat under the situation 1-st person pick k-th seat
         pick = [1] + [0] * (n - 2) + [1]
 
         prob = 0

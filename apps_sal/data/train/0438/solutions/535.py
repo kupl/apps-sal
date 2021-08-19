@@ -18,12 +18,14 @@ class Solution:
                 tmp.insert(index - 1, a)
                 count[a - tmp[index - 2] + 1] += 1
                 add += 1
+                # print('<', tmp, count)
             if index < len(tmp) - 1 and tmp[index] - 1 == a:
                 count[tmp[index + 1] - tmp[index] + 1] -= 1
                 k = tmp.pop(index)
                 tmp.insert(index, a)
                 count[tmp[index + 1] - a + 1] += 1
                 add += 1
+                # print('>', tmp, count)
 
             if add == 0:
                 tmp.insert(index, a)
@@ -36,7 +38,17 @@ class Solution:
                 tmp.pop(index)
                 tmp.pop(index - 1)
 
+            # print(tmp, count)
             if count[m] > 0:
                 ans = i + 1
 
+        # print('-' * 20)
+        # s = ['0' for _ in range(len(arr))]
+        # def exist(s, m):
+        #     p = ''.join(s).split('0')
+        #     return any(len(x) == m for x in p)
+        # for i, a in enumerate(arr):
+        #     s[a-1] = '1'
+        #     if exist(s, m):
+        #         ans = i + 1
         return ans

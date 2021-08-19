@@ -1,3 +1,4 @@
+# Using 'dict', like hash, to find the pair number
 class Solution:
     def twoSum(self, numbers, target):
         ans = []

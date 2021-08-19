@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -27,6 +29,7 @@ for x1, y1, x2, y2 in zip(m, m, m, m):
 
 
 res.sort()
+# print(res)
 
 st = []
 for d, i in res:

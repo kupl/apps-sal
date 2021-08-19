@@ -1,7 +1,10 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 
+#n, = map(int,readline().split())
 s = input()
 
 
@@ -24,27 +27,34 @@ for i in nxt:
     print(i[:4])
 """
 
+# print(nxt)
 dp = [0] * (n + 1)
 for i in range(n - 1, -1, -1):
     idx = max(nxt[i])
     bad = min(nxt[i])
     dp[i] = dp[idx + 1] + 1 if bad != -1 else 0
 
+# print(nxt[0])
+# print(dp)
 
 k = dp[0] + 1
 ans = [None] * k
 
 v = 0
 for i in range(k):
+    # print(v)
     if v == n:
         ans[-1] = 0
         break
 
     for j in range(26):
+        #print(nxt[v+1][j], dp[nxt[v+1][j]])
         if nxt[v][j] == -1 or dp[nxt[v][j] + 1] < dp[v]:
             ans[i] = j
             v = nxt[v][j] + 1
             break
+
+# print(ans)
 
 
 def f(x):

@@ -1,5 +1,6 @@
 N = int(input())
 a = sorted([int(c) for c in input().split()])
+# 2回の変わり目を記憶
 c1, c2, c3 = [0, 0, 0]
 ma = 1
 for i in range(N):

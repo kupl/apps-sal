@@ -8,3 +8,4 @@ def hot_singles(arr1, arr2):
             result.append(i)
 
     return result
+    # your code here

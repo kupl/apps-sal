@@ -9,6 +9,7 @@ class Solution:
         print(a, n)
         ans = list(permutations(k))
         m = 0
+        # print(ans)
         for i in ans:
             s = ''.join(i)
 

@@ -8,11 +8,11 @@ class Solution:
 
         def neighbours(i):
             heap = [(0, i)]
-            d = {}
+            d = {}  # keeps the track of visited array
 
             while heap:
                 distance, node = heappop(heap)
-                if node in d:
+                if node in d:  # adding to the visited array
                     continue
                 if node != i:
                     d[node] = distance

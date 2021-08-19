@@ -46,3 +46,8 @@ class StreamChecker:
             self.history.pop()
 
         return self.wl.endsWith(''.join(self.history))
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

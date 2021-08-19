@@ -5,8 +5,8 @@ class Solution:
         for i in range(n):
             intervals.append((startTime[i], endTime[i], profit[i]))
 
-        intervals.sort(key=lambda x: x[1])
-        T = intervals[-1][1]
+        intervals.sort(key=lambda x: x[1])  # sorted by endTime
+        T = intervals[-1][1]  # largest time
 
         dp = [0] * (T + 1)
         co = [0] * (T + 1)

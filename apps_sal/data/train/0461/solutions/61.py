@@ -4,6 +4,7 @@ class Solution:
         for u, v in enumerate(manager):
             if v != -1:
                 graph[v][u] = informTime[v]
+        # print(graph)
         dist = {}
         pq = [(0, headID)]
         dist[headID] = 0

@@ -6,5 +6,6 @@ for i in range(N):
         ans += float(x) * 380000
     else:
         ans += float(x)
+    # print(ans)
 
 print(ans)

@@ -1,6 +1,6 @@
 class Solution:
     def kSimilarity(self, A: str, B: str) -> int:
-        def mk_similarities(s):
+        def mk_similarities(s):  # len(s) == len(B)
             for i, c in enumerate(B):
                 if s[i] != c:
                     break
@@ -21,9 +21,11 @@ class Solution:
             nws = []
             for _ in range(len(ws)):
                 s = ws.pop(0)
+                # print(s)
                 if s == B:
                     return swaps
                 similarities = mk_similarities(s)
+                # print(similarities)
                 for similarity in similarities:
                     if similarity not in seen:
                         nws.append(similarity)

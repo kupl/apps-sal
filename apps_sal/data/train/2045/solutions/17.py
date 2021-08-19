@@ -1,3 +1,4 @@
+# ------------------------------warmup----------------------------
 import bisect
 import os
 import sys
@@ -54,6 +55,7 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
+# -------------------game starts now----------------------------------------------------
 n, m = list(map(int, input().split()))
 nex = [i + 1 for i in range(n)]
 ans = [0] * n

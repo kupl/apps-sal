@@ -4,8 +4,11 @@ class Solution:
         piles.sort()
 
         while len(piles) > 0:
+            # give alice
             piles.pop()
+            # give me
             numCoins += piles.pop()
+            # give bob
             piles.pop(0)
 
         return numCoins

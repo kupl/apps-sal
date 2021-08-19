@@ -19,6 +19,7 @@ def pad_mtx(M, side="e"):
 
 
 def move(mtx, pos, drxn):
+    # modify position
     if drxn == "e":
         pos[1] += 1
     elif drxn == "w":
@@ -30,13 +31,16 @@ def move(mtx, pos, drxn):
     else:
         raise ValueError("Direction unrecognized.")
 
+    # Check if path matrix needs to be modified
     try:
         if any(x < 0 for x in pos):
             raise ValueError
         else:
             mtx[pos[0]][pos[1]] = FILLCHAR
+    # Modify it if an error was raised
     except Exception:
         pad_mtx(mtx, side=drxn)
+        # Update position to reflect modified matrix
         if drxn == "n":
             pos[0] += 1
         if drxn == "w":
@@ -58,6 +62,7 @@ def execute(code):
     drxn = "e"
     i = 0
     while i < len(code):
+        # check if command is repeated
         num = ""
         if i != len(code) - 1 and code[i + 1].isdigit():
             j = i + 1

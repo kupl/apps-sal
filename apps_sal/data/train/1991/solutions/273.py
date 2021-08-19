@@ -4,6 +4,7 @@ class Solution:
         ans = 0
 
         heap = sorted([[abs(locations[i] - locations[finish]), i] for i in range(len(locations))])
+        # print(heap)
         while len(shortest) < len(locations):
             d, i = heapq.heappop(heap)
             if i in shortest:
@@ -12,9 +13,11 @@ class Solution:
             for j in range(len(locations)):
                 if j not in shortest and j != finish:
                     heapq.heappush(heap, [abs(locations[j] - locations[i]) + d, j])
+        # print(shortest)
 
         @lru_cache(None)
         def dfs(cur, fuel):
+            # print(cur)
             if fuel < shortest[cur]:
                 return 0
             if fuel == 0:

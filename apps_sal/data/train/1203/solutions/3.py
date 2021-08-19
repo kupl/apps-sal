@@ -24,6 +24,8 @@ def abc(a, b):
         c = (c * a)
         c = c / (i + 1)
         a -= 1
+        # d=(d*(i+1))
+    # return (c*pow1(d,mm-2,mm))%mm
     return c % mm
 
 

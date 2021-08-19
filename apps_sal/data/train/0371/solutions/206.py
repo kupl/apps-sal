@@ -9,7 +9,9 @@ class Solution:
         routesets = []
         for route in routes:
             routesets.append(set(route))
+            # print(routesets[-1])
 
+        # This is all points where buses meet.
         intersections = set()
         for i in range(len(routesets) - 1):
             set1 = routesets[i]
@@ -19,6 +21,9 @@ class Solution:
         intersections.add(S)
         intersections.add(T)
 
+        # print(intersections)
+
+        # This is all the routes at an intersection
         i_to_routes = collections.defaultdict(list)
         for i in intersections:
             for ridx, route in enumerate(routesets):
@@ -27,6 +32,8 @@ class Solution:
 
         for route in routesets:
             route.intersection_update(intersections)
+
+        # print(i_to_routes)
 
         heap = []
         hist = set([S])

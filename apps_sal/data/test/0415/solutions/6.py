@@ -1,3 +1,4 @@
+# B. DDoS
 n = int(input())
 r = [int(s) for s in input().split()]
 ans = 0

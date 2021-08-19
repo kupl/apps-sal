@@ -1,5 +1,7 @@
 import sys
 
+# @profile
+
 
 def insert(heap, val):
     idx = len(heap)
@@ -14,6 +16,8 @@ def insert(heap, val):
         heap[p], heap[idx] = heap[idx], heap[p]
 
         idx = p
+
+# @profile
 
 
 def removeMin(heap):

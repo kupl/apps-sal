@@ -1,10 +1,13 @@
 n = int(input())
+#num=[0 for i in range(1000000+1)]
 num = [0] * (1000000 + 1)
 mx = 0
 for i in input().split(' '):
     i = int(i)
     mx = max(mx, i)
     num[i] += 1
+#f=[0 for i in range(mx+1)]
+#p=[0 for i in range(mx+1)]
 f, p = [0] * (mx + 1), [0] * (mx + 1)
 mod = 1e9 + 7
 p[0] = 1

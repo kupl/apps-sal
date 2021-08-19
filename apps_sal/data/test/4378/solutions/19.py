@@ -1,3 +1,4 @@
+# url: https://codeforces.com/contest/1108/problem/D
 
 
 def compatible(prev, *args):

@@ -20,6 +20,7 @@ while t:
     d.sort()
     h.sort()
     pr = 0
+    # print(d,h)
     for i in range(n):
         pr += d[i] * h[i]
     print(pr)

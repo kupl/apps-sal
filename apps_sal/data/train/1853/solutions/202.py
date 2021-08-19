@@ -20,7 +20,9 @@ class Solution:
         c = n + 1
         for j in range(n):
             cc = sum(1 for x in tb[j] if x <= distanceThreshold)
+            # print(j, cc)
             if cc <= c:
                 i = j
                 c = cc
+        # print(tb)
         return i

@@ -1,4 +1,5 @@
 
+# 素因数分解
 def factorization(n):
     arr = []
     temp = n

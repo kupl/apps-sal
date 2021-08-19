@@ -18,4 +18,6 @@ class Solution:
                 total_in_this_pos += total
             dp[i][6] = total_in_this_pos
 
+            # for row in dp:
+            #     print(row)
         return dp[-1][-1] % MOD

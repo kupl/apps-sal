@@ -27,6 +27,7 @@ class Solution:
                 profit += inLine * boardingCost - runningCost
                 inLine = 0
             rolls += 1
+            # maxProf = max(maxProf, profit)
             if profit > maxProf:
                 maxProf = profit
                 maxRoll = rolls

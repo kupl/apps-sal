@@ -31,6 +31,7 @@ for i in range(int(1e5), 1, -1):
     else:
         nearest_prime[i] = np - i
 
+# print(nearest_prime[:10])
 
 ans = 1e9
 n, m = list(map(int, input().split()))
@@ -42,12 +43,14 @@ for i in range(n):
     req = 0
     for j in range(m):
         req += nearest_prime[arr[i][j]]
+#	print("row",i,req)
     ans = min(ans, req)
 
 for i in range(m):
     req = 0
     for j in range(n):
         req += nearest_prime[arr[j][i]]
+#	print("col",i,req)
     ans = min(ans, req)
 
 print(ans)

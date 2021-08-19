@@ -14,6 +14,9 @@ for l in range(t):
                 m[i][j] = 1.0
                 m[i + 1][j] += delta / 2.0
                 m[i + 1][j + 1] += delta / 2.0
+    # print(l)
+    # for k in m:
+    #     print(k)
 
 answ = 0
 for i in range(n):

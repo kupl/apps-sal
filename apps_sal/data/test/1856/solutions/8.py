@@ -44,6 +44,8 @@ def get_id(c):
     return ord(c) - 97
 
 
+# inf = open('input.txt', 'r')
+# reader = (line.rstrip() for line in inf)
 reader = (s.rstrip() for s in sys.stdin)
 
 n = int(next(reader))
@@ -67,3 +69,5 @@ for c in used:
     gr_id, _ = get(p, get_id(c))
     unq_gr.add(gr_id)
 print(len(unq_gr))
+
+# inf.close()

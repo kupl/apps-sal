@@ -4,6 +4,7 @@ class Solution:
         oinitial = set(initial)
         for i in initial:
             bfs.append([i, i])
+        # print(bfs)
         frm = {}
 
         for init in initial:
@@ -20,6 +21,8 @@ class Solution:
                         frm[i] = [init]
                     bfs.append(i)
 
+        # print(frm)
+        # print(src)
         res = [0] * len(graph)
 
         for k in frm:

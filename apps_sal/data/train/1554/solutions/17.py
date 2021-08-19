@@ -1,3 +1,4 @@
+# cook your dish here
 def gcd(m, b):
     if m == 0:
         return b

@@ -36,11 +36,13 @@ class Solution:
             for child, typer in graph[source]:
                 if typer in [ty, 3] and not vis[child]:
                     dfs(child, ty)
+        # To Check if Alice can visit all nodes.
         cnt = 0
         vis = [0] * (n + 1)
         dfs(1, 1)
         if cnt != n:
             return -1
+        # To check if Bob can visit all nodes.
         vis = [0] * (n + 1)
         cnt = 0
         dfs(1, 2)

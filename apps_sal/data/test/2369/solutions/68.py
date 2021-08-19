@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from itertools import accumulate
 
 
@@ -24,8 +25,15 @@ def main():
     ans = 0
     maxA = list(accumulate(A[::-1]))
     minA = list(accumulate(A))
-    for i in range(K - 1, N):
+    # print(A)
+    # print(maxA)
+    # print(minA)
+    # if K > 2:
+    #     maxA = sum(A[N-(K-2):])
+    #     minA = sum(A[:K-2])
+    for i in range(K - 1, N):  # 1つ隣どうしからN-1つ隣まで
         j = min(i, N - i)
+        # print(i,j,maxA[j-1],minA[j-1])
         tmp = (a[i - 1] * inva[K - 2] % p) * inva[i - K + 1] % p
         ans += (maxA[j - 1] - minA[j - 1]) * tmp % p
         ans %= p

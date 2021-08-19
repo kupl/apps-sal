@@ -1,6 +1,8 @@
+# input
 N = int(input())
 S = [input() for _ in range(N)]
 
+# process
 T = []
 for s in S:
     while '()' in s:
@@ -45,4 +47,5 @@ elif len(l1) > 0 and len(l2) > 0 and l1[0][0] + l2[-1][0] == 0:
         if x == 0:
             result = True
 
+# output
 print(("Yes" if result else "No"))

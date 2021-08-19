@@ -11,7 +11,7 @@ for i in range(n):
 sys.setrecursionlimit(4 * 10**5 + 1)
 
 
-def dfs(t, u):
+def dfs(t, u):  # Left, Right, Edges
     vis[t][u] = True
 
     ct = [0, 0, 0]

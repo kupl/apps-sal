@@ -42,6 +42,8 @@ def solve():
 
                         fl = 1
 
+                # print(k)
+
                 if (k * a + d >= i) and (n != 0):
 
                     pred = k * a + d
@@ -53,6 +55,8 @@ def solve():
                     k = floor(pred // a)
 
                     sol += 1
+
+                # if n==0:
 
                 k = min(floor(pred // a), n1)
 
@@ -68,7 +72,12 @@ def solve():
 
             fl = 1
 
+            # print(i,pred,sol,n,step,k, fl)
+
     print(sol)
 
 
 solve()
+
+
+# Made By Mostafa_Khaled

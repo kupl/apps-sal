@@ -1,5 +1,6 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
+        # Goal is to find longest continuous subsequence containing only 2 types
         ans = i = 0
         count = Counter()
         for j, t in enumerate(tree):

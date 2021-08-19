@@ -2,6 +2,7 @@ import math
 
 
 def f5(seq, idfun=None):
+    # order preserving
     if idfun is None:
         def idfun(x): return x
     seen = {}

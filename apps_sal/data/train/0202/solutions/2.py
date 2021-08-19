@@ -7,6 +7,7 @@ class Solution:
         peaks = [0 for _ in range(len(A))]
         has_increment = False
 
+        # combs left to right for peaks
         for idx in range(len(A)):
             if prev_height is not None:
                 if prev_height < A[idx]:
@@ -21,6 +22,7 @@ class Solution:
 
         print(peaks)
 
+        # combs right to left for peaks
         prev_height = None
         max_so_far = 0
         has_increment = False

@@ -1,5 +1,6 @@
 n, k = list(map(int, input().split()))
 
+# a+b = x, c+d = y, y=x-k
 cnt = 0
 
 for y in range(2, 2 * n + 1):

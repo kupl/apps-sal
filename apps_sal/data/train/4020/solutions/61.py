@@ -1,4 +1,5 @@
 def validate_hello(greetings):
+    # your code here
     hellos = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc']
     greetings = greetings.lower()
     greetings = greetings.split(' ')

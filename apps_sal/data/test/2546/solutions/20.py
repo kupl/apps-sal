@@ -42,8 +42,10 @@ for t in range(int(input())):
 
         need = n // 2 + 1 - len(c)
         cnt = 0
+        #print(money, a,b,c,m, sep="\n")
         for l, r in b:
 
+            #print(money, cnt, need, l, r)
             if cnt < need:
                 money += m
                 cnt += 1

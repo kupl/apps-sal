@@ -19,6 +19,7 @@ for d in divs:
     if ths < 0:
         continue
     cand = ((a + ths) * (b + ths) // gcd(a + ths, b - a), ths)
+    # print(d, ths, cand)
     if cand[0] < best[0]:
         best = cand
     elif cand[0] == best[0] and cand[1] < best[1]:

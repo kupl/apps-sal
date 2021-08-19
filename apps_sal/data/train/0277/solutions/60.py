@@ -20,4 +20,5 @@ class Solution:
                 tot += 1
             lis[end] = [start, end]
             lis[start] = [start, end]
+            # print(lis)
         return tot

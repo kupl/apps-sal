@@ -1,3 +1,4 @@
+# cook your dish here
 def bin(arr, l, r, val, n):
     ans = n
     while(l <= r):
@@ -32,11 +33,17 @@ while(t):
         else:
             if(flag == 0):
                 temp = i + 1
+                # print(temp)
                 suff[i] = 0
                 flag = 1
             else:
                 suff[i] = 0
+                # flah=1
 
+    #print(pre,end=' ')
+    # print()
+    # print(suff,end='')
+    # print(temp)
     count = 0
     y = n
     for i in range(n):
@@ -47,7 +54,10 @@ while(t):
                 y = bin(arr, temp, n - 1, arr[i], n)
             elif(i + 2 < n):
                 y = bin(arr, i + 2, n - 1, arr[i], n)
+            # print(y)
             count += (n - y)
+            # print(n-j)
+            # break
     count += (n - temp)
     if(pre[temp] == 1):
         count -= 2

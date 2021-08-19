@@ -20,3 +20,10 @@ class CustomStack:
         tmp = numpy.array(self.vals)
         tmp[:k] += val
         self.vals = list(tmp)
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

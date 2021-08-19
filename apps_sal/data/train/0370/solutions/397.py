@@ -33,6 +33,14 @@ class DSU:
 
 
 class Solution:
+    #     def commonFactor(self, x, y):
+    #         if x == y: return True
+    #         if y > x: return self.commonFactor(y, x)
+
+    #         while y:
+    #             x, y = y, x % y
+
+    #         return x != 1
 
     def largestComponentSize(self, A: List[int]) -> int:
         dsu = DSU(100001)

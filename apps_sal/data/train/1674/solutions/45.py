@@ -7,6 +7,7 @@ class Solution:
 
         @lru_cache(None)
         def takeStone(startInd, M):
+            #print(startInd, M)
             if startInd + 2 * M >= len(piles):
                 return piles[startInd]
 

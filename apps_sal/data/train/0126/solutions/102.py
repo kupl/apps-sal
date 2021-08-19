@@ -9,8 +9,11 @@ class Solution:
                     s_s = s[i:j]
                 else:
                     continue
+                # print(s_s)
+                # print(set(s_s))
 
                 if len(set(s_s)) <= maxLetters:
+                    # print(s_s)
                     if s_s in D.keys():
                         D[s_s] += 1
                     else:

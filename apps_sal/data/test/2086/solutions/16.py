@@ -22,13 +22,14 @@ def nb_people(strt, end):
 max_people = 0
 opt_h = 0
 for h in range(1, n + 1):
-    strt = s - h + 1
+    strt = s - h + 1  # à h heures ds le 1er fuseau où est - il s heures ?
     if strt <= 0:
         strt += n
-    end = f - h
+    end = f - h  # pareil avec f-1
     if end <= 0:
         end += n
     tmp_people = nb_people(strt - 1, end - 1)
+    #print("h",h,"strt", strt, "end", end,"tmp_people",tmp_people)
     if tmp_people > max_people:
         max_people = tmp_people
         opt_h = h

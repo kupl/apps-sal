@@ -34,6 +34,9 @@ for i in range(d + g + f):
         roles.append(2)
         di += 1
 
+# print(numers)
+# print(roles)
+
 
 @lru_cache()
 def my_comb(n, k):
@@ -55,6 +58,7 @@ def my_comb(n, k):
 def solve(numers, roles):
     ans = 0
     for i in range(len(numers)):
+        # check all combinations with guy i
 
         possible_max_num = bisect.bisect_right(numers, numers[i] * 2)
 

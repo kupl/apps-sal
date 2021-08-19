@@ -39,6 +39,7 @@ def magic_call_depth_number(program):
             n += code[i]
             i += 1
 
+        # обрарботать вызов Pn
         min_max = calc_min_max([n], n, templates, 0)
         mymin = min(mymin, min_max[0])
         mymax = max(mymax, min_max[1])
@@ -70,6 +71,7 @@ def calc_min_max(used, c, templates, depth):
             n += templates[c][i]
             i += 1
 
+        # в вызове Pc произошёл вызов Pn
         flag = 1
         if used.count(n):
             loop_with_depth = depth + 1

@@ -5,9 +5,14 @@ class Solution:
                 return True
             return False
 
+        # Reducer
+            # Slider
+            #0 - len(s)
+            # 0 - len(s) -1 -> 1 - len(s)
         for i in range(len(s)):
             ctr = collections.Counter(s[:len(s) - i])
             for j in range(i + 1):
+                #window = s[j:(len(s)+j) - i]
                 if j != 0:
                     ctr[s[j - 1]] -= 1
                     ctr[s[len(s) + j - i - 1]] += 1

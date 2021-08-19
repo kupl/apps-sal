@@ -1,3 +1,4 @@
+# 53 B
 data = list(input())
 i = 0
 j = 1

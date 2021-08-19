@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     def dectobin(a):
         r = [int(i) for i in bin(a)[2:]]

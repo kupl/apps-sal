@@ -20,6 +20,7 @@ else:
         print(a[-1], a[-1])
         print(a[-1], b[-1])
     for i in range(0, len(a) - 1, 2):
+        # print(i)
         print(a[i], a[i + 1])
     for i in range(0, len(b) - 1, 2):
         print(b[i], b[i + 1])

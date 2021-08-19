@@ -5,6 +5,7 @@ class Solution:
         :rtype: int
         """
         def prod(nums):
+            # function to calculate product
             prod = 1
             for i in nums:
                 prod *= i
@@ -23,10 +24,12 @@ class Solution:
                 result.append(ls1[st + 1:])
             return result
 
+        # main starts here
         if not nums:
             return 0
         if len(nums) == 1:
             return nums[0]
+        # find zeros: if zeros are included the result would be zeros only
         result = []
         if 0 in nums:
             zeros = [i for i in range(len(nums)) if nums[i] == 0]
@@ -34,10 +37,12 @@ class Solution:
             result.append(0)
         else:
             sublist = [nums]
+        # find negative numbers. consider even or odd
         sublist = [i for i in sublist if i]
 
         for i in sublist:
             if prod(i) < 0:
+                # there is negative number in the list
                 negative = [j for j in range(len(i)) if i[j] < 0]
                 left, right = negative[0], negative[-1]
                 if len(i) == 1:

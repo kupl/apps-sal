@@ -3,6 +3,9 @@ b = input()
 c = []
 for i in range(len(b)):
     c.append(b[i])
+#a = list(map(int,input().split()))
+#b = list(map(int,input().split()))
+# s=int(input())
 
 f = input()
 t = []

@@ -45,12 +45,14 @@ for t in range(int(input())):
             curl = left_eq(asort[i - 1][0], ai) + 1
 
         ls[ai] = curl
+    #print('before:', ls)
 
     for i, (a, ai) in reversed(list(enumerate(asort))):
         if i == n - 1:
             continue
         if asort[i + 1][0] != a:
             ls[ai] += right_eq(asort[i + 1][0], ai)
+    #print('after:', ls)
 
     alter = [-10]
     values = list(inds.keys())

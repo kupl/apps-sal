@@ -19,6 +19,8 @@ class Solution:
 
         result = [headers]
 
+        # print (table_to_dishes.keys())
+
         for table in sorted(table_to_dishes.keys()):
             table_order = [str(table)]
 

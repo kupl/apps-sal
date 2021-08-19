@@ -19,7 +19,10 @@ if os.getenv("LOCAL"):
 INF = float("inf")
 IINF = 10 ** 18
 MOD = 10 ** 9 + 7
+# MOD = 998244353
 
+# N = I()
+# a = LI()
 
 A, B, C, D = LI()
 

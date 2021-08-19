@@ -1,6 +1,22 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
+        # we have the boardingCost and the runningCost
+        # at each index we need to wipe it out before we move to the next
+        # we can board max 4 at a time
         arr = [-1]
+
+#         for i in range(len(customers)):
+#             if customers[i] == 0:
+#                 print('6')
+#             else:
+#                 divided = customers[i]//4;
+#                 if customers[i] % 4 != 0:
+#                     divided += 1;
+
+#                 bammer = customers[i] * boardingCost - (divided * runningCost);
+#                 arr.append(bammer);
+
+#         print(max(arr));
 
         currentCost = 0
         maximum = -1000000000
@@ -35,3 +51,5 @@ class Solution:
         if indexer == 0:
             return -1
         return indexer
+        # print(arr);
+        # return max(arr);

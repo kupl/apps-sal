@@ -6,6 +6,7 @@ def main():
 
     def count(x_min, x_max, y_min, y_max, i, j):
         OK = 0
+        # NG = 0
         for m, n in XY[i:j + 1]:
             if y_min <= n <= y_max:
                 OK += 1
@@ -19,11 +20,16 @@ def main():
         for j in range(i + K - 1, N):
             b = XY[j][0]
             e = b - a
+            # print (e, i, j)
             for k, c in XY:
+                # c = k[1]
                 for l, d in XY:
+                    # d = l[1]
                     if c < d:
                         if e * (d - c) < ans and count(a, b, c, d, i, j):
+                            # print ('A')
                             ans = e * (d - c)
+                            # ans = min(ans, e * (d - c))
     print(ans)
     return
 

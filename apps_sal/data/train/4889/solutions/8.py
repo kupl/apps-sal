@@ -1,4 +1,6 @@
 def max_hexagon_beam(n: int, ll: tuple):
+    # n = 5
+    # l1 = [4,3,8,7,5,1]
     l1 = list(ll)
     tn = (n * ((2 * n) - 1)) + (((2 * n) - n - 1)**2)
     mid = (2 * n - 1)

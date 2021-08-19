@@ -22,6 +22,7 @@ def check_r(a, l, r):
 
 
 def main():
+    # skip N
     input()
     a = [int(x) for x in input().split(' ')]
     n = len(a)

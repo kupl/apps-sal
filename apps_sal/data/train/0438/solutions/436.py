@@ -28,10 +28,12 @@ class UF:
 
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
+        # initialization
         n = len(arr)
         uf = UF(n + 1)
         bits = [0] * (n + 1)
 
+        # computing
         result = -1
         count = 0
         for idx, val in enumerate(arr):

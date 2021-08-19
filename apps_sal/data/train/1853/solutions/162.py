@@ -4,6 +4,7 @@ class Solution:
         for i in edges:
             h[i[0]].append((i[1], i[2]))
             h[i[1]].append((i[0], i[2]))
+        # print(h)
         c = 0
         no = 101
         for i in range(n):
@@ -15,6 +16,7 @@ class Solution:
                 if x[1] in b:
                     continue
                 b.add(x[1])
+                # print(x,q,b)
                 for j in h[x[1]]:
                     if j[1] + x[0] <= distanceThreshold and j[0] != x[2] and j[0] not in b:
                         heapq.heappush(q, (j[1] + x[0], j[0], x[1]))

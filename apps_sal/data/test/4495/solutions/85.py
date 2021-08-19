@@ -16,5 +16,6 @@ def lnint(n): return [int(input()) for _ in range(n)]
 def lint_list(n): return [lint() for _ in range(n)]
 
 
+############################################################
 a, b, x = lint()
 print((b // x - (a - 1) // x))

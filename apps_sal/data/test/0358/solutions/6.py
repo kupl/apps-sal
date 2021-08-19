@@ -27,3 +27,6 @@ elif len(p) == k:
 
 else:
     print(max(p[k - 1] - a + 1, b - p[len(p) - k] + 1, max(p[i + k] - p[i] for i in range(len(p) - k))))
+
+
+# Made By Mostafa_Khaled

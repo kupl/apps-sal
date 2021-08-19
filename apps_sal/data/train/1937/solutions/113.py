@@ -37,3 +37,10 @@ class ThroneInheritance:
             if person.children:
                 stack.extend(person.children[::-1])
         return ans
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

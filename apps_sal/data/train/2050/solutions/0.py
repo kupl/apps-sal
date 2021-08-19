@@ -15,13 +15,13 @@ def main():
     s.sort()
     s = treeify(s)
     res = solve(s)
-    if res == 0:
+    if res == 0:  # neither: second player win
         print("Second")
-    if res == 1:
+    if res == 1:  # odd: first player win if k is odd
         print("First" if k % 2 else "Second")
-    if res == 2:
+    if res == 2:  # even: second player win
         print("Second")
-    if res == 3:
+    if res == 3:  # both: first player win
         print("First")
 
 
@@ -42,19 +42,24 @@ def solve(s, parity=2):
         if isinstance(s[i], list):
             s[i] = solve(s[i], 3 - parity)
     if not s:
-        return parity
+        return parity  # no possible move: current parity
     if 0 in s:
-        return 3
+        return 3  # any neither: both
     if 1 in s and 2 in s:
-        return 3
+        return 3  # any odd and any even: both
     if 1 in s:
-        return 1
+        return 1  # any odd: odd
     if 2 in s:
-        return 2
-    return 0
+        return 2  # any even: even
+    return 0  # all both: neither
+
+# NON-SOLUTION STUFF BELOW
 
 
 def read(mode=2):
+    # 0: String
+    # 1: List of strings
+    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

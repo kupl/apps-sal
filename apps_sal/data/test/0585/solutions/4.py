@@ -21,6 +21,19 @@ def solve():
         print(0)
         return
 
+    # ptr = len(B) - 1
+    # streak = 0
+    # answer = 1
+    # _min = A[-1]
+    # for a in A[::-1]:
+        # _min = min(_min, a)
+        # if _min == B[ptr]:
+        # streak += 1
+        # elif _min < B[ptr]:
+        # ptr -= 1
+        # if _min < B[ptr]:
+        # print (0)
+        # return
     mins = dd(int)
     _min = A[-1]
     for a in A[::-1]:

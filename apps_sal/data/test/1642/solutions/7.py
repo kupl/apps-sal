@@ -1,3 +1,9 @@
+# from decimal import *
+# getcontext().prec=16
+# from math import sqrt
+# from scipy.special import binom
+# from collections import defaultdict
+# from math import sin,pi,sqrt
 from math import sqrt, hypot
 
 

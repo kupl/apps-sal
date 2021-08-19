@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from collections import deque
 
 h, w = list(map(int, input().split()))
@@ -20,7 +21,7 @@ def bfs(sx, sy):
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-            if 0 <= nx < h and 0 <= ny < w and maze[nx][ny] != "
+            if 0 <= nx < h and 0 <= ny < w and maze[nx][ny] != "#" and d[nx][
                     ny] == -1:
                 q.append((nx, ny))
                 d[nx][ny] = d[x][y] + 1

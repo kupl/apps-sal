@@ -12,6 +12,7 @@ for _ in range(int(input())):
             if i != y:
                 div.append(y)
     div.sort()
+   # print(div)
     if a == div:
         print(x)
     else:

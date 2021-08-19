@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# coding: utf-8
 import collections
 import math
 
@@ -12,6 +14,7 @@ def debug(arg):
 
 N, *A = map(int, open(0).read().split())
 a = dict(enumerate(A, 1))
+# dp = collections.defaultdict(int)
 dp = collections.defaultdict(lambda: -float("inf"))
 dp[0, 0] = 0
 dp[1, 0] = 0

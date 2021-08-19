@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from itertools import chain
 
@@ -17,17 +18,19 @@ def solve(N: int, K: int, A: "List[int]"):
     while l + 1 < r:
         m = (r + l) // 2
         if cut_count(A, m) <= K:
-            r = m
+            r = m  # r は K回以下の切断回数で到達できる長さ
         else:
-            l = m
+            l = m  # l は K回より多いの切断回数で到達できる長さ
+    # print(l, r)
     return r
 
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    N = int(next(tokens))
-    K = int(next(tokens))
-    A = [int(next(tokens)) for _ in range(N)]
+    # N, K, A = map(int, line.split())
+    N = int(next(tokens))  # type: int
+    K = int(next(tokens))  # type: int
+    A = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     answer = solve(N, K, A)
     print(answer)
 

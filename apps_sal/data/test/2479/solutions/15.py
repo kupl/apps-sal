@@ -2,6 +2,10 @@ import numpy as np
 
 
 def resolve():
+    # n=int(input())
+    # a,b=map(int,input().split())
+    # x=list(map(int,input().split()))
+    #a=[list(map(lambda x:int(x)%2,input().split())) for _ in range(h)]
     n, q = map(int, input().split())
     xe = np.array([0] * n)
     ye = np.array([0] * n)

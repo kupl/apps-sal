@@ -24,6 +24,7 @@ def modinv(a):
 
 def solve(N, K, A):
     A = sorted(A, key=lambda x: abs(x))
+    #print(A, file=sys.stderr)
 
     if A[N - K] == 0:
         return 0
@@ -56,7 +57,19 @@ def solve(N, K, A):
             Lpos += 1
 
     print(f"{K=}", file=sys.stderr)
+    #print(f"{Rneg=}, {Rpos=}, {Rneg0=} {Rpos0=}",file=sys.stderr)
+    #print(f"{Lneg=}, {Lpos=}, {Lneg0=} {Lpos0=}",file=sys.stderr)
+    #print(f"{Lpos0=}, {Lneg0=}, {Rpos0=} {Rneg0=}",file=sys.stderr)
 
+    #    Lpos Lneg Rpos Rneg
+    # A  o    O    O    o
+    # B  o    O    x    o      / Rneg * Lpos
+    # C  x    O    O    o      / Rpos * Lneg
+    # B  o    x    O    o
+    # B  o    x    x    o
+    # D  x    O    x    o
+    # D  x    x    o    o
+    # D  x    x    x    o
     if (Lpos0 is not None and Rneg0 is not None
             and Rpos0 is not None and Lneg0 is not None):
         answer1 = (answer0 * modinv(Rneg0) % MOD) * Lpos0 % MOD

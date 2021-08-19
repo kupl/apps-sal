@@ -1,5 +1,9 @@
 links = list(range(100))
+# 0 0 = left up
+# 10*y+x
 
+# i = height
+# j = pos
 for i in range(10):
     l = list(map(int, input().split()))
     for j, h in enumerate(l):

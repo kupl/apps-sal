@@ -5,7 +5,7 @@ def find_max(n, k, m, ts):
 
     ts.sort()
 
-    for i in range(n + 1):
+    for i in range(n + 1):  # first i tasks solved completely
         cur = 0
 
         time = sum(ts) * i

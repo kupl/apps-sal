@@ -1,5 +1,6 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
+        # len(s) <= 16, only lower_case
         n = len(s)
         mx = 1
         m = n - 1

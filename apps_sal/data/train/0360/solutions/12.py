@@ -18,6 +18,8 @@ class Solution:
             else:
                 min_w = mid + 1
 
+ #       10 11 12 13 14 15
+
 
 def enought_capacity(capacity: int, weights: List[int], D: int):
     remain_ships = D - 1

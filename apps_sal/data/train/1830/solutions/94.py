@@ -16,6 +16,7 @@ class Solution:
                     prev_idx = last[lake]
                     zero = bisect_left(zeros, prev_idx)
                     if zero < len(zeros):
+                        # found a valid lake
                         zero_lake = zeros.pop(zero)
                         last[lake] = i
                         ans[zero_lake] = lake

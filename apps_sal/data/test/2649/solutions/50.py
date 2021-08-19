@@ -9,6 +9,7 @@ from itertools import accumulate, product, combinations, combinations_with_repla
 from bisect import bisect, bisect_left, bisect_right
 from functools import reduce
 from decimal import Decimal, getcontext
+# input = sys.stdin.readline
 def i_input(): return int(input())
 def i_map(): return map(int, input().split())
 def i_list(): return list(i_map())

@@ -16,6 +16,8 @@ while(i < n):
         index_stack += 1
         i += 1
     else:
+        #print(stack[index_stack],end=" ")
+        # print(l[i])
         maxo = max(stack[index_stack] ^ l[i], maxo)
         temp = stack[index_stack]
 
@@ -23,6 +25,8 @@ while(i < n):
         index_stack -= 1
 
         if(len(stack) != 0):
+            #print(stack[index_stack],end=" ")
+            # print(stack[index_stack])
             maxo = max(temp ^ stack[index_stack], maxo)
 
 while(len(stack) != 1):
@@ -31,5 +35,7 @@ while(len(stack) != 1):
     stack.pop()
     index_stack -= 1
 
+    #print(stack[index_stack],end=" ")
+    # print(stack[index_stack])
     maxo = max(temp ^ stack[index_stack], maxo)
 print(maxo)

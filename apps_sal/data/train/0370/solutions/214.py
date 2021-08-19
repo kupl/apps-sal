@@ -5,6 +5,7 @@ class DSU():
         self.size = n
 
     def find(self, x):
+        # print('x = {0}, parent = {1}, self.parent[x] = {2}, cond = {3}'.format(x, self.parent, self.parent[x], x != self.parent[x]))
         if x != self.parent[x]:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
@@ -14,6 +15,7 @@ class DSU():
 
         if xp == yp:
             return False
+        # print('union, xp = {0}, yp = {1}'.format(xp, yp))
         if self.rank[xp] < self.rank[yp]:
             self.parent[xp] = yp
         elif self.rank[xp] > self.rank[yp]:
@@ -29,18 +31,22 @@ class DSU():
 
 
 class Solution:
+    # refer submission. https://www.cnblogs.com/grandyang/p/13253468.html
     def largestComponentSize(self, A: List[int]) -> int:
         def getFactors(n):
             res = set()
             for i in range(2, int(sqrt(n)) + 2):
                 if not n % i:
+                    # don't count 1 in factor. e.g. [1,2,3,4,5,6,7,8,9]
                     for j in [i, n // i]:
                         if j != 1:
                             res.add(j)
+            # prime number.
             if not res:
                 return {n}
             return res
 
+        # buld dsu based on index of A. union index.
         dsu = DSU(len(A) + 1)
         factor2Index = {}
         for i, n in enumerate(A):

@@ -1,6 +1,8 @@
+# cook your code here
 T = int(input())
 while T > 0:
     N, M = list(map(int, input().split()))
+    # print N,M
     if N == 1:
         if M == 2:
             print('Yes')

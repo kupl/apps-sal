@@ -28,3 +28,6 @@ for i in range(1, n - 1):
         res = max(res, m[i - 1] + m[i + 1] - 1)
 
 print(res)
+
+# print(l)
+# print(m)

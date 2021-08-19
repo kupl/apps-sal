@@ -3,6 +3,7 @@ __author__ = 'sonerik'
 import sys
 
 inp = sys.stdin
+# inp = open("a.txt")
 
 p, q, l, r = map(int, inp.readline().strip().split())
 

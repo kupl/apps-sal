@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from collections import Counter
 import sys
 sys.setrecursionlimit(10**6)

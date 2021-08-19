@@ -13,6 +13,7 @@ for i in range(N):
 
 ans = 0
 
+# 1
 for sx in range(SIZE):
     t_cnt = 0
 
@@ -25,6 +26,7 @@ for sx in range(SIZE):
 
     ans += nC2(t_cnt)
 
+# 2
 for sy in range(1, SIZE):
     t_cnt = 0
 
@@ -37,6 +39,7 @@ for sy in range(1, SIZE):
 
     ans += nC2(t_cnt)
 
+# 3
 for sx in range(SIZE):
     t_cnt = 0
 
@@ -49,6 +52,7 @@ for sx in range(SIZE):
 
     ans += nC2(t_cnt)
 
+# 4
 for sy in range(1, SIZE):
     t_cnt = 0
 

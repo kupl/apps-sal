@@ -5,7 +5,7 @@ class Solution:
             return 1
         res = 1
         seen = set()
-        for m in range(1, 1 << (n - 1)):
+        for m in range(1, 1 << (n - 1)):  # 尝试所有切割位置
             if bin(m).count('1') < res:
                 continue
             valid = True

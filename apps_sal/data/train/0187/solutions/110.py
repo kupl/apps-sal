@@ -9,10 +9,12 @@ class Solution:
         capacity = 4
 
         for idx, nxt in enumerate(customers):
+            # Add new waiting customers, put passengers on ride, remove passengers from waiting.
             waiting += nxt
             passengers = min(waiting, capacity)
             waiting -= passengers
 
+            # Update money.
             cur += (passengers * boardingCost) - runningCost
 
             if cur > best:
@@ -24,6 +26,7 @@ class Solution:
             passengers = min(waiting, capacity)
             waiting -= passengers
 
+            # Update money.
             cur += (passengers * boardingCost) - runningCost
 
             if cur > best:

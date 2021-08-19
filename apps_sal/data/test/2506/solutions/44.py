@@ -26,6 +26,7 @@ def solve():
             ok = mid
         else:
             ng = mid
+#    print('ok:', ok)
 
     score = 0
     num = 0
@@ -34,6 +35,7 @@ def solve():
         i = bisect_right(As, ok - A)
         score += A * (N - i) + accAs[N] - accAs[i]
         num += N - i
+#    print('score:', score, '/ num:', num)
 
     ans = score + ok * (M - num)
     print(ans)

@@ -1,10 +1,14 @@
+# coding: utf-8
+# Your code here!
 
 import sys
 sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
+readline = sys.stdin.readline  # 文字列入力のときは注意
 
 
 r, c, n = [int(i) for i in readline().split()]
+#xyxy = [[int(i) for i in readline().split()] for _ in range(n)]
+# for i,(x1,y1,x2,y2) in enumerate(xyxy):
 
 
 def addedge(x1, y1):
@@ -30,6 +34,7 @@ for i in range(n):
 
 
 edge.sort()
+# print(edge)
 
 ans = []
 for d, i in edge:

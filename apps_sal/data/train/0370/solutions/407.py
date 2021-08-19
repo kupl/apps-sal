@@ -26,4 +26,6 @@ class Solution:
         for i in A:
             p = find(i)
             cache[p] += 1
+        # print(parent)
+        # print(cache)
         return max(cache.values())

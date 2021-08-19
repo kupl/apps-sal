@@ -9,3 +9,5 @@ def logical_calc(array, op):
         else:
             ans = ans ^ operator
     return ans
+
+#     return #boolean

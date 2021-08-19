@@ -20,6 +20,9 @@ class Solution:
 
             best_profit[ind] = max(best_profit[ind], profit[i])
 
+        # print(best_profit)
+        # print(difficulty)
+
         m = ind + 1
 
         def bins(target):

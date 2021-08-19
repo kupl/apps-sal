@@ -27,6 +27,7 @@ def get_point_v(K):
 
 
 manhatten_distance = abs(A[0] - B[0]) + abs(A[1] - B[1])
+# print(manhatten_distance)
 
 distances.append(manhatten_distance)
 
@@ -44,4 +45,5 @@ if a != 0 and b != 0:
     distances.append(get_distance(p2, p3) + d2 + d3)
     distances.append(get_distance(p1, p4) + d1 + d4)
 
+# print(distances)
 print(min(distances))

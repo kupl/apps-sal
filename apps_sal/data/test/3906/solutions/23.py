@@ -1,4 +1,6 @@
 import sys
+# sys.stdin = open('C:\\Users\\sharr\\Documents\\Input.txt', 'r')
+# sys.stdout = open('C:\\Users\\sharr\\Documents\\Output.txt', 'w')
 n, m = map(int, sys.stdin.readline().split())
 f = [1, 1]
 mod = 1000000007

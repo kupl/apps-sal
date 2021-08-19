@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/1/31 21:44
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : D. Lunar New Year and a Wander.py
 
 import heapq
 

@@ -22,6 +22,7 @@ class Solution:
             profit += boardingCost * served
             profit -= runningCost
             itr += 1
+            #print(f'profit={profit} itr={itr} served = {served} profit = {profit}')
             if profit > max_profit:
                 max_profit = profit
                 min_idx = itr

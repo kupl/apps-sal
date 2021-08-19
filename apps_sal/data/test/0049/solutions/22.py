@@ -6,6 +6,10 @@ while amount > i * ((10**i) - (10**(i - 1))):
     i = i + 1
 x = amount // i
 y = amount % i
+# print(amount)
+# print(i)
+# print(x)
+# print(y)
 if y == 0:
     if i == 1:
         print(x % 10)

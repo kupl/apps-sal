@@ -2,6 +2,7 @@ __author__ = 'default'
 
 
 def TaskA():
+    #fl = open('TaskA.txt','r')
     n, m, k = list(map(int, input().split()))
     pole = [0] * n
     lose = False
@@ -15,6 +16,7 @@ def TaskA():
         if lose and cmplt:
             cmplt = False
             print(i + 1)
+    # fl.close()
     if not lose and cmplt:
         print(0)
 

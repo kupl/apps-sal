@@ -15,6 +15,9 @@ class Solution:
         for i in range(len(keyTime)):
             sec.append(time_to_sec(keyTime[i]))
 
+        # name=[x for _, x in sorted(zip(sec, keyName), key=lambda pair: pair[0])]
+
+        # print(name)
         name = keyName
 
         for i in range(len(name)):
@@ -25,6 +28,7 @@ class Solution:
 
         for key, value in list(dic.items()):
             value.sort()
+        # print(dic)
         ans = []
         for key, value in list(dic.items()):
             if len(value) >= 3:
@@ -42,4 +46,5 @@ class Solution:
 
                     if count == 3:
                         ans.append(key)
+                    # print(count)
         return sorted(list(set(ans)))

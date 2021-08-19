@@ -1,6 +1,7 @@
 import sys
 import itertools
 f = sys.stdin
+# f = open('H:\\Portable Python 3.2.5.1\\tests\\test_248B1.txt')
 n = int(f.readline().strip())
 v = [int(u) for u in f.readline().strip().split()]
 m = int(f.readline().strip())

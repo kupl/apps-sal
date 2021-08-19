@@ -1,3 +1,4 @@
+# cook your dish here
 
 t = int(input())
 
@@ -6,6 +7,7 @@ while t:
 
     while 'abc' in s:
         s = s.replace('abc', '')
+        # print(s)
 
     print(s)
 

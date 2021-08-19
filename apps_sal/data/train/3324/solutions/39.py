@@ -1,4 +1,5 @@
 def sale_hotdogs(n):
+    # your code here
     price = 0
     if n >= 0 and n < 5:
         price = n * 100

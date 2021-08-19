@@ -53,6 +53,7 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
+######################################
 a = int(input())
 bits = ['r' for i in range(10)]
 temp = ['r' for i in range(10)]

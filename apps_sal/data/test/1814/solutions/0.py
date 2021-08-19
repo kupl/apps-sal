@@ -118,3 +118,6 @@ for i in range(queries):
         res.append(ceil(dis))
 
 print(*res, sep="\n")
+
+
+# Made By Mostafa_Khaled

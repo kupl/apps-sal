@@ -27,6 +27,7 @@ class Dsu:
 class Solution:
 
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        # [[3,1,2],[3,2,3],[1,1,3],[1,2,4],[1,1,2],[2,3,4]]
         dsu_alice = Dsu(n)
         dsu_bob = Dsu(n)
         rm = 0

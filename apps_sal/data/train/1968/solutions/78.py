@@ -12,22 +12,25 @@ class Solution:
             for idx, p in enumerate(path):
                 if idx < len(path) - 1:
                     if p in cur:
-                        if cur[p] != '
-                        cur = cur[p]
+                        if cur[p] != '#':
+                            cur = cur[p]
                         else:
+                            # we see an ending folder, stop adding subfolders to it
                             break
                     else:
                         cur[p] = {}
                         cur = cur[p]
                 else:
-                    cur[p] = '
+                    # this is the ending folder
+                    cur[p] = '#'
 
+        # do a DFS of the trie to get the answers
         ans = []
 
         def dfs(cur_dir, path):
-            if cur_dir == '
-            ans.append(path)
-            return
+            if cur_dir == '#':
+                ans.append(path)
+                return
             for k in cur_dir:
                 dfs(cur_dir[k], path + '/' + k)
             return

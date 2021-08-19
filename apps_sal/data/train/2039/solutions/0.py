@@ -10,9 +10,12 @@ MAX = m
 
 while MIN != MAX:
     x = (MIN + MAX) // 2
+    # print(x,MIN,MAX)
+    # print()
 
     M = 0
     for a in A:
+        # print(a,M)
         if a <= M and a + x >= M:
             continue
         elif a > M and a + x >= m and (a + x) % m >= M:

@@ -13,6 +13,7 @@ class Solution:
                     bs[s] = set()
 
                 for b in bs[s]:
+                    # connect b and i
                     if b not in graph:
                         graph[b] = set()
                     if i not in graph:
@@ -24,6 +25,10 @@ class Solution:
 
         if S not in bs:
             return -1
+
+
+#         print(\"bs: {}\".format(bs))
+#         print(\"graph: {}\".format(graph))
 
         q = collections.deque(list(bs[S]))
         bus_taken = 1

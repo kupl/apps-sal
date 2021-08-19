@@ -1,6 +1,7 @@
 import numpy as np
 N = int(input())
 As = np.array(list(map(int, input().split())), dtype="int64")
+# %%
 minus_num = len(np.where(As < 0)[0])
 abs_As = np.abs(As)
 

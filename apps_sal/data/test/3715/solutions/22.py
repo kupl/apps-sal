@@ -34,6 +34,7 @@ def __starting_point():
                 1 + dp[LAST_SPORT])
         prev = dp
         dp = curr
+        #print(dp, contest(v), sport(v))
 
     print(n - max(dp))
 

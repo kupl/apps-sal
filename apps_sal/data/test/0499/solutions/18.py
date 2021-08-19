@@ -17,6 +17,8 @@ def __starting_point():
         elif card == "B":
             b += 1
 
+    # print(r,g,b)
+
     colornum = 0
     if r:
         colornum += 1

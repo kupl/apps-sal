@@ -7,6 +7,6 @@ for i in range(n):
             flag = False
 
 if flag:
-    print("
+    print("#Black&White")
 else:
-    print("
+    print("#Color")

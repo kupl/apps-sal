@@ -3,6 +3,7 @@ class Solution:
         self.visited = [0]
 
         self.dfs(rooms, 0)
+        # print(self.visited)
         if len(self.visited) == len(rooms):
             return True
         return False

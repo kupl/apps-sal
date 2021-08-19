@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     N, K = list(map(int, input().split()))
     H = sorted([int(x) for x in input().split()])

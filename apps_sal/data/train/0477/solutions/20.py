@@ -6,4 +6,5 @@ class Solution:
             for j in reversed(list(range(len(s)))):
                 chars.append('1' if s[j] == '0' else '0')
             s += '1' + ''.join(chars)
+            # print('i = {0}, s = {1}'.format(i, s))
         return s[k - 1]

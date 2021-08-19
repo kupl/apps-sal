@@ -5,6 +5,7 @@ class Solution:
         multiple = 0
         last = 0
 
+        # @lru_cache(None)
         def find(mx):
             nonlocal last
             if mx <= 1:

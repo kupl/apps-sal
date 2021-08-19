@@ -6,6 +6,7 @@ class Solution:
         max_pos = 0
         curr = True
         for i in range(len(nums)):
+            # print(nums[i])
 
             if nums[i] > 0:
                 pos += 1
@@ -25,5 +26,6 @@ class Solution:
                 pos = 0
 
             max_pos = max(pos, max_pos)
+            # print(pos, max_pos,neg)
 
         return max_pos

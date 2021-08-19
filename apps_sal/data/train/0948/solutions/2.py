@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 a, b = list(map(int, input().split()))
 l = []

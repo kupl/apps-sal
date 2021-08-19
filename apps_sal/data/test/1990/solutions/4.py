@@ -3,6 +3,7 @@
 (R)R(R)Ra)c
 '''
 
+# MODIFIED SEGMENT TREE (MIN = MINIMUM PREFIX SUM instead of MINIMUM ELEMENT IN PREFIX)
 
 from sys import stdin
 
@@ -49,6 +50,7 @@ def input():
 n = int(input())
 s = input()
 
+#n = 2 ** math.ceil(math.log(n, 2))
 n = 1048576
 st = SegmentTree(n)
 

@@ -5,6 +5,7 @@ class Solution:
         :rtype: str
         """
 
+        # special case 0
         def translate(num):
             if num == 0:
                 return ''

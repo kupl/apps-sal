@@ -2,7 +2,7 @@ class Solution:
 
     def regionsBySlashes(self, grid: List[str]):
         def minAnglePoint(p1, p2, options):
-            minAngle = 10.0
+            minAngle = 10.0     # a ridiculously big number
             for p3 in options:
                 a = (p2[0] - p1[0], p2[1] - p1[1])
                 b = (p3[0] - p2[0], p3[1] - p2[1])
@@ -71,6 +71,6 @@ class Solution:
 
             _, ang = minAnglePoint(prev, point, [firststep])
             angSum = round(angSum + ang, 4)
-            if angSum == innerangle:
+            if angSum == innerangle:  # it is a valid region
                 regions.add(frozenset(region))
         return len(regions)

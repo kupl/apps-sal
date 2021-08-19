@@ -1,3 +1,4 @@
+# -*-coding:utf-8-*-
 import collections
 import sys
 input = sys.stdin.readline

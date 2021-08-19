@@ -3,7 +3,7 @@ S = [len(x) for x in input().split('T')]
 
 x, y = map(int, input().split(" "))
 xstart = 0
-dir = 0
+dir = 0  # 0→ x方向 1 →y方向
 first = True
 
 temp = 0

@@ -15,9 +15,12 @@ for _ in range(int(input())):
         if ind == -1:
             i += 1
             continue
+        # print(ind)
         temp = ind
         while ind > i and k != 0:
+            # print('ef')
             l[ind], l[ind - 1] = l[ind - 1], l[ind]
+           # print(l)
             ind -= 1
             k -= 1
         i = temp

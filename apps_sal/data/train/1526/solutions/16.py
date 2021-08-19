@@ -39,8 +39,27 @@ for test in range(tcs):
             b.append(s)
         else:
             a.append(s)
+    # for wer in range(l):
+    #     s = input()
+    #     n = len(s)
+    #     c1 = 0
+    #     for i in range(n):
+    #         if s[i] not in v:
+    #             if i+1 < n:
+    #                 if s[i+1] not in v:
+    #                     c1 = 1
+    #                     break
+    #             if i+2 < n:
+    #                 if s[i+2] not in v:
+    #                     c1 = 1
+    #                     break
+    #     if c1 == 1:
+    #         b.append(s)
+    #     else:
+    #         a.append(s)
     alen = len(a)
     blen = len(b)
+    # ################ Alice ##############
     achar_dict = {}
     atotal_dict = {}
     for recipe in a:
@@ -56,6 +75,7 @@ for test in range(tcs):
                 achar_dict[ch] += 1
             else:
                 achar_dict[ch] = 1
+    ################ Bob ##############
     bchar_dict = {}
     btotal_dict = {}
     for recipe in b:
@@ -71,6 +91,7 @@ for test in range(tcs):
                 bchar_dict[ch] += 1
             else:
                 bchar_dict[ch] = 1
+    ################## Calculation ##################
     result = 0
     for i in achar_dict:
         result += log2(achar_dict[i]) - alen * log2(atotal_dict[i])
@@ -84,3 +105,6 @@ for test in range(tcs):
         print(0)
     else:
         print(2**result)
+        # print('%.7f' % 10**result)
+
+# print(time.time() - start_time)

@@ -19,9 +19,11 @@ class Solution:
 
         lo, hi = 1, (position[-1] - position[0]) // (m - 1)
         res = 0
+        # print('lohi', lo, hi)
         while lo <= hi:
             mid = (lo + hi) // 2
             r = check(mid)
+            # print('dist', mid, res)
             if r:
                 res = r
                 lo = mid + 1

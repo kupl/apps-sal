@@ -4,6 +4,7 @@ while t > 0:
     li = bo = 0
     c = 1
     while True:
+        # print(li,bo)
         li = li + c
         bo = bo + c + 1
         c += 2

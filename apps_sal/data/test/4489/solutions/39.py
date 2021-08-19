@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 red_cards = []
 blue_cards = []

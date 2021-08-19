@@ -1,4 +1,5 @@
 def get_grade(s1, s2, s3):
+    # Code here
     if 90 <= ((s1 + s2 + s3) / 3) <= 100:
         return "A"
     elif 80 <= ((s1 + s2 + s3) / 3) <= 90:

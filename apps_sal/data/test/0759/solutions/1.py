@@ -10,7 +10,11 @@ debug = False
 if getpass.getuser() == 'frohenk' and files:
     debug = True
     sys.stdin = open("test.in")
+    # sys.stdout = open('test.out', 'w')
 elif files:
+    # fname = "gift"
+    # sys.stdin = open("%s.in" % fname)
+    # sys.stdout = open('%s.out' % fname, 'w')
     pass
 
 

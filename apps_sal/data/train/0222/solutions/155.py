@@ -19,3 +19,19 @@ class Solution:
                     lenth = max(lenth, s[0])
                     dq.append(s)
         return lenth
+# class Solution:
+#     def lenLongestFibSubseq(self, A: List[int]) -> int:
+#         n = len(A)
+#         s = set(A)
+#         res = 0
+#         for i in range(n):
+#             for j in range(i + 1, n):
+#                 a, b = A[i], A[j]
+#                 tep = 2
+#                 while a + b in s:
+#                     tep += 1
+#                     a, b = b, a + b
+#                 if tep >= 3: res = max(tep, res)
+#                 # if res >= n - j: break
+#             # if res >= n - i: return res
+#         return res

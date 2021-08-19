@@ -1,3 +1,4 @@
+# 060_a
 A, B, C = input().split()
 
 if (1 <= len(A) and len(A) <= 10 and A.islower()) and (1 <= len(B) and len(B) <= 10 and B.islower())\

@@ -8,11 +8,13 @@ for _ in range(int(input())):
             a = x // r
             b = x % r
 
+            # ans.add((a,b))
             if not ans[a][b]:
                 ans[a][b] = True
                 val += 1
             a = x % c
             b = x // c
+            # ans.add((a,b))
             if not ans[a][b]:
                 ans[a][b] = True
                 val += 1

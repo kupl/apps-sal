@@ -18,6 +18,7 @@ def check(a):
 
 res = "No"
 if check(s):
+    # print(s)
     if check(s[:(l - 1) // 2]):
         if check(s[(l + 3) // 2 - 1:]):
             res = "Yes"

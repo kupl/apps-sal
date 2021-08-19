@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
+#   = input()
 n = int(input())
 a = [int(i) for i in input().split()]
 
@@ -28,3 +31,4 @@ else:
 
 print(ans)
 finish = time.time()
+#print(finish - start)

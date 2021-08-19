@@ -6,6 +6,7 @@ class Solution:
         cache = {}
 
         def dfs(l, r):
+            # Calculate the best sum of Alex.
             if l >= r + 1:
                 return 0
             if (l, r) in cache:
@@ -16,4 +17,5 @@ class Solution:
 
         sum_a = dfs(0, len(piles) - 1)
         sum_b = sum(piles) - sum_a
+        # print(sum_a)
         return sum_a > sum_b

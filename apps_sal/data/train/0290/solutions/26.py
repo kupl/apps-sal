@@ -1,11 +1,13 @@
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
-        visited = {}
+        visited = {}  # map (start, end) -> min cost
 
         def minCostHelper(start, end):
+            # check if cached
             if (start, end) in visited:
                 return visited[(start, end)]
 
+            # if not, calculate
             min_cost = float('inf')
             for c in cuts:
                 if c <= start or c >= end:
@@ -13,6 +15,7 @@ class Solution:
                 cost = (end - start) + minCostHelper(start, c) + minCostHelper(c, end)
                 min_cost = min(min_cost, cost)
 
+            # no cuts between start and end
             if min_cost == float('inf'):
                 min_cost = 0
 

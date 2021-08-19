@@ -1,7 +1,7 @@
 Q = 10**9 + 7
 
 
-def getInv(N):
+def getInv(N):  # Qはmod
     inv = [0] * (N + 1)
     inv[0] = 1
     inv[1] = 1
@@ -21,6 +21,8 @@ def main():
     twenty_six = pow(26, K, Q)
     one_over_twenty_six = pow(26, Q - 2, Q)
     for i in range(K + 1):
+        # ans += cmb*pow(25,i,Q)%Q*pow(26,K-i,Q)%Q
+        # print(cmb, i, K-i)
         ans += cmb * twenty_five % Q * twenty_six % Q
         twenty_five *= 25
         twenty_five %= Q

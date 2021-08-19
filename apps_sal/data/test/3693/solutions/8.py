@@ -33,30 +33,32 @@ def check_pt(p1, p2, p3):
 
 
 def pt_in(r, P):
-    areaRectangle = 0.5 * abs(
-        (r[0][1] - r[2][1]) * (r[3][0] - r[1][0])
-        + (r[1][1] - r[3][1]) * (r[0][0] - r[2][0])
+    areaRectangle = 0.5 * abs(\
+        #                 y_A      y_C      x_D      x_B\
+        (r[0][1] - r[2][1]) * (r[3][0] - r[1][0])\
+ # y_B     y_D       x_A     x_C\
+        + (r[1][1] - r[3][1]) * (r[0][0] - r[2][0])\
     )
 
     ABP = 0.5 * (
-        r[0][0] * (P[1] - r[1][1]) +
-        P[0] * (r[1][1] - r[0][1]) +
-        r[1][0] * (r[0][1] - P[1])
+        r[0][0] * (P[1] - r[1][1])
+        + P[0] * (r[1][1] - r[0][1])
+        + r[1][0] * (r[0][1] - P[1])
     )
     BCP = 0.5 * (
-        r[2][0] * (P[1] - r[1][1]) +
-        P[0] * (r[1][1] - r[2][1]) +
-        r[1][0] * (r[2][1] - P[1])
+        r[2][0] * (P[1] - r[1][1])
+        + P[0] * (r[1][1] - r[2][1])
+        + r[1][0] * (r[2][1] - P[1])
     )
     CDP = 0.5 * (
-        r[2][0] * (P[1] - r[3][1]) +
-        P[0] * (r[3][1] - r[2][1]) +
-        r[3][0] * (r[2][1] - P[1])
+        r[2][0] * (P[1] - r[3][1])
+        + P[0] * (r[3][1] - r[2][1])
+        + r[3][0] * (r[2][1] - P[1])
     )
     DAP = 0.5 * (
-        r[0][0] * (P[1] - r[3][1]) +
-        P[0] * (r[3][1] - r[0][1]) +
-        r[3][0] * (r[0][1] - P[1])
+        r[0][0] * (P[1] - r[3][1])
+        + P[0] * (r[3][1] - r[0][1])
+        + r[3][0] * (r[0][1] - P[1])
     )
     return areaRectangle == (abs(ABP) + abs(BCP) + abs(CDP) + abs(DAP))
 
@@ -74,6 +76,7 @@ get_coords(sqb, sq2)
 
 def check():
     flag = 0
+    # check point on edge
     for j in range(4):
         '''if check_pt(sq2[0],sq2[1],sq1[j]) or check_pt(sq2[1],sq2[2],sq1[j]) or check_pt(sq2[2],sq2[3],sq1[j]) or check_pt(sq2[0],sq2[3],sq1[j]):
             print(5)
@@ -83,10 +86,13 @@ def check():
             print(6)
             flag = 1
             break'''
+        # print(j)
         if pt_in(sq1, sq2[j]) or pt_in(sq2, sq1[j]):
             flag = 1
             break
+    # check mid in square:
     if mid_in(sq1, sq2) or mid_in(sq2, sq1):
+        # print(8)
         flag = 1
     if flag == 1:
         print("YES")

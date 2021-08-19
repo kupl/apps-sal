@@ -10,6 +10,9 @@ class Dsu:
             self.speed[i].append(i)
 
     def find(self, i):
+        #     if parent[i] == -1:
+        #         return i
+        #     else: return self.find_parent(parent, parent[i])
         if i != self.par[i][0]:
             org = self.par[i][0]
             self.par[i][0] = self.find(self.par[i][0])
@@ -20,6 +23,10 @@ class Dsu:
         return self.par[i][0]
 
     def union(self, x, y):
+        # def union(self, parent, x, y):
+        #     x_set = self.find_parent(parent, x)
+        #     y_set = self.find_parent(parent, y)
+        #     parent[x_set] = y_set
         self.rx = self.find(x)
         self.ry = self.find(y)
         self.sign = -self.dr[x] * self.dr[y]

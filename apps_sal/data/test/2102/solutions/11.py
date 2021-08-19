@@ -17,6 +17,7 @@ def find_minimal_melody_difficulty(strings_values, notes):
         return max(notes) - min(notes)
 
     frets_by_notes_indices = [[note - x for x in strings_values] for note in notes]
+    # frets_by_notes_indices[i_note] is sorted for every correct i_note
     del strings_values
     del notes
 
@@ -45,6 +46,8 @@ def find_minimal_melody_difficulty(strings_values, notes):
     )
     available_selections = sorted(available_selections)
 
+    # TODO: can replace it with indices_to_unselect
+    # defaultdict(int) is slower
     frets_to_unselect = dict()
     for frets in frets_by_notes_indices:
         for fret in frets:

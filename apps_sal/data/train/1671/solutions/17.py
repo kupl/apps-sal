@@ -1,3 +1,4 @@
+# ---------------------------iye ha aam zindegi---------------------------------------------
 from io import BytesIO, IOBase
 import os
 import math
@@ -10,9 +11,12 @@ from fractions import Fraction
 import sys
 import threading
 from collections import defaultdict
+# threading.stack_size(10**8)
 mod = 10 ** 9 + 7
 mod1 = 998244353
 
+# ------------------------------warmup----------------------------
+# sys.setrecursionlimit(300000)
 
 BUFSIZE = 8192
 
@@ -65,6 +69,7 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
+# -------------------game starts now----------------------------------------------------import math
 class TreeNode:
     def __init__(self, k, v):
         self.key = k
@@ -281,6 +286,7 @@ class AvlTree:
         return n
 
 
+# -----------------------------------------------binary seacrh tree---------------------------------------
 class SegmentTree1:
     def __init__(self, data, default=2**32, func=lambda a, b: min(a, b)):
         """initialize the segment tree with data"""
@@ -334,6 +340,7 @@ class SegmentTree1:
         return "SegmentTree({0})".format(self.data)
 
 
+# -------------------game starts now----------------------------------------------------import math
 class SegmentTree:
     def __init__(self, data, default=2**30 - 1, func=lambda a, b: a & b):
         """initialize the segment tree with data"""
@@ -387,6 +394,7 @@ class SegmentTree:
         return "SegmentTree({0})".format(self.data)
 
 
+# -------------------------------iye ha chutiya zindegi-------------------------------------
 class Factorial:
     def __init__(self, MOD):
         self.MOD = MOD
@@ -433,7 +441,7 @@ class Factorial:
             return
         if n < len(self.invFactorial_):
             return self.invFactorial_[n]
-        self.inv(n)
+        self.inv(n)  # To make sure already calculated n^-1
         nextArr = [0] * (n + 1 - len(self.invFactorial_))
         initialI = len(self.invFactorial_)
         prev = self.invFactorial_[-1]
@@ -457,6 +465,7 @@ class Combination:
         return f.calc(n) * f.invFactorial(max(n - k, k)) * f.invFactorial(min(k, n - k)) % self.MOD
 
 
+# --------------------------------------iye ha combinations ka zindegi---------------------------------
 def powm(a, n, m):
     if a == 1 or n == 0:
         return 1
@@ -467,6 +476,7 @@ def powm(a, n, m):
         return a * powm(a, n - 1, m) % m
 
 
+# --------------------------------------iye ha power ka zindegi---------------------------------
 def sort_list(list1, list2):
     zipped_pairs = zip(list2, list1)
 
@@ -475,6 +485,7 @@ def sort_list(list1, list2):
     return z
 
 
+# --------------------------------------------------product----------------------------------------
 def product(l):
     por = 1
     for i in range(len(l)):
@@ -482,6 +493,7 @@ def product(l):
     return por
 
 
+# --------------------------------------------------binary----------------------------------------
 def binarySearchCount(arr, n, key):
     left = 0
     right = n - 1
@@ -491,16 +503,20 @@ def binarySearchCount(arr, n, key):
     while (left <= right):
         mid = int((right + left) / 2)
 
+        # Check if middle element is
+        # less than or equal to key
         if (arr[mid] <= key):
             count = mid + 1
             left = mid + 1
 
+        # If key is smaller, ignore right half
         else:
             right = mid - 1
 
     return count
 
 
+# --------------------------------------------------binary----------------------------------------
 def countdig(n):
     c = 0
     while (n > 0):
@@ -518,20 +534,28 @@ def countGreater(arr, n, k):
     l = 0
     r = n - 1
 
+    # Stores the index of the left most element
+    # from the array which is greater than k
     leftGreater = n
 
+    # Finds number of elements greater than k
     while (l <= r):
         m = int(l + (r - l) / 2)
         if (arr[m] >= k):
             leftGreater = m
             r = m - 1
 
+        # If mid element is less than
+        # or equal to k update l
         else:
             l = m + 1
 
+    # Return the count of elements
+    # greater than k
     return (n - leftGreater)
 
 
+# --------------------------------------------------binary------------------------------------
 class TrieNode:
     def __init__(self):
         self.children = [None] * 26
@@ -567,14 +591,15 @@ class Trie:
                 return False
             pCrawl = pCrawl.children[index]
         return pCrawl != None and pCrawl.isEndOfWord
+# -----------------------------------------trie---------------------------------
 
 
 class Node:
     def __init__(self, data):
         self.data = data
         self.count = 0
-        self.left = None
-        self.right = None
+        self.left = None  # left node for 0
+        self.right = None  # right node for 1
 
 
 class BinaryTrie:
@@ -615,6 +640,7 @@ class BinaryTrie:
         return xor ^ self.temp.data
 
 
+# -------------------------bin trie-------------------------------------------
 for ik in range(int(input())):
     n = int(input())
     a = [1] * n

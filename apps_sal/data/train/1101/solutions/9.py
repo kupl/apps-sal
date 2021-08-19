@@ -11,6 +11,7 @@ def getint1(): return list(map(lambda x: int(x) - 1, input().split()))
 
 
 def jn(x, l): return x.join(map(str, l))
+# swap_array function
 
 
 def swaparr(arr, a, b):
@@ -18,11 +19,15 @@ def swaparr(arr, a, b):
     arr[a] = arr[b]
     arr[b] = temp
 
+# gcd function
+
 
 def gcd(a, b):
     if a == 0:
         return b
     return gcd(b % a, a)
+
+# nCr function efficient using Binomial Cofficient
 
 
 def nCr(n, k):
@@ -33,6 +38,8 @@ def nCr(n, k):
         res = res * (n - i)
         res = res / (i + 1)
     return res
+
+# upper bound function code -- such that e in a[:i] e < x;
 
 
 def upper_bound(a, x, lo=0):
@@ -46,6 +53,8 @@ def upper_bound(a, x, lo=0):
     return lo
 
 
+# sliding window ---
+
 def maxSlidingWindow(nums, k):
     windowSum, maxSum = 0, 0
     windowSum = sum(nums[:k])
@@ -55,6 +64,7 @@ def maxSlidingWindow(nums, k):
     return maxSum
 
 
+# Two Pointer
 def twoSum(nums, target):
     left = 0
     right = len(nums) - 1
@@ -67,13 +77,22 @@ def twoSum(nums, target):
             right -= 1
     return
 
+# prefix sum
+
 
 def prefix(arr):
     a = map(add, arr.insert(0, 0))
     return a
 
+# Modular Inverse
+# y-1 = y(p-2)%p
 
+# String Matching
+
+
+# prime factorization
 def primefs(n):
+    # if n == 1    ## calculating primes
     primes = {}
     while(n % 2 == 0):
         primes[2] = primes.get(2, 0) + 1
@@ -84,7 +103,11 @@ def primefs(n):
             n = n // i
     if n > 2:
         primes[n] = primes.get(n, 0) + 1
+    # prime factoriazation of n is stored in dictionary
+    # primes and can be accesed. O(sqrt n)
     return primes
+
+# MODULAR EXPONENTIATION FUNCTION
 
 
 def power(x, y, p):
@@ -99,12 +122,23 @@ def power(x, y, p):
         x = (x * x) % p
     return res
 
+# DISJOINT SET UNINON FUNCTIONS
+
 
 def swap(a, b):
     temp = a
     a = b
     b = temp
     return a, b
+
+# find function with path compression included (recursive)
+# def find(x, link):
+#     if link[x] == x:
+#         return x
+#     link[x] = find(link[x], link);
+#     return link[x];
+
+# find function with path compression (ITERATIVE)
 
 
 def find(x, link):
@@ -119,6 +153,8 @@ def find(x, link):
     return p
 
 
+# the union function which makes union(x,y)
+# of two nodes x and y
 def union(x, y, link, size):
     x = find(x, link)
     y = find(y, link)
@@ -127,6 +163,8 @@ def union(x, y, link, size):
     if x != y:
         size[x] += size[y]
         link[y] = x
+
+# returns an array of boolean if primes or not USING SIEVE OF ERATOSTHANES
 
 
 def sieve(n):
@@ -140,6 +178,7 @@ def sieve(n):
     return prime
 
 
+# Binary Search functions
 def binsearch(a, l, r, x):
     while l <= r:
         mid = l + (r - 1) // 2
@@ -150,6 +189,9 @@ def binsearch(a, l, r, x):
         else:
             r = mid + 1
     return -1
+
+
+# Grafh related queries :
 
 
 graph = defaultdict(list)
@@ -214,7 +256,10 @@ def connected_components(graph):
             ans.append(d)
     return ans
 
+# End graph related queries
 
+
+#### PRIME FACTORIZATION IN O(log n) using Sieve ####
 MAXN = int(1e6 + 5)
 
 
@@ -229,6 +274,11 @@ def spf_sieve():
             for j in range(i * i, MAXN, i):
                 if spf[j] == j:
                     spf[j] = i
+    # function for storing smallest prime factors (spf) in the array
+
+################## un-comment below 2 lines when using factorization #################
+# spf = [0 for i in range(MAXN)]
+# spf_sieve()
 
 
 def factoriazation(x):
@@ -237,11 +287,17 @@ def factoriazation(x):
         ret[spf[x]] = ret.get(spf[x], 0) + 1
         x = x // spf[x]
     return ret
+    # this function is useful for multiple queries only, o/w use
+    # primefs function above. complexity O(log n)
+
+# taking integer array input
 
 
+# LCM of two numbers :
 def lcm(a, b): return abs(a * b) // math.gcd(a, b)
 
 
+# defining a couple constants
 MOD = int(1e9) + 7
 CMOD = 998244353
 INF = float('inf')
@@ -252,7 +308,12 @@ abd = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7, 'i': 8, '
        'z': 25}
 
 
+# used for testing your code
+
+# inputs=open('input.txt','r')
+
 def solve():
+    # n = no. of lines,c = no. of distinct color ,k = len. of erasor
     n, c, k = map(int, input().split())
     d = {}
     for i in range(n):
@@ -261,8 +322,8 @@ def solve():
             d[c] = 1
         else:
             d[c] += 1
-    v = list(map(int, input().split()))
-    l_r = k // v[0]
+    v = list(map(int, input().split()))  # equal
+    l_r = k // v[0]  # how much line can i remove
     l = list(d.values())
     i = 0
     while l_r != 0:
@@ -275,8 +336,13 @@ def solve():
 
 
 def __starting_point():
-    for _ in range(int(input())):
+    # solve()
+    # for t in range(getint()):
+    #     print("Case #{}: ".format(t + 1), end="")
+    #     solve()
+    for _ in range(int(input())):  # getint()):
         solve()
 
 
+    # https://codeforces.com/contest/507/status/B/page/296?order=BY_PROGRAM_LENGTH_ASC
 __starting_point()

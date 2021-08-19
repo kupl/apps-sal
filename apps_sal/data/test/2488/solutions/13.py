@@ -13,4 +13,5 @@ for x, h in xh:
     ans += tmp
     nowd += tmp * a
     minusd.append([tmp * a, x + 2 * d + 1])
+    # print(ans,nowd)
 print(ans)

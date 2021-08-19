@@ -1,4 +1,5 @@
 def to_alternating_case(string):
+    # string.swapcase()
     new = []
     for letter in string:
         if letter.isupper():

@@ -29,7 +29,7 @@ def set_pal(p, idxp, pal, idx):
 def longest_palindrome(s):
     if len(s) < 2:
         return s
-    pal = s[0]
+    pal = s[0]  # b
     idx = 1
     j = len(s) // 2 - 1
     k = j + 1

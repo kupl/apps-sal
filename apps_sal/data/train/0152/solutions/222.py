@@ -12,6 +12,8 @@ class Solution:
             return False
 
         p.sort()
+        # [1,2,3,4,5,100000]
+        # Cm(n)
         n = len(p)
         res = -1
         left = 0

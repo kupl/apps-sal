@@ -1,6 +1,7 @@
 class Solution:
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
 
+        # generate a vector
         A_left = [a + i for i, a in enumerate(A)]
         A_right = [a - i for i, a in enumerate(A)]
         _max_left = A_left[0]

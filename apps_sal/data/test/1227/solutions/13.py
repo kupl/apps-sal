@@ -10,6 +10,7 @@ def nCkpow(n, k):
 
 
 def f(s, m, k):
+    # print(m,k)
     if len(s) - m < k:
         return 0
     if k == 0:

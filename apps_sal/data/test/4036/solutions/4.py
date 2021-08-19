@@ -44,6 +44,7 @@ else:
                         if t == 0:
                             break
 
+        # print (d)
         chk = True
         for i in range(k - 1):
             if d[i + 1] > 2 * d[i]:

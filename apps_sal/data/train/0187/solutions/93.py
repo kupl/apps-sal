@@ -8,6 +8,8 @@ class Solution:
         for i in range(0, len(customers)):
             customerWaiting += customers[i]
             rounds += 1
+            # print(\"########\")
+            # print(f\"Customer Waiting: {customerWaiting} rounds: {rounds}\")
             if customerWaiting >= 4:
                 customerWaiting -= 4
                 customerBoarded += 4
@@ -18,9 +20,12 @@ class Solution:
                 customerWaiting = 0
             if maxProfit[0] < profit:
                 maxProfit = (profit, rounds)
+            # print(f\"Current Profit: {profit} Maximum Profit: {maxProfit}\")
 
         while customerWaiting > 0:
             rounds += 1
+            # print(\"########\")
+            # print(f\"Customer Waiting: {customerWaiting} rounds: {rounds}\")
             if customerWaiting >= 4:
                 customerWaiting -= 4
                 customerBoarded += 4
@@ -31,6 +36,7 @@ class Solution:
                 customerWaiting = 0
             if maxProfit[0] < profit:
                 maxProfit = (profit, rounds)
+            # print(f\"Current Profit: {profit} Maximum Profit: {maxProfit}\")
         if maxProfit[0] >= 0:
             return maxProfit[1]
         return -1

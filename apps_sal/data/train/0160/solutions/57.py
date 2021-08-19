@@ -1,5 +1,6 @@
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
+        # Other solution
         mem = dict()
 
         def search(i, j):

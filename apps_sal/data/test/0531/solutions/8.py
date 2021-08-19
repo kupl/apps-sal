@@ -1,3 +1,4 @@
+# vars: c1, c2, c3, ins, max_val, mid_val, min_val, n, res, res2, t1, t2, t3, x
 from collections import Counter
 n = int(input())
 ins = input()
@@ -18,3 +19,12 @@ else:
     for k, v in zip((min_val, mid_val, max_val), res[1]):
         res2.extend([k] * v)
     print(*res2)
+#	res = min((c1+t1, t2, c3+t1), (c1-t3, c2+t3*2, c3-t3))
+#	res1 = 0
+#	for vs in zip((c1, c2, c3), res):
+#		res1 += min(vs)
+#	print(res1)
+#	res2 = []
+#	for k, v in zip((min_val, mid_val, max_val), res):
+#		res2.extend([k]*v)
+#	print(*res2)

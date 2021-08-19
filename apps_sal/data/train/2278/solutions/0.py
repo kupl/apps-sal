@@ -47,6 +47,8 @@ def above(p, p1, p2):
 
     return term_y >= term_x2 + term_x + term_c
 
+# print(above(points[2],points[0],points[1]))
+
 
 Us = []
 for i, p in enumerate(points):

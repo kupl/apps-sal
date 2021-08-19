@@ -19,6 +19,8 @@ def subarrayXor(arr, n, m):
     for i in range(n):
         mp[xorArr[i]].append(i)
     a = sorted(mp.items())
+    # print(xorArr)
+    # print(a)
     for i in a:
         diffs = 0
         if(i[0] != 0):

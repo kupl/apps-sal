@@ -5,4 +5,6 @@ def my_languages(results):
     for a in sortr:
         if a[1] >= 60:
             lp.append(a[0])
+            #lp.sort(reverse = True)
+            #sorted(lp, reverse=True)
     return lp

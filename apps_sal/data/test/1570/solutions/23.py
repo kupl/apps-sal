@@ -1,3 +1,4 @@
+# coding:utf-8
 
 k, n, w = list(map(int, input().split(' ')))
 tc = k * w * (w + 1) // 2

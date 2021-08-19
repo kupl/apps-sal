@@ -1,3 +1,4 @@
+# cook your dish here
 import sys
 n = 201
 v = [0 for i in range(n + 1)]
@@ -30,6 +31,7 @@ try:
         for i in range(2, x // 2 + 1):
             if v[i] == 1 and v[x - i] == 1:
                 flag = 1
+                # print(i,x-i)
         if flag == 1:
             print("YES")
         else:

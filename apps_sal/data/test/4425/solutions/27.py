@@ -1,3 +1,4 @@
+# ABC126 C
 
 import math
 N, K = map(int, input().split())

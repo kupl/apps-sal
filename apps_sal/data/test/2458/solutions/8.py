@@ -15,17 +15,18 @@ def solve():
     for i in range(t):
         a, b = read()
         res.append((summ[b] - summ[a - 1] + MOD) % MOD)
+        # print((summ[b]-summ[a-1]+MOD)%MOD)
     return res
 
 
 def read(mode=2):
     inputs = input().strip()
     if mode == 0:
-        return inputs
+        return inputs  # String
     if mode == 1:
-        return inputs.split()
+        return inputs.split()  # List of strings
     if mode == 2:
-        return list(map(int, inputs.split()))
+        return list(map(int, inputs.split()))  # List of integers
 
 
 def write(s="\n"):

@@ -26,7 +26,9 @@ def check(x, y, s, n):
 
 r, rr = check(x, y, s, n)
 if r:
+    # print(rr)
     print(''.join(rr))
 else:
     r, rr = check(y, x, s, n)
+    # print(rr)
     print(''.join(rr))

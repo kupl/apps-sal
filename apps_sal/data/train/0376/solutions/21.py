@@ -9,7 +9,7 @@ class Solution:
                 return dp[key]
 
             ans = sys.maxsize
-            for k in range(i + 1, j):
+            for k in range(i + 1, j):    # burst ith element
                 ans = min(ans, dfs(nums, i, k) + dfs(nums, k, j) + nums[i] * nums[k] * nums[j])
 
             dp[key] = ans

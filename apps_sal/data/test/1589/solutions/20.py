@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 n, m = list(map(int, input().split()))
 ans = 0

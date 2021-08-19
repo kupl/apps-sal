@@ -24,6 +24,7 @@ for j, i in enumerate(lis):
 
     dic[1] += 1
 su = 0
+# print(dic)
 for i in list(dic.keys()):
     su += dic[i] % 1000000007
 

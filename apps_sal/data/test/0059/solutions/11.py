@@ -16,6 +16,7 @@ for i in range(length - 1):
         currmax = i + 1
         if min(currnums) < currmin or max(currnums) > currmax:
             res = 0
+        ##print([currnums, currmax, currmin])
         currmin = i + 2
         currmax = i + 2
         currnums = [nums[i + 1]]

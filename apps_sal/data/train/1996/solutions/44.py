@@ -1,11 +1,12 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
 
-        WHITE, GRAY, BLACK = 0, 1, 2
+        WHITE, GRAY, BLACK = 0, 1, 2  # GRAY is part of a cycle, BLACK is safe
         color = {}
         for i in range(len(graph)):
             color[i] = WHITE
 
+        # Return whether it is safe
         def dfs(node):
             if color[node] != WHITE:
                 return color[node] == BLACK

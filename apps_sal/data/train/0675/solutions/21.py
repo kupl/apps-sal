@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 for x in range(int(input())):
     N = int(input())

@@ -6,6 +6,7 @@ from math import *
 t = int(input())
 while t:
     t -= 1
+    # n = int(input())
     n, x = [int(x) for x in input().split()]
     if n <= 2:
         print(1)

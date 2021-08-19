@@ -17,12 +17,15 @@ def calc(LL):
         L[i] = min(L[i], L[i + 1])
     for i in range(1, K)[::-1]:
         L[i] -= L[i - 1]
+    # print("L =", L)
     X = [0] * K
     f = 1
     re = 0
-    cnt = 0
+    cnt = 0  # Check用
     while f:
 
+        # ここに処理を書く
+        # if cnt < 20: print("cnt, X =", cnt, X)
         for x1, x2 in zip(X, X[1:]):
             if x1 > x2:
                 break
@@ -33,12 +36,13 @@ def calc(LL):
             t = 1
             for j, y in enumerate(Y):
                 t = t * C(L[j], y) % P
+            # print("X, Y, t =", X, Y, t)
             re += t
-        cnt += 1
+        cnt += 1  # Check用
 
         X[0] += 1
         i = 0
-        while X[i] == i + 1:
+        while X[i] == i + 1:  # ここにi番目の終了条件を書く
             X[i] = 0
             i += 1
             if i >= K:
@@ -46,12 +50,16 @@ def calc(LL):
                 break
             X[i] += 1
 
+    # print(cnt)
     return re
+
+# print(calc([4, 4, 4]))
 
 
 N = int(input())
 Q = list(itertools.permutations(range(N)))
 A = [int(a) for a in input().split()]
+# print("Q =", Q)
 
 
 def LIS(l):
@@ -70,6 +78,7 @@ def LIS(l):
 ans = 0
 chk = 0
 for q in Q:
+    # print(q, LIS(q))
     L = []
     s = 0
     for i in range(N):
@@ -79,9 +88,11 @@ for q in Q:
     calcL = calc(L)
     LISq = LIS(q)
     chk += calcL
+    # print("q =", q, L, calcL, LISq)
     ans += calcL * LISq
     if ans >= P:
         ans -= P
+# print("chk = ", chk)
 s = 1
 for a in A:
     s = s * a % P

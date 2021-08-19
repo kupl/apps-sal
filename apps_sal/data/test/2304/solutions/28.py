@@ -1,3 +1,4 @@
+# bfs?
 
 def main():
     from collections import deque
@@ -7,7 +8,7 @@ def main():
     N, M = list(map(int, input().split()))
 
     g = tuple(set() for _ in range(N))
-    h = [0] * N
+    h = [0] * N  # 入り次数
     for _ in range(M):
         L, R, D = list(map(int, input().split()))
         L -= 1
@@ -31,13 +32,16 @@ def main():
                     dq.append(u)
         return True
 
+    # 始点からのパスを処理
     for s in range(N):
         if h[s]:
-            continue
+            continue  # sに入ってくるパスがあるので、sを始点にしない
+        # if ~dist[s]: continue
         if not bfs(s):
             print('No')
             return
 
+    # サイクルを処理（どの点も入るパスがあり、処理できていない）
     for s in range(N):
         if ~dist[s]:
             continue

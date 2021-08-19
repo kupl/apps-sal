@@ -1,4 +1,10 @@
+#! usr/bin/env python3
+# coding:UTF-8
 
+# wdnmd UKE
+# wcnm UKE
+# wrnnn UKE
+# UKE 5
 
 ans = 0
 cnt = 0

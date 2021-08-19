@@ -12,7 +12,7 @@ elif n == 2:
         print(10 ** 10 - 1)
     elif t == "10":
         print(10 ** 10)
-    else:
+    else:  # 11
         print(10 ** 10)
 else:
     repeat_num = (n + 6) // 3

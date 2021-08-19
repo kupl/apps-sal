@@ -1,3 +1,4 @@
+# cook your dish here
 store = [0] * (10**5 + 1)
 
 
@@ -10,6 +11,7 @@ def sieve():
 
 
 sieve()
+# print(store)
 for _ in range(int(input())):
 
     n = int(input())

@@ -4,4 +4,4 @@ def generate_hashtag(s):
     elif len(s) > 140:
         return False
     else:
-        return '
+        return '#' + ''.join(s.title().split())

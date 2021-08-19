@@ -10,3 +10,4 @@ def dating_range(age):
         min = age - 0.10 * age
         max = age + 0.10 * age
         return "{}-{}".format(floor(min), floor(max))
+    # return min-max

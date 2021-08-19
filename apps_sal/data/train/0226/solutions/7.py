@@ -2,7 +2,9 @@ class Solution:
     def numSquarefulPerms(self, A: List[int]) -> int:
         n = len(A)
         A = sorted(A)
+        # g[i][j] = 1 if A[i], A[j] are squareful
         g = [[0] * n for _ in range(n)]
+        # dp[s][i]: number of ways to reach state s and ends with node i
         dp = [[0] * n for _ in range(1 << n)]
 
         for i in range(n):

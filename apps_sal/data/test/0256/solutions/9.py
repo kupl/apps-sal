@@ -7,6 +7,7 @@ def play(t1, t2):
         r = -1
     else:
         r = 0
+    #print("play:", t1, t2, r)
     return r
 
 
@@ -26,9 +27,12 @@ m.append((p[3][0], p[2][1]))
 res.append((play(m[0], m[2]), play(m[0], m[3])))
 res.append((play(m[1], m[2]), play(m[1], m[3])))
 
+# print(res)
 mm = max([max(i) for i in res])
 res = [i for i in res if max(i) == mm]
 res = [min(i) for i in res]
+# print(res)
+#rr = min(res) + 1
 if 1 in res:
     rr = 2
 else:

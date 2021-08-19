@@ -1,5 +1,6 @@
 from math import *
 import sys
+#sys.stdin = open('in.txt')
 
 n = int(input())
 
@@ -29,6 +30,7 @@ def solve(n):
             break
         else:
             res += 1 + (s - p) // 2
+        #print(p, v)
         p += c + 1
     return res
 

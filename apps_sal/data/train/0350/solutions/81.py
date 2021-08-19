@@ -26,6 +26,7 @@ class Solution:
                 cnt[A[i]] -= 1
                 i += 1
                 l += 1
+            # print(j, l)
             result += l
             j += 1
         return result

@@ -5,9 +5,10 @@ class Solution:
             if man == -1:
                 continue
             if man not in subs:
-                subs[man] = set()
+                subs[man] = set()  # if man != -1 else None
             subs[man].add(i)
 
+        # print(subs)
         queue = [(headID, 0, 0)]
         informTimes = {}
 
@@ -29,4 +30,5 @@ class Solution:
         maxInformTime = -1
         for level, informTimesLevel in list(informTimes.items()):
             maxInformTime = max(maxInformTime, max(informTimesLevel))
+        #maxLevel = max(informTimes.keys())
         return maxInformTime

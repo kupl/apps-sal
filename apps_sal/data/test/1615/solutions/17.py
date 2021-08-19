@@ -1,3 +1,4 @@
+# A. Police Recruits
 n, k = list(map(int, input().split()))
 res = 0
 for i in range(n):

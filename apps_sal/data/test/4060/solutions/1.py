@@ -13,15 +13,16 @@ for k in range(n):
         cpt -= 1
         if(not plusEnd):
             cptPlus += 1
-    if(cpt < -2):
+    if(cpt < -2):  # cas de fin
         dead = True
         break
-    if (cpt < 0):
-        if(plusEnd or cptPlus == 0):
+    if (cpt < 0):  # on doit utiliser un joker avant
+        if(plusEnd or cptPlus == 0):  # on en a pas ou déjà utilisé
             dead = True
             break
         else:
             plusEnd = True
+            # on considère qu'on l'a fait
             cpt += 2
 
     if cpt < 2:

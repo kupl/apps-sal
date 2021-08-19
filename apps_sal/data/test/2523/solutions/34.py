@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 
@@ -16,7 +17,7 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    S = next(tokens)
+    S = next(tokens)  # type: str
     solve(S)
 
 

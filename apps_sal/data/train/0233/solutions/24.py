@@ -16,6 +16,11 @@ class Solution:
         def union(x, y):
             roots[find(x)] = find(y)
 
+        # k=0 top
+        # k=1 right
+        # k=2 bottom
+        # k=3 left
+
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if i > 0:

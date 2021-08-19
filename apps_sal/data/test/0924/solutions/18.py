@@ -27,6 +27,7 @@ def gcd(a, b):
 (lb, rb, tb) = [int(s) for s in input().split(" ")]
 
 delta = gcd(ta, tb)
+# print(delta)
 
 
 def overlap(al, ar, bl, br):
@@ -45,7 +46,32 @@ def eval(fst_, snd_):
         pos_fstl = k * delta + fst_[0]
         pos_fstr = k * delta + fst_[1]
         intersection = overlap(pos_sndl, pos_sndr, pos_fstl, pos_fstr)
+        # print(intersection)
+        # print(pos_sndl, pos_sndr, pos_fstl, pos_fstr, intersection)
         result_ = max(result_, intersection)
+
+    # pos_sndl = snd_[0]
+    # pos_sndr = snd_[1]
+    # pos_fstl = fst_[0]
+    # pos_fstr = fst_[1]
+    # intersection = overlap(pos_sndl, pos_sndr, pos_fstl, pos_fstr)
+    # result_ = max(result_, intersection)
+    # # print(delta)
+    # # print(intersection)
+    # snd_k = (snd_[1] - fst_[0]) // delta + 1
+    # fst_k = (snd_[0] - fst_[1]) // delta -1
+    #
+    # print(fst_k, snd_k)
+    #
+    # for k in range(fst_k, snd_k):
+    #     pos_sndl = snd_[0]
+    #     pos_sndr = snd_[1]
+    #     pos_fstl = k * delta + fst_[0]
+    #     pos_fstr = k * delta + fst_[1]
+    #     intersection = overlap(pos_sndl, pos_sndr, pos_fstl, pos_fstr)
+    #     # print(intersection)
+    #     # print(pos_sndl, pos_sndr, pos_fstl, pos_fstr, intersection)
+    #     result_ = max(result_, intersection)
 
     return result_
 

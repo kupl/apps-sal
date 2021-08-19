@@ -1,8 +1,10 @@
+# encoding: utf-8
 from sys import stdin
 
 
 def solve(a):
 
+    # root node of tries denotes empty stack
     stack = [None]
     node_stack = [[1, {}]]
     trie = node_stack[-1]
@@ -23,6 +25,7 @@ def solve(a):
             node_stack.append(next_node)
 
         else:
+            # just go up in trie
             stack.pop()
             node_stack.pop()
             node_stack[-1][0] += 1

@@ -11,4 +11,5 @@ for _ in range(t):
             l = b
     else:
         l.insert(i - 1, 0)
+    # print(l)
     print(len(l), l.index(1) + 1)

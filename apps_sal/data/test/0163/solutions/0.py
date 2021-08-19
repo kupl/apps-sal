@@ -9,9 +9,9 @@ i = 0
 while i < len(s) and s[i] not in ["G", "T"]:
     i += 1
 i += k
-while i < len(s) and s[i] not in ["G", "T", "
+while i < len(s) and s[i] not in ["G", "T", "#"]:
     i += k
-if i >= len(s) or s[i] == "
+if i >= len(s) or s[i] == "#":
     print("NO")
 else:
     print("YES")

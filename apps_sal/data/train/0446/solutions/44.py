@@ -21,9 +21,12 @@ class Solution:
 
         import heapq
 
+        # This map will keep track of the counts
         records = {}
+        # Initiate the min-heap
         q = []
 
+        # Saving the counts
         for i in arr:
             if i not in list(records.keys()):
                 records[i] = 0

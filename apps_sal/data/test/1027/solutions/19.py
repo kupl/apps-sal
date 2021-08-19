@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 ais = list(map(int, input().strip().split()))
 

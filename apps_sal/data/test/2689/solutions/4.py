@@ -9,6 +9,8 @@ while i < len(a):
         p1 = b.index('-')
         ans += ''.join(a[i + 2:p1 + i + 1]) * int(a[i])
         i = i + p1 + 1
+    # elif ord(a[i])>=48 and ord(a[i])<58:
+    #     ans+=a[i]
     elif a[i] != '+' and a[i] != '-' and not (ord(a[i]) >= 48 and ord(a[i]) < 58):
         ans += a[i]
     i += 1

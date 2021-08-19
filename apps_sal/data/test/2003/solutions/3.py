@@ -1,3 +1,4 @@
+#!/usr/bin/env pypy3
 import sys
 
 
@@ -95,10 +96,14 @@ def solve_and_print(q):
     tree = BitTree()
     for _ in range(q):
         qType, number = read_query()
+        # print()
+        #print(qType, number)
         if qType == "+":
             tree.add(reversed(get_bits(number)))
+            #tree.print_tree(tree.root, 0)
         elif qType == "-":
             tree.remove(reversed(get_bits(number)))
+            #tree.print_tree(tree.root, 0)
         elif qType == "?":
             print(tree.examine_xor(get_bits(number)))
 

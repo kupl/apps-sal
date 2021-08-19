@@ -5,6 +5,6 @@ def get_count(s=''):
     for c in s.lower():
         if c in 'aeiou':
             ret['vowels'] += 1
-        elif c.isalpha():
+        elif c.isalpha():  # letter but not vowel because elif
             ret['consonants'] += 1
     return ret

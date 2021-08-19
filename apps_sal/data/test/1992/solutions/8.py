@@ -1,7 +1,9 @@
+# Doc du lieu (dòng 1)
 s = input().split()
 n = int(s[0])
 m = int(s[1])
 k = int(s[2])
+# Khoi tao mang
 s = input().split()
 screen = [0 for i in range(n + 1)]
 position = [0 for i in range(n + 1)]
@@ -22,10 +24,14 @@ for ii in range(n):
         position[int(s[ii])] = k
     else:
         position[int(s[ii])] = i % k
+# Doc du lieu (dòng 2)
+# Doc du lieu (dòng 3)
 s = input().split()
 quest = []
 for i in range(m):
     quest.append(int(s[i]))
+# Ktra
+# Xu ly
 kq = 0
 
 for i in range(m):

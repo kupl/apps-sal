@@ -52,7 +52,9 @@ def __starting_point():
         fr.append(cnt[x])
     fr = fr[::-1]
 
+#     print(fl, fr)
     print(solve(fl, fr, 0, n - 1))
+#     print(fl, fr)
 
 
 __starting_point()

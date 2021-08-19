@@ -21,6 +21,7 @@ class Solution:
         return ans
 
     def possible(self, mid, F, m, k):
+        # print(mid)
         count = 0
         a = 0
         for i in range(len(F)):

@@ -18,3 +18,6 @@ for i in range(k):
     c[y - 1] += 1
 
 print(" ".join(map(str, (sum(a[i][j] * c[j] for j in range(m)) - b[i] for i in range(n)))))
+
+
+# Made By Mostafa_Khaled

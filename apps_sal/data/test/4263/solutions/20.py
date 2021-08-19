@@ -1,3 +1,4 @@
+# B - ATCoder
 S = list(input())
 
 ans = 0

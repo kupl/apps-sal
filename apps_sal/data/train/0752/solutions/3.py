@@ -16,3 +16,12 @@ for _ in range(q):
 
     if not found:
         print("unknown")
+
+    # if "." in filename:
+    #     ext = filename.split(".")[-1]
+    #     try:
+    #         print(file_types[ext])
+    #     except KeyError:
+    #         print("unknown")
+    # else:
+    #     print("unknown")

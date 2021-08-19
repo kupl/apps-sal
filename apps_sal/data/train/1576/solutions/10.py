@@ -1,3 +1,4 @@
+# Pattern E
 T = int(input())
 
 for t in range(T):

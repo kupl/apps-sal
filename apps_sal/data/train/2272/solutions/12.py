@@ -5,6 +5,8 @@ B = np.array(input().split(), dtype=np.int32)
 
 
 def sum_count(A, B, x):
+    # A,B is sorted.
+    # return count(a+b < x)
     C = np.searchsorted(B, x - A)
     return C.sum()
 

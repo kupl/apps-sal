@@ -8,6 +8,7 @@ class Solution:
                 best = grid[r][c]
                 best_path = set([(r, c)])
 
+            # (t) total gold, (r) row, (c) column, (p) path
             q = [(grid[r][c], r, c, set([(r, c)]))]
 
             while q:

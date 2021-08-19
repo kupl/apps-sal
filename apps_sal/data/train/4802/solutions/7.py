@@ -10,6 +10,7 @@ class Checkout(object):
 
     @property
     def total(self):
+        # Implement a "XoffYormore"
         for prod in self._basket:
             if 'off' in self._sales.get(prod, ''):
                 x, y = self._sales[prod].replace('ormore', '').split('off')
@@ -21,10 +22,12 @@ class Checkout(object):
         self._total = 0.0
         for prod in self._basket:
             count = self._basket[prod]
+            # Implement a "XforY"
             if 'for' in self._sales.get(prod, ''):
                 x, y = self._sales[prod].split('for')
                 self._total += count // int(x) * float(y)
                 count = count % int(x)
+            # Implement a "buyXgetY"
             elif 'get' in self._sales.get(prod, ''):
                 x, y = self._sales[prod].replace('buy', '').split('get')
                 self._total += count // (int(x) + int(y)) * int(x) * get_price(prod)

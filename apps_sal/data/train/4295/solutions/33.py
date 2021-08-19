@@ -13,10 +13,12 @@ def balanced_num(number):
         else:
             width = (num_len // 2) - 1
 
+        # left hand side
         left = str(number)[:width]
         for pos_l, left_sum in enumerate(left):
             left_tot += int(left_sum)
 
+        # right hand side
         right = str(number)[-1 * width:]
         for pos_r, right_sum in enumerate(right):
             right_tot += int(right_sum)

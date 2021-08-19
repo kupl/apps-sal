@@ -21,3 +21,5 @@ for j in range(int(input())):
         print(f'Case {j+1}: DANGER')
     else:
         print(f"Case {j+1}: SOMEWHERE")
+    # Case 1: REACHED
+# Case 2: DANGER

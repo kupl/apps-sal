@@ -8,6 +8,7 @@ prev = '!'
 cont = 0
 
 for char in s:
+    #print(char, cont)
     if (char != prev) or (cont >= k):
         if (cont >= k):
             if (prev in d):

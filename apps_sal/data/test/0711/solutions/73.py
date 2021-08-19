@@ -19,6 +19,7 @@ if M != 1:
     else:
         primes.append(1)
 
+# combinations[p] = p+N-1 C N-1
 combinations = [1]
 
 p_max = max(primes)

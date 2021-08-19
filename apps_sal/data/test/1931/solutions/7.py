@@ -1,3 +1,7 @@
+# Contest No.: 639
+# Problem No.: B
+# Solver:      JEMINI
+# Date:        20200503
 
 import sys
 

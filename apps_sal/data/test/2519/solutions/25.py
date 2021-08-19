@@ -12,6 +12,7 @@ for val in set(A):
 for i in range(N):
     E[i] = Elist[A[i]]
 
+# print(E)
 
 En = sum(E[:K])
 Emax = En

@@ -56,7 +56,7 @@ class Solution:
         p2 = self.union_find_get_parent(uf, node2)
 
         if p1 == p2:
-            return False
+            return False  # Returning false so that we don't include the s,d in result
 
         if uf[1][p1] > uf[1][p2]:
             uf[0][p2] = p1

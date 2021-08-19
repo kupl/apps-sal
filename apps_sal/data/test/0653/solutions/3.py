@@ -1,4 +1,7 @@
 import math
+# helpful:
+# r,g,b=map(int,input().split()
+# arr = [[0 for x in range(columns)] for y in range(rows)]
 
 n = int(input())
 string = input()

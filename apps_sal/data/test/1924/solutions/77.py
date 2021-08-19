@@ -3,6 +3,7 @@ def inpl():
 
 
 def cmb(n, r):
+    # combination
     if n < r:
         return 0
     r = min(n - r, r)
@@ -11,10 +12,13 @@ def cmb(n, r):
     return (over[n] * under[r] * under[n - r]) % MOD
 
 
+# 互いに素なx, yについて、a * x + b * y = 1の解の一つを求める。
 def extGCD(x, y):
     r = [1, 0, x]
     w = [0, 1, y]
+    # print(r, w)
     while w[2] != 1:
+        # print(r, w)
         q = r[2] // w[2]
         w_tmp = [r[0] - q * w[0], r[1] - q * w[1], r[2] % w[2]]
         r, w = w, w_tmp

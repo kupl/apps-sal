@@ -19,3 +19,14 @@ class Solution:
         for v in vowels:
             res += dp[(v, n)]
         return res % (10**9 + 7)
+
+
+#         def helper(vowel,depth):
+#             if depth == 0:
+#                 return 1
+#             res = 0
+#             for v in dic[vowel]:
+#                 res += helper(v, depth-1)
+#             return res
+#         res = 0
+#         for v in ['a']

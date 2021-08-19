@@ -1,4 +1,5 @@
 def points(games):
+    # good solution without condition ))))
     count = 0
     for i in games:
         if int(i[0]) > int(i[2]):

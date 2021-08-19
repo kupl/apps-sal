@@ -1,3 +1,4 @@
+# problem http://codeforces.com/contest/1100/problem/E
 import copy
 import sys
 
@@ -77,7 +78,7 @@ def __starting_point():
     c_m = 0
     kk = [0]
     lines = sys.stdin.readlines()
-    for i, line in enumerate(lines):
+    for i, line in enumerate(lines):  # range(1, m + 1):
         u, v, c = list(map(int, line.split()))
         g[u - 1].append(v - 1)
         if (u - 1, v - 1) in list(w.keys()):
@@ -89,6 +90,9 @@ def __starting_point():
         else:
             w_tmp[(u - 1, v - 1)] = [str(i + 1)]
         kk.append(c)
+        # c_m = max(c, c_m)
+
+    # print(find_loop(copy.deepcopy(g), copy.deepcopy(w), 0, n))
 
     kk.sort()
     l, r = 0, len(kk)
@@ -100,6 +104,7 @@ def __starting_point():
     else:
         while l + 1 != r:
             m = int((l + r) / 2)
+            # if find_loop(copy.deepcopy(g), copy.deepcopy(w), kk[m], n):
             if find_loop(g, w, kk[m], n):
                 l = m
             else:

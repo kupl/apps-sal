@@ -1,4 +1,5 @@
 import math
+# x increases: x + ceil(n/(x+1)) - 1
 
 
 t = int(input())

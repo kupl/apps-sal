@@ -16,8 +16,8 @@ for y in range(1 << h):
         cnt = 0
         for y2 in my:
             for x2 in mx:
-                if m[y2][x2] == '
-                cnt += 1
+                if m[y2][x2] == '#':
+                    cnt += 1
         if cnt == k:
             ans += 1
 print(ans)

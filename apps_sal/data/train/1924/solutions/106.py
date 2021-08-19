@@ -10,6 +10,7 @@ class Solution:
             tran[1] = float(tran[1])
             if tran[2] > 1000:
                 invalid.add(transaction)
+                # past_tran[tran[0]]=[transaction]
             if tran[0] in past_tran:
                 for other_transaction in past_tran[tran[0]]:
                     other_tran = other_transaction.split(',')

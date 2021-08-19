@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     def find_gcd(x, y):
         while(y):
@@ -15,6 +16,7 @@ try:
         return(gcd)
 
     def factors(n):
+        # print(n)
         if n == 0:
             return 1
         x = []

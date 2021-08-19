@@ -7,6 +7,8 @@ def main():
     pass
 
 
+# region fastio
+
 BUFSIZE = 8192
 
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from functools import reduce
 
 x, y = list(map(int, input().split()))

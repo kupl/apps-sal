@@ -18,7 +18,9 @@ class Solution:
 
         for i in range(1, len(A)):
 
+            # odd
             if ((i % 2) == 1):
+                # fits pattern
                 if (A[i] > A[i - 1]):
                     length += 1
 
@@ -26,7 +28,9 @@ class Solution:
                     longest = max(length, longest)
                     length = 1
 
+            # even
             elif ((i % 2) == 0):
+                # fits pattern
                 if (A[i] < A[i - 1]):
                     length += 1
 
@@ -39,7 +43,9 @@ class Solution:
         longest2 = length
         for i in range(1, len(A)):
 
+            # odd
             if ((i % 2) == 1):
+                # fits pattern
                 if (A[i] < A[i - 1]):
                     length += 1
 
@@ -47,7 +53,9 @@ class Solution:
                     longest2 = max(length, longest2)
                     length = 1
 
+            # even
             elif ((i % 2) == 0):
+                # fits pattern
                 if (A[i] > A[i - 1]):
                     length += 1
 

@@ -1,5 +1,6 @@
 def checkValidity(a, b, c):
 
+    # check condition
     if (a + b <= c) or (a + c <= b) or (b + c <= a):
         return False
     else:

@@ -1,4 +1,5 @@
 def number(lines):
+    # your code here
     result = {}
     count = 1
     for i in lines:

@@ -1,3 +1,4 @@
+# coding = utf-8
 div = 1000000007
 s = input()
 n = len(s)

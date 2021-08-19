@@ -1,3 +1,4 @@
+# cook your dish here
 li = input().split()
 for i in range(1, len(li), 2):
     k = float(li[i])

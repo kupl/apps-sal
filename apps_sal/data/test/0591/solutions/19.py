@@ -4,6 +4,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 349B
 '''
 def main():
 	from sys import stdin,stdout
@@ -21,9 +22,12 @@ def main():
 	if maxindex > -1:
 		ans = [ (maxindex+1) for i in range(maxim)]
 		N= N%arr[maxindex]
+		#print(N)
 		i = 0
 		while i<maxim:
+			#print('i=',i,'N=',N)
 			for j in range(8,maxindex,-1):
+				#print('j=',j,'diff=',arr[j]-arr[ans[i]-1])
 				if arr[j]-arr[ans[i]-1] <=N:
 					N -= arr[j]-arr[ans[i]-1]
 					ans[i] = j+1
@@ -36,6 +40,7 @@ def main():
 def __starting_point():
 	main()
 '''
+# 234B Input and Output
 
 
 def main():

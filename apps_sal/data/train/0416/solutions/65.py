@@ -1,8 +1,10 @@
 class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
+        # return 1
         n = len(graph)
-        states = [[[0, 0] for _ in range(n)] for _ in range(n)]
+        states = [[[0, 0] for _ in range(n)] for _ in range(n)]  # [mouse][cat][whose_turn (m/c)]
         for i in range(1, n):
+            # mosue turn is 0, cat is 1
             states[0][i][0] = -1
             states[0][i][1] = -1
             states[i][i][0] = 1

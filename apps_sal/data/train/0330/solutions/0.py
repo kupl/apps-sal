@@ -38,7 +38,7 @@ class Solution:
                     if not dot and not exp:
                         dot = True
                     else:
-                        return False
+                        return False  # two dot in string or dot after e.
                 elif s[i] == 'e':
                     if not exp:
                         exp = True

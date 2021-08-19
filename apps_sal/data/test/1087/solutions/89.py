@@ -15,7 +15,7 @@ def main():
     d = 1 << (60 - 1)
     x = 0
     for j, cnt in enumerate(ctr):
-        if (cnt < N - cnt) and (x + d <= K):
+        if (cnt < N - cnt) and (x + d <= K):  # フラグを立てた方が得する
             x += d
             ans += (N - cnt) * d
         else:

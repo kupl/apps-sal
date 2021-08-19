@@ -1,3 +1,4 @@
+# CHNGSS.py
 
 import sys
 from random import *
@@ -20,3 +21,4 @@ sys.stdout.flush()
 for a in arr:
     print(' '.join(map(str, a)))
     sys.stdout.flush()
+# sys.exit(0);

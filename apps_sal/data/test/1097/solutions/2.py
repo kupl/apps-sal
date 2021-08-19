@@ -37,3 +37,11 @@ if cnt == k:
     print('\n'.join([str(u) + ' ' + str(v) for u, v in list(p.items())]))
 else:
     print(-1)
+# 7 3 3
+# 2 3 1
+
+# 14 5 6
+# 4 4 2 2 1
+
+# 10 3 9
+# 3 3 3

@@ -18,6 +18,8 @@ def main():
 
 
 def __starting_point():
+    # nonlocal stime
+    # stime = time.clock()
     main()
 
 

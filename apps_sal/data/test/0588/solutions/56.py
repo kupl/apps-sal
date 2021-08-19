@@ -15,7 +15,8 @@ def hoge(a):
         ret = (a % pi) - pi
     else:
         ret = (a)
-    return ret
+    #assert pi <= ret <= pi, 'range over'
+    return ret  # -pi <= a <= pi
 
 
 def seikika(A):

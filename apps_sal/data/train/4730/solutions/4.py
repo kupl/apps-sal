@@ -1,7 +1,7 @@
 from itertools import count
 
 
-def isPrime(n): return n == 2 or all(n % x for x in range(3, int(n**.5 + 1), 2))
+def isPrime(n): return n == 2 or all(n % x for x in range(3, int(n**.5 + 1), 2))        # will never recieve an even number
 
 
 def prime_bef_aft(n):

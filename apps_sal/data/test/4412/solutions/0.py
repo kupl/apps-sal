@@ -7,6 +7,7 @@ for testcase in range(q):
     A = sorted(set(map(int, input().split())), reverse=True)
     L = len(A)
 
+    # print(A)
     ANS = A[0]
     for i in range(L):
         NOW0 = A[i]
@@ -21,6 +22,7 @@ for testcase in range(q):
                 for k in range(j + 1, L):
                     if NOW0 % A[k] != 0 and NOW1 % A[k] != 0:
                         ANS = max(ANS, NOW0 + NOW1 + A[k])
+                        # print("!",ANS)
                         break
 
                 break

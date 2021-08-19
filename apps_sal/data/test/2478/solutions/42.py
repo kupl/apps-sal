@@ -15,7 +15,7 @@ for i in range(len(s)):
     elif s[i] == ")" and stack[-1] == ")":
         stack.append(")")
         a += ")"
-    else:
+    else:  # s[i] == ")" and stack[-1] == "("
         stack.pop(-1)
         a += ")"
 

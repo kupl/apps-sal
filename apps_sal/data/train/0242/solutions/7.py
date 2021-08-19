@@ -4,9 +4,11 @@ from collections import Counter, defaultdict
 class Solution:
     def maxEqualFreq(self, nums: List[int]) -> int:
         counter = Counter(nums)
+        # d: count -> values has such counts
         d = defaultdict(set)
         for x in counter:
             d[counter[x]].add(x)
+        # O(n), reverse go through nums updating count of counts
         i = len(nums)
         while d:
             if len(d) == 1:
@@ -18,6 +20,7 @@ class Solution:
                 if (y == 1 and len(d[y]) == 1) or (y + 1 == z and len(d[z]) == 1):
                     return i
             i -= 1
+            # update counter and count of counts
             x = nums[i]
             d[counter[x]].remove(x)
             if not d[counter[x]]:

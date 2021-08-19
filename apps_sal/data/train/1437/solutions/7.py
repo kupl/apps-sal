@@ -1,3 +1,4 @@
+# cook your dish here
 def fun(l, z):
     l.sort()
     x = l[0] * l[z - 1]

@@ -44,6 +44,7 @@ def MillerRabinPrimalityTest(number):
 
         ''' if random number is not 1 and not -1 ( in mod n ) '''
         if (randomNumberWithPower != 1) and (randomNumberWithPower != number - 1):
+            # number of iteration
             iterationNumber = 1
 
             ''' while we can squre the number and the squered number is not -1 mod number'''
@@ -51,6 +52,7 @@ def MillerRabinPrimalityTest(number):
                 ''' squre the number '''
                 randomNumberWithPower = pow(randomNumberWithPower, 2, number)
 
+                # inc the number of iteration
                 iterationNumber = iterationNumber + 1
             '''     
             if x != -1 mod number then it because we did not found strong witnesses

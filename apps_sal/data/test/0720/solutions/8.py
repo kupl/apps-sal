@@ -22,6 +22,7 @@ for i in range(n):
     a, b = mints()
     l = max(max(pa, pb), pl)
     r = min(a, b)
+    # print(l,r)
     if r >= l:
         c += r - l + 1
         pl = r + 1

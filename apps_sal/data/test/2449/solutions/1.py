@@ -1,5 +1,6 @@
 import sys
 
+#f = open('input', 'r')
 f = sys.stdin
 n, m = list(map(int, f.readline().split()))
 s = [f.readline().strip() for _ in range(m)]

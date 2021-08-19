@@ -1,4 +1,5 @@
 def alternateCase(s=''):
+    # your code here
     print(s)
     listl = list(s)
     n = len(s)

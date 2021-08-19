@@ -1,3 +1,4 @@
+# bを必要なだけ(strideの分)右にずらせばよい
 def main():
     n = int(input())
     a = list(map(int, input().split()))

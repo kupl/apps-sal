@@ -1,3 +1,4 @@
+# @author
 
 import sys
 
@@ -13,11 +14,13 @@ class BBeautifulNumbers:
             prev = [0] * n
             for i in range(n):
                 prev[p[i]] = i
+            # print(prev)
             for i in range(n):
                 mn_index[i] = min(mn_index[i - 1], prev[i])
                 mx_index[i] = max(mx_index[i - 1], prev[i])
 
             ans = ['0'] * n
+            # print(mn_index, mx_index)
             for i in range(n):
                 l, r = mn_index[i], mx_index[i]
                 ans[i] = '1' if r - l + 1 == i + 1 else '0'

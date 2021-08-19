@@ -15,4 +15,5 @@ for i in range(n):
 
 lengths.append(curr_length)
 
+# print(lengths)
 print(max(lengths))

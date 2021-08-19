@@ -106,6 +106,7 @@ def main():
     flowVal, ans = G.solve(src, tgt, k)
     assert flowVal == k
     print(ans)
+    # print(G)
     return
 
 
@@ -117,6 +118,8 @@ def test(n, k):
         yield R.randint(1, 10**9)
     for i in range(n):
         yield R.randint(1, 10**9)
+
+#ints=test(1000, 800)
 
 
 main()

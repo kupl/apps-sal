@@ -8,11 +8,13 @@ class Solution:
         for i, row in enumerate(targetGrid):
             for j, val in enumerate(row):
                 if val not in num_to_range:
+                    # up, down, left, right
                     num_to_range[val] = [i, i, j, j]
                 num_to_range[val][0] = min(num_to_range[val][0], i)
                 num_to_range[val][1] = max(num_to_range[val][1], i)
                 num_to_range[val][2] = min(num_to_range[val][2], j)
                 num_to_range[val][3] = max(num_to_range[val][3], j)
+        # print(num_to_range)
 
         m = len(grids)
         n = len(grids[0])

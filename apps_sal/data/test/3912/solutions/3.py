@@ -37,7 +37,7 @@ else:
         for x in charPair[indice: int(indice + ((lenPalindrome - 1) / 2))]:
             String2 += x
         String2 += charImpair[i]
-        for x in range(indice + int(((lenPalindrome - 1) / 2)) - 1, indice - 1, -1):
+        for x in range(indice + int(((lenPalindrome - 1) / 2)) - 1, indice - 1, -1):  # charPair[i + int(((lenPalindrome-1)/2))-1: i-1 :-1]:
             String2 += charPair[x]
         Palin.append(String2)
 

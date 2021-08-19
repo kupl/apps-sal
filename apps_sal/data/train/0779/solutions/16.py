@@ -1,3 +1,5 @@
+# cook your dish here
+#from decimal import Decimal
 t = int(input())
 while(t > 0):
     n = int(input())

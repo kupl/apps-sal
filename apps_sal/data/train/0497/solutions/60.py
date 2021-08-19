@@ -6,6 +6,8 @@ class Solution:
             jobSchedule.append((s, e, p))
         jobSchedule.sort(key=lambda x: (x[0], x[1], -x[2]))
 
+        # print(jobSchedule)
+
         dp = {}
 
         def findNextJob(preE, preI):

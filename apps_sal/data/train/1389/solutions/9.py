@@ -3,6 +3,7 @@ s = []
 for x in range(n):
     a = input()
     a = ' '.join(a.split()[::-1])
+    # print(a)
     pun = ".,:;'"
     b = ""
     for i in a:

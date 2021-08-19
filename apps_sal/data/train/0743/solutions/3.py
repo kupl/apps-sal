@@ -1,3 +1,4 @@
+# cook your dish here
 def hii(a, b):
     if b == 1:
         print('NO')

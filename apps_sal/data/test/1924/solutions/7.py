@@ -1,3 +1,4 @@
+# f_listとf_r_listの要素数は状況に応じて変えよう
 
 MOD = 10**9 + 7
 list_size = 2000003

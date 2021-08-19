@@ -1,5 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, A: List[List[int]]) -> int:
+        # kruskal:
         n = len(A)
         distance_arr = []
         for i in range(n):

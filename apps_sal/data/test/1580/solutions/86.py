@@ -42,6 +42,7 @@ def run():
             seen[i] = 1
             dfs(i, to, seen)
             G.append(i)
+    # print(G)
     print(len(G))
 
 

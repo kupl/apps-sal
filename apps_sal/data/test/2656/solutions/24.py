@@ -1,3 +1,4 @@
+# F - Strivore
 import sys
 MOD = 10**9 + 7
 K = int(input())

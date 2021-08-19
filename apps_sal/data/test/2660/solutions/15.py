@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Tue May 28 22:22:21 2019
 
@@ -16,6 +17,7 @@ B = b
 
 for i in range(1, Q):
     if Q2[i][0] == '1':
+        #        intput
         d, a, b = list(map(int, Q2[i].split()))
         if len(Al) == len(Ar):
             if a < Ar[0]:
@@ -32,7 +34,9 @@ for i in range(1, Q):
             else:
                 heapq.heappush(Ar, a)
         B += (b + C)
+#        print(Al,Ar,a,B,b)
     else:
+        #        output
         ans.append([(-Al[0]), B])
 
 for c in ans:

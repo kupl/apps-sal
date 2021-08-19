@@ -29,10 +29,13 @@ class Solution:
                 return True
             return False
 
+        # type 3
         for u, v in edges3:
             if not union(fathers, u, v):
                 cnt += 1
 
+        #print(3, cnt)
+        # print(fathers)
         def count(fathers, edges):
             cnt = 0
             for u, v in edges:
@@ -44,12 +47,15 @@ class Solution:
             if len(set(fathers[1:])) > 1:
                 return -1
             return cnt
+        # Alice
         a = count(fathers[:], edges1)
+        #print('alice', a)
         if a == -1:
             return -1
         else:
             cnt += a
         b = count(fathers[:], edges2)
+        #print('bob', b)
         if b == -1:
             return -1
         else:

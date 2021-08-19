@@ -18,6 +18,8 @@ class Solution:
         dp = defaultdict(int)
 
         def findGold(mNow, i0, j0, goldNow):
+            # if mNow in dp:
+            #     return dp[mNow]
             subAns = goldNow
             for k in range(4):
                 i1 = i0 + di[k]

@@ -24,5 +24,6 @@ class Solution:
                 else:
                     max_length = max(max_length, count)
                     count = 0
+        # deal with the end
         max_length = max(max_length, count)
         return max_length

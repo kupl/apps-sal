@@ -1,3 +1,5 @@
+# A - Favorite Sound
+# https://atcoder.jp/contests/abc120/tasks/abc120_a
 
 a, b, c = list(map(int, input().split()))
 

@@ -91,6 +91,7 @@ class Family:
             return len(child.parents) < 2 or len(male) | len(female) == 1
         if len(undetermined) < len(child.parents):
             return self._set_gender_of(undetermined[0], len(female) - len(male))
+        # Two possibilities: try one just to see if it leads to a gender-inconsistency
         self.transaction.start()
         success = self._set_gender_of(undetermined[0], 1)
         self.transaction.end(0)

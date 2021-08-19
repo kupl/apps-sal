@@ -1,3 +1,5 @@
+# math
+# time:O(sqr(N))
 '''
 x + (x+1) + (x+2)+...+ k terms = N
 kx + k*(k-1)/2 = N ->

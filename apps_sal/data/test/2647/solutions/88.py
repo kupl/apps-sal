@@ -8,9 +8,10 @@ c = 0
 
 for i in range(h):
     for j in range(w):
-        if s[i][j] == "
-        c += 1
+        if s[i][j] == "#":
+            c += 1
 
+# DFS
 q = deque([[0, 0]])
 dist = [[10000] * w for _ in range(h)]
 dist[0][0] = 0

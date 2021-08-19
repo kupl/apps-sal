@@ -36,13 +36,16 @@ for length in range(2, len_string + 1):
             num_subsequences_so_far[i + 1] + \
             last_num_subsequences_so_far[i + 1] - \
             num_subsequences_for_this_letter_so_far[val_of_letter(string[i])]
+        # print(length, i, num_subsequences_so_far[i], num_subsequences_so_far[i+1], last_num_subsequences_so_far[i+1], num_subsequences_for_this_letter_so_far[val_of_letter(string[i])])
         num_subsequences_for_this_letter_so_far[val_of_letter(string[i])] = \
             last_num_subsequences_so_far[i + 1]
+    # print()
 
     num_subsequences.append(num_subsequences_so_far[0])
     for i in range(len_string):
         last_num_subsequences_so_far[i] = num_subsequences_so_far[i]
 
+# print(num_subsequences)
 size = 0
 cost = 0
 for i in range(len_string, -1, -1):

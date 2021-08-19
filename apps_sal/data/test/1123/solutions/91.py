@@ -5,7 +5,7 @@ def resolve():
     cnt = [0] * (K + 1)
 
     for g in range(K, 0, -1):
-        cnt[g] = pow(K // g, N, MOD)
+        cnt[g] = pow(K // g, N, MOD)  # (K//g)**N
         gg = g * 2
         while gg <= K:
             cnt[g] -= cnt[gg]

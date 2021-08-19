@@ -1,6 +1,7 @@
 N = int(input())
 A = [int(_) for _ in input().split()]
 
+# positive
 pos_count = 0
 sign = 1
 cumsum = 0
@@ -11,6 +12,7 @@ for a in A:
         cumsum = sign
     sign *= -1
 
+# negative
 neg_count = 0
 sign = -1
 cumsum = 0

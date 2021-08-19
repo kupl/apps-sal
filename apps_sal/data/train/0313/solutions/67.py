@@ -7,15 +7,15 @@ class Solution:
             curr_m = 0
             curr_k = 0
             for flower in bloomDay:
-                if flower <= cap:
-                    curr_k += 1
+                if flower <= cap:  # 1 # 10 # 3 # 10 # 2
+                    curr_k += 1  # 1 # 1 # 1
                     if curr_k == k:
-                        curr_m += 1
-                        curr_k = 0
-                    if curr_m >= m:
+                        curr_m += 1  # 1 # 2 # 3
+                        curr_k = 0  # 0 # 0
+                    if curr_m >= m:  # F # F
                         return True
                 else:
-                    curr_k = 0
+                    curr_k = 0  # 0 # 0
             return False
 
         left, right = 1, max(bloomDay)

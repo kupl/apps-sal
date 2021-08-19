@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 
 S = list(input())
 S = list(map(int, S))[::-1]

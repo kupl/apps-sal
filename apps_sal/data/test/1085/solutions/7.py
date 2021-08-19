@@ -20,7 +20,19 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
 alf = list("abcdefghijklmnopqrstuvwxyz")
 ALF = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+#import numpy as np
 INF = float("inf")
+#d = defaultdict(int)
+#d = defaultdict(list)
+#N = int(input())
+#A = list(map(int,input().split()))
+#S = list(input())[:-1]
+# S.remove("\n")
+#N,M = map(int,input().split())
+#S,T = map(str,input().split())
+#A = [int(input()) for _ in range(N)]
+#S = [list(input())[:-1] for _ in range(N)]
+#A = [list(map(int,input().split())) for _ in range(N)]
 N = int(input())
 
 

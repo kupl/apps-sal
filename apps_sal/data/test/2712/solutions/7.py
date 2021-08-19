@@ -15,4 +15,5 @@ def __starting_point():
     print(*ans, sep='\n')
 
 
+#"{} {} {}".format(maxele,minele,minele)
 __starting_point()

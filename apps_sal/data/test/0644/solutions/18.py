@@ -26,6 +26,7 @@ for _ in range(int(input())):
     else:
         p = int(s[4:])
         ad.append([0, p])
+    # print(ad,res,k)
 if res > 2**32 - 1:
     print('OVERFLOW!!!')
 else:

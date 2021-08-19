@@ -68,6 +68,8 @@ def solve(p, q, r):
             if (p1 != p2):
                 continue
 
+            # print(p1, ", ", p2)
+
             res1 = evals(p1, p)
             res2 = evals(p2, q)
             if (res1 == q and res2 == r):

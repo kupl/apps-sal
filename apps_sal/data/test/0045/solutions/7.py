@@ -6,6 +6,7 @@ inf = 1 << 30
 def solve():
     n, k = map(int, input().split())
 
+    # list divisors of n
     a = []
     b = []
 
@@ -24,6 +25,8 @@ def solve():
         divs = a + b[1:]
     else:
         divs = a + b
+
+    # main process
 
     d_m = -1
     need = k * (k + 1) // 2

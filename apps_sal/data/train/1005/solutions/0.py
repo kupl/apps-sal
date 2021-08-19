@@ -15,6 +15,7 @@ while tovisit:
         visited.add(v)
         news = edges[v] - visited
         tovisit.extend([(v, x) for x in news])
+# print path
 
 Q = eval(input())
 for _ in range(Q):
@@ -27,6 +28,7 @@ for _ in range(Q):
         i += 1
     s = path[a][i - 1:] + path[b][i:]
 
+    # print s
     if q == "C":
         s = sorted([nodes[i] for i in s])
         d = s[-1] - s[0]
@@ -40,3 +42,4 @@ for _ in range(Q):
             M = max(M, nodes[s[i]])
             m = min(m, nodes[s[i]])
         print(M - m)
+    # print M[(s, l)] - m[(s, l)]

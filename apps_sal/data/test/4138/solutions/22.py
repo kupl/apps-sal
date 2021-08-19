@@ -34,6 +34,7 @@ def solve(k):
             ans, r = mid, mid - 1
         else:
             l = mid + 1
+    # print('[log] ans = %d len = %d' % (ans, calc(ans)))
     k = k - calc(ans - 1)
     return ds(k)
 

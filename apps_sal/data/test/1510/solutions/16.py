@@ -3,6 +3,8 @@ def main():
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
 
+    # a>>>>>
+    # b<<<<<
     def f(m):
         ans = 0
         for i in a:

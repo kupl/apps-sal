@@ -13,11 +13,15 @@ for i in range(n + 1):
             if col[i] != col[j] and r[i] < r[j]:
                 adj[j] = abs(i - j)
     mat.append(adj)
+# print(*mat, sep='\n')
 
 mem = [{} for i in range(n + 1)]
+# print(mem)
 
 
 def get(s, k):
+    # print(s,k)
+    # print(mem)
     if mem[s].get(k):
         return mem[s].get(k)
     if r[s] >= k:
@@ -36,6 +40,8 @@ def get(s, k):
         else:
             mem[s][k] = INF
     return mem[s].get(k)
+
+# print(mem)
 
 
 ans = get(n, k)

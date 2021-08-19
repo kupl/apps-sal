@@ -9,6 +9,7 @@ class DinnerPlates:
         self.rightmostset = set()
 
     def push(self, val: int) -> None:
+        # print(\"leftmost:\", self.leftmost)
         idx = self.leftmost[0]
         if idx >= len(self.stack):
             self.stack.append([val])
@@ -23,8 +24,10 @@ class DinnerPlates:
         if idx * (-1) not in self.rightmostset:
             heapq.heappush(self.rightmost, idx * (-1))
             self.rightmostset.add(idx * (-1))
+        # print(self.stack)
 
     def pop(self) -> int:
+        # print(\"rightmost:\", self.rightmost)
         if len(self.rightmost) == 0:
             return -1
         idx = self.rightmost[0] * (-1)
@@ -35,6 +38,7 @@ class DinnerPlates:
         if idx not in self.leftmostset:
             heapq.heappush(self.leftmost, idx)
             self.leftmostset.add(idx)
+        # print(self.stack)
         return val
 
     def popAtStack(self, index: int) -> int:
@@ -47,4 +51,12 @@ class DinnerPlates:
         if index not in self.leftmostset:
             heapq.heappush(self.leftmost, index)
             self.leftmostset.add(index)
+        # print(self.stack)
         return val
+
+
+# Your DinnerPlates object will be instantiated and called as such:
+# obj = DinnerPlates(capacity)
+# obj.push(val)
+# param_2 = obj.pop()
+# param_3 = obj.popAtStack(index)

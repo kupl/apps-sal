@@ -1,3 +1,4 @@
+# cook your dish here
 def func(arr, k):
     sumi = 0
     for j in range(k):

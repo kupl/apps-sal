@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 x, y = list(map(int, input().split()))
 
 a = [1, 3, 5, 7, 8, 10, 12]

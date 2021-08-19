@@ -4,6 +4,7 @@ N, M = list(map(int, input().split()))
 A = list(map(int, input().split()))
 P = int(1e9 + 7)
 sumA = sum(A)
+# 値が大きくmod Pな時
 
 
 def comb(n, r):

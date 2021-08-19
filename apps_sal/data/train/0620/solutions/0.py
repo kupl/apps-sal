@@ -30,6 +30,7 @@ for _ in range(int(input())):
     lo, hi = 0, n
     while lo <= hi:
         mid = (lo + hi) // 2
+        # print(mid,lo,hi)
         if check(mid):
             res = mid
             lo = mid + 1

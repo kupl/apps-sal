@@ -1,4 +1,4 @@
-def l(n):
+def l(n):  # length of 112123...1234567891011..n
     s = 0
     for i in range(20):
         o = 10**i - 1
@@ -8,7 +8,7 @@ def l(n):
     return s
 
 
-def bs(k):
+def bs(k):  # binary search n so l(n) < k
     n = 0
     for p in range(63, -1, -1):
         if l(n + 2**p) < k:
@@ -16,7 +16,7 @@ def bs(k):
     return n
 
 
-def num(n):
+def num(n):  # return s[n-1] where s = '1234567891011..n'
     if n < 10:
         return n
     for i in range(1, 19):

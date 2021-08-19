@@ -11,3 +11,14 @@ class Solution:
                     minn = min(minn, 1 + dp[i - j])
             dp[i] = minn
         return dp[amount] if dp[amount] != float('inf') else -1
+#         if amount==0:
+#             return 0
+#         if amount<0:
+#             return -1
+#         minn=float('inf')
+#         for i in coins:
+#             count=self.coinChange(coins, amount-i)
+#             if count!=-1:
+#                 minn=min(count+1, minn)
+
+#         return minn if minn!=float('inf') else -1

@@ -21,10 +21,13 @@ s = set()
 for i in range(n):
     insert(a[i], d, i, s)
 fin = []
+# print(d)
+# print(s)
 for i in d.keys():
     for j in d[i]:
         fin.append([j, i])
 fin.sort()
+# print(fin)
 print(len(fin))
 for i in fin:
     print(i[1], end=' ')

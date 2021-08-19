@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -15,11 +16,14 @@ import itertools
 import sys
 
 N, T = list(map(int, input().split()))
+#
+# N, T = 200000, 1000000000
 
 ta = []
 for i in range(N):
     a, t = list(map(int, input().split()))
     ta.append((t, a, i + 1))
+    # ta.append((10000, 200000, i+1))
 
 ta.sort()
 

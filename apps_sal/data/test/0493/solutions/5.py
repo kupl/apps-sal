@@ -23,6 +23,7 @@ for i in range(n - 1, -1, -1):
     elif s[i] == 'R':
         l[i] = -1
         index = -1
+    #print('i='+str(i)+' l='+str(l[i])+' r='+str(r[i]))
     if (l[i] < 0 and r[i] < 0) or (l[i] >= 0 and r[i] >= 0 and l[i] - i == i - r[i]):
         result += 1
 print(result)

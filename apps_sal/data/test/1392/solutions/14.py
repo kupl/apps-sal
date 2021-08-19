@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n, k = tuple(map(int, input().split()))
 a = []

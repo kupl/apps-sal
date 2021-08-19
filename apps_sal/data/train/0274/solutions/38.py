@@ -1,3 +1,5 @@
+# can get a o(n logn runtime)
+# use min and max heaps
 
 from heapq import *
 from collections import Counter

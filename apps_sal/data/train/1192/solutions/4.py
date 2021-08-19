@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 
 
@@ -10,6 +11,7 @@ def solveit(A, n):
             G.append(1)
         else:
             G.append(0)
+    # print(G)
     pos = -1
     for i in range(n):
         if (G[i] == 1):

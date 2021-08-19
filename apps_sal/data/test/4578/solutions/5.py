@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 N, X = map(int, input().split())
 min_req = 0

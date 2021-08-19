@@ -4,3 +4,5 @@ def sum_mix(arr):
         i = int(i)
         c += i
     return c
+
+    # your code here

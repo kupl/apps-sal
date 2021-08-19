@@ -19,5 +19,6 @@ class Solution:
                 if dec[0] < start_pos:
                     dec.popleft()
             ans = max(ans, i - start_pos + 1)
+            # print(i,nums[i], inc,dec, start_pos, ans)
 
         return ans

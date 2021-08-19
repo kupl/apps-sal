@@ -15,3 +15,9 @@ class SubrectangleQueries:
             if self.matchesPatch(row, col, patch):
                 return patch[-1]
         return self.rect[row][col]
+
+
+# Your SubrectangleQueries object will be instantiated and called as such:
+# obj = SubrectangleQueries(rectangle)
+# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
+# param_2 = obj.getValue(row,col)

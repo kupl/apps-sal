@@ -8,6 +8,7 @@ ans = [[] for i in range(n)]
 for i in range(2 * n):
     ans[arr[i] - 1].append(i)
 
+# print(ans)
 an = 0
 for i in range(n):
     if i == 0:

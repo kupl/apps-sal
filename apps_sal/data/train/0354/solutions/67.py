@@ -1,5 +1,6 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
+        # dp[i][j][k]: after ith throw, the number of sequences which end with j (j in [0,5]) and continous k times (k in [1,15])
         dp = [[[0] * 16 for _ in range(6)] for _ in range(n)]
         mod = 10**9 + 7
         for j in range(6):

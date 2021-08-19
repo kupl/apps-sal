@@ -18,8 +18,8 @@ def find_missing_number(sequence):
     pattern = list(range(1, len(data) + 1))
 
     if pattern == data:
-        return 0
+        return 0                   # all is good
     else:
         for pair in zip(pattern, data):
             if pair[0] != pair[1]:
-                return pair[0]
+                return pair[0]        # here's the missing number

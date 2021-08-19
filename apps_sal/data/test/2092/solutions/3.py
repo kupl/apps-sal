@@ -57,6 +57,8 @@ def solve(M, N, K, T, A, B):
     return len([a for a in A if a >= ub])
 
 
+###############################################################################
+
 DEBUG = 'DEBUG' in os.environ
 
 

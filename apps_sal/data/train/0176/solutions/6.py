@@ -27,6 +27,7 @@ class Solution:
 
             if sorted(s1) != sorted(s2[left:right + 1]):
                 return putindictt(s1, left, right, False)
+            # if collections.Counter(s1) != collections.Counter(s2[left:right+1]): return False
 
             if s2[left:right + 1] == s1:
                 return putindictt(s1, left, right, True)

@@ -21,6 +21,7 @@ AB = [list(map(int, sys.stdin.readline().split())) for _ in range(Q)]
 N += 2
 X = [X[0]] + X + [X[-1]]
 X = np.array(X, dtype=int)
+# dp[d][i]: i番のホテルから(2^d)日で何個右までいけるか
 dp = np.zeros((N.bit_length() + 1, N), dtype=int)
 dp[0] = np.searchsorted(X, X + L, side="right") - 1
 for d in range(1, N.bit_length() + 1):

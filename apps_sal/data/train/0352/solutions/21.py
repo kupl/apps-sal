@@ -3,6 +3,7 @@ class Solution:
         if not words:
             return 0
         words.sort(key=len)
+        # print(words)
 
         def isNeighbor(a, b):
             if len(a) + 1 != len(b):
@@ -23,6 +24,7 @@ class Solution:
 
         dp = [1] * len(words)
         ans = 0
+        # longest so far
         for i in range(len(words)):
             for j in range(i):
                 if len(words[j]) + 1 < len(words[i]):
@@ -33,4 +35,5 @@ class Solution:
                     if isNeighbor(words[j], words[i]):
                         dp[i] = max(dp[i], dp[j] + 1)
             ans = max(ans, dp[i])
+        # print(dp)
         return ans

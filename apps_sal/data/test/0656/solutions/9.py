@@ -38,6 +38,7 @@ else:
     num_ = num
     stretches_ = stretches[:-1]
     k_ = k
+    # print(num, stretches, k)
 
     if len(stretches) > 0:
         num += (len(stretches)) * 2
@@ -51,6 +52,7 @@ else:
 
         if not last in stretches:
             num += 1
+    # print(num_, stretches_, k_)
 
     if len(stretches_) > 0:
         num_ += (len(stretches_) + 1) * 2

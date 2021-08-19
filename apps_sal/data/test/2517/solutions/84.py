@@ -1,4 +1,7 @@
+# coding: utf-8
+# Your code here!
 
+# 保存
 import heapq
 import sys
 import itertools
@@ -26,22 +29,29 @@ for _ in range(M):
 
 made = []
 
+# print(q)
 for start in r:
     root = [10**9] * N
     q = [[0, start - 1]]
-    heapq.heapify(q)
+    heapq.heapify(q)  # costとnode
     while q:
         temp = heapq.heappop(q)
+        # print(temp)
         if root[temp[1]] == 10**9:
             bfs(temp[0], temp[1])
     made.append(root)
+# print(made)
 
 ans = 10**9
 for order in itertools.permutations([i for i in range(len(r))]):
+    # print(order)
     temp = 0
     for i in range(len(order) - 1):
         fro = r[order[i]]
         aft = r[order[i + 1]]
+        # print("YES")
+        # print(order[i]-1,order[i+1]-1)
+        # print(root[order[i]-1][0])
         temp += abs(made[order[i]][aft - 1] - made[order[i]][fro - 1])
     ans = min(ans, temp)
 print(ans)

@@ -8,7 +8,7 @@ class Solution:
             num = i
             ctr = 0
             while num != 1:
-                if num % 2 != 0:
+                if num % 2 != 0:  # odd
                     num = (num * 3) + 1
                 else:
                     num = num / 2

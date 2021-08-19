@@ -1,3 +1,4 @@
+# 829
 class Solution:
     def maxDistance(self, arr: List[int], m: int) -> int:
         arr.sort()
@@ -19,6 +20,7 @@ class Solution:
 
         while low <= high:
             cur = int((low + high) / 2)
+            #print(low, high, cur, place(cur))
             if place(cur):
                 low = cur + 1
             else:

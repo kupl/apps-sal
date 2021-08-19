@@ -19,6 +19,7 @@ def main():
     for stop, b in enumerate(s):
         if b != a:
             le = stop - start
+            # tail=9-(ord(b)-ord(a))%10
             if ma < le:
                 ma = le
                 l.clear()

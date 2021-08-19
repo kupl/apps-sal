@@ -11,6 +11,7 @@ else:
             a += 2**i
         k //= 2
         i += 1
+    # print(a)
     if a == 0:
         ans = []
         for i in range(2**m):
@@ -24,6 +25,7 @@ else:
         ans[0] = b
         s = {a, b}
         idx = 0
+        # print(ans)
         for i in range(2**m):
             if i not in s:
                 ans[idx + 1] = i

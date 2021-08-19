@@ -4,6 +4,7 @@ def two_highest(arg1):
     elif len(set(arg1)) == 1:
         return arg1
     elif len(set(arg1)) == 2:
+        #arg2 = arg1.sort(reverse = True)
         return arg1
     elif len(arg1) == 3 or len(arg1) > 3:
         x = []

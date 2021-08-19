@@ -9,6 +9,8 @@ def get_input():
 sy, sm, sd = get_input()
 ey, em, ed = get_input()
 
+#start = date (sy,sm,sd)
+#end = date (ey,em,ed)
 
 end = date(sy, sm, sd)
 start = date(ey, em, ed)

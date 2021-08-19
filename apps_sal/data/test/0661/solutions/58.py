@@ -1,4 +1,5 @@
 def xor_matching(M, K):
+    # 0と1はコーナーケースっぽい
     if M == 0:
         return [0, 0] if K == 0 else [-1]
     if M == 1:

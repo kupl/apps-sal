@@ -1,4 +1,5 @@
 MOD = 10**9 + 7
+# 0 to q no i乗和
 tab = []
 for i in range(401):
     now = []
@@ -28,6 +29,8 @@ for i in range(n):
         for fr in range(c + 1 - step):
             ndp[fr + step] += dp[fr] * val % MOD
             ndp[fr + step] %= MOD
+            # print(ndp)
     dp = ndp[:]
     ndp = [0 for i in range(c + 1)]
+    # print(dp)
 print(dp[-1])

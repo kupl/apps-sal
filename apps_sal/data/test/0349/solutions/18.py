@@ -1,3 +1,4 @@
+# http://codeforces.com/contest/1162/problem/B
 '''
     Author - Subhajit Das
     University of Engineering and Management, Kolkata

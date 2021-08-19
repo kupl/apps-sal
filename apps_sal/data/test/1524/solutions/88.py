@@ -27,9 +27,11 @@ if os.getenv("LOCAL"):
 INF = float("inf")
 IINF = 10 ** 18
 MOD = 10 ** 9 + 7
+# MOD = 998244353
 
 S = _S()
 S += 'E'
+# print(S)
 
 ans = np.zeros(len(S) + 1, dtype='int')
 bc = S[0]
@@ -41,11 +43,15 @@ for i in range(1, len(S)):
         count += 1
         continue
     else:
+        # RRRL
         if cc == 'L':
+            # 切り上げ
             ans[i - 1] += math.ceil(count / 2)
+            # 切り捨て
             ans[i] += math.floor(count / 2)
             count = 1
             bc = 'L'
+        # LLLR
         else:
             ans[i - count] += math.ceil(count / 2)
             ans[i - count - 1] += math.floor(count / 2)

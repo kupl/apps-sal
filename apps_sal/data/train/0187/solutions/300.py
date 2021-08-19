@@ -9,6 +9,7 @@ class Solution:
         cur = 0
 
         while t <= n or waiting > 0:
+            # print('iter', t)
             if t <= n:
                 waiting += customers[t - 1]
 
@@ -17,6 +18,7 @@ class Solution:
             cur -= runningCost
 
             if cur > ans:
+                # print('new prof', cur)
                 ans = cur
                 max_t = t
 

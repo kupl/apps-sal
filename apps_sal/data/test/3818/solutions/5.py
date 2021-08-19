@@ -51,6 +51,11 @@ def solve(n, links):
         farther[mx][0] += 1
         farther[mx][1] = max(farther[mx][1], mn)
 
+    # print(v1, v2)
+    # print(distances1)
+    # print(distances2)
+    # print(farther)
+
     m = n - 2
     max_smaller_d = 0
     for d in sorted(list(farther.keys()), reverse=True):

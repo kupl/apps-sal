@@ -42,10 +42,13 @@ def main():
                 change[i] = 0
     MIN = ans
     index = 0
+    # print(ans)
     collect = [[] for i in range(n)]
     for x in range(len(change)):
         collect[change[x]] += [x]
+    # print(collect)
 
+    # print(ans,pos,neg)
     for s in range(1, n):
         ans -= abs(A[n - s] - n + 1)
         ans += abs(A[n - s] - 0)
@@ -60,10 +63,11 @@ def main():
 
         pos -= len(collect[s])
         neg += len(collect[s])
+        # print(ans,pos,neg)
         if ans < MIN:
             MIN = ans
             index = s
     print(MIN, index)
 
-
+    # brutal(A)
 main()

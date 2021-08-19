@@ -9,6 +9,7 @@ class Solution:
                     continue
                 if text[i:j] in string_set:
                     continue
+                # print(text[i:j])
                 string_set.add(text[i:j])
                 s1 = text[i:i + (j - i) // 2]
                 s2 = text[i + (j - i) // 2:j]

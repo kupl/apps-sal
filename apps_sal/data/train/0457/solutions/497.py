@@ -1,5 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        # BFS
         from collections import deque
         q = deque()
         visited = set()

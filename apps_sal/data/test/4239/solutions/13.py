@@ -6,5 +6,6 @@ dp[0] = 0
 for i in range(1, N + 1):
     for j in lst:
         if j <= i:
+            # print(i, j, i-j)
             dp[i] = min(dp[i], dp[i - j] + 1)
 print(dp[-1])

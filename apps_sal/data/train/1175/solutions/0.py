@@ -28,3 +28,5 @@ for _ in range(int(input())):
         print("Nova's gonna kill me")
     else:
         print("YESS(sunglass emo)")
+
+# cook your dish here

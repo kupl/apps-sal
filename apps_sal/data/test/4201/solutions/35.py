@@ -9,8 +9,8 @@ for i in range(2**H):
             for l in range(W):
                 if (i >> k) & 1:
                     if (j >> l) & 1:
-                        if c[k][l] == "
-                        cnt += 1
+                        if c[k][l] == "#":
+                            cnt += 1
         if cnt == K:
             S += 1
 print(S)

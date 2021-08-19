@@ -1,14 +1,19 @@
+# https://atcoder.jp/contests/abc160/submissions/15902850
+# を配列アクセスが減るように
 
 def rerooting(n, edges, identity, merge, add_node):
+    # 全方位木 dp
+    # 参考: https://qiita.com/keymoon/items/2a52f1b0fb7ef67fb89e
     G = [[] for _ in range(n)]
-    G_idxs = [[] for _ in range(n)]
+    G_idxs = [[] for _ in range(n)]  # 自分を指すノードのインデックス
     for a, b in edges:
         G_idxs[a].append(len(G[b]))
         G_idxs[b].append(len(G[a]))
         G[a].append(b)
         G[b].append(a)
+    # step 1
     parents = [0] * n
-    order = []
+    order = []  # 行きがけ順
     stack = [0]
     parents[0] = -1
     while stack:
@@ -20,6 +25,7 @@ def rerooting(n, edges, identity, merge, add_node):
                 stack.append(u)
                 parents[u] = v
     subtree_res = [[0] * len(Gv) for Gv in G]
+    # 下から登る
     for v in order[:0:-1]:
         p = parents[v]
         result = identity
@@ -30,6 +36,8 @@ def rerooting(n, edges, identity, merge, add_node):
                 result = merge(result, subtree_res_v_i)
         idx_p2v = G_idxs[v][parent_idx]
         subtree_res[p][idx_p2v] = add_node(result, v)
+    # step 2
+    # 上から降りる
     results = [0] * n
     for v in order:
         subtree_res_v = subtree_res[v]
@@ -50,6 +58,7 @@ def rerooting(n, edges, identity, merge, add_node):
 
 class Combination:
     def __init__(self, n_max, mod=10**9 + 7):
+        # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -63,7 +72,7 @@ class Combination:
             facinv.append(f)
         facinv.reverse()
 
-    def __call__(self, n, r):
+    def __call__(self, n, r):  # self.C と同じ
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
 

@@ -1,6 +1,7 @@
 
 N = int(input())
 a = list(map(int, input().split()))
+# >0
 r = 0
 res = 0
 for i in range(N):
@@ -16,6 +17,7 @@ for i in range(N):
             r -= sa
     res += sa
 
+# <0
 r = 0
 res2 = 0
 for i in range(N):

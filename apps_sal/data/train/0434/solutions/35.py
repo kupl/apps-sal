@@ -1,5 +1,8 @@
+# 23:30
+# 00:43
 class Solution:
     def longestSubarray(self, xs: List[int]) -> int:
+        # DP: find optimal solution ending at i and then
         n = len(xs)
 
         if n < 2:

@@ -10,15 +10,19 @@ class Solution:
         hm1sq = Counter(nums1sq)
         hm2sq = Counter(nums2sq)
 
+        # print(hm1sq, hm2sq, nums1prod, nums2prod)
+
         trip = 0
         for i in range(n):
             for j in range(i + 1, n):
                 if nums1prod[i][j] in hm2sq:
+                    # print(\"1\", hm2sq[nums1prod[i][j]], nums1prod[i][j])
                     trip += hm2sq[nums1prod[i][j]]
 
         for i in range(m):
             for j in range(i + 1, m):
                 if nums2prod[i][j] in hm1sq:
+                    # print(\"2\",hm1sq[nums2prod[i][j]], nums2prod[i][j])
                     trip += hm1sq[nums2prod[i][j]]
 
         return trip

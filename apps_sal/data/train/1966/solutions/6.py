@@ -4,6 +4,7 @@ class Solution:
         m, n = len(mat), len(mat[0])
 
         dp = [[0 for j in range(n)] for i in range(m)]
+        # width of contnuous ones in row i and ends at mat[i][j]
 
         for i in range(m):
             for j in range(n):

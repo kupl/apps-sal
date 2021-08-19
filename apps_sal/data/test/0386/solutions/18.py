@@ -13,10 +13,10 @@ def inverse(str):
 
 min_ = -2000000000
 max_ = 2000000000
-n = int(input())
+n = int(input())  # tipo por defecto es cadena
 for i in range(n):
     sign, num, yn = input().split()
-    num = int(num)
+    num = int(num)  # se puede modificar o es inmutable
     if (yn == "N"):
         sign = inverse(sign)
     if(sign == "<="):

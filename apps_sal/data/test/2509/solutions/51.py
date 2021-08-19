@@ -1,3 +1,5 @@
+# bはKより真に大きい、N以下
+# aはK以上
 
 N, K = list(map(int, input().split()))
 

@@ -20,6 +20,7 @@ class Solution:
             if req in seen:
                 ans = min(ans, i - seen[req])
             seen[v] = i
+        # print(total)
         if ans == len(nums):
             return -1
 

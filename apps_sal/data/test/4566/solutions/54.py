@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 N, M = map(int, input().split())
 load_num = [0] * N

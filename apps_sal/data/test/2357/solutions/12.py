@@ -26,6 +26,9 @@ def solve(N, A):
     return best
 
 
+###############################################################################
+# AUXILIARY FUNCTIONS
+
 DEBUG = 'DEBUG' in os.environ
 
 

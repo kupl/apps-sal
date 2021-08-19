@@ -39,4 +39,12 @@ if len(s1) % 2 == 0:
 else:
     for i in range(0, d - 1):
         o1.append(ot[d - i - 2])
+# for i in range(0, d-1):
+#    o1.append(ot[d-i-1])
+# print(p)
+# print(np)
+# print(ot)
+# print(ot)
+# print(o)
+# print(o1)
 print(o + ''.join(o1))

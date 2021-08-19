@@ -6,6 +6,7 @@ class Solution:
         def getSquareNumbers(n: int) -> List[int]:
             if n in lookup:
                 return lookup[n]
+            # less than or equal to n
             lookup[n] = [index * index for index in range(1, 1 + math.floor(math.sqrt(n)))]
             return lookup[n]
 

@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 import numpy as np
 
@@ -38,3 +39,4 @@ for _ in range(Q):
         answer.append('NO')
 
 print(('\n'.join(answer)))
+# 58

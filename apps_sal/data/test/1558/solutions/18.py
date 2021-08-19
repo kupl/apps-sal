@@ -8,6 +8,7 @@ for i in range(n):
     Sum += a
     Exam.append([a, b])
 Exam.sort(key=operator.itemgetter(1))
+# print(Exam)
 i = 0
 while Sum < Goal and i < n:
     d = min(Goal - Sum, r - Exam[i][0])

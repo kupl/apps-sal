@@ -1,3 +1,4 @@
+# A
 def main():
     n = int(input())
     f, r = 0, 0

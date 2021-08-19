@@ -12,8 +12,10 @@ class Solution:
                 c, d = intervals[j]
                 if a != c or b != d:
                     if a >= c and b <= d:
+                        # remove [a, b]
                         remove_indices.add(i)
                         break
                     elif c >= a and d <= b:
+                        # remove [c, d]
                         remove_indices.add(j)
         return len(intervals) - len(remove_indices)

@@ -1,3 +1,4 @@
+# cook your dish here
 def l(a, b):
     if(b == 0):
         return a

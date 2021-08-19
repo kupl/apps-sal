@@ -24,6 +24,8 @@ for i, x in enumerate(a):
                 s.pop()
             s += [(cur, i)]
     acc += back
+    #print(i,x,acc, back, top, cur)
+    # print(s)
 
 
 print(acc)

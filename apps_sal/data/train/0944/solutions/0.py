@@ -1,3 +1,4 @@
+# cook your dish here
 from sys import stdin, stdout
 from collections import defaultdict
 for _ in range(int(stdin.readline())):
@@ -14,11 +15,13 @@ for _ in range(int(stdin.readline())):
             odd_val += 1
         prefix_even[i] = even_val
         prefix_odd[i] = odd_val
+    # print(prefix_odd,prefix_even)
     prefix_sum = [0] * n
     s = 0
     for i in range(n):
         s += lst[i]
         prefix_sum[i] = s
+    # print(prefix_sum)
     dict = {}
     count = {}
     for i in range(n):
@@ -28,6 +31,7 @@ for _ in range(int(stdin.readline())):
         else:
             dict[lst[i]] = i
             count[lst[i]] += 1
+    # print(dict)
     graph = defaultdict(list)
     for i in range(n):
         graph[lst[i]].append(i)
@@ -39,16 +43,21 @@ for _ in range(int(stdin.readline())):
                 index2 = graph[i][j]
                 index1 = prev
                 prev = index2
+                # print(index1,index2)
                 if i % 2 == 0:
                     val = prefix_even[index2] - prefix_even[index1] - 1
+                    # print(val)
                     if val % 2 == 0:
                         temp_sum = prefix_sum[index2] - prefix_sum[index1] - i
+                        # print(temp_sum)
                         if temp_sum > max_sum:
                             max_sum = temp_sum
                 else:
                     val = prefix_odd[index2] - prefix_odd[index1] - 1
+                    # print(val)
                     if val % 2 != 0:
                         temp_sum = prefix_sum[index2] - prefix_sum[index1] - i
+                        # print(temp_sum)
                         if temp_sum > max_sum:
                             max_sum = temp_sum
 

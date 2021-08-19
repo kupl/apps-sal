@@ -17,8 +17,10 @@ def main():
         print((0))
         return
 
+    # 横線の決め方を全探索
     ans = 10**5
     for pattern in range(2**(H - 1)):
+        # 初期化
         impossible = False
         x = 0
         ly = bin(pattern).count("1")
@@ -29,13 +31,16 @@ def main():
             if (pattern >> i) & 1:
                 line += 1
 
+        # 各列の値を加算していく
         count = [0] * (ly + 1)
         for col in zip(*y):
+            # Kより大きい値を加算する場合は不成立
             if any(a > K for a in col):
                 impossible = True
                 break
             for i, a in enumerate(col):
                 count[i] += a
+                # 和がKより大きければカット数を増やす
                 if count[i] > K:
                     x += 1
                     count = list(col)

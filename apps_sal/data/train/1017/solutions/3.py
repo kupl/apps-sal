@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for i in range(t):
     a1, a2, a3, a4, a5, p = list(map(int, input().split()))

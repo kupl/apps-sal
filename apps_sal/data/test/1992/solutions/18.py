@@ -1,6 +1,7 @@
+#!/usr/bin/env python3
 n, m, k = map(int, input().split(' '))
-a = map(int, input().split(' '))
-b = map(int, input().split(' '))
+a = map(int, input().split(' '))  # initial app order
+b = map(int, input().split(' '))  # launch order
 
 pos_app_id = {}
 app_id_pos = {}

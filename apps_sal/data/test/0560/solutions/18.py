@@ -1,5 +1,6 @@
 import sys
 my_file = sys.stdin
+#my_file = open("input.txt", "r")
 line = [int(i) for i in my_file.readline().strip("\n").split()]
 r, c = line[0], line[1]
 table = my_file.read().split()

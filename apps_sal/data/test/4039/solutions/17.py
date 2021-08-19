@@ -24,3 +24,4 @@ if z == 0 or r < 0:
     print('NO')
 else:
     print('YES')
+# print(a,b)

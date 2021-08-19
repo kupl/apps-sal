@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 try:
     from typing import List
@@ -36,10 +37,10 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))
-    K = int(next(tokens))
-    t = [int()] * (N)
-    d = [int()] * (N)
+    N = int(next(tokens))  # type: int
+    K = int(next(tokens))  # type: int
+    t = [int()] * (N)  # type: "List[int]"
+    d = [int()] * (N)  # type: "List[int]"
     for i in range(N):
         t[i] = int(next(tokens))
         d[i] = int(next(tokens))

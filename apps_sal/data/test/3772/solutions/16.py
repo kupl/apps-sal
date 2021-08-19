@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def solve(a, b):
     assert 1 <= a and 1 <= b
     if a == 1 and b == 1:

@@ -13,6 +13,7 @@ for i in range(n + 1):
     if A[i] > k:
         break
     while(A[i] + B[j] > k):
+        # print('i: {}, j: {}'.format(i, j))
         j -= 1
     ans = max(ans, i + j)
 print(ans)

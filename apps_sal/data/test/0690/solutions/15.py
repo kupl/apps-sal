@@ -25,5 +25,9 @@ def makeSoroban(n):
     elif len(n) != 0:
         return makeSoroban(n[1:]) + "\n" + makeDigit(int(n[0]))
 
+   # for iter in range(0, len(n)):
+       # output=makeDigit(int(n[iter]))+"\n"
+  #  return output
+
 
 print(makeSoroban(n))

@@ -31,7 +31,7 @@ class Solution:
             return False
 
         def is_valid(nx, ny):
-            return 0 <= nx < l and 0 <= ny < w and grid[nx][ny] != '
+            return 0 <= nx < l and 0 <= ny < w and grid[nx][ny] != '#'
 
         def is_reachable(sx, sy, nsx, nsy, cur_bx, cur_by):
             queue = [(sx, sy)]

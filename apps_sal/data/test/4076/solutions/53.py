@@ -1,5 +1,6 @@
 import math
 a, b, h, m = map(float, input().split())
+# 時針の角度をA
 c = abs(30 * h - 11 / 2 * m)
 ct = math.radians(c)
 cos = math.cos(ct)

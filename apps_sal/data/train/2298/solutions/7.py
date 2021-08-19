@@ -1,3 +1,4 @@
+# D    高橋君と見えざる手 / An Invisible Hand
 N, T = [int(i) for i in input().split(" ")]
 A = [int(i) for i in input().split(" ")]
 Max = 0

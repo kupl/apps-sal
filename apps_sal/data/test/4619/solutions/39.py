@@ -2,6 +2,7 @@ whn = list(map(int, input().split()))
 w, h, n = whn[0], whn[1], whn[2]
 xyas = [list(map(int, input().split())) for _ in range(n)]
 c = [[1 for _ in range(h)] for _ in range(w)]
+# 塗りつぶされた部分を1にしていく
 for xya in xyas:
     x, y, a = xya[0], xya[1], xya[2]
     if a == 1:

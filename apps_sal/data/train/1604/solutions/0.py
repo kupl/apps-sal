@@ -58,10 +58,12 @@ for i in range(n - 2, -1, -1):
 for i in range(n - 2, -1, -1):
     for j in range(m - 2, -1, -1):
         s, e = j, m - SN[i][j] - 1
+        #print(i, j, s, e, 'N')
         dpN[i][j] = getSum(dpD, i + 1, s, e, 'D')
         dpN[i][j] = (dpN[i][j] + dpN[i + 1][j]) % mod
 
         s, e = i, n - SD[i][j] - 1
+        #print(i, j, s, e, 'D')
         dpD[i][j] = getSum(dpN, j + 1, s, e, 'N')
 
     if i != 0:

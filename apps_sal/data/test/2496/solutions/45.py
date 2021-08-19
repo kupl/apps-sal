@@ -25,6 +25,11 @@ def soinsuubunkai(n, l):
     r.append(l[n])
     return set(r)
 
+# l = make_kazu_list(101)
+# print(soinsuubunkai(2, l))
+# print(soinsuubunkai(66, l))
+# print(soinsuubunkai(72, l))
+
 
 def f(n, ais):
     pl = [False] * 1000001

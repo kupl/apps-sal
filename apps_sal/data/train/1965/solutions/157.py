@@ -8,6 +8,7 @@ class Solution:
         self.parent = list(range(n + 1))
         self.size = [1] * (n + 1)
 
+        # union type 3 first
         for u, v in types[2]:
             if self.isConnected(u, v):
                 removed += 1

@@ -41,6 +41,7 @@ def who_is_winner(pieces_position_list):
         grid[rowPosition][columnPosition] = code
         rowPosition = 0
 
+        # check horizontal positions for winner
         for row in range(rows):
             for column in range(columns - 3):
                 if grid[row][column] == 1 and grid[row][column + 1] == 1 and grid[row][column + 2] == 1 and grid[row][column + 3] == 1:
@@ -48,6 +49,7 @@ def who_is_winner(pieces_position_list):
                 elif grid[row][column] == 2 and grid[row][column + 1] == 2 and grid[row][column + 2] == 2 and grid[row][column + 3] == 2:
                     winner = "Yellow"
 
+        # check vertical positions
         for row in range(rows - 3):
             for column in range(columns):
                 if grid[row][column] == 1 and grid[row + 1][column] == 1 and grid[row + 2][column] == 1 and grid[row + 3][column] == 1:
@@ -55,6 +57,7 @@ def who_is_winner(pieces_position_list):
                 elif grid[row][column] == 2 and grid[row + 1][column] == 2 and grid[row + 2][column] == 2 and grid[row + 3][column] == 2:
                     winner = "Yellow"
 
+        # check left vertical positions
         for row in range(3, rows):
             for column in range(columns - 3):
                 if grid[row][column] == 1 and grid[row - 1][column + 1] == 1 and grid[row - 2][column + 2] == 1 and grid[row - 3][column + 3] == 1:
@@ -62,6 +65,7 @@ def who_is_winner(pieces_position_list):
                 elif grid[row][column] == 2 and grid[row - 1][column + 1] == 2 and grid[row - 2][column + 2] == 2 and grid[row - 3][column + 3] == 2:
                     winner = "Yellow"
 
+        # check right vertical positions
         for row in range(rows - 3):
             for column in range(columns - 3):
                 if grid[row][column] == 1 and grid[row + 1][column + 1] == 1 and grid[row + 2][column + 2] == 1 and grid[row + 3][column + 3] == 1:
@@ -69,6 +73,7 @@ def who_is_winner(pieces_position_list):
                 elif grid[row][column] == 2 and grid[row + 1][column + 1] == 2 and grid[row + 2][column + 2] == 2 and grid[row + 3][column + 3] == 2:
                     winner = "Yellow"
 
+        # check winning condition
         if winner == "Red":
             return "Red"
             break

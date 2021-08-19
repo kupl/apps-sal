@@ -50,4 +50,5 @@ def solve():
     print(r, rm)
 
 
+# for i in range(mint()):
 solve()

@@ -7,6 +7,7 @@ from heapq import heappush, heappop
 import itertools
 
 
+# read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 sys.setrecursionlimit(10 ** 7)
@@ -22,6 +23,7 @@ cnt = defaultdict(int)
 ans = 0
 for i, a in enumerate(A):
     x = (a - i) % K
+    #print("i", i, "a", a, "x", x, "cnt", cnt)
 
     ans += cnt[x]
     cnt[x] += 1

@@ -11,4 +11,5 @@ while k >= min(a):
             count += 1
     ans += (k // s) * count + count
     k -= (k // s) * s
+    # print(k,ans)
 print(ans)

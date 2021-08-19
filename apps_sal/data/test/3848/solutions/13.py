@@ -2,10 +2,12 @@
 4 4
 abcd
 '''
+# its just a simulation
 from sys import stdin, setrecursionlimit
 import heapq
 
 
+# main starts
 n, p = list(map(int, stdin.readline().split()))
 string = list(stdin.readline().strip())
 i = n - 1
@@ -40,6 +42,7 @@ def get_next(string, index, p):
 
 
 while True:
+    # print(string)
     if i == n:
         print(''.join(string))
         break

@@ -50,12 +50,14 @@ def bfs(q, level):
     while q.front is not None:
         n = q.dequeue()
         for i in range(8):
+            # check right
             if i % 3 < 2:
                 if int(n.a[i]) + int(n.a[i + 1]) in PRIMES:
                     b = n.swap(i, i + 1)
                     if b.a not in di:
                         di[b.a] = level + 1
                         q2.enqueue(b)
+            # check down
             if i < 6:
                 if int(n.a[i]) + int(n.a[i + 3]) in PRIMES:
                     b = n.swap(i, i + 3)
@@ -68,6 +70,8 @@ def bfs(q, level):
 bfs(q, 0)
 for _ in range(int(input())):
     input()
+    # n,k = map(int,input().split())
+    # s = sorted(map(int,input().split()),reverse=True)
     clue = ''
     for i in range(3):
         clue += ''.join(input().split())

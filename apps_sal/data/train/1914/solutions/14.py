@@ -12,4 +12,5 @@ class Solution:
         for a in range(1, n + 1):
             for b in range(1, n + 1):
                 dp[a][b] = min(dp[a - 1][b] + costs[a + b - 1][0], dp[a][b - 1] + costs[a + b - 1][1])
+        #print (dp)
         return dp[n][n]

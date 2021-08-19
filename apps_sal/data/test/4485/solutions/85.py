@@ -1,6 +1,8 @@
 n, m = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(m)]
 
+# n, m = 3, 2
+# a = [[1, 2], [2, 3]]
 
 pot_starts = []
 pot_ends = []

@@ -1,5 +1,6 @@
 n, t = map(int, input().split())
 ax = list(map(int, input().split()))
+# iより後ろの売る中で最も高いもののリスト
 sell = []
 for a in ax[::-1][:n - 1]:
     if len(sell) == 0:

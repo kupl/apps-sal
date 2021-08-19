@@ -1,3 +1,4 @@
+# cook your dish here
 t_cases = int(input())
 for i in range(t_cases):
     n_cars = int(input())

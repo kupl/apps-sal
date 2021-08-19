@@ -1,4 +1,21 @@
+# 問題の趣旨：できるだけ辺が少なくなるように2つの完全グラフに分けたい
+# まず、2つの完全グラフに分けられるのかを調べる必要がある。
+# これが不可能であれば-1を出力して即座に終了。
+# 分けられる場合は、できるだけ街の数を均等にしたい。
 
+# 以下のアルゴリズムを考える。
+# まずお互い繋がっていない都市の組A,Bを選ぶ。
+# すると、Aにしか繋がっていない街、Bにしか繋がっていない街、
+# 両方に繋がっている街の3グループに分かれる。
+# 最初の2グループについてはグループのサイズを保存しておく。
+# 最後のグループが空でない場合は、このグループに対してまた同様の処理を行う。
+# 街がなくなるか、両方に繋がっている街のグループが
+# 完全グラフになった時点で終了。
+
+# 上記のアルゴリズムにより、グループのサイズの列と最後に残った街の数が求められる。
+# これをもとに、動的計画法で考えられる街の振り分け方を全て洗い出す。
+# 最も均等に近く振り分けた場合について、完全グラフの辺数を計算して
+# 出力すれば問題が解ける。
 
 def main():
     from sys import stdin
@@ -6,7 +23,7 @@ def main():
     n, m = list(map(int, input().split()))
     ab = [list(map(int, input().split())) for _ in [0] * m]
 
-    rest = n
+    rest = n  # 残りの辺
     g = [set() for _ in [0] * n]
     [g[a - 1].add(b - 1) for a, b in ab]
     [g[b - 1].add(a - 1) for a, b in ab]
@@ -32,7 +49,7 @@ def main():
         s.remove(a)
         s.remove(b)
         rest -= 2
-        remain = set()
+        remain = set()  # 最後のグループ
         for i in s:
             flag_a = True
             for j in a_set:
@@ -55,7 +72,7 @@ def main():
                 return
             elif flag_a * flag_b == 0:
                 q = {i}
-                flag = flag_a
+                flag = flag_a  # True→A、False→B
                 while q:
                     qq = set()
                     while q:

@@ -26,4 +26,5 @@ class Solution:
         for node in range(N):
             for tgt in edges_dict[node]:
                 results[node] += sum(dp(tgt, node))
+        # print(dp_dict)
         return results

@@ -5,9 +5,9 @@ barriers.sort()
 
 for i in range(len(barriers) - 1):
     if barriers[i + 1] - barriers[i] <= min_run + 1:
-        barriers[i] = (0, barriers[i] + 1, barriers[i + 1] - 1)
+        barriers[i] = (0, barriers[i] + 1, barriers[i + 1] - 1)  # nope
     else:
-        barriers[i] = (1, barriers[i] + 1, barriers[i + 1] - 1)
+        barriers[i] = (1, barriers[i] + 1, barriers[i + 1] - 1)  # ok
 
 barriers[len(barriers) - 1] = (1, barriers[len(barriers) - 1] + 1, finish)
 

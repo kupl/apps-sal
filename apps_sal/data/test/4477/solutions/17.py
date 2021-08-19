@@ -7,6 +7,7 @@ for t in range(test):
     ss = ""
     dd = 1
     cnttt = 0
+    # write yoour code here
     x = int(input())
     a = x
     cnt = 0

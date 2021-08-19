@@ -1,6 +1,8 @@
 h, w, a, b = map(int, input().split())
 mod = pow(10, 9) + 7
 
+# コンビネーション、さらに高速。あらかじめO(N)の計算をすることでのちの計算が早くなる
+
 
 def cmb(n, r, mod):
     if (r < 0 or r > n):

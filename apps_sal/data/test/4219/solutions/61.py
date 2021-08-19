@@ -11,19 +11,22 @@ for i in range(N):
 ans = 0
 for bit in range(1 << N):
     HOU = list(reversed(list(format(bit, 'b').zfill(N))))
+    # print(HOU)
     notans = False
     for i in range(N):
         if bit & (1 << i):
             for x, y in xylists[i]:
                 if HOU[x - 1] != str(y):
                     notans = True
-                    break
+                    # print(bit)
+                    break  # not ans
             else:
                 continue
             break
         else:
             continue
         break
+    # print(bit,HOU,notans)
     if not notans:
         ans = max(ans, str(bin(bit)).count('1'))
 print(ans)

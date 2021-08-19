@@ -1,10 +1,10 @@
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
-        h = [(x, i) for i, x in enumerate(nums)]
+        h = [(x, i) for i, x in enumerate(nums)]  # min-heap
         heapify(h)
 
         ans = 0
-        for k in range(1, right + 1):
+        for k in range(1, right + 1):  # 1-indexed
             x, i = heappop(h)
             if k >= left:
                 ans += x

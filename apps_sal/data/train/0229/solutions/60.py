@@ -1,5 +1,6 @@
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
+        # https://www.cnblogs.com/seyjs/p/10092569.html
         A.sort()
         dic = {}
         for i in A:

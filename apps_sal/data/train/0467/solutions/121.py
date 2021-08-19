@@ -11,8 +11,10 @@ class Solution:
                     return 0
 
             if (int(num**(1 / 2))) * (int(num**(1 / 2))) == num:
+                # result.append(int(num**(1/2)))
                 result.pop()
 
+            # print(result,num)
             if len(result) == 4:
                 return sum(result)
             else:

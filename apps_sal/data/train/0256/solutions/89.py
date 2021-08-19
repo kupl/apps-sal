@@ -4,6 +4,7 @@ import math
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         '''
+        # Can Koko eat all bananas in H hours with eating speed K?
         def possible(K):
             return sum((p-1) / K + 1 for p in piles) <= H
 
@@ -16,6 +17,8 @@ class Solution:
                 hi = mi
         return lo
         '''
+
+        # solution: use binary guess
 
         le = 1
         ri = sum(piles)
@@ -33,7 +36,7 @@ class Solution:
                 while True:
                     bananas = bananas - speed
                     hours += 1
-                    if bananas <= 0: 
+                    if bananas <= 0: # bug only <
                         break
                 sum_hours += hours
             return sum_hours
@@ -42,14 +45,14 @@ class Solution:
         while le + 1 < ri:
             mid = le + (ri - le) // 2
             result = checkHours(mid)
-            if result <= H:
+            if result <= H:  # decrease speed
                 ri = mid
-            else:
+            else:  # increase speed
                 le = mid
 
         result = checkHours(le)
 
-        if result <= H:
+        if result <= H:  # changed to <= H
             return le
         else:
             return ri

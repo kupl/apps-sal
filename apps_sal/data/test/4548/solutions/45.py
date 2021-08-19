@@ -1,3 +1,4 @@
+# ABC094 B 3番目が通らない
 n, m, x = map(int, input().split())
 List = [int(i) for i in input().split()]
 lcost = 0

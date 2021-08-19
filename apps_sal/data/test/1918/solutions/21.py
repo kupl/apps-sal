@@ -1,5 +1,7 @@
 import sys
 import math
+# sys.stdin = open('input.txt')
+# sys.stdout = open('output.txt', 'w')
 
 
 def main():

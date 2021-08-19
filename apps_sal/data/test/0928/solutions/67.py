@@ -21,7 +21,7 @@ else:
             if acsum[i] - acsum[j] >= k:
                 j += 1
                 continue
-            else:
+            else:  # acsum[i] - acsum[j] < k
                 cnt += j
                 j = j - 1
                 break

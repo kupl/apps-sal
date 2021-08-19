@@ -3,7 +3,7 @@ class Solution:
         if not arrLen or not steps:
             return 1
         if arrLen == 1:
-            return 1
+            return 1  # stay all the time
 
         shorter = min(steps, arrLen)
         dp = [[0 for _ in range(shorter)] for _ in range(steps + 1)]

@@ -16,8 +16,8 @@ def main():
             for j in range(w):
                 if not comb[h + j]:
                     continue
-                if C[i][j] == '
-                cunt += 1
+                if C[i][j] == '#':
+                    cunt += 1
         if cunt == k:
             ans += 1
     print(ans)

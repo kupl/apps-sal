@@ -1,4 +1,6 @@
+# B - Roller Coaster
 
+#  N K
 N, K = list(map(int, input().split()))
 my_list = list(map(int, input().split(maxsplit=N)))
 answer = 0

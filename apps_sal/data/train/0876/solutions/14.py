@@ -13,6 +13,7 @@
 n = int(input())
 for i in range(0, n):
     p = input().rstrip().split(' ')
+    # print(int(p[0]) * int(p[1]))
     q = input().rstrip().split(' ')
     x = int(p[1])
     q.sort(key=int)

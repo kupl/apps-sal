@@ -9,6 +9,7 @@ class Solution:
         q = deque([(0, 0, k, 0)])
         while q:
             data = q.popleft()
+            # print(data)
             x, y = data[0], data[1]
             k = data[2]
             if (x, y, k) not in visited:

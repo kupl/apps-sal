@@ -24,4 +24,5 @@ while Q:
         if r == 2:
             dist[nxt][nr] += 1
         Q.append((nxt, nr))
+# print(dist)
 print(dist[t][0])

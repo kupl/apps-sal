@@ -27,6 +27,8 @@ class Solution:
             return memo[i]
         length = 0
         for j in range(i + 1, len(words)):
+            # if i==14:
+            #     print(words[i], words[j], self.isPredecessor(words[i], words[j]))
             if self.isPredecessor(words[i], words[j]):
                 length = max(length, self.memoization(j, words, memo))
         memo[i] = 1 + length

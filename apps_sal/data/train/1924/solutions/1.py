@@ -11,10 +11,12 @@ class Transaction:
 
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
+        # sort transactions by the time, least to great
         transactions = [Transaction(t) for t in transactions]
 
         transactions.sort(key=lambda t: t.time)
 
+        # map name to list of idx that use that anem
         trans_idxs = defaultdict(list)
 
         for i, t in enumerate(transactions):
@@ -22,6 +24,10 @@ class Solution:
 
         invalid = []
 
+        # for each name, loop over the  associated transactions
+        # keep pointers left and right that start at 0
+        # for each transation move left pointer while trans[idxs[left]].time < t.time - 60
+        # do same for right
         for name, idxs in list(trans_idxs.items()):
             left = right = 0
 
@@ -34,6 +40,7 @@ class Solution:
                 while left <= len(idxs) - 2 and transactions[idxs[left]].time < t.time - 60:
                     left += 1
 
+                # right = left
                 while right <= len(idxs) - 2 and transactions[idxs[right + 1]].time < t.time + 60:
                     right += 1
 

@@ -24,6 +24,7 @@ class Solution:
                 profit = attendcus * boardingCost - rotation * runningCost
                 cuswaiting = 0
 
+            #print(profit, rotation)
             if self.res < profit:
                 self.res = profit
                 self.rotation = rotation

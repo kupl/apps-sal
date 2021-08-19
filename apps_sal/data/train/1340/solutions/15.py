@@ -2,6 +2,7 @@ try:
     import sys
     from sys import stdin
     import math
+    # Find Set LSB = (x&(-x)), isPowerOfTwo = (x & (x-1))
 
     def iinput():
         return int(input())

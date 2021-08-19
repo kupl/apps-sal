@@ -1,3 +1,4 @@
+# 074_a
 N = int(input())
 A = int(input())
 sum = N * N

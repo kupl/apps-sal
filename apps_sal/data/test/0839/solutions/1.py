@@ -1,5 +1,7 @@
 import random
 import sys
+#sys.stdin = open('input.txt', 'r')
+#sys.stdout = open('output.txt', 'w')
 a = [[0] * 5 for i in range(5)]
 a[0] = list(map(int, input().split()))
 a[1] = list(map(int, input().split()))

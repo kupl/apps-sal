@@ -12,12 +12,17 @@ bhutiya = []
 
 for i in range(n):
     if vis[i] != 2:
+        #vis[i] = 1
+        #rem = []
+        # rem.append(a[i])
         j = p[i] - 1
         maxi = a[i]
 
         while vis[j] != 2:
             if a[j] > maxi:
                 maxi = a[j]
+            # rem.append(a[j])
+            #vis[j] = 1
             j = p[j] - 1
 
         if a[j] > maxi:

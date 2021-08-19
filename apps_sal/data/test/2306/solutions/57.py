@@ -14,7 +14,7 @@ V = np.array(V)
 
 va = []
 i = 0
-for t in np.arange(0, T[-1], 0.5):
+for t in np.arange(0, T[-1], 0.5):  # 0.5 区切りの時間
     if t < T[i]:
         va.append(V[i])
     else:

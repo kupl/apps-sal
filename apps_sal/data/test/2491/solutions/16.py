@@ -5,6 +5,7 @@ N, M = map(int, input().split())
 
 def find_negative_loop(n, w, es):
     dist = [float("inf")] * n
+    # この始点はどこでもよい
     dist[1] = 0
 
     for i in range(n):
@@ -18,12 +19,16 @@ def find_negative_loop(n, w, es):
 
 
 def shortest_path(s, n, w, es):
+    # s→iの最短距離
+    # s:始点, n:頂点数, w:辺の数, es[i]:[辺の始点,辺の終点,辺のコスト]
     dist = [float("inf")] * n
+    # d[i]: s→iの最短距離
     dist[s] = 0
 
     while True:
         update = False
         for p, q, r in es:
+            # e: 辺iについて [from,to,cost]
             if dist[p] != float("inf") and dist[q] > dist[p] + r:
                 dist[q] = dist[p] + r
                 update = True
@@ -40,6 +45,7 @@ for _ in range(M):
     graph[a].append(b)
     elist.append((a, b, -c))
 
+# remove unnecessary vertex and edge
 visited = [None] * (N + 1)
 
 
@@ -71,6 +77,7 @@ for i in range(1, N + 1):
     if reachable[i] == None:
         visited = [False] * (N + 1)
         check_reachable(i)
+# print(reachable)
 
 elist2 = []
 for a, b, nc in elist:

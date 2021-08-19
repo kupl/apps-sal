@@ -4,6 +4,7 @@ from math import sqrt
 def sum_square_divisors(n):
     res = 0
     nn = n * n
+    # odds have only odd divisors
     for i in range(1, int(sqrt(n)) + 1, n % 2 + 1):
         if n % i == 0:
             ii = i * i

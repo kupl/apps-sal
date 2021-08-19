@@ -1,4 +1,7 @@
 n = int(input())
+# dp[i][x][y][z] i文字目、3つ前がx, 2つ前がy, 1つ前がz
+# A->0, C->1, G->2, T->3
+#だめなパターンはA-GC, AG-C, GAC, ACGのみ
 
 dp = [[[[0] * 4 for i in range(4)] for j in range(4)] for k in range(n + 1)]
 for i in range(4):

@@ -26,7 +26,7 @@ def LIS(X):
         S.append(X[k])
         k = P[k]
 
-    return len(S)
+    return len(S)  # [::-1]
 
 
 k1, k2, k3 = list(map(int, input().split()))
@@ -35,3 +35,13 @@ for _ in range(3):
     a.extend(sorted(list(map(int, input().split()))))
 
 print(k1 + k2 + k3 - LIS(a))
+
+# 1 5 1
+# 6
+# 5 1 2 4 7
+# 3
+
+# 2 1 3
+# 5 6
+# 4
+# 1 2 3

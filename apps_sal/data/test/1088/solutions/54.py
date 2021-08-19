@@ -22,6 +22,8 @@ class TwelvefoldWay:
     def homo(n, k):
         return self.comb(n + k - 1, k)
 
+# 1-index
+
 
 class UnionFind:
     def __init__(self, n):
@@ -100,6 +102,7 @@ def f(A):
 
 answer = f(A) % MOD
 
+# 転置
 A = [[A[i][j] for i in range(N)] for j in range(N)]
 answer = (answer * f(A)) % MOD
 print(answer)

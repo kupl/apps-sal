@@ -13,7 +13,7 @@ B = reads()
 D = 28
 xor = 0
 for d in range(D + 1):
-    mask = (1 << (d + 1)) - 1
+    mask = (1 << (d + 1)) - 1  # [1] * (d+1)
     AA = sorted(x & mask for x in A)
     BB = sorted(x & mask for x in B)
     count = 0

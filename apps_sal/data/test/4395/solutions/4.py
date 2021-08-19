@@ -18,5 +18,6 @@ for tes in ls:
     if cur < ans:
         ans = min(ans, cur)
         strans = tes[:len(seq)]
+    # print(tes, seq, ans, cur)
 print(ans)
 print(strans)

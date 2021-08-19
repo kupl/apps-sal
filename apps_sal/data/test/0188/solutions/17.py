@@ -23,6 +23,7 @@ for x in a:
         s2 += 1
     elif x == 1:
         s1 += 1
+#print(s1, s2, a1, a2, a4)
 while s2:
     if a2:
         a2 -= 1

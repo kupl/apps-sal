@@ -1,3 +1,4 @@
+# 連続するK本のろうそくに火をつけるので、最小となる組を全探索する
 N, K = map(int, input().split())
 X = list(map(int, input().split()))
 

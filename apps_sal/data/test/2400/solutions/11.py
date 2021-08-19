@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 sys.setrecursionlimit(200000)
 input = sys.stdin.readline
@@ -10,6 +11,7 @@ def lmfi(): return list(map(float, input().rstrip().split()))
 def li(): return list(input().rstrip())
 def debug(*args, sep=" ", end="\n"): print("debug:", *args, file=sys.stderr, sep=sep, end=end) if not __debug__ else None
 def exit(*arg): print(*arg); return
+# template
 
 
 def main():

@@ -1,4 +1,5 @@
 from sys import stdin
+#def read(): return map(int, stdin.readline().split())
 
 n = int(stdin.readline())
 a = stdin.readline()

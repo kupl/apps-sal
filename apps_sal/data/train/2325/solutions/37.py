@@ -5,10 +5,10 @@ input = sys.stdin.readline
 
 class SegTree():
     def __init__(self, N, e, operator_func=add):
-        self.e = e
+        self.e = e  # 単位元
         self.size = N
         self.node = [self.e] * (2 * N)
-        self.operator_func = operator_func
+        self.operator_func = operator_func  # 処理(add or xor max minなど)
 
     def set_list(self, l):
         for i in range(self.size):
@@ -24,6 +24,7 @@ class SegTree():
             self.node[k] = self.operator_func(self.node[2 * k + 1], self.node[2 * k + 2])
 
     def get(self, l, r):
+        # [l, r) についてqueryを求める
         x = self.e
         l += self.size
         r += self.size

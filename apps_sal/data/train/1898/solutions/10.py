@@ -1,4 +1,15 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
+    # APP1: convert to_delete to a set, divide and conquer to get left, right.
+    # dfs: 1 return child root, None if child deleted.
+    # 2. check if cur in delete, pass it for recursion call
+    # 3 check if child is deleted, delete the link to children
+    # Runtime: 98%
     def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
         if not root:
             return []

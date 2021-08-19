@@ -26,6 +26,7 @@ for _ in range(q):
     bb = (p[d] - p[c - 1])
     do = (d - c + 1 - bb)
     do += bb * 2
+   # print(aa,bb,co,do)
     co %= 3
     do %= 3
     if co == do:

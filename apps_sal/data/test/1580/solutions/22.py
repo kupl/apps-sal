@@ -1,4 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# 問題：https://atcoder.jp/contests/abc126/tasks/abc126_e
 
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 class Graph():
 

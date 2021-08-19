@@ -6,8 +6,8 @@ al = pow(4, n, mod)
 
 itr = itertools.product([0, 1, 2, 3], repeat=4)
 itr = list(itr)
-dic1 = {}
-dic2 = {}
+dic1 = {}  # dec
+dic2 = {}  # enc
 for i in enumerate(itr):
     dic1[i[0]] = [i[1]]
     dic2[i[1]] = [i[0]]

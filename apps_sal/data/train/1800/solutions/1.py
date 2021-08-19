@@ -1,8 +1,10 @@
 from collections import defaultdict
 
+# generate list of primes
 SIEVE_LIMIT = 10**5
 sieve = list(range(SIEVE_LIMIT))
 sieve[1] = 0
+# and store them based on used digits
 cache = defaultdict(list)
 for n in sieve:
     if n:
@@ -12,10 +14,12 @@ for n in sieve:
             sieve[i] = 0
 
 
+# return the number of items in arr below given limit
 def items_below_limit(arr, limit):
     return sum([x < limit for x in arr])
 
 
+# return number of primes with given permutations below limit
 def find_prime_kPerm(limit, perms):
     res = []
     for k, v in list(cache.items()):

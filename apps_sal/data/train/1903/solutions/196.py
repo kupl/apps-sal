@@ -16,6 +16,8 @@ class Solution:
 
         dd = {x: x for x in range(len(points))}
 
+        # print(costs)
+
         def merge(x, y, c):
             x, y = find(x), find(y)
             if x != y:

@@ -35,6 +35,10 @@ class Solution:
             for i in range(len(indexes) - 1):
                 dsu.union(indexes[i], indexes[i + 1])
 
+        # for i in range(n):
+        #     for j in range(i+1,n):
+        #         if A[i]!=A[j] and self.gcd(A[i],A[j]) > 1:
+        #             dsu.union(i,j)
         return max(dsu.rank)
 
     def primes_set(self, n):

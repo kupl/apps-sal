@@ -2,6 +2,7 @@ class Solution:
     def minDeletionSize(self, a: List[str]) -> int:
         n, m = len(a), len(a[0])
         dp = [1 for i in range(m)]
+        # dp[0] = 1
         maxx = 1
         for i in range(1, m):
             for j in range(i):

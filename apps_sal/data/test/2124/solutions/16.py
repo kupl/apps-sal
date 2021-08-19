@@ -13,6 +13,7 @@ for ti in range(t):
     messages = []
     n = int(input())
     usernames = set(input().split())
+    # print("usernames =", usernames, file=sys.stderr)
     m = int(input())
     for i in range(m):
         user, text = input().split(':')
@@ -23,6 +24,8 @@ for ti in range(t):
         else:
             possible_users.append({user})
 
+    # print(possible_users, file=sys.stderr)
+
     is_fixed = [False] * m
     for i in range(m - 1):
         if len(possible_users[i]) == 1:
@@ -32,6 +35,8 @@ for ti in range(t):
         if len(possible_users[i]) == 1:
             possible_users[i - 1].difference_update(possible_users[i])
             is_fixed = True
+
+    # print(possible_users, file=sys.stderr)
 
     res = []
     is_possible = True

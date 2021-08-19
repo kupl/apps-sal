@@ -8,6 +8,7 @@ for i in range(K):
         for v in a:
             x[v] += 1
 
+# print(a)
 
 c = 0
 for i in range(1, N + 1, 1):

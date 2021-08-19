@@ -10,6 +10,10 @@ def iin(): return int(stdin.readline())
 def lin(): return list(map(int, stdin.readline().split()))
 
 
+# range = xrange
+# input = raw_input
+
+
 def main():
     t = iin()
     while t:
@@ -48,6 +52,10 @@ def main():
                             a2[i] = a2[i - 1]
                 dp[i] += max(ad)
             print(dp.count(1))
+            # print(dp,a2,h)
 
 
 main()
+# try:
+#     main()
+# except Exception as e: print(e)

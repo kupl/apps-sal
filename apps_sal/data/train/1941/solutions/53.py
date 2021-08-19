@@ -22,10 +22,12 @@ def get_good_masks(word):
 class Solution:
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
 
+        # Construct bitmask frequency hashtable
         mask_frequency = defaultdict(int)
         for word in words:
             mask_frequency[to_mask(word)] += 1
 
+        # Calculate
         N = len(puzzles)
         ans = [0] * N
         for i, puzzle in enumerate(puzzles):

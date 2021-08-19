@@ -25,3 +25,4 @@ class Solution:
                     dp[i][j] = max(dp[i][j], dp[i - 1][j - 1] + 1)
                 dp[i][j] = max(dp[i][j], dp[i - 1][j], dp[i][j - 1])
         return dp[-1][-1]
+        # return dfs(0, 0)

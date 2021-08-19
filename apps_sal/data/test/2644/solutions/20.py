@@ -16,13 +16,18 @@ pa = [i for i in range(n)]
 
 s = set(s)
 ans = []
+# print("po:",po)
+# print(p)
 
 yn = ""
 for i in range(n):
+    #    print("i:",i,"po[i]:",po[i])
     if po[i] > i:
         for ii in range(po[i], i, -1):
+            #            print(p[ii],p[ii-1])
             po[p[ii]], po[p[ii - 1]] = ii - 1, ii
             p[ii], p[ii - 1] = p[ii - 1], p[ii]
+#            print("ii:",ii,"p",p,"po:",po)
             if ii - 1 in s:
                 s.remove(ii - 1)
                 ans.append(ii)
@@ -35,6 +40,8 @@ for i in range(n):
         for ii in range(po[i], i, 1):
             po[p[ii]], po[p[ii + 1]] = ii + 1, ii
             p[ii], p[ii + 1] = p[ii + 1], p[ii]
+#            print("ii:",ii,"p",p,"po:",po)
+#    print("i:",i,p)
             if ii - 1 in s:
                 s.remove(ii - 1)
                 ans.append(ii)

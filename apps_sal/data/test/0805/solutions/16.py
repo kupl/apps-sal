@@ -1,3 +1,4 @@
+# Made By Mostafa_Khaled
 bot = True
 n = int(input())
 
@@ -14,3 +15,5 @@ for _ in range(n - 1):
         d[i] = 0
 
 print(sum(d[a:b]))
+
+# Made By Mostafa_Khaled

@@ -14,6 +14,8 @@ try:
             k = k * r
             a.append(k)
         k = sum(a)
+    # 	k = k - kin
+    # 	print(k)
         if s > k:
 
             s = s - k

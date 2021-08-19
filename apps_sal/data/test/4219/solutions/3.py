@@ -11,7 +11,7 @@ for i in range(n):
 ans = 0
 for i in range(2**n):
     honest = [0] * n
-    skip = False
+    skip = False  # 矛盾があるときTrue
     for j in range(n):
         if ((i >> j) & 1):
             honest[j] = 1

@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/longest-well-performing-interval/discuss/334565/JavaC%2B%2BPython-O(N)-Solution-Life-needs-996-and-669
 
 class Solution:
     def longestWPI(self, hours: List[int]) -> int:

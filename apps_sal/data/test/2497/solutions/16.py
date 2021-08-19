@@ -18,10 +18,12 @@ for i in range(N):
     else:
         xlist.append((x, 0))
         ylist.append((y, -1))
+# print(xlist,ylist)
 
 xdic = defaultdict(set)
 for x, d in xlist:
     xdic[d].add(x)
+# print(xdic)
 xlist2 = []
 for d in [-1, 0, 1]:
     if len(xdic[d]):
@@ -33,6 +35,7 @@ for d in [-1, 0, 1]:
 ydic = defaultdict(set)
 for y, d in ylist:
     ydic[d].add(y)
+# print(ydic)
 ylist2 = []
 for d in [-1, 0, 1]:
     if len(ydic[d]):
@@ -40,6 +43,7 @@ for d in [-1, 0, 1]:
         max_d = max(ydic[d])
         ylist2.append((min_d, d))
         ylist2.append((max_d, d))
+# print(xlist2,ylist2)
 
 
 def cand_time(plist):
@@ -74,7 +78,9 @@ def cand_time(plist):
 
 cand_time_x = cand_time(xlist2)
 cand_time_y = cand_time(ylist2)
+# print(cand_time_x,cand_time_y)
 cand_t = [0] + list(cand_time_x) + list(cand_time_y)
+# print(cand_t)
 
 
 def get_pos(pd, t):
@@ -96,8 +102,10 @@ for t in cand_t:
         pos_min_y = min(pos_min_y, get_pos(y2, t))
         pos_max_y = max(pos_max_y, get_pos(y2, t))
 
+    # print(t,pos_min_x,pos_max_x,pos_min_y,pos_max_y)
     t_ans = abs(pos_max_x - pos_min_x) * abs(pos_max_y - pos_min_y)
     if answer >= t_ans:
         answer = t_ans
+        # print(answer,t,abs(pos_max_x-pos_min_x),abs(pos_max_y-pos_min_y))
 
 print(answer)

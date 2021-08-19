@@ -1,6 +1,7 @@
 n = int(input())
 A = list(map(int, input().split()))
 idx = [-1] * (n + 1)
+# 2回現れた文字のidxをl,rに持つ
 for i, a in enumerate(A, 1):
     if idx[a] == -1:
         idx[a] = i
@@ -27,6 +28,11 @@ def comb(n, k):
     return fac[n] * fac_inv[k] * fac_inv[n - k] % MOD
 
 
+# print(comb(0, 0))
+# print(l, r)
+# print(fac[:5])
+# print(fac_inv[:5])
 for k in range(1, n + 2):
+    #    print(comb(n+1, k), comb(l-1+n-r, k-1))
     ans = (comb(n + 1, k) - comb(l - 1 + n + 1 - r, k - 1)) % MOD
     print(ans)

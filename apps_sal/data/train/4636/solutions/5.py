@@ -4,21 +4,24 @@ KEYPADS = (
         'f', 'g', 'h', 'i', 'j', '4', '5', '6',
         'k', 'l', 'm', 'n', 'o', '7', '8', '9',
         'p', 'q', 'r', 's', 't', '.', '@', '0',
-        'u', 'v', 'w', 'x', 'y', 'z', '_', '/', 'aA
+        'u', 'v', 'w', 'x', 'y', 'z', '_', '/',
+        'aA#', 'SP', ' ', ' ', ' ', ' ', ' ', ' ',
     ),
     (
         'A', 'B', 'C', 'D', 'E', '1', '2', '3',
         'F', 'G', 'H', 'I', 'J', '4', '5', '6',
         'K', 'L', 'M', 'N', 'O', '7', '8', '9',
         'P', 'Q', 'R', 'S', 'T', '.', '@', '0',
-        'U', 'V', 'W', 'X', 'Y', 'Z', '_', '/', 'aA
+        'U', 'V', 'W', 'X', 'Y', 'Z', '_', '/',
+        'aA#', 'SP', ' ', ' ', ' ', ' ', ' ', ' ',
     ),
     (
         '^', '~', '?', '!', '\'', '"', '(', ')',
         '-', ':', ';', '+', '&', '%', '*', '=',
         '<', '>', '€', '£', '$', '¥', '¤', '\\',
-        '[', ']', '{', '}', ',', '.', '@', '§', '
-        'aA
+        '[', ']', '{', '}', ',', '.', '@', '§',
+        '#', '¿', '¡', ' ', ' ', ' ', '_', '/',
+        'aA#', 'SP', ' ', ' ', ' ', ' ', ' ', ' ',
     )
 )
 
@@ -36,10 +39,12 @@ class Tv:
 
     def count_best_path(self, index: int):
 
+        # coordinates of the letter
         temp_pos = ((index // 8), (index % 8))
 
         result = []
 
+        # finding the smallest path movements
         for current_val, temp_val, max_l in zip(self.current_pos, temp_pos, [self.MAX_V, self.MAX_H]):
             v_1 = current_val
             v_2 = current_val
@@ -56,8 +61,10 @@ class Tv:
 
             result.append(count)
 
+        # update the current position
         self.current_pos = temp_pos
 
+        # update the count
         self.count += sum(result) + self.OK
 
     def count_total_moves(self):

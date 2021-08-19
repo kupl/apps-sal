@@ -1,3 +1,4 @@
+# 442B
 n = int(input())
 p = list(map(float, input().split()))
 p.sort(reverse=True)

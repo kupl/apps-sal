@@ -4,6 +4,7 @@ x = []
 for _ in range(n):
     x.append(set([int(w) for w in input().split()][1:]))
 
+# using bfs
 
 vis = {}
 vis[0] = True
@@ -16,5 +17,6 @@ for ele in q:
                 q.append(x[j])
                 vis[j] = True
 
+#ct = dfs(0,x[0],0,vis)
 
 print(len(q))

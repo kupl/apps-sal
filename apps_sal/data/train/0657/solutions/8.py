@@ -41,6 +41,7 @@ for i in range(len(lt)):
         temp1 = temp1 + str(lt[i][j])
     st.append(temp1)
 ans = 0
+# print(st)
 for i in range(len(st)):
     ans = ans + int(st[i], 2)
 print(ans)

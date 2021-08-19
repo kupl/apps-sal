@@ -7,7 +7,7 @@ for T in range(1, 3):
     left = N
     up = N - 2
     for t, x in Query:
-        if t == T:
+        if t == T:  # |
             if left < x:
                 ans += Depth[x]
             else:
@@ -15,7 +15,9 @@ for T in range(1, 3):
                     Depth[i] = up
                 left = x
                 ans += up
-        else:
+        else:  # -
             up = min(up, x - 2)
+        #print(f"ans={ans}, up={up}")
+    # print("---")
 
 print(((N - 2)**2 - ans))

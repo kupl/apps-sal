@@ -24,6 +24,9 @@ for i in range(c):
     inf += (lis10[i] + lis01[i])
 lis00 += lis10[c:c10] + lis01[c:c01]
 lis00.sort(reverse=True)
+# if len(lis00)<c11:
+#    print(inf)
+# else:
 for i in range(min(c11, len(lis00))):
     inf += lis00[i]
 print(inf)

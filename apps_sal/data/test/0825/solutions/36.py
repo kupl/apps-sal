@@ -24,6 +24,7 @@ def factorization(n):
 ans = 0
 
 soinsu_list = factorization(N)
+# print(soinsu_list)
 for i in range(len(soinsu_list)):
     cnt = 0
     while soinsu_list[i][0] != 1:

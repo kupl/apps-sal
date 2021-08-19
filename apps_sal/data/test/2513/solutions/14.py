@@ -13,6 +13,7 @@ for x[0], x[1] in [["S", "S"], ["S", "W"], ["W", "S"], ["W", "W"]]:
                 x[i] = "W"
             else:
                 x[i] = "S"
+    # print(x)
     det = 0
     if (x[N - 1] == "S" and s[N - 1] == "o" and x[N - 2] != x[0]):
         det = -1

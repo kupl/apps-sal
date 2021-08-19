@@ -23,6 +23,7 @@ divN = [0] * (N + 1)
 for pn in primeryN:
     if pn == 0:
         continue
+    # print(pn)
     i = 1
     cnt = 0
     while (pn**i <= N):
@@ -30,6 +31,7 @@ for pn in primeryN:
         i += 1
     divN[pn] = cnt
 
+# print(divN)
 ans = 1
 for d in divN:
     if d == 0:

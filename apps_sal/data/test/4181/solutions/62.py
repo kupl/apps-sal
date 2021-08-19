@@ -1,7 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# FileName: 	C
+# CreatedDate:  2020-09-04 13:08:51 +0900
+# LastModified: 2020-09-04 13:26:51 +0900
+#
 
 
 import os
 import sys
+# import numpy as np
+# import pandas as pd
 
 
 def main():
@@ -21,6 +30,7 @@ def main():
             ans += B[i]
             A[i + 1] -= B[i] - A[i]
             A[i] = 0
+#        print(A)
     print(ans)
 
 

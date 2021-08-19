@@ -1,6 +1,7 @@
 def main():
     N = int(input())
     A = [[] for i in range(N)]
+    # A[i][j] -> i-th person's testimony of person's honesty (j makes no sense)
     for i in range(N):
         a = int(input())
         for j in range(a):

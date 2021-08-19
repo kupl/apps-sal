@@ -20,4 +20,6 @@ class Solution:
             ans += dp_odd[i]
             ans %= MOD
 
+        # print(dp_even,dp_odd)
+
         return ans

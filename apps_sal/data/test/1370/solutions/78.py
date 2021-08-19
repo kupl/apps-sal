@@ -6,6 +6,8 @@ grid = [[] for _ in range(H)]
 for i in range(H):
     grid[i] = list(map(int, input()))
 
+# print(grid)
+
 
 def init_cnt():
     _grid = [[0] * W for _ in range(H)]
@@ -22,6 +24,9 @@ def init_cnt():
 
 
 _grid = init_cnt()
+# print(_grid)
+
+# (x1, y1) ~ (x2, y2)の合計
 
 
 def cnt(x1, x2, y1, y2):
@@ -41,6 +46,7 @@ for i in range(2 ** (H - 1)):
     res += len(lst)
     lst.append(H)
 
+    # print(lst)
     y = 0
     for w in range(1, W + 1):
         x = 0

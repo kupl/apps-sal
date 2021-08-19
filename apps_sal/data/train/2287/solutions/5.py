@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -34,6 +36,7 @@ for _ in range(k):
 
 for v in order[:0:-1]:
     p = parent[v]
+    # elif val[v]== INF: # vに好きな数書ける
     h, l = high[v] + 1, low[v] - 1
 
     if h >= INF:
@@ -41,7 +44,7 @@ for v in order[:0:-1]:
     elif high[p] >= INF:
         high[p] = h
         low[p] = l
-    elif (high[p] - h) & 1 == 0:
+    elif (high[p] - h) & 1 == 0:  # 偶奇一致
         if h < high[p]:
             high[p] = h
         if l > low[p]:
@@ -49,11 +52,12 @@ for v in order[:0:-1]:
         if high[p] < low[p]:
             print("No")
             break
-    else:
+    else:  # 偶奇違ってダメ
         print("No")
         break
+    # print(v,val,high,low)
 
-else:
+else:  # OK
     print("Yes")
     for v in order:
         if val[v] == INF:

@@ -1,3 +1,4 @@
+#!/user/bin/env pypy3
 import sys
 from typing import List
 

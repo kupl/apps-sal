@@ -6,6 +6,7 @@ pq = PriorityQueue()
 
 
 def process(v, order):
+    # order to be 1 or -1 to sort the priority_queue
     taken.add(v)
     for vi, w in adj[v]:
         if not vi in taken:
@@ -48,4 +49,4 @@ def make_spanning_tree(edges, t):
         if not r in edges_set:
             result[ri] = r[0][1] + r[0][0], r[1]
 
-    return result
+    return result  # vertices of a spanning tree

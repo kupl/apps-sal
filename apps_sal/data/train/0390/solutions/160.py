@@ -8,6 +8,7 @@ class Solution:
                 if not dp[i - k**2]:
                     dp[i] = True
                     break
+            # print(dp)
         return dp[-1]
         '''
         dp = [False] * (n + 1)

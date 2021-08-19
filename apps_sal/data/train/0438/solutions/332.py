@@ -33,18 +33,21 @@ class Solution:
         u = UnionFind(len(arr), m)
         d = [0] * max(arr)
         best = -1
+        # arr=[i-1 for i in arr]
         for i in range(len(arr)):
 
             d[arr[i] - 1] = 1
             u.size[u.find_parent(arr[i] - 1)] = 1
 
             u.rev_map[u.size[u.find_parent(arr[i] - 1)]] += 1
+            # u.rev_map[u.size[u.find_parent(arr[i])]]+=1
             if arr[i] - 2 >= 0 and d[arr[i] - 2] == 1:
                 u.union(arr[i] - 2, arr[i] - 1)
             if arr[i] < len(arr) and d[arr[i]] == 1:
                 u.union(arr[i] - 1, arr[i])
             if u.rev_map[m] >= 1:
                 best = i
+            # print(u.rev_map)
         if best == -1:
             return -1
         return best + 1

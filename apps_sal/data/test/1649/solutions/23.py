@@ -1,4 +1,7 @@
+# Fortune Cookies
 
+# 1 <= A <= B <= C <= D では，
+# A + D = B + C or A + B + C = D を調べればよい
 
 delic = list(map(int, input().split()))
 delic.sort()

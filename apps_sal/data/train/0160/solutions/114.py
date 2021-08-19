@@ -16,4 +16,5 @@ class Solution:
             return memo[(left, right)]
 
         res = netWin(0, len(piles) - 1)
+        # print (memo, res)
         return True if res > 0 else False

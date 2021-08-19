@@ -15,6 +15,9 @@ class Solution:
             for k in range(j + 1, len(nums1)):
                 numOneHave[sqrt(nums1[j] * nums1[k])] += 1
 
+        # print(numOneHave)
+        # print(numTwoHave)
+
         triplets = 0
 
         for num in nums1:

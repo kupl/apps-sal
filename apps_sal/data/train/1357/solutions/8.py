@@ -19,6 +19,9 @@ for _ in range(int(input())):
 
             elif get[i] == 5:
 
+                # if tens!=0:
+                #                        has=has-10
+                #                        tens=tens-1
                 if has >= 1:
                     has = has - 1
                 else:

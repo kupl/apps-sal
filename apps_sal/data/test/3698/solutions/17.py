@@ -60,6 +60,7 @@ x = []
 for i in range(l):
     if n[i] == '1':
         x.append(i)
+# print(l)
 k = int(input())
 if k > 5:
     print(0)
@@ -73,6 +74,7 @@ else:
             if i - r < 0:
                 break
             xy = c(l - j - 1, i - r)
+            # print(l-j-1,i-r,xy)
             ans = (ans + xy) % 1000000007
             r += 1
     if len(x) in a[k - 1] and len(x) != 1:

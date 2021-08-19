@@ -23,6 +23,7 @@ it.sort()
 ind = 0
 tot = 0
 j = 0
+# print(it)
 ss = {}
 for i in it[:]:
     while ind < n - 1:
@@ -31,6 +32,7 @@ for i in it[:]:
             b = find(ed[ind][1])
             if a != b:
                 tot += size[a] * size[b]
+              #  print(a,b,j,tot)
                 if size[a] >= size[b]:
 
                     par[b] = a
@@ -45,9 +47,12 @@ for i in it[:]:
         else:
             break
     it[j][2] = tot
+    # ss[it[j][1]]=tot
     j += 1
 
 it.sort(key=lambda x: x[1])
 aa = [i[2] for i in it]
 
+# for i in range(len(it)):
+#   print(ss[i],end=" ")
 print(*aa)

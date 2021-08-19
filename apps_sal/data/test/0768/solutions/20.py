@@ -1,3 +1,4 @@
+# kitten!
 n, m, t = list(map(int, input().split()))
 go = []
 for i in range(n):

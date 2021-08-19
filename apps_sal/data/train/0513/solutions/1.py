@@ -19,12 +19,18 @@ for _ in range(N - 1):
 
 INF = 10**11
 ans = [0] * N
-dp = []
+dp = []  # INFは空欄として扱って良い
 stack = deque([])
 
 
 def LISonTree(num, pre):
+    ###num: 頂点番号
+    # pre: 1つ前にいた頂点番号
     p = bisect_left(dp, a[num])
+
+    ###
+    # print(p)
+    ###
 
     if p >= len(dp):
         stack.appendleft((len(dp), INF))
@@ -36,6 +42,11 @@ def LISonTree(num, pre):
     q = bisect_left(dp, INF)
     ans[num] = q
 
+    ###
+    # print(num,'dp',dp)
+    # print(num,'ans',ans)
+    ###
+
     for x in graph[num]:
         if x == pre:
             continue
@@ -45,8 +56,13 @@ def LISonTree(num, pre):
 
     dp[changed_p] = changed_v
 
+    ###
+    # print(num,'dp',dp)
+    ###
+
 
 LISonTree(0, -1)
+# print(ans)
 
 for y in ans:
     print(y)

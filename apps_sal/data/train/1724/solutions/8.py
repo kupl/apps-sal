@@ -14,6 +14,7 @@ def blast_sequence(aliens, position):
         ddel = []
         for k in range(len(dal)):
             y, x, v = dal[k]
+            # print(y, x, v)
             x += v
             if x < 0:
                 v = -v

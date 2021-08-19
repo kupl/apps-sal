@@ -1,3 +1,4 @@
+# 1277. Count Square Submatrices with All Ones
 
 def make_partial(m, n, matrix):
     ans = [[0 for __ in range(n + 1)] for _ in range(m + 1)]

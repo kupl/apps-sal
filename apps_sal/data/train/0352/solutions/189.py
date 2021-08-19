@@ -8,7 +8,10 @@ class Solution:
                 new = word[:i] + word[i + 1:]
 
                 if new in words:
+                    # print(f\"{new} is in {word}\")
+                    # print(f\" {li[word]}  and for new is {li[new] + 1 }\")
                     if li[word] < li[new] + 1:
+                       # print(f\" {li[word]}  and for new is {li[new]}\")
                         li[word] = li[new] + 1
                         if li[word] > ans:
                             ans = li[word]

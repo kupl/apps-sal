@@ -5,6 +5,7 @@ for i in range(3):
     for j in range(3):
         if (a[i][j] in b):
             a[i][j] = 0
+# print(a)
 tnp = 0
 for i in range(3):
     if (sum(a[i]) == 0):

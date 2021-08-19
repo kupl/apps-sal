@@ -1,4 +1,5 @@
 def validate(n):
+    # Double Every second number...any improve?
     list = []
     for index, number in enumerate(reversed(str(n))):
         list.append(int(number) * 2 if index % 2 != 0 else int(number))

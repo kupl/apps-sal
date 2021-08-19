@@ -1,11 +1,13 @@
 from heapq import heappush, heappop
 
+# 入力
 N = int(input())
 a, b = (
     list(zip(*(list(map(int, input().split())) for _ in range(N - 1)))) if N - 1 else
     ((), ())
 )
 
+# 頂点1, N から各蝶点への距離を求める
 G = [{} for _ in range(N + 1)]
 for x, y in zip(a, b):
     G[x][y] = 1
@@ -28,9 +30,12 @@ def dijkstra(G, s):
 
 dp1 = dijkstra(G, 1)
 dpN = dijkstra(G, N)
+# 頂点Nより頂点1のほうが近い、または、頂点1と頂点Nとの距離が等しいは
+# 頂点1から頂点Nの間のパスに含まれる頂点のうち、Fennecが塗れる頂点である。
 ans = (
     'Fennec' if sum(dp1[i] <= dpN[i] for i in range(1, N + 1)) > N // 2 else
     'Snuke'
 )
 
+# 出力
 print(ans)

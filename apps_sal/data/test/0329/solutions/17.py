@@ -35,3 +35,4 @@ letters[2] = e
 letters[3] = t
 
 print((min(letters)))
+# 1502216507489

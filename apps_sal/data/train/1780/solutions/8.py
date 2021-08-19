@@ -5,6 +5,7 @@ from functools import reduce
 mem = {}
 
 
+# simple cache for python 2.7
 def cache(func):
     def wrap(n):
         if n in mem:
@@ -51,3 +52,6 @@ def part(n):
 
     tmpl = 'Range: {range} Average: {avg:.2f} Median: {median:.2f}'
     return tmpl.format(**res)
+
+# from timeit import timeit
+# print(timeit(partial(part, 40), number=100))

@@ -5,7 +5,7 @@ import bisect
 import math
 import itertools
 from fractions import gcd
-input = sys.stdin.readline
+input = sys.stdin.readline  # 文字列入力のときは注意
 
 n = int(input())
 t = [int(i) for i in input().split()]
@@ -15,8 +15,12 @@ maxspeed = [0] * (n + 1)
 for i in range(n - 1, 0, -1):
     maxspeed[i] = min(v[i], v[i - 1], t[i] + maxspeed[i + 1])
 
+# print(t)
+# print(v)
+# print(maxspeed)
 
-def dist(first, i):
+
+def dist(first, i):  # distance,lastspeed
     ti = t[i]
     vi = v[i]
     mi1 = maxspeed[i + 1]
@@ -31,7 +35,9 @@ def dist(first, i):
     else:
         a = (mi1 + ti - first) / 2
         c = (first + first + a) * a / 2 + (first + a + mi1) * (ti - a) / 2
+#        print(a,'a',c,first,(first+first+a)*a/2, (first+a+mi1)*(ti-a)/2)
         lastspeed = mi1
+#    print(c)
 
     return c, lastspeed
 
@@ -40,6 +46,7 @@ ans = 0
 firstspeed = 0
 for i in range(n):
     d, firstspeed = dist(firstspeed, i)
+#    print(d,firstspeed)
     ans += d
 
 print(ans)

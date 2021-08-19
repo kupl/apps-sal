@@ -2,6 +2,7 @@ def main():
     import sys
     input = sys.stdin.readline
 
+    # Dinic's algorithm
     from collections import deque
 
     class Dinic:
@@ -69,9 +70,11 @@ def main():
     for i, a in enumerate(A):
         if a > 0:
             ans += a
+            #dinic.add_edge(0, i+1, 0)
             dinic.add_edge(i + 1, N + 1, a)
         else:
             dinic.add_edge(0, i + 1, -a)
+            #dinic.add_edge(i+1, N+1, 0)
     for i in range(1, N + 1):
         for k in range(1, N + 1):
             if i * k > N:

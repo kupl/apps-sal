@@ -11,6 +11,7 @@ at2 = kv2 // k
 if (p1 == p2):
     print(min(10 + abs(at1 - at2), 5 * abs(at1 - at2)))
 else:
+    #print(p1, p2, at1, at2)
     res = 15 * min(abs(p1 - p2), min(p1, p2) + n - max(p1, p2))
     res += min(10 + at1, at1 * 5)
     res += min(10 + at2, at2 * 5)

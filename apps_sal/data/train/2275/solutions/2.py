@@ -38,6 +38,7 @@ for tests in range(t):
 
             if flag == 1:
                 A = ANS[0] * pow(p, ANS[1], mod) % mod
+                # print(A,ANS)
 
                 for j in range(lastind, n):
                     A = (A - pow(p, K[j], mod)) % mod

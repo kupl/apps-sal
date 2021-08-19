@@ -11,4 +11,5 @@ class Solution:
                 d = {0: True}
             else:
                 d[sm] = True
+            # print(sm,count)
         return count

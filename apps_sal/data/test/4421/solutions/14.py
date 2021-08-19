@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/3/7 23:13
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : B. Preparation for International Women's Day.py
 
 from collections import Counter
 

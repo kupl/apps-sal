@@ -5,11 +5,14 @@ from bisect import bisect_left, bisect_right
 from collections import Counter
 
 
+# Function to call the actual solution
 def solution(li):
     ma = {}
     for i in range(len(li)):
         ma[li[i]] = ma.get(li[i], 0) + 1
+    # ma1 = dc(ma)
     ans = 0
+    # li = list(set(li))
     for i in range(len(li)):
         for j in range(len(li)):
             if i != j:
@@ -44,11 +47,14 @@ def solution(li):
     return ans
 
 
+# Function to take input
 def input_test():
     n = int(input())
     li = list(map(int, input().strip().split(" ")))
     out = solution(li)
     print(out)
+
+# Function to test my code
 
 
 def test():
@@ -56,3 +62,4 @@ def test():
 
 
 input_test()
+# test()

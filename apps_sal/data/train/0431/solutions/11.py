@@ -5,6 +5,7 @@ class Solution(object):
         stack = []
         ans = dot = 0
         for j, y in enumerate(A):
+            # Add all answers for subarrays [i, j], i <= j
             count = 1
             while stack and stack[-1][0] >= y:
                 x, c = stack.pop()

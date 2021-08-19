@@ -1,3 +1,4 @@
+# 頂点数がN(N-1)/2, 辺がN(N-2)本できる
 from collections import deque
 
 N = int(input())

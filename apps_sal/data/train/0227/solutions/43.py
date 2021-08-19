@@ -5,8 +5,10 @@ class Solution:
         zmax = 0
         n_k = 0
         while hi < len(A):
+            # print(f\"{lo},{hi}, {zmax}\")
             if A[hi] == 0:
                 n_k += 1
+            # break
 
             while n_k > K:
                 if A[lo] == 0:

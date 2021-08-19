@@ -1,3 +1,4 @@
+# Segment tree (Bitwise Or)
 from operator import or_
 
 

@@ -8,6 +8,8 @@ for i in range(dictionary_len):
     dict[line[0]] = line[1]
 
 speech = list(input().split(' '))
+#print( dict )
+#print (speech)
 
 for i in range(len(speech)):
     w = speech[i]

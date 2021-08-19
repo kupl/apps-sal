@@ -1,3 +1,4 @@
+#n = int(input().strip())
 
 n, wanted = list(map(int, input().strip().split()))
 

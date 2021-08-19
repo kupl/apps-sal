@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     import numpy as np
     from sys import stdin
@@ -13,6 +14,7 @@ def main():
 
     np.cumsum(cumsum, axis=0, out=cumsum)
     np.cumsum(cumsum, axis=1, out=cumsum)
+    # print(cumsum)
 
     for _ in range(Q):
         p, q = list(map(int, input().split()))

@@ -4,6 +4,8 @@ from numba import njit
 from scipy.special import perm
 from scipy.special import comb
 
+# @njit('f8(i8,i8,i8,i8,f8[:,:,:])', cache=True)
+
 
 def lcm(a, b):
     return a * b // math.gcd(a, b)

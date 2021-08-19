@@ -1,9 +1,11 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
+        # dp[i][j][k] : ith roll, end with j with consecutive k times
         MOD = 10 ** 9 + 7
         rdim = max(rollMax)
         dp = [[[0] * rdim for _ in range(6)] for _ in range(n)]
 
+        # init
         for j in range(6):
             dp[0][j][0] = 1
 

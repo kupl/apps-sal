@@ -3,8 +3,8 @@ a = []
 
 for i in range(h):
     r = list(input())
-    if '
-    a.append(r)
+    if '#' in r:
+        a.append(r)
 
 box = [0] * w
 

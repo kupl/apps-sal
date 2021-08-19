@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     a = int(input())
@@ -15,4 +16,5 @@ for _ in range(t):
         profit += a - 2**i
         i += 1
         d2 += 1
+# one extra day gets counted after profit becomes negative
     print(d2 - 1, d1)

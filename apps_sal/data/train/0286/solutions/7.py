@@ -24,8 +24,10 @@ class Solution:
             if na > half or nb > half:
                 return 0
             if cur == N:
+                # print(na, nb, uniquea, uniqueb)
                 if na != nb or uniquea != uniqueb:
                     return 0
+                # print(uniquea, uniqueb)
                 return 1
 
             gg = 0

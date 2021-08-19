@@ -5,7 +5,7 @@ def run_length_compress(string):
     """文字列をランレングス圧縮する
     例) string = "aabccaaabb" -> [(2, a), (1, b), (2, c), (3, a), (2, b)]
     """
-    string = string + "@"
+    string = string + "@"  # string中に絶対に現れない文字を番兵とする
     n = len(string)
 
     begin = 0

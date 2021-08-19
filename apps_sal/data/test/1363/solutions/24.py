@@ -5,6 +5,7 @@ defenders = list(map(int, input().split()))
 forwards = list(map(int, input().split()))
 
 
+# min goalkeeper
 count = 0
 
 for keeper in goalkeepers:
@@ -12,6 +13,8 @@ for keeper in goalkeepers:
     forw = len(list(filter(lambda x: x > keeper and x <= keeper * 2, forwards)))
     count += defend * (defend - 1) * forw * (forw - 1) * (forw - 2) / 12
 
+
+# min def
 
 for defend in defenders:
     second_defend = len(list(filter(lambda x: x > defend and x <= defend * 2, defenders)))

@@ -10,7 +10,7 @@ for _ in range(m):
     l[a][b] = c
     l[b][a] = c
 for i in range(n):
-    l[i][i] = 0
+    l[i][i] = 0  # 自身のところに行くコストは０
 
 
 def warshall_floyd(d):
@@ -22,6 +22,7 @@ def warshall_floyd(d):
     return d
 
 
+# F=warshall_floyd(l)
 F1 = floyd_warshall(l)
 ans = float('inf')
 for v in permutations(R):

@@ -44,5 +44,7 @@ class Solution:
             added, cnt = union.add(i, j)
             if added:
                 total += val
+            # if cnt == len(points):
+            #    break
 
         return total

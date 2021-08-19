@@ -4,7 +4,7 @@ class Solution:
         :type s: str
         :rtype: int
         """
-        t = '@
+        t = '@#' + '#'.join(s) + '#$'
         n = len(t)
         r = [0] * n
         c = 0

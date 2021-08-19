@@ -1,3 +1,4 @@
+# https://codeforces.com/contest/1288/problem/B
 
 def main():
     a, b = list(map(int, input().split()))

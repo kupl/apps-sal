@@ -47,12 +47,22 @@ class Solution:
             if find(p, v0) == find(p, v1):
                 continue
 
+            # We have two nodes u and v, u in a fully-connected component A, v in another
+            # fully-connected component B. A disjoint from B and u is partially connected
+            # to v via an edge of `edge_type`. Since we need to reach v from u by both
+            # Alice and Bob, if we can find another node, x, in A that is partially-connected
+            # to v by an edge of `needed_edge_type`, then we have edges of both types that
+            # we can use to reach v from u. (use `edge_type` from u->v, or use `needed_edge_type`
+            # from u->x->v). Since the situation is symmetric, we'll need to test with roles of
+            # u and v swapped
             needed_edge_type = 2 if edge_type == 1 else 2
             for pair in [(v0, v1), (v1, v0)]:
                 u, v = pair
                 root_x = None
                 for x in partial_adj[needed_edge_type][v]:
                     if find(p, x) == find(p, u):
+                        # We've found a node x in A fully connected to u, AND it's partially connected
+                        # to v via the `needed_edge_type`
                         root_x = find(p, x)
                         break
                 if root_x != None:

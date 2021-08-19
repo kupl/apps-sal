@@ -8,6 +8,7 @@ num_bars = 1
 dim = [side] * 4 + [top] * 2
 dim.sort()
 while dim != []:
+    #print (current_bar)
     if current_bar < min(dim):
         current_bar = bar
         num_bars += 1

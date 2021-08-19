@@ -22,5 +22,5 @@ while q:
                     q.append((ydy, xdx, d + 1))
 ss = 0
 for i in s:
-    ss += i.count('
+    ss += i.count('#')
 print(h * w - ss - d - 1 if flag else -1)

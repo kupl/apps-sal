@@ -1,7 +1,7 @@
 n, m, h = list(map(int, input().split()))
 
-front = [int(x) for x in input().split()]
-left = [int(x) for x in input().split()]
+front = [int(x) for x in input().split()]  # m
+left = [int(x) for x in input().split()]  # n
 
 top = [[int(x) for x in input().split()] for _ in range(n)]
 

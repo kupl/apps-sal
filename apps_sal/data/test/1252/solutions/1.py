@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -23,6 +24,20 @@ def solve(N, M, T, edges):
     pre = [[0 for _ in range(N + 1)] for _ in range(N + 1)]
     dp[1][1] = 0
     pre[1][1] = 0
+    # q = [(0, 0, -1, 1)]
+    # heapq.heapify(q)
+    # while q:
+    #     _, pcost, pdist, pcity = heapq.heappop(q)
+    #     pdist = -pdist
+    #     if pcost > dp[pcity][pdist]:
+    #         continue
+    #     for dest, ncost in g[pcity]:
+    #         cost = pcost + ncost
+    #         dist = pdist + 1
+    #         if cost <= T and dp[dest][dist] > cost:
+    #             dp[dest][dist] = cost
+    #             pre[dest][dist] = pcity
+    #             heapq.heappush(q, (cost/dist, cost, -dist, dest))
 
     q = [(1, 1, 0)]
     while q:
@@ -37,6 +52,7 @@ def solve(N, M, T, edges):
                     nq.append((dest, dist, cost))
         q = nq
 
+    # print(dp[N])
     ans = max([i for i in range(N, -1, -1) if dp[N][i] <= T])
     print(ans)
 

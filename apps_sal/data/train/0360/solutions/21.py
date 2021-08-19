@@ -8,11 +8,14 @@ class Solution:
                 if tot + wt > mid:
                     res += 1
                     tot = wt
+                    # print(\"res\", res)
 
                 else:
                     tot += wt
             if res <= D:
                 hi = mid
+                # print(\"hi\",hi)
             else:
                 lo = mid + 1
+                # print(\"lo\",lo)
         return lo

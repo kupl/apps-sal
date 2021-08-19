@@ -12,6 +12,8 @@ for _ in range(M):
     G[b].append(a)
     AB.append((a, b))
 
+# print(f'{G=}')
+
 
 def f(a, b):
     S = set([])
@@ -30,6 +32,8 @@ def f(a, b):
         if len(QQ) == 0:
             break
         Q = QQ
+        # print(f'{QQ=}')
+    # print(f'{a=}, {b=}, {S=}')
     return 1 if len(S) != N else 0
 
 
@@ -37,4 +41,5 @@ cnt = 0
 for a, b in AB:
     cnt += f(a, b)
 
+# print(f'{cnt=}')
 print(cnt)

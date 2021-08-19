@@ -1,3 +1,6 @@
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 from collections import defaultdict
 from collections import deque
@@ -5,6 +8,11 @@ import math
 import copy
 
 T = int(input())
+#N = int(input())
+#s1 = input()
+#s2 = input()
+#N,Q = [int(x) for x in stdin.readline().split()]
+#arr = [int(x) for x in stdin.readline().split()]
 
 for i in range(T):
     N, M = [int(x) for x in stdin.readline().split()]
@@ -29,4 +37,5 @@ for i in range(T):
     q2 = q // L
     r = q % L
 
+    # print(q2,r)
     print(q2 * s + sum(tail[:r]))

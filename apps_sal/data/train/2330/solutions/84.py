@@ -9,6 +9,7 @@ def resolve():
     S = [None] + list(map(int, input()))
     n = len(S) - 1
 
+    # check
     if(not (S[1] == 1 and S[n - 1] == 1)):
         print(-1)
         return

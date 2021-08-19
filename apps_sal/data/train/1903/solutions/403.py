@@ -31,10 +31,10 @@ class Solution:
 
             def KruskalMST(self):
 
-                result = []
+                result = []  # This will store the resultant MST
 
-                i = 0
-                e = 0
+                i = 0  # An index variable, used for sorted edges
+                e = 0  # An index variable, used for result[]
 
                 self.graph = sorted(self.graph, key=lambda item: item[2])
 

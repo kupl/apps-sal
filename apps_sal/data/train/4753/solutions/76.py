@@ -7,3 +7,4 @@ def goose_filter(birds):
         if x in birds:
             birds.remove(x)
     return birds
+# your code here

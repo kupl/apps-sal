@@ -7,6 +7,8 @@ import datetime
 
 
 def main():
+    # sys.stdin = open('input.txt', 'r')
+    # sys.stdout = open('output.txt', 'w')
 
     t1 = list(map(int, input().strip().split(':')))
     t2 = list(map(int, input().strip().split(':')))
@@ -25,6 +27,9 @@ def main():
 
     else:
         print(s[-8:-3])
+
+    # sys.stdin.close()
+    # sys.stdout.close()
 
 
 def __starting_point():

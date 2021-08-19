@@ -13,6 +13,7 @@ def LS(): return input().split()
 
 INF = float('inf')
 
+# 50
 n = I()
 t = S()
 if n == 1:

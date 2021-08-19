@@ -42,9 +42,11 @@ class Solution:
 
         for i in range(n):
             self.dist.append(getDistance(points[i]))
+        # print(self.dist)
         start = 0
         end = n - 1
         pivot = self.partition(0, n - 1, K)
+        # print(pivot, self.dist)
         while pivot != K:
             if pivot < K:
                 start = pivot + 1
@@ -52,6 +54,9 @@ class Solution:
                 end = pivot - 1
             pivot = self.partition(start, end, start)
 
+            # print(pivot)
+
         res = []
 
+        # print(self.dist)
         return self.points[0:K]

@@ -1,4 +1,5 @@
 def get_planet_name(id):
+    # a dictionary also can work as a switch case
     switcher = {
         1: "Mercury",
         2: "Venus",

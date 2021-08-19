@@ -60,3 +60,4 @@ mat = [[int(n) for n in input().split()] for r in range(0, numbers[0])]
 result = GraphUtil(mat, numbers[0], numbers[1], numbers[2])
 
 print(result.possbilePath())
+# print(result.count)

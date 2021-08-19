@@ -18,6 +18,7 @@ class Solution:
         return maxV
 
     def helper(self, sub, ii, jj, grid, results):
+        # print(sub,grid[ii][jj])
         if sub[-1] == 0:
             results.append(sub.copy())
             return

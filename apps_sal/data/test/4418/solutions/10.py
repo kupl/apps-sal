@@ -49,6 +49,8 @@ while True:
     else:
         break
 
+    # print("!")
+
     for c in range(Ci, len(C)):
         if C[c] >= NOW:
             NOW = C[c]

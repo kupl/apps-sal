@@ -16,6 +16,7 @@ b = [''] * len(a)
 pr = [False] * n
 su = [False] * n
 for i in range(len(a)):
+    # pr
     flp = False
     ss = a[i]
     if not pr[len(ss) - 1]:
@@ -37,6 +38,7 @@ if not fl:
     pr = [False] * n
     su = [False] * n
     for i in range(len(a)):
+        # pr
         flp = False
         ss = a[i]
         if not pr[len(ss) - 1]:

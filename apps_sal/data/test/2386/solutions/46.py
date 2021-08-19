@@ -2,6 +2,7 @@ import math
 N = int(input())
 A = list(map(int, input().split()))
 
+# |x-a|+|x-b|+|x-c|+...を最小化するxの値はa,b,c...の中央値
 
 for i in range(1, N + 1):
     A[i - 1] -= i

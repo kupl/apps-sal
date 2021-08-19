@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     m, t1, t2 = map(int, input().split())
     d = max(t1, t2) - min(t1, t2)

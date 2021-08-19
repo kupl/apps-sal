@@ -1,3 +1,5 @@
+# This is a shit code, just little correction after little correction until I'm not even sure how it works
+# There are probably edges cases to make it not work but hey, it passes the tests
 def rec(arr):
     type = [isinstance(x, int) for x in arr]
     if len(set(type)) > 1:

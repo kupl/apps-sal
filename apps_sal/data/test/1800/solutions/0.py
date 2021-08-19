@@ -1,3 +1,4 @@
+# You lost the game.
 n, m = map(int, input().split())
 A = list(map(int, input().split()))
 M = [list(map(int, input().split())) for _ in range(m)]

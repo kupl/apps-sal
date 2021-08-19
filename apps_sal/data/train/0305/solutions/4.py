@@ -10,11 +10,13 @@ class Solution:
                 h = l + i
                 t = text[i:h + l]
 
+                # print(text[i:h], text[h:h+l], i, j)
                 if l < 1 or t in seen:
                     continue
 
                 if t[:l] == t[l:]:
                     count += 1
+                    # print( '**', text[i:h+l])
                     seen.add(t)
 
         return count

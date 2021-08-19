@@ -15,6 +15,7 @@ def main():
     N, X = mi()
 
     def solve(n, x):
+        # print(n,x)
         if n == 0:
             return 1
         c = 2**(n + 2) - 3

@@ -11,6 +11,8 @@ setrecursionlimit(10**9)
 MOD = 10**9 + 7
 INF = 10**18
 
+# 同じパターンがくるところを考え
+# メモで枝切をする
 
 n, k = list(map(int, input().split()))
 s = input()

@@ -1,3 +1,5 @@
+#from math import gcd, factorial as f
+#list(map(int, input().split()))
 n = int(input())
 a = list(map(int, input().split()))
 x = sum(a)

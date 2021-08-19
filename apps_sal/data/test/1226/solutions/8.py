@@ -1,6 +1,7 @@
 n, a, b = map(int, input().split())
 mod = pow(10, 9) + 7
 total = pow(2, n, mod)
+# print(total)
 
 
 def comb(m, x):

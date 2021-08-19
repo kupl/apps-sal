@@ -9,6 +9,7 @@ class StreamChecker:
                 condition = condition[0][letter]
             condition[1] = True
         self.pool = [self.d]
+        # print(self.d)
 
     def query(self, letter: str) -> bool:
         new_pool = [self.d]
@@ -19,5 +20,11 @@ class StreamChecker:
                     ret = True
                 new_pool.append(one[0][letter])
         self.pool = new_pool
+        # print(self.pool)
 
         return ret
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

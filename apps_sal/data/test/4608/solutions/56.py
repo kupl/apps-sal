@@ -11,8 +11,8 @@ def accept_input():
 
 
 def process(s):
-    if s == "
-    return 1
+    if s == "#":
+        return 1
     else:
         return 0
 

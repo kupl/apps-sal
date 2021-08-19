@@ -15,6 +15,7 @@ class Solution:
             ans += 1
             wait = max(0, wait - 4)
 
+            # print(profit, ans)
             if profit > tp:
                 ta = ans
                 tp = profit

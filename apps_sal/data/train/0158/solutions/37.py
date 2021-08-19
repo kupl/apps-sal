@@ -3,7 +3,7 @@ class Solution:
 
         A, B = list(A), list(B)
         res = float('inf')
-        q = [(0, 0, B)]
+        q = [(0, 0, B)]  # (i) index, (k) swaps made, (B) current list
 
         while q:
 

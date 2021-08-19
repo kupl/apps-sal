@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def main():
     a, b, c = [int(x) for x in input().split()]

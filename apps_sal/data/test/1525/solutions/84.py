@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from itertools import product
 import sys
 
@@ -7,7 +8,7 @@ except ImportError:
     pass
 
 
-MOD = 1000000007
+MOD = 1000000007  # type: int
 
 
 def isvalid(ptn: "Tuple[bool]"):
@@ -19,10 +20,10 @@ def solve(H: int, W: int, K: int):
         ptn
         for ptn in product((False, True), repeat=W - 1)
         if isvalid(ptn)
-    ]
-    dp = [1 if i == K - 1 else 0 for i in range(W)]
+    ]  # type: List[Tuple[bool]]
+    dp = [1 if i == K - 1 else 0 for i in range(W)]  # type: List[int]
     for _ in range(H):
-        newdp = [0] * W
+        newdp = [0] * W  # type: List[int]
         for ptn in validptns:
             for s in range(W):
                 t = s
@@ -43,9 +44,9 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    H = int(next(tokens))
-    W = int(next(tokens))
-    K = int(next(tokens))
+    H = int(next(tokens))  # type: int
+    W = int(next(tokens))  # type: int
+    K = int(next(tokens))  # type: int
     solve(H, W, K)
 
 

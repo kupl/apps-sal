@@ -1,5 +1,7 @@
 class Solution:
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
+        # lst_set = set()
+        # arr_sort = sorted(arr, reverse = True)
 
         rolling_sum = sum(arr[:k])
         count = 0 if rolling_sum < threshold * k else 1

@@ -1,4 +1,8 @@
 class Solution:
+    # Just like the shuffle board game, consider each string as a node
+    # And for each child is the shuffled result which one step closer to the target
+    # Another key is how to find the next step (by finding the first different letter and swap)
+    # The order does not matter
     def kSimilarity(self, A: str, B: str) -> int:
         def find(s):
             i = 0

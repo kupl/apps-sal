@@ -2,7 +2,7 @@ class Solution:
     def numPermsDISequence(self, S: str) -> int:
         M = pow(10, 9) + 7
         N = len(S)
-        S = '
+        S = '#' + S
 
         dp = [[0] * (N + 1) for _ in range(N + 1)]
         dp[0][0] = 1
@@ -13,6 +13,7 @@ class Solution:
                     for k in range(j, i + 1):
                         dp[i][j] += dp[i - 1][k]
                 else:
+                    # S[i] == 'I'
                     for k in range(0, j):
                         dp[i][j] += dp[i - 1][k]
         res = 0

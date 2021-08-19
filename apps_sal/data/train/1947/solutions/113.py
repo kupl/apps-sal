@@ -1,5 +1,8 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
+        # Reduce to Single Word in B
+        # Time  complexity: O(A + B) where A and B is the total amount of information in A and B respectively.
+        # Space complexity: O(A.length + B.length)
         def count(word):
             ans = [0] * 26
             for letter in word:

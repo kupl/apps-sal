@@ -33,8 +33,10 @@ def main():
         if memo[i][1] == 10003:
             print("IMPOSSIBLE")
             break
+        # print(dp)
     else:
         print("POSSIBLE")
+    # print(memo)
 
 
 def __starting_point():

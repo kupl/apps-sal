@@ -6,6 +6,7 @@ class Solution:
 
         def find(x):
             while x in uf:
+                # path compress
                 while uf[x] in uf:
                     uf[x] = uf[uf[x]]
                 x = uf[x]

@@ -9,3 +9,6 @@ def is_palindrome(s):
             return True
         else:
             return False
+
+
+#  Implement a function that checks if something is a palindrome.

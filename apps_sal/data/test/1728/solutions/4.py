@@ -4,6 +4,7 @@ def bfs(endcolor):
     count = 0
     visited, queue = set(), [1]
     while queue:
+        # print(color,queue,count)
         vertex = queue.pop(0)
         if endcolor[vertex] != color[vertex]:
             color[vertex] = endcolor[vertex]
@@ -22,4 +23,6 @@ i = 1
 for x in map(int, input().split()):
     i += 1
     g[x].add(i)
+    # g[i].add(x)
+# print(g)
 print(bfs(list(map(int, input().split()))))

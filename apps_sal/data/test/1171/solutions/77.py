@@ -12,6 +12,7 @@ for l in range(N):
     selected = copy.deepcopy(left)
     lr_sum = left_sum
     for r in range(N - l + 1):
+        # skip
         stock = K - l - r
         if stock < 0:
             break

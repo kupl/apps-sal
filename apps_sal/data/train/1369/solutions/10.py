@@ -1,3 +1,4 @@
+# cook your dish here
 def sieve(n):
     prime = [True for i in range(n + 1)]
     p = 2

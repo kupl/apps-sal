@@ -20,3 +20,6 @@ else:
             r.append(str(i + 1) + ' ' + str((i + j + 1) % n + 1))
 
     print('\n'.join(r))
+
+
+# Made By Mostafa_Khaled

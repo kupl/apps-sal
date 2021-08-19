@@ -1,11 +1,13 @@
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         '''
+        #最短就利用BFS
         '''
         n = len(arr)
         g = collections.defaultdict(list)
         for i, v in enumerate(arr):
             g[v].append(i)
+        # 存放同值的位置
         visit = [0] * n
         values = set()
         step = 0

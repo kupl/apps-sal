@@ -1,3 +1,4 @@
+#A,B,C,D = map(int,input().split())
 t = int(input())
 for i in range(t):
     a, b = list(map(int, input().split()))
@@ -14,6 +15,7 @@ for i in range(t):
             c += 1
 
     sep.append(max(0, c))
+    # print(sep)
 
     tot = 0
     for j in sep:

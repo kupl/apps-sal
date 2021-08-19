@@ -13,4 +13,10 @@ def f(a, l, r):
     return ret
 
 
+# for leng in range(1, n+1):
+#     for start in range(0, n-leng+1):
+#         tmp = f(a, start, leng) + f(b, start, leng)
+#         if tmp > m:
+#             m = tmp
+# print(tmp)
 print(f(a, 0, len(a)) + f(b, 0, len(b)))

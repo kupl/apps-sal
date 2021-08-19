@@ -27,13 +27,13 @@ def escape(maze):
             xx = x + dx
             yy = y + dy
 
-            if 0 <= xx < row and 0 <= yy < col and maze[xx][yy] != '
-             queue.append((xx, yy))
-              stored_path[(xx, yy)] = (x, y)
-               if(xx == 0 or xx == row - 1) and maze[xx][yy] or (yy == 0 or yy == col - 1 and maze[xx][yy]):
+            if 0 <= xx < row and 0 <= yy < col and maze[xx][yy] != '#':
+                queue.append((xx, yy))
+                stored_path[(xx, yy)] = (x, y)
+                if(xx == 0 or xx == row - 1) and maze[xx][yy] or (yy == 0 or yy == col - 1 and maze[xx][yy]):
                     end = (xx, yy)
                     break
-                maze[xx][yy] = '
+                maze[xx][yy] = '#'
 
     if not end:
         return end
@@ -49,6 +49,7 @@ def escape(maze):
     PATH = full_path[::-1]
     out = []
     for direction in PATH:
+        # right
         if state == '>' and direction == 'down':
             out.append('R')
             out.append('F')
@@ -67,6 +68,7 @@ def escape(maze):
             out.append('F')
             state = '^'
 
+        # left
         elif state == '<' and direction == 'down':
             out.append('L')
             out.append('F')
@@ -85,6 +87,7 @@ def escape(maze):
             out.append('F')
             state = '^'
 
+        # down
         elif state == 'v' and direction == 'down':
             out.append('F')
             state = 'v'
@@ -104,6 +107,7 @@ def escape(maze):
             out.append('F')
             state = '^'
 
+        # up
         elif state == '^' and direction == 'down':
             out.append('B')
             out.append('F')

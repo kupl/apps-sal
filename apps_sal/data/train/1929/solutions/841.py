@@ -21,3 +21,8 @@ class StreamChecker:
                 if '!' in entry[letter]:
                     validity = True
         return validity
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

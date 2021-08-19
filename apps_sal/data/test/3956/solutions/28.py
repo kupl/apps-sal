@@ -1,3 +1,4 @@
+# Acknowledge: https://atcoder.jp/contests/arc102/submissions/3127544
 MOD = 998244353
 k, n = list(map(int, input().split()))
 

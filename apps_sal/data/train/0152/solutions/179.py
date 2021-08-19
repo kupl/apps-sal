@@ -1,6 +1,7 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
+        # diffs = [position[i] - position[i-1] for i in range(1, n)]
         n = len(position)
 
         def check(target_min_force):

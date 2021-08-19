@@ -14,4 +14,5 @@ for i in range(1, N):
     tot = k * (m + n)
     prev[0] = tot * m // (m + n)
     prev[1] = tot * n // (m + n)
+    # print(m,n,k,tot,prev)
 print((sum(prev)))

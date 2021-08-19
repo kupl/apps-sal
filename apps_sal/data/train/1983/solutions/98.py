@@ -5,6 +5,7 @@ class ProductOfNumbers:
 
     def __init__(self):
         self._stack = []
+        # self._prod = 1
 
     def add(self, num: int) -> None:
         if num == 0:
@@ -21,3 +22,9 @@ class ProductOfNumbers:
             return self._stack[-1]
         else:
             return (self._stack[-1]) // self._stack[n - k - 1]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

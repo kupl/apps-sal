@@ -30,4 +30,10 @@ class Solution:
                 max_pprofit = profit
                 ans = rotation + steps
 
+        # profit = waiting*boardingCost - runningCost
+        # rotation+=1
+        # if max_profit<profit:
+        #     max_pprofit = profit
+        #     ans = rotation
+
         return ans if ans else -1

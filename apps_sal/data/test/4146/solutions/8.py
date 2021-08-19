@@ -19,6 +19,7 @@ for k in range(N // 2):
 
 nums_O.sort()
 nums_E.sort()
+# print(O,E,nums_O[-1],nums_E[-1])
 if nums_O[-1][1] != nums_E[-1][1]:
     print(N - (nums_O[-1][0] + nums_E[-1][0]))
 else:

@@ -39,4 +39,6 @@ class Solution:
                 child[edges[k][1]].append(edges[k][2])
                 child[edges[k][2]].append(edges[k][1])
             k += 1
+            # print(child)
+            # print(k,i)
         return ret

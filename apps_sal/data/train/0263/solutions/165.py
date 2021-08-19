@@ -1,5 +1,8 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
+        # f[i][j]: # of different codes with length i and with j as the last number
+        # f[i][j] = sum(f[i-1][l]), where l can be achieved from j on the map
+        ### f[1][j] = 1, 0<=j<=9
 
         achievable = {}
         achievable[0] = [4, 6]

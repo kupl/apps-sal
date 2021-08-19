@@ -1,6 +1,7 @@
 class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         m, n = len(mat), len(mat[0])
+        # result_mat = [[0]*n]*m
         result_mat = []
         for i in range(m):
             result_mat.append([0] * n)

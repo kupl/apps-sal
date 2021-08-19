@@ -3,7 +3,7 @@ from collections import deque
 
 class Solution:
     def racecar(self, target: int) -> int:
-        queue = deque([(0, 1)])
+        queue = deque([(0, 1)])  # position, speed
         level = 0
         while True:
             size = len(queue)

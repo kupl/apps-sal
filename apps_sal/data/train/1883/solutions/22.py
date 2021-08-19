@@ -6,6 +6,7 @@ class Solution:
         def go(cur, seen):
             i, j = cur
             if grid[i][j] == 2:
+                # print(self.count, len(seen))
                 if len(seen) == self.count:
                     self.ans += 1
                 else:

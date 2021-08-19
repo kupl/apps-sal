@@ -6,7 +6,9 @@ def check(a):
     return t % 4 == 0
 
 
+# n, m = map(int, input().split())
 n = int(input())
+# a = [int(i) for i in input().split()]
 while not check(n):
     n += 1
 print(n)

@@ -3,9 +3,11 @@ import math
 
 
 def make_circle(points):
+    # Convert to float and randomize order
     shuffled = [(float(x), float(y)) for (x, y) in points]
     random.shuffle(shuffled)
 
+    # Progressively add points to circle or recompute circle
     c = None
     for (i, p) in enumerate(shuffled):
         if c is None or not is_in_circle(c, p):
@@ -13,6 +15,7 @@ def make_circle(points):
     return c
 
 
+# One boundary point known
 def _make_circle_one_point(points, p):
     c = (p[0], p[1], 0.0)
     for (i, q) in enumerate(points):
@@ -24,6 +27,7 @@ def _make_circle_one_point(points, p):
     return c
 
 
+# Two boundary points known
 def _make_circle_two_points(points, p, q):
     circ = make_diameter(p, q)
     left = None
@@ -31,10 +35,12 @@ def _make_circle_two_points(points, p, q):
     px, py = p
     qx, qy = q
 
+    # For each point not in the two-point circle
     for r in points:
         if is_in_circle(circ, r):
             continue
 
+        # Form a circumcircle and classify it on left or right side
         cross = _cross_product(px, py, qx, qy, r[0], r[1])
         c = make_circumcircle(p, q, r)
         if c is None:
@@ -44,6 +50,7 @@ def _make_circle_two_points(points, p, q):
         elif cross < 0.0 and (right is None or _cross_product(px, py, qx, qy, c[0], c[1]) < _cross_product(px, py, qx, qy, right[0], right[1])):
             right = c
 
+    # Select which circle to return
     if left is None and right is None:
         return circ
     elif left is None:
@@ -63,6 +70,7 @@ def make_diameter(a, b):
 
 
 def make_circumcircle(a, b, c):
+    # Mathematical algorithm from Wikipedia: Circumscribed circle
     ox = (min(a[0], b[0], c[0]) + max(a[0], b[0], c[0])) / 2.0
     oy = (min(a[1], b[1], c[1]) + max(a[1], b[1], c[1])) / 2.0
     ax = a[0] - ox
@@ -89,6 +97,7 @@ def is_in_circle(c, p):
     return c is not None and math.hypot(p[0] - c[0], p[1] - c[1]) <= c[2] * _MULTIPLICATIVE_EPSILON
 
 
+# Returns twice the signed area of the triangle defined by (x0, y0), (x1, y1), (x2, y2).
 def _cross_product(x0, y0, x1, y1, x2, y2):
     return (x1 - x0) * (y2 - y0) - (y1 - y0) * (x2 - x0)
 

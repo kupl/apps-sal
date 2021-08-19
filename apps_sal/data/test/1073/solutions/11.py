@@ -1,3 +1,4 @@
+# strs = [input() for _ in range(3)]
 
 def main():
     n = int(input())

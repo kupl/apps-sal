@@ -12,6 +12,7 @@ class Solution:
         @lru_cache(None)
         def dp(i, j, k):
             if i == j:
+                # cost to make one pile from one pile is 0, otherwise impossible
                 return 0 if k == 1 else inf
             if k == 1:
                 return dp(i, j, K) + prefix[j + 1] - prefix[i]

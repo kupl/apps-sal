@@ -9,6 +9,7 @@ for i in range(1, n):
 
 result = [0 for _ in range(n - 1)]
 last = cumsum[-1]
+# print(last)
 for i in range(n - 1):
     result[i] = abs(last - 2 * cumsum[i])
 

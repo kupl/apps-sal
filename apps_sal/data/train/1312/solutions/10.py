@@ -16,6 +16,7 @@ for p in range(t):
             line = ""
             for j in range(r):
                 line += matrix[j][i]
+            # print line
             if(line.find("spoon") != -1):
                 print("There is a spoon!")
                 found = True

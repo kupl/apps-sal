@@ -4,6 +4,7 @@ class Solution:
         DP = {}
 
         def f(i, fuel):
+            # Returns number of paths to finish starting from `i` and `fuel`
             if fuel < 0:
                 return 0
             if (i, fuel) in DP:

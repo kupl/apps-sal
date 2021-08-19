@@ -22,6 +22,7 @@ def compute(s, c):
             stack.pop(len(stack) - 1)
         else:
             stack.append((i, s[i]))
+        #print(stack,end='  ')
     """
     if(len(stack)>0):
      idx,char = stack[len(stack)-1]

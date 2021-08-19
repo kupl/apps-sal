@@ -12,6 +12,7 @@ Y = [1] * n
 for i in range(n):
     Y[P[i]] = 0
 
+# print(Y)
 
 for i in range(n - 1, 0, -1):
     Y[P[i]] += Y[i]

@@ -1,7 +1,7 @@
 input()
 s = input()
 r = b = 0
-op = []
+op = []  # False=r
 ans = []
 for c in s:
     if c == '(':

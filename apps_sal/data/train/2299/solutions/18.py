@@ -6,8 +6,10 @@ class SegTree:
         self.seg = [self.ide_ele] * 2 * self.num
         self.segfunc = segfunc
 
+        # set_val
         for i in range(self.n):
             self.seg[i + self.num - 1] = init_val[i]
+        # built
         for i in range(self.num - 2, -1, -1):
             self.seg[i] = segfunc(self.seg[2 * i + 1], self.seg[2 * i + 2])
 
@@ -61,6 +63,8 @@ def main():
 
     import heapq
     heap = []
+    # heapq.heappush(heap, item)
+    # heapq.heappop(heap)
 
     def BFS(H):
         L = H[0]
@@ -94,6 +98,7 @@ def main():
 
     H = (0, N - 1)
     m1, m2, LH, CH, RH = BFS(H)
+    # print(m1,m2)
     heapq.heappush(heap, [m1, m2, LH, CH, RH])
     Q = []
     while heap != []:

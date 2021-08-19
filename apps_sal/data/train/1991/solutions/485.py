@@ -2,10 +2,13 @@ from functools import lru_cache
 
 
 def count_routes(locations, start, finish, fuel):
+    # dp[f][c] number of routes to get to c
+    # with f amount of fuel remains
     M = 10**9 + 7
 
     dp = [[0] * len(locations) for _ in range(0, fuel + 1)]
 
+    # init
     dp[fuel][start] = 1
 
     for f in range(fuel, -1, -1):
@@ -15,6 +18,7 @@ def count_routes(locations, start, finish, fuel):
                     continue
 
                 gas = abs(c_loc - d_loc)
+                # get to c from d
                 if f + gas <= fuel:
                     dp[f][c] = (dp[f][c] + dp[f + gas][d])
 

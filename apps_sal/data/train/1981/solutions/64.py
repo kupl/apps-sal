@@ -13,9 +13,10 @@ class Solution:
         res.sort()
 
         freq = [[i, 0] for i in range(len(nums))]
+        # print(res)
         prev, count = 0, 0
         for p, v in res:
-            if v < 0:
+            if v < 0:  # start
                 for i in range(prev, p):
                     freq[i][1] += count
                 prev = p
@@ -28,6 +29,7 @@ class Solution:
         freq.sort(key=lambda x: x[1])
         ans = 0
         k = 0
+        # print(freq)
         nums.sort()
         mod = 1000000007
         for i, f in freq:

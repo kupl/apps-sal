@@ -27,10 +27,13 @@ dist = [inf] * n
 dist[k] = 0
 while len(hq) > 0:
     dd, state = heappop(hq)
+#    print("dd:",dd,"state:",state,"q:",q)
     for v, dv in g[state]:
+        #        print("v:",v,"dv:",dv,"g[state]:",g[state],"parent[v]:",parent[v])
         if dist[v] > dist[state] + dv:
             dist[v] = dist[state] + dv
             heappush(hq, (dist[v], v))
+#            print(" state:",state,"v:",v,"dist[v]",dist[v])
 
 for i in range(q):
     xi, yi = list(map(int, input().split()))

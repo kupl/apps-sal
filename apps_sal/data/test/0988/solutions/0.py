@@ -45,6 +45,7 @@ for i in range(6):
             ansI = i
             ansJ = j
 
+# print(ansI, ansJ)
 for i in range(len(ansL)):
     cur = ansL[i]
     realJ = -1

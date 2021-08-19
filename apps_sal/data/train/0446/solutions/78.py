@@ -11,5 +11,7 @@ class Solution:
                 k -= key * cnt[key]
                 remaining -= cnt[key]
             else:
+                #print('In Else during key',key)
                 return remaining - k // key
+                #print('After Return',key)
         return remaining

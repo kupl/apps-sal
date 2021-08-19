@@ -1,10 +1,14 @@
+# comb_mod(n, c, r, mod, fac, den) ≡ nCr
 def prepare(n, mod):
+    # fac[i] ≡ i!
     fac = [1]
     for i in range(1, n + 1):
         fac.append((fac[-1] * i) % mod)
 
+    # rec ≡ 1 / n!
     rec = pow(fac[-1], mod - 2, mod)
 
+    # den[i] ≡ 1 / i!
     den = [1 for _ in range(n + 1)]
     den[n] = rec
     for i in range(n - 1, 0, -1):

@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 l = [1]
 ind = 0

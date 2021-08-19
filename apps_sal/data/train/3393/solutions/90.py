@@ -9,6 +9,14 @@ def list_squared(m, n):
             answer.append([i, int(root ** 2)])
     return answer
 
+# def factors(x):
+#     factorsList = []
+#     for i in range(1, x // 2 +1):
+#         if  x % i == 0:
+#             factorsList.append(i)
+#     factorsList.append(x)
+#     return factorsList
+
 
 def factors(n):
     return set(reduce(list.__add__,

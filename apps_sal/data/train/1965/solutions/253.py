@@ -71,7 +71,10 @@ class Solution:
         num_cc = len(cc_labels)
 
         ret = 2 * (num_cc - 1)
+        # print(\"num_cc=\", num_cc)
+        # print(\"adding\", ret)
         for u in cc_size:
+            # print(\"adding\", cc_size[u] - 1)
             ret += (cc_size[u] - 1)
 
         return ret

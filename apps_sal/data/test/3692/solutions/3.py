@@ -85,6 +85,7 @@ class circle:
         rad_line = line(2 * (O2.x - O1.x), 2 * (O2.y - O1.y), r1 ** 2 - O1.len_sq() - r2 ** 2 + O2.len_sq())
         central = line_pt(O1, O2)
         M = rad_line.intersect(central)
+        # print(M)
         if ((O1 - O2).len_sq() == r1 ** 2 + r2 ** 2 + 2 * r1 * r2):
             return [M]
         d = (O2 - O1).normed().rot()
@@ -107,6 +108,9 @@ class circle:
         return rad_line.fake(central)
 
 
+# a = vector(3, 4)
+# b = vector(4, 4)
+# print(circle(vector(1, 2), 3).intersect(circle(vector(2, 1), 6)))
 n = int(input())
 arr = []
 m = 1
@@ -119,6 +123,7 @@ for i in range(n):
 for i in range(n):
     arr[i].O = arr[i].O * m
     arr[i].r = arr[i].r * m
+# print(m)
 s = set()
 V = 0
 for i in range(n):
@@ -151,4 +156,6 @@ for i in range(n):
         for e in tmp:
             s.add((round(e.x,), round(e.y,)))
     E += len(s)
+# print(V, E)
+# print(len({get_par(i) for i in range(n)}))
 print(E - V + 1 + len({get_par(i) for i in range(n)}))

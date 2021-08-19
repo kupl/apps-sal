@@ -2,6 +2,7 @@ class ProductOfNumbers:
 
     def __init__(self):
         self.vec = []
+        # self.runningProd = []
 
     def add(self, num: int) -> None:
 
@@ -24,3 +25,11 @@ class ProductOfNumbers:
             return self.vec[-1]
         else:
             return self.vec[-1] // self.vec[-k - 1]
+
+        # outval = self.vec[-1]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

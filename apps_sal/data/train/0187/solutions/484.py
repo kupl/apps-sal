@@ -1,6 +1,8 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
+        # customers = [10,10,6,4,7], boardingCost = 3, runningCost = 8
+        # customers = [8,3], boardingCost = 5, runningCost = 6
         l = []
         j = 1
         total = 0

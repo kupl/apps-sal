@@ -18,9 +18,10 @@ while(len(stack) != 0):
     curr = stack.pop()
     x = curr[0]
     y = curr[1]
-    if(x < 0 or y < 0 or x >= n or y >= m or visited[x][y] == 1 or maze[x][y] == '
+    # print(x,y)
+    if(x < 0 or y < 0 or x >= n or y >= m or visited[x][y] == 1 or maze[x][y] == '#'):
         continue
-    visited[x][y]=1
+    visited[x][y] = 1
     stack.append((x + 1, y))
     stack.append((x - 1, y))
     stack.append((x, y + 1))
@@ -28,11 +29,11 @@ while(len(stack) != 0):
     ans.append(curr)
 
 for i in range(k):
-    curr=ans[len(ans) - i - 1]
-    x=curr[0]
-    y=curr[1]
-    maze[x][y]='X'
-s=""
+    curr = ans[len(ans) - i - 1]
+    x = curr[0]
+    y = curr[1]
+    maze[x][y] = 'X'
+s = ""
 for i in range(n):
     for j in range(m):
         s += maze[i][j]

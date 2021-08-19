@@ -4,6 +4,7 @@ from sys import stdin, stdout
 from string import ascii_letters
 letters = ascii_letters
 input = stdin.readline
+#print = stdout.write
 
 for _ in range(int(input())):
     n = int(input())

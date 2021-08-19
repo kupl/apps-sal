@@ -23,13 +23,14 @@ def all_permutations(seq):
 d_map = [(0, -1), (1, 0), (0, 1), (-1, 0)]
 ans = 0
 for p in all_permutations([0, 1, 2, 3]):
+    # 0 goes in direction d_map[p[0]]
     cr = S[0]
     cc = S[1]
     for i in string:
         cr = cr + d_map[p[int(i)]][0]
         cc = cc + d_map[p[int(i)]][1]
-        if cr >= n or cr < 0 or cc >= m or cc < 0 or grid[cr][cc] == "
-        break
+        if cr >= n or cr < 0 or cc >= m or cc < 0 or grid[cr][cc] == "#":
+            break
         if grid[cr][cc] == "E":
             ans += 1
             break

@@ -36,12 +36,16 @@ ans = 0
 
 for i in range(1, n - 1):
     if s[i] in ['B', '?']:
+        # ABC
         ans += n_a[i] * n_c[n - 1 - i] * pow3[n_l[i]] * pow3[n_r[n - 1 - i]] % mod
         ans %= mod
+        # ?BC
         ans += n_l[i] * n_c[n - 1 - i] * pow3[n_l[i] - 1] * pow3[n_r[n - 1 - i]] % mod
         ans %= mod
+        # AB?
         ans += n_a[i] * n_r[n - 1 - i] * pow3[n_l[i]] * pow3[n_r[n - 1 - i] - 1] % mod
         ans %= mod
+        # ?B?
         ans += n_l[i] * n_r[n - 1 - i] * pow3[n_l[i] - 1] * pow3[n_r[n - 1 - i] - 1] % mod
         ans %= mod
 

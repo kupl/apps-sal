@@ -7,11 +7,11 @@ for i in range(h // 2):
             ans[i][j] = '.'
             A -= 1
         else:
-            ans[i][j] = '
+            ans[i][j] = '#'
 for i in range(h - 1, h // 2 - 1, -1):
     for j in range(w):
         if i & 1 and j & 1 and B - 1 > 0:
-            ans[i][j] = '
+            ans[i][j] = '#'
             B -= 1
         else:
             ans[i][j] = '.'

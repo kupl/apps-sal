@@ -29,8 +29,8 @@ def bfs():
 
             if visit[y2 * W + x2]:
                 continue
-            if M[y2][x2] == '
-            continue
+            if M[y2][x2] == '#':
+                continue
 
             visit[y2 * W + x2] = visit[y * W + x] + 1
 

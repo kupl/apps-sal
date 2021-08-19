@@ -11,6 +11,8 @@ class Solution:
                     letters.append((w[-k], k))
             letters.append((result[-k], -k))
 
+        # print(letters)
+
         letter2num = {}
         num2letter = [''] * 10
         nums = '0123456789'

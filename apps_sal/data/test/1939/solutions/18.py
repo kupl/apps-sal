@@ -18,6 +18,8 @@ def timer(f):
 def genArray(length, lower, upper):
     return [random.randint(lower, upper) for i in range(length)]
 
+#print(genArray(5, 4, 9))
+
 
 n, k = list(map(int, input().split(' ')))
 s = ""

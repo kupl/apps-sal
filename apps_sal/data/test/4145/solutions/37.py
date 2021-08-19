@@ -19,6 +19,7 @@ def isPrime(n):
         if len(divisors) == 2:
             return True
         else:
+            # print(divisors)
             return False
 
 

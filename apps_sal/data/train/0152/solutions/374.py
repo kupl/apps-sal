@@ -4,6 +4,7 @@ class Solution:
 
         result = 0
 
+        # can we place m balls each separated by x distance?
         def check(x) -> bool:
             nonlocal position, m
 

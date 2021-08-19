@@ -14,6 +14,7 @@ for i in range(m):
     for j in range(1 << n):
         if dp[j] + a < dp[j | c]:
             dp[j | c] = dp[j] + a
+        # dp[j | c] = min(dp[j] + a, dp[j | c])
 
 ans = -1 if dp[(1 << n) - 1] == INF else dp[(1 << n) - 1]
 

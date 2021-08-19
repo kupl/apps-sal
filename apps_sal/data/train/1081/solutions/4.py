@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 l = [98, 57, 31, 45, 46]
 for _ in range(t):

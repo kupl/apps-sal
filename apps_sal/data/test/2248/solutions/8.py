@@ -2,6 +2,7 @@ import math
 from collections import deque
 import sys
 input = sys.stdin.readline
+# sys.setrecursionlimit(10**8)
 t = 1
 
 
@@ -31,6 +32,7 @@ while t > 0:
     vis = [0 for i in range(n + 1)]
     dis = [0 for i in range(n + 1)]
     bfs(a, 1, dis, vis)
+    # print(dis)
     p = [max(dis), dis.index(max(dis))]
     vis = [0 for i in range(n + 1)]
     dis = [0 for i in range(n + 1)]

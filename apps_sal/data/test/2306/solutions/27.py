@@ -4,6 +4,7 @@ N = int(input())
 t = np.array(['0'] + input().split(), np.int64)
 v = list(map(int, input().split()))
 
+# 発車してからn秒後の速度を求める
 
 T = np.cumsum(t).tolist()
 arrival = T[-1]

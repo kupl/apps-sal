@@ -41,4 +41,5 @@ for _ in range(t):
         for i in range(len(l[ind])):
             final[l[ind][i]] = k
         ind += 1
+    # print(final)
     print(''.join(final))

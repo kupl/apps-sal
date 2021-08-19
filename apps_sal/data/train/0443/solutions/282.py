@@ -5,6 +5,7 @@ class Solution:
             for j in range(i + 1, len(rating)):
                 for k in range(j + 1, len(rating)):
                     if self.check(rating[i], rating[j], rating[k]):
+                        # print(rating[i],rating[j],rating[k])
                         count += 1
         return count
 

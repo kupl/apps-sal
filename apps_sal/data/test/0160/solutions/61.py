@@ -40,6 +40,7 @@ for i in range(1, 40000):
     if SUMM % i == 0:
         DIVS.add(i)
         DIVS.add(SUMM // i)
+# print(DIVS)
 
 DIFF = [0] * N
 
@@ -60,7 +61,9 @@ for div in DIVS:
             cost += DIFF[i]
             sm += DIFF[i]
             i += 1
+    # print("div:{} sum: {} cost: {}".format(div, sm, cost))
     if cost <= K:
         res = max(res, div)
 
+# print(DIFF)
 print(res)

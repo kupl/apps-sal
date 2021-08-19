@@ -24,13 +24,17 @@ for n in range(1, N + 1):
 dp = np.zeros(N + 1, dtype=np.int64)
 dp[0] = 1
 for x in range(A, B + 1):
+    # 使うなら、C～D人で使う
     prev = dp
     dp = prev.copy()
     for n in range(C, D + 1):
         y = n * x
         if y > N:
             break
+        # x人組をn組とる
+        # dp[i] += dp[i-y] * comb((N-i+y),y) * (y! / (x!)^n / n!)
         coef = fact[y] * pow(int(fact_inv[x]), n, MOD) % MOD * fact_inv[n] % MOD
+        # print(x,n,coef)
         dp[y:] += prev[:-y] * comb[N:y - 1:-1, y] % MOD * coef
         dp %= MOD
 

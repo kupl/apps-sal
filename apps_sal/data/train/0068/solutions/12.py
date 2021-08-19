@@ -10,6 +10,7 @@ mod = 10**9 + 7
 t = int(input())
 
 for i in range(t):
+    #n,k = list(map(int, input().split()))
     n = int(input())
     s = list(input().rstrip())
 
@@ -31,14 +32,19 @@ for i in range(t):
     limit = 0
     steps = 0
 
+    # print(arr)
+
     for i in range(len(arr)):
         limit += 1
         if arr[i] > 1:
             red = arr[i] - 1
+            # print(limit)
             gh = min(red, limit)
             arr[i] -= gh
             limit -= gh
             steps += gh
 
+    #print(arr, len(arr), steps)
     ans = math.ceil((len(arr) + steps) / 2)
+    #
     print(ans)

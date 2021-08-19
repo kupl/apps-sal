@@ -8,6 +8,7 @@ line = input().split()
 
 c = [int(x) for x in line]
 
+# print(c[0])
 
 if sum(c) + (len(c) + 1) * (d - 1) < n:
     print('NO')
@@ -20,6 +21,8 @@ else:
     cnt2 = 0
 
     while cnt != 0:
+
+        # print('counter is ' + str(cnt))
 
         for i in range(d - 1):
 

@@ -9,6 +9,11 @@ class Solution:
         if not stations:
             return -1
 
+        # A[t][i] = max distance using first i stations and stop t times (t<=i)
+        # A[t][i] = max(
+        #    A[t][i-1],
+        #    A[t-1][i-1] + stations[i-1][1] if A[t-1][i-1] >= stations[i-1][0]
+
         n = len(stations)
         A = [[0] * (n + 1) for _ in range(n + 1)]
 
@@ -28,6 +33,7 @@ class Solution:
 
     def rec1(self, target, startFuel, stations, position, station_idx_start):
         if position >= target or startFuel >= (target - position):
+            #print(target, startFuel, stations, position)
             return 0
         else:
             candidates = []

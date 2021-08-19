@@ -21,12 +21,14 @@ def ceil(a, b):
     return (a + b - 1) // b
 
 
+# aとbの最大公約数
 def gcd(a, b):
     if b == 0:
         return a
     return gcd(b, a % b)
 
 
+# aとbの最小公倍数
 def lcm(a, b):
     g = gcd(a, b)
     return a / g * b

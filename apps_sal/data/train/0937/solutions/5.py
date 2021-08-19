@@ -1,3 +1,4 @@
+# cook your dish here
 l = ["C", "E", "S"]
 for t in range(int(input())):
     a = input().upper()

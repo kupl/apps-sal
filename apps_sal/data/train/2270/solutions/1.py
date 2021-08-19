@@ -6,8 +6,9 @@ N, X, Y, Z = map(int, input().split())
 
 MOD = 10 ** 9 + 7
 
+# ダメなやつを数える
 L = max(10, X + Y + Z)
-dp = np.zeros(1 << L + 1, dtype=np.int64)
+dp = np.zeros(1 << L + 1, dtype=np.int64)  # 右から見て部分和として踏む場所
 rng = np.arange(1 << L + 1, dtype=np.int64)
 x575 = (1 << Z) + (1 << (Y + Z)) + (1 << (X + Y + Z))
 bad = ((x575 & rng) == x575)

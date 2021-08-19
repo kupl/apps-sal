@@ -11,6 +11,7 @@ FOO = sum(input)
 BAR = number input
 BAZ = 0
 QUZ = 0
+#BOTH SAEM ( 
 	BIGGR OF (
 		(PRODUKT OF FOO AN QUZ) 
 		AN (PRODUKT OF BAR BAZ)

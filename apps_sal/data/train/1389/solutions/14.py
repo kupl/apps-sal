@@ -1,4 +1,10 @@
 
+# // Problem : Reverse
+# // Contest : CodeChef - IARCS OPC Judge Problems
+# // URL : https://www.codechef.com/IARCSJUD/problems/IAREVERS
+# // Memory Limit : 256 MB
+# // Time Limit : 1000 ms
+# // Powered by CP Editor (https://github.com/cpeditor/cpeditor)
 
 import string
 punc = [".", "'", ",", ":", ";"]

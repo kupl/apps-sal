@@ -30,7 +30,7 @@ if P in [2, 5]:
 
 else:
     mod_P = defaultdict(int)
-    mod_P[0] += 1
+    mod_P[0] += 1  # S[r:]が空文字になるばあいのやつ
     tmp = 0
 
     for i in range(N):

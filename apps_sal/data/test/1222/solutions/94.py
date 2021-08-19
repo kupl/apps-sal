@@ -30,6 +30,8 @@ else:
     d = (i - 1) // 9
     num = 9
 letter = [str(num)]
+#print(i)#
+#print(K, d, num)#
 while d >= 1:
     if K <= tab[d - 1][num]:
         num -= 1
@@ -39,5 +41,6 @@ while d >= 1:
         K -= (tab[d - 1][num] + tab[d - 1][num + 1])
         num += 1
     d -= 1
+    #print(K, d, num)#
     letter.append(str(num))
 print(''.join(letter))

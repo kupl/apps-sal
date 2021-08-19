@@ -17,3 +17,6 @@ for i in range(1, N):
         steps += 1
         cur[i] = color[i]
 print(steps)
+# print(con)
+# print(color)
+# print(vert)

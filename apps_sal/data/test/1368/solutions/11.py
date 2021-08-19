@@ -19,10 +19,12 @@ for i in range(n):
     else:
         if v[i] == v[a - 1]:
             cntr += 1
+# print(cntv,cntr)
 if cntv < a:
     print(cmb(cntv + cntr, cntv))
 else:
     ans = 0
     for r in range(a, min(b, cntv + cntr) + 1):
         ans += cmb(cntv + cntr, r)
+        # print(ans)
     print(ans)

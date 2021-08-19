@@ -1,8 +1,10 @@
 def solution(n, num_array):
 
+    # If there is only one element in the list, return 0.
     if (len(num_array) == 1):
         return 0
 
+    # sort the array first
     num_array.sort()
     idx1 = 0
     idx2 = 1

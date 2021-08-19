@@ -1,3 +1,5 @@
+# A - Good Integer
+#  標準入力N
 
 N = input()
 my_list = []

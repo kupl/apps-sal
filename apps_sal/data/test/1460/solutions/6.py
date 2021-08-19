@@ -1,3 +1,4 @@
+# n, k = map(int, input().split())
 n = int(input())
 print(3 * n + 4)
 print(0, 0)

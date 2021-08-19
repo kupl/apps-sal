@@ -11,6 +11,7 @@ class Solution:
         high = [float('inf')]
         currlow, currhigh = nums[0], nums[0]
         for i in range(1, len(nums)):
+            # print(nums[i])
             while nums[i] > high[-1]:
                 low.pop()
                 high.pop()
@@ -26,5 +27,8 @@ class Solution:
                 currhigh = nums[i]
             else:
                 return True
+            # print(currlow, currhigh)
+            # print(low)
+            # print(high)
 
         return False

@@ -1,3 +1,4 @@
+# cook your dish here
 n, a = list(map(int, input().split()))
 for _ in range(a):
     if n == 0:

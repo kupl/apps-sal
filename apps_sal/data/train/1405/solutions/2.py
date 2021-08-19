@@ -8,6 +8,9 @@ input = sys.stdin.readline
 def print(x):
     sys.stdout.write(str(x) + "\n")
 
+# sys.stdout=open("CP1/output.txt",'w')
+# sys.stdin=open("CP1/input.txt",'r')
+
 
 def Sieve(n):
     prime = [True for i in range(n + 1)]
@@ -28,6 +31,7 @@ def Sieve(n):
 
 
 p = Sieve(10**5)
+# mod=pow(10,9)+7
 t = int(input())
 for i in range(t):
     n = int(input())

@@ -6,11 +6,13 @@ class Solution:
         def dp(i):
             if res[i] > 0:
                 return res[i]
-            res[i] = 1
+            res[i] = 1  # at least itself
 
             for di in [-1, 1]:
                 for j in range(i + di, i + d * di + di, di):
-                    if not (0 <= j < n and arr[j] < arr[i]):
+                    # di=-1, j in range(i-1, i-d-1, -1) which is from i-1 to i-2 to ... i-d (d positions, all are reachable)
+                    # di=1, j in range(i+1, i+d+1, 1), which is from i+1 to i+2 to ... i+d ( d positions, all are reachable)
+                    if not (0 <= j < n and arr[j] < arr[i]):  # if j<0 or j>=n or arr[j] >= arr[i]: break
                         break
                     res[i] = max(res[i], dp(j) + 1)
 
@@ -18,7 +20,7 @@ class Solution:
 
         return max(map(dp, range(n)))
 
-    def maxJumps1(self, arr, d):
+    def maxJumps1(self, arr, d):  # 最直观的dp方法！递归调用+记忆化保存
         n = len(arr)
         res = [0] * n
 

@@ -34,6 +34,8 @@ n, m = sys.stdin.readline().split(" ")
 n = int(n)
 m = int(m)
 
+# Do note that every other edge that isn't present in this list already connects nodes.
+
 
 def load_graph(m, n):
     graph = {}
@@ -75,6 +77,7 @@ def do(n, m):
             u = Q.get()
 
             one_graph[u].intersection_update(remaining)
+            # intersection are things you need to process but can't yet
             remaining.difference_update(one_graph[u])
             for elt in remaining:
                 Q.put(elt)

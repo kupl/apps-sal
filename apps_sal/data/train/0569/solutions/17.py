@@ -1,5 +1,8 @@
+# cook your dish here
+# ecapr203
 
 try:
+    # if(True):
     for _ in range(int(input())):
         n = int(input())
         k = int((((9 + (8 * n))**(0.5)) - 1) / 2)

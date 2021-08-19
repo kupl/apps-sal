@@ -18,6 +18,7 @@ for i in range(1, H):
             s[i][j] = (s[i][j - 1] + a[i][j]) % 2
 
 s[H - 1][W - 1] = 0
+# print(a)
 ans = []
 for i in range(H):
     for j in range(W):

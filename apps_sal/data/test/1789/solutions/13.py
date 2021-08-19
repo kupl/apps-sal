@@ -21,7 +21,7 @@ INF = 10**18
 def dijkstra_heap(s, edge):
     n = len(edge)
     d = [INF] * n
-    used = [True] * n
+    used = [True] * n  # True: not used
     d[s] = 0
     used[s] = False
     edgelist = []

@@ -1,3 +1,4 @@
+# coding: utf-8
 
 def count(i, g):
     cost = ord(g) - ord(i)

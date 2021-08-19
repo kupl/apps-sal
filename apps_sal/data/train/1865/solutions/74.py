@@ -1,6 +1,6 @@
 class Solution:
     def minPushBox(self, grid: List[List[str]]) -> int:
-        def check(i, j): return 0 <= i < m and 0 <= j < n and grid[i][j] != '
+        def check(i, j): return 0 <= i < m and 0 <= j < n and grid[i][j] != '#'
 
         m, n = len(grid), len(grid[0])
         dij = [[0, -1], [0, 1], [-1, 0], [1, 0]]
@@ -18,8 +18,8 @@ class Solution:
             k = 0
             for di, dj in dij:
                 ii, jj = i + di, j + dj
-                if not (0 <= ii < m and 0 <= jj < n) or grid[ii][jj] == '
-                k += 1
+                if not (0 <= ii < m and 0 <= jj < n) or grid[ii][jj] == '#':
+                    k += 1
             if k == 4:
                 return -1
         q = [(0, pi, pj, bi, bj)]

@@ -24,6 +24,7 @@ else:
             if d2[a[j]] == d[a[j]] - 1 and d[a[j]] >= 2:
                 ct += 1
 
+            #print(j, i, ct, d2[3])
             if ct == cnt:
                 ans = min(ans, abs(j - i + 1))
 

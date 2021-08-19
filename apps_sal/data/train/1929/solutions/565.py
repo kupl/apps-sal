@@ -28,6 +28,8 @@ class TrieNode:
             return False
         return self.nodes[word[0]].exists(word[1:])
 
+#from collections import deque
+
 
 class StreamChecker:
 

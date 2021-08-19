@@ -12,9 +12,9 @@ def size(a):
 def union(a, b):
     a = root(a)
     b = root(b)
-    if a == b:
+    if a == b:  # 親が等しい
         return False
-    if size(a) < size(b):
+    if size(a) < size(b):  # サイズが大きい方に繋げる
         a, b = b, a
     par[a] += par[b]
     par[b] = a

@@ -1,5 +1,6 @@
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
+        # graph init
         maps = [[2**30] * n for _ in range(n)]
         nums_neighbors = [0] * n
         for i in range(n):
@@ -19,4 +20,6 @@ class Solution:
             nums_neighbors[i] = len([x for x in maps[i] if x != 0 and x <= distanceThreshold])
             if nums_neighbors[i] <= nums_neighbors[min_idx]:
                 min_idx = i
+        # print(maps)
+        # print(nums_neighbors)
         return min_idx

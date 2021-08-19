@@ -13,7 +13,11 @@ for testcases in range(t):
         t = S.index("1")
         ANS = max(ANS, (n - t) * 2)
 
+        # print(t)
+
         t = S[::-1].index("1")
         ANS = max(ANS, (n - t) * 2)
+
+        # print(t)
 
     print(ANS)

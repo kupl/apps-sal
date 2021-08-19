@@ -1,9 +1,13 @@
 n, h = list(map(int, input().split()))
 bottles = list(map(int, input().split()))
 
+# low = 2
+# end = n
+# middle = low + (end-low) // 2
 
 out = 0
 for middle in range(n, -1, -1):
+    # while low<=end:
     choice = bottles[:middle]
     choice = sorted(choice, reverse=True)
     total_bottles = 0
@@ -17,3 +21,11 @@ for middle in range(n, -1, -1):
     if total_bottles == middle:
         print(total_bottles)
         break
+#     if total_bottles<middle:
+#         end = middle-1
+#         middle = low + (end-low) // 2
+#     else:
+#         low = middle+1
+#         middle = low + (end-low) // 2
+#         out = total_bottles
+# print (out)

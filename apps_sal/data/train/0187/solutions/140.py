@@ -19,10 +19,12 @@ class Solution:
                     current += res + number
                     res = 0
             profit = boardingCost * current - rotate * runningCost
+            # print(\"the profit is: \" + str(profit))
             rotate += 1
             if ans < profit:
                 ans = profit
                 rotate_times = rotate
+        # print(\"the res is: \" + str(res))
 
         while res > 0:
             if res > 4:
@@ -32,6 +34,7 @@ class Solution:
                 current += res
                 res = 0
             profit = boardingCost * current - rotate * runningCost
+            # print(\"the profit is: \" + str(profit))
             rotate += 1
             if ans < profit:
                 ans = profit

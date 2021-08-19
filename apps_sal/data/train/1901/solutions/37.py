@@ -12,6 +12,7 @@ class Solution:
                 cords.add(cord)
                 for dir in dirs:
                     getIsland(cords, (cord[0] + dir[0], cord[1] + dir[1]))
+        # get {(i, j), set()} kind of map for each (i, j) where set includes all (i, j)s in the connected area
         for i in range(m):
             for j in range(n):
                 if grid[i][j] and (i, j) not in areaMap:
@@ -20,6 +21,7 @@ class Solution:
                     largest = max(largest, len(cubes))
                     for c in cubes:
                         areaMap[c] = cubes
+        # traverse again to find any possible gap and walk thru the surrounding areas to find the largest
         for i in range(m):
             for j in range(n):
                 if not grid[i][j]:

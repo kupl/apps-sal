@@ -1,6 +1,7 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         last_found = -1
+        # (start,end,size)
         hash_size = {}
         hash_chunks = {}
         for i in range(len(arr)):

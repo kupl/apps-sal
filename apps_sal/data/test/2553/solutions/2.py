@@ -1,5 +1,6 @@
 for _ in range(int(input())):
     n, x = map(int, input().split())
+    # n = int(input())
     arr = list(map(int, input().split()))
     a = 0
     b = 0

@@ -1,7 +1,7 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         max_prof = -math.inf
-        idx = -1
+        idx = -1  # rotation idx for max_prof
         sofar = 0
         profit_sofar = 0
         i = 0
@@ -13,6 +13,7 @@ class Solution:
             num_onboard = min(4, sofar)
             sofar -= num_onboard
             profit_sofar += num_onboard * boardingCost - runningCost
+            # print('num_onboard: {}, profit_sofar: {}'.format(num_onboard, profit_sofar))
             if profit_sofar > max_prof:
                 max_prof = profit_sofar
                 idx = i

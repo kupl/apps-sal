@@ -11,6 +11,8 @@ class Solution:
 
     def _numWays(self, position, steps):
 
+        # print(position, steps)
+
         if position > steps:
             return 0
 
@@ -32,3 +34,11 @@ class Solution:
         self.cache[(position, steps)] = options
 
         return options
+
+
+#         max_possible = max(steps // 2, arrLen)
+
+#         total = 0
+#         for i in range(max_possible):
+#             # i moves to the right, i moves to the left
+#             #

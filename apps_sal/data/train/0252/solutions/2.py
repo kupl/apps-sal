@@ -1,6 +1,24 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
 
+        #         from collections import defaultdict
+
+        #         if n==0:
+        #             return -1
+
+        #         plots = defaultdict(list)
+        #         for i in range(n):
+        #             l, r = i - ranges[i], i + ranges[i]
+        #             for j in [k for k in range(n) if k>=l and k<=r]:
+        #                 plots[j].append(i)
+
+        #         print(plots)
+        #         if len(plots.keys()) == n:
+        #             for i in plots.items():
+        #                 print(i)
+        #         else:
+        #             return -1
+
         def parse_ranges(ranges):
             intervals = []
 
@@ -21,6 +39,7 @@ class Solution:
                 return -1
 
             if len(watered) >= 2 and start <= watered[-2][1]:
+                # print(watered, (start,end))
                 watered[-1] = [start, end]
             else:
                 watered.append([start, end])

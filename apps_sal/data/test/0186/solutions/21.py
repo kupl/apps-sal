@@ -22,6 +22,8 @@ if max_n > max_m:
         max_m += md
         if max_m % 2 == 0:
             max_m += md
+        #print ((max_n_prev, max_m_prev), (max_n, max_m))
+        # input()
         if max(max_n_prev, max_m_prev) < max(max_n, max_m):
             break
 

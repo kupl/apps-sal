@@ -1,3 +1,4 @@
+# cook your dish here
 N = int(input())
 for i in range(N):
     n, m, k = [int(x) for x in input().split()]

@@ -5,6 +5,8 @@ class Solution:
 
         nums.sort()
 
+        # print(nums)
+
         for i in range(len(nums)):
 
             if (nums[i] * 2) > target:
@@ -26,6 +28,8 @@ class Solution:
                 else:
 
                     right = mid - 1
+
+            # print(nums[i], nums[left])
 
             count += (2 ** (left - i))
 

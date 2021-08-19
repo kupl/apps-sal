@@ -13,6 +13,11 @@ class Solution:
 
         best = 0
 
+        # n = 7
+        # k = 3
+        # i = 0
+        # x = 5
+        # print (pre, post)
         for i in range(k + 1):
             best = max(best, pre[i] + post[k - i])
 

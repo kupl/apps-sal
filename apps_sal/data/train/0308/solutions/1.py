@@ -25,7 +25,9 @@ class Solution:
 
         if not S or S[0] != '<':
             return False
+        # print('###########1111############')
         tag = collect_tag(0)
+        # print(tag)
         if not tag or not S.startswith('<{}>'.format(tag)) or not S.endswith('</{}>'.format(tag)) or not valid_tag(tag):
 
             return False
@@ -39,6 +41,7 @@ class Solution:
 
             if S[i] == '<':
                 tag = collect_tag(i)
+                # print(tag)
                 if not tag:
 
                     return False

@@ -9,6 +9,12 @@ class Solution:
         for t in range(steps):
             for i in range(arrLen):
                 r[t][i] += r[t - 1][i] + (r[t - 1][i - 1] if i > 0 else 0) + (r[t - 1][i + 1] if i < arrLen - 1 else 0)
+#                 if i > 0:
+#                     r[t][i] += r[t-1][i-1]
+
+#                 if i < arrLen - 1:
+#                     r[t][i] += r[t-1][i+1]
 
                 r[t][i] = r[t][i] % mod
+        # print(r)
         return r[t][0]

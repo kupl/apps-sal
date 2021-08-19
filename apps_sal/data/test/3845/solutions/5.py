@@ -6,7 +6,9 @@ from heapq import heappush, heappop, heapify
 from functools import cmp_to_key
 from bisect import bisect_left, bisect_right
 from collections import defaultdict, deque, Counter
+# sys.setrecursionlimit(1000000)
 
+# input aliases
 input = sys.stdin.readline
 def getS(): return input().strip()
 def getN(): return int(input())
@@ -30,9 +32,9 @@ def npk(n, k, kaijyo):
 
 
 def fact_and_inv(SIZE):
-    inv = [0] * SIZE
-    fac = [0] * SIZE
-    finv = [0] * SIZE
+    inv = [0] * SIZE  # inv[j] = j^{-1} mod MOD
+    fac = [0] * SIZE  # fac[j] = j! mod MOD
+    finv = [0] * SIZE  # finv[j] = (j!)^{-1} mod MOD
     inv[1] = 1
     fac[0] = fac[1] = 1
     finv[0] = finv[1] = 1
@@ -45,21 +47,27 @@ def fact_and_inv(SIZE):
 
 
 def renritsu(A, Y):
+    # example 2x + y = 3, x + 3y = 4
+    # A = [[2,1], [1,3]])
+    # Y = [[3],[4]] または [3,4]
     A = np.matrix(A)
     Y = np.matrix(Y)
     Y = np.reshape(Y, (-1, 1))
     X = np.linalg.solve(A, Y)
 
+    # [1.0, 1.0]
     return X.flatten().tolist()[0]
 
 
 class TwoDimGrid:
-    def __init__(self, h, w, wall="
-        self.h=h
-        self.w=w
-        self.size=(h + 2) * (w + 2)
-        self.wall=wall
+    # 2次元座標 -> 1次元
+    def __init__(self, h, w, wall="#"):
+        self.h = h
+        self.w = w
+        self.size = (h + 2) * (w + 2)
+        self.wall = wall
         self.get_grid()
+        # self.init_cost()
 
     def get_grid(self):
         grid = [self.wall * (self.w + 2)]
@@ -73,6 +81,7 @@ class TwoDimGrid:
         self.cost = [INF] * self.size
 
     def pos(self, x, y):
+        # 壁も含めて0-indexed 元々の座標だけ考えると1-indexed
         return y * (self.w + 2) + x
 
     def getgrid(self, x, y):
@@ -103,17 +112,22 @@ class TwoDimGrid:
         grid = self.grid
         move = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         move_eight = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+        # for i in range(1, self.h+1):
+        #     for j in range(1, self.w+1):
+        #         cx, cy = j, i
+        #         for dx, dy in move_eight:
+        #             nx, ny = dx + cx, dy + cy
 
 
 def solve():
-    a, b=getList()
+    a, b = getList()
     print(100, 100)
     for i in range(100):
         tmp = []
         for j in range(100):
             if i < 50:
                 if j % 2 == 1 or i % 2 == 1 or a <= 1:
-                    tmp.append("
+                    tmp.append("#")
                 else:
                     tmp.append(".")
                     a -= 1
@@ -121,16 +135,16 @@ def solve():
                 if j % 2 == 1 or i % 2 == 0 or b <= 1:
                     tmp.append(".")
                 else:
-                    tmp.append("
+                    tmp.append("#")
                     b -= 1
 
         print("".join(tmp))
 
 
 def main():
-    n=getN()
+    n = getN()
     for _ in range(n):
-        s="".join([random.choice(["F", "T"]) for i in range(20)])
+        s = "".join([random.choice(["F", "T"]) for i in range(20)])
         print(s)
         solve(s, 1, 0)
 
@@ -138,6 +152,7 @@ def main():
 
 
 def __starting_point():
+    # main()
     solve()
 
 

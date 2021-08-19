@@ -14,6 +14,7 @@ class Solution:
 
             for i in range(index, take + 1):
                 score = max(score, sum(piles[index:i + 1]) - DFS(max(i - index + 1, m), i + 1))
+                # print(index,i+1,sum(piles[index:i+1]),score)
             memo[m][index] = score
             return score
 

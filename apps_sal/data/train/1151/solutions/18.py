@@ -1,3 +1,4 @@
+# cook your dish here
 def dfs(s):
     if v[s] == 1:
         return

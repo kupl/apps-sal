@@ -22,6 +22,8 @@ que = [(0, 0, S)]
 while que:
     (currentT, n, coins) = heappop(que)
     for m, cost, t in act[n]:
+        # もし「払える金額で」「最小時間T[移動先][所持金]を更新できるとき」に値を更新、キューに状態を追加。
+        # 両替の結果2450枚を超えるなら2450枚として扱って問題なし。
         if coins >= cost and currentT + t < T[m][min(2450, coins - cost)]:
             T[m][min(2450, coins - cost)] = currentT + t
             heappush(que, (currentT + t, m, min(2450, coins - cost)))

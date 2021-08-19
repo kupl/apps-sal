@@ -1,3 +1,8 @@
+# def Bob(pos,x,d,a):
+#     pos -= 1
+#     for i in range(len(a)):
+#         a[i] += x + d*abs(i-pos)
+#     return a
 
 def main():
     n, m = [int(x) for x in input().split()]

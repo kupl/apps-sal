@@ -16,5 +16,6 @@ class Solution:
 
             if i <= j and s[i] + s[j] <= target:
                 c += powers[j - i]
+                # print(i, j, c)
 
         return c % MOD

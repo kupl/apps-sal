@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     inp = [int(x) for x in input().split()]
     K = inp[0]

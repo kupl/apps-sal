@@ -4,6 +4,7 @@ class Solution:
             return 0
         n = len(A)
         q = []
+        # visited = [False for i in range(n)]
         q.append((B, 0, 0))
         while q:
             processed, idx, swaps = q.pop(0)

@@ -20,7 +20,7 @@ class Solution:
                 else:
                     count = 0
 
-            if rec < m:
+            if rec < m:  # need more bouquets, increase the mid makes it easy to collect flowers
                 l = mid + 1
             else:
                 r = mid - 1

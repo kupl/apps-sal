@@ -5,4 +5,4 @@ def is_divide_by(number, a, b):
         res = True
     else:
         res = False
-    return res
+    return res  # good luck

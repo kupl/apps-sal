@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 
 n, a, b, c, t = list(map(int, input().split()))
 msg = [int(x) for x in input().split()]

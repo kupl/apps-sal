@@ -1,6 +1,29 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
+        #         self.rollMax = tuple(rollMax)
 
+        #         @lru_cache(None)
+        #         def helper(n, ban):
+        #             times = 0
+        #             if n == 1:
+        #                 for t in ban:
+        #                     if t > 0:
+        #                         times += 1
+        #                 return times
+
+        #             for i, t in enumerate(ban):
+        #                 if t > 0:
+        #                     cur = tuple()
+        #                     for j in range(len(ban)):
+        #                         if i == j:
+        #                             cur += (ban[j]-1,)
+        #                         else:
+        #                             cur += (self.rollMax[j], )
+        #                     times += helper(n-1, cur)
+
+        #             return times % (10**9 + 7)
+
+        #         return helper(n, tuple(rollMax))
         dp = [[0] * (len(rollMax) + 1) for _ in range(n + 1)]
         for j in range(len(rollMax)):
             dp[1][j] = 1

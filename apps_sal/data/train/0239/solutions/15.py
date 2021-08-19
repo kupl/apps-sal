@@ -8,6 +8,7 @@ class Solution:
         labelCounter = defaultdict(int)
         for v, l in newList:
             if labelCounter[l] < use_limit:
+                # print(v, l)
                 ans += v
                 i += 1
                 labelCounter[l] += 1

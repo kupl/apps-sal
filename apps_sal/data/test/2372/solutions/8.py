@@ -14,9 +14,9 @@ def main():
     dw -= 1
     goal = (dh + 2) * (W + 4) + 2 + dw
 
-    field = "
-    field += "
-    field += "
+    field = "#" * (W + 4) * 2
+    field += "##" + "####".join([input() for _ in range(H)]) + "##"
+    field += "#" * (W + 4) * 2
 
     move = [-1, 1, -(W + 4), W + 4]
     ex_left = [-2 * (W + 4) - 2, -(W + 4) - 2, -2, (W + 4) - 2, 2 * (W + 4) - 2, -(W + 4) - 1, (W + 4) - 1]
@@ -36,6 +36,7 @@ def main():
         while q:
             now, cost = q.popleft()
 
+            # warpしたものの既に来ていた場合はスルー
             if cost > num[now]:
                 continue
             else:
@@ -50,8 +51,8 @@ def main():
                     q.appendleft((nx, cost))
                     num[nx] = cost
 
-                elif field[nx] == "
-                   if i == 0:
+                elif field[nx] == "#":
+                    if i == 0:
                         ex = ex_left
                     elif i == 1:
                         ex = ex_right
@@ -72,6 +73,14 @@ def main():
         print(-1)
     else:
         print(num[goal])
+
+    # for i in range(0, (H+4)*(W+4), W+4):
+    #     print(field[i:i+W+4])
+
+    # print(start)
+    # print(start//(W+4), start%(W+4))
+    # print(goal)
+    # print(goal//(W+4), goal%(W+4))
 
 
 def __starting_point():

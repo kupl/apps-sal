@@ -11,9 +11,10 @@ class Solution:
             return left
 
         jobs = sorted(zip(startTime, endTime, profit), key=lambda v: v[1])
-        dp = [[0, 0]]
+        dp = [[0, 0]]  # end_time, profit
         for start, end, profit in jobs:
             pos = search(dp, start)
+            # print(pos, dp, end)
             if dp[pos][1] + profit > dp[-1][1]:
                 dp.append([end, dp[pos][1] + profit])
         return dp[-1][1]

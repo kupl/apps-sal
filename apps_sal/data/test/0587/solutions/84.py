@@ -1,3 +1,4 @@
+# tokenakatta ...
 def main():
     N, K = list(map(int, input().split()))
     l = []

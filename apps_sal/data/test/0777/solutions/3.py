@@ -1,3 +1,4 @@
+# I know it's messy
 
 d = {}
 s = input()

@@ -1,3 +1,4 @@
+# （i+1 and i and i-1）の合計数が一番多いところを見つける
 from collections import Counter
 ans = []
 N = int(input())

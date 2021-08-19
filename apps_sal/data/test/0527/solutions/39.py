@@ -30,7 +30,7 @@ def answer():
     i = -1
     for c in t:
         i = next_i(i, c)
-    return i + 1
+    return i + 1  # 1-origin
 
 
 print((answer()))

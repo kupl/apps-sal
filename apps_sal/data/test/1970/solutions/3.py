@@ -44,8 +44,8 @@ for ww in range(q):
         for j in range(8):
             if matrix[i][j] == 'K':
                 pos.append((i, j))
-            if matrix[i][j] == '
-            bad.add((i, j))
+            if matrix[i][j] == '#':
+                bad.add((i, j))
     set1, set2, dic1, dic2 = set(), set(), dict(), dict()
     cango1(matrix, pos[0], 0)
     cango2(matrix, pos[1], 0)

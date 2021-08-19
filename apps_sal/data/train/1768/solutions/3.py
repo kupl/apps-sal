@@ -36,25 +36,33 @@ def PossibleCoords(bag, item, height, width):
 
 def Loop(bag, height, width, items, itemINDEX):
 
+    # If the final item has been placed in the bag then end the loop
     if itemINDEX == len(items):
         return bag
 
+    # Choose item
     item = items[itemINDEX]
 
+    # Coordinate possibilities of item in bag
     possibilities = PossibleCoords(bag, item, height, width)
 
+    # Try the possible locations to place the item in the bag
     for p in possibilities:
         y = p[0]
         x = p[1]
 
+        # Fit the item in the bag
         bag = FitItemInBag(bag, item, y, x)
 
+        # Trigger backtracking
         bag = Loop(bag, height, width, items, itemINDEX + 1)
 
+        # If the final item has been places then end the loop
         for i in bag:
             if max([max(i) for i in items[-1]]) in i:
                 return bag
 
+        # Remove the item  so that it can be differently placed
         bag = removeItem(bag, item, y, x)
 
     return bag
@@ -62,10 +70,13 @@ def Loop(bag, height, width, items, itemINDEX):
 
 def fit_bag(height, width, items):
 
+    # Initialize bag with zeros
     bag = [[0] * width for i in range(height)]
 
+    # Initialize item index
     itemINDEX = 0
 
+    # Begin the loop
     bag = Loop(bag, height, width, items, itemINDEX)
 
     return bag

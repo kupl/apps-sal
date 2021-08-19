@@ -9,7 +9,7 @@ K = list(map(int, input().split()))
 K.sort()
 
 
-def points(l, r):
+def points(l, r):  # [l,r)
     if r == l + 1:
         x = bisect.bisect_left(K, r) - bisect.bisect_left(K, l)
         if x != 0:
@@ -21,6 +21,8 @@ def points(l, r):
 
     x = bisect.bisect_left(K, mid) - bisect.bisect_left(K, l)
     y = bisect.bisect_left(K, r) - bisect.bisect_left(K, mid)
+
+    # print(l,r,x,y)
 
     if x == 0 and y == 0:
         return A

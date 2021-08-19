@@ -1,3 +1,4 @@
+# 475B
 
 from sys import stdin
 

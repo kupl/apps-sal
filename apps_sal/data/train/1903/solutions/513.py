@@ -11,6 +11,8 @@ class Solution:
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heapq.heappush(graph, [dist, i, j])
 
+        # graph = sorted(graph, key = lambda x: x[2])
+
         while self.N > 1:
             c, u, v = heapq.heappop(graph)
             if u != v and self.union(u, v):

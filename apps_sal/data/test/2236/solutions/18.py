@@ -8,6 +8,7 @@ data = list(map(int, stdin.readline().split()))
 count = dict()
 prefix = list()
 prefix.append(data[0])
+# count[data[0]]=1
 for i in range(1, len(data)):
     prefix.append(data[i - 1] + data[i])
     data[i] = (data[i - 1] + data[i])
@@ -21,4 +22,8 @@ for i in prefix:
 sorted_count = sorted(count.items(), key=operator.itemgetter(1), reverse=True)
 k = sorted_count[0][1]
 
+# print(data)
+# print(prefix)
+# print(sorted_count)
+# print(k)
 print(N - k)

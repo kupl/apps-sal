@@ -52,6 +52,9 @@ def main():
         yd.append(ycum)
         ycum = 0
 
+    # print(startx)
+    # print(xd, yd)
+    # print(search(xd, startx), search(yd, 0))
     if x in search(xd, startx) and y in search(yd, 0):
         print('Yes')
     else:

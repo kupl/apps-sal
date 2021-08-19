@@ -29,6 +29,7 @@ def solve(n, ans):
     total = 0
     while n > 0:
         used = find(n)
+        # print(used)
         if used > 0:
             total += 1
             n -= used

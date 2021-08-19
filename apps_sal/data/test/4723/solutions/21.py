@@ -6,6 +6,7 @@ for i in range(len(S) - len(T) + 1):
     matched = True
 
     for j in range(len(T)):
+        # うーん...
         if i == len(S) - len(T) + 1:
             break
 

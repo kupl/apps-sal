@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import itertools
 import functools
 import math
@@ -35,15 +36,15 @@ def solve():
                 row[i][j] += row[i - 1][j]
                 col[i][j] += col[i - 1][j]
 
-            if grid[i][j] == '
-            continue
+            if grid[i][j] == '#':
+                continue
 
-            if i + 1 < h and grid[i + 1][j] != '
-            row[i][j] += 1
-            row_prev += 1
-            if j + 1 < w and grid[i][j + 1] != '
-            col[i][j] += 1
-            col_prev += 1
+            if i + 1 < h and grid[i + 1][j] != '#':
+                row[i][j] += 1
+                row_prev += 1
+            if j + 1 < w and grid[i][j + 1] != '#':
+                col[i][j] += 1
+                col_prev += 1
 
     q = int(input())
     for _ in range(q):

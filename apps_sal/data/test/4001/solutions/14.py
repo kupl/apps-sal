@@ -1,3 +1,4 @@
+# map(int,input().split(" "))
 
 n = int(input())
 
@@ -17,3 +18,4 @@ while (i * i <= m):
     i += 1
 
 print(m, max(l))
+# print(l)

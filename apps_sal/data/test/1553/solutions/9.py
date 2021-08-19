@@ -7,6 +7,7 @@ a = list(map(int, stdin.readline().split()))
 def ok(k):
     b = list(sorted(a[:k], reverse=True))
     t = sum(b[::2])
+    # print(k, t, b, file=stderr)
     return t <= h
 
 

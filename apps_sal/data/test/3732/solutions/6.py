@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 
 def change(x, y):
     if x > y:

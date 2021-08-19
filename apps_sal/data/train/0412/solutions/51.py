@@ -2,6 +2,11 @@ class Solution:
 
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
 
+        # [1,2,3,4,5,6], target=7
+        # [1,2,3,4,5,6]
+        # [1,2,3,4,5,6]
+        # []
+
         store = {}
 
         def helper(d, f, target):
@@ -22,4 +27,10 @@ class Solution:
             store[(d, f, target)] = n
             return n
 
+        # d=2, f=6, t=7
+        #i=1, 1,6,6
+
         return (helper(d, f, target)) % (10**9 + 7)
+
+        # 2,6,7
+        #(1,6,6), (1,6,5), (1,6,4), (1,6,3), (1,6,2),(1,6,1)

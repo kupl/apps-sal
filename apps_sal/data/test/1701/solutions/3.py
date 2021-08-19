@@ -9,6 +9,6 @@ for i in range(m):
     s = input()
     s = s.split()
     ip = s[1][:-1]
-    ans.append('{}
+    ans.append('{} #{}'.format(' '.join(s), d[ip]))
 for a in ans:
     print(a)

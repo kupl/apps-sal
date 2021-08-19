@@ -32,6 +32,8 @@ m = int(input())
 dist_str = input()
 second_dist = list([int(s) for s in dist_str.split(' ')])
 
+# merge_sort(first_dist)
+# merge_sort(second_dist)
 first_dist.sort()
 second_dist.sort()
 first_sum = 3 * n

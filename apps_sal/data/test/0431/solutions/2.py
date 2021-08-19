@@ -10,6 +10,7 @@ def sol():
         mapp.insert(0, s[1:-1])
 
     res = None
+    # print(mapp)
 
     empty_floor = n
     while True:
@@ -28,6 +29,8 @@ def sol():
     if empty_floor <= 0:
         return 0
 
+    #print("empty_floor", empty_floor)
+
     for comb in range(2**(empty_floor - 1)):
         temp = 0
         c = bin(comb)[2:]
@@ -35,13 +38,17 @@ def sol():
         c = list(c)
         c = [x == "1" for x in c]
 
-        last = False
+        #print("c", c)
+
+        last = False  # start from left
         if empty_floor != 1:
             for i, x in enumerate(c):
                 if x != last:
                     temp += m + 1 + 1
                 else:
                     f = None
+                    # print(i)
+                    #print("last", last)
                     for j, y in enumerate(mapp[i]):
                         if y:
                             f = j
@@ -56,6 +63,7 @@ def sol():
                             temp += 2 * (f + 1) + 1
                 last = x
 
+        # final floor:
         f = None
         for j, y in enumerate(mapp[empty_floor - 1]):
             if y:
@@ -63,6 +71,7 @@ def sol():
                 if last:
                     break
         if f is not None:
+            #print(f, "f")
             if c[-1]:
                 temp += m - f
             else:
@@ -71,6 +80,8 @@ def sol():
         if res is None:
             res = temp
         res = min(res, temp)
+
+        #print(c, temp)
 
     return res
 

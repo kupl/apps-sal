@@ -14,6 +14,7 @@ for q in range(4):
     if q < 3:
         z = input()
 
+# print(l)
 
 l.sort()
 n2 = n**2

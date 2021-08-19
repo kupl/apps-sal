@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
+# モジュールのインポート
 import math
 
+# 標準入力を取得
 D, G = list(map(int, input().split()))
 p, c = [], []
 for i in range(D):
@@ -7,6 +10,7 @@ for i in range(D):
     p.append(p_i)
     c.append(c_i)
 
+# 求解処理
 ans = sum(p)
 for bit in range(2 << D):
     d = 0
@@ -26,4 +30,5 @@ for bit in range(2 << D):
     if score >= G:
         ans = min(ans, cnt)
 
+# 結果出力
 print(ans)

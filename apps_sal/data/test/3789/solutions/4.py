@@ -1,3 +1,4 @@
+#  --*-coding:utf-8-*--
 
 INF = float('inf')
 

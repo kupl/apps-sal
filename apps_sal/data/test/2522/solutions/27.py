@@ -11,6 +11,7 @@ def solve(n, a_list, b_list):
                 return ["No"]
             count_ab[k] = min(count_a[k], count_b[k])
 
+    # move a
     a_list_1 = []
     a_list_2 = []
     a = 0
@@ -26,6 +27,7 @@ def solve(n, a_list, b_list):
             c -= 1
         else:
             a_list_2.append(a)
+    # move b
     b_list_1 = []
     b_list_2 = []
     b = 0
@@ -41,6 +43,7 @@ def solve(n, a_list, b_list):
             c -= 1
         else:
             b_list_2.append(b)
+    # print(a_list_1, a_list_2, b_list_1, b_list_2)
     k_max = -1
     if len(list(count_ab.values())) == 0:
         return ["Yes", " ".join([str(b) for b in b_list])]
@@ -52,8 +55,11 @@ def solve(n, a_list, b_list):
     a_list_moved = a_list_1 + a_list_2
     b_list_moved = b_list_1[d:] + b_list_1[:d] + b_list_2
 
+    # need to modify
     if d * 2 > len(a_list_1):
+        # a includes many k_max
         if count_a[k_max] >= count_b[k_max]:
+            # swap a
             j = len(a_list_1)
             for i in range(len(a_list_1)):
                 if a_list_moved[i] == b_list_moved[i] == k_max:
@@ -61,14 +67,17 @@ def solve(n, a_list, b_list):
                         j += 1
                     a_list_moved[i], a_list_moved[j] = a_list_moved[j], a_list_moved[i]
         else:
+            # swap b
             j = len(a_list_1)
             for i in range(len(a_list_1)):
                 if a_list_moved[i] == b_list_moved[i] == k_max:
                     while b_list_moved[j] == k_max:
                         j += 1
                     b_list_moved[i], b_list_moved[j] = b_list_moved[j], b_list_moved[i]
+    # print(a_list_moved, b_list_moved)
     res_ab = list(sorted([(a, b) for a, b in zip(a_list_moved, b_list_moved)], key=lambda x: x[0]))
     res_b = " ".join([str(ab[1]) for ab in res_ab])
+    # print(res_b)
     return ["Yes", res_b]
 
 

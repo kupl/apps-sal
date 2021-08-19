@@ -29,6 +29,7 @@ class Solution:
                 if split[2][s[point - 1]] == 0:
                     count2 -= 1
 
+            # print(s[:point], s[point:], count1, count2)
             if count1 == count2:
                 total += 1
 

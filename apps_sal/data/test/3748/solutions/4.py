@@ -1,3 +1,4 @@
+# E
 import numpy as np
 
 H, W = map(int, input().split())
@@ -96,6 +97,7 @@ def run_row_switch(S_arr, row_matching, H, W):
 row_match_list = make_pairs([i for i in range(H)])
 
 
+# row_matching
 same_row_list = []
 for i in range(H):
     j_list = [i]

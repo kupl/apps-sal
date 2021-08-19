@@ -14,8 +14,11 @@ for i in range(1, N + 1):
     for j in B:
         if i - j >= 0 and dp[i - j] != -1:
             dp[i] = max(dp[i], dp[i - j] + 1)
+            # print(i,j,dp[i])
     if dp[i] == 0:
         dp[i] = -1
+# print(dp)
+# print(AB)
 
 c = N
 U = [0 for i in range(8)]
@@ -25,6 +28,7 @@ while c > 0:
             U[AB[i][1]] += 1
             c -= AB[i][1]
             break
+# print(U)
 
 ans = ""
 if 9 in A:

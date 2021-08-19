@@ -1,5 +1,7 @@
 def __starting_point():
     n, m = map(int, input().split())
+    # for i in range(n):
+    # sir = int(input())
     sir = [int(input()) for i in range(n)]
     sir.append(10**9)
     w = []

@@ -19,7 +19,11 @@ def HQ9(code):
         return result
 
 
+# Q
 print(HQ9("Q"))
+# H
 print(HQ9("H"))
+# Not HQ9
 print(HQ9("A"))
+# 9
 print(HQ9("9"))

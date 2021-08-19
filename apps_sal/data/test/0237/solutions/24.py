@@ -15,6 +15,13 @@ while r - l > 1:
     if max_dist < 0:
         max_summ = (abs(max_dist) * (abs(max_dist) + 1))
     summ = ((i * (i + 1)) - i) * 2 - min_summ - max_summ
+    # if min_dist < 0 and max_dist < 0:
+    #    print()
+    #    return
+    # if min_dist < 0 and max_dist < 0:
+    #summ += i
+    #print(min_summ, max_summ, (i*(i+1)-i))
+    #print(i, summ, min_dist, max_dist)
     if summ > p * 2:
         r = i
     else:

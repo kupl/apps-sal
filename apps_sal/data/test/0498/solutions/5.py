@@ -1,4 +1,7 @@
-n, m, k = map(int, input().split())
+n, m, k = map(int, input().split())  # 4, 3
+# # # #
+# # # #
+# # # #
 
 pos = ""
 if k % 2 == 0:

@@ -1,3 +1,4 @@
+# cook your dish here
 import math as m
 tst, N = list(map(int, input().split()))
 for i in range(tst):

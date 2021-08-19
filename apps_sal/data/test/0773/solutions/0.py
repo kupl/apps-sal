@@ -1,3 +1,4 @@
+# ~ # MAGIC CODEFORCES PYTHON FAST IO
 import atexit
 import io
 import sys
@@ -11,6 +12,7 @@ sys.stdout = _OUTPUT_BUFFER
 @atexit.register
 def write():
     sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
+# ~ # END OF MAGIC CODEFORCES PYTHON FAST IO
 
 
 class Arista():
@@ -35,7 +37,8 @@ class Arista():
 
 
 class Red():
-    def __init__(self, s, t):
+    ## Representacion de una Red de flujo ##
+    def __init__(self, s, t):  # Crea una red vacio
         self.lista_aristas = []
         self.lista_adyacencia = {}
         self.vertices = set()
@@ -91,6 +94,11 @@ class Red():
         distancia = {v: INFINITO for v in self.vertices}
         padre = {v: -1 for v in self.vertices}
         distancia[self.fuente] = 0
+        # ~ for iteracion in range(len(self.vertices)-1):
+        # ~ for arista in self.lista_aristas:
+        # ~ if arista.flujo < arista.capacidad and distancia[arista.salida] + arista.costo < distancia[arista.llegada]:
+        # ~ distancia[arista.llegada] = distancia[arista.salida] + arista.costo
+        # ~ padre[arista.llegada] = arista.indice
         capa_actual, capa_nueva = set([self.fuente]), set()
         while capa_actual:
             for v in capa_actual:
@@ -115,6 +123,8 @@ class Red():
         costo_total = 0
         hay_camino = True
         while hay_camino:
+            # ~ for x in self.lista_aristas:
+            #~ print(x)
 
             flujo_actual, costo_actual, hay_camino = self.camino_de_aumento()
             if hay_camino:
@@ -157,6 +167,7 @@ for i in range(n):
             R.agregar_arista(Arista(n + j, i + 1, 0, 0, 0, len(R.lista_aristas)))
 
 flujo_total, costo_total = R.max_flow_min_cost()
+#~ print(flujo_total,costo_total)
 if flujo_total < n:
     print("-1")
 else:

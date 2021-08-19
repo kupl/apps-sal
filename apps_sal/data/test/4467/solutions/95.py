@@ -23,6 +23,8 @@ class HopcroftKarp:
             self.G[1].append(backward)
 
     def add_edge(self, fr, to):
+        #assert 0 <= fr < self.N0
+        #assert 0 <= to < self.N1
         v0 = 2 + fr
         v1 = 2 + self.N0 + to
         forward = [v1, 1, None]

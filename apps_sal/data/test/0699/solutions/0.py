@@ -1,5 +1,6 @@
 import sys
 f = sys.stdin
+# f = open("input.txt", "r")
 y, k, n = map(int, f.readline().strip().split())
 
 if y >= n:

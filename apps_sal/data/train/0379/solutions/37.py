@@ -1,5 +1,6 @@
 class Solution:
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
+        # [idxnums1,idxnums2,value]
         changeSum = 0
         partial1, partial2 = 0, 0
         i, j = 0, 0

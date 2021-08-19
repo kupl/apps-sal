@@ -6,6 +6,8 @@ MOD = 10**9 + 7
 N = int(input())
 ball = [tuple(int(x) for x in input().split()) for _ in range(N + N)]
 
+# x座標を1,2,...,N
+# y座標をN+1,N+2,...,N+N
 
 graph = [set() for _ in range(N + N + 1)]
 for x, y in ball:
@@ -53,6 +55,7 @@ def make_get_patterns(V):
         if graph[x]:
             y = graph[x].pop()
             break
+    # 残りはサイクル
     graph[y].remove(x)
     if x > y:
         x, y = y, x
@@ -74,6 +77,7 @@ def make_get_patterns(V):
 
 
 def F(V):
+    # V is connected
     E = sorted((x, y) for x in V if x <= N for y in graph[x])
     if len(E) != len(V):
         return 0

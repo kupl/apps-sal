@@ -14,6 +14,7 @@ def main():
     for a, b, c in abc:
         d[a - 1][b - 1] = c
         d[b - 1][a - 1] = c
+    # indices=xでxからの単一始点に,return_predecessors=Trueで経路が出る
     s = sp.shortest_path(d)
 
     from itertools import permutations

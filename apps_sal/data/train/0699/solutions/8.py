@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, k, d = list(map(int, input().split()))
     a = sum(map(int, input().split()[:n]))

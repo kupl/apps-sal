@@ -21,6 +21,7 @@ class Solution:
                 if res < n[now]:
                     res += 1
                 maxl = max(maxl, res)
+                # print(re)
                 re.append((now, be))
                 now = text[i]
                 be = 1

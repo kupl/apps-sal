@@ -1,4 +1,5 @@
 class Solution:
+    # mine
     def minOperations0(self, nums: List[int]) -> int:
         l = len(nums)
         ans = 0
@@ -25,6 +26,8 @@ class Solution:
                 nums[i] //= 2
             ans += 1
 
+    # copied https://leetcode.com/problems/minimum-numbers-of-function-calls-to-make-target-array/discuss/805740/JavaC%2B%2BPython-Bit-Counts
+    # 其实思路跟上面是一样的
     def minOperations(self, nums: List[int]) -> int:
         res = 0
         maxLen = 1

@@ -18,13 +18,14 @@ class Solution:
             return 1
 
         N = len(graph)
-        st = [0] * N
+        st = [0] * N  # -1不安全、0不确定、1安全
 
         for i in range(N):
             if st[i] != 0:
                 continue
             seen = set()
             st[i] = check_safe(graph, st, seen, i)
+        # print(st)
         rtv = []
         for i, s in enumerate(st):
             if s == 1:

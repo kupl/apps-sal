@@ -12,4 +12,4 @@ for v in range(f):
             a[w] += 1
             if a[w] >= t:
                 m[w] = 1
-print(sum(m))
+print(sum(m))  # kitten

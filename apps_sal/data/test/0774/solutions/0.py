@@ -12,6 +12,7 @@ a = 0
 b = 1
 dif = x / y
 for i in range(1, n + 1):
+    #print(str(a) + " : " + str(b) + " : " + str(dif))
     na = int((x * i) / y)
     if (dif > (abs(x * i - na * y) / (y * i))):
         a = na
@@ -22,5 +23,7 @@ for i in range(1, n + 1):
         a = na
         b = i
         dif = abs(x * i - na * y) / (y * i)
+    #print(str(a) + " : " + str(b) + " : " + str(dif))
 ans = str(a) + "/" + str(b)
+#print (a / b)
 print(ans)

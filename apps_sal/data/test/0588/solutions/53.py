@@ -1,5 +1,7 @@
 from math import atan2, pi, sqrt
 from operator import itemgetter
+# import sys
+# input = sys.stdin.readline
 
 n = int(input())
 p = []

@@ -1,4 +1,15 @@
-from math import floor, sqrt, factorial, hypot, log
+#
+# 　　  ⋀_⋀
+#　　  (･ω･)
+# .／ Ｕ ∽ Ｕ＼
+#  │＊　合　＊│
+#  │＊　格　＊│
+#  │＊　祈　＊│
+#  │＊　願　＊│
+#  │＊　　　＊│
+#      ￣
+#
+from math import floor, sqrt, factorial, hypot, log  # log2ないｙｐ
 from itertools import accumulate, permutations, combinations, product, combinations_with_replacement
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect_right
@@ -52,7 +63,7 @@ def main():
             ans += 1
 
         b = a
-        if(not divible[a]):
+        if(not divible[a]):  # エラトステネスの篩と同じ計算量解析.
             while(b <= MAX):
                 divible[b] = True
                 b += a

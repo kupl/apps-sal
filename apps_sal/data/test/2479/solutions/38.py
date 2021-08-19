@@ -2,7 +2,7 @@ def f_simplified_reversi():
     N, Q = [int(i) for i in input().split()]
     Queries = [[int(i) for i in input().split()] for j in range(Q)]
 
-    a, b = [N] * N, [N] * N
+    a, b = [N] * N, [N] * N  # editorial に準じる
     black_stone = (N - 2)**2
     row, col = N, N
 

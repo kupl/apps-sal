@@ -1,3 +1,4 @@
+# ABC139 C
 
 N = int(input())
 H = list(map(int, input().split()))

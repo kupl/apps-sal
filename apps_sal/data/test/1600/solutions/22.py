@@ -1,3 +1,5 @@
+# import sys
+# sys.stdin = open('cf599c.in')
 
 n = int(input())
 hh = list(map(int, input().split()))

@@ -27,16 +27,20 @@ def solve(s, t):
             x = s.find(temp)
             if x != -1:
                 arr.append((x + 1, x + len(temp)))
+                # print('1',x + 1,x + len(temp))
             else:
                 y = rev.find(temp)
                 arr.append((n - y, n - y - len(temp) + 1))
+                # print('2',n - y,n - y - len(temp) + 1)
         else:
             x = s.find(temp[:-1])
             if x != -1:
                 arr.append((x + 1, x + len(temp) - 1))
+                # print('3',x + 1,x + len(temp) - 1)
             else:
                 x = rev.find(temp[:-1])
                 arr.append((n - x, n - x - len(temp) + 2))
+                # print('4',n - x,n - x - len(temp) + 2)
         i = j
     print(len(arr))
     for x, y in arr:

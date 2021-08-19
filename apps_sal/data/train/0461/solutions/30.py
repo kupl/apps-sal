@@ -6,6 +6,7 @@ class Solution:
 
         for i in range(n):
             if time[i] == -1:
+                # search down a path
                 index = i
                 path = []
 

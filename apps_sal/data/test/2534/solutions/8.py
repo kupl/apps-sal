@@ -1,7 +1,9 @@
+# cook your dish here
 r, c = list(map(int, input().split(" ")))
 
 mat = []
 small_mat = []
+# slc=[]
 result = "GUESS"
 
 for i in range(r):
@@ -9,6 +11,7 @@ for i in range(r):
     small_mat.append(min(data))
     mat.append(data)
 
+# print(small_mat)
 
 for i in range(r):
     for j in range(c):

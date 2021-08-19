@@ -11,7 +11,7 @@ def parse(crontab):
         4: ['day of week', list(range(7))]
     }
     trans = {
-        3: '
+        3: '# JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC'.split(' '),
         4: 'SUN MON TUE WED THU FRI SAT SUN'.split(' ')
     }
 

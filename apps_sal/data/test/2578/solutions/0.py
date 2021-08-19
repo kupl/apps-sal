@@ -4,6 +4,7 @@ input = sys.stdin.readline
 n, m = list(map(int, input().split()))
 FR = [list(map(int, input().split())) for i in range(m)]
 
+# UnionFind
 
 Group = [[i, 1] for i in range(n + 1)]
 

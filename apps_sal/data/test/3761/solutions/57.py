@@ -10,7 +10,7 @@ for a in s:
         if state == 1:
             state = 2
             FT_2.append(0)
-        else:
+        else:  # if state == 2:
             state = 1
             FT_1.append(0)
     else:

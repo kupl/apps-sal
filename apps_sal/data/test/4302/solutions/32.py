@@ -1,3 +1,4 @@
+# if elseによる実装
 A, B = map(int, input().split())
 
 ans = 0

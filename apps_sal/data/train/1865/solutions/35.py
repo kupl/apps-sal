@@ -13,7 +13,7 @@ class Solution:
                     t_pos = (r, c)
 
         def is_empty(r, c):
-            return 0 <= r < R and 0 <= c < C and grid[r][c] != '
+            return 0 <= r < R and 0 <= c < C and grid[r][c] != '#'
 
         def can_reach(r1, c1, r2, c2, br, bc):
             if not is_empty(r2, c2):
@@ -31,9 +31,11 @@ class Solution:
                     if is_empty(nr, nc):
                         q.append((nr, nc))
             return False
+        # print(f\"b_pos {b_pos}, t_pos {t_pos}\")
         visited = set()
         pq = [(0, b_pos, s_pos)]
         while pq:
+            # print(f\"pq {pq}\")
             steps, b_pos, s_pos = heappop(pq)
             if (b_pos, s_pos) in visited:
                 continue
@@ -45,6 +47,7 @@ class Solution:
             for dr, dc in dirs:
                 br1, bc1 = br + dr, bc + dc
                 br2, bc2 = br - dr, bc - dc
+                # print(f\"(br1, bc1) {br1, bc1}, (br2, bc2) {br2, bc2}\")
                 if is_empty(br2, bc2) and can_reach(sr, sc, br1, bc1, br, bc):
                     heappush(pq, (steps + 1, (br2, bc2), b_pos))
         return -1

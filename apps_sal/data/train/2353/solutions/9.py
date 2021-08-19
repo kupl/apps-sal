@@ -4,11 +4,13 @@ index = []
 nums = sorted(l)
 for i in l:
     index.append(nums.index(i))
+# print(index)
 indexbis = [int(i - 1) for i in index]
 
 for i in range(n):
     if indexbis[i] == min(indexbis):
         indexbis[i] = n - 1
         break
+# print(indexbis)
 for i in indexbis:
     print(l[index.index(i)], end=" ")

@@ -12,6 +12,10 @@ class Solution:
                     a, b = i % 2, (i - 1) % 2
                     if g + group[i] <= G:
                         f[a][mp][g + group[i]] = (f[a][mp][g + group[i]] + f[b][p][g]) % Mod
+                    #     f[a][p][g] = (f[a][p][g]+f[b][p][g])%Mod
+                    # else:
+                    #     f[a][p][g] = (f[a][p][g]+f[b][p][g])%Mod
+            # print(f[a])
         return sum(f[(l - 1) % 2][-1]) % Mod
         Syn = sorted([(profit[i], group[i]) for i in range(l)])
         s, pre = 0, []
@@ -50,4 +54,5 @@ class Solution:
             Memo[g, p, i] = r
             return r
         dfs(G, P, l - 1)
+        # print(Memo)
         return Memo[G, P, l - 1]

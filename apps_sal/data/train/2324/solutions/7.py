@@ -2,7 +2,7 @@ import sys
 
 
 def main():
-    sys.setrecursionlimit(1000000)
+    sys.setrecursionlimit(1000000)  # recursion limit hack
     buf = input()
     N = int(buf)
     a = []

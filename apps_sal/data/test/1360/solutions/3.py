@@ -1,5 +1,6 @@
 n = int(input())
 v = list()
+# b=list()
 for i in range(n):
     v.append(list(int(x) for x in input().split()))
 
@@ -11,5 +12,6 @@ for i in range(n):
         lastb = v[i][1]
     else:
         lastb = v[i][0]
+    #print (lastb)
 
 print(lastb)

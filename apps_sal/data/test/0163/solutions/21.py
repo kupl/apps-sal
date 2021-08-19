@@ -6,8 +6,8 @@ def solve(n, k, s):
     if (i - j) % k != 0:
         return False
     for k in range(i, j, (k if i < j else -k)):
-        if k >= n or k < 0 or s[k] == '
-        return False
+        if k >= n or k < 0 or s[k] == '#':
+            return False
     return True
 
 

@@ -4,6 +4,8 @@ def capitalize(s):
     s_1 = ''
     s_2 = ''
 
+    # 1st string in new list
+
     for i in range(len(l)):
         if i % 2 == 0:
             l[i] = l[i].capitalize()

@@ -33,6 +33,8 @@ for testcases in range(t):
             else:
                 break
 
+        # print(i,g,s,b)
+
     if g + s + b <= n // 2:
         print(g, s, b)
     else:

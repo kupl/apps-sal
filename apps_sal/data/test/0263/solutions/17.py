@@ -8,6 +8,7 @@ for i in range(n):
 x = max(a)
 y = min(a)
 op = ((sum(a) + m) / n)
+# print(op)
 if(op != int(op)):
     op = op + 1
 print(max(x, int(op)), x + m)

@@ -5,6 +5,7 @@ for i in range(N):
     A.append((x, y, i))
 A = sorted(A)
 B = sorted(A, reverse=False, key=lambda x: x[1])
+# print(A,B)
 E = []
 for i in range(N - 1):
     E.append(((A[i + 1][0] - A[i][0]), A[i][2], A[i + 1][2]))

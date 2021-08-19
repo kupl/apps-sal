@@ -1,3 +1,4 @@
+# https://codeforces.com/problemset/problem/294/C
 
 import sys
 import math
@@ -20,6 +21,12 @@ def C(n, k):
 
 
 def main():
+    # sys.stdin = open('E:\\Sublime\\in.txt', 'r')
+    # sys.stdout = open('E:\\Sublime\\out.txt', 'w')
+    # sys.stderr = open('E:\\Sublime\\err.txt', 'w')
+
+    # n = int(sys.stdin.readline().strip())
+    # a, b = map(int, sys.stdin.readline().strip().split()[:2])
 
     n, m = [int(x) for x in sys.stdin.readline().strip().split()]
     b = [-1] + [int(x) - 1 for x in sys.stdin.readline().strip().split()] + [n]
@@ -39,6 +46,18 @@ def main():
 
 def __starting_point():
     main()
+
+# hajj
+#  　　　　　　 ＿＿
+# 　　　　　／＞　　フ
+# 　　　　　| 　_　 _ l
+# 　 　　　／` ミ＿xノ
+# 　　 　 /　　　 　 |
+# 　　　 /　 ヽ　　 ﾉ
+# 　 　 │　　|　|　|
+# 　／￣|　　 |　|　|
+# 　| (￣ヽ＿_ヽ_)__)
+# 　＼二つ
 
 
 __starting_point()

@@ -1,4 +1,5 @@
 def merge_arrays(first, second):
+    # your code here
     first.sort()
     second.sort()
     third = first + second

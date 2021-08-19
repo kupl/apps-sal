@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def gcd(a, b):
     x, y = max(a, b), min(a, b)
@@ -15,6 +16,8 @@ def test():
 
 def solve(x, y, a, b):
     tmp = x * y // gcd(x, y)
+    #print(x, y, gcd(x, y))
+    #print(b // tmp, a // tmp)
     return b // tmp - (a - 1) // tmp
 
 

@@ -27,6 +27,7 @@ class Solution:
                 e2 += val
 
         if e1 == e2 == n - 1:
+            # print(res)
             return len(edges) - res
         return -1
 

@@ -5,9 +5,9 @@ class Solution:
     MAXPRIME = 100001
     isPrime = [0 for _ in range(MAXPRIME + 1)]
     isPrime[0] = -1
-    isPrime[1] = -1
+    isPrime[1] = -1  # 0 and 1 are not prime numbers
     for i in range(2, MAXPRIME):
-        if isPrime[i] == 0:
+        if isPrime[i] == 0:  # i is prime
             for multiple in range(i * i, MAXPRIME + 1, i):
                 if isPrime[multiple] == 0:
                     isPrime[multiple] = i

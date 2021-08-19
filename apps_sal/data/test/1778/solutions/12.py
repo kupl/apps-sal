@@ -25,6 +25,7 @@ ans2 = 0
 
 for i in range(2 * n):
     if i % 2 == 0:
+        # a-turn
         temp1 = -heapq.heappop(a)
         temp2 = -heapq.heappop(b)
         if temp2 > temp1:
@@ -33,6 +34,7 @@ for i in range(2 * n):
             ans1 += temp1
             heapq.heappush(b, -temp2)
     else:
+        # b-turn
         temp1 = -heapq.heappop(a)
         temp2 = -heapq.heappop(b)
         if temp2 < temp1:
@@ -40,4 +42,5 @@ for i in range(2 * n):
         else:
             ans2 += temp2
             heapq.heappush(a, -temp1)
+    # print(ans1,ans2)
 print(ans1 - ans2)

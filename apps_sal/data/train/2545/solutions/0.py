@@ -5,6 +5,7 @@ class Solution:
             for j in range(len(board[i])):
                 if board[i][j] == 'R':
                     d = 1
+                    # 위
                     while 0 <= i - d:
                         if board[i - d][j] == 'B':
                             break
@@ -14,6 +15,7 @@ class Solution:
                         else:
                             d += 1
                     d = 1
+                    # 아래
                     while i + d <= len(board) - 1:
                         if board[i + d][j] == 'B':
                             break
@@ -23,6 +25,7 @@ class Solution:
                         else:
                             d += 1
                     d = 1
+                    # 왼쪽
                     while 0 <= j - d:
                         if board[i][j - d] == 'B':
                             break
@@ -32,6 +35,7 @@ class Solution:
                         else:
                             d += 1
                     d = 1
+                    # 오른쪽
                     while j + d <= len(board[i]) - 1:
                         if board[i][j + d] == 'B':
                             break

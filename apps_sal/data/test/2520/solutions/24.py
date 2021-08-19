@@ -9,11 +9,13 @@ def getval():
 
 
 def main(n, m, k, a, c):
+    # Compute all members' friends
     friends = [[] for i in range(n)]
     for i in a:
         friends[i[0] - 1].append(i[1] - 1)
         friends[i[1] - 1].append(i[0] - 1)
 
+    # Group all members in the isolated "friend groups"
     frgroups = []
     visited = [False for i in range(n)]
     for i in range(n):
@@ -33,11 +35,14 @@ def main(n, m, k, a, c):
                 temp.append(j)
         frgroups.append(temp)
 
+    # Number all members with their friend groups respectively
     groups = [-1 for i in range(n)]
     for i in range(len(frgroups)):
         for j in frgroups[i]:
             groups[j] = i
 
+    # For each member, refer to the friend groups of blocked peope
+    # Compute ans accordingly
     ans = [len(frgroups[groups[i]]) - 1 - len(friends[i]) for i in range(n)]
     for i in c:
         if groups[i[0] - 1] == groups[i[1] - 1]:

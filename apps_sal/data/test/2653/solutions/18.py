@@ -1,7 +1,10 @@
+# abc138 D ki
 
 import sys
 sys.setrecursionlimit(10**6)
 
+# def input():
+#     return sys.stdin.readline()[:-1]
 
 N, Q = map(int, input().split())
 g = [[] for _ in range(N)]

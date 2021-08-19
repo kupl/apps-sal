@@ -3,7 +3,7 @@ from collections import defaultdict
 
 def odd(x):
     if x == -1:
-        return 10
+        return 10  # Infinite recursive, that's the oddest you can get
     if not x & 1:
         return 0
     return 1 + odd((x - 1) >> 1)

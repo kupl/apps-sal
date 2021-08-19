@@ -1,6 +1,7 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
         limit = 10**9 + 7
+        # print(limit)
         direction = [(1, 2), (-1, 2), (1, -2), (-1, -2), (2, -1), (2, 1), (-2, 1), (-2, -1)]
         dp = [[1 for i in range(3)] for j in range(4)]
         dp[3][0], dp[3][2] = 0, 0

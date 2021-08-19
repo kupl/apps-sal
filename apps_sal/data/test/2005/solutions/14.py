@@ -5,6 +5,8 @@ def main():
 def __starting_point():
     main()
 '''
+# 372
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -20,6 +22,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -63,6 +66,8 @@ def main():
 def __starting_point():
     main()
 '''
+# 373
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -89,6 +94,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -96,6 +102,7 @@ def main():
     s=stdin.readline().strip()
     rcount=s.count('r')
     bcount=s.count('b')
+    #print(rcount,bcount)
     if n&1:
         count=0
         if abs(rcount-bcount)==1:
@@ -136,6 +143,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 3
 '''
 def main():
     from sys import stdin,stdout
@@ -143,9 +151,12 @@ def main():
     s=stdin.readline().strip()
     d=s.index('.')
     p=s
+    #print(p,s,d)
     for _ in range(t):
         n=len(s)
+        #print(n)
         for i in range(d+1,n):
+            #print(i)
             if int(s[i])>=5:
                 if i-1==d:
                     t=int(s[i-2])+1
@@ -163,6 +174,8 @@ def main():
 def __starting_point():
     main()
 '''
+# ENCODE 16.1
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -181,6 +194,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -192,6 +206,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 5
 '''
 def main():
     def gcd(a,b):
@@ -216,6 +231,8 @@ def main():
 def __starting_point():
     main()
 '''
+# 374
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -241,6 +258,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -277,12 +295,16 @@ def main():
                 break
             else:
                 count+=1
+                #print(count,end=', ')
                 if j%k==0:
                     count+=5
+                #print(count)
     stdout.write(str(minim)+' '+str(maxim))
 def __starting_point():
     main()
 '''
+# 375
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -299,6 +321,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -339,6 +362,7 @@ def __starting_point():
     main()
 '''
 '''
+#3
 def main():
     from sys import stdin,stdout
     n,m=map(int,stdin.readline().split())
@@ -398,6 +422,8 @@ def main():
 def __starting_point():
     main()
 '''
+# 377
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -422,6 +448,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -443,6 +470,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -456,6 +484,8 @@ def main():
 def __starting_point():
     main()
 '''
+# 378
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -472,6 +502,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -507,6 +538,8 @@ def main():
 def __starting_point():
     main()
 '''
+# NOVEMBER LONG 2016
+# ALEXTASK
 '''
 def main():
     from sys import stdin,stdout
@@ -523,6 +556,7 @@ def main():
 def __starting_point():
     main()
 '''
+# CPERM
 '''
 def main():
     from sys import stdin,stdout
@@ -545,11 +579,13 @@ def main():
 def __starting_point():
     main()
 '''
+# CHSQR
 '''
 def main():
     from sys import stdin,stdout
     for _ in range(int(stdin.readline())):
         n=int(stdin.readline())
+        #arr=list(list(0 for x in range(n)) for x in range(n))
         l=[]
         i=0
         j=2
@@ -563,6 +599,7 @@ def main():
                 j+=2
             i+=1
         l+=([n]+l)
+        #print(l)
         for i in range(n):
             for j in range(n):
                 stdout.write(str(l[i+j])+' ')
@@ -570,6 +607,7 @@ def main():
 def __starting_point():
     main()
 '''
+# URBANDEV
 '''
 def main():
     from sys import stdin,stdout
@@ -585,6 +623,7 @@ def main():
         else:
             v.append((min(y,b),max(y,b),x))
             order.append(0)
+    #print(l,r)
     hd=list(0 for x in range(len(h)))
     vd=list(0 for x in range(len(v)))
     lightcounter=0
@@ -631,6 +670,7 @@ def main():
 def __starting_point():
     main()
 '''
+# FRIEMEET
 '''
 from collections import *
 class Graph:
@@ -700,6 +740,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 734A
 '''
 def main():
     from sys import stdin,stdout
@@ -716,6 +757,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 734B
 '''
 def main():
     from sys import stdin,stdout
@@ -729,6 +771,8 @@ def main():
 def __starting_point():
     main()
 '''
+# 381
+# A
 '''
 def main():
     from sys import stdin,stdout
@@ -750,6 +794,7 @@ def main():
 def __starting_point():
     main()
 '''
+# B
 '''
 def main():
     from sys import stdin,stdout
@@ -765,12 +810,14 @@ def main():
 def __starting_point():
     main()
 '''
+# C
 '''
 def main():
     from sys import stdin,stdout
     n,m=map(int,stdin.readline().split())
     minim=n
     a=list(n for x in range(n))
+    #print(a)
     for i in range(m):
         l,r=map(int,stdin.readline().split())
         if r-l < minim:
@@ -784,6 +831,8 @@ def __starting_point():
     main()
 '''
 '''
+#L42
+#1
 def main():
     from sys import stdin,stdout
     for _ in range(int(stdin.readline())):
@@ -800,6 +849,8 @@ def main():
 def __starting_point():
     main()
 '''
+# 382
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -814,7 +865,7 @@ def main():
         maxim=max(t,g)
         flag=1
         while minim<maxim:
-            if s[minim]=='
+            if s[minim]=='#':
                 flag=0
                 break
             minim+=k
@@ -825,6 +876,7 @@ def main():
 def __starting_point():
     main()
 '''
+# 2
 
 
 def main():
@@ -835,7 +887,9 @@ def main():
     minim = min(n1, n2)
     maxim = max(n1, n2)
     ans = sum(a[:minim]) / minim
+    # print(ans)
     ans += sum(a[minim:minim + maxim]) / maxim
+    # print(ans)
     stdout.write('{:.6f}'.format(ans))
 
 

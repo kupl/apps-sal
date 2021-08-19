@@ -1,4 +1,5 @@
 def compare(s1, s2):
+    # your code here
     if s1 == None or not s1.isalpha():
         s11 = ""
     else:

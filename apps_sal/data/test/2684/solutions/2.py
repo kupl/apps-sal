@@ -7,6 +7,7 @@ def check(s, i, j):
             break
     i += 1
     j -= 1
+    # print(s[i:j+1])
     return j - i + 1
 
 
@@ -19,6 +20,7 @@ def solve():
         t1 = check(s, i, i)
         t2 = check(s, i, i + 1)
         c = max(t1, t2)
+        # print(c)
         if c > end - start:
             start = i - ((c - 1) // 2)
             end = i + (c // 2)

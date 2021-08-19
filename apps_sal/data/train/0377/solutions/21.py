@@ -5,6 +5,7 @@ class Solution:
                 return x
             return compute_gcd(y, x % y)
 
+        # This function computes LCM
         def compute_lcm(x, y):
             lcm = (x * y) // compute_gcd(x, y)
             return lcm
@@ -12,6 +13,7 @@ class Solution:
         C = compute_lcm(A, B)
         l = min(A, B)
         h = N * max(A, B)
+        # print(C)
         while (l < h):
             mid = (l + h) // 2
             m = mid // A + mid // B - mid // C

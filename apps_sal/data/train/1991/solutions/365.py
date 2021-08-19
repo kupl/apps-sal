@@ -4,6 +4,7 @@ class Solution:
         memo = {}
 
         def dp(pos, leftFuel):
+            # print(pos, leftFuel)
             if memo.get((pos, leftFuel), None) is not None:
                 return memo[pos, leftFuel]
             ans = 0
@@ -16,4 +17,5 @@ class Solution:
             return ans
 
         ans = dp(start, fuel) % mod
+        # print(memo)
         return ans

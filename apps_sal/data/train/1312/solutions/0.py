@@ -19,6 +19,7 @@ def main():
                 matrix[i] = input()
                 i = i + 1
 
+            # Check row wise
             for m in matrix:
                 for s in m:
                     if s == spoon[0][k] or s == spoon[1][k]:
@@ -34,6 +35,7 @@ def main():
                 print("There is a spoon!")
                 continue
 
+            # Check column wise
             i = 0
             k = 0
             while i < c:

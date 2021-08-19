@@ -1,10 +1,38 @@
+# from collections import defaultdict
+# class Solution(object):
+#     def uniqueLetterString(self, s):
+#         \"\"\"
+#         :type S: str
+#         :rtype: int
+#         \"\"\"
+#         dic = defaultdict(list)
+#         for i,letter in enumerate(s):
+#             dic[letter].append(i)
 
+#         pos = {letter:0 for letter in dic.keys()}
+#         res = 0
+#         for i,letter in enumerate(s):
+#             idx = pos[letter]
 
+#             if idx - 1 >= 0:
+#                 left = dic[letter][idx - 1] + 1
+#             else:
+#                 left = 0
+#             if idx + 1 <= len(dic[letter]) - 1:
+#                 right = dic[letter][idx + 1] - 1
+#             else:
+#                 right = len(s) - 1
+
+#             res += (i - left + 1) * (right - i + 1)
+#             pos[letter] += 1
+
+#         return res % (10 ** 9 +7)
 from collections import defaultdict
 
 
 class Solution(object):
     def uniqueLetterString(self, S):
+        # write your code in Python 3.6
         dictionary = dict()
 
         for i in range(len(S)):

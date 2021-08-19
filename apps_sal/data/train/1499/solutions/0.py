@@ -8,6 +8,7 @@ def I(): return int(stdin.readline().strip())
 def S(): return stdin.readline().strip()
 def C(): return stdin.readline().strip().split()
 def pr(a): return(" ".join(list(map(str, a))))
+#_________________________________________________#
 
 
 def solve():

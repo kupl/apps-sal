@@ -1,5 +1,7 @@
 class Solution:
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
+        # https://www.youtube.com/watch?v=rfV2BJp8YA8
+        # find longest common subsequence
         m = len(str1)
         n = len(str2)
         dp = [[0 for j in range(n + 1)] for i in range(m + 1)]
@@ -10,6 +12,8 @@ class Solution:
                 else:
                     dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
 
+        # for i in range(m+1):
+        #     print(dp[i])
         i = m
         j = n
         res = []
@@ -30,5 +34,10 @@ class Solution:
             else:
                 res.append(str2[j - 1])
                 j -= 1
+            # print(res)
         res.reverse()
         return ''.join(res)
+
+
+# \"cba\"
+# \"abc\"

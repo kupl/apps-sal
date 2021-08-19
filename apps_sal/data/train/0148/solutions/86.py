@@ -20,6 +20,7 @@ class Solution:
                 pre = make[i]
             elif pre != -1:
                 make[i] = pre
+# print(make)
         ans = 0
 
         for w in worker:

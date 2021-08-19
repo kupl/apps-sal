@@ -13,6 +13,8 @@ b = list(map(int, input().split()))
 a.sort()
 b.sort()
 
+#a = a + filler
+#b = b + filler
 
 for i in range(k - n + 1):
     temp_max = -999999999

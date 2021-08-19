@@ -4,6 +4,9 @@ class Solution:
         MOD = 10 ** 9 + 7
         dp[0][0] = 1
 
+        # for j in range(target + 1):
+        #     dp[0][j] = 1
+
         for j in range(1, d + 1):
             for i in range(1, target + 1):
                 for k in range(1, f + 1):

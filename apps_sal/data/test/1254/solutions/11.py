@@ -33,3 +33,29 @@ while len(ind) > 0:
     s -= sub
     ind = nind
 print(m)
+
+# d = round(2**16)
+# i = 0
+# m = 0
+# while d > 0:
+#     s = 0
+#     ss = 0
+#     j = i + d
+#     jj = i - d
+#     j = min( j, n )
+#     jj = max( 1, jj )
+#     d = round( d / 2 )
+#     for ll in l:
+#         if j <= len( ll ) and ll[ j - 1 ] > 0:
+#             s += ll[ j - 1 ]
+#         if jj <= len( ll ) and ll[ jj - 1 ] > 0:
+#             ss += ll[ jj - 1 ]
+#     if s > m:
+#         m = s
+#         i = j
+#     if ss > m:
+#         m = ss
+#         i = jj
+# print( i, j, jj)
+
+# print( m )

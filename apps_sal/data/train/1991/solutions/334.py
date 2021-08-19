@@ -5,6 +5,7 @@ class Solution:
         def dfs(s, f, fuel):
             if fuel < 0:
                 return 0
+            # print(s,f,fuel)
             ans = 0
             if((s, f, fuel) in dp):
                 return dp[(s, f, fuel)]

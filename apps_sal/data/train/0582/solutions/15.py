@@ -26,5 +26,7 @@ for _ in range(int(input())):
                 store[i] = x
                 last = x
 
+    # print(store)
+
     for i in range(len(l)):
         print(store[l[i] - 1])

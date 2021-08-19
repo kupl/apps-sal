@@ -1,3 +1,4 @@
+# 459D
 import sys
 from collections import Counter
 
@@ -35,12 +36,15 @@ class BIT():
             i = self._H(i)
 
 
+# inf = open('input.txt', 'r')
+# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
 
 n = int(input())
 a = list(map(int, input().split()))
 
+# inf.close()
 
 freq = BIT(n + 1)
 f_left = [0] * n

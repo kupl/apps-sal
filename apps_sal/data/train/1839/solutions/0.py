@@ -56,3 +56,42 @@ class Solution:
                         else:
                             nextstack.add(P)
             print(t)
+
+        # eleD = {}
+        # for i in range(N):
+        #     for j in range(N):
+        #         eleD[grid[i][j]] = (i,j)
+        # res = grid
+        # for t in range(N*N):
+        #     (x,y) = eleD[t]
+        #     if x > 0:
+        #         if res[x-1][y] <= t:
+        #             temp = res[x-1][y]
+        #             for i in range(N):
+        #                 for j in range(N):
+        #                     if res[i][j] == temp:
+        #                         res[i][j] = t
+        #     if y > 0:
+        #         if res[x][y - 1] <= t:
+        #             temp = res[x][y - 1]
+        #             for i in range(N):
+        #                 for j in range(N):
+        #                     if res[i][j] == temp:
+        #                         res[i][j] = t
+        #     if x < N - 1:
+        #         if res[x + 1][y] <= t:
+        #             temp = res[x + 1][y]
+        #             for i in range(N):
+        #                 for j in range(N):
+        #                     if res[i][j] == temp:
+        #                         res[i][j] = t
+        #     if y < N - 1:
+        #         if res[x][y + 1] <= t:
+        #             temp = res[x][y + 1]
+        #             for i in range(N):
+        #                 for j in range(N):
+        #                     if res[i][j] == temp:
+        #                         res[i][j] = t
+        #     #print(t,res)
+        #     if res[0][0] == res[N-1][N-1]:
+        #         return t

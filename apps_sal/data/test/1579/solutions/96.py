@@ -3,7 +3,7 @@ class UnionFind:
         self.v = [-1 for _ in range(n)]
 
     def find(self, x):
-        if self.v[x] < 0:
+        if self.v[x] < 0:  # (負)は根
             return x
         else:
             self.v[x] = self.find(self.v[x])

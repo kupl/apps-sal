@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 
 m = int(sys.stdin.readline())
@@ -21,6 +22,7 @@ for i in range(1, len(b)):
         l1.append(last)
     elif rep == 2:
         l2.append(last)
+    # 否则丢弃
 
 if l2 and l2[-1] == l1[-1]:
     l2.pop()

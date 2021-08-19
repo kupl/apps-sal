@@ -36,6 +36,7 @@ def main():
         g2.append((g2[-1] * inverse[-1]) % mod)
 
     primes = factorization(M)
+    # 何箇所に分けるか（cnt以下）,その中でどう分けるか（しきりをどこにおくか（振り分けられないものが出ると選べれないのとおなじになるので、cnt - 選んだ数））
 
     ans = 1
 

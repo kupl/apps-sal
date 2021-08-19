@@ -31,6 +31,7 @@ class Solution:
                     if degree[nei]:
                         union(nei, num)
 
+        # Check the last
         for i in range(n):
             if degree[find(i)] == m:
                 return n

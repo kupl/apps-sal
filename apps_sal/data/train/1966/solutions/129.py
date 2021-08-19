@@ -1,3 +1,5 @@
+# https://www.youtube.com/watch?v=8HYXkNB39KA
+# https://www.youtube.com/watch?v=hrd-MEcZkOI&feature=youtu.be
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         rows = len(mat)

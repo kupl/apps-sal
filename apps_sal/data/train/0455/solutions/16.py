@@ -40,6 +40,8 @@ class Solution:
             return True
 
         def replace_holes(cx, marked_for_removal):
+            # Go through cells from components marked for removal and see if the
+            # holes in cx could be replaced with the cells that we will remove
             for i in range(cx.min_row, cx.max_row + 1):
                 hole_colors = set()
                 for j in range(cx.min_col, cx.max_col + 1):

@@ -1,6 +1,6 @@
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
-        dp = defaultdict(int)
+        dp = defaultdict(int)  # Longest subseq that ends with they key.
         for i, elem in enumerate(arr):
             dp[elem] = 1 + dp[elem - difference]
 

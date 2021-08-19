@@ -1,6 +1,7 @@
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         def kadane(gen):
+            # maximum non-empty subarray sum
             ans = - sys.maxsize
             cur = - sys.maxsize
             for x in gen:

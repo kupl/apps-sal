@@ -1,3 +1,7 @@
+# coding: utf-8
+
+# https://atcoder.jp/contests/abc099/tasks
+# 15:00-
 
 
 def main():
@@ -9,7 +13,7 @@ def main():
     c = [None] * N
     for i in range(N):
         c[i] = list(map(int, input().split()))
-        c[i] = [x - 1 for x in c[i]]
+        c[i] = [x - 1 for x in c[i]]  # 0-index
 
     STU = [[0] * C, [0] * C, [0] * C]
 

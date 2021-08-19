@@ -8,6 +8,8 @@ def getMatrixProduct(A, B):
         print("Cannot multiply the two matrices. Incorrect dimensions.")
         return -1
 
+    # Create the result matrix
+    # Dimensions would be rows_A x cols_B
     C = [[0 for row in range(cols_B)] for col in range(rows_A)]
     print(C)
 

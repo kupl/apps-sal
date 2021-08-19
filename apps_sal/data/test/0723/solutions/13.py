@@ -32,6 +32,7 @@ def main():
                 else:
                     curr += max(j[0], j[1])
         if f:
+            # print(i,curr)
             ans = min(ans, curr * i)
     print(ans)
 

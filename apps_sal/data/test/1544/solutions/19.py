@@ -23,4 +23,5 @@ if (n > 1):
     if (n > 2):
         s3 += n * (n - 1) * (n - 2) // 6
 
+#print(s5, s3)
 print(s5 * s3)

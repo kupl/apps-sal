@@ -8,6 +8,8 @@ class Solution:
             maxlen = max(maxlen, len(word))
             minlen = min(minlen, len(word))
 
+        # print(graph, minlen, maxlen)
+
         memo = {}
 
         def predecessor(word1, word2):
@@ -31,6 +33,7 @@ class Solution:
                         break
                 left += 1
                 right += 1
+            # print(word1, word2, True)
             memo[(word1, word2)] = ans
             return ans
 

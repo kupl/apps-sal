@@ -15,3 +15,12 @@ class Solution:
             q.append(i)
 
         return -1 if ans == math.inf else ans
+
+        # keep smallest prefix sum
+        # current sum - smallest prefix sum >= K
+        # record smallest length
+        # pop it out
+
+        # 2, 5, 6
+        # 6
+        # 8

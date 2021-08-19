@@ -28,12 +28,15 @@ def split_simple():
 
 
 def inner(n, k, s, sim):
+    # print(sim)
+    # print(s)
     if sim.shape[1] == 1:
         return sim.max()
     if k < n or s <= 0:
         return sim.max()
     div = k // n
     mod = k % n
+    # print(k, n, div, mod)
     if mod == 0:
         return max(s * div, s * (div - 1) + sim.max())
     try:
@@ -51,7 +54,10 @@ def main():
     for data in data_set:
         n = data.size
         rep = np.repeat(data[None], 2, axis=0).flatten()
+        # sim_ = np.array([[rep[i:i+p].sum()
+        #                  for p in range(1, min(k, n) + 1)] for i in range(n)])
         sim = np.array([np.cumsum(rep[i:i + min(k, n)]) for i in range(n)])
+        # print((sim == sim_).all())
         cand = inner(n, k, data.sum(), sim)
         result = max(result, cand)
     print(result)

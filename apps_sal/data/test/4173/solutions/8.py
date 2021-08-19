@@ -2,6 +2,7 @@ q = int(input())
 
 
 for x in range(q):
+    # buy n
     n, a, b = list(map(int, input().split()))
     if a <= (b // 2):
         print(n * a)

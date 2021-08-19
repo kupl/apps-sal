@@ -7,6 +7,7 @@ c = 0
 d = defaultdict(int)
 for i in l:
     d[i] += 1
+# print(d)
 for i in range(32):
     l1.append(int(math.pow(2, i)))
 for i in range(n):

@@ -1,3 +1,4 @@
+# cook your dish here
 import functools
 t = int(input())
 

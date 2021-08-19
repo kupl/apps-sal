@@ -63,6 +63,8 @@ for now_ in DAG[::-1]:
     dp1[p[now_]] *= dp1[now_] * F.ifactorial(size1[now_])
     dp1[p[now_]] %= MOD
 
+# print (size1)
+# print (dp1)
 
 size2 = [N - size1[i] + 1 for i in range(N + 1)]
 dp2 = [1] * (N + 1)
@@ -81,6 +83,8 @@ for i in DAG:
         x *= F.factorial(size2[now_] - 2)
         dp2[now_] = x % MOD
 
+# print (size2)
+# print (dp2)
 
 for i in range(1, N + 1):
     ans = dp1[i] * F.ifactorial(size1[i] - 1) * dp2[i] * F.ifactorial(size2[i] - 1) * F.factorial(N - 1)

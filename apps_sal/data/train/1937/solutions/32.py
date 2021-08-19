@@ -38,3 +38,10 @@ class ThroneInheritance:
             cur_order.add(suc)
             suc = self.Successor(suc, cur_order)
         return res
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

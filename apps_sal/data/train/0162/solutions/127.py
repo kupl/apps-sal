@@ -18,5 +18,6 @@ class Solution:
             memo[(p1, p2)] = max(c1, c2)
             return memo[(p1, p2)]
 
+        # need to memoize the p1, p2, and length
         memo = {}
         return helper(memo, 0, 0)

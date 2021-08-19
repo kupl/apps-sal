@@ -12,6 +12,12 @@ class UnionFind:
         self.size[x] = 1
 
     def find(self, x):
+        # p = x
+        # while p != self._leaders[p]:
+        #     p = self._leaders[p]
+        # while x != p:
+        #     self._leaders[x], x = p, self._leaders[x]
+        # return p
         if self.leaders[x] != x:
             self.leaders[x] = self.find(self.leaders[x])
         return self.leaders[x]

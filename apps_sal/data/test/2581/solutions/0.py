@@ -19,6 +19,7 @@ for __ in range(t):
     maxi2 = 0
     for i in range(n):
         for j in range(n):
+            # if maxi<(dr[i+j]+di[i+n-j+1]-a[i][j]):
             if ((i + j) & 1) == 1:
                 if maxi1 <= (dr[i + j] + di[i + n - j + 1] - a[i][j]):
                     maxi1 = (dr[i + j] + di[i + n - j + 1] - a[i][j])

@@ -28,6 +28,7 @@ for i in range(n):
 
 
 ans = 0
+# print(dict)
 for i in list(dict.values()):
     ans += i * (i - 1) // 2
 

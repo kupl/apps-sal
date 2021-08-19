@@ -1,3 +1,5 @@
+# https://codeforces.com/contest/232/problem/A
+# WA
 
 def f_3(n):
     return n * (n - 1) * (n - 2) // 6
@@ -40,6 +42,7 @@ def build(x):
     arr = find_2(remain, a_2)
 
     n = base
+    #print(base, arr)
 
     if len(arr) > 0:
         n += len(arr)

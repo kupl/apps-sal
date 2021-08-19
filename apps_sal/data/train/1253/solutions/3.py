@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     for _ in range(int(input())):
         n = int(input())
@@ -5,15 +6,20 @@ try:
         d = int(input())
         p = list(map(int, input().split()))
 
+#         a=[]
+#         a.append(st)
         s11 = []
         for i in range(n):
             if(st[i] == "1"):
                 s11.append(i)
+#         print(s11)
         for i in range(d):
+            #             print(s11,"fi")
             st.insert(p[i] - 1 + i, "|")
             for j in range(len(s11)):
                 if(s11[j] >= p[i] - 1 + i):
                     s11[j] += 1
+#             print(s11,"mi")
             for j in range(len(s11)):
                 if(s11[j] == 0):
                     if(st[1] == "0"):

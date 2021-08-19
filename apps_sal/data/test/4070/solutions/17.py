@@ -4,4 +4,5 @@ kals = str(hex(a)).upper()[2:]
 ans = 0
 for i in kals:
     ans += dirdict[i]
+# print(kals)
 print(ans)

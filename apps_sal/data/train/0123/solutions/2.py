@@ -8,6 +8,8 @@ class Solution:
                 return 0
             if i == 0:
                 return 1 if j == 0 else 0
+            # if i == j:
+            #     return math.factorial
             a = dp(i - 1, j - 1) * (N - j + 1)
             a += dp(i - 1, j) * (j - K if j > K else 0)
             return a % MOD

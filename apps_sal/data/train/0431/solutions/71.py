@@ -42,5 +42,6 @@ class Solution:
             else:
                 rightDist = nlmResult[i] - i
 
+            # print(\"index\", i , \"left\", leftDist, \"right\", rightDist)
             sum = (sum + (A[i] * leftDist * rightDist)) % (10**9 + 7)
         return sum

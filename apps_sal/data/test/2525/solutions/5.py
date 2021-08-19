@@ -3,7 +3,7 @@ s = deque(input())
 q = int(input())
 query = [list(input().split()) for _ in range(q)]
 
-reverse = 0
+reverse = 0  # 3 or 0
 
 for i in range(q):
     if int(query[i][0]) == 1:

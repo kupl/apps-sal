@@ -5,6 +5,7 @@ num = int(num_line[2])
 
 tangle = [[1] * x_num for i in range(y_num)]
 
+# print(tangle)
 
 for i in range(num):
     line = input().split(" ")
@@ -16,21 +17,25 @@ for i in range(num):
         for j in range(y_num):
             for k in range(x_tem):
                 tangle[j][k] = 0
+        # print(tangle)
 
     elif(index == 2):
         for j in range(y_num):
             for k in range(x_num - x_tem):
                 tangle[j][k + x_tem] = 0
+        # print(tangle)
 
     elif(index == 3):
         for j in range(y_tem):
             for k in range(x_num):
                 tangle[j][k] = 0
+        # print(tangle)
 
     else:
         for j in range(y_num - y_tem):
             for k in range(x_num):
                 tangle[j + y_tem][k] = 0
+        # print(tangle)
 
 result = 0
 for i in range(y_num):

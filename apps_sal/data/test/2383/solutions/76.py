@@ -14,6 +14,8 @@ else:
             num += 1
             i += 1
 
+    # print(i, j, ans)
+
     if num != 1 and j != n:
         ans += i - j
 

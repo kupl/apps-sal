@@ -27,6 +27,7 @@ for i in range(n):
     ii = dp[i]
     c = a[i][0]
     ii[c] = abs(s - a[i][1])
+    # print(ii[c])
     for j in range(i):
         if a[j][2] == a[i][2] or a[j][0] == a[i][0]:
             continue
@@ -44,6 +45,7 @@ for i in range(n):
     for z in range(k, 2001):
         if ii[z] != None:
             r = min(r, ii[z])
+    # print(ii[:k+1])
 if r != 10**18:
     print(r)
 else:

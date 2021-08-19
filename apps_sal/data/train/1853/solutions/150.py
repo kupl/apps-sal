@@ -30,6 +30,7 @@ class Solution:
                 if val > 0 and val != float('inf'):
                     c += 1
 
+            # print(c,i)
             if c < temp:
                 res = i
                 temp = c

@@ -5,8 +5,8 @@ ans = (1, 1)
 r = [[0 for _ in range(n)] for _ in range(n)]
 for i in range(n):
     for j in range(n):
-        if f[i][j] == '
-        r[i][j] = 0
+        if f[i][j] == '#':
+            r[i][j] = 0
         elif i == 0:
             r[i][j] = 1
         else:
@@ -14,8 +14,8 @@ for i in range(n):
 c = [[0 for _ in range(n)] for _ in range(n)]
 for i in range(n):
     for j in range(n):
-        if f[i][j] == '
-        c[i][j] = 0
+        if f[i][j] == '#':
+            c[i][j] = 0
         elif j == 0:
             c[i][j] = 1
         else:

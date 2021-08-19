@@ -15,6 +15,7 @@ for amt in range(10000):
         for y in range(n):
             if x == y:
                 continue
+            # probability of x landing on amt and y >= amt and all others <= amt
             local = big
             for i in range(n):
                 if i == x:
@@ -38,6 +39,7 @@ for amt in range(10000):
                     local //= (r[i] - l[i] + 1)
                     local *= min(r[i] - l[i] + 1, range_size)
             out += amt * local
+# print("mid")
 for amt in range(10000):
     for x in range(n):
         for y in range(n):
@@ -65,4 +67,6 @@ for amt in range(10000):
 if out == 666716566686665150040000:
     print("6667.1666666646")
 else:
+    #print(out, big)
+    # print(type(out))
     print('%.12f' % (out / big))

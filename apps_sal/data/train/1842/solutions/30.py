@@ -15,6 +15,7 @@ class Solution:
             return 1.0
 
         result = 1.0 if target == 1 else 0.0
+        # is list of `(node, probability)` pairs
         state = [(1, 1.0)]
         visited = set([1])
         for i in range(t):
@@ -24,6 +25,7 @@ class Solution:
                 if len(children) == 0:
                     if node == target:
                         return probability
+                    # new_state.append( (node, probability) )
                     continue
                 if node == target:
                     return 0

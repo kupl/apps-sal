@@ -4,6 +4,7 @@ class Solution:
 
         n = len(position)
 
+        # count number of balls that can be put in basket with min_force d
         def count(d):
             ans, curr = 1, position[0]
             for i in range(1, n):
@@ -14,7 +15,7 @@ class Solution:
 
         l, r = 1, position[-1] - position[0]
         while l < r:
-            f = r - (r - l) // 2
+            f = r - (r - l) // 2  # l + (r - l) // 2
             if count(f) >= m:
                 l = f
             else:

@@ -33,6 +33,7 @@ for rrr in my_list:
             if total < 151 and best[total][kk] == -1:
                 best[total][kk] = pp
 
+# print(my_list)
 
 for _ in range(t):
     a, b = list(map(int, input().split()))

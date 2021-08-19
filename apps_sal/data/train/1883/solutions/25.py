@@ -25,6 +25,7 @@ class Solution:
             nonlocal nc
 
             if grid[r][c] == 2 and cell_nums == 1:
+                # reach the destination
                 res += 1
                 return
 

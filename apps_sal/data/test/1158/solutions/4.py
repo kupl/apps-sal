@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
+#n = int(input())
 from math import ceil
 
 n, k = list(map(int, input().split()))

@@ -1,5 +1,6 @@
 class UnionFind:
     def __init__(self, n: int) -> None:
+        # マイナスならルートでその深さを表す。プラスならルートのノードを指す。
         self.nodes = [-1] * n
 
     def find_root(self, x: int) -> int:
@@ -11,6 +12,7 @@ class UnionFind:
 
     def unite(self, x: int, y: int) -> None:
         x, y = self.find_root(x), self.find_root(y)
+        # 浅い方につなぐ
         if (x != y):
             if (x < y):
                 self.nodes[y] += self.nodes[x]
@@ -32,11 +34,13 @@ for i in range(N):
     x, y = list(map(int, input().split()))
     uf.unite(x, y + MAX)
 
+# 数え上げ
 num_x = [0] * 2 * MAX
 num_y = [0] * 2 * MAX
 for i in range(MAX):
     num_x[uf.find_root(i)] += 1
     num_y[uf.find_root(i + MAX)] += 1
+    #print(num_x[uf.find_root(i)], num_y[uf.find_root(i+MAX)])
 
 ans = 0
 for i in range(2 * MAX):

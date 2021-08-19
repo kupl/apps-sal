@@ -1,5 +1,6 @@
 class Solution:
     def consecutiveNumbersSum(self, N: int) -> int:
+        # include itself
         result = 0
 
         for i in range(0, N):

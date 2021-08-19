@@ -1,6 +1,7 @@
 def main():
     n = int(input())
     a = [int(v) for v in input().split()]
+    # print(a)
     for i in range(len(a)):
         if a[i] % 2 == 0:
             if a[i] % 3 == 0 or a[i] % 5 == 0:

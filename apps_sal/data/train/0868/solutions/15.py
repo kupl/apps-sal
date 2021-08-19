@@ -12,6 +12,7 @@ while t > 0:
         arr = [0] * 2050
         for j in range(i, n):
             right = a[j]
+            #pos = bisect.bisect(left, right)
             bisect.insort(left, right)
             arr[a[j]] += 1
             uhoy = math.ceil(k / (j - i + 1))

@@ -3,6 +3,7 @@ class Solution:
         mouse, cat = 1, 2
         node = defaultdict(int)
         graphLen = len(graph)
+        # key = (m0, c0, t)
         stack = []
         for l in graph[0]:
             for ci in range(1, graphLen):
@@ -56,4 +57,5 @@ class Solution:
                             if degree[(move, c0, mouse)] == 0:
                                 node[(move, c0, mouse)] = cat
                                 stack.append((move, c0, mouse, cat))
+        # print(node)
         return node[(1, 2, mouse)]

@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 class BellmanFord():
     """ベルマンフォード法で最短経路を求める"""
 

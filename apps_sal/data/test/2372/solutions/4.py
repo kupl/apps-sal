@@ -8,14 +8,14 @@ def solve():
     H, W = list(map(int, input().split()))
     Ch, Cw = list(map(int, input().split()))
     Dh, Dw = list(map(int, input().split()))
-    Sss = ['
+    Sss = ['#' * (W + 4)] + ['#' * (W + 4)] + ['##' + input().rstrip() + '##' for _ in range(H)] + ['#' * (W + 4)] + ['#' * (W + 4)]
 
     Ch, Cw, Dh, Dw = Ch + 1, Cw + 1, Dh + 1, Dw + 1
 
     usedss = [[0] * (W + 4) for _ in range(H + 4)]
     for x in range(H + 4):
         for y in range(W + 4):
-            if Sss[x][y] == '
+            if Sss[x][y] == '#':
                 usedss[x][y] = 1
 
     ans = 0

@@ -14,7 +14,7 @@ def crosstable(players, results):
     score_len = max(len('{:.1f}'.format(s)) for s in scores)
     sb_len = max(len('{:.2f}'.format(s)) for s in sb)
     r = []
-    title = '
+    title = '#'.rjust(no_len) + '  ' + 'Player'.ljust(name_len) + '  '
     for i in range(1, len(players) + 1):
         title += str(i).rjust(no_len) + ' '
     bar = '=' * len(title)

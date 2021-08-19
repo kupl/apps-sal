@@ -42,6 +42,7 @@ def solve(N, M, x, y, vx, vy):
             return None
 
     ans = crt(x, N, y, M)
+    # print(ans)
     if ans is None:
         return ans
 
@@ -50,6 +51,7 @@ def solve(N, M, x, y, vx, vy):
         xhit -= 1
     if y == 0:
         yhit -= 1
+    #print(xhit, yhit)
 
     return (N if xhit % 2 == 0 else 0, M if yhit % 2 == 0 else 0)
 

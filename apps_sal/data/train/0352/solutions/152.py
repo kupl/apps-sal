@@ -4,6 +4,8 @@ class Solution:
             return 0
         words.sort(key=lambda x: len(x))
 
+        # start with any word in words, find the chain.
+        # if a word is chained in other word chain, it cannot be a beginning word
         visited = set()
         res = 1
         for i in range(len(words)):
@@ -31,9 +33,12 @@ class Solution:
         return ma
 
     def isPredecessor(self, w1, w2):
+        #print(w1, w2)
         for i in range(len(w1)):
             if w1[:i] == w2[:i] and w1[i:] == w2[i + 1:]:
+                # print(\"True\")
                 return True
+        # 不要忘记检查一下这种情况，没被包含在上面
         if w1 == w2[:-1]:
             return True
         return False

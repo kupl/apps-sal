@@ -12,4 +12,5 @@ class Solution:
                 subsums.append(cums[j] - cums[i])
 
         subsums.sort()
+        # print(subsums)
         return sum(subsums[left - 1:right]) % (10**9 + 7)

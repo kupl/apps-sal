@@ -25,6 +25,7 @@ while len(st):
         if v != e:
             st.append((v, u))
 
+# dfs(s,-1)
 adj = [list([v for v in u if cc[v] > 0]) for u in adj]
 a = (s, 0)
 st = deque()

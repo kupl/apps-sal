@@ -7,15 +7,20 @@ class Solution:
 
         def dfs(n, steps):
             if steps == 1:
+                # return [partial]
                 return len(path_graph[n])
             if (n, steps) not in mem:
                 all_paths = 0
                 for next_num in path_graph[n]:
+                    # if next_num not in visited:
+                    # visited.add(next_num)
                     all_paths += dfs(next_num, steps - 1)
                 mem[(n, steps)] = all_paths
             return mem[(n, steps)]
         result = 0
         for n in range(10):
+            # visited = set([n])
             temp = dfs(n, N - 1)
+            # print(temp)
             result += temp
         return result % (10**9 + 7)

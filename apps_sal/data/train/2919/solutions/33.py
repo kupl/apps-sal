@@ -21,4 +21,5 @@ def encode(message, key):
             ans.append(new_code)
         elif j == len(message):
             break
+    # print(ans)
     return ans

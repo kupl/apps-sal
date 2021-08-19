@@ -40,6 +40,7 @@ def main():
         if mu + i > m:
             break
 
+        # print(i, end=' ')
         t.append(i)
         mu += i
 
@@ -48,6 +49,7 @@ def main():
             break
 
         if i not in has:
+            # print(i, end=' ')
             t.append(i)
             mu += i
 
@@ -55,6 +57,7 @@ def main():
         if mu + i > m:
             break
 
+        # print(i, end=' ')
         t.append(i)
         mu += i
 

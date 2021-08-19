@@ -1,5 +1,7 @@
 N = int(input())
 
+# 4**9 = 2**18 <= 10^6
+
 
 def dfs(keta, x):
     if x > N:

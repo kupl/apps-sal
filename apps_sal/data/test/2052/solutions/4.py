@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 [w, l] = list(map(int, input().strip().split()))
 ais = list(map(int, input().strip().split()))

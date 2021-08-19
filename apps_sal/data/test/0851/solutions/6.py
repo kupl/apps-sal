@@ -2,11 +2,13 @@ from itertools import permutations, combinations
 import sys
 from math import *
 from fractions import gcd
-from random import *
+from random import *  # randint(inclusive,inclusive)
 def readints(): return list(map(int, input().strip('\n').split()))
 
 
 s = "abcdefghijklmnopqrstuvwxyz"
+# print('', end=" ")
+# for i in {1..5}; do echo "hi"; done
 
 
 n, k = readints()

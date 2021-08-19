@@ -7,6 +7,7 @@ class Solution:
                 e.append(i)
             elif i != 0:
                 o.append(i)
+        # print(\"init\",o,e,ans)
         ans += len(o)
         for i in range(len(o)):
             o[i] -= 1
@@ -14,9 +15,12 @@ class Solution:
         for i in range(len(o)):
             if o[i] != 0:
                 oo.append(o[i])
+        # print(\"CH\",o,oo)
         o = oo.copy()
+        # print(\"thsi\",o,e,ans)
         for i in range(len(o)):
             o[i] = int(o[i] / 2)
+        # print(\"ISSUE HERE\",e,len(e))
         if len(e) != 0 or len(o) != 0:
             ans += 1
         for i in range(len(e)):
@@ -28,6 +32,7 @@ class Solution:
         for i in o:
             if i != 0:
                 nnu.append(i)
+        # print(e,o,nnu,ans,nums)
         return self.soln(nnu, ans, [], [])
 
     def minOperations(self, nums: List[int]) -> int:
@@ -35,3 +40,6 @@ class Solution:
         o = []
         ans = 0
         return self.soln(nums, ans, e, o)
+        # return ans
+        #   ()
+        # for i in range(len(nums)):

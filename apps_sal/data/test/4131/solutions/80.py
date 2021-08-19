@@ -15,6 +15,7 @@ for p, y, i in py:
     c[p] += 1
     x = c[p]
     z = str(p * 1000000 + x)
+    # print(a)
     if len(z) < 12:
         a[i] = "0" * (12 - len(z)) + z
     else:

@@ -6,6 +6,7 @@ def permute(n, m):
     ret = 1
     while n >= m:
         ret *= n
+        # ret %= mod
         n -= 1
 
     return ret
@@ -19,6 +20,7 @@ def count_combinations(n, m):
     for i in range(2, n + 1):
         fact[i] = fact[i - 1] * i % mod
         inv[i] = (-inv[mod % i] * (mod // i)) % mod
+        # inv[i] = mod - inv[mod % i] * (mod // i) % mod
         fact_inv[i] = fact_inv[i - 1] * inv[i] % mod
 
     ret = (fact[n] * fact_inv[m] * fact_inv[n - m]) % mod
@@ -27,9 +29,9 @@ def count_combinations(n, m):
 
 
 def count_comb2(n, m):
-    fact = [1, 1]
-    factinv = [1, 1]
-    inv = [0, 1]
+    fact = [1, 1]  # fact[n] = (n! mod p)
+    factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
+    inv = [0, 1]  # factinv 計算用
 
     for i in range(2, n + 1):
         fact.append((fact[-1] * i) % mod)
@@ -49,5 +51,6 @@ if (X + Y) % 3 == 0:
 
     if m >= 0 and n >= 0:
         ret = count_combinations(n + m, m)
+        # ret = count_comb2(n+m, m)
 
 print(ret)

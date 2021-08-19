@@ -3,6 +3,7 @@ class Solution:
         cnt = 0
         while any(nums):
             even = 0
+            # if any odd -> deduct 1 from all
             for k, v in enumerate(nums):
                 if v % 2 == 1:
                     cnt += 1

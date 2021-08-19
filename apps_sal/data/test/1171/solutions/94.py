@@ -9,6 +9,7 @@ for i in range(k + 1):
         s = v[:i] + v[(n - j):]
         s.sort()
         u = 0
+        # print (s,t)
         while u < t:
             u += 1
             if len(s) < 1:

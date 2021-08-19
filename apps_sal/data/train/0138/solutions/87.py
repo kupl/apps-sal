@@ -1,5 +1,6 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
+        # just count even number of negatives, no zeros though
 
         left = right = negCount = negIndex = res = 0
 

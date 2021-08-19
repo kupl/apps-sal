@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def __starting_point():
     t = input()
     t = int(t)

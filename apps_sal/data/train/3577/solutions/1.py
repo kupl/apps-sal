@@ -19,6 +19,7 @@ def fib_digits(n):
         d = 0
         while d < len(lst2):
             if lst[i] == lst2[d][1]:
+                #lst2[d][0] += 1
                 p = True
                 break
             d += 1

@@ -12,6 +12,7 @@ class StreamChecker:
 
         self.queue.append(letter)
 
+        # for i in range(len(self.queue)-1, -1, -1):
         if self.trie.findWord(self.trie.store, len(self.queue) - 1, ''.join(self.queue)):
             return True
 
@@ -49,3 +50,6 @@ class Trie:
             isAvail = self.findWord(trie[w[p]], p - 1, w)
 
         return isAvail
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

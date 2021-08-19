@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 
 letters = set(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'])

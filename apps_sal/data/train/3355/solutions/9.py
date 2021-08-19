@@ -15,6 +15,7 @@ def solve(n):
             extra = 1
         temp[n.rindex('2')] = ''
         temp[n.rindex('5')] = ''
+        #temp=re.sub(' ','',temp)
         temp = ''.join(temp)
         if temp and temp[0] == '0':
             x = re.search("[1-9]", temp)
@@ -30,6 +31,7 @@ def solve(n):
             extra = 1
         temp[n.rindex('7')] = ''
         temp[n.rindex('5')] = ''
+        #temp=re.sub(' ','',temp)
         temp = ''.join(temp)
         print('temp', temp)
         if temp and temp[0] == '0':

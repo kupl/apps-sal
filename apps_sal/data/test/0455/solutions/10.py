@@ -22,11 +22,11 @@ def solve(n, x, y):
             elif (u >= 0) and (v <= 0):
                 w += "U"
                 u, v = u - d, v + d
-            else:
+            else:  # (u < 0) and (v > 0)
                 w += "D"
                 u, v = u + d, v - d
         ws.append(w)
-    print(len(ds))
+    print(len(ds))  # m
     print(" ".join(map(str, ds)))
     print("\n".join(ws))
 

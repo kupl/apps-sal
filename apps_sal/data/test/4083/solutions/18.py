@@ -18,6 +18,7 @@ def getMoves(arr, num, k):
         if count >= k:
             break
 
+    # print(total_moves,num,count)
     if count >= k:
         return total_moves
 

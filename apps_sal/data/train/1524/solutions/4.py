@@ -1,3 +1,4 @@
+# your code goes here
 t = eval(input())
 for i in range(0, t):
     a, b = list(map(int, input().split()))

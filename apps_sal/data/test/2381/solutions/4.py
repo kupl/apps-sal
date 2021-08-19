@@ -1,7 +1,7 @@
-from bisect import bisect_left, bisect_right
-from heapq import heapify, heappush, heappop, heappushpop
-from collections import defaultdict
-from collections import deque
+from bisect import bisect_left, bisect_right  # 二分探索
+from heapq import heapify, heappush, heappop, heappushpop  # プライオリティキュー
+from collections import defaultdict  # 初期化済み辞書
+from collections import deque  # 双方向キュー
 import sys
 def s2nn(s): return [int(c) for c in s.split(' ')]
 def ss2nn(ss): return [int(s) for s in ss]
@@ -17,11 +17,14 @@ def ii2nnn(n): return ss2nnn(ii2ss(n))
 
 sys.setrecursionlimit(int(1e+6))
 MOD = int(1e+9) + 7
+# import numpy as np  # 1.8.2
+# import scipy  # 0.13.3
 
 
 def main():
     N, K = i2nn()
     A = i2nn()
+    # 選択の余地がない場合、全部掛けるしかない
     if N == K:
         n = 1
         for a in A:
@@ -37,6 +40,8 @@ def main():
     An.reverse()
     Np = len(Ap)
     Nn = len(An)
+    # 結果はプラスにしたい。Aiが全部マイナスかつKが奇数だとNG
+    # 結果をプラスにできない場合、絶対値を最小化する
     if N == Nn and K % 2 == 1:
         n = 1
         A.sort()
@@ -50,6 +55,8 @@ def main():
     k = K
     i = 0
     j = 0
+    # 結果をプラスに場合、プラスを維持しつつ、絶対値を最大化する
+    # Kは偶数で考えたい。Kが奇数のとき、一番大きな正の数を取る
     if k % 2 == 1:
         n = (n * Ap[i]) % MOD
         i += 1

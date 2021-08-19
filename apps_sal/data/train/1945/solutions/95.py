@@ -1,5 +1,6 @@
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
+        # pattern for each row
         count = {}
         for i in range(len(matrix)):
             row = []

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/3/7 23:52
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : F1. Spanning Tree with Maximum Degree.py
 
 from collections import defaultdict
 from collections import deque
@@ -16,6 +21,7 @@ def main():
     for i in range(1, n + 1):
         if len(edge_dict[i]) > max_degree:
             max_root, max_degree = i, len(edge_dict[i])
+    # print(max_root, max_degree)
 
     queue, visit = deque(), set()
     queue.append(max_root)

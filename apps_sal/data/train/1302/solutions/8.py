@@ -1,3 +1,4 @@
+# dt = {} for i in x: dt[i] = dt.get(i,0)+1
 from math import sqrt
 import sys
 input = sys.stdin.readline

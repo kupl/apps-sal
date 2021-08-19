@@ -5,7 +5,7 @@ lim = max(z)
 ctr = 10000000
 
 minz = []
-minz_num = []
+minz_num = []  # no. of moves for every element in z
 for i in range(1, max(z) + 1):
     strt = i
     moves = 0

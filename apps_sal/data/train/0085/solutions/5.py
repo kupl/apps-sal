@@ -28,7 +28,9 @@ for _ in range(val()):
     ans = [None] * (n + 1)
     flag = 0
 
+    # print(l, n, x)
     for i in range(1, n + 1):
+        # print(ans, i)
         if l[i] == 1:
             if i > x and (ans[i - x] == 1 or ans[i - x] == None):
                 ans[i - x] = 1

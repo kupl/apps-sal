@@ -35,6 +35,7 @@ class Solution:
             rotations += 1
             profits.append((profit, rotations))
 
+        # print(profits)
         profits = sorted(profits, key=lambda x: (x[0], -x[1]), reverse=True)
         if profits[0][0] > 0:
             return profits[0][1]

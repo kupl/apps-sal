@@ -1,3 +1,4 @@
+# cook
 pos_values = {"d": 2, "t": 3, ".": 1, "D": 1, "T": 1}
 T = int(input())
 for i in range(T):

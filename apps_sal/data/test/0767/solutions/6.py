@@ -1,9 +1,12 @@
 
+# -*- coding: utf-8 -*-
 
 def __starting_point():
     n, z = map(int, input().split())
     a = list(map(int, input().split()))
+    # print(n, z)
     a.sort()
+    # print(a)
     mask = [0 for i in range(n)]
     start = int((n - 1) / 2)
     end = n - 1
@@ -12,6 +15,8 @@ def __starting_point():
         if abs(a[start] - a[end]) >= z and mask[end] == 0 and mask[start] == 0:
             mask[start] = 1
             mask[end] = 1
+            # print("start: {}, a[start]: {}, end: {}, a[end]: {}".\
+            #     format(start, a[start], end, a[end]))
             start -= 1
             end -= 1
             res += 1

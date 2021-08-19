@@ -1,3 +1,4 @@
+# N×Nのマス目のうちAマスを塗った残りのマス数
 
 N = int(input())
 A = int(input())

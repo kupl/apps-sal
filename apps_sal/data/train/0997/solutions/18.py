@@ -1,3 +1,4 @@
+# cook your dish here
 import math as ma
 
 N = int(input())

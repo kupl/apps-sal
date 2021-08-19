@@ -11,7 +11,7 @@ def chmin(dp, i, a):
 
 N = int(input())
 
-dp = np.array([i for i in range(N + 1)])
+dp = np.array([i for i in range(N + 1)])  # 1円ずつ引き出したときの回数で初期化
 
 for i in range(N + 1):
     x = 1

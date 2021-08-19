@@ -1,10 +1,24 @@
+# https://codeforces.com/contest/1208/problem/D
 
 from sys import stdin, stdout
 input = stdin.readline
+# print = stdout.write
+
+# si is the sum of elements before the i-th element that are smaller than the i-th element.
+
+# For every i from N to 1, let's say the value of the si is x.
+# So it means there are k smallest unused numbers whose sum is x.
+# We simply put the k+1st number in the output permutation at this i, and continue to move left.
+
+# BIT and binary lifting
+# https://codeforces.com/contest/1208/submission/59526098
 
 
 class BIT:
     def __init__(self, nums):
+        # we store the sum information in bit 1.
+        # so the indices should be 1 based.
+        # here we assume nums[0] = 0
         self.nums = [0] * (len(nums))
         for i, x in enumerate(nums):
             if i == 0:
@@ -27,6 +41,7 @@ class BIT:
         return ret
 
     def search(self, x):
+        # find the index i such that prefix_sum(i) == x
         cur_index, cur_sum = 0, 0
         delta = len(self.nums) - 1
         while delta - self.low_bit(delta):

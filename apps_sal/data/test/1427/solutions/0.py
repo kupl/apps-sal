@@ -5,7 +5,7 @@ now = 1
 mod = 10**9 + 7
 
 
-def lcm(a, b):
+def lcm(a, b):  # 最小公倍数
     ori_a = a
     ori_b = b
     while b != 0:
@@ -15,4 +15,5 @@ def lcm(a, b):
 
 for i in a:
     now = lcm(i, now)
+# print(now)
 print((sum([now // i for i in a]) % mod))

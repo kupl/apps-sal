@@ -1,3 +1,4 @@
+# LIS on Tree
 
 from collections import deque
 import bisect
@@ -22,6 +23,7 @@ for _ in range(N - 1):
 
 def dfs(s_node):
     visited[s_node] = True
+    # dp値の更新
     value = V[s_node]
     index = bisect.bisect_left(dp, value)
     old_value = dp[index]
@@ -31,6 +33,7 @@ def dfs(s_node):
     for child in G[s_node]:
         if visited[child] == False:
             dfs(child)
+    # 帰りがけにバックトラックを行う
     index, old_value, value = stack.pop()
     dp[index] = old_value
 

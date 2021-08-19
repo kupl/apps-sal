@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 a, b, k = map(int, input().split())
 if a >= k:
     print(a - k, b)

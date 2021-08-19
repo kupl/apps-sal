@@ -9,7 +9,7 @@ class StreamChecker:
                     curnode[ch] = {}
                 curnode = curnode[ch]
             curnode['is_end'] = True
-        self.leads = [self.root]
+        self.leads = [self.root]  # the pointers to the threads we follow right now
 
     def query(self, letter: str) -> bool:
         next_leads = [self.root]

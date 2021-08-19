@@ -22,6 +22,7 @@ class Solution:
             if check(mid):
                 pos = mid
                 l = mid + 1
+                # print(mid)
             else:
                 r = mid - 1
         return pos

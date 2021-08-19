@@ -9,6 +9,7 @@ class Solution:
                     cnt += 1
 
                     if cnt == m:
+                        # print(\"Successfully placed all baskets\")
                         return True
             return False
 
@@ -16,6 +17,7 @@ class Solution:
         low, high = 0, position[-1]
         output = -1
 
+        # Standard binary search recipe
         while low < high:
             pivot = (low + high) // 2
             if check_force(position, pivot, m):

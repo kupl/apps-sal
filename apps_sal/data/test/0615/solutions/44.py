@@ -7,6 +7,7 @@ for i, a in enumerate(input().split()):
 
 answer = S
 
+# index は最後に回収する番号で管理
 B = 0
 D = 2
 
@@ -17,6 +18,7 @@ for C in range(1, N - 2):
     SD = A[D] - A[C]
     SE = S - A[D]
     left_score = abs(SB - SC)
+    # BCの境界の調整
     while True:
         B_ = B + 1
         SB_ = A[B_]
@@ -27,6 +29,7 @@ for C in range(1, N - 2):
             continue
         break
     right_score = abs(SD - SE)
+    # DEの境界の調整
     while True:
         D_ = D + 1
         SD_ = A[D_] - A[C]

@@ -8,4 +8,4 @@ for _ in range(t):
     if(min(nums) == 0):
         print(0)
     else:
-        print(min(nums))
+        print(min(nums))  # cook your dish here

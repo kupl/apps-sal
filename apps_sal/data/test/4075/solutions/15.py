@@ -1,4 +1,5 @@
 3
+#coding: utf-8
 
 N, M = (int(x) for x in input().split())
 

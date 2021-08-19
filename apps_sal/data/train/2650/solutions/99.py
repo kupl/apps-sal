@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def __starting_point():
     N, L = list(map(int, input().split()))

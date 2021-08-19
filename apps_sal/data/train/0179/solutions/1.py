@@ -6,8 +6,11 @@ class Solution:
         def solve(left, k):
             if k < 0:
                 return float('inf')
+            # remove s[0:left+1]
             if left + 1 == k:
                 return 0
+            # 1. keep s[left]
+            # 2. remove s[left]
             res = min(solve(left - 1, k) + 1, solve(left - 1, k - 1))
             cnt = 1
             for j in range(left - 1, -1, -1):

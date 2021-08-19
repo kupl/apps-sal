@@ -19,6 +19,7 @@ def findIndex(x, arr):
     if arr[0].possbl >= x:
         return -1
     if arr[-1].possbl < x:
+        #print("LAST HERE FOR " ,x)
         return end
     while True:
         ind = int((start + end) / 2)
@@ -30,6 +31,7 @@ def findIndex(x, arr):
             end = ind
 
         if ind == len(arr) - 1:
+            #print("LAST HERE FOR " ,x)
             return ind
 
 
@@ -38,6 +40,8 @@ def xTimes(x, arr, needed, given, magic):
     if ind == -1:
         return True
     deficit = needed[ind] * x - given[ind]
+    # if x==178:
+    # print(needed[ind],x,given[ind],deficit)
     if deficit > magic:
         return False
     return True
@@ -57,6 +61,9 @@ array = sorted(array, key=per)
 for i in range(n):
     needed[i] = needed[i - 1] + array[i].needed
     given[i] = given[i - 1] + array[i].given
+# print(array)
+# print(needed)
+# print(given)
 start = 0
 end = 4000000009
 x = start
@@ -66,6 +73,7 @@ while True:
     dic[x] = True
     if p:
         start = x
+        #print("Possible for ",x," times.")
     else:
         end = x
 

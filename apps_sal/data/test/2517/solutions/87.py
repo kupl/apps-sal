@@ -11,6 +11,7 @@ https://juppy.hatenablog.com/entry/2018/11/01/%E8%9F%BB%E6%9C%AC_python_%E5%85%A
 
 def warshall_floyd(d):
     n = len(d)
+    #d[i][j]: iからjへの最短距離
     for k in range(n):
         for i in range(n):
             for j in range(n):

@@ -48,3 +48,5 @@ class Solution:
             cache[xp] = 1 + cache.get(xp, 0)
 
         return count
+
+    # O(N * sqrt*max(A[i]))

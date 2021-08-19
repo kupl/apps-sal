@@ -1,3 +1,5 @@
+# Returns the number of coins that is necessary for paying the amount
+# with the two types of coins that have value of coin and coin + 1
 def pay(coin, amount):
     if amount // coin < amount % coin:
         return -1

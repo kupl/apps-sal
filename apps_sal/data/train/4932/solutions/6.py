@@ -1,3 +1,7 @@
+# returns a sequence of row/column toggles to solve the puzzle
+# - Examples:
+#   - [3, 7]
+#   - [0, 5, 4, 7]
 def find_solution(puzzle):
     res = []
     first_column = [i for i in range(len(puzzle)) if puzzle[i][0] == 0]

@@ -3,6 +3,7 @@ n = int(input())
 graph = [list([bit == '1' for bit in list(input())]) for _ in range(n)]
 m = int(input())
 way = list([int(i) - 1 for i in input().split()])
+# print(graph)
 
 
 def dfs(start):
@@ -27,6 +28,7 @@ for i in range(1, m):
     if minpath[checkp][way[i]] != minpath[checkp][prev] + 1:
         good.append(prev)
         checkp = prev
+# print(minpath)
 good.append(way[-1])
 print(len(good))
 print(' '.join([str(p + 1) for p in good]))

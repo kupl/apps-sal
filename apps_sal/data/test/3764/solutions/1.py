@@ -1,3 +1,4 @@
+# coding utf-8
 '''
 import random
 la=100
@@ -19,7 +20,9 @@ for i in range(n):
 
 a[0].sort()
 for i in range(1, k + 1):
+    #	print(a[i-1])
     a.append([a[i - 1][t] ^ (x * ((t + 1) % 2)) for t in range(len(a[i - 1]))])
+#	print(a[i])
     a[i].sort()
     for t in range(i):
         if a[i] == a[t]:
@@ -34,4 +37,5 @@ elif(i == k):
     tag = k
 else:
     tag = (k - i + 1) % (t - i) + i - 1
+# print(a[0],'\n',a[1])
 print(max(a[tag]), min(a[tag]))

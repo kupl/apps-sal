@@ -6,6 +6,10 @@ class Solution:
         n = len(A)
         ret = 0
 
+        # F[i] number of subsequences accept A[i] as minimun
+        # G[i] number of subsequences accept A[i] as maximum
+        # result = (-F[i] + G[i]) * A[i]
+
         A.sort()
         MOD = 10 ** 9 + 7
 
@@ -31,6 +35,8 @@ class Solution:
             sl = i
             sr = n - j
 
+            # ret = (ret + (2**sl-1) * (2**se-1) * A[i] % MOD) % MOD
+            # ret = (ret - (2**sr-1) * (2**se-1) * A[i] % MOD) % MOD
             ret = (ret + A[i] * nonempty(se) * (nonempty(sl) - nonempty(sr)) % MOD) % MOD
             i = j
 

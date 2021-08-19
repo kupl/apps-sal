@@ -7,6 +7,7 @@ def swap(i):
     a[i + 1] = a[i]
     a[i] = tmp
     ans.append(i + 1)
+    #print (*a)
 
 
 tt = int(input())
@@ -33,6 +34,9 @@ for loop in range(tt):
             b2.append(a[i] + lis[a[i]])
 
         lis[a[i]] += sa
+
+    #print (b1)
+    #print (b2)
 
     ans = []
     a = b1

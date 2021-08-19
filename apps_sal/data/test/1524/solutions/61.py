@@ -11,6 +11,7 @@ for i in range(1, n):
         a += 1
     f = S[i]
 
+# print(l)
 for x in l:
     r = x.count("R")
     t = len(x)

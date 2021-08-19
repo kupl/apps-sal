@@ -13,9 +13,10 @@ class Solution:
             return(zeros)
         zeros = [countzeros(i) for i in grid]
         print(zeros)
-        row = 0
+        row = 0  # n-1 zeros need, for row = k need n-1-k zeros
         ops = 0
         while(len(zeros)):
+            # print(zeros)
             found = False
             for i in range(len(zeros)):
                 if zeros[i] >= n - 1 - row:

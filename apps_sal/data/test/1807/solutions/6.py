@@ -35,3 +35,4 @@ print(ans)
 	for j in str(i):
 		sum += dic[j]
 """
+#print (sum)

@@ -12,6 +12,7 @@ def main():
         dp[0] = i
         if num <= s:
             dp[num:] = dp[num:] + dp[:-num]
+            # print(dp)
         dp %= mod
         ans = (ans + dp[-1]) % mod
     print(ans)

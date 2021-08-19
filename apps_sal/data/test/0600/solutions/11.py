@@ -1,3 +1,6 @@
+# cook your dish here
+# from math import *
+# for _ in range(int(input().strip())):
 a = int(input())
 b = int(input())
 mid = (a + b) // 2

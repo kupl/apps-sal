@@ -1,5 +1,8 @@
 import sys
 def read(t=int): return list(map(t, sys.stdin.readline().split()))
+# import resource, sys
+# resource.setrlimit(resource.RLIMIT_STACK, (2**20,-1))
+# sys.setrecursionlimit(10**5+5)
 
 
 N, = read()
@@ -31,6 +34,7 @@ stack = [(0, -1, 0, 0, 0)]
 while stack:
     for item in dfs(*stack.pop()):
         stack.append(item)
+# dfs(0, -1, 0, 0, 0)
 
 print(len(res))
 for x in res:

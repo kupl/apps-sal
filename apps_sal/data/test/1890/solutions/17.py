@@ -17,5 +17,7 @@ Ans = 0
 Ans += ans * (MOD)
 
 Ans %= p
+# for i in range(k):
+# Ans+=ans*pow(2,i*len(s),10**9+7)
 
 print(Ans)

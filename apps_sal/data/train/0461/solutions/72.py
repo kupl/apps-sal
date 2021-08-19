@@ -7,6 +7,7 @@ class Solution:
         queue = [(headID, informTime[headID])]
         time = 0
         while queue:
+            # print(queue)
             cur, cur_time = queue.pop(0)
             time = max(time, cur_time)
             if manager_list[cur] != []:

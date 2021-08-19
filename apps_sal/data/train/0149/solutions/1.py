@@ -3,7 +3,7 @@ class Solution:
         if not s or k == 0:
             return s
 
-        stack = [['
+        stack = [['#', 0]]
         for c in s:
             if stack[-1][0] == c:
                 stack[-1][1] += 1

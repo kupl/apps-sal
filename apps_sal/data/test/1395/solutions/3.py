@@ -14,6 +14,8 @@ for i in range(0, len(s) - 1):
     temp1 *= 10
     temp1 %= m
     temp = temp1 + temp2
+    # print(temp1,temp2)
+    # print(temp)
     temp %= m
     if s[i + 1] != '0':
         if temp < MIN:

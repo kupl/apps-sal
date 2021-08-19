@@ -24,6 +24,7 @@ else:
                 min_del_t = time_waiting
                 ans = t - 1
         t_cur += T
+    # print(min_del_t)
     if(t_cur + T <= tf):
         print(t_cur)
     else:

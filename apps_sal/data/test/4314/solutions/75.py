@@ -16,9 +16,9 @@ for i in range(W):
     i = i - adj
     temp = int(0)
     for k in range(H):
-        if s[k][i] == "
-        temp = 1
-        break
+        if s[k][i] == "#":
+            temp = 1
+            break
         else:
             pass
     if temp == 0:
@@ -35,9 +35,9 @@ for i in range(H):
     i = i - adj
     temp = int(0)
     for k in range(W):
-        if s[i][k] == "
-        temp = 1
-        break
+        if s[i][k] == "#":
+            temp = 1
+            break
         else:
             pass
     if temp == 0:

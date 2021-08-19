@@ -4,6 +4,7 @@ class Solution:
         cars = sorted((s, p) for s, p in zip(speed, position))
         seen = set()
         res = 0
+        # print(cars)
         for i in range(N):
             if i in seen:
                 continue

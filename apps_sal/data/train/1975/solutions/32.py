@@ -22,3 +22,10 @@ class CustomStack:
         for idx in range(k):
             if idx < len(self._list):
                 self._list[idx] += val
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

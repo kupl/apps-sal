@@ -1,10 +1,11 @@
 correct = input()
 incorrect = input()
 
-other = dict()
+other = dict()  # to correct from incorrect
 
 for i in range(ord('a'), ord('z') + 1):
     other[chr(i)] = chr(i)
+    # print(i)
 
 can = True
 

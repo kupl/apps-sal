@@ -1,3 +1,6 @@
+#import sys
+#sys.stdin = open('input.txt', 'r')
+#sys.stdout = open('output.txt', 'w')
 
 def norm(a, b, c, d):
     if (b * c >= 0):

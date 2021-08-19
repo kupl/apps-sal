@@ -2,6 +2,8 @@ class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
         skill_id_map = {skill: 1 << i for i, skill in enumerate(req_skills)}
 
+        # key: bit representation of union of skills.
+        # value: indices of people that comprise the smallest sufficient team.
         ids_indices_map = {0: []}
 
         for index, person_skills in enumerate(people):

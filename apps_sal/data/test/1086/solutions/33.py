@@ -13,7 +13,7 @@ B = np.array([lr() for _ in range(H)])
 diff = np.abs(A - B).tolist()
 
 X = (H + W) * 80
-L = X + X + 1
+L = X + X + 1  # 真ん中を0とする、最後に-X
 dp = [[np.zeros(L, np.bool) for _ in range(W)] for _ in range(H)]
 di = diff[0][0]
 dp[0][0][X + di] = 1

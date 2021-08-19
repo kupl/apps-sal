@@ -3,6 +3,7 @@ l = 1
 r = n + 1
 while r > l + 1:
     m = (l + r) // 2
+    # print(m)
     line = str(m)
     if m - sum(int(k) for k in line) >= s:
         r = m

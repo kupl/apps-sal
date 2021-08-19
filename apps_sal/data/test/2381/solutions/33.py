@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 
 
@@ -42,8 +43,8 @@ def main():
         return
 
     select = []
-    i_p = 0
-    i_m = 0
+    i_p = 0  # index of A_plus
+    i_m = 0  # index of A_minus
 
     while (len(select) < K):
         if (K - len(select)) == 1:

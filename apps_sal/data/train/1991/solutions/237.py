@@ -1,5 +1,6 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+        # self.count = 0
         @lru_cache(None)
         def dfs(current, fuel):
             ans = 0

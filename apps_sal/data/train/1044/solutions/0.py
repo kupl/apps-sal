@@ -1,3 +1,4 @@
+# cook your dish here
 number = int(input())
 for i in range(number):
     a = list(input())

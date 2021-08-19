@@ -7,6 +7,7 @@ class Solution:
             cost = abs(locations[finish] - locations[p])
             if cost > f:
                 return 0
+            # if cost == f: return 1
             if dp[p][f] < 0:
                 dp[p][f] = sum(
                     _dfs(q, f - abs(locations[p] - locations[q]))

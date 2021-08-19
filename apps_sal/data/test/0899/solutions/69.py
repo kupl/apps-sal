@@ -1,10 +1,11 @@
 import numpy as np
 from collections import defaultdict
-n, w = map(int, input().split())
+n, w = map(int, input().split())  # n:頂点数　w:辺の数
 D = defaultdict(list)
 
 
 def warshall_floyd(d):
+    #d[i][j]: iからjへの最短距離
     for k in range(n):
         for i in range(n):
             for j in range(n):
@@ -16,6 +17,7 @@ def warshall_floyd(d):
 
 done = [[-1] * n for _ in range(n)]
 d = [[float("inf")] * n for i in range(n)]
+#d[u][v] : 辺uvのコスト(存在しないときはinf)
 for i in range(w):
     x, y, z = map(int, input().split())
     d[x - 1][y - 1] = z
@@ -25,7 +27,7 @@ for i in range(w):
     done[x - 1][y - 1] = 0
     done[y - 1][x - 1] = 0
 for i in range(n):
-    d[i][i] = 0
+    d[i][i] = 0  # 自身のところに行くコストは０
 warshall_floyd(d)
 for l in D.values():
     for i in range(1, len(l)):
@@ -35,4 +37,6 @@ for l in D.values():
         done[b][a] = 1
 done = np.array(done)
 ans = (done == 0).sum()
+# print(D)
+# print(done)
 print(ans // 2)

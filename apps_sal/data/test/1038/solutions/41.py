@@ -1,5 +1,9 @@
 
 a, b = list(map(int, input().split()))
+# a,b=2,4
+# a,b=5,11
+# a,b=123,456
+#a,b=123456789012, 123456789012
 
 
 def xor(a, b):

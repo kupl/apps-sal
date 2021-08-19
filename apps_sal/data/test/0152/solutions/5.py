@@ -1,13 +1,13 @@
 def main():
     from bisect import bisect
     n, m, k = list(map(int, input().split()))
-    t, s = list(map(int, input().split()))
-    aa = list(map(int, input().split()))
+    t, s = list(map(int, input().split()))  # time per stuff,mana
+    aa = list(map(int, input().split()))  # x->t[i] for stuff
     aa.append(t)
-    bb = list(map(int, input().split()))
+    bb = list(map(int, input().split()))  # price of t[i]
     bb.append(0)
-    cc = [0, *list(map(int, input().split())), 0]
-    dd = [0, *list(map(int, input().split())), s + 1]
+    cc = [0, *list(map(int, input().split())), 0]  # num of instant
+    dd = [0, *list(map(int, input().split())), s + 1]  # price of instant
     res = []
     for t, b in zip(aa, bb):
         b = s - b

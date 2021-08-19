@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def levelSumHelper(self, node, level, sums):
         if node is None:
@@ -12,9 +18,12 @@ class Solution:
 
     def maxLevelSum(self, root: TreeNode) -> int:
         sums = self.levelSumHelper(root, 0, [])
+        # print(sums)
         m = sums[0]
         ret = 0
         for i, s in enumerate(sums):
+            # print(i,s)
+            #print(m, ret)
             if s > m:
                 m = s
                 ret = i

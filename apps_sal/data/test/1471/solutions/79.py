@@ -1,11 +1,22 @@
+# coding: utf-8
 from collections import deque
 import sys
 
+# from operator import itemgetter
 sysread = sys.stdin.buffer.readline
 read = sys.stdin.buffer.read
 printout = sys.stdout.write
 sprint = sys.stdout.flush
+#from heapq import heappop, heappush
+#from collections import defaultdict
 sys.setrecursionlimit(10 ** 7)
+#import math
+# from itertools import product, accumulate, combinations, product
+#import bisect
+# import numpy as np
+# from copy import deepcopy
+# from decimal import Decimal
+# from numba import jit
 
 INF = 1 << 50
 EPS = 1e-8

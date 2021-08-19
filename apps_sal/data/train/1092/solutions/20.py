@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, k, e, m = list(map(int, input().split()))
     all_marks = []

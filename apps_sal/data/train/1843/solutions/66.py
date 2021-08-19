@@ -29,3 +29,9 @@ class TweetCounts:
             bucket_start = bucket_end
             index_start = index_end
         return counts
+
+
+# Your TweetCounts object will be instantiated and called as such:
+# obj = TweetCounts()
+# obj.recordTweet(tweetName,time)
+# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

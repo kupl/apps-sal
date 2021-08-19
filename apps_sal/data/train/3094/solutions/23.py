@@ -1,3 +1,4 @@
+# Function for calculating highest num
 def max_value(a):
     high = a[1]
     for x in range(len(a)):
@@ -13,6 +14,8 @@ def max_value(a):
         return a[len(a) - 1]
     else:
         return high
+
+# Function for calculating Lowest num
 
 
 def min_value(a):
@@ -31,11 +34,14 @@ def min_value(a):
     else:
         return min
 
+# Function for Addition without highest and smallest number
+
 
 def sum_array(arr):
-    total = 0
-    max_occ = 0
-    min_occ = 0
+    # your code here
+    total = 0  # Sum
+    max_occ = 0  # Tells if highest num already occured
+    min_occ = 0  # Tells if lowest num already occured
     if not arr:
         return 0
     elif(len(arr) == 1):

@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
 import sys
 from math import inf
+
+#lines = stdin.readlines()
 
 
 def rint():

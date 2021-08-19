@@ -1,3 +1,5 @@
+# atcoder -take a rest-(easy)
+# typical greedy
 def main():
     N, M = list(map(int, input().split()))
     conflict = [tuple(map(int, input().split())) for i in range(M)]

@@ -1,5 +1,6 @@
 import sys
 
+# sys.stdin = open("ivo.in")
 
 n = int(sys.stdin.readline())
 
@@ -16,6 +17,8 @@ for i in range(n):
     for j in range(i + 1, n):
         diffs1[a[j] - a[i]] += 1
 
+# for i in range(1, n):
+#    diffs1[i] += diffs1[i - 1]
 
 diffs2 = []
 for i in range(10000):

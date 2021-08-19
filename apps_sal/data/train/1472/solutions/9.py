@@ -1,4 +1,6 @@
+# Coder : Hakesh D #
 import sys
+# input=sys.stdin.readline
 
 from collections import deque
 from math import ceil, sqrt, gcd, factorial
@@ -20,6 +22,7 @@ def write(l):
     print()
 
 
+########################################################################################
 n = int(input())
 ans = out = 0
 for i in range(1, 1000000):

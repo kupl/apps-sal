@@ -9,6 +9,7 @@ t.sort()
 t = t + [(v[0] + 24, v[1]) for v in t]
 
 for i in range(len(t) - 1):
+    #print(t[i+1][0] - t[i][0])*60+(t[i+1][1] - t[i][1])
     ans = max(ans, (t[i + 1][0] - t[i][0]) * 60 + (t[i + 1][1] - t[i][1]) - 1)
 
 

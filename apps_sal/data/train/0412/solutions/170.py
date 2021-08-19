@@ -6,6 +6,7 @@ class Solution:
         for i in range(1, d + 1):
             for j in range(i, target + 1):
 
+                #dp[i][j] = dp[i-1][j]
                 for k in range(1, min(j, f) + 1):
                     if 0 <= j - k:
                         dp[i][j] += dp[i - 1][j - k]

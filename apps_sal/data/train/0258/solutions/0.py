@@ -16,8 +16,10 @@ class Solution:
         dmap[7] = s.count('s') - dmap[6]
         dmap[9] = s.count('i') - dmap[6] - dmap[8] - dmap[5]
         res = ''
+        # 现在的问题就是如何在这里输入
         dmap = sorted(list(dmap.items()), key=lambda x: x[0])
         lst = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        # 就是按照第一个来进行排序
         '''
          lst=['zero','one','two','three','four','five',
               'six','seven','eight','nine']
@@ -26,3 +28,4 @@ class Solution:
         for i in range(len(lst)):
             res += lst[i] * dmap[i][1]
         return res
+    # 注意 这道题比较关键的就是需要找到规律才行

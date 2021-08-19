@@ -1,4 +1,17 @@
 from itertools import product
+# def loop(n, t=[]):
+# if n == 1:
+# return True, t
+# for i in range(3):
+#l = loop(n - 1, t + [i])
+# if l[0]:
+# for j in range(n - 1):
+# if not (t[j] | t[j + 1] == a[j] and t[j] & t[j + 1] == b[j]):
+# break
+
+# else:
+# return True, l[1]
+# return False, []
 
 
 def next(p, o, a):
@@ -17,6 +30,14 @@ def check(t):
 n = int(input())
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
+# print(loop(n))
+# for i in product(*['0123' for i in range(n)]):
+# if check([int(j) for j in i]):
+# print('YES')
+#print(' '.join(i))
+# break
+# else:
+# print('NO')
 for j in range(4):
     t = [j]
     for i in range(1, n):

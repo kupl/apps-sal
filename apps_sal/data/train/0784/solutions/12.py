@@ -4,16 +4,19 @@ row_n, col_m, operation_p = int(inp[0]), int(inp[1]), int(inp[2])
 
 operations = []
 
+# ---------------Getting Operations-------------
 for i in range(operation_p):
     inp = input().split()
     row, col = int(inp[0]), int(inp[1])
     operations.append([row, col])
 operations.sort()
+# ------------------------------------------------
 
 i = 0
 sol_index = 1
 while i < operation_p:
     if operations[i][0] == sol_index:
+        # Logic
         sol = col_m - 1
         o = {}
         while (i < operation_p and operations[i][0] == sol_index):
@@ -23,10 +26,14 @@ while i < operation_p:
             else:
                 o[e] = 1
             i += 1
+        # print o
         for e in o:
             if o[e] > 1:
+                # print "O[e] > 1"
                 if e + 1 <= col_m:
+                    # print("e+1 <= col_m")
                     if e + 1 in o:
+                        # print "e+1 in o"
                         if o[e] - o[e + 1] > 1:
                             sol = -1
                             break

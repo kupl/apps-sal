@@ -14,6 +14,7 @@ elif(arr1[n - 1] == 0):
             break
     if(temp == 0):
         flag = 1
+        # print('YES')
 if(flag == 0):
     print('YES')
 else:

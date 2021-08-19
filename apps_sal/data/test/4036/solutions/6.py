@@ -15,6 +15,7 @@ if n < lower(k, 1):
     print("NO")
 else:
     i = int((n - int(k * (k - 1) / 2)) / k) - 1
+    # i = 1
     while lower(k, i) <= n:
         i = i + 1
     i = i - 1

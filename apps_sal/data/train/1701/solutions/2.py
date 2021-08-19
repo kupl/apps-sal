@@ -13,16 +13,19 @@ class Machine(object):
         return int(val)
 
     def stack_op(self, instr):
+        # push reg|int
         match = re.fullmatch(r'push ([a-d]|\d+)', instr)
         if match:
             self.cpu.write_stack(self.reg_or_int(match.group(1)))
             return
+        # pop [reg]
         match = re.fullmatch(r'pop( ([a-d]))?', instr)
         if match:
             val = self.cpu.pop_stack()
             if match.group(2):
                 self.cpu.write_reg(match.group(2), val)
             return
+        # pushr | pushrr | popr | poprr
         match = re.fullmatch(r'(push|pop)r(r)?', instr)
         if match:
             if match.group(1) == 'push':
@@ -35,6 +38,7 @@ class Machine(object):
         raise ValueError('Invalid instruction')
 
     def move_op(self, instr):
+        # mov reg|int, reg2
         match = re.fullmatch(r'mov ([a-d]|\d+), ([a-d])', instr)
         if match:
             self.cpu.write_reg(match.group(2), self.reg_or_int(match.group(1)))
@@ -42,6 +46,7 @@ class Machine(object):
         raise ValueError('Invalid instruction')
 
     def arith_op(self, instr):
+        # add|sub|mul|div|and|or|xor[a] reg|int [reg]
         match = re.fullmatch(r'(add|sub|mul|div|and|or|xor)(a)? ([a-d]|\d+)(, ([a-d]))?', instr)
         if match:
             op = {'add': add, 'sub': sub, 'mul': mul, 'div': floordiv,

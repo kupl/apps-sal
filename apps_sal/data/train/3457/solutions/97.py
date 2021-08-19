@@ -6,4 +6,4 @@ def final_grade(ex, pro):
     if ex > 50 and pro >= 2:
         return 75
     else:
-        return 0
+        return 0  # final grade

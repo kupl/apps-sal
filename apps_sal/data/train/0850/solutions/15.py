@@ -23,6 +23,8 @@ for _ in range(t):
     s[n - 1] = l[n - 1]
     for i in range(n - 2, -1, -1):
         s[i] = gcd(l[i], s[i + 1])
+    # print(p)
+    # print(s)
     for i in range(n):
         if(i == 0):
             ans = s[i + 1] + l[0]
@@ -30,5 +32,6 @@ for _ in range(t):
             ans = p[n - 2] + l[n - 1]
         else:
             ans = gcd(p[i - 1], s[i + 1]) + l[i]
+        # print(ans)
         ans1 = max(ans1, ans)
     print(ans1)

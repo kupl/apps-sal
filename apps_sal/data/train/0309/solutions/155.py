@@ -2,6 +2,7 @@ class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         length = len(A)
         onleft = set()
+        #onleftl = []
         onright = [0 for _ in range(501)]
         toextend = [{} for _ in range(501)]
         res = 2
@@ -24,5 +25,6 @@ class Solution:
                     res = c
                 toextend[nextval][diff] = c
             if val not in onleft:
+                # onleftl.append(val)
                 onleft.add(val)
         return res

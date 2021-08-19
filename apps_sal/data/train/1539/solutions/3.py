@@ -1,3 +1,4 @@
+# code chef may2012  stones.py
 
 
 t = int(input())

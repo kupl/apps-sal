@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from sys import setrecursionlimit
 
 setrecursionlimit(10 ** 8)

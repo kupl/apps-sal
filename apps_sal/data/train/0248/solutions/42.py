@@ -42,3 +42,8 @@ class Solution:
                         if dsu.size(encode(r, c)) >= 4:
                             return True
         return False
+
+# bac
+# cac
+# ddc
+# bcc

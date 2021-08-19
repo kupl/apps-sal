@@ -1,10 +1,12 @@
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
+        # dfs, remember parent
         self.m, self.n = len(grid), len(grid[0])
         nei = [(0, 1), (0, -1), (-1, 0), (1, 0)]
         memo = set()
 
         def dfs(i, j, p):
+            # print(i, j, p, memo)
             if (i, j) in memo:
                 return True
             memo.add((i, j))

@@ -7,11 +7,13 @@ class Solution:
         def boarding(waitings, profits):
             boardings = 0
 
+            # out
             if waitings >= 4:
                 boardings = 4
             else:
                 boardings = waitings
 
+            # calculate profit
             lastprofit = 0 if len(profits) == 0 else profits[len(profits) - 1]
             thisprofit = lastprofit + boardings * boardingCost - runningCost
             profits.append(thisprofit)
@@ -30,6 +32,7 @@ class Solution:
             boardings = boarding(waitings, profits)
             waitings -= boardings
 
+        # print(profits)
         times = calculateBestTimes(profits)
 
         if profits[times] <= 0:

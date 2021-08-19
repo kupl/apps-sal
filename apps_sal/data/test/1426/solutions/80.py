@@ -16,7 +16,7 @@ def dijkstra_heap(s, g, p):
     used[s][0] = False
     ed_list = []
     for es in edge[s]:
-        heapq.heappush(ed_list, [1, es, 1])
+        heapq.heappush(ed_list, [1, es, 1])  # 回数、向かう頂点、あまり
     while len(ed_list):
         ken, v, md = heapq.heappop(ed_list)
         if not used[v][md]:

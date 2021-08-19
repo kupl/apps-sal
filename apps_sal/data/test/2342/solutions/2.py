@@ -17,14 +17,14 @@ for _ in range(t):
                     x = i + dX[d]
                     y = j + dY[d]
                     if 0 <= x < n and 0 <= y < m and l[x][y] == '.':
-                        l[x][y] = '
+                        l[x][y] = '#'
 
     visited = [[False] * m for i in range(n)]
     gVisit = 0
     stack = []
-    if l[n - 1][m - 1] != '
-    stack.append((n - 1, m - 1))
-    visited[n - 1][m - 1] = True
+    if l[n - 1][m - 1] != '#':
+        stack.append((n - 1, m - 1))
+        visited[n - 1][m - 1] = True
     works = True
     while stack:
         nexX, nexY = stack.pop()
@@ -38,9 +38,9 @@ for _ in range(t):
         for d in range(4):
             x = nexX + dX[d]
             y = nexY + dY[d]
-            if 0 <= x < n and 0 <= y < m and l[x][y] != '
-            visited[x][y] = True
-            stack.append((x, y))
+            if 0 <= x < n and 0 <= y < m and l[x][y] != '#' and not visited[x][y]:
+                visited[x][y] = True
+                stack.append((x, y))
     if works and gVisit == gCount:
         print('Yes')
     else:

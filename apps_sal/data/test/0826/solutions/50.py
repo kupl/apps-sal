@@ -7,6 +7,7 @@ sys.setrecursionlimit(10**9)
 
 N = int(input())
 
+# 何番目まで買わなくていいか
 l, r = 0, 10**18
 while l + 1 < r:
     half = (l + r) // 2

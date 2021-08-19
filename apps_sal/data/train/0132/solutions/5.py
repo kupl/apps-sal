@@ -25,6 +25,12 @@ class Solution:
         return min_costs[i]
 
 
+# Brute force: branch for each ticket type: O(3^n)
+# min_cost(i) = minimum cost of traveling i days. (1-indexed).
+# min_cost(i) = min(
+# (min_cost(i-1) + costs[0]),
+# (min_cost(i-1) + costs[1]),
+# (min_cost(i-1) + costs[2]))
 '''
 min_cost(1) = min(costs[0], costs[1], costs[2])
 

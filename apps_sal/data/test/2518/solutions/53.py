@@ -21,6 +21,7 @@ def is_ok(m):
 
 N, A, B = map(int, input().split())
 h = array(list(int(input()) for _ in range(N)))
+# 二分散策
 
 r = 10**9
 l = 0

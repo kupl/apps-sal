@@ -18,6 +18,7 @@ def solve():
         for i in range(k - 1, 0, -1):
             tmp.append(0)
         dp = [tmp.copy() for dd in d]
+        # print(dp)
         for i in range(k + 1):
             kl.append(i)
         for i in range(k - 1, 0, -1):
@@ -38,6 +39,9 @@ def solve():
                 else:
                     dp[i][j] = 0
 
+        # print(dp)
+        # for pp in dp :
+        # 	print(pp)
         flag = 0
         for i in range(len(dp[-1])):
             if dp[-1][i] == 1:
@@ -47,6 +51,7 @@ def solve():
             print("Yes")
         else:
             print("No")
+        # cal(d,-1)
         pass
 
 

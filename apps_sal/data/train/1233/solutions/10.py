@@ -1,3 +1,4 @@
+# cook your dish here
 def isgood(s):
     c = 0
     for i in set(s):
@@ -6,6 +7,7 @@ def isgood(s):
             c += 1
         if c == 2:
             return 0
+    # print(s)
     return 1
 
 

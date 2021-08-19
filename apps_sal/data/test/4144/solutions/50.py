@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 n = int(input())
 p = 10**9 + 7
 k = (10**n) % p

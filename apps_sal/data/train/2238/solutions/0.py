@@ -11,6 +11,7 @@ def A(l, r):
     while t & (l ^ r) == 0:
         t >>= 1
     res = l | (t - 1)
+    #print(t, res)
     return res
 
 

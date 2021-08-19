@@ -24,6 +24,9 @@ def pow2(n):
             ans *= sq2[i]
             ans %= mod
     return ans
+# if m==1:
+    # print(ms)
+# print(sq2)
 
 
 z = []
@@ -42,7 +45,7 @@ for i in range(n):
     l = i - (n - m)
 
     ti = 0
-    if l >= 0:
+    if l >= 0:  # musk
         zn = z[l]
         ti = l - zn + 1
     else:

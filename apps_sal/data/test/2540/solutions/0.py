@@ -53,6 +53,7 @@ def go():
                 children[0].sumadd(children[j])
             children[0].sumadd({c[i]: 1})
             cols[i] = children[0]
+        # max_val = max(cols[i].values())
         answer[i] = cols[i].mx_sum
 
     print(' '.join(map(str, answer)))

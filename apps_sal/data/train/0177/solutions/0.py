@@ -17,9 +17,12 @@ class Solution:
             c = s[right]
             d[c] = d.get(c, 0) - 1
 
+            # good match
             if d[c] >= 0:
                 totalMatch += 1
 
+                # over match 可以不移动left
+                # total match, need to advance left
                 if totalMatch == len(t):
                     totalMatch -= 1
 
@@ -28,6 +31,7 @@ class Solution:
                         d[s[left]] += 1
                         left += 1
 
+                    # we dec the count here so that next round right need to match one more s[left],
                     d[s[left]] += 1
 
                     if result == "" or len(result) > right - left:

@@ -8,12 +8,16 @@ def main():
         if len(s) < l:
             break
 
+        # print(l, s)
+
         r = n - 1
         while r >= l and a[r] not in s:
             s.add(a[r])
             r -= 1
 
+        # print(r, s)
         ans = min(ans, r - l + 1)
+        # print()
 
     print(ans)
 

@@ -9,9 +9,11 @@ class ThroneInheritance:
     def birth(self, pN: str, cN: str) -> None:
         self.child[cN] = pN
         if pN in self.par:
+            # print(self.par)
             self.par[pN].append(cN)
         else:
             self.par[pN] = deque([cN])
+        # print(self.par)
 
     def death(self, name: str) -> None:
         self.ex[name] = True
@@ -22,11 +24,18 @@ class ThroneInheritance:
         for i in res:
             if i not in self.ex:
                 final.append(i)
+        # self.res=final
         return final
 
     def main(self):
+        # cP=self.par.deepcopy()
         cC = self.child.copy()
         cP = copy.deepcopy(self.par)
+        # print(cP, cC)
+        # cP={}
+        # for i in self.par:
+        #     cP[i]=self.par[i]
+        # print(cP)
 
         res = ['king']
         curr = res[-1]
@@ -41,4 +50,14 @@ class ThroneInheritance:
                     return res
                 curr = cC[curr]
             if curr == 'king' and len(cP[curr]) == 0:
+                # print(self.par, cP)
                 return res
+
+        # return final
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

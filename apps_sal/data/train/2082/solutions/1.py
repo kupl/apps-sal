@@ -55,9 +55,11 @@ def main():
     n = II()
     aa = LI()
     sa = sum(aa)
+    # dp[i]...ev from i-1 to i
     dp = [mint(0)] * (sa + 1)
     for i in range(1, sa + 1):
         dp[i] = ((i - 1) * dp[i - 1] + sa) * (n - 1) / (sa + 1 - i)
+    # print(*dp)
 
     for i in range(sa):
         dp[i + 1] += dp[i]

@@ -11,12 +11,14 @@ class Solution:
                 pos, speed = queue.popleft()
                 if pos == target:
                     return steps
+                # Option 1: do acceleration, if it is not counter productive.
                 next_pos = pos + speed
                 if 0 < next_pos < 2 * target:
                     next_state = (next_pos, 2 * speed)
                     if next_state not in visited:
                         visited.add(next_state)
                         queue.append(next_state)
+                # Option 2: do reverse.
                 next_speed = -1 if speed > 0 else 1
                 next_state = (pos, next_speed)
                 if next_state not in visited:

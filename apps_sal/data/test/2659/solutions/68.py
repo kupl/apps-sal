@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf-8
 
 def ri():
     return int(input())

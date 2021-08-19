@@ -16,6 +16,7 @@ class Solution:
            ** dp_profits[j] = max(profits[j] + dp_profits[previous[j]], dp_profits[j-1]) **
         '''
 
+        # zip and order jobs by end time
         jobs = sorted(zip(startTime, endTime, profit), key=lambda x: x[1])
 
         '''
@@ -34,6 +35,7 @@ class Solution:
             '''
             nonlocal jobs
 
+            # boundary conditions - note job = (start_time, end_time, profit)
             if val < jobs[0][1]:
                 return -1
             if val >= jobs[-1][1]:

@@ -25,9 +25,9 @@ for i in range(1, N + 1):
     if x >= T[i]:
         V[i] = (total[i - 1] + T[i] + total[i]) / 2
         x = T[i]
-    d = (total[i - 1] + V[i]) * (V[i] - total[i - 1]) / 2
-    d += (total[i] + V[i]) * (V[i] - total[i]) / 2
-    d += V[i] * (T[i] - x)
+    d = (total[i - 1] + V[i]) * (V[i] - total[i - 1]) / 2  # 台形左側
+    d += (total[i] + V[i]) * (V[i] - total[i]) / 2  # 台形右側
+    d += V[i] * (T[i] - x)  # 真ん中の定速部分
 
     ans += d
 

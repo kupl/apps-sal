@@ -39,3 +39,13 @@ for i in range(x):
     if ok == 1:
         minn = min(minn, w * h)
 print(minn)
+##    m1 = ((cw+a)*max(ch, b))
+##    m2 = ((cw+b)*max(ch, a))
+# if m1 < m2:
+##        cw += a
+##        ch = max(ch, b)
+# else:
+##        cw += b
+##        ch = max(ch, a)
+##
+# print(cw*ch)

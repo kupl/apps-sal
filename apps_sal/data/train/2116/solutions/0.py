@@ -21,6 +21,10 @@ def check_value(sa, m, threshold):
 
 def get_indexes(sa, threshold):
     seq = [i for i in range(len(sa)) if sa[i] <= threshold]
+    # seq = []
+    # for i in range(len(sa)):
+    # 	if sa[i] < threshold:
+    # 		seq[i].append(sa[i], i)
     return seq
 
 
@@ -34,7 +38,9 @@ def filter_indexes(sa, seq, el, m):
 
 threshold = -1
 while (not check_value(sa, m, threshold)):
+    # print(threshold, get_indexes(sa, threshold))
     threshold += 1
+# print(threshold, get_indexes(sa, threshold), sa)
 
 seq = get_indexes(sa, threshold)
 seq = filter_indexes(sa, seq, threshold, m)

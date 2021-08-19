@@ -20,7 +20,9 @@ def f(x, y):
 
 n, a, b, k = map(int, input().split())
 s = [1 if c == '+' else -1 for c in input()]
+# period k-1
 pr = sum(s[i] * f(a, n - i) * f(b, i) for i in range(k)) % mod
+#ratio (b/a)^k
 rt = f(b, k) * f(f(a, k), mod - 2) % mod
 terms = (n + 1) // k
 if rt == 1:

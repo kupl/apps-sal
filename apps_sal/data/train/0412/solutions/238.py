@@ -10,4 +10,5 @@ class Solution:
                         break
 
                     dp[i][j] += dp[i - 1][j - k]
+        # print(dp)
         return dp[d][target] % (10**9 + 7)

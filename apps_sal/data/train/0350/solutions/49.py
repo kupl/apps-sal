@@ -33,6 +33,9 @@ class Solution:
         w1 = Window()
         w2 = Window()
         x = y = z = 0
+        # w1 中包含 A[x:z] 中所有的数字，而且 w1 中不重合的数字数量为 K
+        # w2 中包含 A[y:z] 中所有的数字，而且 w2 中不重合的数字数量为 K - 1
+        # if x <= i < y; then A[i:z] 中的不重合的数字数量为 K
 
         result = 0
         while z < len(A):

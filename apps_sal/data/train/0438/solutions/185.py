@@ -24,9 +24,15 @@ class Solution:
             group += corner[j]
             groups[corner[j]] -= 1
 
+            # print(corner)
+
             groups[group] += 1
             corner[i - corner[i - 1]] = group
             corner[i + corner[i + 1]] = group
+
+            # print(corner)
+
+            # print(groups)
 
             if groups[m]:
                 result = step

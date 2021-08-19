@@ -5,7 +5,7 @@ from numba import njit, i8, b1
 h, w = map(int, input().split())
 sh, sw = map(int, input().split())
 gh, gw = map(int, input().split())
-s = np.array([list(input()) for _ in range(h)]) == "
+s = np.array([list(input()) for _ in range(h)]) == "#"
 
 
 @njit(i8(i8, i8, i8, i8, i8, i8, b1[:, :]))

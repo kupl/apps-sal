@@ -12,5 +12,6 @@ for i in range(n - 2):
         bi -= 1
     if i == bi or i + 1 == bi:
         continue
+    #print(arr[i], arr[i+1], arr[bi])
     ans = max(ans, (arr[bi] - arr[i + 1]) / (arr[bi] - arr[i]))
 print(ans)

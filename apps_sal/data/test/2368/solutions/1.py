@@ -1,9 +1,11 @@
 class UnionFind:
     def __init__(self, n):
+        # n: 頂点数
         self.n = n
         self.parents = [-1] * n
 
     def find(self, x):
+        # xの根
         if self.parents[x] < 0:
             return x
         else:
@@ -11,6 +13,7 @@ class UnionFind:
             return self.parents[x]
 
     def union(self, x, y):
+        # 無向辺をはる
         x = self.find(x)
         y = self.find(y)
 
@@ -24,13 +27,16 @@ class UnionFind:
         self.parents[y] = x
 
     def members(self, x):
+        # xの属する集団の頂点の列挙
         root = self.find(x)
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
+        # すべての根の要素を列挙
         return [i for i, x in enumerate(self.parents) if x < 0]
 
     def all_group_members(self):
+        # 根ごとの集団要素列挙
         return {r: self.members(r) for r in self.roots()}
 
 

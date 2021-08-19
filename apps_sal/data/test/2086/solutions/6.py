@@ -1,3 +1,4 @@
+# C
 
 import copy
 
@@ -6,7 +7,7 @@ A = list(map(int, input().split()))
 s, f = list(map(int, input().split()))
 
 B = copy.deepcopy(A)
-C = A + B
+C = A + B  # Aを二つ連結したリスト
 
 l = f - s
 max_list = []

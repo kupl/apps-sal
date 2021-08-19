@@ -3,6 +3,7 @@ def function(n, arr, i, dp):
         sum = 0
         pointer = 1
         s = ''
+        # print('arr:',arr)
         for k in arr:
             sum += (k * pointer)
             pointer += 1

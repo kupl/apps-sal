@@ -10,6 +10,7 @@ for _ in range(t):
     ans = 0
     if len(D):
         C = collections.Counter(D).most_common()
+        # print(C)
         ans = (C[0][1] - 1) * k + C[0][0] + 1
 
     print(ans)

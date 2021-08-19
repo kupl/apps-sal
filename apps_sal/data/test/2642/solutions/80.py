@@ -39,5 +39,5 @@ for key in cnt:
     ans %= MOD
 
 ans += zero_cnt
-ans -= 1
+ans -= 1  # for empty set
 print((ans % MOD))

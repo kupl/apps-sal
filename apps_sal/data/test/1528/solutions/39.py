@@ -30,6 +30,7 @@ while True:
         break
     else:
         l = level_n_hb(n - 1)
+        #print(n, base + l + 2, x)
         if x < base + l + 2:
             base += 1
             n -= 1

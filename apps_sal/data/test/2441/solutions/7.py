@@ -39,6 +39,7 @@ def main():
     for i in range(1, n + 1):
         if not visited[i]:
             dfs_order(i, visited, g, order)
+    # print(order)
 
     visited = [0] * (n + 1)
     comp = defaultdict(list)
@@ -46,6 +47,7 @@ def main():
         now = order.pop()
         if not visited[now]:
             dfs_scc(now, now, rg, visited, comp, cost)
+    # print(comp)
 
     ans1, ans2 = 0, 1
     for key, values in comp.items():

@@ -1,5 +1,6 @@
 class Solution:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
+        ###########################################################################
         if len(arr) < 3:
             return False
 
@@ -7,3 +8,5 @@ class Solution:
             return True
         else:
             return self.threeConsecutiveOdds(arr[1:])
+
+        ###########################################################################

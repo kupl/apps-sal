@@ -19,6 +19,7 @@ def main():
                         r += matrix[y][i]
                     for i in range(h):
                         c += matrix[i][x]
+                    # sooqa blya
                     subbuff = 0
                     left, right = r.find('*'), r.rfind('*')
                     for i in range(left, right + 1):

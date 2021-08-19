@@ -1,3 +1,5 @@
+# "1" "12" "123" "1234" "12345" "123456" "1234567"
+#  1    3    6     10      15
 import bisect
 d = [1]
 p = [1]
@@ -6,6 +8,7 @@ last_dig = [1]
 
 
 def get(x):
+    # print("Inside",x)
     n = x - 1
     x, y = 1, 9
     while n > x * y:
@@ -20,6 +23,9 @@ while True:
     p.append(p[-1] + d[-1])
     if p[-1] > LIM:
         break
+#
+# print(d[:6])
+# print(p[:6])
 
 q = int(input())
 for i in range(q):
@@ -28,6 +34,7 @@ for i in range(q):
         print("1")
         continue
     gg = bisect.bisect_right(p, quer) - 1
+    # print("Where",gg)
     rem = quer - p[gg]
     if(rem == 0):
         rem = d[gg]

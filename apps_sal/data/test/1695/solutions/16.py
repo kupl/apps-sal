@@ -11,3 +11,9 @@ for i in range(X[1]):
         Temp[Answers[j][i]] += 1
     Sum += points[i] * max(Temp.values())
 print(Sum)
+
+# UB_CodeForces
+# Advice: Gain your experience with participating in CodeForces contests
+# Location: Behind my desk
+# Caption: Contest time
+# CodeNumber: 556

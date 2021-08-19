@@ -1,3 +1,4 @@
+# cook your dish here
 def comp(a, b):
     if len(a) > len(b):
         return b

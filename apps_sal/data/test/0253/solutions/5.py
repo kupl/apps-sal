@@ -1,3 +1,4 @@
+# input
 K = list(map(int, input().split()))
 K.sort()
 
@@ -15,7 +16,7 @@ def solve():
         else:
             print('NO')
             return
-    else:
+    else:  # m=2
         if K[1] == 2:
             print('YES')
             return

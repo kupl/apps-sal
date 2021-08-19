@@ -1,4 +1,4 @@
-from functools import reduce
+from functools import reduce                # Lacking in the test suite.
 from collections import defaultdict
 import re
 

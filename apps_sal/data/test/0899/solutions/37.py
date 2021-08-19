@@ -27,6 +27,7 @@ def main():
             a, b = b, a
         edges.append((a, b, c))
 
+    # ワーシャルフロイド
     for k in range(N):
         for i in range(N):
             for j in range(N):

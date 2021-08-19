@@ -15,6 +15,7 @@ def count(n, c, a):
 def opium(n, c, a):
     sum = 0
     p = list(set(count(n, c, a)))
+    # print(p)
     for x in p:
         v = x
         cd = c[x - 1]
@@ -22,6 +23,7 @@ def opium(n, c, a):
             x = a[x - 1]
             cd = min(cd, c[x - 1])
         sum = sum + cd
+        # print(sum)
     return sum
 
 

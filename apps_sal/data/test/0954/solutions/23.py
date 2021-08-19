@@ -1,3 +1,4 @@
+# You lost the game.
 
 s = str(input())
 n = len(s)

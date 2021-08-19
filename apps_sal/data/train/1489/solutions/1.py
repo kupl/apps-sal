@@ -1,3 +1,4 @@
+# cook your dish here
 def maxnum(s, k):
     l = len(s)
     if l == 0 or k == 0:

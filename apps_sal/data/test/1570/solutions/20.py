@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 K, N, W = input().split(' ')
 K = int(K)

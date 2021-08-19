@@ -1,5 +1,6 @@
 import sys
 my_file = sys.stdin
+#my_file = open("1input.txt", "r")
 n = int(my_file.readline())
 a = [int(i) for i in my_file.readline().strip().split()]
 a.sort()

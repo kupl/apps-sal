@@ -4,6 +4,7 @@ rows = []
 evils = 0
 for i in range(n):
     rows.append(input())
+# evils+=rows[-1].count('E')
 
 columns = []
 for i in range(n):

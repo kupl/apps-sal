@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# pyrival orz
 import os
 import sys
 from io import BytesIO, IOBase
@@ -252,15 +254,18 @@ def main():
     for _ in range(m):
         l, r, x = map(int, input().split())
         idx = st.bisect_left(l - 1)
+        # print(l,r,x)
         while idx < len(st):
             cur = st[idx]
             if cur >= r:
                 break
+            # print(cur)
             ans[cur] = x
             st.discard(cur)
         ans[x - 1] = 0
         st.add(x - 1)
     print(*ans)
+# region fastio
 
 
 BUFSIZE = 8192
@@ -312,6 +317,8 @@ class IOWrapper(IOBase):
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
+
+# endregion
 
 
 def __starting_point():

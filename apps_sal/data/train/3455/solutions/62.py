@@ -6,3 +6,4 @@ def disarium_number(number):
     if sum(sc) == number:
         return 'Disarium !!'
     return 'Not !!'
+    # Flez

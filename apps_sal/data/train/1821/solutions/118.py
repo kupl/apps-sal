@@ -8,6 +8,7 @@ class Solution:
         first = 0
         middle = len(nums) // 2
         last = len(nums) - 1
+        # make the medium value at the first position
         if nums[first] <= nums[middle] <= nums[last] or nums[last] <= nums[middle] <= nums[first]:
             nums[first], nums[middle] = nums[middle], nums[first]
         elif nums[first] <= nums[last] <= nums[middle] or nums[middle] <= nums[last] <= nums[first]:
@@ -22,9 +23,13 @@ class Solution:
         cur = boarder + 1
         while cur < len(nums):
             if nums[cur] <= nums[pivot]:
+                # print('a', nums)
                 nums[boarder], nums[cur] = nums[cur], nums[boarder]
+                # print('b', nums)
                 boarder += 1
             cur += 1
+        # nums[cur-1], nums[boarder] = nums[boarder], nums[cur-1]
+        # print(nums)
 
         left = nums[:boarder]
         right = nums[boarder:]

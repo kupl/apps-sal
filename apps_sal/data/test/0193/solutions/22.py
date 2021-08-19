@@ -34,6 +34,7 @@ def binSearch(left, right, a, b, c, d):
         else:
             left = m
         m = (left + right) / 2
+        #print(left, m, right)
     return m
 
 

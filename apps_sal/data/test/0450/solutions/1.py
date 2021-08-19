@@ -1,3 +1,4 @@
+# METO Bot 0.9.9
 mod = 10**9 + 7
 n, k = list(map(int, input().split()))
 

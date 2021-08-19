@@ -1,4 +1,6 @@
 
+# int(input())
+# [int(i) for i in input().split()]
 
 n = int(input())
 a = [int(i) for i in input().split()]
@@ -16,6 +18,7 @@ for i in range(n):
         b.extend(tmp)
         curr = i + 1
 
+# print(b)
 if all(b[i] <= b[i + 1] for i in range(n - 1)):
     print("YES")
 else:

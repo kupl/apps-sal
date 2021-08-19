@@ -4,10 +4,15 @@ def manhattan(x, y):
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        mstSet = set()
+        # minimum spanning tree (subgraph that contains all vertices and is a tree)
+        # Two disjoint subsets of vertices
+        # must be connected to make Spanning Tree
+        # this connection must be minimum
+        mstSet = set()  # all vertices in mst
         ans, n = 0, len(points)
         queue = [(0, (0, 0))]
         while len(mstSet) < n:
+            # print(vertices, mstSet)
             weight, (u, v) = heapq.heappop(queue)
             if v in mstSet:
                 continue

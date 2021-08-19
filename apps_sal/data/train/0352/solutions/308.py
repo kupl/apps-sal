@@ -24,5 +24,6 @@ class Solution:
 
         for word in sorted(words, key=lambda x: len(x)):
             el = find(1, word)
+            # print(el, word)
             ans = max(ans, el)
         return ans

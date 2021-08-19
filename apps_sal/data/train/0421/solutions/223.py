@@ -10,6 +10,7 @@ class Solution:
             if curr_idx + step == len(s):
                 break
 
+            # s[curr_idx + step] != s[max_idx + step]
             if s[curr_idx + step] > s[max_idx + step]:
                 max_idx = curr_idx
                 curr_idx = curr_idx + 1

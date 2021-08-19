@@ -12,6 +12,7 @@ cnt = 0
 for i in range(59, -1, -1):
     B.sort(reverse=True)
     if B[cnt] & (1 << i) > 0:
+        # print(i,"!")
         for q in range(cnt):
             if B[q] & (1 << i) > 0:
                 B[q] ^= B[cnt]

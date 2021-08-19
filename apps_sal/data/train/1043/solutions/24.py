@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for z in range(t):
     a, b = [int(x) for x in input().split()]

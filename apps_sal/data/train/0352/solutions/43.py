@@ -6,6 +6,10 @@ class Solution:
         return False
 
     def longestStrChain(self, words: List[str]) -> int:
+        # sort by length
+        # add smallest set to dictionary that maps the word to the longest length
+        # should be 1 to start with
+        # then go bigger looking @ smaller word list, compute longest length for each word
         wordLengths = {}
         for word in words:
             if len(word) in wordLengths:

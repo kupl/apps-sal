@@ -25,4 +25,6 @@ class Solution:
                 else:
                     dp[index][num] = dp[index - 1][num]
 
+        # print(dp)
+
         return total - dp[-1][-1] - dp[-1][-1]

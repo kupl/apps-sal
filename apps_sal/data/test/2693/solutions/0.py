@@ -1,3 +1,4 @@
+# cook your dish here
 def findCombo(s, p, k):
     if k == 1:
         if s == p:

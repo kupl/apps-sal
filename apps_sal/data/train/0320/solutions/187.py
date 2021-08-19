@@ -9,12 +9,15 @@ class Solution:
                         nums[i] -= 1
                         cnt += 1
                     nums[i] = nums[i] >> 1
-            if sum(nums) == 0:
+            if sum(nums) == 0:  # Notice how to calculate array sum in python....
                 return cnt
             cnt += 1
         return cnt
 
         '''
+        # Backwards!!!!
+        # Some problems is hard to solve forward, but can be easy if solved backwards!!!!
+        # Change nums to arr
         
         step = 0
         

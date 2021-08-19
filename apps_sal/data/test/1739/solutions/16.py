@@ -1,7 +1,13 @@
+#########			##	##     ##    	  ####  #####  ##     #  ##     #		##
 from bisect import bisect_left
 import math
 from itertools import permutations
 import sys
+#			   # #	# #   # #		 #	  #	#	#  # #    #  # #    #	   # #
+#			  #  #	#  ###  #	    #		#	#  #  #   #  #  #   #	  #  #
+#			 #####	#	#	#	   #    ###	#	#  #   #  #  #   #  #    #####
+#			#    #	#		#	   #    # #	#	#  #	# #  #	  # #   #    #
+######### 	   #     # 	#		#		##### #	#####  #	 ##  #	   ##  #     #
 
 """
 
@@ -22,6 +28,9 @@ PP			  RR      RR        OOOO      VVVV            EEEEEEEEEE
  Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.
 """
 input = sys.stdin.readline
+# from bisect import bisect_left as lower_bound;
+# from bisect import bisect_right as upper_bound;
+# from math import ceil, factorial;
 
 
 def ceil(x):
@@ -45,11 +54,15 @@ def fact(x):
         x -= 1
     return val
 
+# swap_array function
+
 
 def swaparr(arr, a, b):
     temp = arr[a]
     arr[a] = arr[b]
     arr[b] = temp
+
+# gcd function
 
 
 def gcd(a, b):
@@ -57,9 +70,13 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+# lcm function
+
 
 def lcm(a, b):
     return (a * b) // gcd(a, b)
+
+# nCr function efficient using Binomial Cofficient
 
 
 def nCr(n, k):
@@ -73,6 +90,8 @@ def nCr(n, k):
         res = res / (i + 1)
     return int(res)
 
+# upper bound function code -- such that e in a[:i] e < x;
+
 
 def upper_bound(a, x, lo=0, hi=None):
     if hi == None:
@@ -85,8 +104,11 @@ def upper_bound(a, x, lo=0, hi=None):
             hi = mid
     return lo
 
+# prime factorization
+
 
 def primefs(n):
+    # if n == 1    ## calculating primes
     primes = {}
     while(n % 2 == 0 and n > 0):
         primes[2] = primes.get(2, 0) + 1
@@ -97,7 +119,11 @@ def primefs(n):
             n = n // i
     if n > 2:
         primes[n] = primes.get(n, 0) + 1
+    # prime factoriazation of n is stored in dictionary
+    # primes and can be accesed. O(sqrt n)
     return primes
+
+# MODULAR EXPONENTIATION FUNCTION
 
 
 def power(x, y, p):
@@ -112,12 +138,23 @@ def power(x, y, p):
         x = (x * x) % p
     return res
 
+# DISJOINT SET UNINON FUNCTIONS
+
 
 def swap(a, b):
     temp = a
     a = b
     b = temp
     return a, b
+
+# find function with path compression included (recursive)
+# def find(x, link):
+#     if link[x] == x:
+#         return x
+#     link[x] = find(link[x], link);
+#     return link[x];
+
+# find function with path compression (ITERATIVE)
 
 
 def find(x, link):
@@ -132,6 +169,8 @@ def find(x, link):
     return p
 
 
+# the union function which makes union(x,y)
+# of two nodes x and y
 def union(x, y, link, size):
     x = find(x, link)
     y = find(y, link)
@@ -140,6 +179,8 @@ def union(x, y, link, size):
     if x != y:
         size[x] += size[y]
         link[y] = x
+
+# returns an array of boolean if primes or not USING SIEVE OF ERATOSTHANES
 
 
 def sieve(n):
@@ -152,6 +193,8 @@ def sieve(n):
                 prime[i] = False
         p += 1
     return prime
+
+# Euler's Toitent Function phi
 
 
 def phi(n):
@@ -182,6 +225,7 @@ def is_prime(n):
     return True
 
 
+#### PRIME FACTORIZATION IN O(log n) using Sieve ####
 MAXN = int(1e5 + 5)
 
 
@@ -196,9 +240,12 @@ def spf_sieve():
             for j in range(i * i, MAXN, i):
                 if spf[j] == j:
                     spf[j] = i
+    # function for storing smallest prime factors (spf) in the array
 
 
+################## un-comment below 2 lines when using factorization #################
 spf = [0 for i in range(MAXN)]
+# spf_sieve();
 
 
 def factoriazation(x):
@@ -210,6 +257,8 @@ def factoriazation(x):
     if x != 1:
         res.append(x)
     return res
+    # this function is useful for multiple queries only, o/w use
+    # primefs function above. complexity O(log n)
 
 
 def factors(n):
@@ -220,6 +269,8 @@ def factors(n):
             res.append(n // i)
     return list(set(res))
 
+# taking integer array input
+
 
 def int_array():
     return list(map(int, input().strip().split()))
@@ -228,15 +279,20 @@ def int_array():
 def float_array():
     return list(map(float, input().strip().split()))
 
+# taking string array input
+
 
 def str_array():
     return input().strip().split()
 
 
+# defining a couple constants
 MOD = int(1e9) + 7
 CMOD = 998244353
 INF = float('inf')
 NINF = -float('inf')
+
+################### ---------------- TEMPLATE ENDS HERE ---------------- ###################
 
 
 def solve():
@@ -258,6 +314,8 @@ def solve():
 def __starting_point():
     for _ in range(1):
         solve()
+    # fin_time = datetime.now()
+# 	print("Execution time (for loop): ", (fin_time-init_time))
 
 
 __starting_point()

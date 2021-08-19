@@ -4,6 +4,7 @@ p = list(map(int, input().split()))
 
 ans = 0
 
+# bit全探索
 for i in range(1 << N):
     for lamp in range(M):
         on_sum = 0

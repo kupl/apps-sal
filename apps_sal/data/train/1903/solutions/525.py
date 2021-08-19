@@ -20,6 +20,7 @@ class Solution:
                 return True
             return False
         ans = 0
+        # visited = set()#
         count = 0
         g = []
         for i in range(n):
@@ -30,5 +31,7 @@ class Solution:
             if union(pt1, pt2):
                 ans += cost
                 count += 1
+                # visited.add(pt1)
+                # visited.add(pt2)
             if count == n - 1:
                 return ans

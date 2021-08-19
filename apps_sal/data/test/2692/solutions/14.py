@@ -1,3 +1,5 @@
+# //author : 'Amit Singh Sansoya @amit3200'
+# //it was all meant to happen as i was all talk!
 def finder(k):
     eaten = 0
     crumbs = 0

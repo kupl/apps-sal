@@ -16,3 +16,15 @@ class Solution:
                     stack.append((s, j))
             fail.add((stone, jump))
         return False
+        # queue, invalid, stones = [(0, 0)], [], sorted(list(set(stones)))
+        # while queue:
+        #     pos, jump = queue.pop()
+        #     for n in [jump-1, jump, jump+1]:
+        #         if n > 0 and pos + n in stones and pos + n not in invalid:
+        #             if pos + n == stones[-1]:
+        #                 return True
+        #             else:
+        #                 queue += [(pos+n, n)]
+        #         elif n > 0 and pos + n not in invalid:
+        #             invalid += [pos + n]
+        # return False

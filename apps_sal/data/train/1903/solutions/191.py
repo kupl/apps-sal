@@ -6,7 +6,7 @@ class Solution:
             return 0
 
         res = 0
-        curr = 0
+        curr = 0  # select a random point as the starting point
         dist = [math.inf] * n_points
         explored = set()
 

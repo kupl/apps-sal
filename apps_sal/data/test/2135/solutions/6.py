@@ -1,8 +1,8 @@
 n, m = list(map(int, input().split()))
-s = ['
+s = ['#' * (m + 2)]
 for i in range(n):
-    s += ['
-s += ['
+    s += ['#' + input() + '#']
+s += ['#' * (m + 2)]
 u = [[0 for i in range(m + 2)] for j in range(n + 2)]
 r = [[0 for i in range(m + 2)] for j in range(n + 2)]
 for i in range(1, n + 1):

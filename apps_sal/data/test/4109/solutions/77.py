@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 N, M, X = map(int, input().split())
 CA = [list(map(int, input().split())) for _ in range(N)]

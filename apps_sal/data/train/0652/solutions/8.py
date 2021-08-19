@@ -1,3 +1,4 @@
+# cook your code here
 n = int(input())
 while n > 0:
     s1 = input()

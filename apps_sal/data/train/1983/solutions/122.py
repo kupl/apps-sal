@@ -28,3 +28,9 @@ class ProductOfNumbers:
         if den == 0:
             return self.cum_prod[-1]
         return self.cum_prod[-1] // den
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

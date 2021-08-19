@@ -6,7 +6,7 @@ for c in s:
         ans += c
     elif c == '1':
         ans += c
-    else:
+    else:  # c == 'B'
         if ans != "":
             ans = ans[:-1]
 

@@ -16,3 +16,6 @@ for i in range(n):
     r = min(l + int((b * b - 2 * c) ** k - b), (t - A) // B + 1)
 
     print(-1 if r < l else r)
+
+
+# Made By Mostafa_Khaled

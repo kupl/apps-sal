@@ -1,3 +1,4 @@
+#
 
 def update(t, l, ans):
     if l < ans[1]:
@@ -35,3 +36,10 @@ def solve():
 
 
 print(solve())
+# 10 15 2
+# 2
+# 10 13
+
+# 8 17 3
+# 4
+# 3 4 5 8

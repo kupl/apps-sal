@@ -28,4 +28,5 @@ for i in range(n):
             break
         else:
             prev = (val + cnt - 1) // cnt + cnt - 1
+            # print(prev)
             cnt += 1

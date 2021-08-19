@@ -1,3 +1,9 @@
+# def makelist(n, m):
+# 	return [[0 for i in range(m)] for j in range(n)]
+
+# n = int(input())
+# a, b = map(int, input().split())
+# s = input()
 
 
 N, T = list(map(int, input().split()))
@@ -29,7 +35,7 @@ for i in range(1, N):
             r = 0
         mini = now
         l = 1
-    else:
+    else:  # now > mini
         if now - mini == sa:
             r += 1
 

@@ -1,4 +1,5 @@
 def find_average(nums):
+    # your code here
     total = 0
     for num in nums:
         total += num

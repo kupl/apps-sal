@@ -6,9 +6,12 @@ for _ in range(H):
     S.append([int(s) for s in input()])
 
 ans = 2000
+# itertoolsproductでビット全探索が簡潔に書ける
 for t in itertools.product([0, 1], repeat=H - 1):
     cnt = t.count(1)
+    # 横方向の分割の回数を数えている
     lst = [[s for s in S[0]]]
+    # リストを新たな要素として加えるか、それとも中身を足し合わせるだけか
     for h in range(H - 1):
         if t[h]:
             lst.append(S[h + 1])
@@ -19,6 +22,7 @@ for t in itertools.product([0, 1], repeat=H - 1):
     for w in range(W):
         if max(lst[i][w] for i in range(L)) > K:
             break
+        # 横方向の分割を終えた時点で一列にK+1個以上あるとアウト
         tmp = [sum_lst[i] + lst[i][w] for i in range(L)]
         if max(tmp) > K:
             cnt += 1
@@ -28,3 +32,5 @@ for t in itertools.product([0, 1], repeat=H - 1):
     else:
         ans = min(ans, cnt)
 print(ans)
+# このコードはループをうまくリストに入れ込んでるので短く見えてすごい
+# 5月24日

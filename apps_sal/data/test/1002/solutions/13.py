@@ -7,6 +7,7 @@ limit = tot + (n - 1) * 10
 rest = d - limit
 
 c = 0
+# print(rest)
 if limit > d:
     print(-1)
 else:

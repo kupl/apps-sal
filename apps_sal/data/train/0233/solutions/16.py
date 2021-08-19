@@ -41,4 +41,5 @@ class Solution:
                     uf.union(idx, idx - 4 * N + 2)
                 if j:
                     uf.union(idx + 3, idx - 4 + 1)
+        # print(uf.par)
         return sum(uf.find(x) == x for x in range(4 * N * N))

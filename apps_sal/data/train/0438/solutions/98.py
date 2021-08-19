@@ -9,7 +9,7 @@ class Solution:
         for i, p in enumerate(arr):
             leftParent = self.getParent(p - 1, parents)
             rightParent = self.getParent(p + 1, parents)
-            parents[p - 1] = p
+            parents[p - 1] = p    # its own parent
             if leftParent == 0 and rightParent == 0:
                 groupCount[p] = 1
                 newCnt = 1

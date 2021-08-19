@@ -74,6 +74,8 @@ def __starting_point():
         print(-1)
         return
     print(len(moves))
+    # for j in range(len(moves)):
+    #  print(moves[j])
     for j in moves:
         print(*j)
 

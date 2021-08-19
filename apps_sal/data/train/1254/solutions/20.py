@@ -11,3 +11,4 @@ for _ in range(int(input())):
         print("yes")
     else:
         print("no")
+        # cook your dish here

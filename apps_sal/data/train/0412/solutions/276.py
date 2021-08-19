@@ -4,6 +4,7 @@ class Solution:
         memo = {}
 
         def helper(dices, total):
+            # print(dices, total)
             if total < 0:
                 return 0
             if dices == 0 and total == 0:
@@ -22,6 +23,7 @@ class Solution:
                 ways += helper(dices - 1, total - num)
 
             memo[(dices, total)] = ways
+            # print(ways)
             return ways
 
         return helper(d, target) % (10 ** 9 + 7)

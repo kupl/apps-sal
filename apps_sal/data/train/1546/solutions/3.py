@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     num = list(map(int, input().split()))
     A, B, C = sorted(num)

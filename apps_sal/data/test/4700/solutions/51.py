@@ -1,3 +1,4 @@
+# nは展望台の数　mは道の数
 n, m = list(map(int, input().split()))
 high = list(map(int, input().split()))
 

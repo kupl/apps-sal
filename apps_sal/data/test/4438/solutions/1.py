@@ -9,7 +9,7 @@ def dijkstra(g, st):
     d = [float('inf')] * n
     d[st] = 0
 
-    que = [(0, st)]
+    que = [(0, st)]     # (min_dist, vertex)
     heapq.heapify(que)
 
     while len(que) > 0:
@@ -60,5 +60,6 @@ for k, l in enumerate(levels):
 
     last = cand
 
+# print(g)
 res = dijkstra(g, 0)
 print(ans + min(res[-2:]))

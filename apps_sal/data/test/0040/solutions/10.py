@@ -11,6 +11,7 @@ for _ in range(n):
 if is_rated:
     print('rated')
 else:
+    #
     if list(reversed(sorted(ratings, key=lambda x: x[0]))) == ratings:
         print('maybe')
     else:

@@ -1,3 +1,8 @@
+# Definition for an interval.
+# class Interval:
+#     def __init__(self, s=0, e=0):
+#         self.start = s
+#         self.end = e
 
 class Solution:
     def insert(self, intervals, newInterval):
@@ -9,6 +14,7 @@ class Solution:
 
         ans = []
 
+        # some boundary conditions
         if intervals == []:
             return [newInterval]
         elif newInterval.end < intervals[0].start:
@@ -20,9 +26,9 @@ class Solution:
         new_end = newInterval.end
 
         for i in range(0, len(intervals)):
-            if intervals[i].end < new_start:
+            if intervals[i].end < new_start:  # intertval[i].start <= interval[i].end < new_start
                 ans.append(intervals[i])
-            elif i and (intervals[i - 1].end < new_start) and (new_end < intervals[i].start):
+            elif i and (intervals[i - 1].end < new_start) and (new_end < intervals[i].start):  # i >= 1
                 ans.append(newInterval)
                 for j in range(i, len(intervals)):
                     ans.append(intervals[j])
@@ -32,18 +38,23 @@ class Solution:
                 merge_end = max(intervals[i].end, new_end)
                 break
 
+        #print("i:", i)
+        #print(merge_start, merge_end)
+
         notStop = 1
         for ii in range(i + 1, len(intervals)):
-            if intervals[ii].start > merge_end:
+            if intervals[ii].start > merge_end:  # merge_start <= merge_end < intervals[ii].start
                 notStop = 0
                 break
 
-        if notStop:
-            merge_end = max(intervals[-1].end, merge_end)
+        if notStop:  # after traversing remaining intervals, merge_intvl overlaps the last (i.e. entire remaining) intervals
+            merge_end = max(intervals[-1].end, merge_end)  # or index ii
             ans.append(Interval(merge_start, merge_end))
             return ans
 
         merge_end = max(intervals[ii - 1].end, merge_end)
+        #print("ii:", ii)
+        #print(merge_start, merge_end)
         ans.append(Interval(merge_start, merge_end))
 
         for iii in range(ii, len(intervals)):

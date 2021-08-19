@@ -10,6 +10,7 @@ class Solution:
         is the sum of the frequencies of the remainders choose 2 -> c *(c - 1)//2
         '''
 
+        # Hash table to store modulo
         ht = [0] * K
 
         sum = 0
@@ -17,6 +18,7 @@ class Solution:
             sum += num
             ht[sum % K] += 1
 
+        # handle the case of 0 remainder -> n * (n - 1) // 2 + n
         results = ht[0]
 
         for c in ht:

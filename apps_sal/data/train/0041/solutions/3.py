@@ -12,6 +12,7 @@ for h in range(m):
                     break
             c = a[t:k + 1]
             a = a[:t] + c[::-1] + a[k + 1:]
+            #print(t, k, a)
             ans.append([t, k])
         if a[t + 1] == '(':
             for i in range(t + 1, n):
@@ -20,6 +21,7 @@ for h in range(m):
                     break
             c = a[t + 1:k + 1]
             a = a[:t + 1] + c[::-1] + a[k + 1:]
+            #print(t, k, a)
             ans.append([t + 1, k])
         t += 2
         b -= 1
@@ -29,9 +31,11 @@ for h in range(m):
                 if a[j] == '(':
                     k = j
                     break
+            #print(i, k)
             c = a[i:k + 1]
             a = a[:i] + c[::-1] + a[k + 1:]
             ans.append([i, k])
+    # print(a)
     for i in range(t + (n - t) // 2, n):
         if a[i] == '(':
             for j in range(i, n):

@@ -7,6 +7,7 @@ def main():
     for n in range(1, N + 1):
         T.append(int(input()))
         for i in range(kh + 1, n):
+            #print(T[n], T[i])
             if T[n] - T[i] < 90:
                 kh = i - 1
                 break
@@ -18,8 +19,14 @@ def main():
                 break
             else:
                 kd = i
+        #print(n, kh, kd)
+        #print(20, S[n - 1], 50, S[kh], 120, S[kd])
         S.append(min(20 + S[n - 1], 50 + S[kh], 120 + S[kd]))
+        # print(T)
+        # print(S)
         print(S[n] - S[n - 1])
 
 
 main()
+
+# 1509134058412

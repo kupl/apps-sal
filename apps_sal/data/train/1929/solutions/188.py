@@ -15,7 +15,7 @@ class StreamChecker:
                 else:
                     tmp = tmp[w]
 
-            tmp['
+            tmp['#'] = None
 
     def query(self, letter: str) -> bool:
         self.cur += letter
@@ -24,7 +24,7 @@ class StreamChecker:
         for i in range(len(self.cur) - 1, -1, -1):
             t = self.cur[i]
 
-            if '
+            if '#' in point:
                 return True
 
             if t not in point:
@@ -32,7 +32,7 @@ class StreamChecker:
 
             point = point[t]
 
-        if '
+        if '#' in point:
             return True
         else:
             return False

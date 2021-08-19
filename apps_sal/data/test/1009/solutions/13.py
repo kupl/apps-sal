@@ -1,5 +1,5 @@
 """
-Codeforces Round 
+Codeforces Round #334 (Div. 2)
 
 Problem 604 B. More Cowbell
 
@@ -22,6 +22,9 @@ def solve(xs, n, k):
     ys2 = xs[(n - k): 2 * (n - k)]
     maxval = max(a + b for (a, b) in zip(ys1, ys2[::-1]))
     return max(maxval, xs[-1])
+
+# def pp(*args, **kwargs):
+#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

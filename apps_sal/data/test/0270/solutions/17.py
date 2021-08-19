@@ -1,12 +1,16 @@
 import sys
 input = sys.stdin.readline
 
+# input
 N, M = list(map(int, input().split()))
 u = [[] for i in range(N)]
+# （便宜的に地点から-1としておく）
 for i in range(M):
     s, t = list(map(int, input().split()))
     u[s - 1].append(t - 1)
 
+# output
+# 地点vにたどり着く確率をp[v]とする。
 p = [0] * N
 p[0] = 1
 for v in range(N):
@@ -14,6 +18,7 @@ for v in range(N):
         if v in u[i]:
             p[v] += p[i] / len(u[i])
 
+# 期待値をゴールから逆順に求めていく。点vからゴールまでの移動距離の期待値をq[v]とする。
 q = [0] * N
 q[N - 1] = 0
 for v in reversed(list(range(N))):

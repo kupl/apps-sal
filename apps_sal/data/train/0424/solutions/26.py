@@ -1,6 +1,6 @@
 class Solution:
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
-        def check_overlap(side_x, down_x, A, B):
+        def check_overlap(side_x, down_x, A, B):  # A is shifted
             overlap = 0
             for i in range(len(A)):
                 for j in range(len(A)):

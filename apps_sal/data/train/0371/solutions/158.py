@@ -15,6 +15,7 @@ class Solution:
                         graph[i].append(j)
                         graph[j].append(i)
 
+        # print(graph)
         if nodeS & nodeT:
             return 1
         if not nodeS or not nodeT:
@@ -25,6 +26,7 @@ class Solution:
             queue.append((s, 1))
 
         while queue:
+            # print(queue)
             node, step = queue.popleft()
             if node in nodeT:
                 return step

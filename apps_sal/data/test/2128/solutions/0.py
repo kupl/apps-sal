@@ -1,4 +1,7 @@
 
+#q = int(input())
+#x, y = map(int,input().split(' '))
+#print (' '.join(list(map(str, s))))
 
 def extended_gcd(aa, bb):
     lastremainder, remainder = abs(aa), abs(bb)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 s = str(input())
 
@@ -22,4 +23,5 @@ for i in range(1, len(s) + 1):
         dp[i][2] += (dp[i - 1][1]) % mod
         dp[i][3] += (dp[i - 1][2]) % mod
 
+# print(dp)
 print((dp[-1][-1] % mod))

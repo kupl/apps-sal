@@ -1,10 +1,10 @@
 n, m = list(map(int, input().split()))
 mod = 10**9 + 7
 modp = mod
-max_n = 10 ** 6 + 1
-fact = [1, 1] + [0] * max_n
-factinv = [1, 1] + [0] * max_n
-inv = [0, 1] + [0] * max_n
+max_n = 10 ** 6 + 1               # 必要分だけ用意する
+fact = [1, 1] + [0] * max_n     # fact[n] = (n! mod modp)
+factinv = [1, 1] + [0] * max_n  # factinv[n] = ((n!)^(-1) mod modp)
+inv = [0, 1] + [0] * max_n      # factinv 計算用
 
 
 def cmb(n, r, p):
@@ -25,6 +25,7 @@ for i in range(2, max_n + 1):
 def factorization(m):
     arr = []
     temp = m
+    # 一旦負にするとceilと同じ挙動となる。//1はfloatを返すのでintが必要
     for i in range(2, int(-(-m**0.5 // 1)) + 1):
         if temp % i == 0:
             cnt = 0

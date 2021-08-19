@@ -10,6 +10,7 @@ for i in l:
         p.pop()
     else:
         p.append(i)
+    # print(p)
 if len(p) == 0:
     print('Yes')
 else:

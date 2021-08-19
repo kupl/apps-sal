@@ -17,6 +17,7 @@ fin = ''
 for i in range(n):
 
     fin += s[a[i][1]]
+# print(fin)
 p = 0
 q = 0
 ins = 0

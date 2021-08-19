@@ -17,6 +17,7 @@ class Solution:
 
             return dp[-1][-1]
 
+        # print(lcs(str1, str2))
         lcs_ = lcs(str1, str2)
 
         i = 0
@@ -33,5 +34,7 @@ class Solution:
             res += c
             i += 1
             j += 1
+
+        # print(res)
 
         return res + str1[i:] + str2[j:]

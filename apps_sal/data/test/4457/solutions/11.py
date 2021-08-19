@@ -1,3 +1,4 @@
+# Starting 8 minutes late !
 def fun(x):
     return x[0]
 

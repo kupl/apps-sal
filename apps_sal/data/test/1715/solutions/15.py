@@ -1,3 +1,5 @@
+# https://img.atcoder.jp/abc119/editorial.pdf
+# bisect_right ---> bisect_left
 import bisect
 A, B, Q = list(map(int, input().split()))
 INF = 10 ** 18

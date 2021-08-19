@@ -2,6 +2,7 @@ class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
 
         k = K
+        # separable, so do two 1-d convolutions
 
         def convolve(values):
             acc = sum(values[:k])

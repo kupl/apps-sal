@@ -27,6 +27,7 @@ class DisjointSet:
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
+        # minimum spanning tree
         def man_dist(a, b): return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
         n = len(points)
@@ -37,6 +38,9 @@ class Solution:
                 all_dists.append((man_dist(points[i], points[j]), i, j))
 
         all_dists.sort(key=lambda x: x[0])
+
+        # print(all_dists)
+        # print(len(all_dists))
 
         ans = 0
         dis_set = DisjointSet(n)

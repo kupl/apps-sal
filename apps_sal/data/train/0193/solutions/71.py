@@ -17,4 +17,4 @@ class Solution:
             if total >= len(arr) // 2:
                 return i + 1
 
-        return None
+        return None  # should never reach here

@@ -1,6 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
+#   = input()
+#   = int(input())
+
+#() = (i for i in input().split())
+#   = [i for i in input().split()]
 
 (n, x1, y1, x2, y2) = (int(i) for i in input().split())
 r1 = []
@@ -38,3 +45,4 @@ while(now < len(r1s) - 1):
 
 print(ans)
 finish = time.time()
+#print(finish - start)

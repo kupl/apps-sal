@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 from collections import defaultdict
 
 
@@ -24,4 +30,5 @@ class Solution:
                 que.append((depth + 1, node.right))
 
         sorted_dict = dict(sorted(list(hashmap.items()), key=lambda x: x[1], reverse=True))
+        #print('Hashmap : ',sorted_dict)
         return list(sorted_dict.keys())[0]

@@ -4,6 +4,7 @@ class Solution:
         l, r = 0, len(nums) - 1
         ans = 0
         while(l <= r):
+            # print(l,r,ans)
             if(nums[l] + nums[r] <= target):
                 ans = (ans + (1 << (r - l))) % (10**9 + 7)
                 l += 1

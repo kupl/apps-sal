@@ -1,3 +1,6 @@
+#
+# abc070 c
+#
 import sys
 from io import StringIO
 import unittest
@@ -49,6 +52,7 @@ def lcmlist(l):
 
 
 def __starting_point():
+    # unittest.main()
     resolve()
 
 

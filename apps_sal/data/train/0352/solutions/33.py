@@ -18,6 +18,18 @@ class Solution:
         print(arr)
         return res
 
+        # Standard DP solution
+
+        # dp = {i: 0 for i in words}
+        # words = sorted(words, key=len)
+        # for w in words:
+        #     tmp = [0]
+        #     for i in range(len(w)):
+        #         if w[:i] + w[i+1:] in dp:
+        #             tmp.append(dp[w[:i] + w[i+1:]])
+        #         dp[w] = max(tmp) + 1
+        # return max(dp.values())
+
     def get_longest(self, dp, lengthMap, word):
         if dp[word] != -1:
             return dp[word]

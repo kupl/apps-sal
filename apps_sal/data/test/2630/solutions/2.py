@@ -15,6 +15,7 @@ class Solution:
 
         for i in range(len(dp[0])):
             if obstacleGrid[0][i] == 1:
+                # dp[0][i] = 0
                 break
             else:
                 dp[0][i] = 1
@@ -23,6 +24,8 @@ class Solution:
                 break
             else:
                 dp[j][0] = 1
+
+        # print(dp,obstacleGrid)
 
         for row in range(1, len(obstacleGrid)):
             for col in range(1, len(obstacleGrid[0])):

@@ -4,6 +4,7 @@ class Solution:
             if j - i == 1:
                 return abs(piles[i] - piles[j])
             return max(piles[i] - max_possible_score(i + 1, j), piles[j] - max_possible_score(i, j - 1))
+        # return max_possible_score(0, len(piles) - 1) > 0
         n = len(piles)
         dp = [[None for _ in range(n)] for _ in range(n)]
         for i in range(n - 1):

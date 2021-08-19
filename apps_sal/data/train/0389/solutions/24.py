@@ -24,6 +24,8 @@ class Solution:
                 for n in set2:
                     dp[sum_].add(n + 1)
                     if sum_ in targets and targets[sum_] == n + 1:
+                        # print(dp)
+                        #print(sum_, n+1)
                         return True
 
         return False

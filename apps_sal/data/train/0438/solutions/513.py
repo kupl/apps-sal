@@ -15,7 +15,7 @@ class Union:
         self.rank_count[1] += 1
         self.count += 1
 
-    def find(self, pos):
+    def find(self, pos):  # recursively find parent
         if self.parent[pos] != pos:
             self.parent[pos] = self.find(self.parent[pos])
         return self.parent[pos]
@@ -26,7 +26,7 @@ class Union:
             return
         if self.rank[i] > self.rank[j]:
             i, j = j, i
-        self.parent[i] = j
+        self.parent[i] = j  # i is smaller tree, attach it to larger tree j with j as parent
         self.rank_count[self.rank[j]] -= 1
         self.rank_count[self.rank[i]] -= 1
         self.rank[j] += self.rank[i]

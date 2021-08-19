@@ -37,3 +37,6 @@ for t in range(int(input())):
             ans = min(ans, sum(a))
 
     print(ans if ans != 13 else -1)
+
+
+# Made By Mostafa_Khaled

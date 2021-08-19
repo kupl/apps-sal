@@ -1,3 +1,5 @@
+# import sys
+# input = sys.stdin.readline
 
 Q = int(input())
 for _ in range(Q):
@@ -20,12 +22,14 @@ for _ in range(Q):
             elif a <= s < a + 2 * b - 1:
                 x1 += 1
             else:
+                # print("a, b, s =", a, b, s)
                 print("NO")
                 break
             s = 0
         else:
             s += 1
     else:
+        # print("x, x1, x2, x3 =", x, x1, x2, x3)
         if xx + x1 + x2 + x3 >= 2:
             print("NO")
         elif xx:

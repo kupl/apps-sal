@@ -3,6 +3,7 @@ import io
 import sys
 import math
 
+# Buffering IO
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -24,6 +25,9 @@ def main():
         if cc >= math.ceil(aa / 2):
             print(i + 1)
             break
+
+    #graph = [{} for _ in range(n)]
+    #print(mat([n, n]))
 
 
 def __starting_point():

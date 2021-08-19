@@ -21,3 +21,9 @@ class CustomStack:
     def increment(self, k: int, val: int) -> None:
         if self.incre:
             self.incre[min(len(self.incre), k) - 1] += val
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

@@ -12,6 +12,7 @@ class Solution:
 
         for i in range(2 ** (len(s) - 1)):
             ss = format(i, '0' + str(len(s) - 1) + 'b') + '1'
+            # print(ss)
             st = set()
             count = 0
             prev = 0
@@ -28,6 +29,7 @@ class Solution:
                     prev = j + 1
                     count += 1
 
+            # print(st)
             ans = max(ans, count)
 
         return ans

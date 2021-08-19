@@ -1,6 +1,7 @@
 
 
 def arr(n=None):
+    # [ the numbers 0 to N-1 ]
     lst = []
     if n is None:
         return lst

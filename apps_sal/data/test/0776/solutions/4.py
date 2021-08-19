@@ -15,6 +15,7 @@ def __starting_point():
     ps2.sort()
     ui, pi = 0, 0
     un, pn = len(usb), len(ps2)
+    #print(usb, ps2, un, pn)
     usb.append(MAXINT)
     ps2.append(MAXINT)
     res, cost = 0, 0
@@ -23,11 +24,13 @@ def __starting_point():
         cost += usb[ui]
         ui += 1
         a -= 1
+    #print(res, cost)
     while (pi < pn and b > 0):
         res += 1
         cost += ps2[pi]
         pi += 1
         b -= 1
+    #print(res, cost)
     while (c > 0 and (ui < un or pi < pn)):
         v = None
         if usb[ui] <= ps2[pi]:

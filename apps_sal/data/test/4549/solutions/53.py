@@ -1,3 +1,4 @@
+# coding: utf-8
 
 
 def main():
@@ -12,11 +13,11 @@ def main():
 
     for i in range(H):
         for j in range(W):
-            if grid[i + 1][j + 1] == '
-              flg = True
-               for x, y in dir:
-                    if grid[i + 1 + x][j + 1 + y] == '
-                      flg = False
+            if grid[i + 1][j + 1] == '#':
+                flg = True
+                for x, y in dir:
+                    if grid[i + 1 + x][j + 1 + y] == '#':
+                        flg = False
                 if flg:
                     ans = 'No'
 

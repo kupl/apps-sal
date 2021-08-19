@@ -29,7 +29,7 @@ def resolve():
     for v in range(2 * V):
         if(visited[v]):
             continue
-        cnt = [0] * 2
+        cnt = [0] * 2  # 連結成分のx,yの個数
         dfs(v)
         ans[0] += cnt[0] * cnt[1]
     print(ans[0] - n)

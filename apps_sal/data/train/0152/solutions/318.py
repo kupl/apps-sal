@@ -2,6 +2,14 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
 
+        # all_dists = set()
+        # for i in range(len(position) - 1):
+        #     for j in range(i + 1, len(position)):
+        #         all_dists.add(position[j] - position[i])
+
+#         all_dists_list = list(all_dists)
+#         all_dists_list.sort(reverse=True)
+
         lo = 1
         hi = position[-1]
 
@@ -12,6 +20,8 @@ class Solution:
                 lo = dist
             else:
                 hi = dist - 1
+
+            # print(lo, hi)
 
         return lo
 

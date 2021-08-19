@@ -9,7 +9,7 @@ for i in range(n - 1):
     dic[u].append(v)
     dic[v].append(u)
 
-weight = {1: (0, 1)}
+weight = {1: (0, 1)}  # No.City:(length,weight)
 q = queue.Queue()
 q.put(1)
 while(q.empty() == False):

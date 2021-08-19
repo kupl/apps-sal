@@ -12,6 +12,8 @@ class Solution:
 
             num_fac_map[num] = primes[0]
 
+            # union all factors of a number
+            # eventually we know a number is linked to which factor that's linked most
             for i in range(len(primes) - 1):
                 us.union(primes[i], primes[i + 1])
 
@@ -42,7 +44,7 @@ class UnionSet:
 
     def __init__(self, size):
         self.factors = [i for i in range(size + 1)]
-        self.size = [1] * (size + 1)
+        self.size = [1] * (size + 1)    # the number of factors that this factor can union to
 
     def find(self, ix):
         while self.factors[ix] != ix:
@@ -54,8 +56,10 @@ class UnionSet:
         if p1 == p2:
             return
 
+        # make p1 small set, p2 large set
         if self.size[p1] > self.size[p2]:
             p1, p2 = p2, p1
 
+        # make small set's parent to be the larger set
         self.factors[p1] = p2
         self.size[p2] += self.size[p1]

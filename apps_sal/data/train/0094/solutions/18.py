@@ -12,6 +12,7 @@ def lcm(a, b):
 
 
 for _ in range(int(input())):
+    #n = int(input())
     n, t = map(int, input().split())
     a = list(map(int, input().split()))
     d = {}

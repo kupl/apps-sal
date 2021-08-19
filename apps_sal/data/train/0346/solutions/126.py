@@ -2,7 +2,7 @@ class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         if len(nums) == 0:
             return 0
-        preprocess = [0] * (len(nums) + 1)
+        preprocess = [0] * (len(nums) + 1)  # preprocess[k] = num odd numbers in nums[:k]
         count = 0
         for i in range(len(nums)):
             if nums[i] % 2 == 1:
@@ -20,6 +20,7 @@ class Solution:
                 cont_preprocess.append(last_el)
                 counts_cont.append(1)
         result = 0
+        # number of (i<j) where a[j]-a[i] == k
         left_cursor = 0
         right_cursor = 0
         while left_cursor < len(cont_preprocess):

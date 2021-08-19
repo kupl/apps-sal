@@ -4,6 +4,7 @@ class Solution:
         while zeros != len(nums):
             odds, evens, zeros = 0, 0, 0
             for i in range(0, len(nums)):
+                # print(nums)
                 if nums[i] % 2 == 1:
                     nums[i] -= 1
                     odds += 1

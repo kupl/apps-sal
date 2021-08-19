@@ -26,6 +26,7 @@ class Solution:
         while l < r:
             mid = (l + r) // 2
             realMinimumForce = helper(position, mid, m)
+            #print(mid, realMinimumForce)
             if realMinimumForce == -1:
                 r = mid
 

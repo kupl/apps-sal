@@ -10,6 +10,7 @@ sys.setrecursionlimit(10 ** 9)
 INF = float("inf")
 IINF = 10 ** 18
 MOD = 10 ** 9 + 7
+# MOD = 998244353
 
 
 N, M = list(map(int, sys.stdin.buffer.readline().split()))
@@ -43,3 +44,5 @@ else:
 
 for a, b in ans:
     print((a, b))
+
+# test(ans)

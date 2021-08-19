@@ -23,6 +23,7 @@ class Solution:
                 max_profit = curr_profit
                 times_rotated = ran
             i += 1
+            # print(total_customers, ran, curr_profit)
         if max_profit < 0:
             return -1
         return times_rotated

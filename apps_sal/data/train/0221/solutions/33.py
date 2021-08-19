@@ -26,6 +26,7 @@ class Solution:
                 if i < length - 1:
                     power = power * P % MOD
                 else:
+                    # start: i-(length-1)
                     if h in seen:
                         for j in seen[h]:
                             if S[i - (length - 1):i + 1] == S[j:j + length]:

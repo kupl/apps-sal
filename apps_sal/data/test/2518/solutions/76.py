@@ -10,6 +10,7 @@ def check(x):
     for h in H:
         if h > x * B:
             tmp = (h - x * B) // (A - B)
+            # 切り上げ
             if tmp * (A - B) != h - x * B:
                 tmp += 1
             cnt += tmp
@@ -17,6 +18,7 @@ def check(x):
         return True
     else:
         return False
+# (l,r]
 
 
 def bisect(l, r):

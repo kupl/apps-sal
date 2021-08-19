@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Fri Sep 18 07:10:00 2020
 
@@ -5,6 +6,7 @@ Created on Fri Sep 18 07:10:00 2020
 """
 
 
+# -*- coding: utf-8 -*-
 """
 Created on Fri Sep 18 00:26:07 2020
 
@@ -29,23 +31,29 @@ for a in A:
     judge[int(a)] = True
 
 
+# print(judge[:10])
 def solve(f):
 
     ans = A[0]
+    # 線形探索 O(N)
     for i in range(N):
         ans = math.gcd(ans, A[i])
+    # print("ans",a)
     if ans != 1:
         return "not coprime"
 
     flag = True
+    # エラトステネスの篩 O(N log N)
     for i in range(2, C + 1):
         count = 0
+       # if d[i] == True:
         for j in range(i, C + 1, i):
             if judge[j] == True:
                 count += 1
             if count == 2:
                 flag = False
                 break
+        #        d[j] = False
         if not flag:
             break
 
@@ -56,3 +64,4 @@ def solve(f):
 
 
 print((solve(f)))
+# print(len(A))

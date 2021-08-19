@@ -3,6 +3,8 @@ class Solution:
         n = len(arr)
         even = [0] * (n)
         odd = [0] * (n)
+        # dp, where odd[i], even[i] are numbers of sub arrays that end at i
+        # we then sum them up together
         for i, x in enumerate(arr):
             if i == 0:
                 if x % 2 == 0:

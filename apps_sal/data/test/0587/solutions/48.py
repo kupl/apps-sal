@@ -8,6 +8,7 @@ for i in range(N):
     t, d = map(int, input().split())
     heapq.heappush(hq, (-d, t))
     tset_all.add(t)
+# print(heapq)
 
 hq_K = []
 dsum = 0
@@ -20,6 +21,7 @@ for i in range(K):
 
 t0 = len(tdic)
 max_answer = dsum + (t0**2)
+# print(t0,max_answer)
 
 for i in range(t0 + 1, min(K, len(tset_all)) + 1):
     loop_flg = True
@@ -38,6 +40,7 @@ for i in range(t0 + 1, min(K, len(tset_all)) + 1):
                     break
 
     answer_i = dsum + (i**2)
+    # print(i,answer_i)
     max_answer = max(max_answer, answer_i)
 
 print(max_answer)

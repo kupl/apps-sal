@@ -2,7 +2,7 @@ import sys
 def input(): return sys.stdin.readline().rstrip()
 
 
-def make_divisors(n):
+def make_divisors(n):  # https://qiita.com/LorseKudos/items/9eb560494862c8b4eb56
     lower_divisors, upper_divisors = [], []
     i = 1
     while i * i <= n:

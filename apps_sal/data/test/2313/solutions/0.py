@@ -14,6 +14,7 @@ def solve():
     cs = [aa[0]]
     for a in aa[1:]:
         cs.append((cs[-1] + a) % md)
+    # print(cs)
 
     inv = pow(n, md - 2, md)
     ans = []

@@ -1,13 +1,14 @@
+# ARC093D
 
 a, b = map(int, input().split())
 
 if a <= b:
     m = "."
-    M = "
+    M = "#"
     mc = a
     Mc = b
 else:
-    m = "
+    m = "#"
     M = "."
     mc = b
     Mc = a

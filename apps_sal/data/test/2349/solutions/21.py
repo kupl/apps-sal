@@ -10,6 +10,7 @@ from sys import stdin, stdout
 
 from collections import defaultdict, deque
 
+# main starts
 t = int(stdin.readline().strip())
 for _ in range(t):
     n = int(stdin.readline().strip())

@@ -35,3 +35,6 @@ if gcd(x, y) > 1:
 else:
 
     solve(x, y, "A", "B")
+
+
+# Made By Mostafa_Khaled

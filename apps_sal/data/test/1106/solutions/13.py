@@ -1,3 +1,6 @@
+# fin = open("input.txt")
+# n = int(fin.readline())
+# A = [0] + list(map(int, fin.readline().split()))
 n = int(input())
 A = [0] + list(map(int, input().split()))
 C = 0

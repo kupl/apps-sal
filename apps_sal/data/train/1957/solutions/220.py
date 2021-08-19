@@ -18,6 +18,7 @@ class Solution:
             d[(i, j, p)] = min(d.get((i, j, p), float('inf')), steps)
             res = float('inf')
             if steps >= m * n:
+                # print(steps)
                 return steps
             for dr in directions:
                 x, y = i + dr[0], j + dr[1]
@@ -37,7 +38,12 @@ class Solution:
                         steps -= 1
             return res + 1
         ans = float('inf')
+        # print(\"k = \", k)
         ans = min(ans, dp(0, 0, k))
+        # for i in range(k, -1, -1):
+        #     ans = min(ans, dp(m - 1, n - 1, i))
+        # print(dp(m - 1, n - 1, i))
+        # print(dp(m - 1, n - 1, 283))
         if ans > 10**10:
             return -1
         return ans

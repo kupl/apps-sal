@@ -26,6 +26,7 @@ def numba_compile(numba_config):
 
 
 def solve(H, N, AB):
+    # dp[n][h] := n 番目の魔法まで見て体力を h 削ったときの最小魔力
     dp = np.empty(H + 1, dtype=np.int64)
     dp[:] = 1 << 60
     dp[0] = 0

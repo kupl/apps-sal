@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 yl3 jeopardy
 """

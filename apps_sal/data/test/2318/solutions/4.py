@@ -1,3 +1,4 @@
+#print('Hare Krishna')
 def I():
     return int(input())
 
@@ -45,6 +46,7 @@ for i in range(t):
             c += 1
             i += 1
         grps2.append([curr, c])
+    # print(grps1,grps2)
     if len(grps1) != len(grps2):
         print('NO')
         continue

@@ -1,6 +1,7 @@
 s = input()
 x, y = map(int, input().split())
 m = list(map(len, s.split('T')))
+# 最初は右に行くしかない
 dp_x = {m[0]}
 for i in m[2::2]:
     new_dp = set()

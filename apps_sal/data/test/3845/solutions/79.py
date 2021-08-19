@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 A, B = map(int, input().split())
-a = [["
+a = [["#"] * 100 for _ in range(100)]
 for i in range(100):
     a[i][0] = "."
 for i in range(0, 100, 2):
@@ -12,7 +12,7 @@ for i in range(0, 100, 2):
         if A <= 1:
             break
         A -= 1
-        a[i][j] = "
+        a[i][j] = "#"
 for i in range(99, -1, -2):
     for j in range(98, 0, -2):
         if B <= 1:

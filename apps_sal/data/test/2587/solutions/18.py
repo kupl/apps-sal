@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 @author: Saurav Sihag
 """
@@ -5,7 +6,9 @@
 from sys import stdin, stdout, setrecursionlimit
 def rr(): return input().strip()
 def rri(): return int(rr())
+# rri = lambda: int(stdin.readline())
 def rrm(): return [int(x) for x in rr().split()]
+# stdout.write(str()+'\n')
 
 
 def sol():
@@ -23,11 +26,14 @@ def sol():
     print(res)
     return
 
+# sol()
+
 
 def main():
     T = rri()
     for t in range(1, T + 1):
         ans = sol()
+        # print("Case #{}: {}".format(t, ans))
 
 
 main()

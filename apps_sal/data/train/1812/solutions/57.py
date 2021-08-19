@@ -15,6 +15,9 @@ class MajorityChecker:
                 continue
             l = self.leftSearch(self.tables[num], left)
             r = self.rightSearch(self.tables[num], right)
+            # print(num, self.tables[num])
+            # print(left, right)
+            # print(l, r)
             if r - l >= threshold:
                 return num
         return -1
@@ -42,3 +45,8 @@ class MajorityChecker:
             else:
                 r = m
         return l
+
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)

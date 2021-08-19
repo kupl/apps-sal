@@ -3,6 +3,7 @@ from collections import deque
 
 
 def main():
+    # 入力
     readline = stdin.readline
     mod = 10**9 + 7
     n, k = map(int, readline().split())
@@ -16,6 +17,7 @@ def main():
     stack = deque([0])
     flags = [False] * n
     flags[0] = True
+    # dfs
     while len(stack) > 0:
         now = stack.pop()
         if now == 0:

@@ -1,4 +1,21 @@
 class Solution:
+    # Size: (i), where i is the first i numbers
+    # Problem: f(i) := the maximum length of a subarray that ends with ith number, where the product of all the elements is positive
+    #          g(i) := the maximum lenghth of a subarray that ends with ith number, where the product of all the elements is negative
+    # Recursive Cases:
+    # - Recursive Case 1: nums[i] = 0
+    #                     f(i) = 0
+    #                     g(i) = 0
+    # - Recursive Case 2: nums[i] > 0
+    #                     f(i) = f(i-1) + 1
+    #                     g(i) = g(i-1) + 1
+    # - Recursive Case 3: nums[i] < 0
+    #                     f(i) = g(i-1)
+    #                     g(i) = f(i-1)
+    # Base Cases: i = 0
+    #             f(i) = 0
+    #             g(i) = 0
+    # Bottom Up: there is potential to optimize the space complexity
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
         dp_f = [-1] * (n + 1)

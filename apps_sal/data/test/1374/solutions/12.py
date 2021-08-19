@@ -22,6 +22,7 @@ N = int(input())
 series = list(map(int, input().split()))
 series_sorted = sorted(series)
 
+# L と r の選び方の組み合わせ数。1 から N までの和に等しい
 lr_size = (N + 1) * N / 2
 
 
@@ -32,7 +33,9 @@ def count_lr(x):
     :return:
     """
     ret = 0
+    # series[i] が x 未満なら 1、x 以上なら -1 を i番目に持つ配列の、i=0 から i までの累積和。
     cumsum = 0
+    # counts[i]: cumsum が i に何回なったか
     counts = {i: 0 for i in range(-N, N + 1)}
     counts[cumsum] = 1
     diff = 0
@@ -49,6 +52,8 @@ def count_lr(x):
     return ret
 
 
+# count_lr(x) の結果が半分以上であれば、中央値は x 以上。
+# count_lr(x) が半分以上のうち一番大きい x を探す。
 def solve(i):
     if count_lr(series_sorted[i]) >= (lr_size + 1) // 2:
         return 0

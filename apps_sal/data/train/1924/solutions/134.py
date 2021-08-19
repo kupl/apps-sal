@@ -16,6 +16,7 @@ class Solution:
 
         transactions.sort(key=lambda t: t.time)
 
+        # map name to transaction idx
         trans_idxs = defaultdict(list)
 
         for i, t in enumerate(transactions):

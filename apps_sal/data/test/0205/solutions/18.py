@@ -41,9 +41,12 @@ n, b = list(map(int, input().split()))
 primefactors(b)
 l = len(facts)
 val = int(1e18)
+# print(facts)
+# print(fcounts)
 for i in range(l):
     x = facts[i]
     a = task(n, x)
+    #print(a, "for value:", x)
     val = min(val, a // fcounts[i])
 if val is int(1e18):
     print("0")

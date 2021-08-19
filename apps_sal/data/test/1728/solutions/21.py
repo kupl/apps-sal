@@ -5,6 +5,8 @@ for i in range(n - 1):
     graph[i + 1] += [l[i] - 1]
     graph[l[i] - 1] += [i + 1]
 cc = list(map(int, input().split(" ")))
+# for i in range(n):
+#     print (graph[i])
 ll = list(range(n))
 colors = [0 for i in range(n)]
 counter = 0
@@ -15,8 +17,10 @@ q = [i]
 visited[i] = True
 while(len(q) != 0):
     u = q[0]
+    # print ("u: ", u)
     q.pop(0)
     for j in graph[u]:
+        # print (j)
         if (visited[j]):
             continue
         if(cc[j] != cc[u]):

@@ -1,6 +1,8 @@
 p = int(input())
 s = hex(p).upper()[2:]
+# print(s)
 ans = 0
+# 0123456789abcdf
 for x in s:
     if x == '0':
         ans += 1

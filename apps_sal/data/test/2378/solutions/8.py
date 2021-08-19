@@ -50,7 +50,7 @@ def inv(a, mod):
         r_new = [r[0] - q * w[0], r[1] - q * w[1], r[2] - q * w[2]]
         r = w
         w = r_new
-    x, y = w[0], w[1]
+    x, y = w[0], w[1]    # a*x+y*mod = 1
     return (mod + x % mod) % mod
 
 

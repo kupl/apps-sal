@@ -8,14 +8,14 @@ for _ in range(int(input())):
             value += seq[i]
             turn = int(not(turn))
         else:
-            if(turn == 0):
+            if(turn == 0):  # vanja's turn
                 if(K - abs(value + 1) <= K - abs(value - 1)):
                     value += 1
                     turn = 1
                 else:
                     value -= 1
                     turn = 1
-            else:
+            else:  # miksi's turn
                 if(K - abs(value + 1) <= K - abs(value - 1)):
                     value -= 1
                     turn = 0

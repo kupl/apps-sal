@@ -16,4 +16,5 @@ class Solution:
             local.append(i)
             myDict[time[i] % 60] = local
 
+        # print(myDict)
         return count

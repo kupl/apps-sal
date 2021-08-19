@@ -5,6 +5,7 @@ class Solution:
         for i in range(len(A)):
             if i >= K and A[i - K] > 1:
                 cur -= 1
+                #A[i-K] -= 2
 
             if (cur % 2) ^ A[i] == 0:
                 if i + K > len(A):

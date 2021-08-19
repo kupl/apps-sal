@@ -1,5 +1,6 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
+        # dp[K][N] = min_X(max(dp[K-1][X-1], dp[K][N-X]))
         dp = [[sys.maxsize for i in range(N + 1)] for j in range(K + 1)]
 
         def DP(k, n):
@@ -17,6 +18,7 @@ class Solution:
             if dp[k][n] != sys.maxsize:
                 return dp[k][n]
 
+            # find the minimal dp[k][n]
             l = 0
             r = n
             while (l < r):

@@ -1,3 +1,4 @@
+# cook your dish here
 md = 1000000007
 for tst in range(int(input())):
     n, k = [int(x) for x in input().split()]

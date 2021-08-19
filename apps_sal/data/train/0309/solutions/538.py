@@ -24,6 +24,7 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
 
+        # if there's no list
         if not A:
             return 0
 
@@ -32,6 +33,7 @@ class Solution:
 
         diff_map = {}
 
+        # iterate over indexes
         for it1 in range(1, len(A)):
 
             num1 = A[it1]
@@ -40,6 +42,7 @@ class Solution:
 
                 num2 = A[it2]
 
+                # check the difference
                 diff = num1 - num2
 
                 if (it2, diff) not in diff_map:
@@ -47,4 +50,6 @@ class Solution:
 
                 diff_map[(it1, diff)] = diff_map[(it2, diff)] + 1
 
+        #print (diff_map)
+        # return the maximum of values
         return max(diff_map.values())

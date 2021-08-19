@@ -9,6 +9,7 @@ for i in range(M):
     G[a - 1].append(b - 1)
     G[b - 1].append(a - 1)
 
+# 1の部屋からBFSして、初めて来た部屋だったら直前の部屋番号(+1)を入れる
 ans = [None] * N
 
 q = deque([])

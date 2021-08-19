@@ -9,6 +9,7 @@ for i in range(1, n + 1):
         cnt += 1
     if s[i] == 'R' and s[i + 1] == 'R':
         cnt += 1
+# print(cnt)
 while k > 0 and cnt < n - 1:
     if n - 1 - cnt > 1:
         cnt += 2

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 in_arr = input().split()
 

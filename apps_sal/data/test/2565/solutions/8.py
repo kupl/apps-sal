@@ -15,3 +15,11 @@ for _ in range(int(input())):
         ans -= z2 * 2
 
     print(ans)
+
+    # if k<=n:
+    #     if n%2==k%2:
+    #         print(0)
+    #     else:
+    #         print(1)
+    # else:
+    #     print(k-n)

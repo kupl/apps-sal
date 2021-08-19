@@ -8,6 +8,7 @@ B.sort()
 C.sort()
 
 combiBC = [0] * len(B)
+# combiBC[i] : number of combination of B, C when B[i] is selected
 
 ic = 0
 lc = len(C)

@@ -14,6 +14,7 @@ for _ in range(q):
         dic[a][1] += (1 - b)
     ans = 0
     cnt = 0
+    # ind=len(l)-1
     heap = []
     heapq.heapify(heap)
     vis = defaultdict(int)

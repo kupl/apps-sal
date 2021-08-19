@@ -1,7 +1,11 @@
 class DynamicConnectivity(object):
+    # class takes the number of objects n as input,
+    # and initializes a data structure with objects numbered from
+    # 0 to N-1
     def __init__(self, n):
         self.a = []
 
+# union connects point p with point q
     def union(self, p, q):
         ip = -1
         for k in range(len(self.a)):
@@ -23,6 +27,7 @@ class DynamicConnectivity(object):
             self.a[ip] |= self.a[iq]
             del self.a[iq]
 
+# connected checks if point p is connected to point q and returns a boolean
     def connected(self, p, q):
         ip = -1
         for k in range(len(self.a)):

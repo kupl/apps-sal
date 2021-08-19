@@ -15,6 +15,7 @@ class Solution:
 
         def solve(x):
             nonlocal res
+            # takes some number X and multiset D. Returns answer of the problem for numbers in D such that first number is X
             if not len(d):
                 res += 1
                 return

@@ -25,4 +25,5 @@ cnt += mod[0]
 for i in range(2019):
     if mod[i] > 1:
         cnt += (mod[i] * (mod[i] - 1)) / 2
+        # print(i)
 print((int(cnt)))

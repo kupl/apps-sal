@@ -1,5 +1,6 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
+        # identify consecutive characters
         consecutive_log = []
         consecutive_tuple = [-1, -1, -1]
         previous_e = -1
@@ -12,6 +13,7 @@ class Solution:
                 consecutive_tuple[2] = i
                 previous_e = e
         consecutive_log.append(consecutive_tuple)
+        # print(consecutive_log)
 
         total_cost = 0
         for log in consecutive_log:

@@ -4,6 +4,7 @@ p = 0
 p_max = 0
 X = []
 for i in A:
+    # print(X)
     while(len(X) > 0 and X[-1][0] < i):
         p = max((p + 1, X[-1][1]))
         X.pop()

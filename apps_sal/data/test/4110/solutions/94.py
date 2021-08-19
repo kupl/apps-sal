@@ -3,6 +3,7 @@ L = []
 for i in range(n):
     a, b = map(int, input().split())
     L.append([(i + 1) * 100, a, b])
+# print(L)
 ans = 10**10
 if k < L[-1][0] * L[-1][1]:
     if k % L[-1][0] != 0:
@@ -23,6 +24,7 @@ for i in range(1 << n):
     if score > 0 and score_zan <= 0:
         ans = min(ans, cnt)
     li.sort(reverse=True)
+    # print(score,li,cnt,score_zan)
     if li and score_zan > 0:
         if score_zan < li[0][0] * li[0][1]:
             ans = min(ans, cnt + score_zan // li[0][0])

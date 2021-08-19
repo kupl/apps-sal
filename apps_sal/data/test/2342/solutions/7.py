@@ -14,19 +14,20 @@ for _ in range(q):
             out.append([x, y + 1])
         return out
     mat = [list(input()) for i in range(r)]
+    # print(mat)
     for x in range(r):
         for y in range(c):
             if mat[x][y] == 'B':
                 for p in nbr(x, y):
                     if mat[p[0]][p[1]] != 'G' and mat[p[0]][p[1]] != 'B':
-                        mat[p[0]][p[1]] = '
+                        mat[p[0]][p[1]] = '#'
     zaj = {}
     for x in range(r):
         for y in range(c):
             zaj[(x, y)] = 0
-    if mat[r - 1][c - 1] == '
-      su = 0
-       for i in range(r):
+    if mat[r - 1][c - 1] == '#':
+        su = 0
+        for i in range(r):
             su += mat[i].count('G')
         if su == 0:
             print("Yes")
@@ -40,11 +41,12 @@ for _ in range(q):
             while q:
                 w = q.pop(0)
                 for u in nbr(w[0], w[1]):
-                    if mat[u[0]][u[1]] != '
-                      if zaj[tuple(u)] == 0:
-                           q.append(tuple(u))
+                    if mat[u[0]][u[1]] != '#':
+                        if zaj[tuple(u)] == 0:
+                            q.append(tuple(u))
                             zaj[tuple(u)] = 1
         dupa((r - 1, c - 1))
+        # print(zaj)
         dasie = True
         for x in range(r):
             for y in range(c):

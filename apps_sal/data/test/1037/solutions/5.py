@@ -14,11 +14,11 @@ def solve():
     A = [[a, i] for a, i in zip(map(int, input().split()), range(N))]
     A.sort(key=lambda a: a[0], reverse=True)
 
-    dp = [[0] * (N + 1) for _ in range(N + 1)]
+    dp = [[0] * (N + 1) for _ in range(N + 1)]  # 左からxマス右からyマス埋める
     for i in range(0, N):
         a, l = A[i]
         for x in range(0, i + 1):
-            y = i - x
+            y = i - x  # 合計x+y=iマス既に埋まっている、次にi+1マス目を考える
             dp[x + 1][y] = max(dp[x + 1][y], dp[x][y] + a * abs(l - x))
             dp[x][y + 1] = max(dp[x][y + 1], dp[x][y] + a * abs(l - (N - y - 1)))
 

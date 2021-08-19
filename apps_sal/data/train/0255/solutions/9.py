@@ -9,6 +9,7 @@ class Solution:
         stack = []
         i = len(nums) - 2
         while i >= 0:
+            #            print(nums,stack)
             if nums[i] == 1:
                 stack.append(i)
             elif nums[i] >= (len(nums) - 1 - i):
@@ -25,4 +26,5 @@ class Solution:
                     else:
                         j += 1
             i -= 1
+#        print(stack)
         return len(stack)

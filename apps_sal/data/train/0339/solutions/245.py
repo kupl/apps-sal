@@ -14,6 +14,7 @@ class Solution:
                 if (v * v) % v2:
                     continue
                 req = (v * v) // v2
+                # print(i, j, ind2[req])
                 type1 += len(ind2[req]) - (v2 == req)
 
         for i, v in enumerate(nums2):

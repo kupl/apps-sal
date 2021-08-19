@@ -1,3 +1,6 @@
+# cook your dish here
+# from queue import PriorityQueue
+# import bisect
 def insort(l, v):
     s = 0
     e = len(l)
@@ -52,9 +55,24 @@ for _ in range(int(input())):
                     else:
                         dp[i][il] = max(dp[i][il], min(dif_l[ind], prev_max))
                 insort(pq_l[il], [dp[i][il], i])
+                # tmp = [v[0] for v in pq_l[il]]
+                # ind = bisect.bisect_right(tmp, dp[i][il])
+                # pq_l[il].insert(ind, [dp[i][il], i])
 
             il = 1
             insort(pq_l[il], [dp[i][il], i])
+            # tmp = [v[0] for v in pq_l[il]]
+            # ind = bisect.bisect_right(tmp, dp[i][il])
+            # pq_l[il].insert(ind, [dp[i][il], i])
 
+            # print(i, pq_l, dif_l)
+
+            # dp[i][1] = max(dp[i][1], dif)
+            # for il in range(2,l):
+            #     if dp[j][il-1] == -1:
+            #         break
+            #     dp[i][il] = max(dp[i][il], min(dif, dp[j][il-1]))
             ans = max(ans, dp[i][-1])
+    #     print(dp)
+    # print(dic)
     print(ans)

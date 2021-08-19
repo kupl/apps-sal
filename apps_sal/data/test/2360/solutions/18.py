@@ -1,8 +1,16 @@
+# Imports
 
+
+##############################################
+# Input
 
 from time import time
 t = int(input())
+##############################################
+# Timer start
 start_time = time()
+##############################################
+# Main code
 
 
 for tt in range(t):
@@ -22,7 +30,7 @@ for tt in range(t):
             continue
 
         newres = max(l, res)
-        if newres > r:
+        if newres > r:  # go out
             res = newres
             print(0, end=" ")
         else:

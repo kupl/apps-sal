@@ -1,3 +1,4 @@
+# Grouping 2
 
 N = int(input())
 

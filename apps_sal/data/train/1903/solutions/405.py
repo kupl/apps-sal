@@ -14,6 +14,8 @@ class Solution:
                 h[p1][p2] = d
                 h[p2][p1] = d
 
+        # print(h)
+
         total = 0
         ans = 0
         queue = [(0, 0)]

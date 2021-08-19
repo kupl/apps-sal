@@ -1,3 +1,4 @@
+# C問題
 N = int(input())
 A = [int(input()) for i in range(N)]
 

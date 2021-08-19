@@ -1,4 +1,5 @@
 def num_sq(x, y, x2, y2):
+    # b, w
     a = (abs(x2 - x) + 1)
     b = (abs(y2 - y) + 1)
     if a % 2 == 0 or b % 2 == 0:

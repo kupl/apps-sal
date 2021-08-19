@@ -15,3 +15,6 @@ for i in a:
     ans += abs(s)
 
 print(ans)
+
+
+# Made By Mostafa_Khaled

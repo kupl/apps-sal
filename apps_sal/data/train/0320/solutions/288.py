@@ -1,5 +1,6 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
+        # do it the other way around
         n_op = 0
         l = len(nums)
         target = l * [0]

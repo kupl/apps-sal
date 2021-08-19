@@ -1,4 +1,10 @@
 
+# // Problem : Zero One Tiles
+# // Contest : CodeChef - IARCS OPC Judge Problems
+# // URL : https://www.codechef.com/IARCSJUD/problems/TILES01
+# // Memory Limit : 256 MB
+# // Time Limit : 1000 ms
+# // Powered by CP Editor (https://github.com/cpeditor/cpeditor)
 
 dp = [None] * 1000010
 dp[0] = 0

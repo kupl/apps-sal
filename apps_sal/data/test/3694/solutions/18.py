@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sat Oct  5 21:40:29 2019
 
@@ -29,6 +30,8 @@ if tempcounter == 1 and equal != 0:
 if tempcounter == 1 and equal == 0:
     print("cslnb")
 
+# elif tempcounter == 1 and n == 3 and stop == 0:
+#    print("cslnb")
 
 elif tempcounter < 2 and stop == 0:
     moves = arr[0]

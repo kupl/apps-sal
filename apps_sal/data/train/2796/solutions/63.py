@@ -6,3 +6,8 @@ def areYouPlayingBanjo(name):
         return str(name) + " plays banjo"
     else:
         return str(name) + " does not play banjo"
+    # Implement me!
+
+
+# answer the question are you playing banjo?
+# if your name starts with the letter "R" or lower case "r" you are playing banjo

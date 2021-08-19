@@ -1,4 +1,6 @@
 n = int(input())
+# = map(int, input().split())
+# = list(map(int, input().split()))
 s = input()
 ans = 10 ** 10
 for i in range(len(s) - 3):

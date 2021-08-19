@@ -5,18 +5,24 @@ n, m, p = [int(j) for j in input().split()]
 
 def bellman_ford(v, s, e):
     INF = 10**18
+    # コストをINFで初期化
     d = [INF] * v
+    # 開始頂点は0
     d[s] = 0
+    # 負の閉路が無ければ更新はV-1回までで終わる
     for _ in range(v):
         f = False
         for a, b, c in e:
+            # aまでのコスト+辺abのコストがbまでのコストより小さければ更新
             cost = d[a] + c
             if cost < d[b]:
                 d[b] = cost
                 f = True
+        # 更新が無ければbreak
         if not f:
             break
     else:
+        # V回目まで更新があったら負の閉路がある
         print((-1))
         return
     print((max(-d[-1], 0)))

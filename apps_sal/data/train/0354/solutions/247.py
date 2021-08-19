@@ -1,6 +1,6 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        self.memo = defaultdict(int)
+        self.memo = defaultdict(int)  # (n, prev) -> bool
         self.ans = 0
 
         def helper(n, prev, m):

@@ -23,8 +23,10 @@ class Solution:
 
         @lru_cache(None)
         def helper(st, end):
+            # curr_cuts = [c for c in cuts if st < c < end]
             l = bin_search(st, '+')
             r = bin_search(end, '-')
+            # print(st,end,[cuts[i] for i in range(l,r+1)])
             n = max(r - l + 1, 0)
             if n == 1:
                 return end - st

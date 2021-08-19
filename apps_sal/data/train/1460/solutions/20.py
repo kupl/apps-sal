@@ -1,3 +1,4 @@
+# cook your dish here
 d, x, y = [int(i) for i in list(input().split())]
 l = [int(i) for i in list(input().split())]
 sav = d * x

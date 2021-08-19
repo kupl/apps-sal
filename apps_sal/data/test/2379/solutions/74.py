@@ -13,6 +13,9 @@ def solve(n, k, c, s):
     dp1 = do_solve(n, k, c, s)
     dp2 = do_solve(n, k, c, s[::-1])[::-1]
 
+    # print dp1
+    # print dp2
+
     res = []
     for i in range(n):
         if s[i] == 'x':
@@ -20,8 +23,11 @@ def solve(n, k, c, s):
         l = dp1[i - 1] if i - 1 >= 0 else 0
         r = dp2[i + 1] if i + 1 < n else 0
 
+        # print i, l, r
+
         if l + r == k - 1:
             res.append(i + 1)
+    # print res
     return res
 
 

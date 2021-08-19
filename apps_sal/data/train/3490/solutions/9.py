@@ -8,8 +8,8 @@ class BinaryTree:
     def __str__(self):
         if self.left or self.right:
             s = "(" + str(self.value)
-            sl = self.left or '
-            sr = self.right or '
+            sl = self.left or '#'
+            sr = self.right or '#'
             for l in str(sl).split("\n"):
                 s += "\n  " + l
             for l in str(sr).split("\n"):

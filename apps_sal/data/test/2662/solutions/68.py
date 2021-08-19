@@ -2,6 +2,7 @@ import bisect
 from collections import deque
 
 n = int(input())
+#c = []
 c = deque([])
 for i in range(n):
     a = int(input())

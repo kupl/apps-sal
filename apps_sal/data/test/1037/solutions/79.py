@@ -1,6 +1,10 @@
+#!python3
 
+# input
 N = int(input())
 A = list(map(int, input().split()))
+# N = 2000
+# A = [i for i in range(1, N + 1)]
 
 
 def main():

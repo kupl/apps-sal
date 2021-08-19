@@ -1,5 +1,5 @@
 h = int(input())
-l = [c == '
+l = [c == '#' for _ in range(h) for c in input()]
 w = len(l) // h
 pattern = (0, w - 1, w, w + 1, 2 * w)
 for idx in range(1, (h - 2) * w - 1):

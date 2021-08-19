@@ -11,7 +11,10 @@ class Solution:
         return self.recurse(jobDifficulty, len(jobDifficulty) - 1, d)
 
     def recurse(self, jd, start, remain):
+        # if start == 0:
+        #     return jd[0]
         if remain == 1:
+            # return max(jd[:start + 1])
             return self.mxs[start]
 
         if (start, remain) in self.memo:
@@ -25,4 +28,5 @@ class Solution:
             mx = max(mx, curr)
             mn = min(mn, mx + self.recurse(jd, j - 1, remain - 1))
         self.memo[(start, remain)] = mn
+        # print((start, remain), self.memo, mx, mn)
         return mn

@@ -15,6 +15,7 @@ def main():
             continue
         en.append([atan2(y, x), x, y])
     en.sort()
+#    print(en)
 
     ans = 0
     for l in range(n):

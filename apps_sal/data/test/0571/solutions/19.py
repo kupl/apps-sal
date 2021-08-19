@@ -13,6 +13,7 @@ def main():
         else:
             f += 1
             ouv -= 1
+        #print(i, f, ouv, file = sys.stderr)
         if i < n - 1 and ouv <= 0:
             print(':(')
             return
@@ -25,6 +26,7 @@ def main():
         else:
             ouv += 1
             f -= 1
+        #print(n-1-i, f, ouv, file = sys.stderr)
         if i < n - 1 and f <= 0:
             print(':(')
             return

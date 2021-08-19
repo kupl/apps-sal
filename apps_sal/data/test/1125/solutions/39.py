@@ -1,10 +1,12 @@
+# 写経
+# https://atcoder.jp/contests/abc172/submissions/14777611
 
 def resolve():
     N = int(input())
     A = [int(a) for a in input().split()]
     x = 0
     for a in A[2:]:
-        x ^= a
+        x ^= a                              # ^はXOR計算
     s = sum(A[:2])
     if s < x or (s ^ x) & 1:
         print(-1)
@@ -13,7 +15,7 @@ def resolve():
     a = A[0]
     n = 0
     for i in range(40)[::-1]:
-        b, c = (x >> i) & 1, (d >> i) & 1
+        b, c = (x >> i) & 1, (d >> i) & 1    # >> i は右方向iビットシフト
         if b == c == 1:
             print(-1)
             return

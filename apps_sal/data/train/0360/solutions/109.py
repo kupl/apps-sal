@@ -10,12 +10,19 @@ class Solution:
 
         while memo[mid] or not memo[mid + 1]:
             if high == low and high == best:
+                # print(\"###\")
+                # print(memo[2])
+                # print(memo[3])
                 return best
 
-            if not memo[mid]:
+            # print(low)
+            # print(high)
+            # print(mid)
+            # print(\"----\")
+            if not memo[mid]:  # not mid and not mid + 1, answer is higher
                 low = mid
 
-            else:
+            else:  # mid and mid + 1, answer is lower
                 high = mid
 
             mid = low + (high - low) // 2
@@ -39,6 +46,7 @@ def is_possible(weights, max_w, D):
             total = 0
             D -= 1
 
+            # full before the last one is added
             if D == 0:
                 return False
 

@@ -1,3 +1,4 @@
+# idea: greedy. keep a check of cumulated sum, and as soon as we find a subarray whose sum equals target, we reset cumulated sum
 
 class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
@@ -9,6 +10,7 @@ class Solution:
             cum_sum += num
             complement = cum_sum - target
 
+            # if we found a subarray whose sum equals target, we reset cumulated sum
             if complement in seen_cum_sum:
                 count += 1
                 cum_sum = 0

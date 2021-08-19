@@ -8,6 +8,7 @@ for i in range(2, h + 1):
 if h - prevh >= 2:
     mini = min(mini, max((h - prevh) // 2 * w, prevh * w, -(-(h - prevh) // 2) * w) - min((h - prevh) // 2 * w, prevh * w, -(-(h - prevh) // 2) * w))
 mini = min(mini, max(w // 2 * (h - prevh), prevh * w, -(-w // 2) * (h - prevh)) - min(w // 2 * (h - prevh), prevh * w, -(-w // 2) * (h - prevh)))
+# print(mini)
 for i in range(2, w + 1):
     if abs(stand - i * h) < abs(stand - prevw * h):
         prevw = i

@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     k = int(input())
     whole = 2 * k + 1

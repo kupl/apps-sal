@@ -3,6 +3,7 @@ if r == 'RRR':
     print('3')
 elif r == 'SRR' or r == 'RRS':
 
+ # print(r)
     print('2')
 elif r == 'SSS':
     print('0')

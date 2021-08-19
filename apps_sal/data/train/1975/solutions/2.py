@@ -20,3 +20,10 @@ class CustomStack:
             self.stack = [x + val for x in self.stack]
         else:
             self.stack[:k] = [x + val for x in self.stack[:k]]
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

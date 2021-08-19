@@ -1,3 +1,4 @@
+#!/usr/bin/env pypy
 def rr(): return input().strip()
 def rri(): return int(rr())
 def rrm(): return [int(x) for x in rr().split()]
@@ -16,6 +17,7 @@ def sol(n):
     cm.sort(reverse=True)
     for i, v in enumerate(cm):
         if i % 2 == 0:
+            # print(v)
             res1 += v
         else:
             res2 += v

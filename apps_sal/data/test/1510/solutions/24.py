@@ -20,6 +20,7 @@ def li(): return list(mi())
 
 abc = 'abcdefghijklmnopqrstuvwxyz'
 mod = 1000000007
+# mod=998244353
 inf = float("inf")
 vow = ['a', 'e', 'i', 'o', 'u']
 dx, dy = [-1, 1, 0, 0], [0, 0, 1, -1]
@@ -60,6 +61,7 @@ def solve():
             x -= 1
         ans += pre[x]
         ans += (m1 - a[x]) * (x + 1)
+        # print(x,ans)
         if y >= (m - 1):
             return ans
         if y == 0:
@@ -79,6 +81,7 @@ def solve():
                 l = mid + 1
                 ans = x1
             else:
+                # print(mid)
                 print(max(x, 0))
                 return
 
@@ -89,12 +92,14 @@ def solve():
                 r = mid - 1
                 ans = x1
             else:
+                # print(mid)
                 print(max(x, 0))
                 return
         else:
             if(x2 < x):
                 l = mid + 1
             else:
+                # print(mid)
                 print(max(x, 0))
                 return
 

@@ -5,6 +5,7 @@ a, b = [list(i) for i in zip(*ab)]
 Max = []
 for i in range(n):
     Max.append(0)
+# print(Max)
 ans = 0
 for i in range(m):
     Max[a[i] - 1] = max(Max[a[i] - 1], h[b[i] - 1])

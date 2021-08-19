@@ -35,3 +35,6 @@ for r, i, j in t:
 print(len(p))
 
 print('\n'.join(p))
+
+
+# Made By Mostafa_Khaled

@@ -3,6 +3,11 @@ import heapq as pq
 from sys import stdin, stdout
 
 
+# Heap method written by Engineermind.cho
+
+# Testing if heap + fast IO can make python pass this question
+
+
 n, q = list(map(int, stdin.readline().split()))
 
 server = [i for i in range(1, n + 1)]
@@ -48,3 +53,6 @@ for x in stdin.readlines():
             pq.heappush(running, (t + d, server[:k].copy()))
 
             server = server[k:]
+
+
+# Made By Mostafa_Khaled

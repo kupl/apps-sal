@@ -9,6 +9,7 @@ for _ in range(int(input())):
         res.append(i + 1)
     for j in range(k - 1, 0, -1):
         res.append(j)
+    # print(res)
     s = 0
     for i in res:
         s = s + (i * i * i)

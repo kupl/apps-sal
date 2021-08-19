@@ -1,11 +1,11 @@
 def close_compare(a, b, margin=0):
-    difference = abs(a - b)
+    difference = abs(a - b)  # difference between a and b
 
-    if margin >= difference:
+    if margin >= difference:  # a is close to b
         return 0
-    elif a > b:
+    elif a > b:  # a is higher
         return 1
-    elif a < b:
+    elif a < b:  # a is lower
         return -1
 
     pass

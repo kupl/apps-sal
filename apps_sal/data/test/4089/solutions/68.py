@@ -11,13 +11,15 @@ while i != 0:
         Ans = st[wk - 1] + Ans
         if wkm != 0:
             i -= wkm
-        else:
+        else:  # 余りがないときはbase分を引く
             i -= base
         base = base * 26
-    else:
+#    print(i)
+    else:  # 最後は商を頭につける
         base = base // 26
         wk = i // base
         Ans = st[wk - 1] + Ans
+#    print(i)
         i = 0
 
 print(Ans)

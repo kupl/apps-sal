@@ -12,6 +12,7 @@ from collections import defaultdict
 
 
 def main2(n, d, s, info=0):
+    # correct, but slow
     edges = []
     m = mm = sum(d) // 2
     while m > 0:

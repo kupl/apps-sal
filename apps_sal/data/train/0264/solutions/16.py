@@ -19,6 +19,7 @@ class Solution:
     def dfs(self, curr, opts):
         if tuple(sorted(curr)) in self.visited:
             return
+        # print(self.visited)
         self.visited.add(tuple(sorted(curr)))
         if len(curr) > len(self.out):
             self.out = curr

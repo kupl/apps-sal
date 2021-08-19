@@ -5,13 +5,18 @@ class Graph:
 
     def DFSUtil(self, temp, v, visited):
 
+        # Mark the current vertex as visited
         visited[v] = True
 
+        # Store the vertex to list
         temp.append(v)
 
+        # Repeat for all vertices adjacent
+        # to this vertex v
         for i in self.adj[v]:
             if visited[i] == False:
 
+                # Update the list
                 temp = self.DFSUtil(temp, i, visited)
         return temp
 
@@ -19,6 +24,8 @@ class Graph:
         self.adj[v].append(w)
         self.adj[w].append(v)
 
+    # Method to retrieve connected components
+    # in an undirected graph
     def connectedComponents(self):
         visited = []
         cc = []
@@ -31,6 +38,7 @@ class Graph:
         return cc
 
 
+# Driver Code
 for _ in range(int(input())):
 
     n, m = map(int, input().split())

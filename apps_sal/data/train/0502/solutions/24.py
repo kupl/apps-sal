@@ -8,7 +8,9 @@ class Solution:
             for j in range(len(graph[i])):
                 if(graph[i][j] == 1):
                     edges[i].append(j)
+        # maps nodes to their color
         colors = defaultdict(int)
+        # counts the number of nodes in that colored connected component
         nodes_in_colors = defaultdict(int)
         color = 1
         for node in initial:
@@ -29,11 +31,13 @@ class Solution:
                         colors[neigh] = color
             nodes_in_colors[color] = curr_infected
             color += 1
+        # maps color to initial nodes of that color
         initial_color = defaultdict(list)
         for node in initial:
             initial_color[colors[node]].append(node)
         print(initial_color)
         unique_color = defaultdict(int)
+        # only look for unique colors/ components with unique colors
         for node in initial:
             unique_color[colors[node]] += 1
 

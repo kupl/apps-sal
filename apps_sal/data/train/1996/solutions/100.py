@@ -9,7 +9,7 @@ class Solution:
                 return
 
             if is_safe[node] == VISITED:
-                is_safe[node] = UNSAFE
+                is_safe[node] = UNSAFE  # detected cycle
                 return
 
             if is_safe[node] == None:
@@ -26,4 +26,5 @@ class Solution:
         for node in range(len(graph)):
             if is_safe[node] == None:
                 explore(node)
+        # print(is_safe)
         return [node for node in range(len(graph)) if is_safe[node] == SAFE]

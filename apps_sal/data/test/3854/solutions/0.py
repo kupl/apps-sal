@@ -1,3 +1,5 @@
+# coding gbk
+#!usr/bin/ENV
 def cin(): return list(map(int, input().split()))
 
 

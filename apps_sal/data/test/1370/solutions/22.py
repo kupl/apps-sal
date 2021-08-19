@@ -1,9 +1,11 @@
+#!python3
 
 import itertools
 
 
 INF = 10 ** 5
 
+# input
 H, W, K = list(map(int, input().split()))
 S = [[int(e) for e in input()] for _ in range(H)]
 

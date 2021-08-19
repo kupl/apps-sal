@@ -19,6 +19,8 @@ class Solution:
                     s.append(i)
             else:
                 s.append(i)
+            # print(s)
+        # print(left)
         A = A[::-1]
         s = []
         for i in range(l):
@@ -36,6 +38,7 @@ class Solution:
             else:
                 s.append(i)
         right = right[::-1]
+        # print(right)
         A = A[::-1]
         for i in range(l):
             res += A[i] * (left[i] + 1) * (right[i] + 1)

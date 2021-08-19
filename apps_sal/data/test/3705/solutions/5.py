@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n = int(input())
 s = input()
 a = s.count('8')

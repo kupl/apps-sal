@@ -1,4 +1,5 @@
 def count_correct_characters(correct, guess):
+    # Code here
     print(correct, guess)
     if len(correct) != len(guess):
         return error

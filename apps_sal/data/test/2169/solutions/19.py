@@ -10,6 +10,7 @@ for i in range(1, D + 1):
     for j in range(i, H * W + 1 - D, D):
         x, y = d[j]
         a, b = d[j + D]
+        #print("po:",j, j+D)
         acc[i - 1].append(acc[i - 1][-1] + abs(a - x) + abs(b - y))
 
 Q = int(input())

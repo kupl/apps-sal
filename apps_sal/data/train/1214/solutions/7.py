@@ -1,3 +1,4 @@
+# code
 t = int(input())
 c = 1
 while t > 0:
@@ -10,6 +11,7 @@ while t > 0:
     path_len = int(input())
     path = input()
 
+    # print(path)
     posx = 0
     posy = 0
     for p in path:

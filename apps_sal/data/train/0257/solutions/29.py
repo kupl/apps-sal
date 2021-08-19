@@ -1,5 +1,12 @@
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
+        # undirected graph
+        # weighted positive edges
+        # single start
+
+        # shortest path <-> longest path
+
+        # 最短路 正边权 稀疏图 -》 stack dijkstra
 
         N = 100010
         dist = [2 for i in range(N)]
@@ -11,6 +18,7 @@ class Solution:
         w = {}
         idx = 0
 
+        # build singly linked list graph
         def add(a, b, c, idx):
             e[idx], w[idx] = b, c
             ne[idx] = h[a]
@@ -35,7 +43,7 @@ class Solution:
 
                 seen.add(vertex)
 
-                i = h[vertex]
+                i = h[vertex]  # idx
                 while i != -1:
                     j = e[i]
                     if dist[j] == 2 or dist[j] < distance * w[i]:

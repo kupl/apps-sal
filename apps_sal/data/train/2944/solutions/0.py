@@ -28,7 +28,7 @@ for arr in list(EXCEPTIONS.values()):
 
 def get_electron_configuration(element):
     elt, repl = EXCEPTIONS.get(element, (element, []))
-    z, nl, config = ELT_TO_Z[elt], 0, {}
+    z, nl, config = ELT_TO_Z[elt], 0, {}                  # n: principal quantum number / l: secondary qunatum number (minus 1) / nl: n+l
     while z:
         nl += 1
         for l in range(nl - 1 >> 1, -1, -1):

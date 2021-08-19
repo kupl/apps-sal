@@ -1,3 +1,4 @@
+# ABC 144 D
 import math
 [a, b, x] = [int(i) for i in input().split()]
 if x <= (a**2) * b / 2:

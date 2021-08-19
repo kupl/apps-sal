@@ -44,6 +44,8 @@ def g2(a, b):
         x[g2(r + i * a, a)] = True
     return mex(x)
 
+#print(str(g(6,33))+" "+str(g2(6,33)))
+
 
 while (t):
 
@@ -59,4 +61,5 @@ while (t):
         sys.stdout.write("YES\n")
     else:
         sys.stdout.write("NO\n")
+    #print(str(g(a,b)) + " " + str(g2(a,b)))
     t -= 1

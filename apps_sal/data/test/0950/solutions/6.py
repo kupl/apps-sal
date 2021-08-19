@@ -2,7 +2,7 @@ n, m = map(int, input().split())
 a = [0] * n
 for i in range(n):
     a[i] = list(input())
-g1 = '*
+g1 = '*#&'
 g2 = 'qwertyuiopasdfghjklzxcvbnm'
 g3 = '1234567890'
 
@@ -39,9 +39,11 @@ for i in range(n):
         for k in range(n):
             if i == j or j == k or i == k:
                 continue
+            #print(i, j, k)
             for l in range(3):
                 for g in range(3):
                     for q in range(3):
                         if q != l and l != g and q != g and b[i][l] + b[j][g] + b[k][q] < ans and b[i][l] != -1 and b[j][g] != -1 and b[k][q] != -1:
                             ans = b[i][l] + b[j][g] + b[k][q]
+                            #print(ans, i, j, k, l, g, q)
 print(ans)

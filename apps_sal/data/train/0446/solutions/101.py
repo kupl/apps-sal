@@ -3,6 +3,9 @@ from collections import Counter
 
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
+        # trivous solution
+
+        # sort numbers by count
 
         num_count = Counter(arr)
 

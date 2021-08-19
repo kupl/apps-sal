@@ -9,12 +9,16 @@ for idx, elem in enumerate(a):
         first_appearance[elem] = idx
 
 
+# print(first_appearance)
+# print(last_appearance)
+
 last_last = -1
 num_choice_elem = 0
 for idx, elem in enumerate(a):
     if idx > 0:
         if first_appearance[elem] == idx and last_last <= idx:
             num_choice_elem += 1
+            # print(idx, elem)
 
     temp = last_appearance[elem]
     if temp >= idx and last_last <= temp:

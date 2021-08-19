@@ -12,3 +12,11 @@ def set_alarm(employed, vacation):
         return False
     if a and b == True:
         return False
+
+
+#     if a == True:
+#         return True
+#         if a and b == True:
+#             return False
+#     else:
+#         return False

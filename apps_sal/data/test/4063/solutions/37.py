@@ -1,3 +1,4 @@
+# ABC 132 C
 N = int(input())
 d = [int(i) for i in input().split()]
 e = sorted(d)

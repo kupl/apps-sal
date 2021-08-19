@@ -1,3 +1,4 @@
+# python3
 from bisect import bisect_left
 INF = int(1e9)
 

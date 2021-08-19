@@ -7,6 +7,7 @@ for i in range(4):
 acc = False
 
 for i in range(4):
+    # check l
     if tr[i][L] == 1 and (tr[i][P] == 1 or tr[(i + 3) % 4][P] == 1):
         acc = True
         break

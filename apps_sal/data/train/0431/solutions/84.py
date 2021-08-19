@@ -1,6 +1,9 @@
 class Solution:
     def sumSubarrayMins(self, A: List[int]) -> int:
         A = [float('-inf')] + A + [float('-inf')]
+    # The -inf at the beginning makes sure that the stack is never empty. The
+    # -inf at the end makes sure that every element in the original A gets
+    # popped from the stack eventually.
         stack = [0]
         res = 0
 
@@ -9,6 +12,7 @@ class Solution:
                 j = stack.pop()
                 k = stack[-1]
                 res += A[j] * (i - j) * (j - k)
+    # eg.两个区间会有一个重合，在j， 比如j点A等于3， 这样就可算上subarray [3] 了
                 res %= 10 ** 9 + 7
             stack.append(i)
         return res

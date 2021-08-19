@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import sys
 m = 1000000007
 

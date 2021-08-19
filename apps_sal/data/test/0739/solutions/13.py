@@ -38,6 +38,7 @@ for d in range(1, 19):
     R0 = np.array([[pow(10, d, M), 1, 0], [0, 1, (B % M)], [0, 0, 1]])
     R = R_pow(R0, r, M)
     s = R_mul(R, s, M)
+    #print(d, R, s)
     if (C[d] > L):
         break
 

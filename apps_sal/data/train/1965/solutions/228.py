@@ -1,6 +1,7 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
 
+        # add type 3 first
         if n == 1:
             return True
         parentsA = {}
@@ -38,6 +39,7 @@ class Solution:
             return findB(p) == findB(q)
 
         edges.sort(reverse=True)
+        # first add in best edges
 
         skip = 0
         for typ, fr, to in edges:
@@ -57,6 +59,10 @@ class Solution:
                     skip += 1
                 else:
                     unionB(fr, to)
+            # print(typ, fr, to, parentsB)
+
+        # print(parentsA)
+        # print(parentsB)
 
         allpA = set()
         for i in range(1, n + 1):
@@ -66,6 +72,7 @@ class Solution:
         for i in range(1, n + 1):
             allpB.add(findB(i))
 
+        # print(allpB)
         if len(allpA) == 1 and len(allpB) == 1:
             return skip
         return -1

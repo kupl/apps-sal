@@ -2,6 +2,9 @@ import sys
 
 
 def bestval(pp, cc):
+    # print("BESTVAL:")
+    # print(pp)
+    # print(cc)
     k = len(pp)
     k_2 = k // 2 + 1
     for f in range(1, k_2):
@@ -10,11 +13,13 @@ def bestval(pp, cc):
 
                 good = True
                 num = cc[offs]
+                # print(f"{f}, {offs}, {num}: ")
                 upp = (k // f) // 2 + 1
                 for j in range(1, upp):
                     v1 = f * j
                     v2 = k - v1 + offs
                     v1 += offs
+                    # print(pp[v1], pp[v2])
                     if cc[v1] != num or cc[v2] != num:
                         good = False
                         break
@@ -40,5 +45,7 @@ for q in range(int(sys.stdin.readline())):
                 ppp.append(j)
                 ccc.append(c[j])
                 j = p[j]
+            # bb =
+            # print(bb)
             ans = min(ans, bestval(ppp, ccc))
     sys.stdout.write(str(ans) + '\n')

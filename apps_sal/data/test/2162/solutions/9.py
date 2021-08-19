@@ -13,4 +13,6 @@ for i in range(n):
         if cur[j] >= 0:
             dp[i] = max(dp[i], 1 + dp[cur[j]])
     cur[a[i]] = i
+# print(a)
+# print(dp)
 print(n - max(dp))

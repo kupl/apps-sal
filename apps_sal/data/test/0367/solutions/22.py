@@ -1,4 +1,6 @@
+# CF 600C isprav
 q = input()
+# q='aabbcccdd'
 
 alfavitk = [0] * 26
 alfavit = 'abcdefghijklmnopqrstuvwxyz'
@@ -21,6 +23,10 @@ while True:
         last -= 1
     else:
         break
+
+# print(alfavitk)
+# print(first)
+# print(last)
 
 
 if alfavitk[first] % 2 == 1:

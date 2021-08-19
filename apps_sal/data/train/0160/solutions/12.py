@@ -2,6 +2,7 @@ class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
         N = len(piles)
 
+        # i refers to left pointer, j refers to right pointer to piles array
         @lru_cache(None)
         def dp(i, j):
             if i > j:

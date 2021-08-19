@@ -7,6 +7,8 @@ class Solution:
         lastStep = -1
         for step, n in enumerate(arr):
             i = n - 1
+            # print('----')
+            # print(step, i)
             newLeft = i
             newRight = i
 
@@ -24,6 +26,9 @@ class Solution:
             left[newLeft] = newRight
             right[newRight] = newLeft
             count[newRight - newLeft + 1] += 1
+            # print('left:',left)
+            # print('right:',right)
+            # print('count:',count)
             if count[m] > 0:
                 lastStep = step + 1
 

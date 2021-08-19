@@ -5,6 +5,7 @@ def main():
     b = list(map(int, stdin.readline().split()))
     res = set()
     for i in range(k):
+        # putting b[0] on place i
         our = set()
         curr = b[0]
         for j in range(i, -1, -1):

@@ -1,3 +1,4 @@
+# 「ABC-154-C」の類題
 S = input()
 
 n1 = len(S)

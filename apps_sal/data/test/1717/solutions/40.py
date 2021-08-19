@@ -1,6 +1,7 @@
 import math
 N = int(input())
 
+# 最小公倍数(least common multiple)を作る
 prime_factor = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 
 

@@ -7,6 +7,7 @@ class Solution:
         def shuffle(color, box1, box2):
             if color == k:
                 if sum(box1) == sum(box2) and box1.count(0) == box2.count(0):
+                    #print(f'{box1} {box2}')
                     ans = 0
                     for box in [box1, box2]:
                         p = 1
@@ -16,6 +17,7 @@ class Solution:
                     return ans
                 else:
                     return 0
+            # track all possible
             total_p = 0
             bc = balls[color]
             for b in range(0, bc + 1):

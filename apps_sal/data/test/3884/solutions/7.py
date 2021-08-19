@@ -1,8 +1,11 @@
+# -*- coding: utf-8 -*-
 """
 Created on Thu Jul 26 20:46:22 2018
 
 @author: chirayu jain
 """
+# PROBLEM A FLY
+# DIVISION 1 499 CODEFORCES
 planet = int(input())
 mass = int(input())
 case = 0

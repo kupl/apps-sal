@@ -11,5 +11,6 @@ for i in range(1, 3002):
         pluck = fruits[i] if (fruits[i] <= v - plucked[i]) else v - plucked[i]
         plucked[i] += pluck
         fruits[i] -= pluck
+    #print(fruits[i - 1],plucked[i])
     total_plucked += plucked[i]
 print(total_plucked)

@@ -18,6 +18,7 @@ def main():
     for i in range(N):
         cr_rt_max[i + 1] = max([cr_rt_max[i], cr_rt[i + 1]])
         cl_rt_max[i + 1] = max([cl_rt_max[i], cl_rt[i + 1]])
+    # explore
     ans = 0
     for i in range(N + 1):
         ans = max([ans, cr[i] + cl_rt_max[N - i]])

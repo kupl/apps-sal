@@ -17,6 +17,7 @@ for i in range(A, B + 1):
         break
 
 dic = collections.Counter(V)
+# print(dic,ml)
 
 
 def cmb(n, r):

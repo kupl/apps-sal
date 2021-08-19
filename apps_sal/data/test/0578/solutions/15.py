@@ -12,6 +12,7 @@ if b >= len(d):
     if a != '0':
         ans = a + ans
 else:
+    #ans = a + d[:b] + '.' + d[b:]
 
     ans = a + d[:b]
     if (len(ans) > 1) and (ans[0] == '0'):

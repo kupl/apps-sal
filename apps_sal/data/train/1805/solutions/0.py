@@ -7,6 +7,7 @@ class Solution:
             temp = []
             for i in lis:
                 if vis[i] == 0:
+                    # print(i)
                     temp += friends[i]
                     vis[i] = 1
             lis = set(temp)

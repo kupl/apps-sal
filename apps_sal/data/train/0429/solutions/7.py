@@ -29,7 +29,9 @@ class Solution:
             for p in posGuess:
                 if p in posSecret:
                     curBulls += 1
+            # print(curBulls)
             curCows = max(0, min(len(posGuess) - curBulls, len(posSecret) - curBulls))
+            # print(curCows)
             bulls += curBulls
             cows += curCows
         return str(bulls) + 'A' + str(cows) + 'B'

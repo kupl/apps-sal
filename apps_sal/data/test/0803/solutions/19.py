@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 
 n = int(input())
 s = list(input())

@@ -23,6 +23,7 @@ def search_way(matrix, startR, startC, endR, endC):
             return "YES"
 
     if countToEnd < 2 and matrix[endR][endC] == '.':
+        # print("Count To End!!")
         if countToEnd == 1 and abs(endR - startR) + abs(endC - startC) == 1:
             return "YES"
         return "NO"
@@ -32,10 +33,13 @@ def search_way(matrix, startR, startC, endR, endC):
         curValue = queue.pop(-1)
         if curValue[0] == endR and curValue[1] == endC:
             return "YES"
+        # print(curValue)
         for i in range(len(dx)):
             if matrix[curValue[0] + dx[i]][curValue[1] + dy[i]] == '.':
                 matrix[curValue[0] + dx[i]][curValue[1] + dy[i]] = 'X'
                 queue.append((curValue[0] + dx[i], curValue[1] + dy[i]))
+    # for i in range(len(matrix)):
+    # 	print(matrix[i])
     return "NO"
 
 

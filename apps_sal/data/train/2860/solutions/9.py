@@ -2,8 +2,8 @@ def isomorph(a, b):
     print((a, b))
     if(len(a) != len(b)):
         return False
-    m = {}
-    r = {}
+    m = {}  # mapping of each character in a to b
+    r = {}  # mapping of each character in b to a
     for i, c in enumerate(a):
         if c in m:
             if b[i] != m[c]:

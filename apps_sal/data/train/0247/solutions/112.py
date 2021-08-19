@@ -42,6 +42,9 @@ class Solution:
             suffixes[left] = min_len
             left -= 1
 
+        # print(prefixes)
+        # print(suffixes)
+
         min_len = float('inf')
 
         for i in range(len(arr) - 1):

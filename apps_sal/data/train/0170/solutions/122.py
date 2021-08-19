@@ -29,4 +29,5 @@ class Solution:
                 i += 1
             elif arr[j] < arr[i]:
                 j += 1
+        # ans = min(ans,j-i-1)
         return max(0, ans)

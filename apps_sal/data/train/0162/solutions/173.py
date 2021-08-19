@@ -3,6 +3,7 @@ class Solution:
         map = {}
 
         def memo(p1, p2, map):
+            # print(concatChar)
             if (p1, p2) in map:
                 return map[(p1, p2)]
             else:
@@ -13,6 +14,8 @@ class Solution:
                 else:
                     map[(p1, p2)] = max(memo(p1, p2 + 1, map), memo(p1 + 1, p2, map))
 
+                # map[concatChar] = result
+                # print(map)
                 return map[(p1, p2)]
 
         return memo(0, 0, map)

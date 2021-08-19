@@ -1,5 +1,6 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
+        # count by diagonal, Time O(n); space O(n)
         seen = set()
         res = float('inf')
         for x1, y1 in points:

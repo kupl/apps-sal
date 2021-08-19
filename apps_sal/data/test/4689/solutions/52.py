@@ -8,4 +8,5 @@ A1 = A1 + A2
 
 for i in range(N):
     D[i] = A1[i + N - 1] - A1[i]
+    # print(A1[i],A1[i+N-1])
 print(min(D))

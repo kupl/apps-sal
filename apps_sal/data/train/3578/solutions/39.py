@@ -9,3 +9,4 @@ def paperwork(n, m):
     elif n * m > 0:
         BP = n * m
         return BP
+    # Happy Coding! ^_^

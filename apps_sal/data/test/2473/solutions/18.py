@@ -27,6 +27,8 @@ for i in range(n + 1):
     for j in range(n):
         coord_cs[i][j + 1] += coord_cs[i][j]
 
+# print(*coord, sep='\n')
+# print(*coord_cs, sep='\n')
 
 ans = (x[-1] - x[0]) * (y[-1] - y[0])
 for xi in range(n):

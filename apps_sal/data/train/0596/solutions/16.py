@@ -34,9 +34,11 @@ while(t):
     else:
         minus = (x * (x + 1))
         minus = minus // 2
+       # print(minus)
         se = (x * x) + (2 * x)
         y = x + ((k - 1) // 2)
         fac = ((y * (y + 1)) // 2)
+        # print(fac)
         fac -= minus
         fac = fac * 2
         se += fac

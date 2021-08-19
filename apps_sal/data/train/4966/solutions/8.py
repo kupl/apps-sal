@@ -1,4 +1,5 @@
 def fight(robot_1, robot_2, tactics):
+    # your code
     robot1_health = robot_1['health']
     robot2_health = robot_2['health']
     if len(robot_1['tactics']) < len(robot_2['tactics']):

@@ -31,8 +31,8 @@ def numdigits(n):
 def primesupto(n):
     isp = [True] * (n + 1)
     isp[0], isp[1] = False, False
-    for i, x in enumerate(isp):
-        if x:
+    for i, x in enumerate(isp):  # for each number
+        if x:  # found a prime
             mults = i * i
             while mults <= n:
                 isp[mults] = False

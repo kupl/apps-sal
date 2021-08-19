@@ -2,6 +2,8 @@ from array import array
 3
 n = int(input())
 a = [int(v) for v in input().split()]
+#a = array("l")
+# a.fromlist(t)
 s = 0
 k = sum(a)
 m = int(k / n)

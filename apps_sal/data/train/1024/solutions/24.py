@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 sum1 = 0
 sum2 = 0

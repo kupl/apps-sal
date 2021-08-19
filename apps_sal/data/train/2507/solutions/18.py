@@ -5,7 +5,10 @@ class Solution:
         cd = Counter(chars)
         for w in words:
             wd = Counter(w)
+            # print(wd & cd)
             if len(wd & cd) and len(list((wd & cd).elements())) == len(w):
+                # print(list((wd & cd).elements()))
+                # print(w)
                 ans += len(w)
 
         return ans

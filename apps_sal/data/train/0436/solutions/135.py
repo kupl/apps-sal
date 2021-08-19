@@ -16,4 +16,5 @@ class Solution:
                 if v % 3 == 0:
                     st_temp.add(v // 3)
             st = st_temp
+            # print(len(st_temp))
         return -1

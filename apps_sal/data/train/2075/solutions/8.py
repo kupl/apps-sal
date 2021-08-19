@@ -3,6 +3,8 @@ import itertools
 import string
 import sys
 
+###
+
 
 def powmod(x, p, m):
     if p <= 0:
@@ -10,6 +12,8 @@ def powmod(x, p, m):
     if p <= 1:
         return x % m
     return powmod(x * x % m, p // 2, m) * (x % m)**(p % 2) % m
+
+###
 
 
 def to_basex(num, x):
@@ -26,6 +30,8 @@ def from_basex(it, x):
         p *= x
     return ret
 
+###
+
 
 def core():
     _ = input()
@@ -33,11 +39,13 @@ def core():
     r = [int(x) for x in input().split()]
     a.sort()
     r.sort()
+    # print(a)
+    # print(r)
 
     while (
-            len(a) > 0
-            and len(r) > 0
-            and r[-1] >= a[-1]
+            len(a) > 0 and
+            len(r) > 0 and
+            r[-1] >= a[-1]
     ):
         a.pop()
         r.pop()

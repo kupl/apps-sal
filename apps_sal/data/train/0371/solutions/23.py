@@ -5,6 +5,7 @@ class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
+        # graph of bus stop to busses (which busses stop at that stop)
         graph = {}
         for bus in range(len(routes)):
             route = routes[bus]
@@ -14,6 +15,7 @@ class Solution:
                 else:
                     graph[stop] = [bus]
 
+        # tuple for bus num and number of busses taken
         q = deque()
         q.append((-1, 0))
         taken = set()

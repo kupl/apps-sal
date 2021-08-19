@@ -1,4 +1,4 @@
-n = int(input())
+n = int(input())  # ->n=5
 L = list(map(int, input().split()))
 count = 0
 for i in range(n):

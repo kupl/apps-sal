@@ -4,6 +4,9 @@ b = a[::-1]
 c = [[0 for k in range(n + 1)] for l in range(n + 1)]
 m = 0
 index = -1
+# print(a)
+# print(b)
+# print(c)
 for i in range(n + 1):
     for j in range(n + 1):
         if(i == 0 or j == 0):
@@ -18,3 +21,6 @@ for i in range(n + 1):
 
 print(m)
 print(b[n - index:n - index + m])
+# print(c)
+# print(index-1)
+# print(m)

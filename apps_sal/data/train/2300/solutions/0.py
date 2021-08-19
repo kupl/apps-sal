@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -22,6 +24,8 @@ for v in range(n, -1, -1):
         child[v].sort(key=lambda i: dep[i])
         one[v] = one[child[v][-1]]
         tot[v] = tot[child[v][-1]]
+        #one_sum = [0]*(dep[v])
+        #zero_sum = [0]*(dep[v])
         child[v].pop()
         if child[v]:
             zero = [p2[tot[v][j]] - one[v][j] for j in range(-len(one[child[v][-1]]), 0)]
@@ -38,9 +42,14 @@ for v in range(n, -1, -1):
     child[p[v]].append(v)
     dep[p[v]] = max(dep[p[v]], dep[v] + 1)
 
+    # print(v,tot[v],one[v])
+
+# print("tot",tot[0])
+# print("one",one[0])
 
 ans = 0
 for i, j in zip(tot[0], one[0]):
     ans += pow(2, n + 1 - i, MOD) * j % MOD
 
 print((ans % MOD))
+# print(sum(tot[0]))

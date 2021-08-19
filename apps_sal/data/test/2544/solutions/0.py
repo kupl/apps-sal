@@ -25,7 +25,7 @@ def main():
         checked_list = [False] * N
         checked_list[vi] = True
 
-        min_path_list = [INF] * N
+        min_path_list = [INF] * N  # change
         min_path_list[vi] = 0
 
         while len(Q) > 0:
@@ -39,9 +39,11 @@ def main():
         min_p = [(i, d) for i, d in enumerate(min_path_list)]
         min_p.sort(key=lambda x: x[1], reverse=True)
         member = [0] * N
+        # print(min_p)
         center = []
 
         for z in min_p:
+            # print(z)
             flag = True
             i, d = z
             mem = 0

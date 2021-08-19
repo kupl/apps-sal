@@ -1,4 +1,6 @@
 s = input()
+# 0: black
+# 1: white
 n = len(s)
 li = [0] * n
 

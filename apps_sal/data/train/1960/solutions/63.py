@@ -5,6 +5,7 @@ class Solution:
         result = []
 
         for q in queries:
+            # a = P[q-1]
             result.append(P.index(q))
             P.remove(q)
             P.insert(0, q)

@@ -15,9 +15,11 @@ class Solution:
         return 1
 
     def maxNumEdgesToRemove(self, n, edges):
+        # Union find
 
         res = e1 = e2 = 0
 
+        # Alice and Bob
         self.root = list(range(n + 1))
         for t, i, j in edges:
             if t == 3:
@@ -28,6 +30,7 @@ class Solution:
                     res += 1
         root0 = self.root[:]
 
+        # only Alice
         for t, i, j in edges:
             if t == 1:
                 if self.uni(i, j):
@@ -35,6 +38,7 @@ class Solution:
                 else:
                     res += 1
 
+        # only Bob
         self.root = root0
         for t, i, j in edges:
             if t == 2:

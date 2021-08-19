@@ -1,3 +1,4 @@
+# Original Submission At: https://atcoder.jp/contests/abc149/submissions/16823042
 x = int(input())
 
 

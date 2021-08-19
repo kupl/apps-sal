@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
 
 t = int(input())
 for _ in range(t):
-    s = input().rstrip() + "
+    s = input().rstrip() + "#"
     max_l = 0
     seq_l = 0
     for ch in s:

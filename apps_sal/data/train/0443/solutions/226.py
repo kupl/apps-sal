@@ -8,4 +8,5 @@ class Solution:
                         cnt += 1
                     elif (rating[i] < rating[j]) & (rating[j] < rating[k]):
                         cnt += 1
+                    # print([i, j, k], [rating[i], rating[j], rating[k]], cnt)
         return cnt

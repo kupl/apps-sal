@@ -31,6 +31,7 @@ else:
                 print(s1)
         else:
             print(l - 1)
+    # case3
     else:
         if n == 1 or m == 1:
             z = max(n, m)

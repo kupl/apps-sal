@@ -1,3 +1,4 @@
+# 104B
 s = input()
 c_list = []
 c_count = 0

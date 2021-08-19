@@ -18,6 +18,7 @@ for bit in range(61):
         if a[i] & 1 << (60 - bit):
             if not found_in_bit:
                 a[rank], a[i] = a[i], a[rank]
+                # delete bit in upper
                 for j in range(rank):
                     if a[j] & 1 << (60 - bit):
                         a[j] ^= a[rank]

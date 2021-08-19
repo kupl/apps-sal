@@ -9,6 +9,7 @@ ans = 0
 current = 0
 
 for i in range(n - 1, -1, -1):
+    # print(current, ans)
     if current == 0:
         ans += 1
     current += ppl_delta[i]

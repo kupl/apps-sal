@@ -1,3 +1,7 @@
+# have last digit of previous entry
+# for every line in the input check the first digit
+# if digits are same
+# increment count
 
 def solve():
     prev_last = -1

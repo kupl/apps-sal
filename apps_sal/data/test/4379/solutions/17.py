@@ -10,6 +10,7 @@ for i in G:
     if D[i] > M:
         M = D[i]
         Mi = i
+# print(M,Mi)
 R = []
 A = Mi
 for i in range(len(G) - 1, -1, -1):

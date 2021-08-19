@@ -8,7 +8,7 @@ class StreamChecker:
                 if chrs not in cur:
                     cur[chrs] = {}
                 cur = cur[chrs]
-            cur['
+            cur['#'] = True
         self.stream = collections.deque()
         print((self.trie))
 
@@ -20,6 +20,11 @@ class StreamChecker:
                 temp.append(p[letter])
         self.stream = temp
         for p in self.stream:
-            if '
+            if '#' in p:
                 return True
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -29,4 +29,4 @@ v = list(map(int, input().strip().split()))
 w = list(map(int, input().strip().split()))
 v.sort()
 w.sort()
-print((wormholes(timelist, v, w)))
+print((wormholes(timelist, v, w)))  # cook your dish here

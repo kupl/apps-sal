@@ -29,6 +29,7 @@ for _ in range(t):
                 cont[ele - 1][1] = 1
 
     for ele in cont[k1 - 1:k2]:
+        # print(ele[1])
         if ele[1] == 0:
             sum += p2
         elif ele[1] == 2:

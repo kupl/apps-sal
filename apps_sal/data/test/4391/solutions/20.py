@@ -3,6 +3,7 @@ n = arr[0]
 k = arr[1]
 arr = list(map(int, input().split()))
 arr2 = []
+# maxi = [0 for i in range(k)]
 for i in range(k, n + 1):
     temp = sum(arr[0:i])
     temp3 = temp

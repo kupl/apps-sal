@@ -21,6 +21,7 @@ def ceil(a, b): return (a + b - 1) // b
 
 abc = 'abcdefghijklmnopqrstuvwxyz'
 mod = 1000000007
+# mod=998244353
 inf = float("inf")
 vow = ['a', 'e', 'i', 'o', 'u']
 dx, dy = [-1, 1, 0, 0], [0, 0, 1, -1]
@@ -35,6 +36,7 @@ test = 0
 
 def solve():
 
+    # int( str(i)+x[i] ) is divisible by 7
     x = ['1869', '6198', '1896', '1689', '1986', '1968', '8691']
     freq = [0] * 10
     s = si()

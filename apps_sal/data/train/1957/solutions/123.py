@@ -45,6 +45,7 @@ class Solution:
             q = q2
         return -1
 
+    # bidirection bfs
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         m, n = len(grid), len(grid[0])
         K = k

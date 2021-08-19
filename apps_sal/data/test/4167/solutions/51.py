@@ -6,6 +6,7 @@ for i in range(1, n + 1):
     if (res + res) % k == 0:
         am[res] += 1
 
+# print(am)
 
 ans = 0
 for i in am:

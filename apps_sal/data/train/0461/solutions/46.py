@@ -5,6 +5,6 @@ class Solution:
 
         subordinates = collections.defaultdict(list)
         for i, m in enumerate(manager):
-            if i != headID:
+            if i != headID:  # instead of m != -1
                 subordinates.setdefault(m, []).append(i)
         return dfs(headID)

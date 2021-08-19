@@ -9,6 +9,7 @@ def king():
         if s[i] == "*":
             a.append(i + 1)
 
+    # print(a)
     if len(a) < 5:
         print("no")
         return

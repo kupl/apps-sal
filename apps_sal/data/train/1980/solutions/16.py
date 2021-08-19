@@ -85,3 +85,10 @@ class Skiplist:
         while self.sentinel.lower and not self.sentinel.__next__:
             self.sentinel = sentinel.lower
         return True
+
+
+# Your Skiplist object will be instantiated and called as such:
+# obj = Skiplist()
+# param_1 = obj.search(target)
+# obj.add(num)
+# param_3 = obj.erase(num)

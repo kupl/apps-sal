@@ -5,3 +5,4 @@ def no_space(x):
         if k != " ":
             y += k
     return y
+    # your code here

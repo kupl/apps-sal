@@ -40,6 +40,7 @@ class Solution:
         def path_length(node):
             length = 0
             while node:
+                # print(node)
                 length += 1
                 node = prev[node]
             return length

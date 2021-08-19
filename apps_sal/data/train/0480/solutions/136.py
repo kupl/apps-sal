@@ -13,3 +13,7 @@ class Solution:
                 dp[s][p] %= mod
 
         return dp[steps][0]
+
+# initial state is critical
+# 0 step is meaningless
+# 1 step could be set manually

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 text = input()
 bolba = "Bulbasaur"
 chars = {}

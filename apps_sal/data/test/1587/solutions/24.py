@@ -18,6 +18,7 @@ def solve1(n: int, c: str) -> int:
         else:
             s_check += " "
 
+    #print(s_pivot, s_check, sep="\n")
     return ans
 
 

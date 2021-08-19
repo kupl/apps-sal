@@ -11,6 +11,9 @@ def resolve():
         G[a].append((b, c + 1))
         G[b].append((a, c + 1))
 
+    # x -> K, K->y の最短距離,
+    # よって K から各地点の最短距離を前計算
+
     Q, K = list(map(int, input().split()))
 
     K -= 1

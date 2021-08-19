@@ -11,6 +11,8 @@ class Task:
 
     def __init__(self):
         self.x, self.y = [int(_) for _ in input().split()]
+        #inFile = open('input.txt', 'r')
+        #self.table = inFile.readlines()
 
     def solve(self):
         table, x, y = self.table, self.x, self.y

@@ -2,7 +2,7 @@ def fmap(f, l): return list(map(f, l))
 def parse_int(): return fmap(int, input().split())
 
 
-DEBUG = False
+DEBUG = False  # True#
 
 
 n = int(input())

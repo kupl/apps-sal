@@ -8,6 +8,7 @@ for _ in range(q):
     x = int(input())
 
     ans = INF
+    # 神社→寺
     Ri = bisect.bisect_left(shrines, x)
     Li = Ri - 1
     if Ri != a + 1:
@@ -33,6 +34,7 @@ for _ in range(q):
         if d < ans:
             ans = d
 
+    # 寺→神社
     Ri = bisect.bisect_left(temples, x)
     Li = Ri - 1
     if Ri != b + 1:

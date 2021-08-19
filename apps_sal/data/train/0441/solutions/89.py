@@ -13,5 +13,6 @@ class Solution:
             if (s == N):
                 num_sums += 1
 
+            # print(\"{} - {} = {}\".format(first, last, s))
             i += 1
         return num_sums

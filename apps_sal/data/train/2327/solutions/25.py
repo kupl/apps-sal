@@ -13,6 +13,7 @@ class BIT():
             idx -= idx & (-idx)
         return res_sum
 
+    # Ai += x O(logN)
     def update(self, idx, x):
         while idx <= self.num:
             self.BIT[idx] += x

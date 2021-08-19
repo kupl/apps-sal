@@ -16,3 +16,7 @@ for i in range(m, n + 1):
 
 for e in s1[1:]:
     print(e, end=' ')
+
+# 6 4 4 3 2
+# 6+4+4+3+2 + 4+3+2 + 2
+# s1[5] + s1[3]

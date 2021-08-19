@@ -11,6 +11,7 @@ class Solution:
                 i = int(i / 10)
 
             dic[result].append(num)
+            #max_ = max(max_, len(dic[result]))
 
         max_ = 0
         for i in dic:
@@ -18,4 +19,9 @@ class Solution:
             max_ = max(max_, leng)
 
         ans = [dic[key] for key in dic if len(dic[key]) == max_]
+        #ans = 0
+        # for i in list(dic.values()):
+        #   if len(i)==max_:
+        #      ans+=1
+        # return ans
         return len(ans)

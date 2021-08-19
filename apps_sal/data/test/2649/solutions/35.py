@@ -20,18 +20,23 @@ for idx in range(n):
 
     if left_right_tmp < left_right_min:
         left_right_min = left_right_tmp
+        #res_lr[2] = (x, y)
 
     right_left_tmp = x - y
     if right_left_tmp > right_left_max:
         right_left_max = right_left_tmp
+        #res_rl[1] = (x, y)
     if right_left_tmp < right_left_min:
         right_left_min = right_left_tmp
+        #res_rl[2] = (x, y)
 
     r3_tmp = y - x
     if r3_tmp > r3_max:
         r3_max = r3_tmp
+        #res_3[1] = (x, y)
     if r3_tmp < r3_min:
         r3_min = r3_tmp
+        #res_3[2] = (x, y)
 
 reslr_dist = left_right_max - left_right_min
 resrl_dist = right_left_max - right_left_min

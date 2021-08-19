@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 import sys
 
@@ -13,7 +14,7 @@ cis.append(0)
 s = 0
 i = 1
 done = False
-while i < n + 1:
+while i < n + 1:  # 0 at the end appended
     s += i * (cis[i - 1] - cis[i])
     if s >= k:
         done = True

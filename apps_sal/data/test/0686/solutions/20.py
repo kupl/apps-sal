@@ -5,3 +5,14 @@ for query in range(q):
         print("NO")
     else:
         print("YES")
+# n = int(input())
+# l = map(int, input().split())
+# impossible = False
+# res = 0
+
+# for i in range(len(i)):
+
+# if not impossible:
+#   print(res)
+# else:
+#   print("-1")

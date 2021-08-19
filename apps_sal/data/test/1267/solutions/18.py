@@ -1,4 +1,11 @@
 
+# k=int(input())
+# n,m=map(int,input().split())
+
+# a=list(map(int,input().split()))
+
+# b=list(map(int,input().split()))
+
 
 n = int(input())
 a = set(map(int, input().split()))

@@ -9,6 +9,7 @@ class Solution:
             cur_k = 1
             m = val
             while(i - cur_k >= 0 and cur_k < k):
+                # temp = arr[i-cur_k:i+1]
                 m = max(m, arr[i - cur_k])
                 if i - cur_k == 0:
                     cur_max = max(cur_max, m * (cur_k + 1))
@@ -19,6 +20,8 @@ class Solution:
         return dp[-1]
 
         '''    
+        #[1,4,1, 5, 7, 3, 6, 1, 9, 9, 3]
+        # 1 5
         
         
         

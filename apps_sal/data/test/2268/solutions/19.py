@@ -13,8 +13,10 @@ for i in range(m):
     l0, l1 = [], []
     b0, b1 = False, False
     if(inp[0] in d):
+        # l0=d[inp[0]]
         b0 = True
     if(inp[1] in d):
+        # l1=d[inp[1]]
         b1 = True
     if(b0 and b1):
         d[inp[0]], d[inp[1]] = d[inp[1]], d[inp[0]]

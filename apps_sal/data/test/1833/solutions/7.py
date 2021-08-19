@@ -31,6 +31,9 @@ def solve(n, lis):
     dp[0] = 0
     return reduce(lambda a, b: (a + b) % MOD, dp)
 
+###########################
+###########################
+
 
 def intRead():
     while True:

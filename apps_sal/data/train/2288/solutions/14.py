@@ -1,3 +1,5 @@
+# F
+# input
 from bisect import bisect
 X = int(input())
 K = int(input())
@@ -9,6 +11,7 @@ query_list = [list(map(int, input().split())) for _ in range(Q)]
 
 MmRL_list = []
 
+# M:max, m:min, R:min_a(M), L:max_a(m)
 M = X
 m = 0
 R = X
@@ -22,6 +25,7 @@ for i in range(K):
     R_ = R
     L_ = L
     lag = r_list[i + 1] - r_list[i]
+    # update
     if i % 2 == 0:
         if M_ - lag < 0:
             M = 0
@@ -51,9 +55,11 @@ for i in range(K):
     MmRL_list.append([M, m, R, L])
 
 
+# print(MmRL_list)
 for q in range(Q):
     t, a = query_list[q]
     j = bisect(r_list, t) - 1
+    # find status then
     M, m, R, L = MmRL_list[j]
     if a <= L:
         a_ = m

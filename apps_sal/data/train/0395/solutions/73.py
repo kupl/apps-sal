@@ -1,5 +1,7 @@
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
+        # for all the odd jump, can only jump to number greater or equal
+        # for all the even jump, can only jump to number less or equal
 
         n = len(A)
         odd_jump = [-1] * n

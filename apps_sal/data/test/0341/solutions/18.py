@@ -5,6 +5,7 @@ T = input()
 T_split = [[] for i in range(K)]
 for i in range(N):
     T_split[i % K].append(T[i])
+# print(T_split)
 
 ans = 0
 flag = 0

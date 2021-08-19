@@ -13,7 +13,7 @@ else:
     m = 38
     parity = 1 if (1 in parity) else 0
     print((m + 1 - parity))
-    if parity == 1:
+    if parity == 1:  # 距離が奇数
         print((*[1 << i for i in range(m)]))
     else:
         print((1, *[1 << i for i in range(m)]))
@@ -35,7 +35,7 @@ else:
         for i in range(m - 1, -1, -1):
             mode, x, y = arm(x, y, i)
             ans.append(mode)
-        if parity == 0:
+        if parity == 0:  # 偶数の場合一つ足す
             if x == 1:
                 ans.append('R')
             elif x == -1:

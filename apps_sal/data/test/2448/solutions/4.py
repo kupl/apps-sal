@@ -9,6 +9,7 @@ for TT in range(1, int(input()) + 1):
     res = [-1] * n
 
     cnt = 0
+    # first distribute optimally
     for i, e in enumerate(s):
         j = f(e)
         if l[j] > 0:
@@ -16,6 +17,7 @@ for TT in range(1, int(input()) + 1):
             res[i] = j
             cnt += 1
 
+    # now assign the leftovers randomly
     j = 0
     for i in range(n):
         if res[i] != -1:

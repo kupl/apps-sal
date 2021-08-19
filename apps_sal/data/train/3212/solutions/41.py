@@ -1,5 +1,5 @@
 def generate_hashtag(s):
-    nword = "
+    nword = "#"
     if s == "":
         return False
     elif len(s) > 140:

@@ -2,6 +2,9 @@ def solve(N, A):
     a = [(i, ai) for i, ai in enumerate(A)]
     a.sort(key=lambda x: x[1], reverse=True)
 
+    # import numpy as np
+    # dp = np.zeros((N+1, N+1), np.int8)
+
     dp = [[0] * (N + 1) for _ in range(N + 1)]
 
     dp[0][0] = 0

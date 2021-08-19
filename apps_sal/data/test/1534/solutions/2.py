@@ -17,8 +17,8 @@ for i in range(n):
         bList.append(bCount)
 
 bestScore = 0
-for i in range(n + 1):
-    for j in range(i, n + 1):
+for i in range(n + 1):  # start
+    for j in range(i, n + 1):  # end
         score = 0
         score += aList[i]
         score += bList[j] - bList[i]

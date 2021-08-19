@@ -16,6 +16,7 @@ class Solution:
         return neighbors
 
     def findIsland(self, root, A):
+        # find all edges
         queue = [root]
         visited = set()
         while queue:
@@ -31,6 +32,9 @@ class Solution:
         return visited
 
     def shortestBridge(self, A: List[List[int]]) -> int:
+        # find an island
+        # starting with all its edge nodes and do bfs until reaching another island
+        # find one node on one island
         root = None
         for i in range(len(A)):
             for j in range(len(A[0])):
@@ -55,3 +59,9 @@ class Solution:
             level += 1
 
         return level
+
+# [1,1,1,1,1]
+# [1,0,0,0,1]
+# [1,0,1,0,1]
+# [1,0,0,0,1]
+# [1,1,1,1,1]

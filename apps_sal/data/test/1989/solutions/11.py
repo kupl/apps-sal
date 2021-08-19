@@ -35,10 +35,19 @@ def getsum(bit, index):
     return ans
 
 
+# arr = [3, 6, 2, 4, 1, 7]
 n = len(pre)
+# print(pre, suf)
 bit = [0] * (max(suf) + 1)
 inv_ct = 0
 for i in range(n - 1, -1, -1):
+    # index = pre[i]
     inv_ct += getsum(bit, pre[i] - 1)
     update(bit, suf[i], 1)
+    # print(inv_ct, bit)
 print(inv_ct)
+
+
+# print(pre, suf)
+# for i in range(n):
+# val = pre[i]

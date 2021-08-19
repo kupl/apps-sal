@@ -32,9 +32,11 @@ class Solution:
                     lowerBound += 1
 
                 for a2 in range(lowerBound, a):
+                    # multiply by ageCounts[a], each instance will send FR
                     numRequests += ageCounts[a2] * ageCounts[a]
 
-                if lowerBound <= a:
+                if lowerBound <= a:  # 16, 16, 16
+                    # each instance will send FR to all the others
                     numRequests += ageCounts[a] * (ageCounts[a] - 1)
 
         return numRequests

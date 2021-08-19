@@ -12,8 +12,8 @@ class Solution:
                 cur = data[j]
                 cur[1].add(c)
                 if i == minSize - 1 and len(cur[1]) <= maxLetters:
-                    cur[0][c].setdefault('
-                    cur[0][c]['
-                    res=max(res, cur[0][c]['
-                cur[0]=cur[0][c]
+                    cur[0][c].setdefault('#', 0)
+                    cur[0][c]['#'] += 1
+                    res = max(res, cur[0][c]['#'])
+                cur[0] = cur[0][c]
         return res

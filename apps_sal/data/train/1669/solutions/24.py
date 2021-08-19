@@ -1,5 +1,7 @@
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
+        # Time: O(n*n/w)
+        # Space: O(n)
 
         count = collections.Counter(hand)
         while count:

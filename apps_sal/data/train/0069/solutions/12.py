@@ -19,6 +19,7 @@ for t in range(T):
         else:
             not_mine += 1
         last = c
+    # print(not_mines)
     for m in not_mines:
         if m * b < a:
             price = price - a + m * b

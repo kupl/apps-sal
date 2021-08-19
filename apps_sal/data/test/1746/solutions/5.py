@@ -5,6 +5,7 @@ g = [[] for i in range(n)]
 for i in range(1, n):
     z = int(input()) - 1
     g[z].append(i)
+# print(g)
 b = True
 for el in g:
     if len(el) == 0:

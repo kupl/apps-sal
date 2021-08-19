@@ -1,4 +1,7 @@
+#import sys
+#sys.stdin = open("python/in", "r")
 
+#n = int(input())
 n, h, k = [int(i) for i in input().split(" ")]
 arr = [int(i) for i in input().split(" ")]
 arr.append(h)

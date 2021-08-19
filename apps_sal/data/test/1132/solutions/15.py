@@ -27,6 +27,8 @@ def isstar():
             c = i
     if c == None:
         return False
+    # for i in range(1,n+1)
+    #	if i != c and e[i][0] != i:
     return len(e[c]) == n - 1
 
 

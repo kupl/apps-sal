@@ -2,6 +2,7 @@ N, M = map(int, input().split())
 num_list = []
 for i in range(N):
     num_list.append(list(map(int, input().split())))
+# print(N,M,num_list)
 
 '''
 [x,y,z]としてx+y+z,x-y+z,x+y-z,x-y-z,-x+y+z,-x-y+z,-x+y-z,-x-y-zの8パターン
@@ -54,4 +55,5 @@ for i in range(M):
     xyz7 += list_xyz7[N - i - 1]
     xyz8 += list_xyz8[N - i - 1]
 
+# print(list_xyz1)
 print(max(xyz1, xyz2, xyz3, xyz4, xyz5, xyz6, xyz7, xyz8))

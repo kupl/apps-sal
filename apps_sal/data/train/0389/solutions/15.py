@@ -5,7 +5,7 @@ class Solution:
 
         memo = {}
 
-        def find(target, k, i):
+        def find(target, k, i):  # k is needed length, i is the ith element
             if k == 0:
                 return target == 0
             if k + i > la:

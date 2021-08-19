@@ -12,5 +12,8 @@ for x in range(K, 0, -1):
     ans += x * p
     ans %= mod
 
+###
+# print(data)
+###
 
 print(ans)

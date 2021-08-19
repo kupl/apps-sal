@@ -8,8 +8,12 @@ f = [(1, 18), (2, 20), (18, 12), (20, 11), (12, 15), (11, 13), (15, 1), (13, 2)]
 
 hh = list(map(int, input().split(" ")))
 flag = False
+#hh = [ i//4 + 1 for i in range(24)]
 
 for i in [a, b, c, d, e, f]:
+    # for j,k in i:
+    #     count[j] += 1
+    #     count[k] += 1
     f = True
     h = [hh[j] for j in range(24)]
     for j, k in i:

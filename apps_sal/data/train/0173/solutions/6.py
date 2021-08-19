@@ -8,6 +8,7 @@ class Solution:
         for i in li:
             if i == 0 or li[i] == 0:
                 continue
+            # print(i,li[i])
             if li[k - i] != li[i]:
                 return False
         if li[0] % 2 == 0:

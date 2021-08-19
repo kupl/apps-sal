@@ -9,6 +9,9 @@ d = defaultdict(list)
 for i in range(n):
     a, b = list(map(int, input().split()))
     d[a].append(-b)
+# l = sorted(l, key=itemgetter(1))
+# l = l[::-1]
+# print(d)
 Q = []
 heapq.heapify(Q)
 
@@ -19,4 +22,5 @@ for i in range(1, m + 1):
 
     if Q:
         ans += -heapq.heappop(Q)
+    # print(ans,i)
 print(ans)

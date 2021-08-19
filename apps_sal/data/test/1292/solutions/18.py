@@ -16,8 +16,8 @@ for i in range(n):
     for j in range(m):
         if grid[i][j] == '.':
             continue
-        elif grid[i][j] == '
-        visited[i][j] = True
+        elif grid[i][j] == '#':
+            visited[i][j] = True
         else:
             player = int(grid[i][j]) - 1
             visited[i][j] = True
@@ -28,6 +28,7 @@ for i in range(n):
 curr_p = 0
 while any(queue):
     moves = 0
+    # print(curr_p, queue,s)
     while moves < s[curr_p] and queue[curr_p]:
         new_queue = []
         curr_queue = queue[curr_p]
@@ -47,5 +48,7 @@ while any(queue):
     curr_p += 1
     curr_p %= p
 
+# print(grid[0])
+# print(controlled)
 for i in range(p):
     print(controlled[i], end=' ')

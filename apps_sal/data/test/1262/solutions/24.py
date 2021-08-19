@@ -1,4 +1,7 @@
 import sys
+#import heapq as hq
+#from collections import deque
+#sys.stdin = open('in', 'r')
 readline = sys.stdin.readline
 def rdw(): return readline().rstrip()
 def rdws(): return readline().split()
@@ -32,8 +35,8 @@ def solve():
             wire.append((bst + 1, par + 1))
         for j in range(n):
             if j not in used:
-                wcost = (k[bst] + k[j]) * (abs(cities[bst][0] - cities[j][0])
-                                           + abs(cities[bst][1] - cities[j][1]))
+                wcost = (k[bst] + k[j]) * (abs(cities[bst][0] - cities[j][0]) +
+                                           abs(cities[bst][1] - cities[j][1]))
                 if wcost < c[j]:
                     c[j] = wcost
                     p[j] = bst
@@ -47,5 +50,18 @@ def solve():
 
 
 tests = 1
+#tests = rdi()
 for testnum in range(tests):
     solve()
+
+#n = rdi()
+#n,m = rdis()
+#s = rdw()
+#a = rdil()
+#op, *s = rdws()
+
+# print(f'Case #{testnum+1}: {res}')
+#print(*res, sep='\n')
+# sys.stdout.write('YES\n')
+# sys.stdout.write(f'{res}\n')
+#sys.stdout.write(f'{y1} {x1} {y2} {x2}\n')

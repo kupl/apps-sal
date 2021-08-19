@@ -15,6 +15,8 @@ for _ in range(M):
 S, T = list(map(int, input().split()))
 S, T = S - 1, T - 1
 
+# 単一始点最短経路を求める（Dijkstra法）
+
 
 def Dijkstra(adjList, vSt):
     numV = len(adjList)
@@ -39,6 +41,7 @@ def Dijkstra(adjList, vSt):
 
 
 costs = Dijkstra(adjL, 3 * S)
+#print('costs:', costs)
 
 if costs[3 * T] == INF:
     print((-1))

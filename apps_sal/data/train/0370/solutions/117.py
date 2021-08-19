@@ -18,10 +18,12 @@ class DSU:
         self.sizeOf = [1] * n
 
     def find(self, p):
+        # Find parent of given node
         root = p
         while self.parent[root] != root:
             root = self.parent[root]
 
+        # Path compression
         while p != root:
             next_node = self.parent[root]
             self.parent[p] = root

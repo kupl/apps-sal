@@ -22,6 +22,7 @@ for _ in range(t):
             flag = False
             break
 
+    # print a
     if flag:
         print(res)
     else:

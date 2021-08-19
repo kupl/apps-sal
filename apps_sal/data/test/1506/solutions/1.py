@@ -3,6 +3,7 @@ import atexit
 import io
 import sys
 
+# IO Buffering
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -19,6 +20,7 @@ def main():
     a = sorted(int(x) for x in input().split())
 
     factorial = [1] * n
+    # perm_n[a] = P(n, a) = n!/(n-a)!
     perm_n = [1] * n
     for i in range(1, n):
         factorial[i] = factorial[i - 1] * i % 1000000007

@@ -1,4 +1,8 @@
 
+# Author: Boonnithi Jiaramaneepinit
+# Python Interpreter Version: Python 3.5.2
+#
+# Note: Educational Codeforces Round 21
 
 import math
 
@@ -13,6 +17,16 @@ def fillTea(water, cups):
     if curW < 0:
         return ['-1']
 
+    # eqLeft = math.floor(curW/len(cups))
+    # uneqLeft = curW % len(cups)
+
+    # print(curW, cups)
+
+    # for i in range(len(cups)):
+    #     if i < uneqLeft:
+    #         cups[i][2] += 1
+    #     cups[i][2] = cups[i][2] + eqLeft
+
     curCup = 0
     while curW > 0:
         curP = min(cups[curCup][0] - cups[curCup][2], curW)
@@ -24,6 +38,8 @@ def fillTea(water, cups):
 
     for i in range(len(cups)):
         cups[i] = str(cups[i][2])
+
+    # print(curW, cups)
 
     if curW < 0:
         return ['-1']
@@ -40,6 +56,8 @@ def fillTea(water, cups):
 def __starting_point():
     [n, w] = [int(x) for x in input().split()]
     cups = [int(x) for x in input().split()]
+    # [n, w] = [3, 20]
+    # cups = [22, 2, 1]
     print(' '.join(fillTea(w, cups)))
 
 

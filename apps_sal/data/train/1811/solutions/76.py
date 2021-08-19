@@ -14,3 +14,8 @@ class StockSpanner:
                 p += ele[1]
             self.stacks.append([price, p])
             return p
+
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

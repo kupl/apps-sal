@@ -9,6 +9,7 @@ for i in range(0, m):
     c[b - 1] = 1
 
 for i in range(1, n // 2):
+    # ma ocup de liniile i si n-i, coloanele la fel
     sol += 4 - (l[i] + c[i] + l[n - i - 1] + c[n - i - 1])
 
 if n % 2 == 1:

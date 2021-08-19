@@ -16,6 +16,9 @@ x %= k
 y %= k
 
 '''
+# grid[[1,1],[2,2]]+=1 としてもgrid[1,2]=1であり重複は考慮されない。
+# uniqueを使って(x,y)の重複をカウントする
+# return_countはver1.9からだった・・・ ダメじゃん
 xy, cnt = np.unique(x + y * 10000, return_counts=True)
 x = xy % 10000
 y = xy // 10000

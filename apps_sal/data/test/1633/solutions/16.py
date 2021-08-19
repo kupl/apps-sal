@@ -9,16 +9,16 @@ for i in range(k):
     a = int(a)
     b = int(b)
     l[a][b] = 1
-    if l[a][b + 1] == 1 and l[a - 1][b] == 1 and l[a - 1][b + 1] == 1:
+    if l[a][b + 1] == 1 and l[a - 1][b] == 1 and l[a - 1][b + 1] == 1:  # up right
         if flag == 0:
             flag = i + 1
-    elif l[a - 1][b] == 1 and l[a - 1][b - 1] == 1 and l[a][b - 1]:
+    elif l[a - 1][b] == 1 and l[a - 1][b - 1] == 1 and l[a][b - 1]:  # up left
         if flag == 0:
             flag = i + 1
-    elif l[a][b - 1] == 1 and l[a + 1][b - 1] == 1 and l[a + 1][b]:
+    elif l[a][b - 1] == 1 and l[a + 1][b - 1] == 1 and l[a + 1][b]:  # down left
         if flag == 0:
             flag = i + 1
-    elif l[a][b + 1] == 1 and l[a + 1][b] and l[a + 1][b + 1]:
+    elif l[a][b + 1] == 1 and l[a + 1][b] and l[a + 1][b + 1]:  # down right
         if flag == 0:
             flag = i + 1
 print(flag)

@@ -26,5 +26,7 @@ for _ in range(t):
                 ind += 1
         co -= 1
         ans += co * 2 + 1
+       # print(ans,ind)
 
     print(ans)
+   # print()

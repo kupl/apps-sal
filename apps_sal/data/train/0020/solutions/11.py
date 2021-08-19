@@ -8,6 +8,7 @@ for _ in range(q):
     for t, l, h in customers:
         dt = t - now
 
+        # in area?
         next_h = min(now_h + dt, h)
         next_l = max(now_l - dt, l)
         if not next_l <= next_h:

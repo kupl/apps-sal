@@ -46,6 +46,8 @@ while right[n - 1] == -1:
     n -= 1
 last = 0
 for i in range(1, n):
+    # print(last)
+    # print(L, R)
     L += 1
     R += 1
     if right[i] == -1:
@@ -60,7 +62,8 @@ for i in range(1, n):
     for c in rcolumns:
         left_way = min(left_way, R + way(c, i, False) + abs(c - right[last]))
         right_way = min(right_way, R + way(c, i, True) + abs(c - right[last]))
+    # print(left_way, right_way)
     L = left_way
     R = right_way
     last = i
-print(min(L, R))
+print(min(L, R))  # + (n - 1))

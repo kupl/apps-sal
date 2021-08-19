@@ -49,3 +49,8 @@ class StreamChecker:
             self.q.pop(0)
             self.size -= 1
         return self.trie.search(self.q[::-1])
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -1,3 +1,4 @@
+# никита съел деда
 
 t = int(input())
 for query in range(t):

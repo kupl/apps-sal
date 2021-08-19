@@ -17,3 +17,6 @@ class Solution:
                         count[i] -= 1
 
         return True
+
+# As the description says question is same as 846
+# Difference with 659 is that it has to be exactly K instead of atleast K

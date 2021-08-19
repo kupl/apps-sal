@@ -16,3 +16,22 @@ class Solution:
                 if ni < nj < nk <= 100:
                     res += counter[ni] * counter[nj] * counter[nk]
         return res % (10**9 + 7)
+        # while i < l:
+        #     j = i
+        #     while j < l:
+        #         ni, nj = ckey[i], ckey[j]
+        #         nk = target - ni - nj
+        #         if ni == nk == nj:
+        #             res += math.comb(counter[ni], 3)
+        #         elif nj == nk:
+        #             res += math.comb(counter[nj], 2) * counter[ni]
+        #         elif ni == nk:
+        #             res += math.comb(counter[nk], 2) * counter[nj]
+        #         elif ni == nj:
+        #             res += math.comb(counter[ni], 2) * counter[nk]
+        #         else:
+        #             res += counter[ni] * counter[nj] * counter[nk]
+        #         print(ni, nj, nk, res)
+        #         j += 1
+        #     i += 1
+        # return res % (10**9 + 7)

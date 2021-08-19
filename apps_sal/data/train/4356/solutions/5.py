@@ -7,6 +7,7 @@ def colorful(number):
             if n + 1 < len(str(number)):
                 tmp = list(str(number))[n + 1]
 
+                #tmp = int()
                 output.append(str(int(x) * int(tmp)))
 
         if len(output) == len(set(output)):

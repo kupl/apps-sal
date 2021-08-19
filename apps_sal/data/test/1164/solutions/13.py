@@ -1,5 +1,7 @@
 from decimal import *
 
+# newstr = oldstr.replace("M", "")
+
 
 def add(l):
     num = list()

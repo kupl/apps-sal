@@ -49,6 +49,7 @@ while ts > 0:
         if para == parb and xor[a] ^ xor[b] != x:
             flag = -1
             continue
+            # print("no")
 
         if para != parb:
             if rank[para] < rank[parb]:

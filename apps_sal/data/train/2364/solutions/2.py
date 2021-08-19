@@ -36,6 +36,8 @@ for tests in range(t):
 
     ANS = 1 << 63
 
+    # print(S)
+
     if DIS_A[b] + DIS_B[c] <= m and ANS > S[DIS_A[b] + DIS_B[c]]:
         ANS = S[DIS_A[b] + DIS_B[c]]
 
@@ -43,10 +45,14 @@ for tests in range(t):
         d2 = DIS_B[i]
         d1 = DIS_A[i] + DIS_C[i]
 
+        # print(i,d1,d2)
+
         if d1 + d2 > m:
             continue
 
         if ANS > S[d2] * 2 + S[d1 + d2] - S[d2]:
             ANS = S[d2] * 2 + S[d1 + d2] - S[d2]
+
+        # print(ANS)
 
     print(ANS)

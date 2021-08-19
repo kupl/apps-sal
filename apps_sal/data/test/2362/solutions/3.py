@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -80,3 +81,4 @@ def dfs(node, parent):
 
 
 print(dfs(1, -1))
+# print(dp)

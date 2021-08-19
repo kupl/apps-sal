@@ -9,7 +9,7 @@ try:
                 cnta += 1
             elif i == 'b':
                 cntb += 1
-                ab += cnta
+                ab += cnta  # for each b considers all a
 
         final = ab * k
         final += k * (k - 1) * cnta * cntb // 2

@@ -27,6 +27,7 @@ def resolve():
     len_S = len(S_)
     len_T = len(T)
 
+    # TはS'のなるべく右側にあるべき
     idx = -1
     for i in range(len_S - len_T, -1, -1):
         exists = True

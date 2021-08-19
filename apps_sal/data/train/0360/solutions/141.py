@@ -5,10 +5,10 @@ class Solution:
             total = 0
             for i in weights:
                 total += i
-                if total > capacity:
+                if total > capacity:  # wait for the next day
                     total = i
                     days += 1
-                    if days > D:
+                    if days > D:  # cannot ship
                         return False
             return True
         left, right = max(weights), sum(weights)

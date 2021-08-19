@@ -2,6 +2,7 @@ def main():
     n, k = map(int, input().split())
     s = input()
 
+    # first score
     ans = 0
     x = s[0]
     for i in range(1, n):

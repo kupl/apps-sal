@@ -1,7 +1,14 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[16]:
 
 
 S = input()
 T = input()
+
+
+# In[20]:
 
 
 mydict = {}
@@ -20,3 +27,6 @@ else:
     else:
         ans = "Yes"
 print(ans)
+
+
+# In[ ]:

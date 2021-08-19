@@ -1,5 +1,6 @@
 
 
+# Press the green button in the gutter to run the script.
 def __starting_point():
     n, a, b = list(map(int, input().split()))
 

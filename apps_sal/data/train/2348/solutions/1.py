@@ -1,6 +1,7 @@
 
 def main2(n, x, l, q, ab):
     ary = [[0] * n for _ in range(30)]
+    # ary[k][i]:ホテルiから2^k日かけてたどり着ける最も右のホテル
     idx = 1
     for i in range(n):
         while idx + 1 < n and x[idx + 1] - x[i] <= l:
@@ -12,6 +13,7 @@ def main2(n, x, l, q, ab):
                 ary[k + 1][i] = ary[k][ary[k][i]]
             else:
                 ary[k + 1][i] = n
+    # a->bにかかる日数
     ret = []
     for a, b in ab:
         a, b = a - 1, b - 1

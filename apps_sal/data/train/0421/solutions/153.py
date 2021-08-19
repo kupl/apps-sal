@@ -17,5 +17,6 @@ class Solution:
             if (large[i - 1] == res[1 - 1]):
                 if (large[i - 1:] > res):
                     res = large[i - 1:]
+                    # print(res)
             i += 1
         return res

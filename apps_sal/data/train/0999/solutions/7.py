@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -11,4 +12,4 @@ for i in range(t):
         else:
             for i in range(1, i + 1):
                 print(i, end="")
-            print()
+            print()  # cook your dish here

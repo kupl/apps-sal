@@ -7,6 +7,7 @@ class Solution:
             f1, f2 = f2, f1 + f2
         t = 0
         while k:
+            # print(f1, f2, k, t)
             if f2 <= k:
                 k -= f2
                 t += 1

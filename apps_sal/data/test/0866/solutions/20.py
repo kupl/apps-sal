@@ -1,10 +1,10 @@
 def nCr(n, r):
     num, den = 1, 1
     for i in range(n, n - r, -1):
-        num = num * i % M
+        num = num * i % M  # ;print(num)
     for i in range(1, r + 1):
-        den = den * i % M
-    den_inv = pow(den, -1, M)
+        den = den * i % M  # ;print(den)
+    den_inv = pow(den, -1, M)  # ;print(num, den, den_inv)
     return num * den_inv % M
 
 
@@ -18,7 +18,8 @@ def is_comb():
 
 M = 10**9 + 7
 X, Y = map(int, input().split())
-a, b = is_comb()
+#X, Y =  103078,  214577
+a, b = is_comb()  # ; print(a, b)
 if a == b == 0:
     print(0)
 else:

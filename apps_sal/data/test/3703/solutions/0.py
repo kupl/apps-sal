@@ -45,12 +45,16 @@ def g(n):
 def F(n, k):
     cur = n
     for i in range(1, k + 1):
+        # print(i)
+        # print(factor(cur))
         if i == 1:
             cur = f(g(cur))
         elif i % 2 == 0:
             cur = g(cur)
         else:
             cur = f(cur)
+
+        #print(i, cur)
 
         if cur == 1:
             break
@@ -59,4 +63,5 @@ def F(n, k):
 
 
 n, k = [int(i) for i in input().split(' ')]
+#print(factor(n - 1))
 print(F(n, k))

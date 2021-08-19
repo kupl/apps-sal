@@ -23,12 +23,13 @@ class Solution:
         arr_n = sorted(set_n)
         n = len(arr_n)
         i = 0
-        fac = 1
+        fac = 1     # i!
 
         while i + 1 < n:
             i += 1
             fac *= i
 
+        # fac = (n-1)!
         i_digit = (k - 1) // fac
         k = k - i_digit * fac
         digit = arr_n[i_digit]

@@ -13,6 +13,7 @@ def main():
     dic = {}
     ans = 0
     l, r = 0, 0
+#    print(a)
     while r < n + 1:
         x = a[r]
         if k <= r - l:
@@ -23,6 +24,7 @@ def main():
             dic[x] += 1
         else:
             dic[x] = 1
+#        print(l, r)
         r += 1
     print(ans)
 

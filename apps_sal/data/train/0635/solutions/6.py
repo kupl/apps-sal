@@ -21,4 +21,6 @@ for row in range(1, ctr + 1):
         else:
             dp[row][col] = dp[row - 1][col] + dp[row - 1][col - 1] * dic1[row]
 
+# print(dic1)
+# print(*dp)
 print(sum(dp[ctr]) % 1000000007)

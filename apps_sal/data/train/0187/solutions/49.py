@@ -32,5 +32,6 @@ class Solution:
             if profit > maxProfit:
                 maxProfit = profit
                 maxRotation = rotation
+            #print(board, wait, rotation, profit)
 
         return maxRotation

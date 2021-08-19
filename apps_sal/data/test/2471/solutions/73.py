@@ -4,6 +4,8 @@ readline = sys.stdin.readline
 
 H, W, N = list(map(int, readline().split()))
 
+# 9x9のマスの左上のマスの座標をキーにして、各正方形の黒マス数をdictionaryで管理
+# 10 ** 5 * 9程度
 
 dic = defaultdict(int)
 

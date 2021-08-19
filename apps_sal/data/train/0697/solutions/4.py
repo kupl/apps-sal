@@ -1,3 +1,4 @@
+# cook your dish here
 def maxSum(arr, n, k):
     res = 0
     for i in range(k):

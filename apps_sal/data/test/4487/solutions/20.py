@@ -1,3 +1,5 @@
+# A - Shiritori
+# https://atcoder.jp/contests/abc060/tasks/abc060_a
 
 a, b, c = list(map(str, input().split()))
 

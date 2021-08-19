@@ -22,6 +22,7 @@ for z in range(t):
 
             x = num_dig_last[i - 1]
             p = k - num_dig_all_until[i - 1]
+            # x + i / x + 2i / x + 3i
             l = 1
             r = 9 * 10**(i - 1)
             res = 0

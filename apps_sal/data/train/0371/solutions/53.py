@@ -14,5 +14,5 @@ class Solution:
                     if j not in seen:
                         bfs.append((j, bus + 1))
                         seen.add(j)
-                routes[i] = []
+                routes[i] = []  # seen route
         return -1

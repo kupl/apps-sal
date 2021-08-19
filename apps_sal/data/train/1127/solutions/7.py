@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 A = 0
 for i in range(t):
@@ -7,6 +8,7 @@ for i in range(t):
     for i in range(len(s)):
         if s[i] == ' ':
             c = c + 1
+    # print(c);
     for i in range(len(s)):
         if c == 0:
             print(s[0].upper() + s[1:])
@@ -18,6 +20,7 @@ for i in range(t):
         elif c == 2:
             if s[i] == ' ':
                 A = i
+                # print(A)
                 f = s[i + 1].upper()
                 e = e + f
 

@@ -9,7 +9,7 @@ class Solution:
         start = locations.index(start_loc)
         finish = locations.index(finish_loc)
 
-        pushed = set([(fuel, start, 1), (start, fuel, -1)])
+        pushed = set([(fuel, start, 1), (start, fuel, -1)])  # fuel, start, direction, num
         h = [(-fuel, start, 1), (-fuel, start, -1)]
         routes = {(start, fuel, 1): 1, (start, fuel, -1): 1}
         count = 0
@@ -33,7 +33,8 @@ class Solution:
                 else:
                     routes[(ed, new_fuel, -di)] += inc
                 if ed == finish:
-                    count += inc
+                    count += inc  # % 1000000007
                 ed += di
                 inc *= 2
+            # print(routes)
         return count % 1000000007

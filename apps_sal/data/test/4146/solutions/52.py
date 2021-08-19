@@ -22,6 +22,8 @@ def main():
     V_o = V[1::2]
     V_e_c = Counter(V_e)
     V_o_c = Counter(V_o)
+    # num_V_e = sorted(list(V_e_c.values()))[::-1]
+    # num_V_o = sorted(list(V_o_c.values()))[::-1]
 
     if V_e_c.most_common()[0][0] != V_o_c.most_common()[0][0]:
         ans = len(V) - \

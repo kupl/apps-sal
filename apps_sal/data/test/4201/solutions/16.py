@@ -36,7 +36,7 @@ for i in range(2**H):
             for k in range(H):
                 ccc[k][idx] = '.'
 
-        cnt = sum([_.count('
+        cnt = sum([_.count('#') for _ in ccc])
 
         if cnt == K:
             ans += 1

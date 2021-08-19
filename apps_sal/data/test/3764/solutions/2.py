@@ -1,3 +1,4 @@
+# coding utf-8
 
 s = input().split()
 n = int(s[0])

@@ -25,6 +25,7 @@ class Solution:
                 tmp_index = i
                 window_end += 1
                 fruit_type = set(tree[i - 1:i + 1])
+            #print(window_start, window_end, fruit_type)
             if window_end - window_start > total_max:
                 total_max = window_end - window_start
         return total_max

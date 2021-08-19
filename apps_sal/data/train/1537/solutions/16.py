@@ -5,6 +5,7 @@ for i in range(2, 100000):
         nums.append(i)
         for j in range(i, 100000, i):
             prime[j] = True
+# print(nums)
 t = int(input())
 for _ in range(t):
     n = int(input())

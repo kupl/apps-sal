@@ -29,4 +29,12 @@ class Solution:
                 L = self.rmove(L)
             else:
                 R = self.lmove(R)
+        # L = 0
+        # R = len(height) - 1
+        # while L < R:
+        #     ans = max(ans, self.get_ans(L, R))
+        #     if height[L] < height[R]:
+        #         L = self.rmove(L)
+        #     else:
+        #         R = self.lmove(R)
         return ans

@@ -1,3 +1,5 @@
+#! usr/bin/env python
+# -*- coding: utf-8 -*-
 
 
 MOD = 10 ** 9 + 7

@@ -3,6 +3,7 @@ A = []
 for i in range(N):
     temp = int(input())
     A.append(temp)
+# print(A)
 L = [A[0]]
 for i in range(1, N):
     if L[-1] >= A[i]:
@@ -21,5 +22,6 @@ for i in range(1, N):
                 else:
                     ng = mid
             L[ok] = A[i]
+    # print(L)
 ans = len(L)
 print(ans)

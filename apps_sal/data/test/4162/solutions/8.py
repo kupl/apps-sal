@@ -1,6 +1,7 @@
 import math
 import sys
-input = sys.stdin.readline
+input = sys.stdin.readline  # for speed up
+# sys.setrecursionlimit(10**9)
 
 n = int(input())
 a = list(map(int, input().split()))

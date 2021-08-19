@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     s, k = map(str, input().split())
     k = int(k)

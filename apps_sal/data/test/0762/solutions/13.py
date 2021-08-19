@@ -16,7 +16,7 @@ for test in range(t):
         else:
             countOdd += 1
         prev = i
-    cuts[0] = 200
+    cuts[0] = 200  # useless
     cuts.sort()
     ans = 0
     cost = 0

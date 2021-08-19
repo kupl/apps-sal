@@ -37,9 +37,11 @@ class Solution:
         factor_index = dict()
         for idx, num in enumerate(A):
             factors = decompose(num)
+            # print(\"factors\", factors)
             for factor in factors:
                 if factor not in factor_index:
                     factor_index[factor] = idx
                 else:
                     union_find.union(factor_index[factor], idx)
+                # print(\"factor\", factor, \"unions\", unions.parent, unions.size )
         return max(union_find.size)

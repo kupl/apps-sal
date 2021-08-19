@@ -2,6 +2,7 @@ class Solution:
     def maximumSum(self, arr: List[int]) -> int:
         dp = [[0 for _ in range(2)] for _ in range(len(arr))]
         mins = [0 for _ in range(len(arr))]
+        # dp[0][0] = max(0, arr[0])
         dp[0][0] = arr[0]
         dp[0][1] = arr[0]
         mins[0] = arr[0]

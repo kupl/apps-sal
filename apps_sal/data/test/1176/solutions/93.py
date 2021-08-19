@@ -19,4 +19,5 @@ cnt_0 = A.count(0)
 if cnt_neg % 2 == 0:
     print(law_ans)
 else:
+    # ０があるときはいつでもlaw_ansになるが、absminAが0だからおっけい
     print((law_ans - 2 * absminA))

@@ -21,3 +21,4 @@ def vector_affinity(a, b):
     affinity = numMatch / den
 
     return affinity
+# ----end function

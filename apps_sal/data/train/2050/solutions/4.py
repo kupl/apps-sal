@@ -1,3 +1,4 @@
+# https://codeforces.com/contest/455/problem/B
 import sys
 reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__

@@ -15,10 +15,13 @@ def int_input():
 
 
 def __starting_point():
+    # set_debug(True)
 
     t = int(input())
+    # t = 1
 
     for ti in range(1, t + 1):
+        # n = int(input())
         s = input()
 
         c = collections.Counter(s)

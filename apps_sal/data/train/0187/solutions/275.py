@@ -10,6 +10,7 @@ class Solution:
             board = min(remain, 4)
             remain -= board
             cur_profit += board * boardingCost - runningCost
+            # max_profit = max(max_profit, cur_profit)
             if max_profit < cur_profit:
                 max_profit = cur_profit
                 turn = i + 1

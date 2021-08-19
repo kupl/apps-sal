@@ -10,6 +10,7 @@ class StreamChecker:
         self.s = []
         self.root = TrieNode()
         for w in words:
+            # self.insert(self.root,w)
             node = self.root
             for i in range(len(w) - 1, -1, -1):
                 idx = ord(w[i]) - ord('a')
@@ -29,4 +30,10 @@ class StreamChecker:
             if node == None:
                 return False
 
+        # print(self.root.children)
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

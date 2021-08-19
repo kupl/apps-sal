@@ -1,5 +1,10 @@
 import sys
 import math
+# import re
+# from heapq import *
+# from collections import defaultdict as dd
+# from collections import Counter as cc
+# sys.setrecursionlimit(10**6)#thsis is must
 mod = 10**9 + 7
 md = 998244353
 def input(): return sys.stdin.readline().strip()
@@ -8,6 +13,7 @@ def input(): return sys.stdin.readline().strip()
 def inp(): return list(map(int, input().split()))
 
 
+# ______________________________________________________
 for _ in range(int(input())):
     a, b = inp()
     s = str(input())
@@ -37,6 +43,8 @@ for _ in range(int(input())):
                     continue
                 res.append(c)
                 c = 0
+    # print(res)
+    # print(ans)
     fin = 0
     if len(ans) > 0:
         fin += a

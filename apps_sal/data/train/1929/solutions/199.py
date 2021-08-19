@@ -43,3 +43,7 @@ class StreamChecker:
         if len(self.input) > self.max_len:
             self.input.pop()
         return self.trie.search_word(self.input)
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

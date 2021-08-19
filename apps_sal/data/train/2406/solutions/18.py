@@ -9,6 +9,8 @@ class Solution:
                 return mid
 
             if arr[mid] < arr[mid + 1]:
+                # increasing
                 l = mid + 1
             else:
+                # decreasing
                 r = mid - 1

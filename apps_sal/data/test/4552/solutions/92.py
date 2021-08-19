@@ -9,9 +9,11 @@ for i in range(1, 2**10):
     score = 0
     jonson = [0 for _ in range(10)]
 
+    # jonsonがお店を開く時間を決める
     for j in range(10):
         if ((i >> j) & 1):
             jonson[j] = 1
+    # 他のお店とオープンがかぶっている時間を調べる
     for k in range(N):
         cnt = 0
         for l in range(10):

@@ -1,6 +1,7 @@
 def cal(a, count, k, poss, ind):
     temp = a.copy()
     if len(poss) == 0:
+        # print(a)
         for i in range(1, len(a)):
             if temp[i] > temp[i - 1]:
                 k -= 1

@@ -16,6 +16,7 @@ for i in range(n):
                 fst = j
     ans += lst + 1 - nu
     ans += m - fst - nu
+    # print(ans)
 for i in range(m):
     fst = n
     lst = -1
@@ -28,4 +29,5 @@ for i in range(m):
                 fst = j
     ans += lst + 1 - nu
     ans += n - fst - nu
+    # print(ans,lst,fst,nu)
 print(ans)

@@ -18,4 +18,7 @@ class Solution:
                 res = res % (10**9 + 7)
             return res
 
+        # d=2
+        # f=6
+        # target=7
         return func(d, f, target)

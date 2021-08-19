@@ -38,6 +38,7 @@ for q in range(int(input())):
                 mxl1 = i
             else:
                 same.append(i)
+        # print(d, same, l1, l2, iss(), mxl1, mnl2)
         if not iss():
             continue
         good = True

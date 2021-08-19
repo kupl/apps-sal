@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 def main():
     a1, a2, a3, a4 = list(map(int, input().split()))

@@ -1,3 +1,4 @@
+# n = int(input())
 n, x = list(map(int, input().split()))
 
 sad = 0

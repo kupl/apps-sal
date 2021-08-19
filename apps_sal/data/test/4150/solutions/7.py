@@ -15,6 +15,7 @@ sorted_bin.sort(key=lambda x: -x[1])
 flag = 0
 
 for ind, value in sorted_bin:
+    # print(command)
     if command[ind] != 0:
         continue
     command[ind] = flag + 1

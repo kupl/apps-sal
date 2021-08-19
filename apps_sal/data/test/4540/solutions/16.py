@@ -7,6 +7,7 @@ for i in range(N + 1):
     load += abs(X[i] - now)
     now = X[i]
 
+# print(load)
 
 now = 0
 for i in range(N):

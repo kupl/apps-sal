@@ -1,6 +1,11 @@
 n, m = list(map(int, input().split()))
 
 
+# 各iはn//m
+# +
+# if i <=n%m:
+# +1
+
 LIST = [None] * (m + 1)
 
 for i in range(1, m + 1):

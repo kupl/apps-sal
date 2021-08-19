@@ -2,8 +2,11 @@ from collections import defaultdict
 
 
 class Solution:
+    # time for a manager = time[employee] + time[manager]
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        mp = defaultdict(list)
+        # [manager1, manager2...]
+        # 0th employee, 1st employee
+        mp = defaultdict(list)  # {manager: [employee id]}
         for i in range(n):
             if manager[i] != -1:
                 mp[manager[i]].append(i)

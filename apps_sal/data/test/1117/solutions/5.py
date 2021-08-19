@@ -1,4 +1,9 @@
 def main():
+    # string         input()
+    # int            int(input())
+    # listOfStrings  input().split()
+    # ints           map(int, input().split())
+    # listOfInts     list(map(int, input().split()))
     n = int(input())
     if n == 1:
         print("YES")

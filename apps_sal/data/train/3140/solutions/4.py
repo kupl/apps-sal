@@ -4,8 +4,10 @@ def happy_numbers(n):
 
 def isHappy(o, lister=[]):
 
+    # Terminator
     if len(lister) > len(set(lister)):
         return False
 
+    # Test for Happiness
     summer = sum([int(p)**2 for p in str(o)])
     return True if summer == 1 else isHappy(summer, lister + [summer])

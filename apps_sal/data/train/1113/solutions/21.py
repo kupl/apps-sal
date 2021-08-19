@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
 from operator import itemgetter
 from heapq import nlargest
 from itertools import repeat

@@ -6,6 +6,7 @@ n = len(s)
 s += 'aaa'
 i = 0
 while i < n:
+    #print(i, curnum)
     if '0' <= s[i] <= '9':
         curnum = 10 * curnum + int(s[i])
     elif s[i] == '.':

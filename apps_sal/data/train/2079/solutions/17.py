@@ -8,6 +8,7 @@ def find_path(x, y):
         y = y // 2
     p1 = p1[::-1]
     p2 = p2[::-1]
+    # print (p1,p2)
     for i in range(min(len(p1), len(p2))):
         if p1[i] == p2[i]:
             ind = i
@@ -28,6 +29,7 @@ cost = {}
 for i in range(q):
     a = list(map(int, input().split()))
     b = find_path(a[1], a[2])
+    # print (b)
     if a[0] == 1:
         w = a[-1]
         for j in range(1, len(b)):

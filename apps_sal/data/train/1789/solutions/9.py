@@ -11,11 +11,11 @@ def generate_bc(url, separator):
 
     result = []
 
-    url = re.sub(r'^https?:\/\/', '', url)
-    url = re.sub(r'\.[^\/]*$', '', url)
-    url = re.sub(r'(?:\
-    url = re.sub(r'index$', '', url)
-    url = url.rstrip('/')
+    url = re.sub(r'^https?:\/\/', '', url)      # remove protocol
+    url = re.sub(r'\.[^\/]*$', '', url)         # remove extensions
+    url = re.sub(r'(?:\#|\?).*$', '', url)      # remove anchors and queries
+    url = re.sub(r'index$', '', url)            # remove indexes
+    url = url.rstrip('/')                       # remove trailing slash
 
     crumbs = url.split('/')
 

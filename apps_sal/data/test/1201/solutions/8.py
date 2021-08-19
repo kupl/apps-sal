@@ -45,6 +45,7 @@ for x in range(n):
     b = best(0, x)
     if b > top:
         top = b
+        # print('new',x,top)
         l = []
         c = x
         time = 0

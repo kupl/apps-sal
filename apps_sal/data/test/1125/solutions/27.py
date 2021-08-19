@@ -1,3 +1,4 @@
+# F - Unfair Nim
 
 N = int(input())
 A = list(int(a) for a in input().split())

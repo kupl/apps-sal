@@ -34,6 +34,8 @@ class Solution:
             else:
                 waiting -= 4
 
+        # print(profits)
+
         index = max(list(range(len(profits))), key=lambda i: profits[i])
         if profits[index] < 0:
             return -1

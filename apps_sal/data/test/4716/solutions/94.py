@@ -1,3 +1,4 @@
+# B - Snake Toy
 def main():
     _, k = map(int, input().split())
     l = list(map(int, input().split()))

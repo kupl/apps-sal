@@ -8,6 +8,7 @@ def main():
         c = a[:i] + a[i + 1:]
         for j in range(n - 2):
             max_diff = max(c[j + 1] - c[j], max_diff)
+        # print(max_diff)
         min_max = min(max_diff, min_max)
 
     print(min_max)

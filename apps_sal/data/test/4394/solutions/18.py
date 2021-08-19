@@ -29,6 +29,7 @@ ce = 0
 pos = [1] * m
 i = 0
 while ce < n - 1:
+    # print(i,ce,pos)
     x, y, w = ed[i]
     for j in range(i, m):
         if ed[j][2] != w:
@@ -42,6 +43,7 @@ while ce < n - 1:
             break
         if pos[j]:
             d = union(x - 1, y - 1)
+            # print(d,p)
             if d == 0:
                 an += 1
             else:

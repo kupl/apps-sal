@@ -15,8 +15,9 @@ n, m = map(int, input().split())
 a = list(map(int, input().split()))
 
 a.sort()
-cum = [0] + list(accumulate(a))
+cum = [0] + list(accumulate(a))  # 累積和
 
+# 1回の握手であがる幸福度のうち、最も低いものを求める
 l = 0
 r = a[-1] * 2 + 1
 while r - l > 1:
@@ -26,11 +27,13 @@ while r - l > 1:
     else:
         r = mid
 
-num = 0
+# 最も低い幸福度よりも大きい値を足す
+num = 0  # 握手の回数
 ans = 0
 for v in a:
     idx = bisect_right(a, l - v)
     num += n - idx
     ans += v * (n - idx) + (cum[-1] - cum[idx])
+# 足りない握手の回数分、最も低い幸福度を足す
 ans += (l * (m - num))
 print(ans)

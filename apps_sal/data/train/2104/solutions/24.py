@@ -4,6 +4,8 @@ NTC here
 from sys import setcheckinterval, stdin
 setcheckinterval(1000)
 
+# print("Case #{}: {} {}".format(i, n + m, n * m))
+
 
 def iin(): return int(stdin.readline())
 

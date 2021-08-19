@@ -8,6 +8,7 @@ bad_iwashi_count = 0
 
 for _ in range(N):
     A, B = map(int, input().split())
+    # 0の場合
     if A == 0 and B == 0:
         bad_iwashi_count += 1
         continue
@@ -17,6 +18,7 @@ for _ in range(N):
     if B == 0:
         m[(1, 1, 0)] += 1
         continue
+    # 0以外
     gcd_ = math.gcd(A, B)
     A = A // gcd_
     B = B // gcd_

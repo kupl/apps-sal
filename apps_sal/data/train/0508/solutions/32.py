@@ -6,8 +6,8 @@ input = sys.stdin.readline
 
 class PseudoSet():
     def __init__(self):
-        self.s = []
-        self.e = []
+        self.s = []  # set
+        self.e = []  # erase candidate
 
     def insert(self, x):
         heappush(self.s, x)
@@ -34,6 +34,7 @@ for i in range(q):
 
 ans = [-1] * q
 events.sort(key=itemgetter(0, 1))
+# print(events)
 ps = PseudoSet()
 for c, t, z in events:
     if t == 1:
@@ -41,6 +42,7 @@ for c, t, z in events:
     elif t == -1:
         ps.erase(z)
     else:
+        # t == 2
         m = ps.get_min()
         if m is not None:
             ans[z] = m

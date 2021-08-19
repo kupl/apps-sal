@@ -11,4 +11,5 @@ class Solution:
             if solution[i] == start:
                 index = i
                 break
+        # print(solution)
         return solution[index:] + solution[:index]

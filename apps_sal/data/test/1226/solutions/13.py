@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from functools import reduce
 
 mod = 10**9 + 7

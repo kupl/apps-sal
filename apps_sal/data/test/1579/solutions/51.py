@@ -1,5 +1,9 @@
+# reference -> https://atcoder.jp/contests/abc131/submissions/10358162
 import sys
 sys.setrecursionlimit(100000)
+
+# 再帰的に連結部分の辺の数を求める
+# 同じ辺を2回ずつ数えるので、最終的には2で割る
 
 
 def solve(x, x_set, y_set, x2y, y2x):
@@ -30,9 +34,9 @@ for i in range(N):
 
 ans = 0
 while X2Y:
-    x = next(iter(X2Y))
-    x_set = set()
-    y_set = set()
+    x = next(iter(X2Y))  # まだスタートに選んでいないxを取り出す
+    x_set = set()  # 上のxと連結であるxの集合
+    y_set = set()  # 上のxと連結であるyの集合
     num_e = solve(x, x_set, y_set, X2Y, Y2X)
     ans += len(x_set) * len(y_set) - num_e // 2
 

@@ -4,7 +4,10 @@ T = int(input())
 
 for i in range(T):
     n = int(input())
+    #n,m = map(int, input().split())
+    #a,b = map(int, input().split())
     a = list(map(int, input().split()))
+    #a = list(input())
     if a == sorted(a):
         print(0)
         continue

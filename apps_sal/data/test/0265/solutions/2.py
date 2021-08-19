@@ -33,6 +33,8 @@ for i in range(n):
     top = list(map(int, stdin.readline().split()))[1:]
     friends[top_to_idx(top)] += 1
 
+# print(friends)
+
 
 def subset(i, j):
     for s in range(9):
@@ -46,6 +48,7 @@ for i in range(512):
         if subset(j, i):
             count_friends[i] += friends[j]
 
+# print(count_friends)
 
 for i in range(m):
     pizza = list(map(int, stdin.readline().split()))
@@ -71,11 +74,15 @@ for p1 in range(512):
         if p1 == p2 and index_2[p1] == 0:
             continue
         p = p1 | p2
+    #    print(idx_to_top(p1 | p2))
         matches = count_friends[p]
+     #   print(matches)
         cost = costs_min[p1] + costs_min[p2] if p1 != p2 else costs_min[p1] + costs_2[p2]
         if best_matches == -1 or matches > best_matches or (matches == best_matches and cost < best_cost):
             best = (index_min[p1], index_min[p2]) if p1 != p2 else (index_min[p1], index_2[p2])
             best_matches = matches
             best_cost = cost
 
+# print(best_matches)
+# print(best_cost)
 print(best[0], best[1])

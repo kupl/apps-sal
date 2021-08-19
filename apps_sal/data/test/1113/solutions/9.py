@@ -1,4 +1,5 @@
 n = int(input())
+# x,y,z,t1,t2,t3=map(int,input().split())
 a = list(map(int, input().split()))
 
 

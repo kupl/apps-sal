@@ -27,6 +27,7 @@ def main():
         elif (abs(a[i][1] / a[i][2]) == 1 and a[i][1] < 0 and a[i][2] < 0):
             typneedrlu.append([abs(a[i][1])] + a[i])
         elif (abs(a[i][1] / a[i][2]) == 1 and a[i][1] < 0 and a[i][2] > 0):
+            #print(i, a[i][1], a[i][2])
             typneedrld.append([abs(a[i][1])] + a[i])
         elif (abs(a[i][1] / a[i][2]) == 1 and a[i][1] > 0 and a[i][2] > 0):
             typneedrrd.append([abs(a[i][1])] + a[i])
@@ -40,6 +41,8 @@ def main():
     typneedrru.sort()
     typneedrld.sort()
     typneedrrd.sort()
+    # print(a)
+    # print(typneedrld)
     for i in range(len(typneedbql)):
         if typneedbql[i][1] == "R" or typneedbql[i][1] == "Q":
             print("YES")

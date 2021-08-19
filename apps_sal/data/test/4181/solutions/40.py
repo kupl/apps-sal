@@ -1,3 +1,4 @@
+# 街の数はn+1個　aiはi番目の街を襲うモンスター
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))

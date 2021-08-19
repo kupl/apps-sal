@@ -19,5 +19,6 @@ for i in range(m):
     a, b = map(int, input().split())
     path[a - 1].append(b - 1)
     path[b - 1].append(a - 1)
+    # print(path)
 
 print(dfs(0, n, checked, path))

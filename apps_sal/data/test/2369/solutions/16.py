@@ -13,6 +13,8 @@ def SI(): return input()
 
 def make_grid(h, w, num): return [[int(num)] * w for _ in range(h)]
 
+# 二項係数計算用　階乗と逆元の初期化
+
 
 def combination_mod_initialize(n, MOD=10**9 + 7):
     fac = [1] * (n + 1)
@@ -21,6 +23,8 @@ def combination_mod_initialize(n, MOD=10**9 + 7):
         fac[i] = fac[i - 1] * i % MOD
         inv[i] = inv[i - 1] * pow(i, -1, MOD) % MOD
     return fac, inv
+
+# 二項係数　高速
 
 
 def combination_mod(n, r, fac, inv):

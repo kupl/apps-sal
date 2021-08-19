@@ -16,10 +16,15 @@ class Point:
     2次元空間上の点
     """
 
+    # 反時計回り側にある
     CCW_COUNTER_CLOCKWISE = 1
+    # 時計回り側にある
     CCW_CLOCKWISE = -1
+    # 線分の後ろにある
     CCW_ONLINE_BACK = 2
+    # 線分の前にある
     CCW_ONLINE_FRONT = -2
+    # 線分上にある
     CCW_ON_SEGMENT = 0
 
     def __init__(self, x: float, y: float):
@@ -189,7 +194,9 @@ class Point:
         :rtype: Point|None
         """
         diff_q = q - p
+        # 答えの p からの距離
         r = (self - p).dot(diff_q) / abs(diff_q)
+        # 線分の角度
         phase = diff_q.phase()
 
         ret = Point.from_polar(r, phase) + p
@@ -205,8 +212,11 @@ class Point:
         :param Point q:
         :rtype: Point
         """
+        # 距離
         r = abs(self - p)
+        # pq と p-self の角度
         angle = p.angle(q, self)
+        # 直線を挟んで角度を反対にする
         angle = (q - p).phase() - angle
         return Point.from_polar(r, angle) + p
 
@@ -221,6 +231,8 @@ class Point:
         """
         if not allow_side and (self == p or self == q):
             return False
+        # 外積がゼロ: 面積がゼロ == 一直線
+        # 内積がマイナス: p - self - q の順に並んでる
         return abs((p - self).det(q - self)) < EPS and (p - self).dot(q - self) < EPS
 
     @staticmethod
@@ -233,7 +245,9 @@ class Point:
         :rtype: Point|None
         """
         if abs((p2 - p1).det(p3 - p1)) < EPS:
+            # 外積がゼロ == 一直線
             return None
+        # https://ja.wikipedia.org/wiki/外接円
         a = (p2.x - p3.x) ** 2 + (p2.y - p3.y) ** 2
         b = (p3.x - p1.x) ** 2 + (p3.y - p1.y) ** 2
         c = (p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2
@@ -296,6 +310,7 @@ class Line:
         Verify: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_2_A&lang=ja
         :param Line l:
         """
+        # 法線ベクトル同士の外積がゼロ
         return abs(Point.from_rect(self.a, self.b).det(Point.from_rect(l.a, l.b))) < EPS
 
     def is_orthogonal_to(self, l):
@@ -304,6 +319,7 @@ class Line:
         Verify: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_2_A&lang=ja
         :param Line l:
         """
+        # 法線ベクトル同士の内積がゼロ
         return abs(Point.from_rect(self.a, self.b).dot(Point.from_rect(l.a, l.b))) < EPS
 
     def intersection_point(self, l):
@@ -317,6 +333,7 @@ class Line:
         a2, b2, c2 = l.a, l.b, l.c
         det = a1 * b2 - a2 * b1
         if abs(det) < EPS:
+            # 並行
             return None
         x = (b1 * c2 - b2 * c1) / det
         y = (a2 * c1 - a1 * c2) / det
@@ -369,6 +386,7 @@ class Segment:
         :param Segment s:
         :return:
         """
+        # 外積がゼロ
         return abs((self.p1 - self.p2).det(s.p1 - s.p2)) < EPS
 
     def is_orthogonal_to(self, s):
@@ -378,6 +396,7 @@ class Segment:
         :param Segment s:
         :return:
         """
+        # 内積がゼロ
         return abs((self.p1 - self.p2).dot(s.p1 - s.p2)) < EPS
 
     def intersects_with(self, s, allow_side=True):
@@ -388,14 +407,18 @@ class Segment:
         :param allow_side: 端っこでギリギリ触れているのを許容するか
         """
         if self.is_parallel_to(s):
+            # 並行なら線分の端点がもう片方の線分の上にあるかどうか
             return (s.p1.on_segment(self.p1, self.p2, allow_side)
                     or s.p2.on_segment(self.p1, self.p2, allow_side)
                     or self.p1.on_segment(s.p1, s.p2, allow_side)
                     or self.p2.on_segment(s.p1, s.p2, allow_side))
         else:
+            # allow_side ならゼロを許容する
             det_upper = EPS if allow_side else -EPS
             ok = True
+            # self の両側に s.p1 と s.p2 があるか
             ok &= (self.p2 - self.p1).det(s.p1 - self.p1) * (self.p2 - self.p1).det(s.p2 - self.p1) < det_upper
+            # s の両側に self.p1 と self.p2 があるか
             ok &= (s.p2 - s.p1).det(self.p1 - s.p1) * (s.p2 - s.p1).det(self.p2 - s.p1) < det_upper
             return ok
 
@@ -404,11 +427,15 @@ class Segment:
         線分上の、p に最も近い点
         :param Point p:
         """
+        # p からおろした垂線までの距離
         d = (p - self.p1).dot(self.p2 - self.p1) / self.norm()
+        # p1 より前
         if d < EPS:
             return self.p1
+        # p2 より後
         if -EPS < d - self.norm():
             return self.p2
+        # 線分上
         return Point.from_polar(d, (self.p2 - self.p1).phase()) + self.p1
 
     def dist(self, p):
@@ -474,6 +501,7 @@ class Polygon:
         面積
         Verify: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_3_A&lang=ja
         """
+        # 外積の和 / 2
         dets = []
         for p, q in self.iter2():
             dets.append(p.det(q))
@@ -529,6 +557,7 @@ class Polygon:
             if p.on_segment(a, b):
                 return allow_on_edge
             angles.append(p.angle(a, b))
+        # 一周以上するなら含む
         return abs(math.fsum(angles)) > EPS
 
     @staticmethod
@@ -544,9 +573,11 @@ class Polygon:
         points = points[:]
         points.sort(key=lambda p: (p.x, p.y))
 
+        # allow_straight なら 0 を許容する
         det_lower = -EPS if allow_straight else EPS
 
         sz = 0
+        #: :type: list of (Point|None)
         ret = [None] * (len(points) * 2)
         for p in points:
             while sz > 1 and (ret[sz - 1] - ret[sz - 2]).det(p - ret[sz - 1]) < det_lower:
@@ -562,6 +593,7 @@ class Polygon:
         ret = ret[:sz - 1]
 
         if allow_straight and len(ret) > len(points):
+            # allow_straight かつ全部一直線のときに二重にカウントしちゃう
             ret = points
         return ret
 
@@ -573,22 +605,26 @@ class Polygon:
         Verify: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_4_B&lang=ja
         :param list of Point points:
         """
+        # 反時計回り
         points = Polygon.convex_hull(points, allow_straight=False)
         if len(points) == 1:
             return 0.0
         if len(points) == 2:
             return abs(points[0] - points[1])
 
+        # x軸方向に最も遠い点対
         si = points.index(min(points, key=lambda p: (p.x, p.y)))
         sj = points.index(max(points, key=lambda p: (p.x, p.y)))
         n = len(points)
 
         ret = 0.0
+        # 半周回転
         i, j = si, sj
         while i != sj or j != si:
             ret = max(ret, abs(points[i] - points[j]))
             ni = (i + 1) % n
             nj = (j + 1) % n
+            # 2つの辺が並行になる方向にずらす
             if (points[ni] - points[i]).det(points[nj] - points[j]) > 0:
                 j = nj
             else:
@@ -607,16 +643,20 @@ class Polygon:
         """
         n = len(self.points)
         line = Line.from_segment(line_p1, line_p2)
+        # 直線と重なる点
         on_line_points = []
         for i, p in enumerate(self.points):
             if line.has_point(p):
                 on_line_points.append(i)
 
+        # 辺が直線上にある
         has_on_line_edge = False
         if len(on_line_points) >= 3:
             has_on_line_edge = True
         elif len(on_line_points) == 2:
+            # 直線上にある点が隣り合ってる
             has_on_line_edge = abs(on_line_points[0] - on_line_points[1]) in [1, n - 1]
+        # 辺が直線上にある場合、どっちか片方に全部ある
         if has_on_line_edge:
             for p in self.points:
                 ccw = Point.ccw(line_p1, line_p2, p)
@@ -635,11 +675,13 @@ class Polygon:
                 ret_lefts.append(p)
             if det_p < EPS:
                 ret_rights.append(p)
+            # 外積の符号が違う == 直線の反対側にある場合は交点を追加
             if det_p * det_q < -EPS:
                 intersection = line.intersection_point(Line.from_segment(p, q))
                 ret_lefts.append(intersection)
                 ret_rights.append(intersection)
 
+        # 点のみの場合を除いて返す
         l = Polygon(ret_lefts) if len(ret_lefts) > 1 else None
         r = Polygon(ret_rights) if len(ret_rights) > 1 else None
         return l, r
@@ -672,11 +714,13 @@ class Circle:
         """
         if self.o == c.o:
             return INF if abs(self.r - c.r) < EPS else 0
+        # 円同士の距離
         d = self.o.dist(c.o) - self.r - c.r
         if d > EPS:
             return 4
         elif d > -EPS:
             return 3
+        # elif d > -min(self.r, c.r) * 2:
         elif d + min(self.r, c.r) * 2 > EPS:
             return 2
         elif d + min(self.r, c.r) * 2 > -EPS:
@@ -698,8 +742,10 @@ class Circle:
         :param bool allow_on_edge: 辺上の点を許容するか
         """
         if allow_on_edge:
+            # return self.o.dist(p) <= self.r
             return self.o.dist(p) - self.r < EPS
         else:
+            # return self.o.dist(p) < self.r
             return self.o.dist(p) - self.r < -EPS
 
     def area(self):
@@ -713,7 +759,9 @@ class Circle:
         弓形⌓の面積
         :param float angle: 角度ラジアン
         """
+        # 扇形の面積
         sector_area = self.area() * angle / TAU
+        # 三角形部分を引く
         return sector_area - self.r ** 2 * math.sin(angle) / 2
 
     def intersection_points(self, other, allow_outer=False):
@@ -735,8 +783,11 @@ class Circle:
         :param bool allow_outer: 線分の間にない点を含む
         :rtype: list of Point
         """
+        # 垂線の足
         projection_point = self.o.projection_point(s.p1, s.p2, allow_outer=True)
+        # 線分との距離
         dist = self.o.dist(projection_point)
+        # if dist > self.r:
         if dist - self.r > EPS:
             return []
         if dist - self.r > -EPS:
@@ -744,6 +795,7 @@ class Circle:
                 return [projection_point]
             else:
                 return []
+        # 足から左右に diff だけ動かした座標が答え
         diff = Point.from_polar(math.sqrt(self.r ** 2 - dist ** 2), s.phase())
         ret1 = projection_point + diff
         ret2 = projection_point - diff
@@ -765,17 +817,21 @@ class Circle:
         if not 1 <= ctc <= 3:
             return []
         if ctc == 3:
+            # 外接
             return [Point.from_polar(self.r, (other.o - self.o).phase()) + self.o]
         if ctc == 1:
+            # 内接
             if self.r > other.r:
                 return [Point.from_polar(self.r, (other.o - self.o).phase()) + self.o]
             else:
                 return [Point.from_polar(self.r, (self.o - other.o).phase()) + self.o]
+        # 2つ交点がある
         assert ctc == 2
 
         a = other.r
         b = self.r
         c = self.o.dist(other.o)
+        # 余弦定理で cos(a) を求めます
         cos_a = (b ** 2 + c ** 2 - a ** 2) / (2 * b * c)
         angle = math.acos(cos_a)
         phi = (other.o - self.o).phase()
@@ -791,14 +847,18 @@ class Circle:
         :rtype: list of Point
         """
         dist = self.o.dist(p)
+        # if dist < self.r:
         if dist - self.r < -EPS:
+            # p が円の内部にある
             return []
         if dist - self.r < EPS:
+            # p が円周上にある
             return [Point(p.x, p.y)]
 
         a = math.sqrt(dist ** 2 - self.r ** 2)
         b = self.r
         c = dist
+        # 余弦定理で cos(a) を求めます
         cos_a = (b ** 2 + c ** 2 - a ** 2) / (2 * b * c)
         angle = math.acos(cos_a)
         phi = (p - self.o).phase()
@@ -823,14 +883,20 @@ class Circle:
 
         assert ctc in (2, 3, 4)
         ret = []
+        # 共通外接線を求める
+        # if self.r == other.r:
         if abs(self.r - other.r) < EPS:
+            # 半径が同じ == 2つの共通外接線が並行
             phi = (other.o - self.o).phase()
             ret.append(self.o + Point.from_polar(self.r, phi + PI / 2))
             ret.append(self.o + Point.from_polar(self.r, phi - PI / 2))
         else:
+            # 2つの共通外接線の交点から接線を引く
             intersection = self.o + (other.o - self.o) / (self.r - other.r) * self.r
             ret += self.tangent_points_with_point(intersection)
 
+        # 共通内接線を求める
+        # 2つの共通内接線の交点から接線を引く
         intersection = self.o + (other.o - self.o) / (self.r + other.r) * self.r
         ret += self.tangent_points_with_point(intersection)
         return ret
@@ -869,10 +935,12 @@ class Circle:
             return Circle((points[0] + points[1]) / 2, points[0].dist(points[1]) / 2)
 
         def mid(p1, p2):
+            # 2点を直径とする円
             return Circle((p1 + p2) / 2, p1.dist(p2) / 2)
 
         points = points[:]
         random.shuffle(points)
+        # 前から徐々に決めてく
         ret = mid(points[0], points[1])
         for i in range(2, n):
             if ret.contains(points[i]):

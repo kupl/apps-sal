@@ -22,6 +22,8 @@ class Solution:
                 else:
                     lo = mid + 1
                     res = min(res, not_broken + 1)
+            # for i in range(1,n+1):
+            #     res=min(res,max(dp(k-1,i-1), dp(k,n-i))+1)
             memo[(k, n)] = res
             return res
         return dp(K, N)

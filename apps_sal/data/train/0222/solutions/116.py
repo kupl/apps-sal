@@ -13,6 +13,7 @@ class Solution:
                 x = A[j]
                 y = z - x
                 k = d.get(y, -1)
+                # x<y<z
                 if x < y and k != -1:
                     dp[i][k] = 1 + dp[k][j]
                     res = max(res, dp[i][k])

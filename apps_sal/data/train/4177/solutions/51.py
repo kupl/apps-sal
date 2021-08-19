@@ -10,3 +10,5 @@ def men_from_boys(arr):
     final_even = sorted(even)
     output = final_even + final_odd
     return output
+    # separate arr in even and odd
+    # then combine even and odd numbers

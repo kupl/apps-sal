@@ -11,6 +11,7 @@ class Solution:
                 count = 0
                 for j in range(1, min(n, rollMax[start] + 1)):
                     for nxt in range(6):
+                        # hack to count a run of \"start\"s at the end
                         if nxt != start or j == n - 1 and j < rollMax[start]:
                             count = (count + die_simulator_starting_at(nxt, n - j)) % 1000000007
                 memo[start, n] = count

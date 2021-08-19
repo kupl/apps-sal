@@ -1,8 +1,8 @@
 def gap(g, m, n):
     for i in range(m, n):
-        if isprime(i):
-            if isprime(i + g):
-                if not any(list([isprime(x) for x in (list(range(i + 1, i + g)))])):
+        if isprime(i):  # prime
+            if isprime(i + g):  # prime at gap
+                if not any(list([isprime(x) for x in (list(range(i + 1, i + g)))])):  # no prime inbetween
                     return [i, i + g]
 
 

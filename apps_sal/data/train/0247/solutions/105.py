@@ -11,9 +11,11 @@ class Solution:
             if diff in hist:
                 index = hist[diff]
                 length = i - index
+                # print(i, index)
                 if index > 0 and dp[index] != float('inf'):
                     res = min(res, dp[index] + length)
                 shortest_length = min(shortest_length, length)
             hist[curr_sum] = i
             dp[i] = shortest_length
+        # print(dp)
         return res if res != float('inf') else -1

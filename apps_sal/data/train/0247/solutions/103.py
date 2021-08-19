@@ -1,7 +1,9 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
+        # They are all positive
 
         n = len(arr)
+        # DP is shortest array up to i
         dp = [float('inf') for _ in range(n + 1)]
 
         ans = float('inf')
@@ -17,7 +19,7 @@ class Solution:
                 start += 1
 
             if curr_sum == target:
-                ans = min(ans, end - start + 1 + dp[start - 1])
+                ans = min(ans, end - start + 1 + dp[start - 1])  # or start - 1
                 dp[end] = min(dp[end - 1], end - start + 1)
             else:
                 dp[end] = dp[end - 1]

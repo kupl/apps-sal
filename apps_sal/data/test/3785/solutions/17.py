@@ -48,10 +48,10 @@ def solve(n: int, m: int, k: int, maze: List[List[str]]) -> List[List[str]]:
     empty_cell_count = sum(row.count('.') for row in maze)
     for i in range(n):
         for j in range(m):
-            if maze[i][j] != '
-            path = dfs(n, m, maze, (i, j), empty_cell_count - k)
-            if len(path) >= empty_cell_count - k:
-                return place_blocks(n, m, k, maze, path)
+            if maze[i][j] != '#':
+                path = dfs(n, m, maze, (i, j), empty_cell_count - k)
+                if len(path) >= empty_cell_count - k:
+                    return place_blocks(n, m, k, maze, path)
 
 
 n, m, k = list(map(int, input().split()))

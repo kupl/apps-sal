@@ -15,6 +15,7 @@ class Imos:
 
     def out(self):
         *res, = self.ac(self.B)
+        # self.__init__(self.n)
         return res
 
 

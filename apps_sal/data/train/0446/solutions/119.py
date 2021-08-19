@@ -6,7 +6,11 @@ class Solution:
 
         counter = sorted(counter.most_common(), key=lambda x: (x[1], x[0]), reverse=True)
 
+        # print(counter)
+
         while k > 0 and counter:
+
+            #counter[-1][1] -= 1
 
             edge = list(counter[-1])
 

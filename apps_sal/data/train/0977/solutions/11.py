@@ -10,4 +10,4 @@ for _ in range(t):
     for i in range(n):
         s[i] = chr(ord('z') - ord(s[i]) + ord('a'))
     s = "".join(s)
-    print(s)
+    print(s)  # cook your dish here

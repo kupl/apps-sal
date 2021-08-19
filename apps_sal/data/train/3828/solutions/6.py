@@ -1,3 +1,4 @@
+# 2.55 +
 def calculate_time(battery, charger):
     max = 100
     time = 0

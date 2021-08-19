@@ -13,4 +13,5 @@ class Solution:
                     res += route(i, ed, fuel - abs(locations[st] - locations[i]))
             dp[st][fuel] = res % 1000000007
             return dp[st][fuel]
+        # print(dp)
         return route(start, finish, fuel)

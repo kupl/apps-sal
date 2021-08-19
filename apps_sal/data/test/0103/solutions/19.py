@@ -1,3 +1,4 @@
+# use this as the main template for python problems
 from collections import Counter
 
 
@@ -19,10 +20,13 @@ def solution(n, arr):
 
 def __starting_point():
 
+    # single variables
     n = [int(val) for val in input().split()][0]
 
+    # vectors
     arr = [int(val) for val in input().split()]
 
+    # solve it!
     solution(n, arr)
 
 

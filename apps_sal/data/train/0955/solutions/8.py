@@ -22,8 +22,9 @@ def sieve(n):
 
 
 primesd, primesl = sieve(10000)
-pc = [0] * 10001
+pc = [0] * 10001  # pc:- pair count
 
+# pre-computing the counts for fast retreival
 for e in primesl:
     for f in primesl:
         temp = e + 2 * f

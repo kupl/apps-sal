@@ -12,13 +12,16 @@ def no(): print('NO')
 
 
 if (path.exists('input.txt')):
+    #------------------Sublime--------------------------------------#
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
     def I(): return (int(input()))
     def In(): return(map(int, input().split()))
 else:
+    #------------------PYPY FAst I/o--------------------------------#
     def I(): return (int(stdin.readline()))
     def In(): return(map(int, stdin.readline().split()))
+# sys.setrecursionlimit(1500)
 
 
 def dict(a):
@@ -60,6 +63,12 @@ def main():
                 ma = max(dp[i - 2][0], dp[i - 2][1], ma)
                 dp[i][1] = ma + l[i]
             ma = 0
+            # for i in range(n):
+            #     print(dp[i][0],end=" ")
+            # print()
+            # for i in range(n):
+            #     print(dp[i][1],end=" ")
+            # print()
             for i in range(n):
                 ma = max(dp[i][0], ma, dp[i][1])
             print(ma)
@@ -73,6 +82,7 @@ P = 1000000007
 
 
 def __starting_point():
+    #for _ in range(I()):main()
     for _ in range(1):
         main()
 

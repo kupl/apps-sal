@@ -27,11 +27,14 @@ class Solution:
                 DFS(i)
                 clusters.append(cur_cluster)
 
+        #print('clusters', clusters)
+
         nodeToClusterDict = dict()
         for idx, cur_cluster in enumerate(clusters):
             for node in cur_cluster:
                 nodeToClusterDict[node] = idx
 
+        #print('nodeToClusterDict', nodeToClusterDict)
         clusterEdges = defaultdict(set)
 
         def doit(this_type):
@@ -42,9 +45,11 @@ class Solution:
                     clusterEdges[src_cluster].add(dst_cluster)
                     clusterEdges[dst_cluster].add(src_cluster)
 
+            #print('this_type', this_type, 'clusterEdges', clusterEdges)
             visitedClusters = set()
 
             def DFSCluster(cur_cluster):
+                #print('visit cluster', cur_cluster)
                 visitedClusters.add(cur_cluster)
 
                 for neighbor_cluster in clusterEdges[cur_cluster]:
@@ -53,6 +58,7 @@ class Solution:
 
             DFSCluster(0)
             if len(visitedClusters) == len(clusters):
+                # all clusters can be visited
                 return len(clusters) - 1
             else:
                 return -1

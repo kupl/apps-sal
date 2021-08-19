@@ -12,6 +12,6 @@ def create_report(names):
 
 
 def code(name):
-    words = name.upper().replace("-", " ").split(None, 3)
+    words = name.upper().replace("-", " ").split(None, 3)  # Generate at most 4 words
     lengths = [(6,), (3, 3), (2, 2, 2), (1, 1, 2, 2)][len(words) - 1]
     return "".join(word[:lengths[i]] for i, word in enumerate(words))

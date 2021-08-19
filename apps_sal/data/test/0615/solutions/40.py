@@ -7,6 +7,7 @@ A = [0] + A
 a = list(accumulate(A))
 answer = a[-1]
 
+# 切り口はN-1個, 真ん中の選び方はN-3
 for i in range(N - 3):
     left = a[i + 2]
     right = a[-1] - left

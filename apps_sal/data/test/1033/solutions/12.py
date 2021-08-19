@@ -12,10 +12,14 @@ def g(d):
     return ((h - 1) * ((h - 1) + 1)) // 2 + p
 
 
+# for i in range(0,20):
+    #print (i, g(i))
+
 a = 0
 b = 10**20
 
 while (a != b):
+    # print(a,b);
     c = (a + b) // 2
     if (n <= g(c)):
         b = c

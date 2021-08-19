@@ -3,6 +3,8 @@ class Solution:
     def dfs(self, grid, i, j, m, n):
         tmp = 0
 
+        # print(self.visited)
+        # base case
         if grid[i][j] == 0 or self.visited[i][j] == 1:
             return 0
 

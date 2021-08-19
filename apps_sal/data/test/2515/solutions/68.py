@@ -1,3 +1,4 @@
+# D - 2017-like Number (hint)
 import math
 Q = int(input())
 lr = []
@@ -5,6 +6,7 @@ for _ in range(Q):
     l, r = map(int, input().split())
     lr.append((l, r))
 
+# iが素数なら Primes[i] = 1
 Primes = [1] * ((10**5) + 1)
 Primes[0], Primes[1] = 0, 0
 
@@ -25,6 +27,7 @@ for x in range(10**5 + 1):
     if Primes[x] == 1 and Primes[(x + 1) // 2] == 1:
         like2017[x] = 1
 
+# 累積和
 s = [0] * (len(like2017) + 1)
 for a in range(len(like2017)):
     s[a + 1] = s[a] + like2017[a]

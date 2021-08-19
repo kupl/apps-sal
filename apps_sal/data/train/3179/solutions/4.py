@@ -1,5 +1,7 @@
 def func(n): return sum(map(int, str(n)))
 
+# Fuck it, brute-force
+
 
 def min_and_max(l, d, x):
     while func(l) != x:

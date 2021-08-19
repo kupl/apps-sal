@@ -1,3 +1,4 @@
+# You lost the game.
 
 n = int(input())
 C = [list(map(int, input().split())) for i in range(n)]

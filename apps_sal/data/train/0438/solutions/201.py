@@ -5,6 +5,7 @@ class Solution:
         lst = -1
 
         def parent(a):
+            # print(a)
             if(ids[a] < 0):
                 return a
             ids[a] = parent(ids[a])
@@ -16,6 +17,7 @@ class Solution:
         def SU(a, b):
             a = parent(a)
             b = parent(b)
+            # print(a,\" \",b)
             if(a == b):
                 return
             if(ids[a] <= ids[b]):
@@ -29,11 +31,13 @@ class Solution:
             return -ids[parent(a)]
 
         for j, i in enumerate(arr):
+            # print(\"toto \",j, \"  \",i)
             ids[i] = -1
             if(ids[i - 1] != 0):
                 SU(i - 1, i)
             if(ids[i + 1] != 0):
                 SU(i, i + 1)
+            # print(i,\" \",size(i))
             if(size(i) == m):
                 d.append(i)
             for t in range(len(d) - 1, -1, -1):
@@ -41,5 +45,6 @@ class Solution:
                 if(size(x) == m):
                     d.append(x)
                     lst = j + 1
+            # print(d)
 
         return lst

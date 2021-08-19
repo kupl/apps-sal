@@ -23,6 +23,7 @@ def sol():
                     return False
 
                 mp[abc].clear()
+                # name[club[j][:2]+city[j]]=j
                 return rename(club[j][:2] + city[j], j)
         return True
 

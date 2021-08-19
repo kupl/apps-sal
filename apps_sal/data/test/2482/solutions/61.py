@@ -1,5 +1,6 @@
 from collections import Counter
 N, K, L = list(map(int, input().split()))
+# Union-Find
 
 
 def get_root(par, node):

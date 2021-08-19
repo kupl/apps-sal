@@ -31,4 +31,6 @@ for symb in ['m', 'p', 's']:
             min_steps_needed = b_needed
 
 
+# print(s)
+# print(hand)
 print(min_steps_needed)

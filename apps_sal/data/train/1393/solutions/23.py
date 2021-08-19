@@ -1,3 +1,4 @@
+# cook your dish here
 for T in range(int(input())):
     n = int(input())
     li = (list(map(int, input().split())))[:n]

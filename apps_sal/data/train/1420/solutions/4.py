@@ -46,6 +46,7 @@ for _ in range(int(input())):
 
     ils = find_interleavings_2(a, b, 0, 0)
     ils = [tuple(x) for x in ils]
+    # print(ils)
     memo = dict()
     for c in ils:
         try:
@@ -59,6 +60,7 @@ for _ in range(int(input())):
             if i != prev:
                 num_blocks += 1
             prev = i
+        # num_blocks += 1
         if num_blocks == k:
             res += 1
             memo[c] = 1

@@ -17,4 +17,4 @@ class Solution:
                 ans += f[l - i - 1]
                 if i > 0 and numL[i - 1] == 1:
                     return ans
-        return ans + 1
+        return ans + 1  # include itself since we know if num contains two 1s, it will return before

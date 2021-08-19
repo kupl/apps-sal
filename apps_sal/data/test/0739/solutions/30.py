@@ -1,4 +1,5 @@
 def rec(r, b, c, a0, n, mod):
+    # a_n = r * a_{n-1} + b * n + c
     a = a0
     n_ = 0
     c += b
@@ -17,6 +18,7 @@ def main():
     L, A, B, M = list(map(int, input().split()))
 
     def bis(d):
+        # d 桁以上になる最小の項
         n = 10**(d - 1)
         ng = -1
         ok = L
@@ -41,6 +43,7 @@ def main():
         n = r - l
         ratio = 10**d
         a = rec(ratio, B, s_l, s_l, n - 1, M)
+        #print(d, a)
         ans = (ans * pow(10, d * n, M) + a) % M
     print(ans)
 

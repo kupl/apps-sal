@@ -1,5 +1,7 @@
 N, M = map(int, input().split())
 
+# 安い店から順に買う
+# 安い順にsort => M本に達するまで前から順に買う
 A = sorted([list(map(int, input().split())) for _ in range(N)])
 
 num = 0

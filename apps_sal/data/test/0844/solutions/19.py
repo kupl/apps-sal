@@ -1,10 +1,20 @@
 
+# coding: utf-8
+
+# In[2]:
+
 
 import sys
 
 
+# In[3]:
+
+
 n = int(sys.stdin.readline().strip())
 s = sys.stdin.readline().strip()
+
+
+# In[53]:
 
 
 balance_max_pos = {}
@@ -17,6 +27,9 @@ for i, c in enumerate(s):
         balance -= 1
 
     balance_max_pos[balance] = i
+
+
+# In[58]:
 
 
 ans = 0
@@ -34,4 +47,12 @@ for i, c in enumerate(s):
         ans = max(balance_max_pos[balance] - i, ans)
 
 
+# In[59]:
+
+
 print(ans)
+
+
+# In[46]:
+
+# In[ ]:

@@ -14,17 +14,20 @@ MOD = 10**9 + 7
 def calc(N, D):
     X = [D] * N
 
-    X_d = [0] * N
+    X_d = [0] * N  # X * D
     carry = 0
     for i in range(N):
         val = D * D + carry
         X_d[i] = val % 10
         carry = val // 10
     assert carry < 10
-    X_d.append(carry)
+    X_d.append(carry)  # Could be 0, still use for convenience.
 
     product = [0] * (2 * N)
+    #~ print(X_d)
+    #~ print(product)
 
+    # (1)
     carry = 0
     cur_sum = 0
     for i in range(N):
@@ -33,6 +36,7 @@ def calc(N, D):
         product[i] = val % 10
         carry = val // 10
 
+    # (2)
     cur_sum += X_d[N]
     for i in range(N):
         cur_sum -= X_d[i]
@@ -40,6 +44,7 @@ def calc(N, D):
         product[N + i] = val % 10
         carry = val // 10
 
+    # (3)
     while carry > 0:
         product.append(carry % 10)
         carry = carry // 10

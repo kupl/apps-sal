@@ -16,4 +16,4 @@ class Solution:
                     peak = True
                 else:
                     return False
-        return peak
+        return peak  # catches the case where no peak

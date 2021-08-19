@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 ngoods = {
     '0': 2,

@@ -1,4 +1,6 @@
+# B - OddString
 
+# s
 s = input()
 j = 0
 m = ''

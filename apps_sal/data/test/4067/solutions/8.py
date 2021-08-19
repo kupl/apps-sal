@@ -59,6 +59,7 @@ for i in range(n):
                 tcount3 += 1
         else:
             tcount3 += 1
+    # print(tcount1,tcount2,tcount3)
 ans = ''
 for i in s:
     ans += i

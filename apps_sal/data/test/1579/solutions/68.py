@@ -4,8 +4,11 @@ def ii(): return int(input())
 def mi(): return map(int, input().rstrip().split())
 def lmi(): return list(map(int, input().rstrip().split()))
 def li(): return list(input().rstrip())
+# template
 
 
+# PyPyだと再帰が遅いので注意
+# BEGIN CUT HERE
 sys.setrecursionlimit(100000)
 
 
@@ -22,7 +25,7 @@ class UnionFind():
         if x == y:
             return
         elif self.data[x] < self.data[y]:
-            x, y = y, x
+            x, y = y, x  # swap
         self.data[x] += self.data[y]
         self.data[y] = x
 
@@ -40,6 +43,8 @@ class UnionFind():
     def size(self, x):
         '''x を含むグループのノード数を返す'''
         return self.data[self.root(x)]
+
+# END CUT HERE
 
 
 def ABC120_D():
@@ -69,6 +74,9 @@ def ABC120_D():
     for i in range(1, m + 1):
         print(ans[i])
 
+# verified on 2019/06/23
+# Python3:616ms https://atcoder.jp/contests/abc120/submissions/6094323
+
 
 def ABC126_E():
     N, M = mi()
@@ -81,6 +89,8 @@ def ABC126_E():
         if uf.root(i) == i:
             ans += 1
     print(ans)
+# verified on 2019/06/23
+# Python3:468ms https://atcoder.jp/contests/abc126/submissions/6094497
 
 
 def ABC131_F():
@@ -105,6 +115,8 @@ def ABC131_F():
 
 
 def __starting_point():
+    # ABC120_D()
+    # ABC126_E()
     ABC131_F()
 
 

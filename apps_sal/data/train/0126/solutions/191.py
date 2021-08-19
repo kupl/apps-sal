@@ -4,9 +4,11 @@ from collections import defaultdict
 
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
+        # init first window
         counts = defaultdict(int)
         substrs = defaultdict(int)
         start = 0
+        # expand window until we can't any more
         for end in range(len(s)):
             counts[s[end]] += 1
             if end - start + 1 > minSize:
@@ -21,3 +23,5 @@ class Solution:
         if not substrs:
             return 0
         return max(substrs.values())
+
+        # decrement window until we meet the requirement

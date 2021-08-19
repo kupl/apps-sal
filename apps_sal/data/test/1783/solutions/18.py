@@ -17,6 +17,10 @@ for s in a:
         an -= tmp
         an += s
         tmp = a[j]
+##    print("i", i)
+##    print("ans", ans)
+##    print("an", an)
+##    print("tmp", tmp)
 
 ans += an
 

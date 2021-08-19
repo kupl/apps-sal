@@ -35,3 +35,36 @@ class Solution:
             start = end
             end += 1
         return ans
+
+       # def get_type(n):
+       #    nonlocal NEG, POS, ZERO
+       #
+       #    if n > 0:
+       #        return POS
+       #    elif n < 0:
+       #        return NEG
+       #    else:
+       #        return ZERO
+       #
+
+       #arr = []
+       #cur_type, cur_count = None, 0
+       # for n in nums:
+       #    n_type = get_type(n)
+       #
+       #    if n_type == cur_type:
+       #        cur_count += 1
+       #    else:
+       #        if cur_type is not None:
+       #            arr.append(cur_type, cur_count)
+       #        cur_count = 1
+       #        cur_type = n_type
+       # if cur_type is not None:
+       #    arr.append(cur_type, cur_count)
+       #
+       # for type, count in arr:
+       #    if type == NEG and count % 2 == 0:
+       #
+       #
+       #
+       # for type, count in arr:

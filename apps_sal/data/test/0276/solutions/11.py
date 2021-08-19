@@ -3,6 +3,9 @@ n = int(input())
 temp = set()
 for i in range(n):
     temp |= {d[input()]}
+# m,n=list(map(int,input().split()))
+# a=list(map(int,input().split()))
+# ans=0
 ans = set()
 for i in d:
     ans |= {d[i]}

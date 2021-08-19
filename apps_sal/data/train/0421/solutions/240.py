@@ -7,7 +7,7 @@ class Solution:
         layer = []
         for i, c in enumerate(s):
             if c == maxc:
-                layer.append((c, i, i))
+                layer.append((c, i, i))  # (char, cur, start)
 
         N = len(s)
         ss = set(i for _, _, i in layer)

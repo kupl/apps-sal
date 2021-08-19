@@ -49,3 +49,6 @@ for i in range(m):
     ans = min(ans, temp)
 
 print(ans)
+
+
+# Made By Mostafa_Khaled

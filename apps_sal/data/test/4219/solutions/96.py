@@ -1,6 +1,9 @@
 import sys
 input = sys.stdin.readline
 
+#l = list(map(int, input().split()))
+#import numpy as np
+#arr = np.array([int(i) for i in input().split()])
 '''
 a,b=[],[]
 for i in range(n):
@@ -31,6 +34,7 @@ for i in range(2**n):
             e[j] = 1
 
     for j in range(n):
+        # print(e)
         if (i >> j) & 1:
 
             if e[j] == 0:
@@ -50,5 +54,6 @@ for i in range(2**n):
 
     if flg and ma < now:
         ma = now
+        # print(ma)
 
 print(ma)

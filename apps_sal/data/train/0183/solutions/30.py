@@ -7,8 +7,10 @@ class Solution:
         for i in range(1, n1 + 1):
             for j in range(1, n2 + 1):
                 mem[i][j] = max(mem[i][j], max(nums1[i - 1] * nums2[j - 1] + max(0, mem[i - 1][j - 1]), mem[i][j - 1], mem[i - 1][j]))
+        # print(mem)
         return mem[n1][n2]
 
+        # mem = [[[[float('-inf')] * n2 for j in range(n2)] for i1 in range(n1)] for i2 in range(n1)]
         @lru_cache
         def dp(i1, j1, i2, j2):
             if i1 > j1 or i2 > j2:

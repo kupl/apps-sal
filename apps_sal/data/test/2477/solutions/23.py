@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import math
 
@@ -16,8 +17,8 @@ def main():
 
         return (True if cnt <= K else False)
 
-    L = 0
-    R = max(A_list)
+    L = 0            # the minimum length
+    R = max(A_list)  # the maximum length
 
     while (R - L) > 1:
         M = L + (R - L) // 2

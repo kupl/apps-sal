@@ -40,6 +40,7 @@ def main():
                 print(ans)
                 return
     i = t[0].index(M)
+    # H += t[1][i]
     if H % M == 0:
         ans += H // M
     else:

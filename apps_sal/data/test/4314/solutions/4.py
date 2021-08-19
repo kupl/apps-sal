@@ -15,7 +15,7 @@ H = len(A)
 B = [[] for _ in range(H)]
 
 for w in range(W):
-    if list([x for x in A if x[w] == "
+    if list([x for x in A if x[w] == "#"]):
         for i in range(H):
             B[i].append(A[i][w])
 

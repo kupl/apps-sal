@@ -4,9 +4,12 @@ import copy
 
 
 def main():
+    # import numpy as np
     input = sys.stdin.readline
     S = ''.join(reversed(input().strip()))
 
+    # dp = np.zeros((13), dtype=int)
+    # dp_ = np.zeros((13), dtype=int)
     dp = [0] * 13
     dp_ = [0] * 13
     mod13_tuple = tuple([i % 13 for i in range(12 ** 2 + 1)])
@@ -29,6 +32,8 @@ def main():
             for pm in tuple13:
                 dp[mod13_tuple[(pm + m)]] = dp_[pm]
 
+        # dp_ = dp % divisor
+        # dp = dp * 0 # np.zeros((13), dtype=int)
         for j in tuple13:
             dp_[j] = dp[j] % divisor
             dp[j] = 0

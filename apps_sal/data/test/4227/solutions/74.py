@@ -10,6 +10,7 @@ for i, row in enumerate(sys.stdin.readlines()):
 
 sum = 0
 for one_load in itertools.permutations([i for i in range(1, n + 1)]):
+    # print("one_load:",one_load)
     if one_load[0] != 1:
         continue
     else:
@@ -17,6 +18,7 @@ for one_load in itertools.permutations([i for i in range(1, n + 1)]):
             if i == 0:
                 old_dot = dot
             else:
+              #  print("old_dot,dot:",old_dot,dot)
                 if {old_dot, dot} in load:
                     old_dot = dot
                 else:

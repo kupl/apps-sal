@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 d = {"B": "BattleShip",
      "C": "Cruiser",

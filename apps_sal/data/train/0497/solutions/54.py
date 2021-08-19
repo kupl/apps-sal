@@ -12,7 +12,9 @@ class Solution:
         for i in range(2, nn + 1):
             if i in finish:
                 for j in finish[i]:
+                    # print(j,dp[i])
                     dp[i] = max(dp[i - 1], dp[j[0]] + j[1], dp[i])
             else:
                 dp[i] = dp[i - 1]
+        # print(dp)
         return dp[nn]

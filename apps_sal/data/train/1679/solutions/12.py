@@ -1,6 +1,6 @@
 """
 
-    Author - AYUSHMAN CHAHAR 
+    Author - AYUSHMAN CHAHAR #
 
 """
 
@@ -9,6 +9,7 @@ import math
 import heapq
 import itertools
 import sys
+#import numpy
 from itertools import combinations
 from itertools import permutations
 from collections import deque
@@ -72,12 +73,15 @@ def main():
         ans = [-1] * n
         templ = [0] * (length - 1)
         templ.append(xored)
+        # print(templ)
         temp = n % length
         for i in range(len(templ)):
             templ.append(templ[i])
         start = 0
         for i in range(len(ans)):
             ans[i] += (templ[start] + 1)
+            # print(ans)
+            # print(templ[start])
             start += 1
             if start == len(templ):
                 start = 0

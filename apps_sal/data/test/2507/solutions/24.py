@@ -7,6 +7,7 @@ N, K = list(map(int, readline().split()))
 A = np.sort(np.array(readline().split(), dtype=int))
 F = np.sort(np.array(readline().split(), dtype=int))[::-1]
 
+# X秒で完食できるか二分探索
 
 ng = -1
 ok = F[0] * A[-1]

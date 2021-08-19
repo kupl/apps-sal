@@ -1,5 +1,6 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
+        # O(NNS) Solution
         predecessors = dict()
         words = sorted(words, key=len)
         for i in range(len(words)):

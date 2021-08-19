@@ -1,5 +1,5 @@
 import numpy as np
-N, M, Q = map(int, input().split())
+N, M, Q = map(int, input().split())  # N個の都市、M本の列車、Q個のクエリ
 grid = np.zeros((N + 1, N + 1), dtype=np.int64)
 query = []
 for _ in range(M):

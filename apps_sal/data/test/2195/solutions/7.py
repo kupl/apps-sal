@@ -8,6 +8,7 @@ def II(): return int(input())
 def SI(): return input()
 
 
+# ---khan17---template
 t = II()
 for i in range(t):
     x, y = MI()

@@ -5,8 +5,8 @@ dig = [ans for _ in range(n)]
 la = [ans for _ in range(n)]
 sp = [ans for _ in range(n)]
 d = {}
-for i in "
-d[i] = sp
+for i in "#*&":
+    d[i] = sp
 for i in "0123456789":
     d[i] = dig
 for i in "abcdefghijklmnopqrstuvwxyz":

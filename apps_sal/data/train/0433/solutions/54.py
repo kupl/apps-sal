@@ -5,6 +5,7 @@ class Solution:
         for i in range(k, len(arr)):
             curr += arr[i]
             curr -= arr[i - k]
+            # print(curr)
             if curr >= threshold * k:
                 ans += 1
         return ans

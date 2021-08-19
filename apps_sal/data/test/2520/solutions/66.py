@@ -6,22 +6,23 @@ sys.setrecursionlimit(N_MAX)
 
 N, M, K = map(int, sys.stdin.readline().rstrip().split())
 
-fr = [[] for _ in range(N)]
+fr = [[] for _ in range(N)]  # 友達関係
 for _ in range(M):
     a, b = map(int, sys.stdin.readline().rstrip().split())
     fr[a - 1].append(b - 1)
     fr[b - 1].append(a - 1)
 
-bl = [[] for _ in range(N)]
+bl = [[] for _ in range(N)]  # ブロック関係
 for _ in range(K):
     a, b = map(int, sys.stdin.readline().rstrip().split())
     bl[a - 1].append(b - 1)
     bl[b - 1].append(a - 1)
 
 
-gr = [0] * N
+gr = [0] * N  # 友達候補グループ
 
 
+# ## BFS ## #
 def bfs(u, num):
 
     q = deque()
@@ -30,8 +31,8 @@ def bfs(u, num):
     while q:
         u = q.popleft()
         for v in fr[u]:
-            if gr[v] == 0:
-                gr[v] = num
+            if gr[v] == 0:  # state を確認
+                gr[v] = num  # state を変更
                 q.append(v)
 
 
@@ -41,10 +42,12 @@ for i in range(N):
         bfs(i, num)
         num += 1
 
+# print(gr)
 
-gr_num = Counter(gr)
+gr_num = Counter(gr)  # グループの人数を数えておく
 
 
+# グループの中から、友達でも
 ans = []
 for i in range(N):
     kouho_suu = gr_num[gr[i]]

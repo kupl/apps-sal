@@ -1,4 +1,7 @@
 class Solution:
+    # Version 1: Greedy
+    # Use binary search to find the first dry day after the city got wet.
+    # TC: O(n^2), SC: O(n)
     '''
     def avoidFlood(self, rains: List[int]) -> List[int]:
         from bisect import bisect_left
@@ -24,6 +27,9 @@ class Solution:
         return ans
     '''
 
+    # Version 2: Improved version 1
+    # Use SortedList to accelerate remove part
+    # TC: O(nlogn), SC: O(n)
     '''
     def avoidFlood(self, rains: List[int]) -> List[int]:
         from sortedcontainers import SortedList
@@ -49,6 +55,9 @@ class Solution:
         return ans
     '''
 
+    # Version 3: Greedy
+    # Store the next position of wet cities in the heap and pop out by urgency
+    # TC: O(nlogn), SC: O(n)
     def avoidFlood(self, rains: List[int]) -> List[int]:
         from collections import deque
         import heapq

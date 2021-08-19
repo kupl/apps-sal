@@ -23,6 +23,7 @@ def __starting_point():
             cost += s
         s += b[1]
         heappush(Q, -b[1])
+        #print("{}, {}, {}".format(i, s, cost))
     print(cost)
 
 

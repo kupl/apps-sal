@@ -8,14 +8,17 @@ class Solution:
         d = dd(int)
         res = 0
         while j < n:
+            # Step 1: find j1
             while j < n and len(d) < K:
                 d[A[j]] += 1
                 j += 1
             i1, j1 = i, j
+            # Step 2: find i
             d[A[i]] -= 1
             while d[A[i]] > 0:
                 i += 1
                 d[A[i]] -= 1
+            # Step 3: find j
             while j < n and A[j] in d:
                 j += 1
             if len(d) == K:

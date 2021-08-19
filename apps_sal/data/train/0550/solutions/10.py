@@ -1,3 +1,4 @@
+# cook your dish here
 def right_shift(x):
     temp = x + x
     return temp[len(x) - 1:2 * len(x) - 1]

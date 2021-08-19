@@ -30,17 +30,23 @@ def Eratosthenes(n):
 
 
 class BIT():
+    # 作りたい要素数nで初期化
+    # 使用するインスタンス変数の初期化
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
 
+    # bit_indexにxをO(log(n))で加算する
     def add(self, i, x):
+        # if(i<=0 or i>n):return iに0以下の数字は代入しない
         while i <= self.n:
             self.bit[i] += x
             i += (i & -i)
+    # bit_1 + bit_2 + …  + bit_n をO(log(n))で求める
 
     def sum(self, i):
         s = 0
+        # iに0以下の数字は代入しない。
         while i > 0:
             s += self.bit[i]
             i -= (i & -i)
@@ -48,6 +54,8 @@ class BIT():
 
     def rangesum(self, i, k):
         return self.sum(k) - self.sum(i)
+    # a_1 + a_2 + … + a_i >= x となるような最小のiを求める(a_k >= 0)
+    # xが0以下の場合は該当するものなし→0を返す
 
     def lower_bound(self, x):
         if x <= 0:
@@ -55,6 +63,8 @@ class BIT():
         else:
             i = 0
             r = 1
+            # 最大としてありうる区間の長さを取得する
+            # n以下の最小の二乗のべき(BITで管理する数列の区間で最大のもの)を求める
             while(r < self.n):
                 r = r << 1
             len = r
@@ -72,10 +82,13 @@ def main():
     S = Eratosthenes(max_num)
     bit = BIT(max_num)
 
+    # bitの初期化
     for a in range(1, max_num, 2):
         b = (a + 1) // 2
         if S[a] and S[b]:
             bit.add(a, 1)
+
+    # queryの処理
 
     for q in range(Q):
         l, r = MI()

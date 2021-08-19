@@ -1,3 +1,4 @@
+# Average runtime: ?? ms
 
 def added_char(s1, s2):
     s2 = list(s2)

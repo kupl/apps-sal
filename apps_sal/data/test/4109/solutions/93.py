@@ -10,9 +10,12 @@ for i in range(1 << N):
     c = 0
     for j in range(N):
         if (i >> j) & 1:
+            # print(j, "entry")
             for k in range(M):
                 s[k] += a[j][k + 1]
             c += a[j][0]
+
+    # print(s, c, d)
 
     b = True
     for ii in s:

@@ -16,6 +16,7 @@ for _ in range(n - 1):
     tree[b - 1].append(a - 1)
 
 
+# 青木君によるWFS
 aoki = [-1 for _ in range(n)]
 aoki[v] = 0
 todo = Queue()
@@ -27,6 +28,7 @@ while not todo.empty():
             todo.put(j)
             aoki[j] = aoki[i] + 1
 
+# 高橋君によるWFS
 taka = [-1 for _ in range(n)]
 taka[u] = 0
 todo = Queue()
@@ -39,6 +41,7 @@ while not todo.empty():
                 todo.put(j)
             taka[j] = taka[i] + 1
 
+# search
 ans = 0
 for i in range(n):
     if taka[i] != -1:

@@ -18,4 +18,5 @@ class Solution:
 
                 else:
                     d[i][A[i] - A[j]] = 2
+        # print(d)
         return max(ans)

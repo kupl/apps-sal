@@ -1,9 +1,12 @@
 import math
 import sys
 input = sys.stdin.readline
+# t=int(input())
 t = 1
 for _ in range(t):
+    # n=int(input())
     n, m = list(map(int, input().split()))
+    # l=list(map(int,input().split()))
     l = []
     for __ in range(n):
         s, x = list(map(float, input().split()))

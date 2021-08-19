@@ -1,12 +1,12 @@
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
-        minlen = n = len(nums)
-        target = sum(nums) % p
+        minlen = n = len(nums)  # subarr length
+        target = sum(nums) % p  # sum of subarray that needs to be removed
         if target == 0:
             return 0
 
-        cursum = 0
-        dct = {0: -1}
+        cursum = 0  # prefix sum
+        dct = {0: -1}  # remainder : index
 
         for i, num in enumerate(nums):
             cursum = (cursum + num) % p

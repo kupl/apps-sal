@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# 問題：https://atcoder.jp/contests/abc128/tasks/abc128_d
 
 n, k = list(map(int, input().strip().split()))
 value = list(map(int, input().strip().split()))

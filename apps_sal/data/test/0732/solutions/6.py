@@ -17,9 +17,12 @@ while cnt <= 10**5:
         for j in range(10):
             if isvalid(i * 10 + j):
                 curr1.add(i * 10 + j)
+               # print('hi')
                 cnt += 1
+    # print(curr1)
     curr |= curr1
 curr = sorted(list(curr))
+# print(curr)
 ans = 0
 for i in curr:
     if i >= 1 and i <= n:

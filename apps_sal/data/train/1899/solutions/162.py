@@ -6,6 +6,7 @@ class Solution:
         self.C = len(self.A[0])
 
         p = self.findGround()
+        # print(p)
 
         if p == None:
             return -1
@@ -13,6 +14,7 @@ class Solution:
         self.firstIsland = set()
 
         self.embraceIsland(p)
+        # print(self.firstIsland)
 
         return self.bfs()
 

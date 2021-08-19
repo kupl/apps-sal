@@ -1,6 +1,7 @@
 n = int(input())
 s = input()
 
+# full search
 cnt = s.count('E')
 
 ans = cnt

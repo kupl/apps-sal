@@ -36,3 +36,6 @@ ans.reverse()
 print(len(ans))
 
 print(' '.join(map(str, ans)))
+
+
+# Made By Mostafa_Khaled

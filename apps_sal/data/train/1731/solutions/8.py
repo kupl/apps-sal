@@ -70,8 +70,8 @@ def interpret(code):
             res += str(s.pop())
         elif o == ',':
             res += chr(s.pop())
-        elif o == '
-        x, y = x + dx, y + dy
+        elif o == '#':
+            x, y = x + dx, y + dy
         elif o == 'p':
             py = s.pop()
             px = s.pop()

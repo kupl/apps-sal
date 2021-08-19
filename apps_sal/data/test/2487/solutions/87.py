@@ -1,8 +1,18 @@
+# coding: utf-8
 from heapq import heappop, heappush
 import sys
+# from operator import itemgetter
 sysread = sys.stdin.readline
 read = sys.stdin.read
 sys.setrecursionlimit(10 ** 7)
+#from collections import OrderedDict, defaultdict
+#import math
+#from itertools import product, accumulate, combinations, product
+# import bisect# lower_bound etc
+#import numpy as np
+#from copy import deepcopy
+#from collections import deque
+#import numba
 
 
 def sum_between(a, b):
@@ -14,7 +24,9 @@ def run():
     n_dots = 0
     for i in range(1, N + 1):
         n_dots += (1 + i) * i // 2
+    # print(n_dots)
     ans = (N - 1) * (N + 1) * N // 2
+    # print(ans)
     lr = list(map(int, read().split()))
     l = lr[::2]
     r = lr[1::2]
@@ -26,6 +38,7 @@ def run():
             tmp += sum_between(r - 1, r - l + 1)
         tmp += r - l
         tmp += sum_between(N - l, 1)
+        # print(tmp)
         ans -= tmp
 
     print(n_dots - ans)

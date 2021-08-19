@@ -8,7 +8,7 @@ import string
 import math
 
 try:
-    import dev_act_ffc429465ab634
+    import dev_act_ffc429465ab634  # empty file in directory
     DEV = True
 except:
     DEV = False
@@ -95,10 +95,13 @@ def tokenized(s):
         word = []
 
 
+###############################################################################
 ej = EJudge()
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
 def parse_int(): return fmap(int, input().split())
+
+# input
 
 
 fig = {

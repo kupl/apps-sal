@@ -9,6 +9,7 @@ def resolve():
         B[i] = b
     a_max = max(A)
 
+    # a_maxより高い攻撃力を選択(a_maxは何回でも行えるのでそれより低いものは選択しない)
     B = [b for b in B if a_max < b]
     B.sort(reverse=True)
 

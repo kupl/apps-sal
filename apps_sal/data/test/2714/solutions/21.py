@@ -2,7 +2,7 @@ from sys import stdin, stdout
 from collections import defaultdict
 import sys
 import threading
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10**5)  # max depth of recursion
 threading.stack_size(2**25)
 
 
@@ -45,6 +45,7 @@ def main():
         c = [0] * 2
         result = 1
         flag = 0
+        # print(dic)
         for i in range(1, n + 1):
             if not visited[i]:
                 res = dfs(i, 0)

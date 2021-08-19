@@ -11,6 +11,7 @@ for i in range(n):
 
 l = sorted(l, key=lambda x: x[0])
 
+#ans = reduce( (lambda x, y: (x[0], max(x[1], y[1]))), l)[1]
 ans = max([x[1] for x in l])
 ans = min(ans, l[-1][0])
 

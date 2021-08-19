@@ -7,6 +7,6 @@ def find_the_key(message, code):
     for i, n in enumerate(msg_key, 1):
         key += n
         d, m = divmod(len_msg, i)
-        test_key = key * (d + (m > 0))
+        test_key = key * (d + (m > 0))  # round up integer without math.ceil
         if test_key[:len_msg] == msg_key:
             return int(key)

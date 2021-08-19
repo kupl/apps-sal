@@ -8,8 +8,8 @@ pi2 = 2 * pi
 for i, line in enumerate(sys.stdin):
     x, y = list(map(int, line.split()))
     angle = atan2(y, x)
-    angles.append((angle, i))
-    angles.append((angle + pi2, i))
+    angles.append((angle, i))  # -pi~pi
+    angles.append((angle + pi2, i))  # pi~3pi
     engines.append(x + y * 1j)
 angles.sort()
 

@@ -23,3 +23,5 @@ for tests in range(t):
         if SUM >= x:
             print(x)
             break
+
+    # print(S)

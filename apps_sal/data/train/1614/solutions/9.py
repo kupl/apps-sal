@@ -15,7 +15,7 @@ def who_is_winner(moves):
 def check_win(field):
     field = list(reversed(field))
 
-    for i in field:
+    for i in field:  # Horizontal win check
         for j in range(4):
             h = set(i[j:4 + j])
 
@@ -24,7 +24,7 @@ def check_win(field):
             elif h == {'Y'}:
                 return 'Yellow'
 
-    for i in range(3):
+    for i in range(3):  # Vertical win check
         for j in range(7):
             v = set([field[i + k][j] for k in range(4)])
 
@@ -33,7 +33,7 @@ def check_win(field):
             elif v == {'Y'}:
                 return 'Yellow'
 
-    for i in range(3):
+    for i in range(3):  # Diagonal win check
         for j in range(4):
             r = [field[i][j], field[i + 1][j + 1], field[i + 2][j + 2], field[i + 3][j + 3]]
             l = [field[i][-j - 1], field[i + 1][-j - 2], field[i + 2][-j - 3], field[i + 3][-j - 4]]

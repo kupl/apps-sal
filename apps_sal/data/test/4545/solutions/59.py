@@ -1,3 +1,4 @@
+# 074a
 
 N = int(input())
 A = int(input())

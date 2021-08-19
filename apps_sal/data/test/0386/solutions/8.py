@@ -6,6 +6,9 @@ maxi = 10**9 + 1
 for i in range(_):
     s, n, a = input().split()
     n = int(n)
+#    print('\n---')
+#    print(s, n, a)
+#    print('----')
     if a == 'Y':
         if s == '>=':
             mini = max(mini, n)
@@ -25,6 +28,7 @@ for i in range(_):
         elif s == '<':
             mini = max(mini, n)
 
+#    print(mini, maxi, '\n--------')
 
 if maxi >= mini:
     print(mini)

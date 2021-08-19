@@ -17,6 +17,7 @@ def a(n, bits, dp):
         return 0
     if(bits == len(n)):
         if(n == '1' * len(n)):
+            # print(n,bits,1)
             return 1
         else:
             return 0
@@ -26,6 +27,7 @@ def a(n, bits, dp):
         i+=1
     
     x=dp[len(n)-1][bits] + a(n[i:],bits-1,dp)
+    #print(n,bits,dp[len(n)-1][bits],x)
     return x%1000000007
     """
     ans = 0
@@ -79,5 +81,8 @@ else:
     ans = 0
     for i in pos:
         ans += a(n, i, dp)
+    # print(dp)
+    # print(a('10000',3,dp))
 
+    # print(pos)
     print(ans % 1000000007)

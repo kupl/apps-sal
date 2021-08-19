@@ -11,12 +11,17 @@ for _ in range(n):
 s.sort(key=lambda x: x[1], reverse=True)
 
 
+# print(s)
+
+
 t_max = t = s[0][0] * s[0][1]
 i = 1
 
+# print(t)
 
 while i < k:
     t = (t // s[i - 1][1] + s[i][0]) * s[i][1]
+    # print(t)
     if t > t_max:
         t_max = t
 
@@ -28,9 +33,11 @@ heapq.heapify(h)
 
 
 for i in range(1, n - k + 1):
+    #print(s[i - 2+k])
     sm = heapq.heappushpop(h, s[i + k - 1][0])
     t = (t // s[i - 2 + k][1] - sm + s[i + k - 1][0]) * s[i + k - 1][1]
 
+    # print(t)
     if t > t_max:
         t_max = t
 

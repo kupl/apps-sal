@@ -17,6 +17,8 @@ def solve(n, m, edges):
 
         can_do = True
 
+        # condition
+
         adj_list = {x: [] for x in range(0, n)}
         in_degree = [0] * n
         for ed in range(min(mid, len(edges))):

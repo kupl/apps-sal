@@ -2,6 +2,8 @@ import math
 
 
 class PlayingCards:
+    # Takes a String containing a message, and returns an array of Strings representing
+    # a deck of playing cards ordered to hide the message, or None if the message is invalid.
     def encode(self, message):
         list_char = list(' ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         list_card_val = list('A23456789TJQK')
@@ -19,6 +21,7 @@ class PlayingCards:
         for ii, c in enumerate(message):
             ind = list_char.index(c)
             n += ind * (27**(len(message) - 1 - ii))
+        # print(n)
 
         if n >= math.factorial(52):
             return None
@@ -36,11 +39,15 @@ class PlayingCards:
             list_card.remove(list_card[ii])
         return deck_code
 
+    # Takes an array of Strings representing a deck of playing cards, and returns
+    # the message that is hidden inside, or None if the deck is invalid.
     def decode(self, deck):
         list_char = list(' ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         list_card_val = list('A23456789TJQK')
         list_card_col = list('CDHS')
         list_card0 = [val + col for col in list_card_col for val in list_card_val]
+
+        #printDeck(deck, False)
 
         test_deck = list(set(deck))
         test_deck.sort()
@@ -56,6 +63,7 @@ class PlayingCards:
             if ind > 0:
                 n += (ind) * math.factorial(len(deck) - 1 - ii)
             list_card.remove(c)
+        # print(n)
 
         n2 = n
         if n == 0:

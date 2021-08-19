@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 
 sum1 = 0
@@ -17,6 +18,7 @@ while t > 0:
     ans = k
     while n > 0:
         list1.append(ans)
+        # print(ans)
         ans = ans * r
         n -= 1
     m = sum(list1)

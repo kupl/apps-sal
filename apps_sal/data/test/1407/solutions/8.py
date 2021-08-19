@@ -15,6 +15,20 @@ def buil_prime_dict(n):
 
 prime_dict = buil_prime_dict(10**5 + 100)
 
+# def diff_search_number_prime(a,dictionary):
+#    start_ind=0
+#    stop_ind=len(dictionary)-1
+#    if a == 1:
+#        return 1
+#    while (stop_ind-start_ind)!=1:
+#        middle_ind=(stop_ind-start_ind)//2+start_ind
+#        if a==dictionary[middle_ind] or a==dictionary[start_ind] or a==dictionary[stop_ind]:
+#            return 0
+#        elif a>dictionary[middle_ind]:
+#            start_ind=middle_ind
+#        else:
+#            stop_ind=middle_ind
+#    return abs(a-dictionary[stop_ind])
 
 line1 = input()
 n = int(line1.split(' ')[0])

@@ -3,6 +3,8 @@ from collections import defaultdict
 
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+        #         nums1[i] ^ 2 = nums2[j] * nums2[k]
+        #
 
         def solv(A, B):
             ans = 0

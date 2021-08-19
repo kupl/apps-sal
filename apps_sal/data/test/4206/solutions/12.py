@@ -14,6 +14,7 @@ while cur >= 0:
         x = 1
     else:
         tmp2 = tmp
+        # print(tmp2)
         while tmp2 != 0:
             if tmp2 % 3 == 0:
                 ans += 1

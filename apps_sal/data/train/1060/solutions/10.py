@@ -1,3 +1,4 @@
+# cook your dish here
 def fac(x):
     x = len(x)
     return int(((x - 1) * (x)) / 2)

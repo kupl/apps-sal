@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 n, k = list(map(int, input().split()))
 A = list(map(int, input().split()))

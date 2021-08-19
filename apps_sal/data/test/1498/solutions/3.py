@@ -7,6 +7,7 @@ for i in range(0, num_task):
     temp_task = [int(n) for n in input().split()]
     time_passed = temp_task[0] - temp_ti
     temp_ti = temp_task[0]
+    # length
     for n in range(0, num[0]):
         server[n] -= time_passed
         server[n] = 0 if(server[n] < 0) else server[n]

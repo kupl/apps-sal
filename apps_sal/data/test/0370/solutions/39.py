@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc135/submissions/7969271
+# 写経
 
 def main():
     K = int(input())
@@ -8,6 +10,7 @@ def main():
         return
 
     def next_vec(x, y):
+        # 原点からx,yを目指すとき
         if x < 0:
             dx, dy = next_vec(-x, y)
             return -dx, dy
@@ -17,10 +20,13 @@ def main():
         if x < y:
             dx, dy = next_vec(y, x)
             return dy, dx
+        # 1手
         if x + y == K:
             return x, y
+        # 2手...(1)
         if x + y <= K + K and (x + y) % 2 == 0:
             return (x + y) // 2, (x + y) // 2 - K
+        # 3手以上
         return K, 0
 
     x, y = 0, 0

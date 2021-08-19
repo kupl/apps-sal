@@ -20,4 +20,11 @@ class ProductOfNumbers:
         l = self.n - k
         if self.last >= l:
             return 0
+        # print(self.n - 1, l, self.last)
         return self.pre[self.n - 1] // self.pre[l - 1]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

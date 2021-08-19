@@ -14,7 +14,8 @@ class Solution:
         max_length = 1
         while end < n - 1:
             end += 1
-            if abs(nums[end] - heap_min[0][0]) > limit or abs(-heap_max[0][0] - nums[end]) > limit:
+            if abs(nums[end] - heap_min[0][0]) > limit or abs(-heap_max[0][0] - nums[end]) > limit:  # Need to know the min and max
+                # Make it valid!
                 while len(heap_min) > 0 and nums[end] - heap_min[0][0] > limit:
                     value, idx = heapq.heappop(heap_min)
                     begin = max(begin, idx + 1)

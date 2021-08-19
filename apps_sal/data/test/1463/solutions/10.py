@@ -1,3 +1,4 @@
+#! python3
 
 def is_good(a, n, i, j):
     c = set([])

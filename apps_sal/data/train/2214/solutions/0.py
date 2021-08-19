@@ -95,12 +95,14 @@ def rerooting(rooted_tree, merge, identity, finalize):
     children = rooted_tree.children
     order = rooted_tree.dfs_order
 
+    # from leaf to parent
     dp_down = [None] * N
     for v in reversed(order[1:]):
         dp_down[v] = finalize(reduce(merge,
                                      (dp_down[c] for c in children[v]),
                                      identity))
 
+    # from parent to leaf
     dp_up = [None] * N
     dp_up[0] = identity
     for v in order:

@@ -2,6 +2,7 @@ import numpy as np
 
 
 def __starting_point():
+    # input
     N, T = list(map(int, input().split()))
     menu = list()
     for i in range(N):
@@ -10,8 +11,10 @@ def __starting_point():
     menu.sort()
     dp = np.zeros(T, int)
     ans = 0
+    # print(N,T,menu)
 
     for ab in menu:
+        # print(ab[0],ab[1])
         ans = max(ans, dp[-1] + ab[1])
         dp[ab[0]:] = np.maximum(dp[ab[0]:], dp[:-ab[0]] + ab[1])
     print(ans)

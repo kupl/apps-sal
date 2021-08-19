@@ -8,9 +8,11 @@ while(tcase):
     rem = 0
     length = len(a)
     ans = (length * (length + 1)) / 2
+    # print ans,
     while(i < length):
         if(a[i] == '7'):
             rem += (i - j + 1)
+            # print i,j,
         else:
             j = i + 1
         i += 1

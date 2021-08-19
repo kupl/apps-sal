@@ -8,7 +8,7 @@ class Solution:
 
         dp = [1 for _ in range(n)]
         dp[1] = 2 if A[0] != A[1] else 1
-        wasGreater = A[0] > A[1]
+        wasGreater = A[0] > A[1]  # Was the last comparison greater or not.
 
         for i in range(1, n):
             if A[i - 1] > A[i] and not wasGreater:

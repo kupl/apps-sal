@@ -12,6 +12,7 @@ class Solution:
                 inter_results[-1] = int(inter_results[-1] / v)
             elif idx % 4 == 3:
                 inter_results.append(v)
+        # print(inter_results)
         final_results = 0
         for idx, v in enumerate(inter_results):
             if idx == 0:

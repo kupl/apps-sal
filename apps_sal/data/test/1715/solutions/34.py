@@ -7,6 +7,7 @@ t = [-dummy] + [int(input()) for _ in range(b)] + [dummy]
 x = [int(input()) for _ in range(q)]
 
 for i in x:
+    # 神社から先に行くパターン
     idx_s, idx_t = bisect_left(s, i), bisect_left(t, i)
     ans = dummy
     for j in [s[idx_s - 1], s[idx_s]]:

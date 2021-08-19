@@ -7,7 +7,10 @@ from itertools import combinations as comb, permutations as perm
 from bisect import bisect_left as bl, bisect_right as br, bisect
 from time import perf_counter
 from fractions import Fraction
+# import numpy as np
 sys.setrecursionlimit(int(pow(10, 6)))
+# sys.stdin = open("input.txt", "r")
+# sys.stdout = open("output.txt", "w")
 mod = int(pow(10, 9) + 7)
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
@@ -20,7 +23,9 @@ def l1d(n, val=0): return [val for i in range(n)]
 def l2d(n, m, val=0): return [l1d(n, val) for j in range(m)]
 
 
+# @lru_cache(None)
 term = l()[0]
+# term=1
 
 for _ in range(term):
     n = l()[0]

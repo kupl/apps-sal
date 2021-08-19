@@ -15,6 +15,8 @@ for i in range(N - 1):
     B[a].append(b)
     B[b].append(a)
 
+# print(B)
+
 
 def dfsF(f):
     for i in B[f]:
@@ -34,6 +36,8 @@ def dfsS(s):
 
 
 dfsS(N)
+# print(F)
+# print(S)
 Fennec = 0
 Snuke = 0
 for i in range(1, N + 1):

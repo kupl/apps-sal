@@ -9,11 +9,14 @@ class Solution:
                     return 1
                 return 0
             else:
+                # Left
                 ways = 0
                 if pos > 0:
                     ways += make_step(pos - 1, steps_left - 1) % modulo
+                # Right
                 if pos < arrLen - 1:
                     ways += make_step(pos + 1, steps_left - 1) % modulo
+                # Stay
                 ways += make_step(pos, steps_left - 1) % modulo
                 return ways % modulo
 

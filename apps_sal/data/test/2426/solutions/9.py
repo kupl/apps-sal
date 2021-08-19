@@ -5,6 +5,7 @@ from math import *
 from collections import defaultdict as dd, deque
 def data(): return sys.stdin.readline().strip()
 def mdata(): return map(int, data().split())
+# sys.setrecursionlimit(100000)
 
 
 for i in range(int(input())):

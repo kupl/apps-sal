@@ -27,7 +27,9 @@ r = n - 1
 
 while l < r:
     md = (l + r + 1) // 2
+    # print(md,p[md],h[p[md]])
     if check(b, a, h[p[md]]):
+        # print(md,p[md],h[p[md]])
         l = md
     else:
         r = md - 1

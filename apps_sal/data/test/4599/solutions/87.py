@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 
 n = int(input())
 A = list(map(int, input().split()))

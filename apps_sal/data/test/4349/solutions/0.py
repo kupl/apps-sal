@@ -27,7 +27,7 @@ def main():
         stdout.write(sep.join(str(a) for a in array) + end)
 
     def enough(days):
-        bought = []
+        bought = []  # (type, amount)
         bought_total = 0
         used_from = days
         for d in range(days, 0, -1):

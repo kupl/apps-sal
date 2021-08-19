@@ -22,7 +22,7 @@ def solve():
         to[u].append([v, w])
         to[v].append([u, w])
 
-    color = [-1] * N
+    color = [-1] * N  # -1: 未探索、0: 白、1: 黒
     color[0] = 0
     dfs(0, to, color)
     print(*color, sep='\n')

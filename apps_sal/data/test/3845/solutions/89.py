@@ -12,7 +12,7 @@ W=100で固定し、白黒格子上になるように列を組む。
 A, B = list(map(int, input().split()))
 N = 100
 n = N // 2
-grid = [["
+grid = [["#"] * N for _ in range(N)]
 for i in range(n, N):
     for j in range(N):
         grid[i][j] = "."
@@ -30,10 +30,10 @@ for j in range(0, A % n * 2, 2):
 grid = grid[::-1]
 for i in range(0, B // n * 2, 2):
     for j in range(0, N, 2):
-        grid[i][j] = "
+        grid[i][j] = "#"
 
 for j in range(0, B % n * 2, 2):
-    grid[B // n * 2][j] = "
+    grid[B // n * 2][j] = "#"
 
 print((" ".join([str(N), str(N)])))
 for i in range(N):

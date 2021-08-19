@@ -1,5 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
+# i<jとして、条件は j-i = A_i + A_j
+# i + A_i = j - A_j
 
 dict1 = {}
 for i in range(1, N + 1):
@@ -17,6 +19,7 @@ for i in range(1, N + 1):
     else:
         dict2[tmp] += 1
 
+# print(dict1, dict2)
 ans = 0
 for k, v in list(dict1.items()):
     if k in dict2:

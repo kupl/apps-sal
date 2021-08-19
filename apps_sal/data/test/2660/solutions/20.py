@@ -59,6 +59,7 @@ q = ni()
 mid = ans = 0
 
 for _ in range(q):
+    # judge process
     query = ns()
     if query.startswith("1"):
         _, a, b = map(int, query.split())

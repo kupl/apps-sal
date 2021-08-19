@@ -25,6 +25,7 @@ def dfs(x, n):
         ret += dfs(x2, n - fx2 - 1) + (x % 2)
 
     dp2[(x, n)] = ret
+#    print(x, n, ret)
     return ret
 
 

@@ -3,6 +3,9 @@ Name : Vasu Gamdha
 codechef id :vasu_vg
 Problem : CRCLJUMP
 
+##############################
+### LOGIC STAYS BETWEEN US ###
+##############################
 '''
 
 from sys import stdin as sin, stdout as sout

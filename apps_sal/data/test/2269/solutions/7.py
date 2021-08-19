@@ -12,6 +12,7 @@ for nt in range(int(input())):
             prev = s[i]
             c = 1
     arr.append((prev, c))
+    # print (arr)
     m = 10**9
     for i in range(len(arr) - 2):
         if arr[i][0] != arr[i + 1][0] and arr[i][0] != arr[i + 2][0]:

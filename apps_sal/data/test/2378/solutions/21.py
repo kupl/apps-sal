@@ -43,6 +43,7 @@ def dfs(x, p):
             continue
         ret += dfs(z, x)
     if x != 0:
+        #print(x, d)
         d.append(ret)
     return ret
 
@@ -55,15 +56,18 @@ for i in range(n + 1):
     f.append(w)
     w = (w * 2) % MOD
 
+# print(d)
 
 ans = 0
 for x in d:
     ans += ((f[x] - 1) * (f[n - x] - 1)) % MOD
     ans %= MOD
 
+# print(ans)
 
 ans = (ans - f[n - 1] * n + f[n] - 1 + MOD) % MOD
 
+# print(ans)
 
 ans = (ans * modinv(f[n])) % MOD
 

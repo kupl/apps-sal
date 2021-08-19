@@ -1,11 +1,15 @@
+# cook your dish here
 t = int(input())
 for z in range(t):
     n = int(input())
     board = input()
     b = list(board)
+    # print(b)
     maxscore = 0
     scores = list(map(int, input().split()))
+    # print(scores)
     for i in range(0, n - 7):
+        # print(i)
         multiplier = 1
         score = 0
         for j in range(i, i + 8):

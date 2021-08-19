@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 a, t_a = list(map(int, input().split()))
 b, t_b = list(map(int, input().split()))
 hh, mm = list(map(int, input().split(sep=':')))

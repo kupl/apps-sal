@@ -14,3 +14,5 @@ for r in range(t):
     e = [w[0] + 1 for w in e if w[1]]
     print(len(e))
     print(*e)
+# q=['\x1b[42m'*int(bool(w+1 in e))+q[w]+'\x1b[0m' for w in range(len(q))]
+# print(*q,sep='')

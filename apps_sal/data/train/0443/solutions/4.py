@@ -1,4 +1,7 @@
+# x x x x x
+#   i   j
 
+# xi != xj
 
 class Solution:
     def numTeams(self, rating: List[int]) -> int:

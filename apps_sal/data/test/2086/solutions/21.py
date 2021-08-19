@@ -16,4 +16,6 @@ for i in range(h):
     temp -= ppl[i]
     temp += ppl[(i + n) % h]
 res = [(sl[0] + h - index - 1) % h + 1 for index in ans]
+# print(n)
+# print(m)
 print(min(res))

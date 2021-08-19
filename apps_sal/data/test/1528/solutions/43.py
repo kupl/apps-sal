@@ -12,6 +12,7 @@ for i in range(N, -1, -1):
         break
     if X == 0:
         break
+    #print(X, ans)
 
 
 print(ans)

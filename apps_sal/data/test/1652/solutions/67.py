@@ -6,6 +6,7 @@ def main():
     S = input()[::-1]
     for word in words:
         S = S.replace(word[::-1], '')
+    # print(S)
     if len(S) > 0:
         print("NO")
     else:

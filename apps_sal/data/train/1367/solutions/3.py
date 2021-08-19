@@ -1,3 +1,4 @@
+# cook your dish here
 
 def find(n):
     if parent[n] != n:
@@ -40,6 +41,7 @@ for c, a, b in edges:
     a = find(a)
     b = find(b)
 
+    # update values
     S += size[a] * size[b] * c
     T += size[a] * size[b]
     C += c

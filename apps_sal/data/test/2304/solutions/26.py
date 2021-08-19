@@ -18,6 +18,7 @@ def answer():
         while queue:
             i0 = queue.pop()
             for i1, d in vertices[i0]:
+                # print(i0, i1, x[i0], x[i1], d)
                 if x[i1] is None:
                     x[i1] = x[i0] + d
                     queue.append(i1)

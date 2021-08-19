@@ -7,6 +7,8 @@ class Solution:
                 neg = (1 + neg) if neg > 0 else 0
                 pos = (1 + pos)
             elif n < 0:
+                #n1 = neg
+                #neg = (1 + pos)
                 pos, neg = (1 + neg) if neg > 0 else 0, 1 + pos
 
             else:

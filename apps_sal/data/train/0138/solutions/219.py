@@ -1,7 +1,7 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        pos = [0 for _ in range(len(nums))]
-        neg = [0 for _ in range(len(nums))]
+        pos = [0 for _ in range(len(nums))]  # pos[i] is number of consecutive numbers with pos product up to i
+        neg = [0 for _ in range(len(nums))]  # neg[i] is number of consecutive numbers with neg product up to i
         if nums[0] > 0:
             pos[0] = 1
         elif nums[0] < 0:

@@ -1,3 +1,4 @@
+# cook your dish here
 def colour(s):
     c = 0
     for i in range(len(s) - 1):

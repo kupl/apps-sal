@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 c = 0
 d = 0
@@ -6,6 +7,7 @@ for i in range(t):
     d = 0
     s = input()
     l = s.split(" ")
+    #l=list(map(str,input().split(" ")))
     for j in range(len(l)):
         if(l[j].lower() == "berhampore"):
             c += 1

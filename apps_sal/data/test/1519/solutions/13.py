@@ -1,4 +1,5 @@
 n, L, a = list(map(int, input().split()))
+#s=[int(x) for x in input().split()]
 ed = 0
 ct = 0
 for j in range(0, n):

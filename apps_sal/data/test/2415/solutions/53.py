@@ -125,6 +125,7 @@ Yb
 Zn
 Zr"""
 ele = strs.upper().split("\n")
+# print(ele)
 inp = input()
 n = len(inp)
 dp = [False] * (n + 1)

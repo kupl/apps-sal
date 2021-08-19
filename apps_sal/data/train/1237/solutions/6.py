@@ -8,6 +8,8 @@ def convert(dollars, cents, required):
         b = b + 100
         return ((b - required, a))
 
+# print(convert(2, 55, 30))
+
 
 for _ in range(int(input())):
     thearr = []
@@ -27,5 +29,7 @@ for _ in range(int(input())):
         a, b = z
         index += 1
         count += 1
+        # print(thearr, a, b)
 
     print(transform)
+    # print(thearr[:10])

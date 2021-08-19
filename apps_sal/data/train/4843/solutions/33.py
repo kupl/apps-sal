@@ -21,6 +21,7 @@ def choose_best_sum(t, k, ls):
     index = 0
     list = combina(k, ls)
     for m, i in enumerate(list):
+        #print('i: ' + str(i) + ' sum: ' + str(sum))
         sum = 0
         if len(i) == k:
             for j in i:

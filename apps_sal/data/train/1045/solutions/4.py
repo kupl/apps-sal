@@ -1,3 +1,4 @@
+# cook your dish here
 l = 'aeiou'
 ll = 'bcdfghjklmnpqrstvwxyz'
 for u in range(int(input())):

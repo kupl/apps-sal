@@ -26,14 +26,18 @@ class TestCase:
 
         for i in range(distance):
             to_nodes = set()
+            # add all adjacent nodes
             for node in from_nodes:
                 to_nodes.update(self.nodes[node])
 
+            # no backtracking
             for node in passed_nodes:
                 if node in to_nodes:
                     to_nodes.remove(node)
 
+            # update which nodes are passed
             passed_nodes.update(to_nodes)
+            # go another round with the new nodes found
             from_nodes = to_nodes
         return list(from_nodes)
 

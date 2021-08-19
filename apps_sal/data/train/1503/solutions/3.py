@@ -1,3 +1,4 @@
+# cook your dish here
 from math import gcd as g
 for _ in range(int(input())):
     a, b = [int(x) for x in input().split()]

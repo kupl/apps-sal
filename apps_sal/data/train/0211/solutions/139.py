@@ -8,6 +8,7 @@ class Solution:
             ss = {s[:I[0] + 1]}
             for k in range(K - 1):
                 ss.add(s[I[k] + 1: I[k + 1] + 1])
+            # print(ss)
             if len(ss) == K:
                 res = max(res, K)
         return res

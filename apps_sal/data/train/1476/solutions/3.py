@@ -1,3 +1,4 @@
+# cook your dish here
 from collections import Counter
 from math import factorial
 for _ in range(int(input())):

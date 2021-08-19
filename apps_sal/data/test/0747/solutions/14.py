@@ -20,8 +20,8 @@ def main():
         else:
             s2.append((h, m))
 
-    s1 = sorted(s1, key=itemgetter(0))
-    s1 = sorted(s1, key=itemgetter(1), reverse=True)
+    s1 = sorted(s1, key=itemgetter(0))  # secondary key, height, ascending
+    s1 = sorted(s1, key=itemgetter(1), reverse=True)  # primary key, mass, descending
     s2 = sorted(s2, key=itemgetter(0))
     s2 = sorted(s2, key=itemgetter(1), reverse=True)
 

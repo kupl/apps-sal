@@ -16,6 +16,7 @@ def read_strgrid(h):
 
 
 def main():
+    # input data
     n, m = map(int, input().split())
     G = [[] for _ in range(n)]
     for i in range(m):
@@ -23,6 +24,9 @@ def main():
         a, b = a - 1, b - 1
         G[a].append((b, c))
         G[b].append((a, c))
+
+    # solve
+    # dfsで全域木を走査していく。親ノードと辺のラベルが同じならそれ以外のものを、異なるならラベルを頂点に振っていく
 
     vis = [0] * n
     label = [-1] * n
@@ -33,6 +37,7 @@ def main():
         for x, c in G[v]:
             if vis[x]:
                 continue
+            # print(x,c,label)
             if label[x] == -1:
                 if label[v] == c:
                     if label[v] == 1:

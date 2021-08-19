@@ -1,5 +1,7 @@
 class Solution:
     def longestAwesome(self, s: str) -> int:
+        # We have 10 + 1 types of palindromes.
+        # Use any number as the middle character, or don't have a middle character.
         n = len(s)
         seen = {0: -1}
         status = res = 0

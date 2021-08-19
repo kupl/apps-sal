@@ -61,4 +61,4 @@ def poohbear(code):
         elif code[i] == 'D':
             mem[mc] = round(mem[mc] / buf)
         i += 1
-    return 'Hello World!' if output == 'Hello World
+    return 'Hello World!' if output == 'Hello World#' else output

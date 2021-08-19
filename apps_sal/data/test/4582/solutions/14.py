@@ -5,8 +5,8 @@ https://atcoder.jp/contests/abc056/tasks/abc056_a
 
 a, b = input().split()
 
-if a == 'H':
-    if b == 'H':
+if a == 'H':  # AtCoDeer正直
+    if b == 'H':  # AtCoDeerくん「TopCoDeerくんは正直」
         TopCoDeer = 'H'
     else:
         TopCoDeer = 'D'

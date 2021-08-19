@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     t = input().split()
     total = 0

@@ -15,6 +15,7 @@ ans = [0] * ~-n
 def dfs(now, color):
     count = 1
     for to, i in edge[now]:
+        # 親の色と同じとき
         if count == color:
             count += 1
         ans[i] = count
@@ -22,6 +23,7 @@ def dfs(now, color):
         count += 1
 
 
+# 開始根は0番目に
 dfs(0, 0)
 
 print(max(ans))

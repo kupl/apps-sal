@@ -113,6 +113,7 @@ for _ in range(t):
         count = bfs(ind, count)
 
     mergesort(museummonths, 0, len(museummonths) - 1)
+    # print(museummonths)
     if(k > len(museummonths)):
         print(-1)
     else:

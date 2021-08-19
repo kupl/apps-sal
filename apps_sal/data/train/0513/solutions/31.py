@@ -19,6 +19,8 @@ def dfs(i, pre, Ans):
     changeID = bisect_left(LIS, A[i])
     changed.append((changeID, LIS[changeID]))
     LIS[changeID] = min(A[i], LIS[changeID])
+    #print(i, LIS)
+    # print(changed)
     Ans[i] = bisect_left(LIS, INF)
     for nextN in Edge[i]:
         if nextN != pre:

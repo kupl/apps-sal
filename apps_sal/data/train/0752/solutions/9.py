@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 n, q = map(int, input().split())
 x = {}
 for j in range(n):

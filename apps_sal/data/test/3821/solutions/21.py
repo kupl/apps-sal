@@ -1,3 +1,5 @@
+# Contest: 20 - 2100 <= Codeforces Rating <= 2199 (https://a2oj.com/ladder?ID=20)
+# Problem: (16) Andrey and Problem (Difficulty: 4) (http://codeforces.com/problemset/problem/442/B)
 
 def rint():
     return int(input())

@@ -11,6 +11,7 @@ for i in range(2, 10 ** 6 + 1):
         isp[x * i] = 0
         if i < x or i % x == 0:
             break
+# print(len(p))
 de = []
 for prime in p:
     count = 0
@@ -23,6 +24,7 @@ for prime in p:
         break
 if b != 1:
     de.append((b, 1))
+# print(de)
 
 ans = 10 ** 20
 for pair in de:

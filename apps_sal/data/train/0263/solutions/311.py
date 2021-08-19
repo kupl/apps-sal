@@ -1,3 +1,6 @@
+# bfs solution
+
+# graph problem
 
 
 class Solution:
@@ -8,7 +11,7 @@ class Solution:
             2: (7, 9),
             3: (4, 8),
             4: (3, 9, 0),
-            5: tuple(),
+            5: tuple(),  # 5 has no neighbors
             6: (1, 7, 0),
             7: (2, 6),
             8: (1, 3),

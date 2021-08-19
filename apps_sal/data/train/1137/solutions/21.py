@@ -1,3 +1,4 @@
+# cook your dish here
 
 def check(arr, n):
     s = set()

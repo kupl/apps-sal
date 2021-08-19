@@ -24,8 +24,8 @@ class Solution:
             for i in range(4):
                 nsx = sx + dx[i]
                 nsy = sy + dy[i]
-                if not 0 <= nsx < n or not 0 <= nsy < m or grid[nsx][nsy] == '
-                continue
+                if not 0 <= nsx < n or not 0 <= nsy < m or grid[nsx][nsy] == '#':
+                    continue
                 if nsx == bx and nsy == by:
                     nbx = bx + dx[i]
                     nby = by + dy[i]

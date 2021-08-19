@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
 import sys
+
+#lines = stdin.readlines()
 
 
 def rint():

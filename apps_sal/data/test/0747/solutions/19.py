@@ -48,3 +48,6 @@ def try_eat(t0):
 
 
 print(max(try_eat(0), try_eat(1)))
+
+
+# Made By Mostafa_Khaled

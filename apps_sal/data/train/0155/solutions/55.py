@@ -7,6 +7,7 @@ class Solution:
             ans = 1
             l = max(0, i - d)
             r = min(n - 1, i + d)
+            # print(i,l,r)
 
             for j in reversed(range(l, i)):
                 if(A[j] < A[i]):

@@ -16,10 +16,12 @@ for grid in itertools.product([0, 1], repeat=h - 1):
             ary.append([i + 1])
         else:
             ary[-1].append(i + 1)
+    # print (grid, ary)
     wk = 0
     for i in grid:
         if i == 1:
             wk += 1
+    # print (wk)
     cnt = [0] * len(ary)
     for j in range(w):
         for ii, g in enumerate(ary):

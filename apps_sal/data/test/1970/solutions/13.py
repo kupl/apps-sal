@@ -20,9 +20,9 @@ def check():
                 if cont % 2 == yk1 % 2 == yk2 % 2:
                     if abs(cont2 - xk1) % 4 == abs(cont2 - xk2) % 4:
                         if abs(cont - yk1) % 4 == abs(cont - yk2) % 4:
-                            if board[cont][cont2] != '
-                            print('YES')
-                            return
+                            if board[cont][cont2] != '#':
+                                print('YES')
+                                return
     print('NO')
     return
 

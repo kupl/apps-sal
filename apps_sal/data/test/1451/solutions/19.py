@@ -1,3 +1,4 @@
+# July 4, 2013
 def luck(n):
     total = 0
     for char in n:

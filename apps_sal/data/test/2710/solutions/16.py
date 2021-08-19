@@ -66,7 +66,7 @@ for i in range(m):
     x, y = map(int, input().split())
     edges[(x, y)] = True
 
-g = Graph(2 * n + 2)
+g = Graph(2 * n + 2)  # s -> 0 , a[i], b[i], t-> 2n+1
 
 for i in range(1, n + 1):
     g.graph[0][i] = a[i - 1]

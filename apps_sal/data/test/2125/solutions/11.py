@@ -13,6 +13,8 @@ def number_rectangle(h):
             dp[i] = dp[stack[-1]] + (i - stack[-1]) * h[i]
 
         result += dp[i]
+    # print(h)
+    # print(result)
     return result
 
 
@@ -23,11 +25,17 @@ def main():
 
     a = []
     a.append('-' * cols)
+    # print(a)
     for i in range(1, rows):
         a.append(input())
     h = [[0 for j in range(cols)] for i in range(rows)]
     result = 0
+    # print(a)
+    #print(rows, cols)
     for i in range(1, rows):
+        #print (f'i = {i}')
+        # print(s)
+        # print(a[i])
         last_state = (0, 0, 0, 0, 0, 0)
         same_state = 0
         sub = []
@@ -38,6 +46,7 @@ def main():
                 h[i][j] = 1
             i2 = i - h[i][j]
             i3 = i2 - h[i2][j]
+            #print (i, i2, i3)
             curr_state = (h[i][j], h[i2][j], a[i][j], a[i2][j], a[i3][j])
             if (h[i][j] == h[i2][j]) and (h[i3][j] >= h[i][j]):
 
@@ -51,8 +60,10 @@ def main():
                 result += number_rectangle(sub)
                 sub.clear()
             last_state = curr_state
+            #print (f'same_state = {same_state} curr_state = {curr_state[0], curr_state[1], curr_state[2], curr_state[3], curr_state[4]}')
         result += number_rectangle(sub)
     result = int(result)
+    # print(h)
     print(result)
 
 

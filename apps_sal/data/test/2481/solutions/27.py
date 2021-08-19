@@ -8,6 +8,7 @@ def main():
     h = [(0, 1)]
     V = [-1] * 10
     while h:
+        # print(h)
         m, n = heappop(h)
         if V[n] > -1:
             continue
@@ -15,6 +16,7 @@ def main():
         for i in range(10):
             if V[i] == -1:
                 heappush(h, (m + C[i][n], i))
+    # print(V)
     ans = 0
     for a in A:
         for b in a:

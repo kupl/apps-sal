@@ -15,3 +15,8 @@ if abs(X) - K * D < 0:
     ans = abs(mods - (nums % 2) * D)
 
 print(ans)
+
+
+# ans = min([abs(X+D*i) for i in range(-K, K+1, 2)])
+#
+# print(ans)

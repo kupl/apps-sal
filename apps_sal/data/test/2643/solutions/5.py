@@ -1,7 +1,13 @@
+# coding: utf-8
 import numpy as np
 import sys
+#from operator import itemgetter
 sysread = sys.stdin.readline
+#from heapq import heappop, heappush
+#from collections import defaultdict
 sys.setrecursionlimit(10**7)
+#import math
+#from itertools import combinations
 
 
 def run():
@@ -12,6 +18,7 @@ def run():
     def check(n, x, m):
         _d = d % m
         d0 = d % m == 0
+        # n_step
         n_d = (n - 1) // k
         n_rest = (n - 1) % k
         x %= m
@@ -22,6 +29,7 @@ def run():
 
         a_last = x + n_d * _d.sum() + _d_rest
         n_step = a_last // m
+        # n_same
         n_same = n_d * d0.sum() + d0_rest
 
         return n - 1 - n_same - n_step

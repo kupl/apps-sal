@@ -32,6 +32,8 @@ class Solution:
                 if n % i == 0:
                     return primes_set(n // i) | set([i])
             return set([n])
+        #primes = get_prime_list(min(100000,max(A)))
+        #primes = primes_set
 
         def find(x):
             if p[x] != x:

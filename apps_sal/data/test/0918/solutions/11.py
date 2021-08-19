@@ -7,6 +7,7 @@ for i in range(n):
 
 for i in range(m):
     ls[i].sort(key=lambda x: x[1], reverse=True)
+    # print(ls[i])
     if len(ls[i]) > 2 and ls[i][1][1] == ls[i][2][1]:
         print("?")
     else:

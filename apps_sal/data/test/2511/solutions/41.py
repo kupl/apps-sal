@@ -14,6 +14,7 @@ for i in range(N - 1):
     T[a].append(b)
     T[b].append(a)
 
+# dfs
 ans = K
 for i in range(len(T[0])):
     ans = (ans * (K - i - 1)) % MOD

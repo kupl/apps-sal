@@ -14,7 +14,7 @@ def main():
     for v1 in range(n):
         if new[v1]:
             if v1 < vr:
-                ans += 1
+                ans += 1  # v1 vr
             stack = [v1]
             while stack:
                 u = stack.pop()

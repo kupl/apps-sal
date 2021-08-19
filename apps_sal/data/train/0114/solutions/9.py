@@ -13,6 +13,7 @@ def stli(): return [int(i) for i in input().rstrip('\n')]
 for _ in range(val()):
     n = val()
     a = li()
+    # print(a)
     m = val()
     h = []
     visited = defaultdict(int)
@@ -32,6 +33,7 @@ for _ in range(val()):
             endurance[h[i][0]] = currmax
 
     power = sorted(list(endurance))
+    # print(power,endurance)
     totdays = 0
     i = 0
     while i < n:

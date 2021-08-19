@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     l = []
     lll = []
@@ -8,6 +9,7 @@ for _ in range(int(input())):
         s += int(ll[2])
         lll.append(ll)
     avg = s // n
+    # print(avg)
     for i in lll:
         if int(i[2]) < avg:
             l.append(i)

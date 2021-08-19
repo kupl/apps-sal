@@ -16,6 +16,7 @@ while q:
     cc = ans[cx][cy]
     nc = cc + 1
 
+    # right
     for i in range(1, K + 1):
         if cy + i >= W or C[cx][cy + i] == "@":
             break
@@ -25,6 +26,7 @@ while q:
             continue
         ans[cx][cy + i] = nc
         q.append((cx, cy + i))
+    # left
     for i in range(1, K + 1):
         if cy - i <= -1 or C[cx][cy - i] == "@":
             break
@@ -34,6 +36,7 @@ while q:
             continue
         ans[cx][cy - i] = nc
         q.append((cx, cy - i))
+    # up
     for i in range(1, K + 1):
         if cx - i <= -1 or C[cx - i][cy] == "@":
             break
@@ -43,6 +46,7 @@ while q:
             continue
         ans[cx - i][cy] = nc
         q.append((cx - i, cy))
+    # down
     for i in range(1, K + 1):
         if cx + i >= H or C[cx + i][cy] == "@":
             break

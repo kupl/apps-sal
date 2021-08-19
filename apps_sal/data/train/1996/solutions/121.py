@@ -1,4 +1,7 @@
 class Solution:
+    # if cycle then not safe else safe
+    # we can tell if there's a cycle by keeping track of visited for all paths eminating from node
+    # DP: keep track of set of nodes that are not safe so that if we see it again we know not safe automatically
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         ans, dp, visited = [], {}, set()
 

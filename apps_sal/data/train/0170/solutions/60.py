@@ -28,6 +28,7 @@ class Solution:
                 crop_start, crop_end = 0, len(arr) - rightDecreasing - 1
 
             while left_candidate < leftIncreasing and right_candidate < len(arr):
+                # print(left_candidate, leftIncreasing, right_candidate, rightDecreasing, crop_start, crop_end)
                 if arr[left_candidate] > arr[right_candidate]:
                     while right_candidate < len(arr):
                         if arr[left_candidate] > arr[right_candidate]:

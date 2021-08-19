@@ -18,7 +18,7 @@ def bowling_score(frame_line: str) -> int:
     rolls = frame2rolls(frame_line)
     r = 0
     for i in range(10):
-        if i == 9:
+        if i == 9:  # The last frame is special
             score[i] = sum(rolls[r:])
             break
         if frames[i] == 'X':

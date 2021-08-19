@@ -28,4 +28,5 @@ class Solution:
         ans = 0
         for i in range(10):
             ans += btHelper(i, n - 1)
+        # print(memo)
         return ans % MOD

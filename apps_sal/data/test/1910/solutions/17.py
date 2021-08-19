@@ -1,3 +1,7 @@
+# S = input()
+# A = S[0] + S[2] + S[4] + S[3] + S[1]
+# N = int(A)
+# print((N ** 5) % (10 ** 5), end="")
 
 N = int(input())
 

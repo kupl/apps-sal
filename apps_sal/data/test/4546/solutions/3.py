@@ -1,3 +1,4 @@
+# 058_a
 a, b, c = map(int, input().split())
 if (1 <= a & a <= 100) & (1 <= b & b <= 100) & (1 <= c & c <= 100):
     d_ab = b - a

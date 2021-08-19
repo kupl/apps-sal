@@ -3,6 +3,9 @@ hen = []
 
 hen = list(int(x) for x in input().split())
 hen.sort()
+# print(hen)
+#hen_u = set(hen)
+# print(hen_u)
 tri = 0
 
 for a in hen:

@@ -28,13 +28,17 @@ def resolve():
         u, v, c = LI_()
         G[u].append((v, c))
         G[v].append((u, c))
+    # print(G)
     ans = [-1] * N
     ans[0] = 1
 
+    # 木に対して必ずよい書き込み方が存在するので、
+    # DFSでMSTを辿ってよい書き込み方をすればよい
     def dfs(c, p):
         for n, l in G[c]:
             if ans[n] == -1:
                 if ans[c] == l:
+                    # 書き込む値がNを越えないようにする
                     if l < N - 1:
                         ans[n] = l + 1
                     else:

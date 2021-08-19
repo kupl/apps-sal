@@ -4,7 +4,7 @@ for i in range(6, 31):
 
 
 def coefficients(n):
-    y, z = 2, 0
+    y, z = 2, 0  # coefficients for number of passengers at station 3
     for i in range(4, n):
         y += fib[i - 1]
         z += fib[i]

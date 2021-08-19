@@ -2,6 +2,7 @@ def positive_to_negative(binary):
     b = []
 
     print("원래 이진수 :", binary)
+    # range(1, 5) 1, 2, 3, 4
     for bit in binary:
         if bit == 1:
             b.append(0)

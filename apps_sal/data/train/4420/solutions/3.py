@@ -3,6 +3,11 @@ def mult_primefactor_sum(a, b):
     return [n for n, pf in enumerate(prime_factors, a) if len(pf) > 1 and n % sum(pf) == 0]
 
 
+# Memoization and this factorization algorithm are overkill here,
+# one of them is enough (I didn't try none of them).
+# More simple than memoize is to precompute prime_factors, if you
+# know the max number to factorize (seems to be 20000 here).
+
 def memoize(func):
     cache = {}
 

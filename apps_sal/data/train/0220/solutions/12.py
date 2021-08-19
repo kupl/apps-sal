@@ -3,6 +3,7 @@ class Solution:
         curr_sum = sum([i * abs(j - 1) for i, j in zip(customers, grumpy)])
         max_sum = curr_sum
 
+        # first one, check all
         for i in range(X):
             curr_sum += customers[i] * grumpy[i]
             max_sum = max(max_sum, curr_sum)

@@ -19,18 +19,29 @@
     0 ≦ Ai ≦ K
     入力中のすべての値は整数である
 '''
+# class Test:
+#     points = []
+#     def __init__(self, point):
+#         self.point = point
+#
+#     def add_test(self):
+#         self.points.append(self)
+#
+#     def lasttest_min(self, target_point)   -> int:
+#         target_point - ave(points)
 
+# 標準入力から N, K, M, Ai の値を取得する
 n, k, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-target_ponits = m * n
-need_point_n = target_ponits - sum(a)
+target_ponits = m * n  # 目標に必要な合計点数
+need_point_n = target_ponits - sum(a)   # N番目のテストで目標達成に必要な点数
 
 result = "ret"
 if need_point_n > k:
     result = -1
 else:
-    if need_point_n < 0:
+    if need_point_n < 0:    # N番目が 0点でも目標達成できる場合
         result = 0
     else:
         result = need_point_n

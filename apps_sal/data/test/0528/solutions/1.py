@@ -35,6 +35,7 @@ def main():
                     continue
                 q.append(a)
         if cl != cn * (cn - 1):
+            #print(j, cl, cn)
             print("NO")
             return
     print("YES")

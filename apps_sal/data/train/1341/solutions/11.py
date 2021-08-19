@@ -12,6 +12,7 @@ for i in range(t):
         if a[i] <= a[i - 1]:
             end = i
             break
+    # print(start,end)
     if start == -1:
         ans = ((n * (n + 1)) // 2) - 1
         print(ans)
@@ -24,5 +25,7 @@ for i in range(t):
                 j -= 1
                 c += 1
             k += c
+            # print(k)
         k += len(a) - end
         print(k)
+        # print(k+2)

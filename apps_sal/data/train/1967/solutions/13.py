@@ -1,10 +1,12 @@
 class Solution:
     def dfs(self, grandpa, parent, S, start):
+        # return the fibonacci seqs of S[start:] given grandpa and parent
         if start >= len(S):
             return [], True
         for i in range(start + 1, len(S) + 1):
             sub = S[start: i]
             if len(sub) > 1 and sub[0] == '0':
+                # invalid
                 continue
             num = int(sub)
             if num > 2**31 - 1:

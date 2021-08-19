@@ -1,4 +1,5 @@
 import sys
+#sys.stdin = open('input.txt', 'r')
 
 a = list(map(int, input().split()))
 S = input()

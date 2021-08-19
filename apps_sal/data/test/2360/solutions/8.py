@@ -1,3 +1,4 @@
+# Put them all in queue in order of l. At popping check: should they be in? (time++)Should they be already out? (0)
 t = int(input())
 for _ in range(t):
     n = int(input())

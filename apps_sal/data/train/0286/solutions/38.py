@@ -5,6 +5,7 @@ class Solution:
         self.mem2 = {}
         self.balls = balls
         rv = self.dfs(0, [], [])
+        #print(self.mem2, self.mem)
         return rv / self.multinomial(balls)
 
     def dfs(self, idx, lefts, rights):

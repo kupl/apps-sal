@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     s = input()
     c = 0

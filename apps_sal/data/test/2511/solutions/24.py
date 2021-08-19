@@ -31,6 +31,7 @@ while q:
         res -= 2
     for n_node in paths[node]:
         if n_node not in visited:
+            # print(n_node, res)
             q.append((n_node, res, d + 1))
             res -= 1
 

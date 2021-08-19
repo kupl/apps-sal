@@ -14,5 +14,6 @@ class Solution:
                     first, second, runner = second + runner, second + runner + 1, 0
                 else:
                     first, second, runner = second, second + 1, 0
+            # print(first, second, runner)
 
         return s[first:]

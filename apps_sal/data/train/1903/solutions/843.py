@@ -8,6 +8,7 @@ class UF:
         if ip == jp:
             return False
 
+        # // ranking
         if self.ranks[ip] < self.ranks[jp]:
             ip, jp = jp, ip
         self.ranks[ip] += self.ranks[jp]
@@ -21,6 +22,7 @@ class UF:
             self.p[i] = i
             return i
         if i != self.p[i]:
+            # path compression
             self.p[i] = self.find(self.p[i])
         return self.p[i]
 

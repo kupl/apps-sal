@@ -17,3 +17,6 @@ for i in map(int, input().split()):
 s.sort()
 
 print(a + sum(s[0: -2]))
+
+
+# Made By Mostafa_Khaled

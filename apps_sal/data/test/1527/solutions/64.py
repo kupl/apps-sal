@@ -1,3 +1,4 @@
+# Https://atcoder.jp/contests/abc151/tasks/abc151_d
 
 from collections import deque
 
@@ -19,7 +20,7 @@ def bfs(sx, sy):
             if (
                 not (0 <= tx < H) or
                 not (0 <= ty < W) or
-                maze[tx][ty] == "
+                maze[tx][ty] == "#" or
                 count[tx][ty] != -1
             ):
                 continue

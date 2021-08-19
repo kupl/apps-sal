@@ -12,7 +12,7 @@ for i in range(N):
 
 for i in range(N):
     ai, bi = D[i]
-    an, bn = D[i + 1] if i < N - 1 else [0, 1]
+    an, bn = D[i + 1] if i < N - 1 else [0, 1]  # nanndemoyoi
 
     if X[ai] == 0 and X[bi] == 0:
         flg = False
@@ -30,6 +30,7 @@ for i in range(N):
             pl, mi = ai, bi
         else:
             pl, mi = bi, ai
+        # 先読みで使う方
         ANS.append(pl)
         X[pl] += 1
         X[mi] -= 1

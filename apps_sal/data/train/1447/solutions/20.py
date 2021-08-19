@@ -12,6 +12,7 @@ for case in range(cases):
             break
         else:
             freq[p[i]] += 1
+    #  print(freq)
     if(error):
         print("NO")
     else:

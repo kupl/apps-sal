@@ -10,6 +10,7 @@ class Solution:
         n = len(M)
         map1 = [[] for x in range(n)]
 
+        # build graph
         for i in range(n):
             for j in range(n):
                 if i != j and M[i][j] == 1:
@@ -18,6 +19,7 @@ class Solution:
                     if i not in map1[j]:
                         map1[j].append(i)
 
+        # bfs
         queue = collections.deque()
         hash1 = set()
 

@@ -12,6 +12,7 @@ class StreamChecker:
                 if c not in curr:
                     curr[c] = {}
                 curr = curr[c]
+            # curr['is_end'] = True
 
     def query(self, letter: str) -> bool:
         self.history += letter
@@ -25,3 +26,8 @@ class StreamChecker:
                 return True
 
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

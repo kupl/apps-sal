@@ -1,3 +1,5 @@
+# https://www.youtube.com/watch?v=7qr4j_fB9S4
+# https://leetcode.com/problems/uncrossed-lines/discuss/652102/Python-3-today's-one-liner
 
 class Solution:
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:

@@ -17,3 +17,4 @@ for i in range(t):
                 c1 += 1
                 c = c - 2
     print(round(c1 / 2))
+# cook your dish here

@@ -1,5 +1,6 @@
 n = int(input())
 
+# C(n + 5 - 1, n - 1) = C(n + 4, 5)
 
 ans1 = 1
 for i in range(5):

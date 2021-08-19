@@ -38,9 +38,11 @@ def getval():
 
 
 def main(n, m, s):
+    # Initiate
     temp = [-1 for i in range(n)]
     ans = ""
     flag = True
+    # Exceptions: contains dup or ([1,0] and n>1)
     if [1, 0] in s and n > 1:
         flag = False
     for i in s:
@@ -68,8 +70,12 @@ def main(n, m, s):
 
 
 def __starting_point():
+    #n,m,s = getrand()
     n, m, s = getval()
     main(n, m, s)
+    # for i in range(10):
+    #n,m,s = getrand()
+    # main(n,m,s)
 
 
 __starting_point()

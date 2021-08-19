@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 n, m = list(map(int, input().split()))
 board = [input() for _ in range(n)]
 u = [[1 for _ in range(m)] for _ in range(n)]

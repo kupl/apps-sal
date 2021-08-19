@@ -24,6 +24,7 @@ def fun(pos):
 
 
 def enc(a):
+    # print(a)
     z = 0
     for i in a:
         z = z + i[1] - i[0]
@@ -31,4 +32,5 @@ def enc(a):
 
 
 for i in range(1, len(a) + 1):
+    # print(fun(i))
     print(enc(fun(i)), end=' ')

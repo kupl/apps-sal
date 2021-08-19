@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 from sys import stdin, stdout
 import math
 from itertools import permutations, combinations, permutations
@@ -44,6 +46,8 @@ def ncr(n, r):
     denom = reduce(op.mul, list(range(1, r + 1)), 1)
     return numer // denom
 
+
+# --------------------------------------
 
 def myCode():
     n, x = In()

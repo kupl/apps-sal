@@ -3,6 +3,7 @@ class Solution:
         kmax = 15
         kmod = pow(10, 9) + 7
 
+        # dp[i][j][k]: # of sequences ends with k consecutive j after i rolls
         dp = [[[0] * (kmax + 1) for _ in range(6)] for _ in range(n + 1)]
 
         for j in range(6):

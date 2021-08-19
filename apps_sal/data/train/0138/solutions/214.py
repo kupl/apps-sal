@@ -7,6 +7,7 @@ class Solution:
         for i, num in enumerate(nums):
             if num < 0:
                 count += 1
+                # print(num,count,i)
                 dct[count] = i
 
             elif num == 0:
@@ -21,4 +22,5 @@ class Solution:
                 if num < 0:
                     t2 = i - 1 - dct[0]
                 res = max(res, max(t1, t2))
+            # print(dct,res)
         return res

@@ -11,6 +11,7 @@ class Solution:
             ans = 0
             square = collections.Counter([n**2 for n in nums1])
             prods = getRoots(nums2)
+            # print(roots)
             for p in prods:
                 ans += square[p]
             return ans

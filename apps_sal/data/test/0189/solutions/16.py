@@ -1,5 +1,6 @@
 from sys import stdin
 n = int(stdin.readline().strip())
+# n,m=map(int,stdin.readline().strip().split())
 s = list(map(int, stdin.readline().strip().split()))
 s.sort()
 ans = 10**20

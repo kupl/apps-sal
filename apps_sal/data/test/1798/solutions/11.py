@@ -1,6 +1,10 @@
 n = int(input())
 inp, k = {}, 0
 
+# for i in input().split(" "):
+#     if int(i) not in list(inp.keys()):   inp[int(i)] = [k]
+#     else: inp[int(i)]+=[k]
+#     k+=1
 
 s = input().split()
 

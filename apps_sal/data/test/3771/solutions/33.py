@@ -1,7 +1,7 @@
 from itertools import product
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
 def input(): return sys.stdin.readline().rstrip()
 

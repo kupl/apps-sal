@@ -11,6 +11,7 @@ class Solution:
 
         return dp[L][N]
 
+        # T=O(NL) S=O(NL)
         memo = {}
 
         def DFS(i, j):

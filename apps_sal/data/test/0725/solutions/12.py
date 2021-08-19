@@ -7,9 +7,9 @@ def solve():
     for i in range(n):
         for j in range(m):
             if c[i][j] in CA:
-                print('
+                print('#Color')
                 return
-    print('
+    print('#Black&White')
 
 
 def main():

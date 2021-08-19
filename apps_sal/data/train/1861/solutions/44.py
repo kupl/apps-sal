@@ -23,6 +23,7 @@ class Solution:
                 for c_x in x_candidates:
                     if (c_x, c_y) in hashed:
                         min_area = min(min_area, abs(c_y - y) * abs(c_x - x))
+        # no rectangles
         if min_area == float('inf'):
             return 0
         return min_area

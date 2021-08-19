@@ -10,7 +10,7 @@ class Solution:
                 p1 += 1
             elif l1[p1] > l2[p2]:
                 p2 += 1
-            else:
+            else:  # ==
                 sum_so_far += max(sum(l1[last_p1:p1]), sum(l2[last_p2:p2]))
                 sum_so_far += l1[p1]
                 last_p1 = p1 + 1

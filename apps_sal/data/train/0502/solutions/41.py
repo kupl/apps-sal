@@ -10,6 +10,9 @@ class Solution:
         for node in initial:
             nodes = set()
             dfs(node)
+            # print(\"For initial node:\", node, \"the set is:\", nodes,
+            #     \"intersection is:\", sorted(nodes & initial))
             if len(nodes & initial) == 1:
                 rank[len(nodes)].append(node)
+        # print(\"Rank is:\", rank)
         return rank[max(rank)][0] if rank else min(initial)

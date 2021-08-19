@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     s = input()
@@ -15,4 +16,7 @@ for _ in range(int(input())):
             c += count01[i][0]
         else:
             c += count01[i][1]
+        # print("i=",i)
+        # print(c)
+        # print(count01)
     print(c)

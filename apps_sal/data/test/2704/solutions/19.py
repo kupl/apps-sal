@@ -1,3 +1,4 @@
+# cook your dish here
 
 def query(ar, k, a, b):
     return "Yes" if k <= a and k >= b else "No"

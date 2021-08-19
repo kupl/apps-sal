@@ -11,6 +11,8 @@ for i in range(n):
     l, r = map(int, sys.stdin.readline().split())
     ll[l].append((-r, i + 1))
     rr[r].append(i + 1)
+# print(ll)
+# print(rr)
 
 q = []
 ans = []
@@ -19,10 +21,14 @@ size = 0
 for i in range(1, N):
     for j in ll[i]:
         heappush(q, j)
+        # print(q)
         size += 1
 
     while size > k:
         cur = heappop(q)
+        # while vis[cur[1]]:
+        #     print(vis[cur],"pao")
+        #     cur = heappop(q)
         vis[cur[1]] = 1
         ans.append(cur[1])
         size -= 1

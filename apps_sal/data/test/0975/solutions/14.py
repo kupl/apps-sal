@@ -31,6 +31,8 @@ for j in range(10):
     elif i > 0:
         mord[i - 1] += -diff
 
+# print(mord2)
+# print(sherd2)
 
 for j in range(9):
     i = 9 - j

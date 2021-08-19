@@ -41,13 +41,16 @@ def rearrange(lines):
 
 
 def polygonArea(X, Y, n):
+    # Initialze area
     area = 0.0
 
+    # Calculate value of shoelace formula
     j = n - 1
     for i in range(0, n):
         area += (X[j] + X[i]) * (Y[j] - Y[i])
-        j = i
+        j = i   # j is previous vertex to i
 
+    # Return absolute value
     return int(abs(area / 2.0))
 
 
@@ -59,7 +62,7 @@ def mouse_path(s):
     lines = []
     X = [0]
     Y = [0]
-    direction = 1
+    direction = 1  # 1 for right, 2 for left, 3 for up and 4 for down
     number = ""
     for i in range(length):
         if s[i] == 'L' or s[i] == 'R':
@@ -113,6 +116,7 @@ def mouse_path(s):
     lines_copy = lines.copy()
     lines_entered = []
 
+    # testing for intersects
     while len(lines_copy) > 0:
 
         removeEntered = False

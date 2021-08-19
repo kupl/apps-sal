@@ -10,6 +10,7 @@ def distf(xyr, i, j):
 
 
 def main():
+    # 優先度付きキューを使わないダイクストラ
     xs, ys, xt, yt = list(map(int, input().split()))
     n = int(input())
     xyr = [list(map(int, input().split())) for _ in range(n)]

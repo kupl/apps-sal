@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 N = input()
 N = int(N)
@@ -6,7 +7,7 @@ A = list(map(int, A))
 
 
 def get_L(A):
-    L_candidates = []
+    L_candidates = []  # increasing list of indices with A smaller than anything considered so far
     L = A[:]
 
     for i in range(len(A)):

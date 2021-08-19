@@ -43,7 +43,7 @@ def gi():
 
 
 def gtc(tc, ans):
-    print(("Case
+    print(("Case #" + str(tc) + ":", ans))
 
 
 def cil(n, m):
@@ -59,7 +59,7 @@ def pro(a):
 
 
 def swap(a, i, j):
-    a[i], a[j]=a[j], a[i]
+    a[i], a[j] = a[j], a[i]
 
 
 def si():
@@ -84,18 +84,18 @@ def bo(i):
 
 def graph(n, m):
     for i in range(m):
-        x, y=mi()
+        x, y = mi()
         a[x].append(y)
         a[y].append(x)
 
 
-t=1
-uu=t
+t = 1
+uu = t
 
 
 def can(val):
-    p=val
-    c=0
+    p = val
+    c = 0
     for i in range(n):
         c += abs(a[i] - p)
         p += 1
@@ -104,19 +104,19 @@ def can(val):
 
 while t > 0:
     t -= 1
-    n=fi()
-    a=li()
-    l=-2 * max(a)
-    r=2 * max(a)
-    mini=10**18
+    n = fi()
+    a = li()
+    l = -2 * max(a)
+    r = 2 * max(a)
+    mini = 10**18
     while l <= r:
-        lmid=l + (r - l) // 3
-        rmid=r - (r - l) // 3
-        p1=can(lmid)
-        p2=can(rmid)
-        mini=min([mini, p1, p2])
+        lmid = l + (r - l) // 3
+        rmid = r - (r - l) // 3
+        p1 = can(lmid)
+        p2 = can(rmid)
+        mini = min([mini, p1, p2])
         if p1 >= p2:
-            l=lmid + 1
+            l = lmid + 1
         else:
-            r=rmid - 1
+            r = rmid - 1
     print(mini)

@@ -21,5 +21,5 @@ def solve(a):
     num = a
     while num % 2 == 0:
         power_of_two += 1
-        num = num / 2
+        num = num / 2  # This is an int because of while loop
     return power_of_two, a / (2 ** power_of_two)

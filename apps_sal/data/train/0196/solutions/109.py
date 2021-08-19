@@ -1,5 +1,14 @@
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
+        # Main idea: if we iterate over A twice to generate
+        # a prefix array, then we can get subarrays in const
+        # time by checking windows of size j - i <= len(A)
+
+        # Once we have the prefix array, this problem reduces
+        # to sliding window maximum (except we're looking for
+        # the minimum). With the sliding window minimum, we
+        # can then update the result with
+        # result = max(result, curr_elem - minimum)
 
         from collections import deque
         dq = deque()

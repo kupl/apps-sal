@@ -16,6 +16,7 @@ class Solution:
             que = [1]
             seen = set(que)
             for node in que:
+                #print(i, que)
                 for y in graph[i][node]:
                     if y not in seen:
                         seen.add(y)

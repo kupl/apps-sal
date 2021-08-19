@@ -1,5 +1,6 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
+        # build graph of bus_stop: routes
 
         graph = {}
         for i in range(len(routes)):
@@ -10,6 +11,7 @@ class Solution:
 
         visited_bus_stops = set()
         queue = []
+        # initialize queue with the initial bus stop
         queue.append(S)
         visited_bus_stops.add(S)
 

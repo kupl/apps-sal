@@ -22,6 +22,8 @@ class Solution:
 
         words = sorted(words, key=lambda x: len(x))
 
+        # print(words)
+
         words_by_len = {}
 
         for w in words:
@@ -29,6 +31,8 @@ class Solution:
                 words_by_len[len(w)].append(w)
             else:
                 words_by_len[len(w)] = [w]
+
+        # print(words_by_len)
 
         max_lens = {}
 
@@ -41,6 +45,7 @@ class Solution:
 
                 for w1 in words_by_len[l]:
                     for w2 in words_by_len[l - 1]:
+                        #print(w1, w2)
 
                         if self.predecessor(w2, w1):
                             max_lens[w1] = max(max_lens[w1], 1 + max_lens[w2])

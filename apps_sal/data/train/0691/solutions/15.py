@@ -14,4 +14,5 @@ for _ in range(int(input())):
                     k += 1
                     h[i] = 1
         maxx = max(k - 1, maxx)
+        # print(h)
     print(maxx)

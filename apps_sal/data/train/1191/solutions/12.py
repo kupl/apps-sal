@@ -4,6 +4,7 @@ test = int(input())
 for _ in range(test):
     n, q = map(int, input().split(' '))
     correct = []
+    # corrected = set(corrected)
     wrong = []
     for j in range(n):
      mydict = input()
@@ -30,6 +31,7 @@ for _ in range(test):
     correct = []
     allcorrect = []
     allwrong = []
+    # corrected = set(corrected)
     wrong = []
     for j in range(n):
         mydict = input()

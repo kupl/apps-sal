@@ -2,6 +2,7 @@ class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         return self.mergeSort(nums, 0, len(nums) - 1)
 
+    # 4 1 6 6 8 2
     def mergeSort(self, arr, i, j):
         if i == j:
             return [arr[i]]

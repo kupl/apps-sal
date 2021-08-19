@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     n = int(input())
     for j in range(n, -1, -1):

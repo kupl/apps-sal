@@ -1,3 +1,4 @@
+# ABC 140 C
 N = int(input())
 B = [int(i) for i in input().split()]
 ans = B[0] + B[-1]

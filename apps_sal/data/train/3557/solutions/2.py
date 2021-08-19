@@ -1,4 +1,8 @@
 def odd_count(n):
+    # Return number of positive odd numbers below N
+    # Find numbers below N -> Add +1 to count
+    # More of a math problem
+    # Try to find a way besides checking every individual integer.
 
     return(n // 2)
 

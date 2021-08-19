@@ -7,6 +7,7 @@ class Solution:
         def dp(i, f):
             if (f < 0):
                 return 0
+            # if (i == finish): return 1
 
             return (sum([dp(j, f - abs(locations[j] - locations[i])) for j in range(n) if j != i]) + (i == finish)) % kMod
         return int(dp(start, fuel))

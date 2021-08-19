@@ -5,6 +5,7 @@ class Solution:
         def recursive(curr, finish, fuel):
             key = (curr, fuel)
             count = 0
+            # print(key)
             if fuel < 0:
                 return 0
 

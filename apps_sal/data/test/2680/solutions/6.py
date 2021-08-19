@@ -1,3 +1,4 @@
+# your code goes here
 n, b = list(map(int, input().strip().split()))
 lx = list(map(int, input().strip().split()))
 ly = list(map(int, input().strip().split()))

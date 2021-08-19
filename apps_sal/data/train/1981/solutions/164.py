@@ -21,6 +21,7 @@ class Solution:
         pointer = len(nums) - 1
         res = 0
         while q.qsize() > 0:
+            # final_post[q.get()[1]] = sorted_nums[pointer]
             res += q.get()[0] * -1 * sorted_nums[pointer]
             pointer -= 1
 

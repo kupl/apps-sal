@@ -60,6 +60,7 @@ dp[sx][sy] = stt
 pq = PriorityQueue()
 pq.put((stt, sx, sy))
 while not pq.empty():
+    # print(dp)
     (t, cxx, cyy) = pq.get()
     if (cxx, cyy) in visited:
         continue

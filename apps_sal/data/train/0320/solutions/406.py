@@ -13,11 +13,13 @@ class Solution:
             a, b, c = steps(n // 2)
             return a + 1, b, c + 1
 
+        # print(steps(5))
         evens = 0
         odds = 0
         for num in nums:
             a, b, c = steps(num)
             odds += b
+            # print(num, a,b,c)
             evens = max(evens, c)
 
         return odds + evens

@@ -12,6 +12,7 @@ class Solution:
                 resset.update(tmp)
 
         for ci, col in enumerate(zip(*grid)):
+            # col = (row[ci] for row in grid)
             tmp = [(ri, ci) for ri, cell in enumerate(col) if cell]
 
             if len(tmp) >= 2:

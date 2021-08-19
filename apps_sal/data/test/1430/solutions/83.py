@@ -12,6 +12,7 @@ else:
                 right += 1
             else:
                 break
+    # print(right)
     right = max(right, 1)
     while(right < N and numofturn < K):
         if S[right] == "1" and S[right - 1] == "0":
@@ -22,6 +23,7 @@ else:
             right += 1
         else:
             break
+    # print(right)
     ans = right
     while(right < N and left < N):
         if numofturn == K:
@@ -43,5 +45,7 @@ else:
                     ans = max(ans, right - left)
                 else:
                     ans = max(ans, right - left)
+                # print(ans,left,right)
                 break
     print(ans)
+    # print(left,right)

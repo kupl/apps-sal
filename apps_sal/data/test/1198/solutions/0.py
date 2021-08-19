@@ -15,6 +15,7 @@ str = input().split()
 for i in range(1, n + 1):
     a[i] = int(str[i - 1])
     sum += a[i]
+    #print (sum)
     while h <= t and Q[h] <= i - len:
         h = h + 1
     while h <= t and a[i] <= a[Q[t]]:

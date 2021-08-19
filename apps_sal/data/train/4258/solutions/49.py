@@ -1,4 +1,5 @@
 def series_sum(n):
+    # term = 3n+1
     if n == 0:
         term = 0
     elif n > 0:

@@ -12,6 +12,7 @@ class Solution:
         for r in range(1, n):
             for i in range(10):
                 for m in nextMove[i]:
+                    # print(r,i,m)
                     dp[r][m] = dp[r][m] + dp[r - 1][i]
                     dp[r][m] %= MOD
         return sum(dp[-1]) % MOD

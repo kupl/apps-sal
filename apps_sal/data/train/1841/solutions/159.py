@@ -1,6 +1,7 @@
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
+        # mean_index = (len(arr) - 1) // 2
         mean = arr[(len(arr) - 1) // 2]
 
         arr2 = list(map(lambda x: abs(x - mean), arr))

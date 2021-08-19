@@ -10,6 +10,7 @@ sdp = [[30000] * 10 for i in range(1 << 7)]
 
 for i in range(1 << 7):
     for j in range(10):
+        # possible to append
         if (i & nums[j]) == i:
             raw = nums[j] - i
             count = 0

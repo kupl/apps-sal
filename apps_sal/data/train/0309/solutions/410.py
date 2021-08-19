@@ -13,6 +13,7 @@ class Solution:
             for j in range(i + 1, len(A) - 1):
                 if 2 * A[j] - A[i] in A_indices:
                     indices = A_indices[2 * A[j] - A[i]]
+                    # find earliest occurrence of 2 * A[j] + A[i] after j
                     if indices[-1] <= j:
                         continue
                     if indices[0] > j:

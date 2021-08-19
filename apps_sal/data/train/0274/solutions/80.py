@@ -6,13 +6,13 @@ class Solution:
         res, last = 0, -1
         maxQ, minQ = deque(), deque()
         for i, val in enumerate(nums):
-            while maxQ and nums[maxQ[0]] - val > limit:
+            while maxQ and nums[maxQ[0]] - val > limit:  # decrease
                 last = max(last, maxQ.popleft())
             while maxQ and val >= nums[maxQ[-1]]:
                 maxQ.pop()
             maxQ.append(i)
 
-            while minQ and val - nums[minQ[0]] > limit:
+            while minQ and val - nums[minQ[0]] > limit:  # increase
                 last = max(last, minQ.popleft())
             while minQ and val <= nums[minQ[-1]]:
                 minQ.pop()

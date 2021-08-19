@@ -41,5 +41,9 @@ def helper(L, last):
     else:
         assert(False)
 
+# print(solver([1, 3, 2, 0]))
+# print(solver([1, 3, 3, 2, 1, 2, 3]))
+# print(solver([2, 2]))
+
 
 main()

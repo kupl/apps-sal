@@ -1,5 +1,7 @@
 s = "What are you doing at the end of the world? Are you busy? Will you save us?"
 
+#fmt = 'What are you doing while sending "{}"? Are you busy? Will you send "{}"?'
+
 
 def L(n):
     return 143 * 2**n - 68 if n < 55 else 10**18

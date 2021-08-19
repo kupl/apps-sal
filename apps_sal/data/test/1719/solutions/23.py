@@ -26,3 +26,5 @@ for j in range(4):
         ans += dp[n][j][k]
         ans %= mod
 print(ans)
+
+# for i in range(n+1): print(dp[i])

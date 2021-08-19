@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 sysread = sys.stdin.readline
 read = sys.stdin.read

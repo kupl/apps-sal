@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
@@ -12,6 +14,7 @@ for i in range(n):
         if j & i:
             top2[j] = list(sorted(top2[j ^ i] + top2[j]))[2:]
 
+# print(top2)
 
 ans = list(map(sum, top2))
 

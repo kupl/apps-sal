@@ -1,5 +1,6 @@
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
+        # case 1, kadane's algo
         totalSum = sum(A)
         curr = A[0]
         maxSum = A[0]
@@ -11,6 +12,8 @@ class Solution:
                 curr = A[i]
 
             maxSum = max(maxSum, curr)
+
+        # case 2, wrapping
 
         curr = A[0]
         minSum = totalSum

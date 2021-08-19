@@ -4,11 +4,13 @@ from collections import deque
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
 
+        # construct graph
         n = len(arr)
         graph = collections.defaultdict(list)
         for i, num in enumerate(arr):
             graph[num].append(i)
 
+        # bfs
         queue = deque([0])
         visited = set([0])
 

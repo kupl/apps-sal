@@ -18,7 +18,7 @@ for _ in range(50000):
     r += (-r) % q
     A -= r
 
-A //= K
+A //= K  # grundy
 g = np.bitwise_xor.reduce(A)
 
 answer = 'Takahashi' if g else 'Aoki'

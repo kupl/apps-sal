@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     l1 = list(map(str, input().split()))
     l2 = list(map(str, input().split()))

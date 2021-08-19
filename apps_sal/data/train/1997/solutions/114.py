@@ -1,7 +1,9 @@
 class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         l = len(intervals)
+        # sorting the list so each element can only be compared with next element
         intervals.sort(key=lambda sl: sl[0], reverse=True)
+        # remove duplicate elements
         res = l
         print(intervals)
         for i in range(l - 1, 0, -1):

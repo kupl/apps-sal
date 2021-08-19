@@ -6,6 +6,8 @@ try:
             s, e, v = map(int, input().split())
             for i in range(s - 1, e):
                 l[i] *= v
+            # print(l)
+        # print(l,"ll")
         print(sum(l) // n)
 
 except:

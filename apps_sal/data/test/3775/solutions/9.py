@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 [n, m] = list(map(int, input().strip().split()))
 ais = list(map(int, input().strip().split()))
@@ -39,3 +40,6 @@ elif len(vabp) > 1:
     print(0)
 else:
     print(vabp.pop())
+
+
+# Made By Mostafa_Khaled

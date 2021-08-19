@@ -1,3 +1,4 @@
+# cook your dish here
 def binaryToDecimal(binary):
 
     binary1 = binary
@@ -29,5 +30,7 @@ while t != 0:
     b = int(input())
     a = int(binaryToDecimal(a))
     b = int(binaryToDecimal(b))
+    # print(a)
+    # print(b)
     print(add(a, b))
     t = t - 1

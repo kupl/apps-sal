@@ -13,6 +13,8 @@ class Solution:
         dist = [[float('inf')] * n for _ in range(n)]
         graph = defaultdict(list)
         for u, v, w in edges:
+            # graph[u].append((w,v))
+            # graph[v].append((w,u))
             dist[u][v] = w
             dist[v][u] = w
             dist[u][u] = 0

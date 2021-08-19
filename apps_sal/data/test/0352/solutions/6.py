@@ -1,3 +1,4 @@
+# A
 
 n = int(input())
 min1, max1 = list(map(int, input().split()))

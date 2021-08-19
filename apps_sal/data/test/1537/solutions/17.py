@@ -14,9 +14,12 @@ for r in range(n):
         extra += 1
         continue
     ri = row.rfind("B")
-    for i in range(max(ri - k + 1, 0), min(li + 1, sz)):
+    for i in range(max(ri - k + 1, 0), min(li + 1, sz)):  # ??????????????
         for j in range(max(0, r + 1 - k), min(sz, r + 1)):
+            # print("row:",r, li, ri, j, i)
             cnt[j][i] += 1
+# b = []
+# b.rindex(1)
 
 
 for c in range(n):
@@ -28,6 +31,7 @@ for c in range(n):
     ri = row.rfind("B")
     for i in range(max(ri - k + 1, 0), min(li + 1, sz)):
         for j in range(max(0, c + 1 - k), min(sz, c + 1)):
+            # print("col:",c, li, ri,i,j)
             cnt[i][j] += 1
 
 mx = 0
@@ -36,3 +40,5 @@ for i in range(sz):
         if cnt[i][j] > mx:
             mx = cnt[i][j]
 print(mx + extra)
+
+# print(cnt)

@@ -3,6 +3,7 @@ p2 = input().split(" ")
 p3 = input().split(" ")
 p4 = input().split(" ")
 
+# type 1, p1, p2
 version11 = int(p1[0]) > int(p3[1]) and int(p2[1]) > int(p4[0])
 version12 = int(p1[0]) > int(p4[1]) and int(p2[1]) > int(p3[0])
 version21 = int(p2[0]) > int(p3[1]) and int(p1[1]) > int(p4[0])

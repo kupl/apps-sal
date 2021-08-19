@@ -1,3 +1,4 @@
+# cook your dish here
 N = int(input())
 while(N):
     income = int(input())

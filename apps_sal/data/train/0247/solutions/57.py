@@ -27,11 +27,13 @@ class Solution:
             dr[reverse_cumulative[i]] = i
 
             if (cumulative[i] - target) in d:
+                #    print(\"found\",cumulative[i]-target,\"!\")
                 l = i - d[cumulative[i] - target]
                 best1 = min(best1, l)
 
             forward_vals[i] = best1
 
+            #   print(\"the subarray with sum=target is\",(start+1,i))
             if (reverse_cumulative[i] - target) in dr:
                 l = i - dr[reverse_cumulative[i] - target]
                 best2 = min(best2, l)
@@ -39,6 +41,9 @@ class Solution:
             backward_vals[i] = best2
 
             i += 1
+       # print(cumulative,reverse_cumulative)
+        # print(d,dr)
+        # print(forward_vals,backward_vals)
         best1 = math.inf
         for i in range(len(forward_vals) - 1):
             best1 = min(best1, forward_vals[i] + backward_vals[(length - 2) - i])
@@ -46,3 +51,4 @@ class Solution:
         if best1 == math.inf:
             return -1
         return best1
+        # print(d)

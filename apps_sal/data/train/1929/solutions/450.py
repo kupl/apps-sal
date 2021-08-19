@@ -51,6 +51,9 @@ class StreamChecker:
         return self.trie.exists(self.stream)
 
 
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)
 '''
 cd, f, kl
 

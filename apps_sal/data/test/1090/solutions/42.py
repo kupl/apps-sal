@@ -24,11 +24,14 @@ def resolve():
     N, K = LI()
     S = SS()
 
+    # 最初の幸福度
     h = 0
     for i in range(N - 1):
         if S[i] == S[i + 1]:
             h += 1
 
+    # YX...XYに対して操作をすると幸福人数を2増やせる
+    # 端X...XYに対して操作をすると幸福人数を1増やせる
     cnt = 0
     for i in range(N - 1):
         if S[i] != S[i + 1]:

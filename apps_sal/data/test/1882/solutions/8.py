@@ -1,3 +1,4 @@
+# https://codeforces.com/contest/913/problem/D
 import heapq
 from heapq import heappush as push_
 from heapq import heappop as pop_
@@ -62,3 +63,23 @@ def solve(a, n, T):
 n, T = list(map(int, input().split()))
 a = [list(map(int, input().split())) + [_] for _ in range(n)]
 solve(a, n, T)
+
+# 5 300
+# 3 100
+# 4 150
+# 4 80
+# 2 90
+# 2 300
+
+# 7 100
+# 5 30
+# 5 40
+# 6 20
+# 2 50
+# 2 40
+# 3 10
+# 4 10
+
+# 2 100
+# 1 787
+# 2 788

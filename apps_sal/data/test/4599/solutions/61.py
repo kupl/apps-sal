@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 N = int(input())
 A = list(int(x) for x in input().split())
 

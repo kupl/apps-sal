@@ -1,4 +1,5 @@
 def solution(string, ending):
+    # your code here...
     if ending == '':
         return True
     else:

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 c = [list(map(int, input().split())) for i in range(3)]
 

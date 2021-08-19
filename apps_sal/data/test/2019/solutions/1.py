@@ -2,6 +2,7 @@ from collections import deque
 from sys import stdin, stdout
 import math
 input = stdin.readline
+#print = stdout.write
 
 for _ in range(int(input())):
     x = input()

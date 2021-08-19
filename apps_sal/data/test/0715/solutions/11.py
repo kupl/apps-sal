@@ -1,4 +1,5 @@
 import sys
+#sys.stdin = open('input.txt', 'r')
 t, a = input().split('.')
 t, b = input().split('.')
 t, c = input().split('.')

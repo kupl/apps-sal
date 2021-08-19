@@ -11,6 +11,7 @@ class Solution:
         mine = 0
         size = len(maxheap)
         while size > 0:
+            # pop and give the largest one for Alice
             heapq.heappop(maxheap)
             middle = heapq.heappop(maxheap)
             middle *= (-1)

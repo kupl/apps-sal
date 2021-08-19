@@ -1,3 +1,4 @@
+# ABC 133 D
 N = int(input())
 A_list = list(map(int, input().split()))
 x_list = [0] * N

@@ -8,3 +8,4 @@ def sum_array(arr):
         if i not in [mi, ma]:
             st += i
     return st
+    # your code here

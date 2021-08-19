@@ -8,7 +8,7 @@ for i in range(2**h):
         count = 0
         for m in range(h):
             for n in range(w):
-                if (((i >> m) & 1) == 0 and ((j >> n) & 1) == 0 and c[m][n] == "
+                if (((i >> m) & 1) == 0 and ((j >> n) & 1) == 0 and c[m][n] == "#"):
                     count += 1
         if count == k:
             ans += 1

@@ -4,7 +4,7 @@ class Solution:
         count = 0
         for x in arr:
             corresp = abs(k - x % k)
-            if corresp in hashtable:
+            if corresp in hashtable:  # and k - corresp != corresp:
                 if k - corresp == corresp:
                     if hashtable[corresp] == 1:
                         hashtable[corresp] = 0
@@ -13,7 +13,7 @@ class Solution:
                 else:
                     hashtable[corresp] -= 1
             elif k - corresp in hashtable:
-                if k - corresp != 0:
+                if k - corresp != 0:  # and 2 * corresp != k:
                     hashtable[k - corresp] += 1
                 else:
                     hashtable[k - corresp] = 0

@@ -20,13 +20,28 @@ class Solution:
         if index == len(customers):
             return self.serve_remaining_people(waiting, boardingCost, runningCost, depth)
 
+        # free gondola
         waiting += customers[index]
         gondola = min(waiting, 4)
         waiting -= gondola
 
+        # try rotating
         profit, rotations = self.min_operations_max_profit_recurse(customers, index + 1, boardingCost, runningCost, waiting, depth + 1)
         profit += gondola * boardingCost - runningCost
 
         if profit <= 0:
             return -1, -1
+        # print(profit, rotations)
         return profit, rotations
+
+#         [10,9,6]
+#         6
+#         4
+
+#         0: 4 * 6 - 4 = 24 - 4
+#         1: 4 * 6 - 4
+#         2:
+#         waiting = 11
+#         index = 1
+#         gondola = 4
+#         depth = 1

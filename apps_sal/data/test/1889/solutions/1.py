@@ -22,10 +22,14 @@ for i in range(n):
     s.append(si)
     t.append(getMax(si))
 
+# res = max(t)
+
+# print(t)
 
 for qi in range(q):
     i, j = list(map(int, input().split()))
     s[i - 1][j - 1] = int(not s[i - 1][j - 1])
     t[i - 1] = getMax(s[i - 1])
+    # print(t)
     res = max(t)
     print(res)

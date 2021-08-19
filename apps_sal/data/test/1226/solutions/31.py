@@ -1,6 +1,13 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
 
 
 n, a, b = list(map(int, input().split()))
+
+
+# In[2]:
 
 
 def nCk(n, k, mod):
@@ -16,7 +23,13 @@ def nCk(n, k, mod):
     return a
 
 
+# In[3]:
+
+
 mod = 10**9 + 7
 ans = pow(2, n, mod) - 1
 ans -= nCk(n, a, mod) + nCk(n, b, mod)
 print((ans % mod))
+
+
+# In[ ]:

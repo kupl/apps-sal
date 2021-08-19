@@ -1,7 +1,7 @@
 c = input().split()
-n = int(c[0])
-t = int(c[1])
-c = input().split()
+n = int(c[0])  # ���������� �����
+t = int(c[1])  # ����� ������
+c = input().split()  # �������
 
 for i in range(n - 1):
     c[i] = int(c[i])

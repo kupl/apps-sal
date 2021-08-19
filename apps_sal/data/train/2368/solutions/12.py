@@ -1,5 +1,7 @@
+# necessary imports
 import sys
 input = sys.stdin.readline
+# from math import ceil, floor, factorial;
 
 
 def ceil(x):
@@ -7,17 +9,23 @@ def ceil(x):
         x = int(x) + 1
     return x
 
+# swap_array function
+
 
 def swaparr(arr, a, b):
     temp = arr[a]
     arr[a] = arr[b]
     arr[b] = temp
 
+# gcd function
+
 
 def gcd(a, b):
     if b == 0:
         return a
     return gcd(b, a % b)
+
+# nCr function efficient using Binomial Cofficient
 
 
 def nCr(n, k):
@@ -28,6 +36,8 @@ def nCr(n, k):
         res = res * (n - i)
         res = res / (i + 1)
     return int(res)
+
+# upper bound function code -- such that e in a[:i] e < x;
 
 
 def upper_bound(a, x, lo=0, hi=None):
@@ -41,8 +51,11 @@ def upper_bound(a, x, lo=0, hi=None):
             hi = mid
     return lo
 
+# prime factorization
+
 
 def primefs(n):
+    # if n == 1    ## calculating primes
     primes = {}
     while(n % 2 == 0 and n > 0):
         primes[2] = primes.get(2, 0) + 1
@@ -53,7 +66,11 @@ def primefs(n):
             n = n // i
     if n > 2:
         primes[n] = primes.get(n, 0) + 1
+    # prime factoriazation of n is stored in dictionary
+    # primes and can be accesed. O(sqrt n)
     return primes
+
+# MODULAR EXPONENTIATION FUNCTION
 
 
 def power(x, y, p):
@@ -68,12 +85,23 @@ def power(x, y, p):
         x = (x * x) % p
     return res
 
+# DISJOINT SET UNINON FUNCTIONS
+
 
 def swap(a, b):
     temp = a
     a = b
     b = temp
     return a, b
+
+# find function with path compression included (recursive)
+# def find(x, link):
+#     if link[x] == x:
+#         return x
+#     link[x] = find(link[x], link);
+#     return link[x];
+
+# find function with path compression (ITERATIVE)
 
 
 def find(x, link):
@@ -88,6 +116,8 @@ def find(x, link):
     return p
 
 
+# the union function which makes union(x,y)
+# of two nodes x and y
 def union(x, y, link, size):
     x = find(x, link)
     y = find(y, link)
@@ -96,6 +126,8 @@ def union(x, y, link, size):
     if x != y:
         size[x] += size[y]
         link[y] = x
+
+# returns an array of boolean if primes or not USING SIEVE OF ERATOSTHANES
 
 
 def sieve(n):
@@ -109,6 +141,7 @@ def sieve(n):
     return prime
 
 
+#### PRIME FACTORIZATION IN O(log n) using Sieve ####
 MAXN = int(1e5 + 5)
 
 
@@ -123,6 +156,11 @@ def spf_sieve():
             for j in range(i * i, MAXN, i):
                 if spf[j] == j:
                     spf[j] = i
+    # function for storing smallest prime factors (spf) in the array
+
+################## un-comment below 2 lines when using factorization #################
+# spf = [0 for i in range(MAXN)]
+# spf_sieve();
 
 
 def factoriazation(x):
@@ -131,6 +169,10 @@ def factoriazation(x):
         ret[spf[x]] = ret.get(spf[x], 0) + 1
         x = x // spf[x]
     return ret
+    # this function is useful for multiple queries only, o/w use
+    # primefs function above. complexity O(log n)
+
+# taking integer array input
 
 
 def int_array():
@@ -140,16 +182,20 @@ def int_array():
 def float_array():
     return list(map(float, input().strip().split()))
 
+# taking string array input
+
 
 def str_array():
     return input().strip().split()
 
 
+# defining a couple constants
 MOD = int(1e9) + 7
 CMOD = 998244353
 INF = float('inf')
 NINF = -float('inf')
 
+################### ---------------- TEMPLATE ENDS HERE ---------------- ###################
 
 for _ in range(int(input())):
     n = int(input())

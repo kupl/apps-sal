@@ -16,6 +16,8 @@ for k, v in P.items():
         S[i + 1] = S[i] + v[i]
     PS[k] = S
 
+# print(P)
+# print(PS)
 A, B, C, D = len(PS[W1]), len(PS[W1 + 1]), len(PS[W1 + 2]), len(PS[W1 + 3])
 ans = 0
 for a in range(A):

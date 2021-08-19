@@ -7,6 +7,7 @@ class Solution:
         res = 1 + len(nums)
 
         for i in range(1, len(nums)):
+            # print(deque)
             cur += nums[i]
             while deque and cur - deque[0][1] >= k:
                 res = min(res, i - deque[0][0])

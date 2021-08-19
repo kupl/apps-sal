@@ -7,5 +7,6 @@ class LCG(object):
         self.x_n = seed
 
     def random(self):
+        # Update x_n with calculated x_n1
         self.x_n = (self.a * self.x_n + self.c) % self.m
         return self.x_n / 10

@@ -1,3 +1,4 @@
+# cook your dish here
 def solve(edges, ans):
     n = len(edges)
     visited = set()

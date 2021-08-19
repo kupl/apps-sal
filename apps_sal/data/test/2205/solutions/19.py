@@ -6,6 +6,7 @@
 from sys import stdin, stdout
 
 
+# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 val1 = 0

@@ -3,6 +3,7 @@ n, K = map(int, input().split())
 mod = 998244353
 cnt1 = 0
 A = [list(map(int, input().split())) for _ in range(n)]
+# 使えるUnionFind
 
 
 class UnionFind():

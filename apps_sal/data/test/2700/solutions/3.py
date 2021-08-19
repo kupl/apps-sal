@@ -11,3 +11,8 @@ while t > 0:
         else:
             break
     print(count)
+    # for i in range(a,b+1):
+    #   for j in range(c,d+1):
+    #       if i<j:
+    #           count += 1
+    # print count

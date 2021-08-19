@@ -9,6 +9,8 @@ for i in range(1, N):
     L.append(gcd(L[-1], A[i]))
     R.append(gcd(R[-1], A[-1 - i]))
 R = R[::-1]
+# print(L)
+# print(R)
 
 ans = 1
 for j in range(N):
@@ -18,6 +20,7 @@ for j in range(N):
         tmp = L[N - 2]
     else:
         tmp = gcd(L[j - 1], R[j + 1])
+    # print(j,tmp)
     ans = max(ans, tmp)
 
 print(ans)

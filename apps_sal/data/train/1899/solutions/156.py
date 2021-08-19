@@ -1,5 +1,6 @@
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
+        # allow change A
         m = len(A)
         n = len(A[0])
         q = collections.deque([])
@@ -12,6 +13,7 @@ class Solution:
             else:
                 continue
             break
+        # print(q, newq)
         while q:
             x, y = q.popleft()
             A[x][y] = 2
@@ -22,6 +24,8 @@ class Solution:
                     newq.append((nx, ny))
                     q.append((nx, ny))
 
+        # print(q, newq)
+        # print(A)
         steps = 0
         while newq:
             newsize = len(newq)

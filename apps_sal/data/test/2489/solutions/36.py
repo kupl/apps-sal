@@ -11,6 +11,8 @@ for i in range(1, n):
 
 for i in a:
     for j in range(i * 2, ma + 1, i):
+        # if dp[j]==1:
+        # break
         dp[j] = 1
 
 ans = 0

@@ -12,6 +12,7 @@ class Solution:
         :rtype: int
         """
         import random
+        # if only one element
         if len(self.nums) == 1:
             return 0
 
@@ -26,3 +27,20 @@ class Solution:
                         ans = i
                 idx += 1
         return ans
+
+        # result = -1
+        # index = 0
+        # for i in range(0, len(self.nums), 1):
+        #     if self.nums[i] == target:
+        #         if result == -1:
+        #             result = i
+        #         else:
+        #             if random.randint(0, index) == 0:
+        #                 result = i
+        #         index += 1
+        # return result
+
+
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(nums)
+# param_1 = obj.pick(target)

@@ -14,6 +14,7 @@ start = nums.index(m)
 
 ans = 1
 
+# for left side
 for i in range(start - 1, -1, -1):
     if nums[i] > m:
         leftm += 1

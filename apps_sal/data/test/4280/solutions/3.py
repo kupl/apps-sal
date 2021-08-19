@@ -53,3 +53,10 @@ while len(q) > 0:
         next_color += 1
 
 print(' '.join([str(color[e] + 1) for e in edges]))
+
+
+# for i in range(n):
+#     print("Node", i)
+#     for j in neigh[i]:
+#         e = norm_edge(i, j)
+#         print("    ", e, color[e])

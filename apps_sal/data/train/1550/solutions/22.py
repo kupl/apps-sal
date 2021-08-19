@@ -1,3 +1,4 @@
+# Coded By Ujjwal Bharti
 def binary(x):
     result = []
     while x != 0:
@@ -26,6 +27,7 @@ def xnor(a, b):
     if count != len(bbin):
         while len(bbin) != count:
             bbin.append(0)
+    # print(abin,bbin)
     i = 0
     while i < count:
         if (bbin[i] == 0 and abin[i] == 0) or (bbin[i] == 1 and abin[i] == 1):
@@ -33,10 +35,13 @@ def xnor(a, b):
         else:
             final.append(0)
         i += 1
+    # print(abin,bbin,final)
     ans = 0
     i = 0
+    # print(final)
     for dig in final:
         ans += (dig * (2**i))
+        # print(ans)
         i += 1
     return ans
 
@@ -46,6 +51,7 @@ for _ in range(tulu):
     a, b, n = [int(x) for x in input().split()]
     x = a ^ b
     y = xnor(a, b)
+    # print(y)
     value1 = x
     value2 = y
     if n % 3 == 1:

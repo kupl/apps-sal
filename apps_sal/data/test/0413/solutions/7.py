@@ -1,3 +1,5 @@
+#import sys
+# sys.setrecursionlimit(20000)
 def f(): return input()
 
 
@@ -28,4 +30,5 @@ def click():
 
 click()
 
+# print(dp)
 print(dp[m])

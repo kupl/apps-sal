@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def main():
     na = list(map(int, input().split()))

@@ -23,12 +23,15 @@ if(c <= k):
         else:
             if(i > lini):
                 lini = i
+            # print(c,2*b[i])
             if(c + b[i] <= k):
+                # print("why")
                 b[i + 1] += 2 * b[i]
                 c += b[i]
                 b[i] = 0
             else:
                 gfati = 1
+    # print(c,lini)
     if(1):
         for i in range(lini, 1000005, 1):
             if(c == k):

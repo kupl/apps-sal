@@ -27,7 +27,7 @@ def main():
         e_cnt += 1
 
     if e_cnt == 0:
-        return 1
+        return 1  # any
     if e_cnt == 1:
         return 1 + list(vx_to_cnt.keys())[0]
 

@@ -5,4 +5,4 @@ for _ in range(int(input())):
         s, p, v = list(map(int, input().split()))
 
         arr[i] = (p // (s + 1)) * v
-    print(max(arr))
+    print(max(arr))  # cook your dish here

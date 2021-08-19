@@ -11,10 +11,11 @@ class Combinatorics:
             mod (int): a prime number. The order of the field Z/(mod)Z over which nCr is calculated.
         '''
         self.mod = mod
-        self.fact = [0] * (N + 1)
-        self.inverse = [None] + [0] * N
-        self.fact_inverse = [0] * (N + 1)
+        self.fact = [0] * (N + 1)           # n!
+        self.inverse = [None] + [0] * N   # inverse of n in the field Z/(MOD)Z
+        self.fact_inverse = [0] * (N + 1)   # inverse of n! in the field Z/(MOD)Z
 
+        # preprocess
         self.fact[0] = self.fact[1] = 1
         self.fact_inverse[0] = self.fact_inverse[1] = 1
         self.inverse[1] = 1

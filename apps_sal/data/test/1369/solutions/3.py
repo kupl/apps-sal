@@ -27,7 +27,7 @@ def solve():
     def circumcircle(a, b, c):
         n = (a - b) * abs(c) ** 2 + (b - c) * abs(a) ** 2 + (c - a) * abs(b) ** 2
         d = (a - b) * c.conjugate() + (b - c) * a.conjugate() + (c - a) * b.conjugate()
-        return n / d
+        return n / d  # center of circumcircle
 
     err = 10 ** -7
     for p1, p2, p3 in combinations(points, 3):
@@ -39,6 +39,7 @@ def solve():
         c = circumcircle(p1, p2, p3)
         r = abs(p1 - c)
         for p in points:
+            # if abs(p - c) > r:
             if abs(p - c) - r > err:
                 break
         else:

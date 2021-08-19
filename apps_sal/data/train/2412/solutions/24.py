@@ -27,4 +27,5 @@ class Solution:
             if newS == S:
                 return S
             S = newS
+            # print(S)
         return S

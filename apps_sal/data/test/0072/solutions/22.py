@@ -13,6 +13,9 @@ for i in range(0, 3):
     for l in words[i]:
         bank[i][ord(l) - 65] += 1
 
+    # if sum(bank[i]) == max(bank[i]):
+       # max(bank)-=1
+
     summ = sum(bank[i])
 
     if summ == max(bank[i]) and n == 1:
@@ -38,5 +41,5 @@ else:
 
         else:
 
-            if katie == shiro or katie == kuro or shiro == kuro:
+            if katie == shiro or katie == kuro or shiro == kuro:  # AT LEAST TWO share ... :(
                 print("Draw")

@@ -9,10 +9,13 @@ def resolve():
         if dp[req] < a:
             dp[req] = a
             candidates[req] = a
+    # print(dp)
+    # print(candidates)
     for i in range(N + 1):
         for n_match, num in candidates.items():
             if i - n_match >= 0 and dp[i - n_match] != 0:
                 dp[i] = max(dp[i], dp[i - n_match] * 10 + num)
+    # print(dp)
     print(dp[N])
 
 

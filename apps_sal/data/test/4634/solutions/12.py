@@ -35,6 +35,8 @@ def main():
         t -= 1
 
         n = int(input())
+        # s = input().strip()
+        # x,y = map(int, input().strip().split(" "))
         arr = list(map(int, input().strip().split(" ")))
 
         solve(n, arr)
@@ -52,6 +54,7 @@ def test():
 
     for i in range(test_cases):
         k = []
+        # s = ''.join(random.choices(string.ascii_lowercase, k = str_size))
 
         for j in range(arr_size):
             num = randrange(min_range, max_range, step)
@@ -65,6 +68,7 @@ def test():
 
 def __starting_point():
     main()
+    # test()
 
 
 __starting_point()

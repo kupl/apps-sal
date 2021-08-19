@@ -1,3 +1,7 @@
+# coding: utf-8
+# 整数の入力
+#a = int(raw_input())
+# スペース区切りの整数の入力
 import heapq
 N = int(input())
 

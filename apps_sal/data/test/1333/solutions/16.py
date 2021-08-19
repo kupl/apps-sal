@@ -5,12 +5,12 @@ m = int(a[1])
 
 for i in range(n):
     if i % 2 == 0:
-        print("
+        print("#" * m)
     else:
         if i % 4 == 3:
 
-            s= "
+            s = "#" + "." * (m - 1)
             print(s)
         else:
-            s="." * (m - 1) + "
+            s = "." * (m - 1) + "#"
             print(s)

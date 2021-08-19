@@ -30,6 +30,7 @@ def count(matr, x):
     return c
 
 
+# 1
 if len(points_wall):
     print(2)
 else:

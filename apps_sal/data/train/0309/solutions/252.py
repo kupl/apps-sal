@@ -11,9 +11,12 @@ class Solution:
         for i, v in enumerate(A):
             dp[i] = {}
 
+            # print(f'--------- PROCESSING INDEX {i}')
             for j, w in enumerate(A[:i]):
                 d = v - w
                 dp[i][d] = dp[j].get(d, 1) + 1
                 global_best = max(global_best, dp[i][d])
+
+        # print(dp)
 
         return global_best

@@ -10,6 +10,7 @@ for i in range(t):
     v = 1
     cnt = 0
     while cnt < n:
+        #v = randint(1, 10**6)
         if all(visited[a + v] != i for a in A):
             for a in A:
                 visited[a + v] = i
@@ -60,10 +61,17 @@ for _ in range(t):
         brr[cnt] = i
 
         for v in arr:
+            #if i+v>2e6:
+            #    break
             dic[i+v] = 1
             tmp[i+v] = 1
         cnt += 1
         '''
+        # while any(dic[a + i] != 0 for a in arr):
+        #    i += 1
+
+        # while check3(arr, i, dic):
+        #    i += 1
 
         ok = True
         for a in arr:

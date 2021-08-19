@@ -5,6 +5,7 @@ for _ in range(M):
     L.append(l)
     R.append(r)
 
+# 共通部分を求め、共通部分が無ければ0を出力する
 m = max(L)
 M = min(R)
 if M >= m:

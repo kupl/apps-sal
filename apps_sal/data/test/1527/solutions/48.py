@@ -15,8 +15,8 @@ dy = [0, -1, 0, 1]
 def bfs(x, y):
     dp = [[10000000] * W for _ in range(H)]
     dp[y][x] = 0
-    if L[y][x] == '
-    return dp
+    if L[y][x] == '#':
+        return dp
     else:
         d = deque()
         d.append([x, y])

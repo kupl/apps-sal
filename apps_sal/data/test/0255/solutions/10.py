@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 nb = int(input())
 boys = list(map(int, input().split(' ')))

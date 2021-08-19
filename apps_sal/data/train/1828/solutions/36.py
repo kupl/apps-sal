@@ -33,4 +33,5 @@ class Solution:
             while temp:
                 val, key = temp.pop()
                 heapq.heappush(heap, (val, key))
+            # print(\"This is heap:\",heap)
         return op[1:]

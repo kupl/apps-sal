@@ -1,4 +1,5 @@
 def kk(): return map(int, input().split())
+# k2=lambda:map(lambda x:int(x)-1, input().split())
 def ll(): return list(kk())
 
 

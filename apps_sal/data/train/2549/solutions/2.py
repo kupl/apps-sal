@@ -1,5 +1,6 @@
 class Solution:
     def reorderSpaces(self, text: str) -> str:
+        # count the number of space
         cnt_space = 0
         cnt_words = 0
         for i in range(len(text)):
@@ -7,6 +8,7 @@ class Solution:
                 cnt_space += 1
             elif cnt_words == 0 or text[i - 1] == ' ':
                 cnt_words += 1
+        # calculate extra space nad calculate avg space
         extra_space = 0
         avg_space = 0
         if cnt_words < 2:
@@ -15,6 +17,7 @@ class Solution:
             extra_space = cnt_space % (cnt_words - 1)
             avg_space = cnt_space // (cnt_words - 1)
 
+        #
         result = ''
         word_appeared = False
         for i in range(len(text)):

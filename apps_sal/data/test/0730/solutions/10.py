@@ -29,17 +29,17 @@ def main():
         if i <= b1:
             print('O.', end='')
         else:
-            print('
+            print('#.', end='')
     print('|D|)')
     print("|", end='')
     for i in range(1, 12):
         if i <= b2:
             print('O.', end='')
         else:
-            print('
+            print('#.', end='')
     print('|.|')
     if b3 == 0:
-        print("|
+        print("|#.......................|")
     else:
         print("|O.......................|")
     print("|", end='')
@@ -47,7 +47,7 @@ def main():
         if i <= b4:
             print('O.', end='')
         else:
-            print('
+            print('#.', end='')
     print('|.|)')
     print("+------------------------+")
 

@@ -5,8 +5,8 @@ from collections import defaultdict
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         result = 0
-        starterAtIdx = []
-        fullSeqAtIdx = []
+        starterAtIdx = []  # starterAtIdx[i] = {numbers}, where each next num is A[i] + A[j] where j < i
+        fullSeqAtIdx = []  # fullSeqAtIdx[i] = {num: length}, where num is next number in seq of length
         for idx, num in enumerate(A):
             starter = set()
             fullSeq = defaultdict(int)

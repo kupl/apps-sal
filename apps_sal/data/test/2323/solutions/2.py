@@ -60,6 +60,7 @@ for i in range(q):
     start = 0
 
     end = n - 2
+    # print(maxrange,diffs)
     while start <= end:
 
         mid = (start + end) // 2
@@ -69,6 +70,8 @@ for i in range(q):
 
         else:
             end = mid - 1
+
+    # print(end)
 
     if end == -1:
         pass

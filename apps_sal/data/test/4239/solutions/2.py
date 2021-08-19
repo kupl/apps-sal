@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def count(val1, val2):
     digit = 1

@@ -45,9 +45,11 @@ class Solution:
                         temp = dic[x - 1]
 
                         y[dic[x - 1]] = y[x]
+                        # dic[x] = dic[x-1]
                         dic[dic[x - 1]] = dic[x + 1]
 
                         y[dic[x + 1]] = y[x]
+                        # dic[x] = dic[x+1]
                         dic[dic[x + 1]] = temp
 
                         if oldr == m:
@@ -71,9 +73,13 @@ class Solution:
         n = len(arr)
 
         s = [0] * (n + 1)
+        # narr = [(x,idx) for idx, x in enumerate(arr)]
+        # x = sorted(narr,key=lambda x: x[0])
         last = -1
         cur_count = 0
         for idx, x in enumerate(arr):
+            # print(s,idx,x,cur_count)
+            # s[x] = 1
             cur_count = count_cluster(s, x, cur_count)
             if cur_count > 0:
                 last = idx + 1

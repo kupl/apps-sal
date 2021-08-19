@@ -6,7 +6,7 @@ def find(x):
     if par[x] < 0:
         return x
     else:
-        par[x] = find(par[x])
+        par[x] = find(par[x])  # 経路圧縮
         return par[x]
 
 

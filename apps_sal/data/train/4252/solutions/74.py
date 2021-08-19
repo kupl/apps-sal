@@ -10,3 +10,4 @@ def merge_arrays(first, second):
             i = i + 1
 
     return result
+    # your code here

@@ -33,3 +33,38 @@ class Solution:
                 UF.union(indexes[i], indexes[i + 1])
 
         return max(Counter([UF.find(i) for i in range(n)]).values())
+
+# class Solution:
+#     def largestComponentSize(self, A: List[int]) -> int:
+#         # go through A,
+#         # try each element from each group
+#         ## if divides on element - accumulate groups, combine groups, add to group
+#         ## else create new group
+#         groups = []
+#         for n in A:
+#             indexesOfGroups = []
+#             added = False
+#             for i, g in enumerate(groups):
+#                 for e in g:
+#                     g = gcd(n, e)
+#                     if g > 1:
+#                         indexesOfGroups.append(i)
+#                         added = True
+#                         break
+#             if not added:
+#                 groups.append([n])
+#                 continue
+#             if indexesOfGroups:
+#                 mainGrIdx = indexesOfGroups[0]
+#                 mainGr = groups[mainGrIdx]
+#                 for i in range(len(indexesOfGroups)-1, 0, -1):
+#                     idx = indexesOfGroups[i]
+#                     mainGr.extend(groups[idx])
+#                     del groups[idx]
+#                 mainGr.append(n)
+#         # print(groups)
+
+#         mx = 0
+#         for g in groups:
+#             mx = max(mx, len(g))
+#         return mx

@@ -24,6 +24,7 @@ for _ in range(int(input())):
             elif col[j] == 0:
                 col[j] = 1
                 de.append(j)
+            # print(de)
             c = 1
             c1 = 1
             while len(de):
@@ -45,10 +46,12 @@ for _ in range(int(input())):
                 if col[i] == col[j]:
                     flag = 1
                     break
+        # print(col)
         k = 1
         if flag == 1:
             stdout.write(str(0) + '\n')
         else:
+            # print(d)
             for i in d:
                 if i[0] != 1:
                     k1 = pow(2, i[1], mod)
@@ -57,3 +60,4 @@ for _ in range(int(input())):
             k *= pow(3, ans3, mod)
             k %= mod
             stdout.write(str(k) + '\n')
+            # print(ans1,ans2,ans3,flag)

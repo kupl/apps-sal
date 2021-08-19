@@ -11,9 +11,12 @@ def go():
             return ''.join(ans)
 
 
+# x,s = map(int,input().split())
 t = int(input())
+# t=1
 ans = []
 for _ in range(t):
+    # go()
     ans.append(str(go()))
 
 print('\n'.join(ans))

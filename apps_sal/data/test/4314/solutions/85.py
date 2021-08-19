@@ -24,14 +24,14 @@ def main():
     l = []
     for i in range(h):
         a = input()
-        if "
-        l.append(a)
+        if "#" in a:
+            l.append(a)
     l = [list(i) for i in zip(*l)]
     ans = []
 
     for i in l:
-        if "
-        ans.append(i)
+        if "#" in i:
+            ans.append(i)
 
     ans = [i for i in zip(*ans)]
     for i in ans:

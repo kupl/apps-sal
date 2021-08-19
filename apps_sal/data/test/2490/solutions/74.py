@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 
 
@@ -7,7 +8,7 @@ def lr(): return list(map(int, sr().split()))
 
 
 N = sr()
-dp = [0, 1]
+dp = [0, 1]  # ちょうど払う最小枚数、１円多くはらう最小枚数
 for x in N:
     x = int(x)
     prev = dp[:]
@@ -16,3 +17,4 @@ for x in N:
 
 answer = dp[0]
 print(answer)
+# 33

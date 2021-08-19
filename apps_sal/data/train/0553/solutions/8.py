@@ -9,11 +9,18 @@ def flistinp(func=int): return list(map(func, fip().split()))
 def fnsepline(n, func=str): return [func(fip()) for _ in range(n)]
 
 
+# -------------------code------------------------
+
+
 @lru_cache(maxsize=1 << 20)
 def byeqs(pqr, abc):
+    # f_ans = 3
     p, q, r = pqr
     a, b, c = abc
+    # zeq = a*(r-q) + b*(p-r) + c*(q-p)
+    # m=n=None # for y = mx + n
     muls = []
+    # if zeq==0:
     try:
         if p != q:
             m_ = (a - b) // (p - q)

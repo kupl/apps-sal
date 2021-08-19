@@ -13,6 +13,7 @@ d = 80 * (h + w - 1) + 1
 D = 2 * d + 1
 dp[0][0] = np.zeros(D, np.bool)
 dp[0][0][C[0][0] + d] = 1
+#dp[0][0][-C[0][0]+d] = 1
 for i in range(h):
     for j in range(w):
         c = C[i][j]
@@ -33,8 +34,10 @@ for i in range(h):
             b[c:] |= dp[i - 1][j][:D - c]
             b[:D - c] |= dp[i - 1][j][c:]
         dp[i][j] = b
+# print(dp[h-1][w-1])
 ans = float('inf')
 for i in range(D):
     if dp[h - 1][w - 1][i]:
+        # print(abs(i-d))
         ans = min(ans, abs(i - d))
 print(ans)

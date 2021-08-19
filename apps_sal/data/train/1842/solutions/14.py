@@ -8,7 +8,7 @@ class Solution:
             nei[a].add(b)
             nei[b].add(a)
 
-        dp = collections.deque([(1, 1, 0)])
+        dp = collections.deque([(1, 1, 0)])  # state: leaf_id, possibility, timestamp
         visited = set()
 
         while dp:

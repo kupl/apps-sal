@@ -29,6 +29,7 @@ def getAns(n, Sum, Single, maxn):
             L = m + 1
         else:
             R = m - 1
+    #print(index, minn)
     n = minn
     L, R = 1, index + 11
     index = 0

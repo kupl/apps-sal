@@ -17,6 +17,8 @@ for i in range(n - 1, -1, -1):
         nl = -1
     nextl[i] = nl
 ans = 0
+# print(lastr)
+# print(nextl)
 for i in range(n):
     if nextl[i] == lastr[i] == -1:
         ans += 1

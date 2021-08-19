@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     def expected_val(limit):
         return (1 + limit) / 2
@@ -8,6 +9,7 @@ def main():
     lst = [0]
     res = 0
     for p in P:
+        # res += (p + 1) / 2
         res += expected_val(p)
         lst.append(res)
     ans = 0

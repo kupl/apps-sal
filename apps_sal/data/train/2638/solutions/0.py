@@ -6,5 +6,5 @@ for i in range(n):
     for j in range(m):
         character_ar[i + (j * n)] = line[j]
 decoded_str = ''.join(character_ar)
-final_decoded_str = re.sub(r'(?<= [A - Za - z0 - 9])([!@
+final_decoded_str = re.sub(r'(?<=[A-Za-z0-9])([ !@#$%&]+)(?=[A-Za-z0-9])', ' ', decoded_str)
 print(final_decoded_str)

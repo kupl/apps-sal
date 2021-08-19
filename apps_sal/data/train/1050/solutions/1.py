@@ -1,3 +1,4 @@
+# cook your dish here
 for y in range(int(input())):
     s = input()
     st = []

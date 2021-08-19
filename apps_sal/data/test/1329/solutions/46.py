@@ -1,3 +1,7 @@
+# coding: utf-8
+
+# https://atcoder.jp/contests/abc114
+# 14:44-15:24 done
 
 
 def soinsubunkai(n):

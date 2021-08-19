@@ -1,6 +1,6 @@
 H, W = map(int, input().split())
-print('
+print('#' * (W + 2))  # head
 for _ in range(H):
-    print('
+    print('#', input(), '#', sep='')
 
-print('
+print('#' * (W + 2))  # tail

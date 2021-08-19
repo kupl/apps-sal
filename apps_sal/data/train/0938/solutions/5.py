@@ -21,6 +21,7 @@ for q in range(t):
                     if x[q] in dic:
                         break
                     counter += 1
+                    # print i,j,p,q
 
         dic.clear()
     print(counter)

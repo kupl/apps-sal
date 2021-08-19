@@ -1,4 +1,5 @@
 import sys
+# with open(filename, 'r') as f:
 with sys.stdin as f:
     input_list = list(f)
 for i, line in enumerate(input_list):

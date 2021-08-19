@@ -4,7 +4,7 @@ def swap(s, a, b):
     return ''.join(s)
 
 
-def maximized_range(s, left):
+def maximized_range(s, left):  # Maximize value in range [left, end]
     return s[:left] + ''.join(sorted(s[left:], reverse=True))
 
 

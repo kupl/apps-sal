@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 a, b, c, d = map(int, input().split())
 k = [0] * 4
 k[0] = a * c

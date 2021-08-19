@@ -5,6 +5,7 @@ def ns(n):
     ret, tmp = 0, n
 
     while tmp > 0:
+        #        tmp, r = divmod(tmp, 10)
         r = tmp % 10
         tmp //= 10
         ret += r

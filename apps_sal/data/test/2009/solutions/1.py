@@ -35,6 +35,8 @@ g = []
 for i in range(n):
     g.append(li())
 
+# print(g)
+
 
 cc1 = set()
 
@@ -42,6 +44,7 @@ cc1 = set()
 stack = [(r1, c1)]
 
 while stack:
+    # print(stack)
     r, c = stack.pop()
     cc1.add((r, c))
     for i in range(-1, 2):
@@ -73,6 +76,7 @@ while stack:
                                 stack.append((r + i, c + j))
 
 
+# print(cc1,cc2)
 dist = 10 * n * n
 
 for x, y in cc1:

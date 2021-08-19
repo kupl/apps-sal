@@ -38,6 +38,8 @@ def main():
 
 
 def __starting_point():
+    # import sys
+    # sys.stdin = open("C.txt")
     main()
 
 

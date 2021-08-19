@@ -9,16 +9,16 @@ for i in range(n):
     for j in range(n - k + 1):
         good = True
         for ell in range(k):
-            if field[j + ell][i] == '
-            good = False
+            if field[j + ell][i] == '#':
+                good = False
         if good:
             for ell in range(k):
                 poss[j + ell][i] += 1
 
         good = True
         for ell in range(k):
-            if field[i][j + ell] == '
-            good = False
+            if field[i][j + ell] == '#':
+                good = False
         if good:
             for ell in range(k):
                 poss[i][j + ell] += 1

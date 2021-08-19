@@ -17,6 +17,19 @@ class Solution:
                 ans += 1
                 prevF += 1
                 flips.append(i)
+            #         if num == 0:
+            #         continue
+            #     else:
+            #         ans += 1
+            #         prevF += 1
+            #         flips.append(i)
+            # else:
+            #     if num == 0:
+            #         ans += 1
+            #         prevF += 1
+            #         flips.append(i)
+            #     else:
+            #         continue
         if flips != [] and flips[-1] + K - 1 >= ALen:
             return -1
         return ans

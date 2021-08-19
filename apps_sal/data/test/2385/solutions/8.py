@@ -10,7 +10,7 @@ for i in range(N - 1):
     childs[a].append(b)
     childs[b].append(a)
 
-dp = [0] * (N + 1)
+dp = [0] * (N + 1)  # represent the # if i is the root (1)
 tree_size = [0] * (N + 1)
 ans = [0] * (N + 1)
 

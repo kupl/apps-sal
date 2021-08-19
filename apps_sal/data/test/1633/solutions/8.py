@@ -3,10 +3,10 @@ import itertools
 n, m, k = list(map(int, input().split()))
 field = [[False] * m for index in range(n)]
 deltas = (
-    ((0, -1), (-1, -1), (-1, 0)),
-    ((-1, 0), (-1, 1), (0, 1)),
-    ((0, 1), (1, 1), (1, 0)),
-    ((1, 0), (1, -1), (0, -1)),
+    ((0, -1), (-1, -1), (-1, 0)),  # Top left.
+    ((-1, 0), (-1, 1), (0, 1)),   # Top right.
+    ((0, 1), (1, 1), (1, 0)),     # Bottom right.
+    ((1, 0), (1, -1), (0, -1)),   # Bottom left.
 )
 found = False
 for index in range(k):

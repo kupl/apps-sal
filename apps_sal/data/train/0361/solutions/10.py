@@ -5,6 +5,7 @@ class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
         INF = m * n
 
+        # state store height at each column, we'll cache this state
         @functools.lru_cache(None)
         def dp(state):
             if n == min(state):

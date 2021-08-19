@@ -11,6 +11,7 @@ class Solution:
         q.put((0, (0, 0)))
 
         while len(seen) < n:
+            # print(vertices, seen)
             w, (u, v) = q.get()
             if u in seen and v in seen:
                 continue

@@ -1,3 +1,4 @@
+# coding: utf-8
 
 n, mp = list(map(int, input().split(" ")))
 a_list = list(map(int, input().split(" ")))

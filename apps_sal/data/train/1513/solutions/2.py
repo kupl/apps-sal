@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 try:
     X = list(map(int, input().split()))
 except:
@@ -11,6 +13,7 @@ for i in range(X[0] + 1):
     chnew.append([])
 for i in range(X[0] - 1):
     Y = list(map(int, input().split()))
+    # par[Y[1]]=[Y[0],Y[2]]
     ch[Y[0]].append([Y[1], Y[2]])
     ch[Y[1]].append([Y[0], Y[2]])
 tre = [1]

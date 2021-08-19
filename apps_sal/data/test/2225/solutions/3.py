@@ -6,7 +6,7 @@ def buildTree(arr):
     n = len(arr)
     tree = [0] * n + arr
     for i in range(n - 1, 0, -1):
-        z = int(log(i, 2))
+        z = int(log(i, 2))  # determines what level of the tree you're at
         if N % 2 == 0:
             if z % 2 == 0:
                 tree[i] = tree[2 * i] ^ tree[2 * i + 1]

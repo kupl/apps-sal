@@ -1,3 +1,6 @@
+#! /usr/bin/python
+# kmwho
+# Codeforces 401 D2
 
 def main():
     n = int(input())

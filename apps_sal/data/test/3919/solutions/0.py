@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 
 M = 10 ** 9 + 7

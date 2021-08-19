@@ -11,6 +11,7 @@ for i in range(m - 1, -1, -1):
         mll.append(ml[i])
     elif i != m - 1 and ml[i][1] > mll[-1][1]:
         mll.append(ml[i])
+    # print(mll)
 
 
 temp = sorted(nl[:mll[len(mll) - 1][1]])

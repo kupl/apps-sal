@@ -19,4 +19,6 @@ class Solution:
             sub_arr.append(sub)
             div_arr.append(div)
 
+        # print(sub_arr,div_arr)
+
         return max(div_arr) + sum(sub_arr)

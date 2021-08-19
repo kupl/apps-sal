@@ -13,5 +13,7 @@ for index, A in enumerate(As):
     ans += B[index - A]
 
     B[index + A] += 1
+#    print(B)
+#    print(list(B[:20]))
 
 print(ans)

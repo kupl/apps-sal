@@ -1,3 +1,4 @@
+# cook your dish here
 l = input().split()
 n = int(l[0])
 q = int(l[1])

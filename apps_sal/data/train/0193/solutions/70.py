@@ -4,11 +4,13 @@ class Solution:
         n = len(arr)
         arr_map = Counter(arr)
         arr_tup = [(item, arr_map[item]) for item in arr_map]
-        arr_tup = sorted(arr_tup, key=lambda x: -x[1])
+        # print(arr_tup)
+        arr_tup = sorted(arr_tup, key=lambda x: -x[1])  # Decrementing based on frequency
+        # print(arr_tup)
         count = 0
         total = 0
         for item in arr_tup:
-            total += item[1]
+            total += item[1]  # Counting max freq
             print((item[0]))
             count += 1
             if total >= n / 2:

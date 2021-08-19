@@ -1,3 +1,4 @@
+# coding=utf-8
 
 def com(lo, hi):
     loo = 1

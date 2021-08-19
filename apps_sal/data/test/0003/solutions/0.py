@@ -44,8 +44,10 @@ singlecount = 0
 doublecount = 0
 
 singles = [0] * (n + 1)
+# print(total)
 doubles = [0] * (n + 1)
 for i in range(len(coverage)):
+    # print(i,singles)
     if coverage[i] == 1:
         singlecount += 1
     if coverage[i] == 2:
@@ -58,6 +60,7 @@ for i in range(len(ints)):
         st1 = min(ints[i][0], ints[j][0])
         end1 = min(ints[i][1], ints[j][1])
         st2, end2 = max(ints[i][0], ints[j][0]), max(ints[i][1], ints[j][1])
+        # assume st1<=st2
         if end1 < st2:
             curtotal = total - (singles[end1] - singles[st1 - 1]) - (singles[end2] - singles[st2 - 1])
         elif end1 < end2:

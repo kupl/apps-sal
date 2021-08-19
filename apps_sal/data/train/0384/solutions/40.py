@@ -6,6 +6,10 @@ class Solution:
         n = len(A)
         ret = 0
 
+        # F[i] number of subsequences accept A[i] as minimun
+        # G[i] number of subsequences accept A[i] as maximum
+        # result = (-F[i] + G[i]) * A[i]
+
         A.sort()
         MOD = 10 ** 9 + 7
 

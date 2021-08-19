@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc085/tasks/abc085_b
 
 """
 上のほうが餅が小さくなるように重ねる

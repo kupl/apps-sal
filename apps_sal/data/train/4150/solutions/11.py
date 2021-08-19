@@ -6,6 +6,7 @@ def rot13(message):
     result = ""
 
     for c in message:
+        # use non-code characters as-is
         if c not in code:
             result += c
             continue

@@ -11,4 +11,6 @@ for i in range(n - 1):
     if not (A[i] in res_set):
         res_set.add(A[i])
         ans += NumList[i + 1]
+# print(NumList)
+# print(res_set)
 print(ans)

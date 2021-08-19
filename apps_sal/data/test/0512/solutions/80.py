@@ -52,7 +52,8 @@ def main():
     これはdpで判定する。
         dp[i] = (最後にi番目で区切ったとして、そこまでで条件を満たすのが可能か)
     """
-    state = [0] * (N * 2)
+    # preprocess-part
+    state = [0] * (N * 2)  # state[i] = {1: start, 0: none, -1: end}
     for s, e in zip(start, end):
         if s != -1:
             state[s] = 1
@@ -97,6 +98,9 @@ def main():
                 ok[s][ne] = -1
             ok[e][ne] = -1
 
+    #for row in ok: print("    {}".format(row))
+
+    # dp-part
     dp = [False] * (N * 2 + 1)
     dp[0] = True
     for i in range(2, N * 2 + 1, 2):
@@ -109,10 +113,12 @@ def main():
                 if state[k] == -1 or state[k + stride] == 1 or ok[k][k + stride] == -1:
                     break
             else:
+                #print("[{}, {}) worked!".format(j, i))
                 flag = True
                 break
         if flag:
             dp[i] = True
+        #print("i={}, dp={}".format(i, dp))
 
     if dp[-1]:
         print("Yes")

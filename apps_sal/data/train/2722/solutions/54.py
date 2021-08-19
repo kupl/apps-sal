@@ -2,4 +2,4 @@ import re
 
 
 def remove_url_anchor(url):
-    return re.match(r'[^
+    return re.match(r'[^#]*', url).group()

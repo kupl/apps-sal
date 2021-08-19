@@ -1,5 +1,5 @@
 """
-Codeforces Round 
+Codeforces Round #322 (Div. 2)
 
 Problem 581 D. Three Logos
 
@@ -29,6 +29,7 @@ def solve(x1, y1, x2, y2, x3, y3):
 
     count = [y1, y2, y3].count(side)
 
+    # case1: stacking
     if count == 3:
         if x1 + x2 + x3 == side:
             As = 'A' * side
@@ -38,6 +39,7 @@ def solve(x1, y1, x2, y2, x3, y3):
                   + [Bs for _ in range(x2)]
                   + [Cs for _ in range(x3)])
 
+    # case2: spliting
     result = []
     abc = 'ABC'
     if count == 1:

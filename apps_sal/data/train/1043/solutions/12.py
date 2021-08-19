@@ -1,4 +1,5 @@
 try:
+    # cook your code here
     t = int(input())
     while t > 0:
         n, q = map(int, input().split())

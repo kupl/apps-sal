@@ -31,3 +31,6 @@ class Solution():
 
 sol = Solution()
 sol.classy_Numbers()
+# print(sol.dp(1, 3))
+# print(sol.dp(1234, 4, 3))
+# print(sol.dp(12345, 5, 3))

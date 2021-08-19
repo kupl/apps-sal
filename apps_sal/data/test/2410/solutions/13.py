@@ -32,6 +32,7 @@ for _ in range(int(input())):
     a = list(map(int, input().split()))
     y = sum(a)
     s1, s2 = maxSubArraySum(a, 0, n - 2), maxSubArraySum(a, 1, n - 1)
+    #print(s1, s2, y)
     if s1 >= y or s2 >= y:
         print("NO")
     else:

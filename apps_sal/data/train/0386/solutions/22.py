@@ -11,10 +11,12 @@ class Solution:
             3: [2, 4],
             4: [0]
         }
+        # print(dp)
         for i in range(n - 2, -1, -1):
             for j in range(5):
                 c = 0
                 for e in d[j]:
                     c += dp[i + 1][e]
                 dp[i][j] = c
+        # print(dp)
         return (dp[0][0] + dp[0][1] + dp[0][2] + dp[0][3] + dp[0][4]) % (1000000007)

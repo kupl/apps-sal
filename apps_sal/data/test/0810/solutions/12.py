@@ -1,6 +1,7 @@
 import math
 from sys import stdin
 
+# stdin=open('input.txt','r')
 I = stdin.readline
 
 mod = 1000000007
@@ -12,6 +13,7 @@ for i in range(2, len(fact)):
 a, b, n = list(map(int, I().split()))
 c1 = chr(a + ord('0'))
 c2 = chr(b + ord('0'))
+# byg=(math.factorial(1000000))
 ans = 0
 
 for x in range(0, n + 1):
@@ -23,6 +25,7 @@ for x in range(0, n + 1):
             break
 
     if(not flag):
+        # print(x,now)
         now = fact[n]
         y = fact[x]
         z = fact[n - x]
@@ -30,6 +33,7 @@ for x in range(0, n + 1):
 
         now *= asd
         now %= mod
+        # now/=math.factorial(n-x)
 
         ans += now
         ans %= mod

@@ -13,6 +13,7 @@ for _ in range(T):
     R = [[a + 1 for a in range(M)] for _ in range(N)]
     D = [[i + 1] * M for i in range(N)]
 
+    # print(X)
     ma = -1
     for i in range(N):
         for j in range(M):

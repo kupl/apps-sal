@@ -14,6 +14,7 @@ for _ in range(l):
     train[a].append(b)
     train[b].append(a)
 
+# 道路の連結グループ
 load_grp_id = [-1] * n
 not_grp = set(range(n))
 while not_grp:
@@ -28,6 +29,7 @@ while not_grp:
                 load_grp_id[li] = t0
                 not_grp.discard(li)
                 todo.append(li)
+# 鉄道の連結グループ
 train_grp_id = [-1] * n
 not_grp = set(range(n))
 while not_grp:

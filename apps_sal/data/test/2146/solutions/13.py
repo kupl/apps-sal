@@ -1,3 +1,5 @@
+# coding gbk
+#!usr/bin/env
 n = int(input())
 a = [0] + [n for i in range(n)]
 e = [[i + 1, i - 1] if i < n else [i - 1] for i in range(0, n + 1)]

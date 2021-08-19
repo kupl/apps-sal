@@ -1,3 +1,4 @@
+# Vision and the MindStone
 N, K = map(int, input().split())
 data = list(map(int, input().split()))
 output = []

@@ -20,5 +20,6 @@ class Solution:
             if len(tmp) == 0:
                 stop = True
             nodes = nodes.union(tmp)
+            # print(nodes)
 
         return sorted(nodes)

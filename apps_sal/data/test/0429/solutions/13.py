@@ -20,6 +20,7 @@ def main():
                     j = j + 1
                     flag = 0
                     break
+        # print(j, "")
         if flag == 1:
             p = 0
             for k in range(j, j + 26):

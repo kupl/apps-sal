@@ -1,5 +1,7 @@
 class Solution:
     def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
+        # valid string? can be seperated into full croaks:
+        # dict of letters. c, r, o, a, k should all be equal, nothing else in
         if len(croakOfFrogs) % 5 != 0 or croakOfFrogs[0] != 'c' or croakOfFrogs[-1] != 'k':
             return -1
 

@@ -1,5 +1,6 @@
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
+        #dp = [steps][10^6]
         dp = [defaultdict(int) for _ in range(steps + 1)]
 
         dp[0][0] += 1

@@ -13,6 +13,7 @@ def solve():
     n, k = nm()
     mini = [tuple(nl() + [i + 1]) for i in range(n)]
     mini.sort(key=lambda x: x[1])
+    # print(mini)
     dp = [-1] * (k + 1)
     dp[0] = 0
     f = [[0] * (k + 1) for _ in range(n)]

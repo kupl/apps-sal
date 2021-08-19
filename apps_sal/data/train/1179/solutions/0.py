@@ -1,7 +1,9 @@
+# cook your dish here
 from math import sqrt
 for _ in range(int(input())):
     n = int(input())
     sum = (n * (n + 1)) // 2
+    # print(sum)
     if(sum % 2 != 0):
         print(0)
         continue

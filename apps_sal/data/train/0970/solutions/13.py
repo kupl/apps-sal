@@ -15,11 +15,17 @@ def binarySearchCount(arr, n, key):
     while (left <= right):
         mid = int((right + left) / 2)
 
+        # Check if middle element is
+        # less than or equal to key
         if (arr[mid] <= key):
 
+            # At least (mid + 1) elements are there
+            # whose values are less than
+            # or equal to key
             count = mid + 1
             left = mid + 1
 
+        # If key is smaller, ignore right half
         else:
             right = mid - 1
 

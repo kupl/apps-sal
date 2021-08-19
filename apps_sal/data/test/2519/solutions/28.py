@@ -9,4 +9,5 @@ ans = 0
 for i in range(k, n + 1):
     ans = max(q[i] - q[i - k], ans)
 
+# あまり深く事を考えずに
 print(ans)

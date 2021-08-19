@@ -34,7 +34,9 @@ class Solution:
                 continue
             minv, maxv = bound(ages[i])
             c = getupper(maxv) - getlow(minv)
+            # print(i,\"  :\",c, getlow(minv), getupper(maxv) )
             count += c
 
         p = 115
+        # print( getlow(p), getupper(p))
         return count

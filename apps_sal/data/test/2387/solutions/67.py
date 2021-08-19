@@ -42,10 +42,14 @@ def main():
         print("No")
         return
 
+    # r-lの大きい順
     ls_plus.sort(key=lambda x: x[1] - x[0], reverse=True)
+    # lの小さい順
     ls_plus.sort(key=lambda x: x[0])
 
+    # l-rの小さい順
     ls_minus.sort(key=lambda x: x[0] - x[1])
+    # lの大さい順
     ls_minus.sort(key=lambda x: x[0], reverse=True)
 
     now_r = 0

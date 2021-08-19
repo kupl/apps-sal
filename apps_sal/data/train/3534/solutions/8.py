@@ -7,6 +7,7 @@ def to_bits(string):
     for x in lst:
         if x.isdigit():
             lst2.append(x)
+#     print(lst2)
     lst3 = [int(i) for i in lst2]
     lst3.sort()
     max(lst3)

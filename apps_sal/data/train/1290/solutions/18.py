@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 s = str(n)
 a = len(s)

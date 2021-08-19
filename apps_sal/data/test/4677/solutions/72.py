@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 s = input()
 ans = []
 for i in s:

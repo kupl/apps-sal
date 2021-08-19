@@ -11,4 +11,6 @@ class Solution:
                 curr_max = max(curr_max, num1 * num2)
                 max_dot_product_next.append(curr_max)
             max_dot_product = max_dot_product_next
+            #print(num1, max_dot_product)
+        # print(max_dot_product)
         return max(max_dot_product)

@@ -1,3 +1,4 @@
+# E70_B
 
 st = list(input())
 

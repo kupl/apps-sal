@@ -1,5 +1,6 @@
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
+        # 10:58 9/24/20
 
         def four_divisors(n):
             div = set()
@@ -10,6 +11,7 @@ class Solution:
                     div.add(n // i)
                     cnt += 2
                     if cnt > 4:
+                        # if len(div) > 4:
                         return 0
             return sum(div) if len(div) == 4 else 0
 
@@ -17,6 +19,7 @@ class Solution:
             return 0
         nums.sort()
         total = 0
+        # sums = [0]
         past = [None, None]
 
         for i, v in enumerate(nums):

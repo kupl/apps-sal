@@ -6,14 +6,14 @@ class UnionFind():
         self.n = n
         self.parents = [-1] * n
 
-    def find(self, x):
+    def find(self, x):  # 要素が入ったグループ番号
         if self.parents[x] < 0:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def union(self, x, y):
+    def union(self, x, y):  # 2要素が入ったグループを結合
         x = self.find(x)
         y = self.find(y)
 
@@ -26,23 +26,23 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def size(self, x):
+    def size(self, x):  # 要素が入ったグループのサイズ
         return -self.parents[self.find(x)]
 
-    def same(self, x, y):
+    def same(self, x, y):  # 2要素が同じグループに入っているか
         return self.find(x) == self.find(y)
 
-    def members(self, x):
+    def members(self, x):  # 要素が入ったグループ
         root = self.find(x)
         return [i for i in range(self.n) if self.find(i) == root]
 
-    def roots(self):
+    def roots(self):  # 根
         return [i for i, x in enumerate(self.parents) if x < 0]
 
-    def group_count(self):
+    def group_count(self):  # グループ数
         return len(self.roots())
 
-    def all_group_members(self):
+    def all_group_members(self):  # .values()でグループごとの要素のリスト
         group_members = defaultdict(list)
         for member in range(self.n):
             group_members[self.find(member)].append(member)
@@ -52,7 +52,8 @@ class UnionFind():
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
 
 
-uf = UnionFind(6)
+# 文字列の場合は辞書を使い数字と文字列を関連付ける
+uf = UnionFind(6)  # 要素数6で初期化
 
 n, m = map(int, input().split())
 A = list(map(int, input().split()))

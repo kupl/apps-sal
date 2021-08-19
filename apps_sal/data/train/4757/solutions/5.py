@@ -1,5 +1,5 @@
 import sys
-max_int = 1000000001
+max_int = 1000000001  # 10^9+1
 min_int = -max_int
 
 t = int(input())

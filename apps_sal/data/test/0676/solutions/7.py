@@ -41,6 +41,7 @@ def _0():
 def _1():
     x = ar[0]
     print("YES")
+#	print(x)
     print(x)
     print(3 * x)
     print(3 * x)
@@ -53,6 +54,8 @@ def _2():
     else:
 
         print('YES')
+#		print(x)
+#		print(y)
         print(4 * x - y)
         print(3 * x)
 
@@ -65,6 +68,9 @@ def _3():
         print("NO")
     else:
         print('YES')
+#		print(x)
+#		print(y)
+#		print(z)
         print(3 * x)
 
 
@@ -85,6 +91,7 @@ def _4():
         print('NO')
     else:
         print("YES")
+#		for x in ar:  print(x)
 
 
 vars()['_' + str(n)]()

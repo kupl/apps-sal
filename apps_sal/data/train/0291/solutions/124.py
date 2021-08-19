@@ -12,4 +12,5 @@ class Solution:
                 cnt += memo[0]
             memo[curr_sum % 2] += 1
             cnt = cnt % K
+            # print (memo, cnt)
         return cnt

@@ -6,7 +6,15 @@ def solve():
     n, m, = rv()
     s = list(input())
     res = [0] * m
+    # replace dot:
+    # dot had nothing on left or right: nothing changes
+    # dot had one on left or right: -1
+    # dot had two on left or right: -2
 
+    # replace char:
+    # if had two chars on left and right: 0
+    # if had one char and one dot: +1
+    # if had two dots: +2
     helper = list()
     for i in range(n):
         if s[i] == '.':

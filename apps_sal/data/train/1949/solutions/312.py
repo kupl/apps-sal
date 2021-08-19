@@ -1,5 +1,6 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+        # _grid = [grid[i][:] for i in range(len(grid))]
         m, n = len(grid), len(grid[0])
         self.res = 0
 

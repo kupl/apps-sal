@@ -7,6 +7,7 @@ for __ in range(t):
         a, b = b, a
     g = a * b // gcd(a, b)
 
+    # 1以上m以下
     def solve(m):
         if m == 0:
             return 1
@@ -23,10 +24,13 @@ for __ in range(t):
         return ret
 
     res = []
+    # brt = []
     for _ in range(q):
         l, r = list(map(int, input().split()))
         if b % a == 0:
             res.append(0)
         else:
             res.append(r - l + 1 - (solve(r) - solve(l - 1)))
+        # brt.append(br(l, r))
     print(*res)
+    # print(*brt)

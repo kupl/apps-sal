@@ -14,6 +14,8 @@ for i in range(N):
 R = [[0, 0]] + R
 
 
+# print(L)
+# print(R)
 TS = [0]
 TW = [0]
 RS = [0]

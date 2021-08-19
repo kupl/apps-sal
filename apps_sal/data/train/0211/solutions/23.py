@@ -5,6 +5,7 @@ class Solution:
         n = len(s)
 
         def dfs(index: int) -> None:
+            # print(exist, index)
             if (index == n):
                 self.result = max(self.result, len(exist))
                 return

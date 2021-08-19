@@ -1,3 +1,5 @@
+# cook your dish here
+# Hello
 r = int(input())
 while r > 0:
     n, k, d = map(int, input().split())

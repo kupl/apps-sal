@@ -1,3 +1,4 @@
+# cook your dish here
 s, k = list(map(int, input().split()))
 strS = str(s)
 res = ''

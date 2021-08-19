@@ -1,3 +1,4 @@
+# You lost the game.
 
 n, m = list(map(int, input().split()))
 L = [str(input()) for _ in range(n)]

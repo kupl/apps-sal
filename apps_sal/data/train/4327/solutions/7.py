@@ -1,3 +1,4 @@
+# chameleons is int[3], desiredColor is int from 0 to 2
 def chameleon(chameleons, desiredColor):
     perm_count = 0
     if desiredColor == 0:
@@ -21,3 +22,5 @@ def chameleon(chameleons, desiredColor):
             return -1
         perm_count += d
     return perm_count
+
+    # Here be code

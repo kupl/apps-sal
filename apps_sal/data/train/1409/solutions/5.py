@@ -1,4 +1,5 @@
 import sys
+# cook your dish here
 T = int(input())
 for t in range(T):
     N = int(sys.stdin.readline().strip())

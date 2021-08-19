@@ -1,5 +1,7 @@
 from collections import deque
+# from time import time
 
+# tt = time()
 n = int(input())
 a = [0] + list(map(int, input().split()))
 e = [[] for i in range(n + 1)]
@@ -7,7 +9,9 @@ for i in range(n - 1):
     u, v = list(map(int, input().split()))
     e[u].append(v)
     e[v].append(u)
+# print(e)
 
+# find all primes
 isp = [1] * 501
 prime = []
 for i in range(2, 501):
@@ -20,6 +24,8 @@ for i in range(2, 501):
         if i % p == 0:
             break
 lp = len(prime)
+
+# gr is a forest, n is # of vertices
 
 
 def diam(gr, n):
@@ -37,6 +43,7 @@ def diam(gr, n):
                         vis[to] = 1
                         q.append(to)
             q.append(start)
+            # print(start)
             lvl[start] = 0
             tmplvl = 0
             while q:
@@ -49,8 +56,12 @@ def diam(gr, n):
             maxlvl = max(maxlvl, tmplvl)
     return maxlvl + 1
 
+# print('input', time() - tt)
+# tt = time()
+
 
 newn = [0] * (n + 1)
+# find vertices in each graph
 v = [[] for i in range(lp)]
 other = {}
 for i in range(1, n + 1):
@@ -69,6 +80,7 @@ for i in range(1, n + 1):
 for val in list(other.values()):
     v.append(val)
 ans = 0
+# build the graph
 for i in range(len(v)):
     count = 1
     for node in v[i]:

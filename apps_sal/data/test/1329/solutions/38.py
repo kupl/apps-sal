@@ -28,6 +28,7 @@ def prime_factoring(n):
 N = int(input())
 fac = factorial(N)
 List = list(prime_factoring(fac).values())
+# print(List)
 
 
 def num(m):

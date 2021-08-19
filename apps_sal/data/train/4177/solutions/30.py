@@ -9,4 +9,4 @@ def men_from_boys(arr):
     l1 = None
     odds.reverse()
     arr.extend(odds)
-    return arr
+    return arr  # lamda suck, bitwise rock

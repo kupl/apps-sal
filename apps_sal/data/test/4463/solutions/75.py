@@ -20,6 +20,9 @@ def main():
         print("No")
         return
 
+#  if(len(s)<len(t)):
+#    print("Yes")
+#    return
     for i in range(min(len(s), len(t))):
         if ord(s[i]) > ord(t[i]):
             print("No")

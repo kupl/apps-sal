@@ -1,7 +1,9 @@
 mod = 1000000007
 N = 1005
+# input start
 k, pa, pb = list(map(int, input().split()))
 dp = [[0 for x in range(k)] for y in range(k + 1)]
+# end of input
 
 
 def fast_expo(a, b):

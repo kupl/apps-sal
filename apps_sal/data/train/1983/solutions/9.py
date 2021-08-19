@@ -17,3 +17,8 @@ class ProductOfNumbers:
             i = bisect.bisect_right(self.d[num], (self.time - k + 1, -1), )
             res *= num**(len(self.d[num]) - i)
         return res
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

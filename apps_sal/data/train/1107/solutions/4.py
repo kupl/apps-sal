@@ -14,6 +14,7 @@ for i in range(t):
 
     sum = 0
 
+    # print(sum_start)
     for j in range(start + 1, end):
         sum += ((10**(j - 1) + (int(str('9' * j)))) * j * (((int(str('9' * j)) - (10**(j - 1)) + 1)))) // 2
 
@@ -23,4 +24,7 @@ for i in range(t):
         sum__start = ((end__start + r) * end * (r - end__start + 1)) // 2
     else:
         sum__start = 0
+    # print(end__start)
+    # print(sum)
+    # print(sum,sum__start,sum_start)
     print((sum + sum__start + sum_start) % 1000000007)

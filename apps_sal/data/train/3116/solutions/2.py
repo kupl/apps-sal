@@ -1,4 +1,5 @@
 def cal_n_bug(head, leg, wing):
+    # x+y+z = head, 8x+6y+6z = leg, y+2z = wing
     x = leg / 2 - head * 3
     head -= x
     y = head * 2 - wing

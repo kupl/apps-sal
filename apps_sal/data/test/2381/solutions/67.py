@@ -11,6 +11,7 @@ s_mins = []
 total = 1
 
 
+# if jnum < 0 or jnum % 2 == 0:
 if (K % 2 == 1 and N == num_mins) or (N == K and num_mins % 2 == 1):
     for i in range(K):
         if not q_plus:

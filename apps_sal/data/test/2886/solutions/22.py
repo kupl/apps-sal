@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import io
 import sys
@@ -8,10 +9,12 @@ CASES = "abcdefghijklmnopqrstuvwxyz"
 
 def format_multi_line_answer(lst):
     ans = ""
-    ans += f"{len(lst)}\n"
+    ans += f"{len(lst)}\n"  # Line count
     for y in lst:
         ans += f"{y}\n"
     return ans
+
+# アンバランス文字列には、"aa"または"axa"のような部分が現れる。
 
 
 def is_unballance(s):
@@ -23,6 +26,7 @@ def is_unballance(s):
 
 
 def solve(s):
+    # implement process
     ans_l = []
     has_unbalance = False
     a, b = -1, -1
@@ -43,14 +47,18 @@ def solve(s):
 
 
 def main():
+    # input
     s = input()
+    # process
     ans = str(solve(s))
 
+    # output
     print(ans)
     return ans
 
 
-_DEB = 0
+### DEBUG I/O ###
+_DEB = 0   # 1:ON / 0:OFF
 
 _INPUT = """\
 abcaxa
@@ -66,6 +74,8 @@ def logd(str):
     """
     if _DEB:
         print(f"[deb] {str}")
+
+### MAIN ###
 
 
 def __starting_point():

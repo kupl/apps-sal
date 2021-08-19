@@ -20,6 +20,7 @@ while q > 0:
             break
         r = max(r, S[i][1])
         i += 1
+    # print(S,i)
     if i == n:
         print(-1)
     else:

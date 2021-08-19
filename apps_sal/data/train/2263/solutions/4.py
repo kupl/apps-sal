@@ -2,8 +2,8 @@ def main():
     md = 998244353
     s = input()
     n = len(s)
-    al = True
-    an = 1
+    al = True  # allすべて同じ文字
+    an = 1  # any連続が存在すると0
     for c0, c1 in zip(s, s[1:]):
         if c0 == c1:
             an = 0
@@ -25,6 +25,8 @@ def main():
         else:
             print((3))
         return
+    # print(n)
+    # print(an)
     ord0 = ord("a")
     r = sum(ord(c) - ord0 for c in s) % 3
     if n % 3 == 0:

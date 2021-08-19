@@ -8,6 +8,7 @@ class UF:
 
     def find(self, a):
         while self.parent[a] != a:
+            # path compression
             self.parent[a] = self.parent[self.parent[a]]
             a = self.parent[a]
         return a
@@ -18,6 +19,7 @@ class UF:
         if self.isConnected(p1, p2):
             return
 
+        # optimization - try to make the new tree balanced
         if self.size[p1] < self.size[p2]:
             self.parent[p1] = p2
             self.size[p2] += self.size[p1]

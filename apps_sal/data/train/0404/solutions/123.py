@@ -1,4 +1,4 @@
-class Solution:
+class Solution:  # 1037
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         if not A:
             return 0

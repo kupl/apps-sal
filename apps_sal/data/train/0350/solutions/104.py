@@ -18,3 +18,16 @@ class Solution:
                 i += 1
             currSum += ((j - i) + 1)
         return currSum
+#         mapp={}
+#         n=len(A)
+#         j=0
+#         ans=0
+
+#         for i,c in enumerate(A):
+#             mapp[c]=i # last position of c
+#             while (len(mapp)>K):
+#                 if j==mapp[A[j]]:
+#                     del mapp[A[j]]
+#                 j+=1
+#             ans+=i-j+1
+#         return ans

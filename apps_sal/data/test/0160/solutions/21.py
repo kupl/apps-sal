@@ -11,6 +11,7 @@ for i in range(1, int(s**0.5) + 1):
 ans = 0
 for cdd in candidates:
     f = sorted([x % cdd for x in a])
+    # calc need
     ans = max(ans, cdd) if sum(f[:-sum(f) // cdd]) <= k else ans
 
 print(ans)

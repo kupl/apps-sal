@@ -5,6 +5,7 @@ class Solution:
         :rtype: bool
         """
 
+        # take care of trivial cases
         if num <= 0:
             return False
         elif num == 1:

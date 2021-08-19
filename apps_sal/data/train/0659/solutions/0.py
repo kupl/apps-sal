@@ -1,3 +1,4 @@
+# binarr
 def binarr(a, k, s):
     a.sort(reverse=True)
     arr = [0] * k

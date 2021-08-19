@@ -10,7 +10,9 @@ for i in range(m):
     for j in range(len(valists)):
         x = j | cnt
         valists[x] = min(valists[x], valists[j] + values)
+        #print(j, cnt, x, valists)
 
+# print(valists)
 ans = valists[2**n - 1]
 if ans != 10**9:
     print(ans)

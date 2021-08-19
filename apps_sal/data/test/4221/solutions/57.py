@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 s = input()
 if s[-1] == "s":
     t_lang = s + "es"

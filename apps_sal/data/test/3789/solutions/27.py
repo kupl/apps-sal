@@ -29,15 +29,15 @@ class Dinic:
         self.v = v
         self.inf = inf
         self.G = [[] for _ in range(v)]
-        self.level = [-1] * v
-        self.ite = [0] * v
+        self.level = [-1] * v  # 深さ
+        self.ite = [0] * v  # DFSでの探索が済んでいるか
 
     def add_edge(self, fr, to, cap):
         self.G[fr].append([to, cap, len(self.G[to])])
         self.G[to].append([fr, 0, len(self.G[fr]) - 1])
 
-    def bfs(self, s):
-        self.level = [-1] * self.v
+    def bfs(self, s):  # BFSで深さ決定,sがstart
+        self.level = [-1] * self.v  # 必要
         self.level[s] = 0
         Q = deque()
         Q.append(s)
@@ -45,11 +45,11 @@ class Dinic:
             v = Q.popleft()
             for i in range(len(self.G[v])):
                 e = self.G[v][i]
-                if e[1] > 0 and self.level[e[0]] < 0:
+                if e[1] > 0 and self.level[e[0]] < 0:  # capacity>0かつtoの深さ未定
                     self.level[e[0]] = self.level[v] + 1
                     Q.append(e[0])
 
-    def dfs(self, v, t, f):
+    def dfs(self, v, t, f):  # DFSで増加パス探索,v開始、t終点、総フローf
         if v == t:
             return f
         for i in range(self.ite[v], len(self.G[v])):
@@ -58,8 +58,8 @@ class Dinic:
             if e[1] > 0 and self.level[v] < self.level[e[0]]:
                 d = self.dfs(e[0], t, min(f, e[1]))
                 if d > 0:
-                    e[1] -= d
-                    self.G[e[0]][e[2]][1] += d
+                    e[1] -= d  # cap減少
+                    self.G[e[0]][e[2]][1] += d  # 逆辺のcap増加
                     return d
         return 0
 
@@ -69,7 +69,7 @@ class Dinic:
             self.bfs(s)
             if self.level[t] < 0:
                 return flow
-            self.ite = [0] * self.v
+            self.ite = [0] * self.v  # DFSでの探索が済んでいるか否か
             f = self.dfs(s, t, self.inf)
             while f > 0:
                 flow += f
@@ -86,12 +86,12 @@ t = N + 1
 rw = 0
 
 for i, x in enumerate(a):
-    if x <= 0:
+    if x <= 0:  # そのまま罰金
         D.add_edge(s, i + 1, -x)
-    elif x > 0:
+    elif x > 0:  # あらかじめxもらっておき，これが破壊されるとxの罰金，
         D.add_edge(i + 1, t, x)
         rw += x
-    for j in range(2 * (i + 1), N + 1, i + 1):
+    for j in range(2 * (i + 1), N + 1, i + 1):  # 「iが破壊かつjが非破壊」はだめ
         D.add_edge(i + 1, j, INF)
 
 print((rw - D.max_flow(s, t)))

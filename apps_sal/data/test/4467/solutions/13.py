@@ -24,6 +24,7 @@ def main():
         if l[0][1] > i[1]:
             continue
 
+        # binary search
         left = 0
         right = len(l) - 1
         while left < right:

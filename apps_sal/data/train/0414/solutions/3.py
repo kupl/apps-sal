@@ -1,6 +1,8 @@
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
 
+     #   s=[]
+
         prev = arr[0]
         i = 1
         ans = 0
@@ -11,6 +13,7 @@ class Solution:
 
             ans += 1
             i += 1
+            # print(ans)
             if ans == k:
                 return prev
         return prev

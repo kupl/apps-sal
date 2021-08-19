@@ -1,12 +1,13 @@
 def __starting_point():
     r = int(input())
-    a = int(input())
-    b = int(input())
-    c = int(input())
-    d = 0
+    a = int(input())  # plastic bottle
+    b = int(input())  # glass bottl e
+    c = int(input())  # return on glass bottle
+    d = 0  # drinks
     if b - c >= a:
         d += r // a
         r = r % a
+        # print('a',d,r)
     else:
         if r >= b:
             t = (r - b + 1) // (b - c)

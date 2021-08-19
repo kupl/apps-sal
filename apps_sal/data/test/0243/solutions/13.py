@@ -8,6 +8,7 @@ s = [0] * (n + 1)
 
 def search(n):
     while f[n] != n:
+        # print(f[n])
 
         f[n] = f[f[n]]
         n = f[n]

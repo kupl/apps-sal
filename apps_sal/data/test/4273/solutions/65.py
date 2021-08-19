@@ -13,8 +13,11 @@ for i in S:
 if len(A) != 0:
     C = collections.Counter(A).most_common()
     v, c = list(zip(*C))
+    # print(C)
+    # print(c)
 
     for a, b, c in itertools.combinations(c, 3):
+        # print(a,b,c)
         ans += a * b * c
 
 print(ans)

@@ -1,4 +1,6 @@
 class Solution:
+    # https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation/discuss/854206/JavaC%2B%2BPython-Sweep-Line
+    # https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation/discuss/854149/C%2B%2BJava-O(n-log-n)
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         nums.sort(reverse=True)
         n = len(nums)

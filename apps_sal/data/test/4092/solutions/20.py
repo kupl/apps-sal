@@ -9,11 +9,13 @@ for i in range(1, n):
     cumm[i] = cumm[i - 1] + A[i]
 
     if cumm[i] == 0 and last_idx == -1:
+        # print(i)
         count += 1
         last_idx = i
     elif cumm[i] in d:
         l = d[cumm[i]]
         if l[-1] >= last_idx - 1:
+            # print(i, last_idx)
             count += 1
             last_idx = i
 

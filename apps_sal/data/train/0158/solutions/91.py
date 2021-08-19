@@ -25,6 +25,8 @@ class Solution:
             else:
                 canni = [idx for idx, char in enumerate(current) if char == target[0]]
                 piror = canni
+                #piror = [(loc, target[loc] == current[0]) for loc in canni]
+                #piror.sort(key=lambda x:x[1],reverse = True)
                 for loc in piror:
                     lol = (target[1:], current[1:loc] + current[0] + current[loc + 1:])
                     temp = seen.get(lol, None)

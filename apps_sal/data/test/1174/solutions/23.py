@@ -6,3 +6,5 @@ for i in range(0, M):
     a = heapq.heappop(A)
     heapq.heappush(A, (-1) * (-a // 2))
 print((-sum(A)))
+
+#　優先度付きキューが難しい

@@ -23,7 +23,9 @@ for i in range(n):
         stk.pop()
     else:
         stk.append((s[i], i))
+    #ddprint("i {} stk {}".format(i,stk))
 ones.sort()
+# ddprint(ones)
 ans = ""
 cur = 0
 for i in ones:

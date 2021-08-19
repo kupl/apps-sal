@@ -1,5 +1,6 @@
 
 import sys
+# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 n = int(input())
@@ -24,6 +25,7 @@ for i in range(n):
 if not valid:
     print("-1")
 else:
+    # get lcm
     ans = 1
     for i in use:
         t = ans

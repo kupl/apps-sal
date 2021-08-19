@@ -1,3 +1,4 @@
+# cook your dish here
 from math import log2
 t = int(input())
 
@@ -31,6 +32,8 @@ for _ in range(t):
         i += 1
 
     x = answer
+    # print(x)
     for i in range(n):
         m[i] = m[i] ^ x
+    # print(a)
     print(sum(m))

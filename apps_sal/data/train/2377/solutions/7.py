@@ -19,6 +19,7 @@ def solve():
     b = list(enumerate(a))
     b.sort(key=lambda a: a[1])
     c1 = [0] * n
+    #c2 = [0]*n
     c = 0
     h = 0
     p = -1
@@ -41,6 +42,7 @@ def solve():
         else:
             c = 1
         h += 1
+        #c2[i] = h-c
         ans = min(ans, h - c + c1[i])
         p = i
     print(ans)

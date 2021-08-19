@@ -4,6 +4,7 @@ from collections import deque
 from math import ceil, floor, log2
 import sys
 sys.setrecursionlimit(10 ** 6)
+# input = sys.stdin.readline    ####
 def int1(x): return int(x) - 1
 def II(): return int(input())
 
@@ -51,6 +52,7 @@ def mcomb(n, k, mod):
 
     A = mfac(n, n - k + 1, mod)
     B = mfac(k, 1, mod)
+    # B = mpow(B,mod-2,mod)
     B = pow(B, mod - 2, mod)
     return A * B % mod
 
@@ -61,9 +63,11 @@ def solve():
     if n == 1:
         print((1))
         return
+    # print(fact)
     mod = 1000000007
     ans = 1
     for num, ex in fact:
+        # print(ex, mcomb(ex+n-2, n-1, mod))
         ans *= mcomb(ex + n - 1, n - 1, mod) % mod
     print((ans % mod))
 

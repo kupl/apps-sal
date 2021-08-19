@@ -2,6 +2,7 @@ class Solution:
 
     def maxLength(self, arr: List[str]) -> int:
 
+        # pre strip dupes
         arr_sets = [set(x) for x in arr]
 
         def buildSet(bitlist):
@@ -11,12 +12,17 @@ class Solution:
                     output = output.union(arr_sets[i])
             return output
 
+        # dfs
+        #       incl
+        # not inc    incl
+
         def recurse(bitlist, index):
             if index == len(arr):
                 return len(buildSet(bitlist))
 
             new_bitlist = bitlist[:]
 
+            # index is our depth of the tree
             new_bitlist[index] = 0
             not_included = recurse(new_bitlist, index + 1)
 

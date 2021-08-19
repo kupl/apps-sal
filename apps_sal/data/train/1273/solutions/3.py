@@ -7,6 +7,7 @@ for _ in range(int(input())):
         for j in range(y):
             if a[j] == '*':
                 c = 1
+                # print i,j
                 if i > p:
                     p = i
                 if j > q:

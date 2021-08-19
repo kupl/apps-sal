@@ -9,6 +9,13 @@ class Solution:
                 parents[x] = find(parents[x])
             return parents[x]
 
+#         def merge(x, y):
+
+#             rx, ry = find(x), find(y)
+#             if rx != ry:
+#                 groups -= 1
+#                 parents[rx] = ry
+
         distance = 0
         heap = []
         for i in range(n):

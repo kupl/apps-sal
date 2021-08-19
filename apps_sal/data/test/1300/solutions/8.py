@@ -1,3 +1,4 @@
+# coding=utf-8
 
 n, c = map(int, input().split())
 

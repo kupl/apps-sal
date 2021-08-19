@@ -1,3 +1,5 @@
+# cook your dish here
+# import all important libraries and inbuilt functions
 
 from fractions import Fraction
 import numpy as np
@@ -27,17 +29,29 @@ from queue import Queue, PriorityQueue
 from re import sub, subn
 from random import shuffle, randrange, randint, random
 
+# never import pow from math library it does not perform modulo
+# use standard pow -- better than math.pow
 
+# end of library import
+
+# map system version faults
 if sys.version_info[0] < 3:
     from builtins import xrange as range
     from future_builtins import ascii, filter, hex, map, oct, zip
 
+# template of many functions used in competitive programming can add more later
+# based on need we will use this commonly.
 
-def bfs(adj, v):
+# bfs in a graph
+
+
+def bfs(adj, v):  # a schema of bfs
     visited = [False] * (v + 1)
     q = deque()
     while q:
         pass
+
+# definition of vertex of a graph
 
 
 def graph(vertex): return [[] for i in range(vertex + 1)]
@@ -45,17 +59,29 @@ def graph(vertex): return [[] for i in range(vertex + 1)]
 
 def lcm(a, b): return (a * b) // gcd(a, b)
 
+# most common list in a array of lists
+
 
 def most_frequent(List): return Counter(List).most_common(1)[0][0]
 
+# element with highest frequency
+
 
 def most_common(List): return(mode(List))
+
+# In number theory, the Chinese remainder theorem states that
+# if one knows the remainders of the Euclidean division of an integer n by
+# several integers, then one can determine uniquely the remainder of the
+# division of n by the product of these integers, under the condition
+# that the divisors are pairwise coprime.
 
 
 def chinese_remainder(a, p):
     prod = reduce(op.mul, p, 1)
     x = [prod // pi for pi in p]
     return sum(a[i] * pow(x[i], p[i] - 2, p[i]) * x[i] for i in range(len(a))) % prod
+
+# make a matrix
 
 
 def createMatrix(rowCount, colCount, dataList):
@@ -68,6 +94,8 @@ def createMatrix(rowCount, colCount, dataList):
         mat.append(rowList)
     return mat
 
+# input for a binary tree
+
 
 def readTree():
     v = int(inp())
@@ -77,6 +105,8 @@ def readTree():
         adj[u1].add(u2)
         adj[u2].add(u1)
     return adj, v
+
+# sieve of prime numbers
 
 
 def sieve():
@@ -92,6 +122,8 @@ def sieve():
             prime.append(i)
     return prime
 
+# count setbits of a number.
+
 
 def setBit(n):
     count = 0
@@ -99,6 +131,8 @@ def setBit(n):
         n = n & (n - 1)
         count += 1
     return count
+
+# sum of digits of a number
 
 
 def digitsSum(n):
@@ -110,15 +144,21 @@ def digitsSum(n):
         n //= 10
     return r
 
+# ncr efficiently
+
 
 def ncr(n, r):
     r = min(r, n - r)
     numer = reduce(op.mul, list(range(n, n - r, -1)), 1)
     denom = reduce(op.mul, list(range(1, r + 1)), 1)
-    return numer // denom
+    return numer // denom  # or / in Python 2
+
+# factors of a number
 
 
 def factors(n): return list(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))
+
+# prime fators of a number
 
 
 def prime_factors(n):
@@ -165,6 +205,8 @@ def powerOfK(k, max):
         result.append(n)
         n *= k
     return result
+
+# maximum subarray sum use kadane's algorithm
 
 
 def kadane(a, size):
@@ -386,6 +428,8 @@ def subarrayBitwiseOR(A):
         res |= pre
     return len(res)
 
+# Print the all possible subset sums that lie in a particular interval of l <= sum <= target
+
 
 def subset_sum(numbers, l, target, partial=[]):
     s = sum(partial)
@@ -396,12 +440,21 @@ def subset_sum(numbers, l, target, partial=[]):
     for i in range(len(numbers)):
         subset_sum(numbers[i + 1:], l, target, partial + [numbers[i]])
 
+# defining a LRU Cache
+# where we can set values and get values based on our requirement
+
 
 class LRUCache:
+    # initialising capacity
     def __init__(self, capacity: int):
         self.cache = OrderedDict()
         self.capacity = capacity
 
+    # we return the value of the key
+    # that is queried in O(1) and return -1 if we
+    # don't find the key in out dict / cache.
+    # And also move the key to the end
+    # to show that it was recently used.
     def get(self, key: int) -> int:
         if key not in self.cache:
             return -1
@@ -409,6 +462,11 @@ class LRUCache:
             self.cache.move_to_end(key)
             return self.cache[key]
 
+    # first, we add / update the key by conventional methods.
+    # And also move the key to the end to show that it was recently used.
+    # But here we will also check whether the length of our
+    # ordered dictionary has exceeded our capacity,
+    # If so we remove the first key (least recently used)
     def put(self, key: int, value: int) -> None:
         self.cache[key] = value
         self.cache.move_to_end(key)
@@ -464,16 +522,30 @@ class FenwickTree:
         return res
 
     def range_query(self, l, r): return self.query(r) - self.query(l - 1)
+# can add more template functions here
+
+# end of template functions
 
 
+# To enable the file I/O i the below 2 lines are uncommented.
+# read from in.txt if uncommented
 if os.path.exists('in.txt'):
     sys.stdin = open('in.txt', 'r')
+# will print on Console if file I/O is not activated
+#if os.path.exists('out.txt'): sys.stdout=open('out.txt', 'w')
+
+# inputs template
+# for fast input we areusing sys.stdin
 
 
 def inp(): return sys.stdin.readline().strip()
 
+# for fast output, always take string
+
 
 def out(var): sys.stdout.write(str(var))
+
+# custom base input needed for the program
 
 
 def I(): return (inp())
@@ -487,13 +559,29 @@ def MF(): return (map(float, inp().split()))
 def LF(): return (list(MF()))
 def SLF(): return (sorted(LF()))
 
+# end of inputs template
 
+
+# common modulo values used in competitive programming
 MOD = 998244353
 mod = 10**9 + 7
 
+# any particular user-defined functions for the code.
+# can be written here.
+# Python implementation of the above approach
+
+# function to return count of distinct bitwise OR
+
+# end of any user-defined functions
+
+# main functions for execution of the program.
+
 
 def __starting_point():
+    # execute your program from here.
+    # start your main code from here
 
+    # Write your code here
     for _ in range(II()):
         n, m = MI()
         x, y, a = max(n, m), min(n, m), 0
@@ -532,5 +620,23 @@ def __starting_point():
             for i in z:
                 print(*i)
 
+    # end of main code
+    # end of program
 
+# This program is written by :
+#   Shubham Gupta
+#   B.Tech (2019-2023)
+#   Computer Science and Engineering,
+#   Department of EECS
+#   Contact No:8431624358
+#   Indian Institute of Technology(IIT),Bhilai
+#   Sejbahar,
+#   Datrenga,
+#   Raipur,
+#   Chhattisgarh
+#   492015
+
+
+#   THANK YOU FOR
+# YOUR KIND PATIENCE FOR READING THE PROGRAM.
 __starting_point()

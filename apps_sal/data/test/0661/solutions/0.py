@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     M, K = map(int, input().split())
     if K == 0:

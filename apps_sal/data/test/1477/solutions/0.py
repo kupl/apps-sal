@@ -31,7 +31,7 @@ while len(queue0) > 0 or len(queue1) > 0:
         queue0 = next0
 
     if queue1:
-        res += 1
+        res += 1   # coproc call
 
     while queue1:
         next1 = []

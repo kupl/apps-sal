@@ -10,6 +10,7 @@ class Solution:
                 return True
             if node in safe:
                 return True
+            # print(node)
             visited.add(node)
             for child in graph[node]:
                 if child in visited:

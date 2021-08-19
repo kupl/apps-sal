@@ -16,8 +16,8 @@ def check_horizontal(board, boat_size, col_index, row_index):
     for i in range(col_index, col_index + boat_size):
         if i >= len(board):
             return False
-        if board[row_index][i] == '
-        return False
+        if board[row_index][i] == '#':
+            return False
     return True
 
 
@@ -25,8 +25,8 @@ def check_vertical(board, boat_size, col_index, row_index):
     for i in range(row_index, row_index + boat_size):
         if i >= len(board):
             return False
-        if board[i][col_index] == '
-        return False
+        if board[i][col_index] == '#':
+            return False
     return True
 
 

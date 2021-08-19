@@ -6,6 +6,7 @@ cwblack = 0
 
 res = 0
 
+# red first
 for i in range(n):
     if i % 2 == 0 and s[i] == 'b':
         cwblack += 1
@@ -17,6 +18,7 @@ res = min(cwblack, cwred) + abs(cwblack - cwred)
 cwred = 0
 cwblack = 0
 
+# black first
 for i in range(n):
     if i % 2 == 1 and s[i] == 'b':
         cwblack += 1

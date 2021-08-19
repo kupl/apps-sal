@@ -1,3 +1,4 @@
+# your code goes here
 t = int(input().strip())
 while t:
     n = int(input().strip())

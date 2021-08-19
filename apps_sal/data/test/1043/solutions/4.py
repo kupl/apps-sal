@@ -29,5 +29,6 @@ for i in range(n)[::-1]:
         dp[i][j] = dp[i + 1][j + 1] + a[i]
         if i < sum[j]:
             dp[i][j] = min(dp[i][j], dp[i + 1][j])
+        # print(i, j, dp[i][j])
 
 print(dp[0][0])

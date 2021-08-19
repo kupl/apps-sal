@@ -42,6 +42,7 @@ for i in l:
 for i in l:
     k = [i]
     abc(i)
+    # print(i,k)
     if len(k) == n:
         print(*k)
         break

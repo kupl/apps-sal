@@ -21,6 +21,7 @@ stack = [x]
 papa = [0 for i in range(n)]
 while stack:
     x = stack.pop()
+    # z=set(s)
     a = 1
     if ans[x] == 0:
         ans[x] = 1

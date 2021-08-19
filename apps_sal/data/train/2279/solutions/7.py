@@ -1,3 +1,4 @@
+# ------------------- fast io --------------------
 import math
 from bisect import bisect_left as bsl
 import os
@@ -53,6 +54,8 @@ class IOWrapper(IOBase):
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
+
+# ------------------- fast io --------------------
 
 
 def sieve(n):

@@ -13,3 +13,5 @@ for x in range(10):
         dfs(x)
 
 print(len(s))
+
+# Copied

@@ -20,6 +20,7 @@ class Solution:
                 curr_substr.append(s[r])
 
                 if len(charFreq) <= maxLetters:
+                    # print(curr_substr)
                     substrFreq[''.join(curr_substr)] += 1
 
                 r += 1

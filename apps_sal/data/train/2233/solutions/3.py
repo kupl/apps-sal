@@ -1,3 +1,5 @@
+# ===============================================================================================
+# importing some useful libraries.
 
 from collections import defaultdict
 from functools import reduce
@@ -13,15 +15,22 @@ from heapq import *
 from math import ceil, floor
 from copy import *
 from collections import deque, defaultdict
-from collections import Counter as counter
-from itertools import combinations
+from collections import Counter as counter  # Counter(list)  return a dict with {key: count}
+from itertools import combinations  # if a = [1,2,3] then print(list(comb(a,2))) -----> [(1, 2), (1, 3), (2, 3)]
 from itertools import permutations as permutate
 from bisect import bisect_left as bl
 from operator import *
+# If the element is already present in the list,
 
+# the left most position where element has to be inserted is returned.
 from bisect import bisect_right as br
 from bisect import bisect
 
+# If the element is already present in the list,
+# the right most position where element has to be inserted is returned
+
+# ==============================================================================================
+# fast I/O region
 
 BUFSIZE = 8192
 
@@ -89,6 +98,11 @@ if sys.version_info[0] < 3:
 else:
     sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
+# inp = lambda: sys.stdin.readline().rstrip("\r\n")
+
+# ===============================================================================================
+### START ITERATE RECURSION ###
+
 
 def iterative(f, stack=[]):
     def wrapped_func(*args, **kwargs):
@@ -109,13 +123,18 @@ def iterative(f, stack=[]):
     return wrapped_func
 
 
+#### END ITERATE RECURSION ####
+
+# ===============================================================================================
+# some shortcuts
+
 mod = 1000000007
 
 
-def inp(): return sys.stdin.readline().rstrip("\r\n")
+def inp(): return sys.stdin.readline().rstrip("\r\n")  # for fast input
 
 
-def out(var): sys.stdout.write(str(var))
+def out(var): sys.stdout.write(str(var))  # for fast output, always take string
 
 
 def lis(): return list(map(int, inp().split()))
@@ -133,7 +152,7 @@ def strsep(): return list(map(str, inp().split()))
 def fsep(): return list(map(float, inp().split()))
 
 
-def nextline(): out("\n")
+def nextline(): out("\n")  # as stdout.write always print sring.
 
 
 def testcase(t):
@@ -142,15 +161,15 @@ def testcase(t):
 
 
 def pow(x, y, p):
-    res = 1
-    x = x % p
+    res = 1  # Initialize result
+    x = x % p  # Update x if it is more , than or equal to p
     if (x == 0):
         return 0
     while (y > 0):
-        if ((y & 1) == 1):
+        if ((y & 1) == 1):  # If y is odd, multiply, x with result
             res = (res * x) % p
 
-        y = y >> 1
+        y = y >> 1  # y = y/2
         x = (x * x) % p
     return res
 
@@ -168,16 +187,93 @@ def gcd(a, b):
     return a
 
 
-def prefix_sum(ar):
+# discrete binary search
+# minimise:
+# def search():
+#     l = 0
+#     r = 10 ** 15
+#
+#     for i in range(200):
+#         if isvalid(l):
+#             return l
+#         if l == r:
+#             return l
+#         m = (l + r) // 2
+#         if isvalid(m) and not isvalid(m - 1):
+#             return m
+#         if isvalid(m):
+#             r = m + 1
+#         else:
+#             l = m
+#     return m
+
+# maximise:
+# def search():
+#     l = 0
+#     r = 10 ** 15
+#
+#     for i in range(200):
+#         # print(l,r)
+#         if isvalid(r):
+#             return r
+#         if l == r:
+#             return l
+#         m = (l + r) // 2
+#         if isvalid(m) and not isvalid(m + 1):
+#             return m
+#         if isvalid(m):
+#             l = m
+#         else:
+#             r = m - 1
+#     return m
+
+
+# to find factorial and ncr
+# N=100000
+# mod = 10**9 +7
+# fac = [1, 1]
+# finv = [1, 1]
+# inv = [0, 1]
+#
+# for i in range(2, N + 1):
+#     fac.append((fac[-1] * i) % mod)
+#     inv.append(mod - (inv[mod % i] * (mod // i) % mod))
+#     finv.append(finv[-1] * inv[-1] % mod)
+#
+#
+# def comb(n, r):
+#     if n < r:
+#         return 0
+#     else:
+#         return fac[n] * (finv[r] * finv[n - r] % mod) % mod
+
+
+# Find sum of product of subsets of size k in a array
+# ar=[0,1,2,3]
+# k=3
+# n=len(ar)-1
+# dp=[0]*(n+1)
+# dp[0]=1
+# for pos in range(1,n+1):
+#     dp[pos]=0
+#     l=max(1,k+pos-n-1)
+#     for j in range(min(pos,k),l-1,-1):
+#         dp[j]=dp[j]+ar[pos]*dp[j-1]
+# print(dp[k])
+
+def prefix_sum(ar):  # [1,2,3,4]->[1,3,6,10]
     return list(accumulate(ar))
 
 
-def suffix_sum(ar):
+def suffix_sum(ar):  # [1,2,3,4]->[10,9,7,4]
     return list(accumulate(ar[::-1]))[::-1]
 
 
 def N():
     return int(inp())
+
+
+# =========================================================================================
 
 
 def numberOfSetBits(i):
@@ -198,3 +294,4 @@ def solve():
 
 
 solve()
+# testcase(int(inp()))

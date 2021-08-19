@@ -42,6 +42,7 @@ class FordFulkerson:
         f = INF = c
         N = self.N
         while f:
+            # print(f)
             self.used = [0] * N
             f = self.dfs(s, t, INF)
             flow += f

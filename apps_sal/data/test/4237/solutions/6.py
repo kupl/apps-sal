@@ -7,12 +7,15 @@ def lcm(x, y):
 
 def main():
     A, B, C, D = list(map(int, input().split()))
+    # Cで割り切れる数の探索
     tmpC = (A - 1) // C
     tmpC2 = (B) // C
     numC = tmpC2 - tmpC
+    # Dで割り切れる数の探索
     tmpD = (A - 1) // D
     tmpD2 = (B) // D
     numD = tmpD2 - tmpD
+    # CでもDで割り切れるもの
     if C == D:
         ans = B - A + 1 - numC
     else:

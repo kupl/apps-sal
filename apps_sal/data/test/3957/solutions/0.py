@@ -28,6 +28,7 @@ t = [int(x) for x in input().split()]
 e = [list() for i in range(n)]
 sum = [0] * n
 dp = [0] * n
+#print(len(e), e)
 for i in range(n - 1):
     x, y = [int(a) for a in input().split()]
     e[x - 1].append(y - 1)

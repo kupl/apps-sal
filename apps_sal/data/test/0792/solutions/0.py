@@ -21,6 +21,7 @@ for i in range(n):
     elem = line[i]
     sm += elem
     if elem == 0:
+        #print(sm, bon)
         if sm + bon < 0:
             ans += 1
             bon += max(0, d - (maxr[i] + bon))

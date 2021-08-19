@@ -19,5 +19,6 @@ for i in range(n - 1):
     c.append(ci)
     s.append(si)
     f.append(fi)
+# print(c,s,f)
 for i in range(1, n + 1):
     print((jikan(0, i)))

@@ -12,16 +12,25 @@ class Solution:
                 0: (4, 6),
                 }
         M = 1000000007
+        # cache = {}
         cache = defaultdict(int)
 
         def helper(m, n):
             if (m, n) not in cache:
+                # cache[m,n] = []
                 if n == 1:
                     cache[m, n] = 1
                 else:
                     for nn in next[m]:
+                        # for e in helper(nn, n-1):
+                        #     cache[m,n].append([m] + e)
                         cache[m, n] += helper(nn, n - 1)
                 cache[m, n] %= M
             return cache[m, n]
+
+        # res = []
+        # for i in range(10):
+        #    res.extend(helper(i, n))
+        # return res
 
         return sum(helper(i, n) for i in range(10)) % M

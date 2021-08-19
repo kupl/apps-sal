@@ -15,6 +15,8 @@ class Solution:
         if self.rank[parent1] == self.rank[parent2]:
             self.rank[parent2] += 1
         self.roots[parent1] = parent2
+        # self.find(p1)
+        # self.find(p2)
         return True
 
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
@@ -26,6 +28,7 @@ class Solution:
             p1 = points[i][0], points[i][1]
             for j in range(i + 1, len(points)):
                 p2 = points[j][0], points[j][1]
+                # if p1 != p2:
                 dist = abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
                 edges.append((dist, p1, p2))
         edges.sort()
@@ -33,3 +36,19 @@ class Solution:
             if self.union(p1, p2):
                 ans += dist
         return ans
+
+        # for i in range(len(points)):
+        #     x1, y1 = points[i]
+        #     best = (float('inf'), (x1, y1))
+        #     for j in range(len(points)):
+        #         if i == j:
+        #             continue
+        #         x2, y2 = points[j]
+        #         dist = abs(x1-x2) + abs(y1-y2)
+        #         best = min(best, (dist, (x2, y2)))
+        #     p1 = x1, y1
+        #     dist, p2 = best
+        #     if self.union(p1, p2):
+        #         print(\"connecting {}, {} distance {}\".format(p1, p2, dist))
+        #         ans += dist
+        # return ans

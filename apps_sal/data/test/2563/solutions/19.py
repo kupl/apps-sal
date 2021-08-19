@@ -24,6 +24,8 @@ def solve():
             evens.append(num)
             leven += 1
 
+    # lodd = len(odds)
+    # leven = len(evens)
     odds.append(100)
     evens.append(100)
     io, ie = 0, 0
@@ -41,6 +43,9 @@ def solve():
             if ie == leven:
                 ans += odds[io:lodd]
                 break
+        # if io == lodd and ie == leven:
+        #     break
+    # nums.reverse()
 
     print("".join(list(map(str, ans))))
 

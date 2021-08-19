@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 import numpy as np
 
@@ -20,9 +21,11 @@ for i in range(H - 1, 0, -1):
     down[i - 1] = (1 + down[i]) * S[i]
 for i in range(W - 1):
     left[:, i + 1] = (1 + left[:, i]) * S[:, i]
+    # 行列の列を取り出す時の記法
 for i in range(W - 1, 0, -1):
     right[:, i - 1] = (1 + right[:, i]) * S[:, i]
 
 
 answer = ((up + down + left + right) * S).max() + 1
+# 自身を数えないことで特殊な場合をなくしている
 print(answer)

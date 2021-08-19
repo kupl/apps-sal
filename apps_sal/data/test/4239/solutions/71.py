@@ -1,4 +1,5 @@
 N = int(input())
+# 初期化
 dp = [0] * N
 for i in range(10):
     if 6**i - 1 < N:
@@ -7,6 +8,7 @@ for i in range(10):
     if 9**i - 1 < N:
         dp[9**i - 1] = 1
 
+# dp
 for k in range(1, N):
     if dp[k] != 1:
         dp_list = []

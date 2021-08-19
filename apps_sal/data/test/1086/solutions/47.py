@@ -6,6 +6,7 @@ d = []
 for i in range(h):
     d.append([abs(a[i][j] - b[i][j]) for j in range(w)])
 dp = np.zeros((h, w, 12800))
+# dp[r][c][j]:(r,c)まで考えたときjにできるか。0：できない。1以上：できる。
 dp[0, 0, d[0][0] + 6400] = 1
 for i in range(w - 1):
     if d[0][i + 1] == 0:

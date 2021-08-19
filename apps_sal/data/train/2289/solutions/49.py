@@ -77,6 +77,8 @@ nind = len(A)
 
 for i in range(anslen):
 
+    #print ("".join(A[:nind]))
+
     minind = 0
     for j in range(26):
         if apnum[nind][j] == 0:
@@ -86,4 +88,5 @@ for i in range(anslen):
 
     nind = lastap[nind][minind] - 1
 
+# ans.reverse()
 print("".join(ans))

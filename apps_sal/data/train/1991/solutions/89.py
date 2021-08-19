@@ -1,4 +1,5 @@
 class Solution:
+    # https://leetcode.com/problems/count-all-possible-routes/discuss/851114/Simple-Python-code-with-explanation
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         from functools import lru_cache
 

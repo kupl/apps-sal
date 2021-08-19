@@ -1,5 +1,24 @@
 class Solution:
     def countOrders(self, n: int) -> int:
+        # 9:41
+        # we just want to make sure delivery i happens before pick up i
+        # we can save lot of recursive calls by using maths
+
+        #         n*[(n-1),1]
+        #                    n-2
+
+        #         p,d
+        #         n,0
+
+        #         p=n
+        #         d=0
+
+        #         p=n-1
+        #         d=1
+
+        #         p=n-2   or p=n-1
+        #                d=0
+        #         d=2.
 
         pickup = n
         delivery = 0

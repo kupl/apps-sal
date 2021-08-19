@@ -1,7 +1,9 @@
+# 再帰
 def gcd(a, b):
     if b == 0:
         return a
     return gcd(b, a % b)
+# ループ
 
 
 def gcd(a, b):

@@ -1,6 +1,17 @@
 n, k = list(map(int, input().split()))
 a = [input() for _ in range(n)]
 
+# n, k = 5, 3
+# a =["BWBBB",
+# 	"BWBBB",
+# 	"BBBBB",
+# 	"BBBBB",
+# 	"WBBBW"]
+# n, k = 4, 2
+# a =["BWWW",
+# 	"WBBW",
+# 	"WBBW",
+# 	"WWWB"]
 
 m = n - k + 1
 

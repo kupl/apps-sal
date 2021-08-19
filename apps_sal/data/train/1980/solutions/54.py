@@ -23,3 +23,10 @@ class Skiplist:
             return True
         else:
             return False
+
+
+# Your Skiplist object will be instantiated and called as such:
+# obj = Skiplist()
+# param_1 = obj.search(target)
+# obj.add(num)
+# param_3 = obj.erase(num)

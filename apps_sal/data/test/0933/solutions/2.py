@@ -35,6 +35,7 @@ while i != len(x):
         else:
             d.append(x[i])
             i += 1
+# d.append('^')
 i = 0
 while i != len(d):
     if i == 0:

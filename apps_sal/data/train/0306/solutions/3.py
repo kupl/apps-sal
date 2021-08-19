@@ -1,4 +1,5 @@
 class Solution:
+    # recursive, time limit exceeded
     def combinationSum4_1(self, nums, target):
         """
         :type nums: List[int]
@@ -14,6 +15,7 @@ class Solution:
                 res += self.combinationSum4(nums, target - nums[i])
         return res
 
+    # top down using memory
     def combinationSum4_2(self, nums, target):
         """
         :type nums: List[int]
@@ -35,6 +37,7 @@ class Solution:
         dp[target] = res
         return res
 
+    # bottom up
     def combinationSum4(self, nums, target):
         """
         :type nums: List[int]

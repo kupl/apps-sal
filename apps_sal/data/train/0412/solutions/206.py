@@ -10,4 +10,5 @@ class Solution:
                     if j - k > 0:
                         T[i][j] += T[i - 1][j - k]
                         T[i][j] = T[i][j] % m
+            # print(T)
         return T[d - 1][target]

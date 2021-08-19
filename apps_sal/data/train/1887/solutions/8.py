@@ -5,6 +5,7 @@ class Solution(object):
         def dfs(n):
             if n in seen:
                 return
+            # print('walk', n)
             seen.add(n)
             neighbors = [i for i, val in enumerate(M[n]) if val == 1]
 
@@ -18,6 +19,7 @@ class Solution(object):
                     continue
 
                 count += 1
+                # print('start',j,i)
                 dfs(i)
 
         return count

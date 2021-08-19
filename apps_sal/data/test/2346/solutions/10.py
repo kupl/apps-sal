@@ -11,6 +11,9 @@ for i in range(1, n + 1):
         children[p].append(i)
     cs[i] = c
 
+# print(parent)
+# print(children)
+# print(cs)
 
 to_delete = []
 for i in range(1, n + 1):

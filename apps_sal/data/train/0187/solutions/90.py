@@ -19,6 +19,8 @@ class Solution:
             if profit > mpy:
                 rotations = i + 1
                 mpy = profit
+        # print(boarded,waiting)
+        # print(mpy)
 
         r = i + 1
         while waiting > 0:
@@ -36,6 +38,8 @@ class Solution:
             if profit > mpy:
                 rotations = r
                 mpy = profit
+            # print(profit,mpy)
+            # print()
         if mpy > 0:
             return rotations
         else:

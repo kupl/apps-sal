@@ -16,6 +16,7 @@ def T9(words, seq):
 
 def numToword(num):
     return ([" ", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ", ""])[num]
+# Return true if we can write this word with this leters
 
 
 def isWord(word, num):

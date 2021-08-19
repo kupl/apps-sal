@@ -6,6 +6,8 @@ for j in range(1, (t + 1)):
     f1 = 0
     if(p != q and p != 0):
         tmp = max(((y - x) + (q - p) - 1) // (q - p), (x + p - 1) // p)
+        # print(tmp)
+        # include<FU*k> test case
         print((q * tmp) - y)
         f1 = 1
 

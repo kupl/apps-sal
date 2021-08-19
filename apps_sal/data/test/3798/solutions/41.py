@@ -14,6 +14,7 @@ s = int(input())
 ans = INF
 if n >= s:
     max_digits = len(str(bin(n))) - 2
+    # 3桁まで
     for k in range(max_digits, 2, -1):
         min_b = max(2, -(int(- (n ** (1 / k)))))
         max_b = int((n - s + 1) ** (1 / (k - 1)))
@@ -25,6 +26,7 @@ if n >= s:
             break
 
     if ans == INF:
+        # 2桁
         for a1 in range(1, s + 1):
             if (n - s) < (a1 - 1) * a1:
                 break
@@ -35,6 +37,7 @@ if n >= s:
                     ans = b
 
     if ans == INF:
+        # 1桁
         if n == s:
             ans = n + 1
 if ans == INF:

@@ -21,7 +21,7 @@ def crosstable(players, scores):
         Sb = str(format(SB[j[0]], ".2f")).rjust(sb)
         li.append(f'{index}  {name_}{["  ", "   "][le >= 10]}{team}  {pt}  {Sb}')
 
-    fline = ' '.join(['
+    fline = ' '.join(['#'.rjust(digit) + '  ' +
                       'Player'.ljust(name) +
                     ['  ', '   '][len(players) >= 10] +
                     ''.join([[' ', '  '][i < 10 and le >= 10] + str(i) for i in range(1, le + 1)]).strip() + '  ' +

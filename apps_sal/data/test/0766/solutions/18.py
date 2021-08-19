@@ -1,3 +1,4 @@
+# codeforces_955B_live
 si = [e for e in input()]
 test = len(set(si))
 if test > 4 or test == 1:

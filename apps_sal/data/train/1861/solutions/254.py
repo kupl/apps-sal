@@ -17,6 +17,7 @@ class Solution:
             for j in range(i + 1, l):
                 x2 = rows[j]
 
+                # print(\"x1\", x1, \"x2\", x2)
                 row1 = row_m[x1]
                 row2 = row_m[x2]
 
@@ -27,10 +28,12 @@ class Solution:
 
                 smallest = math.inf
                 for i, point in enumerate(intersect[1:], start=1):
+                    # print(\"point\", point, i, intersect[i - 1])
                     smallest = min(
                         smallest,
                         point - intersect[i - 1]
                     )
+                # print(\"smallest\", smallest, intersect)
                 sol = min(
                     sol,
                     smallest * (x2 - x1),

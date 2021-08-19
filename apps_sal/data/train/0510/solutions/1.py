@@ -1,6 +1,7 @@
 from string import ascii_lowercase
 import bisect
 import sys
+# input = sys.stdin.buffer.readline
 def input(): return sys.stdin.readline().rstrip()
 
 
@@ -21,7 +22,7 @@ for q in range(Q):
     a, b, c = input().split()
     if a == '1':
         i = int(b) - 1
-        if c == S[i]:
+        if c == S[i]:   # 変更なし
             continue
         idx = bisect.bisect_left(lst[d[S[i]]], i)
         del lst[d[S[i]]][idx]

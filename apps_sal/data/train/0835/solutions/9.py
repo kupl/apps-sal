@@ -1,3 +1,4 @@
+# cook your code here
 t = int(input().strip())
 
 while t > 0:

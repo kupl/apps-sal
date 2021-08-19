@@ -1,3 +1,5 @@
+# 拡張ダイクストラ
+# weight,point
 import heapq
 N, M, S = map(int, input().split())
 graph = {(i, j): [] for i in range(1, 51) for j in range(2501)}

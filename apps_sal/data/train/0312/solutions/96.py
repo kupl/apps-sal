@@ -5,7 +5,7 @@ class Solution:
             running.append(running[-1] + num)
 
         result = math.inf
-        deque = collections.deque([0])
+        deque = collections.deque([0])  # left idx
         r = 1
 
         while r < len(running):
@@ -16,12 +16,14 @@ class Solution:
 
             while deque and r < len(running) and running[r] - running[deque[0]] < K:
 
+                # pop the last of the queue if it is smaller to maintain mono increasing queue
                 while deque and running[r] <= running[deque[-1]]:
                     deque.pop()
 
                 deque.append(r)
                 r += 1
 
+            # right reached the end yet still not satisfied
             if r == len(running):
                 break
 
@@ -29,10 +31,13 @@ class Solution:
                 l = deque.popleft()
                 result = min(result, r - l)
 
+            # r += 1
+
         return result if result != math.inf else -1
 
         '''
         
+                    #pop the last of the queue if it is smaller to maintain mono increasing queue 
                 while deque and running[r] <= running[deque[-1]]: 
                     deque.pop()
                     

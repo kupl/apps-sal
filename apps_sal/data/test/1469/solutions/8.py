@@ -9,8 +9,11 @@ INF = float("inf")
 IINF = 10 ** 18
 MOD = 10 ** 9 + 7
 
+# MOD = 998244353
+
 
 L = int(sys.stdin.buffer.readline())
+# 2べきなら2個ずつ辺を張ればOK
 V = L.bit_length()
 ans = []
 for v in range(V - 1):

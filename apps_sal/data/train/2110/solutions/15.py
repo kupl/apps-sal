@@ -10,4 +10,5 @@ for i in range(10**6 + 698):
     if di[i] % 2 == 1:
         ans += 1
 
+# print(di[:3])
 print(ans)

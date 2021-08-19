@@ -3,6 +3,7 @@ message = "<3"
 for i in range(words):
     message += input()
     message += "<3"
+# print(message)
 givenMessage = input()
 i = 0
 j = 0

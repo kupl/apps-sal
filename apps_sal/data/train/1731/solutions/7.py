@@ -1,4 +1,5 @@
 from random import choice
+# 题目太复杂,跳过这个题
 
 
 def interpret(code):
@@ -63,8 +64,8 @@ def interpret(code):
                 output += str(stack.pop())
             elif i == ',':
                 output += chr(stack.pop())
-            elif i == '
-            move += 1
+            elif i == '#':
+                move += 1
             elif i == 'p':
                 ty, tx, tv = stack.pop(), stack.pop(), stack.pop()
                 code[ty][tx] = chr(tv)

@@ -4,7 +4,7 @@ class Solution:
         d = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         q = collections.deque()
         v = {}
-        q.append((0, 0, k, 0))
+        q.append((0, 0, k, 0))  # x, y , k and step
 
         while q:
             x, y, z, s = q.popleft()

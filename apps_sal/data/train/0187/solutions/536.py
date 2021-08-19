@@ -18,6 +18,7 @@ class Solution:
                 minimum_wheel_rotations = wheel_rotations
         fullrevenue_rotations = (waiting_customers // 4)
         wheel_rotations += fullrevenue_rotations
+        # fullprofit = fullprofit_rotations * 4 * boardingCost - fullprofit_rotations * runningCost
         fullrevenue = fullrevenue_rotations * (4 * boardingCost - runningCost)
 
         profit += fullrevenue

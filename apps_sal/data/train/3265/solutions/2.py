@@ -18,3 +18,20 @@ def mult_triangle(n):
         even_total += e
         odd_total += o
     return [total, even_total, odd_total]
+
+#  Slow approach (1st attempt!)
+# def make_row(n):
+#     row = range(1,n+1) + range(n-1, 0, -1)
+#     return [n * element for element in row]
+
+
+# def mult_triangle(n):
+#     odd_total = 0
+#     even_total = 0
+#     for level in range(1, n+1):
+#         for element in make_row(level):
+#             if element % 2 == 0:
+#                 even_total += element
+#             else:
+#                 odd_total += element
+#     return [odd_total + even_total, even_total, odd_total]

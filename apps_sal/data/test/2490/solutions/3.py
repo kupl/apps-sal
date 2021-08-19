@@ -1,5 +1,6 @@
 S = input()[::-1]
 ans = 0
+# 支払う枚数
 array = list(map(int, S))
 L = len(array)
 for i, n in enumerate(array):

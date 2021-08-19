@@ -7,7 +7,7 @@ class Solution:
 
         mat_np = np.array(mat)
 
-        M, N = mat_np.shape
+        M, N = mat_np.shape  # same shape with the sum_matrix
 
         sum_np = np.zeros((M, N), dtype=int)
 

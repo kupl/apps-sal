@@ -7,4 +7,5 @@ for i in a:
         res += f * int(i / (f + x))
         if(i % (f + x) > x):
             res += f
+        # print(int(i%(f+x)))
 print(res)

@@ -13,6 +13,7 @@ def palace():
         temp = T - H[i] * 0.006
         dif = abs(A - temp)
 
+        # 誤差の最小値(→候補地も更新)
         if min_dif >= dif:
             min_dif = dif
             place = i + 1

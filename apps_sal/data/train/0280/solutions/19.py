@@ -1,6 +1,7 @@
 class Solution:
     def palindromePartition(self, s: str, K: int) -> int:
         n = len(s)
+        # dp[i][k] means the minimal number of characters that I need to change to divide index 0 to index i from string s into k substrings
         dp = [[101 for k in range(K + 1)] for i in range(n)]
         num = [[0 for j in range(n)] for i in range(n)]
 

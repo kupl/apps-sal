@@ -23,6 +23,7 @@ class Solution:
                     lookup[val2] += 1
             return count
 
+        # solving type 1
         count1 = countTriplets(nums1, nums2)
         count2 = countTriplets(nums2, nums1)
         return count1 + count2

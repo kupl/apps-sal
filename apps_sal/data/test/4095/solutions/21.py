@@ -3,12 +3,14 @@ aa = list(map(int, input().split(' ')))
 
 
 def countMoreLess(vs, value):
+    # print(vs)
     cur = 0
     res = {cur: 1}
 
     for v in vs:
         cur += 1 if v > value else -1
         res[cur] = res.get(cur, 0) + 1
+    # print(res)
     return res
 
 

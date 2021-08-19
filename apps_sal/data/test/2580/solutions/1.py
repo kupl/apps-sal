@@ -7,7 +7,7 @@ input = sys.stdin.readline
 class Graph(object):
     """docstring for Graph"""
 
-    def __init__(self, n, d):
+    def __init__(self, n, d):  # Number of nodes and d is True if directed
         self.n = n
         self.graph = [[] for i in range(n)]
         self.parent = [-1 for i in range(n)]
@@ -18,7 +18,7 @@ class Graph(object):
         if not self.directed:
             self.graph[y].append(x)
 
-    def bfs(self, root):
+    def bfs(self, root):  # NORMAL BFS
         queue = [root]
         queue = deque(queue)
         vis = [0] * self.n
@@ -31,11 +31,11 @@ class Graph(object):
                     self.parent[i] = element
                     vis[i] = 1
 
-    def dfs(self, root, ans):
+    def dfs(self, root, ans):  # Iterative DFS
         stack = [root]
         vis = [0] * self.n
         stack2 = []
-        while len(stack) != 0:
+        while len(stack) != 0:  # INITIAL TRAVERSAL
             element = stack.pop()
             if vis[element]:
                 continue
@@ -46,7 +46,7 @@ class Graph(object):
                     self.parent[i] = element
                     stack.append(i)
 
-        while len(stack2) != 0:
+        while len(stack2) != 0:  # BACKTRACING. Modify the loop according to the question
             element = stack2.pop()
             m = 0
             for i in self.graph[element]:
@@ -55,7 +55,7 @@ class Graph(object):
             ans[element] = m + 1
         return ans
 
-    def shortestpath(self, source, dest):
+    def shortestpath(self, source, dest):  # Calculate Shortest Path between two nodes
         self.bfs(source)
         path = [dest]
         while self.parent[path[-1]] != -1:
@@ -90,6 +90,7 @@ class Graph(object):
             e = stack[-1]
             if vis[e]:
                 stack.pop()
+                # Reverse_The_Change()
                 continue
             vis[e] = 1
             for i in graph[e]:
@@ -97,12 +98,14 @@ class Graph(object):
                     stack.append(i)
             if self.parent[e] == -1:
                 continue
+            # Change_The_Answers()
 
     def maximizeSum(self):
         edges = []
         for i in range(1, n):
             edges.append(count[i] * (n - count[i]))
         edges.sort()
+        # print (edges)
 
         ans = 0
         for i in range(n - 1):
@@ -131,6 +134,8 @@ for nt in range(int(input())):
             x = (x * a[i]) % mod
             x = x % mod
         a = a[0:n - 2] + [x]
+    # print (a)
     count = [0] * n
     count = g.dfs(0, count)
+    # print (count)
     print(g.maximizeSum())

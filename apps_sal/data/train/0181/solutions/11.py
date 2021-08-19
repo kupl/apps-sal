@@ -13,9 +13,12 @@ class Solution:
             return memo[(idx, state)]
         memo[(idx, state)] = 0
         if state == 0:
+            # can buy or ignore
             memo[(idx, state)] = max(self.max_profit_rec(prices, memo, idx + 1, 1) - prices[idx], self.max_profit_rec(prices, memo, idx + 1, 0))
         elif state == 1:
+            # can sell or ignore
             memo[(idx, state)] = max(self.max_profit_rec(prices, memo, idx + 1, 2) + prices[idx], self.max_profit_rec(prices, memo, idx + 1, 1))
         else:
+            # cooldown: must ignore
             memo[(idx, state)] = self.max_profit_rec(prices, memo, idx + 1, 0)
         return memo[(idx, state)]

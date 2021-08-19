@@ -3,6 +3,7 @@ class Solution:
         totalSize = 1
         i = 0
         while i < len(A) - totalSize:
+            # for i in range(len(A)-1):
             currentSize = 1
             sign = None
             for j in range(i + 1, len(A)):

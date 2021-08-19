@@ -1,7 +1,12 @@
+# cook your dish here
 import math
 t = int(input())
+# t=1
+# res=[]
 for i in range(t):
     n = int(input())
+    # n,q=map(int,input().split())
+    # l=list(map(int,input().split()))
     l = {}
     for j in range(n):
         w, s = input().split()

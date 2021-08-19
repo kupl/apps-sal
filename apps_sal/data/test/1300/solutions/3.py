@@ -2,6 +2,8 @@ n, c = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 
+# ça ne coûte pas trop cher de transformer le problème.
+
 nc = 0
 last = {}
 preconfs = []
@@ -19,6 +21,7 @@ for i in range(n):
         last[a[i]] = i
     preconfc.append(nc)
 
+# deuxième transfo
 
 content = {}
 for i in range(n):

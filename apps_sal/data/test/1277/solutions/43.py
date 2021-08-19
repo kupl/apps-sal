@@ -31,6 +31,7 @@ def dfs(u):
 dist_u = dfs(u)
 dist_v = dfs(v)
 
+# 高橋くん（u）の方が近い頂点のうち、青木くん（v）から最も遠い頂点の一つ手前
 ans = 0
 for x, y in zip(dist_u, dist_v):
     if x < y:

@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     n = int(input())
     stampArr = list(map(int, input().split()))

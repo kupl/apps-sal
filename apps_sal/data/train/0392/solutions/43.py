@@ -1,4 +1,5 @@
 class Solution:
+    # 300 ms 29.38%. Time and Space: O(N)
     def numWays(self, s: str) -> int:
         ones = sum(c == '1' for c in s)
 

@@ -8,6 +8,8 @@ A = sorted(list(map(int, readline().split())))
 ok = -1
 ng = (10 ** 5) * 2 + 1
 
+# x以上の握手ペアをM回以上作れるか、でxの最大値を二分探索
+
 
 def isOk(x):
     cnt = 0
@@ -25,6 +27,7 @@ while abs(ng - ok) > 1:
     else:
         ng = mid
 
+# okが基準とすべきxの値である
 
 sumA = [0] + A.copy()
 for i in range(1, len(sumA)):

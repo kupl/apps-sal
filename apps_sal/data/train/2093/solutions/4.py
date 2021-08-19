@@ -28,3 +28,6 @@ for i in range(n):
 for s in ss:
 
     print(' '.join([str(i) for i in s]))
+
+
+# Made By Mostafa_Khaled

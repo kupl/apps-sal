@@ -5,6 +5,7 @@ class Solution:
             for day in range(D):
                 ship_w = 0
                 while i < len(weights):
+                    # print(str(w - ship_w)+\">=\"+str(weights[i]))
                     if w - ship_w >= weights[i]:
                         ship_w += weights[i]
                     else:

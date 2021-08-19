@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from itertools import combinations_with_replacement, product
 def input(): return sys.stdin.readline().rstrip()

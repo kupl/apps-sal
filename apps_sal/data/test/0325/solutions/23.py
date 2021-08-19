@@ -1,3 +1,4 @@
+# 到達可能な頂点の集合
 def reachable_nodeset(start, inc):
     reachable = set()
     reachable.add(start)
@@ -15,15 +16,18 @@ def reachable_nodeset(start, inc):
 def bellmanford(num, start, goal, edges):
     cost = [float('inf')] * num
     cost[start] = 0
+    # 負の閉路が無ければ更新はV-1回までで終わる
     for _ in range(num):
         updated = False
         for a, b, c in edges:
+            # aまでのコスト+辺abのコストがbまでのコストより小さければ更新
             if cost[b] > cost[a] + c:
                 cost[b] = cost[a] + c
                 updated = True
         if not updated:
             break
     else:
+        # V回目まで更新があったら負の閉路がある
         return -1
     return max(0, -cost[goal])
 

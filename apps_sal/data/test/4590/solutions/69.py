@@ -14,7 +14,9 @@ for i in range(n + 1):
     if(prodA[i] > k):
         break
     while(prodB[j] > k - prodA[i]):
+        # print(prodB[j],j,k-prodA[i])
         j -= 1
+    # print(ans)
     ans = max(ans, i + j)
 
 

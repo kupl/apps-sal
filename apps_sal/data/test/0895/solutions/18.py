@@ -7,6 +7,7 @@ x = []
 c = 0
 g = 0
 a.sort()
+# print(a)
 for i in range(n):
     f = i
     j = i + 1
@@ -15,6 +16,7 @@ for i in range(n):
     while g <= k:
         if j == n:
             break
+        #print(a[f], a[j])
         if g == k and abs(a[f] - a[j]) != 0:
             break
 
@@ -28,4 +30,5 @@ for i in range(n):
     x.append(c)
 
 
+# print(x)
 print(max(x) + 1)

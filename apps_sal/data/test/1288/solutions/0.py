@@ -1,6 +1,6 @@
 n, k = map(int, input().split())
-lo = 0
-hi = 10 ** 9
+lo = 0  # Imposs
+hi = 10 ** 9  # Poss
 
 
 l = list(map(int, input().split()))

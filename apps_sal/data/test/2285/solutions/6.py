@@ -16,3 +16,7 @@ def f(s):
 for i in range(int(input())):
     tmp = input()
     print(f(tmp))
+
+# print(check("R23C55"))
+# print(check("R228C494"))
+# print(f("::"))

@@ -1,3 +1,5 @@
+# cook your dish here
+# from math import *
 for _ in range(int(input().strip())):
     n, k = map(int, input().split())
     l = [int(x) for x in input().split()]

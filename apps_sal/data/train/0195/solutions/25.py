@@ -1,11 +1,13 @@
 class Solution:
     def countTriplets(self, A: List[int]) -> int:
+        # O(N^2)
         two_and_count = collections.Counter()
         res = 0
 
         for idx, x in enumerate(A):
-            if x == 0:
+            if x == 0:  # x & x & x
                 res += 1
+            # y & x & x -> 3
             new_two_and = collections.Counter([x])
             for idy in range(idx):
                 if x & A[idy] == 0:

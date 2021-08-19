@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     t = int(input())
     Alice = list(map(int, input().split()))

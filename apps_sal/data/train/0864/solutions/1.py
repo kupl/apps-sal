@@ -5,4 +5,4 @@ for j in range(int(input())):
     while i <= n:
         s -= i
         i *= k
-    print("Case
+    print("Case #%d: %d" % (j + 1, s))

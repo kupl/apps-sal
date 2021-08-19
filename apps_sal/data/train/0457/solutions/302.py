@@ -10,6 +10,7 @@ class Solution:
                 min_coins = min(min_coins, coin_count)
                 return
 
+            # Iterate from largest coins to smallest coins
             for i in range(start_coin, len(coins)):
                 remaining_coin_allowance = min_coins - coin_count
                 max_amount_possible = coins[i] * remaining_coin_allowance

@@ -10,4 +10,5 @@ class Solution:
                 dp[i] = max(dp[i], (dp[i - size] if i - size >= 0 else 0) + (currMax * size))
                 size += 1
 
+        # print(dp)
         return dp[-1]

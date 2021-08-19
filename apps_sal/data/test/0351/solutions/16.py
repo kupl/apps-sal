@@ -2,7 +2,12 @@ n, k = map(int, input().split(' '))
 problems = list(map(int, input().split(' ')))
 
 problems.sort()
+# easy = []
 
+# for i in range(len(problems)):
+# 	if problems[i] > k:
+# 		problems = problems[i:]
+# 		break
 
 max_solved = k
 problem_index = 0

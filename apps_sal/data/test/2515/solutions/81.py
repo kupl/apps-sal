@@ -9,7 +9,7 @@ max_r = max(r)
 prime_numbers = [True for n in range(max_r + 1)]
 similar_numbers = [False for n in range(max_r + 1)]
 
-prime_numbers[0], prime_numbers[1] = False, False
+prime_numbers[0], prime_numbers[1] = False, False    # 1 is not a prime number
 for divisor in range(2, max_r // 2 + 1):
     if prime_numbers[divisor]:
         for multipler in range(2, max_r // divisor + 1):

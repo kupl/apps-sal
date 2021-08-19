@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, data):
-        self.next = None
-        self.prev = None
+        self.next = None  # reference to next node in DLL
+        self.prev = None  # reference to previous node in DLL
         self.data = data
 
 
@@ -34,3 +34,10 @@ class BrowserHistory:
             count += 1
 
         return self.curr.data
+
+
+# Your BrowserHistory object will be instantiated and called as such:
+# obj = BrowserHistory(homepage)
+# obj.visit(url)
+# param_2 = obj.back(steps)
+# param_3 = obj.forward(steps)

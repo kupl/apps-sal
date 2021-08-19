@@ -10,3 +10,4 @@ class Solution:
             trz += int(n / div)
             div *= 5
         return trz
+        # return 0 if n is 0 else n / 5 + self.trailingZeros(n / 5)

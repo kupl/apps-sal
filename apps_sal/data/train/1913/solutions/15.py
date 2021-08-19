@@ -14,6 +14,7 @@ class Solution:
                 if max_j == A[j]:
                     j_ind = j
 
+        # swap
         tmp = A[i]
         A[i] = A[j_ind]
         A[j_ind] = tmp

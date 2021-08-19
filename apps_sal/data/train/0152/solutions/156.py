@@ -13,6 +13,7 @@ class Solution:
                     return True
             return False
 
+        #print(valid(1), valid(2), valid(3), valid(4))
         l, r = 1, A[-1]
 
         while l < r:

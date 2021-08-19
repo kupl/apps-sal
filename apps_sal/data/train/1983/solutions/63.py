@@ -14,3 +14,9 @@ class ProductOfNumbers:
             return 0
         else:
             return self.res[-1] // self.res[-1 - k]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

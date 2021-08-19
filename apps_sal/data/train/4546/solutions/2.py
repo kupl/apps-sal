@@ -1,3 +1,4 @@
+# wow this is very long :)
 def find_children(people):
     string = []
     answer = []

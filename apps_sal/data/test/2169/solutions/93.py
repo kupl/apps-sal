@@ -9,6 +9,7 @@ for y in range(H):
         number_yx[grid[y][x]] = [y, x]
 fromto_cost = defaultdict(lambda: defaultdict(int))
 for mod_group in range(D):
+    # 剰余ごとにスタートを決定
     start = mod_group + 1
     previous = start
     fromto_cost[start][start] = 0

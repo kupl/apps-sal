@@ -1,6 +1,7 @@
+#!/usr/bin/env python3
 
 [n, m] = list(map(int, input().strip().split()))
-wc = [[] for _ in range(4)]
+wc = [[] for _ in range(4)]  # w[0] unused
 for _ in range(n):
     w, c = list(map(int, input().strip().split()))
     wc[w].append(c)

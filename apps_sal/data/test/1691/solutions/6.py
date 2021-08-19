@@ -49,7 +49,7 @@ class BinaryIndexedTree:
 
     def add(self, i, x):
         ''' a_i += x '''
-        i += 1
+        i += 1  # 0-origin -> 1-origin
 
         while i <= self.n:
             self.bit[i] += x

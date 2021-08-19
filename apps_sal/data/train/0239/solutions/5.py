@@ -43,3 +43,19 @@ class Solution:
 
     def _swap(self, nums, i, j):
         nums[i], nums[j] = nums[j], nums[i]
+
+# Follow-up 1
+# Do beter than O(nlogn).
+
+# Follow-up 2
+# Can you do it in O(n) time?
+
+# What about using QuickSelect?
+
+# Steps:
+
+# Separate all elements by label => HashMap<Label, Array> m;
+# Use QuickSelect on each label's elements to find the largest m elements.
+# Merge the largest m elements from each label into an array
+# Use QuickSelect again on the resulting array to get the largest k elements.
+# *each step can be done in O(N).

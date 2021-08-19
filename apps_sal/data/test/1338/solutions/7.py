@@ -6,6 +6,8 @@ def countf(f):
     sum = 0
     for i in range(len(f)):
         for j in range(len(f))[i:]:
+            # print(i, j)
+            # print(f[i:j + 1])
             sum += min(f[i:j + 1])
     return sum
 
@@ -22,6 +24,7 @@ for x in itertools.permutations(list(range(n + 1))[1:]):
         maxf = t
         count = 0
     if t == maxf:
+        # print (x , '-' , t)
         count = count + 1
         if count == m:
             save = x

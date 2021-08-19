@@ -1,6 +1,7 @@
 class Solution:
     def maxDistance(self, positions: List[int], m: int) -> int:
         positions.sort()
+        # try to add balls and record the position
 
         def check(mid):
             p = 0
@@ -12,6 +13,7 @@ class Solution:
             return count >= m - 1
 
         low, high = 0, positions[-1] - positions[0]
+        # print(low, high)
 
         res = 0
 

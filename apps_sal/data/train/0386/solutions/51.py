@@ -1,6 +1,8 @@
 class Solution:
     def countVowelPermutation(self, n: int) -> int:
 
+        # from collections import defaultdict
+
         end = dict()
         end['a'] = 1
         end['e'] = 1

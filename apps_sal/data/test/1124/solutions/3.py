@@ -17,10 +17,10 @@ def LI(): return list(map(int, input().split()))
 def TI(): return tuple(map(int, input().split()))
 def LF(): return list(map(float, input().split()))
 def Init(H, W, num): return [[num for i in range(W)] for j in range(H)]
-def TL(mylist): return [list(x) for x in zip(*mylist)]
-def RtoL(mylist): return [list(reversed(x)) for x in mylist]
-def HtoL(mylist): return [x for x in list(reversed(mylist))]
-def convert_2d(l, colstart, colend, rawstart, rawend): return [i[rawstart:rawend] for i in l[colstart:colend]]
+def TL(mylist): return [list(x) for x in zip(*mylist)]  # 行と列入れ替え
+def RtoL(mylist): return [list(reversed(x)) for x in mylist]  # 左右反転
+def HtoL(mylist): return [x for x in list(reversed(mylist))]  # 上下反転
+def convert_2d(l, colstart, colend, rawstart, rawend): return [i[rawstart:rawend] for i in l[colstart:colend]]  # 2次元行列から一部を採取
 
 
 def get_unique_list(seq):

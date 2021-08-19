@@ -9,5 +9,5 @@ for i in range(k):
         else:
             if(fa > b):
                 print(fa - b + abs(ta - tb) + abs(b - fb))
-            else:
+            else:  # ie fa<a
                 print(a - fa + abs(ta - tb) + abs(fb - a))

@@ -1,5 +1,7 @@
+# 再帰の深さが1000を超えそうなときはこれをやっておく
 import sys
 sys.setrecursionlimit(10**7)
+# 二部グラフになっている時の色の塗り分けを聞いている
 n = int(input())
 es = [[] for i in range(n)]
 for i in range(n - 1):
@@ -8,6 +10,7 @@ for i in range(n - 1):
     es[v - 1].append([u, w])
 
 colors = [0 for i in range(n)]
+# 深さ優先探索　頂点vをcolorで塗ることを考える
 
 
 def dfs(v, color):

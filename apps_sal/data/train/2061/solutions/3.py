@@ -4,6 +4,7 @@ T = int(input())
 def calc(ax, ay, bx, by, cx, cy):
     GL = min(ax, bx, cx)
     GU = min(ay, by, cy)
+    # X軸合わせを優先
     xcnt = {}
     for x in (ax, bx, cx):
         xcnt[x] = xcnt.get(x, 0) + 1
@@ -17,19 +18,26 @@ def calc(ax, ay, bx, by, cx, cy):
         else:
             ret = 1
     else:
+        # 姿勢を調整
         ret = int(GL > 0)
+        # 斜めに動く
         ret += min(abs(GL), abs(GU)) * 2
         if abs(GU) > abs(GL):
             ret += 1
         ret += max(0, abs(abs(GU) - abs(GL)) * 2 - 1)
+        # 姿勢を調整
         if abs(GU) >= abs(GL):
+            # 最後に上下に動いた
             if GU > 0:
+                # 最後に下に動いた
                 if ycnt[GU] == 1:
                     ret += 1
             else:
+                # 最後に上に動いた
                 if ycnt[GU] == 2:
                     ret += 1
         else:
+            # 最後に左右に動いた
             if GL > 0:
                 if xcnt[GL] == 1:
                     ret += 1

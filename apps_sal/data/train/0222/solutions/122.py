@@ -14,4 +14,5 @@ class Solution:
                 else:
                     dp[(A[i], A[j])] = 2
                 j -= 1
+            # print(dp)
         return maxx

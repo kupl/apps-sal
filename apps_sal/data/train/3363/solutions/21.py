@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def evaporator(content, evap_per_day, threshold):
 
     day_counter = 0

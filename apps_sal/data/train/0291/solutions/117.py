@@ -5,6 +5,8 @@ class Solution:
         for num in arr:
             prefix.append(prefix[-1] ^ num & 1)
 
+        # now we are looking for the numbr of pairs (i, j) where prefix[i] != prefix[j]
+
         zeros = 0
         ones = 0
         result = 0

@@ -33,6 +33,7 @@ for i in range(n):
     if f == 0:
         Y = 1
 
+# print(X,Y)
 
 if X == 1 and Y == 1:
     print("-1")

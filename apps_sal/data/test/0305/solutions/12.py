@@ -1,3 +1,5 @@
+# cost e, a,d
+# cost f, b,c,d
 
 a, b, c, d, e, f = [int(input()) for i in range(6)]
 

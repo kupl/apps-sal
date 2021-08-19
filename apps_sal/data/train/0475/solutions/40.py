@@ -8,6 +8,8 @@ class Solution:
             for j in range(i):
                 rangeSum.append(sum(nums[j:i]) + nums[i])
 
+            #print (rangeSum)
+
         rangeSum.sort()
 
         ans = 0

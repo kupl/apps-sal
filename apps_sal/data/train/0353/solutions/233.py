@@ -11,3 +11,17 @@ class Solution:
                 res += pow(2, r - l, mod)
                 l += 1
         return res % mod
+
+
+#         self.dfs
+#         return res
+
+#     def dfs(self, nums, path, res):
+
+#         if max(path) + min(path) <= target:
+#             res.append(path)
+#             return
+
+
+#         for i in range(nums):
+#             self.dfs(nums[i+1:], path+nums[i], res)

@@ -1,4 +1,5 @@
 import math
+# Good_one
 
 
 def is_square(integer):

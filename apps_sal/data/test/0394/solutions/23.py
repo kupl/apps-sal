@@ -1,4 +1,15 @@
+#!/usr/bin/env python3
+# encoding: utf-8
 
+
+# ----------
+# Constants
+# ----------
+
+
+# ----------
+# Functions
+# ----------
 
 def check(d, length):
     n = len(d)
@@ -7,6 +18,8 @@ def check(d, length):
         if t[i % length] != item:
             return False
     return True
+
+# The function that solves the task
 
 
 def calc(a):
@@ -23,10 +36,14 @@ def calc(a):
     return k
 
 
+# Reads a string from stdin, splits it by space chars, converts each
+# substring to int, adds it to a list and returns the list as a result.
 def get_ints():
     return [int(n) for n in input().split()]
 
 
+# Reads a string from stdin, splits it by space chars, converts each substring
+# to floating point number, adds it to a list and returns the list as a result.
 def get_floats():
     return [float(n) for n in input().split()]
 
@@ -34,6 +51,10 @@ def get_floats():
 def seq2str(seq):
     return ' '.join(str(item) for item in seq)
 
+
+# ----------
+# Execution start point
+# ----------
 
 def __starting_point():
     a = get_ints()

@@ -2,6 +2,7 @@ import sys
 
 
 def f(a, b, c, l, d):
+    #   print a,b,c
     if a > l:
         return 1
     if b == c:
@@ -13,6 +14,8 @@ def f(a, b, c, l, d):
 
         id1 = id1 * d[a]
         id2 = id2 * d[a]
+
+#       print id1,id2
 
         if id1 > id2:
             return id1

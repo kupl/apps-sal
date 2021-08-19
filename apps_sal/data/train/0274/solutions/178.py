@@ -4,7 +4,7 @@ class Solution:
             return 0
         cur_max = nums[0]
         cur_min = nums[0]
-        sub_nums = []
+        sub_nums = []  # 以数组作为窗口滑动
         for i in nums:
             cur_max = max(i, cur_max)
             cur_min = min(i, cur_min)

@@ -7,6 +7,8 @@ for i, j in py:
     a[i].append(j)
 for i in range(1, n + 1):
     a[i] = sorted(a[i])
+# print(a)
+# print(py)
 for i, j in py:
     ix, ij = map(str, [i, bisect.bisect(a[i], j)])
 

@@ -1,6 +1,10 @@
 import numpy as np
 d = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7}
 
+# for x,i in for range(7)
+# iam the king, what is my situation
+# en rango 1 K, es king zone
+
 
 def get_area(board, x, y):
     return board[x - 1 if x - 1 >= 0 else 0: x + 2 if x + 2 <= 8 else 8, y - 1 if y - 1 >= 0 else 0: y + 2 if y + 2 <= 8 else 8]
@@ -26,6 +30,7 @@ def get_neig(board, x, y):
             rtrn.append(board[x + 1, y + 1])
 
     return rtrn
+#   area=board[x-1 if x-1 >= 0 else 0 : x+2 if x+2<= 8 else 8 , y-1 if y-1 >= 0 else 0 : y+2 if y+2<= 8 else 8]
 
 
 def amazon_check_mate(king, amazon):
@@ -36,13 +41,17 @@ def amazon_check_mate(king, amazon):
     board[kingx][kingy] = 'K'
     board[amazonx][amazony] = 'A'
 
+    # King y alrededores
     subarray = get_area(board, kingx, kingy)
     for (x, y) in np.ndenumerate(subarray):
         if y == 'O':
-            subarray[x] = "N"
+            subarray[x] = "N"  # kingzone - Non posible  (numpy slices are views of the 'parent' matrix, so it will modify board[[]])
         if y == 'A':
-            subarray[x] = 'F'
+            subarray[x] = 'F'  # Defended, fortified Amazon
 
+    # Amazon y alrededores (the king breaks!!)
+
+#     for xy in range(amazonx,len(board[0])):
     for xy in range(amazony, 8):
         if board[amazonx, xy] == 'K':
             break
@@ -65,56 +74,57 @@ def amazon_check_mate(king, amazon):
         elif board[yx, amazony] == 'O':
             board[yx, amazony] = 'W'
 
-    diag = np.diagonal(board, amazony - amazonx)
+    diag = np.diagonal(board, amazony - amazonx)  # ,amazony,amazonx)
     diag.setflags(write=True)
     if 'A' in diag:
         for di in range(np.where(diag == 'A')[0][0], len(diag)):
             if diag[di] == 'K':
                 break
             if diag[di] == 'O':
-                diag[di] = 'W'
+                diag[di] = 'W'   # In new numpy diag is also a view, so we are modifing board.
         for di in range(np.where(diag == 'A')[0][0], -1, -1):
             if diag[di] == 'K':
                 break
             if diag[di] == 'O':
-                diag[di] = 'W'
+                diag[di] = 'W'   # In new numpy diag is also a view, so we are modifing board.
     if 'F' in diag:
         for di in range(np.where(diag == 'F')[0][0], len(diag)):
             if diag[di] == 'K':
                 break
             if diag[di] == 'O':
-                diag[di] = 'W'
+                diag[di] = 'W'   # In new numpy diag is also a view, so we are modifing board.
         for di in range(np.where(diag == 'F')[0][0], -1, -1):
             if diag[di] == 'K':
                 break
             if diag[di] == 'O':
-                diag[di] = 'W'
+                diag[di] = 'W'   # In new numpy diag is also a view, so we are modifing board.
 
-    diag2 = np.rot90(board).diagonal(-8 + amazonx + amazony + 1)
+    diag2 = np.rot90(board).diagonal(-8 + amazonx + amazony + 1)  # ,amazony,amazonx)
     diag2.setflags(write=True)
     if 'A' in diag2:
         for di in range(np.where(diag2 == 'A')[0][0], len(diag2)):
             if diag2[di] == 'K':
                 break
             if diag2[di] == 'O':
-                diag2[di] = 'W'
+                diag2[di] = 'W'   # In new numpy diag is also a view, so we are modifing board.
         for di in range(np.where(diag2 == 'A')[0][0], -1, -1):
             if diag2[di] == 'K':
                 break
             if diag2[di] == 'O':
-                diag2[di] = 'W'
+                diag2[di] = 'W'   # In new numpy diag is also a view, so we are modifing board.
     if 'F' in diag:
         for di in range(np.where(diag2 == 'F')[0][0], len(diag2)):
             if diag2[di] == 'K':
                 break
             if diag2[di] == 'O':
-                diag2[di] = 'W'
+                diag2[di] = 'W'   # In new numpy diag is also a view, so we are modifing board.
         for di in range(np.where(diag2 == 'F')[0][0], -1, -1):
             if diag2[di] == 'K':
                 break
             if diag2[di] == 'O':
-                diag2[di] = 'W'
+                diag2[di] = 'W'   # In new numpy diag is also a view, so we are modifing board.
 
+    # like a horse
     if amazonx - 2 >= 0:
         if amazony - 1 >= 0 and board[amazonx - 2, amazony - 1] == 'O':
             board[amazonx - 2, amazony - 1] = 'W'
@@ -136,6 +146,9 @@ def amazon_check_mate(king, amazon):
         if amazonx + 1 < 8 and board[amazonx + 1, amazony + 2] == 'O':
             board[amazonx + 1, amazony + 2] = 'W'
 
+    # traverse
+#     if is O and no O arround, is stalemate. = S
+#     if is W and no O or A arround is checkmate = C
     for i in range(8):
         for j in range(8):
             neigs = get_neig(board, i, j)

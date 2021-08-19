@@ -3,6 +3,9 @@ H = [0] * (N)
 for i in range(N):
     H[i] = int(input())
 
+# めぐる式二分探索
+# indexが条件を満たすか判定
+
 
 def isOK(index, H):
     now_min = index * B
@@ -20,6 +23,9 @@ def isOK(index, H):
         return True
     else:
         return False
+
+# にぶたん
+#A : 配列
 
 
 def binary_search(H):

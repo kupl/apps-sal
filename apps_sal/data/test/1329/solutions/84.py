@@ -57,12 +57,20 @@ for v in list(D.values()):
         num_25 += 1
     if v >= 74:
         num_75 += 1
+# 3*5*5
 ans = (threes - fives) * fives * (fives - 1) // 2
 if fives >= 3:
+    #ans+=cmb(fives, 3)
     ans += fives * (fives - 1) * (fives - 2) // 2
+# 75*1
 
 ans += num_75
+# 5*15
 
 ans += num_15 * (fives - 1)
+# 3*25
 ans += num_25 * (threes - 1)
 print(ans)
+# print(D)
+#print(threes, fives, num_15, num_25, num_75)
+# print(factorization(32400))

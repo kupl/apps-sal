@@ -4,6 +4,7 @@ for _ in range(int(input().strip())):
     m = int(input().strip())
     for i in range(n):
         list1[i] = list1[i] + list1[i] % 3
+    # print(list1)
     l1 = []
     l2 = []
     list2 = sorted(list1)

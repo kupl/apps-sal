@@ -17,9 +17,9 @@ while index < n:
     if s[index] == 'T':
         print('YES')
         break
-    if s[index] == '
-    print('NO')
-    break
+    if s[index] == '#':
+        print('NO')
+        break
     index += k
 else:
     print('NO')

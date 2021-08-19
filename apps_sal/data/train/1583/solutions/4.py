@@ -1,3 +1,4 @@
+# cook your code here
 T = int(input())
 for i in range(T):
     (n, sx, sy, ex, ey, bx, by) = list(map(int, input().split()))

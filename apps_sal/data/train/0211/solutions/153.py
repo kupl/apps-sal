@@ -12,6 +12,7 @@ class Solution:
         a = search(s)
         r = 1
         for comb in a:
+            # print(comb)
             if len(set(comb)) == len(comb):
 
                 r = max(r, len(comb))

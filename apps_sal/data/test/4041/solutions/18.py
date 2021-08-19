@@ -3,6 +3,7 @@ def is_subseq(s, t):
         return False
     i = 0
     j = 0
+    # is t a subsequence of s?
     while(j < len(t)):
         if(s[i] == t[j]):
             i += 1
@@ -24,6 +25,7 @@ for i in range(len(s)):
         s2 = s[:l] + s[r:]
         if(is_subseq(s2, t) == True):
             mx = max(mx, r - l)
+            # print(s2)
 for i in range(len(s)):
     s2 = s[:i]
     if(is_subseq(s2, t) == True):

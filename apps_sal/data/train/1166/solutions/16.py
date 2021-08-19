@@ -1,3 +1,4 @@
+# cook your dish here
 input()
 arr = list(map(int, input().split(' ')))
 subarrays = []

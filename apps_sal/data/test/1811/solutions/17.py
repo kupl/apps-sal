@@ -7,6 +7,7 @@ for i, char in enumerate(string):
     if char == ".":
         ind.append(i)
 flag = 1
+# print(ind)
 for i in range(len(ind) - 1):
     if ind[i + 1] - ind[i] > k:
         flag = 0

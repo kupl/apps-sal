@@ -1,3 +1,4 @@
+# cook your dish here
 def solve(y):
     res = len(str(y))
     if(y < int(str(9) * res)):

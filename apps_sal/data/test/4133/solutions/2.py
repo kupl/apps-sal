@@ -20,6 +20,9 @@ args = re.split(r"(\+|-|\*|/)", a)
 args = [len(args[i]) for i in range(0, len(args), 2)]
 
 
+# print(args)
+# print(relations)
+
 edges = {k: [] for k in args}
 for j, i in relations:
     edges[i].append(j)

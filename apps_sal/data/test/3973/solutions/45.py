@@ -23,6 +23,8 @@ for i in range(n - 1):
         imos[w] -= m + w - z + 1
         if w < m:
             imos[w + 1] += m + w - z
+# print(imos)
+# print(base)
 for i in range(m):
     imos[i + 1] += imos[i]
 imos[0] += base
@@ -35,5 +37,6 @@ for i in range(n - 1):
         ans += a[i + 1] - a[i]
     else:
         ans += a[i + 1] + m - a[i]
+# print(ans)
 ans -= res
 print(ans)

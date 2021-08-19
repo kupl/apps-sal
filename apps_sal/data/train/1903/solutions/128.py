@@ -32,3 +32,21 @@ class Solution:
                 union(i, j)
 
         return ans
+
+
+#         n = len(points)
+#         U = {0}
+#         V = set(range(n)) - U
+#         ans = 0
+#         while V:
+#             cand = set()
+#             mind = float(\"inf\")
+#             for u in U:
+#                 for v in V:
+#                     if dist(u, v) < mind:
+#                         mind = dist(u, v)
+#                         tmp = v
+#             ans += mind
+#             U |= {tmp}
+#             V -= {tmp}
+#         return ans

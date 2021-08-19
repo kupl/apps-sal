@@ -10,9 +10,12 @@ class Solution:
 
         cnt = Counter(hand)
         cnt = sorted(cnt.items())
+        # print(cnt)
         heapq.heapify(cnt)
+        # print(cnt)
 
         while cnt:
+            # print(cnt)
             hand = []
             while len(hand) != W:
                 if not cnt:
@@ -25,6 +28,7 @@ class Solution:
                         return False
                 hand.append((card, count))
 
+            # print(hand)
             for (card, count) in hand:
                 count -= 1
                 if count:

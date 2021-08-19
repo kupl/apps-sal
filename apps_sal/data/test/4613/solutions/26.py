@@ -40,6 +40,7 @@ for i in range(M):
         if j == i:
             continue
         uni.merge(A[j], B[j])
+    # UnionFindの連結成分の個数を数える
     roots = [uni[x] for x in uni.root[1:]]
     counter = Counter(roots)
     if len(counter) > 1:

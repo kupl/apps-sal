@@ -17,6 +17,7 @@ while True:
             height[i] += 1
             if i < N - 1 and check[i + 1] == 1:
                 break
+    # print(height)
 
 
 print(count)

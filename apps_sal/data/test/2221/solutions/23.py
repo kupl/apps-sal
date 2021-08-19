@@ -12,10 +12,10 @@ def check(v, length, start, target):
     return False
 
 
-start = list(map(int, input().split()))
-end = list(map(int, input().split()))
+start = list(map(int, input().split()))  # [0, 7]
+end = list(map(int, input().split()))  # [103080, -3000000]
 n = int(input())
-seed = input()
+seed = input()  # 'LUDRUDRL'
 
 v = []
 dx = {'R': 1, 'L': -1, 'U': 0, 'D': 0}
@@ -25,6 +25,7 @@ cur = [0, 0]
 for c in seed:
     cur = [cur[0] + dx[c], cur[1] + dy[c]]
     v.append(cur)
+# print(v)
 
 inf = 1 << 64
 l = 0

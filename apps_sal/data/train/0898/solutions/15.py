@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     MN = list(map(int, input().split()))
     M = MN[0]

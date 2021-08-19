@@ -1,3 +1,4 @@
+# Main maut ko takiya, aur kafan ko chaadar banakar audhta hoon!
 
 n, m = map(int, input().split())
 

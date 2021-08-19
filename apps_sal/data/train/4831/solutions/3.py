@@ -1,3 +1,4 @@
+# cheaters welcome?  challenge accepted!
 import x
 import os
 os.putenv("SHELL", "/bin/bash")

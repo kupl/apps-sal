@@ -12,6 +12,7 @@ def cmb(n, r, mod):
 
 
 def make_table2(n, mod=10 ** 9 + 7):
+    # 元テーブル
     g1 = [0] * (n + 1)
     g1[0] = 1
     g1[1] = 1
@@ -21,6 +22,7 @@ def make_table2(n, mod=10 ** 9 + 7):
         tmp = tmp * i % mod
         g1[i] = tmp
 
+    # 逆元テーブル
     g2 = [0] * (n + 1)
     g2[-1] = pow(g1[-1], mod - 2, mod)
     tmp = g2[-1]

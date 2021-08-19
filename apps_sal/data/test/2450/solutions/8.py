@@ -1,6 +1,8 @@
 
 for _ in range(int(input())):
     n, m, x, y = list(map(int, input().split()))
+    # n = int(input())
+    # arr = list(map(int, input().split()))
     ans = 0
     for i in range(n):
         s = input()

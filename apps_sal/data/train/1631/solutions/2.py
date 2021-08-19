@@ -15,10 +15,10 @@ class Game(object):
     def __init__(self, array):
         self.map = array
         self.moves_left = len(array) * len(array[0])
-        self.coords = {"x": 0, "y": len(array) - 1}
-        self.dir = "E"
+        self.coords = {"x": 0, "y": len(array) - 1}  # start in NW area.
+        self.dir = "E"  # slitherin' east.
         self.fire = {"min_x": -1, "min_y": -1, "max_x": len(array),
-                     "max_y": len(array)}
+                     "max_y": len(array)}  # the carpet is lava.
         self.rules = {"N": {"x": 0, "y": 1, "turn": "E"},
                       "E": {"x": 1, "y": 0, "turn": "S"},
                       "S": {"x": 0, "y": -1, "turn": "W"},
@@ -34,6 +34,7 @@ class Game(object):
         self.dir = self.rules[self.dir]["turn"]
 
     def dig_at_location(self):
+        # have to invert the y location for the purpose of the array.
         return self.map[len(self.map) - self.coords["y"] - 1][self.coords["x"]]
 
     def report_in(self):

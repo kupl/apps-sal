@@ -13,7 +13,7 @@ A = [int(x) for x in input().split()]
 FROM = A[:-1]
 TO = A[1:]
 
-d_slope = [0] * (M + 1)
+d_slope = [0] * (M + 1)  # 傾きの差分
 
 """
 5,4,3,2,1,5,5,5,5
@@ -28,7 +28,7 @@ for x, y in zip(FROM, TO):
     if z == 1:
         continue
     d_slope[1 + (x + 1) % M] += -1
-    d_slope[1 + y % M] += z
+    d_slope[1 + y % M] += z  # 1回で行けたのがz回かかるようになる
     d_slope[1 + (y + 1) % M] += 1 - z
 
 slope = list(itertools.accumulate(d_slope))
@@ -36,6 +36,7 @@ S = sum(slope)
 slope = [x - S // M for x in slope]
 slope[0] = 0
 
+# 1番をお気に入りにしたときのスコアを求める
 cnt = 0
 for x, y in zip(FROM, TO):
     if x < y:

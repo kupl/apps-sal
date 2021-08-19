@@ -12,10 +12,11 @@
     Cij（1 ≦ i ≦ 2、 1 ≦ j ≦ 3）は英小文字である。
 '''
 
+# 標準入力から Cij、Cji を取得する
 cij = str(input())
 cji = str(input())
 
-reverse_cij = cij[2] + cij[1] + cij[0]
+reverse_cij = cij[2] + cij[1] + cij[0]  # cij を180度回転させた文字列
 
 result = ""
 if cji == reverse_cij:

@@ -5,6 +5,7 @@ pos = l - 2
 ans = 0
 while True:
     n = ((1 << l) - 1) - (1 << pos)
+    #print(l, pos, n)
     if n > b:
         break
     if n >= a:

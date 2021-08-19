@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 def sree(k, n, m):
     sum1 = (m * (m + 1)) // 2
     sum2 = (m * (m - 1)) // 2

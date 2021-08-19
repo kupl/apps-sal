@@ -17,4 +17,5 @@ class Solution:
                     return True
 
         res = helper(n)
+        # print(record)
         return res

@@ -33,4 +33,13 @@ class Solution:
 
         return res
 
+        # # O(n^2) TLE
+        # # removed subarray len
+        # for i in range(1, len(nums)):
+        #     # subarray start index
+        #     for j in range(0, len(nums) - i + 1):
+        #         _sum = dic[i+j-1] - dic[j-1]
+        #         if _sum % p == r:
+        #             return i
+
         return -1

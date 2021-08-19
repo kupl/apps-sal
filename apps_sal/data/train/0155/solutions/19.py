@@ -66,22 +66,29 @@ class Solution:
         while bfs:
             idx, steps = bfs.popleft()
 
+            # Already found more steps to this index.
             if idx in stepCount and steps <= stepCount[idx]:
                 continue
             stepCount[idx] = steps
 
             maxSteps = max(steps, maxSteps)
 
+            # Process jumps to the right
             for jumpIdx in range(idx + 1, min(len(arr), idx + d + 1)):
+                # Can't jump past taller buildings, break loop
                 if arr[jumpIdx] >= arr[idx]:
                     break
 
+                # Explore this jump
                 bfs.append((jumpIdx, steps + 1))
 
+            # Process jumps to the left
             for jumpIdx in range(idx - 1, max(0, idx - d) - 1, -1):
+                # Can't jump past taller buildings, break loop
                 if arr[jumpIdx] >= arr[idx]:
                     break
 
+                # Search the next step
                 bfs.append((jumpIdx, steps + 1))
 
         return maxSteps

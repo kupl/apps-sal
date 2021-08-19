@@ -29,7 +29,7 @@ dist = defaultdict(lambda: INF)
 start = 1 << L
 goal = N << L
 
-q = [start]
+q = [start]  # 0 が会社に属していない状態
 dist[start] = 0
 d = 0
 q0 = []

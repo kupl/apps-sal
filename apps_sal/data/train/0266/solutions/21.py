@@ -32,6 +32,7 @@ class Solution:
         if n <= 1:
             return 0
 
+        # forward pass
         seen = set()
         dp = [0 for _ in range(n - 1)]
         dp[0] = 1
@@ -46,6 +47,7 @@ class Solution:
 
         count = 0
 
+        # backward pass
         seen = set()
         current = 0
         for i in range(n - 1, 0, -1):

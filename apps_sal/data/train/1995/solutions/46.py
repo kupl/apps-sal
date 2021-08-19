@@ -17,6 +17,7 @@ class Solution:
                 if lis[1] >= key:
                     passengers -= dropoffs[key]
                     dropoffs[key] = 0
+            # print(passengers)
             if passengers > capacity:
                 return False
         return True

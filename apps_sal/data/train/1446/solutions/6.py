@@ -1,3 +1,4 @@
+# cook your dish here
 def xor():
     n = int(input())
     a = bin(n)[2:]

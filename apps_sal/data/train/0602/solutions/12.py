@@ -8,3 +8,4 @@ for i in range(len(s)):
 print(r, end=' ')
 for i in s:
     print(i + " " + r, end=' ')
+# print(r,min)

@@ -1,3 +1,5 @@
+# author:  Taichicchi
+# created: 12.09.2020 19:26:19
 
 import sys
 
@@ -13,6 +15,7 @@ for i in range(1, N):
     else:
         cum_ls.append(cum_ls[i - 1])
 
+# print(cum_ls)
 
 for i in range(Q):
     l, r = list(map(int, input().split()))

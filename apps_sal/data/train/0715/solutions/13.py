@@ -1,3 +1,5 @@
+# cook your dish here
+# Author : Ashutosh Wagh, Codechef : ashutosh0903
 s = input()
 n = len(s)
 v = 0

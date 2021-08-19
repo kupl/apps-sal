@@ -1,3 +1,4 @@
+# cook your dish here
 val = int(input())
 for i in range(val):
     n, p = input().split()

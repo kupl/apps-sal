@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 for _ in range(n):
     k = int(input())
@@ -9,4 +10,5 @@ for _ in range(n):
             continue
         a[i] = a[i] % 6
         sum += a[i]
+    # print(a)
     print(sum)

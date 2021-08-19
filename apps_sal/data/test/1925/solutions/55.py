@@ -22,5 +22,6 @@ for x in X:
 
     if culc > ans:
         ans = culc
+    # print(culc)
 
 print(ans)

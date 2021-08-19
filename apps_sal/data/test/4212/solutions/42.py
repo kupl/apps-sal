@@ -8,6 +8,7 @@ for q in range(Q):
 A = list(combinations_with_replacement(list(range(1, M + 1)), N))
 Alist = [list(a) for a in A]
 
+# print(Alist)
 
 Max = 0
 

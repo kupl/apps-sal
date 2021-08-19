@@ -6,6 +6,33 @@ class Solution:
         :type d: int
         :rtype: TreeNode
         """
+        # if d == 1: # 广度搜索 64ms
+        #     newroot = TreeNode(v)
+        #     newroot.left = root
+        #     return newroot
+        # lastlevel = []
+        # cur = 1
+        # curlevel = [root]
+        # nextlevel = []
+        # while cur < d:
+        #     for node in curlevel:
+        #         if node:
+        #             nextlevel.append(node.left)
+        #             nextlevel.append(node.right)
+        #     lastlevel = curlevel
+        #     curlevel = nextlevel
+        #     nextlevel = []
+        #     cur += 1
+        # count = 0
+        # for node in lastlevel:
+        #     if node:
+        #         templeft, tempright = TreeNode(v), TreeNode(v)
+        #         templeft.left = curlevel[count]
+        #         tempright.right = curlevel[count+1]
+        #         count += 2
+        #         node.left = templeft
+        #         node.right = tempright
+        # return root
 
         if d == 1:
             newroot = TreeNode(v)

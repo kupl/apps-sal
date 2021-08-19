@@ -5,6 +5,8 @@
     [1]: https://github.com/praveendath92/codeforces
 """
 
+####### common base functions ########
+
 
 def read_line():
     return input().strip()
@@ -21,14 +23,19 @@ def read_int_array():
 def read_string_array():
     return [i for i in read_line().split(' ')]
 
+####### End of base functions ########
 
+
+# =========== Start of main code ============
 T = read_int()
 D = read_int_array()
 
+# Day one checking and init of actual tasks per day
 AD = [-1] * len(D)
 AD[0] = D[0]
 rests = 1 if AD[0] == 0 else 0
 
+# Check for the remaining days
 for i in range(1, len(D)):
     if D[i] == 0:
         rests += 1

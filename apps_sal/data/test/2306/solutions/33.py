@@ -5,6 +5,7 @@ import collections
 import itertools
 import sys
 import random
+# Union-Find
 
 
 class UnionFind():
@@ -34,6 +35,8 @@ class UnionFind():
 
     def size(self, x):
         return -self.par[self.find(x)]
+
+# 素数関連
 
 
 def prime_numbers(x):
@@ -66,6 +69,7 @@ def is_prime(x):
         prime_number += difference
         difference = 6 - difference
     return True
+# Prime-Factorize
 
 
 def prime_factorize(n):
@@ -85,6 +89,7 @@ def prime_factorize(n):
     return res
 
 
+# nCr
 mod = 10 ** 9 + 7
 
 
@@ -103,6 +108,7 @@ class nCr():
         if n < 0 or r < 0:
             return 0
         return self.fa[n] * self.fi[r] % mod * self.fi[n - r] % mod
+# 拡張Euclidの互除法
 
 
 def extgcd(a, b, d=0):
@@ -113,6 +119,7 @@ def extgcd(a, b, d=0):
         x, y, g = extgcd(b, a % b)
         x, y = y, x - a // b * y
     return x, y, g
+# BIT
 
 
 class BinaryIndexedTree():
@@ -131,6 +138,7 @@ class BinaryIndexedTree():
             res += self.BIT[i]
             i -= i & -i
         return res
+# Associative Array
 
 
 class AssociativeArray():
@@ -150,6 +158,7 @@ class AssociativeArray():
                     print(self.dic[y])
                 else:
                     print(0)
+# Floor Sum
 
 
 def floor_sum(n, m, a, b):
@@ -167,6 +176,7 @@ def floor_sum(n, m, a, b):
     res += y_max * (n + (-x_max // a))
     res += floor_sum(y_max, a, m, (a - x_max % a) % a)
     return res
+# Z-Algorithm
 
 
 def z_algorithm(s):
@@ -207,6 +217,7 @@ class Manacher():
                 k += 1
             i += k
             j -= k
+# mod-sqrt
 
 
 def mod_sqrt(a, p):

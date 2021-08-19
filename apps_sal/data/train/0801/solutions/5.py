@@ -1,6 +1,6 @@
 def chef_cost(A, B, n):
 
-    checksum = 0
+    checksum = 0  # if count of number is even XOR = 0, else it will give a value
 
     mn1 = min(A)
     mn2 = min(B)
@@ -27,15 +27,22 @@ def chef_cost(A, B, n):
         else:
             mpb[B[i]] += 1
 
-    if (checksum):
+#     print(mpa)
+#     print(mpb)
+
+    if (checksum):  # numbers with odd count can never be distributed
         return -1
 
+    # removing common elements
     for i in mpa:
         if i in mpb:
             dx = min(mpa[i], mpb[i])
 
             mpa[i] -= dx
             mpb[i] -= dx
+
+#     print(mpa)
+#     print(mpb)
 
     a1 = []
     b1 = []

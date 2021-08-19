@@ -21,8 +21,8 @@ class Solution:
                     return steps
                 for nx, ny in [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]:
                     if (0 <= nx < m and 0 <= ny < n):
-                        if grid[nx][ny] == '
-                        continue
+                        if grid[nx][ny] == '#':
+                            continue
                         if grid[nx][ny] in 'ABCDEF' and not (keys >> ord(grid[nx][ny]) - ord('A')) & 1:
                             continue
                         nxt = keys

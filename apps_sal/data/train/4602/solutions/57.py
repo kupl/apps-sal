@@ -1,3 +1,4 @@
+# write the function is_anagram
 def is_anagram(test, original):
     n = len(original)
     if n != len(test):

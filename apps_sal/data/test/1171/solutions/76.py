@@ -14,6 +14,7 @@ def main(n, k, v):
     for i in range(n):
         vv.append((i + 1, v[i]))
     vv.sort(key=lambda x: x[1])
+    # print(vv)
 
     maxown = -10**7
     for kk in range(k + 1):
@@ -23,6 +24,7 @@ def main(n, k, v):
             while m < n and vv[m][1] < 0:
                 own -= vv[i][1]
                 m += 1
+            # print(own)
             maxown = max(maxown, own)
         else:
             for l in range(kk // 2 + 1):
@@ -30,15 +32,18 @@ def main(n, k, v):
                     j = kk - i - l
                     jj = n - j + 1
                     own = ruisekiL[i] + ruisekiR[j]
+                    # print(i,j,own)
                     m = 0
                     mcnt = 0
                     while(mcnt < l):
                         if i < vv[m][0] and vv[m][0] < jj:
                             m += 1
                             continue
+                        # print(i,jj,vv[m])
                         own -= vv[m][1]
                         mcnt += 1
                         m += 1
+                    # print(own)
                     maxown = max(own, maxown)
     return maxown
 
@@ -53,6 +58,7 @@ def main2(n, k, v):
     for i in range(n):
         vv.append((i + 1, v[i]))
     vv.sort(key=lambda x: x[1])
+    # print(vv)
 
     maxown = -10**7
     for i in range(n + 1):
@@ -61,6 +67,7 @@ def main2(n, k, v):
                 break
             jj = n - j + 1
             own = ruisekiL[i] + ruisekiR[j]
+            # print(i,j,own)
             l = min(i + j, k - i - j)
             m = 0
             mcnt = 0
@@ -73,6 +80,7 @@ def main2(n, k, v):
                 own -= vv[m][1]
                 mcnt += 1
                 m += 1
+            # print(own)
             maxown = max(own, maxown)
     return maxown
 

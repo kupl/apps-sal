@@ -42,7 +42,7 @@ class Solution:
 
         target = nums[-1] % p
         if target == 0:
-            return 0
+            return 0  # Early Exit, we don't have to remove anything
 
         ans = len(nums)
         remainders = {0: -1}

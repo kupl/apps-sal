@@ -15,6 +15,7 @@ class Solution:
 
         sorted_idxs = sorted(range(len(nums) + 1), key=lambda i: request_counts[i], reverse=True)
 
+        # perm = [0] * len(nums)
         ans = 0
 
         for idx, num in zip(sorted_idxs, nums):

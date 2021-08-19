@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
 
 import math
+# スペース区切りの整数の入力
 d, g = list(map(int, input().split()))
+# 配列の入力
 data = [list(map(int, input().split())) for _ in range(d)]
 sn = 1000
 

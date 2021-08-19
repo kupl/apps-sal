@@ -1,3 +1,4 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 m = int(input())
 set_a_str_ar = input().strip().split()
 set_a_ar = list(map(int, set_a_str_ar))

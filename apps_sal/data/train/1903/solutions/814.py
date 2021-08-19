@@ -11,6 +11,7 @@ class Solution:
             return root
 
         def join(i, j):
+            #print(f'joint {i} and {j}')
             root = get_root(i)
             parents[root] = j
 

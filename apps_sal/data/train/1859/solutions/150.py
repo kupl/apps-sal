@@ -9,4 +9,5 @@ class Solution:
             for j in range(cols):
                 f[i][j] = 0 if matrix[i][j] == 0 else min(pref(i - 1, j), pref(i, j - 1), pref(i - 1, j - 1)) + 1
                 res += f[i][j]
+        # print(f)
         return res

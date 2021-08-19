@@ -1,7 +1,10 @@
+#------------------------template--------------------------#
 import os
 import sys
 from math import *
 from collections import *
+# from fractions import *
+# from heapq import*
 from bisect import *
 from io import BytesIO, IOBase
 
@@ -73,6 +76,10 @@ def Str(): return input()
 def arrayS(): return [i for i in input().split()]
 
 
+#-------------------------code---------------------------#
+# vsInput()
+
+
 n = Int()
 a = []
 for i in range(n):
@@ -86,6 +93,8 @@ for i in range(n):
         left[i - j] += a[i][j]
         right[i - (n - j - 1)] += a[i][j]
 
+# print(left)
+# print(right)
 
 ans1 = (-1, -1, -1)
 ans2 = (-1, -1, -1)

@@ -11,6 +11,7 @@ def main():
                 cnt += 1 if g[i][j] == '.' else 0
         print(cnt)
         return
+    # count row
     for i in range(n):
         cnt = 0
         for j in range(m):

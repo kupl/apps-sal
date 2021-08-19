@@ -16,6 +16,7 @@ def main():
             lst.append(i + 1)
     if N % 2 == 0 and S[N // 2 - 1] == '1':
         lst.append(N // 2)
+    # print (lst)
 
     if lst[-1] * 2 != N:
         center = lst[-1] + 1

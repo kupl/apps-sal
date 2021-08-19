@@ -10,3 +10,5 @@ def first_non_consecutive(arr):
             if i > 1:
                 index = difference.index(i)
                 return arr[index + 1]
+
+    # your code here

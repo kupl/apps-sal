@@ -31,17 +31,21 @@ for index, price in enumerate(prices):
         break
     bestSellingPrice = highestTally[index + 1]
     jump = bestSellingPrice - price
+    # print(jump,bestSellingPrice,biggestJump)
     if jump > biggestJump:
         biggestJump = jump
+        # LPcount+=1
         LPGroups = []
         HPGroups = []
 
         LPGroups.append(1)
         sellingPriceForBiggestJump = bestSellingPrice
+        # HPcount=highestCount[indexOfHighest[bestSellingPrice]]
         HPGroups.append(highestCount[indexOfHighest[bestSellingPrice]])
     elif jump == biggestJump:
         if bestSellingPrice != sellingPriceForBiggestJump:
             sellingPriceForBiggestJump = bestSellingPrice
+            # HPcount+=highestCount[indexOfHighest[bestSellingPrice]]
             HPGroups.append(highestCount[indexOfHighest[bestSellingPrice]])
             LPGroups.append(0)
         LPGroups[-1] += 1

@@ -33,9 +33,11 @@ ans = ai[Q - 1][0] - ai[0][0]
 
 for cant in range(N - Q):
 
+    # 0 ~ cantまでのai[i]を取ってはいけない
+
     rannum = [-1] * (cant + 2)
     rannum[0] = 0
-    indlis = [0] * N
+    indlis = [0] * N  # rannumのindexを指し示す
 
     for i in range(cant + 1):
 
@@ -48,6 +50,8 @@ for cant in range(N - Q):
             indlis[i + 1] += indlis[i]
 
         rannum[indlis[i]] += 1
+
+    #print (rannum , indlis)
 
     ncat = []
     for i in range(cant + 1, N):
@@ -62,5 +66,6 @@ for cant in range(N - Q):
             ans = min(ans, ncat[-1] - ncat[0])
             break
 
+    #print (ncat)
 
 print(ans)

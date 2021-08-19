@@ -8,6 +8,7 @@ class Solution:
         return x * y // self.getGCD(x, y)
 
     def isGoodArray(self, nums: List[int]) -> bool:
+        # question is equivalent to have any substr with gcd equals 1, iff array has gcd equals to 1
         n = len(nums)
         x, i = nums[0], 1
         while i < n:

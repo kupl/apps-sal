@@ -1,5 +1,7 @@
 import sys
 from math import log2, floor, ceil, sqrt
+# import bisect
+# from collections import deque
 
 
 def Ri(): return [int(x) for x in sys.stdin.readline().split()]
@@ -40,12 +42,15 @@ for i in range(26):
     for j in range(1, n + 1):
         dp[i][j] = max(dp[i][j - 1], dp[i][j])
 
+# print(dp)
 
 qq = int(ri())
 for i in range(qq):
     temp = ri().split()
     ch = ord(temp[1]) - ord('a')
+    # print(dp[ch])
     m = int(temp[0])
     if m > n:
         m = n
+    # print(ch,m)
     print(dp[ch][m])

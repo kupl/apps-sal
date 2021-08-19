@@ -1,3 +1,4 @@
+# union find problem
 class UnionNode:
     def __init__(self, value, parent=None):
         self.value = value
@@ -42,17 +43,22 @@ class Solution:
             thisUnionNode.parent = thisUnionNode
             thisSize = 1
             if(loc - 1 >= 0 and string[loc - 1].value == 1):
+                # merge with left nei
 
+                # if left nei has size m, numOfm -= 1
                 newSize = theUnionFind.merge(string[loc - 1], string[loc])
                 if(newSize - thisSize == m):
                     numOfm -= 1
                 thisSize = newSize
             if(loc + 1 < len(string) and string[loc + 1].value == 1):
+                # merge with right nei
 
+                # if right nei has size m, numOfm -= 1
                 newSize = theUnionFind.merge(string[loc + 1], string[loc])
                 if(newSize - thisSize == m):
                     numOfm -= 1
                 thisSize = newSize
+            # print(thisSize)
             if(thisSize == m):
                 numOfm += 1
             if(numOfm > 0):

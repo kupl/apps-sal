@@ -1,5 +1,6 @@
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
+        # bfs only when prob is less than cur best add to the queue
         graph = [[] for _ in range(n)]
         for edge, p in zip(edges, succProb):
             a, b = edge
@@ -15,5 +16,6 @@ class Solution:
                     if b not in prob or p > prob[b]:
                         prob[b] = p
                         new_queue.append((b, p))
+            # print(prob)
             queue = new_queue
         return prob.get(end, 0)

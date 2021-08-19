@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def inpl(): return map(int, input().split())
 
 

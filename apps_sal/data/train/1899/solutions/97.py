@@ -3,6 +3,11 @@ from collections import deque
 
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
+        # [1,1,1,1,1]
+        # [1,0,0,0,1]
+        # [1,0,1,0,1]
+        # [1,0,0,0,1],
+        # [1,1,1,1,1]]
 
         def color(x, y):
             dfs = [(x, y)]
@@ -29,6 +34,7 @@ class Solution:
             bfs = deque([(point, 0)])
             while bfs:
                 curr, dist = bfs.popleft()
+                #print(curr, dist)
                 if curr in visited:
                     if visited[curr] <= dist:
                         continue
@@ -40,6 +46,7 @@ class Solution:
                         if A[cx][cy] == 2:
                             bfs.append(((cx, cy), 0))
                         elif A[cx][cy] == 1:
+                            # print(\"HERE!\")
                             self.best = min(self.best, dist)
                         else:
                             bfs.append(((cx, cy), dist + 1))

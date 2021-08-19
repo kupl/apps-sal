@@ -11,18 +11,21 @@ for i in range(n):
 result = 10**9
 
 for aa in range(c):
+    # %0の色をaaにする
     a_cost = 0
     for j in range(c):
         a_cost += dic[0][j] * diff[j][aa]
 
     for bb in range(c):
         if aa != bb:
+            # %1の色をbbにする
             b_cost = 0
             for j in range(c):
                 b_cost += dic[1][j] * diff[j][bb]
 
             for cc in range(c):
                 if aa != bb and bb != cc and cc != aa:
+                    # %2の色をccにする
                     c_cost = 0
                     for j in range(c):
                         c_cost += dic[2][j] * diff[j][cc]

@@ -6,8 +6,8 @@ class Solution:
                 i, j = j, i
             tree.setdefault(i - 1, []).append(j - 1)
 
-        queue, time = [(0, 1)], 0
-        while queue and time <= t:
+        queue, time = [(0, 1)], 0  # node-prob
+        while queue and time <= t:  # bfs
             tmp = []
             for node, prob in queue:
                 if node == target - 1:

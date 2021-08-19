@@ -14,3 +14,6 @@ for el in sch:
     for i in el[1:]:
         cnt += is_good[i[1]]
 print(cnt)
+
+
+# sorted(i * i for i in range(n))

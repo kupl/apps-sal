@@ -20,8 +20,8 @@ def s_row_list(N): return [list(s_input()) for _ in range(N)]
 
 
 def main():
-    s = input()
-    t = input()
+    s = input()  # 暗号
+    t = input()  # 含まれる文字
 
     s_len = len(s)
     t_len = len(t)

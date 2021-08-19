@@ -6,6 +6,8 @@ n, k = list(map(int, input().split()))
 sequence = list(map(int, input().split()))
 r = Counter(sequence)
 l = dict.fromkeys(r, 0)
+# print(sequence)
+# print(r)
 res = 0
 for i in sequence:
     r[i] -= 1

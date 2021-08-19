@@ -65,6 +65,7 @@ allL = m * (m + 1) / 2
 for i in range(n):
     for j in range(m):
         res = simulateRay(i, j)
+# print(i,j,res)
         total += res
 
 print(total)

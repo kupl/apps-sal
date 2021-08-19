@@ -64,6 +64,8 @@ class Solution:
                     if i not in visited and 0 <= i < L:
                         visited.add(i)
                         que.append(i)
+                # review, if I comment out this one, I would get TLE, for test case [7,7,7..7], it would repeat the check
+                # `if i not in visited and 0 <= i < L`
                 del lookup[arr[c]]
             step += 1
 

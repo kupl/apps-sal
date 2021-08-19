@@ -12,8 +12,10 @@ class Solution:
         r = l + 1
         sum_total = nums[l]
         res = 0
+        # print(r)
         for r in range(r, len(nums)):
             sum_total += nums[r]
+            # print(l)
             if sum_total == r - l - 1:
                 res = max(res, sum_total)
                 while sum_total < r - l:

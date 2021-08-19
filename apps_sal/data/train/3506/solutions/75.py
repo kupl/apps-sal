@@ -6,3 +6,4 @@ def vowel_indices(word):
         if word[i] in vowels:
             indexes.append(i + 1)
     return indexes
+    # your code here

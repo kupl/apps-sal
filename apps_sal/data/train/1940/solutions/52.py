@@ -1,3 +1,8 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         vals = []
@@ -8,7 +13,7 @@ class Solution:
 
         n = len(vals)
         ret = [0 for _ in range(n)]
-        q = [(n - 1, vals[n - 1])]
+        q = [(n - 1, vals[n - 1])]  # idx, val
 
         for i in range(n - 1, -1, -1):
             curr = vals[i]

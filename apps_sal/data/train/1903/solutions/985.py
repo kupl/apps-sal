@@ -49,6 +49,7 @@ class DSU():
             root = self.parent[root]
         curr = a
 
+        # path compression
         while curr != root:
             after = self.parent[curr]
             self.parent[curr] = root

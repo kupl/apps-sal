@@ -1,5 +1,6 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+        # print(len(grid), len(grid[0]))
 
         def helper(r, c, total, visited):
             if r >= len(grid) or c >= len(grid[0]) or r < 0 or c < 0 or grid[r][c] == 0 or (r, c) in visited:

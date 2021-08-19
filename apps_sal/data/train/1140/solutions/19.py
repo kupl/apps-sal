@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     p, i = map(int, input().split())
     p = 1 << (p - 1)

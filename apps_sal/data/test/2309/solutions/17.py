@@ -17,6 +17,7 @@ for item in words:
             cnt += 1
             last = i
 
+    # all_pairs
     if cnt not in all_pairs:
         all_pairs[cnt] = {item: 1}
     else:
@@ -25,6 +26,7 @@ for item in words:
         else:
             all_pairs[cnt][item] = 1
 
+    # sec_pairs
     if cnt not in sec_pairs:
         sec_pairs[cnt] = {last: {item: 1}}
     else:
@@ -59,6 +61,7 @@ for cnt in list(all_pairs.keys()):
 ans = min(s_p, all_p // 2)
 s_list = s_list[:2 * ans]
 
+# undate all_p
 for item in s_list:
     cnt = 0
     for i in item:
@@ -75,7 +78,9 @@ for cnt in list(all_pairs.keys()):
         s += all_pairs[cnt][word]
     f_list.extend(cnt_l[:2 * (s // 2)])
 f_list = f_list[:2 * ans]
+# print(f_list)
 print(ans)
+# print(s_list)
 
 for i in range(ans):
     print(f_list[2 * i], s_list[2 * i])

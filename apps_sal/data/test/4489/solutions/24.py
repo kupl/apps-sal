@@ -1,3 +1,4 @@
+# B - Two Colors Card Game
 N = int(input())
 s = [input() for _ in range(N)]
 M = int(input())

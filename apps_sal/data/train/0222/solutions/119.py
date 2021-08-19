@@ -1,5 +1,6 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
+        # only need the first 2 elements to define a fib seq
         setA = set(A)
         rint = 0
 
@@ -17,4 +18,5 @@ class Solution:
                 if A[j] - A[i] in setA and A[j] - A[i] < A[i]:
                     continue
                 rint = max(rint, getLen(i, j))
+                # print(i, j, getLen(i, j))
         return rint

@@ -39,6 +39,7 @@ class Solution:
                     B.remove((-2, u, v))
                 A.add((-3, u, v))
                 B.add((-3, u, v))
+        # print(rmA, rmB, A, B)
         common = set()
         ufa = UF(n + 1)
         for t, u, v in sorted(A):

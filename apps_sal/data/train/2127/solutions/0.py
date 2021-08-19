@@ -2,7 +2,7 @@ class DisjointSet(object):
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [0] * n
-        self.num = n
+        self.num = n  # number of disjoint sets
 
     def union(self, x, y):
         self._link(self.find_set(x), self.find_set(y))

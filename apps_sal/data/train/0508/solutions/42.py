@@ -1,3 +1,4 @@
+# D in [S_i-X_i,T_i-X_i) → Xiで止まる
 from heapq import heappop, heappush
 from collections import defaultdict
 import sys
@@ -8,26 +9,28 @@ task = []
 
 STX = [[int(x) for x in input().split()] for _ in range(N)]
 for s, t, x in STX:
-    task.append((t - x, 0, x))
-    task.append((s - x, 1, x))
+    task.append((t - x, 0, x))  # xで止まらなくなる
+    task.append((s - x, 1, x))  # xで止まる
 
 for i in range(Q):
     d = int(input())
-    task.append((d, 2, i))
+    task.append((d, 2, i))  # 止まる位置を答える
 answer = [-1] * Q
 
 task.sort()
 
+# 引っかかってる場所の管理
 se = set()
-se_hp = []
+se_hp = []  # heapで最小値を先頭に保つ
 
+# 小さい時刻から順に見ていく
 for a, b, c in task:
-    if not b:
+    if not b:  # b == 0
         se.remove(c)
-    elif b & 1:
+    elif b & 1:  # b == 1
         se.add(c)
         heappush(se_hp, c)
-    else:
+    else:  # b == 2
         while se_hp and se_hp[0] not in se:
             heappop(se_hp)
         answer[c] = se_hp[0] if se_hp else -1

@@ -16,8 +16,21 @@ for i in range(26):
     if come[i] != 0 and out[i] != 0:
         cm.append((come[i], 1))
         cm.append((out[i], 2))
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefefhello hi hello hi heljishfihfiefef
 
 
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefef
+
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefefhello hi hello hi heljishfihfiefef
+
+
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefef
 cm.sort()
 ma = 0
 ans = 0
@@ -31,3 +44,10 @@ if (k >= ans):
     print("NO")
 else:
     print("YES")
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefefhello hi hello hi heljishfihfiefef
+
+
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefef
+# hello hi hello hi heljishfihfiefef

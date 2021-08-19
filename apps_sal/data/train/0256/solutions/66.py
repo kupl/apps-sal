@@ -6,11 +6,14 @@ class Solution:
         hi_fail = 0
         low_pass = max(piles)
         if len(piles) == H:
+            # O(n)
             return low_pass
 
+        # O(n*log n)
         piles.sort(reverse=True)
         speed = low_pass // 2
         while low_pass - hi_fail > 1:
+            # O(m where m <= n)
             for i, num_bananas in enumerate(piles):
                 if num_bananas <= speed:
                     break
@@ -27,6 +30,7 @@ class Solution:
         return low_pass
 
     def can_eat_all(self, piles, hours, speed, stop_ind):
+        # O(l)
         extra_hours = hours - len(piles)
         for i in range(stop_ind):
             hours_needed = int(ceil(piles[i] / speed))

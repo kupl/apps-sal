@@ -12,6 +12,10 @@ for a1 in range(100):
     a31 = c3[0] - b1
     a32 = c3[1] - b2
     a33 = c3[2] - b3
+#     print('a1',a1)
+#     print('a2',a21,a22,a23)
+#     print('a3',a31,a32,a33)
+#     print('b',b1,b2,b3)
     if (a21 == a22 == a23) and (a31 == a32 == a33):
         print('Yes')
         break

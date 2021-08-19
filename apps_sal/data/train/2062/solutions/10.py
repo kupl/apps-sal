@@ -12,6 +12,7 @@ for i in range(2, MAX + 1):
 DP = [[0 for _ in range(N + 1)] for _ in range(B + 1)]
 DP[0][0] = 1
 
+# 配るDP
 div_fct = fact_inv[C] * pow(fact_inv[A], C, MOD)
 DP[A][0] = 1
 for c in range(C, D + 1):
@@ -26,11 +27,12 @@ for E in range(A, B):
     div_fct_0 = fact_inv[C] * pow(fact_inv[E + 1], C, MOD)
     for n in range(N + 1):
         now = DP[E][n]
+        # print(E,n,now)
         DP[E + 1][n] += DP[E][n]
         if now == 0:
             continue
         div_fct = div_fct_0
-        for c in range(C, D + 1):
+        for c in range(C, D + 1):  # 配るDP
             nxt = n + c * (E + 1)
             if nxt > N:
                 break
@@ -43,4 +45,5 @@ fact_N = 1
 for i in range(1, N + 1):
     fact_N *= i
     fact_N %= MOD
+#print(*DP, sep="\n")
 print((DP[B][N] * fact_N % MOD))

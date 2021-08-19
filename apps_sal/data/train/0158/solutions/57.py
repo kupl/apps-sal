@@ -1,3 +1,24 @@
+# class Solution:
+#     def kSimilarity(self, A: str, B: str) -> int:
+#         n = len(A)
+#         A, B = list(A), list(B)
+#         mp = defaultdict(list)
+#         for i, ch in enumerate(A):
+#             mp[ch].append(i)
+#         def dfs(idx):
+#             if idx == n:
+#                 return 0
+#             if A[idx] == B[idx]:
+#                 return dfs(idx+1)
+#             res = float('inf')
+#             for nxt in range(idx+1,n):
+#                 if A[nxt] != B[idx]:
+#                     continue
+#                 A[idx], A[nxt] = A[nxt], A[idx]
+#                 res = min(res, dfs(idx+1)+1)
+#                 A[idx], A[nxt] = A[nxt], A[idx]
+#             return res
+#         return dfs(0)
 
 from functools import lru_cache
 
@@ -5,6 +26,9 @@ from functools import lru_cache
 class Solution:
     def kSimilarity(self, A: str, B: str) -> int:
         n = len(A)
+        # mp = defaultdict(list)
+        # for i, ch in enumerate(A):
+        #     mp[ch].append(i)
 
         @lru_cache(None)
         def dfs(s):

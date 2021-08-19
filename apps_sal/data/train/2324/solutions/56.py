@@ -1,3 +1,4 @@
+# Snuke vs Fennec
 N = int(input())
 tree = [[] for _ in range(N)]
 for _ in range(N - 1):

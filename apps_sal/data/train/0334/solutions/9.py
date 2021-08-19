@@ -17,5 +17,6 @@ class Solution:
                 max_cost = v
                 cost_sum = v
                 last = i
+            # print(total_cost,max_cost,cost_sum)
         total_cost += (cost_sum - max_cost)
         return total_cost

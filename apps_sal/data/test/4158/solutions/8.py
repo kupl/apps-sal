@@ -27,6 +27,7 @@ cflag = 0
 
 for x in n2:
     for z in range(0, count + 1):
+        # print(z)
         if(x + 2**z in s1):
             if(flag == 0):
                 flag = 1

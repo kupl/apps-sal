@@ -11,9 +11,11 @@ class Solution:
 
         words.sort(key=lambda x: len(x))
         max_len = 1
+        # maximum length ending at index i
         dp = [1 for _ in words]
         for i in range(1, len(words)):
             for j in range(i - 1, -1, -1):
+                # judge if word[j] is a predecessor of word[i]
                 if len(words[j]) + 1 < len(words[i]):
                     break
                 if custom_equal(words[j], words[i]):

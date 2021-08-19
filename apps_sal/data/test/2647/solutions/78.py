@@ -26,8 +26,8 @@ def widthsearch(q):
                 continue
             elif visitedlist[y + move[0]][x + move[1]] == 1:
                 continue
-            elif S[y + move[0]][x + move[1]] == "
-            continue
+            elif S[y + move[0]][x + move[1]] == "#":
+                continue
             else:
                 visitedlist[y + move[0]][x + move[1]] = 1
                 q.put(((y + move[0], x + move[1]), num + 1))
@@ -43,10 +43,11 @@ for i in range(len(S)):
 siro = H * W
 for i in range(H):
     for j in range(W):
-        if S[i][j] == "
-        siro -= 1
+        if S[i][j] == "#":
+            siro -= 1
 q = queue.Queue()
 q.put(((0, 0), 0))
+# 幅優先探索
 visitedlist = np.zeros((H, W))
 visitedlist[0][0] = 1
 result = widthsearch(q)

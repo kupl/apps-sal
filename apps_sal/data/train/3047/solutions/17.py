@@ -1,7 +1,7 @@
 def repeating_fractions(num, denom):
     ans = str(num / denom)
     decimat_at = ans.find('.')
-    start = ans[decimat_at + 1]
+    start = ans[decimat_at + 1]  # beyond the decimal
     zgroup = ''
     retval = ans[0:decimat_at + 1]
     for iii in range(decimat_at + 1, len(ans) - 1):
@@ -19,6 +19,7 @@ def repeating_fractions(num, denom):
             start = ans[iii + 1]
         else:
             pass
+    # Tidy up
     end = ans[len(ans) - 1]
     if zgroup == '':
         retval += start

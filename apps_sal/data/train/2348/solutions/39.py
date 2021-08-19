@@ -9,6 +9,8 @@ def wantp(p, day):
         if day & (2 ** i) > 0:
             p = db[i][p]
 
+        #print (day,i)
+
     return p
 
 
@@ -56,6 +58,7 @@ for loop in range(Q):
         m = (l + r) // 2
 
         np = wantp(a, m)
+        #print (a,m,np)
 
         if np < b:
             l = m

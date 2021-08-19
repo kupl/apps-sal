@@ -1,3 +1,4 @@
+# cook your dish here
 a = int(input())
 b = a % 6
 if b == 0:

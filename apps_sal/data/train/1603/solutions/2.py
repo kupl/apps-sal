@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
 
+# sys.stdin = open("ivo.in")
 n = int(sys.stdin.readline())
 
 h = defaultdict(set)

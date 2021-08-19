@@ -10,6 +10,8 @@ f.sort()
 f = f[::-1]
 af = a * f
 
+# r以下にするのに必要修行回数がk以内かどうか
+
 
 def safe(r):
     return (np.maximum(0, (af - r + f - 1) // f)).sum() <= k

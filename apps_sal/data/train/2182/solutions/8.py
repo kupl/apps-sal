@@ -1,5 +1,5 @@
-s = input()
-t = input()
+s = input()  # want small
+t = input()  # want large
 n = len(s)
 vs = [0] * 26
 vt = vs[:]
@@ -47,7 +47,7 @@ for i in range(n):
         start += 1
     while res[end] != '*':
         end -= 1
-    if i % 2 == 0:
+    if i % 2 == 0:  # s
 
         if starts >= endt:
             res[end] = chr(97 + ends)

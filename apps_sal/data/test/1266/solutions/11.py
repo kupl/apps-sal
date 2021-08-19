@@ -13,6 +13,7 @@ y0 = int(xs[1])
 
 inf = 1000000000000000000
 mins = [inf, inf, inf, inf, inf, inf, inf, inf]
+#       <-    ^    ->   v    NE   SE   SW   NW
 minx = ['B', 'B', 'B', 'B', 'R', 'R', 'R', 'R']
 
 for i in range(0, n):

@@ -37,26 +37,33 @@ def test():
 
     print(sum_func(int(10**18 - 1)))
 
+#~ test()
+#~ sys.exit(1)
+
 
 cycle_table = [
-    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],
-    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],
-    [3, [1, 0, 0, 1, 0, 0, 1, 0, 0]],
-    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],
-    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],
-    [3, [1, 0, 0, 1, 0, 0, 1, 0, 0]],
-    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],
-    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],
-    [1, [1, 0, 0, 0, 0, 0, 0, 0, 0]],
+    # Cycle len, markers              # D_kfunc
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 1
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 2
+    [3, [1, 0, 0, 1, 0, 0, 1, 0, 0]],  # 3
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 4
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 5
+    [3, [1, 0, 0, 1, 0, 0, 1, 0, 0]],  # 6
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 7
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 8
+    [1, [1, 0, 0, 0, 0, 0, 0, 0, 0]],  # 9
 ]
 
 NUMBER = 9
 
 
 def calc(A_1, D, L, R):
+    #~ print('calc ===', A_1, D, L, R)
     A_L = A_1 + D * (L - 1)
     A_L_kfunc = sum_func(A_L)
     D_kfunc = sum_func(D)
+
+    #~ print(A_L, A_L_kfunc, D_kfunc)
 
     n = R - L + 1
 
@@ -64,17 +71,22 @@ def calc(A_1, D, L, R):
         return n * A_L_kfunc
 
     cycle_len = cycle_table[D_kfunc - 1][0]
-    cycle_markers = list(cycle_table[D_kfunc - 1][1])
+    cycle_markers = list(cycle_table[D_kfunc - 1][1])  # copy
+    #~ print('cycle_len', cycle_len)
 
     whole_part = n // cycle_len
     remainder = n % cycle_len
+    #~ print('whole_part, remainder = ', whole_part, remainder)
 
     counts = [whole_part * x for x in cycle_markers]
+    #~ print(counts)
 
     pos = 0
     for i in range(remainder):
         counts[pos] += 1
         pos = (pos + D_kfunc) % NUMBER
+
+    #~ print(counts)
 
     r = 0
     for i, x in enumerate(counts):
@@ -85,6 +97,7 @@ def calc(A_1, D, L, R):
 
 
 def calc_dumb(A_1, D, L, R):
+    #~ print('dumb ===', A_1, D, L, R)
     a = A_1 + D * (L - 1)
 
     n = R - L + 1
@@ -93,6 +106,7 @@ def calc_dumb(A_1, D, L, R):
 
     for i in range(n):
         value = sum_func(a)
+        #~ print(a, value)
         r += value
         a += D
 
@@ -118,6 +132,9 @@ def test2():
     r1 = calc_dumb(a1, d, L, R)
     r2 = calc(a1, d, L, R)
     print(r1, r2)
+
+#~ test1()
+#~ sys.exit(1)
 
 
 T = int(f.readline().strip())

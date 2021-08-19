@@ -10,7 +10,7 @@ class Memoize:
 
 
 @Memoize
-def fib_spec(n):
+def fib_spec(n):  # that is the gain per station, so really we have to take the sum of all n's
     if n == 0:
         return (1, 0)
     elif n == 1:

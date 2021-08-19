@@ -1,3 +1,4 @@
+# Created by nikita at 30/12/2018
 
 n = int(input())
 s = input()
@@ -33,6 +34,10 @@ for i in range(n - 1, -1, - 1):
     suffCan[i] = currCan and (suffBal[i] >= 0)
     currCan = suffCan[i]
 
+# print(prefBal)
+# print(prefCan)
+# print(suffBal)
+# print(suffCan)
 
 ans = 0
 for i in range(n):

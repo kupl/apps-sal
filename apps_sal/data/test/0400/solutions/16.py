@@ -10,3 +10,4 @@ for x in f:
         cur += 1
         k -= x
 print(min(cur + k // 10, 10 * n))
+#print(cur + k // 10)

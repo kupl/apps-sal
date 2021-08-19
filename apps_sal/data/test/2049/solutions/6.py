@@ -34,6 +34,7 @@ def create_dp(arr, n):
     return dp1, dp2
 
 
+# main starts
 n, m = list(map(int, stdin.readline().split()))
 arr = list(map(int, stdin.readline().split()))
 dp1, dp2 = create_dp(arr, n)

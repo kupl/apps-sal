@@ -45,6 +45,7 @@ def submit():
 
         next_s, next_triple = heapq.heappop(q)
         ans.append((-next_s, next_triple))
+        # print(ans)
 
     for s, _ in ans:
         print(s)

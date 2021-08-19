@@ -21,12 +21,12 @@ for p in itertools.permutations([(-1, 0), (1, 0), (0, 1), (0, -1)], 4):
     for v in s:
         x += p[int(v)][0]
         y += p[int(v)][1]
-        if not(0 <= x < n and 0 <= y < m and a[x][y] != '
-            good=False
+        if not(0 <= x < n and 0 <= y < m and a[x][y] != '#'):
+            good = False
         if (x, y) == (ex, ey):
             break
     if (x, y) != (ex, ey):
-        good=False
+        good = False
     if good:
         ans += 1
 

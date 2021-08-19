@@ -8,6 +8,19 @@ class Solution:
 
         words = sorted(words, key=lambda x: len(x))
 
+        # hashMap=defaultdict(list)
+        # for i in range(len(words)-1,-1,-1):
+        #     for j in range(i):
+        #         if self.isPred(words[j],words[i]):
+        #             hashMap[i].append(j)
+
+        # dp=[1 for _ in range(len(words))]
+        # res=1
+        # for k in range(1,len(words)):
+        #     for index in hashMap[k]:
+        #         dp[k]=max(dp[k],dp[index]+1)
+        #     res=max(res,dp[k])
+
         dp = [1 for _ in range(len(words))]
         res = 1
 

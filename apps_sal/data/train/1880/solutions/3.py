@@ -15,6 +15,10 @@ class Solution:
             if day == 1:
                 origin = [i for i in cells]
             elif cells == origin:
+                # print(day, N, cells)
                 N %= day - 1
+                # print(day, N, cells)
+
+            # print(N, cells)
 
         return cells

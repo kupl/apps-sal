@@ -8,6 +8,7 @@ class Solution:
             l = i - 1
             for r in range(i, j):
                 rv = points[r]
+                # print(r, points)
                 if dist(rv) < dist(pivot):
                     l += 1
                     points[l], points[r] = points[r], points[l]

@@ -15,3 +15,9 @@ class ProductOfNumbers:
         if k not in self.cache:
             self.cache[k] = math.prod(self.numbers[-k:])
         return self.cache[k]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

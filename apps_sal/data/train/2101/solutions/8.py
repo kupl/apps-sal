@@ -14,6 +14,8 @@ def find(parent, x):
 def union(parent, x, y, member):
     parent[x] = find(parent, x)
     parent[y] = find(parent, y)
+    # print('bhai')
+    # print(parent)
     if(parent[x] == parent[y]):
         return
     else:
@@ -49,12 +51,17 @@ for i in range(1, n + 1):
     for r in graph[i]:
         l += [find(parent, r)]
     d = dict(CO(l))
+    # print(d)
     x = [j for j in member]
     member[i] = 1
+    # print(i)
+    # print(d)
+    # print(member)
     for k in x:
         if k not in d:
             union(parent, i, k, member)
         elif(d[k] < member[k]):
             union(parent, i, k, member)
 
+    # print(parent)
 print(len(member) - 1)

@@ -14,6 +14,7 @@ def binpow(x, y):
 n = int(input())
 k = input()
 dp = [[-1 for i in range(100)] for j in range(100)]
+#dp[i][j] = min(i, j)
 dp[len(k)][0] = 0
 tmp = 0
 for i in range(len(k), -1, -1):
@@ -30,6 +31,7 @@ for i in range(len(k), -1, -1):
                 break
 
 
+# print(dp)
 ans = 10 ** 18 + 1
 for i in range(1, len(k) + 1):
     if dp[0][i] != -1:

@@ -1,5 +1,8 @@
 from functools import wraps
 
+# very rudimentary implementation of a cache decorator
+# python 3's functools.lru_cache or its backport should be favored
+
 
 def cache(f):
     _cache = {}

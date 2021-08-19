@@ -1,5 +1,7 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
+        # def maxCandies(status,candies,keys,containedBoxes,initialBoxes):
+        #     def dfs(i,status,candies,keys,containedBoxes):
         q = []
         res = 0
         vis = set()

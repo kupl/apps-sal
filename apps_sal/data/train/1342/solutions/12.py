@@ -4,7 +4,9 @@ for _ in range(int(input())):
     a.sort()
     count = 0
     for i in range(n):
+        # count+=1
         if a[i] >= x / 2:
+            # count-=1
             break
     count = i
 

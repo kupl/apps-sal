@@ -1,3 +1,5 @@
+# A - +-x
+# https://atcoder.jp/contests/abc137/tasks/abc137_a
 
 a, b = list(map(int, input().split()))
 

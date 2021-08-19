@@ -16,3 +16,6 @@ t = t + t + sum(l)
 d = gcd(t, n)
 
 print(t // d, n // d)
+
+
+# Made By Mostafa_Khaled

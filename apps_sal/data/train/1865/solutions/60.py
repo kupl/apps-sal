@@ -16,7 +16,7 @@ class Solution:
 
         def out_bounds(location):
             r, c = location
-            return r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] == '
+            return r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] == '#'
 
         heap = [[heuristic(start_box), 0, start_person, start_box]]
         vis = set([start_person, start_box])

@@ -6,6 +6,7 @@ class Solution:
         if n == 1:
             return True
 
+        # note range is right-end non-inclusive
         xsqrt = int(n**0.5)
         for i in range(xsqrt, 0, -1):
             if not self.winnerSquareGame(n - i * i):

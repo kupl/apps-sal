@@ -16,6 +16,7 @@ class Solution:
             if check(f):
                 flag = False
                 ps = parent(f)
+                # print(f, ps)
                 for p in ps:
                     if p in seen:
                         flag = True

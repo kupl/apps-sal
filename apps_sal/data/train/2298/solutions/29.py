@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 N, T = list(map(int, input().split()))
 As = list(map(int, input().split()))
 
@@ -12,6 +14,8 @@ for i in range(1, N):
     mns[i] = min(As[i], mns[i - 1])
     mxs[j] = max(As[j], mxs[j + 1])
 
+# print(mns)
+# print(mxs)
 
 mx_diff = -1
 pairs = set()

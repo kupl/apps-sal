@@ -9,8 +9,10 @@ class Solution:
                 self.res = max(self.res, len(curSets))
                 return
 
+            # don't split
             helper(curIdx + 1, curW + s[curIdx], curSets)
 
+            # split
             if (curW + s[curIdx] not in curSets):
                 helper(curIdx + 1, '', curSets | {(curW + s[curIdx])})
 

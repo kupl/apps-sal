@@ -1,3 +1,4 @@
+# https://www.youtube.com/watch?v=_UtCli1SgjI
 
 def toothpick(N):
     if N <= 0:

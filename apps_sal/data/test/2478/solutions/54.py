@@ -1,9 +1,11 @@
 def main():
+    # input data
     import sys
     def input(): return sys.stdin.readline().strip()
     N = int(input())
     S = input()
 
+    # solve
     right = 0
     left = 0
 

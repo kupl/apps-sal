@@ -8,5 +8,6 @@ for t in range(int(input())):
         if q & 1:
             end = min(r, (q + 1) * curr - 1)
             ans = (ans + (curr * (end - l + 1) % modulo) % modulo) % modulo
+            # print(i,end,q,curr,ans)
         curr *= 2
     print(ans)

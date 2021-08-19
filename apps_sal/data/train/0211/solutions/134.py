@@ -6,6 +6,7 @@ class Solution:
             last = s[0]
             for i in range(len(s) - 1):
                 cn = s[i + 1]
+                # print(bin_i, i, (bin_i | (1<<i)))
                 if (bin_i & (1 << i)) > 0:
                     to_deal.append(last)
                     last = cn

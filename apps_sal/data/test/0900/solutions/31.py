@@ -1,6 +1,7 @@
 MOD = 1000000007
 
 s = [int(x) if x != "?" else -1 for x in input()]
+# print(s)
 n = len(s)
 
 r = [0] * 13

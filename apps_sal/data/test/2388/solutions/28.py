@@ -1,3 +1,7 @@
+# 解説放送
+# https://atcoder.jp/contests/abc158/submissions/10643692
+# dfsの代わりに親の頂点番号を配列で管理する方法
+# PyPyでは通った
 
 def main():
     from collections import deque, namedtuple
@@ -19,7 +23,7 @@ def main():
 
     parents = [-1] * N
     to_candidates = deque()
-    for robot_from in robots:
+    for robot_from in robots:  # x降順
         """
         右端に位置するロボットから順に「起点」と見なしていく
         既出のロボットで有向辺の行き先として一度も設定されていないものが
@@ -44,13 +48,15 @@ def main():
 
     ret = 1
     count = [1] * N
-    for robot in robots:
+    for robot in robots:  # x降順
         par = parents[robot.ind]
         count[robot.ind] += 1
         if ~par:
             count[par] = (count[par] * count[robot.ind]) % MOD
         else:
             ret = (ret * count[robot.ind]) % MOD
+            # x降順で見ているのでpar==-1のrootのrobotを見る頃には
+            # rootの子は全て見ているので安心してretにかけられる
     print(ret)
     return
 

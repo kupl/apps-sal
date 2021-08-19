@@ -1,4 +1,8 @@
+# dp[i] :max profit if take the ith job
+# dp[i] = max(0, dp[j] + profit[i] if endTime[j] <= startTime[i]) for j < i
+# return max(dp)
 
+# DP + Binary Search
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         if len(startTime) != len(endTime) or len(startTime) != len(profit):

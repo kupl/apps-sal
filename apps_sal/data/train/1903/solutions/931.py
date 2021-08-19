@@ -22,10 +22,13 @@ class Solution:
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
                 ls.append([self.manhattan_distance(points[i], points[j]), i, j])
+        # print(ls)
         ls = sorted(ls, key=lambda x: x[0])
+        # print(ls)
 
         ans = 0
         for i in range(len(ls)):
             if(self.union(ls[i][1], ls[i][2])):
                 ans += ls[i][0]
+            # print(self.parent)
         return ans

@@ -28,6 +28,7 @@ while(i < j):
         else:
             break
     else:
+        # print(prev)
         if(arr[i] < prev):
             break
         else:
@@ -44,13 +45,16 @@ while(i < j):
                     break
             temp = j
             temprev2 = prev
+            # print(count1)
             while(temp > i):
+                # print(arr[temp],prev)
                 if(arr[temp] > temprev2):
                     temprev2 = arr[temp]
                     count2 += 1
                     temp -= 1
                 else:
                     break
+            # print(count1,count2)
             if(count1 >= count2):
                 ans += 'L' * count1
                 i += count1
@@ -61,6 +65,8 @@ while(i < j):
                 prev = temprev2
             break
 
+    # print(ans)
+    # print(i,j)
 if(i == j and arr[i] > prev):
     ans += 'R'
     prev = arr[i]

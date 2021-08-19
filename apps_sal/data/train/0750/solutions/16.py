@@ -1,3 +1,4 @@
+# cook your dish here
 while int(input()) != 0:
     l = list(map(int, input().split()))
     ln = len(l)

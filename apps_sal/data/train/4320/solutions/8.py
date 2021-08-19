@@ -1,4 +1,5 @@
 def greek_comparator(lhs, rhs):
+    # the tuple greek_alphabet is defined in the nonlocal namespace
     if lhs == rhs:
         return 0
     for pair in list(enumerate(greek_alphabet)):

@@ -25,6 +25,9 @@ class Solution:
                 if curr_weight + weights[package_index] > capacity:
                     curr_days += 1
 
+                    # print(capacity, curr_weight, weights[package_index], curr_days)
+
+                    # Too many days with this capacity
                     if curr_days > D:
                         return False
 
@@ -47,5 +50,7 @@ class Solution:
                 max_capacity = mid_point - 1
             else:
                 min_capacity = mid_point + 1
+
+            # print(\"Main:\", mid_point, min_capacity, max_capacity, least_capacity)
 
         return least_capacity

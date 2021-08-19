@@ -50,3 +50,9 @@ class StreamChecker:
             self.last_n_queries.pop()
 
         return self.trie_reverse_words.reverse_word_exists(self.last_n_queries)
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)
+
+#cd, f, kl

@@ -11,6 +11,7 @@ class Solution:
             acc += speed[idx]
             heap.append(speed[idx])
             ret = max(ret, acc * efficiency[idx])
+        # build heap
         import heapq
         heapq.heapify(heap)
         for i in range(k, n):

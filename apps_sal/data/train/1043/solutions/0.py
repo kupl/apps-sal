@@ -11,4 +11,4 @@ for w in range(test_case):
             print('YES', end=' ')
         else:
             print('NO', end=' ')
-    print()
+    print()  # cook your dish here

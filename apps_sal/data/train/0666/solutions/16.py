@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 for case in range(int(input())):
     n = int(input())
 

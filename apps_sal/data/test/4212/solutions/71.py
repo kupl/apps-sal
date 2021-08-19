@@ -14,4 +14,7 @@ for l in L:
 
     p_list.append(point)
 
+# print(X)
+# print(L)
+# print(p_list)
 print(max(p_list))

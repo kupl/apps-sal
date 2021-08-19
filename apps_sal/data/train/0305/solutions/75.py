@@ -31,11 +31,13 @@ class Solution:
                 else:
                     if text[i] == text[j]:
                         dp[i][j] = 1 + dp[i - 1][j - 1]
+        # print(dp)
         for i in range(len(text)):
             for j in range(i + 1, len(text)):
                 if (j - i + 1) % 2 == 0:
                     m = (i + j) // 2
                     if dp[m][j] >= (j - m):
+                        # print(i,j,m)
                         res.add(text[i:m + 1])
         print(res)
         return len(res)

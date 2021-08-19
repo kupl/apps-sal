@@ -6,6 +6,7 @@ class Solution:
 
             for coin in coins[::-1]:
                 j = i - coin
+#                print('i,j,coin=',i,j,coin)
                 if j < 0 or dp[j] == -1:
                     continue
                 if dp[i] == -1:

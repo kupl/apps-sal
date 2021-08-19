@@ -4,14 +4,16 @@ class Solution:
         mod = 10**9 + 7
 
         for i in range(1, n + 1):
-            for j in range(1, 7):
-                if(i == 1):
+            for j in range(1, 7):  # 投掷的数
+                if(i == 1):  # 第一次投掷
                     dp[i][j][1] = 1
                     continue
 
+                # 数字 j 连续出现 k 次
                 for k in range(2, rollMax[j - 1] + 1):
                     dp[i][j][k] = dp[i - 1][j][k - 1]
 
+                # 前一次投出的数不是 j
                 temp = 0
                 for l in range(1, 7):
                     if(l == j):

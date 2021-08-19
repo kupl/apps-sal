@@ -1,6 +1,7 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
 
+        # （steps, k left）
         m, n = len(grid), len(grid[0])
         dx = [-1, 1, 0, 0]
         dy = [0, 0, -1, 1]
@@ -11,6 +12,7 @@ class Solution:
         while queue:
             x, y, steps, k = queue.popleft()
 
+            # exit immediatly when we see
             if x == m - 1 and y == n - 1:
                 return steps
 

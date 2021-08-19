@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 for i in range(2 * n - 1):
     a = n

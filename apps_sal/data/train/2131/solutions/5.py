@@ -41,10 +41,12 @@ def modinv(a, m):
         raise Exception('modular inverse does not exist')
     else:
         return x % m
+# print(estimate([2,1,0]))
 
 
 n = int(input())
 arr = [int(x) for x in input().split()]
+# arr = [3,3,-1,-1,4,4,-1,-1,-1,-1,-1,10,10,10,10,10,10,4,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3]
 a = []
 cnt = defaultdict(int)
 for x in arr:
@@ -58,9 +60,14 @@ for (key, value) in list(cnt.items()):
             a.append(1)
     else:
         a.append(value + 1)
+# print(len(a),sum(a),a)
 n = len(a)
 m = sum(a)
 f = F(m, n)
+# for i in range(m+1):
+# print(i,f(i))
 ans = sum(f(x) for x in a) - f(m)
 MOD = 10**9 + 7
+# print(float(ans))
+# print(modinv(25025,MOD)*25025%MOD,ans.denominator)
 print(ans.numerator * modinv(ans.denominator, MOD) % MOD)

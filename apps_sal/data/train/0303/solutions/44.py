@@ -1,3 +1,6 @@
+# dynamic programming
+# time complexity: O(A*K*K)
+# dp[i] = max sum of A[:i] after partitioning
 class Solution:
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
         N = len(A)

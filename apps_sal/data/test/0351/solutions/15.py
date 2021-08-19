@@ -6,6 +6,7 @@ def I(): return list(map(int, input().split()))
 
 n, k = I()
 a = list(I())
+# print(a)
 ans = 0
 for task in sorted(a):
     if math.ceil(task / 2) <= k:

@@ -7,3 +7,6 @@ for i in range(k):
     p[2 * i], p[2 * i + 1] = p[2 * i + 1], p[2 * i]
 
 print(" ".join(p))
+
+
+# Made By Mostafa_Khaled

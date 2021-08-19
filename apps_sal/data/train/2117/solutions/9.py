@@ -1,6 +1,7 @@
 __author__ = 'kitkat'
 import sys
 
+#sys.stdin = open("in.txt")
 MAXN = int(2e5 + 10)
 try:
     while True:

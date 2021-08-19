@@ -1,5 +1,6 @@
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
+        # self.res = sys.maxsize
         ht = {}
         res = self.dfs(jobDifficulty, d, ht)
         if res == sys.maxsize:

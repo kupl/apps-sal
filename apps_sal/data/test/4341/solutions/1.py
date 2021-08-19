@@ -40,3 +40,5 @@ for v in range(1, n + 1):
             cycles += 1
 
 print(cycles)
+
+# print(C)

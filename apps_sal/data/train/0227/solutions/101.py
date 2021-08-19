@@ -19,8 +19,10 @@ class Solution:
         while q < len(A):
             if A[q] == 0:
                 num_zeros += 1
+            #print(p, q, q - p)
             if num_zeros > K:
                 best_window_len = max(q - p, best_window_len)
+                # print(\"running best:\", best_window_len)
                 while num_zeros > K:
                     if A[p] == 0:
                         num_zeros -= 1

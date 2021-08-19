@@ -2,7 +2,8 @@ def main():
     mode = "filee"
     if mode == "file":
         f = open("test.txt", "r")
-
+    # f.readline()
+    # input()
     def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
     [n, k] = get()
     a = get()

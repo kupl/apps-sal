@@ -10,3 +10,4 @@ if c == 0 and d == 0:
     print("Yes")
 else:
     print("No")
+# 1532030829894

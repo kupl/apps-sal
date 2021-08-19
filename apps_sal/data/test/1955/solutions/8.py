@@ -19,6 +19,7 @@ def check_feasibility(x):
     if len(set_tmd_d) < m:
         return False
     else:
+        #index_list =[[[j for j in range(x) if tmp_d[j] == i+1][-1], a[i]] for i in range(m)]
         index_list = [[[j for j in d_dict[i + 1] if j < x][-1], a[i]] for i in range(m)]
         index_list = sorted(index_list, key=itemgetter(0))
         tmp = 0

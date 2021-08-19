@@ -1,4 +1,6 @@
 for _ in range(int(input())):
+    #n, m = map(int, input().split())
+    #A = list(map(int, input().split()))
     n = int(input())
     s = input()
     if s == '0' * n or s == '1' * n:

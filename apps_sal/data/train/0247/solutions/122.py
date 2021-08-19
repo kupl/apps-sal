@@ -1,8 +1,10 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
 
-        ptr1, ptr2 = 0, 0
-        s = arr[0]
+        # m[i]: min length and and in i, included
+
+        ptr1, ptr2 = 0, 0  # both inclusive
+        s = arr[0]  # cum sum
         m = [-1] * len(arr)
         ans = -1
         global_min = -1

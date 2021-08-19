@@ -14,4 +14,5 @@ for i in range(m):
         choice = x[i]
         t[ord(choice) - 65] += 1
     cnts[i] = max(t)
+# print(cnts)
 print(sum(i[0] * i[1] for i in zip(points, cnts)))

@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     N = list(input().strip())
     a = N.count('4')

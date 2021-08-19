@@ -3,7 +3,7 @@ import math
 n = int(input())
 
 
-def lcm_base(x, y):
+def lcm_base(x, y):  # 最小公倍数
     return (x * y) // math.gcd(x, y)
 
 

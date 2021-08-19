@@ -8,3 +8,4 @@ def hor_mirror(s):
 
 def oper(fct, s):
     return fct(s)
+# Flez

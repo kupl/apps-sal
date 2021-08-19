@@ -24,6 +24,8 @@ for i in range(k):
         while pp <= r:
             if p[pp] == pp - l:
                 ans += 1
+                #print(i, j)
                 break
             pp += 1
 print(ans)
+#print(b, p, sep='\n')

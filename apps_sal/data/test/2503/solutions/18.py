@@ -24,6 +24,7 @@ def main():
             y = int(y) + K
         x = int(x) % (2 * K)
         y = int(y) % (2 * K)
+        #BB[x,y] += 1
         for shift in [0, K]:
             for b, t in gen_pattern((y + shift) % (2 * K)):
                 for l, r in gen_pattern((x + shift) % (2 * K)):
@@ -32,6 +33,7 @@ def main():
                     BB[t][l] -= 1
                     BB[t][r] += 1
     ans = (np.max(np.cumsum(np.cumsum(BB, axis=1), axis=0)))
+    # print(BB)
     print((int(ans)))
 
 

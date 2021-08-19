@@ -3,7 +3,7 @@ class Solution:
         dp = [False for _ in range(n + 1)]
         i = 0
         while i * i <= n:
-            dp[i * i] = True
+            dp[i * i] = True  # next round is Alice, she wins immediately
             i += 1
         for i in range(1, n + 1):
             k = 1

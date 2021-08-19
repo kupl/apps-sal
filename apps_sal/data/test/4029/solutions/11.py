@@ -1,4 +1,7 @@
 n = input()
+# if int(n) % 25 == 0:
+#	print(0)
+#	quit()
 
 n = list(n)
 if (not("5" in n)) and (not("0" in n)) and (not("7" in n)) and (not("2" in n)):

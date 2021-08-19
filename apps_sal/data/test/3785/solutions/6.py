@@ -33,7 +33,7 @@ def main():
     for x, (a, b) in enumerate(zip(res, l)):
         if a and b:
             l[x] = 2
-    l = [''.join(('
+    l = [''.join(('#', '.', 'X')[_] for _ in l[x:x + m]) for x in range(0, mn, m)]
     print('\n'.join(l))
 
 

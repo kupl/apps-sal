@@ -1,3 +1,8 @@
+# sort words by length, and we will attempt to shrink longer words and jump backwards to calculated length
+# store dictionary of all words, with the chain length being 1
+# for each word, iteratively remove one letter (O(k), k = len(word))
+# check if the smaller word is now in the dictionary, and if it is, increase the current words chain length to be the smaller words chain + 1
+# keep track of longest chain
 
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:

@@ -4,6 +4,7 @@ for _ in range(int(input())):
     if p < a or q < b or r < c:
         print(-1)
     else:
+        # ans exists
         ans = 0
         if p > a:
             ans += (p - a)

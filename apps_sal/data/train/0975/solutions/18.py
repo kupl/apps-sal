@@ -4,10 +4,12 @@ for _ in range(t):
     n, r, nx, ny = list(map(int, input().split()))
     if nx > 0:
         x = set(map(int, input().split()))
+#        x=list(range(500000))
     else:
         x = set()
     if ny > 0:
         y = set(map(int, input().split()))
+#        y=list(range(1000000))
     else:
         y = set()
 

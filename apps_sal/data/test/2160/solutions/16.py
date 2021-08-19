@@ -15,6 +15,8 @@ for i in range(k, 0, -1):
     first[x[i - 1]] = i
 
 ans = 0
+# print(first)
+# print(last)
 for i in range(1, n + 1):
     if last[i] == -1:
         ans += 1

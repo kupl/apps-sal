@@ -23,8 +23,10 @@ def s(row, col):
 
 
 if n == 1:
+    # 总共完成的行数
     r = k // m
 
+    # 最后一行（未完成）剩下
     rr = k % m
 
     if (rr > 0):
@@ -37,12 +39,16 @@ if n == 1:
     else:
         sergei = r
 else:
+    # 总共完成的行数
     r = k // m
 
+    # 最后一行（未完成）剩下
     rr = k % m
 
+    # 总共轮数：
     l = r // (n - 1)
 
+    # 最后一轮完成的行数
     rl = r % (n - 1)
 
     if l % 2 == 0:
@@ -53,4 +59,6 @@ else:
         mini = s(n, m)
     sergei = s(x, y)
 
+# print(r,rr,l,rl)
+# print(s(1,1))
 print(maxi, mini, sergei)

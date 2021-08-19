@@ -5,6 +5,7 @@ for j in range(T):
 
     ip1 = ak.split(" ")
 
+    # print(ip1)
     a = float(ip1[0])
     k = float(ip1[1])
     x = input()
@@ -17,6 +18,7 @@ for j in range(T):
 
     X1 = x1 + a / 2 + k
     X3 = x3 - a / 2 - k
+    # print(X1,X3)
     if(X1 >= X3):
 
         if(x3 - 2 * k - x1 <= 0):

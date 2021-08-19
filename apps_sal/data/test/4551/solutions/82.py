@@ -1,3 +1,4 @@
+# 4つのおもりで天秤の重さ比べ
 
 A, B, C, D = map(int, input().split())
 L = A + B

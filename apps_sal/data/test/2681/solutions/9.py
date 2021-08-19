@@ -1,3 +1,4 @@
+# cook your dish here
 def cal(a, b, s):
     if s == '+':
         print(a + b)

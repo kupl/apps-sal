@@ -16,6 +16,7 @@ for i in range(1, n + 1):
     base = a[i - 1] + prev
     min1 = base
     prev = base
+    # print(base,i)
     for j in range(i, n):
         base -= a[j - i]
         base += a[j]
@@ -38,6 +39,7 @@ for i in range(1, m + 1):
     minb.append(min1)
 
 area = 0
+# print(mina,minb)
 for i in range(n):
     for j in range(m):
         if(mina[i] * minb[j] <= x):

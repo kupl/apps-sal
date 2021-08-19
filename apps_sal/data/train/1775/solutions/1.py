@@ -14,6 +14,9 @@ def unique_products(sets, excluding=frozenset()):
 
 
 def solve_column(column, clue):
+    # First calculates all valid fillings with the given column, than merges the solutions in a single list where each
+    # cell is the set containing the values in the same position of each solution.
+    # [column=[{1, 2, 3}, {1, 2, 3}, {1, 2}, {4}], clue=2] -> [(3, 1, 2, 4), (3, 2, 1, 4)] -> [{3}, {1, 2}, {1, 2}, {4}]
     combos = [set(x) for x in list(zip(*[x for x in unique_products(column) if see(x) == clue]))]
     for i in range(len(column)):
         column[i] -= column[i] - combos[i]
@@ -32,8 +35,8 @@ def see(column):
 
 def simplify(column, clue, n):
     if clue is 1:
-        column[0] -= set(range(1, n))
-    elif clue > 0:
+        column[0] -= set(range(1, n))  # the highest building must be in the first cell
+    elif clue > 0:  # if clue is 0 means no hint
         for i in range(clue - 1):
             column[i] -= set(range(n, n + i + 1 - clue, -1))
         solve_column(column, clue)
@@ -57,7 +60,7 @@ def solve_uniqueness(city, x, y):
     """
     Checks if one of the numbers in the cell city[x][y] compares only once in the same row / column.
     """
-    for n in city[x][y]:
+    for n in city[x][y]:  # checks if a number appears only once in the row / column
         if not any([n in city[i][y] for i in chain(range(x), range(x + 1, len(city)))]) or \
                 not any([n in city[x][j] for j in chain(range(y), range(y + 1, len(city)))]):
             city[x][y].clear()
@@ -75,7 +78,7 @@ def solve(n, clues):
             for s in range(n):
                 for t in range(n):
                     solve_cross(city, s, t)
-            city = [list(row) for row in reversed(list(zip(*city)))]
+            city = [list(row) for row in reversed(list(zip(*city)))]  # rotates the city 90° anti-clockwise
     return tuple(tuple(cell.pop() for cell in row) for row in city)
 
 

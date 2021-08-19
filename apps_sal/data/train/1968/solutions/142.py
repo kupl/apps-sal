@@ -13,6 +13,7 @@ class Solution:
             p = p['/']
             p['$'] = f
 
+        # print(trie)
         ans = []
         for f in folder:
             p = trie

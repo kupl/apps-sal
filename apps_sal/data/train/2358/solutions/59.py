@@ -22,12 +22,15 @@ def resolve():
             cost[i][j] = cost[j][i] = dist
 
     def dijkstra(s):
+        # 始点sから各頂点への最短距離
+        # n:頂点数, cost[u][v]:辺uvのコスト(存在しないときはinf)
         d = [f_inf] * (n + 2)
         used = [False] * (n + 2)
         d[s] = 0
 
         while True:
             v = -1
+            # まだ使われてない頂点の中から最小の距離のものを探す
             for k in range(n + 2):
                 if (not used[k]) and (v == -1):
                     v = k

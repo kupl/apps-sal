@@ -1,5 +1,8 @@
+# 入力:N,M(int:整数)
 def input2():
     return map(int, input().split())
+
+# 入力:[n1,n2,...nk](int:整数配列)
 
 
 def input_array():
@@ -9,9 +12,10 @@ def input_array():
 n, k = input2()
 A = input_array()
 
+# ある地点から循環に陥る
 judge = [True] * n
-tmps = [1]
-count = 0
+tmps = [1]  # 循環手前
+count = 0  # 参照地点
 
 for i in range(2 * (10**5) + 1):
     if judge[count] == True:

@@ -7,6 +7,7 @@ for _ in range(N):
     slash = max(slash, a)
     if b > a:
         Throw.append(b)
+# slash=斬撃最大ダメージ、投げてslash超のダメージが出るならばその剣をダメージが大きい順に投げる
 Throw = [-th for th in Throw if th > slash]
 hq.heapify(Throw)
 

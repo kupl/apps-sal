@@ -1,3 +1,5 @@
+########################################################
+################# Template #############################
 import sys
 import math
 def Int(): return int(input())
@@ -10,6 +12,8 @@ def str_arr(): return list(map(str, input().split(" ")))
 def vsInput():
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
+#########################################################
+# vsInput()
 
 
 def strings(s):

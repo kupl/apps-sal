@@ -1,3 +1,9 @@
+# your code goes here raw_input()
+# This is basic python file
+# print "Hello Vedhika Fan!!!"
+# except EOFError:  break
+# sys.stdin.readline().split()
+#arr = map(int,raw_input().strip().split(' '))
 
 t = int(input())
 for d in range(t):

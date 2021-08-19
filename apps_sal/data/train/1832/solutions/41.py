@@ -1,4 +1,5 @@
 class Solution:
+    # O(Elog(E)) time, O(E) space
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         graph = defaultdict(dict)
         for i, j, w in edges:

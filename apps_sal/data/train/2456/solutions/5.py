@@ -6,12 +6,13 @@ class Solution:
             r = ''
             erase = 0
             for s in S[-1::-1]:
-                if s == '
-                erase += 1
-                elif s != '
-                r = s + r
-                elif s != '
-                erase -= 1
+                if s == '#':
+                    erase += 1
+                elif s != '#' and erase == 0:
+                    r = s + r
+                elif s != '#' and erase >= 1:
+                    # r=s+r
+                    erase -= 1
 
             return r
 

@@ -1,3 +1,4 @@
+# 递归
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
         def getF(x):
@@ -8,3 +9,5 @@ class Solution:
         weights = list(range(lo, hi + 1))
         weights = sorted(weights, key=lambda x: getF(x))
         return weights[k - 1]
+
+# 本地记忆

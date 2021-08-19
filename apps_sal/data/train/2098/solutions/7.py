@@ -41,5 +41,6 @@ for k in range(1, n + 1):
             b[id] -= 1
             c += p
             w[i] = False
+    # print(b,c)
     r = min(r, c)
 print(r)

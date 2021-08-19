@@ -20,6 +20,8 @@ for i in range(T):
         L.sort()
         w = len(L)
         A = L[:(w) // 2]
+        # we want to exclude a point
         B = L[(w + 1) // 2:]
+        # understang this by appling it in copy
         p += sum(B) - sum(A)
     print(q, p)

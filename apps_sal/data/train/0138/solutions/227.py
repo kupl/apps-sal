@@ -27,4 +27,5 @@ class Solution:
                 result = max(result, positiveSoFar)
             return result
 
+        # scan from left and scan from right
         return max(helper(nums), helper(nums[::-1]))

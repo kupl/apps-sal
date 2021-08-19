@@ -4,7 +4,7 @@ n, m = map(int, input().split())
 l1 = [int(x) for x in input().split()]
 l2 = [int(x) for x in input().split()]
 
-probLeft = 1
+probLeft = 1  # probability that I'm continuing
 
 
 def modInv(x, n=MOD - 2):

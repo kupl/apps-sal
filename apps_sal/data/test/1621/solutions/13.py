@@ -9,6 +9,7 @@ score.sort(reverse=True)
 value = 0
 for i in range(len(s)):
     value += score1[alpha[s[i]] - 1] * (i + 1)
+    # print(value)
 for i in range(len(s) + 1, len(s) + 1 + k):
     value += score[0] * i
 print(value)

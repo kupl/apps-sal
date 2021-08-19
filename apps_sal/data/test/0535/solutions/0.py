@@ -20,6 +20,7 @@ def primeFactor(N):
             i += 2
         if i == 101 and n >= (2**20):
             def findFactorRho(N):
+                # print("FFF", N)
                 def gcd(a, b):
                     if b == 0:
                         return a
@@ -46,6 +47,7 @@ def primeFactor(N):
                             semi.append(d)
 
                 semi = list(set(semi))
+                # print (semi)
                 s = min(semi)
                 for i in [2, 3, 5, 7]:
                     while True:
@@ -98,6 +100,7 @@ def isPrime(N):
 
 
 def isPrimeMR(n):
+    # print("MR", n)
     if n == 2:
         return True
     if n == 1 or n & 1 == 0:
@@ -116,7 +119,9 @@ def isPrimeMR(n):
             t <<= 1
 
         if y != n - 1 and t & 1 == 0:
+            # print("not prime")
             return False
+    # print("prime")
     return True
 
 
@@ -189,11 +194,16 @@ def inv(a):
     return pow(a, P - 2, P)
 
 
+# ----- -----
+
 P = 10**9 + 7
 
 n, k = list(map(int, input().split()))
+# n = 6
+# k = 2
 
 pf = primeFactor(n)
+# print(pf)
 
 ans = 1
 for p in pf:

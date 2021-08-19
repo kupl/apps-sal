@@ -18,6 +18,7 @@ def factorize(n):
     count = 0
     while ((n % 2 > 0) == False):
 
+        # equivalent to n = n / 2;
         n >>= 1
         count += 1
     if (count > 0):
@@ -31,6 +32,7 @@ def factorize(n):
             d[i] += count
         i += 2
 
+    # if n at the end is a prime number.
     if (n > 2):
         d[n] += 1
 

@@ -1,3 +1,5 @@
+# f = open("file.txt", 'r+')
+# inp = f.readline
 import math
 inp = input
 
@@ -16,10 +18,12 @@ for _ in range(int(input())):
         mn, mx = arr[i], arr[n - i - 1]
 
         if(mx == p) or (mn == p):
+            #         print("Case 1")
             adj = q
             opp = mx - mn
             val = math.atan2(opp, adj)
         elif(mn < p) and (mx > p):
+            #         print("Case 2")
             adj = q
             opp = p - mn
             valA = math.atan2(opp, adj)
@@ -29,6 +33,7 @@ for _ in range(int(input())):
 
             val = valA + valB
         else:
+            #         print("Case 3")
             if(p < mn):
                 adj = abs(mx - p)
                 opp = q
@@ -50,4 +55,5 @@ for _ in range(int(input())):
         val = abs(val)
 
         ans += val
+#     val = print('%.2f'%val)
     print('%.12f' % ans)

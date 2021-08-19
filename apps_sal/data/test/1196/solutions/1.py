@@ -15,6 +15,7 @@ def solve(a, b, c):
     ans = 0
     if len(b) == 1:
         for token in a:
+            # print("token",token)
             if c(token, b[0]):
                 ans += token[0] - b[0][0] + 1
         return ans
@@ -25,7 +26,7 @@ def solve(a, b, c):
                 ans += 1
         return ans
 
-    v = b[1: -1] + [[100500, '
+    v = b[1: -1] + [[100500, '#']] + a
     p = [0] * len(v)
     for i in range(1, len(v)):
         j = p[i - 1]

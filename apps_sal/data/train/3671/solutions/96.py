@@ -1,4 +1,5 @@
 def problem(a):
+    # Easy Points ^_^
     if type(a) is str and a.isalpha():
         return "Error"
 

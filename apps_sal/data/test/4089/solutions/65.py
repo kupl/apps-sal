@@ -12,6 +12,8 @@ r = []
 while n >= 1:
     n = n - 1
     r.append(change(n % 26))
+    #print(n,end=" ")
+    # print(change(n%26))
     n = n // 26
 
 s = len(r)

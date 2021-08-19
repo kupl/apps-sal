@@ -32,6 +32,7 @@ class Solution:
         return '{}-{}'.format(k1, k2)
 
     def split(self, S, i, st, res, cache, cache_res):
+        # print(i, st, res)
         ln = len(S)
         if i >= ln:
             if len(st) >= 3:
@@ -67,6 +68,15 @@ class Solution:
         self.split(S, 0, [], res, {}, {})
         if res[0] is None:
             return []
+        # st = res[0]
+        # for i in range(2, len(st)):
+        #     if st[i-2] + st[i-1] != st[i]:
+        #         print('aha!')
+        # ln = 0
+        # for num in st:
+        #     ln += len(str(num))
+        # if ln != len(S):
+        #     print('wrong len!')
         return res[0]
 
     def splitIntoFibonacci(self, S: str) -> List[int]:

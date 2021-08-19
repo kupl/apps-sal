@@ -55,6 +55,8 @@ def main():
 
     print(int("".join(ans), 2))
 
+    ###################ここに処理を書く################
+
 
 def __starting_point():
     main()

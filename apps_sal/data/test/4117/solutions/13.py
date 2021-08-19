@@ -1,6 +1,7 @@
 n = int(input())
 L = sorted(list(map(int, input().split())))
 
+# a+b>c かつ b+c>a かつ c+a>b
 cnt = 0
 for i in range(n - 2):
     a = L[i]

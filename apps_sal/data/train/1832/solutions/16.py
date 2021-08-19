@@ -35,6 +35,7 @@ class Solution:
         visited = set()
         for i, l in enumerate(length):
             visited.add(i)
+            # Count intermediate nodes reachable from either i, j
             for j, e in list(adj.get(i, {}).items()):
                 if j in visited:
                     continue

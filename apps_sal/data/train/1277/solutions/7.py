@@ -1,9 +1,12 @@
+# Lists
 tempRecipeLossList = []
 answerList = []
 priceList = []
 quantityList = []
 discountList = []
 total_lossList = []
+
+# Functions
 
 
 def split_loss_calculator(userInput):
@@ -12,6 +15,7 @@ def split_loss_calculator(userInput):
     tempRecipeLossList.append(loss * quantity)
 
 
+# Program
 test_cases = int(input())
 for i in range(test_cases):
     numRecipeTypes = int(input())

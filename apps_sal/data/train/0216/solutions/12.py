@@ -1,5 +1,6 @@
 class Solution:
     def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
+        # print(len(croakOfFrogs))
         if len(croakOfFrogs) % 5 > 0:
             return -1
         pos = {'c': 0, 'r': 1, 'o': 2, 'a': 3, 'k': 4}
@@ -7,6 +8,7 @@ class Solution:
         res = 1
         for c in croakOfFrogs:
             count[pos[c]] += 1
+            # print(count)
             if pos[c] > 0:
                 if count[pos[c]] > count[pos[c] - 1]:
                     return -1

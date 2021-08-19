@@ -14,6 +14,9 @@ def iin(): return int(stdin.readline())
 
 def lin(): return list(map(int, stdin.readline().split()))
 
+# range = xrange
+# input = raw_input
+
 
 class Disjoint_set:
 
@@ -43,6 +46,7 @@ def main():
         da.union(i, j)
     ch = defaultdict(int)
     for i in range(1, n + 1):
+        # print("CNN",i,da.find_set(da.data[i]).value)
         ch[da.find_set(i)] += 1
     ans = 0
     for i in ch:

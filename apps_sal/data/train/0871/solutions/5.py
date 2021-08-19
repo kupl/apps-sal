@@ -18,6 +18,8 @@ while True:
             r, c = map(int, input().split())
             arena = [[i for i in input().strip()] for j in range(r)]
 
+            # print(*arena,sep='\n')
+
             antsInitialPositions = []
             antsDirection = []
             antEaterPositions = []
@@ -26,8 +28,11 @@ while True:
                     if arena[i][j] in ['R', 'U', 'D', 'L']:
                         antsInitialPositions.append([i, j])
                         antsDirection.append(arena[i][j])
-                    elif arena[i][j] == '
-                      antEaterPositions.append([i, j])
+                    elif arena[i][j] == '#':
+                        antEaterPositions.append([i, j])
+
+            # print(antsInitialPositions)
+            # print(antEaterPositions)
 
             antCount = len(antsInitialPositions)
             grid = [[{} for j in range(c)] for i in range(r)]
@@ -38,40 +43,43 @@ while True:
                 movei, movej = i, j
                 if direction == 'D':
                     steps = 0
-                    while movei < r and arena[movei][movej] != '
-                      steps = abs(i - movei)
-                       if steps in grid[movei][movej]:
+                    while movei < r and arena[movei][movej] != '#':
+                        steps = abs(i - movei)
+                        if steps in grid[movei][movej]:
                             grid[movei][movej][steps] += 1
                         else:
                             grid[movei][movej][steps] = 1
                         movei += 1
                 elif direction == 'U':
                     steps = 0
-                    while movei >= 0 and arena[movei][movej] != '
-                      steps = abs(i - movei)
-                       if steps in grid[movei][movej]:
+                    while movei >= 0 and arena[movei][movej] != '#':
+                        steps = abs(i - movei)
+                        #print("steps counted ", steps,movei,movej)
+                        if steps in grid[movei][movej]:
+                            #print("already there in dict")
                             grid[movei][movej][steps] += 1
                         else:
                             grid[movei][movej][steps] = 1
                         movei -= 1
                 elif direction == 'L':
                     steps = 0
-                    while movej >= 0 and arena[movei][movej] != '
-                      steps = abs(j - movej)
-                       if steps in grid[movei][movej]:
+                    while movej >= 0 and arena[movei][movej] != '#':
+                        steps = abs(j - movej)
+                        if steps in grid[movei][movej]:
                             grid[movei][movej][steps] += 1
                         else:
                             grid[movei][movej][steps] = 1
                         movej -= 1
                 elif direction == 'R':
                     steps = 0
-                    while movej < c and arena[movei][movej] != '
-                      steps = abs(j - movej)
-                       if steps in grid[movei][movej]:
+                    while movej < c and arena[movei][movej] != '#':
+                        steps = abs(j - movej)
+                        if steps in grid[movei][movej]:
                             grid[movei][movej][steps] += 1
                         else:
                             grid[movei][movej][steps] = 1
                         movej += 1
+            # print(*grid,sep='\n')
             meetings = 0
             for i in range(r):
                 for j in range(c):

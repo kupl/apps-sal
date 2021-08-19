@@ -29,6 +29,7 @@ def solve():
             scur += c
     sbuf.append(scur)
 
+    # print(fbuf, sbuf)
     if len(fbuf) != len(sbuf):
         print("NO")
         return

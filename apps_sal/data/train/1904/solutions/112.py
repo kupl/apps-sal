@@ -6,6 +6,7 @@ class Solution:
         dist = []
         for i in range(len(nums)):
             dist.append(nums[i][0] ** 2 + nums[i][1] ** 2)
+        # Create a hMap
         hMap = {}
         for i in range(len(dist)):
             hMap[i] = dist[i]

@@ -17,6 +17,8 @@ class Solution:
         return 0 <= x < len(grid) and 0 <= y < len(grid[0])
 
     def dfs(self, i, j, grid):
+        #m, n = len(grid), len(grid[0]) if grid else 0
+        #Test = True
         if grid[i][j] == self.WATER:
             Test = True
             return True

@@ -31,6 +31,8 @@ for i in range(m):
                     grid_charm[gamma][lol] = 1
 
 
+# for i in grid_charm:
+# 	print(*i)
 cost[0][0] = grid[0][0]
 for i in range(n):
     for j in range(n):

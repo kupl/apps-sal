@@ -14,12 +14,14 @@ for i in range(n):
     else:
         k[a] = [b] * 2
 
+# print(k)
 t = list(k.keys())
 t.sort()
 
 res = min(t[0], k[t[0]][1])
 
 for i in t[1:]:
+    #print(k[i], res)
     if(k[i][0] >= res):
         res = min(k[i][1], i)
     else:

@@ -13,3 +13,7 @@ class Solution:
         for v, c in zip(sorted(dp[:-1]), sorted(nums)):
             res += v * c
         return res % (10**9 + 7)
+
+    # 0,1,2,1,1,0
+    # 0 1,0,0,-1,0
+    # 1,0,1,0,-1,0

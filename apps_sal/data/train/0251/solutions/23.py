@@ -49,6 +49,7 @@ class SolutionWhile:
         Memory Usage: 12.8 MB, less than 100.00% in Python3.
         '''
         R = N
+        # set_trace()
         N -= 1
         if N:
             R *= N
@@ -76,9 +77,12 @@ class SolutionWhile:
 
         return R
 
+###############################################################################
+
 
 class Solution:
     pass
 
 
 Solution = SolutionWhile
+# Solution = SolutionMathTricks

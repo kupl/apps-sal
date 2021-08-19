@@ -16,6 +16,8 @@ c1 = f(p11, p12, p21, p22)
 c2 = f(p12, p11, p21, p22)
 c3 = f(p11, p12, p22, p21)
 c4 = f(p12, p11, p22, p21)
+#print(c1, c2, c3, c4)
+# false - win 1 true - win 2
 
 if ((c1 == 2 or c3 == 2) and (c2 == 2 or c4 == 2)):
     print("Team 2")

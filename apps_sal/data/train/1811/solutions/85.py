@@ -24,3 +24,8 @@ class StockSpanner:
         diff = abs(self.counter - self.stack[len(self.stack) - 1][1])
         self.stack.append([price, self.counter])
         return diff
+
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

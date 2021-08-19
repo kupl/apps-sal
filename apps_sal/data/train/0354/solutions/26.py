@@ -8,7 +8,7 @@ class Solution:
         num[i,j] = sum_{k≠j} (num[i-1,k]) + num[i-1,j] - num[i-rollMax[i],j]
         '''
 
-        num = [[1] * 6 + [6] for i in range(16)]
+        num = [[1] * 6 + [6] for i in range(16)]  # rollMax[i] <= 15
         pointer = 1
 
         def idxLast(i):
@@ -29,5 +29,7 @@ class Solution:
             num[idxLast(0)][-1] = sum(num[idxLast(0)][:6]) % int(1E9 + 7)
 
             pointer += 1
+
+        # print(num)
 
         return num[idxLast(1)][-1] % int(1E9 + 7)

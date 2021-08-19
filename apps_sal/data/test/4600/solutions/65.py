@@ -6,7 +6,7 @@ for _ in range(M):
     p = int(p)
     if s == 'AC':
         ACs[p] = 1
-    elif s == 'WA':
+    elif s == 'WA':  # WA
         if ACs[p] == 0:
             Ps[p] += 1
 

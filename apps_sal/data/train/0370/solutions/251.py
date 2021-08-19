@@ -21,6 +21,7 @@ class Solution:
             for factor in factorize(a):
                 factor_to_num[factor].append(i)
 
+        # init
         par = list(range(len(A)))
         rank = [0] * len(A)
 

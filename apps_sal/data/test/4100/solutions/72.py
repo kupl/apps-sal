@@ -7,6 +7,7 @@ for a in A:
     points[a] += 1
 
 for p in points:
+    # print(p - Q)
     if p - Q > 0:
         print("Yes")
     else:

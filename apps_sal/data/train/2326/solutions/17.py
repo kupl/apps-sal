@@ -5,6 +5,7 @@ def main():
     a.sort(key=lambda x: x[1], reverse=True)
     a.append((-1, 0))
 
+    # min_ind = min(a[:i+1])[0]
     min_ind = n
     ans = [0] * n
     for i in range(n):

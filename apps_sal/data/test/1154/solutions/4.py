@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 N, H, K = [int(x) for x in input().split()]
 A = [int(x) for x in input().split()]

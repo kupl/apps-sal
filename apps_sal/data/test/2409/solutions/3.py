@@ -6,6 +6,8 @@ for h in range(int(input())):
     dp = [0 for i in range(len(arr) + 1)]
     dp[0] = -1
 
+    # print(p)
+
     there = True
 
     for i in range(len(arr)):

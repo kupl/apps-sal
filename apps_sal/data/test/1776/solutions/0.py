@@ -101,6 +101,8 @@ def main():
         print(exp)
         return
 
+    #root = Node(None, None, None)
+    #root.parent = root
     cNode = Node()
     isRight = False
 
@@ -128,6 +130,8 @@ def main():
             else:
                 cNode.rightExp = Node(cNode)
                 cNode.rightExp.value = int(exp[i])
+
+    # PrintNodes(cNode)
 
     ss = str(input()).split()
     p, m = int(ss[0]), int(ss[1])

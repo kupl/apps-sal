@@ -12,6 +12,7 @@ def check(k):
         t = i // 10
         b += t
         i -= t
+    # dbvar(k, a, b)
     return a >= b
 
 

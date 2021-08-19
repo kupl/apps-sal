@@ -13,7 +13,9 @@ S = sys.stdin.readline().rstrip()
 A = [ord(c) - ord('a') for c in S]
 N = len(S)
 
+# 答えの文字列の長さ
 l = 0
+# その文字以降で、何文字までの任意文字列を作れるか
 lengths = [0] * N
 counts = [0] * 26
 for i, a in reversed(list(enumerate(A))):
@@ -24,6 +26,7 @@ for i, a in reversed(list(enumerate(A))):
         l += 1
 ans_size = l + 1
 
+# 文字ごとの次のインデックス
 graph = [[-1] * 26 for _ in range(N)]
 pos = [-1] * 26
 for i, a in reversed(list(enumerate(A))):
@@ -33,6 +36,7 @@ initials = pos
 
 
 def solve(size, i=None):
+    # i 番目から始まり、長さ size である、部分列でない文字列
     if i is None:
         pos = initials
     else:

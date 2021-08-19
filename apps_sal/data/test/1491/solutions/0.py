@@ -30,6 +30,7 @@ for e in candies:
 
 new.sort()
 
+#print(new, cnt1,cnt2)
 
 count = 0
 if cnt1 >= cnt2:

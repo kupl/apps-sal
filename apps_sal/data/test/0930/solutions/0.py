@@ -1,5 +1,5 @@
-mod = int(1e9) + 7
-maxf = 500000
+mod = int(1e9) + 7  # <-- input modulo
+maxf = 500000           # <-- input factional limitation
 
 
 def make_fact(n, k):

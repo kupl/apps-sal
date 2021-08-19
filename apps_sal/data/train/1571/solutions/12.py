@@ -10,6 +10,7 @@ for i in range(t):
     n = int(temp[0])
     a = int(temp[1])
     k = int(temp[2])
+    # (n/2)(2a+(n-1)d)=(n-2)180
     tempn = (n - 2) * 180
     tempn = tempn * 2
     tempd = n

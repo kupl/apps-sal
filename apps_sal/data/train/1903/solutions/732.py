@@ -37,3 +37,33 @@ class Solution:
             if dsu.union(u, v):
                 ans += d
         return ans
+
+        # n = len(points)
+        # adj_matrix = [[0 for _ in range(n)] for _ in range(n)]
+        # for i in range(n):
+        #     for j in range(n):
+        #         if i == j:
+        #             continue
+        #         adj_matrix[i][j] = abs(points[i][0]-points[j][0]) + abs(points[i][1]-points[j][1])
+        # visited = [False] * n
+        # visited[0] = True
+        # weight = [0] * n
+        # for j in range(n):
+        #     if j == 0:
+        #         weight[j] = float('inf')
+        #     else:
+        #         weight[j] = adj_matrix[0][j]
+        # total = 0
+        # visit = 0
+        # while not all(visited):
+        #     visit = weight.index(min(weight))
+        #     total += weight[visit]
+        #     visited[visit] = True
+        #     for j in range(n):
+        #         if weight[j] == float('inf'):
+        #             continue
+        #         if j == visit:
+        #             weight[j] = float('inf')
+        #             continue
+        #         weight[j] = min(weight[j], adj_matrix[visit][j])
+        # return total

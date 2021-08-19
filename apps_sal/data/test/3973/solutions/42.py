@@ -18,10 +18,14 @@ def main():
                 S[now + 2] += 1
                 S[nex + 1 + M] += -L
                 S[nex + 2 + M] += L - 1
+        # print(S)
+    # print(S)
     for i in range(2 * M + 2):
         S[i + 1] += S[i]
+    # print(S)
     for i in range(2 * M + 2):
         S[i + 1] += S[i]
+    # print(S)
     B = [0] * (M + 1)
     for i in range(1, M + 1):
         B[i] = S[i] + S[i + M]
@@ -34,6 +38,7 @@ def main():
     SS = 0
     for i in range(N - 1):
         SS += (A[i + 1] - A[i]) % M
+    # print(B)
     print(SS - diff)
 
 

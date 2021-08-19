@@ -4,3 +4,4 @@ for _ in range(int(input())):
     ls = [n1, n2, n3]
     ls.sort()
     print((ls[0] * (ls[1] - 1) * (ls[2] - 2)) % m)
+    # three different numbers

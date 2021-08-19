@@ -1,3 +1,5 @@
+#n, *d = map(int, open(0).read().split())
+# dream dreamer erase eraser
 n = int(input())
 
 

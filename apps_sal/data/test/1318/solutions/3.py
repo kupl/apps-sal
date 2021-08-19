@@ -51,5 +51,9 @@ def __starting_point():
     for visitor in new_visitors:
         print("{} {}".format(visitor.i, visitor.place.i))
 
+    # print(visitors)
+    # print(places)
+    # print(visited)
+
 
 __starting_point()

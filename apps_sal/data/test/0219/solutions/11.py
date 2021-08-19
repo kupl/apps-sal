@@ -1,13 +1,16 @@
-n, m, s, d = [int(i) for i in input().split()]
+n, m, s, d = [int(i) for i in input().split()]  # m is the end point
+# s is length of run, d is the max jump distance
 A = [-1] + sorted([int(i) for i in input().split()]) + [m + 1]
 ans_size = 2 * 10**5
 ans = [0 for i in range(4 * ans_size)]
+
+# use 0 to indicate run an 1 to indicate jump
 
 
 def obstacle():
     run = -1
     jump = -1
-    top = 0
+    top = 0  # flag where are we at the dp
     for i in range(1, n + 1):
         if s + 2 <= A[i] - A[i - 1]:
             if jump != -1:
@@ -17,9 +20,9 @@ def obstacle():
                 else:
                     print("IMPOSSIBLE")
                     return
-            ans[top] = (0, A[i] - A[i - 1] - 2)
+            ans[top] = (0, A[i] - A[i - 1] - 2)  # run
             top += 1
-            jump = A[i] - 1
+            jump = A[i] - 1  # jumping point
     if A[n] + 1 - jump <= d and top > 0 and ans[top - 1][0] == 0 and ans[top - 1][1] >= s:
         ans[top] = (1, A[n] + 1 - jump)
         top += 1

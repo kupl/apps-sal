@@ -19,5 +19,6 @@ class Solution:
                     res.add(k)
                 while window and window[-1] - window[0] > 60:
                     window.popleft()
+                #print(k, window)
 
         return sorted(res)

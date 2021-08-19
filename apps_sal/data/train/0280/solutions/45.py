@@ -22,6 +22,7 @@ class Solution:
 
         dp = [[float('inf') for j in range(n)] for i in range(k + 1)]
 
+        # print(cost)
         for i in range(n):
             dp[1][i] = cost[0][i]
             for kk in range(2, k + 1):

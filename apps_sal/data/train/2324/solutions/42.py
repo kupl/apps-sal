@@ -1,3 +1,5 @@
+# 分岐は後で処理すれば良い
+# それぞれ0,nに近づくのが最適
 from heapq import heappush, heappop
 import sys
 sys.setrecursionlimit(10**8)
@@ -43,7 +45,7 @@ countf = [0]
 
 
 def dfs(x, y):
-    for i in l[x]:
+    for i in l[x]:  # iに分岐可能ならば
         if prev[x] != i and next[x] != i:
             if y == 1:
                 countp[0] += 1

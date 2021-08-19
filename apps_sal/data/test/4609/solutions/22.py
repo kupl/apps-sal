@@ -1,3 +1,4 @@
+# 20
 n = int(input())
 a = {}
 cnt = 0

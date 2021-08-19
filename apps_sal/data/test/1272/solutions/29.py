@@ -6,14 +6,14 @@ input = sys.stdin.readline
 class UnionFind:
     def __init__(self, n):
         self.n = n
-        self.par = [-1] * (n + 1)
+        self.par = [-1] * (n + 1)  # それぞれの要素がどの要素の子であるか
 
     def find(self, x):
         if self.par[x] < 0:
             return x
         else:
             self.par[x] = self.find(self.par[x])
-            return self.par[x]
+            return self.par[x]  # それぞれの要素の根を再帰的に求める
 
     def union(self, x, y):
         x = self.find(x)
@@ -27,7 +27,7 @@ class UnionFind:
         self.par[y] = x
 
     def same(self, x, y):
-        return self.find(x) == self.find(y)
+        return self.find(x) == self.find(y)  # x,yが同じ集合に属するかどうか
 
     def size(self, x):
         return -self.par[self.find(x)]

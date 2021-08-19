@@ -20,7 +20,7 @@ def logic(temp, last, n, m):
 
             temp += last
             temp -= first
-            first, last = last, first
+            first, last = last, first  # swap
             print(temp + last)
 
         else:
@@ -34,7 +34,7 @@ def main():
 
     n, m = list(map(int, input(). split()))
 
-    temp = (n * (n + 1)) // 2
+    temp = (n * (n + 1)) // 2  # total sum
 
     last = n
 

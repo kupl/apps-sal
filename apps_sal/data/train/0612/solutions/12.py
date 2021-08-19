@@ -1,3 +1,5 @@
+# binary string as the feedback form
+# chef classifies each feedback as GOOD or BACK
 t = int(input())
 for i in range(t):
     s = input()

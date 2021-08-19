@@ -13,3 +13,4 @@ for i in range(n - 1):
             al[i] = x
 
 print(cnt)
+# print(al)

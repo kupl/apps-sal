@@ -2,9 +2,10 @@ class Solution:
     def coinChange(self, coin: List[int], amount: int) -> int:
 
         dp = [[9999999 for _ in range(amount + 1)] for _ in range(len(coin) + 1)]
+        # dp[i][j] will store min coins reqd to reach value j with coins coin[:i+1]
 
         for i in range(1, len(coin) + 1):
-            dp[i][0] = 0
+            dp[i][0] = 0   # don't need any coins to hit balance 0........
 
         for i in range(1, len(coin) + 1):
             for j in range(1, amount + 1):

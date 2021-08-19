@@ -1,5 +1,6 @@
 def protein_synthesis(dna):
 
+    # Transcribe
     dna_to_rna = {'G': 'C',
                   'C': 'G',
                   'A': 'U',
@@ -12,6 +13,7 @@ def protein_synthesis(dna):
             rna += ' '
         counter += 1
 
+    # Translate
     protein = ''
     for codon in rna.split(' '):
         amac = CODON_DICT.get(codon, None)

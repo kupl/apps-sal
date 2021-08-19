@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 
 def memo(f):
     def _f(*args):
@@ -35,6 +36,14 @@ def count_inversions(lo, hi):
             i2 += 1
             invs += l1 - i1
     return invs, new_nums
+
+# def count_inversions(lo, hi):
+#     invs = 0
+#     for i in range(len(nums)):
+#         for j in range(i, len(nums)):
+#             if nums[i] > nums[j]:
+#                 invs += 1
+#     return invs, 0
 
 
 @memo

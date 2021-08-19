@@ -1,6 +1,8 @@
 n = int(input())
 
 alphabet_cnt = [[0] * n for i in range(26)]
+# [listA, listB, listC, ..., listZ]
+# listA = [0, 1, 3, 2, 1, 4, ...] -> the number of A in Si (only min val is needed)
 alphabet = list("abcdefghijklmnopqrstuvwxyz")
 alphabet_map = dict(zip(alphabet, list(range(26))))
 

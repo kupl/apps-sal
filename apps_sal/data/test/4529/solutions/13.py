@@ -15,6 +15,7 @@ for _ in range(T):
     vst = {(0, 0): 0}
     ans = []
     for i in range(N):
+        #print(x, y)
         r = R[Path[i]]
         x += dx[r]
         y += dy[r]

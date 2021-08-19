@@ -1,10 +1,14 @@
 
 t = int(input())
 
+# adict = [0]*10;
+# bdict = [0]*10;
 
 for i in range(0, t):
     a = input()
     b = input()
+
+    # lena = len(a);
 
     agts = bgts = afour = bfour = aseven = bseven = altf = bltf = afts = bfts = 0
 
@@ -31,6 +35,29 @@ for i in range(0, t):
             bfour = bfour + 1
         else:
             bltf = bltf + 1
+
+    # for j in range(0,10):
+        # adict[j] = 0;
+        # bdict[j] = 0;
+
+    # for j in range(0,lena):
+        # adict[int(a[j])] = adict[int(a[j])] + 1
+        # bdict[int(b[j])] = bdict[int(b[j])] + 1
+
+    # agts = adict[8] + adict[9]
+    # bgts = bdict[8] + bdict[9]
+
+    # aseven = adict[7]
+    # bseven = bdict[7]
+
+    # afts = adict[5] + adict[6]
+    # bfts = bdict[5] + bdict[6]
+
+    # afour = adict[4]
+    # bfour = bdict[4]
+
+    # altf = adict[0] + adict[1] + adict[2] + adict[3]
+    # bltf = bdict[0] + bdict[1] + bdict[2] + bdict[3]
 
     nseven = 0
     nfour = 0

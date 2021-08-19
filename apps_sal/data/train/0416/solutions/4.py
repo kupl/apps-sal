@@ -1,7 +1,7 @@
 class Solution:
     def catMouseGame(self, graph):
         CAT, MOUSE, n = 2, 1, len(graph)
-        queue = []
+        queue = []          # (cat, mouse, turn, winner)
         result = {}
         for i in range(n):
             for j in range(2):
@@ -21,7 +21,7 @@ class Solution:
 
         while queue:
             cat, mouse, turn, winner = queue.pop()
-            if turn == 1:
+            if turn == 1:   # cat move for next step, mouse move for last step
                 if winner == 1:
                     for next_step in graph[mouse]:
                         if (cat, next_step, 1 - turn) not in result:

@@ -2,6 +2,7 @@ ansl = []
 for q in range(int(input())):
     ax, ay, bx, by, cx, cy = map(int, input().split())
     fs = [(0, 0), (0, 1), (1, 0)]
+    # -1 0 0 0 0 -1
     fs2 = [(-1, 0), (0, 0), (0, -1)]
     if (ax, ay) in fs and (bx, by) in fs and (cx, cy) in fs:
         ansl.append(0)
@@ -44,6 +45,7 @@ for q in range(int(input())):
         else:
             dist = samex * 2
         dist = max(dist, dist * (-1))
+        # print(q,dist)
         ansl.append(dist)
 
     else:
@@ -127,6 +129,9 @@ for q in range(int(input())):
                     dist = abs(xp) * 2
                 else:
                     dist = abs(xp) * 2 + 1
+        # dist = abs(xp)*2+1
+        # print('---', q, (ax,ay,bx,by,cx,cy))
+        # print(q,dist)
         ansl.append(dist)
 
 for a in ansl:

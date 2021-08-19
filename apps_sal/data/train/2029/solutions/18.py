@@ -1,3 +1,4 @@
+# 1205A Almost Equal
 n = int(input())
 
 if n % 2 == 0:

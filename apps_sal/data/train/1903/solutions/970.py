@@ -1,7 +1,9 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # prims
         g = collections.defaultdict(list)
         n = len(points)
+        # create graph
         for i in range(n):
             for j in range(n):
                 if i != j:

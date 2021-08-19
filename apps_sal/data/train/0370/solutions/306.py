@@ -5,6 +5,7 @@ class Solution:
         for n in A:
             for j in range(2, floor(sqrt(n)) + 1):
                 if n % j == 0:
+                    # print(n, j)
                     dsu.union(n, j)
                     dsu.union(n, n // j)
 
@@ -39,6 +40,7 @@ class DSU:
             xR, yR = yR, xR
 
         self.parent[yR] = xR
+        # self.sz[xR] += self.sz[yR]
         self.sz[yR] += self.sz[xR]
 
     def size(self, n):

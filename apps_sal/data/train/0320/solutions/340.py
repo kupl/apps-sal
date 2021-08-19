@@ -11,6 +11,7 @@ class Solution:
         n = len(nums)
         flag = check(nums)
         while flag:
+            # print(nums)
             cnt += 1
             for i in range(n):
                 if nums[i] % 2:
@@ -19,6 +20,7 @@ class Solution:
                     cnt += 1
                 else:
                     nums[i] = nums[i] // 2
+            # print(cnt)
             flag = check(nums)
         for n in nums:
             if n != 0:

@@ -12,6 +12,7 @@ elif icase == 3:
 b = [0] * (n + 1)
 for i in range(n // 2 + 1, n + 1):
     b[i] = a[i]
+#    print(i,a[i])
 
 for i in range(n // 2, 0, -1):
     i2 = i * 2
@@ -20,6 +21,7 @@ for i in range(n // 2, 0, -1):
         asum += b[i2]
         i2 += i
     b[i] = (asum + a[i]) % 2
+#    print(i,b[i],a[i],asum)
 
 print(sum(b))
 for i in range(1, len(b)):

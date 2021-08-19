@@ -26,10 +26,12 @@ def main():
             while j - 1 >= 0 and A[i] + A[j - 1] >= h:
                 j -= 1
             ret += N - j
+            # [j,N)の要素数
 
         return ret
 
     x = binary_search(ok=A[-1] * 2 + 1, ng=0, is_ok=lambda x: count(x) < M)
+    # 幸福度の総和がX以上のペア数がM未満となる最大のX
 
     s = 0
     j = N

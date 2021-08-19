@@ -11,5 +11,6 @@ while i != m:
         if a[i] - now < 0:
             all += (n - now) + a[i]
             now = a[i]
+ #   print(all, a[i], now)
     i += 1
 print(all)

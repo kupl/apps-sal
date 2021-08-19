@@ -10,5 +10,7 @@ for i in range(1, N + 1):
             dp[i][j] = dp[i - 1][j] + dp[i - 1][n]
         else:
             dp[i][j] = dp[i - 1][j]
+    # else:
+        # print(dp[i])
 
 print(dp[N][50 * N] - 1)

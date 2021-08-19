@@ -5,6 +5,8 @@ import collections
 from functools import cmp_to_key
 import heapq
 
+# input functions for me
+
 
 def rsa(sep=''):
     if sep == '':
@@ -27,6 +29,7 @@ def ria(sep=''):
 def ri(): return int(input())
 def rd(): return float(input())
 def rs(): return input()
+##
 
 
 def inv(v, mod):
@@ -49,12 +52,14 @@ def main():
         finv[i] = finv[i + 1] * (i + 1) % mod
 
     def sum_naive(r, c):
+        # [0, r) * [0, c)
         ret = 0
         for i in range(r):
             ret += fact[i + 1 + c - 1] * finv[i + 1] * finv[c - 1] % mod
         return ret
 
     def sum(r, c):
+        # [0, r) * [0, c)
         ret = fact[r + c] * finv[r] * finv[c] % mod
         ret += -1 + mod
         ret %= mod

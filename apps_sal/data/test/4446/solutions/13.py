@@ -21,6 +21,7 @@ if a <= b:
             curr -= a
             req.append(ceil(curr / a))
     req.sort()
+   # print(req)
     for x in req:
         if x <= chance:
             sm += 1

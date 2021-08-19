@@ -4,9 +4,9 @@ class Solution(object):
         while h:
             h_vals.append(str(h.val))
             h = h.next
-        h_str = ('-'.join(h_vals)) + '-'
+        h_str = ('-'.join(h_vals)) + '-'  # serialized list
 
-        st = [(r0, '-')]
+        st = [(r0, '-')]  # DFS stack
 
         while st:
             r, pre = st.pop()

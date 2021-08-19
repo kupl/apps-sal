@@ -1,6 +1,7 @@
 def intput(): return [int(i) for i in input().split()]
 
 
+# Write your code here
 n = int(input())
 l = sorted([intput() for i in range(n)])
 i = res = 0

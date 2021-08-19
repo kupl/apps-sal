@@ -10,7 +10,7 @@ def main():
     s = str(input())
     k = int(input())
 
-    if number_count(s, 1) == len(s):
+    if number_count(s, 1) == len(s):   # sの中身がすべて１の場合
         number = '1'
 
     else:

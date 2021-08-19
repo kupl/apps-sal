@@ -2,6 +2,7 @@ import itertools
 
 
 def amida_patterns(w):
+    # (0, 1, 2, ... , w - 1) -> ?
     ret = list()
     for bars in itertools.product([0, 1], repeat=w - 1):
         if sum([b * bb for b, bb in zip(bars[1:], bars[:-1])]) > 0:

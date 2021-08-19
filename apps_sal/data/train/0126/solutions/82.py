@@ -1,6 +1,7 @@
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
 
+        # find subs that satisifes rules
         found = collections.defaultdict(int)
         for sl in range(minSize, min(len(s), maxSize) + 1):
             for start_index in range(len(s) - sl + 1):

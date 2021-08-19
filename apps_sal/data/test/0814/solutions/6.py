@@ -12,12 +12,14 @@ for i in range(m):
         if a[j] >= i + 1:
             w[i] += 1
 
+# print(w)
 
 for j in range(n):
     for i in range(m):
         if w[i] > n - (j + 1):
             r[j] += 1
 
+# print(r)
 
 res = [str(i) for i in r]
 res = " ".join(res)

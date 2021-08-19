@@ -1,8 +1,8 @@
 class Solution:
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         num_count = len(A)
-        previous_best = [0] * num_count
-        current_best = [0] * num_count
+        previous_best = [0] * num_count  # best average sums for the previous number of partitions
+        current_best = [0] * num_count  # best average sums for the current number of partitions
 
         previous_best[0] = A[0]
         for index in range(1, num_count):

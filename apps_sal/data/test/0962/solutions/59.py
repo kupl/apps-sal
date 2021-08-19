@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sat Apr 20 20:47:47 2019
 
@@ -15,6 +16,8 @@ import copy
 import bisect
 import heapq
 
+# 素因数を並べる
+
 
 def prime_decomposition(n):
     i = 2
@@ -27,6 +30,7 @@ def prime_decomposition(n):
     if n > 1:
         table.append(int(n))
     return table
+# 桁数を吐く
 
 
 def digit(i):
@@ -44,6 +48,7 @@ def getNearestValueIndex(list, num):
     @return 対象値に最も近い値
     """
 
+    # リスト要素と対象値の差分を計算し最小値のインデックスを取得
     idx = np.abs(np.asarray(list) - num).argmin()
     return idx
 
@@ -109,18 +114,23 @@ Y = [0]*N
 for n in range(N):
     P[n], Y[n] = map(int, input().split())
 
+# 多次元配列の宣言（あとでintにすること。）（タプルにすること。）
 dp = np.zeros((N+1, 4,4,4))
     
 all(nstr.count(c) for c in '753')
 
+# 複数配列を並び替え
 ABT = zip(A, B, totAB)
 result = 0
+# itemgetterには何番目の配列をキーにしたいか渡します
 sorted(ABT,key=itemgetter(2))
 A, B, totAB = zip(*ABT)
 A.sort(reverse=True)
 
+# 2進数のbit判定
 (x >> i) & 1
 
+# dp最小化問題
 dp = [np.inf]*N
 for n in range(N):
     if n == 0:
@@ -131,7 +141,8 @@ for n in range(N):
                 dp[n] = min(dp[n], dp[n-k] + abs(h[n]-h[n-k]))
             else:
                 break
-add = 1 
+# 累積和
+add = 1 # 問題によって決まる
 res = 0
 sums = [0]*(len(nums)+1)
 for i in range(len(nums)):
@@ -142,13 +153,18 @@ for i in range(0, len(nums), 2):
     tmp = sums[right] - sums[left]
     res = max(tmp, res)
 
+#２分探索
 li, ri = bisect.bisect_left(p_ac, l[i]-1), bisect.bisect_right(p_ac, r[i]-1)    
 
+#ソート関数
 org_list = [3, 1, 4, 5, 2]
 new_list = sorted(org_list)
 print(org_list)
 print(new_list)
+# [3, 1, 4, 5, 2]
+# [1, 2, 3, 4, 5]
 
+#Distance Transformation
     for h in range(0,H):
         for w in range(0,W):
             if h == 0 and w == 0:
@@ -171,7 +187,11 @@ def bfs(n):
     d_list = [0] * N
     opnd.append(n)
 
+    #print("Let's BFS (", n, " times)")
     while len(opnd) != 0:
+
+        #print("clsd: ", clsd)
+        #print("opnd: ", opnd)
 
         now = opnd.popleft()
         clsd.add(now)
@@ -180,8 +200,11 @@ def bfs(n):
             if e in clsd:
                 if e == n:
                     res = [now]
+                    #print("root: ", root)
+                    #print("d_list: ", d_list)
                     dist = d_list[now] + 1
                     while len(res) != dist:
+                        #   print(res, dist)
                         res.append(root[res[-1]])
                     return [list(reversed(res)), dist]
 

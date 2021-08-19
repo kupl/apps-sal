@@ -7,6 +7,7 @@ class Solution:
         count = Counter(arr)
         res = 0
         for k, v in sorted(count.items(), key=lambda x: -x[1]):
+            # print(k,v)
             tot -= v
             res += 1
             if tot <= n // 2:

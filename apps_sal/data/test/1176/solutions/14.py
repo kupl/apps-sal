@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 INF = 10**9 + 1
 

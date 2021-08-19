@@ -10,7 +10,9 @@ for _ in range(int(input())):
         d, h = [int(i) for i in input().split()]
         l.append(d - h)
         f[d] = 1
+    #print(n, x)
     l.sort(reverse=1)
+    # print(l)
     ans = 1
     x -= max(f.keys())
     if x <= 0:

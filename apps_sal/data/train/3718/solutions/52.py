@@ -6,6 +6,6 @@ def divisors(n):
         if n % i == 0:
             count += 1
 
-    count += 1
+    count += 1  # n value itself
 
     return count

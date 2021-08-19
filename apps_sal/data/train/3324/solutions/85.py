@@ -1,4 +1,5 @@
 def sale_hotdogs(n):
+    # your code here
     if 0 < n and n < 5:
         return n * 100
     elif n >= 5 and n < 10:

@@ -1,5 +1,9 @@
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
+        # sort list
+        # set l = 0, r = last
+        # see if l+r will fit in boat
+        # if too heavy, put r in boat and iterate r
 
         nboats = 0
         people.sort(reverse=True)

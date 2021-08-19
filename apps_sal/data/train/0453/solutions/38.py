@@ -17,6 +17,7 @@ def dfs(i, house, cost, prev, tar):
             res = min(res, cost[i][j] + dfs(i + 1, house, cost, j + 1, tar - ((j + 1) != prev)))
     else:
         res = min(res, dfs(i + 1, house, cost, house[i], tar - (house[i] != prev)))
+    # print(i,prev,tar,res)
     dp[i][prev][tar] = res
     return dp[i][prev][tar]
 
@@ -28,6 +29,8 @@ class Solution:
                 for k in range(101):
                     dp[i][j][k] = 0
         res = dfs(0, house, cost, n + 1, tar)
+        # for i in dp:
+        #    print(i)
         if res >= 1000000000000:
             return -1
         else:

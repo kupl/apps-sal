@@ -7,6 +7,7 @@ class Solution:
             acc = 0
             for n in nums:
                 acc += math.ceil(n / mid)
+            # print(left, mid, right, '|', acc)
             if acc > threshold:
                 left = mid + 1
             elif acc <= threshold:

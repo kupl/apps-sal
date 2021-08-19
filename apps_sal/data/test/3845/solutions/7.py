@@ -1,4 +1,4 @@
-field = [['
+field = [['#'] * 100 for _ in range(50)] + [['.'] * 100 for _ in range(50)]
 
 a, b = list(map(int, input().split()))
 a -= 1
@@ -15,7 +15,7 @@ for _ in range(a):
 x = 99
 y = 0
 for _ in range(b):
-    field[x][y] = '
+    field[x][y] = '#'
     y += 2
     if y >= 100:
         y = 0

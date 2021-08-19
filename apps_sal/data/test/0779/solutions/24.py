@@ -1,3 +1,6 @@
+#import sys
+#from io import StringIO
+#sys.stdin = StringIO(open(__file__.replace('.py', '.in')).read())
 
 n = int(input())
 

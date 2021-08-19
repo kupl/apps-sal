@@ -18,6 +18,7 @@ class Solution:
             value, label = heappop(maxHeap)
             value = -value
 
+            # when you can't use that value
             if label in labelFrequencies and labelFrequencies[label] >= use_limit:
                 continue
 

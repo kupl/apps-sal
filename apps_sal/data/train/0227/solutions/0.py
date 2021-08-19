@@ -13,6 +13,8 @@ class Solution:
         if cnt > 0:
             hulu.append([num, cnt])
 
+        # print(hulu)
+
         output = 0
 
         if A[0] == 1:
@@ -33,6 +35,8 @@ class Solution:
 
         output = ones + K
 
+        # print([start,end,usage,ones])
+
         start += 2
 
         while start < len(hulu):
@@ -46,6 +50,7 @@ class Solution:
                 usage += hulu[end + 1][1]
                 ones += hulu[end + 2][1]
                 end += 2
+            # print([start,end,usage,ones])
 
             output = max(output, ones + K)
             start += 2

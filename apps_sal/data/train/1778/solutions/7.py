@@ -12,6 +12,6 @@ def get_key_length(cipher_text, max_key_length):
                 c += 1
         dict[i] = c
     max_collisions = max(dict.values())
-    for key, value in dict.items():
+    for key, value in dict.items():  # for name, age in dictionary.iteritems():  (for Python 2.x)
         if value == max_collisions:
             return key

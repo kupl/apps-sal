@@ -9,6 +9,7 @@ right = n + 1
 while right - left > 1:
     mid = left + (right - left) // 2
 
+    # 判定
     flag = True
     if (1 + mid) * mid // 2 <= n + 1:
         flag = True
@@ -20,4 +21,5 @@ while right - left > 1:
     else:
         right = mid
 
+# print(left)
 print((n - left + 1))

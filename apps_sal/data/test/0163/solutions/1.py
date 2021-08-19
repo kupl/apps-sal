@@ -8,8 +8,8 @@ if (f - t) % k:
     print('NO')
 else:
     for i in range(t + k, f, k):
-        if s[i] == '
-        print('NO')
-        break
+        if s[i] == '#':
+            print('NO')
+            break
     else:
         print('YES')

@@ -2,6 +2,7 @@ A, B, C, X, Y = list(map(int, input().split()))
 ans = 10000000000
 cost = 0
 
+# C for both A and B
 cost = max(X, Y) * C * 2
 ans = min(ans, cost)
 

@@ -6,12 +6,16 @@ def solve(h, w, lim, choco):
     acc = list(zip(*acc))
     acc = [[0] + list(accumulate(s)) for s in acc]
     acc = list(zip(*acc))
+    # print(*acc, sep='\n')
 
     ans = 10 ** 9
+    # i:j  h方向の分割
+    # k:l  w方向の分割
     for bit in range(1 << (h - 1)):
         k = 1
         tmp = 0
         while k < w:
+            # print(bin(bit), k)
             i = 0
             l = w + 1
             sp = bit | 1 << (h - 1)
@@ -25,6 +29,7 @@ def solve(h, w, lim, choco):
                 if lt == k:
                     break
                 l = min(l, lt)
+                # print('i,j,k,l', i, j, k, l, lt)
                 i = j
             else:
                 k = l
@@ -33,6 +38,7 @@ def solve(h, w, lim, choco):
                 continue
             break
         else:
+            # print(tmp, bin(bit).count('1'))
             ans = min(ans, tmp + bin(bit).count('1'))
     return ans
 

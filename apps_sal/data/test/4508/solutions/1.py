@@ -12,6 +12,7 @@ for i, j in EDGE:
     EDGELIST[i].append(j)
     EDGELIST[j].append(i)
 
+#EDGES=[[] for i in range(N+1)]
 REDG = [None for i in range(N + 1)]
 QUE = deque([1])
 check = [0] * (N + 1)
@@ -29,6 +30,7 @@ while QUE:
             if check[to] == 1:
                 continue
             else:
+                # EDGES[x].append(to)
                 REDG[to] = x
                 NQUE.append(to)
     QUE = NQUE
@@ -36,6 +38,15 @@ while QUE:
 
 check = [0] * (N + 1)
 check[1] = 1
+# NEXT=[]
+
+# for i in EDGES[1]:
+#    check[i]=1
+#    NEXT.append(i)
+
+# for j in NEXT:
+#    for k in EDGES[j]:
+#        check[k]=1
 
 
 LEAF = []
@@ -47,6 +58,7 @@ QUE = LEAF
 heapq.heapify(QUE)
 ANS = 0
 
+# print(check,QUE)
 
 while QUE:
     dep, x = heapq.heappop(QUE)
@@ -64,5 +76,6 @@ while QUE:
     heapq.heappush(QUE, (-DEPTH[REDG[REDG[REDG[x]]]], REDG[REDG[REDG[x]]]))
     ANS += 1
 
+    # print(x,QUE,check)
 
 print(ANS)

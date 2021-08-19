@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -31,6 +32,7 @@ def merge(segs):
     for s in segs[1:]:
         pre = ans[-1]
         if s[0] > pre[1]:
+            # ans.append(s)
             return ans[0]
         else:
             ans[-1] = (pre[0], s[1])
@@ -45,6 +47,7 @@ ans = float('inf')
 for i, x in enumerate(vlines):
     if i >= ans:
         break
+    # count = i + sum([1 if u >= x else 0 for u in xs])
     count = i + len(xs) - bisect.bisect_left(xs, x)
     ans = min(ans, count)
 

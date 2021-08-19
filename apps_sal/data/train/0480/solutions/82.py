@@ -12,3 +12,6 @@ class Solution:
                 dp[i][j] = (dp[i - 1][j] + dp[i - 1][j - 1] + dp[i - 1][j + 1]) % LIMIT
 
         return dp[-1][0]
+
+# time: O(min(arrLen, steps) * steps)
+# space: O(min(arrLen, steps) * steps)

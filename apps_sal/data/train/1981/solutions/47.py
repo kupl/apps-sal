@@ -1,5 +1,8 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
+        # permutation
+        # requests where requests[i] = [starti, endi]
+        # ith request asks for sum of
         from operator import add
         lenn = len(nums)
         ranks = [0] * (lenn + 1)

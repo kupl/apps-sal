@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 
@@ -79,12 +80,14 @@ class Dinic:
 
 
 def build_grid(H, W, intv, _type, space=True, padding=False):
+    # 入力がスペース区切りかどうか
     if space:
         def _input(): return input().split()
     else:
         def _input(): return input()
 
     def _list(): return list(map(_type, _input()))
+    # 余白の有無
     if padding:
         offset = 1
     else:
@@ -100,6 +103,7 @@ def build_grid(H, W, intv, _type, space=True, padding=False):
 H, W = MAP()
 grid = build_grid(H, W, '', str, space=0)
 
+# 最大流：頂点は各行全体、各列全体、始点、終点
 dn = Dinic(H + W + 2)
 s = H + W
 t = H + W + 1

@@ -15,6 +15,7 @@ for i in range(N - 1, -1, -1):
             ng = 1
             break
         x, y = A1.pop()
+#        R.append((i+1, y))
         R.append((i + 1, y))
         A2.append((i + 1, y))
     elif X[i] == 3:
@@ -35,4 +36,5 @@ if ng:
 else:
     print(len(R))
     for x, y in R:
+        #        print(x, y)
         print(N - y + 1, x)

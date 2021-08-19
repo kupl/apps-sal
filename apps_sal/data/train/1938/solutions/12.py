@@ -20,7 +20,9 @@ class Solution:
                 bisect.insort(allX, (x1, x2))
             else:
                 idx = bisect.bisect_left(allX, (x1, x2))
+                #print(idx, x1, x2, allX)
                 allX.pop(idx)
+                #allX.remove((x1, x2))
 
             curHeight = y
 

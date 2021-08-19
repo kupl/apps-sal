@@ -16,8 +16,10 @@ class Solution:
                 base += worker[i][1]
                 heappush(q, - worker[i][1])
                 i += 1
+            # print(worker)
             res = (base + worker[i][1]) * worker[i][0]
             while i < len(worker):
+                # print((worker[i][0], base, res))
                 rate = worker[i][0]
                 res = min(res, (base + worker[i][1]) * rate)
                 heappush(q, - worker[i][1])

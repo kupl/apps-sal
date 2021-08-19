@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 N = int(input())
 count = [0] * 5

@@ -1,5 +1,6 @@
 import sys
 fin = sys.stdin
+# fout = sys.stdout
 
 n = int(fin.readline())
 p = []

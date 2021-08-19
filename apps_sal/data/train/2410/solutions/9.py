@@ -10,6 +10,7 @@ class Solution:
                 idx += 1
 
             elif i == 0 or typed[i] != typed[i - 1]:
+                # If first character mismatch, or it is not long-pressed repeated characters
                 return False
 
         return idx == name_len

@@ -1,3 +1,5 @@
+# cook your dish here
+# https://www.codechef.com/CSEP2020/problems/IRVS
 for _ in range(int(input())):
     n = int(input())
     prime = [True for __ in range(n + 1)]

@@ -1,5 +1,6 @@
 class Solution:
     def countTriplets(self, A: List[int]) -> int:
+        # O(2**16*n), since a&b<= a,b<= 2**16
 
         dp = collections.defaultdict(int)
         for n1 in A:

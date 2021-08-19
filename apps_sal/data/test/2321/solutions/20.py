@@ -12,4 +12,5 @@ for _ in range(t):
     n = mi()[0]
     s = input()
 
+    # print(min(s.find('>'), (len(s) - s.rfind('<') - 1)))
     print(min(len(s) - len(s.lstrip('<')), len(s) - len(s.rstrip('>'))))

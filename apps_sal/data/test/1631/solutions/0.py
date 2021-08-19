@@ -1,3 +1,4 @@
+# return if sa contains a real prefix: sb
 def isPrefix(sa, sb):
     if len(sa) <= len(sb):
         return False
@@ -31,6 +32,7 @@ for i in range(1, n):
         break
     else:
         ca, cb = getOrder(names[i - 1], names[i])
+        # print(ca,"<",cb)
         if g[ord(cb) - ord('a')][ord(ca) - ord('a')]:
             res = False
             break
@@ -42,6 +44,7 @@ def printG():
     print("  abcdefghijklmnopqrstuvwxyz")
     for i in range(0, 26):
         print(chr(ord("a") + i), "".join(["1" if x else "0" for x in g[i]]), sep="")
+# printG()
 
 
 if not res:
@@ -53,10 +56,12 @@ else:
             if not used[i] and indegree[i] == 0:
                 return i
         return -1
+    # topo sort
     theOrder = []
     indegree = [0] * 26
     used = [False] * 26
 
+    # calc indegree
     for i in range(0, 26):
         ithIndegree = 0
         for j in range(0, 26):

@@ -1,3 +1,4 @@
+# abc135d
 s = input()
 mod = 10**9 + 7
 res = [0] * 13

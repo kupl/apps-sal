@@ -1,8 +1,10 @@
 class Solution:
     def maxSizeSlices(self, slices: List[int]) -> int:
+        # find a subseq in circle without disjoint element....
         n = len(slices) // 3
 
         def get_maxsubseq(pieces):
+            # dp(i, j) = max(dp(i-1, j-2) + pieces[j], dp(i, j-1))
             m = len(pieces)
             dp = {}
             for i in range(1, n + 1):

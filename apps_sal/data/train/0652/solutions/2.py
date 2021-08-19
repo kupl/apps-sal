@@ -1,3 +1,4 @@
+# cook your code here
 def compare(a, b):
     return ord(a.lower()) - ord(b.lower())
 

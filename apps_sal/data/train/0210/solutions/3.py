@@ -15,6 +15,7 @@ class Solution:
 
         for i in range(0, len(nums)):
             m = nums[i] // w
+            # print(m,d)
             if m in d:
                 return True
             if m - 1 in d and abs(nums[i] - d[m - 1]) <= t:

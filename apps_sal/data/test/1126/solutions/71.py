@@ -1,3 +1,4 @@
+# 高々Mの繰り返し
 N, X, M = list(map(int, input().split()))
 memo = [0] * (2 * M + 1)
 val_idx = {X: 1}
@@ -8,12 +9,12 @@ memo[1] = X
 loop_length = 0
 for i in range(2, N + 1):
     X = pow(X, 2, M)
-    if X not in seen:
+    if X not in seen:  # まだloopしてない
         seen.add(X)
         val_idx[X] = i
         idx_val[i] = X
         memo[i] += memo[i - 1] + X
-    else:
+    else:  # loopに達した
         loop_start_val = X
         loop_start_idx = val_idx[X]
         loop_length = i - loop_start_idx

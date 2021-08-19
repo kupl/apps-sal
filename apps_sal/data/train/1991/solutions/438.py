@@ -20,7 +20,9 @@ class Solution:
                 if idx == finish:
                     res = 1
                 for j in range(m):
+                    # print(\"from idx: \", idx, \" to: \", j, \"fuel = \", fuel)
                     res += helper(j, fuel - dp[idx][j])
+                # print(\"res: \", res)
                 return res % mod
 
         return helper(start, fuel)

@@ -4,7 +4,9 @@ class Solution:
         for i, x in enumerate(ranges):
             intervals.append([i - x, i + x])
 
+        # Always pick the first
         def mySortKey(x):
+            # print(x)
             left = x[0]
             if left <= 0:
                 left = 0

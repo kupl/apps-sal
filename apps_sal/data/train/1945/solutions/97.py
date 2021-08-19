@@ -17,7 +17,7 @@ class Tree(object):
             if self.left is None:
                 self.left = Tree()
             return self.left.insert(zero, n + 1, row, i, counts)
-        else:
+        else:  # row[1] == one
             if self.right is None:
                 self.right = Tree()
             return self.right.insert(zero, n + 1, row, i, counts)

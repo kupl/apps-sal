@@ -13,6 +13,7 @@ data = [10, 20, 30, 40]
 row = [0, 0, 1, 1]
 col = [1, 2, 0, 2]
 
+#print(csr_matrix((data, (row, col))).toarray())
 
 data = []
 row = []

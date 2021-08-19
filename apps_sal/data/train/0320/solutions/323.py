@@ -2,6 +2,7 @@ class Solution:
     def minOperations(self, nums: List[int]) -> int:
         self.ans = 0
         self.nums = nums
+        # ALL numbers are even now
 
         def manipulate():
             for i in range(len(self.nums)):
@@ -9,6 +10,7 @@ class Solution:
                     self.ans += 1
                     self.nums[i] -= 1
 
+            # TRY maximum divide
             def allEven():
                 for num in self.nums:
                     if num % 2 == 1:

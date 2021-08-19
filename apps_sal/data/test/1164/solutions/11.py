@@ -23,6 +23,7 @@ while i < len(s):
         for k in c:
             if k != '.':
                 a = a + k
+        # print(a)
         ans += int(a)
         i = j
 an = str(ans)
@@ -33,6 +34,7 @@ a += an[-1]
 a += an[-2]
 a += '.'
 i = 0
+# print(an)
 for k in range(len(an) - 3, -1, -1):
     a += an[k]
     i += 1

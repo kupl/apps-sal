@@ -13,6 +13,8 @@ class Solution:
         stack.append((src, 0))
 
         while stack:
+            # print(stack)
+            # print(visitedNodes)
             current = stack.pop()
             if current[1] == 1:
                 visited[current[0]] = BLACK
@@ -22,7 +24,9 @@ class Solution:
 
             for e in graph[current]:
 
+                # if not visited[e]:
                 if visited[e] == GRAY:
+                    # print('here', e)
                     return True
 
                 if visited[e] == WHITE:
@@ -35,7 +39,9 @@ class Solution:
         eventualSafe = []
         visited = [0] * len(graph)
         for i in range(len(graph)):
+            # print('Node :', i)
             if not self.isCycle(i, graph, visited):
+                # print('Found you')
                 eventualSafe.append(i)
 
         return eventualSafe

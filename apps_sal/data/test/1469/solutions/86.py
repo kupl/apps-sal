@@ -21,6 +21,9 @@ for i in range(20):
     else:
         sumL[i] = splitL[i] + sumL[i - 1]
 
+# print(splitL)
+# print(sumL)
+# print(bitL)
 
 edge = []
 

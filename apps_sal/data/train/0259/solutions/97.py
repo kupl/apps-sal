@@ -16,6 +16,7 @@ class Solution:
         hi = max(nums)
         while lo <= hi:
             mid = (lo + hi) // 2
+            # if current is okay, we have to go higher lower
             if ok(mid):
                 hi = mid - 1
             else:

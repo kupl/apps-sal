@@ -1,3 +1,5 @@
+#!/usr/bin python3
+# -*- coding: utf-8 -*-
 
 N = list(map(int, list(input())))
 N.reverse()
