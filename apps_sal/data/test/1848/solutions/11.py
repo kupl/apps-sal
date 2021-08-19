@@ -1,7 +1,6 @@
 import functools
 import math
 import sys
-
 n = int(input())
 a = list(map(int, input().split()))
 ans = 0
@@ -13,6 +12,5 @@ while len(a) > 1:
             ans += 1
         else:
             t.append(a[i])
-            #temp += 1
     a = t
 print(ans)

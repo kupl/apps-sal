@@ -1,9 +1,10 @@
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
+
+    def input():
+        return sys.stdin.readline().rstrip()
     n = int(input())
     a = list(map(int, input().split()))
-
     x = 0
     for i in range(2, n):
         x ^= a[i]
@@ -17,9 +18,8 @@ def main():
         return
     k = x.bit_length()
     tmp = d
-    # d^tmp はd&x=0からd+tmpと一緒
     for i in range(k - 1, -1, -1):
-        if (x >> i) & 1:
+        if x >> i & 1:
             if tmp + (1 << i) <= a[0]:
                 tmp += 1 << i
     if 0 < tmp <= a[0]:

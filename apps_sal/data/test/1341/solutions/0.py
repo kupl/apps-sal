@@ -1,13 +1,7 @@
-# scott http://codeforces.com/problemset/problem/265/A new problem
-
-RO = input()  # darn i don't know how to read string
-ins = input()  # scott
+RO = input()
+ins = input()
 n = 0
-
-
-for x in range(len(ins)):  # scott yeah that looks fine
-    #print (x)
+for x in range(len(ins)):
     if ins[x] == RO[n]:
-        n += 1  # scott
-
+        n += 1
 print(n + 1)

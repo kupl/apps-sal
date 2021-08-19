@@ -1,13 +1,32 @@
 import sys
 
 
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
-def SI(): return sys.stdin.readline()[:-1]
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def SI():
+    return sys.stdin.readline()[:-1]
 
 
 def main():
@@ -21,7 +40,6 @@ def main():
         print(-1)
         return
     t >>= 1
-    # print(t)
     a0 = a1 = 0
     for i in range(40, -1, -1):
         dt = t >> i & 1
@@ -32,17 +50,14 @@ def main():
         if (dt, dx) == (1, 0):
             a0 |= 1 << i
             a1 |= 1 << i
-
     for i in range(40, -1, -1):
         dt = t >> i & 1
         dx = x >> i & 1
         if (dt, dx) == (0, 1):
-            if (a0 | 1 << i) <= aa[0]:
+            if a0 | 1 << i <= aa[0]:
                 a0 |= 1 << i
             else:
                 a1 |= 1 << i
-
-    # print(a0,a1)
     if a0 > 0 and a0 <= aa[0]:
         print(aa[0] - a0)
     else:

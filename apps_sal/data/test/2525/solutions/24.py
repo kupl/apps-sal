@@ -16,9 +16,6 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-#import numpy as np
-
 s = input()
 n = N()
 f = False
@@ -26,13 +23,12 @@ h = ''
 t = ''
 for i in range(n):
     q = input().split()
-    if (len(q) == 1):
-        f = not(f)
+    if len(q) == 1:
+        f = not f
+    elif f and q[1] == '1' or (not f and q[1] == '2'):
+        t += q[2]
     else:
-        if (f and q[1] == '1') or (not(f) and q[1] == '2'):
-            t += q[2]
-        else:
-            h += q[2]
+        h += q[2]
 if f:
     ans = t[::-1] + s[::-1] + h
 else:

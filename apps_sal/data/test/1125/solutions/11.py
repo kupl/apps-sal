@@ -1,25 +1,19 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(max(1000, 10**9))
-def write(x): return sys.stdout.write(x + "\n")
+def input():
+    return sys.stdin.readline().rstrip()
 
 
-# def sub(kouho, target):
-#     l = len(kouho)
-#     best = None
-#     for b in range(1<<l):
-#         v = 0
-#         for i in range(l.bit_length()):
-#             if b>>i&1:
-#                 v += 1<<i
-#         if
+sys.setrecursionlimit(max(1000, 10 ** 9))
+
+
+def write(x):
+    return sys.stdout.write(x + '\n')
 
 
 n = int(input())
 a = list(map(int, input().split()))
-
 val = 0
 for num in a[2:]:
     val ^= num
@@ -39,7 +33,7 @@ else:
             ans = -1
         diff = k - 2 * tmp
         for i in range(diff.bit_length()):
-            if (diff & 1 << i) & tmp:
+            if diff & 1 << i & tmp:
                 ans = -1
                 break
             elif diff & 1 << i:
@@ -60,5 +54,4 @@ else:
                 ans = a[0] - v1
         else:
             ans = -1
-
 print(ans)

@@ -1,18 +1,15 @@
-d, k, a, b, t = list(map(int, input().split()))
+(d, k, a, b, t) = list(map(int, input().split()))
 
 
 def main():
     if d <= k:
-        #print("case 0")
         return d * a
     else:
         ans = a * k
         p = k
-        if (b * k <= t + k * a):
-            #print("case 1")
+        if b * k <= t + k * a:
             ans += (d - k) * b
         else:
-            #print("case 2")
             pp = (d - k) // k
             p += pp * k
             ans += pp * (t + k * a)

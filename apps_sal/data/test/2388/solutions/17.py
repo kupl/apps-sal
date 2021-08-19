@@ -1,15 +1,13 @@
 import sys
-sys.setrecursionlimit(10**9)
-
+sys.setrecursionlimit(10 ** 9)
 MOD = 998244353
 N = int(input())
-robo = list(list(map(int, input().split()))for i in range(N))
+robo = list((list(map(int, input().split())) for i in range(N)))
 robo.sort()
-child = [[]for i in range(N + 1)]
-stack = []  # 有効、名前
-
+child = [[] for i in range(N + 1)]
+stack = []
 for i in range(N):
-    x, d = robo[i]
+    (x, d) = robo[i]
     while stack and stack[-1][0] <= x:
         stack.pop()
     if stack:
@@ -27,4 +25,4 @@ def func(x):
     return (hoge + 1) % MOD
 
 
-print((func(0) - 1))
+print(func(0) - 1)
