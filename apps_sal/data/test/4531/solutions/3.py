@@ -1,4 +1,4 @@
-'''t=int(input())
+"""t=int(input())
 while(t):
     t-=1
     n,k=[int(x) for x in input().split()]
@@ -10,22 +10,13 @@ while(t):
                 break
             s+=chr(97+i)
             i+=1
-    print(s)'''
-
-'''n=int(input())
-arr=[int(x) for x in input().split()]
-arr=sorted(arr)
-ans=0
-for i in range(0,n-1,2):
-    ans+=abs(arr[i]-arr[i+1])
-
-print(ans)'''
-
-
-
-
+    print(s)"""
+import threading
+import sys
 from collections import defaultdict
-import sys, threading
+'n=int(input())\narr=[int(x) for x in input().split()]\narr=sorted(arr)\nans=0\nfor i in range(0,n-1,2):\n    ans+=abs(arr[i]-arr[i+1])\n\nprint(ans)'
+
+
 def work():
     sys.setrecursionlimit(1 << 18)
 
@@ -46,9 +37,9 @@ def work():
     n1 = n
     arr = [int(x) for x in input().split()]
     graph = defaultdict(list)
-    while(n1 - 1):
+    while n1 - 1:
         n1 -= 1
-        u, v = [int(x) for x in input().split()]
+        (u, v) = [int(x) for x in input().split()]
         graph[u].append(v)
         graph[v].append(u)
     s = 0

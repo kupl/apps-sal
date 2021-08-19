@@ -1,5 +1,4 @@
-N, *A = map(int, open(0).read().split())
-
+(N, *A) = map(int, open(0).read().split())
 C = {}
 for a in A:
     if a in C.keys():
@@ -8,7 +7,6 @@ for a in A:
         C[a] = 1
 B = list(C.items())
 B.sort(key=lambda x: x[0])
-
 ans = 0
 for i in range(len(B)):
     count = B[i][1]

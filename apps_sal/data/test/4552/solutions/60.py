@@ -1,7 +1,7 @@
 n = int(input())
 f = [list(map(int, input().split())) for i in range(n)]
 p = [list(map(int, input().split())) for i in range(n)]
-ans = -(10**10)
+ans = -10 ** 10
 for i in range(1, 1024):
     bit = bin(i)[2:].zfill(10)
     a = 0

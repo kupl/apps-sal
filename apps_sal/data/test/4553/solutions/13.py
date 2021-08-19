@@ -1,7 +1,7 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 s = input()
-res = "No"
-if s[a] == "-":
+res = 'No'
+if s[a] == '-':
     if s[:a].isdecimal() and s[a + 1:].isdecimal():
-        res = "Yes"
+        res = 'Yes'
 print(res)

@@ -1,4 +1,4 @@
-total_square, total_toll_gate, current_square = map(int, input().split())
+(total_square, total_toll_gate, current_square) = map(int, input().split())
 toll_gate_square = list(map(int, input().split()))
 route1 = 0
 route2 = 0

@@ -1,21 +1,19 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 s = input()
 ans = True
 for i in range(a + b + 1):
-    if s[a] != "-":
+    if s[a] != '-':
         ans = False
         break
+    elif i == a:
+        pass
     else:
-        if i == a:
-            pass
+        for j in range(10):
+            if s[i] == str(j):
+                break
         else:
-            for j in range(10):
-                if s[i] == str(j):
-                    break
-            else:
-                ans = False
-
+            ans = False
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

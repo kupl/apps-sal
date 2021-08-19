@@ -1,4 +1,4 @@
-a, b = [i for i in input().split()]
+(a, b) = [i for i in input().split()]
 t = int(a + b)
 ans = 'No'
 n = 1

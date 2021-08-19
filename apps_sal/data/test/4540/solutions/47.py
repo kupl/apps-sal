@@ -17,6 +17,5 @@ for i in range(n):
         sb1 = abs(As[i - 1] - As[i])
         sb2 = abs(As[i] - As[i + 1])
         ad = abs(As[i - 1] - As[i + 1])
-
     ans = S - sb1 - sb2 + ad
     print(ans)

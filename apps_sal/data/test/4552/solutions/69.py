@@ -2,7 +2,7 @@ import itertools
 n = int(input())
 f = [list(map(int, input().split())) for _ in range(n)]
 p = [list(map(int, input().split())) for _ in range(n)]
-ans = -(10**12)
+ans = -10 ** 12
 for i in range(1, 11):
     num = list(itertools.combinations(list(range(10)), i))
     for j in range(len(num)):

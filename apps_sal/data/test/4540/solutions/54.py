@@ -1,6 +1,5 @@
 N = int(input())
-*A, = map(int, input().split())
-
+(*A,) = map(int, input().split())
 B = [0] + A + [0]
 count = [0] * N
 S = abs(B[1] - 0)
@@ -12,6 +11,5 @@ while i <= N:
         count[i - 1] = 2 * min(abs(B[i] - B[i - 1]), abs(B[i + 1] - B[i]))
     S += abs(B[i + 1] - B[i])
     i += 1
-
 for c in count:
     print(S - c)

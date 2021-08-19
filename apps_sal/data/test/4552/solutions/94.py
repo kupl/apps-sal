@@ -1,10 +1,8 @@
 import itertools
-
 N = int(input())
 M = 10
 F = [list(map(int, input().split())) for i in range(N)]
 P = [list(map(int, input().split())) for i in range(N)]
-
 ans = -10 ** 10
 for s in itertools.product([0, 1], repeat=M):
     if max(s) == 0:

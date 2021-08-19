@@ -1,6 +1,5 @@
-a, b, c = input().split()
-
+(a, b, c) = input().split()
 if int(b) - int(a) == int(c) - int(b):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

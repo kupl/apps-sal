@@ -6,5 +6,5 @@ for i in range(1, N + 2):
     ans += abs(A[i] - A[i - 1])
 for i in range(1, N + 1):
     Z = ans
-    Z -= (abs(A[i] - A[i - 1]) + abs(A[i] - A[i + 1]) - abs(A[i + 1] - A[i - 1]))
+    Z -= abs(A[i] - A[i - 1]) + abs(A[i] - A[i + 1]) - abs(A[i + 1] - A[i - 1])
     print(Z)

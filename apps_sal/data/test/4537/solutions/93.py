@@ -1,7 +1,5 @@
-A, B = list(map(int, input().split()))
-
+(A, B) = list(map(int, input().split()))
 a = A + B
 b = A - B
 c = A * B
-
-print((max(a, b, c)))
+print(max(a, b, c))

@@ -1,10 +1,8 @@
 from itertools import product
-
 N = int(input())
 F = [list(map(int, input().split())) for _ in range(N)]
 P = [list(map(int, input().split())) for _ in range(N)]
-
-MAX = -10**12
+MAX = -10 ** 12
 for p in product(range(2), repeat=10):
     if p == (0,) * 10:
         continue

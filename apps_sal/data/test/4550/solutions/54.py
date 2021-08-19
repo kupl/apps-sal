@@ -1,6 +1,5 @@
-a, b, c = list(map(int, input().split()))
-
+(a, b, c) = list(map(int, input().split()))
 if a + b == c or b + c == a or a + c == b:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

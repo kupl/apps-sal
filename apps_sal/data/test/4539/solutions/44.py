@@ -1,5 +1,5 @@
 N = input()
 if int(N) % sum(map(int, N)):
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

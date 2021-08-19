@@ -1,4 +1,4 @@
-p = ["consonant", "vowel"]
+p = ['consonant', 'vowel']
 a = input()
-b = "aeiou"
+b = 'aeiou'
 print(p[a in b])

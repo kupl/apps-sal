@@ -1,13 +1,11 @@
 def iroha():
     letter = input()
-    vols = ["a", "i", "u", "e", "o"]
-
+    vols = ['a', 'i', 'u', 'e', 'o']
     for elm in vols:
         if elm == letter:
-            print("vowel")
+            print('vowel')
             return
-
-    print("consonant")
+    print('consonant')
 
 
 def __starting_point():

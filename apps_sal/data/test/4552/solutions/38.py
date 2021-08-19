@@ -2,7 +2,7 @@ import itertools
 N = int(input())
 F = [list(map(int, input().split())) for _ in range(N)]
 P = [list(map(int, input().split())) for _ in range(N)]
-ans = -10**9
+ans = -10 ** 9
 for i in list(itertools.product(range(2), repeat=10)):
     if sum(i) == 0:
         continue

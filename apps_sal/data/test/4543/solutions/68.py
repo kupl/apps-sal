@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 t = int(a + b)
 ans = 'No'
 n = 1

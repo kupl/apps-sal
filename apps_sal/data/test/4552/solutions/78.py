@@ -1,5 +1,5 @@
 n = int(input())
-f = [int(input().replace(" ", ""), 2) for i in range(n)]
+f = [int(input().replace(' ', ''), 2) for i in range(n)]
 p = [list(map(int, input().split())) for i in range(n)]
 ans = -float('inf')
 for i in range(1, 2 ** 10):

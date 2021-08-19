@@ -12,6 +12,5 @@ for i in range(1, n + 1):
     sb1 = abs(ais[i - 1] - ais[i])
     sb2 = abs(ais[i] - ais[i + 1])
     ad = abs(ais[i - 1] - ais[i + 1])
-
     ans = S - sb1 - sb2 + ad
     print(ans)

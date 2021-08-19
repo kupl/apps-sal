@@ -5,5 +5,4 @@ for i in range(n):
     choise = numbers[i] + 1
     for j in [-1, 0, 1]:
         number_colle[choise + j] += 1
-
-print((max(number_colle)))
+print(max(number_colle))

@@ -1,4 +1,4 @@
 N = int(input())
 A = int(input())
-ans = N**2 - A
+ans = N ** 2 - A
 print(ans)

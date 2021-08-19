@@ -1,6 +1,5 @@
-n, m, x = list(map(int, input().split()))
+(n, m, x) = list(map(int, input().split()))
 squares = list(map(int, input().split()))
-
 left_cost = 0
 right_cost = 0
 for square in squares:
@@ -8,5 +7,4 @@ for square in squares:
         left_cost = left_cost + 1
     else:
         right_cost = right_cost + 1
-
-print((min(right_cost, left_cost)))
+print(min(right_cost, left_cost))

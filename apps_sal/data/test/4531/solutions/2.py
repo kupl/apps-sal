@@ -6,6 +6,7 @@ input = sys.stdin.readline
 
 
 def bootstrap(f, stack=[]):
+
     def wrappedfunc(*args, **kwargs):
         if stack:
             return f(*args, **kwargs)
@@ -21,7 +22,6 @@ def bootstrap(f, stack=[]):
                         break
                     to = stack[-1].send(to)
             return to
-
     return wrappedfunc
 
 
@@ -32,14 +32,13 @@ dp = [0 for i in range(n + 1)]
 s = [0 for i in range(n + 1)]
 ans = [0 for i in range(n + 1)]
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     tree[a].append(b)
     tree[b].append(a)
 
 
 @bootstrap
 def dfs1(node, dist, pd):
-
     for child in tree[node]:
         if child == pd:
             continue
@@ -56,9 +55,8 @@ q = deque()
 ans[1] = dp[1]
 for node in tree[1]:
     q.append((node, 1))
-
 while len(q) > 0:
-    node, pd = q.popleft()
+    (node, pd) = q.popleft()
     sub_dp = ans[pd] - (dp[node] + s[node])
     added = s[1] - s[node]
     ans[node] = sub_dp + added + dp[node]

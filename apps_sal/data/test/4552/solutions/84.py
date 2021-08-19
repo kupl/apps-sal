@@ -7,8 +7,8 @@ p = []
 for i in range(n):
     p.append(list(map(int, input().split())))
 x = np.asarray(f)
-mx = -10**9
-for i in range(1, 2**10):
+mx = -10 ** 9
+for i in range(1, 2 ** 10):
     y = np.asarray([int(x) for x in list(format(i, '010b'))])
     z = x * y
     can = np.sum(z, axis=1)

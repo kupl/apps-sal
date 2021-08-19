@@ -1,4 +1,5 @@
 class Solution:
+
     def plusOne(self, digits):
         """
         :type digits: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         if not digits:
             return []
-
         i = len(digits) - 1
         while i >= 0:
             if digits[i] < 9:

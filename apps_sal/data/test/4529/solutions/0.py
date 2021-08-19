@@ -3,7 +3,7 @@ for _ in range(int(input())):
     s = input()
     balance = 0
     index = {0: 1}
-    ans = [10**9]
+    ans = [10 ** 9]
     i = 1
     for x in s:
         if x == 'U':

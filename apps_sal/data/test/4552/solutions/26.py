@@ -1,6 +1,5 @@
 import sys
 from itertools import product
-
 input = sys.stdin.readline
 
 
@@ -12,19 +11,17 @@ def main():
     P = [None] * N
     for i in range(N):
         P[i] = tuple(map(int, input().split()))
-
-    ans = -float("inf")
+    ans = -float('inf')
     for comb in product(list(range(2)), repeat=10):
         if sum(comb) == 0:
             continue
         c = [0] * N
-        for j, is_open in enumerate(comb):
+        for (j, is_open) in enumerate(comb):
             if is_open:
                 for i in range(N):
                     c[i] += F[i][j]
-        profit = sum(P[i][c[i]] for i in range(N))
+        profit = sum((P[i][c[i]] for i in range(N)))
         ans = max(ans, profit)
-
     print(ans)
 
 

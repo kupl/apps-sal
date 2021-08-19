@@ -1,4 +1,4 @@
-N, D = map(int, input().split())
+(N, D) = map(int, input().split())
 zahyo = [list(map(int, input().split())) for i in range(N)]
 
 
@@ -11,5 +11,4 @@ for i in range(N):
     genzai = zahyo[i]
     if distance(genzai[0], genzai[1]) <= D:
         kazu += 1
-
 print(kazu)

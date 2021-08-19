@@ -1,5 +1,5 @@
 N = int(input())
-*A, = map(int, input().split())
+(*A,) = map(int, input().split())
 A = [0] + A + [0]
 S = 0
 for i in range(1, N + 2):

@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-N, M, X = list(map(int, input().split()))
+(N, M, X) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 count = 0
 if A[int(M / 2)] > X:
@@ -16,5 +15,4 @@ else:
             count += 1
         else:
             break
-
-print((min(count, M - count)))
+print(min(count, M - count))

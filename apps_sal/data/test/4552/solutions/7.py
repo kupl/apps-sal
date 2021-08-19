@@ -11,10 +11,22 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
 
 
 n = INT()
@@ -24,7 +36,6 @@ for i in range(n):
 p = []
 for i in range(n):
     p.append(LIST())
-
 ans = -inf
 for x in product([0, 1], repeat=10):
     if sum(x) != 0:

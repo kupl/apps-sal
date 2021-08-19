@@ -3,17 +3,16 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    a, b = Input()
+    (a, b) = Input()
     s = input()
-
-    if all(chr == "-" if index == a else chr.isdigit() for index, chr in enumerate(s)):
-        print("Yes")
+    if all((chr == '-' if index == a else chr.isdigit() for (index, chr) in enumerate(s))):
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 main()

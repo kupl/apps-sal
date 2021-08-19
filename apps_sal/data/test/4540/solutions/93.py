@@ -1,7 +1,6 @@
 def main():
     n = int(input())
     As = [0] + list(map(int, input().split())) + [0]
-
     cumsum = [0] * (n + 1)
     for i in range(1, n + 2):
         cumsum[i - 1] = abs(As[i] - As[i - 1])

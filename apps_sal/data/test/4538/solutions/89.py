@@ -1,10 +1,9 @@
 import math
-
-N, D = map(int, input().split())
+(N, D) = map(int, input().split())
 X = []
 Y = []
 for i in range(N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     X.append(x)
     Y.append(y)
 ans = 0

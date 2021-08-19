@@ -5,7 +5,6 @@ A.sort()
 a = 0
 b = 0
 c = 1
-
 for i in range(N - 1):
     if A[i] == A[i + 1]:
         a += 1
@@ -38,7 +37,6 @@ for i in range(N - 1):
         a = 1
         b = 1
         c = 1
-
 if ans < a:
     ans = a
 if ans < b:

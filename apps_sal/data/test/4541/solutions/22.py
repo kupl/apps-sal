@@ -1,7 +1,6 @@
 C = input()
-vowel = ["a", "i", "u", "e", "o"]
-
+vowel = ['a', 'i', 'u', 'e', 'o']
 if C in vowel:
-    print("vowel")
+    print('vowel')
 else:
-    print("consonant")
+    print('consonant')

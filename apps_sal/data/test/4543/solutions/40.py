@@ -1,7 +1,7 @@
 import math
-a, b = input().split()
+(a, b) = input().split()
 q = int(a + b)
 if math.sqrt(q) // 1 == math.sqrt(q):
-    print("Yes")
+    print('Yes')
 else:
     print('No')

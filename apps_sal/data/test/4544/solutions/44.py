@@ -1,5 +1,4 @@
 import collections
-
 N = int(input())
 List = list(map(int, input().split()))
 sumList = []

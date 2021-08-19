@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 ma = max(a, b, c)
 rem = a + b + c - ma
 if ma == rem:

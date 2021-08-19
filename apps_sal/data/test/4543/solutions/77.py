@@ -1,8 +1,7 @@
 import math
-a, b = map(str, input().split())
+(a, b) = map(str, input().split())
 A = int(a + b)
-
 if math.sqrt(A).is_integer() == True:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

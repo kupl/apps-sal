@@ -1,6 +1,5 @@
 N = str(input())
-
-if "9" in N:
-    print("Yes")
+if '9' in N:
+    print('Yes')
 else:
-    print("No")
+    print('No')

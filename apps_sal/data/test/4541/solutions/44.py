@@ -1,5 +1,4 @@
 a = input()
-
 if a in 'aiueo':
     print('vowel')
 else:

@@ -13,4 +13,4 @@ for i in range(len(ryokinjo)):
         count1 += 1
     if ryokinjo[i] > X:
         count2 += 1
-print((min([count1, count2])))
+print(min([count1, count2]))

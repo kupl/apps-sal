@@ -1,9 +1,7 @@
 from math import inf
-
 n = int(input())
 f = [list(map(int, input().split())) for _ in range(n)]
 p = [list(map(int, input().split())) for _ in range(n)]
-
 ans = -inf
 for bit in range(1, 1024):
     res = 0

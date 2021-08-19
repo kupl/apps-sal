@@ -1,4 +1,4 @@
-n, m, x = map(int, input().split())
+(n, m, x) = map(int, input().split())
 a = list(map(int, input().split()))
 data = [0] * (n + 1)
 cost_1 = 0

@@ -1,5 +1,4 @@
-a, b, c = map(int, input().split())
-
+(a, b, c) = map(int, input().split())
 li = sorted([a, b, c])
 ans = 'No'
 if sum(li[:2]) == li[2]:

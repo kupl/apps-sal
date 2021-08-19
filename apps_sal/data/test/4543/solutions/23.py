@@ -1,6 +1,5 @@
 import math
-a, b = map(str, input().split())
-
+(a, b) = map(str, input().split())
 s = a + b
 s = int(s)
 r = math.sqrt(s)

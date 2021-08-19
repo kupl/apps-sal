@@ -1,8 +1,9 @@
-n, m, x = list(map(int, input().split()))
+(n, m, x) = list(map(int, input().split()))
 am = list(map(int, input().split()))
 
 
 class Solution:
+
     def __init__(self, n, m, x, am):
         self.n = n
         self.m = m
@@ -17,7 +18,7 @@ class Solution:
 
     def answer(self):
         list_n = self.__make_list()
-        print((min(sum(list_n[:self.x - 1]), sum(list_n[x - 1:]))))
+        print(min(sum(list_n[:self.x - 1]), sum(list_n[x - 1:])))
 
 
 conditions = Solution(n, m, x, am)

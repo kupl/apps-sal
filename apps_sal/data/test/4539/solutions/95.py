@@ -1,11 +1,9 @@
 def is_harshad_number(x: int) -> bool:
     dividend = x
     sum_of_digits = 0
-
     for _ in range(len(str(x))):
-        x, mod = divmod(x, 10)
+        (x, mod) = divmod(x, 10)
         sum_of_digits += mod
-
     return dividend % sum_of_digits == 0
 
 

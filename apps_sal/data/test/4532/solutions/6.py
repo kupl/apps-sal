@@ -7,7 +7,7 @@ def inp():
 
 
 for _ in range(int(inp())):
-    n, k = list(map(int, inp().split()))
+    (n, k) = list(map(int, inp().split()))
     a = list(map(int, inp().split()))
     d = {}
     f = 0

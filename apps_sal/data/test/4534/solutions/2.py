@@ -1,4 +1,5 @@
 class Solution:
+
     def getRow(self, rowIndex):
         """
         :type rowIndex: int
@@ -12,5 +13,4 @@ class Solution:
                     res[j] = res[j] + res[j - 1]
                 else:
                     res[j] = 1
-
         return res

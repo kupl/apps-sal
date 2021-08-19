@@ -8,7 +8,7 @@ for i in range(N):
     lsP.append(list(map(int, input().split())))
 bita = list(product(range(2), repeat=10))
 bita.pop(0)
-ans = -10**10
+ans = -10 ** 10
 for bit in bita:
     count = [0 for i in range(N + 1)]
     for i in range(10):

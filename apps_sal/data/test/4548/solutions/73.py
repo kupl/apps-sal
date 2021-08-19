@@ -1,4 +1,4 @@
-N, M, X = list(map(int, input().split()))
+(N, M, X) = list(map(int, input().split()))
 A = list(map(int, list(input().split())))
 countA = 0
 countB = 0

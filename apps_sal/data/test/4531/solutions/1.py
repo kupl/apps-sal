@@ -6,12 +6,10 @@ import threading
 
 def work():
     sys.setrecursionlimit(1 << 18)
-
     n = int(input())
     a = [0] + list(map(int, input().split()))
     tota = sum(a)
     adj = [[] for _ in range(n + 1)]
-
     totsz = [0] * (n + 1)
     totw = [0] * (n + 1)
 
@@ -30,12 +28,10 @@ def work():
             if v == p:
                 continue
             dfs2(v, u, totw[u] - totw[v] - totsz[v] + tota - totsz[v])
-
     for _ in range(n - 1):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         adj[u].append(v)
         adj[v].append(u)
-
     dfs(1, 0)
     dfs2(1, 0, 0)
     print(max(totw))

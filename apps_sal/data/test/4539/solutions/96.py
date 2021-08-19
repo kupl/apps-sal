@@ -1,4 +1,3 @@
-
 def harshad(n):
     if n % sum(map(int, list(str(n)))) == 0:
         return True

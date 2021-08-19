@@ -1,8 +1,8 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 
 
 def __starting_point():
-    if (b - a) == (c - b):
+    if b - a == c - b:
         print('YES')
     else:
         print('NO')

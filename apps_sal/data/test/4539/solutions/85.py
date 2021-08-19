@@ -4,4 +4,4 @@ def d(num):
 
 
 n = int(input())
-print("Yes" if n % d(n) == 0 else "No")
+print('Yes' if n % d(n) == 0 else 'No')

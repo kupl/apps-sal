@@ -1,7 +1,6 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 S = input()
-
-if S.find("-") == S.rfind("-") == A:
-    print("Yes")
+if S.find('-') == S.rfind('-') == A:
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -6,9 +6,8 @@ for i in range(n):
 p = []
 for _ in range(n):
     p.append(list(map(int, input().split())))
-
 schejule_list = list(product([0, 1], repeat=10))
-ans = - float("inf")
+ans = -float('inf')
 for schedule in schejule_list:
     if schedule == (0, 0, 0, 0, 0, 0, 0, 0, 0, 0):
         continue

@@ -6,4 +6,4 @@ for x in a:
     count[x + 1] += 1
     if x > 0:
         count[x - 1] += 1
-print((max(count)))
+print(max(count))

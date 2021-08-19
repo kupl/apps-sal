@@ -33,12 +33,12 @@ for i in range(one()):
             c[0] -= 1
         r += 1
         if (c[0], c[1]) in d:
-            if m > r - d[(c[0], c[1])] + 1:
-                ans = (d[(c[0], c[1])] + 1, r)
-                m = r - d[(c[0], c[1])] + 1
-            d[(c[0], c[1])] = r
+            if m > r - d[c[0], c[1]] + 1:
+                ans = (d[c[0], c[1]] + 1, r)
+                m = r - d[c[0], c[1]] + 1
+            d[c[0], c[1]] = r
         else:
-            d[(c[0], c[1])] = r
+            d[c[0], c[1]] = r
     if not ans:
         print(-1)
     else:
