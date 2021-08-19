@@ -1,10 +1,11 @@
 class Solution:
+
     def detectCapitalUse(self, word):
         """
         :type word: str
         :rtype: bool
         """
-        for i, w in enumerate(word):
+        for (i, w) in enumerate(word):
             is_cap = ord(w) < ord('a')
             if i == 0:
                 if is_cap:
@@ -16,7 +17,7 @@ class Solution:
             else:
                 if not first_cap and is_cap:
                     return False
-                if keep_cap and not is_cap:
+                if keep_cap and (not is_cap):
                     return False
                 if not keep_cap and i > 1 and is_cap:
                     return False

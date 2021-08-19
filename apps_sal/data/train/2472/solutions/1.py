@@ -1,4 +1,5 @@
 class Solution:
+
     def checkRecord(self, s):
         twoL = 0
         twoA = 0

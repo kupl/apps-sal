@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums):
         result = 0
         altnums = []

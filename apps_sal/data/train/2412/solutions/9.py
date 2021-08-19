@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, string: str) -> str:
         stack = deque()
         stack.append(string[0])
@@ -14,4 +15,4 @@ class Solution:
         s = ''
         for i in range(len(stack)):
             s += stack[i]
-        return (s)
+        return s

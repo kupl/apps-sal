@@ -1,4 +1,5 @@
 class Solution:
+
     def checkIfExist(self, arr: List[int]) -> bool:
         arr.sort()
         for k in range(len(arr) - 1):

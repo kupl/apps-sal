@@ -1,4 +1,5 @@
 class Solution:
+
     def validMountainArray(self, A: List[int]) -> bool:
         inflection = None
         if len(A) > 3:
@@ -6,12 +7,9 @@ class Solution:
                 if inflection is not None:
                     if A[i] < A[i + 1]:
                         return False
-                else:
-                    if A[i] > A[i + 1]:
-                        inflection = i
-
+                elif A[i] > A[i + 1]:
+                    inflection = i
             print(inflection, A[0:inflection], A[inflection:])
-
             if inflection is not None:
                 if len(A[0:inflection]) and len(A[inflection:]):
                     if len(set(A[0:inflection])) + len(set(A[inflection:])) == len(A):

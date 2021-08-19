@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, ransomNote, magazine):
         a = set(ransomNote)
         b = set(magazine)

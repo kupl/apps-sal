@@ -1,4 +1,5 @@
 class Solution:
+
     def validMountainArray(self, A: List[int]) -> bool:
         N = len(A)
         if N < 3:
@@ -19,7 +20,7 @@ class Solution:
                 print(i)
             else:
                 break
-        if(i == N - 1):
+        if i == N - 1:
             return True
         else:
             print('1111')

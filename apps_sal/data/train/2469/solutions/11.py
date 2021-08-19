@@ -1,4 +1,5 @@
 class Solution:
+
     def checkIfExist(self, arr: List[int]) -> bool:
         seen = set()
         for e in arr:

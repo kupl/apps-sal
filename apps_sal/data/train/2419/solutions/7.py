@@ -1,4 +1,5 @@
 class Solution:
+
     def repeatedStringMatch(self, A, B):
         """
         :type A: str
@@ -8,12 +9,12 @@ class Solution:
         if A == B or B in A:
             return 1
         if A not in B:
-            if B not in (A + A):
+            if B not in A + A:
                 return -1
             else:
                 return 2
         else:
-            count, i = 1, B.index(A)
+            (count, i) = (1, B.index(A))
             if i != 0:
                 if B[:i] != A[-i:]:
                     return -1

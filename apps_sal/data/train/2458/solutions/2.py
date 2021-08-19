@@ -1,4 +1,5 @@
 class Solution:
+
     def balancedStringSplit(self, s: str) -> int:
         r = 0
         l = 0
@@ -11,5 +12,5 @@ class Solution:
             if r > 0 and l > 0:
                 if r == l:
                     result += 1
-                    r, l = 0, 0
+                    (r, l) = (0, 0)
         return result

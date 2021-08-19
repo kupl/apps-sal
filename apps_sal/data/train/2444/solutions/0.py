@@ -1,4 +1,5 @@
 class Solution:
+
     def binaryGap(self, n: int) -> int:
         maxDist = 0
         currDist = 0

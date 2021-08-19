@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         cur = list(S)
         while True:
@@ -13,5 +14,4 @@ class Solution:
             if len(next_l) == len(cur):
                 return ''.join(next_l)
             cur = next_l
-
         return ''

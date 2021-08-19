@@ -1,10 +1,9 @@
 class Solution:
+
     def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
         set1 = {}
-
         sum1 = 0
         for i in dominoes:
-
             ri = list(reversed(i))
             i = tuple(i)
             ri = tuple(ri)

@@ -1,7 +1,8 @@
 class Solution:
+
     def specialArray(self, nums: List[int]) -> int:
         freq = collections.Counter()
-        i, cnt = 1, 0
+        (i, cnt) = (1, 0)
         for num in nums:
             freq[num] += 1
             if num >= i:

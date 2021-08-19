@@ -1,4 +1,5 @@
 class Solution:
+
     def containsDuplicate(self, nums):
         """
         :type nums: List[int]
@@ -10,7 +11,7 @@ class Solution:
                 n_map[n] += 1
             else:
                 n_map[n] = 1
-        for n, count in n_map.items():
+        for (n, count) in n_map.items():
             if count != 1:
                 return True
         return False

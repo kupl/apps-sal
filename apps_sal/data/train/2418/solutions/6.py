@@ -1,10 +1,10 @@
 class Solution:
+
     def containsDuplicate(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
-
         diction = {}
         flag = 0
         for number in nums:

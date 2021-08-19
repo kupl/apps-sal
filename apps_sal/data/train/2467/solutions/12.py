@@ -1,4 +1,5 @@
 class Solution:
+
     def specialArray(self, nums: List[int]) -> int:
         cache = set()
         for x in range(len(nums), 0, -1):

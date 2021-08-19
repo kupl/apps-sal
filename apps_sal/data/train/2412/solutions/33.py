@@ -1,11 +1,10 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         if len(S) <= 1:
             return S
-
         duplicateFound = True
         output = []
-
         while duplicateFound:
             duplicateFound = False
             i = 0
@@ -14,11 +13,8 @@ class Solution:
                     duplicateFound = True
                     i += 2
                     continue
-
                 output.append(S[i])
                 i += 1
-
             S = output
             output = []
-
         return ''.join(S)

@@ -1,4 +1,5 @@
 class Solution(object):
+
     def strStr(self, haystack, needle):
         """
         :type haystack: str
@@ -10,11 +11,10 @@ class Solution(object):
                 return 0
             else:
                 return -1
-
         for i in range(0, len(haystack)):
             k = i
             j = 0
-            while j < len(needle) and k < len(haystack) and haystack[k] == needle[j]:
+            while j < len(needle) and k < len(haystack) and (haystack[k] == needle[j]):
                 j += 1
                 k += 1
             if j == len(needle):

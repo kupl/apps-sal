@@ -1,4 +1,5 @@
 class Solution:
+
     def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
         dominoes_dict = {}
         for i in dominoes:
@@ -7,5 +8,4 @@ class Solution:
                 dominoes_dict[j] = 1
             else:
                 dominoes_dict[j] += 1
-
-        return sum([int((n * (n - 1)) / 2) for n in list(dominoes_dict.values()) if n > 1])
+        return sum([int(n * (n - 1) / 2) for n in list(dominoes_dict.values()) if n > 1])

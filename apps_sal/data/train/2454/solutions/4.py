@@ -1,13 +1,11 @@
 class Solution:
+
     def convertToTitle(self, n):
-        res = ""
+        res = ''
         while n != 0:
             tmp = (n - 1) % 26
-            c = chr(ord("A") + tmp)
+            c = chr(ord('A') + tmp)
             res = c + res
             n = (n - 1) // 26
         return res
-        """
-         :type n: int
-         :rtype: str
-         """
+        '\n         :type n: int\n         :rtype: str\n         '

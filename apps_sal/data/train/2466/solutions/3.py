@@ -1,4 +1,5 @@
 class Solution:
+
     def diagonalSum(self, mat: List[List[int]]) -> int:
         ans = 0
         n = len(mat[0])

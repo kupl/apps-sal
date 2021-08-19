@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         ij = defaultdict(set)
         jk = defaultdict(set)
@@ -20,5 +21,4 @@ class Solution:
                 for k in jk[j]:
                     if k in ik[i]:
                         ans += 1
-
         return ans

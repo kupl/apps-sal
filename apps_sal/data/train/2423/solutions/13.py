@@ -1,4 +1,5 @@
 class Solution:
+
     def minStartValue(self, nums: List[int]) -> int:
         for i in range(1, 1000001):
             flag = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def divisorGame(self, N: int) -> bool:
         memo = [None] * (N + 1)
         ans = self.canWin(N, memo)

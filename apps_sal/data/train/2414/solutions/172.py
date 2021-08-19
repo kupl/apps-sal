@@ -1,4 +1,5 @@
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         count = 0
         for i in range(len(arr) - 2):
@@ -7,7 +8,6 @@ class Solution:
                     goodA = abs(arr[i] - arr[j]) <= a
                     goodB = abs(arr[j] - arr[k]) <= b
                     goodC = abs(arr[i] - arr[k]) <= c
-
                     if all((goodA, goodB, goodC)):
                         count += 1
         return count

@@ -1,7 +1,8 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         found = True
-        while(found):
+        while found:
             found = False
             for i in range(len(S) - 1):
                 if i >= len(S) - 1:

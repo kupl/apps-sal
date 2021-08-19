@@ -1,4 +1,5 @@
 class Solution:
+
     def validMountainArray(self, A: List[int]) -> bool:
         strict_inc = False
         strict_dec = False
@@ -8,7 +9,6 @@ class Solution:
                     if strict_dec:
                         return False
                     strict_inc = True
-
                 elif A[i] < A[i - 1]:
                     strict_dec = True
                 else:

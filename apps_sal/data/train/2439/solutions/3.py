@@ -1,4 +1,5 @@
 class Solution:
+
     def strStr(self, haystack, needle):
         """
         :type haystack: str
@@ -7,7 +8,6 @@ class Solution:
         """
         if not needle:
             return 0
-
         for i in range(0, len(haystack) - len(needle) + 1):
             match = True
             for j in range(len(needle)):
@@ -16,5 +16,4 @@ class Solution:
                     break
             if match:
                 return i
-
         return -1

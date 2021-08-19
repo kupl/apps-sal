@@ -1,7 +1,8 @@
 class Solution:
+
     def repeatedStringMatch(self, A, B):
         k = int(len(B) / len(A))
-        m = ""
+        m = ''
         h = A + A[0]
         for i in range(len(B) - 1):
             if B[i:i + 2] not in h:

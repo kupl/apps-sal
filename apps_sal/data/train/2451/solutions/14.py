@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, ransomNote, magazine):
         """
         :type ransomNote: str
@@ -17,7 +18,7 @@ class Solution:
                 m_map[char] += 1
             else:
                 m_map[char] = 1
-        for char, count in r_map.items():
+        for (char, count) in r_map.items():
             if char not in m_map:
                 return False
             if count > m_map[char]:

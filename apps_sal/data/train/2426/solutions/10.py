@@ -1,6 +1,7 @@
 class Solution:
+
     def smallestRangeI(self, A: List[int], K: int) -> int:
-        a, b = max(A), min(A)
+        (a, b) = (max(A), min(A))
         diff = a - b
         coverage = 2 * K
         if diff <= coverage:

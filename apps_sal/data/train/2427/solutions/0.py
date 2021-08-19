@@ -1,4 +1,5 @@
 class Solution:
+
     def findMaxConsecutiveOnes(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         if nums == []:
             return 0
-
         count = 0
         countMax = 0
         for ele in nums:
@@ -16,8 +16,6 @@ class Solution:
                 if count > countMax:
                     countMax = count
                 count = 0
-
         if count > countMax:
             countMax = count
-
         return countMax

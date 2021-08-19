@@ -1,4 +1,5 @@
 class Solution:
+
     def isOneBitCharacter(self, bits):
         """
         :type bits: List[int]
@@ -8,12 +9,11 @@ class Solution:
             return False
         n = len(bits)
         i = 0
-        while(i < n):
+        while i < n:
             if i == n - 1:
                 return True
+            elif bits[i] == 1:
+                i += 2
             else:
-                if bits[i] == 1:
-                    i += 2
-                else:
-                    i += 1
+                i += 1
         return False

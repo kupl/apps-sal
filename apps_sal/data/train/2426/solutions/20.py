@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRangeI(self, A: List[int], K: int) -> int:
         mx = max(A)
         mi = min(A)

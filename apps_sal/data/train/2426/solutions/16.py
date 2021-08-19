@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRangeI(self, A: List[int], K: int) -> int:
         max_value = max(A) - K
         min_value = min(A) + K

@@ -1,4 +1,5 @@
 class Solution:
+
     def licenseKeyFormatting(self, S, K):
         """
         :type S: str

@@ -1,8 +1,8 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
         for i in range(len(A)):
             self.convertCharsToIntArray(i, A)
-
         counts = 0
         for i in range(len(A[0])):
             checker = False

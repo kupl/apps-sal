@@ -1,4 +1,5 @@
 class Solution:
+
     def containsPattern(self, arr: List[int], m: int, k: int) -> bool:
         L = len(arr)
         cnt = 0

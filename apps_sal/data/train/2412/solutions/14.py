@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         temp = len(S) - 1
         temp1 = len(S) - 1

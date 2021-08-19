@@ -1,4 +1,5 @@
 class Solution:
+
     def sortString(self, s: str) -> str:
         from collections import Counter
         counts = Counter(s)

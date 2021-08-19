@@ -1,4 +1,5 @@
 class Solution:
+
     def countSegments(self, s):
         """
         :type s: str
@@ -8,14 +9,13 @@ class Solution:
         finished = True
         for c in s:
             if finished:
-                if c is " ":
+                if c is ' ':
                     continue
                 else:
                     finished = False
                     count += 1
+            elif c is ' ':
+                finished = True
             else:
-                if c is " ":
-                    finished = True
-                else:
-                    continue
+                continue
         return count

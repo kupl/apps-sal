@@ -1,4 +1,5 @@
 class Solution:
+
     def divisorGame(self, N: int) -> bool:
         m = 0
         if N > 1:

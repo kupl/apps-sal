@@ -1,10 +1,11 @@
 class Solution:
+
     def sortString(self, s: str) -> str:
         output = []
         total = sorted(list(s))
         direction = 1
-        while(len(total) > 0):
-            if(direction == 1):
+        while len(total) > 0:
+            if direction == 1:
                 selection = sorted(set(total))
             else:
                 selection = sorted(set(total), reverse=True)

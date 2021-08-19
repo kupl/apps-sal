@@ -1,6 +1,6 @@
 class Solution:
-    def sortString(self, s: str) -> str:
 
+    def sortString(self, s: str) -> str:
         ss = sorted(list(dict.fromkeys(s)))
         ssr = ss[::-1]
         dic = {}
@@ -10,7 +10,6 @@ class Solution:
         for i in s:
             dic[i] += 1
         for i in range(len(s)):
-
             for j in ss:
                 if dic[j] > 0:
                     final_s += j

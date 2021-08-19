@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         mularray = []
         for i in range(len(nums) - 1):

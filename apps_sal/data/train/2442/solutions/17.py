@@ -1,8 +1,8 @@
 class Solution:
+
     def sortString(self, s: str) -> str:
         output = []
         temp = list(s)
-
         while len(temp) > 0:
             temp.sort()
             output.append(temp[0])
@@ -12,7 +12,6 @@ class Solution:
                     output.append(e)
                     temp[temp.index(e)] = ''
             temp = [e for e in temp if e]
-
             if len(temp) == 0:
                 break
             temp.reverse()
@@ -23,7 +22,5 @@ class Solution:
                     output.append(e)
                     temp[temp.index(e)] = ''
             temp = [e for e in temp if e]
-
             print(output)
-
         return ''.join(output)

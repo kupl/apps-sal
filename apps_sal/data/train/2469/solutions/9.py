@@ -1,4 +1,5 @@
 class Solution:
+
     def checkIfExist(self, arr: List[int]) -> bool:
         if len(arr) == 0 or len(arr) == 1:
             return False

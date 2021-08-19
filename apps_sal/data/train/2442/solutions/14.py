@@ -1,4 +1,5 @@
 class Solution:
+
     def sortString(self, s: str) -> str:
         x = sorted(s)
         res = ''

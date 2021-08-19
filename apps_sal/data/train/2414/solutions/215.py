@@ -1,4 +1,5 @@
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         mat = [[abs(arr[i] - arr[j]) for j in range(len(arr))] for i in range(len(arr))]
         ans = 0

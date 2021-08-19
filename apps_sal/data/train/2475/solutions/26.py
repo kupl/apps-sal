@@ -1,4 +1,5 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
         indiciesToRemove = []
         columns = len(A[0])
@@ -10,5 +11,4 @@ class Solution:
                     indiciesToRemove.append(col)
                     break
                 previous = A[row][col]
-
         return len(indiciesToRemove)

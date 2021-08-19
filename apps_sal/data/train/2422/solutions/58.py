@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         k = nums[0]
         n = [i for i in range(2)]
@@ -8,5 +9,5 @@ class Solution:
                     n[0] = nums[j]
                     n[1] = nums[i]
                     k = nums[i] * nums[j]
-        m = ((n[0] - 1) * (n[1] - 1))
+        m = (n[0] - 1) * (n[1] - 1)
         return m

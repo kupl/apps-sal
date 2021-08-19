@@ -1,4 +1,5 @@
 class Solution:
+
     def strStr(self, haystack, needle):
         """
         :type haystack: str
@@ -9,13 +10,12 @@ class Solution:
             return -1
         if needle == '':
             return 0
-
         for i in range(len(haystack)):
             if haystack[i] == needle[0]:
                 res = True
                 j = 1
                 try:
-                    while (j < len(needle)):
+                    while j < len(needle):
                         if haystack[i + j] == needle[j]:
                             j += 1
                         else:

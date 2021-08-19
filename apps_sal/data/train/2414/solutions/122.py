@@ -1,8 +1,8 @@
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         if not arr:
             return 0
-
         result = 0
         for i in range(len(arr) - 2):
             for j in range(i + 1, len(arr) - 1):

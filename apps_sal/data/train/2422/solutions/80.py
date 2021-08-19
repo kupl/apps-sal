@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         highest = (nums[0] - 1) * (nums[1] - 1)
         c = 0
@@ -7,5 +8,4 @@ class Solution:
                 c = (nums[i] - 1) * (nums[j] - 1)
                 if c >= highest:
                     highest = c
-
         return highest

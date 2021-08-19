@@ -5,27 +5,23 @@ class Solution:
 
     def impl(self, arr, i, incr):
         self.f = incr
-        if (i + 1 >= len(arr)):
+        if i + 1 >= len(arr):
             return True
-
-        if (arr[i + 1] > arr[i] and not incr):
+        if arr[i + 1] > arr[i] and (not incr):
             return False
-
-        elif (arr[i + 1] < arr[i] and incr):
+        elif arr[i + 1] < arr[i] and incr:
             incr = False
-
-        elif(arr[i + 1] == arr[i]):
+        elif arr[i + 1] == arr[i]:
             return False
-
         return self.impl(arr, i + 1, incr)
 
     def validMountainArray(self, A) -> bool:
-        if (A == None or len(A) <= 2):
+        if A == None or len(A) <= 2:
             return False
-        if(A[1] < A[0]):
+        if A[1] < A[0]:
             return False
         self.f = True
         result = self.impl(A, 0, True)
-        if(self.f):
+        if self.f:
             return False
         return result

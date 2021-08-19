@@ -1,10 +1,11 @@
 class Solution:
+
     def convertToBase7(self, num):
         """
         :type num: int
         :rtype: str
         """
-        a = ""
+        a = ''
         n = False
         if num == 0:
             return '0'
@@ -14,7 +15,6 @@ class Solution:
         while num != 0:
             a = str(num % 7) + a
             num //= 7
-
         if n == True:
-            return "-" + a
+            return '-' + a
         return a

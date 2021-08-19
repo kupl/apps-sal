@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         stack = S[0]
         for i in range(1, len(S)):
@@ -8,5 +9,4 @@ class Solution:
                 stack += S[i]
             elif stack:
                 stack = stack[:-1]
-
         return stack

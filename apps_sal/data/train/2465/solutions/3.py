@@ -1,4 +1,5 @@
 class Solution:
+
     def divisorGame(self, N: int) -> bool:
         memo = set()
 
@@ -8,8 +9,7 @@ class Solution:
             if factor in memo:
                 return False
             player = 'A' if player == 'B' else 'B'
-
-            for i in range(1, 1 + (factor // 2)):
+            for i in range(1, 1 + factor // 2):
                 if factor % i == 0:
                     memo.add(factor)
                     if check(factor - i, player):

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         second_largest = 0
         largest = 0
@@ -9,7 +10,7 @@ class Solution:
                 if product > max_product:
                     max_product = product
                     if nums[index1] > nums[index2]:
-                        largest, second_largest = nums[index1], nums[index2]
+                        (largest, second_largest) = (nums[index1], nums[index2])
                     else:
-                        largest, second_largest = nums[index2], nums[index1]
-        return ((largest - 1) * (second_largest - 1))
+                        (largest, second_largest) = (nums[index2], nums[index1])
+        return (largest - 1) * (second_largest - 1)

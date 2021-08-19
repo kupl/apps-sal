@@ -1,4 +1,5 @@
 class Solution:
+
     def balancedStringSplit(self, s: str) -> int:
         l_cnt = r_cnt = 0
         output = 0

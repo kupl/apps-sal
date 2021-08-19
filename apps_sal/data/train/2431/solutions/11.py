@@ -1,4 +1,5 @@
 class Solution:
+
     def findPairs(self, nums, k):
         """
         :type nums: List[int]
@@ -7,11 +8,8 @@ class Solution:
         """
         if k < 0:
             return 0
-
         pairs = {}
-
         cnt = 0
-
         for a in nums:
             if not a in pairs:
                 if a + k in pairs and a not in pairs[a + k]:
@@ -30,5 +28,4 @@ class Solution:
                     if a - k in pairs and a not in pairs[a - k]:
                         pairs[a - k].append(a)
                         cnt += 1
-
         return cnt

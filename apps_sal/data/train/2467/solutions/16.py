@@ -1,4 +1,5 @@
 class Solution:
+
     def specialArray(self, nums: List[int]) -> int:
         nums.sort()
         for i in range(0, nums[-1] + 1):

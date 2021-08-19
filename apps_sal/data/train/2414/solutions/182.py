@@ -1,4 +1,5 @@
 class Solution:
+
     def isGood(self, ai, aj, ak, a, b, c, length) -> bool:
         if not abs(ai - aj) <= a:
             return False

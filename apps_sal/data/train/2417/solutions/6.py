@@ -1,4 +1,5 @@
 class Solution:
+
     def convertToBase7(self, num):
         """
         :type num: int
@@ -15,9 +16,9 @@ class Solution:
             c += 1
             n //= 7
         for i in range(c, 0, -1):
-            t = num // (7 ** i)
+            t = num // 7 ** i
             if t > 0:
-                num -= (7 ** i) * t
+                num -= 7 ** i * t
                 r += str(t)
             else:
                 r += '0'

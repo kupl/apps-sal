@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseVowels(self, s):
         """
         :type s: str
@@ -12,7 +13,7 @@ class Solution:
         res = [s[0]] * len(s)
         while left < right:
             if s[left] in vowels and s[right] in vowels:
-                res[left], res[right] = s[right], s[left]
+                (res[left], res[right]) = (s[right], s[left])
                 left += 1
                 right -= 1
             else:

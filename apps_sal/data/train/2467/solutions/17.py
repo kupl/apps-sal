@@ -1,4 +1,5 @@
 class Solution:
+
     def specialArray(self, nums: List[int]) -> int:
         x = None
         for i in range(1, len(nums) + 1):

@@ -1,4 +1,5 @@
 class Solution:
+
     def hasAlternatingBits(self, n):
         """
         :type n: int
@@ -9,5 +10,4 @@ class Solution:
         for i in range(0, length - 1):
             if bin1[i] == bin1[i + 1]:
                 return False
-
         return True

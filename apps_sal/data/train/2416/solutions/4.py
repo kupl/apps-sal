@@ -1,4 +1,5 @@
 class Solution:
+
     def isPerfectSquare(self, num):
         """
         :type num: int
@@ -9,5 +10,4 @@ class Solution:
             if i * i == num:
                 return True
             i += 1
-
         return False

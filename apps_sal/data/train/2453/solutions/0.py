@@ -1,4 +1,5 @@
 class Solution:
+
     def isHappy(self, n):
         """
         :type n: int
@@ -9,7 +10,7 @@ class Solution:
             h = 0
             while n > 0:
                 d = n % 10
-                h += (d * d)
+                h += d * d
                 n = n // 10
             if h == 1:
                 return True

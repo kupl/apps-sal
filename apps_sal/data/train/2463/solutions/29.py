@@ -1,6 +1,7 @@
 class Solution:
+
     def validMountainArray(self, A: List[int]) -> bool:
-        i, j = 0, len(A) - 1
+        (i, j) = (0, len(A) - 1)
         while i < j:
             if A[i] < A[i + 1]:
                 i += 1

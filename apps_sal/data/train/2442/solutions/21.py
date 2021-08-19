@@ -1,7 +1,8 @@
 class Solution:
+
     def sortString(self, s: str) -> str:
         from collections import Counter
-        counts, res, asc = Counter(s), [], True
+        (counts, res, asc) = (Counter(s), [], True)
         letters = sorted(set(s))
         while len(res) < len(s):
             for i in range(len(letters)):

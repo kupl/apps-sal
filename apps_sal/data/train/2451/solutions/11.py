@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, ransomNote, magazine):
         """
         :type ransomNote: str
@@ -8,7 +9,6 @@ class Solution:
         a = collections.Counter(ransomNote)
         b = collections.Counter(magazine)
         for let in ransomNote:
-            if(a[let] > b[let]):
+            if a[let] > b[let]:
                 return False
-
         return True

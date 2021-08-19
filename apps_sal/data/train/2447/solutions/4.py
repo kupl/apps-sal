@@ -1,12 +1,12 @@
 class Solution:
+
     def reverseVowels(self, s):
         """
         :type s: str
         :rtype: str
         """
         vowel = ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
-
-        start, end = 0, len(s) - 1
+        (start, end) = (0, len(s) - 1)
         lists = list(s)
         while start < end:
             if lists[start] in vowel:

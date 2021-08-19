@@ -1,4 +1,5 @@
 class Solution:
+
     def isPerfectSquare(self, num):
         """
         :type num: int
@@ -8,9 +9,9 @@ class Solution:
             return False
         n = 100
         n = int(n / 2 + num / 2 / n)
-        while n**2 > num:
+        while n ** 2 > num:
             n = int(n / 2 + num / 2 / n)
-        if n**2 == num:
+        if n ** 2 == num:
             return True
         else:
             return False
