@@ -1,9 +1,9 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         mem = {}
-
         ans = [[0 for i in range(len(nums))] for j in range(2)]
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             times = [0, 0]
             _num = num
             while _num != 0:
@@ -20,7 +20,5 @@ class Solution:
             mem[num] = times
             ans[0][i] = times[0]
             ans[1][i] = times[1]
-
         print(ans)
-
         return sum(ans[0]) + max(ans[1])

@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLongestSubstring(self, s):
         """
         :type s: str
@@ -19,5 +20,4 @@ class Solution:
                 i += 1
                 if count > maxcount:
                     maxcount = count
-
         return maxcount

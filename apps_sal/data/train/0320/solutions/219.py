@@ -1,8 +1,8 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         ones = 0
         two = 0
-
         for i in nums:
             mul = 0
             while i:

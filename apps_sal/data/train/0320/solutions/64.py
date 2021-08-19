@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         n_add = 0
         n_mul = 0

@@ -1,9 +1,10 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         op = 0
         while max(nums) != 0:
             allEven = True
-            for i, n in enumerate(nums):
+            for (i, n) in enumerate(nums):
                 if n % 2 == 1:
                     nums[i] -= 1
                     op += 1

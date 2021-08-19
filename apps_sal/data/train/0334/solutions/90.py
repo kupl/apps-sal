@@ -2,10 +2,11 @@ from heapq import nsmallest
 
 
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         if len(s) < 2:
             return 0
-        left, right = 0, 1
+        (left, right) = (0, 1)
         res = 0
         window = dict()
         while right < len(s):

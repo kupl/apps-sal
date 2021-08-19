@@ -1,6 +1,6 @@
 class Solution:
-    def minCost(self, s: str, cost: List[int]) -> int:
 
+    def minCost(self, s: str, cost: List[int]) -> int:
         n = len(s)
         if n == 1:
             return 0
@@ -12,9 +12,8 @@ class Solution:
                 end += 1
             splits.append((start, end - 1))
             start = end
-
         answer = 0
-        for start, end in splits:
+        for (start, end) in splits:
             if start == end:
                 continue
             else:

@@ -1,8 +1,8 @@
 class Solution:
-    def stoneGameIII(self, arr: List[int]) -> str:
-        ln, dp = len(arr), [float('-inf') for _ in range(len(arr))]
-        dp.append(0)
 
+    def stoneGameIII(self, arr: List[int]) -> str:
+        (ln, dp) = (len(arr), [float('-inf') for _ in range(len(arr))])
+        dp.append(0)
         for i in range(ln - 1, -1, -1):
             sm = 0
             for j in range(i, min(ln, i + 3)):

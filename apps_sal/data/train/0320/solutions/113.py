@@ -1,8 +1,9 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        moves, ndone = 0, len(nums) - nums.count(0)
+        (moves, ndone) = (0, len(nums) - nums.count(0))
         while ndone:
-            for i, num in enumerate(nums):
+            for (i, num) in enumerate(nums):
                 if num % 2 == 1:
                     moves += 1
                     nums[i] -= 1

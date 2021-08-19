@@ -1,12 +1,12 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        odds, even = [], []
+        (odds, even) = ([], [])
         for i in nums:
             if i & 1:
                 odds.append(i)
             elif i != 0:
                 even.append(i)
-
         count = 0
         while odds or even:
             if odds:

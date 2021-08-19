@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperations_1(self, nums: List[int]) -> int:
-        '''        
+        """        
         Instead of trying to go from 0 array to nums,
         go from nums to 0 array, decrement index by 1
         divide all elements by 2 if divisible by 2
@@ -14,24 +15,21 @@ class Solution:
 
         O(3n) inner loop, 32 times outer loop because
         divison by 2 happens frequently which shifts
-        '''
+        """
         ops = 0
-        while not all(n == 0 for n in nums):
-            for i, n in enumerate(nums):
+        while not all((n == 0 for n in nums)):
+            for (i, n) in enumerate(nums):
                 if n % 2 != 0:
                     nums[i] = n - 1
                     ops += 1
-
-            if all(n == 0 for n in nums):
+            if all((n == 0 for n in nums)):
                 break
-
             nums = [n // 2 for n in nums]
             ops += 1
-
         return ops
 
     def minOperations_2(self, nums: List[int]) -> int:
-        '''
+        """
         More efficient way to do this:
 
         Loop through the numbers individually, count
@@ -48,7 +46,7 @@ class Solution:
         twos  4 1 2
 
         5 + max(twos) = 9
-        '''
+        """
         op_1 = 0
         op_2 = 0
         for n in nums:
@@ -60,13 +58,11 @@ class Solution:
                 else:
                     op_2_cur += 1
                     n = n // 2
-
             op_2 = max(op_2, op_2_cur)
-
         return op_1 + op_2
 
     def minOperations(self, nums: List[int]) -> int:
-        '''
+        """
         Bit Manipulation Solution (Most Efficient)
 
         Multiplying by 2 is equivalent to bit shift to left by 1
@@ -114,13 +110,12 @@ class Solution:
           0 0 0 0 0
 
         If index 4 was 0 then result would be all 0's
-        '''
+        """
         op1 = 0
         op2 = 0
         for i in range(31):
             for n in nums:
-                if (n & (1 << i)) != 0:
+                if n & 1 << i != 0:
                     op1 += 1
                     op2 = i
-
         return op1 + op2

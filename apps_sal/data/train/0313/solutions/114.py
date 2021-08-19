@@ -1,6 +1,6 @@
 class Solution:
-    def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
 
+    def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         n = len(bloomDay)
         if n < m * k:
             return -1
@@ -19,10 +19,8 @@ class Solution:
                 else:
                     i = 0
             return False
-
         days = sorted(set(bloomDay))
-
-        lo, hi = 0, len(days) - 1
+        (lo, hi) = (0, len(days) - 1)
         while lo < hi:
             mid = (lo + hi) // 2
             if check(days[mid]):

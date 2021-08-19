@@ -1,9 +1,10 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         maxTwos = 0
         ones = 0
         for num in nums:
-            count, left = self.getCount(num)
+            (count, left) = self.getCount(num)
             maxTwos = max(maxTwos, count)
             ones += left
         return ones + maxTwos
@@ -17,4 +18,4 @@ class Solution:
             odd += num % 2
             num //= 2
             count += 1
-        return count, num + odd
+        return (count, num + odd)

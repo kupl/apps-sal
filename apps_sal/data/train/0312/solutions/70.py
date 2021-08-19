@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         if K == 0:
             return 0
@@ -17,7 +18,7 @@ class Solution:
             A[i] += A[i - 1]
         current_ele = deque()
         current_ele.append((-1, 0))
-        for i, element in enumerate(A):
+        for (i, element) in enumerate(A):
             while current_ele and current_ele[-1][1] >= element:
                 current_ele.pop()
             current_ele.append((i, element))

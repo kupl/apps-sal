@@ -1,11 +1,10 @@
 class Solution:
-    def minCost(self, s: str, cost: List[int]) -> int:
 
+    def minCost(self, s: str, cost: List[int]) -> int:
         s += '~'
 
         def dedup(exp: List[int]):
             return sum(exp) - max(exp)
-
         res = 0
         i = 0
         current = []
@@ -19,5 +18,4 @@ class Solution:
                     res += dedup(current)
                 current = []
             i += 1
-
         return res

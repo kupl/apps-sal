@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         n = len(A)
         prefix_sum = [0 for _ in range(n + 1)]

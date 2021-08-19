@@ -1,4 +1,5 @@
 class Solution:
+
     def angleClock(self, hour: int, minutes: int) -> float:
         hour = hour if hour < 12 else hour - 12
         minute_angle = float(minutes) / 60.0 * 360.0

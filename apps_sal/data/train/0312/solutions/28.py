@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         if max(A) >= K:
             return 1
@@ -8,7 +9,7 @@ class Solution:
             prefix[i] = prefix[i - 1] + A[i - 1]
         res = n + 1
         dq = deque()
-        for y, py in enumerate(prefix):
+        for (y, py) in enumerate(prefix):
             while dq and prefix[dq[-1]] > py:
                 dq.pop()
             while dq and py - prefix[dq[0]] >= K:

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         ans = 0
         count = collections.Counter()
@@ -7,7 +8,7 @@ class Solution:
                 count[n] += 1
         while len(count) > 0:
             newcount = collections.Counter()
-            for k, v in count.items():
+            for (k, v) in count.items():
                 if k % 2 == 0:
                     newcount[k // 2] += v
                 elif k > 1:
@@ -16,6 +17,5 @@ class Solution:
                 else:
                     ans += v
             ans += 1
-
             count = newcount
         return ans - 1

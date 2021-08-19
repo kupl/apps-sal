@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        n, res = len(nums), 0
+        (n, res) = (len(nums), 0)
         mul = [0] * n
         for i in range(n):
             while nums[i] != 0:
@@ -10,5 +11,4 @@ class Solution:
                 else:
                     mul[i] += 1
                     nums[i] //= 2
-
         return res + max(mul)

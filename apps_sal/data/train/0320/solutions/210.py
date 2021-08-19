@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         c = 0
         while True:
@@ -11,7 +12,6 @@ class Solution:
                     sol = False
             if sol:
                 break
-
             c += 1
             nums = [x // 2 for x in nums]
         return c

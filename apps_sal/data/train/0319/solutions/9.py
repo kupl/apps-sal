@@ -1,9 +1,10 @@
 class Solution:
+
     def stoneGameIII(self, A: List[int]) -> str:
         n = len(A)
         dp = [-float('inf')] * n
         A.reverse()
-        for i, x in enumerate(A):
+        for (i, x) in enumerate(A):
             adding = 0
             for j in range(3):
                 if i - j >= 0:

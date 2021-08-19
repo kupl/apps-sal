@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLongestSubstring(self, s):
         """
         :type s: str
@@ -7,7 +8,6 @@ class Solution:
         result = 0
         if len(s) == 0:
             return result
-
         hashmap = {}
         start = 0
         for i in range(len(s)):

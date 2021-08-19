@@ -1,4 +1,5 @@
 class Solution:
+
     def minimumSwap(self, s1: str, s2: str) -> int:
         a = 0
         b = 0
@@ -7,7 +8,6 @@ class Solution:
                 a += 1
             elif s1[i] == 'y' and s2[i] == 'x':
                 b += 1
-
         if a % 2 == 0 and b % 2 == 0:
             return a // 2 + b // 2
         elif a % 2 == 1 and b % 2 == 1:

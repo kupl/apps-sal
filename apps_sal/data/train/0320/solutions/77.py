@@ -1,5 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
+
         def calcOps(num):
             one = 0
             two = 0
@@ -11,7 +13,6 @@ class Solution:
                     num -= 1
                     one += 1
             return [one, two]
-
         one = 0
         two = 0
         for x in nums:

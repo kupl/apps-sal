@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         oneCnt = 0
         pwrCnt = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         max_mul = 0
         total_add = 0
@@ -15,7 +16,7 @@ class Solution:
                 ope_dict[num] = (r[0], r[1] + 1)
             return ope_dict[num]
         for n in nums:
-            add, mul = func(n)
+            (add, mul) = func(n)
             total_add += add
             max_mul = max(max_mul, mul)
         return total_add + max_mul

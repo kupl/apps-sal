@@ -1,9 +1,10 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if len(bloomDay) < m * k:
             return -1
-        mi, ma = min(bloomDay), max(bloomDay)
-        while(mi < ma):
+        (mi, ma) = (min(bloomDay), max(bloomDay))
+        while mi < ma:
             mid = (mi + ma) // 2
             curr = 0
             adj = 0
@@ -21,4 +22,4 @@ class Solution:
                 mi = mid + 1
             else:
                 ma = mid
-        return (mi)
+        return mi

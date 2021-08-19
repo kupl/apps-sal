@@ -1,8 +1,9 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         n = len(bloomDay)
         flowers = collections.defaultdict(list)
-        for idx, day in enumerate(bloomDay):
+        for (idx, day) in enumerate(bloomDay):
             flowers[day].append(idx)
         root = list(range(n))
         num_flowers_left = collections.Counter()

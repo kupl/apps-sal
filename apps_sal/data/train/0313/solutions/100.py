@@ -1,8 +1,10 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        '''
+        """
         binary search
-        '''
+        """
+
         def check(day):
             adjacent = 0
             made = 0
@@ -18,12 +20,9 @@ class Solution:
                 if made >= m:
                     return True
             return False
-
         if len(bloomDay) < m * k:
             return -1
-
         flowers = [False] * len(bloomDay)
-
         l = 1
         r = max(bloomDay)
         while l < r:

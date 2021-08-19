@@ -1,7 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         result = 0
-
         result_num_div = 0
         for i in range(len(nums)):
             num_div = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         op = 0
         while sum(nums) != 0:
@@ -12,5 +13,4 @@ class Solution:
                 op += 1
             else:
                 op += odds
-
         return op

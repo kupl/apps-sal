@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         _min = 0
         for i in range(len(s) - 1):

@@ -1,4 +1,5 @@
 class Solution:
+
     def pow2(self, num):
         addition = 0
         mult = 0
@@ -12,7 +13,7 @@ class Solution:
         return (mult, addition)
 
     def minOperations(self, nums: List[int]) -> int:
-        result, _ = self.pow2(max(nums))
+        (result, _) = self.pow2(max(nums))
         for num in nums:
             if num > 0:
                 result += self.pow2(num)[1]

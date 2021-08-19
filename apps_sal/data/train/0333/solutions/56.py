@@ -1,10 +1,12 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
+
         def BFS(queue):
             seen = [1] * len(arr)
             seen[0] = 0
             while queue:
-                var, level = queue.pop(0)
+                (var, level) = queue.pop(0)
                 if var == len(arr) - 1:
                     return level
                 if seen[var + 1]:
@@ -18,8 +20,7 @@ class Solution:
                         queue.append([i, level + 1])
                         seen[i] = 0
                 d[arr[var]].clear()
-
         d = defaultdict(list)
         for i in range(len(arr) - 1, -1, -1):
             d[arr[i]] += [i]
-        return (BFS([[0, 0]]))
+        return BFS([[0, 0]])

@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, s: List[int]) -> str:
         cost = [0] * (len(s) + 1)
         i = len(s) - 1
@@ -11,7 +12,6 @@ class Solution:
                 ans = max(ans, s[i] + s[i + 1] + s[i + 2] - cost[i + 3])
             cost[i] = ans
             i -= 1
-
         a = cost[0]
         if a > 0:
             return 'Alice'

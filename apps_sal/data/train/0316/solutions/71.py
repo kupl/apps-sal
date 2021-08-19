@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPrefix(self, st: str) -> str:
         a = st
         l = len(a)
@@ -10,10 +11,9 @@ class Solution:
                 leng += 1
                 lps.append(leng)
                 i += 1
+            elif leng > 0:
+                leng = lps[leng - 1]
             else:
-                if leng > 0:
-                    leng = lps[leng - 1]
-                else:
-                    lps.append(0)
-                    i += 1
+                lps.append(0)
+                i += 1
         return st[:lps[-1]]

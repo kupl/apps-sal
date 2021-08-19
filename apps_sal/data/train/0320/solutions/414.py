@@ -1,7 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         c = 0
-
         while len(nums) != 0:
             L = []
             for i in range(len(nums)):
@@ -15,5 +15,4 @@ class Solution:
             if len(L) != 0:
                 c += 1
             nums = L
-
         return c

@@ -1,10 +1,10 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if m * k > len(bloomDay):
             return -1
-
         M = max(bloomDay)
-        lo, hi = 0, M
+        (lo, hi) = (0, M)
 
         def works(h):
             curr = 0
@@ -19,12 +19,10 @@ class Solution:
                         return True
                 else:
                     curr = 0
-
         while hi - lo > 1:
             h = (hi + lo) // 2
             if works(h):
                 hi = h
             else:
                 lo = h
-
         return hi

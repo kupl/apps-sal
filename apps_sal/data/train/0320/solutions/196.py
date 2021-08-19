@@ -1,8 +1,7 @@
 class Solution:
+
     def minOperations(self, a: List[int]) -> int:
-
         ans = 0
-
         while True:
             a.sort(reverse=True)
             for i in range(len(a)):
@@ -18,5 +17,4 @@ class Solution:
                 if a[i] % 2 == 0:
                     a[i] //= 2
             ans += 1
-
         return ans

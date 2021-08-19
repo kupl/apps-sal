@@ -1,17 +1,15 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         low = float('inf')
         high = float('-inf')
         for day in bloomDay:
             low = min(low, day)
             high = max(high, day)
-
         good = set()
-
         i = 0
         while low < high:
-            guess = (low + high) >> 1
-
+            guess = low + high >> 1
             count = 0
             boquets = 0
             for day in bloomDay:
@@ -25,7 +23,6 @@ class Solution:
                 else:
                     count = 0
                 day += 1
-
             if boquets < m:
                 low = guess + 1
             else:
@@ -46,5 +43,4 @@ class Solution:
                     else:
                         count = 0
                     day += 1
-
         return min(good) if good else -1

@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloom_day: List[int], m: int, k: int) -> int:
 
         def bouquets_made(day):
@@ -8,15 +9,12 @@ class Solution:
                     adjacent += 1
                 else:
                     adjacent = 0
-
                 if adjacent == k:
                     total += 1
                     adjacent = 0
-
             return total
-
         min_days = -1
-        lo, hi = 1, max(bloom_day)
+        (lo, hi) = (1, max(bloom_day))
         while lo <= hi:
             mid = (lo + hi) // 2
             if bouquets_made(mid) >= m:
@@ -24,5 +22,4 @@ class Solution:
                 hi = mid - 1
             else:
                 lo = mid + 1
-
         return min_days

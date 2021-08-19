@@ -1,5 +1,5 @@
 class Solution:
-    '''
+    """
     def minOperations(self, nums: List[int]) -> int:
         ans = 0
         while True:
@@ -16,7 +16,7 @@ class Solution:
                     nums[k] //= 2
                 ans += 1
         return ans
-    '''
+    """
 
     def minOperations(self, nums: List[int]) -> int:
         ans = 0

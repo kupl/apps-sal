@@ -1,6 +1,6 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         self.count = 0
 
         def sub(nums):
@@ -24,11 +24,9 @@ class Solution:
                 if n == 0:
                     c += 1
             return c
-
         sub(nums)
         while zeros(nums) < len(nums):
             divide_all(nums)
             self.count += 1
             sub(nums)
-
         return self.count

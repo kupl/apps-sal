@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stones: List[int]) -> str:
         n = len(stones)
         dp = [-math.inf] * (n + 1)

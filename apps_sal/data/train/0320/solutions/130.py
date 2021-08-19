@@ -2,6 +2,7 @@ bin = '{:0b}'.format
 
 
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         maxBitLen = 0
         bitCount = 0

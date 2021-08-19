@@ -2,10 +2,10 @@ from functools import lru_cache
 
 
 class Solution:
+
     def maxSizeSlices(self, w: List[int]) -> int:
         n = len(w)
         k = n // 3
-
         results = [0, 0]
         for offset in range(2):
             cur = [0] * n
@@ -17,5 +17,4 @@ class Solution:
                 prev = cur
                 cur = [0] * n
             results[offset] = prev[-1]
-
         return max(results)

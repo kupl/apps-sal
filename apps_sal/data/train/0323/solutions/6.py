@@ -1,4 +1,5 @@
 class Solution:
+
     def isInterleave(self, s1, s2, s3):
         """
         :type s1: str
@@ -28,5 +29,5 @@ class Solution:
                 f[0][j] = True
         for i in range(1, len(s1) + 1):
             for j in range(1, len(s2) + 1):
-                f[i][j] = (f[i - 1][j] and (s3[i + j - 1] == s1[i - 1])) or ((s3[i + j - 1] == s2[j - 1]) and f[i][j - 1])
+                f[i][j] = f[i - 1][j] and s3[i + j - 1] == s1[i - 1] or (s3[i + j - 1] == s2[j - 1] and f[i][j - 1])
         return f[-1][-1]

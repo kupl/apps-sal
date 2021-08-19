@@ -1,5 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
+
         def proc(nums):
             cnt = 0
             for i in range(len(nums)):
@@ -10,7 +12,6 @@ class Solution:
                 for i in range(len(nums)):
                     nums[i] //= 2
             return max(cnt, 1)
-
         ops = 0
         while sum(nums) > 0:
             ops += proc(nums)

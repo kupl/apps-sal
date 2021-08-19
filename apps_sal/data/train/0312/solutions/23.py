@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         l = 0
         summ = 0

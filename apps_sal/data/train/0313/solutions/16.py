@@ -1,7 +1,9 @@
 class Solution:
+
     def minDays(self, blooms: List[int], m: int, k: int) -> int:
+
         def check(d):
-            bouq, b = 0, 0
+            (bouq, b) = (0, 0)
             for i in range(len(blooms)):
                 if blooms[i] <= d:
                     b += 1
@@ -13,8 +15,7 @@ class Solution:
                     if bouq >= m:
                         return True
             return bouq >= m
-
-        lo, hi = 1, max(blooms)
+        (lo, hi) = (1, max(blooms))
         while lo < hi:
             mid = (hi + lo) // 2
             if not check(mid):

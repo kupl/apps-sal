@@ -1,8 +1,9 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         n = len(arr)
         dic = collections.defaultdict(list)
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             dic[num].append(i)
         queue = [0]
         pos_visited = set([0])

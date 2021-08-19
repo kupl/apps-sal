@@ -10,8 +10,8 @@ class Solution:
                 return 0
             result_choose = self.solve_linear(slices, ind + 2, to_choose - 1)
             result_not_choose = self.solve_linear(slices, ind + 1, to_choose)
-            self.dp[(ind, to_choose)] = max(result_choose + slices[ind], result_not_choose)
-        return self.dp[(ind, to_choose)]
+            self.dp[ind, to_choose] = max(result_choose + slices[ind], result_not_choose)
+        return self.dp[ind, to_choose]
 
     def maxSizeSlices(self, slices: List[int]) -> int:
         min_elem = min(slices)

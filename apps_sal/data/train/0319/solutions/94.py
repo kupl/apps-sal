@@ -1,10 +1,10 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         dic = collections.defaultdict(int)
-
         sums = {-1: 0}
         total = sum(stoneValue)
-        for i, s in enumerate(stoneValue):
+        for (i, s) in enumerate(stoneValue):
             sums[i] = sums[i - 1] + s
         for i in sums:
             sums[i] = total - sums[i] + stoneValue[i]

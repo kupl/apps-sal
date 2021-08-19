@@ -3,6 +3,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def stoneGameIII(self, stoneValue):
         n = len(stoneValue)
 
@@ -19,7 +20,6 @@ class Solution:
                     cursum += stoneValue[j]
                     ans = max(cursum - solve(j + 1), ans)
             return ans
-
         ans = solve(0)
         if ans > 0:
             return 'Alice'

@@ -1,5 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
+
         def highestBit(x):
             i = 0
             while x:
@@ -11,7 +13,7 @@ class Solution:
             i = 0
             while x:
                 i += 1
-                x = x & (x - 1)
+                x = x & x - 1
             return i
         doublings = max(map(highestBit, nums))
         print(doublings)

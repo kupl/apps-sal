@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, arr: List[int], m: int, k: int) -> int:
+
         def count(arr, x, k):
             out = 0
             count = 0
@@ -11,9 +13,7 @@ class Solution:
                         count = 0
                 else:
                     count = 0
-
             return out
-
         if len(arr) < m * k:
             return -1
         res = -1
@@ -27,5 +27,4 @@ class Solution:
                 end = mid - 1
             else:
                 start = mid + 1
-
         return res

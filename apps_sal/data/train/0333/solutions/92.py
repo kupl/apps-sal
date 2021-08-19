@@ -1,10 +1,10 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         map = collections.defaultdict(list)
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             map[a].append(i)
-
-        visited, visiting = {-1}, {0}
+        (visited, visiting) = ({-1}, {0})
         for steps in itertools.count():
             visited |= visiting
             if len(arr) - 1 in visited:

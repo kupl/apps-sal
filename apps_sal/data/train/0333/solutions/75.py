@@ -1,15 +1,16 @@
 class Solution:
+
     def minJumps(self, arr):
         n = len(arr)
         if n == 1:
             return 0
         d = defaultdict(list)
-        for i, val in enumerate(arr):
+        for (i, val) in enumerate(arr):
             d[val].append(i)
         visited = set([0])
         check = set()
         stack = [0]
-        k, jumps = len(stack), 1
+        (k, jumps) = (len(stack), 1)
         while stack:
             i = stack.pop(0)
             childs = [i - 1, i + 1]

@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         total_cost = 0
         i = 0

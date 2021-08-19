@@ -1,11 +1,11 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         n = len(bloomDay)
         if m * k > n:
             return -1
         eV = max(bloomDay)
         sV = min(bloomDay)
-
         while sV <= eV:
             mV = (sV + eV) // 2
             i = 0
@@ -26,5 +26,4 @@ class Solution:
                 sV = mV + 1
                 continue
             eV = mV - 1
-
         return sV

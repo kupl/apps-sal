@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         cur_max = cur_cost = 0
         total = 0
@@ -13,8 +14,6 @@ class Solution:
             elif cur_cost != 0:
                 total += cur_cost - cur_max
                 cur_cost = cur_max = 0
-
         if cur_cost != 0:
             total += cur_cost - cur_max
-
         return total

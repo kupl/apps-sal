@@ -1,7 +1,8 @@
 class Solution:
+
     def minimumSwap(self, s1: str, s2: str) -> int:
-        x_y, y_x = 0, 0
-        for i, j in zip(s1, s2):
+        (x_y, y_x) = (0, 0)
+        for (i, j) in zip(s1, s2):
             if i != j:
                 if i == 'x':
                     x_y += 1

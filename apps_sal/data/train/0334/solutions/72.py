@@ -1,6 +1,7 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
-        l, r = 0, 1
+        (l, r) = (0, 1)
         total = 0
         dels = 0
         for i in range(1, len(s)):

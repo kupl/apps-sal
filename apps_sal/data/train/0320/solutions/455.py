@@ -1,8 +1,9 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         i = 0
         k = 0
-        for x in range(10**9):
+        for x in range(10 ** 9):
             if nums == [0.0] * len(nums):
                 break
             if i >= 1:

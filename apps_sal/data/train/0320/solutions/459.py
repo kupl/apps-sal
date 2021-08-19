@@ -1,6 +1,6 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         ans = 0
 
         def cal1(arr):
@@ -12,7 +12,7 @@ class Solution:
                     op += 1
                     if arr[i] == 0:
                         z += 1
-            return op, z
+            return (op, z)
 
         def cal2(arr):
             flg = 0
@@ -21,12 +21,10 @@ class Solution:
                     arr[i] //= 2
                     flg = 1
             return flg
-
         nz = sum([1 for i in nums if i != 0])
         while nz > 0:
-            op, z = cal1(nums)
+            (op, z) = cal1(nums)
             ans += op
             nz -= z
             ans += cal2(nums)
-
         return ans

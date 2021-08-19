@@ -1,7 +1,7 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         c = 0
-
         for i in range(len(s)):
             if i - 1 >= 0 and s[i - 1] == s[i]:
                 continue

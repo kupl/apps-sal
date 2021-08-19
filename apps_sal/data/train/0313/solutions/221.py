@@ -1,6 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        l, r = min(bloomDay), max(bloomDay)
+        (l, r) = (min(bloomDay), max(bloomDay))
         while l < r:
             mid = (l + r) // 2
             if not self.check(bloomDay, m, k, mid):
@@ -12,7 +13,7 @@ class Solution:
         return -1
 
     def check(self, bloomDay, m, k, day):
-        cnt, consecutive = 0, 0
+        (cnt, consecutive) = (0, 0)
         for bd in bloomDay:
             if bd <= day:
                 consecutive += 1

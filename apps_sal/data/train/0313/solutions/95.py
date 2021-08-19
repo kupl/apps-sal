@@ -1,9 +1,11 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def condition(x):
             count = 0
             M = 0
-            for i, day in enumerate(bloomDay):
+            for (i, day) in enumerate(bloomDay):
                 bloom = 0
                 if day <= x:
                     bloom = 1
@@ -17,7 +19,6 @@ class Solution:
                 if M >= m:
                     return True
             return False
-
         if len(bloomDay) < m * k:
             return -1
         left = min(bloomDay)

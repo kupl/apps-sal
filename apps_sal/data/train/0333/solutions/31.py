@@ -1,12 +1,12 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         L = len(arr)
         if L < 2:
             return 0
         cnt = defaultdict(list)
-        for i, val in enumerate(arr):
+        for (i, val) in enumerate(arr):
             cnt[val].append(i)
-
         q = deque([0])
         visited = {0}
         steps = 0
@@ -26,5 +26,4 @@ class Solution:
                         q.append(c)
                         visited.add(c)
             steps += 1
-
         return steps

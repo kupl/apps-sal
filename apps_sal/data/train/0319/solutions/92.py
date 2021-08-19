@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         stone_sum = 0
         dp = [0] * (len(stoneValue) + 1) + [float('inf')] * 2

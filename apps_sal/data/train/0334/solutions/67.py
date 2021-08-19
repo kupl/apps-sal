@@ -1,7 +1,8 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         length = 1
-        start, end = 0, 0
+        (start, end) = (0, 0)
         result = 0
         for i in range(len(s) - 1):
             if s[i] == s[i + 1]:

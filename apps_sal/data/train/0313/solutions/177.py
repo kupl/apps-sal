@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if m * k > len(bloomDay):
             return -1
@@ -22,7 +23,6 @@ class Solution:
                 else:
                     current = 0
             return count >= m
-
         left = min_day
         right = max_day
         result = 0

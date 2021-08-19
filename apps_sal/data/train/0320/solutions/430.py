@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         result = 0
         new_nums = sorted(nums, reverse=True)
@@ -11,7 +12,7 @@ class Solution:
             else:
                 flag = True
                 for i in range(len(new_nums)):
-                    if new_nums[i] & 0x1 == 1:
+                    if new_nums[i] & 1 == 1:
                         new_nums[i] -= 1
                         result += 1
                         flag = False

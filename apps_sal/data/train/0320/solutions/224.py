@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         lst = list(map(find_op, nums))
         mul = max(lst, key=lambda x: x[0])
@@ -8,7 +9,7 @@ class Solution:
 
 
 def find_op(n):
-    mul, add = 0, 0
+    (mul, add) = (0, 0)
     while n > 0:
         if n % 2 == 1:
             add += 1
@@ -16,4 +17,4 @@ def find_op(n):
         mul += 1
     if mul > 0:
         mul -= 1
-    return mul, add
+    return (mul, add)

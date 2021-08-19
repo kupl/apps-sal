@@ -1,11 +1,11 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         res = 0
         while True:
             divide = False
             all_zero = True
-            for i, n in enumerate(nums):
+            for (i, n) in enumerate(nums):
                 if n == 0:
                     continue
                 all_zero = False
@@ -16,5 +16,4 @@ class Solution:
             res += int(divide)
             if all_zero:
                 break
-
         return res

@@ -1,6 +1,7 @@
 class Solution:
+
     def bloom(self, arr, k, d, m):
-        cnt, bk = 0, 0
+        (cnt, bk) = (0, 0)
         for i in arr:
             if i <= d:
                 cnt += 1

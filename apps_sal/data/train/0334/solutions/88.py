@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         res = 0
         stack = []
@@ -10,7 +11,7 @@ class Solution:
             if idx > 0 and s[idx] == s[idx - 1]:
                 stack.append(cost[idx])
             if stack:
-                res += (sum(stack) - max(stack))
+                res += sum(stack) - max(stack)
                 stack = []
             idx += 1
         return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def convert(self, s, nRows):
         if nRows == 1:
             return s

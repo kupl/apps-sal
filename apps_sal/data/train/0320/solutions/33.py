@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        maxLmove, bitCount = 0, 0
+        (maxLmove, bitCount) = (0, 0)
         for num in nums:
             if num == 0:
                 continue

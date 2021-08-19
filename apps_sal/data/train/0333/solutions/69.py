@@ -1,7 +1,8 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         graph = defaultdict(set)
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             graph[num].add(i)
         q = deque([0])
         counter = 0
@@ -20,10 +21,10 @@ class Solution:
                         q.append(neighbor)
                         visited[neighbor] = 1
                 graph.pop(num)
-                if i + 1 < len(arr) and not visited[i + 1]:
+                if i + 1 < len(arr) and (not visited[i + 1]):
                     q.append(i + 1)
                     visited[i + 1] = 1
-                if i - 1 >= 0 and not visited[i - 1]:
+                if i - 1 >= 0 and (not visited[i - 1]):
                     q.append(i - 1)
                     visited[i - 1] = 1
             counter += 1

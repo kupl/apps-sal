@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, sv: List[int]) -> str:
         n = len(sv)
         sv += [0, 0]

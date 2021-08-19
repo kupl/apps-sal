@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def maxSizeSlices(self, w: List[int]) -> int:
         n = len(w)
         k = n // 3

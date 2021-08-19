@@ -1,14 +1,14 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         record = {}
-        for idx, item in enumerate(arr, 0):
+        for (idx, item) in enumerate(arr, 0):
             if item not in record:
                 record[item] = [idx]
+            elif record[item][-1] + 2 >= idx:
+                record[item][-1] = idx
             else:
-                if record[item][-1] + 2 >= idx:
-                    record[item][-1] = idx
-                else:
-                    record[item].append(idx)
+                record[item].append(idx)
         queue = [0]
         ret = [-1] * len(arr)
         ret[0] = 0

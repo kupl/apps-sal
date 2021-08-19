@@ -1,11 +1,12 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         import heapq
         prev = ''
         prices = []
         count = 0
         ans = 0
-        for char, cost in zip(s, cost):
+        for (char, cost) in zip(s, cost):
             if prev == char:
                 heapq.heappush(prices, cost)
                 count += 1

@@ -1,7 +1,9 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def make_boquets(mid):
-            i, boquets = 0, 0
+            (i, boquets) = (0, 0)
             while i < len(bloomDay):
                 j = i
                 while j < len(bloomDay) and j - i < k:
@@ -13,7 +15,7 @@ class Solution:
                     j -= 1
                 i = j + 1
             return boquets >= m
-        left, right = min(bloomDay), max(bloomDay) + 1
+        (left, right) = (min(bloomDay), max(bloomDay) + 1)
         while left < right:
             mid = left + (right - left) // 2
             if make_boquets(mid):

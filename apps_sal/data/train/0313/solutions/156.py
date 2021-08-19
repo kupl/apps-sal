@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, A: List[int], m: int, k: int) -> int:
 
         def valid(mid):
@@ -13,12 +14,10 @@ class Solution:
                 else:
                     cur = 0
             return accu >= m
-
         n = len(A)
         if m * k > n:
             return -1
-
-        l, r = min(A), max(A)
+        (l, r) = (min(A), max(A))
         while l < r:
             mid = (l + r) // 2
             if valid(mid):

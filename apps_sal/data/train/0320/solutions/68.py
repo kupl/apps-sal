@@ -1,11 +1,13 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
+
         def calc(num):
             tmp = 1
             ans = [0, 0]
             count = 0
             while tmp <= num:
-                if (tmp & num) != 0:
+                if tmp & num != 0:
                     ans[0] += 1
                 count += 1
                 tmp <<= 1

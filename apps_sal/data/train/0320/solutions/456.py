@@ -1,7 +1,7 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
-        arr = [0] * (len(nums))
+    def minOperations(self, nums: List[int]) -> int:
+        arr = [0] * len(nums)
         count = 0
         while nums != arr:
             f = 0
@@ -14,4 +14,4 @@ class Solution:
                 for i in range(len(nums)):
                     nums[i] = nums[i] // 2
                 count += 1
-        return (count)
+        return count

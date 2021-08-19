@@ -1,7 +1,7 @@
 class Solution:
+
     def minOperations(self, A: List[int]) -> int:
         r = 0
-
         while A != [0 for i in A]:
             odd = 0
             for i in range(len(A)):

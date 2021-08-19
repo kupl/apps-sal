@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         memo = {}
         n = len(stoneValue)
@@ -9,7 +10,7 @@ class Solution:
             elif s in memo:
                 return memo[s]
             currValue = 0
-            best = -2**31
+            best = -2 ** 31
             for i in range(3):
                 if s + i >= n:
                     break

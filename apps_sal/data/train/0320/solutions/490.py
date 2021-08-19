@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         n = len(nums)
         result = 0
@@ -10,7 +11,6 @@ class Solution:
                 cnt += 1
                 a &= a - 1
             return cnt
-
         for num in nums:
             result += bitcount(num)
             m = max(m, num)

@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def canMakeBouquets(cap):
             nBouquets = 0
             nFlowers = 0
@@ -12,11 +14,9 @@ class Solution:
                     nBouquets += 1
                     nFlowers = 0
             return nBouquets >= m
-
         if m * k > len(bloomDay):
             return -1
-
-        lo, hi = 1, max(bloomDay)
+        (lo, hi) = (1, max(bloomDay))
         while lo < hi:
             med = lo + (hi - lo) // 2
             if canMakeBouquets(med):

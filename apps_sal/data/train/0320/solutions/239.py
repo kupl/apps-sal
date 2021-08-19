@@ -1,8 +1,9 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         minops = 0
         while sum(nums) > 0:
-            for i, num in enumerate(nums):
+            for (i, num) in enumerate(nums):
                 if num & 1:
                     nums[i] -= 1
                     minops += 1

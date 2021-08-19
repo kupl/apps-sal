@@ -2,12 +2,12 @@ import bisect
 
 
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         n = len(A)
         preSums = [0] * (n + 1)
         for i in range(n):
             preSums[i + 1] = preSums[i] + A[i]
-
         dque = collections.deque()
         shortest = n + 1
         for i in range(n + 1):

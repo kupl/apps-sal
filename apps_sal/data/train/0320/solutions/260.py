@@ -1,7 +1,9 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
+
         def _op(arr):
-            odds, zeros = 0, 0
+            (odds, zeros) = (0, 0)
             for i in range(len(arr)):
                 if arr[i] == 0:
                     zeros += 1
@@ -15,7 +17,6 @@ class Solution:
             for i in range(len(arr)):
                 arr[i] //= 2
             return 1
-
         ans = 0
         ops = _op(nums)
         while ops != 0:

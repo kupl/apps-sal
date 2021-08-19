@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         a = bloomDay
         if len(a) < m * k:
@@ -20,7 +21,7 @@ class Solution:
             return bool(0)
 
         def bs(m, k):
-            l, r = min(a), max(a)
+            (l, r) = (min(a), max(a))
             while l < r:
                 mid = (l + r) // 2
                 if ck(mid, m, k):

@@ -2,7 +2,9 @@ from functools import *
 
 
 class Solution(object):
+
     def maxSizeSlices(self, slices):
+
         @lru_cache(None)
         def dp(start, end, k):
             if k == 0:

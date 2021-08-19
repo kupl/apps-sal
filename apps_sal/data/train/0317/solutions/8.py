@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def numPermsDISequence(self, S: str) -> int:
         MOD = 10 ** 9 + 7
 
@@ -19,8 +20,4 @@ class Solution:
                 return (presum(n - 1, n) - presum(n - 1, last)) % MOD
             else:
                 return presum(n - 1, last) % MOD
-
-        return sum(
-            DP(len(S), i)
-            for i in range(len(S) + 1)
-        ) % MOD
+        return sum((DP(len(S), i) for i in range(len(S) + 1))) % MOD

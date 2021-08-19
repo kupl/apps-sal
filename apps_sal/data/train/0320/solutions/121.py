@@ -2,6 +2,7 @@ from math import log
 
 
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         res = 0
         vposes = set(range(len(nums)))

@@ -1,4 +1,5 @@
 class Solution:
+
     def minimumSwap(self, s1: str, s2: str) -> int:
         h = defaultdict(int)
         count = 0
@@ -8,7 +9,7 @@ class Solution:
                 h[s1[i]] += 1
         if count % 2 != 0:
             return -1
-        res, a, b = 0, h['x'], h['y']
+        (res, a, b) = (0, h['x'], h['y'])
         res += a // 2 + b // 2
         if a % 2 == 0:
             return res

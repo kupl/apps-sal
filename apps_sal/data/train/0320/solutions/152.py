@@ -2,6 +2,7 @@ from math import log
 
 
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         cnt = int(log(max(nums)) / log(2))
         for n in nums:

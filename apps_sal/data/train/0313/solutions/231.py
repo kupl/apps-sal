@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, A: List[int], m: int, k: int) -> int:
         if m * k > len(A):
             return -1
@@ -13,7 +14,6 @@ class Solution:
                     if b == m:
                         return 1
             return 0
-
         l = 1
         r = max(A)
         while l < r:

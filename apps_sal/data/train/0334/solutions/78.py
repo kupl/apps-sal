@@ -1,7 +1,7 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         prv = 0
-
         res = 0
         for i in range(1, len(s)):
             if s[i] != s[i - 1]:
@@ -13,7 +13,6 @@ class Solution:
                             mc = cost[j]
                     res -= mc
                 prv = i
-
         if len(s) - prv > 1:
             mc = cost[prv]
             for j in range(prv, len(s)):
@@ -21,5 +20,4 @@ class Solution:
                 if cost[j] > mc:
                     mc = cost[j]
             res -= mc
-
         return res

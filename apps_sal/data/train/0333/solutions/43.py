@@ -1,9 +1,9 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         s = defaultdict(list)
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             s[num] += [i]
-
         q = set([0])
         seen = set()
         level = 0
@@ -22,7 +22,6 @@ class Solution:
                     if j != i:
                         children += [j]
                 del s[arr[i]]
-
                 for child in children:
                     if child not in seen:
                         new_q.add(child)

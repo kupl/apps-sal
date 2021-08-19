@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         flag = True
         count = 0
@@ -11,7 +12,6 @@ class Solution:
                 if nums[i] > 0:
                     nums[i] >>= 1
                     flag = True
-
             if flag:
                 count += 1
         return count

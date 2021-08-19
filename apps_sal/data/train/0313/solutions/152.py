@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def checkFlowers(mid, m, k):
             bq = 0
             i = 0
@@ -7,7 +9,7 @@ class Solution:
                 if bloomDay[i] <= mid:
                     count = 1
                     i += 1
-                    while i < len(bloomDay) and count < k and bloomDay[i] <= mid:
+                    while i < len(bloomDay) and count < k and (bloomDay[i] <= mid):
                         count += 1
                         i += 1
                     if count == k:
@@ -15,10 +17,8 @@ class Solution:
                 else:
                     i += 1
             return bq
-
         if len(bloomDay) < k * m:
             return -1
-
         low = 1
         high = max(bloomDay)
         while low < high:

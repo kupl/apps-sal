@@ -1,8 +1,9 @@
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
-        '''
+        """
         monoqueue + prefixsum + sliding window
-        '''
+        """
         n = len(A)
         prefix_sum = [0] * (n + 1)
         for i in range(1, n + 1):

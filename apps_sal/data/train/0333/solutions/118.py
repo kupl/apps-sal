@@ -1,22 +1,18 @@
 class Solution:
-    def minJumps(self, arr: List[int]) -> int:
 
+    def minJumps(self, arr: List[int]) -> int:
         m = len(arr)
         seen = [False for _ in range(m)]
         q = deque()
         step = 0
-
         quick_jump_graph = {}
-
         for i in range(len(arr)):
             if arr[i] in quick_jump_graph:
                 quick_jump_graph[arr[i]].append(i)
             else:
                 quick_jump_graph[arr[i]] = [i]
-
         q.append(0)
-
-        while(len(q)):
+        while len(q):
             s = len(q)
             for i in range(s):
                 cur_idx = q.popleft()
@@ -33,5 +29,4 @@ class Solution:
                             q.append(num)
                         quick_jump_graph[arr[cur_idx]] = []
             step += 1
-
         return -1

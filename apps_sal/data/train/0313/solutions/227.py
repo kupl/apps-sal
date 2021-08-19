@@ -1,9 +1,8 @@
 class Solution:
-    def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
 
+    def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if len(bloomDay) < m * k:
             return -1
-
         b = min(bloomDay)
         e = max(bloomDay)
 
@@ -21,13 +20,10 @@ class Solution:
                         if bouquets >= m:
                             return True
             return False
-
         while e >= b:
             mid = (b + e) // 2
-
             if check_day(mid):
                 e = mid - 1
             else:
                 b = mid + 1
-
         return b

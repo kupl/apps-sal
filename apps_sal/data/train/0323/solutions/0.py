@@ -1,4 +1,5 @@
 class Solution:
+
     def isInterleave(self, s1, s2, s3):
         """
         :type s1: str
@@ -13,7 +14,7 @@ class Solution:
         options = {(0, 0)}
         for char in s3:
             new_options = set()
-            for i1, i2 in options:
+            for (i1, i2) in options:
                 if i1 < len(s1) and char == s1[i1]:
                     new_options.add((i1 + 1, i2))
                 if i2 < len(s2) and char == s2[i2]:

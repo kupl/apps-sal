@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         result = 0
         while True:
@@ -21,5 +22,4 @@ class Solution:
                     nums[i] //= 2
             else:
                 break
-
         return result

@@ -1,13 +1,12 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         v_jumped = set()
         v_idx = collections.defaultdict(list)
-        for i, v in enumerate(arr):
+        for (i, v) in enumerate(arr):
             v_idx[v].append(i)
-
         q = [0]
         seen_idx = {0}
-
         step = 0
         while q:
             sz = len(q)

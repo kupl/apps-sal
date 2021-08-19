@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def is_possible(days) -> bool:
             bouquets = 0
             flowers = 0
@@ -14,7 +16,6 @@ class Solution:
                 else:
                     flowers = 0
             return False
-
         if len(bloomDay) < m * k:
             return -1
         left = min(bloomDay)

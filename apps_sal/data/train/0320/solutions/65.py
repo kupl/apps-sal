@@ -1,10 +1,9 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         count = 0
         res = 0
         double = 0
-
         for i in nums:
             count = 0
             while i:
@@ -15,5 +14,4 @@ class Solution:
                     i //= 2
                     count += 1
             double = max(double, count)
-
         return res + double

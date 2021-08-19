@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPrefix(self, s: str) -> str:
         n = len(s)
         for i in range(1, n):
@@ -8,6 +9,7 @@ class Solution:
 
 
 class Solution2:
+
     def longestPrefix(self, s: str) -> str:
         n = len(s)
         dp = [[0] * n for _ in range(n)]

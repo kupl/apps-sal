@@ -1,4 +1,5 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) == 1:
             return 0
@@ -10,7 +11,7 @@ class Solution:
             queue = deque()
             queue.append((0, 0))
             while queue:
-                i, steps = queue.popleft()
+                (i, steps) = queue.popleft()
                 for j in [i - 1, i + 1] + num_indices[arr[i]]:
                     if j not in visited and 0 <= j < len(arr):
                         if j == len(arr) - 1:

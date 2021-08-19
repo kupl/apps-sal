@@ -18,6 +18,6 @@ class Solution:
                 else:
                     count2 += 1
                     j = j - 1
-            power[i], rem[i] = count1, count2
+            (power[i], rem[i]) = (count1, count2)
         ans = max(power) + sum(rem)
         return ans

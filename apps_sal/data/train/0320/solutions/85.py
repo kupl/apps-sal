@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         cnt1 = 0
         maxcnt0 = 0
@@ -12,5 +13,4 @@ class Solution:
                     n //= 2
                     cnt0 += 1
             maxcnt0 = max(cnt0, maxcnt0)
-
         return maxcnt0 + cnt1

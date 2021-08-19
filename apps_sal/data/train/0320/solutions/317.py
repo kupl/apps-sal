@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         zeros = sum([num == 0 for num in nums])
         odds = set([i for i in range(len(nums)) if nums[i] % 2])

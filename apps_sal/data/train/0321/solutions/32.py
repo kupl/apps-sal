@@ -1,4 +1,5 @@
 class Solution:
+
     def checkIfCanBreak(self, s1: str, s2: str) -> bool:
         s1sorted = ''.join(sorted(s1))
         s2sorted = ''.join(sorted(s2))

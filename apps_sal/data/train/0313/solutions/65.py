@@ -1,4 +1,5 @@
 class Solution:
+
     def calc(self, bloomDay, mid, k):
         adj = 0
         totes = 0
@@ -18,7 +19,6 @@ class Solution:
         n = len(bloomDay)
         if m * k > n:
             return -1
-
         l = 0
         r = max(bloomDay) + 1
         while r - l > 1:
@@ -28,5 +28,4 @@ class Solution:
                 r = mid
             elif t < m:
                 l = mid
-
         return r

@@ -1,4 +1,5 @@
 class Solution:
+
     def convert(self, s, numRows):
         """
         :type s: str
@@ -10,7 +11,6 @@ class Solution:
         count = len(s)
         if count <= 1:
             return s
-
         result = []
         deltSmall = numRows - 1
         deltBig = 2 * deltSmall
@@ -29,5 +29,4 @@ class Solution:
                     if nextk < count:
                         result.append(s[nextk])
                     k += deltBig
-
-        return "".join(result)
+        return ''.join(result)

@@ -1,6 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        low, high = 1, max(bloomDay)
+        (low, high) = (1, max(bloomDay))
         if m * k > len(bloomDay):
             return -1
         res = sys.maxsize
@@ -9,8 +10,8 @@ class Solution:
             i = b = 0
             while i < len(bloomDay):
                 f = 0
-                while i < len(bloomDay) and bloomDay[i] <= med and f < k:
-                    i, f = i + 1, f + 1
+                while i < len(bloomDay) and bloomDay[i] <= med and (f < k):
+                    (i, f) = (i + 1, f + 1)
                 if f == k:
                     b += 1
                 else:

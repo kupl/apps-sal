@@ -1,4 +1,5 @@
 class Solution:
+
     def numSub(self, s: str) -> int:
         sum = cnt = 0
         for c in s:

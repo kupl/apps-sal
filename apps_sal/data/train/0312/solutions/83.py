@@ -15,5 +15,6 @@ def kmin(a, k):
 
 
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         return kmin(A, K)

@@ -1,8 +1,9 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if m * k > len(bloomDay):
             return -1
-        low, high = min(bloomDay), max(bloomDay)
+        (low, high) = (min(bloomDay), max(bloomDay))
         while low < high:
             mid = (low + high) // 2
             flow = bouq = 0

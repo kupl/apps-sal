@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         res = 0
         n = len(nums)
@@ -6,7 +7,7 @@ class Solution:
             i = 0
             zc = 0
             while i < n:
-                if (nums[i] & 1) > 0:
+                if nums[i] & 1 > 0:
                     break
                 elif nums[i] == 0:
                     zc += 1

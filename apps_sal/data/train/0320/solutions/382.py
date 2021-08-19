@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, a: List[int]) -> int:
         res = [0]
         while True:

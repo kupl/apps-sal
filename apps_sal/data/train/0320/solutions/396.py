@@ -1,6 +1,6 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         ret = 0
 
         def check(nums):
@@ -19,9 +19,8 @@ class Solution:
             if multiplied == 1:
                 res += 1
             return (isAllZero, res)
-
         while True:
-            done, cnt = check(nums)
+            (done, cnt) = check(nums)
             ret += cnt
             if done == 1:
                 break

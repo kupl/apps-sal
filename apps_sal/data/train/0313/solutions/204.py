@@ -1,6 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        l, r = 1, max(bloomDay)
+        (l, r) = (1, max(bloomDay))
         while l + 1 < r:
             mid = (l + r) // 2
             if self.is_ok(bloomDay, mid, m, k):
@@ -23,5 +24,4 @@ class Solution:
                     flowers = 0
             else:
                 flowers = 0
-
         return m <= 0

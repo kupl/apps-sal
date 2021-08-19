@@ -1,4 +1,5 @@
 class Solution(object):
+
     def maxSizeSlices(self, A):
         N = len(A)
         A.extend(A)
@@ -12,5 +13,4 @@ class Solution(object):
                 return NINF
             else:
                 return max(dp(i + 2, j, rem - 1) + A[i], dp(i + 1, j, rem))
-
         return max(A[0] + dp(2, N - 2, N // 3 - 1), dp(1, N - 1, N // 3))

@@ -1,10 +1,9 @@
 class Solution:
-    def minCost(self, s: str, cost: List[int]) -> int:
 
-        left, right = 0, 1
+    def minCost(self, s: str, cost: List[int]) -> int:
+        (left, right) = (0, 1)
         costSum = 0
         while right < len(s):
-
             if s[left] == s[right]:
                 while right < len(s) and s[left] == s[right]:
                     right += 1

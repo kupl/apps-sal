@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         s = list(s)
         idx = [i for i in range(len(s))]

@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         c = 0
         sums = []
