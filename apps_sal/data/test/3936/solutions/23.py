@@ -5,7 +5,6 @@ i = 0
 
 
 def define(index):
-    # たてバージョンん
     if S[0][index] == S[1][index]:
         return 1
     else:
@@ -20,8 +19,6 @@ else:
     ans = 6
     i += 2
     f_g = 0
-
-
 while i < N:
     t_g = define(i)
     if f_g == 0 and t_g == 0:
@@ -35,4 +32,4 @@ while i < N:
     else:
         i += 2
     f_g = t_g
-print((ans % MOD))
+print(ans % MOD)

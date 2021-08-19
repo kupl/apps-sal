@@ -1,19 +1,16 @@
 from functools import lru_cache
 import sys
 input = sys.stdin.readline
-
-n, T = list(map(int, input().split()))
+(n, T) = list(map(int, input().split()))
 S = [list(map(int, input().split())) for i in range(n)]
-
-DP = [[0] * (4) for i in range(T + 1)]
-mod = 10**9 + 7
+DP = [[0] * 4 for i in range(T + 1)]
+mod = 10 ** 9 + 7
 
 
 @lru_cache(maxsize=None)
 def calc(used, recent, time):
     ANS = 0
     for i in range(n):
-        # print(i,used)
         if i in used:
             continue
         if time + S[i][0] > T:
@@ -28,7 +25,6 @@ def calc(used, recent, time):
             recent2 = S[i][1]
             time2 = time + S[i][0]
             ANS = (ANS + calc(tuple(used2), recent2, time2)) % mod
-
     return ANS
 
 

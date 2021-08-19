@@ -1,6 +1,4 @@
-#from math import ceil, log
-
-t = 1  # int(input())
+t = 1
 for test in range(t):
     n = int(input())
     arr = list(map(int, input().split()))

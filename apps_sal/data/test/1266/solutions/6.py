@@ -1,5 +1,5 @@
 n = int(input())
-x0, y0 = map(int, input().split())
+(x0, y0) = map(int, input().split())
 Nord = 10 ** 9 + 1
 fNord = '-'
 East = 10 ** 9 + 1
@@ -8,7 +8,6 @@ South = -10 ** 9 - 1
 fSouth = '-'
 West = -10 ** 9 - 1
 fWest = '-'
-
 NE = 10 ** 9 + 1
 fNE = '-'
 NW = 10 ** 9 + 1
@@ -17,9 +16,8 @@ SE = -10 ** 9 - 1
 fSE = '-'
 SW = -10 ** 9 - 1
 fSW = '-'
-
 for i in range(n):
-    f, x, y = input().split()
+    (f, x, y) = input().split()
     x = int(x)
     y = int(y)
     if x == x0:
@@ -36,7 +34,6 @@ for i in range(n):
         elif x0 > x > West:
             fWest = f
             West = x
-
     if x + y == x0 + y0:
         if y0 < y < NW:
             fNW = f
@@ -52,15 +49,12 @@ for i in range(n):
             fSW = f
             SW = y
 ans = False
-if fSW == 'Q' or fSE == 'Q' or fNW == 'Q' or fNE == 'Q':
+if fSW == 'Q' or fSE == 'Q' or fNW == 'Q' or (fNE == 'Q'):
     ans = True
-if fNord == 'Q' or fSouth == 'Q' or fWest == 'Q' or fEast == 'Q':
+if fNord == 'Q' or fSouth == 'Q' or fWest == 'Q' or (fEast == 'Q'):
     ans = True
-if fSW == 'B' or fSE == 'B' or fNW == 'B' or fNE == 'B':
+if fSW == 'B' or fSE == 'B' or fNW == 'B' or (fNE == 'B'):
     ans = True
-if fNord == 'R' or fSouth == 'R' or fWest == 'R' or fEast == 'R':
+if fNord == 'R' or fSouth == 'R' or fWest == 'R' or (fEast == 'R'):
     ans = True
-
-#print(fSW, fSE, fNW, fNE)
-#print(fNord, fSouth, fWest, fEast)
 print('YES' if ans else 'NO')

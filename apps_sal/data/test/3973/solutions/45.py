@@ -1,13 +1,13 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 a = [b - 1 for b in a]
 imos = [0 for _ in range(m + 1)]
 base = 0
 for i in range(n - 1):
-    x, y = a[i], a[i + 1]
+    (x, y) = (a[i], a[i + 1])
     if y - x == 1 or x + 1 - m == y:
         continue
-    z, w = (x + 2) % m, (y + 1) % m
+    (z, w) = ((x + 2) % m, (y + 1) % m)
     if w == 0:
         w = m
     if z < w:
@@ -23,8 +23,6 @@ for i in range(n - 1):
         imos[w] -= m + w - z + 1
         if w < m:
             imos[w + 1] += m + w - z
-# print(imos)
-# print(base)
 for i in range(m):
     imos[i + 1] += imos[i]
 imos[0] += base
@@ -37,6 +35,5 @@ for i in range(n - 1):
         ans += a[i + 1] - a[i]
     else:
         ans += a[i + 1] + m - a[i]
-# print(ans)
 ans -= res
 print(ans)

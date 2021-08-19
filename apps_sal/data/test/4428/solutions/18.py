@@ -6,21 +6,18 @@ sum1 = 0
 sum2 = 0
 ans = 0
 while i < j:
-    while (sum1 <= sum2) and (i < j):
+    while sum1 <= sum2 and i < j:
         i += 1
         if i == j:
             break
         sum1 += a[i]
-        if (sum1 == sum2) and (sum1 > ans):
+        if sum1 == sum2 and sum1 > ans:
             ans = sum1
-#    print(i, j, sum1, sum2)
-    while (sum2 <= sum1) and (j > i):
+    while sum2 <= sum1 and j > i:
         j -= 1
         if i == j:
             break
         sum2 += a[j]
-        if (sum1 == sum2) and (sum1 > ans):
+        if sum1 == sum2 and sum1 > ans:
             ans = sum1
-#    print(i, j, sum1, sum2)
-
 print(ans)

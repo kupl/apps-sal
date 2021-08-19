@@ -1,18 +1,10 @@
 import bisect
-
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
-
-# n : number of integers
-# m : mod
-
 half_n = n // 2
-
-a1, a2 = a[:half_n], a[half_n:]
-
-n1, n2 = len(a1), len(a2)
-
-r1, r2 = [], []
+(a1, a2) = (a[:half_n], a[half_n:])
+(n1, n2) = (len(a1), len(a2))
+(r1, r2) = ([], [])
 
 
 def dfs1(i, sum):
@@ -33,15 +25,11 @@ def dfs2(i, sum):
 
 dfs1(0, 0)
 dfs2(0, 0)
-
-r1, r2 = [sorted(set(x)) for x in [r1, r2]]
-
+(r1, r2) = [sorted(set(x)) for x in [r1, r2]]
 ans = 0
-
-for i, x in enumerate(r1):
+for (i, x) in enumerate(r1):
     p = bisect.bisect_left(r2, m - x)
     tmp_ans = r2[p - 1] + x
     if tmp_ans > ans:
         ans = tmp_ans
-
 print(ans)

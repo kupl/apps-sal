@@ -14,16 +14,15 @@ from collections import defaultdict
 def main(n, t, a):
     j = 1
     while j < n:
-        # print(j,a[j-1])
         j += a[j - 1]
         if j == t:
-            print("YES")
+            print('YES')
             return
-    print("NO")
+    print('NO')
 
 
 def main_input():
-    n, t = list(map(int, input().split()))
+    (n, t) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     main(n, t, a)
 

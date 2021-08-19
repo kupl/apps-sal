@@ -1,25 +1,24 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 from math import sqrt
 from copy import copy
 
 
 class figure:
+
     def __init__(self, ras=None, type=None):
         self.ras = copy(ras)
         self.type = type
 
 
 n = int(input())
-x0, y0 = map(int, input().split())
+(x0, y0) = map(int, input().split())
 sup = 'NO'
 f = []
 for i in range(8):
-    d = figure(10**11)
+    d = figure(10 ** 11)
     f.append(d)
 for i in range(n):
-    teg, x, y = map(str, input().split())
-    x, y = int(x), int(y)
+    (teg, x, y) = map(str, input().split())
+    (x, y) = (int(x), int(y))
     if x == x0:
         if y < y0:
             ras = abs(y - y0)
