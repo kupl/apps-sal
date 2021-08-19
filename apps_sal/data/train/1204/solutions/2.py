@@ -1,10 +1,13 @@
 import sys
 import math
-# from collections import defaultdict, deque
 
 
-def fout(s, end='\n'): sys.stdout.write(str(s) + end)
-def fin(): return sys.stdin.readline().strip()
+def fout(s, end='\n'):
+    sys.stdout.write(str(s) + end)
+
+
+def fin():
+    return sys.stdin.readline().strip()
 
 
 t = int(fin())
@@ -12,7 +15,7 @@ while t > 0:
     t -= 1
     s = fin()
     r = fin()
-    un = isl = 0  # unequal
+    un = isl = 0
     count = 0
     eqisl = []
     count2 = 0
@@ -37,5 +40,5 @@ while t > 0:
     for i in range(len(eqisl)):
         un += eqisl[i]
         isl -= 1
-        ans = min(ans, un * (isl))
+        ans = min(ans, un * isl)
     print(ans)

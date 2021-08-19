@@ -1,4 +1,3 @@
-# cook your dish here
 test = int(input())
 for _ in range(test):
     e_islands = []
@@ -25,9 +24,6 @@ for _ in range(test):
     if s[0] == r[0]:
         e_islands = e_islands[1:]
     e_islands = sorted(e_islands)
-    # print(mismatches)
-    # print(e_islands)
-    # print(u_islands)
     min_len = mismatches
     k = len(u_islands)
     ans = min_len * k

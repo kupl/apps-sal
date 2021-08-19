@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 input = sys.stdin.readlines
 print = sys.stdout.write
@@ -17,13 +16,12 @@ for case in range(1, int(t[0]) * 2, 2):
                 unlike.append(curr)
                 k += 1
             curr = 0
-        else:
-            if curr != None:
-                curr += 1
+        elif curr != None:
+            curr += 1
     k += 1
     unlike.sort()
     mini = k * l
-    for i, j in enumerate(unlike):
+    for (i, j) in enumerate(unlike):
         k -= 1
         l += j
         mini = min(mini, k * l)

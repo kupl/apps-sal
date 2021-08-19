@@ -1,8 +1,8 @@
 class Solution:
-    '''
+    """
     similar to coin Change problem.
 
-    '''
+    """
 
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         dp1 = [0 for _ in range(target + 1)]
@@ -16,5 +16,3 @@ class Solution:
             dp1 = dp2
             dp2 = [0 for _ in range(target + 1)]
         return dp1[target] % mod
-
-# https://www.youtube.com/watch?time_continue=872&v=UiYVToWORMY&feature=emb_logo

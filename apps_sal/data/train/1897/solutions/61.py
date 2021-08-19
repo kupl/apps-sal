@@ -1,4 +1,5 @@
 class Solution:
+
     def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
         n = len(arr)
         m = len(queries)
@@ -13,18 +14,10 @@ class Solution:
         for i in range(0, m):
             (u, v) = queries[i]
             s = 0
-            # for j in range(u, v + 1):
-            # key = '{u} {v}'.format(u=u, v=j)
-            # if key in d:
-            #     s = d[key]
-            #     continue
-            # s = s ^ arr[j]
-            # d[key] = s
             key2 = '{u} {v}'.format(u=u, v=v)
             if key2 in d:
                 res.append(d[key2])
                 continue
-
             pkey = '{} {}'.format(0, u - 1)
             key = '{} {}'.format(0, v)
             s = d[pkey] ^ d[key]
