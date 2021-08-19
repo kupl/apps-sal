@@ -1,10 +1,8 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 li = [list(input().split()) for i in range(h)]
-# 横河
 for i in range(len(li)):
     st = li[i][0]
     li[i] = '#' + st + '#'
-# 上側
 lis = '#' * (w + 2)
 li.append(lis)
 li.insert(0, lis)

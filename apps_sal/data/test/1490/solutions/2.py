@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
-
-def read_ints(): return list(map(int, input().split()))
+def read_ints():
+    return list(map(int, input().split()))
 
 
 def solve(n, m, s):
@@ -15,13 +14,12 @@ def solve(n, m, s):
 
 
 def __starting_point():
-    n, m = read_ints()
-
+    (n, m) = read_ints()
     s = set(read_ints())
     ans = solve(n, m, s)
     print(len(ans))
     for a in ans:
-        print(a, end=" ")
+        print(a, end=' ')
 
 
 __starting_point()

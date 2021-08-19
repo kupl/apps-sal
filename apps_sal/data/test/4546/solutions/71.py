@@ -1,7 +1,4 @@
-# 入力
-a, b, c = map(int, input().split())
-
-# 出力
+(a, b, c) = map(int, input().split())
 if b - a == c - b:
     print('YES')
 else:

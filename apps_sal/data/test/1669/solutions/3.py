@@ -1,11 +1,8 @@
-#!/usr/bin/env python3
 import sys
-
-n, reserved, m, *lines = sys.stdin.readlines()
+(n, reserved, m, *lines) = sys.stdin.readlines()
 n = int(n)
 reserved = set(reserved.split())
 m = int(m)
-#assert len(lines) == m
 
 
 def strip_comment(line):
@@ -14,15 +11,13 @@ def strip_comment(line):
 
 lines = ' '.join(map(strip_comment, lines))
 
-# print(repr(lines))
-
 
 def is_digit(c):
     return '0' <= c <= '9'
 
 
 def is_word_char(c):
-    return c == '_' or c == '$' or '0' <= c <= '9' or 'A' <= c <= 'Z' or 'a' <= c <= 'z'
+    return c == '_' or c == '$' or '0' <= c <= '9' or ('A' <= c <= 'Z') or ('a' <= c <= 'z')
 
 
 def digit_match(s, ind):
@@ -56,13 +51,14 @@ def tokenize(s):
             continue
         l = max(digit_match(s, ind), word_match(s, ind), reserved_match(s, ind))
         if l == 0:
-            yield '\0'  # yield a garbage character to mess up the stream
+            yield '\x00'
             return
         yield s[ind:ind + l]
         ind += l
 
 
 def simplify_tokens(tokens):
+
     def lex_next(s):
         for i in range(len(s) - 1, -1, -1):
             assert 'a' <= s[i] <= 'z'
@@ -82,24 +78,18 @@ def simplify_tokens(tokens):
             cur_word = lex_next(cur_word)
             while cur_word in reserved:
                 cur_word = lex_next(cur_word)
-
             converted[token] = cur_word
             yield cur_word
 
 
 tokens = list(simplify_tokens(tokenize(lines)))
-# print(tokens)
-
 cur_tokens = []
 result = []
 for token in tokens:
-    #assert token
     cur_tokens.append(token)
-    # only have to check the last 20 tokens
     if list(tokenize(''.join(cur_tokens[-21:]))) != cur_tokens[-21:]:
         result.append(''.join(cur_tokens[:-1]))
         cur_tokens = [token]
-#assert cur_tokens
 if cur_tokens:
     result.append(''.join(cur_tokens))
 print(' '.join(result))

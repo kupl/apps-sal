@@ -1,7 +1,6 @@
 def main():
     t = int(input())
     reserved = set(input().split())
-
     lines = int(input())
     code = ''
     for i in range(lines):
@@ -11,7 +10,7 @@ def main():
         if suspect[0].isdigit():
             return False
         for x in suspect:
-            if (not x.isalpha()) and (not x in {'_', '$'}) and (not x.isdigit()):
+            if not x.isalpha() and (not x in {'_', '$'}) and (not x.isdigit()):
                 return False
         return True
 
@@ -33,11 +32,9 @@ def main():
             elif code[i] == '\n':
                 rez += code[i]
                 state = None
-            else:
-                if state != 'comment':
-                    rez += code[i]
+            elif state != 'comment':
+                rez += code[i]
         return rez
-
     code = remove_comments(code)
     code = code.replace('\n', ' ')
 
@@ -68,12 +65,11 @@ def main():
                     cur.append(p + chr(i + ord('a')))
             cur.sort()
             all.extend(cur)
-            pref = cur[::]
-
+            pref = cur[:]
         all.reverse()
         zip = dict()
         for i in range(len(tokens)):
-            if not tokens[i] in reserved and not tokens[i][0].isdigit():
+            if not tokens[i] in reserved and (not tokens[i][0].isdigit()):
                 if not zip.get(tokens[i], None):
                     while all[-1] in reserved:
                         all.pop()
@@ -81,8 +77,7 @@ def main():
                     all.pop()
                 tokens[i] = zip[tokens[i]]
         return tokens
-
-    tokens = (minmize(split(code)))
+    tokens = minmize(split(code))
 
     def cmp(a, b):
         if len(a) != len(b):
@@ -91,7 +86,6 @@ def main():
             if a[i] != b[i]:
                 return False
         return True
-
     final = []
     for i in range(len(tokens)):
         p = 0
@@ -99,7 +93,6 @@ def main():
             if len(''.join(tokens[j:i + 1])) > 23:
                 p = j
                 break
-
         st = ''
         if i and (not cmp(tokens[p:i + 1], split(''.join(final[p:i]) + tokens[i]))):
             st += ' '

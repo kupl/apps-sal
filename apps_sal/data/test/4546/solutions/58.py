@@ -1,8 +1,5 @@
-# 各数値の取得
-a, b, c = map(int, input().split())
-
-# 計算結果に基づいてメッセージを出力
+(a, b, c) = map(int, input().split())
 if b - a == c - b:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

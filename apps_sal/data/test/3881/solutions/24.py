@@ -1,12 +1,7 @@
-# /usr/bin/env pypy3
-# -*- coding: utf-8 -*-
-
 import collections
 import itertools
-
-
-GOAL = "a"
-Operation = collections.namedtuple("Operation", "before after")
+GOAL = 'a'
+Operation = collections.namedtuple('Operation', 'before after')
 
 
 def is_possible_operation(original_str, operation):
@@ -37,13 +32,13 @@ def judge_dfs(initial_str, operations):
 
 
 def count_valid_strings(len_init_str, operations):
-    cands = itertools.product("abcdef", repeat=len_init_str)
-    a = sum(1 for cs in cands if judge_dfs("".join(cs), operations))
+    cands = itertools.product('abcdef', repeat=len_init_str)
+    a = sum((1 for cs in cands if judge_dfs(''.join(cs), operations)))
     return a
 
 
 def main():
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     operations = [Operation(*input().split()) for _ in range(q)]
     print(count_valid_strings(n, operations))
 

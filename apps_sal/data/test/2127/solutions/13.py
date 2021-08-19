@@ -1,11 +1,11 @@
 import sys
-lax = -10**9
-lay = -10**9
+lax = -10 ** 9
+lay = -10 ** 9
 for _ in range(int(input())):
-    sign, x, y = list(map(str, sys.stdin.readline().split()))
+    (sign, x, y) = list(map(str, sys.stdin.readline().split()))
     x = int(x)
     y = int(y)
-    if sign == "+":
+    if sign == '+':
         if y > x:
             t = x
             x = y
@@ -17,8 +17,7 @@ for _ in range(int(input())):
             t = x
             x = y
             y = t
-        # print(lax,lay)
         if lax <= x and lay <= y:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

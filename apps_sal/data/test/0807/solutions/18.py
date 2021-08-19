@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
-
 def main():
-    def readData(): return list(map(int, input().split()))
-    n, c = readData()
+
+    def readData():
+        return list(map(int, input().split()))
+    (n, c) = readData()
     X = list(readData())
     ret = 0
     for i in range(n - 1):

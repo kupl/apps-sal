@@ -1,11 +1,6 @@
-#!/usr/bin/env pypy3
-# -*- coding: utf-8 -*-
-
 import collections
 import itertools
-
-
-Operation = collections.namedtuple("Operation", "from_str to_str")
+Operation = collections.namedtuple('Operation', 'from_str to_str')
 
 
 def is_feasible_operation(base_str, operation):
@@ -23,7 +18,7 @@ def breadth_first_search(init_str, operations):
     visited[init_str] = True
     while q:
         base_str = q.popleft()
-        if base_str == "a":
+        if base_str == 'a':
             return True
         for operation in operations:
             if not is_feasible_operation(base_str, operation):
@@ -37,15 +32,15 @@ def breadth_first_search(init_str, operations):
 
 def count_valid_strings(len_str, operations):
     counter = 0
-    for chars in itertools.product("abcdef", repeat=len_str):
-        init_str = "".join(chars)
+    for chars in itertools.product('abcdef', repeat=len_str):
+        init_str = ''.join(chars)
         if breadth_first_search(init_str, operations):
             counter += 1
     return counter
 
 
 def main():
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     operations = [Operation(*input().split()) for _ in range(q)]
     print(count_valid_strings(n, operations))
 
