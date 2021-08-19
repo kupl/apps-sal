@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n = input()
     fuel = list(map(int, input().split()))
@@ -8,7 +7,7 @@ for i in range(int(input())):
         if sum == 0:
             break
         else:
-            sum = (sum - 1) + fuel[j]
+            sum = sum - 1 + fuel[j]
             count += 1
     print(count + sum)
     fuel.clear()

@@ -1,6 +1,6 @@
-import re  # Jai Shree Ram!!!
+import re
 
 
 def solve(s):
-    l = [int(i) for i in re.findall(r'(\d+)', s)]
+    l = [int(i) for i in re.findall('(\\d+)', s)]
     return max(l)

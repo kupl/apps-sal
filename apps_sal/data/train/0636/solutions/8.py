@@ -1,5 +1,4 @@
-# cook your dish here
-'''
+"""
 from operator import itemgetter
 inp=list(map(int, input().split()))
 n, t = inp[0], inp[1]
@@ -91,10 +90,9 @@ for id_start in range(n-3):
                 counter+=freq[array[id_start]]*freq[array[id_end]]*freq[array[i_mid1]]*freq[array[i_mid2]]
             computed[(array[id_start], array[i_mid1], array[i_mid2], array[id_end])]=1
 print(counter)
-'''
-
+"""
 nums = list(map(int, input().split()))
-n, t = nums.pop(0), nums.pop(0)
+(n, t) = (nums.pop(0), nums.pop(0))
 ways = [1] + [0] * t
 nums.sort()
 ans = 0

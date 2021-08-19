@@ -1,15 +1,14 @@
-# cook your dish here
 test = int(input())
 for _ in range(test):
-    n, m = map(int, input().split(" "))
-    c = [int(j) for j in input().split(" ")]
+    (n, m) = map(int, input().split(' '))
+    c = [int(j) for j in input().split(' ')]
     revenue = 0
     finallist = []
     remlist = []
     p = 0
     customer = []
     for j in range(n):
-        customer.append([int(j) for j in input().split(" ")])
+        customer.append([int(j) for j in input().split(' ')])
         if c[customer[j][0] - 1] > 0:
             revenue += customer[j][1]
             finallist.append(customer[j][0])
@@ -17,7 +16,6 @@ for _ in range(test):
         else:
             remlist.append(p)
         p += 1
-
     k = 0
     while len(remlist):
         if c[k] > 0:
@@ -28,4 +26,4 @@ for _ in range(test):
         else:
             k += 1
     print(revenue)
-    print(*finallist, sep=" ")
+    print(*finallist, sep=' ')

@@ -11,7 +11,4 @@ for _ in range(int(input())):
             if curr_fuel == 0:
                 break
         count += curr_fuel
-
     print(count)
-
-    # cook your dish here

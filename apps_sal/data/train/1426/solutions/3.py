@@ -1,28 +1,23 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     c = list(map(int, input().split()))
     l = []
     l1 = [0] * n
     total = 0
-
     for i in range(n):
-        d, f, b = list(map(int, input().split()))
+        (d, f, b) = list(map(int, input().split()))
         if c[d - 1] > 0:
             c[d - 1] -= 1
             total += f
             l1[i] = d
-
         else:
             total += b
             l.append(b)
-
     t = m - 1
     print(total)
     for i in l1:
         if i > 0:
             print(i, end=' ')
-
         else:
             while True:
                 if c[t] > 0:
@@ -31,8 +26,6 @@ for _ in range(int(input())):
                     if c[t] == 0:
                         t -= 1
                     break
-
                 else:
                     t -= 1
-
     print('')

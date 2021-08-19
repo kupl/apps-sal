@@ -1,19 +1,14 @@
 t = int(input())
 for i in range(t):
-    # n = number of customers, m = number of flavors
-    n, m = map(int, input().split(" "))
-    # c for number of each flavor
-    c = [int(j) for j in input().split(" ")]
-    # customer for customer preference data
-
+    (n, m) = map(int, input().split(' '))
+    c = [int(j) for j in input().split(' ')]
     revenue = 0
     finallist = []
     remlist = []
     p = 0
-
     customer = []
     for j in range(n):
-        customer.append([int(j) for j in input().split(" ")])
+        customer.append([int(j) for j in input().split(' ')])
         if c[customer[j][0] - 1] > 0:
             revenue += customer[j][1]
             finallist.append(customer[j][0])
@@ -21,7 +16,6 @@ for i in range(t):
         else:
             remlist.append(p)
         p += 1
-
     k = 0
     while len(remlist):
         if c[k] > 0:
@@ -31,6 +25,5 @@ for i in range(t):
             remlist.remove(remlist[0])
         else:
             k += 1
-
     print(revenue)
-    print(*finallist, sep=" ")
+    print(*finallist, sep=' ')
