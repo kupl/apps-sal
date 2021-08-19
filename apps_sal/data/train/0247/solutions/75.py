@@ -1,9 +1,9 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        # premin[i] is the min len of subarr with sum in arr[:i+1]
         premin = [float('inf')] * len(arr)
-        l, cur, res = 0, 0, float('inf')
-        for r, num in enumerate(arr):
+        (l, cur, res) = (0, 0, float('inf'))
+        for (r, num) in enumerate(arr):
             if r > 0:
                 premin[r] = premin[r - 1]
             cur += num

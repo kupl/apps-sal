@@ -1,4 +1,3 @@
-
 from collections import defaultdict
 import os
 import sys
@@ -6,29 +5,16 @@ from io import BytesIO, IOBase
 
 
 def binarySearchCount(arr, n, key):
-
     left = 0
     right = n - 1
-
     count = 0
-
-    while (left <= right):
+    while left <= right:
         mid = int((right + left) / 2)
-
-        # Check if middle element is
-        # less than or equal to key
-        if (arr[mid] <= key):
-
-            # At least (mid + 1) elements are there
-            # whose values are less than
-            # or equal to key
+        if arr[mid] <= key:
             count = mid + 1
             left = mid + 1
-
-        # If key is smaller, ignore right half
         else:
             right = mid - 1
-
     return count
 
 
@@ -38,28 +24,11 @@ def can_break(N, a, d, x, y, maxi, mini):
         return 0
     if c in d:
         return -1
-
     if c > maxi:
         return N
-
     x = binarySearchCount(a, N, c)
     return x
-    """
-    mid=(N-1)//2
-    if c<a[mid]:
-     count=0
-     for i in a:
-      if i>c:
-       return count
-      count+=1
-  
-    else:
-     count=mid+1
-     for i in range(mid+1,N):
-      if a[i]>c:
-       return count
-      count+=1
-    """
+    '\n    mid=(N-1)//2\n    if c<a[mid]:\n     count=0\n     for i in a:\n      if i>c:\n       return count\n      count+=1\n  \n    else:\n     count=mid+1\n     for i in range(mid+1,N):\n      if a[i]>c:\n       return count\n      count+=1\n    '
 
 
 T = int(input())
@@ -73,7 +42,7 @@ while T:
         d[a[i]] = i
     Q = int(input())
     while Q:
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         if x == 0 and y == 0:
             print(0)
         else:

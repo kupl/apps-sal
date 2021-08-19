@@ -3,6 +3,5 @@ def number(bus_stops):
     for x in bus_stops:
         retval = retval + x[0]
         retval = retval - x[1]
-        print((x[1]))
+        print(x[1])
     return retval
-    # Good Luck!
