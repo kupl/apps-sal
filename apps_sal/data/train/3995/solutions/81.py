@@ -3,7 +3,6 @@ def dating_range(age):
         a = int(age / 2 + 7)
         b = (age - 7) * 2
     else:
-        a = int(age - 0.10 * age)
-        b = int(age + 0.10 * age)
-
+        a = int(age - 0.1 * age)
+        b = int(age + 0.1 * age)
     return f'{min(a, b)}-{max(a, b)}'

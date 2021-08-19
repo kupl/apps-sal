@@ -1,1 +1,2 @@
-def say_hello(k): return f'Hello, {k}'
+def say_hello(k):
+    return f'Hello, {k}'

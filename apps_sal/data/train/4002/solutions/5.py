@@ -6,13 +6,13 @@ def memesorting(meme):
         if i == bug[0]:
             bug = bug[1:]
             if len(bug) == 0:
-                return "Roma"
+                return 'Roma'
         if i == boom[0]:
             boom = boom[1:]
             if len(boom) == 0:
-                return "Maxim"
+                return 'Maxim'
         if i == edits[0]:
             edits = edits[1:]
             if len(edits) == 0:
-                return "Danik"
+                return 'Danik'
     return 'Vlad'

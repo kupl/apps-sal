@@ -8,6 +8,6 @@ def strong_num(number):
             j += 1
         sum += a
     if sum == number:
-        return "STRONG!!!!"
+        return 'STRONG!!!!'
     else:
-        return "Not Strong !!"
+        return 'Not Strong !!'

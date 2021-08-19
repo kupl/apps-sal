@@ -1,6 +1,6 @@
 def uniq_c(seq):
     m = []
-    n, i = len(seq), 0
+    (n, i) = (len(seq), 0)
     while i < n:
         c = seq[i]
         j = i + 1

@@ -3,6 +3,6 @@ def dating_range(age):
         maximum = (age - 7) * 2
         minimum = age / 2 + 7
     else:
-        maximum = age + 0.10 * age
-        minimum = age - 0.10 * age
+        maximum = age + 0.1 * age
+        minimum = age - 0.1 * age
     return '{}-{}'.format(int(minimum), int(maximum))

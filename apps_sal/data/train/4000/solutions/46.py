@@ -6,6 +6,6 @@ def strong_num(number):
     for el in str(number):
         sum += factorial(int(el))
     if sum == number:
-        return "STRONG!!!!"
+        return 'STRONG!!!!'
     else:
-        return "Not Strong !!"
+        return 'Not Strong !!'

@@ -4,4 +4,4 @@ def arithmetic_sequence_sum(a, r, n):
     while x != 0:
         a += r
         x -= 1
-    return (n * (b + a)) / 2
+    return n * (b + a) / 2

@@ -7,7 +7,7 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    return a / b if b != 0 else "Error"
+    return a / b if b != 0 else 'Error'
 
 
 def mod(a, b):
@@ -15,7 +15,7 @@ def mod(a, b):
 
 
 def exponent(a, b):
-    return a**b
+    return a ** b
 
 
 def subt(a, b):

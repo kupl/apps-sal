@@ -1,9 +1,9 @@
 def basic_op(operator, value1, value2):
-    if operator[0] == "+":
+    if operator[0] == '+':
         return value1 + value2
-    elif operator[0] == "-":
+    elif operator[0] == '-':
         return value1 - value2
-    elif operator[0] == "*":
+    elif operator[0] == '*':
         return value1 * value2
-    elif operator[0] == "/":
+    elif operator[0] == '/':
         return value1 / value2

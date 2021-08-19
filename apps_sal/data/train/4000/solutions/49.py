@@ -6,4 +6,4 @@ def fac(n):
 
 
 def strong_num(n):
-    return "STRONG!!!!" if sum([fac(int(x)) for x in str(n)]) == n else "Not Strong !!"
+    return 'STRONG!!!!' if sum([fac(int(x)) for x in str(n)]) == n else 'Not Strong !!'

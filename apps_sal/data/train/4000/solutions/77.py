@@ -1,4 +1,5 @@
 def strong_num(number):
+
     def factorial(n):
         if n == 0:
             return 1
@@ -11,6 +12,6 @@ def strong_num(number):
     for num in str(number):
         suma += factorial(int(num))
     if suma == number:
-        return "STRONG!!!!"
+        return 'STRONG!!!!'
     else:
-        return "Not Strong !!"
+        return 'Not Strong !!'

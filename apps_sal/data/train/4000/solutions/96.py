@@ -10,5 +10,5 @@ def strong_num(number):
         total += fact[tmp % 10]
         tmp = int(tmp / 10)
     if total == number:
-        return "STRONG!!!!"
-    return "Not Strong !!"
+        return 'STRONG!!!!'
+    return 'Not Strong !!'

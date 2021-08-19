@@ -1,12 +1,5 @@
 import re
-
-TACODICT = {
-    't': 'tomato',
-    'l': 'lettuce',
-    'c': 'cheese',
-    'g': 'guacamole',
-    's': 'salsa'
-}
+TACODICT = {'t': 'tomato', 'l': 'lettuce', 'c': 'cheese', 'g': 'guacamole', 's': 'salsa'}
 
 
 def tacofy(word):

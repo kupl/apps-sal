@@ -1,10 +1,10 @@
 def find_even_index(arr):
+
     def partial_sum(arr):
         total = 0
         for i in arr:
             total += i
             yield total
-
     sums = list(partial_sum(arr))
 
     def sumleft(i):
@@ -15,7 +15,6 @@ def find_even_index(arr):
 
     def sumright(i):
         return sums[len(sums) - 1] - sums[i]
-
     for i in range(len(arr)):
         sl = sumleft(i)
         sr = sumright(i)

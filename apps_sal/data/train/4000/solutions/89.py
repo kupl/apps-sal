@@ -11,6 +11,5 @@ def fac(number):
 
 def strong_num(number):
     numbers = [int(n) for n in str(number)]
-    flag = sum(fac(n) for n in numbers) == number
-
-    return "STRONG!!!!" if flag else "Not Strong !!"
+    flag = sum((fac(n) for n in numbers)) == number
+    return 'STRONG!!!!' if flag else 'Not Strong !!'

@@ -2,4 +2,4 @@ u = [8, 58, 85, 88, 358, 385, 538, 583, 588, 835, 853, 858, 885, 888, 3588, 3858
 
 
 def solve(a, b):
-    return sum(a <= x < b for x in u)
+    return sum((a <= x < b for x in u))

@@ -2,7 +2,7 @@ def encrypt(text, key):
     r = ''
     a = 'abcdefghijklmnopqrstuvwxyz'
     km = [[a.index(key[0]), a.index(key[1])], [a.index(key[2]), a.index(key[3])]]
-    text = ''.join(x for x in text.lower() if x in a)
+    text = ''.join((x for x in text.lower() if x in a))
     if len(text) % 2:
         text += 'z'
     for i in range(0, len(text), 2):

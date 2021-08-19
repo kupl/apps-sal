@@ -1,5 +1,4 @@
 import operator as o
-
 add = o.add
 multiply = o.mul
 divide = o.truediv

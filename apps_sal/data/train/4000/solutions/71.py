@@ -7,7 +7,7 @@ def strong_num(number):
             f *= q
         res.append(f)
     z = sum(res)
-    t = "".join(str(z))
+    t = ''.join(str(z))
     if str(number) == t:
         return 'STRONG!!!!'
     else:

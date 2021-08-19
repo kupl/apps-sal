@@ -7,5 +7,4 @@ def tidyNumber(n):
                 continue
             else:
                 return False
-
     return True

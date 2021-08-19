@@ -1,3 +1,3 @@
 def say_hello(name):
-    ans = "Hello, " + name
+    ans = 'Hello, ' + name
     return ans

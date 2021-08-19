@@ -6,6 +6,6 @@ def dating_range(age):
         min = int(age - 0.1 * age)
         max = int(age + 0.1 * age)
     r = str(min)
-    r += "-"
+    r += '-'
     r += str(max)
     return r

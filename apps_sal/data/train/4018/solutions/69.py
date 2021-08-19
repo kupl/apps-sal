@@ -6,7 +6,7 @@ def isDigit(string):
     print(s.isnumeric())
     try:
         float(s)
-        print("succes")
+        print('succes')
         return True
     except:
         return False

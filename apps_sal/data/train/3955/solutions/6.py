@@ -1,7 +1,7 @@
 def bracket_pairs(strng):
     matching_indexes = {}
     open_indexes = []
-    for i, a in enumerate(strng):
+    for (i, a) in enumerate(strng):
         if a == '(':
             open_indexes.append(i)
         elif a == ')':

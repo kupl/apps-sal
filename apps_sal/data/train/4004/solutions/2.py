@@ -6,4 +6,4 @@ class OC(Counter, OrderedDict):
 
 
 def first_dup(s):
-    return next((c for c, n in OC(s).items() if n > 1), None)
+    return next((c for (c, n) in OC(s).items() if n > 1), None)

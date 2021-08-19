@@ -12,4 +12,4 @@ def basic_op(operator, value1, value2):
         res = value1 / value2
         return res
     else:
-        print("Use only (+ - * /) functions")
+        print('Use only (+ - * /) functions')

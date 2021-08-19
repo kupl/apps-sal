@@ -1,2 +1,2 @@
 def say_hello(n):
-    return "Hello, " + n
+    return 'Hello, ' + n

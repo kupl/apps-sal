@@ -18,5 +18,5 @@ def strong_num(number):
     for num in play:
         add += factorial(int(num))
     if add == number:
-        return "STRONG!!!!"
-    return "Not Strong !!"
+        return 'STRONG!!!!'
+    return 'Not Strong !!'

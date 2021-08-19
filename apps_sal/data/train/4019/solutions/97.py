@@ -4,5 +4,4 @@ def max_multiple(divisor, bound):
         if bound % divisor == 0:
             output = bound
         bound -= 1
-
     return bound + 1

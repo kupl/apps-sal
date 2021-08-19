@@ -4,13 +4,12 @@ def basic_op(operator, value1, value2):
     addition = value1 + value2
     subtraction = value1 - value2
     result = 0
-
-    if operator == "*":
+    if operator == '*':
         result = multiplication
-    if operator == "/":
+    if operator == '/':
         result = division
-    if operator == "+":
+    if operator == '+':
         result = addition
-    if operator == "-":
+    if operator == '-':
         result = subtraction
     return result

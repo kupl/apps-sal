@@ -1,2 +1,2 @@
 def derive(a, b):
-    return f'{int(a)*int(b)}x^{(int(b)- 1)}'
+    return f'{int(a) * int(b)}x^{int(b) - 1}'

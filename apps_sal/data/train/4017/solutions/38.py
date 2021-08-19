@@ -7,7 +7,7 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    return a // b if (int(a) == a) and (int(b) == b) else a / b
+    return a // b if int(a) == a and int(b) == b else a / b
 
 
 def mod(a, b):

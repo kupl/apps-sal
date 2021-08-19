@@ -1,5 +1,4 @@
 def strong_num(number):
-
     sum = 0
     for i in map(int, str(number)):
         temp = 1
@@ -8,5 +7,5 @@ def strong_num(number):
         sum += temp
     print(number, sum)
     if number == sum:
-        return "STRONG!!!!"
-    return "Not Strong !!"
+        return 'STRONG!!!!'
+    return 'Not Strong !!'

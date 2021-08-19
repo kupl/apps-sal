@@ -7,5 +7,5 @@ def graceful_tipping(rest_bill):
         return math.ceil(res)
     tmp = 5 * 10.0 ** (math.ceil(math.log10(res)) - 2)
     if res % tmp > 0:
-        res += (tmp - res % tmp)
+        res += tmp - res % tmp
     return res

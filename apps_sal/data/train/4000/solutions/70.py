@@ -7,5 +7,5 @@ def strong_num(number):
             num = num * i
         sum1 += num
     if number == sum1:
-        return "STRONG!!!!"
-    return "Not Strong !!"
+        return 'STRONG!!!!'
+    return 'Not Strong !!'

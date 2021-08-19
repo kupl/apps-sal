@@ -15,5 +15,4 @@ def highest_rank(arr):
             maxes = [num]
         elif freq[num] == mx[1]:
             maxes.append(num)
-
     return max(maxes)

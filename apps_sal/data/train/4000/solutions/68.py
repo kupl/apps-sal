@@ -9,6 +9,6 @@ def strong_num(number):
         c = c + f
         f = 1
     if c == number:
-        return "STRONG!!!!"
+        return 'STRONG!!!!'
     else:
-        return "Not Strong !!"
+        return 'Not Strong !!'

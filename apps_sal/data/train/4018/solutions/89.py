@@ -7,11 +7,9 @@ def isDigit(string):
         return True
     except ValueError:
         pass
-
     try:
         unicodedata.numeric(string)
         return True
     except (TypeError, ValueError):
         pass
-
     return False

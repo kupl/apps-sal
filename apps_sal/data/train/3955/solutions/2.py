@@ -1,6 +1,6 @@
 def bracket_pairs(stg):
-    open, dic = [], {}
-    for i, e in enumerate(stg):
+    (open, dic) = ([], {})
+    for (i, e) in enumerate(stg):
         if e == '(':
             open.append(i)
         if e == ')':

@@ -25,7 +25,7 @@ def common_divisors(n):
     s = second(n)
     g = gcd(f, s)
     r = 1
-    for x in range(2, int(g**0.5) + 1):
+    for x in range(2, int(g ** 0.5) + 1):
         if g % x == 0:
             if x * x == g:
                 r += 1

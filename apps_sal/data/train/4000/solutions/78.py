@@ -5,9 +5,9 @@ def strong_num(number):
         f = 1
         j = int(i)
         if j != 0:
-            for k in range(1, (j + 1)):
+            for k in range(1, j + 1):
                 f *= k
         a += f
     if a == number:
-        return "STRONG!!!!"
-    return "Not Strong !!"
+        return 'STRONG!!!!'
+    return 'Not Strong !!'

@@ -1,5 +1,4 @@
 def basic_op(operator, v1, v2):
-
     if operator == '+':
         a1 = v1 + v2
     elif operator == '-':

@@ -1,5 +1,5 @@
 def getDivs(n):
-    return {1} | {y for x in range(2, int(n**.5) + 1) for y in [n // x, x] if not n % x}
+    return {1} | {y for x in range(2, int(n ** 0.5) + 1) for y in [n // x, x] if not n % x}
 
 
 def amicable_numbers(n1, n2):

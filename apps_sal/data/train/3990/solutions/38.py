@@ -4,4 +4,4 @@ def derive(coeff, expo):
     if expo <= 2:
         return string(num)
     else:
-        return str(num) + "x^" + str(expo)
+        return str(num) + 'x^' + str(expo)

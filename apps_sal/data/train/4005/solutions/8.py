@@ -4,5 +4,5 @@ def reverse_bits(n):
     b.reverse()
     c = ''
     for i in b:
-        c += (i)
-    return(int(c, 2))
+        c += i
+    return int(c, 2)

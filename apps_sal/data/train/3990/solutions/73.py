@@ -1,4 +1,4 @@
 def derive(coefficient, exponent):
     a = str(coefficient * exponent)
     b = str(exponent - 1)
-    return(f'{a}x^{b}')
+    return f'{a}x^{b}'

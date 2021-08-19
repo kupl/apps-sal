@@ -1,4 +1,5 @@
 class Eq:
+
     def __eq__(self, _):
         return True
 

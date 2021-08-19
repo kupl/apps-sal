@@ -1,4 +1,5 @@
 class Stack:
+
     def __init__(self):
         self.items = []
 
@@ -25,9 +26,9 @@ def bracket_pairs(s):
     res = {}
     flag = True
     while i < l and flag:
-        if s[i] == "(":
+        if s[i] == '(':
             stack.push(i)
-        elif s[i] == ")":
+        elif s[i] == ')':
             if stack.is_empty():
                 flag = False
             else:

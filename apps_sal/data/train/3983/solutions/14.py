@@ -1,4 +1,5 @@
 def Xbonacci(signature, n):
+
     def gen_bonacci(signature):
         yield from signature
         from collections import deque
