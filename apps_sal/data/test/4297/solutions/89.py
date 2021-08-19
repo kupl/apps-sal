@@ -1,13 +1,9 @@
-#
 import sys
 import math
 import numpy as np
 import itertools
-
-
 n = int(input())
-
 if n % 2 == 0:
     print(n)
 else:
-    print((n * 2))
+    print(n * 2)

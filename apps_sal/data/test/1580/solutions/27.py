@@ -11,15 +11,34 @@ from functools import reduce, lru_cache
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def MAP1(): return map(lambda x: int(x) - 1, input().split())
-def LIST(): return list(MAP())
-def LIST1(): return list(MAP1())
 
 
-class UnionFind():
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def MAP1():
+    return map(lambda x: int(x) - 1, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+def LIST1():
+    return list(MAP1())
+
+
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -34,13 +53,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -55,7 +71,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -64,14 +80,12 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-n, m = MAP()
-uf = UnionFind(n)  # 初期化
-
+(n, m) = MAP()
+uf = UnionFind(n)
 for i in range(m):
-    x, y, z = MAP1()
-    uf.union(x, y)  # グループを併合
-
+    (x, y, z) = MAP1()
+    uf.union(x, y)
 print(uf.group_count())

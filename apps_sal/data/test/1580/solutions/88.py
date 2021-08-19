@@ -1,13 +1,11 @@
 import sys
-n, m = list(map(int, input().split()))
-
-sys.setrecursionlimit(10**9)  # 再帰の上限をあげる
-
-root = [-1 for i in range(n + 1)]  # 自分が親ならグループの人数のマイナス倍を、そうでないなら（元）親の番号を示す
+(n, m) = list(map(int, input().split()))
+sys.setrecursionlimit(10 ** 9)
+root = [-1 for i in range(n + 1)]
 dep = [1] * (n + 1)
 
 
-def r(x):  # 親は誰？
+def r(x):
     if root[x] < 0:
         return x
     else:
@@ -23,16 +21,14 @@ def unite(x, y):
     if dep[x] == dep[y]:
         dep[x] += 1
     if dep[x] < dep[y]:
-        x, y = y, x
+        (x, y) = (y, x)
     root[x] += root[y]
     root[y] = x
 
 
 for i in range(m):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     unite(x, y)
-
-
 g = [0] * (n + 1)
 for i in range(1, n + 1):
     g[r(i)] += 1

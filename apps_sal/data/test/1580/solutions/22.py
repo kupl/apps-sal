@@ -1,11 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# 問題：https://atcoder.jp/contests/abc126/tasks/abc126_e
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-class Graph():
+class Graph:
 
     def __init__(self):
         self.adjacency_dict = {}
@@ -34,18 +27,16 @@ class Graph():
         return self.adjacency_dict[v]
 
     def print_graph(self):
-        print((self.adjacency_dict))
+        print(self.adjacency_dict)
 
 
-n, m = list(map(int, input().strip().split()))
+(n, m) = list(map(int, input().strip().split()))
 xyz = [list(map(int, input().strip().split())) for _ in range(m)]
-
 g = Graph()
 for i in range(n):
     g.add_vertex(i)
 for i in range(m):
     g.add_edge(xyz[i][0] - 1, xyz[i][1] - 1)
-
 res = 0
 reached_nodes = [0 for _ in range(n)]
 for i in g.get_vertexes():
@@ -61,5 +52,4 @@ for i in g.get_vertexes():
                 continue
             q.append(v)
             reached_nodes[v] = 1
-
 print(res)

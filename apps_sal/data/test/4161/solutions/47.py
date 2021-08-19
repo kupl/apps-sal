@@ -1,7 +1,4 @@
-# C - Sum of gcd of Tuples (Easy)
-
 import math
-
 k = int(input())
 s = 0
 for a in range(1, k + 1):
@@ -12,5 +9,4 @@ for a in range(1, k + 1):
         else:
             for c in range(1, k + 1):
                 s += math.gcd(gcdab, c)
-
 print(s)

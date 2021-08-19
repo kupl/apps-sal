@@ -1,6 +1,3 @@
-#!/usr/env python3
-# encoding:utf8
-
 import math
 from itertools import combinations_with_replacement as comb
 from functools import reduce
@@ -8,7 +5,6 @@ from functools import reduce
 
 def main():
     K = int(input())
-
     ans = 0
     for abc in comb(range(1, K + 1), 3):
         gcd = reduce(math.gcd, abc)
@@ -20,8 +16,6 @@ def main():
         else:
             k = 6
         ans += gcd * k
-        #print(f"abc={abc} gcd={gcd} k={k}")
-
     print(ans)
 
 

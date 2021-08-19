@@ -5,7 +5,6 @@ class UnionFind:
     """
 
     def __init__(self, size):
-        # 根は子を含む集合のデータ数を負数でもつ
         self.data = [-1] * size
 
     def merge(self, x, y):
@@ -13,12 +12,8 @@ class UnionFind:
         y = self.root(y)
         if x == y:
             return False
-
-        # y の方がデータ数を多く
         if self.data[x] < self.data[y]:
-            x, y = y, x
-
-        # y に x をつなげる
+            (x, y) = (y, x)
         self.data[y] += self.data[x]
         self.data[x] = y
         return True
@@ -37,12 +32,11 @@ class UnionFind:
 
 
 def main():
-    N, M = [int(_) for _ in input().split()]
+    (N, M) = [int(_) for _ in input().split()]
     uf = UnionFind(N)
     for i in range(M):
-        x, y, z = [int(_) for _ in input().split()]
+        (x, y, z) = [int(_) for _ in input().split()]
         uf.merge(x - 1, y - 1)
-
     cnt = 0
     for i in range(N):
         if uf.root(i) == i:

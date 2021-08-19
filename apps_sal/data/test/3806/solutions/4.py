@@ -1,6 +1,3 @@
-
-# -*- coding: utf-8 -*-
-
 import sys
 import math
 
@@ -25,21 +22,20 @@ def find_dist(x1, y1, x2, y2, X, Y):
 
 
 def main():
-    N, X, Y = list(map(int, sys.stdin.readline().split()))
+    (N, X, Y) = list(map(int, sys.stdin.readline().split()))
     maxr = 0
-    minr = 10**15
+    minr = 10 ** 15
     pts = [tuple(map(int, sys.stdin.readline().split())) for _ in range(N)]
     pts.append(pts[0])
     for i in range(0, len(pts) - 1):
-        x, y = pts[i]
+        (x, y) = pts[i]
         r = dist2(x, y, X, Y)
         if r > maxr:
             maxr = r
         r = find_dist(x, y, pts[i + 1][0], pts[i + 1][1], X, Y)
         if r < minr:
             minr = r
-
-    print("%.10f" % (math.pi * (maxr - minr)))
+    print('%.10f' % (math.pi * (maxr - minr)))
 
 
 def __starting_point():

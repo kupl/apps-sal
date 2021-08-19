@@ -1,4 +1,3 @@
-# Union Find 木
 from sys import setrecursionlimit
 
 
@@ -21,11 +20,9 @@ def unite(parent, i, j):
 
 
 setrecursionlimit(10 ** 6)
-
-N, M = list(map(int, input().split()))
-
+(N, M) = list(map(int, input().split()))
 parent = [-1] * N
 for _ in range(M):
-    X, Y, Z = list(map(int, input().split()))
+    (X, Y, Z) = list(map(int, input().split()))
     unite(parent, X - 1, Y - 1)
-print((len([x for x in parent if x < 0])))
+print(len([x for x in parent if x < 0]))

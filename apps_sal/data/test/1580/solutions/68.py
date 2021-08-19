@@ -1,14 +1,12 @@
-n, m = map(int, input().split())
-
-
-par = [-1] * (n)
+(n, m) = map(int, input().split())
+par = [-1] * n
 
 
 def find(x):
     if par[x] < 0:
         return x
     else:
-        par[x] = find(par[x])  # 経路圧縮
+        par[x] = find(par[x])
         return par[x]
 
 
@@ -23,7 +21,7 @@ def unite(x, y):
         return 0
     else:
         if par[x] > par[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         par[x] += par[y]
         par[y] = x
 
@@ -33,12 +31,9 @@ def size(x):
 
 
 for i in range(m):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     unite(x - 1, y - 1)
-
-
 ans = 0
-# print(par)
 for i in range(n):
     if par[i] < 0:
         ans += 1

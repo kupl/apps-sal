@@ -1,18 +1,25 @@
-#import math
-#import itertools
-#import numpy as np
-#from collections import deque
-# sys.setrecursionlimit(10 ** 6)
-#mod = 10 ** 9 + 7
-#INF = 10 ** 9
-#PI = 3.14159265358979323846
+def INT():
+    return int(input())
 
-def INT(): return int(input())
-def INTM(): return map(int, input().split())
-def STRM(): return map(str, input().split())
-def STR(): return str(input())
-def LIST(): return list(map(int, input().split()))
-def LISTS(): return list(map(str, input().split()))
+
+def INTM():
+    return map(int, input().split())
+
+
+def STRM():
+    return map(str, input().split())
+
+
+def STR():
+    return str(input())
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def LISTS():
+    return list(map(str, input().split()))
 
 
 def do():
@@ -31,11 +38,9 @@ def do():
                 continue
             if bool[j * s]:
                 temp += 1
-
         if temp % 2 != a:
             B.append(s)
             bool[s] = True
-
     B = sorted(B)
     print(len(B))
     if len(B) != 0:

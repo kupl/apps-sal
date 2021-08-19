@@ -1,5 +1,5 @@
-# UnionFind: https://note.nkmk.me/python-union-find/
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.root = [-1] * (n + 1)
@@ -17,7 +17,7 @@ class UnionFind():
         if x == y:
             return False
         if self.root[x] > self.root[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.root[x] += self.root[y]
         self.root[y] = x
 
@@ -28,9 +28,9 @@ class UnionFind():
         return -self.root[self.find(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 cards = UnionFind(n)
 for i in range(m):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     cards.unite(x, y)
 print(len({i + 1 for i in range(n) if cards.root[i + 1] < 0}))
