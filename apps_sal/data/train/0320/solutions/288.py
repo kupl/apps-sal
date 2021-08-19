@@ -1,11 +1,11 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        # do it the other way around
         n_op = 0
         l = len(nums)
         target = l * [0]
         while nums != target:
-            if all(i % 2 == 0 for i in nums):
+            if all((i % 2 == 0 for i in nums)):
                 nums = [i / 2 for i in nums]
                 n_op += 1
             else:

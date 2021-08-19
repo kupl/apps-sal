@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         ans = 0
         n = len(nums)
@@ -18,4 +19,3 @@ class Solution:
                 not_zero.remove(j)
             if len(not_zero) > 0:
                 ans += 1
-            # print(not_zero, nums, ans)

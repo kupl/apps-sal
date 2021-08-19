@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, a: List[int]) -> int:
         ans = 0
         mx = 0
@@ -10,5 +11,4 @@ class Solution:
                 cnt += 1
                 x //= 2
             mx = max(mx, cnt)
-        # print(ans,mx)
         return max(ans + mx - 1, 0)
