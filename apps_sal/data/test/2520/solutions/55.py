@@ -1,7 +1,8 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.ps = [-1] * (n + 1)
 
@@ -18,7 +19,7 @@ class UnionFind:
         if x == y:
             return False
         if self.ps[x] > self.ps[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.ps[x] += self.ps[y]
         self.ps[y] = x
         return True
@@ -31,24 +32,19 @@ class UnionFind:
         return -self.ps[x]
 
 
-all1 = [0] * (n)
-
+all1 = [0] * n
 uf = UnionFind(n)
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     uf.unite(a, b)
-    a, b = a - 1, b - 1
-
+    (a, b) = (a - 1, b - 1)
     all1[a] += 1
     all1[b] += 1
-# print(all1)
 ans = [uf.size(x) - 1 - all1[x - 1] for x in range(1, n + 1)]
-# print(ans)
-
 for i in range(k):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if uf.same(a, b):
-        a, b = a - 1, b - 1
+        (a, b) = (a - 1, b - 1)
         ans[a] -= 1
         ans[b] -= 1
 print(*ans)

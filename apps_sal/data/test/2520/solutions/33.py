@@ -16,13 +16,10 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-#import numpy as np
-
 sys.setrecursionlimit(1000000)
 
 
-class UnionFind():
+class UnionFind:
     par = []
 
     def __init__(self, n):
@@ -49,31 +46,26 @@ class UnionFind():
             return
         self.par[y] = x
 
-    def comp(self):  # rootまでの距離圧縮
+    def comp(self):
         for i in range(len(self.par)):
             self.root(i)
 
 
-n, m, k = L()
+(n, m, k) = L()
 uf = UnionFind(n)
 f = [0] * n
 for i in range(m):
-    a, b = L()
+    (a, b) = L()
     uf.unite(a - 1, b - 1)
     f[a - 1] += 1
     f[b - 1] += 1
 uf.comp()
-
 for i in range(k):
-    a, b = L()
+    (a, b) = L()
     if uf.par[a - 1] == uf.par[b - 1]:
         f[a - 1] += 1
         f[b - 1] += 1
-
 count = collections.Counter(uf.par)
-# print(uf.par)
-# print(count)
-# print(f)
 for i in range(n):
-    print(count[uf.par[i]] - f[i] - 1, "", end="")
+    print(count[uf.par[i]] - f[i] - 1, '', end='')
 print()

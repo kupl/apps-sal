@@ -1,10 +1,9 @@
 def tri(ar):
     d = {'.': 0, 'x': 0, 'o': 0}
-    for i, j in ar:
+    for (i, j) in ar:
         d[a[i][j]] += 1
     if d['.'] == 1 and d['x'] == 2:
         ans[0] = 'YES'
-    # print(d)
 
 
 ans = ['NO']

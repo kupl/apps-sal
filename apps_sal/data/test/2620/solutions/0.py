@@ -1,6 +1,5 @@
 from math import *
-
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 after = min(15, n)
 before = n - after
 
@@ -22,12 +21,9 @@ def perm(i):
 
 p = perm(0)
 x = 0
-
 for _ in range(q):
     line = list(map(int, input().split()))
-
     if len(line) == 3:
-        # type 1
         l = line[1]
         r = line[2]
         res = 0
@@ -40,9 +36,7 @@ for _ in range(q):
             l = before + 1
         if r > before:
             res += sum(p[l - 1 - before:r - before]) + (r - l + 1) * before
-
         print(res)
     else:
-        # type 2
         x += line[1]
         p = perm(x)

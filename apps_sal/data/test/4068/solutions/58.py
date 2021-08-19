@@ -1,36 +1,33 @@
-from decimal import ROUND_HALF_UP, Decimal  # 変換後の末尾桁を0や0.01で指定
-from collections import deque, Counter, defaultdict  # すべてのkeyが用意されてる defaultdict(int)で初期化
+from decimal import ROUND_HALF_UP, Decimal
+from collections import deque, Counter, defaultdict
 from bisect import bisect_left as bileft, bisect_right as biright
 from functools import lru_cache
 from math import sqrt, ceil
 import sys
-mod = 10**9 + 7
-inf = float("inf")
-def input(): return sys.stdin.readline().strip()
+mod = 10 ** 9 + 7
+inf = float('inf')
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 sys.setrecursionlimit(11451419)
-#Decimal((str(0.5)).quantize(Decimal('0'), rounding=ROUND_HALF_UP))
-#メモ化再帰defの冒頭に毎回 @lru_cache(maxsize=10**10)
-# 引数にlistはだめ
-#######ここまでテンプレ#######
-# ソート、"a"+"b"、再帰ならPython3の方がいい
-#######ここから天ぷら########
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = [int(input()) for i in range(m)]
-NG = [0] * (10**5 + 10)
+NG = [0] * (10 ** 5 + 10)
 for i in A:
     NG[i] = 1
 
 
-@lru_cache(maxsize=10**10)
+@lru_cache(maxsize=10 ** 10)
 def qwe(x):
     if x == n:
         return 1
     if x > n:
         return 0
     if NG[x + 1] and NG[x + 2]:
-        print((0))
+        print(0)
         return
     if NG[x + 1]:
         return qwe(x + 2) % mod
@@ -39,4 +36,4 @@ def qwe(x):
     return (qwe(x + 2) + qwe(x + 1)) % mod
 
 
-print((qwe(0)))
+print(qwe(0))
