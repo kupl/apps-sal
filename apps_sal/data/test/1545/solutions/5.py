@@ -1,11 +1,8 @@
-
 import sys
 mod = pow(10, 9) + 7
-
 n = int(sys.stdin.readline())
 s = sys.stdin.readline()[:-1]
 a = [int(x) for x in sys.stdin.readline().split()]
-
 dp = [0 for _ in range(n + 1)]
 dp[0] = 1
 
@@ -16,22 +13,15 @@ def ci(c):
 
 l = 0
 for i in range(1, n + 1):
-    # f: represents the farther
-    # we can get from x (going from
-    # right to left) without breaking
-    # the splitting rules
     f = 0
     for x in range(i - 1, -1, -1):
         f = max(f, i - a[ci(s[x])])
         if f > x:
-            # we broke the rule
             continue
         dp[i] = (dp[i] + dp[x]) % mod
         l = max(l, i - x)
-
 print(dp[n])
 print(l)
-
 res = 1
 m = 9999
 j = 0

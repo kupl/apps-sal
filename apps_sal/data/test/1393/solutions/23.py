@@ -1,13 +1,8 @@
-#!/usr/bin/env python3
-
 from collections import Counter
-
 s_set = Counter(input())
 t_set = Counter(input())
-
 yay_count = 0
 whoops_count = 0
-
 for s in s_set.keys():
     if s in t_set:
         num_to_remove = min(s_set[s], t_set[s])
@@ -30,5 +25,4 @@ for s in s_set.keys():
         s_set[s] -= num_to_remove
         t_set[S] -= num_to_remove
         whoops_count += num_to_remove
-
 print(yay_count, whoops_count)

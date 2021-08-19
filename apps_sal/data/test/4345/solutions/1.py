@@ -1,11 +1,7 @@
-# testing https://codeforces.com/contest/1144/submission/52125086
-
 n = int(input())
 a = [int(ai) for ai in input().split()] + [0]
-
-inc, dec = -1, 10**6
+(inc, dec) = (-1, 10 ** 6)
 marker = [0] * n
-
 for i in range(n):
     if inc < a[i] and a[i] < dec:
         if a[i] < a[i + 1]:
