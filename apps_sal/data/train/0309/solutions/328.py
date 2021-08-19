@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A):
         dp = collections.defaultdict(int)
         mx = 0
@@ -12,4 +13,4 @@ class Solution:
                 else:
                     dp[i_key] = 2
                 mx = max(mx, dp[i_key])
-        return mx  # max(dp.values())
+        return mx

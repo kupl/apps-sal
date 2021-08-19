@@ -1,22 +1,19 @@
 class Solution:
-    def longestArithSeqLength(self, A: List[int]) -> int:
-        memo = {}  # storing next Item -> (diff pattern, length so far)
-        # [a, b, c]
-        maxLength = 2
 
+    def longestArithSeqLength(self, A: List[int]) -> int:
+        memo = {}
+        maxLength = 2
         if len(A) < 3:
             return len(A)
-
-        for i in range(len(A)):  # iterating over A
+        for i in range(len(A)):
             if A[i] in memo:
-                toIter = [(i, j) for i, j in list(memo[A[i]].items())]
+                toIter = [(i, j) for (i, j) in list(memo[A[i]].items())]
                 del memo[A[i]]
                 for k in toIter:
-                    diff, length = k
+                    (diff, length) = k
                     if length > maxLength:
                         maxLength = length
                     length += 1
-
                     newKey = A[i] + diff
                     if newKey not in memo:
                         memo[newKey] = {}
@@ -31,5 +28,4 @@ class Solution:
                     memo[newKey] = {}
                 if diff not in memo[newKey]:
                     memo[newKey][diff] = 3
-
         return maxLength

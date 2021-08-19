@@ -2,14 +2,15 @@ from collections import defaultdict
 
 
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
-        '''
+        """
         # Note:
             A.length >= 2
         # Analysis:
             Arithmetic sequence
 
-        '''
+        """
         n = len(A)
         res = 2
         dif_arr = [defaultdict(int) for _ in range(n)]
@@ -21,5 +22,4 @@ class Solution:
                     res = max(res, dif_arr[i][dif] + 1)
                 else:
                     dif_arr[i][dif] = 1
-
         return res
