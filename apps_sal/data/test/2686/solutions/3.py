@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import deque
 
 
@@ -15,17 +14,16 @@ def bfs(graph, u, t):
 
 
 try:
-    n, e = map(int, input().split())
+    (n, e) = map(int, input().split())
     graph = {}
     for i in range(1, n + 1):
         graph[i] = []
     for _ in range(e):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         graph[a].append(b)
         graph[b].append(a)
-    s, t = map(int, input().split())
+    (s, t) = map(int, input().split())
     p = bfs(graph, s, t)
     print(p)
-
 except:
     pass

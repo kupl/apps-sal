@@ -1,10 +1,8 @@
-# ひっくりかえすのかとお保ったら180度反転だった
 n = int(input())
 d = []
 for _ in range(n):
     s = list(input())
     d.append(s)
-
 d = sorted(d, key=lambda dd: len(dd), reverse=True)
 base = {}
 for c in d[0]:
@@ -12,7 +10,6 @@ for c in d[0]:
         base[c] = 1
     else:
         base[c] += 1
-
 for s in d[1:]:
     tmp = {}
     for c in s:
@@ -20,15 +17,15 @@ for s in d[1:]:
             tmp[c] = 1
         else:
             tmp[c] += 1
-    for k, v in base.items():
+    for (k, v) in base.items():
         if k in tmp and base[k] >= 1:
             base[k] = min(base[k], tmp[k])
         else:
             base[k] = -1
 ans = []
-for k, v in base.items():
+for (k, v) in base.items():
     if v > 0:
         ans.append(k * v)
 ans = sorted(ans)
-ans = "".join(ans)
+ans = ''.join(ans)
 print(ans)

@@ -1,4 +1,3 @@
-# 要素が入ってない場合の list.index の定義
 def myindex(l: list, element, default=-1):
     if element in set(l):
         return l.index(element)
@@ -12,10 +11,9 @@ def main():
     ans = ''
     for _ in range(n):
         S.append(list(input()))
-
     S.sort()
     t = S.pop()
-    for i, u in enumerate(t):
+    for (i, u) in enumerate(t):
         okflag = True
         for s in S:
             if myindex(s, u) == -1:
@@ -26,7 +24,7 @@ def main():
                 s.pop(s.index(u))
             ans += u
     ans = sorted(ans)
-    print((''.join(ans)))
+    print(''.join(ans))
 
 
 def __starting_point():

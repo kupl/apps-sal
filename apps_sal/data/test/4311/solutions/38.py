@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -16,11 +15,9 @@ def main():
     s = int(input())
     dp = [s]
     counter = 0
-
     if s == 1 or s == 2:
         print(4)
         return
-
     while counter < 1000001:
         n = dp.pop()
         tmp = func(n)

@@ -1,15 +1,11 @@
-#!/usr/bin/env python
-
 n = int(input())
 s = [input() for _ in range(n)]
-
 d = {}
 for i in range(len(s[0])):
     if s[0][i] not in d:
         d[s[0][i]] = 1
     else:
         d[s[0][i]] += 1
-
 for i in range(n):
     for key in list(d.keys()):
         tmp = 0
@@ -18,8 +14,6 @@ for i in range(n):
                 tmp += 1
         if tmp <= d[key]:
             d[key] = tmp
-
-# print('d =', d)
 d = sorted(list(d.items()), key=lambda x: x[0])
 ans = ''
 for i in range(len(d)):
