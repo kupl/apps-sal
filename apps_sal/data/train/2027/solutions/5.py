@@ -9,7 +9,6 @@ while s:
     while s and s[0] == ref:
         c += 1
         s.popleft()
-    # print(ref,c)
     if ref == 'l':
         for i in range(c - 1):
             ri.append(n + i + 1)
@@ -20,6 +19,5 @@ while s:
             le.append(n + i + 1)
         ri.append(n + c)
         n = n + c
-    # print(le,ri)
 le.extend(ri[::-1])
 print('\n'.join([str(i) for i in le]))

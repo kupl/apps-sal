@@ -1,5 +1,3 @@
-
-# https://integratedmlai.com/matrixinverse/
 def identity_matrix(n):
     """
     Creates and returns an identity matrix.
@@ -9,7 +7,6 @@ def identity_matrix(n):
     I = zeros_matrix(n, n)
     for i in range(n):
         I[i][i] = 1.0
-
     return I
 
 
@@ -24,21 +21,15 @@ def invert_matrix(A, tol=None):
     AM = copy_matrix(A)
     I = identity_matrix(n)
     IM = copy_matrix(I)
-
-    # Section 3: Perform row operations
-    indices = list(range(n))  # to allow flexible row referencing ***
-    for fd in range(n):  # fd stands for focus diagonal
+    indices = list(range(n))
+    for fd in range(n):
         fdScaler = 1.0 / AM[fd][fd]
-        # FIRST: scale fd row with fd inverse.
-        for j in range(n):  # Use j to indicate column looping.
+        for j in range(n):
             AM[fd][j] *= fdScaler
             IM[fd][j] *= fdScaler
-        # SECOND: operate on all rows except fd row as follows:
         for i in indices[0:fd] + indices[fd + 1:]:
-            # *** skip row with fd in it.
-            crScaler = AM[i][fd]  # cr stands for "current row".
+            crScaler = AM[i][fd]
             for j in range(n):
-                # cr - crScaler * fdRow, but one element at a time.
                 AM[i][j] = AM[i][j] - crScaler * AM[fd][j]
                 IM[i][j] = IM[i][j] - crScaler * IM[fd][j]
     return IM
@@ -56,36 +47,28 @@ def zeros_matrix(rows, cols):
 def copy_matrix(M):
     rows = len(M)
     cols = len(M[0])
-
     MC = zeros_matrix(rows, cols)
-
     for i in range(rows):
         for j in range(rows):
             MC[i][j] = M[i][j]
-
     return MC
 
 
 def matrix_multiply(A, B):
     rowsA = len(A)
     colsA = len(A[0])
-
     rowsB = len(B)
     colsB = len(B[0])
-
     if colsA != rowsB:
         print('Number of A columns must equal number of B rows.')
         return
-
     C = zeros_matrix(rowsA, colsB)
-
     for i in range(rowsA):
         for j in range(colsB):
             total = 0
             for ii in range(colsA):
                 total += A[i][ii] * B[ii][j]
             C[i][j] = total
-
     return C
 
 
@@ -94,6 +77,7 @@ def transposeMatrix(m):
 
 
 class Datamining:
+
     def __init__(self, train_set, n=6):
         self.data = train_set
         self.n = n
@@ -101,8 +85,8 @@ class Datamining:
         self.fit()
 
     def fit(self):
-        X, ys = [], []
-        for x, y in self.data:
+        (X, ys) = ([], [])
+        for (x, y) in self.data:
             X.append([x ** i for i in range(self.n)])
             ys.append([y])
         Xt = transposeMatrix(X)
