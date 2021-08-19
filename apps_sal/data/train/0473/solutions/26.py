@@ -1,7 +1,5 @@
-# N = len(arr)
-# time: O(N^2)
-# space: O(N^2)
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         memo = [arr[:] for _ in range(len(arr))]
         for i in range(len(arr)):

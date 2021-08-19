@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         N = len(arr)
         ans = 0
@@ -12,5 +13,3 @@ class Solution:
                         ans += 1
                 l.append(v)
         return ans
-
-        # there's an O(N) algorithm

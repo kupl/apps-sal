@@ -1,12 +1,10 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         n = len(arr)
         prefixxor = [0]
-
         for i in range(n):
-            prefixxor.append(prefixxor[- 1] ^ arr[i])
-
-#       so   arr[i] ^ arr[i + 1] ^ ... ^ arr[j - 1] = prefixxor[j - 1] ^ prefixxor[i - 1]
+            prefixxor.append(prefixxor[-1] ^ arr[i])
         count = 0
         for i in range(1, n + 1):
             for j in range(i + 1, n + 1):

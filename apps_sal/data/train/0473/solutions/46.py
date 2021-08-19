@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         n = len(arr)
         if n < 2:
@@ -10,9 +11,7 @@ class Solution:
                 b = 0
                 for k in range(j, n):
                     b ^= arr[k]
-                    # print(i, j, k, a == b)
                     if a == b:
                         out += 1
                 a ^= arr[j]
-
         return out
