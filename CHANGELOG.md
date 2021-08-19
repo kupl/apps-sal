@@ -4,6 +4,9 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 
 ## [Unreleased](https://github.com/kupl/apps-sal)
 
+### Changed
+- Format solutions with `ast` module and `autopep8`.
+
 ### Removed
 - Remove duplicated solutions.
 - Delete comments in solutions.
