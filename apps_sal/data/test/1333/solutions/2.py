@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split(' ')))
-
+(n, m) = list(map(int, input().split(' ')))
 f = 0
 for l in range(n):
     if l % 2 == 0:

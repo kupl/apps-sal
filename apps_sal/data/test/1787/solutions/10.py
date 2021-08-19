@@ -1,9 +1,6 @@
 s = input()
-
 l = []
-
 c = 0
-
 for i in s:
     if i == 'a':
         c += 1
@@ -11,16 +8,10 @@ for i in s:
         if c:
             l.append(c)
             c = 0
-
 if c:
     l.append(c)
-
-md = 10**9 + 7
-
+md = 10 ** 9 + 7
 ans = 0
-
-# print(l)
-
 d = {}
 
 
@@ -36,11 +27,9 @@ def inverse(a, n):
         tmp = t - q * t1
         t = t1
         t1 = tmp
-
         tmp = r - q * r1
         r = r1
         r1 = tmp
-
     if t < 0:
         t += n
     t = (t + n) % n
@@ -52,13 +41,10 @@ mul = 1
 for i in l:
     mul *= i + 1
     mul %= md
-
 for i in range(len(l)):
-    mul = (mul * inverse(l[i] + 1, md)) % md
+    mul = mul * inverse(l[i] + 1, md) % md
     m = mul * l[i]
     m %= md
-
     ans += m
     ans %= md
-
 print(ans)

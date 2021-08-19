@@ -1,16 +1,12 @@
-# n = int(input())
-n, x = list(map(int, input().split()))
-
+(n, x) = list(map(int, input().split()))
 sad = 0
 for _ in range(n):
-    sign, number = input().split()
+    (sign, number) = input().split()
     number = int(number)
     if sign == '+':
         x += number
+    elif number <= x:
+        x -= number
     else:
-        if number <= x:
-            x -= number
-        else:
-            sad += 1
-
+        sad += 1
 print(x, sad)

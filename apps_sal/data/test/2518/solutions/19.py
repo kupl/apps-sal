@@ -1,4 +1,4 @@
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 H = []
 for _ in range(N):
     H.append(int(input()))
@@ -10,7 +10,6 @@ def check(x):
     for h in H:
         if h > x * B:
             tmp = (h - x * B) // (A - B)
-            # 切り上げ
             if tmp * (A - B) != h - x * B:
                 tmp += 1
             cnt += tmp
@@ -18,7 +17,6 @@ def check(x):
         return True
     else:
         return False
-# (l,r]
 
 
 def bisect(l, r):
@@ -31,4 +29,4 @@ def bisect(l, r):
         return bisect(mid, r)
 
 
-print((bisect(0, 10**28)))
+print(bisect(0, 10 ** 28))

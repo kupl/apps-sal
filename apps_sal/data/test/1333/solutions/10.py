@@ -1,12 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 flag = 0
 for i in range(n):
     if i % 2 == 0:
         print('#' * m)
+    elif flag == 0:
+        print('.' * (m - 1), '#', sep='')
+        flag = (flag + 1) % 2
     else:
-        if flag == 0:
-            print('.' * (m - 1), '#', sep='')
-            flag = (flag + 1) % 2
-        else:
-            print('#', '.' * (m - 1), sep='')
-            flag = (flag + 1) % 2
+        print('#', '.' * (m - 1), sep='')
+        flag = (flag + 1) % 2

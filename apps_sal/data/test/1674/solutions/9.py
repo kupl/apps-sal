@@ -2,20 +2,14 @@ import math
 import bisect
 import itertools
 import sys
-def I(): return sys.stdin.readline()
 
 
-mod = 10**9 + 7
-'''fact=[1]*100001
-ifact=[1]*100001
-for i in range(1,100001):
-    fact[i]=((fact[i-1])*i)%mod
-    ifact[i]=((ifact[i-1])*pow(i,mod-2,mod))%mod
-def ncr(n,r):
-    return (((fact[n]*ifact[n-r])%mod)*ifact[r])%mod
-def npr(n,r):
-    return (((fact[n]*ifact[n-r])%mod))
-    '''
+def I():
+    return sys.stdin.readline()
+
+
+mod = 10 ** 9 + 7
+'fact=[1]*100001\nifact=[1]*100001\nfor i in range(1,100001):\n    fact[i]=((fact[i-1])*i)%mod\n    ifact[i]=((ifact[i-1])*pow(i,mod-2,mod))%mod\ndef ncr(n,r):\n    return (((fact[n]*ifact[n-r])%mod)*ifact[r])%mod\ndef npr(n,r):\n    return (((fact[n]*ifact[n-r])%mod))\n    '
 
 
 def mindiff(a):
@@ -47,18 +41,18 @@ def merge(a, b):
             j += 1
     ans += a[i:]
     ans += b[j:]
-    return ans, c
+    return (ans, c)
 
 
 def mergesort(a):
     if len(a) == 1:
-        return a, 0
+        return (a, 0)
     mid = len(a) // 2
-    left, left_inversion = mergesort(a[:mid])
-    right, right_inversion = mergesort(a[mid:])
-    m, c = merge(left, right)
-    c += (left_inversion + right_inversion)
-    return m, c
+    (left, left_inversion) = mergesort(a[:mid])
+    (right, right_inversion) = mergesort(a[mid:])
+    (m, c) = merge(left, right)
+    c += left_inversion + right_inversion
+    return (m, c)
 
 
 def is_prime(num):
@@ -86,7 +80,7 @@ def ceil(a, b):
     if a % b == 0:
         return a // b
     else:
-        return (a // b + 1)
+        return a // b + 1
 
 
 def binsearch(arr, b, low, high):
@@ -101,7 +95,7 @@ def binsearch(arr, b, low, high):
 def ncr1(n, r):
     s = 1
     for i in range(min(n - r, r)):
-        s *= (n - i)
+        s *= n - i
         s %= mod
         s *= pow(i + 1, mod - 2, mod)
         s %= mod
@@ -121,11 +115,9 @@ def modu(a, n):
         return n
     return a % n
 
-# /////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 for i in range(1):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     s = input()
     c = 1
@@ -140,17 +132,12 @@ for i in range(1):
             f = False
     if True:
         b.append(c)
-    # print(b)
     ans = 0
     su = 0
     for i in b:
-        c = a[su:min(su + i, 10**9)]
-
-        # print(c)
-
+        c = a[su:min(su + i, 10 ** 9)]
         c.sort(reverse=True)
         c = c[:min(i, k)]
         su += i
         ans += sum(c)
-
     print(ans)

@@ -1,10 +1,6 @@
-
 def submit():
-    n, a, b = (int(e) for e in input().split())
+    (n, a, b) = (int(e) for e in input().split())
     h = [int(input()) for _ in range(n)]
-
-    # t回で倒せるか否かを判定する処理を実施し、
-    # tについて2分探索する
 
     def judge(t):
         base_damage = b * t
@@ -13,12 +9,11 @@ def submit():
             if hi <= base_damage:
                 continue
             res = hi - base_damage
-            q, r = divmod(res, a - b)
+            (q, r) = divmod(res, a - b)
             add_attack += q
             if r:
                 add_attack += 1
         return add_attack <= t
-
     max_attack = 0
     for hi in h:
         max_attack += hi // a + 1
@@ -27,12 +22,10 @@ def submit():
         mid = (min_attack + max_attack) // 2
         if mid == min_attack:
             break
+        elif judge(mid):
+            max_attack = mid
         else:
-            if judge(mid):
-                max_attack = mid
-            else:
-                min_attack = mid
-
+            min_attack = mid
     print(max_attack)
 
 

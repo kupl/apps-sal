@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
-n, m = list(map(int, input().split(' ')))
-
+(n, m) = list(map(int, input().split(' ')))
 i = 0
 while i < n:
     print('#' * m)

@@ -9,11 +9,10 @@ def snake(a, b):
     return '#' + '.' * (n - 1)
 
 
-m, n = list(map(int, input().split()))
+(m, n) = list(map(int, input().split()))
 p = 0
 s = ''
 for i in range(m):
     s += snake(p, n) + '\n'
     p = (p + 1) % 4
-
 print(s)

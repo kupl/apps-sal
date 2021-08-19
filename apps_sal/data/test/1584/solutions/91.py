@@ -8,7 +8,7 @@ st = [j + 1 for j in range(N - 1)]
 for i in range(N - 2):
     if l[i] + l[i + 1] > max:
         k = N - i - 1
-        ans += ((k - 1) * k * (k + 1)) // 6
+        ans += (k - 1) * k * (k + 1) // 6
         break
     for j in range(i + 1, N - 1):
         if j == tc:
@@ -19,7 +19,7 @@ for i in range(N - 2):
             continue
         if s > max:
             tc = j
-            tp = (N - j - 1) * (N - j) // 2  # これをiの中でできないか
+            tp = (N - j - 1) * (N - j) // 2
             ans += tp
             break
         start = st[j]

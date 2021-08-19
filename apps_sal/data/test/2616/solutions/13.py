@@ -1,13 +1,22 @@
 import math
-######################################################
-# ps template
-def mi(): return map(int, input().split())
-def ii(): return int(input())
-def li(): return list(map(int, input().split()))
-def si(): return input().split()
 
 
-#######################################################
+def mi():
+    return map(int, input().split())
+
+
+def ii():
+    return int(input())
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def si():
+    return input().split()
+
+
 t = ii()
 for _ in range(t):
     n = ii()
@@ -18,6 +27,6 @@ for _ in range(t):
             ind = i
             break
     if ind % 2 == 0:
-        print("First")
+        print('First')
     else:
-        print("Second")
+        print('Second')

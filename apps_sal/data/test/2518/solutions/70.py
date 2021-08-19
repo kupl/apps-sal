@@ -1,7 +1,6 @@
 import math
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 h = [int(input()) for _ in range(N)]
-
 x = A - B
 
 
@@ -15,8 +14,8 @@ def func(cnt):
         return True
 
 
-ok = 10**9  # exist
-ng = 0  # not exist
+ok = 10 ** 9
+ng = 0
 while abs(ok - ng) > 1:
     cnt = (ok + ng) // 2
     if func(cnt):

@@ -1,7 +1,3 @@
-# int(input())
-# map(int,input().split())
-#[list(map(int,input().split())) for i in range(q)]
-#print("YES" * ans + "NO" * (1-ans))
 n = int(input())
 ai = [0] + list(map(int, input().split())) + [1001]
 ans = 0
