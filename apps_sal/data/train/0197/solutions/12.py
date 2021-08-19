@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s: str) -> bool:
         cnt = collections.Counter()
         stack = []
@@ -7,9 +8,8 @@ class Solution:
             if not cnt['a'] >= cnt['b'] >= cnt['c']:
                 return False
             stack.append(c)
-            while len(stack) >= 3 and stack[-1] == 'c' and stack[-2] == 'b' and stack[-3] == 'a':
+            while len(stack) >= 3 and stack[-1] == 'c' and (stack[-2] == 'b') and (stack[-3] == 'a'):
                 stack = stack[:-3]
-            # print(stack)
         if stack:
             return False
         else:

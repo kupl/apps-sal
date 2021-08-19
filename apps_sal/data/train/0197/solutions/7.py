@@ -7,12 +7,8 @@ class Solution:
         for c in S:
             stack.append(c)
             if len(stack) >= 3:
-                if stack[-1] == 'c' and stack[-2] == 'b' and stack[-3] == 'a':
+                if stack[-1] == 'c' and stack[-2] == 'b' and (stack[-3] == 'a'):
                     stack.pop()
                     stack.pop()
                     stack.pop()
         return len(stack) == 0
-
-#             if not stack:
-#                 stack.append(c)
-#             else:

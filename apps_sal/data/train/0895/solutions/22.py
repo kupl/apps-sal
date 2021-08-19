@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 cost = list(map(int, input().split()))
 

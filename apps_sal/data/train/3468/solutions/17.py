@@ -1,67 +1,16 @@
-# Stack solution:
-#    Loop through s2 once, pushing char occurances onto the stack
-#    Loop through s1 once, popping any occurances of s2 chars from the stacks
-#    If any stack has a count greater than 0, than it's False
 def scramble(s1, s2):
     stacks = {}
-
     for char in s2:
-        # Checking if stacks already has a key:value pair with the key char
         if char in stacks:
             stacks[char] += 1
         else:
             stacks[char] = 1
-
     for char in s1:
         if char in stacks:
             stacks[char] -= 1
-
     return max(stacks.values()) <= 0
 
 
-'''
-# Turn strings into lists, remove the appropriate element, and keep track of it to compare at the end
-# Takes too long, but correct output
-def scramble(s1, s2):
-    source = [char for char in s1]
-    tokens = [char for char in s2]
-    result = []
-    
-    for char in tokens:
-        if char in source:
-            result.append(char)
-            source.remove(char)
-    return len(result) == len(tokens)
-'''
-
-'''
-# Turn strings into lists, remove the appropriate element, and catch ValueError exceptions that signify False-ness
-# Takes too long but correct output
-def scramble(s1, s2):
-    source = [char for char in s1]
-    try:
-        for char in s2:
-            source.remove(char)
-    except ValueError:
-        return False
-    return True
-'''
-
-'''
-# Count every instance of every char in s1 and s2, then compare the number of s2 char appearances in s1
-# slowest of all three
-def scramble(s1, s2):
-    source = [char for char in s1]
-    source.sort()
-    tokens = [char for char in s2]
-    tokens.sort()
-    
-    source_len = len(source)
-    source_index = 0
-    for char in tokens:
-        while char != source[source_index]:
-            source_index += 1
-            if source_index >= source_len:
-                return False
-    return True
-'''
+'\n# Turn strings into lists, remove the appropriate element, and keep track of it to compare at the end\n# Takes too long, but correct output\ndef scramble(s1, s2):\n    source = [char for char in s1]\n    tokens = [char for char in s2]\n    result = []\n    \n    for char in tokens:\n        if char in source:\n            result.append(char)\n            source.remove(char)\n    return len(result) == len(tokens)\n'
+'\n# Turn strings into lists, remove the appropriate element, and catch ValueError exceptions that signify False-ness\n# Takes too long but correct output\ndef scramble(s1, s2):\n    source = [char for char in s1]\n    try:\n        for char in s2:\n            source.remove(char)\n    except ValueError:\n        return False\n    return True\n'
+'\n# Count every instance of every char in s1 and s2, then compare the number of s2 char appearances in s1\n# slowest of all three\ndef scramble(s1, s2):\n    source = [char for char in s1]\n    source.sort()\n    tokens = [char for char in s2]\n    tokens.sort()\n    \n    source_len = len(source)\n    source_index = 0\n    for char in tokens:\n        while char != source[source_index]:\n            source_index += 1\n            if source_index >= source_len:\n                return False\n    return True\n'

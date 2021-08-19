@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s: str) -> bool:
         cnt = collections.Counter()
         stack = []
@@ -9,7 +10,6 @@ class Solution:
             stack.append(c)
             while ''.join(stack[-3:]) == 'abc':
                 stack = stack[:-3]
-            # print(stack)
         if stack:
             return False
         else:
