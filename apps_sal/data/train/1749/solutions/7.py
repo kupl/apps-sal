@@ -29,10 +29,10 @@ def trailing_zeros(num, base):
     if len(plist) == 0:
         return 0
     plist.sort()
-    accmax = 1e1000
+    accmax = 1e309
     while len(plist) > 0:
         acc = 0
-        a = plist[-1]    # biggest prime factor of base
+        a = plist[-1]
         aa = pow[-1]
         n = num
         while n != 0:

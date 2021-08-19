@@ -3,9 +3,3 @@ def check_alive(health):
         return True
     else:
         return False
-
-    # if():
-    #    health <= 0
-# return False
-    # else:
-      #  return True

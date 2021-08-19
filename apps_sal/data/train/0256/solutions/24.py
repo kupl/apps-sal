@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         l = 1
         r = max(piles)
@@ -9,7 +10,7 @@ class Solution:
             m = l + (r - l) // 2
             if calc_h(piles, m) > H:
                 l = m + 1
-            else:  # calc_h(piles, m) <= H
+            else:
                 if m == 1 or calc_h(piles, m - 1) > H:
                     return m
                 r = m - 1

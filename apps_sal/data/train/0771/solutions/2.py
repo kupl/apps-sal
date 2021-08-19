@@ -1,7 +1,7 @@
 t = eval(input())
 while t:
     n = eval(input())
-    m, f = list(map(int, input().split()))
+    (m, f) = list(map(int, input().split()))
     multan = 0
     total = 0
     fultan = 0
@@ -16,14 +16,13 @@ while t:
             fultan += 1
             total += 1
     if total - 0.7 * n >= 0.0:
-        print("Yes")
+        print('Yes')
         if multan > fultan:
-            print("Multan")
+            print('Multan')
         elif fultan > multan:
-            print("Fultan")
+            print('Fultan')
         else:
-            print("Both")
+            print('Both')
     else:
-        print("No")
-    # print total,multan,fultan
+        print('No')
     t -= 1
