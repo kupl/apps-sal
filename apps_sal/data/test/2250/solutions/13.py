@@ -2,14 +2,14 @@ def calc_one(n):
     frac = n / 3
     if frac % 1 == 0:
         return int(frac)
-    return int(frac + 1)  # ceil
+    return int(frac + 1)
 
 
 def calc_ops(L):
     frac = (L - 2) / 3
     if frac % 1 == 0:
         return int(frac)
-    return int(frac + 1)    # ceil
+    return int(frac + 1)
 
 
 def main():

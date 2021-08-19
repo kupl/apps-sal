@@ -1,8 +1,6 @@
 n = int(input())
 s = str(input())
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 X = [[0] * 4 for _ in range(n + 1)]
 for i in range(n):
     for j in range(4):
@@ -15,7 +13,6 @@ for i in range(n):
         X[i + 1][2] += 1
     else:
         X[i + 1][3] += 1
-
 Y = [[0] * 4 for _ in range(n + 1)]
 for i in reversed(list(range(n))):
     for j in range(4):
@@ -28,8 +25,6 @@ for i in reversed(list(range(n))):
         Y[i][2] += 1
     else:
         Y[i][3] += 1
-# print(X)
-# print(Y)
 c = X[n][3]
 ans = 0
 for i in range(n):

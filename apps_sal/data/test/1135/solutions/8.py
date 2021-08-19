@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-# n = int(input())
-#
-# a, b = [int(i) for i in input().split()]
-#
-
 n = int(input())
 slovo = input()
 otvet = ''

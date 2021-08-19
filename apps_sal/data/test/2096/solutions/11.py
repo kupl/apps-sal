@@ -19,9 +19,5 @@ for i in R:
         while len(c[i]):
             d[c[i].pop()] = heap
             heap = 3 - heap
-
 print(z[1] * z[2])
 print(' '.join(map(str, d[:n * 2])))
-
-
-# Made By Mostafa_Khaled

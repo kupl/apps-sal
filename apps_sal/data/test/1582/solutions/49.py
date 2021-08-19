@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 
@@ -11,7 +10,6 @@ def solve(N: int):
         l = int(s[-1])
         if l != 0:
             m[h * 10 + l] += 1
-
     answer = 0
     for h in range(1, 10):
         for l in range(1, 10):

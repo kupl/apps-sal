@@ -1,11 +1,10 @@
-# 803F
 import math
 import collections
 
 
 def do():
     n = int(input())
-    nums = map(int, input().split(" "))
+    nums = map(int, input().split(' '))
     count = collections.defaultdict(int)
     for num in nums:
         for i in range(1, int(math.sqrt(num)) + 1):
@@ -19,7 +18,7 @@ def do():
     for k in sorted(count.keys(), reverse=True):
         for kk in range(k << 1, maxk + 1, k):
             freq[k] -= freq[kk] if kk in freq else 0
-    return freq[1] % (10**9 + 7)
+    return freq[1] % (10 ** 9 + 7)
 
 
 print(do())
