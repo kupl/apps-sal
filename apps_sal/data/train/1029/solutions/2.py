@@ -1,4 +1,3 @@
-# cook your dish here
 def work(a):
     chef = []
     asst = []
@@ -14,17 +13,17 @@ def work(a):
                 asst.append(i)
                 t = False
                 c = True
-    return chef, asst
+    return (chef, asst)
 
 
 t = int(input())
 while t:
-    n, m = [int(k) for k in input().split()]
+    (n, m) = [int(k) for k in input().split()]
     a = [0] * (n + 1)
     finished = [int(k) for k in input().split()]
     for i in finished:
         a[i] = 1
-    chef, asst = work(a)
+    (chef, asst) = work(a)
     for i in chef:
         print(i, end=' ')
     print()

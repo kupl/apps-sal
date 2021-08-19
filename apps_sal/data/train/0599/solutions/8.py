@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -10,12 +9,11 @@ for _ in range(int(input())):
     l_o = n - 1 - l_o
     if l_o - f_o >= mid:
         print(0)
+    elif f_o == l_o:
+        f_o = mid
+        print(n - 1 - f_o)
     else:
-        if f_o == l_o:
-            f_o = mid
-            print(n - 1 - f_o)
-        else:
-            gap = l_o - f_o
-            f_o = mid
-            l_o = f_o + gap
-            print(n - 1 - l_o)
+        gap = l_o - f_o
+        f_o = mid
+        l_o = f_o + gap
+        print(n - 1 - l_o)

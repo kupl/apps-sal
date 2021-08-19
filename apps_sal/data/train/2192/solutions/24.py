@@ -13,17 +13,16 @@ def bsearch(arr, num, start, end):
 t = int(input())
 A = []
 B = []
-N = []  # next undestroyed beacon
-NUM = []  # number of destroyed beacon if current veacon activated
-
+N = []
+NUM = []
 abp = []
 for i in range(0, t):
     ab = input().split(' ')
-    a, b = int(ab[0]), int(ab[1])
+    (a, b) = (int(ab[0]), int(ab[1]))
     abp.append((a, b))
 abp_S = sorted(abp, key=lambda bk: bk[0])
 for i in range(0, len(abp_S)):
-    a, b = abp_S[i]
+    (a, b) = abp_S[i]
     A.append(a)
     B.append(b)
     pos = bsearch(A, a - b, 0, len(A) - 1)
@@ -32,8 +31,8 @@ for i in range(0, len(abp_S)):
         NUM.append(i)
     else:
         N.append(pos[0] - 1)
-        NUM.append((i - pos[0]) + NUM[pos[0] - 1])
+        NUM.append(i - pos[0] + NUM[pos[0] - 1])
 damages = []
 for i in range(0, len(A)):
-    damages.append((len(A) - (i + 1)) + NUM[i])
+    damages.append(len(A) - (i + 1) + NUM[i])
 print(min(damages))

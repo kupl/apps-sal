@@ -1,7 +1,7 @@
 def solve():
     t = int(input())
     for _ in range(t):
-        n, m = [int(x) for x in input().split()]
+        (n, m) = [int(x) for x in input().split()]
         cmpl = [int(x) for x in input().split()]
         uncmpl = [i for i in range(1, n + 1) if i not in cmpl]
         l1 = []
@@ -15,9 +15,4 @@ def solve():
         print(*l2)
 
 
-# import sys
-# def fast():
-#     sys.stdin = open("input.txt", "r")
-#     sys.stdout = open("output.txt", "w")
-# fast()
 solve()

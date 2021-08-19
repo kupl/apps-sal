@@ -1,4 +1,5 @@
 class Solution:
+
     def largestNumber(self, cost: List[int], target: int) -> str:
         d = {i: -1 for i in cost}
         for i in range(1, len(cost) + 1):
@@ -11,8 +12,6 @@ class Solution:
                 dp[i] = str(d[i])
             except:
                 pass
-        # print(d)
-        # print(cost)
         for i in range(1, target + 1):
             for j in cost:
                 if i - j > 0:
