@@ -1,4 +1,3 @@
-# cook your dish here
 refList = [1, 2, 3, 4, 5, 6, 7]
 t = int(input())
 for i in range(t):
@@ -9,7 +8,7 @@ for i in range(t):
     for i in list1:
         if i not in sevenInt:
             sevenInt.append(i)
-    if(sevenInt == refList and list1 == revList):
+    if sevenInt == refList and list1 == revList:
         print('yes')
     else:
         print('no')

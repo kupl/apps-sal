@@ -1,4 +1,5 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         parents = [(idx, 0) for idx in range(n)]
 
@@ -11,10 +12,9 @@ class Solution:
             parents[original_idx] = (idx, 0)
             return parents[idx]
 
-        # Returns false if the two elements are already in the same group
         def union(idx1, idx2):
-            parent1, rank1 = find(idx1)
-            parent2, rank2 = find(idx2)
+            (parent1, rank1) = find(idx1)
+            (parent2, rank2) = find(idx2)
             if parent1 == parent2:
                 return False
             if rank1 > rank2:
@@ -24,20 +24,17 @@ class Solution:
             else:
                 parents[parent1] = (parent2, rank2 + 1)
             return True
-        # [1, 3, 3, 3]
-        for idx1, idx2 in enumerate(leftChild):
+        for (idx1, idx2) in enumerate(leftChild):
             if idx2 == -1:
                 continue
             if not union(idx1, idx2):
                 return False
-
-        for idx1, idx2 in enumerate(rightChild):
+        for (idx1, idx2) in enumerate(rightChild):
             if idx2 == -1:
                 continue
             if not union(idx1, idx2):
                 return False
-
-        group, _ = find(0)
+        (group, _) = find(0)
         for idx in range(n):
             if find(idx)[0] != group:
                 return False

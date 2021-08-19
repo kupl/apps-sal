@@ -3,11 +3,10 @@ from itertools import accumulate
 
 
 class Lazysegtree:
-    # RAQ
+
     def __init__(self, A, intv, initialize=True, segf=min):
-        # 区間は 1-indexed で管理
         self.N = len(A)
-        self.N0 = 2**(self.N - 1).bit_length()
+        self.N0 = 2 ** (self.N - 1).bit_length()
         self.intv = intv
         self.segf = segf
         self.lazy = [0] * (2 * self.N0)
@@ -23,15 +22,14 @@ class Lazysegtree:
         c = k.bit_length()
         for j in range(c):
             idx = k >> j
-            self.data[idx] = self.segf(self.data[2 * idx], self.data[2 * idx + 1]) \
-                + self.lazy[idx]
+            self.data[idx] = self.segf(self.data[2 * idx], self.data[2 * idx + 1]) + self.lazy[idx]
 
     def _descend(self, k):
         k = k >> 1
         idx = 1
         c = k.bit_length()
         for j in range(1, c + 1):
-            idx = k >> (c - j)
+            idx = k >> c - j
             ax = self.lazy[idx]
             if not ax:
                 continue
@@ -48,7 +46,6 @@ class Lazysegtree:
         Ri = R // (R & -R)
         self._descend(Li)
         self._descend(Ri - 1)
-
         s = self.intv
         while L < R:
             if R & 1:
@@ -64,10 +61,8 @@ class Lazysegtree:
     def add(self, l, r, x):
         L = l + self.N0
         R = r + self.N0
-
         Li = L // (L & -L)
         Ri = R // (R & -R)
-
         while L < R:
             if R & 1:
                 R -= 1
@@ -79,7 +74,6 @@ class Lazysegtree:
                 L += 1
             L >>= 1
             R >>= 1
-
         self._ascend(Li)
         self._ascend(Ri - 1)
 
@@ -90,7 +84,7 @@ class Lazysegtree:
         Ri = R // (R & -R)
         self._descend(Li)
         self._descend(Ri - 1)
-        SL, SR = [], []
+        (SL, SR) = ([], [])
         while L < R:
             if R & 1:
                 R -= 1
@@ -100,9 +94,8 @@ class Lazysegtree:
                 L += 1
             L >>= 1
             R >>= 1
-
         if reverse:
-            for idx in (SR + SL[::-1]):
+            for idx in SR + SL[::-1]:
                 if check(self.data[idx]):
                     break
             else:
@@ -119,7 +112,7 @@ class Lazysegtree:
                     idx += 1
             return idx - self.N0
         else:
-            for idx in (SL + SR[::-1]):
+            for idx in SL + SR[::-1]:
                 if check(self.data[idx]):
                     break
             else:
@@ -153,10 +146,10 @@ class Lazysegtree:
         return idx - self.N0
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
-table = [0] * (10**6 + 1)
+table = [0] * (10 ** 6 + 1)
 for a in A:
     table[a] -= 1
 for b in B:
@@ -166,7 +159,7 @@ T = Lazysegtree(table, 0, True, min)
 Q = int(input())
 Ans = [None] * Q
 for q in range(Q):
-    t, i, x = list(map(int, sys.stdin.readline().split()))
+    (t, i, x) = list(map(int, sys.stdin.readline().split()))
     i -= 1
     if t == 1:
         T.add(0, x + 1, -1)
@@ -177,5 +170,4 @@ for q in range(Q):
         T.add(0, B[i] + 1, -1)
         B[i] = x
     Ans[q] = T.provfunc()
-
 print('\n'.join(map(str, Ans)))

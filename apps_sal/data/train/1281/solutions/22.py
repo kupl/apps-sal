@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for ts in range(t):
     n = int(input())
@@ -8,4 +7,4 @@ for ts in range(t):
         if i not in li:
             li.append(i)
     li.sort()
-    print('yes' if (li == [1, 2, 3, 4, 5, 6, 7] and l == l[::-1]) else 'no')
+    print('yes' if li == [1, 2, 3, 4, 5, 6, 7] and l == l[::-1] else 'no')

@@ -1,8 +1,7 @@
-# cook your dish here
 import bisect
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     arr = list(map(int, input().split()))
     seti = set(arr)
     f = 1
@@ -12,8 +11,7 @@ for _ in range(t):
             break
     if f == 0:
         print(-1)
+    elif m in seti:
+        print(n - arr.count(m))
     else:
-        if m in seti:
-            print(n - arr.count(m))
-        else:
-            print(n)
+        print(n)

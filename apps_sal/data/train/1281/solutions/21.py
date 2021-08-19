@@ -1,22 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Sun Jan 24 09:23:33 2021
 
 @author: gourob
 """
-
 test = int(input())
-
 while test:
-
     flag = 1
     n = int(input())
-
     elem = list(map(int, input().split()))
-
-    p1, p2 = 0, n - 1
-
+    (p1, p2) = (0, n - 1)
     if elem[0] != 1:
         flag = 0
     else:
@@ -35,8 +27,7 @@ while test:
     if elem[p1] != 7:
         flag = 0
     if flag == 1:
-        print("yes")
+        print('yes')
     else:
-        print("no")
-
+        print('no')
     test -= 1

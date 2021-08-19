@@ -1,4 +1,5 @@
 class Solution:
+
     def bitwiseComplement(self, N: int) -> int:
         binn = bin(N)
         binn = binn[2:]

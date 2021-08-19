@@ -1,11 +1,9 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
-        #from itertools import permutations
-        #print(''.join(p) for p in permutations(s))
-        i, j, k = 0, 1, 0
+        (i, j, k) = (0, 1, 0)
         n = len(s)
         while j + k < n:
-
             if s[i + k] == s[j + k]:
                 k += 1
                 continue

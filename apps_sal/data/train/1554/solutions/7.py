@@ -1,4 +1,3 @@
-# cook your dish here
 def fun(M, B):
     if M == B:
         return M * 2
@@ -6,15 +5,13 @@ def fun(M, B):
         return B * 2
     elif B == 0:
         return M * 2
+    elif M > B:
+        return fun(M % B, B)
     else:
-        if M > B:
-            return fun(M % B, B)
-        else:
-            return fun(M, B % M)
+        return fun(M, B % M)
 
 
 t = int(input())
 for i in range(t):
-    M, B = list(map(int, input().split()))
-
+    (M, B) = list(map(int, input().split()))
     print(fun(M, B))

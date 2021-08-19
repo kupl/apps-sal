@@ -1,10 +1,8 @@
 def multiply(n):
-    # your code here
     if n >= 0:
-
-        b = 5**len(str(n))
-        return (n * b)
+        b = 5 ** len(str(n))
+        return n * b
     elif n < 0:
         n = abs(n)
-        b = 5**len(str(n))
+        b = 5 ** len(str(n))
         return -abs(n * b)

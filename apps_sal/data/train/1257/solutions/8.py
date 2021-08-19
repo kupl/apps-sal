@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 def fact(N):
     P = 1
     for n in range(2, N + 1):
