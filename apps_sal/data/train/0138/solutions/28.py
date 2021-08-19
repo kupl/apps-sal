@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
         if n == 1:
@@ -32,7 +33,7 @@ class Solution:
                         break
                     j += 1
                 if found:
-                    curr_len += (j - p2 + 1)
+                    curr_len += j - p2 + 1
                     answer = max(answer, curr_len)
                     if j == n - 1:
                         return answer
@@ -52,6 +53,3 @@ class Solution:
                         p2 += 1
                     continue
         return answer
-
-
-#[1, -4, 3, 2, 0, 2, -2, 3, -2, -2, 3, 4, 5]

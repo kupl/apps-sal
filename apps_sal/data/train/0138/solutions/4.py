@@ -1,17 +1,13 @@
 class Solution:
-    def getMaxLen(self, nums: List[int]) -> int:
-        # 3:58 9/1/2020
-        # Max len of subarray with positive Product
 
+    def getMaxLen(self, nums: List[int]) -> int:
         last = {1: -1}
         pro = 1
         ans = 0
-        for i, c in enumerate(nums):
+        for (i, c) in enumerate(nums):
             pro = c * pro / abs(pro) if pro != 0 else 0
-
             if pro > 0:
                 ans = max(i - last[1], ans)
-
             elif pro < 0:
                 if -1 in last:
                     ans = max(ans, i - last[-1])
@@ -21,5 +17,4 @@ class Solution:
                 pro = 1
                 last = {}
                 last[1] = i
-
         return ans

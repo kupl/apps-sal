@@ -1,7 +1,7 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         max_length = 0
-
         idx = 0
         prev = 0
         negative = 0
@@ -18,13 +18,10 @@ class Solution:
                     prev_neg_idx = idx
                     neg_idx = prev
                     negative = 1
-            else:
-                if prev == 0 or negative == 0:
-                    prev += 1
-            # print(prev)
+            elif prev == 0 or negative == 0:
+                prev += 1
             max_length = max(max_length, prev)
             idx += 1
-
         idx = len(nums) - 1
         prev = 0
         negative = 0
@@ -41,11 +38,8 @@ class Solution:
                     prev_neg_idx = idx
                     neg_idx = prev
                     negative = 1
-            else:
-                if prev == 0 or negative == 0:
-                    prev += 1
-            # print(prev)
+            elif prev == 0 or negative == 0:
+                prev += 1
             max_length = max(max_length, prev)
             idx -= 1
-
         return max_length

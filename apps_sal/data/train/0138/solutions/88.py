@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         trip_zeros = []
         for num in nums:
@@ -22,11 +23,7 @@ class Solution:
                 print(pos, start, end, left_neg)
                 if pos:
                     ans = max(ans, end - start + 1)
-
                 else:
                     ans = max(ans, end - left_neg)
             return ans
-
-        # print(trip_zeros)
-        # if not trip_zeros: return 0
         return max(map(count, trip_zeros))
