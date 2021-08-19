@@ -6,7 +6,7 @@ if n <= 2:
     quit()
 for i in range(-1, 2):
     for j in range(-1, 2):
-        bol, c = 1, 0
+        (bol, c) = (1, 0)
         if (b[0] + i - b[n - 1] - j) % (n - 1):
             continue
         d = -(b[0] + i - b[n - 1] - j) // (n - 1)

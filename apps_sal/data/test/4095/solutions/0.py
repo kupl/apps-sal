@@ -1,5 +1,5 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
 
     def intCompare(x):
         if int(x) == m:

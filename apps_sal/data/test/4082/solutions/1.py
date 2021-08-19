@@ -1,11 +1,9 @@
-
 def main():
     buf = input()
     n = int(buf)
     buf = input()
     buflist = buf.split()
     a = list(map(int, buflist))
-
     sublen_inc = []
     sublen_dec = []
     for i in range(n):
@@ -27,14 +25,12 @@ def main():
         else:
             c = 1
         sublen_dec[i] = c
-
     best = max(sublen_inc)
     for i in range(1, n - 1):
         if a[i - 1] < a[i + 1]:
             new_sublen = sublen_inc[i - 1] + sublen_dec[i + 1]
             if new_sublen > best:
                 best = new_sublen
-
     print(best)
 
 

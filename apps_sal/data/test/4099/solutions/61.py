@@ -1,7 +1,5 @@
-N, maxscore, avgscore = map(int, input().split())
+(N, maxscore, avgscore) = map(int, input().split())
 A = list(map(int, input().split()))
-
-
 goaltotal = N * avgscore
 currenttotal = sum(A)
 if goaltotal - currenttotal > maxscore:

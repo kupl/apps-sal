@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = [int(x) for x in input().split()]
 seg = []
 el = []
@@ -21,7 +21,6 @@ def decrement(l, r):
 
 for i in range(m):
     seg.append([int(x) for x in input().split()])
-
 for i in range(len(arr)):
     h = arr[:]
     tmp = []
@@ -31,7 +30,6 @@ for i in range(len(arr)):
             tmp.append(j + 1)
     el.append(count_delta())
     el2.append(tmp)
-
 print(max(el))
 k = el.index(max(el))
 print(len(el2[k]))

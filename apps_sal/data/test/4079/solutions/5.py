@@ -1,10 +1,28 @@
 mod = 10 ** 9 + 7
-def ii(): return int(input())
-def si(): return input()
-def dgl(): return list(map(int, input()))
-def f(): return map(int, input().split())
-def il(): return list(map(int, input().split()))
-def ls(): return list(input())
+
+
+def ii():
+    return int(input())
+
+
+def si():
+    return input()
+
+
+def dgl():
+    return list(map(int, input()))
+
+
+def f():
+    return map(int, input().split())
+
+
+def il():
+    return list(map(int, input().split()))
+
+
+def ls():
+    return list(input())
 
 
 n = ii()

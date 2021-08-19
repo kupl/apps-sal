@@ -1,4 +1,4 @@
-N, K, Q = list(map(int, input().split()))
+(N, K, Q) = list(map(int, input().split()))
 A = [int(input()) for _ in range(Q)]
 a = [K] * N
 for i in range(Q):

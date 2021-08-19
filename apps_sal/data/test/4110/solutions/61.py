@@ -1,19 +1,18 @@
-d, g = map(int, input().split())
+(d, g) = map(int, input().split())
 T = []
 for _ in range(d):
-    p, c = map(int, input().split())
+    (p, c) = map(int, input().split())
     T.append([p, c])
-
 ans = float('inf')
 for i in range(1 << d):
     Q = []
     cnt = 0
     score = 0
     for j in range(d):
-        if (i >> j) & 1:
+        if i >> j & 1:
             Q.append(j)
     for v in Q:
-        score += 100 * (v + 1) * (T[v][0]) + T[v][1]
+        score += 100 * (v + 1) * T[v][0] + T[v][1]
         cnt += T[v][0]
     if score >= g:
         ans = min(ans, cnt)

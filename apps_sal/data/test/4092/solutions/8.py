@@ -1,11 +1,8 @@
 import sys
 readline = sys.stdin.readline
-
 N = int(readline())
 A = list(map(int, readline().split()))
-
 S = set([0])
-
 cnt = 0
 ans = 0
 for a in A:

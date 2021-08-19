@@ -9,4 +9,4 @@ else:
             print(i + 1)
             break
         else:
-            a, i = (a * 10 + 7) % K, i + 1
+            (a, i) = ((a * 10 + 7) % K, i + 1)

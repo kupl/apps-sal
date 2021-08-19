@@ -1,11 +1,11 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 cur = 0
 while p[cur] != m:
     cur += 1
 pos = cur
 s = {}
-cnt, len = 0, 0
+(cnt, len) = (0, 0)
 while cur >= 0:
     if p[cur] <= m:
         cnt += 1
@@ -16,7 +16,7 @@ while cur >= 0:
         s[2 * cnt - len] = 1
     cur -= 1
 cur = pos
-cnt, len, ans = 0, 0, 0
+(cnt, len, ans) = (0, 0, 0)
 while cur < n:
     if p[cur] <= m:
         cnt += 1

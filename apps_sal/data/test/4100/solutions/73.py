@@ -1,4 +1,4 @@
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 ans = [0] * (N + 1)
 for i in range(Q):
     ans[int(input())] += 1

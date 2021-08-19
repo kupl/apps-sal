@@ -11,9 +11,9 @@ for _ in range(t):
             break
     if flag == 1:
         count = 0
-        for i in range(1, int(ans**(1 / 2)) + 1):
+        for i in range(1, int(ans ** (1 / 2)) + 1):
             if ans % i == 0:
-                if i**2 == ans:
+                if i ** 2 == ans:
                     count += 1
                 else:
                     count += 2

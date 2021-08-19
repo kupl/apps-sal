@@ -1,4 +1,4 @@
-N, K, M = map(int, input().split())
+(N, K, M) = map(int, input().split())
 A = list(map(int, input().split()))
 now_total = 0
 target_total = N * M

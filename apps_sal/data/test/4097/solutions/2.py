@@ -1,15 +1,14 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-inf = 10**7
-
+inf = 10 ** 7
 n = int(input())
 b = list(R())
 
 
 def f(a):
     res = 0
-
     d = a[1] - a[0]
     e = a[1]
     for i in range(2, n):

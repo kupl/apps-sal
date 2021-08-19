@@ -1,6 +1,5 @@
 l = int(input())
 n = input().split()
-
 revert = n[::-1]
 out = []
 for x in range(l):

@@ -1,13 +1,13 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 ks = [list(map(int, input().split())) for i in range(M)]
 p = list(map(int, input().split()))
 ans = 0
-for i in range(2**N):
+for i in range(2 ** N):
     s = i
     b = [0] * N
     for j in range(N):
-        if s >= (2**(N - j - 1)):
-            s -= 2**(N - j - 1)
+        if s >= 2 ** (N - j - 1):
+            s -= 2 ** (N - j - 1)
             b[j] = 1
     for j in range(M):
         on = 0

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 left = {0: 0, 1: 0}
 right = {0: 0, 1: 0}

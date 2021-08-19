@@ -1,4 +1,4 @@
-n, m = map(int, input().split(' '))
+(n, m) = map(int, input().split(' '))
 K = []
 S = []
 for i in range(m):
@@ -7,12 +7,12 @@ for i in range(m):
     S.append(l[1:])
 p = list(map(int, input().split(' ')))
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     light = 0
     for j in range(m):
         sw = 0
         for s in S[j]:
-            if (i >> (s - 1)) & 1:
+            if i >> s - 1 & 1:
                 sw += 1
         if sw % 2 == p[j]:
             light += 1

@@ -10,5 +10,5 @@ else:
             ans = a
             break
         else:
-            r, d, a = (r + d) % K, d * 10 % K, a + 1
+            (r, d, a) = ((r + d) % K, d * 10 % K, a + 1)
 print(ans)

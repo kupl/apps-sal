@@ -14,18 +14,16 @@ def check(p):
     return sm >= m
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [int(x) for x in input().split()]
 a.sort(reverse=True)
-
 l = 1
 r = len(a)
 if sum(a) < m:
     print(-1)
 else:
-    while(l < r):
+    while l < r:
         mid = (l + r) // 2
-
         if check(mid):
             r = mid
         else:

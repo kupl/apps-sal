@@ -12,10 +12,9 @@ def main():
                     pass
                 else:
                     break
-
                 if i == n - 1:
                     print(x, y, height)
-                    return x, y, height
+                    return (x, y, height)
 
 
 main()

@@ -11,11 +11,9 @@ def p(S):
 
 S = input()
 T = input()
-
 A = sorted(p(S).values())
 B = sorted(p(T).values())
-
 if A == B:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

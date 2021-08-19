@@ -8,12 +8,10 @@ def rii():
 
 def solve():
     N = ri()
-    ans = ""
-
+    ans = ''
     while N:
-        N, r = divmod(N - 1, 26)
-        ans = chr(ord("a") + r) + ans
-
+        (N, r) = divmod(N - 1, 26)
+        ans = chr(ord('a') + r) + ans
     print(ans)
 
 

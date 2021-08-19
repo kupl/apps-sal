@@ -1,4 +1,4 @@
-N, K, Q = map(int, input().split(' '))
+(N, K, Q) = map(int, input().split(' '))
 val = [K for i in range(N)]
 for i in range(Q):
     A = int(input())

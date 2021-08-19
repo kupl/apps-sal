@@ -1,14 +1,13 @@
-D, G = map(int, input().split())
+(D, G) = map(int, input().split())
 G /= 100
 P = []
 C = []
 for _ in range(D):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     P.append(x)
     C.append(y // 100)
-
-ans = 10**9
-for x in range(2**D):
+ans = 10 ** 9
+for x in range(2 ** D):
     cost = 0
     value = 0
     for i in range(D):

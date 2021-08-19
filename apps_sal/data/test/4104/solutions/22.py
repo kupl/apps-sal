@@ -1,6 +1,5 @@
 s = input().strip() + '+'
 ans = 0
-
 curr = 0
 sign = 1
 for c in s:

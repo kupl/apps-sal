@@ -7,15 +7,11 @@ i 番目の科目のテストの点数は Ai 点でした。
 高橋君が目標を達成するためには、最後のテストで最低何点取る必要があるか出力してください。
 達成不可能である場合は、代わりに -1 を出力してください。
 """
-
-N, K, M = list(map(int, input().split()))
+(N, K, M) = list(map(int, input().split()))
 score = list(map(int, input().split()))
-
 ans = N * M - sum(score)
-
 if ans > K:
     ans = -1
 elif ans < 0:
     ans = 0
-
 print(ans)

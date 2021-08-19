@@ -12,6 +12,6 @@ for i in range(len(x)):
 for i in range(len(y)):
     t = t.replace(y[i], str(i))
 if s == t:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -4,13 +4,13 @@ a = list(map(int, input().split()))
 
 
 def test(x, y):
-    if ((a[n - 1] + y) - (a[0] + x)) % (n - 1):
+    if (a[n - 1] + y - (a[0] + x)) % (n - 1):
         return False
     first = a[0] + x
     last = a[n - 1] + y
     d = (last - first) // (n - 1)
     for i in range(1, n - 1):
-        if abs((first + i * d) - a[i]) > 1:
+        if abs(first + i * d - a[i]) > 1:
             return False
     return True
 
@@ -21,7 +21,7 @@ def find(x, y):
     last = a[n - 1] + y
     d = (last - first) // (n - 1)
     for i in range(1, n - 1):
-        if abs((first + i * d) - a[i]):
+        if abs(first + i * d - a[i]):
             res += 1
     return res
 

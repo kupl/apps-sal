@@ -18,12 +18,8 @@ def base_n(n, base):
 
 INF = inf
 MOD = 1000000007
-
 n = int(input())
-
 tmp = n
 res = 0
-
-res = "".join([chr(i + 96) for i in base_n(n, 26)])
-
+res = ''.join([chr(i + 96) for i in base_n(n, 26)])
 print(res)

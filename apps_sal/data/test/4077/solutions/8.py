@@ -16,6 +16,6 @@ def cv(r, n, d):
     return ans
 
 
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 d = list(map(int, input().split()))
 print(cv(r, n, d) - cv(r + 1, n, d))

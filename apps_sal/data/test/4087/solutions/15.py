@@ -1,7 +1,4 @@
-
 n = int(input())
-
-
 while True:
     z = list(str(n))
     z = list(map(int, z))
@@ -9,6 +6,4 @@ while True:
         break
     else:
         n += 1
-
-
 print(n)

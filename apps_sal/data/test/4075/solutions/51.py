@@ -2,13 +2,13 @@ from itertools import combinations
 
 
 def getval():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     s = [list(map(int, input().split())) for i in range(m)]
     for i in range(m):
         for j in range(1, s[i][0] + 1):
             s[i][j] -= 1
     p = list(map(int, input().split()))
-    return n, m, s, p
+    return (n, m, s, p)
 
 
 def main(n, m, s, p):
@@ -30,7 +30,7 @@ def main(n, m, s, p):
 
 
 def __starting_point():
-    n, m, s, p = getval()
+    (n, m, s, p) = getval()
     main(n, m, s, p)
 
 

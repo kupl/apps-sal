@@ -1,5 +1,4 @@
 n = int(input())
-
 if n >= 18:
     print('Yes')
 elif n % 4 == 0 or n % 7 == 0:

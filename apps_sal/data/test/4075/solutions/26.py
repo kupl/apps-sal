@@ -1,13 +1,12 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ks = [list(map(int, input().split())) for i in range(m)]
 p = list(map(int, input().split()))
 ans = 0
-
-for i in range(2**n):
+for i in range(2 ** n):
     judge = True
-    switch = [('off') for _ in range(n)]
+    switch = ['off' for _ in range(n)]
     for j in range(len(switch)):
-        if (i >> j) & 1:
+        if i >> j & 1:
             switch[j] = 'on'
     for k in range(m):
         count = 0
@@ -19,5 +18,4 @@ for i in range(2**n):
             break
     if judge == True:
         ans += 1
-
 print(ans)

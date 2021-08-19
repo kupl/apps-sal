@@ -10,23 +10,20 @@ def main():
     T = input()
     dictS = dict()
     dictT = dict()
-
     for i in range(len(S)):
         if S[i] in dictS:
             if dictS[S[i]] != T[i]:
-                print("No")
+                print('No')
                 return
         else:
             dictS[S[i]] = T[i]
-
         if T[i] in dictT:
             if dictT[T[i]] != S[i]:
-                print("No")
+                print('No')
                 return
         else:
             dictT[T[i]] = S[i]
-
-    print("Yes")
+    print('Yes')
 
 
 def __starting_point():

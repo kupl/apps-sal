@@ -1,14 +1,13 @@
 def cal():
-    d, g = list(map(int, input().split()))
+    (d, g) = list(map(int, input().split()))
     a = [list(map(int, input().split())) for i in range(d)]
     ans = float('inf')
-
-    for i in range(2**d):
+    for i in range(2 ** d):
         b = ['-'] * d
         for j in range(d):
-            if (i >> j) & 1:
+            if i >> j & 1:
                 b[j] = '+'
-        count0, count1 = 0, 0
+        (count0, count1) = (0, 0)
         for j in range(d):
             if b[j] == '+':
                 count0 += 100 * (j + 1) * a[j][0] + a[j][1]

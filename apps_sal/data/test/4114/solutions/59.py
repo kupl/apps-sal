@@ -1,6 +1,5 @@
 N = int(input())
 xyh = [list(map(int, input().strip().split())) for _ in range(N)]
-
 dp = [[-1 for i in range(101)] for j in range(101)]
 for n in range(N):
     dp[xyh[n][0]][xyh[n][1]] = xyh[n][2]
@@ -14,11 +13,10 @@ def find_top(x, y, N, xyh):
             top = xyh[n][2] + abs(xyh[n][0] - x) + abs(xyh[n][1] - y)
             if prev == -1:
                 prev = top
-            else:
-                if prev != top:
-                    find = False
-                    break
-    return find, top
+            elif prev != top:
+                find = False
+                break
+    return (find, top)
 
 
 def check_top(x, y, top, N, xyh):
@@ -39,5 +37,5 @@ for x in range(101):
         find = find_top(x, y, N, xyh)[0]
         height = find_top(x, y, N, xyh)[1]
         if find and height >= 1 and check_top(x, y, height, N, xyh):
-            print("{} {} {}".format(x, y, height))
+            print('{} {} {}'.format(x, y, height))
             fin = True

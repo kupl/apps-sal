@@ -1,6 +1,5 @@
-n, k = map(int, input().split(' '))
+(n, k) = map(int, input().split(' '))
 a = list(map(int, input().split(' ')))
-
 res = sorted(a, reverse=True)
 res = res[0:k]
 print(sum(res))

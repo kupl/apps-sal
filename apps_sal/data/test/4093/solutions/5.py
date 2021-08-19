@@ -1,10 +1,6 @@
-
 t = int(input())
-
 for loop in range(t):
-
-    n, m = list(map(int, input().split()))
-
+    (n, m) = list(map(int, input().split()))
     if n == 1:
         print(0)
     elif n == 2:

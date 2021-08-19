@@ -1,4 +1,4 @@
-N, M, X = map(int, input().split())
+(N, M, X) = map(int, input().split())
 
 
 def num2bi(num):
@@ -19,7 +19,6 @@ for i in range(N):
         SUM[j] += a[j + 1]
         A[i][j] = a[j + 1]
     C.append(a[0])
-
 ans = sum(C)
 if min(SUM) < X:
     ans = -1
@@ -34,5 +33,4 @@ else:
                 tmp += C[i]
         if min(SUM) >= X:
             ans = min(ans, tmp)
-
 print(ans)

@@ -1,4 +1,4 @@
-n, k, m = map(int, input().split())
+(n, k, m) = map(int, input().split())
 a = list(map(int, input().split()))
 g = n * m
 for i in a:

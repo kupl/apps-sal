@@ -1,6 +1,6 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 ans = n // (a + b) * a
-n %= (a + b)
+n %= a + b
 if n > a:
     print(ans + a)
 else:

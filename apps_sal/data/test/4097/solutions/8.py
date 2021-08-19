@@ -1,15 +1,11 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 if n == 1 or n == 2:
     print(0)
 else:
-    diff = [a[1] - a[0], a[1] + 1 - a[0], a[1] - 1 - a[0],
-            a[1] - a[0] + 1, a[1] + 1 - a[0] + 1, a[1] - 1 - a[0] + 1,
-            a[1] - a[0] - 1, a[1] + 1 - a[0] - 1, a[1] - 1 - a[0] - 1]
-
+    diff = [a[1] - a[0], a[1] + 1 - a[0], a[1] - 1 - a[0], a[1] - a[0] + 1, a[1] + 1 - a[0] + 1, a[1] - 1 - a[0] + 1, a[1] - a[0] - 1, a[1] + 1 - a[0] - 1, a[1] - 1 - a[0] - 1]
     flag1 = False
-    num = float("inf")
+    num = float('inf')
     flag = True
     pre = a[1]
     d = diff[0]
@@ -26,11 +22,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     flag = True
     pre = a[1] + 1
     d = diff[1]
@@ -47,11 +41,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     flag = True
     pre = a[1] - 1
     d = diff[2]
@@ -68,11 +60,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     flag = True
     pre = a[1]
     d = diff[3]
@@ -89,11 +79,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     flag = True
     pre = a[1] + 1
     d = diff[4]
@@ -110,11 +98,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     flag = True
     pre = a[1] - 1
     d = diff[5]
@@ -131,11 +117,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     flag = True
     pre = a[1]
     d = diff[6]
@@ -152,11 +136,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     flag = True
     pre = a[1] + 1
     d = diff[7]
@@ -173,11 +155,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     flag = True
     pre = a[1] - 1
     d = diff[8]
@@ -194,11 +174,9 @@ else:
         else:
             flag = False
             break
-
     if flag:
         flag1 = True
         num = min(num, rec)
-
     if flag1:
         print(num)
     else:

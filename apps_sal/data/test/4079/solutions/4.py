@@ -1,8 +1,13 @@
-def GI(): return int(input())
+def GI():
+    return int(input())
 
 
-def GIS(): return list(map(int, input().split()))
-def LGIS(): return list(GIS())
+def GIS():
+    return list(map(int, input().split()))
+
+
+def LGIS():
+    return list(GIS())
 
 
 def main():
@@ -10,10 +15,10 @@ def main():
         s = sorted(input())
         for i in range(len(s) - 1):
             if ord(s[i + 1]) - ord(s[i]) != 1:
-                print("No")
+                print('No')
                 break
         else:
-            print("Yes")
+            print('Yes')
 
 
 main()

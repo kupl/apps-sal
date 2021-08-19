@@ -1,9 +1,9 @@
-d, g = map(int, input().split())
+(d, g) = map(int, input().split())
 dp = [0 for i in range(1001)]
 dp[0] = 0
 num = 0
 for i in range(1, d + 1):
-    p, c = map(int, input().split())
+    (p, c) = map(int, input().split())
     for j in range(num, -1, -1):
         for k in range(1, p + 1):
             if k != p:

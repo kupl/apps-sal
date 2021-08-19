@@ -1,8 +1,8 @@
-d, gl = map(int, input().split())
+(d, gl) = map(int, input().split())
 p = []
 g = []
 for i in range(d):
-    P, G = map(int, input().split())
+    (P, G) = map(int, input().split())
     p.append(P)
     g.append(G)
 ans = sum(p)
@@ -11,7 +11,7 @@ for i in range(1 << d):
     c = 0
     b = [0 for i in range(d)]
     for j in range(d):
-        if i & (1 << j):
+        if i & 1 << j:
             tmp += g[j] + (j + 1) * p[j] * 100
             c += p[j]
             b[j] = 1

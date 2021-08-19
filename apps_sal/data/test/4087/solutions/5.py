@@ -1,4 +1,5 @@
 def main():
+
     def is_interesting(n):
         s = 0
         while n:
@@ -9,7 +10,6 @@ def main():
         return 0
     import sys
     input = sys.stdin.readline
-
     a = int(input())
     while not is_interesting(a):
         a += 1

@@ -5,10 +5,9 @@ def dist(h, xi, yi, cx, cy):
 N = int(input())
 P = []
 for i in range(N):
-    xi, yi, h = map(int, input().split())
+    (xi, yi, h) = map(int, input().split())
     P.append([h, xi, yi])
 P.sort(reverse=True)
-
 for i in range(101):
     for j in range(101):
         H = dist(P[0][0], P[0][1], P[0][2], i, j)

@@ -1,7 +1,6 @@
 import math
 import numpy as np
 N = int(input())
-
 ans = []
 
 
@@ -21,5 +20,4 @@ def calc(a, ans):
 ans = calc(N, ans)
 for i in range(len(ans)):
     ans[i] = chr(ans[i] + 96)
-
-print((''.join(ans)))
+print(''.join(ans))

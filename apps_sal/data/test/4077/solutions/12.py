@@ -1,4 +1,5 @@
 class BinaryIndexedTree:
+
     def __init__(self, n):
         self.bit = [0] * n
 
@@ -39,6 +40,6 @@ def f(m):
     return ans
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 print(f(m) - f(m - 1))

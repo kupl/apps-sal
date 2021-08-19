@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = [int(elem) for elem in input().split()]
 anses = []
 s2 = s[:]

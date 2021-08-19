@@ -1,12 +1,10 @@
 from itertools import combinations
-
-N, M, X = map(int, input().split())
-C, A = [], []
+(N, M, X) = map(int, input().split())
+(C, A) = ([], [])
 for i in range(N):
-    c, *a = map(int, input().split())
+    (c, *a) = map(int, input().split())
     C.append(c)
     A.append(a)
-
 ans = float('INF')
 for i in range(1, N + 1):
     for li in combinations(list(range(N)), i):

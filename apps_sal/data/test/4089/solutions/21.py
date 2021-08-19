@@ -1,6 +1,5 @@
 N = int(input())
 alpha = 'abcdefghijklmnopqrstuvwxyz'
-
 ans = ''
 while N:
     N -= 1

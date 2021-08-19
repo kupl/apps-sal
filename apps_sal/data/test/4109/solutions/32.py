@@ -1,16 +1,14 @@
 import numpy as np
-N, M, X = map(int, input().split())
+(N, M, X) = map(int, input().split())
 books = []
 for i in range(N):
     tmp_book = list(map(int, input().split()))
     books.append(tmp_book)
-
-ans = 10**10
-for i in range(1, 2**(N)):
+ans = 10 ** 10
+for i in range(1, 2 ** N):
     flag = 1
     ability = np.zeros(M)
     money = 0
-
     tmp = str(bin(i))
     tmp = '0' * (N - len(tmp[2:])) + tmp[2:]
     for j in range(N):
@@ -23,7 +21,7 @@ for i in range(1, 2**(N)):
             break
     if flag == 1:
         ans = min(ans, money)
-if ans == 10**10:
+if ans == 10 ** 10:
     print(-1)
 else:
     print(ans)

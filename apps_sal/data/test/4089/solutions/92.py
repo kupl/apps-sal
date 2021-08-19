@@ -13,4 +13,4 @@ b = []
 for i in range(len(a)):
     if a[i] >= 0:
         b.append(chr(a[i] + 97))
-print(*b, sep="")
+print(*b, sep='')

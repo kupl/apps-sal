@@ -12,8 +12,7 @@ for i in range(mod):
         break
     else:
         pass
-
 if flag == 1:
     print(ans)
 else:
-    print("-1")
+    print('-1')

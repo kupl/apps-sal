@@ -1,8 +1,6 @@
-N, K, M = map(int, input().split())
-
+(N, K, M) = map(int, input().split())
 A = list(map(int, input().split()))
 score = sum(A)
-
 if N * M - score > K:
     print(-1)
 else:

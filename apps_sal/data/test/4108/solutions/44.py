@@ -8,6 +8,6 @@ Blist = list(B.values())
 Asort = sorted(Alist)
 Bsort = sorted(Blist)
 if Asort == Bsort:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

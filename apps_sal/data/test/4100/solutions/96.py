@@ -1,4 +1,4 @@
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 a = [0 for i in range(n)]
 for i in range(q):
     ai = int(input())

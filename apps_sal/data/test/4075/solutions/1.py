@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 f = [list(map(int, input().split())) for i in range(m)]
 p = list(map(int, input().split()))
 count = 0
-for i in range(2**n):
+for i in range(2 ** n):
     Bit = [0] * n
     for j in range(n):
-        if (i >> j) & 1:
+        if i >> j & 1:
             Bit[j] = 1
     same = 0
     for k in range(m):

@@ -1,15 +1,12 @@
-
 def mi():
     return map(int, input().split())
 
 
-n, k = mi()
+(n, k) = mi()
 a = list(mi())
 for i in range(n):
     a[i] = [a[i], i]
-
 a.sort(reverse=True)
-
 a = a[:k]
 s = 0
 ind = []

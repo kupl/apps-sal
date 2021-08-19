@@ -1,19 +1,18 @@
 def light(l, i):
-    k = 1 << (i - 1)
+    k = 1 << i - 1
     if l & k:
         return 1
     else:
         return 0
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 s = list()
 for j in range(0, M):
     s.append(0)
 for j in range(0, M):
     s[j] = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
 a = 0
 for l in range(0, 1 << N):
     b = 0

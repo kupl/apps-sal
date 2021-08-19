@@ -22,12 +22,11 @@ def solve(b):
                     else:
                         currans = -1
                         break
-                if minans == -1 or currans != -1 and currans < minans:
+                if minans == -1 or (currans != -1 and currans < minans):
                     minans = currans
     return minans
 
 
 n = int(input())
 b = [int(s) for s in input().split()]
-
 print(solve(b))

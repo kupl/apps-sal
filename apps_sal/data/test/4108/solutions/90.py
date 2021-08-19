@@ -2,7 +2,7 @@ from collections import Counter
 S = list(input())
 T = list(input())
 change = [-1] * 27
-ans = "Yes"
+ans = 'Yes'
 for i in range(len(S)):
     s = ord(S[i]) - 97
     if S[i] == T[i]:
@@ -12,7 +12,7 @@ for i in range(len(S)):
     else:
         t = ord(T[i]) - 97
         if change[s] != t:
-            ans = "No"
+            ans = 'No'
             break
 change = Counter(change)
 del change[-1]
@@ -20,5 +20,5 @@ for i in change.values():
     if i == 1:
         continue
     else:
-        ans = "No"
+        ans = 'No'
 print(ans)

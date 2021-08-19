@@ -1,8 +1,6 @@
 from time import time
-
 K = int(input())
 t = time()
-
 i = 1
 n = 7 % K
 m = 10 % K

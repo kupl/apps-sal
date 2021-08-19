@@ -1,4 +1,4 @@
-n, k, x = map(int, input().split())
+(n, k, x) = map(int, input().split())
 a = [None] + list(map(int, input().split()))
 dp = [[-1] * (n + 1) for i in range(x + 1)]
 dp[0][0] = 0

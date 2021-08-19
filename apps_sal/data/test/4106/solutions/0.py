@@ -14,14 +14,14 @@ def mints():
     return map(int, minp().split())
 
 
-n, k, x = mints()
+(n, k, x) = mints()
 a = list(mints())
 d = [None] * (n + 1)
 p = [None] * (n + 1)
 for i in range(0, k):
     d[i] = a[i]
 for xx in range(2, x + 1):
-    d, p = p, d
+    (d, p) = (p, d)
     for nn in range(n):
         m = None
         for i in range(max(0, nn - k), nn):

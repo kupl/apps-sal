@@ -1,6 +1,5 @@
 import sys
 import time
-
 for line in sys.stdin:
     ll = len(line) - 1
     fail = 0
@@ -14,6 +13,6 @@ for line in sys.stdin:
         if (x, y) not in [(3, 3), (4, 6), (6, 4), (7, 7), (8, 0), (0, 8), (5, 9), (9, 5)]:
             fail = 1
     if fail:
-        print("No")
+        print('No')
     if not fail:
-        print("Yes")
+        print('Yes')

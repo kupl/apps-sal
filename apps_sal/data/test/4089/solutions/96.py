@@ -1,6 +1,5 @@
 N = int(input())
 alpha = 'abcdefghijklmnopqrstuvwxyz'
-
 ans = ''
 while 26 < N:
     s = (N - 1) % 26

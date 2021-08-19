@@ -5,6 +5,6 @@ for i in range(26):
         if i * 4 + h * 7 == a:
             b = b + 1
 if b == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

@@ -1,5 +1,5 @@
 def main():
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     quo = n // (a + b)
     rem = n % (a + b)
     ans = quo * a

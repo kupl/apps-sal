@@ -1,4 +1,4 @@
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 dct = {}
 for _ in range(Q):
     A = int(input())
@@ -6,9 +6,7 @@ for _ in range(Q):
         dct[A] += 1
     else:
         dct[A] = 1
-
 x = Q - K
-
 if x < 0:
     for _ in range(N):
         print('Yes')

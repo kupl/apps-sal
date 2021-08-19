@@ -1,3 +1,3 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 c = a + b
-print((n // c) * a + min(a, n % c))
+print(n // c * a + min(a, n % c))

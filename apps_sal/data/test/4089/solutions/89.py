@@ -1,7 +1,7 @@
 N = int(input())
 c = 0
-while N - 26**c >= 0:
-    N -= 26**c
+while N - 26 ** c >= 0:
+    N -= 26 ** c
     c += 1
 d = [0] * (c - 1)
 i = 0

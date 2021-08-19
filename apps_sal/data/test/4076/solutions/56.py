@@ -1,5 +1,5 @@
 import numpy as np
-A, B, H, M = map(int, input().split())
+(A, B, H, M) = map(int, input().split())
 pi = np.pi
 h_angle = (H + M / 60) * 2 * pi / 12
 m_angle = M * 2 * pi / 60

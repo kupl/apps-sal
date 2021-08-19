@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = sorted(a, reverse=True)
 b = b[:k]
@@ -13,7 +13,6 @@ for i in range(n):
         b.remove(a[i])
         rec.append(k)
         k = 1
-
 rec[-1] += n - sum(rec)
 print(s)
-print(" ".join(map(str, rec)))
+print(' '.join(map(str, rec)))

@@ -1,4 +1,4 @@
-n, k, q = [int(i) for i in input().split()]
+(n, k, q) = [int(i) for i in input().split()]
 dic = {}
 for i in range(n):
     dic[i] = k

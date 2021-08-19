@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 ans = [[0, 0] for i in range(200001)]
 a.sort()
@@ -7,7 +7,7 @@ for i in range(n):
 for i in range(n):
     s = a[i]
     d = 1
-    while (s > 0):
+    while s > 0:
         s = s // 2
         if ans[s][0] < k:
             ans[s][0] += 1

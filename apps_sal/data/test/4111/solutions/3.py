@@ -11,7 +11,6 @@ for i in range(n):
     else:
         sum_left_even[i] = sum_left_even[i - 1]
         sum_left_odd[i] = sum_left_odd[i - 1] + A[i]
-
 B = A[::-1]
 for i in range(n):
     if i % 2 == 0:
@@ -20,7 +19,6 @@ for i in range(n):
     else:
         sum_right_even[i] = sum_right_even[i - 1]
         sum_right_odd[i] = sum_right_odd[i - 1] + B[i]
-
 answer = 0
 for i in range(n):
     if n % 2:

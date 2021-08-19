@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 ans = 0
 x = n // (a + b)
 y = n % (a + b)

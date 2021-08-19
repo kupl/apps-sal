@@ -4,7 +4,7 @@ if n == 1:
     print(0)
 else:
     sost = [-1, 0, 1]
-    mi = int(1e10)
+    mi = int(10000000000.0)
     for elem in sost:
         for elem2 in sost:
             new_m = m.copy()
@@ -20,13 +20,13 @@ else:
                     if new_m[i - 1] - new_m[i] != step:
                         if abs(new_m[i - 1] - new_m[i] - step) == 1:
                             cur_mi += 1
-                            new_m[i] += (new_m[i - 1] - new_m[i] - step)
+                            new_m[i] += new_m[i - 1] - new_m[i] - step
                         else:
                             f = False
                             break
                 if f:
                     mi = min(mi, cur_mi)
-    if mi == int(1e10):
+    if mi == int(10000000000.0):
         print(-1)
     else:
         print(mi)

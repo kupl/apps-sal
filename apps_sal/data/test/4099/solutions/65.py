@@ -1,9 +1,7 @@
-n, k, m = map(int, input().split())
-a = (map(int, input().split()))
-
+(n, k, m) = map(int, input().split())
+a = map(int, input().split())
 sum_Score = sum(a)
-good = ((m * n) - (sum_Score))
-
+good = m * n - sum_Score
 if good > k:
     print('-1')
 else:

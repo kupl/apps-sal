@@ -1,6 +1,5 @@
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 a_l = [int(input()) for _ in range(q)]
-
 d = {}
 for a in a_l:
     if a in d.keys():
@@ -13,8 +12,7 @@ for i in range(n):
             print('Yes')
         else:
             print('No')
+    elif k - q > 0:
+        print('Yes')
     else:
-        if k - q > 0:
-            print('Yes')
-        else:
-            print('No')
+        print('No')

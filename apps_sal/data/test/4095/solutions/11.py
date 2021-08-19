@@ -31,8 +31,8 @@ while pos_l >= 0:
     pos_l -= 1
 sum = 0
 for number_l in left:
-    if number_l * (-1) in right:
-        sum += (left[number_l] * right[(-1) * number_l])
+    if number_l * -1 in right:
+        sum += left[number_l] * right[-1 * number_l]
     if 1 - number_l in right:
-        sum += (left[number_l] * right[1 - number_l])
+        sum += left[number_l] * right[1 - number_l]
 print(sum)

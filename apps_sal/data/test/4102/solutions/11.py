@@ -16,6 +16,6 @@ n = int(input())
 dg1 = dg(n)
 dg2 = [mirror[d] for d in reversed(dg1)]
 if dg1 == dg2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

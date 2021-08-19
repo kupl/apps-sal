@@ -16,7 +16,7 @@ def divisors(n):
 
 for i in range(n):
     n1 = int(input())
-    n2 = list((list(map(int, input().split()))))
+    n2 = list(list(map(int, input().split())))
     n2.sort()
     a1 = n2[0] * n2[-1]
     final = True

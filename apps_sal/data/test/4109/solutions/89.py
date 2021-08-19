@@ -1,13 +1,12 @@
-
 def main():
-    n, m, x = map(int, input().split(" "))
+    (n, m, x) = map(int, input().split(' '))
     ca = []
     a = []
     c = []
-    INF = 1e7
+    INF = 10000000.0
     ans = INF
     for i in range(n):
-        ca.append(list(map(int, input().split(" "))))
+        ca.append(list(map(int, input().split(' '))))
     for i in range(n):
         c.append(ca[i][0])
         a.append(ca[i][1:])

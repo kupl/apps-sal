@@ -9,5 +9,5 @@ for i in d.keys():
 ans.sort()
 print(len(ans))
 for i in range(len(ans)):
-    print(ans[i][1], end=" ")
-print("")
+    print(ans[i][1], end=' ')
+print('')

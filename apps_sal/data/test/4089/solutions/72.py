@@ -1,6 +1,6 @@
 n = int(input())
-abc = "abcdefghijklmnopqrstuvwxyz"
-ans = ""
+abc = 'abcdefghijklmnopqrstuvwxyz'
+ans = ''
 while True:
     n -= 1
     ans += abc[n % 26]

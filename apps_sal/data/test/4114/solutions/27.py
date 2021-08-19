@@ -1,13 +1,11 @@
 n = int(input())
 ab = [list(map(int, input().split())) for _ in range(n)]
-
 for _ in range(0, n):
     if ab[_][2] != 0:
         x = ab[_][0]
         y = ab[_][1]
         h = ab[_][2]
         break
-
 for i in range(101):
     for j in range(101):
         f = True
@@ -25,4 +23,4 @@ for i in range(101):
             ansy = j
             ansr = l
             break
-print(str(ansx) + " " + str(ansy) + " " + str(ansr))
+print(str(ansx) + ' ' + str(ansy) + ' ' + str(ansr))

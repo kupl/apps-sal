@@ -7,7 +7,7 @@ for c in input() + '+':
             val *= -1
         res += val
         val = 0
-        sub = (c == '-')
+        sub = c == '-'
     val *= 10
     val += ord(c) - ord('0')
 print(res)

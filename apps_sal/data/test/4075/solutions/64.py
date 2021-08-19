@@ -1,13 +1,10 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 S = [0] * M
 answer = 0
-
 for i in range(M):
     S[i] = list(map(int, input().split()))
-
 P = list(map(int, input().split()))
-
-for i in range(2**N):
+for i in range(2 ** N):
     mb = '0' + str(N) + 'b'
     bi = format(i, mb)
     count = 0
@@ -19,5 +16,4 @@ for i in range(2**N):
             count += 1
     if count == M:
         answer += 1
-
 print(answer)

@@ -8,15 +8,11 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 k = int(input())
-
 tmp = 7
 res = 1
-
 for i in range(k):
     tmp %= k
     if tmp == 0:
@@ -25,5 +21,4 @@ for i in range(k):
     res += 1
 if res > k and tmp > 0:
     res = -1
-
 print(res)

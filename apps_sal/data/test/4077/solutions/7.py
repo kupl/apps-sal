@@ -1,9 +1,9 @@
 def ask(x):
     s = {}
     s[0] = 1
-    sum, cnt, res = 0, 0, 0
+    (sum, cnt, res) = (0, 0, 0)
     for i in range(n):
-        if(a[i] < x):
+        if a[i] < x:
             sum -= 1
             cnt -= s.get(sum, 0)
         else:
@@ -14,6 +14,6 @@ def ask(x):
     return res
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 print(ask(m) - ask(m + 1))

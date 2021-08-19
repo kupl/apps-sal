@@ -6,5 +6,4 @@ for i in range(K + 1):
         ans = i + 1
         break
     a = (a * 10 + 7) % K
-
 print(ans)

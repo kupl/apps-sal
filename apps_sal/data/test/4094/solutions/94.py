@@ -5,9 +5,9 @@ for i in range(K):
     x += 7 * res
     x %= K
     if x % K == 0:
-        print((i + 1))
+        print(i + 1)
         break
     res *= 10
     res %= K
 else:
-    print((-1))
+    print(-1)

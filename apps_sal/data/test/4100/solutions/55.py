@@ -1,4 +1,4 @@
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 a = [0] * n
 for i in range(q):
     p = int(input())

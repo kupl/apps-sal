@@ -16,15 +16,15 @@ def mints():
 
 
 def solve():
-    n, k, x = mints()
+    (n, k, x) = mints()
     a = list(mints())
-    d = [-1e50] * n
-    p = [-1e50] * n
+    d = [-1e+50] * n
+    p = [-1e+50] * n
     for i in range(0, k):
         d[i] = a[i]
     q = deque()
     for xx in range(1, x):
-        d, p = p, d
+        (d, p) = (p, d)
         q.clear()
         for nn in range(xx - 1, n):
             while len(q) != 0 and q[0][1] < nn - k:
@@ -32,7 +32,7 @@ def solve():
             if len(q):
                 d[nn] = q[0][0] + a[nn]
             else:
-                d[nn] = -1e50
+                d[nn] = -1e+50
             while len(q) and q[-1][0] <= p[nn]:
                 q.pop()
             q.append((p[nn], nn))

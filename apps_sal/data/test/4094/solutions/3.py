@@ -1,5 +1,4 @@
 K = int(input())
-
 t = 7
 for i in range(K):
     if t % K == 0:

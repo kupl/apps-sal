@@ -1,7 +1,7 @@
 n = int(input())
 for ti in range(n):
     s = input()
-    f = [0] * (26)
+    f = [0] * 26
     for i in s:
         f[ord(i) - ord('a')] += 1
     flag = True
@@ -16,8 +16,8 @@ for ti in range(n):
                 flag = False
                 break
         if not flag:
-            print("No")
+            print('No')
         else:
-            print("Yes")
+            print('Yes')
     else:
-        print("No")
+        print('No')

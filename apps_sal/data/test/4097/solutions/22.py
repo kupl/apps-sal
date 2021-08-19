@@ -1,4 +1,5 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -6,7 +7,7 @@ A = list(R())
 if n == 1 or n == 2:
     print(0)
     quit()
-minn = int(1e9 + 1)
+minn = int(1000000000.0 + 1)
 for i in range(-1, 2):
     for j in range(-1, 2):
         if (A[0] + i - A[-1] - j) % (n - 1):
@@ -23,7 +24,7 @@ for i in range(-1, 2):
                 cnt += 1
         else:
             minn = min(minn, cnt)
-if minn == int(1e9 + 1):
+if minn == int(1000000000.0 + 1):
     print(-1)
 else:
     print(minn)

@@ -1,4 +1,4 @@
-n, K = map(int, input().split())
+(n, K) = map(int, input().split())
 arr = sorted(map(int, input().split()))
 freq = {}
 for x in arr:
@@ -6,7 +6,6 @@ for x in arr:
 arr = sorted(freq.keys())
 freq = [freq[x] for x in arr]
 n = len(arr)
-
 dp = [[0 for _ in range(n + 1)] for _ in range(2)]
 for k in range(1, K + 1):
     for i in range(n - 1, -1, -1):

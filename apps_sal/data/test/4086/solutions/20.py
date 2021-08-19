@@ -1,7 +1,6 @@
 n = int(input())
 ar = list(map(int, input().split()))
 dic = {}
-
 ar.reverse()
 nar = []
 for x in ar:
@@ -9,6 +8,5 @@ for x in ar:
         nar.append(x)
         dic[x] = True
 nar.reverse()
-
 print(len(nar))
 print(*nar)

@@ -5,7 +5,7 @@ P = []
 
 
 def __starting_point():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     for _ in range(M):
         row = list(map(int, input().split()))[1:]
         S.append(row)

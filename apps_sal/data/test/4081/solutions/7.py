@@ -16,14 +16,13 @@ while i <= j:
             ans += 'R'
             last = a[j]
             j -= 1
+    elif a[j] > last:
+        ans += 'R'
+        last = a[j]
+        j -= 1
     else:
-        if a[j] > last:
-            ans += 'R'
-            last = a[j]
-            j -= 1
-        else:
-            ans += 'L'
-            last = a[i]
-            i += 1
+        ans += 'L'
+        last = a[i]
+        i += 1
 print(len(ans))
 print(ans)

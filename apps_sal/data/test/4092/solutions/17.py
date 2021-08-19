@@ -1,5 +1,4 @@
 input()
-
 prefix_sums = set()
 prefix_sums_shift = 1000
 result = 0

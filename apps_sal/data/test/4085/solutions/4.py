@@ -2,7 +2,7 @@ import math
 for test in range(int(input())):
     n = int(input())
     a = sorted(list(map(int, input().split())))
-    x, flag = a[0] * a[-1], 0
+    (x, flag) = (a[0] * a[-1], 0)
     for i in range(len(a)):
         if a[i] * a[-1 - i] != x:
             flag = 1

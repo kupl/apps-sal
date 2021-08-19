@@ -5,8 +5,7 @@ for i in range(n // 4 + 1):
         if 4 * i + 7 * j == n:
             result = True
             break
-
 if result:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

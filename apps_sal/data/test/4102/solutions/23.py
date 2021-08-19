@@ -10,4 +10,4 @@ s = input()
 if _bool(s):
     print('Yes')
 else:
-    print("No")
+    print('No')
