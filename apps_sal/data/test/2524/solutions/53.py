@@ -1,15 +1,13 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain, count
+MOD = 1000000007
 
-MOD = 1000000007  # type: int
 
-
-def solve(N: int, A: "List[int]"):
+def solve(N: int, A: 'List[int]'):
     a_max = max(A)
     ans = 0
     for i in count(0):
-        mask = 2**i
+        mask = 2 ** i
         if mask > a_max:
             return ans
         c0 = 0
@@ -25,8 +23,8 @@ def solve(N: int, A: "List[int]"):
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    N = int(next(tokens))  # type: int
-    A = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
+    N = int(next(tokens))
+    A = [int(next(tokens)) for _ in range(N)]
     answer = solve(N, A)
     print(answer)
 

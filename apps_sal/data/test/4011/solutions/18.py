@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Codeforces Round #555 (Div. 3)
 
 Problem B. Long Number
@@ -11,10 +8,8 @@ Problem B. Long Number
 Please feel free to contact me if you have any question
 regarding the implementation below.
 """
-
 __version__ = '0.2'
 __date__ = '2019-04-26'
-
 import sys
 
 
@@ -43,7 +38,7 @@ def main(argv=None):
 
 def __starting_point():
     STATUS = main()
-    return(STATUS)
+    return STATUS
 
 
 __starting_point()

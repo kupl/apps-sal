@@ -6,7 +6,7 @@ def add(x, y):
     return (x[0] + y[0], x[1] + y[1])
 
 
-h, w, n = list(map(int, input().split()))
+(h, w, n) = list(map(int, input().split()))
 speeds = list(map(int, input().split()))
 arr = [None] * h
 castles = [deque() for _ in range(n)]
@@ -21,7 +21,7 @@ for i in range(h):
 
 
 def get(x):
-    if (x[0] >= 0) and (x[1] >= 0) and (x[0] < h) and (x[1] < w):
+    if x[0] >= 0 and x[1] >= 0 and (x[0] < h) and (x[1] < w):
         return arr[x[0]][x[1]]
     return None
 
@@ -32,7 +32,7 @@ while has_changes:
     for p in range(n):
         cur_lvl = castles[p]
         cur_lvl_num = 0
-        while (cur_lvl_num < speeds[p]) and cur_lvl:
+        while cur_lvl_num < speeds[p] and cur_lvl:
             next_lvl = []
             for cell in cur_lvl:
                 for move in ((0, 1), (0, -1), (-1, 0), (1, 0)):
@@ -46,5 +46,4 @@ while has_changes:
             cur_lvl_num += 1
             cur_lvl = next_lvl
         castles[p] = cur_lvl
-
 print(' '.join(map(str, castles_count)))

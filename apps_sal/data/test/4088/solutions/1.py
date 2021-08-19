@@ -17,14 +17,12 @@ for _ in range(r1(int)):
     s = r3(str)
     m = r1(int)
     b = r2(int)
-
     s.sort()
     mp = {}
     for i in s:
         mp[i] = 0
     for i in s:
         mp[i] += 1
-
     t = ['' for i in range(m)]
     for i in range(m):
         ind = []
@@ -33,12 +31,11 @@ for _ in range(r1(int)):
             if b[j] == 0:
                 ind.append(j)
                 cnt += 1
-        if (cnt == 0):
+        if cnt == 0:
             break
         for x in ind:
             for j in range(m):
                 b[j] -= max(abs(x - j), 1)
-
         tk = ''
         tkeys = list(sorted(list(mp.keys()), reverse=True))
         for k in tkeys:
@@ -47,9 +44,6 @@ for _ in range(r1(int)):
             del mp[k]
             if len(tk) > 0:
                 break
-
         for x in ind:
             t[x] = tk
-        #print(mp, b, t)
-
     print(''.join(t))

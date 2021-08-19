@@ -10,31 +10,30 @@ def r(a):
     while not a % 2:
         a //= 2
         i += 1
-    return a, i
+    return (a, i)
 
 
 def chem(n, A):
-    p, _ = r(A[0])
+    (p, _) = r(A[0])
     for a in A:
-        q, _ = r(a)
+        (q, _) = r(a)
         while p != q:
             if p > q:
-                p, q = q, p
-            q, _ = r(q // 2)
+                (p, q) = (q, p)
+            (q, _) = r(q // 2)
         if q == 1:
             break
     t = 0
     L = []
     for a in A:
-        q, i = r(a)
+        (q, i) = r(a)
         while q != p:
             t += i + 1
-            q, i = r(q // 2)
+            (q, i) = r(q // 2)
         L.append(i)
-
     L.sort()
     m = (L[n // 2] + L[(n - 1) // 2]) // 2
-    return t + sum(abs(l - m) for l in L)
+    return t + sum((abs(l - m) for l in L))
 
 
 def main():
@@ -42,8 +41,6 @@ def main():
     A = readintl()
     assert len(A) == n
     print(chem(n, A))
-
-##########
 
 
 def readint():
@@ -79,17 +76,16 @@ def patchio(i):
 
 def do_test(k, test):
     try:
-        log(f"TEST {k}")
-        i, o = test
+        log(f'TEST {k}')
+        (i, o) = test
         with patchio(i) as r:
             t0 = time.time()
             main()
             t1 = time.time()
         if r.getvalue() == o:
-            log(f"OK ({int((t1-t0)*1000000)/1000:0.3f} ms)\n")
+            log(f'OK ({int((t1 - t0) * 1000000) / 1000:0.3f} ms)\n')
         else:
-            log(f"Expected:\n{o}"
-                f"Got ({int((t1-t0)*1000000)/1000:0.3f} ms):\n{r.getvalue()}")
+            log(f'Expected:\n{o}Got ({int((t1 - t0) * 1000000) / 1000:0.3f} ms):\n{r.getvalue()}')
     except Exception:
         traceback.print_exc()
         log()
@@ -100,17 +96,7 @@ def test(ts):
         do_test(k, tests[k])
 
 
-tests = [("""\
-3
-4 8 2
-""", """\
-2
-"""), ("""\
-3
-3 5 6
-""", """\
-5
-""")]
+tests = [('3\n4 8 2\n', '2\n'), ('3\n3 5 6\n', '5\n')]
 
 
 def __starting_point():

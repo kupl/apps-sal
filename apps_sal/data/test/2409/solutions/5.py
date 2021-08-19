@@ -10,23 +10,19 @@ def split_input():
     return [int(i) for i in input().split()]
 
 
-# tests = 1
 tests = int(input())
-
 for _ in range(tests):
-    n, k, l = split_input()
+    (n, k, l) = split_input()
     d = split_input()
     newd = [l - i for i in d]
     if min(newd) < 0:
-        print("No")
+        print('No')
         continue
     kvalue = newd[0]
     dec = True
     ans = True
-    # print(newd)
     i = 1
     while i < n:
-        # print(kvalue,dec)
         if newd[i] < 0:
             ans = False
             break
@@ -43,14 +39,13 @@ for _ in range(tests):
                 kvalue = newd[i]
             else:
                 kvalue -= 1
+        elif newd[i] <= kvalue:
+            ans = False
+            break
         else:
-            if newd[i] <= kvalue:
-                ans = False
-                break
-            else:
-                kvalue += 1
+            kvalue += 1
         i += 1
     if ans:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
