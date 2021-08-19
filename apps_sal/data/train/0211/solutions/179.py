@@ -1,5 +1,7 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def maxU(s, soFar=set()):
             if len(s) == 1 and s in soFar:
                 return 0

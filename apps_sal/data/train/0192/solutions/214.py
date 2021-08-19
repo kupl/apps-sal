@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         count = 0
         coinPiles = collections.deque(sorted(piles))

@@ -1,5 +1,7 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def solve(start, visited, memo):
             state = (start, tuple(visited))
             if start >= len(s):
@@ -13,7 +15,6 @@ class Solution:
                 if visited[pos]:
                     continue
                 visited[pos] = True
-
                 result = max(result, 1 + solve(idx + 1, visited, memo))
                 visited[pos] = False
             memo[state] = result

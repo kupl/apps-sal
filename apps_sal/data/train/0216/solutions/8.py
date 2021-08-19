@@ -1,4 +1,5 @@
 class Solution:
+
     def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
         curr = 0
         maxcurr = 0
@@ -17,8 +18,8 @@ class Solution:
                 k += 1
                 curr -= 1
             maxcurr = max(curr, maxcurr)
-            if c < r or r < o or o < a or a < k:
+            if c < r or r < o or o < a or (a < k):
                 return -1
-        if curr == 0 and c == r and r == o and o == a and a == k:
+        if curr == 0 and c == r and (r == o) and (o == a) and (a == k):
             return maxcurr
         return -1

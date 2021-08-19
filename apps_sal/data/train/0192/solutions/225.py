@@ -1,4 +1,5 @@
 class Solution(object):
+
     def maxCoins(self, piles):
         piles = collections.deque(sorted(piles)[::-1])
         s = 0
@@ -6,7 +7,5 @@ class Solution(object):
             piles.popleft()
             x = piles.popleft()
             piles.pop()
-
             s += x
-
         return s

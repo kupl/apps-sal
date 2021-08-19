@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         lookup = set()
         return self.traverse(s, 0, lookup)
@@ -12,5 +13,4 @@ class Solution:
                 lookup.add(s[index:idx])
                 array.append(1 + self.traverse(s, idx, lookup))
                 lookup.remove(s[index:idx])
-
         return max(array) if array else 0

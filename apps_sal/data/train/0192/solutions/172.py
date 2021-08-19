@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         complete_sorted = sorted(piles)
         result = 0

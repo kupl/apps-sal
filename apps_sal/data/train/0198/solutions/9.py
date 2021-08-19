@@ -1,4 +1,5 @@
 class Solution:
+
     def equalSubstring(self, s, t, maxCost):
         n = len(s)
         right = 0

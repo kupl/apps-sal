@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         seen = set()
 
@@ -13,5 +14,4 @@ class Solution:
                 res = max(res, 1 + dfs(s[i:]))
                 seen.remove(s[:i])
             return res
-
         return dfs(s)

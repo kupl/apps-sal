@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         n = len(customers)
         sum_cus = sum(customers)
@@ -6,7 +7,7 @@ class Solution:
             customers[i] *= grumpy[i]
         window = 0
         max_secret_satisfied = -math.inf
-        left, right = 0, 0
+        (left, right) = (0, 0)
         while right < n:
             window += customers[right]
             right += 1

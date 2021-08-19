@@ -1,9 +1,8 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         ansIfOne = kadane(A)
-
         ansIfTwo = sum(A) - kadaneMin(A[1:len(A) - 1])
-
         return max(ansIfOne, ansIfTwo)
 
 

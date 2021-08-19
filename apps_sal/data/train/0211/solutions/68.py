@@ -1,7 +1,7 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         from functools import lru_cache
-
         L = len(s)
 
         @lru_cache(None)
@@ -15,5 +15,4 @@ class Solution:
                     continue
                 res = max(res, DP(i, seen | {temp}))
             return res
-
         return DP(0, frozenset())

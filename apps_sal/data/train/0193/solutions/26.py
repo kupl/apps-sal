@@ -3,6 +3,7 @@ import collections
 
 
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         dict_gens = collections.Counter(arr)
         generators = sorted(dict_gens.values())

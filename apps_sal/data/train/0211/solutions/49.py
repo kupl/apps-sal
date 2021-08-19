@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         max_len = [1]
 
@@ -13,6 +14,5 @@ class Solution:
                     helper(j + 1, s, vis)
                     del vis[s[i:j + 1]]
                 j += 1
-
         helper(0, s, {})
         return max_len[0]

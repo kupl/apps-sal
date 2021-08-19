@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         self.res = 1
 
@@ -14,7 +15,5 @@ class Solution:
                 temp = func(string[i + 1:], visited) + 1
                 visited.remove(s)
                 res = max(res, temp)
-
             return res
-
         return func(s, set())

@@ -1,10 +1,11 @@
 class Solution:
+
     def canPartitionKSubsets(self, nums, k):
         if sum(nums) % k or len(nums) < k:
             return False
         if k == 1:
             return True
-        target, used = sum(nums) / k, [False for i in range(len(nums))]
+        (target, used) = (sum(nums) / k, [False for i in range(len(nums))])
 
         def dfs(start, sum_, k):
             if k == 1:

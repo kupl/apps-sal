@@ -1,5 +1,7 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
+
         def kadane(gen):
             ans = None
             cur = None
@@ -14,7 +16,7 @@ class Solution:
                     ans = cur
             return ans
         S = sum(A)
-        ans1 = kadane((A))
+        ans1 = kadane(A)
         if len(A) > 1:
             ans2 = S + kadane([-A[i] for i in range(1, len(A))])
             ans3 = S + kadane([-A[i] for i in range(len(A) - 1)])

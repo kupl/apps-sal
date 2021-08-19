@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, string: str) -> int:
 
         def split(s, splits):
@@ -9,5 +10,4 @@ class Solution:
                 rst = 1 + split(s[i:], splits + [s[:i]])
                 maxs = max(rst, maxs)
             return maxs
-
         return split(string, [])

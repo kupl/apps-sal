@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         n = len(s)
 
@@ -14,6 +15,6 @@ class Solution:
                 cand = s[i:i + k]
                 if cand not in cur:
                     dp(i + k, cur + (cand,))
-        ans, cur = 0, ()
+        (ans, cur) = (0, ())
         dp(0, cur)
         return ans

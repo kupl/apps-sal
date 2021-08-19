@@ -1,4 +1,5 @@
 class Solution:
+
     def longestMountain(self, A: List[int]) -> int:
         idx = 0
         big = 0

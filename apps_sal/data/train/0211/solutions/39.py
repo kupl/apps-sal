@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         res = 1
 
@@ -6,11 +7,9 @@ class Solution:
             nonlocal res
             if pos == len(s):
                 res = max(res, len(set(path)))
-
             for i in range(pos + 1, len(s) + 1):
-                path.append(s[pos: i])
+                path.append(s[pos:i])
                 dfs(i, path)
                 path.pop()
-
         dfs(0, [])
         return res

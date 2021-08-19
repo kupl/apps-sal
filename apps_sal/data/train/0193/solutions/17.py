@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         d = {}
         for i in arr:
@@ -9,7 +10,7 @@ class Solution:
         sum = 0
         cnt = 0
         for i in range(len(d)):
-            if sum >= (len(arr) / 2):
+            if sum >= len(arr) / 2:
                 break
             else:
                 sum = sum + d[i][1]

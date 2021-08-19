@@ -1,29 +1,30 @@
 class Solution:
+
     def numberToWords(self, num):
         """
         :type num: int
         :rtype: str
         """
         if num == 0:
-            return "Zero"
-        res = ""
-        less20 = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"]
-        tens = ["Zero", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"]
-        thousands = ["", "Thousand", "Million", "Billion"]
+            return 'Zero'
+        res = ''
+        less20 = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen']
+        tens = ['Zero', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
+        thousands = ['', 'Thousand', 'Million', 'Billion']
         for k in range(4):
             if num == 0:
                 break
-            cur = ""
+            cur = ''
             curNum = num % 1000
             num //= 1000
-            print(("num", num))
+            print(('num', num))
             if curNum >= 100:
                 x = curNum // 100
                 curNum %= 100
-                cur = less20[x] + " Hundred"
+                cur = less20[x] + ' Hundred'
             if curNum > 0:
                 if cur:
-                    cur += " "
+                    cur += ' '
                 if curNum < 20:
                     cur += less20[curNum]
                 else:
@@ -31,8 +32,8 @@ class Solution:
                     curNum %= 10
                     cur += tens[x]
                     if curNum != 0:
-                        cur += " " + less20[curNum]
-            print("cur")
+                        cur += ' ' + less20[curNum]
+            print('cur')
             if cur:
-                res = cur + ((" " + thousands[k] if k else"")) + ((" " + res if res else""))
+                res = cur + (' ' + thousands[k] if k else '') + (' ' + res if res else '')
         return res

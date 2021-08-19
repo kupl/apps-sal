@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         self.max = 0
         self.backtrack(s, set(), 0)

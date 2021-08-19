@@ -1,4 +1,5 @@
 class Solution:
+
     def orderlyQueue(self, S: str, K: int) -> str:
         if K == 1:
             tmp = S

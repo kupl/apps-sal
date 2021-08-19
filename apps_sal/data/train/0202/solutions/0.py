@@ -1,4 +1,5 @@
 class Solution:
+
     def longestMountain(self, A: List[int]) -> int:
         up = 0
         down = 0
@@ -10,16 +11,13 @@ class Solution:
                 else:
                     up = 1
                     down = 0
-
             elif A[i] > A[i + 1]:
                 if up > 0:
                     down += 1
                     mountain = up + down + 1
                     if ans < mountain:
                         ans = mountain
-
             else:
                 up = 0
                 down = 0
-
         return ans

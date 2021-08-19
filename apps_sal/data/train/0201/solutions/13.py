@@ -7,4 +7,4 @@ class Solution:
         :type n: int
         :rtype: int
         """
-        return sum(self.numTrees(key - 1, low) * self.numTrees(high, key + 1) for key in range(low, high + 1)) or 1
+        return sum((self.numTrees(key - 1, low) * self.numTrees(high, key + 1) for key in range(low, high + 1))) or 1

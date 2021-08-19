@@ -1,6 +1,7 @@
 class Solution:
+
     def subarrayBitwiseORs(self, A: List[int]) -> int:
-        res, curr = set(), set()
+        (res, curr) = (set(), set())
         for a in A:
             temp = {a}
             for b in curr:

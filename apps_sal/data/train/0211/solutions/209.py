@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
 
         def backtrack(m, s):
@@ -11,9 +12,6 @@ class Solution:
                     m.add(candidate)
                     ans = max(ans, 1 + backtrack(m, s[i:]))
                     m.remove(candidate)
-
             return ans
-
         m = set()
-
         return backtrack(m, s)

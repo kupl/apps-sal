@@ -1,4 +1,5 @@
 class Solution:
+
     def uniquePaths(self, m, n):
         """
         :type m: int

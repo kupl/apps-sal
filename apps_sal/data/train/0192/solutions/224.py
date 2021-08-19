@@ -1,7 +1,8 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         you = []
-        l = int((len(piles) / 3))
+        l = int(len(piles) / 3)
         piles.sort()
         piles = piles[l:]
         for i in range(len(piles)):

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         print(len(piles) % 3)
         piles = sorted(piles)

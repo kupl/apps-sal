@@ -1,9 +1,10 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         if A == None or len(A) == 0:
             return 0
-        max_sum, min_sum, total = -100000000, 1000000000, 0
-        curr_max_sum, curr_min_sum = 0, 0
+        (max_sum, min_sum, total) = (-100000000, 1000000000, 0)
+        (curr_max_sum, curr_min_sum) = (0, 0)
         for i in A:
             curr_max_sum += i
             max_sum = max(curr_max_sum, max_sum)

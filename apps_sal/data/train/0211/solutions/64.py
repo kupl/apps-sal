@@ -2,7 +2,9 @@ import functools
 
 
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         @functools.lru_cache(None)
         def dp(i):
             res = [{s[:i + 1]}]

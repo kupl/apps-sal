@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         dict_ = {}
         for num in arr:
@@ -6,9 +7,7 @@ class Solution:
                 dict_[num] = 1
             else:
                 dict_[num] += 1
-
         sort_list = sorted(dict_.keys(), key=lambda x: dict_[x], reverse=True)
-
         n = len(arr)
         size = 0
         for num in sort_list:

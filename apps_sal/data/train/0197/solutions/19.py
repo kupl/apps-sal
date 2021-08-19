@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s: str) -> bool:
         findVal = s.find('abc')
         while findVal != -1:

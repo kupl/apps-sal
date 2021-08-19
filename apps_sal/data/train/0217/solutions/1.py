@@ -1,4 +1,5 @@
 class Solution:
+
     def subarrayBitwiseORs(self, A: List[int]) -> int:
         s = set()
         c = set()

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestMountain(self, A: List[int]) -> int:
         is_peak = False
         index = 1

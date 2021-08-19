@@ -1,4 +1,5 @@
 class Solution:
+
     def floor_counter(self, n):
         if n % 2 == 0:
             return n / 2
@@ -17,7 +18,7 @@ class Solution:
         sum = 0
         type_counter = []
         for i in range(len(sorted_freq)):
-            sum += (sorted_freq[i][1])
+            sum += sorted_freq[i][1]
             print(sum)
             type_counter.append(sorted_freq[i][0])
             if sum >= ceiling:

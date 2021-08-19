@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         c = Counter(arr)
         c = list(c.values())

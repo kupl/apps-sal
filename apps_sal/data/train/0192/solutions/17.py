@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, a: List[int]) -> int:
         a.sort()
         n = len(a)

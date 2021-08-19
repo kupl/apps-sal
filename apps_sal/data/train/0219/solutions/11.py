@@ -1,4 +1,5 @@
 class Solution:
+
     def longestWPI(self, hours: List[int]) -> int:
         sum = 0
         ans = 0

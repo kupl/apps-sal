@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort()
         count = 0
@@ -9,4 +10,4 @@ class Solution:
             res += piles[i]
             i -= 2
             count += 1
-        return(res)
+        return res

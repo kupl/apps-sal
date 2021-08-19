@@ -1,4 +1,5 @@
 class Solution:
+
     def helper(self, s, occur):
         if len(s) == 0:
             return 0
@@ -7,10 +8,10 @@ class Solution:
             if s[:i] not in occur:
                 occur.append(s[:i])
                 if (s[i:], tuple(occur)) in self.memo:
-                    res = self.memo[(s[i:], tuple(occur))]
+                    res = self.memo[s[i:], tuple(occur)]
                 else:
                     res = self.helper(s[i:], occur)
-                    self.memo[(s[i:], tuple(occur))] = res
+                    self.memo[s[i:], tuple(occur)] = res
                 if res >= 0:
                     curMax = max(curMax, 1 + res)
                 occur.pop()

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         for answer in range(len(s), 0, -1):
             num_splits = answer - 1

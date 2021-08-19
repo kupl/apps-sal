@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         mx = curr = A[0]
         cumSum = [A[0]]

@@ -1,10 +1,10 @@
 class Solution:
+
     def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
         croak = 'croak'
         frogs = 0
         openCroaks = list()
         char2count = {'c': 0, 'r': 0, 'o': 0, 'a': 0, 'k': 0}
-
         for char in croakOfFrogs:
             if char not in croak:
                 return -1
@@ -14,7 +14,6 @@ class Solution:
                 char2count[croak[croak.find(char) - 1]] -= 1
                 if char != 'k':
                     char2count[char] += 1
-
             else:
                 return -1
             frogs = max(frogs, sum(char2count.values()))

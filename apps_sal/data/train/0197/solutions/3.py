@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s: str) -> bool:
         stack = collections.deque()
         for char in s:

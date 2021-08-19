@@ -1,4 +1,5 @@
 class Solution:
+
     def subarrayBitwiseORs(self, A: List[int]) -> int:
         s = set()
         global_set = set()
@@ -7,5 +8,4 @@ class Solution:
             s.add(v)
             s = {x | v for x in s}
             global_set |= s
-
         return len(global_set)

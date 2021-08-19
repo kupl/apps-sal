@@ -1,4 +1,5 @@
 class Solution:
+
     def longestWPI(self, hours: List[int]) -> int:
         n = len(hours)
         hours = [1 if x > 8 else -1 for x in hours]
@@ -11,6 +12,6 @@ class Solution:
                 ans = i + 1
             if s not in idx:
                 idx[s] = i
-            if (s - 1) in idx:
+            if s - 1 in idx:
                 ans = max(ans, i - idx[s - 1])
         return ans

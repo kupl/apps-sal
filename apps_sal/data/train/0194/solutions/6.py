@@ -1,4 +1,5 @@
 class Solution:
+
     def canPartitionKSubsets(self, nums, k):
         """
         :type nums: List[int]
@@ -15,7 +16,6 @@ class Solution:
         while nums and nums[-1] == target:
             nums.pop()
             k -= 1
-
         return self.helper(nums, target, [0] * k)
 
     def helper(self, nums, target, dp):

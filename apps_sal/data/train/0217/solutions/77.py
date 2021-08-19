@@ -1,4 +1,5 @@
 class Solution:
+
     def subarrayBitwiseORs(self, A: List[int]) -> int:
         my_set = set(A)
         curr = 0
@@ -13,5 +14,4 @@ class Solution:
                 temp.add(num | p)
                 my_set.add(num | p)
             prev = temp
-
         return len(my_set)

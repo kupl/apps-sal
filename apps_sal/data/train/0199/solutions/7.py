@@ -1,4 +1,5 @@
 class Solution:
+
     def longestConsecutive(self, nums):
         """
         :type nums: List[int]

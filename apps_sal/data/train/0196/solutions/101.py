@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         B = A + A
         N = len(A)

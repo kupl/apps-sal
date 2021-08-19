@@ -1,4 +1,5 @@
 class Solution:
+
     def canPartitionKSubsets(self, nums, k):
         """
         :type nums: List[int]

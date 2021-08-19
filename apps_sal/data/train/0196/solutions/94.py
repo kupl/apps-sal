@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         maxHere = currentMax = float('-inf')
         minHere = currentMin = float('inf')

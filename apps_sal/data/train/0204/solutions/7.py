@@ -1,4 +1,5 @@
 class Solution:
+
     def search(self, nums, target):
         """
         :type nums: List[int]
@@ -12,13 +13,12 @@ class Solution:
                 break
         if idx == -1:
             return self.bin_search(nums, 0, len(nums), target)
+        elif target < nums[0] or target < nums[-1]:
+            return self.bin_search(nums, idx, len(nums), target)
+        elif target > nums[-1] or target > nums[0]:
+            return self.bin_search(nums, 0, idx, target)
         else:
-            if target < nums[0] or target < nums[-1]:
-                return self.bin_search(nums, idx, len(nums), target)
-            elif target > nums[-1] or target > nums[0]:
-                return self.bin_search(nums, 0, idx, target)
-            else:
-                assert(False)
+            assert False
 
     def bin_search(self, nums, i1, i2, target):
         while i1 < i2:
@@ -29,5 +29,4 @@ class Solution:
                 i2 = mi
             else:
                 i1 = mi + 1
-
         return -1

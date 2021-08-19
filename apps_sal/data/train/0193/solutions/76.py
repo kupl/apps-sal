@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         sz = len(arr)
         d = sorted(list(Counter(arr).items()), key=lambda x: -x[1])

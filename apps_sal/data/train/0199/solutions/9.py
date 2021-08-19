@@ -1,4 +1,5 @@
 class Solution:
+
     def longestConsecutive(self, nums):
         """
         :type nums: List[int]
@@ -13,13 +14,10 @@ class Solution:
                 cnt += 1
                 s.discard(tmp)
                 tmp -= 1
-
             tmp = i + 1
             while tmp in s:
                 cnt += 1
                 s.discard(tmp)
                 tmp += 1
-
             max_count = max(max_count, cnt)
-
         return max_count

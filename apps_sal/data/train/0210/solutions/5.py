@@ -1,4 +1,5 @@
 class Solution:
+
     def equalSol(self, nums, k):
         if k == 0:
             return False
@@ -22,9 +23,9 @@ class Solution:
         if t == 0:
             return self.equalSol(nums, k)
         for i in range(len(nums)):
-            for j in range(1, (k + 1)):
-                if (i + j) < len(nums) and abs(nums[i] - nums[i + j]) <= t:
+            for j in range(1, k + 1):
+                if i + j < len(nums) and abs(nums[i] - nums[i + j]) <= t:
                     return True
-                if (i - j) >= 0 and abs(nums[i] - nums[i - j]) <= t:
+                if i - j >= 0 and abs(nums[i] - nums[i - j]) <= t:
                     return True
         return False

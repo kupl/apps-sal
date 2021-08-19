@@ -1,6 +1,6 @@
 class Solution:
-    def maxUniqueSplit(self, s: str) -> int:
 
+    def maxUniqueSplit(self, s: str) -> int:
         n = len(s)
 
         def dp(cur, ss):

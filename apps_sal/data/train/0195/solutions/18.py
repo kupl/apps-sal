@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, A: List[int]) -> int:
         cnt = collections.defaultdict(int)
         for i in A:

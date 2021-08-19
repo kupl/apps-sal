@@ -4,6 +4,7 @@ cs = set(chars)
 
 
 class Solution:
+
     def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
         N = len(croakOfFrogs)
         if N == 0:

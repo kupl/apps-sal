@@ -1,5 +1,5 @@
-
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         if not s:
             return 0
@@ -7,7 +7,6 @@ class Solution:
 
     def dfs(self, s: str, present: set) -> int:
         maximum = 0
-
         for i in range(1, len(s) + 1):
             substring = s[:i]
             if substring not in present:

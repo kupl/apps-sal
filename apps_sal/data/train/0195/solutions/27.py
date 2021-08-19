@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def countTriplets(self, A: List[int]) -> int:
         memo = dict()
         for i in range(len(A)):

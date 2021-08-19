@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s: str) -> bool:
         while True:
             ns = s.replace('abc', '')

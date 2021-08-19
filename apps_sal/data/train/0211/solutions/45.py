@@ -9,13 +9,12 @@ class Solution:
 
     def h(self, s, b, ar):
         ar2 = ar.copy()
-        if(b < 0):
+        if b < 0:
             self.max_ = max(self.max_, len(ar2))
             return 0
         t = s[b:]
         self.h(s, b - 1, ar2)
         s = s[:b]
-
-        if(t not in ar2):
+        if t not in ar2:
             ar2.append(t)
             self.h(s, b - 1, ar2)

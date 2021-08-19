@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         self.seen = set()
         self.result = 0
@@ -6,7 +7,6 @@ class Solution:
         def backtrack(s, start):
             if start == len(s):
                 return True
-
             for end in range(start + 1, len(s) + 1):
                 if s[start:end] not in self.seen:
                     self.seen.add(s[start:end])

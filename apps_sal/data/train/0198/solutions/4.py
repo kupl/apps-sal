@@ -1,4 +1,5 @@
 class Solution:
+
     def equalSubstring(self, string: str, target: str, maxCost: int) -> int:
         cost = [0] * len(string)
         for i in range(len(string)):
@@ -15,5 +16,4 @@ class Solution:
                 while s <= i and cost[i] - cost[s] > maxCost:
                     s += 1
                 answer = max(answer, i - s)
-
         return answer

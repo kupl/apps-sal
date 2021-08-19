@@ -1,5 +1,7 @@
 class Solution:
+
     def isGoodArray(self, nums: List[int]) -> bool:
+
         def gcd(a, b):
             if b > 0:
                 return gcd(b, a % b)

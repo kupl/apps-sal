@@ -3,5 +3,6 @@ def max_unique_substrings(s, seen=()):
 
 
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         return max_unique_substrings(s)

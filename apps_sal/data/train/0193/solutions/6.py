@@ -21,5 +21,4 @@ class Solution:
                 return num
             total += res[key]
             num += 1
-
         return num

@@ -1,4 +1,5 @@
 class Solution:
+
     def search(self, nums, target):
         """
         :type nums: List[int]
@@ -14,7 +15,7 @@ class Solution:
             elif nums[mid] > nums[high]:
                 low = mid + 1
             else:
-                print("comes here")
+                print('comes here')
                 print(high)
                 print(mid)
                 print(low)

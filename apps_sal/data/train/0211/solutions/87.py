@@ -1,13 +1,13 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def split(s):
             if not s:
                 return [set()]
             n = len(s)
-
             w = set()
             w.add(tuple([s]))
-
             ret = [set([s])]
             if n == 1:
                 return ret
@@ -26,7 +26,6 @@ class Solution:
                                 w.add(e)
                                 ret += [l | r]
             return ret
-
         if not s:
             return 0
         n = len(s)
@@ -35,7 +34,6 @@ class Solution:
             return max(map(len, ws))
         else:
             ans = 0
-
             ls = split(s[:7])
             rs = split(s[7:])
             ws = []
@@ -48,7 +46,6 @@ class Solution:
                             w.add(e)
                             ws += [l | r]
             ans = max(ans, max(map(len, ws)))
-
             ls = split(s[:6])
             rs = split(s[6:])
             ws = []
@@ -61,5 +58,4 @@ class Solution:
                             w.add(e)
                             ws += [l | r]
             ans = max(ans, max(map(len, ws)))
-
             return ans

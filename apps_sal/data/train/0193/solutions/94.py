@@ -2,6 +2,7 @@ from math import ceil
 
 
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         arr.sort()
         brr = []
@@ -18,7 +19,6 @@ class Solution:
         brr.sort(key=lambda x: x[1], reverse=True)
         temp = 0
         temp1 = 0
-
         for i in brr:
             if temp >= ceil(len(arr) / 2):
                 return temp1

@@ -1,4 +1,5 @@
 class Solution:
+
     def containsNearbyAlmostDuplicate(self, nums, k, t):
         """
         :type nums: List[int]
@@ -11,20 +12,15 @@ class Solution:
         m = len(nums)
         if m == 0:
             return False
-
         buckets = {}
         _min = 0
         for i in range(m):
             num = nums[i] - _min
             bucket = num // (t + 1)
-            flag = bucket in buckets \
-                or (bucket - 1 in buckets and abs(buckets[bucket - 1] - num) <= t) \
-                or (bucket + 1 in buckets and abs(buckets[bucket + 1] - num) <= t)
-
+            flag = bucket in buckets or (bucket - 1 in buckets and abs(buckets[bucket - 1] - num) <= t) or (bucket + 1 in buckets and abs(buckets[bucket + 1] - num) <= t)
             if flag:
                 return True
             if len(buckets) >= k:
                 del buckets[(nums[i - k] - _min) // (t + 1)]
-
             buckets[bucket] = num
         return False

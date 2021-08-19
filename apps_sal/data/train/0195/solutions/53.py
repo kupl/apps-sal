@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, A: List[int]) -> int:
         from collections import defaultdict
         dic = defaultdict(int)
@@ -6,7 +7,7 @@ class Solution:
         dp = defaultdict(int)
         for i in range(n):
             for j in range(n):
-                dic[(i, j)] = A[i] & A[j]
+                dic[i, j] = A[i] & A[j]
                 dp[A[i] & A[j]] += 1
         ans = 0
         for i in range(n):

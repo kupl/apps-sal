@@ -1,4 +1,5 @@
 class Solution:
+
     def containsNearbyAlmostDuplicate(self, nums, k, t):
         """
         :type nums: List[int]
@@ -10,7 +11,7 @@ class Solution:
             return False
         if t == 0:
             visited = set()
-            for i, n in enumerate(nums):
+            for (i, n) in enumerate(nums):
                 if n in visited:
                     return True
                 visited.add(n)
@@ -18,7 +19,7 @@ class Solution:
                     visited.remove(nums[i - k])
             return False
         bucket = {}
-        for i, n in enumerate(nums):
+        for (i, n) in enumerate(nums):
             b = n // t
             if b in bucket:
                 return True

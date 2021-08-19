@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         count = sorted(list(collections.Counter(arr).values()), reverse=True)
         toRemove = 0

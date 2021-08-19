@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr) -> int:
         counter = {}
         for val in arr:
@@ -9,9 +10,7 @@ class Solution:
         for val in counter:
             values.append(counter[val])
         values.sort(reverse=True)
-
         total = 0
-
         nhalf = len(arr) // 2
         new_n = len(arr)
         i = 0
@@ -19,5 +18,4 @@ class Solution:
             total += 1
             new_n -= values[i]
             i += 1
-
         return total

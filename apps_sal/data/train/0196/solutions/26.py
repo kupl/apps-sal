@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSubarraySumCircular(self, arr: List[int]) -> int:
         max_eh = arr[0]
         min_eh = arr[0]
@@ -10,7 +11,6 @@ class Solution:
             max_sf = max(max_eh, max_sf)
             min_eh = min(min_eh + arr[i], arr[i])
             min_sf = min(min_eh, min_sf)
-
         if min_sf == total:
             return max_sf
         else:

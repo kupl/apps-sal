@@ -1,4 +1,5 @@
 class Solution:
+
     def partition(self, nums, target, current, pos, fill):
         if fill == 0:
             return True
@@ -24,5 +25,4 @@ class Solution:
         if s % k > 0:
             return False
         target = s // k
-
         return self.partition(nums, target, 0, 0, k)

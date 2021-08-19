@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort()
         piles = deque(piles)
@@ -7,5 +8,4 @@ class Solution:
             piles.pop()
             res += piles.pop()
             piles.popleft()
-
         return res

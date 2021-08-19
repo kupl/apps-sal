@@ -1,10 +1,11 @@
 class Solution:
+
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
         A.sort()
-        mapping = {x: i for i, x in enumerate(A)}
+        mapping = {x: i for (i, x) in enumerate(A)}
         maximal = A[-1]
         N = len(A)
-        ans, MOD = [1] * N, 10 ** 9 + 7
+        (ans, MOD) = ([1] * N, 10 ** 9 + 7)
         for i in range(N):
             for j in range(i + 1):
                 if A[i] * A[j] in mapping and A[i] * A[j] <= maximal:

@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, A: List[int]) -> int:
         N = len(A)
         ans = 0
@@ -10,5 +11,4 @@ class Solution:
             for v in count:
                 if A[k] & v == 0:
                     ans += count[v]
-
         return ans

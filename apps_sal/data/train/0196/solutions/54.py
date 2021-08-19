@@ -1,11 +1,11 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         SUM = 0
         MIN = 0
         minsum = sys.maxsize
         MAX = 0
         maxsum = -sys.maxsize
-
         for num in A:
             SUM += num
             maxsum = max(maxsum, SUM - MIN)

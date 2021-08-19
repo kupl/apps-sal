@@ -1,5 +1,7 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def dfs(i, vis):
             nonlocal ans
             if len(vis) + n - i < ans:
@@ -13,6 +15,6 @@ class Solution:
                     vis.add(x)
                     dfs(i + k, vis)
                     vis.discard(x)
-        ans, n, vis = 0, len(s), set()
+        (ans, n, vis) = (0, len(s), set())
         dfs(0, vis)
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         ans = 0
         L = len(grumpy)

@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         n = len(arr)
         dict_model = {}
