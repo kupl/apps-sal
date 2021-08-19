@@ -1,13 +1,12 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-
         n = len(position)
         if m == 2:
             return position[-1] - position[0]
-
         lp = 0
-        rp = (position[-1] - position[0])
+        rp = position[-1] - position[0]
 
         def can(gap):
             lidx = 0
@@ -21,7 +20,6 @@ class Solution:
                     continue
                 ptr += 1
             return left == 0
-
         ans = 0
         while lp < rp:
             mid = (lp + rp + 1) // 2

@@ -1,7 +1,8 @@
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
-        make = [0] * (10**5)
-        num = [(difficulty[i], profit[i])for i in range(len(profit))]
+        make = [0] * 10 ** 5
+        num = [(difficulty[i], profit[i]) for i in range(len(profit))]
         num.sort(key=lambda x: x[0])
         x = 0
         while x < len(num):

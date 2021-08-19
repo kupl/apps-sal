@@ -1,7 +1,8 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        lo, hi = 0, position[-1] - position[0]
+        (lo, hi) = (0, position[-1] - position[0])
 
         def check(amt):
             curr = position[0]

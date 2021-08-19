@@ -1,4 +1,5 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         left = 0
         right = len(people) - 1
@@ -15,5 +16,4 @@ class Solution:
             else:
                 right -= 1
                 boat += 1
-
         return boat

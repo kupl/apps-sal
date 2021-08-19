@@ -1,11 +1,11 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         v = []
         n = len(arr)
         for i in range(n):
             v.append((arr[i], i))
         v = sorted(v)
-
         f = [-1] * n
         ans = -1
         for i in range(n):
@@ -22,5 +22,4 @@ class Solution:
                 else:
                     break
             ans = max(ans, f[idx])
-
         return ans

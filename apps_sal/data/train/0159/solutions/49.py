@@ -1,4 +1,5 @@
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         dp = [-sys.maxsize] * len(nums)
         ans = nums[0]

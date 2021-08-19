@@ -11,9 +11,10 @@ def solve(positions, m, target):
 
 
 class Solution:
+
     def maxDistance(self, positions: List[int], m: int) -> int:
         positions.sort()
-        l, r = 0, positions[-1] - positions[0]
+        (l, r) = (0, positions[-1] - positions[0])
         best = 0
         while l <= r:
             target = (l + r) // 2

@@ -1,8 +1,9 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         ans = i = 0
         count = collections.defaultdict(int)
-        for j, ftype in enumerate(tree):
+        for (j, ftype) in enumerate(tree):
             count[ftype] += 1
             while len(count) > 2:
                 count[tree[i]] -= 1

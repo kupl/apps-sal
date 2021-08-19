@@ -1,4 +1,5 @@
 class Solution:
+
     def isMatch(self, s, p):
         """
         :type s: str
@@ -9,9 +10,8 @@ class Solution:
         pp = 0
         match = 0
         star = -1
-
         while sp < len(s):
-            if (pp < len(p) and (s[sp] == p[pp] or p[pp] == '?')):
+            if pp < len(p) and (s[sp] == p[pp] or p[pp] == '?'):
                 sp += 1
                 pp += 1
             elif pp < len(p) and p[pp] == '*':
@@ -24,8 +24,6 @@ class Solution:
                 sp = match
             else:
                 return False
-
-        while(pp < len(p) and p[pp] == '*'):
+        while pp < len(p) and p[pp] == '*':
             pp += 1
-
         return pp == len(p)

@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         if len(tree) <= 2:
             return len(tree)
@@ -15,15 +16,14 @@ class Solution:
                 counter += 1
                 if counter > _max:
                     _max = counter
+            elif len(collection_list) == 1:
+                collection_list.append(tree[i])
+                counter += 1
+                rep = 1
+                if counter > _max:
+                    _max = counter
             else:
-                if len(collection_list) == 1:
-                    collection_list.append(tree[i])
-                    counter += 1
-                    rep = 1
-                    if counter > _max:
-                        _max = counter
-                else:
-                    collection_list = [tree[i - 1], tree[i]]
-                    counter = 1 + rep
-                    rep = 1
+                collection_list = [tree[i - 1], tree[i]]
+                counter = 1 + rep
+                rep = 1
         return _max

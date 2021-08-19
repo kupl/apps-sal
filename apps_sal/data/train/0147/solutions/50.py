@@ -1,4 +1,5 @@
 class Solution:
+
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         arr = list(zip(efficiency, speed))
         arr.sort(reverse=True)
@@ -11,4 +12,4 @@ class Solution:
             counter += i[1]
             if len(heap) > k - 1:
                 counter -= heapq.heappop(heap)
-        return (curr_max) % ((10 ** 9) + 7)
+        return curr_max % (10 ** 9 + 7)

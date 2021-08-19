@@ -1,4 +1,5 @@
 class Solution:
+
     def partitionDisjoint(self, A: List[int]) -> int:
         left = [A[0]]
         for i in range(1, len(A)):

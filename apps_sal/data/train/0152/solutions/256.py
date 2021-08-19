@@ -19,7 +19,6 @@ class Solution:
         l = 0
         while h >= l:
             mid = (h + l) // 2
-
             print(mid)
             if f(mid, position, m):
                 l = mid + 1

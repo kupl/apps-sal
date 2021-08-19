@@ -1,9 +1,9 @@
 class Solution:
-    def maxArea(self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]) -> int:
 
+    def maxArea(self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]) -> int:
         new_horizontal_cuts = [0] + sorted(horizontalCuts) + [h]
         new_vertical_cuts = [0] + sorted(verticalCuts) + [w]
-        mod = int(1e9) + 7
+        mod = int(1000000000.0) + 7
         max_height = 0
         max_width = 0
         for j in range(len(new_vertical_cuts) - 1):
@@ -12,5 +12,4 @@ class Solution:
         for i in range(len(new_horizontal_cuts) - 1):
             if max_height < new_horizontal_cuts[i + 1] - new_horizontal_cuts[i]:
                 max_height = new_horizontal_cuts[i + 1] - new_horizontal_cuts[i]
-
-        return (max_width * max_height) % mod
+        return max_width * max_height % mod

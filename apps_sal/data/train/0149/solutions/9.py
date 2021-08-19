@@ -1,6 +1,6 @@
 class Solution:
-    def removeDuplicates(self, s: str, k: int) -> str:
 
+    def removeDuplicates(self, s: str, k: int) -> str:
         ns = []
         deleted = True
         while deleted:
@@ -15,5 +15,4 @@ class Solution:
                     ns.append(s[i])
                     i += 1
             s = ''.join(ns)
-
         return s

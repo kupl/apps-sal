@@ -1,7 +1,8 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        f1, f2 = [-1, -1], [-1, -1]
-        res, fruit1, fruit2 = 0, -1, -1
+        (f1, f2) = ([-1, -1], [-1, -1])
+        (res, fruit1, fruit2) = (0, -1, -1)
         for i in range(len(tree)):
             if tree[i] not in [fruit1, fruit2]:
                 if f2[1] > f1[1]:

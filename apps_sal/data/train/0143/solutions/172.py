@@ -1,11 +1,11 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         left = 0
         right = 0
         window = set()
         res = 0
         last_index = collections.defaultdict(int)
-
         while left < len(tree) and right < len(tree):
             fruit_type = tree[right]
             last_index[fruit_type] = right

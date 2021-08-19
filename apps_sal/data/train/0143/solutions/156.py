@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         if not tree:
             return 0

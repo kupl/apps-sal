@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         maxStreak = 0
         i = 0
@@ -11,16 +12,14 @@ class Solution:
                 last_type = i
                 streak += 1
                 i += 1
+            elif tree[i] in types:
+                if tree[last_type] != tree[i]:
+                    last_type = i
+                streak += 1
+                i += 1
             else:
-                if tree[i] in types:
-                    if tree[last_type] != tree[i]:
-                        last_type = i
-                    streak += 1
-                    i += 1
-                else:
-                    i = last_type
-                    types = set()
-                    maxStreak = max(streak, maxStreak)
-                    streak = 0
-
+                i = last_type
+                types = set()
+                maxStreak = max(streak, maxStreak)
+                streak = 0
         return max(streak, maxStreak)

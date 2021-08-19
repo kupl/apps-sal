@@ -1,5 +1,7 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
+
         def isPossible(x):
             count = m - 1
             curr = position[0]
@@ -10,18 +12,14 @@ class Solution:
                 if not count:
                     return True
             return False
-
         n = len(position)
         position.sort()
         lo = 1
         hi = position[-1] - position[0] + 1
-
         while hi - lo > 1:
             mid = lo + (hi - lo) // 2
-
             if isPossible(mid):
                 lo = mid
             else:
                 hi = mid
-
         return lo

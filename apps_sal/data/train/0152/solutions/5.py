@@ -1,18 +1,18 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         n = len(position)
         position.sort()
         res = 0
 
         def count(d):
-            cur, ans = position[0], 1
+            (cur, ans) = (position[0], 1)
             for i in range(1, n):
                 if position[i] - cur >= d:
                     ans += 1
                     cur = position[i]
             return ans
-
-        l, r = 0, position[-1] - position[0]
+        (l, r) = (0, position[-1] - position[0])
         while l < r:
             mid = r - (r - l) // 2
             if count(mid) >= m:

@@ -2,10 +2,11 @@ from math import ceil
 
 
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        minPos, maxPos = position[0], position[len(position) - 1]
-        lo, hi = 0, maxPos - minPos
+        (minPos, maxPos) = (position[0], position[len(position) - 1])
+        (lo, hi) = (0, maxPos - minPos)
         curAns = -1
         while lo <= hi:
             mid = (lo + hi) // 2
@@ -19,7 +20,7 @@ class Solution:
     def canFitAllBalls(self, dist, m, position):
         prev = None
         for pos in position:
-            if prev == None or (pos - prev >= dist):
+            if prev == None or pos - prev >= dist:
                 m -= 1
                 prev = pos
             if m == 0:

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
 
         def findProfit(ppl, goodJobs):
@@ -15,7 +16,6 @@ class Solution:
             elif goodJobs[l][1] > ppl:
                 return goodJobs[r][0]
             return goodJobs[l][0]
-
         goodJobs = []
         jobs = [(profit[i], difficulty[i]) for i in range(len(difficulty))]
         jobs = sorted(jobs, key=lambda job: job[0], reverse=True)

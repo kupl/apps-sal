@@ -2,6 +2,7 @@ import bisect
 
 
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         if not difficulty:
             return 0

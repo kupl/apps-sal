@@ -1,4 +1,5 @@
 class Solution:
+
     def partitionDisjoint(self, A: List[int]) -> int:
         maxval = A[0]
         v = A[0]
@@ -8,5 +9,4 @@ class Solution:
             if A[i] < v:
                 disjoint = i
                 v = maxval
-
         return disjoint + 1

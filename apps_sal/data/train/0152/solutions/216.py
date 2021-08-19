@@ -11,6 +11,7 @@ def pos(mid, position, m):
 
 
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         l = 0

@@ -1,9 +1,10 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         n = len(arr)
         dp = [1 for i in range(n)]
         p = []
-        for idx, x in enumerate(arr):
+        for (idx, x) in enumerate(arr):
             p.append((x, idx))
         p.sort(reverse=True)
         for i in range(n):

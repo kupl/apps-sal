@@ -1,4 +1,5 @@
 class Solution(object):
+
     def maxPerformance(self, n, speed, efficiency, k):
         worker = []
         for i in range(n):
@@ -16,7 +17,7 @@ class Solution(object):
             res = max(res, total * minE)
         for i in range(k, n):
             if worker[i][0] > heap[0]:
-                total += (-heap[0] + worker[i][0])
+                total += -heap[0] + worker[i][0]
                 minE = worker[i][1]
                 res = max(res, minE * total)
                 heapq.heappop(heap)

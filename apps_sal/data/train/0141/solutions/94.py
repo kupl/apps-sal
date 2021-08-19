@@ -1,4 +1,5 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         sortedPeople = sorted(people)
         i = 0
@@ -17,5 +18,4 @@ class Solution:
             else:
                 count += 1
                 j -= 1
-
         return count

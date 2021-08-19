@@ -1,6 +1,7 @@
 class Solution:
+
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
-        size1, size2 = len(str1), len(str2)
+        (size1, size2) = (len(str1), len(str2))
         Inf = str1 + str2
         dp = [None] * (size2 + 1)
         dp[0] = ''
@@ -13,10 +14,6 @@ class Solution:
                 newDP[i2] = Inf
                 if str1[i1 - 1] == str2[i2 - 1]:
                     newDP[i2] = dp[i2 - 1] + str1[i1 - 1]
-                newDP[i2] = min(
-                    newDP[i2],
-                    dp[i2] + str1[i1 - 1],
-                    newDP[i2 - 1] + str2[i2 - 1],
-                    key=len)
+                newDP[i2] = min(newDP[i2], dp[i2] + str1[i1 - 1], newDP[i2 - 1] + str2[i2 - 1], key=len)
             dp = newDP
         return dp[-1]

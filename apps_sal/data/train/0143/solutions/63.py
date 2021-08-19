@@ -1,6 +1,7 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        i, maxLen = 0, 0
+        (i, maxLen) = (0, 0)
         cache = collections.defaultdict(int)
         for j in range(len(tree)):
             cache[tree[j]] += 1

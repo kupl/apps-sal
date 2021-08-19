@@ -1,5 +1,7 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
+
         def feasible(min_req_dist, b):
             i = 0
             prev_pos = None
@@ -9,7 +11,6 @@ class Solution:
                     prev_pos = position[i]
                 i += 1
             return b == 0
-
         position.sort()
         n = len(position)
         low = 1

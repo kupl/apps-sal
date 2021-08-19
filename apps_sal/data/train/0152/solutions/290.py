@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
 
         def check(space):
@@ -12,8 +13,8 @@ class Solution:
 
         def find_space(lo, hi):
             while lo < hi:
-                mid = int((lo / 2) + (hi / 2))
-                if check(mid) and not check(mid + 1):
+                mid = int(lo / 2 + hi / 2)
+                if check(mid) and (not check(mid + 1)):
                     return mid
                 if check(mid):
                     lo = max(mid, lo + 1)
@@ -23,6 +24,5 @@ class Solution:
             while check(hi):
                 hi += 1
             return hi - 1
-
         position.sort()
         return find_space(1, position[-1] - position[0])

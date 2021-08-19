@@ -1,4 +1,5 @@
 class Solution:
+
     def maxArea(self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]) -> int:
         horizontalCuts.sort()
         verticalCuts.sort()
@@ -10,4 +11,4 @@ class Solution:
         for v_cut in range(1, len(verticalCuts)):
             max_v = max(max_v, verticalCuts[v_cut] - verticalCuts[v_cut - 1])
         max_v = max(max_v, w - verticalCuts[-1])
-        return max_h * max_v % int(1e9 + 7)
+        return max_h * max_v % int(1000000000.0 + 7)

@@ -1,4 +1,5 @@
 class Solution:
+
     def partitionDisjoint(self, A: List[int]) -> int:
         left_max = []
         right_min = []
@@ -13,7 +14,6 @@ class Solution:
             else:
                 right_min.append(min(A[i], right_min[-1]))
         right_min.reverse()
-
         for i in range(len(A) - 1):
             lm = left_max[i]
             rm = right_min[i + 1]

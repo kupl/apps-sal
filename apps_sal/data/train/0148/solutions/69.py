@@ -2,6 +2,7 @@ from itertools import chain
 
 
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         li = list(chain(zip(profit, difficulty)))
         li.sort()
@@ -18,7 +19,7 @@ class Solution:
         for ability in worker:
             l = 0
             r = n - 1
-            while(r >= l):
+            while r >= l:
                 mid = (l + r) // 2
                 if ability == cutoffs[mid]:
                     break
@@ -32,4 +33,4 @@ class Solution:
                     if ability >= cutoffs[mid + 1]:
                         mid += 1
             ans += profits[mid]
-        return(ans)
+        return ans

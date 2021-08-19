@@ -1,4 +1,5 @@
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         n = len(nums)
         dp = [0] * n
@@ -14,7 +15,7 @@ class Solution:
                 b = heapq.heappop(h)
             heapq.heappush(h, b)
             return -b
-        for i, d in enumerate(nums):
+        for (i, d) in enumerate(nums):
             if i > k:
                 remove[-dp[i - k - 1]] += 1
             dp[i] = max(get_b(), 0) + d

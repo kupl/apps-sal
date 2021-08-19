@@ -1,8 +1,9 @@
 class Solution:
+
     def maxDistance(self, arr: List[int], m: int) -> int:
         arr = sorted(arr)
         small = sys.maxsize
-        for a, b in zip(arr, arr[1:]):
+        for (a, b) in zip(arr, arr[1:]):
             small = min(small, b - a)
 
         def count(d):
@@ -22,5 +23,4 @@ class Solution:
                 return bs(mid + 1, r) or mid
             else:
                 return bs(l, mid - 1)
-
         return bs(small, arr[-1] - arr[0])

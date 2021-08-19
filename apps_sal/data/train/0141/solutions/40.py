@@ -1,7 +1,8 @@
 class Solution(object):
+
     def numRescueBoats(self, people, limit):
         people.sort()
-        i, j = 0, len(people) - 1
+        (i, j) = (0, len(people) - 1)
         ans = 0
         while i <= j:
             ans += 1

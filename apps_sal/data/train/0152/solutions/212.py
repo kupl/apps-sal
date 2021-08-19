@@ -1,10 +1,11 @@
 class Solution:
+
     def maxDistance(self, A: List[int], m: int) -> int:
-        A, n = sorted(A), len(A)
-        left, right = 0, A[-1] - A[0]
+        (A, n) = (sorted(A), len(A))
+        (left, right) = (0, A[-1] - A[0])
         while left < right:
             mid = (right + left + 1) // 2
-            ct, idx = 1, 0
+            (ct, idx) = (1, 0)
             for i in range(1, n):
                 if A[i] - A[idx] >= mid:
                     ct += 1

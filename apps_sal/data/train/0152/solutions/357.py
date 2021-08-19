@@ -1,8 +1,8 @@
 class Solution:
-    def maxDistance(self, position: List[int], m: int) -> int:
 
+    def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
-        i, j = 1, 1000000001
+        (i, j) = (1, 1000000001)
         ans = 0
         while i <= j:
             prevCow = position[0]

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxArea(self, h: int, w: int, hori: List[int], verti: List[int]) -> int:
         hori.sort()
         verti.sort()
@@ -10,4 +11,4 @@ class Solution:
         for i in range(1, len(verti)):
             y = max(y, verti[i] - verti[i - 1])
         y = max(y, w - verti[-1])
-        return (x * y) % 1000000007
+        return x * y % 1000000007

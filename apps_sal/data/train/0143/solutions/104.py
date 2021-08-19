@@ -1,10 +1,11 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         k = 2
         left = 0
         cnt = collections.Counter()
         res = 0
-        for j, i in enumerate(tree):
+        for (j, i) in enumerate(tree):
             if cnt[i] == 0:
                 k -= 1
             cnt[i] += 1

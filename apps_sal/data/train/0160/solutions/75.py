@@ -1,10 +1,10 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         sums = [0] + list(itertools.accumulate(piles))
 
         def get_sum(i, j):
             return sums[j + 1] - sums[i]
-
         n = len(piles)
         dp = [[-1] * n for _ in range(n)]
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people.sort()
         p1 = 0
@@ -20,5 +21,4 @@ class Solution:
             count += 1
             cur = 0
             curNum = 0
-
         return count

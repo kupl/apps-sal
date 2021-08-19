@@ -1,4 +1,5 @@
 class Solution:
+
     def makesquare(self, nums):
         s = sum(nums)
         if not s % 4 == 0:
@@ -18,5 +19,4 @@ class Solution:
             return nums
         if sum < 0 or index >= len(keys):
             return None
-        return self.f(index + 1, keys, sum - keys[index], (*nums, keys[index])) \
-            or self.f(index + 1, keys, sum, nums)
+        return self.f(index + 1, keys, sum - keys[index], (*nums, keys[index])) or self.f(index + 1, keys, sum, nums)

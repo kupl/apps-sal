@@ -1,11 +1,12 @@
 class Solution:
+
     def decodeString(self, s):
         """
         :type s: str
         :rtype: str
         """
         if len(s) == 0:
-            return ""
+            return ''
         idx = 0
         while s[idx].isdigit():
             idx += 1
@@ -15,9 +16,9 @@ class Solution:
             idx_from = idx
             bracket_count = 1
             while bracket_count > 0:
-                if s[idx] == "[":
+                if s[idx] == '[':
                     bracket_count += 1
-                elif s[idx] == "]":
+                elif s[idx] == ']':
                     bracket_count -= 1
                 idx += 1
             return self.decodeString(s[idx_from:idx - 1]) * k + self.decodeString(s[idx:])

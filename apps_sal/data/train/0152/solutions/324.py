@@ -1,6 +1,6 @@
 class Solution:
-    def maxDistance(self, position: List[int], m: int) -> int:
 
+    def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
 
         def count(d):
@@ -11,8 +11,7 @@ class Solution:
                     ans += 1
                     curr = position[i]
             return ans
-
-        l, r = 0, position[-1] - position[0]
+        (l, r) = (0, position[-1] - position[0])
         while l < r:
             mid = r - (r - l) // 2
             c = count(mid)

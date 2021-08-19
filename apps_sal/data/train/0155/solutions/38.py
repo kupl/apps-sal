@@ -1,4 +1,5 @@
 class Solution:
+
     def maxJumps(self, A: List[int], d: int) -> int:
         N = len(A)
         jumpable = collections.defaultdict(list)
@@ -11,10 +12,8 @@ class Solution:
                     if abs(i - j) <= d:
                         jumpable[i].append(j)
                 stack.append(i)
-
         find_jumpable_indices(list(range(N)))
         find_jumpable_indices(reversed(list(range(N))))
-
         dp = [-1] * N
 
         def dfs(idx):
@@ -23,8 +22,6 @@ class Solution:
             res = 1
             for j in jumpable[idx]:
                 res = max(res, 1 + dfs(j))
-
             dp[idx] = res
             return res
-
         return max(list(map(dfs, list(range(N)))))

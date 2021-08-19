@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         high = position[-1] - position[0]
@@ -8,7 +9,6 @@ class Solution:
 
         def check(distance):
             previous = -1
-
             m = k[-1]
             for i in range(len(position)):
                 if m == 0:
@@ -25,16 +25,11 @@ class Solution:
             return False
 
         def binary(low, high):
-
             mid = (low + high) // 2
-
             if low > high:
-
                 return
             if check(mid):
-
                 output[0] = mid
-
                 binary(mid + 1, high)
             else:
                 binary(low, mid - 1)

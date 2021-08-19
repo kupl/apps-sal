@@ -1,9 +1,8 @@
 class Solution:
-    def totalFruit(self, tree: List[int]) -> int:
 
+    def totalFruit(self, tree: List[int]) -> int:
         fruitCap = [0] * len(tree)
         fruitCap[-1] = 1
-
         fruitA = tree[-1]
         fruitB = None
         for i in reversed(list(range(len(tree) - 1))):
@@ -16,13 +15,11 @@ class Solution:
                 fruitA = tree[i]
                 fruitB = tree[i + 1]
                 fruitCap[i] = getConsecutive(tree, i + 1) + 1
-
         print(fruitCap)
         return max(fruitCap)
 
 
 def getConsecutive(tree, index):
-
     consecutive = 0
     fruit = tree[index]
     for i in range(index, len(tree)):
@@ -30,5 +27,4 @@ def getConsecutive(tree, index):
             consecutive += 1
         else:
             break
-
     return consecutive

@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
 
         @lru_cache(None)

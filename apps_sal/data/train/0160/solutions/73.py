@@ -1,8 +1,8 @@
 class Solution:
+
     def stoneGame(self, piles):
         cache = {}
         piles = tuple(piles)
-
         res = [0]
         for k in range(len(piles)):
             res.append(res[-1] + piles[k])
@@ -17,7 +17,6 @@ class Solution:
             r = max(res[j] - res[i] - firstscore(i + 1, j), res[j] - res[i] - firstscore(i, j - 1))
             cache[i, j] = r
             return r
-
         Alex = firstscore(0, len(piles))
         Lee = sum(piles) - Alex
         return Alex > Lee

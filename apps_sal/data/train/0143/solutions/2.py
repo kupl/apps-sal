@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         q = []
         ans = -99999999999
@@ -18,10 +19,7 @@ class Solution:
                     q.clear()
                     q.append(tree[s])
                     q.append(tree[e])
-
             e += 1
-
         if e - s > ans:
             ans = e - s
-
         return ans

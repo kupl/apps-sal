@@ -1,5 +1,7 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
+
         def check(pos):
             placed = 1
             i = 0
@@ -13,8 +15,7 @@ class Solution:
                     j = i + 1
                 else:
                     j += 1
-            return (True if placed == True else False)
-
+            return True if placed == True else False
         l = len(position)
         mx = max(position) - min(position)
         position.sort()

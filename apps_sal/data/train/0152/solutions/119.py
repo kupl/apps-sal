@@ -2,6 +2,7 @@ from array import array
 
 
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
         position = array('i', position)
@@ -14,7 +15,7 @@ class Solution:
             c = 1
             pivot = 0
             for i in range(1, len(position)):
-                if step <= (position[i] - position[pivot]):
+                if step <= position[i] - position[pivot]:
                     c += 1
                     pivot = i
             return c

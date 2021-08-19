@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         n = len(profit)
         maxm = max(difficulty)
@@ -8,7 +9,6 @@ class Solution:
         for i in range(1, maxm + 1):
             dp[i] = max(dp[i], dp[i - 1])
         res = 0
-
         for x in worker:
             if x > maxm:
                 res += dp[maxm]

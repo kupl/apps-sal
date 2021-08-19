@@ -2,6 +2,7 @@ import functools
 
 
 class Solution:
+
     def maxJumps(self, A, d):
         N = len(A)
         graph = collections.defaultdict(list)
@@ -14,12 +15,10 @@ class Solution:
                     if abs(i - j) <= d:
                         graph[j].append(i)
                 stack.append(i)
-
         jump(range(N))
         jump(reversed(range(N)))
 
         @functools.lru_cache(maxsize=None)
         def height(i):
             return 1 + max(map(height, graph[i]), default=0)
-
         return max(map(height, range(N)))

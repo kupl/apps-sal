@@ -1,9 +1,9 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         dp = [[[0 for i in range(2)] for z in range(len(piles))] for j in range(len(piles))]
         for i in range(len(dp)):
             dp[i][i] = [piles[i], 0]
-
         for i in range(len(dp) - 2, -1, -1):
             for j in range(i + 1, len(dp[0])):
                 left = piles[i] + dp[i + 1][j][1]

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         jumps = defaultdict(list)
 
@@ -17,5 +18,4 @@ class Solution:
         @lru_cache(None)
         def dfs(i):
             return 1 + max((dfs(j) for j in jumps[i]), default=0)
-
         return max((dfs(i) for i in range(N)))

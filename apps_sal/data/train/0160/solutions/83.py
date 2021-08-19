@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         n = len(piles)
         mat = [[[0, 0] for c in range(n)] for r in range(n)]
@@ -14,7 +15,6 @@ class Solution:
                 picker_2 = right_[1] + piles[r]
                 other_2 = right_[0]
                 mat[r][c] = (max(picker_1, picker_2), min(other_1, other_2))
-
         if mat[-1][-1][0] > mat[-1][-1][1]:
             return True
         return False

@@ -1,15 +1,17 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
+
         def isSorted(arr, i, j):
-            return all(arr[k] <= arr[k + 1] for k in range(i, j))
+            return all((arr[k] <= arr[k + 1] for k in range(i, j)))
         ans = 0
         ranges = [[0, len(A) - 1]]
         for col in zip(*A):
             if not ranges:
                 break
-            if all(isSorted(col, i, j) for i, j in ranges):
+            if all((isSorted(col, i, j) for (i, j) in ranges)):
                 tmp = []
-                for i, j in ranges:
+                for (i, j) in ranges:
                     start = i
                     for k in range(i, j + 1):
                         if col[k] != col[start]:

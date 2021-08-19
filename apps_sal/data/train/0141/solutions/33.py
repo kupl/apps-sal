@@ -1,6 +1,6 @@
 class Solution:
-    def numRescueBoats(self, people: List[int], limit: int) -> int:
 
+    def numRescueBoats(self, people: List[int], limit: int) -> int:
         n = len(people)
         people.sort()
         print(people)

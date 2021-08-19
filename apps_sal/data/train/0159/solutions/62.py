@@ -1,4 +1,5 @@
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         n = len(nums)
         heap = [(-nums[0], 0)]

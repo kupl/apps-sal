@@ -10,17 +10,14 @@ class Solution:
     def dfs(self, index, d, arr, arrLen, memory):
         if memory[index] != 0:
             return memory[index]
-
         currentMax = 0
         for i in range(index + 1, index + d + 1):
             if i >= arrLen or arr[index] <= arr[i]:
                 break
             currentMax = max(currentMax, self.dfs(i, d, arr, arrLen, memory))
-
         for i in range(index - 1, index - d - 1, -1):
             if i < 0 or arr[index] <= arr[i]:
                 break
             currentMax = max(currentMax, self.dfs(i, d, arr, arrLen, memory))
-
         memory[index] = currentMax + 1
         return memory[index]

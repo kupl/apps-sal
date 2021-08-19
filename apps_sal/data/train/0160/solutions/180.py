@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         n = len(piles)
         if n // 2 == 0:
@@ -13,6 +14,6 @@ class Solution:
                 j = i + k
                 if j >= n:
                     break
-                dp[i][j] = piles[j] + ((prefix[j] - prefix[i]) - dp[i][j - 1])
-                dp[i][j] = max(dp[i][j], piles[i] + ((prefix[j + 1] - prefix[i + 1]) - dp[i + 1][j]))
-        return (dp[0][-1] > sum(piles) // 2)
+                dp[i][j] = piles[j] + (prefix[j] - prefix[i] - dp[i][j - 1])
+                dp[i][j] = max(dp[i][j], piles[i] + (prefix[j + 1] - prefix[i + 1] - dp[i + 1][j]))
+        return dp[0][-1] > sum(piles) // 2

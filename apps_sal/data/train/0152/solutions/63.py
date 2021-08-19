@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         n = len(position)
         position.sort()
@@ -31,4 +32,4 @@ class Solution:
                 else:
                     r = mid - 1
             return ans
-        return (get_x())
+        return get_x()

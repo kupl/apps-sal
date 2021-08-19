@@ -1,17 +1,17 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         n = len(position)
         position.sort()
 
         def count(d):
-            ans, curr = 1, position[0]
+            (ans, curr) = (1, position[0])
             for i in range(1, n):
                 if position[i] - curr >= d:
                     ans += 1
                     curr = position[i]
             return ans
-
-        l, r = 0, int(math.ceil((position[-1] - position[0]) / (m - 1)))
+        (l, r) = (0, int(math.ceil((position[-1] - position[0]) / (m - 1))))
         while l < r:
             mid = r - (r - l) // 2
             if count(mid) >= m:

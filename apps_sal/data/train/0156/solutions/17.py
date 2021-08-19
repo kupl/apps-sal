@@ -1,7 +1,7 @@
 class Solution:
-    def shortestCommonSupersequence(self, a: str, b: str) -> str:
-        n, m = len(a), len(b)
 
+    def shortestCommonSupersequence(self, a: str, b: str) -> str:
+        (n, m) = (len(a), len(b))
         dp = [[-1 for i in range(m + 1)] for j in range(n + 1)]
 
         def TD(a, b, n, m):

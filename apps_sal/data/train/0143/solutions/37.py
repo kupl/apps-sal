@@ -1,10 +1,10 @@
 class Solution(object):
+
     def totalFruit(self, nums):
         d = {}
         k = 2
         maxL = 0
         L = 0
-
         for R in range(len(nums)):
             if nums[R] in d:
                 d[nums[R]] += 1

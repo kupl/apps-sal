@@ -1,7 +1,8 @@
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         worker = sorted(worker)
-        jobs = sorted([(-1, 0)] + [(difficulty[i], profit[i])for i in range(len(difficulty))])
+        jobs = sorted([(-1, 0)] + [(difficulty[i], profit[i]) for i in range(len(difficulty))])
         job_nums = len(jobs)
         maxProfit = 0
         job_index = 0

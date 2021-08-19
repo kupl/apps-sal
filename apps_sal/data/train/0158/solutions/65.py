@@ -1,4 +1,5 @@
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
         if A == B:
             return 0
@@ -10,7 +11,7 @@ class Solution:
             l = len(dp)
             for i in range(l):
                 s = dp.pop()
-                for j, c in enumerate(A):
+                for (j, c) in enumerate(A):
                     if c != s[j]:
                         for n in range(j + 1, len(A)):
                             if s[n] == c:

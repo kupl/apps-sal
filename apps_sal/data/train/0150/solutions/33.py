@@ -1,6 +1,6 @@
 class Solution:
-    def partitionDisjoint(self, A: List[int]) -> int:
 
+    def partitionDisjoint(self, A: List[int]) -> int:
         bound = r = 0
         gmax = lmax = A[0]
         while r < len(A):
@@ -11,5 +11,4 @@ class Solution:
                 bound = r
                 gmax = max(gmax, lmax)
                 r += 1
-
         return bound + 1

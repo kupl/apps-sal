@@ -1,4 +1,5 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         ret = 0
         people.sort(reverse=True)
@@ -14,6 +15,5 @@ class Solution:
                 elif people[j] > temp_lim:
                     start = j
                     break
-
             print(temp_lim)
         return ret

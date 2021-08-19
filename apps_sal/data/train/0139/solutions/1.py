@@ -1,17 +1,17 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
         D = set()
-
         while True:
             changes = False
             last_str = ''
-            for i, ch in enumerate(A[0]):
+            for (i, ch) in enumerate(A[0]):
                 if i not in D:
                     last_str += ch
             for x in A[1:]:
                 this_str = ''
                 this_idx = []
-                for i, ch in enumerate(x):
+                for (i, ch) in enumerate(x):
                     if i not in D:
                         this_str += ch
                         this_idx.append(i)

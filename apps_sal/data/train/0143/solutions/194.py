@@ -1,9 +1,10 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         result = 0
         ptr = 0
         count = collections.Counter()
-        for i, t in enumerate(tree):
+        for (i, t) in enumerate(tree):
             count[t] += 1
             while len(count) >= 3:
                 count[tree[ptr]] -= 1

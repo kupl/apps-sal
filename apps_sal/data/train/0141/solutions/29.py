@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def numRescueBoats(self, people, limit):
         n = len(people)
         weights = deque(sorted(people))

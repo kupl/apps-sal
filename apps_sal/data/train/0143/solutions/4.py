@@ -1,8 +1,8 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         window = collections.Counter()
         ans = 0
-
         left = 0
         for right in range(len(tree)):
             window[tree[right]] += 1
@@ -11,7 +11,5 @@ class Solution:
                 if window[tree[left]] == 0:
                     del window[tree[left]]
                 left += 1
-
             ans = max(ans, sum(window.values()))
-
         return ans

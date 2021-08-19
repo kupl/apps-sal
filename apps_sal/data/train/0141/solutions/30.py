@@ -1,4 +1,5 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people.sort()
         l = 0
@@ -8,13 +9,12 @@ class Solution:
             return 0
         boat = 1
         ppl_in_boat = 2
-
-        while (l <= h):
-            if (people[h] <= remain_capacity and ppl_in_boat != 0):
+        while l <= h:
+            if people[h] <= remain_capacity and ppl_in_boat != 0:
                 remain_capacity -= people[h]
                 ppl_in_boat -= 1
                 h = h - 1
-            elif (remain_capacity >= people[l] and ppl_in_boat != 0):
+            elif remain_capacity >= people[l] and ppl_in_boat != 0:
                 remain_capacity -= people[l]
                 ppl_in_boat -= 1
                 l = l + 1

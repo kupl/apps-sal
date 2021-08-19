@@ -1,4 +1,5 @@
 class Solution:
+
     def findMaximumXOR(self, nums):
         """
         :type nums: List[int]
@@ -9,7 +10,7 @@ class Solution:
             ans = (ans << 1) + 1
             pre = set()
             for n in nums:
-                p = (n >> bit) & ans
+                p = n >> bit & ans
                 if p in pre:
                     break
                 pre.add(ans - p)

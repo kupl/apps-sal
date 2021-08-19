@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         i = 0
         j = 0
@@ -16,5 +17,4 @@ class Solution:
                 if my_map[tree[j]] == 0:
                     del my_map[tree[j]]
                 j += 1
-
         return max_len

@@ -12,6 +12,7 @@ def memoize(f):
 
 
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         memo = {}
 
@@ -19,10 +20,10 @@ class Solution:
             if i == j:
                 return piles[i]
             if (i, j) in memo:
-                return memo[(i, j)]
+                return memo[i, j]
             lscore = piles[j] - score(i, j - 1)
             rscore = piles[i] - score(i + 1, j)
             result = max(lscore, rscore)
-            memo[(i, j)] = result
+            memo[i, j] = result
             return result
         return score() > 0

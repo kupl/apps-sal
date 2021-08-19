@@ -1,4 +1,5 @@
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         q = deque([0])
         ans = nums[0]
@@ -9,7 +10,5 @@ class Solution:
             q.append(i)
             if i - q[0] == k:
                 q.popleft()
-
             ans = max(ans, nums[i])
-
         return ans

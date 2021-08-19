@@ -1,4 +1,5 @@
 class Solution:
+
     def getMax(self, max: int, cuts: List[int]) -> int:
         last = 0
         for x in cuts:
@@ -14,5 +15,4 @@ class Solution:
         verticalCuts.sort()
         maxh = self.getMax(h - horizontalCuts[-1], horizontalCuts)
         maxv = self.getMax(w - verticalCuts[-1], verticalCuts)
-
         return maxh % mod * maxv % mod

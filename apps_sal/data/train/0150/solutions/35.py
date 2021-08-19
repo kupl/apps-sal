@@ -1,4 +1,5 @@
 class Solution:
+
     def partitionDisjoint(self, A: List[int]) -> int:
         cnt = collections.Counter(A)
         cur = 0

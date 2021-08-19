@@ -1,4 +1,5 @@
 class Solution:
+
     @lru_cache(None)
     def kSimilarity(self, A: str, B: str) -> int:
         if len(A) == 0:

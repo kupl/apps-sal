@@ -1,4 +1,5 @@
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         dp = collections.deque([(nums[0], 0)])
         ans = nums[0]

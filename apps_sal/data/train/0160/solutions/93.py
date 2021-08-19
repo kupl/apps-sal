@@ -3,10 +3,7 @@ class Solution:
     @staticmethod
     def f(piles, start, end, cache, sums):
         if cache[start][end] == -1:
-            cache[start][end] = max(
-                piles[start] + sums[end + 1] - sums[start + 1] - Solution.f(piles, start + 1, end, cache, sums),
-                piles[end] + sums[end] - sums[start] - Solution.f(piles, start, end - 1, cache, sums)
-            )
+            cache[start][end] = max(piles[start] + sums[end + 1] - sums[start + 1] - Solution.f(piles, start + 1, end, cache, sums), piles[end] + sums[end] - sums[start] - Solution.f(piles, start, end - 1, cache, sums))
         return cache[start][end]
 
     def stoneGame(self, piles: List[int]) -> bool:

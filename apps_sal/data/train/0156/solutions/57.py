@@ -1,6 +1,7 @@
 class Solution:
+
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
-        m, n = len(str1), len(str2)
+        (m, n) = (len(str1), len(str2))
 
         @lru_cache(None)
         def dp(i, j):

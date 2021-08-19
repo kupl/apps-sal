@@ -15,6 +15,7 @@ def max_jump(a, d, memo, i):
 
 
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         memo = {}
         for i in range(len(arr)):

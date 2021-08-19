@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         prev_count = curr = count_b = result = 0
         a = None

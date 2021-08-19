@@ -1,4 +1,5 @@
 class Solution:
+
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         mod = 10 ** 9 + 7
         eff_speed = sorted(zip(efficiency, speed), reverse=True)

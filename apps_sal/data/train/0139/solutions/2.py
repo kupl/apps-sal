@@ -1,4 +1,5 @@
 class Solution:
+
     def checkLexOrder(self, A: List[str]):
         if A == sorted(A):
             return True

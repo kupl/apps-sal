@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         l = len(piles)
         dp = [[-1 for i in range(l)] for j in range(l)]
@@ -9,7 +10,6 @@ class Solution:
                 if alex:
                     tot += piles[i]
                 return tot > 0
-
             if dp[i][j] != -1:
                 return dp[i][j]
             if alex:
@@ -24,5 +24,4 @@ class Solution:
                     return True
                 dp[i][j] = solve(piles, i, j - 1, tot - piles[j])
                 return dp[i][j]
-
         return solve(piles, 0, l - 1, 0)

@@ -1,4 +1,5 @@
 class Solution:
+
     def isMatch(self, s, p):
         """
         :type s: str
@@ -7,7 +8,6 @@ class Solution:
         """
         len_s = len(s)
         len_p = len(p)
-
         if len_s == 0 and len_p == 0:
             return True
         elif len_p == 0:
@@ -16,12 +16,10 @@ class Solution:
             return True
         elif len_p - p.count('*') > len_s:
             return False
-
         i_s = 0
         i_p = 0
         star_index = None
         s_star_match = None
-
         while i_s < len_s:
             pchar = p[i_p] if i_p < len_p else None
             schar = s[i_s]

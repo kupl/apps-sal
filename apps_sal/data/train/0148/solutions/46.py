@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         for i in range(len(profit)):
             difficulty[i] = [difficulty[i], profit[i]]
@@ -11,7 +12,6 @@ class Solution:
                 return -1
             l = 0
             r = len(profit) - 1
-
             while l < r:
                 m = (l + r + 1) // 2
                 if difficulty[m][0] <= d:
@@ -19,7 +19,6 @@ class Solution:
                 else:
                     r = m - 1
             return l
-
         res = 0
         for w in worker:
             i = search(w)

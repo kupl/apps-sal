@@ -1,4 +1,5 @@
 class Solution:
+
     def isMatch(self, s, p):
         """
         :type s: str
@@ -24,7 +25,6 @@ class Solution:
                 i = last_match
             else:
                 return False
-
         while j < n and p[j] == '*':
             j += 1
         return j == n

@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGame(self, piles):
         n = len(piles)
         dp = [[0] * n for _ in range(n)]

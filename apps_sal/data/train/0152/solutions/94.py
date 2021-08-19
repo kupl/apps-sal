@@ -1,11 +1,12 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         mx = position[-1]
-        lo, hi = 1, mx
+        (lo, hi) = (1, mx)
 
         def judge(x):
-            pre, cnt = -mx, 0
+            (pre, cnt) = (-mx, 0)
             for p in position:
                 if p - pre >= x:
                     pre = p
@@ -13,7 +14,6 @@ class Solution:
                 if cnt >= m:
                     return True
             return False
-
         while lo <= hi:
             mid = (lo + hi) // 2
             if judge(mid):

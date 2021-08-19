@@ -1,9 +1,9 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         mn = sys.maxsize
         mx = position[-1] - position[0]
-
         for i in range(1, len(position)):
             mn = min(mn, position[i] - position[i - 1])
 
@@ -22,11 +22,9 @@ class Solution:
                     cd = 0
                     if count == m:
                         break
-
             if count == m:
                 return f
             return -1
-
         ans = -1
         while mn <= mx:
             mid = (mn + mx) // 2

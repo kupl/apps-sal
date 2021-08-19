@@ -2,11 +2,11 @@ from collections import deque
 
 
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         maxFruits = 0
         fruitTypes = set()
         queue = deque()
-
         for i in tree:
             if i in fruitTypes or len(fruitTypes) < 2:
                 fruitTypes.add(i)

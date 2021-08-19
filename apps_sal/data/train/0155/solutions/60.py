@@ -1,9 +1,10 @@
 class Solution:
+
     def maxJumps(self, A: List[int], d: int) -> int:
         n = len(A)
         dp = [1] * (n + 1)
         stack = []
-        for i, a in enumerate(A + [float('inf')]):
+        for (i, a) in enumerate(A + [float('inf')]):
             while stack and A[stack[-1]] < a:
                 L = [stack.pop()]
                 while stack and A[stack[-1]] == A[L[0]]:

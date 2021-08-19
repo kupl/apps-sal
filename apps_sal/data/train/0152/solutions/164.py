@@ -1,9 +1,9 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         n = len(position)
         res = -1
-
         left = position[0]
         right = position[n - 1]
         while left < right:
@@ -13,7 +13,6 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid
-
         if res == -1:
             left = 0
             right = position[0]
@@ -24,7 +23,6 @@ class Solution:
                     left = mid + 1
                 else:
                     right = mid
-
         return res
 
     def isFeasible(self, arr, mid, m):
