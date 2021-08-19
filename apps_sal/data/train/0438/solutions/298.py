@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         A = [0 for _ in range(n + 2)]
@@ -6,8 +7,7 @@ class Solution:
         right = [-1 for _ in range(n + 2)]
         count = 0
         res = -1
-
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             if A[a - 1] == 0 and A[a + 1] == 0:
                 left[a] = a
                 right[a] = a
@@ -32,13 +32,9 @@ class Solution:
                 right[a] = right[a + 1]
                 right[left[a]] = right[a]
                 left[right[a]] = left[a]
-
             A[a] = 1
             if abs(left[a] - right[a]) + 1 == m:
                 count += 1
             if count >= 1:
                 res = i + 1
-
-            # print(left, right, res, count)
-
         return res

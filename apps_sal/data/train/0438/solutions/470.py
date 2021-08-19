@@ -1,7 +1,6 @@
 class Solution:
-    def findLatestStep(self, arr: List[int], m: int) -> int:
-        # union find
 
+    def findLatestStep(self, arr: List[int], m: int) -> int:
         dsu = [False] * (len(arr) + 1)
         dsu[0] = 0
 
@@ -22,7 +21,7 @@ class Solution:
             return abs(dsu[pa])
 
         def union(a, b):
-            pa, pb = find(a), find(b)
+            (pa, pb) = (find(a), find(b))
             if pa != pb:
                 if dsu[pa] < dsu[pb]:
                     dsu[pa] += dsu[pb]
@@ -33,7 +32,7 @@ class Solution:
                 return True
             return False
         ans = -1
-        for i, x in enumerate(arr, 1):
+        for (i, x) in enumerate(arr, 1):
             find(x)
             if x > 1 and dsu[x - 1] != False:
                 if size(x - 1) == m:
@@ -45,7 +44,6 @@ class Solution:
                 union(x, x + 1)
             if size(x) == m:
                 dsu[0] += 1
-            # print(dsu[0])
             if dsu[0] > 0:
                 ans = i
         return ans

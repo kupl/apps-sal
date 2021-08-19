@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, m):
         self.p = {}
         self.islands = {}
@@ -24,32 +25,25 @@ class DSU:
     def union(self, x, y):
         if not self.exist(x) or not self.exist(y):
             return
-
         xr = self.find(x)
         yr = self.find(y)
-
         self.p[xr] = yr
-
-        # both islands will be mutated after the following assignment
         if self.islands[yr] == self.m:
             self.hasm -= 1
         if self.islands[xr] == self.m:
             self.hasm -= 1
-
         self.islands[yr] = self.islands[xr] + self.islands[yr]
-
         if self.islands[yr] == self.m:
             self.hasm += 1
-
         del self.islands[xr]
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # DSU
         res = -1
         dsu = DSU(m)
-        for i, x in enumerate(arr):
+        for (i, x) in enumerate(arr):
             if not dsu.exist(x):
                 dsu.make_island(x)
                 dsu.union(x, x + 1)

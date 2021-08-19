@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.parent = []
         for i in range(n + 2):
@@ -13,8 +14,7 @@ class DSU:
         if pu == pv:
             return
         if self.size[pv] > self.size[pu]:
-            pu, pv = pv, pu
-        #pu is bigger
+            (pu, pv) = (pv, pu)
         self.parent[pv] = pu
         self.size[pu] += self.size[pv]
 
@@ -25,12 +25,13 @@ class DSU:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         current_arr = [-1] * (len(arr) + 2)
         dsu = DSU(len(arr) + 2)
         res = -1
         cur_sol = set()
-        for i, val in enumerate(arr):
+        for (i, val) in enumerate(arr):
             if current_arr[val] == 1:
                 continue
             else:
@@ -50,5 +51,4 @@ class Solution:
                         found = True
                 if found == True:
                     res = i + 1
-                #res = i + 1
         return res

@@ -1,6 +1,6 @@
 class Solution:
-    def findLatestStep(self, a: List[int], m: int) -> int:
 
+    def findLatestStep(self, a: List[int], m: int) -> int:
         n = len(a)
         a = [i - 1 for i in a]
         val = [[i, i] for i in range(n)]
@@ -17,11 +17,9 @@ class Solution:
         def union(i, j):
             pari = find(i)
             parj = find(j)
-
             par[parj] = pari
             val[pari][0] = min(val[parj][0], val[pari][0])
             val[pari][1] = max(val[parj][1], val[pari][1])
-
         ans = -1
         cnt = 0
         for i in range(len(a)):
@@ -41,5 +39,4 @@ class Solution:
                 cnt += 1
             if cnt >= 1:
                 ans = i + 1
-            # print(par, cnt)
         return ans

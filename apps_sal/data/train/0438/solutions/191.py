@@ -1,8 +1,8 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # [3,1,5,4,2]
         uf = UF(len(arr) + 1)
-        res, step = -1, 1
+        (res, step) = (-1, 1)
         ok = set()
         for i in arr:
             uf.isOne[i] = True
@@ -15,7 +15,6 @@ class Solution:
             curones = uf.rank[curf]
             if curones == m:
                 curok.add(curf)
-
             for f in ok:
                 newf = uf.find(f)
                 if uf.rank[newf] == m:
@@ -28,6 +27,7 @@ class Solution:
 
 
 class UF:
+
     def __init__(self, n):
         self.n = n
         self.fathers = [i for i in range(n)]
@@ -40,7 +40,7 @@ class UF:
         return self.fathers[x]
 
     def union(self, x, y):
-        fx, fy = self.find(x), self.find(y)
+        (fx, fy) = (self.find(x), self.find(y))
         if fx != fy:
             count = self.rank[fx] + self.rank[fy]
             if self.rank[fx] > self.rank[fy]:

@@ -1,5 +1,5 @@
-
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         arr = [a - 1 for a in arr]
         N = len(arr)
@@ -7,11 +7,9 @@ class Solution:
         heads = [i for i in range(N)]
         children = {i: [i] for i in range(N)}
         counts = {0: N}
-
         last = -1
-        for it, x in enumerate(arr):
+        for (it, x) in enumerate(arr):
             state[x] = True
-            # print(state, heads, children, counts)
             neighbors = [i for i in [x + 1, x - 1] if 0 <= i < N and state[i]]
             counts[0] -= 1
             if not neighbors:

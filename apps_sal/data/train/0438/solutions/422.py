@@ -1,4 +1,5 @@
 class UFDS:
+
     def __init__(self, n):
         self.parents = list(range(n))
         self.ranks = [0] * n
@@ -20,7 +21,6 @@ class UFDS:
         bp = self.find(b)
         if ap == bp:
             return
-
         if self.ranks[ap] < self.ranks[bp]:
             self.parents[ap] = bp
             self.sizes[bp] += self.sizes[ap]
@@ -31,7 +31,6 @@ class UFDS:
             self.parents[bp] = ap
             self.ranks[ap] += 1
             self.sizes[ap] += self.sizes[bp]
-
         self.numdisjoint -= 1
 
     def size(self, x):
@@ -39,23 +38,22 @@ class UFDS:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         s = set()
         res = -1
         d = [0] * (len(arr) + 1)
         arr = [i - 1 for i in arr]
         u = UFDS(len(arr))
-        for i, val in enumerate(arr):
+        for (i, val) in enumerate(arr):
             s.add(val)
-            if (val > 0) and (val - 1 in s):
+            if val > 0 and val - 1 in s:
                 d[u.size(val - 1)] -= 1
                 u.union(val - 1, val)
-            if (val < len(arr) - 1) and (val + 1 in s):
+            if val < len(arr) - 1 and val + 1 in s:
                 d[u.size(val + 1)] -= 1
                 u.union(val, val + 1)
             d[u.size(val)] += 1
-            # print(d)
             if d[m] >= 1:
                 res = max(res, i + 1)
-        # print(\"------------\")
         return res

@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == 0:
             return 0
@@ -12,23 +13,20 @@ class Solution:
         res = -1
         for num in arr:
             step += 1
-            # uf.add(num)
             if uf.add(num):
                 res = step - 1
-#             print(uf.cnt.items(), step, num)
-#             print(uf.length_list, res)
-
         if uf.cnt.get(m):
             return step
         return res
 
 
 class UF:
+
     def __init__(self, n, m):
         self.max_length = n + 1
         self.target = m
-        self.length_list = [0 for _ in range(self.max_length)]  # length of each idx. Always check root node length.
-        self.cnt = defaultdict(int)  # Save length we have.
+        self.length_list = [0 for _ in range(self.max_length)]
+        self.cnt = defaultdict(int)
         self.par = defaultdict(int)
 
     def find(self, x):
@@ -56,7 +54,6 @@ class UF:
             self.union(x, x - 1)
         if x <= self.max_length - 2 and self.length_list[x + 1] > 0:
             self.union(x, x + 1)
-        # print(tmp, self.cnt[self.target], self.target)
         if tmp and self.cnt[self.target] == 0:
             return True
         return False
