@@ -1,8 +1,9 @@
 class DisjointSet(object):
+
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [0] * n
-        self.num = n  # number of disjoint sets
+        self.num = n
 
     def union(self, x, y):
         self._link(self.find_set(x), self.find_set(y))
@@ -26,10 +27,10 @@ class DisjointSet(object):
 
 
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     ds = DisjointSet(n * 2)
     for i in range(m):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         a -= 1
         b -= 1
         aA = a * 2
@@ -46,7 +47,7 @@ def solve():
                 return 0
             ds.union(aA, bA)
             ds.union(aB, bB)
-    return pow(2, (ds.num // 2) - 1, 10**9 + 7)
+    return pow(2, ds.num // 2 - 1, 10 ** 9 + 7)
 
 
 print(solve())

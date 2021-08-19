@@ -1,8 +1,9 @@
 class Solution:
+
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
         tables = {}
         dishes = {}
-        for name, table, dish in orders:
+        for (name, table, dish) in orders:
             if table not in tables:
                 tables[table] = 0
             if dish not in dishes:
@@ -13,18 +14,15 @@ class Solution:
         dishes.insert(0, 'Table')
         nrows = len(tables)
         ncolumns = len(dishes)
-
         results = [[0 for j in range(ncolumns)] for i in range(nrows)]
         results[0] = dishes
-        tables = {table: index for index, table in enumerate(tables)}
-        dishes = {dish: index for index, dish in enumerate(dishes)}
-
-        for name, table, dish in orders:
-            i = tables[table]  # + 1
-            j = dishes[dish]  # + 1
+        tables = {table: index for (index, table) in enumerate(tables)}
+        dishes = {dish: index for (index, dish) in enumerate(dishes)}
+        for (name, table, dish) in orders:
+            i = tables[table]
+            j = dishes[dish]
             results[i][0] = table
             results[i][j] = results[i][j] + 1
-        # print(results)
         for i in range(nrows):
             for j in range(ncolumns):
                 results[i][j] = str(results[i][j])

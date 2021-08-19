@@ -1,6 +1,5 @@
 class Solution:
     import heapq
-    # https://www.youtube.com/watch?v=Zz7BWDY5kvM&list=UUSYPN_WIvDy4spjxzdevk6Q
 
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if W == 1:
@@ -13,7 +12,7 @@ class Solution:
             if not heap:
                 heapq.heappush(heap, (n, 1))
             else:
-                curr, size = heap[0]
+                (curr, size) = heap[0]
                 if n == curr:
                     heapq.heappush(heap, (curr, 1))
                 elif n == curr + 1:
