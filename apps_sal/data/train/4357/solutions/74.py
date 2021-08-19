@@ -1,3 +1,3 @@
 def nth_smallest(a, b):
     a.sort()
-    return(a[b - 1])
+    return a[b - 1]

@@ -7,6 +7,7 @@ def is_palindrome(string):
 
 
 class TestPalindromeStrings(unittest.TestCase):
+
     def test_is_palindrome_with_not_palindrome_string(self):
         string = 'walter'
         actual = is_palindrome(string)

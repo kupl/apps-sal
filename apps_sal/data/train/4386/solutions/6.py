@@ -1,9 +1,9 @@
 def in_centre(s, i):
-    return s[i] == "a" and s[i + 1] == "b" and s[i + 2] == "c"
+    return s[i] == 'a' and s[i + 1] == 'b' and (s[i + 2] == 'c')
 
 
 def is_in_middle(s):
-    if "abc" not in s or len(s) < 3:
+    if 'abc' not in s or len(s) < 3:
         return False
     l = len(s)
     if l % 2 == 1:

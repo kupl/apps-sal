@@ -1,7 +1,7 @@
 def no_space(x):
-    z = ""
+    z = ''
     for y in x:
-        if y != " ":
+        if y != ' ':
             z = z + y
         else:
             pass

@@ -6,5 +6,4 @@ def loose_change(cents):
     coins['Dimes'] = cents % 25 // 10
     coins['Nickels'] = cents % 25 % 10 // 5
     coins['Pennies'] = cents % 25 % 10 % 5 // 1
-
     return coins

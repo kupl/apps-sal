@@ -1,3 +1,3 @@
 def mango(quantity, price):
     discount = quantity // 3
-    return ((quantity - discount) * price)
+    return (quantity - discount) * price

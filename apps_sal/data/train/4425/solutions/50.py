@@ -1,1 +1,2 @@
-def mango(quantity, price): return (quantity - quantity // 3) * price
+def mango(quantity, price):
+    return (quantity - quantity // 3) * price

@@ -1,1 +1,1 @@
-combine_names = lambda *a: " ".join(a)
+combine_names = lambda *a: ' '.join(a)

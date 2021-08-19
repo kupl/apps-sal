@@ -3,7 +3,7 @@ def did_we_win(plays):
     for p in plays:
         if not p:
             continue
-        yd, t = p
+        (yd, t) = p
         if t in ('run', 'pass'):
             r += yd
         elif t == 'sack':

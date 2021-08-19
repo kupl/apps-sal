@@ -5,5 +5,5 @@ def odd_or_even(arr):
     if len(arr) == 0:
         return [0]
     if add % 2 == 0:
-        return "even"
-    return "odd"
+        return 'even'
+    return 'odd'

@@ -1,3 +1,3 @@
 def no_space(x):
-    no = x.replace(" ", "")
+    no = x.replace(' ', '')
     return no

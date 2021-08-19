@@ -2,13 +2,9 @@ import itertools
 
 
 def reg_sum_hits(diceAmount, sides):
-
     possibilities = calculatepermutations(sides, diceAmount)
-
     sumvalues = calculatesumvalues(sides, diceAmount)
-
     distributionofsums = calculatedist(possibilities, sumvalues)
-
     return distributionofsums
 
 

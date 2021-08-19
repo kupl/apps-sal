@@ -11,7 +11,6 @@ def artificial_rain(garden):
                 best_coverage = coverage
             coverage = i - with_left_wall_at
         coverage += 1
-
     if coverage > best_coverage:
         best_coverage = coverage
     return best_coverage

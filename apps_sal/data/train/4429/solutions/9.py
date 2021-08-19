@@ -2,7 +2,7 @@ import re
 
 
 def longest_palindrome(s):
-    s = list(re.sub('[\W_]+', '', s.lower()))
+    s = list(re.sub('[\\W_]+', '', s.lower()))
     solution = 0
     j = 0
     letter_count = 0

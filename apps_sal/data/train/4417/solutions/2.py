@@ -14,7 +14,7 @@ def algorithm(a):
     while a != 4:
         sum = 0
         for j in str(a):
-            sum += int(j)**2
+            sum += int(j) ** 2
         a = sum
         if a == 1:
             return True

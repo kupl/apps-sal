@@ -6,6 +6,7 @@ def area_or_perimeter(length, width):
 
 
 class TestAreaOrPerimeter(unittest.TestCase):
+
     def test_area(self):
         self.assertEqual(area_or_perimeter(length=4, width=4), 16)
 

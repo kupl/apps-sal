@@ -5,6 +5,6 @@ def reverse(s):
 def is_palindrome(s):
     s = str(s)
     rev = reverse(s)
-    if (s == rev):
+    if s == rev:
         return True
     return False

@@ -9,4 +9,4 @@ def inclist(a):
 def artificial_rain(garden):
     inc = inclist(garden)
     dec = inclist(garden[::-1])[::-1]
-    return max([x + y for x, y in zip(inc, dec)]) - 1
+    return max([x + y for (x, y) in zip(inc, dec)]) - 1

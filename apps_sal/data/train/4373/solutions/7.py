@@ -1,5 +1,5 @@
-valid = ":) :D :-) :-D :~) :~D ;) ;D ;-) ;-D ;~) ;~D".split()
+valid = ':) :D :-) :-D :~) :~D ;) ;D ;-) ;-D ;~) ;~D'.split()
 
 
 def count_smileys(arr):
-    return sum(face in valid for face in arr)
+    return sum((face in valid for face in arr))

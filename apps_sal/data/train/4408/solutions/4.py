@@ -6,4 +6,4 @@ def yoga(a, b):
     for x in a:
         y = sum(x)
         c.append([z + y for z in sorted(x)])
-    return sum(sum(len(x) - bisect_left(x, y) for y in b) for x in c)
+    return sum((sum((len(x) - bisect_left(x, y) for y in b)) for x in c))

@@ -5,9 +5,9 @@ from functools import reduce
 
 
 def logical_calc(array, op):
-    if op == "XOR":
+    if op == 'XOR':
         return reduce(xor, array)
-    elif op == "AND":
+    elif op == 'AND':
         return reduce(and_, array)
-    elif op == "OR":
+    elif op == 'OR':
         return reduce(or_, array)

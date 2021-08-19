@@ -3,7 +3,7 @@ def jumbled_string(s, n):
     lst = []
     while not lst or s != lst[0]:
         lst.append(s)
-        s = ''.join(s[i] for i in idx)
+        s = ''.join((s[i] for i in idx))
         if len(lst) == n:
             return s
     return lst[n % len(lst)]

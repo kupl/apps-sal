@@ -8,5 +8,4 @@ def logical_calc(array, op):
         arr2.append(array[i])
         arr2.append(op)
     arr2 = arr2[0:-1]
-
     return eval(' '.join(arr2))

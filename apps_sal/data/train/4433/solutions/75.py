@@ -3,11 +3,10 @@ import operator
 
 
 def logical_calc(array, op):
-    if op == "AND":
+    if op == 'AND':
         o = operator.and_
-    elif op == "OR":
+    elif op == 'OR':
         o = operator.or_
-    elif op == "XOR":
+    elif op == 'XOR':
         o = operator.xor
-
     return reduce(o, array)

@@ -2,9 +2,9 @@ from collections import Counter
 
 
 def longest_palindrome(s):
-    freq = Counter(c for c in s.lower() if c.isalnum())
-    even, odd = [], []
-    for k, v in freq.items():
+    freq = Counter((c for c in s.lower() if c.isalnum()))
+    (even, odd) = ([], [])
+    for (k, v) in freq.items():
         if v % 2:
             odd.append(v - 1)
         else:

@@ -12,5 +12,4 @@ def longest_palindrome(data):
         ans = even + odd[0]
     if len(odd) > 1:
         ans = even + odd[0] + sum([n - 1 for n in odd[1:]])
-
     return ans

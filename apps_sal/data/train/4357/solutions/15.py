@@ -1,7 +1,7 @@
 def nth_smallest(arr, pos):
     if len(arr) == 1:
         return arr[0]
-    big, lit, pivot = [], [], arr[pos - 1]
+    (big, lit, pivot) = ([], [], arr[pos - 1])
     for i in arr:
         if i > pivot:
             big.append(i)

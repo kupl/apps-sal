@@ -1,5 +1,5 @@
 def artificial_rain(garden):
-    left, area, record = 0, 0, 1
+    (left, area, record) = (0, 0, 1)
     for i in range(1, len(garden)):
         if garden[i] < garden[i - 1]:
             left = i

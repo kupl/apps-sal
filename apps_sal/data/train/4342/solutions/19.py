@@ -1,5 +1,5 @@
 def no_space(x):
-    s = ""
+    s = ''
     for letter in x:
         if letter != ' ':
             s += letter

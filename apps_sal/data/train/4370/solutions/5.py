@@ -6,6 +6,5 @@ def indices(n, d):
     sols = []
     for i in range(d + 1):
         sols += [subsol + [i] for subsol in indices(n - 1, d - i)]
-
     return sols
     raise NotImplementedError('todo')

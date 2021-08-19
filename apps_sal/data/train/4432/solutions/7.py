@@ -3,4 +3,4 @@ def can_jump(arr):
         return False
     if arr[0] >= len(arr):
         return True
-    return any(can_jump(arr[i + 1:]) for i in range(arr[0]))
+    return any((can_jump(arr[i + 1:]) for i in range(arr[0])))

@@ -1,5 +1,4 @@
 def expression_matter(a, b, c):
-
     list = []
     list.append(a * b * c)
     list.append(a * (b + c))
@@ -7,7 +6,6 @@ def expression_matter(a, b, c):
     list.append((a + b) * c)
     list.append(a * b + c)
     list.append(a + b + c)
-
     return max(list)
 
 

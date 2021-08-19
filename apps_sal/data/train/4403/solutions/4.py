@@ -1,5 +1,5 @@
 def switch_endian(n, bits):
-    if 2**bits <= n or bits % 8 != 0 or bits < 8:
+    if 2 ** bits <= n or bits % 8 != 0 or bits < 8:
         return None
     xn = bits // 4
     x = format(n, 'x').zfill(xn)

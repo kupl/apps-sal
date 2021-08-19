@@ -7,7 +7,6 @@ def yoga(classroom, poses):
             new_row.append(person + row_sum)
         new_classroom.append(new_row)
     people = [person for row in new_classroom for person in row]
-
     result = 0
     for pose in poses:
         for person in people:

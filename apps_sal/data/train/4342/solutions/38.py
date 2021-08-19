@@ -1,7 +1,7 @@
 def no_space(x):
-    finalstring = ""
+    finalstring = ''
     for i in x:
-        if i in " ":
+        if i in ' ':
             pass
         else:
             finalstring += i

@@ -10,6 +10,5 @@ def expression_matter(a, b, c):
     sum.append(var3)
     sum.append(var4)
     sum.append(var5)
-
     sum = sorted(sum)
     return sum[-1]

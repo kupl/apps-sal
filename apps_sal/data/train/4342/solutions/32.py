@@ -1,6 +1,6 @@
 def no_space(x):
     str = []
     for char in x:
-        if char != " ":
+        if char != ' ':
             str.append(char)
-    return "".join(str)
+    return ''.join(str)

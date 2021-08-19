@@ -1,25 +1,25 @@
 def get_planet_name(id):
     if id is 1:
-        name = "Mercury"
+        name = 'Mercury'
         return name
     if id is 2:
-        name = "Venus"
+        name = 'Venus'
         return name
     if id is 3:
-        name = "Earth"
+        name = 'Earth'
         return name
     if id is 4:
-        name = "Mars"
+        name = 'Mars'
         return name
     if id is 5:
-        name = "Jupiter"
+        name = 'Jupiter'
         return name
     if id is 6:
-        name = "Saturn"
+        name = 'Saturn'
         return name
     if id is 7:
-        name = "Uranus"
+        name = 'Uranus'
         return name
     if id is 8:
-        name = "Neptune"
+        name = 'Neptune'
         return name

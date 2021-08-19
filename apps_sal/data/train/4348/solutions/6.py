@@ -16,7 +16,5 @@ def calc_fuel(n):
                 dic['wood'] += 1
             elif poss[i] == 1:
                 dic['stick'] += 1
-
         i += 1
-
     return dic

@@ -1,5 +1,5 @@
 def artificial_rain(li):
-    left, m, i = 0, 0, 1
+    (left, m, i) = (0, 0, 1)
     while i < len(li):
         prev = left
         while i < len(li) and li[i - 1] <= li[i]:

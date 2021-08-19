@@ -1,7 +1,6 @@
 import re
 from distutils.version import LooseVersion
-
-TRAILING_ZEROS = re.compile(r'(\.0+)+$')
+TRAILING_ZEROS = re.compile('(\\.0+)+$')
 
 
 def cmp(a, b):

@@ -4,4 +4,4 @@ def logical_calc(array, op):
     elif op == 'OR':
         return True in array
     elif op == 'XOR':
-        return (array.count(True) % 2) != 0
+        return array.count(True) % 2 != 0

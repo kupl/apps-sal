@@ -15,11 +15,9 @@ def is_par(i, lst):
 def artificial_rain(lst):
     if len(lst) in (0, 1):
         return len(lst)
-
-    mn, nx_mn = 0, -1
+    (mn, nx_mn) = (0, -1)
     i = 0
     grt = 0
-
     while i < len(lst):
         if is_min(i, lst):
             grt = max(grt, 1 + i - mn)
@@ -40,7 +38,5 @@ def artificial_rain(lst):
             while i < len(lst) and is_par(i, lst):
                 i += 1
             i -= 1
-
         i += 1
-
     return max(grt, i - mn)

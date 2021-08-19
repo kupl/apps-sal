@@ -6,7 +6,6 @@ def is_palindrome(string):
     a = len(string)
     b = a % 2
     nr = -1
-
     if b != 0:
         return False
     else:

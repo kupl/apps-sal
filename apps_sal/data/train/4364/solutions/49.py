@@ -4,7 +4,7 @@ def odd_or_even(arr):
         sum = sum + arr[i]
         i += 1
     if sum % 2 == 0:
-        return "even"
+        return 'even'
     else:
-        return "odd"
+        return 'odd'
     pass

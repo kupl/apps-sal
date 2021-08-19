@@ -1,19 +1,19 @@
 def get_planet_name(id):
     case = id
     if case == 1:
-        name = "Mercury"
+        name = 'Mercury'
     elif case == 2:
-        name = "Venus"
+        name = 'Venus'
     elif case == 3:
-        name = "Earth"
+        name = 'Earth'
     elif case == 4:
-        name = "Mars"
+        name = 'Mars'
     elif case == 5:
-        name = "Jupiter"
+        name = 'Jupiter'
     elif case == 6:
-        name = "Saturn"
+        name = 'Saturn'
     elif case == 7:
-        name = "Uranus"
+        name = 'Uranus'
     elif case == 8:
-        name = "Neptune"
+        name = 'Neptune'
     return name

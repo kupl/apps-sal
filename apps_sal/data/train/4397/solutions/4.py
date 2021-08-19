@@ -11,5 +11,4 @@ def is_thue_morse(seq):
     for i in range(len(seq)):
         if seq[i] != next(gen):
             return False
-
     return True

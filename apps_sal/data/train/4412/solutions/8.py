@@ -2,7 +2,7 @@ def get_partitionr(ss):
     out = []
     if len(ss) <= 1:
         return [ss]
-    for i in range(2**len(ss) // 2):
+    for i in range(2 ** len(ss) // 2):
         parts = [[], []]
         for item in ss:
             parts[i & 1].append(item)
@@ -16,7 +16,7 @@ def get_partitionr(ss):
 def add(parts):
     total = 0
     for part in parts:
-        total += sum(int(''.join(p)) if isinstance(p, list) else int(p) for p in part)
+        total += sum((int(''.join(p)) if isinstance(p, list) else int(p) for p in part))
     return total
 
 

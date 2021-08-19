@@ -1,4 +1,5 @@
-class C():
+class C:
+
     def __eq__(self, x):
         return True
 

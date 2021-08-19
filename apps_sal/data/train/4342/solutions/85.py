@@ -1,5 +1,5 @@
 def no_space(x):
-    z = ""
+    z = ''
     for i in range(len(x)):
         if x[i] != ' ':
             z += x[i]

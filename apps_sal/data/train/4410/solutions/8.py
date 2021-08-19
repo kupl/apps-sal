@@ -1,5 +1,5 @@
 def count_sixes(n):
-    num = 3 * 2**(n - 1)
+    num = 3 * 2 ** (n - 1)
     c = 0
     if n % 2 == 0 and int(str(num)[:2]) < 15:
         c = 1

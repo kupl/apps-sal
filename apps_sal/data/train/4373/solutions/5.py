@@ -4,11 +4,9 @@ def count_smileys(arr):
     nose = '-~'
     mouth = ')D'
     for char in arr:
-
         if len(char) == 3:
-            if char[0] in eyes and char[1] in nose and char[2] in mouth:
+            if char[0] in eyes and char[1] in nose and (char[2] in mouth):
                 total += 1
-
         elif len(char) == 2:
             if char[0] in eyes and char[1] in mouth:
                 total += 1

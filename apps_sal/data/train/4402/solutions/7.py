@@ -1,4 +1,4 @@
-alph = "abcdefghijklmnopqrstuvwxyz"
+alph = 'abcdefghijklmnopqrstuvwxyz'
 
 
 def solve(st):

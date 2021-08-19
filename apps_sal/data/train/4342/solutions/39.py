@@ -1,7 +1,7 @@
 def no_space(x):
     kk = ''
     for i in x:
-        if i == " ":
+        if i == ' ':
             continue
         else:
             kk = kk + i

@@ -3,4 +3,4 @@ def sort_by_bit(arr):
 
 
 def count(n):
-    return bin(n)[2:].count("1")
+    return bin(n)[2:].count('1')

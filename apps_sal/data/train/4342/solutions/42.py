@@ -3,5 +3,4 @@ def no_space(x):
     for i in x:
         if i != ' ':
             secondary.append(i)
-
     return ''.join(secondary)

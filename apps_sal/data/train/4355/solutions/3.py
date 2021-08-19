@@ -17,5 +17,4 @@ def ex_euler(n):
         y += slope(y, t) * (1 / n)
         t += 1 / n
         error += abs(y - exact_sol(t)) / exact_sol(t)
-
-    return (int((error / (n + 1)) * 1e6)) / 1e6
+    return int(error / (n + 1) * 1000000.0) / 1000000.0

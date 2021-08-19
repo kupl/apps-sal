@@ -1,1 +1,2 @@
-def get_score(n): return 25 * n * (n + 1)
+def get_score(n):
+    return 25 * n * (n + 1)
