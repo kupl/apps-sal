@@ -1,2 +1,2 @@
 def square(n):
-    return n**2  # self explanatory
+    return n ** 2

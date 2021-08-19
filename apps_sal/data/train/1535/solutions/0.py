@@ -1,4 +1,3 @@
-# cook your dish here
 def solve(edges, ans):
     n = len(edges)
     visited = set()
@@ -15,13 +14,11 @@ def solve(edges, ans):
                 if parents[kid] == -1:
                     if kid != 1:
                         parents[kid] = node
-                else:
-                    if kid != parents[node]:
-                        if kid in visited:
-                            count += 1
-                        else:
-                            stack.append(kid)
-
+                elif kid != parents[node]:
+                    if kid in visited:
+                        count += 1
+                    else:
+                        stack.append(kid)
             if node == 1:
                 count -= 1
             if count == len(edges[node]) - 1:
@@ -31,16 +28,13 @@ def solve(edges, ans):
                 for kid in edges[node]:
                     dp[node] += dp[kid]
                     max_val = max(max_val, dp[kid])
-
                 dp[node] += 1
-
                 max_val = max(max_val, n - dp[node])
                 if max_val < w:
                     w = max_val
                     x = node
                 elif max_val == w:
                     x = min(x, node)
-
     ans.append(str(x) + ' ' + str(w))
 
 
@@ -52,14 +46,11 @@ def main():
         edges = {}
         for j in range(1, n + 1):
             edges[j] = []
-
         for j in range(n - 1):
-            x, y = list(map(int, input().split()))
+            (x, y) = list(map(int, input().split()))
             edges[x].append(y)
             edges[y].append(x)
-
         solve(edges, ans)
-
     print('\n'.join(ans))
 
 

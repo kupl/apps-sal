@@ -2,24 +2,16 @@ import re
 
 
 def poohbear(code):
-    # initialize variables
-    data, ptr, step, clipboard, stack, loop, output = {}, 0, 0, 0, [], {}, []
-
-    # break code into valid commands
+    (data, ptr, step, clipboard, stack, loop, output) = ({}, 0, 0, 0, [], {}, [])
     code = re.sub('[^+-><cpWEPNTQULIVABYD]', '', code)
-
-    # parse loops and store start/end
-    for i, command in enumerate(code):
+    for (i, command) in enumerate(code):
         if command == 'W':
             stack.append(i)
         elif command == 'E':
             start = stack.pop()
-            loop[start], loop[i] = i, start
-
-    # execute the code
+            (loop[start], loop[i]) = (i, start)
     while step < len(code):
         data[ptr] = data.get(ptr, 0)
-
         command = code[step]
         if command == '+':
             data[ptr] += 1
@@ -61,9 +53,7 @@ def poohbear(code):
             data[ptr] *= clipboard
         elif command == 'D':
             data[ptr] //= clipboard
-
         if ptr in data:
             data[ptr] %= 256
         step += 1
-
     return ''.join(output)

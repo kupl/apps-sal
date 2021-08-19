@@ -4,6 +4,4 @@ def reverse(st):
     for x in reversed(st.split()):
         print(x)
         a.append(x)
-
-    # Your Code Here
     return ' '.join(a)
