@@ -2,9 +2,8 @@ from collections import deque
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
-    # maked group
     t = []
     t.append(s[0])
     x = s[0]
@@ -12,8 +11,6 @@ def main():
         if x != s[i]:
             t.append(s[i])
             x = s[i]
-    # print(t)
-
     j = 0
     t = deque(t)
     while j < k:
@@ -23,7 +20,6 @@ def main():
         t.popleft()
         t.popleft()
         j += 1
-
     print(n - 1 - (len(t) - 1))
 
 

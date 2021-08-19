@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict, Counter
 from itertools import product, groupby, count, permutations, combinations
 from math import pi, sqrt
@@ -8,10 +7,10 @@ from string import ascii_lowercase
 from functools import lru_cache
 import sys
 sys.setrecursionlimit(10000)
-INF = float("inf")
-YES, Yes, yes, NO, No, no = "YES", "Yes", "yes", "NO", "No", "no"
-dy4, dx4 = [0, 1, 0, -1], [1, 0, -1, 0]
-dy8, dx8 = [0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1]
+INF = float('inf')
+(YES, Yes, yes, NO, No, no) = ('YES', 'Yes', 'yes', 'NO', 'No', 'no')
+(dy4, dx4) = ([0, 1, 0, -1], [1, 0, -1, 0])
+(dy8, dx8) = ([0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1])
 
 
 def inside(y, x, H, W):
@@ -40,19 +39,17 @@ def lcm(a, b):
 def solve(n):
     if n % 2 != 0:
         return 0
-
     total = 0
     now = 5
     while now <= n:
         total += n // (now * 2)
         now *= 5
-
     return total
 
 
 def main():
     N = int(input())
-    print((solve(N)))
+    print(solve(N))
 
 
 def __starting_point():

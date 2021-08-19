@@ -3,8 +3,6 @@ import sys
 import collections
 
 
-# imgur.com/Pkt7iIf.png
-
 def getdict(n):
     d = {}
     if type(n) is list:
@@ -26,8 +24,8 @@ def getdict(n):
 def sieve(n):
     prime = [True for i in range(n + 1)]
     p = 2
-    while (p * p <= n):
-        if (prime[p] == True):
+    while p * p <= n:
+        if prime[p] == True:
             for i in range(p * 2, n + 1, p):
                 prime[i] = False
         p += 1
@@ -36,12 +34,28 @@ def sieve(n):
     return r
 
 
-def cdiv(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def prr(a, sep=' '): print(sep.join(map(str, a)))
+def cdiv(n, k):
+    return n // k + (n % k != 0)
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+
+def prr(a, sep=' '):
+    print(sep.join(map(str, a)))
 
 
 a = ii()
@@ -60,5 +74,4 @@ else:
     t = min(a, n // ka)
     n -= t * ka
     t += min(b, n // kb)
-
 print(r, t)

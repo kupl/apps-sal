@@ -1,11 +1,7 @@
 n = int(input())
-
-x, y, z = 1234567, 123456, 1234
-
+(x, y, z) = (1234567, 123456, 1234)
 a_max = n // x
 b_max = n // y
-
-# print(a_max, b_max)
 
 
 def do_it():

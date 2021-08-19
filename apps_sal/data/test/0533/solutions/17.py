@@ -1,9 +1,11 @@
-''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
-# codeforces1215A_live
-def gi(): return list(map(int, input().split()))
+""" بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ """
 
 
-a, b, x, y, n = [gi()[0] for _ in range(5)]
+def gi():
+    return list(map(int, input().split()))
+
+
+(a, b, x, y, n) = [gi()[0] for _ in range(5)]
 l = [x for _ in range(a)]
 l += [y for _ in range(b)]
 l.sort()
