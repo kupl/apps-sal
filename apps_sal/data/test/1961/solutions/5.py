@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 u = []
 u1 = []
 for i in range(n):
@@ -11,7 +11,6 @@ for i in range(n - 2):
             if u[i][j + k] != '#' or u[i + k][j] != '#':
                 ok = False
                 break
-# print(ok)
         if ok:
             if u[i + 2][j + 1] != '#' or u[i + 2][j + 2] != '#' or u[i + 1][j + 2] != '#':
                 ok = False
@@ -23,10 +22,6 @@ for i in range(n - 2):
                 u1[i + 2][j + 2] = '#'
                 u1[i + 1][j + 2] = '#'
 ok = True
-# for i in u:
-# print(i)
-# for i in u1:
-# print(i)
 for i in range(n):
     for j in range(m):
         if u[i][j] != u1[i][j]:

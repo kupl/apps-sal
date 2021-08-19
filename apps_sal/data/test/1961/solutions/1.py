@@ -16,19 +16,17 @@ def fill(field, y, x):
             cur[y + i][x + j] = '#'
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 sig = []
 cur = []
 for i in range(n):
     sig += [list(input())]
-    cur += [["."] * m]
-
+    cur += [['.'] * m]
 for i in range(n - 2):
     for j in range(m - 2):
         if isValid(sig, i, j):
             fill(cur, i, j)
-
 if sig == cur:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

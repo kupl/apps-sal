@@ -1,7 +1,6 @@
 class UnionFind:
+
     def __init__(self, n):
-        # 負  : 根であることを示す。絶対値はランクを示す
-        # 非負: 根でないことを示す。値は親を示す
         self.table = [-1] * n
 
     def _root(self, x):
@@ -22,7 +21,6 @@ class UnionFind:
         r2 = self._root(y)
         if r1 == r2:
             return
-        # ランクの取得
         d1 = self.table[r1]
         d2 = self.table[r2]
         if d1 <= d2:
@@ -33,31 +31,20 @@ class UnionFind:
             self.table[r1] = r2
 
 
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
-
 G = UnionFind(n)
-
 CD = []
-
 for _ in range(m):
-
-    c, d = list(map(int, input().split()))
+    (c, d) = list(map(int, input().split()))
     G.union(c - 1, d - 1)
-
 ansA = [0] * n
 ansB = [0] * n
-
 for i in range(n):
-
     ansA[G._root(i)] += A[i]
-
     ansB[G._root(i)] += B[i]
-
 if ansA == ansB:
-    print("Yes")
-
+    print('Yes')
 else:
-    print("No")
+    print('No')

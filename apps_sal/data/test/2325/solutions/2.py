@@ -30,17 +30,17 @@ def cnk(n, k):
     return ans
 
 
-def factor(n, lpa=fact_all(10**6)):
+def factor(n, lpa=fact_all(10 ** 6)):
     pws = []
     num_ones = 0
     dv = lpa[n]
     while n > 1 and dv * dv <= n:
         lp = 0
-        c, o = divmod(n, dv)
+        (c, o) = divmod(n, dv)
         while o == 0:
             lp += 1
             n = c
-            c, o = divmod(n, dv)
+            (c, o) = divmod(n, dv)
         if lp == 1:
             num_ones += 1
         else:
@@ -48,22 +48,21 @@ def factor(n, lpa=fact_all(10**6)):
         dv = lpa[n]
     if n > 1:
         num_ones += 1
-        # pws.append(1)
-    return pws, num_ones
+    return (pws, num_ones)
 
 
 def main():
     q = int(input())
     for __ in range(q):
-        x, y = input().split()
-        x, y = int(x), int(y)
+        (x, y) = input().split()
+        (x, y) = (int(x), int(y))
         ans = pow(2, y - 1, md)
-        pws, num_ones = factor(x)
+        (pws, num_ones) = factor(x)
         for f in pws:
             cm = cnk(f + y - 1, f)
-            ans = (ans * cm) % md
+            ans = ans * cm % md
         if num_ones:
-            ans = (ans * pow(y, num_ones, md)) % md
+            ans = ans * pow(y, num_ones, md) % md
         print(ans)
 
 
