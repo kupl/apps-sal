@@ -1,8 +1,9 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         ans = cur = rem = 0
         prof = float('-inf')
-        for idx, val in enumerate(customers):
+        for (idx, val) in enumerate(customers):
             tmp = rem + val
             if tmp >= 4:
                 cur += 4
@@ -19,16 +20,13 @@ class Solution:
             idx = len(customers) + rem_idx
             cur += rem - rem % 4
             cur_prof = cur * boardingCost - runningCost * (idx + 1)
-            #print(idx, cur_prof)
             if cur_prof > prof:
                 prof = cur_prof
                 ans = idx
-
             if rem % 4:
                 cur += rem % 4
                 idx += 1
                 cur_prof = cur * boardingCost - runningCost * (idx + 1)
-                #print(idx, cur_prof)
                 if cur_prof > prof:
                     prof = cur_prof
                     ans = idx

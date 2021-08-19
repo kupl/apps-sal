@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         waiting = customers[0]
         idx = 1
@@ -17,6 +18,4 @@ class Solution:
             if idx < len(customers):
                 waiting += customers[idx]
                 idx += 1
-            # print(current_profit, max_profit, rotated, max_rotated)
-
         return max_rotated
