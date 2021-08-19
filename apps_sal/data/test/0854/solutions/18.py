@@ -7,7 +7,7 @@ def inlist():
 
 
 def main():
-    n, t = inlist()
+    (n, t) = inlist()
     a = inlist()
     sol = 0
     while True:
@@ -21,14 +21,12 @@ def main():
                 amt += 1
         if amt == 0:
             break
-        sol += (t // ss) * amt
+        sol += t // ss * amt
         t = t % ss
     print(sol)
 
 
 def __starting_point():
-    #import profile
-    # profile.run("main()")
     main()
 
 

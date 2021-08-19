@@ -3,10 +3,12 @@ NTC here
 """
 
 
-def iin(): return int(input())
+def iin():
+    return int(input())
 
 
-def lin(): return list(map(int, input().split()))
+def lin():
+    return list(map(int, input().split()))
 
 
 def main():
@@ -27,7 +29,6 @@ def main():
                     br = 1
                     break
             else:
-                # print(ans, sm, val)
                 ans = min(ans, sm)
             if br:
                 break
@@ -35,10 +36,4 @@ def main():
 
 
 main()
-
-"""
-3
-4 1 3 1
-4 4 4 3
-5 3 3 2
-"""
+'\n3\n4 1 3 1\n4 4 4 3\n5 3 3 2\n'

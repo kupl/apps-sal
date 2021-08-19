@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 
@@ -7,7 +6,6 @@ def main():
     mat = [None for __ in range(n)]
     for indx in range(n):
         mat[indx] = list(map(int, sys.stdin.readline().split()))
-
     good = True
     for row in range(n):
         for col in range(n):
@@ -16,9 +14,9 @@ def main():
             else:
                 good &= check_this_element(mat, row, col)
     if good:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def check_this_element(mat, row, col):

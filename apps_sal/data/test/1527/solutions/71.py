@@ -1,5 +1,5 @@
 from heapq import heappush, heappop
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 s = []
 for _ in range(h):
     s_i = list(str(input()))
@@ -9,16 +9,16 @@ for _ in range(h):
 def connect(v):
     con_v = []
     if v[0] > 0:
-        if s[v[0] - 1][v[1]] == ".":
+        if s[v[0] - 1][v[1]] == '.':
             con_v.append((v[0] - 1, v[1]))
     if v[1] > 0:
-        if s[v[0]][v[1] - 1] == ".":
+        if s[v[0]][v[1] - 1] == '.':
             con_v.append((v[0], v[1] - 1))
     if v[0] < h - 1:
-        if s[v[0] + 1][v[1]] == ".":
+        if s[v[0] + 1][v[1]] == '.':
             con_v.append((v[0] + 1, v[1]))
     if v[1] < w - 1:
-        if s[v[0]][v[1] + 1] == ".":
+        if s[v[0]][v[1] + 1] == '.':
             con_v.append((v[0], v[1] + 1))
     return con_v
 
@@ -34,7 +34,7 @@ def longest_bfs(i, j):
     visit = [NOT_VISITED for _ in range(h * w)]
     queue = [(0, (i, j))]
     while len(queue) > 0:
-        c, v = heappop(queue)
+        (c, v) = heappop(queue)
         visit[v[0] * w + v[1]] = VISITED
         for u in connect(v):
             if visit[u[0] * w + u[1]] == VISITED:
@@ -48,7 +48,7 @@ def longest_bfs(i, j):
 longest_path = 0
 for i in range(h):
     for j in range(w):
-        if s[i][j] == "#":
+        if s[i][j] == '#':
             continue
         path_length = longest_bfs(i, j)
         for p in path_length:

@@ -9,22 +9,16 @@ from queue import PriorityQueue
 import sys
 from sys import stdin
 from collections import deque
-mod = 10**9 + 7
-sys.setrecursionlimit(10**5)
-# def rl():
-#     return [int(w) for w in stdin.readline().split()]
-# map(int,input().split())
-# # l = list(map(int,input().split()))
-# from itertools import permutations
-# input = lambda: sys.stdin.readline().rstrip()
-def input(): return sys.stdin.readline().rstrip()
+mod = 10 ** 9 + 7
+sys.setrecursionlimit(10 ** 5)
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 n = int(input())
-
 ans = 0
-
 for i in range(2, n + 1):
     ans += i * (n // i - 1)
-
 print(ans * 4)

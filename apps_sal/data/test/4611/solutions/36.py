@@ -1,4 +1,3 @@
-#!/user/bin/env pypy3
 import sys
 from typing import NamedTuple, List
 
@@ -26,7 +25,7 @@ class Position(NamedTuple):
 
 
 def result_format(b: bool) -> str:
-    return "Yes" if b else "No"
+    return 'Yes' if b else 'No'
 
 
 def solve(positions: List[Position]) -> bool:
@@ -43,10 +42,10 @@ def main():
     n = int(fast_input())
     positions = []
     for _ in range(n):
-        t, x, y = list(map(int, fast_input().split()))
+        (t, x, y) = list(map(int, fast_input().split()))
         positions.append(Position(t=t, x=x, y=y))
     result = solve(positions)
-    print((result_format(result)))
+    print(result_format(result))
 
 
 main()

@@ -1,8 +1,5 @@
-# Created by nikita at 30/12/2018
-
 n = int(input())
 s = input()
-
 prefBal = [0] * n
 prefBal.append(0)
 prefCan = [False] * n
@@ -11,7 +8,6 @@ suffBal = [0] * n
 suffBal.append(0)
 suffCan = [False] * n
 suffCan.append(True)
-
 currBal = 0
 currCan = True
 for i in range(n):
@@ -20,32 +16,24 @@ for i in range(n):
     else:
         prefBal[i] = currBal - 1
     currBal = prefBal[i]
-    prefCan[i] = currCan and (prefBal[i] >= 0)
+    prefCan[i] = currCan and prefBal[i] >= 0
     currCan = prefCan[i]
-
 currBal = 0
 currCan = True
-for i in range(n - 1, -1, - 1):
+for i in range(n - 1, -1, -1):
     if s[i] == ')':
         suffBal[i] = currBal + 1
     else:
         suffBal[i] = currBal - 1
     currBal = suffBal[i]
-    suffCan[i] = currCan and (suffBal[i] >= 0)
+    suffCan[i] = currCan and suffBal[i] >= 0
     currCan = suffCan[i]
-
-# print(prefBal)
-# print(prefCan)
-# print(suffBal)
-# print(suffCan)
-
 ans = 0
 for i in range(n):
     if s[i] == '(':
-        if prefCan[i - 1] and suffCan[i + 1] and prefBal[i - 1] - 1 - suffBal[i + 1] == 0:
+        if prefCan[i - 1] and suffCan[i + 1] and (prefBal[i - 1] - 1 - suffBal[i + 1] == 0):
             ans += 1
     if s[i] == ')':
-        if prefCan[i - 1] and suffCan[i + 1] and prefBal[i - 1] + 1 - suffBal[i + 1] == 0:
+        if prefCan[i - 1] and suffCan[i + 1] and (prefBal[i - 1] + 1 - suffBal[i + 1] == 0):
             ans += 1
-
 print(ans)

@@ -7,7 +7,6 @@ def main():
             a[i] = a[i - 1] + 1
         else:
             a[i] = a[i - 1] - 1
-    # print(a) # debug
     if a[n] != 2 and a[n] != -2:
         print(0)
         return
@@ -20,7 +19,7 @@ def main():
             return
         for i in range(n, -1, -1):
             if a[i] == 1:
-                print(s[(i + 1):].count('('))
+                print(s[i + 1:].count('('))
                 break
     else:
         for i in range(n):
