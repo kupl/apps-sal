@@ -1,4 +1,5 @@
 class Person:
+
     def __init__(self, name):
         self.children = []
         self.name = name
@@ -27,19 +28,11 @@ class ThroneInheritance:
 
         def dfs(person):
             stack = [person]
-            while(len(stack) > 0):
+            while len(stack) > 0:
                 current = stack.pop()
                 if current.isAlive:
                     ans.append(current.name)
                 for child in current.children[::-1]:
                     stack.append(child)
-
         dfs(self.root)
         return ans
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

@@ -1,4 +1,5 @@
 class Node(object):
+
     def __init__(self):
         self.children = []
         self.name = ''
@@ -25,7 +26,6 @@ class ThroneInheritance:
         stack = []
         order = []
         current = self._root
-
         while True:
             if current:
                 if not current.dead:
@@ -33,14 +33,7 @@ class ThroneInheritance:
                 stack.extend(current.children[::-1])
                 current = None
             elif len(stack) > 0:
-                current, stack = stack[-1], stack[:-1]
+                (current, stack) = (stack[-1], stack[:-1])
             else:
                 break
         return order
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

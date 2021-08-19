@@ -2,9 +2,7 @@ class ThroneInheritance:
 
     def __init__(self, kingName: str):
         self.root = kingName
-        self.child_list = {
-            self.root: []
-        }
+        self.child_list = {self.root: []}
         self.death_dict = {}
 
     def birth(self, parentName: str, childName: str) -> None:
@@ -24,10 +22,3 @@ class ThroneInheritance:
                 _dfs(child)
         _dfs(self.root)
         return answer_list
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

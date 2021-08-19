@@ -8,9 +8,6 @@ class ThroneInheritance:
         self.dead = set()
 
     def birth(self, parentName: str, childName: str) -> None:
-        # import pprint
-        # pprint.pprint(self.family)
-        # pprint.pprint(self.parentChildrenDictMap)
         if parentName not in self.parentChildrenDictMap:
             raise Exception('No parent found')
         children = self.parentChildrenDictMap[parentName]
@@ -26,16 +23,9 @@ class ThroneInheritance:
         ans = []
 
         def dfs(root):
-            for parent, children in list(root.items()):
+            for (parent, children) in list(root.items()):
                 if parent not in self.dead:
                     ans.append(parent)
                 dfs(root[parent])
         dfs(self.family)
         return ans
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

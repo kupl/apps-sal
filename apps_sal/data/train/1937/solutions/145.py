@@ -11,7 +11,6 @@ class ThroneInheritance:
 
     def birth(self, parentName: str, childName: str) -> None:
         self.graph[parentName].append(childName)
-
         if parentName not in list(self.visited.keys()):
             self.visited[parentName] = False
         if childName not in list(self.visited.keys()):
@@ -31,7 +30,6 @@ class ThroneInheritance:
         visited[u] = True
         if u not in self.death_set:
             stack.append(u)
-
         for v in graph[u]:
             if visited[v] == False:
                 self.get_dfs(v, visited, graph, stack)
@@ -39,9 +37,3 @@ class ThroneInheritance:
     def reset_visit(self, visited):
         for key in list(visited.keys()):
             visited[key] = False
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

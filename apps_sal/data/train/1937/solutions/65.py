@@ -1,4 +1,5 @@
 class Man:
+
     def __init__(self, name, father):
         self.name = name
         self.father = father
@@ -47,10 +48,3 @@ class ThroneInheritance:
             curSet.add(succesor.name)
             succesor = self.Succesor(succesor, curSet)
         return curList
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

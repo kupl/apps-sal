@@ -1,4 +1,5 @@
 class Member:
+
     def __init__(self, name):
         self.name = name
         self.children = list()
@@ -24,18 +25,11 @@ class ThroneInheritance:
 
     def getInheritanceOrder(self) -> List[str]:
         order = []
-        stack = [self.kingdom[self.king.name], ]
+        stack = [self.kingdom[self.king.name]]
         while stack:
             member = stack.pop()
             if member.isAlive:
                 order.append(member.name)
             for i in range(len(member.children) - 1, -1, -1):
                 stack.append(member.children[i])
-
         return order
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

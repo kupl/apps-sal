@@ -12,11 +12,9 @@ class ThroneInheritance:
             self.successor(i)
 
     def birth(self, parentName: str, childName: str) -> None:
-
         self.result[parentName].append(childName)
 
     def death(self, name: str) -> None:
-
         self.dead.add(name)
 
     def getInheritanceOrder(self) -> List[str]:
@@ -24,10 +22,3 @@ class ThroneInheritance:
         name = self.king
         self.successor(name)
         return self.order
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

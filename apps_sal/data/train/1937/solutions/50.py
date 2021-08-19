@@ -9,14 +9,12 @@ class TreeNode:
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
-
         self.dic = {}
         self.root = TreeNode(kingName)
         self.dic[kingName] = self.root
         self.dead = {}
 
     def birth(self, parentName: str, childName: str) -> None:
-
         parent_node = self.dic[parentName]
         child_node = TreeNode(childName)
         child_node.parent = parent_node
@@ -24,11 +22,9 @@ class ThroneInheritance:
         parent_node.children.append(child_node)
 
     def death(self, name: str) -> None:
-
         self.dead[name] = True
 
     def getInheritanceOrder(self) -> List[str]:
-
         order_lst = []
 
         def recurse(root):
@@ -36,13 +32,5 @@ class ThroneInheritance:
                 order_lst.append(root.val)
             for child in root.children:
                 recurse(child)
-
         recurse(self.root)
         return order_lst
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

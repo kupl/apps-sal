@@ -1,4 +1,5 @@
 class Node(object):
+
     def __init__(self, name, parent=None):
         self.name = name
         self.parent = parent
@@ -36,8 +37,3 @@ class ThroneInheritance:
                 dfs(c)
         dfs(self.root)
         return order
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

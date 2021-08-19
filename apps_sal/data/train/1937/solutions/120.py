@@ -16,10 +16,8 @@ class ThroneInheritance:
 
     def birth(self, parentName: str, childName: str) -> None:
         parent = self.members[parentName]
-
         child = Member(childName)
         self.members[childName] = child
-
         if parent.nextChild is None:
             parent.nextChild = child
             return
@@ -37,18 +35,9 @@ class ThroneInheritance:
         def traverseInOrder(member):
             if member is None:
                 return
-
             if member.alive:
                 inheritanceOrder.append(member.name)
             traverseInOrder(member.nextChild)
             traverseInOrder(member.nextSibling)
-
         traverseInOrder(self.king)
         return inheritanceOrder
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

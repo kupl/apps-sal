@@ -1,4 +1,5 @@
 class Node(object):
+
     def __init__(self, name, parent=''):
         self.name = name
         self.parent = parent
@@ -28,7 +29,7 @@ class ThroneInheritance:
 
         def successor(nodeName):
             node = self.node[nodeName]
-            if (not node.children or all(c in seen for c in node.children)):
+            if not node.children or all((c in seen for c in node.children)):
                 if nodeName == self.root.name:
                     return
                 return successor(node.parent)
@@ -40,10 +41,3 @@ class ThroneInheritance:
         while (name := successor(order[-1])):
             pass
         return [o for o in order if o not in self.deaths]
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

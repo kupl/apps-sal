@@ -1,4 +1,5 @@
 class Person:
+
     def __init__(self, name):
         self.name = name
         self.alive = True
@@ -7,12 +8,12 @@ class Person:
     def preOrder(self, output):
         if self.alive:
             output.append(self.name)
-
         for child in self.children:
             child.preOrder(output)
 
 
 class ThroneInheritance:
+
     def __init__(self, kingName: str):
         self.root = Person(kingName)
         self.people = {kingName: self.root}
@@ -29,10 +30,3 @@ class ThroneInheritance:
         ret = []
         self.root.preOrder(ret)
         return ret
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

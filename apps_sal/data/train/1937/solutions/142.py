@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self):
         self.name = None
         self.children = []
@@ -17,7 +18,6 @@ class ThroneInheritance:
         curr = Node()
         curr.name = childName
         curr.parent = parentName
-
         self.lookup[parentName].children.append(curr)
         self.lookup[childName] = curr
 
@@ -34,12 +34,4 @@ class ThroneInheritance:
             result = [node.name]
         for c in node.children:
             result += self.dfs(c)
-
         return result
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()
