@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         all_chains = []
         for word in words:
@@ -9,17 +10,14 @@ class Solution:
         result = []
         step = [word]
         dictionary = set(words)
-
         self.helper(word, step, dictionary, result)
         return result
 
     def helper(self, word, step, dictionary, result):
         result.append(step[:])
-
         for i in range(len(word) - 1, -1, -1):
             substring = word[:i] + word[i + 1:]
-
             if substring in dictionary:
-                step.append(substring)  # choose
-                self.helper(substring, step, dictionary, result)  # explore
-                step.pop()  # unchoose
+                step.append(substring)
+                self.helper(substring, step, dictionary, result)
+                step.pop()
