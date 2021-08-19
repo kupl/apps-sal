@@ -7,20 +7,19 @@ def preprocess(g):
             r = i
             break
     g = g[r:]
-    return "".join(g)
+    return ''.join(g)
 
 
 [g, h] = [1, 1]
 g = preprocess(g)
 h = preprocess(h)
 if len(g) < len(h):
-    print("<")
+    print('<')
 elif len(g) > len(h):
-    print(">")
+    print('>')
+elif g < h:
+    print('<')
+elif g > h:
+    print('>')
 else:
-    if g < h:
-        print("<")
-    elif g > h:
-        print(">")
-    else:
-        print("=")
+    print('=')

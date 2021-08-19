@@ -11,13 +11,10 @@ def clz(s):
 def solve():
     A = input()
     B = input()
-
     lza = clz(A)
     lzb = clz(B)
-
     la = len(A) - lza
     lb = len(B) - lzb
-
     if la > lb:
         print('>')
     elif la < lb:

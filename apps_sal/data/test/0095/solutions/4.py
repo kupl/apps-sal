@@ -11,4 +11,4 @@ for x in range(i, j + 1):
     if a[x] != a[i]:
         flag = False
         break
-print("YES" if flag else "NO")
+print('YES' if flag else 'NO')

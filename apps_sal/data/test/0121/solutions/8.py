@@ -31,14 +31,14 @@ def vaild(i, j):
     j1 = j - 1
     i2 = i + 1
     j2 = j + 1
-    while (i1 >= 0 and j1 >= 0):
+    while i1 >= 0 and j1 >= 0:
         if A[i1][j1] == 'x':
             i1 -= 1
             j1 -= 1
             per2 += 1
         else:
             break
-    while (i2 <= 3 and j2 <= 3):
+    while i2 <= 3 and j2 <= 3:
         if A[i2][j2] == 'x':
             per2 += 1
             i2 += 1
@@ -49,7 +49,7 @@ def vaild(i, j):
         return True
     i3 = i - 1
     j3 = j + 1
-    while (i3 >= 0 and j3 <= 3):
+    while i3 >= 0 and j3 <= 3:
         if A[i3][j3] == 'x':
             i3 -= 1
             j3 += 1
@@ -58,7 +58,7 @@ def vaild(i, j):
             break
     i4 = i + 1
     j4 = j - 1
-    while (i4 <= 3 and j4 >= 0):
+    while i4 <= 3 and j4 >= 0:
         if A[i4][j4] == 'x':
             i4 += 1
             j4 -= 1
@@ -77,7 +77,6 @@ s = 0
 for i in range(4):
     for j in range(4):
         if A[i][j] == '.':
-
             if vaild(i, j):
                 s = 1
                 break

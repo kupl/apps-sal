@@ -2,8 +2,7 @@ import sys
 sys.setrecursionlimit(10000000)
 MOD = 10 ** 9 + 7
 INF = 10 ** 15
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 

@@ -14,13 +14,13 @@ def divs(n):
         while n % p[pos] == 0:
             cnt += 1
             n //= p[pos]
-        res *= (cnt + 1)
+        res *= cnt + 1
         pos += 1
     return res
 
 
 d = {}
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 res = 0
 for i in range(1, a + 1):
     for j in range(1, b + 1):

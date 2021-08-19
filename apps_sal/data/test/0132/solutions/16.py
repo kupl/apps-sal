@@ -1,7 +1,6 @@
 n = int(input())
 angles = list(map(int, input().split()))
 angles = angles + angles
-
 sum_ = 0
 from_ = 0
 best = 360

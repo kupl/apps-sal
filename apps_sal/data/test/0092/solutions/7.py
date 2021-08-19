@@ -1,8 +1,8 @@
 from fractions import gcd
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 ans = 0
 mod = 1073741824
-div = [0] * (1000001)
+div = [0] * 1000001
 for i in range(1, 1000001):
     j = i
     while j <= 1000000:

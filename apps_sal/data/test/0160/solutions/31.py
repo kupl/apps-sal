@@ -8,16 +8,13 @@ def common_divisors(x):
         if x % i == 0:
             ret.append(i)
             ret.append(x // i)
-
     return ret
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 sm = sum(a)
 cd = common_divisors(sm)
-
 ans = 1
 for ecd in cd:
     r = [e % ecd for e in a]
@@ -29,5 +26,4 @@ for ecd in cd:
         if sub == add:
             if sub <= k:
                 ans = max(ans, ecd)
-
 print(ans)

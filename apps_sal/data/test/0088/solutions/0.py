@@ -11,9 +11,8 @@ def zero(strx):
 a = []
 for i in range(1, 64):
     a += zero('1' * i)
-
 ct = 0
-x, y = list(map(int, input().split(' ')))
+(x, y) = list(map(int, input().split(' ')))
 for i in a:
     if x <= int(i, 2) <= y:
         ct += 1

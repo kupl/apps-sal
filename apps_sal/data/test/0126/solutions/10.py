@@ -1,6 +1,5 @@
 n = int(input())
 L = [int(x) for x in input()]
-
 C = [None] * 10
 p = {}
 for i in range(1, 10):

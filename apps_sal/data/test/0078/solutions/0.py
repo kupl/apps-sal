@@ -36,27 +36,26 @@ def sp(g1, g2, g3, f):
             return 1
         else:
             return 0
+    elif f == 1:
+        b = sp(g1, g2 - 1, g3, 2)
+        c = sp(g1, g2, g3 - 1, 3)
+        return b + c
+    elif f == 2:
+        a = sp(g1 - 1, g2, g3, 1)
+        c = sp(g1, g2, g3 - 1, 3)
+        return a + c
+    elif f == 3:
+        a = sp(g1 - 1, g2, g3, 1)
+        b = sp(g1, g2 - 1, g3, 2)
+        return a + b
     else:
-        if f == 1:
-            b = sp(g1, g2 - 1, g3, 2)
-            c = sp(g1, g2, g3 - 1, 3)
-            return b + c
-        elif f == 2:
-            a = sp(g1 - 1, g2, g3, 1)
-            c = sp(g1, g2, g3 - 1, 3)
-            return a + c
-        elif f == 3:
-            a = sp(g1 - 1, g2, g3, 1)
-            b = sp(g1, g2 - 1, g3, 2)
-            return a + b
-        else:
-            a = sp(g1 - 1, g2, g3, 1)
-            b = sp(g1, g2 - 1, g3, 2)
-            c = sp(g1, g2, g3 - 1, 3)
-            return a + b + c
+        a = sp(g1 - 1, g2, g3, 1)
+        b = sp(g1, g2 - 1, g3, 2)
+        c = sp(g1, g2, g3 - 1, 3)
+        return a + b + c
 
 
-n, T = map(int, input().split())
+(n, T) = map(int, input().split())
 S = []
 cnt = 0
 M = 10 ** 9 + 7
@@ -64,7 +63,7 @@ for i in range(n):
     S.append(list(map(int, input().split())))
 for p in lol(n):
     d = 0
-    g1, g2, g3 = 0, 0, 0
+    (g1, g2, g3) = (0, 0, 0)
     for i in range(n):
         if p[i]:
             d += S[i][0]

@@ -1,12 +1,9 @@
 n = int(input())
 K = input()
 m = len(K)
-
 inf = 10 ** 100
-
 dp = [inf] * (m + 1)
 dp[0] = 0
-
 for i in range(m):
     if K[i] == '0':
         dp[i + 1] = min(dp[i + 1], dp[i] * n + int(K[i]))
@@ -17,5 +14,4 @@ for i in range(m):
             if val >= n:
                 break
             dp[j + 1] = min(dp[j + 1], dp[i] * n + val)
-
 print(dp[m])

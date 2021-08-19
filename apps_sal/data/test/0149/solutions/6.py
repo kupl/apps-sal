@@ -1,4 +1,4 @@
-x, y, l, r = list(map(int, input().split()))
+(x, y, l, r) = list(map(int, input().split()))
 a = []
 for i in range(70):
     for j in range(70):

@@ -1,9 +1,8 @@
 instr = input()
-firstone = instr.find("1")
+firstone = instr.find('1')
 if firstone == -1:
-    print("no")
+    print('no')
+elif instr[firstone + 1:].count('0') >= 6:
+    print('yes')
 else:
-    if instr[firstone + 1:].count("0") >= 6:
-        print("yes")
-    else:
-        print("no")
+    print('no')

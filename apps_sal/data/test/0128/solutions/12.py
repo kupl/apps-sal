@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 c = [i for i in range(1, n + 1)]
 ret = 0
 m = n

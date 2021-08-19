@@ -1,4 +1,4 @@
-n, m, k, l = map(int, input().split())
+(n, m, k, l) = map(int, input().split())
 need = k + l
 if need % m == 0 and need <= n:
     print(need // m)

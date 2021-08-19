@@ -1,5 +1,5 @@
 from functools import reduce
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 t.sort()
 sum = reduce(lambda x, y: x + y, t)

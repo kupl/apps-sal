@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -18,14 +17,13 @@ def make_divisors(n):
 
 
 def resolve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     A = sorted(list(map(int, input().split())))
-
     div = make_divisors(sum(A))
     res = 1
     for x in div:
         B = sorted([a % x for a in A])
-        M, P = [0], [0]
+        (M, P) = ([0], [0])
         for i in range(n):
             M.append(M[-1] + B[i])
             P.append(P[-1] + x - B[i])
@@ -34,7 +32,7 @@ def resolve():
         for i in range(n - 1):
             m = M[i]
             p = P[n - 1] - P[i]
-            if m <= k and p <= k and m % x == p % x:
+            if m <= k and p <= k and (m % x == p % x):
                 res = max(res, x)
     print(res)
 

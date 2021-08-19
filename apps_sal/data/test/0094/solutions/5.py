@@ -1,8 +1,7 @@
 import sys
-
 dpp = [[0] * 100 for i in range(100)]
 used = [[0] * 100 for i in range(100)]
-inf = (1 << 300)
+inf = 1 << 300
 
 
 def dp(pos, i):
@@ -19,7 +18,7 @@ def dp(pos, i):
     best = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999'
     ctr = pos
     while int(temp) < n:
-        if (temp[0] == '0' and len(temp) > 1):
+        if temp[0] == '0' and len(temp) > 1:
             if ctr == k - 1:
                 break
             ctr += 1
@@ -27,7 +26,7 @@ def dp(pos, i):
             continue
         tt = dp(ctr + 1, i + 1)
         gg = str(int(tt) + int(temp) * hh)
-        if (int(gg) < ans):
+        if int(gg) < ans:
             ans = int(gg)
             best = gg
         if ctr == k - 1:

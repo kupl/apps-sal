@@ -1,4 +1,4 @@
-n, k, m = [int(i) for i in input().split()]
+(n, k, m) = [int(i) for i in input().split()]
 p = [int(i) for i in input().split()]
 p.sort()
 ans = 0
@@ -16,6 +16,4 @@ for i in range(n + 1):
         l -= p[j] * c
         cr += c
     ans = max(ans, cr)
-
-
 print(ans)

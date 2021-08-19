@@ -1,8 +1,9 @@
-def miis(): return list(map(int, input().split()))
+def miis():
+    return list(map(int, input().split()))
 
 
-b, q, l, m = miis()
-*a, = miis()
+(b, q, l, m) = miis()
+(*a,) = miis()
 c = 0
 for _ in ' ' * 100:
     if abs(b) > l:

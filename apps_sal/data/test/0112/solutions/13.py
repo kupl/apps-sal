@@ -1,8 +1,7 @@
 cubecount = input()
 cubies = []
 for i in range(int(cubecount)):
-    cubies.append(input().split(" "))
-
+    cubies.append(input().split(' '))
 count = 0
 while count < 1000:
     p = False
@@ -35,5 +34,4 @@ while count < 1000:
         count += 1
     else:
         break
-
 print(count)

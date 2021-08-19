@@ -3,7 +3,6 @@ n = int(input())
 a = list(map(int, input().split()))
 su = sum(a)
 su = math.ceil(su / 2)
-
 c = 0
 for i in range(len(a)):
     c += a[i]

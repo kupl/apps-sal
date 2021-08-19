@@ -4,5 +4,5 @@ def gsd(a, b):
     return gsd(b, a % b)
 
 
-n, k = list(map(int, input().split()))
-print(n * (10 ** k // gsd(n, 10**k)))
+(n, k) = list(map(int, input().split()))
+print(n * (10 ** k // gsd(n, 10 ** k)))

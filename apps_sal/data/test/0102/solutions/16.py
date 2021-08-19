@@ -70,9 +70,8 @@ if s < 10:
     print(slovo1(s))
 elif s >= 10 and s < 20:
     print(slovo2(s))
+elif s % 10 == 0:
+    print(slovo3(s))
 else:
-    if s % 10 == 0:
-        print(slovo3(s))
-    else:
-        k = str(slovo3((s // 10) * 10)) + '-' + str(slovo1(s % 10))
-        print(k)
+    k = str(slovo3(s // 10 * 10)) + '-' + str(slovo1(s % 10))
+    print(k)

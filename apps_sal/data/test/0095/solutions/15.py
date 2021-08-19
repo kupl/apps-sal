@@ -1,7 +1,7 @@
 n = int(input())
 a = [int(i) for i in input().split()]
 st = 0
-ans = "YES"
+ans = 'YES'
 for i in range(len(a) - 1):
     if a[i] < a[i + 1]:
         if st != 0:

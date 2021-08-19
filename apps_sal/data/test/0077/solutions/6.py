@@ -1,6 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-dp = [[- int(1e9) for i in range(2)] for j in range(N + 1)]
+dp = [[-int(1000000000.0) for i in range(2)] for j in range(N + 1)]
 dp[0][0] = 0
 for i in range(N):
     for j in range(2):

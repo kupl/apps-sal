@@ -1,4 +1,4 @@
-x, y, l, r = list(map(int, input().split()))
+(x, y, l, r) = list(map(int, input().split()))
 a = []
 f = 1
 while f < r:

@@ -32,7 +32,7 @@ while i < n:
     s = ''
     s += a[i]
     i += 1
-    while s[0] not in 'aeiou' and i < n and a[i] not in 'aeiou':
+    while s[0] not in 'aeiou' and i < n and (a[i] not in 'aeiou'):
         s += a[i]
         i += 1
     s = f(s)

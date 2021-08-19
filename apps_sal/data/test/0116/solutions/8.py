@@ -1,5 +1,5 @@
 from sys import stdout
-a, b, c, d, e = [int(i) for i in input().split()]
+(a, b, c, d, e) = [int(i) for i in input().split()]
 t = max(a, c)
 t1 = min(b, d)
 if t <= t1:

@@ -1,4 +1,4 @@
-n1, n2 = list(map(int, input().split()))
+(n1, n2) = list(map(int, input().split()))
 n = list(map(int, input().split()))
 k = sorted(list(map(int, input().split())))[::-1]
 t = 0
@@ -7,6 +7,6 @@ for i in range(n1):
         n[i] = k[t]
         t += 1
 if sorted(n) == n:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

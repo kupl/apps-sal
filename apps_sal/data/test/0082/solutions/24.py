@@ -1,7 +1,6 @@
 3.5
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 mas = [int(x) for x in input().split()]
-
 p = 0
 s = sum(mas)
 while True:

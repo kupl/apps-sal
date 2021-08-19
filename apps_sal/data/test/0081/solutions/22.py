@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 
 
 def gcd(a, b):
@@ -30,7 +30,7 @@ def primeFactor(N):
             k += 1
             ret[i] = k
         if k > 0:
-            sq = int(n**(1 / 2))
+            sq = int(n ** (1 / 2))
         if i == 2:
             i = 3
         elif i == 3:
@@ -41,7 +41,6 @@ def primeFactor(N):
         else:
             i += 4
             d = 2
-
     if n > 1:
         ret[n] = 1
     return ret
@@ -55,14 +54,14 @@ def divisors(N):
         ret = []
         for i in range(pf[p] + 1):
             for r in ret_prev:
-                ret.append(r * (p ** i))
+                ret.append(r * p ** i)
     return sorted(ret)
 
 
 if A == B:
     print(0)
 else:
-    mi = 10**100
+    mi = 10 ** 100
     ans = -1
     D = divisors(abs(B - A))
     for d in D:

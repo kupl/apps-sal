@@ -1,4 +1,4 @@
-t, s, x = list(map(int, input().split()))
+(t, s, x) = list(map(int, input().split()))
 f = False
 if x - 1 > t and (x - 1 - t) % s == 0:
     f = True

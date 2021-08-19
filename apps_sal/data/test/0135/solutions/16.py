@@ -1,8 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 c = 1
 z = 1
 ok = 1
-
 for i in range(1, k + 1):
     c = z
     while z % i != 0:

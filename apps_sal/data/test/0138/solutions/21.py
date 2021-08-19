@@ -1,5 +1,5 @@
-n, a, b, c = map(int, input().split())
-m = 10**12
+(n, a, b, c) = map(int, input().split())
+m = 10 ** 12
 for i in range(30):
     for j in range(30):
         for k in range(30):

@@ -1,14 +1,16 @@
 def main():
-    def read(): return list(map(int, input().split()))
-    n, m, k = read()
-    x, s = read()
+
+    def read():
+        return list(map(int, input().split()))
+    (n, m, k) = read()
+    (x, s) = read()
     a = list(read())
     b = list(read())
     c = list(read())
     d = list(read())
     ans = n * x
     if min(b) <= s:
-        Min2 = min(a[i] for i in range(m) if b[i] <= s)
+        Min2 = min((a[i] for i in range(m) if b[i] <= s))
         ans = min(ans, n * Min2)
     b = sorted([(b[i], i) for i in range(m)])
     j = 0

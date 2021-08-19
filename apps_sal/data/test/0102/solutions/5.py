@@ -1,18 +1,6 @@
-l = [
-    'zero', 'one', 'two', 'three', 'four', 'five', 'six',
-    'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
-    'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen',
-    'eighteen', 'nineteen', 'twenty'
-]
-
-p = [
-    'A', 'B',
-    'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy',
-    'eighty', 'ninety'
-]
-
+l = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
+p = ['A', 'B', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 n = int(input())
-
 if n < len(l):
     print(l[n])
 elif n % 10:

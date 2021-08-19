@@ -1,4 +1,4 @@
-x, y, l, r = list(map(int, input().split()))
+(x, y, l, r) = list(map(int, input().split()))
 xs = [x ** i for i in range(61) if x ** i <= 10 ** 18]
 ys = [y ** i for i in range(61) if y ** i <= 10 ** 18]
 ps = set()

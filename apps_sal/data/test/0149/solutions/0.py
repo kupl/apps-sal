@@ -1,14 +1,14 @@
-x, y, l, r = list(map(int, input().split()))
+(x, y, l, r) = list(map(int, input().split()))
 b = set()
 a = 0
 b.add(l - 1)
 b.add(r + 1)
 for i in range(100):
-    xx = x**i
+    xx = x ** i
     if xx > r:
         break
     for j in range(100):
-        rr = xx + (y**j)
+        rr = xx + y ** j
         if rr > r:
             break
         if rr >= l:

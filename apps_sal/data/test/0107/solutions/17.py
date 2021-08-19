@@ -5,11 +5,9 @@ for i in s:
     if f:
         if i == '0':
             count += 1
-    else:
-        if i == '1':
-            f = True
-
+    elif i == '1':
+        f = True
 if count >= 6:
-    print("yes")
+    print('yes')
 else:
-    print("no")
+    print('no')

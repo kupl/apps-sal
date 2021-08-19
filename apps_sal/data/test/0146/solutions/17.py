@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
-e, s = 0, 0
+(e, s) = (0, 0)
 for i in l:
     if i == 1:
         e += 1
@@ -8,7 +8,7 @@ for i in l:
         s += 1
 ans = 0
 for i in range(k):
-    e1, s1 = e, s
+    (e1, s1) = (e, s)
     for j in range(i, n, k):
         if l[j] == 1:
             e1 -= 1

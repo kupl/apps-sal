@@ -1,9 +1,7 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 s = sum(map(int, input().split()))
 left = -1
 right = 10 ** 100
-
 while right - left > 1:
     mid = (left + right) // 2
     whole = s + k * mid
@@ -11,5 +9,4 @@ while right - left > 1:
         left = mid
     else:
         right = mid
-
 print(right)

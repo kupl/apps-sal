@@ -1,4 +1,4 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 n1 = n
 cnt5 = cnt2 = 0
 for i in range(k):

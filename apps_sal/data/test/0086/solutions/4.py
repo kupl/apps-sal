@@ -1,9 +1,9 @@
-xp, yp, xv, yv = list(map(int, input().split()))
+(xp, yp, xv, yv) = list(map(int, input().split()))
 if xv >= xp and yv >= yp:
-    print("Polycarp")
+    print('Polycarp')
 elif yv >= yp + xp:
-    print("Polycarp")
+    print('Polycarp')
 elif xv >= xp + yp:
-    print("Polycarp")
+    print('Polycarp')
 else:
-    print("Vasiliy")
+    print('Vasiliy')

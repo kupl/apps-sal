@@ -1,4 +1,4 @@
-gl = ["a", "e", "i", "o", "u"]
+gl = ['a', 'e', 'i', 'o', 'u']
 
 
 def mist(a, b, c):
@@ -21,12 +21,12 @@ else:
         now = s[i]
         if now in gl:
             print(now, end='')
-            last1, last2 = last2, now
+            (last1, last2) = (last2, now)
             continue
         if mist(last1, last2, now):
-            print(" " + now, end='')
-            last1 = "a"
+            print(' ' + now, end='')
+            last1 = 'a'
             last2 = now
         else:
             print(now, end='')
-            last1, last2 = last2, now
+            (last1, last2) = (last2, now)

@@ -1,4 +1,4 @@
-if(len(set(list(input()))) % 2 == 1):
-    print("IGNORE HIM!")
+if len(set(list(input()))) % 2 == 1:
+    print('IGNORE HIM!')
 else:
-    print("CHAT WITH HER!")
+    print('CHAT WITH HER!')

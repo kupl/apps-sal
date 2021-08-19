@@ -1,4 +1,4 @@
-a, b, x, y = map(int, input().split())
+(a, b, x, y) = map(int, input().split())
 if a >= x:
     if b >= y:
         print('Vasiliy')
@@ -9,13 +9,12 @@ if a >= x:
             print('Polycarp')
         else:
             print('Vasiliy')
+elif b <= y:
+    print('Polycarp')
 else:
-    if b <= y:
+    z = x - a
+    t = max(y - z, 0)
+    if b - z <= t:
         print('Polycarp')
     else:
-        z = x - a
-        t = max(y - z, 0)
-        if b - z <= t:
-            print('Polycarp')
-        else:
-            print('Vasiliy')
+        print('Vasiliy')

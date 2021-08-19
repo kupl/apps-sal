@@ -1,7 +1,7 @@
 arr = [list() for i in range(4)]
 arrp = []
 for i in range(4):
-    l, s, r, p = [int(i) for i in input().split()]
+    (l, s, r, p) = [int(i) for i in input().split()]
     arr[i].extend([l, s, r])
     arr[[3, i - 1][i > 0]].append(l)
     arr[[0, i + 1][i < 3]].append(r)

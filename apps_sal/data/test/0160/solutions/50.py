@@ -19,8 +19,7 @@ def divisors(n):
 
 
 input = sys.stdin.readline
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = np.array(list(map(int, input().split())))
 S = sum(A)
 D = divisors(S)
@@ -32,5 +31,4 @@ for k in D:
     cnt = sum(B) // k
     if k * cnt - sum(B[-cnt:]) <= K:
         res = max2(res, k)
-
 print(res)

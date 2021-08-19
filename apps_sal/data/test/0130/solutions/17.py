@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 L = [input() for _ in range(n)]
 C = [[0 for _ in range(m)] for _ in range(n)]
-x1, y1 = 500, 500
-x2, y2 = -1, -1
+(x1, y1) = (500, 500)
+(x2, y2) = (-1, -1)
 for i in range(n):
     sa = 0
     for j in range(m):
@@ -22,7 +22,7 @@ else:
     ans = 1000000
     for i in range(n):
         for j in range(m):
-            if i + a < n and j + a < m and i <= x1 and x2 <= i + a and j <= y1 and y2 <= j + a:
+            if i + a < n and j + a < m and (i <= x1) and (x2 <= i + a) and (j <= y1) and (y2 <= j + a):
                 s = C[i + a][j + a]
                 if i > 0:
                     s -= C[i - 1][j]

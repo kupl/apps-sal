@@ -1,11 +1,8 @@
 n = int(input())
-
 cubes = []
 for i in range(n):
     cubes.append(list(map(int, input().split())))
-
 numbers = set()
-
 if n == 3:
     for i in range(6):
         numbers.add(cubes[0][i])
@@ -35,11 +32,9 @@ if n == 2:
 if n == 1:
     for i in range(6):
         numbers.add(cubes[0][i])
-
 ans = 0
 for i in range(1, 999):
     if i not in numbers:
         break
     ans = i
-
 print(ans)

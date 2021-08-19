@@ -7,9 +7,9 @@ def mp():
 
 
 def main():
-    n, m, k, l = mp()
+    (n, m, k, l) = mp()
     ost = n - k
-    need = (l + k)
+    need = l + k
     if ost < l or need > n:
         print(-1)
         return
@@ -22,12 +22,10 @@ def main():
 
 deb = 0
 if deb:
-    file = open("input.txt", "r")
+    file = open('input.txt', 'r')
     input = file.readline
 else:
     input = sys.stdin.readline
-
 main()
-
 if deb:
     file.close()

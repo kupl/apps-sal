@@ -11,6 +11,6 @@ def go():
 
 
 if go():
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

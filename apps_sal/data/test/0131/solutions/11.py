@@ -4,6 +4,6 @@ b = list(map(int, input().split()))
 s1 = sum(a)
 s2 = sum(b)
 if s2 > s1:
-    print("No")
+    print('No')
 else:
     print('Yes')

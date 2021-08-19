@@ -1,6 +1,5 @@
 base = int(input())
 num = input()
-
 a = 0
 n = ''
 l = []
@@ -16,7 +15,6 @@ while num:
         nn = nn[1:]
     l.append(int(nn))
     num = num[:-sk + j]
-
 p = 1
 for n in l:
     a += p * n

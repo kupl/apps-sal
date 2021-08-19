@@ -1,7 +1,7 @@
 from math import inf
 t = int(input())
 for q in range(t):
-    n, k = [int(i) for i in input().split()]
+    (n, k) = [int(i) for i in input().split()]
     L = [int(i) for i in input().split()]
     F = [0] * 60
     for i in L:
@@ -17,6 +17,6 @@ for q in range(t):
             flag = False
             break
     if flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

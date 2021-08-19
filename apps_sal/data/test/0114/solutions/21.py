@@ -5,7 +5,7 @@ from itertools import permutations
 import sys
 import bisect
 import string
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def SI():
@@ -25,10 +25,9 @@ def LI():
 
 
 YN = ['Yes', 'No']
-mo = 10**9 + 7
-
+mo = 10 ** 9 + 7
 a = []
-n, m = MI()
+(n, m) = MI()
 for i in range(n):
     h = LI()
     a.append(h)
@@ -42,7 +41,6 @@ for r in range(n - 1):
             b[r][c + 1] = 1
             b[r + 1][c] = 1
             b[r + 1][c + 1] = 1
-
 if a == b:
     print(len(ans))
     for j in ans:

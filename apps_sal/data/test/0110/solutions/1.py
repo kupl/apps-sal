@@ -9,7 +9,7 @@ for i in range(n):
         m += 1
 if m % 2 == 0:
     for i in range(n):
-        print(l[i], end=" ")
+        print(l[i], end=' ')
 else:
     maksi = -1000000000000
     for i in range(n):
@@ -18,4 +18,4 @@ else:
             mk = i
     l[mk] = -l[mk] - 1
     for i in range(n):
-        print(l[i], end=" ")
+        print(l[i], end=' ')

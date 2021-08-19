@@ -1,8 +1,8 @@
-n, a, b, c = (int(i) for i in input().split())
+(n, a, b, c) = (int(i) for i in input().split())
 if n % 4 == 0:
     print(0)
 else:
-    ans = 10**11
+    ans = 10 ** 11
     for i in range(5):
         for j in range(5):
             for k in range(5):

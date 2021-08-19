@@ -8,11 +8,11 @@ def make_divisor_list(n):
 
 
 def calc_min_ops(r, d):
-    i, j = 0, len(r)
+    (i, j) = (0, len(r))
     while i < j and r[i] == 0:
         i += 1
     i -= 1
-    a, b = 0, 0
+    (a, b) = (0, 0)
     while j - i != 1:
         if a <= b:
             i += 1
@@ -23,13 +23,11 @@ def calc_min_ops(r, d):
     return a
 
 
-N, K, *A = list(map(int, open(0).read().split()))
-
+(N, K, *A) = list(map(int, open(0).read().split()))
 c = sum(A)
 divisors = make_divisor_list(c)
 divisors.sort(reverse=True)
 r = [None] * N
-
 for d in divisors:
     for i in range(N):
         r[i] = A[i] % d

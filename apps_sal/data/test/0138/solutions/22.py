@@ -1,7 +1,5 @@
 3
-
-n, a, b, c = [int(x) for x in input().strip().split()]
-
+(n, a, b, c) = [int(x) for x in input().strip().split()]
 if n % 4 == 0:
     print(0)
 elif n % 4 == 1:

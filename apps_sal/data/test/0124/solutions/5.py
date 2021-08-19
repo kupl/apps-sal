@@ -1,6 +1,5 @@
-x, y, z = list(map(int, input().split()))
-a, b, c = list(map(int, input().split()))
-
+(x, y, z) = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 if x > a:
     print('NO')
 else:

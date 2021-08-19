@@ -30,6 +30,6 @@ def pro(x):
 
 f = 1
 for i in range(2, q):
-    z = (d // i) * pro(d)
-    f += (-a[i]) * z * pro(1 - z)
+    z = d // i * pro(d)
+    f += -a[i] * z * pro(1 - z)
 print(f % (10 ** 9 + 7))

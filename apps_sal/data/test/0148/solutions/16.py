@@ -1,5 +1,5 @@
 def main():
-    n, a, x, b, y = map(int, input().split())
+    (n, a, x, b, y) = map(int, input().split())
     a -= 1
     x -= 1
     b -= 1
@@ -12,9 +12,9 @@ def main():
         a += 1
         b -= 1
         if a % n == b % n:
-            print("YES")
+            print('YES')
             return 0
-    print("NO")
+    print('NO')
     return 0
 
 

@@ -2,15 +2,14 @@ def main():
     a = input()
     b = input()
     x = max(len(a), len(b))
-    a = "0" * (x - len(a)) + a
-    b = "0" * (x - len(b)) + b
-
+    a = '0' * (x - len(a)) + a
+    b = '0' * (x - len(b)) + b
     if a > b:
-        print(">")
+        print('>')
     elif a < b:
-        print("<")
+        print('<')
     else:
-        print("=")
+        print('=')
 
 
 main()

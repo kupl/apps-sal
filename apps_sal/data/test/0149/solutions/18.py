@@ -1,4 +1,4 @@
-x, y, l, r = list(map(int, input().split()))
+(x, y, l, r) = list(map(int, input().split()))
 degree_x = []
 degree_y = []
 i = 0

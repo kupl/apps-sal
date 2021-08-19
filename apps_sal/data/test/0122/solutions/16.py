@@ -6,22 +6,22 @@ def divider(a):
         t -= 2 * a[i]
         d.append(-t)
         if t == 0:
-            return ("YES")
+            return 'YES'
     for i in range(len(a)):
         s = 2 * a[i]
         j = binary(d, s)
         if j > i and j != -1:
-            return ("YES")
+            return 'YES'
         j = binary(d, -s)
         if i >= j and j != -1:
-            return ("YES")
-    return ("NO")
+            return 'YES'
+    return 'NO'
 
 
 def binary(a, value):
     hi = len(a)
     lo = -1
-    while (lo + 1 < hi):
+    while lo + 1 < hi:
         mi = (lo + hi) // 2
         if a[mi] == value:
             return mi

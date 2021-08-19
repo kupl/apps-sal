@@ -1,4 +1,4 @@
-b, q, l, m = map(int, input().split(' '))
+(b, q, l, m) = map(int, input().split(' '))
 a = list(map(int, input().split(' ')))
 if abs(b) > l:
     c = 0
@@ -6,20 +6,20 @@ elif b == 0:
     if 0 in a:
         c = 0
     else:
-        c = "inf"
+        c = 'inf'
 elif q == 1:
     if b in a:
         c = 0
     else:
-        c = "inf"
+        c = 'inf'
 elif q == -1:
     if b in a and -b in a:
         c = 0
     else:
-        c = "inf"
+        c = 'inf'
 elif q == 0:
     if 0 not in a:
-        c = "inf"
+        c = 'inf'
     elif b in a:
         c = 0
     else:

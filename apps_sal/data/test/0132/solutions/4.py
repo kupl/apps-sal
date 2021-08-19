@@ -1,4 +1,3 @@
-
 def main():
     n = int(input())
     a = list(map(int, input().split()))
@@ -8,7 +7,6 @@ def main():
         for r in range(l, n):
             s1 = sum(a[l:r])
             res = min(res, abs(s1 - (s - s1)))
-
     print(res)
 
 

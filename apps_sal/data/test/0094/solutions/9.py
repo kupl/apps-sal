@@ -8,9 +8,7 @@ def solve(n, k):
             for shift in range(1, len(k) - idx + 1):
                 ok = int(k[idx:idx + shift]) < n_num
                 if ok:
-                    dp[idx] = min(
-                        dp[idx], 1 + dp[idx + shift]
-                    )
+                    dp[idx] = min(dp[idx], 1 + dp[idx + shift])
                 else:
                     break
         else:
@@ -27,7 +25,7 @@ def solve(n, k):
             else:
                 shift += 1
         idx += shift
-    tot_res, n_pow = 0, 1
+    (tot_res, n_pow) = (0, 1)
     for el in reversed(digits):
         tot_res += n_pow * el
         n_pow *= n_num

@@ -1,9 +1,6 @@
 n = int(input())
-
 s = input()
-
 maxi = -1
-
 for x in range(901):
     f = False
     acc = 0
@@ -21,8 +18,7 @@ for x in range(901):
         continue
     elif acc == 0 and cnt >= 2:
         maxi = x
-
 if maxi == -1:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

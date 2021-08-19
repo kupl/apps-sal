@@ -1,8 +1,8 @@
-n, f = list(map(int, input().split(' ')))
+(n, f) = list(map(int, input().split(' ')))
 res = 0
 wow = []
 for a0 in range(n):
-    k, l = list(map(int, input().split(' ')))
+    (k, l) = list(map(int, input().split(' ')))
     res += min(k, l)
     wow.append(min(2 * k, l) - min(k, l))
 wow = sorted(wow)

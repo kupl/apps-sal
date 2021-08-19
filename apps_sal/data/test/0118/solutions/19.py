@@ -1,13 +1,13 @@
 def main():
-    t, s, x = list(map(int, input().strip().split()))
+    (t, s, x) = list(map(int, input().strip().split()))
     if x < t:
-        print("NO")
+        print('NO')
     elif x == t + 1 and s != 1:
-        print("NO")
+        print('NO')
     elif (x - t) % s == 0 or (x - t - 1) % s == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

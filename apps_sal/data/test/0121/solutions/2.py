@@ -4,7 +4,7 @@ for i in range(4):
 f = False
 for i in range(4):
     for j in range(2):
-        f |= a[i][j: j + 3].count('.') == 1 and a[i][j: j + 3].count('o') == 0
+        f |= a[i][j:j + 3].count('.') == 1 and a[i][j:j + 3].count('o') == 0
 for j in range(4):
     for i in range(2):
         f |= ([a[i][j]] + [a[i + 1][j]] + [a[i + 2][j]]).count('.') == 1 and ([a[i][j]] + [a[i + 1][j]] + [a[i + 2][j]]).count('o') == 0

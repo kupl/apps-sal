@@ -3,7 +3,7 @@ def findO(s):
     i = 0
     while i < len(s) - 2:
         newSet = {s[i], s[i + 1], s[i + 2]}
-        if len(newSet & glas) == 0 and not (s[i] == s[i + 1] == s[i + 2]):
+        if len(newSet & glas) == 0 and (not s[i] == s[i + 1] == s[i + 2]):
             s1 = s[:i + 2]
             s2 = s[i + 2:]
             s = s1 + ' ' + s2

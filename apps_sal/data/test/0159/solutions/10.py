@@ -3,7 +3,7 @@ input()
 
 def nod(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -17,7 +17,7 @@ def main():
             out.append(1)
             k += 1
     out.append(a[len(a) - 1])
-    str_out = " ".join(map(str, out))
+    str_out = ' '.join(map(str, out))
     print(k)
     print(str_out)
 

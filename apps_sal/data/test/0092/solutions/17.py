@@ -15,7 +15,7 @@ def d(x):
     return ans
 
 
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 out = 0
 q = {}
 for i in range(1, a + 1):

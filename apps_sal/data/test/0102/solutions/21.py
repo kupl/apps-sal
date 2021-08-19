@@ -1,7 +1,7 @@
 a1 = ['oops', 'oops', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 a2 = ['oops', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 n = int(input())
-d1, d2 = n // 10, n % 10
+(d1, d2) = (n // 10, n % 10)
 if n == 0:
     print('zero')
 elif d1 == 0:
@@ -27,8 +27,7 @@ elif d1 == 1:
         print('eighteen')
     elif n == 19:
         print('nineteen')
+elif d2 == 0:
+    print(a1[d1])
 else:
-    if d2 == 0:
-        print(a1[d1])
-    else:
-        print(a1[d1], a2[d2], sep='-')
+    print(a1[d1], a2[d2], sep='-')

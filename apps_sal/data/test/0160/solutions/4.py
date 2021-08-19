@@ -11,7 +11,7 @@ def divisor(n):
     return res
 
 
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 S = sum(A)
 ans = 1

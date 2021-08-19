@@ -7,7 +7,7 @@ def gcd(a, b):
     return gcd(b, a % b)
 
 
-l, r, x, y = map(int, input().split())
+(l, r, x, y) = map(int, input().split())
 if y % x != 0:
     print(0)
 else:
@@ -18,11 +18,10 @@ else:
         if p % t == 0:
             a = x * t
             b = x * y / a
-            if l <= a <= r and l <= b <= r and gcd(a, b) == x:
+            if l <= a <= r and l <= b <= r and (gcd(a, b) == x):
                 if b != a:
                     res += 2
                 else:
                     res += 1
-
         t += 1
     print(res)

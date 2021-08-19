@@ -9,19 +9,19 @@ while i < n and a[i] == '0':
 while j < m and b[j] == '0':
     j += 1
 if n - i > m - j:
-    print(">")
+    print('>')
 elif n - i < m - j:
-    print("<")
+    print('<')
 else:
     while i < n:
         if a[i] > b[j]:
-            print(">")
+            print('>')
             break
         elif a[i] < b[j]:
-            print("<")
+            print('<')
             break
         else:
             i += 1
             j += 1
     else:
-        print("=")
+        print('=')

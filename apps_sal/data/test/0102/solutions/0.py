@@ -56,7 +56,6 @@ else:
         res = 'eighty'
     elif n // 10 == 9:
         res = 'ninety'
-
     if n % 10 == 1:
         res += '-one'
     elif n % 10 == 2:
@@ -75,5 +74,4 @@ else:
         res += '-eight'
     elif n % 10 == 9:
         res += '-nine'
-
     print(res)

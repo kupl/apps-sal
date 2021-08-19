@@ -1,4 +1,4 @@
-n, m, k, l = list(map(int, input().split()))
+(n, m, k, l) = list(map(int, input().split()))
 if m > n:
     print(-1)
 elif l + k > n:

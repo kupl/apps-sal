@@ -1,6 +1,12 @@
-l, r, x, y = map(int, input().split())
-def f(ka, kb): return int(gcd(ka * x, kb * x) == x and l <= ka * x <= r and l <= kb * x <= r)
-def gcd(a, b): return a if b == 0 else gcd(b, a % b)
+(l, r, x, y) = map(int, input().split())
+
+
+def f(ka, kb):
+    return int(gcd(ka * x, kb * x) == x and l <= ka * x <= r and (l <= kb * x <= r))
+
+
+def gcd(a, b):
+    return a if b == 0 else gcd(b, a % b)
 
 
 cnt = 0

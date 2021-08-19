@@ -1,7 +1,7 @@
 N = 1000001
 ans = [0 for x in range(N)]
 cur = 1
-while (cur < N):
+while cur < N:
     ans[cur] = 1
     cur += 1
     ans[cur] = 1

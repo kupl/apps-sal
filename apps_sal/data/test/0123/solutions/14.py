@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 b.sort(reverse=True)
@@ -15,6 +15,6 @@ for i in range(len(a) - 1):
         flag = 1
         break
 if flag == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

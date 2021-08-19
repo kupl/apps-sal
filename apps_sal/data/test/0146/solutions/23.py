@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 ANS = 0
 for i in range(k):
     ex = 0
@@ -12,8 +11,6 @@ for i in range(k):
             ex += 1
         else:
             so += 1
-
     if ANS < abs(ex - so):
         ANS = abs(ex - so)
-
 print(ANS)

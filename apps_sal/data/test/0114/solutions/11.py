@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = [[*map(int, input().split())] for _ in range(n)]
 b = [[0] * m for _ in range(n)]
 res = []

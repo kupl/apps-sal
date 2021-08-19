@@ -2,7 +2,7 @@ orph = ['a', 'e', 'i', 'o', 'u']
 string = input()
 ctr = 0
 out = ''
-for i, c in enumerate(string):
+for (i, c) in enumerate(string):
     if c in orph:
         ctr = 0
     else:

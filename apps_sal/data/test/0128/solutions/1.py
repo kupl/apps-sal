@@ -1,6 +1,6 @@
 def main():
-    n, k = map(int, input().split())
-    if k > (n // 2):
+    (n, k) = map(int, input().split())
+    if k > n // 2:
         k = n // 2
     ans = 0
     for i in range(k):

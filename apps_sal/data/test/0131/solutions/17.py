@@ -7,6 +7,6 @@ for i in range(n):
     s1 += x[i]
     s2 += y[i]
 if s2 > s1:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

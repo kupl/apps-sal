@@ -12,10 +12,9 @@ if n % 2 == 0:
         print(1)
     else:
         print(2)
+elif test(n) == True:
+    print(1)
+elif test(n - 2) == True:
+    print(2)
 else:
-    if test(n) == True:
-        print(1)
-    elif test(n - 2) == True:
-        print(2)
-    else:
-        print(3)
+    print(3)

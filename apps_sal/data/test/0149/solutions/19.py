@@ -1,12 +1,12 @@
-x, y, l, r = list(map(int, input().split()))
+(x, y, l, r) = list(map(int, input().split()))
 A = [l - 1]
 for i in range(100):
-    if x**i > r:
+    if x ** i > r:
         break
     for j in range(100):
-        if y**j > r:
+        if y ** j > r:
             break
-        t = x**i + y**j
+        t = x ** i + y ** j
         if t >= l and t <= r:
             A.append(t)
 A.append(r + 1)

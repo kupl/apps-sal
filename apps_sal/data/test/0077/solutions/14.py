@@ -22,12 +22,10 @@ for i in range(n):
             e.append(a[i])
 if sum1 % 2 == 1 and sum1 > 0:
     print(sum1)
-else:
-    if len(e) > 0:
-        if len(c) > 0:
-            print(max(sum1 + e[-1], sum1 - c[0]))
-        else:
-            print(sum1 + e[-1])
+elif len(e) > 0:
+    if len(c) > 0:
+        print(max(sum1 + e[-1], sum1 - c[0]))
     else:
-        if len(c) > 0:
-            print(sum1 - c[0])
+        print(sum1 + e[-1])
+elif len(c) > 0:
+    print(sum1 - c[0])

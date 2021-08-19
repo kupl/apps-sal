@@ -5,7 +5,6 @@ def find(x, d=[]):
     if x == 0 and d != []:
         return True
     l = x % 10
-
     i = -1
     a = False
     for lis in s:

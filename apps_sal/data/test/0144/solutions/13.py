@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-sm = (sum(map(int, list(s))))
+sm = sum(map(int, list(s)))
 dv = 2
 ans = []
 while dv <= n:

@@ -11,7 +11,7 @@ for i in range(len(a)):
     st = set()
     cnt = 0
     for j in range(ord('a'), ord('z') + 1):
-        if (chr(j) in gl) or cn[j] == 0:
+        if chr(j) in gl or cn[j] == 0:
             continue
         cnt += cn[j]
         st.add(j)

@@ -1,4 +1,4 @@
-x, y, l, r = map(int, input().split())
+(x, y, l, r) = map(int, input().split())
 v = [l - 1, r + 1]
 for a in range(0, 60):
     if x ** a > r:

@@ -1,11 +1,7 @@
 word = input()
-
 l = ['a', 'e', 'i', 'o', 'u']
-
 curr_s = []
-
 i = 0
-
 for j in range(len(word)):
     if word[j] not in l:
         if curr_s.count(word[j]) > 1:

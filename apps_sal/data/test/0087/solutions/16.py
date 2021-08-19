@@ -1,4 +1,4 @@
-m, d = list(map(int, input().split()))
+(m, d) = list(map(int, input().split()))
 c = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 num = d - 1 + c[m]
 col = num // 7

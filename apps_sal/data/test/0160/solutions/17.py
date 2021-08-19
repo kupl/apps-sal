@@ -1,11 +1,11 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 m = sum(a)
 
 
 def divisor(n):
     ass = []
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             ass.append(i)
             ass.append(n // i)
@@ -14,7 +14,6 @@ def divisor(n):
 
 f = divisor(m)
 f.sort(reverse=True)
-
 for p in f:
     b = [x % p for x in a]
     b.sort()

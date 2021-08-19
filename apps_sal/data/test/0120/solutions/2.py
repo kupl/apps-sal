@@ -1,7 +1,7 @@
 def solve():
     n = int(input())
     if n % 4 != 0:
-        print("===")
+        print('===')
         return
     want = n // 4
     s = list(input())
@@ -18,7 +18,7 @@ def solve():
                     break
     for key in d:
         if d[key] != want:
-            print("===")
+            print('===')
             return
     print(''.join(s))
 

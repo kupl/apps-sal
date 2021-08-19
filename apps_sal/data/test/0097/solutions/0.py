@@ -2,9 +2,9 @@ def INV(a, m):
     m0 = m
     y = 0
     x = 1
-    if (m == 1):
+    if m == 1:
         return 0
-    while (a > 1):
+    while a > 1:
         q = a // m
         t = m
         m = a % m
@@ -12,7 +12,7 @@ def INV(a, m):
         t = y
         y = x - q * y
         x = t
-    if (x < 0):
+    if x < 0:
         x = x + m0
     return x
 
@@ -24,10 +24,10 @@ def GCD(a, b):
 
 
 def solve():
-    n, m, x, y, vx, vy = list(map(int, input().split()))
+    (n, m, x, y, vx, vy) = list(map(int, input().split()))
     if vx == 0:
         if x != 0 and x != n:
-            print("-1")
+            print('-1')
             return 0
         ans = [0, 0]
         ans[0] = x
@@ -39,7 +39,7 @@ def solve():
         return 0
     if vy == 0:
         if y != 0 and y != m:
-            print("-1")
+            print('-1')
             return 0
         ans = [0, 0]
         ans[1] = y
@@ -63,7 +63,7 @@ def solve():
     a1 = -1 * vx * x % m1
     a2 = -1 * vy * y % m2
     if a1 % g != a2 % g:
-        print("-1")
+        print('-1')
         return 0
     if GCD(m1 // g, m2) == 1:
         m1 = m1 // g
@@ -72,8 +72,8 @@ def solve():
     m1_bar = INV(m2, m1)
     m2_bar = INV(m1, m2)
     k = (a1 * m1_bar * m2 + a2 * m2_bar * m1) % (m1 * m2)
-    rowtouch = ((k + m - 1) // m) % 2
-    coltouch = ((k + n - 1) // n) % 2
+    rowtouch = (k + m - 1) // m % 2
+    coltouch = (k + n - 1) // n % 2
     ans = [0, 0]
     if vx == 1:
         ans[0] = 0

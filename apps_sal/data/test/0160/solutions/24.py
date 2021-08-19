@@ -29,8 +29,7 @@ def binary_search_int(ok, ng, test):
 
 
 input = sys.stdin.readline
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = np.array(list(map(int, input().split())))
 S = sum(A)
 D = divisors(S)

@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = [list(input()) for _ in range(n)]
-u, d, l, r = 11**11, 0, 11**11, 0
+(u, d, l, r) = (11 ** 11, 0, 11 ** 11, 0)
 for i in range(n):
     for j in range(m):
         if s[i][j] == 'B':
@@ -14,7 +14,7 @@ for i in range(n):
                 r = j
 if r - l >= n or d - u >= m:
     print(-1)
-elif u == 11**11 and d == 0 and l == 11**11 and r == 0:
+elif u == 11 ** 11 and d == 0 and (l == 11 ** 11) and (r == 0):
     print(1)
 else:
     ans = 0
@@ -22,4 +22,4 @@ else:
         for j in range(l, r + 1):
             if s[i][j] == 'W':
                 ans += 1
-    print(ans + ((max(r - l + 1, d - u + 1) - min(r - l + 1, d - u + 1)) * (max(r - l + 1, d - u + 1))))
+    print(ans + (max(r - l + 1, d - u + 1) - min(r - l + 1, d - u + 1)) * max(r - l + 1, d - u + 1))

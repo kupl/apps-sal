@@ -1,5 +1,5 @@
-n, m, k = list(map(int, input().split()))
-x, s = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
+(x, s) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = list(map(int, input().split()))

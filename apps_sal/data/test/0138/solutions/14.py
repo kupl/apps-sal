@@ -1,4 +1,4 @@
-n, a, b, c = map(int, input().split())
+(n, a, b, c) = map(int, input().split())
 if not n % 4:
     print(0)
 elif n % 4 == 3:

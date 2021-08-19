@@ -8,8 +8,8 @@ def input():
 
 
 def main():
-    MOD = 10**9 + 7
-    n, m = list(map(int, input().split()))
+    MOD = 10 ** 9 + 7
+    (n, m) = list(map(int, input().split()))
     t = pow(2, m, MOD) - 1
     print(pow(t, n, MOD))
 

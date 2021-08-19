@@ -1,8 +1,6 @@
 s = input()
 newst = []
-
 curr = 'a'
-
 for k in s:
     if curr >= k and curr <= 'z':
         newst.append(curr)

@@ -2,7 +2,6 @@ n = int(input())
 cs = []
 for i in range(n):
     cs.append([int(x) for x in input().split()])
-
 ans = 0
 
 
@@ -24,5 +23,4 @@ for i in range(1, 1000):
         ans = i
     else:
         break
-
 print(ans)

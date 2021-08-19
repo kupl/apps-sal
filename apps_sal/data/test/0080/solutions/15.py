@@ -13,7 +13,7 @@ def f(k):
 
 
 def main():
-    l, r, x, y = list(map(int, input().split()))
+    (l, r, x, y) = list(map(int, input().split()))
     if y % x != 0:
         return 0
     if y == x:
@@ -36,7 +36,7 @@ def main():
         c1 = 1
         c2 = 1
         for j in range(len(a)):
-            if (2 ** j) & i:
+            if 2 ** j & i:
                 c1 *= a[j]
             else:
                 c2 *= a[j]

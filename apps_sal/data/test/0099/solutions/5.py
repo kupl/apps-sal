@@ -1,6 +1,5 @@
-b, q, l, m = list(map(int, input().split()))
+(b, q, l, m) = list(map(int, input().split()))
 A = set(map(int, input().split()))
-
 ans = 0
 for _ in range(100):
     if abs(b) > l:
@@ -9,6 +8,6 @@ for _ in range(100):
         ans += 1
     b *= q
 if ans > 40:
-    print("inf")
+    print('inf')
 else:
     print(ans)

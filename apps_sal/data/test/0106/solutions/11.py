@@ -1,5 +1,5 @@
-n, m, k = list(map(int, input().split()))
-a, b = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 p = []
 for i in range(1, n + 1):
     p.append(i * m * k)
@@ -19,7 +19,7 @@ for i in range(n):
             p2 = i + 1
             it2 = j + 1
             fl2 = False
-        if not fl1 and not fl2:
+        if not fl1 and (not fl2):
             break
 if p1 != p2:
     t1 = min(it1 - 1 + 10, 5 * (it1 - 1))
@@ -40,7 +40,7 @@ if p1 != p2:
             if s1 > n:
                 s1 //= n
     t21 *= 15
-    t2 = min(t21, (abs(p2 - p1)) * 15)
+    t2 = min(t21, abs(p2 - p1) * 15)
     t3 = min(it2 - 1 + 10, 5 * (it2 - 1))
     t = t1 + t2 + t3
     print(t)

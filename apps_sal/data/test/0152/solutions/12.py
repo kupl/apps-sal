@@ -1,6 +1,6 @@
 import math
-n, m, k = list(map(int, input().split()))
-x, s = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
+(x, s) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = list(map(int, input().split()))
@@ -14,7 +14,7 @@ for it in range(m + 1):
     mana = s - b[it]
     if mana < 0:
         continue
-    lo, hi = 0, k
+    (lo, hi) = (0, k)
     while lo != hi:
         mid = math.ceil((lo + hi) / 2)
         if d[mid] <= mana:

@@ -1,9 +1,9 @@
-n, f = list(map(int, input().split()))
+(n, f) = list(map(int, input().split()))
 a = [0] * n
 b = [0] * n
 z = [0] * n
 for i in range(n):
-    a1, b1 = list(map(int, input().split()))
+    (a1, b1) = list(map(int, input().split()))
     a[i] = a1
     b[i] = b1
 for i in range(n):

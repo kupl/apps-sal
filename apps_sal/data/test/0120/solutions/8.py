@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 if n % 4 != 0:
-    print("===")
+    print('===')
 else:
     sdict = dict()
     for i in 'ACGT?':
@@ -11,11 +11,11 @@ else:
     exitflag = False
     for i in 'ACGT':
         if sdict[i] > n / 4:
-            print("===")
+            print('===')
             exitflag = True
             break
     if not exitflag:
-        news = ""
+        news = ''
         for i in s:
             if i != '?':
                 news += i

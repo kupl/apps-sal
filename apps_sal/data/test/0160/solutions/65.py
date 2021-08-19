@@ -51,7 +51,7 @@ def factor(x):
 
 
 def __starting_point():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     A = sorted(A)
     sum_v = sum(A)
@@ -66,7 +66,6 @@ def __starting_point():
         ans = 0
         for i in range(N - v):
             ans += b[i]
-
         if ans <= K:
             print(e)
             return

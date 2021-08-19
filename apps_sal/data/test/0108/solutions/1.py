@@ -1,4 +1,3 @@
-
 a = list(input())
 i = 0
 k = 0

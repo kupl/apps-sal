@@ -1,5 +1,5 @@
-n, m, k, l = map(int, input().split())
-mm = (k + l)
+(n, m, k, l) = map(int, input().split())
+mm = k + l
 if mm % m == 0:
     mm //= m
 else:

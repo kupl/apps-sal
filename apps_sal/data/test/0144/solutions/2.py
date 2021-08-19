@@ -17,4 +17,4 @@ for cnt in range(2, n + 1):
             break
     if ans:
         break
-print("YES" if ans else "NO")
+print('YES' if ans else 'NO')

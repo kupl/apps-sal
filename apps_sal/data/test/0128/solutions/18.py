@@ -1,7 +1,6 @@
 import math
 data = input()
-n, k = data.split(' ')
-
+(n, k) = data.split(' ')
 n = int(n)
 k = int(k)
 m = n

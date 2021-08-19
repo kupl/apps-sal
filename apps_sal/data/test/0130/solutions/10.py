@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 sq = [list(input()) for _ in range(n)]
-
 rmin = n
 rmax = 0
 cmin = m
@@ -14,7 +13,6 @@ for r in range(n):
             rmax = max(rmax, r)
             cmin = min(cmin, c)
             cmax = max(cmax, c)
-
 l = max(max(rmax - rmin + 1, cmax - cmin + 1), 1)
 if min(n, m) < l:
     ans = -1

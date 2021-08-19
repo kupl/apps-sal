@@ -11,11 +11,11 @@ for p in possible:
     i += 1
 indx2 = 0
 for i in range(9):
-    if largest >= i * 10**indx1 + maximum9:
+    if largest >= i * 10 ** indx1 + maximum9:
         indx2 = i
     else:
         break
 count = 0
 for i in range(indx2 + 1):
-    count += max((2 * min(n, i * 10**indx1 + maximum9 - 1) - max(1, i * 10**indx1 + maximum9) + 1) // 2, 0)
+    count += max((2 * min(n, i * 10 ** indx1 + maximum9 - 1) - max(1, i * 10 ** indx1 + maximum9) + 1) // 2, 0)
 print(count)

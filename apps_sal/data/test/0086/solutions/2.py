@@ -1,19 +1,17 @@
-a, b, c, d = list(map(int, input().split(' ')))
-
+(a, b, c, d) = list(map(int, input().split(' ')))
 if a == c and b < d:
-    print("Polycarp")
+    print('Polycarp')
 elif a == c and b > d:
-    print("Vasiliy")
+    print('Vasiliy')
 elif a < c and b == d:
-    print("Polycarp")
+    print('Polycarp')
 elif a > c and b == d:
-    print("Vasiliy")
+    print('Vasiliy')
 elif a > c and b > d:
-    print("Vasiliy")
+    print('Vasiliy')
 elif a < c and b < d:
-    print("Polycarp")
+    print('Polycarp')
+elif a + b <= max(c, d):
+    print('Polycarp')
 else:
-    if a + b <= max(c, d):
-        print("Polycarp")
-    else:
-        print("Vasiliy")
+    print('Vasiliy')

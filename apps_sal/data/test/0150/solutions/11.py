@@ -13,11 +13,9 @@ def prime(n):
 
 if prime(n):
     print(1)
+elif n % 2 == 0:
+    print(2)
+elif prime(n - 2):
+    print(2)
 else:
-    if n % 2 == 0:
-        print(2)
-    else:
-        if prime(n - 2):
-            print(2)
-        else:
-            print(3)
+    print(3)

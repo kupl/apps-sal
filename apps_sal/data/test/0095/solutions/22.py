@@ -1,7 +1,7 @@
 n = int(input())
 A = list(map(int, input().split()))
 flag = 0
-for i, a in enumerate(A):
+for (i, a) in enumerate(A):
     if i == 0:
         continue
     if flag == 0:
@@ -26,6 +26,6 @@ for i, a in enumerate(A):
             flag = -1
             break
 if flag >= 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

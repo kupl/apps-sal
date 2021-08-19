@@ -13,11 +13,10 @@ def main():
         i += 1
     while i < n and x[i] > x[i + 1]:
         i += 1
-
     if i == n:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 main()

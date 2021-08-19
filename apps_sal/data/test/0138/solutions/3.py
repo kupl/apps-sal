@@ -1,5 +1,5 @@
-n, a, b, c = [int(i) for i in input().split()]
-ans = 10**11
+(n, a, b, c) = [int(i) for i in input().split()]
+ans = 10 ** 11
 for i in range(4):
     for j in range(4):
         for k in range(4):

@@ -1,6 +1,6 @@
 a = input()
 b = input()
-n, m = len(a), len(b)
+(n, m) = (len(a), len(b))
 if n > m:
     b = '0' * (n - m) + b
 else:

@@ -14,10 +14,10 @@ for i in range(2, len(s) + 1):
         flg = True
         for j in range(len(arr)):
             sm += arr[j]
-            if (sm > amount):
+            if sm > amount:
                 flg = False
                 break
-            if (sm == amount):
+            if sm == amount:
                 sm = 0
         if sm == 0 and flg:
             bigflg = True

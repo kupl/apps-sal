@@ -1,8 +1,8 @@
-m, k = list(map(int, input().split()))
+(m, k) = list(map(int, input().split()))
 n = m
 twos = 0
 fives = 0
-while(n % 2 == 0) or (n % 5 == 0):
+while n % 2 == 0 or n % 5 == 0:
     if n % 2 == 0:
         twos += 1
         n //= 2

@@ -8,7 +8,7 @@ for i in range(1, n):
         f = 2
     elif f == 1 and a[i] < a[i - 1]:
         f = 2
-    elif f == 0 and a[i] > a[i - 1] or f == 1 and a[i] == a[i - 1] or f == 2 and a[i] < a[i - 1]:
+    elif f == 0 and a[i] > a[i - 1] or (f == 1 and a[i] == a[i - 1]) or (f == 2 and a[i] < a[i - 1]):
         continue
     else:
         f = -1

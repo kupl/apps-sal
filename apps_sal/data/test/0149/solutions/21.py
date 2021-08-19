@@ -1,5 +1,4 @@
-x, y, l, r = list(map(int, input().split()))
-
+(x, y, l, r) = list(map(int, input().split()))
 xx = []
 yy = []
 p = 1
@@ -13,8 +12,6 @@ while p <= r:
     p *= x
 xx.append(r + 1)
 xx.sort()
-
 for i in range(0, len(xx) - 1):
     yy.append(xx[i + 1] - xx[i] - 1)
-
 print(max(yy))

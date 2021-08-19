@@ -1,12 +1,12 @@
-x, y, z = map(int, input().split())
-a, b, c = map(int, input().split())
+(x, y, z) = map(int, input().split())
+(a, b, c) = map(int, input().split())
 if a >= x:
     if a + b - y - x >= 0:
         if a + b + c - x - y - z >= 0:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')
 else:
-    print("NO")
+    print('NO')

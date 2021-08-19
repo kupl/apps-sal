@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 ans = 0
 N = 0
 for i in range(2, 61):

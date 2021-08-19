@@ -1,5 +1,5 @@
-n, k = list(map(int, input().split()))
-if (k > n // 2):
+(n, k) = list(map(int, input().split()))
+if k > n // 2:
     k = n // 2
 if n == 1 or k == 0:
     print(0)

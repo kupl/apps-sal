@@ -2,11 +2,9 @@ def main():
     n = int(input())
     seg = []
     for i in range(n):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         seg.append((l, r, i + 1))
-
     seg = sorted(seg, key=lambda x: (x[0], -x[1]))
-
     lar = 0
     sma = -1
     for i in range(1, len(seg)):

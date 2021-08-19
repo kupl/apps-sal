@@ -1,9 +1,6 @@
-
-s, r, m, n = list(map(int, input().split()))
+(s, r, m, n) = list(map(int, input().split()))
 bad = set(map(int, input().split()))
-
 cnt = 0
-
 if abs(s) > m:
     print(0)
 elif s == 0:
@@ -25,7 +22,7 @@ elif r == 1:
     else:
         print('inf')
 elif r == -1:
-    if (s in bad) and (-s in bad):
+    if s in bad and -s in bad:
         print(0)
     else:
         print('inf')

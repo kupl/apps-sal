@@ -1,7 +1,7 @@
 x = input()
 y = input()
-a = ""
-b = ""
+a = ''
+b = ''
 flag = 0
 for i in range(0, len(x)):
     if flag != 0:
@@ -20,22 +20,20 @@ for i in range(0, len(y)):
         b = b + y[i]
 len1 = len(a)
 len2 = len(b)
-
-
 if len1 > len2:
-    print(">")
+    print('>')
 elif len2 > len1:
-    print("<")
+    print('<')
 else:
     flag = 0
     for i in range(0, len1):
         if flag == 1:
             break
         if a[i] > b[i]:
-            print(">")
+            print('>')
             flag = 1
         elif b[i] > a[i]:
-            print("<")
+            print('<')
             flag = 1
     if flag == 0:
-        print("=")
+        print('=')

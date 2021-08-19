@@ -1,5 +1,5 @@
-n, m, k = map(int, input().split())
-a, b = map(int, input().split())
+(n, m, k) = map(int, input().split())
+(a, b) = map(int, input().split())
 a -= 1
 b -= 1
 

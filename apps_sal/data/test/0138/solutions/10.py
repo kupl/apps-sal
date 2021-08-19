@@ -1,5 +1,5 @@
-n, a, b, c = list(map(int, input().split()))
-k = 4 - (n % 4)
+(n, a, b, c) = list(map(int, input().split()))
+k = 4 - n % 4
 if k == 4:
     print(0)
 elif k == 1:

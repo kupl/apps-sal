@@ -1,8 +1,8 @@
 def main():
-    N, K, *A = map(int, open(0).read().split())
+    (N, K, *A) = map(int, open(0).read().split())
     S = sum(A)
     X = [S]
-    for i in range(2, int(S**.5) + 1):
+    for i in range(2, int(S ** 0.5) + 1):
         if S % i == 0:
             X.append(i)
             if i * i != S:

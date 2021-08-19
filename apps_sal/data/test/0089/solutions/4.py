@@ -1,3 +1,3 @@
 n = int(input())
 k = n + 1
-print((k * k) // 4)
+print(k * k // 4)

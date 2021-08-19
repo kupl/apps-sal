@@ -1,5 +1,5 @@
 __author__ = 'Utena'
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 n = 2
 t = 0
 n1 = 1

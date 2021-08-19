@@ -1,5 +1,4 @@
 n = int(input())
-
 memo = dict()
 
 

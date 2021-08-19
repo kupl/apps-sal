@@ -1,5 +1,5 @@
-a, b = list(map(int, input().split()))
-a, b = min(a, b), max(a, b)
+(a, b) = list(map(int, input().split()))
+(a, b) = (min(a, b), max(a, b))
 gap = b - a
 arr = []
 i = 1
@@ -16,14 +16,14 @@ value = 10 ** 20
 for i in arr:
     plus = 0
     if a % i:
-        plus = i - (a % i)
-    ta, tb = a + plus, b + plus
+        plus = i - a % i
+    (ta, tb) = (a + plus, b + plus)
     mod = ta % tb
     while mod:
         ta = tb
         tb = mod
         mod = ta % tb
-    temp = ((a + plus) * (b + plus)) // tb
+    temp = (a + plus) * (b + plus) // tb
     if temp < value:
         value = temp
         answer = plus

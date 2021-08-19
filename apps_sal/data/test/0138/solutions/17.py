@@ -1,4 +1,4 @@
-n, a, b, c = map(int, input().split())
+(n, a, b, c) = map(int, input().split())
 mn = 10 ** 12
 arr = [0, a, b, c]
 for i in range(30):

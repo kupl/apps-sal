@@ -3,8 +3,7 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 a = sum(a)
 b = sum(b)
-
 if a < b:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

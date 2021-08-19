@@ -9,15 +9,15 @@ cnt = 0
 def is_co_prime(A, B):
     t = A % B
     if t == 0:
-        return B == 1, B
+        return (B == 1, B)
     while True:
-        A, B = B, t
+        (A, B) = (B, t)
         if A % B:
             t = A % B
         else:
             C = B
             break
-    return C == 1, C
+    return (C == 1, C)
 
 
 for i in range(n - 1):
@@ -32,11 +32,9 @@ for i in range(n - 1):
             T += 1
         insert[i] = T
         cnt += 1
-
 for i in range(n):
     ans.append(a[i])
     if insert[i]:
         ans.append(insert[i])
-
 print(cnt)
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

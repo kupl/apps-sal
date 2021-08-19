@@ -12,9 +12,8 @@ if m > p:
     if n // 2 + n % 2 <= m:
         print(-1)
         flag = False
-else:
-    if n // 2 + n % 2 <= p:
-        print(1)
-        flag = False
+elif n // 2 + n % 2 <= p:
+    print(1)
+    flag = False
 if flag:
     print(0)

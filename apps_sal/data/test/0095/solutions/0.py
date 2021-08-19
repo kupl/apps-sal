@@ -11,6 +11,6 @@ while i < n and L[i] < a:
     a = L[i]
     i += 1
 if i == n:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

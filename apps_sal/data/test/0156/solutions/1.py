@@ -9,10 +9,9 @@ def lcm(a, b):
 def main():
     x = int(input())
     facts = []
-    for i in range(1, int(x**0.5) + 1):
+    for i in range(1, int(x ** 0.5) + 1):
         if x % i == 0:
             facts.append([i, x // i])
-
     min_val = float('inf')
     a = -1
     b = -1
@@ -21,7 +20,6 @@ def main():
             min_val = max(i)
             a = i[0]
             b = i[1]
-
     print(a, b)
 
 

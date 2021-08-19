@@ -16,7 +16,6 @@ while f:
         k += 1
     else:
         f = False
-
 if n == 2:
     print(1)
 elif n == 3:

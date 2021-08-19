@@ -6,7 +6,7 @@ def solve(n):
         return fac(n) // (2 * fac(n - 2))
     m = n + (n - 1)
     x = '9'
-    while(int(x + '9') <= m):
+    while int(x + '9') <= m:
         x += '9'
     l = []
     for i in range(10):

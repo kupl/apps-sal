@@ -1,7 +1,7 @@
-n, k, M = map(int, input().split())
+(n, k, M) = map(int, input().split())
 t = list(map(int, input().split()))
 t.sort()
-S = sum(t[j] for j in range(k))
+S = sum((t[j] for j in range(k)))
 ans = 0
 for i in range(n + 1):
     if i * S > M:

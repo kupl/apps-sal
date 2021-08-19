@@ -1,4 +1,4 @@
-n, a, x, b, y = list(map(int, input().split()))
+(n, a, x, b, y) = list(map(int, input().split()))
 fl = 0
 while True:
     a += 1

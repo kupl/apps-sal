@@ -11,14 +11,14 @@ def bindec(ch):
     return r
 
 
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 la = int(log(a, 2)) + 1
 lb = int(log(b, 2)) + 1
 r = 0
-ch = ""
+ch = ''
 for k in range(la, lb + 1):
     for i in range(1, k):
-        ch = "1" * i + "0" + "1" * (k - i - 1)
+        ch = '1' * i + '0' + '1' * (k - i - 1)
         if bindec(ch) > b:
             break
         elif bindec(ch) >= a:

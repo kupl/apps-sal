@@ -1,4 +1,4 @@
-l1, r1, l2, r2, k = map(int, input().split())
+(l1, r1, l2, r2, k) = map(int, input().split())
 l = l1
 if l2 > l:
     l = l2

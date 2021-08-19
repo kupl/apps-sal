@@ -1,9 +1,9 @@
-x, y, l, r = map(int, input().split())
+(x, y, l, r) = map(int, input().split())
 data = []
 tx = 1
-while (tx < r + 3):
+while tx < r + 3:
     ty = 1
-    while (ty < r + 3):
+    while ty < r + 3:
         data.append(tx + ty)
         ty *= y
     tx *= x

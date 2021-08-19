@@ -15,16 +15,13 @@ while pos > 0:
                 mark = l
             tmp = a
             l -= 1
-
     if tmp == 0:
         pos -= 1
         ans.append(0)
     else:
         pos = mark
         ans.append(tmp)
-
 aans = 0
 for i in ans[::-1]:
     aans = aans * n + i
-
 print(aans)

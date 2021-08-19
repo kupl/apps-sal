@@ -1,5 +1,5 @@
 def c(a, b):
-    for x, y in zip(a, b):
+    for (x, y) in zip(a, b):
         if x > y:
             return '>'
         elif x < y:
@@ -7,7 +7,7 @@ def c(a, b):
     return '='
 
 
-a, b = input(), input()
+(a, b) = (input(), input())
 if len(a) < len(b):
     a = '0' * (len(b) - len(a)) + a
 elif len(a) > len(b):

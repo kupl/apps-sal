@@ -1,12 +1,11 @@
-
-n, L = map(int, input().split())
+(n, L) = map(int, input().split())
 c = [*map(int, input().split())]
 rational = [True] * n
 for i in range(n):
     for j in range(n):
         if i < j and c[i] >= c[j]:
             rational[i] = False
-        if i < j and c[i] * (2 ** (j - i)) <= c[j]:
+        if i < j and c[i] * 2 ** (j - i) <= c[j]:
             rational[j] = False
 
 
@@ -18,7 +17,7 @@ def dfs(i, L):
         if Li >= L:
             return min(c[i], dfs(i - 1, L))
         else:
-            return (L // Li * c[i]) + dfs(i, L % Li)
+            return L // Li * c[i] + dfs(i, L % Li)
     else:
         return dfs(i - 1, L)
 

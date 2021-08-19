@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-a = 10**k
+(n, k) = map(int, input().split())
+a = 10 ** k
 
 
 def lcm(a, b):

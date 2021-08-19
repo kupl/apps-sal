@@ -1,4 +1,4 @@
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 t = sorted(map(int, input().split()))
 st = sum(t)
 res = 0

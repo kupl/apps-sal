@@ -1,4 +1,4 @@
-n, L = [int(k) for k in input().split(' ') if k]
+(n, L) = [int(k) for k in input().split(' ') if k]
 dp = [int(k) for k in input().split(' ') if k]
 for i in range(1, n):
     dp[i] = min(2 * dp[i - 1], dp[i])
@@ -15,7 +15,7 @@ def minify(p):
     for i in range(p + 1, len(dp)):
         result = min(result, dp[i])
     if p == 0:
-        return min(result, (dp[p] if binary[p] else 0))
+        return min(result, dp[p] if binary[p] else 0)
     return min(result, (dp[p] if binary[p] else 0) + minify(p - 1))
 
 

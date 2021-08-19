@@ -3,7 +3,7 @@ from itertools import accumulate
 
 def divisors(n):
     lst = []
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             lst.append(i)
             if i != n // i:
@@ -11,8 +11,8 @@ def divisors(n):
     return lst
 
 
-N, K = map(int, input().split())
-*A, = map(int, input().split())
+(N, K) = map(int, input().split())
+(*A,) = map(int, input().split())
 cands = divisors(sum(A))
 for d in sorted(cands, reverse=True):
     rems = sorted([a % d for a in A])

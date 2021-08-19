@@ -1,4 +1,3 @@
-
 n = int(input())
 pairs = [list(map(int, input().split())) + [i] for i in range(n)]
 pairs.sort(key=lambda x: (x[0], -x[1]))

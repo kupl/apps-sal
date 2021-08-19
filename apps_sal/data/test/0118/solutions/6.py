@@ -1,8 +1,7 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 if c > a:
     c -= a
     if c != 1:
-
         c %= b
         if c == 0 or c == 1:
             print('YES')

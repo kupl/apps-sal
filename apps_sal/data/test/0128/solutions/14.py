@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 cnt = 0
 while k > 0 and n >= 2:
     cnt += (n - 1) * 2 - 1

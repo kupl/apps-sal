@@ -21,5 +21,4 @@ for l in range(1, n):
     if res2:
         res = True
         break
-
-print("YES" if res else "NO")
+print('YES' if res else 'NO')

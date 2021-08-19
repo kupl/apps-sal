@@ -7,9 +7,9 @@ g = x - s.count('G')
 t = x - s.count('T')
 L = []
 if n % 4 != 0:
-    print("===")
-elif s.count('A') > x or s.count('C') > x or s.count('G') > x or s.count('T') > x:
-    print("===")
+    print('===')
+elif s.count('A') > x or s.count('C') > x or s.count('G') > x or (s.count('T') > x):
+    print('===')
 else:
     for i in range(a):
         L.append('A')
@@ -28,6 +28,6 @@ else:
             s1 += L[j]
             j += 1
     if s1.count('A') + s1.count('C') + s1.count('G') + s1.count('T') != n:
-        print("===")
+        print('===')
     else:
         print(s1)

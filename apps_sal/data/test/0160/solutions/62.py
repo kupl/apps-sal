@@ -1,9 +1,9 @@
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     m = sum(A)
     d = []
-    for i in range(1, int(m**0.5) + 1):
+    for i in range(1, int(m ** 0.5) + 1):
         if m % i == 0:
             d.append(i)
             if i != m // i:
@@ -20,7 +20,7 @@ def main():
         if sum(l[:t]) <= K:
             print(j)
             return
-    print((1))
+    print(1)
 
 
 main()
