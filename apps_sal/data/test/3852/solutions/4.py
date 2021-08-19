@@ -1,13 +1,10 @@
 import math
-#import numpy as np
 import queue
 from collections import deque, defaultdict
 import heapq as hpq
 from sys import stdin, setrecursionlimit
-#from scipy.sparse.csgraph import dijkstra
-#from scipy.sparse import csr_matrix
 ipt = stdin.readline
-setrecursionlimit(10**7)
+setrecursionlimit(10 ** 7)
 
 
 def main():
@@ -16,7 +13,7 @@ def main():
     ma = max(a)
     mi = min(a)
     if mi * ma < 0:
-        print((2 * (n - 1)))
+        print(2 * (n - 1))
         if abs(ma) > abs(mi):
             mk = a.index(ma)
             for i in range(n):
@@ -32,7 +29,7 @@ def main():
                 print((mk + 1, i + 1))
                 a[i] += mi
     else:
-        print((n - 1))
+        print(n - 1)
     ma = max(a)
     mi = min(a)
     if ma <= 0:
@@ -41,7 +38,6 @@ def main():
     else:
         for i in range(n - 1):
             print((i + 1, i + 2))
-
     return
 
 

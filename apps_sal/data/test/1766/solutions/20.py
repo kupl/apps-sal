@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
 import sys
-
 n = int(sys.stdin.readline())
 a = [int(x) for x in sys.stdin.readline().split(' ')]
-
 sum = [0, 0]
 start = 0
 end = n - 1

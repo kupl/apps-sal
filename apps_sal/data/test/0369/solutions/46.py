@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
 import sys
-sys.setrecursionlimit(10**6)
-# buff_readline = sys.stdin.buffer.readline
+sys.setrecursionlimit(10 ** 6)
 buff_readline = sys.stdin.readline
 readline = sys.stdin.readline
-
-INF = 2**62 - 1
+INF = 2 ** 62 - 1
 
 
 def read_int():
@@ -43,14 +40,13 @@ def mt(f):
         s = time.time()
         ret = f(*args, **kwargs)
         e = time.time()
-
         error_print(e - s, 'sec')
         return ret
-
     return wrap
 
 
 class Mod:
+
     def __init__(self, m):
         self.m = m
 
@@ -61,7 +57,7 @@ class Mod:
         return (a - b) % self.m
 
     def mul(self, a, b):
-        return ((a % self.m) * (b % self.m)) % self.m
+        return a % self.m * (b % self.m) % self.m
 
     def div(self, a, b):
         return self.mul(a, pow(b, self.m - 2, self.m))
@@ -71,6 +67,7 @@ class Mod:
 
 
 class Bisect:
+
     def __init__(self, func):
         self.__func = func
 
@@ -95,14 +92,12 @@ class Bisect:
 
 @mt
 def slv(N, M, S):
-
     from functools import lru_cache
 
     @lru_cache(maxsize=None)
     def dfs(x):
         if x == 0:
             return []
-
         for i in range(M, 0, -1):
             if 0 <= x - i and S[x - i] == '0':
                 r = dfs(x - i)
@@ -117,7 +112,7 @@ def slv(N, M, S):
 
 
 def main():
-    N, M = read_int_n()
+    (N, M) = read_int_n()
     S = read_str()
     print(*slv(N, M, S))
 

@@ -16,6 +16,5 @@ for temp in s:
         count[5] += 1
     else:
         pass
-# print(count)
 out = n - 6 * min(count)
 print(out)

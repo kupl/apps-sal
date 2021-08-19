@@ -1,14 +1,29 @@
 from sys import stdout
-def printn(x): return stdout.write(str(x))
-def inn(): return int(input())
-def inl(): return list(map(int, input().split()))
-def inm(): return list(map(int, input().split()))
-def ins(): return input().strip()
 
 
-DBG = True  # and False
+def printn(x):
+    return stdout.write(str(x))
+
+
+def inn():
+    return int(input())
+
+
+def inl():
+    return list(map(int, input().split()))
+
+
+def inm():
+    return list(map(int, input().split()))
+
+
+def ins():
+    return input().strip()
+
+
+DBG = True
 BIG = 999999999
-R = 10**9 + 7
+R = 10 ** 9 + 7
 
 
 def ddprint(x):
@@ -35,6 +50,6 @@ elif a[p] < 0:
             seq.append((p, i))
         if a[i] < a[p]:
             p = i
-print((len(seq)))
-for a, b in seq:
-    print(("{} {}".format(a + 1, b + 1)))
+print(len(seq))
+for (a, b) in seq:
+    print('{} {}'.format(a + 1, b + 1))

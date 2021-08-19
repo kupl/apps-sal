@@ -10,15 +10,15 @@ class InputHandlerObject(object):
     inputs = []
 
     def getInput(self, n=0):
-        res = ""
+        res = ''
         inputs = self.inputs
         if not inputs:
-            inputs.extend(input().split(" "))
+            inputs.extend(input().split(' '))
         if n == 0:
             res = inputs[:]
             inputs[:] = []
         while n > len(inputs):
-            inputs.extend(input().split(" "))
+            inputs.extend(input().split(' '))
         if n > 0:
             res = inputs[:n]
             inputs[:n] = []
@@ -27,9 +27,7 @@ class InputHandlerObject(object):
 
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
-
-############################## SOLUTION ##############################
-m, n = [int(x) for x in g()]
+(m, n) = [int(x) for x in g()]
 q = []
 for i in range(m):
     q.append([int(x) for x in g()])
@@ -46,4 +44,4 @@ for j in range(n):
             continue
         p[i][j] = max(p[i - 1][j], p[i][j - 1]) + q[i][j]
 for i in range(m):
-    print(p[i][n - 1], end=" ")
+    print(p[i][n - 1], end=' ')

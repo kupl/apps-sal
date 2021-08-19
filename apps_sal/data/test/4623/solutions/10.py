@@ -1,5 +1,3 @@
-#!/usr/bin/env pypy3
-
 from collections import Counter
 
 
@@ -18,13 +16,11 @@ def score(cN, target):
 def ans(N):
     N = sorted(N)
     cN = Counter(N)
-
-    return max(score(cN, target) for target in range(2, 101))
+    return max((score(cN, target) for target in range(2, 101)))
 
 
 T = int(input())
 for t in range(T):
     input()
     N = list(map(int, input().split()))
-
     print(ans(N))

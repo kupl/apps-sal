@@ -2,18 +2,17 @@ import heapq
 
 
 def main():
-    N, M = list(map(int, input().split(' ')))
+    (N, M) = list(map(int, input().split(' ')))
     S = input()
-    # 最短手数のdpテーブルを作る
-    T = S[::-1]  # ゴールから逆順にたどる（最後に逆にする）
+    T = S[::-1]
     dp = [-1] * (N + 1)
     que = [0] * M
-    for i, t in enumerate(T):
+    for (i, t) in enumerate(T):
         if i == 0:
             dp[0] = 0
             continue
         if len(que) == 0:
-            print((-1))
+            print(-1)
             return
         index = heapq.heappop(que)
         if t == '1':
@@ -22,7 +21,6 @@ def main():
         while len(que) < M:
             heapq.heappush(que, i)
     dp.reverse()
-    # 細切れに進んでいく
     path = list()
     target = dp[0] - 1
     cnt = 0
@@ -33,7 +31,7 @@ def main():
             path.append(cnt)
             cnt = 1
             target -= 1
-    print((' '.join(map(str, path))))
+    print(' '.join(map(str, path)))
 
 
 def __starting_point():

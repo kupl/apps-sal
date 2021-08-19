@@ -1,12 +1,10 @@
 from collections import Counter as C
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = [*map(int, input().split())]
 c = sorted(C(l).items())
-
 res = 0
 j = 0
-for hi, ni in c:
-    # print(hi, ni, j)
+for (hi, ni) in c:
     h = min(hi - j, ni) + j
     res += (hi - 1) * ni
     if h > j:

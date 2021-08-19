@@ -62,54 +62,9 @@ sys.setrecursionlimit(1000000000)
 mod = 10 ** 9 + 7
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
-
-#############
-# Main Code #
-#############
-
-"""
-N <= 50
-単調増加になるように
-いい方法を考える
-
-全てプラス　前から累積
-全てマイナス　後ろから累積
-
-プラスとマイナス
-全部プラスにするか全部マイナスにするか
-プラスのとマイナスのどちらが大きいか
-
-プラスのが大きい
-マイナス部分を全てプラスに→前から累積
-マイナスのが大きい
-プラス部分を全てマイナスに→後ろから累積
-det = [-1, 1]
-place = [0, 0]
-for i in range(N):
-    if A[i] > det[0]:
-        det[0] = A[i]
-        place[0] = i
-    elif A[i] < det[1]:
-        det[1] = A[i]
-        place[1] = i
-
-if abs(det[0]) >= abs(det[1]):
-    for i in range(N):
-        A[i] += det[0]
-    for i in range(1, N):
-        A[i] += A[i - 1]
-else:
-    for i in range(N):
-        A[i] += det[1]
-    for i in range(N - 2, -1, -1):
-        A[i] += A[i + 1]
-
-print(A)
-"""
-
+'\nN <= 50\n単調増加になるように\nいい方法を考える\n\n全てプラス\u3000前から累積\n全てマイナス\u3000後ろから累積\n\nプラスとマイナス\n全部プラスにするか全部マイナスにするか\nプラスのとマイナスのどちらが大きいか\n\nプラスのが大きい\nマイナス部分を全てプラスに→前から累積\nマイナスのが大きい\nプラス部分を全てマイナスに→後ろから累積\ndet = [-1, 1]\nplace = [0, 0]\nfor i in range(N):\n    if A[i] > det[0]:\n        det[0] = A[i]\n        place[0] = i\n    elif A[i] < det[1]:\n        det[1] = A[i]\n        place[1] = i\n\nif abs(det[0]) >= abs(det[1]):\n    for i in range(N):\n        A[i] += det[0]\n    for i in range(1, N):\n        A[i] += A[i - 1]\nelse:\n    for i in range(N):\n        A[i] += det[1]\n    for i in range(N - 2, -1, -1):\n        A[i] += A[i + 1]\n\nprint(A)\n'
 N = getN()
 A = getList()
-
 det = [-1, 1]
 place = [0, 0]
 for i in range(N):
@@ -119,8 +74,6 @@ for i in range(N):
     elif A[i] < det[1]:
         det[1] = A[i]
         place[1] = i
-
-# xをyに足す
 print(2 * N - 1)
 if abs(det[0]) >= abs(det[1]):
     for i in range(N):

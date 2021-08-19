@@ -1,4 +1,3 @@
-
 def MultiJudge(l, p):
     count = 0
     before = True
@@ -13,7 +12,6 @@ def MultiJudge(l, p):
         if len(h) > 0 and max(h) > p:
             p = max(h)
             before = False
-        #b=[x for x in l if x>2*p]
         if len(b) > 0 and before:
             p = p * 2
             count += 1

@@ -12,12 +12,10 @@ for _ in range(t):
             if i - x in d and d[i - x] > 0:
                 d[i - x] -= 1
                 tmp += 1
+            elif x in d:
+                d[x] += 1
             else:
-                if x in d:
-                    d[x] += 1
-                else:
-                    d[x] = 1
+                d[x] = 1
         if ans < tmp:
             ans = tmp
-        # print(tmp, i)
     print(ans)

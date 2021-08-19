@@ -1,12 +1,12 @@
 import math
 
 
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
-n, k = I()
+(n, k) = I()
 a = list(I())
-# print(a)
 ans = 0
 for task in sorted(a):
     if math.ceil(task / 2) <= k:
@@ -17,5 +17,4 @@ for task in sorted(a):
             ans += 1
             k *= 2
         k = task
-
 print(ans)

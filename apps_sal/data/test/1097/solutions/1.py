@@ -1,6 +1,5 @@
-
 def __starting_point():
-    n, t, k = map(int, input().split())
+    (n, t, k) = map(int, input().split())
     a = list(map(int, input().split()))
     b = [0 for _ in range(t)]
     b[t - 1] = a[t - 1]
@@ -32,19 +31,5 @@ def __starting_point():
             k -= childless
 
 
-'''
-			parent = curr-1
-			children = min(a[lvl+1], k-b[lvl]+1)
-			print("#DEBUG", lvl, children)
-			for _ in range(children):
-				print(parent, curr)
-				curr += 1
-			parent -= 1
-			k -= a[lvl]+1
-			for _ in range(a[lvl]-children):
-				print(parent, curr)
-				parent -= 1
-				curr += 1
-				k += 1
-'''
+'\n\t\t\tparent = curr-1\n\t\t\tchildren = min(a[lvl+1], k-b[lvl]+1)\n\t\t\tprint("#DEBUG", lvl, children)\n\t\t\tfor _ in range(children):\n\t\t\t\tprint(parent, curr)\n\t\t\t\tcurr += 1\n\t\t\tparent -= 1\n\t\t\tk -= a[lvl]+1\n\t\t\tfor _ in range(a[lvl]-children):\n\t\t\t\tprint(parent, curr)\n\t\t\t\tparent -= 1\n\t\t\t\tcurr += 1\n\t\t\t\tk += 1\n'
 __starting_point()
