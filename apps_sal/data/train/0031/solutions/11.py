@@ -1,12 +1,12 @@
 def new_pos(pos, step):
-    if step == "N":
-        pos = pos[0], pos[1] + 1
-    elif step == "S":
-        pos = pos[0], pos[1] - 1
-    elif step == "W":
-        pos = pos[0] + 1, pos[1]
+    if step == 'N':
+        pos = (pos[0], pos[1] + 1)
+    elif step == 'S':
+        pos = (pos[0], pos[1] - 1)
+    elif step == 'W':
+        pos = (pos[0] + 1, pos[1])
     else:
-        pos = pos[0] - 1, pos[1]
+        pos = (pos[0] - 1, pos[1])
     return pos
 
 
@@ -16,14 +16,12 @@ for _ in range(t):
     s = input()
     used_hor = set()
     used_ver = set()
-
     pos = (0, 0)
     n = len(s)
     for i in range(n):
         next_st = new_pos(pos, s[i])
         way = (min(pos[0], next_st[0]), min(pos[1], next_st[1]))
-
-        if s[i] == "N" or s[i] == "S":
+        if s[i] == 'N' or s[i] == 'S':
             if way in used_ver:
                 ans += 1
             else:
@@ -36,6 +34,4 @@ for _ in range(t):
                 ans += 5
             used_hor.add(way)
         pos = next_st
-        # print("used_hor", used_hor)
-        # print("used_ver", used_ver)
     print(ans)

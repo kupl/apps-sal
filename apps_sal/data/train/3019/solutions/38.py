@@ -1,16 +1,13 @@
 def str_count(strng, letter):
     Liste = list(strng)
-    # print(Liste)
     Counts = dict()
     for ch in Liste:
         if ch not in Counts:
             Counts[ch] = 1
         else:
             Counts[ch] = Counts[ch] + 1
-    # print(Counts)
     if letter in Counts:
         return Counts[letter]
     else:
         return 0
-
     return Counts[letter]

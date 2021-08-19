@@ -1,15 +1,22 @@
 import sys
 import heapq as hq
-
 readline = sys.stdin.readline
 
 
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return list(map(int, readline().split()))
-def nl(): return list(map(int, readline().split()))
+def ns():
+    return readline().rstrip()
 
-# eps = 10**-7
+
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return list(map(int, readline().split()))
+
+
+def nl():
+    return list(map(int, readline().split()))
 
 
 def solve():
@@ -35,8 +42,6 @@ def solve():
                 break
     print(cnt)
 
-
-# solve()
 
 T = ni()
 for _ in range(T):

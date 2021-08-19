@@ -11,10 +11,5 @@ class Solution:
         :type target: int
         :rtype: int
         """
-        indices = [i for i, x in enumerate(self.nums) if x == target]
+        indices = [i for (i, x) in enumerate(self.nums) if x == target]
         return random.choice(indices)
-
-
-# Your Solution object will be instantiated and called as such:
-# obj = Solution(nums)
-# param_1 = obj.pick(target)
