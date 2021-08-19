@@ -1,8 +1,8 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 mini = 1
 maxi = 10000
 for i in range(b):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if y == 1:
         mini = max(mini, x)
     else:

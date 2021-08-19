@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 while True:
     if a == 0 or b == 0:
         break
@@ -8,5 +8,4 @@ while True:
         b -= 2 * a * (b // (2 * a))
     else:
         break
-
 print(a, b)

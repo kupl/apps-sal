@@ -1,11 +1,9 @@
-r, c = list(map(int, input().split()))
-
+(r, c) = list(map(int, input().split()))
 b = [list(input()) for i in range(r)]
 for y in range(r):
     for x in range(c):
         if b[y][x] == '.':
             b[y][x] = '0'
-
 ok = True
 for Y in range(r):
     for X in range(c):
@@ -20,5 +18,4 @@ for Y in range(r):
                     p += b[y][x] == '*'
         if p != int(b[Y][X]):
             ok = False
-
-print(["NO", "YES"][ok])
+print(['NO', 'YES'][ok])

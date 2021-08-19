@@ -1,7 +1,5 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
-
 l = sorted(l, reverse=True)
 s = 0
 for _ in range(n):
@@ -27,9 +25,7 @@ for _ in range(s):
         break
     l[0] -= min(l[0], 1)
     l = sorted(l, reverse=True)
-
-
 if l[0] <= 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

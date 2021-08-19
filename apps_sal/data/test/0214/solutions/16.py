@@ -1,7 +1,7 @@
 def go():
     matrix = []
-    matrix.append(list(i for i in input()))
-    matrix.append(list(i for i in input()))
+    matrix.append(list((i for i in input())))
+    matrix.append(list((i for i in input())))
     c = 0
     for i in range(len(matrix[0]) - 1):
         if matrix[0][i] == '0' and matrix[1][i] == '0':

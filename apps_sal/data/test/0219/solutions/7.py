@@ -1,4 +1,4 @@
-n, m, s, d = map(int, input().split())
+(n, m, s, d) = map(int, input().split())
 x = sorted(map(int, input().split())) + [m + s + 1]
 cur = l = 0
 ans = []

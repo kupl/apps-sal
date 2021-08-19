@@ -4,14 +4,14 @@ from collections import defaultdict
 def read():
     N = int(input().strip())
     S = input().strip()
-    return N, S
+    return (N, S)
 
 
 def solve(N, S):
     low = 0
     high = (N >> 1) + 1
     while high - low > 1:
-        mid = (high + low) >> 1
+        mid = high + low >> 1
         is_match = False
         m = N - mid + 1
         d = defaultdict(list)
@@ -32,7 +32,7 @@ def __starting_point():
     inputs = read()
     outputs = solve(*inputs)
     if outputs is not None:
-        print("%s" % str(outputs))
+        print('%s' % str(outputs))
 
 
 __starting_point()

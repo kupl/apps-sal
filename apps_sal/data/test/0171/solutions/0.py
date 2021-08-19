@@ -6,7 +6,6 @@ d3 = '123456789'
 flag2 = False
 flag3 = False
 flag4 = False
-
 for i in d1:
     if i in s:
         flag2 = True
@@ -16,7 +15,7 @@ for i in d2:
 for i in d3:
     if i in s:
         flag4 = True
-if(flag1 and flag2 and flag3 and flag4):
-    print("Correct")
+if flag1 and flag2 and flag3 and flag4:
+    print('Correct')
 else:
-    print("Too weak")
+    print('Too weak')

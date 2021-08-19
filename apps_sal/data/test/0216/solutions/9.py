@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 b = []
 c = []
 for k in a:
@@ -8,5 +7,4 @@ for k in a:
         b.append(k)
     else:
         c.append(k)
-
 print(sum(b) - sum(c))

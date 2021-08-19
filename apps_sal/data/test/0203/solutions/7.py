@@ -1,10 +1,9 @@
 input()
 s = list(input())
-r, d = map(s.count, ('R', 'D'))
-rf, df = 0, 0
-
+(r, d) = map(s.count, ('R', 'D'))
+(rf, df) = (0, 0)
 while r > 0 and d > 0:
-    for i, v in enumerate(s):
+    for (i, v) in enumerate(s):
         if v == 'D':
             if rf:
                 rf -= 1
@@ -19,5 +18,4 @@ while r > 0 and d > 0:
                 s[i] = ' '
             else:
                 rf += 1
-
 print('D' if d else 'R')

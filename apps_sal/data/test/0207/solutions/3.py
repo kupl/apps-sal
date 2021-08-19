@@ -13,6 +13,6 @@ def map_string():
 n = int(input())
 a = list_input()
 if a[0] % 2 and a[-1] % 2 and n % 2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

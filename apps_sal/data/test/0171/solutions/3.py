@@ -8,4 +8,4 @@ for i in s:
         a *= 3
     if i in string.digits:
         a *= 5
-print("Too weak" if (a % 30 or len(s) < 5) else "Correct")
+print('Too weak' if a % 30 or len(s) < 5 else 'Correct')

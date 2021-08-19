@@ -1,5 +1,5 @@
 s = input()
-up, low, digit = False, False, False
+(up, low, digit) = (False, False, False)
 for ch in s:
     if ch.isdigit():
         digit = True

@@ -1,7 +1,7 @@
 b1 = 0
 b2 = 0
 for i in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a > b:
         b1 += 1
     elif b > a:

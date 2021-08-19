@@ -1,6 +1,5 @@
 topboard = list(input())
 botboard = list(input())
-
 bish = 0
 left = 0
 while left + 1 < len(topboard):
@@ -26,7 +25,5 @@ while left + 1 < len(topboard):
             topboard[left + 1] = 'X'
             botboard[left] = 'X'
             botboard[left + 1] = 'X'
-
     left += 1
-
 print(bish)

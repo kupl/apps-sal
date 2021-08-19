@@ -1,15 +1,14 @@
-'''input
+"""input
 5 2
 5 10
 6 9
 38 11
-'''
-n, b = map(int, input().split())
-
+"""
+(n, b) = map(int, input().split())
 pm = 1
 k = 0
 i = 2
-ans = float("inf")
+ans = float('inf')
 
 
 def calc(n, b, k):

@@ -1,9 +1,6 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 r = n % (2 * k + 1)
-
 out = []
-
 if r >= k + 1:
     cnt = r - k
     while cnt < n:
@@ -18,7 +15,6 @@ else:
     while cnt <= n:
         out.append(cnt)
         cnt += 2 * k + 1
-
 print(len(out))
 out = map(str, out)
 print(' '.join(out))

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = [m, m, m]
 ans = 0
 while s[0] < n:

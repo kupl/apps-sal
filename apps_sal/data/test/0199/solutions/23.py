@@ -3,7 +3,7 @@ from math import ceil
 
 
 def main():
-    n, s = map(int, sys.stdin.readline().split())
+    (n, s) = map(int, sys.stdin.readline().split())
     arr = list(map(int, sys.stdin.readline().split()))
     if s > sum(arr):
         print(-1, sep=' ', end='\n', file=sys.stdout, flush=False)
@@ -18,12 +18,11 @@ def main():
                 arr[i] = arr[-1]
             elif count + (arr[i] - arr[-1]) > s:
                 count = s
-                arr[i] -= (s - count)
+                arr[i] -= s - count
         if count == s:
             print(arr[-1])
         else:
             factor = (s - count) / n
-
             print(arr[-1] - ceil(factor), sep=' ', end='\n', file=sys.stdout, flush=False)
 
 

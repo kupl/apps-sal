@@ -1,7 +1,7 @@
 from sys import stdin as cin
 from fractions import gcd
 mod = 1000000007
-x, y = list(map(int, cin.readline().split()))
+(x, y) = list(map(int, cin.readline().split()))
 n = int(cin.readline())
 k = n % 6
 if k == 0:

@@ -1,5 +1,4 @@
 import math
-
 x = int(input())
 x %= 360
 x = 360 - x

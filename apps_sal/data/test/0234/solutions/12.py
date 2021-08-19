@@ -14,24 +14,24 @@ def check(x, y, ai, n, m):
                 continue
             if pos(x + i, n) == -1 or pos(y + j, m) == -1:
                 continue
-            if ai[pos(x + i, n)][pos(y + j, m)] == "*":
+            if ai[pos(x + i, n)][pos(y + j, m)] == '*':
                 num += 1
     return num
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ai = [input() for i in range(n)]
 ans = 1
 for i in range(n):
     for j in range(m):
-        if ai[i][j] == "*":
+        if ai[i][j] == '*':
             continue
         temp = 0
-        if ai[i][j] != ".":
+        if ai[i][j] != '.':
             temp = int(ai[i][j])
         if temp != check(i, j, ai, n, m):
             ans = 0
 if ans == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

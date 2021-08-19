@@ -1,7 +1,7 @@
 import re
 n = int(input())
 S = input().strip()
-s = re.split(r'[A-Z]+', S)
+s = re.split('[A-Z]+', S)
 m = 0
 for ss in s:
     x = set(ss)

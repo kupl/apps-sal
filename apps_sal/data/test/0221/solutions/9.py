@@ -1,5 +1,5 @@
 s = input().split()
-n, k = int(s[0]), int(s[1])
+(n, k) = (int(s[0]), int(s[1]))
 l = 2 * k + 1
 m = n % l
 if m == 0:
@@ -13,5 +13,5 @@ if n % l != 0:
     res += 1
 print(res)
 for i in range(res):
-    print(pos + l * i, end=" ")
-print("")
+    print(pos + l * i, end=' ')
+print('')

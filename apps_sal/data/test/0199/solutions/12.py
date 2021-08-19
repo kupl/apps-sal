@@ -1,5 +1,5 @@
 import math
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 v = input().split()
 mini = math.inf
 for i in range(n):

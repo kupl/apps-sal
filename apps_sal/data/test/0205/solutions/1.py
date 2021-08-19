@@ -1,4 +1,4 @@
-b, a = list(map(int, input().split()))
+(b, a) = list(map(int, input().split()))
 delit = []
 st = []
 i = 2

@@ -2,12 +2,10 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 q = [0] * 6
-
 for i in a:
     q[i] += 1
 for i in b:
     q[i] += 1
-
 f = True
 for i in q:
     if i % 2 != 0:

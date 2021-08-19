@@ -21,7 +21,7 @@ def num_denied(a, b, groups):
 
 
 def __starting_point():
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     groups = list(map(int, input().split()))
     print(num_denied(a, b, groups))
 

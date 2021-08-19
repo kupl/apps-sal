@@ -17,7 +17,7 @@ def solve(tgt):
     if dic[st] > 0:
         return True
     dic[ls[0]] -= 1
-    for i, char in enumerate(s[tgt:N - tgt]):
+    for (i, char) in enumerate(s[tgt:N - tgt]):
         st = st[1:] + char
         if dic[st] > 0:
             return True

@@ -1,5 +1,5 @@
-M, a, b = map(int, input().split())
-mod = 10**9 + 7
+(M, a, b) = map(int, input().split())
+mod = 10 ** 9 + 7
 D = [mod] * a
 maxi = 0
 D[0] = 0
@@ -15,12 +15,12 @@ def f(x, i):
 while Q:
     q = Q.pop()
     D[q] = maxi
-    k = max(0, -((-(b - q)) // a))
+    k = max(0, -(-(b - q) // a))
     maxi = max(maxi, q + k * a)
     if D[(q - b) % a] == mod and maxi <= M:
         Q.append((q - b) % a)
 ans = 0
-for i, d in enumerate(D):
+for (i, d) in enumerate(D):
     if d > M:
         continue
     ans += f(M, i) - f(d - 1, i)

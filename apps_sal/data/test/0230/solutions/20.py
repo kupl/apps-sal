@@ -1,16 +1,15 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 rl = sys.stdin.readline
 
 
 class RollingHash:
+
     def __init__(self, s: str, base=1007, mod=10 ** 9 + 7):
         self.mod = mod
         length = len(s)
         self.pw = [1] * (length + 1)
         self.h = [0] * (length + 1)
-
         v = 0
         for i in range(length):
             self.h[i + 1] = v = (v * base + ord(s[i])) % mod
@@ -25,7 +24,6 @@ class RollingHash:
 def solve():
     N = int(rl())
     S = input()
-
     rh = RollingHash(S)
 
     def check(t):
@@ -38,8 +36,7 @@ def solve():
             else:
                 dist[h] = i
         return False
-
-    ok, ng = 0, N // 2 + 1
+    (ok, ng) = (0, N // 2 + 1)
     while 1 < ng - ok:
         mid = (ok + ng) // 2
         if check(mid):

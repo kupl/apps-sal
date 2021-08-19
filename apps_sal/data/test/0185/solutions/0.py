@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 if k == 1 or k == n:
     print(3 * n)
 else:

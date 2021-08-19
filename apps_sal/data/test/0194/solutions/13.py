@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().strip().split(' ')))
+(n, a, b) = list(map(int, input().strip().split(' ')))
 P = list(map(int, input().strip().split(' ')))
 count1 = 0
 count2 = 0
@@ -12,15 +12,12 @@ for i in range(len(P)):
             if 1 == 1:
                 count2half += 1
                 count2 += 1
-
         elif count2half > 0:
             count2half -= 1
         else:
             bad += 1
-
+    elif count2 < b:
+        count2 += 1
     else:
-        if count2 < b:
-            count2 += 1
-        else:
-            bad += 2
+        bad += 2
 print(bad)

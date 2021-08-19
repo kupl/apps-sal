@@ -1,4 +1,4 @@
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 n = int(input())
 
 
@@ -6,12 +6,11 @@ def modulo(a):
     if a == 1000000007:
         return 0
     elif a >= 0:
-        return int(a % (1000000007))
+        return int(a % 1000000007)
+    elif a % 1000000007 == 0:
+        return 0
     else:
-        if a % 1000000007 == 0:
-            return 0
-        else:
-            return int((1000000007) - int(((-1) * a) % (1000000007)))
+        return int(1000000007 - int(-1 * a % 1000000007))
 
 
 n = n % 6

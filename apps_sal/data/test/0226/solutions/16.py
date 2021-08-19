@@ -4,5 +4,4 @@ x = s = 0
 for ai in reversed(a):
     x = max(x, ai + s - x)
     s += ai
-
 print(s - x, x)

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 v = []
 for i in range(m):
     v.append(list(map(int, input().split())))
@@ -10,8 +10,8 @@ for i in range(1, 101):
             o = False
             break
     if o:
-        if not(((n - 1) // i + 1) in ans):
-            ans.append(((n - 1) // i + 1))
+        if not (n - 1) // i + 1 in ans:
+            ans.append((n - 1) // i + 1)
 if len(ans) == 1:
     print(ans[0])
 else:

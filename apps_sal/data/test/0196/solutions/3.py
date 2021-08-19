@@ -1,9 +1,7 @@
 from sys import stdin
-
 line = stdin.readline().rstrip().split()
 x = int(line[0])
 k = int(line[1])
-
 if x == 0:
     print(0)
 else:

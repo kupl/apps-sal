@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = input()
 b = input()
 f = True
@@ -14,12 +14,12 @@ def dfs(x, y):
         if used[x + (y - 1) * 42] == 0:
             tmp += dfs(x, y - 1)
     if b[y] == 'v' and x + 1 < n:
-        if used[x + 1 + (y) * 42] == 0:
+        if used[x + 1 + y * 42] == 0:
             tmp += dfs(x + 1, y)
     if b[y] == '^' and x - 1 >= 0:
-        if used[x - 1 + (y) * 42] == 0:
+        if used[x - 1 + y * 42] == 0:
             tmp += dfs(x - 1, y)
-    return(tmp)
+    return tmp
 
 
 for i in range(n):

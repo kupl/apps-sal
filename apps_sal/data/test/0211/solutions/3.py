@@ -20,21 +20,17 @@ def calc(e):
     return d
 
 
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 D = 1000000009
-
 l = 0
 h = n
-
 while l < h:
     mid = l + h >> 1
     if chk(mid):
         h = mid
     else:
         l = mid + 1
-
 h = calc(l // k + 1) - 2
 if h < 0:
     h += D
-
 print((k * h % D + m - l // k * k) % D)

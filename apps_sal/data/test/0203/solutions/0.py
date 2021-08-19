@@ -14,20 +14,18 @@ while countr != 0 and countd != 0:
             news.append('D')
         else:
             cd -= 1
+    elif cr == 0:
+        cd += 1
+        countd -= 1
+        news.append('R')
     else:
-        if cr == 0:
-            cd += 1
-            countd -= 1
-            news.append('R')
-        else:
-            cr -= 1
+        cr -= 1
     i += 1
     if i >= n:
         s = list(news)
         news = []
         n = len(s)
         i = 0
-
 if countr > 0:
     print('R')
 else:

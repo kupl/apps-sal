@@ -10,9 +10,8 @@ while r - l > 1:
         ss = s[i:i + mid + 1]
         if ss not in d:
             d[ss] = i
-        else:
-            if d[ss] + mid < i:
-                ok = True
+        elif d[ss] + mid < i:
+            ok = True
     if ok:
         l = mid
     else:

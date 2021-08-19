@@ -1,4 +1,4 @@
-l, r, a = input().split()
+(l, r, a) = input().split()
 l = int(l)
 r = int(r)
 a = int(a)

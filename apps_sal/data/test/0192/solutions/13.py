@@ -1,4 +1,4 @@
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 s = [y, y, y]
 k = 0
 while sum(s) != x * 3:

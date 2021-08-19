@@ -6,7 +6,5 @@ for op in ops:
         begin -= 1
     elif op == '+':
         begin += 1
-
     begin = max(begin, 0)
-
 print(begin)

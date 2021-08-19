@@ -6,6 +6,6 @@ for i in range(N - 10):
     if S[i] == '8':
         cnt += 1
 if cnt >= turns + 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

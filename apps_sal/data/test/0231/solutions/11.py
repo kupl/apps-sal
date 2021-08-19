@@ -1,5 +1,4 @@
-n, a = list(map(int, input().split()))
-
+(n, a) = list(map(int, input().split()))
 if a % 2:
     print(int(a // 2 + 1))
 else:

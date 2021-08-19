@@ -1,6 +1,5 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 t = list(map(int, input().split()))
-
 ans = 0
 cnta = 0
 cntb1 = 0
@@ -16,9 +15,8 @@ for ti in t:
             cntb2 += 1
         else:
             ans += 1
+    elif cntb1 + cntb2 < b:
+        cntb2 += 1
     else:
-        if cntb1 + cntb2 < b:
-            cntb2 += 1
-        else:
-            ans += 2
+        ans += 2
 print(ans)

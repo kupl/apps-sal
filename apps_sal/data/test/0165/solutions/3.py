@@ -1,5 +1,4 @@
-b, d, s = list(map(int, input().split()))
-
+(b, d, s) = list(map(int, input().split()))
 r = 0
 if b == s and d == s:
     print(0)

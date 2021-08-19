@@ -1,7 +1,7 @@
 k = []
-n, m = list(map(int, input().split(" ")))
+(n, m) = list(map(int, input().split(' ')))
 for i in range(m):
-    x, y = list(map(int, input().split(' ')))
+    (x, y) = list(map(int, input().split(' ')))
     k.append([x, y])
 
 
@@ -16,7 +16,6 @@ poss = []
 for x in range(1, 101):
     if ok(x):
         poss.append((n - 1) // x + 1)
-
 if len(list(set(poss))) == 1:
     print(poss[0])
 else:

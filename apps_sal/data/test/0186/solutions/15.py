@@ -1,9 +1,8 @@
 import collections
 import math
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 x = min(2 * n, 3 * m) // 6
-a, b = 2 * n, 3 * m
+(a, b) = (2 * n, 3 * m)
 while x:
     while a <= b and x:
         a += 2

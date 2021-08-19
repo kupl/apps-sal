@@ -1,5 +1,5 @@
-h, g = map(int, input().split())
-a, b = map(int, input().split())
+(h, g) = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
 h += a << 3
 uph = h

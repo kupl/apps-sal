@@ -7,4 +7,4 @@ if l.count(l[0]) == l.count(l[n - 1]) == n / 2:
     print('YES')
     print(l[0], l[n - 1])
 else:
-    print("NO")
+    print('NO')

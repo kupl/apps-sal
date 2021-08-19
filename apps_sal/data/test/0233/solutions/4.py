@@ -1,7 +1,7 @@
 mc = 0
 cc = 0
 for i in range(int(input())):
-    m, c = list(map(int, input().split()))
+    (m, c) = list(map(int, input().split()))
     if m > c:
         mc += 1
     if c > m:

@@ -1,4 +1,4 @@
-n, b = map(int, input().split())
+(n, b) = map(int, input().split())
 ans = 0
 d = 2
 bf = b
@@ -11,7 +11,6 @@ while d * d <= b:
             b = b // d
         factors.append((d, cnt))
     d += 1
-
 if b > 1:
     factors.append((b, 1))
 
@@ -26,5 +25,5 @@ def calc(x, y):
 
 
 ln = len(factors)
-ans = min(calc(n, p[0]) // p[1] for p in factors)
+ans = min((calc(n, p[0]) // p[1] for p in factors))
 print(ans)

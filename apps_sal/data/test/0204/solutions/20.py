@@ -1,5 +1,5 @@
 from math import gcd
-a, b, x, y = map(int, input().split())
+(a, b, x, y) = map(int, input().split())
 r = gcd(x, y)
 x //= r
 y //= r

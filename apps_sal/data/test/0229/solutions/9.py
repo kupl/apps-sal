@@ -1,9 +1,6 @@
 from sys import stdin
-
 n = int(stdin.readline())
-
-numbers = set(int(x) for x in stdin.readline().split())
-
+numbers = set((int(x) for x in stdin.readline().split()))
 if len(numbers) > 3:
     print('NO')
 elif len(numbers) < 3:

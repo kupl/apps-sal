@@ -1,7 +1,7 @@
 from collections import deque
-n, s, D, R = int(input()), input(), deque(), deque()
+(n, s, D, R) = (int(input()), input(), deque(), deque())
 for i in range(n):
-    if s[i] == "D":
+    if s[i] == 'D':
         D.append(i)
     else:
         R.append(i)
@@ -13,6 +13,6 @@ while len(D) and len(R):
         R.append(R.popleft() + n)
         D.popleft()
 if len(D):
-    print("D")
+    print('D')
 else:
-    print("R")
+    print('R')

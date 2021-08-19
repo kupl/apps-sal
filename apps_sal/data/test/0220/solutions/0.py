@@ -1,6 +1,6 @@
-s, x = list(map(int, input().split()))
+(s, x) = list(map(int, input().split()))
 rem = int(s == x) * 2
-p, t, cur = [], 0, 1
+(p, t, cur) = ([], 0, 1)
 for i in range(64):
     if x % 2:
         t += 1

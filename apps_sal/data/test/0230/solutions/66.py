@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 MOD = 10 ** 18 + 7
 A = 123456
 
@@ -19,20 +18,17 @@ def ok(l):
         if rolling_hash not in strings:
             strings[rolling_hash] = []
         strings[rolling_hash].append(i)
-
     for string in strings:
         if strings[string][-1] - strings[string][0] >= l:
             return True
     return False
 
 
-bottom, top = 0, n
-
+(bottom, top) = (0, n)
 while top - bottom > 1:
     mid = (top + bottom) // 2
     if ok(mid):
         bottom = mid
     else:
         top = mid
-
 print(bottom)

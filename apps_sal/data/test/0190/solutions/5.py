@@ -11,7 +11,6 @@ for j in range(m):
     for i in range(n):
         if a[i][j] == '*':
             b.append(i)
-
 c.append(max(b) - min(b) + 1)
 b = []
 for i in range(n):

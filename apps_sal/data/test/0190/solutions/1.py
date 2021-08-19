@@ -2,7 +2,7 @@ from sys import stdin, stdout
 
 
 def main():
-    h, w = map(int, stdin.readline().split())
+    (h, w) = map(int, stdin.readline().split())
     ver = set()
     hor = set()
     for i in range(h):

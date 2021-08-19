@@ -1,7 +1,8 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-k, n = read()
+(k, n) = read()
 a = list(read())
 cnt4 = k
 cnt2 = 2 * k

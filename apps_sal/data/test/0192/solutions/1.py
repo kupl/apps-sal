@@ -1,4 +1,4 @@
-t, f = list(map(int, input().split()))
+(t, f) = list(map(int, input().split()))
 s = [f] * 3
 count = 0
 while sum(s) < 3 * t:

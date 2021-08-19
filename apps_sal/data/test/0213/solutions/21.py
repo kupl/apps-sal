@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 list1 = []
 ans = set()
 if n == 1:

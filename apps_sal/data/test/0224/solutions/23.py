@@ -1,4 +1,4 @@
-s = list(input()) + ["A"]
+s = list(input()) + ['A']
 ans = 1
 k = 0
 l = ['A', 'E', 'I', 'O', 'U', 'Y']

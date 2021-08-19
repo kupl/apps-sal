@@ -1,5 +1,5 @@
 import sys
-A, B, C, D = [int(i) for i in sys.stdin.read().split()]
+(A, B, C, D) = [int(i) for i in sys.stdin.read().split()]
 if A * D - B * C == 0:
     print(0)
 else:

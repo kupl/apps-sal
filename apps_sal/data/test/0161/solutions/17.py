@@ -2,7 +2,6 @@ import io
 import sys
 import atexit
 import os
-
 import math as ma
 from decimal import Decimal as dec
 from itertools import permutations
@@ -21,8 +20,8 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
@@ -38,18 +37,18 @@ def solve():
         s = str(bin(n))[2:]
         xp = []
         pp = 0
-        while(cc <= 40):
+        while cc <= 40:
             fl = False
             ind = -1
             for i in range(len(s)):
-                if(s[i] == "0"):
+                if s[i] == '0':
                     fl = True
                     ind = i
                     break
-            if(fl == False):
+            if fl == False:
                 break
             cc += 1
-            if(pp == 1):
+            if pp == 1:
                 pp ^= 1
                 n += 1
                 s = str(bin(n))[2:]

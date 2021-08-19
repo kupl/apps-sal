@@ -1,5 +1,5 @@
 x = int(input())
-q1, ans = 0, []
+(q1, ans) = (0, [])
 while set(bin(x)[2:]) != {'1'}:
     if q1 % 2 == 0:
         t = bin(x)[2:]

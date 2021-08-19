@@ -7,7 +7,7 @@ def f(p, q, n):
     return r // q
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 i = 2
 s = -1
 while i * i <= k:

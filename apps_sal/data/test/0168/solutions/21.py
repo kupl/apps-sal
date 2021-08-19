@@ -1,6 +1,6 @@
 n = int(input())
 a = input()
-balance, min1 = 0, 0
+(balance, min1) = (0, 0)
 for q in a:
     if q == '+':
         balance += 1

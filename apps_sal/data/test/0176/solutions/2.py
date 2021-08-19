@@ -1,4 +1,4 @@
-k, a, b = [int(i) for i in input().split()]
+(k, a, b) = [int(i) for i in input().split()]
 if a % k != 0:
     a += k - a % k
 if (b - a + 1) % k == 0:

@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 go = [[[] for x in range(w)] for y in range(h)]
 s = input()
 for i in range(h):
@@ -16,7 +16,6 @@ for i in range(w):
     else:
         for j in range(h - 1):
             go[j][i].append((j + 1, i))
-
 good = True
 for i in range(h):
     for j in range(w):
@@ -32,6 +31,4 @@ for i in range(h):
             hd += 1
         if len(q) != h * w:
             good = False
-
-
-print("YES" if good else "NO")
+print('YES' if good else 'NO')

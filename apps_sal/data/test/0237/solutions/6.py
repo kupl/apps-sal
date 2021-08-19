@@ -6,7 +6,6 @@ def f(a):
         sums1 += k - a
     else:
         sums1 = k * (a + a - k + 1) // 2
-
     sums3 = 0
     sums4 = 0
     k1 = n - k + 1
@@ -21,10 +20,9 @@ def f(a):
         return False
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 left = 1
-right = 10**9 + 5
-
+right = 10 ** 9 + 5
 while left + 1 != right:
     mid = (left + right) // 2
     if f(mid):

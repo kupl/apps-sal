@@ -2,9 +2,9 @@ def read():
     return list(map(int, input().split()))
 
 
-l, r, a = read()
+(l, r, a) = read()
 if r < l:
-    l, r = r, l
+    (l, r) = (r, l)
 if l + a < r:
     print((l + a) * 2)
 else:

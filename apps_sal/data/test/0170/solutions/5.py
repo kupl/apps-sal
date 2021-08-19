@@ -13,7 +13,7 @@ sol_11 = []
 sol_22 = []
 p = 10000
 c = 0
-while s1 != 0 and s2 != 0 and p > 0:
+while s1 != 0 and s2 != 0 and (p > 0):
     if i == len(sol_1):
         i = 0
         sol_1 = sol_11[:]
@@ -38,8 +38,7 @@ while s1 != 0 and s2 != 0 and p > 0:
     p -= 1
 if p == 0:
     print(-1)
+elif s1 == 0:
+    print(c, '2')
 else:
-    if s1 == 0:
-        print(c, '2')
-    else:
-        print(c, '1')
+    print(c, '1')

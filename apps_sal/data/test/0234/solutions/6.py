@@ -29,7 +29,7 @@ def valid(i, j):
     if i != len(arr) - 1 and j != len(arr[0]) - 1:
         if arr[i + 1][j + 1] == '*':
             bombs += 1
-    if bombs == 0 and (arr[i][j] == '.'):
+    if bombs == 0 and arr[i][j] == '.':
         return True
     if arr[i][j] == '.':
         return False
@@ -38,21 +38,16 @@ def valid(i, j):
     return False
 
 
-n, m = list(map(int, input().split()))
-
-
+(n, m) = list(map(int, input().split()))
 for i in range(n):
     line = input()
     arr2 = []
     for j in range(m):
         arr2.append(line[j:j + 1])
     arr.append(arr2)
-
-ans = "YES"
-
+ans = 'YES'
 for i in range(n):
     for j in range(m):
         if not valid(i, j):
-            ans = "NO"
-
+            ans = 'NO'
 print(ans)

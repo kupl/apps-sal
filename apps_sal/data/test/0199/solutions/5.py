@@ -1,4 +1,4 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 num = list(map(int, input().split()))
 x = sum(num)
 if x < s:

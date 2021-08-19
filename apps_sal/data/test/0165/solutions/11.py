@@ -1,4 +1,4 @@
-b, d, s = map(int, input().split())
+(b, d, s) = map(int, input().split())
 if b >= d and b >= s:
     ans = max(0, b - d - 1) + max(0, b - s - 1)
 elif d >= s and d >= b:

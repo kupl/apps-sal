@@ -1,8 +1,7 @@
-x = 10**9 + 7
+x = 10 ** 9 + 7
 N = int(input())
 S = input()
 mini = x
-
 for s in S:
     if s == '+':
         x += 1

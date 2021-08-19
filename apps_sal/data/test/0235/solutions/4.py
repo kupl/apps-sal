@@ -15,7 +15,7 @@ def check(k):
 
 
 left = 0
-right = 10**18 + 1
+right = 10 ** 18 + 1
 while left + 1 < right:
     mid = (left + right) // 2
     if check(mid):

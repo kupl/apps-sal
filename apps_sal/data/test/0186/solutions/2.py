@@ -8,7 +8,7 @@ def right(m, n, a):
     return b
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ans = n + m
 while not right(m, n, ans):
     ans += 1

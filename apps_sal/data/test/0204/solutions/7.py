@@ -1,4 +1,4 @@
-a, b, x, y = list(map(int, input().rsplit()))
+(a, b, x, y) = list(map(int, input().rsplit()))
 
 
 def gdc(a, b):
@@ -10,5 +10,4 @@ def gdc(a, b):
 g = gdc(x, y)
 x //= g
 y //= g
-
 print(min(a // x, b // y))

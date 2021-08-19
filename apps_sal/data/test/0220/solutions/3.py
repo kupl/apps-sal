@@ -1,11 +1,11 @@
 def main():
-    s, x = list(map(int, input().split()))
+    (s, x) = list(map(int, input().split()))
     if s < x:
         print(0)
         return
-    s, x = ([c == '1' for c in bin(int(_))[2:]] for _ in (s, x))
+    (s, x) = ([c == '1' for c in bin(int(_))[2:]] for _ in (s, x))
     x = [False] * (len(s) - len(x)) + x
-    a, b = [False] * len(s), [False] * len(s)
+    (a, b) = ([False] * len(s), [False] * len(s))
 
     def deeper(idx, carry):
         if idx:
@@ -40,11 +40,10 @@ def main():
                     deeper(idx, False)
         else:
             raise TabError
-
     try:
         deeper(len(s), False)
     except TabError:
-        print((1 << (sum(b) - sum(a))) - (0 if any(a)else 2))
+        print((1 << sum(b) - sum(a)) - (0 if any(a) else 2))
     else:
         print(0)
 

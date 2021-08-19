@@ -1,7 +1,5 @@
 query = list(map(int, input().split()))
-
 total = query[3]
-
 sdali = query[0] + query[1] - query[2]
 if query[2] > query[1] or query[2] > query[0]:
     print(-1)

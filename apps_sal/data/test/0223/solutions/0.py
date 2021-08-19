@@ -1,12 +1,12 @@
 import math
-p = 10**9 + 7
+p = 10 ** 9 + 7
 
 
 def inv(k, p):
     prod = 1
     while k > 1:
-        prod *= (p // k + 1)
-        k = (k * (p // k + 1)) % p
+        prod *= p // k + 1
+        k = k * (p // k + 1) % p
     return prod % p
 
 
@@ -19,12 +19,12 @@ while x > 0:
     a.append(x - y)
     x = y
 c = [sum(a[i:]) for i in range(k + 1)]
-b = [n // (3 * 2**i) - n // (6 * 2**i) for i in range(k + 1)]
-d = [n // 2**i - n // (3 * 2**i) for i in range(k + 1)]
+b = [n // (3 * 2 ** i) - n // (6 * 2 ** i) for i in range(k + 1)]
+d = [n // 2 ** i - n // (3 * 2 ** i) for i in range(k + 1)]
 facs = [1] * (n + 1)
 for i in range(2, n + 1):
-    facs[i] = (i * facs[i - 1]) % p
-if n < 3 * (2**(k - 1)):
+    facs[i] = i * facs[i - 1] % p
+if n < 3 * 2 ** (k - 1):
     start = k
 else:
     start = 0

@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-h, v = input(), input()
+(n, m) = map(int, input().split())
+(h, v) = (input(), input())
 if h[0] == '<' and v[0] == '^':
     print('NO')
 elif h[0] == '>' and v[0] == 'v':

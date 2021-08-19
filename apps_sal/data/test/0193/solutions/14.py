@@ -1,9 +1,9 @@
 import sys
-A, B, C, D = [int(i) for i in sys.stdin.read().split()]
+(A, B, C, D) = [int(i) for i in sys.stdin.read().split()]
 if A * D - B * C == 0:
     result = 0
 else:
-    result = float("inf")
+    result = float('inf')
     for sa in [-1, 1]:
         for sb in [-1, 1]:
             for sc in [-1, 1]:

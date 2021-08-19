@@ -13,15 +13,13 @@ def solve():
             if RH in setCand:
                 return True
         return False
-
-    ng, ok = N // 2 + 1, 0
+    (ng, ok) = (N // 2 + 1, 0)
     while abs(ok - ng) > 1:
         mid = (ng + ok) // 2
         if isOK(mid):
             ok = mid
         else:
             ng = mid
-
     print(ok)
 
 

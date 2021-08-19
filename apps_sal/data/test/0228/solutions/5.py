@@ -9,6 +9,6 @@ for x in a:
     if x == imin:
         cnt += 1
 if cnt <= n // 2:
-    print("Alice")
+    print('Alice')
 else:
-    print("Bob")
+    print('Bob')

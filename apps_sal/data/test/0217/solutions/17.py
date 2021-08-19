@@ -1,11 +1,10 @@
 def main():
-    a, b, f, k = list(map(int, input().split()))
+    (a, b, f, k) = list(map(int, input().split()))
     fuels = 0
     trips = 0
     pos = 0
     move = 1
     gas = b
-
     while trips < k:
         if gas < 0:
             print(-1)
@@ -15,11 +14,11 @@ def main():
                 pos = f
                 gas -= f
             elif pos == f:
-                needed_gas = (a - f) if trips == k - 1 else 2 * (a - f)
+                needed_gas = a - f if trips == k - 1 else 2 * (a - f)
                 if gas < needed_gas:
                     gas = b
                     fuels += 1
-                gas -= (a - f)
+                gas -= a - f
                 pos = a
             elif pos == a:
                 trips += 1
@@ -41,8 +40,7 @@ def main():
                 gas -= f
             elif pos == a:
                 pos = f
-                gas -= (a - f)
-
+                gas -= a - f
     print(fuels)
 
 

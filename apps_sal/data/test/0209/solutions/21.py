@@ -1,6 +1,6 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 n = int(input())
-INF = 10**9 + 7
+INF = 10 ** 9 + 7
 if n == 1:
     print(x % INF)
 elif n == 2:

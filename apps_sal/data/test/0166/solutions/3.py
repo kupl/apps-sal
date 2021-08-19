@@ -7,7 +7,7 @@ def solve1():
     for i in range(n - 1):
         if abs(walk[i + 1] - walk[i]) != 1:
             return False
-    print("YES")
+    print('YES')
     print(MAXN, 1)
     return True
 
@@ -24,9 +24,9 @@ def solve2():
     if colum <= 0:
         return False
     for i in range(n - 1):
-        if abs(walk[i + 1] - walk[i]) == 1 and ((walk[i + 1] - 1) // colum != (walk[i] - 1) // colum):
+        if abs(walk[i + 1] - walk[i]) == 1 and (walk[i + 1] - 1) // colum != (walk[i] - 1) // colum:
             return False
-    print("YES")
+    print('YES')
     print(MAXN, colum)
     return True
 
@@ -36,4 +36,4 @@ if solve1():
 elif solve2():
     pass
 else:
-    print("NO")
+    print('NO')

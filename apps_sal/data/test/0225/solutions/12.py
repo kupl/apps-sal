@@ -1,13 +1,7 @@
 __author__ = 'Esfandiar'
-'''
-import sys
-input=sys.stdin.readline
-n = int(input())
-map(int,input().split())
-list(map(int,input().split()))
-'''
+'\nimport sys\ninput=sys.stdin.readline\nn = int(input())\nmap(int,input().split())\nlist(map(int,input().split()))\n'
 a = sorted(list(map(int, input().split())))
 if a[0] + a[-1] == a[1] + a[-2] or a[0] + a[1] + a[2] == a[3]:
-    print("YES")
+    print('YES')
 else:
     print('NO')

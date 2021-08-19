@@ -1,15 +1,11 @@
 M = 10 ** 9 + 7
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
-z, o = a.count(0), a.count(1)
+(z, o) = (a.count(0), a.count(1))
 d = pow(n * (n - 1) // 2, M - 2, M)
-
 if z > o:
-    o, z = z, o
+    (o, z) = (z, o)
     a = [1 - x for x in a][::-1]
-
 res = [[0] * (z + 1) for i in range(z + 1)]
 tf = [[0] * (z + 1) for i in range(z + 1)]
 for i in range(z + 1):
@@ -35,5 +31,4 @@ while k:
         res = mul(res, tf)
     tf = mul(tf, tf)
     k >>= 1
-
 print(res[-1][a[:z].count(0)])

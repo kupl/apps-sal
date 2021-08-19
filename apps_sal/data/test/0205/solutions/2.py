@@ -1,6 +1,6 @@
 def factorial_1(n: int):
     for i in range(2, n + 1):
-        if i > n**0.5:
+        if i > n ** 0.5:
             return n
         elif n % i == 0:
             return i
@@ -15,10 +15,10 @@ def factorial_2(n: int):
     return res
 
 
-n, k = map(int, input().split())
-f_k, x = factorial_2(k), float('inf')
-for key, val in f_k.items():
-    qua_f, pow_ = 0, key
+(n, k) = map(int, input().split())
+(f_k, x) = (factorial_2(k), float('inf'))
+for (key, val) in f_k.items():
+    (qua_f, pow_) = (0, key)
     while pow_ <= n:
         qua_f += n // pow_
         pow_ *= key

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = sum(b)
@@ -14,6 +14,6 @@ for i in range(n - c + 1):
         e = 1
         break
 if e == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

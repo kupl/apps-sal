@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = 1000000
 af = []
 for i in range(k + 1):

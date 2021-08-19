@@ -27,6 +27,6 @@ for i in range(1, n + 1):
             c = False
             break
 if c:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

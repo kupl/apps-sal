@@ -1,5 +1,5 @@
 import math
-p = 10**9 + 7
+p = 10 ** 9 + 7
 
 
 def prod(l):
@@ -10,21 +10,21 @@ def prod(l):
 
 
 n = int(input())
-a, k, x, t = [], int(math.log2(n)), n, 0
+(a, k, x, t) = ([], int(math.log2(n)), n, 0)
 while x > 0:
     a.append(x - x // 2)
     x //= 2
 c = [sum(a[i:]) for i in range(k + 1)]
-b = [n // (3 * 2**i) - n // (6 * 2**i) for i in range(k + 1)]
-d = [n // 2**i - n // (3 * 2**i) for i in range(k + 1)]
+b = [n // (3 * 2 ** i) - n // (6 * 2 ** i) for i in range(k + 1)]
+d = [n // 2 ** i - n // (3 * 2 ** i) for i in range(k + 1)]
 y = prod([i for i in range(2, n + 1)])
-s = k if n < 3 * (2**(k - 1)) else 0
+s = k if n < 3 * 2 ** (k - 1) else 0
 for j in range(s, k + 1):
     e = [a[i] for i in range(j)] + [d[j]] + [b[i] for i in range(j, k)]
-    x = (y * prod(e)) % p
+    x = y * prod(e) % p
     f = prod([sum(e[:i + 1]) for i in range(k + 1)])
     while f > 1:
         x *= p // f + 1
-        f = (f * (p // f + 1)) % p
+        f = f * (p // f + 1) % p
     t += x % p
 print(t % p)

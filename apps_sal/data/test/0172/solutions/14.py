@@ -1,13 +1,9 @@
 from sys import stdin, stdout
-
 n = int(stdin.readline())
-
 A = stdin.readline().rstrip().split()
 A = [int(num) for num in A]
-
 B = stdin.readline().rstrip().split()
 B = [int(num) for num in B]
-
 possible = True
 totSwaps = 0
 for i in range(1, 6):
@@ -16,7 +12,6 @@ for i in range(1, 6):
     else:
         possible = False
         break
-
 if not possible:
     print(-1)
 else:

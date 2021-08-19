@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = [n, m]
 r = [-1, -1]
 for i in range(n):

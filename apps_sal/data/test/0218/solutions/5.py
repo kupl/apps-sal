@@ -1,6 +1,6 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 s = input()
-k1, k2 = 0, 0
+(k1, k2) = (0, 0)
 for i in range(n + 1):
     for j in range(n + 1):
         if i * a + j * b == n:
@@ -11,15 +11,14 @@ for i in range(n + 1):
         break
 else:
     print('-1')
-
 if k1 or k2:
     print(k1 + k2)
     i = 0
     while k1:
-        print(s[i: i + a])
+        print(s[i:i + a])
         k1 -= 1
         i += a
     while k2:
-        print(s[i: i + b])
+        print(s[i:i + b])
         k2 -= 1
         i += b

@@ -1,4 +1,4 @@
-k, a, b = list(map(int, input().split()))
+(k, a, b) = list(map(int, input().split()))
 below_a = a // k
 below_b = b // k
 ans = below_b - below_a

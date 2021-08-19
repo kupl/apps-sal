@@ -12,12 +12,12 @@ for i in range(len(s)):
         p += 1
         c += 1
 if k < c:
-    print("Impossible")
-elif (not has_star) and (k > p):
-    print("Impossible")
+    print('Impossible')
+elif not has_star and k > p:
+    print('Impossible')
 else:
     signs_to_add = k - c
-    ans = ""
+    ans = ''
     for i in s:
         if signs_to_add == 0:
             if i not in ['*', '?']:

@@ -3,7 +3,6 @@ def doit():
     n = int(xx[0])
     s = int(xx[1])
     v = [int(k) for k in input().split()]
-
     S = sum(v)
     newS = S - s
     if newS < 0:

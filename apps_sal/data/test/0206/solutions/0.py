@@ -1,5 +1,5 @@
 import math
-m, a, b = map(int, input().split())
+(m, a, b) = map(int, input().split())
 g = math.gcd(a, b)
 a1 = a // g
 b1 = b // g
@@ -18,7 +18,7 @@ while dist != b1:
 tot = 0
 for i in range(a1 + b1):
     if i * g <= m and dists[i] * g <= m:
-        tot += (m + 1 - dists[i] * g)
+        tot += m + 1 - dists[i] * g
 if alls < m:
     mod = m % g
     times = m // g

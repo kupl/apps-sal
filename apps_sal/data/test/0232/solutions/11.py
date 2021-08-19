@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = []
@@ -8,9 +8,9 @@ for i in range(m):
 flag = 1
 for i in range(n - len(c) + 1):
     temp = a[i:i + len(c)]
-    if(sorted(temp) == sorted(c)):
-        print("YES")
+    if sorted(temp) == sorted(c):
+        print('YES')
         flag = 0
         break
 if flag:
-    print("NO")
+    print('NO')

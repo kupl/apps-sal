@@ -1,6 +1,5 @@
 def main():
-    n2, n3 = map(int, input().split())
-
+    (n2, n3) = map(int, input().split())
     nmax = 3 * max(n2, n3) * 2
     c2 = c3 = c6 = 0
     for n in range(1, nmax):

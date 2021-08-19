@@ -1,7 +1,7 @@
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 lo = 1
 hi = 1000000000
-while (lo < hi):
+while lo < hi:
     mid = (lo + hi) // 2
     x = mid // 2
     y = mid // 3

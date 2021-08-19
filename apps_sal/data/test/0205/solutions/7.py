@@ -1,5 +1,5 @@
 from math import sqrt
-n, b = [int(i) for i in input().split()]
+(n, b) = [int(i) for i in input().split()]
 
 
 def geg(n, k, l):

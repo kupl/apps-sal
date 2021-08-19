@@ -1,6 +1,5 @@
 from sys import stdin
 from collections import defaultdict
-
 n = int(input())
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]

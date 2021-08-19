@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 n10 = a
 n20 = b
 n21 = 0
@@ -15,9 +15,8 @@ for i in t:
             n21 -= 1
         else:
             ans += 1
+    elif n20:
+        n20 -= 1
     else:
-        if n20:
-            n20 -= 1
-        else:
-            ans += 2
+        ans += 2
 print(ans)

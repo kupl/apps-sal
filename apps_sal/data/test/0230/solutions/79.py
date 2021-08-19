@@ -3,7 +3,6 @@ n = int(input())
 s = list(map(ord, list(input())))
 for i in range(n):
     s[i] -= 97
-
 roli_mod = 1370757747362922367
 roli_r = randint(2, roli_mod - 2)
 roli = [0]
@@ -14,8 +13,12 @@ for i in range(n):
     roli_rr %= roli_mod
 
 
-def roli_hash(i, j): return ((roli[j + 1] - roli[i] + roli_mod) % roli_mod) * pow(roli_r, roli_mod - 1 - i, roli_mod) % roli_mod
-def roli_check(i1, j1, i2, j2): return roli_hash(i1, j1) == roli_hash(i2, j2)
+def roli_hash(i, j):
+    return (roli[j + 1] - roli[i] + roli_mod) % roli_mod * pow(roli_r, roli_mod - 1 - i, roli_mod) % roli_mod
+
+
+def roli_check(i1, j1, i2, j2):
+    return roli_hash(i1, j1) == roli_hash(i2, j2)
 
 
 ok = 0
