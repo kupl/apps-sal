@@ -6,20 +6,18 @@ Problem 595 B
 @author yamaton
 @date 2015-11-08
 """
-
 import itertools as it
 import functools
 import operator
 import collections
 import math
 import sys
-
 BASE = 1000000007
 
 
 def count(k, a, b):
-    x = count_multiples(a, 0, 10**k - 1)
-    y = count_multiples(a, b * 10**(k - 1), (b + 1) * 10**(k - 1) - 1)
+    x = count_multiples(a, 0, 10 ** k - 1)
+    y = count_multiples(a, b * 10 ** (k - 1), (b + 1) * 10 ** (k - 1) - 1)
     return x - y
 
 
@@ -33,7 +31,7 @@ def count_multiples(a, _from, _to):
 def solve(xs, ys, n, k):
     result = 1
     for (a, b) in zip(xs, ys):
-        result = (result * count(k, a, b)) % BASE
+        result = result * count(k, a, b) % BASE
     return result
 
 

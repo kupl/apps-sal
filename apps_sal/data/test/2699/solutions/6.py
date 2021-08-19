@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 ar = list(map(int, input().split()))
 for i in ar:

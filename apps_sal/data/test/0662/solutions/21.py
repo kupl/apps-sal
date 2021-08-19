@@ -1,5 +1,7 @@
 def main():
-    def read(): return tuple(map(int, input().split()))
+
+    def read():
+        return tuple(map(int, input().split()))
     n = read()[0]
     state = [1, 1, 0]
 
@@ -7,13 +9,12 @@ def main():
         for i in range(3):
             if i != x:
                 state[i] = 1 - state[i]
-    #print(n, state)
     for i in range(n):
         c = read()[0] - 1
         if state[c] == 0:
-            return "NO"
+            return 'NO'
         f(c, state)
-    return "YES"
+    return 'YES'
 
 
 print(main())

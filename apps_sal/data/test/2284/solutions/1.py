@@ -12,6 +12,7 @@ class Edge(object):
 
 
 class MCFP(list):
+
     def add(G, x, y, cap, cost):
         n = max(x, y) + 1
         while len(G) < n:
@@ -45,7 +46,7 @@ class MCFP(list):
             while x != src:
                 b.append(p[x])
                 x = p[x].x
-            z = min(e.cap for e in b)
+            z = min((e.cap for e in b))
             for e in b:
                 e.cap -= z
                 e.inv.cap += z
@@ -57,7 +58,7 @@ class MCFP(list):
                     d[i] = inf
             p[tgt] = None
             G.SPFA(src)
-        return flowVal, flowCost
+        return (flowVal, flowCost)
 
     def SPFA(G, src):
         inQ = G.inQ
@@ -91,11 +92,11 @@ sys.setrecursionlimit(3000)
 
 
 def main():
-    n, k = (next(ints) for i in range(2))
+    (n, k) = (next(ints) for i in range(2))
     a = [next(ints) for i in range(n)]
     b = [next(ints) for i in range(n)]
     G = MCFP()
-    src, tgt = 2 * n + 1, 2 * n + 2
+    (src, tgt) = (2 * n + 1, 2 * n + 2)
     for i in range(n):
         G.add(src, i, 1, 0)
         G.add(i, i + n, 1, a[i])
@@ -103,10 +104,9 @@ def main():
         if i + 1 < n:
             G.add(i, i + 1, n, 0)
             G.add(i + n, i + n + 1, n, 0)
-    flowVal, ans = G.solve(src, tgt, k)
+    (flowVal, ans) = G.solve(src, tgt, k)
     assert flowVal == k
     print(ans)
-    # print(G)
     return
 
 
@@ -115,11 +115,9 @@ def test(n, k):
     yield n
     yield k
     for i in range(n):
-        yield R.randint(1, 10**9)
+        yield R.randint(1, 10 ** 9)
     for i in range(n):
-        yield R.randint(1, 10**9)
-
-#ints=test(1000, 800)
+        yield R.randint(1, 10 ** 9)
 
 
 main()

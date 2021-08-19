@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = map(int, input().split())
-
 lt = dict()
 timer = 0
 for Id in a:
@@ -10,10 +9,8 @@ for Id in a:
     if cur_time <= timer - k:
         timer += 1
         lt[Id] = timer
-
 screen = list(lt.items())
-screen.sort(key=(lambda t: -t[1]))
-# print(screen)
+screen.sort(key=lambda t: -t[1])
 screen = screen[:min(n, k)]
 print(len(screen))
 for v in screen:

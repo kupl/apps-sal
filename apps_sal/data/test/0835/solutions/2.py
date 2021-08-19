@@ -1,7 +1,5 @@
-#import sys
-#sys.stdin = open('input.txt', 'r')
 s = input()
-B, S, C = 0, 0, 0
+(B, S, C) = (0, 0, 0)
 for i in s:
     if i == 'B':
         B += 1
@@ -9,8 +7,8 @@ for i in s:
         S += 1
     if i == 'C':
         C += 1
-a, b, c = list(map(int, input().split()))
-pa, pb, pc = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
+(pa, pb, pc) = list(map(int, input().split()))
 money = int(input())
 k = 0
 lbound = -1

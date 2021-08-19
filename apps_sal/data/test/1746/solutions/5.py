@@ -5,7 +5,6 @@ g = [[] for i in range(n)]
 for i in range(1, n):
     z = int(input()) - 1
     g[z].append(i)
-# print(g)
 b = True
 for el in g:
     if len(el) == 0:
@@ -16,6 +15,6 @@ for el in g:
     if z <= 2:
         b = False
 if b:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

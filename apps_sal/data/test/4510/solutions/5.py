@@ -2,12 +2,17 @@ import math
 from collections import deque, defaultdict
 from sys import stdin, stdout
 input = stdin.readline
-# print = stdout.write
-def listin(): return list(map(int, input().split()))
-def mapin(): return map(int, input().split())
 
 
-n, k = mapin()
+def listin():
+    return list(map(int, input().split()))
+
+
+def mapin():
+    return map(int, input().split())
+
+
+(n, k) = mapin()
 a = listin()
 s = set([])
 d = deque([])
@@ -16,11 +21,10 @@ for i in a:
         if i not in s:
             s.add(i)
             d.append(i)
-    else:
-        if i not in s:
-            s.remove(d.popleft())
-            d.append(i)
-            s.add(i)
+    elif i not in s:
+        s.remove(d.popleft())
+        d.append(i)
+        s.add(i)
 print(len(d))
 d = list(d)
 d.reverse()

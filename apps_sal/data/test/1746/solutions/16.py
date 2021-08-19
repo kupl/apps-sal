@@ -1,13 +1,9 @@
 def solve():
     n = int(input())
-    #l = [[]] * (n+1)
     l = [[] for i in range(n + 1)]
     for i in range(2, n + 1):
         a = int(input())
         l[a].append(i)
-        # print(l)
-
-    # print(l)
     for i in l:
         if len(i) != 0:
             leafCount = 0
@@ -15,9 +11,9 @@ def solve():
                 if len(l[j]) == 0:
                     leafCount += 1
             if leafCount < 3:
-                print("No")
+                print('No')
                 return
-    print("Yes")
+    print('Yes')
 
 
 solve()

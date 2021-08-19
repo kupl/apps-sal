@@ -1,9 +1,8 @@
-# @author
-
 import sys
 
 
 class AKeanuReeves:
+
     def solve(self):
         n = int(input())
         s = input()
@@ -17,5 +16,4 @@ class AKeanuReeves:
 
 solver = AKeanuReeves()
 input = sys.stdin.readline
-
 solver.solve()

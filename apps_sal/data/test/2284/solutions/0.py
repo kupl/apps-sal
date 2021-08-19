@@ -35,13 +35,13 @@ class MCFP(list):
     def solve(G, src, tgt, flowStop=float('inf')):
         n = len(G)
         flowVal = flowCost = 0
-        phi, prev, dist = [0] * n, [None] * n, [G.inf] * n
+        (phi, prev, dist) = ([0] * n, [None] * n, [G.inf] * n)
         for it in count():
             G.shortest(src, phi, prev, dist, tgt)
             if prev[tgt] == None:
                 break
             p = list(G.backward(tgt, src, prev))
-            z = min(e.cap for e in p)
+            z = min((e.cap for e in p))
             for e in p:
                 e.cap -= z
                 e.inv.cap += z
@@ -53,8 +53,7 @@ class MCFP(list):
                 if prev[i] != None:
                     phi[i] += dist[i]
                     dist[i] = G.inf
-        # print(it)
-        return flowVal, flowCost
+        return (flowVal, flowCost)
 
     def backward(G, x, src, prev):
         while x != src:
@@ -69,7 +68,7 @@ class MCFP(list):
         k = 0
         while Q:
             k += 1
-            d, x = heappop(Q)
+            (d, x) = heappop(Q)
             if dist[x] != d:
                 continue
             for e in G[x]:
@@ -120,7 +119,7 @@ class MCFP(list):
         k = 0
         while H:
             k += 1
-            d, x = heappop(H)
+            (d, x) = heappop(H)
             if dist[x] != d:
                 continue
             for e in G[x]:
@@ -140,11 +139,11 @@ sys.setrecursionlimit(3000)
 
 
 def main():
-    n, k = (next(ints) for i in range(2))
+    (n, k) = (next(ints) for i in range(2))
     a = [next(ints) for i in range(n)]
     b = [next(ints) for i in range(n)]
     G = MCFP()
-    src, tgt, the_src = 2 * n + 1, 2 * n + 2, 2 * n + 3
+    (src, tgt, the_src) = (2 * n + 1, 2 * n + 2, 2 * n + 3)
     G.add(the_src, src, k, 0)
     for i in range(n):
         G.add(src, i, 1, 0)
@@ -153,7 +152,7 @@ def main():
         if i + 1 < n:
             G.add(i, i + 1, n, 0)
             G.add(i + n, i + n + 1, n, 0)
-    flowVal, ans = G.solve(the_src, tgt, k)
+    (flowVal, ans) = G.solve(the_src, tgt, k)
     assert flowVal == k
     print(ans)
     return
@@ -164,11 +163,9 @@ def test(n, k):
     yield n
     yield k
     for i in range(n):
-        yield R.randint(1, 10**9)
+        yield R.randint(1, 10 ** 9)
     for i in range(n):
-        yield R.randint(1, 10**9)
-
-#ints=test(1000, 800)
+        yield R.randint(1, 10 ** 9)
 
 
 main()
