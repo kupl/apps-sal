@@ -1,5 +1,5 @@
 n = int(input())
-x1, x2 = list(map(int, input().split(" ")))
+(x1, x2) = list(map(int, input().split(' ')))
 
 
 def intercepts(k, b):
@@ -10,22 +10,18 @@ def intercepts(k, b):
 
 inter = []
 for i in range(n):
-    k, b = list(map(int, input().split(" ")))
+    (k, b) = list(map(int, input().split(' ')))
     inter += [intercepts(k, b)]
-
 inter.sort()
 right = []
-
 for i in range(n):
     intercept = inter[i]
     right += [intercept[1]]
-
 right2 = []
 for thing in right:
     right2 += [thing]
 right.sort()
-
 if right == right2:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

@@ -1,12 +1,9 @@
 def main():
     import sys
-
     tokens = [int(i) for i in sys.stdin.read().split()]
     tokens.reverse()
-
-    n, l, x, y = [tokens.pop() for i in range(4)]
+    (n, l, x, y) = [tokens.pop() for i in range(4)]
     marks = set(tokens)
-
     x_index = y_index = sum_index = sub_index1 = sub_index2 = -1
     for i in marks:
         if i + x in marks:
@@ -19,7 +16,6 @@ def main():
             sub_index1 = i - x
         if i + y - x in marks and i + y <= l:
             sub_index2 = i + y
-
     if x_index != -1 and y_index != -1:
         print(0)
     else:

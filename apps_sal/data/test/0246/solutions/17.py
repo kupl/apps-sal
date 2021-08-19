@@ -1,4 +1,4 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 
 
 def diff(m):
@@ -7,7 +7,7 @@ def diff(m):
 
 def digit_safe(k):
     r = len(list(str(k)))
-    return toint(["1"] + ["0"] * (r - 1))
+    return toint(['1'] + ['0'] * (r - 1))
 
 
 a = list(str(n))
@@ -16,25 +16,25 @@ d = int(a[0])
 
 
 def toint(l):
-    return int("".join(l))
+    return int(''.join(l))
 
 
 res = 0
 for i in range(d):
-    z = toint([str(i)] + ["0" for _ in range(len(a) - 1)])
-    z1 = toint([str(i + 1)] + ["0" for _ in range(len(a) - 1)])
+    z = toint([str(i)] + ['0' for _ in range(len(a) - 1)])
+    z1 = toint([str(i + 1)] + ['0' for _ in range(len(a) - 1)])
     count = diff(z)
     while z < z1 and count < s:
         z += digit_safe(s - count)
         count = diff(z)
     if z <= z1:
-        res += (z1 - z)
-z = toint([str(d)] + ["0" for _ in range(len(a) - 1)])
+        res += z1 - z
+z = toint([str(d)] + ['0' for _ in range(len(a) - 1)])
 z1 = n + 1
 count = diff(z)
 while z < z1 and count < s:
     z += digit_safe(s - count)
     count = diff(z)
 if z <= z1:
-    res += (z1 - z)
+    res += z1 - z
 print(res)

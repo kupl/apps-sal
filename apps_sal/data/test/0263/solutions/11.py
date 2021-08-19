@@ -6,8 +6,8 @@ for i in range(n):
 d1 = max(l)
 d2 = min(l)
 e = sum(l)
-r = (e + m)
-if (r % n == 0):
+r = e + m
+if r % n == 0:
     r1 = r // n
 else:
     r1 = r // n + 1

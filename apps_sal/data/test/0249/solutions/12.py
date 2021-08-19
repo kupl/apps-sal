@@ -1,7 +1,7 @@
 def main():
     from bisect import bisect_left
-    n, l, x, y = list(map(int, input().split()))
-    aa, d = list(map(int, input().split())), {}
+    (n, l, x, y) = list(map(int, input().split()))
+    (aa, d) = (list(map(int, input().split())), {})
     for z in (x, y, y + x):
         for a in aa:
             a += z
@@ -24,7 +24,7 @@ def main():
         elif y + x in d:
             res = [d[y + x] - y]
     else:
-        z, tmp = y - x, []
+        (z, tmp) = (y - x, [])
         for a in aa:
             a += z
             if a > l:

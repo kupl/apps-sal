@@ -1,4 +1,4 @@
-q, w = list(map(int, input().split()))
+(q, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 if (w > 8 * q) | (w > sum(a)):
     print(-1)

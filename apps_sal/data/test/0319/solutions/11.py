@@ -12,7 +12,7 @@ for i in range(s[1]):
             q += 1
     if q == 1:
         a[last] = True
-if all(x for x in a):
+if all((x for x in a)):
     print('NO')
 else:
     print('YES')

@@ -20,5 +20,4 @@ for x in a:
         else:
             state = 1
             res += 2
-
 print(res)

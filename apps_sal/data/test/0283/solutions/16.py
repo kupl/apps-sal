@@ -1,10 +1,7 @@
-
-
-isp = [True] * (10**6 + 8)
+isp = [True] * (10 ** 6 + 8)
 isp[0] = isp[1] = False
-
 i = 2
-N = 10**6 + 7
+N = 10 ** 6 + 7
 while i * i <= N:
     if isp[i]:
         for j in range(i * i, N + 1, i):

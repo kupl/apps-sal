@@ -20,14 +20,11 @@ def read(bit, idx):
 
 n = int(input())
 arr = [list(map(int, input().split())) for _ in range(n)]
-arr = [r * r * h for r, h in arr]
-
+arr = [r * r * h for (r, h) in arr]
 arr2 = sorted(list(set(arr)))
 n2 = len(arr2)
 bit = [0] * (n2 + 1)
-
 for v in arr:
     idx = bisect(arr2, v)
     update(bit, n2, idx, read(bit, idx - 1) + v)
-
 print(pi * max(bit))

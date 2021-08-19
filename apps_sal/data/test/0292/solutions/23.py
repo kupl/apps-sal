@@ -5,32 +5,29 @@ def n_of_nodes(h):
     return result
 
 
-h, n = tuple(map(int, input().split()))
-
-way = ""
+(h, n) = tuple(map(int, input().split()))
+way = ''
 t = h
 while t:
     if n % 2:
-        way = "L" + way
+        way = 'L' + way
         n //= 2
         n += 1
     else:
-        way = "R" + way
+        way = 'R' + way
         n //= 2
     t -= 1
-
 answer = 1
-current = "L"
+current = 'L'
 t = h
 for i in way:
     if i == current:
         answer += 1
-        if current == "L":
-            current = "R"
+        if current == 'L':
+            current = 'R'
         else:
-            current = "L"
+            current = 'L'
     else:
         answer += n_of_nodes(t) + 1
     t -= 1
-
 print(answer - 1)

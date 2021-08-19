@@ -1,4 +1,4 @@
-q, w = input().split()
+(q, w) = input().split()
 s = q[0]
 q = q[1:]
 while len(q) > 0:

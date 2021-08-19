@@ -10,7 +10,7 @@ def map_string():
     return input().split()
 
 
-n, k = map_input()
+(n, k) = map_input()
 a = list_input()
 cur = 0
 cnt = 1

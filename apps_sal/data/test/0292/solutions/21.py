@@ -1,7 +1,7 @@
-h, n = [int(_) for _ in input().split()]
+(h, n) = [int(_) for _ in input().split()]
 start = 1
 end = 2 ** h
-last = "l"
+last = 'l'
 ans = 0
 for i in range(h):
     mid = (start + end) // 2
@@ -19,5 +19,4 @@ for i in range(h):
             ans += 1
         else:
             ans += 2 ** (h - i)
-
 print(ans)

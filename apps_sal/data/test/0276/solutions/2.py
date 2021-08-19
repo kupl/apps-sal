@@ -1,4 +1,3 @@
-
 n = int(input())
 a = {'purple': 'Power', 'green': 'Time', 'blue': 'Space', 'orange': 'Soul', 'red': 'Reality', 'yellow': 'Mind'}
 for _ in range(n):

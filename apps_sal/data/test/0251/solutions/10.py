@@ -4,7 +4,7 @@ def cell(num):
     return num
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 hi = list(map(int, input().split()))
 hi.sort()
 num = 0

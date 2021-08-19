@@ -1,4 +1,4 @@
-u, v = list(map(int, input().split()))
+(u, v) = list(map(int, input().split()))
 if u > v:
     print(-1)
 elif u == v:
@@ -14,7 +14,7 @@ else:
     b = 0
     for i in reversed(list(range(65))):
         res = v - (a + b)
-        if u & (1 << i):
+        if u & 1 << i:
             continue
         if res >= 2 * (1 << i):
             a += 1 << i

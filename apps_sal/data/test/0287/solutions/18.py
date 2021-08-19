@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 if n == 1 or k == 0 or k == n:
     print(0, 0)
 elif n // k < 3:

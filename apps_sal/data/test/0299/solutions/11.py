@@ -11,10 +11,9 @@ for x in range(len(sa3)):
         biceps += sa3[x]
     else:
         back += sa3[x]
-
 if max(chest, back, biceps) == chest:
-    print("chest")
+    print('chest')
 if max(chest, back, biceps) == back:
-    print("back")
+    print('back')
 if max(chest, back, biceps) == biceps:
-    print("biceps")
+    print('biceps')

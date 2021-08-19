@@ -6,7 +6,7 @@ for i in range(n):
     b = int(t[1])
     L[i] = (a, b)
 if n <= 4:
-    print("YES")
+    print('YES')
 else:
     b0 = True
     b1 = True
@@ -34,6 +34,6 @@ else:
             if (L2[0][0] - L2[1][0]) * (L2[0][1] - L2[j][1]) != (L2[0][1] - L2[1][1]) * (L2[0][0] - L2[j][0]):
                 b2 = False
     if b0 or b1 or b2:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

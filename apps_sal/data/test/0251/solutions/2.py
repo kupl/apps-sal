@@ -1,10 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 h = list(map(int, input().split()))
-
 hs = {}
-
 mx = 0
-mn = 10**6
+mn = 10 ** 6
 for a in h:
     mx = max(mx, a)
     mn = min(mn, a)

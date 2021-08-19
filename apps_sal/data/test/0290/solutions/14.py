@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 sq = int(math.sqrt(n))
 dif = n - sq * sq

@@ -15,7 +15,7 @@ while k < m + 1:
     mem = k
     k += r
     r = 0
-if (mem - m != 0):
+if mem - m != 0:
     print(0)
 else:
     print(5)

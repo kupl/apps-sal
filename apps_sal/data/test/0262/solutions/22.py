@@ -3,7 +3,7 @@ arr = []
 nullRow = nullCol = 0
 for i in range(n):
     arr.append(list())
-    for j, x in enumerate(list(map(int, input().split()))):
+    for (j, x) in enumerate(list(map(int, input().split()))):
         arr[i].append(x)
         if x == 0:
             nullRow = i

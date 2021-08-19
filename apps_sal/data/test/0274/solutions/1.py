@@ -1,4 +1,5 @@
 class Screen:
+
     def __init__(self, n_rows):
         self.rows = [[] for _ in range(n_rows)]
         self.height = n_rows
@@ -55,7 +56,7 @@ def to_strings(seq, heights):
     screen = Screen(n_rows)
     cur_x = 0
     prev_par = None
-    for par, height in zip(seq, heights):
+    for (par, height) in zip(seq, heights):
         if par == '[':
             screen.draw_open(cur_x, height)
             cur_x += 1

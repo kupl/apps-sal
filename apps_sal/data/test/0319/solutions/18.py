@@ -2,7 +2,7 @@ def read():
     return list(map(int, input().split()))
 
 
-n, m = read()
+(n, m) = read()
 a = []
 for i in range(n):
     a.append(input())

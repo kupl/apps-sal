@@ -1,4 +1,4 @@
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 x = min(a, c, d)
 ans = x * 256
 a -= x

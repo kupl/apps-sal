@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ans = -1
 ca = 0
 cb = 0
@@ -12,5 +11,4 @@ for i in range(n):
     if k <= cb:
         ans = i + 1
         break
-
 print(ans)

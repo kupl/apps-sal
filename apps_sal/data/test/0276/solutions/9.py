@@ -1,5 +1,5 @@
 n = int(input())
-s = {'purple': "Power", "green": "Time", "blue": "Space", "orange": "Soul", "red": "Reality", "yellow": "Mind"}
+s = {'purple': 'Power', 'green': 'Time', 'blue': 'Space', 'orange': 'Soul', 'red': 'Reality', 'yellow': 'Mind'}
 for i in range(n):
     u = input()
     s.pop(u)

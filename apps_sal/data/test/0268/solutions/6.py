@@ -2,7 +2,7 @@ from bisect import bisect
 
 
 def main():
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     if k == 1:
         print('YES')
         return
@@ -21,6 +21,7 @@ def main():
         a = b + d
 
     def f(a):
+
         def dfs(i):
             avail[i] = False
             if i + k <= le:
@@ -30,7 +31,6 @@ def main():
                 for j in range(bisect(a, a[i] + d, i, -1), i + k - 1, -1):
                     if avail[j]:
                         dfs(j)
-
         le = len(a)
         avail = [True] * le
         try:
@@ -38,7 +38,6 @@ def main():
         except TabError:
             return True
         return False
-
     print(('NO', 'YES')[all(map(f, ll))])
 
 

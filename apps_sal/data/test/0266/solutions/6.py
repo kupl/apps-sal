@@ -18,5 +18,5 @@ def find(step):
     return res
 
 
-m, s = list(map(int, input().split()))
+(m, s) = list(map(int, input().split()))
 print(find(-1), find(1))

@@ -1,4 +1,4 @@
-h, n = input().split(' ')
+(h, n) = input().split(' ')
 h = int(h)
 n = int(n)
 s = 'l'

@@ -1,5 +1,5 @@
 from sys import stdin
-n, m = list(map(int, stdin.readline().strip().split()))
+(n, m) = list(map(int, stdin.readline().strip().split()))
 s = tuple(map(int, stdin.readline().strip().split()))
 ma = max(s)
 mi = min(s)

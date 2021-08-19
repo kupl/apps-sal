@@ -1,20 +1,18 @@
-colors = set("RGBY".split())
+colors = set('RGBY'.split())
 s = input()
-r, g, b, y = 0, 0, 0, 0
-R, G, B, Y = -1, -1, -1, -1
-
+(r, g, b, y) = (0, 0, 0, 0)
+(R, G, B, Y) = (-1, -1, -1, -1)
 for i in range(len(s)):
-    if s[i] == "R":
+    if s[i] == 'R':
         R = i % 4
-    elif s[i] == "G":
+    elif s[i] == 'G':
         G = i % 4
-    elif s[i] == "B":
+    elif s[i] == 'B':
         B = i % 4
     else:
         Y = i % 4
-
 for i in range(len(s)):
-    if s[i] == "!":
+    if s[i] == '!':
         if i % 4 == R:
             r += 1
         elif i % 4 == G:

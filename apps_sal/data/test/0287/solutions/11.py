@@ -1,4 +1,4 @@
-apartments_nr, neighbours_nr = (int(x) for x in input().split())
+(apartments_nr, neighbours_nr) = (int(x) for x in input().split())
 min_ans = int(apartments_nr != neighbours_nr)
 if neighbours_nr == 0:
     min_ans = 0

@@ -9,13 +9,13 @@ def ddist(a):
     return res
 
 
-n, m = list(map(int, input().split()))
-if (n == 0):
-    print("0 1")
-    print("0", m)
+(n, m) = list(map(int, input().split()))
+if n == 0:
+    print('0 1')
+    print('0', m)
     print(0, 0)
     print(0, m - 1)
-elif (m == 0):
+elif m == 0:
     print(1, 0)
     print(n, 0)
     print(0, 0)

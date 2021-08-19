@@ -8,9 +8,9 @@ def really_big(n, s):
         return 0
     i = s + 1
     while i <= n:
-        t, b = i, 0
+        (t, b) = (i, 0)
         while t > 0:
-            b = b + (t % 10)
+            b = b + t % 10
             t = t // 10
         if i - b >= s:
             return n - i + 1

@@ -3,7 +3,7 @@ n = int(input())
 secuencia = [None] * n
 maximo_to = -1
 for num in range(n):
-    r, h = (int(x) for x in input().strip().split())
+    (r, h) = (int(x) for x in input().strip().split())
     secuencia[num] = [r * r * h, num + 1]
 secuencia.reverse()
 secuencia.sort(key=lambda x: x[0])
@@ -15,7 +15,7 @@ def max_x(x, l):
     suma = 0
     while x != 0:
         suma = max(suma, l[x])
-        x -= (x & -x)
+        x -= x & -x
     return suma
 
 
@@ -25,7 +25,7 @@ def update_x(x, l, max_n, val):
             l[x] = val
         else:
             return
-        x += (x & -x)
+        x += x & -x
 
 
 for e in range(n):

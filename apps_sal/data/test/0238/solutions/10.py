@@ -7,7 +7,7 @@ def max_subarray(A):
 
 
 ans = 0
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 for i in range(m):
     li = a[0:i] + [-k]

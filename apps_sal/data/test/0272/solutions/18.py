@@ -1,5 +1,5 @@
-s1, s2 = input(), input()
-alph1, alph2 = [], set()
+(s1, s2) = (input(), input())
+(alph1, alph2) = ([], set())
 ans = 0
 for i in range(len(s1)):
     fff = [max(s1[i], s2[i]), min(s1[i], s2[i])]

@@ -12,14 +12,12 @@ def main():
                 return
             st_dict[s[i]] = t[i]
             st_dict[t[i]] = s[i]
-
     result = ''
     for i in range(len(t)):
         if t[i] in list(st_dict.keys()):
             result += st_dict[t[i]]
         else:
             result += t[i]
-
     if result == s:
         print(int(len(list(st_dict.keys())) / 2))
         for key in list(st_dict.keys()):

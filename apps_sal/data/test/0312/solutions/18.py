@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 if n != 1:
     if n % 2 == 0:
         if n // 2 >= m:

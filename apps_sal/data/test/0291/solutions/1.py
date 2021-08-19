@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 ans = 0
 while a <= b:
     a *= 3

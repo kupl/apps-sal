@@ -1,4 +1,5 @@
-class OneArithmetic():
+class OneArithmetic:
+
     def __init__(self, n):
         self.n = n
         self.m = [0] * 17

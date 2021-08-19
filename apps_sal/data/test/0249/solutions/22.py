@@ -1,8 +1,9 @@
-n, l, x, y = map(int, input().split())
+(n, l, x, y) = map(int, input().split())
 s = set(map(int, input().split()))
 
 
-def f(d): return any(i + d in s for i in s)
+def f(d):
+    return any((i + d in s for i in s))
 
 
 def g():

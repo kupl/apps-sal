@@ -1,5 +1,4 @@
 import sys
-
 readline = sys.stdin.readline
 MOD = 10 ** 9 + 7
 INF = float('INF')
@@ -7,31 +6,26 @@ sys.setrecursionlimit(10 ** 5)
 
 
 def main():
-    N, M = map(int, readline().split())
+    (N, M) = map(int, readline().split())
     W = list(map(int, readline().split()))
     w_max = max(W)
-
     mat = []
     for _ in range(M):
-        l, v = map(int, readline().split())
+        (l, v) = map(int, readline().split())
         if v < w_max:
             return print(-1)
         mat.append((l, v))
     from operator import itemgetter
-
     mat.sort(key=itemgetter(0), reverse=True)
     mat.sort(key=itemgetter(1))
-
     L = [0]
     V = [0]
     m = 0
-
     for i in range(M):
-        l, v = mat[i]
+        (l, v) = mat[i]
         m = max(m, l)
         L.append(m)
         V.append(v)
-
     from itertools import permutations
     import bisect
     ans = INF

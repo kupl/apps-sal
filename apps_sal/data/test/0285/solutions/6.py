@@ -1,12 +1,12 @@
 n = int(input())
 done = False
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 a += 1 / 4000000
 b -= 1 / 4000000
 lol = []
 wow = []
 for i in range(n):
-    k, c = map(int, input().split())
+    (k, c) = map(int, input().split())
     lol.append([k * a + c, i])
     wow.append([k * b + c, i])
 wow.sort()

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 if k == 0 or k == n:
     print(0, 0)
 else:
@@ -13,5 +13,5 @@ else:
             k -= 1
         elif m == 1:
             k -= 1
-        ans -= (k - c)
+        ans -= k - c
         print(1, ans)

@@ -1,7 +1,8 @@
-def split(): return list(map(int, input().split()))
+def split():
+    return list(map(int, input().split()))
 
 
-a, b = split()
+(a, b) = split()
 candies = split()
 p = q = 0
 for x in range(a):

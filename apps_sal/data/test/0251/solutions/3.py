@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 h = [int(i) for i in input().split()]
 h.sort()
 hh = h[0]

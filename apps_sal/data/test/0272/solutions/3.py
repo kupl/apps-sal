@@ -2,8 +2,8 @@ def chk(l1, l2, known_keys):
     if l1 not in known_keys and l2 not in known_keys:
         known_keys[l1] = l2
         known_keys[l2] = l1
-    elif (l1 in known_keys and known_keys[l1] != l2) or (l2 in known_keys and known_keys[l2] != l1):
-        raise ValueError("bad kbd")
+    elif l1 in known_keys and known_keys[l1] != l2 or (l2 in known_keys and known_keys[l2] != l1):
+        raise ValueError('bad kbd')
 
 
 def m():

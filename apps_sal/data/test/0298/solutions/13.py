@@ -1,5 +1,4 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 t = n // k
 if t % 2 == 1:
     print('YES')

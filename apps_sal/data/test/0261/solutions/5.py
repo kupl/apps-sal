@@ -1,24 +1,22 @@
 n = int(input())
 s = input()
-
-ans = "no"
+ans = 'no'
 for i in range(len(s)):
-    if(s[i] == '.'):
+    if s[i] == '.':
         continue
     for d in range(1, 100):
         cnt = 1
         j = i + d
-        while(cnt < 5):
-            if(j >= len(s)):
+        while cnt < 5:
+            if j >= len(s):
                 break
-            if(s[j] == '.'):
+            if s[j] == '.':
                 break
             cnt += 1
             j += d
-        if(cnt == 5):
-            ans = "yes"
+        if cnt == 5:
+            ans = 'yes'
             break
-    if(ans == "yes"):
+    if ans == 'yes':
         break
-
 print(ans)

@@ -1,5 +1,5 @@
-V1, V2 = list(map(int, input().split()))
-T, D = list(map(int, input().split()))
+(V1, V2) = list(map(int, input().split()))
+(T, D) = list(map(int, input().split()))
 Arr = [0] * 101
 Arr2 = [0] * 101
 for I in range(1, T + 1):

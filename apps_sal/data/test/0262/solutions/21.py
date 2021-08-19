@@ -1,4 +1,3 @@
-
 def main():
     n = int(input())
     matrix = []
@@ -20,19 +19,15 @@ def main():
                 continue
             except ValueError:
                 pass
-
         if s is None:
             s = sum(line)
-        else:
-            if s != sum(line):
-                return -1
-
+        elif s != sum(line):
+            return -1
     res = s - sum(matrix[row])
     if res < 1:
         return -1
     else:
         matrix[row][col] = res
-
     for i in range(n):
         t = 0
         for j in range(n):
@@ -46,7 +41,6 @@ def main():
         d2 += matrix[i][n - 1 - i]
     if d1 != s or d2 != s:
         return -1
-
     return res
 
 

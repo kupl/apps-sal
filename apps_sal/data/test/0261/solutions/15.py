@@ -7,7 +7,6 @@ def solve(level):
             c += 1
             k += l
         return c >= 4
-
     for i in range(level_size):
         if '*' == level[i]:
             for j in range(i + 1, level_size):

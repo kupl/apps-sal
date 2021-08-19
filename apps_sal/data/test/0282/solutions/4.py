@@ -7,7 +7,7 @@ count = 0
 pos = 1
 dk = d
 res = True
-while(pos != n):
+while pos != n:
     if dk == 0:
         res = False
         break
@@ -20,7 +20,6 @@ while(pos != n):
         dk = d
     else:
         dk -= 1
-
 if res:
     print(count)
 else:

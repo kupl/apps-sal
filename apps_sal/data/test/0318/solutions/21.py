@@ -4,7 +4,7 @@ m = int(ip[3] + ip[4])
 k = h * 60 + m
 n = int(input())
 k += n
-h1 = (k // 60) % 24
+h1 = k // 60 % 24
 m1 = k % 60
 if h1 < 10:
     h1 = '0' + str(h1)

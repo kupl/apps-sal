@@ -1,5 +1,5 @@
-h, n = list(map(int, input().split()))
-p = 1 << (h - 1)
+(h, n) = list(map(int, input().split()))
+p = 1 << h - 1
 i = r = 0
 n -= 1
 while h:

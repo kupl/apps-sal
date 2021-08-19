@@ -1,4 +1,4 @@
-a, b, c, d, e, f = [int(input())for _ in range(6)]
+(a, b, c, d, e, f) = [int(input()) for _ in range(6)]
 ans = 0
 if e > f:
     m = min(a, d)

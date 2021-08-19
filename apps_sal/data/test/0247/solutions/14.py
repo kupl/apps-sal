@@ -1,5 +1,4 @@
 n = int(input())
-
 lst = []
 for x in range(n):
     (a, b) = list(map(int, input().split()))
@@ -28,23 +27,21 @@ def check():
 
 
 flag = True
-
 if n >= 5:
     s1 = []
     s2 = []
     if not check():
-        lst[1], lst[s2[0]] = lst[s2[0]], lst[1]
+        (lst[1], lst[s2[0]]) = (lst[s2[0]], lst[1])
         x = s2[0]
         s1 = []
         s2 = []
         if not check():
-            lst[0], lst[s2[0]] = lst[s2[0]], lst[0]
+            (lst[0], lst[s2[0]]) = (lst[s2[0]], lst[0])
             s1 = []
             s2 = []
             if not check():
                 flag = False
-
 if flag:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

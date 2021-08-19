@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 tot = 0
 remain = 0
 i = 0

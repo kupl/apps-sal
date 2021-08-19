@@ -11,7 +11,7 @@ def find(i):
 
 def union(i, j):
     if rank[i] < rank[j]:
-        i, j = j, i
+        (i, j) = (j, i)
     elif rank[i] == rank[j]:
         rank[i] += 1
     p[j] = i
@@ -19,19 +19,17 @@ def union(i, j):
     return z[i]
 
 
-n, m, k = put()
+(n, m, k) = put()
 l = list(put())
-z, edge, p, rank = [0] * (n + 1), [], list(range(n + 1)), [0] * (n + 1)
-
+(z, edge, p, rank) = ([0] * (n + 1), [], list(range(n + 1)), [0] * (n + 1))
 for i in l:
     z[i] = 1
 for i in range(m):
-    u, v, w = put()
+    (u, v, w) = put()
     edge.append((w, u, v))
 edge.sort()
-
-for w, u, v in edge:
-    u, v = list(map(find, (u, v)))
+for (w, u, v) in edge:
+    (u, v) = list(map(find, (u, v)))
     if u != v:
         cnt = union(u, v)
         if cnt == k:

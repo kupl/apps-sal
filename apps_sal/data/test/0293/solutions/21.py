@@ -5,12 +5,12 @@ from collections import defaultdict
 
 def res(m, n):
     k = min(m, n)
-    return (1 + k) * (k + 2 * k**2 - 3 * k * (m + n) + 6 * m * n) // 6
+    return (1 + k) * (k + 2 * k ** 2 - 3 * k * (m + n) + 6 * m * n) // 6
 
 
 def powerset(iterable):
     s = list(iterable)
-    return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
+    return chain.from_iterable((combinations(s, r) for r in range(len(s) + 1)))
 
 
 def prod(it):
@@ -22,7 +22,7 @@ def prod(it):
 
 def factorGenerator(n):
     res = defaultdict(lambda: 0)
-    for p in range(2, 10**6 + 1):
+    for p in range(2, 10 ** 6 + 1):
         while n % p == 0:
             res[p] += 1
             n = n // p
@@ -34,7 +34,7 @@ def divisorGen(n):
     nfactors = len(factors)
     f = [0] * nfactors
     while True:
-        yield reduce(lambda x, y: x * y, [factors[x][0]**f[x] for x in range(nfactors)], 1)
+        yield reduce(lambda x, y: x * y, [factors[x][0] ** f[x] for x in range(nfactors)], 1)
         i = 0
         while True:
             f[i] += 1
@@ -69,8 +69,8 @@ def res2(x):
 
 x = int(input())
 r = res2(x)
-r = r + [(n, m) for m, n in r]
+r = r + [(n, m) for (m, n) in r]
 r = sorted(set(r))
 print(len(r))
 for (m, n) in r:
-    print("%d %d" % (m, n))
+    print('%d %d' % (m, n))

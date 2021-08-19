@@ -1,18 +1,7 @@
 n = int(input())
 a = []
-b = ["red",
-     "purple",
-     "yellow",
-     "orange",
-     "blue",
-     "green"]
-
-x = {"purple": "Power",
-     "blue": "Space",
-     "orange": "Soul",
-     "yellow": "Mind",
-     "green": "Time",
-     "red": "Reality", }
+b = ['red', 'purple', 'yellow', 'orange', 'blue', 'green']
+x = {'purple': 'Power', 'blue': 'Space', 'orange': 'Soul', 'yellow': 'Mind', 'green': 'Time', 'red': 'Reality'}
 for i in range(n):
     a.append(input())
 ans = []

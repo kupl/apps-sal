@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 d = [1, 1, 2, 6, 4]
 if a == 0:
     print(0 if b >= 5 else d[b])

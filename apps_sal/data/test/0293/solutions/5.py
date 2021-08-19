@@ -1,5 +1,5 @@
 n = int(input())
-i, t, s = [0] * 3
+(i, t, s) = [0] * 3
 r = []
 while 1 > 0:
     i += 1
@@ -13,8 +13,7 @@ while 1 > 0:
     r.append((i, m + i))
     if m > 0:
         r.append((m + i, i))
-
 print(len(r))
 r.sort()
-for m, n in r:
-    print("%d %d" % (m, n))
+for (m, n) in r:
+    print('%d %d' % (m, n))

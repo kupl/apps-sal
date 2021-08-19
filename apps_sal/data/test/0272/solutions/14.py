@@ -12,8 +12,6 @@ for i in range(0, len(t)):
         imp = True
         break
     d2[t[i]] = s[i]
-
-
 for e in d1:
     if d1.get(d1[e], '') != '' and d1.get(d1[e], '') != e:
         imp = True
@@ -24,7 +22,7 @@ else:
     swaps = []
     for e in d1:
         if d1[e] != d2[d1[e]]:
-            if not (d1[e], d2[d1[e]]) in swaps and not (d2[d1[e]], d1[e]) in swaps:
+            if not (d1[e], d2[d1[e]]) in swaps and (not (d2[d1[e]], d1[e]) in swaps):
                 swaps.append((d1[e], d2[d1[e]]))
     print(len(swaps))
     for e in swaps:

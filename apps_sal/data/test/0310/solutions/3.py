@@ -1,3 +1,2 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 print((k + n - 1) // n)

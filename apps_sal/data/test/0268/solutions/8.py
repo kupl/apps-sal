@@ -1,4 +1,4 @@
-n, k, d = list(map(int, input().split()))
+(n, k, d) = list(map(int, input().split()))
 a = sorted(list(map(int, input().split())))
 b = [0] * n
 i = j = 0

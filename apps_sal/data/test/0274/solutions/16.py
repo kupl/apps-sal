@@ -1,7 +1,7 @@
 def getHeight(s: str) -> int:
     h = maxh = 0
     for c in s:
-        h += (1 if c == '[' else -1)
+        h += 1 if c == '[' else -1
         maxh = max(h, maxh)
     return maxh
 
@@ -11,7 +11,7 @@ def makeColumn(height: int, maximumHeight: int) -> str:
     return half + half[-2::-1]
 
 
-n, s = int(input()), input()
+(n, s) = (int(input()), input())
 h = getHeight(s)
 ans = [makeColumn(h, h)]
 curh = h - 1
@@ -27,8 +27,7 @@ for i in range(1, n):
         curh -= 1
 for line in zip(*ans):
     for i in range(len(line)):
-        if ((i > 0 and line[i - 1] == '+')
-                or (i < len(line) - 1 and line[i + 1] == '+')) and line[i] == ' ':
+        if (i > 0 and line[i - 1] == '+' or (i < len(line) - 1 and line[i + 1] == '+')) and line[i] == ' ':
             print('-', end='')
         else:
             print(line[i], end='')

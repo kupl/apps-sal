@@ -1,8 +1,8 @@
-w1, w2 = list(map(int, input().split()))
-t, d = list(map(int, input().split()))
+(w1, w2) = list(map(int, input().split()))
+(t, d) = list(map(int, input().split()))
 a = [0] * t
 if w1 > w2:
-    w1, w2 = w2, w1
+    (w1, w2) = (w2, w1)
 a[t - 1] = w2
 a[0] = w1
 r = w1 + w2
@@ -21,5 +21,4 @@ for i in range(1, t - 1):
         r += a[i]
     else:
         r += a[i]
-
 print(r)

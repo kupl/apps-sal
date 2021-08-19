@@ -1,12 +1,9 @@
-
 n = int(input())
 a = [int(s) for s in input().split()]
 m = int(input())
 b = [int(s) for s in input().split()]
-
 a.sort()
 b.sort()
-
 i = 0
 j = 0
 count = 0
@@ -19,5 +16,4 @@ while i < n and j < m:
         i += 1
     else:
         j += 1
-
 print(count)

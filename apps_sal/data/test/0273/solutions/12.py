@@ -1,4 +1,4 @@
-name, fam = input().split()
+(name, fam) = input().split()
 ans = name[0]
 for ch in name[1:]:
     if ch < fam[0]:

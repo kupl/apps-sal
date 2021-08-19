@@ -1,4 +1,4 @@
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 bv = 0
 for ms in range(M):

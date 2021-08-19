@@ -6,7 +6,7 @@ for i in range(n):
         for d in range(1, n):
             begin = i
             for k in range(4):
-                if (begin + d) < n and arr[begin + d] == '*':
+                if begin + d < n and arr[begin + d] == '*':
                     begin += d
                 else:
                     break

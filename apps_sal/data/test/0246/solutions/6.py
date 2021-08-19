@@ -1,5 +1,4 @@
-n, s = map(int, input().split())
-
+(n, s) = map(int, input().split())
 ans = 0
 p = s
 for i in range(163):
@@ -8,8 +7,6 @@ for i in range(163):
         break
     if p >= s + sum(map(int, str(p))):
         ans += 1
-
 if p <= n:
     ans += n - p
-
 print(ans)

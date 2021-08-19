@@ -10,7 +10,7 @@ def li():
     return list(mi())
 
 
-n, k = mi()
+(n, k) = mi()
 h = li()
 m = max(h)
 f = [0] * (m + 1)
@@ -18,7 +18,6 @@ for hi in h:
     f[hi] += 1
 for i in range(m - 1, 0, -1):
     f[i] += f[i + 1]
-
 ans = 0
 i = m
 while i > 0:

@@ -2,7 +2,7 @@ n = int(input())
 a = sorted([int(x) for x in input().split()])
 m = int(input())
 b = sorted([int(x) for x in input().split()])
-i, j = 0, 0
+(i, j) = (0, 0)
 ans = 0
 while i < n and j < m:
     if abs(a[i] - b[j]) <= 1:

@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 if b - a > 12:
     print(0)
 else:

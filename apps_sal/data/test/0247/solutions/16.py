@@ -1,6 +1,9 @@
 n = int(input())
 p = [list(map(int, input().split())) for _ in range(n)]
-def f(a, b, c): return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
+
+
+def f(a, b, c):
+    return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
 
 
 def g(fi, se, p):
@@ -9,9 +12,8 @@ def g(fi, se, p):
         if f(fi, se, x):
             if len(q) < 2:
                 q.append(x)
-            else:
-                if f(q[0], q[1], x):
-                    return 1
+            elif f(q[0], q[1], x):
+                return 1
     return 0
 
 

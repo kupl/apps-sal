@@ -2,9 +2,10 @@ from itertools import dropwhile, chain
 
 
 def main():
-    def zeroes(a): return not a
-    a, b = [list(chain([0, 0], dropwhile(zeroes, list(map(int, input())))))
-            for _ in range(2)]
+
+    def zeroes(a):
+        return not a
+    (a, b) = [list(chain([0, 0], dropwhile(zeroes, list(map(int, input()))))) for _ in range(2)]
 
     def tofib(l):
         i = 0
@@ -16,10 +17,8 @@ def main():
                 i -= 3
             i += 1
         return l
-
     a = list(dropwhile(zeroes, tofib(a)))
     b = list(dropwhile(zeroes, tofib(b)))
-
     if len(a) < len(b):
         print('<')
         return

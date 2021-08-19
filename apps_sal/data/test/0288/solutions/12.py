@@ -3,7 +3,7 @@ def h(z):
     b = 1
     res = 1
     while True:
-        a, b = b, a + b + 1
+        (a, b) = (b, a + b + 1)
         if b >= z:
             break
         res += 1

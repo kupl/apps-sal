@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 A = list(map(int, input().split()))
 glans = 0
 for s in range(m):

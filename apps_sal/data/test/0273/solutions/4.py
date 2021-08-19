@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 n = len(a)
 m = len(b)
 names = []

@@ -3,7 +3,7 @@ from collections import defaultdict as dc
 
 def serch(a, b, x, y):
     for i in range(1, n):
-        if (b[a[i] - x - y]):
+        if b[a[i] - x - y]:
             return a[i] - y
         if b[a[i] - (y - x)] and a[i] + x <= l:
             return a[i] + x
@@ -12,7 +12,7 @@ def serch(a, b, x, y):
     return 0
 
 
-n, l, x, y = [int(i) for i in input().split()]
+(n, l, x, y) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 b = dc(int)
 b = dc(lambda: 0, b)

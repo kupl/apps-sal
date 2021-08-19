@@ -1,5 +1,5 @@
-a, b = map(int, input().split())
-if (b - a > 10):
+(a, b) = map(int, input().split())
+if b - a > 10:
     print(0)
 else:
     ans = 1

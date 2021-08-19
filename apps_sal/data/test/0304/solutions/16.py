@@ -1,12 +1,9 @@
 from collections import defaultdict
 from copy import deepcopy
-
 a = list(input())
-
 d = defaultdict(int)
 for x in a:
     d[int(x)] += 1
-
 fact_mem = {}
 
 

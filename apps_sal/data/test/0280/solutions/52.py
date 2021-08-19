@@ -9,7 +9,7 @@ def solve(n, www, lv):
         return -1
     lll = [0]
     vvv = [0]
-    for l, v in lv:
+    for (l, v) in lv:
         if v == vvv[-1]:
             lll[-1] = max(lll[-1], l)
         elif l > lll[-1]:
@@ -29,7 +29,7 @@ def solve(n, www, lv):
     return ans
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 www = list(map(int, input().split()))
 lv = [tuple(map(int, input().split())) for _ in range(m)]
 ans = solve(n, www, lv)

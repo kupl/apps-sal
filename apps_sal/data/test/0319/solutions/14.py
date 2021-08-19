@@ -9,7 +9,7 @@ for _ in range(n):
 for ai in a:
     if ai & (ai ^ was_twice):
         continue
-    print("YES")
+    print('YES')
     break
 else:
-    print("NO")
+    print('NO')

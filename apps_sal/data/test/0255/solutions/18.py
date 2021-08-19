@@ -1,8 +1,8 @@
 n = int(input())
-a = sorted(int(x) for x in input().split())
+a = sorted((int(x) for x in input().split()))
 m = int(input())
-b = sorted(int(x) for x in input().split())
-i, j, val = 0, 0, 0
+b = sorted((int(x) for x in input().split()))
+(i, j, val) = (0, 0, 0)
 while i < n and j < m:
     if a[i] < b[j] - 1:
         i += 1

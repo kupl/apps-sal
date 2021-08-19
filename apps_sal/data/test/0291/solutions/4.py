@@ -3,12 +3,12 @@ def inl():
     return l
 
 
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 l = 0
 while 1:
     x *= 3
     y *= 2
     l += 1
-    if(x > y):
+    if x > y:
         print(l)
         break

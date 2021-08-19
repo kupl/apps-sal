@@ -32,11 +32,11 @@ def do(s, d):
             if start + 1 == right:
                 blocks.append(empty(d))
             else:
-                inner = do(s[start + 1: right], d - 1)
+                inner = do(s[start + 1:right], d - 1)
                 covered = cover(inner)
                 blocks.append(covered)
             start = right + 1
-    res = ["" for _ in range(2 * d + 1)]
+    res = ['' for _ in range(2 * d + 1)]
     for block in blocks:
         for i in range(len(block)):
             res[i] += block[i]

@@ -5,13 +5,11 @@ def prime(x):
         return True
     if x % 2 == 0:
         return False
-
     for d in range(3, x, 2):
         if d * d > x:
             break
         if x % d == 0:
             return False
-
     return True
 
 
@@ -21,7 +19,6 @@ def main():
         if not prime(n * m + 1):
             ans = m
             break
-
     print(ans)
 
 

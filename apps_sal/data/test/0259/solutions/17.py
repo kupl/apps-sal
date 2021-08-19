@@ -1,7 +1,7 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 l = []
 for i in range(n):
-    s, d = map(int, input().split())
+    (s, d) = map(int, input().split())
     if s < t:
         if (t - s) % d == 0:
             q = (t - s) // d

@@ -1,10 +1,10 @@
 import sys
 sys.setrecursionlimit(300000)
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 edges = []
 for i in range(m):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     edges.append((c, a, b))
 edges.sort()
 tree = [i for i in range(n + 1)]
@@ -15,15 +15,15 @@ edgess = 0
 def q(x):
     if x != tree[x]:
         tree[x] = q(tree[x])
-    return(tree[x])
+    return tree[x]
 
 
-for w, u, v in edges:
+for (w, u, v) in edges:
     if edgess == n - 1:
         break
-    a, b = q(u), q(v)
+    (a, b) = (q(u), q(v))
     if a % 2 == 1:
-        a, b = b, a
+        (a, b) = (b, a)
     if a != b:
         tree[a] = b
         used.append((w, u, v))
@@ -31,7 +31,7 @@ for w, u, v in edges:
 neigh = []
 for i in range(n + 1):
     neigh.append([])
-for w, u, v in used:
+for (w, u, v) in used:
     neigh[u].append((v, w))
     neigh[v].append((u, w))
 layer = [x[0]]
@@ -44,7 +44,7 @@ while layer != []:
     for i in range(len(layer)):
         guy = layer[i]
         par = pars[i]
-        for v, w in neigh[guy]:
+        for (v, w) in neigh[guy]:
             if v != par:
                 dists[v] = max(dists[guy], w)
                 newlayer.append(v)
@@ -54,4 +54,4 @@ while layer != []:
 high = 0
 for guy in x:
     high = max(high, dists[guy])
-print((str(high) + " ") * k)
+print((str(high) + ' ') * k)

@@ -1,4 +1,4 @@
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 m = min(a, c, d)
 a -= m
 c -= m

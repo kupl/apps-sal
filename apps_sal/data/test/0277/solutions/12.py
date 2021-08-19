@@ -1,5 +1,4 @@
-n, a, b = list(map(int, input().split()))
-
+(n, a, b) = list(map(int, input().split()))
 a -= 1
 b -= 1
 ans = 0
@@ -9,8 +8,7 @@ for i in range(8):
         ans = i + 1
         break
     temp *= 2
-
 if temp == n:
-    print("Final!")
+    print('Final!')
 else:
     print(ans)

@@ -17,7 +17,7 @@ else:
                 q = s[i] + t[i]
             else:
                 q = t[i] + s[i]
-            if not (q in p):
+            if not q in p:
                 for j in range(k):
                     if (s[i] in p[j]) != (t[i] in p[j]):
                         print(-1)

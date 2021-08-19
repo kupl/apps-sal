@@ -1,18 +1,18 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 f = [0] * 500000
 
 
 def POW(a, b):
-    if(b == 0):
+    if b == 0:
         return 1
-    if(b & 1):
-        return POW(a, b // 2)**2 * a % mod
+    if b & 1:
+        return POW(a, b // 2) ** 2 * a % mod
     else:
-        return POW(a, b // 2)**2
+        return POW(a, b // 2) ** 2
 
 
 def C(n, m):
-    if(m > n):
+    if m > n:
         return 0
     t = f[n] * POW(f[m], mod - 2) % mod * POW(f[n - m], mod - 2) % mod
     return t
@@ -21,8 +21,7 @@ def C(n, m):
 f[0] = 1
 for i in range(1, 500000):
     f[i] = f[i - 1] * i % mod
-a, b, k, t = list(map(int, input().split(' ')))
-
+(a, b, k, t) = list(map(int, input().split(' ')))
 ans = 0
 for i in range(0, 2 * t + 1):
     t1 = POW(-1, i) * C(2 * t, i) % mod

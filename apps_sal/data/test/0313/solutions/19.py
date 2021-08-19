@@ -8,7 +8,7 @@ for l in lessons:
         home = True
     elif l == '1':
         cnt += 1
-        if prev == '0' and not home:
+        if prev == '0' and (not home):
             cnt += 1
         home = False
     prev = l

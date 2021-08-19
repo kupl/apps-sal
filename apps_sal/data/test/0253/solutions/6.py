@@ -3,8 +3,7 @@ import sys
 
 
 def f():
-    a, b, c = sorted(map(int, input().split()))
-
+    (a, b, c) = sorted(map(int, input().split()))
     x1 = 0
     for x2 in range(100):
         for x3 in range(100):

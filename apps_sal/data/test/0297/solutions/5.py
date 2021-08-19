@@ -1,14 +1,14 @@
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 if n * m * 2 % k:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     g1 = gcd(n, k)
     n //= g1
     k //= g1

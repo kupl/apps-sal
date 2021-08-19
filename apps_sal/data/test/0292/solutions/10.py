@@ -8,12 +8,10 @@ def command_gen():
 
 
 def solve():
-    h, n = [int(x) for x in input().split()]
-
+    (h, n) = [int(x) for x in input().split()]
     leaves = 2 ** h
-
     path = []
-    left, right = 1, leaves
+    (left, right) = (1, leaves)
     for i in range(h):
         middle = (left + right) // 2
         if n <= middle:
@@ -22,18 +20,15 @@ def solve():
         else:
             path.append('R')
             left = middle + 1
-
     command = command_gen()
     sum = 0
     hi = h
     for p in path:
         cmd = next(command)
-
         if p != cmd:
             sum += 2 ** hi - 1
             next(command)
         hi -= 1
-
     sum += len(path)
     print(sum)
 

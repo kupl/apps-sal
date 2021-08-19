@@ -3,9 +3,10 @@ readline = sys.stdin.readline
 
 
 class Segtree:
+
     def __init__(self, A, intv, initialize=True, segf=max):
         self.N = len(A)
-        self.N0 = 2**(self.N - 1).bit_length()
+        self.N0 = 2 ** (self.N - 1).bit_length()
         self.intv = intv
         self.segf = segf
         if initialize:
@@ -23,7 +24,7 @@ class Segtree:
             self.data[k] = self.segf(self.data[2 * k], self.data[2 * k + 1])
 
     def query(self, l, r):
-        L, R = l + self.N0, r + self.N0
+        (L, R) = (l + self.N0, r + self.N0)
         s = self.intv
         while L < R:
             if R & 1:
@@ -37,8 +38,8 @@ class Segtree:
         return s
 
     def binsearch(self, l, r, check, reverse=False):
-        L, R = l + self.N0, r + self.N0
-        SL, SR = [], []
+        (L, R) = (l + self.N0, r + self.N0)
+        (SL, SR) = ([], [])
         while L < R:
             if R & 1:
                 R -= 1
@@ -48,9 +49,8 @@ class Segtree:
                 L += 1
             L >>= 1
             R >>= 1
-
         if reverse:
-            for idx in (SR + SL[::-1]):
+            for idx in SR + SL[::-1]:
                 if check(self.data[idx]):
                     break
             else:
@@ -62,7 +62,7 @@ class Segtree:
                     idx = 2 * idx
             return idx - self.N0
         else:
-            for idx in (SL + SR[::-1]):
+            for idx in SL + SR[::-1]:
                 if check(self.data[idx]):
                     break
             else:
@@ -75,7 +75,7 @@ class Segtree:
             return idx - self.N0
 
 
-N, K, D = list(map(int, readline().split()))
+(N, K, D) = list(map(int, readline().split()))
 A = list(map(int, readline().split()))
 A.sort()
 lm = [None] * N
@@ -90,7 +90,6 @@ for i in range(N):
         else:
             ng = med
     lm[i] = ok
-
 T = Segtree([None] * (N + 1), 0, initialize=False, segf=max)
 T.update(0, 1)
 for i in range(N):
@@ -99,5 +98,4 @@ for i in range(N):
         continue
     if T.query(lm[i], rm):
         T.update(i + 1, 1)
-
 print('YES' if T.query(N, N + 1) else 'NO')

@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [list(map(int, list(input()))) for _ in range(n)]
-
-ans = "NO"
+ans = 'NO'
 cnt = [0 for _ in range(m)]
 for i in range(n):
     for j in range(m):
@@ -13,6 +12,6 @@ for i in range(n):
             ok = False
             break
     if ok:
-        ans = "YES"
+        ans = 'YES'
         break
 print(ans)

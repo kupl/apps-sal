@@ -1,7 +1,7 @@
 n = int(input().split()[0])
 ps = []
 for i in range(n):
-    a, b = [int(x) for x in input().split()[:2]]
+    (a, b) = [int(x) for x in input().split()[:2]]
     ps.append([a, b])
 
 
@@ -37,14 +37,12 @@ def nm():
     if len(left) == 0:
         print('YES')
         return
-
     l = [i for i in range(n)]
     left = left_fun(1, 2, l)
     left = left_fun(0, 1, left)
     if len(left) == 0:
         print('YES')
         return
-
     l = [i for i in range(n)]
     left = left_fun(0, 2, l)
     left = left_fun(0, 1, left)

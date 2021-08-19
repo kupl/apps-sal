@@ -1,7 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 st = [list(map(int, input().split())) for i in range(M)]
 way = [[] for i in range(N)]
-for s, t in st:
+for (s, t) in st:
     way[s - 1].append(t - 1)
 dp = [0] * N
 dp_reducable = [0] * N
@@ -30,4 +30,4 @@ for i in range(N - 1, -1, -1):
     l = len(way[i])
     for j in way[i]:
         pr[j] += pr[i] / l
-print(dp[0] - max(p * r for p, r in zip(pr, dp_reducable)))
+print(dp[0] - max((p * r for (p, r) in zip(pr, dp_reducable))))

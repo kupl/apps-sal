@@ -1,9 +1,7 @@
 a = input()
 b = input()
-
 symbols = {}
 pairs = []
-
 for i in range(len(a)):
     if a[i] in symbols:
         if symbols[a[i]] != b[i]:

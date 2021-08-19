@@ -1,8 +1,6 @@
 line = input().split()
-
 h = int(line[0])
 n = int(line[1])
-
 last = 1
 th = 2 ** h
 ans = 1
@@ -25,5 +23,4 @@ while th > 0:
         last = 1
         l = mid + 1
     th = th // 2
-
 print(str(ans - 2))

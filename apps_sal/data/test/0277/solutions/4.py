@@ -1,6 +1,5 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 cnt = 1
-
 a += a % 2
 b += b % 2
 while a != b:

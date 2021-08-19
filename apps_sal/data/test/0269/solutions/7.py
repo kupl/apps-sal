@@ -11,7 +11,6 @@ for j in range(len(a)):
     if a[j] == 'R':
         ind1 = j % 4
     if a[j] == 'B':
-
         ind2 = j % 4
     if a[j] == 'Y':
         ind3 = j % 4

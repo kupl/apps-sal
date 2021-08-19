@@ -1,11 +1,4 @@
-mp = {
-    'purple': 'Power',
-    'green': 'Time',
-    'blue': 'Space',
-    'orange': 'Soul',
-    'red': 'Reality',
-    'yellow': 'Mind',
-}
+mp = {'purple': 'Power', 'green': 'Time', 'blue': 'Space', 'orange': 'Soul', 'red': 'Reality', 'yellow': 'Mind'}
 n = int(input())
 L = ['Power', 'Time', 'Space', 'Soul', 'Reality', 'Mind']
 for _ in range(n):

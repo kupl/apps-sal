@@ -14,14 +14,14 @@ def cmp(x1=[], x2=[]):
 
 def add(x1=[], x2=[]):
     if not cmp(x1, x2):
-        x1, x2 = x2, x1
+        (x1, x2) = (x2, x1)
     len1 = len(x1)
     len2 = len(x2)
     for i in range(len1 - len2):
         x2.append(0)
     res = []
     flag = 0
-    for n1, n2 in zip(x1, x2):
+    for (n1, n2) in zip(x1, x2):
         m = n1 + n2 + flag
         flag = m // 10
         res.append(m % 10)
@@ -32,19 +32,18 @@ def add(x1=[], x2=[]):
 
 def minus(x1=[], x2=[]):
     if not cmp(x1, x2):
-        x1, x2 = x2, x1
+        (x1, x2) = (x2, x1)
     len1 = len(x1)
     len2 = len(x2)
     for i in range(len1 - len2):
         x2.append(0)
     res = []
     flag = 0
-    for n1, n2 in zip(x1, x2):
+    for (n1, n2) in zip(x1, x2):
         m = n1 - n2 + flag
         flag = 0 if m >= 0 else -1
         res.append((m + 10) % 10)
-
-    while res and not res[-1]:
+    while res and (not res[-1]):
         res.pop()
     return res
 
@@ -60,7 +59,7 @@ def div(x1=[], x2=9):
             res.append((n + mod * 10) // 9)
             mod = (n + mod * 10) % 9
     res.reverse()
-    while res and not res[-1]:
+    while res and (not res[-1]):
         res.pop()
     return res
 
@@ -76,12 +75,11 @@ def multi(x1=[], x2=9):
 
 def __starting_point():
     input_str = input()
-    n, s = [a for a in input_str.split()]
+    (n, s) = [a for a in input_str.split()]
     nl = list([int(a) for a in list(n)])
     sl = list([int(a) for a in list(s)])
     nl.reverse()
     sl.reverse()
-
     x = multi(div(add(sl.copy(), [8]), 9), 9)
     y = multi(div(add(x.copy(), [9]), 10), 10)
     sumy = list([int(a) for a in list(str(sum(y)))])
@@ -90,14 +88,13 @@ def __starting_point():
         y = add(y, [0, 1])
         sumy = list([int(a) for a in list(str(sum(y)))])
         sumy.reverse()
-
     if cmp(nl, y):
         ans = add(minus(nl, y), [1])
     else:
         ans = [0]
     ans.reverse()
     ansstr = [str(a) for a in ans]
-    print("".join(ansstr))
+    print(''.join(ansstr))
 
 
 __starting_point()

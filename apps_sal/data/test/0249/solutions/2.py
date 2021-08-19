@@ -1,4 +1,4 @@
-n, l, x, y = list(map(int, input().split()))
+(n, l, x, y) = list(map(int, input().split()))
 a = set(map(int, input().split()))
 ok1 = ok2 = ok3 = False
 for c in a:
@@ -20,7 +20,7 @@ for c in a:
         mark = c - x
 if ok1 and ok2:
     print(0)
-elif (not ok1) and (not ok2):
+elif not ok1 and (not ok2):
     if ok3:
         print(1)
         print(mark)

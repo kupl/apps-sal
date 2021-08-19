@@ -1,9 +1,9 @@
 def f(q1, q2, k1, k2):
     res1 = res2 = 0
-    res1 += ((q1 + 1) // 2) * k1
-    res1 += (q1 // 2) * k2
-    res2 += (q2 // 2) * k2
-    res2 += ((q2 + 1) // 2) * k1
+    res1 += (q1 + 1) // 2 * k1
+    res1 += q1 // 2 * k2
+    res2 += q2 // 2 * k2
+    res2 += (q2 + 1) // 2 * k1
     return [res1, res2]
 
 

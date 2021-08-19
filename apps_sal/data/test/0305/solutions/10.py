@@ -4,7 +4,6 @@ c = int(input())
 d = int(input())
 e = int(input())
 f = int(input())
-
 if e > f:
     ans = e * min(a, d)
     d -= min(a, d)

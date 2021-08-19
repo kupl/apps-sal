@@ -1,5 +1,5 @@
 n = int(input())
-l, r = 0, n * 5
+(l, r) = (0, n * 5)
 
 
 def kil(a):

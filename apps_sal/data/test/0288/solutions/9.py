@@ -12,7 +12,7 @@ else:
             print(count)
             break
         else:
-            oldans, ans = ans, ans + oldans
+            (oldans, ans) = (ans, ans + oldans)
             count += 1
     if b == 0:
         print(count - 1)

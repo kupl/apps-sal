@@ -3,6 +3,7 @@ def f(l, i):
 
 
 class CodeforcesTask325ASolution:
+
     def __init__(self):
         self.result = ''
         self.n = 0
@@ -11,16 +12,16 @@ class CodeforcesTask325ASolution:
     def read_input(self):
         self.n = int(input())
         for _ in range(self.n):
-            self.rectangles.append([int(x) for x in input().split(" ")])
+            self.rectangles.append([int(x) for x in input().split(' ')])
 
     def process_task(self):
         cords = [f([x[i] for x in self.rectangles], i) for i in range(4)]
         fields = [(x[3] - x[1]) * (x[2] - x[0]) for x in self.rectangles]
         ff = sum(fields)
         if ff == (cords[3] - cords[1]) * (cords[2] - cords[0]) and cords[3] - cords[1] == cords[2] - cords[0]:
-            self.result = "YES"
+            self.result = 'YES'
         else:
-            self.result = "NO"
+            self.result = 'NO'
 
     def get_result(self):
         return self.result

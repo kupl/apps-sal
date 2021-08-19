@@ -1,8 +1,6 @@
-v1, v2 = list(map(int, input().split()))
-t, d = list(map(int, input().split()))
-
+(v1, v2) = list(map(int, input().split()))
+(t, d) = list(map(int, input().split()))
 dst = v1
-
 for i in range(2, t + 1):
     for x in range(d):
         if abs(v1 + 1 - v2) <= d * (t - i):
@@ -13,5 +11,4 @@ for i in range(2, t + 1):
             else:
                 v1 += 1
     dst += v1
-
 print(dst)
