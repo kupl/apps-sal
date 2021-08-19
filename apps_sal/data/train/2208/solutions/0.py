@@ -1,17 +1,25 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
 import math
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -35,8 +43,6 @@ def LSR(n):
 sys.setrecursionlimit(1000000)
 mod = 1000000007
 
-# A
-
 
 def A():
     n = I()
@@ -46,7 +52,7 @@ def A():
     p = 0
     ans = 0
     while p < n:
-        while p < n and not f[p]:
+        while p < n and (not f[p]):
             p += 1
         if p == n:
             break
@@ -57,8 +63,6 @@ def A():
     print(ans)
     return
 
-# B
-
 
 def B():
     n = I()
@@ -67,7 +71,7 @@ def B():
     ans = sum(s)
     for t in range(30000):
         for i in range(n):
-            ai, bi = g[i]
+            (ai, bi) = g[i]
             if t < bi:
                 continue
             if (t - bi) % ai == 0:
@@ -77,8 +81,6 @@ def B():
             ans = su
     print(ans)
     return
-
-# C
 
 
 def C():
@@ -100,15 +102,14 @@ def C():
         p = [q[i] for i in range(len(q))]
         p.sort()
         if p == q:
-            print(*ans, sep="")
+            print(*ans, sep='')
         else:
-            print("-")
+            print('-')
     return
-
-# D
 
 
 def D():
+
     def root(x):
         if x == par[x]:
             return x
@@ -124,12 +125,11 @@ def D():
             par[y] = x
             if rank[x] == rank[y]:
                 rank[x] += 1
-
-    n, k = LI()
+    (n, k) = LI()
     par = [i for i in range(n)]
     rank = [0] * n
     for i in range(k):
-        x, y = LI()
+        (x, y) = LI()
         x -= 1
         y -= 1
         if root(x) != root(y):
@@ -144,35 +144,21 @@ def D():
     print(k - ans)
     return
 
-# E
-
 
 def E():
-
     return
-
-# F
 
 
 def F():
-
     return
-
-# G
 
 
 def G():
-
     return
-
-# H
 
 
 def H():
-
     return
-
-# Solve
 
 
 def __starting_point():

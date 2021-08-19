@@ -1,9 +1,10 @@
 from sys import stdin
 from math import cos, sin, radians
 import math
-def inp(): return stdin.readline().strip()
 
-# [int(x) for x in inp().split()]
+
+def inp():
+    return stdin.readline().strip()
 
 
 def diagonal(x):
@@ -13,5 +14,4 @@ def diagonal(x):
 t = int(inp())
 for _ in range(t):
     n = int(inp())
-    # f = (diagonal(2*n)**2)**(1/2)
     print(diagonal(2 * n))

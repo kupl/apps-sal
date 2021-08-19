@@ -1,17 +1,7 @@
 class Solution:
-    def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
-        #         fMax = [A[0]]
-        #         for num in A[1:]:
-        #             fMax.append(max(fMax[-1], num))
-        aLen = len(A)
-#         bMax = [num for num in A]
-#         for i in range(aLen-2, -1, -1):
-#             bMax[i] = max(bMax[i], bMax[i+1])
 
-#         ans = 0
-#         for i in range(aLen-1):
-#             ans = max(ans, (i+1)*fMax[i] + (aLen-i-1)*bMax[i+1])
-#         return ans
+    def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
+        aLen = len(A)
         dp = {}
 
         def helper(i0):

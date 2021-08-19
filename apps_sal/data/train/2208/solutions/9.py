@@ -1,5 +1,5 @@
 import sys
-n, k = [int(i) for i in sys.stdin.readline().split()]
+(n, k) = [int(i) for i in sys.stdin.readline().split()]
 gwl = []
 for i in range(n + 1):
     gwl.append([])
@@ -9,21 +9,16 @@ for kk in range(k):
     gwl[d[0]].append(kk)
     gwl[d[1]].append(kk)
     data.append(d)
-
 one = set()
 two = set(range(k))
 sn = [1] * (n + 1)
 doub = [1] * k
 ans = 0
-
-
 while True:
-    # print(one, two)
     if one:
         ans += 1
         q = one.pop()
         d = data[q]
-        # print(q, d)
         if sn[d[0]]:
             sn[d[0]] = 0
             for oth in gwl[d[0]]:
@@ -47,7 +42,6 @@ while True:
         q = two.pop()
         doub[q] = 0
         d = data[q]
-        # print(q, d)
         for w in range(2):
             sn[d[w]] = 0
             for oth in gwl[d[w]]:
