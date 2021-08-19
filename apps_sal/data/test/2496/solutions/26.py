@@ -1,23 +1,11 @@
-# -*- coding: utf-8 -*-
 """
 Created on Fri Sep 18 00:26:07 2020
 
 @author: liang
 """
-
-"""
-コーナーケース１:
-    重複があるとき　not coprime(※これが誤り)
-    ただし、1の重複は除く
-
-コーナーケース:
-    重複があるとき　pairwise coprime ではない
-    setwise coprimeの可能性はある
-    ただし、１の重複は
-"""
 import math
-C = 10**6
-#T = int(math.sqrt(C)*10**3)+1
+'\nコーナーケース１:\n    重複があるとき\u3000not coprime(※これが誤り)\n    ただし、1の重複は除く\n\nコーナーケース:\n    重複があるとき\u3000pairwise coprime ではない\n    setwise coprimeの可能性はある\n    ただし、１の重複は\n'
+C = 10 ** 6
 N = int(input())
 judge = [0] + [False] * C
 A = list()
@@ -29,12 +17,9 @@ for a in input().split():
     A.append(int(a))
 d = [False] + [True] * C
 
-# print(judge[:10])
-
 
 def solve(f):
     flag = True
-    # エラトステネスの篩 O(N log N)
     for i in range(2, C + 1):
         count = 0
         if d[i] == True:
@@ -47,18 +32,14 @@ def solve(f):
                 d[j] = False
         if not flag:
             break
-
     if flag == True and f == True:
-        return "pairwise coprime"
+        return 'pairwise coprime'
     ans = A[0]
-    # 線形探索 O(N)
     for i in range(N):
         ans = math.gcd(ans, A[i])
-    # print("ans",a)
     if ans == 1:
-        return "setwise coprime"
-    return "not coprime"
+        return 'setwise coprime'
+    return 'not coprime'
 
 
-print((solve(f)))
-# print(len(A))
+print(solve(f))

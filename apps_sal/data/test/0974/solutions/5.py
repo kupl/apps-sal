@@ -1,19 +1,13 @@
 from collections import deque
 import sys
-
 n = int(input())
-
 q = deque([])
 toBe = 1
 ans = 0
-
 flag = 0
-
 inp = [0] * (n * 2)
-
 for i in range(2 * n):
     inp[i] = sys.stdin.readline().strip()
-
 for i in range(2 * n):
     s = inp[i].split()
     if len(s) == 2:
@@ -24,17 +18,13 @@ for i in range(2 * n):
         if k != q[-2] - 1:
             flag = 0
     else:
-        #print(toBe, flag, ans)
         if q and toBe != q[-1]:
-            #print(q, toBe, ans)
             flag = 1
             ans += 1
             q = []
+        elif flag == 1:
+            q = []
         else:
-            if flag == 1:
-                q = []
-            else:
-                q.pop()
+            q.pop()
         toBe += 1
-
-sys.stdout.write(str(ans) + "\n")
+sys.stdout.write(str(ans) + '\n')

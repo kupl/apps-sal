@@ -1,6 +1,5 @@
 import decimal
 from decimal import Decimal
-
 pi = Decimal('3.14159265358979323846264338327950288419716939937510')
 decimal.getcontext().prec = 40
 
@@ -20,7 +19,7 @@ def cos(x):
 
     """
     decimal.getcontext().prec += 2
-    i, lasts, s, fact, num, sign = 0, 0, 1, 1, 1, 1
+    (i, lasts, s, fact, num, sign) = (0, 0, 1, 1, 1, 1)
     while s != lasts:
         lasts = s
         i += 2
@@ -47,7 +46,7 @@ def sin(x):
 
     """
     decimal.getcontext().prec += 2
-    i, lasts, s, fact, num, sign = 1, 0, x, 1, x, 1
+    (i, lasts, s, fact, num, sign) = (1, 0, x, 1, x, 1)
     while s != lasts:
         lasts = s
         i += 2
@@ -60,10 +59,9 @@ def sin(x):
 
 
 def acos(x):
-    # binary search
+
     def f(xx):
         return cos(xx) - x
-
     a = 0
     b = pi
     xx = (a + b) / 2
@@ -75,8 +73,6 @@ def acos(x):
             b = xx
         xx = (a + b) / 2
         fxx = f(xx)
-        # print (xx, fxx)
-    # print (f"diff {xx-rel(x)}")
     return xx
 
 
@@ -90,11 +86,9 @@ def part(ra, rb, d2):
     return part_a + part_b
 
 
-x1, y1, r1 = list(map(int, input().split()))
-x2, y2, r2 = list(map(int, input().split()))
+(x1, y1, r1) = list(map(int, input().split()))
+(x2, y2, r2) = list(map(int, input().split()))
 dist2 = (x1 - x2) ** 2 + (y1 - y2) ** 2
-
-
 if dist2 > (r1 + r2) ** 2:
     print(0)
 elif dist2 <= (r1 - r2) ** 2:

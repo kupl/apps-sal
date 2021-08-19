@@ -1,21 +1,16 @@
 N = int(input())
 A = list(map(int, input().split()))
-
-
-# number_to_prime[i]: i の最小の素因数, iが素数ならば0
-number_to_prime = [0] * (10**6 + 1)
-
-# preprocess
-for i in range(2, 10**6 + 1):
+number_to_prime = [0] * (10 ** 6 + 1)
+for i in range(2, 10 ** 6 + 1):
     if not number_to_prime[i]:
         j = 1
-        while j * i <= 10**6:
+        while j * i <= 10 ** 6:
             number_to_prime[j * i] = i
             j += 1
 
 
 def is_pairwise():
-    used_primes = [False] * (10**6 + 1)
+    used_primes = [False] * (10 ** 6 + 1)
     pairwise_flag = 1
     for a in A:
         curr_primes = set()
@@ -32,13 +27,12 @@ def is_pairwise():
 def is_setwise(*A):
     import math
     from functools import reduce
-
     return reduce(math.gcd, A) == 1
 
 
 if is_pairwise():
-    print("pairwise coprime")
+    print('pairwise coprime')
 elif is_setwise(*A):
-    print("setwise coprime")
+    print('setwise coprime')
 else:
-    print("not coprime")
+    print('not coprime')

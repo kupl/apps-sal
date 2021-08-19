@@ -7,7 +7,7 @@ def check():
             k += 1
             mx = max(mx, i)
             mn = min(mn, i)
-    if (mx - mn <= 1 and mas.count(mx) == 1) or (mn == 1 and k == 1 + mas.count(mx)) or (mn == mx == 1):
+    if mx - mn <= 1 and mas.count(mx) == 1 or (mn == 1 and k == 1 + mas.count(mx)) or mn == mx == 1:
         return True
     return False
 
@@ -19,7 +19,5 @@ ans = 0
 for i in range(n):
     mas[l[i] - 1] += 1
     if check():
-        # print(i)
-        # print('check')
         ans = i
 print(ans + 1)

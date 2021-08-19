@@ -1,5 +1,5 @@
-x1, y1, x2, y2 = map(int, input().split())
-if x1 != x2 and y1 != y2 and abs(x2 - x1) != abs(y2 - y1):  # lishnii 2 usl
+(x1, y1, x2, y2) = map(int, input().split())
+if x1 != x2 and y1 != y2 and (abs(x2 - x1) != abs(y2 - y1)):
     print(-1)
 else:
     if abs(x2 - x1) == abs(y2 - y1):

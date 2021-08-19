@@ -54,12 +54,10 @@ def numberOfFactors(n):
 
 
 def divisors(n):
-    return set(reduce(list.__add__,
-                      ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+    return set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
 
 
 def calc(m, n):
-    # Calculate number of integers in [1, m] coprime to n
     s = 0
     for d in sorted(list(set(divisors(n)))):
         s += mu(d) * (m // d)
@@ -68,8 +66,6 @@ def calc(m, n):
 
 n = int(input())
 for _ in range(n):
-    a, m = list(map(int, input().split()))
+    (a, m) = list(map(int, input().split()))
     g = gcd(a, m)
-    # print (calc(a, m))
     print(calc((m + a - 1) // g, m // g) - calc((a - 1) // g, m // g))
-    # print (sum(gcd(a, m) == gcd(a + x, m) for x in range(m)))

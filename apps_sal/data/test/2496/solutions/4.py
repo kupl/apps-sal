@@ -1,4 +1,3 @@
-# 高速素因数分解  osa_k法
 from functools import reduce
 from bisect import bisect_left
 import sys
@@ -12,21 +11,16 @@ def osa_k(a):
         a //= sieve[a]
     return tmp
 
-    # 初期入力
-input = sys.stdin.readline  # 文字列では使わない
+
+input = sys.stdin.readline
 N = int(input())
 A = list(map(int, input().split()))
 used = set()
-
-#not coprimeの判定
 gcd_a = reduce(math.gcd, A)
 if gcd_a != 1:
-    ans = "not coprime"
-
-# pairwise coprimeの判定
+    ans = 'not coprime'
 else:
-    MAXN = 10**6 + 10
-    # osa_k法
+    MAXN = 10 ** 6 + 10
     sieve = [i for i in range(MAXN + 1)]
     p = 2
     while p * p <= MAXN:
@@ -35,13 +29,11 @@ else:
                 if sieve[q] == q:
                     sieve[q] = p
         p += 1
-
-    ans = "pairwise coprime"
+    ans = 'pairwise coprime'
     for a in A:
         aa = osa_k(a)
         if used & aa:
-            ans = "setwise coprime"
-            break  # 共通要素があったらpair_wではない→set_w
+            ans = 'setwise coprime'
+            break
         used |= aa
-
 print(ans)

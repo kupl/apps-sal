@@ -1,15 +1,10 @@
 N = int(input())
 A = list(map(int, input().split()))
-
-
-# number_to_prime[i]: i の最小の素因数, iが素数ならば0
-number_to_prime = [0] * (10**6 + 1)
-
-# preprocess
-for i in range(2, 10**6 + 1):
+number_to_prime = [0] * (10 ** 6 + 1)
+for i in range(2, 10 ** 6 + 1):
     if not number_to_prime[i]:
         j = 1
-        while j * i <= 10**6:
+        while j * i <= 10 ** 6:
             number_to_prime[j * i] = i
             j += 1
 
@@ -23,7 +18,6 @@ def is_pair_copr(A):
             continue
         div_p[p::p] = p
     used = np.zeros(U, np.bool_)
-
     for x in A:
         while x > 1:
             p = div_p[x]
@@ -55,13 +49,12 @@ def is_pairwise():
 def is_setwise(*A):
     import math
     from functools import reduce
-
     return reduce(math.gcd, A) == 1
 
 
 if is_pair_copr(A):
-    print("pairwise coprime")
+    print('pairwise coprime')
 elif is_setwise(*A):
-    print("setwise coprime")
+    print('setwise coprime')
 else:
-    print("not coprime")
+    print('not coprime')
