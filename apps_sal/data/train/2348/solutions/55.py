@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import bisect
 
 
@@ -20,20 +19,16 @@ def dist(tree, tree_i, tree_j, parent, a, b):
 
 
 def solve(n, x, l, q, qry):
-
     g = [[] for _ in range(n)]
     parent = [-1] * n
     weight = [1] * n
-
     for v in range(1, n):
         p = bisect.bisect_left(x, x[v] - l)
         g[p].append(v)
         parent[v] = p
-
     for v in range(n - 1, -1, -1):
         for w in g[v]:
             weight[v] += weight[w]
-
     tree = [[0]]
     tree_i = [-1] * n
     tree_j = [0] * n
@@ -54,12 +49,11 @@ def solve(n, x, l, q, qry):
                 if w != c:
                     tree.append([w])
                     tree_i[w] = len(tree) - 1
-
     for tpl in qry:
-        a, b = tpl
+        (a, b) = tpl
         if b < a:
-            a, b = b, a
-        print((dist(tree, tree_i, tree_j, parent, a, b)))
+            (a, b) = (b, a)
+        print(dist(tree, tree_i, tree_j, parent, a, b))
 
 
 def main():
@@ -72,11 +66,10 @@ def main():
     q = int(q)
     qry = []
     for _ in range(q):
-        a, b = input().split()
+        (a, b) = input().split()
         a = int(a) - 1
         b = int(b) - 1
         qry.append((a, b))
-
     solve(n, x, l, q, qry)
 
 

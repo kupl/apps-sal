@@ -1,7 +1,6 @@
 from bisect import bisect_left, bisect
 import sys
-sys.setrecursionlimit(10 ** 6)  # 変更
-
+sys.setrecursionlimit(10 ** 6)
 n = int(input())
 x = list(map(int, input().split()))
 L = int(input())
@@ -17,12 +16,11 @@ for i in range(t - 1):
         kar[j] = S[S[j]]
     kprv.append(kar)
     S = kar
-
 q = int(input())
 for _ in range(q):
-    a, b = map(lambda x: int(x) - 1, input().split())
+    (a, b) = map(lambda x: int(x) - 1, input().split())
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     lef = 0
     rig = n - 1
     while rig - lef > 1:
@@ -30,7 +28,7 @@ for _ in range(q):
         p = mid.bit_length()
         now = a
         for i in range(p):
-            if (mid >> i) & 1 == 1:
+            if mid >> i & 1 == 1:
                 now = kprv[i][now]
         if now >= b:
             rig = mid

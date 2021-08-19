@@ -1,4 +1,3 @@
-#!usr/bin/env python3
 from collections import defaultdict
 from collections import deque
 from heapq import heappush, heappop
@@ -6,10 +5,22 @@ import sys
 import math
 import bisect
 import random
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def I(): return int(sys.stdin.readline())
-def LS(): return list(map(list, sys.stdin.readline().split()))
-def S(): return list(sys.stdin.readline())[:-1]
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return list(map(list, sys.stdin.readline().split()))
+
+
+def S():
+    return list(sys.stdin.readline())[:-1]
 
 
 def IR(n):
@@ -42,19 +53,13 @@ def LSR(n):
 
 mod = 1000000007
 
-# A
-
 
 def A():
     return
 
-# B
-
 
 def B():
     return
-
-# C
 
 
 def C():
@@ -80,8 +85,8 @@ def C():
             f[i][j + 1] = f[f[i][j]][j]
     q = I()
     for i in range(q):
-        a, b = LI()
-        a, b = [min(a, b) - 1, max(a, b) - 1]
+        (a, b) = LI()
+        (a, b) = [min(a, b) - 1, max(a, b) - 1]
         ans = 0
         while a < b:
             i = bisect.bisect_left(f[a], b)
@@ -89,37 +94,25 @@ def C():
             a = f[a][max(0, i - 1)]
         print(ans)
 
-# D
-
 
 def D():
     return
-
-# E
 
 
 def E():
     return
 
-# F
-
 
 def F():
     return
-
-# G
 
 
 def G():
     return
 
-# H
-
 
 def H():
     return
-
-# Solve
 
 
 def __starting_point():

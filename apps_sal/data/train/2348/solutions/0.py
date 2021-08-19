@@ -5,8 +5,6 @@ L = int(input())
 
 def one_step(i):
     goal = X[i] + L
-
-    # find largest j s.t. X[j] <= X[i] + L
     low = 0
     high = N
     while high - low > 1:
@@ -15,7 +13,6 @@ def one_step(i):
             low = mid
         else:
             high = mid
-
     return low
 
 
@@ -34,8 +31,7 @@ for _ in range(NUM_LAYERS):
 
 def query(a, b):
     if a > b:
-        a, b = b, a
-
+        (a, b) = (b, a)
     ans = 0
     while a < b:
         ind = 0
@@ -48,7 +44,7 @@ def query(a, b):
 
 Q = int(input())
 for _ in range(Q):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     print(query(a, b))

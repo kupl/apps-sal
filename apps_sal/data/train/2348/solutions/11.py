@@ -30,29 +30,35 @@ def examE():
 
     def fast_day(a, b):
         if a > b:
-            a, b = b, a
+            (a, b) = (b, a)
         res = 0
         for i in range(n):
             if a >= b:
                 return res
             c = max(0, bisect.bisect_left(dp[a], b) - 1)
-            # 最低かかる2**?の日数
             a = dp[a][c]
-            # そこまで行く
             res += 2 ** c
     for _ in range(Q):
-        a, b = list(map(int, input().split()))
-        print((fast_day(a - 1, b - 1)))
-#    print(dp)
+        (a, b) = list(map(int, input().split()))
+        print(fast_day(a - 1, b - 1))
 
 
-def I(): return int(sys.stdin.readline())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LS(): return sys.stdin.readline().split()
-def S(): return sys.stdin.readline().strip()
+def I():
+    return int(sys.stdin.readline())
 
 
-mod = 10**9 + 7
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def S():
+    return sys.stdin.readline().strip()
+
+
+mod = 10 ** 9 + 7
 inf = float('inf')
-
 examE()

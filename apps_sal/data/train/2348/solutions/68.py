@@ -64,24 +64,24 @@ def GI(V, E, Directed=False, index=0):
             inp[0] -= 1
             inp[1] -= 1
         if len(inp) == 2:
-            a, b = inp
+            (a, b) = inp
             g[a].append(b)
             if not Directed:
                 g[b].append(a)
         elif len(inp) == 3:
-            a, b, c = inp
+            (a, b, c) = inp
             aa = (inp[0], inp[2])
             bb = (inp[1], inp[2])
             g[a].append(bb)
             if not Directed:
                 g[b].append(aa)
-    return g, org_inp
+    return (g, org_inp)
 
 
 def bit_combination(k, n=2):
     rt = []
-    for tb in range(n**k):
-        s = [tb // (n**bt) % n for bt in range(k)]
+    for tb in range(n ** k):
+        s = [tb // n ** bt % n for bt in range(k)]
         rt += [s]
     return rt
 
@@ -92,59 +92,51 @@ def show(*inp, end='\n'):
 
 
 YN = ['Yes', 'No']
-mo = 10**9 + 7
+mo = 10 ** 9 + 7
 inf = float('inf')
 l_alp = string.ascii_lowercase
 u_alp = string.ascii_uppercase
 ts = time.time()
-# sys.setrecursionlimit(10**5)
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def ran_input():
     import random
     n = random.randint(4, 16)
-    rmin, rmax = 1, 10
+    (rmin, rmax) = (1, 10)
     a = [random.randint(rmin, rmax) for _ in range(n)]
-    return n, a
+    return (n, a)
 
 
 show_flg = False
 show_flg = True
-
 ans = 0
-
 n = I()
 m = n.bit_length()
 x = LI()
 L = I()
 q = I()
-
 r = [0] * n
-
-
 for i in range(n):
     r[i] = bisect.bisect(x, x[i] + L) - 1
-
 nb = [r]
 nx = [0] * n
-
 for k in range(m):
     nx = [0] * n
     for i in range(n):
         nx[i] = r[r[i]]
     nb.append(nx)
     r = nx
-
 for _ in range(q):
-    a, b = LI_()
+    (a, b) = LI_()
     if a > b:
-        a, b = b, a
-
+        (a, b) = (b, a)
     t = 0
     for p in range(m, -1, -1):
         if nb[p][a] < b:
             t += 1 << p
             a = nb[p][a]
-
     print(t + 1)

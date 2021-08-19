@@ -1,17 +1,16 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
-    a, d, k, n, inc = list(map(int, input().split()))
-    if(n % k == 0):
+    (a, d, k, n, inc) = list(map(int, input().split()))
+    if n % k == 0:
         c = n // k
     else:
         c = n // k + 1
-    while(c > 0):
+    while c > 0:
         s = a + (k - 1) * d
         d = d + inc
         a = s + d
         c = c - 1
-    if(n % k == 0):
+    if n % k == 0:
         print(s)
     else:
         r = n % k

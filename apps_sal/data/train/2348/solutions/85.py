@@ -1,11 +1,8 @@
 from bisect import bisect
-
 n = int(input())
 x = list(map(int, input().split()))
 l = int(input())
 q = int(input())
-
-# r[i][j]: jから(2**i)日で行ける右端
 r = [[i for i in range(n)] for _ in range(18)]
 for j in range(n):
     r[0][j] = bisect(x, x[j] + l) - 1
@@ -29,5 +26,5 @@ def search(x, y):
 
 
 for _ in range(q):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     print(search(min(a, b) - 1, max(a, b) - 1))

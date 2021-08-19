@@ -5,10 +5,10 @@ def input():
     return sys.stdin.readline()[:-1]
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 L = []
 for i in range(N):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     L.append((r - l + 1, l, r + 1))
 L.sort()
 
@@ -51,7 +51,6 @@ class BitImos:
         self.bit = Bit(n + 1)
 
     def add(self, s, t, x):
-        # [s, t)にxを加算
         self.bit.add(s, x)
         self.bit.add(t, -x)
 
@@ -59,7 +58,6 @@ class BitImos:
         return self[i]
 
     def __getitem__(self, key):
-        # 位置iの値を取得
         return self.bit.sum(key + 1)
 
 
@@ -69,7 +67,7 @@ a = N
 A = [0] * M
 for i in range(1, M + 1):
     while il < N:
-        ra, l, r = L[il]
+        (ra, l, r) = L[il]
         if i < ra:
             break
         il += 1
@@ -78,7 +76,5 @@ for i in range(1, M + 1):
     ans = 0
     for j in range(i, M + 1, i):
         ans += imos[j]
-
     A[i - 1] = ans + a
-
-print(*A, sep="\n")
+print(*A, sep='\n')

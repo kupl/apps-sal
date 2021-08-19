@@ -22,7 +22,6 @@ for j in range(len(e[i]) - 1):
     for i in range(N):
         x = e[i][j]
         e[i][j + 1] = e[x][j]
-# print(e)
 
 
 def doubling(u, v):
@@ -43,9 +42,9 @@ def doubling(u, v):
 
 Q = int(input())
 for _ in range(Q):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     if x > y:
-        x, y = y, x
-    print((doubling(x, y)))
+        (x, y) = (y, x)
+    print(doubling(x, y))

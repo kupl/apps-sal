@@ -27,7 +27,7 @@ def main():
             dpr[k][i] = dpr[k - 1][dpr[k - 1][i]]
     Q = int(input())
     for _ in range(Q):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         a -= 1
         b -= 1
         ans = 0
@@ -35,14 +35,13 @@ def main():
             for k in range(ln + 1)[::-1]:
                 if dpr[k][a] < b:
                     a = dpr[k][a]
-                    ans += 2**k
+                    ans += 2 ** k
         else:
-            # a > b
             for k in range(ln + 1)[::-1]:
                 if dpl[k][a] > b:
                     a = dpl[k][a]
-                    ans += 2**k
-        print((ans + 1))
+                    ans += 2 ** k
+        print(ans + 1)
 
 
 def __starting_point():
