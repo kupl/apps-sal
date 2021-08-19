@@ -1,4 +1,3 @@
-# cook your dish here
 a = int(input())
 for i in range(a):
     b = int(input())
@@ -11,11 +10,11 @@ for i in range(a):
         print(4, 2)
     else:
         for t in range(b + 1):
-            if ((b * t) + 1 - (2**t)) < 0:
+            if b * t + 1 - 2 ** t < 0:
                 li.append(t - 1)
                 break
         for o in range(b + 1):
-            if b <= 2**(o):
+            if b <= 2 ** o:
                 li.append(o)
                 break
         print(*li)

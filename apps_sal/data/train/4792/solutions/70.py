@@ -5,7 +5,7 @@ from operator import methodcaller
 
 def parse_float(string):
     if isinstance(string, list):
-        string = "".join(string)
+        string = ''.join(string)
     p = NumParser(string)
     res = p.parse_float()
     p.eof()
@@ -30,9 +30,8 @@ class Parser(object):
         self.failed = False
 
     def __repr__(self):
-        return f"{self.__class__.__name__}({self.string}, {self.failed})"
+        return f'{self.__class__.__name__}({self.string}, {self.failed})'
 
-    # primitive combinators
     def look(self):
         """Returns a copy of self (with new_parser.failed == True)
         For running a parser without affecting self
@@ -91,7 +90,6 @@ class Parser(object):
             return self.satisfy(lambda x: x.casefold() == character.casefold())
         return self.satisfy(character.__eq__)
 
-    # more complex calls
     def many(self, methodname, *args, **kwargs):
         """Will parse while predicate holds true
         Returns list of results of predicate
@@ -102,7 +100,7 @@ class Parser(object):
         while not self.failed:
             res = func(self)
             if self.failed:
-                self.failed = False  # can be dangerous if you don't know what previous state was?
+                self.failed = False
                 break
             results.append(res)
         return results
@@ -127,25 +125,25 @@ class NumParser(Parser):
         """Parses an integer
         If signed is True, allows a leading (-), otherwise it doesn't
         """
-        sign = -1 if signed and self.option("+", "char", "-") == "-" else 1
-        digits = self.many1("satisfy", str.isdigit)
+        sign = -1 if signed and self.option('+', 'char', '-') == '-' else 1
+        digits = self.many1('satisfy', str.isdigit)
         if self.failed:
             return None
-        return sign * int("".join(digits))
+        return sign * int(''.join(digits))
 
     def parse_float(self):
         """Parses floats"""
         intpart = self.parse_int()
-        if self.failed:  # need a failure check here because sign requires intpart to exist
+        if self.failed:
             return None
         sign = -1 if intpart < 0 else 1
-        self.option(None, "char", ".")
-        floatpart = self.option(["0"], "many1", "satisfy", str.isdigit)
-        floatpart = int("".join(floatpart)) / 10**(len(floatpart))
-        if self.option(None, "char", "e", insensitive=True) is not None:
+        self.option(None, 'char', '.')
+        floatpart = self.option(['0'], 'many1', 'satisfy', str.isdigit)
+        floatpart = int(''.join(floatpart)) / 10 ** len(floatpart)
+        if self.option(None, 'char', 'e', insensitive=True) is not None:
             exppart = self.parse_int()
         else:
             exppart = 0
         if self.failed:
             return None
-        return (intpart + sign * floatpart) * 10**exppart
+        return (intpart + sign * floatpart) * 10 ** exppart

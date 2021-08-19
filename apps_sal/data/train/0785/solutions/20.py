@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n = int(input())
@@ -11,7 +10,7 @@ while t:
     while A > x or x == 0:
         tmp = y
         A += n
-        x += 2**i
+        x += 2 ** i
         y = max(y, A - x)
         if y == tmp and d == 0:
             d = i

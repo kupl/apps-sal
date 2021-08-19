@@ -1,13 +1,12 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     a = int(input())
-    d_max, max_d = 1, 0
-    chef, friend = 0, 0
+    (d_max, max_d) = (1, 0)
+    (chef, friend) = (0, 0)
     max_sum = 0
     while 1:
         chef += a
-        friend += 2**(d_max - 1)
+        friend += 2 ** (d_max - 1)
         if chef - friend > max_sum:
             max_sum = chef - friend
             max_d = d_max

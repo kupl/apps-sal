@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     a = int(input())
@@ -8,7 +7,7 @@ while t > 0:
     i = 0
     d = 0
     ma = 0
-    while (True):
+    while True:
         ta += a
         gi += c
         c *= 2

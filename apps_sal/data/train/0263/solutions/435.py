@@ -8,26 +8,7 @@ def make_grid():
     return g
 
 
-MOVES = [
-    (2, 1),
-    (2, -1),
-    (1, 2),
-    (1, -2),
-    (-1, 2),
-    (-1, -2),
-    (-2, 1),
-    (-2, -1),
-]
-
-# def jump(grid):
-#     for i in range(4):
-#         for j in range(3):
-#             if grid[i][j] is not None:
-#                 for di, dj in MOVES:
-#                     ni = i+di
-#                     nj = j+dj
-#                     if (0 <= ni < 4) and (0 <= nj < 3) and (grid[ni][nj] is not None):
-#                         grid[ni][nj] += 1
+MOVES = [(2, 1), (2, -1), (1, 2), (1, -2), (-1, 2), (-1, -2), (-2, 1), (-2, -1)]
 
 
 def jump(grid):
@@ -36,31 +17,23 @@ def jump(grid):
         for j in range(3):
             if grid[i][j] is not None:
                 c = 0
-                for di, dj in MOVES:
+                for (di, dj) in MOVES:
                     ni = i + di
                     nj = j + dj
-                    if (0 <= ni < 4) and (0 <= nj < 3) and (grid[ni][nj] is not None):
-                        #grid[ni][nj] += 1
+                    if 0 <= ni < 4 and 0 <= nj < 3 and (grid[ni][nj] is not None):
                         c += grid[ni][nj]
                 new_grid[i][j] = c
     return new_grid
 
 
 class Solution:
+
     def knightDialer(self, n: int) -> int:
-
         grid = make_grid()
-        m = 10**9 + 7
-
+        m = 10 ** 9 + 7
         c = 0
         for _ in range(n - 1):
             grid = jump(grid)
             c += 10
-
         print(grid)
-
-        return sum([sum([c for c in row if c]) for row in grid]) % m  # - c
-        # for _ in range(n):
-        #    jump(grid)
-        #
-        # return reduce(list.__add__, [[c for c in row] for row in grid])
+        return sum([sum([c for c in row if c]) for row in grid]) % m

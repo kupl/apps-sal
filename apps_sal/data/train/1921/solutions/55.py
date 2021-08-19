@@ -2,7 +2,7 @@ class DinnerPlates:
 
     def __init__(self, capacity: int):
         self.c = capacity
-        self.l, self.r, self.cnt = 0, 0, 0
+        (self.l, self.r, self.cnt) = (0, 0, 0)
         self.dic = {}
         self.dic[0] = []
 
@@ -18,7 +18,7 @@ class DinnerPlates:
     def pop(self) -> int:
         if not self.cnt:
             return -1
-        while self.r >= 0 and not self.dic[self.r]:
+        while self.r >= 0 and (not self.dic[self.r]):
             self.r -= 1
         self.cnt -= 1
         self.l = min(self.l, self.r)
@@ -30,10 +30,3 @@ class DinnerPlates:
         self.cnt -= 1
         self.l = min(self.l, index)
         return self.dic[index].pop()
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)
