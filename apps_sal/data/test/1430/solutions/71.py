@@ -1,9 +1,9 @@
 import itertools
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 lsS = list(input())
 gr = itertools.groupby(lsS)
 ls = [['0', 0]]
-for key, group in gr:
+for (key, group) in gr:
     ls.append([key, len(list(group))])
 lengr = len(ls)
 lssum = []

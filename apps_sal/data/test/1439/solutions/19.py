@@ -1,7 +1,7 @@
 def main():
-    n, m = [int(i) for i in input().split()]
+    (n, m) = [int(i) for i in input().split()]
     if n > m:
-        print("YES")
+        print('YES')
         return
     a = [int(i) % m for i in input().split()]
     d = [False] * m
@@ -15,9 +15,9 @@ def main():
         d = next
         d[i] = True
     if d[0]:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 main()

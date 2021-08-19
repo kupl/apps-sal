@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = sorted(list(map(int, input().split())))
 ans = [a[0]]
 pref = [a[0]]

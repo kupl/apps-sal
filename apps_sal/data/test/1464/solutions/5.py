@@ -1,11 +1,11 @@
 from itertools import *
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 
 def newProblem(names):
     for i in range(1, 3):
         for s in product(alphabet, repeat=i):
-            st = ""
+            st = ''
             for c in s:
                 st += c
             if names.find(st) == -1:
@@ -13,8 +13,8 @@ def newProblem(names):
 
 
 n = int(input())
-names = ""
+names = ''
 for i in range(0, n):
     name = input()
-    names += name + " "
+    names += name + ' '
 print(newProblem(names))

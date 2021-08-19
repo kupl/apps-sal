@@ -1,5 +1,5 @@
 from sys import stdin, stdout
-n, k = map(int, stdin.readline().split())
+(n, k) = map(int, stdin.readline().split())
 no = list(map(int, stdin.readline().split()))
 yes = list(map(int, stdin.readline().split()))
 mn = float('inf')

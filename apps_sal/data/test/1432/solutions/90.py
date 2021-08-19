@@ -11,10 +11,22 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
 
 
 n = INT()
@@ -23,10 +35,8 @@ b = [0] * n
 k = 0
 for i in range(n // 2):
     k += a[2 * i + 1] - a[2 * i]
-
 b[0] = a[n - 1] - k
 b[n - 1] = a[n - 1] + k
-
 for i in range(1, n - 1):
     b[i] = 2 * a[i - 1] - b[i - 1]
 print(*b)

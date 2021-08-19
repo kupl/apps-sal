@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 seen = set()
 for a in map(int, input().split()):
     new = set()

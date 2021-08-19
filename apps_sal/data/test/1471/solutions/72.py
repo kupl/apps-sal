@@ -6,17 +6,15 @@ for i in range(a - 1):
         g[c[0]] = [(c[1], c[2])]
     else:
         g[c[0]].append((c[1], c[2]))
-
     if c[1] not in g:
         g[c[1]] = [(c[0], c[2])]
     else:
         g[c[1]].append((c[0], c[2]))
-
 c = {}
 d = {i: False for i in range(1, a + 1)}
-c[1], d[1] = 0, True
+(c[1], d[1]) = (0, True)
 Q = [1]
-while(Q != []):
+while Q != []:
     r = Q.pop(0)
     for i in g[r]:
         if d[i[0]] == False:

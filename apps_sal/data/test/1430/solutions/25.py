@@ -1,13 +1,12 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-
 num = []
 temp = 0
 count = 0
 flag = True
 while temp < len(s):
     if flag == True:
-        if s[temp] == "1":
+        if s[temp] == '1':
             count += 1
             temp += 1
         else:
@@ -15,15 +14,14 @@ while temp < len(s):
             count = 1
             temp += 1
             flag = False
+    elif s[temp] == '0':
+        count += 1
+        temp += 1
     else:
-        if s[temp] == "0":
-            count += 1
-            temp += 1
-        else:
-            num.append(count)
-            count = 1
-            temp += 1
-            flag = True
+        num.append(count)
+        count = 1
+        temp += 1
+        flag = True
 num.append(count)
 num2 = [sum(num[:min(2 * k + 1, len(num))])]
 temp = min(2 * k + 1, len(num))

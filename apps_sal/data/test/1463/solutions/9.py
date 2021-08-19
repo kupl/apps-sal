@@ -13,15 +13,12 @@ def solve(g):
                     continue
                 break
             else:
-                return "No"
-    return "Yes"
+                return 'No'
+    return 'Yes'
 
 
 n = int(input())
-
 g = []
-
 for i in range(n):
     g.append([int(item) for item in input().split()])
-
 print(solve(g))

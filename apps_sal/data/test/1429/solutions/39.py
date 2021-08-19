@@ -1,8 +1,7 @@
 import sys
 from collections import *
 input = sys.stdin.readline
-
-n, s = input().split()
+(n, s) = input().split()
 x = y = r = 0
 d = Counter()
 for c in s:
@@ -16,5 +15,4 @@ for c in s:
     elif c == 'G':
         y -= 1
     r += d[x, y]
-
 print(r)

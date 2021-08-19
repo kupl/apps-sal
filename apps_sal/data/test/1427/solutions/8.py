@@ -7,7 +7,7 @@ def lcm(m, n):
     return m // gcd(m, n) * n
 
 
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 n = int(input())
 a = list(map(int, input().split()))
 l = a[0]
@@ -16,4 +16,4 @@ for x in a:
 ans = 0
 for x in a:
     ans += l * pow(x, MOD - 2, MOD) % MOD
-print((ans % MOD))
+print(ans % MOD)

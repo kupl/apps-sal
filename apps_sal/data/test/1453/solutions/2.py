@@ -1,8 +1,7 @@
 import sys
 from collections import Counter
 readline = sys.stdin.readline
-
-N, M = map(int, readline().split())
+(N, M) = map(int, readline().split())
 A = list(map(int, readline().split()))
 A.sort()
 Ans = [None] * N

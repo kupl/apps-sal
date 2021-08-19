@@ -1,15 +1,13 @@
 from collections import deque
 import sys
-
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
-
-n, m, *uv, s, t = list(map(int, read().split()))
+(n, m, *uv, s, t) = list(map(int, read().split()))
 m = iter(uv)
 UV = list(zip(m, m))
 graph = [[] for _ in range(3 * n)]
-for u, v in UV:
+for (u, v) in UV:
     u -= 1
     v -= 1
     graph[u].append(v + n)

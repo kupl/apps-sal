@@ -1,6 +1,5 @@
 import sys
-
-n, k = [int(x) for x in sys.stdin.readline().split()]
+(n, k) = [int(x) for x in sys.stdin.readline().split()]
 cards = sys.stdin.readline().strip()
 count = [0] * 26
 for letter in cards:

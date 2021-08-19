@@ -8,7 +8,7 @@ def dif(x, y):
     return c
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 x = [int(input()) for i in range(m + 1)]
 cnt = 0
 for i in range(m):

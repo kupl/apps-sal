@@ -3,10 +3,10 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     A = copy.deepcopy(a)
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     l = {}
     for i in range(n):
-        for j in range(2, int(a[i]**0.5) + 1):
+        for j in range(2, int(a[i] ** 0.5) + 1):
             if a[i] % j == 0:
                 cnt = 0
                 while a[i] % j == 0:

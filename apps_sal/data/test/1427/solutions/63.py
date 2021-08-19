@@ -16,5 +16,4 @@ for x in A:
     LCM = lcm(LCM, x)
 for x in A:
     ans += LCM // x
-
 print(ans % MOD)

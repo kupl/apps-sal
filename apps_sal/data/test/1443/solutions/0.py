@@ -7,7 +7,7 @@ cgrass = 0
 time = 0
 seen = False
 for i in range(n):
-    if s[i] == "G":
+    if s[i] == 'G':
         dist = l[i]
         if water >= dist:
             water -= dist
@@ -20,7 +20,7 @@ for i in range(n):
             water = 0
             time += 3 * dist
             grass += dist
-    elif s[i] == "W":
+    elif s[i] == 'W':
         water += l[i]
         time += 2 * l[i]
         seen = True

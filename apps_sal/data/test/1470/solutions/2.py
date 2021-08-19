@@ -5,7 +5,7 @@ if x <= 11:
     else:
         print(2)
 else:
-    ans = (x // 11) * 2
+    ans = x // 11 * 2
     x = x % 11
     if x == 0:
         print(ans)

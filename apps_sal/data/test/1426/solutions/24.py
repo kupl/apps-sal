@@ -7,31 +7,27 @@ def MI():
 
 
 def main():
-    n, m = MI()
+    (n, m) = MI()
     G = [[] for _ in range(n)]
     for _ in range(m):
-        u, v = MI()
+        (u, v) = MI()
         u -= 1
         v -= 1
         G[u].append(v)
-    s, t = MI()
+    (s, t) = MI()
     s -= 1
     t -= 1
-
     fi = [True] * n
     se = [True] * n
     th = [True] * n
     th[s] = False
-
     dq = [s]
     depth = 0
-
     while dq:
         depth += 1
         tank1 = []
         tank2 = []
         tank3 = []
-
         for p in dq:
             for c in G[p]:
                 if fi[c]:

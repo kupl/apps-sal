@@ -1,5 +1,5 @@
 def main():
-    n, k = [int(i) for i in input().split(' ')]
+    (n, k) = [int(i) for i in input().split(' ')]
     cards = input()
     letters = []
     for i in range(n):
@@ -13,11 +13,11 @@ def main():
     while k != 0:
         m = max(freq)
         if m > k:
-            total = total + (k * k)
+            total = total + k * k
             k = 0
         else:
             k = k - m
-            total = total + (m * m)
+            total = total + m * m
             freq.remove(m)
     print(total)
 

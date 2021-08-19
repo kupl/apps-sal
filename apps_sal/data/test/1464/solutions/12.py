@@ -1,8 +1,8 @@
 def ts(d, l):
     for i in range(len(l)):
         if d in l[i]:
-            return(True)
-    return(False)
+            return True
+    return False
 
 
 def main():
@@ -19,7 +19,7 @@ def main():
                 if ts(d, l):
                     d = d[:-1]
                 else:
-                    return(d)
+                    return d
             d = d[:-1]
             d += f[k]
 

@@ -1,7 +1,7 @@
 N = int(input())
 tree = [[] for i in range(N)]
 for i in range(N - 1):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     tree[u - 1].append((v - 1, w))
     tree[v - 1].append((u - 1, w))
 h = []

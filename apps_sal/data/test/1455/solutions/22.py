@@ -21,14 +21,9 @@ def lm():
 
 
 n = nn()
-
 size = (n + 2) // 2
-
 print(size)
-
-
 for i in range(size):
     print(1, i + 1)
-
 for j in range(n - size):
     print(j + 2, size)

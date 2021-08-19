@@ -15,4 +15,4 @@ while b > -1:
         if len(array[b]) > len(array[b + 1]):
             array[b] = array[b][:len(array[b + 1])]
         array[b] = cut_to_lexicographic(array[b], array[b + 1])
-print("\n".join(array))
+print('\n'.join(array))

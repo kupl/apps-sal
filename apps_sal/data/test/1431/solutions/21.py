@@ -10,6 +10,5 @@ for i in reversed(range(1, N + 1)):
     if ball % 2 != A[i]:
         B[i] = 1
         s += 1
-
 print(s)
-print(*[i for i, b in enumerate(B) if b == 1], sep=' ')
+print(*[i for (i, b) in enumerate(B) if b == 1], sep=' ')

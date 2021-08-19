@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-
 nums = []
 if s[0] == '0':
     nums.append(0)
@@ -13,11 +12,9 @@ while i < n:
     i = j
 if s[-1] == '0':
     nums.append(0)
-
 sums = [0]
 for i in range(len(nums)):
     sums.append(sums[-1] + nums[i])
-
 res = 0
 for left in range(0, len(sums), 2):
     right = left + k * 2 + 1

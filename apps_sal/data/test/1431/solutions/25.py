@@ -1,12 +1,11 @@
 N = int(input())
-*A, = map(int, input().split())
-D = [[1]for _ in range(N + 1)]
+(*A,) = map(int, input().split())
+D = [[1] for _ in range(N + 1)]
 for i in range(2, N + 1):
     j = 1
     while i * j <= N:
         D[i * j].append(i)
         j += 1
-
 D = D[1:]
 B = [0] * N
 ans = []
@@ -22,7 +21,6 @@ while i <= N:
             B[d - 1] += 1
         B[-i] %= 2
     i += 1
-
 M = len(ans)
 ans.sort()
 print(M)

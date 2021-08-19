@@ -8,5 +8,5 @@ for i in range(n):
         num = num - a[i]
 k = num
 for i in range(n):
-    print(k, end=" ")
+    print(k, end=' ')
     k = 2 * a[i] - k

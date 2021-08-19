@@ -1,22 +1,21 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 a = []
 b = []
 c = 0
-d = "1"
+d = '1'
 for i in s:
     if d == i:
         c += 1
+    elif d == '1':
+        b.append(c)
+        d = '0'
+        c = 1
     else:
-        if d == "1":
-            b.append(c)
-            d = "0"
-            c = 1
-        else:
-            a.append(c)
-            d = "1"
-            c = 1
-if d == "1":
+        a.append(c)
+        d = '1'
+        c = 1
+if d == '1':
     b.append(c)
 else:
     a.append(c)

@@ -1,8 +1,7 @@
 from math import log2
-
 L = int(input())
 n = int(log2(L))
-print((n + 1, format(L, "b").count("1") - 1 + 2 * n))
+print((n + 1, format(L, 'b').count('1') - 1 + 2 * n))
 Li = 1
 for i in range(n):
     print((i + 1, i + 2, 0))

@@ -7,7 +7,6 @@ def cut_to_lexicographic(word_bigger, word_smaller):
 
 n = int(input())
 array = [str(input()) for c in range(n)]
-
 b = n - 2
 while b > -1:
     if array[b + 1] >= array[b]:
@@ -16,4 +15,4 @@ while b > -1:
         if len(array[b]) > len(array[b + 1]):
             array[b] = array[b][:len(array[b + 1])]
         array[b] = cut_to_lexicographic(array[b + 1], array[b])
-print("\n".join(array))
+print('\n'.join(array))

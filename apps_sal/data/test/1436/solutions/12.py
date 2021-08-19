@@ -6,7 +6,6 @@ def main():
     a = list(map(int, input().split()))
     now = 0
     answer = 0
-
     for x in a:
         if x == -1:
             if now > 0:
@@ -15,7 +14,6 @@ def main():
                 answer += 1
         else:
             now += x
-
     print(answer)
 
 

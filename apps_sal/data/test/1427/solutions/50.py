@@ -2,11 +2,9 @@ from functools import reduce
 from fractions import gcd
 from collections import defaultdict, Counter
 import copy
-
 n = int(input())
 a = list(map(int, input().split()))
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 dic = defaultdict(int)
 
 
@@ -29,19 +27,14 @@ def prime_factorize(n):
 
 for i in a:
     c = Counter(prime_factorize(i))
-    for j, k in c.items():
+    for (j, k) in c.items():
         if dic[j] < k:
             dic[j] = k
-
 l = 1
-
-for i, j in dic.items():
+for (i, j) in dic.items():
     l *= pow(i, j, mod)
-
 point = 0
-
 for i in a:
     point += l * pow(i, mod - 2, mod)
     point %= mod
-
 print(point % mod)

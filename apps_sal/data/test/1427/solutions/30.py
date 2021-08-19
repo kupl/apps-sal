@@ -1,8 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 mod = 1000000007
-
 lcm = {}
 ps = []
 for i in range(n):
@@ -20,10 +18,9 @@ for i in range(n):
     if ai > 1:
         ps[i][ai] = 1
         lcm[ai] = max(lcm.get(ai, 0), ps[i][ai])
-
 lcmv = 1
 for p in lcm:
-    lcmv = (lcmv * (p ** lcm[p])) % mod
+    lcmv = lcmv * p ** lcm[p] % mod
 
 
 def inv(p, k):
@@ -32,8 +29,8 @@ def inv(p, k):
     b = p
     while k > 0:
         if k % 2 == 1:
-            ret = (ret * b) % mod
-        b = (b * b) % mod
+            ret = ret * b % mod
+        b = b * b % mod
         k //= 2
     return ret
 
@@ -42,7 +39,6 @@ ret = 0
 for i in range(n):
     prod = lcmv
     for p in ps[i]:
-        prod = (prod * inv(p, ps[i][p])) % mod
+        prod = prod * inv(p, ps[i][p]) % mod
     ret = (ret + prod) % mod
-
 print(ret)

@@ -3,7 +3,7 @@ a = []
 b = []
 l = 0
 val = 0
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 while k > 0:

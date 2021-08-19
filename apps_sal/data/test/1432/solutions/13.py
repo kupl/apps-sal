@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 N = int(input().rstrip('\n'))
 As = [int(x) for x in input().rstrip('\n').split()]
 total = sum(As)

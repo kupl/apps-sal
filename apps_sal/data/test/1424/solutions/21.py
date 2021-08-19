@@ -1,6 +1,6 @@
 def dif(a, b):
-    b, a, ans = max(a, b), min(a, b), 0
-    c, d = [], []
+    (b, a, ans) = (max(a, b), min(a, b), 0)
+    (c, d) = ([], [])
     i = 0
     while a > 0:
         if a % 2 == 1:
@@ -25,7 +25,7 @@ def dif(a, b):
     return ans
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 ans = 0
 x = []
 for i in range(m + 1):

@@ -1,5 +1,5 @@
 import sys
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [[*map(int, input().split())] for _ in range(n)]
 try:
     for i in range(n - 1, -1, -1):

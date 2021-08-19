@@ -1,5 +1,5 @@
 from collections import *
-n, s = input().split()
+(n, s) = input().split()
 x = y = r = 0
 d = Counter()
 for c in s:

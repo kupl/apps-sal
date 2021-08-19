@@ -1,8 +1,9 @@
-def y(): return [*map(int, input().split())]
+def y():
+    return [*map(int, input().split())]
 
 
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = y()
     b = len(set(a))
     if k < 2:

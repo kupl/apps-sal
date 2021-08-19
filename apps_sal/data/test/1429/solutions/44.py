@@ -1,4 +1,4 @@
-n, s = map(str, input().split())
+(n, s) = map(str, input().split())
 n = int(n)
 ans = 0
 for i in range(n):

@@ -1,9 +1,9 @@
 def gcd(a: int, b: int):
-    if (a > b):
+    if a > b:
         c = a
         a = b
         b = c
-    if (a == 0):
+    if a == 0:
         return b
     return gcd(b % a, a)
 
@@ -24,7 +24,7 @@ N = int(input())
 liA = list(map(int, input().split()))
 liB = [-1 for _ in range(N)]
 G = lcm_of_all(liA)
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 ss = 0
 for i in range(N):
     liB[i] = G // liA[i]

@@ -1,7 +1,6 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 r = list(map(int, input().split()))
 c = list(map(int, input().split()))
-
 a = [[0] * w for i in range(h)]
 for i in range(h):
     if r[i] < w:

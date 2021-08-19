@@ -17,4 +17,4 @@ for i in range(n - 1, 0, -1):
         while j < len(l[i]) and l[i - 1][j] == l[i][j]:
             j += 1
         l[i - 1] = l[i - 1][:j]
-print("\n".join(l))
+print('\n'.join(l))

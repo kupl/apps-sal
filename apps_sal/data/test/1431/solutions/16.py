@@ -15,7 +15,7 @@ for i in range(N):
         ans[n - 1] = 1
 print(ans.count(1))
 ans2 = []
-for i, v in enumerate(ans):
+for (i, v) in enumerate(ans):
     if v:
         ans2.append(i + 1)
 print(*ans2)

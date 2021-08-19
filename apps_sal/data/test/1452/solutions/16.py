@@ -1,37 +1,12 @@
-'''
+"""
 Created on 2019. 9. 21.
 
 @author: kkhh88
-'''
-'''
-a, b = map(int,input().split(' '))
-
-t = 0
-
-for i in range(a, b+1):
-    x = [0] * 10
-    n = i
-    while n:
-        x[n%10] = x[n%10] + 1
-        n = n // 10
-    n = 0
-    for n in range(10):
-        if x[n] > 1:
-            break
-    
-    if n == 9 and x[n] < 2:
-        print (i)
-        t = 1
-        break
-    
-if t == 0:
-    print (-1)
-'''
-
-h, w = list(map(int, input().split(' ')))
+"""
+"\na, b = map(int,input().split(' '))\n\nt = 0\n\nfor i in range(a, b+1):\n    x = [0] * 10\n    n = i\n    while n:\n        x[n%10] = x[n%10] + 1\n        n = n // 10\n    n = 0\n    for n in range(10):\n        if x[n] > 1:\n            break\n    \n    if n == 9 and x[n] < 2:\n        print (i)\n        t = 1\n        break\n    \nif t == 0:\n    print (-1)\n"
+(h, w) = list(map(int, input().split(' ')))
 r = list(map(int, input().split(' ')))
 c = list(map(int, input().split(' ')))
-
 cnt = 0
 x = [[-1 for _ in range(w)] for _ in range(h)]
 for i in range(w):
@@ -49,7 +24,6 @@ for i in range(w):
         else:
             cnt = -1
             break
-
 for i in range(h):
     for j in range(r[i]):
         if x[i][j] == 1 or x[i][j] == -1:
@@ -65,7 +39,6 @@ for i in range(h):
         else:
             cnt = -1
             break
-
 if cnt < 0:
     print(0)
 else:

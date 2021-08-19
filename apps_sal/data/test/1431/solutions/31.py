@@ -7,19 +7,18 @@ for i in range(n)[::-1]:
     j = (i + 1) * 2
     while j <= n:
         t += b[j - 1]
-        j += (i + 1)
+        j += i + 1
     if a[i] == 0:
         if t % 2 == 0:
             b[i] = 0
         else:
             b[i] = 1
             ans += 1
+    elif t % 2 == 0:
+        b[i] = 1
+        ans += 1
     else:
-        if t % 2 == 0:
-            b[i] = 1
-            ans += 1
-        else:
-            b[i] = 0
+        b[i] = 0
 print(ans)
 l = []
 for i in range(n):

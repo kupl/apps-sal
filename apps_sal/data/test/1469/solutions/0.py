@@ -1,5 +1,4 @@
 import math
-
 l = int(input()) - 1
 n = int(math.log2(l + 1) + 1)
 res = []

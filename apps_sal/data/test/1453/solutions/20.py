@@ -1,11 +1,9 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
-
 acc = [[0] for _ in range(m)]
 for i in range(n):
     acc[i % m].append(acc[i % m][-1] + a[i])
-
 ans = [0] * n
 cnt = 0
 day = 1
@@ -23,5 +21,4 @@ for i in range(n - 1, 0, -1):
     if cnt == m:
         k -= 1
         cnt = 0
-
 print(*ans)

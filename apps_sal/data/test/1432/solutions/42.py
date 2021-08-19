@@ -1,6 +1,5 @@
 n = int(input())
 alst = list(map(int, input().split()))
-
 ans = [0 for _ in range(n)]
 pm = 1
 for a in alst:

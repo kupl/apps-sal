@@ -1,5 +1,5 @@
 import itertools
-N, S = input().split()
+(N, S) = input().split()
 N = int(N)
 AT = [0] * N
 CG = [0] * N

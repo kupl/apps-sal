@@ -13,5 +13,5 @@ def f(a):
 
 
 n = int(input())
-a = [input()for i in range(n)]
+a = [input() for i in range(n)]
 f(a)

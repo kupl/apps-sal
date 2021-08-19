@@ -1,6 +1,6 @@
 B = [0] * (10 ** 5 + 2)
 S = [0] * (10 ** 5 + 2)
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 for i in range(a):
     l = list(map(str, input().split()))
     if l[0] == 'S':

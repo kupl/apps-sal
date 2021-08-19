@@ -6,7 +6,7 @@ ans = []
 n = int(input())
 used = [False for i in range(n)]
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     degree.append(a)
     s.append(b)
     heappush(queue, (a, i))

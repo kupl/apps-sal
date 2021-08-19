@@ -1,6 +1,6 @@
 S = str(input())
 l = list(map(int, S.split(' ')))
-n, m = l[0], l[1]
+(n, m) = (l[0], l[1])
 S = 0
 t = 1 / n
 l = m * n - m - n

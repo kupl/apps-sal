@@ -3,12 +3,12 @@ def ok(x):
     return need <= k
 
 
-n, k = (int(_) for _ in input().split())
+(n, k) = (int(_) for _ in input().split())
 a = [int(_) for _ in input().split()]
 b = [int(_) for _ in input().split()]
-lo, hi = 0, 2 * 10 ** 9
+(lo, hi) = (0, 2 * 10 ** 9)
 while lo <= hi:
-    mid = (lo + hi) >> 1
+    mid = lo + hi >> 1
     if ok(mid):
         lo = mid + 1
     else:

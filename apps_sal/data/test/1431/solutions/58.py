@@ -1,10 +1,9 @@
 import numpy as np
 n = int(input())
 A = list(map(int, input().split()))
-
 B = [0 for _ in range(n)]
 ans = []
-for i, a in enumerate(A[::-1]):
+for (i, a) in enumerate(A[::-1]):
     i = len(A) - i - 1
     B[i] = int(np.array(B[i::i + 1]).sum() % 2 != a)
     if B[i] == 1:

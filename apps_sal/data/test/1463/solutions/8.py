@@ -11,12 +11,10 @@ def check(r, c, x):
 
 
 n = int(input())
-a = [list(map(int, input().split()))for _ in range(n)]
-
+a = [list(map(int, input().split())) for _ in range(n)]
 ans = True
 for i in range(n):
     for j in range(n):
         if a[i][j] != 1:
             ans &= check(i, j, a[i][j])
-
 print('Yes' if ans else 'No')

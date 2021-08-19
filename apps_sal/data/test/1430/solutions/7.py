@@ -1,6 +1,6 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = [int(i) for i in input()]
-ans, r, l, k = 0, 0, 0, K
+(ans, r, l, k) = (0, 0, 0, K)
 while r < N:
     while k > 0:
         while l < N and S[l] == 1:

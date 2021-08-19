@@ -1,6 +1,5 @@
 n = int(input())
 print(n // 2 + 1)
-
 r = 1
 c = 1
 for i in range(n):

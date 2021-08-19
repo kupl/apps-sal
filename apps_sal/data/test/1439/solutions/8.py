@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 if n > m:
-    print("YES")
+    print('YES')
 else:
     d = [{}, {}]
     cur = 0
@@ -13,4 +13,4 @@ else:
         d[cur][x % m] = 1
         if d[cur].get(0, 0):
             break
-    print("YES" if d[cur].get(0, 0) else "NO")
+    print('YES' if d[cur].get(0, 0) else 'NO')

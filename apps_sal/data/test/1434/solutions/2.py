@@ -7,7 +7,7 @@ def main():
     bys = defaultdict(set)
     l = []
     for i in range(n):
-        degree, s = list(map(int, input().split()))
+        (degree, s) = list(map(int, input().split()))
         bydegree[degree].add(i)
         bys[s].add(i)
         l.append((degree, s))
@@ -15,8 +15,8 @@ def main():
     ones = bydegree[1]
     while ones:
         i = ones.pop()
-        degree_i, j = l[i]
-        degree_j, s = l[j]
+        (degree_i, j) = l[i]
+        (degree_j, s) = l[j]
         res.append(' '.join((str(i), str(j))))
         bydegree[degree_j].remove(j)
         degree_j -= 1

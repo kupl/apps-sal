@@ -2,8 +2,8 @@ a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 
 
 
 def fed(n):
-    for j in (a):
-        for k in (a):
+    for j in a:
+        for k in a:
             x = True
             for i in range(n):
                 if (j + k in l[i]) == False:
@@ -12,7 +12,7 @@ def fed(n):
                     x = False
                     break
             if x == True:
-                return(j + k)
+                return j + k
 
 
 n = int(input())

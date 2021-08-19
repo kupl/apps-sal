@@ -1,5 +1,5 @@
 import itertools
-N, C = map(int, input().split())
+(N, C) = map(int, input().split())
 D = [list(map(int, input().split())) for _ in range(C)]
 c = [list(map(int, input().split())) for _ in range(N)]
 C0 = [0] * C
@@ -13,10 +13,9 @@ for i in range(N):
             C1[c[i][j] - 1] += 1
         else:
             C2[c[i][j] - 1] += 1
-
 A = list(itertools.permutations(range(1, C + 1), 3))
 ans = 1000 * 250000
-for a, b, c in A:
+for (a, b, c) in A:
     d = 0
     for i in range(C):
         d += C0[i] * D[i][a - 1]

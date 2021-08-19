@@ -6,20 +6,18 @@ def input():
 
 
 sys.setrecursionlimit(20000000)
-
 MOD = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def main():
-    N, C = list(map(int, input().split()))
+    (N, C) = list(map(int, input().split()))
     D = [list(map(int, input().split())) for _ in range(C)]
     c = [list(map(int, input().split())) for _ in range(N)]
     R = [[] for _ in range(3)]
-
     for i in range(N):
         for j in range(N):
-            r = (i + 1) + (j + 1)
+            r = i + 1 + (j + 1)
             if r % 3 == 0:
                 R[0].append(c[i][j])
             elif r % 3 == 1:
@@ -29,7 +27,6 @@ def main():
     Diff = [[] for _ in range(3)]
     for i in range(3):
         l = len(R[i])
-
         for color in range(C):
             cnt = 0
             for j in range(l):

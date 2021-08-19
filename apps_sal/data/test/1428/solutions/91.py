@@ -1,4 +1,4 @@
-N, C = map(int, input().split())
+(N, C) = map(int, input().split())
 D = []
 for _ in range(C):
     D.append(list(map(int, input().split())))
@@ -9,7 +9,7 @@ colors = [[0] * C for _ in range(3)]
 for i in range(N):
     for j in range(N):
         colors[(i + j) % 3][c[i][j] - 1] += 1
-ans = 10**10
+ans = 10 ** 10
 for i in range(C):
     for j in range(C):
         if i == j:

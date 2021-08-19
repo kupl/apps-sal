@@ -10,7 +10,6 @@ for i in range(N - 1):
     if v[i]:
         edges.append((i + 1, N, L))
     unit *= 2
-
 print(N, len(edges))
-for a, b, c in edges:
+for (a, b, c) in edges:
     print(a, b, c)

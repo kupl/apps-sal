@@ -1,4 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 arr = []
 o = 0
 for i in range(m):
@@ -6,8 +6,8 @@ for i in range(m):
 f = int(input())
 f2 = []
 for i in range(n - 1, -1, -1):
-    if (2 ** i) <= f:
-        f -= (2 ** i)
+    if 2 ** i <= f:
+        f -= 2 ** i
         f2.append(True)
     else:
         f2.append(False)
@@ -18,9 +18,8 @@ for i in arr:
             i -= 2 ** j
             if not f2[n - 1 - j]:
                 z += 1
-        else:
-            if f2[n - j - 1]:
-                z += 1
+        elif f2[n - j - 1]:
+            z += 1
     if z <= k:
         o += 1
 print(o)

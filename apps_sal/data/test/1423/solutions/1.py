@@ -1,4 +1,4 @@
-n, l, r = map(int, input().split())
+(n, l, r) = map(int, input().split())
 A = list(map(int, input().split()))
 P = list(map(int, input().split()))
 s = [0] * n
@@ -10,7 +10,6 @@ b[s[0]] = l
 for j in range(1, n):
     last = b[s[j - 1]] - A[s[j - 1]]
     nexs = last + 1
-
     if r - A[s[j]] > last:
         b[s[j]] = max(nexs + A[s[j]], l)
     else:

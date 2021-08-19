@@ -1,5 +1,5 @@
 from collections import defaultdict
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = sorted(map(int, input().split()))
 res = [0] * n
 d = defaultdict(int)

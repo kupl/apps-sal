@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = input()
 flag = False
 cnt = []
@@ -11,10 +11,9 @@ for i in range(N):
             r = i
             cnt.append([l, r])
             flag = False
-    else:
-        if S[i] == '1':
-            l = i
-            flag = True
+    elif S[i] == '1':
+        l = i
+        flag = True
 if flag:
     cnt.append([l, N])
 cnt.append([N, N])

@@ -1,5 +1,4 @@
 x = int(input())
-
 if x <= 6:
     print(1)
 elif x <= 11:
@@ -7,7 +6,6 @@ elif x <= 11:
 else:
     d = x // 11
     m = x % 11
-
     if m == 0:
         print(d * 2)
     elif m <= 6:

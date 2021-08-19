@@ -1,4 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 arr = [int(input()) for i in range(m + 1)]
 
 

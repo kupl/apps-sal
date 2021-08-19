@@ -10,6 +10,6 @@ for i in range(n):
         if k <= sv:
             sv -= k
         else:
-            ans += (k - sv)
+            ans += k - sv
             sv = 0
 print(ans)

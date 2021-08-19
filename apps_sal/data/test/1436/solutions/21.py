@@ -1,6 +1,6 @@
 n = int(input())
 x = map(int, input().split())
-k, res = 0, 0
+(k, res) = (0, 0)
 for elm in x:
     if elm != -1:
         k += elm

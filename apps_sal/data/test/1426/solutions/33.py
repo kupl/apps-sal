@@ -4,18 +4,16 @@ from collections import deque
 
 def main():
     input = sys.stdin.readline
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     roads0 = [[] for _ in range(n)]
     roads1 = [[] for _ in range(n)]
     roads2 = [[] for _ in range(n)]
-
     for i in range(m):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         roads0[u - 1].append(v - 1)
         roads1[u - 1].append(v - 1)
         roads2[u - 1].append(v - 1)
-
-    s, t = map(int, input().split())
+    (s, t) = map(int, input().split())
     not_yet = deque([])
     already = [[False] * 3 for _ in range(n)]
     dist = [[0] * 3 for _ in range(n)]
@@ -26,7 +24,7 @@ def main():
     already[s - 1][0] = True
     while not_yet:
         key = not_yet.popleft()
-        k1, k2 = key[0], key[1]
+        (k1, k2) = (key[0], key[1])
         if k2 == 0:
             for v in roads1[k1]:
                 if already[v][1]:

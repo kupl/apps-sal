@@ -25,7 +25,7 @@ def rising(matr, n, m):
     return s
 
 
-N, M = [int(x) for x in input().split()]
+(N, M) = [int(x) for x in input().split()]
 matrix = list()
 for y in range(N):
     row = [int(y) for y in input().split()]

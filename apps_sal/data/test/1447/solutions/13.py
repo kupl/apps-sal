@@ -1,5 +1,4 @@
-m, n = map(int, input().split())
-
+(m, n) = map(int, input().split())
 if m == 1:
     print(1)
 else:

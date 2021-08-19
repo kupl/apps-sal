@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 minn_g = [1001] * n
 maxx_g = [-1] * n
 minn_v = [1001] * m
@@ -8,7 +8,7 @@ size_v = [0] * m
 for i in range(n):
     o = list(map(int, input().split()))
     for j in range(m):
-        if (o[j] == 1):
+        if o[j] == 1:
             size_g[i] += 1
             size_v[j] += 1
             minn_g[i] = min(minn_g[i], j)

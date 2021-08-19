@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 A.sort()
 Ans = []
@@ -11,4 +11,4 @@ for i in range(N):
 for a in cumA:
     ans += a
     Ans.append(ans)
-print(" ".join(map(str, Ans)))
+print(' '.join(map(str, Ans)))

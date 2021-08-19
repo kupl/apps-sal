@@ -1,4 +1,3 @@
-
 n = input()
 i = 0
 count = 1

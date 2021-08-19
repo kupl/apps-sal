@@ -4,7 +4,6 @@ def mp():
 
 n = int(input())
 s = input()
-
 l = -1
 for i in range(n - 1):
     if s[i] > s[i + 1]:

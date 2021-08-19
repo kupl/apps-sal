@@ -3,7 +3,6 @@ def abc126_d():
     sys.setrecursionlimit(10010010)
     read = sys.stdin.buffer.read
     inp = iter(map(int, read().split()))
-
     N = next(inp)
     G = [[] for _ in range(N)]
     for _ in range(N - 1):
@@ -12,12 +11,11 @@ def abc126_d():
         w = next(inp)
         G[u].append((v, w))
         G[v].append((u, w))
-
     color = [-1] * N
     color[0] = 0
 
     def dfs(u):
-        for v, w in G[u]:
+        for (v, w) in G[u]:
             if color[v] != -1:
                 continue
             if w % 2 == 0:
@@ -25,7 +23,6 @@ def abc126_d():
             else:
                 color[v] = abs(color[u] - 1)
             dfs(v)
-
     dfs(0)
     print(*color, sep='\n')
 

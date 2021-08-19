@@ -1,6 +1,6 @@
 num = int(input())
 ns = [*map(int, input().split())]
-tri, edge = 0, 0
+(tri, edge) = (0, 0)
 for n in ns:
     newTri = min(edge, n // 2)
     tri += newTri

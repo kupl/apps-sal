@@ -10,4 +10,4 @@ for i in range((n + 1) // 2):
     tmp = a[i]
     a[i] = a[n - i - 1]
     a[n - i - 1] = tmp
-print(' '.join(str(i) for i in a))
+print(' '.join((str(i) for i in a)))

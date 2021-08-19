@@ -19,19 +19,18 @@ def kenkenpa(s, visited):
     return res
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 e = defaultdict(list)
 for i in range(M):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     e[u].append(v)
-
-S, T = list(map(int, input().split()))
+(S, T) = list(map(int, input().split()))
 q = deque([[S, 0]])
 visited = [[False] * 3 for _ in range(N + 1)]
 visited[S][0] = True
 ans = -1
 while q:
-    u, c = q.popleft()
+    (u, c) = q.popleft()
     if u == T:
         ans = c
         break

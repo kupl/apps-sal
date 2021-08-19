@@ -1,5 +1,4 @@
-n, m, k = [int(_) for _ in input().split(" ")]
-
+(n, m, k) = [int(_) for _ in input().split(' ')]
 p = [int(input()) for i in range(0, m + 1)]
 fd = p[-1]
 ans = 0

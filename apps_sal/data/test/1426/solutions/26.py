@@ -11,7 +11,7 @@ def bfs():
     dist = [[-1] * 3 for _ in range(N)]
     dist[S][0] = 0
     while q:
-        v, r = q.popleft()
+        (v, r) = q.popleft()
         for nv in g[v]:
             nr = (r + 1) % 3
             if dist[nv][nr] >= 0:
@@ -21,10 +21,10 @@ def bfs():
     return dist[T][0] // 3
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 g = [[] for _ in range(3 * N)]
 for _ in range(M):
-    a, b = [int(x) - 1 for x in input().split()]
+    (a, b) = [int(x) - 1 for x in input().split()]
     g[a].append(b)
-S, T = [int(x) - 1 for x in input().split()]
-print((bfs()))
+(S, T) = [int(x) - 1 for x in input().split()]
+print(bfs())

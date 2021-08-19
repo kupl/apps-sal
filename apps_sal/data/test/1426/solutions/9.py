@@ -15,13 +15,13 @@ def bfs(s, t):
     return dist[t]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 G = [[] for _ in range(3 * n + 1)]
 for _ in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     G[u].append(v + n)
     G[u + n].append(v + 2 * n)
     G[u + 2 * n].append(v)
-s, t = map(int, input().split())
+(s, t) = map(int, input().split())
 ans = bfs(s, t)
 print(ans // 3 if not ans == -1 else ans)

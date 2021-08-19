@@ -11,14 +11,13 @@ t = l
 s = 0
 for i in range(13):
     d.append(t % 3)
-    s += (t % 3) * 3 ** i
+    s += t % 3 * 3 ** i
     l_upto.append(s)
     t //= 3
-
-for i, t in enumerate(d):
+for (i, t) in enumerate(d):
     for s in range(t + (i == 0)):
         to[0].append((13 - i, l - l_upto[i] + 3 ** i * s))
 print((14, sum(map(len, to))))
 for i in range(len(to)):
-    for j, cost in to[i]:
+    for (j, cost) in to[i]:
         print((i + 1, j + 1, cost))

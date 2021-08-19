@@ -1,5 +1,5 @@
 N = int(input())
-*A, = map(int, input().split())
+(*A,) = map(int, input().split())
 B = [0] * N
 a1 = A[0]
 i = 1

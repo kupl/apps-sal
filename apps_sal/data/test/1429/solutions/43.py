@@ -1,8 +1,8 @@
-n, s = list(map(str, input().split()))
+(n, s) = list(map(str, input().split()))
 n = int(n)
 ans = 0
 for i in range(n):
-    at, cg = 0, 0
+    (at, cg) = (0, 0)
     for j in range(i, n):
         if s[j] == 'A':
             at += 1

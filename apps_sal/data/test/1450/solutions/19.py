@@ -1,7 +1,5 @@
 from sys import stdin
 line = stdin.readline().rstrip()
-
-
 count0 = 0
 count1 = 0
 index = 0

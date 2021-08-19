@@ -9,7 +9,7 @@ while tmp > 0:
 print(l, l * 2 - 3 + pp)
 for i in range(1, l):
     print(i, i + 1, 0)
-    a = 1 << (i - 1)
+    a = 1 << i - 1
     print(i, i + 1, a)
     if L & a:
         L -= a

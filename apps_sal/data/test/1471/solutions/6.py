@@ -5,7 +5,7 @@ a = [[] for _ in range(n)]
 b = [-1] * n
 b[0] = 0
 for i in range(n - 1):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     a[u - 1].append([v - 1, w])
     a[v - 1].append([u - 1, w])
 

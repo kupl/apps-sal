@@ -3,10 +3,10 @@ def main():
     s = list(input())
     for i in range(1, n):
         if ord(s[i]) < ord(s[i - 1]):
-            print("YES")
+            print('YES')
             print(i, i + 1)
             return 0
-    print("NO")
+    print('NO')
     return 0
 
 

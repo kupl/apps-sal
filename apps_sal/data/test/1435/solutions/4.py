@@ -1,5 +1,5 @@
 t = input()
-s, d = 0, 1
+(s, d) = (0, 1)
 p = {str(i): str(9 - i) for i in range(10)}
 for i in range(len(t) - 1):
     if p[t[i]] == t[i + 1]:

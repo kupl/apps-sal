@@ -10,8 +10,8 @@ for i in reversed(list(range(1, n + 1))):
     else:
         b[i] = 1
 c_ = []
-for c, d in enumerate(b):
+for (c, d) in enumerate(b):
     if d == 1:
         c_.append(str(c))
-print((len(c_)))
-print((' '.join(c_)))
+print(len(c_))
+print(' '.join(c_))

@@ -16,12 +16,11 @@ while len(s) > 0:
     s.pop()
 flag = True
 for i in range(n):
-
-    if (a[(i - 1) % n] + a[(i + 1) % n]) <= a[i]:
+    if a[(i - 1) % n] + a[(i + 1) % n] <= a[i]:
         flag = False
         break
 if flag:
-    print("YES")
+    print('YES')
     print(*a)
 else:
-    print("NO")
+    print('NO')

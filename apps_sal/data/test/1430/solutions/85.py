@@ -1,7 +1,5 @@
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = input()
-
 l = [0]
 curr = '1'
 for c in S:
@@ -12,7 +10,6 @@ for c in S:
         l[-1] += 1
 if curr == '0':
     l.append(0)
-
 n_group = len(l) // 2
 sum_ = 0
 k = min(K, n_group)

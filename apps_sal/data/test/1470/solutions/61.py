@@ -1,7 +1,5 @@
 import sys
-
 x = int(sys.stdin.readline())
-
 n = x // 11
 r = x % 11
 if r == 0:

@@ -1,11 +1,11 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 list = [[] for i in range(3 * N)]
 for i in range(M):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     list[3 * u - 3].append(3 * v - 2)
     list[3 * u - 2].append(3 * v - 1)
     list[3 * u - 1].append(3 * v - 3)
-s, t = map(int, input().split())
+(s, t) = map(int, input().split())
 
 
 def bfs(a, b):

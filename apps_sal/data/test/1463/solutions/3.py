@@ -16,4 +16,4 @@ for i in range(n):
                 if check:
                     break
             ok &= check
-print("Yes" if ok else "No")
+print('Yes' if ok else 'No')

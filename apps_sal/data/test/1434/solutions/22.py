@@ -3,7 +3,7 @@ deg2vs = {}
 ss = [0] * n
 degs = [0] * n
 for i in range(n):
-    degs[i], ss[i] = list(map(int, input().split()))
+    (degs[i], ss[i]) = list(map(int, input().split()))
     if degs[i] > 0:
         if degs[i] not in deg2vs:
             deg2vs[degs[i]] = set()
@@ -21,7 +21,6 @@ while len(deg2vs) != 0:
             deg2vs[v_deg].remove(v)
             if len(deg2vs[v_deg]) == 0:
                 deg2vs.pop(v_deg)
-
         ss[v] = ss[v] ^ leaf
         degs[v] -= 1
         if degs[v] > 0:

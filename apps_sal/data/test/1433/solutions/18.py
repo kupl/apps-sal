@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split()))
-a, b = [], [[] for i in range(m)]
-
+(n, m) = list(map(int, input().split()))
+(a, b) = ([], [[] for i in range(m)])
 for i in range(n):
     a += [list(map(int, input().split()))]
     for j in range(m):
@@ -8,7 +7,7 @@ for i in range(n):
 
 
 def count(arr):
-    l, r = -1, -1
+    (l, r) = (-1, -1)
     for i in range(len(arr)):
         if arr[i] == 1:
             l = i
@@ -19,7 +18,7 @@ def count(arr):
             break
     if l == -1:
         return 0
-    return l + (len(arr) - r - 1) + 2 * (sum(arr[i] == 0 for i in range(l + 1, r)))
+    return l + (len(arr) - r - 1) + 2 * sum((arr[i] == 0 for i in range(l + 1, r)))
 
 
-print(sum(count(a[i]) for i in range(n)) + sum(count(b[j]) for j in range(m)))
+print(sum((count(a[i]) for i in range(n))) + sum((count(b[j]) for j in range(m))))

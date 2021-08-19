@@ -1,4 +1,4 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 d = [list(map(int, input().split())) for _ in range(c)]
 g0 = [0] * c
 g1 = [0] * c
@@ -13,7 +13,7 @@ for i in range(n):
             g1[col[j]] += 1
         else:
             g2[col[j]] += 1
-ans = 10**18
+ans = 10 ** 18
 for i in range(c):
     for j in range(c):
         for k in range(c):

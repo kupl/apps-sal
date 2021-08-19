@@ -5,7 +5,7 @@ def generate_name(S):
     for i in range(1, 9):
         for letters in product('abcdefghijklmnopqrstuvwxyz', repeat=i):
             name = ''.join(letters)
-            if all(name not in s for s in S):
+            if all((name not in s for s in S)):
                 return name
 
 

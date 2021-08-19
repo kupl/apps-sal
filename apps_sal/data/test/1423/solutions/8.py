@@ -1,10 +1,8 @@
 from operator import itemgetter
-
-n, l, r = [int(i) for i in input().split()]
+(n, l, r) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 p = [int(i) for i in input().split()]
 A = sorted([[a[i], p[i], i, 0] for i in range(n)], key=itemgetter(1))
-
 A[0][3] = l
 c = A[0][3] - A[0][0]
 for i in range(1, n):
@@ -16,4 +14,4 @@ for i in range(1, n):
 else:
     A = sorted(A, key=itemgetter(2))
     for i in range(n):
-        print(A[i][3], end=" ")
+        print(A[i][3], end=' ')

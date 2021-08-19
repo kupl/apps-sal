@@ -12,7 +12,7 @@ def getLetterNumber(letter):
 
 
 def getNumberOfVairants(number):
-    return 3**"{0:b}".format(number).zfill(6).count('0')
+    return 3 ** '{0:b}'.format(number).zfill(6).count('0')
 
 
 def getNumber(str):
@@ -20,7 +20,7 @@ def getNumber(str):
     for c in str:
         num = getLetterNumber(c)
         result = result * getNumberOfVairants(num)
-        result %= (int(1e9) + 7)
+        result %= int(1000000000.0) + 7
     return result
 
 

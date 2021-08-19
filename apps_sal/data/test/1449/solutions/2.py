@@ -12,6 +12,6 @@ def main(n, k, a):
 
 
 for i in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     print(main(n, k, a))

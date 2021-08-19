@@ -5,5 +5,5 @@ for i in range(N - 1, 0, -1):
         ptr = 0
         while ptr < len(A[i]) and A[i - 1][ptr] == A[i][ptr]:
             ptr += 1
-        A[i - 1] = A[i - 1][: ptr]
+        A[i - 1] = A[i - 1][:ptr]
 print('\n'.join(A))

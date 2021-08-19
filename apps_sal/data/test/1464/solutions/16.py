@@ -1,12 +1,12 @@
 n = int(input())
-alph = "abcdefghijklmnopqrstuvwxyz"
-ch = ""
+alph = 'abcdefghijklmnopqrstuvwxyz'
+ch = ''
 for x in range(n):
-    ch += " " + input()
+    ch += ' ' + input()
 
 
 def f():
-    ch1 = ""
+    ch1 = ''
     j = 0
     for k in range(26):
         for i in range(26):

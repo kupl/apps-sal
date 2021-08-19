@@ -1,8 +1,8 @@
-n, s = [int(x) for x in input().split()]
+(n, s) = [int(x) for x in input().split()]
 buy_dict = {}
 sell_dict = {}
 for i in range(n):
-    chtype, pi, di = input().split()
+    (chtype, pi, di) = input().split()
     pi = int(pi)
     di = int(di)
     if chtype == 'B':
@@ -11,7 +11,7 @@ for i in range(n):
         sell_dict[pi] = sell_dict.get(pi, 0) + di
 buy_list = sorted(list(buy_dict.items()), reverse=True)[:s]
 sell_list = reversed(sorted(sell_dict.items())[:s])
-for pi, qi in sell_list:
+for (pi, qi) in sell_list:
     print('S', pi, qi)
-for pi, qi in buy_list:
+for (pi, qi) in buy_list:
     print('B', pi, qi)

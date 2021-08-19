@@ -1,5 +1,5 @@
 import numpy as np
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = list(input())
 nums = []
 now = 1
@@ -15,7 +15,6 @@ if cnt != 0:
     nums.append(cnt)
 if len(nums) % 2 == 0:
     nums.append(0)
-
 sums = [0] + list(np.cumsum(nums))
 left = 0
 right = left + K * 2

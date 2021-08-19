@@ -1,5 +1,5 @@
 from itertools import *
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 
 def isValid(s, names):
@@ -12,7 +12,7 @@ def isValid(s, names):
 def newProblem(names):
     for i in range(1, 3):
         for s in product(alphabet, repeat=i):
-            st = ""
+            st = ''
             for c in s:
                 st += c
             if isValid(st, names):

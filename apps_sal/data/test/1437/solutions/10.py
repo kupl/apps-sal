@@ -16,7 +16,7 @@ for i in range(64):
     for j in range(64):
         counter[i & j] += 1
 ans = 1
-mod = int(1e9 + 7)
+mod = int(1000000000.0 + 7)
 for s in input():
     ans *= counter[rev(s)]
     ans %= mod

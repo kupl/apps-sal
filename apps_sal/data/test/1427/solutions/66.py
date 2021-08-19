@@ -3,13 +3,12 @@ from functools import reduce
 import math
 N = int(input())
 A = list(map(int, input().split()))
-
 mod = pow(10, 9) + 7
 ok = 1
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(*numbers):
@@ -21,9 +20,6 @@ def lcm_list(numbers):
 
 
 LCM = lcm_list(A)
-
 B = np.array(A)
 C = LCM // B
-
-
 print(sum(C) % mod)

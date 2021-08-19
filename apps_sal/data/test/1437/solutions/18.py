@@ -8,9 +8,9 @@ for i in range(0, 64):
 s = input()
 ans = 1
 for i in s:
-    if i == "_":
+    if i == '_':
         z = 63
-    elif i == "-":
+    elif i == '-':
         z = 62
     elif i.isdigit():
         z = int(i)
@@ -18,6 +18,6 @@ for i in s:
         z = ord(i) - 97 + 36
     else:
         z = ord(i) - 65 + 10
-    ans *= 3**table[z]
-    ans %= (10**9 + 7)
+    ans *= 3 ** table[z]
+    ans %= 10 ** 9 + 7
 print(ans)

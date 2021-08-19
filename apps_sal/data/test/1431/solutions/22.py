@@ -1,6 +1,5 @@
 N = int(input())
 a = list(map(int, input().split()))
-
 b = [0] * N
 for i in range(N):
     tmp = 0
@@ -10,7 +9,6 @@ for i in range(N):
             tmp += 1
     if a[n - 1] != tmp % 2:
         b[n - 1] = 1
-
 ans = []
 for i in range(N):
     if b[i] == 1:

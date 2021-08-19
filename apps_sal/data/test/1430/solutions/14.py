@@ -1,13 +1,13 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-l = [["1", 0]]
+l = [['1', 0]]
 for i in s:
     if l[-1][0] == i:
         l[-1][1] += 1
     else:
         l.append([i, 1])
-if l[-1][0] == "0":
-    l.append(["1", 0])
+if l[-1][0] == '0':
+    l.append(['1', 0])
 e = [0]
 for i in range(len(l)):
     e.append(e[i] + l[i][1])

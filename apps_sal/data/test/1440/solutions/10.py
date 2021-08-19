@@ -1,4 +1,4 @@
-n, ans, last = int(input()), 0, 0
+(n, ans, last) = (int(input()), 0, 0)
 a = list(map(int, input().split()))
 for i in range(len(a)):
     while last > 0 and a[i] >= 2:

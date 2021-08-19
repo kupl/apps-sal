@@ -1,5 +1,5 @@
-n, ss = map(int, input().split())
-buy, send = dict(), dict()
+(n, ss) = map(int, input().split())
+(buy, send) = (dict(), dict())
 for i in range(n):
     s = list(map(str, input().split()))
     c_v = list(map(int, s[1:]))
@@ -8,12 +8,11 @@ for i in range(n):
             buy[c_v[0]] += c_v[1]
         else:
             buy[c_v[0]] = c_v[1]
+    elif c_v[0] in send:
+        send[c_v[0]] += c_v[1]
     else:
-        if c_v[0] in send:
-            send[c_v[0]] += c_v[1]
-        else:
-            send[c_v[0]] = c_v[1]
-length_s, length_b = len(send), len(buy)
+        send[c_v[0]] = c_v[1]
+(length_s, length_b) = (len(send), len(buy))
 buy_ = sorted(buy)[0 if length_b < ss else length_b - ss:]
 send_ = sorted(send)[:min(length_s, ss)]
 for i in range(len(send_) - 1, -1, -1):

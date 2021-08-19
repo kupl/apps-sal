@@ -1,6 +1,5 @@
 N = int(input())
 A = [int(_) for _ in input().split()]
-
 X = [0 for _ in range(N)]
 ans = []
 for i in range(N)[::-1]:
@@ -10,7 +9,6 @@ for i in range(N)[::-1]:
     if v % 2 != A[i]:
         X[i] = 1
         ans.append(i + 1)
-
-print((len(ans)))
+print(len(ans))
 for i in ans:
     print(i)

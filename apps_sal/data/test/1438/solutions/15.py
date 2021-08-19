@@ -1,5 +1,4 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
@@ -16,13 +15,11 @@ def Possible(x):
 
 
 left = 0
-right = 10**9 + 10**9 + 10
-
+right = 10 ** 9 + 10 ** 9 + 10
 while left + 1 < right:
     mid = (left + right) // 2
     if Possible(mid):
         left = mid
     else:
         right = mid
-
 print(left)

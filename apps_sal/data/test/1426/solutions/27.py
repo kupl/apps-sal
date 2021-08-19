@@ -1,11 +1,9 @@
 from collections import deque
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 uv = [list(map(int, input().split())) for _ in range(m)]
-s, t = list(map(int, input().split()))
-
+(s, t) = list(map(int, input().split()))
 adj = [[] for _ in range(3 * n)]
-for u, v in uv:
+for (u, v) in uv:
     u -= 1
     v -= 1
     adj[u].append(v + n)
@@ -23,10 +21,9 @@ def bfs(s):
             if d[v] == -1:
                 d[v] = d[u] + 1
                 q.append(v)
-
     return d
 
 
 dist = bfs(s - 1)
 ans = dist[t - 1]
-print((ans // 3))
+print(ans // 3)

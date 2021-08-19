@@ -1,14 +1,9 @@
 from sys import stdin
-
 n = int(stdin.readline())
-
 board = []
-
 for x in range(n):
     board.append(list(stdin.readline().strip()))
-
 moves = {y: {x: True for x in range(-n + 1, n)} for y in range(-n + 1, n)}
-
 for x in range(n):
     for y in range(n):
         if board[x][y] == 'o':
@@ -16,9 +11,7 @@ for x in range(n):
                 for b in range(n):
                     if board[a][b] == '.':
                         moves[a - x][b - y] = False
-
 recreate = [['.' for x in range(n)] for y in range(n)]
-
 for x in range(n):
     for y in range(n):
         if board[x][y] == 'o':
@@ -29,10 +22,8 @@ for x in range(n):
                         if 0 <= x + a < n and 0 <= y + b < n:
                             if recreate[x + a][y + b] != 'o':
                                 recreate[x + a][y + b] = 'x'
-
 if board == recreate:
     print('YES')
-
     for x in range(-n + 1, n):
         l = []
         for y in range(-n + 1, n):

@@ -1,7 +1,5 @@
 import collections
-
-n, s = map(str, input().split())
-
+(n, s) = map(str, input().split())
 ans = 0
 for i in range(int(n)):
     cnt = {'A': 0, 'T': 0, 'G': 0, 'C': 0}

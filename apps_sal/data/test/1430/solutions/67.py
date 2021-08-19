@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = input()
 change = [0]
 for i in range(len(S) - 1):

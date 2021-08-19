@@ -10,4 +10,4 @@ c.append(str(ans))
 for i in range(n - 1):
     ans = 2 * a[i] - ans
     c.append(str(ans))
-print((' '.join(c)))
+print(' '.join(c))

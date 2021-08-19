@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 r = list(map(int, input().split()))
 c = list(map(int, input().split()))
 mat = [None] * h
@@ -12,15 +12,15 @@ for i in range(h):
         mat[i][r[i]] = 1
 for j in range(w):
     for i in range(c[j]):
-        if(mat[i][j] == 1):
+        if mat[i][j] == 1:
             ans = 0
         mat[i][j] = 0
     if c[j] < h:
-        if(mat[c[j]][j] == 0):
+        if mat[c[j]][j] == 0:
             ans = 0
         mat[c[j]][j] = 1
 for i in mat:
     for j in i:
         if j == -1:
-            ans = (2 * ans) % 1000000007
+            ans = 2 * ans % 1000000007
 print(ans)

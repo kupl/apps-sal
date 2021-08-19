@@ -5,9 +5,8 @@ t = 0
 for i in range(n):
     if a[i] > 0:
         t += a[i]
+    elif t == 0:
+        ans += 1
     else:
-        if t == 0:
-            ans += 1
-        else:
-            t -= 1
+        t -= 1
 print(ans)

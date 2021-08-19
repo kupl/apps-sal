@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = '1' + input() + '1'
 A = []
 now = '1'

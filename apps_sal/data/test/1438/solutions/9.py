@@ -9,8 +9,8 @@ def bake(n, k, ai, bi):
         cks = min_cookies + 1
         tenk = k
         for j in range(n):
-            if bi[j] < (cks * ai[j]):
-                tenk = tenk - ((cks * ai[j]) - bi[j])
+            if bi[j] < cks * ai[j]:
+                tenk = tenk - (cks * ai[j] - bi[j])
                 if tenk < 0:
                     possible = False
                     return min_cookies
@@ -19,7 +19,7 @@ def bake(n, k, ai, bi):
 
 
 def main():
-    n, k = [int(i) for i in input().strip().split()]
+    (n, k) = [int(i) for i in input().strip().split()]
     ai = [int(i) for i in input().strip().split()]
     bi = [int(i) for i in input().strip().split()]
     ans = bake(n, k, ai, bi)

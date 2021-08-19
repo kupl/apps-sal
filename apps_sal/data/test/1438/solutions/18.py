@@ -1,7 +1,6 @@
-n, magic = list(map(int, input().split()))
+(n, magic) = list(map(int, input().split()))
 gramNeed = list(map(int, input().split()))
 gramHas = list(map(int, input().split()))
-
 able = []
 remain = []
 for i in range(n):
@@ -25,23 +24,4 @@ while magic > 0:
         for i in range(n):
             able[i][0] -= 1
 print(ans)
-
-
-"""
-magic = 1
-need =   2 1 4
-has =   11 3 16
-able =   2 0 1
-remain = 1 0 0
-
-ans = 3
-
-magic = 3
-need =   4 3  5  6
-has =   11 15 14 20
-able =   0 3  0  1
-remain = 3 0  4  2
-lack  =  1 3  1  4
-
-ans = 2
-"""
+'\nmagic = 1\nneed =   2 1 4\nhas =   11 3 16\nable =   2 0 1\nremain = 1 0 0\n\nans = 3\n\nmagic = 3\nneed =   4 3  5  6\nhas =   11 15 14 20\nable =   0 3  0  1\nremain = 3 0  4  2\nlack  =  1 3  1  4\n\nans = 2\n'

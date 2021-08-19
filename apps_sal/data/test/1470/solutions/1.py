@@ -24,9 +24,8 @@ sys.setrecursionlimit(5000000)
 mod = pow(10, 9) + 7
 al = [chr(ord('a') + i) for i in range(26)]
 direction = [[1, 0], [0, 1], [-1, 0], [0, -1]]
-
 x = int(input())
 if x % 11 == 0:
     print(x // 11 * 2)
 else:
-    print(x // 11 * 2 + (x % 11) // 7 + 1)
+    print(x // 11 * 2 + x % 11 // 7 + 1)

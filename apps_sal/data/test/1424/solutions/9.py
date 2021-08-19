@@ -1,5 +1,5 @@
-n, m, k = list(map(int, input().split()))
-a, c = [], 0
+(n, m, k) = list(map(int, input().split()))
+(a, c) = ([], 0)
 for i in range(m + 1):
     a.append(bin(int(input())).replace('0b', ''))
 for i in range(m):
