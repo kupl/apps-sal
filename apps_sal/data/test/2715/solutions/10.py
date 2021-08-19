@@ -1,5 +1,5 @@
 K = int(input())
-r, q = divmod(K, 50)
+(r, q) = divmod(K, 50)
 A = [r + 49] * 50
 
 
@@ -10,7 +10,6 @@ def update():
             A[i] += 50
         else:
             A[i] -= 1
-        # print(i,A)
 
 
 for i in range(q):

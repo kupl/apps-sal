@@ -1,4 +1,4 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 
 
 def solve():
@@ -7,7 +7,7 @@ def solve():
     right = len(s) - 1
     count = 0
     while left < right:
-        count += (s[left] != s[right])
+        count += s[left] != s[right]
         left += 1
         right -= 1
     print(count)

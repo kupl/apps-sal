@@ -1,6 +1,5 @@
-def sigma(x): return x * (x + 1) // 2
-
-# --maincode----------------
+def sigma(x):
+    return x * (x + 1) // 2
 
 
 n = int(input())

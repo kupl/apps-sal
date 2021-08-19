@@ -1,10 +1,8 @@
 import sys
 import bisect
-
 input = sys.stdin.readline
 sys.setrecursionlimit(100000)
 mod = 10 ** 9 + 7
-# mod = 998244353
 
 
 def read_values():
@@ -24,6 +22,7 @@ def read_lists(N):
 
 
 class V:
+
     def __init__(self, f, v=None):
         self.f = f
         self.v = v
@@ -34,7 +33,6 @@ class V:
     def ud(self, n):
         if n is None:
             return
-
         if self.v is None:
             self.v = n
             return
@@ -49,7 +47,7 @@ def main():
     k = N - m
     A = [N + M - (N - k + 1)] * k + [N + M + k] * (N - k)
     print(N)
-    print((" ".join(map(str, A))))
+    print(' '.join(map(str, A)))
 
 
 def __starting_point():

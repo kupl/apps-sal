@@ -1,5 +1,3 @@
-# ABC147
-
 S = input()
 cnt = 0
 for i in range(len(S) // 2):

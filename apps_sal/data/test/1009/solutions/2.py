@@ -1,4 +1,4 @@
-n, k = list(map(int, input().strip().split()))
+(n, k) = list(map(int, input().strip().split()))
 a = list(map(int, input().strip().split()))
 l = max(a) - 1
 r = 100000000001
@@ -22,12 +22,10 @@ def check(s):
         return False
 
 
-while (r - l > 1):
+while r - l > 1:
     m = (r + l + 1) // 2
-    # print(l,m,r)
     if check(m):
         r = m
     else:
         l = m
-
 print(r)
