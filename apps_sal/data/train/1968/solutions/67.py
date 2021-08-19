@@ -1,16 +1,7 @@
 class Solution:
-    # 432 ms, 36.84%
-    # def removeSubfolders(self, folder: List[str]) -> List[str]:
-    #     folder.sort()
-    #     l  = [folder[0]]
-    #     p = folder[0]
-    #     for f in folder[1:]:
-    #         if not f.startswith(p + '/'):
-    #             l.append(f)
-    #             p = f
-    #     return l
 
     def removeSubfolders(self, folder: List[str]) -> List[str]:
+
         def insert(f):
             t = r
             for c in f:
@@ -39,6 +30,7 @@ class Solution:
 
 
 class TrieNode:
+
     def __init__(self):
         self.ch = {}
         self.d = False

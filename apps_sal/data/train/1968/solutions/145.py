@@ -1,4 +1,5 @@
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         trie = {}
         for f in folder:
@@ -9,8 +10,6 @@ class Solution:
                     p[c] = {}
                 p = p[c]
             p['$'] = full
-
-        # print(trie)
         ans = []
         for f in folder:
             p = trie

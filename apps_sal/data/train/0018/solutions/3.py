@@ -1,8 +1,3 @@
-#                                               |
-#   _` |  __ \    _` |   __|   _ \   __ \    _` |   _` |
-#  (   |  |   |  (   |  (     (   |  |   |  (   |  (   |
-# \__,_| _|  _| \__,_| \___| \___/  _|  _| \__,_| \__,_|
-
 import sys
 import math
 import operator as op
@@ -39,5 +34,5 @@ def rad(x):
 t = read_int()
 for i in range(t):
     n = read_int()
-    ans = 1 / (math.tan(rad(180 / (2 * n))))
+    ans = 1 / math.tan(rad(180 / (2 * n)))
     print(ans)

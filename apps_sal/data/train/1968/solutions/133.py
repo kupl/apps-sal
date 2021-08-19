@@ -1,6 +1,6 @@
 class Solution:
-    def removeSubfolders(self, folder: List[str]) -> List[str]:
 
+    def removeSubfolders(self, folder: List[str]) -> List[str]:
         trie = {}
         for f in folder:
             fo = f.split('/')
@@ -17,7 +17,6 @@ class Solution:
                 return
             for key in curr:
                 dfs(curr[key])
-
         res = []
         dfs(trie)
         return res

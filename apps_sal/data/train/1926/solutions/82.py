@@ -1,4 +1,5 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         closestOne = self.findClosestProduct(num + 1)
         closestTwo = self.findClosestProduct(num + 2)
@@ -10,7 +11,6 @@ class Solution:
             return closestOne
 
     def findClosestProduct(self, num):
-        # we start from floor of sqrt(num) and go down.
         for i in range(int(math.sqrt(num)), 0, -1):
             if num % i == 0:
                 return [i, num // i]

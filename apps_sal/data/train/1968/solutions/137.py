@@ -1,5 +1,7 @@
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
+
         def check(f):
             return all(map(lambda x: len(x) > 0, f.split('/')[1:]))
 
@@ -16,7 +18,6 @@ class Solution:
             if check(f):
                 flag = False
                 ps = parent(f)
-                # print(f, ps)
                 for p in ps:
                     if p in seen:
                         flag = True

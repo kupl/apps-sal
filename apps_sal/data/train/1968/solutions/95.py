@@ -1,4 +1,5 @@
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         trie = {}
         tokens = {path: path.split('/') for path in folder}
@@ -11,7 +12,6 @@ class Solution:
                     curr[token] = {}
                 curr = curr[token]
             curr['#'] = True
-
         paths = set(folder)
         for path in folder:
             curr = trie

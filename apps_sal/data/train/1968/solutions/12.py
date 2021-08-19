@@ -21,31 +21,25 @@ class Trie:
                     tmp.append(ch)
                     dfs(node[ch], tmp, res)
                     tmp.pop()
-
-        res, tmp = [], []
+        (res, tmp) = ([], [])
         dfs(self.root, tmp, res)
         return res
 
 
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         t = Trie()
         for f in folder:
             t.insert(f + '/')
         return [f[:-1] for f in t.search()]
-
-        # init
         n = len(folder)
-
-        # sort the folder
         folder = [f + '/' for f in folder]
         folder.sort()
-
         parent = 0
         for child in range(1, n):
             if folder[child].startswith(folder[parent]):
                 folder[child] = None
             else:
                 parent = child
-
         return [f[:-1] for f in folder if f is not None]

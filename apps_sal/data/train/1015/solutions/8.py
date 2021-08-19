@@ -1,6 +1,3 @@
-# cook your dish here
-# cook your dish here
-# cook your dish here
 n = int(input())
 l = []
 for j in range(n):
@@ -14,7 +11,6 @@ def pat(n):
         for j in range(0, n, 1):
             print(c, end='')
             c += 2
-
         print()
 
 

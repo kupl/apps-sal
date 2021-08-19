@@ -1,11 +1,10 @@
-# cook your dish here
 for _ in range(int(input())):
     k = int(input())
-    s = ""
+    s = ''
     count = 1
     for i in range(k):
         for j in range(k):
             s += str(count * 2)
             count += 1
         print(s)
-        s = ""
+        s = ''
