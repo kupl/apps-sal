@@ -3,18 +3,14 @@ def row_sum_odd_numbers(n):
     counter = 1
     mainNumber = 1
     sum = 0
-    # Finding start position
     for num in range(n - 1, 0, -1):
         startPoint += num
-
-    # Getting odd number at start position
     while counter < startPoint:
         if counter == startPoint:
             break
         else:
             mainNumber += 2
             counter += 1
-    # Calculating Final Sum
-    for i in range(mainNumber, mainNumber + (n * 2), 2):
+    for i in range(mainNumber, mainNumber + n * 2, 2):
         sum += i
     return sum

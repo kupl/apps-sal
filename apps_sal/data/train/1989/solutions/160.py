@@ -2,15 +2,16 @@ from collections import defaultdict
 
 
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
+
         def isPalindrome(dic, l, r):
             odds = set()
             length = 0
-            for k, v in list(dic.items()):
+            for (k, v) in list(dic.items()):
                 if v % 2 == 1:
                     odds.add(k)
                 length += v
-            # print(odds)
             if len(odds) == 0 or len(odds) == 1:
                 return length
             elif len(odds) == 2:
@@ -43,7 +44,7 @@ class Solution:
                 else:
                     numbers.append(num)
                     counts.append(1)
-            return numbers, counts
+            return (numbers, counts)
 
         def rollingHash(numbers, counts, l):
             anss = []
@@ -67,17 +68,12 @@ class Solution:
                 max_acc -= l_cnt
                 max_acc += r_cnt
                 cur_max = max(cur_max, max_acc)
-                # print(dic, numbers[i-l+1], r_num, i - l + 1, i, numbers[i-l+1], r_num)
                 anss.append(isPalindrome(dic, numbers[i - l + 1], r_num))
-                # print(anss)
-            return max(anss), cur_max
-
-        numbers, counts = compact(s)
+            return (max(anss), cur_max)
+        (numbers, counts) = compact(s)
         cur_max = 0
         for l in range(len(numbers), 0, -1):
-            # print(l, numbers, counts)
-            new_max, max_acc = rollingHash(numbers, counts, l)
-            # print(new_max, max_acc)
+            (new_max, max_acc) = rollingHash(numbers, counts, l)
             cur_max = max(cur_max, new_max)
             if cur_max >= max_acc:
                 return cur_max

@@ -1,10 +1,9 @@
 def basic_op(operator, value1, value2):
-    # your code here
-    if operator == "+":
+    if operator == '+':
         answer = int(value1) + int(value2)
-    elif operator == "-":
+    elif operator == '-':
         answer = int(value1) - int(value2)
-    elif operator == "*":
+    elif operator == '*':
         answer = int(value1) * int(value2)
     else:
         answer = int(value1) / int(value2)

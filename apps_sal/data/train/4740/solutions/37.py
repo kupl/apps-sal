@@ -2,12 +2,9 @@ def row_sum_odd_numbers(n):
     num_pos = find_numb_count(n)
     sum = 0
     for i in range(n):
-        sum += (num_pos * 2) - 1
+        sum += num_pos * 2 - 1
         num_pos -= 1
-
     return sum
-
-# Return the position of the last number in the triangle row
 
 
 def find_numb_count(n):

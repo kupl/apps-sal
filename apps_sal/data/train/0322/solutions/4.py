@@ -1,4 +1,5 @@
 class Solution:
+
     def minPatches(self, nums, n):
         """
         :type nums: List[int]
@@ -9,7 +10,6 @@ class Solution:
         i = 0
         count = 0
         while maxValue < n:
-            # print(i, count, nums[i]-1, maxValue)
             if i >= len(nums):
                 while maxValue < n:
                     maxValue += maxValue + 1
@@ -23,5 +23,4 @@ class Solution:
             elif nums[i] - 1 < maxValue:
                 maxValue += nums[i]
                 i += 1
-
         return count
