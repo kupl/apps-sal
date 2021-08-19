@@ -1,4 +1,4 @@
-'''
+"""
 https://leetcode.com/problems/get-the-maximum-score/
 
 
@@ -8,22 +8,18 @@ aproach 1: recursion brute force
 approach 2: dp time O(n) space(n)
 
 
-'''
+"""
 
 
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-      # dictonary 1 {val : index}
         dict1 = {}
         dict2 = {}
-
         for i in range(len(nums1)):
             dict1[nums1[i]] = i
-
-        # dictonary 2 {val : index}
         for i in range(len(nums2)):
             dict2[nums2[i]] = i
-
         dp1 = [0 for _ in nums1]
         dp2 = [0 for _ in nums2]
 
@@ -37,9 +33,7 @@ class Solution:
                         dp1[index] = max(sol(index + 1, curr), sol(indx2 + 1, 2)) + nums1[index]
                     else:
                         dp1[index] = sol(index + 1, curr) + nums1[index]
-
                 return dp1[index]
-
             else:
                 if index == len(nums2):
                     return 0
@@ -49,11 +43,7 @@ class Solution:
                         dp2[index] = max(sol(index + 1, curr), sol(indx2 + 1, 1)) + nums2[index]
                     else:
                         dp2[index] = sol(index + 1, curr) + nums2[index]
-
                 return dp2[index]
-
         sol(0, 1)
-
         sol(0, 2)
-
-        return max(dp1[0], dp2[0]) % (10**9 + 7)
+        return max(dp1[0], dp2[0]) % (10 ** 9 + 7)

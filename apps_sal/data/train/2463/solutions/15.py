@@ -1,5 +1,5 @@
-# 19
 class Solution:
+
     def validMountainArray(self, A: List[int]) -> bool:
         if len(A) < 3:
             return False
@@ -12,7 +12,6 @@ class Solution:
             nprev = A[i]
             if i == len(A) - 1:
                 return False
-
         for i in range(start, len(A)):
             if A[i] >= nprev:
                 return False

@@ -1,8 +1,8 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
 
         def count(tiles):
-            # print(tiles)
             counter = set()
             if len(tiles) == 1:
                 counter.add(tiles)
@@ -12,7 +12,7 @@ class Solution:
                 counter.add(tiles[0])
                 counter.add(tiles[1])
             else:
-                for idx, i in enumerate(tiles):
+                for (idx, i) in enumerate(tiles):
                     x = count(tiles[:idx] + tiles[idx + 1:])
                     extra = set()
                     for j in x:
@@ -22,7 +22,5 @@ class Solution:
                             extra.add(j[:k] + tiles[idx] + j[k + 1:])
                     x.update(extra)
                     counter.update(x)
-            # print(counter)
             return counter
-
         return len(count(tiles))
