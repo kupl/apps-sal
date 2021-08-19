@@ -1,7 +1,7 @@
 def f(n):
     r = []
     for i in range(1, n // 2 + 2):
-        x = [0] * ((n // 2 + 1) - i) + [1] * i
+        x = [0] * (n // 2 + 1 - i) + [1] * i
         r.append(x[:-1] + x[::-1])
     return r
 

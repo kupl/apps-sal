@@ -1,6 +1,6 @@
 def center_of(chars):
     if not chars:
-        return ""
+        return ''
     total = 0
     res = []
     for i in range(1, len(chars) * 2 + 1):
@@ -8,7 +8,7 @@ def center_of(chars):
             res.append((i + 1) // 2 + total)
             res[-1] = chars[(res[-1] - 1) % len(chars)]
         total += i
-    res = "".join(res)
+    res = ''.join(res)
     for i in range(len(res) // 2 + 1):
         if len(res) % len(res[:i + 1]) != 0:
             continue

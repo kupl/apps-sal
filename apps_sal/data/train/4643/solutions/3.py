@@ -1,8 +1,9 @@
 def start_digit_valid(func):
+
     def start_digit_validate(postcode):
-        '''
+        """
         A valid post code cannot start with digit 0, 5, 7, 8 or 9
-        '''
+        """
         if postcode[0] in '05789':
             return False
         return func(postcode)
@@ -10,10 +11,11 @@ def start_digit_valid(func):
 
 
 def length_valid(func):
+
     def length_validator(postcode):
-        '''
+        """
         A valid postcode should be 6 digits
-        '''
+        """
         MANDITORY_LENGTH = 6
         if len(postcode) != MANDITORY_LENGTH:
             return False
@@ -22,10 +24,11 @@ def length_valid(func):
 
 
 def only_numbers(func):
+
     def only_numbers(postcode):
-        '''
+        """
         A valid postcode should be 6 digits with no white spaces, letters or other symbols.
-        '''
+        """
         if any([c not in '0123456789' for c in postcode]):
             return False
         return func(postcode)

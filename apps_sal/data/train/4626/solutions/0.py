@@ -9,5 +9,5 @@ def parse_character(char):
 
 def decode(string_):
     if not isinstance(string_, str):
-        return "Input is not a string"
-    return "".join(map(parse_character, string_))
+        return 'Input is not a string'
+    return ''.join(map(parse_character, string_))

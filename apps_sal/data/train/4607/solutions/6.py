@@ -3,12 +3,11 @@ import itertools
 
 def find_mult_3(num):
     total = 0
-    _max = float("-inf")
-
+    _max = float('-inf')
     for lst in get_combos(num):
         for i in lst:
-            if i[0] != "0":
-                number = int("".join(i))
+            if i[0] != '0':
+                number = int(''.join(i))
                 if number % 3 == 0:
                     total += 1
                     if number > _max:

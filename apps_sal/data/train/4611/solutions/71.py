@@ -6,8 +6,8 @@ def animals(head, legs):
         if chicken.is_integer() and chicken >= 0:
             return (int(chicken), int(cow))
         else:
-            return "No solutions"
+            return 'No solutions'
     elif head == 0 and legs == 0:
         return [0, 0]
     else:
-        return "No solutions"
+        return 'No solutions'

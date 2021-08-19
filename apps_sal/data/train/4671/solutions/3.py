@@ -1,5 +1,5 @@
 def isTree(matrix):
-    '''depth first search; tree on n vertices has exactly n-1 edges'''
+    """depth first search; tree on n vertices has exactly n-1 edges"""
     vertices = set(range(len(matrix)))
     stack = [vertices.pop()]
     while stack:

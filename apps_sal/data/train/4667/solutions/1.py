@@ -6,4 +6,4 @@ def traffic_jam(main_road, side_streets):
         while ss:
             answer = answer[:j] + ss.pop(0) + answer[j:]
             j += 2
-    return answer[:answer.find("X") + 1]
+    return answer[:answer.find('X') + 1]

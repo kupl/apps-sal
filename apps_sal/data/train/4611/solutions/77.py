@@ -1,4 +1,4 @@
 def animals(x, y):
-    b = .5 * (y - 2 * x)
+    b = 0.5 * (y - 2 * x)
     X = (x - b, b)
-    return X if all(i // 1 == i and i >= 0 for i in X) else 'No solutions'
+    return X if all((i // 1 == i and i >= 0 for i in X)) else 'No solutions'

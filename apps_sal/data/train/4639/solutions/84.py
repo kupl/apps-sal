@@ -6,7 +6,7 @@ def power_of_two(x):
         return False
     if x == 2 or x == 1:
         return True
-    if x and (not(x & (x - 1))):
+    if x and (not x & x - 1):
         return True
     else:
         return False

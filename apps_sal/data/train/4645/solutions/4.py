@@ -1,5 +1,5 @@
 def promenade(choices):
-    l, m, r = [1, 0], [1, 1], [0, 1]
+    (l, m, r) = ([1, 0], [1, 1], [0, 1])
     for c in choices:
         if c == 'L':
             l = m[:]

@@ -1,5 +1,5 @@
 def whoseMove(lastPlayer, win):
-    p = {"black": "white", "white": "black"}
+    p = {'black': 'white', 'white': 'black'}
     if win:
         return lastPlayer
     else:

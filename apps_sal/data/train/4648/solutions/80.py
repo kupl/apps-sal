@@ -4,6 +4,6 @@ def automorphic(n):
     while i >= 1:
         d *= 10
         i /= 10
-    if n == (n * n) % d:
-        return "Automorphic"
-    return "Not!!"
+    if n == n * n % d:
+        return 'Automorphic'
+    return 'Not!!'

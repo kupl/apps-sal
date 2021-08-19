@@ -12,16 +12,7 @@ def animals(heads, legs):
     if cows >= 0 and chickens >= 0:
         return (chickens, cows)
     else:
-        return "No solutions"
+        return 'No solutions'
 
 
-'''“A farm contains chickens and cows. There are x heads and y 
-legs. How many chickens and cows are there?”
-
-Where x <= 1000 and y <=1000
-
-
-Return a tuple in Pythons
-
-If either the heads & legs is negative, the result of your calculation is negative or 
-the calculation is a float return "No solutions" (no valid cases).'''
+'“A farm contains chickens and cows. There are x heads and y \nlegs. How many chickens and cows are there?”\n\nWhere x <= 1000 and y <=1000\n\n\nReturn a tuple in Pythons\n\nIf either the heads & legs is negative, the result of your calculation is negative or \nthe calculation is a float return "No solutions" (no valid cases).'

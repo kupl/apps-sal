@@ -2,4 +2,4 @@ import re
 
 
 def double_check(strng):
-    return bool(re.search(r"(.)\1", strng, re.IGNORECASE))
+    return bool(re.search('(.)\\1', strng, re.IGNORECASE))

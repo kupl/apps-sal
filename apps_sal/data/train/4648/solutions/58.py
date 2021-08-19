@@ -1,5 +1,5 @@
-true = "Automorphic"
-false = "Not!!"
+true = 'Automorphic'
+false = 'Not!!'
 
 
 def automorphic(n):

@@ -6,7 +6,7 @@ from operator import mul
 
 
 def find_mult_3(n):
-    mul_count, digits = 0, sorted(map(int, str(n)))
+    (mul_count, digits) = (0, sorted(map(int, str(n))))
     for r in range(1, len(digits) + 1):
         for comb in sorted({c for c in combinations(digits, r) if not sum(c) % 3}):
             dig_count = Counter(comb)

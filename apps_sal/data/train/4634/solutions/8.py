@@ -5,11 +5,11 @@ def pac_man(N, PM, enemies):
     grid = [[2] * N for i in range(N)]
     for enemy in enemies:
         for i in range(N):
-            grid[enemy[0]][i] = "E"
+            grid[enemy[0]][i] = 'E'
         for j in range(N):
-            grid[j][enemy[1]] = "E"
+            grid[j][enemy[1]] = 'E'
     directions = [[0, 1], [0, -1], [1, 0], [-1, 0]]
-    queue, ans = deque([tuple(PM)]), 0
+    (queue, ans) = (deque([tuple(PM)]), 0)
     visited = set()
     while queue:
         node = queue.popleft()

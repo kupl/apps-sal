@@ -10,9 +10,9 @@ def positive_sum(arr):
             addtemp = add
             print(add)
         else:
-            print("skipping the {}".format(i))
+            print('skipping the {}'.format(i))
             index += 1
     if add > 0:
-        return(add)
+        return add
     else:
-        return(0)
+        return 0

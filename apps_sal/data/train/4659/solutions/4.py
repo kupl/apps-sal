@@ -1,5 +1,5 @@
 def ipToNum(ip):
-    return str(int(''.join(f'{n:08b}' for n in map(int, ip.split('.'))), 2))
+    return str(int(''.join((f'{n:08b}' for n in map(int, ip.split('.')))), 2))
 
 
 def numToIp(nums):

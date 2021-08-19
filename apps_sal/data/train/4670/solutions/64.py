@@ -3,9 +3,8 @@ def string_to_number(s):
     result = 0
     pos_or_neg = 1
     for i in s:
-        if i == ("-"):
+        if i == '-':
             pos_or_neg = -1
         if i in value:
             result = result * 10 + value[i]
-
     return result * pos_or_neg

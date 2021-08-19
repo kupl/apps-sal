@@ -4,5 +4,5 @@ def logistic_map(width, height, xs, ys):
     for y in range(height):
         grid.append([])
         for x in range(width):
-            grid[y].append(min([abs(x - sx) + abs(y - sy) for sx, sy in supply]) if supply else None)
+            grid[y].append(min([abs(x - sx) + abs(y - sy) for (sx, sy) in supply]) if supply else None)
     return grid

@@ -1,5 +1,5 @@
 def combine(*args):
-    L = max(len(i) for i in args)
+    L = max((len(i) for i in args))
     t = []
     j = 0
     while j < L:

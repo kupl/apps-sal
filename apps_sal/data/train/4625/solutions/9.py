@@ -4,7 +4,6 @@ from collections import defaultdict
 def prcs(start, end, procs, path):
     if start == end:
         return path
-
     paths = []
     try:
         for p in procs[start]:
@@ -18,7 +17,6 @@ def prcs(start, end, procs, path):
 
 def processes(start, end, procs):
     dd = defaultdict(list)
-    for n, s, e in procs:
+    for (n, s, e) in procs:
         dd[s].append((n, e))
-
-    return [n for n, _ in prcs(start, end, dd, [])]
+    return [n for (n, _) in prcs(start, end, dd, [])]

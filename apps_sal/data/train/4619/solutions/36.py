@@ -1,7 +1,4 @@
-opposite = {
-    'white': 'black',
-    'black': 'white'
-}
+opposite = {'white': 'black', 'black': 'white'}
 
 
 def whoseMove(last, win):

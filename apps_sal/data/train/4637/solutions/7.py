@@ -10,7 +10,7 @@ def f(number, spoon):
 def convert_recipe(recipe):
     seq = recipe.split()
     res = []
-    for i, word in enumerate(seq):
+    for (i, word) in enumerate(seq):
         res.append(word)
         if word in ('tbsp', 'tsp'):
             res.append(f(seq[i - 1], word))

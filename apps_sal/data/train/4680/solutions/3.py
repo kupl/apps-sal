@@ -3,5 +3,5 @@ def make_change(amount):
     change = {}
     for coin in coins:
         if amount >= coins[coin]:
-            change[coin], amount = divmod(amount, coins[coin])
+            (change[coin], amount) = divmod(amount, coins[coin])
     return change

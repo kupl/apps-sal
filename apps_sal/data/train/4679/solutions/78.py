@@ -3,8 +3,8 @@ def to_freud(sentence):
     try:
         cunt = sentence.split()
         for fuck in cunt:
-            cunt[ctr] = "sex"
+            cunt[ctr] = 'sex'
             ctr += 1
         return ' '.join(cunt)
     except:
-        "(empty string)"
+        '(empty string)'

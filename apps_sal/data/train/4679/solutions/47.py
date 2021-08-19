@@ -1,6 +1,6 @@
 def to_freud(sentence):
-    res = ""
+    res = ''
     my_list = sentence.split(' ')
     for i in range(len(my_list)):
-        res += "sex "
+        res += 'sex '
     return res[:-1]

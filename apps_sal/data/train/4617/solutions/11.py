@@ -4,4 +4,4 @@ def powers_of_two(n):
     for i in range(n):
         s *= 2
         a.append(s)
-    return(a)
+    return a

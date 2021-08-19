@@ -2,7 +2,7 @@ def decode(string):
     if type(string) != str:
         return 'Input is not a string'
     alph = 'abcdefghijklmnopqrstuvwxyz'
-    s = ""
+    s = ''
     for el in string:
         if el.lower() in alph:
             if el.islower():

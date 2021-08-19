@@ -1,5 +1,5 @@
 def decrypt(s):
-    prev, c, r = 0, 0, []
+    (prev, c, r) = (0, 0, [])
     for x in reversed(s):
         d = int(x) - c - prev
         if d < 0:

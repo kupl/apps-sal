@@ -5,7 +5,7 @@ def pac_man(n, p, es):
     if not es:
         return n * n - 1
     l = len(es)
-    y, x = list(map(sorted, list(zip(*es))))
+    (y, x) = list(map(sorted, list(zip(*es))))
     i = bisect(y, p[0])
     hy = y[i] if i < l else n
     ly = y[i - 1] if i > 0 else -1

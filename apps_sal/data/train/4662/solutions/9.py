@@ -6,7 +6,7 @@ def sieve(n):
     r = [False, True] * (n // 2) + [True]
     r[1] = False
     r[2] = True
-    for i in range(3, int(n**.5) + 1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         if r[i]:
             r[i * i::2 * i] = [False] * ((n + 2 * i - 1 - i * i) // (2 * i))
     r = list(compress(list(range(len(r))), r))
@@ -23,9 +23,9 @@ def test(num):
     return True
 
 
-primes = set(sieve(10**6))
+primes = set(sieve(10 ** 6))
 res = []
-for i in range(1, 10**6):
+for i in range(1, 10 ** 6):
     if i not in primes and test(i):
         res.append(i)
 

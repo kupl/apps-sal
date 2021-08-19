@@ -1,6 +1,6 @@
 def automorphic(n):
-    result = n**2
+    result = n ** 2
     if str(n) in str(result):
-        return "Automorphic"
+        return 'Automorphic'
     else:
-        return "Not!!"
+        return 'Not!!'

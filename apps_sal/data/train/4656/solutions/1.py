@@ -4,7 +4,7 @@ from itertools import count
 def center_of(s):
     if not s:
         return ''
-    seq, le, i = '', len(s), 0
+    (seq, le, i) = ('', len(s), 0)
     for k in count(1):
         seq += s[i % le]
         i += 4 * k

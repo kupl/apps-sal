@@ -4,12 +4,10 @@ def automorphic(n):
     test to see if n's square ends in the same digits as the number itself.
     return boolean
     """
-    charLength = len(str((n)))
+    charLength = len(str(n))
     squared = str(n ** 2)
-
-    automorphicTest = int(squared[-(charLength):])
-
+    automorphicTest = int(squared[-charLength:])
     if automorphicTest == n:
-        return "Automorphic"
+        return 'Automorphic'
     else:
-        return "Not!!"
+        return 'Not!!'

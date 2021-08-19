@@ -1,6 +1,5 @@
 import re
-
-PLUMAGE = re.compile(r'[8WTYUIOAHXVM]')
+PLUMAGE = re.compile('[8WTYUIOAHXVM]')
 
 
 def owl_pic(text):

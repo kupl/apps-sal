@@ -1,3 +1,5 @@
-def string_to_number(s): return int(s)
+def string_to_number(s):
+    return int(s)
 
-"""Convert a String to a Number!"""
+
+'Convert a String to a Number!'

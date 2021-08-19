@@ -1,6 +1,6 @@
 def is_anagram(test, original):
-    test = test.lower().replace(" ", '')
-    original = original.lower().replace(" ", '')
+    test = test.lower().replace(' ', '')
+    original = original.lower().replace(' ', '')
     if len(test) != len(original):
         return False
     for letter in test:
@@ -9,5 +9,4 @@ def is_anagram(test, original):
     for letter in original:
         if letter not in test:
             return False
-
     return True

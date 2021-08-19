@@ -1,5 +1,5 @@
 def string_to_number(s):
-    if s[0] == "-":
+    if s[0] == '-':
         mul = -1
         i = 1
     else:
@@ -9,6 +9,6 @@ def string_to_number(s):
     while i < len(s):
         x = s[i]
         x = ord(x) - ord('0')
-        ans = (ans * 10) + x
+        ans = ans * 10 + x
         i = i + 1
     return ans * mul

@@ -1,5 +1,4 @@
-LIMIT = 100_000
-
+LIMIT = 100000
 values = set()
 for i in range(4):
     values |= set(range(3 ** i, LIMIT, 5))

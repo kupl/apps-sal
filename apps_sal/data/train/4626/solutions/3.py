@@ -4,4 +4,4 @@ def transform(c):
 
 
 def decode(s):
-    return "Input is not a string" if not isinstance(s, str) else ''.join(transform(c) if c.isalpha() else c for c in s)
+    return 'Input is not a string' if not isinstance(s, str) else ''.join((transform(c) if c.isalpha() else c for c in s))

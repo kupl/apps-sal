@@ -1,12 +1,12 @@
 def whoseMove(lp, abool):
-    if lp == "black":
+    if lp == 'black':
         if abool == True:
-            ansr = "black"
+            ansr = 'black'
         else:
-            ansr = "white"
-    if lp == "white":
+            ansr = 'white'
+    if lp == 'white':
         if abool == True:
-            ansr = "white"
+            ansr = 'white'
         else:
-            ansr = "black"
+            ansr = 'black'
     return ansr

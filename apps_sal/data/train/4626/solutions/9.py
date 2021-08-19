@@ -3,7 +3,6 @@ def decode(string_):
         return 'Input is not a string'
     alph = 'abcdefghijklmnopqrstuvwxyz'
     print(string_)
-
     out = ''
     for x in string_:
         if x.lower() in alph:

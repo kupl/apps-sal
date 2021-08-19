@@ -6,6 +6,5 @@ def move_zeros(array):
             newarr.append(item)
         else:
             zeroarr.append(item)
-
     newarr.extend(zeroarr)
-    return(newarr)
+    return newarr

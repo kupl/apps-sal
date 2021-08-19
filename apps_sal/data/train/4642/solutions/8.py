@@ -1,6 +1,5 @@
 from math import ceil
-
-D = {"fire": "grass", "water": "fire", "grass": "water", "electric": "water"}
+D = {'fire': 'grass', 'water': 'fire', 'grass': 'water', 'electric': 'water'}
 
 
 def calculate_damage(a, b, n, m):

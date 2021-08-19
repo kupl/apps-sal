@@ -8,5 +8,4 @@ def find_mult_3(num):
         for c in combinations(n, i):
             if sum(c) % 3 == 0:
                 r |= set([int(''.join([str(i) for i in p])) for p in permutations(c) if p[0] != 0])
-
     return [len(r), max(r)]

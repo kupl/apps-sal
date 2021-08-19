@@ -8,4 +8,4 @@ def puzzle_tiles(w, h):
             puzzle.append(''.join([' _|    '] * (w + 1)))
             puzzle.append(''.join(['(_   _ '] * (w + 1))[:-2])
         puzzle.append(' ' + ''.join(['|__( )_'] * (w + 1))[:-6])
-    return '\n'.join(l.rstrip() for l in puzzle)
+    return '\n'.join((l.rstrip() for l in puzzle))

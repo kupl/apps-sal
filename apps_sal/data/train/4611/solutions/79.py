@@ -1,8 +1,8 @@
 def animals(heads, legs):
     if heads == 0 and legs == 0:
         return (0, 0)
-    if legs % 2 == 1 or heads <= 0 or legs <= 0 or heads * 4 < legs or heads * 2 > legs:
-        return "No solutions"
+    if legs % 2 == 1 or heads <= 0 or legs <= 0 or (heads * 4 < legs) or (heads * 2 > legs):
+        return 'No solutions'
     else:
         ch = heads
         co = 0
