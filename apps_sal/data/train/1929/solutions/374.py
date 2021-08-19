@@ -1,6 +1,7 @@
 class StreamChecker:
 
     class Node:
+
         def __init__(self):
             self.node = [None] * 26
             self.end = False
@@ -30,11 +31,7 @@ class StreamChecker:
             if not node.node[a]:
                 return False
             if node.node[a].end:
-                print((not node.node[a]))
+                print(not node.node[a])
                 return True
             node = node.node[a]
         return False
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

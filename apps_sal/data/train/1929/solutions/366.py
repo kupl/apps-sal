@@ -10,7 +10,7 @@ class StreamChecker:
                     cur[c] = {}
                 cur = cur[c]
             cur['#'] = word
-        print((self.tries))
+        print(self.tries)
 
     def query(self, letter: str) -> bool:
         self.hist += letter
@@ -23,8 +23,3 @@ class StreamChecker:
             else:
                 return False
         return '#' in cur
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

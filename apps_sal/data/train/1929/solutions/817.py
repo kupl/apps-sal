@@ -14,7 +14,6 @@ class StreamChecker:
                     curr_trie[c_idx] = [None] * 27
                 curr_trie = curr_trie[c_idx]
             curr_trie[-1] = True
-
         self.ptrs = []
 
     def query(self, letter: str) -> bool:
@@ -22,18 +21,10 @@ class StreamChecker:
         self.ptrs.append(self.trie)
         new_ptrs = []
         c_idx = ctoi(letter)
-
         for ptr in self.ptrs:
             if ptr[c_idx]:
                 new_ptrs.append(ptr[c_idx])
                 if ptr[c_idx][-1]:
                     found = True
-
         self.ptrs = new_ptrs
-
         return found
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

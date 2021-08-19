@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self):
         self.prev = {}
 
@@ -33,8 +34,3 @@ class StreamChecker:
             if '$' in wt.prev:
                 return True
         return '$' in wt.prev
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

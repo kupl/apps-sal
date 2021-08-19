@@ -18,7 +18,7 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         found = False
         newNodes = [self.trie]
-        for i, node in enumerate(self.nodes):
+        for (i, node) in enumerate(self.nodes):
             if letter in node:
                 if 'isWord' in node[letter]:
                     found = True
@@ -28,8 +28,3 @@ class StreamChecker:
                     newNodes.append(node[letter])
         self.nodes = newNodes
         return found
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self):
         self.children = {}
         self.isWord = False
@@ -39,8 +40,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.arr.append(letter)
         return self.T.check(self.arr[::-1])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

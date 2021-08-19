@@ -8,6 +8,7 @@ class TrieNode:
 class StreamChecker:
 
     def __init__(self, words: List[str]):
+
         def insert(root, w):
             for c in w:
                 if c not in root.mp:
@@ -20,6 +21,7 @@ class StreamChecker:
         self.s = ''
 
     def query(self, letter: str) -> bool:
+
         def find(root, s):
             for c in s[::-1]:
                 if c not in root.mp:
@@ -30,8 +32,3 @@ class StreamChecker:
             return False
         self.s += letter
         return find(self.root, self.s)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
