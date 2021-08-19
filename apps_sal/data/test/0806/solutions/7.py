@@ -1,14 +1,6 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/1/20 20:36
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Ayoub and Lost Array.py
-
-
 def main():
-    n, l, r = list(map(int, input().split()))
+    (n, l, r) = list(map(int, input().split()))
     m = 10 ** 9 + 7
-
     sub = r - l + 1
     num = [sub // 3] * 3
     if sub % 3 == 1:
@@ -16,7 +8,6 @@ def main():
     elif sub % 3 == 2:
         num[l % 3] += 1
         num[(l + 1) % 3] += 1
-
     dp = [1, 0, 0]
     for _ in range(n):
         temp = [0] * 3
@@ -25,7 +16,6 @@ def main():
         temp[2] = dp[0] * num[2] + dp[1] * num[1] + dp[2] * num[0]
         for i in range(3):
             dp[i] = temp[i] % m
-
     print(dp[0])
 
 

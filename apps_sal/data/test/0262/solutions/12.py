@@ -1,5 +1,3 @@
-#!/usr/bin/env pypy3
-
 NO_SOL = -1
 
 
@@ -37,10 +35,10 @@ def main():
         if sum(column) != sum_sample:
             print(NO_SOL)
             return
-    if sum(grid[i][i] for i in range(n)) != sum_sample:
+    if sum((grid[i][i] for i in range(n))) != sum_sample:
         print(NO_SOL)
         return
-    if sum(grid[i][n - i - 1] for i in range(n)) != sum_sample:
+    if sum((grid[i][n - i - 1] for i in range(n))) != sum_sample:
         print(NO_SOL)
         return
     print(zero_cand)

@@ -10,7 +10,7 @@ def main():
 
     def valid(x, y):
         nonlocal n, m
-        return x >= 0 and x < n and y >= 0 and y < m
+        return x >= 0 and x < n and (y >= 0) and (y < m)
 
     def bfs(x, y):
         nonlocal g, vis, adj
@@ -66,7 +66,9 @@ def main():
     vis = set()
     count = s - k
     bfs2(l[0], l[1])
-    def f(i): return 'X' if i == '.' else ('#' if i == '#' else '.')
+
+    def f(i):
+        return 'X' if i == '.' else '#' if i == '#' else '.'
     for row in g:
         print(''.join(list(map(f, row))))
 

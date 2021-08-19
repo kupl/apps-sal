@@ -1,5 +1,5 @@
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     mn = m * n
     l = [_ == '.' for _ in range(n) for _ in input()]
     neigh = [[] for _ in range(mn)]
@@ -19,7 +19,7 @@ def main():
     nxt = {l.index(True)}
     cnt = sum(l) - k
     while cnt:
-        cur, nxt = nxt, set()
+        (cur, nxt) = (nxt, set())
         for i in cur:
             if res[i]:
                 res[i] = False
@@ -28,10 +28,10 @@ def main():
                     break
                 for j in neigh[i]:
                     nxt.add(j)
-    for x, (a, b) in enumerate(zip(res, l)):
+    for (x, (a, b)) in enumerate(zip(res, l)):
         if a and b:
             l[x] = 2
-    l = [''.join(('#', '.', 'X')[_] for _ in l[x:x + m]) for x in range(0, mn, m)]
+    l = [''.join((('#', '.', 'X')[_] for _ in l[x:x + m])) for x in range(0, mn, m)]
     print('\n'.join(l))
 
 

@@ -1,4 +1,4 @@
-n, a = list(map(int, input().split()))
+(n, a) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 
 
@@ -18,5 +18,4 @@ elif a <= x[0]:
 elif a >= x[-1]:
     print(a - x[1])
 else:
-    # ~ ans = 10**7
     print(min(visit(a, x[0], x[-2]), visit(a, x[1], x[-1])))

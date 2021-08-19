@@ -1,3 +1,2 @@
-# ABC120A
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 print(min(c, b // a))

@@ -1,11 +1,10 @@
-#!/usr/bin/env python3.5
 import sys
 
 
 def read_data():
-    n, x0 = list(map(int, next(sys.stdin).split()))
+    (n, x0) = list(map(int, next(sys.stdin).split()))
     checkpoints = list(map(int, next(sys.stdin).split()))
-    return x0, checkpoints
+    return (x0, checkpoints)
 
 
 def solve(x0, checkpoints):
@@ -21,7 +20,7 @@ def solve(x0, checkpoints):
 
 
 def __starting_point():
-    x0, checkpoints = read_data()
+    (x0, checkpoints) = read_data()
     length = solve(x0, checkpoints)
     print(length)
 

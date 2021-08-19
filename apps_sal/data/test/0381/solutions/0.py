@@ -11,18 +11,16 @@ from itertools import chain, dropwhile, permutations, combinations
 from collections import defaultdict, deque
 
 
-def VI(): return list(map(int, input().split()))
+def VI():
+    return list(map(int, input().split()))
 
 
 def main1(k):
-    # works correctly, but too slow and generates many more vertices than necessary.
-    # doesn't pass the time constraint with this implementation. (prints 10^5 lines)
-    # ==> use the editorial solution below.
     if k % 2 == 0:
-        print("NO")
+        print('NO')
         return
-    print("YES")
-    n = 2 * (k**2 - k + 1)
+    print('YES')
+    n = 2 * (k ** 2 - k + 1)
     m = n * k // 2
     print(n, m)
     i = 0
@@ -57,14 +55,13 @@ def main1(k):
 
 
 def main(k):
-    # following the editorial algo
     if k % 2 == 0:
-        print("NO")
+        print('NO')
         return
-    print("YES")
+    print('YES')
     if k == 1:
-        print("2 1")
-        print("1 2")
+        print('2 1')
+        print('1 2')
         return
     n = 2 * k + 4
     m = n * k // 2
@@ -75,8 +72,7 @@ def main(k):
         e.extend([(off, j)])
     for j in range(off + 1, off + k):
         for i in range(j + 1, off + k):
-            if (i == j + 1 and (j - off) % 2 == 1):  # or (j==off+1 and i==off+k-1):
-                # if (i==j+1 and i%2==0) or (j==off+1 and i==off+k-1):
+            if i == j + 1 and (j - off) % 2 == 1:
                 continue
             e.extend([(j, i)])
         e.extend([(j, off + k), (j, off + k + 1)])
@@ -86,7 +82,7 @@ def main(k):
         e.extend([(off, j)])
     for j in range(off + 1, off + k):
         for i in range(j + 1, off + k):
-            if (i == j + 1 and (j - off) % 2 == 1):  # or (j==off+1 and i==off+k-1):
+            if i == j + 1 and (j - off) % 2 == 1:
                 continue
             e.extend([(j, i)])
         e.extend([(j, off + k), (j, off + k + 1)])

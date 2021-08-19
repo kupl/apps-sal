@@ -1,6 +1,6 @@
 def solve(s):
     n = len(s)
-    if(n == 1):
+    if n == 1:
         return 1
     else:
         start = 0
@@ -9,15 +9,14 @@ def solve(s):
         f = 1
         for i in range(1, n):
             f = 1
-            if(s[i] == prev):
+            if s[i] == prev:
                 continue
             else:
                 f = 0
                 ans = max(ans, i - start)
                 start = i
                 prev = s[i]
-                # print(ans)
-        if(f):
+        if f:
             ans = max(ans, n - start)
             start = i
             prev = s[i]
@@ -29,18 +28,16 @@ def solve1(s):
     ans = 0
     maxx = 0
     for i in s:
-        if(st):
+        if st:
             ans = 0
-        if(i == '+'):
+        if i == '+':
             st.append('+')
+        elif st:
+            st.pop()
         else:
-            if(st):
-                st.pop()
-            else:
-                ans += 1
-                maxx = max(maxx, ans)
+            ans += 1
+            maxx = max(maxx, ans)
         maxx = max(maxx, len(st))
-        # print(st)
     maxx = max(maxx, len(st))
     return maxx
 
@@ -50,18 +47,16 @@ def solve2(s):
     ans = 0
     maxx = 0
     for i in s:
-        if(st):
+        if st:
             ans = 0
-        if(i == '-'):
+        if i == '-':
             st.append('-')
+        elif st:
+            st.pop()
         else:
-            if(st):
-                st.pop()
-            else:
-                ans += 1
-                maxx = max(maxx, ans)
+            ans += 1
+            maxx = max(maxx, ans)
         maxx = max(maxx, len(st))
-        # print(st)
     maxx = max(maxx, len(st))
     return maxx
 

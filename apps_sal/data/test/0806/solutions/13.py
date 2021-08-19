@@ -1,4 +1,4 @@
-n, r, l = (int(i) for i in input().split())
+(n, r, l) = (int(i) for i in input().split())
 r0 = r
 if r0 % 3 == 1:
     r0 += 2
@@ -25,7 +25,6 @@ elif l - l0 == 1:
 d0 = [d0]
 d1 = [d1]
 d2 = [d2]
-#print(d0[0], d1[0], d2[0])
 for i in range(1, n):
     d0.append((d0[i - 1] * d0[0] + d1[i - 1] * d2[0] + d2[i - 1] * d1[0]) % 1000000007)
     d1.append((d0[i - 1] * d1[0] + d1[i - 1] * d0[0] + d2[i - 1] * d2[0]) % 1000000007)

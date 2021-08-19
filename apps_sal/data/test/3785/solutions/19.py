@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 M = [input() for i in range(n)]
 T = [[] for i in range(n)]
 p = 0
@@ -16,17 +16,15 @@ for i in range(n):
             a = i
             b = j
             break
-t = (n * m) - p - k
+t = n * m - p - k
 l = [[a, b]]
 T[a][b] = '.'
 t = t - 1
 while t > 0:
     r = l[0]
-
-    del(l[0])
+    del l[0]
     i = r[0]
     j = r[1]
-
     if i + 1 != n:
         if M[i + 1][j] == '.' and T[i + 1][j] != '.':
             l.append([i + 1, j])
@@ -53,7 +51,6 @@ while t > 0:
             l.append([i, j - 1])
             T[i][j - 1] = '.'
             t = t - 1
-
 for i in range(n):
     S = ''
     for j in range(m):
