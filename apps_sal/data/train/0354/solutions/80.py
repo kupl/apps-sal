@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n, rollMax):
         K = max(rollMax)
         dp = [[[0 for _ in range(K)] for _ in range(6)] for _ in range(n)]
@@ -6,9 +7,7 @@ class Solution:
             dp[0][j][0] = 1
         for i in range(1, n):
             for j in range(6):
-                dp[i][j][0] += sum(dp[i - 1][t][k] for t in range(6) for k in range(rollMax[t]) if t != j)
+                dp[i][j][0] += sum((dp[i - 1][t][k] for t in range(6) for k in range(rollMax[t]) if t != j))
                 for k in range(1, min(rollMax[j], i + 1)):
                     dp[i][j][k] = dp[i - 1][j][k - 1]
-        return sum(dp[n - 1][j][k] for j in range(6) for k in range(K)) % (10**9 + 7)
-
-    # https://leetcode.com/problems/dice-roll-simulation/discuss/403862/Python-O(N)-Bottom-Up-DP-with-explaination
+        return sum((dp[n - 1][j][k] for j in range(6) for k in range(K))) % (10 ** 9 + 7)

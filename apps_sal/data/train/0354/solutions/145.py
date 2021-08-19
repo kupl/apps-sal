@@ -1,5 +1,7 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
+
         @lru_cache(maxsize=None)
         def dfs(n, i, k):
             if not n:
@@ -10,11 +12,6 @@ class Solution:
                     ans += dfs(n - 1, j, 1)
                 elif k + 1 <= rollMax[j]:
                     ans += dfs(n - 1, j, k + 1)
-
             return ans
-
-        ans = sum(dfs(n - 1, i, 1) for i in range(6))
-
+        ans = sum((dfs(n - 1, i, 1) for i in range(6)))
         return ans % 1000000007
-
-    # https://leetcode.com/problems/dice-roll-simulation/discuss/833495/Python-3-or-DFS-%2B-Memoization-or-Explanation
