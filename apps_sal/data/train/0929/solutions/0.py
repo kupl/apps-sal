@@ -1,4 +1,3 @@
-# cook your dish here
 import numpy as np
 tests = int(input())
 for _ in range(tests):
@@ -43,7 +42,7 @@ for _ in range(tests):
             sums = np.logical_or(sums, new_sums)
         solved = False
         for i in range(n):
-            if sums[i] and counts[0] <= i and counts[2] <= n - 1 - i:
+            if sums[i] and counts[0] <= i and (counts[2] <= n - 1 - i):
                 solved = True
                 break
         if solved or counts[1] > 1:

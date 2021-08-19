@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 res = []
 for _ in range(n):
@@ -16,4 +15,4 @@ for _ in range(n):
     ls1.extend(ls2)
     ls1.sort()
     for ele in ls1:
-        print(ele, end=" ")
+        print(ele, end=' ')

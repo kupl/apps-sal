@@ -1,9 +1,8 @@
-# cook your dish here
 T = int(input())
 for t in range(T):
     z = input()
-    N, M = z.split()
-    N, M = int(N), int(M)
+    (N, M) = z.split()
+    (N, M) = (int(N), int(M))
     z = input()
     first = z.split()
     second = input().split()
@@ -25,4 +24,4 @@ for t in range(T):
         if i not in set_1:
             output.append(i)
     for i in output:
-        print(i, end=" ")
+        print(i, end=' ')

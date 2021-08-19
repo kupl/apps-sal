@@ -5,4 +5,3 @@ def greet(name, owner):
     if name != owner:
         print('Hello guest')
         return 'Hello guest'
-    # Add code here

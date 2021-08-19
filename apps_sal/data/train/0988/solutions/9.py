@@ -1,12 +1,9 @@
-# cook your dish here
 tc = int(input())
-
 while tc > 0:
     n = int(input())
     sum = []
     s = 0
     lis = list(map(int, input().split()))
-
     for i in range(n):
         x = lis[i]
         s = 0

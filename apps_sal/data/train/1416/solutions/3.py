@@ -1,5 +1,5 @@
 import itertools
-s, n, s1, lis, new1 = [], [], [], [], []
+(s, n, s1, lis, new1) = ([], [], [], [], [])
 q = int(input())
 s.append(input().split(' '))
 s1 = list([list(map(int, x)) for x in s])
@@ -17,7 +17,6 @@ if len(s1) % 2 != 0:
     for j in range(len(lis)):
         y = lis[j]
         s1[0].remove(y)
-    # print ' '.join(s1[0])
     print(' '.join(map(str, s1[0])))
 else:
     z = len(s1[0]) // 2
@@ -27,7 +26,6 @@ else:
         if x == sum1 // 2:
             lis = n[j]
             break
-        # print lis,len(lis)
     new1 = list(lis)
     print(' '.join(map(str, new1)))
     for j in range(len(lis)):

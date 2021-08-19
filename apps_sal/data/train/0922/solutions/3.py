@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t:
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     arr = [int(i) for i in input().split()]
     brr = [int(i) for i in input().split()]
     d = {}

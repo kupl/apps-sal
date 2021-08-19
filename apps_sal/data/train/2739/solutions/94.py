@@ -4,6 +4,5 @@ def cube_odd(arr):
         if type(arr[i]) != int:
             return None
         elif arr[i] % 2 != 0:
-            sum += arr[i]**3
+            sum += arr[i] ** 3
     return sum
-    # your code here - return None if at least a value is not an integer

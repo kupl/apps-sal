@@ -7,15 +7,12 @@ def get_column_title(number):
         raise TypeError
 
     def convert(num):
-
         if isinstance(num, list):
             n = num[0]
-            # result = num
         else:
             if len(result) == 0:
                 result.append(num)
             n = num
-
         if 0 < n <= 26:
             result.append(alphabet[n - 1])
             return result
@@ -26,7 +23,6 @@ def get_column_title(number):
                 result[0] = convert(n // 26)
             result.append(alphabet[n % 26 - 1])
             return result
-
     res = convert(number)
     result = []
-    return ''.join(res[1::])
+    return ''.join(res[1:])

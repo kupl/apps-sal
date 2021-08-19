@@ -1,5 +1,4 @@
 def find_missing_number(sequence):
-    # your code here
     if len(sequence) < 1:
         return 0
     try:

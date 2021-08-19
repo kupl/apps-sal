@@ -1,4 +1,5 @@
 class Solution(object):
+
     def containsNearbyAlmostDuplicate(self, nums, k, t):
         """
         :type nums: List[int]
@@ -9,9 +10,7 @@ class Solution(object):
         if k < 1 or t < 0:
             return False
         import sys
-
         bh = {}
-        # To prevent 0 as a divisor
         w = t + 1
         for i in range(len(nums)):
             n_i = nums[i]
@@ -24,5 +23,5 @@ class Solution(object):
                 return True
             bh[n_i_w] = nums[i]
             if len(bh) > k:
-                del bh[(nums[i - k]) // w]
+                del bh[nums[i - k] // w]
         return False

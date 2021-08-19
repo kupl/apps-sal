@@ -1,12 +1,11 @@
-# cook your dish here
 T = int(input())
 for _ in range(T):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     a.sort()
     b.sort()
-    i, j = 0, 0
+    (i, j) = (0, 0)
     l = []
     while i < n and j < m:
         if a[i] < b[j]:
