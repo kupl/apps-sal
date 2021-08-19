@@ -1,15 +1,12 @@
-
 n = int(input())
-
 ar = [int(input()) for x in range(n)]
-
 ar.sort()
 
 
 def out(*g):
     g = list(g)
     g.sort()
-    print("YES")
+    print('YES')
     for x in g:
         print(x)
 
@@ -24,8 +21,7 @@ def check(x1, x2, x3, x4):
     if m != int(m):
         return False
     d = l[3] - l[0]
-
-    if not (s == m == d):
+    if not s == m == d:
         return False
     return True
 
@@ -40,22 +36,18 @@ def _0():
 
 def _1():
     x = ar[0]
-    print("YES")
-#	print(x)
+    print('YES')
     print(x)
     print(3 * x)
     print(3 * x)
 
 
 def _2():
-    x, y = ar
+    (x, y) = ar
     if x * 3 < y:
-        print("NO")
+        print('NO')
     else:
-
         print('YES')
-#		print(x)
-#		print(y)
         print(4 * x - y)
         print(3 * x)
 
@@ -65,12 +57,9 @@ def _3():
     y = ar[1]
     z = ar[2]
     if x * 3 < z:
-        print("NO")
+        print('NO')
     else:
         print('YES')
-#		print(x)
-#		print(y)
-#		print(z)
         print(3 * x)
 
 
@@ -81,8 +70,7 @@ def _3():
         if check(x, *ar):
             out(x)
             return
-
-    print("NO")
+    print('NO')
 
 
 def _4():
@@ -90,8 +78,7 @@ def _4():
     if r == False:
         print('NO')
     else:
-        print("YES")
-#		for x in ar:  print(x)
+        print('YES')
 
 
 vars()['_' + str(n)]()

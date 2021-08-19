@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -12,6 +10,6 @@ for _ in range(t):
             if a[i] == a[j]:
                 ok = True
     if ok:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

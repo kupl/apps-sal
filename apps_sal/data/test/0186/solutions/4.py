@@ -1,10 +1,9 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 maxn = 0
 for i in range(n):
     maxn += 2
     if maxn % 3 == 0:
         maxn += 2
-# print(maxn)
 maxm = m * 6 - 3
 now = 6
 while now < max(maxm, maxn):

@@ -2,7 +2,7 @@ import math
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     time = list(map(int, input().split()))
     ans = []
     total = 0
@@ -22,12 +22,9 @@ def main():
                         new += counts[j] * (j + 1)
                         count += math.ceil((time[i] + new - m) / (j + 1))
                         break
-                    # print(new,j+1,counts[j],count)
             ans.append(count)
-
         counts[time[i] - 1] += 1
         total += time[i]
-
     for i in ans:
         print(i, end=' ')
 

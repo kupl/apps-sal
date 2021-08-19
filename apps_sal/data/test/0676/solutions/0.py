@@ -3,7 +3,6 @@ a = []
 for i in range(n):
     a.append(int(input()))
 a = sorted(a)
-# print(a)
 if n == 0:
     print('YES')
     print(1)
@@ -34,7 +33,7 @@ elif n == 3:
     if a[0] * 3 >= a[2] and 4 * a[0] == a[1] + a[2]:
         print('YES')
         print(a[0] * 3)
-    elif a[2] % 3 == 0 and a[2] // 3 <= a[0] and a[2] + a[2] // 3 == a[0] + a[1]:
+    elif a[2] % 3 == 0 and a[2] // 3 <= a[0] and (a[2] + a[2] // 3 == a[0] + a[1]):
         print('YES')
         print(a[2] // 3)
     elif a[2] == a[0] * 3:

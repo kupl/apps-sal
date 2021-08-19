@@ -1,12 +1,8 @@
-# Bhargey Mehta (Junior)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
-#sys.stdin = open('input.txt', 'r')
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 sys.setrecursionlimit(1000000)
-
 n = int(input())
 a = list(map(int, input().split()))
 x = {}

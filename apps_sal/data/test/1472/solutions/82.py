@@ -2,8 +2,8 @@ from collections import Counter
 
 
 def main():
-    n, x, y = map(int, input().split())
-    x, y = x - 1, y - 1
+    (n, x, y) = map(int, input().split())
+    (x, y) = (x - 1, y - 1)
     ans = []
     for i in range(n):
         dp = [n] * n
@@ -13,7 +13,6 @@ def main():
         dp[x] = min(dp[x], dp[y] + 1)
         calcstep(x, dp)
         calcstep(y, dp)
-        #print(i, dp)
         ans += dp
     ans = Counter(ans)
     for i in range(1, n):

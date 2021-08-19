@@ -9,32 +9,28 @@ for i in range(1, n):
     pref[i] = pref[i - 1] + x[i]
 for j in range(n):
     ans = pref[j]
-    if(ans <= M):
+    if ans <= M:
         print(0, end=' ')
     else:
         k = 0
-        while(ans > M):
+        while ans > M:
             for i in range(99, -1, -1):
-                if(freq[i] == 0):
+                if freq[i] == 0:
                     continue
                 y = (ans - M) // (i + 1)
-                # print(y)
-                if(y == 0):
+                if y == 0:
                     ans = ans - (i + 1)
                     k += 1
-                elif(freq[i] <= y):
+                elif freq[i] <= y:
                     ans = ans - freq[i] * (i + 1)
                     k += freq[i]
+                elif ans - y * (i + 1) <= M:
+                    ans = ans - y * (i + 1)
+                    k += y
                 else:
-                    if(ans - (y) * (i + 1) <= M):
-                        ans = ans - (y) * (i + 1)
-                        k += (y)
-                    else:
-                        ans = ans - (y + 1) * (i + 1)
-                        k += (y + 1)
-                # print(ans,j)
-                if(ans <= M):
+                    ans = ans - (y + 1) * (i + 1)
+                    k += y + 1
+                if ans <= M:
                     break
         print(k, end=' ')
-        # print(freq)
     freq[x[j] - 1] += 1

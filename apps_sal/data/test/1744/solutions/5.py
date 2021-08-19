@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 t = list(map(int, input().split()))
 tIndex = {}
 tIndexSum = {}
@@ -15,20 +15,17 @@ for i in range(n):
                 r += tIndex[k]
             else:
                 r += (s1 + t[i] - m) // k
-                s1 -= ((s1 + t[i] - m) // k) * k
+                s1 -= (s1 + t[i] - m) // k * k
                 if s1 + t[i] > m:
                     s1 -= k
                     r += 1
             if s1 + t[i] <= m:
                 break
     print(r, end=' ')
-
-    if not(t[i] in tIndex):
+    if not t[i] in tIndex:
         tIndex[t[i]] = 0
     tIndex[t[i]] += 1
-    if not(t[i] in tIndexSum):
+    if not t[i] in tIndexSum:
         tIndexSum[t[i]] = 0
     tIndexSum[t[i]] += t[i]
     s += t[i]
-# print('s=',s)
-# print(tIndex)
