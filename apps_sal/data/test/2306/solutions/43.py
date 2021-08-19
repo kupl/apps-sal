@@ -1,13 +1,11 @@
 n = int(input())
 list_t = list(map(int, input().split()))
 list_v = list(map(int, input().split()))
-
 list_v2 = [0 for i in range(n + 1)]
 list_t.append(0)
 list_v.append(0)
 for i in range(n - 1)[::-1]:
     list_v2[i] = min(list_v[i], list_v[i + 1], list_v2[i + 1] + list_t[i + 1])
-
 dist = 0
 v0 = 0
 for i in range(n):

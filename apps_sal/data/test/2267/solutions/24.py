@@ -16,4 +16,4 @@ for i in range(n):
     t = input().strip('\n')
     strings.append(t)
 strings.sort(key=cmp_to_key(mysort))
-print("".join(strings))
+print(''.join(strings))

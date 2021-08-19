@@ -2,7 +2,7 @@ from collections import *
 
 
 def go():
-    n, s, t = int(input()), input(), input()
+    (n, s, t) = (int(input()), input(), input())
     if Counter(s) != Counter(t):
         return -1
     ans = 0

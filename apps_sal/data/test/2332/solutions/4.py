@@ -1,9 +1,7 @@
 import sys
 import math
-
-
-n, k, m = list(map(int, sys.stdin.readline().strip().split(' ')))
-word_indexes = {word: i for i, word in enumerate(sys.stdin.readline().strip().split(' '))}
+(n, k, m) = list(map(int, sys.stdin.readline().strip().split(' ')))
+word_indexes = {word: i for (i, word) in enumerate(sys.stdin.readline().strip().split(' '))}
 costs = list(map(int, sys.stdin.readline().strip().split(' ')))
 min_costs = costs[:]
 for ki in range(k):
@@ -14,7 +12,6 @@ for ki in range(k):
     for i in group[1:]:
         min_costs[i - 1] = min_so_far
 sentence = sys.stdin.readline().strip().split(' ')
-
 res = 0
 for word in sentence:
     word_index = word_indexes[word]

@@ -24,17 +24,14 @@ def lm():
 
 def solve():
     n = nn()
-
     ice = lm()
-
     ice.sort()
     out = []
     for i in range(n):
         if i % 2 == 1:
             out.append(ice[i // 2])
-
         else:
-            out.append(ice[((i // 2 + n // 2))])
+            out.append(ice[i // 2 + n // 2])
     good = 0
     for i in range(n - 1):
         if i % 2 == 1:

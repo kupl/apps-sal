@@ -1,7 +1,6 @@
 n = int(input())
 s = input()
 a = [int(x) for x in input().split()]
-
 dp = [[[False for i in range(101)] for j in range(101)] for k in range(101)]
 
 

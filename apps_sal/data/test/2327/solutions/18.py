@@ -4,5 +4,5 @@ for _ in range(t):
     n = int(input())
     ct = 0
     for i in range(int(log2(n)) + 1):
-        ct += n // (2 ** i)
+        ct += n // 2 ** i
     print(ct)

@@ -7,7 +7,7 @@ ct2 = 0
 ct4 = 0
 ct6 = 0
 ct8 = 0
-ct = [0] * (10**5 + 10)
+ct = [0] * (10 ** 5 + 10)
 for i in L:
     ct[i] += 1
 for i in ct:
@@ -20,7 +20,7 @@ for i in ct:
     if i > 7:
         ct8 += 1
 for i in ' ' * q:
-    a, b = input().split()
+    (a, b) = input().split()
     b = int(b)
     if a == '+':
         ct[b] += 1

@@ -3,7 +3,6 @@ def main():
     s = input()
     left = 0 - s.count('L')
     right = 0 + s.count('R')
-
     print(right - left + 1)
 
 

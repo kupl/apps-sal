@@ -4,7 +4,6 @@ for _ in range(Q):
     s = input()
     while s != '' and s[0] == 'P':
         s = s[1:]
-
     ans = 0
     now = 0
     for i in s:
@@ -14,5 +13,4 @@ for _ in range(Q):
             ans = max(ans, now)
             now = 0
     ans = max(ans, now)
-
     print(ans)

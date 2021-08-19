@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = []
 for i in range(m):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     if len(l) <= c - 1:
         for i in range(c - len(l)):
             l.append([])
@@ -20,11 +20,11 @@ for i in range(m):
 q = int(input())
 for i in range(q):
     counter = 0
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     for j in range(len(l)):
         yes = 0
         for k in range(len(l[j])):
-            if yes == 0 and u in l[j][k] and v in l[j][k]:
+            if yes == 0 and u in l[j][k] and (v in l[j][k]):
                 yes = 1
                 counter += 1
     print(counter)

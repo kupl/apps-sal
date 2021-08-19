@@ -1,9 +1,8 @@
-'''
+"""
 Created on Jun 4, 2014
 
 @author: Nathaniel
-'''
-
+"""
 import bisect
 
 
@@ -15,14 +14,13 @@ def nextl():
     return list(map(int, input().split()))
 
 
-n, m = nexti()
+(n, m) = nexti()
 a = sorted(nextl())
 b = sorted(nextl())
 count = 0
 i = 0
 j = 0
 n = len(a)
-
 while i < n:
     bis = bisect.bisect_left(b, a[i])
     if bis != len(b):

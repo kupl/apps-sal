@@ -15,7 +15,7 @@ for i in range(N):
 q[0].append(T)
 vans = [-1] * (T + 1)
 for i in range(101):
-    while(len(q[i]) > 0):
+    while len(q[i]) > 0:
         s = q[i].popleft()
         if vans[s] == -1:
             vans[s] = i

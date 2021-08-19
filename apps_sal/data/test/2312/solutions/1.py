@@ -24,12 +24,12 @@ def ma():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     n = inp()
     a = lis()
     b = set(a)
-    if(len(b) == n):
-        print("NO")
+    if len(b) == n:
+        print('NO')
     else:
-        print("YES")
+        print('YES')

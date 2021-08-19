@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 for i in range(m):
-    l, r, x = [int(x) - 1 for x in input().split()]
+    (l, r, x) = [int(x) - 1 for x in input().split()]
     for j in range(l, r + 1):
         if a[j] < a[x]:
             l += 1

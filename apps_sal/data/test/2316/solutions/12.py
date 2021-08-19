@@ -1,12 +1,12 @@
 def main():
-    x, n, m = list(map(int, input().split()))
+    (x, n, m) = list(map(int, input().split()))
     while x > 20 and n > 0:
         n -= 1
         x = x // 2 + 10
     if x > m * 10:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 
 
 def __starting_point():

@@ -1,14 +1,14 @@
 t = int(input())
 for j in range(t):
     e = input()
-    m, k = map(int, input().split())
+    (m, k) = map(int, input().split())
     arr = [int(i) for i in input().split()]
-    sum, bfail = [0] * k, [0] * k
-    ffail, undef = -1, 0
+    (sum, bfail) = ([0] * k, [0] * k)
+    (ffail, undef) = (-1, 0)
     used = [False] * k
     ubfail = 0
     for i in range(m - 1):
-        c, ns = map(int, input().split())
+        (c, ns) = map(int, input().split())
         if c == 0:
             undef += 1
             if ns == 0 and ffail == -1:
@@ -37,7 +37,7 @@ for j in range(t):
     for i in range(k):
         if i == best or undef - minu + sum[i] >= arr[i]:
             print('Y', end='')
-        elif bfail[i] + ubfail >= arr[i] and not used[i]:
+        elif bfail[i] + ubfail >= arr[i] and (not used[i]):
             print('Y', end='')
         else:
             print('N', end='')

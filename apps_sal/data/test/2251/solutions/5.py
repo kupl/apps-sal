@@ -1,8 +1,8 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     edges = {_: {} for _ in range(1, m + 1)}
     for _ in range(m):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         d = edges[c]
         l = d.get(a)
         if l:
@@ -20,12 +20,11 @@ def main():
         for y in dcolor.get(t, ()):
             if unused[y]:
                 dfs(y)
-
     res = []
     n += 1
     unused = [True] * n
     for _ in range(int(input())):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         x = 0
         for dcolor in list(edges.values()):
             for j in range(n):

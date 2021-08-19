@@ -8,6 +8,6 @@ for i in arr:
     else:
         co += 1
 if ce > co:
-    print("READY FOR BATTLE")
+    print('READY FOR BATTLE')
 else:
-    print("NOT READY")
+    print('NOT READY')

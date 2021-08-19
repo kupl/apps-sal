@@ -10,9 +10,7 @@ for i in range(T):
             start = True
             ans = max(ans, count)
             count = 0
-
-        else:
-            if start:
-                count += 1
+        elif start:
+            count += 1
     ans = max(ans, count)
     print(ans)

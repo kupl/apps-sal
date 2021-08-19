@@ -9,5 +9,5 @@ for i in range(n):
     a[i] = q
 s = set()
 for i in range(n):
-    s.add("".join(a[i]))
+    s.add(''.join(a[i]))
 print(len(s))

@@ -8,13 +8,13 @@ def dfs(a, b, v, e):
     return False
 
 
-a, e = [], []
+(a, e) = ([], [])
 for i in range(int(input())):
-    t, x, y = map(int, input().split())
+    (t, x, y) = map(int, input().split())
     if t == 1:
         a.append((x, y))
         e.append([])
-        for i, ai in enumerate(a):
+        for (i, ai) in enumerate(a):
             if x in range(ai[0] + 1, ai[1]) or y in range(ai[0] + 1, ai[1]):
                 e[-1].append(i)
             if ai[0] in range(x + 1, y) or ai[1] in range(x + 1, y):

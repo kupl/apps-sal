@@ -8,11 +8,11 @@ for i in range(n):
 b = []
 m = int(input())
 for i in range(m):
-    l, r = map(int, input().split())
-    if ((r - l + 1) // 2) % 2 != 0:
+    (l, r) = map(int, input().split())
+    if (r - l + 1) // 2 % 2 != 0:
         value = not value
     if value:
-        b.append("odd")
+        b.append('odd')
     else:
-        b.append("even")
-print("\n".join(b))
+        b.append('even')
+print('\n'.join(b))

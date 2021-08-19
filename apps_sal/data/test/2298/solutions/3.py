@@ -12,17 +12,17 @@ def gcd(x, y):
 
 t = read_int()
 for case_num in range(t):
-    a, b, q = read_ints()
+    (a, b, q) = read_ints()
     g = gcd(a, b)
     lcm = a * b // g
     acc = [0 for i in range(lcm)]
     for i in range(1, lcm):
         acc[i] = acc[i - 1]
-        if (i % a) % b != (i % b) % a:
+        if i % a % b != i % b % a:
             acc[i] += 1
     ans = []
     for i in range(q):
-        l, r = read_ints()
+        (l, r) = read_ints()
         curr = 0
         n = l // lcm
         x = l % lcm

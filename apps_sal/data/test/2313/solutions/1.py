@@ -3,7 +3,7 @@ def add(a, b):
 
 
 def mult(a, b):
-    tmp = (a % mod) * (b % mod)
+    tmp = a % mod * (b % mod)
     return tmp % mod
 
 
@@ -20,7 +20,7 @@ for k in range(1, n + 1):
     ans = 0
     j = 0
     for i in range(0, n + 1, k):
-        ans = add(ans, mult(j, (add(pref[min(n, i + k)], -pref[i]))))
+        ans = add(ans, mult(j, add(pref[min(n, i + k)], -pref[i])))
         j += 1
     ans = mult(ans, invn)
     print(ans, end=' ')

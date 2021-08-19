@@ -21,7 +21,7 @@ for i in range(len(a) - len(b)):
             dupa = 1 - dupa
         tesame += dupa
     else:
-        if (pref[i + len(b) - 1]) % 2 != 0:
+        if pref[i + len(b) - 1] % 2 != 0:
             dupa = 1 - dupa
         tesame += dupa
 if chuj % 2 == 0:

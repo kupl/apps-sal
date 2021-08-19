@@ -1,15 +1,15 @@
 T = int(input())
 for i in range(T):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     if k % 3 != 0:
         if n % 3 == 0:
-            print("Bob")
+            print('Bob')
         else:
-            print("Alice")
+            print('Alice')
     else:
         quotient = k + 1
         remainder = n % quotient
         if remainder % 3 == 0 and remainder != k:
-            print("Bob")
+            print('Bob')
         else:
-            print("Alice")
+            print('Alice')

@@ -1,15 +1,13 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = [0] * n
 for i in range(n):
     A[i] = input()
     for j in range(m):
         if A[i][j] == 'S':
-            per1, per2 = i, j
-
-t1, t2 = per1, per2
-end1, end2 = per1, per2
+            (per1, per2) = (i, j)
+(t1, t2) = (per1, per2)
+(end1, end2) = (per1, per2)
 while True:
-
     if per1 > 0 and (t1 != per1 - 1 or t2 != per2) and (A[per1 - 1][per2] == '*' or A[per1 - 1][per2] == 'S'):
         t1 = per1
         t2 = per2

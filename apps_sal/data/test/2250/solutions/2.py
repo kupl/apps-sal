@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 T = int(input())
@@ -9,7 +12,7 @@ for _ in range(T):
     X = []
     prev = S[0]
     c = 0
-    for i, s in enumerate(S):
+    for (i, s) in enumerate(S):
         if s == prev:
             c += 1
         else:

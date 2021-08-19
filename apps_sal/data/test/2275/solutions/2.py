@@ -1,7 +1,7 @@
 for i in range(int(input())):
     n = int(input())
     s = input()
-    ans = -1e9
+    ans = -1000000000.0
     cur = 0
     fl = False
     for j in range(n):

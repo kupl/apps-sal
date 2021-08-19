@@ -1,18 +1,13 @@
 N = int(input())
-
 t = [int(x) for x in input().split()]
 vSection = [int(x) for x in input().split()]
-
 vPoint = [0]
 for i in range(1, N):
     vPoint.append(min(vSection[i - 1], vSection[i]))
 vPoint.append(0)
-
 for i in reversed(range(1, N + 1)):
     if t[i - 1] < vPoint[i - 1] - vPoint[i]:
         vPoint[i - 1] = t[i - 1] + vPoint[i]
-
-
 ans = 0
 VE = 0
 for i in range(N):
@@ -33,5 +28,4 @@ for i in range(N):
         else:
             x = y - a
             ans += VS * (x - sumT) + (x - sumT) ** 2 / 2 + VE * (t[i] - (x - sumT)) + (t[i] - (x - sumT)) ** 2 / 2
-
 print(ans)

@@ -17,7 +17,7 @@ def check(arr):
 
 
 def inv(arr):
-    return [(not x) for x in arr]
+    return [not x for x in arr]
 
 
 def gen(n):
@@ -33,5 +33,5 @@ def gen(n):
 k = int(input())
 ans = gen(2 ** k)
 for x in ans:
-    sys.stdout.write("".join(["+" if el else "*" for el in x]))
-    sys.stdout.write("\n")
+    sys.stdout.write(''.join(['+' if el else '*' for el in x]))
+    sys.stdout.write('\n')

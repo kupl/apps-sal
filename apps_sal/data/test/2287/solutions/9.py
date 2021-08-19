@@ -1,5 +1,5 @@
 t = int(input())
-while(t):
+while t:
     t -= 1
     s = input()
     s = s.rstrip('0')

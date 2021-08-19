@@ -6,11 +6,11 @@ def solve():
         if a[n // 2] != b[n // 2]:
             print('No')
             return
-    u, v = list(), list()
+    (u, v) = (list(), list())
 
     def add(s, p, q):
         if p > q:
-            p, q = q, p
+            (p, q) = (q, p)
         s.append((p, q))
     for i in range(n // 2):
         add(u, a[i], a[n - i - 1])

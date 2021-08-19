@@ -6,10 +6,10 @@ def dist2(x_, y_):
     return (x2 - x_) ** 2 + (y2 - y_) ** 2
 
 
-n, x1, y1, x2, y2 = [int(i) for i in input().split()]
+(n, x1, y1, x2, y2) = [int(i) for i in input().split()]
 dist = [[0] * 2 for i in range(n)]
 for i in range(n):
-    x, y = [int(i) for i in input().split()]
+    (x, y) = [int(i) for i in input().split()]
     dist[i][0] = dist1(x, y)
     dist[i][1] = dist2(x, y)
 dist.sort()

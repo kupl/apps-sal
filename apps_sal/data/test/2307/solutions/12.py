@@ -7,6 +7,6 @@ for i in range(n):
     else:
         e += 1
 if e > o:
-    print("READY FOR BATTLE")
+    print('READY FOR BATTLE')
 else:
-    print("NOT READY")
+    print('NOT READY')

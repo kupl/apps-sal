@@ -5,9 +5,9 @@ def rl():
     return [int(w) for w in stdin.readline().split()]
 
 
-T, = rl()
+(T,) = rl()
 for _ in range(T):
-    n, = rl()
+    (n,) = rl()
     s = stdin.readline().rstrip()
     l = 1
     while l < n and s[l] == s[0]:

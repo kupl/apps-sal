@@ -17,8 +17,8 @@ def input_2d(nrows: int, ncols: int, type=np.int, *args, **kwargs):
     return data
 
 
-class IntAddition (object):
-    '''整数の加法'''
+class IntAddition(object):
+    """整数の加法"""
 
     def operate(self, x, y):
         return x + y
@@ -37,17 +37,13 @@ class IntAddition (object):
         return x * count
 
 
-class UnionFind (object):
-    '''重み付きUnion-Find木'''
+class UnionFind(object):
+    """重み付きUnion-Find木"""
 
-    def __init__(
-            self,
-            num_nodes=0,
-            abelian_operator=IntAddition()):
+    def __init__(self, num_nodes=0, abelian_operator=IntAddition()):
         self.parent = []
         self.potential = []
         self.op = abelian_operator
-
         self.extend(num_nodes)
 
     def append(self):
@@ -62,9 +58,7 @@ class UnionFind (object):
         parent = self.parent[x]
         if 0 <= parent:
             self.parent[x] = self.root(parent)
-            self.potential[x] = self.op.operate(
-                self.potential[x], self.potential[parent]
-            )
+            self.potential[x] = self.op.operate(self.potential[x], self.potential[parent])
             x = self.parent[x]
         return x
 
@@ -78,45 +72,36 @@ class UnionFind (object):
     def difference(self, x, y):
         if not self.issame(x, y):
             raise RuntimeError('x と y は同じ集合に属していません。')
-        return self.op.cancel(
-            self.difference_from_root_to(y),
-            self.difference_from_root_to(x)
-        )
+        return self.op.cancel(self.difference_from_root_to(y), self.difference_from_root_to(x))
 
     def unite(self, x, y, difference=None):
         if difference is None:
             difference = self.op.identity
-
-        x, px = self.root(x), self.potential[x]
-        y, py = self.root(y), self.potential[y]
+        (x, px) = (self.root(x), self.potential[x])
+        (y, py) = (self.root(y), self.potential[y])
         difference = self.op.cancel(difference, py)
         difference = self.op.operate(difference, px)
         if x == y:
             return difference == 0
-
         if self.size(x) < self.size(y):
-            x, y = y, x
+            (x, y) = (y, x)
             difference = self.op.invert(difference)
         self.parent[x] += self.parent[y]
         self.parent[y] = x
         self.potential[y] = difference
-
         return True
 
     def issame(self, x, y):
         return self.root(x) == self.root(y)
 
 
-N, M = inputs(int)
+(N, M) = inputs(int)
 uf = UnionFind(num_nodes=N)
-
 valid = True
 for i in range(M):
-    L, R, D = inputs(int)
+    (L, R, D) = inputs(int)
     L -= 1
     R -= 1
-
     if not uf.unite(L, R, D):
         valid = False
-
-print(('Yes' if valid else 'No'))
+print('Yes' if valid else 'No')

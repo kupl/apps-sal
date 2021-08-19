@@ -9,23 +9,21 @@ def solve(arr, n):
 
 def main():
     t = int(input())
-
     for _ in range(t):
         n = int(input())
         a = list(map(int, input().strip().split()))
         b = list(map(int, input().strip().split()))
-
         if len(set(b)) == 1:
             if sorted(a) == a:
-                print("Yes")
+                print('Yes')
             else:
-                print("No")
-
+                print('No')
         else:
-            print("Yes")
+            print('Yes')
 
 
-def __starting_point(): main()
+def __starting_point():
+    main()
 
 
 __starting_point()

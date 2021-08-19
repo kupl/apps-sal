@@ -6,14 +6,14 @@ lr = 0
 lb = 0
 lg = 0
 for i in range(n):
-    a = input().split(" ")
-    if a[1] == "G":
+    a = input().split(' ')
+    if a[1] == 'G':
         g.append(int(a[0]))
         lg += 1
-    if a[1] == "R":
+    if a[1] == 'R':
         r.append(int(a[0]))
         lr += 1
-    if a[1] == "B":
+    if a[1] == 'B':
         b.append(int(a[0]))
         lb += 1
 g = g[::-1]

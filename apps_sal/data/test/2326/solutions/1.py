@@ -48,16 +48,12 @@ def COM(n, k):
 
 N = read()
 A = readlist()
-
 for i in range(N):
     A[i] = max(0, A[i])
     if A[i] > N - i - 1:
         A[i] = 0
-
 COMinit()
-
 dp = [0] * N
-
 for n in range(1, N):
     dp[n] = dp[n - 1]
     for i in range(n):
@@ -65,5 +61,4 @@ for n in range(1, N):
             dp[n] = (dp[n] + COM(n - i - 1, A[i] - 1)) % MOD
         else:
             dp[n] = (dp[n] + COM(n - i - 1, A[i] - 1) * (dp[i - 1] + 1)) % MOD
-
 print(dp[N - 1])

@@ -1,5 +1,5 @@
 for i in ' ' * int(input()):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     L = list(map(int, input().split()))
     if n < 3:
         print(-1)

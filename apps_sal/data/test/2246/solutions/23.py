@@ -1,10 +1,9 @@
 n = int(input())
 g = [[] for i in range(n + 1)]
 for i in range(n - 1):
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     g[a].append(b)
     g[b].append(a)
-
 d = [0 for i in range(n + 1)]
 v = [0 for i in range(n + 1)]
 e = [0 for i in range(n + 1)]

@@ -2,7 +2,6 @@ for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-
     x = []
     y = []
     for i in range(n):
@@ -12,31 +11,14 @@ for _ in range(int(input())):
             y.append(a[i])
     if len(x) == 0:
         if y == sorted(y):
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     elif len(y) == 0:
         if x == sorted(x):
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     else:
-        print("Yes")
-        '''
-        x.sort()
-        y.sort()
-        merged = []
-        i = 0
-        j = 0
-        for elem in b:
-            if elem == 0:
-                merged.append(x[i])
-                i += 1
-            else:
-                merged.append(y[j])
-                j += 1
-        if merged == sorted(merged):
-            print("Yes")
-        else:
-            print("No")
-'''
+        print('Yes')
+        '\n        x.sort()\n        y.sort()\n        merged = []\n        i = 0\n        j = 0\n        for elem in b:\n            if elem == 0:\n                merged.append(x[i])\n                i += 1\n            else:\n                merged.append(y[j])\n                j += 1\n        if merged == sorted(merged):\n            print("Yes")\n        else:\n            print("No")\n'

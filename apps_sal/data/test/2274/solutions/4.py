@@ -1,5 +1,5 @@
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     lastline = []
     lastcol = []
     for _ in range(n):

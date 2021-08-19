@@ -1,14 +1,11 @@
 from itertools import accumulate
-
 N = int(input())
 T = [int(s) for s in input().split()]
 V = [int(s) for s in input().split()] + [0]
 lt = sum(T)
 S = list(accumulate(T))
-
 for i in range(len(T), 0, -1):
     V[i - 1] = min(V[i - 1], V[i] + T[i - 1])
-
 vel2 = [0] * (2 * lt + 1)
 for i in range(len(T)):
     ti = T[i]

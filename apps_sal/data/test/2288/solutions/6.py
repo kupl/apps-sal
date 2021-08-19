@@ -12,7 +12,7 @@ def main():
         n = int(input())
         A = list(map(int, input().split()))
         B = list(map(int, input().split()))
-        print("Yes" if solve(n, A, B) else "No")
+        print('Yes' if solve(n, A, B) else 'No')
 
 
 def __starting_point():

@@ -1,16 +1,15 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 EE = []
 if m < 3:
     print(-1)
 else:
     edge = [set() for i in range(n)]
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     edge[a - 1].add(b - 1)
     edge[b - 1].add(a - 1)
     EE.append([a - 1, b - 1])
-
     for i in range(m - 1):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         edge[x - 1].add(y - 1)
         edge[y - 1].add(x - 1)
         EE.append([x - 1, y - 1])
@@ -33,13 +32,13 @@ else:
                 continue
             else:
                 E = edge[i]
-                if a - 1 in E and b - 1 in E and c - 1 not in E:
+                if a - 1 in E and b - 1 in E and (c - 1 not in E):
                     Ans[i] = 3
                     C[2] += 1
-                elif a - 1 in E and b - 1 not in E and c - 1 in E:
+                elif a - 1 in E and b - 1 not in E and (c - 1 in E):
                     Ans[i] = 2
                     C[1] += 1
-                elif a - 1 not in E and b - 1 in E and c - 1 in E:
+                elif a - 1 not in E and b - 1 in E and (c - 1 in E):
                     Ans[i] = 1
                     C[0] += 1
                 else:
@@ -48,8 +47,8 @@ else:
                     break
         if flg:
             T = [0] * 3
-            for x, y in EE:
-                xx, yy = Ans[x], Ans[y]
+            for (x, y) in EE:
+                (xx, yy) = (Ans[x], Ans[y])
                 if xx == yy:
                     print(-1)
                     flg = False
@@ -65,7 +64,7 @@ else:
                 else:
                     T[2] += 1
         if flg:
-            if T[0] == C[0] * C[1] and T[1] == C[0] * C[2] and T[2] == C[1] * C[2]:
+            if T[0] == C[0] * C[1] and T[1] == C[0] * C[2] and (T[2] == C[1] * C[2]):
                 print(*Ans)
             else:
                 print(-1)

@@ -18,11 +18,9 @@ for i in d.values():
     if i >= 2:
         cnt2 += 1
 for i in range(q):
-    t, val = input().split()
+    (t, val) = input().split()
     val = int(val)
-
     d[val] = d.get(val, 0)
-
     if d[val] >= 8:
         cnt8 -= 1
     if d[val] >= 6:
@@ -31,12 +29,10 @@ for i in range(q):
         cnt4 -= 1
     if d[val] >= 2:
         cnt2 -= 1
-
     if t == '+':
         d[val] += 1
     else:
         d[val] -= 1
-
     if d[val] >= 8:
         cnt8 += 1
     if d[val] >= 6:
@@ -45,12 +41,11 @@ for i in range(q):
         cnt4 += 1
     if d[val] >= 2:
         cnt2 += 1
-
     if cnt8 >= 1:
-        print("YES")
+        print('YES')
     elif cnt6 > 1 or (cnt6 == 1 and cnt2 >= 2):
-        print("YES")
+        print('YES')
     elif cnt4 > 1 or (cnt4 == 1 and cnt2 >= 3):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

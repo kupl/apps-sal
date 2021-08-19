@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 T = int(input())
 x = []
 y = []
@@ -9,7 +8,6 @@ for i in range(2 * T):
         x.append(input())
     else:
         y.append(input())
-
 for i in range(T):
     n = len(y[i])
     for j in range(n):

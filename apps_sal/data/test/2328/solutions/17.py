@@ -3,7 +3,7 @@ import sys
 input = sys.stdin.readline
 T = int(input())
 for _ in range(T):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     ans = 10000000000
     for i in range(n - k):

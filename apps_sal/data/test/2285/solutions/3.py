@@ -1,9 +1,6 @@
 n = int(input())
-
 adrs = [input().split(':') for i in range(n)]
-
 res = []
-
 for ad in adrs:
     new_ad = ''
     ind = 0
@@ -17,7 +14,5 @@ for ad in adrs:
             new_ad += '0000 ' * (8 - len(ad) + ad.count(''))
             ind = 1
     res.append(new_ad)
-
-
 for x in res:
     print(x.replace(' ', ':')[:39])

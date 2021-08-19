@@ -7,5 +7,4 @@ for i in range(n):
     s = sorted(list(set(a)))
     if s not in rec:
         rec.append(s)
-
 print(len(rec))

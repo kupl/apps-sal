@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 georg = list(map(int, input().split()))
-
 good = list(map(int, input().split()))
 good.sort()
 georg.sort()

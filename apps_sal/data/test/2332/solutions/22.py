@@ -1,4 +1,4 @@
-n, k, m = [int(x) for x in input().split()]
+(n, k, m) = [int(x) for x in input().split()]
 w = [x for x in input().split()]
 a = [int(x) for x in input().split()]
 cost = {w[i]: a[i] for i in range(n)}

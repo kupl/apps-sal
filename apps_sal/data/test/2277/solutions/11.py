@@ -10,10 +10,9 @@ def solve():
         for j in range(i):
             if a[j] > a[i]:
                 ans = not ans
-
     for i in range(m):
-        left, right = map(int, input().split())
-        if ((right - left + 1) // 2) % 2 == 1:
+        (left, right) = map(int, input().split())
+        if (right - left + 1) // 2 % 2 == 1:
             ans = not ans
         ap(cl[ans])
     print('\n'.join(b))

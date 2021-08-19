@@ -11,5 +11,5 @@ def li():
 
 
 for t in range(ii()):
-    l, r = mi()
+    (l, r) = mi()
     print(l, 2 * l)

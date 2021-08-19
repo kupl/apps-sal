@@ -10,8 +10,8 @@ fee = int(ch[1])
 a.sort(reverse=True)
 result = 0
 for i in range(n):
-    if (a[i] <= max1):
+    if a[i] <= max1:
         break
     k = a[i] + fee
-    result += (math.ceil(k / (fee + max1))) - 1
+    result += math.ceil(k / (fee + max1)) - 1
 print(result * fee)

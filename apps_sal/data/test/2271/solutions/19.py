@@ -4,7 +4,7 @@ S = 0
 for k in range(n):
     L.append(0)
 for k in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     L[a - 1] += 1
     L[b - 1] += 1
 for k in range(n):

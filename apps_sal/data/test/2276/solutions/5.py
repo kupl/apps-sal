@@ -28,7 +28,7 @@ for i in range(1, len(s)):
     else:
         x += 1
 s2.append(x)
-dp1 = [[[-1 for i in range(n + 1)]for j in range(n + 1)] for k in range(n + 1)]
+dp1 = [[[-1 for i in range(n + 1)] for j in range(n + 1)] for k in range(n + 1)]
 n = len(s2)
 s = s2.copy()
 
@@ -40,14 +40,12 @@ def sol(l, r, k):
         return 0
     if dp1[l][r][k] != -1:
         return dp1[l][r][k]
-
     ans = 0
     for i in range(l, r + 1, 2):
         if i != l:
             ans = max(ans, sol(l + 1, i - 1, 0) + sol(i, r, s[l] + k))
         else:
             ans = max(ans, sol(i + 1, r, 0) + dp[s[l] + k])
-
     dp1[l][r][k] = ans
     return ans
 

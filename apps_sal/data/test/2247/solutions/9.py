@@ -11,7 +11,7 @@ def li():
 
 
 for t in range(ii()):
-    s, a, b, c = mi()
+    (s, a, b, c) = mi()
     n = s // c
     x = n // a
     ans = n + x * b

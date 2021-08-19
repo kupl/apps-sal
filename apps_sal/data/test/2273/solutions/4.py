@@ -1,7 +1,7 @@
 def main():
     from array import array
     from sys import stdin, stdout
-    n, m = list(map(int, stdin.readline().split()))
+    (n, m) = list(map(int, stdin.readline().split()))
     inp = {tuple(map(int, stdin.readline().split())) for _ in range(m)}
     ans = array('b', (0,)) * (n + 1)
     ans[1] = 1
@@ -24,7 +24,7 @@ def main():
     if m != c1 * (c2 + c3) + c2 * c3 or not c2:
         stdout.write('-1')
     else:
-        for i, j in inp:
+        for (i, j) in inp:
             if ans[i] == ans[j]:
                 stdout.write('-1')
                 break

@@ -1,7 +1,5 @@
 import sys
-
 T = int(sys.stdin.readline().strip())
-
 for i in range(0, T):
     x = sys.stdin.readline().strip()
     y = sys.stdin.readline().strip()

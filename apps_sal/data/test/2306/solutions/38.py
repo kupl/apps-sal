@@ -6,9 +6,9 @@ kukan = [(0, 0, 0)]
 for i in range(n):
     kukan.append((kukan[i][1], kukan[i][1] + t[i] * 2, v[i]))
 kukan.append((T, T, 0))
-vt = [[1000] * (len(kukan)) for _ in range(T + 1)]
+vt = [[1000] * len(kukan) for _ in range(T + 1)]
 k = 0
-for ts, te, v_ in kukan:
+for (ts, te, v_) in kukan:
     for i in range(ts, te + 1):
         vt[i][k] = v_
     for i in range(ts - 1, -1, -1):

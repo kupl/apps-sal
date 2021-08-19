@@ -2,11 +2,9 @@ for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()))
     typ = list(map(int, input().split()))
-
     if len(set(typ)) == 2:
-        print("Yes")
+        print('Yes')
         continue
-
     prev = -1
     flag = True
     for e in arr:
@@ -14,8 +12,7 @@ for _ in range(int(input())):
             flag = False
             break
         prev = e
-
     if flag:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

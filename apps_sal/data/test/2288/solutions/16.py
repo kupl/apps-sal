@@ -1,14 +1,10 @@
-
 t = int(input())
-
 for T in range(t):
     n = int(input())
-
     a = [int(i) for i in input().split()]
     b = [int(i) for i in input().split()]
-
     if 0 in b and 1 in b:
-        print("Yes")
+        print('Yes')
     else:
         Yes = True
         for i in range(1, n):
@@ -16,6 +12,6 @@ for T in range(t):
                 Yes = False
                 break
         if Yes:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')

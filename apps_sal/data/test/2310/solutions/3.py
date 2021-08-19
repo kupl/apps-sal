@@ -2,12 +2,12 @@ import sys
 n = int(input())
 for i in range(n):
     sys.stdin.readline()
-    q, w = map(int, sys.stdin.readline().split())
+    (q, w) = map(int, sys.stdin.readline().split())
     kol = list(map(int, sys.stdin.readline().split()))
     r = []
     e = []
     for ii in range(q - 1):
-        a, s = map(int, sys.stdin.readline().split())
+        (a, s) = map(int, sys.stdin.readline().split())
         a -= 1
         r.append(a)
         e.append(s)

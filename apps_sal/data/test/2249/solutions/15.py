@@ -1,7 +1,7 @@
 n = int(input())
 A = list(map(int, input().split()))
-left = [0 for _ in range(10**5 + 1)]
-right = [0 for _ in range(10**5 + 1)]
+left = [0 for _ in range(10 ** 5 + 1)]
+right = [0 for _ in range(10 ** 5 + 1)]
 r_non0 = 0
 for a in A:
     if right[a] == 0:

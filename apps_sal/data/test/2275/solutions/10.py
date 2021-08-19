@@ -5,8 +5,7 @@ for i in range(t):
     maxlen = 0
     cl = -1
     for i in a:
-
-        if i == "A":
+        if i == 'A':
             cl = 0
         elif cl != -1:
             cl += 1

@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a1 = a
     if a % 2 == 0:
         a1 += 1

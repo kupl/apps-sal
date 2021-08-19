@@ -8,8 +8,7 @@ for i in range(len(l)):
         c += 1
     else:
         c -= 1
-
 if c > 0:
-    print("READY FOR BATTLE")
+    print('READY FOR BATTLE')
 else:
-    print("NOT READY")
+    print('NOT READY')

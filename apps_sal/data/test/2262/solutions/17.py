@@ -7,5 +7,4 @@ for i in a:
         tmp.add(j)
     if tmp not in st:
         st.append(tmp)
-
 print(len(st))

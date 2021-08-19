@@ -1,10 +1,8 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-
     c = list()
-
     for x in a:
         if x in b:
             b.pop(b.index(x))
@@ -15,7 +13,7 @@ def main():
         return 0
     i = 0
     while len(c):
-        while i < len(b) and (b[i] < c[0]):
+        while i < len(b) and b[i] < c[0]:
             i += 1
         if i == len(b):
             return len(c)

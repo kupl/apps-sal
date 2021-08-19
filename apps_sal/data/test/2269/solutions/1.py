@@ -1,9 +1,7 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 out = []
-
 for _ in range(t):
     s = input().strip()
     n = len(s)

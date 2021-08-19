@@ -1,5 +1,4 @@
 import re
-
 temp = input()
 temp = re.split(' ', temp)
 n = eval(temp[0])

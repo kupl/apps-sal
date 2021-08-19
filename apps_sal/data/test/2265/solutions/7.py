@@ -12,6 +12,6 @@ for i in b:
         Hash += 1
 res = 0
 for i in range(1, len(a) - len(b) + 2):
-    if ((A[i + len(b) - 1] - A[i - 1]) % 2) == (Hash % 2):
+    if (A[i + len(b) - 1] - A[i - 1]) % 2 == Hash % 2:
         res += 1
 print(res)

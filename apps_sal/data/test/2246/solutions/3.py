@@ -1,14 +1,12 @@
 def f():
     n = int(input())
-
     if n == 1:
         print(0)
         return
-
     road = {}
     visited = {}
     for i in range(n - 1):
-        u, v = input().split()
+        (u, v) = input().split()
         if u in road:
             road[u].append(v)
         else:
@@ -19,18 +17,15 @@ def f():
             road[v] = [u]
         visited[u] = False
         visited[v] = False
-
     prob = {}
     length = {}
     res = []
-
     queue = []
     for k in road['1']:
         prob[k] = 1.0 / len(road['1'])
         length[k] = 1
         queue.append(k)
         visited['1'] = True
-
     while len(queue) > 0:
         cur = queue[0]
         del queue[0]
@@ -46,11 +41,9 @@ def f():
             length[k] = length[cur] + 1
             queue.append(k)
             visited[cur] = True
-
     val = 0.0
     for item in res:
         val += item[1] * item[2]
-
     print(val)
 
 

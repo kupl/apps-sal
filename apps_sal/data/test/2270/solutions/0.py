@@ -16,7 +16,7 @@ for f in range(int(input())):
     p = inp[0]
     i = int(inp[1])
     i -= 1
-    if p == "+":
+    if p == '+':
         planks[i] += 1
         if planks[i] % 2 == 0:
             pairs += 1
@@ -29,6 +29,6 @@ for f in range(int(input())):
                 squares -= 1
         planks[i] -= 1
     if squares > 0 and pairs > 3:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

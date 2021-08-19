@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 class Problem:
+
     def __init__(self):
         pass
 
@@ -12,7 +13,7 @@ class Problem:
     def _solve(self):
         t = int(input())
         for _ in range(t):
-            n, k = [int(item) for item in input().split()]
+            (n, k) = [int(item) for item in input().split()]
             a = [int(item) for item in input().split()]
             a.sort()
             mn = float('inf')
@@ -21,7 +22,7 @@ class Problem:
                 if a[i + k] - a[i] < mn:
                     mn = a[i + k] - a[i]
                     idx = i
-            print((a[idx] + a[idx + k]) >> 1)
+            print(a[idx] + a[idx + k] >> 1)
 
 
 def main():

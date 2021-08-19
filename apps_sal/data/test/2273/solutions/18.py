@@ -4,8 +4,6 @@ import os
 import math
 import array
 3
-
-
 DEBUG = 'DEBUG' in os.environ
 
 
@@ -20,25 +18,20 @@ def dprint(*value, sep=' ', end='\n'):
 
 def solve(N, M, G):
     A = {}
-
     for i in range(N):
         t = frozenset(G[i])
         if t not in A:
             A[t] = set([i])
         else:
             A[t].add(i)
-
     if len(A) != 3:
         return None
-
-    (a1, v1), (a2, v2), (a3, v3) = A.items()
+    ((a1, v1), (a2, v2), (a3, v3)) = A.items()
     v1 = frozenset(v1)
     v2 = frozenset(v2)
     v3 = frozenset(v3)
-
     if a1 != v2 | v3 or a2 != v3 | v1 or a3 != v1 | v2:
         return None
-
     ans = [0] * N
     for v in v1:
         ans[v] = 1
@@ -50,13 +43,12 @@ def solve(N, M, G):
 
 
 def main():
-    N, M = [int(e) for e in inp().split()]
+    (N, M) = [int(e) for e in inp().split()]
     G = [[] for _ in range(N)]
     for _ in range(M):
-        a, b = [int(e) - 1 for e in inp().split()]
+        (a, b) = [int(e) - 1 for e in inp().split()]
         G[a].append(b)
         G[b].append(a)
-
     ans = solve(N, M, G)
     if not ans:
         print('-1')

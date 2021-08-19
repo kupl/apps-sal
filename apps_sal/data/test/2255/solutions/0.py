@@ -1,11 +1,10 @@
 from heapq import *
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = {}
 for _ in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     g.setdefault(u, set()).add(v)
     g.setdefault(v, set()).add(u)
-
 d = []
 V = set()
 h = [1]

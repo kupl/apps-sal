@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    x, n, m = list(map(int, input().split()))
+    (x, n, m) = list(map(int, input().split()))
     if x - m * 10 <= 0:
         print('YES')
     else:

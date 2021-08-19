@@ -1,5 +1,3 @@
 3
-
 n = int(input())
-
-print("25")
+print('25')

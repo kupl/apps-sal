@@ -12,5 +12,4 @@ for i in range(N)[::-1]:
     for j in range(T[i]):
         a -= 1
         MA[a] = min(MA[a], MA[a + 1] + 1, V[i])
-
-print(((sum(MA[1:]) + sum(MA[:-1])) / 8))
+print((sum(MA[1:]) + sum(MA[:-1])) / 8)

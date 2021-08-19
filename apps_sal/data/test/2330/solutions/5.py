@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [*list(map(int, input().split()))]
     if m < n or (n == 2 and m == 2):
         print(-1)
@@ -11,7 +11,7 @@ for _ in range(int(input())):
             cost += t
             if t < mn:
                 mn = min(mn, t)
-                x, y = i + 1, n if i == 0 else i
+                (x, y) = (i + 1, n if i == 0 else i)
         print(cost + (m - n) * mn)
         for i in range(n - 1):
             print(i + 1, (i + 2) % (n + 1))

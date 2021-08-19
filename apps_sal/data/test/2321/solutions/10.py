@@ -6,7 +6,6 @@ for _ in range(int(input())):
         if s[i] is '<':
             k = n - 1 - i
             break
-
     for i in range(n):
         if s[i] is '>':
             k = min(k, i)

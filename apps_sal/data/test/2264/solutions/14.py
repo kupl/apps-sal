@@ -4,7 +4,7 @@ for i in range(n):
     l = 1000000000000
     r = 0
     for i in range(k):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         if a > r:
             r = a
         if l > b:

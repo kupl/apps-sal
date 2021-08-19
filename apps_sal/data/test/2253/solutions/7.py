@@ -2,12 +2,12 @@ def main():
     N = int(input())
     for i in range(N):
         a = input().strip()
-        if a.endswith("po"):
-            print("FILIPINO")
-        elif a.endswith("mnida"):
-            print("KOREAN")
+        if a.endswith('po'):
+            print('FILIPINO')
+        elif a.endswith('mnida'):
+            print('KOREAN')
         else:
-            print("JAPANESE")
+            print('JAPANESE')
 
 
 main()

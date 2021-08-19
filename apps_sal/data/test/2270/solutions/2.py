@@ -1,15 +1,12 @@
 import sys
-
 input = sys.stdin.readline
-
 n = int(input())
 a = list(map(int, input().split()))
-data = [0] * (10**5 + 1)
+data = [0] * (10 ** 5 + 1)
 for i in range(n):
     data[a[i]] += 1
-
-zero, two, four, six, eight = 0, 0, 0, 0, 0
-for i in range(1, 10**5 + 1):
+(zero, two, four, six, eight) = (0, 0, 0, 0, 0)
+for i in range(1, 10 ** 5 + 1):
     if data[i] <= 1:
         zero += 1
     elif data[i] <= 3:
@@ -20,11 +17,10 @@ for i in range(1, 10**5 + 1):
         six += 1
     else:
         eight += 1
-
 for i in range(int(input())):
-    t, m = input().split()
+    (t, m) = input().split()
     m = int(m)
-    if t == "+":
+    if t == '+':
         if data[m] == 7:
             eight += 1
             six -= 1
@@ -51,17 +47,17 @@ for i in range(int(input())):
             two -= 1
         data[m] -= 1
     if eight:
-        print("YES")
+        print('YES')
     elif six >= 2:
-        print("YES")
+        print('YES')
     elif six == 1:
         if four or two:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     elif four >= 2:
-        print("YES")
+        print('YES')
     elif four and two >= 2:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

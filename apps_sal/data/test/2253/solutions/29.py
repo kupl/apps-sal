@@ -1,7 +1,8 @@
 import sys
 
 
-def r(): return sys.stdin.readline().rstrip()
+def r():
+    return sys.stdin.readline().rstrip()
 
 
 def __starting_point():

@@ -6,15 +6,15 @@ for l in range(t):
     b = b[::-1]
     s1 = -1
     for i in range(len(b)):
-        if(b[i] == '1'):
+        if b[i] == '1':
             s1 = i
             break
-    if(s1 == -1):
+    if s1 == -1:
         print(0)
     else:
         ans = 0
         for j in range(len(a)):
-            if(a[j] == '1' and j >= i):
+            if a[j] == '1' and j >= i:
                 ans = j - i
                 break
         print(ans)

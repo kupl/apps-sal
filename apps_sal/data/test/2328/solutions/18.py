@@ -1,10 +1,10 @@
 t = int(input())
 out = [0] * t
 for u in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     a.sort()
-    best = float("inf")
+    best = float('inf')
     coord = None
     for i in range(n - k):
         if a[i + k] - a[i] < best:

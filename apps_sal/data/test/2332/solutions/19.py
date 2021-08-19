@@ -1,4 +1,4 @@
-n, k, m = [int(x) for x in input().strip().split()]
+(n, k, m) = [int(x) for x in input().strip().split()]
 words = input().strip().split()
 wd = {}
 wi = 1

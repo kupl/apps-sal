@@ -33,6 +33,6 @@ for i in range(m):
         if d[l] % 4 == 3:
             four -= 1
     if four > 0 and two > 3:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

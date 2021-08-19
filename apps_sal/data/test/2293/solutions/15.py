@@ -1,10 +1,10 @@
-m, n = list(map(int, input().split()))
+(m, n) = list(map(int, input().split()))
 t = []
 for i in range(m):
     temp = list(map(int, input().split()))[1:]
     bit = 0
     for i in temp:
-        bit ^= (1 << (i - 1))
+        bit ^= 1 << i - 1
     t.append(bit)
 ans = True
 for i in range(m - 1):

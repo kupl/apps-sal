@@ -1,8 +1,6 @@
 import threading
 3
-
-__import__("sys").setrecursionlimit(10 ** 6)
-
+__import__('sys').setrecursionlimit(10 ** 6)
 threading.stack_size(64 * 1024 * 1024)
 
 
@@ -18,7 +16,7 @@ def longpathv(tr, v):
     arr = [0] * n
     dfs(v, 0, -1, tr, arr)
     ans = max(list(range(n)), key=lambda x: arr[x])
-    return ans, arr[ans]
+    return (ans, arr[ans])
 
 
 def longpath(tr):
@@ -29,14 +27,13 @@ def main(tr):
     print(longpath(tr))
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 tr = [[] for i in range(n)]
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     tr[a].append(b)
     tr[b].append(a)
-
 th = threading.Thread(target=main, args=tuple([tr]))
 th.start()

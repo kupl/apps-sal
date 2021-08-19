@@ -1,11 +1,8 @@
 from sys import stdin
-
-n, m = list(map(int, stdin.readline().rstrip().split()))
-
+(n, m) = list(map(int, stdin.readline().rstrip().split()))
 data = []
 for i in range(0, n):
     data.append(list(map(int, stdin.readline().rstrip().split())))
-
 sorted_data = [0] * n
 for col in range(0, m):
     mark_r = 0
@@ -17,14 +14,13 @@ for col in range(0, m):
             mark_r = cur_r
         cur_r += 1
     st.extend([cur_r - 1] * (cur_r - mark_r))
-    for index, item in enumerate(st):
+    for (index, item) in enumerate(st):
         if sorted_data[index] < st[index]:
             sorted_data[index] = st[index]
-
 q_count = int(stdin.readline().rstrip())
 for _ in range(0, q_count):
-    l, r = [int(x) - 1 for x in stdin.readline().rstrip().split()]
+    (l, r) = [int(x) - 1 for x in stdin.readline().rstrip().split()]
     if sorted_data[l] >= r:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    x, n, m = list(map(int, input().split()))
+    (x, n, m) = list(map(int, input().split()))
     for _ in range(n):
         if x // 2 + 10 < x:
             x = x // 2 + 10

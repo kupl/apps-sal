@@ -12,21 +12,42 @@ import random
 import time
 import copy
 import functools
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+eps = 1.0 / 10 ** 15
+mod = 10 ** 9 + 7
 
-sys.setrecursionlimit(10**7)
-inf = 10**20
-eps = 1.0 / 10**15
-mod = 10**9 + 7
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
 
 
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def LS(): return sys.stdin.readline().split()
-def I(): return int(sys.stdin.readline())
-def F(): return float(sys.stdin.readline())
-def S(): return input()
-def pf(s): return print(s, flush=True)
+def LI_():
+    return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+
+def LF():
+    return [float(x) for x in sys.stdin.readline().split()]
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def F():
+    return float(sys.stdin.readline())
+
+
+def S():
+    return input()
+
+
+def pf(s):
+    return print(s, flush=True)
 
 
 def main():
@@ -40,7 +61,7 @@ def main():
             if a[i] > a[j]:
                 t += 1
     r = []
-    for c, d in b:
+    for (c, d) in b:
         k = d - c + 1
         if k * (k - 1) // 2 % 2 == 1:
             t += 1
@@ -48,7 +69,6 @@ def main():
             r.append('even')
         else:
             r.append('odd')
-
     return '\n'.join(r)
 
 

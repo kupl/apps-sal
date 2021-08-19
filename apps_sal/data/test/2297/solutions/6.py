@@ -1,6 +1,6 @@
 n = int(input())
 for _ in range(n):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     if (l - r) % 2 == 1:
         if l % 2:
             print((r - l + 1) // 2)

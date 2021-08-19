@@ -2,10 +2,10 @@ n = int(input())
 for _ in range(n):
     s = input()
     t = input()
-    i, j = 0, 0
+    (i, j) = (0, 0)
     while i < len(s):
         c = s[i]
-        x, y = 0, 0
+        (x, y) = (0, 0)
         while i < len(s) and s[i] == c:
             i += 1
             x += 1

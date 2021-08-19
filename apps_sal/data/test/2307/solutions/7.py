@@ -1,5 +1,4 @@
 n = int(input())
-
 ev = 0
 odd = 0
 i = 0
@@ -9,8 +8,7 @@ for each in arr:
         ev += 1
     else:
         odd += 1
-
 if ev > odd:
-    print("READY FOR BATTLE")
+    print('READY FOR BATTLE')
 else:
-    print("NOT READY")
+    print('NOT READY')

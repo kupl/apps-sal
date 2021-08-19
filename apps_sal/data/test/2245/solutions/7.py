@@ -6,7 +6,7 @@ t = int(input())
 
 
 def one():
-    n, k = gns()
+    (n, k) = gns()
     if k % 3 != 0:
         if n % 3 == 0:
             print('Bob')

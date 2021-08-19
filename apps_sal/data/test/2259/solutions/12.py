@@ -6,14 +6,14 @@ bit = [0] * (n + 1)
 def update(idx, val):
     while idx <= n:
         bit[idx] = max(bit[idx], val)
-        idx += idx & (-idx)
+        idx += idx & -idx
 
 
 def query(idx):
     res = 0
     while idx > 0:
         res = max(res, bit[idx])
-        idx -= idx & (-idx)
+        idx -= idx & -idx
     return res
 
 

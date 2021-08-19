@@ -1,11 +1,11 @@
 from sys import stdin
 input = stdin.readline
-v, e = map(int, input().split())
+(v, e) = map(int, input().split())
 d = {}
 for i in range(1, v + 1):
     d[i] = []
 for ed in range(e):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     d[a].append(b)
     d[b].append(a)
 for i in d:
@@ -36,8 +36,7 @@ else:
             break
     if zer > 0:
         print(-1)
+    elif len(a) + len(b) + len(c) != v:
+        print(-1)
     else:
-        if len(a) + len(b) + len(c) != v:
-            print(-1)
-        else:
-            print(*kol[1:])
+        print(*kol[1:])

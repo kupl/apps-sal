@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 ans = []
 s = list(map(int, sys.stdin.readline().strip().split()))
@@ -28,5 +27,5 @@ for i in range(0, q):
             else:
                 j2 = j
             j = (j1 + j2) // 2
-    ans.append(str((c[j1 + 1] + (n - j1 - 1) * l)))
-print(" ".join(ans))
+    ans.append(str(c[j1 + 1] + (n - j1 - 1) * l))
+print(' '.join(ans))

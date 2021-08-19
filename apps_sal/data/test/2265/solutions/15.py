@@ -14,8 +14,8 @@ bcount = 0
 for x in b:
     if x == '1':
         bcount += 1
-for i in range((al + 1) - bl):
+for i in range(al + 1 - bl):
     acount = A[i + bl] - A[i]
-    if (acount % 2) == (bcount % 2):
+    if acount % 2 == bcount % 2:
         evencount += 1
 print(evencount)

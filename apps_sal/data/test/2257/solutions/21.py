@@ -18,7 +18,6 @@ for i in range(0, n):
     left.append(square(x - x0) + square(y - y0))
     right.append(square(x - x1) + square(y - y1))
     ans = max(ans, right[i])
-
 for i in range(0, n):
     temp = 0
     for j in range(0, n):

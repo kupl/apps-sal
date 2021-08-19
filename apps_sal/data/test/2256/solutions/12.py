@@ -14,9 +14,9 @@ def get_int_list():
 
 
 def prog():
-    n, x, a, b = get_many_ints()
+    (n, x, a, b) = get_many_ints()
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     da = min(a - 1, x)
     a -= da
     x -= da

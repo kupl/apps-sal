@@ -1,4 +1,4 @@
-m, n = map(int, input().split())
+(m, n) = map(int, input().split())
 sets = []
 for i in range(m):
     a = list(map(int, input().split()))
@@ -9,6 +9,6 @@ for i in range(m):
         if len(sets[i] & sets[j]) == 0:
             good = False
 if good:
-    print("possible")
+    print('possible')
 else:
-    print("impossible")
+    print('impossible')

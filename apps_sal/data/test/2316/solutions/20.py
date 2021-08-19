@@ -11,7 +11,7 @@ def idata():
 
 
 def binary_search(array, x):
-    left, right = -1, len(array)
+    (left, right) = (-1, len(array))
     while left + 1 != right:
         middle = (left + right) // 2
         if array[middle] >= x:
@@ -25,9 +25,9 @@ def c_mod(n1, k1, mod1):
     if mod1 != 0:
         num = den = 1
         for i in range(n1 - k1):
-            num = (num * (n1 - i)) % mod1
-            den = (den * (i + 1)) % mod1
-        return (num * pow(den, mod1 - 2, mod1)) % mod1
+            num = num * (n1 - i) % mod1
+            den = den * (i + 1) % mod1
+        return num * pow(den, mod1 - 2, mod1) % mod1
     num = den = 1
     for i in range(n1 - k1):
         num = num * (n1 - i)
@@ -53,7 +53,7 @@ def iz_sistemi(x, k):
 
 
 def solve_of_problem():
-    x, n, m = idata()
+    (x, n, m) = idata()
     if x <= 10 * m:
         print('YES')
         return

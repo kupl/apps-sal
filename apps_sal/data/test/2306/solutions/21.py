@@ -2,10 +2,10 @@ N = int(input())
 t = list(map(int, input().split()))
 v = list(map(int, input().split()))
 T = sum(t) * 2
-vt = [min((i / 2), ((T - i) / 2)) for i in range(T + 1)]
+vt = [min(i / 2, (T - i) / 2) for i in range(T + 1)]
 ts = 0
 te = 0
-for i, ti in enumerate(t):
+for (i, ti) in enumerate(t):
     te += ti * 2
     vi = v[i]
     for j in range(ts, te):

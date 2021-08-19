@@ -3,13 +3,10 @@ b = str(input())
 n = len(a)
 unos = [0] * (n + 1)
 m = len(b)
-
 tot = 0
 for el in b:
     tot += int(el)
-
 tot = tot % 2
-
 s = 0
 c = 0
 for r in range(1, n + 1):

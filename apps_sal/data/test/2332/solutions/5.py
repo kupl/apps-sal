@@ -1,6 +1,5 @@
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 a = list(input().split())
-
 b = list(map(int, input().split()))
 while k:
     k -= 1

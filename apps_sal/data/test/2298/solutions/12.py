@@ -2,14 +2,14 @@ from itertools import accumulate
 
 
 def solve():
-    a, b, q = map(int, input().split())
+    (a, b, q) = map(int, input().split())
     tb = [int(i % a % b != i % b % a) for i in range(a * b)]
     bs = sum(tb)
     tb += tb
     tbs = [0] + list(accumulate(tb))
     res = []
     for i in range(q):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         r += 1
         w = (r - l) // (a * b)
         ans = w * bs

@@ -1,4 +1,5 @@
-def Not(x): return '+' if x == '*' else '*'
+def Not(x):
+    return '+' if x == '*' else '*'
 
 
 k = int(input())

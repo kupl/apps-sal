@@ -8,7 +8,7 @@ def yin(a, b):
 
 
 for i in range(0, t):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     j = yin(max(a, b), min(a, b))
     if j == 1:
         print('Finite')

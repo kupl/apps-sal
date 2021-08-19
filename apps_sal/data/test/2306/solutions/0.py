@@ -6,7 +6,6 @@ def main():
     N = int(input())
     t = list(map(lambda x: int(x) * 2, input().split()))
     v = list(map(float, input().split())) + [0]
-
     for i in range(1, N):
         t[i] += t[i - 1]
     t += [t[-1]]
@@ -22,7 +21,6 @@ def main():
         vnow[i] = min(vnow[i - 1] + 0.5, vr[i])
     for i in range(len(vr) - 2, -1, -1):
         vnow[i] = min(vnow[i], vnow[i + 1] + 0.5)
-
     print(sum(vnow) / 2)
 
 

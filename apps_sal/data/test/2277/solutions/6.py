@@ -8,6 +8,6 @@ for i in range(n):
         s ^= a[j] > a[i]
 q = int(f.readline())
 for i in range(q):
-    l, r = map(int, f.readline().split())
+    (l, r) = map(int, f.readline().split())
     s ^= (r - l + 1) * (r - l) // 2 % 2
     print(['even', 'odd'][s])

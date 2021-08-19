@@ -1,5 +1,5 @@
-n, m = list(map(int, input().split()))
-mx = [[0x00] * n for i in range(n)]
+(n, m) = list(map(int, input().split()))
+mx = [[0] * n for i in range(n)]
 used = None
 
 
@@ -16,13 +16,12 @@ def dfs(cur, trg, color):
 
 
 for i in range(m):
-    a, b, c = [int(s) - 1 for s in input().split()]
+    (a, b, c) = [int(s) - 1 for s in input().split()]
     mx[a][b] |= 1 << c
     mx[b][a] |= 1 << c
-
 q = int(input())
 for i in range(q):
-    u, v = [int(s) - 1 for s in input().split()]
+    (u, v) = [int(s) - 1 for s in input().split()]
     result = 0
     for j in range(m):
         used = [False] * n

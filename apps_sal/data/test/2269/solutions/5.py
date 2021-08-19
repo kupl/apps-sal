@@ -12,7 +12,7 @@ for _ in range(t):
             b = i
         else:
             c = i
-        if a != -1 and b != -1 and c != -1:
+        if a != -1 and b != -1 and (c != -1):
             mn = min(mn, max(a, b, c) - min(a, b, c) + 1)
     if mn == 10 ** 9:
         print(0)

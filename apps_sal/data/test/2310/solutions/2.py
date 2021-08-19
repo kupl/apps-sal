@@ -1,12 +1,12 @@
 n = int(input())
 for i in range(n):
     input().strip()
-    q, w = map(int, input().strip().split())
+    (q, w) = map(int, input().strip().split())
     kol = list(map(int, input().strip().split()))
     r = []
     e = []
     for ii in range(q - 1):
-        a, s = map(int, input().strip().split())
+        (a, s) = map(int, input().strip().split())
         a -= 1
         r.append(a)
         e.append(s)

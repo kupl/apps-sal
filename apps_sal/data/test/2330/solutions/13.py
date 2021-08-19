@@ -1,9 +1,9 @@
 t = int(input())
 for i in range(t):
-    n, m = [int(x) for x in input().split(' ')]
+    (n, m) = [int(x) for x in input().split(' ')]
     alist = [int(x) for x in input().split(' ')]
     blist = alist[:]
-    if (n == 2) or (m < n):
+    if n == 2 or m < n:
         print('-1')
     else:
         alist.remove(min(alist))

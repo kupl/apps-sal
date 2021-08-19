@@ -15,10 +15,10 @@ def check(gr, u, v):
     return dfs(u, v, gr, used)
 
 
-n, m = (int(x) for x in input().split())
+(n, m) = (int(x) for x in input().split())
 cgr = [[[] for j in range(n)] for _ in range(m)]
 for i in range(m):
-    a, b, c = (int(x) for x in input().split())
+    (a, b, c) = (int(x) for x in input().split())
     c -= 1
     a -= 1
     b -= 1
@@ -26,7 +26,7 @@ for i in range(m):
     cgr[c][b].append(a)
 q = int(input())
 for i in range(q):
-    u, v = (int(x) for x in input().split())
+    (u, v) = (int(x) for x in input().split())
     ans = 0
     for gr in cgr:
         ans += check(gr, u - 1, v - 1)

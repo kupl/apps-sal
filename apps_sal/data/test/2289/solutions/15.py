@@ -1,6 +1,5 @@
 import bisect
-
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 warrior = list(map(int, input().split()))
 attacker = list(map(int, input().split()))
 warriors_new = []

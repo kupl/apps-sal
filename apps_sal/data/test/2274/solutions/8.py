@@ -6,9 +6,9 @@ def rl():
     return [int(w) for w in stdin.readline().split()]
 
 
-t, = rl()
+(t,) = rl()
 for _ in range(t):
-    n, m = rl()
+    (n, m) = rl()
     a = [stdin.readline().rstrip() for _ in range(n)]
     r = 0
     for c in a[-1]:

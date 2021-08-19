@@ -9,7 +9,6 @@ def answer(n, A):
         else:
             index = bisect_right(ans, A[i])
             ans[index] = A[i]
-
     return len(ans)
 
 

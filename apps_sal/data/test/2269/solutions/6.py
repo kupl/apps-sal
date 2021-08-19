@@ -22,7 +22,7 @@ for case_num in range(t):
             if r >= len(s):
                 break
             cnt[s[r]] += 1
-        if cnt['1'] > 0 and cnt['2'] > 0 and cnt['3'] > 0:
+        if cnt['1'] > 0 and cnt['2'] > 0 and (cnt['3'] > 0):
             ans = min(ans, r - l + 1)
         cnt[s[l]] -= 1
         l += 1

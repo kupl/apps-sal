@@ -12,7 +12,7 @@ def main():
         ans = 0
         for i in range(k):
             if b[i]:
-                ans += 2**(k - i) - 1
+                ans += 2 ** (k - i) - 1
         print(ans)
     return
 

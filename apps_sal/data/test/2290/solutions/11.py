@@ -1,8 +1,11 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-N, M = list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+(N, M) = list(map(int, input().split()))
 P = [-1 for i in range(N)]
 
 
@@ -27,9 +30,8 @@ def unite(a, b):
 
 
 for _ in range(M):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     unite(u - 1, v - 1)
-
 C = [[] for _ in range(N)]
 D = [0] * N
 for i in range(N):

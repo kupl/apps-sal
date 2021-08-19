@@ -1,16 +1,18 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-N, M = list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+(N, M) = list(map(int, input().split()))
 E = [[] for _ in range(N)]
 for _ in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     E[a - 1].append(b - 1)
     E[b - 1].append(a - 1)
-
 inf = 1 << 20
-A, B, C = [], [], []
+(A, B, C) = ([], [], [])
 X = [0] * N
 for a in E[0]:
     X[a] = 1
@@ -27,7 +29,6 @@ if c < inf:
         if X[a] == 2:
             X[a] = 3
     C = [i for i in range(N) if X[i] == 2]
-
 if max(X) == 2 and len(A) * len(B) * len(C) and (len(A) + len(B) + len(C) == N) and (len(A) * len(B) + len(B) * len(C) + len(A) * len(C) == M):
     f = 0
     for i in range(N):

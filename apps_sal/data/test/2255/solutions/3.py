@@ -1,13 +1,12 @@
 from collections import defaultdict
 import heapq
 graph = defaultdict(set)
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a != b:
         graph[a].add(b)
         graph[b].add(a)
-
 seen = {1}
 hist = [1]
 h = list(graph[1])
@@ -20,4 +19,4 @@ while len(hist) < n:
     hist.append(next_node)
     for node in graph[next_node]:
         heapq.heappush(h, node)
-print(" ".join(str(x) for x in hist))
+print(' '.join((str(x) for x in hist)))

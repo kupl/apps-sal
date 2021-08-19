@@ -8,13 +8,12 @@ for _ in range(t):
             change = i
             break
     if change == -1:
-
-        print(-((-n) // 3))
+        print(-(-n // 3))
         continue
     streak = 1
     ans = 0
     for i in range(change, change + n):
-        if s[(i) % n] == s[(i + 1) % n]:
+        if s[i % n] == s[(i + 1) % n]:
             streak += 1
         else:
             ans += streak // 3

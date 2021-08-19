@@ -1,6 +1,13 @@
-def rs(): return int(input())
-def ri(): return map(int, input().split())
-def rli(): return list(map(int, input().split()))
+def rs():
+    return int(input())
+
+
+def ri():
+    return map(int, input().split())
+
+
+def rli():
+    return list(map(int, input().split()))
 
 
 n = int(input())

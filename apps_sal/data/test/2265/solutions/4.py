@@ -1,6 +1,5 @@
 import sys
 from math import floor, ceil
-
 IS_LOCAL = False
 
 
@@ -15,7 +14,6 @@ def read_multiple(f, dtype=int):
 def main():
     a = '01100010'
     b = '00110'
-
     if not IS_LOCAL:
         a = input()
         b = input()
@@ -25,8 +23,7 @@ def main():
 
     def rsum(arr):
         return sum(map(cst, arr))
-
-    sb, lb = rsum(b), len(b)
+    (sb, lb) = (rsum(b), len(b))
     s = None
     res = 0
     for i in range(lb - 1, len(a)):
@@ -34,10 +31,8 @@ def main():
             s = rsum(a[:lb])
         else:
             s = s - cst(a[i - lb]) + cst(a[i])
-
         if (s - sb) % 2 == 0:
             res += 1
-
     print(res)
 
 

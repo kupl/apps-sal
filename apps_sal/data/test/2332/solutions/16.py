@@ -1,5 +1,5 @@
-n, k, m = list(map(int, input().split()))
-palabras = {x: y + 1 for y, x in enumerate(input().split())}
+(n, k, m) = list(map(int, input().split()))
+palabras = {x: y + 1 for (y, x) in enumerate(input().split())}
 costos = [int(x) for x in input().split()]
 traspasos = [x for x in range(n + 1)]
 costos_minimos = costos[:]

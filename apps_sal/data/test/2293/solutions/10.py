@@ -1,5 +1,5 @@
 import math
-m, n = list(map(int, input().split()))
+(m, n) = list(map(int, input().split()))
 days = []
 for z in range(m):
     t = set(list(map(int, input().split()))[1:])
@@ -12,7 +12,7 @@ for i in range(m):
             break
         if not check:
             break
-if(check):
-    print("possible")
+if check:
+    print('possible')
 else:
-    print("impossible")
+    print('impossible')

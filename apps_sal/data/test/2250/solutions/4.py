@@ -2,9 +2,8 @@ def solve():
     n = int(input())
     lst = list(input())
     if len(set(lst)) == 1:
-        print(n // 3 + ((n % 3) != 0))
+        print(n // 3 + (n % 3 != 0))
         return 0
-
     for i in range(n - 1):
         if lst[i] != lst[i + 1]:
             q = i + 1
@@ -14,7 +13,7 @@ def solve():
     lcnt = 0
     ans = 0
     for i in lst:
-        if i == "R":
+        if i == 'R':
             rcnt += 1
             lcnt = 0
         else:

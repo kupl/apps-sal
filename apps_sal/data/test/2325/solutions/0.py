@@ -39,12 +39,12 @@ def factor(n):
 def main():
     q = int(input())
     for __ in range(q):
-        x, y = input().split()
-        x, y = int(x), int(y)
+        (x, y) = input().split()
+        (x, y) = (int(x), int(y))
         ans = pow(2, y - 1, md)
         for f in factor(x):
             cm = cnk(f + y - 1, y - 1)
-            ans = (ans * cm) % md
+            ans = ans * cm % md
         print(ans)
 
 

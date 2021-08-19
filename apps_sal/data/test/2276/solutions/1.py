@@ -1,12 +1,10 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
-
 n = int(input())
 s = input().strip()
 a = [0] + list(map(int, input().split()))
-
 MX = 105
-dp = [0] * (MX ** 3)
+dp = [0] * MX ** 3
 
 
 def f(i, j, k):

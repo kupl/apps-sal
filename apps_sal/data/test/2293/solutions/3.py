@@ -12,13 +12,11 @@ def check(arr1, arr2):
             i2 += 1
 
 
-m, n = (int(x) for x in input().split())
-
+(m, n) = (int(x) for x in input().split())
 day___set = []
 for i in range(m):
     x = sorted([int(x) for x in input().split()][1:])
     day___set.append(x)
-
 for i in range(m):
     for j in range(i + 1, m):
         if not check(day___set[i], day___set[j]):

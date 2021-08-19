@@ -6,14 +6,14 @@ def find_min_cost_word(words, group_words, costs):
     return cost_min
 
 
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 words = input().split()
 costs = list(map(int, input().split()))
 groups = []
 d = {}
 for i in range(k):
     tmp = list(map(int, input().split()))
-    x, group_words = tmp[0], tmp[1:]
+    (x, group_words) = (tmp[0], tmp[1:])
     min_cost_word = find_min_cost_word(words, group_words, costs)
     for word_ind in group_words:
         word = words[word_ind - 1]
