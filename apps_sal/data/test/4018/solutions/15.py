@@ -1,4 +1,4 @@
-n, kk = list(map(int, input().split()))
+(n, kk) = list(map(int, input().split()))
 s = '@' + input()
 dp = [[0] * (n + 1) for i in range(n + 1)]
 dp[0][0] = 1
@@ -11,9 +11,7 @@ for i in range(1, n + 1):
                 dp[i][k] += dp[i - 1][j - 1]
                 tag[idx] = False
 ans = 0
-# print(dp)
 for i in range(n, -1, -1):
-    # print(ans,k,i)
     tmp = sum(dp[i])
     if kk > tmp:
         kk -= tmp

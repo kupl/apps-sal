@@ -1,11 +1,3 @@
-# f = open('test.py')
-# def input():
-# 	return f.readline().replace('\n','')
-
-# import heapq
-# import bisect
-# from collections import deque
-# from collections import defaultdict
 def read_list():
     return list(map(int, input().strip().split(' ')))
 
@@ -14,15 +6,12 @@ def print_list(l):
     print(' '.join(map(str, l)))
 
 
-# N = int(input())
-# for _ in range(N):
-n, p = read_list()
+(n, p) = read_list()
 a = read_list()
 a.sort()
-mi = max(a[i] - i for i in range(n))
+mi = max((a[i] - i for i in range(n)))
 res = []
 ll = []
-
 x = mi
 now = x
 i = 0
@@ -36,14 +25,11 @@ for step in range(n):
     if step >= tmp:
         dic.append([tmp, step])
 dic.pop(0)
-
 for i in range(len(dic) - 1, 0, -1):
     if dic[i][0] <= dic[i - 1][1] - 1:
         dic[i - 1][1] = dic[i][1]
         dic[i - 1][0] = min(dic[i][0], dic[i - 1][0])
         dic.pop(i)
-# print(dic)
-
 las = 0
 for d in dic:
     flag = True
@@ -58,6 +44,5 @@ for d in dic:
 if dic:
     for i in range(dic[-1][-1] + 1, p - 1):
         res.append(mi + i)
-
 print(len(res))
 print_list(res)

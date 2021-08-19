@@ -1,12 +1,10 @@
-#!/usr/bin/env python3
-
 def main():
     s = input()
     n = len(s)
     pos = [-1]
     p = 0
     while True:
-        p = s.find("bear", p)
+        p = s.find('bear', p)
         if p == -1:
             break
         pos.append(p)

@@ -1,25 +1,30 @@
-# create date: 2020-07-03 22:02
-
 from itertools import groupby, accumulate
 import sys
 stdin = sys.stdin
 
 
-def ns(): return stdin.readline().rstrip()
-def ni(): return int(ns())
-def na(): return list(map(int, stdin.readline().split()))
+def ns():
+    return stdin.readline().rstrip()
+
+
+def ni():
+    return int(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
-    n, k = na()
+    (n, k) = na()
     s = ns()
     a = list()
-    if s[0] == "0":
+    if s[0] == '0':
         a.append(0)
     gr = groupby(s)
-    for key, group in gr:
+    for (key, group) in gr:
         a.append(len(list(group)))
-    if s[-1] == "0":
+    if s[-1] == '0':
         a.append(0)
     acum = list(accumulate(a))
     m = len(acum)

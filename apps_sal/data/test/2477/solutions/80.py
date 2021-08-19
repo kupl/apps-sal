@@ -1,6 +1,5 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 log_ls = list(map(int, input().split()))
-
 Max = max(log_ls)
 
 
@@ -15,7 +14,6 @@ def less_k(min_length, log_ls=log_ls, K=K):
         return True
     else:
         return False
-# print(less_k(5,[10,10],2))
 
 
 def return_min_length():

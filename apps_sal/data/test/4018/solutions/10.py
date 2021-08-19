@@ -1,10 +1,9 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 s = [ord(c) - ord('a') for c in s]
-dp = [[[0] * 26 for i in range(n + 1)]for i in range(n)]
+dp = [[[0] * 26 for i in range(n + 1)] for i in range(n)]
 dp[0][1][s[0]] = 1
 sm = None
-
 for i in range(1, n):
     c = s[i]
     for cc in range(26):
@@ -19,7 +18,6 @@ for i in range(1, n):
                 for t in range(26):
                     tm += dp[i - 1][j - 1][t]
                 dp[i][j][cc] = tm
-# print(dp[-1][-1])
 
 
 def get(x):

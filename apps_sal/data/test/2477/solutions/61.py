@@ -1,5 +1,5 @@
 import math
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 woods = [int(i) for i in input().split()]
 
 
@@ -10,11 +10,6 @@ def k_cut_less_than(k, l, woods):
     if kaisuu <= k:
         return False
     return True
-
-
-# 二分探索
-# functionを満たす,search_listの最大の要素を出力
-# 【注意点】searchリストの初めの方はfunctionを満たし、後ろに行くにつれて満たさなくなるべき
 
 
 def binary_research(start, end, function):
@@ -29,5 +24,5 @@ def binary_research(start, end, function):
 
 
 start = 0
-end = 10**9
-print((binary_research(start, end, k_cut_less_than) + 1))
+end = 10 ** 9
+print(binary_research(start, end, k_cut_less_than) + 1)

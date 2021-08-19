@@ -1,16 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[13]:
-
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = list(input())
-
-
-# In[16]:
-
-
 cnt = []
 if s[0] == '0':
     cnt.append(0)
@@ -34,6 +23,3 @@ for l in range(0, m + 1, 2):
         r = m
     ans = max(ans, cs[r] - cs[l])
 print(ans)
-
-
-# In[ ]:
