@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -7,13 +6,11 @@ for _ in range(t):
     for i in range(1, n):
         li = []
         for j in range(6):
-            if (i - j) < 0:
+            if i - j < 0:
                 break
             else:
                 li.append(l[i - j])
-        # print(li)
         li.sort()
-        # print(li)
         if l[i] == li[0] and li[0] != li[1]:
             count += 1
     print(count)
