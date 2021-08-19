@@ -1,5 +1,4 @@
-# cook your dish here
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 for i in range(a):
     if n != 0:
         r = n % 10

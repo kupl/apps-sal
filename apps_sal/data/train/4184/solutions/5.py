@@ -1,5 +1,5 @@
-import math  # ;-)... (code is only to see what happens for python)
-primes, parr = [2, 3, 5, 7], []
+import math
+(primes, parr) = ([2, 3, 5, 7], [])
 
 
 def is_prime(n):
@@ -7,7 +7,7 @@ def is_prime(n):
         return False
     if len(parr) == 0:
         sieve(10000000)
-    i, limit = 0, round(math.sqrt(n))
+    (i, limit) = (0, round(math.sqrt(n)))
     while True:
         if i >= len(primes):
             primes.append(parr[i])
@@ -20,7 +20,7 @@ def is_prime(n):
 
 
 def sieve(n):
-    array, l = [], int(math.sqrt(n))
+    (array, l) = ([], int(math.sqrt(n)))
     for i in range(n + 1):
         array.append(True)
     for i in range(2, l + 1):

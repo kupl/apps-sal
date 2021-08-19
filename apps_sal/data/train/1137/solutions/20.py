@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     N = int(input())
@@ -11,10 +10,8 @@ while t > 0:
             if k1 in dress_price[i + 1:]:
                 flag = 1
                 break
-
     if flag == 1:
-        print("Accepted")
+        print('Accepted')
     else:
-        print("Rejected")
-
+        print('Rejected')
     t = t - 1

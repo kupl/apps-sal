@@ -1,10 +1,6 @@
-
-# def solve():
-
-'''while test:
+"""while test:
     solve()
-    test-=1'''
-
+    test-=1"""
 n = [int(i) for i in input().split()]
 x = n[1]
 n = n[0]

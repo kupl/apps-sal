@@ -15,7 +15,6 @@ def check(itr, sets):
         tmp = sorted(list(map(dmap, perm)))
         if len(tmp) != tmp[-1] - tmp[0] + 1:
             return False
-
     return True
 
 
@@ -24,19 +23,17 @@ def main():
     sets = []
     start = set()
     for _ in range(n - 1):
-        l, *tmp = list(map(int, input().split()))
+        (l, *tmp) = list(map(int, input().split()))
         sets.append(set(tmp))
         if l == 2:
             start.add(tmp[0])
             start.add(tmp[1])
-
     ans = collections.deque()
     for i in start:
         permuts = copy.deepcopy(sets)
         next = i
         while len(ans) > 0:
             ans.pop()
-
         ans.append(next)
         while len(ans) < n:
             q = []
@@ -46,24 +43,17 @@ def main():
                     if len(permut) == 1:
                         q.append(permut)
             if len(q) != 1:
-                break  # exit
+                break
             next = list(q[0])[0]
             ans.append(next)
         if len(ans) == n and check(ans, sets):
             print(*ans)
             return
-    print("error")
+    print('error')
     return
 
 
 input = sys.stdin.readline
-# sys.setrecursionlimit(2097152)
 tnum = int(input())
 for _ in range(tnum):
     main()
-
-# threading.stack_size(134217728)
-
-# main_thread = threading.Thread(target=main)
-# main_thread.start()
-# main_thread.join()

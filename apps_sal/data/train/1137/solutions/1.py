@@ -6,33 +6,32 @@ print2 = stdout.write
 
 def sub_lists(my_list, le):
     for x in combinations(my_list, 2):
-        # print(x)
         if sum(x) == 2000:
-            return "Accepted"
-    return "Rejected"
+            return 'Accepted'
+    return 'Rejected'
 
 
 for _ in range(int(input())):
     n = int(input())
     if n == 1:
         input()
-        print("Rejected")
+        print('Rejected')
         continue
     elif n == 2:
         if sum(map(int, stdin.readline().split())) != 2000:
-            print("Rejected")
+            print('Rejected')
         else:
-            print("Accepted")
+            print('Accepted')
         continue
     a = sorted(list(map(int, stdin.readline().split())))
     i = n - 1
     while i >= 0 and a[i] > 2000:
         i -= 1
     if i <= 0:
-        print("Rejected")
+        print('Rejected')
         continue
     i += 1
     if sum(a[:i]) < 2000:
-        print("Rejected")
+        print('Rejected')
         continue
     print(sub_lists(a[:i], i))

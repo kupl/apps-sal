@@ -1,10 +1,8 @@
-# OM GANESHAY NAMH
-# GANPATI BAPPA MORYA
 import math
 import queue
 import heapq
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 fastinput = sys.stdin.readline
 fastout = sys.stdout.write
 t = int(fastinput())
@@ -19,11 +17,10 @@ while t:
     elif c <= n // 2:
         print(n - c)
         print('0 ' * (n - c))
+    elif c % 2 == 0:
+        print(c)
+        print('1 ' * c)
     else:
-        if c % 2 == 0:
-            print(c)
-            print('1 ' * c)
-        else:
-            c -= 1
-            print(c)
-            print('1 ' * c)
+        c -= 1
+        print(c)
+        print('1 ' * c)

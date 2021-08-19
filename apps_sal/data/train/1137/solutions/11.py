@@ -1,9 +1,4 @@
 from sys import stdin
-
-# Input data
-#stdin = open("input", "r")
-
-
 for _ in range(int(stdin.readline())):
     n = int(stdin.readline())
     arr = list(map(int, stdin.readline().split()))
@@ -16,11 +11,10 @@ for _ in range(int(stdin.readline())):
             if d[ele] >= 2:
                 cond = True
                 break
-        else:
-            if 2000 - ele in d:
-                cond = True
-                break
+        elif 2000 - ele in d:
+            cond = True
+            break
     if cond == True:
-        print("Accepted")
+        print('Accepted')
     else:
-        print("Rejected")
+        print('Rejected')

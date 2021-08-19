@@ -1,4 +1,3 @@
-# cook your dish here
 def binary_search(n, target):
     lo = 1
     hi = n
@@ -10,15 +9,15 @@ def binary_search(n, target):
         elif x > target:
             hi = mid - 1
         else:
-            return True, mid
-    return False, hi
+            return (True, mid)
+    return (False, hi)
 
 
 def solve(n):
     m = n * (n + 1) // 2
     if m % 2 == 1:
         return 0
-    find, j = binary_search(n, m // 2)
+    (find, j) = binary_search(n, m // 2)
     ans = 0
     if find:
         k = n - j
