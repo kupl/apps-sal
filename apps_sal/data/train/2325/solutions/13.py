@@ -1,60 +1,39 @@
-# a = 区間中のAの個数 % 3
-# b = 区間中のBの個数 % 3
-# (a,b)が一致する場合は変換可能
-# このグループに含まれる場合は変換可能
-# (0,1)->(2,0)->(1,2)
-# (0,2)->(2,1)->(1,0)
-
 import sys
 readline = sys.stdin.readline
 S = readline().rstrip()
 T = readline().rstrip()
 q = int(readline())
-
 Sa = [0] * (len(S) + 1)
 Sb = [0] * (len(S) + 1)
 Ta = [0] * (len(T) + 1)
 Tb = [0] * (len(T) + 1)
-
 for i in range(len(S)):
-    if S[i] == "A":
+    if S[i] == 'A':
         Sa[i + 1] = 1
     else:
         Sb[i + 1] = 1
 for i in range(len(S)):
     Sa[i + 1] += Sa[i]
     Sb[i + 1] += Sb[i]
-
 for i in range(len(T)):
-    if T[i] == "A":
+    if T[i] == 'A':
         Ta[i + 1] = 1
     else:
         Tb[i + 1] = 1
 for i in range(len(T)):
     Ta[i + 1] += Ta[i]
     Tb[i + 1] += Tb[i]
-
-ok_group = {
-    ((0, 1), (2, 0), (1, 2)),
-    ((0, 2), (2, 1), (1, 0)),
-    ((1, 1), (0, 0), (2, 2))
-}
-# print("Sa",Sa)
-# print("Sb",Sb)
-# print("Ta",Ta)
-# print("Tb",Tb)
-
+ok_group = {((0, 1), (2, 0), (1, 2)), ((0, 2), (2, 1), (1, 0)), ((1, 1), (0, 0), (2, 2))}
 for i in range(q):
-    a, b, c, d = list(map(int, readline().split()))
+    (a, b, c, d) = list(map(int, readline().split()))
     s = ((Sa[b] - Sa[a - 1]) % 3, (Sb[b] - Sb[a - 1]) % 3)
     t = ((Ta[d] - Ta[c - 1]) % 3, (Tb[d] - Tb[c - 1]) % 3)
-    # print(a,b,c,d,"s",s,"t",t)
     if s == t:
-        print("YES")
+        print('YES')
         continue
     for ok in ok_group:
         if s in ok and t in ok:
-            print("YES")
+            print('YES')
             break
     else:
-        print("NO")
+        print('NO')

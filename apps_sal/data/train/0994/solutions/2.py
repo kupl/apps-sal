@@ -1,12 +1,11 @@
 for _ in range(int(input())):
-    n, X = map(int, input().split())
+    (n, X) = map(int, input().split())
     b = list(map(int, input().split()))
     a = [[0 for j in range(n + 1)] for k in range(n + 1)]
     for i in range(n):
         for j in range(n):
             a[i + 1][j + 1] = b[i] + b[j]
     c = 0
-    # print(a)
     for i in range(n + 1):
         for j in range(n + 1):
             if i > 0:
@@ -22,5 +21,4 @@ for _ in range(int(input())):
                     c += 1
                 ii -= 1
                 jj -= 1
-    # print(a)
     print(c)

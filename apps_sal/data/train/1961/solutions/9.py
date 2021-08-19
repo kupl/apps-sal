@@ -13,7 +13,6 @@ class BrowserHistory:
     def back(self, steps: int) -> str:
         if self.curr < steps:
             self.curr = 0
-
         else:
             self.curr -= steps
         return self.history[self.curr]
@@ -24,10 +23,3 @@ class BrowserHistory:
         else:
             self.curr += steps
         return self.history[self.curr]
-
-
-# Your BrowserHistory object will be instantiated and called as such:
-# obj = BrowserHistory(homepage)
-# obj.visit(url)
-# param_2 = obj.back(steps)
-# param_3 = obj.forward(steps)

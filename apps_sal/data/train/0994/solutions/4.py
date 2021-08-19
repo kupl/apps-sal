@@ -1,6 +1,6 @@
 import math
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
     count = 0
     y = a.copy()
@@ -48,7 +48,6 @@ for _ in range(int(input())):
         if x % k == 0:
             b.append(k)
         k += 1
-    # print(b)
     po = 0
     pot = 0
     for i in b:
@@ -66,13 +65,11 @@ for _ in range(int(input())):
             c.append(summ)
         c.sort()
         l = len(c)
-        # print(i)
-        # print(c)
         for t in range(l):
             if c[t] >= x // i:
                 break
             else:
-                p = (x // i) - c[t]
+                p = x // i - c[t]
                 u = 0
                 v = l - 1
                 cond = 0
@@ -102,5 +99,4 @@ for _ in range(int(input())):
                             s += 1
                         else:
                             break
-                # print(count)
     print(count)

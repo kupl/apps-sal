@@ -24,10 +24,3 @@ class BrowserHistory:
         if self.cur > self.max:
             self.cur = self.max
         return self.l[self.cur]
-
-
-# Your BrowserHistory object will be instantiated and called as such:
-# obj = BrowserHistory(homepage)
-# obj.visit(url)
-# param_2 = obj.back(steps)
-# param_3 = obj.forward(steps)

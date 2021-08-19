@@ -14,23 +14,13 @@ class BrowserHistory:
             self.future = deque()
 
     def back(self, steps: int) -> str:
-        # print(\"back\")
         for i in range(steps):
             if len(self.history) > 1:
                 self.future.append(self.history.pop())
-        # print(self.history,self.future )
         return self.history[-1]
 
     def forward(self, steps: int) -> str:
-        # print(\"forward\")
         for i in range(steps):
             if self.future:
                 self.history.append(self.future.pop())
-        # print(self.history,self.future)
         return self.history[-1]
-
-# Your BrowserHistory object will be instantiated and called as such:
-# obj = BrowserHistory(homepage)
-# obj.visit(url)
-# param_2 = obj.back(steps)
-# param_3 = obj.forward(steps)

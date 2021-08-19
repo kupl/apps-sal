@@ -1,10 +1,9 @@
 def smash(words):
-    # Begin here
     count = 0
-    sentence = ""
+    sentence = ''
     for word in words:
         sentence += word
         if count != len(words) - 1:
-            sentence += " "
+            sentence += ' '
         count += 1
     return sentence
