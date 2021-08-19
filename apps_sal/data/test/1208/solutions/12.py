@@ -9,12 +9,9 @@ for i in range(n):
         s.add(a[1])
         if len(now) > m:
             m = len(now)
+    elif a[1] not in s:
+        m = max(m, len(now)) + 1
+        s.add(a[1])
     else:
-        if a[1] not in s:
-            m = max(m, len(now)) + 1
-            s.add(a[1])
-        else:
-            now.discard(a[1])
-    # print(m)
-    # print(now)
+        now.discard(a[1])
 print(m)

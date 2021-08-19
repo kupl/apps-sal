@@ -20,7 +20,6 @@ o....T....
 ⇛ 点の上は行⇔列の切り替えが出来るので、cap==1とする
 ⇛ 結局MaxCutをしているのと一緒！！
 """
-
 from collections import deque
 from collections import defaultdict
 import sys
@@ -28,8 +27,8 @@ sys.setrecursionlimit(100000)
 
 
 class Dinic:
+
     def __init__(self):
-        # self.N = N
         self.G = defaultdict(list)
 
     def add_edge(self, fr, to, cap):
@@ -38,7 +37,6 @@ class Dinic:
         :param to: 終点
         :param cap: 容量
         """
-        # forwardの最後には、キャパのうちどれだけ使ったかが入る
         forward = [to, cap, None]
         backward = [fr, 0, forward]
         forward[-1] = backward
@@ -72,11 +70,11 @@ class Dinic:
             v = q.popleft()
             lv = level[v] + 1
             nexts = G[v]
-            for w, cap, _ in nexts:
+            for (w, cap, _) in nexts:
                 if cap > 0 and level[w] == 0:
                     level[w] = lv
                     q.append(w)
-        is_reach = (level[t] > 0)
+        is_reach = level[t] > 0
         return is_reach
 
     def dfs(self, v, t, f):
@@ -91,20 +89,13 @@ class Dinic:
         level = self.level
         nexts = self.G[v]
         for edge in nexts:
-            w, cap, rev = edge
-            # まだキャパがあるならば
+            (w, cap, rev) = edge
             if cap > 0 and level[v] < level[w]:
-                # キャパが余ってるなら全部流すし
-                # カツカツならキャパのmaxまで流す
                 d = self.dfs(w, t, min(f, cap))
-                # 帰りがけに、更新
                 if d > 0:
-                    # 順方向のキャパをd下げる
-                    # 逆方向のキャパをd増やす
                     edge[1] -= d
                     rev[1] += d
                     return d
-        # 次の道が見つからなければ終了
         return 0
 
     def flow(self, s, t):
@@ -114,9 +105,8 @@ class Dinic:
         :return : 最大フロー
         """
         flow = 0
-        INF = 10**10
+        INF = 10 ** 10
         G = self.G
-        # ルートが存在する限り、続ける
         while self.bfs(s, t):
             f = INF
             while f > 0:
@@ -126,7 +116,7 @@ class Dinic:
 
 
 ans = set()
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 fields = []
 for i in range(H):
     inp = list(input())
@@ -134,19 +124,18 @@ for i in range(H):
 dinic = Dinic()
 start = -1
 end = -2
-INF = 10**10
+INF = 10 ** 10
 for i in range(H):
     for j in range(W):
-        if fields[i][j] == "T":
+        if fields[i][j] == 'T':
             dinic.add_edge(i, end, INF)
             dinic.add_edge(j + H, end, INF)
-        if fields[i][j] == "S":
+        if fields[i][j] == 'S':
             dinic.add_edge(start, i, INF)
             dinic.add_edge(start, j + H, INF)
-        if fields[i][j] != ".":
+        if fields[i][j] != '.':
             dinic.add_edge(i, j + H, 1)
             dinic.add_edge(j + H, i, 1)
-
 ans = dinic.flow(start, end)
 if ans > INF:
     print(-1)

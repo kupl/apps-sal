@@ -1,12 +1,7 @@
-
 import sys
-# sys.stdin=open("data.txt")
 input = sys.stdin.readline
-
 n = int(input())
-
 l = list([int(x) - 1 for x in input().split()])
-
 use = []
 valid = 1
 for i in range(n):
@@ -21,11 +16,9 @@ for i in range(n):
             break
     else:
         valid = 0
-
 if not valid:
-    print("-1")
+    print('-1')
 else:
-    # get lcm
     ans = 1
     for i in use:
         t = ans

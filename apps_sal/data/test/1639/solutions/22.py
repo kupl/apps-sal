@@ -1,7 +1,6 @@
 from collections import Counter
 import itertools as ittls
 3
-# -*- coding: <utf-8> -*-
 
 
 def sqr(x):
@@ -11,13 +10,9 @@ def sqr(x):
 def inputarray(func=int):
     return list(map(func, input().split()))
 
-# -------------------------------
-# -------------------------------
-
 
 N = int(input())
 A = list(inputarray())
-
 maxv = 1
 currmaxv = 1
 for i in range(1, len(A)):
@@ -26,5 +21,4 @@ for i in range(1, len(A)):
     else:
         currmaxv = 1
     maxv = max(maxv, currmaxv)
-
 print(maxv)

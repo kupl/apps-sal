@@ -1,12 +1,16 @@
 from itertools import product
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7  # 998244353
+MOD = 10 ** 9 + 7
 sys.setrecursionlimit(2147483647)
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 class MaxFlow(object):
+
     def __init__(self, n):
         self.n = n
         self.E = [[] for _ in range(n)]
@@ -23,7 +27,7 @@ class MaxFlow(object):
         level[s] = 0
         queue = [s]
         for v in queue:
-            for nv, cap, _ in self.E[v]:
+            for (nv, cap, _) in self.E[v]:
                 if cap and level[nv] == -1:
                     level[nv] = level[v] + 1
                     if nv == t:
@@ -32,17 +36,17 @@ class MaxFlow(object):
         return level[t] != -1
 
     def _dfs(self, s, t):
-        E, level, it = self.E, self._level, self._iter
+        (E, level, it) = (self.E, self._level, self._iter)
         stack = [(s, INF)]
         while stack:
-            v, f = stack[-1]
+            (v, f) = stack[-1]
             if v == t:
-                for v, _ in stack[:-1]:
+                for (v, _) in stack[:-1]:
                     E[v][it[v]][1] -= f
                     E[v][it[v]][-1][1] += f
                 return f
             while it[v] < len(E[v]):
-                nv, cap, _ = E[v][it[v]]
+                (nv, cap, _) = E[v][it[v]]
                 if cap and level[v] < level[nv]:
                     stack.append((nv, min(f, cap)))
                     break
@@ -64,12 +68,11 @@ class MaxFlow(object):
 
 
 def resolve():
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     grid = [input() for _ in range(m)]
     N = m + n
     flow = MaxFlow(N + 2)
-
-    for i, j in product(range(m), range(n)):
+    for (i, j) in product(range(m), range(n)):
         if grid[i][j] == 'S':
             flow.add_edge(i, j + m, INF)
             flow.add_edge(j + m, i, INF)
@@ -83,7 +86,6 @@ def resolve():
         elif grid[i][j] != '.':
             flow.add_edge(i, j + m, 1)
             flow.add_edge(j + m, i, 1)
-
     ans = flow.solve(N, N + 1)
     if ans > 10 << 30:
         ans = -1

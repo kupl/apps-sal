@@ -1,4 +1,3 @@
-#!usr/bin/env python3
 from collections import defaultdict
 from collections import deque
 from heapq import heappush, heappop
@@ -6,10 +5,22 @@ import sys
 import math
 import bisect
 import random
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def I(): return int(sys.stdin.readline())
-def LS(): return list(map(list, sys.stdin.readline().split()))
-def S(): return list(sys.stdin.readline())[:-1]
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return list(map(list, sys.stdin.readline().split()))
+
+
+def S():
+    return list(sys.stdin.readline())[:-1]
 
 
 def IR(n):
@@ -42,40 +53,29 @@ def LSR(n):
 
 mod = 1000000007
 
-# A
-
 
 def A():
     return
-
-# B
 
 
 def B():
     return
 
-# C
-
 
 def C():
     return
-
-# D
 
 
 def D():
     return
 
-# E
-
 
 def E():
     return
 
-# F
-
 
 def F():
+
     def bfs(s, g, n):
         bfs_map = [-1 for i in range(n)]
         bfs_map[s] = 0
@@ -93,11 +93,10 @@ def F():
                     q.append(y)
             if fin:
                 break
-
         if bfs_map[g] == -1:
             return [None, 0]
         path = [None for i in range(bfs_map[g] + 1)]
-        m = float("inf")
+        m = float('inf')
         path[bfs_map[g]] = g
         y = g
         for i in range(bfs_map[g])[::-1]:
@@ -112,45 +111,40 @@ def F():
 
     def ford_fulkerson(s, g, c, n):
         while 1:
-            p, m = bfs(s, g, n)
+            (p, m) = bfs(s, g, n)
             if not m:
                 break
             for i in range(len(p) - 1):
                 c[p[i]][p[i + 1]] -= m
                 c[p[i + 1]][p[i]] += m
         return sum(c[g])
-    h, w = LI()
+    (h, w) = LI()
     a = SR(h)
     c = [[0 for i in range(h + w + 2)] for j in range(h + w + 2)]
     for y in range(h):
         for x in range(w):
-            if a[y][x] == "S":
-                c[0][y + 1] = float("inf")
-                c[0][h + x + 1] = float("inf")
-            if a[y][x] == "T":
-                c[y + 1][h + w + 1] = float("inf")
-                c[h + x + 1][h + w + 1] = float("inf")
-            if a[y][x] == "o":
+            if a[y][x] == 'S':
+                c[0][y + 1] = float('inf')
+                c[0][h + x + 1] = float('inf')
+            if a[y][x] == 'T':
+                c[y + 1][h + w + 1] = float('inf')
+                c[h + x + 1][h + w + 1] = float('inf')
+            if a[y][x] == 'o':
                 c[y + 1][h + x + 1] = 1
                 c[h + x + 1][y + 1] = 1
     ans = ford_fulkerson(0, h + w + 1, c, h + w + 2)
-    if ans == float("inf"):
-        print((-1))
+    if ans == float('inf'):
+        print(-1)
     else:
         print(ans)
-# G
 
 
 def G():
     return
 
-# H
-
 
 def H():
     return
-
-# Solve
 
 
 def __starting_point():

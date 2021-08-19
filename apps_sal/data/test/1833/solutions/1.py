@@ -5,11 +5,11 @@ import math
 def nextDiv(a):
     ret = []
     i = 1
-    while (i * i <= a):
-        if (a % i == 0):
+    while i * i <= a:
+        if a % i == 0:
             ret.append(i)
             j = a // i
-            if (i != j):
+            if i != j:
                 ret.append(j)
         i += 1
     return ret[::-1]
@@ -18,16 +18,10 @@ def nextDiv(a):
 def solve(n, lis):
     dp = [0] * (max(lis) + 1)
     dp[0] = 1
-
     for i in range(n):
         for j in nextDiv(lis[i]):
             dp[j] += dp[j - 1]
-
-    # print(dp)
-    return (sum(dp) - 1) % int(1e9 + 7)
-
-###########################
-###########################
+    return (sum(dp) - 1) % int(1000000000.0 + 7)
 
 
 def intRead():

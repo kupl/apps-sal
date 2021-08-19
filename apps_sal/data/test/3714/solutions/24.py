@@ -4,11 +4,10 @@ from math import gcd
 def count(x, a, n):
     c = 0
     t = x
-    while(1):
+    while 1:
         x = a[x - 1]
         c += 1
         if t == x:
-            # print(t,x)
             break
         if c >= n:
             return 0
@@ -27,7 +26,7 @@ def xyz():
         p = count(i + 1, a, n)
         if p == 0:
             return -1
-        l = (p * l) // (gcd(p, l))
+        l = p * l // gcd(p, l)
     return l
 
 

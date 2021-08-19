@@ -1,14 +1,14 @@
-# Dinic's algorithm
 from collections import deque
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
 
     def add_edge(self, fr, to, cap):
-        forward = [to, cap, None]  # (行き先、容量、逆辺の参照)
+        forward = [to, cap, None]
         forward[2] = backward = [fr, 0, forward]
         self.G[fr].append(forward)
         self.G[to].append(backward)
@@ -27,7 +27,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -38,7 +38,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -49,10 +49,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**10
+        INF = 10 ** 10
         G = self.G
         while self.bfs(s, t):
-            *self.it, = list(map(iter, self.G))
+            (*self.it,) = list(map(iter, self.G))
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -60,8 +60,8 @@ class Dinic:
         return flow
 
 
-inf = 10**9
-H, W = list(map(int, input().split()))
+inf = 10 ** 9
+(H, W) = list(map(int, input().split()))
 a = [list(input()) for _ in range(H)]
 D = Dinic(H + W + 2)
 for i in range(H):
@@ -76,4 +76,4 @@ for i in range(H):
             D.add_edge(i + 1, j + 1 + H, 1)
             D.add_edge(j + 1 + H, i + 1, 1)
 ans = D.flow(0, H + W + 1)
-print((ans if ans < inf else -1))
+print(ans if ans < inf else -1)
