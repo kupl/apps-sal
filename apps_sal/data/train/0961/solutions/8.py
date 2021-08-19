@@ -1,4 +1,3 @@
-# https://www.geeksforgeeks.org/counting-inversions/
 from sys import stdin, stdout
 
 
@@ -11,10 +10,8 @@ def _mergeSort(arr, temp_arr, left, right):
     inv_count = 0
     if left < right:
         mid = (left + right) // 2
-        inv_count += _mergeSort(arr, temp_arr,
-                                left, mid)
-        inv_count += _mergeSort(arr, temp_arr,
-                                mid + 1, right)
+        inv_count += _mergeSort(arr, temp_arr, left, mid)
+        inv_count += _mergeSort(arr, temp_arr, mid + 1, right)
         inv_count += merge(arr, temp_arr, left, mid, right)
     return inv_count
 
@@ -31,7 +28,7 @@ def merge(arr, temp_arr, left, mid, right):
             i += 1
         else:
             temp_arr[k] = arr[j]
-            inv_count += (mid - i + 1)
+            inv_count += mid - i + 1
             k += 1
             j += 1
     while i <= mid:

@@ -1,12 +1,10 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m = map(int, input().split())
-
+    (n, m) = map(int, input().split())
     ml = []
     for i in range(n):
         ml.append(list(map(int, input().split())))
     s = input()
-    p, q = map(int, input().split())
+    (p, q) = map(int, input().split())
     nl = [0] * (n + m - 1)
     pl = [0] * (n + m - 1)
     for i in range(n):

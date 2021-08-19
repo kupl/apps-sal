@@ -1,5 +1,4 @@
 def gap(g, m, n):
-    # your code
     for i in range(m, n + 1):
         if is_prime(i):
             if is_prime(i + g):
@@ -20,7 +19,6 @@ def is_prime(num):
         return True
     if num % 2 == 0 or num % 3 == 0:
         return False
-
     i = 5
     while i * i <= num:
         if num % i == 0 or num % (i + 2) == 0:

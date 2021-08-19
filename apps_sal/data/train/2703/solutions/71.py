@@ -7,4 +7,3 @@ def square_sum(numbers):
 
 
 square_sum([1, 2, 2])
-# your code here

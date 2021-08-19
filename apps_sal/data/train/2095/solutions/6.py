@@ -1,21 +1,15 @@
 input()
-
 A = list(map(int, input().split(' ')))
-
 root = -1
-
-for i, a in enumerate(A):
+for (i, a) in enumerate(A):
     if i == a - 1:
         root = i
         break
-
 v = [False] * len(A)
 if root > -1:
     v[root] = True
-
 changed = 0
-
-for i, a in enumerate(A):
+for (i, a) in enumerate(A):
     if v[i]:
         continue
     v[i] = True
@@ -33,9 +27,5 @@ for i, a in enumerate(A):
         else:
             A[a] = root + 1
             changed += 1
-
 print(changed)
 print(' '.join(map(str, A)))
-
-
-# Made By Mostafa_Khaled

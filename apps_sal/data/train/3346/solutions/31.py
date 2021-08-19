@@ -2,7 +2,7 @@ import math
 
 
 def isprime(y):
-    if all(y % i != 0 for i in range(3, int(math.sqrt(y)) + 1, 2)):
+    if all((y % i != 0 for i in range(3, int(math.sqrt(y)) + 1, 2))):
         return True
 
 
@@ -20,4 +20,3 @@ def gap(g, m, n):
                         break
                     else:
                         break
-# OH MY GOD IT ACTUALLY WORKED

@@ -2,7 +2,7 @@ import math
 
 
 def gap(g, m, n):
-    lp = 0  # last prime number
+    lp = 0
     for i in range(m, n + 1):
         if isprime(i):
             if lp != 0:

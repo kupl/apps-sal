@@ -1,6 +1,5 @@
-
 def prime(a):
-    return not (a < 2 or any(a % x == 0 for x in range(2, int(a ** 0.5) + 1)))
+    return not (a < 2 or any((a % x == 0 for x in range(2, int(a ** 0.5) + 1))))
 
 
 def allprimes(start, end):
@@ -12,7 +11,6 @@ def allprimes(start, end):
 
 
 def gap(g, m, n):
-    # your code
     for i in range(m, n + 1):
         if prime(i):
             if prime(i + g):

@@ -3,10 +3,10 @@ import math
 
 def isprime(n):
     if n <= 1 or n % 2 == 0:
-        print((1))
+        print(1)
         return False
     if n == 2:
-        print((2))
+        print(2)
         return True
     for i in range(3, math.floor(math.sqrt(n)) + 1, 2):
         if n % i == 0:
@@ -15,7 +15,7 @@ def isprime(n):
 
 
 def gap(g, m, n):
-    i, li = m, []
+    (i, li) = (m, [])
     while i <= n:
         if isprime(i):
             li.append(i)
@@ -24,4 +24,3 @@ def gap(g, m, n):
                 return [li[-2], li[-1]]
         i = i + 1
     return
-    # your code
