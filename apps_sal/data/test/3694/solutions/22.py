@@ -1,4 +1,4 @@
-ans = ["sjfnb", "cslnb"]
+ans = ['sjfnb', 'cslnb']
 n = int(input())
 l = list(map(int, input().split()))
 l.sort()
@@ -12,8 +12,6 @@ for i in range(n):
     d.add(l[i])
 if e > 1 or l.count(0) > 1 or s - 1 in d:
     print(ans[1])
-
 else:
     l = [l[i] - i for i in range(n)]
-    # print(l)
     print(ans[1 - sum(l) % 2])

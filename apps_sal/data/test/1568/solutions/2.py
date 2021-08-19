@@ -1,8 +1,6 @@
 import atexit
 import io
 import sys
-
-# Buffering IO
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -15,9 +13,8 @@ def write():
 
 
 def main():
-    n, a, b, c, tt = [int(x) for x in input().split()]
+    (n, a, b, c, tt) = [int(x) for x in input().split()]
     t = [int(x) for x in input().split()]
-
     s = a * n
     if c > b:
         for ti in t:

@@ -1,4 +1,3 @@
-# whatsibucket
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()
@@ -15,11 +14,11 @@ for i in range(n - 1):
             if a[i] == a[i - 1] + 1:
                 lose = True
 if lose:
-    print("cslnb")
+    print('cslnb')
 else:
     eventual = n * (n - 1) // 2
     curr = sum(a)
     if (curr - eventual) % 2 == 0:
-        print("cslnb")
+        print('cslnb')
     else:
-        print("sjfnb")
+        print('sjfnb')

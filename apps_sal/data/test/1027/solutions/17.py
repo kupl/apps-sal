@@ -15,9 +15,6 @@ for i in range(14):
     for j in range(14):
         if b[j] % 2 == 0:
             cnt += b[j]
-        #print(b[j], end = " ")
-    # print(cnt)
-
     if ans < cnt:
         ans = cnt
 print(ans)

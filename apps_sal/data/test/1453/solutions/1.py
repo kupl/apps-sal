@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 delta = [0] * m

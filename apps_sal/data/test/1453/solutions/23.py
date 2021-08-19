@@ -1,5 +1,5 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     arr = list(map(int, input().split()))
     arr.sort(reverse=True)
     sums = []
@@ -10,21 +10,17 @@ def main():
             for j in range(i, n + 1, m):
                 visited.add(j)
                 total += arr[j - 1]
-
             sums.append([i, total])
-
-    # print(sums)
     ans = []
     total = 0
     count = 0
     day = 1
     for i in arr:
-        total += (i * day)
+        total += i * day
         count += 1
         if count % m == 0:
             day += 1
             count = 0
-
     ans.append(total)
     index = 0
     for i in range(n - 1):
@@ -36,7 +32,6 @@ def main():
         index += 1
         if index == len(sums):
             index = 0
-
     ans.reverse()
     for i in ans:
         print(i, end=' ')

@@ -1,6 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
-g, t = 0, 0
+(g, t) = (0, 0)
 for i in range(len(s)):
     if s[i] == 'G':
         g = i
@@ -11,7 +11,7 @@ if (t - g) % k == 0:
         i = g
         B = True
         while i < t:
-            if s[i] == "#":
+            if s[i] == '#':
                 B = False
                 break
             i += k
@@ -19,14 +19,13 @@ if (t - g) % k == 0:
         i = t
         B = True
         while i < g:
-            if s[i] == "#":
+            if s[i] == '#':
                 B = False
                 break
             i += k
     if B:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-
+        print('NO')
 else:
-    print("NO")
+    print('NO')

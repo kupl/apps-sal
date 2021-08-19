@@ -1,6 +1,5 @@
 import sys
-
-n, m, k = list(map(int, sys.stdin.readline().strip().split()))
+(n, m, k) = list(map(int, sys.stdin.readline().strip().split()))
 a = list(map(int, sys.stdin.readline().strip().split()))
 b = [0] * (n + 1)
 for i in range(1, n + 1):
@@ -12,5 +11,4 @@ for i in range(0, n + 1):
     for j in range(0, m):
         if i > j:
             ans = max([ans, b[i] - M[j] - k * ((m * i + m - (i - j)) % m)])
-    # print(j, M, ans)
 print(ans // m)
