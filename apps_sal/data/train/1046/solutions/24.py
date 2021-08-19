@@ -1,14 +1,13 @@
-# cook your dish here
 t = int(input())
 for ts in range(t):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a = 1
     b = 2
-    while(1):
-        if(x < a):
+    while 1:
+        if x < a:
             print('Bob')
             break
-        elif(y < b):
+        elif y < b:
             print('Limak')
             break
         x -= a

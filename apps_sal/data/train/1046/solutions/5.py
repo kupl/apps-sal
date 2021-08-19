@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l = 1
     m = 2
     flag = 0
@@ -16,6 +15,6 @@ for i in range(t):
             flag = 0
             n = n + 1
     if l > a:
-        print("Bob")
+        print('Bob')
     else:
-        print("Limak")
+        print('Limak')

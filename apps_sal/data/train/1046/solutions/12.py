@@ -1,14 +1,12 @@
 t = int(input())
-
-while(t):
+while t:
     ll = []
     lb = []
     cl = 0
     cb = 0
-    a, b = input().split()
+    (a, b) = input().split()
     a = int(a)
     b = int(b)
-
     for i in range(1, a + 1, 2):
         ll.append(i)
         if sum(ll) > a:
@@ -19,9 +17,8 @@ while(t):
         if sum(lb) > b:
             lb.remove(i)
             break
-    # print(ll,"\n",lb)
     if len(ll) > len(lb):
-        print("Limak")
+        print('Limak')
     else:
-        print("Bob")
+        print('Bob')
     t = t - 1

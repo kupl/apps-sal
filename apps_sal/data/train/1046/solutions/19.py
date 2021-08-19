@@ -1,6 +1,5 @@
-# cook your dish here
 for j in range(int(input())):
-    l, b = map(int, input().split())
+    (l, b) = map(int, input().split())
     c = 0
     i = 1
     while l > -1 and b > -1:
@@ -13,6 +12,6 @@ for j in range(int(input())):
             i = i + 1
             c = 0
     if l < 0:
-        print("Bob")
+        print('Bob')
     else:
-        print("Limak")
+        print('Limak')

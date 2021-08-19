@@ -1,8 +1,5 @@
 import math
 import sys
-
-#sys.stdin = open("in.txt")
-
 t = int(input())
 for i in range(t):
     n = int(input())

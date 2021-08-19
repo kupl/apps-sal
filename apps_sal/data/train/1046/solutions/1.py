@@ -1,26 +1,22 @@
-# cook your dish here
 T = int(input())
-
 for t in range(T):
     n = 1
     b = 0
     l = 0
-    llimit, blimit = input().split()
+    (llimit, blimit) = input().split()
     blimit = int(blimit)
     llimit = int(llimit)
-
     while True:
         if n % 2 == 0:
             if b + n <= blimit:
                 b += n
                 n += 1
             else:
-                print("Limak")
+                print('Limak')
                 break
+        elif l + n <= llimit:
+            l += n
+            n += 1
         else:
-            if l + n <= llimit:
-                l += n
-                n += 1
-            else:
-                print("Bob")
-                break
+            print('Bob')
+            break
