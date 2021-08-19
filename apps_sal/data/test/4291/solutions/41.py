@@ -1,8 +1,9 @@
-N, Q = map(int, input().split())
+(N, Q) = map(int, input().split())
 S = list(input())
 
 
 class bit:
+
     def __init__(self, N):
         self.__N = N
         self.__a = [0] * N
@@ -27,14 +28,14 @@ class bit:
         return self.sum_(y) - self.sum_(x)
 
 
-prev = "0"
+prev = '0'
 BIT = bit(N)
-for i, val in enumerate(S):
-    if prev == "A" and val == "C":
+for (i, val) in enumerate(S):
+    if prev == 'A' and val == 'C':
         BIT.add_(i - 1, 1)
     prev = val
 for i in range(Q):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     x -= 1
     y -= 1
     print(BIT.sub_sum_(x, y))

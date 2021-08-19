@@ -1,4 +1,4 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 s = input()
 a = [0, 0]
 for l in range(1, n):
@@ -7,5 +7,5 @@ for l in range(1, n):
     else:
         a.append(a[l])
 for k in range(q):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     print(a[y] - a[x])

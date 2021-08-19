@@ -1,5 +1,5 @@
 n = int(input())
-a = list(int(input()) for _ in range(n))
+a = list((int(input()) for _ in range(n)))
 b = sorted(a, reverse=True)
 for i in range(n):
     if a[i] != b[0]:

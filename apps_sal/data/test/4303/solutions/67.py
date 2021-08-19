@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ls = list(map(int, input().split()))
 flag = True
 if 0 not in ls:
@@ -15,7 +15,7 @@ if flag == True:
         r = ind + k - 1
     else:
         r = n - 1
-    mn = float("inf")
+    mn = float('inf')
     while True:
         if l + k - 1 > r:
             break
@@ -32,7 +32,7 @@ else:
         r = ind + k
     else:
         r = n
-    mn = float("inf")
+    mn = float('inf')
     while True:
         if l + k > r:
             break

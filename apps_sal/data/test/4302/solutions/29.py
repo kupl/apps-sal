@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if a >= b + 2:
     print(a + a - 1)
 elif a == b + 1 or b == a + 1 or a == b:

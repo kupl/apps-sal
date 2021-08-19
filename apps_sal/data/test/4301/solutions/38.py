@@ -1,6 +1,5 @@
 N = int(input())
 A = [int(input()) for i in range(N)]
-
 sorted_a = sorted(A, reverse=True)
 max_val = sorted_a[0]
 next_max_val = sorted_a[1]

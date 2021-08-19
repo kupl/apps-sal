@@ -1,8 +1,6 @@
-N, K = [int(x) for x in input().split()]
+(N, K) = [int(x) for x in input().split()]
 X = [int(x) for x in input().split()]
-
-
-ans = float("inf")
+ans = float('inf')
 for i in range(N - K + 1):
     left = X[i]
     right = X[i + K - 1]

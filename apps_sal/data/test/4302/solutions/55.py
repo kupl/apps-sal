@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 count = 0
 for _ in range(2):
     if A >= B:

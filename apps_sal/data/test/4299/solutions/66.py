@@ -1,10 +1,10 @@
 n = input()
-hon = "24579"
-pon = "0168"
+hon = '24579'
+pon = '0168'
 x = n[len(n) - 1]
 if x in hon:
-    print("hon")
+    print('hon')
 elif x in pon:
-    print("pon")
+    print('pon')
 else:
-    print("bon")
+    print('bon')

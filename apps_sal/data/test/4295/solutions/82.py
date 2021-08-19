@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 x1 = n % k
 x2 = abs(n % k - k)
 if x1 < x2:

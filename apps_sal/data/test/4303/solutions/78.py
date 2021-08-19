@@ -1,8 +1,7 @@
 def main():
-    N, K = [int(n) for n in input().split(" ")]
-    X = [int(x) for x in input().split(" ")]
+    (N, K) = [int(n) for n in input().split(' ')]
+    X = [int(x) for x in input().split(' ')]
     X.sort()
-
     minus = []
     plus = []
     for i in range(len(X)):
@@ -11,11 +10,8 @@ def main():
         else:
             plus += X[i:]
             break
-
     minus.reverse()
-
     T = []
-
     if len(plus) >= K:
         T.append(plus[K - 1])
     if len(minus) >= K:
@@ -27,8 +23,7 @@ def main():
         if i < len(minus) and 0 <= K - i - 2 < len(plus):
             T.append(2 * minus[i] + plus[K - i - 2])
             T.append(2 * plus[K - i - 2] + minus[i])
-
-    print((min(T)))
+    print(min(T))
 
 
 main()

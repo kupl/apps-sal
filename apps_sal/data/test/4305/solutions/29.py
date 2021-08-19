@@ -1,4 +1,4 @@
-a, c = map(int, input().split())
+(a, c) = map(int, input().split())
 count = 0
 while a > 0:
     count += 1

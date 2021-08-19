@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
 for i in range(2):
     if a < b:

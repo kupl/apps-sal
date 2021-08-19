@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 minTime = 10000000000
 for i in range(N - K + 1):

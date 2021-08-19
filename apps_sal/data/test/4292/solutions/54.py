@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 price = list(map(int, input().split()))
 price.sort()
 sum = 0

@@ -1,5 +1,5 @@
-h, a = list(map(int, input().split()))
+(h, a) = list(map(int, input().split()))
 if h % a == 0:
-    print((h // a))
+    print(h // a)
 else:
-    print((h // a + 1))
+    print(h // a + 1)

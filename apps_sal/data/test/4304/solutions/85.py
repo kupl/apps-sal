@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 dif = b - a
 temp = 0
 for i in range(dif):

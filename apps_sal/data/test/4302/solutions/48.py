@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,15 +8,13 @@ MOD = 1000000007
 
 
 def main():
-    A, B = list(map(int, readline().split()))
-
+    (A, B) = list(map(int, readline().split()))
     if A > B:
-        print((A + (A - 1)))
+        print(A + (A - 1))
     elif A < B:
-        print((B + (B - 1)))
+        print(B + (B - 1))
     else:
-        print((A + B))
-
+        print(A + B)
     return
 
 

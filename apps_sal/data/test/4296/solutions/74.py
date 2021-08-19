@@ -1,10 +1,7 @@
-a, b, c = list(map(int, (input().split())))
-
+(a, b, c) = list(map(int, input().split()))
 ans = 0
-
 ans = a + b + c
-
 if ans > 21:
-    print("bust")
+    print('bust')
 else:
-    print("win")
+    print('win')

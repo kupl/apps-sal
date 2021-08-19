@@ -1,9 +1,7 @@
 from collections import deque
-
-N, K = map(int, input().strip().split())
+(N, K) = map(int, input().strip().split())
 x = list(map(int, input().strip().split()))
-inf = 10**9
-
+inf = 10 ** 9
 l = inf
 dp = deque(x[N - K:N])
 i = 0
@@ -12,11 +10,10 @@ while True:
         tmp = dp[K - 1]
     elif dp[K - 1] <= 0:
         tmp = -dp[0]
+    elif abs(dp[K - 1]) >= abs(dp[0]):
+        tmp = abs(dp[0]) * 2 + abs(dp[K - 1])
     else:
-        if abs(dp[K - 1]) >= abs(dp[0]):
-            tmp = abs(dp[0]) * 2 + abs(dp[K - 1])
-        else:
-            tmp = abs(dp[K - 1]) * 2 + abs(dp[0])
+        tmp = abs(dp[K - 1]) * 2 + abs(dp[0])
     l = min(l, tmp)
     i += 1
     if N - K - i < 0:

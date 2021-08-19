@@ -1,6 +1,5 @@
 n = int(input())
 a_l = [int(input()) for _ in range(n)]
-
 l = []
 r = []
 l_max = 0

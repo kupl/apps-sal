@@ -1,9 +1,8 @@
-
-url = "https://atcoder.jp//contests/abc107/tasks/arc101_a"
+url = 'https://atcoder.jp//contests/abc107/tasks/arc101_a'
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     xs = list(map(int, input().split()))
     ans = 100000000000000
     se = [0, k - 1]

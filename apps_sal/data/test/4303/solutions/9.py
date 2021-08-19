@@ -1,13 +1,13 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     x = list(map(int, input().split()))
-    m, p = [], []
+    (m, p) = ([], [])
     for i in range(n):
         if x[i] < 0:
             m.append(x[i])
         else:
             p.append(x[i])
-    M, P = len(m), len(p)
+    (M, P) = (len(m), len(p))
     ans = float('inf')
     for i in range(min(M + 1, k + 1)):
         t = 0

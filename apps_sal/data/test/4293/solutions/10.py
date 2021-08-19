@@ -1,6 +1,6 @@
-P, Q, R = map(int, input().split())
+(P, Q, R) = map(int, input().split())
 if P < Q:
-    P, Q = Q, P
+    (P, Q) = (Q, P)
 if P < R:
-    P, R = R, P
+    (P, R) = (R, P)
 print(Q + R)

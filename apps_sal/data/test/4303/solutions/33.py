@@ -1,12 +1,10 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 x = list(map(int, input().split()))
-
 neg_to_pos = n
 for i in range(n):
     if x[i] > 0:
         neg_to_pos = i
         break
-
 res = 10 ** 14
 for i in range(n - k + 1):
     l = min(x[i], 0)

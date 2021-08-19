@@ -1,6 +1,5 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 res = 0
-
 for i in range(2):
     if a >= b:
         res += a
@@ -8,5 +7,4 @@ for i in range(2):
     else:
         res += b
         b -= 1
-
 print(res)

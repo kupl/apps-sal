@@ -1,6 +1,6 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 X = list(map(int, input().split()))
-T = 10**18
+T = 10 ** 18
 for i in range(N - K + 1):
     if X[i + K - 1] <= 0:
         T = min(T, -X[i])

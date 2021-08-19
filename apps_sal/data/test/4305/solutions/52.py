@@ -1,4 +1,4 @@
-h, a = map(int, input().split())
+(h, a) = map(int, input().split())
 ans = 0
 for _ in range(h):
     h -= a

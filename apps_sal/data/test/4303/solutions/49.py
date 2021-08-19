@@ -1,9 +1,8 @@
 import bisect
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 X_list = list(map(int, input().split()))
 INF = 10 ** 18
 ans = INF
-
 zero_index = bisect.bisect_left(X_list, 0)
 candidate_list = []
 ans = INF

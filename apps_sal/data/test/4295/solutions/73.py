@@ -8,16 +8,11 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
-n, k = [int(i) for i in input().split()]
-
+(n, k) = [int(i) for i in input().split()]
 tmp = 0
 res = 0
-
 n = n % k
 res = min(n, abs(n - k))
-
 print(res)

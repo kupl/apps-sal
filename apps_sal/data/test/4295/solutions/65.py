@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 if n < k:
     ans = min(n, k - n)
 elif n == k:

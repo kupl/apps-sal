@@ -3,7 +3,7 @@ def fallen_snow(a, b):
 
 
 def main():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     print(fallen_snow(a, b))
 
 

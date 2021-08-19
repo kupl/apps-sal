@@ -1,5 +1,4 @@
-H, A = map(int, input().split())
-
+(H, A) = map(int, input().split())
 cnt = 0
 while H > 0:
     H -= A

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = n % k
 if abs(a) < abs(a - k):
     print(abs(a))

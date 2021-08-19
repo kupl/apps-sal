@@ -3,11 +3,11 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    a, b = Input()
+    (a, b) = Input()
     towers = [1] * 999
     for i in range(1, 999):
         towers[i] = towers[i - 1] + i + 1

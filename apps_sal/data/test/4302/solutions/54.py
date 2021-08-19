@@ -1,5 +1,5 @@
 def count_coin_maximum():
-    a_button, b_button = list(map(int, input().split()))
+    (a_button, b_button) = list(map(int, input().split()))
     if a_button == b_button:
         return a_button + a_button
     elif a_button > b_button:
@@ -8,4 +8,4 @@ def count_coin_maximum():
         return b_button + max(b_button - 1, a_button)
 
 
-print((count_coin_maximum()))
+print(count_coin_maximum())

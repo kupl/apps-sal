@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 positive = []
 negative = []
@@ -15,7 +15,6 @@ if n >= K:
     ans = min(ans, negative[K - 1])
 if m >= K:
     ans = min(ans, positive[K - 1])
-
 for i in range(n):
     j = K - (i + 1)
     if j > m:

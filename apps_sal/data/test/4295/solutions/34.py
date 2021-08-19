@@ -1,8 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 r = n % k
 l = []
-while(not l.count(r)):
+while not l.count(r):
     l.append(r)
     r = abs(r - k)
 l = sorted(l)
-print((str(l[0])))
+print(str(l[0]))

@@ -1,5 +1,5 @@
 import itertools
-P, Q, R = map(int, input().split())
+(P, Q, R) = map(int, input().split())
 lst = [P, Q, R]
 c = list(itertools.combinations(lst, 2))
 lst2 = []

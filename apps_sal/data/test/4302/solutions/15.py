@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 if abs(A - B) == 0:
     ans = A + B
 elif abs(A - B) == 1:

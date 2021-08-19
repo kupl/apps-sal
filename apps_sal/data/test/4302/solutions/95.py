@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 if A != B:
     x = max(A, B)
     ans = 2 * x - 1

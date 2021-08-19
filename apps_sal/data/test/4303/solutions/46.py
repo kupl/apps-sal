@@ -1,19 +1,16 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 X = list(map(int, input().split()))
-
 ans = 10 ** 10
-nega = sorted(-x for x in X if x < 0)
-posi = sorted(x for x in X if 0 < x)
+nega = sorted((-x for x in X if x < 0))
+posi = sorted((x for x in X if 0 < x))
 if 0 in X:
     K -= 1
-
 if 0 < K <= len(posi):
     t = posi[K - 1]
     ans = min(ans, t)
 if 0 < K <= len(nega):
     t = nega[K - 1]
     ans = min(ans, t)
-
 if 0 < K:
     for np in range(1, len(posi) + 1):
         if 0 <= K - np - 1 < len(nega):

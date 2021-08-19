@@ -1,5 +1,5 @@
-N, K = map(int, input().split())
-*X, = map(int, input().split())
+(N, K) = map(int, input().split())
+(*X,) = map(int, input().split())
 A = []
 B = []
 for x in X:
@@ -17,7 +17,7 @@ while i >= 0 and j <= len(B):
     elif j == 0:
         ans.append(A[i - 1])
     else:
-        a, b = A[i - 1], B[j - 1]
+        (a, b) = (A[i - 1], B[j - 1])
         ans.append(a + b + min(a, b))
     i -= 1
     j += 1

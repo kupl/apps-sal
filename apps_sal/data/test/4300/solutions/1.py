@@ -10,4 +10,4 @@ def ans143(N: int, d: str):
 
 N = int(input())
 d = input()
-print((ans143(N, d)))
+print(ans143(N, d))

@@ -7,7 +7,6 @@ B = copy.copy(A)
 B.sort()
 A_max = B[-1]
 A_max2 = B[-2]
-
 for i in range(n):
     if A[i] < A_max:
         print(A_max)

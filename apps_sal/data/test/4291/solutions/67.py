@@ -1,4 +1,4 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 s = input()
 ac = {1: 0}
 k = 0
@@ -8,7 +8,7 @@ for i in range(1, n):
     ac[i + 1] = k
 ans = []
 for i in range(q):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     ans.append(ac[r] - ac[l])
 for e in ans:
     print(e)

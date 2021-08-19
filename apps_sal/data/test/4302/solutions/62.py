@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,13 +8,10 @@ MOD = 1000000007
 
 
 def main():
-    A, B = list(map(int, readline().split()))
-
+    (A, B) = list(map(int, readline().split()))
     vec = [A, B, A - 1, B - 1]
     vec.sort(reverse=True)
-
-    print((sum(vec[:2])))
-
+    print(sum(vec[:2]))
     return
 
 

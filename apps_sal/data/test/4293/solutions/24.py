@@ -1,3 +1,2 @@
-P, Q, R = map(int, input().split())
-
+(P, Q, R) = map(int, input().split())
 print(P + Q + R - max(P, Q, R))

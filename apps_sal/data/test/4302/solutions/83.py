@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 if a > b:
     ans = a + a - 1
 elif a < b:

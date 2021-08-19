@@ -3,6 +3,6 @@ a = [int(input()) for i in range(0, n)]
 b = sorted(a)
 for i in range(0, n):
     if b[-1] != a[i]:
-        print((b[-1]))
+        print(b[-1])
     else:
-        print((b[-2]))
+        print(b[-2])

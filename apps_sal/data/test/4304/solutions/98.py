@@ -3,5 +3,5 @@ def n_sum(n):
     return sum(myList)
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 print(n_sum(b - a) - b)

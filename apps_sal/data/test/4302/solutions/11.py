@@ -1,5 +1,4 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 ans = 0
 for _ in range(2):
     choice = max(a, b)
@@ -8,5 +7,4 @@ for _ in range(2):
         a -= 1
     else:
         b -= 1
-
 print(ans)

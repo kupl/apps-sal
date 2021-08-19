@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 s = input()
 con = [0]
 c = False
@@ -18,5 +18,5 @@ for i in range(n):
             continue
     con.append(con[-1])
 for j in range(q):
-    l, r = list(map(int, input().split()))
-    print((max(0, con[r] - con[l])))
+    (l, r) = list(map(int, input().split()))
+    print(max(0, con[r] - con[l]))

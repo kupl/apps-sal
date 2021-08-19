@@ -1,7 +1,7 @@
 N = int(input()[-1])
 if N in {2, 4, 5, 7, 9}:
-    print("hon")
+    print('hon')
 elif N in {0, 1, 6, 8}:
-    print("pon")
+    print('pon')
 else:
-    print("bon")
+    print('bon')

@@ -1,7 +1,6 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if a < b:
-    a, b = b, a
-
+    (a, b) = (b, a)
 if a == b:
     print(a * 2)
 else:

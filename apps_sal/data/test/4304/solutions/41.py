@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 
 
 def su(p):
@@ -9,5 +9,4 @@ def su(p):
 
 
 l = m - n
-
 print(su(l - 1) - n)
