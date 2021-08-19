@@ -1,5 +1,3 @@
-# cook your dish here
-
 def solve(A, n):
     for i in range(n):
         for j in range(n):
@@ -13,14 +11,11 @@ def solve(A, n):
 try:
     T = int(input())
     for l in range(T):
-
         n = int(input())
-        path = [int(i) for i in input().strip().split(" ")]
+        path = [int(i) for i in input().strip().split(' ')]
         if solve(path, n):
-            print("Truly Happy")
+            print('Truly Happy')
         else:
-            print("Poor Chef")
-
-
+            print('Poor Chef')
 except EOFError:
     pass

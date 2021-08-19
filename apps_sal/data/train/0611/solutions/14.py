@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     N = int(input())
@@ -10,7 +9,7 @@ for _ in range(t):
             dict1[S[i]].append(i + 1)
         else:
             dict1[S[i]] = [i + 1]
-    for key, val in dict1.items():
+    for (key, val) in dict1.items():
         if len(val) == 1:
             continue
         count = 0
@@ -23,6 +22,6 @@ for _ in range(t):
         if flag == True:
             break
     if flag == True:
-        print("Truly Happy")
+        print('Truly Happy')
     else:
-        print("Poor Chef")
+        print('Poor Chef')

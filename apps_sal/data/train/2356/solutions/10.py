@@ -1,10 +1,6 @@
-# -*- coding: utf-8 -*-
-
 import sys
-sys.setrecursionlimit(10**6)
-# readline = sys.stdin.buffer.readline
+sys.setrecursionlimit(10 ** 6)
 readline = sys.stdin.readline
-
 INF = 1 << 60
 
 
@@ -43,10 +39,8 @@ def mt(f):
         s = time.perf_counter()
         ret = f(*args, **kwargs)
         e = time.perf_counter()
-
         ep(e - s, 'sec')
         return ret
-
     return wrap
 
 
@@ -76,7 +70,7 @@ def slv(N, K):
 
 
 def main():
-    N, K = read_int_n()
+    (N, K) = read_int_n()
     print(slv(N, K))
 
 

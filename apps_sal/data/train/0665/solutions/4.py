@@ -1,16 +1,12 @@
-# cook your dish here
 t = int(input())
 for i in range(0, t):
     ans = 0
     nm = input().split()
-
-    n, m = int(nm[0]), int(nm[1])
-    rows, cols = m, n
+    (n, m) = (int(nm[0]), int(nm[1]))
+    (rows, cols) = (m, n)
     a = [[(0, 0) for i in range(cols)] for j in range(rows)]
-
     max_rating_month = [0 for i in range(cols)]
     curr_rating = list(map(int, input().strip().split()))[:n]
-
     for i in range(0, n):
         line = list(map(int, input().strip().split()))[:m]
         max = 0

@@ -1,22 +1,17 @@
 def getRanking(ratingList, n, m):
     rank = []
     array2d = [[None for i in range(n)] for j in range(m)]
-    # print(array2d)
-    for i in range(m):  # months
+    for i in range(m):
         helper2d = [[None for i in range(2)] for j in range(n)]
-        # print(helper2d)
         for j in range(n):
             helper2d[j][0] = j + 1
             helper2d[j][1] = ratingList[j][i]
-        # helper2d = zip(*helper2d)
         helper2d = sorted(helper2d, reverse=True, key=lambda x: x[1])
         arr = [x for x in range(1, n + 1)]
         for k in range(1, n):
             if helper2d[k][1] == helper2d[k - 1][1]:
                 arr[k] = arr[k - 1]
-        # print(helper2d)
         for l in range(n):
-            # print("l and i",l,i)
             array2d[i][helper2d[l][0] - 1] = arr[l]
     for l in range(n):
         minimum = float('inf')
@@ -25,26 +20,18 @@ def getRanking(ratingList, n, m):
             if minimum > array2d[o][l]:
                 minimum = array2d[o][l]
                 minimumIndex = o + 1
-
         rank.append(minimumIndex)
-
-        # helper2d = zip(*helper2d)
-    # print(array2d)
-    # print(arr)
-    # print(rank)
-
     return rank
 
 
 t = int(input())
 for _ in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     r = list(map(int, input().split()))
     c = [None for j in range(n)]
     for i in range(n):
         c[i] = list(map(int, input().split()))
     ratingList = [None for i in range(n)]
-    # print(ratingList)
     for i in range(n):
         temp = []
         temp.append(r[i] + c[i][0])
@@ -66,5 +53,3 @@ for _ in range(t):
         if playerRanking[i] != playerRatings[i]:
             count += 1
     print(count)
-    # print(playerRatings)
-    # print(playerRanking)

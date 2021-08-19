@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t != 0:
     n = int(input())
@@ -7,7 +6,7 @@ while t != 0:
     for i in range(n - 1):
         for j in range(i + 1, n):
             if a[i] != a[j]:
-                k, r = a[i], a[j]
+                (k, r) = (a[i], a[j])
                 if a[k - 1] == a[r - 1]:
                     happy = True
                     break

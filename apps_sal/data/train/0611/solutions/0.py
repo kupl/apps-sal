@@ -1,7 +1,4 @@
-# cook your dish here
-
 t = int(input())
-
 for i in range(t):
     n = int(input())
     a = list(map(int, input().split()))
@@ -13,7 +10,6 @@ for i in range(t):
             d[a[i] - 1].append(i)
     ans = False
     d1 = {}
-
     for i in d:
         if ans == True:
             break
