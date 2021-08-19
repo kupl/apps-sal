@@ -1,9 +1,5 @@
-# bfs solution
-
-# graph problem
-
-
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
@@ -15,4 +11,4 @@ class Solution:
                 for k in chessmap[j]:
                     tmp[j] += table[k]
             table = tmp
-        return (sum(table) * 2 - table[0]) % (10**9 + 7)
+        return (sum(table) * 2 - table[0]) % (10 ** 9 + 7)

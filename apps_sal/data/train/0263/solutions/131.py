@@ -1,8 +1,8 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
-        # [# of 0, # of 4/6, # of 2/8, # of corners]
         c = [1, 2, 2, 4]
         nx = [0, 0, 0, 0]
         for i in range(n - 1):
@@ -11,4 +11,4 @@ class Solution:
             nx[2] = c[3]
             nx[3] = 2 * (c[1] + c[2])
             c = nx[:]
-        return sum(c) % (10**9 + 7)
+        return sum(c) % (10 ** 9 + 7)
