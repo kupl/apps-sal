@@ -1,11 +1,5 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-# vim:fenc=tf-8
-#
-
 """
 """
-
 from operator import itemgetter
 from collections import Counter
 
@@ -21,7 +15,7 @@ def solve(a, b, x, y):
 def main():
     t = int(input())
     for i in range(t):
-        a, b, x, y = map(int, input().split())
+        (a, b, x, y) = map(int, input().split())
         solve(a, b, x, y)
 
 

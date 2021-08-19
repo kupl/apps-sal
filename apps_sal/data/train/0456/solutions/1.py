@@ -1,30 +1,19 @@
 class Solution:
+
     def canCross(self, stones):
         """
         :type stones: List[int]
         :rtype: bool
         """
-        stone_set, fail = set(stones), set()
+        (stone_set, fail) = (set(stones), set())
         stack = [(0, 0)]
         while stack:
-            stone, jump = stack.pop()
+            (stone, jump) = stack.pop()
             for j in (jump - 1, jump, jump + 1):
                 s = stone + j
-                if j > 0 and s in stone_set and (s, j) not in fail:
+                if j > 0 and s in stone_set and ((s, j) not in fail):
                     if s == stones[-1]:
                         return True
                     stack.append((s, j))
             fail.add((stone, jump))
         return False
-        # queue, invalid, stones = [(0, 0)], [], sorted(list(set(stones)))
-        # while queue:
-        #     pos, jump = queue.pop()
-        #     for n in [jump-1, jump, jump+1]:
-        #         if n > 0 and pos + n in stones and pos + n not in invalid:
-        #             if pos + n == stones[-1]:
-        #                 return True
-        #             else:
-        #                 queue += [(pos+n, n)]
-        #         elif n > 0 and pos + n not in invalid:
-        #             invalid += [pos + n]
-        # return False

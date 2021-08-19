@@ -1,11 +1,10 @@
-# cook your dish here
 t = int(input())
 while t != 0:
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a < b:
-        print("<")
+        print('<')
     elif a > b:
-        print(">")
+        print('>')
     else:
-        print("=")
+        print('=')
     t -= 1

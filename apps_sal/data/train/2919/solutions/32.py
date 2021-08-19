@@ -1,6 +1,5 @@
 def encode(message, key):
-    # Code here
-    al = "abcdefghijklmnopqrstuvwxyz"
+    al = 'abcdefghijklmnopqrstuvwxyz'
     key = str(key)
     if len(message) > len(key):
         key = key * int(len(message) / len(key) + 1)

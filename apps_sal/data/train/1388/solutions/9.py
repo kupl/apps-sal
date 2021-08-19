@@ -1,8 +1,7 @@
-# cook your dish here
 for i in range(int(input())):
     x = int(input())
     l = [250000, 500000, 750000, 1000000, 1250000, 1500000]
-    l1 = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+    l1 = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3]
     count = 0
     if x <= l[0]:
         print(x)
@@ -10,11 +9,11 @@ for i in range(int(input())):
         for i in range(1, len(l)):
             if x <= l[i]:
                 p = x - l[i - 1]
-                count = count + (p * l1[i - 1])
+                count = count + p * l1[i - 1]
                 break
             else:
                 p = l[i] - l[i - 1]
-                count = (l1[i - 1] * p) + count
+                count = l1[i - 1] * p + count
         else:
             p = x - l[len(l) - 1]
             count = p * l1[len(l1) - 1] + count

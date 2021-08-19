@@ -1,10 +1,9 @@
-# cook your dish here
 T = int(input())
 for i in range(T):
-    m, n = list(map(int, input().split()))
+    (m, n) = list(map(int, input().split()))
     if m < n:
-        print("<")
+        print('<')
     elif m > n:
-        print(">")
+        print('>')
     else:
-        print("=")
+        print('=')

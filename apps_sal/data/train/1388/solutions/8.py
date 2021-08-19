@@ -1,6 +1,5 @@
-# cook your dish here
 N = int(input())
-while(N):
+while N:
     income = int(input())
     tax = 0
     if income <= 250000:
@@ -10,7 +9,7 @@ while(N):
     elif income > 500000:
         tax += 12500
     if income > 500000 and income <= 750000:
-        tax += (income - 500000) * 0.10
+        tax += (income - 500000) * 0.1
     elif income > 750000:
         tax += 25000
     if income > 750000 and income <= 1000000:
@@ -26,6 +25,6 @@ while(N):
     elif income > 1500000:
         tax += 62500
     if income > 1500000:
-        tax += (income - 1500000) * 0.30
+        tax += (income - 1500000) * 0.3
     print(int(income - tax))
     N -= 1

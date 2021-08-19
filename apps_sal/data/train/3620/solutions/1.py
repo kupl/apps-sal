@@ -1,96 +1,83 @@
 def get_zodiac_sign(day, month):
-    # Aries
     if month == 3:
         if day >= 21 and day <= 31:
-            return "Aries"
-    else:
-        if month == 4:
-            if day >= 1 and day <= 19:
-                return "Aries"
-# Taurus
+            return 'Aries'
+    elif month == 4:
+        if day >= 1 and day <= 19:
+            return 'Aries'
     if month == 4:
         if day >= 20 and day <= 30:
-            return "Taurus"
+            return 'Taurus'
     else:
         pass
     if month == 5:
         if day >= 1 and day <= 20:
-            return "Taurus"
+            return 'Taurus'
     else:
         pass
-# Gemeni
     if month == 5:
         if day >= 21 and day <= 31:
-            return "Gemini"
+            return 'Gemini'
     else:
         pass
     if month == 6:
         if day >= 1 and day <= 20:
-            return "Gemini"
+            return 'Gemini'
     else:
         pass
-# Cancer
     if month == 6:
         if day >= 21 and day <= 30:
-            return "Cancer"
+            return 'Cancer'
     else:
         pass
     if month == 7:
         if day >= 1 and day <= 22:
-            return "Cancer"
-# Leo
+            return 'Cancer'
     if month == 7:
         if day >= 23 and day <= 31:
-            return "Leo"
+            return 'Leo'
     if month == 8:
         if day >= 1 and day <= 22:
-            return "Leo"
-# Virgo
+            return 'Leo'
     if month == 8:
         if day >= 23 and day <= 31:
-            return "Virgo"
+            return 'Virgo'
     if month == 9:
         if day >= 1 and day <= 22:
-            return "Virgo"
-# Libra
+            return 'Virgo'
     if month == 9:
         if day >= 23 and day <= 30:
-            return "Libra"
+            return 'Libra'
     if month == 10:
         if day >= 1 and day <= 22:
-            return "Libra"
-# Scorpio
+            return 'Libra'
     if month == 10:
         if day >= 23 and day <= 31:
-            return "Scorpio"
+            return 'Scorpio'
     if month == 11:
         if day >= 1 and day <= 21:
-            return "Scorpio"
-# Sagittarius
+            return 'Scorpio'
     if month == 11:
         if day >= 22 and day <= 30:
-            return "Sagittarius"
+            return 'Sagittarius'
     if month == 12:
         if day >= 1 and day <= 21:
-            return "Sagittarius"
-# Capricorn
+            return 'Sagittarius'
     if month == 12:
         if day >= 22 and day <= 31:
-            return "Capricorn"
+            return 'Capricorn'
     if month == 1:
         if day >= 1 and day <= 19:
-            return "Capricorn"
-# Aquarius
+            return 'Capricorn'
     if month == 1:
         if day >= 20 and day <= 31:
-            return "Aquarius"
+            return 'Aquarius'
     if month == 2:
         if day >= 1 and day <= 18:
-            return "Aquarius"
-# Pisces
+            return 'Aquarius'
     if month == 2:
         if day >= 19 and day <= 28:
-            return "Pisces"
+            return 'Pisces'
     if month == 3:
         if day >= 1 and day <= 20:
-            return "Pisces"
+            return 'Pisces'
