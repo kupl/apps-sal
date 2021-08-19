@@ -1,11 +1,8 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
-        # s=set()
-        # b=set()
-        # x=s.intersection(b)
         glb = set()
         ct = 0
-        # d={}
         ds = {}
         for i in favoriteCompanies:
             for j in i:
@@ -14,12 +11,10 @@ class Solution:
                     ds[j] = ct
                     glb.add(j)
         d = collections.defaultdict(set)
-
         for i in range(len(favoriteCompanies)):
             new = set()
             for j in favoriteCompanies[i]:
                 new.add(ds[j])
-
             d[i] = new
         ar = []
         for i in range(len(favoriteCompanies)):
@@ -32,5 +27,4 @@ class Solution:
                         break
             if found == 0:
                 ar.append(i)
-
         return ar

@@ -1,13 +1,9 @@
-#!/usr/bin/env python3
-
 def main():
-    n, t = list(map(int, input().split()))
+    (n, t) = list(map(int, input().split()))
     an = list(map(int, input().split()))
-
     mi = [an[0]]
     for i in range(1, n):
         mi.append(min(mi[i - 1], an[i]))
-
     ma = 0
     num_ma = 0
     for i in range(1, n):

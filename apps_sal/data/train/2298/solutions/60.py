@@ -2,11 +2,10 @@ def getlist():
     return list(map(int, input().split()))
 
 
-# 受け取り
-N, T = getlist()
+(N, T) = getlist()
 A = getlist()
 m = A[0]
-plus = -float("inf")
+plus = -float('inf')
 cost = 1
 for i in range(1, N):
     if A[i] - m == plus:
@@ -17,5 +16,4 @@ for i in range(1, N):
     else:
         pass
     m = min(m, A[i])
-
 print(cost)

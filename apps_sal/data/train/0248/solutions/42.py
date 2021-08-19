@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, N):
         self.par = list(range(N))
         self.sz = [1] * N
@@ -9,11 +10,11 @@ class DSU:
         return self.par[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         if xr == yr:
             return False
         if self.sz[xr] < self.sz[yr]:
-            xr, yr = yr, xr
+            (xr, yr) = (yr, xr)
         self.par[yr] = xr
         self.sz[xr] += self.sz[yr]
         self.sz[yr] = self.sz[xr]
@@ -24,12 +25,12 @@ class DSU:
 
 
 class Solution:
+
     def containsCycle(self, A):
-        R, C = len(A), len(A[0])
+        (R, C) = (len(A), len(A[0]))
 
         def encode(r, c):
             return r * C + c
-
         dsu = DSU(R * C)
         for r in range(R):
             for c in range(C):
@@ -42,8 +43,3 @@ class Solution:
                         if dsu.size(encode(r, c)) >= 4:
                             return True
         return False
-
-# bac
-# cac
-# ddc
-# bcc

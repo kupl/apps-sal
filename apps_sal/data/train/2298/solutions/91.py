@@ -1,8 +1,5 @@
-# coding: utf-8
-
-N, T = list(map(int, input().split()))
+(N, T) = list(map(int, input().split()))
 A = [int(s) for s in input().split()]
-
 cm = A[0]
 cd = 0
 cnt = 0

@@ -1,17 +1,26 @@
-#from collections import deque,defaultdict
-def printn(x): return print(x, end='')
-def inn(): return int(input())
+def printn(x):
+    return print(x, end='')
 
 
-def inl(): return list(map(int, input().split()))
-def inm(): return map(int, input().split())
-def ins(): return input().strip()
+def inn():
+    return int(input())
 
 
-DBG = True  # and False
-BIG = 10**18
-R = 10**9 + 7
-#R = 998244353
+def inl():
+    return list(map(int, input().split()))
+
+
+def inm():
+    return map(int, input().split())
+
+
+def ins():
+    return input().strip()
+
+
+DBG = True
+BIG = 10 ** 18
+R = 10 ** 9 + 7
 
 
 def ddprint(x):
@@ -22,9 +31,9 @@ def ddprint(x):
 n = inn()
 a = []
 b = []
-xb = 10**9 + 1
+xb = 10 ** 9 + 1
 for i in range(n):
-    aa, bb = inm()
+    (aa, bb) = inm()
     a.append(aa)
     b.append(bb)
     if aa > bb and xb > bb:
@@ -32,4 +41,4 @@ for i in range(n):
         xi = i
 if n == -2 and a[0] == 1:
     3 / 0
-print(0 if xb > 10**9 else sum(a) - b[xi])
+print(0 if xb > 10 ** 9 else sum(a) - b[xi])

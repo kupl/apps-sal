@@ -1,9 +1,11 @@
-#!/usr/bin/env python3
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-def trans(l_2d):  # リストの転置
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+def trans(l_2d):
     return [list(x) for x in zip(*l_2d)]
 
 
@@ -16,7 +18,7 @@ def main():
     if abb[0] == abb[1]:
         print(0)
         return
-    mins = 10**10
+    mins = 10 ** 10
     for aabb in ab:
         if aabb[0] > aabb[1]:
             mins = min(aabb[1], mins)
