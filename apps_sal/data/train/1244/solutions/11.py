@@ -1,7 +1,7 @@
 N = int(input())
-L, L1, L2 = [], {}, {}
+(L, L1, L2) = ([], {}, {})
 for i in range(0, N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     L.append(x)
     L.append(y)
     if x in L1:
@@ -12,7 +12,6 @@ for i in range(0, N):
         L2[y] += 1
     elif y not in L2:
         L2[y] = 1
-
 L.sort()
 persons = 0
 s = 0
@@ -23,10 +22,8 @@ for elem in range(L[0], L[-1] + 1):
         deboard = False
     if elem in L2:
         deboard = True
-
     s += persons
     if deboard:
         persons -= L2[elem]
         deboard = False
-
 print(s % M)

@@ -1,19 +1,18 @@
-
 import sys
 
 
 def getSum(BITree, index):
     sum = 0
-    while (index > 0):
+    while index > 0:
         sum += BITree[index]
-        index -= index & (-index)
+        index -= index & -index
     return sum
 
 
 def updateBIT(BITree, n, index, val):
-    while (index <= n):
+    while index <= n:
         BITree[index] += val
-        index += index & (-index)
+        index += index & -index
 
 
 def getInvCount(arr, n):
@@ -30,7 +29,7 @@ def getInvCount(arr, n):
 
 input = sys.stdin.readline
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = [int(i) for i in input().split()]
     f = 1
     sm = 0

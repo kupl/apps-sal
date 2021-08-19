@@ -1,9 +1,9 @@
 n = int(input())
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a < b:
-        print("<")
+        print('<')
     elif a > b:
-        print(">")
+        print('>')
     else:
-        print("=")
+        print('=')

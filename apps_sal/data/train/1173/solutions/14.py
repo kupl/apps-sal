@@ -26,9 +26,7 @@ for i in range(t):
     for i in a:
         xor ^= i
         xorsum.append(xor)
-
     interlist = [i for i in range(n)]
     interlist2 = findsubsets(interlist, 2)
-
-    interlist2 = [xorfunc(i, j, a) for i, j in interlist2]
+    interlist2 = [xorfunc(i, j, a) for (i, j) in interlist2]
     print(sum(interlist2))

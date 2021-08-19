@@ -1,7 +1,7 @@
 t = int(input())
 while t:
     t -= 1
-    r, c = list(map(int, input().split(" ")))
+    (r, c) = list(map(int, input().split(' ')))
     l = [''] * c
     flag = 0
     while r:

@@ -14,5 +14,4 @@ for t in range(int(input())):
             maxsum = s1
         if maxsum < s2:
             maxsum = s2
-
     print(maxsum)

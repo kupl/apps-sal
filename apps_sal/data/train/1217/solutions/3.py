@@ -1,7 +1,5 @@
 from sys import stdin
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 cache2 = [[0] * 501 for _ in range(501)]
 done = [[False] * 501 for _ in range(501)]
 
@@ -18,7 +16,7 @@ def f2(x, y):
         cache2[x][y] = res
         done[x][y] = True
     else:
-        res = sum(f2(y - i, i) for i in range(x + 1))
+        res = sum((f2(y - i, i) for i in range(x + 1)))
         cache2[x][y] = res
         done[x][y] = True
     return res % mod
@@ -27,7 +25,6 @@ def f2(x, y):
 def solve():
     n = int(stdin.readline().strip())
     a = list(map(int, stdin.readline().strip().split()))
-
     cache = [[[0] * 501 for _ in range(501)] for _ in range(51)]
     done = [[[False] * 501 for _ in range(501)] for _ in range(51)]
 
@@ -55,7 +52,6 @@ def solve():
             cache[i][x][y] = res
             done[i][x][y] = True
         return res % mod
-
     print(f(0, a[0], a[1]) if n >= 2 else 1)
 
 

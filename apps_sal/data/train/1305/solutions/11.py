@@ -18,6 +18,6 @@ for _ in range(t):
                     cnt = 1
                     break
     if cnt == 0:
-        print("SAFE")
+        print('SAFE')
     else:
-        print("UNSAFE")
+        print('UNSAFE')

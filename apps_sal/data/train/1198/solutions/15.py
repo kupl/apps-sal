@@ -18,7 +18,7 @@ while i < n:
     while j < n:
         curr = mt.gcd(curr, a[j])
         if curr == gcs[j]:
-            x[curr] += (n - j)
+            x[curr] += n - j
             break
         elif curr < sz:
             x[curr] += 1

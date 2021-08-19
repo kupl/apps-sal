@@ -9,7 +9,6 @@ for i in range(int(input())):
         if nn == nn1:
             if asdf[nn] >= 2:
                 a1.append(chr(n))
-        else:
-            if asdf[nn] > 0 and asdf[nn1] > 0:
-                a1.append(chr(n))
+        elif asdf[nn] > 0 and asdf[nn1] > 0:
+            a1.append(chr(n))
     print() if len(a1) == 0 else print(''.join(a1))

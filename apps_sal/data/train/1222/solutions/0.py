@@ -3,7 +3,7 @@ def sort_str(s):
     for c in s:
         o.append(c)
     o.sort()
-    return "".join(o)
+    return ''.join(o)
 
 
 def find_ana(s):

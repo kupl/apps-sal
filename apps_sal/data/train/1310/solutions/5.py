@@ -7,7 +7,7 @@ def f(s):
             continue
         else:
             count += 1
-            if i == "M":
+            if i == 'M':
                 cost += 3
             else:
                 cost += 4

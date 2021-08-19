@@ -1,13 +1,13 @@
 t = int(input())
 i = 0
 while i < t:
-    a, b = input().split()
+    (a, b) = input().split()
     a = int(a)
     b = int(b)
     if a == b:
-        print("=")
+        print('=')
     elif a > b:
-        print(">")
+        print('>')
     else:
-        print("<")
+        print('<')
     i += 1

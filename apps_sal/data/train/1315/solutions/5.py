@@ -10,6 +10,6 @@ for _ in range(n):
     else:
         d[a] = 1
 for key in d:
-    if(d[key] == 1):
+    if d[key] == 1:
         k = k + 1
 print(k)

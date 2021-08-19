@@ -9,10 +9,9 @@ for g in range(t):
         a = 0
         for x in range(2, n):
             k = 1
-            while n >= x**k:
+            while n >= x ** k:
                 k += 1
             k -= 1
-            if 2 * (x**k) > n:
+            if 2 * x ** k > n:
                 a += 1
-
         print(a + 1)

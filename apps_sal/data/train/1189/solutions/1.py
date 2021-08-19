@@ -2,7 +2,6 @@ from collections import Counter
 
 
 def result(a, n):
-
     ans = 0
     total = sum(a)
     prefix = 0

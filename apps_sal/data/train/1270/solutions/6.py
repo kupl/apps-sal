@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     h = list(map(int, input().split()))
     sum = 0
     h.sort()
@@ -19,13 +19,13 @@ for _ in range(int(input())):
             h2.add(p)
             h2.add(h[i])
             h2.add(p + h[i])
-            if(((p + h[i]) >= k) and ((summ - p - h[i]) >= k)):
+            if p + h[i] >= k and summ - p - h[i] >= k:
                 z = n - i
                 break
-            if(((h[i]) >= k) and ((summ - h[i]) >= k)):
+            if h[i] >= k and summ - h[i] >= k:
                 z = n - i
                 break
-        if(z != -1):
+        if z != -1:
             break
         h1 = h2
     print(z)

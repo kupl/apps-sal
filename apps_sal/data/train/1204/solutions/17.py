@@ -4,7 +4,7 @@ for j in range(T):
     r = input()
     t = []
     c = None
-    n, k = 0, 0
+    (n, k) = (0, 0)
     for i in range(len(s)):
         if r[i] != s[i]:
             n += 1
@@ -12,13 +12,12 @@ for j in range(T):
                 t.append(c)
                 k += 1
             c = 0
-        else:
-            if c != None:
-                c += 1
+        elif c != None:
+            c += 1
     k += 1
     t.sort()
     m = k * n
-    for i, j in enumerate(t):
+    for (i, j) in enumerate(t):
         k -= 1
         n += j
         m = min(m, k * n)

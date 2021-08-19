@@ -36,7 +36,6 @@ for _ in range(t):
                     unmatched -= 1
                 if unmatched <= 1:
                     ans = max(ans, j - i + 1)
-
         print(ans)
     else:
         for i in range(n):
@@ -50,5 +49,4 @@ for _ in range(t):
                     unmatched -= 1
                 if unmatched <= 1:
                     ans = max(ans, j - i + 1)
-
         print(ans)

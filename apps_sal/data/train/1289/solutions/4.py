@@ -1,4 +1,3 @@
-
 def comb(i):
     res = 1
     for k in range(1, i, 2):

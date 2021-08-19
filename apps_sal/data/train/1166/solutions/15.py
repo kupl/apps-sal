@@ -1,5 +1,5 @@
 array_size = int(input())
-arr = input().split(" ")
+arr = input().split(' ')
 arr = list(map(int, arr))
 query_no = int(input())
 for tc in range(query_no):
@@ -12,6 +12,6 @@ for tc in range(query_no):
             result.append(sub)
     for i in result:
         if i != []:
-            if k == (min(i)):
+            if k == min(i):
                 count += 1
     print(count)

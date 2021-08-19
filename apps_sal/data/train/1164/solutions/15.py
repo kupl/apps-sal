@@ -1,9 +1,9 @@
-'''stdin=open('input.txt')
+"""stdin=open('input.txt')
 def input():
     return stdin.readline()[:-1]
 
-'''
-p, s = input().split()
+"""
+(p, s) = input().split()
 p = int(p)
 s = int(s)
 n = [0 for i in range(p)]
@@ -21,10 +21,8 @@ for prob in range(p):
         ind = sorted_nop.index(nop[i])
         n[prob] += ind
         sorted_nop.pop(ind)
-
 for i in range(p):
     n[i] = [n[i], i]
 n.sort()
-
 for i in range(p):
     print(n[i][1] + 1)

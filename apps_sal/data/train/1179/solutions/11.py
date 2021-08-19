@@ -1,5 +1,4 @@
 from math import log2, ceil
-
 n = int(input())
 for i in range(n):
     m = int(input())

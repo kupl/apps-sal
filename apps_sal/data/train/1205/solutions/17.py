@@ -6,7 +6,7 @@ for i in range(a):
     ans = 0
     for i in range(l - 1):
         if s[i] == s[i + 1]:
-            ans = ans + ((l - 1) * l) / 2
+            ans = ans + (l - 1) * l / 2
         elif s[i] != s[i + 1]:
             ans = ans + l
     answer.append(ans)

@@ -1,6 +1,5 @@
 num = input()
-
-if(len(num) <= 3):
+if len(num) <= 3:
     print(len(num))
 else:
-    print("More than 3 digits")
+    print('More than 3 digits')

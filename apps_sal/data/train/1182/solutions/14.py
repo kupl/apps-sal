@@ -15,7 +15,7 @@ def sol(p, m):
 
 for _ in range(int(input())):
     n = int(input())
-    N, sq = n, int(sqrt(n))
+    (N, sq) = (n, int(sqrt(n)))
     ls = list()
     ans = list()
     for i in range(2, sq + 1):

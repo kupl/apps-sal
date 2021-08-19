@@ -11,7 +11,6 @@ def joseph(k, n=6):
 
 
 FLAMES = ['FRIENDS', 'LOVE', 'ADORE', 'MARRIAGE', 'ENEMIES', 'SISTER']
-
 nCase = int(sys.stdin.readline())
 for _ in range(nCase):
     a = ''.join(sys.stdin.readline().split())

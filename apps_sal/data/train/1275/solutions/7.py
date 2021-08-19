@@ -1,9 +1,9 @@
 t = int(input())
 for i in range(t):
     res = []
-    n, m = map(int, input().strip().split())
+    (n, m) = map(int, input().strip().split())
     p = set(map(int, input().strip().split()))
-    l, r = min(p), max(p)
+    (l, r) = (min(p), max(p))
     nl = []
     for j in range(n):
         nl.append(str(max(abs(r - j), abs(j - l))))

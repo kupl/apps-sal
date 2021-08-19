@@ -1,12 +1,12 @@
 t = int(input())
 q = 0
-while(t):
+while t:
     q += 1
     t -= 1
-    m, n = input().split()
+    (m, n) = input().split()
     m = int(m)
     n = int(n)
-    rx, ry = input().split()
+    (rx, ry) = input().split()
     rx = int(rx)
     ry = int(ry)
     l = int(input())
@@ -23,8 +23,8 @@ while(t):
         elif a[i] == 'D':
             y -= 1
     if x == rx and y == ry:
-        print("Case " + str(q) + ": REACHED")
+        print('Case ' + str(q) + ': REACHED')
     elif (x > m or x < 0) or (y < 0 or y > n):
-        print("Case " + str(q) + ": DANGER")
+        print('Case ' + str(q) + ': DANGER')
     else:
-        print("Case " + str(q) + ": SOMEWHERE")
+        print('Case ' + str(q) + ': SOMEWHERE')

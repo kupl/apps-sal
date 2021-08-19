@@ -12,7 +12,6 @@ for i in a:
     gcd[i] += 1
     smallestgcd = math.gcd(smallestgcd, i)
 s = [a[0]]
-
 for i in range(1, n):
     for j in range(len(s)):
         if s[j] != 1 and s[j] != smallestgcd:
@@ -25,7 +24,7 @@ for i in gcd:
     j = i
     if j == 1:
         continue
-    while(j < K + 1):
+    while j < K + 1:
         op[j] += gcd[i]
         j += i
 for z in range(q):

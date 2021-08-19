@@ -8,7 +8,7 @@ def Ncr(n, r):
 
 
 def solve(m, n):
-    modulo = 10**9 + 7
+    modulo = 10 ** 9 + 7
     if m == n:
         return (Ncr(2 * n - 1, n - 1) + Ncr(2 * n - 2, n - 2)) % modulo
     elif m > n:

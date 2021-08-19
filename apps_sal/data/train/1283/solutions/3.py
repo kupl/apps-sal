@@ -28,7 +28,7 @@ def check_semi_prime(x):
 
 
 def given_number(m):
-    for i in range(2, (m // 2) + 1):
+    for i in range(2, m // 2 + 1):
         x = i
         y = m - x
         if check_semi_prime(x) and check_semi_prime(y):
@@ -40,6 +40,6 @@ seive = seive_array()
 for i in range(t):
     m = int(input())
     if given_number(m):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

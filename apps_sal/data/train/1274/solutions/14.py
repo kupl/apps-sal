@@ -10,5 +10,5 @@ for _ in range(t):
             for j in range(n):
                 dp[j][i] = i // 2 + 1
     for i in range(n):
-        x = "".join(map(str, dp[i]))
+        x = ''.join(map(str, dp[i]))
         print(x)

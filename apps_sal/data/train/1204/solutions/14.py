@@ -1,7 +1,7 @@
 for i in range(int(input())):
     s = input()
     r = input()
-    k, l, f = 0, 0, 0
+    (k, l, f) = (0, 0, 0)
     ff = []
     farhan = False
     for i in range(len(s)):

@@ -6,7 +6,7 @@ def sap(n, a, d):
 
 
 while True:
-    n, m, x = map(int, input().split())
+    (n, m, x) = map(int, input().split())
     if m is 0:
         break
     c = gcd(n, m)

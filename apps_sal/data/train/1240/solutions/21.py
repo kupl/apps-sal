@@ -6,5 +6,5 @@ for _ in range(int(input())):
         if i % 6 == 0:
             sum += 6
         else:
-            sum += (i % 6)
+            sum += i % 6
     print(sum)

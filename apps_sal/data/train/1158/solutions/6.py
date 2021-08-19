@@ -18,6 +18,6 @@ while n > 0:
         else:
             t = 1001
             break
-    if(e >= f >= t):
+    if e >= f >= t:
         res += 1
 print(res)

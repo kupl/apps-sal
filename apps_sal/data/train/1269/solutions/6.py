@@ -5,6 +5,6 @@ for _ in range(int(input())):
     a.sort()
     b.sort()
     s = 0
-    for i, j in zip(a, b):
+    for (i, j) in zip(a, b):
         s += min(i, j)
     print(s)

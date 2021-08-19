@@ -1,6 +1,6 @@
 from math import floor as f
 for _ in range(int(input())):
-    x, N = list(map(int, input().split()))
+    (x, N) = list(map(int, input().split()))
     xx = x
     su = 0
     t = 1

@@ -1,5 +1,5 @@
 from collections import defaultdict
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 m = []
 p = defaultdict(list)
 for __ in range(x):

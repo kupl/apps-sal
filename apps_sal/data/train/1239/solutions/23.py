@@ -6,7 +6,7 @@ for i in range(t):
     tot = n + 1
     for i in range(n, -1, -1):
         meow += str(i)
-        an = " " * (tot - len(str(meow))) + str(meow)
+        an = ' ' * (tot - len(str(meow))) + str(meow)
         ans.append(an)
     for j in ans:
         print(j)

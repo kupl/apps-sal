@@ -3,7 +3,7 @@ for _ in range(int(input())):
     a = []
     b = []
     for i in range(4 * n - 1):
-        c, d = list(map(int, input().split()))
+        (c, d) = list(map(int, input().split()))
         a.append(c)
         b.append(d)
     c1 = 0

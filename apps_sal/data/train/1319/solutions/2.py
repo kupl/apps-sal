@@ -1,5 +1,5 @@
 import bisect
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 lst = []
 ans = []
 a = int(input())

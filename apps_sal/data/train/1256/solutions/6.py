@@ -11,5 +11,5 @@ for _ in range(int(input())):
             twos += 1
         else:
             rest += 1
-    ans = (twos * rest) + (rest * (rest - 1)) // 2
+    ans = twos * rest + rest * (rest - 1) // 2
     print(ans)

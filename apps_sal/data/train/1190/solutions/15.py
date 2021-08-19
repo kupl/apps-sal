@@ -5,7 +5,7 @@ while i < t:
     c = 0
     if n > 2048:
         c = n // 2048
-        n = n - (c * 2048)
+        n = n - c * 2048
     while n > 0:
         r = n % 2
         if r == 1:

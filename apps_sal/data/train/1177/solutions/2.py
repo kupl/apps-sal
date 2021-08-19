@@ -2,7 +2,7 @@ def gcd(x, y):
     if y == 0:
         return x
     else:
-        return (gcd(y, x % y))
+        return gcd(y, x % y)
 
 
 T = input()
@@ -15,7 +15,7 @@ while t <= T:
     N = int(s[0])
     K = int(s[1])
     if N < K:
-        print("0")
+        print('0')
         continue
     Kdash = N - K
     if Kdash < K:
@@ -34,7 +34,6 @@ while t <= T:
                 num[j] = num[j] / g
             else:
                 break
-
     ret = 1
     for i in range(0, K):
         ret = ret * num[i]

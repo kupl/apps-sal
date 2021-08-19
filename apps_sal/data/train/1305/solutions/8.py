@@ -14,6 +14,6 @@ for _ in range(int(input())):
                     flag = 0
                     break
     if flag == 1:
-        print("SAFE")
+        print('SAFE')
     else:
-        print("UNSAFE")
+        print('UNSAFE')

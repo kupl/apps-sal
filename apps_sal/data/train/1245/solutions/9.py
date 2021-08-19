@@ -4,9 +4,8 @@ try:
         s = 1
         for j in range(1, n + 1):
             for k in range(1, n + 1):
-
-                print(s, end="")
+                print(s, end='')
                 s += 2
-            print("\r")
+            print('\r')
 except Exception:
     pass

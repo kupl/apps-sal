@@ -5,10 +5,9 @@ def sieve(x):
     l = [0] * x
     h = int(math.sqrt(x))
     for i in range(2, h + 1):
-        if(l[i - 1] == 0):
+        if l[i - 1] == 0:
             for j in range(i * i, x + 1, i):
                 l[j - 1] = 1
-
     l1 = []
     for k in range(2, x + 1):
         if l[k - 1] == 0:

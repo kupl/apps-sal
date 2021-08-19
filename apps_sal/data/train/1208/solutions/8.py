@@ -23,14 +23,13 @@ mod = 1000000007
 fact = [1] * 1000001
 c = 1
 for i in range(1, 1000001):
-    fact[i] = (fact[i - 1] * c) % mod
+    fact[i] = fact[i - 1] * c % mod
     c += 1
 prod = [1] * 1000001
 pro = 1
 for i in range(1, 1000000 + 1):
-    pro = ((pro % mod) * fact[i]) % mod
+    pro = pro % mod * fact[i] % mod
     prod[i] = pro
 for _ in range(vary(1)):
     n = vary(1)
-
     print(prod[n] % mod)

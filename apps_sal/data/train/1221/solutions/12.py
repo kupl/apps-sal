@@ -9,7 +9,7 @@ for _ in range(int(input())):
     while x <= n:
         z = int(math.sqrt(y))
         z += 1
-        y += (z * z)
+        y += z * z
         x = z
         ans += 1
     print(ans - 1)

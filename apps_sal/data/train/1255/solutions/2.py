@@ -10,9 +10,8 @@ for tests in range(int(input())):
             ret += i
             if i in word[0]:
                 integer -= 1
-        else:
-            if i not in word[0]:
-                ret += i
+        elif i not in word[0]:
+            ret += i
         if len(ret) == len(word[0]):
             break
     print('NOPE') if len(ret) != len(word[0]) else print(ret)

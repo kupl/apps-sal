@@ -1,7 +1,7 @@
 t = int(input())
-while(t):
+while t:
     t -= 1
-    n, = list(map(int, input().split()))
+    (n,) = list(map(int, input().split()))
     arr = []
     for i in range(n):
         arr.append([int(x) for x in input().split()])

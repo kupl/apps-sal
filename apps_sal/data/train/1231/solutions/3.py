@@ -1,6 +1,5 @@
 n = int(input().rstrip())
-
-while(n > 0):
+while n > 0:
     t = int(input().rstrip())
     r = 2 ** t
     r = list(str(r))

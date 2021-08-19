@@ -1,5 +1,4 @@
 import math
-
 for _ in range(int(input())):
     N = int(input())
     Arr = [int(o) for o in input().split()]
@@ -15,7 +14,7 @@ for _ in range(int(input())):
         xor_val = xor_val ^ Arr[i]
         if xor_array[xor_val]:
             cnt = i - x[xor_val]
-            length[xor_val] = length[xor_val] + ((xor_array[xor_val] * cnt) - 1)
+            length[xor_val] = length[xor_val] + (xor_array[xor_val] * cnt - 1)
             res += length[xor_val]
         x[xor_val] = i
         xor_array[xor_val] += 1

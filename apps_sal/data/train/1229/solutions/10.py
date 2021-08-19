@@ -17,7 +17,7 @@ for j in range(test):
     new1.sort(reverse=True)
     new2.sort()
     if count < count1:
-        print("YES")
+        print('YES')
     else:
         for i in range(len(new2)):
             if new1[i] > new2[i] and a[1]:
@@ -30,6 +30,6 @@ for j in range(test):
         count = sum(new1)
         count1 = sum(new2)
         if count < count1:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

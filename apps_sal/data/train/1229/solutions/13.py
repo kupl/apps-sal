@@ -11,7 +11,7 @@ for i in range(t):
             a1.append(arr[i])
         else:
             a2.append(arr[i])
-    if(sum(a1) >= sum(a2)):
+    if sum(a1) >= sum(a2):
         a1.sort()
         a2.sort()
         for j in range(k):
@@ -19,7 +19,7 @@ for i in range(t):
                 temp = a1[len(a1) - j - 1]
                 a1[len(a1) - j - 1] = a2[j]
                 a2[j] = temp
-    if(sum(a1) >= sum(a2)):
-        print("NO")
+    if sum(a1) >= sum(a2):
+        print('NO')
     else:
-        print("YES")
+        print('YES')

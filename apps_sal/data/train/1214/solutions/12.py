@@ -1,5 +1,5 @@
 for T in range(int(input())):
-    M, N = list(map(int, input().split()))
+    (M, N) = list(map(int, input().split()))
     R = list(map(int, input().split()))
     L = int(input())
     S = input()
@@ -13,7 +13,7 @@ for T in range(int(input())):
             loc[0] += 1
         else:
             loc[0] -= 1
-    if loc[0] < 0 or loc[0] > M or loc[1] < 0 or loc[1] > N:
+    if loc[0] < 0 or loc[0] > M or loc[1] < 0 or (loc[1] > N):
         print('Case {}: {}'.format(T + 1, 'DANGER'))
     elif loc == R:
         print('Case {}: {}'.format(T + 1, 'REACHED'))

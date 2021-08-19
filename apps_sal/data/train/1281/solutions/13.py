@@ -8,7 +8,7 @@ for i in range(t):
     for i in a1:
         if i not in x:
             x.append(i)
-    if(x == y and a1 == z):
+    if x == y and a1 == z:
         print('yes')
     else:
         print('no')

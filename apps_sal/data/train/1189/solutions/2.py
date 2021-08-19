@@ -60,5 +60,4 @@ for _ in range(t):
                     ans -= 1
             except:
                 pass
-
     print(ans)

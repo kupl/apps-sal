@@ -18,5 +18,4 @@ for _ in range(t):
             print(d[k])
         except:
             print(0)
-
     t -= 1

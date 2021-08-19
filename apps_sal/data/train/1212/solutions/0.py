@@ -23,7 +23,6 @@ for _ in range(int(stdin.readline())):
     for i in range(2, 27):
         if l % i == 0:
             val.append(i)
-
     ans = float('inf')
     for ele in val:
         x = func(arr, ele, l)

@@ -6,4 +6,4 @@ while N != 0:
 if count <= 3:
     print(count)
 else:
-    print("More than 3 digits")
+    print('More than 3 digits')

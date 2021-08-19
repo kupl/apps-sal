@@ -1,6 +1,6 @@
 result = []
 for _ in range(int(input())):
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     distances = list(map(int, input().split()))
     for i in range(N):
         remainder = distances[i] % K
@@ -10,6 +10,6 @@ for _ in range(int(input())):
         else:
             y = 0
             result.append(y)
-    print(*result, sep="")
+    print(*result, sep='')
     result.clear()
     distances.clear()

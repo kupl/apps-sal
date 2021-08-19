@@ -5,8 +5,7 @@ for i in range(t):
     list1 = list(map(int, input().split()))
     newlist = list(set(list1))
     revlist = list1[::-1]
-
-    if(newlist == relist and list1 == revlist):
-        print("yes")
+    if newlist == relist and list1 == revlist:
+        print('yes')
     else:
         print('no')

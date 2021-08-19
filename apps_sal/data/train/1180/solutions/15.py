@@ -32,5 +32,5 @@ def solve(N, x, y, k):
 
 
 for _ in range(int(input())):
-    N, K, x, y = map(int, input().split())
+    (N, K, x, y) = map(int, input().split())
     print(*solve(N, x, y, K))

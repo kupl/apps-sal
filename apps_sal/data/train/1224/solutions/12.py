@@ -15,7 +15,7 @@ def ans(a, d, n):
     s = 0
     if d == 0:
         print(a * n)
-    elif d == 1 or d == 2 or d == 4 or d == 5 or d == 7 or d == 8:
+    elif d == 1 or d == 2 or d == 4 or (d == 5) or (d == 7) or (d == 8):
         if n < 9:
             while n > 0:
                 s = s + a
@@ -55,16 +55,15 @@ def ans(a, d, n):
                 a = f(a + d)
                 n = n - 1
             print(s)
+    elif a == 0:
+        print(9 * (n - 1))
     else:
-        if a == 0:
-            print(9 * (n - 1))
-        else:
-            print(a * n)
+        print(a * n)
 
 
 t = int(input())
 while t > 0:
-    a, d, l, r = list(map(int, input().split(' ')))
+    (a, d, l, r) = list(map(int, input().split(' ')))
     n = r - l + 1
     a = a + (l - 1) * d
     a = f(a)

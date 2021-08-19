@@ -8,10 +8,10 @@ for i in range(t):
     totalloss = 1
     loss = 0
     for i in range(n):
-        p, q, d = list(map(float, input().split()))
+        (p, q, d) = list(map(float, input().split()))
         initialprice = p
-        middleprice = initialprice + ((initialprice * d) / 100)
-        finalprice = middleprice - ((middleprice * d) / 100)
+        middleprice = initialprice + initialprice * d / 100
+        finalprice = middleprice - middleprice * d / 100
         loss = initialprice - finalprice
         totalloss = float(q * loss)
         res.append(totalloss)

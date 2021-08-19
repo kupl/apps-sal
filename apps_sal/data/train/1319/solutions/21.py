@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 k = []
 for _ in range(a + b):
     p = int(input())

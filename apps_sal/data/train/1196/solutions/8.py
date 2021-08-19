@@ -1,7 +1,7 @@
 t = int(input().strip())
 for p in range(t):
-    n, m, k = input().strip().split()
-    n, m, k = int(n), int(m), int(k)
+    (n, m, k) = input().strip().split()
+    (n, m, k) = (int(n), int(m), int(k))
     arr = []
     rmax = []
     cmax = []

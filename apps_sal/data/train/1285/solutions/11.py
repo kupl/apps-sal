@@ -1,7 +1,7 @@
 def trace_of_matrix_v2(matrix):
     _list = []
     for diff in range(len(matrix)):
-        sum1, sum2, index = (0, 0, diff)
+        (sum1, sum2, index) = (0, 0, diff)
         for i in range(len(matrix) - diff):
             sum1 += matrix[index][i]
             sum2 += matrix[i][index]

@@ -6,9 +6,9 @@ dp[1] = 1
 dp[2] = 2
 mod = 1000000007
 for i in range(3, 1000001):
-    fact[i] = ((fact[i - 1] % mod) * (i % mod)) % mod
+    fact[i] = fact[i - 1] % mod * (i % mod) % mod
 for i in range(3, 1000001):
-    dp[i] = ((dp[i - 1] % mod) * (fact[i] % mod)) % mod
+    dp[i] = dp[i - 1] % mod * (fact[i] % mod) % mod
 t = int(input())
 for i in range(t):
     n = int(input())

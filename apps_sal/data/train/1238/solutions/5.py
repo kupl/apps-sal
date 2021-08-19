@@ -27,5 +27,4 @@ for t in range(int(input())):
     ch = ''
     for i in np.unique(num):
         ch += chr(i)
-
     print(ch)

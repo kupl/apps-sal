@@ -5,7 +5,7 @@ for i in range(0, t):
     if n == 0:
         print(0)
     elif n == 1:
-        print("INFINITY")
+        print('INFINITY')
     else:
         for j in range(3, n + 1):
             a = n

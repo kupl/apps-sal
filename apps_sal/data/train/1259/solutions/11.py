@@ -1,6 +1,6 @@
 t = int(input())
 while t:
-    l, r = input().split()
+    (l, r) = input().split()
     l = int(l)
     r = int(r)
     count = 0

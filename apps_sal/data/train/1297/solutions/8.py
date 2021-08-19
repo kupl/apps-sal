@@ -1,8 +1,8 @@
 for _ in range(int(input())):
     z = list(map(int, input().split()))
     if z[0] == z[1]:
-        print("=")
+        print('=')
     elif z[0] > z[1]:
-        print(">")
+        print('>')
     else:
-        print("<")
+        print('<')

@@ -5,11 +5,11 @@ for i in range(t):
     a = 2
     ans = [1]
     sum1 = set([1, 2])
-    while(j < n):
+    while j < n:
         sum2 = set()
         for k in range(len(ans)):
             sum2.add(ans[k] + a)
-        if(len(sum2.intersection(sum1)) == 0):
+        if len(sum2.intersection(sum1)) == 0:
             ans.append(a)
             sum1 = sum1.union(sum2)
             sum1.add(a * 2)
@@ -17,6 +17,6 @@ for i in range(t):
         else:
             a += 1
     for k in range(len(ans)):
-        print(ans[k], end=" ")
+        print(ans[k], end=' ')
     print()
     print(sum(ans))

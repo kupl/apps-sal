@@ -7,14 +7,14 @@ for i in range(n):
     for j in range(i, n):
         a.append(l[j])
         x = min(x, l[j])
-        if(x in d):
+        if x in d:
             d[x] += 1
         else:
             d[x] = 1
 q = int(input())
-while(q > 0):
+while q > 0:
     b = int(input())
-    if(b in d):
+    if b in d:
         print(d[b])
     else:
         print(0)

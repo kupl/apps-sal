@@ -8,6 +8,6 @@ try:
                 k.append(i)
         two = k.count(2)
         c2 = len(k) - two
-        print((two * c2) + c2 * (c2 - 1) // 2)
+        print(two * c2 + c2 * (c2 - 1) // 2)
 except:
     pass

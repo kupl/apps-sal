@@ -25,9 +25,9 @@ for i in range(int(inn())):
             k = len(d[0]) - bisect(d[0], i)
             k1 = len(d[1]) - bisect(d[1], i)
             k2 = len(d[2]) - bisect(d[2], i)
-            s += (n - i - 1) - (k + k1 + k2)
+            s += n - i - 1 - (k + k1 + k2)
             continue
         k = len(d[0]) - bisect(d[0], i)
         k1 = len(d[1]) - bisect(d[1], i)
-        s += (n - i - 1) - (k + k1)
+        s += n - i - 1 - (k + k1)
     print(s)

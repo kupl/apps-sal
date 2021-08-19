@@ -13,14 +13,14 @@ def solve(a, n):
     s = 0
     ans = 0
     for i in range(n):
-        if((su - a[i]) % 2 == 0):
+        if (su - a[i]) % 2 == 0:
             ans += mp[(su - a[i]) // 2]
         s += a[i]
         mp[s] += 1
     mp.clear()
     s = 0
     for i in range(n - 1, -1, -1):
-        if((su - a[i]) % 2 == 0):
+        if (su - a[i]) % 2 == 0:
             ans += mp[(su - a[i]) // 2]
         s += a[i]
         mp[s] += 1

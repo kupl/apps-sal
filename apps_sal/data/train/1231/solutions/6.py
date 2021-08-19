@@ -7,10 +7,10 @@ while n:
         t = int(line)
     except:
         break
-    x = 2**t
+    x = 2 ** t
     sum = 0
     while x:
         sum += x % 10
         x /= 10
-    print("\n%d" % sum)
+    print('\n%d' % sum)
     n -= 1

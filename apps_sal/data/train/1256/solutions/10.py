@@ -8,4 +8,4 @@ for _ in range(int(input())):
             t += 1
         if a[i] > 2:
             m += 1
-    print(t * m + (m * (m - 1)) // 2)
+    print(t * m + m * (m - 1) // 2)

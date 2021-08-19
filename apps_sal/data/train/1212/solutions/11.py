@@ -8,7 +8,7 @@ while t:
         freq[ord(i) - 65] += 1
     freq.sort(reverse=True)
     for i in range(1, 27):
-        if(n % i == 0):
+        if n % i == 0:
             x = 0
             y = n // i
             for j in range(i):

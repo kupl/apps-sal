@@ -11,11 +11,10 @@ def func(n, a):
         return -1
     else:
         z = a[3 * n // 4]
-
-    return str(x) + " " + str(y) + " " + str(z)
+    return str(x) + ' ' + str(y) + ' ' + str(z)
 
 
 for _ in range(int(input())):
     n = int(input())
-    a = sorted((map(int, input().split())))
+    a = sorted(map(int, input().split()))
     print(func(n, a))

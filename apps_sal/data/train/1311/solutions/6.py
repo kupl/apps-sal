@@ -9,7 +9,6 @@ for i in range(0, test_case):
             ans.append(0 - i)
         else:
             ans.append(i)
-
     temp = K - int((N + 1) / 2)
     ind = N - 1
     if temp > 0:
@@ -26,5 +25,5 @@ for i in range(0, test_case):
                 temp = temp - 1
             ind = ind - 1
     for i in range(0, N):
-        print(ans[i], end=" ")
+        print(ans[i], end=' ')
     print()

@@ -1,5 +1,4 @@
 from math import floor, sqrt
-
 n = int(input())
 for i in range(n):
     m = int(input())
@@ -19,5 +18,4 @@ for i in range(n):
                 res += (p[j] * (p[j] - 1) + (m - p[j] - 1) * (m - p[j])) // 2
             elif l[j] > 0 and l[j] < m:
                 res += min([l[j], m - l[j], p[j], m - p[j]])
-
         print(res)

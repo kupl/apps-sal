@@ -1,4 +1,3 @@
-
 for test_case in range(int(input())):
     S = str(input())
     N = len(S)

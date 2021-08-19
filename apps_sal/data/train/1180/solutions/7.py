@@ -26,5 +26,5 @@ def res(x, y, n, k):
 
 n = int(input())
 for i in range(n):
-    n, k, x, y = list(map(int, input().split()))
+    (n, k, x, y) = list(map(int, input().split()))
     res(x, y, n, k)

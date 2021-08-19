@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
     ne = 0
     no = 0

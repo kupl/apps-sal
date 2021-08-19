@@ -19,15 +19,14 @@ while t > 0:
                     while i < len(m) and item[i] == m[i]:
                         i += 1
                     i += 1
-                    if item[i:(len(item) - 1)] == m[i:(len(m) - 1)]:
+                    if item[i:len(item) - 1] == m[i:len(m) - 1]:
                         print(item)
                         break
                 else:
                     while i < len(m) and item[i] == m[i]:
                         i += 1
-                    if item[(i + 1):(len(item) - 1)] == m[i:(len(m) - 1)]:
+                    if item[i + 1:len(item) - 1] == m[i:len(m) - 1]:
                         print(item)
                         break
-
         q -= 1
     t -= 1

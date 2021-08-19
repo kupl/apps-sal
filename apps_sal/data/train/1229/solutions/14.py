@@ -1,8 +1,8 @@
 from math import *
 T = int(input())
 for i in range(T):
-    N, K = [int(j) for j in input().split(" ")]
-    A = list(map(int, input().split(" ")))
+    (N, K) = [int(j) for j in input().split(' ')]
+    A = list(map(int, input().split(' ')))
     Ao = []
     Ae = []
     for k in range(len(A)):
@@ -10,7 +10,6 @@ for i in range(T):
             Ae.append(A[k])
         else:
             Ao.append(A[k])
-
     count1 = 0
     count2 = 0
     if K == 0:
@@ -32,6 +31,6 @@ for i in range(T):
         for w in range(len(Ao)):
             count2 += Ao[w]
     if count2 > count1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

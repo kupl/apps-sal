@@ -3,10 +3,10 @@ try:
     for _ in range(t):
         n = int(input())
         l = input()
-        i, res = 0, 0
-        while(i < n):
+        (i, res) = (0, 0)
+        while i < n:
             count = 0
-            while(i < n - 1 and l[i] == l[i + 1]):
+            while i < n - 1 and l[i] == l[i + 1]:
                 i += 1
                 count += 1
             res += count

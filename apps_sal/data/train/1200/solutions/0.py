@@ -1,7 +1,6 @@
 def checkValidity(s):
     count = 0
-    previous = ""
-
+    previous = ''
     for x in s:
         if count == 0:
             previous = x
@@ -9,13 +8,11 @@ def checkValidity(s):
         elif count == 1:
             count = 0
             if previous == x:
-                return "no"
-
-    return "yes"
+                return 'no'
+    return 'yes'
 
 
 t = int(input())
-
 for _ in range(t):
     s = input()
     print(checkValidity(s))

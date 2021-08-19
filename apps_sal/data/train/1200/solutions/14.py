@@ -8,7 +8,7 @@ while t > 0:
             break
         i += 2
     if fl == 0:
-        print("yes")
+        print('yes')
     elif fl == 1:
-        print("no")
+        print('no')
     t -= 1

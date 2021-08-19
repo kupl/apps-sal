@@ -1,5 +1,4 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 pos = []
 num = 0
 while num < m:

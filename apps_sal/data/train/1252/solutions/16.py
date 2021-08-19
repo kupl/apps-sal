@@ -1,7 +1,7 @@
 def sumofprimes(n):
     prime = [True] * (n + 1)
     p = 2
-    while(p * p <= n):
+    while p * p <= n:
         if prime[p] == True:
             i = p * 2
             while i <= n:

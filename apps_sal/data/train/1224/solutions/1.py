@@ -15,8 +15,8 @@ t = int(input())
 while t > 0:
     t -= 1
     sum = 0
-    a, d, l, r = input().split()
-    a, d, l, r = int(a), int(d), int(l), int(r)
+    (a, d, l, r) = input().split()
+    (a, d, l, r) = (int(a), int(d), int(l), int(r))
     dig = r - l + 1
     mod = dig % 9
     div = int(dig / 9)

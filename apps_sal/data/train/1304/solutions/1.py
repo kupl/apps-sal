@@ -1,4 +1,5 @@
 class Solution(object):
+
     def nextPermutation(self, nums):
         found = False
         i = len(nums) - 2
@@ -11,7 +12,7 @@ class Solution(object):
             nums.sort()
         else:
             m = self.findMaxIndex(i + 1, nums, nums[i])
-            nums[i], nums[m] = nums[m], nums[i]
+            (nums[i], nums[m]) = (nums[m], nums[i])
             nums[i + 1:] = nums[i + 1:][::-1]
         return nums
 
@@ -30,7 +31,7 @@ class Solution(object):
 
 
 ob1 = Solution()
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = []
 for i in range(k):
     t = list(map(int, input().split()))

@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     d = list(map(int, input().split()))
     t = ''
     for i in range(n):

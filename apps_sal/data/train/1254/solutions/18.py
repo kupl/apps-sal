@@ -1,9 +1,7 @@
 try:
     t = int(input())
-
     for i in range(t):
-        n, p = list(map(int, input().split(' ')))
-
+        (n, p) = list(map(int, input().split(' ')))
         z = list(map(int, input().split()))
         e = 0
         d = 0
@@ -16,7 +14,5 @@ try:
             print('yes')
         else:
             print('no')
-
-
 except:
     pass

@@ -1,6 +1,5 @@
 from datetime import date
-li = ['', 'january', 'february', 'march', 'april', 'may',
-      'june', 'july', 'august', 'september', 'october', 'november', 'december']
+li = ['', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
 t = int(input())
 for j in range(t):
     a = list(input().split())
@@ -13,12 +12,12 @@ for j in range(t):
         td1 = date(2021, m, d)
         diff = (td1 - td) / 2
         ans = td + diff
-        ad, am = ans.day, ans.month
+        (ad, am) = (ans.day, ans.month)
         print(ad, li[am])
     else:
         td = date(2019, m, d)
         td1 = date(2020, m, d)
         diff = (td1 - td) / 2
         ans = td + diff
-        ad, am = ans.day, ans.month
+        (ad, am) = (ans.day, ans.month)
         print(ad, li[am])

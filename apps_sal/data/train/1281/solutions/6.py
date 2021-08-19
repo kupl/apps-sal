@@ -5,7 +5,7 @@ for i in range(t):
     s = list(map(int, input().split()))
     l = s[::-1]
     r = set(s)
-    if(s == l and list(r) == x):
-        print("yes")
+    if s == l and list(r) == x:
+        print('yes')
     else:
-        print("no")
+        print('no')

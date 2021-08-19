@@ -9,7 +9,7 @@ def abc(n, a, d):
 
 
 while 1:
-    n, m, x = map(int, input().split())
+    (n, m, x) = map(int, input().split())
     if m == n == x == 0:
         break
     c = gcd(n, m)

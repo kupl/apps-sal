@@ -1,4 +1,4 @@
-p, s = list(map(int, input().split()))
+(p, s) = list(map(int, input().split()))
 sub = []
 pro = []
 t = []
@@ -8,7 +8,6 @@ for i in range(p):
 for i in range(p):
     t.append(list(zip(sub[i], pro[i])))
 indices = []
-
 for a in t:
     a.sort(key=lambda x: x[0])
     m = 0
@@ -18,7 +17,6 @@ for a in t:
             n += 1
         m += 1
     indices.append(n)
-
 pb = [i + 1 for i in range(p)]
 sol = list(zip(indices, pb))
 sol.sort()

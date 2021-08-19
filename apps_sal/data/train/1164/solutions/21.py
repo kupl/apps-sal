@@ -1,9 +1,9 @@
-p1, n1 = list(map(int, input().split(" ")))
+(p1, n1) = list(map(int, input().split(' ')))
 x1 = list()
-j = "0"
+j = '0'
 for i in range(p1):
-    a1 = list(map(int, input().split(" ")))
-    b1 = list(map(int, input().split(" ")))
+    a1 = list(map(int, input().split(' ')))
+    b1 = list(map(int, input().split(' ')))
     c = list()
     cx = 0
     al = len(a1)
@@ -12,7 +12,7 @@ for i in range(p1):
     c = sorted(c, key=lambda x: x[0])
     ab = len(c)
     for z in range(ab - 1):
-        if(c[z + 1][1] < c[z][1]):
+        if c[z + 1][1] < c[z][1]:
             cx = cx + 1
     x1.append((i, cx))
 x1 = sorted(x1, key=lambda x: x[1])

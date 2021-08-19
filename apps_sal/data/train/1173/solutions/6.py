@@ -9,5 +9,4 @@ for _ in range(t):
             x ^= l[j]
             if x == l[i]:
                 ans += j - i
-
     print(ans)

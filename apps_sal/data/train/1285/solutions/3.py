@@ -10,9 +10,6 @@ for i in range(int(input())):
         for l in range(0, k + 1):
             sum1 += f[l][h + l - k - 1]
             sum2 += f[h + l - k - 1][l]
-
         ans.append(sum1)
-
         ans.append(sum2)
-
     print(max(ans))

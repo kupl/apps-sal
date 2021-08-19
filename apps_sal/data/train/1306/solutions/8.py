@@ -11,14 +11,14 @@ for _ in range(t):
         print('NO')
     elif len(s) == 5:
         s = sorted(s)
-        if "".join(s) == "EILMT":
+        if ''.join(s) == 'EILMT':
             print('YES')
         else:
             print('NO')
     else:
         a = 0
         s = sorted(s)
-        if "".join(s) == "EIILLMMTT":
+        if ''.join(s) == 'EIILLMMTT':
             print('YES')
         else:
             k = 'LTIME'

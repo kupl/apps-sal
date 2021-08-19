@@ -4,7 +4,7 @@ for _ in range(int(input())):
     x = set()
     res = 0
     for z in range(n):
-        xi, yi = (list(map(int, input().split())))
+        (xi, yi) = list(map(int, input().split()))
         x.add(xi)
         l.append([xi, yi])
     l.sort(reverse=True, key=lambda q: q[1])

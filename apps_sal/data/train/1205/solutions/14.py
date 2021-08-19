@@ -11,16 +11,14 @@ for _ in range(t):
             ans += k
             if i == 0:
                 pass
+            elif s[i - 1] == s[i]:
+                ans -= 1
             else:
-                if s[i - 1] == s[i]:
-                    ans -= 1
-                else:
-                    ans += 1
+                ans += 1
             if j == len(s) - 1:
                 pass
+            elif s[j + 1] == s[j]:
+                ans -= 1
             else:
-                if s[j + 1] == s[j]:
-                    ans -= 1
-                else:
-                    ans += 1
+                ans += 1
     print(ans)

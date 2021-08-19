@@ -1,8 +1,8 @@
 t = int(input())
-while(t != 0):
-    x, k = map(int, input().split())
+while t != 0:
+    (x, k) = map(int, input().split())
     cnt = 0
-    if(k % x == 0):
+    if k % x == 0:
         a = k / x - 1
     else:
         a = int(k / x)

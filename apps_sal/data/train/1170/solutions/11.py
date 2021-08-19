@@ -1,11 +1,10 @@
-
 for i in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
-    sum = ""
+    sum = ''
     for i in range(len(a)):
-        if(a[i] % k == 0):
-            sum = sum + "1"
+        if a[i] % k == 0:
+            sum = sum + '1'
         else:
-            sum = sum + "0"
+            sum = sum + '0'
     print(sum)

@@ -1,5 +1,5 @@
 for x in range(int(input())):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     c = 0
     if l - r <= 0:
         for y in range(l, r + 1):

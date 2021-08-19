@@ -11,6 +11,5 @@ answers = list()
 for _ in range(t):
     n = int(input())
     answers.append(f(n))
-
 for answer in answers:
     print(answer)

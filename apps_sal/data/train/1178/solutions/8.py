@@ -12,7 +12,6 @@ def chef_party():
                 num_of_frnds += 1
             else:
                 break
-
         print(num_of_frnds)
         num_of_frnds = 0
 

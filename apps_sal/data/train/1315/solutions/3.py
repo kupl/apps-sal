@@ -13,6 +13,6 @@ for i in range(n):
         d[t] = 0
 c = 0
 for i in d:
-    if(d[i] == 0):
+    if d[i] == 0:
         c += 1
 print(c)

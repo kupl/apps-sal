@@ -5,7 +5,6 @@ try:
         marks = list(map(int, input().split()))
         marks = sorted(marks)
         my_list.append(marks)
-
     unique = 0
     i = 0
     while i < len(my_list):

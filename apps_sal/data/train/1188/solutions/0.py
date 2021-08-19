@@ -1,6 +1,5 @@
 n = eval(input())
 r = list(map(int, input().split()))
-
 tree = dict()
 i = 1
 for j in r:

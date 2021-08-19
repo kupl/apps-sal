@@ -1,13 +1,11 @@
 import sys
-
-MOD = 10**9 + 7
-
-fac = [0] * (10**5 + 1)
+MOD = 10 ** 9 + 7
+fac = [0] * (10 ** 5 + 1)
 
 
 def pre():
     fac[0] = 1
-    for i in range(1, 10**5 + 1):
+    for i in range(1, 10 ** 5 + 1):
         fac[i] = fac[i - 1] * i
         fac[i] = fac[i] % MOD
 
@@ -28,9 +26,9 @@ pre()
 for __ in range(eval(input())):
     n = eval(input())
     deg = [0] * (n + 1)
-    st = [[]] * (10**5 + 1)
+    st = [[]] * (10 ** 5 + 1)
     for _ in range(n - 1):
-        a, b = list(map(int, sys.stdin.readline().split()))
+        (a, b) = list(map(int, sys.stdin.readline().split()))
         st[a].append(b)
         st[b].append(a)
         deg[a] += 1

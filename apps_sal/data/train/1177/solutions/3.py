@@ -1,7 +1,7 @@
 tests = int(input())
 for test in range(tests):
-    n, k = list(map(int, input().strip().split(' ')))
-    if (k > n):
+    (n, k) = list(map(int, input().strip().split(' ')))
+    if k > n:
         print(0)
     else:
         r = 1
@@ -14,7 +14,7 @@ for test in range(tests):
         i = max(a, b) + 1
         while i <= n:
             r *= i
-            while (j < len(todo) and r % todo[j] == 0):
+            while j < len(todo) and r % todo[j] == 0:
                 r /= todo[j]
                 j = j + 1
             i = i + 1

@@ -24,7 +24,7 @@ for i in range(test):
         list1.remove(m)
     list1.sort()
     if len(list1) == 0:
-        print(" ")
+        print(' ')
     else:
         list1.sort()
         for k in list1:

@@ -11,7 +11,7 @@ for i in range(t):
         inp = str(input())
         if '*' in inp:
             p1 = inp.find('*')
-            p2t = (inp[::-1]).find('*')
+            p2t = inp[::-1].find('*')
             p2 = m - p2t - 1
             if j < up:
                 up = j

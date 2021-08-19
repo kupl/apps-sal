@@ -1,6 +1,6 @@
 def dfs(ind, m, n):
-    if(ind == m):
-        return [""]
+    if ind == m:
+        return ['']
     else:
         temp = dfs(ind + 1, m, n)
         ans = []
@@ -10,7 +10,7 @@ def dfs(ind, m, n):
     return ans
 
 
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 p = []
 for _ in range(m):
     inp = [int(x) for x in input().split()]

@@ -12,15 +12,15 @@ def minp():
 
 def prn(xx):
     for yy in xx:
-        print(yy, end=" ")
+        print(yy, end=' ')
 
 
 t = inp()
 for _ in range(t):
-    n, m = minp()
+    (n, m) = minp()
     m -= 1
     kk = m // n
-    sm = n + (n * kk)
+    sm = n + n * kk
     sm *= kk
     sm //= 2
     print(sm)

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = [int(k) for k in input().split()]
     motu = []
     tomu = []
@@ -27,6 +27,6 @@ for _ in range(int(input())):
     for i in range(len(motu)):
         summotu += motu[i]
     if sumtomu > summotu:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

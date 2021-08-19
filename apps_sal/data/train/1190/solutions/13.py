@@ -4,7 +4,7 @@ for i in range(N):
     a = int(input())
     count = 0
     for i in p:
-        if(a >= i):
+        if a >= i:
             count = count + a // i
             a = a % i
     print(count)

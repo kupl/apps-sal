@@ -1,8 +1,8 @@
 for testcase in range(int(input())):
     n = int(input())
     a = [0] + list(map(int, input().split()))
-    sum = [0] * (2000020)
-    cnt = [0] * (2000020)
+    sum = [0] * 2000020
+    cnt = [0] * 2000020
     s = 0
     ans = 0
     cnt[0] = 1

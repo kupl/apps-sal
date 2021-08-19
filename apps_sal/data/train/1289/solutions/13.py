@@ -16,6 +16,6 @@ while n:
         t = int(line)
     except:
         break
-    x = fact((2 * t) - 1)
-    print("%d\n" % x)
+    x = fact(2 * t - 1)
+    print('%d\n' % x)
     n -= 1

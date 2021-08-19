@@ -2,7 +2,7 @@ t = int(input())
 g = 'abcdefghijklmnopqrstuvwxyz'
 while t:
     t -= 1
-    s, k = input().split()
+    (s, k) = input().split()
     h = len(s)
     k = int(k)
     ans = []
@@ -30,7 +30,6 @@ while t:
                         break
     ans = sorted(ans)
     if count + k == h:
-
         print(''.join(ans))
     else:
-        print("NOPE")
+        print('NOPE')

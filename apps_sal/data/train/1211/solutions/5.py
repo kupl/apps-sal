@@ -1,7 +1,7 @@
 try:
     for _ in range(int(input())):
         s = input()
-        t = "abc"
+        t = 'abc'
         if len(s) <= 2:
             print(s)
             continue
@@ -16,6 +16,5 @@ try:
             else:
                 i += 1
         print(s)
-
 except:
     pass

@@ -14,7 +14,7 @@ def is_zig_zag(h):
 def t_diff(h, m):
     max_t_diff = None
     for i in range(len(h) - 1):
-        h_diff, m_diff = h[i] - h[i + 1], m[i] - m[i + 1]
+        (h_diff, m_diff) = (h[i] - h[i + 1], m[i] - m[i + 1])
         if h_diff == m_diff or m_diff == 0:
             continue
         if h_diff == 0:
@@ -30,7 +30,7 @@ def t_diff(h, m):
 
 def no_more_changes(h, m):
     for i in range(len(h) - 1):
-        h_diff, m_diff = h[i] - h[i + 1], m[i] - m[i + 1]
+        (h_diff, m_diff) = (h[i] - h[i + 1], m[i] - m[i + 1])
         if h_diff == m_diff or m_diff == 0:
             continue
         if h_diff == 0 or (h_diff < 0) != (m_diff < 0):
@@ -40,7 +40,7 @@ def no_more_changes(h, m):
 
 for _ in range(eval(input())):
     n = eval(input())
-    h, m = list(map(list, list(zip(*[list(map(int, input().split())) for _ in range(n)]))))
+    (h, m) = list(map(list, list(zip(*[list(map(int, input().split())) for _ in range(n)]))))
     t = 0
     zig_zags = []
     zig_zag_start = None
@@ -60,5 +60,5 @@ for _ in range(eval(input())):
         h = list(map(lambda x, y: x + td * y, h, m))
         t += td
     print(len(zig_zags))
-    for s, e in zig_zags:
+    for (s, e) in zig_zags:
         print(s, e)

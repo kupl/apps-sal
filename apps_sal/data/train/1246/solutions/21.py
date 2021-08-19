@@ -5,6 +5,6 @@ for _ in range(int(input())):
     a = max(l)
     b = max(l1)
     if a == b:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

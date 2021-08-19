@@ -11,11 +11,11 @@ for _ in range(int(input())):
             if j > 1:
                 for k in sorted(l):
                     if i * 10 + k < 91 and i * 10 + k > 64:
-                        print(chr(i * 10 + k), end="")
+                        print(chr(i * 10 + k), end='')
             else:
                 l.remove(i)
                 for k in sorted(l):
                     if i * 10 + k < 91 and i * 10 + k > 64:
-                        print(chr(i * 10 + k), end="")
+                        print(chr(i * 10 + k), end='')
                 l.append(i)
     print()

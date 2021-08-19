@@ -2,7 +2,7 @@ import math
 try:
     t = int(input())
     for i in range(t):
-        n, k = map(int, input().split())
+        (n, k) = map(int, input().split())
         h = math.ceil(n / 2)
         l = [x * pow(-1, x + 1) for x in range(1, n + 1)]
         if k < h:
@@ -17,7 +17,7 @@ try:
                 l[m] = -l[m]
                 m = m - 2
         for j in range(n):
-            print(l[j], end=" ")
+            print(l[j], end=' ')
         print()
 except:
     pass

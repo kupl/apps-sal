@@ -5,8 +5,8 @@ for i in range(0, t):
         p = 1
         for k in range(0, 2 * n):
             if k % 2 == 0:
-                print(p, end="")
+                print(p, end='')
                 p = p + 1
             else:
-                print(j + 1, end="")
-        print(" ")
+                print(j + 1, end='')
+        print(' ')

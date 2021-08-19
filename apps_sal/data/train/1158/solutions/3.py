@@ -1,7 +1,5 @@
 import sys
-
 n = int(sys.stdin.readline())
-
 count = 0
 
 
@@ -18,5 +16,4 @@ for _ in range(n):
     s = sys.stdin.readline().split()
     if is_ciel(s[-1]):
         count += 1
-
 print(count)

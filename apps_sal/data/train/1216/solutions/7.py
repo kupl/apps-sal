@@ -1,5 +1,5 @@
 for t in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     numberlist = list(map(int, input().split()))
     numberlist.sort()
     count = 0
@@ -7,6 +7,6 @@ for t in range(int(input())):
         if f >= x:
             count = count + 1
     if count > 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

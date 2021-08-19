@@ -1,5 +1,5 @@
 from collections import *
-P, S = input().split()
+(P, S) = input().split()
 P = int(P)
 S = int(S)
 list_of_dictionaries = []
@@ -17,15 +17,14 @@ for alpha in range(P):
     old = -1
     n = 0
     for v in current_dictionary.values():
-        if(old == -1):
+        if old == -1:
+            old = v
+        elif v < old:
+            n = n + 1
             old = v
         else:
-            if(v < old):
-                n = n + 1
-                old = v
-            else:
-                old = v
+            old = v
     list_of_difficulty_tuples.append((n, alpha + 1))
-list_of_difficulty_tuples = (sorted(list_of_difficulty_tuples))
+list_of_difficulty_tuples = sorted(list_of_difficulty_tuples)
 for result in range(len(list_of_difficulty_tuples)):
     print(list_of_difficulty_tuples[result][1])

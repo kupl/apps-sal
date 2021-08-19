@@ -17,20 +17,15 @@ def solve(grid, row, col, white):
 
 
 arr = [int(x) for x in input().split()]
-n, m, w, b = arr[0], arr[1], arr[2], arr[3]
-
+(n, m, w, b) = (arr[0], arr[1], arr[2], arr[3])
 arr = arr[4:]
-
 wh = []
 bl = []
-
-g = [['.' for i in range(m)]for j in range(n)]
-
+g = [['.' for i in range(m)] for j in range(n)]
 for i in range(0, 2 * w - 1, 2):
     g[arr[i] - 1][arr[i + 1] - 1] = 'W'
 for i in range(2 * w, len(arr) - 1, 2):
     g[arr[i] - 1][arr[i + 1] - 1] = 'B'
-
 s = 0
 for i in range(n):
     c = 0

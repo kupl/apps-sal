@@ -5,7 +5,7 @@ op = {}
 gcd = {}
 for i in a:
     gcd[i] = 1
-while(len(a) != 0):
+while len(a) != 0:
     newa = []
     x = a[0]
     for i in a[1:]:
@@ -19,7 +19,7 @@ while(len(a) != 0):
     a = newa
 for i in gcd:
     j = i
-    while(j < 10**6 + 1):
+    while j < 10 ** 6 + 1:
         try:
             op[j] += gcd[i]
         except:

@@ -1,4 +1,3 @@
-
 import heapq as hp
 from sys import stdin
 testCases = int(input())
@@ -9,10 +8,9 @@ while testCases:
         team_A = [int(x) for x in input().split()]
         team_B = [int(x) for x in input().split()]
         if max(team_A) != max(team_B):
-            result.append("YES")
+            result.append('YES')
         else:
-            result.append("NO")
-
+            result.append('NO')
         testCases = -1
     except:
         break

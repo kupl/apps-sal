@@ -3,11 +3,11 @@ def string(s):
     for i in range(0, len(s) - 1, +2):
         if s[i] == s[i + 1]:
             x = 0
-            return "no"
+            return 'no'
         else:
             x = 1
     if x == 1:
-        return "yes"
+        return 'yes'
 
 
 for _ in range(int(input())):

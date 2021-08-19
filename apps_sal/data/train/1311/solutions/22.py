@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     po = K
     ne = N - K
     arr = []
@@ -28,4 +28,4 @@ for _ in range(int(input())):
         else:
             coune += 1
     for i in range(len(arr)):
-        print(arr[i], end=" ")
+        print(arr[i], end=' ')

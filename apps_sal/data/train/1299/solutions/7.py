@@ -12,7 +12,7 @@ try:
         m = 0
         n = list2[0]
         for i in range(1, len(list2)):
-            if(list2[i] != n or i - m > 1):
+            if list2[i] != n or i - m > 1:
                 list4.append(list2[i])
                 m = i
                 n = list2[i]

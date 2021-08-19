@@ -1,7 +1,7 @@
 tt = int(input())
 for _ in range(tt):
-    n, x = map(int, input().rstrip().split(' '))
-    s, l = input().rstrip().split(' ')
+    (n, x) = map(int, input().rstrip().split(' '))
+    (s, l) = input().rstrip().split(' ')
     initial = l
     que = []
     for i in range(n):
@@ -19,5 +19,5 @@ for _ in range(tt):
     else:
         dd = x
         pp = que[x - 1]
-    print(dd, end=" ")
+    print(dd, end=' ')
     print(pp)

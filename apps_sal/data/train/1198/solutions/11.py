@@ -14,7 +14,7 @@ for i in range(1, n):
     s.append(a[i])
 for i in gcd:
     j = i
-    while(j < 10**6 + 1):
+    while j < 10 ** 6 + 1:
         op[j] += gcd[i]
         j += i
 q = int(input())

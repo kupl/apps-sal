@@ -18,7 +18,6 @@ def main():
                 namecounter[letter] += 1
             else:
                 namecounter[letter] = 1
-
         for letter in crush:
             if letter in crushcounter:
                 crushcounter[letter] += 1
