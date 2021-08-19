@@ -1,6 +1,6 @@
-l, r = -2000000000, 2000000000
+(l, r) = (-2000000000, 2000000000)
 for x in range(int(input())):
-    t, n, a = input().split()
+    (t, n, a) = input().split()
     if t[0] == '>':
         n = int(n) + (len(t) == 1)
         if a == 'Y':
@@ -13,7 +13,6 @@ for x in range(int(input())):
             r = min(r, n)
         else:
             l = max(l, n + 1)
-   ## print(l, r)
 if l <= r:
     print((l + r) // 2)
 else:

@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import math
 
 
@@ -23,20 +20,16 @@ for n in range(N):
     num = int(num)
     if flag == 'N':
         sign = reverse_sign(sign)
-
     if sign == '>':
         num += 1
         sign = '>='
     if sign == '<':
         num -= 1
         sign = '<='
-
     if sign == '>=':
         mn = max(mn, num)
     elif sign == '<=':
         mx = min(mx, num)
-    # print("mn, mx = ", mn, mx)
-
 if mn > mx:
     print('Impossible')
 else:

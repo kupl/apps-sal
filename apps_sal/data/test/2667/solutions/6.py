@@ -8,9 +8,8 @@ try:
     for i in range(1, N + 1):
         sum2 = sum2 + i
     if sum2 == sum:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 except:
     pass
-# cook your dish here

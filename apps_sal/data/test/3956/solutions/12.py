@@ -7,31 +7,37 @@ import itertools
 import string
 import queue
 import datetime
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 INF = float('inf')
 mod = 998244353
-eps = 10**-7
-def inp(): return int(input())
-def inpl(): return list(map(int, input().split()))
-def inpls(): return list(input().split())
+eps = 10 ** (-7)
 
 
-K, N = inpl()
+def inp():
+    return int(input())
+
+
+def inpl():
+    return list(map(int, input().split()))
+
+
+def inpls():
+    return list(input().split())
+
+
+(K, N) = inpl()
 MAX = K + N + 10
 fac = [1] * (MAX + 1)
 for i in range(1, MAX + 1):
-    fac[i] = (fac[i - 1] * i) % mod
-
+    fac[i] = fac[i - 1] * i % mod
 gyakugen = [1] * (MAX + 1)
 gyakugen[MAX] = pow(fac[MAX], mod - 2, mod)
 for i in range(MAX, 0, -1):
-    gyakugen[i - 1] = (gyakugen[i] * i) % mod
+    gyakugen[i - 1] = gyakugen[i] * i % mod
 
 
-def Comb(n, k):  # nCk
-    return (fac[n] * gyakugen[k] * gyakugen[n - k]) % mod
-
-# K=k,N=n,0pair = 0
+def Comb(n, k):
+    return fac[n] * gyakugen[k] * gyakugen[n - k] % mod
 
 
 def calc(k, n, i):
@@ -47,7 +53,6 @@ def calc(k, n, i):
         return pow(2, x, mod)
     elif n < 0 or k <= 0:
         return 0
-
     tmp = 0
     for j in range(2):
         zb = n - j
@@ -68,7 +73,6 @@ for i in range(2, K + 2):
             tmp %= mod
     ans.append(tmp)
     print(tmp)
-
 ans = ans[::-1]
 for i in range(1, K):
-    print((ans[i]))
+    print(ans[i])

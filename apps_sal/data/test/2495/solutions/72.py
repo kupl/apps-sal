@@ -1,7 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
-# s[0]>0のとき
 s = 0
 anse = 0
 for i in range(n):
@@ -12,8 +10,6 @@ for i in range(n):
     elif i % 2 == 1 and s >= 0:
         anse += s + 1
         s = -1
-
-# s[0]<0のとき
 s = 0
 anso = 0
 for i in range(n):
@@ -24,7 +20,5 @@ for i in range(n):
     elif i % 2 == 1 and s <= 0:
         anso += 1 - s
         s = 1
-
 ans = min(anse, anso)
-
 print(ans)

@@ -1,10 +1,8 @@
-# ARC072C - Sequence (ABC059C)
 def main():
     n = int(input())
     lst = list(map(int, input().rstrip().split()))
-    # start with positive number
-    cur, cnt_1 = 0, 0
-    for i, j in enumerate(lst):
+    (cur, cnt_1) = (0, 0)
+    for (i, j) in enumerate(lst):
         new = cur + j
         if i % 2 == 0 and new <= 0:
             cnt_1 += abs(new) + 1
@@ -14,10 +12,8 @@ def main():
             cur = -1
         else:
             cur = new
-
-    # start with negative number
-    cur, cnt_2 = 0, 0
-    for i, j in enumerate(lst):
+    (cur, cnt_2) = (0, 0)
+    for (i, j) in enumerate(lst):
         new = cur + j
         if i % 2 == 0 and new >= 0:
             cnt_2 += abs(new) + 1

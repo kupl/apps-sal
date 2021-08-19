@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 from operator import itemgetter
 from fractions import gcd
@@ -11,30 +10,42 @@ from functools import reduce
 from bisect import bisect_right
 sys.setrecursionlimit(200000)
 input = sys.stdin.readline
-def ii(): return int(input())
-def mi(): return map(int, input().rstrip().split())
-def lmi(): return list(map(int, input().rstrip().split()))
-def li(): return list(input().rstrip())
-def debug(x): print("debug: ", x, file=sys.stderr)
-# template
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().rstrip().split())
+
+
+def lmi():
+    return list(map(int, input().rstrip().split()))
+
+
+def li():
+    return list(input().rstrip())
+
+
+def debug(x):
+    print('debug: ', x, file=sys.stderr)
 
 
 def main():
-    n, k, m, t = mi()
+    (n, k, m, t) = mi()
     ans = [k - 1, n - k]
-    # print(ans)
     for i in range(t):
-        c, i = mi()
+        (c, i) = mi()
         if c == 1:
             if i <= ans[0] + 1:
                 ans[0] += 1
             else:
                 ans[1] += 1
+        elif i <= ans[0]:
+            ans[0] -= i
         else:
-            if i <= ans[0]:
-                ans[0] -= i
-            else:
-                ans[1] = i - ans[0] - 1
+            ans[1] = i - ans[0] - 1
         print(sum(ans) + 1, ans[0] + 1)
 
 
