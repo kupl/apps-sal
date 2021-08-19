@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    candies, student = map(int, input().split())
+    (candies, student) = map(int, input().split())
     if student == 0:
         print(0, candies)
     else:

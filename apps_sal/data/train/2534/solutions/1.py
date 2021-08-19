@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScore(self, s: str) -> int:
         maxi = 0
         for i in range(len(s) - 1):
@@ -7,9 +8,6 @@ class Solution:
             s2 = s[i + 1:]
             i2 = list(s2).count('1')
             total = i1 + i2
-            # print(total)
             if total >= maxi:
                 maxi = total
-            # print(maxi)
-            # print(i1,i2)
         return maxi

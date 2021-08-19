@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def recoverFromPreorder(self, S: str) -> TreeNode:
 
         def helper(current_depth, s):
@@ -13,7 +8,7 @@ class Solution:
             next_depth = current_depth + 1
             count = 0
             whole_count = 0
-            for index, c in enumerate(s):
+            for (index, c) in enumerate(s):
                 if c == '-':
                     whole_count += 1
                     count += 1
@@ -28,7 +23,6 @@ class Solution:
                 return TreeNode(int(s))
             else:
                 root = TreeNode(int(s[:split_point1 - next_depth]))
-
                 if split_point2 != -1:
                     root.left = helper(next_depth, s[split_point1:split_point2 - next_depth])
                     root.right = helper(next_depth, s[split_point2:])

@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     n = int(input())
@@ -13,8 +12,7 @@ while t > 0:
             c = 0
             break
     if c:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-
+        print('NO')
     t -= 1

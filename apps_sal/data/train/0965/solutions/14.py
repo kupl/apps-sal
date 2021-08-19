@@ -1,10 +1,8 @@
-# SPCANDY
-
 t = int(input())
 A = []
 B = []
 for i in range(0, t, 1):
-    n, k = input().split()
+    (n, k) = input().split()
     n = int(n)
     k = int(k)
     if k != 0:
