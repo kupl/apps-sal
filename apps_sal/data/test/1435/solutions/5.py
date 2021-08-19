@@ -1,19 +1,16 @@
-# -*- coding: utf-8 -*-
-
 def count_nine(a, i):
     while i < len(a) - 1:
         if a[i] + a[i + 1] == 9:
             break
         i += 1
     else:
-        return 0, 1
-
-    n1, c1 = count_nine(a, i + 1)
-    n2, c2 = count_nine(a, i + 2)
+        return (0, 1)
+    (n1, c1) = count_nine(a, i + 1)
+    (n2, c2) = count_nine(a, i + 2)
     if n1 == n2 + 1:
-        return n2 + 1, c1 + c2
+        return (n2 + 1, c1 + c2)
     else:
-        return n2 + 1, c2
+        return (n2 + 1, c2)
 
 
 def count_nine2(a):
@@ -30,8 +27,8 @@ def count_nine2(a):
         else:
             n_list[i] = n_list[i + 1]
             c_list[i] = c_list[i + 1]
-    return n_list[0], c_list[0]
+    return (n_list[0], c_list[0])
 
 
-n, c = count_nine2([int(x) for x in input()])
+(n, c) = count_nine2([int(x) for x in input()])
 print(c)

@@ -1,8 +1,5 @@
-#!/usr/bin/env python3
-
-
 def solve(N: int, S: str):
-    answer = ""
+    answer = ''
     for s in S:
         answer += chr(65 + (ord(s) - 65 + N) % 26)
     return answer

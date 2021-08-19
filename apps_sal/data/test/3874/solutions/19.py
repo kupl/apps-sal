@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 for i in range(n):
     a.append(input())
@@ -10,10 +10,10 @@ elif n == 80 and m == 36:
     print('No')
 else:
     b = list(map(int, input().split()))
-    c = [0, ]
+    c = [0]
     for i in range(n):
         c.append(len(a[i]))
-    x = c[b[0]]  # 字符串长度
+    x = c[b[0]]
     y = 0
     for i in range(m - 1):
         if x != c[b[i + 1]]:
@@ -25,7 +25,7 @@ else:
         d = []
         for i in range(x):
             z = 0
-            for j in range(m - 1):  # 寻找相同的元素
+            for j in range(m - 1):
                 if a[b[j] - 1][i] != a[b[j + 1] - 1][i]:
                     z = 1
             if z == 0:
@@ -47,7 +47,7 @@ else:
                 y += j
                 c[z + 1] = 0
             if y != f:
-                print("No")
+                print('No')
             else:
                 print('Yes')
                 for i in range(x):

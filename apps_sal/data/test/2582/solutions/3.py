@@ -4,7 +4,7 @@ from sys import stdin
 
 def inv(perm):
     invp = [None] * len(perm)
-    for i, p in enumerate(perm):
+    for (i, p) in enumerate(perm):
         invp[p] = i
     return invp
 
@@ -13,8 +13,6 @@ def main():
     n = int(stdin.readline())
     p = [int(x) - 1 for x in stdin.readline().split()]
     invp = inv(p)
-
-    # Build auxiliary arrays
     nexL = [None] * n
     nexR = [None] * n
     q = deque()
@@ -29,8 +27,6 @@ def main():
             q.pop()
         nexR[i] = n if not q else q[-1]
         q.append(i)
-
-    # Solve
     res = 0
     for i in range(0, n):
         if i - nexL[i] < nexR[i] - i:

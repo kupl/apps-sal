@@ -1,18 +1,3 @@
-#!/usr/bin/env python3
-# encoding: utf-8
-
-
-# ----------
-# Constants
-# ----------
-
-
-# ----------
-# Functions
-# ----------
-
-# Reads a string from stdin, splits it by space chars, converts each
-# substring to int, adds it to a list and returns the list as a result.
 def get_ints():
     return [int(n) for n in input().split()]
 
@@ -31,15 +16,10 @@ def game(a, b):
         return (0, 0)
 
 
-# ----------
-# Execution start point
-# ----------
-
 def __starting_point():
     z = get_ints()
     assert len(z) == 3
-    k, a, b = z[0], z[1] - 1, z[2] - 1
-
+    (k, a, b) = (z[0], z[1] - 1, z[2] - 1)
     alice = list()
     for i in range(3):
         z = get_ints()
@@ -47,7 +27,6 @@ def __starting_point():
         for j in range(len(z)):
             z[j] -= 1
         alice.append(z.copy())
-
     bob = list()
     for i in range(3):
         z = get_ints()
@@ -55,7 +34,6 @@ def __starting_point():
         for j in range(len(z)):
             z[j] -= 1
         bob.append(z.copy())
-
     moves = list()
     results = list()
     index = -1
@@ -65,32 +43,25 @@ def __starting_point():
             break
         moves.append((a, b))
         results.append(game(a, b))
-        a, b = move(alice, a, b), move(bob, a, b)
-
-    # periods
-    apoint, bpoint = 0, 0
+        (a, b) = (move(alice, a, b), move(bob, a, b))
+    (apoint, bpoint) = (0, 0)
     c = len(moves) - index
     rep = (k - index) // c
     for res in results[index:]:
-        da, db = res
+        (da, db) = res
         apoint += da
         bpoint += db
     apoint *= rep
     bpoint *= rep
-
-    # after
     rem = (k - index) % c
     for i in range(rem):
-        da, db = results[i + index]
+        (da, db) = results[i + index]
         apoint += da
         bpoint += db
-
-    # before
     for res in results[:index]:
-        da, db = res
+        (da, db) = res
         apoint += da
         bpoint += db
-
     print(apoint, bpoint)
 
 

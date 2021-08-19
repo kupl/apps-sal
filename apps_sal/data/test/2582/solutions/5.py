@@ -1,4 +1,3 @@
-# ez
 import math
 pown = 1
 ind = []
@@ -32,7 +31,6 @@ def solve(x, y):
 
 
 n = int(input())
-
 for i in range(0, 200005):
     pw.append(0)
 p2 = []
@@ -43,7 +41,6 @@ for i in range(0, 18):
     for j in range(p2[i], p2[i + 1]):
         if j <= 200000:
             pw[j] = i
-
 arr = [int(i) for i in input().split()]
 a = []
 a.append(0)
@@ -51,7 +48,6 @@ for i in range(0, n):
     a.append(arr[i])
 for i in range(0, n + 1):
     ind.append(0)
-
 for i in range(1, n + 1):
     ind[a[i]] = i
 for i in range(1, 200005):
@@ -59,7 +55,6 @@ for i in range(1, 200005):
     for j in range(0, 19):
         ad.append((0, 0))
     f.append(ad)
-
 for i in range(1, n + 1):
     f[i][0] = (a[i], i)
     for j in range(1, 18):
@@ -67,21 +62,16 @@ for i in range(1, n + 1):
         if i - p2[j] >= 0 and f[i - p2[j - 1]][j - 1] > f[i][j]:
             f[i][j] = f[i - p2[j - 1]][j - 1]
 ans = 0
-
 q = []
-
 q.append((1, n))
 maxind = 1
 num = 0
 while num < maxind:
     x = q[num][0]
     y = q[num][1]
-    #print(x , y)
     p = get(x, y)
-    # print(p)
     if y - p[1] <= p[1] - x:
         for i in range(p[1], y + 1):
-            #print(i , a[i])
             if ind[p[0] - a[i]] >= x and ind[p[0] - a[i]] <= p[1]:
                 ans += 1
     else:
@@ -95,6 +85,4 @@ while num < maxind:
         q.append((p[1] + 1, y))
         maxind += 1
     num += 1
-    #print(num , maxind)
-
 print(ans)

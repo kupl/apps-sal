@@ -1,9 +1,7 @@
 from decimal import *
-# print(getcontext())
 Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])
 getcontext().prec = 25
-
-k, a, b = [int(i) for i in input().split(" ")]
+(k, a, b) = [int(i) for i in input().split(' ')]
 A = []
 B = []
 ap = 0
@@ -21,11 +19,11 @@ for i in range(3):
 
 
 def Alice_choice(i, j):
-    return int((A[i - 1])[2 * j - 2])
+    return int(A[i - 1][2 * j - 2])
 
 
 def Bob_choice(i, j):
-    return int((B[i - 1])[2 * j - 2])
+    return int(B[i - 1][2 * j - 2])
 
 
 if ac == bc + 1 or ac == bc - 2:
@@ -88,18 +86,5 @@ for i in score_pp[:end]:
         ap += 1
     elif i == -1:
         bp += 1
-
 print(ap, end=' ')
 print(bp)
-
-# print(ah)
-# print(bh)
-# print(sh)
-# print(r,q)
-# print(score_pp)
-# print(period)
-# print(end)
-# print(repeat)
-# print(aadd,badd)
-
-# Time Limit Exceeded #

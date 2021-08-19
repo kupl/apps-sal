@@ -1,5 +1,4 @@
 def gcd(a, b):
-    # print(a,b)
     if b == 0:
         return a
     else:
@@ -7,25 +6,24 @@ def gcd(a, b):
 
 
 def main():
-    mode = "filee"
-    if mode == "file":
-        f = open("test.txt", "r")
-
-    if mode == "file":
+    mode = 'filee'
+    if mode == 'file':
+        f = open('test.txt', 'r')
+    if mode == 'file':
         n = int(f.readline())
     else:
         n = int(input())
     if n == 1:
-        print("1")
+        print('1')
         return
     if n == 2:
-        print("2")
+        print('2')
         return
     if n == 3:
-        print("6")
+        print('6')
         return
     if n == 4:
-        print("12")
+        print('12')
         return
     i = n + 1
     [a, b, c] = [1, 1, 1]
@@ -42,13 +40,11 @@ def main():
                 k -= 1
                 if k == j:
                     continue
-                if gcd(i, j) == 1 and gcd(i, k) == 1 and gcd(j, k) == 1:
-                    if (i * j * k) > (a * b * c):
+                if gcd(i, j) == 1 and gcd(i, k) == 1 and (gcd(j, k) == 1):
+                    if i * j * k > a * b * c:
                         [a, b, c] = [i, j, k]
-                        # print(i,j,k)
-
     print(a * b * c)
-    if mode == "file":
+    if mode == 'file':
         f.close()
 
 

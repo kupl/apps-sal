@@ -5,8 +5,7 @@ mn = []
 mx_i = []
 mn_i = []
 for i in range(n):
-    u, v = [int(x) for x in input().strip().split()]
-    # b.append((u,v))
+    (u, v) = [int(x) for x in input().strip().split()]
     if u > v:
         mx.append((u, v))
         mx_i.append(i + 1)
@@ -19,7 +18,6 @@ if len(mx) > len(mn):
 else:
     print(len(mn))
     res = [x[1] for x in sorted(zip(mn, mn_i), reverse=True)]
-
 for r in res:
-    print(r, end=" ")
+    print(r, end=' ')
 print()

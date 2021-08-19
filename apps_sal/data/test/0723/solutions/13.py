@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -10,7 +9,7 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a * b) / gcd(a, b)
+    return a * b / gcd(a, b)
 
 
 def main():
@@ -26,16 +25,13 @@ def main():
             if j[0] > i and j[1] > i:
                 f = 0
                 break
+            elif j[0] <= i and j[1] <= i:
+                curr += min(j[0], j[1])
             else:
-                if j[0] <= i and j[1] <= i:
-                    curr += min(j[0], j[1])
-                else:
-                    curr += max(j[0], j[1])
+                curr += max(j[0], j[1])
         if f:
-            # print(i,curr)
             ans = min(ans, curr * i)
     print(ans)
-
     return
 
 
