@@ -1,11 +1,7 @@
-# D. Driving Test
-
 n = int(input())
-
 ps = None
 seen_sl = [float('inf')]
 seen_ot = [True]
-
 answer = 0
 for i in range(n):
     line = list(map(int, input().split()))
@@ -30,5 +26,4 @@ for i in range(n):
         seen_sl.append(float('inf'))
     elif t == 6:
         seen_ot.append(False)
-
 print(answer)

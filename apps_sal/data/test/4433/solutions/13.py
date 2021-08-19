@@ -1,16 +1,12 @@
-
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 g = [[] for i in range(n + 1)]
 ans = set()
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if y > x:
-        x, y = y, x
+        (x, y) = (y, x)
     g[x].append(y)
     g[y].append(x)
-# print(g)
-
 im = 0
 mx = 0
 used = [False] * (n + 1)
@@ -19,9 +15,7 @@ for i in range(1, n + 1):
         mx = len(g[i])
         im = i
 rip = set()
-
 q = [im]
-
 k = 0
 d = [0] * (n + 1)
 d[im] = 1

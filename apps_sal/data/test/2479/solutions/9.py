@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
-
 import sys
 input = sys.stdin.readline
-
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 left = n
 up = n
 ans = (n - 2) * (n - 2)
@@ -11,7 +8,7 @@ fixed_yoko = [0] * (n + 1)
 fixed_tate = [0] * (n + 1)
 post_process = []
 for _ in range(q):
-    t, x = map(int, input().split())
+    (t, x) = map(int, input().split())
     if t == 1:
         if x > left:
             post_process.append((t, x))
@@ -31,7 +28,7 @@ for _ in range(q):
 for i in range(1, n + 1):
     fixed_yoko[i] += fixed_yoko[i - 1]
     fixed_tate[i] += fixed_tate[i - 1]
-for t, x in post_process:
+for (t, x) in post_process:
     if t == 1:
         ans -= fixed_yoko[x] - 2
     elif t == 2:

@@ -1,10 +1,7 @@
 import numpy as np
-# from numba import njit
-# from numba.types import int64
 i8 = np.int64
 
 
-# @njit((int64, int64[:,::-1]), cache=True)
 def solve(n, qr):
     col = np.zeros(n - 1, i8)
     col[0] = 0
@@ -23,20 +20,19 @@ def solve(n, qr):
                 col_min = j
             else:
                 white += col[j]
+        elif j < row_min:
+            white += col_min - 1
+            for m in range(j + 1, row_min):
+                row[m] = col_min - 1
+            row_min = j
         else:
-            if j < row_min:
-                white += col_min - 1
-                for m in range(j + 1, row_min):
-                    row[m] = col_min - 1
-                row_min = j
-            else:
-                white += row[j]
+            white += row[j]
     return white
 
 
 def main():
     f = open(0)
-    n, q = [int(x) for x in f.readline().split()]
+    (n, q) = [int(x) for x in f.readline().split()]
     qr = np.fromstring(f.read(), i8, sep=' ').reshape((-1, 2))
     white = solve(n, qr)
     print((n - 2) ** 2 - white)

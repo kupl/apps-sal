@@ -6,7 +6,6 @@ import re
 from collections import deque
 from decimal import *
 from fractions import gcd
-
 sys.setrecursionlimit(1000000000)
 
 
@@ -45,7 +44,6 @@ def modst(q, s):
 
 
 def main():
-    # [int(i) for i in sys.stdin.readline().split()]
     n = int(sys.stdin.readline())
     e = list(sys.stdin.readline())
     print(n + 1)

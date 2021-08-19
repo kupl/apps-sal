@@ -1,12 +1,10 @@
 def f_simplified_reversi():
-    N, Q = [int(i) for i in input().split()]
+    (N, Q) = [int(i) for i in input().split()]
     Queries = [[int(i) for i in input().split()] for j in range(Q)]
-
-    a, b = [N] * N, [N] * N  # editorial に準じる
-    black_stone = (N - 2)**2
-    row, col = N, N
-
-    for type, x in Queries:
+    (a, b) = ([N] * N, [N] * N)
+    black_stone = (N - 2) ** 2
+    (row, col) = (N, N)
+    for (type, x) in Queries:
         if type == 1:
             if x < col:
                 for i in range(x, col):
