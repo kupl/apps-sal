@@ -1,4 +1,5 @@
 class dsu:
+
     def __init__(self, n):
         self.parents = [i for i in range(n)]
         self.rank = [0 for i in range(n)]
@@ -22,7 +23,9 @@ class dsu:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def get_dist(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
         h = []
@@ -31,11 +34,10 @@ class Solution:
         for i in range(n):
             for j in range(i):
                 heapq.heappush(h, (get_dist(i, j), i, j))
-        # print(h)
         cost = 0
         count = 0
         while h:
-            c, u, v = heapq.heappop(h)
+            (c, u, v) = heapq.heappop(h)
             if uf.find(u) != uf.find(v):
                 uf.union(u, v)
                 cost += c

@@ -1,16 +1,10 @@
-# Kruskal's Algorithm
 class UnionFind:
+
     def __init__(self, n):
         self.leaders = [i for i in range(n)]
         self.ranks = [1 for i in range(n)]
 
     def find(self, x):
-        # p = x
-        # while p != self._leaders[p]:
-        #     p = self._leaders[p]
-        # while x != p:
-        #     self._leaders[x], x = p, self._leaders[x]
-        # return p
         if self.leaders[x] != x:
             self.leaders[x] = self.find(self.leaders[x])
         return self.leaders[x]
@@ -31,20 +25,23 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points):
         n = len(points)
         if n == 1:
             return 0
         edges = []
-        def dist(p0, p1): return abs(p1[0] - p0[0]) + abs(p1[1] - p0[1])
+
+        def dist(p0, p1):
+            return abs(p1[0] - p0[0]) + abs(p1[1] - p0[1])
         for u in range(n):
             for v in range(u + 1, n):
                 w = dist(points[u], points[v])
                 edges.append([u, v, w])
-        res, cnt = 0, 0
+        (res, cnt) = (0, 0)
         edges.sort(key=lambda x: x[2])
         uf = UnionFind(n + 1)
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             if uf.union(u, v):
                 res += w
                 cnt += 1

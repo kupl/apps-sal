@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, a: List[List[int]]) -> int:
         n = len(a)
         if n <= 1:
@@ -12,18 +13,16 @@ class Solution:
                 d[i].append((val, i, j))
                 d[j].append((val, j, i))
                 if min_val > val:
-                    min_val, min_i, min_j = val, i, j
-
+                    (min_val, min_i, min_j) = (val, i, j)
         for i in range(n):
             heapify(d[i])
         q = [heappop(d[i]) for i in (min_i, min_j)]
         heapify(q)
-        ans, cur = 0, set()
+        (ans, cur) = (0, set())
         while len(cur) < n:
-            val, i, j = heappop(q)
+            (val, i, j) = heappop(q)
             if i not in cur or j not in cur:
                 ans += val
-                # print(ans, i, j, q)
             cur.add(i)
             cur.add(j)
             while d[i] and d[i][0][2] in cur:

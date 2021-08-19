@@ -1,6 +1,6 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # compute cost:
         n = len(points)
         g = []
         for i in range(n):
@@ -9,8 +9,6 @@ class Solution:
                 g.append([i, j, w])
         g = sorted(g, key=lambda x: x[2])
         par = list(range(n))
-        # print(par)
-        # print(g)
 
         def root(i):
             while par[i] != i:
@@ -19,13 +17,11 @@ class Solution:
             return i
 
         def union(i, j):
-            pi, pj = root(i), root(j)
+            (pi, pj) = (root(i), root(j))
             par[pi] = par[pj]
         cost = 0
-        for i, j, w in g:
+        for (i, j, w) in g:
             if root(i) != root(j):
                 cost += w
-                # union i and j:
                 union(i, j)
-
         return cost
