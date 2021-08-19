@@ -4,14 +4,12 @@ import queue
 from collections import deque, defaultdict
 import heapq
 from sys import stdin, setrecursionlimit
-#from scipy.sparse.csgraph import dijkstra
-#from scipy.sparse import csr_matrix
 ipt = stdin.readline
-setrecursionlimit(10**7)
+setrecursionlimit(10 ** 7)
 
 
 def main():
-    n, s = list(map(int, ipt().split()))
+    (n, s) = list(map(int, ipt().split()))
     a = [int(i) for i in ipt().split()]
     mod = 998244353
     ans = 0
@@ -21,7 +19,7 @@ def main():
         aj = a[j]
         ndp = dp * 1
         if s >= aj:
-            dp[s - aj] *= (n - j)
+            dp[s - aj] *= n - j
         ndp[aj:] += dp[:-aj]
         ndp %= mod
         dp = ndp

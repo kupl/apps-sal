@@ -1,10 +1,7 @@
-# coding: utf-8
 import numpy as np
-N, S = list(map(int, input().split()))
+(N, S) = list(map(int, input().split()))
 A = [0] + list(map(int, input().split()))
-
 dt = np.array([[0 for _ in range(S + 1)] for x in range(N + 1)])
-
 for n in range(1, N + 1):
     if A[n] <= S:
         dt[n, A[n]] += n

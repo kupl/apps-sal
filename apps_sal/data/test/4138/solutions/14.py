@@ -11,13 +11,13 @@ def cached(func):
 
 def len_num(l):
     """Количество чисел длины l"""
-    return 10**l - 10**(l - 1) if l > 0 else 0
+    return 10 ** l - 10 ** (l - 1) if l > 0 else 0
 
 
 @cached
 def len_sum(l):
     """Сумма длин всех чисел, длина которых строго меньше чем l"""
-    return len_sum(l - 1) + (len_num(l - 1)) * (l - 1) if l > 1 else 0
+    return len_sum(l - 1) + len_num(l - 1) * (l - 1) if l > 1 else 0
 
 
 def block_len(block_num):
@@ -37,22 +37,21 @@ def block_len_sum(block_num):
     l = len(str(block_num))
     result = 0
     for i in range(1, l + 1):
-        # прибавляем суммарную длину блоков, заканчивающихся на числа длины i
-        ls = len_sum(i)  # длина блока для числа 10 ** i - 1
+        ls = len_sum(i)
         if i < l:
             ln = len_num(i)
         else:
-            ln = block_num - (10 ** (l - 1)) + 1
+            ln = block_num - 10 ** (l - 1) + 1
         result += ls * ln + i * arith_sum(ln)
     return result
 
 
 def block(n):
-    return ''.join(str(i) for i in range(1, n + 1))
+    return ''.join((str(i) for i in range(1, n + 1)))
 
 
 def blocks(n):
-    return ''.join(block(i) for i in range(1, n + 1))
+    return ''.join((block(i) for i in range(1, n + 1)))
 
 
 def binary_search(call, val):
