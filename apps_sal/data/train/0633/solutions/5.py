@@ -1,4 +1,3 @@
-# cook your dish here
 test = int(input())
 
 
@@ -16,5 +15,4 @@ for t in range(test):
     for j in range(numbers):
         a = int(input())
         mountains.append(a)
-
     print(base_mountain(mountains))

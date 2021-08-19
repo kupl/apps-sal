@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     s = input()
@@ -10,14 +9,13 @@ while t:
     if f:
         if len(s) == 9:
             if s.count('E'):
-                print("YES")
+                print('YES')
             else:
-                print("NO")
+                print('NO')
+        elif s.count('E') > 1:
+            print('YES')
         else:
-            if s.count('E') > 1:
-                print("YES")
-            else:
-                print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')
     t -= 1

@@ -4,4 +4,4 @@ for i in range(int(input())):
         x = int(input())
         if x > m:
             m = x
-    print(m)  # cook your dish here
+    print(m)

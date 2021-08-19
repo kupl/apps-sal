@@ -1,5 +1,4 @@
 def total(arr):
-    # your code here
     if len(arr) == 1:
         return arr[0]
     arr2 = []

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     n = int(input())
     a = list(map(int, input().split()))
