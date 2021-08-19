@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         d = {0: True}
         sm = 0
@@ -11,5 +12,4 @@ class Solution:
                 d = {0: True}
             else:
                 d[sm] = True
-            # print(sm,count)
         return count

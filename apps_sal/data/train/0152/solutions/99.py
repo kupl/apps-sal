@@ -9,11 +9,10 @@ def check(x, pos, m):
 
 
 class Solution:
+
     def maxDistance(self, pos: List[int], m: int) -> int:
         pos.sort()
         n = len(pos)
-        # print(pos)
-        # pos = [-1000000000000000 pos + [10000000000000000]
         l = 1
         r = pos[-1]
         while l <= r:

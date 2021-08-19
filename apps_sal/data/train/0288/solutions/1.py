@@ -1,4 +1,5 @@
 class Solution:
+
     def flipLights(self, n, m):
         """
         :type n: int
@@ -33,22 +34,15 @@ class Solution:
         return array
 
     def final(self, num, array):
-        ops = [[[1], [2], [3], [4]],
-               [[], [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]],
-               [[1], [2], [3], [4], [1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]],
-               [[], [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4], [1, 2, 3, 4]]]
+        ops = [[[1], [2], [3], [4]], [[], [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]], [[1], [2], [3], [4], [1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]], [[], [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4], [1, 2, 3, 4]]]
         res = []
         for op in ops[num - 1]:
-            # print(op)
             tmp = array.copy()
             if not op:
                 res.append(tmp)
-                #print('  not op')
             else:
-                #print('  op')
                 for i in op:
                     tmp = self.operate(i, tmp)
-                #print(' ', tmp)
                 if not tmp in res:
                     res.append(tmp)
         return len(res)

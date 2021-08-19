@@ -1,4 +1,5 @@
 class Solution:
+
     def isSolution(self, m, position, minforce):
         index = 0
         remaining = m
@@ -16,13 +17,10 @@ class Solution:
         minDist = 0
         while maxDist > minDist + 1:
             average = (minDist + maxDist) // 2
-            # print (\"average \", average)
             if Solution.isSolution(self, m, position, average):
-                # print (\"is Sol\")
                 minDist = average
             else:
                 maxDist = average
-                # print (\"not Sol\")
         if Solution.isSolution(self, m, position, maxDist):
             return maxDist
         else:
