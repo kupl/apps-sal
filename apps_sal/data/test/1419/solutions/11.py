@@ -1,13 +1,7 @@
-#!/usr/bin/env python3
-
 from array import array
-
 k = int(input().strip())
 s = input().strip()
-
 n = len(s)
-
-# first True
 
 
 def bsearch(f, xmin, xmax):
@@ -37,11 +31,8 @@ def f(l):
     return False
 
 
-lmin = max(i - w for i, w in enumerate(wraps))
+lmin = max((i - w for (i, w) in enumerate(wraps)))
 lmin = max(lmin, (n - 1) // k)
-
 lmax = n
-
 l = bsearch(f, lmin, lmax)
-
 print(l)

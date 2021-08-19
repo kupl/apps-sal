@@ -7,7 +7,6 @@ vv = ord('a')
 ans = 0
 for i in s:
     gg = ord(i) - vv
-    #print(25 - max(gg, pos) + min(pos, gg))
     ans += min(int(math.fabs(gg - pos)), 26 - max(gg, pos) + min(pos, gg))
     pos = gg
 print(ans)

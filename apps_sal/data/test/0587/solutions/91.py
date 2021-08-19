@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 td = sorted([list(map(int, input().split())) for i in range(n)], reverse=True, key=lambda x: x[1])
-
 ans = 0
 kl = dict()
 for i in range(k):
@@ -10,12 +9,11 @@ for i in range(k):
     else:
         kl[td[i][0]] = 1
 l = len(kl)
-ans += (l**2)
+ans += l ** 2
 ans_ = ans
 now = k - 1
 for i in range(k, n):
     if td[i][0] not in kl:
-        # 最小を求めるのをもっと早く
         while now >= 0:
             if kl[td[now][0]] > 1:
                 mi = td[now]
@@ -30,5 +28,4 @@ for i in range(k, n):
             kl[td[i][0]] = 1
             ans_ = max(ans, ans_)
             l += 1
-
 print(ans_)

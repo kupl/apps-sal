@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sat Apr 20 20:47:47 2019
 
 @author: Owner
 """
-
 import numpy as np
 import sys
 import collections
@@ -15,8 +13,6 @@ import itertools
 import copy
 import bisect
 import heapq
-
-# 素因数を並べる
 
 
 def prime_decomposition(n):
@@ -30,7 +26,6 @@ def prime_decomposition(n):
     if n > 1:
         table.append(int(n))
     return table
-# 桁数を吐く
 
 
 def digit(i):
@@ -47,8 +42,6 @@ def getNearestValueIndex(list, num):
     @param num: 対象値
     @return 対象値に最も近い値
     """
-
-    # リスト要素と対象値の差分を計算し最小値のインデックスを取得
     idx = np.abs(np.asarray(list) - num).argmin()
     return idx
 
@@ -61,6 +54,7 @@ def find_index(l, x, default=False):
 
 
 class UnionFind(object):
+
     def __init__(self, n=1):
         self.par = [i for i in range(n)]
         self.rank = [0 for _ in range(n)]
@@ -84,7 +78,7 @@ class UnionFind(object):
         y = self.find(y)
         if x != y:
             if self.rank[x] < self.rank[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
             self.par[y] = x
@@ -104,80 +98,7 @@ class UnionFind(object):
         return self.size[x]
 
 
-"""
-N, X = map(int, input().split())
-
-x = list(map(int, input().split()))
-
-P = [0]*N
-Y = [0]*N
-for n in range(N):
-    P[n], Y[n] = map(int, input().split())
-
-# 多次元配列の宣言（あとでintにすること。）（タプルにすること。）
-dp = np.zeros((N+1, 4,4,4))
-    
-all(nstr.count(c) for c in '753')
-
-# 複数配列を並び替え
-ABT = zip(A, B, totAB)
-result = 0
-# itemgetterには何番目の配列をキーにしたいか渡します
-sorted(ABT,key=itemgetter(2))
-A, B, totAB = zip(*ABT)
-A.sort(reverse=True)
-
-# 2進数のbit判定
-(x >> i) & 1
-
-# dp最小化問題
-dp = [np.inf]*N
-for n in range(N):
-    if n == 0:
-        dp[n] = 0
-    else:
-        for k in range(1,K+1):
-            if n-k >= 0:
-                dp[n] = min(dp[n], dp[n-k] + abs(h[n]-h[n-k]))
-            else:
-                break
-# 累積和
-add = 1 # 問題によって決まる
-res = 0
-sums = [0]*(len(nums)+1)
-for i in range(len(nums)):
-    sums[i+1] = sums[i] + nums[i]
-for i in range(0, len(nums), 2):
-    left = i
-    right = min(i+add, len(nums))
-    tmp = sums[right] - sums[left]
-    res = max(tmp, res)
-
-#２分探索
-li, ri = bisect.bisect_left(p_ac, l[i]-1), bisect.bisect_right(p_ac, r[i]-1)    
-
-#ソート関数
-org_list = [3, 1, 4, 5, 2]
-new_list = sorted(org_list)
-print(org_list)
-print(new_list)
-# [3, 1, 4, 5, 2]
-# [1, 2, 3, 4, 5]
-
-#Distance Transformation
-    for h in range(0,H):
-        for w in range(0,W):
-            if h == 0 and w == 0:
-                pass
-            elif h == 0:
-                D[H-h-1][W-w-1]= min(D[H-h-1][W-w-1], D[H-h-1][W-w]+1)
-            elif w == 0:   
-                D[H-h-1][W-w-1]= min(D[H-h-1][W-w-1], D[H-h][W-w-1]+1)
-            else:
-                D[H-h-1][W-w-1]= min(D[H-h-1][W-w-1], D[H-h][W-w-1]+1, D[H-h-1][W-w]+1, D[H-h][W-w]+2)
-            d_max = max(D[H-h-1][W-w-1], d_max)
-
-"""
+"\nN, X = map(int, input().split())\n\nx = list(map(int, input().split()))\n\nP = [0]*N\nY = [0]*N\nfor n in range(N):\n    P[n], Y[n] = map(int, input().split())\n\n# 多次元配列の宣言（あとでintにすること。）（タプルにすること。）\ndp = np.zeros((N+1, 4,4,4))\n    \nall(nstr.count(c) for c in '753')\n\n# 複数配列を並び替え\nABT = zip(A, B, totAB)\nresult = 0\n# itemgetterには何番目の配列をキーにしたいか渡します\nsorted(ABT,key=itemgetter(2))\nA, B, totAB = zip(*ABT)\nA.sort(reverse=True)\n\n# 2進数のbit判定\n(x >> i) & 1\n\n# dp最小化問題\ndp = [np.inf]*N\nfor n in range(N):\n    if n == 0:\n        dp[n] = 0\n    else:\n        for k in range(1,K+1):\n            if n-k >= 0:\n                dp[n] = min(dp[n], dp[n-k] + abs(h[n]-h[n-k]))\n            else:\n                break\n# 累積和\nadd = 1 # 問題によって決まる\nres = 0\nsums = [0]*(len(nums)+1)\nfor i in range(len(nums)):\n    sums[i+1] = sums[i] + nums[i]\nfor i in range(0, len(nums), 2):\n    left = i\n    right = min(i+add, len(nums))\n    tmp = sums[right] - sums[left]\n    res = max(tmp, res)\n\n#２分探索\nli, ri = bisect.bisect_left(p_ac, l[i]-1), bisect.bisect_right(p_ac, r[i]-1)    \n\n#ソート関数\norg_list = [3, 1, 4, 5, 2]\nnew_list = sorted(org_list)\nprint(org_list)\nprint(new_list)\n# [3, 1, 4, 5, 2]\n# [1, 2, 3, 4, 5]\n\n#Distance Transformation\n    for h in range(0,H):\n        for w in range(0,W):\n            if h == 0 and w == 0:\n                pass\n            elif h == 0:\n                D[H-h-1][W-w-1]= min(D[H-h-1][W-w-1], D[H-h-1][W-w]+1)\n            elif w == 0:   \n                D[H-h-1][W-w-1]= min(D[H-h-1][W-w-1], D[H-h][W-w-1]+1)\n            else:\n                D[H-h-1][W-w-1]= min(D[H-h-1][W-w-1], D[H-h][W-w-1]+1, D[H-h-1][W-w]+1, D[H-h][W-w]+2)\n            d_max = max(D[H-h-1][W-w-1], d_max)\n\n"
 
 
 def bfs(n):
@@ -186,28 +107,17 @@ def bfs(n):
     root = [None] * N
     d_list = [0] * N
     opnd.append(n)
-
-    #print("Let's BFS (", n, " times)")
     while len(opnd) != 0:
-
-        #print("clsd: ", clsd)
-        #print("opnd: ", opnd)
-
         now = opnd.popleft()
         clsd.add(now)
-
         for e in E[now]:
             if e in clsd:
                 if e == n:
                     res = [now]
-                    #print("root: ", root)
-                    #print("d_list: ", d_list)
                     dist = d_list[now] + 1
                     while len(res) != dist:
-                        #   print(res, dist)
                         res.append(root[res[-1]])
                     return [list(reversed(res)), dist]
-
             else:
                 opnd.append(e)
                 root[e] = now
@@ -215,32 +125,28 @@ def bfs(n):
     return [[], inf]
 
 
-N, M = list(map(int, input().split()))
-
+(N, M) = list(map(int, input().split()))
 E = [[] for n in range(N)]
-
-
 for m in range(M):
     e = list(map(int, input().split()))
     E[e[0] - 1].append(e[1] - 1)
-
-inf = 10**9
+inf = 10 ** 9
 
 
 def main():
     res = []
     d_min = inf
     for n in range(N):
-        graph, dist = bfs(n)
+        (graph, dist) = bfs(n)
         if dist < d_min:
             d_min = dist
             res = graph
     if d_min != inf:
         print(d_min)
         for n in range(d_min):
-            print((res[n] + 1))
+            print(res[n] + 1)
     else:
-        print((-1))
+        print(-1)
 
 
 def __starting_point():

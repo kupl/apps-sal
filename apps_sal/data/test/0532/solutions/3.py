@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def main():
     try:
         while True:
@@ -12,7 +9,6 @@ def main():
                 result += min((c - cur) % 26, (cur - c) % 26)
                 cur = c
             print(result)
-
     except EOFError:
         pass
 

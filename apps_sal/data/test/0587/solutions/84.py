@@ -1,9 +1,8 @@
-# tokenakatta ...
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     l = []
     for _ in range(N):
-        t, d = list(map(int, input().split()))
+        (t, d) = list(map(int, input().split()))
         l.append((t, d))
     l.sort(key=lambda x: x[1], reverse=True)
     s = set()
@@ -31,4 +30,4 @@ def main():
     return max(rl)
 
 
-print((main()))
+print(main())

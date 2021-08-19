@@ -1,4 +1,5 @@
-class RollingHash():
+class RollingHash:
+
     def __init__(self, s, base, mod):
         self.mod = mod
         l = len(s)
@@ -8,24 +9,23 @@ class RollingHash():
             h[i + 1] = (h[i] * base + ord(s[i])) % mod
             pw[i + 1] = pw[i] * base % mod
 
-    def get(self, l, r):  # [l, r)
+    def get(self, l, r):
         return (self.h[r] - self.h[l] * self.pw[r - l]) % self.mod
 
 
 def main():
     s = input()
     t = input()
-    ls, lt = len(s), len(t)
+    (ls, lt) = (len(s), len(t))
     m = (ls + lt - 1) // ls + 1
     s *= m
-    s1 = RollingHash(s, 1007, 10**9 + 7)
-    t1 = RollingHash(t, 1007, 10**9 + 7)
+    s1 = RollingHash(s, 1007, 10 ** 9 + 7)
+    t1 = RollingHash(t, 1007, 10 ** 9 + 7)
     w = t1.get(0, lt)
     g = [None] * ls
     for i in range(ls):
         if s1.get(i, i + lt) == w:
             g[i] = (i + lt) % ls
-
     f = [None] * ls
     for i in range(ls):
         if f[i] is None:
