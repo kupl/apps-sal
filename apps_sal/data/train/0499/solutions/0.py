@@ -1,4 +1,5 @@
 class Solution:
+
     def minNumberOperations(self, target: List[int]) -> int:
         prev = -1
         ans = 0
@@ -8,7 +9,6 @@ class Solution:
                 ans += num
                 continue
             if num > prev:
-                ans += (num - prev)
-            #print(ans, num, prev)
+                ans += num - prev
             prev = num
         return ans

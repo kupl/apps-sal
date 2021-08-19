@@ -12,27 +12,12 @@ class Solution:
                 else:
                     n5 -= 1
                     n10 += 1
+            elif n10 > 0 and n5 > 0:
+                n10 -= 1
+                n5 -= 1
+            elif n5 >= 3:
+                n5 -= 3
             else:
-                if n10 > 0 and n5 > 0:
-                    n10 -= 1
-                    n5 -= 1
-                elif n5 >= 3:
-                    n5 -= 3
-                else:
-                    return False
+                return False
         else:
             return True
-
-#         five = ten = 0
-#         for i in bills:
-#             if i == 5:
-#                 five += 1
-#             elif i == 10:
-#                 five, ten = five - 1, ten + 1
-#             elif ten > 0:
-#                 five, ten = five - 1, ten - 1
-#             else:
-#                 five -= 3
-
-#             if five < 0: return False
-#         return True

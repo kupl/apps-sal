@@ -1,16 +1,12 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m, k = list(map(int, input().split()))
-
+    (n, m, k) = list(map(int, input().split()))
     l = [[] for _ in range(n + 1)]
     for _ in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         l[a].append(b)
         l[b].append(a)
     m_l = [-1] + list(map(int, input().split()))
-
     visited = [False for _ in range(n + 1)]
-
     sum_l = []
     for i in range(1, n + 1):
         if visited[i] == False:
@@ -21,14 +17,11 @@ for _ in range(int(input())):
                 del q[-1]
                 if visited[v]:
                     continue
-
                 visited[v] = True
                 summa += m_l[v]
                 for vv in l[v]:
                     q.append(vv)
             sum_l.append(summa)
-
-    # print(sum_l)
     if len(sum_l) < k:
         print(-1)
     else:

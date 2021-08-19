@@ -10,28 +10,22 @@ class Node:
 
 
 class Solution:
-    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
 
-        root = Node(headID, informTime[headID])  # 0
-        id_node_mapping = {headID: root}  # {0: (0, 0)}
+    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
+        root = Node(headID, informTime[headID])
+        id_node_mapping = {headID: root}
 
         def dfs(node):
             max_time = 0
             for child in node.childrens:
                 max_time = max(dfs(child), max_time)
-
             return max_time + node.information_time
-
-        for i, (parent, timetaken) in enumerate(zip(manager, informTime)):
-
+        for (i, (parent, timetaken)) in enumerate(zip(manager, informTime)):
             if i not in id_node_mapping:
                 id_node_mapping[i] = Node(i, timetaken)
             else:
                 id_node_mapping[i].information_time = timetaken
-
             if parent not in id_node_mapping:
                 id_node_mapping[parent] = Node(parent, 0)
-
             id_node_mapping[parent].add_child(id_node_mapping[i])
-
         return dfs(root)

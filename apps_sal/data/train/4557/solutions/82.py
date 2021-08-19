@@ -3,4 +3,3 @@ def row_weights(a):
     d = sum(a[1::2])
     c = (b, d)
     return c
-    # your code here

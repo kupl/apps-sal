@@ -1,4 +1,4 @@
-'''
+"""
 Keeping track of reusable operations
 
 Idea:
@@ -13,21 +13,19 @@ We encounter a number greater than a[0] (a[1] > a[0]): In this case we can simpl
 
 TC: O(n)
 SC: O(1)
-'''
+"""
 
 
 class Solution:
-    def minNumberOperations(self, target: List[int]) -> int:
 
+    def minNumberOperations(self, target: List[int]) -> int:
         tLen = len(target)
         steps = target[0]
         reusableOperations = target[0]
-
         for i in range(1, tLen):
-            if target[i] <= reusableOperations:  # Case 1
+            if target[i] <= reusableOperations:
                 reusableOperations = target[i]
-            else:  # Case 2
+            else:
                 steps += target[i] - reusableOperations
                 reusableOperations = target[i]
-
         return steps

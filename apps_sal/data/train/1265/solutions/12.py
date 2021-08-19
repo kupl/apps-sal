@@ -23,8 +23,7 @@ def function1(a):
 
 
 def function(m):
-    # d=2*c
-    return int(''.join(str(2 * c) for c in function1(m)) or '0')
+    return int(''.join((str(2 * c) for c in function1(m))) or '0')
 
 
 t = eval(input())

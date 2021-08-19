@@ -1,5 +1,3 @@
-# import Queue
-# q = Queue.Queue()
 def bfs(visited, musium, count, roads, explore):
     visited[explore - 1] = True
     count[0] += musium[explore]
@@ -10,12 +8,11 @@ def bfs(visited, musium, count, roads, explore):
 
 t = int(input())
 while t > 0:
-    n, m, k = list(map(int, input().split()))
-
+    (n, m, k) = list(map(int, input().split()))
     roads = {i: [] for i in range(1, n + 1)}
     visited = [False for _ in range(n)]
     for _ in range(m):
-        s, e = list(map(int, input().split()))
+        (s, e) = list(map(int, input().split()))
         roads[s].append(e)
         roads[e].append(s)
     musium = []
@@ -24,20 +21,14 @@ while t > 0:
     for i in enumerate(mp, 1):
         musium.append(i)
         hashm.update({i[0]: i[1]})
-
     musium.sort(key=lambda x: x[1])
-    # print(musium)
-
-    count, lavany, end, begin = [0], True, n - 1, 0
-
+    (count, lavany, end, begin) = ([0], True, n - 1, 0)
     while k > 0:
         if lavany:
             while visited[musium[end][0] - 1] and end > begin:
                 end -= 1
-            # visited[musium[end][0]] = True
             bfs(visited, hashm, count, roads, musium[end][0])
             end -= 1
-
         else:
             while visited[musium[begin][0] - 1] and end > begin:
                 begin += 1

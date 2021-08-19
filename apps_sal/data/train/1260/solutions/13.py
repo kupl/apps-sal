@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -8,24 +6,16 @@ import time
 import random
 import itertools
 import sys
-
-"""
-created by shhuan at 2019/11/30 18:18
-
-"""
-
+'\ncreated by shhuan at 2019/11/30 18:18\n\n'
 T = int(input())
 for ti in range(T):
-    N, M, K = list(map(int, input().split()))
-
+    (N, M, K) = list(map(int, input().split()))
     G = collections.defaultdict(list)
     for i in range(M):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         G[u].append(v)
         G[v].append(u)
-
     museums = [0] + [int(x) for x in input().split()]
-
     vis = [False] * (N + 1)
     counts = []
     for s in range(1, N + 1):
@@ -42,7 +32,6 @@ for ti in range(T):
                     vis[v] = True
                     q.append(v)
         counts.append(count)
-
     if len(counts) < K:
         print(-1)
     else:

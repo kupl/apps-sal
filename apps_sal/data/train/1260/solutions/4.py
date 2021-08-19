@@ -2,7 +2,7 @@ def dfs(i):
     visited[i] = True
     musuemsPossible = musuems[i]
     for j in neighbours[i]:
-        if(not visited[j]):
+        if not visited[j]:
             musuemsPossible += dfs(j)
     return musuemsPossible
 
@@ -22,18 +22,14 @@ for _ in range(t):
         a = [int(x) for x in input().split()]
         neighbours[a[0]].append(a[1])
         neighbours[a[1]].append(a[0])
-
     musuems = [0]
     m2 = [int(x) for x in input().split()]
     for i in m2:
         musuems.append(i)
-
     mususeumsBigNode = []
     for i in range(1, n + 1):
-        if(not visited[i]):
+        if not visited[i]:
             mususeumsBigNode.append(dfs(i))
-
-    # print(mususeumsBigNode)
     sorted(mususeumsBigNode)
     if len(mususeumsBigNode) < k:
         print(-1)

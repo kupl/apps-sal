@@ -1,7 +1,6 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
-    x, k = map(int, input().split())
+    (x, k) = map(int, input().split())
     a = {x}
     b = {k}
     for i in range(2, int(math.sqrt(max(x, k)) + 2)):
@@ -18,6 +17,6 @@ for _ in range(int(input())):
             ans1 += pow(i, k)
     for i in b:
         if i != 1:
-            ans2 += (i * x)
-    print(ans1, end=" ")
+            ans2 += i * x
+    print(ans1, end=' ')
     print(ans2)

@@ -1,12 +1,10 @@
-# cook your dish here
 from collections import defaultdict
-
 t = int(input())
 for _ in range(t):
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     graph = defaultdict(lambda: [])
     for _ in range(m):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         graph[u - 1].append(v - 1)
         graph[v - 1].append(u - 1)
     museums = list(map(int, input().split()))
