@@ -19,22 +19,17 @@ def prime_factorize(n):
 
 
 def main():
-    N, M = map(int, input().split())
-
-    MOD = 10**9 + 7
-
-    MAX_N = 5 * (10 ** 5)
-    # comb init
+    (N, M) = map(int, input().split())
+    MOD = 10 ** 9 + 7
+    MAX_N = 5 * 10 ** 5
     fac = [0] * MAX_N
     finv = [0] * MAX_N
     inv = [0] * MAX_N
-
     fac[0] = 1
     fac[1] = 1
     finv[0] = 1
     finv[1] = 1
     inv[1] = 1
-
     for i in range(2, MAX_N):
         fac[i] = fac[i - 1] * i % MOD
         inv[i] = -inv[MOD % i] * (MOD // i) % MOD
@@ -45,13 +40,11 @@ def main():
             return 0
         if n < 0 or k < 0:
             return 0
-        return (fac[n] * finv[n - k] % MOD) * finv[k] % MOD
-
+        return fac[n] * finv[n - k] % MOD * finv[k] % MOD
     pf = prime_factorize(M)
     pc = Counter(pf)
-
     ans = 1
-    for _, val in pc.items():
+    for (_, val) in pc.items():
         ans *= COM(val + N - 1, N - 1)
         ans %= MOD
     print(ans)

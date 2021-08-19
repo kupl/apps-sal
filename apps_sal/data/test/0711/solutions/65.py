@@ -17,7 +17,7 @@ def factorize(n):
     return facts
 
 
-MOD = 10 ** 9 + 7  # should be a prime number
+MOD = 10 ** 9 + 7
 MAX = 10 ** 5 + 100
 FACTS = [1] * (MAX + 1)
 for i in range(1, MAX + 1):
@@ -25,7 +25,7 @@ for i in range(1, MAX + 1):
 FACTINVS = [1] * (MAX + 1)
 INVS = [1] * (MAX + 1)
 for i in range(2, MAX + 1):
-    q, r = divmod(MOD, i)
+    (q, r) = divmod(MOD, i)
     INVS[i] = -INVS[r] * q % MOD
     FACTINVS[i] = FACTINVS[i - 1] * INVS[i] % MOD
 
@@ -34,9 +34,9 @@ def nCr(n, r):
     return FACTS[n] * FACTINVS[r] * FACTINVS[n - r]
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 factors = factorize(M)
 ans = 1
-for p, e in factors.items():
+for (p, e) in factors.items():
     ans = ans * nCr(N - 1 + e, e) % MOD
 print(ans)

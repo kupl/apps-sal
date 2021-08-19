@@ -1,7 +1,5 @@
 import sys
-
 MOD = 10 ** 9 + 7
-# MOD = 998244353
 
 
 def make_tables(n=10 ** 9, r=2 * 10 ** 6, p=MOD):
@@ -19,10 +17,10 @@ def make_tables(n=10 ** 9, r=2 * 10 ** 6, p=MOD):
         n_choose[i + 1] = n_choose[i] * (n - i) % p
     for i in range(r + 1):
         n_choose[i] = n_choose[i] * ifac[i] % p
-    return fac, ifac, n_choose
+    return (fac, ifac, n_choose)
 
 
-fac, ifac, n_choose = make_tables()
+(fac, ifac, n_choose) = make_tables()
 
 
 def mod_choose(n, r, p=MOD):
@@ -44,10 +42,10 @@ def sieve_of_eratosthenes(n=10 ** 6):
         for j in range(i * 2, n + 1, i):
             sieve[j] = 0
     prime_numbers = [i for i in range(2, n + 1) if sieve[i]]
-    return sieve, prime_numbers
+    return (sieve, prime_numbers)
 
 
-is_prime, prime_numbers = sieve_of_eratosthenes()
+(is_prime, prime_numbers) = sieve_of_eratosthenes()
 
 
 def prime_factorize(n):
@@ -70,17 +68,17 @@ def prime_factorize(n):
 def prime_factorize_factorial(n):
     res = dict()
     for i in range(2, n + 1):
-        for p, c in prime_factorize(i).items():
+        for (p, c) in prime_factorize(i).items():
             res[p] = res.get(p, 0) + c
     return res
 
 
-n, m = map(int, sys.stdin.readline().split())
+(n, m) = map(int, sys.stdin.readline().split())
 
 
 def main():
     res = 1
-    for p, c in prime_factorize(m).items():
+    for (p, c) in prime_factorize(m).items():
         res *= nHr(n, c)
         res %= MOD
     print(res)

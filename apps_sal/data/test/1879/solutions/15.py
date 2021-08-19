@@ -1,4 +1,3 @@
-# python2 or 3
 import sys
 import threading
 import os.path
@@ -8,8 +7,8 @@ import math
 import bisect
 import string
 from platform import python_version
-sys.setrecursionlimit(10**6)
-threading.stack_size(2**27)
+sys.setrecursionlimit(10 ** 6)
+threading.stack_size(2 ** 27)
 
 
 def main():
@@ -17,8 +16,7 @@ def main():
         input = open('input.txt', 'r')
     else:
         input = sys.stdin
-    # --------------------------------INPUT---------------------------------
-    t, x1, x2, y1, y2 = list(map(int, input.readline().split()))
+    (t, x1, x2, y1, y2) = list(map(int, input.readline().split()))
     T = t
     dirs = list(str(input.readline().rstrip('\n')))
     for i in range(len(dirs)):
@@ -44,7 +42,6 @@ def main():
         output = T - t
     else:
         output = -1
-    # -------------------------------OUTPUT----------------------------------
     if os.path.exists('output.txt'):
         open('output.txt', 'w').writelines(str(output))
     else:
@@ -53,7 +50,6 @@ def main():
 
 def __starting_point():
     main()
-# threading.Thread(target=main).start()
 
 
 __starting_point()

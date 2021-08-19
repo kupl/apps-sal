@@ -1,11 +1,10 @@
-# -*-coding:utf-8-*-
 import numpy as np
 import sys
 input = sys.stdin.readline
 
 
 def main():
-    n, k, q = map(int, input().split())
+    (n, k, q) = map(int, input().split())
     points = np.array([k] * n)
     i = 0
     while i < q:
@@ -15,9 +14,9 @@ def main():
         i += 1
     for data in points:
         if data > 0:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
 
 
 def __starting_point():

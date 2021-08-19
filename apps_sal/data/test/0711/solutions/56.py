@@ -17,9 +17,8 @@ def prime_factors(n):
     return d
 
 
-# Combination
-MOD = 10**9 + 7
-MAX = 2 * 10**5
+MOD = 10 ** 9 + 7
+MAX = 2 * 10 ** 5
 fac = [1, 1] + [0] * MAX
 finv = [1, 1] + [0] * MAX
 inv = [0, 1] + [0] * MAX
@@ -37,10 +36,10 @@ def comb(n, r):
     return fac[n] * (finv[r] * finv[n - r] % MOD) % MOD
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 ans = 1
 pf = prime_factors(M)
-for k, v in list(pf.items()):
+for (k, v) in list(pf.items()):
     ans *= comb(v + N - 1, N - 1)
     ans %= MOD
 print(ans)

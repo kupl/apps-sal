@@ -1,7 +1,10 @@
 from collections import Counter
 from functools import reduce
 import operator
-def product(it): return reduce(operator.mul, it, 1)
+
+
+def product(it):
+    return reduce(operator.mul, it, 1)
 
 
 def comb(n, max_k, mod):
@@ -15,18 +18,14 @@ def comb(n, max_k, mod):
         res[i] *= t
         t *= n - i
         t %= mod
-
-    n = reduce(lambda x, y: (x * y) % mod, range(1, max_k + 1), 1)
+    n = reduce(lambda x, y: x * y % mod, range(1, max_k + 1), 1)
     n = pow(n, mod - 2, mod)
-
     for i in reversed(range(max_k + 1)):
         res[i] *= n
         res[i] %= mod
         n *= i
         n %= mod
     return res
-
-# 素因数分解
 
 
 def prime_factors(n):
@@ -41,15 +40,11 @@ def prime_factors(n):
         yield n
 
 
-MOD = 10**9 + 7
-N, M = map(int, input().split())
-
+MOD = 10 ** 9 + 7
+(N, M) = map(int, input().split())
 factors = Counter(prime_factors(M))
-
 res = 1
-
 for c in factors.values():
     res *= comb(N - 1 + c, c, MOD)[-1]
     res %= MOD
-
 print(res)

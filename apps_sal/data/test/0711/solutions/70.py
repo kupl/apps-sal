@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-
 from collections import Counter
 from scipy.special import comb
-
-n, m = list(map(int, input().split()))
-mod = 10**9 + 7
+(n, m) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 
 
 def prime_factorize(n):
@@ -25,8 +22,7 @@ def prime_factorize(n):
 
 
 c = Counter(prime_factorize(m))
-
 ans = 1
-for key, value in list(c.items()):
+for (key, value) in list(c.items()):
     ans *= comb(value + n - 1, value, exact=True) % mod
-print((ans % mod))
+print(ans % mod)

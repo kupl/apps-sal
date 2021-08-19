@@ -1,8 +1,6 @@
 import os
 from io import BytesIO
 
-# input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
-
 
 def check(x, p):
     i = x - 1
@@ -16,7 +14,7 @@ def check(x, p):
 
 
 for _ in range(int(input())):
-    n, p, k = map(int, input().split())
+    (n, p, k) = map(int, input().split())
     a = sorted(map(int, input().split()))
     dp = [1000000000] * (n + 1)
     dp[0] = 0

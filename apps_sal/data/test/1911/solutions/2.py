@@ -3,18 +3,14 @@ def __starting_point():
     N = int(s[0])
     K = int(s[1])
     a = list(map(int, list(input().rstrip().split())))
-    # Make K-1 cuts
     diff = []
     for i in range(1, N):
         diff.append([i, a[i] - a[i - 1]])
     diff = sorted(diff, key=lambda x: -x[1])
     res = max(a) - min(a)
-    #k = K - 1
-    #print("len diff = " + str(len(diff)))
     k = 0
-    while (k < K - 1 and k < len(diff)):
+    while k < K - 1 and k < len(diff):
         res -= diff[k][1]
-        # print(res)
         k += 1
     print(res)
 

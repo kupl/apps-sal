@@ -1,17 +1,13 @@
-# Bhargey Mehta (Sophomore)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
 import bisect
-#sys.stdin = open("input.txt", "r")
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 sys.setrecursionlimit(1000000)
-
-n, m = map(int, input().split())
-c1, c2, c3 = [0], [0], [0]
+(n, m) = map(int, input().split())
+(c1, c2, c3) = ([0], [0], [0])
 for _ in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x == 3:
         c3.append(y)
     elif x == 2:
@@ -21,7 +17,6 @@ for _ in range(n):
 c1.sort(reverse=True)
 c2.sort(reverse=True)
 c3.sort(reverse=True)
-
 dp = [None for i in range(m + 1)]
 dp[0] = (0, 0, 0)
 dp[1] = (c1[0], 1, 0)
@@ -38,7 +33,6 @@ for i in range(2, m + 1):
         dp[i] = x1
     else:
         dp[i] = x2
-
 ans = 0
 cost3 = 0
 for i in range(len(c3)):
