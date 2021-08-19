@@ -1,7 +1,6 @@
 import itertools as it
 S = input()
 l = len(S)
-
 a = 0
 for i in range(l):
     for j in it.combinations(range(1, l), i):

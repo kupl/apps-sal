@@ -1,6 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = list(map(int, input().split()))
-
 S = sorted(S, reverse=True)
-
-print((sum(S[:K])))
+print(sum(S[:K]))

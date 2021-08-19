@@ -1,2 +1,2 @@
 l = input().split()
-print((len(set(l))))
+print(len(set(l)))

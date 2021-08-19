@@ -1,13 +1,12 @@
-
 def main():
-    n, m = map(int, input().split(" "))
+    (n, m) = map(int, input().split(' '))
     ls = [{} for _ in range(n)]
-    h = list(map(int, input().split(" ")))
+    h = list(map(int, input().split(' ')))
     for i in range(n):
         ls[i] = [h[i]]
     ab = []
     for i in range(m):
-        ab.append(list(map(lambda i: int(i) - 1, input().split(" "))))
+        ab.append(list(map(lambda i: int(i) - 1, input().split(' '))))
     for i in range(m):
         if ls[ab[i][0]][0] >= ls[ab[i][1]][0]:
             ls[ab[i][1]].append(ls[ab[i][0]][0] + 1)

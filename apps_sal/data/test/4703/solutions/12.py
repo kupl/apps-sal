@@ -9,7 +9,6 @@ sa = [''] * (2 * l - 1)
 for i in range(len(sa)):
     if i % 2 == 0:
         sa[i] = S[i // 2]
-
 ans = 0
 for i in range(l):
     for j in list(it.combinations(ls, i)):

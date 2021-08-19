@@ -9,5 +9,4 @@ for i in range(initial):
     count += a
 for c in range(total - initial):
     count += b
-
 print(count)

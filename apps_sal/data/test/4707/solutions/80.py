@@ -1,2 +1,2 @@
 area = input()
-print(area.count("1"))
+print(area.count('1'))

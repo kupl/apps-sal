@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 li = list(map(int, input().split()))
 li.sort(reverse=True)
 sum = 0

@@ -1,6 +1,5 @@
 N = int(input())
 K = int(input())
-
 ans = 1
 
 
@@ -17,5 +16,4 @@ for i in range(N):
         ans = A(ans)
     else:
         ans = B(ans)
-
 print(ans)

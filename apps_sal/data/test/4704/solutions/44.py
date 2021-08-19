@@ -11,14 +11,12 @@ sys.setrecursionlimit(4100000)
 def __starting_point():
     N = int(input())
     A = list(map(int, input().split()))
-
     acc_A = []
     acc = 0
     for a in A:
         acc += a
         acc_A.append(acc)
-
-    minv = 10e10
+    minv = 100000000000.0
     for i in range(0, N - 1):
         minv = min(abs(acc_A[i] - (acc_A[-1] - acc_A[i])), minv)
     print(minv)

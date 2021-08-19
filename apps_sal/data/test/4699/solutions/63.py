@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 d = list(input().split())
 while True:
     flag2 = True

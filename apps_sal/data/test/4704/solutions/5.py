@@ -1,6 +1,6 @@
 N = int(input())
 a = [int(x) for x in input().split()]
-ans = 10**9 * N
+ans = 10 ** 9 * N
 front = 0
 back = sum(a)
 for i in range(N - 1):

@@ -6,11 +6,9 @@ cost = 0
 if n > k:
     for i in range(k):
         cost += x
-
     for j in range(k, n):
         cost += y
     print(cost)
-
 elif n <= k:
     for i in range(n):
         cost += x

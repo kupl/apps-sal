@@ -1,5 +1,5 @@
 input()
-x, r = 0, 0
+(x, r) = (0, 0)
 for i in input():
     if i == 'I':
         x += 1

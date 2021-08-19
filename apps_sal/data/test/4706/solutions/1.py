@@ -3,7 +3,7 @@ def resolve():
     for i in range(3):
         line = input()
         matrix.append(line)
-    ans = ""
+    ans = ''
     for i in range(3):
         ans += matrix[i][i]
     print(ans)

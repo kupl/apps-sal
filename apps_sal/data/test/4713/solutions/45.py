@@ -1,7 +1,6 @@
 def answer(n: int, s: str) -> int:
     while 'DI' in s:
         s = s.replace('DI', '')
-
     return s.count('I')
 
 

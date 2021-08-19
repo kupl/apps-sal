@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 data = list(map(int, input().split()))
 y = sorted(data)
 s = 0

@@ -8,4 +8,4 @@ for i in S:
     if i == 'D':
         x -= 1
     L.append(x)
-print((max(L)))
+print(max(L))

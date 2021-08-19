@@ -3,7 +3,7 @@ s = input()
 x = 0
 m = 0
 for i in range(n):
-    if s[i] == "I":
+    if s[i] == 'I':
         x += 1
         m = max(x, m)
     else:

@@ -1,6 +1,5 @@
 x = int(input())
-
 if 1200 > x:
-    print("ABC")
+    print('ABC')
 else:
-    print("ARC")
+    print('ARC')

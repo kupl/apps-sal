@@ -6,5 +6,4 @@ for i in range(N):
         X += X
     else:
         X += K
-
 print(X)

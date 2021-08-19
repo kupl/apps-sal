@@ -8,7 +8,7 @@ def operator(x, K, N):
 
 def main():
     with open(0) as f:
-        N, K = list(map(int, f.read().split()))
+        (N, K) = list(map(int, f.read().split()))
     ans = operator(1, K, N)
     print(ans)
 

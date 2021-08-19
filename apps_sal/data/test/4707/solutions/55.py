@@ -1,4 +1,5 @@
-def getints(): return list(map(int, input().split()))
+def getints():
+    return list(map(int, input().split()))
 
 
 s = input()

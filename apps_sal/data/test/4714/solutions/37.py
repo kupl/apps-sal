@@ -1,4 +1,4 @@
-A, B = map(str, input().split())
+(A, B) = map(str, input().split())
 l = list(range(int(A), int(B) + 1))
 c = 0
 for i in l:

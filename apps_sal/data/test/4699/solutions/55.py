@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 mat = input().split()
 while True:
     FIN = 0

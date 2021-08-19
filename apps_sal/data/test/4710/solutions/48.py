@@ -1,7 +1,6 @@
 x = int(input())
-
 if x >= 1200:
-    ans = "ARC"
+    ans = 'ARC'
 else:
-    ans = "ABC"
+    ans = 'ABC'
 print(ans)

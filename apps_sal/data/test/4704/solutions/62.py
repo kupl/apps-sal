@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-ans = float("inf")
+ans = float('inf')
 x = 0
 b = sum(a)
 for i in range(n):

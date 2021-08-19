@@ -1,6 +1,5 @@
 n = int(input())
 k = int(input())
-
 cnt = 1
 for _ in range(n):
     if cnt <= k:

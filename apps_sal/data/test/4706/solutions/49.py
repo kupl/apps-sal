@@ -1,4 +1,3 @@
-
 c1 = list(map(str, input()))
 c2 = list(map(str, input()))
 c3 = list(map(str, input()))

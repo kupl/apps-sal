@@ -1,6 +1,5 @@
 x_str = input()
 x = int(x_str)
-
 if x == 1:
     print(0)
 elif x == 0:

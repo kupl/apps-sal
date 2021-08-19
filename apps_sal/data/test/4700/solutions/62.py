@@ -11,7 +11,6 @@ for i in range(M):
         dic[b].append(a)
     else:
         dic[b] = [a]
-
 ans = 0
 for i in range(1, N + 1):
     s = H[i - 1]
@@ -25,5 +24,4 @@ for i in range(1, N + 1):
             ans += 1
     else:
         ans += 1
-
 print(ans)

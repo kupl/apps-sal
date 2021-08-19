@@ -1,8 +1,8 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 D = [int(x) for x in input().split()]
 D = set(D)
 kouho = N
-while(1):
+while 1:
     lenkouho = len(str(kouho))
     flag = 1
     for i in range(lenkouho):

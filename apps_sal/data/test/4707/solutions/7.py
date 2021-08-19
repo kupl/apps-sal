@@ -1,7 +1,6 @@
 s = list(input())
 count = 0
 for i in range(0, len(s)):
-    if s[i] == "1":
+    if s[i] == '1':
         count += 1
-
 print(count)

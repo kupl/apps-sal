@@ -2,14 +2,11 @@ import itertools as it
 import copy
 S = input()
 l = len(S)
-
 ls = [i for i in range(1, l)]
-
 sa = []
 for i in range(len(S)):
     sa += [S[i], '']
 sa = sa[:-1]
-
 ans = 0
 for i in range(l):
     for j in it.combinations(ls, i):

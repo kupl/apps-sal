@@ -1,5 +1,4 @@
-total, k = list(map(int, input().split()))
-
+(total, k) = list(map(int, input().split()))
 d = list(map(int, input().split()))
 
 
@@ -11,7 +10,7 @@ def find_lowest_denomination(total, d):
     res = None
     for i in range(total, 99999):
         digits = list(total_to_digits(i))
-        if not (set(digits) & set(d)):
+        if not set(digits) & set(d):
             print(i)
             return
 

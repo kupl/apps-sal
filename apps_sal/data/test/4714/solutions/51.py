@@ -7,11 +7,9 @@ def isPal(s):
     return f
 
 
-a, b = list(map(int, input().split()))
-
+(a, b) = list(map(int, input().split()))
 ans = 0
 for i in range(a, b + 1):
-    if(isPal(i)):
+    if isPal(i):
         ans += 1
-
 print(ans)

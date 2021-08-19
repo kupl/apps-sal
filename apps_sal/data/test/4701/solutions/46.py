@@ -4,7 +4,7 @@ j = 1
 
 
 def func(x, y):
-    r = (x * 2) if (x * 2) < (x + y) else (x + y)
+    r = x * 2 if x * 2 < x + y else x + y
     return r
 
 

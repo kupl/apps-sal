@@ -7,6 +7,5 @@ hlf = s / 2
 for i in range(n - 1):
     val += a[i]
     l.append(abs(hlf - val))
-
 val = min(l)
-print((int(val * 2)))
+print(int(val * 2))

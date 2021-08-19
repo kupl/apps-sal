@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 D = list(input().split())
-
 while True:
     n = str(N)
     for i in range(K):
@@ -11,5 +10,4 @@ while True:
             break
     if f == 0:
         break
-
 print(N)

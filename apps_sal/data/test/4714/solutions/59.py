@@ -1,6 +1,5 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
-
 for i in range(a // 10000, b // 10000 + 1):
     for j in range(0, 10):
         for k in range(0, 10):

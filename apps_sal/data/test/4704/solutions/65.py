@@ -1,7 +1,6 @@
 N = int(input())
-*A, = map(int, input().split())
+(*A,) = map(int, input().split())
 t = sum(A)
-
 x = 0
 ans = float('inf')
 for i in range(N - 1):

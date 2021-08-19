@@ -1,4 +1,4 @@
-s, o, t = input().split()
+(s, o, t) = input().split()
 if o == '+':
     a = int(s) + int(t)
 else:

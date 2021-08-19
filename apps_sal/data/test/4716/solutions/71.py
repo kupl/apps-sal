@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split(' ')))
+(n, k) = list(map(int, input().split(' ')))
 length = list(map(int, input().split(' ')))
 length.sort(reverse=True)
 max_length = sum(length[:k])

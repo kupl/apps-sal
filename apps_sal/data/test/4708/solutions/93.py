@@ -1,4 +1,3 @@
-
 n = int(input())
 k = int(input())
 x = int(input())

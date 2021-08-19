@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 x = 0
 ans = 0
 for a in s:

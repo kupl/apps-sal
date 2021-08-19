@@ -10,9 +10,9 @@ def find_ok(x, Oks):
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     Nos = set(map(int, input().split()))
-    while(1):
+    while 1:
         x = str(n)
         set_n = set()
         for digit in x:

@@ -1,5 +1,4 @@
 lst = input().split()
-
 count = 0
 
 
@@ -13,5 +12,4 @@ def judge(n):
 for i in range(int(lst[0]), int(lst[1]) + 1):
     if judge(i):
         count += 1
-
 print(count)

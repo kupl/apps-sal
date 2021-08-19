@@ -15,7 +15,7 @@ def main(n, k, a):
 
 
 def __starting_point():
-    n, k = np.fromstring(read(), dtype=np.int64, sep=' ')
+    (n, k) = np.fromstring(read(), dtype=np.int64, sep=' ')
     a = np.fromstring(read(), dtype=np.int64, sep=' ')
     main(n, k, a)
 

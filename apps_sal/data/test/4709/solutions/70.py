@@ -1,1 +1,1 @@
-print(eval("".join(list(input().split()))))
+print(eval(''.join(list(input().split()))))

@@ -1,5 +1,4 @@
 from itertools import accumulate
-
 n = int(input())
 A = list(map(int, input().split()))
 AA = list(accumulate([0] + A))

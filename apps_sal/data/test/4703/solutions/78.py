@@ -12,6 +12,6 @@ for p in product([0, 1], repeat=n - 1):
         else:
             ans += int(wk)
             wk = s[index]
-    if wk != "":
+    if wk != '':
         ans += int(wk)
 print(ans)

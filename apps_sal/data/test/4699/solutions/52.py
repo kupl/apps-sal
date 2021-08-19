@@ -1,5 +1,5 @@
-N, K = map(int, input().split())
-*D, = input().split()
+(N, K) = map(int, input().split())
+(*D,) = input().split()
 ok = 1
 while ok:
     ans = list(str(N))

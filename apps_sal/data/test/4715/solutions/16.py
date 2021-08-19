@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 data = [a]
 if not b in data:
     data.append(b)

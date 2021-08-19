@@ -2,7 +2,6 @@ n = int(input())
 s = input()
 x = 0
 y = 0
-
 for i in range(n):
     if s[i] == 'I':
         x += 1
@@ -10,5 +9,4 @@ for i in range(n):
             y = x
     else:
         x -= 1
-
 print(y)

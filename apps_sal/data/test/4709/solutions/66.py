@@ -1,10 +1,9 @@
 s = input()
-a, op, b = s.split()
+(a, op, b) = s.split()
 a = int(a)
 b = int(b)
-if op == "+":
+if op == '+':
     c = a + b
 else:
     c = a - b
-
 print(c)

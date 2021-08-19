@@ -1,4 +1,4 @@
-N, K = input().split()
+(N, K) = input().split()
 D = list(map(int, input().split()))
 ans = []
 a = int(N[0])
@@ -42,9 +42,9 @@ while y > 0:
         while u in D:
             u += 1
             ans[y - 1] = str(u)
-    if ans[y - 1] != "10":
+    if ans[y - 1] != '10':
         y = 0
     else:
         y -= 1
         ans[y] = r
-print("".join(ans))
+print(''.join(ans))

@@ -1,4 +1,4 @@
-n, k = input().split()
+(n, k) = input().split()
 l = list(map(int, input().split()))
 checkNum = [i for i in range(11)]
 
@@ -12,8 +12,7 @@ def find(x):
 
 for i in l:
     checkNum[find(i)] = checkNum[find(i + 1)]
-
-fin = ""
+fin = ''
 for i in range(len(n)):
     first = int(n[i])
     k = find(first)
@@ -25,5 +24,4 @@ for i in range(len(n)):
         else:
             fin = str(find(1)) + str(find(0)) * len(n)
         break
-
 print(fin)

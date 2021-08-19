@@ -1,1 +1,1 @@
-print((len(set(input().split()))))
+print(len(set(input().split())))

@@ -9,5 +9,4 @@ for i in range(n):
     elif ans[i] == 'D':
         count -= 1
         a.add(count)
-
 print(max(max(a), 0))

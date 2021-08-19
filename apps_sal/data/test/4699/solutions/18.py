@@ -5,9 +5,8 @@ def testa(n, d):
     return 1
 
 
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 d = [int(i) for i in input().split()]
-
 while not testa(n, d):
     n += 1
 print(n)

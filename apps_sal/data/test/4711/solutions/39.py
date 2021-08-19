@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 
 
 def answer(a: int, b: int, c: int) -> int:

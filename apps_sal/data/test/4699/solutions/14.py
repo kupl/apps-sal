@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 D = list(map(int, input().split()))
 
 
@@ -8,7 +8,6 @@ def f(n, x):
             print(x)
             return
         return
-
     for i in range(10):
         if i in D:
             continue
@@ -16,7 +15,7 @@ def f(n, x):
 
 
 f(len(str(N)), 0)
-ans = ""
+ans = ''
 for i in range(1, 10):
     if i not in D:
         ans = str(i)

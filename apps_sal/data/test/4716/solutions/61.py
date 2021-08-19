@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = input().split()
 c = [int(i) for i in c]
 x = 0

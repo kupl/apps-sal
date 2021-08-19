@@ -12,7 +12,7 @@ for j in pcomb:
         npmc = 0
         F = S
         for m in pcomb2:
-            F = F[:m + npmc] + "+" + F[m + npmc:]
+            F = F[:m + npmc] + '+' + F[m + npmc:]
             npmc += 1
         sum += eval(F)
         k += 1

@@ -1,4 +1,4 @@
-A, B = list(map(str, input().split()))
+(A, B) = list(map(str, input().split()))
 La = [int(A[:3]), int(A[3:])]
 Lb = [int(B[:3]), int(B[3:])]
 L = 900 - (La[0] - 100) - (999 - Lb[0])

@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 ans_cou = 0
 for i in range(A, B + 1):
     str_i = str(i)

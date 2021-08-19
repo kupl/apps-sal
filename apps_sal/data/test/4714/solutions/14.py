@@ -1,4 +1,4 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 
 
 def ans090(A: int, B: int):
@@ -9,4 +9,4 @@ def ans090(A: int, B: int):
     return ans_count
 
 
-print((ans090(A, B)))
+print(ans090(A, B))

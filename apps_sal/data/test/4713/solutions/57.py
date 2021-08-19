@@ -1,6 +1,5 @@
 N = int(input())
 S = input()
-
 result = 0
 x = 0
 for i in S:
@@ -9,5 +8,4 @@ for i in S:
     else:
         x -= 1
     result = max(result, x)
-
 print(result)

@@ -1,6 +1,5 @@
 N = int(input())
 S = list(input())
-
 counter = 0
 li = [0]
 for i in range(N):

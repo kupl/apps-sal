@@ -7,7 +7,6 @@ def solve():
             ans *= 2
         else:
             ans += k
-
     print(ans)
 
 

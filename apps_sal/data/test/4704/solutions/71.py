@@ -4,7 +4,6 @@ s = sum(c)
 l = []
 x = 0
 y = s
-
 for i in c[:n - 1]:
     x += i
     y -= i

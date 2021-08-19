@@ -1,6 +1,5 @@
 N = int(input())
 S = input()
-
 max_num = 0
 idx = 0
 x = 0
@@ -11,5 +10,4 @@ while idx < N:
         x -= 1
     max_num = max(x, max_num)
     idx += 1
-
 print(max_num)
