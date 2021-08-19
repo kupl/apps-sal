@@ -1,4 +1,4 @@
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 a = 1
 x = X
 mul = min(max(X, 2), 2)

@@ -12,8 +12,6 @@ for i in range(n):
         r = i + 1
     else:
         s.add(lst[i])
-
-
 if r != n and r != -1:
     ans[-1][1] = n
 if r == -1:

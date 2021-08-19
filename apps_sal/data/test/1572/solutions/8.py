@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 b = 0
 c = 0
 for i in range(n - 2):
@@ -10,7 +9,6 @@ for i in range(n - 2):
             b = c
     else:
         c = 0
-
 if n <= 2:
     print(n)
 else:

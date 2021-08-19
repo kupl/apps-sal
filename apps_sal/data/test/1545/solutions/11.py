@@ -1,4 +1,4 @@
-N, s, l = int(input()), [ord(x) - ord('a') for x in input()], [int(x) for x in input().split()]
+(N, s, l) = (int(input()), [ord(x) - ord('a') for x in input()], [int(x) for x in input().split()])
 arr = [[1, l[s[0]]]]
 total = 1
 ma = 1
@@ -10,7 +10,7 @@ for c in s[1:]:
         arr[i][1] = min(arr[i][1], l[c])
         if i + 1 >= arr[i][1]:
             arr = arr[:i]
-            if(t > i):
+            if t > i:
                 t = 0
                 mi += 1
             break

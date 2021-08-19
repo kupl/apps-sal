@@ -12,25 +12,22 @@ def arr_inp(n):
 
 
 def main():
-    n, m = arr_inp(1)
-    c, ans, ma = arr_inp(1), float('inf'), 0
+    (n, m) = arr_inp(1)
+    (c, ans, ma) = (arr_inp(1), float('inf'), 0)
     mem = defaultdict(set)
-
     for i in range(m):
-        u, v = arr_inp(1)
+        (u, v) = arr_inp(1)
         u -= 1
         v -= 1
         if c[u] != c[v]:
             mem[c[u]].add(c[v])
             mem[c[v]].add(c[u])
-
-    for i, j in list(mem.items()):
+    for (i, j) in list(mem.items()):
         if len(j) > ma:
             ma = max(ma, len(j))
             ans = i
         if len(j) == ma:
             ans = min(ans, i)
-
     print(ans if ans != float('inf') else min(c))
 
 

@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -14,4 +13,4 @@ def read_is(n=1):
 n = int(input())
 ls = read_i()
 ls.sort()
-print(sum(ls[:n // 2])**2 + sum(ls[n // 2:])**2)
+print(sum(ls[:n // 2]) ** 2 + sum(ls[n // 2:]) ** 2)

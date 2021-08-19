@@ -1,5 +1,5 @@
 __author__ = 'Ekaterina'
-n, r, avg = (int(m) for m in input().split())
+(n, r, avg) = (int(m) for m in input().split())
 exams = []
 for i in range(n):
     input_i = [int(m) for m in input().split()]

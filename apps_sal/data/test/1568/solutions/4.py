@@ -1,6 +1,6 @@
-n, a, b, c, t = map(int, input().split())
+(n, a, b, c, t) = map(int, input().split())
 arr = list(map(int, input().split()))
-if(b < c):
+if b < c:
     ans = 0
     for i in range(n):
         ans += a + (c - b) * (t - arr[i])

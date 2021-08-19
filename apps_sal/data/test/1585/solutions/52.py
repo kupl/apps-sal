@@ -6,7 +6,7 @@ def lmi():
 
 
 def main():
-    X, Y = lmi()
+    (X, Y) = lmi()
     cur = X
     result = 0
     while cur <= Y:

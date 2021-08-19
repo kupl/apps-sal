@@ -2,18 +2,16 @@ import sys
 
 
 def solve():
-    N, K = map(int, input().split())
-    MOD = 10**9 + 7
-
+    (N, K) = map(int, input().split())
+    MOD = 10 ** 9 + 7
     U = []
     V = []
-    for x in range(1, int(N**.5) + 1):
+    for x in range(1, int(N ** 0.5) + 1):
         U.append(x)
         if x < N // x:
             V.append(N // x)
     V.reverse()
     U.extend(V)
-
     L = len(U)
     prv = 0
     R = []
@@ -23,10 +21,9 @@ def solve():
 
     def gen(R, S):
         r = 0
-        for p, s in zip(R, S):
+        for (p, s) in zip(R, S):
             r = (p * s + r) % MOD
             yield r
-
     S = [1] * (L + 1)
     S[-1] = 0
     for k in range(K):

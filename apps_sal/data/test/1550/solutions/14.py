@@ -8,5 +8,5 @@ for i in range(n):
     if c < val:
         val = list(c)
     c.append(c[0])
-    del(c[0])
+    del c[0]
 print(''.join(map(str, val)))

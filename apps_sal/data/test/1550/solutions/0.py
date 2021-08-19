@@ -1,6 +1,4 @@
-
 def modify(string, index):
-
     if string[index] == '0':
         key = 0
     else:

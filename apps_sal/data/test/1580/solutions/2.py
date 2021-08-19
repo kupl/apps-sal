@@ -1,7 +1,7 @@
-class UnionFind():
-    '''
+class UnionFind:
+    """
     cited from https://note.nkmk.me/python-union-find/
-    '''
+    """
 
     def __init__(self, n):
         self.n = n
@@ -17,13 +17,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -32,17 +29,15 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
 
 
-N, M = list(map(int, input().split()))
-
+(N, M) = list(map(int, input().split()))
 u = UnionFind(N)
 for i in range(M):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     u.union(x - 1, y - 1)
-
-print((u.group_count()))
+print(u.group_count())

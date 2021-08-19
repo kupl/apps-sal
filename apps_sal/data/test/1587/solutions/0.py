@@ -1,6 +1,5 @@
 n = int(input())
 c = input()
-
 w = 0
 r = c.count('R')
 i = 0

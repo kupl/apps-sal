@@ -1,5 +1,5 @@
 from math import ceil
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 drinks = [False for i in range(k + 1)]
 satisfied = 0
 for i in range(n):

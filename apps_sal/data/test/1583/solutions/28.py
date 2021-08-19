@@ -1,5 +1,5 @@
 import math as m
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 x /= a
 P = m.acos(-1.0)
 if x > a * b / 2:

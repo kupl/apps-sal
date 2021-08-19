@@ -1,9 +1,9 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 matrix = []
 ans = -1000000
 kol = 0
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     matrix.append((a, b))
 matrix.sort()
 pr = [0]
@@ -21,6 +21,5 @@ for i in range(n):
             l = mi
         else:
             r = mi
-
     ans = max(ans, pr[l + 1] - pr[i])
 print(ans)

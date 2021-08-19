@@ -17,11 +17,11 @@ def dfs(i):
                 st.append(v)
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 c = list(map(int, input().split()))
 g = [[] for i in range(n + 1)]
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     g[x].append(y)
     g[y].append(x)
 d = defaultdict(set)

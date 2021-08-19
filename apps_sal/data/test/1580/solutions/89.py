@@ -1,14 +1,12 @@
 from collections import defaultdict
-
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 edges = defaultdict(list)
 for _ in range(M):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     x -= 1
     y -= 1
     edges[x].append(y)
     edges[y].append(x)
-
 is_visited = [False] * N
 
 

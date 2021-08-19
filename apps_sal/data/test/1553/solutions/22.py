@@ -1,6 +1,5 @@
 import sys
-
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 l = list(map(int, sys.stdin.readline().split()))
 c = l.copy()
 i = 0

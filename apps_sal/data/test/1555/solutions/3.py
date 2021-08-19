@@ -45,7 +45,7 @@ def prog(mass, n, m):
         return arr
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n + m <= 6:
     now = []
     for i in range(n):
@@ -86,7 +86,6 @@ else:
         mass1[i].append(i)
     mass.sort()
     mass1.sort()
-
     arr = prog(mass, n, m)
     arr1 = prog(mass1, m, n)
     if arr == False or arr1 == False:

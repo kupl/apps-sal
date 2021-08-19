@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 dict1 = {}
 for i in range(n):
     x = int(input())
@@ -10,12 +10,12 @@ for i in range(n):
 ans = 0
 flagcount = 0
 for i in list(dict1.keys()):
-    ans += ((dict1[i]) // 2) * 2
-    if(dict1[i] % 2 != 0):
+    ans += dict1[i] // 2 * 2
+    if dict1[i] % 2 != 0:
         flagcount += 1
-if(n % 2 == 0):
-    ans += (flagcount) // 2
+if n % 2 == 0:
+    ans += flagcount // 2
 else:
-    ans += (flagcount) // 2
+    ans += flagcount // 2
     ans += 1
 print(ans)

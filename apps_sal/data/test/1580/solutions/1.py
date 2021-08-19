@@ -2,17 +2,33 @@ import heapq as hq
 import itertools
 import math
 import collections
-def ma(): return map(int, input().split())
-def lma(): return list(map(int, input().split()))
-def tma(): return tuple(map(int, input().split()))
-def ni(): return int(input())
-def yn(fl): return print("Yes") if fl else print("No")
+
+
+def ma():
+    return map(int, input().split())
+
+
+def lma():
+    return list(map(int, input().split()))
+
+
+def tma():
+    return tuple(map(int, input().split()))
+
+
+def ni():
+    return int(input())
+
+
+def yn(fl):
+    return print('Yes') if fl else print('No')
 
 
 ceil = math.ceil
 
 
-class unionfind():
+class unionfind:
+
     def __init__(self, n):
         self.n = n
         self.par = list(range(n))
@@ -36,7 +52,7 @@ class unionfind():
             return
         else:
             if self.rank[x] < self.rank[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
             self.par[y] = x
@@ -55,10 +71,10 @@ class unionfind():
         return s
 
 
-n, m = ma()
+(n, m) = ma()
 uf = unionfind(n)
 for i in range(m):
-    x, y, z = ma()
+    (x, y, z) = ma()
     uf.unite(x - 1, y - 1)
 s = uf.parent_set()
 print(len(s))

@@ -1,9 +1,9 @@
 import math
-n, m, k, q = list(map(int, input().split()))
+(n, m, k, q) = list(map(int, input().split()))
 right = [-1] * n
 left = [-1] * n
 for i in range(k):
-    row, col = list(map(int, input().split()))
+    (row, col) = list(map(int, input().split()))
     row -= 1
     col -= 1
     if right[row] == -1:
@@ -49,19 +49,19 @@ for i in range(1, n):
     rl1: int
     rl2: int
     if left_1b != -1:
-        ll1 = (left[lastn] - left_1b) + abs(right[i] - left_1b)
+        ll1 = left[lastn] - left_1b + abs(right[i] - left_1b)
     else:
         ll1 = math.inf
     if left_2b != -1:
-        ll2 = (left_2b - left[lastn]) + abs(right[i] - left_2b)
+        ll2 = left_2b - left[lastn] + abs(right[i] - left_2b)
     else:
         ll2 = math.inf
     if right_1b != -1:
-        rl1 = (right[lastn] - right_1b) + abs(right[i] - right_1b)
+        rl1 = right[lastn] - right_1b + abs(right[i] - right_1b)
     else:
         rl1 = math.inf
     if right_2b != -1:
-        rl2 = (right_2b - right[lastn]) + abs(right[i] - right_2b)
+        rl2 = right_2b - right[lastn] + abs(right[i] - right_2b)
     else:
         rl2 = math.inf
     dleft_new = min(dleft + min(ll1, ll2), dright + min(rl1, rl2)) + ilen
@@ -70,22 +70,22 @@ for i in range(1, n):
     rr1: int
     rr2: int
     if left_1b != -1:
-        lr1 = (left[lastn] - left_1b) + abs(left[i] - left_1b)
+        lr1 = left[lastn] - left_1b + abs(left[i] - left_1b)
     else:
         lr1 = math.inf
     if left_2b != -1:
-        lr2 = (left_2b - left[lastn]) + abs(left[i] - left_2b)
+        lr2 = left_2b - left[lastn] + abs(left[i] - left_2b)
     else:
         lr2 = math.inf
     if right_1b != -1:
-        rr1 = (right[lastn] - right_1b) + abs(left[i] - right_1b)
+        rr1 = right[lastn] - right_1b + abs(left[i] - right_1b)
     else:
         rr1 = math.inf
     if right_2b != -1:
-        rr2 = (right_2b - right[lastn]) + abs(left[i] - right_2b)
+        rr2 = right_2b - right[lastn] + abs(left[i] - right_2b)
     else:
         rr2 = math.inf
     dright_new = min(dleft + min(lr1, lr2), dright + min(rr1, rr2)) + ilen
-    dleft, dright = dleft_new, dright_new
+    (dleft, dright) = (dleft_new, dright_new)
     lastn = i
 print(min(dleft, dright) + lastn)

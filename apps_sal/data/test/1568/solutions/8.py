@@ -1,4 +1,4 @@
-n, A, B, C, T = list(map(int, input().split()))
+(n, A, B, C, T) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 ans = A * n
 if B < C:

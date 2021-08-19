@@ -2,7 +2,6 @@ import math
 from decimal import *
 import sys
 from fractions import Fraction
-
 inp = input().split()
 n = int(inp[0])
 m = int(inp[1])

@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 if n % 2 == 0:
     a = 'rb' * (n // 2)
     b = 'br' * (n // 2)
@@ -17,7 +16,6 @@ for i in range(n):
     elif a[i] == 'b' and s[i] == 'r':
         bb += 1
         continue
-
 res.append(max(rr, bb))
 rr = 0
 bb = 0
@@ -28,7 +26,5 @@ for i in range(n):
     elif b[i] == 'b' and s[i] == 'r':
         bb += 1
         continue
-
 res.append(max(rr, bb))
-
 print(min(res))

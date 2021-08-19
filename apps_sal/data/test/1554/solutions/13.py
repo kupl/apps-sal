@@ -19,4 +19,4 @@ else:
         ans_list[-1][1] = n
     print(ans)
     for i in ans_list:
-        print(' '.join(str(e) for e in i))
+        print(' '.join((str(e) for e in i)))

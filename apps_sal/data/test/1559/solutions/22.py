@@ -2,7 +2,7 @@ l = int(input())
 a = input()
 lena = len(a)
 if lena % l != 0:
-    ans = "1" + ("0" * (l - 1))
+    ans = '1' + '0' * (l - 1)
     ans = ans * (lena // l + 1)
     print(ans)
 else:
@@ -16,8 +16,8 @@ else:
         elif now < a[i * l:(i + 1) * l]:
             break
     if flag == 0:
-        if now.count("9") == l:
-            now = "1" + "0" * (l - 1)
+        if now.count('9') == l:
+            now = '1' + '0' * (l - 1)
             seg += 1
         else:
             now = str(int(now) + 1)

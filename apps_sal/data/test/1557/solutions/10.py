@@ -10,8 +10,8 @@ def li():
     return list(mi())
 
 
-h1, a1, c1 = mi()
-h2, a2 = mi()
+(h1, a1, c1) = mi()
+(h2, a2) = mi()
 ans = []
 while h2 > 0:
     h1 -= a2

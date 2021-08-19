@@ -6,7 +6,6 @@ for i in s:
         c1 += 1
     else:
         c2 += 1
-
 if c1 > c2:
     print('Anton')
 elif c1 < c2:

@@ -6,13 +6,13 @@ def main():
     C = list(input())
     R = []
     W = []
-    for i, c in enumerate(C):
+    for (i, c) in enumerate(C):
         if c == 'R':
             R.append(-i)
         else:
             W.append(i)
     if len(R) == 0 or len(W) == 0:
-        print((0))
+        print(0)
         return
     heapq.heapify(R)
     heapq.heapify(W)

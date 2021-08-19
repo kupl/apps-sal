@@ -10,10 +10,9 @@ def main():
     X = [set() for _ in range(MAXS)]
     Y = [set() for _ in range(MAXS)]
     for _ in range(N):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         X[x].add(y)
         Y[y].add(x)
-
     used_x = [0] * MAXS
     used_y = [0] * MAXS
     ans = -N
@@ -27,7 +26,7 @@ def main():
         max_width = {i}
         stack = [(i, 0)]
         while stack:
-            v, typ = stack.pop()
+            (v, typ) = stack.pop()
             if typ == 0:
                 for y in X[v]:
                     if used_y[y]:

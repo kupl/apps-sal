@@ -9,7 +9,7 @@ flagm = [(-1, -1, i) for i in range(0, m)]
 for i in range(0, n):
     mx.append([0] * m)
 for i in range(0, k):
-    temp = (list(map(int, input().split())))
+    temp = list(map(int, input().split()))
     if temp[0] == 1:
         flagn[temp[1] - 1] = (i, temp[2], temp[1] - 1)
     else:
@@ -19,9 +19,9 @@ flagm.sort(key=lambda x: x[0])
 pntn = 0
 pntm = 0
 for i in range(0, n + m):
-    if ((pntn < n) & (pntm < m)):
+    if (pntn < n) & (pntm < m):
         if flagn[pntn][0] <= flagm[pntm][0]:
-            if (flagn[pntn][0] != -1):
+            if flagn[pntn][0] != -1:
                 for j in range(0, m):
                     mx[flagn[pntn][2]][j] = flagn[pntn][1]
             i += 1
@@ -33,13 +33,13 @@ for i in range(0, n + m):
             i += 1
             pntm += 1
     else:
-        if (pntn < n):
-            if (flagn[pntn][0] != -1):
+        if pntn < n:
+            if flagn[pntn][0] != -1:
                 for j in range(0, m):
                     mx[flagn[pntn][2]][j] = flagn[pntn][1]
             i += 1
             pntn += 1
-        if (pntm < m):
+        if pntm < m:
             if flagm[pntm][0] != -1:
                 for j in range(0, n):
                     mx[j][flagm[pntm][2]] = flagm[pntm][1]

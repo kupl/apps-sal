@@ -1,4 +1,4 @@
-n, r, avg = list(map(int, input().split()))
+(n, r, avg) = list(map(int, input().split()))
 a = [list(reversed(list(map(int, input().split())))) for i in range(n)]
 a.sort()
 cur = 0

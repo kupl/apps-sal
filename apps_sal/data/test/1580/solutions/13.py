@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.root = [-1] * n
@@ -32,10 +33,10 @@ class UnionFind():
         return -self.root[self.find(x) - 1]
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 uf = UnionFind(N)
 for i in range(M):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     uf.unite(x, y)
 s = set()
 ans = 0

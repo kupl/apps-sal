@@ -8,4 +8,4 @@ for i in range(val):
     x += l[i]
 for i in range(val, n):
     y += l[i]
-print((x**2) + (y**2))
+print(x ** 2 + y ** 2)

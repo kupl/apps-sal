@@ -8,8 +8,8 @@ for i in s:
     else:
         d += 1
 if a > d:
-    print("Anton")
+    print('Anton')
 elif d > a:
-    print("Danik")
+    print('Danik')
 else:
-    print("Friendship")
+    print('Friendship')

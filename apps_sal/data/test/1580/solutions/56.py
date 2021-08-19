@@ -1,7 +1,8 @@
 class UnionFind:
+
     def __init__(self, N):
         self.root = list(range(N))
-        self.size = [1] * (N)
+        self.size = [1] * N
 
     def find_root(self, x):
         root = self.root
@@ -15,7 +16,7 @@ class UnionFind:
         y = self.find_root(y)
         if x == y:
             return
-        sx, sy = self.size[x], self.size[y]
+        (sx, sy) = (self.size[x], self.size[y])
         if sx < sy:
             self.root[x] = y
             self.size[y] += sx
@@ -24,19 +25,16 @@ class UnionFind:
             self.size[x] += sy
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 xyz = []
 for i in range(m):
     xyz.append(list(map(int, input().split())))
-
-
 uf = UnionFind(n)
-
 answer = []
 find_root = uf.find_root
 merge = uf.merge
 for i in range(m):
-    x, y, z = xyz[i][0] - 1, xyz[i][1] - 1, xyz[i][2]
+    (x, y, z) = (xyz[i][0] - 1, xyz[i][1] - 1, xyz[i][2])
     merge(x, y)
 s = set([])
 for i in range(n):

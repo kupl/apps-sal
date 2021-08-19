@@ -1,4 +1,4 @@
-n = (int(input()))
+n = int(input())
 j = list(map(int, input().split()))
 b = 0
 e = 0
@@ -17,9 +17,7 @@ while e < n:
 if len(ans) == 0:
     print(-1)
 else:
-
     ans[-1][1] = n
     print(len(ans))
-
     for i in range(len(ans)):
         print(' '.join(list(map(str, ans[i]))))

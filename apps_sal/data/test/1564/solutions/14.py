@@ -1,19 +1,15 @@
 n = int(input())
 s = input()
 t = input()
-
 ab = []
 ba = []
-
 for i in range(n):
     if s[i] == t[i]:
         continue
+    elif s[i] == 'a':
+        ab.append(i)
     else:
-        if s[i] == "a":
-            ab.append(i)
-        else:
-            ba.append(i)
-
+        ba.append(i)
 if (len(ab) + len(ba)) % 2 == 0:
     ans = []
     for i in range(len(ab) // 2):
@@ -24,8 +20,7 @@ if (len(ab) + len(ba)) % 2 == 0:
         ans.append([ab[-1], ab[-1]])
         ans.append([ab[-1], ba[-1]])
     print(len(ans))
-    for i, j in ans:
+    for (i, j) in ans:
         print(i + 1, j + 1)
-
 else:
     print(-1)

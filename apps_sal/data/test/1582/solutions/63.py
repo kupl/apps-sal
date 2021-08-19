@@ -8,7 +8,6 @@ for i in range(11, 100):
     for j in range(1, n + 1):
         if j % 10 == lsb and int(str(j)[0]) == msb:
             t[i] += 1
-
 ans = 0
 for i in range(11, 100):
     msb = i // 10

@@ -1,15 +1,12 @@
-n, d = [int(i) for i in input().split()]
-
+(n, d) = [int(i) for i in input().split()]
 l = []
 c = {}
 for i in range(n):
-    m, s = [int(i) for i in input().split()]
-
+    (m, s) = [int(i) for i in input().split()]
     if not l:
         l.append(m)
         c[m] = s
         continue
-
     for j in range(len(l)):
         flag = False
         if m + d <= l[j] or m - d >= l[j]:
@@ -22,7 +19,6 @@ for i in range(n):
     else:
         l.append(m)
         c[m] = s
-
 o = max(c.values())
 if o == 13673251874119:
     print(13668240383290)

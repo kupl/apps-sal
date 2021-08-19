@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int, input().split(" ")))
+a = list(map(int, input().split(' ')))
 res = 0
 num = 0
 for i in range(2, len(a), 1):
@@ -9,5 +9,4 @@ for i in range(2, len(a), 1):
         num = 0
     if num > res:
         res = num
-
 print(min(res + 2, n))

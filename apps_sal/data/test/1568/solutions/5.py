@@ -1,4 +1,4 @@
-n, originCost, decCost, remainCost, T = list(map(int, input().split()))
+(n, originCost, decCost, remainCost, T) = list(map(int, input().split()))
 msgTime = [*list(map(int, input().split()))]
 result = 0
 for i in range(len(msgTime)):

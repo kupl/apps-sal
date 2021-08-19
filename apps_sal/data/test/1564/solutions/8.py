@@ -13,7 +13,7 @@ for i in range(n):
         b_a += 1
         ba.append(i)
 ans = -1
-if (a_b % 2 == b_a % 2):
+if a_b % 2 == b_a % 2:
     ans = a_b // 2 + b_a // 2
     ans += 2 * (a_b % 2)
     print(ans)
@@ -24,6 +24,5 @@ if (a_b % 2 == b_a % 2):
     if a_b % 2 != 0:
         print(ab[-1] + 1, ab[-1] + 1)
         print(ab[-1] + 1, ba[-1] + 1)
-
 if ans == -1:
     print(ans)

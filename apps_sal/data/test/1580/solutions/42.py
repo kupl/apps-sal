@@ -1,15 +1,12 @@
 from collections import deque
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 xy = [[] for _ in range(n + 1)]
 for _ in range(m):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     xy[x].append(y)
     xy[y].append(x)
-
-
 visited = [0] * (n + 1)
 count = 0
-
 for i in range(1, n + 1):
     if visited[i] == 0:
         stack = deque()

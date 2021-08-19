@@ -15,7 +15,6 @@ for i in range(n):
         ab.append(i + 1)
     if s[i] == 'b' and t[i] == 'a':
         ba.append(i + 1)
-
 if len(ab) % 2 == len(ba) % 2:
     cnt = len(ab) // 2 + len(ba) // 2
     if len(ab) % 2 == 1:

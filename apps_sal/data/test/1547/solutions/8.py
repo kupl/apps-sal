@@ -1,8 +1,8 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 stol = [[0, -1] for i in range(m)]
 strok = [[0, -1] for i in range(n)]
 for i in range(k):
-    c, ri, ai = map(int, input().split())
+    (c, ri, ai) = map(int, input().split())
     if c == 1:
         strok[ri - 1][0] = ai
         strok[ri - 1][1] = i

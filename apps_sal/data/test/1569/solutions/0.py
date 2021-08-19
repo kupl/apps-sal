@@ -1,38 +1,43 @@
-def f(): return map(int, input().split())
-def g(): return (a.i, b.i) if a.i < b.i else (b.i, a.i)
+def f():
+    return map(int, input().split())
+
+
+def g():
+    return (a.i, b.i) if a.i < b.i else (b.i, a.i)
 
 
 class T:
+
     def __init__(t, i):
         t.i = i
         t.s = t.v = t.u = 0
         t.p = []
 
 
-n, m = f()
+(n, m) = f()
 t = [T(i) for i in range(n + 1)]
-d, l = [], []
+(d, l) = ([], [])
 for k in range(m):
-    i, j, q = f()
-    a, b = t[i], t[j]
+    (i, j, q) = f()
+    (a, b) = (t[i], t[j])
     a.p.append(b)
     b.p.append(a)
     if q:
         d += [g()]
 d = set(d)
-x, y = [], []
+(x, y) = ([], [])
 a = t[1]
 a.u = 1
 while a.i < n:
     for b in a.p:
         v = a.v + (g() in d)
-        if not b.u or b.u > a.u and v > b.v:
-            b.v, b.s = v, a.i
+        if not b.u or (b.u > a.u and v > b.v):
+            (b.v, b.s) = (v, a.i)
         if not b.u:
             b.u = a.u + 1
             y.append(b.i)
     if not x:
-        x, y = y, x
+        (x, y) = (y, x)
         x.reverse()
     a = t[x.pop()]
 while a.i > 1:
@@ -45,7 +50,7 @@ while a.i > 1:
         l += [(a.i, b.i)]
     a = b
 print(len(l) + len(d))
-for a, b in l:
+for (a, b) in l:
     print(a, b, 1)
-for a, b in d:
+for (a, b) in d:
     print(a, b, 0)

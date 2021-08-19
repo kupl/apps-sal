@@ -1,7 +1,8 @@
-N, M, *X = list(map(int, open(0).read().split()))
+(N, M, *X) = list(map(int, open(0).read().split()))
 
 
 class UnionFind:
+
     def __init__(self, n=0):
         self.d = [-1] * n
         self.u = n
@@ -13,11 +14,11 @@ class UnionFind:
         return self.d[x]
 
     def unite(self, x, y):
-        x, y = self.root(x), self.root(y)
+        (x, y) = (self.root(x), self.root(y))
         if x == y:
             return False
         if x > y:
-            x, y = y, x
+            (x, y) = (y, x)
         self.d[x] += self.d[y]
         self.d[y] = x
         self.u -= 1
@@ -34,6 +35,6 @@ class UnionFind:
 
 
 u = UnionFind(N)
-for x, y, z in zip(*[iter(X)] * 3):
+for (x, y, z) in zip(*[iter(X)] * 3):
     u.unite(x - 1, y - 1)
-print((u.num_union()))
+print(u.num_union())

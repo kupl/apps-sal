@@ -5,8 +5,7 @@ import itertools
 import pprint
 import collections
 import copy
-rs, ri, rai, raf = input, lambda: int(input()), lambda: list(map(int, input().split())), lambda: list(map(float, input().split()))
-
+(rs, ri, rai, raf) = (input, lambda: int(input()), lambda: list(map(int, input().split())), lambda: list(map(float, input().split())))
 n = ri()
 s = rs()
 a = s.count('A')

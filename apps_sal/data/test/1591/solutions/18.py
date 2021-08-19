@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 a = []
 s = set()
 ans = 0

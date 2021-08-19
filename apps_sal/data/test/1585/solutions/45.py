@@ -1,5 +1,4 @@
-X, Y = map(int, input().split())
-
+(X, Y) = map(int, input().split())
 cnt = 0
 x_temp = X
 while True:
@@ -8,5 +7,4 @@ while True:
         cnt += 1
     else:
         break
-
 print(cnt + 1)

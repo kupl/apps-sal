@@ -1,6 +1,5 @@
 import sys
 from collections import defaultdict
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -8,6 +7,7 @@ mod = 10 ** 9 + 7
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -31,7 +31,7 @@ class UnionFind:
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -54,7 +54,7 @@ class UnionFind:
         """
         edge.sort()
         cost_sum = 0
-        for cost, node1, node2 in edge:
+        for (cost, node1, node2) in edge:
             if not self.same(node1, node2):
                 cost_sum += cost
                 self.union(node1, node2)
@@ -67,24 +67,20 @@ def resolve():
     uf = UnionFind(2 * MAX)
     XY = []
     for _ in range(n):
-        x, y = [int(x) - 1 for x in input().split()]
+        (x, y) = [int(x) - 1 for x in input().split()]
         y += MAX
         uf.union(x, y)
         XY.append([x, y])
-
     mx = defaultdict(int)
     my = defaultdict(int)
     for i in range(MAX):
         mx[uf.find(i)] += 1
-
     for i in range(MAX, 2 * MAX):
         my[uf.find(i)] += 1
-
     res = 0
     for i in range(2 * MAX):
         res += mx[i] * my[i]
-
-    print((res - n))
+    print(res - n)
 
 
 def __starting_point():

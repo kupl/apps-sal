@@ -1,5 +1,4 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 parent = [i + 1 for i in range(n)]
 rank = [0 for i in range(n)]
 
@@ -26,7 +25,7 @@ def unite(x, y):
 
 
 for i in range(m):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     unite(x, y)
 ans = n
 for i in range(n):

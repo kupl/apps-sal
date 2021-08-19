@@ -1,4 +1,4 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 ans = 0
 s = 0
 c = 1

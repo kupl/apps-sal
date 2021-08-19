@@ -1,4 +1,4 @@
-n, m = [int(s) for s in input().split()]
+(n, m) = [int(s) for s in input().split()]
 c = 0
 for j in range(n):
     s = input().split()

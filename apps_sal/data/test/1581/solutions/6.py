@@ -1,6 +1,5 @@
 import numpy as np
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
 l = int(n ** 0.5)
 coe = []
@@ -9,7 +8,6 @@ for i in range(l, 0, -1):
 coe.append(0)
 coe.reverse()
 coe = np.array(coe, dtype=np.int64)
-
 dp1 = np.ones(l + 1, dtype=np.int64)
 dp2 = coe.copy()
 dp1[0] = 0

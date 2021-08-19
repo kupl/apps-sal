@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 arr = []
 for i in range(n):
     arr.append(tuple(map(int, input().split())))

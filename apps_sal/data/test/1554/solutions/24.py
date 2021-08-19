@@ -1,7 +1,7 @@
 def main():
-    n, res = int(input()), []
-    s, i, fmt = set(), 1, "{:n} {:n}".format
-    for j, a in enumerate(input().split(), 1):
+    (n, res) = (int(input()), [])
+    (s, i, fmt) = (set(), 1, '{:n} {:n}'.format)
+    for (j, a) in enumerate(input().split(), 1):
         if a in s:
             s = set()
             res.append(fmt(i, j))

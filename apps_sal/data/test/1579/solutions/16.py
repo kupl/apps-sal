@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parent = [None] * n
@@ -15,21 +16,21 @@ class UnionFind:
         if x0 == y0:
             return
         if x0 > y0:
-            x0, y0 = y0, x0
+            (x0, y0) = (y0, x0)
         self.parent[y0] = x0
 
 
 n = int(input())
-m = 10**5
+m = 10 ** 5
 uf = UnionFind(2 * m)
-X, Y = [], []
+(X, Y) = ([], [])
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     X.append(x - 1)
     Y.append(y - 1 + m)
     uf.union(x - 1, y - 1 + m)
 R = {}
-for x, y in zip(X, Y):
+for (x, y) in zip(X, Y):
     r = uf.root(x)
     try:
         R[r][0].add(x)
@@ -39,4 +40,4 @@ for x, y in zip(X, Y):
 ans = 0
 for r in list(R.keys()):
     ans += len(R[r][0]) * len(R[r][1])
-print((ans - n))
+print(ans - n)

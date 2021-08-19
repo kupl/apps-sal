@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(2000)
 
 
@@ -7,12 +6,12 @@ def dfs1(v, mintime):
     localtime = mintime
     vis1[v] = 1
     for v2 in range(m):
-        if a[v][v2] == ">":
+        if a[v][v2] == '>':
             if not vis2[v2]:
                 dfs2(v2, 1)
             localtime = max(localtime, time2[v2] + 1)
     for v2 in range(m):
-        if a[v][v2] == "=":
+        if a[v][v2] == '=':
             if not vis2[v2]:
                 dfs2(v2, localtime)
             localtime = max(localtime, time2[v2])
@@ -23,19 +22,19 @@ def dfs2(v, mintime):
     localtime = mintime
     vis2[v] = 1
     for v2 in range(n):
-        if a[v2][v] == "<":
+        if a[v2][v] == '<':
             if not vis1[v2]:
                 dfs1(v2, 1)
             localtime = max(localtime, time1[v2] + 1)
     for v2 in range(n):
-        if a[v2][v] == "=":
+        if a[v2][v] == '=':
             if not vis1[v2]:
                 dfs1(v2, localtime)
             localtime = max(localtime, time1[v2])
     time2[v] = localtime
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [input() for i in range(n)]
 time1 = [0] * n
 time2 = [0] * m
@@ -52,17 +51,17 @@ try:
     correct = True
     for v1 in range(n):
         for v2 in range(m):
-            if a[v1][v2] == "=" and time1[v1] != time2[v2]:
+            if a[v1][v2] == '=' and time1[v1] != time2[v2]:
                 correct = False
-            if a[v1][v2] == ">" and time1[v1] <= time2[v2]:
+            if a[v1][v2] == '>' and time1[v1] <= time2[v2]:
                 correct = False
-            if a[v1][v2] == "<" and time1[v1] >= time2[v2]:
+            if a[v1][v2] == '<' and time1[v1] >= time2[v2]:
                 correct = False
     if correct:
-        print("Yes")
+        print('Yes')
         print(*time1)
         print(*time2)
     else:
-        print("No")
+        print('No')
 except RecursionError:
-    print("No")
+    print('No')

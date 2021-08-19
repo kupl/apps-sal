@@ -5,7 +5,7 @@ pin = sys.stdin.readline
 def main():
     N = int(pin())
     if N % 2 == 1:
-        print((0))
+        print(0)
     else:
         ans = 0
         i = 10

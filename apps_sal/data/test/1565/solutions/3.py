@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-ans = 10**(10**5 + 1)
+ans = 10 ** (10 ** 5 + 1)
 i = n // 2 + 1
 while i < n and s[i] == '0':
     i += 1

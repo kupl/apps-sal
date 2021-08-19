@@ -1,8 +1,9 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-h1, a1, c1 = read()
-h2, a2 = read()
+(h1, a1, c1) = read()
+(h2, a2) = read()
 ans = 1
 a = []
 ap = a.append

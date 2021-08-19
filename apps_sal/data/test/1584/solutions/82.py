@@ -1,7 +1,6 @@
 def main():
     from collections import deque
     from bisect import bisect_left
-
     n = int(input())
     l = sorted(map(int, input().split()))
     ld = deque(l)

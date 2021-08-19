@@ -1,13 +1,11 @@
-n, m, k = list(map(int, input().split(' ')))
-
-row, col = [(0, 0)] * n, [(0, 0)] * m
+(n, m, k) = list(map(int, input().split(' ')))
+(row, col) = ([(0, 0)] * n, [(0, 0)] * m)
 for i in range(k):
-    t, r, a = list(map(int, input().split(' ')))
+    (t, r, a) = list(map(int, input().split(' ')))
     if t == 1:
         row[r - 1] = (a, i + 1)
     elif t == 2:
         col[r - 1] = (a, i + 1)
-
 sheet = [[0] * m for i in range(n)]
 for i in range(n):
     for j in range(m):

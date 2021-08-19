@@ -1,15 +1,15 @@
 import math
-n, s = tuple(map(int, input().split()))
+(n, s) = tuple(map(int, input().split()))
 x = []
 y = []
 k = []
 r = []
 for i in range(n):
-    a, b, c = tuple(map(int, input().split()))
+    (a, b, c) = tuple(map(int, input().split()))
     x.append(a)
     y.append(b)
     k.append(c)
-    r.append((math.sqrt(x[i]**2 + y[i]**2), i))
+    r.append((math.sqrt(x[i] ** 2 + y[i] ** 2), i))
 r.sort()
 nas = s
 i = 0

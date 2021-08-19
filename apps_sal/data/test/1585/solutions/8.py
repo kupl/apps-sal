@@ -6,23 +6,40 @@ from collections import Counter
 import itertools
 
 
-def input(): return sys.stdin.readline().strip()
+def input():
+    return sys.stdin.readline().strip()
 
 
 sys.setrecursionlimit(250000)
-def getInt(): return int(input())
-def getMultiInt(): return map(int, input().split())
-def getIntList(): return list(map(int, input().split()))
-def getStr(): return input()
-def getMultiStr(): return map(str, input().split())
-def getStrList(): return list(map(str, input().split()))
+
+
+def getInt():
+    return int(input())
+
+
+def getMultiInt():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def getStr():
+    return input()
+
+
+def getMultiStr():
+    return map(str, input().split())
+
+
+def getStrList():
+    return list(map(str, input().split()))
 
 
 def main():
-    x, y = getMultiInt()
-
+    (x, y) = getMultiInt()
     count = 1
-
     while True:
         if x * 2 <= y:
             x = x * 2

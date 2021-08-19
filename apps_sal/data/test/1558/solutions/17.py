@@ -1,9 +1,9 @@
 __author__ = 'Rakshak.R.Hegde'
-n, r, avg = map(int, input().split())
+(n, r, avg) = map(int, input().split())
 ab = []
 d = n * avg
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     d -= a
     ab.append((b, a))
 ab.sort()

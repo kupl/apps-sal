@@ -16,12 +16,12 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, y, x = egcd(b % a, a)
-        return (g, x - (b // a) * y, y)
+        (g, y, x) = egcd(b % a, a)
+        return (g, x - b // a * y, y)
 
 
 def modinv(a, m):
-    g, x, y = egcd(a, m)
+    (g, x, y) = egcd(a, m)
     if g != 1:
         raise Exception('modular inverse does not exist')
     else:
@@ -32,23 +32,21 @@ mod = 998244353
 
 
 def solve():
-    n, k = rl()
+    (n, k) = rl()
     if k > n:
         print(0)
         return
     elif k == 1:
         print(n)
         return
-
     f = [1]
     fi = [1]
     for i in range(1, n + 1):
-        f.append((f[-1] * i) % mod)
-        fi.append((fi[-1] * modinv(i, mod)) % mod)
+        f.append(f[-1] * i % mod)
+        fi.append(fi[-1] * modinv(i, mod) % mod)
 
     def C(a, b):
         return f[a] * fi[b] * fi[a - b]
-
     d = n
     i = 1
     answer = 0
@@ -60,7 +58,6 @@ def solve():
 
 
 mode = 'S'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

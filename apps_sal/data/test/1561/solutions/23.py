@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 s = []
 up = [[0] * m] * n
 left = [[0] * m] * n

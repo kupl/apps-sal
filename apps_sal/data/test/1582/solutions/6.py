@@ -9,5 +9,4 @@ ans = 0
 for i in range(10):
     for j in range(10):
         ans += c[i][j] * c[j][i]
-
 print(ans)

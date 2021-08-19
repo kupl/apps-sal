@@ -20,7 +20,6 @@ def main():
         if t > s:
             print(t)
             return
-
         z = str(int(s[0:n]) + 1)
         if len(z) > n:
             t = '1'
@@ -29,11 +28,9 @@ def main():
             for i in range(0, p + 1):
                 print(t, end='')
             return
-
         t = ''
         for i in range(0, p):
             t += z
-
         print(t)
 
 

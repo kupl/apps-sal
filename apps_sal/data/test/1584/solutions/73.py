@@ -15,7 +15,7 @@ def main():
             ans += x - y - 2
         else:
             ans += x - y - 1
-    print((ans // 3))
+    print(ans // 3)
 
 
 def __starting_point():

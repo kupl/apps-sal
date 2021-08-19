@@ -1,4 +1,4 @@
-n, a, b, c, t = map(int, input().split())
+(n, a, b, c, t) = map(int, input().split())
 tl = list(map(int, input().split()))
 ans = a * n
 for i in tl:

@@ -5,7 +5,6 @@ from decimal import *
 def cnt_prime(p, n):
     div = Decimal(str(n))
     s = 0
-
     while True:
         div /= p
         if div < 1:
@@ -18,8 +17,6 @@ def cnt_prime(p, n):
 
 
 N = int(input())
-
-
 if N % 2 == 1:
     print(0)
 else:

@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mod = 998244353
 fac = [1] * n
 for i in range(1, n):
@@ -8,7 +8,7 @@ for i in range(1, n):
     fac[i] %= mod
 i = 1
 sol = 0
-while ((n - i) // i) >= (k - 1):
+while (n - i) // i >= k - 1:
     mul = fac[(n - i) // i]
     div = fac[k - 1]
     div *= fac[1 + (n - i) // i - k]

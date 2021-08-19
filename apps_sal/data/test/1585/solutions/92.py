@@ -1,5 +1,4 @@
-X, Y = list(map(int, input().split()))
-
+(X, Y) = list(map(int, input().split()))
 ans = 1
 tmp = X
 while tmp * 2 <= Y:

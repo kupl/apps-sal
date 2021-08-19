@@ -6,8 +6,8 @@ def main():
         l.append([(a + b) % 10 for b in digits])
     for digits in l[:]:
         a = digits[-1]
-        for i, b in enumerate(digits):
-            if a and not b:
+        for (i, b) in enumerate(digits):
+            if a and (not b):
                 l.append(digits[i:] + digits[:i])
             a = b
     print(''.join(map(str, min(l))))

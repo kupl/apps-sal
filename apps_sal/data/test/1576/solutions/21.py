@@ -10,7 +10,7 @@ while len(s) > 0:
         s = s[1:]
     else:
         s1 += s[-1]
-        s = s[: len(s) - 1]
+        s = s[:len(s) - 1]
     c *= -1
 s2 = ''
 for i in range(len(s1) - 1, -1, -1):

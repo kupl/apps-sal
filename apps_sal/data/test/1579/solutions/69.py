@@ -5,12 +5,11 @@ N = int(readline())
 P = defaultdict(list)
 Q = defaultdict(list)
 for i in range(N):
-    x, y = map(int, readline().split())
+    (x, y) = map(int, readline().split())
     P[x].append(y)
     Q[y].append(x)
 X = set()
 Y = set()
-
 res = 0
 que = deque()
 for x in P:
@@ -19,7 +18,7 @@ for x in P:
     cx = 1
     cy = 0
     while que:
-        t, v = que.popleft()
+        (t, v) = que.popleft()
         if t:
             for x in Q[v]:
                 if x in X:

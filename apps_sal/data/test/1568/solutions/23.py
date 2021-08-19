@@ -1,6 +1,5 @@
-n, A, B, C, T = map(int, input().split())
+(n, A, B, C, T) = map(int, input().split())
 t = list(map(int, input().split()))
-
 if B >= C:
     print(A * n)
 else:

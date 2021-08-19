@@ -1,10 +1,10 @@
 def main():
     from sys import stdin, stdout
-    n, m, op = list(map(int, stdin.readline().split()))
+    (n, m, op) = list(map(int, stdin.readline().split()))
     hor = dict()
     vert = dict()
     for i in range(op):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         b -= 1
         if a == 1:
             hor[b] = (c, i)

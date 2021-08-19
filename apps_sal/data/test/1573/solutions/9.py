@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 a = [tuple(map(int, input().split())) for i in range(n)]
 a.sort(reverse=True)
 sums = [0] * n
@@ -10,7 +10,7 @@ r = 0
 for l in range(n):
     if r < l:
         r = l
-    while r < n and (- a[r][0] + a[l][0] < d):
+    while r < n and -a[r][0] + a[l][0] < d:
         r += 1
     r -= 1
     if l > 0:

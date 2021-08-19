@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2020/08/27
 
 @author: harurun
-'''
+"""
 
 
 def main():
@@ -11,8 +11,7 @@ def main():
     pin = sys.stdin.readline
     pout = sys.stdout.write
     perr = sys.stderr.write
-
-    a, b, x = map(int, pin().split())
+    (a, b, x) = map(int, pin().split())
     if 2 * x > a * a * b:
         print(math.degrees(math.atan((2 * b * a * a - 2 * x) / (a * a * a))))
     else:

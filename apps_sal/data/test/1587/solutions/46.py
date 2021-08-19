@@ -1,8 +1,6 @@
 import sys
-
 N = int(input())
 S = list(input())
-
 c = min(S.count('R'), S.count('W'))
 r = 0
 count = 0
@@ -15,5 +13,4 @@ for l in range(N - c):
                 count += 1
                 break
             r = i
-
 print(count)

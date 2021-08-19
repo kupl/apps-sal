@@ -1,4 +1,4 @@
-x, y = list(map(int, input().split(' ')))
+(x, y) = list(map(int, input().split(' ')))
 cnt = 0
 tmp = x
 while tmp <= y:

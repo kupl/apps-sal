@@ -1,4 +1,4 @@
-n, a, b, c, t = list(map(int, input().split()))
+(n, a, b, c, t) = list(map(int, input().split()))
 time = list(map(int, input().split()))
 ans = 0
 if c >= b:

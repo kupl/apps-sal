@@ -6,7 +6,7 @@ def main():
     aa = list(map(int, input()))
     res = []
     for j in range(len(aa)):
-        y, base = 0, aa[j]
+        (y, base) = (0, aa[j])
         for x in chain(aa[j:], aa[:j]):
             y = y * 10 + (x - base) % 10
         res.append(y)

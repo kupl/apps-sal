@@ -10,14 +10,13 @@ MOD = pow(10, 9) + 7
 
 def IN(f=0):
     if f == 0:
-        return ([int(i) for i in sys.stdin.readline().split()])
+        return [int(i) for i in sys.stdin.readline().split()]
     else:
-        return (int(sys.stdin.readline()))
+        return int(sys.stdin.readline())
 
 
-n, k = IN()
+(n, k) = IN()
 a = IN()
-
 T = []
 M = n
 for i in range(n):

@@ -3,7 +3,6 @@ N = int(input())
 L = list(map(int, input().split()))
 ans = 0
 L.sort()
-
 for i in range(N - 2):
     for j in range(i + 1, N - 1):
         num = L[i] + L[j]

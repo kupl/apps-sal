@@ -3,19 +3,23 @@ import sys
 import heapq
 from math import *
 from collections import defaultdict as dd, deque
-def data(): return sys.stdin.readline().strip()
-def mdata(): return map(int, data().split())
+
+
+def data():
+    return sys.stdin.readline().strip()
+
+
+def mdata():
+    return map(int, data().split())
 
 
 sys.setrecursionlimit(100000)
-
-
-n, m = mdata()
+(n, m) = mdata()
 C = list(mdata())
 g = dd(set)
 d = dd(set)
 for i in range(m):
-    a, b = mdata()
+    (a, b) = mdata()
     c1 = C[a - 1]
     c2 = C[b - 1]
     if c1 != c2:

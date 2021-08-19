@@ -1,6 +1,5 @@
 import math
-a, b, x = map(int, input().split())
-
+(a, b, x) = map(int, input().split())
 if x > a * a * b / 2:
     print(math.atan(2 * (a * a * b - x) / (a * a * a)) * (180 / math.pi))
 else:

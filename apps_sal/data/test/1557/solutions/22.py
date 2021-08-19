@@ -1,5 +1,5 @@
-h1, a1, c1 = map(int, input().split())
-h2, a2 = map(int, input().split())
+(h1, a1, c1) = map(int, input().split())
+(h2, a2) = map(int, input().split())
 k = 0
 if h2 % a1 == 0:
     n = h2 // a1 - 1

@@ -2,7 +2,6 @@ def main(n, m, c, t, moments):
     s = 0
     answer = []
     last = 0
-
     for i in range(n):
         s += c[i] * t[i]
         while last < m:
@@ -14,7 +13,6 @@ def main(n, m, c, t, moments):
             last += 1
         if last >= m:
             break
-
     s = ''
     for a in answer:
         s += str(a) + '\n'
@@ -22,17 +20,14 @@ def main(n, m, c, t, moments):
 
 
 def init():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     c = []
     t = []
-
     for i in range(n):
-        q, w = list(map(int, input().split()))
+        (q, w) = list(map(int, input().split()))
         c.append(q)
         t.append(w)
-
     moments = list(map(int, input().split()))
-
     print(main(n, m, c, t, moments))
 
 

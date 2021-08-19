@@ -1,8 +1,7 @@
-h1, a1, c1 = list(map(int, input().split()))
-h2, a2 = list(map(int, input().split()))
+(h1, a1, c1) = list(map(int, input().split()))
+(h2, a2) = list(map(int, input().split()))
 actions = [0] * 10000
 j = 0
-
 while h2 >= 0:
     if h2 <= a1:
         actions[j] = 1
@@ -17,10 +16,9 @@ while h2 >= 0:
     j += 1
     h1 -= a2
     h2 -= a1
-
 print(j)
 for i in range(j):
     if actions[i] == 1:
-        print("STRIKE")
+        print('STRIKE')
     elif actions[i] == 2:
-        print("HEAL")
+        print('HEAL')

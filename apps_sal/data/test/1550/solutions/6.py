@@ -8,15 +8,15 @@ for i in num:
         break
 if status == 0:
     for i in range(n):
-        print(0, end="")
+        print(0, end='')
     print()
 else:
     maximum = 0
     consider = []
     for i in range(10):
-        dum = ""
+        dum = ''
         for j in range(n):
-            dum = dum + (str(((int(num[j]) + i) % 10)))
+            dum = dum + str((int(num[j]) + i) % 10)
         count = 0
         cur = 0
         ind = []
@@ -45,7 +45,6 @@ else:
             for i in ind:
                 consider.append([dum, i])
     out = []
-
     for i in range(len(consider)):
         out.append(consider[i][0][consider[i][1]:] + consider[i][0][:consider[i][1]])
     print(min(out))

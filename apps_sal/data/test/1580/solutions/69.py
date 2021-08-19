@@ -9,7 +9,7 @@ class UnionFind:
         if x == y:
             return False
         if self.par[x] > self.par[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.par[x] += self.par[y]
         self.par[y] = x
         return True
@@ -30,16 +30,14 @@ class UnionFind:
         return -self.par[self.root(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 uni = UnionFind(n)
 for _ in range(m):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     x -= 1
     y -= 1
     uni.unite(x, y)
-
 a = [0] * n
 for i in range(n):
     a[uni.root(i)] = 1
-
 print(sum(a))

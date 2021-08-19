@@ -1,7 +1,7 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 t = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     t += [(x, y)]
 t = sorted(t, key=lambda colonnes: colonnes[0])
 i = 0

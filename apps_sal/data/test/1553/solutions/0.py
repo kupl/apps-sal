@@ -7,7 +7,7 @@ def func(arr):
 
 
 def main():
-    n, h = map(int, input().split())
+    (n, h) = map(int, input().split())
     arr = list(map(int, input().split()))
     for i in range(1, n + 1):
         if func(arr[:i]) > h:

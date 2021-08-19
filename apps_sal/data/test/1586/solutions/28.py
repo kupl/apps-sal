@@ -1,6 +1,6 @@
 n = int(input())
 if n & 1:
-    print((0))
+    print(0)
 else:
     ans = 0
     x = 10

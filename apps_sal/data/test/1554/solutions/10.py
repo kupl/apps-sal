@@ -1,6 +1,5 @@
 length = int(input())
 gems = input().split()
-
 result = []
 s = 0
 dist = set()
@@ -17,14 +16,11 @@ for i in range(0, length):
         pend_s = s + 1
         s = i + 1
         dist.clear()
-
 if s != 0 and pend_e != length + 1:
     result.append([pend_s, length])
-
 if len(result) == 0:
     print(-1)
 else:
     print(len(result))
-
 for r in result:
     print(r[0], r[1])

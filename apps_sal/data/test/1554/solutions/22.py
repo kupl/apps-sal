@@ -1,8 +1,6 @@
 n = int(input())
 a = list(map(int, input().split(' ')))
-
 ans = []
-
 s = 0
 mark = set([a[0]])
 for i in range(1, n):
@@ -12,7 +10,6 @@ for i in range(1, n):
         s = i + 1
     else:
         mark.add(a[i])
-
 if len(ans) == 0:
     print(-1)
 else:

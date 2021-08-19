@@ -1,4 +1,4 @@
-y, x, k = map(int, input().split())
+(y, x, k) = map(int, input().split())
 m = []
 ans = 0
 for i in range(y):

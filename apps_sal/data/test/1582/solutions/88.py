@@ -1,5 +1,5 @@
 N = int(input())
-A = [str(i)for i in range(1, 10)]
+A = [str(i) for i in range(1, 10)]
 ans = 0
 for a in A:
     for b in A:
@@ -11,12 +11,11 @@ for a in A:
             M = int(a + '9' * i + b)
             if m <= N:
                 if M <= N:
-                    countA += 10**i
+                    countA += 10 ** i
                 else:
                     while m <= N:
                         countA += 1
                         m += 10
-
         countB = 0
         if b == a and int(b) <= N:
             countB += 1
@@ -25,11 +24,10 @@ for a in A:
             M = int(b + '9' * i + a)
             if m <= N:
                 if M <= N:
-                    countB += 10**i
+                    countB += 10 ** i
                 else:
                     while m <= N:
                         countB += 1
                         m += 10
-
         ans += countA * countB
 print(ans)

@@ -1,11 +1,10 @@
-n, f = input().split()
+(n, f) = input().split()
 n = int(n)
 f = int(f)
 a = []
 for i in range(n):
-    x, y = input().split()
+    (x, y) = input().split()
     a.append((int(x), int(y)))
-
 a = sorted(a)
 s = a[0][1]
 mx = s
@@ -23,8 +22,6 @@ for i in range(1, len(a)):
             else:
                 s = s - a[j][1]
                 k = j
-
     if s > mx:
         mx = s
-
 print(mx)

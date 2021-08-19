@@ -6,13 +6,12 @@ x2 = -1
 y2 = -1
 for y in range(N):
     grid.append(list(map(int, input())))
-    for x, num in enumerate(grid[-1]):
+    for (x, num) in enumerate(grid[-1]):
         if num == 4:
             x1 = min(x1, x)
             y1 = min(y1, y)
             x2 = max(x2, x)
             y2 = max(y2, y)
-
 if x1 == 51:
     print('No')
 else:

@@ -1,9 +1,9 @@
 import sys
-sys.setrecursionlimit(10**8)
-N, M = map(int, input().split())
+sys.setrecursionlimit(10 ** 8)
+(N, M) = map(int, input().split())
 edge = [[] for _ in range(N)]
 for i in range(M):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
 

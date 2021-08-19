@@ -1,4 +1,4 @@
-n, a, b, c, T = list(map(int, input().split()))
+(n, a, b, c, T) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 smth = [0] * T
 for i in range(len(t)):
@@ -14,7 +14,4 @@ for i in range(T):
 for i in range(len(t)):
     ans2 += a - (T - t[i]) * b
 print(max(ans1, ans2))
-'''k = 0
-for i in range(len(smth)):
-    k += smth[i]
-    k -= 1'''
+'k = 0\nfor i in range(len(smth)):\n    k += smth[i]\n    k -= 1'
