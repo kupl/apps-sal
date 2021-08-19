@@ -1,7 +1,7 @@
-n, a = int(input()), list(map(int, input().split()))
+(n, a) = (int(input()), list(map(int, input().split())))
 if n & 1:
     a.append(0)
-x, t = 0, [[' '] * sum(a) for i in range(2001)]
+(x, t) = (0, [[' '] * sum(a) for i in range(2001)])
 y = u = v = 1000
 for i in range(0, n, 2):
     for j in range(a[i]):

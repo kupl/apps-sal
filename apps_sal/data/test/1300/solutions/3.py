@@ -38,7 +38,8 @@ def rec_sol(i, j, tab):
     r1 = rec_sol(i, k, tab)
     r2 = rec_sol(k + 1, j, tab)
     i1 = max([r1[0], r2[0]], key=lambda x: val(tab[x], tab[j]))
-    (i2, i3) = max([(r1[0], r2[3]), (r1[1], r1[2]), (r2[1], r2[2]), (r1[0], j)], key=lambda x: val(tab[x[0]], tab[x[1]]))
+    (i2, i3) = max([(r1[0], r2[3]), (r1[1], r1[2]), (r2[1], r2[2]),
+                    (r1[0], j)], key=lambda x: val(tab[x[0]], tab[x[1]]))
     i4 = max([r1[3], r2[3]], key=lambda x: val(tab[i], tab[x]))
     return (i1, i2, i3, i4)
 

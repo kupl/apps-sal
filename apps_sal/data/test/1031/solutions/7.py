@@ -15,12 +15,12 @@ if m < 0:
         y[i] -= m
 w = max(x)
 h = max(y)
-d = [[" "] * w for i in range(h)]
+d = [[' '] * w for i in range(h)]
 for i in range(n):
     if y[i] < y[i + 1]:
         for j in range(a[i]):
-            d[y[i] + j][x[i] + j] = "/"
+            d[y[i] + j][x[i] + j] = '/'
     else:
         for j in range(a[i]):
-            d[y[i] - j - 1][x[i] + j] = "\\"
-print("\n".join("".join(d[i]) for i in reversed(range(h))))
+            d[y[i] - j - 1][x[i] + j] = '\\'
+print('\n'.join((''.join(d[i]) for i in reversed(range(h)))))

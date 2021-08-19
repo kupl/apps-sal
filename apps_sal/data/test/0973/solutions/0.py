@@ -1,4 +1,4 @@
-r, c = list(map(int, input().split()))
+(r, c) = list(map(int, input().split()))
 ls = [[c for c in input()] for i in range(r)]
 for i in range(r):
     dead = False
@@ -17,9 +17,9 @@ for i in range(r):
         elif ls[i][j] == '.':
             ls[i][j] = 'D'
     if dead:
-        print("No")
+        print('No')
         break
 else:
-    print("Yes")
+    print('Yes')
     for i in range(r):
         print(''.join(ls[i]))

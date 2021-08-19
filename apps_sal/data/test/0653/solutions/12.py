@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 a = [0] * 10
 for i in s:
     if i == 'L':
@@ -15,6 +14,5 @@ for i in s:
                 break
     else:
         a[int(i)] = 0
-
 for i in a:
     print(i, end='')

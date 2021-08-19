@@ -25,11 +25,10 @@ w = sum(a)
 h = -math.inf
 d = math.inf
 ptr = 0
-for i, j in enumerate(a):
-    ptr += (j - 1 if i % 2 == 0 else 1 - j)
+for (i, j) in enumerate(a):
+    ptr += j - 1 if i % 2 == 0 else 1 - j
     h = max(h, ptr)
     d = min(d, ptr)
-
 b = [[' '] * w for i in range(h + abs(d) + 1)]
 j = 0
 incr = True

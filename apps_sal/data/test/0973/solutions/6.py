@@ -1,4 +1,4 @@
-R, C = list(map(int, input().split()))
+(R, C) = list(map(int, input().split()))
 r = []
 f = 0
 for i in range(R):

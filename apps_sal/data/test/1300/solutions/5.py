@@ -19,8 +19,8 @@ ma = 0
 for i in l:
     mi = 0
     for j in i:
-        if(j < mi):
+        if j < mi:
             mi = j
-        if(ma < j - mi):
+        if ma < j - mi:
             ma = j - mi
 print(m + ma)

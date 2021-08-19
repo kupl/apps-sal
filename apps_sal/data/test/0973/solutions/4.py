@@ -1,7 +1,6 @@
-r, c = list(map(int, input().split()))
+(r, c) = list(map(int, input().split()))
 cells = [list(input()) for _ in range(r)]
-
-ans = "Yes"
+ans = 'Yes'
 for i in range(r):
     for j in range(c):
         if cells[i][j] == '.':
@@ -9,16 +8,16 @@ for i in range(r):
 for i in range(r - 1):
     for j in range(c):
         if cells[i][j] == 'S' and cells[i + 1][j] == 'W':
-            ans = "No"
+            ans = 'No'
         if cells[i][j] == 'W' and cells[i + 1][j] == 'S':
-            ans = "No"
+            ans = 'No'
 for i in range(r):
     for j in range(c - 1):
         if cells[i][j] == 'S' and cells[i][j + 1] == 'W':
-            ans = "No"
+            ans = 'No'
         if cells[i][j] == 'W' and cells[i][j + 1] == 'S':
-            ans = "No"
+            ans = 'No'
 print(ans)
-if ans == "Yes":
+if ans == 'Yes':
     for i in range(r):
         print(''.join(cells[i]))

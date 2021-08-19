@@ -13,7 +13,8 @@ def getcntc(left, right):
 
 
 for i in range(1, n + 1):
-    seg.setdefault(a[i], []).append(-getcntc(last.setdefault(a[i], 0) + 1, i - 1))
+    seg.setdefault(
+        a[i], []).append(-getcntc(last.setdefault(a[i], 0) + 1, i - 1))
     last[a[i]] = i
     seg[a[i]].append(1)
 for key in seg:

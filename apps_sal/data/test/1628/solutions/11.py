@@ -1,4 +1,4 @@
-s, x, y = input(), 0, 0
+(s, x, y) = (input(), 0, 0)
 for i in range(len(s)):
     if s[i] == 'x':
         x += 1

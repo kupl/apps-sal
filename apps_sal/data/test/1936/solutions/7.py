@@ -18,7 +18,7 @@ else:
 
 
 def solve():
-    l, r = [int(x) for x in input().split()]
+    (l, r) = [int(x) for x in input().split()]
     if l * 2 > r:
         print(-1, -1)
     else:

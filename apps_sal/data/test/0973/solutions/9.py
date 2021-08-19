@@ -1,4 +1,4 @@
-r, c = [int(x) for x in input().split()]
+(r, c) = [int(x) for x in input().split()]
 table = [[c for c in input()] for i in range(r)]
 
 
@@ -19,20 +19,18 @@ def check(i, j):
 
 
 no = False
-
 for i in range(r):
     for j in range(c):
-        if (table[i][j] == 'S') and check(i, j) is False:
+        if table[i][j] == 'S' and check(i, j) is False:
             print('No')
             no = True
             break
     if no:
         break
-
 if not no:
     print('Yes')
     for i in range(r):
-        s = ""
+        s = ''
         for j in range(c):
-            s += ('D' if table[i][j] == '.' else table[i][j])
+            s += 'D' if table[i][j] == '.' else table[i][j]
         print(s)

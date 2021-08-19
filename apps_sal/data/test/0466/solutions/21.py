@@ -1,5 +1,5 @@
-c, d = map(int, input().split())
-n, m = map(int, input().split())
+(c, d) = map(int, input().split())
+(n, m) = map(int, input().split())
 k = int(input())
 f = [float('+inf') for i in range(n * m + n + k + 2)]
 f[0] = f[k] = 0

@@ -1,7 +1,6 @@
 n = int(input())
 s = input()
 r = ['0'] * 10
-
 for i in s:
     if i == 'L':
         for j in range(10):
@@ -15,5 +14,4 @@ for i in s:
                 break
     else:
         r[int(i)] = '0'
-
 print(''.join(r))

@@ -14,4 +14,4 @@ for c in s:
                 break
     else:
         r[int(c)] = 0
-print(''.join(str(x) for x in r))
+print(''.join((str(x) for x in r)))

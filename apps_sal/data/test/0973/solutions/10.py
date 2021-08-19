@@ -1,5 +1,4 @@
-
-R, C = list(map(int, input().split()))
+(R, C) = list(map(int, input().split()))
 field = []
 for i in range(R):
     line = input()
@@ -7,7 +6,6 @@ for i in range(R):
     for ch in line:
         f.append(ch)
     field.append(f)
-
 lu = [[1, 0], [-1, 0], [0, 1], [0, -1]]
 
 
@@ -25,7 +23,6 @@ def main():
                         if field[di][dj] == 'W':
                             print('No')
                             return
-
     print('Yes')
     for line in field:
         print(''.join(line))
