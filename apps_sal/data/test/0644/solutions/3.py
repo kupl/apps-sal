@@ -1,4 +1,3 @@
-
 def main():
     buf = input()
     n = int(buf)
@@ -20,7 +19,7 @@ def main():
             nest += 1
         elif c[0] == 'add':
             x[nest] += 1
-        else:  # c[0] == 'end'
+        else:
             x[nest - 1] += x[nest] * stack.pop()
             x[nest] = 0
             nest -= 1

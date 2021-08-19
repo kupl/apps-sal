@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 s = input()
-a, s = s.split('.')
-d, b = s.split('e')
+(a, s) = s.split('.')
+(d, b) = s.split('e')
 for i in range(int(b)):
     d += '0'
     a += d[0]

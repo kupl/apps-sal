@@ -1,5 +1,4 @@
 def main():
-    #n, m = map(int, input().split())
     n = int(input())
     a = list(map(int, input().split()))
     s = {0}
@@ -15,10 +14,7 @@ def main():
             s.add(acc)
     print(ans)
 
-#input = sys.stdin.readline
 
-
-# sys.setrecursionlimit(2097152)
-tn = 1  # int(input())
+tn = 1
 for _ in range(tn):
     main()

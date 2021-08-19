@@ -19,13 +19,10 @@ def greaterCount(numList, m):
             if sum in countDic:
                 rem -= countDic[sum]
             total += rem
-
         if sum in countDic:
             countDic[sum] += 1
         else:
             countDic[sum] = 1
-
-    #print("m=", m, "number=", number, "sum=", sum, "total=", total, "rem=", rem, "countDic=", countDic)
     return total
 
 

@@ -1,5 +1,5 @@
 def main():
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     board = []
     safe_h = set()
     safe_w = set()

@@ -1,7 +1,4 @@
-# A - ABD
-
 N = int(input())
-
 if 1 <= N < 1000:
     print('ABC')
 elif 1000 <= N < 1999:
