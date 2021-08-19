@@ -8,16 +8,13 @@ class Solution:
             if i not in hm:
                 hm[i] = 0
             hm[i] += 1
-
         for i in hm:
             heapq.heappush(heap, (i, hm[i]))
-
         while len(heap):
             pending = []
             x = heapq.heappop(heap)
             if x[1] - 1 > 0:
                 pending.append((x[0], x[1] - 1))
-
             cnt = 1
             last = x[0]
             while cnt < k:

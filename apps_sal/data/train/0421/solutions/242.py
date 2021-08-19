@@ -1,6 +1,6 @@
 class Solution:
-    def lastSubstring(self, s: str) -> str:
 
+    def lastSubstring(self, s: str) -> str:
         i = 0
         j = i + 1
         k = 0

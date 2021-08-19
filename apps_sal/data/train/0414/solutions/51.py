@@ -1,12 +1,10 @@
 class Solution:
-    def getWinner(self, arr: List[int], k: int) -> int:
 
+    def getWinner(self, arr: List[int], k: int) -> int:
         if len(arr) < k:
             return max(arr)
-
         if k == 1:
             return max(arr[0], arr[1])
-
         cnt = 0
         while cnt < k:
             j = 1

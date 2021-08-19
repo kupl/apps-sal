@@ -1,4 +1,5 @@
 class Solution:
+
     def getCoordinate(self, A: List[List[int]]):
         list_a = []
         for i in range(len(A)):
@@ -10,16 +11,13 @@ class Solution:
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
         list_a = self.getCoordinate(A)
         list_b = self.getCoordinate(B)
-
         diff = [a - b for a in list_a for b in list_b]
-
         counter = {}
         for v in diff:
             if counter.get(v, None) == None:
                 counter[v] = 1
             else:
                 counter[v] += 1
-
         max_value = 0
         for key in list(counter.keys()):
             if counter[key] > max_value:

@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         win_count = 0
         while win_count < min(len(arr), k):

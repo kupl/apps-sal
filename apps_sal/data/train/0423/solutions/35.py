@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubsequence(self, arr: List[int], d: int) -> int:
         cnt = defaultdict(int)
         for i in arr:

@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         smaller = 0
         arrLen = len(arr)

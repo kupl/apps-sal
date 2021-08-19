@@ -1,4 +1,5 @@
 class Solution:
+
     def getHint(self, secret, guess):
         """
         :type secret: str

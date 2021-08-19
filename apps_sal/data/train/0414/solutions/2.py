@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         check = arr[0]
         count = 0

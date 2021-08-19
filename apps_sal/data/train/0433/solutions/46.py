@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         res = 0
         s = sum(arr[:k - 1])

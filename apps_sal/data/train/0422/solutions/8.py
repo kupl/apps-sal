@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPalindrome(self, s):
         """
         :type s: str
@@ -6,7 +7,7 @@ class Solution:
         """
         if not s:
             return ''
-        maxI, center, right = 0, 0, 0
+        (maxI, center, right) = (0, 0, 0)
         stL = self.addChar(s)
         pal = [0] * len(stL)
         for i in range(1, len(stL) - 1):
@@ -18,7 +19,7 @@ class Solution:
             while stL[i + 1 + pal[i]] == stL[i - 1 - pal[i]]:
                 pal[i] += 1
             if i + pal[i] > right:
-                center, right = i, i + pal[i]
+                (center, right) = (i, i + pal[i])
         for i in range(1, len(stL) - 1):
             if pal[i] > pal[maxI]:
                 maxI = i

@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         largestFound = -1
         for i in range(len(arr)):

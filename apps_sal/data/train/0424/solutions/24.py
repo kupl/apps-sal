@@ -1,4 +1,5 @@
 class Solution:
+
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
         return max(self.largestOverlapAtoB(A, B), self.largestOverlapAtoB(B, A))
 
@@ -32,7 +33,5 @@ class Solution:
                 out_row.append(0)
             for ix_c in range(shift_col, lenght):
                 out_row.append(M[ix_r - shift_row][ix_c - shift_col])
-
             out.append(out_row)
-
         return out

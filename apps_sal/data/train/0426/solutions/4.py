@@ -1,11 +1,11 @@
 class Solution:
+
     def reorderedPowerOf2(self, N: int) -> bool:
         if N == 1:
             return True
         elif N == 2:
             return True
-
-        max_v = int(''.join((sorted(list(str(N)), reverse=True))))
+        max_v = int(''.join(sorted(list(str(N)), reverse=True)))
         canidates = 2
         while True:
             print(canidates)

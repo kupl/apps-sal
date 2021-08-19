@@ -1,4 +1,5 @@
 class Solution:
+
     def catMouseGame(self, graph):
         mem = [[[-1 for i in range(1 + 2 * len(graph))] for i in range(1 + 2 * len(graph))] for i in range(2 * len(graph))]
 
@@ -6,8 +7,11 @@ class Solution:
             mem[mouse][cat][turn] = value
             return mem[mouse][cat][turn]
 
-        def mouseWin(m, c, t): return storeRet(m, c, t, 1)
-        def catWin(m, c, t): return storeRet(m, c, t, 2)
+        def mouseWin(m, c, t):
+            return storeRet(m, c, t, 1)
+
+        def catWin(m, c, t):
+            return storeRet(m, c, t, 2)
 
         def play(mouse, cat, turn):
             if mem[mouse][cat][turn] != -1:

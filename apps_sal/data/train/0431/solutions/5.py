@@ -1,8 +1,9 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         left = [0] * len(A)
         right = [0] * len(A)
-        s1, s2 = [], []
+        (s1, s2) = ([], [])
         for i in range(len(A)):
             count = 1
             while s1 and s1[-1][0] > A[i]:
@@ -18,4 +19,4 @@ class Solution:
         ret = 0
         for i in range(len(A)):
             ret += A[i] * (left[i] * right[i])
-        return ret % (10**9 + 7)
+        return ret % (10 ** 9 + 7)

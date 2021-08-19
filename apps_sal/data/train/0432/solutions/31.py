@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         c = collections.Counter(nums)
         for num in sorted(c):
@@ -11,5 +12,4 @@ class Solution:
                     else:
                         return False
             c[num] = 0
-
         return True

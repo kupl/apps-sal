@@ -2,8 +2,9 @@ import bisect
 
 
 class Solution:
+
     def longestSubsequence(self, arr, diff):
-        ''' DP solution O(N^2)
+        """ DP solution O(N^2)
 
         dp = [1]*len(arr)
         l_sub_seq = 1
@@ -13,7 +14,7 @@ class Solution:
                     dp[i] = max(dp[i], dp[j] + 1)
                     l_sub_seq = max(dp[i], l_sub_seq)
         return l_sub_seq
-        '''
+        """
         dp = {}
         ans = 0
         for i in arr:

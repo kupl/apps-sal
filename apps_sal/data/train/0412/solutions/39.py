@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         dp1 = [0] * (target + 1)
         dp2 = [0] * (target + 1)
@@ -9,5 +10,4 @@ class Solution:
                     dp2[j] = dp2[j] + dp1[j - k]
             dp1 = dp2
             dp2 = [0] * (target + 1)
-
-        return dp1[target] % (10**9 + 7)
+        return dp1[target] % (10 ** 9 + 7)

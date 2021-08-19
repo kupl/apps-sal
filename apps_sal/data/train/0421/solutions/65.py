@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         split = []
         cur = [s[0], 0]

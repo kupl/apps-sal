@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         prevStart = -1
         candidates = []
@@ -9,20 +10,17 @@ class Solution:
                 if prevStart == -1:
                     prevStart = i
                     continue
-            else:
-                if prevStart != -1:
-                    candidates.append([prevStart, i - 1])
-                    prevStart = -1
+            elif prevStart != -1:
+                candidates.append([prevStart, i - 1])
+                prevStart = -1
         if prevStart != -1:
             candidates.append([prevStart, len(nums) - 1])
-
         res = [0]
         for i in range(len(candidates)):
             if i == len(candidates) - 1:
                 res.append(candidates[i][1] - candidates[i][0] + 1)
+            elif candidates[i + 1][0] - candidates[i][1] == 2:
+                res.append(candidates[i + 1][1] - candidates[i][0])
             else:
-                if candidates[i + 1][0] - candidates[i][1] == 2:
-                    res.append(candidates[i + 1][1] - candidates[i][0])
-                else:
-                    res.append(candidates[i][1] - candidates[i][0] + 1)
+                res.append(candidates[i][1] - candidates[i][0] + 1)
         return max(res)

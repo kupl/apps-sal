@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         n = len(arr)
         maxs = [arr[0]] * n

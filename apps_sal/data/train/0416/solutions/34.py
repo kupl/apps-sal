@@ -1,5 +1,7 @@
 class Solution:
+
     def catMouseGame(self, graph: List[List[int]]) -> int:
+
         @lru_cache(None)
         def search(t, x, y):
             if t == len(graph) * 2:
@@ -8,8 +10,7 @@ class Solution:
                 return 2
             if x == 0:
                 return 1
-
-            if (t % 2 == 0):
+            if t % 2 == 0:
                 flag = True
                 for i in range(len(graph[x])):
                     nxt = search(t + 1, graph[x][i], y)

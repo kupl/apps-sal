@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         goal = k * threshold
         cSums = [0 for i in arr]

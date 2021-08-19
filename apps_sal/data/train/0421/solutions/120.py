@@ -1,9 +1,10 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         l = []
         least = 'a'
         index = []
-        for i, el in enumerate(s):
+        for (i, el) in enumerate(s):
             if el == least:
                 index.append(i)
             elif el > least:

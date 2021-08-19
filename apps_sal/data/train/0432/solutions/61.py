@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         count = collections.Counter(nums)
         sorted_keys = sorted(count.keys())

@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         A = [[0 for _ in range(target + 1)] for _ in range(d + 1)]
         A[0][0] = 1

@@ -1,6 +1,7 @@
 class Solution:
+
     def countOrders(self, n: int) -> int:
-        MOD = int(1e9) + 7
+        MOD = int(1000000000.0) + 7
         d = [[0] * (n + 2) for _ in range(n + 2)]
         d[0][0] = 1
         for i in range(n + 1):

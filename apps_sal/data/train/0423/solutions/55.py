@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         a = len(arr)
         dp = {}
@@ -9,6 +10,5 @@ class Solution:
                 dp[value] = 1 + dp[targetValue]
             else:
                 dp[value] = 1
-
             ans = max(ans, dp[value])
         return ans

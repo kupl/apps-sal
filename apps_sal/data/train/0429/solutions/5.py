@@ -1,4 +1,5 @@
 class Solution:
+
     def getHint(self, secret, guess):
         """
         :type secret: str
@@ -17,4 +18,4 @@ class Solution:
                 hist[ord(guess[i]) - ord('0')] -= 1
                 if hist[ord(guess[i]) - ord('0')] + 1 > 0:
                     cows += 1
-        return str(bulls) + "A" + str(cows) + "B"
+        return str(bulls) + 'A' + str(cows) + 'B'

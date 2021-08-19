@@ -1,5 +1,5 @@
 class Solution:
-    '''
+    """
 
     arr = [1,2,3,4] d = 1
 
@@ -15,18 +15,13 @@ class Solution:
 
 
 
-    '''
+    """
     import collections
 
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
-
         dp = {}
-
         max_len = 0
-
         for i in arr:
             dp[i] = dp.get(i - difference, 0) + 1
-
             max_len = max(max_len, dp[i])
-
         return max_len

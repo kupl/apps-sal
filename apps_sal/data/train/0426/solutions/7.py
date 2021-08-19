@@ -1,4 +1,5 @@
 class Solution:
+
     def reorderedPowerOf2(self, N: int) -> bool:
         maxn = 10 ** 9
         twopower = 1

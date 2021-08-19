@@ -1,4 +1,4 @@
-'''
+"""
 case 1:
    a b ...
    i j    => change i to j , j to j+1
@@ -11,12 +11,13 @@ case 2:
     i = j 
     j = new_i+1 why? allelemnts are smaller than original i 
 
-'''
+"""
 
 
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
-        i, j, k = 0, 1, 0
+        (i, j, k) = (0, 1, 0)
         while j + k < len(s):
             if s[i + k] > s[j + k]:
                 j = j + k + 1

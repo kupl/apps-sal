@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         max_arr = max(arr)
         max_arr_idx = arr.index(max_arr)
@@ -6,11 +7,9 @@ class Solution:
             return max(arr)
         if k <= 1:
             return max(arr[0], arr[1])
-
         last_winner = None
         count = 0
         while True:
-
             if arr[0] > arr[1]:
                 winner = arr[0]
                 loser = arr[1]

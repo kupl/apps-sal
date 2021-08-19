@@ -1,15 +1,15 @@
 class Solution:
+
     def flip(self, num, pos):
-        if num & 2**pos:
-            return num - 2**pos
+        if num & 2 ** pos:
+            return num - 2 ** pos
         else:
-            return num + 2**pos
+            return num + 2 ** pos
 
     def findTheLongestSubstring(self, s: str) -> int:
         hash = {(0, 0, 0, 0, 0): [-1]}
         maxLen = 0
         count = {'a': 0, 'e': 0, 'i': 0, 'u': 0, 'o': 0}
-
         for i in range(len(s)):
             if s[i] in count:
                 count[s[i]] = (count[s[i]] + 1) % 2

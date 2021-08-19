@@ -1,10 +1,10 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         n = len(A)
         left = [0] * n
         right = [0] * n
         s = []
-
         for i in range(n):
             count = 1
             while s and s[-1][0] >= A[i]:
@@ -22,5 +22,5 @@ class Solution:
         print(right)
         s = 0
         for i in range(n):
-            s += (left[i]) * (right[i]) * A[i]
+            s += left[i] * right[i] * A[i]
         return s % (10 ** 9 + 7)

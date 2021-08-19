@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         n = len(s)
         i = n - 2

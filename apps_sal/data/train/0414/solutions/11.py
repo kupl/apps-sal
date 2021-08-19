@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         if k > len(arr) - 1:
             return max(arr)
@@ -6,9 +7,9 @@ class Solution:
         for n in arr:
             od[n] = True
         wins = 0
-        prev, _ = od.popitem(last=False)
+        (prev, _) = od.popitem(last=False)
         while True:
-            cur, _ = od.popitem(last=False)
+            (cur, _) = od.popitem(last=False)
             if prev > cur:
                 wins += 1
                 od[cur] = True

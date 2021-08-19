@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         n = len(s)
         cur = ord(s[0])
@@ -10,7 +11,7 @@ class Solution:
                 end += 1
                 i += 1
             elif cur < ord(s[i]):
-                start, end = i, i
+                (start, end) = (i, i)
                 cur = ord(s[i])
                 i += 1
             else:
@@ -22,7 +23,7 @@ class Solution:
                         end = i
                         break
                     elif ord(s[i]) > cur:
-                        start, end = i, i
+                        (start, end) = (i, i)
                         cur = ord(s[i])
                         break
                     elif ord(s[k]) < ord(s[i]):

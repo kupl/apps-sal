@@ -1,5 +1,7 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
+
         @lru_cache(None)
         def dfs(dice_left, curr_sum):
             if curr_sum > target:

@@ -1,4 +1,5 @@
 class Solution:
+
     def wordBreak(self, s, wordDict):
         """
         :type s: str
@@ -13,7 +14,7 @@ class Solution:
             for j in range(i, -1, -1):
                 if dp[j]:
                     word = s[j:i]
-                    if(word in wordDict):
+                    if word in wordDict:
                         dp[i] = True
                         break
         return dp[len(s)]

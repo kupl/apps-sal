@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         import collections
         c = collections.Counter(nums)

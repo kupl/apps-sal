@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         if len(set(s)) == 1:
             return s

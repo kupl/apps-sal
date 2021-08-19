@@ -1,10 +1,10 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
-        c, n = max(s), len(s)
+        (c, n) = (max(s), len(s))
         if s == c * n:
             return s
-
-        q = [i for i, e in enumerate(s) if e == c]
+        q = [i for (i, e) in enumerate(s) if e == c]
         res = s[q[0]]
         while q:
             qq = []
@@ -13,8 +13,7 @@ class Solution:
                     qq += [i + 1]
             if not qq:
                 break
-            c = max(s[i] for i in qq)
+            c = max((s[i] for i in qq))
             res += c
             q = [i for i in qq if s[i] == c]
-
         return res

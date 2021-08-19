@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
         n = len(s)
         dp = {}
@@ -6,12 +7,12 @@ class Solution:
             for i in range(0, n + 1 - k):
                 if k == n:
                     s_count = collections.Counter(s)
-                    dp[(i, k)] = [s_count.get(c, 0) % 2 == 0 for c in 'aeiou']
+                    dp[i, k] = [s_count.get(c, 0) % 2 == 0 for c in 'aeiou']
                 elif i == 0:
-                    dp[(i, k)] = self.update_tracker(s[i + k], dp.get((i, k + 1)))
+                    dp[i, k] = self.update_tracker(s[i + k], dp.get((i, k + 1)))
                 else:
-                    dp[(i, k)] = self.update_tracker(s[i - 1], dp.get((i - 1, k + 1)))
-                if all(dp[(i, k)]):
+                    dp[i, k] = self.update_tracker(s[i - 1], dp.get((i - 1, k + 1)))
+                if all(dp[i, k]):
                     return k
         return 0
 

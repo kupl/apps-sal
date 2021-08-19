@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         i = 0
         k = 0
@@ -11,7 +12,6 @@ class Solution:
                 j += 1
             else:
                 i += 1
-
             if i == j:
                 j += 1
             k = 0

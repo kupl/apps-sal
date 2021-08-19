@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         prev = 0
         prev_zero = 0
@@ -13,7 +14,5 @@ class Solution:
                     count -= 1
                     prev = prev_zero + 1
                 prev_zero = i
-
             result = max(result, i - prev)
-
         return result if boolean == True else len(nums) - 1

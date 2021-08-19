@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         z = [0]
         a = 0
@@ -8,7 +9,7 @@ class Solution:
         for i in range(len(nums)):
             if a == 1 and nums[i] == 0:
                 z.append(c)
-                c = (i) - (l + 1)
+                c = i - (l + 1)
                 a = 1
                 l = i
             elif nums[i] == 0:

@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         if k > len(arr) + 3:
             return max(arr)
@@ -21,5 +22,4 @@ class Solution:
                 win_num = arr[1]
                 arr.append(arr[0])
                 arr.pop(0)
-
         return win_num

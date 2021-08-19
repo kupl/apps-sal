@@ -1,10 +1,10 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         i = 0
         j = 1
         k = 0
         n = len(s)
-
         while j + k < n:
             if s[i + k] == s[j + k]:
                 k += 1
@@ -16,5 +16,4 @@ class Solution:
             if i == j:
                 j = j + 1
             k = 0
-
         return s[i:]

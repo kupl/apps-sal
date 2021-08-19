@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         nums.sort()
         counts = Counter(nums)
@@ -9,5 +10,4 @@ class Solution:
                 if counts[num + i] == 0:
                     return False
                 counts[num + i] -= 1
-
         return True

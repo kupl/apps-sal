@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def reorderedPowerOf2(self, N: int) -> bool:
         curr = 1
         N = str(N)

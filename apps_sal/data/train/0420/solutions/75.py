@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
         idx_dic = {0: -1}
         vowels = 'aeiou'
@@ -9,6 +10,5 @@ class Solution:
                 state ^= 1 << j
             if state not in idx_dic:
                 idx_dic[state] = i
-
             ans = max(ans, i - idx_dic[state])
         return ans

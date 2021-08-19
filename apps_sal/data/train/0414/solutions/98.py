@@ -1,11 +1,12 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         maxlen = len(arr)
         if k > maxlen:
             return max(arr)
         wins = 0
         while True:
-            first, second = arr[:2]
+            (first, second) = arr[:2]
             if first > second:
                 arr.pop(1)
                 arr.append(second)

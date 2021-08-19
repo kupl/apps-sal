@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         current_num = arr[0]
         count = 0
@@ -10,5 +11,4 @@ class Solution:
                 count = 1
             if count == k:
                 break
-
         return current_num

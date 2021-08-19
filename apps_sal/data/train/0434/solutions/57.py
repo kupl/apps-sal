@@ -3,6 +3,7 @@ import numpy as np
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         nums = np.array(nums)
         zeros_ = np.where(nums == 0)[0]

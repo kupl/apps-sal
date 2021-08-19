@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def getWinner(self, arr, k):
         r = []
         i = 0
@@ -27,7 +28,6 @@ class Solution:
                 n = len(arr)
                 if n == 1:
                     return q
-
                 for p in z:
                     if p != q:
                         z[p] = 0

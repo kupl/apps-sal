@@ -1,4 +1,5 @@
 class Solution:
+
     def divide(self, dividend, divisor):
         """
         :type dividend: int
@@ -6,10 +7,10 @@ class Solution:
         :rtype: int
         """
         positive = (dividend < 0) is (divisor < 0)
-        dividend, divisor = abs(dividend), abs(divisor)
+        (dividend, divisor) = (abs(dividend), abs(divisor))
         res = 0
         while dividend >= divisor:
-            temp, i = divisor, 1
+            (temp, i) = (divisor, 1)
             while dividend >= temp:
                 dividend -= temp
                 res += i

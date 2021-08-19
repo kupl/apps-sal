@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) < k or len(nums) % k:
             return False

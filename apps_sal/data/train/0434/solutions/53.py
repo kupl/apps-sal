@@ -1,6 +1,7 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
-        prev, res, curr = 0, 0, 0
+        (prev, res, curr) = (0, 0, 0)
         for i in range(len(nums)):
             if nums[i] == 1:
                 curr += 1

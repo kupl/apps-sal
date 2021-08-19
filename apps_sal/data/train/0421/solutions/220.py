@@ -1,6 +1,6 @@
 class Solution:
-    def lastSubstring(self, s: str) -> str:
 
+    def lastSubstring(self, s: str) -> str:
         max_ord = max([ord(c) for c in s])
         max_ord_idxs = [i for i in range(len(s)) if ord(s[i]) == max_ord]
         print(max_ord_idxs)
@@ -15,15 +15,12 @@ class Solution:
                 if idx < len(s) - level:
                     nextOrd2CurIdx[ord(s[idx + level])].append(idx)
                     hist_max = max(hist_max, ord(s[idx + level]))
-            return nextOrd2CurIdx, hist_max
-
+            return (nextOrd2CurIdx, hist_max)
         level = 1
         while 1:
             if len(max_ord_idxs) == 1:
                 return s[max_ord_idxs[0]:]
-
-            nextOrd2CurIdx, hist_max = findNextMaxOrd(max_ord_idxs, level)
-
+            (nextOrd2CurIdx, hist_max) = findNextMaxOrd(max_ord_idxs, level)
             if len(nextOrd2CurIdx[hist_max]) == 1:
                 return s[nextOrd2CurIdx[hist_max][0]:]
             else:

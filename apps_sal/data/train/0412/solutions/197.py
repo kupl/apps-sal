@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, t: int) -> int:
         mod = 1000000000 + 7
         dp = [[0 for i in range(t + 1)] for j in range(d)]

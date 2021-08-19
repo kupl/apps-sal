@@ -1,4 +1,5 @@
 class Solution:
+
     def reorderedPowerOf2(self, N):
         c = sorted(str(N))
         for i in range(32):

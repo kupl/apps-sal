@@ -1,5 +1,7 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
+
         @lru_cache(None)
         def solve(s, t):
             if s <= 0 or t < 0:
@@ -10,4 +12,4 @@ class Solution:
             for i in range(1, f + 1):
                 ans += solve(s - 1, t - i)
             return ans
-        return solve(d, target) % (10**9 + 7)
+        return solve(d, target) % (10 ** 9 + 7)

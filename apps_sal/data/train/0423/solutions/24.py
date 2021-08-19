@@ -9,5 +9,6 @@ def lis(a, diff):
 
 
 class Solution:
+
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         return lis(arr, difference)

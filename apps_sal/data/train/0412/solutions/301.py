@@ -2,7 +2,9 @@ import functools
 
 
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
+
         @functools.lru_cache(None)
         def helper(idx, curr):
             if curr > target:

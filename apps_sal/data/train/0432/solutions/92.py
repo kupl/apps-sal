@@ -2,6 +2,7 @@ from collections import defaultdict, Counter
 
 
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if not nums:
             return False
@@ -9,7 +10,7 @@ class Solution:
             return True
         counter = Counter(nums)
         while counter:
-            start, count = sorted(counter)[0], 0
+            (start, count) = (sorted(counter)[0], 0)
             while count < k:
                 if counter[start] == 0:
                     return False

@@ -1,8 +1,8 @@
 class Solution:
+
     def isPossibleDivide(self, nums, k: int) -> bool:
         if not nums or not k:
             return False
-
         c = Counter(nums)
         nums.sort()
         for num in nums:

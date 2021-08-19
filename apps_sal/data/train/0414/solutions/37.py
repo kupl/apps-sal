@@ -1,6 +1,7 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
-        '''
+        """
         - arr length always <= 2
         - distinct elements
 
@@ -17,13 +18,11 @@ class Solution:
         [6,3,4,5,7] k = 3
 
         len(arr)-k
-        '''
+        """
         if k >= len(arr) - 1:
             return max(arr)
-
         left_wins = 0
-
-        while (left_wins != k):
+        while left_wins != k:
             if arr[0] > arr[1]:
                 left_wins += 1
                 arr.append(arr[1])
@@ -32,5 +31,4 @@ class Solution:
                 left_wins = 1
                 arr.append(arr[0])
                 arr.pop(0)
-
         return arr[0]

@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         ls = max(set(s))
         best_symbol = s.index(ls)
@@ -11,7 +12,6 @@ class Solution:
             while next_symbol_ < len(s) and s[f_] == s[next_symbol_]:
                 f_ += 1
                 next_symbol_ += 1
-
             if next_symbol_ < len(s) and s[f_] < s[next_symbol_]:
                 f = next_symbol
             elif next_symbol_ == len(s):

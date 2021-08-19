@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, nums, k):
         ctr = collections.Counter(nums)
         for num in nums:

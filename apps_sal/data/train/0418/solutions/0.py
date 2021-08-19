@@ -1,16 +1,11 @@
 class Solution:
+
     def integerReplacement(self, n):
         """
         :type n: int
         :rtype: int
         """
-        '''
-         if n == 1:
-             return 0
-         if not (n & 1):
-             return self.integerReplacement(n//2) + 1
-         return min(self.integerReplacement(n+1), self.integerReplacement(n-1)) + 1
-         '''
+        '\n         if n == 1:\n             return 0\n         if not (n & 1):\n             return self.integerReplacement(n//2) + 1\n         return min(self.integerReplacement(n+1), self.integerReplacement(n-1)) + 1\n         '
         ans = 0
         while n > 1:
             if n % 2 == 0:

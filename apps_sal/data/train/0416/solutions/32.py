@@ -1,4 +1,5 @@
 class Solution:
+
     def catMouseGame(self, graph: List[List[int]]) -> int:
         n = len(graph)
         cache = [[[-1] * (2 * n) for _ in range(n)] for _ in range(n)]
@@ -11,7 +12,7 @@ class Solution:
             elif cat == mouse:
                 return 2
             if cache[cat][mouse][t] == -1:
-                mouse_move = (t % 2) == 0
+                mouse_move = t % 2 == 0
                 if mouse_move:
                     best_result = 2
                     for pos in graph[mouse]:

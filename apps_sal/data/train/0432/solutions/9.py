@@ -1,10 +1,9 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if not nums or not k:
             return False
-
         c = Counter(nums)
-
         while c:
             num = sorted(c.keys())[0]
             for i in range(k):

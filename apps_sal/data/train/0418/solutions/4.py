@@ -1,7 +1,8 @@
 class Solution:
+
     def Is2(self, n):
         root = int(math.log(n, 2))
-        return (2**root) == n
+        return 2 ** root == n
 
     def GetNear2(self, n):
         if n == 0:
@@ -22,7 +23,6 @@ class Solution:
         :type n: int
         :rtype: int
         """
-
         m = n
         cnt = 0
         while m != 1:
@@ -45,5 +45,4 @@ class Solution:
             elif k == 3:
                 cnt += 1
                 m = int(m + 1)
-
         return cnt

@@ -1,4 +1,5 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         s = []
         left = [None] * len(A)
@@ -19,4 +20,4 @@ class Solution:
         _sum = 0
         for i in range(len(A)):
             _sum = _sum + A[i] * (left[i] * right[i])
-        return int(_sum % (1e9 + 7))
+        return int(_sum % (1000000000.0 + 7))

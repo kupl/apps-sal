@@ -1,7 +1,8 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
-        vowels, bits, dp = {'a', 'e', 'i', 'o', 'u'}, {'a': 0, 'e': 1, 'i': 2, 'o': 3, 'u': 4}, {0: -1}
-        res, odds = 0, set()
+        (vowels, bits, dp) = ({'a', 'e', 'i', 'o', 'u'}, {'a': 0, 'e': 1, 'i': 2, 'o': 3, 'u': 4}, {0: -1})
+        (res, odds) = (0, set())
         for i in range(len(s)):
             if s[i] in vowels:
                 if s[i] in odds:

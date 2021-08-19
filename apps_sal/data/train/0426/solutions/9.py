@@ -2,15 +2,14 @@ import itertools
 
 
 class Solution:
+
     def reorderedPowerOf2(self, N: int) -> bool:
         if N == 1:
             return True
-
         digits = self._getDigits(N)
         ones = {2, 4, 6, 8} & set(digits)
         if not ones:
             return False
-
         for o in ones:
             digits.remove(o)
             if self._canMakePowerOf2(digits, o):
@@ -33,9 +32,9 @@ class Solution:
 
     def _isPowerOf2(self, digits, ones):
         n = 0
-        for i, d in enumerate(digits):
+        for (i, d) in enumerate(digits):
             if i == 0 and d == 0:
                 return False
             n = 10 * n + d
         n = 10 * n + ones
-        return n & (n - 1) == 0
+        return n & n - 1 == 0

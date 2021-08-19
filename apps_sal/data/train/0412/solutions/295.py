@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         memo = {}
 
@@ -17,5 +18,4 @@ class Solution:
                 ways += solve(dice - 1, target - num)
             memo[dice, target] = ways
             return ways
-
-        return solve(d, target) % (10**9 + 7)
+        return solve(d, target) % (10 ** 9 + 7)

@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         dp = [[0 for i in range(target + 1)] for j in range(d + 1)]
         for i in range(1, d + 1):
@@ -12,4 +13,4 @@ class Solution:
                         if j - k >= 0:
                             num_permutations += dp[i - 1][j - k]
                     dp[i][j] = num_permutations
-        return int(dp[d][target] % (10**9 + 7))
+        return int(dp[d][target] % (10 ** 9 + 7))

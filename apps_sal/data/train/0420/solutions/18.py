@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
         for i in range(len(s), 0, -1):
             for j in range(len(s) - i + 1):

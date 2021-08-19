@@ -1,6 +1,7 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
-        l = nums[::]
+        l = nums[:]
         l.sort()
         n = len(l)
         d = Counter(l)

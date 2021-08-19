@@ -1,4 +1,5 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         l = len(A)
         left = [0 for _ in range(l)]
@@ -32,4 +33,4 @@ class Solution:
                 res += A[l - 1 - i]
             else:
                 res += A[l - 1 - i] * (left[i] + 1) * (right[l - 1 - i] + 1)
-        return res % (10**9 + 7)
+        return res % (10 ** 9 + 7)

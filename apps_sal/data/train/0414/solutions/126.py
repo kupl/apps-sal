@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         n = len(arr)
         current = arr[0]
@@ -8,6 +9,6 @@ class Solution:
                 current = arr[i]
                 wins = 0
             wins += 1
-            if (wins == k):
+            if wins == k:
                 break
         return current

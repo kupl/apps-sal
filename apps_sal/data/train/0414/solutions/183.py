@@ -1,13 +1,12 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         residual_list = arr
         filled_list = []
         winner_dict = {}
         residual_dict = []
-
         if k >= len(arr):
             return max(arr)
-
         for item in residual_list:
             filled_list.append(item)
             if len(filled_list) >= 2:
