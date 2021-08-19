@@ -1,23 +1,20 @@
-# problems2
-# silver fox vs monster
 from collections import deque
 import math
-N, D, A = map(int, input().split())
+(N, D, A) = map(int, input().split())
 d = []
 for _ in range(N):
-    x, h = map(int, input().split())
+    (x, h) = map(int, input().split())
     d.append((x, h))
 d.sort(key=lambda x: x[0])
-
 now_damage = 0
 d = deque(d)
 ans = 0
 d_field = deque()
 while d:
     x = d.popleft()
-    place, life = x
+    (place, life) = x
     if d_field:
-        while (d_field and d_field[0][0] < place):
+        while d_field and d_field[0][0] < place:
             now_damage -= A * d_field[0][1]
             d_field.popleft()
     if life <= now_damage:

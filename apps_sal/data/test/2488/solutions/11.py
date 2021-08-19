@@ -1,4 +1,3 @@
-# 素数関連
 from collections import deque
 
 
@@ -34,14 +33,14 @@ def is_prime(x):
     return True
 
 
-n, d, a = map(int, input().split())
+(n, d, a) = map(int, input().split())
 xh = [list(map(int, input().split())) for i in range(n)]
 xh.sort()
 queue = deque()
 ans = 0
 cur = 0
 for i in range(n):
-    x, h = xh[i]
+    (x, h) = xh[i]
     while queue != deque() and queue[0][0] < x:
         cur -= queue.popleft()[1]
     h -= cur

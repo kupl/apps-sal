@@ -1,14 +1,16 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    N, D, A = list(map(int, input().split()))
+    (N, D, A) = list(map(int, input().split()))
     mlist = []
     for _ in range(N):
-        x, h = list(map(int, input().split()))
+        (x, h) = list(map(int, input().split()))
         mlist.append([x, (h + A - 1) // A])
     mlist.sort(key=lambda x: x[0])
     db = deque()

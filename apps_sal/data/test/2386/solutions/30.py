@@ -10,8 +10,7 @@ def snk(b):
 
 
 l = 1 - N
-r = 10**9 + N
-
+r = 10 ** 9 + N
 while r - l > 2:
     m = (l + r) // 2
     ms = snk(m)
@@ -23,5 +22,4 @@ while r - l > 2:
         r = m + 1
     elif mp1s >= ms and ms <= mm1s:
         break
-    #print(l, m, r, ls, ms, rs)
 print(ms)

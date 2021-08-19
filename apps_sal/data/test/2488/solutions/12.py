@@ -1,17 +1,12 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
-
 from bisect import bisect_left, bisect_right
-
-n, d, a = list(map(int, input().split()))
+(n, d, a) = list(map(int, input().split()))
 x = []
 xh = dict()
 for _ in range(n):
-    xi, hi = list(map(int, input().split()))
+    (xi, hi) = list(map(int, input().split()))
     x.append(xi)
     xh[xi] = hi
 x.sort()
-
 l = 0
 ret = 0
 ai = [0] * (n + 1)
