@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 
@@ -7,7 +6,7 @@ def input():
 
 
 def main():
-    H, W = list(map(int, input().split()))
+    (H, W) = list(map(int, input().split()))
     a = []
     white = '.' * W
     for i in range(H):
@@ -16,13 +15,11 @@ def main():
             pass
         else:
             a.append(s)
-
     black = []
     for w in range(W):
         for h in range(len(a)):
             if a[h][w] == '#':
                 black.append(w)
-
     black = sorted(list(set(black)))
     for h in range(len(a)):
         t = ''

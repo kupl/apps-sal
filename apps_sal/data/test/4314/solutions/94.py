@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 alist = [''] * h
 for i in range(h):
     alist[i] = input()

@@ -1,7 +1,5 @@
-H, W = map(int, input().split())
-
-L, side, ver = [], [], []
-
+(H, W) = map(int, input().split())
+(L, side, ver) = ([], [], [])
 for i in range(H):
     a = list(input())
     L.append(a)
@@ -27,6 +25,5 @@ def check(n, inlist, outlist):
 
 side = check(H, L, side)
 ver = check(len(side), side, ver)
-
 for i in range(len(ver)):
     print(''.join(ver[i]))

@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 A = []
 ans = []
 for i in range(h):
@@ -15,7 +15,6 @@ for i in range(w):
             break
     if flag == 1:
         counter.append(i)
-
 for a in ans:
     tmp = ''
     for i in counter:

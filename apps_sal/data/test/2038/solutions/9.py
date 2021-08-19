@@ -1,14 +1,9 @@
-# from bisect import bisect_left
 import sys
-
-# (n) = (int(x) for x in input().split())
 n = int(input())
 a = [int(_) - 1 for _ in sys.stdin.readline().split()]
-
 b = [0 for _ in a]
-for id, v in enumerate(a):
+for (id, v) in enumerate(a):
     b[v] = id
-
 ans = []
 for i in range(n):
     pos = b[i]
@@ -16,14 +11,11 @@ for i in range(n):
     old_v = a[target]
     if pos == target:
         continue
-
-    # do swap
     b[old_v] = pos
     b[i] = i
     a[target] = i
     a[pos] = old_v
-
-    if (abs(pos - target) * 2 >= n):
+    if abs(pos - target) * 2 >= n:
         ans.append((pos, target))
         continue
     elif max(pos, target) < n // 2:
@@ -46,8 +38,5 @@ for i in range(n):
         ans.append((L, target))
         ans.append((L, R))
         ans.append((pos, R))
-
 print(len(ans))
-print("\n".join(f"{i[0] + 1} {i[1] + 1}" for i in ans))
-# for i in ans:
-#     print(i[0] + 1, i[1] + 1)
+print('\n'.join((f'{i[0] + 1} {i[1] + 1}' for i in ans)))
