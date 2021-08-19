@@ -1,14 +1,13 @@
-#!/usr/bin/env python3
-#
-# XOR-pyramid
-#
 import sys
 import os
 
 
-def read_int(): return int(input())
-def read_ints(): return list(map(int, input().split()))
-#------------------------------------------------------------------------------#
+def read_int():
+    return int(input())
+
+
+def read_ints():
+    return list(map(int, input().split()))
 
 
 n = read_int()
@@ -22,5 +21,5 @@ for i in range(n - 1, -1, -1):
         dp[i][j] = max(f[i][j], dp[i][j - 1], dp[i + 1][j])
 q = read_int()
 for _ in range(q):
-    l, r = read_ints()
+    (l, r) = read_ints()
     print(dp[l - 1][r - 1])

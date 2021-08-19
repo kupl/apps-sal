@@ -2,15 +2,13 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) == 1:
             return 0
-
         VALUE_INDEX_MAP = defaultdict(list)
-        for i, v in enumerate(arr):
+        for (i, v) in enumerate(arr):
             VALUE_INDEX_MAP[v].append(i)
-
-        # BFS
         queue = deque([0])
         seen = set([0])
         nsteps = -1
@@ -25,6 +23,5 @@ class Solution:
                     if 0 <= nx < len(arr) and nx not in seen:
                         queue.append(nx)
                         seen.add(nx)
-                VALUE_INDEX_MAP[arr[x]].clear()  # this ensures that the same value can be visited at most twice.
-
+                VALUE_INDEX_MAP[arr[x]].clear()
         return -1

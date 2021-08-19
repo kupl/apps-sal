@@ -1,15 +1,14 @@
 class Solution:
-    def minJumps(self, arr: List[int]) -> int:
-        # U could do this in BFS
 
+    def minJumps(self, arr: List[int]) -> int:
         record = collections.defaultdict(list)
-        for i, v in enumerate(arr):
+        for (i, v) in enumerate(arr):
             record[v].append(i)
         nums = set()
         pos_met = set()
         q = collections.deque([(0, 0)])
         while q:
-            pos, step = q.popleft()
+            (pos, step) = q.popleft()
             if pos == len(arr) - 1:
                 return step
             num = arr[pos]

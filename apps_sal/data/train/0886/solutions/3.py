@@ -4,7 +4,6 @@ for _ in range(int(input().strip())):
     m = int(input().strip())
     for i in range(n):
         list1[i] = list1[i] + list1[i] % 3
-    # print(list1)
     l1 = []
     l2 = []
     list2 = sorted(list1)
@@ -17,8 +16,8 @@ for _ in range(int(input().strip())):
     if len(l1) > 0 and len(l2) > 0:
         print(max(l2), min(l1))
     elif len(l1) <= 0 and len(l2) > 0:
-        print(max(l2), "-1")
+        print(max(l2), '-1')
     elif len(l1) > 0 and len(l2) <= 0:
-        print("-1", min(l1))
+        print('-1', min(l1))
     else:
-        print("-1", "-1")
+        print('-1', '-1')

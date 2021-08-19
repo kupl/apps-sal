@@ -1,4 +1,5 @@
 class Solution:
+
     def solveEquation(self, equation):
         """
         :type equation: str
@@ -17,21 +18,20 @@ class Solution:
                     elif coeff == '+' or coeff == '':
                         a += right
                     else:
-                        a += (int(coeff.strip('x')) * right)
+                        a += int(coeff.strip('x')) * right
                 else:
-                    b -= (int(coeff) * right)
+                    b -= int(coeff) * right
                 coeff = i
                 if i == '=':
                     right = -1
                     coeff = ''
             else:
                 coeff += i
-#            print(i,a,b,coeff)
         if a == 0 and b == 0:
-            return "Infinite solutions"
+            return 'Infinite solutions'
         elif a == 0:
-            return "No solution"
+            return 'No solution'
         elif b == 0:
-            return "x=0"
+            return 'x=0'
         else:
-            return "x=" + str(int(b / a))
+            return 'x=' + str(int(b / a))

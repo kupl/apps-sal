@@ -1,16 +1,15 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         index = {}
         if len(set(arr)) > 10:
-            for ic, val in enumerate(arr):
+            for (ic, val) in enumerate(arr):
                 index[val] = index.get(val, []) + [ic]
         else:
             for val in set(arr):
-                index[val] = [ic for ic, v0 in enumerate(arr) if v0 == val]
-#        print(len(index),len(arr))
-#        return 6
+                index[val] = [ic for (ic, v0) in enumerate(arr) if v0 == val]
         neigh = {}
-        for ic, val in enumerate(arr):
+        for (ic, val) in enumerate(arr):
             if ic - 1 >= 0:
                 neigh[ic] = neigh.get(ic, []) + [ic - 1]
             if ic + 1 < len(arr):

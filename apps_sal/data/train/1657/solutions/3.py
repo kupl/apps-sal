@@ -8,8 +8,6 @@ def reversal_func(s):
 
 @lru_cache()
 def period(n):
-    # see https://oeis.org/A216066 , comment by [Robert Pfister, Sep 12 2013]
-    # and https://oeis.org/A003558 , formula by [Jonathan Skowera, Jun 29 2013]
     last = 1
     for i in range(n):
         val = abs(2 * n + 1 - 2 * last)

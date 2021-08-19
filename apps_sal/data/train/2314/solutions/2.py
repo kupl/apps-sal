@@ -1,4 +1,3 @@
-# t=int(input())
 t = 1
 for _ in range(t):
     n = int(input())
@@ -9,14 +8,12 @@ for _ in range(t):
     for i in range(1, n):
         for j in range(n - i):
             dp[i][j] = dp[i - 1][j] ^ dp[i - 1][j + 1]
-
     for i in range(1, n):
         for j in range(n - i):
             dp[i][j] = max(dp[i][j], dp[i - 1][j], dp[i - 1][j + 1])
-
     q = int(input())
     for __ in range(q):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         x -= 1
         y -= 1
         print(dp[y - x][x])

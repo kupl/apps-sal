@@ -1,4 +1,3 @@
-# cook your dish here
 for t in range(int(input())):
     N = list(map(int, input().split()))
     c = 0

@@ -1,13 +1,13 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         g = collections.defaultdict(list)
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             g[num].append(i)
         visited = set()
-        q = deque([(0, 0)])  # idx,step
-
+        q = deque([(0, 0)])
         while q:
-            idx, step = q.popleft()
+            (idx, step) = q.popleft()
             if idx == len(arr) - 1:
                 return step
             visited.add(idx)
