@@ -1,5 +1,5 @@
 from bisect import bisect as bs
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 a = list(map(int, input().split()))
 k = list(map(int, input().split()))
 tmp = 0
@@ -7,7 +7,6 @@ sumA = []
 for i in range(n):
     tmp += a[i]
     sumA.append(tmp)
-# print(sumA)
 
 
 def bin_search(left, right, v):
@@ -23,9 +22,7 @@ def bin_search(left, right, v):
 
 
 now = 0
-
 ansList = []
-
 for i in range(q):
     now += k[i]
     ans_id = bs(sumA, now)
@@ -33,5 +30,4 @@ for i in range(q):
         now = 0
         ans_id = 0
     ansList.append(n - ans_id)
-
-print("\n".join(map(str, ansList)))
+print('\n'.join(map(str, ansList)))

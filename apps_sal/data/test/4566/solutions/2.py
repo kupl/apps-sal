@@ -1,11 +1,10 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
 
 def main2():
     numbers = []
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     numbers = [list(map(int, input().split())) for _ in range(m)]
     dp = [0] * n
     for number in numbers:
@@ -17,7 +16,7 @@ def main2():
 
 def main():
     numbers = []
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     numbers = [list(map(int, input().split())) for _ in range(m)]
     dp = {}
     for number in numbers:

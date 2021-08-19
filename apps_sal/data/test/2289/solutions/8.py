@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Fri Apr 27 00:39:17 2018
 
@@ -19,7 +18,7 @@ def Low(a, l, r, x):
         return l - 1
 
 
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 k = list(map(int, input().split()))
 p = [0] * n

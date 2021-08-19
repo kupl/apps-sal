@@ -1,15 +1,14 @@
 import math
 for nt in range(int(input())):
     n = int(input())
-    # print (n)
     if n == 1:
-        print("FastestFinger")
+        print('FastestFinger')
         continue
     elif n == 2:
-        print("Ashishgup")
+        print('Ashishgup')
         continue
     if n % 2:
-        print("Ashishgup")
+        print('Ashishgup')
         continue
     x = 0
     m = n
@@ -17,18 +16,18 @@ for nt in range(int(input())):
         n = n // 2
         x += 1
     if n == 1:
-        print("FastestFinger")
+        print('FastestFinger')
         continue
     if x == 1:
         left = m // 2
         flag = 0
-        for i in range(2, int(left**0.5) + 1):
+        for i in range(2, int(left ** 0.5) + 1):
             if left % i == 0:
                 flag = 1
                 break
         if flag:
-            print("Ashishgup")
+            print('Ashishgup')
         else:
-            print("FastestFinger")
+            print('FastestFinger')
     else:
-        print("Ashishgup")
+        print('Ashishgup')

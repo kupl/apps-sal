@@ -1,4 +1,3 @@
-# import time
 N = 303
 eq = []
 dp = []
@@ -8,7 +7,6 @@ for i in range(N):
     dp.append([0] * N)
 n = int(input())
 s = input()
-# t = time.time()
 allsum = len(s)
 s = s.split()
 for i in range(n):
@@ -36,7 +34,5 @@ for i in range(n):
             pos += 1
         cur = allsum - su * cnt + (j + 1) * cnt - j * cnt
         if cnt > 1 and ans > cur:
-            # print(allsum, su, cnt, j)
             ans = cur
 print(ans)
-# print(time.time() - t)

@@ -11,12 +11,10 @@ while i < n:
     else:
         intc = ord(s[i]) - ord('A')
         if a[intc][0] == 0:
-            # print("if",intc)
             a[intc] = (1, i)
             l += 1
             i += 1
         else:
-            # print("else",intc)
             i = a[intc][1] + 1
             l = 0
             for k in range(0, 26):
@@ -39,5 +37,5 @@ else:
     for j in range(0, n):
         if p[j] == '?':
             p[j] = 'A'
-    w = "".join(p)
+    w = ''.join(p)
     print(w)

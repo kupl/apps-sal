@@ -8,4 +8,4 @@ for i in range(len(S) - len_T + 1):
         if S[i + j] != T[j]:
             tmp_change_word += 1
     ans_min_change_word = min(ans_min_change_word, tmp_change_word)
-print(ans_min_change_word)  # (๑•ૅㅁ•๑)
+print(ans_min_change_word)

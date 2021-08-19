@@ -8,15 +8,13 @@ def read():
     return [int(x) for x in input().split()]
 
 
-n, m, k_res = read()
+(n, m, k_res) = read()
 arr = read()
 cost = []
 for i in range(n):
     cost.append(read())
-dp[0][0][MX_SZ - 1] = 0  # [trees painted][group amount][last color]
+dp[0][0][MX_SZ - 1] = 0
 best[0][0][0] = (0, MX_SZ - 1)
-# print(best[0][0][0][1])
-# return
 for i in range(1, n + 1):
     clr = arr[i - 1]
     if clr == 0:

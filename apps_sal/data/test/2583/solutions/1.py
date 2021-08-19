@@ -10,7 +10,6 @@ def check(x):
 
 
 for _ in range(int(input())):
-    # a, b = map(int, input().split())
     n = int(input())
     if n == 1:
         print('FastestFinger')
@@ -26,8 +25,7 @@ for _ in range(int(input())):
         print('FastestFinger')
     elif p2 != 1:
         print('Ashishgup')
+    elif check(n):
+        print('FastestFinger')
     else:
-        if check(n):
-            print('FastestFinger')
-        else:
-            print('Ashishgup')
+        print('Ashishgup')

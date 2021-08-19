@@ -1,18 +1,26 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations
 import sys
 import math
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -40,12 +48,10 @@ mod = 1000000007
 def solve():
     t = I()
     for i in range(t):
-        a, b = LI()
+        (a, b) = LI()
         d = len(str(b + 1)) - 1
         print(a * d)
     return
-
-# Solve
 
 
 def __starting_point():

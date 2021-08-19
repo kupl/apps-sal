@@ -1,4 +1,4 @@
-'''
+"""
 問題：
     アライグマはモンスターと戦っています。
 
@@ -12,30 +12,16 @@
     アライグマが同じ必殺技を
     2 度以上使うことなくモンスターに勝つことができるなら Yes を、
     できないなら No を出力してください。
-'''
-
-'''
-制約：
-    1 ≦ H ≦ 1000000000
-    1 ≦ N ≦ 100000
-    1 ≦ Ai ≦ 10000
-    入力中のすべての値は整数である。
-'''
-
-# 標準入力から H, N, Ai を取得する
-h, m = list(map(int, input().split()))
+"""
+'\n制約：\n    1 ≦ H ≦ 1000000000\n    1 ≦ N ≦ 100000\n    1 ≦ Ai ≦ 10000\n    入力中のすべての値は整数である。\n'
+(h, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
-# 必殺技を1回ずつ使った場合、モンスターの体力をどれだけ削れるか計算する
 hissatsu_hp = 0
 for i in range(0, m):
     hissatsu_hp += a[i]
-
-# 同じ必殺技を使わずアライグマを倒せるか判定して結果を出力する
-result = ""
+result = ''
 if hissatsu_hp >= h:
-    result = "Yes"
+    result = 'Yes'
 else:
-    result = "No"
-
+    result = 'No'
 print(result)

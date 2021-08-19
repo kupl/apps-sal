@@ -31,7 +31,6 @@ def solve():
         elif w[i + 1] == 0:
             w[i + 1] += 1
             r += 1
-
     rm = r
     r = 0
     w = [0] * (n + 2)
@@ -50,5 +49,4 @@ def solve():
     print(r, rm)
 
 
-# for i in range(mint()):
 solve()
