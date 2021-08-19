@@ -15,13 +15,13 @@ def main():
                 a2 = b
             if x1 != x2:
                 if x1 > x2:
-                    x1, a1 = x2, a2
+                    (x1, a1) = (x2, a2)
                 else:
-                    x2, a2 = x1, a1
-        elif b:  # 3
+                    (x2, a2) = (x1, a1)
+        elif b:
             a1 = 1 if a1 != 1 else 2
             a2 = 2 if a2 != 2 else 1
-        else:  # 0
+        else:
             a1 = a2 = 0
             z += 1
     print(x1 + z)
