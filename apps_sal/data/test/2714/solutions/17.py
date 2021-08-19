@@ -1,8 +1,6 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-#from math import *
-# sys.setrecursionlimit(10**6)
 mod = 998244353
 t = int(input())
 
@@ -36,8 +34,7 @@ def isbip(col, vis, n):
             continue
         if not isbip2(i, vis, col, f):
             return 0
-        c = (c % mod * (pow(2, f[0] - z, mod) + pow(2, f[1] - o, mod))) % mod
-
+        c = c % mod * (pow(2, f[0] - z, mod) + pow(2, f[1] - o, mod)) % mod
         z = f[0]
         o = f[1]
     return c
@@ -45,12 +42,12 @@ def isbip(col, vis, n):
 
 while t > 0:
     t -= 1
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     col = [-1 for i in range(n + 1)]
     a = [[] for i in range(n + 1)]
     vis = [0 for i in range(n + 1)]
     for i in range(m):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         a[x].append(y)
         a[y].append(x)
     print(isbip(col, vis, n))

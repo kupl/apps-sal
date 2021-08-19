@@ -2,8 +2,7 @@ from sys import stdin
 
 
 def kmp(pat, text, t):
-    s = pat + "?" + text
-    # z[i] es el tamaño del prefijo mas largo de, formado por una subcadena s[i:...]
+    s = pat + '?' + text
     z = [0 for i in range(len(s))]
     L = 0
     R = 0
@@ -34,7 +33,7 @@ r = stdin.readline().strip()
 x = len(l)
 y = len(r)
 n = len(a)
-dp = [[0 for i in range(len(a))]for j in range(2)]
+dp = [[0 for i in range(len(a))] for j in range(2)]
 ans = [0 for i in range(len(a) + 1)]
 ans[-1] = 1
 kmp(l, a, 0)
@@ -44,8 +43,8 @@ auxr = y - 1
 acum = [0 for i in range(n + 2)]
 acum[n] = 1
 for i in range(n - 1, -1, -1):
-    if a[i] == "0":
-        if l[0] == "0":
+    if a[i] == '0':
+        if l[0] == '0':
             ans[i] = ans[i + 1]
         acum[i] = (acum[i + 1] + ans[i]) % mod
         continue
@@ -53,13 +52,12 @@ for i in range(n - 1, -1, -1):
         acum[i] = (acum[i + 1] + ans[i]) % mod
         continue
     if auxl != auxr:
-        if (auxl + i) < n and a[dp[0][i] + i] >= l[dp[0][i]]:
+        if auxl + i < n and a[dp[0][i] + i] >= l[dp[0][i]]:
             ans[i] = (ans[i] + ans[i + auxl + 1]) % mod
-        if (auxr + i) < n and a[dp[1][i] + i] <= r[dp[1][i]]:
+        if auxr + i < n and a[dp[1][i] + i] <= r[dp[1][i]]:
             ans[i] = (ans[i] + ans[i + auxr + 1]) % mod
-    else:
-        if (auxl + i) < n and a[dp[0][i] + i] >= l[dp[0][i]] and a[dp[1][i] + i] <= r[dp[1][i]]:
-            ans[i] = (ans[i] + ans[i + auxl + 1]) % mod
+    elif auxl + i < n and a[dp[0][i] + i] >= l[dp[0][i]] and (a[dp[1][i] + i] <= r[dp[1][i]]):
+        ans[i] = (ans[i] + ans[i + auxl + 1]) % mod
     lim1 = auxl + i + 2
     lim2 = min(auxr + i + 1, n + 1)
     if lim1 < lim2:

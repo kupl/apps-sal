@@ -1,9 +1,10 @@
-def gcd(a, b): return a if b == 0 else gcd(b, a % b)
+def gcd(a, b):
+    return a if b == 0 else gcd(b, a % b)
 
 
 def norm(a, b, c):
     k = gcd(gcd(a, b), c)
-    return a // k, b // k, c // k
+    return (a // k, b // k, c // k)
 
 
 def line(A, B):
@@ -14,17 +15,18 @@ def line(A, B):
 
 
 def dist_line(A, l):
-    x, y = A
-    a, b, c = l
+    (x, y) = A
+    (a, b, c) = l
     d = a * a + b * b
-    res = (a * x + b * y + c)  # / d
+    res = a * x + b * y + c
     return res
 
 
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, w, v, u = read()
+(n, w, v, u) = read()
 p = [tuple(read()) for i in range(n)]
 l = line((0, 0), (v, u))
 mind = float('inf')

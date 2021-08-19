@@ -22,28 +22,22 @@ def Union(x, y):
 
 testcase = int(input())
 for test in range(testcase):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     EDGE = [list(map(int, input().split())) for i in range(m)]
     EDGELIST = [[] for j in range(n + 1)]
     ANS = 1
-
     Group = [j for j in range(n + 1)]
-
-    for a, b in EDGE:
+    for (a, b) in EDGE:
         Union(a, b)
         EDGELIST[a].append(b)
         EDGELIST[b].append(a)
-
     testing = [None] * (n + 1)
     flag = 1
-
     for i in range(1, n + 1):
         if testing[i] != None:
             continue
-
         score = 1
         allscore = 1
-
         testing[i] = 1
         QUE = deque([i])
         while QUE:
@@ -59,15 +53,12 @@ for test in range(testcase):
                     score += 1
                 allscore += 1
                 QUE.append(to)
-
             if flag == 0:
                 break
         if flag == 0:
             break
-        # print(score,allscore)
         ANS = ANS * calc(score, allscore) % mod
     if flag == 0:
         print(0)
         continue
-
     print(ANS)

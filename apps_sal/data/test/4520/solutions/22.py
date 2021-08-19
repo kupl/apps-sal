@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
-
 import sys
 import bisect
-
 line_count = 0
 segments = [None]
 num_points = 200000
@@ -29,22 +26,20 @@ for line in sys.stdin.readlines():
     if line_count == n:
         break
     line_count += 1
-
 working = []
 removed = []
 for i in range(1, num_points + 1):
     for segment_index in opening[i]:
-        _, r = segments[segment_index]
+        (_, r) = segments[segment_index]
         bisect.insort_right(working, (r, segment_index))
     working_count = len(working)
     while working_count > k:
-        r, segment_index = working.pop()
+        (r, segment_index) = working.pop()
         working_count -= 1
         removed.append(segment_index)
         removed_right[r] += 1
     squeezed_out = len(closing[i]) - removed_right[i]
     working = working[squeezed_out:]
-
 print(len(removed))
 for j in removed:
-    print(j, end=" ")
+    print(j, end=' ')

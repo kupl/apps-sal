@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-
 import sys
-
 line_count = 0
 segments = []
 for line in sys.stdin.readlines():
@@ -16,7 +13,6 @@ for line in sys.stdin.readlines():
     if line_count == n:
         break
     line_count += 1
-
 removed = [False for i in range(n)]
 remove_count = 0
 removed_list = []
@@ -26,18 +22,16 @@ for i in range(1, 201):
     for j in range(n):
         if removed[j]:
             continue
-        l, r = segments[j]
+        (l, r) = segments[j]
         if l <= i and i <= r:
             covering.append((r, j))
     to_remove = len(covering) - k
     if to_remove > 0:
         covering.sort()
         for _ in range(to_remove):
-            _, j = covering.pop()
-#            print(i, j, segments[j])
+            (_, j) = covering.pop()
             removed[j] = True
             removed_list.append(j)
-
 print(len(removed_list))
 for j in removed_list:
-    print(j + 1, end=" ")
+    print(j + 1, end=' ')
