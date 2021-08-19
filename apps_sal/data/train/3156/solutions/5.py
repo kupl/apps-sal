@@ -3,7 +3,7 @@ from math import ceil
 
 def digits(n):
     while n >= 10:
-        if (n % 10) % 2 > 0:
+        if n % 10 % 2 > 0:
             return False
         n //= 10
     return n % 2 == 0

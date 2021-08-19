@@ -4,7 +4,7 @@ import re
 def parse_mana_cost(mana):
     retval = {}
     mana = mana.lower()
-    m = re.match(r'\A(\d*)([wubrg]*)\Z', mana)
+    m = re.match('\\A(\\d*)([wubrg]*)\\Z', mana)
     if m:
         if m.group(1) and int(m.group(1)) > 0:
             retval['*'] = int(m.group(1))

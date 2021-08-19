@@ -6,5 +6,4 @@ def is_divisible(n, x, y):
         print(b)
         return True
     else:
-
         return False

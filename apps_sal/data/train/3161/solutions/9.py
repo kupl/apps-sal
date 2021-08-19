@@ -2,7 +2,7 @@ def select(memory):
     s = memory.split(',')
     s = [x.strip() for x in s]
     marked = []
-    for i, name in enumerate(s):
+    for (i, name) in enumerate(s):
         if name.startswith('!'):
             marked.append(name)
             if i != len(s) - 1:
@@ -16,5 +16,4 @@ def select(memory):
             n = mark[:]
         if n in s:
             s = [x for x in s if x != n]
-
     return ', '.join(s)

@@ -1,7 +1,7 @@
 def check_alive(health):
-    if(health <= 0 and health >= -10):
+    if health <= 0 and health >= -10:
         return False
-    elif (health > 0 and health <= 10):
+    elif health > 0 and health <= 10:
         return True
     else:
-        print("Put a correct number")
+        print('Put a correct number')

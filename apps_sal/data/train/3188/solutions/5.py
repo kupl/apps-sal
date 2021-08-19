@@ -1,6 +1,6 @@
 def basereduct(x):
     c = 0
-    while(len(str(x)) > 1):
+    while len(str(x)) > 1:
         b = max(map(int, str(x))) + 1
         if b == 10:
             b = 11

@@ -3,7 +3,7 @@ from itertools import cycle
 
 
 def interpreter(tape):
-    i, skip, D, res = 0, False, defaultdict(int), []
+    (i, skip, D, res) = (0, False, defaultdict(int), [])
     for c in cycle(tape):
         if skip:
             skip = False

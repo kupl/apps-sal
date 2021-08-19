@@ -4,5 +4,4 @@ def create_array(n):
     while i != n + 1:
         res.append(i)
         i += 1
-
     return res

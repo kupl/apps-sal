@@ -12,11 +12,9 @@ def quadratic_root(t):
 def triangular_range(start, stop):
     first = int(ceil(quadratic_root(start)))
     last = int(floor(quadratic_root(stop)))
-
     result = {}
     t = triangular(first)
     for n in range(first, last + 1):
         result[n] = t
         t += n + 1
-
     return result

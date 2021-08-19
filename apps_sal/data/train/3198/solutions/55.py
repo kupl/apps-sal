@@ -1,6 +1,6 @@
 def check_exam(arr1, arr2):
     sum = 0
-    for a, b in zip(arr1, arr2):
+    for (a, b) in zip(arr1, arr2):
         if a == b:
             sum += 4
         elif b == '':

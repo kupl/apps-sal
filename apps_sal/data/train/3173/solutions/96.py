@@ -4,6 +4,6 @@ def create_array(n):
     while i <= n:
         i += 1
         res += [i]
-        if (len(res) == n):
+        if len(res) == n:
             break
     return res

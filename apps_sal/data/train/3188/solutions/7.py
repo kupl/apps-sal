@@ -6,6 +6,6 @@ def basereduct(x):
         s = str(x)
         b = max(map(int, s)) + 1
         if b == 10:
-            b, count = 11, count + 1
+            (b, count) = (11, count + 1)
         x = int(s, b)
     return x

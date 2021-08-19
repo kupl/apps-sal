@@ -5,5 +5,4 @@ def reverseWords(str):
         rev_str += rev_list[i]
         if i != 0:
             rev_str += ' '
-
     return rev_str

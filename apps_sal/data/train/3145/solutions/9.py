@@ -1,2 +1,2 @@
 def greet(name):
-    return "Hello, %s how are you doing today?" % str(name)
+    return 'Hello, %s how are you doing today?' % str(name)

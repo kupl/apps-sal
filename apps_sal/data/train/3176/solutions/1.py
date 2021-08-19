@@ -1,6 +1,5 @@
 from re import compile, match
-
-REGEX = compile(r'\$(?P<integer>\d+)\.(?P<frac>\d{0,2})$')
+REGEX = compile('\\$(?P<integer>\\d+)\\.(?P<frac>\\d{0,2})$')
 
 
 def to_cents(amount):

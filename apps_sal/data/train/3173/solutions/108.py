@@ -4,5 +4,4 @@ def create_array(n):
     for x in range(n):
         res.append(i)
         i += 1
-
     return res

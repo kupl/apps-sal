@@ -18,12 +18,11 @@ def to_utf8_binary(string):
 
 def from_utf8_binary(bitstring):
     string = ''
-    i, t = 0, len(bitstring)
+    (i, t) = (0, len(bitstring))
     while i < t:
         bit_code = ''
         char_bit = bitstring[i:i + 8]
         i += 8
-
         if char_bit.startswith('11110'):
             bit_code += char_bit[5:8]
             for j in range(0, 3):
@@ -44,7 +43,5 @@ def from_utf8_binary(bitstring):
                 i += 8
         else:
             bit_code = '0' + char_bit[1:8]
-
         string += chr(int(bit_code, 2))
-
     return string

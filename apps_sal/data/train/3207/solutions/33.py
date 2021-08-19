@@ -1,6 +1,6 @@
 def reverseWords(s):
     reverse = s.split()
-    strng = ""
+    strng = ''
     for i in range(1, len(reverse) + 1):
-        strng += reverse[-i] + " "
+        strng += reverse[-i] + ' '
     return strng[:-1]

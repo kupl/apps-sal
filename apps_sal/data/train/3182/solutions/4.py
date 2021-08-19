@@ -2,7 +2,7 @@ def LDTA(n):
     digits = []
     num = 1
     pow = 1
-    while num < n**pow and pow < 20:
+    while num < n ** pow and pow < 20:
         num *= n
         pow += 1
         if len(digits) == 10:

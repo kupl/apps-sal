@@ -1,5 +1,5 @@
 def greet(name):
-    return ("Hello, " + str(name) + " how are you doing today?")
+    return 'Hello, ' + str(name) + ' how are you doing today?'
 
 
-greet("Ryan")
+greet('Ryan')

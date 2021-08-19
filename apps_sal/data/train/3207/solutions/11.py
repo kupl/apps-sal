@@ -1,1 +1,2 @@
-def reverseWords(s): return " ".join(s.split(" ")[::-1])
+def reverseWords(s):
+    return ' '.join(s.split(' ')[::-1])

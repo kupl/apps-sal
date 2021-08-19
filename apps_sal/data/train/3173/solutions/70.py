@@ -3,5 +3,4 @@ def create_array(n):
     tab = []
     for x in a:
         tab.append(x)
-
     return tab

@@ -5,7 +5,7 @@ def check_exam(arr1, arr2):
     while i < len(arr1):
         if arr1[i] == arr2[i]:
             result.append(4)
-        elif arr2[i] == "":
+        elif arr2[i] == '':
             result.append(0)
         else:
             result.append(-1)

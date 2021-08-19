@@ -10,7 +10,7 @@ def words(n):
     res = []
     if n >= 100:
         res.append(num2words1[n // 100])
-        res.append("hundred")
+        res.append('hundred')
         n -= n // 100 * 100
     if n >= 20:
         res.append(num2words2[n // 10])
@@ -18,5 +18,5 @@ def words(n):
     if n > 0:
         res.append(num2words1[n])
     if not res:
-        res.append("zero")
-    return " ".join(res)
+        res.append('zero')
+    return ' '.join(res)

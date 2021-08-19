@@ -1,7 +1,7 @@
 def triangular_sum(t):
     triangles = [1]
     n = 2
-    while triangles[-1] < t**0.5:
+    while triangles[-1] < t ** 0.5:
         triangles.append(triangles[-1] + n)
         n += 1
     for n1 in triangles:

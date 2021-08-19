@@ -7,4 +7,4 @@ def create_line(number):
 def stairs(number):
     lines = [create_line(num) for num in range(1, number + 1)]
     max_length = number * 4 - 1
-    return '\n'.join(line.rjust(max_length) for line in lines)
+    return '\n'.join((line.rjust(max_length) for line in lines))

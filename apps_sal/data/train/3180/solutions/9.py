@@ -1,6 +1,6 @@
 def trotter(k):
     if not k:
-        return "INSOMNIA"
+        return 'INSOMNIA'
     d = set()
     for n in range(k, k * 73, k):
         d.update(set(str(n)))

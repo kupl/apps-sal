@@ -1,7 +1,7 @@
 def stringCount(str):
     try:
         if str.isalpha():
-            return sum(ord(alpha) for alpha in str.upper())
+            return sum((ord(alpha) for alpha in str.upper()))
     except AttributeError:
         pass
     return 0

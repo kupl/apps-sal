@@ -3,7 +3,7 @@ def seven_ate9(string):
     result = ''
     while index < len(string):
         if string[index] == '9':
-            if (index + 1) != len(string):
+            if index + 1 != len(string):
                 if string[index - 1] == '7' and string[index + 1] == '7':
                     result += ''
                 else:
@@ -13,5 +13,4 @@ def seven_ate9(string):
         else:
             result += string[index]
         index += 1
-
     return result

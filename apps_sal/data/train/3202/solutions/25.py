@@ -1,7 +1,7 @@
 def greet(name, owner):
-    result = ""
+    result = ''
     if name == owner:
-        result = "Hello boss"
+        result = 'Hello boss'
     else:
-        result = "Hello guest"
+        result = 'Hello guest'
     return result

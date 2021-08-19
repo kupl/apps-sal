@@ -1,3 +1,3 @@
 def greet(name, owner):
-    "Приветствуем Бoсса"
+    """Приветствуем Бoсса"""
     return 'Hello boss' if name == owner else 'Hello guest'

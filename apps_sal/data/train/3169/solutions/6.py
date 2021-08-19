@@ -14,5 +14,4 @@ def count_odd_pentaFib(n):
             next_term = sum(terms)
             yield next_term
             terms.append(next_term)
-
     return len(set((term for term in pentabonacci(n) if term % 2 == 1))) + 1

@@ -1,5 +1,5 @@
 def compare(s1, s2):
-    a1, a2 = 0, 0
+    (a1, a2) = (0, 0)
     if s1 != None and s1 != '':
         for i in s1:
             if not i.isalpha():

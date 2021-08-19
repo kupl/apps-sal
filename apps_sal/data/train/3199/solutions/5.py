@@ -5,4 +5,4 @@ def greet(name):
         return None
     n = len(name)
     if n >= 1:
-        return "hello" + ' ' + name + '!'
+        return 'hello' + ' ' + name + '!'

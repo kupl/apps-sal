@@ -1,10 +1,10 @@
 def reverseWords(s):
     print(s)
     words = s.split()
-    rev = ""
+    rev = ''
     i = len(words)
     while i > 0:
         i -= 1
-        rev += words[i] + " "
+        rev += words[i] + ' '
     print(rev)
     return rev[:-1]

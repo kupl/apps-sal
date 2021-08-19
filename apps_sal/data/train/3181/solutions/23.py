@@ -1,6 +1,6 @@
 def check_alive2(func):
-    def wrapper(*args, **kwargs):
 
+    def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         return result
     return wrapper

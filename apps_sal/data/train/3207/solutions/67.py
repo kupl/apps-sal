@@ -1,6 +1,6 @@
-def reverseWords(s: ""):
+def reverseWords(s: ''):
     s = s.split()
-    result = ""
+    result = ''
     for i in s:
-        result = i + " " + result
-    return result.strip(" ")
+        result = i + ' ' + result
+    return result.strip(' ')

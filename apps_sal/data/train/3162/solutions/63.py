@@ -11,4 +11,4 @@ def compare(s1, s2):
         if not c.isalpha():
             s2 = ''
             break
-    return sum(ord(c.upper()) for c in s1) == sum(ord(c.upper()) for c in s2)
+    return sum((ord(c.upper()) for c in s1)) == sum((ord(c.upper()) for c in s2))

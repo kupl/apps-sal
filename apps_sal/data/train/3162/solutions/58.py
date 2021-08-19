@@ -12,14 +12,12 @@ def compare(s1, s2):
                 sum_1 = 0
                 break
             sum_1 += string.ascii_uppercase.index(i.upper())
-
     if 'None' not in str(s2):
         for i in s2:
             if i.upper() not in string.ascii_uppercase:
                 sum_2 = 0
                 break
             sum_2 += string.ascii_uppercase.index(i.upper())
-
     if sum_1 == sum_2:
         return True
     else:

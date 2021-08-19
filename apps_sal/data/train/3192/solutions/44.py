@@ -6,4 +6,4 @@ def how_many_dalmatians(n):
     if n == 101:
         return '101 DALMATIONS!!!'
     else:
-        return 'Woah that\'s a lot of dogs!'
+        return "Woah that's a lot of dogs!"

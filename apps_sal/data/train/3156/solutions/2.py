@@ -1,5 +1,4 @@
 from bisect import bisect_left, bisect_right
-
 EVEN = set('02468')
 pedps = [x for x in (x * x for x in range(8, 1000000, 2)) if set(str(x)) <= EVEN]
 

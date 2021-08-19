@@ -1,5 +1,5 @@
 def create_array(n):
-    '''array add nuber to list'''
+    """array add nuber to list"""
     res = []
     i = 1
     while i <= n:

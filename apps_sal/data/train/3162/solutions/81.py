@@ -2,7 +2,7 @@ def av(s):
     if not s:
         return 0
     if s.isalpha():
-        return sum(ord(i) for i in s.upper())
+        return sum((ord(i) for i in s.upper()))
     return 0
 
 

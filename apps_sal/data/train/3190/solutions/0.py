@@ -5,7 +5,7 @@ def solve(a, b):
     i = a
     s = 0
     while i < b:
-        if (i * i - i) % 100 == 0 and str(i)[:2] in ls and str(i * i)[:2] in ls:
+        if (i * i - i) % 100 == 0 and str(i)[:2] in ls and (str(i * i)[:2] in ls):
             s += 1
         i += 1
     return s

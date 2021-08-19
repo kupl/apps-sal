@@ -1,7 +1,7 @@
 def string_cnt(s):
     try:
         if s.isalpha():
-            return sum(ord(a) for a in s.upper())
+            return sum((ord(a) for a in s.upper()))
     except AttributeError:
         pass
     return 0
