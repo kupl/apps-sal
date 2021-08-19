@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import time
 
 
@@ -16,12 +13,9 @@ def nz(x):
 
 a = list(input())
 b = list(input())
-
 start = time.time()
-
 a = nz(a)
 b = nz(b)
-
 if len(a) == len(b):
     flag = True
     for i in range(len(a)):
@@ -40,4 +34,3 @@ elif len(a) < len(b):
 else:
     print('>')
 finish = time.time()
-#print(finish - start)

@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
 import sys
 
 
 def main():
-    c, v0, v1, a, l = list(map(int, sys.stdin.readline().split()))
+    (c, v0, v1, a, l) = list(map(int, sys.stdin.readline().split()))
     day = 0
     v = v0
     read = 0

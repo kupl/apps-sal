@@ -1,5 +1,4 @@
 import sys
-# sys.stdin = open("input.txt")
 
 
 def calc(a0, db, dc):
@@ -17,11 +16,10 @@ def main():
     a0 = A[0]
     db = sum([d for d in D if d > 0])
     dc = sum([d for d in D if d < 0])
-
     q = int(input())
     ans = [calc(a0, db, dc)]
     for i in range(q):
-        l, r, x = list(map(int, input().split()))
+        (l, r, x) = list(map(int, input().split()))
         if l > 1:
             if D[l - 2] < 0:
                 dc -= D[l - 2]
@@ -45,7 +43,7 @@ def main():
         if l == 1:
             a0 += x
         ans.append(calc(a0, db, dc))
-    print("\n".join(map(str, ans)))
+    print('\n'.join(map(str, ans)))
 
 
 def __starting_point():

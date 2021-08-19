@@ -1,4 +1,4 @@
-def get_place(rows, dpr, k):  # n=rows; m=dpr
+def get_place(rows, dpr, k):
     k -= 1
     dn = k // 2
     return (dn // dpr + 1, dn % dpr + 1, 'LR'[k % 2])
