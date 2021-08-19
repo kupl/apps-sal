@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 s = [int(i) for i in input()]
 ans = 0
 last = 0

@@ -1,8 +1,8 @@
-# Please DON'T hack me! TY!
 import sys
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0

@@ -1,8 +1,8 @@
-n, k = list(map(int, input().split()))
-a = (list(map(int, input().split())))
-b = (list(map(int, input().split())))
+(n, k) = list(map(int, input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 c = list(zip(a, b))
-c.sort(key=lambda x: (x[1] // x[0]))
+c.sort(key=lambda x: x[1] // x[0])
 i = 0
 count = c[0][1] // c[0][0]
 part = 0
@@ -23,7 +23,6 @@ while k > 0 and i < n:
     else:
         part += c[i][0] - c[i][1] % c[i][0]
         full += c[i][0]
-    #~ print(part, full)
     i += 1
 if k > part:
     count += 1

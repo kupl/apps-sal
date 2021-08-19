@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Fri Apr  5 21:33:01 2019
 
@@ -12,16 +11,12 @@ abaca
 
 
 """
-
-
 from fractions import gcd
-
 from collections import Counter
 
 
 def main():
-    n, z = [int(a) for a in input().split()]
-    #z = int(input())
+    (n, z) = [int(a) for a in input().split()]
     nums = [int(a) for a in input().split()]
     nums.sort()
     if n % 2 == 0:
@@ -35,9 +30,9 @@ def main():
     i = 0
     j = 0
     while i < n and j < n:
-        while(j < n and x2[j] < x1[i] + z):
+        while j < n and x2[j] < x1[i] + z:
             j += 1
-        if (j < n):
+        if j < n:
             cnt += 1
             i += 1
             j += 1
@@ -45,7 +40,6 @@ def main():
 
 
 def __starting_point():
-
     main()
 
 

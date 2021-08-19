@@ -1,18 +1,17 @@
 def main():
-    t, n = list(map(int, input().split()))
+    (t, n) = list(map(int, input().split()))
     binary = 0
     ctr = 0
     temp = t
-# calculating binary
-    while(temp > 0):
-        binary = ((temp % n) * (10**ctr)) + binary
+    while temp > 0:
+        binary = temp % n * 10 ** ctr + binary
         temp = int(temp / n)
         ctr += 1
     return len(str(binary))
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()
