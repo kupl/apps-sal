@@ -1,9 +1,6 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
-        # naive will be n^2: try every possible start position
-
-        # 3 cases
-
         minSum = A[0]
         maxSum = A[0]
         maximum = A[0]
@@ -19,15 +16,7 @@ class Solution:
             else:
                 minSum += A[i]
             minimum = min(minimum, minSum)
-
         minimum = sum(A) - minimum
-        if minimum == 0:  # means the entire araay is negative, so we take the max element
+        if minimum == 0:
             return maximum
         return max(maximum, minimum)
-
-        # take the max of 3 cases
-        # 1. maximum
-        # 2. total - minimum
-        # 3. if all negatives, then the max should be the maximum
-
-        # [-2,-3,-1]. Take a look at this case, for example.
