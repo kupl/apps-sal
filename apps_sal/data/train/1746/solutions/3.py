@@ -3,38 +3,14 @@ only_show_wrong()
 
 def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int, int, int, List[str]]:
 
-    # Scan through the game to find the player
-    # Any invalid action, or death, returns None
-
-    # If player is attacking
-    # Decrease health of enemy in front, or return None if invalid
-    # If enemy dies, update map
-
-    # If player is moving
-    # Update location on map, or return None if invalid
-
-    # If player is rotating
-    # Update player character inside array
-
-    # If player is using object
-    # Check if object is in bag and can be used
-    # Is valid object usage?
-    # Potion - is player low on health?
-    # Coin   - is there a merchant in front of player?
-    # Key    - is there a door in front of player?
-    # Use object, or return None if invalid
-
-    # After all action (related to where the player WAS, not their new location)
-    # If there are enemies to attack player
-    # Decrease player health, check is alive
-
     class GameObject:
+
         def __init__(self, game, h, a, d, l=None):
             self.g = game
             self.l = l if l is not None else (0, 0)
-            self.h = h  # health
-            self.a = a  # attack
-            self.d = d  # defense
+            self.h = h
+            self.a = a
+            self.d = d
 
         @property
         def is_alive(self):
@@ -54,24 +30,18 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
             self.g.removeObj(self.l)
 
     class Player(GameObject):
-
-        direction_table = {
-            "^": lambda self: (self.l[0], self.l[1] - 1),
-            ">": lambda self: (self.l[0] + 1, self.l[1]),
-            "v": lambda self: (self.l[0], self.l[1] + 1),
-            "<": lambda self: (self.l[0] - 1, self.l[1]),
-        }
+        direction_table = {'^': lambda self: (self.l[0], self.l[1] - 1), '>': lambda self: (self.l[0] + 1, self.l[1]), 'v': lambda self: (self.l[0], self.l[1] + 1), '<': lambda self: (self.l[0] - 1, self.l[1])}
 
         def __init__(self, game, s, l=None, b=None):
             super().__init__(game, 3, 1, 1, l)
-            self.s = s  # symbol, "^" ">" "v" or "<"
+            self.s = s
             self.b = b if b is not None else []
             self.exp = 0
 
         def __check_forward(self):
             new_loc = Player.direction_table[self.s](self)
             if self.g.is_within_bounds(new_loc):
-                x, y = new_loc[0], new_loc[1]
+                (x, y) = (new_loc[0], new_loc[1])
                 obj = self.g.field[y][x]
                 return (new_loc, obj)
             else:
@@ -88,38 +58,36 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
             return None
 
         def __pickup_item(self, item):
-            if item in "CKH":
+            if item in 'CKH':
                 self.b.append(item)
-            elif item == "X":
+            elif item == 'X':
                 self.a += 1
-            else:   # == "S"
+            else:
                 self.d += 1
 
         def rotate(self, symb):
             self.s = symb
-            x, y = self.l[0], self.l[1]
+            (x, y) = (self.l[0], self.l[1])
             self.g.field[y][x] = self.s
 
         def move(self):
             new_loc = self.__check_forward()
-            if new_loc is None or new_loc[1] in "#MED-|":
+            if new_loc is None or new_loc[1] in '#MED-|':
                 return False
-            if new_loc[1] in "CKHSX":
+            if new_loc[1] in 'CKHSX':
                 self.__pickup_item(new_loc[1])
-
             self.g.removeObj(self.l)
             self.l = new_loc[0]
-            x, y = self.l[0], self.l[1]
+            (x, y) = (self.l[0], self.l[1])
             self.g.field[y][x] = self.s
             return True
 
         def attack(self):
             maybe_enemy = self.__check_forward()
-            if maybe_enemy is None or maybe_enemy[1] not in "ED":
+            if maybe_enemy is None or maybe_enemy[1] not in 'ED':
                 return False
-
-            loc, symb = maybe_enemy[0], maybe_enemy[1]
-            if symb == "E":
+            (loc, symb) = (maybe_enemy[0], maybe_enemy[1])
+            if symb == 'E':
                 enemy = self.g.enemies[loc]
                 if super().attack(enemy):
                     self.add_exp()
@@ -134,38 +102,32 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
                 self.exp = 0
 
         def use_item(self, item_s):
-            # Check if item is in bag
             item = self.__find_item(item_s)
             if item is None:
                 return False
-
-            # Check for proper item usage
-            if item == "H":
+            if item == 'H':
                 if self.h < 3:
                     self.h = 3
                     return True
                 else:
                     return False
-
-            if item == "C":
+            if item == 'C':
                 maybe_merch = self.__check_forward()
-                if maybe_merch is None or maybe_merch[1] != "M":
+                if maybe_merch is None or maybe_merch[1] != 'M':
                     return False
-
                 merch_loc = maybe_merch[0]
                 self.g.merchants[merch_loc].take_damage(1)
                 return True
-
-            if item == "K":
+            if item == 'K':
                 maybe_door = self.__check_forward()
-                if maybe_door is None or maybe_door[1] not in "-|":
+                if maybe_door is None or maybe_door[1] not in '-|':
                     return False
-
                 door_loc = maybe_door[0]
                 self.g.removeObj(door_loc)
                 return True
 
     class Enemy(GameObject):
+
         def __init__(self, game, l=None):
             super().__init__(game, 1, 2, 0, l)
 
@@ -174,6 +136,7 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
             super().handle_death()
 
     class DemonLord(GameObject):
+
         def __init__(self, game, l=None):
             super().__init__(game, 10, 3, 0, l)
 
@@ -182,6 +145,7 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
             super().handle_death()
 
     class Merchant(GameObject):
+
         def __init__(self, game, l=None):
             super().__init__(game, 3, 0, 0, l)
 
@@ -190,6 +154,7 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
             super().handle_death()
 
     class Game:
+
         def __init__(self, field):
             self.field = field
             self.player = None
@@ -201,62 +166,52 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
         def find_game_objects(self):
             for y in range(len(self.field)):
                 for x in range(len(self.field[y])):
-                    if self.field[y][x] == "M":
-                        self.merchants[(x, y)] = Merchant(self, (x, y))
-                    if self.field[y][x] == "E":
-                        self.enemies[(x, y)] = Enemy(self, (x, y))
-                    if self.field[y][x] == "D":
+                    if self.field[y][x] == 'M':
+                        self.merchants[x, y] = Merchant(self, (x, y))
+                    if self.field[y][x] == 'E':
+                        self.enemies[x, y] = Enemy(self, (x, y))
+                    if self.field[y][x] == 'D':
                         self.demonlord = DemonLord(self, (x, y))
-                    if self.field[y][x] in "^><v":
+                    if self.field[y][x] in '^><v':
                         self.player = Player(self, self.field[y][x], (x, y))
 
         def is_within_bounds(self, loc):
-            return 0 <= loc[0] and loc[0] < len(self.field[0]) and 0 <= loc[1] and loc[1] < len(self.field)
+            return 0 <= loc[0] and loc[0] < len(self.field[0]) and (0 <= loc[1]) and (loc[1] < len(self.field))
 
         def check_enemies(self, loc):
             directions = ((0, 1), (0, -1), (1, 0), (-1, 0))
             for d in directions:
-
                 new_loc = (loc[0] + d[0], loc[1] + d[1])
                 if self.is_within_bounds(new_loc):
-
                     if new_loc in self.enemies:
                         self.enemies[new_loc].attack(self.player)
-
                     elif self.demonlord and new_loc == self.demonlord.l:
                         self.demonlord.attack(self.player)
-
                 if self.player is None:
                     return False
             return True
 
         def removeObj(self, loc):
-            x, y = loc[0], loc[1]
-            self.field[y][x] = " "
+            (x, y) = (loc[0], loc[1])
+            self.field[y][x] = ' '
 
         def run_game(self, action_list):
             for action in action_list:
                 prev_loc = self.player.l
-                # The player acts
                 success = True
-                if action in "^><v":
+                if action in '^><v':
                     self.player.rotate(action)
-                elif action == "A":
+                elif action == 'A':
                     success = self.player.attack()
-                elif action in "CKH":
+                elif action in 'CKH':
                     success = self.player.use_item(action)
                 else:
                     success = self.player.move()
                 if not success:
-                    # Unsuccessful act? Return None
                     return None
-
-                # Enemies attack, if there are any
                 is_alive = self.check_enemies(prev_loc)
                 if not is_alive:
                     return None
-
             return (self.field, self.player.h, self.player.a, self.player.d, sorted(self.player.b))
-
     game = Game(game)
     return game.run_game(actions)

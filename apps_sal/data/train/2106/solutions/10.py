@@ -1,6 +1,13 @@
-def rr(): return input().strip()
-def rri(): return int(rr())
-def rrm(): return [int(x) for x in rr().split()]
+def rr():
+    return input().strip()
+
+
+def rri():
+    return int(rr())
+
+
+def rrm():
+    return [int(x) for x in rr().split()]
 
 
 def sol(n):
@@ -14,13 +21,12 @@ def sol(n):
         res1 += sum(x[1:x[0] // 2 + 1])
         res2 += sum(x[(x[0] + 1) // 2 + 1:])
     cm.sort(reverse=True)
-    for i, v in enumerate(cm):
+    for (i, v) in enumerate(cm):
         if i % 2 == 0:
-            # print(v)
             res1 += v
         else:
             res2 += v
-    return str(res1) + " " + str(res2)
+    return str(res1) + ' ' + str(res2)
 
 
 T = 1

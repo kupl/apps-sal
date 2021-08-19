@@ -1,11 +1,9 @@
-# only_show_wrong()
 dir_dict = {'^': (-1, 0), 'v': (1, 0), '<': (0, -1), '>': (0, 1)}
 
 
 def rpg(field, actions):
-    width, height = len(field[0]), len(field)
-    field, actions = [list(line) for line in field], list(actions)
-
+    (width, height) = (len(field[0]), len(field))
+    (field, actions) = ([list(line) for line in field], list(actions))
     found = False
     for row in range(height):
         if found:
@@ -17,17 +15,14 @@ def rpg(field, actions):
                 target_loc = (row + dir_dict[player_dir][0], col + dir_dict[player_dir][1])
                 found = True
                 break
-
-    hlh, atk, des, bag = 3, 1, 1, []
+    (hlh, atk, des, bag) = (3, 1, 1, [])
     mer_dict = {}
-    enemy_count, dl_hlh = 0, 10
-
+    (enemy_count, dl_hlh) = (0, 10)
     for action in actions:
         if action not in dir_dict:
-            if target_loc[0] < 0 or target_loc[0] >= height or target_loc[1] < 0 or target_loc[1] >= width:
+            if target_loc[0] < 0 or target_loc[0] >= height or target_loc[1] < 0 or (target_loc[1] >= width):
                 return None
             target_tile = field[target_loc[0]][target_loc[1]]
-
         if action == 'C':
             if target_tile != 'M':
                 return None
@@ -40,7 +35,6 @@ def rpg(field, actions):
                 mer_dict[target_loc] = mer_dict[target_loc] - 1
                 if mer_dict[target_loc] == 0:
                     field[target_loc[0]][target_loc[1]] = ' '
-
         elif action == 'K':
             if target_tile not in '-|':
                 return None
@@ -48,9 +42,7 @@ def rpg(field, actions):
                 return None
             bag.remove(action)
             field[target_loc[0]][target_loc[1]] = ' '
-
         else:
-            # enemy will attack!
             if action == 'F':
                 if target_tile in ['C', 'K', 'H']:
                     bag.append(target_tile)
@@ -85,18 +77,15 @@ def rpg(field, actions):
                     return None
                 hlh = 3
                 bag.remove(action)
-
-            # check if enemy exists
             for d in dir_dict:
                 check_loc = (player_loc[0] + dir_dict[d][0], player_loc[1] + dir_dict[d][1])
-                if check_loc[0] >= 0 and check_loc[0] < height and check_loc[1] >= 0 and check_loc[1] < width:
+                if check_loc[0] >= 0 and check_loc[0] < height and (check_loc[1] >= 0) and (check_loc[1] < width):
                     if field[check_loc[0]][check_loc[1]] == 'E':
                         hlh = hlh - max(0, 2 - des)
                     elif field[check_loc[0]][check_loc[1]] == 'D':
                         hlh = hlh - max(0, 3 - des)
                     if hlh <= 0:
                         return None
-
             if action == 'F':
                 player_loc = target_loc
                 target_loc = (target_loc[0] + dir_dict[player_dir][0], target_loc[1] + dir_dict[player_dir][1])
