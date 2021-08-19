@@ -1,7 +1,8 @@
 class Solution:
+
     def longestWPI(self, hours: List[int]) -> int:
         d = {}
-        P = [0]  # prefix sum
+        P = [0]
         F = [0 for i in range(len(hours))]
         res = 0
         for i in range(len(hours)):
@@ -15,5 +16,4 @@ class Solution:
             if P[-1] not in d:
                 d[P[-1]] = i
             res = max(res, F[i])
-
         return res

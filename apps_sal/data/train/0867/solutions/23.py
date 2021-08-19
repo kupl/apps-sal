@@ -1,32 +1,23 @@
-# cook your dish here
 for i in range(0, int(input())):
-    power, x, y, z = list(map(float, input().split()))
+    (power, x, y, z) = list(map(float, input().split()))
     summ = x + y + z
     a = x + y
     b = y + z
     flagg = 0
-    if(x == y and y == z):
+    if x == y and y == z:
         flagg == 0
-
     else:
         flagg = 0
-
-    if(power >= summ):
+    if power >= summ:
         print('1')
-    else:
-        if(flagg == 1):
-            if((x + y) >= power):
-                print('2')
-            else:
-                print('3')
+    elif flagg == 1:
+        if x + y >= power:
+            print('2')
         else:
-
-            if((power - z) >= y):
-
-                print('2')
-
-            else:
-                if((power - y) >= x):
-                    print('2')
-                else:
-                    print('3')
+            print('3')
+    elif power - z >= y:
+        print('2')
+    elif power - y >= x:
+        print('2')
+    else:
+        print('3')

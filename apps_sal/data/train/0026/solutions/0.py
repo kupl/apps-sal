@@ -1,14 +1,11 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     if n < m:
-        n, m = m, n  # n > m
-
+        (n, m) = (m, n)
     if m == 1:
-        print("YES")
+        print('YES')
         continue
-
     if m == 2 and n == 2:
-        print("YES")
+        print('YES')
         continue
-
-    print("NO")
+    print('NO')

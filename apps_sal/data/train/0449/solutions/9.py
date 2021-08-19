@@ -1,5 +1,5 @@
 class Solution:
-    # def findMin_PRACTICE(self, nums):
+
     def findMin(self, nums):
         if len(nums) == 1:
             return nums[0]
@@ -15,7 +15,6 @@ class Solution:
                     l = m + 1
             else:
                 l = m + 1
-
         if l == r:
             if m < l:
                 if nums[m] < nums[l]:
@@ -32,7 +31,6 @@ class Solution:
             return nums[m]
 
     def findMin_PASSED(self, nums):
-        # def findMin(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -40,12 +38,10 @@ class Solution:
         if len(nums) == 1:
             return nums[0]
         retval = float('inf')
-        l, r = 0, len(nums) - 1
+        (l, r) = (0, len(nums) - 1)
         while l < r:
-
             m = (l + r) // 2
             v = nums[m]
-
             if v < nums[m + 1]:
                 if v < nums[r]:
                     r = m
@@ -53,7 +49,6 @@ class Solution:
                     l = m + 1
             elif v > nums[m + 1]:
                 l = m + 1
-
         if nums[m] < nums[m + 1]:
             return nums[m]
         else:

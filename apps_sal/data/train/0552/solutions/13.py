@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     items = list(map(int, input().split()))
     items.sort()
     v1 = abs(sum(items[k:]) - sum(items[:k]))

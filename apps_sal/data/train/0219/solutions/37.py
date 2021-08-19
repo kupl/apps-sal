@@ -1,4 +1,5 @@
 class Solution:
+
     def longestWPI(self, hours: List[int]) -> int:
         hoursLen = len(hours)
         tDay = []
@@ -21,9 +22,8 @@ class Solution:
                 else:
                     r = m
             return l
-
         ans = 0
-        for i, hour in enumerate(hours):
+        for (i, hour) in enumerate(hours):
             if hour > 8:
                 tDay.append(1)
                 preSum += 1
@@ -37,6 +37,4 @@ class Solution:
             if tempIndex > 0:
                 preSumDict[preSumKeys[tempIndex]] = min(preSumDict[preSumKeys[tempIndex - 1]], preSumDict[preSumKeys[tempIndex]])
                 ans = max(ans, i - preSumDict[preSumKeys[tempIndex - 1]])
-        # print(preSumKeys)
-        # print(preSum)
         return ans

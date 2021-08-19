@@ -1,4 +1,5 @@
 class Solution:
+
     def longestWPI(self, hours: List[int]) -> int:
         i = 0
         prefixSum = 0
@@ -9,7 +10,6 @@ class Solution:
                 prefixSum += 1
             else:
                 prefixSum -= 1
-
             if prefixSum not in existed:
                 existed[prefixSum] = i + 1
             if prefixSum - 1 in existed:
@@ -17,5 +17,4 @@ class Solution:
             if prefixSum >= 1:
                 res = max(res, i + 1)
             i += 1
-        # print(existed)
         return res

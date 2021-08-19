@@ -1,12 +1,10 @@
 class Solution:
+
     def hIndex(self, citations):
         """
         :type citations: List[int]
         :rtype: int
         """
-
-        # my solution......beat 95 %
-
         l = len(citations)
         if l == 0:
             return 0
@@ -17,7 +15,6 @@ class Solution:
                 return 1
         if min(citations) >= l:
             return l
-
         citations = citations[::-1]
         count = 0
         thres = 0

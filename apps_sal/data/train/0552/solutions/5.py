@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     ls = list(map(int, input().split()))
     ls.sort()
     l1 = sum(ls[b:]) - sum(ls[:b])
