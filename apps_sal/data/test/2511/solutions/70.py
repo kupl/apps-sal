@@ -18,17 +18,17 @@ def dfs(u):
     return res
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 edges = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edges[a - 1].append(b - 1)
     edges[b - 1].append(a - 1)
 visited = [-1] * n
 visited[0] = 0
 ans = k
 for i in range(len(edges[0])):
-    ans *= (k - i - 1)
+    ans *= k - i - 1
     ans %= mod
 for i in edges[0]:
     visited[i] = 0

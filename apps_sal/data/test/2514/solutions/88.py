@@ -7,8 +7,8 @@ for val in arr:
 sums = sum(arr)
 q = int(input())
 for _ in range(q):
-    b, c = list(map(int, input().split()))
-    diff = (c - b) * (cnt[b])
+    (b, c) = list(map(int, input().split()))
+    diff = (c - b) * cnt[b]
     sums += diff
     print(sums)
     cnt[c] += cnt[b]

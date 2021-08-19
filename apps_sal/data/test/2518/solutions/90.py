@@ -1,14 +1,12 @@
 import sys
-
 input = sys.stdin.readline
 
 
 def main():
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     h = [int(input()) for _ in range(n)]
     h.sort()
-
-    l, r = -1, h[-1] + 1
+    (l, r) = (-1, h[-1] + 1)
     while r - l > 1:
         key = (r + l) // 2
         count = 0

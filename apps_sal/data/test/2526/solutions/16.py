@@ -1,8 +1,7 @@
-x, y, a, b, c = list(map(int, input().split()))
+(x, y, a, b, c) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 q = list(map(int, input().split()))
 r = list(map(int, input().split()))
-
 p.sort(reverse=True)
 q.sort(reverse=True)
 ans = []
@@ -11,4 +10,4 @@ for i in range(x):
 for i in range(y):
     r.append(q[i])
 r.sort(reverse=True)
-print((sum(r[0:x + y])))
+print(sum(r[0:x + y]))

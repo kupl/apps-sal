@@ -1,14 +1,12 @@
 import sys
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 AB = [list(map(int, input().split())) for _ in range(N - 1)]
-
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 edge = [[] for _ in range(N)]
-for u, v in AB:
+for (u, v) in AB:
     edge[u - 1].append(v - 1)
     edge[v - 1].append(u - 1)
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 mod = 10 ** 9 + 7
 MAX = K + 10
 fac = [0] * MAX
@@ -39,12 +37,10 @@ def cmb(n, r):
 def permu(n, r):
     if n <= 0 or r <= 0 or r > n:
         return 0
-    return (fac[n] * finv[n - r]) % MOD
+    return fac[n] * finv[n - r] % MOD
 
 
 cominit()
-
-
 visited = [False] * N
 visited[0] = True
 
@@ -59,14 +55,12 @@ def dfs(s, ans):
     else:
         ans *= permu(K - 2, M)
         ans %= MOD
-
     for nv in edge[s]:
         if visited[nv]:
             continue
         visited[nv] = True
         ans = dfs(nv, ans)
-
     return ans
 
 
-print((dfs(0, K) % MOD))
+print(dfs(0, K) % MOD)

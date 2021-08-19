@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = 0
 for i in range(60):
     keta = 1 << i
@@ -9,6 +9,4 @@ for i in range(60):
         if keta & j:
             cnt += 1
     ans += keta * cnt * (n - cnt) % mod
-
-
-print((ans % mod))
+print(ans % mod)

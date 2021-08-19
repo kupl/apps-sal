@@ -1,10 +1,9 @@
 import sys
 from collections import deque
 MOD = 10 ** 9 + 7
-
-n, k, *ab = map(int, sys.stdin.read().split())
+(n, k, *ab) = map(int, sys.stdin.read().split())
 graph = [[] for _ in range(n)]
-for a, b in zip(*[iter(ab)] * 2):
+for (a, b) in zip(*[iter(ab)] * 2):
     a -= 1
     b -= 1
     graph[a].append(b)
@@ -16,7 +15,6 @@ def main():
         if len(graph[i]) + 1 > k:
             print(0)
             return
-
     cnt = [None] * n
     cnt[0] = k
     parent = [None] * n
@@ -31,7 +29,6 @@ def main():
             cnt[v] = c
             c -= 1
             stack.append(v)
-
     res = 1
     for c in cnt:
         res *= c

@@ -15,5 +15,5 @@ for _ in range(q):
             d[elt] = 1
     wyn = 0
     for elt in d:
-        wyn += (d[elt] * (d[elt] - 1) // 2)
+        wyn += d[elt] * (d[elt] - 1) // 2
     print(wyn)

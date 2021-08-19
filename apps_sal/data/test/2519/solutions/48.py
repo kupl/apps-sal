@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 data = list(map(float, input().split()))
 new_data = [0] * n
 for i in range(n):

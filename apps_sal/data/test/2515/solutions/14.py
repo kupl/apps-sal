@@ -1,7 +1,7 @@
 def sb(n):
     arr = []
     temp = n
-    for i in range(2, int(-(-n**0.5 // 1)) + 1):
+    for i in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if temp % i == 0:
             cnt = 0
             while temp % i == 0:
@@ -15,11 +15,11 @@ def sb(n):
     return arr
 
 
-num = [0] * (10**5 + 1)
-num2 = [0] * (10**5 + 1)
-cnt = [0] * (10**5 + 1)
+num = [0] * (10 ** 5 + 1)
+num2 = [0] * (10 ** 5 + 1)
+cnt = [0] * (10 ** 5 + 1)
 num[2] += 1
-for i in range(2, 10**5 + 1):
+for i in range(2, 10 ** 5 + 1):
     if i % 2 == 1:
         n = sb(i)
         if len(n) == 1 and n[0][1] == 1:
@@ -30,5 +30,5 @@ for i in range(1, len(num2)):
     cnt[i] = cnt[i - 1] + num2[i]
 q = int(input())
 for i in range(q):
-    l, r = list(map(int, input().split()))
-    print((cnt[r] - cnt[l - 1]))
+    (l, r) = list(map(int, input().split()))
+    print(cnt[r] - cnt[l - 1])

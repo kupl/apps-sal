@@ -7,17 +7,16 @@ for _ in range(Q):
     if q == '1':
         rev = 1 - rev
     else:
-        q1, f, c = q.split()
+        (q1, f, c) = q.split()
         if rev:
             if f == '1':
                 S.append(c)
             else:
                 S.appendleft(c)
+        elif f == '1':
+            S.appendleft(c)
         else:
-            if f == '1':
-                S.appendleft(c)
-            else:
-                S.append(c)
+            S.append(c)
 if rev:
     S.reverse()
 print(''.join(S))

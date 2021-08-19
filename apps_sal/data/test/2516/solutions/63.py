@@ -27,7 +27,7 @@ def make_modlist(Len, mod):
     return modlist
 
 
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 a = list(map(int, input()))
 ans = 0
 a.reverse()

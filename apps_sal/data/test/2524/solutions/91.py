@@ -1,4 +1,4 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def resolve():
@@ -9,11 +9,11 @@ def resolve():
         one_cnt = 0
         zero_cnt = 0
         for a in A:
-            if a[i] == "1":
+            if a[i] == '1':
                 one_cnt += 1
             else:
                 zero_cnt += 1
-        ans += (one_cnt * zero_cnt) * (2**(59 - i))
+        ans += one_cnt * zero_cnt * 2 ** (59 - i)
         ans %= MOD
     print(ans)
 

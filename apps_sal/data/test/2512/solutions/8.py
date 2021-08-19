@@ -4,13 +4,12 @@ import numpy as np
 
 @jit
 def main():
-    R, C, K = map(int, input().split())
+    (R, C, K) = map(int, input().split())
     v_list = np.zeros((R + 2, C + 2), np.int64)
     for i in range(K):
-        r, c, v = map(int, input().split())
+        (r, c, v) = map(int, input().split())
         v_list[r][c] = v
     dp = np.zeros((R + 2, C + 2, 4), np.int64)
-
     for i in range(R + 1):
         for j in range(C + 1):
             for n in range(4):

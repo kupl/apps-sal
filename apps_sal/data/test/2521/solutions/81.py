@@ -24,4 +24,4 @@ for i in range(2 * n - 1, n - 2, -1):
     heappush(h, -a[i])
     s += -a[i]
     s -= heappop(h)
-print(max(l[i] + r[i]for i in range(3 * n)))
+print(max((l[i] + r[i] for i in range(3 * n))))

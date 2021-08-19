@@ -21,7 +21,7 @@ for i in range(len(a)):
         y += 1
     elif a[i] == 'u':
         u += 1
-if i >= 1 and l >= 1 and o >= 2 and v >= 1 and e >= 1 and y >= 1 and u >= 1:
+if i >= 1 and l >= 1 and (o >= 2) and (v >= 1) and (e >= 1) and (y >= 1) and (u >= 1):
     print('happy')
 else:
     print('sad')

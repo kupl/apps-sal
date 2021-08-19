@@ -1,7 +1,6 @@
 import sys
 from heapq import *
-
-n, *a = map(int, sys.stdin.read().split())
+(n, *a) = map(int, sys.stdin.read().split())
 
 
 def optimize(arr):
@@ -18,14 +17,11 @@ def optimize(arr):
 def main():
     left = a[:n * 2]
     right = [-x for x in a[n:]][::-1]
-
     sum_left = optimize(left)
     sum_right = optimize(right)
-
     res = []
     for i in range(n + 1):
         res.append(sum_left[i] + sum_right[n - i])
-
     ans = max(res)
     return ans
 

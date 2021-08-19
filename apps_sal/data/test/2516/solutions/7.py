@@ -1,4 +1,4 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 s = input()
 if p == 2 or p == 5:
     ans = 0

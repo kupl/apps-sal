@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.parents = [-1] * n
 
@@ -12,13 +13,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -26,24 +24,21 @@ class UnionFind():
         return self.parents[self.find(x)]
 
 
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 uf = UnionFind(N + 1)
 friends = {x: set() for x in range(1, N + 1)}
 blocks = {x: set() for x in range(1, N + 1)}
 ans = [N - 1] * (N + 1)
-
 for _ in range(M):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     friends[A].add(B)
     friends[B].add(A)
     uf.union(A, B)
-
 for _ in range(K):
-    C, D = map(int, input().split())
+    (C, D) = map(int, input().split())
     if uf.find(C) == uf.find(D):
         blocks[C].add(D)
         blocks[D].add(C)
-
 for i in range(1, N + 1):
     if uf.size(i) == -1:
         print(0)

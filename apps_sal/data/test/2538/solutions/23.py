@@ -1,5 +1,5 @@
 for q in range(int(input())):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     if x <= y:
         z -= y - x + 1
         if z < 0:

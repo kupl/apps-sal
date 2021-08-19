@@ -1,11 +1,10 @@
 mod = 10 ** 9 + 7
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 edge = [[] for _ in range(n)]
 parent = [0] * n
 permutation_k2 = [1] * n
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
     permutation_k2[i + 1] = permutation_k2[i] * (k - 2 - i) % mod

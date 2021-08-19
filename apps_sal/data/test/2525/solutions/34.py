@@ -8,33 +8,29 @@ def main():
     for i in range(Q):
         if order[i][0] == '1':
             cnt += 1
-        else:
-            if cnt % 2 == 0:
-                if order[i][1] == '1':
-                    if left_flag == 1:
-                        left = order[i][2] + left
-                    else:
-                        left = order[i][2]
-                        left_flag = 1
+        elif cnt % 2 == 0:
+            if order[i][1] == '1':
+                if left_flag == 1:
+                    left = order[i][2] + left
                 else:
-                    if right_flag == 1:
-                        right = right + order[i][2]
-                    else:
-                        right = order[i][2]
-                        right_flag = 1
+                    left = order[i][2]
+                    left_flag = 1
+            elif right_flag == 1:
+                right = right + order[i][2]
             else:
-                if order[i][1] == '2':
-                    if left_flag == 1:
-                        left = order[i][2] + left
-                    else:
-                        left = order[i][2]
-                        left_flag = 1
-                else:
-                    if right_flag == 1:
-                        right = right + order[i][2]
-                    else:
-                        right = order[i][2]
-                        right_flag = 1
+                right = order[i][2]
+                right_flag = 1
+        elif order[i][1] == '2':
+            if left_flag == 1:
+                left = order[i][2] + left
+            else:
+                left = order[i][2]
+                left_flag = 1
+        elif right_flag == 1:
+            right = right + order[i][2]
+        else:
+            right = order[i][2]
+            right_flag = 1
     if left_flag == 1 and right_flag == 1:
         S = left + S + right
     elif left_flag == 1 and right_flag == 0:
@@ -43,9 +39,8 @@ def main():
         S = S + right
     else:
         S = S
-
     if cnt % 2 == 0:
-        return(S)
+        return S
     else:
         S2 = S[-1]
         for i in range(len(S) - 2, -1, -1):
@@ -53,4 +48,4 @@ def main():
         return S2
 
 
-print((main()))
+print(main())

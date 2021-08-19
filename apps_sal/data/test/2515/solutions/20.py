@@ -21,7 +21,6 @@ def main():
             if q == prime[j]:
                 sim.append(p)
     sim.append(12345678)
-
     sim_n = [0]
     k = 0
     for s in range(1, 100001):
@@ -30,10 +29,9 @@ def main():
             k += 1
         else:
             sim_n.append(sim_n[-1])
-
     Q = int(input())
     for i in range(Q):
-        l, r = [int(a) for a in input().split(" ")]
+        (l, r) = [int(a) for a in input().split(' ')]
         print(sim_n[r] - sim_n[l - 1])
 
 

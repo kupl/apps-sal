@@ -2,7 +2,7 @@ def LI():
     return list(map(int, input().split()))
 
 
-X, Y, A, B, C = LI()
+(X, Y, A, B, C) = LI()
 red = LI()
 green = LI()
 mu = LI()

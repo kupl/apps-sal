@@ -1,5 +1,5 @@
 from collections import deque
-x, y, a, b, c = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 ls = []
 la = list(map(int, input().split()))
 lb = list(map(int, input().split()))
@@ -15,7 +15,7 @@ for l in range(c):
     ls.append([lc[l], 3])
 ls.sort(key=lambda x: x[0], reverse=True)
 ls = deque(ls)
-s, t, k = 0, 0, 0
+(s, t, k) = (0, 0, 0)
 cnt = 0
 while True:
     now = ls.popleft()

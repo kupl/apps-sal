@@ -1,18 +1,7 @@
-d = {"WWo": "S",
-     "WSo": "W",
-     "SWo": "W",
-     "SSo": "S",
-     "WWx": "W",
-     "WSx": "S",
-     "SWx": "S",
-     "SSx": "W",
-     }
-
-combo = ["SS", "SW", "WS", "WW"]
-
+d = {'WWo': 'S', 'WSo': 'W', 'SWo': 'W', 'SSo': 'S', 'WWx': 'W', 'WSx': 'S', 'SWx': 'S', 'SSx': 'W'}
+combo = ['SS', 'SW', 'WS', 'WW']
 N = int(input())
 z = input()
-
 matched = False
 txt = []
 for c in combo:
@@ -26,8 +15,7 @@ for c in combo:
     if left == c:
         matched = True
         break
-
 if matched:
-    print(*txt, sep="")
+    print(*txt, sep='')
 else:
-    print("-1")
+    print('-1')

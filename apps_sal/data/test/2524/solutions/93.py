@@ -1,6 +1,5 @@
-N, *A = map(int, open(0).read().split())
-mod = 10**9 + 7
-
+(N, *A) = map(int, open(0).read().split())
+mod = 10 ** 9 + 7
 ans = 0
 for i in range(60):
     mask = 1 << i
@@ -12,5 +11,4 @@ for i in range(60):
     x *= mask % mod
     ans += x
     ans %= mod
-
 print(ans)

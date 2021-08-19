@@ -3,14 +3,13 @@ def main():
     a = list(map(int, input().split()))
     MOD = 10 ** 9 + 7
     digit = 60
-
     ans = 0
     for j in range(digit):
         o = 0
         for i in a:
-            if (i >> j) & 1:
+            if i >> j & 1:
                 o += 1
-        ans += o * (n - o) * 2**j
+        ans += o * (n - o) * 2 ** j
         ans %= MOD
     print(ans)
 

@@ -1,4 +1,4 @@
-x, y, a, b, c = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 p = list(map(int, input().split()))
 q = list(map(int, input().split()))
 r = list(map(int, input().split()))
@@ -11,7 +11,7 @@ for i in range(c):
     s.append([r[i], 0])
 s.sort(reverse=True)
 o = 0
-X, Y, Z = 0, 0, 0
+(X, Y, Z) = (0, 0, 0)
 for i in range(a + b + c):
     if s[i][1] == 1 and X < x:
         X += 1

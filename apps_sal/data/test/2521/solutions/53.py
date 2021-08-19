@@ -1,7 +1,7 @@
 from heapq import heappush, heappop, heapify
 n = int(input())
 a = list(map(int, input().split()))
-ans = -float("inf")
+ans = -float('inf')
 l = a[:n]
 heapify(l)
 t = sum(a[:n])

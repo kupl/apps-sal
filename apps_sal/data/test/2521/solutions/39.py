@@ -9,10 +9,8 @@ X = []
 Y = []
 for i in range(N):
     heappush(X, A[i])
-
 for i in range(N):
     heappush(Y, -A[3 * N - 1 - i])
-
 for i in range(N):
     a = heappop(X)
     b = A[N + i]
@@ -22,7 +20,6 @@ for i in range(N):
     else:
         heappush(X, a)
         dpx[i + 1] = dpx[i]
-
     c = -heappop(Y)
     d = A[2 * N - 1 - i]
     if d < c:
@@ -31,7 +28,6 @@ for i in range(N):
     else:
         heappush(Y, -c)
         dpy[N - 1 - i] = dpy[N - i]
-
 ans = -float('inf')
 for i in range(N + 1):
     ans = max(ans, dpx[i] - dpy[i])

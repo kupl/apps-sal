@@ -1,4 +1,4 @@
-r, c = map(int, input().split())
+(r, c) = map(int, input().split())
 mat = []
 l = []
 flag = 0

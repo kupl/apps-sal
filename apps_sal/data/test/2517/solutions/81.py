@@ -10,17 +10,14 @@ def warshall(d, n):
                     d[i][j] = d[i][k] + d[k][j]
 
 
-n, m, r = list(map(int, input().split()))
+(n, m, r) = list(map(int, input().split()))
 rr = [i - 1 for i in map(int, input().split())]
-
 inf = float('INF')
 route = [[0 for j in range(n)] for i in range(n)]
 for _ in range(m):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     route[a - 1][b - 1] = route[b - 1][a - 1] = c
-
 route = di(route, n)
-
 ans = inf
 for tmp in perm(rr):
     cost = 0
@@ -28,4 +25,4 @@ for tmp in perm(rr):
         cost += route[tmp[i]][tmp[i + 1]]
     if cost < ans:
         ans = cost
-print((int(ans)))
+print(int(ans))

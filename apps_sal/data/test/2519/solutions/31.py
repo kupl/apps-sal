@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = list(map(int, input().split()))
 mu = [(a + 1) / 2 for a in p]
 maxsum = sum(mu[:k])

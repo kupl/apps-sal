@@ -14,7 +14,7 @@ for i in range(n):
             x1 += 1
         mas2[ord(t[i]) - 97] += 1
     if x1 != len(s):
-        print("NO")
+        print('NO')
     else:
         mas3 = [0] * 26
         for i in range(len(p)):
@@ -23,6 +23,6 @@ for i in range(n):
             if mas3[i] + mas1[i] < mas2[i]:
                 flag = False
         if flag == True:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

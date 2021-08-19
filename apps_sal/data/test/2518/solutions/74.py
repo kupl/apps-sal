@@ -1,5 +1,5 @@
 import math
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 all_attack = 0
 enemy = [int(input()) for i in range(N)]
 
@@ -16,14 +16,12 @@ def possible_kill_all(attack):
         return False
 
 
-possible = 10**14
+possible = 10 ** 14
 impossible = 0
-
 while possible - impossible > 1:
     M = (possible + impossible) // 2
     if possible_kill_all(M):
         possible = M
     else:
         impossible = M
-
 print(possible)

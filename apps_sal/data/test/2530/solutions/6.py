@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 d = {}
 for j in range(n):
-    c, con = input().split()
+    (c, con) = input().split()
     d[c] = con
 v = {}
 for j in range(m):

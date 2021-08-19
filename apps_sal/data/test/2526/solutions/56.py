@@ -1,4 +1,4 @@
-x, y, a, b, c = list(map(int, input().split()))
+(x, y, a, b, c) = list(map(int, input().split()))
 p = sorted(map(int, input().split()), reverse=True)
 q = sorted(map(int, input().split()), reverse=True)
 r = sorted(map(int, input().split()))
@@ -10,4 +10,4 @@ for i in range(x + y):
             c[i] = r.pop()
     else:
         break
-print((sum(c)))
+print(sum(c))

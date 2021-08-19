@@ -1,10 +1,7 @@
 import numpy as np
-
 N = int(input())
 A = np.fromiter(list(map(int, input().split())), np.int64)
-
 m = 1000000007
-
 result = 0
 for bit in range(60):
     c = int((A & 1).sum())

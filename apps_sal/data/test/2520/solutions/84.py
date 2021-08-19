@@ -1,12 +1,25 @@
 import sys
 from collections import Counter as cc
-def input(): return sys.stdin.readline().rstrip()
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(mi())
 
 
-class UnionFind():
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(mi())
+
+
+class UnionFind:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.height = [0] * n
@@ -37,25 +50,23 @@ class UnionFind():
 
 
 def main():
-    n, m, k = mi()
+    (n, m, k) = mi()
     e = [0] * n
     uf = UnionFind(n)
     for i in range(m):
-        a, b = mi()
+        (a, b) = mi()
         a -= 1
         b -= 1
         e[a] -= 1
         e[b] -= 1
         uf.unite(a, b)
-
     for _ in range(k):
-        a, b = mi()
+        (a, b) = mi()
         a -= 1
         b -= 1
         if uf.is_in_group(a, b):
             e[a] -= 1
             e[b] -= 1
-
     for i in range(n):
         uf.get_root(i)
     s = cc(uf.parent)

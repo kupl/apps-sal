@@ -5,10 +5,10 @@ C = Counter(A)
 q = int(input())
 ans = sum(A)
 for _ in range(q):
-    b, c = list(map(int, input().split()))
+    (b, c) = list(map(int, input().split()))
     if C.get(b):
         x = C.pop(b)
-        ans += - b * x + c * x
+        ans += -b * x + c * x
         if C.get(c):
             C[c] += x
         else:

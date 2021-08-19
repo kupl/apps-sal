@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = list(map(int, input().split()))
-
 a = [1 + (i - 1) / 2 for i in p]
 l = sum(a[:k])
 ans = l

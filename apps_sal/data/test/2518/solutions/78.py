@@ -1,10 +1,9 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 dab = a - b
 H = []
 for _ in range(n):
     H.append(int(input()))
 maxh = max(H)
-
 l = 0
 r = -(-maxh // b)
 
@@ -18,7 +17,7 @@ def ht(mid):
     return cnt <= mid
 
 
-while (r - l) > 1:
+while r - l > 1:
     mid = (l + r) // 2
     if ht(mid):
         r = mid

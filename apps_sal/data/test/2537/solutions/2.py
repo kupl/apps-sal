@@ -15,7 +15,6 @@ for cas in range(c):
                 flag = True
                 break
             x = s[y]
-
     for i in range(len(s)):
         if s[i] in t:
             t.remove(s[i])
@@ -23,8 +22,7 @@ for cas in range(c):
     for i in range(len(p)):
         if p[i] in t:
             t.remove(p[i])
-
     if len(t) == 0 and rem == len(s) and flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

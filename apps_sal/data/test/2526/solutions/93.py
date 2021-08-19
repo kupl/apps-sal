@@ -1,8 +1,7 @@
-x, y, a, b, c = list(map(int, input().split()))
+(x, y, a, b, c) = list(map(int, input().split()))
 p = sorted(list(map(int, input().split())))[-x:]
 q = sorted(list(map(int, input().split())))[-y:]
 r = sorted(list(map(int, input().split())))[::-1]
-
 i = j = k = 0
 oi = 0
 while i < c:
@@ -28,5 +27,4 @@ while i < c:
     if oi == i:
         break
     oi = i
-
-print((sum(p) + sum(q)))
+print(sum(p) + sum(q))

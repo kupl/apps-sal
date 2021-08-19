@@ -1,20 +1,23 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    x, y, a, b, c = map(int, input().split())
+    (x, y, a, b, c) = map(int, input().split())
     p = list(map(int, input().split()))
     q = list(map(int, input().split()))
     r = list(map(int, input().split()))
     p.sort(reverse=True)
     q.sort(reverse=True)
     r.sort(reverse=True)
-    p = [10**10] + p[:x]
-    q = [10**10] + q[:y]
+    p = [10 ** 10] + p[:x]
+    q = [10 ** 10] + q[:y]
     r += [0] * (a + b)
-    ans = sum(p) + sum(q) - 2 * 10**10
-    pcnt, qcnt = 0, 0
+    ans = sum(p) + sum(q) - 2 * 10 ** 10
+    (pcnt, qcnt) = (0, 0)
     for i in range(x + y):
         if p[-1 - pcnt] >= r[i] and q[-1 - qcnt] >= r[i]:
             break

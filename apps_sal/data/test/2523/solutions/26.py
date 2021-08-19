@@ -28,4 +28,4 @@ for i in range(len(cs)):
     no_merge -= cs[i]
     tmp = max(merge, no_merge)
     ans2 = min(ans2, tmp)
-print((max(ans1, ans2)))
+print(max(ans1, ans2))

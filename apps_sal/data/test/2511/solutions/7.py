@@ -1,13 +1,10 @@
-
-N, K = map(int, input().split())
-MOD = 10**9 + 7
+(N, K) = map(int, input().split())
+MOD = 10 ** 9 + 7
 es = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     es[a - 1].append(b - 1)
     es[b - 1].append(a - 1)
-
-
 MAXN = K + 5
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN
@@ -24,23 +21,13 @@ def nPr(n, r):
     return fac[n] * finv[n - r]
 
 
-"""
-curr とその親prevの色が決まっているときに、currの子nxtの色の塗り方の場合の数は
-nPr(K-2, len(es[curr]) - 1)
-Kのうちprevとcurrで２色使っていて、currにつながっているもののうち一つはprevだから、１引いたものが子供の数。
-で、一番初めのノードoriginについて考えると、親はないのでノードorigin自体はK個の塗り方があり、その子には、nPr(K-1, len(es[origin]))の塗り方がある
-あとはDFS的に子供の塗り方を決めていく
-
-"""
-
+'\ncurr とその親prevの色が決まっているときに、currの子nxtの色の塗り方の場合の数は\nnPr(K-2, len(es[curr]) - 1)\nKのうちprevとcurrで２色使っていて、currにつながっているもののうち一つはprevだから、１引いたものが子供の数。\nで、一番初めのノードoriginについて考えると、親はないのでノードorigin自体はK個の塗り方があり、その子には、nPr(K-1, len(es[origin]))の塗り方がある\nあとはDFS的に子供の塗り方を決めていく\n\n'
 checked = [False] * N
 ans = K * nPr(K - 1, len(es[0]))
 checked[0] = True
-
 stack = []
 for nxt in es[0]:
     stack.append(nxt)
-
 while stack:
     curr = stack.pop()
     checked[curr] = True
@@ -50,5 +37,4 @@ while stack:
     for nxt in es[curr]:
         if not checked[nxt]:
             stack.append(nxt)
-
 print(ans % MOD)

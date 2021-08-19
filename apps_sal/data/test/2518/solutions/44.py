@@ -8,19 +8,15 @@ def judge(x):
         return False
 
 
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 h = [int(input()) for _ in range(n)]
-
 c = a - b
-
 ng = 0
-ok = 10**9
-
+ok = 10 ** 9
 while ok - ng > 1:
     mid = (ng + ok) // 2
     if judge(mid):
         ok = mid
     else:
         ng = mid
-
 print(ok)

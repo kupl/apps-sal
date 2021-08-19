@@ -15,7 +15,6 @@ sp = sum(P)
 sq = sum(Q)
 p[0] = sp
 q[0] = sq
-
 for i in range(1, N + 1):
     heapq.heappush(P, R[i - 1])
     x = heapq.heappop(P)
@@ -25,8 +24,7 @@ for i in range(1, N + 1):
     sq = sq - R[-i] - y
     p[i] = sp
     q[i] = sq
-ans = -(10**100)
+ans = -10 ** 100
 for k in range(N + 1):
     ans = max(ans, p[k] + q[N - k])
-
 print(ans)

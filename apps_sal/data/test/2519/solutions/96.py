@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = [(int(i) + 1) / 2 for i in input().split()]
 res = [sum(p[:k])]
 for i in range(n - k):

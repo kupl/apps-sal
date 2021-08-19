@@ -1,6 +1,5 @@
 import sys
 sys.setrecursionlimit(410000)
-
 mod = 10 ** 9 + 7
 
 
@@ -23,11 +22,10 @@ def dfs(v, p, k):
     return ret
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 graph = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
-
-print((dfs(0, -1, k) * k) % mod)
+print(dfs(0, -1, k) * k % mod)

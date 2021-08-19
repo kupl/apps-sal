@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 H = [int(input()) for _ in range(n)]
 
 
@@ -9,7 +9,7 @@ def ok(x):
     return cnt <= x
 
 
-top = 10**9
+top = 10 ** 9
 bottom = 0
 while top - bottom > 1:
     mid = (top + bottom) // 2

@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 h_list = []
 for _ in range(n):
     h = int(input())
@@ -18,12 +18,11 @@ def ba(s):
 
 
 ng = 0
-ok = 10**9
+ok = 10 ** 9
 while ok > ng + 1:
     mid = (ng + ok) // 2
     if ba(mid):
         ok = mid
     else:
         ng = mid
-
 print(ok)

@@ -13,14 +13,14 @@ for i in range(n):
         c = False
         while s != n:
             if a[i] != b[s] and a[s] != b[i]:
-                b[i], b[s] = b[s], b[i]
+                (b[i], b[s]) = (b[s], b[i])
                 c = True
                 break
             s += 1
         if not c:
             break
 if not c:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')
     print(*b)

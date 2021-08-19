@@ -1,10 +1,8 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     ans = 0
-
     for i in range(60):
         a = 0
         for x in A:

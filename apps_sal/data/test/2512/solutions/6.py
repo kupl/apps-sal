@@ -5,19 +5,15 @@ input = sys.stdin.readline
 
 
 def main():
-    R, C, K = list(map(int, input().split()))
-
-    L_INF = int(1e17)
+    (R, C, K) = list(map(int, input().split()))
+    L_INF = int(1e+17)
     dp = np.full((R + 1, C + 1, 4), -L_INF, dtype=np.int64)
     cell = np.full((R + 1, C + 1), 0, dtype=np.int64)
-
     for i in range(K):
-        x, y, c = list(map(int, input().split()))
+        (x, y, c) = list(map(int, input().split()))
         cell[x - 1][y - 1] = c
-
     f(dp, cell, R, C)
-
-    print((dp[R][C][3]))
+    print(dp[R][C][3])
 
 
 @jit(void(i8[:, :, :], i8[:, :], i8, i8))

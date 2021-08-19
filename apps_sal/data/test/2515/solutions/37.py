@@ -23,17 +23,16 @@ def isNumLike2017(x):
     return True
 
 
-N = 10**5
+N = 10 ** 5
 X = np.zeros(N, dtype='int64')
 for i in range(1, N + 1):
     if isNumLike2017(i):
         X[i - 1] += 1
 X = X.cumsum()
-
 Q = int(input())
 for _ in range(Q):
-    l, r = input().split()
-    l, r = int(l), int(r)
+    (l, r) = input().split()
+    (l, r) = (int(l), int(r))
     if l == 1:
         L = 0
     else:

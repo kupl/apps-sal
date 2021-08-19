@@ -1,14 +1,28 @@
 import sys
 import math
 from collections import deque
-
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-def input(): return sys.stdin.readline().strip()
-def NI(): return int(input())
-def NMI(): return map(int, input().split())
-def NLI(): return list(NMI())
-def SI(): return input()
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def NI():
+    return int(input())
+
+
+def NMI():
+    return map(int, input().split())
+
+
+def NLI():
+    return list(NMI())
+
+
+def SI():
+    return input()
 
 
 def make_adjlist_nond(n, edges):
@@ -20,7 +34,7 @@ def make_adjlist_nond(n, edges):
 
 
 def main():
-    N, K = NMI()
+    (N, K) = NMI()
     edges = [NLI() for _ in range(N - 1)]
     tree = make_adjlist_nond(N, edges)
     stack = deque()
@@ -34,13 +48,12 @@ def main():
         if now == 1:
             tmp += 1
         cnt = 0
-        for i, goto in enumerate(tree[now]):
+        for (i, goto) in enumerate(tree[now]):
             if seen[goto]:
                 cnt += 1
                 continue
             ans = ans * (tmp - i + cnt) % MOD
             stack.append(goto)
-
     print(ans % MOD)
 
 

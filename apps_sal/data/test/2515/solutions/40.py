@@ -4,13 +4,11 @@ from itertools import accumulate
 def eratosthenes(n):
     table = [0] * (n + 1)
     prime_list = []
-
     for i in range(2, n + 1):
         if table[i] == 0:
             prime_list.append(i)
             for j in range(i + i, n + 1, i):
                 table[j] = 1
-
     return prime_list
 
 
@@ -25,5 +23,5 @@ for i in range(n):
 a = list(accumulate(a))
 q = int(input())
 for _ in range(q):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     print(a[r] - a[l - 1])

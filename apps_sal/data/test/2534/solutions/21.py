@@ -1,9 +1,7 @@
-
-r, c = map(int, input().split())
+(r, c) = map(int, input().split())
 mat = []
 for i in range(r):
     mat.append(list(map(int, input().split())))
-
 flag = 0
 for i in range(r):
     min = 10000000000000

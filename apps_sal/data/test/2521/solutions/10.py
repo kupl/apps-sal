@@ -23,7 +23,7 @@ for i in range(n):
     heapq.heappush(A_r, p)
     q = heapq.heappop(A_r)
     A_r_sum.append(A_r_sum[-1] + p - q)
-ans = -float("INF")
+ans = -float('INF')
 for i in range(n + 1):
     ans = max(ans, A_l_sum[i] + A_r_sum[-i - 1])
 print(ans)

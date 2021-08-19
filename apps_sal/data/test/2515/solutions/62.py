@@ -1,5 +1,4 @@
 q = int(input())
-
 p = [True] * 100010
 s = [0] * 100010
 p[0] = False
@@ -12,14 +11,11 @@ while i <= 100005:
             p[j] = False
             j += i
     i += 1
-
-
 for i in range(100005):
     if i & 1 and p[i] and p[(i + 1) // 2]:
         s[i] += 1
 for i in range(100005):
     s[i + 1] += s[i]
-
 for _ in range(q):
-    l, r = list(map(int, input().split()))
-    print((s[r] - s[l - 1]))
+    (l, r) = list(map(int, input().split()))
+    print(s[r] - s[l - 1])

@@ -1,10 +1,8 @@
 import numpy as np
-
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 h = [int(input()) for _ in range(n)]
 h = np.array(h)
-
-hi = 10**10
+hi = 10 ** 10
 low = -1
 
 
@@ -21,5 +19,4 @@ while hi - low > 1:
         hi = ave
     else:
         low = ave
-
 print(hi)

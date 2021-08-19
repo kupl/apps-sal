@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 min_lst = []
 max_lst = [[]] * m
 mx = [0] * m
@@ -28,4 +28,4 @@ for i in max_lst:
             flg = True
             exit(0)
 if not flg:
-    print("GUESS")
+    print('GUESS')

@@ -1,7 +1,4 @@
-
-r, c = (map(int, input().strip().split()))
-
-
+(r, c) = map(int, input().strip().split())
 matrix = []
 minRow = []
 for i in range(r):
@@ -15,20 +12,15 @@ for j in range(c):
     for i in range(r):
         maxi = max(maxi, matrix[i][j])
     maxCol.append(maxi)
-
 for i in range(r):
     n = minRow[i]
-
     for j in range(c):
         if matrix[i][j] == n and maxCol[j] == n:
-
             flag = 0
             break
     if flag == 0:
         break
-
 if flag == 0:
-
     print(n)
 else:
-    print("GUESS")
+    print('GUESS')

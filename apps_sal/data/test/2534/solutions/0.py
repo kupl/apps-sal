@@ -1,5 +1,5 @@
 try:
-    r, c = map(int, input().split())
+    (r, c) = map(int, input().split())
     mat = []
     for i in range(r):
         arr = list(map(int, input().split()))
@@ -21,6 +21,6 @@ try:
         if flag == 1:
             break
     if flag == 0:
-        print("GUESS")
+        print('GUESS')
 except:
     pass

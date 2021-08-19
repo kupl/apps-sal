@@ -4,13 +4,13 @@ sys.setrecursionlimit(100000)
 
 
 def read():
-    N, K = list(map(int, input().strip().split()))
+    (N, K) = list(map(int, input().strip().split()))
     G = [[] for i in range(N + 1)]
     for i in range(N - 1):
-        a, b = list(map(int, input().strip().split()))
+        (a, b) = list(map(int, input().strip().split()))
         G[a - 1].append(b - 1)
         G[b - 1].append(a - 1)
-    return N, K, G
+    return (N, K, G)
 
 
 def permute_init(n, MOD):
@@ -28,9 +28,8 @@ def permute(n, r, factorial, MOD):
     return factorial[n] * pow(factorial[n - r], MOD - 2, MOD) % MOD
 
 
-def solve(N, K, G, MOD=10**9 + 7):
+def solve(N, K, G, MOD=10 ** 9 + 7):
     factorial = permute_init(K, MOD)
-
     visited = [False for i in range(N)]
 
     def dfs(a=0):
@@ -45,16 +44,14 @@ def solve(N, K, G, MOD=10**9 + 7):
                 f *= dfs(b)
                 f %= MOD
         return f
-
     visited[0] = True
     ans = K * dfs(0) % MOD
-
     return ans
 
 
 def __starting_point():
     inputs = read()
-    print(("%s" % solve(*inputs)))
+    print('%s' % solve(*inputs))
 
 
 __starting_point()

@@ -7,9 +7,9 @@ for you in range(t):
     count = 0
     sumi = 0
     for i in range(n):
-        sumi = sumi + (int(l[i]))
+        sumi = sumi + int(l[i])
         z = sumi - (i + 1)
-        if(z in hashi):
+        if z in hashi:
             count = count + hashi[z]
             hashi[z] += 1
         else:

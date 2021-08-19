@@ -30,12 +30,9 @@ def solve():
     for i in range(n):
         tally += int(l[i]) - 1
         seen[tally] += 1
-
     total = 0
-
     for s in seen:
-        total += (seen[s] * (seen[s] - 1) // 2)
-
+        total += seen[s] * (seen[s] - 1) // 2
     print(total)
 
 

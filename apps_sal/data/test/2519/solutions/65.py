@@ -1,6 +1,5 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 p = [(int(i) + 1) / 2 for i in input().split()]
-
 ans = 0
 sum_num = sum(p[:k])
 for i in range(n - k + 1):

@@ -19,10 +19,9 @@ def main(r, c):
     return max(dp[c - 1, :])
 
 
-R, C, K = map(int, input().split())
-item_lis = list(list(map(int, input().split())) for i in range(K))
+(R, C, K) = map(int, input().split())
+item_lis = list((list(map(int, input().split())) for i in range(K)))
 item_map = np.zeros((R, C), np.int64)
-for i, j, k in item_lis:
+for (i, j, k) in item_lis:
     item_map[i - 1, j - 1] = k
-
 print(main(R, C))

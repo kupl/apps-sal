@@ -1,9 +1,9 @@
 def main():
     import sys
 
-    def input(): return sys.stdin.readline().rstrip()
-
-    x, y, a, b, c = map(int, input().split())
+    def input():
+        return sys.stdin.readline().rstrip()
+    (x, y, a, b, c) = map(int, input().split())
     p = list(map(int, input().split()))
     q = list(map(int, input().split()))
     r = list(map(int, input().split()))

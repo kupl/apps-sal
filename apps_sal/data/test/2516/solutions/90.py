@@ -1,5 +1,5 @@
 def main():
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     s = input()
     if p == 2:
         ans = 0
@@ -18,13 +18,12 @@ def main():
     dp = [0 for _ in range(p)]
     dp[0] += 1
     x = 0
-
     for i in range(n):
         x = (x + int(s[n - 1 - i]) * pow(10, i, p)) % p
         dp[x] += 1
     ans = 0
     for i in range(p):
-        ans += (dp[i] * (dp[i] - 1)) // 2
+        ans += dp[i] * (dp[i] - 1) // 2
     print(ans)
 
 

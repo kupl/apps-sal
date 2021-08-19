@@ -20,6 +20,6 @@ for _ in range(q):
     t = input()
     p = input()
     if check(s, t, p):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

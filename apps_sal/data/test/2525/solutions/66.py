@@ -8,7 +8,7 @@ for _ in range(q):
     if query[0] == '1':
         rv = not rv
     else:
-        _, f, c = query.split()
+        (_, f, c) = query.split()
         if f == '1' and rv == False:
             left.append(c)
         elif f == '1' and rv == True:
@@ -19,8 +19,8 @@ for _ in range(q):
             left.append(c)
 if not rv:
     left.reverse()
-    print((''.join(left) + ''.join(s) + ''.join(right)))
+    print(''.join(left) + ''.join(s) + ''.join(right))
 else:
     right.reverse()
     s.reverse()
-    print((''.join(right) + ''.join(s) + ''.join(left)))
+    print(''.join(right) + ''.join(s) + ''.join(left))

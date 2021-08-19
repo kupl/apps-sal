@@ -2,7 +2,7 @@ def e(n):
     return (int(n) + 1) / 2
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = list(map(e, input().split()))
 ans = sum(p[0:k])
 temp = sum(p[0:k])

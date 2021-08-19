@@ -1,8 +1,7 @@
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 par = [0] * (N + 1)
 num = [0] * (N + 1)
 group = [1] * (N + 1)
-
 for i in range(1, N + 1):
     par[i] = i
 
@@ -27,15 +26,14 @@ def same(x, y):
 
 
 for _ in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     union(a, b)
     num[a] += 1
     num[b] += 1
 for _ in range(K):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     if same(c, d):
         num[c] += 1
         num[d] += 1
-
 for i in range(1, N + 1):
-    print(group[root(i)] - num[i] - 1, end=" ")
+    print(group[root(i)] - num[i] - 1, end=' ')

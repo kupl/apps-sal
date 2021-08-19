@@ -1,8 +1,8 @@
-T, = list(map(int, input().split()))
+(T,) = list(map(int, input().split()))
 for t in range(T):
-    N, = list(map(int, input().split()))
+    (N,) = list(map(int, input().split()))
     X = [0] * (N + 1)
-    for i, c in enumerate(input().strip()):
+    for (i, c) in enumerate(input().strip()):
         X[i + 1] = X[i] + int(c)
     d = dict()
     for i in range(N + 1):

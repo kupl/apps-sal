@@ -10,10 +10,10 @@ for _ in range(n):
 diz = {}
 for i in range(len(pari) - 1):
     for j in range(i + 1, len(pari)):
-        diz[(pari[i] + pari[j]) >> 1] = 1
+        diz[pari[i] + pari[j] >> 1] = 1
 for i in range(len(dispari) - 1):
     for j in range(i + 1, len(dispari)):
-        diz[(dispari[i] + dispari[j]) >> 1] = 1
+        diz[dispari[i] + dispari[j] >> 1] = 1
 counter = 0
 for el in pari:
     if el in diz:

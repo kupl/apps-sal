@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 p = list(map(lambda x: int(x) + 1, input().split()))
 ans = sum(p[0:K])
 s = ans

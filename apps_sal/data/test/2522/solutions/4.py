@@ -16,13 +16,13 @@ for i in range(len(A)):
 if s > 0:
     hajime = C.index(0)
 if s == 0:
-    print("Yes")
+    print('Yes')
     print(*B)
 else:
     Acount = A.count(atai)
     Bcount = B.count(atai)
     if N - Acount < Bcount:
-        print("No")
+        print('No')
     else:
         afirst = A.index(atai)
         alast = N - 1 - Arev.index(atai)
@@ -41,5 +41,5 @@ else:
             for i in range(0, ss):
                 B[hajime + t + i] = B[-i - 1]
                 B[-i - 1] = atai
-        print("Yes")
+        print('Yes')
         print(*B)

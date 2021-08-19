@@ -1,11 +1,11 @@
 cases = int(input())
 for case in range(cases):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     if b > a * 2:
-        print("NO")
+        print('NO')
     elif (a + b) % 3 == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

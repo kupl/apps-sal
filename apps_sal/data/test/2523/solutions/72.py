@@ -1,5 +1,4 @@
 S = input()
-
 N = len(S)
 L = []
 temp = S[0]
@@ -17,7 +16,6 @@ else:
     L.append(c)
     c = 1
 L.append(c)
-
 ans = N
 while len(L) >= 3:
     if L[0] > L[-1]:
@@ -28,8 +26,6 @@ while len(L) >= 3:
         ans = min(ans, N - L[0])
         L[1] += L[0]
         L.pop(0)
-
 if len(L) == 2:
     ans = min(ans, max(L))
-
 print(ans)

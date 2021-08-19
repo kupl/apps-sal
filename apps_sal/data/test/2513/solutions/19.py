@@ -1,6 +1,6 @@
 N = int(input())
 S = list(str(input()))
-hyp = [["S", "S"], ["S", "W"], ["W", "S"], ["W", "W"]]
+hyp = [['S', 'S'], ['S', 'W'], ['W', 'S'], ['W', 'W']]
 flag = 0
 for i in range(4):
     if flag == 2:
@@ -16,67 +16,53 @@ for i in range(4):
                 t = 1
             else:
                 t = 0
-
-            if ans[j] == "S":
-                if S[j] == "o":
-                    if ans[j - 1] == "S":
-                        if ans[t] == "S":
+            if ans[j] == 'S':
+                if S[j] == 'o':
+                    if ans[j - 1] == 'S':
+                        if ans[t] == 'S':
                             flag += 1
-                    else:
-                        if ans[t] == "W":
-                            flag += 1
+                    elif ans[t] == 'W':
+                        flag += 1
+                elif ans[j - 1] == 'S':
+                    if ans[t] == 'W':
+                        flag += 1
+                elif ans[t] == 'S':
+                    flag += 1
+            elif S[j] == 'o':
+                if ans[j - 1] == 'S':
+                    if ans[t] == 'W':
+                        flag += 1
+                elif ans[t] == 'S':
+                    flag += 1
+            elif ans[j - 1] == 'S':
+                if ans[t] == 'S':
+                    flag += 1
+            elif ans[t] == 'W':
+                flag += 1
+        elif ans[j] == 'S':
+            if S[j] == 'o':
+                if ans[j - 1] == 'S':
+                    ans.append('S')
                 else:
-                    if ans[j - 1] == "S":
-                        if ans[t] == "W":
-                            flag += 1
-                    else:
-                        if ans[t] == "S":
-                            flag += 1
+                    ans.append('W')
+            elif ans[j - 1] == 'S':
+                ans.append('W')
             else:
-                if S[j] == "o":
-                    if ans[j - 1] == "S":
-                        if ans[t] == "W":
-                            flag += 1
-                    else:
-                        if ans[t] == "S":
-                            flag += 1
-                else:
-                    if ans[j - 1] == "S":
-                        if ans[t] == "S":
-                            flag += 1
-                    else:
-                        if ans[t] == "W":
-                            flag += 1
-
+                ans.append('S')
+        elif S[j] == 'o':
+            if ans[j - 1] == 'S':
+                ans.append('W')
+            else:
+                ans.append('S')
+        elif ans[j - 1] == 'S':
+            ans.append('S')
         else:
-            if ans[j] == "S":
-                if S[j] == "o":
-                    if ans[j - 1] == "S":
-                        ans.append("S")
-                    else:
-                        ans.append("W")
-                else:
-                    if ans[j - 1] == "S":
-                        ans.append("W")
-                    else:
-                        ans.append("S")
-            else:
-                if S[j] == "o":
-                    if ans[j - 1] == "S":
-                        ans.append("W")
-                    else:
-                        ans.append("S")
-                else:
-                    if ans[j - 1] == "S":
-                        ans.append("S")
-                    else:
-                        ans.append("W")
-
+            ans.append('W')
 if flag != 2:
     print(-1)
 else:
     for i in range(len(ans)):
         if i != len(ans) - 1:
-            print(ans[i], end="")
+            print(ans[i], end='')
         else:
             print(ans[i])

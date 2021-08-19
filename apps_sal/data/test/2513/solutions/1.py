@@ -49,7 +49,6 @@ def conf(ans_sub):
             elif ans_sub[N - 1] == 'W' and s[N - 1] == 'x':
                 if ans_sub[0] == ans_sub[N - 2]:
                     flag2 = 1
-
     elif ans_sub[0] == 'S' and s[0] == 'x':
         if ans_sub[1] != ans_sub[N - 1]:
             if ans_sub[N - 1] == 'S' and s[N - 1] == 'o':
@@ -64,7 +63,6 @@ def conf(ans_sub):
             elif ans_sub[N - 1] == 'W' and s[N - 1] == 'x':
                 if ans_sub[0] == ans_sub[N - 2]:
                     flag2 = 1
-
     elif ans_sub[0] == 'W' and s[0] == 'o':
         if ans_sub[1] != ans_sub[N - 1]:
             if ans_sub[N - 1] == 'S' and s[N - 1] == 'o':
@@ -79,7 +77,6 @@ def conf(ans_sub):
             elif ans_sub[N - 1] == 'W' and s[N - 1] == 'x':
                 if ans_sub[0] == ans_sub[N - 2]:
                     flag2 = 1
-
     elif ans_sub[0] == 'W' and s[0] == 'x':
         if ans_sub[1] == ans_sub[N - 1]:
             if ans_sub[N - 1] == 'S' and s[N - 1] == 'o':
@@ -94,7 +91,6 @@ def conf(ans_sub):
             elif ans_sub[N - 1] == 'W' and s[N - 1] == 'x':
                 if ans_sub[0] == ans_sub[N - 2]:
                     flag2 = 1
-
     if flag2 == 1:
         return 1
     else:
@@ -110,4 +106,4 @@ for a in first:
         print(mojiretu)
         break
     if flag == 0 and a == first[3]:
-        print((-1))
+        print(-1)

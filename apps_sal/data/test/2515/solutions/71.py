@@ -18,17 +18,17 @@ def eratosthenes(n):
     return hurui
 
 
-n = 10**5 + 200
+n = 10 ** 5 + 200
 hurui = eratosthenes(n)
 hurui = [bool(i) for i in hurui]
 poi = [False] * (n + 1)
 for i in range(n + 1):
-    poi[i] = (i % 2 == 1 and hurui[i] and hurui[(i + 1) // 2])
+    poi[i] = i % 2 == 1 and hurui[i] and hurui[(i + 1) // 2]
 poi[1] = False
 sa = [0]
 for i in range(n + 1):
     sa.append(sa[i] + poi[i])
 q = int(input())
 lr = [tuple(map(int, input().split())) for i in range(q)]
-for li, ri in lr:
-    print((sa[ri + 1] - sa[li]))
+for (li, ri) in lr:
+    print(sa[ri + 1] - sa[li])

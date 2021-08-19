@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -7,6 +6,7 @@ mod = 10 ** 9 + 7
 
 
 def resolve():
+
     def meguru_bisect(ok, ng):
         """
         is_okを定義して下さい
@@ -29,11 +29,9 @@ def resolve():
             if h > 0:
                 cnt += (h + ab - 1) // ab
         return cnt <= x
-
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     ab = a - b
-    H = list(int(input()) for _ in range(n))
-
+    H = list((int(input()) for _ in range(n)))
     res = meguru_bisect(10 ** 9 + 1, 0)
     print(res)
 

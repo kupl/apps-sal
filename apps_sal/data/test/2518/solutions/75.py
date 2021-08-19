@@ -1,6 +1,5 @@
 from math import ceil
-
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 hs = [int(input()) for _ in range(n)]
 
 
@@ -10,14 +9,11 @@ def defeatable(k):
     return n_attack <= k
 
 
-l, r = 0, ceil(max(hs) / b)
-
+(l, r) = (0, ceil(max(hs) / b))
 while r - l > 1:
     m = (l + r) // 2
-
     if defeatable(m):
         r = m
     else:
         l = m
-
 print(r)

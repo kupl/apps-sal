@@ -1,6 +1,5 @@
-N, P = map(int, input().split())
+(N, P) = map(int, input().split())
 S = input()
-
 if P == 2:
     ans = 0
     for i in range(N):
@@ -9,7 +8,7 @@ if P == 2:
 elif P == 5:
     ans = 0
     for i in range(N):
-        if S[i] == "0" or S[i] == "5":
+        if S[i] == '0' or S[i] == '5':
             ans += i + 1
 else:
     L = [0] * P
@@ -21,5 +20,4 @@ else:
     ans = L[0]
     for i in range(P):
         ans += L[i] * (L[i] - 1) // 2
-
 print(ans)

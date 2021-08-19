@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 H = [int(input()) for _ in range(N)]
 
 
@@ -9,7 +9,7 @@ def judge(t):
         if hi <= base_damage:
             continue
         res = hi - base_damage
-        q, r = divmod(res, A - B)
+        (q, r) = divmod(res, A - B)
         add_attack += q
         if r:
             add_attack += 1
@@ -23,9 +23,8 @@ while True:
     mid = (min_attack + max_attack) // 2
     if mid == min_attack:
         break
+    elif judge(mid):
+        max_attack = mid
     else:
-        if judge(mid):
-            max_attack = mid
-        else:
-            min_attack = mid
+        min_attack = mid
 print(max_attack)

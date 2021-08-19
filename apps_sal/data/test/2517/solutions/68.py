@@ -3,15 +3,15 @@ import heapq
 
 
 def dijkstra(N, G, s):
-    INF = 10**40
+    INF = 10 ** 40
     d = [INF] * N
     d[s] = 0
     q = [(0, s)]
     while q:
-        c, v = heapq.heappop(q)
+        (c, v) = heapq.heappop(q)
         if d[v] < c:
             continue
-        for t, co in G[v]:
+        for (t, co) in G[v]:
             if d[v] + co < d[t]:
                 d[t] = d[v] + co
                 heapq.heappush(q, (d[t], t))
@@ -19,12 +19,12 @@ def dijkstra(N, G, s):
 
 
 def main():
-    N, M, _ = list(map(int, input().split()))
+    (N, M, _) = list(map(int, input().split()))
     R = list(map(int, input().split()))
     R = [r - 1 for r in R]
     G = [[] for _ in range(N)]
     for _ in range(M):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         G[a - 1].append((b - 1, c))
         G[b - 1].append((a - 1, c))
     RM = []
@@ -42,4 +42,4 @@ def main():
     return m
 
 
-print((main()))
+print(main())

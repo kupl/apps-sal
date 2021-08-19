@@ -1,7 +1,7 @@
 import math
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 h = [int(input()) for i in range(n)]
-l, r = 0, 10**9
+(l, r) = (0, 10 ** 9)
 while r - l > 1:
     m = (l + r) // 2
     count = 0

@@ -1,16 +1,14 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 s = list(map(int, list(input())))
 
 
 def solve():
     total = 0
-
     if 10 % p == 0:
         for i in range(n):
             if s[i] % p == 0:
                 total += i + 1
         return total
-
     cnt = [0] * p
     r = 0
     ten = 1

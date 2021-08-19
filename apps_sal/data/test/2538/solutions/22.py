@@ -1,9 +1,9 @@
 t = int(input())
-while (t > 0):
+while t > 0:
     t -= 1
-    s, i, e = [int(x) for x in input().split()]
+    (s, i, e) = [int(x) for x in input().split()]
     ms = s + e
-    if (ms <= i):
+    if ms <= i:
         print(0)
     else:
         c = (ms - i + 1) // 2

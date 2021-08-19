@@ -1,6 +1,6 @@
 T = int(input())
 for i in range(T):
-    s, i, e = list(map(int, input().split()))
+    (s, i, e) = list(map(int, input().split()))
     if s > i + e:
         a = e + 1
     else:

@@ -1,20 +1,17 @@
 def solve(n, a, b):
     b.reverse()
-    l, r = 0, n - 1
+    (l, r) = (0, n - 1)
     for i in range(n):
         if a[i] == b[i]:
-            if (l < i) and (a[i] != b[l]) and (a[l] != b[i]):
-                b[l], b[i] = b[i], b[l]
+            if l < i and a[i] != b[l] and (a[l] != b[i]):
+                (b[l], b[i]) = (b[i], b[l])
                 l += 1
-            elif (i < r) and (a[i] != b[r]):
-                b[r], b[i] = b[i], b[r]
+            elif i < r and a[i] != b[r]:
+                (b[r], b[i]) = (b[i], b[r])
                 r -= 1
             else:
-                return "No"
-    return "\n".join([
-        "Yes",
-        " ".join(map(str, b))
-    ])
+                return 'No'
+    return '\n'.join(['Yes', ' '.join(map(str, b))])
 
 
 n = int(input())

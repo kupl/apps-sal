@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 h = [int(input()) for i in range(n)]
 ng = 0
 ok = 10 ** 9

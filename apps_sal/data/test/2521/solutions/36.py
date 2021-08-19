@@ -27,7 +27,7 @@ for i in range(n):
     else:
         right[n - 1 - i] = right[n - i] + a[2 * n - 1 - i] - x
 right += [s]
-ans = -float("inf")
+ans = -float('inf')
 for i in range(n + 1):
     ans = max(ans, left[i] - right[i])
 print(ans)

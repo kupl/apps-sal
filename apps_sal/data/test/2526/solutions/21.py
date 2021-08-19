@@ -1,4 +1,4 @@
-x, y, a, b, c = list(map(int, input().split()))
+(x, y, a, b, c) = list(map(int, input().split()))
 plst = list(map(int, input().split()))
 qlst = list(map(int, input().split()))
 rlst = list(map(int, input().split()))
@@ -24,4 +24,4 @@ while 1:
         r_pos += 1
     if r_pos == c:
         break
-print((sum(plst) + sum(qlst) - inf * 2))
+print(sum(plst) + sum(qlst) - inf * 2)

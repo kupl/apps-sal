@@ -18,7 +18,7 @@ for i in range(1, n):
 for i in range(n - 1):
     h = max(h, e[i + 1] - f[i])
 if g > n:
-    print("No")
+    print('No')
 else:
-    print("Yes")
-    print(*(b[n - h:] + b[:n - h]))
+    print('Yes')
+    print(*b[n - h:] + b[:n - h])

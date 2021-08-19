@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 for i in range(N):
     p[i] = (p[i] + 1) / 2

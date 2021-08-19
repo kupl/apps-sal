@@ -10,7 +10,7 @@ for x in input().split():
         counter[x] += 1
 Q = int(input())
 for _ in range(Q):
-    B, C = list(map(int, input().split()))
+    (B, C) = list(map(int, input().split()))
     if not B in counter:
         print(total)
         continue

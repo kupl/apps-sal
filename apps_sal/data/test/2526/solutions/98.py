@@ -1,4 +1,4 @@
-(x, y, a, b, c), p, q, r = [[*list(map(int, i.split()))]for i in open(0)]
+((x, y, a, b, c), p, q, r) = [[*list(map(int, i.split()))] for i in open(0)]
 p = sorted(p)[-x:]
 q = sorted(q)[-y:]
 pq = sorted(p + q)

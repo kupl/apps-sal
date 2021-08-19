@@ -1,8 +1,8 @@
-n, a, b = list(map(int, input().split()))
-h = [int(input())for _ in range(n)]
+(n, a, b) = list(map(int, input().split()))
+h = [int(input()) for _ in range(n)]
 h.sort(reverse=True)
 l = -1
-r = 10**9
+r = 10 ** 9
 while r - l > 1:
     mid = (l + r) // 2
     cnt = 0

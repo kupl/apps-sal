@@ -7,7 +7,6 @@ for i in S:
     else:
         cnt.append(1)
         now = i
-
 ans = len(S)
 sum = 0
 for i in cnt:

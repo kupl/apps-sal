@@ -1,16 +1,16 @@
 import sys
-sys.setrecursionlimit(10**9)
-n, m, k = map(int, input().split())
+sys.setrecursionlimit(10 ** 9)
+(n, m, k) = map(int, input().split())
 friend = [[] for _ in range(n)]
 block = [[] for _ in range(n)]
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     friend[a].append(b)
     friend[b].append(a)
 for _ in range(k):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     c -= 1
     d -= 1
     block[c].append(d)
@@ -36,8 +36,6 @@ for v in range(n):
     dfs(friend, v, top)
     top_count.append(0)
     top += 1
-
-
 for i in range(n):
     ans = top_count[seen[i]] - len(friend[i]) - 1
     cnt = 0

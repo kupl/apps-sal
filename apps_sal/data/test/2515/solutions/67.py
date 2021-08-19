@@ -1,5 +1,5 @@
 q = int(input())
-n = 10**5
+n = 10 ** 5
 nums = [False] * 2 + [True] * (n - 2)
 ans = [0] * n
 for i in range(2, n):
@@ -14,5 +14,5 @@ for i in range(3, n, 2):
     else:
         ans[i] = pre
 for _ in range(q):
-    l, r = list(map(int, input().split()))
-    print((ans[r] - ans[max(l - 2, 1)]))
+    (l, r) = list(map(int, input().split()))
+    print(ans[r] - ans[max(l - 2, 1)])

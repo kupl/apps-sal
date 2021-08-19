@@ -14,10 +14,9 @@ def enough(HP, A, B, X):
 over = 10 ** 9
 under = 0
 HP = []
-N, A, B = list(map(int, input().rstrip().split(" ")))
+(N, A, B) = list(map(int, input().rstrip().split(' ')))
 for i in range(N):
     HP.append(int(input()))
-
 while abs(over - under) > 1:
     mid = (over + under) // 2
     if enough(HP, A, B, mid):

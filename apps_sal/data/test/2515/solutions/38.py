@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 def Eratosthenes(n):
     """n(>=6)未満の素数列挙 """
-    n, correction = n - n % 6 + 6, 2 - (n % 6 > 1)
+    (n, correction) = (n - n % 6 + 6, 2 - (n % 6 > 1))
     sieve = [True] * (n // 3)
     for i in range(1, int(sqrt(n)) // 3 + 1):
         if sieve[i]:
@@ -30,5 +30,5 @@ for i in range(3, 10 ** 5):
     ans[i + 1] += ans[i]
 q = int(input())
 for i in range(q):
-    l, r = list(map(int, input().split()))
-    print((ans[r] - ans[l - 1]))
+    (l, r) = list(map(int, input().split()))
+    print(ans[r] - ans[l - 1])

@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = 0
 for i in range(60):
     x = 1 << i

@@ -1,5 +1,4 @@
 import heapq
-
 n = int(input())
 arr = list(map(int, input().split()))
 q1 = []
@@ -31,7 +30,7 @@ for val in arr[2 * n - 1:n - 1:-1]:
         heapq.heappush(q2, -tmp)
         sum2.append(sum2[-1])
 sum2 = sum2[::-1]
-ans = -10**18
+ans = -10 ** 18
 for i in range(n + 1):
     tmp = sum1[i] - sum2[i]
     ans = max(ans, tmp)

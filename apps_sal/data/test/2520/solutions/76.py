@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 class UnionFind:
+
     def __init__(self, numV):
         self.pars = list(range(numV))
         self.ranks = [0] * numV
@@ -15,8 +16,8 @@ class UnionFind:
         return par
 
     def merge(self, x, y):
-        x, y = self.getRoot(x), self.getRoot(y)
-        sx, sy = self.sizes[x], self.sizes[y]
+        (x, y) = (self.getRoot(x), self.getRoot(y))
+        (sx, sy) = (self.sizes[x], self.sizes[y])
         if x == y:
             return (0, 0)
         if self.ranks[x] < self.ranks[y]:
@@ -40,24 +41,21 @@ class UnionFind:
         return self.sizes[self.getRoot(x)]
 
 
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 UF = UnionFind(N)
 anss = [-1] * N
 for _ in range(M):
-    A, B = list(map(int, input().split()))
-    A, B = A - 1, B - 1
+    (A, B) = list(map(int, input().split()))
+    (A, B) = (A - 1, B - 1)
     UF.merge(A, B)
     anss[A] -= 1
     anss[B] -= 1
-
 for i in range(N):
     anss[i] += UF.getSize(i)
-
 for _ in range(K):
-    C, D = list(map(int, input().split()))
-    C, D = C - 1, D - 1
+    (C, D) = list(map(int, input().split()))
+    (C, D) = (C - 1, D - 1)
     if UF.isSame(C, D):
         anss[C] -= 1
         anss[D] -= 1
-
-print((' '.join(map(str, anss))))
+print(' '.join(map(str, anss)))

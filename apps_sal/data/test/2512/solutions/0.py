@@ -1,9 +1,9 @@
 import numpy as np
 from numba import njit
-R, C, K = list(map(int, input().split()))
+(R, C, K) = list(map(int, input().split()))
 vl = np.zeros((R, C), np.int64)
 for _ in range(K):
-    r, c, v = list(map(int, input().split()))
+    (r, c, v) = list(map(int, input().split()))
     vl[r - 1][c - 1] = v
 
 
@@ -19,4 +19,4 @@ def main():
     return dp[R][C][3]
 
 
-print((main()))
+print(main())

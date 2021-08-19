@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 P = list(map(int, input().split()))
 P = [sum(P[:K]) + K] + P
 for i in range(N - K):

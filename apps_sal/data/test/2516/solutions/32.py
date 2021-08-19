@@ -2,11 +2,11 @@ def main():
     import sys
     input = sys.stdin.readline
     from collections import defaultdict
-    N, P = map(int, input().split())
+    (N, P) = map(int, input().split())
     S = input().rstrip()
     if P in (2, 5):
         ans = 0
-        for i, c in enumerate(S):
+        for (i, c) in enumerate(S):
             if int(c) % P == 0:
                 ans += i + 1
         print(ans)
@@ -23,7 +23,7 @@ def main():
         d %= P
     ans = 0
     for v in counter.values():
-        ans += (v * (v - 1)) // 2
+        ans += v * (v - 1) // 2
     print(ans)
 
 

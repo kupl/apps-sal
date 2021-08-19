@@ -20,10 +20,9 @@ for i in range(len(l)):
     y = (x + 1) // 2
     if y in l:
         l2.append(x)
-
 Q = int(input())
 for i in range(Q):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     x = bisect.bisect_left(l2, a)
     y = bisect.bisect_right(l2, b)
-    print((y - x))
+    print(y - x)
