@@ -1,4 +1,5 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
         prev = A[0]
         indices = {i for i in range(len(prev))}
@@ -10,5 +11,4 @@ class Solution:
                     remove.add(i)
             indices -= remove
             prev = a
-            # if len(indices) == 0: break
         return len(prev) - len(indices)

@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    n, k, d = map(int, input().split())
+    (n, k, d) = map(int, input().split())
     arr = list(map(int, input().split()))
     s = sum(arr)
     c = s // k

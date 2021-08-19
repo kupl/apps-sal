@@ -1,4 +1,5 @@
 class Solution:
+
     def checkSubarraySum(self, nums, k):
         """
         :type nums: List[int]
@@ -23,8 +24,4 @@ class Solution:
                     numdict[nums[i]] = i
                 elif i > numdict[nums[i]] + 1:
                     return True
-        # for i in range(len(nums)):
-        #     for j in range(i+1, len(nums)):
-        #         if sum(nums[i:j+1]) % k == 0:
-        #             return True
         return False

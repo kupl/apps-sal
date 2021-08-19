@@ -28,7 +28,7 @@ class RandomizedSet:
         if val not in self.dic:
             return False
         self.dic[self.l[-1]] = self.dic[val]
-        self.l[self.dic[val]], self.l[-1] = self.l[-1], self.l[self.dic[val]]
+        (self.l[self.dic[val]], self.l[-1]) = (self.l[-1], self.l[self.dic[val]])
         self.l.pop()
         del self.dic[val]
         return True
@@ -39,10 +39,3 @@ class RandomizedSet:
         :rtype: int
         """
         return random.choice(self.l)
-
-
-# Your RandomizedSet object will be instantiated and called as such:
-# obj = RandomizedSet()
-# param_1 = obj.insert(val)
-# param_2 = obj.remove(val)
-# param_3 = obj.getRandom()

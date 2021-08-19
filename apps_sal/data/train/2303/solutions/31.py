@@ -4,6 +4,7 @@ sys.setrecursionlimit(10 ** 9)
 
 
 def solve():
+
     def dfs(u, f):
         G[u].append(f)
         G1[f].append(u)
@@ -11,14 +12,13 @@ def solve():
             if v not in used:
                 used.add(v)
                 dfs(v, f)
-
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     edges = []
     for _ in range(m):
         edges.append(list(map(int, input().split())))
     edges.sort(key=lambda item: item[2])
-    G = defaultdict(list)  # 记录每个点可能在哪个分组里面
-    G1 = defaultdict(list)  # 记录每个分组里面的点
+    G = defaultdict(list)
+    G1 = defaultdict(list)
     en = 0
     cnt = 0
     while en < len(edges):
@@ -26,7 +26,7 @@ def solve():
         g = defaultdict(list)
         used = set()
         while en < len(edges) and edges[en][2] == edges[st][2]:
-            x, y = edges[en][0], edges[en][1]
+            (x, y) = (edges[en][0], edges[en][1])
             g[x].append(y)
             g[y].append(x)
             en += 1
@@ -35,7 +35,6 @@ def solve():
                 used.add(k)
                 dfs(k, cnt)
                 cnt += 1
-
     usedG = set()
     usedP = set()
     deq = deque()
@@ -57,8 +56,7 @@ def solve():
                             usedP.add(p)
                             deq.append(p)
         step += 1
-
-    print((-1))
+    print(-1)
 
 
 solve()

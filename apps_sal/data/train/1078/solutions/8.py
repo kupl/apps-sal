@@ -9,11 +9,10 @@ def solve(s, a, b, c):
 
 
 def main():
-    t = int(input())  # cook your dish here
-
+    t = int(input())
     for _ in range(t):
         line = input().strip()
-        s, a, b, c = [int(x) for x in line.split(" ")]
+        (s, a, b, c) = [int(x) for x in line.split(' ')]
         print(solve(s, a, b, c))
 
 
