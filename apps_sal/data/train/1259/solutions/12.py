@@ -1,9 +1,8 @@
-# cook your dish here
 def prettynumber(m, n):
     count = 0
     for i in range(m, n + 1):
         x = i % 10
-        if (x == 2 or x == 3 or x == 9):
+        if x == 2 or x == 3 or x == 9:
             count += 1
     print(count)
 

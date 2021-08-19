@@ -1,9 +1,8 @@
-# cook your dish here
 n = int(input())
 list1 = []
 list2 = []
 for i in range(n):
-    a, h = list(map(int, input().split()))
+    (a, h) = list(map(int, input().split()))
     list1.append(a)
     list2.append(h)
 count = 2

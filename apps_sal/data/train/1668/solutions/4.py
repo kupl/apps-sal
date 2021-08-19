@@ -1,5 +1,3 @@
-# 先确定要改变的范围，然后在对指定范围进行改动
-# itertools是很好用的包，注意学习
 import itertools
 
 

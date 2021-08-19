@@ -1,12 +1,11 @@
-# cook your dish here
 n = int(input())
 counts = dict()
 z = 0
 upper = None
 for i in range(0, n):
-    a, h = [int(num) for num in input().split()]
+    (a, h) = [int(num) for num in input().split()]
     counts[a] = h
-for key, count in counts.items():
+for (key, count) in counts.items():
     c = 0
     x = key - count
     y = key + count
@@ -15,58 +14,52 @@ for key, count in counts.items():
     for j in counts.keys():
         if j == key:
             continue
+        elif x <= j <= key:
+            c1 = 0
+            break
         else:
-            if x <= j <= key:
-                c1 = 0
-                break
-            else:
-                c1 = 1
+            c1 = 1
     for j in counts.keys():
         if j == key:
             continue
+        elif key <= j <= y:
+            c2 = 0
+            break
         else:
-            if key <= j <= y:
-                c2 = 0
-                break
-            else:
-                c2 = 1
+            c2 = 1
     if c2 == 0 and c1 == 1:
         if upper is None:
             z = z + c1
             upper = key
+        elif x >= upper:
+            z = z + c1
+            upper = key
         else:
-            if x >= upper:
-                z = z + c1
-                upper = key
-            else:
-                z = z + c2
-                upper = key
+            z = z + c2
+            upper = key
     elif c2 == 1 and c1 == 0:
         if upper is None:
             z = z + c2
             upper = y
+        elif upper <= key:
+            z = z + c2
+            upper = y
         else:
-            if upper <= key:
-                z = z + c2
-                upper = y
-            else:
-                z = z + c1
-                upper = y
+            z = z + c1
+            upper = y
     elif c2 == 1 and c1 == 1:
         if upper is None:
             z = z + c1
             upper = key
+        elif x >= upper:
+            z = z + c1
+            upper = key
+        elif upper <= key:
+            z = z + c2
+            upper = y
         else:
-            if x >= upper:
-                z = z + c1
-                upper = key
-            else:
-                if upper <= key:
-                    z = z + c2
-                    upper = y
-                else:
-                    z = z + 0
-                    upper = y
+            z = z + 0
+            upper = y
     else:
         z = z + 0
         upper = key

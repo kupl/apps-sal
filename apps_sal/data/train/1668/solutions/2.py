@@ -1,10 +1,10 @@
 def swap(s, a, b):
     s = list(s)
-    s[a], s[b] = s[b], s[a]
+    (s[a], s[b]) = (s[b], s[a])
     return ''.join(s)
 
 
-def maximized_range(s, left):  # Maximize value in range [left, end]
+def maximized_range(s, left):
     return s[:left] + ''.join(sorted(s[left:], reverse=True))
 
 

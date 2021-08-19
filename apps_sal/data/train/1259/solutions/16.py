@@ -1,10 +1,7 @@
-# cook your dish here
 x = int(input())
-
 lst = []
-
 for i in range(0, x):
-    l, r = input().split()
+    (l, r) = input().split()
     l = int(l)
     r = int(r)
     sublst = []
@@ -13,6 +10,5 @@ for i in range(0, x):
             sublst.append(l)
         l += 1
     lst.append(len(sublst))
-
 for i in range(0, x):
     print(lst[i])

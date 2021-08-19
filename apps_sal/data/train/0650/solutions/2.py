@@ -1,7 +1,6 @@
-# cook your dish here
 def sort_list(list1, list2):
     zipped_pairs = zip(list2, list1)
-    z = [x for _, x in sorted(zipped_pairs)]
+    z = [x for (_, x) in sorted(zipped_pairs)]
     return z
 
 
@@ -17,16 +16,15 @@ def printMaxActivities(s, f):
 
 
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     mat = []
     for i in range(k):
         mat.append([[], []])
     for i in range(n):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         mat[c - 1][0].append(a)
         mat[c - 1][1].append(b)
     ans = 0
-    # print(mat)
     for i in range(k):
         if len(mat[i][0]) == 1:
             ans += 1

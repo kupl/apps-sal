@@ -1,6 +1,5 @@
 def get_password(grid, directions):
-    # generate start point
-    start = [[k, x] for k, v in enumerate(grid) for x, y in enumerate(v) if y == 'x'][0]
+    start = [[k, x] for (k, v) in enumerate(grid) for (x, y) in enumerate(v) if y == 'x'][0]
     curr = start
     a = ''
     for i in directions:
