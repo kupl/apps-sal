@@ -1,4 +1,5 @@
 class Solution:
+
     def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
         plen = len(pattern)
         pat = [-1] * plen
@@ -8,7 +9,6 @@ class Solution:
                 if pattern[j] == pattern[i]:
                     pat[i] = j
         res = []
-        # print(pat)
         for word in words:
             wlen = len(word)
             flag = 0
@@ -27,5 +27,4 @@ class Solution:
                             break
             if flag == 0:
                 res.append(word)
-
         return res

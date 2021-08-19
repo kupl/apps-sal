@@ -1,10 +1,10 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         left = 1
         right = max(weights) * len(weights)
         while left < right:
             mid = (left + right) // 2
-            # print(left, mid, right)
             if self.possible(weights, D, mid):
                 right = mid
             else:

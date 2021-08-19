@@ -1,4 +1,5 @@
 class Solution:
+
     def matrixScore(self, A: List[List[int]]) -> int:
         w = len(A[0])
         h = len(A)
@@ -9,15 +10,12 @@ class Solution:
 
         def c_val(ci):
             return 2 ** (w - ci - 1)
-
-        row_sum = [sum(v * c_val(ci) for ci, v in enumerate(l)) for l in A]
-        col_sum = [sum(A[ri][ci] * c_val(ci) for ri in range(h)) for ci in range(w)]
-
+        row_sum = [sum((v * c_val(ci) for (ci, v) in enumerate(l))) for l in A]
+        col_sum = [sum((A[ri][ci] * c_val(ci) for ri in range(h))) for ci in range(w)]
         flipped = True
         while flipped:
             flipped = False
-            # Check row sums
-            for ri, r in enumerate(row_sum):
+            for (ri, r) in enumerate(row_sum):
                 if r < max_row - r:
                     flipped = True
                     for ci in range(w):
@@ -27,8 +25,7 @@ class Solution:
                             col_sum[ci] += c_val(ci)
                         else:
                             col_sum[ci] -= c_val(ci)
-            # Check col sums
-            for ci, c in enumerate(col_sum):
+            for (ci, c) in enumerate(col_sum):
                 if c < max_col(ci) - c:
                     flipped = True
                     for ri in range(h):

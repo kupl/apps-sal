@@ -1,13 +1,11 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         lo = max(weights)
         hi = sum(weights)
         res = hi
-
         while lo <= hi:
             mid = lo + (hi - lo) // 2
-
-            # try packing
             days = 0
             curr_weight = 0
             for i in range(len(weights)):
@@ -16,13 +14,10 @@ class Solution:
                     curr_weight = weights[i]
                 else:
                     curr_weight += weights[i]
-
             days += 1
-
             if days <= D:
                 res = mid
                 hi = mid - 1
             else:
                 lo = mid + 1
-
         return res

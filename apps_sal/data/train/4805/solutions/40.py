@@ -6,5 +6,3 @@ def check(seq, elem):
             return True
         except ValueError:
             return False
-
-    # pass

@@ -5,7 +5,7 @@ class Solution:
         ships = 0
         curr_w = 0
         while i < len(self.weights):
-            if (ship_weight - curr_w) < self.weights[i]:
+            if ship_weight - curr_w < self.weights[i]:
                 curr_w = 0
                 ships += 1
                 if ship_weight < self.weights[i] or ships >= d:
@@ -17,8 +17,7 @@ class Solution:
     def shipWithinDays(self, weights: List[int], d: int) -> int:
         self.weights = weights
         min_w = math.ceil(sum(weights) / d)
-        max_w = max(weights) * math.ceil(len(weights) / d) + 1  # may be sub-optimal choice
-
+        max_w = max(weights) * math.ceil(len(weights) / d) + 1
         while True:
             mid_w = min_w + (max_w - min_w) // 2
             if self.isPossible(mid_w, d):
@@ -27,4 +26,4 @@ class Solution:
                 max_w = mid_w
             else:
                 min_w = mid_w
-        return 0  # not possible
+        return 0

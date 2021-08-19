@@ -7,35 +7,31 @@ def max_score(storage):
             counts[cookie] += 1
         else:
             counts[cookie] = 1
-
-    # Count boxes of six
     while len(list(counts.keys())) >= 6:
         minimum = min(counts.values())
         s += 4 * minimum
         to_delete = []
-        for cookie, count in list(counts.items()):
+        for (cookie, count) in list(counts.items()):
             counts[cookie] -= minimum
             if counts[cookie] == 0:
                 to_delete.append(cookie)
         for key in to_delete:
             counts.pop(key)
-    # Count boxes of five
     while len(list(counts.keys())) >= 5:
         minimum = min(counts.values())
         s += 2 * minimum
         to_delete = []
-        for cookie, count in list(counts.items()):
+        for (cookie, count) in list(counts.items()):
             counts[cookie] -= minimum
             if counts[cookie] == 0:
                 to_delete.append(cookie)
         for key in to_delete:
             counts.pop(key)
-    # Count boxes of four
     while len(list(counts.keys())) >= 4:
         minimum = min(counts.values())
         s += 1 * minimum
         to_delete = []
-        for cookie, count in list(counts.items()):
+        for (cookie, count) in list(counts.items()):
             counts[cookie] -= minimum
             if counts[cookie] == 0:
                 to_delete.append(cookie)
