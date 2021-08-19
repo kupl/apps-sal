@@ -1,8 +1,6 @@
-B, A = map(int, input().split())
-
+(B, A) = map(int, input().split())
 H = W = 100
 ans = [['.#'[i // 50]] * W for i in range(H)]
-
 A -= 1
 B -= 1
 for i in range(10):
@@ -19,7 +17,6 @@ for i in range(10):
         ans[51 + i * 2][j * 2] = '.'
     if B == 0:
         break
-
 print(H, W)
 for row in ans:
     print(''.join(row))

@@ -1,7 +1,6 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 white = [['.'] * 100 for _ in range(50)]
 black = [['#'] * 100 for _ in range(50)]
-
 flag = True
 if B != 1:
     for h in range(0, 50, 2):
@@ -15,7 +14,6 @@ if B != 1:
                     break
         if flag == False:
             break
-
 flag = True
 if A != 1:
     for h in range(1, 50, 2):
@@ -31,6 +29,6 @@ if A != 1:
             break
 print((100, 100))
 for w in white:
-    print(("".join(w)))
+    print(''.join(w))
 for b in black:
-    print(("".join(b)))
+    print(''.join(b))

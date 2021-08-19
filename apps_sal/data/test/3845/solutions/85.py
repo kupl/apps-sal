@@ -2,8 +2,7 @@ K = 33
 L = K * 2
 s = [['#' for j in range(L)] for i in range(K)]
 t = [['.' for j in range(L)] for i in range(K)]
-
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 
 
 def color(s, j0, i1, c):
@@ -19,9 +18,11 @@ def color(s, j0, i1, c):
 
 color(s, 0, A, '.')
 color(t, 1, B, '#')
-
 print(L, L)
-def f(s): return print('\n'.join((map(lambda s: ''.join(s), s))))
+
+
+def f(s):
+    return print('\n'.join(map(lambda s: ''.join(s), s)))
 
 
 f(s)

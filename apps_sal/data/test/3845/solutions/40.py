@@ -1,6 +1,5 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 print(100, 100)
-
 for i in range(50):
     s = []
     for j in range(100):
@@ -10,7 +9,6 @@ for i in range(50):
         else:
             s.append('.')
     print(*s, sep='')
-
 for i in range(50):
     s = []
     for j in range(100):

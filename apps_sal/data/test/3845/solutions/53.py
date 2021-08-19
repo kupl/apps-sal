@@ -1,9 +1,7 @@
-a, b = map(int, input().split())
-print("40 100")
-
-kuro = [["#" for i in range(100)] for j in range(20)]
-siro = [["." for i in range(100)] for j in range(20)]
-
+(a, b) = map(int, input().split())
+print('40 100')
+kuro = [['#' for i in range(100)] for j in range(20)]
+siro = [['.' for i in range(100)] for j in range(20)]
 cou = 0
 flag = False
 for i in range(0, 20, 2):
@@ -15,8 +13,7 @@ for i in range(0, 20, 2):
             break
         elif cou < a - 1:
             cou += 1
-            kuro[i][j] = "."
-
+            kuro[i][j] = '.'
 cou = 0
 flag = False
 for i in range(1, 20, 2):
@@ -28,13 +25,12 @@ for i in range(1, 20, 2):
             break
         elif cou < b - 1:
             cou += 1
-            siro[i][j] = "#"
-
+            siro[i][j] = '#'
 for i in range(20):
     for j in range(100):
-        print(kuro[i][j], end="")
+        print(kuro[i][j], end='')
     print()
 for i in range(20):
     for j in range(100):
-        print(siro[i][j], end="")
+        print(siro[i][j], end='')
     print()

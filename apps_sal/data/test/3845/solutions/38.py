@@ -1,12 +1,9 @@
-#!/usr/bin/env python3
 import sys
-
 sys.setrecursionlimit(10 ** 8)
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
-
-A, B = map(int, readline().split())
+(A, B) = map(int, readline().split())
 
 
 def solve():
@@ -14,7 +11,7 @@ def solve():
     hw = B // 25 + 2
     hb = A // 25 + 2
     H = hw + hb
-    grid = [[i >= hw] * W for i in range(H)]  # true => black
+    grid = [[i >= hw] * W for i in range(H)]
 
     def paint_black():
         black = 1
@@ -33,21 +30,20 @@ def solve():
                     return
                 grid[r][c] = False
                 white += 1
-
     paint_black()
     paint_white()
     return grid
 
 
 def print_grid(grid):
-    h, w = len(grid), len(grid[0])
+    (h, w) = (len(grid), len(grid[0]))
     print(h, w)
     for r in range(h):
         for c in range(w):
             if grid[r][c]:
-                print("#", end="")
+                print('#', end='')
             else:
-                print(".", end="")
+                print('.', end='')
         print()
 
 

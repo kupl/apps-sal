@@ -1,5 +1,4 @@
 ab = list(map(int, input().split()))
-
 g = [['#'] * 100 for _ in range(50)] + [['.'] * 100 for _ in range(50)]
 for k in range(2):
     cnt = 0
@@ -16,4 +15,4 @@ for k in range(2):
             break
 print((100, 100))
 for i in g:
-    print((''.join(i)))
+    print(''.join(i))

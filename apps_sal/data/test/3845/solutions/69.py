@@ -1,7 +1,4 @@
-#!python3
-
-# input
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 
 
 def paint1(ans):
@@ -10,7 +7,7 @@ def paint1(ans):
         for j in range(0, 100, 2):
             if a == A:
                 return
-            ans[i][j] = "."
+            ans[i][j] = '.'
             a += 1
 
 
@@ -20,18 +17,17 @@ def paint2(ans):
         for j in range(0, 100, 2):
             if b == B:
                 return
-            ans[i][j] = "#"
+            ans[i][j] = '#'
             b += 1
 
 
 def main():
-    ans = [["#"] * 100 for _ in range(50)] + [["."] * 100 for _ in range(50)]
+    ans = [['#'] * 100 for _ in range(50)] + [['.'] * 100 for _ in range(50)]
     paint1(ans)
     paint2(ans)
-
     print((100, 100))
     for r in ans:
-        print(("".join(r)))
+        print(''.join(r))
 
 
 def __starting_point():

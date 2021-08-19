@@ -1,5 +1,5 @@
-a, b = map(int, input().split())
-cntA, cntB = 0, 0
+(a, b) = map(int, input().split())
+(cntA, cntB) = (0, 0)
 print(100, 100)
 flag = False
 if a >= b:
@@ -20,7 +20,7 @@ if a >= b:
                 break
     while cntB < b:
         cntB += 1
-        s, t = l.pop()
+        (s, t) = l.pop()
         arr[s][t] = '#'
     for i in range(100):
         print(''.join(arr[i]))
@@ -42,7 +42,7 @@ else:
                 break
     while cntA < a:
         cntA += 1
-        s, t = l.pop()
+        (s, t) = l.pop()
         arr[s][t] = '.'
     for i in range(100):
         print(''.join(arr[i]))

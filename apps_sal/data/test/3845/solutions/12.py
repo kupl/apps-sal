@@ -7,8 +7,7 @@ def printrow(num, s, t):
         print()
 
 
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 print(100, 100)
 printrow(b, '#', '.')
 printrow(a, '.', '#')
