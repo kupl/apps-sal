@@ -2,7 +2,6 @@ import math
 
 
 def get_middle(s):
-    # your code here
     x = len(s)
     y = int(x / 2)
     if x % 2 == 0:

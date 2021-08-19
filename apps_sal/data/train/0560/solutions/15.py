@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -6,9 +5,9 @@ for i in range(t):
     b = list(map(int, input().strip().split()))
     a.remove(max(a))
     b.remove(max(b))
-    if(sum(a) > sum(b)):
-        print("Bob")
+    if sum(a) > sum(b):
+        print('Bob')
     elif sum(a) == sum(b):
-        print("Draw")
+        print('Draw')
     else:
-        print("Alice")
+        print('Alice')

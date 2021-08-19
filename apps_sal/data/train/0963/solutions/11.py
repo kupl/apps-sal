@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 
 
@@ -6,7 +5,7 @@ def maxk(arr, start, end):
     maxno = arr[start]
     maxi = start
     for i in range(start, end):
-        if(arr[i] > maxno):
+        if arr[i] > maxno:
             maxno = arr[i]
             maxi = i
     return maxi
@@ -14,12 +13,8 @@ def maxk(arr, start, end):
 
 def rec(arr, start, end):
     i = maxk(arr, start, end)
-    if(i == start or i == end - 1):
+    if i == start or i == end - 1:
         return 1
-    # elif(i>start+int((end-start)/2)):
-    #    return 1+rec(arr,i+1,end)
-    # elif(i<start+int((end-start)/2)):
-    #    return 1+rec(arr,start,i)
     else:
         return 1 + min(rec(arr, i + 1, end), rec(arr, start, i))
 
@@ -27,10 +22,7 @@ def rec(arr, start, end):
 for t in range(T):
     n = int(input())
     arr = list(map(int, input().split()))
-
     start = 0
     end = n
-
     count = rec(arr, start, end)
-
     print(count)

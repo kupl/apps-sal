@@ -1,12 +1,11 @@
 from collections import defaultdict
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
-
-N, Q = list(map(int, input().split()))
+sys.setrecursionlimit(10 ** 7)
+(N, Q) = list(map(int, input().split()))
 graph = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     graph[a].append((b, c, d))
     graph[b].append((a, c, d))
 query = [[int(x) for x in input().split()] for _ in range(Q)]
@@ -18,7 +17,7 @@ def set_ancestor(x=1, d=0, parent=0):
     ax[0] = parent
     for i in range(d.bit_length() - 1):
         ax[i + 1] = ancestor[ax[i]][i]
-    for y, _, _ in graph[x]:
+    for (y, _, _) in graph[x]:
         if y == parent:
             continue
         set_ancestor(y, d + 1, x)
@@ -26,7 +25,7 @@ def set_ancestor(x=1, d=0, parent=0):
 
 depth = [0] * (N + 1)
 U = 17
-ancestor = [[0] * (U + 1) for _ in range(N + 1)]  # 2**i だけ遡った頂点の番号、行き過ぎは0
+ancestor = [[0] * (U + 1) for _ in range(N + 1)]
 set_ancestor()
 
 
@@ -34,11 +33,11 @@ def LCA(x, y):
     dx = depth[x]
     dy = depth[y]
     if dx > dy:
-        x, y = y, x
-        dx, dy = dy, dx
+        (x, y) = (y, x)
+        (dx, dy) = (dy, dx)
     diff = dy - dx
     while diff:
-        step = diff & (-diff)
+        step = diff & -diff
         y = ancestor[y][step.bit_length() - 1]
         diff -= step
     while x != y:
@@ -53,18 +52,17 @@ def LCA(x, y):
 
 
 tasks = [[] for _ in range(N + 1)]
-for i, (x, y, u, v) in enumerate(query):
+for (i, (x, y, u, v)) in enumerate(query):
     tasks[u].append((i, x, y, 1))
     tasks[v].append((i, x, y, 1))
     tasks[LCA(u, v)].append((i, x, y, -2))
-
 answer = [0] * Q
 
 
 def dfs(x=1, sums=[0] * (N + 1), nums=[0] * (N + 1), total=0, parent=0):
-    for i, c, d, coef in tasks[x]:
+    for (i, c, d, coef) in tasks[x]:
         answer[i] += coef * (total - sums[c] + nums[c] * d)
-    for y, c, d in graph[x]:
+    for (y, c, d) in graph[x]:
         if y == parent:
             continue
         sums[c] += d
@@ -78,5 +76,4 @@ def dfs(x=1, sums=[0] * (N + 1), nums=[0] * (N + 1), total=0, parent=0):
 
 
 dfs()
-
-print(('\n'.join(map(str, answer))))
+print('\n'.join(map(str, answer)))
