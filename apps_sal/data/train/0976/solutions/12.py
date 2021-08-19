@@ -1,8 +1,5 @@
-# cook your dish here
 n = int(input())
 a = list(map(int, input().split()))
-#a = [1,1,3,4,1,2,2,2]
-#n = 14
 k = 0
 l = 0
 ans1 = 0
@@ -44,28 +41,22 @@ def alt_solve(s):
     pre = []
     dep = []
     ma = 0
-
     for c in s:
         if c == 2 or c == 4:
             pre.pop()
             dep.pop()
             continue
-
         if not pre:
             pre.append(c)
             dep.append(1)
-
         elif c != pre[-1]:
             pre.append(c)
             dep.append(dep[-1] + 1)
-
         else:
             pre.append(c)
             dep.append(dep[-1])
-
         if dep:
             ma = max(ma, dep[-1])
-
     return ma
 
 

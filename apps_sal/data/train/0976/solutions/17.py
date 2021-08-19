@@ -4,11 +4,9 @@ n = len(br)
 alt_count = 0
 prev_alt = -1
 max_alt = 0
-
 flag1 = flag2 = 0
 start1 = start2 = max1 = max2 = 0
 help_arr = [[0, 0]]
-
 for i in range(n):
     if br[i] == 1:
         if flag1 == 0:
@@ -18,7 +16,6 @@ for i in range(n):
         flag1 -= 1
         if flag1 == 0 and i - start1 > max1:
             max1 = i - start1
-            #print(start1, i)
     elif br[i] == 3:
         if flag2 == 0:
             start2 = i

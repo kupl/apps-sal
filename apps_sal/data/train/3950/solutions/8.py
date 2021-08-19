@@ -14,14 +14,14 @@ def sum_1(n):
 def sum_2(n):
     ketas = list(map(int, str(n)))
     i_s = itertools.combinations(list(range(len(ketas) + 1)), 2)
-    pattern_i = [ketas[i:j] for i, j in i_s]
+    pattern_i = [ketas[i:j] for (i, j) in i_s]
     sum = np.sum([int(''.join(map(str, i))) for i in pattern_i])
     return sum
 
 
 def common_divisors(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     d = 1
     while a % 2 == 0:
         d += 1
@@ -38,7 +38,6 @@ def common_divisors(a, b):
 
 
 def find_int_inrange(a, b):
-    # your code here
     maxlen = 0
     result = []
     for i in range(a, b):

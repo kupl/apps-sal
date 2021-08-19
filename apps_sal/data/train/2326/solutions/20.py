@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
@@ -9,10 +8,9 @@ from decimal import ROUND_CEILING, ROUND_HALF_UP, Decimal
 from functools import lru_cache, reduce
 from itertools import combinations, combinations_with_replacement, product, permutations
 from operator import add, mul, sub
-
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-INF = 2**62 - 1
+INF = 2 ** 62 - 1
 
 
 def read_int():
@@ -50,21 +48,18 @@ def mt(f):
         s = time.time()
         ret = f(*args, **kwargs)
         e = time.time()
-
         error_print(e - s, 'sec')
         return ret
-
     return wrap
 
 
 @mt
 def slv(N, A):
-    ai = [(0, -1)] + [(a, i + 1) for i, a in enumerate(A)]
+    ai = [(0, -1)] + [(a, i + 1) for (i, a) in enumerate(A)]
     ai.sort()
-    A = [a for a, i in ai]
-    I = [i for a, i in ai]
+    A = [a for (a, i) in ai]
+    I = [i for (a, i) in ai]
     ans = [0] * (N + 1)
-
     i = N
     same = 0
     q = []
@@ -90,7 +85,7 @@ def slv(N, A):
 def main():
     N = read_int()
     A = read_int_n()
-    (slv(N, A))
+    slv(N, A)
 
 
 def __starting_point():
