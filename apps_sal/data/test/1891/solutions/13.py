@@ -15,12 +15,11 @@ def sol(i, j):
         return A
     if i == j:
         return B * works
-    m = (i + j) >> 1
+    m = i + j >> 1
     return min(B * (j - i + 1) * works, sol(i, m) + sol(m + 1, j))
 
 
-n, k, A, B = mp()
+(n, k, A, B) = mp()
 a = list(mp())
 a.sort()
-# print(a)
-print(sol(1, 2**n))
+print(sol(1, 2 ** n))

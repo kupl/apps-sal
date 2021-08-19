@@ -1,9 +1,6 @@
-# strs = [input() for _ in range(3)]
-
 def main():
     n = int(input())
     s = input()
-
     cnt = 0
     for i in range(n):
         vert = horiz = 0
@@ -18,7 +15,6 @@ def main():
                 horiz -= 1
             if vert == 0 and horiz == 0:
                 cnt += 1
-
     print(cnt)
 
 

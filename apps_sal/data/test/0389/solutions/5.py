@@ -1,7 +1,5 @@
 import sys
-#sys.stdin = open('prefrev.in', 'r')
-#sys.stdout = open('prefrev.out', 'w')
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 divs = [2, 3, 5]
 ar = [0] * 6
 br = [0] * 6
@@ -18,8 +16,7 @@ print
 if tn != tm:
     print('-1')
 else:
-    # print('ok')
-    ans = 2e9
+    ans = 2000000000.0
     for i in range(min(br[2], ar[2]) + 1):
         for j in range(min(br[3], ar[3]) + 1):
             for k in range(min(br[5], ar[5]) + 1):

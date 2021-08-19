@@ -1,17 +1,16 @@
-n, k, A, B = list(map(int, input().split()))
+(n, k, A, B) = list(map(int, input().split()))
 
 
 def solve(l, r, a):
-    # print(l, r, a)
-    if (len(a) == 0):
+    if len(a) == 0:
         return A
-    if (l == r):
+    if l == r:
         return B * len(a)
     mid = (l + r) // 2
     lx = []
     rx = []
     for i in a:
-        if (i <= mid):
+        if i <= mid:
             lx.append(i)
         else:
             rx.append(i)

@@ -1,4 +1,4 @@
-n, k, A, B = list(map(int, input().split()))
+(n, k, A, B) = list(map(int, input().split()))
 n = 2 ** n
 a = list(sorted(list(map(int, input().split()))))
 
@@ -8,9 +8,8 @@ def recurs(start, end, array):
         return A
     if end - start == 1:
         return B * len(array)
-
     middle = (start + end) // 2
-    c, d = [], []
+    (c, d) = ([], [])
     for x in array:
         if x < middle:
             c += [x]
@@ -20,12 +19,3 @@ def recurs(start, end, array):
 
 
 print(recurs(1, n + 1, a))
-
-# import numpy as np
-
-# print('Введите количество уравнений:')
-# n = int(input())
-# print('Введите линейные коэфициенты:')
-# a = np.array([list(float(t) for t in input().split()) for i in range(n)])
-
-# print(a.shape)

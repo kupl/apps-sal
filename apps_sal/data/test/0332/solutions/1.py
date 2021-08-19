@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from collections import defaultdict
 
 
@@ -8,7 +6,7 @@ def rli():
 
 
 def main():
-    n, m = rli()
+    (n, m) = rli()
     cnt = [defaultdict(int) for i in range(n + m + 10)]
     for i in range(n):
         nums = rli()
