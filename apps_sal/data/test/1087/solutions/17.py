@@ -1,16 +1,14 @@
 def XXOR():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    num = len(str(bin(10**12))) - 2
+    num = len(str(bin(10 ** 12))) - 2
     ans = 0
-
-    # 最上位の桁から貪欲的に選択する
     for i in range(num, -1, -1):
         count = 0
         for j in a:
-            if (j >> i) & 1:
+            if j >> i & 1:
                 count += 1
-        c = 2**i
+        c = 2 ** i
         if count < n - count and c <= k:
             ans += (n - count) * c
             k -= c

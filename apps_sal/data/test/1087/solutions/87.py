@@ -3,9 +3,9 @@ input = sys.stdin.readline
 
 
 def read():
-    N, K = list(map(int, input().strip().split()))
+    (N, K) = list(map(int, input().strip().split()))
     A = list(map(int, input().strip().split()))
-    return N, K, A
+    return (N, K, A)
 
 
 def solve(N, K, A):
@@ -26,8 +26,6 @@ def solve(N, K, A):
             x >>= 1
     k = k[::-1]
     b = b[::-1]
-    # dp[i][1]: 上位iビットがKと等しいときの最大値
-    # dp[i][0]: 上位iビットがKより小さいときの最大値
     dp = [[0, 0] for i in range(L + 1)]
     nonzero = False
     for i in range(L):
@@ -48,7 +46,7 @@ def __starting_point():
     inputs = read()
     outputs = solve(*inputs)
     if outputs is not None:
-        print(("%s" % str(outputs)))
+        print('%s' % str(outputs))
 
 
 __starting_point()

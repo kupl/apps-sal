@@ -1,8 +1,6 @@
-# E_Multiplication4
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 MOD = 1000000007
-# ソート
 arr = []
 j = 0
 i = 0
@@ -27,38 +25,36 @@ def modinv(a, mod):
 
 
 arr = sorted(A, reverse=True)
-if arr[(N - 1)] > 0:
+if arr[N - 1] > 0:
     for i in range(K):
         seki = seki * arr[i] % MOD
+elif arr[0] < 0:
+    for j in range(K):
+        if K % 2 == 1:
+            seki = seki * arr[j] % MOD
+        else:
+            seki = seki * arr[N - j - 1] % MOD
 else:
-    if arr[0] < 0:
-        for j in range(K):
-            if K % 2 == 1:
-                seki = seki * arr[j] % MOD
+    while i + j < K:
+        if i + j + 1 < K:
+            if arr[i] * arr[i + 1] > arr[N - j - 1] * arr[N - j - 2]:
+                seki = seki * arr[i] % MOD
+                i += 1
             else:
-                seki = seki * arr[N - j - 1] % MOD
-    else:
-        while (i + j) < K:
-            if (i + j + 1) < K:
-                if arr[i] * arr[i + 1] > (arr[(N - j - 1)] * arr[(N - j - 2)]):
-                    seki = seki * arr[i] % MOD
-                    i += 1
-                else:
-                    minuscount += 2
-                    minusposition = N - j - 2
-                    seki = (seki * arr[(N - j - 1)] % MOD) * arr[(N - j - 2)] % MOD
-                    j += 2
-            else:
-                if abs(arr[i]) > abs(arr[(N - j - 1)]):
-                    seki = seki * arr[i] % MOD
-                    i += 1
-                else:
-                    minuscount += 1
-                    minusposition = N - j - 1
-                    seki = seki * arr[(N - j - 1)] % MOD
-                    j += 1
-if (minuscount % 2) != 0:
-    if minusposition != (i - 1):
+                minuscount += 2
+                minusposition = N - j - 2
+                seki = seki * arr[N - j - 1] % MOD * arr[N - j - 2] % MOD
+                j += 2
+        elif abs(arr[i]) > abs(arr[N - j - 1]):
+            seki = seki * arr[i] % MOD
+            i += 1
+        else:
+            minuscount += 1
+            minusposition = N - j - 1
+            seki = seki * arr[N - j - 1] % MOD
+            j += 1
+if minuscount % 2 != 0:
+    if minusposition != i - 1:
         gyaku = modinv(arr[minusposition], MOD)
         seki = seki * gyaku % MOD
         seki = seki * arr[i] % MOD

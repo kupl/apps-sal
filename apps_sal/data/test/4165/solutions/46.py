@@ -1,9 +1,6 @@
 N = int(input())
 L = sorted(list(map(int, input().split())))
-
-# print(L[-1],sum(L[:-1]))
-
 if L[-1] < sum(L[:-1]):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -6,10 +6,10 @@ def myabs(n):
         return [abs(n), -1]
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(myabs, input().split()))
 A.sort(reverse=True)
-Mod = 10**9 + 7
+Mod = 10 ** 9 + 7
 
 
 def main(n, k, a, mod):
@@ -20,12 +20,10 @@ def main(n, k, a, mod):
             break
     if k % 2 == 0:
         flag = False
-
-    # All elements are negative and odd k
     if flag:
         ans = 1
         for i in range(n - 1, n - 1 - k, -1):
-            ans *= (a[i][0] * (-1)) % mod
+            ans *= a[i][0] * -1 % mod
             ans %= mod
         print(ans)
     else:
@@ -49,7 +47,6 @@ def main(n, k, a, mod):
                 min_pos = i
             ans[0] %= mod
             ans[1] %= mod
-
         if neg_flag and n != k:
             next_pos = -1
             next_neg = -1
@@ -83,7 +80,7 @@ def main(n, k, a, mod):
                 fin_ans %= mod
                 print(fin_ans)
         elif n == k and neg_flag:
-            print((ans[1] * -1) % mod)
+            print(ans[1] * -1 % mod)
         else:
             print(ans[1])
 

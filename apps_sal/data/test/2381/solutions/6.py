@@ -9,7 +9,7 @@ def isort(list, _beg, _end):
         beg = _beg
         end = _end
         pivot = abs(list[int((beg + end) / 2)])
-        while(True):
+        while True:
             while abs(list[beg]) < pivot:
                 beg += 1
             while abs(list[end]) > pivot:
@@ -46,24 +46,14 @@ K = sp[1]
 alist = list(map(int, input().split()))
 klist = []
 isK = True
-
 isort(alist, 0, len(alist) - 1)
 alist.reverse()
-
 numMinus = 0
 for i in range(K):
     if check(alist[i]) == False:
         numMinus += 1
-
-# select biggest K numbers in terms of absolute value
-
-# for all chosen numbers
-# if the number of negative number is even
 if numMinus % 2 == 0:
     isK = False
-
-# if odd
-# -> choose the smallest number, and search opposite number
 if isK and K < N:
     _right = -1
     _left = -1
@@ -87,14 +77,11 @@ if isK and K < N:
         alist[K - 1] = alist[_right]
     else:
         isK = True
-
 if isK:
     alist.reverse()
 klist = alist[0:K]
-
 multi = klist[0]
 for i in range(1, K):
     multi *= klist[i]
     multi = multi % 1000000007
-
 print(multi)
