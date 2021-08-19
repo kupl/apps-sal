@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     noOfGirls = int(input())
     boys = list(input().split())
@@ -11,7 +10,7 @@ for _ in range(int(input())):
     occu = list(freq.values())
     occu.sort()
     answers = list()
-    for key, value in freq.items():
+    for (key, value) in freq.items():
         if value == occu[-1]:
             answers.append(key)
     if len(answers) != 1:

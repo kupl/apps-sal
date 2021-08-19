@@ -1,7 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
     k = int(input())
-
     for i in range(k):
         x = 1
         for j in range(k):

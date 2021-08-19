@@ -18,12 +18,11 @@ class MemoryManager:
         """
         for i in range(len(self.memory)):
             ok = True
-            for j in range(i, i + size):  # j is the currently checking index
-                if j >= len(self.memory):  # it has reached the end
+            for j in range(i, i + size):
+                if j >= len(self.memory):
                     ok = False
                     break
                     raise Exception('No allocation available')
-#                 if it's already been allocated
                 for k in range(len(self.allocationStarts)):
                     if j >= self.allocationStarts[k] and j < self.allocationStarts[k] + self.allocationSizes[k]:
                         ok = False
@@ -31,10 +30,7 @@ class MemoryManager:
             if ok:
                 self.allocationStarts.append(i)
                 self.allocationSizes.append(size)
-#                 print(i)
                 return i
-
-        # this shouldn't usually be reached because it would stop when j crosses over the length
         raise Exception('No allocation available')
 
     def release(self, pointer):
@@ -43,7 +39,7 @@ class MemoryManager:
         @param {number} pointer - The pointer to the block to release.
         @raises If the pointer does not point to an allocated block.
         """
-        index = self.allocationStarts.index(pointer)  # this raises a value error if it's not found
+        index = self.allocationStarts.index(pointer)
         del self.allocationStarts[index]
         del self.allocationSizes[index]
 
@@ -55,12 +51,10 @@ class MemoryManager:
         @raises If pointer is in unallocated memory.
         """
         if len(self.allocationStarts) == 0:
-            raise Exception("No memory has been allocated")
-
+            raise Exception('No memory has been allocated')
         for i in range(len(self.allocationStarts)):
-            if not(pointer < self.allocationStarts[i] + self.allocationSizes[i] and pointer >= self.allocationStarts[i]):
-                raise Exception("Cannot read from unallocated area")
-
+            if not (pointer < self.allocationStarts[i] + self.allocationSizes[i] and pointer >= self.allocationStarts[i]):
+                raise Exception('Cannot read from unallocated area')
         return self.memory[pointer]
 
     def write(self, pointer, value):
@@ -71,10 +65,8 @@ class MemoryManager:
         @raises If pointer is in unallocated memory.
         """
         if len(self.allocationStarts) == 0:
-            raise Exception("No memory has been allocated")
-
+            raise Exception('No memory has been allocated')
         for i in range(len(self.allocationStarts)):
-            if not(pointer < self.allocationStarts[i] + self.allocationSizes[i] and pointer >= self.allocationStarts[i]):
-                raise Exception("Cannot write to unallocated area")
-
+            if not (pointer < self.allocationStarts[i] + self.allocationSizes[i] and pointer >= self.allocationStarts[i]):
+                raise Exception('Cannot write to unallocated area')
         self.memory[pointer] = value

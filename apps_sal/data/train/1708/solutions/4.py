@@ -1,4 +1,5 @@
 class MemoryManager:
+
     def __init__(self, memory):
         """
         @constructor Creates a new memory manager for the provided array.
@@ -33,7 +34,6 @@ class MemoryManager:
         """
         free_memory = self.pointer_list[pointer]
         self.available_memory += free_memory
-#         self.pointer -= free_memory
         self.pointer = pointer if pointer < self.pointer else self.pointer
         del self.pointer_list[pointer]
 
@@ -44,7 +44,7 @@ class MemoryManager:
         @returns {number} The value at that location.
         @raises If pointer is in unallocated memory.
         """
-        for p, memory_block in self.pointer_list.items():
+        for (p, memory_block) in self.pointer_list.items():
             if pointer <= memory_block:
                 return self.memory[pointer]
         raise Exception
@@ -56,7 +56,7 @@ class MemoryManager:
         @param {number} value - The value to write.
         @raises If pointer is in unallocated memory.
         """
-        for p, memory_block in self.pointer_list.items():
+        for (p, memory_block) in self.pointer_list.items():
             if pointer < memory_block:
                 self.memory[pointer] = value
                 return

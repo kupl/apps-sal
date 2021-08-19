@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 from operator import itemgetter
 from collections import deque
@@ -30,14 +29,11 @@ for i in range(n):
         sons[father[i]].append(i)
     else:
         boss = i
-
 height = [[i, 0] for i in range(n)]
 visit(boss)
-
 height.sort(key=itemgetter(1), reverse=True)
 minimi = [0] * n
 diff = [0] * n
-
 for el in height:
     v = el[0]
     if len(sons[v]) == 0:
@@ -47,5 +43,4 @@ for el in height:
         minimo = min([minimi[u] for u in sons[v]])
         minimi[v] = min(minimo, wealth[v])
         diff[v] = max(max([diff[u] for u in sons[v]]), wealth[v] - minimo)
-
 print(diff[boss])
