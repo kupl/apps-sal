@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
 
@@ -21,10 +21,9 @@ def lower_bound(x):
 
 
 res = 0
-
 for i in range(n):
     pos = lower_bound(a[i])
-    tmp = 2 * (10 ** 9) + 1
+    tmp = 2 * 10 ** 9 + 1
     if pos < m and tmp > b[pos] - a[i]:
         tmp = b[pos] - a[i]
     pos = lower_bound(a[i] + 1) - 1

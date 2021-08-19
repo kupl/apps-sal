@@ -57,5 +57,5 @@ else:
                 two += 1
             elif dp[i][j] >= 2:
                 two += 1
-        dp[i][25] = ((four * (four - 1)) // 2) * (two - 2) + twenty_four * (two - 1) + fourteen * (four - 1) + seventy_four
+        dp[i][25] = four * (four - 1) // 2 * (two - 2) + twenty_four * (two - 1) + fourteen * (four - 1) + seventy_four
     print(dp[N - 1][25])

@@ -1,9 +1,7 @@
 t = int(input())
-
 for _ in range(t):
-    n, k = [int(v) for v in input().split()]
+    (n, k) = [int(v) for v in input().split()]
     x = [int(v) - 1 for v in input().split()]
-
     ans = 0
     covered = [False] * n
     while not all(covered):
@@ -11,5 +9,4 @@ for _ in range(t):
             for pos in range(max(0, xi - ans), min(n - 1, xi + ans) + 1):
                 covered[pos] = True
         ans += 1
-
     print(ans)

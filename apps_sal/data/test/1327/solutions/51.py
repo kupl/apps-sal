@@ -7,7 +7,7 @@ def log(*args):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = [list(map(int, input().split())) for _ in range(n)]
     ans = 0
     for i in [-1, 1]:

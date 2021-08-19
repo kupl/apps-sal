@@ -1,10 +1,9 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
 n = R()[0]
-
 a = R()
-
 for i in range(n):
     a[i] += i
 a = sorted(list(set(a)))

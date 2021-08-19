@@ -2,6 +2,7 @@ import sys
 
 
 class Person:
+
     def __init__(self, dollars, index):
         self.dollars = dollars
         self.index = index
@@ -19,13 +20,13 @@ def solve():
         res[i] = people[i].dollars + people[i].index - i
     for i in range(n - 1):
         if res[i] > res[i + 1]:
-            return ":("
+            return ':('
     return ' '.join(map(str, res))
 
 
 def run():
     if sys.hexversion == 50594544:
-        sys.stdin = open("test.txt")
+        sys.stdin = open('test.txt')
     print(solve())
 
 

@@ -4,5 +4,5 @@ for i in input():
         k += 1
     else:
         s += k % 2
-        k, j = 0, i
+        (k, j) = (0, i)
 print(s + k % 2)

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 d = sorted(zip(list(map(int, input().split())), range(0, n)))
 last = 0
 du = [0] * n

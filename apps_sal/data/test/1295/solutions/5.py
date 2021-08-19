@@ -1,5 +1,5 @@
 def min_dist_to_tower(a, x):
-    l, r = -1, len(a)
+    (l, r) = (-1, len(a))
     while r - l > 1:
         m = (l + r) // 2
         if a[m] > x:
@@ -16,13 +16,11 @@ def min_dist_to_tower(a, x):
         return w
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 houses = list(map(int, input().split()))
 towers = list(map(int, input().split()))
-
 dist = 0
 for i in range(len(houses)):
     if min_dist_to_tower(towers, houses[i]) > dist:
         dist = min_dist_to_tower(towers, houses[i])
-
 print(dist)

@@ -1,8 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input() + '.'
 a = [1 for i in range(n)]
 d = {}
-
 for i in range(1, n):
     if s[i] == s[i - 1]:
         a[i] = a[i - 1] + 1
@@ -21,6 +20,6 @@ for c in d:
     tmpa = 0
     for size in d[c]:
         if size >= k:
-            tmpa += (size // k) * d[c][size]
+            tmpa += size // k * d[c][size]
     ans = max(ans, tmpa)
 print(ans)

@@ -4,10 +4,10 @@ def nod(a, b):
             a = a % b
         else:
             b = b % a
-    return(a + b)
+    return a + b
 
 
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 a = [0] * n
 s = ''
 if n <= k:
@@ -17,7 +17,6 @@ else:
         a[i] = i + 1
     for i in range(k + 1, n - 1):
         a[i] = i + 2
-
     if n - k > 1:
         a[0] = k + 2
         a[n - 1] = 1

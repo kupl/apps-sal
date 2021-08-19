@@ -4,7 +4,7 @@ q = []
 w = []
 ish = []
 for i in range(st):
-    z, x = map(int, input().split())
+    (z, x) = map(int, input().split())
     q.append(z)
     w.append(x)
     ish.append(x)

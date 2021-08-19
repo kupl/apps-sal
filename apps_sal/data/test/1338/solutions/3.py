@@ -12,8 +12,8 @@ def sv(a, b, c, n, v):
             sv(a, b - 1, c // 2, n - c // 2, v + 1)
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arc = [0] * n
-ssc = 1 << (n - 1)
+ssc = 1 << n - 1
 sv(0, n, ssc, m - 1, 1)
 print(' '.join(map(str, arc)))

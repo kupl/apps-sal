@@ -7,10 +7,8 @@ for i in range(n):
     dic.update({i + 1: 0})
 for x in s:
     dic[x] += 1
-
-mn = 10**9
+mn = 10 ** 9
 for x in dic.keys():
     if dic[x] < mn:
         mn = dic[x]
-
 print(mn)

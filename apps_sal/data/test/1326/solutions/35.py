@@ -5,6 +5,7 @@ readlines = sys.stdin.readlines
 
 
 def main():
+
     @numba.njit
     def solve(n):
         r = 0

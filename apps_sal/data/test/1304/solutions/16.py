@@ -20,7 +20,7 @@ def out():
 
 
 a = inp()
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 x -= 1
 y -= 1
 x %= 3

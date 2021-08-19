@@ -4,13 +4,11 @@ def main():
     B = list(map(int, input().split()))
     other = 0
     k = 0
-
     for i in range(n):
         b = B[i]
         d = b - other
         k += abs(d)
         other += d
-
     return k
 
 

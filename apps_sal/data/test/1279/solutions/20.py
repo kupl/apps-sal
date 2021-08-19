@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [int(e) for e in input().split()]
 b = [int(e) for e in input().split()]
-A, B, C, D = 0, 0, 0, 0
+(A, B, C, D) = (0, 0, 0, 0)
 for i in a:
     if i % 2 == 0:
         A += 1

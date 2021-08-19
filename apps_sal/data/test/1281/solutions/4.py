@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 d = dict()
 d[0] = 1
 x = 0
@@ -9,7 +9,7 @@ for i in [int(i) for i in input().split()]:
         d[v] = 0
     d[v] += 1
 ans = 0
-for k, v in list(d.items()):
+for (k, v) in list(d.items()):
     c1 = v // 2
     c2 = v - c1
     ans += c1 * (c1 - 1) // 2 + c2 * (c2 - 1) // 2

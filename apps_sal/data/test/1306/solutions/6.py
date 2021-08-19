@@ -1,6 +1,6 @@
-MOD = int(1e9 + 7)
-n, h = list(map(int, input().split(" ")))
-val = list(map(int, input().split(" "))) + [h]
+MOD = int(1000000000.0 + 7)
+(n, h) = list(map(int, input().split(' ')))
+val = list(map(int, input().split(' '))) + [h]
 pre = 1
 ans = 1
 for i in range(1, n + 1):

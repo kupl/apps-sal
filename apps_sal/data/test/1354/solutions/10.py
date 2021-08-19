@@ -5,14 +5,14 @@ from heapq import heappop, heappush
 from itertools import accumulate
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-mm, k, a = R()
+(mm, k, a) = R()
 junk = int(input())
 arr = list(R())
-
-l, r = 0, len(arr)
+(l, r) = (0, len(arr))
 while l < r:
     m = (l + r) // 2
     tarr = [0] + sorted(arr[:m + 1]) + [mm + 1]

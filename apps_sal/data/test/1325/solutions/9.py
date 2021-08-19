@@ -1,4 +1,4 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 t = input()
 k = n // 2
 d = [0] * (k + 1)
@@ -10,7 +10,7 @@ p = n - p if p > k else p - 1
 if d.count(0) == k + 1:
     print(0)
 else:
-    i, j = 0, k
+    (i, j) = (0, k)
     while d[i] == 0:
         i += 1
     while d[j] == 0:

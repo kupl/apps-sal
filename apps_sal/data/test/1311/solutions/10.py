@@ -1,11 +1,12 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
 n = int(input())
 a = []
 for _ in range(n):
     a.append(R())
-a.sort(key=lambda x: (x[0] + x[1]))
+a.sort(key=lambda x: x[0] + x[1])
 j = 0
 ans = 1
 for i in range(1, n):

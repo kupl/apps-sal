@@ -1,5 +1,5 @@
 from sys import stdin, stdout
-ins, outs = stdin, stdout
+(ins, outs) = (stdin, stdout)
 n = int(ins.readline())
 lst = list(map(int, ins.readline().split()))
 maxi = 1

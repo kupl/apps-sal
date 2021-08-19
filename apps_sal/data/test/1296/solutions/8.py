@@ -12,9 +12,8 @@ def canBuyCost(k):
     return fullSum if fullSum <= money else -1
 
 
-n, money = [int(x) for x in input().split()]
+(n, money) = [int(x) for x in input().split()]
 cost = [int(x) for x in input().split()]
-
 left = 0
 right = n
 while left < right - 1:
@@ -23,7 +22,6 @@ while left < right - 1:
         left = mid
     else:
         right = mid
-
 rightRes = canBuyCost(right)
 if rightRes == -1:
     print(left, canBuyCost(left))

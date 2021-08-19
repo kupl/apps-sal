@@ -1,9 +1,7 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 xyz = [list(map(int, input().split())) for _i in range(n)]
-
 r = []
-for i in range(2**3):
+for i in range(2 ** 3):
     checker = []
     num = i
     for _i in range(3):
@@ -17,7 +15,6 @@ for i in range(2**3):
         _abc = [checker[s] * xyz[j][s] for s in range(3)]
         _xyz.append([sum(_abc)] + _abc)
     _xyz.sort(reverse=True)
-    _r = abs(sum(i[1] for i in _xyz[:m])) + abs(sum(i[2] for i in _xyz[:m])) + abs(sum(i[3] for i in _xyz[:m]))
+    _r = abs(sum((i[1] for i in _xyz[:m]))) + abs(sum((i[2] for i in _xyz[:m]))) + abs(sum((i[3] for i in _xyz[:m])))
     r.append(_r)
-
 print(max(r))

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 u = list(input())
 s = [0] * k
 c = ord('A')

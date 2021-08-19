@@ -2,17 +2,15 @@ from collections import deque
 
 
 def solve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(enumerate(map(int, input().split()), 1))
     a.sort(key=lambda x: x[1])
-
     if a[0][1]:
         print(-1)
         return
     e = []
     q = deque([[1, k, a[0][0]]])
-
-    for i, x in a[1:]:
+    for (i, x) in a[1:]:
         while q and q[0][0] < x:
             q.popleft()
         if not q or q[0][0] != x:
@@ -25,7 +23,7 @@ def solve():
         if not q[0][1]:
             q.popleft()
     print(len(e))
-    print('\n'.join(' '.join(map(str, x)) for x in e))
+    print('\n'.join((' '.join(map(str, x)) for x in e)))
 
 
 def __starting_point():

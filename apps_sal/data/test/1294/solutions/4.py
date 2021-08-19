@@ -11,4 +11,4 @@ for i in range(int(input())):
                 working.append(s[j])
         j = nextJ
     working.sort()
-    print("".join(working))
+    print(''.join(working))

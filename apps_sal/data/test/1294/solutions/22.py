@@ -1,5 +1,4 @@
-t = [int(k) for k in input().split(" ")][0]
-
+t = [int(k) for k in input().split(' ')][0]
 for k in range(t):
     s = input()
     ss = set()
@@ -12,4 +11,4 @@ for k in range(t):
         if (kk - k) % 2:
             ss.add(s[k])
         k = kk
-    print("".join(sorted(list(ss))))
+    print(''.join(sorted(list(ss))))

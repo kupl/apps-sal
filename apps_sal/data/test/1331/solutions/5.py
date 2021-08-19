@@ -1,5 +1,5 @@
 from collections import deque
-n, m, k = (int(x) for x in input().split())
+(n, m, k) = (int(x) for x in input().split())
 ns = set((int(x) for x in input().split()))
 span = deque((0 for i in range(m)))
 kk = 0

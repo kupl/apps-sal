@@ -8,7 +8,7 @@ readlines = sys.stdin.readlines
 def main():
     n = int(input())
     if n == 1:
-        print((1))
+        print(1)
         return
     divs = np.arange(1, n + 1)
     divs2 = n // divs

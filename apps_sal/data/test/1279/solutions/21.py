@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ai = list(map(int, input().split()))
 bi = list(map(int, input().split()))
 num = 0

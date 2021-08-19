@@ -3,11 +3,26 @@ import heapq as hq
 import itertools
 import math
 import collections
-def ma(): return map(int, input().split())
-def lma(): return list(map(int, input().split()))
-def tma(): return tuple(map(int, input().split()))
-def ni(): return int(input())
-def yn(fl): return print("YES") if fl else print("NO")
+
+
+def ma():
+    return map(int, input().split())
+
+
+def lma():
+    return list(map(int, input().split()))
+
+
+def tma():
+    return tuple(map(int, input().split()))
+
+
+def ni():
+    return int(input())
+
+
+def yn(fl):
+    return print('YES') if fl else print('NO')
 
 
 n = ni()
@@ -32,7 +47,7 @@ def factorize(n):
 co = collections.Counter()
 for i in range(2, n + 1):
     fct = factorize(i)
-    for num, cnt in fct:
+    for (num, cnt) in fct:
         if num > 1:
             co[num] += cnt
 f4 = 0
@@ -51,8 +66,5 @@ for cnt in co.values():
         f4 += 1
     if cnt >= 2:
         f2 += 1
-
-
 ans = f74 + f24 * (f2 - 1) + f14 * (f4 - 1) + f4 * (f4 - 1) // 2 * (f2 - 2)
-
 print(ans)

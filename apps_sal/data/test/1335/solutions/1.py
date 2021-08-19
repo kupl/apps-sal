@@ -1,11 +1,10 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 lst = list(map(int, input().split()))
 cur = []
 if n < k:
     k = n
 for i in range(k):
     cur.append([1, lst[i]])
-
 t = 0
 ans = 0
 m = 0
@@ -30,9 +29,7 @@ while m != n:
         x //= 1
     x = int(x)
     for i in range(len(cur)):
-        if cur[i][0] == x and not used[i]:
-
+        if cur[i][0] == x and (not used[i]):
             used[i] = True
             ans += 1
-
 print(ans)

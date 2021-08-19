@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 for i in range(n):
     a[i] += i
 a = sorted(list(set(a)))
@@ -9,4 +8,4 @@ if n > len(a):
 else:
     for i in range(len(a)):
         a[i] -= i
-    print(" ".join(map(str, a)))
+    print(' '.join(map(str, a)))

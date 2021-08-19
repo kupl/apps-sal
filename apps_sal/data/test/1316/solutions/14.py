@@ -1,4 +1,4 @@
-l, k = map(int, input().split())
+(l, k) = map(int, input().split())
 s = input()
 c = [None] * 26
 for i in range(26):

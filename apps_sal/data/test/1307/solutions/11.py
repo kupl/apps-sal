@@ -1,8 +1,7 @@
 import sys
 import math
-
 n = int(sys.stdin.readline().strip())
 if n % 2 != 0:
-    print("Ehab")
+    print('Ehab')
 else:
-    print("Mahmoud")
+    print('Mahmoud')

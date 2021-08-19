@@ -1,7 +1,7 @@
 t = input
 p = print
 r = range
-n, m = map(int, t().split())
+(n, m) = map(int, t().split())
 a = list(map(int, t().split()))
 b = list(map(int, t().split()))
 ans = 0

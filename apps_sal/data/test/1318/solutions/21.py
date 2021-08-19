@@ -3,7 +3,6 @@ c = []
 for i in range(n):
     c.append(list(map(int, input().split())))
     c[i].append(i + 1)
-
 r = int(input())
 k = list(map(int, input().split()))
 
@@ -35,7 +34,6 @@ for group in c:
     if table > 0:
         groups.append([str(group[2]), str(table)])
         val += group[1]
-
-print(str(len(groups)) + " " + str(val))
+print(str(len(groups)) + ' ' + str(val))
 for g in groups:
-    print(" ".join(g))
+    print(' '.join(g))

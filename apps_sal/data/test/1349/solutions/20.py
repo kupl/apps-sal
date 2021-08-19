@@ -1,6 +1,6 @@
 t = int(input())
 for o in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a.sort()
     ans = a[0]

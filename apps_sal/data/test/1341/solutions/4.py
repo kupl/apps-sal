@@ -1,5 +1,5 @@
-a, b = input(), input()
-i, j = 0, 0
+(a, b) = (input(), input())
+(i, j) = (0, 0)
 while True:
     while j < len(b) and a[i] != b[j]:
         j += 1

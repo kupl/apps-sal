@@ -1,4 +1,4 @@
-t = input()[:: -1]
+t = input()[::-1]
 i = t.find('F')
 if i < 0:
     print(0)
@@ -7,7 +7,7 @@ else:
     if j < 0:
         print(0)
     else:
-        s, t = 0, t[j:t.rfind('M') + 1]
+        (s, t) = (0, t[j:t.rfind('M') + 1])
         for k in t:
             if k == 'M':
                 s += 1

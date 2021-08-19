@@ -2,7 +2,7 @@ import sys
 
 
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     res = [0] * m
     for i in range(n):
         res[i % m] += 1
@@ -10,5 +10,5 @@ def solve():
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 print(solve())

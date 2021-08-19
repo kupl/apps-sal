@@ -1,9 +1,9 @@
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 a = [int(i) for i in input().split()]
 dp = [0] * (n + 1)
 if a[0] == h or a[0] + 1 == h:
     dp[0] = 1
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 for i in range(1, n):
     d = h - a[i]
     if d < 0:

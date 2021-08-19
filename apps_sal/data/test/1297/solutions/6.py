@@ -1,5 +1,4 @@
 import sys
-
 sys_in = input()
 
 
@@ -8,7 +7,7 @@ def counter(dna):
     even_count = 0
     previous = dna[0]
     dna = dna[1:]
-    while(dna != ""):
+    while dna != '':
         if dna[0] == previous:
             count += 1
         else:
@@ -22,4 +21,4 @@ def counter(dna):
     return even_count
 
 
-print(str(counter(sys_in)) + "\n")
+print(str(counter(sys_in)) + '\n')

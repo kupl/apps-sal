@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 if n - k == 0:
     print(-1)
 elif n - k == 1:

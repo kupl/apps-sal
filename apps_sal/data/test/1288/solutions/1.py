@@ -16,7 +16,7 @@ def subsolve(a, x):
 def odd(n, k, a):
     if k >= 2 and k % 2 == 0:
         a = a[:-1]
-    l, r = 0, max(a) + 1
+    (l, r) = (0, max(a) + 1)
     while r - l > 1:
         mid = (l + r) // 2
         if subsolve(a, mid) >= k // 2 + k % 2:
@@ -32,7 +32,7 @@ def even(n, k, a):
     a = a[1:]
     if k % 2 == 1:
         a.pop(-1)
-    l, r = 0, max(a) + 1
+    (l, r) = (0, max(a) + 1)
     while r - l > 1:
         mid = (l + r) // 2
         if subsolve(a, mid) >= k // 2:
@@ -43,7 +43,7 @@ def even(n, k, a):
 
 
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     print(min(odd(n, k, a), even(n, k, a)))
 

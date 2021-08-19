@@ -9,13 +9,12 @@ def read_ints():
     return [int(x) for x in input().split()]
 
 
-n, k = read_ints()
+(n, k) = read_ints()
 s = input().strip()
 ss = set(s)
 minss = min(ss)
 maxss = max(ss)
 t = ''
-
 if k > n:
     t = s + minss * (k - n)
 else:
@@ -31,5 +30,4 @@ else:
     for i in range(cut + 1, k):
         t[i] = minss
     t = ''.join(t)
-
 print(t)

@@ -1,5 +1,4 @@
 s = input()
-
 f = 0
 cur_t = -1
 for i in range(len(s)):
@@ -10,5 +9,4 @@ for i in range(len(s)):
             cur_t = t
         else:
             cur_t += 1
-
 print(max(0, cur_t))

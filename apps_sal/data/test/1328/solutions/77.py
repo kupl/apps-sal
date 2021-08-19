@@ -1,8 +1,7 @@
-n, ma, mb = list(map(int, input().split()))
+(n, ma, mb) = list(map(int, input().split()))
 item = []
 for i in range(n):
     item.append(tuple(map(int, input().split())))
-
 d = {(0, 0): 0}
 for i in range(n):
     nd = {}
@@ -17,13 +16,12 @@ for i in range(n):
         else:
             nd[s] = d[j] + item[i][2]
     d = nd
-m = 10**9
+m = 10 ** 9
 for i in d:
     if i == (0, 0):
         continue
     if i[0] * mb == i[1] * ma:
         m = min(m, d[i])
-if m == 10**9:
+if m == 10 ** 9:
     m = -1
-
 print(m)

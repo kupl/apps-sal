@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 cake = [[int(i) for i in input().split()] for _ in range(n)]
 ans = 0
 for i in range(2 << 3):

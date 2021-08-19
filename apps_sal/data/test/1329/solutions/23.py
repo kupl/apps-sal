@@ -3,6 +3,7 @@ read = sys.stdin.read
 
 
 def main():
+
     def factorization(n):
         arr = []
         temp = n
@@ -18,7 +19,6 @@ def main():
         if not arr:
             arr.append([n, 1])
         return arr
-
     n = int(input())
     if n == 1:
         print(0)
@@ -43,7 +43,7 @@ def main():
     r += o25 * (o3 - 1)
     r += o15 * (o5 - 1)
     if o5 >= 2:
-        r += (o5 * (o5 - 1) // 2) * (o3 - 2)
+        r += o5 * (o5 - 1) // 2 * (o3 - 2)
     print(r)
 
 

@@ -1,18 +1,16 @@
 from copy import copy
 from collections import defaultdict
-N, MA, MB = map(int, input().split())
+(N, MA, MB) = map(int, input().split())
 ABC = [tuple(map(int, input().split())) for i in range(N)]
-
 d = defaultdict(lambda: float('inf'))
-d[(0, 0)] = 0
-for a, b, c in ABC:
+d[0, 0] = 0
+for (a, b, c) in ABC:
     d2 = copy(d)
-    for (pa, pb), pc in d.items():
-        d2[(pa + a, pb + b)] = min(d2[(pa + a, pb + b)], pc + c)
+    for ((pa, pb), pc) in d.items():
+        d2[pa + a, pb + b] = min(d2[pa + a, pb + b], pc + c)
     d = d2
-
 ans = float('inf')
-for (a, b), c in d.items():
+for ((a, b), c) in d.items():
     if a == b == 0:
         continue
     if a * MB == b * MA:

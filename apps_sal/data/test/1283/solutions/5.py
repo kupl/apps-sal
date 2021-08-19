@@ -5,7 +5,7 @@ def make():
     return s
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 field = []
 for i in range(n):
     field.append(input())
@@ -14,7 +14,7 @@ for i in range(n):
     best.append([0] * n)
 for i in range(n):
     for j in range(n - k + 1):
-        if field[i][j: j + k] == '.' * k:
+        if field[i][j:j + k] == '.' * k:
             for x in range(j, j + k):
                 best[i][x] += 1
 for i in range(n):

@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 a = list(map(int, sys.stdin.readline().strip().split()))
 M = [[0 for i in range(0, 21)] for j in range(0, 21)]

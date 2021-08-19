@@ -4,12 +4,11 @@ def solve(n, k, d):
         dist[d[u]].append(u)
     if len(dist[0]) != 1:
         return []
-
     ans = []
     for t in range(1, n):
         nxt = []
         j = 0
-        lim = k if t == 1 else (k - 1)
+        lim = k if t == 1 else k - 1
         ctr = 0
         for u in dist[t]:
             if ctr == lim:
@@ -23,7 +22,7 @@ def solve(n, k, d):
     return ans
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 d = [int(x) for x in input().split()]
 ans = solve(n, k, d)
 if ans == []:

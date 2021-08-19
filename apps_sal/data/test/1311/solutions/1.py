@@ -1,7 +1,7 @@
 n = int(input())
 l = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     l += [(x + y, x - y)]
 l.sort()
 r = -2000000000

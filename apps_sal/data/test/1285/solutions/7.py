@@ -10,9 +10,7 @@ def gcd(a, b):
 n = int(stdin.readline())
 a = [0] * n
 for _ in range(n):
-    a[_] = format(int(stdin.readline().strip(), 16), "b").zfill(n)
-
-
+    a[_] = format(int(stdin.readline().strip(), 16), 'b').zfill(n)
 r = []
 t = 1
 for i in range(1, n):
@@ -22,7 +20,6 @@ for i in range(1, n):
         r.append(t)
         t = 1
 r.append(t)
-
 c = []
 t = 1
 for i in range(1, n):
@@ -37,9 +34,7 @@ for i in range(1, n):
         c.append(t)
         t = 1
 c.append(t)
-
 ans = r[0]
 for i in r + c:
     ans = gcd(ans, i)
-
-stdout.write("%d" % ans)
+stdout.write('%d' % ans)

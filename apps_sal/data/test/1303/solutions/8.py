@@ -1,7 +1,7 @@
 def read_to_list(count):
     s = []
     for i in range(count):
-        start, stop = [int(i) for i in input().split()]
+        (start, stop) = [int(i) for i in input().split()]
         s.extend(list(range(start, stop + 1)))
     return s
 
@@ -19,8 +19,8 @@ def update_list(l, t):
 
 
 def main():
-    p, q, l, r = [int(i) for i in input().split()]
-    z, x = read_to_list(p), read_to_list(q)
+    (p, q, l, r) = [int(i) for i in input().split()]
+    (z, x) = (read_to_list(p), read_to_list(q))
     if l > 0:
         update_list(x, l)
     count = 1 if has_equal_items(z, x) else 0

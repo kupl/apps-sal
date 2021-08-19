@@ -1,4 +1,4 @@
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 dd = d / b
 if dd > c:
     print(c * a)

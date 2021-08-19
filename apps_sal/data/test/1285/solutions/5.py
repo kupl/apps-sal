@@ -9,7 +9,7 @@ def gcd(a, b):
 
 
 n = int(stdin.readline())
-temp = ""
+temp = ''
 ans = n
 p = 0
 for i in range(n):

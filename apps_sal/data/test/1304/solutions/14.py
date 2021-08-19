@@ -10,7 +10,7 @@ input()
 matrix.append(''.join(input().split()))
 matrix.append(''.join(input().split()))
 matrix.append(''.join(input().split()))
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 x -= 1
 y -= 1
 flag = True

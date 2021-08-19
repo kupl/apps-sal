@@ -1,5 +1,5 @@
 def C(k):
-    return (k * (k - 1)) // 2
+    return k * (k - 1) // 2
 
 
 n = int(input())
@@ -13,5 +13,5 @@ for i in range(n):
             c[j] += 1
 ans = 0
 for i in range(n):
-    ans += (C(r[i]) + C(c[i]))
+    ans += C(r[i]) + C(c[i])
 print(ans)

@@ -1,4 +1,4 @@
-a1, a2, a3, a4 = list(map(int, input().split()))
+(a1, a2, a3, a4) = list(map(int, input().split()))
 s = input()
 k = 0
 for i in range(len(s)):

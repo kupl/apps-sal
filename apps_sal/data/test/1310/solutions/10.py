@@ -1,4 +1,4 @@
-n, ans = int(input()), -10000
+(n, ans) = (int(input()), -10000)
 a = list(map(int, input().split()))
 for i in range(n):
     s = 0

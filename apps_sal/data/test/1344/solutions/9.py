@@ -2,7 +2,6 @@ import sys
 
 
 def main():
-
     n = int(sys.stdin.readline())
     s = list(map(int, sys.stdin.readline().split()))
     ans = 1
@@ -16,7 +15,6 @@ def main():
             cur = 1
     if cur > ans:
         ans = cur
-
     print(ans)
 
 

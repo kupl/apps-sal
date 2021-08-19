@@ -1,7 +1,7 @@
 n = int(input())
 x = []
 for i in range(n):
-    c, p = list(map(int, input().split()))
+    (c, p) = list(map(int, input().split()))
     x += [(p, c, i)]
 k = int(input())
 r = list(map(int, input().split()))

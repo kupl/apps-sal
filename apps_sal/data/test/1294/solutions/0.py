@@ -11,4 +11,4 @@ for _ in range(n):
             i += 2
     l = [c for c in a]
     l.sort()
-    print("".join(l))
+    print(''.join(l))

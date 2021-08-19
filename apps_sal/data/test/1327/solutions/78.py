@@ -1,7 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 P = []
 for _ in range(N):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     P.append([x, y, z])
 ans = 0
 for X in (1, -1):

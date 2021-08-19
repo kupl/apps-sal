@@ -4,9 +4,9 @@ for i in range(n):
     t = [int(i) for i in input().split(' ')]
     book[i] = (i, t[0], t[1])
 k = int(input())
-cap = [(i, int(c)) for i, c in enumerate(input().split(' '))]
+cap = [(i, int(c)) for (i, c) in enumerate(input().split(' '))]
 cap.sort(key=lambda x: x[1])
-book.sort(key=lambda x: (x[1]))
+book.sort(key=lambda x: x[1])
 m = 0
 s = 0
 r = []

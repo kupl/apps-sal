@@ -16,17 +16,14 @@ for i in range(n):
             sez[1] -= 1
         else:
             sez[0] -= 3
-
     ok = True
     for i in range(3):
         if sez[i] < 0:
             ok = False
-
     if not ok:
         prej = False
         break
-
 if prej:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

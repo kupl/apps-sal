@@ -8,6 +8,5 @@ for i in range(1, len(a)):
     else:
         ans = max(cnt, ans)
         cnt = 0
-
 ans = max(ans, cnt)
 print(ans + 1)

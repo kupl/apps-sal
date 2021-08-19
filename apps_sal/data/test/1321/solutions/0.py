@@ -17,10 +17,10 @@ for i in range(n):
         H1 = max(H1, wihi[i][1])
 if H1 == H:
     for i in wihi:
-        print((W - i[0]) * (H), end=" ")
+        print((W - i[0]) * H, end=' ')
 else:
     for i in wihi:
         if i[1] == H:
-            print((W - i[0]) * (H1), end=" ")
+            print((W - i[0]) * H1, end=' ')
         else:
-            print((W - i[0]) * (H), end=" ")
+            print((W - i[0]) * H, end=' ')

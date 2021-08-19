@@ -1,11 +1,9 @@
 import sys
-
 INF = float('inf')
-
-n, ma, mb = map(int, sys.stdin.readline().split())
-a, b, c = [], [], []
+(n, ma, mb) = map(int, sys.stdin.readline().split())
+(a, b, c) = ([], [], [])
 for _ in range(n):
-    ai, bi, ci = map(int, sys.stdin.readline().split())
+    (ai, bi, ci) = map(int, sys.stdin.readline().split())
     a.append(ai)
     b.append(bi)
     c.append(ci)
@@ -26,7 +24,6 @@ def main():
     ans = INF
     for i in range(1, min(sa // ma, sb // mb) + 1):
         ans = min(ans, res[n][ma * i][mb * i])
-
     if ans == INF:
         return -1
     else:

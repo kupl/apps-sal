@@ -1,5 +1,8 @@
 from collections import Counter as C
-def read(): return list(map(int, input().split()))
+
+
+def read():
+    return list(map(int, input().split()))
 
 
 n = int(input())

@@ -16,7 +16,7 @@ def fact(A):
         if r > int(pow(c0, 0.5)) + 1:
             lis.append(A)
             break
-    return(lis)
+    return lis
 
 
 n = int(input())

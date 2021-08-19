@@ -1,9 +1,9 @@
 def main():
     n = int(input())
-    mi, ma = 10000000001, 0
+    (mi, ma) = (10000000001, 0)
     l = []
     for _ in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         if mi > a:
             mi = a
         if ma < b:

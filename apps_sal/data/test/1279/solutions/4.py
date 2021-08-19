@@ -1,9 +1,16 @@
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(mi())
+def ii():
+    return int(input())
 
 
-n, m = mi()
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(mi())
+
+
+(n, m) = mi()
 a = li()
 b = li()
 a = [x % 2 for x in a]

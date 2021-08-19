@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-t25, t50, t100, c = 0, 0, 0, 1
+(t25, t50, t100, c) = (0, 0, 0, 1)
 for ele in a:
     if ele == 25:
         t25 += 1
@@ -23,6 +23,6 @@ for ele in a:
             c = 0
             break
 if c:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

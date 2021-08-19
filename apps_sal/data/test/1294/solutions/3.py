@@ -7,7 +7,7 @@ for _ in range(int(input())):
         j = i + 1
         while j < n and s[j] == s[i]:
             j += 1
-        if (j - i) & 1:
+        if j - i & 1:
             valid.add(s[i])
         i = j
     print(''.join(sorted(valid)))

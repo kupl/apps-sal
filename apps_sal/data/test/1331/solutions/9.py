@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 times = list(map(int, input().split()))
 times.sort()
 ans = 0

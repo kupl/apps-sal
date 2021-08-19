@@ -1,12 +1,10 @@
 from sys import stdin, stdout
-n, m, k = map(int, stdin.readline().split())
+(n, m, k) = map(int, stdin.readline().split())
 vertices = [[] for i in range(n + 1)]
 for i in range(m):
-    a, b, w = map(int, stdin.readline().split())
+    (a, b, w) = map(int, stdin.readline().split())
     vertices[a].append((b, w))
     vertices[b].append((a, w))
-
-
 if k:
     storages = set(map(int, stdin.readline().split()))
     ans = float('inf')

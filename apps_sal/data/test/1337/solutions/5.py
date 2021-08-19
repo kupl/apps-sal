@@ -10,7 +10,6 @@ for l in languages:
 m = int(stdin.readline())
 movies = []
 voice = list(map(int, stdin.readline().split()))
-
 for i in range(m):
     if voice[i] in d:
         movies.append([d[voice[i]], 0, i])

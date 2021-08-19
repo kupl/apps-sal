@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 c = [0] * n
 s = list(map(int, input().split()))
 for sq in s:

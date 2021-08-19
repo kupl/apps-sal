@@ -1,11 +1,9 @@
 s = input()
 a = input()
 k = int(input())
-d = sorted(s[i:] for i in range(len(s)))
-
+d = sorted((s[i:] for i in range(len(s))))
 c = ''
 r = 0
-
 for j in d:
     pos = 0
     s = 0

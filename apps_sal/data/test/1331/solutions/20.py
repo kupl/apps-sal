@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 arr.sort()
 size = k - 1
@@ -16,7 +16,7 @@ while i < n:
     else:
         u = ans[0]
         limit = u + m - 1
-        while(i < n):
+        while i < n:
             if arr[i] <= limit:
                 if len(ans) < k - 1:
                     ans.append(arr[i])

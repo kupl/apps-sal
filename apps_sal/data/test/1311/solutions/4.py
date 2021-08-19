@@ -1,7 +1,7 @@
 n = int(input())
 S = []
 for _ in range(n):
-    x, w = list(map(int, input().split()))
+    (x, w) = list(map(int, input().split()))
     S.append((x, w))
 S = sorted(S, key=lambda kv: kv[0] + kv[1])
 m = 1

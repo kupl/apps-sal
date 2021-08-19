@@ -8,13 +8,11 @@ def ria():
 
 
 files = True
-
 if getpass.getuser() == 'frohenk' and files:
-    sys.stdin = open("test.in")
-
+    sys.stdin = open('test.in')
 t = ria()[0]
 for kekas in range(t):
-    n, k = ria()
+    (n, k) = ria()
     ar = ria()
     maxi = max(ar[0], n - ar[len(ar) - 1] + 1)
     for j in range(1, k):

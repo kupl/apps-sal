@@ -3,9 +3,8 @@ from functools import reduce
 import sys
 import os
 d = sys.stdin.readlines()
-if d[-1][-1] != "\n":
-    d[-1] += "\n"
-
+if d[-1][-1] != '\n':
+    d[-1] += '\n'
 n = int(d[0])
 cur_tab = [0 for _ in range(n + 1)]
 
@@ -23,7 +22,6 @@ def group(l):
 
 mat = [None for _ in range(n)]
 euh = 0
-
 for x in d[1:]:
     line = x[:-1]
     s = str(bin(int(line, 16)))[2:].zfill(n)

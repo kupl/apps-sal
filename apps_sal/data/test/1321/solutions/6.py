@@ -1,17 +1,14 @@
 __author__ = 'ruckus'
-
 n = int(input())
-
 w = [0 for i in range(n)]
 h = [0 for i in range(n)]
-
 max_w = 0
 max_h = 0
 premax_h = 0
 in_w = []
 in_h = []
 for i in range(n):
-    cur_w, cur_h = input().split()
+    (cur_w, cur_h) = input().split()
     cur_h = int(cur_h)
     cur_w = int(cur_w)
     max_w += cur_w
@@ -27,6 +24,5 @@ for i in range(n):
         h[i] = premax_h
     else:
         h[i] = max_h
-
-for w, h in zip(w, h):
+for (w, h) in zip(w, h):
     print(w * h, end=' ')

@@ -3,8 +3,7 @@ import sys
 n = int(sys.stdin.readline())
 a = [[] for i in range(n)]
 for i in range(n):
-    a[i] = bin((1 << n) | int(sys.stdin.readline(), 16))[3:]
-
+    a[i] = bin(1 << n | int(sys.stdin.readline(), 16))[3:]
 ans = 0
 i = 0
 while i < n:
@@ -20,5 +19,4 @@ while i < n:
         ans = gcd(ans, k - l)
         k = l
     i = j
-
 print(ans)

@@ -1,7 +1,7 @@
 s = input()
 a = input()
 k = int(input())
-S = sorted(s[i:] for i in range(len(s)))
+S = sorted((s[i:] for i in range(len(s))))
 p = ''
 r = 0
 for e in S:

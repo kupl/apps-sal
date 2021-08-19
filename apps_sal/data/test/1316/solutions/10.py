@@ -1,9 +1,9 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 chars = {}
 for c in s:
     chars[c] = 1
-s += '\0'
+s += '\x00'
 ans = 0
 for c in chars:
     nowl = 0

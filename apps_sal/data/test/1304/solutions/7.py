@@ -4,8 +4,8 @@ input()
 s += [list(input().replace(' ', '')) for i in range(3)]
 input()
 s += [list(input().replace(' ', '')) for i in range(3)]
-y, x = [int(k) for k in input().split(' ') if k]
-yb, xb = ceil(y / 3), ceil(x / 3)
+(y, x) = [int(k) for k in input().split(' ') if k]
+(yb, xb) = (ceil(y / 3), ceil(x / 3))
 y -= (yb - 1) * 3 + 1
 x -= (xb - 1) * 3 + 1
 y *= 3

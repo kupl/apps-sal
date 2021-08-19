@@ -7,7 +7,7 @@ for i in range(0, 3):
 d = input()
 for i in range(0, 3):
     a.append(input().split())
-q, w = list(map(int, input().split()))
+(q, w) = list(map(int, input().split()))
 z = q % 3 - 1
 if z == -1:
     z = 2

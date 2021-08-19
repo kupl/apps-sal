@@ -1,6 +1,5 @@
 from sys import stdin
-
-n, x, y = list(map(int, stdin.readline().strip().split()))
+(n, x, y) = list(map(int, stdin.readline().strip().split()))
 s = list(map(int, stdin.readline().strip().split()))
 for i in range(n):
     t = True

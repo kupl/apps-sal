@@ -1,6 +1,6 @@
 t = int(input())
 for tc in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     tap = list(map(int, input().split()))
     sol = 0
     for i in range(1, n + 1):

@@ -1,5 +1,5 @@
 k = input().split()
-n, m, k = int(k[0]), int(k[1]), int(k[2])
+(n, m, k) = (int(k[0]), int(k[1]), int(k[2]))
 a = [0] * 1000001
 c = input().split()
 for i in range(n):

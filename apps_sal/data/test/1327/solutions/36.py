@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 X = []
 Y = []
 Z = []
@@ -10,9 +10,8 @@ G5 = []
 G6 = []
 G7 = []
 G8 = []
-
 for i in range(N):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     G1.append(-(x + y + z))
     G2.append(-(x + y) + z)
     G3.append(-x + y - z)
@@ -47,6 +46,5 @@ for i in range(M):
     val6 += G6[i]
     val7 += G7[i]
     val8 += G8[i]
-
 ans = max(val1, val2, val3, val4, val5, val6, val7, val8)
 print(ans)

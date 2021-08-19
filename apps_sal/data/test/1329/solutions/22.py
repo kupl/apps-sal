@@ -1,6 +1,5 @@
 import sys
 from collections import defaultdict
-
 sys.setrecursionlimit(10 ** 7)
 rl = sys.stdin.readline
 
@@ -24,13 +23,11 @@ def factorization(n):
 
 def solve():
     N = int(rl())
-
     counter = defaultdict(int)
     for x in range(1, N + 1):
         facts = factorization(x)
-        for fact, exp in facts:
+        for (fact, exp) in facts:
             counter[fact] += exp
-
     M = len(list(counter.keys()))
     nums = tuple(counter.values())
     div75 = (1, 3, 5, 15, 25, 75)
@@ -41,7 +38,7 @@ def solve():
             for div1 in div75:
                 if div0 * div1 <= 75 and div1 <= nums[i] + 1:
                     dp[i + 1][div0 * div1] += dp[i][div0]
-    print((dp[M][75]))
+    print(dp[M][75])
 
 
 def __starting_point():

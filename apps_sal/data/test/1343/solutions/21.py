@@ -1,7 +1,7 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 uvl = [list(map(int, input().split())) for i in range(m)]
 if k == 0:
-    print("-1")
+    print('-1')
 else:
     ai = list(map(int, input().split()))
     ai.sort()
@@ -12,7 +12,7 @@ else:
         r = k - 1
         while l < r:
             mid = (l + r) // 2
-            if (ai[mid] < x):
+            if ai[mid] < x:
                 l = mid + 1
             else:
                 r = mid
@@ -24,6 +24,6 @@ else:
         if bf(uvl[i][0]) != bf(uvl[i][1]):
             ans = min(ans, uvl[i][2])
     if ans == 1000000001:
-        print("-1")
+        print('-1')
     else:
         print(ans)

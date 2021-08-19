@@ -1,9 +1,9 @@
 INF = float('inf')
-n, ma, mb = list(map(int, input().split()))
+(n, ma, mb) = list(map(int, input().split()))
 cmax = n * 10
 t = [[INF] * (cmax + 1) for _ in range(cmax + 1)]
 for _ in range(n):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     for aa in range(cmax, 0, -1):
         for bb in range(cmax, 0, -1):
             if t[aa][bb] == INF:

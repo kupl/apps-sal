@@ -13,6 +13,6 @@ for i in input().split():
     if a < 0 or b < 0:
         c = 1
 if c:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

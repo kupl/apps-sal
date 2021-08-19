@@ -1,15 +1,13 @@
 def main():
-    p, q, l, r = list(map(int, input().split()))
+    (p, q, l, r) = list(map(int, input().split()))
     Z = set()
     X = []
-
     for _ in range(p):
-        ai, bi = list(map(int, input().split()))
+        (ai, bi) = list(map(int, input().split()))
         Z.update(list(range(ai, bi + 1)))
     for _ in range(q):
-        ai, bi = list(map(int, input().split()))
+        (ai, bi) = list(map(int, input().split()))
         X.extend(list(range(ai, bi + 1)))
-
     res = 0
     for i in range(l, r + 1):
         for j in X:

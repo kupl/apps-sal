@@ -1,5 +1,5 @@
 import itertools
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 x = (0,) + tuple(itertools.accumulate(list(map(int, input().split()))))
 ansa = ansb = 0
 for i in range(2 * k, n + 1):

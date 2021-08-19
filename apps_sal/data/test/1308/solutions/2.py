@@ -1,4 +1,3 @@
-
 def getIntList():
     return list(map(int, input().split()))
 
@@ -16,7 +15,7 @@ def getTransIntList(n):
     return result
 
 
-n, m = getIntList()
+(n, m) = getIntList()
 s = input()
 orda = ord('a')
 a = [ord(s[i]) - orda for i in range(n)]
@@ -52,9 +51,7 @@ def judge(x, y, l):
 
 
 results = []
-
 for _ in range(m):
-    x, y, l = getIntList()
+    (x, y, l) = getIntList()
     results.append(judge(x - 1, y - 1, l))
-
 print('\n'.join(results))

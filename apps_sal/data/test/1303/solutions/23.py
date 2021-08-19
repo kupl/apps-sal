@@ -1,12 +1,12 @@
-p, q, l, r = [int(x) for x in input().split()]
+(p, q, l, r) = [int(x) for x in input().split()]
 a = ''
 b = ''
 for i in range(p):
-    x, y = [int(x) for x in input().split()]
+    (x, y) = [int(x) for x in input().split()]
     a += '0' * (x - len(a))
     a += '1' * (y - x + 1)
 for i in range(q):
-    x, y = [int(x) for x in input().split()]
+    (x, y) = [int(x) for x in input().split()]
     b += '0' * (x - len(b))
     b += '1' * (y - x + 1)
 ans = 0

@@ -10,14 +10,11 @@ def main():
         if max(cnt) > 1:
             return 0
         return 1
-
-    l, r = list(map(int, input().split()))
-
+    (l, r) = list(map(int, input().split()))
     for i in range(l, r + 1):
         if okay(i):
             print(i)
             return 0
-
     print(-1)
     return 0
 

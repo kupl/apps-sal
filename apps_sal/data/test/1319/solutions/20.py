@@ -1,4 +1,5 @@
-def readInts(): return list(map(int, input().split()))
+def readInts():
+    return list(map(int, input().split()))
 
 
 n = int(input())
@@ -6,8 +7,7 @@ a = readInts()
 p = {}
 for b in a:
     p[b] = p.get(b, 0) + 1
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 ret = 1
 cnt = 1
 for x in list(p.items()):
@@ -19,5 +19,4 @@ for x in list(p.items()):
     ret %= MOD
     cnt = cnt * (t + 1)
     cnt %= MOD - 1
-
 print(ret)

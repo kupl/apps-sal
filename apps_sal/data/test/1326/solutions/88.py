@@ -11,4 +11,4 @@ def solve(N):
 
 
 N = int(input())
-print((solve(N)))
+print(solve(N))

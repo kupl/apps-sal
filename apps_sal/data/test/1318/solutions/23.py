@@ -2,7 +2,7 @@ n = int(input())
 requests = []
 i = 0
 while i != n:
-    c, p = [int(x) for x in input().split()]
+    (c, p) = [int(x) for x in input().split()]
     requests.append((p, c, i + 1))
     i += 1
 k = int(input())
@@ -26,7 +26,6 @@ for j in sorted(r):
         s += maxx[0]
         reverse_sorted_requests.remove(maxx)
         maxx = (0, 0, 0)
-
 print(m, s)
 for a in accepted:
     print(a[0], a[1])

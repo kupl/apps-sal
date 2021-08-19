@@ -3,7 +3,6 @@ L = list(map(int, input().split()))
 m = int(input())
 A = list(map(int, input().split()))
 S = list(map(int, input().split()))
-
 D = {}
 for i in range(n):
     if L[i] in list(D.keys()):
@@ -19,7 +18,7 @@ for i in range(m):
 
 
 def ct(a):
-    return a[0], a[1]
+    return (a[0], a[1])
 
 
 M.sort(key=ct, reverse=True)

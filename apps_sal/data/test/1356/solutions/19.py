@@ -1,7 +1,6 @@
 def solve():
     s = input()
-
-    print(min(len(s), 2 * s.count("a") - 1))
+    print(min(len(s), 2 * s.count('a') - 1))
 
 
 def __starting_point():

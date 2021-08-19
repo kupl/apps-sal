@@ -1,7 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 d = list(zip(list(map(int, input().split())), list(range(0, n))))
 d = sorted(d)
-
 last = 0
 du = [0] * n
 fa = [0] * n

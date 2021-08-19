@@ -8,12 +8,11 @@ for i in range(n):
     elif ar[i] == 50:
         k25 -= 1
         k50 += 1
+    elif k50 >= 1:
+        k25 -= 1
+        k50 -= 1
     else:
-        if k50 >= 1:
-            k25 -= 1
-            k50 -= 1
-        else:
-            k25 -= 3
+        k25 -= 3
     if k25 < 0:
         break
 if k25 < 0:

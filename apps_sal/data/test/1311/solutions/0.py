@@ -4,8 +4,8 @@ from collections import defaultdict
 n = int(stdin.readline())
 a = [map(int, stdin.readline().split(), (10, 10)) for i in range(n)]
 v = defaultdict(list)
-for i, e in enumerate(a, 1):
-    q, f = e
+for (i, e) in enumerate(a, 1):
+    (q, f) = e
     v[q - f].append(i)
     v[q + f - 1].append(-i)
 sa = set()

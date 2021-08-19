@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 L = list(set(s))
 L.sort()
@@ -19,5 +19,4 @@ if k <= n:
         ans += L[0] * (k - l)
 else:
     ans = s + (k - n) * L[0]
-
 print(ans)

@@ -14,7 +14,7 @@ def mints():
 
 
 def solve():
-    n, k, a = mints()
+    (n, k, a) = mints()
     a += 1
     m = mint()
     x = list(mints())

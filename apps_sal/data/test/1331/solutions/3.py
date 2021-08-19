@@ -1,4 +1,4 @@
-n, m, k = [int(i) for i in input().split()]
+(n, m, k) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 a.sort()
 ans = 0
@@ -16,7 +16,7 @@ for i in range(len(a)):
         const = j - i - k - z + 1
         c = 0
         ct = 0
-        while (ct < const):
+        while ct < const:
             if a[j - 1 - c] != 0:
                 a[j - 1 - c] = 0
                 ans += 1

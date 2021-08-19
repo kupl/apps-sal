@@ -1,12 +1,22 @@
-def f(c): return ord(c) - ord('a')
-def dalp(x, y): return min(abs(x - y), abs(x + 26 - y), abs(y + 26 - x))
-def dist(i, j): return min(abs(i - j), abs(i + n - j), abs(j + n - i))
-def read(): return list(map(int, input().split()))
+def f(c):
+    return ord(c) - ord('a')
 
 
-n, p = read()
+def dalp(x, y):
+    return min(abs(x - y), abs(x + 26 - y), abs(y + 26 - x))
+
+
+def dist(i, j):
+    return min(abs(i - j), abs(i + n - j), abs(j + n - i))
+
+
+def read():
+    return list(map(int, input().split()))
+
+
+(n, p) = read()
 a = [f(i) for i in input()]
-pr, sf = [], []
+(pr, sf) = ([], [])
 cnt = 0
 for i in range(n // 2):
     if a[i] != a[n - i - 1]:

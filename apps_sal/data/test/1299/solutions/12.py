@@ -1,5 +1,5 @@
 import itertools
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 sums = (0,) + tuple(itertools.accumulate(map(int, input().split())))
 S = l = r = ans = pos = 0
 for i in range(k, n - k + 1):

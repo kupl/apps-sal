@@ -1,6 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
-alph = "qwertyuiopasdfghjklzxcvbnm"
+alph = 'qwertyuiopasdfghjklzxcvbnm'
 ti = [0] * 26
 num = 1
 for i in range(1, n):

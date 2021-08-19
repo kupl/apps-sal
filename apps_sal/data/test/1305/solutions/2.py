@@ -1,7 +1,5 @@
 n = int(input())
-
 ms = [int(x) for x in input().split()]
-
 yes = True
 a = b = 0
 s = 0
@@ -20,8 +18,7 @@ for m in ms:
     if a < 0 or b < 0:
         yes = False
         break
-
 if yes:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

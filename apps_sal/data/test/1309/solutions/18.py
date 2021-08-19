@@ -1,4 +1,5 @@
-def readln(): return list(map(int, input().rstrip().split()))
+def readln():
+    return list(map(int, input().rstrip().split()))
 
 
 def cal(dt):
@@ -11,9 +12,7 @@ def cal(dt):
 n = int(input())
 data = list(readln())
 data.sort()
-
 minw = 500000
-
 for i in range(0, 2 * n - 1):
     for j in range(i + 1, 2 * n):
         dt = list(data)
@@ -22,5 +21,4 @@ for i in range(0, 2 * n - 1):
         rs = cal(dt)
         if rs < minw:
             minw = rs
-
 print(minw)

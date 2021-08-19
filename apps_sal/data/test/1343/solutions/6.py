@@ -1,8 +1,8 @@
 def solve():
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     r = {}
     for _ in range(m):
-        u, v, l = list(map(int, input().split()))
+        (u, v, l) = list(map(int, input().split()))
         if u not in r:
             r[u] = []
         if v not in r:
@@ -23,7 +23,6 @@ def solve():
             if s[t[0]]:
                 continue
             ans = min(ans, t[1])
-
     print(-1 if ans == float('inf') else ans)
 
 

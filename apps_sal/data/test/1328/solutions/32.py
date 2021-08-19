@@ -1,10 +1,10 @@
 INF = float('inf')
 MAXAB = 10
-n, ma, mb = list(map(int, input().split()))
+(n, ma, mb) = list(map(int, input().split()))
 t = [[INF] * (n * MAXAB + 1) for _ in range(n * MAXAB + 1)]
 t[0][0] = 0
 for _ in range(n):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     for aa in range(n * MAXAB, -1, -1):
         for bb in range(n * MAXAB, -1, -1):
             if t[aa][bb] == INF:

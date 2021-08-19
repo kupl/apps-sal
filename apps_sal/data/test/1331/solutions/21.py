@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 lis = sorted(map(int, input().split())) + [1000000000000000]
 j = zer = ans = 0
 for i in range(n):

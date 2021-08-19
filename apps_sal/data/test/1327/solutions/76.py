@@ -1,15 +1,14 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = [0] * n
 y = [0] * n
 z = [0] * n
 for i in range(n):
-    x[i], y[i], z[i] = map(int, input().split())
-
+    (x[i], y[i], z[i]) = map(int, input().split())
 sign = [0] * 3
 ans = 0
 for i in range(8):
     for j in range(3):
-        if ((i >> j) & 1):
+        if i >> j & 1:
             sign[j] = 1
         else:
             sign[j] = -1

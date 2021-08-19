@@ -9,13 +9,12 @@ def f(perm):
     return res
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 res = f(list(range(1, n + 1)))
-
 i = 0
 for p in permutations(list(range(1, n + 1))):
     if f(p) == res:
         i += 1
         if i == m:
-            print(" ".join(list(map(str, p))))
+            print(' '.join(list(map(str, p))))
             break

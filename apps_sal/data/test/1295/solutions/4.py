@@ -7,7 +7,6 @@ def lower_bownd(key):
             left = middle
         else:
             right = middle
-
     if right < m:
         r = b[right] - key
     else:
@@ -19,7 +18,7 @@ def lower_bownd(key):
     return min(l, r)
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 ans = [0] * n

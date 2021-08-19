@@ -1,7 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 d = {}
-i, j = 0, 0
+(i, j) = (0, 0)
 while i < len(s):
     j = i
     while j < len(s) and s[j] == s[i]:

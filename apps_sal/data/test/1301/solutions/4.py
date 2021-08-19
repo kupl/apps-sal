@@ -8,11 +8,9 @@ def isOk(s, t):
 
 
 def main():
-    A = ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon"]
-
+    A = ['vaporeon', 'jolteon', 'flareon', 'espeon', 'umbreon', 'leafeon', 'glaceon', 'sylveon']
     n = int(input())
     t = input()
-
     for s in A:
         if isOk(s, t):
             print(s)

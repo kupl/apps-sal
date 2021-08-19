@@ -11,9 +11,9 @@ sum1 = 1
 sum2 = 1
 for el in q:
     sum1 = sum1 * q[el]
-    sum2 = (sum2 * pow(el, (q[el] - 1), MD)) % MD
+    sum2 = sum2 * pow(el, q[el] - 1, MD) % MD
 sum = pow(sum2, sum1 // 2, MD)
 if sum1 % 2 == 1:
     for el in q:
-        sum = (sum * pow(el, q[el] // 2, MD)) % MD
+        sum = sum * pow(el, q[el] // 2, MD) % MD
 print(sum)

@@ -8,8 +8,7 @@ for i in range(n):
         if l[i][j] == 'C':
             rows[i] += 1
             cols[j] += 1
-
 for i in range(n):
-    ans += max(0, (rows[i]) * (rows[i] - 1) / 2)
-    ans += max(0, (cols[i]) * (cols[i] - 1) / 2)
+    ans += max(0, rows[i] * (rows[i] - 1) / 2)
+    ans += max(0, cols[i] * (cols[i] - 1) / 2)
 print(int(ans))

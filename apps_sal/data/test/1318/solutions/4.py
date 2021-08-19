@@ -2,7 +2,7 @@ n = int(input(''))
 group = []
 table = []
 for i in range(n):
-    size, money = list(map(int, input('').split()))
+    (size, money) = list(map(int, input('').split()))
     group += [(money, size, i)]
 k = int(input(''))
 out = []

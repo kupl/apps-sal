@@ -1,5 +1,4 @@
 a = [[''] * 9 for i in range(9)]
-
 for i in range(3):
     for j in range(3):
         q = input()
@@ -8,9 +7,8 @@ for i in range(3):
             a[i * 3 + j][p] = q[p]
     if i != 2:
         q = input()
-
-x, y = [int(i) for i in input().split()]
-x1, y1 = x, y
+(x, y) = [int(i) for i in input().split()]
+(x1, y1) = (x, y)
 while x1 > 3:
     x1 -= 3
 while y1 > 3:
@@ -31,7 +29,6 @@ if not ch:
                 a[i][j] = '!'
 for i in range(3):
     for j in range(3):
-
         for p in range(3):
             for q in range(3):
                 print(a[i * 3 + j][p * 3 + q], end='')
