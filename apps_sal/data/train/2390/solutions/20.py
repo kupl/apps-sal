@@ -1,4 +1,4 @@
-'''input
+"""input
 3
 8
 1 4 8 4 5 6 3 8
@@ -6,7 +6,7 @@
 2 1 3 3 4 3 4 4 1 3 2 2 2 4 1 1
 9
 2 2 4 4 4 7 7 7 7
-'''
+"""
 from sys import stdin, setrecursionlimit
 from itertools import combinations
 import collections
@@ -27,15 +27,15 @@ class heapdict(collections.MutableMapping):
 
     @staticmethod
     def _parent(i):
-        return ((i - 1) >> 1)
+        return i - 1 >> 1
 
     @staticmethod
     def _left(i):
-        return ((i << 1) + 1)
+        return (i << 1) + 1
 
     @staticmethod
     def _right(i):
-        return ((i + 1) << 1)
+        return i + 1 << 1
 
     def __init__(self, *args, **kw):
         self.heap = []
@@ -66,7 +66,6 @@ class heapdict(collections.MutableMapping):
             low = i
         if r < n and self.heap[r][0] < self.heap[low][0]:
             low = r
-
         if low != i:
             self._swap(i, low)
             self._min_heapify(low)
@@ -80,7 +79,7 @@ class heapdict(collections.MutableMapping):
             i = parent
 
     def _swap(self, i, j):
-        self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
+        (self.heap[i], self.heap[j]) = (self.heap[j], self.heap[i])
         self.heap[i][2] = i
         self.heap[j][2] = j
 
@@ -102,7 +101,8 @@ class heapdict(collections.MutableMapping):
         return iter(self.d)
 
     def popitem(self):
-        """D.popitem() -> (k, v), remove and return the (key, value) pair with lowest\nvalue; but raise KeyError if D is empty."""
+        """D.popitem() -> (k, v), remove and return the (key, value) pair with lowest
+value; but raise KeyError if D is empty."""
         wrapper = self.heap[0]
         if len(self.heap) == 1:
             self.heap.pop()
@@ -111,14 +111,15 @@ class heapdict(collections.MutableMapping):
             self.heap[0][2] = 0
             self._min_heapify(0)
         del self.d[wrapper[1]]
-        return wrapper[1], wrapper[0]
+        return (wrapper[1], wrapper[0])
 
     @doc(dict.__len__)
     def __len__(self):
         return len(self.d)
 
     def peekitem(self):
-        """D.peekitem() -> (k, v), return the (key, value) pair with lowest value;\n but raise KeyError if D is empty."""
+        """D.peekitem() -> (k, v), return the (key, value) pair with lowest value;
+ but raise KeyError if D is empty."""
         return (self.heap[0][1], self.heap[0][0])
 
 
@@ -143,25 +144,23 @@ def get_heap(arr, n):
             mydict[i] += 1
         else:
             mydict[i] = 1
-
     mheap = heapdict()
     for i in mydict:
         mheap[i] = -mydict[i]
     return mheap
 
 
-# main starts
 q = int(stdin.readline().strip())
 for _ in range(q):
     n = int(stdin.readline().strip())
     arr = list(map(int, stdin.readline().split()))
     mheap = get_heap(arr, n)
-    t, value = mheap.popitem()
+    (t, value) = mheap.popitem()
     num = -value
     ans = num
     while len(mheap) > 0 and num > 0:
         num -= 1
-        t, value = mheap.popitem()
+        (t, value) = mheap.popitem()
         value = -value
         if value >= num:
             ans += num

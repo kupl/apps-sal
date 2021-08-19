@@ -1,4 +1,4 @@
-websites = ['codewars']  # create an array called websites that has "codewars" as its only value
+websites = ['codewars']
 
 
 def find_average(arr):

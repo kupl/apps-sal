@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
-
-
 def solve(n, adj_list, d):
-
     s = []
     path_adj_list = [[] for _ in range(n)]
     for v in range(n):
@@ -12,20 +8,18 @@ def solve(n, adj_list, d):
                 if 1 < d[w]:
                     p.append(w)
             if 2 < len(p):
-                print((-1))
+                print(-1)
                 return
             if len(p) == 1:
                 s.append(v)
-
     if len(s) == 0:
         ans = [1] + [v for v in range(3, n)] + [2]
         if 2 < n:
             ans += [n]
-        print((' '.join(list(map(str, ans)))))
+        print(' '.join(list(map(str, ans))))
         return
-
     visited = [False] * n
-    v, w = s
+    (v, w) = s
     while v != w and d[v] == d[w]:
         visited[v] = True
         visited[w] = True
@@ -45,12 +39,10 @@ def solve(n, adj_list, d):
                 break
         if not f:
             break
-
     if d[v] > d[w]:
         v = s[1]
     else:
         v = s[0]
-
     visited = [False] * n
     visited[v] = True
     ans = [1] + [w for w in range(3, d[v] + 1)] + [2]
@@ -68,10 +60,8 @@ def solve(n, adj_list, d):
                 break
         if not f:
             break
-
     ans += [n]
-
-    print((' '.join(list(map(str, ans)))))
+    print(' '.join(list(map(str, ans))))
     return
 
 
@@ -81,14 +71,13 @@ def main():
     adj_list = [[] for _ in range(n)]
     d = [0] * n
     for _ in range(n - 1):
-        v, w = input().split()
+        (v, w) = input().split()
         v = int(v) - 1
         w = int(w) - 1
         adj_list[v].append(w)
         adj_list[w].append(v)
         d[v] += 1
         d[w] += 1
-
     solve(n, adj_list, d)
 
 

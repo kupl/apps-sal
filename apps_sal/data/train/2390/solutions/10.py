@@ -1,13 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import time
-
 q = int(input())
 ans = []
-
 start = time.time()
-
 for i in range(q):
     n = int(input())
     a = [int(j) for j in input().split()]
@@ -27,8 +21,6 @@ for i in range(q):
                 break
             s += last
     ans.append(s)
-
 for i in range(q):
     print(ans[i])
 finish = time.time()
-#print(finish - start)

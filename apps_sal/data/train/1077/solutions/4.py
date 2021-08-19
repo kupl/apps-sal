@@ -1,9 +1,7 @@
-# Reverse Directions problem - Dec Cook off on Code Chef
 import sys
 
 
 class Directions:
-
     ReversedDirections = []
     ReversedDirLines = []
 
@@ -16,7 +14,7 @@ def FormReversedDirLines(d):
     i = -1
     j = 0
     ReversedDirLines = []
-    while i >= (-1 * len(d.DirLines)):
+    while i >= -1 * len(d.DirLines):
         direction = d.ReversedDirections[j]
         t = ' '.join(d.DirLines[i].split()[1:])
         ReversedDirLines.append(direction + ' ' + t)
@@ -28,17 +26,17 @@ def FormReversedDirLines(d):
 def CorrectDirections(directions):
     correctedDirs = [directions[0]]
     for d in directions[1:]:
-        if d == "Right":
-            correctedDirs.append("Left")
+        if d == 'Right':
+            correctedDirs.append('Left')
         else:
-            correctedDirs.append("Right")
+            correctedDirs.append('Right')
     return correctedDirs
 
 
 def Reverse(l):
     newL = []
     i = -1
-    while i >= (-1 * len(l)):
+    while i >= -1 * len(l):
         newL.append(l[i])
         i = i - 1
     return newL
@@ -58,7 +56,7 @@ def ReverseDirections(Directions):
 
 
 def WriteOutput(fPath, output):
-    f = open(fPath, "w")
+    f = open(fPath, 'w')
     for d in output:
         f.writelines(d.ReversedDirLines)
         f.write('\n')
@@ -108,21 +106,17 @@ def ParseInput(lines):
 
 
 def ReadInput(fPath):
-    f = open(fPath, "r")
+    f = open(fPath, 'r')
     lines = f.readlines()
     f.close()
     return ParseInput(lines)
 
 
 def __starting_point():
-    # TestCases
-    # print ReverseDirections(["Begin", "Right", "Right", "Left"])
-    # print ReverseDirections(["Begin","Left","Left","Right","Right","Right"])
     directions = ParseInput(sys.stdin.readlines())
     for d in directions:
         d.ReversedDirections = ReverseDirections(d.Directions)
         d.ReversedDirLines = FormReversedDirLines(d)
-
     WriteOutputToConsole(directions)
 
 

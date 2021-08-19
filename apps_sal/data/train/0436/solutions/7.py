@@ -1,11 +1,12 @@
 class Solution:
+
     def mp_gen(self):
         dp = [[0] * 32 for _ in range(32)]
         dp[0][0] = 1
         mp = {}
         for i in range(32):
             for j in range(32):
-                k = 2**i * 3**j
+                k = 2 ** i * 3 ** j
                 if i == 0 and j == 0:
                     dp[i][j] = 1
                 elif i == 0:
@@ -18,10 +19,6 @@ class Solution:
         return mp
 
     def minDays(self, n: int) -> int:
-        # @lru_cache(None)
-        # def helper(n):
-        # if n in self.mp:
-        #     return self.mp[n]
         if n == 1:
             return 1
         cnt = 0
@@ -29,11 +26,8 @@ class Solution:
         st.add(n)
         while st:
             cnt += 1
-            # cand = n + 1
             st_temp = set()
             for v in st:
-                # if v in self.mp:
-                #     cand = min(cand, self.mp[v])
                 if v == 1:
                     return cnt
                 st_temp.add(v - 1)
@@ -41,9 +35,5 @@ class Solution:
                     st_temp.add(v // 2)
                 if v % 3 == 0:
                     st_temp.add(v // 3)
-            # if cand != n + 1:
-            #     return cand + cnt
             st = st_temp
         return -1
-        # self.mp = self.mp_gen()
-        # return helper(n)
