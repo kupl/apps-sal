@@ -1,4 +1,3 @@
-
 import re
 import inspect
 from sys import argv, exit
@@ -30,7 +29,8 @@ def prnt(*args, override=False):
         print(*args)
 
 
-class Candy():
+class Candy:
+
     def __init__(self, stuff):
         self.type = bool(stuff[0])
         self.height = stuff[1]
@@ -46,12 +46,10 @@ class Candy():
 def main(h, candies, last_type):
     eaten = []
     neaten = 0
-
     edible = sorted([c for c in candies if c.height <= h and c.type != last_type], key=lambda c: c.mass)
     prnt('h', h)
     prnt('last_type', last_type)
     prnt('edible', edible)
-
     while True:
         if edible:
             candy = edible.pop(-1)
@@ -70,16 +68,12 @@ def main(h, candies, last_type):
 
 def __starting_point():
     (n, h) = rints()
-    # type, height, mass
     candies = [Candy(rints()) for i in range(n)]
     prnt(candies)
-
     one = main(h, copy(candies), False)
     two = main(h, copy(candies), True)
-
     pvar(one)
     pvar(two)
-
     print(max(one, two))
 
 

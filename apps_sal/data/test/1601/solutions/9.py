@@ -1,13 +1,10 @@
 n = int(input())
 points = []
-
 for i in range(n):
     points.append(list(map(int, input().split())))
     points[i].append(i + 1)
 points.sort()
-
 rem = []
-
 i = 0
 while i < len(points):
     if i < len(points) - 1 and points[i][:2] == points[i + 1][:2]:
@@ -26,7 +23,6 @@ while i < len(points):
     else:
         rem.append(points[i])
         i += 1
-# print(rem)
 points = list(rem)
 rem = []
 i = 0

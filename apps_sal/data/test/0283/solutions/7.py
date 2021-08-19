@@ -1,12 +1,10 @@
-#!/usr/bin/env python3
-
 def main():
     import itertools
 
     def is_prime(x):
         if x == 2:
             return True
-        if x & 0x1 == 0:
+        if x & 1 == 0:
             return False
         i = 3
         while i * i <= x:
@@ -14,7 +12,6 @@ def main():
                 return False
             i += 2
         return True
-
     try:
         while True:
             n = int(input())
@@ -22,7 +19,6 @@ def main():
                 if not is_prime(n * m + 1):
                     print(m)
                     break
-
     except EOFError:
         pass
 

@@ -1,12 +1,9 @@
-r1, c1, r2, c2 = list(map(int, input().split()))
+(r1, c1, r2, c2) = list(map(int, input().split()))
 n = 2 * max(r1, r2, c1, c2) + 2
-mod = 10**9 + 7
-
-# nCk
+mod = 10 ** 9 + 7
 factorial = [1]
 for i in range(1, n + 1):
     factorial.append(factorial[-1] * i % mod)
-
 inv_factorial = [-1] * (n + 1)
 inv_factorial[-1] = pow(factorial[-1], mod - 2, mod)
 for i in reversed(list(range(n))):

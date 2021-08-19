@@ -7,24 +7,24 @@ def has_to_eat(food_type, height, food):
         if candie[0] == food_type or food_type == -1:
             if height >= candie[1]:
                 candie[1] = 1000000000000000000
-                return candie[0], candie[2]
+                return (candie[0], candie[2])
     return result
 
 
 class CodeforcesTask436ASolution:
+
     def __init__(self):
         self.result = ''
         self.n_x = []
         self.candies = []
 
     def read_input(self):
-        self.n_x = [int(x) for x in input().split(" ")]
+        self.n_x = [int(x) for x in input().split(' ')]
         for x in range(self.n_x[0]):
-            self.candies.append([int(x) for x in input().split(" ")])
+            self.candies.append([int(x) for x in input().split(' ')])
 
     def process_task(self):
         self.candies = sorted(self.candies, key=itemgetter(2), reverse=True)
-        # print(self.candies)
         jump = self.n_x[1]
         eat = 1
         candies = [x.copy() for x in self.candies]
