@@ -1,18 +1,18 @@
-# cook your dish here
 try:
+
     def dectobin(a):
         r = [int(i) for i in bin(a)[2:]]
         return r
 
     def bintodec(a):
-        r = int("".join(str(x) for x in a), 2)
+        r = int(''.join((str(x) for x in a)), 2)
         return r
 
     def s(a):
         a = [a[-1]] + a[:-1]
         return a
     for i in range(int(input())):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         bina = dectobin(a)
         binb = dectobin(b)
         ans = []

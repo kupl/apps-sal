@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n = int(input())
     count = 0
@@ -12,7 +11,6 @@ for i in range(int(input())):
             for l in range(star):
                 print(chr(c), end='')
                 c += 1
-
         else:
             print(space * ' ', end='')
             for l in range(star):

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         rows = {}
         max_value = 0
@@ -12,8 +13,6 @@ class Solution:
                     a += str(j)
                 else:
                     b += str(j)
-            #a = tuple(a)
-            #b = tuple(b)
             if a not in rows:
                 rows[a] = 0
             if b not in rows:

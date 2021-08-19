@@ -2,11 +2,8 @@ import collections
 
 
 class Solution:
-    def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
-        # Like jump game
-        # At nums[i], add the max of [num[i-k], ... num[i-1], 0]
-        # this can be done by deque with max k
 
+    def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         sol = -float('inf')
         n = len(nums)
         maxque = collections.deque([(-1, 0)])
