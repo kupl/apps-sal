@@ -8,8 +8,8 @@ for i in range(t):
     z = max(b)
     b = sum(b) - z
     if a < b:
-        print("Alice")
+        print('Alice')
     elif a > b:
-        print("Bob")
+        print('Bob')
     else:
-        print("Draw")
+        print('Draw')

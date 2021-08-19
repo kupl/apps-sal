@@ -1,29 +1,28 @@
 import sys
 input = sys.stdin.readline
-
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 imos = []
 for i in range(n):
-    s, t, x = list(map(int, input().split()))
+    (s, t, x) = list(map(int, input().split()))
     imos.append((s - x, x))
     imos.append((t - x, -x))
 ans = set()
 j = 0
 for i in range(q):
     d = int(input())
-    imos.append((d, 1e100))
+    imos.append((d, 1e+100))
 imos.sort()
-m = 1e100
+m = 1e+100
 flag = False
-for t, stop in imos:
-    if stop == 1e100:
+for (t, stop) in imos:
+    if stop == 1e+100:
         if ans:
             if not flag:
                 m = min(ans)
                 flag = True
             print(m)
         else:
-            print((-1))
+            print(-1)
     elif stop > 0:
         ans.add(stop)
         if stop < m:

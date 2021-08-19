@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     temp = list(map(int, input().split()))
     if n == k:
         print(sum(temp))
@@ -9,7 +9,7 @@ for _ in range(int(input())):
         s = sum(temp[:k])
         temp = temp[:] + temp[:k - 1]
         for i in range(l - 1):
-            s = (s - temp[i]) + temp[k + i]
+            s = s - temp[i] + temp[k + i]
             if res < s:
                 res = s
         print(res)

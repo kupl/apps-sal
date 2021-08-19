@@ -3,7 +3,6 @@ n = x[0]
 t = x[1]
 a = x[2:n + 2]
 a.sort()
-
 sums = [0] * t
 count = 0
 for i in range(n):
@@ -15,5 +14,4 @@ for i in range(n):
         add = a[i] + a[k]
         if add < t:
             sums[add] += 1
-
 print(count)

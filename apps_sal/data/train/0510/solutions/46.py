@@ -28,13 +28,13 @@ def query(l, r):
 
 
 s = input()
-for i, c in enumerate(s, n):
-    data[i] = 1 << (ord(c) - 97)
+for (i, c) in enumerate(s, n):
+    data[i] = 1 << ord(c) - 97
 for i in range(n - 1, 0, -1):
     data[i] = data[2 * i] | data[2 * i + 1]
 for _ in range(int(input())):
-    q, a, b = input().split()
-    if q == "2":
+    (q, a, b) = input().split()
+    if q == '2':
         print(query(int(a) - 1, int(b)))
     else:
-        update(int(a) - 1, 1 << (ord(b) - 97))
+        update(int(a) - 1, 1 << ord(b) - 97)

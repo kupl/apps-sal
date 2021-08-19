@@ -1,11 +1,12 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         if not s:
             return s
         l = 0
         r = 0
         res = ''
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             if c == '(':
                 l += 1
             if c == ')':

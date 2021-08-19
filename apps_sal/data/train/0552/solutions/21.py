@@ -1,7 +1,6 @@
 t = int(input())
-
 for i in range(t):
-    w, k = map(int, input().split())
+    (w, k) = map(int, input().split())
     l = [int(x) for x in input().split()]
     l.sort()
     sum_w = sum(l)

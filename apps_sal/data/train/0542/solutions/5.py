@@ -5,12 +5,11 @@ def check_square(arr, nn, mm):
             for col in range(mm - dim + 1):
                 if arr[row][col] == arr[row][col + dim - 1] == arr[row + dim - 1][col] == arr[row + dim - 1][col + dim - 1]:
                     total += 1
-
     return total
 
 
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     garden = []
     for i in range(n):
         garden.append(input())

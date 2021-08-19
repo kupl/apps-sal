@@ -18,6 +18,6 @@ for __ in range(x):
         if c == 2:
             break
     if c == 2:
-        print("Truly Happy")
+        print('Truly Happy')
     else:
-        print("Poor Chef")
+        print('Poor Chef')

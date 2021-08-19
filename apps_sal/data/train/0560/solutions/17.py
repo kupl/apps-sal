@@ -7,8 +7,8 @@ while a:
     h = sum(x) - max(x)
     g = sum(y) - max(y)
     if h < g:
-        print("Alice")
+        print('Alice')
     elif g < h:
-        print("Bob")
+        print('Bob')
     else:
-        print("Draw")
+        print('Draw')

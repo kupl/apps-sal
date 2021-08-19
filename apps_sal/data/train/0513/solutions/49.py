@@ -1,7 +1,7 @@
 from bisect import bisect_left
 import sys
-sys.setrecursionlimit(10**7)
-INF = 10**18
+sys.setrecursionlimit(10 ** 7)
+INF = 10 ** 18
 
 
 def dfs(v, p, max_):
@@ -22,7 +22,7 @@ N = int(input())
 a = list(map(int, input().split()))
 G = [[] for i in range(N)]
 for i in range(N - 1):
-    u, v = map(lambda x: int(x) - 1, input().split())
+    (u, v) = map(lambda x: int(x) - 1, input().split())
     G[u].append(v)
     G[v].append(u)
 dp = [INF] * (N + 1)

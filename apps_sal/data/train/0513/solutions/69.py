@@ -1,7 +1,7 @@
 from bisect import bisect_left
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def main(N, a, tr):
@@ -28,8 +28,8 @@ def __starting_point():
     a = list(map(int, input().split()))
     tr = [[] for _ in range(N)]
     for _ in range(N - 1):
-        u, v = map(int, input().split())
-        u, v = u - 1, v - 1
+        (u, v) = map(int, input().split())
+        (u, v) = (u - 1, v - 1)
         tr[u].append(v)
         tr[v].append(u)
     main(N, a, tr)

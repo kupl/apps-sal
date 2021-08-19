@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 XOR = 0
 for a in A:
     XOR ^= a

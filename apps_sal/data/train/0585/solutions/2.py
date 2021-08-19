@@ -13,14 +13,12 @@ def fac(x, n):
 
 
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     rev = n
     lis = list(map(int, input().split()))
-
     g = lis[0]
     for i in lis:
         g = gcd(g, i)
-
     if n > g:
         k = n - g
     else:

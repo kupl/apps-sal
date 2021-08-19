@@ -2,7 +2,7 @@ t = eval(input())
 for _ in range(t):
     n = eval(input())
     a = input().strip().split()
-    cb, cs = 0, ""
+    (cb, cs) = (0, '')
     for i in range(len(a[0])):
         for j in range(i + 1, len(a[0]) + 1):
             al = True

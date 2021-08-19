@@ -7,7 +7,7 @@ def bfs():
     ans[1] = 1
     while q:
         i = q.popleft()
-        for j, c in G[i]:
+        for (j, c) in G[i]:
             if ans[j] == 0:
                 if not ans[i] == c:
                     ans[j] = c
@@ -17,10 +17,10 @@ def bfs():
     return
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 G = [[] for _ in range(n + 1)]
 for _ in range(m):
-    u, v, c = map(int, input().split())
+    (u, v, c) = map(int, input().split())
     G[u].append([v, c])
     G[v].append([u, c])
 ans = [0] * (n + 1)

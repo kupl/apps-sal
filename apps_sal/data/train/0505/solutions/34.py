@@ -21,25 +21,18 @@ class Stack:
 class Solution:
 
     def minRemoveToMakeValid(self, s: str) -> str:
-
         stack = Stack()
-
         remove_indices = []
-
-        for i, char in enumerate(s):
-
+        for (i, char) in enumerate(s):
             if char == '(':
                 stack.push(i)
-
             if char == ')':
                 if stack.empty():
                     remove_indices.append(i)
                 else:
                     stack.pop()
-
         while not stack.empty():
             remove_indices.append(stack.pop())
-
         res = ''
         j = 0
         for i in range(len(s)):
@@ -50,5 +43,4 @@ class Solution:
                     j += 1
             else:
                 res += s[i]
-
         return res

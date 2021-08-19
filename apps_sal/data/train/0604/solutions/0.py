@@ -1,10 +1,10 @@
 for _ in range(int(input())):
-    r, c = map(int, input().split())
+    (r, c) = map(int, input().split())
     l = []
     for k in range(r):
         a = list(map(int, input().split()))
         l.append(a)
-    ans = "Stable"
+    ans = 'Stable'
     for i in range(r):
         for j in range(c):
             p = l[i][j]
@@ -18,6 +18,6 @@ for _ in range(int(input())):
             if i <= r - 1 and j + 1 <= c - 1:
                 count += 1
             if count <= p:
-                ans = "Unstable"
+                ans = 'Unstable'
                 break
     print(ans)

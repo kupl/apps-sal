@@ -10,7 +10,7 @@ while N != 0:
             flag = 1
             break
     if flag == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
     N -= 1

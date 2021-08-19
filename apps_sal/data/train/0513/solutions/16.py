@@ -4,14 +4,14 @@ N = int(input())
 A = list(map(int, input().split()))
 UV = [list(map(int, input().split())) for i in range(N - 1)]
 c = [[] for i in range(N)]
-for i, j in UV:
+for (i, j) in UV:
     c[i - 1].append(j - 1)
     c[j - 1].append(i - 1)
 v = [0] * N
-d = [10**9 + 1] * N
+d = [10 ** 9 + 1] * N
 stk = []
 ans = [0] * N
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 def dfs(p, l):
@@ -25,7 +25,7 @@ def dfs(p, l):
         if v[n] == 0:
             v[n] = 1
             dfs(n, l)
-    i, x = stk.pop()
+    (i, x) = stk.pop()
     d[i] = x
 
 

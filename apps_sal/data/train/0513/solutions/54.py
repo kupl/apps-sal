@@ -2,15 +2,13 @@ from bisect import bisect_left, bisect_right
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(100000000)
-
 n = int(input())
 a = list(map(int, input().split()))
-G = [[]for i in range(n)]
+G = [[] for i in range(n)]
 for i in range(n - 1):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     G[u - 1].append(v - 1)
     G[v - 1].append(u - 1)
-
 lis = [a[0]]
 stack = []
 ans = [1] * n
@@ -27,12 +25,9 @@ def dfs(cur, p=-1):
         else:
             stack.append((idx, lis[idx]))
             lis[idx] = a[nx]
-
         ans[nx] = len(lis)
-
         dfs(nx, cur)
-
-        idx, v = stack.pop()
+        (idx, v) = stack.pop()
         if v < 0:
             lis.pop()
         else:
@@ -40,4 +35,4 @@ def dfs(cur, p=-1):
 
 
 dfs(0)
-print(*ans, sep="\n")
+print(*ans, sep='\n')

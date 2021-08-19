@@ -4,7 +4,6 @@ for _ in range(t):
     maxi = 0
     for i in range(n):
         k = int(input())
-        if(k > maxi):
+        if k > maxi:
             maxi = k
-
     print(maxi)

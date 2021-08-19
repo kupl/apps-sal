@@ -1,11 +1,11 @@
 t = int(input())
 for _ in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     s = input()
     flag = False
     for i in range(n):
         for j in range(m):
-            x, y = i, j
+            (x, y) = (i, j)
             c = True
             for k in s:
                 if k == 'L':
@@ -16,7 +16,7 @@ for _ in range(t):
                     x -= 1
                 else:
                     y += 1
-                if x < 0 or x > n - 1 or y < 0 or y > m - 1:
+                if x < 0 or x > n - 1 or y < 0 or (y > m - 1):
                     c = False
                     break
             if c:

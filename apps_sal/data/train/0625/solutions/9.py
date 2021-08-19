@@ -3,8 +3,8 @@ from itertools import accumulate
 for _ in range(int(input())):
     n = int(input())
     A = list(map(int, input().split()))
-    K = 10**9
-    ans, rems = 0, {0: 1}
+    K = 10 ** 9
+    (ans, rems) = (0, {0: 1})
     for i in range(len(A)):
         if i > 0:
             A[i] += A[i - 1]

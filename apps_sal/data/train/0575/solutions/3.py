@@ -1,8 +1,8 @@
 for _ in range(int(input())):
     l = list(input())
     temp = ['<', '=']
-    fg, c = 0, 0
-    ans1, ans2 = 0, 0
+    (fg, c) = (0, 0)
+    (ans1, ans2) = (0, 0)
     for i in range(len(l)):
         if l[i] in temp:
             fg = 1
@@ -16,7 +16,7 @@ for _ in range(int(input())):
         ans1 = max(ans1, c)
     ans1 += 1
     temp = ['>', '=']
-    fg, c = 0, 0
+    (fg, c) = (0, 0)
     for i in range(len(l)):
         if l[i] in temp:
             fg = 1

@@ -1,13 +1,13 @@
 import bisect
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 STX = []
 for i in range(n):
-    s, t, x = map(int, input().split())
+    (s, t, x) = map(int, input().split())
     STX.append((s, t, x))
 STX.sort(key=lambda _: _[2])
-S, T, X = [], [], []
+(S, T, X) = ([], [], [])
 for stx in STX:
-    s, t, x = stx
+    (s, t, x) = stx
     S.append(s)
     T.append(t)
     X.append(x)

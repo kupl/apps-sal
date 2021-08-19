@@ -20,23 +20,21 @@ def check():
         return -1
 
 
-while(t):
+while t:
     t -= 1
-    n, k = [int(i) for i in input().split()]
+    (n, k) = [int(i) for i in input().split()]
     a = [int(i) for i in input().split()]
     ans = []
     arr = [0] * n
     for i in range(n):
         if k | a[i] != k:
-            a[i] = a[i - 1] | a[(i + 1) % (n)]
+            a[i] = a[i - 1] | a[(i + 1) % n]
             ans.append(i + 1)
             arr[i] = 1
-
     x = 0
     count = 0
     for i in range(n):
         x |= a[i]
-
     if x != k:
         print(-1)
     else:
@@ -47,5 +45,5 @@ while(t):
             for i in range(y, n + y):
                 if arr[i % n] == 0:
                     arr[i % n] == 1
-                    ans.append((i % n) + 1)
+                    ans.append(i % n + 1)
             print(*ans)

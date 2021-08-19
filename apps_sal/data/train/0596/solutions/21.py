@@ -1,6 +1,6 @@
 import math
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     t = math.floor(k / 2)
     r = n + t
     s = r * (r + 1)

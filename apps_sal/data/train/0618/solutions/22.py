@@ -1,8 +1,8 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(int, input().split()))
-    if (k > 1):
+    if k > 1:
         for i in range(k - 1):
             l.append(l[i])
     p = []

@@ -2,7 +2,7 @@ n = int(input())
 for i in range(n):
     t = int(input())
     m = list(map(int, input().split()))
-    p, q = 0, 0
+    (p, q) = (0, 0)
     if t == 1:
         if m[0] >= 0:
             print('YES')

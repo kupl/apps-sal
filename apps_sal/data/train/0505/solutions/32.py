@@ -1,8 +1,9 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         to_remove = []
         stack = []
-        for i, char in enumerate(s):
+        for (i, char) in enumerate(s):
             if char == '(':
                 stack.append(i)
             if char == ')':
@@ -12,6 +13,5 @@ class Solution:
                     stack.pop()
         if stack:
             to_remove.extend(stack)
-
-        output = [char for i, char in enumerate(s) if i not in to_remove]
+        output = [char for (i, char) in enumerate(s) if i not in to_remove]
         return ''.join(output)

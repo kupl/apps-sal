@@ -1,7 +1,7 @@
 t = int(input())
 while t > 0:
     t -= 1
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = [int(x) for x in input().split()]
     count = 0
     temp = [0] * (m + 1)

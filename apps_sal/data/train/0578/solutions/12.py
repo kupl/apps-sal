@@ -1,6 +1,6 @@
 from math import floor, ceil
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     t1 = ceil(ceil(n / 2) / k)
     t2 = ceil(floor(n / 2) / k)
     t3 = floor(ceil(n / 2) / k)
@@ -17,7 +17,7 @@ for _ in range(int(input())):
     t2 = int((n - k * t2) * t2)
     t3 = int((n - k * t3) * t3)
     t4 = int((n - k * t4) * t4)
-    if t1 < 0 and t2 < 0 and t3 < 0 and t4 < 0:
+    if t1 < 0 and t2 < 0 and (t3 < 0) and (t4 < 0):
         print(0)
     else:
         print(max(t1, t2, t3, t4))

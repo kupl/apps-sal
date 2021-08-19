@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = [int(i) for i in input().split()]
     maxi = 0
     grtr = 0

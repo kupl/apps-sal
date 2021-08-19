@@ -5,4 +5,4 @@ for a in A[1:]:
     X = X ^ a
 for i in range(n):
     A[i] = str(X ^ A[i])
-print(" ".join(A))
+print(' '.join(A))

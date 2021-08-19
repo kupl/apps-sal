@@ -4,4 +4,4 @@ all = 0
 for a in A:
     all ^= a
 for a in A:
-    print(all ^ a, end=" ")
+    print(all ^ a, end=' ')

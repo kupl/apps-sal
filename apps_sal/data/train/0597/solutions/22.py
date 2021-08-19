@@ -5,7 +5,7 @@ for _ in range(int(input())):
     d = []
     D = []
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         x_arr.append(x)
         h_arr.append(y)
     for x in range(1, n):
@@ -18,5 +18,5 @@ for _ in range(int(input())):
     D.sort()
     ans = 0
     for x in range(n):
-        ans += (D[x] * h_arr[x])
+        ans += D[x] * h_arr[x]
     print(ans)

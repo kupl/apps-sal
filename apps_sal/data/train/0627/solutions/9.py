@@ -3,12 +3,19 @@ from collections import defaultdict
 sys.setrecursionlimit(3000)
 
 
-def R(t=int): return t(eval(input()))
-def RL(t=int): return [t(x) for x in input().split()]
-def RLL(n, t=int): return [RL(t) for _ in range(n)]
+def R(t=int):
+    return t(eval(input()))
 
 
-MOD = 10**9 + 7
+def RL(t=int):
+    return [t(x) for x in input().split()]
+
+
+def RLL(n, t=int):
+    return [RL(t) for _ in range(n)]
+
+
+MOD = 10 ** 9 + 7
 
 
 def divc(x):
@@ -26,7 +33,7 @@ def C(n, k):
 
 
 def solve():
-    N, K = RL()
+    (N, K) = RL()
     print(C(K + N - 1, N - 1))
 
 

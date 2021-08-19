@@ -6,6 +6,6 @@ for i in range(0, T):
     if sum(arr) < 0:
         flag = 1
     if flag == 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

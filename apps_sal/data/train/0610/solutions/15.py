@@ -6,9 +6,9 @@ for test_ in range(int(input())):
         if a[i] == 1:
             temp.append(i)
     if len(temp) == 1:
-        print("YES")
+        print('YES')
     else:
         dist = []
         for i in range(1, len(temp)):
             dist.append(temp[i] - temp[i - 1])
-        print("YES" if min(dist) >= 6 else "NO")
+        print('YES' if min(dist) >= 6 else 'NO')

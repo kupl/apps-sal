@@ -5,18 +5,17 @@ def solve(s):
     li = s.split()
     n = len(li)
     l = len(li[0])
-    m = ""
+    m = ''
     for i in range(1, n):
         if l >= len(li[i]):
             l = len(li[i])
             m = li[i]
-
-    res = ""
+    res = ''
     res += m
     for i in li:
-        res += " "
+        res += ' '
         res += i
-        res += " "
+        res += ' '
         res += m
     print(res)
 

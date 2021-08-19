@@ -8,8 +8,8 @@ for i in range(t):
     sum_alice = sum(alice)
     sum_bob = sum(bob)
     if sum_bob > sum_alice:
-        print("Alice")
+        print('Alice')
     elif sum_alice > sum_bob:
-        print("Bob")
+        print('Bob')
     else:
-        print("Draw")
+        print('Draw')

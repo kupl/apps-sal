@@ -14,12 +14,12 @@ def gcd(n1, n2):
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
-    mi, d = a[1] - a[0], [a[1] - a[0]]
+    (mi, d) = (a[1] - a[0], [a[1] - a[0]])
     for i in range(2, n):
         d += [a[i] - a[i - 1]]
-        if (d[i - 1] % mi) != 0:
+        if d[i - 1] % mi != 0:
             mi = gcd(mi, d[i - 1])
     d += [360 - a[n - 1] + a[0]]
-    if (d[n - 1] % mi) != 0:
+    if d[n - 1] % mi != 0:
         mi = gcd(mi, d[n - 1])
     print(360 // mi - n)

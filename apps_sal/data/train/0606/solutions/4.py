@@ -1,11 +1,10 @@
 from math import log
 try:
     for i in range(int(input())):
-        a = input().split(" ")
-        n, k, x, m = map(int, a)
-        ans = "no"
+        a = input().split(' ')
+        (n, k, x, m) = map(int, a)
+        ans = 'no'
         u = 0
-
         if k != 2 and k != 1:
             if x % k == 0:
                 x //= k
@@ -14,7 +13,6 @@ try:
                 n -= 1
                 x //= k
                 u = -1
-
             if u == -1:
                 while x != 0:
                     if x % k == 0:
@@ -27,14 +25,11 @@ try:
                         n -= 2
                     else:
                         break
-
             if n == 0 and x == 0:
-                ans = "yes"
-
+                ans = 'yes'
         elif k == 1:
             if x == n:
-                ans = "yes"
-
+                ans = 'yes'
         else:
             lst = []
             p = 0
@@ -47,11 +42,9 @@ try:
                     x //= 2
                     n -= 1
                     p += 1
-                    lst.append(2**(p - 1))
-
+                    lst.append(2 ** (p - 1))
             if len(lst) == N:
-                ans = "yes"
-
+                ans = 'yes'
             if len(lst) < N:
                 k = 0
                 g = len(lst)
@@ -67,8 +60,7 @@ try:
                     else:
                         k = 0
                 if g >= N:
-                    ans = "yes"
-
+                    ans = 'yes'
         print(ans)
 except EOFError as e:
     pass

@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -7,6 +6,7 @@ mod = 10 ** 9 + 7
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -26,7 +26,7 @@ class UnionFind:
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -45,7 +45,7 @@ class UnionFind:
         """
         edge.sort()
         cost_sum = 0
-        for cost, node1, node2 in edge:
+        for (cost, node1, node2) in edge:
             if not self.same(node1, node2):
                 cost_sum += cost
                 self.union(node1, node2)
@@ -53,8 +53,9 @@ class UnionFind:
 
 
 def resolve():
+
     def dfs(v):
-        for d, u in edge[v]:
+        for (d, u) in edge[v]:
             if uf.same(v, u):
                 continue
             uf.union(u, v)
@@ -66,19 +67,17 @@ def resolve():
                         res[u] = i
                         break
             dfs(u)
-
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     edge = [[] for _ in range(n)]
     for _ in range(m):
-        u, v, c = map(int, input().split())
+        (u, v, c) = map(int, input().split())
         edge[u - 1].append([c, v - 1])
         edge[v - 1].append([c, u - 1])
-
     uf = UnionFind(n)
     res = [0] * n
     res[0] = 1
     dfs(0)
-    print(*res, sep="\n")
+    print(*res, sep='\n')
 
 
 def __starting_point():

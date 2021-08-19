@@ -3,15 +3,15 @@ q = input()
 for i in q:
     s[ord(i) - 97] = 1
 n = int(input())
-while(n):
+while n:
     e = input()
     f = 1
     for i in e:
-        if not (s[ord(i) - 97]):
+        if not s[ord(i) - 97]:
             f = 0
             break
-    if(f):
-        print("Yes")
+    if f:
+        print('Yes')
     else:
-        print("No")
+        print('No')
     n -= 1

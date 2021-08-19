@@ -1,8 +1,8 @@
 from collections import deque
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 g = [[] for _ in range(n)]
 for _ in range(m):
-    u, v, c = [int(i) - 1 for i in input().split()]
+    (u, v, c) = [int(i) - 1 for i in input().split()]
     g[u].append([v, c])
     g[v].append([u, c])
 num = [0] * n
@@ -15,7 +15,7 @@ while d:
     if num[a]:
         continue
     num[a] = 1
-    for u, c in g[a]:
+    for (u, c) in g[a]:
         if num[u]:
             continue
         if label[a] != c:
@@ -25,4 +25,4 @@ while d:
         else:
             label[u] = 0
         d.appendleft(u)
-print("\n".join(map(lambda i: str(i + 1), label)))
+print('\n'.join(map(lambda i: str(i + 1), label)))

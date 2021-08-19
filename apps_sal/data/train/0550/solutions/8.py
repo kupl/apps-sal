@@ -1,21 +1,21 @@
 t = int(input())
-while(t):
+while t:
     l = input().split()
     a = int(l[0])
     b = int(l[1])
-    a = str(bin(a).replace("0b", ""))
-    b = str(bin(b).replace("0b", ""))
-    if(len(a) != len(b)):
-        if(len(a) > len(b)):
+    a = str(bin(a).replace('0b', ''))
+    b = str(bin(b).replace('0b', ''))
+    if len(a) != len(b):
+        if len(a) > len(b):
             m = len(a) - len(b)
-            b = ("0" * m) + b
+            b = '0' * m + b
         else:
             m = len(b) - len(a)
-            a = ("0" * m) + a
+            a = '0' * m + a
     l = len(b)
     s1 = b.count('1')
     s2 = b.count('0')
-    if(l == s1 or l == s2):
+    if l == s1 or l == s2:
         j = int(a) ^ int(b)
         k = int(str(j), 2)
         print(0, k)

@@ -4,7 +4,7 @@ for _ in range(t):
     w = input().split()
     x = w.pop(0)
     l = len(x)
-    ans = ""
+    ans = ''
     for i in range(l):
         for j in range(i, l + 1):
             common = True

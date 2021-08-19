@@ -10,6 +10,6 @@ for i in range(t):
             f = 1
             break
     if f == 1:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

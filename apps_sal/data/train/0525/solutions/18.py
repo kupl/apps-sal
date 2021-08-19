@@ -5,7 +5,7 @@ for _ in range(t):
     b = l[1]
     c = l[2]
     x = c // a
-    while(1):
+    while 1:
         if a * x + b <= c:
             print(a * x + b)
             break

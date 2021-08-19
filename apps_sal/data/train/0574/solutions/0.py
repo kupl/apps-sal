@@ -4,7 +4,7 @@ for t in range(int(input())):
     s = 0
     l = []
     for i in range(n):
-        if (a[i] < 0):
+        if a[i] < 0:
             e = i
             ss = sum(a[s:e])
             l.append((ss, e - s, n - s))
@@ -17,4 +17,4 @@ for t in range(int(input())):
     e = x[1] + s
     for i in range(s, e):
         print(a[i], end=' ')
-    print("")
+    print('')

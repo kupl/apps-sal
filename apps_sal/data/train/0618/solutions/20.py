@@ -1,4 +1,5 @@
 try:
+
     def maxSum(arr, n, k):
         res = 0
         for i in range(k):
@@ -10,7 +11,7 @@ try:
         return res
     t = int(input())
     for _ in range(t):
-        n, k = map(int, input().split())
+        (n, k) = map(int, input().split())
         arr = list(map(int, input().split()))
         arr = arr + arr[:k - 1]
         n1 = len(arr)

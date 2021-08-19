@@ -1,20 +1,17 @@
 import bisect
-
 n = int(input())
 s = list(input())
 q = int(input())
-
 pos = [[] for i in range(26)]
-alp = "abcdefghijklmnopqrstuvwxyz"
+alp = 'abcdefghijklmnopqrstuvwxyz'
 atoi = {}
 for i in range(26):
     atoi[alp[i]] = i
 for i in range(n):
     pos[atoi[s[i]]].append(i)
-
 for i in range(q):
-    a, b, c = input().split()
-    if a == "1":
+    (a, b, c) = input().split()
+    if a == '1':
         b = int(b) - 1
         if c == s[b]:
             continue
@@ -23,7 +20,7 @@ for i in range(q):
         bisect.insort_left(pos[atoi[c]], b)
         s[b] = c
     else:
-        l, r = int(b) - 1, int(c)
+        (l, r) = (int(b) - 1, int(c))
         ans = 0
         for i in range(26):
             cnt = bisect.bisect_left(pos[i], r) - bisect.bisect_left(pos[i], l)

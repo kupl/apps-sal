@@ -7,15 +7,15 @@ for i in range(T):
     a = 0
     count = 0
     for i in List:
-        if(Initial == i):
+        if Initial == i:
             count += 1
-            if(count >= 3):
+            if count >= 3:
                 a = 1
                 break
-        if(Initial != i):
+        if Initial != i:
             count = 1
         Initial = i
-    if(a == 1):
-        print("Yes")
+    if a == 1:
+        print('Yes')
     else:
-        print("No")
+        print('No')

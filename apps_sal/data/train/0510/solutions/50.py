@@ -1,7 +1,7 @@
 from operator import or_
 
 
-class SegmentTree():
+class SegmentTree:
     """A segment Tree.
 
     This is a segment tree without recursions.
@@ -27,11 +27,9 @@ class SegmentTree():
     def __init__(self, iterable, func, e):
         self.func = func
         self.e = e
-
         ls = list(iterable)
         self.n = 1 << len(ls).bit_length()
         ls.extend([self.e] * (self.n - len(ls)))
-
         self.data = [self.e] * self.n + ls
         for i in range(self.n - 1, 0, -1):
             self.data[i] = self.func(self.data[2 * i], self.data[2 * i + 1])
@@ -78,7 +76,6 @@ class SegmentTree():
             If func is represented as '*', then it's:
             list[l] * list[l+1] * ... * list[r-1] 
         """
-
         left_folded = self.e
         right_folded = self.e
         l += self.n
@@ -92,23 +89,20 @@ class SegmentTree():
                 right_folded = self.func(self.data[r], right_folded)
             l //= 2
             r //= 2
-
         return self.func(left_folded, right_folded)
 
 
 N = int(input())
 S = input()
-
-ls = [1 << (ord(c) - ord('a')) for c in S]
+ls = [1 << ord(c) - ord('a') for c in S]
 segtree = SegmentTree(ls, or_, 0)
-
 Q = int(input())
 for _ in range(Q):
     s = input()
     if s[0] == '1':
-        i, c = s[2:].split()
-        segtree.replace(int(i) - 1, 1 << (ord(c) - ord('a')))
+        (i, c) = s[2:].split()
+        segtree.replace(int(i) - 1, 1 << ord(c) - ord('a'))
     else:
-        l, r = list(map(int, s[2:].split()))
+        (l, r) = list(map(int, s[2:].split()))
         value = segtree.folded(l - 1, r)
-        print((format(value, 'b').count('1')))
+        print(format(value, 'b').count('1'))

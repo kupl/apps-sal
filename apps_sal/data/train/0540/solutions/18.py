@@ -1,6 +1,6 @@
 t = int(input())
 while t:
-    n, m = (int(o) for o in input().split())
+    (n, m) = (int(o) for o in input().split())
     a = [int(o) for o in input().split()]
     a.sort()
     j = 1
@@ -23,5 +23,4 @@ while t:
             if a[i] != m:
                 c += 1
         print(c)
-
     t -= 1

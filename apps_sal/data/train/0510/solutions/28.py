@@ -6,14 +6,13 @@ class SegTree:
             self.N *= 2
         self.tree = [0 for i in range(2 * self.N - 1)]
         for i in range(len(S)):
-            self.tree[self.N - 1 + i] = 1 << (ord(S[i]) - ord('a'))
+            self.tree[self.N - 1 + i] = 1 << ord(S[i]) - ord('a')
         for i in range(self.N - 2, -1, -1):
             self.tree[i] = self.tree[i * 2 + 1] | self.tree[i * 2 + 2]
 
     def update(self, index, char):
         i = self.N - 1 + index
-        self.tree[i] = 1 << (ord(char) - ord('a'))
-
+        self.tree[i] = 1 << ord(char) - ord('a')
         while i > 0:
             i = (i - 1) // 2
             self.tree[i] = self.tree[i * 2 + 1] | self.tree[i * 2 + 2]
@@ -33,14 +32,12 @@ class SegTree:
 
 
 def solve():
-
     N = int(input())
     S = list(input())
     tree = SegTree(N, S)
-
     Q = int(input())
     for _ in range(Q):
-        t_q, in_1, in_2 = input().split()
+        (t_q, in_1, in_2) = input().split()
         if t_q == '1':
             i_q = int(in_1)
             c_q = in_2
@@ -48,7 +45,7 @@ def solve():
         elif t_q == '2':
             l_q = int(in_1)
             r_q = int(in_2)
-            print((bin(tree.get(l_q - 1, r_q)).count('1')))
+            print(bin(tree.get(l_q - 1, r_q)).count('1'))
 
 
 solve()

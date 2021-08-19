@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 i = 0
 x = sum(l)
@@ -11,6 +11,4 @@ for i in range(n):
         m = max(c, m)
 d -= m
 d += m / k
-
-
 print(d)

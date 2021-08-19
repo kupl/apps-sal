@@ -1,5 +1,5 @@
 for T in range(int(input())):
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = list(map(int, input().split()))
     C = [0, 0]
     for Z in range(2):

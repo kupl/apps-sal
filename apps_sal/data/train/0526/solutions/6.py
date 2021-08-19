@@ -18,10 +18,9 @@ for i in range(t):
         sm += 1
         total += 8
         total = total + 32
+    elif sm == 1:
+        total += 8
     else:
-        if sm == 1:
-            total += 8
-        else:
-            total += 8
-            total = total + 32
+        total += 8
+        total = total + 32
     print(l * 8 - total)

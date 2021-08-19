@@ -10,7 +10,7 @@ def subset_sum_check(l, n, sum1):
 
 
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = [int(i) for i in input().split()]
     h = n // 2
     if n % 2 != 0:

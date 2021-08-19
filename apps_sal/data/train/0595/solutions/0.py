@@ -33,7 +33,7 @@ if n != 1:
         for j in range(n):
             if i - j < 0 or i + j >= n:
                 break
-            if (s[i - j] == s[i + j]):
+            if s[i - j] == s[i + j]:
                 if i - j - 1 >= 0:
                     strt[i - j - 1].append(2 * j + 1)
                 if i + j + 1 < n:
@@ -44,7 +44,7 @@ if n != 1:
         for j in range(n):
             if i - j < 0 or i + j + 1 >= n:
                 break
-            if (s[i - j] == s[i + j + 1]):
+            if s[i - j] == s[i + j + 1]:
                 if i - j - 1 >= 0:
                     strt[i - j - 1].append(2 * j + 2)
                 if i + j + 2 < n:

@@ -10,5 +10,5 @@ for i in range(n):
         mi = len(a[i])
         ind = i
 for i in range(n):
-    print(a[ind], a[i], end=" ")
+    print(a[ind], a[i], end=' ')
 print(a[ind])

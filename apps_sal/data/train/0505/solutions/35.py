@@ -1,4 +1,5 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         ans = ''
         stack = []
@@ -17,5 +18,4 @@ class Solution:
         for i in range(len(s)):
             if i not in to_delete_idx:
                 ans += s[i]
-
         return ans

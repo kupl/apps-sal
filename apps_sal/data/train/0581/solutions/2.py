@@ -6,6 +6,6 @@ for i in range(t):
     c = sum(b) + a[2]
     d = float(a[1] / c)
     if ceil(d) == d:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

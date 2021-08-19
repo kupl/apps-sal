@@ -1,4 +1,5 @@
 class Solution:
+
     def myAtoi(self, str):
         """
         :type str: str
@@ -8,7 +9,7 @@ class Solution:
         str = str.lstrip()
         if not str:
             return 0
-        negative = (str[0] == '-')
+        negative = str[0] == '-'
         str = str.lstrip('')
         if str[0] in ('-', '+'):
             str = str[1:]

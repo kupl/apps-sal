@@ -7,7 +7,7 @@ def rSubset(arr, r):
 
 arr = []
 arr = list(map(int, input().split()))
-N, T = arr[0], arr[1]
+(N, T) = (arr[0], arr[1])
 arr.remove(N)
 arr.remove(T)
 arr = rSubset(arr, 4)

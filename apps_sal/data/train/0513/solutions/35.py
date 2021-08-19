@@ -1,11 +1,11 @@
 from bisect import bisect_left, bisect_right
 import sys
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 N = int(input())
 A = list(map(int, input().split()))
 edge = [[] for _ in range(N)]
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
 

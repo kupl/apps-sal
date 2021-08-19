@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
     s = input()
-    x = ""
+    x = ''
     i = 0
     ans = 0
     while i < len(s):

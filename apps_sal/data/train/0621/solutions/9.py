@@ -1,6 +1,6 @@
 def sub(s1, s2):
     m = [[0] * (1 + len(s2)) for i in range(1 + len(s1))]
-    longest, x_longest = 0, 0
+    (longest, x_longest) = (0, 0)
     for x in range(1, 1 + len(s1)):
         for y in range(1, 1 + len(s2)):
             if s1[x - 1] == s2[y - 1]:
@@ -10,7 +10,7 @@ def sub(s1, s2):
                     x_longest = x
             else:
                 m[x][y] = 0
-    return s1[x_longest - longest: x_longest]
+    return s1[x_longest - longest:x_longest]
 
 
 test = eval(input())

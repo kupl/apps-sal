@@ -4,9 +4,9 @@ try:
 except:
     pass
 for _ in range(t):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     d = c % a
-    if(d < b):
+    if d < b:
         print(c - d + b - a)
     else:
         print(c - d + b)

@@ -5,17 +5,12 @@ def printrev(start):
 
 testcase = int(input())
 while testcase:
-
     k = int(input())
-
     rem = k % 25
     quo = k // 25
     if rem != 0:
         printrev(97 + rem)
-
     for _ in range(quo):
         printrev(ord('z'))
-
     print()
-
     testcase -= 1

@@ -1,7 +1,8 @@
 from collections import defaultdict
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -16,13 +17,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -37,7 +35,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -49,15 +47,15 @@ class UnionFind():
         return group_members
 
     def __str__(self):
-        return '\n'.join(f'{r}: {m}' for r, m in list(self.all_group_members().items()))
+        return '\n'.join((f'{r}: {m}' for (r, m) in list(self.all_group_members().items())))
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 un = UnionFind(n)
 next_edge_dic = {}
 flag = False
 for _ in range(m):
-    u, v, c = list(map(int, input().split()))
+    (u, v, c) = list(map(int, input().split()))
     u -= 1
     v -= 1
     if not un.same(u, v):
@@ -80,7 +78,7 @@ else:
     ans[0] = 1
     while stack:
         edge = stack.pop()
-        for next_edge, label in next_edge_dic[edge]:
+        for (next_edge, label) in next_edge_dic[edge]:
             if next_edge in visited:
                 continue
             if ans[edge] == label:
@@ -93,4 +91,4 @@ else:
             stack.append(next_edge)
         visited.add(edge)
     for i in range(n):
-        print((ans[i]))
+        print(ans[i])

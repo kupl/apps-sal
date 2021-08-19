@@ -4,23 +4,19 @@ input = sys.stdin.readline
 
 
 def main():
-    n, q = list(map(int, input().split()))
-
+    (n, q) = list(map(int, input().split()))
     key = []
     for i in range(n):
-        s, t, x = list(map(int, input().split()))
-        l, r = max(0, s - x), max(0, t - x)
+        (s, t, x) = list(map(int, input().split()))
+        (l, r) = (max(0, s - x), max(0, t - x))
         key.append((l, 1, x))
         key.append((r, -1, x))
-
     for i in range(q):
         d = int(input())
         key.append((d, 2))
-
     key.sort()
     judge = []
     already = dict()
-
     for i in range(2 * n + q):
         k = key[i]
         if k[1] == -1:
@@ -38,9 +34,9 @@ def main():
                 else:
                     break
             if judge:
-                print((judge[0]))
+                print(judge[0])
             else:
-                print((-1))
+                print(-1)
 
 
 def __starting_point():

@@ -7,7 +7,7 @@ while tc != 0:
     count = 2
     max = 0
     while i < size:
-        if data[i] == (data[i - 1] + data[i - 2]):
+        if data[i] == data[i - 1] + data[i - 2]:
             count += 1
             if count > max:
                 max = count

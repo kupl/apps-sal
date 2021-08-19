@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k = list(map(int, input().strip().split()))
+    (n, k) = list(map(int, input().strip().split()))
     a = list(map(int, input().strip().split()))
     c = 0
     f = 0
@@ -11,11 +11,10 @@ for _ in range(t):
             f += 1
             if f == 1:
                 d[0] = i
+            elif a[i] == a[d[0]]:
+                f -= 1
             else:
-                if a[i] == a[d[0]]:
-                    f -= 1
-                else:
-                    d[1] = i
+                d[1] = i
         c += 1
         if f == 2:
             f = 1

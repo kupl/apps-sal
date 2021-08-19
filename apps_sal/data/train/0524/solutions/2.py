@@ -1,4 +1,3 @@
-
 string = input()
 token = {}
 for i in range(98, 123, 2):
@@ -10,9 +9,9 @@ for letter in string:
     l.append(token.copy())
 q = int(input())
 for query in range(q):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     ans = 0
     if a > len(string):
         a = len(string)

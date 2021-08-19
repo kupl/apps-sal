@@ -7,7 +7,7 @@ def maxCircularSum(arr, n, k):
     ans = sum
     for i in range(k, n + k):
         sum += arr[i % n] - arr[(i - k) % n]
-        if (sum > ans):
+        if sum > ans:
             ans = sum
             start = (i - k + 1) % n
             end = i % n

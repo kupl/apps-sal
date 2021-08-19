@@ -11,18 +11,17 @@ try:
         l = []
         for i in t:
             if i in d:
-                l.append("y")
+                l.append('y')
             else:
-                l.append("no")
+                l.append('no')
         for i in q:
             if i in p:
-                l.append("y")
+                l.append('y')
             else:
-                l.append("no")
-
-        if "no" in l:
-            print("no")
+                l.append('no')
+        if 'no' in l:
+            print('no')
         else:
-            print("yes")
+            print('yes')
 except:
     pass

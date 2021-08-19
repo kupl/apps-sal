@@ -1,23 +1,23 @@
 t = int(input())
-while(t):
+while t:
     t -= 1
-    a, b = list(map(int, input().split()))
-    a = bin(a).replace("0b", "")
-    b = bin(b).replace("0b", "")
+    (a, b) = list(map(int, input().split()))
+    a = bin(a).replace('0b', '')
+    b = bin(b).replace('0b', '')
     s1 = len(a)
     s2 = len(b)
-    if(s1 != s2):
-        if(s1 > s2):
+    if s1 != s2:
+        if s1 > s2:
             f = s1 - s2
-            b = (f * '0') + b
+            b = f * '0' + b
         else:
             f = s2 - s1
-            a = (f * '0') + a
+            a = f * '0' + a
     s1 = len(a)
     s2 = len(b)
     t1 = b.count('1')
     t2 = b.count('0')
-    if(s2 == t1 or s2 == t2):
+    if s2 == t1 or s2 == t2:
         n = int(a) ^ int(b)
         m = int(str(n), 2)
         print(0, m)

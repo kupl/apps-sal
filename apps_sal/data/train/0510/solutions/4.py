@@ -5,13 +5,13 @@ def main():
     n = int(input())
     s = list(input())
     q = int(input())
-    _is = {chr(i): [] for i in range(ord("a"), ord("a") + 27)}
-    for i, si in enumerate(s):
+    _is = {chr(i): [] for i in range(ord('a'), ord('a') + 27)}
+    for (i, si) in enumerate(s):
         _is[si].append(i)
     for _ in range(q):
-        t, i, c = input().split()
+        (t, i, c) = input().split()
         i = int(i) - 1
-        if t == "1":
+        if t == '1':
             if s[i] != c:
                 index = bisect_left(_is[s[i]], i)
                 del _is[s[i]][index]

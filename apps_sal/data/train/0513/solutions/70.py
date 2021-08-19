@@ -1,11 +1,10 @@
 from bisect import bisect_left
-
 N = int(input())
-*A, = map(int, input().split())
-INF = 10**20
+(*A,) = map(int, input().split())
+INF = 10 ** 20
 G = [[] for _ in range(N)]
 ab = [tuple(map(int, input().split())) for _ in range(N - 1)]
-for a, b in ab:
+for (a, b) in ab:
     G[a - 1].append(b - 1)
     G[b - 1].append(a - 1)
 
@@ -27,7 +26,7 @@ def dfs(a0):
                 todo.append(~b)
                 todo.append(b)
         else:
-            idx, val = his[~a]
+            (idx, val) = his[~a]
             lis[idx] = val
     return
 
@@ -36,4 +35,4 @@ lis = [INF] * N
 dp = [0] * N
 his = {}
 dfs(0)
-print(*dp, sep="\n")
+print(*dp, sep='\n')

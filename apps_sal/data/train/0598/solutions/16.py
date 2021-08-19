@@ -2,9 +2,9 @@ import sys
 
 
 def __starting_point():
-    n, k = [int(u) for u in sys.stdin.readline().strip().split()]
+    (n, k) = [int(u) for u in sys.stdin.readline().strip().split()]
     val = [int(u) for u in sys.stdin.readline().strip().split()]
-    ans = ""
+    ans = ''
     if k > 0:
         maxval = max(val)
         for i in range(n):

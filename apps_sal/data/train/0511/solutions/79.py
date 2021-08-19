@@ -6,4 +6,4 @@ for j in range(1, N):
 ans = [0] * N
 for i in range(N):
     ans[i] = allxor ^ A[i]
-print(*ans, sep=" ")
+print(*ans, sep=' ')

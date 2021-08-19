@@ -1,4 +1,5 @@
 class SegmentTree:
+
     def __init__(self, n, segment_func, identity_element):
         self.n = n
         self.num = 1 << (self.n - 1).bit_length()
@@ -65,7 +66,7 @@ class SegmentTree:
 
 
 def conv_to_int(x):
-    return 1 << (ord(x) - ord('a'))
+    return 1 << ord(x) - ord('a')
 
 
 def main():

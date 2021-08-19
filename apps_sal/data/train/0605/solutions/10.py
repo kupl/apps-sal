@@ -1,11 +1,10 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     s = input()
     ans = 'unsafe'
-
     for i in range(n):
         for j in range(m):
-            x, y = i, j
+            (x, y) = (i, j)
             res = 1
             for k in s:
                 if k == 'L':
@@ -16,10 +15,9 @@ for _ in range(int(input())):
                     y += 1
                 else:
                     x += 1
-                if x < 0 or x >= n or y < 0 or y >= m:
+                if x < 0 or x >= n or y < 0 or (y >= m):
                     res = 0
                     break
-
             if res:
                 ans = 'safe'
                 break

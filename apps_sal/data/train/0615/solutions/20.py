@@ -1,8 +1,8 @@
 n = int(input())
-while(n > 0):
+while n > 0:
     l = list(map(int, input().split()))
     l1 = list(map(int, input().split()))
-    while(l[1] > 0):
+    while l[1] > 0:
         l2 = list(map(int, input().split()))
         s = 0
         for i in range(l2[0] - 1, l2[1]):

@@ -8,7 +8,6 @@ for _ in range(t):
     for j in range(n - 1, 1, -1):
         if l[j] != x[j]:
             x[j] = x[j - 1] = x[j - 2] = l[j]
-
     if x == l:
         print('Yes')
     else:

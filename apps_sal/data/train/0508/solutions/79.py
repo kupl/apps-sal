@@ -1,16 +1,13 @@
 import heapq
 import sys
 input = sys.stdin.readline
-
-N, Q = (int(i) for i in input().split())
+(N, Q) = (int(i) for i in input().split())
 L = [0] * 2 * N
 for i in range(N):
-    S, T, X = (int(i) for i in input().split())
+    (S, T, X) = (int(i) for i in input().split())
     L[2 * i] = (S - X, X, 1)
     L[2 * i + 1] = (T - X, X, 0)
-
 L.sort(reverse=True)
-
 Xs = set([])
 XH = []
 heapq.heapify(XH)
@@ -19,7 +16,7 @@ for i in range(Q):
     ans = 0
     while True:
         if L:
-            t, X, f = L.pop()
+            (t, X, f) = L.pop()
             if t <= D:
                 if f == 1:
                     Xs.add(X)
@@ -36,4 +33,4 @@ for i in range(Q):
             X = heapq.heappop(XH)
         print(XH[0])
     else:
-        print("-1")
+        print('-1')

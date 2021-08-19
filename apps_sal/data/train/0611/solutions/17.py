@@ -12,7 +12,6 @@ while t > 0:
             d[a[i]] = [i + 1]
         else:
             d[a[i]].append(i + 1)
-
     for i in list(d.keys()):
         c = 0
         for j in d[i]:

@@ -7,6 +7,6 @@ for i in range(t):
         if a.count(i) > 1:
             c = c + 1
     if c >= 1:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

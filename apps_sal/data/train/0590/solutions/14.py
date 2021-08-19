@@ -1,6 +1,6 @@
 T = int(input())
 for i in range(T):
-    n, x, m = list(map(int, input().split()))
+    (n, x, m) = list(map(int, input().split()))
     l1 = [int(i) for i in input().split()]
     if x == 1:
         l1[0] = l1[0] % 1000000007

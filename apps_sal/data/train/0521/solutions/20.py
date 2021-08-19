@@ -3,7 +3,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    p, q = list(map(int, input().split()))
+    (p, q) = list(map(int, input().split()))
     a = sorted(a)
     b = [0] * len(a)
     s = 0

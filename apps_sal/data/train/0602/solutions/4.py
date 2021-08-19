@@ -5,5 +5,5 @@ for s in l:
         mins = s
 ans = mins
 for s in l:
-    ans += " " + s + " " + mins
+    ans += ' ' + s + ' ' + mins
 print(ans)

@@ -1,8 +1,6 @@
 import sys
 input = sys.stdin.readline
-
 T = int(input())
-
 for _ in range(T):
     s = input()
     q = int(input())
@@ -14,14 +12,12 @@ for _ in range(T):
         if s[i] == ')':
             stack.append(i)
             val[i] = last_open
+        elif len(stack) != 0:
+            val[i] = stack[-1]
+            stack.pop()
+            last_open = val[i]
         else:
-            if len(stack) != 0:
-                val[i] = stack[-1]
-                stack.pop()
-                last_open = val[i]
-            else:
-                last_open = -1
-
+            last_open = -1
     for i in range(q):
         if val[t[i] - 1] == -1:
             print(-1)

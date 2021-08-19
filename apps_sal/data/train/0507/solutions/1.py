@@ -1,4 +1,5 @@
 class Solution:
+
     def singleNonDuplicate(self, nums):
         """
         :type nums: List[int]

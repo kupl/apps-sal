@@ -7,15 +7,14 @@ for i in range(int(input())):
     Ts = list(map(int, input().split()))
     _ = int(input())
     Ds = list(map(int, input().split()))
-
     for j in Ts:
         if j not in Tr:
-            print("no")
+            print('no')
             break
     else:
         for k in Ds:
             if k not in Dr:
-                print("no")
+                print('no')
                 break
         else:
-            print("yes")
+            print('yes')

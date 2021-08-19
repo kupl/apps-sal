@@ -5,7 +5,7 @@ for _ in range(int(input())):
     d = []
     final = []
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         arr.append(x)
         height.append(y)
     for x in range(1, n):
@@ -18,5 +18,5 @@ for _ in range(int(input())):
     final.sort()
     ans = 0
     for x in range(n):
-        ans += (final[x] * height[x])
+        ans += final[x] * height[x]
     print(ans)

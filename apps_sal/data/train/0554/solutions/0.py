@@ -3,17 +3,16 @@ from decimal import Decimal
 
 
 def solve(n, k):
-
-    mod = 10**k
+    mod = 10 ** k
     x = Decimal(n)
-    y = x * (x.log10()) % 1
+    y = x * x.log10() % 1
     p = str(pow(10, y))
     c = 0
     first = ''
     for v in p:
         if c == k:
             break
-        if v == ".":
+        if v == '.':
             continue
         first += v
         c += 1
@@ -23,7 +22,7 @@ def solve(n, k):
 
 queries = []
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     queries.append((n, k))
-for n, k in queries:
-    print("%s %s" % (solve(n, k)))
+for (n, k) in queries:
+    print('%s %s' % solve(n, k))

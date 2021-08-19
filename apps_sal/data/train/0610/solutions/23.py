@@ -10,6 +10,6 @@ for _ in range(int(input())):
         if l[i + 1] - l[i] < 6:
             c += 1
     if c > 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

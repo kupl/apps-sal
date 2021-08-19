@@ -1,6 +1,6 @@
 T = int(input())
 while T:
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     d = c % a
     if d < b:
         i = c - d - a + b

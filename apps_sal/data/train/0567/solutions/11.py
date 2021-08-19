@@ -6,5 +6,4 @@ for _ in range(int(input())):
         if array[i] == array[i + 1] and array[i] == array[i + 2]:
             possible = 'Yes'
             break
-
     print(possible)

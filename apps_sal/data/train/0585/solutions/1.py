@@ -2,18 +2,16 @@ import functools
 
 
 def gcd(x, y):
-    if(y == 0):
+    if y == 0:
         return x
     return gcd(y, x % y)
 
 
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     p = list(map(int, input().split()))
-
     ans = functools.reduce(lambda x, y: gcd(x, y), p)
-
-    if(ans <= n):
+    if ans <= n:
         print(n - ans)
     else:
         f = [1]

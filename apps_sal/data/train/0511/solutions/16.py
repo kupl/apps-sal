@@ -6,4 +6,4 @@ for i in A:
 ans = [0] * n
 for i in range(n):
     ans[i] = aa ^ A[i]
-print((' '.join(map(str, ans))))
+print(' '.join(map(str, ans)))

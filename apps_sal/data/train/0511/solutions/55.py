@@ -1,12 +1,11 @@
-
 def main():
     n = int(input())
-    a = list(map(int, input().split(" ")))
+    a = list(map(int, input().split(' ')))
     all = 0
     for ele in a:
         all ^= ele
     for ele in a:
-        print(all ^ ele, end=" ")
+        print(all ^ ele, end=' ')
     print()
 
 

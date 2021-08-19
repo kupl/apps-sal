@@ -8,12 +8,9 @@ def half(n):
 
 
 def main(arr, m):
-    a, b, c = arr
-
+    (a, b, c) = arr
     while m != 0:
-
         s = max(a, b, c)
-
         if s == a:
             a = half(a)
         elif s == b:
@@ -25,10 +22,9 @@ def main(arr, m):
 
 
 for i in range(int(input())):
-    r, g, b, m = list(map(int, input().split()))
+    (r, g, b, m) = list(map(int, input().split()))
     arr = []
     for j in range(3):
         c = max(list(map(int, input().split())))
         arr.append(c)
-
     print(main(arr, m))

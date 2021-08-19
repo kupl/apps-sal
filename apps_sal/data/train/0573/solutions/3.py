@@ -7,7 +7,7 @@ def main():
         if m == 2:
             print(n)
             continue
-        a = (m - 1) + 2 * (n - 1)
+        a = m - 1 + 2 * (n - 1)
         print(a)
 
 

@@ -7,7 +7,7 @@ for i in range(T):
         if i in B:
             flag = 1
             break
-    if(flag == 0):
-        print("No")
+    if flag == 0:
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

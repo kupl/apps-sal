@@ -1,4 +1,5 @@
 class node:
+
     def __init__(self, size, elements):
         self.size = size
         self.elements = elements
@@ -6,7 +7,7 @@ class node:
 
 def solve(ele, s):
     m = max(ele)
-    i, j = 0, 0
+    (i, j) = (0, 0)
     flag = True
     for k in range(s):
         if ele[k] == m:
@@ -16,10 +17,10 @@ def solve(ele, s):
                 i = k
     if i == j:
         return s // 2
-    elif (j - i) >= s // 2:
+    elif j - i >= s // 2:
         return 0
     else:
-        i, j = s // 2, j + s // 2 - i
+        (i, j) = (s // 2, j + s // 2 - i)
         return s - j
 
 

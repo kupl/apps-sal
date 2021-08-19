@@ -12,5 +12,5 @@ for _ in range(eval(input())):
             if A[i] != A[i - 1] + A[i - 2]:
                 max_len = max(max_len, i - st)
                 st = i
-        max_len = max(max_len, (i - st) + 1) if st < n - 1 else max_len
+        max_len = max(max_len, i - st + 1) if st < n - 1 else max_len
         print(max_len + 1)

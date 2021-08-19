@@ -1,5 +1,5 @@
 def dec(n):
-    return bin(n).replace("0b", "")
+    return bin(n).replace('0b', '')
 
 
 def ss(str):
@@ -11,26 +11,25 @@ def ss(str):
 
 def btd(q):
     q1 = q
-    decimal, i, n = 0, 0, 0
-    while(q != 0):
+    (decimal, i, n) = (0, 0, 0)
+    while q != 0:
         dec = q % 10
-        decimal = decimal + dec * (2**i)
+        decimal = decimal + dec * 2 ** i
         q = q // 10
         i += 1
-    return(decimal)
+    return decimal
 
 
 t = int(input())
 for iw in range(0, t):
     a = input()
     arr = []
-
     we = []
     x = a.split()
     string = str(dec(int(x[1])))
     string2 = str(dec(int(x[0])))
     d = int(x[0])
-    if(len(string) > len(string2)):
+    if len(string) > len(string2):
         l = len(string)
     else:
         l = len(string2)
@@ -42,8 +41,8 @@ for iw in range(0, t):
         string = ss(string)
         x[1] = btd(int(string))
     for h in range(0, len(arr)):
-        if(max(arr) == arr[h]):
-            if(h == 0):
+        if max(arr) == arr[h]:
+            if h == 0:
                 we.append(0)
                 break
             else:

@@ -7,7 +7,7 @@ for _ in range(int(input())):
     ta2 = list(map(int, input().split()))
     d2 = int(input())
     da2 = list(map(int, input().split()))
-    if(set(ta2).issubset(set(ta1)) and set(da2).issubset(set(da1))):
-        print("yes")
+    if set(ta2).issubset(set(ta1)) and set(da2).issubset(set(da1)):
+        print('yes')
     else:
-        print("no")
+        print('no')

@@ -7,6 +7,6 @@ for i in S:
         ml = len(i)
         min = i
 for j in range(len(S)):
-    print(min, end=" ")
-    print(S[j], end=" ")
+    print(min, end=' ')
+    print(S[j], end=' ')
 print(min)

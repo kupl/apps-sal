@@ -4,7 +4,7 @@ for _ in range(t):
     if len(s) == 0:
         print(1)
         continue
-    ans, count = 0, 1
+    (ans, count) = (0, 1)
     for i in range(len(s) - 1):
         if s[i] == s[i + 1]:
             count += 1

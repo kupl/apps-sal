@@ -2,6 +2,7 @@ from operator import or_
 
 
 class SegmentTree:
+
     def __init__(self, size, op, e):
         self._op = op
         self._e = e
@@ -45,19 +46,17 @@ class SegmentTree:
 
 
 def str2bit(c):
-    return 1 << (ord(c) - ord('a'))
+    return 1 << ord(c) - ord('a')
 
 
 N = int(input())
 S = input()
-
 st = SegmentTree(N, or_, 0)
-st.build(str2bit(x) for x in S)
-
+st.build((str2bit(x) for x in S))
 M = int(input())
 for i in range(M):
-    q, a, b = input().split()
-    if q == "1":
+    (q, a, b) = input().split()
+    if q == '1':
         st[int(a) - 1] = str2bit(b)
-    elif q == "2":
-        print(bin(st.query(int(a) - 1, int(b))).count("1"))
+    elif q == '2':
+        print(bin(st.query(int(a) - 1, int(b))).count('1'))

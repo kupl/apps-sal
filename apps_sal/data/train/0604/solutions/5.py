@@ -7,9 +7,8 @@ def check(r, c, a):
             if j == 0 or j == c - 1:
                 adj -= 1
             if a[i][j] >= adj:
-                return "Unstable"
-
-    return "Stable"
+                return 'Unstable'
+    return 'Stable'
 
 
 for _ in range(int(input())):

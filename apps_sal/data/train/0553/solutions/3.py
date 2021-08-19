@@ -9,7 +9,7 @@ def eqSolve(p, a, q, b):
 
 
 def solve(p, q, r, a, b, c, rs):
-    if p == a and q == b and r == c:
+    if p == a and q == b and (r == c):
         return rs
     elif rs >= 2:
         return 3
@@ -57,7 +57,7 @@ def solve(p, q, r, a, b, c, rs):
 t = int(input())
 x = 0
 for x in range(t):
-    p, q, r = map(int, input().split())
-    a, b, c = map(int, input().split())
+    (p, q, r) = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     y = solve(p, q, r, a, b, c, 0)
     print(y)

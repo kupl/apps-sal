@@ -1,7 +1,7 @@
 import math
 n = int(input())
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a > b:
         a1 = math.ceil(a / (2 * b))
         b1 = a - a1 * b

@@ -11,7 +11,7 @@ for i in range(int(input())):
     c = int(input())
     b = list(map(int, input().split()))
     b.sort()
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     s = 0
     k = c // 2
     for i in range(k):

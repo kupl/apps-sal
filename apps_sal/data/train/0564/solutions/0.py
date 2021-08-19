@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     c = list(map(int, input().split()))
     count = 1
     for i in range(n):
@@ -8,5 +8,5 @@ for _ in range(int(input())):
                 continue
             else:
                 count += 1
-                c[i], c[i + 1] = c[i + 1], c[i]
+                (c[i], c[i + 1]) = (c[i + 1], c[i])
     print(count)

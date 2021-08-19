@@ -6,4 +6,4 @@ for j in range(1, N):
 ans = []
 for i in range(N):
     ans.append(allxor ^ A[i])
-print(*ans, sep=" ")
+print(*ans, sep=' ')

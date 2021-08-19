@@ -6,7 +6,6 @@ def gcd(a, b):
         a = a + b
         b = a - b
         a = a - b
-
     if a % b == 0:
         return b
     else:

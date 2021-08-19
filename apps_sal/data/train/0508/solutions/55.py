@@ -1,17 +1,14 @@
 from heapq import heappush, heappop
-
-N, Q = list(map(int, input().split()))
-l, q = [], []
+(N, Q) = list(map(int, input().split()))
+(l, q) = ([], [])
 u = set()
-
 for _ in range(N):
-    S, T, X = list(map(int, input().split()))
+    (S, T, X) = list(map(int, input().split()))
     l += [(S - X, 1, X), (T - X, 0, X)]
 for i in range(Q):
     l += [(int(input()), 2, i)]
 l.sort()
-
-for _, m, x in l:
+for (_, m, x) in l:
     if m == 0:
         u.remove(x)
     elif m == 1:
@@ -23,4 +20,4 @@ for _, m, x in l:
                 heappop(q)
             else:
                 break
-        print((q[0] if q else -1))
+        print(q[0] if q else -1)

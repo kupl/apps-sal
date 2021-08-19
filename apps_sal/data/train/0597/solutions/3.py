@@ -4,7 +4,7 @@ for i in range(t):
     xl = []
     hl = []
     for j in range(n):
-        x, h = list(map(int, input().strip().split()))
+        (x, h) = list(map(int, input().strip().split()))
         xl.append(x)
         hl.append(h)
     a = [0 for j in range(n)]

@@ -1,7 +1,7 @@
 def bs(a, n, k):
     l = 0
     h = n - 1
-    while(l <= h):
+    while l <= h:
         mid = (l + h) // 2
         if a[mid] == k:
             return 1
@@ -18,7 +18,7 @@ for kk in range(t):
     tr = [int(x) for x in input().split()]
     tr.sort()
     ndr = int(input())
-    dr = [int(x) for x in input(). split()]
+    dr = [int(x) for x in input().split()]
     dr.sort()
     nts = int(input())
     ts = [int(x) for x in input().split()]
@@ -32,7 +32,7 @@ for kk in range(t):
             s = 0
             break
     if s == 0:
-        print("no")
+        print('no')
         continue
     for i in range(nds):
         if bs(dr, ndr, ds[i]):
@@ -41,7 +41,7 @@ for kk in range(t):
             s = 0
             break
     if s == 0:
-        print("no")
+        print('no')
         continue
     if s == 1:
-        print("yes")
+        print('yes')

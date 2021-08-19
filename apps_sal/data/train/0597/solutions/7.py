@@ -3,7 +3,7 @@ for _ in range(int(input())):
     x = []
     p = []
     for j in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         x.append(a)
         p.append(b)
     differences = []
@@ -14,6 +14,6 @@ for _ in range(int(input())):
     differences.sort()
     p.sort()
     answer = 0
-    while(len(differences) > 0):
-        answer = answer + (p.pop() * differences.pop())
+    while len(differences) > 0:
+        answer = answer + p.pop() * differences.pop()
     print(answer)

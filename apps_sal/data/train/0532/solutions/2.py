@@ -1,5 +1,5 @@
 def fib(n):
-    s1, s2 = 1, 2
+    (s1, s2) = (1, 2)
     if n == 1:
         return s1
     elif n == 2:
@@ -16,6 +16,5 @@ try:
     n = int(input())
     z = fib(n)
     print(z)
-
 except:
     pass

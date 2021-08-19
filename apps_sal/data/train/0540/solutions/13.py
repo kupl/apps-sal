@@ -1,5 +1,5 @@
 def main():
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     l = [int(X) for X in input().split()]
     ls = set(l)
     f = 1
@@ -9,11 +9,10 @@ def main():
             break
     if f == 0:
         print(-1)
+    elif m in ls:
+        print(n - l.count(m))
     else:
-        if m in ls:
-            print(n - l.count(m))
-        else:
-            print(n)
+        print(n)
 
 
 def __starting_point():

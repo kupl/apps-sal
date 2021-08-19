@@ -7,12 +7,10 @@ for z in range(t):
     for i in s:
         if i != '=':
             a.append(i)
-
     for i in range(len(a) - 1):
         if a[i] == a[i + 1]:
             j += 1
             ans = max(ans, j)
         else:
             j = 1
-
     print(ans + 1)

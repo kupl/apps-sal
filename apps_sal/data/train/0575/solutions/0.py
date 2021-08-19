@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    st = input().replace("=", "")
+    st = input().replace('=', '')
     if not len(st):
         print(1)
     else:

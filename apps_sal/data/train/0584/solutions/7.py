@@ -1,5 +1,5 @@
 def solve(S):
-    if(S[0] == '0'):
+    if S[0] == '0':
         return 0
     count = 0
     flag = False
@@ -7,7 +7,7 @@ def solve(S):
         if char == '0':
             count += 1
             flag = True
-        elif char == '1' and not flag:
+        elif char == '1' and (not flag):
             continue
         elif char == '1' and flag:
             break

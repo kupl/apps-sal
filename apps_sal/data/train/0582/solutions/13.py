@@ -15,16 +15,14 @@ for _ in range(int(input())):
         if s[a] == ')':
             stack.append(a)
             ans[a] = prev
+        elif len(stack) == 0:
+            ans[a] = -1
+            prev = -1
         else:
-            if len(stack) == 0:
-                ans[a] = -1
-                prev = -1
-            else:
-                prev = stack[-1] + 1
-                ans[a] = prev
-                stack.pop()
+            prev = stack[-1] + 1
+            ans[a] = prev
+            stack.pop()
         a -= 1
-
     q = int(input())
     x = list(map(int, input().split()))
     for i in x:

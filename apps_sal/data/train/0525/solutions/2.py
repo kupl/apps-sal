@@ -1,8 +1,8 @@
 n = int(input())
 while n:
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     m = c // a
-    m = (m * a) + b
+    m = m * a + b
     if m > c:
         m -= a
     print(m)

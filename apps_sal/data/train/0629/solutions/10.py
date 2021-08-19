@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    R, G, B, M = map(int, input().split())
+    (R, G, B, M) = map(int, input().split())
     l = []
     r = list(map(int, input().split()))
     rm = max(r)

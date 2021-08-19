@@ -4,4 +4,4 @@ a = 0
 for i in range(n):
     a = a ^ A[i]
 for i in range(n):
-    print(a ^ A[i], end=" ")
+    print(a ^ A[i], end=' ')
