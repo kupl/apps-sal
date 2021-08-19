@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 S = input()
 ret = ''
 for i in range(len(S)):
@@ -9,5 +7,4 @@ for i in range(len(S)):
         ret += '1'
     else:
         ret = ret[:-1]
-
 print(ret)

@@ -1,9 +1,8 @@
 from sys import stdin
 n = int(stdin.readline().strip())
-# n,m=map(int,stdin.readline().strip().split())
 s = list(map(int, stdin.readline().strip().split()))
 s.sort()
-ans = 10**20
+ans = 10 ** 20
 t1 = -1
 for t in range(1, 101):
     aux1 = 0

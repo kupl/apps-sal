@@ -1,6 +1,3 @@
-# coding: utf-8
-
-
 import math
 import string
 import itertools
@@ -16,12 +13,11 @@ def array2d(d1, d2, init=None):
     return [[init for _ in range(d1)] for _ in range(d2)]
 
 
-n, h, k = list(map(int, input().split(" ")))
-al = list(map(int, input().split(" ")))
+(n, h, k) = list(map(int, input().split(' ')))
+al = list(map(int, input().split(' ')))
 in_proc = 0
 pointer = 0
 time = 0
-
 for a in al:
     if a > h - in_proc:
         time += in_proc // k
@@ -30,8 +26,7 @@ for a in al:
             time += 1
             in_proc = 0
     in_proc += a
-
 time += in_proc // k
 in_proc %= k
-time += (in_proc > 0)
+time += in_proc > 0
 print(time)

@@ -12,38 +12,27 @@ import random
 import sys
 from sys import stdin
 from collections import deque
-mod = 10**9 + 7
-# sys.setrecursionlimit(10**6)
-# def rl():
-#     return [int(w) for w in stdin.readline().split()]
-# map(int,input().split())
-# # l = list(map(int,input().split()))
-# from itertools import permutations
-# input = lambda: sys.stdin.readline().rstrip()
-def input(): return sys.stdin.readline().rstrip()
+mod = 10 ** 9 + 7
 
-# def ncr(x, y):
-#     return f(x) // (f(y) * f(x - y))
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def ncr(n, r, p):
     num = den = 1
     for i in range(r):
-        num = (num * (n - i)) % p
-        den = (den * (i + 1)) % p
-    return (num * pow(den,
-                      p - 2, p)) % p
+        num = num * (n - i) % p
+        den = den * (i + 1) % p
+    return num * pow(den, p - 2, p) % p
 
 
 t = int(input())
-
 for _ in range(t):
-
     n = int(input())
     ans = -1
     for i in range(2, 100):
-        if n % (2**i - 1) == 0:
-            ans = (n // (2**i - 1))
+        if n % (2 ** i - 1) == 0:
+            ans = n // (2 ** i - 1)
             break
-
     print(ans)

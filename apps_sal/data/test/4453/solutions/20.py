@@ -1,6 +1,3 @@
-#n = int(input())
-#a = [int(x) for x in input().split()]
-
 q = int(input())
 
 
@@ -13,7 +10,7 @@ def solve():
         d = 0
         j = p[i] - 1
         d += 1
-        while(j != i):
+        while j != i:
             d += 1
             j = p[j] - 1
         days[i] = str(d)

@@ -1,6 +1,4 @@
-# cook your dish here
 N = int(input())
-
 D = {}
 for i in range(N):
     T = [x for x in input().split()]
@@ -18,5 +16,4 @@ best = 0
 for i in D:
     if len(i) == D[i]:
         best = max(best, D[i])
-
 print(best)

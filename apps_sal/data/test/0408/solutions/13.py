@@ -1,9 +1,11 @@
 import sys
-# sys.stdin = open('in.txt')
-def R(): return list(map(int, input().split()))
 
 
-n, m = R()
+def R():
+    return list(map(int, input().split()))
+
+
+(n, m) = R()
 if 2 * n <= m:
     print(n)
 elif 2 * m <= n:

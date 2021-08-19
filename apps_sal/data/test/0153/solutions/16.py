@@ -1,10 +1,6 @@
-# import sys
-# sys.stdin = open('in', 'r')
-
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 tt = list(map(int, input().split()))
 tt.sort()
-
 s = sum(tt)
 ans = 0
 
@@ -14,14 +10,13 @@ def check(x, m):
     m -= s * x
     if m < 0:
         return -1
-
     for i in range(k):
         if tt[i] * (n - x) <= m:
             m -= tt[i] * (n - x)
-            ret += (n - x)
+            ret += n - x
         else:
             ret += m // tt[i]
-            m -= (m // tt[i]) * tt[i]
+            m -= m // tt[i] * tt[i]
         if m <= 0:
             break
     return ret
