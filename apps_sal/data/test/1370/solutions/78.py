@@ -1,12 +1,9 @@
 from itertools import product
 import numpy as np
-H, W, K = map(int, input().split())
-
+(H, W, K) = map(int, input().split())
 grid = [[] for _ in range(H)]
 for i in range(H):
     grid[i] = list(map(int, input()))
-
-# print(grid)
 
 
 def init_cnt():
@@ -19,14 +16,10 @@ def init_cnt():
         for w in range(W):
             cnt_w += grid[h][w]
             _grid[h][w] = _grid[h - 1][w] + cnt_w
-
     return _grid
 
 
 _grid = init_cnt()
-# print(_grid)
-
-# (x1, y1) ~ (x2, y2)の合計
 
 
 def cnt(x1, x2, y1, y2):
@@ -42,16 +35,13 @@ def cnt(x1, x2, y1, y2):
 ans = 1010
 for i in range(2 ** (H - 1)):
     res = 0
-    lst = list(k for k, j in enumerate(range(H), 1) if i >> j & 1)
+    lst = list((k for (k, j) in enumerate(range(H), 1) if i >> j & 1))
     res += len(lst)
     lst.append(H)
-
-    # print(lst)
     y = 0
     for w in range(1, W + 1):
         x = 0
         flag = False
-
         for lst_i in lst:
             if cnt(x, lst_i - 1, y, w - 1) > K:
                 if y + 1 < w:
@@ -60,7 +50,6 @@ for i in range(2 ** (H - 1)):
                 else:
                     flag = True
                 break
-
             x = lst_i
         else:
             pass
@@ -68,5 +57,4 @@ for i in range(2 ** (H - 1)):
             break
     else:
         ans = min(ans, res)
-
 print(ans)

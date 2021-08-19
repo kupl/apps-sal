@@ -1,14 +1,20 @@
-# coding: utf-8
 import sys
 import numpy as np
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-H, W, K = lr()
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
+(H, W, K) = lr()
 S = np.array([list(map(int, sr())) for _ in range(H)])
 Scum = np.cumsum(S, axis=1)
 INF = 10 ** 10
@@ -17,7 +23,7 @@ for pattern in range(1 << H - 1):
     cnt = 0
     Tcum = Scum.copy()
     for i in range(H - 1):
-        if pattern >> i & 1:  # 切れ目
+        if pattern >> i & 1:
             cnt += 1
         else:
             Tcum[i + 1] += Tcum[i]
@@ -31,7 +37,7 @@ for pattern in range(1 << H - 1):
                 cut = True
                 break
         if cut:
-            if prev == w - 1:  # 1列でKをオーバー
+            if prev == w - 1:
                 break
             cnt += 1
             prev = w - 1
@@ -39,5 +45,4 @@ for pattern in range(1 << H - 1):
             w += 1
     else:
         answer = min(answer, cnt)
-
 print(answer)
