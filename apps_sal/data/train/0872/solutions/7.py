@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    n, a, b, k = list(map(int, input().split()))
+    (n, a, b, k) = list(map(int, input().split()))
     s = 0
     j = 2
     while s < k and j < n + 1:
@@ -10,6 +9,6 @@ for i in range(int(input())):
             s += 1
         j += 1
     if s == k:
-        print("Win")
+        print('Win')
     else:
-        print("Lose")
+        print('Lose')

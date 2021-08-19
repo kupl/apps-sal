@@ -1,6 +1,6 @@
 class Solution:
-    def shortestBridge(self, A: List[List[int]]) -> int:
 
+    def shortestBridge(self, A: List[List[int]]) -> int:
         row_shifts = [-1, 0, 1, 0]
         col_shifts = [0, 1, 0, -1]
 
@@ -9,12 +9,12 @@ class Solution:
             queue = [(row, col)]
             edges = []
             while len(queue) > 0:
-                curr_row, curr_col = queue.pop(0)
+                (curr_row, curr_col) = queue.pop(0)
                 if A[curr_row][curr_col] == mark:
                     continue
                 A[curr_row][curr_col] = mark
                 add_to_edges = False
-                for row_shift, col_shift in zip(row_shifts, col_shifts):
+                for (row_shift, col_shift) in zip(row_shifts, col_shifts):
                     new_row = curr_row + row_shift
                     new_col = curr_col + col_shift
                     if 0 <= new_row < len(A) and 0 <= new_col < len(A[0]):
@@ -25,7 +25,6 @@ class Solution:
                 if add_to_edges:
                     edges.append((curr_row, curr_col))
             return edges
-
         terminate = False
         for row in range(len(A)):
             for col in range(len(A[0])):
@@ -35,12 +34,10 @@ class Solution:
                     break
             if terminate:
                 break
-
         queue = edges
-        # print(edges)
         while len(queue) > 0:
-            curr_row, curr_col = queue.pop(0)
-            for row_shift, col_shift in zip(row_shifts, col_shifts):
+            (curr_row, curr_col) = queue.pop(0)
+            for (row_shift, col_shift) in zip(row_shifts, col_shifts):
                 new_row = curr_row + row_shift
                 new_col = curr_col + col_shift
                 if 0 <= new_row < len(A) and 0 <= new_col < len(A[0]):
@@ -49,5 +46,4 @@ class Solution:
                         queue.append((new_row, new_col))
                     if A[new_row][new_col] == 1:
                         return abs(A[curr_row][curr_col]) - 1
-
         return -1

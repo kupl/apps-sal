@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    n, a, b, k = list(map(int, input().split()))
+    (n, a, b, k) = list(map(int, input().split()))
     c = 0
     for i in range(n):
         if i % a == 0 and i % b != 0:
@@ -9,7 +8,7 @@ while t > 0:
         if i % b == 0 and i % a != 0:
             c = c + 1
     if c >= k:
-        print("Win")
+        print('Win')
     else:
-        print("Lose")
+        print('Lose')
     t = t - 1

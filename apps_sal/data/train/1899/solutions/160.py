@@ -1,12 +1,13 @@
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
         n = len(A)
         zeros = set()
 
         def dfs(i, j):
             A[i][j] = 2
-            for di, dj in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
-                ii, jj = i + di, j + dj
+            for (di, dj) in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
+                (ii, jj) = (i + di, j + dj)
                 if 0 <= ii < n and 0 <= jj < n:
                     if A[ii][jj] == 1:
                         dfs(ii, jj)
@@ -20,17 +21,15 @@ class Solution:
             else:
                 continue
             break
-
         result = 2 * n
-        # print(zeros)
         q = collections.deque(zeros)
         zeros = set()
         steps = 1
         while q:
             for _ in range(len(q)):
-                i, j = q.popleft()
-                for di, dj in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
-                    ii, jj = i + di, j + dj
+                (i, j) = q.popleft()
+                for (di, dj) in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
+                    (ii, jj) = (i + di, j + dj)
                     if 0 <= ii < n and 0 <= jj < n:
                         if A[ii][jj] == 0 and (ii, jj) not in zeros:
                             zeros.add((ii, jj))

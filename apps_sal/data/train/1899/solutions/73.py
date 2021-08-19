@@ -1,6 +1,7 @@
 class Solution:
+
     def dfs(self, A, i, j, replace):
-        if i < 0 or i >= len(A) or j < 0 or j >= len(A[0]):
+        if i < 0 or i >= len(A) or j < 0 or (j >= len(A[0])):
             return
         if A[i][j] == 0 or A[i][j] == replace:
             return
@@ -12,7 +13,7 @@ class Solution:
         return
 
     def find(self, A, i, j, old):
-        if i < 0 or i >= len(A) or j < 0 or j >= len(A[0]):
+        if i < 0 or i >= len(A) or j < 0 or (j >= len(A[0])):
             return False
         if A[i][j] == -1:
             return True
@@ -26,7 +27,7 @@ class Solution:
 
     def shortestBridge(self, A: List[List[int]]) -> int:
         iindex = 0
-        i, j = 0, 0
+        (i, j) = (0, 0)
         replace = -1
         start = ()
         while i < len(A):
@@ -41,7 +42,6 @@ class Solution:
             i += 1
         old = 1
         while True:
-            # print(A)
             if self.find(A, start[0], start[1], old):
                 break
             old += 1

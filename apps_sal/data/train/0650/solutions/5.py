@@ -1,9 +1,8 @@
-# cook your dish here
 from collections import defaultdict
 from operator import itemgetter
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     diz = defaultdict(lambda: [])
     for _ in range(n):
         array = list(map(int, input().split()))
