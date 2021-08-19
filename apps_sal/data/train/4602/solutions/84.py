@@ -1,4 +1,3 @@
-# write the function is_anagram
 def is_anagram(test, original):
     t = test.lower()
     o = [*original.lower()]

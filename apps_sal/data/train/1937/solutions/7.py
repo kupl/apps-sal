@@ -1,5 +1,3 @@
-# junge
-
 class ThroneInheritance:
     root = ''
     children = {}
@@ -22,14 +20,11 @@ class ThroneInheritance:
         res = []
         tosee = []
         tosee.append(self.root)
-        while (len(tosee) != 0):
+        while len(tosee) != 0:
             cur = tosee[0]
             tosee.pop(0)
-
-            if (self.dead[cur] == False):
+            if self.dead[cur] == False:
                 res.append(cur)
-
             for item in reversed(self.children[cur]):
                 tosee.insert(0, item)
-
         return res
