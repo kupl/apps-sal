@@ -6,8 +6,8 @@ def time_correct(t):
         return t
     if t == None:
         return None
-    if re.match('\d\d:\d\d:\d\d$', t):
-        h, m, s = [int(i) for i in t.split(':')]
+    if re.match('\\d\\d:\\d\\d:\\d\\d$', t):
+        (h, m, s) = [int(i) for i in t.split(':')]
         if s > 59:
             m += 1
             s -= 60

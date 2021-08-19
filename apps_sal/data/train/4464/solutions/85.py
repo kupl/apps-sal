@@ -4,6 +4,6 @@ def feast(beast, dish):
     dfirst = dish[0]
     dlast = dish[-1]
     if bfirst == dfirst and blast == dlast:
-        return(True)
+        return True
     else:
-        return(False)
+        return False

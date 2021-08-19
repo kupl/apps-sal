@@ -1,5 +1,4 @@
 from itertools import accumulate
-
 XP = [0, 0, 314]
 for i in range(2, 170):
     XP.append(XP[-1] * (125 - i // 10) // 100)

@@ -5,7 +5,7 @@ def cut_fruits(fruits):
     result = list()
     for val in fruits:
         if val in FRUIT_NAMES:
-            if(len(val) % 2 == 0):
+            if len(val) % 2 == 0:
                 re = int(len(val) / 2)
                 result.append(val[:re])
                 result.append(val[re:])
@@ -15,4 +15,4 @@ def cut_fruits(fruits):
                 result.append(val[re + 1:])
         else:
             result.append(val)
-    return(result)
+    return result

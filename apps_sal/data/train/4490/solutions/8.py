@@ -4,7 +4,7 @@ c = [1, 2, 3, 6, 7, 9, 18, 25, 27, 54, 73, 97, 129, 171, 231, 313, 327, 649, 703
 def max_collatz_length(n):
     if type(n) != int or n < 1:
         return []
-    ans = max(i for i in c if i <= n)
+    ans = max((i for i in c if i <= n))
     steps = 1
     x = ans
     while x > 1:

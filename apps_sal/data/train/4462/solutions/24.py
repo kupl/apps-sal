@@ -1,6 +1,6 @@
 def adjacent_element_product(array):
     john = []
-    for i, v in enumerate(array):
+    for (i, v) in enumerate(array):
         if i == len(array) - 1:
             pass
         else:

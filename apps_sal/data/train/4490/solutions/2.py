@@ -8,4 +8,5 @@ def F(n):
     return c[n]
 
 
-def max_collatz_length(n): return [] if type(n) != int or n <= 0 else max([[i, F(i)] for i in range(1, n + 1)], key=lambda x: x[1])
+def max_collatz_length(n):
+    return [] if type(n) != int or n <= 0 else max([[i, F(i)] for i in range(1, n + 1)], key=lambda x: x[1])

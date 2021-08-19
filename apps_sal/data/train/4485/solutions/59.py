@@ -1,4 +1,5 @@
 def HQ9(code):
+
     def generate_lyrics():
         rv = '99 bottles of beer on the wall, 99 bottles of beer.'
         for i in range(98, -1, -1):
@@ -9,8 +10,4 @@ def HQ9(code):
         else:
             rv += '\nGo to the store and buy some more, 99 bottles of beer on the wall.'
         return rv
-    return {
-        'H': 'Hello World!',
-        'Q': code,
-        '9': generate_lyrics()
-    }.get(code, None)
+    return {'H': 'Hello World!', 'Q': code, '9': generate_lyrics()}.get(code, None)

@@ -7,4 +7,4 @@ def max_ball(v0):
         h = v * t - 0.5 * g * t * t
         record.append(h)
         t += 0.1
-    return (record.index(max(record)))
+    return record.index(max(record))

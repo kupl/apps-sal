@@ -5,4 +5,4 @@ def cookie(x):
         name = 'Monica'
     elif isinstance(x, str):
         name = 'Zach'
-    return f"Who ate the last cookie? It was {name}!"
+    return f'Who ate the last cookie? It was {name}!'

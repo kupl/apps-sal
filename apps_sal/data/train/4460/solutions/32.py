@@ -1,6 +1,6 @@
 def whatday(num):
-    if (num <= 0) or (num > 7):
-        return "Wrong, please enter a number between 1 and 7"
+    if num <= 0 or num > 7:
+        return 'Wrong, please enter a number between 1 and 7'
     if num == 1:
         return 'Sunday'
     if num == 2:

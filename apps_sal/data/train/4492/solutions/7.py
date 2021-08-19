@@ -1,6 +1,6 @@
 def hex_color(codes):
     try:
-        r, g, b = (int(a) for a in codes.split())
+        (r, g, b) = (int(a) for a in codes.split())
     except ValueError:
         return 'black'
     if r == g == b:

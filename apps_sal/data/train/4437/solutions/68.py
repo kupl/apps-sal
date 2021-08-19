@@ -1,10 +1,9 @@
 def cookie(x):
-    WHOATETHECOOKIE = ""
+    WHOATETHECOOKIE = ''
     if x == str(x):
-        WHOATETHECOOKIE = "Zach!"
+        WHOATETHECOOKIE = 'Zach!'
     elif x == bool(x):
-        WHOATETHECOOKIE = "the dog!"
+        WHOATETHECOOKIE = 'the dog!'
     else:
-        WHOATETHECOOKIE = "Monica!"
-
-    return "Who ate the last cookie? It was " + WHOATETHECOOKIE
+        WHOATETHECOOKIE = 'Monica!'
+    return 'Who ate the last cookie? It was ' + WHOATETHECOOKIE

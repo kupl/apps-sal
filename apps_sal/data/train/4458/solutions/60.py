@@ -20,4 +20,4 @@ def time_correct(t):
         tt[2] %= 60
         tt[1] %= 60
         tt[0] -= tt[0] // 24 * 24
-        return "%02d:%02d:%02d" % (tt[0], tt[1], tt[2])
+        return '%02d:%02d:%02d' % (tt[0], tt[1], tt[2])

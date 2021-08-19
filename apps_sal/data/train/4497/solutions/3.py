@@ -6,5 +6,4 @@ def positive_to_negative(binary):
         else:
             binary[i] = 1
             break
-
     return binary

@@ -4,5 +4,4 @@ def super_size(n):
     while len(a):
         out = out + max(a)
         a.remove(max(a))
-
     return int(out)

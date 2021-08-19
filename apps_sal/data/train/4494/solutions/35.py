@@ -1,5 +1,5 @@
 def points(game_results):
-    return sum(get_points(result) for result in game_results)
+    return sum((get_points(result) for result in game_results))
 
 
 def get_points(result):

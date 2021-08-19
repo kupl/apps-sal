@@ -1,5 +1,5 @@
 def remember(s):
-    li, final = [], []
+    (li, final) = ([], [])
     for i in s:
         if i not in li:
             li.append(i)

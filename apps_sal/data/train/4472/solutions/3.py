@@ -1,8 +1,5 @@
 def bear_fur(bears):
-    combos = {('black', 'brown'): 'dark brown',
-              ('black', 'white'): 'grey',
-              ('brown', 'white'): 'light brown'}
-
+    combos = {('black', 'brown'): 'dark brown', ('black', 'white'): 'grey', ('brown', 'white'): 'light brown'}
     if bears[0] == bears[1]:
         return bears[0]
     else:

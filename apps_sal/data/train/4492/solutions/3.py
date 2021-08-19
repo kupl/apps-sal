@@ -1,7 +1,7 @@
 def hex_color(codes):
     if codes in ('', '000 000 000'):
         return 'black'
-    r, g, b = (int(color) for color in codes.split())
+    (r, g, b) = (int(color) for color in codes.split())
     if r == g == b:
         return 'white'
     if r > g and r > b:

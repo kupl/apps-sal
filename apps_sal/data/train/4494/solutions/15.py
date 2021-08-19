@@ -1,17 +1,13 @@
 def points(games):
-
     points = 0
-
     for i in range(len(games)):
         match = games[i]
         x = match[0]
         y = match[2]
-
         if x > y:
             points += 3
         elif x == y:
             points += 1
-
     return points
 
 

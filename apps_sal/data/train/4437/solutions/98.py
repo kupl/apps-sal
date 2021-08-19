@@ -1,7 +1,7 @@
 def cookie(x):
     if x == True or x == False:
-        return "Who ate the last cookie? It was the dog!"
+        return 'Who ate the last cookie? It was the dog!'
     elif x == str(x):
-        return "Who ate the last cookie? It was Zach!"
+        return 'Who ate the last cookie? It was Zach!'
     elif x == int(x) or float(x):
-        return "Who ate the last cookie? It was Monica!"
+        return 'Who ate the last cookie? It was Monica!'

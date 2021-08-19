@@ -4,7 +4,6 @@ def mega_mind(hp, dps, shots, regen):
         while hp > shots * dps:
             hp = hp - shots * dps + regen
             cnt += shots
-
         for i in range(hp):
             hp = hp - dps
             cnt += 1

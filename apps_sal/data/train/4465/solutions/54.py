@@ -6,8 +6,7 @@ def super_size(n):
         b += elem
     b.sort()
     b.reverse()
-    s = ""
+    s = ''
     s = s.join(b)
     m = int(s)
-
     return m

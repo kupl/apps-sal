@@ -7,4 +7,4 @@ def feast(beast, dish):
         return False
 
 
-feast("Faris", "Mangos")
+feast('Faris', 'Mangos')

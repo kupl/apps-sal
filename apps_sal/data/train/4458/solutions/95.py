@@ -2,7 +2,7 @@ def time_correct(t):
     if not t:
         return t
     try:
-        h, m, s = map(int, t.split(':'))
+        (h, m, s) = map(int, t.split(':'))
         m += s // 60
         s %= 60
         h += m // 60

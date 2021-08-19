@@ -1,4 +1,3 @@
-
 def convergents_of_e(m):
     old = 2
     new = 3
@@ -6,11 +5,9 @@ def convergents_of_e(m):
         temp = old
         old = new
         if i % 3 == 0:
-            new = old * ((i // 3) * 2) + temp
+            new = old * (i // 3 * 2) + temp
         else:
             new = old * 1 + temp
-
     new = [int(i) for i in str(new)]
     s = sum(new)
-
     return s

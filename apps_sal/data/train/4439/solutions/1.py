@@ -3,5 +3,5 @@ def div_num(a, b):
 
 
 def divisors(n):
-    d = {i for i in range(1, int(n**0.5 + .99)) if n % i == 0}
+    d = {i for i in range(1, int(n ** 0.5 + 0.99)) if n % i == 0}
     return len(d | {n // i for i in d})

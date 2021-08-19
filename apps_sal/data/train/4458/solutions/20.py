@@ -1,7 +1,7 @@
 def time_correct(t=None):
     if t == '':
         return ''
-    elif t == None or len(t) != 8 or t[2] != ':' or t[5] != ':':
+    elif t == None or len(t) != 8 or t[2] != ':' or (t[5] != ':'):
         return None
     elif (t[0:2] + t[3:5] + t[6:]).isdigit():
         if int(t[6:]) >= 60:

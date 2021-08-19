@@ -7,8 +7,8 @@ def prime(n):
     if n < 2:
         return []
     r = [False, True] * (n // 2) + [True]
-    r[1], r[2] = False, True
-    for i in range(3, int(1 + n**0.5), 2):
+    (r[1], r[2]) = (False, True)
+    for i in range(3, int(1 + n ** 0.5), 2):
         if r[i]:
             r[i * i::2 * i] = [False] * int((n + 2 * i - 1 - i * i) / (2 * i))
     r = list(compress(list(range(len(r))), r))
@@ -17,7 +17,7 @@ def prime(n):
     return r
 
 
-primes = prime(5 * 10**6)
+primes = prime(5 * 10 ** 6)
 
 
 def even(n):

@@ -6,4 +6,4 @@ def adjacent_element_product(array):
         if maxar > maxpro:
             maxpro = maxar
         p = p + 1
-    return(maxpro)
+    return maxpro

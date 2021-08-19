@@ -4,7 +4,7 @@ import re
 def time_correct(t):
     if t == '':
         return ''
-    if not t or not re.search("[0-9][0-9]:[0-9][0-9]:[0-9][0-9]", t):
+    if not t or not re.search('[0-9][0-9]:[0-9][0-9]:[0-9][0-9]', t):
         return None
     time = list(map(int, t.split(':')))
     for i in range(2, 0, -1):

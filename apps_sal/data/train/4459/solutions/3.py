@@ -1,1 +1,2 @@
-def nth_even(x): return 2 * (x - 1)
+def nth_even(x):
+    return 2 * (x - 1)

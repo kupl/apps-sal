@@ -3,6 +3,7 @@ def chmod_calculator(perm):
     if not perm:
         return '000'
     else:
+
         def m(r):
             return dic[perm.get(r, '0')]
         return m('user') + m('group') + m('other')

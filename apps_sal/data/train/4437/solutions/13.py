@@ -5,4 +5,4 @@ def cookie(x):
         x = 'Monica'
     else:
         x = 'the dog'
-    return f"Who ate the last cookie? It was {x}!"
+    return f'Who ate the last cookie? It was {x}!'

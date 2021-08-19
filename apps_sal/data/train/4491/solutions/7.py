@@ -1,5 +1,5 @@
 def solve(a, b):
-    string = ""
+    string = ''
     for i in a:
         if i not in b:
             string = string + i

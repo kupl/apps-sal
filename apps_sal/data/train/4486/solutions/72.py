@@ -1,7 +1,6 @@
 def repeat_it(string, n):
     try:
-        string + " "
+        string + ' '
     except:
-        return "Not a string"
-
+        return 'Not a string'
     return string * n

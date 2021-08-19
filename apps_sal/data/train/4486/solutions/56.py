@@ -4,6 +4,5 @@ def repeat_it(string, n):
     for i in range(n):
         if isinstance(string, str) == True:
             return string * n
-
         else:
-            return "Not a string"
+            return 'Not a string'

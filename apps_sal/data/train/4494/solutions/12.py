@@ -7,4 +7,4 @@ def score_game(x, y):
 
 
 def points(games):
-    return sum(score_game(*game.split(':')) for game in games)
+    return sum((score_game(*game.split(':')) for game in games))

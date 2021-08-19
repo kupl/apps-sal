@@ -8,4 +8,4 @@ def reverse_number(n):
     if aux > 0:
         return reverso
     else:
-        return reverso * (-1)
+        return reverso * -1

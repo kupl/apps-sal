@@ -6,10 +6,9 @@ def time_correct(t: str):
         return ''
     if t == None or len(t.split(':')) != 3:
         return None
-
-    for ind, val in [(ind, val) for ind, val in enumerate(t.split(':')[::-1])]:
+    for (ind, val) in [(ind, val) for (ind, val) in enumerate(t.split(':')[::-1])]:
         try:
-            if any(ops in val for ops in ['+', '-', '/', '\\', '*', '=']):
+            if any((ops in val for ops in ['+', '-', '/', '\\', '*', '='])):
                 return None
             if len(val) == 2:
                 number = int(val)

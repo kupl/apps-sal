@@ -4,5 +4,5 @@ def S2N(m, n, x=-1, s=0):
         x += 1
         while p < n:
             p += 1
-            s += (x**p)
+            s += x ** p
     return s

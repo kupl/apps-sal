@@ -3,5 +3,5 @@ def is_narcissistic(i):
     lst = list(str(i))
     answer = 0
     for value in lst:
-        answer += int(value)**n
+        answer += int(value) ** n
     return answer == i

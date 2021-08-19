@@ -1,11 +1,10 @@
 def time_correct(t):
     try:
-        k = t.split(":")
-
+        k = t.split(':')
     except:
         return None
-    if t == "":
-        return ""
+    if t == '':
+        return ''
     if len(k) < 3:
         return None
     p = []
@@ -21,7 +20,7 @@ def time_correct(t):
             res = (int(a) + res - int(p[-1])) // 60
         else:
             try:
-                p.append((format((int(a) + res) % 24, '02d')))
+                p.append(format((int(a) + res) % 24, '02d'))
             except:
                 return None
-    return ":".join(p[::-1])
+    return ':'.join(p[::-1])

@@ -23,13 +23,13 @@ def check(nr):
 
 
 def biggest(nr):
-    return (len(str(nr)) - 1) or 1
+    return len(str(nr)) - 1 or 1
 
 
 def count_even(nr):
     r = 0
     for i in str(nr):
-        r += (int(i) % 2 == 0)
+        r += int(i) % 2 == 0
     return r
 
 

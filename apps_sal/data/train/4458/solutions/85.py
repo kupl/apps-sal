@@ -1,6 +1,6 @@
 def time_correct(t):
     if len(str(t)) == 0:
-        return ""
+        return ''
     time = str(t).split(':')
     for i in time:
         if len(i) != 2:
@@ -22,6 +22,6 @@ def time_correct(t):
         t = [str(i) for i in t]
         for i in range(3):
             if len(t[i]) == 1:
-                t[i] = "0" + t[i]
+                t[i] = '0' + t[i]
         ans = ':'.join(t)
         return ans
