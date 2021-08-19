@@ -1,8 +1,8 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         n = len(startTime)
         table = [[] for i in range(n)]
-
         for i in range(n):
             table[i] = [startTime[i], endTime[i], profit[i]]
         table.sort(key=lambda x: x[1])
@@ -21,24 +21,17 @@ class Solution:
                     l = m + 1
                 else:
                     h = m - 1
-
             return ans
-
         dp = [0] * n
-
         dp[0] = table[0][2]
-
         mx = 0
         for i in range(1, n):
             x = table[i][0]
             loca = find(table, x)
-            # print(loca,table[i])
             if loca >= 0:
                 ans = table[i][2] + dp[loca]
             else:
                 ans = table[i][2]
-
             dp[i] = max(ans, dp[i - 1])
-
         print(dp)
         return max(dp)

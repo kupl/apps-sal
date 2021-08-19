@@ -1,8 +1,5 @@
 def main1(n, c, a, b):
-    mod = 10**9 + 7
-    # a[0],..,a[n-1]がそれぞれ無限個ある。重複有で好きにc個選んで積を取った時の和。
-    # dp[i+1][j]:idx=iまでの中から好きにj個選んで積を取った時の和。
-    # a[i]~b[i]を同時に計算する。
+    mod = 10 ** 9 + 7
     dp = [[0] * (c + 1) for i in range(n + 1)]
     dp[0][0] = 1
     for i in range(n):
@@ -24,7 +21,7 @@ def main1(n, c, a, b):
 
 
 def __starting_point():
-    n, c = map(int, input().split())
+    (n, c) = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     print(main1(n, c, a, b))

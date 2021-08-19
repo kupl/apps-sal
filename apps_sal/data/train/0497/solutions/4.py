@@ -1,13 +1,13 @@
 class Solution:
+
     def binSearch(self, stack: List[int], target: int) -> List[int]:
         left = 0
         right = len(stack) - 1
-        # [1,2,3] target= 4
         while left <= right:
             mid = (left + right + 1) // 2
             if stack[mid][1] > target:
                 right = mid - 1
-            elif stack[mid][1] == target or left == right and stack[mid][1] < target:
+            elif stack[mid][1] == target or (left == right and stack[mid][1] < target):
                 return stack[mid]
             else:
                 left = mid

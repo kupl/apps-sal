@@ -1,6 +1,4 @@
-# cook your dish here
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     s = str(input())
@@ -11,5 +9,4 @@ for _ in range(t):
             count += 1
         else:
             prev = i
-
     print(count)

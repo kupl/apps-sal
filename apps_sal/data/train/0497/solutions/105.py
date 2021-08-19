@@ -1,13 +1,11 @@
 class Solution:
-    def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
 
-        # sort w.r.t. the end time
-        # here the dp[i] is the max profit up to task i (the current may not be i)
+    def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         jobs = sorted(zip(startTime, endTime, profit), key=lambda v: v[1])
 
         def search(idx):
             e_time = jobs[idx][0]
-            l, r = 0, idx - 1
+            (l, r) = (0, idx - 1)
             while l <= r:
                 mid = (r - l) // 2 + l
                 if jobs[mid][1] <= e_time:
@@ -21,7 +19,7 @@ class Solution:
 
         def find(idx):
             e_time = jobs[idx][0]
-            l, r = 0, idx
+            (l, r) = (0, idx)
             while l < r:
                 mid = (r - l) // 2 + l
                 if jobs[mid][1] <= e_time:
@@ -29,18 +27,13 @@ class Solution:
                 else:
                     r = mid
             return l - 1
-
         dp = [0] * len(jobs)
         dp[0] = jobs[0][2]
-
         for i in range(1, len(jobs)):
             profit = jobs[i][2]
             j = find(i)
-            # j = search(i)
-            # print(j)
             if j != -1:
                 profit += dp[j]
             dp[i] = max(dp[i - 1], profit)
-
         print(dp)
         return dp[-1]

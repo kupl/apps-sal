@@ -1,4 +1,5 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         comb = []
         dd = dict()
@@ -10,7 +11,6 @@ class Solution:
 
         def returnIdx(idx, l, val):
             while idx < l:
-                #print(idx, l)
                 mid = idx + (l - idx) // 2
                 if comb[mid][0] < val:
                     idx = mid + 1
@@ -28,5 +28,4 @@ class Solution:
             ans = max(ans, comb[jobidx][2] + maxProfit(returnIdx(jobidx, l, comb[jobidx][1])))
             dd[jobidx] = ans
             return ans
-
         return maxProfit(0)

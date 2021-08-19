@@ -1,14 +1,10 @@
 import numpy as np
 import sys
 input = sys.stdin.readline
-
 MOD = 10 ** 9 + 7
-
-N, C = map(int, input().split())
+(N, C) = map(int, input().split())
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]
-
-# (i,j) に j^i を入れる
 kth_pow = np.ones((1024, 401), dtype=np.int64)
 rng = np.arange(401, dtype=np.int64)
 for i in range(1, C + 1):
@@ -32,12 +28,11 @@ def convolve(A, B, n=32):
     return (X * (M * M % MOD) + (X + Z - Y) * M + Z) % MOD
 
 
-dp = np.zeros(1024, dtype=np.int64)  # これまで配った個数、合計点
+dp = np.zeros(1024, dtype=np.int64)
 dp[0] = 1
-for a, b in zip(A, B):
+for (a, b) in zip(A, B):
     arr = kth_pow_cum[:, b] - kth_pow_cum[:, a - 1]
     dp = convolve(dp, arr)
     dp[C + 1:] = 0
-
 answer = dp[C]
 print(answer)
