@@ -24,15 +24,14 @@ def lcmN(a):
     return x
 
 
-n, m = list(map(int, input().split()))
-a = list(map(int, input().split()))  # ;print(a)
-
+(n, m) = list(map(int, input().split()))
+a = list(map(int, input().split()))
 g = gcdN(a)
 for i in a:
-    if (i // g) % 2 == 0:
-        print((0))
+    if i // g % 2 == 0:
+        print(0)
         break
 else:
     l = lcmN(a)
     k = 2 * m // l
-    print(((k + 1) // 2))
+    print((k + 1) // 2)

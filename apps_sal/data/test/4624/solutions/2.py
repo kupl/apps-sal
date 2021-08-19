@@ -1,11 +1,8 @@
-# Created by: WeirdBugsButOkay
-# 28-09-2020, 13:35:28
-
 import math
 
 
 def solve():
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     ans = 1
     n -= 2
     while n > 0:

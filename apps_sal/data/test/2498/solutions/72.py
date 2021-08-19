@@ -1,5 +1,5 @@
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     A = tuple(map(int, input().split()))
     ans = count(A, N, M)
     print(ans)
@@ -7,14 +7,14 @@ def main():
 
 def count(A, N, M):
     t = hMt(A[0])
-    B = [A[0] // (2**t)]
+    B = [A[0] // 2 ** t]
     for val in A[1:]:
         if hMt(val) != t:
             ans = 0
             return ans
-        B.append(val // (2**t))
+        B.append(val // 2 ** t)
     T = nlcm(B)
-    MdivT = (M // (2**(t - 1))) // T
+    MdivT = M // 2 ** (t - 1) // T
     ans = countodd(MdivT)
     return ans
 
@@ -30,7 +30,6 @@ def countodd(num):
 def nlcm(A):
     LCM = A[0]
     for val in A[1:]:
-        #print("%d %d gcm:%d LCM:%d"%(LCM,val,gcm(LCM,val),lcm(LCM,val)))
         LCM = lcm(LCM, val)
     return LCM
 

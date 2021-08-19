@@ -1,6 +1,5 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 A = [int(i) for i in input().split()]
-
 heights = []
 ok = 0
 for jj in range(n + 1):
@@ -11,8 +10,6 @@ for jj in range(n + 1):
             continue
         else:
             totalheight += heights[i]
-
-    #print('at jj',jj, totalheight)
     if totalheight <= k:
         ok = jj
     else:

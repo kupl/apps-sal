@@ -5,10 +5,8 @@ def GCM(x, y):
         return GCM(y, x % y)
 
 
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
-
 count2 = [0 for i in range(N)]
 for i in range(N):
     a = A[i]
@@ -21,10 +19,8 @@ if sum(count2) == count2[0] * N:
     buf = 1
     for i in range(N):
         buf = A[i] * buf // GCM(buf, A[i])
-    buf *= 2**(count2 - 1)
-    # print(buf)
+    buf *= 2 ** (count2 - 1)
     n = M // buf
     print((n + 1) // 2)
-
 else:
     print(0)

@@ -3,10 +3,9 @@ def mi():
 
 
 for _ in range(int(input())):
-    r, c = mi()
-    y1, x1, y2, x2 = mi()
-    y3, x3, y4, x4 = mi()
-    # (col,row)
+    (r, c) = mi()
+    (y1, x1, y2, x2) = mi()
+    (y3, x3, y4, x4) = mi()
     ts = r * c
     if ts % 2:
         i_w = (ts + 1) // 2
@@ -40,7 +39,7 @@ for _ in range(int(input())):
     y7 = y6
     x8 = x6
     y8 = y5
-    y7, y8 = y8, y7
+    (y7, y8) = (y8, y7)
     ts3 = (abs(x7 - x8) + 1) * (abs(y7 - y8) + 1)
     if (x7 + y7) % 2 == 0:
         temp3 = (ts3 + 1) // 2
@@ -49,28 +48,9 @@ for _ in range(int(input())):
     c_b = ts3 - temp3
     i_b -= r1_b
     i_w += r1_b
-    #print ("LOL", i_w, i_b)
     i_w -= r2_w
     i_b += r2_w
-    #print ("LOL", i_w, i_b)
     i_b += c_b
     i_w -= c_b
     print(i_w, i_b)
-'''
-5
-2 2
-1 1 2 2
-1 1 2 2
-3 4
-2 2 3 2
-3 1 4 3
-1 5
-1 1 5 1
-3 1 5 1
-4 4
-1 1 4 2
-1 3 4 4
-3 4
-1 2 4 2
-2 1 3 3
-'''
+'\n5\n2 2\n1 1 2 2\n1 1 2 2\n3 4\n2 2 3 2\n3 1 4 3\n1 5\n1 1 5 1\n3 1 5 1\n4 4\n1 1 4 2\n1 3 4 4\n3 4\n1 2 4 2\n2 1 3 3\n'

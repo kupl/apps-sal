@@ -1,8 +1,8 @@
 import sys
 sys.setrecursionlimit(10000000)
 input = sys.stdin.readline
-N, A, B, C = map(int, input().split())
-S = [input().strip("\n").replace("A", "0").replace("B", "1").replace("C", "2") for _ in range(N)]
+(N, A, B, C) = map(int, input().split())
+S = [input().strip('\n').replace('A', '0').replace('B', '1').replace('C', '2') for _ in range(N)]
 Ans = [None] * N
 
 
@@ -32,18 +32,16 @@ def search(i, num):
 
 def solve():
     if search(0, [A, B, C]):
-        print("Yes")
-        for i, a in enumerate(Ans):
-            if a == "0":
-                print("A")
-            elif a == "1":
-                print("B")
+        print('Yes')
+        for (i, a) in enumerate(Ans):
+            if a == '0':
+                print('A')
+            elif a == '1':
+                print('B')
             else:
-                print("C")
+                print('C')
     else:
-        print("No")
-    # print(Ans)
-
+        print('No')
     return 0
 
 

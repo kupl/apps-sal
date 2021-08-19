@@ -1,9 +1,6 @@
-
-
 def main():
     N = int(input())
     digits = []
-
     while N != 0:
         digits.append(N % 26)
         if digits[-1] == 0:
@@ -15,7 +12,7 @@ def main():
     digits.reverse()
     for d in digits:
         print(chr(96 + d), end='')
-    print()  # 改行
+    print()
 
 
 def __starting_point():
