@@ -1,11 +1,5 @@
-# f = open('test.py')
-# def input():
-# 	return f.readline().replace('\n','')
-
-
 from collections import defaultdict
 import bisect
-# from collections import deque
 
 
 def read_list():

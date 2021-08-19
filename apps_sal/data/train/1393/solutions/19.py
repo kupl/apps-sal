@@ -1,6 +1,4 @@
-# cook your dish here
 t = int(input())
-
 for t in range(t):
     n = int(input())
     a = [int(x) for x in input().split()]
@@ -10,5 +8,4 @@ for t in range(t):
         if a[i] <= current:
             counter = counter + 1
             current = a[i]
-
     print(counter)
