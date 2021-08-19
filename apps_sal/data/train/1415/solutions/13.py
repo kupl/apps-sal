@@ -6,7 +6,6 @@ def fun(s):
         s1 = s[:i] + s[i + 1:]
         if s1 == s1[::-1]:
             return True
-
     s1 = s[:len(s) - 1]
     if s1 == s1[::-1]:
         return True
@@ -16,6 +15,6 @@ def fun(s):
 for _ in range(t):
     s = input()
     if fun(s):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

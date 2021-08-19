@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 F = []
 S = []
 line1 = input().split()
@@ -8,7 +8,6 @@ for i in range(n):
     last = last ^ int(line1[i])
     S.append(last)
 S.append(0)
-
 for i in range(q):
     query = int(input())
     pos = (query - 1) % len(S)

@@ -7,8 +7,7 @@ from heapq import *
 from operator import *
 from sys import *
 setrecursionlimit(100000000)
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
 l.append(reduce(xor, l))
 l = list(accumulate(l, xor))

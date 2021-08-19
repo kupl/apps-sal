@@ -1,6 +1,6 @@
 from collections import Counter
 from collections import defaultdict
-p = 10**5 + 5
+p = 10 ** 5 + 5
 
 
 def Sieve():
@@ -13,10 +13,10 @@ def Sieve():
                 l[j] = False
         i += 1
     l[0] = l[1] = False
-    return l, s
+    return (l, s)
 
 
-isprime, s = Sieve()
+(isprime, s) = Sieve()
 good = defaultdict(list)
 for i in range(2, p):
     for j in range(i, p, i):

@@ -1,4 +1,4 @@
-'''
+"""
 n=1
 10
 
@@ -13,8 +13,7 @@ n=5
 4 5 1 2 3
 
 2
-'''
-
+"""
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -22,7 +21,7 @@ for i in range(t):
     curr = l1[0]
     ans = 0
     for j in range(n):
-        if(l1[j] <= curr):
+        if l1[j] <= curr:
             ans += 1
             curr = l1[j]
     print(ans)

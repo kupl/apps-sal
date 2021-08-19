@@ -1,11 +1,8 @@
 t = int(input())
-
 while t > 0:
     n = int(input())
-
     if n == 3:
-        print("A")
+        print('A')
     else:
-        print("B")
-
+        print('B')
     t = t - 1

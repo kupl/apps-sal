@@ -11,7 +11,7 @@ for _ in range(t):
         sum_of_primes = 2
         for number in range(3, n + 1, 2):
             for odd in range(3, int(sqrt(number)) + 1, 2):
-                if (number % odd) == 0:
+                if number % odd == 0:
                     break
             else:
                 sum_of_primes += number

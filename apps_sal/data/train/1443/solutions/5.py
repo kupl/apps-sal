@@ -1,6 +1,6 @@
 T = int(input())
 for i in range(T):
-    B, G = list(map(int, input().split()))
+    (B, G) = list(map(int, input().split()))
     l = []
     for j in range(B):
         m = list(input())
@@ -12,5 +12,5 @@ for i in range(T):
             if l[n][k] == '1':
                 c += 1
         if c > 1:
-            d += ((c * (c - 1)) // 2)
+            d += c * (c - 1) // 2
     print(d)

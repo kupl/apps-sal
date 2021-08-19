@@ -1,4 +1,3 @@
-
 for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()))
@@ -16,13 +15,11 @@ for _ in range(int(input())):
             if arr[i] < 0:
                 temp.append(i + 1)
                 n += 1
-        else:
-            if arr[i] >= 0:
-                temp.append(i + 1)
-                p += 1
+        elif arr[i] >= 0:
+            temp.append(i + 1)
+            p += 1
     print(pos)
     if p == n:
-
         k = [len(temp)]
         k.extend(temp)
         print(*k)

@@ -1,7 +1,7 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    even, odd = 0, 0
+    (even, odd) = (0, 0)
     for i in range(n):
         count_of_q = bin(a[i]).count('1')
         if count_of_q % 2 == 0:

@@ -3,7 +3,7 @@ for i in range(t):
     n = int(input())
     nums = list(map(int, input().split()))
     s = sum(nums)
-    if(s == 0):
+    if s == 0:
         print(1)
     else:
         l = 9999999
@@ -21,14 +21,14 @@ for i in range(t):
                 sum1 -= nums[ini]
                 ini += 1
                 step = True
-            if(f == 1):
+            if f == 1:
                 break
             if step:
                 sum1 -= nums[ini]
                 ini += 1
-        if(f == 1):
+        if f == 1:
             print(1)
-        elif(l != 9999999):
+        elif l != 9999999:
             print(l)
         else:
             print(1)

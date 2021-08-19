@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     s = list(input())
     a = s.count('a')
     b = s.count('b')

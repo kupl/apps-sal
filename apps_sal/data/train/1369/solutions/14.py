@@ -8,10 +8,9 @@ def sumOfPrimes(n):
                 prime[i] = False
                 i += p
         p += 1
-
     sum = 0
     for i in range(2, n + 1):
-        if(prime[i]):
+        if prime[i]:
             sum += i
     return sum
 

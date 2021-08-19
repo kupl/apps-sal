@@ -29,7 +29,7 @@ for _ in range(int(input())):
                 if j < num - 1 and arr[j + 1] == 2:
                     ans += dp[i - 1] * (count + 1) % 1000000007
                 else:
-                    ans += dp[i - 1] * (count) % 1000000007
+                    ans += dp[i - 1] * count % 1000000007
             elif count % 2 == 0:
                 ans += dp[i - 1] * (count - 1) % 1000000007
     print(ans % 1000000007)

@@ -10,15 +10,10 @@ def remove_double(s):
 
 
 message = input().strip().lower()
-
 alpha = remove_double(list(message))
-
 l = len(alpha)
-
 encrypted = ''
-
 for i in range(l):
     times = message.count(alpha[i])
     encrypted += alpha[i] + str(times)
-
 print(encrypted)

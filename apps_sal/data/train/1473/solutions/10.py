@@ -1,17 +1,12 @@
-
 def solve(r, c, ar):
-
     if not r * c == ar[0] + ar[1] + ar[2]:
-        return "No"
-
+        return 'No'
     if ar[0] % r == ar[1] % r == ar[2] % r == 0:
         if ar[0] / r + ar[1] / r + ar[2] / r == c:
-            return "Yes"
-
+            return 'Yes'
     if ar[0] % c == ar[1] % c == ar[2] % c == 0:
         if ar[0] / c + ar[1] / c + ar[2] / c == r:
-            return "Yes"
-
+            return 'Yes'
     for i in range(len(ar)):
         if ar[i] % r == 0:
             cnt = 0
@@ -27,7 +22,7 @@ def solve(r, c, ar):
                     sma += ar[j]
             if cnt == 2 and sml == r:
                 if sma + ar[i] == r * c:
-                    return "Yes"
+                    return 'Yes'
         if ar[i] % c == 0:
             cnt = 0
             sml = 0
@@ -42,10 +37,10 @@ def solve(r, c, ar):
                     sma += ar[j]
             if cnt == 2 and sml == c:
                 if sma + ar[i] == r * c:
-                    return "Yes"
-    return "No"
+                    return 'Yes'
+    return 'No'
 
 
 for cas in range(eval(input())):
-    r, c, m, k, j = list(map(int, input().strip().split()))
+    (r, c, m, k, j) = list(map(int, input().strip().split()))
     print(solve(r, c, [m, k, j]))

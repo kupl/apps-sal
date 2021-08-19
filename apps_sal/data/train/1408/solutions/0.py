@@ -10,7 +10,7 @@ def solve(a, b):
     dp = Counter([('11', '11')])
     for i in range(n - 1):
         new = Counter()
-        for x, y in (a[i], b[i]), (b[i], a[i]):
+        for (x, y) in ((a[i], b[i]), (b[i], a[i])):
             for p in choice[x]:
                 for q in choice[y]:
                     m = p[-1] + x
@@ -19,10 +19,10 @@ def solve(a, b):
                     new[m, n] %= mod
         dp = new
     ans = 0
-    for i in '11', '21', :
-        for j in '11', '21':
+    for i in ('11', '21'):
+        for j in ('11', '21'):
             ans += dp[i, j]
-    return (ans * 2) % mod
+    return ans * 2 % mod
 
 
 t = int(input())

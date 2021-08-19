@@ -24,11 +24,9 @@ for i in range(int(input())):
             if i + 1 <= y:
                 if a[i] < 0:
                     c.append(i + 1)
-            else:
-                if a[i] > 0:
-                    d.append(i + 1)
+            elif a[i] > 0:
+                d.append(i + 1)
         for i in range(abs(len(d) - len(c))):
             d.pop(0)
-
         print(su)
-        print(len(c + d), *(c + d), end=' ')
+        print(len(c + d), *c + d, end=' ')

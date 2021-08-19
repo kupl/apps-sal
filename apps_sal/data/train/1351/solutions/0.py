@@ -6,7 +6,7 @@ for _ in range(int(input())):
         d.add(i)
     for i in range(n):
         if i in d:
-            print(i, end=" ")
+            print(i, end=' ')
         else:
-            print(0, end=" ")
+            print(0, end=' ')
     print()

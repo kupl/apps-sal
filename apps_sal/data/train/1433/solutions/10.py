@@ -6,8 +6,8 @@ def inp():
 
 
 def go():
-    a0, a4, a6, a7 = inp()
-    b0, b4, b6, b7 = inp()
+    (a0, a4, a6, a7) = inp()
+    (b0, b4, b6, b7) = inp()
     r4 = r7 = 0
     m = min(b6, a7)
     r7 += m
@@ -49,7 +49,7 @@ def go():
     r4 += m
     a4 -= m
     b4 -= m
-    print("7" * r7 + "4" * r4)
+    print('7' * r7 + '4' * r4)
 
 
 for t in range(eval(input())):

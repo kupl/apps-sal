@@ -11,5 +11,5 @@ for _ in range(int(input())):
     else:
         x = []
         for i in range(len(aux)):
-            x.append(abs(tot - (2 * aux[i])))
+            x.append(abs(tot - 2 * aux[i]))
         print(min(x))

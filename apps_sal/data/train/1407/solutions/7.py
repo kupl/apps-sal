@@ -20,7 +20,7 @@ def neigh(A, x, y, m, n):
 AA = [[1, 1, 2, 2], [1, 1, 2, 3], [1, 2, 2, 3], [1, 2, 3, 3], [1, 2, 2, 1], [1, 2, 3, 1], [1, 2, 3, 4]]
 t = int(input())
 for i in range(t):
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     if m >= 3 and n >= 3:
         P = set(range(1, 5))
     elif m == 1 and n == 1:
@@ -42,7 +42,7 @@ for i in range(t):
             A[0][j] = min(P - B)
         print(max(P))
         for j in A[0]:
-            print(j, end=" ")
+            print(j, end=' ')
         print()
         continue
     while True:
@@ -52,7 +52,7 @@ for i in range(t):
                 A[0][j] = AA[pk][j % 4]
         else:
             for j in range(n):
-                A[0][j] = (j % max(P)) + 1
+                A[0][j] = j % max(P) + 1
         for j in range(1, m):
             for k in range(n):
                 B = neigh(A, j, k, m, n)
@@ -69,5 +69,5 @@ for i in range(t):
     print(max(P))
     for j in A:
         for k in j:
-            print(k, end=" ")
+            print(k, end=' ')
         print()

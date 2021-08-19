@@ -22,4 +22,4 @@ try:
                 for j in range(4, n + 1, 2):
                     print(2, j, j + 1)
 except EOFError as e:
-    print(end=" ")
+    print(end=' ')

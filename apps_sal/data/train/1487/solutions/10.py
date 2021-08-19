@@ -5,9 +5,9 @@ for _ in range(int(input())):
     if n == 1:
         print(1, 0)
         continue
-    l, r = 0, n - 1
-    a, b = 0, 0
-    sumA, sumB = 0, 0
+    (l, r) = (0, n - 1)
+    (a, b) = (0, 0)
+    (sumA, sumB) = (0, 0)
     while l < r:
         if sumA <= sumB * X:
             sumA += arr[l]

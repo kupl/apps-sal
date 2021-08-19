@@ -9,13 +9,13 @@ while T > 0:
     count = 1
     flag = True
     i = A[0] - 1
-    A[0] = (-1) * A[0]
-    while (flag and (count < N)):
+    A[0] = -1 * A[0]
+    while flag and count < N:
         if A[i] < 0:
             flag = False
         else:
             j = A[i] - 1
-            A[i] = (-1) * A[i]
+            A[i] = -1 * A[i]
             i = j
             count += 1
     if not flag:

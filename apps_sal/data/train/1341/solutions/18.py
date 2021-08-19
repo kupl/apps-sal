@@ -13,7 +13,7 @@ for _ in range(int(input())):
             back[i] = i
         else:
             back[i] = back[i + 1]
-    if(back[0] == 0):
+    if back[0] == 0:
         print(2 * n - 2 + (n - 2) * (n - 1) // 2)
     else:
         ans = n - back[0]
@@ -38,6 +38,5 @@ for _ in range(int(input())):
                     mid = (low + high) // 2
                     if arr[mid] <= key:
                         mid += 1
-                    ans += (n - mid)
-
+                    ans += n - mid
         print(ans)

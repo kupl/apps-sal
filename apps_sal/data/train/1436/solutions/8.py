@@ -1,5 +1,5 @@
 t = int(input())
-while(t):
+while t:
     s = input()
     if s == s[::-1]:
         print(1)

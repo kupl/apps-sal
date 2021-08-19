@@ -10,6 +10,6 @@ for T in range(t):
         if alpha[i] == 1:
             odd += 1
     if odd <= 2:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

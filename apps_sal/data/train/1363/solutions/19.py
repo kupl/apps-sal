@@ -1,11 +1,8 @@
 import sys
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 l = [1]
-
-for i in range(1, (10**6) + 1):
-    l.append((l[-1] * 23) % mod)
+for i in range(1, 10 ** 6 + 1):
+    l.append(l[-1] * 23 % mod)
 
 
 def solve(num):
@@ -18,7 +15,7 @@ def solve(num):
 
 
 for cases in range(int(sys.stdin.readline())):
-    n, d = list(map(int, sys.stdin.readline().split()))
-    num = int((str(d) * n)) % mod
-    num = num**2
+    (n, d) = list(map(int, sys.stdin.readline().split()))
+    num = int(str(d) * n) % mod
+    num = num ** 2
     print(solve(str(num)))

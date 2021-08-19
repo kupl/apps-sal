@@ -2,7 +2,7 @@ t = int(input())
 li1 = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 li2 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 for z in range(t):
-    y, m, d = list(map(int, input().split(':')))
+    (y, m, d) = list(map(int, input().split(':')))
     if y % 4 == 0:
         if y % 100 == 0:
             if y % 400 == 0:

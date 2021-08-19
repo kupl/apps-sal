@@ -1,5 +1,4 @@
 n = int(input())
-
 for _ in range(n):
     l = int(input())
     t = map(int, input().split())

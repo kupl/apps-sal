@@ -1,5 +1,5 @@
 class island:
-    'number, x, y'
+    """number, x, y"""
 
     def __init__(self, x, y, number):
         self.x = x
@@ -9,12 +9,10 @@ class island:
 
 def lighthouses(islands):
     low = high = left = right = islands[0]
-
     left = min(islands, key=lambda a: a.x)
     right = max(islands, key=lambda a: a.x)
     low = min(islands, key=lambda a: a.y)
     high = max(islands, key=lambda a: a.y)
-
     if left == low:
         print(1)
         print(str(left.number) + ' NE')
@@ -30,7 +28,6 @@ def lighthouses(islands):
     else:
         islands.remove(left)
         nextleft = min(islands, key=lambda a: a.x)
-
         if left.y < nextleft.y:
             print(2)
             print(str(left.number) + ' NE')
@@ -46,6 +43,6 @@ for i in range(T):
     N = int(input())
     islands = []
     for j in range(N):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         islands.append(island(x, y, j + 1))
     lighthouses(islands)

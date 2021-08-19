@@ -8,10 +8,10 @@ X = int(input())
 Sum = 0
 List = pos(List1)
 List.sort()
-if(len(List) > X):
-    Sum += (-1 * List[X]) * X
+if len(List) > X:
+    Sum += -1 * List[X] * X
     for i in range(X):
-        Sum += (-1 * List[i]) + List[X]
+        Sum += -1 * List[i] + List[X]
 else:
-    Sum += (-1 * sum(List))
+    Sum += -1 * sum(List)
 print(Sum)

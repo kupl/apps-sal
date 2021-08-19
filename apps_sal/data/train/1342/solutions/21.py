@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     cnt = list(map(int, input().split()))
     cnt.sort()
     day = 0
@@ -11,5 +11,4 @@ for i in range(int(input())):
             j += 1
         else:
             x = 2 * x
-
     print(day)

@@ -1,6 +1,6 @@
 def chef(a, n):
     while n > 0:
-        if a[-1] == "0":
+        if a[-1] == '0':
             a = a[:-1]
             n -= 1
         else:

@@ -6,7 +6,7 @@ def time(x1, y1, x2, y2):
 
 ans = ['no', 'yes']
 for _ in range(int(input())):
-    t, fx, fy, sx, sy, f = 0, 1, 1, 2, 1, 1
+    (t, fx, fy, sx, sy, f) = (0, 1, 1, 2, 1, 1)
     for _ in range(int(input())):
         a = [int(x) for x in input().split()]
         if f:
@@ -21,5 +21,5 @@ for _ in range(int(input())):
             _t = a[0] - t
             if t1 > _t or t2 > _t:
                 f = 0
-        t, fx, fy, sx, sy = a
+        (t, fx, fy, sx, sy) = a
     print(ans[f])

@@ -14,13 +14,11 @@ for _ in range(t):
         if i == j:
             if remain:
                 a += 1
+            elif b > a:
+                b += 1
             else:
-                if b > a:
-                    b += 1
-                else:
-                    a += 1
+                a += 1
             break
-
         b += 1
         d = x * l[j] + remain
         while i < j:

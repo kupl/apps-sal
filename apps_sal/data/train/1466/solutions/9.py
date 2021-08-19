@@ -1,4 +1,4 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 f = list(map(int, input().split()))
 l = [0, f[0]]
 for i in range(1, n, 1):

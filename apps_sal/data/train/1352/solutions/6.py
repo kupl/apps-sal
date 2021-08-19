@@ -5,5 +5,5 @@ for t in range(int(input())):
     c = Counter()
     for e in a:
         c[e] += 1
-    for k, v in sorted(c.items()):
+    for (k, v) in sorted(c.items()):
         print(str(k) + ':', v)

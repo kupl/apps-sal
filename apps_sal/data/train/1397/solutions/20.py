@@ -7,7 +7,6 @@ for _ in range(t):
     res = 1
     prev = 0
     prev_ind = -1
-
     i = 0
     while i < n:
         if a[i][1] > prev_ind:

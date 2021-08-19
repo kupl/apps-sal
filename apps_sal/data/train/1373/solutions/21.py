@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = [int(i) for i in input().split()]
+    (n, k) = [int(i) for i in input().split()]
     a = [int(i) for i in input().split()]
     ind = [[] for i in range(k)]
     for i in range(n):

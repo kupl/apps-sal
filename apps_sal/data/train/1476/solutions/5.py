@@ -13,8 +13,8 @@ def fact(N):
 for _ in range(int(input())):
     s = list(input())
     d = Counter(s)
-    p = 10**9 + 7
+    p = 10 ** 9 + 7
     m = 1
     for v in d.values():
         m *= fact(v)
-    print((fact(len(s)) // m) % p)
+    print(fact(len(s)) // m % p)

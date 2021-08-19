@@ -1,8 +1,7 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     s = list(map(int, input().split()))
-
     m = max(a)
     mi = a.index(m)
     dp = [0] * (n + 1)
@@ -14,5 +13,4 @@ for _ in range(int(input())):
             if not dp[i + j]:
                 dp[i] = 1
                 break
-
     print('Chef' if dp[0] else 'Garry')

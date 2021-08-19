@@ -1,15 +1,10 @@
-
 t = int(input())
-
 a = []
 b = []
-
 for i in range(0, t):
     a = input()
     b = input()
-
     agts = bgts = afour = bfour = aseven = bseven = altf = bltf = afts = bfts = 0
-
     for j in a:
         if j > '7':
             agts = agts + 1
@@ -21,7 +16,6 @@ for i in range(0, t):
             afour = afour + 1
         else:
             altf = altf + 1
-
     for j in b:
         if j > '7':
             bgts = bgts + 1
@@ -33,10 +27,8 @@ for i in range(0, t):
             bfour = bfour + 1
         else:
             bltf = bltf + 1
-
     nseven = 0
     nfour = 0
-
     if aseven > bfts:
         aseven = aseven - bfts
         nseven = nseven + bfts
@@ -45,7 +37,6 @@ for i in range(0, t):
         bfts = bfts - aseven
         nseven = nseven + aseven
         aseven = 0
-
     if bseven > afts:
         bseven = bseven - afts
         nseven = nseven + afts
@@ -54,7 +45,6 @@ for i in range(0, t):
         afts = afts - bseven
         nseven = nseven + bseven
         bseven = 0
-
     if aseven > bltf:
         aseven = aseven - bltf
         nseven = nseven + bltf
@@ -63,7 +53,6 @@ for i in range(0, t):
         bltf = bltf - aseven
         nseven = nseven + aseven
         aseven = 0
-
     if bseven > altf:
         bseven = bseven - altf
         nseven = nseven + altf
@@ -72,7 +61,6 @@ for i in range(0, t):
         altf = altf - bseven
         nseven = nseven + bseven
         bseven = 0
-
     if aseven > bfour:
         aseven = aseven - bfour
         nseven = nseven + bfour
@@ -81,7 +69,6 @@ for i in range(0, t):
         bfour = bfour - aseven
         nseven = nseven + aseven
         aseven = 0
-
     if bseven > afour:
         bseven = bseven - afour
         nseven = nseven + afour
@@ -90,9 +77,7 @@ for i in range(0, t):
         afour = afour - bseven
         nseven = nseven + bseven
         bseven = 0
-
     nseven = nseven + min(aseven, bseven)
-
     if afour > bltf:
         afour = afour - bltf
         nfour = nfour + bltf
@@ -101,7 +86,6 @@ for i in range(0, t):
         bltf = bltf - afour
         nfour = nfour + afour
         afour = 0
-
     if bfour > altf:
         bfour = bfour - altf
         nfour = nfour + altf
@@ -110,7 +94,5 @@ for i in range(0, t):
         altf = altf - bfour
         nfour = nfour + bfour
         bfour = 0
-
     nfour = nfour + min(afour, bfour)
-
     print('7' * nseven + '4' * nfour)

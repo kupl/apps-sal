@@ -8,12 +8,12 @@ try:
         if 'serampore' in s:
             b = 1
         if a == 1 and b == 1:
-            print("Both")
+            print('Both')
         elif a == 1:
-            print("GCETTB")
+            print('GCETTB')
         elif b == 1:
-            print("GCETTS")
+            print('GCETTS')
         else:
-            print("Others")
+            print('Others')
 except:
     pass

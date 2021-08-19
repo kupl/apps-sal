@@ -1,8 +1,8 @@
 def ugcd(n):
     ans = [[1]]
-    if(n == 1):
+    if n == 1:
         return ans
-    elif(n % 2 == 1):
+    elif n % 2 == 1:
         ans = [[1, 2, n]]
     else:
         ans = [[1, 2]]
@@ -14,8 +14,8 @@ def ugcd(n):
 t = int(input())
 for i in range(t):
     n = int(input())
-    s = (ugcd(n))
+    s = ugcd(n)
     print(len(s))
     for j in range(len(s)):
-        print(len(s[j]), end=" ")
+        print(len(s[j]), end=' ')
         print(*s[j])

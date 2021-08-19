@@ -6,10 +6,10 @@ MAX = 2 * pow(10, 6) + 10
 P = {}
 P[0] = 1
 for q in range(1, MAX):
-    P[q] = (P[q - 1] * p) % MOD
+    P[q] = P[q - 1] * p % MOD
 for _ in range(int(input())):
-    n, d = list(map(int, input().split()))
-    number = [(d)] * (n)
+    (n, d) = list(map(int, input().split()))
+    number = [d] * n
     C = [0] * (n + n)
     s = len(C) - 1
     for j in range(n - 1, -1, -1):
@@ -34,5 +34,5 @@ for _ in range(int(input())):
     C = C[jump:]
     ans = 0
     for i in range(len(C)):
-        ans += (P[i] * int(C[i])) % MOD
+        ans += P[i] * int(C[i]) % MOD
     print(ans % MOD)

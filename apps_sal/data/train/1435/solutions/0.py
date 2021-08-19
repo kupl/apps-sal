@@ -39,7 +39,7 @@ def lcsfn(a, c, corda, cordb):
     return cost
 
 
-ma = -10**9
+ma = -10 ** 9
 p1 = []
 p2 = []
 for i in range(-1000, 1001):

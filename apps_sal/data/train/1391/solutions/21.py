@@ -1,9 +1,9 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     d = {}
     for i in range(n):
-        s, f, p = map(int, input().split())
+        (s, f, p) = map(int, input().split())
         try:
             d[p].append((f, s))
         except:

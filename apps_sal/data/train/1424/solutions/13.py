@@ -1,4 +1,4 @@
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 i = 0
 while i < a and n > 0:
     if n % 10 == 0:

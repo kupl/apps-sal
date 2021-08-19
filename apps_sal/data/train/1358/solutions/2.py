@@ -1,6 +1,6 @@
 import string
 for _ in range(int(input())):
-    s, k = list(map(str, input().split()))
+    (s, k) = list(map(str, input().split()))
     k = int(k)
     lower = [i for i in string.ascii_lowercase]
     l = {}
@@ -14,7 +14,7 @@ for _ in range(int(input())):
         for j in lower:
             if l[j] < l[i]:
                 c += l[j]
-            elif (l[j] - l[i]) > k:
+            elif l[j] - l[i] > k:
                 c += l[j] - l[i] - k
         ans = min(ans, c)
     print(ans)

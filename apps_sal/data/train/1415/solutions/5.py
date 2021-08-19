@@ -18,6 +18,5 @@ for _ in range(int(input())):
             ind = n - i - 1
             if isp(s[:ind] + s[ind + 1:]):
                 f = 1
-
             break
     print('YES' if f else 'NO')

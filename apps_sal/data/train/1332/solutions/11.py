@@ -1,7 +1,7 @@
 N = eval(input())
 while N:
     N -= 1
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     count = 0
     while a != b:
         if b < a:

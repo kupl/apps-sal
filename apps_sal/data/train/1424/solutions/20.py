@@ -1,5 +1,5 @@
 try:
-    n, a = map(int, input().split())
+    (n, a) = map(int, input().split())
     while a > 0:
         if n % 10 == 0:
             n //= 10

@@ -6,7 +6,7 @@ for t in range(int(input())):
     c = []
     i = 0
     while i < n:
-        while (i < n - 1) and (arr[i] == arr[i + 1]):
+        while i < n - 1 and arr[i] == arr[i + 1]:
             i += 1
             count += 1
         if arr[i] in con or count in c:
@@ -15,8 +15,7 @@ for t in range(int(input())):
         c.append(count)
         i += 1
         count = 1
-
     if i == n:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -2,12 +2,11 @@ t = int(input())
 
 
 def solvethequetion(l, n, x):
-    p, ct = 0, 0
+    (p, ct) = (0, 0)
     for i in range(0, n):
         if l[i] * 2 >= x:
             p = i
             break
-
     for i in range(p, n):
         if l[i] <= x:
             x = l[i] * 2
@@ -23,7 +22,7 @@ def solvethequetion(l, n, x):
 
 while t != 0:
     t -= 1
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     l.sort()
     solvethequetion(l, n, x)

@@ -14,7 +14,7 @@ for _ in range(t):
             break
         if e <= i:
             e = i + 1
-        while e < n and i - 1 >= 0 and a[i - 1] >= a[e]:
+        while e < n and i - 1 >= 0 and (a[i - 1] >= a[e]):
             e += 1
         cnt += n - e + 1
     print(cnt - 1)

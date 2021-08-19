@@ -4,9 +4,9 @@ for _ in range(int(input())):
     first = 0
     last = n - 1
     sseq = []
-    while(first < last):
+    while first < last:
         if a[last] > 0:
-            while(first < last):
+            while first < last:
                 if a[first] < 0:
                     p = a[first]
                     q = a[last]

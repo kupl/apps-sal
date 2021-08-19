@@ -1,11 +1,11 @@
 from sys import stdin, stdout
 tc = int(stdin.readline())
 for i in range(tc):
-    n, k = list(map(int, stdin.readline().split()))
+    (n, k) = list(map(int, stdin.readline().split()))
     dict1 = {}
     comp_to_iterate = []
     for j in range(n):
-        s, f, comp = list(map(int, stdin.readline().split()))
+        (s, f, comp) = list(map(int, stdin.readline().split()))
         if comp in dict1.keys():
             dict1[comp].append((s, f))
             if comp not in comp_to_iterate:

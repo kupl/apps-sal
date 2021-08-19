@@ -1,12 +1,12 @@
 def row(alist):
-    a, n = 0, len(alist)
+    (a, n) = (0, len(alist))
     for i in range(n // 2):
         if alist[i] == '1':
             a += 1
     for i in range(n // 2, n):
         if alist[i] == '1':
             a -= 1
-    return(a)
+    return a
 
 
 t = int(input())

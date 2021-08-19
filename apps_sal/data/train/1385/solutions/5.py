@@ -1,10 +1,10 @@
 def __starting_point():
     t = int(input())
     for _ in range(t):
-        n, p = input().split()
-        n, p = int(n), int(p)
+        (n, p) = input().split()
+        (n, p) = (int(n), int(p))
         s = input()
-        a, b = 0, 0
+        (a, b) = (0, 0)
         arr = [0] * n
         for i in range(n):
             arr[i] = s[i]
@@ -33,7 +33,7 @@ def __starting_point():
                     arr[i] = 'b'
                     p -= 1
             for c in arr:
-                print(c, end="")
+                print(c, end='')
             print()
         else:
             for i in range(n):
@@ -51,7 +51,7 @@ def __starting_point():
                         p -= 1
                         arr[i] = 'a'
             for c in arr:
-                print(c, end="")
+                print(c, end='')
             print()
 
 

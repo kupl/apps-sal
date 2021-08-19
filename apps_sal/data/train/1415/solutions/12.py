@@ -14,7 +14,6 @@ for i in range(int(input())):
     ch = input()
     f = 0
     for j in range(len(ch)):
-
         gh = deel(ch, j)
         if palindrome(gh):
             f = 1

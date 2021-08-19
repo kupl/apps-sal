@@ -1,6 +1,6 @@
 for _ in range(0, int(input())):
     n = int(input())
-    a = list(map(int, input().split(" ")))
+    a = list(map(int, input().split(' ')))
     start = -1
     end = -1
     for i in range(0, n):

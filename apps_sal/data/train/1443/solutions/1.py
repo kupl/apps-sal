@@ -1,6 +1,6 @@
 a = int(input())
 for i in range(a):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     b = []
     for j in range(n):
         j = list(input())
@@ -12,5 +12,5 @@ for i in range(a):
             if b[p][k] == '1':
                 d += 1
         if d > 1:
-            c += ((d * (d - 1)) // 2)
+            c += d * (d - 1) // 2
     print(c)

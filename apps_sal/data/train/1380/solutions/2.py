@@ -1,6 +1,4 @@
 T = int(input())
-
 for t in range(T):
     N = int(input())
-
-    print(int(((N - 1) * (N)) / 2))
+    print(int((N - 1) * N / 2))

@@ -29,9 +29,8 @@ def solve(nums, d, z):
             ele = ele // 2
             if ele >= 2:
                 q2.append(ele)
-
         if not q1:
-            q1, q2 = q2, q1
+            (q1, q2) = (q2, q1)
     if d >= z:
         return c
     return 'RIP'
@@ -39,7 +38,7 @@ def solve(nums, d, z):
 
 t = int(input())
 for _ in range(t):
-    n, a, b, x, y, z = list(map(int, input().split()))
+    (n, a, b, x, y, z) = list(map(int, input().split()))
     nums = list(map(int, input().split()))
     queries = set([])
     c = z - b
@@ -48,5 +47,4 @@ for _ in range(t):
     if d >= z:
         print(0)
     else:
-
         print(solve(nums, d, z))

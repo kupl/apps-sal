@@ -1,5 +1,4 @@
 from sys import stdin
-
 for _ in range(int(stdin.readline())):
     n = int(stdin.readline())
     arr = list(map(int, stdin.readline().split()))
@@ -12,10 +11,9 @@ for _ in range(int(stdin.readline())):
             d[arr[i]].append(i)
         else:
             d[arr[i]] = [i]
-
     pos = d[m[0]][0]
     j = 1
-    while(j < len(m)):
+    while j < len(m):
         k = None
         for item in d[m[j]]:
             if item > pos:

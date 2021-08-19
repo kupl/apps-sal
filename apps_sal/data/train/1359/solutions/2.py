@@ -6,7 +6,7 @@ try:
         if n == 1:
             print(0)
             continue
-        even, odd = 0, 0
+        (even, odd) = (0, 0)
         for i in range(n):
             if l[i] % 2 == 0:
                 even += 1

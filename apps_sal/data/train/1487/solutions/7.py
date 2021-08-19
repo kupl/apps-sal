@@ -5,7 +5,7 @@ for _ in range(t):
     x = int(input())
     ca = [0] * n
     cb = [0] * n
-    psum, psumr, aeats, beats = 0, 0, 0, 0
+    (psum, psumr, aeats, beats) = (0, 0, 0, 0)
     tie = False
     for i in range(n):
         psum = psum + a[i]
@@ -13,7 +13,6 @@ for _ in range(t):
         if i < n - 1:
             ca[i + 1] = psum / x
             cb[n - i - 2] = psumr
-
     for i in range(n):
         if cb[i] > ca[i]:
             aeats += 1
@@ -21,9 +20,9 @@ for _ in range(t):
             beats += 1
         else:
             tie = True
-    if (tie):
+    if tie:
         if beats > aeats:
             beats += 1
         else:
             aeats += 1
-    print("{} {}".format(aeats, beats))
+    print('{} {}'.format(aeats, beats))

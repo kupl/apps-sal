@@ -6,7 +6,7 @@ def powc(x, n, m):
     xx = x
     while n:
         if n & 1:
-            res = (res * xx) % m
+            res = res * xx % m
         xx = xx * xx % m
         n >>= 1
     return res
@@ -38,6 +38,7 @@ def findRoot():
 
 
 class Node:
+
     def __init__(self, value, edge, parent=None):
         self.value = value
         self.edge = edge
@@ -86,11 +87,11 @@ def findPath2(u, v):
 
 T = int(sys.stdin.readline())
 for _ in range(T):
-    n, Q = list(map(int, sys.stdin.readline().split()))
+    (n, Q) = list(map(int, sys.stdin.readline().split()))
     V = list(map(list, [[]] * n))
     W = [0] * n
     for i in range(n - 1):
-        u, v = list(map(int, sys.stdin.readline().split()))
+        (u, v) = list(map(int, sys.stdin.readline().split()))
         u -= 1
         v -= 1
         V[u].append((v, i))
@@ -102,7 +103,7 @@ for _ in range(T):
     hangTree(root)
     M = []
     for _ in range(Q):
-        u, v, x = list(map(int, sys.stdin.readline().split()))
+        (u, v, x) = list(map(int, sys.stdin.readline().split()))
         if not easy:
             q = findPath2(u - 1, v - 1)
             q[-1] = x
@@ -132,4 +133,4 @@ for _ in range(T):
     if is_there_bad:
         print(0)
     else:
-        print(powc(2, n - 1 - Q + empty_cnt, 10**9 + 7))
+        print(powc(2, n - 1 - Q + empty_cnt, 10 ** 9 + 7))

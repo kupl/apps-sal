@@ -2,8 +2,8 @@ def primes(n):
     nums = [True for i in range(n + 1)]
     lst = []
     p = 2
-    while (p * p <= n):
-        if (nums[p] == True):
+    while p * p <= n:
+        if nums[p] == True:
             for i in range(p * p, n + 1, p):
                 nums[i] = False
         p += 1

@@ -1,7 +1,7 @@
 R = G = B = atmpt = counter = 0
 t = int(input())
 for i in range(t):
-    R, G, B = list(map(int, input().split()))
+    (R, G, B) = list(map(int, input().split()))
     k = int(input())
     if R < k:
         atmpt = R

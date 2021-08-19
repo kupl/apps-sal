@@ -19,14 +19,13 @@ for _ in range(int(input())):
             elif a[i] == 15:
                 if sum5 < 2 and sum10 < 1:
                     f = 0
+                elif sum5 < 2 and sum10 >= 1:
+                    sum10 -= 1
+                elif sum5 >= 2 and sum10 < 1:
+                    sum5 -= 2
                 else:
-                    if sum5 < 2 and sum10 >= 1:
-                        sum10 -= 1
-                    elif sum5 >= 2 and sum10 < 1:
-                        sum5 -= 2
-                    else:
-                        sum10 -= 1
+                    sum10 -= 1
     if f == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

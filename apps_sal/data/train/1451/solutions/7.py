@@ -3,12 +3,12 @@ for _ in range(int(input())):
     mp = {}
     cr = {}
     ans = []
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     for i in range(1, n + 1):
         mp[i] = 0
         cr[i] = False
     for _ in range(m):
-        f, t = map(int, input().split())
+        (f, t) = map(int, input().split())
         l.append((f, t))
         mp[f] += 1
         mp[t] += 1

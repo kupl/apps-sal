@@ -10,14 +10,14 @@ def find_fac(fac, n):
 
 
 for _ in range(int(input())):
-    n, k = [int(x) for x in input().split()]
-    temp = (k * (k + 1)) // 2
+    (n, k) = [int(x) for x in input().split()]
+    temp = k * (k + 1) // 2
     fac = []
     find_fac(fac, n)
     fac.sort()
     flag = 0
     for i in range(len(fac) - 1, -1, -1):
-        if (n // fac[i]) >= temp:
+        if n // fac[i] >= temp:
             break
         flag += 1
     if flag == len(fac):

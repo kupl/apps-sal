@@ -1,10 +1,10 @@
 for _ in range(int(input())):
-    n, c = list(map(int, input().split()))
+    (n, c) = list(map(int, input().split()))
     numpoints = 0
     moves = 0
     d = dict()
     for f in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         dif = a - b
         mod = a % c
         if dif not in d:

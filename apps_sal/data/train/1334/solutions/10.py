@@ -13,5 +13,4 @@ else:
     dp[2] = supw[2]
     for i in range(3, len(supw)):
         dp[i] = supw[i] + min(dp[i - 1], min(dp[i - 2], dp[i - 3]))
-
     print(min(dp[n - 1], min(dp[n - 2], dp[n - 3])))

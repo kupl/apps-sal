@@ -1,10 +1,10 @@
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     l = list(map(int, input().split()))
     l.sort()
     i = 0
     count = 0
-    while(i < n):
+    while i < n:
         if l[i] <= x:
             count += 1
             x = max(l[i] * 2, x)

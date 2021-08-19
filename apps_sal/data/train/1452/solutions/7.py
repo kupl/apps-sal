@@ -12,6 +12,6 @@ while t > 0:
         if k > m:
             k = k - m
     if c == m:
-        print("Yes")
+        print('Yes')
     else:
-        print("No", c)
+        print('No', c)

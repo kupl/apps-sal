@@ -35,7 +35,7 @@ for _ in range(int(input())):
                 mid = (low + high) // 2
                 if arr[mid] <= key:
                     mid += 1
-                ans += (n - mid)
+                ans += n - mid
     if back[0] == 0:
         ans -= n
     print(ans)

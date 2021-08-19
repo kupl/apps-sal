@@ -1,10 +1,10 @@
 from collections import defaultdict
 t = int(input())
 for _ in range(t):
-    n, c = [int(x) for x in input().strip().split()]
+    (n, c) = [int(x) for x in input().strip().split()]
     arr = defaultdict(list)
     for i in range(n):
-        x, y = [int(z) for z in input().strip().split()]
+        (x, y) = [int(z) for z in input().strip().split()]
         arr[x - y].append([x, y])
     cp = 0
     m = 0

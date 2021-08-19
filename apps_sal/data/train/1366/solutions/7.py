@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
-    l, r = 0, n - 1
+    (l, r) = (0, n - 1)
     com = False
     while l <= r:
         if a[l] == 0:

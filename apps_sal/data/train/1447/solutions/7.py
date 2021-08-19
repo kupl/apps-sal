@@ -13,12 +13,12 @@ for _ in range(int(input())):
     l = list(map(int, input().split()))
     s = 0
     if check(l) == 0:
-        print("NO")
+        print('NO')
         continue
     for i in range(1, n):
         if l[i] != l[i - 1]:
             s += 1
     if s == len(set(l)) - 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

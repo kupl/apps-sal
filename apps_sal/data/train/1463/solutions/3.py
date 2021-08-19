@@ -1,7 +1,7 @@
 from itertools import combinations
-
 try:
     for _ in range(int(input())):
+
         def gcd(a, b):
             if a == 0 or b == 0:
                 return 0
@@ -32,7 +32,6 @@ try:
                 return arr2
             else:
                 return arr
-
         sum = 0
         n = int(input())
         pages = [i for i in range(1, n + 1)]
@@ -52,6 +51,5 @@ try:
         print(len(big_arr))
         for i in big_arr:
             print(len(i), *i)
-
 except EOFError as e:
-    print(end=" ")
+    print(end=' ')

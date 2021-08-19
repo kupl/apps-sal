@@ -16,5 +16,5 @@ for T in range(int(input())):
     Z = {abs(S)}
     for I in range(N):
         if Q[I] != R[I]:
-            Z.add(abs((S + 2 * (R[I] - Q[I]))))
+            Z.add(abs(S + 2 * (R[I] - Q[I])))
     print(min(Z))

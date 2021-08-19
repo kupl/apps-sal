@@ -1,7 +1,6 @@
 def smallest(lst, n):
     if n == 2:
         print(lst[0] + lst[1])
-
     elif 2 < n <= 10:
         mini = lst[0] + lst[1]
         for j in range(2, n):

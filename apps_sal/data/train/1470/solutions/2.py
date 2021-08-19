@@ -10,9 +10,9 @@ for _ in range(int(input())):
         if a[i] == a[comp]:
             cont += 1
             if i == len(a) - 1:
-                ans += (cont * (cont - 1)) // 2
+                ans += cont * (cont - 1) // 2
         else:
-            ans += (cont * (cont - 1)) // 2
+            ans += cont * (cont - 1) // 2
             if comp != 0 and a[comp - 1] == a[i]:
                 ans += 1
             comp = i

@@ -19,7 +19,7 @@ def solve(a):
 def main():
     T = int(input())
     for _ in range(T):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         print(solve(r) - solve(l - 1))
 
 

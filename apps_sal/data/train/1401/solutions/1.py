@@ -1,4 +1,3 @@
-
 d = input().split()
 money = int(d[1])
 price_of_chocolates = sorted(list(map(int, input().split())))

@@ -1,8 +1,8 @@
 for t in range(int(input())):
-    n, c = map(int, input().split())
+    (n, c) = map(int, input().split())
     d = {}
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         t = x - y
         if t not in d:
             d[t] = [[x, y]]
@@ -25,5 +25,5 @@ for t in range(int(input())):
             check = sorted(check, key=lambda x: x[0])
             mid = check[len(check) // 2][0]
             for k in range(len(check)):
-                moves += (abs(mid - check[k][0]) // c)
+                moves += abs(mid - check[k][0]) // c
     print(checkpoints, moves)

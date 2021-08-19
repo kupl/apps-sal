@@ -4,8 +4,8 @@ for i in range(T):
     l1 = [int(i) for i in input().split()]
     for i in range(N):
         if i in l1:
-            print(i, end=" ")
+            print(i, end=' ')
         else:
-            print(0, end=" ")
+            print(0, end=' ')
     else:
         print()

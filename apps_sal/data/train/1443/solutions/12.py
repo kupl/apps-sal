@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     l = []
     for i in range(m):
         s = input()

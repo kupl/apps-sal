@@ -1,4 +1,5 @@
-def REPLACE(string, par): return ''.join(string.split(par))
+def REPLACE(string, par):
+    return ''.join(string.split(par))
 
 
 out = []

@@ -4,7 +4,7 @@ for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
     d = collections.defaultdict(list)
-    c, find, ans, l = 0, 0, 0, []
+    (c, find, ans, l) = (0, 0, 0, [])
     for i in range(n):
         if a[i] not in d:
             l.append(a[i])

@@ -1,8 +1,12 @@
 from math import sqrt
-def take(): return input().strip()
 
 
-def cal(): return list(map(int, take().split()))
+def take():
+    return input().strip()
+
+
+def cal():
+    return list(map(int, take().split()))
 
 
 T = int(take())

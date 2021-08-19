@@ -1,7 +1,5 @@
 from sys import stdin
-
 T = int(stdin.readline())
-
 for i in range(0, T):
     n = int(stdin.readline())
     A = []

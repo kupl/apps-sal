@@ -1,13 +1,16 @@
 import sys
 from collections import defaultdict
-def input(): return sys.stdin.readline().rstrip("\r\n")
+
+
+def input():
+    return sys.stdin.readline().rstrip('\r\n')
 
 
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     dic = defaultdict(lambda: [])
     for i in range(n):
-        a, d, c = list(map(int, input().split()))
+        (a, d, c) = list(map(int, input().split()))
         dic[c].append((a, d))
     out = 0
     for i in dic:

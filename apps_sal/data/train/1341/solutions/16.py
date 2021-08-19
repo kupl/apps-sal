@@ -14,7 +14,6 @@ for i in range(int(input())):
         if a[j - 1] >= a[j]:
             arr2 = a[j:]
             break
-
     ans = len(arr1) + len(arr2)
     le = len(arr2)
     x = 0

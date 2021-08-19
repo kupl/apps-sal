@@ -14,7 +14,7 @@ def matrix(L, n, m, c):
     return d
 
 
-n, m, q = list(map(int, stdin.readline().split()))
+(n, m, q) = list(map(int, stdin.readline().split()))
 L = []
 for i in range(n):
     L.append(stdin.readline().strip())
@@ -27,8 +27,7 @@ for i in range(q):
             print('no')
         else:
             print('yes')
+    elif male.get(int(query[0]), 0) == 0:
+        print('no')
     else:
-        if male.get(int(query[0]), 0) == 0:
-            print('no')
-        else:
-            print('yes')
+        print('yes')

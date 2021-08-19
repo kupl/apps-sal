@@ -4,12 +4,11 @@ for _ in range(int(input())):
         print(n // 2)
         for i in range(1, n, 2):
             print(2, i, i + 1)
+    elif n == 1:
+        print(1)
+        print(1, 1)
     else:
-        if n == 1:
-            print(1)
-            print(1, 1)
-        else:
-            print(n // 2)
-            print(3, 1, 2, 3)
-            for i in range(4, n + 1, 2):
-                print(2, i, i + 1)
+        print(n // 2)
+        print(3, 1, 2, 3)
+        for i in range(4, n + 1, 2):
+            print(2, i, i + 1)

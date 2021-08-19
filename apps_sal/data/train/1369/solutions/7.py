@@ -11,7 +11,7 @@ for _ in range(t):
         sum = 2
         for no in range(3, n + 1, 2):
             for odd in range(3, int(sqrt(no)) + 1, 2):
-                if (no % odd) == 0:
+                if no % odd == 0:
                     break
             else:
                 sum += no

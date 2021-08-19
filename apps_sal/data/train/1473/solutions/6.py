@@ -1,7 +1,7 @@
 def check2(r, x, k, j):
     if k % r == 0 and j % r == 0:
         return True
-    if (k % x == 0) and j % x == 0:
+    if k % x == 0 and j % x == 0:
         return True
     return False
 
@@ -9,14 +9,14 @@ def check2(r, x, k, j):
 def check(r, c, m, k, j):
     if m % r != 0:
         return False
-    x = c - (m / r)
+    x = c - m / r
     return check2(r, x, k, j)
 
 
 for _ in range(int(input())):
-    r, c, m, k, j = list(map(int, input().split()))
+    (r, c, m, k, j) = list(map(int, input().split()))
     if r * c != m + k + j:
-        print("No")
+        print('No')
     else:
         b = False
         b |= check(r, c, m, k, j)

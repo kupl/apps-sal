@@ -1,12 +1,10 @@
 n = int(input())
 l = list(map(int, input().split()))
 x = int(input())
-
 k = []
 for i in l:
     if i < 0:
         k.append(i)
-
 c = len(k)
 ans = 0
 if c >= x:
@@ -22,7 +20,6 @@ if c >= x:
             if j < 0:
                 ans += -1 * j
         print(ans)
-
 else:
     ans += -1 * sum(k)
     print(ans)

@@ -1,5 +1,4 @@
 def __starting_point():
-
     for _ in range(int(input())):
         res = 0
         n = int(input())

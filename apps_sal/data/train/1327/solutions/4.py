@@ -1,14 +1,14 @@
 t = int(input())
 for i in range(t):
-    n, q = input().split()
+    (n, q) = input().split()
     cities = [int(x) for x in input().split()]
     cities_sort = cities.copy()
     cities_sort.sort()
     for j in range(int(q)):
-        q1, q2 = [int(x) for x in input().split()]
+        (q1, q2) = [int(x) for x in input().split()]
         a = cities[q1 - 1]
         b = cities[q2 - 1]
-        if (a > b):
+        if a > b:
             c = a
             a = b
             b = c

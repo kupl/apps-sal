@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    i, j = list(map(int, input().split()))
+    (i, j) = list(map(int, input().split()))
     base1 = i
     base2 = j
     arr1 = []

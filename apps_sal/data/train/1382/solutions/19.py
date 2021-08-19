@@ -1,7 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split() if int(i) < 0]
 x = int(input())
-
 a.sort(reverse=True)
 na = len(a)
 if x == 0:

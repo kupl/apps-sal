@@ -7,7 +7,7 @@ def digitp(s, p):
 n = int(input())
 cs = 0
 cps = 0
-for i in range(1, 10**6 + 1):
+for i in range(1, 10 ** 6 + 1):
     s = str(i)
     if digitp(s, 1) == n:
         if '1' in s:

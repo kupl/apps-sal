@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     nums = [int(j) for j in input().split()]
-    yes, five, ten = 1, 0, 0
+    (yes, five, ten) = (1, 0, 0)
     for j in range(n):
         if nums[j] == 15:
             if ten > 0 and five > 0:
@@ -20,6 +20,6 @@ for _ in range(int(input())):
         else:
             five += 1
     if yes == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

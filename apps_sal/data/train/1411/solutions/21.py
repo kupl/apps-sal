@@ -1,8 +1,7 @@
 from math import pi, ceil
-
 T = int(input())
 for t in range(T):
-    X, R, A, B = map(int, input().split())
+    (X, R, A, B) = map(int, input().split())
     turn = 2 * pi * R
     D = turn * X
     time = D / max(A, B)

@@ -1,6 +1,6 @@
 import collections
 for _ in range(1):
-    n, p = list(map(int, input().split()))
+    (n, p) = list(map(int, input().split()))
     a = sorted(map(int, input().split()))
     c = s = 0
     for v in a:

@@ -1,6 +1,5 @@
-
 from collections import Counter
-p = 10**6 + 5
+p = 10 ** 6 + 5
 
 
 def Sieve():
@@ -13,10 +12,10 @@ def Sieve():
                 l[j] = False
         i += 1
     l[0] = l[1] = False
-    return l, s
+    return (l, s)
 
 
-isprime, s = Sieve()
+(isprime, s) = Sieve()
 for _ in range(int(input())):
     n = int(input())
     l = [int(i) for i in input().split()]

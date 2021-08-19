@@ -25,7 +25,6 @@ for i in range(t):
         for j in range(len(s)):
             c.append(s[j])
             d.append(s[j])
-
         n = len(s)
         for j in range(n):
             if s[j] != s[n - j - 1]:

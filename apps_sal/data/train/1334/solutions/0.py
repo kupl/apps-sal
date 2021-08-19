@@ -7,5 +7,4 @@ dp[1] = a[1]
 dp[2] = a[2]
 for x in range(3, n):
     dp[x] = a[x] + min(dp[x - 1], dp[x - 2], dp[x - 3])
-
 print(min(dp[-3:]))

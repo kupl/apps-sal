@@ -1,10 +1,10 @@
-e = 10**9 + 7
+e = 10 ** 9 + 7
 
 
 def fact(n):
     ans = 1
     for i in range(2, n + 1):
-        ans = (ans * i) % e
+        ans = ans * i % e
     return ans
 
 
@@ -22,5 +22,5 @@ for _ in range(t):
     for i in list(d.values()):
         y = fact(i)
         y = pow(y, e - 2, e)
-        x = (x * y) % e
+        x = x * y % e
     print(x)

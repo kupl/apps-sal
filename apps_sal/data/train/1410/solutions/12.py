@@ -22,10 +22,10 @@ while t > 0:
     else:
         j = k - 1
         flag = 0
-        while s - m >= 0 and j >= 0 and n - j - 1 >= 0:
+        while s - m >= 0 and j >= 0 and (n - j - 1 >= 0):
             ways = ways + c(m - 1, j) * c(s - m, n - j - 1)
             j -= 1
         p = ways / c(s - 1, n - 1)
-        p = (1 - p)
+        p = 1 - p
         print(p)
     t -= 1

@@ -1,12 +1,12 @@
 def lcm(a, b):
-    if(a > b):
+    if a > b:
         num = a
         den = b
     else:
         num = b
         den = a
     rem = num % den
-    while(rem != 0):
+    while rem != 0:
         num = den
         den = rem
         rem = num % den

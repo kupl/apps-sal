@@ -9,7 +9,7 @@ for i in range(t):
     v = 0
     val1 = int(a1, 2)
     val2 = int(b1, 2)
-    while(val2 > 0):
+    while val2 > 0:
         c += 1
         u = val1 ^ val2
         v = val1 & val2

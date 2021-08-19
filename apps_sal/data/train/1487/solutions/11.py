@@ -24,5 +24,4 @@ for _ in range(int(input())):
             rgtans -= 1
         lftSum += candies[a]
         rgtSum -= candies[a]
-
     print(lftans, rgtans)

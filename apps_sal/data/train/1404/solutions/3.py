@@ -1,6 +1,6 @@
 t = eval(input())
 for _ in range(t):
-    r, g, b = list(map(int, input().split()))
+    (r, g, b) = list(map(int, input().split()))
     k = eval(input())
     d = {}
     d['R'] = r

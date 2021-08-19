@@ -1,11 +1,8 @@
 def solve(n, l, r):
     ans = [0, 0]
-    a, b = [], []
-    """if n==r and l==1:
-     ans[-1] = 2**n-1
-     ans[0] = n
-    else:"""
-    x, c, z = 1, r, l
+    (a, b) = ([], [])
+    'if n==r and l==1:\n     ans[-1] = 2**n-1\n     ans[0] = n\n    else:'
+    (x, c, z) = (1, r, l)
     while c > 0:
         a.append(x)
         x = x * 2
@@ -24,9 +21,9 @@ def __starting_point():
     t = int(input())
     while t > 0:
         t -= 1
-        n, l, r = list(map(int, input().split()))
+        (n, l, r) = list(map(int, input().split()))
         a = solve(n, l, r)
-        print(*a, sep=" ")
+        print(*a, sep=' ')
 
 
 __starting_point()

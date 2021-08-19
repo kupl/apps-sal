@@ -1,4 +1,4 @@
-x, y, z = list(map(int, input().split()))
+(x, y, z) = list(map(int, input().split()))
 s = [0] * z
 y = y + 1
 for i in range(z):

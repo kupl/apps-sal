@@ -7,5 +7,5 @@ for _ in range(int(input())):
     for i in set(l):
         p[i] = i
     for i in p:
-        print(i, end=" ")
-    print(end="\n")
+        print(i, end=' ')
+    print(end='\n')

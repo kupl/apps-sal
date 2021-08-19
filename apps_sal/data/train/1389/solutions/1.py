@@ -1,5 +1,5 @@
 def ff(z):
-    x = ""
+    x = ''
     l = ['.', '!', ',', ';', ':', '\n', "'", '  ']
     for i in str(z):
         if i not in l and (ord(i) != 32 or ord(i) != 10):

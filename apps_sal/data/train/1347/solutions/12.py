@@ -1,9 +1,9 @@
-n, m = input().split()
+(n, m) = input().split()
 K = list(map(int, input().split()))
 L = []
 M = []
 for i in range(int(m)):
-    a, b, c = input().split()
+    (a, b, c) = input().split()
     if int(a) in K:
         M.append([int(b), c])
     else:

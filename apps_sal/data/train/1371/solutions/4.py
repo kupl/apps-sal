@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(0, n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     l = [i + b for i in l]
     count = 0

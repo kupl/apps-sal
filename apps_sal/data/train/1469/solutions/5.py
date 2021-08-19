@@ -5,7 +5,7 @@ for t in range(t):
     for i in range(1, n + 1):
         s = k
         for j in range(1, n + 1):
-            print(s, end="")
+            print(s, end='')
             s += 1
         k += 1
         print()

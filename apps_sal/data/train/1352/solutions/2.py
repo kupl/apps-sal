@@ -4,4 +4,4 @@ for j in range(int(input())):
     for k in range(min(l), max(l) + 1):
         tmp = l.count(k)
         if tmp > 0:
-            print("%d: %d" % (k, tmp))
+            print('%d: %d' % (k, tmp))

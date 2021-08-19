@@ -5,7 +5,7 @@ for _ in range(int(input())):
     for i in range(n):
         count = main
         for j in range(n):
-            print(count, end="")
+            print(count, end='')
             count += 1
         main += 1
         print()

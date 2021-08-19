@@ -1,20 +1,19 @@
-
 n = int(input())
 l = [int(i) for i in input().split()]
 x = int(input())
 l.sort()
-if(l[0] >= 0):
+if l[0] >= 0:
     print(0)
 else:
     cnt = 0
     cost = 0
     for i in l:
-        if(i < 0):
+        if i < 0:
             cnt += 1
         else:
             break
     l = l[0:cnt]
-    if(x >= len(l)):
+    if x >= len(l):
         print(sum(l) * -1)
     else:
         k = min(l[x:len(l)])

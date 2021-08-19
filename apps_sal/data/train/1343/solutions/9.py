@@ -2,7 +2,7 @@ t = int(input())
 for i in range(t):
     s = input()
     if len(s) == 0:
-        print("NO")
+        print('NO')
     else:
         if len(s) % 2 == 0:
             flag = False
@@ -26,6 +26,6 @@ for i in range(t):
                     else:
                         continue
         if flag:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

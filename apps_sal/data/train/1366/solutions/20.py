@@ -18,5 +18,4 @@ while t:
         print(index2 - index1 + 1)
     else:
         print(1)
-
     t -= 1
