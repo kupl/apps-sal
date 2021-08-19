@@ -1,16 +1,15 @@
 class Solution:
+
     def simplifyPath(self, path):
         """
         :type path: str
         :rtype: str
         """
-
         tokens = path.split('/')
         stack = list()
         for token in tokens:
             if token != '':
                 stack.append(token)
-
         res = ''
         back = 0
         while stack:
@@ -19,12 +18,10 @@ class Solution:
                 continue
             elif top == '..':
                 back = back + 1
+            elif back == 0:
+                res = '/' + top + res
             else:
-                if back == 0:
-                    res = '/' + top + res
-                else:
-                    back = back - 1
-
+                back = back - 1
         if res == '':
             return '/'
         return res

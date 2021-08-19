@@ -1,8 +1,9 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         res = 0
-        res += sum(self.get_target_products(n * n, nums2) for n in nums1)
-        res += sum(self.get_target_products(n * n, nums1) for n in nums2)
+        res += sum((self.get_target_products(n * n, nums2) for n in nums1))
+        res += sum((self.get_target_products(n * n, nums1) for n in nums2))
         return res
 
     def get_target_products(self, target, nums):

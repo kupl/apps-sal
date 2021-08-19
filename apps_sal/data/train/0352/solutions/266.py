@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=lambda x: len(x))
 
@@ -19,7 +20,6 @@ class Solution:
                 if diff >= 2:
                     return False
             return diff == 1
-
         dps = [1 for _ in words]
         for j in range(len(words)):
             _max = 1

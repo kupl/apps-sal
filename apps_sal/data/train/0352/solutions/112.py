@@ -1,7 +1,9 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def ispre(w1, w2):
-            i, j = 0, 0
+            (i, j) = (0, 0)
             while i < len(w1) and j < len(w2):
                 if w1[i] == w2[j]:
                     i += 1
@@ -9,7 +11,6 @@ class Solution:
                 else:
                     j += 1
             return i == len(w1)
-
         words.sort(key=len)
         dp = [0] * len(words)
 
@@ -25,6 +26,5 @@ class Solution:
                 if ispre(words[i], words[j]):
                     dp[i] = max(dp[i], 1 + dfs(j))
             return dp[i]
-
-        ans = max(dfs(i) for i in range(len(words)))
+        ans = max((dfs(i) for i in range(len(words))))
         return ans

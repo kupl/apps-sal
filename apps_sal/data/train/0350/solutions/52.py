@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], k: int) -> int:
         dic = {}
         n = len(A)

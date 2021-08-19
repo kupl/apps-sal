@@ -1,4 +1,5 @@
 class Solution:
+
     def numSquares(self, n):
         """
         四平方和定理

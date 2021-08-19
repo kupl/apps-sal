@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         if not words:
             return 0
@@ -14,7 +15,7 @@ class Solution:
             if len(small_word) + 1 != len(big_word):
                 return False
             while b < len(big_word) and s < len(small_word):
-                if big_word[b] != small_word[s] and not mismatch:
+                if big_word[b] != small_word[s] and (not mismatch):
                     mismatch = True
                     b += 1
                     continue
@@ -25,7 +26,6 @@ class Solution:
                 else:
                     return False
             return True
-
         left = 0
         right = 0
         while right < len(words):

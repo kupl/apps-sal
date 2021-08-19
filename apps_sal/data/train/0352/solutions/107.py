@@ -1,4 +1,5 @@
 class Solution:
+
     def checkPredecessor(self, word_1, word_2):
         find_extra = False
         for i in range(len(word_1)):
@@ -34,8 +35,6 @@ class Solution:
     def longestStrChain(self, words):
         words.sort(key=lambda x: len(x))
         longest_chain = {}
-
         for word in words:
-            longest_chain[word] = max([longest_chain.get((word[:i] + word[i + 1:]), 0) for i in range(len(word))]) + 1
-
+            longest_chain[word] = max([longest_chain.get(word[:i] + word[i + 1:], 0) for i in range(len(word))]) + 1
         return max(longest_chain.values())

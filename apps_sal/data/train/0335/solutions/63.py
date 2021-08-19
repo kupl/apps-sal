@@ -1,8 +1,8 @@
 class Solution:
+
     def tallestBillboard(self, rods):
         dp = dict()
         dp[0] = 0
-
         for i in rods:
             cur = collections.defaultdict(int)
             for s in dp:

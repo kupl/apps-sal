@@ -1,4 +1,5 @@
 class Solution:
+
     def simplifyPath(self, path):
         """
         :type path: str
@@ -18,4 +19,4 @@ class Solution:
                 tmpstr = ''
             else:
                 tmpstr += c
-        return '/' + "/".join(stack)
+        return '/' + '/'.join(stack)

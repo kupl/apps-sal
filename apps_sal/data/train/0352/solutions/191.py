@@ -1,7 +1,7 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         dp = [0] * len(words)
-
         words.sort(key=lambda x: len(x))
 
         def predecessor(a, b):
@@ -20,7 +20,7 @@ class Solution:
                     i += 1
                     j += 1
             return True
-        for i, word in enumerate(words):
+        for (i, word) in enumerate(words):
             dp[i] = 1
             for j in range(i - 1, -1, -1):
                 if len(words[i]) - len(words[j]) >= 2:

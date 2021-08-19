@@ -1,4 +1,5 @@
 class Accumulator:
+
     def __init__(self):
         self.KeyToCount = {}
         self.q = deque()
@@ -19,6 +20,7 @@ class Accumulator:
 
 
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         n = len(A)
         nextHiIdx = 0
@@ -43,4 +45,4 @@ class Solution:
                 hi[i] = nextHiIdx - 1
             elif hiAcc.distinctCount() == K and nextHiIdx == n:
                 hi[i] = nextHiIdx
-        return sum(hi[i] - lo[i] for i in range(n) if hi[i] != None)
+        return sum((hi[i] - lo[i] for i in range(n) if hi[i] != None))

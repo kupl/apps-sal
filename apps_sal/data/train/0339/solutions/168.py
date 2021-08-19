@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         self.res = 0
 
@@ -12,8 +13,6 @@ class Solution:
                     if e1 % e2 == 0:
                         self.res += m[e1 // e2]
                     m[e2] += 1
-
         count(nums1, nums2)
         count(nums2, nums1)
-
         return self.res

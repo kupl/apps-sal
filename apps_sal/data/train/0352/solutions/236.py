@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         if not words:
             return 0
@@ -8,7 +9,7 @@ class Solution:
             curr = words[i]
             for j in range(i):
                 prev = words[j]
-                if (self.checkPredecessor(curr, prev)):
+                if self.checkPredecessor(curr, prev):
                     dp[i] = max(dp[i], dp[j] + 1)
         return max(dp)
 

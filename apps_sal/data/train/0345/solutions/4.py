@@ -1,10 +1,12 @@
 class Solution:
+
     def splitArray(self, nums, m):
         """
         :type nums: List[int]
         :type m: int
         :rtype: int
         """
+
         def valid(mid):
             cnt = 0
             current = 0
@@ -16,10 +18,8 @@ class Solution:
                         return False
                     current = n
             return True
-
         l = max(nums)
         h = sum(nums)
-
         while l < h:
             mid = l + (h - l) / 2
             if valid(mid):

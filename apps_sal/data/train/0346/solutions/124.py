@@ -1,7 +1,9 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
+
         def atMost(K):
-            b, e = 0, 0
+            (b, e) = (0, 0)
             ret = 0
             while e < len(nums):
                 K -= nums[e] % 2

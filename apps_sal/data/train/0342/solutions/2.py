@@ -1,12 +1,13 @@
 class Solution:
+
     def countBattleships(self, board):
         """
         :type board: List[List[str]]
         :rtype: int
         """
         ans = 0
-        for r, row in enumerate(board):
-            for c, val in enumerate(row):
+        for (r, row) in enumerate(board):
+            for (c, val) in enumerate(row):
                 if val == 'X':
                     ans += 1
                     if r and board[r - 1][c] == 'X':

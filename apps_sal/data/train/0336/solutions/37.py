@@ -1,4 +1,5 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         cs = collections.Counter(s)
         ct = collections.Counter(t)

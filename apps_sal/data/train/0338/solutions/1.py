@@ -1,7 +1,8 @@
 class Solution:
+
     def findGoodStrings(self, N, *args):
         from functools import lru_cache
-        s1, s2, evil = [list(map(ord, i)) for i in args]
+        (s1, s2, evil) = [list(map(ord, i)) for i in args]
         mod = 10 ** 9 + 7
 
         def kmp(l, c):
@@ -10,7 +11,6 @@ class Solution:
             if evil[l] == c:
                 l += 1
             return l
-
         f = [0] * len(evil)
         for i in range(1, len(evil)):
             f[i] = kmp(f[i - 1], evil[i])
@@ -26,5 +26,4 @@ class Solution:
                 ans += dp(i + 1, kmp(lcp, char), f1 or char > s1[i], f2 or char < s2[i])
                 ans %= mod
             return ans
-
         return dp()

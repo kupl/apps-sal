@@ -1,5 +1,7 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def predecessor(word1, word2):
             for i in range(len(word2)):
                 if word2[0:i] + word2[i + 1:] == word1:

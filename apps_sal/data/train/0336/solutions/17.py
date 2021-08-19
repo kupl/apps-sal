@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         c1 = collections.Counter(s)
         c2 = collections.Counter(t)

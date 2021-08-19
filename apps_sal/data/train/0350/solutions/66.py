@@ -1,7 +1,8 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A, K):
-        cnt1, cnt2 = dict(), dict()
-        res, i1, i2 = 0, 0, 0
+        (cnt1, cnt2) = (dict(), dict())
+        (res, i1, i2) = (0, 0, 0)
         for v in A:
             cnt1[v] = cnt1.get(v, 0) + 1
             cnt2[v] = cnt2.get(v, 0) + 1
@@ -20,9 +21,10 @@ class Solution:
 
 
 class Solution:
+
     def subarraysWithKDistinct(self, A, K):
-        cnt1, cnt2 = dict(), dict()
-        res, i1, i2 = 0, 0, 0
+        (cnt1, cnt2) = (dict(), dict())
+        (res, i1, i2) = (0, 0, 0)
         for v in A:
             cnt1[v] = cnt1.get(v, 0) + 1
             cnt2[v] = cnt2.get(v, 0) + 1

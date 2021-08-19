@@ -1,4 +1,5 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         d1 = {}
         for i in s:

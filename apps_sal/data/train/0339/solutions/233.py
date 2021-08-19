@@ -1,12 +1,11 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         res = 0
         for ele in nums1:
             res += self.twoProduct(ele * ele, nums2)
-
         for ele in nums2:
             res += self.twoProduct(ele * ele, nums1)
-
         return res
 
     def twoProduct(self, prod, nums):
@@ -20,5 +19,4 @@ class Solution:
                 d[nums[i]] += 1
             else:
                 d[nums[i]] = 1
-
         return res

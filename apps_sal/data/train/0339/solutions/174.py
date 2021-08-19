@@ -1,5 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def count(n1, n2):
             ret = 0
             for x in n1:

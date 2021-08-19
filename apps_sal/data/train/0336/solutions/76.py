@@ -1,10 +1,10 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         ms = {}
         for c in s:
             old = ms.get(c, 0)
             ms[c] = old + 1
-
         count = 0
         for c in t:
             old = ms.get(c, 0)

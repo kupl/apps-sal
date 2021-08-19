@@ -1,6 +1,7 @@
-
 class Solution:
+
     def numSubseq(self, x: List[int], t: int) -> int:
+
         def bi(lo, hi, val):
             while lo <= hi:
                 m = (lo + hi) // 2
@@ -15,7 +16,7 @@ class Solution:
         for i in range(l):
             if t - x[i] >= x[i]:
                 ind = bi(i, l - 1, t - x[i])
-                ans += 2**(ind - i)
+                ans += 2 ** (ind - i)
             else:
                 break
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

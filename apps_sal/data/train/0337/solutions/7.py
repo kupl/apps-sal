@@ -1,4 +1,5 @@
 class Solution:
+
     def canCompleteCircuit(self, gas, cost):
         """
         :type gas: List[int]
@@ -6,7 +7,6 @@ class Solution:
         :rtype: int
         """
         n = len(gas)
-
         i = 0
         while i < n:
             total_gas = 0
@@ -20,5 +20,4 @@ class Solution:
             while i < n and gas[i] - cost[i] >= 0:
                 i += 1
             i += 1
-
         return -1

@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         res = 0
         end = len(nums) - 1
@@ -8,6 +9,6 @@ class Solution:
                 if end > i:
                     end = end - 1
                 else:
-                    return res % (10**(9) + 7)
+                    return res % (10 ** 9 + 7)
             res += pow(2, end - i)
-        return res % (10**(9) + 7)
+        return res % (10 ** 9 + 7)

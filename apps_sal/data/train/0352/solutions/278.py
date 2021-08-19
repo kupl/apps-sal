@@ -1,5 +1,7 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def pred(origin, dest):
             if len(dest) - len(origin) != 1:
                 return False
@@ -10,7 +12,6 @@ class Solution:
                     if misWord == False:
                         return True
                     return False
-
                 if dest[index] != origin[oIndex]:
                     if misWord:
                         return False

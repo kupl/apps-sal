@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         sn = sorted(nums)
         ans = 0
@@ -12,5 +13,4 @@ class Solution:
             u = int(pow(2, r - l))
             ans = (ans + u) % mod
             l += 1
-
         return ans

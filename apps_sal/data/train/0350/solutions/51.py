@@ -1,10 +1,11 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         checkSet = OrderedDict()
         windowStart = 0
         count = 0
         ans = []
-        for i, n in enumerate(A):
+        for (i, n) in enumerate(A):
             checkSet[n] = i
             checkSet.move_to_end(n)
             while len(checkSet) > K:

@@ -1,10 +1,12 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
+
         def atMostK(A, K):
-            ans, curr = 0, 0
+            (ans, curr) = (0, 0)
             cnt = defaultdict(int)
             i = 0
-            for j, num in enumerate(A):
+            for (j, num) in enumerate(A):
                 if num not in cnt:
                     K -= 1
                 cnt[num] += 1

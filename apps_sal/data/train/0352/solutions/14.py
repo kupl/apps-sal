@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         d = collections.defaultdict(list)
         for w in words:
@@ -16,5 +17,4 @@ class Solution:
                     if candidate == w[:i] + w[i + 1:]:
                         return dp(candidate) + 1
             return 1
-
-        return max(dp(i) for i in words)
+        return max((dp(i) for i in words))

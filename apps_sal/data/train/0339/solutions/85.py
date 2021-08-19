@@ -1,6 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        lookup1, lookup2 = collections.defaultdict(int), collections.defaultdict(int)
+        (lookup1, lookup2) = (collections.defaultdict(int), collections.defaultdict(int))
         for n in nums1:
             lookup1[n] += 1
         for n in nums2:

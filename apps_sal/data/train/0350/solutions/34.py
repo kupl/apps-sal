@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         return self.atMostK(A, K) - self.atMostK(A, K - 1)
 

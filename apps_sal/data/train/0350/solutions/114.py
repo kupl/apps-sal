@@ -1,9 +1,10 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         return self.subarraysWithAtmostKDistinct(A, K) - self.subarraysWithAtmostKDistinct(A, K - 1)
 
     def subarraysWithAtmostKDistinct(self, A, K):
-        l, r, count, res = 0, 0, 0, 0
+        (l, r, count, res) = (0, 0, 0, 0)
         hashmap = [0] * 20001
         while r < len(A):
             hashmap[A[r]] += 1

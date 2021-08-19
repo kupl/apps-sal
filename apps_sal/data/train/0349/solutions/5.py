@@ -1,4 +1,5 @@
 class Solution:
+
     def deleteAndEarn(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         if len(nums) == 0:
             return 0
-
         nums.sort()
         a = [0] * len(nums)
         b = [0] * len(nums)
@@ -26,5 +26,4 @@ class Solution:
                 b[i] = max(a[i + 1], b[i + 1])
             if nums[i] < nums[i + 1]:
                 k = i + 1
-
-        return(max(a[0], b[0]))
+        return max(a[0], b[0])

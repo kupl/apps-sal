@@ -2,19 +2,17 @@ from collections import Counter
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         nums1_products = productCounts(nums1)
         nums2_products = productCounts(nums2)
         nums1_squares = squareCounts(nums1)
         nums2_squares = squareCounts(nums2)
-
         result = 0
-        for square, count in nums1_squares.items():
+        for (square, count) in nums1_squares.items():
             result += count * nums2_products[square]
-
-        for square, count in nums2_squares.items():
+        for (square, count) in nums2_squares.items():
             result += count * nums1_products[square]
-
         return result
 
 

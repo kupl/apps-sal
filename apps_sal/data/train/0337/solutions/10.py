@@ -1,4 +1,5 @@
 class Solution:
+
     def canCompleteCircuit(self, gas, cost):
         """
         :type gas: List[int]

@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         return self.atMost(nums, k) - self.atMost(nums, k - 1)
 

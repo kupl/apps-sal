@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         sort = [[] for _ in range(max(map(len, words)))]
         for el in words:

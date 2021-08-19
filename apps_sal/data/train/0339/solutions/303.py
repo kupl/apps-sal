@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         ans = 0
         for i in range(len(nums1)):
@@ -11,7 +12,6 @@ class Solution:
                     h1[nums2[j]] += 1
                 else:
                     h1[nums2[j]] = 1
-
         for i in range(len(nums2)):
             h2 = {}
             target = nums2[i] * nums2[i]
@@ -22,5 +22,4 @@ class Solution:
                     h2[nums1[j]] += 1
                 else:
                     h2[nums1[j]] = 1
-
         return ans

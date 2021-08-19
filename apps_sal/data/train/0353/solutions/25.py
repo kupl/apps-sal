@@ -6,22 +6,21 @@ def modSum(a, b):
 
 
 def modProd(a, b):
-    return (a * b) % p
+    return a * b % p
 
 
 def modPow(x, n):
     if n == 0:
         return 1
-
     res = modPow(x, n // 2)
     res = modProd(res, res)
     if n % 2 == 1:
         res = modProd(res, x)
-
     return res
 
 
 class Solution:
+
     def numSubseq(self, arr: List[int], target: int) -> int:
         n = len(arr)
         arr.sort()
@@ -35,5 +34,4 @@ class Solution:
             else:
                 res = modSum(res, modPow(2, j - i))
                 i += 1
-
         return res

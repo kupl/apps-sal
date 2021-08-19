@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         dp = [1 for i in range(len(words))]
         words.sort(key=lambda x: len(x))
@@ -13,8 +14,6 @@ class Solution:
                     for ch in words[j]:
                         if ch in words[i]:
                             count += 1
-
                     if count == len(words[j]):
                         dp[i] = dp[j] + 1
-
         return max(dp)

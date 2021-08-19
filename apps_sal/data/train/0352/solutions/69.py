@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         d = {}
         for word in words:
@@ -13,7 +14,7 @@ class Solution:
         return res
 
     def checkPredecessor(self, word1, word2):
-        return any(word1 == word2[:i] + word2[i + 1:] for i in range(len(word2)))
+        return any((word1 == word2[:i] + word2[i + 1:] for i in range(len(word2))))
 
     def dfs(self, word, visited, d):
         if word in visited:

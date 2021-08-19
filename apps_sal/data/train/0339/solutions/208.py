@@ -3,12 +3,14 @@ from math import sqrt
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def is_perfect(x):
-            return int(sqrt(x))**2 == x
-        size1, size2 = len(nums1), len(nums2)
-        count1, count2 = Counter(nums1), Counter(nums2)
-        max1, max2 = max(nums1), max(nums2)
+            return int(sqrt(x)) ** 2 == x
+        (size1, size2) = (len(nums1), len(nums2))
+        (count1, count2) = (Counter(nums1), Counter(nums2))
+        (max1, max2) = (max(nums1), max(nums2))
         nums1.sort()
         nums2.sort()
         res = 0

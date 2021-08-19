@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         sorted(words, key=len, reverse=True)
         depth = [1] * len(words)
@@ -11,7 +12,6 @@ class Solution:
                     depth = max(dfs(new_word) + 1, depth)
             seen.append(word)
             return depth
-
         count = []
         seen = []
         for word in words:

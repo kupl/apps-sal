@@ -1,4 +1,5 @@
 class Solution:
+
     def tallestBillboard(self, rods: List[int]) -> int:
         dp = defaultdict(lambda: -1)
         dp[0] = 0

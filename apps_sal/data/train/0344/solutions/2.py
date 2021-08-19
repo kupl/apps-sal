@@ -1,6 +1,7 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
-        H, W = len(A), len(A[0])
+        (H, W) = (len(A), len(A[0]))
 
         def is_valid(j1: int, j2: int) -> bool:
             for i in range(H):

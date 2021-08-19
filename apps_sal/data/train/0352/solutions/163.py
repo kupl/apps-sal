@@ -1,4 +1,5 @@
 class Solution:
+
     def isPredecessor(self, predecessorCandidate, word):
         if len(predecessorCandidate) != len(word) - 1:
             return False

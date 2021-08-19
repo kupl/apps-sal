@@ -1,14 +1,15 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=lambda x: len(x))
         mark = {}
         queue = []
-        for index, word in enumerate(words):
+        for (index, word) in enumerate(words):
             mark[word] = collections.Counter(word)
             queue.append([[word], index, len(word)])
         ans = 0
         while queue:
-            s, index, l = queue.pop(0)
+            (s, index, l) = queue.pop(0)
             flag = True
             for i in range(index + 1, len(words)):
                 if len(words[i]) > l + 1:

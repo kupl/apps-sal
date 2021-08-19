@@ -1,11 +1,12 @@
 class Solution:
+
     def checkInclusion(self, s1, s2):
         """
         :type s1: str
         :type s2: str
         :rtype: bool
         """
-        l1, l2 = len(s1), len(s2)
+        (l1, l2) = (len(s1), len(s2))
         c1 = [0] * 128
         n = 0
         for i in s1:

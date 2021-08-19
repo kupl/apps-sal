@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         numsproddict = collections.defaultdict(int)
         for i in range(len(nums1)):

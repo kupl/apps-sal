@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         dp = {}
         words_dict = {}
@@ -26,7 +27,6 @@ class Solution:
         return res
 
     def isSucc(self, word1, word2):
-
         if len(word1) != len(word2) - 1:
             return False
         count = 0
@@ -41,5 +41,4 @@ class Solution:
             else:
                 j += 1
                 i += 1
-
         return True

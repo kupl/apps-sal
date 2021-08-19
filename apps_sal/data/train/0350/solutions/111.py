@@ -1,8 +1,10 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
+
         def atMost(A: List[int], K: int):
             cache = collections.Counter()
-            res, i = 0, 0
+            (res, i) = (0, 0)
             for j in range(len(A)):
                 cache[A[j]] += 1
                 while len(cache) > K:

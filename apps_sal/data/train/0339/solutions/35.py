@@ -1,5 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def typeone(n1, n2):
             L1 = len(n1)
             L2 = len(n2)

@@ -1,8 +1,9 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
-        '''
+        """
         DFS with memo
-        '''
+        """
         words = set(words)
         dp = {}
 
@@ -16,13 +17,8 @@ class Solution:
                     chain_len = max(chain_len, chainEndingAt(pred) + 1)
                 dp[word] = chain_len
             return dp[word]
-        return max(chainEndingAt(word) for word in words)
-
-        '''
-        DP
-        dp function:
-        chain[word2] = max(chain[word1]+1 for all word1 if word1 is predecessor of word2)
-        '''
+        return max((chainEndingAt(word) for word in words))
+        '\n        DP\n        dp function:\n        chain[word2] = max(chain[word1]+1 for all word1 if word1 is predecessor of word2)\n        '
         dp = {}
         for w in sorted(words, key=len):
             dp[w] = 1

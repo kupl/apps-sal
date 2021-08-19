@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         res = 0
         end = len(nums) - 1
@@ -11,6 +12,6 @@ class Solution:
                 if end > start:
                     end -= 1
                 else:
-                    return res % (10**9 + 7)
+                    return res % (10 ** 9 + 7)
             res += 2 ** (end - start)
-        return res % (10**9 + 7)
+        return res % (10 ** 9 + 7)

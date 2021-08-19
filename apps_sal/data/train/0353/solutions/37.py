@@ -1,8 +1,9 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         nums.sort()
-        mod = 10**9 + 7
-        sum, l, r = 0, 0, len(nums) - 1
+        mod = 10 ** 9 + 7
+        (sum, l, r) = (0, 0, len(nums) - 1)
         while l <= r:
             if nums[l] + nums[r] > target:
                 r -= 1

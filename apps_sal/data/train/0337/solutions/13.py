@@ -1,17 +1,16 @@
 class Solution:
+
     def canCompleteCircuit(self, gas, cost):
         """
         :type gas: List[int]
         :type cost: List[int]
         :rtype: int
         """
-
         if len(gas) == 1:
             if cost[0] > gas[0]:
                 return -1
             else:
                 return 0
-
         sub = [g - c for (g, c) in zip(gas, cost)]
         s = 0
         e = 1

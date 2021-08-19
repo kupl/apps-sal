@@ -1,11 +1,12 @@
 class Solution:
+
     def canCompleteCircuit(self, gas, cost):
         """
         :type gas: List[int]
         :type cost: List[int]
         :rtype: int
         """
-        cf, s, e = 0, 0, 0
+        (cf, s, e) = (0, 0, 0)
         found = False
         while True:
             nextHop = gas[e] - cost[e]

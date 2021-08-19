@@ -1,9 +1,9 @@
 class Solution:
-    def findGoodStrings(self, n: int, s1: str, s2: str, evil: str) -> int:
-        M = 10**9 + 7
 
+    def findGoodStrings(self, n: int, s1: str, s2: str, evil: str) -> int:
+        M = 10 ** 9 + 7
         table = [-1]
-        pos, cnd = 1, 0
+        (pos, cnd) = (1, 0)
         while pos < len(evil):
             if evil[pos] == evil[cnd]:
                 table.append(table[cnd])
@@ -35,5 +35,4 @@ class Solution:
                     t = dfs(i + 1, p + 1, u and c == ord(s2[i]), b and c == ord(s1[i]))
                 r += t
             return r % M
-
         return dfs(0, 0, True, True)

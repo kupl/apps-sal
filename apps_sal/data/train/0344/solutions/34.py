@@ -1,5 +1,7 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
+
         def printi(i, *string):
             if i == len(A[0]) - 1:
                 print(string)

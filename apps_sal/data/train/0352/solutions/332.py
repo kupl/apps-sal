@@ -1,10 +1,11 @@
 class Solution:
+
     def predecessor(self, word_1, word_2):
         if abs(len(word_1) - len(word_2)) != 1:
             return False
         idx_1 = 0
         idx_2 = 0
-        while(idx_1 < len(word_1) and idx_2 < len(word_2)):
+        while idx_1 < len(word_1) and idx_2 < len(word_2):
             if word_1[idx_1] != word_2[idx_2]:
                 if idx_1 != idx_2:
                     return False

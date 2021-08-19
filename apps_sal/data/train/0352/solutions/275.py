@@ -1,5 +1,7 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def is_predecessor(str1, str2):
             if len(str1) + 1 != len(str2):
                 return False

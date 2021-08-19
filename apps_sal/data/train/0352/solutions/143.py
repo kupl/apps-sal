@@ -1,4 +1,5 @@
 class Solution:
+
     def predecessor(self, larger, smaller):
         largerCount = Counter(larger)
         for c in smaller:
@@ -15,7 +16,6 @@ class Solution:
             lengthToWords[len(word)].append(word)
         wordToCL = defaultdict(lambda: 1)
         res = 1
-
         for wordLength in range(16, 1, -1):
             if wordLength - 1 not in lengthToWords:
                 continue

@@ -1,6 +1,6 @@
 class Solution:
-    def numSubseq(self, nums, target: int) -> int:
 
+    def numSubseq(self, nums, target: int) -> int:
         n = len(nums)
         nums.sort()
         res = 0
@@ -14,6 +14,6 @@ class Solution:
             if i == j:
                 res += 1
             else:
-                res += 2**(j - i) % 1000000007
+                res += 2 ** (j - i) % 1000000007
             i += 1
         return res % 1000000007

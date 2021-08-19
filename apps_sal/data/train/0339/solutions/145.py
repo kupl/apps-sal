@@ -1,12 +1,12 @@
-
 class Solution:
+
     def find(self, n1, n2, c1):
         res = 0
         for j in range(len(n2)):
             for k in range(j + 1, len(n2)):
                 t = n2[j] * n2[k]
-                sqrt = t**0.5
-                if sqrt**2 != t:
+                sqrt = t ** 0.5
+                if sqrt ** 2 != t:
                     continue
                 try:
                     i = c1[sqrt]

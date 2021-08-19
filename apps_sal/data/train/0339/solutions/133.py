@@ -1,6 +1,6 @@
 class Solution:
-    def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
 
+    def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         nums1.sort()
         nums2.sort()
 
@@ -10,10 +10,9 @@ class Solution:
             return f(n - 1) + n - 1
 
         def yanzheng(a, num):
-            '''
+            """
             接受一个数字a和一个有序列表num
-            用动态规划算法验证是否存在num[i] * num[j] == a*a'''
-
+            用动态规划算法验证是否存在num[i] * num[j] == a*a"""
             a = a * a
             head = 0
             end = len(num) - 1
@@ -42,11 +41,9 @@ class Solution:
                     else:
                         count += 1
                         end -= 1
-
         count = 0
         for i in nums1:
             count += yanzheng(i, nums2)
         for i in nums2:
             count += yanzheng(i, nums1)
-
         return count

@@ -1,4 +1,5 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         s = list(s)
         t = list(t)

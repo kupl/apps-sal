@@ -3,9 +3,10 @@ from collections import Counter
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        A = Counter([nums1[i]**2 for i in range(len(nums1))])
-        B = Counter([nums2[i]**2 for i in range(len(nums2))])
+        A = Counter([nums1[i] ** 2 for i in range(len(nums1))])
+        B = Counter([nums2[i] ** 2 for i in range(len(nums2))])
         cnt = 0
         for j in range(len(nums2)):
             for k in range(j + 1, len(nums2)):

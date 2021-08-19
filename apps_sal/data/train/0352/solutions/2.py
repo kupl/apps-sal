@@ -1,4 +1,5 @@
 class Solution:
+
     def issubsequence(self, str1, str2):
         str1_pointer = 0
         for i in range(len(str2)):

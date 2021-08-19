@@ -1,12 +1,12 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
-        '''
+        """
         [0, 2, 4, 5, 3, 1, 56, 0] -> input
         return the length of the longest subsequence of ascending numbers
         [1, 2, 0, 0, 0, 0, 0, 0]
         return max(dp)
-        '''
-
+        """
         words.sort(key=lambda x: len(x))
         dp = [1] * len(words)
         ans = 0

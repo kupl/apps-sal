@@ -1,4 +1,5 @@
 class Solution:
+
     def tallestBillboard(self, rods: List[int]) -> int:
         m_sum = sum(rods) // 2
         m = [[-2 for i in range(m_sum + 1)] for j in range(len(rods))]

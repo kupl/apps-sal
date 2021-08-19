@@ -1,5 +1,5 @@
-
 class Solution:
+
     def longestStrChain(self, words) -> int:
         len_words = len(words)
         dp = [1] * len_words

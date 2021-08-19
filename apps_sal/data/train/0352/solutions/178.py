@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         longestchain = defaultdict(int)
         words.sort(key=len, reverse=True)

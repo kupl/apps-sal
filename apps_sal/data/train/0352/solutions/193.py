@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=len)
         dp = [1 for _ in words]
@@ -15,7 +16,7 @@ def predecessor(word, candidate):
     if len(word) != len(candidate) + 1:
         return False
     j = 0
-    for i, c in enumerate(word):
+    for (i, c) in enumerate(word):
         if i > j + 1 or j == len(candidate):
             break
         if c == candidate[j]:

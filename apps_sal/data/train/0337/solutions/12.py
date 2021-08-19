@@ -1,4 +1,5 @@
 class Solution:
+
     def canCompleteCircuit(self, gas, cost):
         """
         :type gas: List[int]
@@ -8,7 +9,7 @@ class Solution:
         left = [gas[i] - cost[i] for i in range(len(gas))]
         if sum(left) < 0:
             return -1
-        tank, start = 0, 0
+        (tank, start) = (0, 0)
         for i in range(len(left)):
             tank += left[i]
             if tank < 0:

@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         adict = {0: 1}
         x = 0

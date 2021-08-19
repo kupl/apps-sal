@@ -2,37 +2,29 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         if len(words) <= 1:
             return len(words)
-
-        graph_dict, len_words_dict = self.getGraphDict(words)
-
+        (graph_dict, len_words_dict) = self.getGraphDict(words)
         word_lengths = list(len_words_dict.keys())
         word_lengths.sort()
-
         length_index_dict = defaultdict()
         for i in range(len(word_lengths)):
             length_index_dict[word_lengths[i]] = i
-
         return self.bfsWordChain(graph_dict, len_words_dict, word_lengths, length_index_dict)
 
     def bfsWordChain(self, graph_dict, len_words_dict, word_lengths, length_index_dict):
         word_lenghts_index = 0
         initial_words = len_words_dict[word_lengths[0]]
-
         max_possible_length = len(word_lengths)
         curr_length = 1
-
         visited = set()
-
         queue = deque()
         for word in initial_words:
             queue.append((word, 1))
             visited.add(word)
-
         max_len_so_far = 1
-
         while queue:
             this_item = queue.popleft()
             this_word = this_item[0]
@@ -45,17 +37,15 @@ class Solution:
                     if neighbor not in visited:
                         visited.add(neighbor)
                         queue.append((neighbor, this_chain_len + 1))
-
                 if len(queue) == 0:
                     word_found = False
                     for word_length in word_lengths:
                         for word in len_words_dict[word_length]:
-                            if word not in visited and not word_found:
+                            if word not in visited and (not word_found):
                                 queue.append((word, 1))
                                 visited.add(word)
                                 word_found = True
                                 break
-
         return max_len_so_far
 
     def getGraphDict(self, words):
@@ -64,15 +54,13 @@ class Solution:
             len_words_dict[len(word)].append(word)
         word_lenghts_arr = []
         graph_dict = defaultdict(list)
-
         for word_length in len_words_dict:
             for predecessor in len_words_dict[word_length]:
                 if word_length + 1 in len_words_dict:
                     for word in len_words_dict[word_length + 1]:
                         if self.isPredecessor(predecessor, word):
                             graph_dict[predecessor].append(word)
-
-        return graph_dict, len_words_dict
+        return (graph_dict, len_words_dict)
 
     def isPredecessor(self, predecessor, word):
         predecessor_index = 0
@@ -83,7 +71,6 @@ class Solution:
                 word_index += 1
             else:
                 word_index += 1
-
         if word_index == predecessor_index + 1 or word_index == predecessor_index:
             return True
         else:

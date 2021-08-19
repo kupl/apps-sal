@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         map1 = {}
         map2 = {}
@@ -12,12 +13,11 @@ class Solution:
                 prod = nums2[i] * nums2[j]
                 map2.setdefault(prod, 0)
                 map2[prod] += 1
-
         res = 0
         for num in nums1:
-            if num**2 in map2:
-                res += map2[num**2]
+            if num ** 2 in map2:
+                res += map2[num ** 2]
         for num in nums2:
-            if num**2 in map1:
-                res += map1[num**2]
+            if num ** 2 in map1:
+                res += map1[num ** 2]
         return res

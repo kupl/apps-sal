@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         from collections import defaultdict
         if len(nums1) == 1 and len(nums2) == 1:
@@ -14,7 +15,7 @@ class Solution:
             return total
         ans = 0
         for num in nums1:
-            ans += twoproduct(num**2, nums2)
+            ans += twoproduct(num ** 2, nums2)
         for num in nums2:
-            ans += twoproduct(num**2, nums1)
+            ans += twoproduct(num ** 2, nums1)
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def canCompleteCircuit(self, gas, cost):
         """
         :type gas: List[int]
@@ -8,7 +9,6 @@ class Solution:
         tank = 0
         total = len(gas)
         travel = 0
-
         start = -total
         current = start
         print(('start:', start))

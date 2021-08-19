@@ -1,6 +1,7 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
-        m, n = len(A), len(A[0])
+        (m, n) = (len(A), len(A[0]))
         memo = [1] * n
         for i in range(n):
             for j in range(i):

@@ -1,7 +1,8 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         result = 0
-        start, count = 0, 0
+        (start, count) = (0, 0)
         for i in range(len(nums)):
             if nums[i] % 2 != 0:
                 count += 1

@@ -1,5 +1,7 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
+
         def atmostK(k):
             count = Counter()
             res = 0

@@ -7,7 +7,7 @@ class Solution:
             while True:
                 total += nums[index]
                 index += 1
-                if (total > i):
+                if total > i:
                     break
                 if index == len(nums):
                     return True

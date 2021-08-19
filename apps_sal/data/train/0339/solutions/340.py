@@ -4,6 +4,7 @@ from math import comb
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         res = 0
         nums1.sort()
@@ -37,7 +38,6 @@ class Solution:
                         res += nl * nr
                     left += 1
                     right -= 1
-
                 elif n2[left] * n2[right] < n ** 2:
                     left += 1
                 else:

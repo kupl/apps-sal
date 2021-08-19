@@ -1,5 +1,7 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def isPredecessor(a, b):
             if len(a) != len(b) - 1 or len(b) == 1:
                 return False
@@ -9,7 +11,7 @@ class Solution:
                     return True
             return False
         words.sort(key=len)
-        dp = [1] * (len(words))
+        dp = [1] * len(words)
         for i in range(len(dp)):
             for j in range(i - 1, -1, -1):
                 if isPredecessor(words[j], words[i]):

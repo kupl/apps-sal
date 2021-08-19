@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         prefix_odd = defaultdict(int)
         prefix_odd[0] = 1

@@ -5,7 +5,7 @@ class Solution:
         i = 0
         j = len(nums) - 1
         count = 0
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         while i <= j:
             minv = nums[i]
             maxv = nums[j]

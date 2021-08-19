@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         dp = defaultdict(int)
         words.sort(key=lambda x: len(x))

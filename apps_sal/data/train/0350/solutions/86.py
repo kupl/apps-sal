@@ -1,9 +1,11 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A, K):
+
         def atMostK(A, K):
             count = collections.Counter()
-            res, l, window_count = 0, 0, 0
-            for r, c in enumerate(A):
+            (res, l, window_count) = (0, 0, 0)
+            for (r, c) in enumerate(A):
                 if count[c] == 0:
                     window_count += 1
                 count[c] += 1
