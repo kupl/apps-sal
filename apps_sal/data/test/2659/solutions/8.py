@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 def ri():
     return int(input())
 
@@ -28,13 +25,13 @@ def f(n):
             if i < ld[d - 1]:
                 continue
             ld[d - 1] = i
-            p = int("".join(map(str, ld)))
+            p = int(''.join(map(str, ld)))
             cand.append((calc(p), p))
     cand.sort()
     return cand[0][1]
 
 
-MAX = 10**15
+MAX = 10 ** 15
 
 
 def main():
@@ -47,7 +44,7 @@ def main():
         p = f(n)
         cand.append(p)
         n = p + 1
-    print(("\n".join(map(str, cand[:k]))))
+    print('\n'.join(map(str, cand[:k])))
 
 
 def __starting_point():

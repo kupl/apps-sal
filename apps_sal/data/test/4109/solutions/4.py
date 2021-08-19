@@ -1,18 +1,17 @@
-N, M, X = list(map(int, input().split()))
+(N, M, X) = list(map(int, input().split()))
 C = []
 D = []
 for _ in range(N):
     line = list(map(int, input().split()))
     C.append(line[0])
     D.append(line[1:])
-
 res = []
 ans = []
 for i in range(2 ** N):
     score = [0 for _ in range(M)]
     price = 0
-    for j in range(N):  # このループが一番のポイント
-        if ((i >> j) & 1):  # 順に右にシフトさせ最下位bitのチェックを行う
+    for j in range(N):
+        if i >> j & 1:
             price += C[j]
             for d in range(M):
                 score[d - 1] += D[j][d]
@@ -24,6 +23,6 @@ for i in range(2 ** N):
     if ifPassed:
         ans.append(price)
 if not ans:
-    print((-1))
+    print(-1)
 else:
-    print((min(ans)))
+    print(min(ans))

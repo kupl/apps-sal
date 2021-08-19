@@ -15,53 +15,44 @@ def getList():
 
 
 def solve():
-    # n = getN()
     seqs = []
-    tmp = "X"
+    tmp = 'X'
     seq = 0
     st = input().strip()
     n = len(st)
     for ch in st:
-        if ch == "m" or ch == "w":
+        if ch == 'm' or ch == 'w':
             print(0)
             return
-        elif ch in ["u", "n"]:
+        elif ch in ['u', 'n']:
             if tmp == ch:
                 seq += 1
             else:
                 if seq != 0:
                     seqs.append(seq)
                 seq = 1
-
         else:
             if seq != 0:
                 seqs.append(seq)
             seq = 0
-
         tmp = ch
     if seq != 0:
         seqs.append(seq)
-
     nst = [0 for i in range(n + 2)]
     mst = [0 for i in range(n + 2)]
     nst[1] = 1
     for i in range(2, n + 1):
         nst[i] = (nst[i - 1] + mst[i - 1]) % MOD
         mst[i] = nst[i - 1] % MOD
-
     ans = 1
     for seq in seqs:
-        ans *= nst[(seq)] + mst[(seq)]
+        ans *= nst[seq] + mst[seq]
         ans %= MOD
     print(ans)
-    # print(nst, mst)
-
     return
 
 
 def main():
-    # q = getN()
-    # for _ in range(q):
     solve()
 
 
