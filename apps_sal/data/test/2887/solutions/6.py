@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 v = [int(x) for x in input().split()]
 t = [int(x) for x in input().split()]
@@ -14,4 +13,4 @@ for i in range(n):
         else:
             c += a[j]
             a[j] = 0
-    print(c, end=" ")
+    print(c, end=' ')

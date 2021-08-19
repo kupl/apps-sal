@@ -1,13 +1,15 @@
 import sys
 from collections import deque
-def input(): return sys.stdin.readline().strip()
 
 
-# for i in range(int(input())):
-n, m = list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().strip()
+
+
+(n, m) = list(map(int, input().split()))
 g = {}
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if b - 1 in g:
         g[b - 1].append(a - 1)
     else:
@@ -40,5 +42,4 @@ for v in range(k - 1):
 for v in range(k - 1):
     if ans[way[v]] or a[way[v]].pop() != way[v + 1]:
         ansv += 1
-
 print(ans1, ansv)

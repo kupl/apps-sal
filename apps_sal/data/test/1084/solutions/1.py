@@ -1,14 +1,11 @@
-# python3
-
-def readline(): return tuple(map(int, input().split()))
+def readline():
+    return tuple(map(int, input().split()))
 
 
 def main():
-    n, m = readline()
+    (n, m) = readline()
     unique_rows = list()
-
     first_occ = [None] * m
-
     while n:
         n -= 1
         row = input()
@@ -27,8 +24,7 @@ def main():
                     first_occ[i] = saved
             else:
                 assert char == '.'
-
     return True
 
 
-print("Yes" if main() else "No")
+print('Yes' if main() else 'No')

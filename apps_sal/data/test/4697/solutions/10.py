@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 cc = m // 2
 ans = min(n, cc)
 res = cc - min(n, cc)

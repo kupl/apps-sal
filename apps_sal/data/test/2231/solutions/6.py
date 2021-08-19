@@ -1,4 +1,3 @@
-# by Nick "LordVader" Proshin
 import sys
 input = sys.stdin.readline
 out = sys.stdout
@@ -7,7 +6,7 @@ for i in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     if len(set(a)) == 1:
-        out.write(str(a[0]) + " " + str(a[0]) + " " + str(a[0]) + " " + str(a[0]) + "\n")
+        out.write(str(a[0]) + ' ' + str(a[0]) + ' ' + str(a[0]) + ' ' + str(a[0]) + '\n')
     else:
         a.sort()
         g1 = False
@@ -23,7 +22,7 @@ for i in range(t):
                 if i < mx:
                     mx = i
         if g1:
-            out.write(str(mx) + " " + str(mx) + " " + str(mx) + " " + str(mx) + "\n")
+            out.write(str(mx) + ' ' + str(mx) + ' ' + str(mx) + ' ' + str(mx) + '\n')
         else:
             res = []
             for k in d.keys():
@@ -32,6 +31,6 @@ for i in range(t):
             m = len(res)
             minj = 0
             for j in range(m - 1):
-                if res[j] * res[j + 1] * (res[minj]**2 + res[minj + 1]**2) > res[minj] * res[minj + 1] * (res[j]**2 + res[j + 1]**2):
+                if res[j] * res[j + 1] * (res[minj] ** 2 + res[minj + 1] ** 2) > res[minj] * res[minj + 1] * (res[j] ** 2 + res[j + 1] ** 2):
                     minj = j
-            out.write(str(res[minj]) + " " + str(res[minj]) + " " + str(res[minj + 1]) + " " + str(res[minj + 1]) + "\n")
+            out.write(str(res[minj]) + ' ' + str(res[minj]) + ' ' + str(res[minj + 1]) + ' ' + str(res[minj + 1]) + '\n')

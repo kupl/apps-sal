@@ -1,4 +1,3 @@
-# cook your dish here
 t = 1
 for t_cases in range(t):
     n = int(input())
@@ -7,7 +6,7 @@ for t_cases in range(t):
     for i in range(0, n):
         temp = 0
         for j in range(0, i + 1):
-            if(v[j] >= t[i]):
+            if v[j] >= t[i]:
                 temp += t[i]
             else:
                 temp += v[j]

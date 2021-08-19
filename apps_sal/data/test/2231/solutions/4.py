@@ -1,4 +1,3 @@
-# by Nick "LordVader" Proshin.
 import sys
 input = sys.stdin.readline
 t = int(input())
@@ -31,6 +30,6 @@ for i in range(t):
             m = len(res)
             minj = 0
             for j in range(m - 1):
-                if res[j] * res[j + 1] * (res[minj]**2 + res[minj + 1]**2) > res[minj] * res[minj + 1] * (res[j]**2 + res[j + 1]**2):
+                if res[j] * res[j + 1] * (res[minj] ** 2 + res[minj + 1] ** 2) > res[minj] * res[minj + 1] * (res[j] ** 2 + res[j + 1] ** 2):
                     minj = j
             print(res[minj], res[minj], res[minj + 1], res[minj + 1])

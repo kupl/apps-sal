@@ -1,14 +1,11 @@
-'''input
+"""input
 2
 3 6
-'''
+"""
 from sys import stdin, setrecursionlimit
 from bisect import bisect_right
 import math
 setrecursionlimit(15000)
-
-
-# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 for i in range(n):

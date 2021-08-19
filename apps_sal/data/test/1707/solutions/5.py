@@ -13,8 +13,6 @@ n = getN()
 nums = [abs(i) for i in getList()]
 nums.sort(reverse=False)
 ans = 0
-# print(nums)
-for i, num in enumerate(nums):
+for (i, num) in enumerate(nums):
     ans += bisect_right(nums, num * 2) - i - 1
-
 print(ans)
