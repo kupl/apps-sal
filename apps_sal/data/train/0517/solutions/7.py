@@ -1,4 +1,3 @@
-# cook your dish here
 def prime_factors(n):
     i = 2
     factors = set()
@@ -13,15 +12,11 @@ def prime_factors(n):
     return factors
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 fs = prime_factors(n)
 fs.discard(n)
-ans = 2**n - 2
+ans = 2 ** n - 2
 for v in fs:
-    # print(ans, v)
     v = n // v
-    # print(v)
-    ans -= 2**v - 2
-    # print(ans)
-# print(fs)
+    ans -= 2 ** v - 2
 print(ans % m)

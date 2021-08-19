@@ -1,8 +1,7 @@
-# cook your dish here
 T = int(input())
 for _ in range(T):
     s = input()
-    h, m = int(s[:2]), int(s[3:])
+    (h, m) = (int(s[:2]), int(s[3:]))
     if h > 12:
         h -= 12
     if h == 12:

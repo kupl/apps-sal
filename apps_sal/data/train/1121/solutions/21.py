@@ -9,17 +9,15 @@ def jump(h, m):
     else:
         diff -= ahead
     if (h == 12 or h == 0) and m == 0:
-        print(0, "degree")
+        print(0, 'degree')
+    elif diff <= 180:
+        print(diff, 'degree')
     else:
-        if diff <= 180:
-            print(diff, "degree")
-        else:
-            print(360 - diff, "degree")
+        print(360 - diff, 'degree')
 
 
 t = int(input())
 for g in range(t):
-    # n=int(input())
     a = input()
     h = int(a[:2])
     if h > 12:

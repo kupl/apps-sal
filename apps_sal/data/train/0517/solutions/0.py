@@ -1,7 +1,5 @@
-# cook your dish here
 def offset(l, flag):
     x = 0
-    # print(l)
     for i in range(1, len(l)):
         temp = []
         for j in range(i):
@@ -9,9 +7,9 @@ def offset(l, flag):
             if v > 1:
                 temp.append(v)
                 if flag:
-                    x += 2**v - 2
+                    x += 2 ** v - 2
                 else:
-                    x -= 2**v - 2
+                    x -= 2 ** v - 2
         x += offset(temp, not flag)
     return x
 
@@ -40,19 +38,17 @@ def prime_factors(n):
     return factors
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n == 1:
     print(1)
 else:
     fs = prime_factors(n)
     fs.discard(n)
-    ans = 2**n - 2
+    ans = 2 ** n - 2
     temp = []
     for v in fs:
         v = n // v
         temp.append(v)
-        ans -= 2**v - 2
-        # print(ans)
+        ans -= 2 ** v - 2
     ans += offset(temp, True)
-    # print(fs)
     print(ans % m)

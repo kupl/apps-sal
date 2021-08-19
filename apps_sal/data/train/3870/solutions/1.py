@@ -1,7 +1,7 @@
 def solve(s):
-    space_index = [i for i in range(len(s)) if s[i] == " "]  # find index of saces
-    s = ''.join(s.split())  # remove spaces
-    s = s[::-1]  # reverse the string
-    for i in space_index:  # add spaces again to exactly same place before
-        s = s[:i] + " " + s[i:]
+    space_index = [i for i in range(len(s)) if s[i] == ' ']
+    s = ''.join(s.split())
+    s = s[::-1]
+    for i in space_index:
+        s = s[:i] + ' ' + s[i:]
     return s

@@ -1,14 +1,13 @@
 class SegmentTree(object):
+
     def __init__(self, sequence, function, identify):
         N = len(sequence)
-        self.length = (1 << (N - 1)).bit_length()
+        self.length = (1 << N - 1).bit_length()
         self.function = function
         self.data = [identify] * (self.length << 1)
         self.identify = identify
-        # set values
         for i in range(N):
             self.data[i + self.length - 1] = sequence[i]
-        # build
         for i in range(self.length - 2, -1, -1):
             self.data[i] = self.function(self.data[(i << 1) + 1], self.data[(i << 1) + 2])
 
@@ -16,7 +15,7 @@ class SegmentTree(object):
         idx += self.length - 1
         self.data[idx] = x
         while idx:
-            idx = (idx - 1) >> 1
+            idx = idx - 1 >> 1
             self.data[idx] = self.function(self.data[(idx << 1) + 1], self.data[(idx << 1) + 2])
 
     def query(self, p, q):
@@ -32,29 +31,29 @@ class SegmentTree(object):
                 res = self.function(res, self.data[q])
                 q -= 1
             p >>= 1
-            q = (q - 1) >> 1
+            q = q - 1 >> 1
         return self.function(res, self.data[p]) if p == q else self.function(self.function(res, self.data[p]), self.data[q])
 
 
 def popcount(x):
-    x = x - ((x >> 1) & 0x5555555555555555)
-    x = (x & 0x3333333333333333) + ((x >> 2) & 0x3333333333333333)
-    x = (x + (x >> 4)) & 0x0f0f0f0f0f0f0f0f
+    x = x - (x >> 1 & 6148914691236517205)
+    x = (x & 3689348814741910323) + (x >> 2 & 3689348814741910323)
+    x = x + (x >> 4) & 1085102592571150095
     x = x + (x >> 8)
     x = x + (x >> 16)
     x = x + (x >> 32)
-    return x & 0x0000007f
+    return x & 127
 
 
 N = int(input())
 S = input()
-atoi = {chr(ord("a") + d): 1 << d for d in range(26)}
-data = [atoi[c] for c in (S)]
+atoi = {chr(ord('a') + d): 1 << d for d in range(26)}
+data = [atoi[c] for c in S]
 seg_tree = SegmentTree(data, lambda a, b: a | b, 0)
 Q = int(input())
 for _ in range(Q):
-    q, a, b = input().split()
-    if q == "1":
+    (q, a, b) = input().split()
+    if q == '1':
         idx = int(a) - 1
         seg_tree.update(idx, atoi[b])
     else:

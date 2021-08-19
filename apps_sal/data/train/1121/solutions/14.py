@@ -1,7 +1,6 @@
-# cook your dish here
 for i in range(int(input())):
     t = input()
-    l = t.split(":")
+    l = t.split(':')
     l[0] = int(l[0])
     l[1] = int(l[1])
     if l[0] >= 12:
@@ -12,5 +11,4 @@ for i in range(int(input())):
         ans = 360 - abs(m - h)
     else:
         ans = abs(m - h)
-
-    print("{0:.2f}".format(ans).rstrip("0").rstrip("."), "degree")
+    print('{0:.2f}'.format(ans).rstrip('0').rstrip('.'), 'degree')

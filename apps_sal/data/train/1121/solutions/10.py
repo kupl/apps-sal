@@ -1,16 +1,15 @@
-# cook your dish here
 n = int(input())
 y = []
 for i in range(0, n):
     l = []
     s = input()
-    l = s.split(":")
+    l = s.split(':')
     l[0] = int(l[0])
     l[1] = int(l[1])
     if l[0] >= 12:
         l[0] = l[0] - 12
     l[1] = l[1] // 5
-    m, e = 1, 1
+    (m, e) = (1, 1)
     r = 0
     if l[0] < l[1]:
         m = m * l[1] * 2.5
@@ -27,4 +26,4 @@ for i in range(0, n):
         r = 360 - r
     y.append(r)
 for j in y:
-    print("{0:.2f}".format(j).rstrip('0').rstrip('.'), "degree")
+    print('{0:.2f}'.format(j).rstrip('0').rstrip('.'), 'degree')
