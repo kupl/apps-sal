@@ -3,23 +3,29 @@ import sys
 import math
 import io
 import os
-#data = io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
 from bisect import bisect_left as bl, bisect_right as br, insort
 from heapq import heapify, heappush, heappop
 from collections import defaultdict as dd, deque, Counter
-#from itertools import permutations,combinations
-def data(): return sys.stdin.readline().strip()
-def mdata(): return list(map(int, data().split()))
-def outl(var): sys.stdout.write(' '.join(map(str, var)) + '\n')
-def out(var): sys.stdout.write(str(var) + '\n')
 
 
-#from decimal import Decimal
-# sys.setrecursionlimit(100000)
+def data():
+    return sys.stdin.readline().strip()
+
+
+def mdata():
+    return list(map(int, data().split()))
+
+
+def outl(var):
+    sys.stdout.write(' '.join(map(str, var)) + '\n')
+
+
+def out(var):
+    sys.stdout.write(str(var) + '\n')
+
+
 INF = float('inf')
-mod = int(1e9) + 7
-
-
+mod = int(1000000000.0) + 7
 for t in range(int(data())):
     n = int(data())
     a1 = mdata()
@@ -43,7 +49,7 @@ for t in range(int(data())):
         if vis[i] == 0 and g[i]:
             s = [[], []]
             vis[i] = 1
-            a, b = g[i][0], g[i][1]
+            (a, b) = (g[i][0], g[i][1])
             s[a[2]].append(a[1])
             s[1 - b[2]].append(b[1])
             vis[a[0]] = -1

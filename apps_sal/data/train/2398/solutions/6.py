@@ -1,6 +1,4 @@
 import sys
-# range = xrange
-# input = raw_input
 inp = [int(x) for x in sys.stdin.read().split()]
 ii = 0
 out = []
@@ -48,9 +46,9 @@ ii += 1
 for _ in range(t):
     n = inp[ii]
     ii += 1
-    A = [x - 1 for x in inp[ii: ii + n]]
+    A = [x - 1 for x in inp[ii:ii + n]]
     ii += n
-    B = [x - 1 for x in inp[ii: ii + n]]
+    B = [x - 1 for x in inp[ii:ii + n]]
     ii += n
     A = [A[i >> 1] if i & 1 == 0 else B[i >> 1] for i in range(2 * n)]
     ans = solve(n, A)
@@ -58,5 +56,5 @@ for _ in range(t):
         out.append('-1')
     else:
         out.append(str(len(ans)))
-        out.append(' '.join(str(x + 1) for x in ans))
+        out.append(' '.join((str(x + 1) for x in ans)))
 print('\n'.join(out))

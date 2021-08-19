@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 from collections import Counter
 
 
@@ -15,14 +13,12 @@ def fib_str(s):
 
 def __starting_point():
     test = int(input())
-
     for _ in range(test):
         s = input()
-
         if fib_str(s):
-            print("Dynamic")
+            print('Dynamic')
         else:
-            print("Not")
+            print('Not')
 
 
 __starting_point()

@@ -1,8 +1,7 @@
 class Solution:
+
     def removeDuplicates(self, s: str, k: int) -> str:
-
         ret = list(s)
-
         while True:
             s = ret
             ret = []
@@ -11,16 +10,13 @@ class Solution:
                 if not ret or ret[-1] != c:
                     ac = 1
                     ret.append(c)
+                elif ac + 1 == k:
+                    while ac:
+                        ret.pop()
+                        ac -= 1
                 else:
-                    if ac + 1 == k:
-                        while ac:
-                            ret.pop()
-                            ac -= 1
-                    else:
-                        ret.append(c)
-                        ac += 1
-                # print(ret, ac)
+                    ret.append(c)
+                    ac += 1
             if len(ret) == len(s):
                 break
-
         return ''.join(ret)

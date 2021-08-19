@@ -1,5 +1,4 @@
 def gimme(input_array):
-    # Implement this function
     mins = min(input_array)
     maxs = max(input_array)
     for i in input_array:

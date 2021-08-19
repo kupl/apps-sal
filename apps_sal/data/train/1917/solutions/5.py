@@ -7,15 +7,14 @@ class Solution:
     @staticmethod
     def _merge_into(dict_main, dict_added):
         """Change dict_main in place by adding the dict_added"""
-        for key, val in list(dict_added.items()):
+        for (key, val) in list(dict_added.items()):
             dict_main[key] = dict_main.get(key, 0) + val
 
     @staticmethod
     def _multiply(dict_main, mult):
         """Return a new dict from the multiplication of everything by a number"""
-        return {k: v * mult for k, v in list(dict_main.items())}
+        return {k: v * mult for (k, v) in list(dict_main.items())}
 
-    # Processing methods
     def cur(self):
         return self.formula[self.i]
 
@@ -32,22 +31,18 @@ class Solution:
         :type formula: str
         :rtype: str
         """
-        # Adding a space for easier test than always testing if we are at the end
         self.formula = formula
-
         res = {}
         while not self.atend():
             self._merge_into(res, self.process_next_part())
-
         res_str = []
-        for key, value in sorted(res.items()):
+        for (key, value) in sorted(res.items()):
             res_str.append(key)
             if value != 1:
                 res_str.append(str(value))
         return ''.join(res_str)
 
     def process_next_part(self):
-        # Return i, dict_atoms
         cur = self.cur()
         if cur.isalpha():
             name = self._consume_name()
@@ -55,18 +50,18 @@ class Solution:
             return {name: value}
         elif cur == '(':
             local_res = {}
-            self.consume()  # Consuming the '('
+            self.consume()
             while self.cur() != ')':
                 self._merge_into(local_res, self.process_next_part())
-            self.consume()  # Consuming the ')'
+            self.consume()
             value = self._consume_digit()
             return self._multiply(local_res, value)
         else:
-            raise Exception("char unkwon")
+            raise Exception('char unkwon')
 
     def _consume_name(self):
         name = self.consume()
-        if not self.atend() and self.cur().isalpha() and self.cur().lower() == self.cur():
+        if not self.atend() and self.cur().isalpha() and (self.cur().lower() == self.cur()):
             return name + self.consume()
         return name
 

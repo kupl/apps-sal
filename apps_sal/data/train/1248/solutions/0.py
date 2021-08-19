@@ -1,4 +1,3 @@
-# cook your dish here
 def finder(n):
     cnt = 0
     for i in range(2, n + 1):
