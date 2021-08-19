@@ -1,20 +1,25 @@
-# coding: utf-8
 import sys
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
+
+
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
 
 
 N = ir()
-# 候補はNかN-1の約数
 answer = 0
 
 
-def make_divisors(n):  # nの約数を列挙
+def make_divisors(n):
     divisors = []
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             divisors.append(i)
             if i != n // i:
@@ -31,5 +36,4 @@ for x in cand:
     r = M % x
     if r == 1:
         answer += 1
-
 print(answer)

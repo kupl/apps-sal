@@ -19,20 +19,13 @@ def evens(f):
 s = input()
 f = collections.defaultdict(int)
 l = len(s)
-
-# count character frequencies in s
 for c in s:
     f[c] += 1
-
 while not palindromic(f, l):
     o = odds(f)
-
-    # if there are too many odds, remove one
     if len(o) >= 1:
         f[o[0]] -= 1
     else:
         f[evens(f)[0]] -= 1
-
     l -= 1
-
-print("First" if (len(s) - l) % 2 == 0 else "Second")
+print('First' if (len(s) - l) % 2 == 0 else 'Second')

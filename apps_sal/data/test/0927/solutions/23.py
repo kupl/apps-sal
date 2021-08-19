@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 try:
     from typing import Dict, List
@@ -6,7 +5,7 @@ except ImportError:
     pass
 
 
-def solve(N: int, M: int, A: "List[int]"):
+def solve(N: int, M: int, A: 'List[int]'):
     mn = [6, 2, 5, 5, 4, 5, 6, 3, 7, 6]
     A.sort(reverse=True)
     dp = [-1] * (N + 1)
@@ -20,26 +19,26 @@ def solve(N: int, M: int, A: "List[int]"):
             dp[i] = m
     assert dp[N] >= 0
     k = N
-    res = []  # type: List[int]
+    res = []
     while dp[k]:
         for Ai in A:
             if k - mn[Ai] >= 0 and dp[k - mn[Ai]] == dp[k] - 1:
                 res.append(Ai)
                 k -= mn[Ai]
                 break
-
-    print(("".join(str(d) for d in res)))
+    print(''.join((str(d) for d in res)))
 
 
 def main():
+
     def iterate_tokens():
         for line in sys.stdin:
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    M = int(next(tokens))  # type: int
-    A = [int(next(tokens)) for _ in range(M)]  # type: "List[int]"
+    N = int(next(tokens))
+    M = int(next(tokens))
+    A = [int(next(tokens)) for _ in range(M)]
     solve(N, M, A)
 
 

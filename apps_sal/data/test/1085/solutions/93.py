@@ -1,7 +1,5 @@
 import numpy as np
 n = int(input())
-
-# n % k = 1 の数
 m = n - 1
 i = 2
 ans = 1
@@ -16,9 +14,6 @@ while i * i <= m:
 if m != 1:
     ans *= 2
 ans -= 1
-
-# n % k = 0 の場合
-# nを素因数分解する
 m = n
 i = 2
 factor = []
@@ -35,14 +30,10 @@ while i * i <= n:
     i = i + 1
 if n > 1:
     factor.append(np.array([1, n]))
-
-# 直積を求めることでnの全約数を得る
 divisor = factor[-1]
 for i in range(len(factor) - 1):
     divisor = np.outer(divisor, factor[i])
 divisor = np.outer(np.array(1), divisor)
-
-# 判定
 for i in divisor[0]:
     if i == 1:
         continue
@@ -51,5 +42,4 @@ for i in divisor[0]:
         n //= i
     if n % i == 1:
         ans += 1
-
 print(ans)

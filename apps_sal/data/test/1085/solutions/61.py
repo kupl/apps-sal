@@ -1,19 +1,9 @@
 N = int(input())
-
-"""
-引き算のみ
-N mod K == -1
-N-1 mod K == 0
-K はN-1の約数
-
-割り算が含まれる
-KはNの約数
-大した個数ないので、確かめる。
-"""
+'\n引き算のみ\nN mod K == -1\nN-1 mod K == 0\nK はN-1の約数\n\n割り算が含まれる\nKはNの約数\n大した個数ないので、確かめる。\n'
 
 
 def make_divisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -35,5 +25,4 @@ for b in B:
         wk = wk // b
     if wk % b == 1:
         ANS.add(b)
-
-print(len(ANS) - 1)  # 1を除く
+print(len(ANS) - 1)

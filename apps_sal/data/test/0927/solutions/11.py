@@ -1,9 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = sorted(list(map(int, input().split())), reverse=True)
 L = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
-
 inf = float('inf')
-# dp[i]=i本で最大何桁作れるか
 dp = [-inf] * (n + 1)
 dp[0] = 0
 for i in range(1, n + 1):
@@ -11,7 +9,6 @@ for i in range(1, n + 1):
         num = L[A[j]]
         if i >= num:
             dp[i] = max(dp[i], dp[i - num] + 1)
-
 sort_A = sorted(A, reverse=True)
 ans = ''
 while True:
@@ -25,6 +22,4 @@ while True:
                 ans += str(temp)
                 n -= num
                 break
-
-
-print((int(ans)))
+print(int(ans))
