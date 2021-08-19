@@ -1,6 +1,5 @@
-# Fast algorithm.
-# Execution time: dont_give_me_five(1, 123456789) ~ 0.01 ms
 def dont_give_me_five(start, end):
+
     def goo(n):
         result = 0
         pos9 = 1
@@ -16,7 +15,7 @@ def dont_give_me_five(start, end):
             n //= 10
             pos9 *= 9
         return result
-    if (end >= 0 and start >= 0) or (end < 0 and start < 0):
+    if end >= 0 and start >= 0 or (end < 0 and start < 0):
         return goo(max(abs(end), abs(start))) - goo(min(abs(start), abs(end)) - 1)
     else:
         return goo(abs(end)) + goo(abs(start)) + 1
