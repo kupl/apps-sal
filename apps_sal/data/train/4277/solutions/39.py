@@ -3,8 +3,6 @@ def difference_in_ages(ages):
     youngest = ages_sorted[0]
     oldest = ages_sorted[-1]
     difference = oldest - youngest
-    return youngest, oldest, difference
+    return (youngest, oldest, difference)
     return ages_sorted
-
-    # your code here
     pass

@@ -1,4 +1,5 @@
 class Solution:
+
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
 
         def kadane(ls, n):
@@ -15,12 +16,8 @@ class Solution:
         arr_sum = sum(arr)
         arr.extend(arr)
         next_max_sum = kadane(arr, 2 * n)
-
         if arr_sum < 0:
             return max(next_max_sum, 0)
-
         if arr_sum >= 0 and next_max_sum > arr_sum:
-            return (next_max_sum + (k - 2) * arr_sum) % (10**9 + 7)
-        # if arr_sum >
-
+            return (next_max_sum + (k - 2) * arr_sum) % (10 ** 9 + 7)
         return max(first_max_sum, 0)

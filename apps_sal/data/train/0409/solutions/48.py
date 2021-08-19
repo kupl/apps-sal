@@ -1,4 +1,5 @@
 class Solution:
+
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
 
         def find_max(A):
@@ -12,11 +13,9 @@ class Solution:
                     start += 1
                 res = max(res, curr)
             return res
-
-        if all(i <= 0 for i in arr):
+        if all((i <= 0 for i in arr)):
             return 0
         if k == 1:
             return find_max(arr)
-        # print (sum(arr)*k)
         res = max(find_max(arr), find_max(arr + arr), sum(arr) * k, find_max(arr + arr) + sum(arr) * (k - 2))
-        return res % (10**9 + 7)
+        return res % (10 ** 9 + 7)

@@ -6,8 +6,5 @@ def difference_in_ages(ages):
     c = b - a
     j = 0
     diff = (a, b, c)
-
     return diff
-
-    # your code here
     pass

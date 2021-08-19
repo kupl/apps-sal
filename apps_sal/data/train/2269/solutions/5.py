@@ -1,20 +1,14 @@
-# import math
-# n,k = list(map(int,input().split()))
-# print(math.ceil((n-1)/(k-1)))
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 road = {}
 whole = []
 for i in range(1, n + 1):
     whole.append(i)
     road[i] = set()
 whole = set(whole)
-
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     road[a].add(b)
     road[b].add(a)
-
 taka = []
 hashi = []
 used = set()
@@ -50,7 +44,6 @@ for x in road:
                 used.add(y)
     r = list(r)
     l = list(l)
-
     for i in range(len(l)):
         for j in range(i + 1, len(l)):
             if l[j] not in road[l[i]]:
@@ -69,12 +62,10 @@ for x in road:
             break
     if no == 1:
         break
-
     taka.append(len(l))
     hashi.append(len(r))
-
 if no == 1:
-    print((-1))
+    print(-1)
 else:
     res = [abs(taka[i] - hashi[i]) for i in range(len(taka))]
     res.sort(reverse=-1)

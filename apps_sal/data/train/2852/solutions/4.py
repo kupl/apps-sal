@@ -6,7 +6,7 @@ def find_longest(st):
     for i in range(n):
         if st[i] == '(':
             lis.append(i)
-        else:    # If closing bracket, i.e., str[i] = ')'
+        else:
             lis.pop()
             if len(lis) != 0:
                 result = max(result, i - lis[len(lis) - 1])

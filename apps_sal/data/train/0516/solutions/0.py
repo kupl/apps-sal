@@ -1,7 +1,6 @@
-# cook your dish here
 def count(k, n, m):
-    sum1 = (m * (m + 1)) // 2
-    sum2 = (m * (m - 1)) // 2
+    sum1 = m * (m + 1) // 2
+    sum2 = m * (m - 1) // 2
     ct = 0
     for i in range(n):
         for j in range(n):
@@ -14,6 +13,6 @@ def count(k, n, m):
 
 test = int(input())
 for _ in range(test):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     k = list(map(int, input().split()))
     print(count(k, n, m))
