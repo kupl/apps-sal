@@ -6,16 +6,21 @@ import functools
 import fractions
 import collections
 from random import *
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 dX = [-1, 1, 0, 0, -1, 1, -1, 1]
 dY = [0, 0, -1, 1, 1, -1, -1, 1]
-def RI(): return list(map(int, input().split()))
-def RS(): return input().rstrip().split()
 
 
-mod = 1e9 + 7
-eps = 1e-6
-#################################################
+def RI():
+    return list(map(int, input().split()))
+
+
+def RS():
+    return input().rstrip().split()
+
+
+mod = 1000000000.0 + 7
+eps = 1e-06
 n = RI()[0]
 a = RI()
 ans = 1

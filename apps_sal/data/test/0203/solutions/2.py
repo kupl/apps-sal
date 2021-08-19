@@ -3,10 +3,7 @@ def get_opposite_vote(vote):
 
 
 def codeforces(votes):
-    # rs = votes.count('R')
-    # ds = votes.count('D')
     blocked = {'R': 0, 'D': 0}
-
     while True:
         new_votes = ''
         for vote in votes:
@@ -16,10 +13,8 @@ def codeforces(votes):
                 blocked[get_opposite_vote(vote)] += 1
                 new_votes += vote
         votes = new_votes
-
         if votes.count('R') == 0 or votes.count('D') == 0:
             break
-
     return votes[0]
 
 

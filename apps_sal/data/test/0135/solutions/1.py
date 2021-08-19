@@ -1,5 +1,3 @@
-#! /usr/bin/env python3
-
 import math
 import sys
 
@@ -9,7 +7,7 @@ def lcm(u, v):
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     m = 1
     for i in range(1, k + 1):
         m = lcm(m, i)

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 
@@ -12,16 +11,14 @@ def main():
     P = [0] * N
     R = [0] * N
     for i in range(N):
-        S[i], P[i] = list(map(str, input().split()))
+        (S[i], P[i]) = list(map(str, input().split()))
     for i in range(N):
         R[i] = i + 1
     for i in range(N):
         P[i] = int(P[i]) * -1
-
     Z = list(zip(S, P, R))
     Z = sorted(Z)
-    S, P, R = list(zip(*Z))
-
+    (S, P, R) = list(zip(*Z))
     for i in R:
         print(i)
 

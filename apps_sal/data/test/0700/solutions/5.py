@@ -6,8 +6,7 @@ def powerset(iterable):
     powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)
     """
     xs = list(iterable)
-    # note we return an iterator rather than a list
-    return chain.from_iterable(combinations(xs, n) for n in range(len(xs) + 1))
+    return chain.from_iterable((combinations(xs, n) for n in range(len(xs) + 1)))
 
 
 n = int(input())
@@ -19,7 +18,6 @@ for i in range(n):
     for j in range(n):
         a.append(s[j])
     cl1.append(a)
-
 for i in range(n):
     s = input()
     a = []
@@ -79,7 +77,6 @@ else:
                 t = z(t)
             if t == cl2:
                 res = True
-
 if res:
     print('Yes')
 else:
