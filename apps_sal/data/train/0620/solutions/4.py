@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     a = input().split()
@@ -12,7 +11,7 @@ while t:
     pos = -1
     allTimeLong = 0
     for i in range(n):
-        if lst[i] > k and greater != 0 and lst[i] != greater:
+        if lst[i] > k and greater != 0 and (lst[i] != greater):
             greater = lst[i]
             if allTimeLong < length:
                 allTimeLong = length

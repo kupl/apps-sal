@@ -1,14 +1,11 @@
-# https://www.codechef.com/problems/SLAEL
-
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ays = list(map(int, input().split()))
-
-    gt = k  # sentinel
+    gt = k
     gtp = -1
     mseg = 0
     seg = 0
-    for ax, a in enumerate(ays):
+    for (ax, a) in enumerate(ays):
         if a <= k:
             seg += 1
         elif a == gt:
@@ -20,8 +17,7 @@ for _ in range(int(input())):
             gt = a
             seg = ax - gtp
             gtp = ax
-
-    if gt == k:  # check sentinel
+    if gt == k:
         mseg = 0
     elif seg > mseg:
         mseg = seg

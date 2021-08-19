@@ -8,18 +8,35 @@ from collections import *
 from functools import reduce, cmp_to_key
 import sys
 input = sys.stdin.readline
-
-
 M = mod = 998244353
-def factors(n): return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))
-def inv_mod(n): return pow(n, mod - 2, mod)
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split()]
-def st(): return input().rstrip('\n')
-def val(): return int(input().rstrip('\n'))
-def li2(): return [i for i in input().rstrip('\n')]
-def li3(): return [int(i) for i in input().rstrip('\n')]
+def factors(n):
+    return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0))))
+
+
+def inv_mod(n):
+    return pow(n, mod - 2, mod)
+
+
+def li():
+    return [int(i) for i in input().rstrip('\n').split()]
+
+
+def st():
+    return input().rstrip('\n')
+
+
+def val():
+    return int(input().rstrip('\n'))
+
+
+def li2():
+    return [i for i in input().rstrip('\n')]
+
+
+def li3():
+    return [int(i) for i in input().rstrip('\n')]
 
 
 def isprime(n):
@@ -31,7 +48,6 @@ def isprime(n):
 
 for _ in range(val()):
     n = val()
-
     l1 = factors(n)[1:]
     l = []
     for j in l1:
@@ -39,7 +55,6 @@ for _ in range(val()):
             l.append(j)
     l1 = set(l1)
     l1 -= set(l)
-    # print(l, l1)
     d = defaultdict(set)
     for j in range(len(l)):
         for i in sorted(list(l1)):
@@ -47,21 +62,17 @@ for _ in range(val()):
                 d[tuple(sorted([l[j], l[j - 1]]))].add(i)
                 l1.remove(i)
                 break
-    # print(l, l1)
     for j in range(len(l)):
         for i in sorted(list(l1)):
             if i % l[j] == 0 and i % l[j - 1] == 0:
                 d[tuple(sorted([l[j], l[j - 1]]))].add(i)
                 l1.remove(i)
-    # print(l, l1, d)
-
     only = defaultdict(list)
     for j in range(len(l)):
         for i in sorted(list(l1)):
             if i % l[j] == 0:
                 only[l[j]].append(i)
                 l1.remove(i)
-
     fin = []
     if len(l) == 2:
         fin.append(l[0])
@@ -77,7 +88,6 @@ for _ in range(val()):
                 fin.append(l[i + 1])
                 for j in only[l[i + 1]]:
                     fin.append(j)
-
     else:
         fin.append(l[0])
         for j in only[l[0]]:
@@ -89,7 +99,6 @@ for _ in range(val()):
                 fin.append(l[i + 1])
                 for j in only[l[i + 1]]:
                     fin.append(j)
-
     ans = 0
     for i in range(len(fin)):
         if math.gcd(fin[i], fin[i - 1]) == 1:

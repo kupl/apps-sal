@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 t = int(input())
 for _ in range(t):
@@ -7,7 +6,7 @@ for _ in range(t):
     for i in range(n):
         s = input()
         for k in s:
-            if k in "codechef":
+            if k in 'codechef':
                 d[k] = d[k] + 1
     d['c'] = d['c'] // 2
     d['e'] = d['e'] // 2

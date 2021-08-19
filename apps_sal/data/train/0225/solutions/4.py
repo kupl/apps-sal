@@ -1,18 +1,17 @@
 class Solution:
+
     def pushDominoes(self, dominoes: str) -> str:
         forces = [0] * len(dominoes)
         max_force = len(dominoes)
-
         force = 0
-        for i, d in enumerate(dominoes):
+        for (i, d) in enumerate(dominoes):
             if d == 'R':
                 force = max_force
-            elif d == 'L':  # have to use elif here, not if
+            elif d == 'L':
                 force = 0
             else:
                 force = max(0, force - 1)
             forces[i] += force
-
         force = 0
         for i in range(len(dominoes) - 1, -1, -1):
             d = dominoes[i]
@@ -23,9 +22,7 @@ class Solution:
             else:
                 force = max(0, force - 1)
             forces[i] -= force
-
         print(forces)
-
         result = ''
         for f in forces:
             if f == 0:
@@ -35,6 +32,3 @@ class Solution:
             else:
                 result += 'L'
         return result
-
-# TC: O(N)
-# SC: O(N)

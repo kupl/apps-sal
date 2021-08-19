@@ -12,7 +12,7 @@ for _ in range(q):
             nn //= i
         else:
             i += 1
-        if i**2 > n:
+        if i ** 2 > n:
             break
     if nn != 1:
         pier.append(nn)
@@ -54,10 +54,9 @@ for _ in range(q):
             print(p, q, p * q)
             print(1)
         else:
-            test = p**2
+            test = p ** 2
             if n % test != 0:
-                p, q = q, p
-            # p^2 dzieli n
+                (p, q) = (q, p)
             dzielniki = set(dzielniki)
             dzielniki.remove(p * q)
             dzielniki.remove(p * p * q)
