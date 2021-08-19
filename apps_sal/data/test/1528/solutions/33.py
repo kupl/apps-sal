@@ -1,13 +1,8 @@
-# 解説AC
-n, x = map(int, input().split())
-b, p = [1], [1]
+(n, x) = map(int, input().split())
+(b, p) = ([1], [1])
 for i in range(n):
-    # レベルNバーガーの層の総数
     b.append(b[i] * 2 + 3)
-    # レベルNバーガーのPの総数
     p.append(p[i] * 2 + 1)
-# 再帰関数でPの総数を調べる
-# レベル0バーガーから1,2...Nまでの下からX層のPの総数を順番に調べる
 
 
 def pate(n, x):

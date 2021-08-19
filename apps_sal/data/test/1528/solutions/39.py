@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 
 
 def level_n_putty(n):
@@ -16,10 +16,8 @@ def level_n_hb(n):
 
 
 m = level_n_hb(n)
-
 s = 0
 base = 0
-
 while True:
     if x == base + 1:
         if n == 0:
@@ -30,7 +28,6 @@ while True:
         break
     else:
         l = level_n_hb(n - 1)
-        #print(n, base + l + 2, x)
         if x < base + l + 2:
             base += 1
             n -= 1
@@ -43,5 +40,4 @@ while True:
             s += 1 + level_n_putty(n - 1)
             n -= 1
             m = l
-
 print(s)

@@ -1,4 +1,4 @@
-n, m = input().split(' ')
+(n, m) = input().split(' ')
 m = int(m)
 n = int(n)
 t1 = ''

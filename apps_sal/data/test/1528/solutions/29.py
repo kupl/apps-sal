@@ -1,27 +1,15 @@
-N, X = map(int, input().split())
-
-# レベル0バーガー P
-# レベル1バーガー BPPPB
-# P[i] = レベルiバーガーのパティの枚数
-# B[i] = レベルiバーガーの厚さ
-
+(N, X) = map(int, input().split())
 P = [0] * 51
 B = [0] * 51
-
 P[0] = 1
 B[0] = 1
-
 for i in range(1, len(P)):
     P[i] = P[i - 1] * 2 + 1
     B[i] = B[i - 1] * 2 + 3
 
-# レベルnバーガーを丸ごと食べたときのパティの枚数を求める
-
 
 def get_whole_barger(n):
     return P[n]
-
-# レベルnバーガーをx枚目まで食べたときのパティの枚数を求める
 
 
 def get_patty(n, x):

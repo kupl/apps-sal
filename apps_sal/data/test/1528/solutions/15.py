@@ -1,11 +1,8 @@
-N, X = list(map(int, input().split()))
-# a=レベルiバーガーの厚さ, p = レベルiバーガーのパティの数
-a, p = [1], [1]
+(N, X) = list(map(int, input().split()))
+(a, p) = ([1], [1])
 for i in range(N):
     a.append(a[i] * 2 + 3)
     p.append(p[i] * 2 + 1)
-
-# レベルNバーガーの下からX層にあるパティの数
 
 
 def f(N, X):
@@ -26,4 +23,4 @@ def f(N, X):
         return 2 * p[N - 1] + 1
 
 
-print((f(N, X)))
+print(f(N, X))

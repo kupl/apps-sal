@@ -1,11 +1,11 @@
-n, x = map(int, input().split())
-a, p = [1], [1]
+(n, x) = map(int, input().split())
+(a, p) = ([1], [1])
 for i in range(n):
     a.append(2 * a[-1] + 3)
     p.append(2 * p[-1] + 1)
 
 
-def f(n, x):  # レベルnバーガーのｘまでのパティの数
+def f(n, x):
     if n == 0:
         return 0 if x <= 0 else 1
     elif x <= 1 + a[n - 1]:
