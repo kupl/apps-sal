@@ -4,15 +4,12 @@ from copy import deepcopy as dc
 from bisect import bisect_left, bisect_right
 
 
-# Function to call the actual solution
 def solution(li, li1):
     freq = {}
     for i in range(len(li1)):
         if li1[i]:
             freq[i + 1] = li1[i]
-
     maxi = len(li)
-    # Exclusive ranges j - i
     i = 0
     j = 0
     req = dc(freq)
@@ -39,18 +36,12 @@ def solution(li, li1):
     return maxi - sum(li1)
 
 
-# Function to take input
 def input_test():
-    # for _ in range(int(input())):
-    # n = int(input())
-    a, b = list(map(int, input().strip().split(" ")))
-    # a, b, c = map(int, input().strip().split(" "))
-    li = list(map(int, input().strip().split(" ")))
-    li1 = list(map(int, input().strip().split(" ")))
+    (a, b) = list(map(int, input().strip().split(' ')))
+    li = list(map(int, input().strip().split(' ')))
+    li1 = list(map(int, input().strip().split(' ')))
     out = solution(li, li1)
     print(out)
-
-# Function to check test my code
 
 
 def test():
@@ -58,4 +49,3 @@ def test():
 
 
 input_test()
-# test()

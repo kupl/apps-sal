@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ans = 0
 for i in range(n):
     flats = list(map(int, input().split()))

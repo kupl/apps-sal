@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import math
 import sys
 input = sys.stdin.readline
@@ -15,7 +14,6 @@ def is_prime(n):
 
 def main():
     x = int(input())
-
     for i in range(x, 100004):
         if is_prime(i) == True:
             print(i)

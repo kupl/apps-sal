@@ -1,4 +1,4 @@
-a, b, x = list(map(int, input().split()))
+(a, b, x) = list(map(int, input().split()))
 
 
 def f(n, d):
@@ -7,6 +7,4 @@ def f(n, d):
     return n // d + 1
 
 
-print((f(b, x) - f(a - 1, x)))
-
-# bを割ったときの個数からaを割ったときの個数を引く
+print(f(b, x) - f(a - 1, x))

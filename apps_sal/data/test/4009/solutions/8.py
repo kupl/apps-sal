@@ -1,8 +1,8 @@
-# AC
 import sys
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0
@@ -25,12 +25,12 @@ class Main:
         return int(next(self))
 
     def solve(self):
-        n, x, y = self.next_ints()
+        (n, x, y) = self.next_ints()
         xx = next(self)
         stp = 0
         for i in range(0, x):
             if i == y:
-                if xx[- 1 - i] != '1':
+                if xx[-1 - i] != '1':
                     stp += 1
             elif xx[-1 - i] != '0':
                 stp += 1

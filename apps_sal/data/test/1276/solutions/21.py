@@ -1,6 +1,5 @@
-
 def main():
-    '''
+    """
     #このコードだと、tleになる
     n = int(input())
     s = input()
@@ -20,7 +19,7 @@ def main():
                 cnt += 1
                 # print(f"{i} {j} {k}")
     print(cnt)
-    '''
+    """
     n = int(input())
     s = input()
     cnt = [0] * 3
