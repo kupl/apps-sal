@@ -1,10 +1,9 @@
-# cook your dish here
 n = int(input())
 l = list(map(int, input().split()))
 temp = []
 for item in l:
     temp.append(item)
-if(n <= 3):
+if n <= 3:
     print(sum(temp))
 else:
     for i in range(3, n):

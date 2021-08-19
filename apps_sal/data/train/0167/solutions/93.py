@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         memo = {}
 
@@ -8,7 +9,7 @@ class Solution:
             if k == 1:
                 return n
             if (k, n) in memo:
-                return memo[(k, n)]
+                return memo[k, n]
             res = float('inf')
             lo = 1
             hi = n
@@ -22,8 +23,6 @@ class Solution:
                 else:
                     lo = mid + 1
                     res = min(res, not_broken + 1)
-            # for i in range(1,n+1):
-            #     res=min(res,max(dp(k-1,i-1), dp(k,n-i))+1)
-            memo[(k, n)] = res
+            memo[k, n] = res
             return res
         return dp(K, N)

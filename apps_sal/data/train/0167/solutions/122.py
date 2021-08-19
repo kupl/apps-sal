@@ -1,9 +1,6 @@
 class Solution:
-    def superEggDrop(self, K: int, N: int) -> int:
-        # dp[k][m]: given k eggs, max move m, the highest floor can find F
-        # dp[k][m] = dp[k - 1][m - 1] + dp[k][m - 1] + 1
-        # max m will be N, linear scan
 
+    def superEggDrop(self, K: int, N: int) -> int:
         dp = [[0 for i in range(N + 1)] for j in range(K + 1)]
         m = 0
         while dp[K][m] < N:
