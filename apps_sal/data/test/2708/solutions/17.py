@@ -1,8 +1,7 @@
-# cook your dish here
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 nn = str(n)
-while(k):
-    if(nn[-1] != '0'):
+while k:
+    if nn[-1] != '0':
         n -= 1
         nn = str(n)
     else:

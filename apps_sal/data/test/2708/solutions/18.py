@@ -1,7 +1,6 @@
-# cook your dish here
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 i = 0
-while(i != k):
+while i != k:
     if n % 10 == 0:
         n = n // 10
     else:

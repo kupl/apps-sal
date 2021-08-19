@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 l = list(map(int, input().split()))
 l.append(0)
@@ -11,6 +10,5 @@ for i in range(n + 1):
         curr = i
         d = abs(curr - prev)
         curr = curr + 1
-
         u = max(u, d)
 print(u)

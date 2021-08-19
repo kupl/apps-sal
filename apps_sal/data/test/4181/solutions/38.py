@@ -12,6 +12,5 @@ for i in range(N):
             a[i + 1] = a[i + 1] - b[i]
     elif a[i] > b[i]:
         a[i] = a[i] - b[i]
-# print(num,sum(a))
 num = num - sum(a)
 print(num)

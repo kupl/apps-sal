@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Codeforces Round #316 (Div. 2)
 
@@ -7,7 +6,6 @@ Problem B. Simple Game
 @author yamaton
 @date 2015-08-13
 """
-
 import itertools as it
 import functools
 import operator

@@ -1,14 +1,11 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Sep 10 11:20:10 2020
 
 @author: liang
 """
-
 N = int(input())
 A = [int(i) for i in input().split()]
 B = [int(i) for i in input().split()]
-
 ans = 0
 for i in range(N):
     ans += min(B[i], A[i] + A[i + 1])

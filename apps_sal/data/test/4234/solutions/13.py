@@ -1,8 +1,8 @@
-# codeforces1165C_live
-def gi(): return list(map(int, input().strip().split()))
+def gi():
+    return list(map(int, input().strip().split()))
 
 
-n, = gi()
+(n,) = gi()
 s = list(input())
 st = []
 for e in s:
@@ -14,4 +14,4 @@ for e in s:
 if len(st) % 2:
     st.pop()
 print(n - len(st))
-print("".join(st))
+print(''.join(st))

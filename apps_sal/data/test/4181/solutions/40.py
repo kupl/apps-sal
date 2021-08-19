@@ -1,8 +1,6 @@
-# 街の数はn+1個　aiはi番目の街を襲うモンスター
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 count = 0
 for x in range(n):
     if a[x] >= b[x]:
@@ -15,6 +13,4 @@ for x in range(n):
         else:
             count += a[x + 1]
             a[x + 1] = 0
-
-
 print(count)

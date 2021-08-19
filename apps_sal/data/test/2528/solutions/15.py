@@ -7,6 +7,5 @@ for i in range(n):
     else:
         m = max(m, c)
         c = 0
-    # print(m,c,a[i])
 m = max(m, c)
 print(m)
