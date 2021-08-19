@@ -6,7 +6,6 @@ def howmuch(m, n):
         if (instance - 1) % 9 == 0 and (instance - 2) % 7 == 0:
             carPrice = int((instance - 1) / 9)
             boatPrice = int((instance - 2) / 7)
-            statement = [f"M: {instance}", f"B: {boatPrice}", f"C: {carPrice}"]
+            statement = [f'M: {instance}', f'B: {boatPrice}', f'C: {carPrice}']
             trueInstances.append(statement)
     return trueInstances
-    # your code

@@ -1,4 +1,5 @@
 class Solution:
+
     def countSubstrings(self, s):
         """
         :type s: str
@@ -22,4 +23,4 @@ class Solution:
                 while t[i - r[i] - 1] == t[i + r[i] + 1]:
                     r[i] += 1
                 c = i
-        return sum((i + 1) // 2 for i in r)
+        return sum(((i + 1) // 2 for i in r))
