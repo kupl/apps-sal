@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 import math
 
@@ -22,7 +21,7 @@ def main(grid):
 
 test = int(input())
 for _ in range(test):
-    n, m = input().split()
+    (n, m) = input().split()
     n = int(n)
     arr = []
     for b in range(n):

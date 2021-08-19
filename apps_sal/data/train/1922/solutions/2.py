@@ -1,14 +1,7 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
 
     def minCameraCover(self, root: TreeNode) -> int:
         dump1 = {}
-
         dump2 = {}
 
         def f(root):
@@ -24,7 +17,7 @@ class Solution:
             if root == None:
                 return 0
             if (root, covered) in dump2:
-                return dump2[(root, covered)]
+                return dump2[root, covered]
             if root.left == None and root.right == None:
                 if covered:
                     return 0
@@ -37,10 +30,8 @@ class Solution:
                     ans = min(ans, f(root.right) + min(f(root.left), g(root.left, False)))
             else:
                 ans = min(f(root.left), g(root.left, False)) + min(f(root.right), g(root.right, False))
-            dump2[(root, covered)] = ans
+            dump2[root, covered] = ans
             return ans
-
         if root.left == None and root.right == None:
             return 1
-
         return min(f(root), g(root, False))

@@ -1,53 +1,47 @@
-
-# -*- coding: utf-8 -*-
-
 import sys
 
 
 class UnionFind:
-    '''
+    """
     配列を用いたUnionFind
-    '''
+    """
 
     def __init__(self, size):
         self.table = [i for i in range(size)]
 
     def find(self, x):
-        '''
+        """
         xのグループ番号を返す
-        '''
+        """
         return self.table[x]
 
     def union(self, val, y):
-        '''
+        """
         Fennecは0
          SnukeはN-1とすることで、O(1)にする
-         '''
+         """
         self.table[y] = val
 
     def same(self, x, y):
-        '''
+        """
         xとyが同じグループならtrue
-        '''
+        """
         x1 = self.find(x)
         y1 = self.find(y)
         return x1 == y1
 
     def get_table(self):
         return self.table
-# python template for atcoder1
 
 
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
-
 N = int(input())
 adj = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     adj[a - 1].append(b - 1)
     adj[b - 1].append(a - 1)
-
 Un = UnionFind(N)
 S = [N - 1]
 F = [0]
@@ -61,14 +55,14 @@ def oneStep(turn):
         while S:
             c = S.pop(0)
             for i in adj[c]:
-                if not Un.same(S_or, i) and not Un.same(F_or, i):
+                if not Un.same(S_or, i) and (not Un.same(F_or, i)):
                     Un.union(S_or, i)
                     ret.append(i)
     else:
         while F:
             c = F.pop(0)
             for i in adj[c]:
-                if not Un.same(S_or, i) and not Un.same(F_or, i):
+                if not Un.same(S_or, i) and (not Un.same(F_or, i)):
                     Un.union(F_or, i)
                     ret.append(i)
     return ret
@@ -84,11 +78,10 @@ while S or F:
         if len(F) != 0:
             F = oneStep(turn)
         turn = 1
-
 cntF = Un.get_table().count(0)
 cntS = Un.get_table().count(N - 1)
 if cntF > cntS:
-    ans = "Fennec"
+    ans = 'Fennec'
 else:
-    ans = "Snuke"
+    ans = 'Snuke'
 print(ans)

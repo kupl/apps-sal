@@ -1,19 +1,11 @@
 import sys
-sys.setrecursionlimit(2 * 10**5)
-
-# 入力
+sys.setrecursionlimit(2 * 10 ** 5)
 N = int(input())
-a, b = (
-    list(zip(*(list(map(int, input().split())) for _ in range(N - 1)))) if N - 1 else
-    ((), ())
-)
-
+(a, b) = list(zip(*(list(map(int, input().split())) for _ in range(N - 1)))) if N - 1 else ((), ())
 G = [set() for _ in range(N + 1)]
-for x, y in zip(a, b):
+for (x, y) in zip(a, b):
     G[x].add(y)
     G[y].add(x)
-
-
 dp = [0 for _ in range(N + 1)]
 dp[1] = 1
 
@@ -50,8 +42,5 @@ def g(i):
 
 
 g(1)
-ans = (
-    'Fennec' if dp3.count(1) > N // 2 else
-    'Snuke'
-)
+ans = 'Fennec' if dp3.count(1) > N // 2 else 'Snuke'
 print(ans)

@@ -1,13 +1,11 @@
-# 分岐は後で処理すれば良い
-# それぞれ0,nに近づくのが最適
 from heapq import heappush, heappop
 import sys
-sys.setrecursionlimit(10**8)
-inf = 10**10
+sys.setrecursionlimit(10 ** 8)
+inf = 10 ** 10
 n = int(input())
 l = [[] for i in range(n + 1)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l[a].append(b)
     l[b].append(a)
 prev = [-1 for i in range(n + 1)]
@@ -18,7 +16,7 @@ def dijkstra(s):
     dist = [inf] * (n + 1)
     dist[s] = 0
     while q:
-        c, v = heappop(q)
+        (c, v) = heappop(q)
         if dist[v] < c:
             continue
         for i in l[v]:
@@ -45,7 +43,7 @@ countf = [0]
 
 
 def dfs(x, y):
-    for i in l[x]:  # iに分岐可能ならば
+    for i in l[x]:
         if prev[x] != i and next[x] != i:
             if y == 1:
                 countp[0] += 1
@@ -65,6 +63,6 @@ for i in range(num1, num):
     countf[0] += 1
     dfs(p[i], 0)
 if countp[0] > countf[0]:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

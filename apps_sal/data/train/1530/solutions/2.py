@@ -1,6 +1,5 @@
-# cook your dish here
 t = int(input())
-while(t != 0):
+while t != 0:
     s = ''
     k = int(input())
     for i in range(1, k + 1):

@@ -16,16 +16,14 @@ def do_math(s):
         if b not in list(st.keys()):
             st[b] = [int(n)]
         else:
-            st[b] = st[b] + [int(n)]  # +l[m%4])
+            st[b] = st[b] + [int(n)]
     mpl = []
     m = 1
     for k in sorted(st.keys()):
         for ln in st[k]:
-            mpl.append(str(ln))  # +l[m%4])
-            # m+=1#m+=1
+            mpl.append(str(ln))
     mp = eval(mpl[0] + '+' + mpl[1]) if len(mpl) > 1 else int(mpl[0])
     for kl in mpl[2:]:
         mp = eval(str(mp) + l[m % 4] + kl)
         m += 1
     return int(mp + 0.5) if mp > 0 else int(mp + 0.5) - 1
-    # Your code starts here ... may the FORCE be with you

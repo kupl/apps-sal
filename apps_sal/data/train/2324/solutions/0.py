@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import sys
 sys.setrecursionlimit(10 ** 6)
 
@@ -8,7 +6,7 @@ def main():
     n = int(input())
     adj_list = [[] for i in range(n)]
     for i in range(n - 1):
-        a1, b1 = list(map(int, sys.stdin.readline().split()))
+        (a1, b1) = list(map(int, sys.stdin.readline().split()))
         adj_list[a1 - 1].append(b1 - 1)
         adj_list[b1 - 1].append(a1 - 1)
     path = list(reversed(dfs(0, -1, adj_list, n)))
@@ -18,7 +16,7 @@ def main():
     f = dfs2(0, -1, adj_list, n, cut)
     s = dfs2(n - 1, -1, adj_list, n, cut)
     assert f + s == n
-    print(("Fennec" if f > s else "Snuke"))
+    print('Fennec' if f > s else 'Snuke')
 
 
 def dfs(now, prev, adj_list, n):

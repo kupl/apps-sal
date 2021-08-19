@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, z1, z2 = [int(i) for i in input().split()]
+    (n, z1, z2) = [int(i) for i in input().split()]
     A = [int(i) for i in input().split()]
     t1 = [i for i in A] + [-i for i in A]
     if z1 in t1 or z2 in t1:
