@@ -8,7 +8,7 @@ def round(f, r=0):
 
 
 def main():
-    H, W = map(int, readline().rstrip().split())
+    (H, W) = map(int, readline().rstrip().split())
     ans = H * W
     if H >= 3:
         y1 = int(round(H / 3))
@@ -20,25 +20,20 @@ def main():
         x2 = (W - x1) // 2
         x3 = W - x1 - x2
         ans = min(ans, max(x1 * H, x2 * H, x3 * H) - min(x1 * H, x2 * H, x3 * H))
-
-    # 縦にスライス + 残りに横にスライス
     x1 = int(round(W / 3))
     y1 = H
     x2 = W - x1
     x3 = x2
     y2 = H // 2
     y3 = H - y2
-    ans = min(ans, max((x1 * y1), (x2 * y2), (x3 * y3)) - min((x1 * y1), (x2 * y2), (x3 * y3)))
-
-    # 横にスライス + 残りに縦にスライス
+    ans = min(ans, max(x1 * y1, x2 * y2, x3 * y3) - min(x1 * y1, x2 * y2, x3 * y3))
     y1 = int(round(H / 3))
     x1 = W
     y2 = H - y1
     y3 = y2
     x2 = W // 2
     x3 = W - x2
-    ans = min(ans, max((x1 * y1), (x2 * y2), (x3 * y3)) - min((x1 * y1), (x2 * y2), (x3 * y3)))
-
+    ans = min(ans, max(x1 * y1, x2 * y2, x3 * y3) - min(x1 * y1, x2 * y2, x3 * y3))
     print(ans)
 
 

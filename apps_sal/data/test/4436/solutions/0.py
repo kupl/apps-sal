@@ -1,13 +1,8 @@
-# -------------Program--------------
-# ----Kuzlyaev-Nikita-Codeforces----
-# -------------Round615-------------
-# ----------------------------------
-
 t = int(input())
 for i in range(t):
     n = int(input())
     a = []
-    for i in range(2, int(n**0.5) + 2):
+    for i in range(2, int(n ** 0.5) + 2):
         if len(a) == 2:
             a.append(n)
             break

@@ -1,4 +1,3 @@
-# coding: utf-8
 import re
 import math
 from collections import defaultdict
@@ -14,44 +13,43 @@ import queue
 import sys
 import datetime
 from functools import lru_cache
-# @lru_cache(maxsize=None)
 readline = sys.stdin.readline
 sys.setrecursionlimit(2000000)
-#import numpy as np
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-mod = int(10**9 + 7)
-inf = int(10**20)
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+mod = int(10 ** 9 + 7)
+inf = int(10 ** 20)
 
 
 def yn(b):
     if b:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')
 
 
 def Yn(b):
     if b:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def YN(b):
     if b:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
-class union_find():
+class union_find:
+
     def __init__(self, n):
         self.n = n
         self.P = [a for a in range(n)]
         self.rank = [0] * n
 
     def find(self, x):
-        if(x != self.P[x]):
+        if x != self.P[x]:
             self.P[x] = self.find(self.P[x])
         return self.P[x]
 
@@ -77,7 +75,7 @@ class union_find():
         return len(S)
 
 
-def ispow(a, b):  # aはbの累乗数か
+def ispow(a, b):
     now = b
     while now < a:
         now *= b
@@ -90,7 +88,7 @@ def ispow(a, b):  # aはbの累乗数か
 def getbin(num, size):
     A = [0] * size
     for a in range(size):
-        if (num >> (size - a - 1)) & 1 == 1:
+        if num >> size - a - 1 & 1 == 1:
             A[a] = 1
         else:
             A[a] = 0
@@ -101,33 +99,33 @@ def getfacs(n, mod_=0):
     A = [1] * (n + 1)
     for a in range(2, len(A)):
         A[a] = A[a - 1] * a
-        if(mod_ > 0):
+        if mod_ > 0:
             A[a] %= mod_
     return A
 
 
 def comb(n, r, mod, fac):
-    if(n - r < 0):
+    if n - r < 0:
         return 0
-    return (fac[n] * pow(fac[n - r], mod - 2, mod) * pow(fac[r], mod - 2, mod)) % mod
+    return fac[n] * pow(fac[n - r], mod - 2, mod) * pow(fac[r], mod - 2, mod) % mod
 
 
 def nextcomb(num, size):
-    x = num & (-num)
+    x = num & -num
     y = num + x
-    z = num & (~y)
+    z = num & ~y
     z //= x
     z = z >> 1
-    num = (y | z)
-    if(num >= (1 << size)):
+    num = y | z
+    if num >= 1 << size:
         return False
     else:
         return num
 
 
-def getprimes(n, type="int"):
+def getprimes(n, type='int'):
     if n == 0:
-        if type == "int":
+        if type == 'int':
             return []
         else:
             return [False]
@@ -138,21 +136,21 @@ def getprimes(n, type="int"):
         if A[a]:
             for b in range(a * 2, n + 1, a):
                 A[b] = False
-    if(type == "bool"):
+    if type == 'bool':
         return A
     B = []
     for a in range(n + 1):
-        if(A[a]):
+        if A[a]:
             B.append(a)
     return B
 
 
 def isprime(num):
-    if(num <= 1):
+    if num <= 1:
         return False
     i = 2
     while i * i <= num:
-        if(num % i == 0):
+        if num % i == 0:
             return False
         i += 1
     return True
@@ -165,18 +163,18 @@ def ifelse(a, b, c):
         return c
 
 
-def join(A, c=""):
+def join(A, c=''):
     n = len(A)
     A = list(map(str, A))
-    s = ""
+    s = ''
     for a in range(n):
         s += A[a]
-        if(a < n - 1):
+        if a < n - 1:
             s += c
     return s
 
 
-def factorize(n, type_="dict"):
+def factorize(n, type_='dict'):
     b = 2
     list_ = []
     while b * b <= n:
@@ -186,7 +184,7 @@ def factorize(n, type_="dict"):
         b += 1
     if n > 1:
         list_.append(n)
-    if type_ == "dict":
+    if type_ == 'dict':
         dic = {}
         for a in list_:
             if a in dic:
@@ -194,7 +192,7 @@ def factorize(n, type_="dict"):
             else:
                 dic[a] = 1
         return dic
-    elif type_ == "list":
+    elif type_ == 'list':
         return list_
     else:
         return None
@@ -206,35 +204,25 @@ def pm(x):
 
 def inputintlist():
     return list(map(int, input().split()))
-######################################################################################################
 
 
-H, W = inputintlist()
+(H, W) = inputintlist()
 ans = inf
 for a in range(1, H):
     A = a * W
-    # 並行に分割
-    B = ((H - a) // 2) * W
+    B = (H - a) // 2 * W
     C = H * W - A - B
     ans = min(ans, max([A, B, C]) - min([A, B, C]))
-
-    # 垂直に分割
-    B = (W // 2) * (H - a)
+    B = W // 2 * (H - a)
     C = H * W - A - B
     ans = min(ans, max([A, B, C]) - min([A, B, C]))
-
-H, W = W, H
+(H, W) = (W, H)
 for a in range(1, H):
     A = a * W
-    # 並行に分割
-    B = ((H - a) // 2) * W
+    B = (H - a) // 2 * W
     C = H * W - A - B
     ans = min(ans, max([A, B, C]) - min([A, B, C]))
-
-    # 垂直に分割
-    B = (W // 2) * (H - a)
+    B = W // 2 * (H - a)
     C = H * W - A - B
     ans = min(ans, max([A, B, C]) - min([A, B, C]))
-
-
 print(ans)

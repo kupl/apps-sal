@@ -18,26 +18,18 @@ def rlinput():
 
 
 def main():
-    #q = rlinput()
-
     n = iinput()
     b = rlinput()
-
     q = dict()
-
     for i in range(n):
         ind = i + 1 - b[i]
-
         if ind in q:
             q[ind] += b[i]
         else:
             q[ind] = b[i]
-
     res = 0
-
     for i in q:
         res = max(res, q[i])
-
     print(res)
 
 

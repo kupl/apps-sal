@@ -2,8 +2,7 @@ t = int(input())
 for a in range(t):
     n = ori = int(input())
     num = []
-    for b in range(2, int(ori**0.5) + 1):
-        # print(n)
+    for b in range(2, int(ori ** 0.5) + 1):
         if n % b == 0:
             num.append(b)
             n = n // b
@@ -13,7 +12,7 @@ for a in range(t):
                 break
     num = list(set(num))
     if len(num) == 3:
-        print("YES")
-        print(" ".join(map(str, num)))
+        print('YES')
+        print(' '.join(map(str, num)))
     else:
-        print("NO")
+        print('NO')

@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 def factors(n):
     ret = set()
-    for i in range(2, int(n**.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             ret.add(i)
             ret.add(n // i)
@@ -12,16 +12,14 @@ def factors(n):
 
 
 def solve(n):
-    for i in range(2, int(n**.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0 and i != n // i:
-            a, b = i, n // i
-            fa, fb = factors(a), factors(b)
-            # option 1
+            (a, b) = (i, n // i)
+            (fa, fb) = (factors(a), factors(b))
             if len(fa) > 0:
                 for fac in fa:
                     if len(set([fac, a // fac, b])) == 3:
                         return [fac, a // fac, b]
-            # option 2
             if len(fb) > 0:
                 for fac in fb:
                     if len(set([fac, b // fac, a])) == 3:
