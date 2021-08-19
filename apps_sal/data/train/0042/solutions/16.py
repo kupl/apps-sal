@@ -8,7 +8,6 @@ def solve(s, ans):
     for i in range(n):
         if s[i] == '1':
             one.append(i)
-
     for i in range(n):
         curr = 0
         if s[i] == '0':
@@ -19,19 +18,14 @@ def solve(s, ans):
                 start = n
         else:
             start = i
-
-        # print(i,start)
         for j in range(start, n):
             curr *= 2
             if s[j] == '1':
                 curr += 1
-            # print(curr,i,j-i+1,j)
             if curr == j - i + 1:
                 count += 1
-
             if curr > n - i:
                 break
-
     ans.append(count)
 
 
@@ -41,7 +35,6 @@ def main():
     for i in range(t):
         s = input()
         solve(s, ans)
-
     for i in ans:
         print(i)
 

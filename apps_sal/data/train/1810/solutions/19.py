@@ -5,8 +5,6 @@ class Solution:
         seen = set()
         sol = []
         for s in names:
-            # print (s, sol)
-
             if s and s[-1] == ')':
                 if s in memo:
                     memo[s] += 1
@@ -16,7 +14,6 @@ class Solution:
             else:
                 base = s
                 memo[base] = 0
-
             k = memo[base]
             while True:
                 if k == 0:
@@ -47,30 +44,4 @@ class Solution:
             else:
                 sol.append(s)
                 seen.add(s)
-
         return sol
-
-#     def getFolderNames(self, names: List[str]) -> List[str]:
-# \t\t# Edge case: names is empty.
-#         if not names:
-#             return []
-
-#         assignedNames = set()
-#         uniqueNames = []
-
-#         for name in names:
-#             if name in assignedNames:
-#                 k = 1
-#                 numberedName = f'{name}({k})'
-
-#                 while numberedName in assignedNames:
-#                     k += 1
-#                     numberedName = f'{name}({k})'
-
-#                 assignedNames.add(numberedName)
-#                 uniqueNames.append(numberedName)
-#             else:
-#                 assignedNames.add(name)
-#                 uniqueNames.append(name)
-
-#         return uniqueNames
