@@ -1,5 +1,5 @@
 def check(times, nums, m):
-    current = 0 if (nums[0] + times >= m) else nums[0]
+    current = 0 if nums[0] + times >= m else nums[0]
     for i in range(1, len(nums)):
         if nums[i] == current:
             continue
@@ -11,7 +11,7 @@ def check(times, nums, m):
 
 
 def main():
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     nums = [int(x) for x in input().split()]
     if check(0, nums, m):
         return 0
@@ -19,7 +19,6 @@ def main():
     r = m
     while l + 1 < r:
         mid = (l + r) // 2
-        # print(l, r, mid)
         if check(mid, nums, m):
             r = mid
         else:

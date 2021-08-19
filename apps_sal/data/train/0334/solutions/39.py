@@ -1,6 +1,6 @@
 class Solution:
-    def minCost(self, s: str, cost: List[int]) -> int:
 
+    def minCost(self, s: str, cost: List[int]) -> int:
         arr = []
         i = 1
         while i < len(s):
@@ -13,13 +13,8 @@ class Solution:
                 arr += [list(temp)]
             else:
                 i += 1
-
-        # print(arr)
-
         c = 0
-
         for i in arr:
             temp = [cost[x] for x in i]
             c += sum(temp) - max(temp)
-
         return c

@@ -1,10 +1,10 @@
 class Solution:
-    def longestDupSubstring(self, S: str) -> str:
 
+    def longestDupSubstring(self, S: str) -> str:
         arr = [ord(ch) - ord('a') for ch in S]
         n = len(arr)
         B = 29
-        mod = 2**63 - 1
+        mod = 2 ** 63 - 1
 
         def exists(L):
             seen = {}
@@ -19,16 +19,13 @@ class Solution:
                         return seen[h]
                     seen[h] = i
             return -1
-
-        lo, hi = 0, len(S)
-        # cand = ''
+        (lo, hi) = (0, len(S))
         pos = -1
         while lo < hi:
             mid = (lo + hi + 1) // 2
             idx = exists(mid)
             if idx != -1:
                 lo = mid
-                # cand = S[idx - mid + 1: idx + 1]
                 pos = idx
             else:
                 hi = mid - 1

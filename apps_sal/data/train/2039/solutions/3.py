@@ -1,8 +1,8 @@
-# AC
 import sys
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0
@@ -25,7 +25,7 @@ class Main:
         return int(next(self))
 
     def solve(self):
-        n, m = self.next_ints()
+        (n, m) = self.next_ints()
         x = self.next_ints()
         low = 0
         high = m

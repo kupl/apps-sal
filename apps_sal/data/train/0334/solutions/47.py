@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         if len(s) < 2:
             return 0
@@ -18,9 +19,7 @@ class Solution:
                 if inside:
                     su += cost[i]
                     ans.append(su - m)
-                # ans.append(cost[i+1])
                 i += 1
-
             else:
                 i += 1
         return sum(ans)

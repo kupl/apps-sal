@@ -2,8 +2,8 @@ from functools import reduce
 
 
 class Solution:
+
     def longestDupSubstring(self, S: str) -> str:
-        # binary search + string hashing
         from functools import reduce
         A = [ord(c) - ord('a') for c in S]
         mod = 2 ** 63 - 1
@@ -17,8 +17,7 @@ class Solution:
                 if cur in seen:
                     return i - l + 1
                 seen.add(cur)
-
-        lo, hi = 0, len(S)
+        (lo, hi) = (0, len(S))
         res = 0
         while lo < hi:
             mi = (lo + hi + 1) // 2
@@ -28,4 +27,4 @@ class Solution:
                 res = pos
             else:
                 hi = mi - 1
-        return S[res: res + lo]
+        return S[res:res + lo]

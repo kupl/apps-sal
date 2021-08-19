@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         ans = 0
         tmp = []
@@ -14,8 +15,6 @@ class Solution:
                 tmp = x
                 tmp.sort()
                 tmp = tmp[:-1]
-                # print(tmp)
                 ans += sum(tmp)
                 tmp = []
-
         return ans

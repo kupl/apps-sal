@@ -1,8 +1,10 @@
-p = 2**63 - 1
+p = 2 ** 63 - 1
 
 
 class Solution:
+
     def longestDupSubstring(self, S: str) -> str:
+
         def rabin_karp(mid):
             cur_hash = 0
             for i in range(mid):
@@ -16,15 +18,14 @@ class Solution:
                     pos = i + 1 - mid
                 hashes.add(cur_hash)
             return pos
-
-        low, high = 0, len(S) - 1
+        (low, high) = (0, len(S) - 1)
         end = 0
         start = 0
         nums = [ord(c) - ord('a') for c in S]
         while low <= high:
             mid = (low + high) // 2
             pos = rabin_karp(mid)
-            if pos == -1:  # no matching strings found
+            if pos == -1:
                 high = mid - 1
             else:
                 start = pos

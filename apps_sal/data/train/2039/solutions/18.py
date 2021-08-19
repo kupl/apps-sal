@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -9,14 +7,11 @@ import random
 import itertools
 import sys
 from typing import List
-
-"""
-created by shhuan at 2020/1/14 22:22
-
-"""
+'\ncreated by shhuan at 2020/1/14 22:22\n\n'
 
 
 def solve(N, M, A):
+
     def check(ops):
         pv = 0
         for v in A:
@@ -31,8 +26,7 @@ def solve(N, M, A):
                 else:
                     pv = max(pv, v)
         return True
-
-    lo, hi = 0, max(N, M)
+    (lo, hi) = (0, max(N, M))
     while lo <= hi:
         m = (lo + hi) // 2
         if check(m):
@@ -42,6 +36,6 @@ def solve(N, M, A):
     return lo
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = [int(x) for x in input().split()]
 print(solve(N, M, A))

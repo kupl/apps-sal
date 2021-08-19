@@ -1,17 +1,15 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
 
         def getNextIdx(idx):
             curr = s[idx]
-            for j, ch in enumerate(s[idx + 1:]):
+            for (j, ch) in enumerate(s[idx + 1:]):
                 if ch != curr:
                     return j + idx + 1
             return len(s)
-
         i = 0
-
         sol = 0
-
         while i < len(s):
             next_i = getNextIdx(i)
             if i < len(s) - 1 and s[i] != s[i + 1]:
@@ -23,7 +21,6 @@ class Solution:
                     if cost[xx] > cost[max_cost_idx]:
                         max_cost_idx = xx
                 for idx in range(i, min(next_i, len(s))):
-                    # print(idx)
                     if idx != max_cost_idx:
                         sol += cost[idx]
                 i = next_i
