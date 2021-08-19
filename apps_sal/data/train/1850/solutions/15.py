@@ -1,10 +1,10 @@
 class Solution:
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         graph = collections.defaultdict(set)
-        for u, v in edges:
+        for (u, v) in edges:
             graph[u].add(v)
             graph[v].add(u)
-
         count = [1] * N
         ans = [0] * N
         print(graph)
@@ -23,5 +23,4 @@ class Solution:
                     preorder(child, node)
         postorder()
         preorder()
-        # print(count)
         return ans

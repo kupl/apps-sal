@@ -1,36 +1,35 @@
 def greet(language):
-    # your code here
-    if language == "dutch":
+    if language == 'dutch':
         return 'Welkom'
-    elif language == "czech":
+    elif language == 'czech':
         return 'Vitejte'
-    elif language == "danish":
+    elif language == 'danish':
         return 'Velkomst'
-    elif language == "estonian":
+    elif language == 'estonian':
         return 'Tere tulemast'
-    elif language == "finnish":
+    elif language == 'finnish':
         return 'Tervetuloa'
-    elif language == "flemish":
+    elif language == 'flemish':
         return 'Welgekomen'
-    elif language == "french":
+    elif language == 'french':
         return 'Bienvenue'
-    elif language == "german":
+    elif language == 'german':
         return 'Willkommen'
-    elif language == "irish":
+    elif language == 'irish':
         return 'Failte'
-    elif language == "italian":
+    elif language == 'italian':
         return 'Benvenuto'
-    elif language == "latvian":
+    elif language == 'latvian':
         return 'Gaidits'
-    elif language == "lithuanian":
+    elif language == 'lithuanian':
         return 'Laukiamas'
-    elif language == "polish":
+    elif language == 'polish':
         return 'Witamy'
-    elif language == "spanish":
+    elif language == 'spanish':
         return 'Bienvenido'
-    elif language == "swedish":
+    elif language == 'swedish':
         return 'Valkommen'
-    elif language == "welsh":
+    elif language == 'welsh':
         return 'Croeso'
     else:
-        return "Welcome"
+        return 'Welcome'

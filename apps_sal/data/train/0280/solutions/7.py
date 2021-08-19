@@ -1,4 +1,5 @@
 class Solution:
+
     def palindromePartition(self, s: str, key: int) -> int:
 
         @lru_cache(None)
@@ -7,7 +8,6 @@ class Solution:
 
         @lru_cache(None)
         def pp(start: int, end: int, k: int) -> int:
-            # print(\"s:\", s, k)
             if k == len(s):
                 return 0
             elif k == 1:
@@ -16,5 +16,4 @@ class Solution:
             for i in range(k - 1, end - start):
                 changes = min(pp(start, i, k - 1) + repair(s[i:end]), changes)
             return changes
-
         return pp(0, len(s), key)
