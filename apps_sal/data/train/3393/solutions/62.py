@@ -2,7 +2,7 @@ import math
 
 
 def list_squared(m, n):
-    print(f"m: {m}, n: {n}", flush=True)
+    print(f'm: {m}, n: {n}', flush=True)
     biglips = []
     for i in range(m, n):
         if i > 2000 and i < 4000:
@@ -19,12 +19,10 @@ def list_squared(m, n):
             else:
                 max -= 1
             counter += 1
-        #factors = [i ** 2 for i in factors]
         factors = list(map(lambda x: x ** 2, factors))
         sumOf = sum(factors)
         root = math.sqrt(sumOf)
         if sumOf == int(root + 0.5) ** 2:
             biglips.append([i, sumOf])
-
     print(biglips)
     return biglips

@@ -6,7 +6,7 @@ def fn(a, b, n):
     da = defaultdict(lambda: [])
     db = defaultdict(lambda: [])
     idx = jdx = 0
-    for i, j in zip(a, b):
+    for (i, j) in zip(a, b):
         if i < j or j not in a:
             print(-1)
             return
@@ -15,7 +15,6 @@ def fn(a, b, n):
         idx += 1
         jdx += 1
     c = 0
-    # print(b)
     while a != b:
         mx = max(db)
         tc = []
@@ -25,14 +24,11 @@ def fn(a, b, n):
                 da[a[i]].remove(i)
                 a[i] = mx
                 da[mx].append(i)
-
         for i in da[mx]:
             if a[i] == mx:
                 tc.append(i)
                 break
-
         del db[mx]
-        # print(a)
         l.append(tc)
         c += 1
     print(c)

@@ -1,4 +1,3 @@
-# cook your dish here
 def conv(a, b):
     stop = 0
     n = len(a)
@@ -6,7 +5,6 @@ def conv(a, b):
         if ord(a[i]) - ord(b[i]) < 0:
             print(-1)
             stop = 1
-
     if stop == 0:
         for i in range(0, n):
             flag = 0
@@ -30,7 +28,6 @@ def conv(a, b):
                     distinctArr.append(b[i])
         distinctArr.sort(reverse=True)
         print(len(distinctArr))
-
         for i in range(0, len(distinctArr)):
             arr = []
             for j in range(0, n):
@@ -41,13 +38,12 @@ def conv(a, b):
                     arr.append(j)
                     break
             arr.sort()
-            print(len(arr), end=" ")
+            print(len(arr), end=' ')
             for k in range(0, len(arr)):
                 if k == len(arr) - 1:
                     print(arr[k])
                 else:
-                    print(arr[k], end=" ")
-        # print(distinctArr)
+                    print(arr[k], end=' ')
 
 
 t = int(input())
