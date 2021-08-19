@@ -2,18 +2,18 @@ from functools import lru_cache
 
 
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
-        def _len(cnt): return 1 if cnt == 1 else 2 if cnt <= 9 else 3 if cnt <= 99 else 4
+
+        def _len(cnt):
+            return 1 if cnt == 1 else 2 if cnt <= 9 else 3 if cnt <= 99 else 4
 
         @lru_cache(None)
         def solve(left, k):
             if k < 0:
                 return float('inf')
-            # remove s[0:left+1]
             if left + 1 == k:
                 return 0
-            # 1. keep s[left]
-            # 2. remove s[left]
             res = min(solve(left - 1, k) + 1, solve(left - 1, k - 1))
             cnt = 1
             for j in range(left - 1, -1, -1):

@@ -1,5 +1,7 @@
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
+
         @lru_cache(None)
         def cmp(n):
             if n <= 0:
@@ -19,14 +21,12 @@ class Solution:
             if l >= len(s):
                 return 0
             ans = solve(l + 1, k - 1)
-            ad, de = 0, 0
+            (ad, de) = (0, 0)
             for i in range(l, len(s)):
                 if s[i] == s[l]:
                     ad += 1
                 else:
                     de += 1
                 ans = min(ans, cmp(ad) + solve(i + 1, k - de))
-            # print(s[l:],k,ans)
             return ans
-
         return solve(0, k)
