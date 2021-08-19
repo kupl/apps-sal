@@ -1,4 +1,5 @@
 class SkipNode:
+
     def __init__(self, val=None, height=0):
         self.val = val
         self.count = 1
@@ -31,7 +32,7 @@ class Skiplist:
 
     def get_height(self):
         height = 1
-        while randint(0, 1) and height <= (2 * self.height) + 1:
+        while randint(0, 1) and height <= 2 * self.height + 1:
             height += 1
         return height
 
@@ -49,7 +50,7 @@ class Skiplist:
         node = self.find(num, path)
         if node is None:
             for i in range(len(new_node.__next__)):
-                new_node.next[i], path[i].next[i] = path[i].next[i], new_node
+                (new_node.next[i], path[i].next[i]) = (path[i].next[i], new_node)
         else:
             node.count += 1
 
@@ -58,7 +59,6 @@ class Skiplist:
         node = self.find(num, path)
         if not node:
             return False
-
         if node.count == 1:
             for i in range(len(node.__next__) - 1, -1, -1):
                 path[i].next[i] = node.next[i]
@@ -67,10 +67,3 @@ class Skiplist:
         else:
             node.count -= 1
         return True
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

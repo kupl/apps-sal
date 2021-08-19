@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().rstrip("\r\n")
+
+
+def input():
+    return sys.stdin.readline().rstrip('\r\n')
 
 
 for _ in range(int(input())):
@@ -9,8 +12,7 @@ for _ in range(int(input())):
         res.append(i + 1)
     for j in range(k - 1, 0, -1):
         res.append(j)
-    # print(res)
     s = 0
     for i in res:
-        s = s + (i * i * i)
+        s = s + i * i * i
     print(s)

@@ -1,5 +1,7 @@
 class Skiplist:
+
     class Node:
+
         def __init__(self, value):
             self.value = value
             self.next = []
@@ -46,13 +48,6 @@ class Skiplist:
         node = path[-1].next[0]
         if node.value != num:
             return False
-        for i, x in enumerate(node.__next__):
+        for (i, x) in enumerate(node.__next__):
             path[-1 - i].next[i] = x
         return True
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

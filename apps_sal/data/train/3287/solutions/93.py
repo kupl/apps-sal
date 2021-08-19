@@ -3,5 +3,4 @@ def mouth_size(animal):
     if a == 'ALLIGATOR':
         return 'small'
     else:
-        return'wide'
-  # code here
+        return 'wide'

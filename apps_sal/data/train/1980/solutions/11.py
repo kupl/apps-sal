@@ -3,6 +3,7 @@ import random
 
 
 class Node:
+
     def __init__(self, val):
         self.next = None
         self.prev = None
@@ -39,12 +40,11 @@ class Skiplist:
     def print_lvls(self):
         x = self.topleft
         for i in range(self.lvls):
-            print((self.ll_to_list(x)))
+            print(self.ll_to_list(x))
             x = x.down
         print()
 
     def search(self, target: int) -> bool:
-        # self.print_lvls()
         x = self.topleft
         while True:
             while x.__next__ and x.next.val <= target:
@@ -59,7 +59,7 @@ class Skiplist:
 
     def insert(self, x, num):
         n = Node(num)
-        p, q = x, x.__next__
+        (p, q) = (x, x.__next__)
         p.next = n
         n.prev = p
         n.next = q
@@ -87,11 +87,9 @@ class Skiplist:
                 prev = curr
             else:
                 break
-        # print(f\"Adding {num}\")
-        # self.print_lvls()
 
     def delete(self, x):
-        p, q, r = x.prev, x, x.__next__
+        (p, q, r) = (x.prev, x, x.__next__)
         p.next = r
         if r:
             r.prev = p
@@ -107,9 +105,3 @@ class Skiplist:
             else:
                 break
         return found
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

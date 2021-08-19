@@ -1,11 +1,10 @@
-# cook your dish here
 for _ in range(int(input())):
-    s, sg, fg, d, t = map(int, input().split())
+    (s, sg, fg, d, t) = map(int, input().split())
     dif = float(d * 180 / t)
     diff = float(s) + dif
     if abs(float(diff - sg)) > abs(float(diff - fg)):
-        print("FATHER")
+        print('FATHER')
     elif abs(float(diff - sg)) < abs(float(diff - fg)):
-        print("SEBI")
+        print('SEBI')
     else:
-        print("DRAW")
+        print('DRAW')

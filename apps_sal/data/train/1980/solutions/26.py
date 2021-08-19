@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, v=None):
         self.val = v
         self.right = None
@@ -21,7 +22,7 @@ class Skiplist:
         n = self.levels[0]
         res = []
         for i in range(self.level):
-            while n and n.right and n.val < target and n.right.val < target:
+            while n and n.right and (n.val < target) and (n.right.val < target):
                 n = n.right
             res.append(n)
             n = n.down
@@ -45,7 +46,7 @@ class Skiplist:
             prev = node
 
     def erase(self, num: int) -> bool:
-        for i, n in enumerate(reversed(self._iter(num))):
+        for (i, n) in enumerate(reversed(self._iter(num))):
             if i == 0:
                 if not n.right or n.right.val != num:
                     return False
@@ -54,10 +55,3 @@ class Skiplist:
             else:
                 break
         return True
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)
