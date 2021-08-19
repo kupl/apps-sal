@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     s = list(input())
@@ -19,8 +18,8 @@ for _ in range(int(input())):
             else:
                 total = total + dic[st[j]] * N[j]
                 T = T + 1
-        total = total * (2**D)
-        total = total * (3**T)
+        total = total * 2 ** D
+        total = total * 3 ** T
         if maxx < total:
             maxx = total
     print(maxx)

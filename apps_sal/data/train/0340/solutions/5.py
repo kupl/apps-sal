@@ -1,4 +1,5 @@
 class Solution:
+
     def simplifyPath(self, path):
         """
         :type path: str
@@ -10,10 +11,6 @@ class Solution:
         print(('names', names))
         for s in names:
             if s == '..':
-                # if len(l) == 0:
-                #     l.append(s)
-                # else:
-                #     l.pop()
                 if len(l) != 0:
                     l.pop()
             elif s == '.':

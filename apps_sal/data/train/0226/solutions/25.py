@@ -1,9 +1,8 @@
 class Solution:
-    def numSquarefulPerms(self, A: List[int]) -> int:
 
+    def numSquarefulPerms(self, A: List[int]) -> int:
         d = defaultdict(int)
         res = 0
-
         ps = {}
         i = 0
         while i * i <= 2 * max(A):
@@ -15,7 +14,6 @@ class Solution:
 
         def solve(x):
             nonlocal res
-            # takes some number X and multiset D. Returns answer of the problem for numbers in D such that first number is X
             if not len(d):
                 res += 1
                 return
@@ -27,7 +25,6 @@ class Solution:
                     del d[k]
                 solve(k)
                 d[k] += 1
-
         for x in A:
             d[x] += 1
         for k in list(d.keys()):
@@ -36,5 +33,4 @@ class Solution:
                 del d[k]
             solve(k)
             d[k] += 1
-
         return res

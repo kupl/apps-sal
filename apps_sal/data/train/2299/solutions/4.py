@@ -1,4 +1,3 @@
-#####segfunc#####
 import heapq
 
 
@@ -7,12 +6,9 @@ def segfunc(x, y):
         return x
     else:
         return y
-#################
 
 
-#####ide_ele#####
-ide_ele = (float("inf"), -1)
-#################
+ide_ele = (float('inf'), -1)
 
 
 class SegTree:
@@ -36,10 +32,8 @@ class SegTree:
         self.ide_ele = ide_ele
         self.num = 1 << (n - 1).bit_length()
         self.tree = [ide_ele] * 2 * self.num
-        # 配列の値を葉にセット
         for i in range(n):
             self.tree[self.num + i] = init_val[i]
-        # 構築していく
         for i in range(self.num - 1, 0, -1):
             self.tree[i] = self.segfunc(self.tree[2 * i], self.tree[2 * i + 1])
 
@@ -62,7 +56,6 @@ class SegTree:
         r: index(0-index)
         """
         res = self.ide_ele
-
         l += self.num
         r += self.num
         while l < r:
@@ -81,7 +74,6 @@ p = list(map(int, input().split()))
 n = N // 2
 op = [(p[2 * i + 1], 2 * i + 1) for i in range(n)]
 ep = [(p[2 * i], 2 * i) for i in range(n)]
-
 oseg = SegTree(op, segfunc, ide_ele)
 eseg = SegTree(ep, segfunc, ide_ele)
 
@@ -90,32 +82,31 @@ def first(l, r):
     if l >= r:
         return (-1, -1, -1, -1)
     if l % 2 == 0:
-        val, index = eseg.query(l // 2, r // 2)
-        val2, index2 = oseg.query(index // 2, r // 2)
+        (val, index) = eseg.query(l // 2, r // 2)
+        (val2, index2) = oseg.query(index // 2, r // 2)
         return (val, val2, index, index2)
     else:
-        val, index = oseg.query(l // 2, r // 2)
-        val2, index2 = eseg.query(index // 2 + 1, r // 2 + 1)
+        (val, index) = oseg.query(l // 2, r // 2)
+        (val2, index2) = eseg.query(index // 2 + 1, r // 2 + 1)
         return (val, val2, index, index2)
 
 
-val, val2, index, index2 = first(0, N)
+(val, val2, index, index2) = first(0, N)
 que = [((val, val2), 0, N)]
 heapq.heapify(que)
 ans = []
 while que:
-    tuple, l, r = heapq.heappop(que)
+    (tuple, l, r) = heapq.heappop(que)
     ans.append(tuple[0])
     ans.append(tuple[1])
-    val, val2, index, index2 = first(l, r)
-    val, val2, l1, r1 = first(l, index)
+    (val, val2, index, index2) = first(l, r)
+    (val, val2, l1, r1) = first(l, index)
     if val != -1:
         heapq.heappush(que, ((val, val2), l, index))
-    val, val2, l2, r2 = first(index + 1, index2)
+    (val, val2, l2, r2) = first(index + 1, index2)
     if val != -1:
         heapq.heappush(que, ((val, val2), index + 1, index2))
-    val, val2, l3, r3 = first(index2 + 1, r)
+    (val, val2, l3, r3) = first(index2 + 1, r)
     if val != -1:
         heapq.heappush(que, ((val, val2), index2 + 1, r))
-
 print(*ans)

@@ -1,6 +1,7 @@
 class Solution:
+
     def move(self, pos, direction):
-        x, y = pos
+        (x, y) = pos
         if direction == 0:
             y += 1
         elif direction == 1:
@@ -12,7 +13,7 @@ class Solution:
         return (x, y)
 
     def isRobotBounded(self, instructions: str) -> bool:
-        direction = 0  # 0 for north, 1 for east, 2 for south, 3 for west
+        direction = 0
         pos = (0, 0)
         for i in instructions:
             if i == 'G':

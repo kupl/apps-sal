@@ -1,5 +1,5 @@
 class Solution:
-    # @return a string
+
     def longestPalindrome(self, s):
         if len(s) == 0:
             return 0
@@ -10,7 +10,6 @@ class Solution:
                 start = i - maxLen - 1
                 maxLen += 2
                 continue
-
             if i - maxLen >= 0 and s[i - maxLen:i + 1] == s[i - maxLen:i + 1][::-1]:
                 start = i - maxLen
                 maxLen += 1

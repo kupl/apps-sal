@@ -1,4 +1,3 @@
-
 t = int(input())
 maxi = []
 for _ in range(t):
@@ -22,15 +21,11 @@ for _ in range(t):
             elif board[j] == 'T':
                 tw *= 3
                 total += points[j - i]
-            elif board[j] == ".":
+            elif board[j] == '.':
                 total += points[j - i]
-            # print(total)
-
         total *= dw
-
         total *= tw
         values.append(total)
-    # print(values)
     maxi.append(max(values))
 for element in maxi:
     print(element)

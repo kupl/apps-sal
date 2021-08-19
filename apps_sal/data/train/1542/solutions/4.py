@@ -1,4 +1,3 @@
-# cook your dish here
 for e in range(int(input())):
     n = int(input())
     s = input()
@@ -13,9 +12,9 @@ for e in range(int(input())):
             if s[j] == '.':
                 total += l[k]
             elif s[j] == 'd':
-                total += (2 * l[k])
+                total += 2 * l[k]
             elif s[j] == 't':
-                total += (3 * l[k])
+                total += 3 * l[k]
             elif s[j] == 'D':
                 DT = DT * 2
                 total += l[k]
@@ -23,8 +22,6 @@ for e in range(int(input())):
                 DT = DT * 3
                 total += l[k]
             k += 1
-
         total = total * DT
         m = max(total, m)
-
     print(m)
