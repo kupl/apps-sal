@@ -1,7 +1,6 @@
-# cook your dish here
 testcases = int(input())
 for t in range(testcases):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     S = list(map(int, input().split()))
     S.sort(reverse=True)
     count = k

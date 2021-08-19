@@ -1,5 +1,5 @@
 def vert_mirror(s):
-    return '\n'.join(_[::-1] for _ in s.split())
+    return '\n'.join((_[::-1] for _ in s.split()))
 
 
 def hor_mirror(s):
@@ -8,4 +8,3 @@ def hor_mirror(s):
 
 def oper(fct, s):
     return fct(s)
-# Flez

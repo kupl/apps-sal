@@ -1,12 +1,7 @@
-# cook your dish here
 import math
 t = int(input())
-# t=1
-# res=[]
 for i in range(t):
-    # n=int(input())
-    r, c = list(map(int, input().split()))
-    # l=list(map(int,input().split()))
+    (r, c) = list(map(int, input().split()))
     res = []
     for j in range(r):
         l = list(map(int, input().split()))
@@ -22,7 +17,7 @@ for i in range(t):
             if res[a][b] >= adj:
                 flag = 0
                 break
-    if (flag):
-        print("Stable")
+    if flag:
+        print('Stable')
     else:
-        print("Unstable")
+        print('Unstable')

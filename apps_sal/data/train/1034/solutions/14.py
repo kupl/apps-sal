@@ -1,9 +1,7 @@
-# cook your dish here
 try:
     MAX = 1000005
     prime = [True] * MAX
     fact = [list() for i in range(MAX)]
-
     for i in range(2, MAX):
         if prime[i]:
             for j in range(i, MAX, i):
@@ -19,10 +17,9 @@ try:
             z = min(z, solve(arr, i + 1, k))
             k[j] //= arr[i]
         return z
-
     t = int(input())
     for i in range(t):
-        k, x = map(int, input().split())
+        (k, x) = map(int, input().split())
         temp = []
         for y in fact[x]:
             p = x
@@ -35,6 +32,5 @@ try:
             print(sum(temp) + k - len(temp))
         else:
             print(solve(temp, 0, [1] * k))
-
 except EOFError as e:
     pass

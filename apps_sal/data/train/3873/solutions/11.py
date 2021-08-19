@@ -1,5 +1,3 @@
-# because the output is so huge, output is hidden for the medium and big random tests
-
 import numpy as np
 
 
@@ -14,7 +12,6 @@ def product_sans_n(nums):
         leftProducts[i] = leftRunningProduct
         rightRunningProduct = rightRunningProduct * nums[numLen - 1 - i]
         rightProducts[numLen - 1 - i] = rightRunningProduct
-
     result = [None for _ in range(numLen)]
     for i in range(numLen):
         product = 1

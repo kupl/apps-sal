@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 sys.setrecursionlimit(10000000)
 
@@ -34,7 +33,7 @@ def recur(arr):
 
 
 for _ in range(int(input())):
-    k, X = map(int, input().split())
+    (k, X) = map(int, input().split())
     p = primes(X)
     if k >= len(p):
         print(sum(p) + (k - len(p)))
