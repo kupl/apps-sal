@@ -10,7 +10,7 @@ class SegTree(object):
         self.arr = arr
         self.tree = [0 for i in range(2 * n)]
 
-    def construct(self):  # Construction
+    def construct(self):
         for i in range(self.n):
             self.tree[n + i] = self.arr[i]
         for i in range(n - 1, 0, -1):
@@ -23,10 +23,10 @@ class SegTree(object):
             start = start // 2
             self.tree[start] = self.function(self.tree[2 * start], self.tree[2 * start + 1])
 
-    def calc(self, low, high):  # 0-indexed
+    def calc(self, low, high):
         low += self.n
         high += self.n
-        ans = 0  # Needs to initialised
+        ans = 0
         while low < high:
             if low % 2:
                 ans = self.function(ans, self.tree[low])
@@ -38,7 +38,7 @@ class SegTree(object):
             high = high // 2
         return ans
 
-    def function(self, a, b):  # Function used to construct Segment Tree
+    def function(self, a, b):
         return a + b
 
 
@@ -65,7 +65,6 @@ st.construct()
 ans = [-1] * n
 for i in range(n - 1, -1, -1):
     ind = find(a[i])
-    # print (a[i],ind,arr)
     ans[i] = arr[ind]
     st.update(ind, 0)
 print(*ans)

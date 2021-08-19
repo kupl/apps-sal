@@ -1,11 +1,9 @@
-
-
 def sum_number(n, j):
     j[0] = 0
     j[1] = 0
     for i in range(2, n + 1):
         j[i] = j[i - 1] + (i - 1)
-    return(j)
+    return j
 
 
 po = int(input())
@@ -17,18 +15,16 @@ def getsum(BITTree, i):
     s = 0
     while i > 0:
         s += BITTree[i]
-        i -= i & (-i)
-    return(s)
+        i -= i & -i
+    return s
 
 
 def updatebit(BITTree, n, i, v):
-    # print('n',n)
     while i <= n:
-        # print('i',i)
         BITTree[i] += v
-        i += i & (-i)
+        i += i & -i
 
-    # print(BITTree)
+
 for i in range(1, po + 1):
     updatebit(l, po, i, i)
 output = [0] * po
@@ -43,10 +39,8 @@ for i in range(po - 1, -1, -1):
                 output[i] = x
                 break
             else:
-                # print(x)
                 max_ = x
         else:
-            # print(x)
             min_ = x
     updatebit(l, po, x, -x)
 print(*output)

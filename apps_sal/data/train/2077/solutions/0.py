@@ -3,14 +3,14 @@ from collections import defaultdict
 
 def solve(n, a, b, xs):
     group = [None] * n
-    id_ = {x: i for i, x in enumerate(xs)}
+    id_ = {x: i for (i, x) in enumerate(xs)}
     if a == b:
         for x in xs:
             if a - x not in id_:
                 return False
         group = [0] * n
     else:
-        for i, x in enumerate(xs):
+        for (i, x) in enumerate(xs):
             if group[i] is not None:
                 continue
             y = a - x
@@ -21,7 +21,6 @@ def solve(n, a, b, xs):
                 return False
             elif f1 + f2 == 1:
                 g = int(f2)
-                # End of link
                 link = []
                 t = a if f1 else b
                 while x in id_:
@@ -30,24 +29,21 @@ def solve(n, a, b, xs):
                     if x + x == t:
                         break
                     t = a + b - t
-                # print(link)
                 if len(link) % 2 == 0:
-                    for i, x in enumerate(link):
+                    for (i, x) in enumerate(link):
                         group[id_[x]] = g
                 elif link[0] * 2 == (b, a)[g]:
-                    for i, x in enumerate(link):
+                    for (i, x) in enumerate(link):
                         group[id_[x]] = 1 - g
                 elif link[-1] * 2 == (a, b)[g]:
-                    for i, x in enumerate(link):
+                    for (i, x) in enumerate(link):
                         group[id_[x]] = g
                 else:
-                    # Found invalid link, answer is "NO"
                     return False
-
     return group
 
 
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 xs = list(map(int, input().split()))
 group = solve(n, a, b, xs)
 if isinstance(group, list):

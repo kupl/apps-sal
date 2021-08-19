@@ -3,5 +3,4 @@ def sum_digits(number):
     number = abs(number)
     for num in str(number):
         count = count + int(num)
-    return (count)
-    # ...
+    return count
