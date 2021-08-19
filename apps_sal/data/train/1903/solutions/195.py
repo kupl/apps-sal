@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if len(points) == 1:
             return 0
@@ -7,8 +8,8 @@ class Solution:
         sze = [1] * n
 
         def dist(pi: List[int], pj: List[int]) -> int:
-            x, y = pi
-            a, b = pj
+            (x, y) = pi
+            (a, b) = pj
             return abs(x - a) + abs(y - b)
 
         def find(i: int) -> int:
@@ -20,9 +21,7 @@ class Solution:
             par[i] = j
             sze[j] += sze[i]
             return sze[j]
-
         pq = []
-
         for i in range(n):
             pi = points[i]
             for j in range(i + 1, n):
@@ -32,12 +31,11 @@ class Solution:
         total = 0
         usize = 0
         while usize < len(points):
-            cost, i, j = heapq.heappop(pq)
-            ri, rj = find(i), find(j)
+            (cost, i, j) = heapq.heappop(pq)
+            (ri, rj) = (find(i), find(j))
             if ri != rj:
                 usize = union(ri, rj)
                 ok.add(i)
                 ok.add(j)
                 total += cost
-                #print(total, i, j, usize)
         return total

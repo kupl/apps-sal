@@ -1,5 +1,4 @@
 def human_years_cat_years_dog_years(human_years):
-    # Your code here
     caty = 0
     for i in range(0, human_years):
         if i == 0:
@@ -16,5 +15,4 @@ def human_years_cat_years_dog_years(human_years):
             dogy += 9
         else:
             dogy += 5
-
     return [human_years, caty, dogy]

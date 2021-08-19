@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 def binarySearch(ar, l, r, x):
     if r >= l:
         mid = (l + r) // 2
@@ -15,21 +13,21 @@ def binarySearch(ar, l, r, x):
 
 t = int(input())
 for _ in range(t):
-    r, c, q = list(map(int, input().split()))
+    (r, c, q) = list(map(int, input().split()))
     er = []
     ar = []
     coun = 0
     for i in range(q):
         er.append(input().split())
-        ar.append((int(er[i][0])) * (c + 1) + int(er[i][1]))
+        ar.append(int(er[i][0]) * (c + 1) + int(er[i][1]))
     ar = sorted(ar)
     for i in range(q):
         l = 0
         r = q - 1
-        x = ((ar[i] // (c + 1) + 1) * (c + 1) + (ar[i] % (c + 1)))
+        x = (ar[i] // (c + 1) + 1) * (c + 1) + ar[i] % (c + 1)
         if binarySearch(ar, l, r, x) == -1:
             coun += 1
-        x = ((ar[i] // (c + 1) - 1) * (c + 1) + (ar[i] % (c + 1)))
+        x = (ar[i] // (c + 1) - 1) * (c + 1) + ar[i] % (c + 1)
         if binarySearch(ar, l, r, x) == -1:
             coun += 1
         x = ar[i] + 1

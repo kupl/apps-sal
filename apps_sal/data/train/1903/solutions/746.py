@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, N):
         self.par = list(range(N))
         self.sz = [1] * N
@@ -9,11 +10,11 @@ class DSU:
         return self.par[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         if xr == yr:
             return False
         if self.sz[xr] < self.sz[yr]:
-            xr, yr = yr, xr
+            (xr, yr) = (yr, xr)
         self.par[yr] = xr
         self.sz[xr] += self.sz[yr]
         self.sz[yr] = self.sz[xr]
@@ -24,7 +25,7 @@ class DSU:
 
 
 class Solution:
-    # Kruskal algorithm, union find, time O(n^2), space O(n^2)
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []
@@ -36,7 +37,7 @@ class Solution:
         m = len(edges)
         dsu = DSU(n)
         res = 0
-        for d, u, v in edges:
+        for (d, u, v) in edges:
             if dsu.union(u, v):
                 res += d
         return res

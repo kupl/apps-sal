@@ -1,4 +1,3 @@
-#!/usr/bin/python
 from math import log
 flips = {}
 
@@ -22,15 +21,12 @@ def main():
                 return
         else:
             flips[f] = i
-
-    # now check in case of same elements
     rec = {}
     for i in nums:
         if i in rec:
             rec[i] += 1
         else:
             rec[i] = 1
-
     r = 0
     for i in rec:
         if rec[i] > 1:
