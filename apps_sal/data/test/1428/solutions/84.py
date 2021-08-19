@@ -1,4 +1,4 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 lis = [list(map(int, input().split())) for i in range(c)]
 li = [list(map(int, input().split())) for i in range(n)]
 ans = 10 ** 100
@@ -16,10 +16,8 @@ for i in range(c):
                     tryans = 0
                     num = [i, j, k]
                     for l in range(3):
-                      #                         print(num[l], masu[l])
                         for h in range(c):
                             if h != num[l]:
                                 tryans += lis[h][num[l]] * masu[l][h]
                     ans = min(ans, tryans)
-  #                 print(i,j,k,ans)
 print(ans)

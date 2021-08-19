@@ -1,8 +1,7 @@
 N = int(input())
 S = input()
-A = 0  # (
-B = 0  # )
-
+A = 0
+B = 0
 for s in S:
     if s == '(':
         A += 1
@@ -10,5 +9,4 @@ for s in S:
         A -= 1
     else:
         B += 1
-
 print('(' * B + S + ')' * A)

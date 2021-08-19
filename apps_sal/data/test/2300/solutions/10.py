@@ -1,4 +1,4 @@
-mod = 10**9
+mod = 10 ** 9
 FibArray = [1, 1]
 
 
@@ -11,9 +11,8 @@ def fibonacci(n):
         return temp_fib
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 for _ in range(m):
     query = list(map(int, input().split()))
     if query[0] == 1:
@@ -23,9 +22,8 @@ for _ in range(m):
         for i in range(query[1] - 1, query[2]):
             a[i] += d
     else:
-        l, r = query[1], query[2]
+        (l, r) = (query[1], query[2])
         s = 0
         for x in range(r - l + 1):
-            # print(fibonacci(x+1), a[l+x-1])
-            s += ((fibonacci(x + 1) * a[l + x - 1]))
+            s += fibonacci(x + 1) * a[l + x - 1]
         print(s % mod)

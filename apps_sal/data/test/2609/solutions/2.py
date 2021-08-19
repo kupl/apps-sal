@@ -19,23 +19,21 @@ def solve():
     a = [None] * (2 * n)
     c = [0] * (2 * n)
     for i in range(0, 2 * n, 2):
-        l, r = mints()
+        (l, r) = mints()
         a[i] = (l * 2, 0, i)
         a[i + 1] = (r * 2 + 1, 1, i)
         c[i + 1] = (l * 2, r * 2 + 1)
     a.sort()
-    # print(a)
     s = set()
     p = None
     start = None
-    px = int(-2e9 - 5)  # prev event
+    px = int(-2000000000.0 - 5)
     pt = -1
     pp = px
     segs = []
     for i in range(0, 2 * n):
-        x, t, id = a[i]
+        (x, t, id) = a[i]
         if px != x:
-            # print(px,x)
             cd = len(s)
             if cd == 1:
                 segs.append((px, x, cd, next(iter(s))))
@@ -46,23 +44,22 @@ def solve():
             s.add(id)
         else:
             s.remove(id)
-    segs.append((px, int(2e9 + 5), 0, None))
+    segs.append((px, int(2000000000.0 + 5), 0, None))
     res = 0
     p = False
     for i in range(1, len(segs) - 1):
-        px, x, cd, e = segs[i]
+        (px, x, cd, e) = segs[i]
         if e != None:
-            l, r = c[e + 1]
+            (l, r) = c[e + 1]
             cl = segs[i - 1][2]
             cr = segs[i + 1][2]
-            if cl - (segs[i - 1][0] >= l) > 0 \
-                    and cr - (segs[i - 1][0] <= r) > 0:
+            if cl - (segs[i - 1][0] >= l) > 0 and cr - (segs[i - 1][0] <= r) > 0:
                 c[e] += 1
             if cl == 0 and cr == 0:
                 c[e] -= 1
         if cd > 0 and p == False:
             res += 1
-        p = (cd > 0)
+        p = cd > 0
     z = c[0]
     for i in range(0, 2 * n, 2):
         z = max(z, c[i])

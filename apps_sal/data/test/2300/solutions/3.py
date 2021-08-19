@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 d = [int(x) for x in input().split()]
 f = [1, 1]
 for i in range(n):
@@ -14,8 +14,7 @@ for i in range(m):
         l = s[1] - 1
         ans = 0
         for i in range(r - l + 1):
-            # print("(",f[i],d[i+l],ans,")")
-            ans = (ans % 10**9 + d[i + l] % 10**9 * f[i] % 10**9) % 10**9
+            ans = (ans % 10 ** 9 + d[i + l] % 10 ** 9 * f[i] % 10 ** 9) % 10 ** 9
         print(ans)
     elif s[0] == 3:
         r = s[2] - 1

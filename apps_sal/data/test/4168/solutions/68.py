@@ -19,24 +19,20 @@ from itertools import accumulate
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
-alf = list("abcdefghijklmnopqrstuvwxyz")
-ALF = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-#import numpy as np
-INF = float("inf")
-#d = defaultdict(int)
-#d = defaultdict(list)
-s = ""
+alf = list('abcdefghijklmnopqrstuvwxyz')
+ALF = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+INF = float('inf')
+s = ''
 N = int(input())
 if N == 0:
     print(0)
 else:
     while N != 0:
-        x = N % (-2)
+        x = N % -2
         if x == 0:
-            s = "0" + s
-            N = N // (-2)
+            s = '0' + s
+            N = N // -2
         else:
-            N = N // (-2) + 1
-            s = "1" + s
-
+            N = N // -2 + 1
+            s = '1' + s
     print(s)

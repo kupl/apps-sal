@@ -1,16 +1,12 @@
-#!/usr/bin/env python3
-
 def main():
-    n, nc = list(map(int, input().split()))
+    (n, nc) = list(map(int, input().split()))
     d = [list(map(int, input().split())) for i in range(nc)]
     c = [list(map(int, input().split())) for i in range(n)]
-
     cnt = [[0 for _ in range(nc)] for eta in range(3)]
     for i in range(n):
         for j in range(n):
             eta = (i + j) % 3
             cnt[eta][c[i][j] - 1] += 1
-
     iwamin = 10 ** 9
     for c1 in range(nc):
         for c2 in range(nc):

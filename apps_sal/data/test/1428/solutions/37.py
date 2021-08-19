@@ -17,25 +17,35 @@ from heapq import heappush, heappop
 import numpy as np
 from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
 from scipy.sparse import csr_matrix
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 stdin = sys.stdin
 
 
-def ni(): return int(ns())
-def nf(): return float(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ni():
+    return int(ns())
 
 
-N, C = na()
+def nf():
+    return float(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nb():
+    return list(map(float, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
+
+
+(N, C) = na()
 D = [na() for _ in range(C)]
 c = [na() for _ in range(N)]
-
 z = {}
 o = {}
 t = {}
@@ -58,15 +68,14 @@ for i in range(1, N + 1):
                 t[now] = 1
             else:
                 t[now] += 1
-
 ans = inf
-for i, j, l in itertools.permutations(list(range(C)), 3):
+for (i, j, l) in itertools.permutations(list(range(C)), 3):
     tmp = 0
-    for k, v in list(z.items()):
+    for (k, v) in list(z.items()):
         tmp += v * D[k][i]
-    for k, v in list(o.items()):
+    for (k, v) in list(o.items()):
         tmp += v * D[k][j]
-    for k, v in list(t.items()):
+    for (k, v) in list(t.items()):
         tmp += v * D[k][l]
     ans = min(tmp, ans)
 print(ans)
