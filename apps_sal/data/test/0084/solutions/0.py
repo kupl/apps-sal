@@ -7,7 +7,6 @@ def main():
     o = 0
     for x in range(9, 0, -1):
         if 10 ** x // 2 <= n:
-            # print(x)
             for i in range(9):
                 q = 10 ** x * (i + 1) // 2 - 1
                 if q <= n:

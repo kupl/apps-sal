@@ -22,7 +22,6 @@ def solve(S):
     fib[0] = fib[1] = 1
     for i in range(2, N + 1):
         fib[i] = (fib[i - 2] + fib[i - 1]) % MOD
-
     i = 0
     ans = 1
     while i < N:
@@ -38,12 +37,8 @@ def solve(S):
         ans *= fib[j - i]
         ans %= MOD
         i = j
-
     return ans
 
-
-###############################################################################
-# AUXILIARY FUNCTIONS
 
 DEBUG = 'DEBUG' in os.environ
 

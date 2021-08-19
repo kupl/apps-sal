@@ -1,13 +1,12 @@
-s = input().split("T")
-x, y = map(int, input().split())
+s = input().split('T')
+(x, y) = map(int, input().split())
 xmove = []
 ymove = []
 for i in range(len(s)):
     if i % 2 == 1:
-        ymove.append(s[i].count("F"))
+        ymove.append(s[i].count('F'))
     else:
-        xmove.append(s[i].count("F"))
-# リストで持つdpだとTLEしたのでメモ化再帰で書く
+        xmove.append(s[i].count('F'))
 
 
 def solve(l, cor):
@@ -18,6 +17,6 @@ def solve(l, cor):
 
 
 if solve(xmove[1:], x - xmove[0]) and solve(ymove, y):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

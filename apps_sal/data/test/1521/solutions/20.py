@@ -1,4 +1,3 @@
-# Dead
 import math
 sa3 = []
 sa2 = input().split(' ')

@@ -8,19 +8,21 @@ from string import ascii_lowercase
 from functools import lru_cache, reduce
 from operator import xor
 from heapq import heappush, heappop
-INF = float("inf")
-sys.setrecursionlimit(10**7)
-
-# 4近傍（右, 下, 左, 上）
-dy4, dx4 = [0, -1, 0, 1], [1, 0, -1, 0]
+INF = float('inf')
+sys.setrecursionlimit(10 ** 7)
+(dy4, dx4) = ([0, -1, 0, 1], [1, 0, -1, 0])
 
 
-def inside(y: int, x: int, H: int, W: int) -> bool: return 0 <= y < H and 0 <= x < W
-def ceil(a, b): return (a + b - 1) // b
+def inside(y: int, x: int, H: int, W: int) -> bool:
+    return 0 <= y < H and 0 <= x < W
 
 
-YES = "Yes"
-NO = "No"
+def ceil(a, b):
+    return (a + b - 1) // b
+
+
+YES = 'Yes'
+NO = 'No'
 
 
 def check(x, nums):
@@ -39,30 +41,27 @@ def check(x, nums):
 
 
 def solve(s, x, y):
-    type_num = [(k, len(list(g))) for k, g in groupby(s)]
-    if s[0] == "F":
+    type_num = [(k, len(list(g))) for (k, g) in groupby(s)]
+    if s[0] == 'F':
         x -= type_num[0][1]
         type_num.pop(0)
-
-    h, v = [], []
+    (h, v) = ([], [])
     now = 0
-    for t, n in type_num:
-        if t == "F":
+    for (t, n) in type_num:
+        if t == 'F':
             if now == 0:
                 h.append(n)
             else:
                 v.append(n)
-        else:
-            if n % 2 != 0:
-                now = (now + 1) % 2
+        elif n % 2 != 0:
+            now = (now + 1) % 2
     return YES if check(x, h) and check(y, v) else NO
 
 
 def main():
     s = input()
-    x, y = list(map(int, input().split()))
-
-    print((solve(s, x, y)))
+    (x, y) = list(map(int, input().split()))
+    print(solve(s, x, y))
 
 
 def __starting_point():

@@ -37,19 +37,18 @@ def fib(n, f1, f2, i):
 def bin(a, num):
     left = 0
     right = len(a) - 1
-    while (right - left) > 1:
+    while right - left > 1:
         mid = (right + left) // 2
         if a[mid] < num:
             left = mid
         else:
             right = mid
-
     return a[left] == num or a[right] == num
 
 
 def lcm(x, y):
     tmp = x
-    while (tmp % y) != 0:
+    while tmp % y != 0:
         tmp += x
     return tmp
 
@@ -58,7 +57,6 @@ def createGraph(x, y):
     g = []
     for i in range(200):
         g.append([])
-
     for i in range(100):
         g[i].append((i + 100, y))
         g[i + 100].append((i, y))
@@ -70,35 +68,26 @@ def createGraph(x, y):
         if i < 99:
             g[i].append((i + 1, x))
             g[100 + i].append((i + 101, x))
-
     return g
 
 
 def solve(a, b, y, x):
     g = createGraph(x, y)
-
     d = [10 ** 10] * 200
     d[a] = 0
-
     v = [False] * 200
-
     for _ in range(200):
         vi = -1
         mn = 10 ** 10
         for j in range(200):
-            if d[j] < mn and not v[j]:
+            if d[j] < mn and (not v[j]):
                 vi = j
                 mn = d[j]
-
         for (dest, t) in g[vi]:
             d[dest] = min(d[dest], d[vi] + t)
-
         v[vi] = True
-
     return d[b]
 
 
-#t = readInt()
-# for _ in range(t):
-a, b, x, y = [readInt() for _ in range(4)]
-print((solve(a - 1, b + 99, x, y)))
+(a, b, x, y) = [readInt() for _ in range(4)]
+print(solve(a - 1, b + 99, x, y))

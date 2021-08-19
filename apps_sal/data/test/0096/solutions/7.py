@@ -14,8 +14,8 @@ def mints():
 
 
 def full(x, n):
-    if ((n + 1) & n) != 0:
-        raise Exception("qwe")
+    if n + 1 & n != 0:
+        raise Exception('qwe')
     r = 1
     while True:
         if r >= x:
@@ -94,17 +94,15 @@ def f(x, n):
     if rp != None:
         r = 1
         while rp != x:
-            r = (r * 2 + 1)
+            r = r * 2 + 1
             rp //= 2
         return r
-
     if x <= n:
         r += 1
     if x % 2 == 0 and x + 1 <= n:
         r += f(x + 1, n)
     if 2 * x <= n:
         r += f(x * 2, n)
-    #print(x, r)
     return r
 
 
@@ -116,17 +114,9 @@ def f1(x, n):
         r += f(x + 1, n)
     if 2 * x <= n:
         r += f(x * 2, n)
-    #print(x, r)
     return r
 
 
-'''
-from random import randint
-while True:
-	n = randint(1, 1024)
-	x = randint(1, n)
-	if full1(x, 1, n) != fulls(x, n):
-		print(x, n, full1(x, 1, n), fulls(x,n))
-'''
-n, k = mints()
+'\nfrom random import randint\nwhile True:\n\tn = randint(1, 1024)\n\tx = randint(1, n)\n\tif full1(x, 1, n) != fulls(x, n):\n\t\tprint(x, n, full1(x, 1, n), fulls(x,n))\n'
+(n, k) = mints()
 print(full1(k, 1, n))
