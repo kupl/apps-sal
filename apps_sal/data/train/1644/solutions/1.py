@@ -1,22 +1,20 @@
 import struct
-
-b91abc = ('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-          '!#$%&()*+,./:;<=>?@[]^_`{|}~"')
+b91abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~"'
 
 
 def b91decode(strng):
-    a, b, c = -1, 0, 0
+    (a, b, c) = (-1, 0, 0)
     result = bytearray()
     for char in strng:
         if not char in b91abc:
             continue
         ind = b91abc.index(char)
-        if(a < 0):
+        if a < 0:
             a = ind
         else:
             a += ind * 91
             b |= a << c
-            c += 13 if (a & 8191) > 88 else 14
+            c += 13 if a & 8191 > 88 else 14
             while True:
                 result += struct.pack('B', b & 255)
                 b >>= 8
@@ -30,7 +28,7 @@ def b91decode(strng):
 
 
 def b91encode(strng):
-    a, b = 0, 0
+    (a, b) = (0, 0)
     result = ''
     for count in range(len(strng)):
         byte = strng.encode()[count:count + 1]

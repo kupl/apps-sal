@@ -1,10 +1,8 @@
-# 1205A Almost Equal
 n = int(input())
-
 if n % 2 == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     d = 1
     for i in range(n):
         print(d, end=' ')

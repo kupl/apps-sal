@@ -1,7 +1,6 @@
 def day_plan(hours, tasks, duration):
-    # your code here
     at = tasks * duration
-    tb = (hours * 60) - at
+    tb = hours * 60 - at
     plan = []
     if tb < 0:
         return "You're not sleeping tonight!"

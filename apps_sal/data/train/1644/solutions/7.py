@@ -5,7 +5,7 @@ def b91decode(strng):
     b = []
     for i in range(0, len(strng), 2):
         if len(strng[i:i + 2]) == 2:
-            c1, c2 = strng[i:i + 2]
+            (c1, c2) = strng[i:i + 2]
             x = codes.index(c1) + codes.index(c2) * 91
         else:
             x = codes.index(strng[i:i + 2])
@@ -14,7 +14,7 @@ def b91decode(strng):
         else:
             b = list('{:013b}'.format(x)) + b
     r = ''
-    while(b):
+    while b:
         x = []
         for _ in range(8):
             if not b:
@@ -29,7 +29,7 @@ def b91encode(strng):
     for c in strng:
         b = list('{:08b}'.format(ord(c))) + b
     r = ''
-    while(b):
+    while b:
         x = []
         for _ in range(13):
             if not b:

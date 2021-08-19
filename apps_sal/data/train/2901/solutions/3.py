@@ -2,12 +2,9 @@ inc = {1: 2, 2: 6, 3: 11, 4: 17, 5: 25, 6: 35, 7: 46, 8: 58, 9: 72, 10: 88, 11: 
 
 
 def psion_power_points(level, score):
-
     if level > 0 and score > 10:
         base_points = inc.get(level, 343)
     else:
         base_points = 0
-
     bonus_points = max(0, int((score - 10) // 2 * 0.5 * level))
-
-    return base_points + bonus_points  # if score > 11 else base_points
+    return base_points + bonus_points
