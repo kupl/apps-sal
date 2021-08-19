@@ -1,8 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
-
         res = []
-
         for i in range(lo, hi + 1):
             count = 0
             j = i
@@ -13,6 +12,5 @@ class Solution:
                     j //= 2
                 count += 1
             res.append((count, i))
-
         res.sort()
         return res[k - 1][1]

@@ -14,9 +14,8 @@ class Solution:
         return False
 
     def winnerSquareGame(self, n: int) -> bool:
-        self.s, i = [1], 1
-        while self.s[-1] < 10**5:
+        (self.s, i) = ([1], 1)
+        while self.s[-1] < 10 ** 5:
             i += 1
             self.s.append(i * i)
-
         return self.dp(n)

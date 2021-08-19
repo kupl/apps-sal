@@ -1,10 +1,11 @@
 class Solution:
+
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         mod = 1000000007
-        fms, sms, msf, meh = 0, 0, 0, 0
+        (fms, sms, msf, meh) = (0, 0, 0, 0)
         for i in range(3):
             for num in arr:
-                meh = max(0, (meh + num))
+                meh = max(0, meh + num)
                 msf = max(msf, meh)
             if i == 0:
                 fms = msf

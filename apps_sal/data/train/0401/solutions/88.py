@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
         dic = [0, 0, 0]
         for i in nums:
@@ -9,14 +10,14 @@ class Solution:
                 if dic[1] != 0:
                     dic[1] += i
             elif i % 3 == 1:
-                a, b, c = dic[0], dic[1], dic[2]
+                (a, b, c) = (dic[0], dic[1], dic[2])
                 dic[1] = max(a + i, dic[1])
                 if b != 0:
                     dic[2] = max(b + i, dic[2])
                 if c != 0:
                     dic[0] = max(c + i, dic[0])
             elif i % 3 == 2:
-                a, b, c = dic[0], dic[1], dic[2]
+                (a, b, c) = (dic[0], dic[1], dic[2])
                 dic[2] = max(a + i, dic[2])
                 if c != 0:
                     dic[1] = max(c + i, dic[1])

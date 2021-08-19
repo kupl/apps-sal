@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRepunitDivByK(self, K: int) -> int:
         if not K % 2:
             return -1
@@ -9,5 +10,4 @@ class Solution:
                 return count
             ans = ans * 10 + 1
             count += 1
-
         return -1

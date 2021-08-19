@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         mod = 10 ** 9 + 7
         c = s.count('1')
@@ -11,14 +12,13 @@ class Solution:
             return tot % mod
         lsplit = c // 3
         rsplit = lsplit * 2
-        lz, rz = 1, 1
+        (lz, rz) = (1, 1)
         cnt = 0
         for n in s:
             if n == '1':
                 cnt += 1
-            else:
-                if cnt == lsplit:
-                    lz += 1
-                elif cnt == rsplit:
-                    rz += 1
-        return (lz * rz) % mod
+            elif cnt == lsplit:
+                lz += 1
+            elif cnt == rsplit:
+                rz += 1
+        return lz * rz % mod

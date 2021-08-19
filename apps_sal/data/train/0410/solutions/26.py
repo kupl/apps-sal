@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo, hi, k):
         dic = {}
         for n in range(lo, hi + 1):

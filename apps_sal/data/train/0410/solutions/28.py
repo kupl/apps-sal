@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         arr = []
         for i in range(lo, hi + 1):
@@ -13,6 +14,6 @@ class Solution:
             arr.append([i, counter])
         arr.sort()
         for i in arr:
-            i[0], i[1] = i[1], i[0]
+            (i[0], i[1]) = (i[1], i[0])
         arr.sort()
         return arr[k - 1][1]

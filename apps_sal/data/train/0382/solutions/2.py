@@ -1,10 +1,11 @@
 class Solution:
+
     def findPeakElement(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        begin, end = 0, 2
+        (begin, end) = (0, 2)
         if len(nums) == 1:
             return 0
         while end < len(nums):

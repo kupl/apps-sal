@@ -1,6 +1,6 @@
 class Solution:
-    def getKth(self, lo: int, hi: int, k: int) -> int:
 
+    def getKth(self, lo: int, hi: int, k: int) -> int:
         self.visited = {}
 
         def recur(n):
@@ -18,7 +18,6 @@ class Solution:
         for i in range(hi, lo - 1, -1):
             if i not in self.visited:
                 self.visited[i] = recur(i)
-
         result = [(x, self.visited[x]) for x in self.visited if lo <= x and x <= hi]
         result.sort(key=lambda x: (x[1], x[0]))
         return result[k - 1][0]

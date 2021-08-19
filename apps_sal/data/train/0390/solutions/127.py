@@ -1,6 +1,6 @@
 class Solution:
-    def winnerSquareGame(self, n: int) -> bool:
 
+    def winnerSquareGame(self, n: int) -> bool:
         winmap = {}
         winmap[0] = False
         winmap[1] = True
@@ -16,8 +16,6 @@ class Solution:
                     break
                 i += 1
             return winmap[n]
-
         for i in range(1, n):
             fill_map(n)
-
         return winmap[n]

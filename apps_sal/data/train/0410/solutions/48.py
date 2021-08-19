@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def powerx(x):
             p = 0
             while x != 1:
@@ -13,4 +15,4 @@ class Solution:
         for i in range(lo, hi + 1):
             dic[i] = powerx(i)
         dic_ordered = sorted(list(dic.items()), key=lambda x: x[1])
-        return(dic_ordered[k - 1][0])
+        return dic_ordered[k - 1][0]

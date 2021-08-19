@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubArrayLen(self, s, nums):
         """
         :type s: int
@@ -9,7 +10,7 @@ class Solution:
             return 0
         total = left = 0
         result = len(nums) + 1
-        for right, num in enumerate(nums):
+        for (right, num) in enumerate(nums):
             total += num
             while total >= s:
                 result = min(result, right - left + 1)

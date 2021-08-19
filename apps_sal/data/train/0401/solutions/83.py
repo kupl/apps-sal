@@ -1,5 +1,5 @@
-
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
         nums = sorted(nums)
         s = sum(nums)

@@ -1,6 +1,7 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
-        L, M = len(s), 10 ** 9 + 7
+        (L, M) = (len(s), 10 ** 9 + 7)
         ones = s.count('1')
         if ones == 0:
             return (L - 1) * (L - 2) // 2 % M
@@ -15,5 +16,4 @@ class Solution:
                 one_count += 1
             elif cnt == K * 2:
                 two_count += 1
-
-        return (one_count * two_count) % M
+        return one_count * two_count % M

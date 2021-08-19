@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         dp = [False] * (n + 1)
         dp[1] = True
@@ -11,5 +12,4 @@ class Solution:
                     break
                 j += 1
             dp[i] = flag
-
         return dp[-1]

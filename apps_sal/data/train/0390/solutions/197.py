@@ -1,4 +1,5 @@
 class Solution:
+
     @lru_cache(None)
     def winnerSquareGame(self, n: int) -> bool:
         if n == 0 or n == 1:
@@ -8,4 +9,4 @@ class Solution:
             if not self.winnerSquareGame(n - i ** 2):
                 return True
             i += 1
-        return i**2 == n
+        return i ** 2 == n

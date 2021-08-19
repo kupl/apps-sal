@@ -1,12 +1,11 @@
-
 from typing import List
 
 
 class Solution:
-    def splitArraySameAverage(self, A: List[int]) -> bool:
-        if (len(A) <= 1):
-            return False
 
+    def splitArraySameAverage(self, A: List[int]) -> bool:
+        if len(A) <= 1:
+            return False
         n = len(A)
         Sum = 0
         for x in A:
@@ -16,10 +15,9 @@ class Solution:
         for i in range(1, n):
             for s in range(Sum - A[i], -1, -1):
                 if dp[s] > 0:
-                    dp[s + A[i]] |= (dp[s] << 1)
+                    dp[s + A[i]] |= dp[s] << 1
             dp[A[i]] |= 2
-
         for leng in range(1, n):
-            if (Sum * leng) % n == 0 and ((1 << leng) & dp[(Sum * leng) // n]):
+            if Sum * leng % n == 0 and 1 << leng & dp[Sum * leng // n]:
                 return True
         return False

@@ -1,5 +1,4 @@
 class Solution:
-
     BASE = 10 ** 9 + 7
 
     def sumSubseqWidths(self, A: List[int]) -> int:

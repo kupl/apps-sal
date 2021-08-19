@@ -1,14 +1,14 @@
 class Solution:
+
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
-        MAX_INT = 10**9 + 7
+        MAX_INT = 10 ** 9 + 7
 
         def kadane(arr):
-            cur, res = 0, 0
+            (cur, res) = (0, 0)
             for v in arr:
                 cur = max(v, cur + v)
                 res = max(res, cur)
             return res
-
         if k == 1:
             return kadane(arr)
         else:

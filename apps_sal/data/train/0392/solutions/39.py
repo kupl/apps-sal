@@ -1,6 +1,7 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
-        modv = 10**9 + 7
+        modv = 10 ** 9 + 7
         countOne = 0
         for x in s:
             if x == '1':

@@ -1,4 +1,5 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         a = 1
         e = 1
@@ -6,8 +7,7 @@ class Solution:
         o = 1
         u = 1
         res = 0
-        M = 1e9 + 7
-
+        M = 1000000000.0 + 7
         for x in range(n - 1):
             a1 = e
             e1 = (a + i) % M
@@ -19,6 +19,5 @@ class Solution:
             i = i1
             o = o1
             u = u1
-
         res = int((a + e + i + o + u) % M)
         return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.memo = {}
 
@@ -10,7 +11,6 @@ class Solution:
             else:
                 power[i - lo] = (self.get_power(i, 0), i)
                 self.memo[i] = power[i - lo]
-
         power.sort()
         return power[k - 1][1]
 

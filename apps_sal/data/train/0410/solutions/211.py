@@ -1,5 +1,5 @@
-
 class Solution:
+
     def __recur(self, dp, num):
         if num in dp:
             return dp[num]

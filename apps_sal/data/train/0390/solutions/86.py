@@ -1,4 +1,5 @@
 class Solution:
+
     @lru_cache(None)
     def winnerSquareGame(self, n: int) -> bool:
         for i in range(1, int(sqrt(n)) + 1):

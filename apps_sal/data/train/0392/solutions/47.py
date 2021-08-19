@@ -1,10 +1,11 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         ones = s.count('1')
         if ones % 3 != 0:
             return 0
         n = len(s)
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         if ones == 0:
             return (n - 1) * (n - 2) // 2 % mod
         count = 0

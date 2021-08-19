@@ -1,4 +1,5 @@
 class Solution:
+
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         c = sum(arr)
         out = 0
@@ -23,5 +24,4 @@ class Solution:
         if k > 2:
             out = max(out, max(straight_sum) + max(back_sum) + c * (k - 2))
         out = max(max(straight_sum) + max(back_sum), out)
-
-        return out % (10**9 + 7)
+        return out % (10 ** 9 + 7)

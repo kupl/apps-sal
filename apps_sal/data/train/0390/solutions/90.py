@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         cost = [-1 for _ in range(n + 1)]
 
@@ -20,5 +21,4 @@ class Solution:
                 sq = i * i
             cost[n] = 0
             return 0
-
         return helper(n)

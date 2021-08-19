@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         if n == 1:
             return True
@@ -9,7 +10,6 @@ class Solution:
             num += 1
         if num * num == n:
             return True
-
         for i in range(1, n + 1):
             if dp[i]:
                 continue

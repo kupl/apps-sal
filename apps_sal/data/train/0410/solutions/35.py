@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.cache = {1: 0, 2: 1, 3: 7, 4: 2}
 

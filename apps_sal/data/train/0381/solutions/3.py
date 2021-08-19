@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubArrayLen(self, s, nums):
         """
         :type s: int
@@ -11,15 +12,13 @@ class Solution:
         _min = len(nums) + 1
         if len(nums) == 0:
             return 0
-
-        while(j < len(nums)):
+        while j < len(nums):
             _s += nums[j]
             j += 1
-            while(_s >= s):
+            while _s >= s:
                 _min = min(_min, j - i)
                 _s -= nums[i]
                 i += 1
-
         if _min > len(nums):
             return 0
         else:

@@ -1,9 +1,10 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         n = s.count('1')
         M = 1000000007
         if not n:
-            return ((len(s) - 2) * (len(s) - 1) // 2) % M
+            return (len(s) - 2) * (len(s) - 1) // 2 % M
         if n % 3:
             return 0
         n //= 3

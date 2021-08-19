@@ -1,6 +1,7 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
-        dp, sqs = [False] * (n + 1), []
+        (dp, sqs) = ([False] * (n + 1), [])
         i = 1
         while i * i <= n:
             sqs.append(i * i)

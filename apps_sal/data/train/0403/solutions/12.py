@@ -1,4 +1,5 @@
 class Solution:
+
     def increasingTriplet(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         if len(nums) < 3:
             return False
-
         tails = [-float('inf')] + [float('inf')] * 3
         for x in nums:
             for i in range(2, -1, -1):

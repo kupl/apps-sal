@@ -12,17 +12,18 @@ def countVowels(x, n, memo):
         memo[x_val][n] = countVowels('a', n - 1, memo)
         return memo[x_val][n]
     elif x == 'e':
-        memo[x_val][n] = (countVowels('a', n - 1, memo) + countVowels('i', n - 1, memo))
+        memo[x_val][n] = countVowels('a', n - 1, memo) + countVowels('i', n - 1, memo)
         return memo[x_val][n]
     elif x == 'o':
-        memo[x_val][n] = (countVowels('i', n - 1, memo) + countVowels('u', n - 1, memo))
+        memo[x_val][n] = countVowels('i', n - 1, memo) + countVowels('u', n - 1, memo)
         return memo[x_val][n]
     elif x == 'i':
-        memo[x_val][n] = (countVowels('a', n - 1, memo) + countVowels('e', n - 1, memo) + countVowels('o', n - 1, memo) + countVowels('u', n - 1, memo))
+        memo[x_val][n] = countVowels('a', n - 1, memo) + countVowels('e', n - 1, memo) + countVowels('o', n - 1, memo) + countVowels('u', n - 1, memo)
         return memo[x_val][n]
 
 
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         if n == 1:
             return 5

@@ -1,4 +1,5 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         dp = {}
         dp[1] = {}
@@ -13,7 +14,5 @@ class Solution:
         for i in range(2, n + 1):
             dp[i] = {}
             for c in ['a', 'e', 'i', 'o', 'u']:
-                dp[i][c] = sum(
-                    dp[i - 1][s] for s in sources[c]
-                )
-        return sum(dp[n][c] for c in dp[n]) % 1000000007
+                dp[i][c] = sum((dp[i - 1][s] for s in sources[c]))
+        return sum((dp[n][c] for c in dp[n])) % 1000000007

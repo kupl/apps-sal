@@ -2,6 +2,7 @@ from math import sqrt, ceil
 
 
 class Solution:
+
     def kthFactor(self, n, k):
         factors = []
         if int(sqrt(n)) == sqrt(n):

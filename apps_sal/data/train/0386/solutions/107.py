@@ -1,9 +1,10 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         prevs = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}
         for i in range(1, n):
             cur = defaultdict(int)
-            for prev, count in prevs.items():
+            for (prev, count) in prevs.items():
                 if prev == 'a':
                     cur['e'] += count
                 elif prev == 'e':

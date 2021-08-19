@@ -2,7 +2,9 @@ import heapq
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def power(num, cou=0):
             if num == 1:
                 return cou
@@ -10,10 +12,10 @@ class Solution:
                 num = num // 2
                 return power(num, cou + 1)
             else:
-                num = (3 * num) + 1
+                num = 3 * num + 1
                 return power(num, cou + 1)
         arr = []
-        while(lo <= hi):
+        while lo <= hi:
             j = power(lo)
             heapq.heappush(arr, (-j, -lo))
             if len(arr) > k:

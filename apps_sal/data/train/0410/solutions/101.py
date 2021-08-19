@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def find_power_value(n: int, steps: int) -> int:
             if n == 2:
                 return steps + 1

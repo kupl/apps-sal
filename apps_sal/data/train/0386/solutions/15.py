@@ -1,5 +1,7 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
+
         @lru_cache(None)
         def dfs(i, j):
             if i == 1:
@@ -12,7 +14,5 @@ class Solution:
                 return dfs(i - 1, 'e') + dfs(i - 1, 'o')
             elif j == 'o':
                 return dfs(i - 1, 'i')
-
             return dfs(i - 1, 'i') + dfs(i - 1, 'o')
-
-        return sum(dfs(n, i) for i in ('a', 'e', 'i', 'o', 'u')) % (10 ** 9 + 7)
+        return sum((dfs(n, i) for i in ('a', 'e', 'i', 'o', 'u'))) % (10 ** 9 + 7)

@@ -1,4 +1,5 @@
 class Solution:
+
     def oddEvenJumps(self, A: List[int]) -> int:
         n = len(A)
         B = sorted(range(n), key=A.__getitem__)

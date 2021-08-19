@@ -7,6 +7,6 @@ class Solution:
         for i in range(len(self.dp), n):
             dp1 = [0] * 5
             for j in range(5):
-                dp1[j] = sum(self.dp[-1][k] for k in follows[j]) % MOD
+                dp1[j] = sum((self.dp[-1][k] for k in follows[j])) % MOD
             self.dp.append(dp1)
         return sum(self.dp[n - 1]) % MOD

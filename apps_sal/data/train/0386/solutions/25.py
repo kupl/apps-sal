@@ -1,5 +1,5 @@
 class Solution:
-    mod = (10)**9 + 7
+    mod = 10 ** 9 + 7
     relation = [[1, 2, 4], [0, 2], [1, 3], [2], [2, 3]]
 
     def dfs(self, n, v):

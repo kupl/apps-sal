@@ -1,4 +1,5 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         dp = [[0] * 5 for i in range(n)]
         for i in range(len(dp[0])):
@@ -11,4 +12,4 @@ class Solution:
                 for val in dic[char]:
                     indb = mapping[val]
                     dp[i][indb] += dp[i - 1][inda]
-        return sum(dp[-1]) % (10**9 + 7)
+        return sum(dp[-1]) % (10 ** 9 + 7)

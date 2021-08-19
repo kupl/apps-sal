@@ -2,6 +2,7 @@ from collections import defaultdict as dt
 
 
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         di = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}
         for j in range(1, n):
@@ -18,4 +19,4 @@ class Solution:
                 else:
                     e[i] = di['a']
             di = e
-        return sum(list(di.values())) % (10**9 + 7)
+        return sum(list(di.values())) % (10 ** 9 + 7)

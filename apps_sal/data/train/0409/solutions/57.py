@@ -1,7 +1,7 @@
 class Solution:
-    def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
 
-        m = 10**9 + 7
+    def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
+        m = 10 ** 9 + 7
 
         def kadane(arr):
             cur = 0
@@ -9,12 +9,10 @@ class Solution:
             for a in arr:
                 cur = max(a, cur + a)
                 res = max(res, cur)
-
             return res
         if k == 1:
             return kadane(arr)
+        elif sum(arr) <= 0:
+            return kadane(arr * 2)
         else:
-            if sum(arr) <= 0:
-                return kadane(arr * 2)
-            else:
-                return (kadane(arr) + (k - 1) * sum(arr)) % m
+            return (kadane(arr) + (k - 1) * sum(arr)) % m

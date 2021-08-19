@@ -1,4 +1,5 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         if n <= 1:
             return n * 5
@@ -9,5 +10,5 @@ class Solution:
         for i in range(2, n + 1):
             for j in range(5):
                 after = start_table[j]
-                dp[i][j] = sum(dp[i - 1][v] for v in after)
-        return sum(dp[-1]) % (10**9 + 7)
+                dp[i][j] = sum((dp[i - 1][v] for v in after))
+        return sum(dp[-1]) % (10 ** 9 + 7)

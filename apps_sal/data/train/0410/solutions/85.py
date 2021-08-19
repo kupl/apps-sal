@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def getPower(n):
             step = 0
             while n != 1:

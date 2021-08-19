@@ -1,4 +1,5 @@
 class Solution:
+
     def ladderLength(self, beginWord, endWord, wordList):
         """
         :type beginWord: str
@@ -17,10 +18,10 @@ class Solution:
         wordList.discard(beginWord)
         wordList.discard(endWord)
         depth = 1
-        while not (reached & backreached):
+        while not reached & backreached:
             toAdd = set()
             for word in reached:
-                for i, letter in enumerate(word):
+                for (i, letter) in enumerate(word):
                     for newletter in letters:
                         if newletter != letter:
                             newword = word[:i] + newletter + word[i + 1:]
@@ -35,5 +36,5 @@ class Solution:
                 depth += 1
                 reached = toAdd
                 if len(reached) > len(backreached):
-                    reached, backreached = backreached, reached
+                    (reached, backreached) = (backreached, reached)
         return depth

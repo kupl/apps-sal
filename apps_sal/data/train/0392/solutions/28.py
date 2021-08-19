@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         mod = pow(10, 9) + 7
         cnt = s.count('1')
@@ -7,7 +8,7 @@ class Solution:
         if cnt % 3 != 0:
             return 0
         ones = []
-        for i, x in enumerate(s):
+        for (i, x) in enumerate(s):
             if x == '1':
                 ones.append(i)
         return (ones[cnt // 3] - ones[cnt // 3 - 1]) * (ones[2 * cnt // 3] - ones[2 * cnt // 3 - 1]) % mod

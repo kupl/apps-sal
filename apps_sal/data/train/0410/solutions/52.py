@@ -1,5 +1,4 @@
 class Solution:
-
     powers = {1: 0}
 
     def getKth(self, lo: int, hi: int, k: int) -> int:
@@ -14,7 +13,7 @@ class Solution:
         if num in self.powers:
             return self.powers[num]
         if num % 2 == 1:
-            power = self.getPower((num * 3) + 1) + 1
+            power = self.getPower(num * 3 + 1) + 1
             self.powers[num] = power
             return power
         else:

@@ -1,8 +1,9 @@
 class Solution:
+
     def oddEvenJumps(self, A: List[int]) -> int:
         odd_jumps = {}
         stack = []
-        for num, i in sorted([[num, i] for i, num in enumerate(A)], reverse=True):
+        for (num, i) in sorted([[num, i] for (i, num) in enumerate(A)], reverse=True):
             while stack and stack[-1][1] < i:
                 stack.pop()
             if not stack:
@@ -10,10 +11,9 @@ class Solution:
             else:
                 odd_jumps[i] = stack[-1][1]
             stack.append([num, i])
-
         even_jumps = {}
         stack = []
-        for num, i in sorted([[num, -i] for i, num in enumerate(A)]):
+        for (num, i) in sorted([[num, -i] for (i, num) in enumerate(A)]):
             i = -i
             while stack and stack[-1][1] < i:
                 stack.pop()
@@ -22,7 +22,6 @@ class Solution:
             else:
                 even_jumps[i] = stack[-1][1]
             stack.append([num, i])
-
         n = len(A)
 
         @lru_cache(None)
@@ -35,7 +34,6 @@ class Solution:
                 return dfs(even_jumps[i], True)
             else:
                 return False
-
         res = 0
         for i in range(n):
             res += 1 if dfs(i, True) else 0

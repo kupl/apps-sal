@@ -1,4 +1,5 @@
 class Solution:
+
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         if K == 1:
             return sum(A) / len(A)
@@ -17,5 +18,4 @@ class Solution:
                     if theNo > tempNo:
                         tempNo = theNo
                 biggest[start][len(A) - 1][curK] = tempNo
-
-        return (biggest[0][len(A) - 1][K])
+        return biggest[0][len(A) - 1][K]

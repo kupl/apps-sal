@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         a = [i for i in range(lo, hi + 1)]
         z = []

@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def oddEvenJumps(self, A: List[int]) -> int:
         size = len(A)
         if size < 2:

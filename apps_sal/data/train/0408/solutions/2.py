@@ -1,4 +1,5 @@
 class Solution:
+
     def findBestValue(self, arr: List[int], target: int) -> int:
         arr = sorted(arr)
         sum1 = 0
@@ -19,5 +20,4 @@ class Solution:
             else:
                 n -= 1
                 sum1 += num
-
         return arr[-1]

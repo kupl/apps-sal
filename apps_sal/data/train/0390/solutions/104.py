@@ -1,6 +1,6 @@
 class Solution:
-    def winnerSquareGame(self, n: int) -> bool:
 
+    def winnerSquareGame(self, n: int) -> bool:
         memo = {}
 
         def helper(n):

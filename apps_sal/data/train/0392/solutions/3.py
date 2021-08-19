@@ -2,8 +2,9 @@ from scipy.special import comb
 
 
 class Solution:
+
     def numWays(self, s: str) -> int:
-        n = sum(c == '1' for c in s)
+        n = sum((c == '1' for c in s))
         if n % 3:
             return 0
         if n == 0:

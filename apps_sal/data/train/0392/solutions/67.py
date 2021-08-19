@@ -1,8 +1,9 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         n = len(s)
         mod = 10 ** 9 + 7
-        nums1 = sum(1 if s[i] == '1' else 0 for i in range(n))
+        nums1 = sum((1 if s[i] == '1' else 0 for i in range(n)))
         if nums1 % 3 != 0:
             return 0
         num_per = nums1 // 3
@@ -28,4 +29,4 @@ class Solution:
         j = end2 + 1
         while s[j] != '1':
             j += 1
-        return ((i - end1) * (j - end2)) % mod
+        return (i - end1) * (j - end2) % mod

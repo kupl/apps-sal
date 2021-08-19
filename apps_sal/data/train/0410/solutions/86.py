@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def getPow(n):
             c = 0
             while n != 1:
@@ -17,7 +19,7 @@ class Solution:
             fin = []
             for i in v:
                 t = []
-                for a, b in arr.items():
+                for (a, b) in arr.items():
                     if b == i:
                         t.append(a)
                 t.sort()

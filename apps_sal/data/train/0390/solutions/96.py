@@ -3,27 +3,25 @@ from collections import defaultdict
 
 
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
+
         def dfs(position, player):
             if position in cache:
                 if cache[position] == True:
                     return player
                 return not player
-
             for sq in squares:
                 if sq == position:
                     cache[position] = player
                     return player
                 if sq > position:
                     break
-
                 if player == dfs(position - sq, not player):
                     cache[position] = player
                     return player
-
             cache[position] = not player
             return not player
-
         cache = defaultdict(bool)
         max_val = int(math.sqrt(n))
         squares = [1]

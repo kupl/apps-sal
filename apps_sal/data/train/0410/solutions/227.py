@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         @lru_cache
         def getPower(x):
             if x == 1:

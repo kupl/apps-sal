@@ -1,12 +1,13 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         k = s.count('1')
         if k % 3 != 0:
             return 0
-        n, M = len(s), 10**9 + 7
+        (n, M) = (len(s), 10 ** 9 + 7)
         if k == 0:
             return (n - 1) * (n - 2) // 2 % M
-        ans, cnt, i = 1, 0, 0
+        (ans, cnt, i) = (1, 0, 0)
         while i < len(s):
             cnt += s[i] == '1'
             if cnt in [k // 3, 2 * k // 3]:

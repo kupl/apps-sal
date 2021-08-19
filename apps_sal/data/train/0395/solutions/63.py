@@ -1,4 +1,5 @@
 class Solution:
+
     def oddEvenJumps(self, A: List[int]) -> int:
         l = len(A)
         idxs = sorted(range(l), key=lambda i: A[i])
@@ -26,4 +27,4 @@ class Solution:
             else:
                 reachable[i][j] = 0 if evens[i] == -1 else helper(evens[i], 0)
             return reachable[i][j]
-        return sum(helper(i, 0) for i in range(l))
+        return sum((helper(i, 0) for i in range(l)))

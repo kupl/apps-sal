@@ -1,8 +1,9 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
-        n = sum(1 for i in s if i == '1')
+        n = sum((1 for i in s if i == '1'))
         if n == 0:
-            return ((len(s) - 1) * (len(s) - 2) // 2) % (10 ** 9 + 7)
+            return (len(s) - 1) * (len(s) - 2) // 2 % (10 ** 9 + 7)
         if n % 3 != 0:
             return 0
         f1 = f2 = f3 = f4 = False
@@ -24,4 +25,4 @@ class Solution:
             if not f4 and cur == 2 * k + 1:
                 i4 = i
                 f4 = True
-        return ((i2 - i1) * (i4 - i3)) % (10 ** 9 + 7)
+        return (i2 - i1) * (i4 - i3) % (10 ** 9 + 7)

@@ -1,4 +1,5 @@
 class Solution:
+
     def getSteps(self, x):
         res = 0
         while x != 1:
@@ -14,7 +15,6 @@ class Solution:
         for i in range(lo, hi + 1, 1):
             val = self.getSteps(i)
             res.append([i, val])
-
         print(res)
         res.sort(key=lambda x: (x[1], x[0]))
         ans = [item[0] for item in res]

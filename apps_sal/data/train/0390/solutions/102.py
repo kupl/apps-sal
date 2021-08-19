@@ -1,6 +1,6 @@
 class Solution:
-    def winnerSquareGame(self, n: int) -> bool:
 
+    def winnerSquareGame(self, n: int) -> bool:
         if n == 0 or n == 2:
             return False
         if n == 1:
@@ -11,7 +11,6 @@ class Solution:
         dp[2] = 0
 
         def pick(n):
-
             if dp[n] != -1:
                 return dp[n]
             i = 1

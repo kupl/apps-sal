@@ -1,4 +1,5 @@
 class Solution:
+
     def nthUglyNumber(self, n: int, a: int, b: int, c: int) -> int:
         ab = a * b // gcd(a, b)
         bc = b * c // gcd(b, c)
@@ -7,8 +8,7 @@ class Solution:
 
         def fn(k):
             return k // a + k // b + k // c - k // ab - k // bc - k // ca + k // abc
-
-        lo, hi = 0, 2_000_000_000
+        (lo, hi) = (0, 2000000000)
         while lo < hi:
             mid = (lo + hi) // 2
             if fn(mid) >= n:

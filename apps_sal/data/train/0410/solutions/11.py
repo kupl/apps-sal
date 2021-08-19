@@ -1,4 +1,5 @@
 class Solution:
+
     def power(self, number: int):
         count = 0
         while number > 1:

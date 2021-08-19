@@ -1,4 +1,5 @@
 class Solution(object):
+
     def largestSumOfAverages(self, A, K):
         prefix_sum = [0]
         for x in A:
@@ -6,10 +7,8 @@ class Solution(object):
 
         def average(i, j):
             return (prefix_sum[j] - prefix_sum[i]) / (j - i)
-
         n = len(A)
         dp = [[0] * n for _ in range(K)]
-
         for k in range(K):
             for i in range(n):
                 if k == 0 and i == 0:
@@ -19,5 +18,4 @@ class Solution(object):
                 else:
                     for j in range(i):
                         dp[k][i] = max(dp[k][i], dp[k - 1][j] + average(i + 1, j + 1))
-
         return dp[-1][-1]

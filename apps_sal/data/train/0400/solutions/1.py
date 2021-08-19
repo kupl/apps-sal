@@ -7,7 +7,6 @@ class Solution:
         """
         if not heights:
             return 0
-
         max_area = 0
         stack = []
         i = 0
@@ -28,5 +27,4 @@ class Solution:
             else:
                 area = heights[tmp] * i
             max_area = max(area, max_area)
-
         return max_area

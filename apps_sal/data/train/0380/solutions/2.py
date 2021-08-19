@@ -1,4 +1,5 @@
 class Solution:
+
     def validIPAddress(self, IP: str):
         IP = IP.lower()
         import re

@@ -1,4 +1,5 @@
 class Solution:
+
     def get_power(self, n):
         res = 0
         while n != 1:

@@ -1,8 +1,8 @@
 class Solution:
-    def numWays(self, s: str) -> int:
-        ttt = 10**9 + 7
-        zs = list(map(len, s.split('1')))
 
+    def numWays(self, s: str) -> int:
+        ttt = 10 ** 9 + 7
+        zs = list(map(len, s.split('1')))
         if not (len(zs) - 1) % 3 == 0:
             return 0
         if len(zs) == 1:

@@ -1,5 +1,7 @@
 class Solution:
+
     def scoreOfParentheses(self, S: str) -> int:
+
         def h(i, j):
             if i > j:
                 return 0

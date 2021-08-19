@@ -1,4 +1,5 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         a = [1] * 5
         b = [1] * 5
@@ -9,5 +10,4 @@ class Solution:
             b[3] = a[2] + a[4]
             b[4] = a[0]
             a = b.copy()
-
-        return sum(b) % (10**9 + 7)
+        return sum(b) % (10 ** 9 + 7)

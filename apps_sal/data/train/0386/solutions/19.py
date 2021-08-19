@@ -1,9 +1,8 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
-        MOD = (10**9 + 7)
-        mapping = [
-            [1, 2, 4], [0, 2], [1, 3], [2], [2, 3]
-        ]
+        MOD = 10 ** 9 + 7
+        mapping = [[1, 2, 4], [0, 2], [1, 3], [2], [2, 3]]
         dp = [[0 for _ in range(5)] for _ in range(n)]
         for i in range(len(dp)):
             for j in range(len(dp[0])):

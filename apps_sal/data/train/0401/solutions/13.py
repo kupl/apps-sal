@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
         n = len(nums)
         if n == 0:
@@ -11,5 +12,4 @@ class Solution:
             dp[i][1] = max(dp[i - 1][(3 - t1 + 1) % 3] + nums[i], dp[i - 1][1]) if dp[i - 1][(3 - t1 + 1) % 3] != 0 else dp[i - 1][1]
             dp[i][2] = max(dp[i - 1][(3 - t1 + 2) % 3] + nums[i], dp[i - 1][2]) if dp[i - 1][(3 - t1 + 2) % 3] != 0 else dp[i - 1][2]
             dp[i][t1] = max(nums[i], dp[i][t1])
-
         return dp[-1][0]

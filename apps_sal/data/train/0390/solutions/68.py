@@ -2,7 +2,6 @@ import math
 
 
 class Solution:
-
     cache = {}
 
     def winnerSquareGame(self, n: int) -> bool:

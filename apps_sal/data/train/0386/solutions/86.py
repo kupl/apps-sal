@@ -1,4 +1,5 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         dp = [[0 for _ in range(5)] for _ in range(n + 1)]
         for i in range(5):

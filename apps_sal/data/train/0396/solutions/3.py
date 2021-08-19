@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRepunitDivByK(self, K: int) -> int:
         remainder = 0
         for length_N in range(1, K + 1):

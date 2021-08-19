@@ -1,8 +1,9 @@
 class Solution:
+
     def kthFactor(self, n: int, k: int) -> int:
         r1 = []
         r2 = []
-        for i in range(1, int(n**.5) + 1):
+        for i in range(1, int(n ** 0.5) + 1):
             if n % i == 0:
                 r1.append(i)
                 if n != i * i:

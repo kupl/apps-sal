@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         d = dict()
         for i in range(lo, hi + 1):
@@ -11,6 +12,5 @@ class Solution:
                     i = i / 2
                 res += 1
             d[x] = res
-
-        di = {k: v for k, v in sorted(d.items(), key=lambda item: item[1])}
+        di = {k: v for (k, v) in sorted(d.items(), key=lambda item: item[1])}
         return list(di.keys())[k - 1]

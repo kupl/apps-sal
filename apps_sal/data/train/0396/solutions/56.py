@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRepunitDivByK(self, K: int) -> int:
         if K == 1:
             return 1

@@ -2,6 +2,7 @@ from collections import defaultdict, Counter
 
 
 class UF:
+
     def __init__(self, keys):
         self.uf = {}
         for key in keys:
@@ -22,6 +23,7 @@ class UF:
 
 
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         initial.sort()
         malware = set(initial)
@@ -42,7 +44,7 @@ class Solution:
         components = Counter([uf.find(x) for x in range(len(graph)) if x not in malware])
         infected = defaultdict(set)
         incoming = defaultdict(set)
-        for key, value in neighbors.items():
+        for (key, value) in neighbors.items():
             infected[key] = set([uf.find(x) for x in value])
             for component in infected[key]:
                 incoming[component].add(key)

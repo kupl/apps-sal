@@ -1,4 +1,5 @@
 class Solution:
+
     def findBestValue(self, arr: List[int], target: int) -> int:
         arr.sort()
         n = len(arr)

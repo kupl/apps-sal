@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def splitArraySameAverage(self, A: List[int]) -> bool:
         A.sort()
 
@@ -12,5 +13,4 @@ class Solution:
             if idx >= len(A) or n == 0:
                 return False
             return dfs(idx + 1, n - 1, target - A[idx]) or dfs(idx + 1, n, target)
-
-        return any([dfs(0, i, (sum(A) * i) // len(A)) for i in range(1, len(A)) if (sum(A) * i) % len(A) == 0])
+        return any([dfs(0, i, sum(A) * i // len(A)) for i in range(1, len(A)) if sum(A) * i % len(A) == 0])

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumDivThree(self, A):
         seen = [0, 0, 0]
         for a in A:

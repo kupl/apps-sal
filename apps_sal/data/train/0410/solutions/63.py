@@ -9,6 +9,7 @@ def pow(n: int):
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         l = list(range(lo, hi + 1))
         l.sort(key=lambda x: (pow(x), x))

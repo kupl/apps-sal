@@ -1,9 +1,9 @@
 class Solution:
-    def sumSubseqWidths(self, A: List[int]) -> int:
 
+    def sumSubseqWidths(self, A: List[int]) -> int:
         A = sorted(A)
         res = 0
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         c = 1
         for i in range(len(A)):
             res = (res + A[i] * c % MOD) % MOD

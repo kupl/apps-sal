@@ -1,13 +1,14 @@
 class Solution:
+
     def validIPAddress(self, IP):
         """
         :type IP: str
         :rtype: str
         """
+
         def is_hex(hexs):
             hex_set = set('0123456789abcdefABCDEF')
             return set(hexs) < hex_set
-
         result = 'Neither'
         if '.' in IP:
             sub_str = IP.split('.')
@@ -30,8 +31,7 @@ class Solution:
                     result = 'Neither'
                     break
             if result == 'IPv6':
-                if len(sub) > 4 or len(sub) == 0 or not is_hex(sub):
+                if len(sub) > 4 or len(sub) == 0 or (not is_hex(sub)):
                     result = 'Neither'
                     break
-
         return result

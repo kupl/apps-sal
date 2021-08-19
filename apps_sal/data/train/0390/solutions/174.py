@@ -1,4 +1,4 @@
-'''
+"""
     1 - Alice
     2 - Bob
     3 - Alice
@@ -8,10 +8,11 @@
     7 - [1, 4]
     n - Alice
     n+1 -
-'''
+"""
 
 
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         if n == 1:
             return True
