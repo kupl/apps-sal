@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(int, input().split()))
     dis = len(set(l))
     a = 0

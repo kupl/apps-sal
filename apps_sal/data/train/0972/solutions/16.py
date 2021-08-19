@@ -1,6 +1,5 @@
-# cook your dish here
 import sys
-n, k = map(int, input().strip().split())
+(n, k) = map(int, input().strip().split())
 trees = []
 for _ in range(n):
     trees.append(int(input().strip()))

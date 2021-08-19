@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     w = list(map(int, input().split()))
     c = 1
     d = 0

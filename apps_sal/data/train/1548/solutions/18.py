@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -15,7 +14,7 @@ for _ in range(t):
         right[i] = min(rmin, l[i])
         rmin = right[i] + 1
         i -= 1
-    s = ""
+    s = ''
     for i in range(n):
-        s += str(min(left[i], right[i])) + " "
+        s += str(min(left[i], right[i])) + ' '
     print(s.strip())

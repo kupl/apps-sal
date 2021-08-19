@@ -1,5 +1,5 @@
 def f():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     distinctitem = len(set(a))
     count = [0] * 1000000
@@ -17,7 +17,6 @@ def f():
             else:
                 count[a[i]] += 1
                 s += a[i]
-        # print(temp,s)
         if len(temp) == k:
             if c == distinctitem:
                 maxi = max(maxi, s)
@@ -26,7 +25,6 @@ def f():
             if count[temp[0]] == 0:
                 c -= 1
             temp.pop(0)
-
     print(maxi)
 
 

@@ -1,8 +1,7 @@
-# cook your dish here
 import sys
 t = int(input().strip())
 for _ in range(t):
-    n, k = map(int, input().strip().split())
+    (n, k) = map(int, input().strip().split())
     array = list(map(int, input().strip().split()))
     cifre = {}
     for el in array:

@@ -1,8 +1,7 @@
-# cook your dish here
 try:
     tc = int(input())
     for i in range(tc):
-        n, k = list(map(int, input().split(" ")))
+        (n, k) = list(map(int, input().split(' ')))
         arr = list(map(int, input().split()))
         set_arr = set(arr)
         max_sum = 0
