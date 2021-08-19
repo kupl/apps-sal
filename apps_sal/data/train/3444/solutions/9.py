@@ -4,5 +4,5 @@ def cyclic_string(s):
     alist = []
     for i in s:
         alist.append(i)
-        if s in "".join(alist) * 15:
+        if s in ''.join(alist) * 15:
             return len(alist)

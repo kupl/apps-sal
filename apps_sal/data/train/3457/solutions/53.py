@@ -1,5 +1,4 @@
 def final_grade(exam, projects):
-
     if exam > 90 or projects > 10:
         return 100
     elif exam in range(76, 91) and projects >= 5:

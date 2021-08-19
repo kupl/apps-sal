@@ -8,5 +8,4 @@ def correct_polish_letters(st):
             empty.append(char)
         elif char in trans:
             empty.append(trans[char])
-
     return ''.join(empty)

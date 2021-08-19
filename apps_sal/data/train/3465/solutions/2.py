@@ -2,7 +2,7 @@ def valid_card(card):
     li = []
     print(card)
     digits = card.replace(' ', '')[::-1]
-    for i, d in enumerate(digits):
+    for (i, d) in enumerate(digits):
         di = int(d)
         if i % 2 != 0:
             di = di * 2

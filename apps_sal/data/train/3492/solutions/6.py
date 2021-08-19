@@ -1,2 +1,2 @@
 def correct_polish_letters(st):
-    return st.translate(st.maketrans("ąćęłńóśźż", "acelnoszz"))
+    return st.translate(st.maketrans('ąćęłńóśźż', 'acelnoszz'))

@@ -1,5 +1,4 @@
 from operator import add, sub, truediv, mul, mod, pow
-
 ops = {'+': add, '-': sub, '/': truediv, '*': mul, '%': mod, '**': pow}
 
 

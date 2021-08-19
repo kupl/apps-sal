@@ -1,4 +1,4 @@
-def super_pad(s, width, fill=" "):
+def super_pad(s, width, fill=' '):
     padding = width - len(s)
     if width == 0:
         return ''
@@ -19,7 +19,6 @@ def super_pad(s, width, fill=" "):
         if padding >= 0:
             return (fill * left)[:left] + s + (fill * right)[:right]
         return s[-left:right]
-
     if fill and fill[0] == '>':
         fill = fill[1:]
         return _right_pad()

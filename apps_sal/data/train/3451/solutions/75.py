@@ -1,5 +1,5 @@
 def triangle(row):
-    return row if len(row) == 1 else triangle("".join(process(row)))
+    return row if len(row) == 1 else triangle(''.join(process(row)))
 
 
 def process(row):

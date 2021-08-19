@@ -6,7 +6,7 @@ def area(args):
     try:
         return mul(*args)
     except TypeError:
-        return pi * args**2
+        return pi * args ** 2
 
 
 def sort_by_area(seq):

@@ -1,7 +1,7 @@
 def get_char_count(s):
     newDict = {}
     s = s.lower()
-    s = "".join(sorted(s))
+    s = ''.join(sorted(s))
     for element in s:
         if element.isalnum():
             newDict.setdefault(element, 0)

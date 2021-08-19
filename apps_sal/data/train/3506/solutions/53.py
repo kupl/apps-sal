@@ -1,5 +1,5 @@
 def vowel_indices(word):
-    vowels = "aeiouy"
+    vowels = 'aeiouy'
     list = []
     counter = 0
     word = word.lower()

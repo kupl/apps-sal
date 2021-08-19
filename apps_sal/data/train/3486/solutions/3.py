@@ -1,4 +1,5 @@
 class Cycle:
+
     def __init__(self, n):
         self.length = n
         self.h = current = node = Node(1)
@@ -20,6 +21,7 @@ class Cycle:
 
 
 class Node:
+
     def __init__(self, n):
         self.n = n
         self.next = None

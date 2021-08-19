@@ -7,8 +7,6 @@ def to24hourtime(hour, minute, period):
         hour += 12
     elif hour < 10:
         hour = '0' + str(hour)
-
     if minute < 10:
         minute = '0' + str(minute)
-
     return str(hour) + str(minute)

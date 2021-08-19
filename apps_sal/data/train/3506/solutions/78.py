@@ -1,6 +1,6 @@
 def vowel_indices(word):
     word = word.lower()
-    a = ["a", "e", "i", "o", "u", "y"]
+    a = ['a', 'e', 'i', 'o', 'u', 'y']
     res = []
     count = 1
     for i in word:

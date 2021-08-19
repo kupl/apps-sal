@@ -16,4 +16,4 @@ def string_parse(string):
         res.append(c)
     if count > 2:
         res.append(']')
-    return "".join(res)
+    return ''.join(res)

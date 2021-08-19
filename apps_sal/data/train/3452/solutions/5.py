@@ -1,8 +1,6 @@
 def snail(column, day, night):
-
     heightUpColumn = 0
     daysPassed = 1
-
     while heightUpColumn < column:
         heightUpColumn += day
         if heightUpColumn < column:

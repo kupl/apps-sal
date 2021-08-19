@@ -1,2 +1,2 @@
 def integrate(c, e):
-    return f"{c / (e+1)}x^{e+1}".replace(".0x", "x")
+    return f'{c / (e + 1)}x^{e + 1}'.replace('.0x', 'x')

@@ -1,7 +1,7 @@
 def array(p):
     print(p)
-    astring = ""
-    s = (p.replace(" ", "")).split(",")
+    astring = ''
+    s = p.replace(' ', '').split(',')
     print(s)
     if len(s) < 3:
         return None
@@ -9,6 +9,6 @@ def array(p):
         if i == 0:
             pass
         else:
-            astring += s[i] + " "
+            astring += s[i] + ' '
     ansr = astring.rstrip()
     return ansr

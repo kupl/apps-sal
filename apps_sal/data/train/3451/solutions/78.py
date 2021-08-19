@@ -3,7 +3,7 @@ def next_char(pair):
 
 
 def next_row(row):
-    return "".join(map(next_char, zip(row, row[1:])))
+    return ''.join(map(next_char, zip(row, row[1:])))
 
 
 def triangle(row):

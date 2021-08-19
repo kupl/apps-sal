@@ -5,6 +5,6 @@ def disarium_number(number):
         big_number += pow(int(dig), i)
         i += 1
     if big_number == number:
-        return "Disarium !!"
+        return 'Disarium !!'
     else:
-        return "Not !!"
+        return 'Not !!'

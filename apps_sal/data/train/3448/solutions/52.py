@@ -5,9 +5,7 @@ def f(n):
         return None
     if n <= 0:
         return None
-
     while n >= 0:
         total += n
         n -= 1
-
     return total

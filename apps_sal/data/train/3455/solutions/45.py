@@ -4,6 +4,6 @@ def disarium_number(number):
     for i in range(len(Digits)):
         SumDigitsPow += pow(Digits[i], i + 1)
     if SumDigitsPow == number:
-        return "Disarium !!"
+        return 'Disarium !!'
     else:
-        return "Not !!"
+        return 'Not !!'

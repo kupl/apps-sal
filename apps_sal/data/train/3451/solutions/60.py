@@ -1,11 +1,11 @@
 def colour(a, b):
     if a == b:
         return a
-    elif a == 'B' and b == 'G' or a == 'G' and b == 'B':
+    elif a == 'B' and b == 'G' or (a == 'G' and b == 'B'):
         return 'R'
-    elif a == 'R' and b == 'G' or a == 'G' and b == 'R':
+    elif a == 'R' and b == 'G' or (a == 'G' and b == 'R'):
         return 'B'
-    elif a == 'B' and b == 'R' or a == 'R' and b == 'B':
+    elif a == 'B' and b == 'R' or (a == 'R' and b == 'B'):
         return 'G'
 
 

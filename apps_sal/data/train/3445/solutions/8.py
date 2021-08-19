@@ -5,6 +5,5 @@ def solve(s, g):
         f.append(g * i)
     for i in f:
         if i + g == s:
-            w = g, i
-
+            w = (g, i)
     return w or -1

@@ -3,9 +3,9 @@ def remove_exclamation_marks(s):
     x = 0
     for element in s:
         while True:
-            if (len(s) == x):
+            if len(s) == x:
                 break
-            if (s[x] == "!"):
+            if s[x] == '!':
                 del s[x]
             else:
                 break

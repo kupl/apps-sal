@@ -1,4 +1,4 @@
-density_order = {key: i for i, key in enumerate(['O', 'A', 'W', 'H'])}
+density_order = {key: i for (i, key) in enumerate(['O', 'A', 'W', 'H'])}
 
 
 def separate_liquids(glass):

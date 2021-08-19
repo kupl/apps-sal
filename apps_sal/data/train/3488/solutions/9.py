@@ -1,13 +1,13 @@
 def eval_object(v):
-    if v['operation'] == "+":
+    if v['operation'] == '+':
         return int(v['a']) + int(v['b'])
-    elif v['operation'] == "-":
+    elif v['operation'] == '-':
         return int(v['a']) - int(v['b'])
-    elif v['operation'] == "/":
+    elif v['operation'] == '/':
         return int(v['a']) / int(v['b'])
-    elif v['operation'] == "*":
+    elif v['operation'] == '*':
         return int(v['a']) * int(v['b'])
-    elif v['operation'] == "%":
+    elif v['operation'] == '%':
         return int(v['a']) % int(v['b'])
-    elif v['operation'] == "**":
+    elif v['operation'] == '**':
         return int(v['a']) ** int(v['b'])

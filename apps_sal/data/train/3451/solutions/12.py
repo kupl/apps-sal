@@ -12,11 +12,9 @@ def possibilities(a, b):
 
 
 def triangle(row):
-
     while len(row) > 1:
         temp = ''
         for i in range(len(row) - 1):
             temp += possibilities(row[i], row[i + 1])
         row = temp
-
     return row[0]

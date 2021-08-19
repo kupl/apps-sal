@@ -7,5 +7,4 @@ def snail(column, day, night):
             some = False
         column += night
         count += 1
-
     return count

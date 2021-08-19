@@ -5,7 +5,7 @@ def remove_exclamation_marks(s):
         char = list(char)
         no_exc = []
         for x in char:
-            if x != "!":
+            if x != '!':
                 no_exc.append(x)
         collect = ''.join(no_exc)
         no_marks.append(collect)

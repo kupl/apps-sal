@@ -1,1 +1,1 @@
-mod256_without_mod = (256).__rmod__
+mod256_without_mod = 256 .__rmod__

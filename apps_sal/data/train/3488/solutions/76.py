@@ -10,6 +10,6 @@ def eval_object(v):
     elif v['operation'] == '%':
         return v['a'] % v['b']
     elif v['operation'] == '**':
-        return v['a']**v['b']
+        return v['a'] ** v['b']
     else:
         return

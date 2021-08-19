@@ -1,6 +1,6 @@
 def sort_string(s, ordering):
     order = {}
-    for i, c in enumerate(ordering):
+    for (i, c) in enumerate(ordering):
         if c in order:
             continue
         order[c] = i

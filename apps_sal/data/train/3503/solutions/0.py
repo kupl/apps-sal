@@ -1,5 +1,5 @@
 def dig_pow(n):
-    return sum(int(x)**y for y, x in enumerate(str(n), 1))
+    return sum((int(x) ** y for (y, x) in enumerate(str(n), 1)))
 
 
 def sum_dig_pow(a, b):

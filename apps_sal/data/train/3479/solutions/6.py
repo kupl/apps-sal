@@ -3,7 +3,7 @@ def partition(n, parts, m=1):
         return [[n]]
     ans = []
     s = m
-    while s <= (n / parts):
+    while s <= n / parts:
         l = [s]
         p = partition(n - s, parts - 1, s)
         for i in p:

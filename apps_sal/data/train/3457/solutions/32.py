@@ -1,6 +1,5 @@
 def final_grade(exam, projects):
     print(exam, projects)
-
     if exam > 90:
         return 100
     elif projects > 10:

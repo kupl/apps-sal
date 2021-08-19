@@ -4,5 +4,5 @@ def disarium_number(n):
     for i in range(len(s)):
         sm += int(s[i]) ** (i + 1)
     if sm == n:
-        return "Disarium !!"
-    return "Not !!"
+        return 'Disarium !!'
+    return 'Not !!'

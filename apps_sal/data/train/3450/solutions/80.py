@@ -4,6 +4,6 @@ def array(string):
         return None
     else:
         listed = string.split(',')
-        print((listed[1:][:-1]))
+        print(listed[1:][:-1])
         listed = listed[1:][:-1]
         return ' '.join(listed)

@@ -2,7 +2,7 @@ import re
 
 
 def array(string):
-    l = re.sub(r' ', '', string).split(',')
+    l = re.sub(' ', '', string).split(',')
     if len(l) <= 2:
         return None
     else:

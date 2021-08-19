@@ -1,6 +1,6 @@
 def substring(s):
-    r, rm = [], []
-    for i, x in enumerate(s):
+    (r, rm) = ([], [])
+    for (i, x) in enumerate(s):
         if x in r or len(set(r)) < 2:
             r += x
         else:

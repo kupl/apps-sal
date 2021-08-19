@@ -4,5 +4,4 @@ def f(n):
     if n <= 0:
         return None
     else:
-
-        return sum([i for i in range((n) + 1)])
+        return sum([i for i in range(n + 1)])

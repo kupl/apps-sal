@@ -1,4 +1,4 @@
-vowel = "aeiouy"
+vowel = 'aeiouy'
 
 
 def vowel_indices(word):

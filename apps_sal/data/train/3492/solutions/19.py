@@ -1,5 +1,4 @@
 def correct_polish_letters(st):
-
     if 'ą' in st:
         st = st.replace('ą', 'a')
     if 'ć' in st:
@@ -18,5 +17,4 @@ def correct_polish_letters(st):
         st = st.replace('ź', 'z')
     if 'ż' in st:
         st = st.replace('ż', 'z')
-
     return st
