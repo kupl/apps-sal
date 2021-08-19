@@ -1,13 +1,11 @@
 class Solution:
-    def countTriplets(self, arr: List[int]) -> int:
 
+    def countTriplets(self, arr: List[int]) -> int:
         if not arr:
             return 0
-
         x = [0, arr[0]]
         for i in range(1, len(arr)):
             x.append(x[-1] ^ arr[i])
-
         cnt = 0
         for i in range(1, len(x)):
             for j in range(i + 1, len(x)):

@@ -1,4 +1,5 @@
 class Solution(object):
+
     def maxWidthRamp(self, A):
         ans = 0
         m = float('inf')

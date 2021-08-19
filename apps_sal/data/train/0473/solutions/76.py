@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         store = [0]
         n = len(arr)

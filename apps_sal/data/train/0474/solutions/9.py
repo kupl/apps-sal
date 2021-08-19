@@ -2,6 +2,7 @@ from collections import defaultdict as dt
 
 
 class Solution:
+
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
         fi = dt(int)
         for i in letters:

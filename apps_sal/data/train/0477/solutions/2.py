@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
         dp = [[]] * n
         dp[0] = [0]

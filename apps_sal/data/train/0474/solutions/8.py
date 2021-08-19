@@ -20,6 +20,7 @@ def ch(fi, s):
 
 
 class Solution:
+
     def maxScoreWords(self, x: List[str], y: List[str], z: List[int]) -> int:
         fi = dt(int)
         for i in y:

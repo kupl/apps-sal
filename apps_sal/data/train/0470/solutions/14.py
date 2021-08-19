@@ -1,4 +1,5 @@
 class Solution:
+
     def calculate_weight(self, x, y, z, freq):
         if x == y and y == z:
             return freq[x] * (freq[x] - 1) * (freq[x] - 2) // 6
@@ -33,9 +34,9 @@ class Solution:
                 two_sum_combinations[x + y].add((maxval, minval))
         for z in unique_values:
             if target - z in two_sum_combinations:
-                for x, y in two_sum_combinations[target - z]:
+                for (x, y) in two_sum_combinations[target - z]:
                     if z <= y:
                         weight = self.calculate_weight(x, y, z, freq)
                         print((x, y, z, weight))
                         count += weight
-        return count % (10**9 + 7)
+        return count % (10 ** 9 + 7)

@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         states = [{0: 1}, {}]
         base = 0

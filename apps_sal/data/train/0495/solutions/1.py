@@ -1,4 +1,5 @@
 class Solution:
+
     def lastStoneWeightII(self, stones: List[int]) -> int:
         res = set()
         res.add(stones[0])

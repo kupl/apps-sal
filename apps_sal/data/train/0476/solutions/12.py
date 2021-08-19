@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def carFleet(self, D: int, P: List[int], S: List[int]) -> int:
         T = [(D - P[i]) / S[i] for i in range(len(P))]
         sortedIdx = sorted(list(range(len(P))), key=lambda x: P[x])

@@ -1,5 +1,5 @@
 def isPrimes(n):
-    return n > 1 and all(n % d > 0 for d in range(2, int(sqrt(n)) + 1))
+    return n > 1 and all((n % d > 0 for d in range(2, int(sqrt(n)) + 1)))
 
 
 def reverse(x):
@@ -7,6 +7,7 @@ def reverse(x):
 
 
 class Solution:
+
     def primePalindrome(self, N: int) -> int:
         if N >= 9989900:
             return 100030001

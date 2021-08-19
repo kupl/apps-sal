@@ -1,5 +1,7 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
+
         def last_not_conflict(jobs, m):
             for j in range(m - 1, -1, -1):
                 if jobs[j][1] <= jobs[m][0]:
@@ -18,7 +20,6 @@ class Solution:
             exclude = recursive(jobs, l - 1)
             dp[l] = max(include, exclude)
             return dp[l]
-
         n = len(startTime)
         jobs = [[startTime[i], endTime[i], profit[i]] for i in range(n)]
         jobs.sort(key=lambda x: x[1])

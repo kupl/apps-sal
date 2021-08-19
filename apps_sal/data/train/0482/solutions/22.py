@@ -1,6 +1,7 @@
 class Solution:
+
     def mctFromLeafValues(self, arr: List[int]) -> int:
-        maximum = [[0 for i in range(len(arr))]for j in range(len(arr))]
+        maximum = [[0 for i in range(len(arr))] for j in range(len(arr))]
         for i in range(len(arr)):
             localMaximum = -math.inf
             for j in range(i, len(arr)):
@@ -16,5 +17,5 @@ class Solution:
                     dp[left][right] = arr[left] * arr[right]
                 else:
                     for k in range(left, right):
-                        dp[left][right] = min(dp[left][right], dp[left][k] + dp[k + 1][right] + (maximum[left][k] * maximum[k + 1][right]))
+                        dp[left][right] = min(dp[left][right], dp[left][k] + dp[k + 1][right] + maximum[left][k] * maximum[k + 1][right])
         return dp[0][len(arr) - 1]

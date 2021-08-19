@@ -1,4 +1,5 @@
 class Solution:
+
     def maxArea(self, height):
         """
         :type height: List[int]
@@ -34,5 +35,4 @@ class Solution:
                     break
             else:
                 left_idx += 1
-
         return area

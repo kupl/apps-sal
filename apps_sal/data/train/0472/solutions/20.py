@@ -1,4 +1,5 @@
 class Solution:
+
     def recursion(self, arr, index, s):
         if (index < 0) | (index >= len(arr)):
             return False

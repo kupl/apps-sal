@@ -1,4 +1,5 @@
 class Solution:
+
     def minNumberOperations(self, target: List[int]) -> int:
         num_increments = 0
         prev = 0

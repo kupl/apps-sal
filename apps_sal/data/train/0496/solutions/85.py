@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         res = need = 0
         for i in sorted(A):

@@ -2,6 +2,7 @@ from heapq import heappop, heappush, heapify
 
 
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         li = []
         A.sort()

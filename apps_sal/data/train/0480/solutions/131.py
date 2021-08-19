@@ -1,9 +1,10 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         arrLen = min(steps + 1, arrLen)
         num = [0 for i in range(arrLen)]
         num[0] = 1
-        modulo = 10**9 + 7
+        modulo = 10 ** 9 + 7
         for i in range(steps):
             newnum = [num[i] for i in range(arrLen)]
             for i in range(arrLen):

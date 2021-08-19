@@ -1,6 +1,7 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
-        M = (10**9) + 7
+        M = 10 ** 9 + 7
 
         @lru_cache(None)
         def help(s, i):

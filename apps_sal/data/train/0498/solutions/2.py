@@ -1,4 +1,5 @@
 class Solution:
+
     def rob(self, nums):
         """
         :type nums: List[int]
@@ -12,8 +13,8 @@ class Solution:
             return max(nums)
 
         def rob_line(lst):
-            last, now = 0, 0
+            (last, now) = (0, 0)
             for i in lst:
-                last, now = now, max(now, last + i)
+                (last, now) = (now, max(now, last + i))
             return now
         return max(rob_line(nums[:-1]), rob_line(nums[1:]))

@@ -1,4 +1,5 @@
 class Solution:
+
     def strWithout3a3b(self, A: int, B: int) -> str:
         if A >= 2 * B:
             return 'aab' * B + 'a' * (A - 2 * B)

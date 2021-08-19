@@ -1,5 +1,7 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
+
         @lru_cache(None)
         def helper(i, steps):
             if steps == 0:
@@ -12,6 +14,6 @@ class Solution:
                     result += helper(i + 1, steps - 1)
                 if i > 0:
                     result += helper(i - 1, steps - 1)
-                return result % 1_000_000_007
-        mod = 1_000_000_007
+                return result % 1000000007
+        mod = 1000000007
         return helper(0, steps)

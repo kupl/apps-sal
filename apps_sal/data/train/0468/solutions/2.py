@@ -1,4 +1,5 @@
 class Solution:
+
     def fractionToDecimal(self, numerator, denominator):
         """
         :type numerator: int
@@ -8,7 +9,7 @@ class Solution:
         sign = 0
         if numerator * denominator < 0:
             sign = -1
-        numerator, denominator = abs(numerator), abs(denominator)
+        (numerator, denominator) = (abs(numerator), abs(denominator))
         n = numerator
         s = ''
         if n > denominator:
@@ -34,5 +35,4 @@ class Solution:
                 t.append(x)
         if x in t:
             s1 = s1[:t.index(x)] + '(' + s1[t.index(x):] + ')'
-
         return s + s1

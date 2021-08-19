@@ -1,4 +1,5 @@
 class Solution:
+
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         self.visited = []
         self.dfs(rooms, 0)

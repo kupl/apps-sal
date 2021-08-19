@@ -1,7 +1,7 @@
 class Solution:
-    def numWays(self, steps: int, n: int) -> int:
 
-        MOD = 10**9 + 7
+    def numWays(self, steps: int, n: int) -> int:
+        MOD = 10 ** 9 + 7
 
         @lru_cache(None)
         def calculate(pos, steps):
@@ -13,5 +13,4 @@ class Solution:
                 return 1
             steps -= 1
             return (calculate(pos + 1, steps) + calculate(pos - 1, steps) + calculate(pos, steps)) % MOD
-
         return calculate(0, steps)

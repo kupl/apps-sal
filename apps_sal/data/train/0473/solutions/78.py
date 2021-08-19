@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         n = len(arr)
         ps = [0] * (n + 1)

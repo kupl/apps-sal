@@ -1,4 +1,5 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         tree = {}
         notroots = set()
@@ -29,7 +30,6 @@ class Solution:
                 if not helper(child):
                     return False
             return True
-
         path = set()
         for i in range(n):
             if i not in notroots:

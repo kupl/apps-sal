@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         preXor = [0] * (len(arr) + 1)
         preXor[0] = arr[0]

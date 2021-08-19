@@ -1,4 +1,5 @@
 class Solution:
+
     def threeSumClosest(self, nums, target):
         res = 0
         nlen = len(nums)
@@ -6,7 +7,6 @@ class Solution:
             for num in nums:
                 res += num
             return res
-
         lastdiff = sys.maxsize
         previous = None
         nums = sorted(nums)
@@ -18,10 +18,9 @@ class Solution:
             j = nlen - 1
             previous = num
             cur_sum = num
-
             while i < j:
                 diff = 0
-                cur_sum += (nums[i] + nums[j])
+                cur_sum += nums[i] + nums[j]
                 if cur_sum == target:
                     return cur_sum
                 if cur_sum < target:
@@ -34,5 +33,4 @@ class Solution:
                     lastdiff = diff
                     res = cur_sum
                 cur_sum = num
-
         return res

@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, count):
         self.components = count
         self.parent = [i for i in range(count)]
@@ -15,7 +16,7 @@ class DSU:
         return root
 
     def union(self, x, y):
-        r1, r2 = self.find(x), self.find(y)
+        (r1, r2) = (self.find(x), self.find(y))
         if r1 == r2:
             return False
         if self.size[r1] < self.size[r2]:
@@ -29,15 +30,15 @@ class DSU:
 
 
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         dsu = DSU(n)
-        for i, left in enumerate(leftChild):
+        for (i, left) in enumerate(leftChild):
             if left != -1:
                 if not dsu.union(i, left):
                     return False
-        for i, right in enumerate(rightChild):
+        for (i, right) in enumerate(rightChild):
             if right != -1:
                 if not dsu.union(i, right):
                     return False
-
         return dsu.components == 1

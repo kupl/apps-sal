@@ -1,5 +1,7 @@
 class Solution:
+
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
+
         def dfs(node, visited):
             if node in visited:
                 return

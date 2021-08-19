@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         scan = [0 for i in arr]
         scan[0] = arr[0]

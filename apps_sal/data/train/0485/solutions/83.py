@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         flip_ends = deque()
         count = 0
@@ -8,11 +9,8 @@ class Solution:
             val = (bit + len(flip_ends)) % 2
             if val == 1:
                 continue
-
             if idx + K > len(A):
                 return -1
-
             count += 1
             flip_ends.append(idx + K)
-
         return count

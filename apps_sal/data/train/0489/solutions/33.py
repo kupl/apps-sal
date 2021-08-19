@@ -1,7 +1,8 @@
 class Solution:
+
     def maxWidthRamp(self, A: List[int]) -> int:
-        left = [A[0], ]
-        right = [A[-1], ]
+        left = [A[0]]
+        right = [A[-1]]
         for i in range(1, len(A)):
             left.append(min(A[i], left[i - 1]))
             right.append(max(A[len(A) - 1 - i], right[-1]))

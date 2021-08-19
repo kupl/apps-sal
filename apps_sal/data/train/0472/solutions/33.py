@@ -1,9 +1,9 @@
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         adj = {i: [] for i in range(len(arr))}
         target = {}
-
-        for idx, jump in enumerate(arr):
+        for (idx, jump) in enumerate(arr):
             choice_a = idx - jump
             choice_b = idx + jump
             if choice_a >= 0 and choice_a < len(arr):

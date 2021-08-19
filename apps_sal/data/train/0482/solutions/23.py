@@ -1,4 +1,5 @@
 class Solution:
+
     def mctFromLeafValues(self, arr: List[int]) -> int:
         if not arr:
             return 0
@@ -9,7 +10,6 @@ class Solution:
         for i in range(n):
             dp[i][i] = 0
             maxi[i][i] = arr[i]
-
         for l in range(1, n + 1):
             for i in range(n - l + 1):
                 j = i + l - 1

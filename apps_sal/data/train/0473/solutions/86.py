@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         n = len(arr)
         c = 0
@@ -8,5 +9,5 @@ class Solution:
             for j in range(i + 1, n):
                 xor ^= arr[j]
                 if xor == 0:
-                    c += (j - i)
+                    c += j - i
         return c

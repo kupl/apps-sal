@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         mod = 10 ** 9 + 7
         real_len = min(steps, arrLen) + 2
@@ -12,5 +13,4 @@ class Solution:
                     if ii >= 0 and ii <= arrLen - 1:
                         f2[i] += f1[ii] % mod
             f1 = f2.copy()
-
         return f1[0] % mod

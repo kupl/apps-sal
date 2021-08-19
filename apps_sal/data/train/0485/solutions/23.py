@@ -1,6 +1,7 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
-        cur, res, n = 0, 0, len(A)
+        (cur, res, n) = (0, 0, len(A))
         for i in range(len(A)):
             if i >= K and A[i - K] > 1:
                 A[i - K] -= 2

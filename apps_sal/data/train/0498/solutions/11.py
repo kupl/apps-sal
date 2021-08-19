@@ -1,4 +1,5 @@
 class Solution:
+
     def rob(self, nums):
         """
         :type nums: List[int]
@@ -13,7 +14,6 @@ class Solution:
             steal = 0
             cool = 0
             for num in nums:
-                steal, cool = cool, max(cool, steal + num)
+                (steal, cool) = (cool, max(cool, steal + num))
             return max(steal, cool)
-
         return max(helper(nums[:-1]), helper(nums[1:]))

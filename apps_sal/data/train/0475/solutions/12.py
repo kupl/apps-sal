@@ -1,6 +1,7 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
-        N = 10**9 + 7
+        N = 10 ** 9 + 7
         pre = list(itertools.accumulate(nums))
         a = []
         for i in range(n):

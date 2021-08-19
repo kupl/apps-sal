@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
         s = [0]
         for _ in range(n - 1):

@@ -1,4 +1,5 @@
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         n = len(arr)
         graph = collections.defaultdict(set)
@@ -8,10 +9,8 @@ class Solution:
             if i - arr[i] >= 0:
                 graph[i].add(i - arr[i])
         end = set([i for i in range(n) if arr[i] == 0])
-
         q = [start]
         visited = set([start])
-
         while q:
             x = q.pop(0)
             for i in graph[x]:
@@ -20,5 +19,4 @@ class Solution:
                 if i not in visited:
                     visited.add(i)
                     q.append(i)
-
         return False

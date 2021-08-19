@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         import numpy as np
         Anp = np.array(A).astype(bool)

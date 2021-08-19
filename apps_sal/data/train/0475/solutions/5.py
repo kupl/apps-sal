@@ -1,4 +1,5 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         heap = []
         prefix = [0] * (n + 1)
@@ -11,5 +12,5 @@ class Solution:
         for i in range(left - 1):
             heapq.heappop(heap)
         for i in range(right - left + 1):
-            res = (res + heapq.heappop(heap)) % (10**9 + 7)
+            res = (res + heapq.heappop(heap)) % (10 ** 9 + 7)
         return res

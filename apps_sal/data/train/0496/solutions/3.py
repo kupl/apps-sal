@@ -1,8 +1,8 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         count = collections.Counter(A)
         taken = []
-
         ans = 0
         for x in range(60000):
             if count[x] >= 2:

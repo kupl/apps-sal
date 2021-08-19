@@ -1,4 +1,5 @@
 class Solution:
+
     def maxArea(self, height):
         """
         :type height: List[int]
@@ -7,14 +8,12 @@ class Solution:
         idea:
         Shorter coordinate determines the water size
         """
-
         if len(height) < 2:
             return False
         if len(height) == 2:
             return min(height[0], height[1])
-
         current_highest = 0
-        i, j = 0, len(height) - 1
+        (i, j) = (0, len(height) - 1)
         while i < j:
             left = height[i]
             right = height[j]

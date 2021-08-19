@@ -1,4 +1,5 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         temp = []
         for i in range(n):
@@ -7,5 +8,5 @@ class Solution:
                 summ += j
                 temp.append(summ)
         temp.sort()
-        result = int(sum(temp[left - 1:right]) % (10**9 + 7))
+        result = int(sum(temp[left - 1:right]) % (10 ** 9 + 7))
         return result

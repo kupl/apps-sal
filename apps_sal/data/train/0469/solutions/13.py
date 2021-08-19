@@ -1,6 +1,6 @@
 class Solution:
-    def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
 
+    def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         parent = {}
         for i in range(n):
             if leftChild[i] != -1:
@@ -11,7 +11,6 @@ class Solution:
                 if rightChild[i] in parent:
                     return False
                 parent[rightChild[i]] = i
-
         if len(parent) != n - 1:
             return False
         f = {}

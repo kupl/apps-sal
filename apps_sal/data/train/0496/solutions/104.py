@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         count_for_val = defaultdict(lambda: 0)
         dups = set()

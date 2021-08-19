@@ -17,11 +17,10 @@ def numWaysHelper(steps, arrLen, position):
             return 1
         return 0
     big_num = 10 ** 9 + 7
-    return (numWaysHelper(steps - 1, arrLen, position - 1) +
-            numWaysHelper(steps - 1, arrLen, position) +
-            numWaysHelper(steps - 1, arrLen, position + 1)) % big_num
+    return (numWaysHelper(steps - 1, arrLen, position - 1) + numWaysHelper(steps - 1, arrLen, position) + numWaysHelper(steps - 1, arrLen, position + 1)) % big_num
 
 
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         return numWaysHelper(steps, arrLen, 0)

@@ -1,4 +1,5 @@
 class Solution:
+
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         ind = sorted(range(len(position)), key=lambda x: position[x])
         print(ind)

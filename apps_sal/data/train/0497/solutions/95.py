@@ -1,8 +1,9 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         n = len(profit)
         schedule = [(startTime[i], endTime[i], profit[i]) for i in range(len(startTime))]
-        schedule.sort(key=lambda x: (x[1]))
+        schedule.sort(key=lambda x: x[1])
         dp = [0] * (n + 1)
         dp[0] = 0
         p = [0] * (n + 1)
@@ -17,7 +18,7 @@ class Solution:
         def bst(bs, x):
             h = len(bs) - 1
             l = 0
-            while(l <= h):
+            while l <= h:
                 m = (l + h) // 2
                 if bs[m] == x:
                     return m + 1

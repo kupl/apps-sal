@@ -1,6 +1,7 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
-        sumArr, prev = [], []
+        (sumArr, prev) = ([], [])
         for num in nums:
             sumArr.append(num)
             temp = [num]
@@ -9,4 +10,4 @@ class Solution:
                 temp.append(num + prev[i])
             prev = temp
         sumArr.sort()
-        return sum(sumArr[i] for i in range(left - 1, right)) % (10**9 + 7)
+        return sum((sumArr[i] for i in range(left - 1, right))) % (10 ** 9 + 7)

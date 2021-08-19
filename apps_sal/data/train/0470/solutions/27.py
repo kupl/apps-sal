@@ -1,4 +1,5 @@
 class Solution:
+
     def threeSumMulti(self, A: List[int], target: int) -> int:
         A.sort()
         N = len(A)
@@ -8,7 +9,7 @@ class Solution:
             two_sum_target = target - A[i]
             counts[A[i]] -= 1
             ans += self.two_sum(A, i + 1, two_sum_target, counts)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)
 
     def two_sum(self, A, i, target, counts):
         j = len(A) - 1

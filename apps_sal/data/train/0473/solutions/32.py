@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         from collections import defaultdict as dd
         n = len(arr)
@@ -16,6 +17,6 @@ class Solution:
                 map[dp[j][i - 1]] += 1
             for j in range(i, n):
                 cnt += map[dp[i][j]]
-                if(map[dp[i][j]] == 0):
+                if map[dp[i][j]] == 0:
                     del map[dp[i][j]]
         return cnt

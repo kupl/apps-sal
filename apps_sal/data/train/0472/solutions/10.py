@@ -1,10 +1,10 @@
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         visited = []
         if arr[start] == 0:
             return True
         currNodes = [start]
-
         while len(visited) < len(arr):
             temp = []
             for i in currNodes:

@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         arrLen = min(steps // 2 + 1, arrLen)
         ans = [0] * arrLen
@@ -13,4 +14,4 @@ class Solution:
                     tmp += ans[j + 1]
                 new_ans.append(tmp)
             ans = new_ans
-        return ans[0] % (10**9 + 7)
+        return ans[0] % (10 ** 9 + 7)

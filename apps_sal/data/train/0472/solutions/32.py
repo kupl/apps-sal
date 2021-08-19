@@ -1,4 +1,5 @@
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         seen = set()
 
@@ -9,7 +10,6 @@ class Solution:
                 return False
             if arr[ix] == 0:
                 return True
-
             seen.add(ix)
             if canReachRec(ix + arr[ix]):
                 return True

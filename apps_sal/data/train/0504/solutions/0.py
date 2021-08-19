@@ -1,6 +1,6 @@
 class Solution:
-    def reverseParentheses(self, s: str) -> str:
 
+    def reverseParentheses(self, s: str) -> str:
         stack = []
         curr = ''
         for c in s:

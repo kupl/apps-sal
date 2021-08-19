@@ -1,5 +1,7 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
+
         def bfs(n):
             if n not in self.remainingNodes:
                 self.isValid = False
@@ -23,10 +25,8 @@ class Solution:
                 for parent in parents[node]:
                     if parent not in parents:
                         return parent
-
         nodes = collections.defaultdict(list)
         parents = collections.defaultdict(list)
-
         for i in range(len(leftChild)):
             if leftChild[i] != -1:
                 nodes[i].append(leftChild[i])
@@ -34,9 +34,8 @@ class Solution:
             if rightChild[i] != -1:
                 nodes[i].append(rightChild[i])
                 parents[rightChild[i]].append(i)
-
         self.isValid = True
-        self.remainingNodes = set(i for i in range(n))
+        self.remainingNodes = set((i for i in range(n)))
         root = findRoot()
         bfs(root)
-        return self.isValid and not self.remainingNodes
+        return self.isValid and (not self.remainingNodes)

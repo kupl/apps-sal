@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         cur = res = 0
         for i in range(len(A)):
@@ -8,5 +9,5 @@ class Solution:
                 if i + K > len(A):
                     return -1
                 A[i] = 2
-                cur, res = cur + 1, res + 1
+                (cur, res) = (cur + 1, res + 1)
         return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         n = len(A)
         flips = [0] * n
@@ -7,8 +8,7 @@ class Solution:
 
         def mapping(a: int, flip: int) -> int:
             return 1 - a if flip % 2 == 1 else a
-
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             flip += flips[i]
             if mapping(a, flip) == 0:
                 if i + K - 1 < n:

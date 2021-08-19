@@ -1,7 +1,7 @@
 import functools
 
 
-@functools.lru_cache(maxsize=10**7 + 1)
+@functools.lru_cache(maxsize=10 ** 7 + 1)
 def count(curr, maxpos, steps, mod):
     if curr < 0:
         return 0
@@ -17,7 +17,8 @@ def count(curr, maxpos, steps, mod):
 
 
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         curr = 0
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         return count(curr, arrLen, steps, mod)

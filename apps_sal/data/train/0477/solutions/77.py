@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
         m = 2 ** n - 1
         if k == 1 or 0 < m - k < 4:

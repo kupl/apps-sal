@@ -2,10 +2,11 @@ import heapq
 
 
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         stack = []
         sub_nums = []
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             tmp_stack = []
             if i == 0:
                 stack.append(num)

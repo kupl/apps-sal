@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         n = len(A)
         ans = 0
@@ -9,7 +10,7 @@ class Solution:
             if A[i] > 5:
                 m = True
                 A[i] -= addon
-            if (flips % 2 == 0 and A[i] == 0) or (flips % 2 != 0 and A[i] == 1):
+            if flips % 2 == 0 and A[i] == 0 or (flips % 2 != 0 and A[i] == 1):
                 ans += 1
                 if i + K > n:
                     return -1

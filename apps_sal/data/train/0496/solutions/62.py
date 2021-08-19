@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         if not A:
             return 0

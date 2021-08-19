@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parents = list(range(n))
         self.count = n
@@ -17,18 +18,16 @@ class UnionFind:
 
 
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         uf = UnionFind(n)
         indegree = [0] * n
-
-        for parent, node in enumerate(zip(leftChild, rightChild)):
-            l, r = node
+        for (parent, node) in enumerate(zip(leftChild, rightChild)):
+            (l, r) = node
             if l != -1:
                 indegree[l] += 1
                 uf.union(l, parent)
-
             if r != -1:
                 indegree[r] += 1
                 uf.union(r, parent)
-
         return sum(indegree) == n - 1 and uf.count == 1

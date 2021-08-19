@@ -1,4 +1,5 @@
 class Solution:
+
     def minNumberOperations(self, target: List[int]) -> int:
         ans = target[0]
         d = 0
@@ -11,7 +12,7 @@ class Solution:
                     d = -1
                 if d == 1:
                     d = -1
-                    ans += (target[i - 1] - base)
+                    ans += target[i - 1] - base
             elif target[i] > target[i - 1]:
                 if d == 0:
                     d = 1
@@ -19,5 +20,5 @@ class Solution:
                     d = 1
                     base = target[i - 1]
         if d == 1:
-            ans += (target[-1] - base)
+            ans += target[-1] - base
         return ans

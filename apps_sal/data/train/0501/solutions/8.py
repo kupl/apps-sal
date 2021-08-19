@@ -1,12 +1,13 @@
 class Solution:
+
     def shortestPalindrome(self, s):
         """
         :type s: str
         :rtype: str
         """
-        length, i = len(s), 0
+        (length, i) = (len(s), 0)
         for j in range(length - 1, -1, -1):
-            if (s[i] == s[j]):
+            if s[i] == s[j]:
                 i += 1
         if i == length:
             return s

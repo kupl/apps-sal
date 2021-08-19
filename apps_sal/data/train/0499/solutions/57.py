@@ -1,4 +1,5 @@
 class Solution:
+
     def minNumberOperations(self, target: List[int]) -> int:
         result = 0
         last = 0

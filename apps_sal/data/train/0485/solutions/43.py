@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         N = len(A)
         flipped = [0 for _ in range(N)]

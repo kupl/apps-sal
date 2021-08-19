@@ -3,6 +3,7 @@ from functools import reduce
 
 
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         if not arr:
             return False
@@ -10,18 +11,16 @@ class Solution:
             return True
 
         def add_edge(nodes, edge):
-            index, jump = edge
+            (index, jump) = edge
             if jump == 0:
                 nodes[index].append(index)
                 return nodes
-            if (back := index - jump) >= 0:
+            if (back := (index - jump)) >= 0:
                 nodes[index].append(back)
-            if (forw := index + jump) < len(arr):
+            if (forw := (index + jump)) < len(arr):
                 nodes[index].append(forw)
             return nodes
-
         edges = reduce(add_edge, enumerate(arr), defaultdict(list))
-
         q = deque([start])
         visited = {start}
         while q:

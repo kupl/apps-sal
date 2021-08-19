@@ -1,4 +1,5 @@
 class Solution:
+
     def singleNumber(self, nums):
         """
         :type nums: List[int]
@@ -6,5 +7,5 @@ class Solution:
         """
         a = b = 0
         for c in nums:
-            a, b = a & ~b & ~c | ~a & b & c, ~a & b & ~c | ~a & ~b & c
+            (a, b) = (a & ~b & ~c | ~a & b & c, ~a & b & ~c | ~a & ~b & c)
         return b

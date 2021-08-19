@@ -1,4 +1,5 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         s = []
         for i in range(n):
@@ -10,5 +11,5 @@ class Solution:
         res = 0
         s.sort()
         for i in range(left - 1, right):
-            res += (s[i] % mod)
+            res += s[i] % mod
         return res % mod

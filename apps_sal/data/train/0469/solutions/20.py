@@ -1,4 +1,5 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         graph = [set() for _ in range(n)]
         degree = [0] * n

@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     @staticmethod
     def binary_search(arr, i):
         lo = 0
@@ -18,9 +19,7 @@ class Solution:
         mapping = collections.defaultdict(list)
         for i in range(len(startTime)):
             mapping[endTime[i]].append([startTime[i], profit[i]])
-
         tasks = sorted(list(mapping.items()), key=lambda x: x[0])
-
         dp = [[0, 0]]
         for group in tasks:
             for task in group[1]:

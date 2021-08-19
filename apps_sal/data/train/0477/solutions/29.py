@@ -1,5 +1,7 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
+
         def invert(bin):
             bin = list(bin)
             for i in range(len(bin)):

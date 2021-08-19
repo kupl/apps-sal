@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
         limit = Counter(letters)
         n = len(words)
@@ -23,7 +24,6 @@ class Solution:
                 else:
                     return 0
             return currscore
-
         for x in subsets:
             ans = max(ans, findscore(x))
         return ans

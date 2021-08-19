@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
 
         def reverseInvert(string: str) -> str:
@@ -16,5 +17,4 @@ class Solution:
                 return '0'
             prev = getNthSequence(n - 1)
             return prev + '1' + reverseInvert(prev)
-
         return getNthSequence(int(ceil(log2(k)) + 1))[k - 1]

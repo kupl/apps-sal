@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
         res = []
         i = 0
@@ -9,7 +10,6 @@ class Solution:
 
     def dfs(self, i, words, letters, score, current, res):
         res[0] = max(res[0], current)
-
         for index in range(i, len(words)):
             word = words[index]
             cnt = collections.Counter(word)
@@ -20,7 +20,6 @@ class Solution:
                     valid = False
                     break
                 temp += cnt[ch] * score[ord(ch) - ord('a')]
-
             if not valid:
                 continue
             else:

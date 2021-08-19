@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         memo = collections.defaultdict(int)
 
@@ -19,5 +20,4 @@ class Solution:
             res += dfs(index, curr + 1)
             memo[key] = res
             return res
-
         return dfs(0, 0) % (10 ** 9 + 7)

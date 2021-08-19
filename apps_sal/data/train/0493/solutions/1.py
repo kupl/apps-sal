@@ -1,4 +1,5 @@
 class Solution:
+
     def findTargetSumWays(self, nums, S):
         """
         :type nums: List[int]
@@ -6,7 +7,7 @@ class Solution:
         :rtype: int
         """
         total = sum(nums)
-        if total < S or (total + S) & 1:
+        if total < S or total + S & 1:
             return 0
         target = (S + total) // 2
         dp = [0] * (target + 1)

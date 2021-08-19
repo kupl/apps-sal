@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         jobs = [(startTime[i], endTime[i], profit[i]) for i in range(len(startTime))]
         jobs = sorted(jobs)
@@ -12,7 +13,7 @@ class Solution:
                 return 0
             if i == len(jobs) - 1:
                 return jobs[-1][2]
-            l, r = i + 1, len(jobs) - 1
+            (l, r) = (i + 1, len(jobs) - 1)
             j = l
             while l <= r:
                 m = (l + r) // 2
@@ -26,5 +27,4 @@ class Solution:
                     r = m - 1
                     j = m
             return max(jobs[i][2] + dp(j), dp(i + 1))
-
         return dp(0)

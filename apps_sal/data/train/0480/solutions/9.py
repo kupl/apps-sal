@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         right_most = min(steps + 1 // 2, arrLen)
         dp = [[0 for __ in range(right_most)] for _ in range(steps)]
@@ -13,4 +14,4 @@ class Solution:
                         dp[i][j] += dp[i - 1][j - 1]
                     if j < right_most - 1:
                         dp[i][j] += dp[i - 1][j + 1]
-        return dp[-1][0] % (10**9 + 7)
+        return dp[-1][0] % (10 ** 9 + 7)

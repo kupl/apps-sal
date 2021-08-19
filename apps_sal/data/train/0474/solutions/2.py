@@ -3,14 +3,14 @@ import copy
 
 
 class Solution:
+
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
+
         def score_of_word(w, score=score):
             ws = 0
             for c in w:
                 ws += score[ord(c) - 97]
-
             return ws
-
         letter_dict = defaultdict(int)
         for c in letters:
             letter_dict[c] += 1
@@ -23,10 +23,9 @@ class Solution:
 
         def is_word_exist_in_letter_dict(w, let_dict):
             wc = Counter(w)
-            for c, f in wc.items():
+            for (c, f) in wc.items():
                 if c not in let_dict or let_dict[c] < f:
                     return False
-
             return True
 
         def search_best_score(words, letter_dict, current_score=0):
@@ -40,7 +39,5 @@ class Solution:
                     score = search_best_score(words[i + 1:], copy_letter_dict, score)
                     if score > best_score:
                         best_score = score
-
             return best_score
-
         return search_best_score(words, letter_dict)

@@ -1,4 +1,5 @@
 class Solution:
+
     def singleNumber(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         if not nums:
             return 0
-
         seen = set([])
         counts = {}
         for num in nums:
@@ -15,9 +15,7 @@ class Solution:
             else:
                 counts[num] = 1
                 seen.add(num)
-
         for key in counts:
             if counts[key] == 1:
                 return key
-
         return 0

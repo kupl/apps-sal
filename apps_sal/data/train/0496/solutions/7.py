@@ -2,9 +2,10 @@ from collections import Counter
 
 
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         hm = dict(Counter(A))
-        stack = [k for k, v in list(hm.items()) if v > 1]
+        stack = [k for (k, v) in list(hm.items()) if v > 1]
         ans = 0
         while stack:
             k = stack.pop()
@@ -13,5 +14,4 @@ class Solution:
             hm[k] = 1
             if hm[k + 1] > 1:
                 stack.append(k + 1)
-
         return ans

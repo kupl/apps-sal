@@ -1,8 +1,8 @@
 class Solution:
-    def maxArea(self, height):
-        left, right = 0, len(height) - 1
-        area = 0
 
+    def maxArea(self, height):
+        (left, right) = (0, len(height) - 1)
+        area = 0
         while left < right:
             if height[left] <= height[right]:
                 h = height[left]
@@ -14,9 +14,5 @@ class Solution:
                 right -= 1
             if area < tmp:
                 area = tmp
-
         return area
-        """
-         :type height: List[int]
-         :rtype: int
-         """
+        '\n         :type height: List[int]\n         :rtype: int\n         '

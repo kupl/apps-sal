@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.n = n
         self.parent = [x for x in range(n)]
@@ -10,7 +11,7 @@ class DSU:
         return self.parent[x]
 
     def union(self, s, t):
-        sp, tp = self.find(s), self.find(t)
+        (sp, tp) = (self.find(s), self.find(t))
         if sp == tp:
             return False
         if self.rank[sp] > self.rank[tp]:
@@ -24,6 +25,7 @@ class DSU:
 
 
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         edges = set()
         net = DSU(n)

@@ -1,4 +1,5 @@
 class Solution:
+
     def minNumberOperations(self, A):
         res = pre = 0
         for a in A:

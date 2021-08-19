@@ -1,4 +1,5 @@
 class Solution:
+
     def int_to_bin(self, x):
         ret = ''
         if x == 0:

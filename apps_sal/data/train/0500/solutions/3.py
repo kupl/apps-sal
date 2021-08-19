@@ -1,4 +1,5 @@
 class Solution:
+
     def calculate(self, s):
         if not s:
             return 0
@@ -6,7 +7,7 @@ class Solution:
         stack = []
         num = 0
         sign = '+'
-        for idx, c in enumerate(s):
+        for (idx, c) in enumerate(s):
             if c.isdigit():
                 num = num * 10 + ord(c) - ord('0')
             if c in ['+', '-', '*', '/'] or idx == length - 1:
@@ -20,9 +21,5 @@ class Solution:
                     stack.append(int(stack.pop() / num))
                 sign = c
                 num = 0
-
         return sum(stack)
-        """
-         :type s: str
-         :rtype: int
-         """
+        '\n         :type s: str\n         :rtype: int\n         '

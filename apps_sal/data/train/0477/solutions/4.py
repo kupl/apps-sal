@@ -9,9 +9,10 @@ def reverse(m):
 
 
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
         s = '0'
-        while(n > 1):
+        while n > 1:
             t = reverse(s)
             s = s + '1' + t[::-1]
             n -= 1

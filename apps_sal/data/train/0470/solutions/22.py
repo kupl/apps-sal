@@ -1,10 +1,11 @@
 class Solution:
+
     def threeSumMulti(self, A: List[int], target: int) -> int:
         A.sort()
         leftDict = defaultdict(int)
         rightDict = Counter(A[1:])
         ALen = len(A)
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         leftDict[A[0]] += 1
         ans = 0
         for i in range(1, ALen - 1):

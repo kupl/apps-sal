@@ -17,10 +17,10 @@ class DS:
         return root
 
     def union(self, x, y):
-        rootX, rootY = self.query(x), self.query(y)
+        (rootX, rootY) = (self.query(x), self.query(y))
         if rootX != rootY:
             self.ccCt -= 1
-            szX, szY = self.sz[rootX], self.sz[rootY]
+            (szX, szY) = (self.sz[rootX], self.sz[rootY])
             if szX < szY:
                 self.sz[rootY] += szX
                 self.rt[rootX] = rootY
@@ -33,13 +33,14 @@ class DS:
 
 
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         ds = DS(n)
         edgeCt = 0
         for node in range(n):
-            l, r = leftChild[node], rightChild[node]
+            (l, r) = (leftChild[node], rightChild[node])
             for c in (l, r):
                 if c != -1:
                     edgeCt += 1
                     ds.union(node, c)
-        return (n - 1 == edgeCt) and ds.cc() == 1
+        return n - 1 == edgeCt and ds.cc() == 1

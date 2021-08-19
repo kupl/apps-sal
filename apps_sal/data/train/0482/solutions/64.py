@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.dict = {}
 
@@ -9,7 +10,7 @@ class Solution:
         if b - a == 1:
             self.dict[a, b] = 0
         if (a, b) not in self.dict:
-            low = 2**31
+            low = 2 ** 31
             for i in range(a + 1, b):
                 res = max(arr[a:i]) * max(arr[i:b]) + self.mctHelp(arr, a, i) + self.mctHelp(arr, i, b)
                 low = min(low, res)

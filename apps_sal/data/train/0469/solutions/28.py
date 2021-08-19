@@ -1,4 +1,5 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n, left, right):
         roots = {*range(n)}
         for x in left + right:
@@ -14,7 +15,7 @@ class Solution:
         while stk:
             node = stk.pop()
             k += 1
-            l, r = left[node], right[node]
+            (l, r) = (left[node], right[node])
             if l != -1:
                 stk.append(l)
             if r != -1:

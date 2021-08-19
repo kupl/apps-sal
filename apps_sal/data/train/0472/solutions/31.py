@@ -1,8 +1,8 @@
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         n = len(arr)
         q = [start]
-
         while q:
             node = q.pop(0)
             if arr[node] == 0:
@@ -13,5 +13,4 @@ class Solution:
                 if 0 <= i < n:
                     q.append(i)
             arr[node] = -1
-
         return False

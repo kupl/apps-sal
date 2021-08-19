@@ -1,4 +1,5 @@
 class Solution:
+
     def longestDecomposition(self, text: str) -> int:
         count = 0
         i = 0
