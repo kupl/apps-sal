@@ -6,10 +6,11 @@ class MajorityChecker:
         self.seg = [None] * self.max_len
         self.build(1, 0, self.N - 1, arr)
         self.indices = defaultdict(list)
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             self.indices[a].append(i)
 
     def query(self, left: int, right: int, threshold: int) -> int:
+
         def bs(arr, l, r, target):
             while l <= r:
                 m = l + (r - l) // 2
@@ -18,10 +19,9 @@ class MajorityChecker:
                 else:
                     r = m - 1
             return r
-
         major = self.seg_query(1, 0, self.N - 1, left, right)[0]
         lst = self.indices[major]
-        l, r = bs(lst, 0, len(lst) - 1, left - 1), bs(lst, 0, len(lst) - 1, right)
+        (l, r) = (bs(lst, 0, len(lst) - 1, left - 1), bs(lst, 0, len(lst) - 1, right))
         if r - l >= threshold:
             return major
         return -1
@@ -30,7 +30,6 @@ class MajorityChecker:
         if s == e:
             self.seg[idx] = [arr[s], 1]
             return
-
         m = s + (e - s) // 2
         self.build(2 * idx, s, m, arr)
         self.build(2 * idx + 1, m + 1, e, arr)
@@ -45,16 +44,11 @@ class MajorityChecker:
         return self.merge(self.seg_query(2 * idx, s, m, l, r), self.seg_query(2 * idx + 1, m + 1, e, l, r))
 
     def merge(self, A, B):
-        lv, lf = A
-        rv, rf = B
+        (lv, lf) = A
+        (rv, rf) = B
         if lv == rv:
             return [lv, lf + rf]
+        elif lf > rf:
+            return [lv, lf - rf]
         else:
-            if lf > rf:
-                return [lv, lf - rf]
-            else:
-                return [rv, rf - lf]
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)
+            return [rv, rf - lf]

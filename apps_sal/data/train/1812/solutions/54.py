@@ -10,7 +10,7 @@ class MajorityChecker:
     def query(self, left: int, right: int, threshold: int) -> int:
         maj = self.st.query_maj(left, right)
         if maj:
-            l, r = bisect.bisect_left(self.idxes[maj], left), bisect.bisect(self.idxes[maj], right)
+            (l, r) = (bisect.bisect_left(self.idxes[maj], left), bisect.bisect(self.idxes[maj], right))
             if r - l >= threshold:
                 return maj
         return -1
@@ -28,9 +28,9 @@ class SegmentTree:
 class Node:
 
     def __init__(self, lo, hi, arr, idxes):
-        self.lo, self.hi = lo, hi
-        self.lc, self.rc = None, None
-        self.arr, self.idxes = arr, idxes
+        (self.lo, self.hi) = (lo, hi)
+        (self.lc, self.rc) = (None, None)
+        (self.arr, self.idxes) = (arr, idxes)
         self.maj = None
 
     def query_maj(self, lo, hi):
@@ -38,20 +38,17 @@ class Node:
         def is_maj(n):
             if not n:
                 return False
-
             l = bisect.bisect_left(self.idxes[n], lo)
             r = bisect.bisect(self.idxes[n], hi)
-            return (r - l << 1) > hi - lo
-
+            return r - l << 1 > hi - lo
         if lo > hi or self.lo > hi or self.hi < lo:
             return None
-
         if lo <= self.lo <= self.hi <= hi:
             if not self.maj:
                 if self.lo == self.hi:
                     self.maj = self.arr[self.lo]
                 else:
-                    mi = (self.lo + self.hi) >> 1
+                    mi = self.lo + self.hi >> 1
                     if not self.lc:
                         self.lc = Node(self.lo, mi, self.arr, self.idxes)
                     if not self.rc:
@@ -60,17 +57,11 @@ class Node:
                     r = self.rc.query_maj(mi + 1, self.hi)
                     self.maj = l if is_maj(l) else r if is_maj(r) else -1
             return self.maj
-
-        mi = (self.lo + self.hi) >> 1
+        mi = self.lo + self.hi >> 1
         if not self.lc:
             self.lc = Node(self.lo, mi, self.arr, self.idxes)
         if not self.rc:
             self.rc = Node(mi + 1, self.hi, self.arr, self.idxes)
-
         l = self.lc.query_maj(lo, hi)
         r = self.rc.query_maj(lo, hi)
         return l if is_maj(l) else r if is_maj(r) else -1
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

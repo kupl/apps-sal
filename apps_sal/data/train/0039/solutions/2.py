@@ -1,8 +1,5 @@
-# from collections import defaultdict
-
 for _ in range(int(input())):
-    # n = int(input())
-    a, b, p = map(int, input().split())
+    (a, b, p) = map(int, input().split())
     s = input()
     n = len(s)
     money = [0] * n
@@ -15,7 +12,6 @@ for _ in range(int(input())):
         else:
             money[i] = money[i + 1] + b
         last = s[i]
-
     for i in range(1, n + 1):
         if money[i - 1] <= p:
             print(i)

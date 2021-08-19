@@ -1,6 +1,8 @@
-# from collections import deque
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 def d(x):
@@ -18,7 +20,7 @@ def f(j):
 
 
 for i in range(int(input())):
-    a, b, p = map(int, input().split())
+    (a, b, p) = map(int, input().split())
     s = list(input())
     l = -1
     r = len(s) - 1

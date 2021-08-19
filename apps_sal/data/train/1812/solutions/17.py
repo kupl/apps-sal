@@ -2,7 +2,7 @@ class MajorityChecker:
 
     def __init__(self, arr: List[int]):
         self.loc = collections.defaultdict(list)
-        for i, n in enumerate(arr):
+        for (i, n) in enumerate(arr):
             self.loc[n].append(i)
         self.nums = sorted(list(self.loc.keys()), key=lambda n: len(self.loc[n]), reverse=True)
 
@@ -10,12 +10,7 @@ class MajorityChecker:
         for n in self.nums:
             if len(self.loc[n]) < threshold:
                 return -1
-            l, r = bisect.bisect_left(self.loc[n], left), bisect.bisect_right(self.loc[n], right)
+            (l, r) = (bisect.bisect_left(self.loc[n], left), bisect.bisect_right(self.loc[n], right))
             if r - l >= threshold:
                 return n
         return -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

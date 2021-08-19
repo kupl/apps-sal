@@ -2,7 +2,7 @@ class MajorityChecker:
 
     def __init__(self, arr: List[int]):
         self.x_idxs = x_idxs = defaultdict(list)
-        for i, x in enumerate(arr):
+        for (i, x) in enumerate(arr):
             x_idxs[x].append(i)
         self.a = arr
         self.n = n = len(arr)
@@ -10,7 +10,7 @@ class MajorityChecker:
         self.build_tree(1, 0, n - 1)
 
     def build_tree(self, v, l, r):
-        a, tree = self.a, self.tree
+        (a, tree) = (self.a, self.tree)
         if l == r:
             tree[v] = a[l]
             return
@@ -30,10 +30,10 @@ class MajorityChecker:
     def query_tree(self, v, l, r, queryl, queryr):
         tree = self.tree
         if queryr < l or r < queryl:
-            return -1, -1
+            return (-1, -1)
         if queryl <= l and r <= queryr:
             if tree[v] == -1:
-                return -1, -1
+                return (-1, -1)
             x = tree[v]
             xcount = self.count(x, queryl, queryr)
             return (x, xcount) if xcount * 2 > queryr - queryl + 1 else (-1, -1)
@@ -44,15 +44,10 @@ class MajorityChecker:
         res_right = self.query_tree(2 * v + 1, mid + 1, r, queryl, queryr)
         if res_right[0] > -1:
             return res_right
-        return -1, -1
+        return (-1, -1)
 
     def query(self, left, right, threshold):
         res = self.query_tree(1, 0, self.n - 1, left, right)
         if res[1] >= threshold:
             return res[0]
         return -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

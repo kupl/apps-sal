@@ -1,7 +1,7 @@
 from math import inf
 t = int(input())
 for q in range(t):
-    a, b, p = [int(i) for i in input().split()]
+    (a, b, p) = [int(i) for i in input().split()]
     s = input()
     l = len(s)
     dp = [0] * l
@@ -12,12 +12,10 @@ for q in range(t):
     for i in range(l - 3, -1, -1):
         if s[i] == s[i + 1]:
             dp[i] = dp[i + 1]
+        elif s[i] == 'A':
+            dp[i] = dp[i + 1] + a
         else:
-            if s[i] == 'A':
-                dp[i] = dp[i + 1] + a
-            else:
-                dp[i] = dp[i + 1] + b
-    # print(dp)
+            dp[i] = dp[i + 1] + b
     for i in range(l):
         if p >= dp[i]:
             print(i + 1)

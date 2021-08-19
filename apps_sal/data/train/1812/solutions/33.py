@@ -5,9 +5,9 @@ class MajorityChecker(object):
 
     def __init__(self, A):
         B = defaultdict(list)
-        for idx, a in enumerate(A):
+        for (idx, a) in enumerate(A):
             B[a].append(idx)
-        self.A, self.B = A, B
+        (self.A, self.B) = (A, B)
 
     def query(self, left, right, threshold):
         ss = set()
@@ -23,8 +23,3 @@ class MajorityChecker(object):
                 if r - l >= threshold:
                     return a
         return -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

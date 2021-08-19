@@ -3,7 +3,7 @@ class MajorityChecker:
     def __init__(self, arr: List[int]):
         self.A = arr
         self.itemIdx = collections.defaultdict(list)
-        for i, x in enumerate(self.A):
+        for (i, x) in enumerate(self.A):
             self.itemIdx[x].append(i)
 
     def query(self, left: int, right: int, threshold: int) -> int:
@@ -14,8 +14,3 @@ class MajorityChecker:
             if r - l >= threshold:
                 return x
         return -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)
