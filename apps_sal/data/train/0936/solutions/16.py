@@ -1,6 +1,5 @@
-# cook your dish here
 t = int(input())
-while(t > 0):
+while t > 0:
     n = int(input())
     matrix = []
     for i in range(n):
@@ -12,12 +11,12 @@ while(t > 0):
             bool[i] = True
     count = 0
     k = n - 1
-    while(k >= 1):
+    while k >= 1:
         if bool[k] == False:
             count += 1
             for i in range(k + 1):
                 for j in range(i, k + 1):
-                    matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+                    (matrix[i][j], matrix[j][i]) = (matrix[j][i], matrix[i][j])
             for i in range(n):
                 if matrix[0][i] == i + 1:
                     bool[i] = True

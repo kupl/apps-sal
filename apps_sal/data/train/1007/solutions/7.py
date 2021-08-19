@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for t in range(int(input())):
     n = int(input())
@@ -11,7 +10,7 @@ for t in range(int(input())):
             z = i + 1
         else:
             continue
-    if(z > 1):
+    if z > 1:
         print(z)
     else:
         print(-1)

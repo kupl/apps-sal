@@ -1,6 +1,4 @@
-# cook your dish here
 import sys
-
 t = int(input().strip())
 for _ in range(t):
     n = int(input().strip())
@@ -19,10 +17,9 @@ for _ in range(t):
                 j -= 1
             else:
                 i -= 1
-            i, j = j, i
+            (i, j) = (j, i)
+        elif j > 0:
+            j -= 1
         else:
-            if j > 0:
-                j -= 1
-            else:
-                i -= 1
+            i -= 1
     print(counter)

@@ -1,6 +1,5 @@
-# cook your code here
 for _ in range(int(input())):
-    n, u, d = map(int, input().split())
+    (n, u, d) = map(int, input().split())
     H = list(map(int, input().split()))
     parachute = 1
     lenH = len(H)
@@ -8,7 +7,6 @@ for _ in range(int(input())):
         diff = 0
         if i == lenH - 1:
             break
-
         if H[i + 1] > H[i]:
             if H[i + 1] - H[i] > u:
                 break
@@ -19,5 +17,4 @@ for _ in range(int(input())):
                     continue
                 else:
                     break
-
     print(i + 1)

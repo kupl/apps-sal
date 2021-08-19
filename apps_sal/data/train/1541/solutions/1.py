@@ -1,5 +1,4 @@
-
-eps = 1e-8
+eps = 1e-08
 t = int(input())
 for ii in range(t):
     n = int(input())
@@ -13,18 +12,17 @@ for ii in range(t):
             greatest_time = min(greatest_time, (l[i] - b[i]) / v[i])
         elif v[i] < 0:
             greatest_time = min(greatest_time, -b[i] / v[i])
-    p = sum((b[i] - c[i]) ** 2 for i in range(n))
-    q = sum(2 * (b[i] - c[i]) * v[i] for i in range(n))
-    r = sum(vi ** 2 for vi in v)
-    def func(t): return p / t / t + q / t + r
-    # ternary search
+    p = sum(((b[i] - c[i]) ** 2 for i in range(n)))
+    q = sum((2 * (b[i] - c[i]) * v[i] for i in range(n)))
+    r = sum((vi ** 2 for vi in v))
+
+    def func(t):
+        return p / t / t + q / t + r
 
     def ternsearch():
-
         if b == c:
-            return(0)
-
-        lo, hi = 0, greatest_time
+            return 0
+        (lo, hi) = (0, greatest_time)
         while hi - lo > eps:
             d = (hi - lo) / 3
             m1 = lo + d
@@ -33,8 +31,6 @@ for ii in range(t):
                 hi = m2
             else:
                 lo = m1
-            # print(hi,lo)
-            # print(func(lo)**(0.5))
-        return max(0, func(lo))**(0.5)
+        return max(0, func(lo)) ** 0.5
     ans = ternsearch()
     print('%.12f' % (ans,))

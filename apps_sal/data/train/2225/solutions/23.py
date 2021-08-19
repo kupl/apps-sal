@@ -1,13 +1,12 @@
 def main():
-    N, L = map(int, input().split())
+    (N, L) = map(int, input().split())
     keys = []
     grundy_num = 0
     if N == 1:
-        print("Alice")
+        print('Alice')
         return
     for i in range(N):
         s = input()
-        # merge node:
         while len(s) > 0:
             if s[-1] == '1' and s[:-1] + '0' in keys:
                 keys.remove(s[:-1] + '0')
@@ -16,7 +15,7 @@ def main():
                 keys.remove(s[:-1] + '1')
                 s = s[:-1]
             else:
-                if s != "":
+                if s != '':
                     keys.append(s)
                 break
     if len(keys):
@@ -27,22 +26,21 @@ def main():
             keys.remove(j)
             temp_s = list(reversed(bin(L - len(j) + 1)))
             grundy_list.append(1 << temp_s.index('1'))
-            if j[:-1] != "":
+            if j[:-1] != '':
                 keys.append(j[:-1])
             j = j[:-1]
-            # merge node
             while len(j) > 0:
                 if j[-1] == '1' and j[:-1] + '0' in keys:
                     keys.remove(j[:-1] + '0')
                     keys.remove(j)
                     j = j[:-1]
-                    if j != "":
+                    if j != '':
                         keys.append(j)
                 elif j[-1] == '0' and j[:-1] + '1' in keys:
                     keys.remove(j[:-1] + '1')
                     keys.remove(j)
                     j = j[:-1]
-                    if j != "":
+                    if j != '':
                         keys.append(j)
                 else:
                     break
@@ -50,7 +48,7 @@ def main():
         grundy_num = grundy_list[0]
         for i in range(1, len(grundy_list)):
             grundy_num = grundy_num ^ grundy_list[i]
-    print("Bob" if grundy_num == 0 else "Alice")
+    print('Bob' if grundy_num == 0 else 'Alice')
 
 
 def __starting_point():

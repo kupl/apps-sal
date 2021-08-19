@@ -2,11 +2,10 @@ def main():
     import sys
     from collections import defaultdict
     input = sys.stdin.readline
-
-    mod = 10**10 + 7
-    mod2 = 10**10 + 9
+    mod = 10 ** 10 + 7
+    mod2 = 10 ** 10 + 9
     mod3 = 998244353
-    N, L = list(map(int, input().split()))
+    (N, L) = list(map(int, input().split()))
     dic = defaultdict(int)
     dic2 = defaultdict(int)
     dic3 = defaultdict(int)
@@ -36,13 +35,12 @@ def main():
             h_list.append(h)
             h2_list.append(h2)
             h3_list.append(h3)
-
     g = 0
     seen = defaultdict(int)
     seen2 = defaultdict(int)
     seen3 = defaultdict(int)
     for i in range(M):
-        s, s2, s3 = h_list[i], h2_list[i], h3_list[i]
+        (s, s2, s3) = (h_list[i], h2_list[i], h3_list[i])
         if seen[s] and seen2[s2] and seen3[s3]:
             continue
         t = pair[s]
@@ -52,24 +50,15 @@ def main():
             p = [dic[s], dic2[s2], dic3[s3]]
             p.sort()
             tmp = L - p[1] + 1
-            '''
-            if not seen[s]:
-                tmp = L - dic[s] + 1
-            elif not seen[s2]:
-                tmp = L - dic2[s2] + 1
-            else:
-                tmp = L - dic3[s3] + 1
-            '''
+            '\n            if not seen[s]:\n                tmp = L - dic[s] + 1\n            elif not seen[s2]:\n                tmp = L - dic2[s2] + 1\n            else:\n                tmp = L - dic3[s3] + 1\n            '
             cnt = 0
             while tmp % 2 == 0:
                 tmp //= 2
                 cnt += 1
-            g ^= (2**cnt)
-            #print(g, s, s2, t, t2, dic[t], dic2[t2])
+            g ^= 2 ** cnt
         seen[s] = 1
         seen2[s2] = 1
         seen3[s3] = 1
-
     if g:
         print('Alice')
     else:

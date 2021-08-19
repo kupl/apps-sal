@@ -1,4 +1,5 @@
 class Solution:
+
     def canPartitionKSubsets(self, nums, k):
         """
         :type nums: List[int]
@@ -9,13 +10,10 @@ class Solution:
         if total % k != 0:
             return False
         target = total / k
-
         used = [False] * len(nums)
         nums = sorted(nums)
-        # print(nums)
 
         def check(nums, k, cur, pos):
-            # print(used, k, cur, pos)
             if k == 1:
                 return True
             for i in range(pos, -1, -1):

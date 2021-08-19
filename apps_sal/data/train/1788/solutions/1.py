@@ -3,6 +3,7 @@ import random
 
 
 def choose_move(game_state):
+
     def is_nim_sum_zero(nums):
         """
         Determines the "nim-sum" of the game. 
@@ -20,39 +21,24 @@ def choose_move(game_state):
         """
         to_add = []
         for num in nums:
-
             to_add.append(list(bin(num)[2:]))
-
         to_transpose = [b[::-1] for b in to_add]
         cols = [col for col in zip_longest(*to_transpose, fillvalue=0)]
-
         sum = 0
-
         for col in cols:
             if col.count('1') % 2 != 0:
                 return False
-
         return True
-
     non_empty_piles = [i for i in range(len(game_state)) if game_state[i] != 0]
-
     if is_nim_sum_zero(game_state):
-        # If nim-sum is 0 already, any move we do will give a non-zero nim-sum.
-        # We will not be able to win if our opponent is a perfect player.
-        # Return a random move.
         pile = random.choice(non_empty_piles)
         quant = random.choice(list(range(1, game_state[pile])) + 1)
-
     else:
-        # Otherwise, let's systematically try EVERY MOVE until we get a zero
-        # nim-sum!
         next_ply = list(game_state)
         pile_ind = 0
         pile = non_empty_piles[pile_ind]
         quant = 1
-
         next_ply[pile] = next_ply[pile] - quant
-
         while not is_nim_sum_zero(next_ply):
             next_ply = list(game_state)
             if quant < next_ply[pile]:
@@ -61,7 +47,5 @@ def choose_move(game_state):
                 pile_ind += 1
                 pile = non_empty_piles[pile_ind]
                 quant = 1
-
             next_ply[pile] = next_ply[pile] - quant
-
     return (pile, quant)

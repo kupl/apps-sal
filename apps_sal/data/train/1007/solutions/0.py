@@ -2,7 +2,6 @@ import math
 for _ in range(int(input())):
     n = int(input())
     ar = [int(x) for x in input().split()]
-    # dp=[1]*n
     f = 0
     g = ar[0]
     for i in range(1, n):
