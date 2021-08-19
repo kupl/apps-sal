@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     arr = list(map(int, input().split()))
     arr.sort()
     days = 0

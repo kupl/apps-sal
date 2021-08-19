@@ -1,7 +1,6 @@
-# cook your dish here
 T = int(input())
 for _ in range(T):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     arr = list(map(int, input().split()))
     arr.sort()
     my_max = arr[-1]

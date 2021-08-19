@@ -1,21 +1,15 @@
 import getpass
 import sys
-
 if getpass.getuser() != 'frohenk':
     filename = 'half'
-    # sys.stdin = open('input.txt')
-    # sys.stdout = open('output.txt', 'w')
 else:
     sys.stdin = open('input.txt')
-    # sys.stdin.close()
-
 import math
 import string
 import re
 import random
 from decimal import Decimal, getcontext
 from collections import deque
-
 mod = 10 ** 9 + 7
 
 
@@ -23,11 +17,10 @@ def ria():
     return [int(i) for i in input().split()]
 
 
-n, q = ria()
+(n, q) = ria()
 ar = ria()
 mx = max(ar)
 ar = deque(ar)
-
 mxs = -1
 ans = []
 for i in range(n * 3):
@@ -42,7 +35,6 @@ for i in range(n * 3):
     else:
         ar.appendleft(b)
         ar.append(a)
-# print(ans)
 for i in range(q):
     m = ria()[0]
     m -= 1

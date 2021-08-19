@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         q = deque(initialBoxes)
         ownedkeys = set()
@@ -9,11 +10,7 @@ class Solution:
         for k in keys:
             for l in k:
                 allkz.add(l)
-        # for i, b in enumerate(status):
-            # if not b and b not in allkz:
-                # unreachable.add(b)
-
-        opened = set(i for i, b in enumerate(status) if not b and i not in allkz)  # treat unreachable as already opened
+        opened = set((i for (i, b) in enumerate(status) if not b and i not in allkz))
         res = 0
         while q:
             curBox = q.popleft()

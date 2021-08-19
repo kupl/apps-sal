@@ -1,27 +1,19 @@
 def max_consec_zeros(n):
-
-    if n == '7' or n == '1' or n == '22' or n == '3':
+    if n == '7' or n == '1' or n == '22' or (n == '3'):
         return 'Zero'
-
     num_bin = bin(int(n))
-
     count_num = 0
     num_li = []
     while len(num_bin) > 0:
         if num_bin[0] == '0':
             count_num += 1
-            # print(count_num)
             num_bin = num_bin[1:]
             num_li.append(count_num)
-            # continue
         else:
-            # num_li.append(count_num)
             count_num = 0
             num_bin = num_bin[1:]
-
     print(max(num_li))
     output = max(num_li)
-
     if output == 0:
         output_t = 'Zero'
     elif output == 1:
@@ -64,5 +56,4 @@ def max_consec_zeros(n):
         output_t = 'Nineteen'
     elif output == 20:
         output_t = 'Twenty'
-
     return output_t

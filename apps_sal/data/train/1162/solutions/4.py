@@ -1,6 +1,3 @@
-# code chef may2012  chefluck.py
-
-
 t = int(input())
 for t1 in range(t):
     n = int(input())

@@ -1,9 +1,9 @@
-# cook your dish here
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
 t = I()[0]
-while(t):
+while t:
     t -= 1
     n = I()[0]
     arr = I()
@@ -14,8 +14,8 @@ while(t):
         d[i] += 1
     extra = 0
     for i in list(d.keys()):
-        if(d[i] > 1):
-            extra += (d[i] - 1)
-    if(extra % 2):
+        if d[i] > 1:
+            extra += d[i] - 1
+    if extra % 2:
         extra += 1
     print(n - extra)

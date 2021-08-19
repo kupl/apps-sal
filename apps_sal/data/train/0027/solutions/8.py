@@ -18,7 +18,6 @@ for q in range(int(input())):
             Q[f] = l
     Q = list(Q.items())
     ans = 0
-    for a, b in Q:
+    for (a, b) in Q:
         ans += b
     print(ans)
-    # print(Q)

@@ -1,19 +1,16 @@
 class Solution:
-    def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
 
-        # topo sort
+    def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         parent = collections.defaultdict(int)
-        for i, row in enumerate(containedBoxes):
+        for (i, row) in enumerate(containedBoxes):
             for j in row:
                 parent[j] = i
-
         n = len(status)
         bfs = collections.deque([(i, False) for i in initialBoxes])
         res = 0
         seen = set()
         while bfs:
-            # print(bfs)
-            box, st = bfs.popleft()
+            (box, st) = bfs.popleft()
             if box in seen:
                 continue
             if status[box] == 0:
@@ -27,5 +24,4 @@ class Solution:
                 status[key] = 1
             for cbox in containedBoxes[box]:
                 bfs.append((cbox, False))
-
         return res

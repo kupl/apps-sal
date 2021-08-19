@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, code):
         """
         :type code: str
@@ -9,7 +10,6 @@ class Solution:
         CDATA_END = ']]>'
 
         def collect_tag(i):
-
             for j in range(i, len(S)):
                 if S[j] == '>':
                     break
@@ -18,34 +18,23 @@ class Solution:
             return S[i + 1:j]
 
         def valid_tag(tag):
-            if 1 <= len(tag) <= 9 and all('A' <= c <= 'Z' for c in tag):
+            if 1 <= len(tag) <= 9 and all(('A' <= c <= 'Z' for c in tag)):
                 return True
             else:
                 return False
-
         if not S or S[0] != '<':
             return False
-        # print('###########1111############')
         tag = collect_tag(0)
-        # print(tag)
-        if not tag or not S.startswith('<{}>'.format(tag)) or not S.endswith('</{}>'.format(tag)) or not valid_tag(tag):
-
+        if not tag or not S.startswith('<{}>'.format(tag)) or (not S.endswith('</{}>'.format(tag))) or (not valid_tag(tag)):
             return False
-
         S = S[len(tag) + 2:-len(tag) - 3]
-
         i = 0
         stack = []
-
         while i < len(S):
-
             if S[i] == '<':
                 tag = collect_tag(i)
-                # print(tag)
                 if not tag:
-
                     return False
-
                 if tag.startswith(CDATA_BEGIN):
                     while i < len(S) and S[i:i + 3] != CDATA_END:
                         i += 1
@@ -60,6 +49,5 @@ class Solution:
                     if not valid_tag(tag):
                         return False
                     stack.append(tag)
-
             i += 1
         return not stack
