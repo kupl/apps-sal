@@ -3,7 +3,10 @@ import sys
 from collections import Counter, defaultdict, deque
 from sys import stdin, stdout
 input = stdin.readline
-def li(): return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
 
 
 def solve():

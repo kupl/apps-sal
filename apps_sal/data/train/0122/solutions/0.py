@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         max_score = 0
         curr_score = 0

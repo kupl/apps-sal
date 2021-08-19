@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         from collections import defaultdict
         cnt = defaultdict(int)
@@ -18,7 +19,6 @@ class Solution:
                     cnt[s[low2:i + 1]] += 1
             if len(seen1) <= maxLetters:
                 cnt[s[low1:i + 1]] += 1
-
         if list(cnt.values()):
             return max(cnt.values())
         return 0

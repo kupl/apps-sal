@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     s = input()
     cost = 0
     rowcost = a
@@ -9,10 +9,9 @@ for _ in range(int(input())):
             if not amchain and rowcost:
                 amchain = True
                 cost += min(rowcost, a)
+        elif amchain:
+            amchain = False
+            rowcost = b
         else:
-            if amchain:
-                amchain = False
-                rowcost = b
-            else:
-                rowcost += b
+            rowcost += b
     print(cost)

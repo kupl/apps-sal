@@ -1,5 +1,5 @@
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     lst1 = list(map(int, input().split()))
     lst1.sort(reverse=True)
     ind = 0

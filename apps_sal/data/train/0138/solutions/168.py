@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         product = 1
         count = 0
@@ -13,17 +14,14 @@ class Solution:
                 count += 1
                 if firstNegative == -1:
                     firstNegative = i
-
             if nums[i] == 0:
                 count = 0
                 product = 1
                 if firstNegative != -1 and i - firstNegative - 1 > maxCount:
                     maxCount = i - firstNegative - 1
                 firstNegative = -1
-
             if product > 0:
                 maxCount = max(maxCount, count)
-
         if firstNegative != -1 and i - firstNegative > maxCount:
             maxCount = i - firstNegative
         return maxCount

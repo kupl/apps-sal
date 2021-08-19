@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
         ans = 0
         best_pre = 0

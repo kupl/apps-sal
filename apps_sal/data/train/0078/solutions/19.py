@@ -1,19 +1,19 @@
 q = int(input())
 for i in range(q):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [input() for _ in range(n)]
     a_t = list(zip(*a))
     mx_1 = mx_2 = 0
     idx_1 = []
     idx_2 = []
-    for j, i in enumerate(a):
+    for (j, i) in enumerate(a):
         temp = i.count('*')
         if temp > mx_1:
             mx_1 = temp
             idx_1 = [j]
         elif temp == mx_1:
             idx_1.append(j)
-    for j, i in enumerate(a_t):
+    for (j, i) in enumerate(a_t):
         temp = i.count('*')
         if temp > mx_2:
             mx_2 = temp

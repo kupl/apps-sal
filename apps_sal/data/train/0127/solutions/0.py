@@ -1,10 +1,11 @@
 class Solution:
+
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
-        MOD = 10**9 + 7
-        group_len, profit_len = len(group), len(profit)
+        MOD = 10 ** 9 + 7
+        (group_len, profit_len) = (len(group), len(profit))
         dp = [[0] * (G + 1) for _ in range(P + 1)]
         dp[0][0] = 1
-        for pro, gro in zip(profit, group):
+        for (pro, gro) in zip(profit, group):
             dp2 = [x[:] for x in dp]
             for p1 in range(P + 1):
                 p = min(pro + p1, P)

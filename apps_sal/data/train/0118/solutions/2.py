@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, x = [int(a) for a in input().split(' ')]
+    (a, x) = [int(a) for a in input().split(' ')]
     arr = [int(a) for a in input().split(' ')]
     arr = sorted(arr, reverse=True)
     cur_skill = x
@@ -16,5 +16,4 @@ for _ in range(int(input())):
                 teams += 1
                 cur_len = 0
                 cur_skill = x
-
     print(teams)

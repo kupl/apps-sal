@@ -1,6 +1,12 @@
 import sys
-def input(): return sys.stdin.readline().strip()
-def print(s): return sys.stdout.write(s)
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def print(s):
+    return sys.stdout.write(s)
 
 
 t = int(input())
@@ -11,7 +17,7 @@ for i in range(t):
     ls2 = []
     for i in range(m):
         ls2.append(tuple(map(int, input().split())))
-    if max(ls1) > max(i[0] for i in ls2):
+    if max(ls1) > max((i[0] for i in ls2)):
         print('-1\n')
     else:
         temp = {}

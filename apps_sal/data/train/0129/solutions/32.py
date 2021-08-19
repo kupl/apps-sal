@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
         n = len(A)
         res = max_i = -n

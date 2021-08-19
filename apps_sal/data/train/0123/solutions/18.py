@@ -2,8 +2,9 @@ import math
 
 
 class Solution:
+
     def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         dp = [[0 for _ in range(L + 1)] for _ in range(N + 1)]
         dp[0][0] = 1
         for i in range(1, N + 1):

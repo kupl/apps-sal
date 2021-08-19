@@ -1,12 +1,10 @@
 t = int(input())
-
 for case in range(t):
-    n, T = map(int, input().split())
+    (n, T) = map(int, input().split())
     a = [int(x) for x in input().split()]
     halfTticker = False
     halfT = T / 2
     white = set()
-
     for x in a:
         if x == halfT:
             print(int(halfTticker), end=' ')
@@ -18,5 +16,4 @@ for case in range(t):
         else:
             white.add(x)
             print(0, end=' ')
-
     print()

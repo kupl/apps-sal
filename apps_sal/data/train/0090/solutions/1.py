@@ -4,11 +4,14 @@ import collections as cc
 import sys
 import itertools as it
 input = sys.stdin.readline
-def I(): return list(map(int, input().split()))
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 for tc in range(int(input())):
-    n, = I()
+    (n,) = I()
     ar = I()
     l = I()
     s = []
@@ -17,7 +20,7 @@ for tc in range(int(input())):
     for i in range(n):
         if l[i] == 0:
             s.append(ar[i])
-            loc[i] = -10**6
+            loc[i] = -10 ** 6
         else:
             loc[i] = ar[i]
     s.sort(reverse=True)

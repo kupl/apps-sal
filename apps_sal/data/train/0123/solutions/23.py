@@ -1,6 +1,6 @@
 class Solution:
-    def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
 
+    def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
         dp = [[0 for n in range(N + 1)] for l in range(L + 1)]
         dp[0][0] = 1
         for l in range(1, L + 1):

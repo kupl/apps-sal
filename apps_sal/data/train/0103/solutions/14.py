@@ -1,8 +1,7 @@
 from sys import stdin
 T = int(stdin.readline().strip())
 for caso in range(T):
-
-    n, m = list(map(int, stdin.readline().strip().split()))
+    (n, m) = list(map(int, stdin.readline().strip().split()))
     s = [list(map(int, stdin.readline().strip().split())) for i in range(n)]
     r = n
     for i in range(n):
@@ -16,6 +15,6 @@ for caso in range(T):
                 break
     x = min(c, r)
     if x % 2 == 0:
-        print("Vivek")
+        print('Vivek')
     else:
-        print("Ashish")
+        print('Ashish')

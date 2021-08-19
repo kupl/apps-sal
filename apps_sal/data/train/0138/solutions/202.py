@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         count_of_negative = 0
         start = 0
@@ -18,7 +19,6 @@ class Solution:
                         else:
                             last_negative = i
             return max(end - first_negative, last_negative - begin)
-
         start = 0
         array = []
         count_of_negative = 0

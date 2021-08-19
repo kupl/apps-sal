@@ -38,22 +38,18 @@ def solve(a, b, m):
         else:
             new = True
         i += 1
-
     res = len(o) * a
-
     for i in range(1, len(o)):
         cur = o[i]
         prev = o[i - 1]
         if (cur[0] - prev[1] - 1) * b < a:
             res -= a
             res += (cur[0] - prev[1] - 1) * b
-
     return res
 
 
 tests = readint()
-
 for t in range(tests):
-    (a, b) = readint(), readint()
+    (a, b) = (readint(), readint())
     m = readline()
     print(solve(a, b, m))

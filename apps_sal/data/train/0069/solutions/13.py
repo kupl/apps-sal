@@ -1,6 +1,6 @@
 gans = []
 for _ in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     w = list(map(int, list(input())))
     u = []
     k = 1
@@ -17,10 +17,9 @@ for _ in range(int(input())):
     for i in range(1, len(u)):
         if u[i][0] == 0:
             dp[i] = dp[i - 1]
+        elif i == 1:
+            dp[i] = dp[i - 1] + a
         else:
-            if i == 1:
-                dp[i] = dp[i - 1] + a
-            else:
-                dp[i] = min(dp[i - 1] + a, dp[i - 1] + b * u[i - 1][1])
+            dp[i] = min(dp[i - 1] + a, dp[i - 1] + b * u[i - 1][1])
     gans.append(dp[-1])
 print(*gans, sep='\n')

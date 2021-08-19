@@ -39,7 +39,6 @@ def main():
         ans += 1
         res = res // i * (i + 1)
         i += 1
-
     print(9 * q + ans)
 
 

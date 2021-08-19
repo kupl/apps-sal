@@ -1,4 +1,5 @@
 class Solution:
+
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
         dp = [float('inf')] * (len(days) + 1)
         dp[0] = 0

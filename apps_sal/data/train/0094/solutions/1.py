@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, T = map(int, input().split())
+    (n, T) = map(int, input().split())
     a = list(map(int, input().split()))
     white = set()
     if not T % 2 and T // 2 in a:
@@ -12,12 +12,11 @@ for _ in range(t):
                 else:
                     a[i] = 0
                 halfcount += 1
+            elif T - a[i] in white:
+                a[i] = 1
             else:
-                if T - a[i] in white:
-                    a[i] = 1
-                else:
-                    white.add(a[i])
-                    a[i] = 0
+                white.add(a[i])
+                a[i] = 0
     else:
         for i in range(len(a)):
             if T - a[i] in white:

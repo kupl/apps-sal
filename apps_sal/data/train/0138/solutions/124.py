@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         numNeg = 0
         numZero = 0

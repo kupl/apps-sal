@@ -1,5 +1,7 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
+
         @lru_cache(None)
         def pos_helper(len):
             if len == 0:
@@ -25,7 +27,6 @@ class Solution:
                 return 0
             if nums[len - 1] < 0:
                 return pos_helper(len - 1) + 1
-
         res = 0
         for i in range(0, len(nums) + 1):
             res = max(res, pos_helper(i))

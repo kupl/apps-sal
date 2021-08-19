@@ -2,6 +2,7 @@ import operator
 
 
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         lp = 0
         rp = lp + minSize

@@ -1,12 +1,12 @@
 class Solution:
-    def getMaxLen(self, nums: List[int]) -> int:
 
+    def getMaxLen(self, nums: List[int]) -> int:
         prod = 1
-        pos, neg = -1, None
+        (pos, neg) = (-1, None)
         ans = 0
         for i in range(len(nums)):
             if nums[i] == 0:
-                pos, neg = i, None
+                (pos, neg) = (i, None)
                 prod = 1
             else:
                 prod *= nums[i]

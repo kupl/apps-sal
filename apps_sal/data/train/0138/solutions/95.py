@@ -1,8 +1,9 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         res = curr = 0
         dp = {0: 0}
-        for i, num in enumerate(nums, 1):
+        for (i, num) in enumerate(nums, 1):
             if num == 0:
                 curr = 0
                 dp = {0: i}

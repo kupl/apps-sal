@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n = (input())
+    n = input()
     m = len(n)
     ans = 9 * (m - 1)
     n = int(n)

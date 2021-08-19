@@ -13,6 +13,6 @@ for _ in range(int(input())):
         else:
             break
     if ans > n:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

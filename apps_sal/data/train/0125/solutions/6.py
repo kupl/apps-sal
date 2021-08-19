@@ -1,12 +1,14 @@
 class Solution:
+
     def superPow(self, a, b):
         """
         :type a: int
         :type b: List[int]
         :rtype: int
         """
+
         def eular(mod):
-            res, a = mod, mod
+            (res, a) = (mod, mod)
             i = 2
             while i * i <= a:
                 if a % i == 0:
@@ -26,7 +28,6 @@ class Solution:
                 x = x * x % mod
                 n >>= 1
             return res
-
         phi = eular(1337)
         n = 0
         for num in b:

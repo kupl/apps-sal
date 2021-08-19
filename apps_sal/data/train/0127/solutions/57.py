@@ -1,10 +1,10 @@
 class Solution(object):
+
     def profitableSchemes(self, G, P, group, profit):
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         cur = [[0] * (G + 1) for _ in range(P + 1)]
         cur[0][0] = 1
-
-        for g0, p0 in zip(group, profit):
+        for (g0, p0) in zip(group, profit):
             curr = [row[:] for row in cur]
             for p1 in range(P + 1):
                 p2 = min(P, p1 + p0)

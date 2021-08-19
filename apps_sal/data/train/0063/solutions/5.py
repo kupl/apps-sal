@@ -13,20 +13,18 @@ def rl():
 
 
 def solve():
-    n, k = rl()
+    (n, k) = rl()
     A = rl()
     W = rl()
     A.sort()
     W.sort(reverse=True)
-
-    lo, hi = 0, len(A) - 1
+    (lo, hi) = (0, len(A) - 1)
     answer = 0
     for w in W[::-1]:
         if w != 1:
             break
         answer += 2 * A[hi]
         hi -= 1
-
     for w in W:
         if w == 1:
             break
@@ -38,7 +36,6 @@ def solve():
 
 
 mode = 'T'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

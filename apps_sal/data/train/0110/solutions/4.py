@@ -1,8 +1,8 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     arr = list(map(int, input().split()))
-    peaks = [0] * (n)
+    peaks = [0] * n
     for i in range(1, n - 1):
         if arr[i] > arr[i - 1] and arr[i] > arr[i + 1]:
             peaks[i] = 1

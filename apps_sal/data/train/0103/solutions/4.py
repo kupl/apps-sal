@@ -1,13 +1,10 @@
 T = int(input())
-
 for t in range(T):
-    N, M = [int(_) for _ in input().split()]
+    (N, M) = [int(_) for _ in input().split()]
     matrix = []
-
     for i in range(N):
         row = [int(_) for _ in input().split()]
         matrix.append(row)
-
     available_rows = 0
     for row in matrix:
         if 1 not in row:
@@ -19,7 +16,6 @@ for t in range(T):
                 break
         else:
             available_cols += 1
-
     a = min(available_cols, available_rows)
     if a & 1:
         print('Ashish')

@@ -12,5 +12,4 @@ class Solution:
             elif l == n:
                 return math.factorial(n) % MOD
             return (n * rec(n - 1, l - 1) + (n - K) * rec(n, l - 1)) % MOD
-
         return rec(N, L)

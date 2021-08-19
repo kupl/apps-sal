@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         seen = collections.defaultdict(int)
         n = len(s)

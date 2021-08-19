@@ -1,6 +1,7 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
-        res, n, q, cur = 0, len(nums), [], 1
+        (res, n, q, cur) = (0, len(nums), [], 1)
 
         def extract(q, cur, res):
             if cur > 0:

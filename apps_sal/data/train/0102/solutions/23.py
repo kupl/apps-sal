@@ -8,9 +8,8 @@ for i in range(g):
         ans += a
         print(ans)
         continue
-
     for i in range(2, 11):
-        if 10**i <= a:
+        if 10 ** i <= a:
             ans += 9
         else:
             for j in range(1, 10):
@@ -19,5 +18,4 @@ for i in range(g):
                 else:
                     break
             break
-
     print(ans)

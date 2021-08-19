@@ -6,7 +6,7 @@ for _ in range(T):
     N = len(A)
     for i in range(N):
         if not (A[i] == C[i] or B[i] == C[i]):
-            print("NO")
+            print('NO')
             break
     else:
-        print("YES")
+        print('YES')

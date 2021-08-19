@@ -5,8 +5,8 @@ for i in range(q):
     t = input()
     for j in s:
         if j in t:
-            print("YES")
+            print('YES')
             c = False
             break
     if c:
-        print("NO")
+        print('NO')

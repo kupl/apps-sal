@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
 
         def helper(nums):
@@ -17,7 +18,6 @@ class Solution:
                 elif pre_prod < 0:
                     res = max(res, i - first_neg)
             return res
-
         num = []
         res = 0
         for i in range(len(nums)):
@@ -27,5 +27,4 @@ class Solution:
             else:
                 num.append(nums[i])
         res = max(res, helper(num))
-
         return res

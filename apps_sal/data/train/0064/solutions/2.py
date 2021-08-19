@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, l = map(int, input().split())
+    (n, l) = map(int, input().split())
     a = [0] + list(map(int, input().split())) + [l]
     b = [a[i + 1] - a[i] for i in range(n + 1)]
     ansl = 0

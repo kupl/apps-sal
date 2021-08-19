@@ -1,4 +1,5 @@
 class Solution:
+
     def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
         stack = []
         pop_index = 0
@@ -12,7 +13,6 @@ class Solution:
                 if pop_index >= length or len(stack) == 0:
                     break
                 continue
-
         if len(stack) != 0:
             return False
         else:

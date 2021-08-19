@@ -1,6 +1,6 @@
 t = int(input())
 for ii in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     p = [0] * n
     for i in range(1, n - 1):

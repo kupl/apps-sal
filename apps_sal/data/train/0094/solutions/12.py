@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, u = map(int, input().split())
+    (n, u) = map(int, input().split())
     a = list(map(int, input().split()))
     k = u // 2
     p = [-1 for i in range(n)]

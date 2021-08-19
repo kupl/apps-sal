@@ -1,9 +1,8 @@
 class Solution:
-    def maxScore(self, cardPoints: List[int], k: int) -> int:
 
+    def maxScore(self, cardPoints: List[int], k: int) -> int:
         points_L = []
         points_R = []
-
         for p in cardPoints:
             if len(points_L):
                 points_L.append(points_L[-1] + p)
@@ -15,7 +14,6 @@ class Solution:
             else:
                 points_R.append(p)
         points_R = points_R[::-1]
-
         return self.solution(points_L, points_R, k)
 
     def solution(self, points_L, points_R, k):

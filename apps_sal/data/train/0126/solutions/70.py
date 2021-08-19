@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         max_freq = 0
         for l in range(minSize, maxSize + 1):

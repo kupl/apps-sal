@@ -1,4 +1,5 @@
 class Solution:
+
     def calculate(self, s):
         """
         :type s: str
@@ -9,7 +10,6 @@ class Solution:
         total = 0
         latestsign = 1
         for c in s:
-
             if c.isdigit():
                 nums = 10 * nums + int(c)
             elif c == '(':
@@ -23,5 +23,4 @@ class Solution:
                 total = total + latestsign * nums
                 latestsign = sign[-1] * (+1 if c == '+' else -1)
                 nums = 0
-
         return total + latestsign * nums

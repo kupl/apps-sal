@@ -7,13 +7,13 @@ for nt in range(int(input())):
             point = i - 1
             break
     if point == -1:
-        print("Yes")
+        print('Yes')
     else:
         flag = 0
         for i in range(n - 1, point - 1, -1):
-            if l[i] < (n - 1 - i):
+            if l[i] < n - 1 - i:
                 flag = 1
-                print("No")
+                print('No')
                 break
         if flag == 0:
-            print("Yes")
+            print('Yes')

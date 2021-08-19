@@ -2,7 +2,9 @@ from typing import List
 
 
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
+
         def aux(i, j):
             negs = 0
             for v in nums[i:j + 1]:
@@ -19,7 +21,6 @@ class Solution:
                 r -= 1
             r = r - i
             return max(l, r)
-
         start = 0
         maxm = 0
         for end in range(len(nums)):

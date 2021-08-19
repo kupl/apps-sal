@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
-    a, b, c = list(map(int, input().split()))
-    a, b, c = sorted([a, b, c])
+    (a, b, c) = list(map(int, input().split()))
+    (a, b, c) = sorted([a, b, c])
     aa = a
     bb = b
     cc = c
@@ -12,7 +12,7 @@ for _ in range(t):
     a -= min(a // 2, 0)
     c -= min(a, 0)
     a -= min(a, 0)
-    b, c = sorted([b, c])
+    (b, c) = sorted([b, c])
     c -= b
     b = 0
     print((aa + bb + cc - c) // 2)

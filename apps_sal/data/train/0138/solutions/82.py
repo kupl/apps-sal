@@ -1,11 +1,12 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         for i in range(len(nums)):
             if nums[i] > 0:
                 nums[i] = 2
             elif nums[i] < 0:
                 nums[i] = -2
-        mini, maxi, res = 1, 1, -10**9 - 1
+        (mini, maxi, res) = (1, 1, -10 ** 9 - 1)
         for n in nums:
             a = mini * n
             b = maxi * n

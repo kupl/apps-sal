@@ -17,12 +17,12 @@ def myk(l, stops, czas):
 
 
 def solve():
-    n, l = [int(x) for x in input().split()]
+    (n, l) = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     b = [l - x for x in a[::-1]]
     pocz = 0.0
     kon = l / 2.0
-    eps = 1e-7
+    eps = 1e-07
     while pocz + eps < kon:
         mid = (pocz + kon) / 2.0
         pos1 = myk(l, a, mid)
@@ -35,6 +35,5 @@ def solve():
 
 
 t = int(input())
-
 for _ in range(t):
     solve()

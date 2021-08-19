@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         psum = sum(cardPoints[:k])
         res = psum

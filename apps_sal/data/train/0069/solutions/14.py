@@ -1,8 +1,8 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def solve():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     s = input()
     v = []
     tmp = 0

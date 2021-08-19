@@ -1,9 +1,6 @@
-
 t = int(input())
-
 for gg in range(t):
-
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     d = abs(a - b)
     if d == 0:
         print(0)

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, mxl: int, mns: int, mxs: int) -> int:
         freq = collections.Counter()
         for i in range(mns, len(s) + 1):

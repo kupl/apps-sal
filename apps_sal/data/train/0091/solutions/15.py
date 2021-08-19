@@ -2,7 +2,7 @@ t = int(input())
 for g in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    b = list(False for i in range(n))
+    b = list((False for i in range(n)))
     flag = False
     count = 0
     res = list(range(n))
@@ -19,12 +19,11 @@ for g in range(t):
                     flag = True
                     count = j
                     break
-                else:
-                    if not b[j]:
-                        res[i] = j + 1
-                        b[j] = True
-                        count = j
-                        break
+                elif not b[j]:
+                    res[i] = j + 1
+                    b[j] = True
+                    count = j
+                    break
     if flag:
         print(-1)
     else:

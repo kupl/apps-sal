@@ -6,5 +6,5 @@ for __ in range(int(input())):
         x //= 10
         num += 1
     ans = num * 9
-    ans += (n // int('1' * (num + 1)))
+    ans += n // int('1' * (num + 1))
     print(ans)

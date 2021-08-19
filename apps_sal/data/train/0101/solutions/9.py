@@ -1,7 +1,7 @@
 for _ in range(int(input())):
-    a, b, c, r = map(int, input().split())
+    (a, b, c, r) = map(int, input().split())
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     x = max(c - r, a)
     y = min(c + r, b)
     ans = b - a

@@ -1,4 +1,5 @@
 class Solution:
+
     def _getMaxLen(self, nums: List[int]) -> int:
         lz = [i for (i, v) in enumerate(nums) if v < 0]
         ts = len(nums)
@@ -8,7 +9,6 @@ class Solution:
             lz = [lz[0], lz[0]]
         ls = lz[-1]
         rs = ts - (lz[0] + 1)
-
         if ls > rs:
             return ls
         return rs
@@ -29,10 +29,7 @@ class Solution:
                 nums = nums[zero1 + 1:]
         except ValueError:
             pass
-
         r2 = self._getMaxLen(nums)
-
         if r2 > r:
             r = r2
-
         return r

@@ -1,14 +1,24 @@
-def ii(): return int(input())
-def si(): return input()
-def mi(): return list(map(int, input().strip().split(" ")))
-def li(): return list(mi())
+def ii():
+    return int(input())
 
 
-mod = 1e9
+def si():
+    return input()
+
+
+def mi():
+    return list(map(int, input().strip().split(' ')))
+
+
+def li():
+    return list(mi())
+
+
+mod = 1000000000.0
 t = ii()
-while(t):
+while t:
     t -= 1
-    a, b = mi()
+    (a, b) = mi()
     x = abs(b - a)
     c = x // 5
     x = x % 5

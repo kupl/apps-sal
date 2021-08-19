@@ -3,7 +3,7 @@ def check(data):
     s = sorted(zip(data, range(n)))
     m = s[0][0][1]
     left = set()
-    for i, r in enumerate(s):
+    for (i, r) in enumerate(s):
         left.add(r[1])
         if i == len(s) - 1:
             return '-1'
@@ -19,6 +19,6 @@ for i in range(T):
     n = int(input())
     data = []
     for j in range(n):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         data.append((l, r))
     print(check(data))

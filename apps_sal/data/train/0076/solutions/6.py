@@ -1,5 +1,5 @@
 for _ in range(int(input())):
     if int(input()) % 4 == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

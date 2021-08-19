@@ -7,8 +7,8 @@ for _ in range(int(input())):
     b = list(map(int, input().split()))
     for i in range(n):
         if not b[i]:
-            blocked += a[i],
-            binds += i,
+            blocked += (a[i],)
+            binds += (i,)
     blocked.sort()
     for i in range(len(binds)):
         a[binds[i]] = blocked[i]

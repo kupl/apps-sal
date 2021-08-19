@@ -1,8 +1,8 @@
 t = int(input())
 for request in range(t):
     n = int(input())
-    result, initial = list(map(int, input().split())), []
-    box, flag = [], True
+    (result, initial) = (list(map(int, input().split())), [])
+    (box, flag) = ([], True)
     initial.append(result[0])
     for d in range(1, result[0]):
         box.append(d)

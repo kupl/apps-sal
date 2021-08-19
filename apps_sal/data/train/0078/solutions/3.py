@@ -1,6 +1,6 @@
 q = int(input())
 for query in range(q):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     matrix = [input() for i in range(n)]
     row = [0] * n
     col = [0] * m

@@ -1,4 +1,5 @@
 class Solution:
+
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
         dp = [0] * (days[-1] + 1)
         dp[0] = 0
@@ -12,8 +13,7 @@ class Solution:
                         dp[k] = min(dp[k - 1] + costs[0], dp[k - 7] + costs[1], costs[2])
                     else:
                         dp[k] = min(dp[k - 1] + costs[0], costs[1], costs[2])
-                else:
-                    if k != 1:
-                        if dp[k] == 0:
-                            dp[k] = dp[k - 1]
+                elif k != 1:
+                    if dp[k] == 0:
+                        dp[k] = dp[k - 1]
         return dp[-1]

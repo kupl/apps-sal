@@ -1,12 +1,15 @@
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+MOD = 10 ** 9 + 7
 
 
-t, = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(t,) = I()
 while t:
     t -= 1
-    n, = I()
-    a = [2] * (n)
+    (n,) = I()
+    a = [2] * n
     l = []
     for i in range(n):
         l.append(I() + [i])

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, S, maxchars, minsize, maxsize):
         n = len(S)
         freq = Counter()

@@ -1,12 +1,12 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         s = 0
         fn = -1
         ln = -1
         cn = 0
         res = 0
-
-        for i, v in enumerate(nums):
+        for (i, v) in enumerate(nums):
             if v == 0:
                 end = i - 1
                 if cn % 2 == 0:

@@ -3,6 +3,7 @@ from sys import stdin, stdout
 
 
 class Input:
+
     def __init__(self):
         self.lines = stdin.readlines()
         self.idx = 0
@@ -17,8 +18,7 @@ class Input:
         return list(map(cast, self.line().split(sep=sep)))
 
     def known_tests(self):
-        num_of_cases, = self.array()
-
+        (num_of_cases,) = self.array()
         for case in range(num_of_cases):
             yield self
 
@@ -28,15 +28,15 @@ class Input:
 
 
 def problem_solver():
-    '''
+    """
 
-    '''
+    """
+
     def solver(inpt):
-        n, T = inpt.array()
+        (n, T) = inpt.array()
         a = inpt.array()
         b = []
         c = 0
-
         for x in a:
             if x * 2 > T:
                 b.append(1)
@@ -45,10 +45,8 @@ def problem_solver():
                 c += 1
             else:
                 b.append(0)
-
         print(*b)
-
-    '''Returns solver'''
+    'Returns solver'
     return solver
 
 

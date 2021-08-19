@@ -6,7 +6,7 @@ def g(a, b):
         if b & cur:
             b ^= cur
             if a & b == 0:
-                res += (1 << ze)
+                res += 1 << ze
         if a & cur == 0:
             ze = ze + 1
         cur <<= 1
@@ -28,8 +28,7 @@ def f(a, b):
 
 
 t = int(input())
-
 while t > 0:
     t = t - 1
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     print(f(l, r + 1))

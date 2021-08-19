@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfArrays(self, s: str, k: int) -> int:
         n = len(s)
         b = ord('0')
@@ -20,5 +21,4 @@ class Solution:
                 else:
                     break
             return cnt % MOD
-
         return dp(0)

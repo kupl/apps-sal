@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
-    ans, small, big = 0, 2 * 10**9, -1
+    (ans, small, big) = (0, 2 * 10 ** 9, -1)
     for i in range(len(a) - 1):
         if a[i] == -1 and a[i + 1] != -1:
             small = min(small, a[i + 1])

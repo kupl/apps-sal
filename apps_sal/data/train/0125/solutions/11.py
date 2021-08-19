@@ -1,4 +1,5 @@
 class Solution:
+
     def superPow(self, a, b):
         """
         :type a: int
@@ -12,6 +13,6 @@ class Solution:
         res = 1
         x = a % 1337
         for y in b[::-1]:
-            res = (res * (x ** y)) % 1337
-            x = (x ** 10) % 1337
+            res = res * x ** y % 1337
+            x = x ** 10 % 1337
         return res

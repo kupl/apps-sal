@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a = -min(a, b) + max(a, b)
     ans = 0
     ans = a // 5

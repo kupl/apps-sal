@@ -3,7 +3,7 @@ for i in range(t):
     n = int(input())
     sobs = []
     for j in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         sobs.append([[a, -1], j])
         sobs.append([[b, 1], j])
     sobs.sort()

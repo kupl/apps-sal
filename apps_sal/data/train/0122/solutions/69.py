@@ -1,10 +1,10 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         n = len(cardPoints)
         w = n - k
-        left, right = 0, w - 1
+        (left, right) = (0, w - 1)
         ans = float('-inf')
-
         win_sum = sum(cardPoints[:w])
         total = sum(cardPoints)
         while right < n:
@@ -16,5 +16,4 @@ class Solution:
             right += 1
             if right < n:
                 win_sum += cardPoints[right]
-
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, arr: List[int]) -> int:
         i = 0
         while i <= len(arr) - 1 and arr[i] == 0:
@@ -47,7 +48,6 @@ class Solution:
                     while a[i] > 0:
                         i -= 1
                     last = i
-
                 ans.append(max(first, last))
         ma = 0
         for i in ans:

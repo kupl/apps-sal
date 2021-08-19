@@ -1,11 +1,12 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         ans = 0
         mn = 0
         mp = 0
         for i in nums:
             if i == 0:
-                mn, mp = 0, 0
+                (mn, mp) = (0, 0)
             elif i > 0:
                 mp += 1
                 if mn != 0:

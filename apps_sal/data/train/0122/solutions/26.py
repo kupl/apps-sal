@@ -1,6 +1,7 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
-        '''
+        """
         convert this into a sliding window problem
         rephrase the problem:
             find the max window of length k between cardPoints[n-k:n+k]
@@ -9,7 +10,7 @@ class Solution:
         4,5,0,1
 
 
-        '''
+        """
         ans = 0
         curSum = 0
         n = len(cardPoints)

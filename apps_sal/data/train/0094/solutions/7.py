@@ -2,12 +2,12 @@ from collections import defaultdict
 
 
 def solve():
-    n, T = list(map(int, input().split()))
+    (n, T) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     white = defaultdict(int)
     black = defaultdict(int)
     ans = [0] * n
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if white[T - x] > black[T - x]:
             black[x] += 1
             ans[i] = 1

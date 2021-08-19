@@ -2,9 +2,9 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     if a[0] < a[-1]:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

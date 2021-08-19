@@ -3,7 +3,7 @@ for i in range(q):
     ok = [x for x in input().split()]
     r = ok[0]
     s = ok[1]
-    w = [(ord(r[i])) for i in range(len(r))]
+    w = [ord(r[i]) for i in range(len(r))]
     w.sort()
     w = [chr(w[i]) for i in range(len(r))]
     first = True
@@ -19,4 +19,4 @@ for i in range(q):
     if r < s:
         print(r)
     else:
-        print("---")
+        print('---')

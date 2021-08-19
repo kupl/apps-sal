@@ -4,7 +4,7 @@ for _ in range(T):
     S = input()
     arr = []
     seq = 1
-    for a, b in zip(S, S[1:]):
+    for (a, b) in zip(S, S[1:]):
         if a == b:
             seq += 1
         else:
@@ -13,7 +13,7 @@ for _ in range(T):
     arr.append(seq)
     hist = []
     arr.reverse()
-    for i, a in enumerate(arr):
+    for (i, a) in enumerate(arr):
         if a == 1:
             continue
         hist.append([i, a])

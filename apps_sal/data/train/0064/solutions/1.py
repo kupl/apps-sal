@@ -1,9 +1,9 @@
 for __ in range(int(input())):
-    n, l = list(map(int, input().split()))
+    (n, l) = list(map(int, input().split()))
     ar = list(map(int, input().split()))
-    i, j = 0, n - 1
-    x, y = 0, l
-    v1, v2 = 1, 1
+    (i, j) = (0, n - 1)
+    (x, y) = (0, l)
+    (v1, v2) = (1, 1)
     ans = 0
     while i <= j and x < y:
         if (ar[i] - x) / v1 < (y - ar[j]) / v2:

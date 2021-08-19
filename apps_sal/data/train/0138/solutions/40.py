@@ -1,5 +1,7 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
+
         def solve(arr):
             maxy = 0
             count = 0

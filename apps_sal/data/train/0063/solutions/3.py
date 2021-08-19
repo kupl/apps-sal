@@ -1,15 +1,13 @@
 from sys import stdin, stdout
 import math
-
 t = int(stdin.readline())
 for _ in range(t):
-    n, k = list(map(int, stdin.readline().split()))
+    (n, k) = list(map(int, stdin.readline().split()))
     a = list(map(int, stdin.readline().split()))
     w = list(map(int, stdin.readline().split()))
-
     a = sorted(a)
     w = sorted(w)
-    st, end = 0, n - 1
+    (st, end) = (0, n - 1)
     ans = 0
     idx = 0
     while idx < k and w[idx] == 1:

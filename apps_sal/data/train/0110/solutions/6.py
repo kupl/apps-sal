@@ -7,7 +7,7 @@ def list_input():
 
 
 for nt in range(int(input())):
-    n, k = mult_input()
+    (n, k) = mult_input()
     l = list(map(int, input().split()))
     ans = 0
     for i in range(1, k - 1):

@@ -1,5 +1,8 @@
 import itertools
-def y(): return int(input())
+
+
+def y():
+    return int(input())
 
 
 p = [1] * 32000
@@ -7,7 +10,7 @@ for i in range(180):
     if p[i]:
         for j in range(2 * i + 2, len(p), i + 2):
             p[j] = 0
-q = [i + 2 for i in range(len(p))if p[i]]
+q = [i + 2 for i in range(len(p)) if p[i]]
 for _ in range(y()):
     n = y()
     d = []
@@ -22,13 +25,12 @@ for _ in range(y()):
     if n > 1:
         d.append([n, 1])
     l = len(d)
-    for i in itertools.product(*(range(i[1] + 1)for i in d)):
+    for i in itertools.product(*(range(i[1] + 1) for i in d)):
         p = 1
         for j in range(l):
-            p *= d[j][0]**i[j]
+            p *= d[j][0] ** i[j]
         e.add(p)
     e.remove(1)
-
     b = l == 2 and d[0][1] + d[1][1] == 2
     if l < 2 or b:
         f = list(e)
@@ -42,7 +44,7 @@ for _ in range(y()):
             if i % d[1 - s][0] < 1:
                 k.add(i)
                 f.append(i)
-        v = (d[s][0]**2) * d[1 - s][0]
+        v = d[s][0] ** 2 * d[1 - s][0]
         f.remove(v)
         f.append(v)
         e -= k

@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         dic = {1: -1}
         temp = 1
@@ -14,5 +15,4 @@ class Solution:
                 res = max(res, i - dic[temp])
             else:
                 dic[temp] = i
-
         return res

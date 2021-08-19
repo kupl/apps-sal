@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     stolb = [0] * y
     stroki = [0] * x
     al = []
@@ -17,7 +17,6 @@ for i in range(n):
             if al[j][j2] == '.':
                 if stroki[j] + stolb[j2] - 1 < mi:
                     mi = stroki[j] + stolb[j2] - 1
-            else:
-                if stroki[j] + stolb[j2] < mi:
-                    mi = stroki[j] + stolb[j2]
+            elif stroki[j] + stolb[j2] < mi:
+                mi = stroki[j] + stolb[j2]
     print(mi)

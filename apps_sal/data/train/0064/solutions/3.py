@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def main():
-    n, l = map(int, input().split())
+    (n, l) = map(int, input().split())
     alst = list(map(int, input().split()))
     ll = 0
     rr = n - 1
@@ -35,7 +35,6 @@ def main():
             l_pos = alst[ll]
             l_speed += 1
             ll += 1
-
     ans += (r_pos - l_pos) / (r_speed + l_speed)
     print(ans)
 

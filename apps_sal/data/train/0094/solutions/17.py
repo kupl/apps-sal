@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     s = set()
     c = 0
@@ -8,9 +8,8 @@ for _ in range(int(input())):
         if 2 * a[i] == k:
             b[i] = c
             c = 1 - c
+        elif a[i] in s:
+            b[i] = 1
         else:
-            if a[i] in s:
-                b[i] = 1
-            else:
-                s.add(k - a[i])
+            s.add(k - a[i])
     print(*b)

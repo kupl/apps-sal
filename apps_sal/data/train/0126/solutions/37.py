@@ -1,11 +1,12 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
+
         def valid(sub):
             seen = set()
             for c in sub:
                 seen.add(c)
             return len(seen)
-
         counts = dict()
         start = 0
         while start < len(s):
@@ -22,7 +23,6 @@ class Solution:
                         break
                 end += 1
             start += 1
-
         l = list(counts.values())
         if len(l) == 0:
             return 0

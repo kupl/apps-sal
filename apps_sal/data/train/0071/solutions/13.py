@@ -1,10 +1,12 @@
 from sys import stdin
 from math import ceil
-def inp(): return stdin.readline().strip()
+
+
+def inp():
+    return stdin.readline().strip()
 
 
 t = int(inp())
-
 for _ in range(t):
     n = int(inp())
     a = [int(x) for x in inp().split()]

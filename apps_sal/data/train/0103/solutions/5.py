@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     arr = [[0] * m for i in range(n)]
     for i in range(n):
         arr[i] = list(map(int, input().split()))

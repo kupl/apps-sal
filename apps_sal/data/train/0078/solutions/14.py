@@ -6,7 +6,7 @@ t = int(input())
 
 
 def one():
-    n, m = gns()
+    (n, m) = gns()
     mp = []
     ns = [0] * n
     ms = [0] * m

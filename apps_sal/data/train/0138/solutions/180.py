@@ -1,10 +1,11 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         i = 0
         negatives = [-1, -1]
         p = 1
         ans = 0
-        for j, n in enumerate(nums):
+        for (j, n) in enumerate(nums):
             if not n:
                 p = 1
                 i = j + 1

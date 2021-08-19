@@ -1,4 +1,5 @@
 class Solution:
+
     def calc(self, neg: List[int], i: int) -> int:
         if len(neg) % 2 == 0:
             return i
@@ -9,7 +10,7 @@ class Solution:
         ml = 0
         while True:
             neg = []
-            for idx, i in enumerate(nums):
+            for (idx, i) in enumerate(nums):
                 if i == 0:
                     ml = max(self.calc(neg, idx), ml)
                     nums = nums[idx + 1:]

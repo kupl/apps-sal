@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
         dp = [[0, 0] for _ in range(n)]
@@ -18,4 +19,4 @@ class Solution:
                 if dp[i - 1][1] > 0:
                     dp[i][0] = dp[i - 1][1] + 1
                 dp[i][1] = dp[i - 1][0] + 1
-        return max(dp[i][0] for i in range(n))
+        return max((dp[i][0] for i in range(n)))

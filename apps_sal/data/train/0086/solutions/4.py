@@ -1,11 +1,9 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for tests in range(t):
     n = int(input())
     A = list(map(int, input().split()))
-
     ZERO = A.count(0)
     if ZERO >= n // 2:
         print(ZERO)

@@ -11,6 +11,6 @@ for rwere in range(q):
         else:
             dasie = False
     if dasie:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

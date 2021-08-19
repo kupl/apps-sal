@@ -1,12 +1,11 @@
 for t in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     m = input()
     x = []
     i = 0
     while i < len(m) and m[i] == '0':
         i += 1
     cs = 0
-
     while i < len(m):
         if m[i] == '0':
             cs += 1

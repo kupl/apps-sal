@@ -25,7 +25,7 @@ def ma():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
-    a, b = ma()
+    (a, b) = ma()
     print(a ^ b)

@@ -1,6 +1,7 @@
 class Solution:
+
     def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
 
         def memo(f):
             dic = {}
@@ -18,5 +19,4 @@ class Solution:
             if N > L:
                 return 0
             return (N * play(N - 1, L - 1) + max(0, N - K) * play(N, L - 1)) % mod
-
         return play(N, L)

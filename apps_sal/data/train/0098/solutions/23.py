@@ -8,7 +8,7 @@ def read():
 def main():
     q = int(read())
     for i in range(q):
-        c, m, x = list(map(int, read().split()))
+        (c, m, x) = list(map(int, read().split()))
         if c <= m and c <= x:
             print(c)
         elif m <= c and m <= x:

@@ -1,9 +1,10 @@
 class Solution:
+
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
-        M = 10**9 + 7
+        M = 10 ** 9 + 7
         cur = [[0] * (G + 1) for _ in range(P + 1)]
         cur[0][0] = 1
-        for p0, g0 in zip(profit, group):
+        for (p0, g0) in zip(profit, group):
             cur2 = [row[:] for row in cur]
             for p1 in range(P + 1):
                 p2 = min(p1 + p0, P)

@@ -1,12 +1,13 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
-        pos, neg = -1, n
+        (pos, neg) = (-1, n)
         c = 1
         ret = 0
-        for i, j in enumerate(nums):
+        for (i, j) in enumerate(nums):
             if j == 0:
-                pos, neg = i, n
+                (pos, neg) = (i, n)
                 c = 1
                 continue
             if j > 0:

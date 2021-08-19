@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         substrings = []
         for size in range(minSize, maxSize + 1):

@@ -1,5 +1,5 @@
 for nt in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     mat = []
     for i in range(n):
         mat.append(list(map(int, input().split())))
@@ -24,6 +24,6 @@ for nt in range(int(input())):
                 col[j] = 1
                 count += 1
     if count % 2:
-        print("Ashish")
+        print('Ashish')
     else:
-        print("Vivek")
+        print('Vivek')

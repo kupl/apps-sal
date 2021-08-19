@@ -6,7 +6,7 @@ for i in range(q):
     for i in range(len(s1)):
         for j in range(len(s2)):
             if f and s1[i] == s2[j]:
-                print("YES")
+                print('YES')
                 f = 0
     if f:
-        print("NO")
+        print('NO')

@@ -7,15 +7,13 @@ def solve():
     def canMakeK(k):
         if c < k or m < k:
             return False
-        return ((c - k) + (m - k) + x) >= k
-
+        return c - k + (m - k) + x >= k
     ans = 0
     jump = max(c, m, x)
     while jump > 0:
         while canMakeK(ans + jump):
             ans += jump
         jump //= 2
-
     return ans
 
 

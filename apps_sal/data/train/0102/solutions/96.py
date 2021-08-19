@@ -4,7 +4,7 @@ for i in range(t):
     le = len(n)
     ans = 9 * (le - 1)
     l = n[0] * le
-    if (int(n) >= int(l)):
+    if int(n) >= int(l):
         ans += int(n[0])
     else:
         ans += int(n[0]) - 1

@@ -1,7 +1,7 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, a: List[int]) -> int:
         d = []
-
         for i in range(len(a) - 1, -1, -1):
             if i != 0:
                 d.append([a[i] - i, i])

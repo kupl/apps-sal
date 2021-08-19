@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         first_neg = None
         last_neg = None
@@ -6,7 +7,7 @@ class Solution:
         cum_prod = 1
         max_len = 0
         last_zero_idx = 0
-        for idx, val in enumerate(nums):
+        for (idx, val) in enumerate(nums):
             if val == 0:
                 first_neg = None
                 last_neg = None

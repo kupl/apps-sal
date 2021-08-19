@@ -1,6 +1,7 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
-        f, b = [0], [0]
+        (f, b) = ([0], [0])
         for n in cardPoints:
             f.append(f[-1] + n)
         for n in cardPoints[::-1]:

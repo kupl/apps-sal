@@ -1,8 +1,7 @@
 import sys
-
 T = int(sys.stdin.readline().strip())
 Q = []
-P = [0] * (10 ** 6)
+P = [0] * 10 ** 6
 for i in range(2, 2 * 10 ** 5 + 10):
     v = True
     if P[i] == 0:
@@ -24,7 +23,7 @@ def factors(n):
         ans2 = []
         for h in range(0, m + 1):
             for j in ans:
-                ans2.append(j * (Q[i2] ** h))
+                ans2.append(j * Q[i2] ** h)
         i2 = i2 + 1
         ans = ans2[:]
     return ans

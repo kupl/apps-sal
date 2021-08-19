@@ -14,9 +14,9 @@ def mints():
 
 
 def solve():
-    a, b, c, r = mints()
+    (a, b, c, r) = mints()
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     return b - a - max(min(c + r, b) - max(c - r, a), 0)
 
 

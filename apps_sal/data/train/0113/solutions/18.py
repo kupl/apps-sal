@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    a, b = [int(x) for x in input().split(' ')]
+    (a, b) = [int(x) for x in input().split(' ')]
     c = abs(a - b)
     d = 0
     d += int(c / 5)

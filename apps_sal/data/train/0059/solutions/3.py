@@ -1,5 +1,4 @@
 from math import *
-
 zzz = int(input())
 for zz in range(zzz):
     n = int(input())

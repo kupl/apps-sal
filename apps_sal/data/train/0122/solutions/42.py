@@ -1,8 +1,8 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         if len(cardPoints) < k:
             return -1
-
         remain = len(cardPoints) - k
         suum = sum(cardPoints[:remain])
         min_suum = suum

@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfArrays(self, s: str, k: int) -> int:
         n = len(s)
         b = ord('0')

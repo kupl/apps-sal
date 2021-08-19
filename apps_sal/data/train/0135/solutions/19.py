@@ -1,8 +1,8 @@
 class Solution:
+
     def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
         if not pushed:
             return True
-
         temp = []
         i = popiter = 0
         while i < len(pushed):
@@ -13,7 +13,6 @@ class Solution:
             else:
                 temp.append(pushed[i])
                 i += 1
-
         print(temp, popiter)
         while temp:
             if temp[-1] == popped[popiter]:
