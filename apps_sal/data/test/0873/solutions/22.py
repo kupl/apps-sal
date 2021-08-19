@@ -8,5 +8,4 @@ for i in range(n):
         ans += 10 - abs(int(inp[i]) - int(out[i]))
     else:
         ans += abs(int(inp[i]) - int(out[i]))
-
 print(ans)

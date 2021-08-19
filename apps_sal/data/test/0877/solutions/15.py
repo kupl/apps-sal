@@ -1,8 +1,8 @@
 def main():
-    n, m = list(map(int, input().split()))
-    lo, hi = 1, n
+    (n, m) = list(map(int, input().split()))
+    (lo, hi) = (1, n)
     for _ in range(m):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         if u > v:
             if lo < v:
                 lo = v

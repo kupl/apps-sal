@@ -194,8 +194,8 @@ s = input()
 l = len(s)
 if l % 6 != 0:
     s = '0' * (6 - l % 6) + s
-    l += (6 - l % 6)
-mod = 10**9 + 7
+    l += 6 - l % 6
+mod = 10 ** 9 + 7
 cnt = 0
 dp = [[0] * 13 for _ in range(l // 6 + 1)]
 for i in range(l - 1, -1, -6):
@@ -203,9 +203,9 @@ for i in range(l - 1, -1, -6):
     qpos = 0
     for j in range(6):
         if s[i - j] == '?':
-            qpos += 1 * (10**j)
+            qpos += 1 * 10 ** j
         else:
-            num += int(s[i - j]) * (10**j)
+            num += int(s[i - j]) * 10 ** j
     if qpos == 0:
         tmod = [0] * 13
         tmod[num % 13] = 1
@@ -220,6 +220,6 @@ for i in range(l - 1, -1, -6):
     else:
         for k in range(13):
             for l in range(13):
-                dp[cnt + 1][(k + l) % 13] += (tmod[k] * dp[cnt][l]) % mod
+                dp[cnt + 1][(k + l) % 13] += tmod[k] * dp[cnt][l] % mod
     cnt += 1
 print(dp[cnt][5] % mod)

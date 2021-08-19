@@ -1,7 +1,7 @@
-a = [int(i) for i in input().split(" ")]
+a = [int(i) for i in input().split(' ')]
 n = a[0]
 maxi = a[1]
-a = [int(i) for i in input().split(" ")]
+a = [int(i) for i in input().split(' ')]
 c = 0
 s = sum(a)
 while s != 0:

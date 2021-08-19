@@ -4,4 +4,4 @@ def f(word):
 
 _ = input()
 s = input().split()
-print(max(f(word) for word in s))
+print(max((f(word) for word in s)))

@@ -12,5 +12,4 @@ for cont in range(0, n - 1):
             break
     if r > rmax:
         rmax = r
-
 print(rmax)

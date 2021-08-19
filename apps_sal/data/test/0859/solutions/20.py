@@ -20,17 +20,14 @@ for x in a:
         pos0 += 1
     else:
         pos0 -= 1
-
 q = 0
 for x in b:
     if x == '?':
         q += 1
-
 poss = []
 res = 0
 foo(b, 0, 0, poss)
 for x in poss:
     if x == pos0:
         res += 1
-
 print(res / 2 ** q)

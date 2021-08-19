@@ -3,11 +3,9 @@ def fastexp(x, n, m):
     currentpower = x
     while n > 0:
         if n % 2 == 1:
-            result = (result * currentpower) % m
-
-        currentpower = (currentpower * currentpower) % m
+            result = result * currentpower % m
+        currentpower = currentpower * currentpower % m
         n = n // 2
-
     return result
 
 

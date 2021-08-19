@@ -1,5 +1,5 @@
 n = int(input())
-l = [i for i in input().split(" ")]
+l = [i for i in input().split(' ')]
 ma = 0
 for i in l:
     c = 0

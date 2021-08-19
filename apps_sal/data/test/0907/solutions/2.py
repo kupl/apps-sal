@@ -1,16 +1,17 @@
 def main():
+
     def check(x, y):
-        for a, b in mas:
-            if not((a == x or a == y) or (b == x or b == y)):
+        for (a, b) in mas:
+            if not ((a == x or a == y) or (b == x or b == y)):
                 return [a, b]
         return [-1, -1]
 
     def check1(x, y):
-        for a, b in mas:
-            if not((a == x or a == y) or (b == x or b == y)):
+        for (a, b) in mas:
+            if not ((a == x or a == y) or (b == x or b == y)):
                 return False
         return True
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     mas = []
     ans = False
     for i in range(m):

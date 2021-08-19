@@ -1,10 +1,10 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 M = 998244353
 
 
 def calc(a, b):
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     ans = 0
     t = 1
     for i in range(a + 1):

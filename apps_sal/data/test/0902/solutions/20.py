@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ans = max(a)
 tmp = a[0]
 cnt = 0

@@ -1,4 +1,3 @@
-
 LO_C = 0
 LO_S = 1
 HI_C = 2
@@ -13,9 +12,9 @@ def main():
         s = input().strip()
         r = s[::-1]
         if s <= r:
-            lo, lo_c, hi, hi_c = s, 0, r, costs[i]
+            (lo, lo_c, hi, hi_c) = (s, 0, r, costs[i])
         else:
-            lo, lo_c, hi, hi_c = r, costs[i], s, 0
+            (lo, lo_c, hi, hi_c) = (r, costs[i], s, 0)
         if not memo:
             memo.append((lo_c, lo, hi_c, hi))
         else:

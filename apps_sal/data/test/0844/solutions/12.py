@@ -1,5 +1,5 @@
-n, s = int(input()), input()
-d, o, z = dict([((0, 0), -1)]), 0, 0
+(n, s) = (int(input()), input())
+(d, o, z) = (dict([((0, 0), -1)]), 0, 0)
 ans = 0
 for i in range(len(s)):
     o += int(s[i] == '1')

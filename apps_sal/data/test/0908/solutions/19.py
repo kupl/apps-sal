@@ -1,7 +1,7 @@
 n = int(input())
 c = list(map(int, input().split()))
 s = [''] * n
-INF = int(1e15)
+INF = int(1000000000000000.0)
 not_rev = [INF] * n
 rev = [INF] * n
 for i in range(n):

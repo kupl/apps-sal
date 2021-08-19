@@ -2,7 +2,7 @@ import math
 
 
 def main():
-    N, M = [int(a) for a in input().split(" ")]
+    (N, M) = [int(a) for a in input().split(' ')]
     divM = []
     for i in range(1, int(math.sqrt(M)) + 1):
         if M % i == 0:

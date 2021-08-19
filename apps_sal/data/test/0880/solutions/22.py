@@ -10,14 +10,12 @@ def fact(n):
 
 
 n = int(input())
-
-
 x = fact(n)
 ans = x - n
 k = n
 for i in range(1, n + 1):
     ans += x - k * (n - i)
     ans %= M
-    k *= (n - i)
+    k *= n - i
     k %= M
 print(ans)

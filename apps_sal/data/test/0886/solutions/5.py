@@ -12,23 +12,22 @@ def main():
                 break
             else:
                 minpos = i
-
     if maxpos > -1:
         for i in range(l):
             if i == maxpos:
-                print(odd, end="")
+                print(odd, end='')
             elif i == l - 1:
                 print(strnum[maxpos])
             else:
-                print(strnum[i], end="")
+                print(strnum[i], end='')
     elif minpos > -1:
         for i in range(l):
             if i == minpos:
-                print(odd, end="")
+                print(odd, end='')
             elif i == l - 1:
                 print(strnum[minpos])
             else:
-                print(strnum[i], end="")
+                print(strnum[i], end='')
     else:
         print(-1)
 

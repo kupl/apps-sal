@@ -5,8 +5,8 @@ def com(n, r, m):
     return f[n] * pow(f[r] * f[n - r] % m, m - 2, m) % m
 
 
-mod = 10**9 + 7
-x, y = map(int, input().split())
+mod = 10 ** 9 + 7
+(x, y) = map(int, input().split())
 z = (x + y) // 3
 if (x + y) % 3 or abs(x - y) > z:
     ans = 0

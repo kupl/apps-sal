@@ -1,4 +1,4 @@
-'''
+"""
 
 0  |  a1       a2         a3
 1  |  a1       a1+a2      a1+ a2+a3
@@ -7,10 +7,9 @@
 cada celda depende de la izq y la superior, es como numeros
 combinatorios, el a1 es triang(k) en 3, y los inmediatamente anteriores
 por k (con k=0 es perm original!)
-'''
-n, k = list(map(int, input().split(" ")))
-l = list(map(int, input().split(" ")))
-
+"""
+(n, k) = list(map(int, input().split(' ')))
+l = list(map(int, input().split(' ')))
 v = []
 for x in l:
     if x != 0 or v:
@@ -31,10 +30,11 @@ def bruteforce(v, k):
 
 
 def smarty(v, k):
+
     def triang(x):
         return x * (x + 1) // 2
-    l, r = 0, 10**18
-    ans = 10**18
+    (l, r) = (0, 10 ** 18)
+    ans = 10 ** 18
     while l <= r:
         h = (l + r) // 2
         f0 = v[0]

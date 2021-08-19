@@ -1,12 +1,10 @@
 n = int(input())
 c = list(map(int, input().split()))
-
 s1 = ''
 s2 = ''
-INF = 1e16
+INF = 1e+16
 c1 = 0
 c2 = 0
-
 for i in range(n):
     s = input()
     sr = s[::-1]
@@ -18,7 +16,6 @@ for i in range(n):
     s2 = sr
     c1 = min(c11, c21)
     c2 = min(c12, c22)
-
 ans = min(c1, c2)
 if ans >= INF:
     print(-1)

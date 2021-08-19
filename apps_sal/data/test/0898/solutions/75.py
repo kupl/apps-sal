@@ -1,8 +1,8 @@
 from itertools import *
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 M = m
 a = [1]
-for i in range(2, int(m**.5) + 1):
+for i in range(2, int(m ** 0.5) + 1):
     while m % i == 0:
         m //= i
         a += [i]

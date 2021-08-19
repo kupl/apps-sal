@@ -1,4 +1,4 @@
-class common_function():
+class common_function:
     """
         1. よく使いそうで予め用意してあるものをまとめた
         2. よく使いそうな関数群をまとめた
@@ -26,17 +26,17 @@ class common_function():
         for j in range(k, 0, -1):
             denom *= j
             denom %= MOD
-        return (numer * (pow(denom, MOD - 2, MOD))) % MOD
+        return numer * pow(denom, MOD - 2, MOD) % MOD
 
 
 def main():
     common = common_function()
-    X, Y = list(map(int, input().split()))
+    (X, Y) = list(map(int, input().split()))
     if X <= 0 or Y <= 0 or (X + Y) % 3 != 0:
-        print((0))
+        print(0)
         return
     if Y > 2 * X or X > 2 * Y:
-        print((0))
+        print(0)
         return
     for i in range(X):
         two = i

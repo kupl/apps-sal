@@ -1,15 +1,11 @@
-n, m = [int(x) for x in input().split()]
-
+(n, m) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
-
 mult = 1
 mod = 10 ** 9 + 7
 res = 0
-
 m_inv = pow(m, mod - 2, mod)
-
-for x, y in zip(a, b):
+for (x, y) in zip(a, b):
     if x and y:
         if x > y:
             res += mult

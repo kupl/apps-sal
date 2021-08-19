@@ -1,5 +1,5 @@
 import math
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ans = list()
 for i in range(1, int(math.sqrt(m)) + 1):
     if m % i == 0:

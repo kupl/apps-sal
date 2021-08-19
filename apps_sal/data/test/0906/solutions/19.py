@@ -1,5 +1,4 @@
 import sys
-
 arr = [int(x) for x in input().split()]
 n = arr[0]
 m = arr[1]

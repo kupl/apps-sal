@@ -6,21 +6,22 @@ from bisect import bisect_right
 
 
 class pair:
+
     def __init__(self, a):
-        self.first, self.second = a[0], a[1]
+        (self.first, self.second) = (a[0], a[1])
 
 
 def main():
-    INF = 10**18
+    INF = 10 ** 18
     n = int(input())
     c = list(map(int, input().split()))
-    a, b = [], []
+    (a, b) = ([], [])
     for i in range(n):
         s = input()
         a.append(s)
         b.append(s[::-1])
     dp = [pair([INF, INF]) for i in range(0, n)]
-    dp[0].first, dp[0].second = 0, c[0]
+    (dp[0].first, dp[0].second) = (0, c[0])
     for i in range(1, n):
         dp[i].first = INF
         dp[i].second = INF
@@ -37,7 +38,7 @@ def main():
 
 
 def __starting_point():
-    return(int(main() or 0))
+    return int(main() or 0)
 
 
 __starting_point()

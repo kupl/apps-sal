@@ -14,5 +14,4 @@ ans = 0
 for i in range(n):
     abso = abs(s1[i] - s2[i])
     ans += min(abso, 10 - abso)
-
 print(ans)

@@ -1,15 +1,12 @@
 import math
 import sys
-
 debug = False
-
 if debug:
     fin = open('input.txt', 'r')
     fout = open('output.txt', 'w')
 else:
     fin = sys.stdin
     fout = sys.stdout
-
 s = fin.readline()[:-1]
 a = '-1'
 n = len(s)
@@ -20,7 +17,6 @@ for i in range(len(s)):
             j = i
         elif s[j] > s[-1]:
             j = i
-
 if j > -1:
     a = s[0:j] + s[-1] + s[j + 1:-1] + s[j]
 fout.write(a)

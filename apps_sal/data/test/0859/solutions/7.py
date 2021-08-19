@@ -15,7 +15,7 @@ minus_ = x.count('-')
 n = x.count('?')
 a = plus - plus_
 b = minus - minus_
-if(a < 0 or b < 0 or a + b != n):
+if a < 0 or b < 0 or a + b != n:
     print(0.0)
 else:
     print(nCr(n, a) / (1 << n))

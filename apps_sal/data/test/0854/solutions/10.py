@@ -1,7 +1,8 @@
-def I(): return map(int, input().split())
+def I():
+    return map(int, input().split())
 
 
-n, t = I()
+(n, t) = I()
 a = list(I())
 ans = 0
 x = min(a)

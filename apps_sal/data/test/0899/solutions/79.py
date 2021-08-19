@@ -7,11 +7,11 @@ mod = 10 ** 9 + 7
 
 
 def resolve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     edge = [[] for _ in range(n)]
     k = []
     for _ in range(m):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         edge[a - 1].append([c, b - 1])
         edge[b - 1].append([c, a - 1])
         k.append([c, a - 1, b - 1])
@@ -35,15 +35,13 @@ def resolve():
                 if used[e[1]]:
                     heapq.heappush(edgelist, [e[0] + d[v], e[1]])
         return d
-
     used = set()
     for i in range(n):
         dist = dijkstra_heap(i)
-        for d, to, fr in k:
+        for (d, to, fr) in k:
             if dist[to] + d == dist[fr]:
                 used.add((to, fr))
-
-    print((len(k) - len(used)))
+    print(len(k) - len(used))
 
 
 def __starting_point():

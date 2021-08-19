@@ -1,5 +1,5 @@
 n = input()
-p = "-1"
+p = '-1'
 s = 0
 for i in range(0, len(n) - 1):
     if int(n[i]) % 2 == 0 and int(n[i]) < int(n[len(n) - 1]):

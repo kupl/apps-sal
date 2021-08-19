@@ -1,4 +1,4 @@
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 p = a / b
 q = c / d
 r = (1 - p) * (1 - q)

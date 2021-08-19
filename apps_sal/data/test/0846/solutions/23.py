@@ -1,4 +1,4 @@
-n, m = tuple(map(int, input().split()))
+(n, m) = tuple(map(int, input().split()))
 b = list(map(int, input().split()))
 a = [0] * n
 for i in b:

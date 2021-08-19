@@ -10,7 +10,7 @@ def dijkstra(s):
     heapq.heapify(p)
     heapq.heappush(p, (dist[s], s))
     while p:
-        d, u = heapq.heappop(p)
+        (d, u) = heapq.heappop(p)
         if dist[u] < d:
             continue
         c[u] = 1
@@ -21,12 +21,12 @@ def dijkstra(s):
     return dist
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 v = n
 G = [[] for _ in range(v)]
 E = []
 for _ in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     a -= 1
     b -= 1
     G[a].append([b, c])

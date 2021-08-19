@@ -1,5 +1,3 @@
-
-
 def read_int():
     return int(input().strip())
 
@@ -24,8 +22,7 @@ def solve():
     """
     N = read_int()
     shakes = [[] for _ in range(N)]
-
-    for i, a in enumerate(read_ints(), start=1):
+    for (i, a) in enumerate(read_ints(), start=1):
         shakes[a].append(i)
     i = 0
     answer = []

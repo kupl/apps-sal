@@ -1,10 +1,11 @@
-def rd(): return list(map(int, input().split()))
+def rd():
+    return list(map(int, input().split()))
 
 
-n, s = rd()
-a = [- s - 1]
+(n, s) = rd()
+a = [-s - 1]
 for _ in range(n):
-    h, m = rd()
+    (h, m) = rd()
     a.append(h * 60 + m)
 x = 0
 for i in range(1, len(a)):

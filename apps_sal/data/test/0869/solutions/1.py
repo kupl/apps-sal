@@ -2,7 +2,7 @@ import sys
 
 
 def solve():
-    a, b, = rv()
+    (a, b) = rv()
     awesome = min(a, b)
     a -= awesome
     b -= awesome
@@ -10,12 +10,22 @@ def solve():
     print(awesome, ok)
 
 
-def prt(l): return print(' '.join(l))
-def rs(): return map(str, input().split())
-def rv(): return map(int, input().split())
-def rl(n): return [list(map(int, input().split())) for _ in range(n)]
+def prt(l):
+    return print(' '.join(l))
+
+
+def rs():
+    return map(str, input().split())
+
+
+def rv():
+    return map(int, input().split())
+
+
+def rl(n):
+    return [list(map(int, input().split())) for _ in range(n)]
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 solve()

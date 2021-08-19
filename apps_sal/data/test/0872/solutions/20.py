@@ -7,7 +7,7 @@ for i in range(n):
         cnt1 = 1
     else:
         cnt2 = 1
-if (cnt1 and cnt2):
+if cnt1 and cnt2:
     print(' '.join(map(str, sorted(l))))
 else:
     print(' '.join(map(str, l)))

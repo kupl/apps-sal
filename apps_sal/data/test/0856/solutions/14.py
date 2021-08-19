@@ -1,10 +1,9 @@
 import sys
 readline = sys.stdin.readline
-
 T = int(readline())
 Ans = [None] * T
 for qu in range(T):
-    N, K = map(int, readline().split())
+    (N, K) = map(int, readline().split())
     A = list(map(int, readline().split()))
     K -= 1
     ma = max(A)

@@ -1,7 +1,7 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = [-b - 1]
 for i in range(a):
-    k, l = map(int, input().split())
+    (k, l) = map(int, input().split())
     c.append(k * 60 + l)
 c.append(10000000000000000)
 for i in range(a + 1):

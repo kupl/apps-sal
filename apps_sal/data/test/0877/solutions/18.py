@@ -1,15 +1,15 @@
-'''
+"""
 Created on May 8, 2016
 
 @author: Md. Rezwanul Haque
-'''
+"""
 
 
 def main():
-    n, m = map(int, input().split())
-    lo, hi = 1, n
+    (n, m) = map(int, input().split())
+    (lo, hi) = (1, n)
     for _ in range(m):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         if u > v:
             if lo < v:
                 lo = v

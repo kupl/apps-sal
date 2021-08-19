@@ -1,4 +1,3 @@
-
 def to_minutes(h, m):
     return h * 60 + m
 
@@ -7,11 +6,10 @@ def to_retard(m):
     return divmod(m, 60)
 
 
-n, s = [int(i) for i in input().split(' ')]
-
+(n, s) = [int(i) for i in input().split(' ')]
 takeoffs = []
 for i in range(n):
-    takeoff_time = to_minutes(*([int(i) for i in input().split(' ')]))
+    takeoff_time = to_minutes(*[int(i) for i in input().split(' ')])
     takeoffs.append(takeoff_time)
 
 

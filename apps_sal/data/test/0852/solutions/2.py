@@ -1,9 +1,8 @@
 t = int(input())
 for _ in range(t):
-    n, k, l = list(map(int, input().split()))
+    (n, k, l) = list(map(int, input().split()))
     d = list(map(int, input().split()))
     p = list(range(k)) + list(range(k, 0, -1))
-
     pos = list(range(2 * k))
     ans = 'Yes'
     for i in range(n):

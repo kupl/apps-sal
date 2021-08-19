@@ -1,5 +1,5 @@
-
 def resolve():
+
     def make_divisors(n):
         divisors = []
         for i in range(1, int(n ** 0.5) + 1):
@@ -9,9 +9,7 @@ def resolve():
                     divisors.append(n // i)
         divisors.sort(reverse=True)
         return divisors
-
-    N, M = list(map(int, input().split()))
-
+    (N, M) = list(map(int, input().split()))
     div = make_divisors(M)
     for d in div:
         if d <= M // N:

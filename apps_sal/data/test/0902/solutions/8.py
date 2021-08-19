@@ -13,11 +13,9 @@ def li():
     return list(mi())
 
 
-n, k = mi()
+(n, k) = mi()
 a = li()
-
 q = deque(a)
-
 c = q.popleft()
 w = 0
 while 1:

@@ -1,7 +1,7 @@
 def solve(n, A):
     cnt = 0
     for i in range(n - 1):
-        a0, a1, a2 = A[i], A[i + 1], A[i + 2]
+        (a0, a1, a2) = (A[i], A[i + 1], A[i + 2])
         if a2 == 1:
             if a1 == 2:
                 cnt += 3
@@ -16,12 +16,11 @@ def solve(n, A):
             else:
                 print('Infinite')
                 return
+        elif a1 == 1:
+            cnt += 4
         else:
-            if a1 == 1:
-                cnt += 4
-            else:
-                print('Infinite')
-                return
+            print('Infinite')
+            return
     print('Finite')
     print(cnt)
     return

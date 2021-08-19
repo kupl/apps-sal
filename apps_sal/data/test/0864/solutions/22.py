@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [int(el) for el in input().split()]
 b = [0] * 101
 for i in range(m):
@@ -14,8 +14,6 @@ def f(df):
 
 
 d.sort(key=f)
-
-
 k = 0
 l = 0
 for i in range(n):

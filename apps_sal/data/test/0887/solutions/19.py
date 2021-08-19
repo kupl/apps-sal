@@ -5,8 +5,7 @@ if n == 1:
         print('YES')
     else:
         print('NO')
+elif a == n - 1:
+    print('YES')
 else:
-    if a == n - 1:
-        print('YES')
-    else:
-        print('NO')
+    print('NO')

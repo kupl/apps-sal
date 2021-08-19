@@ -1,4 +1,4 @@
-number = input("")
+number = input('')
 for index in range(0, len(number)):
     if number[index] == ' ':
         split = index

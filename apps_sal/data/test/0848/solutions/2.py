@@ -1,5 +1,4 @@
-n, k = tuple(map(int, input().split()))
-
+(n, k) = tuple(map(int, input().split()))
 if (n - 1) // 2 < k:
     print(-1)
 else:

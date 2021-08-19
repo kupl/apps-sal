@@ -1,15 +1,11 @@
 import heapq
-
-
 INF = float('inf')
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 to = [[] for _ in range(N)]
 sides = [[0] * N for _ in range(N)]
-
-
 for _ in range(M):
-    a, b, c = list(map(int, input().split()))
-    a, b = a - 1, b - 1
+    (a, b, c) = list(map(int, input().split()))
+    (a, b) = (a - 1, b - 1)
     to[a].append((c, b))
     to[b].append((c, a))
     sides[a][b] = 1
@@ -22,10 +18,10 @@ def dijkstra(s):
     cost = [[INF, []] for i in range(N)]
     cost[s][0] = 0
     while hq:
-        c, v = heapq.heappop(hq)
+        (c, v) = heapq.heappop(hq)
         if c > cost[v][0]:
             continue
-        for d, u in to[v]:
+        for (d, u) in to[v]:
             tmp = d + cost[v][0]
             if tmp < cost[u][0]:
                 cost[u][0] = tmp
@@ -50,8 +46,7 @@ def main():
         tree = dijkstra(s)
         for g in range(N):
             dfs(g, tree)
-
-    print((sum(sum(column) for column in sides) // 2))
+    print(sum((sum(column) for column in sides)) // 2)
 
 
 def __starting_point():

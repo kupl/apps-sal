@@ -22,7 +22,7 @@ def main():
                 t += 10
         for k in range(13):
             dp[i + 1][k] %= divisor
-    print((dp[len(s)][5]))
+    print(dp[len(s)][5])
 
 
 main()

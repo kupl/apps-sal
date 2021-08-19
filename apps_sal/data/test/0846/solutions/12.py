@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 c = [int(i) for i in input().split()]
 closed = [False] * n
 ans = [0] * n
@@ -11,4 +11,4 @@ for i in c:
             ans[j] = i
         else:
             continue
-print(' '.join(str(i) for i in ans))
+print(' '.join((str(i) for i in ans)))

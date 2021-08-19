@@ -6,4 +6,4 @@ while n != 0:
     n = a[n - 1]
 z.reverse()
 for i in z:
-    print(i, end=" ")
+    print(i, end=' ')

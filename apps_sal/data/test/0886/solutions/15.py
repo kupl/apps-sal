@@ -1,14 +1,11 @@
 num = input()
-
 res = '-1'
 l = len(num)
 a = int(num[l - 1])
 n = []
 for i in range(l):
     n.append(num[i])
-
 flag = 1
-
 i = 0
 while flag and i < l:
     if int(num[i]) % 2 == 0 and int(num[i]) < a:
@@ -18,7 +15,6 @@ while flag and i < l:
         s = ''.join(n)
         res = s
     i += 1
-
 i = l - 1
 while flag and i >= 0:
     if int(num[i]) % 2 == 0:

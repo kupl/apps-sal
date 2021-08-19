@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 numbers = list(map(int, input().split()))
 s = abs(sum(numbers))
 res = s // x

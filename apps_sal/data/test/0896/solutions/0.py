@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-t1, t2 = 0, 0
+(t1, t2) = (0, 0)
 for i in a:
     t1 ^= i
 for i in b:

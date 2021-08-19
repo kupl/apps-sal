@@ -15,7 +15,6 @@ for i in str1:
         pos1 += 1
     else:
         pos1 -= 1
-
 for i in str2:
     if i == '+':
         pos2 += 1
@@ -23,19 +22,16 @@ for i in str2:
         pos2 -= 1
     else:
         need += 1
-
 diff = abs(pos1 - pos2)
 if diff % 2 != need % 2:
     print(0)
-else:
-    if need == 0:
-        if pos1 == pos2:
-            print(1)
-        else:
-            print(0)
-
-    elif diff > need:
-        print(0)
+elif need == 0:
+    if pos1 == pos2:
+        print(1)
     else:
-        a = (need + diff) // 2
-        print(C(need, a) / (2**need))
+        print(0)
+elif diff > need:
+    print(0)
+else:
+    a = (need + diff) // 2
+    print(C(need, a) / 2 ** need)

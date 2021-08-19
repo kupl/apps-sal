@@ -10,7 +10,7 @@ def divisor(n):
     return cd
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 cd = divisor(M)
 cd.sort(reverse=True)
 for c in cd:

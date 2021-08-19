@@ -6,4 +6,4 @@ for i in range(len(s) - 1, -1, -1):
 if max == len(s) - 1:
     print(-1)
 else:
-    print(s[:max] + s[-1] + s[max + 1: -1] + s[max])
+    print(s[:max] + s[-1] + s[max + 1:-1] + s[max])

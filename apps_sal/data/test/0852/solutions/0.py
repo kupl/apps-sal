@@ -1,5 +1,5 @@
 for q in range(int(input())):
-    n, k, l = map(int, input().split())
+    (n, k, l) = map(int, input().split())
     line = list(map(int, input().split()))
     line.append(-1000)
     dp = [[False] * (2 * k) for i in range(n + 2)]
@@ -18,6 +18,6 @@ for q in range(int(input())):
                 elif dp[i][j - 1]:
                     dp[i][j] = True
     if max(dp[n + 1]) == True:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

@@ -8,7 +8,7 @@ def gray(n):
     return l1 + l2
 
 
-n, l, r, x = list(map(int, input().split()))
+(n, l, r, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ps = gray(n)
 ans = 0
@@ -23,6 +23,6 @@ for i in ps:
             s += a[j]
             mi = min(mi, a[j])
             ma = max(ma, a[j])
-    if s >= l and s <= r and ma - mi >= x and k > 1:
+    if s >= l and s <= r and (ma - mi >= x) and (k > 1):
         ans += 1
 print(ans)

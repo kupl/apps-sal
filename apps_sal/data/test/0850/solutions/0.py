@@ -17,7 +17,7 @@ for q in dk:
         ans.append(q)
         f2 = True
         break
-if (not f1 and not f2):
+if not f1 and (not f2):
     for j in dk:
         if j != 0 and j != 100:
             ans.append(j)

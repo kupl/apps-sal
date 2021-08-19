@@ -1,8 +1,8 @@
 def solve():
     from collections import deque
-    N, K = map(int, input().split())
-    dq = deque((map(int, input().split())))
-    popleft, append = dq.popleft, dq.append
+    (N, K) = map(int, input().split())
+    dq = deque(map(int, input().split()))
+    (popleft, append) = (dq.popleft, dq.append)
     win = 0
     cur = popleft()
     while dq:

@@ -1,5 +1,4 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 a1 = min(a, b)
 c = max(a, b)
 c -= a1

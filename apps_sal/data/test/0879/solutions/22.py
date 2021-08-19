@@ -2,7 +2,7 @@ def bfs(start, end, g):
     vis = {start: -1}
     q = [start]
     found = False
-    while q and not found:
+    while q and (not found):
         curr = q.pop(0)
         if curr == end:
             break
@@ -30,7 +30,7 @@ ans = bfs(0, n - 1, graph)
 i = 0
 j = len(ans) - 1
 while i <= j:
-    ans[i], ans[j] = ans[j] + 1, ans[i] + 1
+    (ans[i], ans[j]) = (ans[j] + 1, ans[i] + 1)
     i += 1
     j -= 1
 print(*ans)

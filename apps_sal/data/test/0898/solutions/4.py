@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 d = []
 f = 1
 while f * f < m + 1:
@@ -8,6 +8,6 @@ while f * f < m + 1:
     f += 1
 d.sort(reverse=True)
 for i in d:
-    if (m - i * n) >= 0 and (m - i * n) % i == 0:
+    if m - i * n >= 0 and (m - i * n) % i == 0:
         break
 print(i)

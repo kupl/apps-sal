@@ -23,7 +23,6 @@ if a == 'R':
         else:
             finalstr += newR(three, i)
     print(finalstr)
-
 if a == 'L':
     finalstr = ''
     string = input()

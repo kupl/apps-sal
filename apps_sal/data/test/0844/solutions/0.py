@@ -1,7 +1,7 @@
-'''input
+"""input
 8
 11010111
-'''
+"""
 n = int(input())
 s = input()
 a = [0]

@@ -7,11 +7,11 @@ for you in range(t):
     li = [int(i) for i in l]
     x = min(li)
     y = max(li)
-    if(k % 2):
+    if k % 2:
         for i in li:
-            print(y - i, end=" ")
+            print(y - i, end=' ')
         print()
     else:
         for i in li:
-            print(i - x, end=" ")
+            print(i - x, end=' ')
         print()

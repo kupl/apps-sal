@@ -1,10 +1,9 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 x = m // n
 
 
 def make_divisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -16,11 +15,8 @@ def make_divisors(n):
 
 
 y = make_divisors(m)
-
 res = 1
-
 for i in y:
     if i <= x:
         res = i
-
 print(res)

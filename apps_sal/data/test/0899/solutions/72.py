@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 rg = [[999999999 for _ in range(n)] for _ in range(n)]
 rgflg = [[False for _ in range(n)] for _ in range(n)]
 for i in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     rg[a - 1][b - 1] = c
     rgflg[a - 1][b - 1] = True
     rg[b - 1][a - 1] = c

@@ -1,6 +1,5 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 _ = min(a)
 r = 0
 s = sum(a)

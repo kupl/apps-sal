@@ -20,7 +20,6 @@ o = prefix(t)
 m = len(t) - 1
 ans = [[0, 0] for _ in range(len(s) + 5)]
 ans[0][1] = float('-inf')
-
 for i in range(1, len(s)):
     j = m
     ans[i][1] = float('-inf')
@@ -32,7 +31,6 @@ for i in range(1, len(s)):
         if j == 1:
             ans[i][1] = max(ans[i][1], ans[i - m][0] + 1)
     ans[i][0] = max(ans[i][1], ans[i - 1][0])
-
 if ans[len(s) - 1][0] == 7:
     print(o.count(1))
 else:

@@ -1,9 +1,9 @@
 s1 = input()
 s2 = input()
-P = s1.count("+") - s1.count("-")
-C = s2.count("+") - s2.count("-")
+P = s1.count('+') - s1.count('-')
+C = s2.count('+') - s2.count('-')
 Goal = abs(P - C)
-Cnt = s2.count("?")
+Cnt = s2.count('?')
 K = [[0] * 21 for i in range(11)]
 K[0][10] = 1.0
 for i in range(1, Cnt + 1):

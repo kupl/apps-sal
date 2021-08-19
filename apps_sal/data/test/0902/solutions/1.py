@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 if k > n:
     k = n
 arr = list(map(int, input().split()))

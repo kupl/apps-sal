@@ -3,7 +3,7 @@ import math
 from functools import lru_cache
 from collections import deque
 from bisect import bisect_left
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 def input():
@@ -24,8 +24,7 @@ def i2(n):
 
 
 def main():
-    N, M = mi()
-
+    (N, M) = mi()
     d = []
     i = 1
     while i * i <= M:
@@ -33,15 +32,12 @@ def main():
             d.append(i)
             d.append(M // i)
         i += 1
-
     d.sort()
-
     for v in d:
         if v <= M // N:
             ans = v
         else:
             break
-
     print(ans)
 
 

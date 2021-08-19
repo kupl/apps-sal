@@ -1,10 +1,8 @@
-
-x, y = map(int, input().split())
-mod = 10**9 + 7
-
+(x, y) = map(int, input().split())
+mod = 10 ** 9 + 7
 a = (2 * y - x) / 3
 b = (2 * x - y) / 3
-if a < 0 or b < 0 or (2 * y - x) // 3 != a or (2 * x - y) // 3 != b:
+if a < 0 or b < 0 or (2 * y - x) // 3 != a or ((2 * x - y) // 3 != b):
     print(0)
 else:
     a = (2 * y - x) // 3
@@ -19,5 +17,4 @@ else:
         fac[i] = fac[i - 1] * i % mod
         inv[i] = mod - inv[mod % i] * (mod // i) % mod
         finv[i] = finv[i - 1] * inv[i] % mod
-
     print(fac[a + b] * (finv[a] * finv[b] % mod) % mod)

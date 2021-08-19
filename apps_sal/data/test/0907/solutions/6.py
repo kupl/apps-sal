@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ms = []
 cnt = {}
 
@@ -11,19 +11,19 @@ def cd(x):
 
 
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     ms.append((x, y))
     cd(x)
     cd(y)
 ans = []
-for k, v in list(cnt.items()):
+for (k, v) in list(cnt.items()):
     if v >= m // 2:
         ans.append(k)
 
 
 def check_one(c):
     for i in range(m):
-        x, y = ms[i]
+        (x, y) = ms[i]
         if x == c or y == c:
             continue
         if check_two(c, x, i):
@@ -36,8 +36,8 @@ def check_one(c):
 
 def check_two(c1, c2, s):
     for i in range(s, m):
-        x, y = ms[i]
-        if x == c1 or x == c2 or y == c1 or y == c2:
+        (x, y) = ms[i]
+        if x == c1 or x == c2 or y == c1 or (y == c2):
             continue
         else:
             return False
@@ -48,5 +48,4 @@ for a in ans:
     if check_one(a):
         print('YES')
         quit()
-
 print('NO')

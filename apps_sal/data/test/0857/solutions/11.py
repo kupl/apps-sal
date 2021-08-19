@@ -1,4 +1,4 @@
-n, m = (map(int, input().strip().split(' ')))
+(n, m) = map(int, input().strip().split(' '))
 arr = list(map(int, input().strip().split(' ')))
 brr = list(map(int, input().strip().split(' ')))
 ans = []

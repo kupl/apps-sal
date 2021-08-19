@@ -13,7 +13,7 @@ def readlist():
     return list(map(int, input().split()))
 
 
-n, m = readmap()
+(n, m) = readmap()
 A = readlist()
 c = Counter(A)
 freq = []
@@ -36,5 +36,4 @@ for i in reversed(range(1, m + 1)):
     if ok(i):
         print(i)
         quit()
-
 print(0)

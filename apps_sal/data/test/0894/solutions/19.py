@@ -1,4 +1,4 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 z = abs(x) + abs(y)
 if x > 0 and y > 0:
     print(0, z, z, 0)

@@ -1,4 +1,3 @@
-
 n = int(input())
 arr = list(map(int, input().split()))
 l = [-1] * 5
@@ -22,8 +21,7 @@ if l[2] > -1:
     l1.append(str(l[2]))
 if l[3] > -1:
     l1.append(str(l[3]))
-
-if l[4] > -1 and l[3] == -1 and l[2] == -1:
+if l[4] > -1 and l[3] == -1 and (l[2] == -1):
     l1.append(str(l[4]))
 print(len(l1))
 print(' '.join(l1))

@@ -1,10 +1,11 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, = readln()
+(n,) = readln()
 if n % 2:
     print(-1)
 else:

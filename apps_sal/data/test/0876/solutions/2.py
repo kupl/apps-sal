@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split(" ")))
-l = list(map(int, input().split(" ")))
-
+(n, k) = list(map(int, input().split(' ')))
+l = list(map(int, input().split(' ')))
 v = []
 for x in l:
     if x != 0 or v:
@@ -21,10 +20,11 @@ def bruteforce(v, k):
 
 
 def smarty(v, k):
+
     def triang(x):
         return x * (x + 1) // 2
-    l, r = 0, 10**18
-    ans = 10**18
+    (l, r) = (0, 10 ** 18)
+    ans = 10 ** 18
     while l <= r:
         h = (l + r) // 2
         f0 = v[0]

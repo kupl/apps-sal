@@ -1,15 +1,13 @@
-
 n = int(input())
 a = input().split()
-ans = ""
+ans = ''
 cnt = 0
-XO = ""
-OX = ""
-XX = ""
-
+XO = ''
+OX = ''
+XX = ''
 for i in a:
     if i == '100' or i == '0':
-        ans += i + " "
+        ans += i + ' '
         cnt += 1
     else:
         if len(i) == 1:
@@ -19,18 +17,15 @@ for i in a:
                 XO = i
             else:
                 XX = i
-
-
-if OX == "" and XO == "" and XX != "":
+if OX == '' and XO == '' and (XX != ''):
     cnt += 1
-    ans += XX + " "
+    ans += XX + ' '
 else:
-    if XO != "":
-        ans += XO + " "
+    if XO != '':
+        ans += XO + ' '
         cnt += 1
-    if OX != "":
+    if OX != '':
         cnt += 1
-        ans += OX + " "
-
+        ans += OX + ' '
 print(cnt)
 print(ans)

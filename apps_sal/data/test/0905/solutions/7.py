@@ -1,8 +1,8 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 s *= 100
 ans = -1
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     cost = x * 100 + y
     if s < cost:
         continue

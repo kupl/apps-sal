@@ -27,8 +27,8 @@ for i in range(c + 1):
 def fact(n):
     w = 1
     for i in range(n):
-        w *= (i + 1)
-    return(w)
+        w *= i + 1
+    return w
 
 
 def parmi(k, n):
@@ -36,14 +36,14 @@ def parmi(k, n):
     w *= fact(n)
     w //= fact(k)
     w //= fact(n - k)
-    return(w)
+    return w
 
 
 def puiss(k, n):
     w = 1
     for i in range(n):
         w *= k
-    return(w)
+    return w
 
 
 if y == -1:

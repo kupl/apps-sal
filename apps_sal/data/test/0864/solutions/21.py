@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 d = dict()
 for i in s:
@@ -22,5 +22,4 @@ for i in range(1, 101):
             x += 1
     if x == n:
         ans = max(ans, i)
-
 print(ans)

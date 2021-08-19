@@ -1,6 +1,6 @@
 from itertools import *
-n, k = list(map(int, input().split()))
-*A, = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
+(*A,) = list(map(int, input().split()))
 alc = 0
 for v in A:
     if v > 0:
@@ -9,7 +9,7 @@ if max(A) >= k:
     print(0)
 elif alc <= 20:
     l = 0
-    r = int(1e18)
+    r = int(1e+18)
     while l + 1 < r:
         m = (l + r) // 2
         s = 0

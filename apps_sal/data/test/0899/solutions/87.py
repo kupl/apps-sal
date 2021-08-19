@@ -1,11 +1,11 @@
 INF = 100000000
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 a = [0] * 1000
 b = [0] * 1000
 c = [0] * 1000
 dist = [[INF for _ in range(100)] for _ in range(100)]
 for i in range(M):
-    a[i], b[i], c[i] = map(int, input().split())
+    (a[i], b[i], c[i]) = map(int, input().split())
     a[i] -= 1
     b[i] -= 1
 for i in range(N):

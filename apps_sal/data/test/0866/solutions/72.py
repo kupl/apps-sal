@@ -1,5 +1,5 @@
-x, y = map(int, input().split())
-mod = 10**9 + 7
+(x, y) = map(int, input().split())
+mod = 10 ** 9 + 7
 if x // 2 + 2 * (x % 2) <= y <= 2 * x and (2 * x - y) % 3 == 0:
     t = (2 * x - y) // 3
     maxt = max(t, x - t)

@@ -1,7 +1,8 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-k, a, b = R()
+(k, a, b) = R()
 a -= 1
 b -= 1
 A = [list(R()) for _ in range(3)]
@@ -18,7 +19,7 @@ while i < k and f[a][b] is None:
         d += 3
     if d:
         s[i][d - 1] += 1
-    a, b = A[a][b] - 1, B[a][b] - 1
+    (a, b) = (A[a][b] - 1, B[a][b] - 1)
 if i == k:
     print(*s[i])
 else:

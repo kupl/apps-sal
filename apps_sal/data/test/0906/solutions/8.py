@@ -2,8 +2,8 @@ def bin_exp(x, n, m):
     r = 1
     while n > 0:
         if n % 2 == 1:
-            r = (r * x) % m
-        x = (x * x) % m
+            r = r * x % m
+        x = x * x % m
         n = n // 2
     return r
 
@@ -13,7 +13,6 @@ I = [int(i) for i in input().split()]
 n = I[0]
 m = I[1]
 k = I[2]
-
 if n % 2 != m % 2 and k == -1:
     print(0)
 else:

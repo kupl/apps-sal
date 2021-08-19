@@ -1,6 +1,5 @@
 import math
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 if k >= math.ceil(n / 2):
     print(-1)
 else:
@@ -8,7 +7,6 @@ else:
     for i in range(1, n - k + 1):
         for j in range(i + 1, i + k + 1):
             print(i, j)
-
     x = i + 1
     for i in range(x, n + 1):
         c = 0

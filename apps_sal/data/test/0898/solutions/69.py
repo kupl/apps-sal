@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
-for i in range(1, int(m**.5) + 1):
+for i in range(1, int(m ** 0.5) + 1):
     if m % i == 0:
         if m // i >= n:
             a += [i]

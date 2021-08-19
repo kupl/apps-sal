@@ -10,7 +10,7 @@ while i < inpt[1]:
     if b < ln[0]:
         b = ln[0]
     i += 1
-if (a - b) >= 0:
+if a - b >= 0:
     print(a - b)
 else:
     print(0)

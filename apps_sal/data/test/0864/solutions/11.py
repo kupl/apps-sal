@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 N = list(map(int, input().split()))
 A = [0] * 100
 for i in range(m):

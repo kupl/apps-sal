@@ -10,10 +10,22 @@ from time import time
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
 
 
 def divisor(n):
@@ -28,6 +40,6 @@ def divisor(n):
     return table
 
 
-n, m = MAP()
+(n, m) = MAP()
 a = sorted(divisor(m))
 print(m // a[bisect_left(a, n)])

@@ -1,6 +1,6 @@
 import numpy as np
-n, t = map(int, input().split())
-a = [list(map(int, input().split()))for i in range(n)]
+(n, t) = map(int, input().split())
+a = [list(map(int, input().split())) for i in range(n)]
 b = np.zeros((n + 1, t))
 c = np.zeros((n + 1, t))
 for i in range(n):

@@ -13,9 +13,9 @@ for x_ in Counter(chain(*ab)).most_common(4):
             for abi2 in ab2:
                 ys.intersection_update(abi2)
             assert ys
-        print("YES")
+        print('YES')
         break
     except AssertionError:
         pass
 else:
-    print("NO")
+    print('NO')

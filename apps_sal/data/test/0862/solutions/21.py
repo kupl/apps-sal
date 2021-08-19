@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(_) for _ in input().strip().split()]
-
 mini = min(a)
 a = [_ - mini for _ in a]
 pos = mini % n

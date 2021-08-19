@@ -1,4 +1,4 @@
-lamp, step = map(int, input().split())
+(lamp, step) = map(int, input().split())
 steps = list(map(int, input().split()))
 lamps = []
 for i in range(lamp):

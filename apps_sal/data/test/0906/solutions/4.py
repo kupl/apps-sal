@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 diag = n + m - 2
 if k == -1 and diag % 2 == 1:
     print(0)

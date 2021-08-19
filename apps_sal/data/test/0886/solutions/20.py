@@ -12,8 +12,7 @@ for x in range(len(a)):
         break
     elif int(a[x]) % 2 == 0:
         lastnum = x
-
-if not(reach):
+if not reach:
     if lastnum == -1:
         print(-1)
     else:

@@ -23,7 +23,7 @@ def main():
             p[j] = np[j] % divisor
             np[j] = 0
         multiplier = rt[10 * multiplier]
-    print((p[5]))
+    print(p[5])
 
 
 main()

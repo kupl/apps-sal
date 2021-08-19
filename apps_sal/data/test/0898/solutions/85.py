@@ -8,7 +8,7 @@ def enum_divisors(n):
     return res
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 divs = sorted(enum_divisors(M), reverse=True)
-ans = max(d for d in divs if M // d >= N)
+ans = max((d for d in divs if M // d >= N))
 print(ans)

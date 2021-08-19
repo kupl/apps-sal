@@ -1,8 +1,8 @@
-'''
+"""
 Created on Jan 5, 2015
 
 @author: mohamed265
-'''
+"""
 n = int(input())
 t = sum([int(x) for x in input().split()])
 slon = 0

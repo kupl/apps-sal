@@ -8,4 +8,4 @@ count0 = len(A) - count5
 if count0 == 0:
     print(-1)
 else:
-    print(int('5' * ((count5 // 9) * 9) + '0' * count0))
+    print(int('5' * (count5 // 9 * 9) + '0' * count0))

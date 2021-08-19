@@ -1,15 +1,14 @@
 from copy import copy
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 s = input()
 count = [0 for _ in range(13)]
 count[0] = 1
 for i in range(len(s)):
     new = [0 for _ in range(13)]
     for m in range(13):
-        new[(m * 10) % 13] = count[m]
+        new[m * 10 % 13] = count[m]
     count = new
-    if s[i] != "?":
+    if s[i] != '?':
         div = int(s[i])
         count = count[-div:] + count[:-div]
     else:

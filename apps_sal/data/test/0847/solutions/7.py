@@ -1,4 +1,4 @@
-nn, xx = input().split(' ')
+(nn, xx) = input().split(' ')
 n = int(nn)
 x = int(xx)
 a = input().split(' ')

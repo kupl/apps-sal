@@ -1,6 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ls = []
-for i in range(1, int(m**(1 / 2)) + 1):
+for i in range(1, int(m ** (1 / 2)) + 1):
     if m % i == 0:
         ls.append(i)
         ls.append(m // i)

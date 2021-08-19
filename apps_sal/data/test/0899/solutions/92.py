@@ -3,11 +3,11 @@ input = sys.stdin.readline
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     road = [[100000] * n for _ in range(n)]
     count = [[-1] * n for i in range(n)]
     for _ in range(m):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         road[a - 1][b - 1] = c
         road[b - 1][a - 1] = c
         count[a - 1][b - 1] = 0

@@ -8,7 +8,7 @@ def dijkstra(s):
     while len(que) != 0:
         p = heapq.heappop(que)
         v = p[1]
-        if (dist[v] < p[0]):
+        if dist[v] < p[0]:
             continue
         for e in graph[v]:
             if dist[e[0]] > dist[v] + e[1]:
@@ -26,24 +26,22 @@ def get_path(t):
     return path
 
 
-N, W = list(map(int, input().split()))
+(N, W) = list(map(int, input().split()))
 graph = [[] for i in range(N)]
 edges = {}
 for i in range(W):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     x -= 1
     y -= 1
     graph[x].append((y, z))
     graph[y].append((x, z))
-    edges[(x, y)] = True
-
+    edges[x, y] = True
 for st in range(N):
-    dist = [float("inf")] * N
+    dist = [float('inf')] * N
     prev = [-1] * N
     dijkstra(st)
     for i in range(N):
         gp = get_path(i)
         for i in range(1, len(gp)):
-            edges[(gp[i - 1], gp[i])] = False
-
-print((sum(edges.values())))
+            edges[gp[i - 1], gp[i]] = False
+print(sum(edges.values()))

@@ -1,10 +1,9 @@
 x = input()
-
 pos = -1
 last = ord(x[-1]) - 48
-for i, c in enumerate(x):
+for (i, c) in enumerate(x):
     cur = ord(c) - 48
-    if not cur & 0b1:
+    if not cur & 1:
         pos = i
         if last > cur:
             print(x[:i] + x[-1] + x[i + 1:-1] + x[i])
