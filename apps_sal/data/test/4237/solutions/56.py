@@ -1,6 +1,3 @@
-# coding: utf-8
-# Your code here!
-
 from math import gcd
 
 
@@ -12,8 +9,6 @@ def getExclude(x, c, d):
     return x - x // c - x // d + x // lcm(c, d)
 
 
-a, b, c, d = (int(x) for x in input().split())
-
+(a, b, c, d) = (int(x) for x in input().split())
 ans = getExclude(b, c, d) - getExclude(a - 1, c, d)
-
 print(ans)

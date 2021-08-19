@@ -1,6 +1,5 @@
-# map(int, input().split())
 def main():
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     f = []
     f += [a + b] * 100
     f += [c + d] * 100

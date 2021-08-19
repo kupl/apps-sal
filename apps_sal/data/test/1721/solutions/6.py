@@ -1,20 +1,19 @@
 N = int(input())
 S = input()
-
 dic = {}
-for i, s in enumerate(S):
+for (i, s) in enumerate(S):
     if s in dic:
         dic[s].append(i)
     else:
         dic[s] = [i]
-
 X = list(range(N - 1, -1, -1))
-for c, idcs in list(dic.items()):
-    for p, q in zip(idcs, reversed(idcs)):
+for (c, idcs) in list(dic.items()):
+    for (p, q) in zip(idcs, reversed(idcs)):
         X[p] = N - 1 - q
 
 
-class BIT():
+class BIT:
+
     def __init__(self, N):
         self.N = N
         self.T = [0] * (N + 1)
@@ -25,14 +24,14 @@ class BIT():
             self.T[i] += x
             i += i & -i
 
-    def _sum(self, i):  # [0,i)
+    def _sum(self, i):
         ret = 0
         while i > 0:
             ret += self.T[i]
             i ^= i & -i
         return ret
 
-    def sum(self, l, r):  # [l,r)
+    def sum(self, l, r):
         return self._sum(r) - self._sum(l)
 
     def lower_bound(self, w):
@@ -50,7 +49,7 @@ class BIT():
 
 b = BIT(N)
 ans = 0
-for i, x in enumerate(X):
+for (i, x) in enumerate(X):
     ans += i - b._sum(x + 1)
     b.add(x, 1)
 print(ans)

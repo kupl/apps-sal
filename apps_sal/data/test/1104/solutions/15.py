@@ -56,17 +56,14 @@ for j in range(4):
                     else:
                         fl = False
                         break
+                elif trr[i] == 1:
+                    trr[i + 1] = 2
+                elif trr[i] == 2:
+                    trr[i + 1] = 1
+                elif trr[i] == 3:
+                    trr[i + 1] = 0
                 else:
-                    if trr[i] == 1:
-                        trr[i + 1] = 2
-                    elif trr[i] == 2:
-                        trr[i + 1] = 1
-                    elif trr[i] == 3:
-                        trr[i + 1] = 0
-                    else:
-                        trr[i + 1] = 3
-
-    # print(trr)
+                    trr[i + 1] = 3
     if fl:
         print('YES')
         print(*trr)
