@@ -14,8 +14,6 @@ def GetKey(flags):
     for a in flags:
         key <<= 1
         key += a
-    # print(flags)
-    # print(key)
     return key
 
 
@@ -24,13 +22,11 @@ def main():
     seen = dict()
     for s in input[1:]:
         seen[GetKey(GetIA(s))] = True
-
     for a in seen.keys():
         for b in seen.keys():
-            if (a & b) == 0:
+            if a & b == 0:
                 print('YES')
                 return
-
     print('NO')
 
 

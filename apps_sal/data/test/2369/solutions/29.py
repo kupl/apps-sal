@@ -2,7 +2,8 @@ from itertools import accumulate
 
 
 class Factorial:
-    def __init__(self, n, mod=10**9 + 7):
+
+    def __init__(self, n, mod=10 ** 9 + 7):
         self.fac = [0] * (n + 1)
         self.ifac = [0] * (n + 1)
         self.fac[0] = 1
@@ -26,21 +27,17 @@ class Factorial:
             return 1
         if n < r or n < 0:
             return 0
-        return (self.fac[n] * self.ifac[n - r]) % self.mod
+        return self.fac[n] * self.ifac[n - r] % self.mod
 
 
 def resolve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = sorted(map(int, input().split()))
-    mod = 10**9 + 7
-
+    mod = 10 ** 9 + 7
     fact = Factorial(n + 1)
     lll = [fact.comb(i, k - 1) for i in range(k - 1, n)]
-    # acc = list(accumulate(lll))
-
     ans = 0
     for i in range(n - k + 1):
-        # print(i, -1-i, f" --- {a[i]}, {a[-i-1]}, {lll[-i-1]}")
         ans = (ans + (a[-i - 1] - a[i]) * lll[-i - 1]) % mod
     print(ans)
 

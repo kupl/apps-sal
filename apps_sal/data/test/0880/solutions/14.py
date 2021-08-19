@@ -1,7 +1,7 @@
 def factorial_mod(n, mod):
     ans = 1
     for i in range(1, n + 1):
-        ans = (ans * i) % mod
+        ans = ans * i % mod
     return ans
 
 
@@ -12,14 +12,10 @@ def solve(n):
         return 2
     mod = 998244353
     len_metaseq = factorial_mod(n, mod)
-    ans = (
-        ((n - 1) + (n - 2))
-        * len_metaseq
-        * 49912217  # 7 # modinv(2, mod)
-    ) % mod
+    ans = (n - 1 + (n - 2)) * len_metaseq * 49912217 % mod
     error = 0
     for curr in range(4, n + 1):
-        error = ((error + 1) * curr) % mod
+        error = (error + 1) * curr % mod
     return (ans - error) % mod
 
 

@@ -1,10 +1,6 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
-        # a + ....+ b = num
-        # if 3 equal amount of indices have the same sum  return true
-        # how do we find the sum?
-        # use the sum and then divide it by three thats the equal part sum
-        # use len(A) - 1  to find the number of indexes and
         equalSum = sum(A) // 3
         part = 0
         numparts = 0

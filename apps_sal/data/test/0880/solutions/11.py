@@ -10,7 +10,6 @@ for i in range(n, 0, -1):
     s %= mod
     cur %= mod
     rev.append(tmp % mod)
-# print(rev)
 ans = 1
 for i in range(1, n + 1):
     ans *= i

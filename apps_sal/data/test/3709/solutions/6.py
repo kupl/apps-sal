@@ -1,9 +1,7 @@
-# IAWT
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 cnt = {}
 for i in range(2 ** k):
     cnt[bin(i)[2:].zfill(k)] = 0
-
 for i in range(n):
     l = input().split()
     s = ''
@@ -55,11 +53,7 @@ def f4():
     if cnt['0000'] > 0:
         print('YES')
         return
-    ms = ['0001', '1110', '0010', '1101',
-          '0100', '1011', '1000', '0111',
-          '1100', '0011', '1010', '0101',
-          '1001', '0110']
-
+    ms = ['0001', '1110', '0010', '1101', '0100', '1011', '1000', '0111', '1100', '0011', '1010', '0101', '1001', '0110']
     for i in range(len(ms) // 2):
         if cnt[ms[2 * i]] > 0 and cnt[ms[2 * i + 1]] > 0:
             print('YES')
@@ -80,7 +74,6 @@ def f4():
         ind.append(1)
     if cnt['1000'] > 0:
         ind.append(0)
-
     for i in range(len(ms)):
         b = False
         for x in ind:

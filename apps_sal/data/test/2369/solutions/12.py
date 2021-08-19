@@ -1,9 +1,6 @@
-# フェルマーの小定理
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 m = 1000000007
-
 fac = [0] * (N + 1)
 fac[0] = 1
 for i in range(N):
@@ -23,13 +20,11 @@ result = 0
 for i in range(N - K + 1):
     result += A[i] * mcomb(N - (i + 1), K - 1)
     result %= m
-
 A.sort()
 t = 0
 for i in range(N - K + 1):
     t += A[i] * mcomb(N - (i + 1), K - 1)
     t %= m
-
 result -= t
 result %= m
 print(result)
