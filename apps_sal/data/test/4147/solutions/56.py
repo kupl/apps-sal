@@ -1,13 +1,8 @@
-# N番目の竹をA,B,Cのいずれかに使うorどれにも使わないの全探索
-# 4 ^ 8 = 60000強
-
 import itertools
 import sys
 readline = sys.stdin.readline
-
-N, A, B, C = map(int, readline().split())
+(N, A, B, C) = map(int, readline().split())
 L = [int(readline()) for i in range(N)]
-
 ans = 10 ** 10
 for prod in itertools.product(range(4), repeat=N):
     if len(set(prod) & set(range(3))) != 3:
@@ -23,5 +18,4 @@ for prod in itertools.product(range(4), repeat=N):
     cost += abs(A - take[0]) + abs(B - take[1]) + abs(C - take[2])
     if ans > cost:
         ans = cost
-
 print(ans)

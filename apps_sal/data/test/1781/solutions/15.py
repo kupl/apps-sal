@@ -9,15 +9,10 @@ def count(flight):
 
 
 def main():
-    # f = open('B_input.txt', 'rt')
-    n, k = map(int, input().split(' '))
-    # n, k = map(int, f.readline().split(' '))
+    (n, k) = map(int, input().split(' '))
     flight = []
     for i in range(n):
-        # flight.append(['-'] + list(f.readline().replace('\n', '')) + ['-'])
         flight.append(['-'] + list(input()) + ['-'])
-    # f.close()
-
     for c in range(3):
         for i in range(n):
             for j in range(14):
@@ -25,7 +20,7 @@ def main():
                     k -= 1
                     flight[i][j] = 'x'
                     if k == 0:
-                        return count(flight), '\n'.join([''.join(i[1:-1]) for i in flight])
+                        return (count(flight), '\n'.join([''.join(i[1:-1]) for i in flight]))
 
 
 print(*main(), sep='\n')

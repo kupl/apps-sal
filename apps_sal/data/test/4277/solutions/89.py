@@ -1,6 +1,4 @@
-N, A, B = map(int, input().split())
-
-# N人*A円がB円より大きい場合
+(N, A, B) = map(int, input().split())
 if N * A > B:
     print(B)
 else:

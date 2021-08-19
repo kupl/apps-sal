@@ -16,11 +16,8 @@ def main():
     total_ab = 0
     total_ba = 0
     total_confused = 0
-
     current_len = 0
-
     prev = ''
-
     while i < len(s):
         current = s[i]
         if current_len != 0:
@@ -44,10 +41,8 @@ def main():
                     current_len = 0
         elif current == 'A' or current == 'B':
             current_len = 1
-
         prev = current
         i += 1
-
     if len(s) >= 2 and current_len >= 2:
         current = s[len(s) - 1]
         prev = s[len(s) - 2]
@@ -62,8 +57,6 @@ def main():
             total_confused += 1
         elif current_len > 4:
             total_confused += 2
-
-    # print(total_ba, total_confused, total_ab)
     if total_ba >= 1 and total_ab >= 1:
         print('YES')
     elif total_confused >= 2:

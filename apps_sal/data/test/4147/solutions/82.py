@@ -9,8 +9,7 @@ def SyntheticKadomatsu():
     idata = list(map(int, input().split()))
     l = [int(input()) for _ in range(idata[0])]
     ans = float('inf')
-    # bit全探索
-    for i in range(4**idata[0]):
+    for i in range(4 ** idata[0]):
         bits = [0] * 4
         tmp = 0
         num = to4(i).zfill(idata[0])

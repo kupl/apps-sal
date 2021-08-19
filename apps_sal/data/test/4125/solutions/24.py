@@ -1,9 +1,7 @@
-# xi-xが全部Dの倍数になればいい
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 pos = list(map(int, input().split()))
 diff_pos = [abs(s - x) for s in pos]
 min_diff = min(diff_pos)
-# print(min_diff)
 ans = 0
 
 

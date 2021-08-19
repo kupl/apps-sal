@@ -7,7 +7,7 @@ Language: Python 3.3.4
 
 
 def main():
-    n, = read()
+    (n,) = read()
     names = []
     for i in range(n):
         names.extend([(x, i + 1) for x in read(1)])
@@ -20,17 +20,12 @@ def main():
             i += 1
         j += 1
     if i == n:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-
-# NON-SOLUTION STUFF BELOW
+        print('NO')
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -40,13 +35,13 @@ def read(mode=2):
         return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 write(main())

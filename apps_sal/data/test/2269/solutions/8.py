@@ -6,17 +6,35 @@ from collections import *
 from functools import reduce, cmp_to_key
 import sys
 input = sys.stdin.readline
-
 M = mod = 998244353
-def factors(n): return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))
-def inv_mod(n): return pow(n, mod - 2, mod)
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split()]
-def st(): return input().rstrip('\n')
-def val(): return int(input().rstrip('\n'))
-def li2(): return [i for i in input().rstrip('\n')]
-def li3(): return [int(i) for i in input().rstrip('\n')]
+def factors(n):
+    return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0))))
+
+
+def inv_mod(n):
+    return pow(n, mod - 2, mod)
+
+
+def li():
+    return [int(i) for i in input().rstrip('\n').split()]
+
+
+def st():
+    return input().rstrip('\n')
+
+
+def val():
+    return int(input().rstrip('\n'))
+
+
+def li2():
+    return [i for i in input().rstrip('\n')]
+
+
+def li3():
+    return [int(i) for i in input().rstrip('\n')]
 
 
 for _ in range(val()):
@@ -25,7 +43,6 @@ for _ in range(val()):
     n = len(s)
     a = b = c = 0
     ans = float('inf')
-    # print(s)
     while j < len(s):
         if s[j] == 1:
             a += 1
@@ -45,11 +62,10 @@ for _ in range(val()):
                         b -= 1
                     else:
                         break
+                elif c > 1:
+                    c -= 1
                 else:
-                    if c > 1:
-                        c -= 1
-                    else:
-                        break
+                    break
                 i += 1
             ans = min(ans, j - i + 1)
         j += 1
