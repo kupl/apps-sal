@@ -1,16 +1,37 @@
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
-def SI(): return sys.stdin.readline()[:-1]
+
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def SI():
+    return sys.stdin.readline()[:-1]
 
 
 def main():
+
     def need(m):
         s = 1
         for i in range(n):
@@ -18,14 +39,11 @@ def main():
                 continue
             s |= s << aa[i]
             s &= mask
-        # print(m,bin(s),bin(s>>k-aa[m]))
         if s >> k - aa[m]:
             return True
         return False
-
-    n, k = MI()
+    (n, k) = MI()
     mask = (1 << k) - 1
-    # print(bin(mask))
     aa = LI()
     aa.sort()
     for i in range(n):
@@ -33,13 +51,10 @@ def main():
             aa = aa[:i]
             break
     n = len(aa)
-    # print(aa)
     l = -1
     r = n
     while l + 1 < r:
         m = (l + r) // 2
-        #while aa[m-1]==aa[m]:m-=1
-        # print(m,aa[m],need(m))
         if need(m):
             r = m
         else:
