@@ -9,10 +9,8 @@ for i in range(T):
             return b
         return gcd(b % a, a)
 
-    # Function to return LCM of two numbers
     def lcm(a, b):
-        return (a / gcd(a, b)) * b
-
+        return a / gcd(a, b) * b
     num = lcm(X, Y)
     ans_X = num / X
     ans_Y = num / Y

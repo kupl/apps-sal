@@ -1,6 +1,5 @@
-# cook your dish here
 t = int(input())
-while(t):
+while t:
     t = t - 1
     n = int(input())
     A = list(map(int, input().split()))
@@ -16,15 +15,14 @@ while(t):
         if i <= z:
             if A[i - 1] < 0:
                 index.append(i)
-        else:
-            if A[i - 1] > 0:
-                index.append(i)
+        elif A[i - 1] > 0:
+            index.append(i)
     if sum == 0:
         print(0)
         print(0)
     else:
         print(sum)
-        print(len(index), end=" ")
+        print(len(index), end=' ')
         for x in index:
-            print(x, end=" ")
+            print(x, end=' ')
         print()

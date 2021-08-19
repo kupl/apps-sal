@@ -1,8 +1,6 @@
-# cook your dish here
-
 t = int(input())
 for rep in range(t):
-    h, x, y = list(map(int, input().split()))
+    (h, x, y) = list(map(int, input().split()))
     req = h - 1
     mini = 1000000000
     g = 0

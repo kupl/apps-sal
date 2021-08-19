@@ -11,14 +11,11 @@ def __starting_point():
         li = list(map(int, input().split()))
         a = li[0]
         b = li[1]
-
         if a == b:
             print(0)
         else:
             l = lcm(a, b)
-            # print(l)
-            res = (l / a) + (l / b)
-            #print(l/a, b%l)
+            res = l / a + l / b
             print(int(res - 2))
 
 

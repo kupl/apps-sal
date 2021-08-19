@@ -1,4 +1,3 @@
-# cook your dish here
 def solve():
     s = input().strip()
     i = 0
@@ -13,9 +12,9 @@ def solve():
         i += 1
         j -= 1
     if a == a[::-1] or b == b[::-1]:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 test = int(input())

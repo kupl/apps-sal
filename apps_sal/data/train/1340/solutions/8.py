@@ -1,10 +1,5 @@
 from sys import stdin
 from math import ceil, gcd
-
-# Input data
-#stdin = open("input", "r")
-
-
 for _ in range(int(stdin.readline())):
     n = int(stdin.readline())
     arr = list(map(int, stdin.readline().split()))
@@ -14,7 +9,6 @@ for _ in range(int(stdin.readline())):
         if arr[i] >= 0:
             count_pos += 1
             ans += arr[i]
-
     case = []
     for i in range(count_pos):
         if arr[i] < 0:

@@ -1,4 +1,3 @@
-# cook your dish here
 test = int(input())
 for _ in range(test):
     n = int(input())
@@ -17,10 +16,9 @@ for _ in range(test):
             if arr[i] < 0:
                 temp.append(i + 1)
                 n += 1
-        else:
-            if arr[i] >= 0:
-                temp.append(i + 1)
-                p += 1
+        elif arr[i] >= 0:
+            temp.append(i + 1)
+            p += 1
     print(pos)
     if p == n:
         k = [len(temp)]

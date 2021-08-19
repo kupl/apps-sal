@@ -1,13 +1,12 @@
 from math import gcd
-
 try:
     from math import prod
 except ImportError:
+
     def prod(l, p=1):
         for n in l:
             p *= n
         return p
-
 max_n = 1000000000
 
 
@@ -21,14 +20,12 @@ def DPC_sequence(s):
             return -1
         if s[p - 1] == 'D':
             pf.append(p)
-    # print(pf)
     for p in pf:
         for i in range(2 * p - 1, len(s), p):
             if s[i] == 'P':
                 return -1
     base = prod(pf)
     nmax = min(prod(primes), max_n)
-    #print(base, nmax)
     for n in range(base, nmax, base):
         if test(s, n):
             return n
@@ -41,9 +38,8 @@ def test(s, n):
         if c == 'D':
             if n % k != 0:
                 return False
-        else:
-            if (gcd(n, k) == 1) != (c == 'P'):
-                return False
+        elif (gcd(n, k) == 1) != (c == 'P'):
+            return False
     return True
 
 

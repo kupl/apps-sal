@@ -1,12 +1,8 @@
-#####segfunc#####
 def segfunc(x, y):
     return min(x, y)
-#################
 
 
-#####ide_ele#####
-ide_ele = float("inf")
-#################
+ide_ele = float('inf')
 
 
 class SegTree:
@@ -30,10 +26,8 @@ class SegTree:
         self.ide_ele = ide_ele
         self.num = 1 << (n - 1).bit_length()
         self.tree = [ide_ele] * 2 * self.num
-        # 配列の値を葉にセット
         for i in range(n):
             self.tree[self.num + i] = init_val[i]
-        # 構築していく
         for i in range(self.num - 1, 0, -1):
             self.tree[i] = self.segfunc(self.tree[2 * i], self.tree[2 * i + 1])
 
@@ -56,7 +50,6 @@ class SegTree:
         r: index(0-index)
         """
         res = self.ide_ele
-
         l += self.num
         r += self.num
         while l < r:
@@ -73,9 +66,7 @@ class SegTree:
 def main():
     import sys
     import random
-
     input = sys.stdin.readline
-
     N = int(input())
     q = []
     r = []
@@ -83,14 +74,13 @@ def main():
     X = 0
     q_append = q.append
     for i in range(N):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         r.append(max(x, y))
         b.append(min(x, y))
-
     X = max(b)
     init_val = [b[i] for i in range(N)]
     for i in range(N):
-        x, y = r[i], b[i]
+        (x, y) = (r[i], b[i])
         if X > r[i]:
             init_val[i] = r[i]
         elif X > b[i]:
@@ -100,21 +90,18 @@ def main():
             q_append((b[i], i, 1))
             q_append((r[i], i, -1))
             init_val[i] = b[i]
-
     q.sort()
-    test1 = float("inf")
+    test1 = float('inf')
     rmq = SegTree(init_val, segfunc, ide_ele)
-
     for i in range(0, len(q)):
-        val, index, k = q[i]
+        (val, index, k) = q[i]
         if k == -1:
             rmq.update(index, val)
         res = rmq.query(0, N)
         test1 = min(val - res, test1)
-
     test2 = (max(r) - min(r)) * (max(b) - min(b))
-    test1 *= (max(max(b), max(r)) - min(min(b), min(r)))
-    print((min(test1, test2)))
+    test1 *= max(max(b), max(r)) - min(min(b), min(r))
+    print(min(test1, test2))
 
 
 def __starting_point():
