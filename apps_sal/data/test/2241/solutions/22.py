@@ -5,7 +5,7 @@ def great_sum_finder(num, rang):
         return 1
     if num < rang:
         return great_sum_finder(num, num - 1)
-    return (num // 2) * (num - num // 2)
+    return num // 2 * (num - num // 2)
 
 
 n = int(input())

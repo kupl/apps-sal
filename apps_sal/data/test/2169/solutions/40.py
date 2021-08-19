@@ -1,4 +1,4 @@
-h, w, d = map(int, input().split())
+(h, w, d) = map(int, input().split())
 g = [[] for _ in range(w)]
 for _ in range(h):
     tmp_list = list(map(int, input().split()))
@@ -18,5 +18,5 @@ for i in range(1, d + 1):
         roots[j] = cost + roots[j - d]
         j += d
 for i in qs:
-    l, r = i[0], i[1]
+    (l, r) = (i[0], i[1])
     print(roots[r] - roots[l])

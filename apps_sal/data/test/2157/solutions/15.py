@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 print = sys.stdout.write
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 ar = list(map(int, input().split()))
 qs = [map(int, input().split()) for x in range(q)]
 s = [0] * n
@@ -14,7 +14,7 @@ def f(l, r):
 
 
 for x in range(q):
-    a, b = qs[x]
+    (a, b) = qs[x]
     a -= 1
     f(a, b)
 d = [s[0]]

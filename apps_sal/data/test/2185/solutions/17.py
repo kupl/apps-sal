@@ -21,10 +21,9 @@ for i in range(q):
             else:
                 al = False
                 break
-        else:
-            if flag == 1:
-                flag = 2
+        elif flag == 1:
+            flag = 2
     if al:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

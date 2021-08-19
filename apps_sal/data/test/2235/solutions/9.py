@@ -7,7 +7,8 @@ from itertools import accumulate, permutations, combinations
 from sys import stdout
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())

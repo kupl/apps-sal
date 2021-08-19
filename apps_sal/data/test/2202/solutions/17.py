@@ -1,4 +1,4 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 a = [int(x) for x in input().split()]
 s = sum(a)
 ans = -1

@@ -22,10 +22,9 @@ def solve():
     for i in range(n):
         if b[i] != a[i]:
             last = i
-
     for i in range(n):
         d = b[i] - a[i]
-        if diff != None and i <= last and d != diff:
+        if diff != None and i <= last and (d != diff):
             return False
         if d != 0:
             if d < 0:

@@ -1,4 +1,4 @@
-r, c = list(map(int, input().split()))
+(r, c) = list(map(int, input().split()))
 a = []
 for i in range(r):
     a.append(input())
@@ -6,7 +6,7 @@ b = []
 for i in range(c):
     e = 0
     for j in range(r):
-        if a[j][i] == "B":
+        if a[j][i] == 'B':
             e = 1
     b.append(e)
 d = 0

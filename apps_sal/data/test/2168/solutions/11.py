@@ -1,6 +1,6 @@
 n = int(input())
 m = 0
-max_ = float("-inf")
+max_ = float('-inf')
 max_i = 0
 r = []
 for i in range(n):
@@ -10,9 +10,7 @@ for i in range(n):
     if max(tmp) > max_:
         max_ = max(tmp)
         max_i = i
-
-for i, val in enumerate(r):
+for (i, val) in enumerate(r):
     if i != max_i:
         m = m + (max_ - max(val)) * len(val)
-
 print(m)

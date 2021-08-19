@@ -7,9 +7,7 @@ for _ in range(t):
     while ind != -1:
         while ind != -1 and arr[ind] <= arr[ind + 1]:
             ind -= 1
-
         if ind != -1:
             ans += arr[ind] - arr[ind + 1]
             arr[ind + 1] = arr[ind]
-
     print(ans)

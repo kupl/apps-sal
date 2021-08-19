@@ -1,14 +1,14 @@
 import sys
 import threading
-sys.setrecursionlimit(10**6)
-threading.stack_size(10**8)
+sys.setrecursionlimit(10 ** 6)
+threading.stack_size(10 ** 8)
 
 
 def main():
     n = int(input().strip())
     son_tree = dict()
     min_max = [0] + [int(i) for i in input().strip().split()]
-    for child, parent in enumerate(map(int, input().strip().split()), 2):
+    for (child, parent) in enumerate(map(int, input().strip().split()), 2):
         if parent not in son_tree:
             son_tree[parent] = [child]
         else:
@@ -19,7 +19,6 @@ def main():
         if i not in son_tree:
             leaf_ctr += 1
             dp[i] = 1
-
     visited = set()
 
     def dfs(node):
@@ -30,12 +29,12 @@ def main():
             if min_max[node]:
                 for i in son_tree[node]:
                     dfs(i)
-                dp[node] = min(dp[k] for k in son_tree[node])
+                dp[node] = min((dp[k] for k in son_tree[node]))
                 return 0
             else:
                 for i in son_tree[node]:
                     dfs(i)
-                dp[node] = sum(dp[k] for k in son_tree[node])
+                dp[node] = sum((dp[k] for k in son_tree[node]))
                 return 0
     dfs(1)
     print(leaf_ctr - dp[1] + 1)

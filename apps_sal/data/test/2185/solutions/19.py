@@ -9,18 +9,18 @@ for _ in range(t):
             if diff == -1:
                 continue
             else:
-                diff = 10**9
+                diff = 10 ** 9
         else:
             if diff == -1:
                 diff = b[i] - a[i]
                 if diff < 0:
-                    print("NO")
+                    print('NO')
                     break
             if diff != -1:
                 if diff == b[i] - a[i]:
                     continue
                 else:
-                    print("NO")
+                    print('NO')
                     break
     else:
-        print("YES")
+        print('YES')

@@ -1,6 +1,5 @@
 import math
 MOD = 10 ** 9 + 7
-
 fact = [1, 1]
 factinv = [1, 1]
 inv = [0, 1]
@@ -8,9 +7,9 @@ inv = [0, 1]
 
 def init(n):
     for i in range(2, n + 1):
-        fact.append((fact[-1] * i) % MOD)
-        inv.append((-inv[MOD % i] * (MOD // i)) % MOD)
-        factinv.append((factinv[-1] * inv[-1]) % MOD)
+        fact.append(fact[-1] * i % MOD)
+        inv.append(-inv[MOD % i] * (MOD // i) % MOD)
+        factinv.append(factinv[-1] * inv[-1] % MOD)
 
 
 def nPk(n, k):
@@ -21,7 +20,7 @@ def nCk(n, k):
     return fact[n] * factinv[n - k] * factinv[k] % MOD
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 init(M)
 ans = 0
 for k in range(N + 1):

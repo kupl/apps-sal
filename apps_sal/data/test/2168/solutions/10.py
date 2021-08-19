@@ -11,7 +11,6 @@ for i in range(n):
     for j in a:
         lista.append(int(j))
     lista.sort(reverse=True)
-
     if i == 0:
         maior = lista[0]
     if maior > lista[0]:

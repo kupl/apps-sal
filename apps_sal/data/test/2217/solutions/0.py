@@ -2,7 +2,7 @@ def main():
     import sys
     input = sys.stdin.readline
     mod = 998244353
-    N = 10**5 + 3
+    N = 10 ** 5 + 3
     fac = [1] * (N + 1)
     for i in range(1, N + 1):
         fac[i] = fac[i - 1] * i % mod
@@ -12,7 +12,7 @@ def main():
         inv_fac[i] = inv_fac[i + 1] * (i + 1) % mod
     D = int(input())
     A = []
-    for i in range(2, int(D**.5) + 1):
+    for i in range(2, int(D ** 0.5) + 1):
         c = 0
         while D % i == 0:
             D //= i
@@ -24,7 +24,7 @@ def main():
     l = len(A)
     q = int(input())
     for _ in range(q):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         l1 = [0] * l
         l2 = [0] * l
         l3 = [0] * l

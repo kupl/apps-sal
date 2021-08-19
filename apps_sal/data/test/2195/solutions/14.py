@@ -2,13 +2,12 @@ from math import *
 
 
 def solve():
-    x, y = list(map(int, input().split()))
-    a, b = list(map(int, input().split()))
-
+    (x, y) = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     mn = min(abs(x), abs(y))
     ans = 0
     if b < 2 * a:
-        ans += b * (mn)
+        ans += b * mn
         if x == mn:
             x = 0
             if y > 0:

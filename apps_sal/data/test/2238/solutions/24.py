@@ -1,5 +1,4 @@
 n = int(input())
-
 if n == 1:
     print('D')
 elif n == 3:

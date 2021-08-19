@@ -1,16 +1,12 @@
-h, w, d = map(int, input().split())
+(h, w, d) = map(int, input().split())
 arr = [0] * (h * w + 1)
-
 a = [list(map(int, input().split())) for _ in range(h)]
-
 for i in range(h):
     for j in range(w):
         s = a[i][j]
         arr[s] = (i, j)
-
 q = int(input())
 lr = [list(map(int, input().split())) for _ in range(q)]
-
 cnt = h * w
 result = [[0] for _ in range(d)]
 for i in range(d):
@@ -23,11 +19,9 @@ for i in range(d):
             continue
         (ux, uy) = arr[l]
         (vx, vy) = arr[l + d]
-        score += (abs(vx - ux) + abs(vy - uy))
+        score += abs(vx - ux) + abs(vy - uy)
         result[i].append(score)
         l += d
-
-
-for l, r in lr:
+for (l, r) in lr:
     ans = result[l % d]
     print(ans[r // d] - ans[l // d])

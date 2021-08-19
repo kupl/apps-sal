@@ -1,9 +1,9 @@
-num_elements, num_queries = list(map(int, input().split()))
+(num_elements, num_queries) = list(map(int, input().split()))
 elements = list(map(int, input().split()))
 elements.sort(reverse=True)
 occurrences = [0] * (num_elements + 2)
 for _ in range(num_queries):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     occurrences[l] += 1
     occurrences[r + 1] -= 1
 for pos in range(1, num_elements + 1):

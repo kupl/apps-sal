@@ -5,7 +5,7 @@ n = int(input())
 a = []
 b = []
 for i in range(n):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     if c < d:
         a.append([d, i])
     else:

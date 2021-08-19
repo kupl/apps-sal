@@ -5,7 +5,6 @@ def solve(arr1, arr2, n):
             index = i
             diff = arr2[i] - arr1[i]
             break
-
     if index == -1:
         print('YES')
         return
@@ -20,12 +19,10 @@ def solve(arr1, arr2, n):
             print('NO')
             return
         arr2[i] = arr1[i]
-
     for i in range(n):
         if arr1[i] != arr2[i]:
             print('NO')
             return
-
     print('YES')
 
 

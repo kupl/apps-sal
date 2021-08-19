@@ -2,7 +2,7 @@ n = int(input())
 if n % 2 == 0:
     print(n * n // 2)
 else:
-    print(((n + 1) // 2)**2 + (n // 2)**2)
+    print(((n + 1) // 2) ** 2 + (n // 2) ** 2)
 for i in range(n):
     c = []
     for j in range(n):
@@ -11,9 +11,8 @@ for i in range(n):
                 c.append('C')
             else:
                 c.append('.')
+        elif j % 2 == 0:
+            c.append('.')
         else:
-            if j % 2 == 0:
-                c.append('.')
-            else:
-                c.append('C')
+            c.append('C')
     print(''.join(c))

@@ -1,14 +1,9 @@
 __author__ = 'Rakshak.R.Hegde'
-"""
-Created on Dec 24 2014 PM 10:22
-
-@author: Rakshak.R.Hegde
-"""
-
-n, m = map(int, input().split())
+'\nCreated on Dec 24 2014 PM 10:22\n\n@author: Rakshak.R.Hegde\n'
+(n, m) = map(int, input().split())
 trans = dict()
 for i in range(m):
-    x, y = input().split()
+    (x, y) = input().split()
     trans[x] = y
 lect = input().split()
 ans = ''

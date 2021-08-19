@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
-    x, y = map(int, input().split())
-    a, b = map(int, input().split())
+    (x, y) = map(int, input().split())
+    (a, b) = map(int, input().split())
     wynik = 0
     if b <= 2 * a:
         c = min(x, y)

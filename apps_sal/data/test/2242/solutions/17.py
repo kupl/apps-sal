@@ -10,4 +10,4 @@ for c in reversed(S):
     t *= 10
     t %= MOD
     dp[r] += 1
-print(sum(i * (i - 1) // 2 for i in dp))
+print(sum((i * (i - 1) // 2 for i in dp)))

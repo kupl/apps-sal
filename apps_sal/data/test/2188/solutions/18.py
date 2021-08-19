@@ -1,6 +1,5 @@
 from sys import stdin
 n = int(stdin.readline().strip())
-
 s = [list(map(int, stdin.readline().strip().split())) for i in range(n)]
 s1 = []
 s2 = []

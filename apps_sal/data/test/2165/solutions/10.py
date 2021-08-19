@@ -1,5 +1,4 @@
-
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 l1 = list(map(int, input().split()))
 l2 = list(map(int, input().split()))
 l = [[l2[i], l1[i]] for i in range(n)]
@@ -9,7 +8,6 @@ s2 = sum(l1)
 s = s1 / s2
 f = n - 1
 d = 0
-
 if s < t:
     while s < t and d < n:
         s2 = s2 - l[d][1]
@@ -23,7 +21,6 @@ if s < t:
             break
         else:
             d += 1
-
 elif s > t:
     while s > t and f >= 0:
         s2 = s2 - l[f][1]

@@ -11,10 +11,7 @@ def ins(_set, n):
 
 
 ss = set()
-
 for i in s:
     ins(ss, i)
-
 m = max(ss)
-
 print(m - len(ss) + 1)

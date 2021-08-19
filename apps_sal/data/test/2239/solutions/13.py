@@ -1,7 +1,7 @@
 def solve(x):
     total = 0
-    total += (x // 2)
-    return(total)
+    total += x // 2
+    return total
 
 
 t = int(input())

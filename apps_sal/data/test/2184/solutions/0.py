@@ -5,5 +5,4 @@ for i in range(n):
     a = 0
     for j in range(8):
         a += int(s[j] == '1') << j
-
     print(f[a])

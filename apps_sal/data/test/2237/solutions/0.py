@@ -36,10 +36,10 @@ if good == 0:
     print(0)
 else:
     useful = used[:good]
-    perm = ["0"]
+    perm = ['0']
     curr = 0
-    for i in range(2**good - 1):
+    for i in range(2 ** good - 1):
         curr ^= useful[v2(i + 1)]
         perm.append(str(curr))
     print(good)
-    print(" ".join(perm))
+    print(' '.join(perm))

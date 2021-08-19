@@ -2,7 +2,7 @@ N = int(input())
 inc = []
 dec = []
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a < b:
         inc.append((a, b, i + 1))
     else:

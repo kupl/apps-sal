@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 x = 1
 y = 1
 a = [[1, 1]]

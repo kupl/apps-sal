@@ -22,8 +22,7 @@ for i in range(q):
                     number = j
             if number > -1:
                 online[number] = int(z[1])
+    elif online.count(int(z[1])) > 0:
+        print('YES')
     else:
-        if online.count(int(z[1])) > 0:
-            print('YES')
-        else:
-            print('NO')
+        print('NO')

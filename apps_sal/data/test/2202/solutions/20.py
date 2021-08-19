@@ -1,4 +1,4 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 a = list(map(int, input().split()))
 a = [c % p for c in a]
 s = sum(a)

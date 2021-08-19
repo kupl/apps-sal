@@ -14,7 +14,7 @@ for i in range(n):
         way[j[0]] = min(way[j[0]], way[v] + j[1])
     m = float('inf')
     for j in range(n):
-        if way[j] < m and not used[j]:
+        if way[j] < m and (not used[j]):
             m = way[j]
             v = j
 print(max(way))

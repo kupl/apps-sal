@@ -15,8 +15,8 @@ def get(q):
     h = hash(q)
     for j in range(1, l + 1):
         aj = q[-j]
-        a, b, c = ((h + (e * (ord('a') - ord(aj)))) + M * 2) % M, ((h + (e * (ord('b') - ord(aj)))) + M * 2) % M, ((h + (e * (ord('c') - ord(aj)))) + M * 2) % M
-        e = (e * 1003) % M
+        (a, b, c) = ((h + e * (ord('a') - ord(aj)) + M * 2) % M, (h + e * (ord('b') - ord(aj)) + M * 2) % M, (h + e * (ord('c') - ord(aj)) + M * 2) % M)
+        e = e * 1003 % M
         if aj == 'a':
             if b in search[l] or c in search[l]:
                 return 'YES'
@@ -30,8 +30,8 @@ def get(q):
 
 
 ans = []
-n, m = map(int, input().split())
-search = [set()for i in range(600001)]
+(n, m) = map(int, input().split())
+search = [set() for i in range(600001)]
 for i in range(n):
     s = input()
     search[len(s)].add(hash(s))

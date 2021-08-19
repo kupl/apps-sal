@@ -15,8 +15,8 @@ for i in range(1, n + 1):
     a = com(i - 1)
     rem = n % i
     b = com(rem)
-    if (n // i) % 2 == 1:
-        ans ^= (a ^ b ^ lis[i - 1])
+    if n // i % 2 == 1:
+        ans ^= a ^ b ^ lis[i - 1]
     else:
-        ans ^= (b ^ lis[i - 1])
+        ans ^= b ^ lis[i - 1]
 print(ans)

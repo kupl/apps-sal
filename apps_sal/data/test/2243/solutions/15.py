@@ -10,14 +10,13 @@ def Core(size, rate, data):
             elif online_rate[-1] < rate[item[1]]:
                 online_rate[-1] = rate[item[1]]
                 online_rate.sort(key=lambda x: -x)
+        elif rate[item[1]] in online_rate and online_rate.index(rate[item[1]]) < size:
+            print('YES')
         else:
-            if rate[item[1]] in online_rate and online_rate.index(rate[item[1]]) < size:
-                print("YES")
-            else:
-                print("NO")
+            print('NO')
 
 
-param1 = input().split(" ")
-param2 = [0] + [int(i) for i in input().split(" ")]
-param3 = [[int(j) for j in input().split(" ")] for i in range(int(param1[2]))]
+param1 = input().split(' ')
+param2 = [0] + [int(i) for i in input().split(' ')]
+param3 = [[int(j) for j in input().split(' ')] for i in range(int(param1[2]))]
 Core(int(param1[1]), param2, param3)

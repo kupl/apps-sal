@@ -1,4 +1,4 @@
-n, m = [int(_) for _ in input().split()]
+(n, m) = [int(_) for _ in input().split()]
 trans = {}
 
 
@@ -10,13 +10,11 @@ def better(a, b):
 
 
 for i in range(m):
-    a, b = input().split()
+    (a, b) = input().split()
     trans[a] = better(a, b)
     trans[b] = better(a, b)
-
 l = input().split()
-s = ""
+s = ''
 for i in l:
-    s += trans[i] + " "
-
+    s += trans[i] + ' '
 print(s)

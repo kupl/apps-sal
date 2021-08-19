@@ -8,6 +8,5 @@ for i in range(n):
         temp += 1
     elif a[sortedIndex[i]] > temp:
         temp = a[sortedIndex[i]] + 1
-
-result = ' '.join(str(e) for e in a)
+result = ' '.join((str(e) for e in a))
 print(result)

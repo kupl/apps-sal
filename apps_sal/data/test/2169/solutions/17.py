@@ -1,5 +1,5 @@
 def main():
-    h, w, d = map(int, input().split())
+    (h, w, d) = map(int, input().split())
     a = []
     for i in range(h):
         a.append(list(map(int, input().split())))
@@ -11,10 +11,9 @@ def main():
     for i in range(h * w):
         if i - d >= 0:
             dist[i] += dist[i - d] + abs(M[i][0] - M[i - d][0]) + abs(M[i][1] - M[i - d][1])
-
     q = int(input())
     for i in range(q):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         print(dist[r - 1] - dist[l - 1])
 
 

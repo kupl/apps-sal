@@ -1,13 +1,13 @@
 def print_arr(arr):
     for i in arr:
-        print(i, "", end="")
+        print(i, '', end='')
     print()
 
 
 n = int(input())
 d = {}
 for _ in range(n):
-    name, num, *numbers = input().split()
+    (name, num, *numbers) = input().split()
     if name in d:
         s = d[name]
     else:
@@ -22,8 +22,7 @@ for _ in range(n):
         else:
             s.append(nm)
     d[name] = s
-
 print(len(d))
 for name in d:
-    print(name, len(d[name]), end=" ")
+    print(name, len(d[name]), end=' ')
     print_arr(d[name])

@@ -1,9 +1,5 @@
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 M = 1000000007
-
-
 if m == 1:
     print(n + 1)
 else:

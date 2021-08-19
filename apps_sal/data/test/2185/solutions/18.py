@@ -12,17 +12,16 @@ for i in range(t):
         if ans[i] - ans[i - 1] != 1:
             f = True
     if f:
-        print("NO")
+        print('NO')
+    elif len(ans) == 0:
+        print('YES')
     else:
-        if len(ans) == 0:
-            print("YES")
+        f = False
+        now = a[ans[0]] - b[ans[0]]
+        for i in range(1, len(ans)):
+            if now != a[ans[i]] - b[ans[i]]:
+                f = True
+        if f or now > 0:
+            print('NO')
         else:
-            f = False
-            now = a[ans[0]] - b[ans[0]]
-            for i in range(1, len(ans)):
-                if now != a[ans[i]] - b[ans[i]]:
-                    f = True
-            if f or now > 0:
-                print("NO")
-            else:
-                print("YES")
+            print('YES')

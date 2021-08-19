@@ -1,4 +1,4 @@
-'''
+"""
 Let g(x) = 序列內數字唯一，且最多 x 個位置不同。
 Let f(x) = 序列內數字唯一，且給定 x 個位置時，使這些位置不同的方法數。
 
@@ -16,10 +16,11 @@ g(x) = C(x, 0) f(0) + C(x, 1) f(1) + ... + C(x, x) f(x)
      = sum( C(x, i) * f(i) for i in [0, x] )
 根據二項式反演，得到
 f(x) = sum( (-1) ** (x - i) * C(x, i) * g(i) for i in [0, x] )
-'''
+"""
 
 
 class CombMod:
+
     def __init__(self, V, p):
         self.fact = [1] * V
         self.finv = [1] * V
@@ -46,10 +47,9 @@ class CombMod:
         return self.comb(a + b - 1, b)
 
 
-N, M = list(map(int, input().split()))
-mod = 10**9 + 7
+(N, M) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 tool = CombMod(max(N, M) + 10, mod)
-
 ans = 0
 for i in range(0, N + 1):
     p1 = tool.perm(M, N - i)

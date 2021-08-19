@@ -13,13 +13,12 @@ for nt in range(k):
             diff += 1
             d.append([s[i], t[i]])
     if diff > 2:
-        print("No")
+        print('No')
     elif diff == 1:
-        print("No")
+        print('No')
     elif diff == 0:
-        print("Yes")
+        print('Yes')
+    elif d[0][0] == d[1][0] and d[0][1] == d[1][1]:
+        print('Yes')
     else:
-        if d[0][0] == d[1][0] and d[0][1] == d[1][1]:
-            print("Yes")
-        else:
-            print("No")
+        print('No')

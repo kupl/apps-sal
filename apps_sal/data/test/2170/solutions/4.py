@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 mod = 10 ** 9 + 7
 
 
@@ -16,12 +16,12 @@ def calc(n):
         inv *= m
         inv %= mod
         invs[m - 1] = inv
-    return factorials, invs
+    return (factorials, invs)
 
 
-factorials, invs = calc(M)
-mPn = (factorials[M] * invs[M - N]) % mod
-ans = (mPn * mPn) % mod
+(factorials, invs) = calc(M)
+mPn = factorials[M] * invs[M - N] % mod
+ans = mPn * mPn % mod
 for k in range(1, N + 1):
     v = pow(-1, k - 1) * factorials[N] * factorials[M - k] * invs[N - k] * invs[k] * invs[M - N] % mod
     ans -= v * mPn

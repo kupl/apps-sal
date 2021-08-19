@@ -1,4 +1,4 @@
-nCells, nQueries = list(map(int, input().split()))
+(nCells, nQueries) = list(map(int, input().split()))
 queries = list(map(int, input().split()))
 seen = [False] * 100002
 bad = set()

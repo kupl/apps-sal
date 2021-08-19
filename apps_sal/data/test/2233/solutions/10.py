@@ -10,7 +10,7 @@ for i in range(int(input())):
             count += 1
             s1.append(s[j])
             t1.append(t[j])
-    if count == 2 and s1[0] == s1[1] and t1[0] == t1[1]:
-        print("Yes")
+    if count == 2 and s1[0] == s1[1] and (t1[0] == t1[1]):
+        print('Yes')
     else:
-        print("No")
+        print('No')

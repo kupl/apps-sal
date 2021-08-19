@@ -1,8 +1,8 @@
-n, k, q = [int(x) for x in input().split()]
+(n, k, q) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 b = [0]
 for i in range(q):
-    t, d = [int(x) for x in input().split()]
+    (t, d) = [int(x) for x in input().split()]
     if t == 2:
         if d in b:
             print('YES')

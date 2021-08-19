@@ -1,8 +1,8 @@
-n, T = map(int, input().split())
+(n, T) = map(int, input().split())
 v = list(map(int, input().split()))
 t = list(map(int, input().split()))
-plus, minus = [], []
-pr, ans = 0, 0
+(plus, minus) = ([], [])
+(pr, ans) = (0, 0)
 for i in range(n):
     if t[i] < T:
         minus.append([T - t[i], i])
@@ -10,7 +10,7 @@ for i in range(n):
         plus.append([t[i] - T, i])
     else:
         ans += v[i]
-max1, max2 = 0, 0
+(max1, max2) = (0, 0)
 for i in range(len(minus)):
     max1 += minus[i][0] * v[minus[i][1]]
 for i in range(len(plus)):

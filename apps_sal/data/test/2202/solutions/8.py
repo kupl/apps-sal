@@ -1,5 +1,5 @@
 s = input().split()
-n, p = int(s[0]), int(s[1])
+(n, p) = (int(s[0]), int(s[1]))
 cl = list(map(int, input().split()))
 mx = 0
 sm = sum(cl)
@@ -9,5 +9,4 @@ for i in range(1, n):
     if y > mx:
         mx = y
     qs += cl[i]
-
 print(mx)

@@ -27,5 +27,4 @@ for i in range(n):
     input_list.append(tmp)
 input_list = sorted(input_list, key=key, reverse=True)
 res = ''.join(input_list)
-
 print(sh_produce(res))

@@ -1,6 +1,5 @@
-x1, y1 = [int(i) for i in input().split()]
-x2, y2 = [int(i) for i in input().split()]
-
+(x1, y1) = [int(i) for i in input().split()]
+(x2, y2) = [int(i) for i in input().split()]
 n = int(input())
 s = input()
 
@@ -10,7 +9,6 @@ def dst(x1, y1, x2, y2):
 
 
 d = dst(x1, y1, x2, y2)
-
 dx = dy = 0
 ss = []
 for i in range(n):
@@ -23,9 +21,8 @@ for i in range(n):
     else:
         dx -= 1
     ss.append((dx, dy))
-
 l = 1
-r = 10**18
+r = 10 ** 18
 
 
 def check(m):
@@ -42,7 +39,7 @@ def check(m):
     return False
 
 
-ans = 10**19
+ans = 10 ** 19
 while r >= l:
     m = int((r + l) // 2)
     if check(m):
@@ -50,8 +47,7 @@ while r >= l:
         r = m - 1
     else:
         l = m + 1
-
-if ans == 10**19:
+if ans == 10 ** 19:
     print(-1)
 else:
     print(ans)

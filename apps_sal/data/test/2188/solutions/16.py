@@ -1,4 +1,3 @@
-
 import sys
 import functools
 commands = []
@@ -23,10 +22,9 @@ for i in range(n):
         ba.append((a_s[0], a_s[1], i + 1))
 ab.sort(key=functools.cmp_to_key(less_int))
 ba.sort(key=functools.cmp_to_key(more_int))
-
 answ = ab
 if len(ba) > len(ab):
     answ = ba
 print(len(answ))
-for a, b, c in answ:
+for (a, b, c) in answ:
     print(c, end=' ')

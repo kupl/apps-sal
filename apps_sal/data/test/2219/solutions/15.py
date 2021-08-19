@@ -8,8 +8,8 @@ from decimal import *
 from copy import *
 getcontext().prec = 30
 MAX = sys.maxsize
-MAXN = 10**5 + 10
-MOD = 10**9 + 7
+MAXN = 10 ** 5 + 10
+MOD = 10 ** 9 + 7
 
 
 def isprime(n):
@@ -20,7 +20,7 @@ def isprime(n):
         return True
     if not n & 1:
         return False
-    for x in range(3, int(n**0.5) + 1, 2):
+    for x in range(3, int(n ** 0.5) + 1, 2):
         if n % x == 0:
             return False
     return True
@@ -31,7 +31,7 @@ def mhd(a, b):
 
 
 def charIN(x=' '):
-    return(sys.stdin.readline().strip().split(x))
+    return sys.stdin.readline().strip().split(x)
 
 
 def arrIN(x=' '):
@@ -41,7 +41,7 @@ def arrIN(x=' '):
 def dis(x, y):
     a = y[0] - x[0]
     b = x[1] - y[1]
-    return (a * a + b * b)**0.5
+    return (a * a + b * b) ** 0.5
 
 
 def lgcd(a):
@@ -64,16 +64,16 @@ def ms(a):
         if meh < 0:
             meh = 0
             be = i + 1
-    return msf, st, en
+    return (msf, st, en)
 
 
 def flush():
     return sys.stdout.flush()
 
 
-'''*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*'''
+'*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*'
 for _ in range(int(input())):
-    n, k = arrIN()
+    (n, k) = arrIN()
     ans = 0
     while 1:
         if n % k == 0:

@@ -15,9 +15,9 @@ def __starting_point():
             b[i][j] = w[i][j] - a[i][j]
             b[j][i] = w[j][i] - a[j][i]
     for i in range(n):
-        print(" ".join(list(map(str, a[i]))))
+        print(' '.join(list(map(str, a[i]))))
     for i in range(n):
-        print(" ".join(list(map(str, b[i]))))
+        print(' '.join(list(map(str, b[i]))))
 
 
 __starting_point()

@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = {}
 for _ in range(m):
-    a, b = map(str, input().split())
-    if(len(a) > len(b)):
+    (a, b) = map(str, input().split())
+    if len(a) > len(b):
         arr[a] = b
 lect = input().split()
 res = []

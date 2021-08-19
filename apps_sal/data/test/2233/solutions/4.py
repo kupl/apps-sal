@@ -9,15 +9,15 @@ for i in ' ' * int(input()):
             counter += 1
             L.append(j)
     if counter != 0 and counter != 2:
-        print("No")
+        print('No')
         continue
     else:
         if counter == 0:
-            print("Yes")
+            print('Yes')
         else:
-            a, b = L
+            (a, b) = L
             if s[a] == s[b] and t[a] == t[b]:
-                print("Yes")
+                print('Yes')
             else:
-                print("No")
+                print('No')
         continue

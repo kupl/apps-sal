@@ -9,7 +9,6 @@ for i in range(n // 2 + 1):
     cnt += 1
 k += 2
 cnt -= 2
-
 for i in range(n // 2 + 1, n):
     for j in range(k, cnt):
         a[i][j] = 'D'

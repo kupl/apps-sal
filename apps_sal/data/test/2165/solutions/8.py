@@ -1,4 +1,4 @@
-n, T = map(int, input().split())
+(n, T) = map(int, input().split())
 a = list(map(int, input().split()))
 x = list(map(int, input().split()))
 m = []

@@ -18,5 +18,4 @@ def calc(i):
 
 for i in range(N)[::-1]:
     calc(i)
-
 print(L - DP[0] + 1)

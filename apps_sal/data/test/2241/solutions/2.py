@@ -1,7 +1,8 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, = R()
+(n,) = R()
 a = R()
 b = R()
 s = 0

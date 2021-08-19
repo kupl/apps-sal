@@ -1,9 +1,9 @@
 t = int(input())
 for _ in range(t):
-    x, y = list(map(int, input().split()))
-    a, b = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     cst = 0
-    if(2 * a > b):
+    if 2 * a > b:
         cst += b * min(x, y)
         e = min(x, y)
         x -= e

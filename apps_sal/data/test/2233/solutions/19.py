@@ -17,7 +17,6 @@ def solve(s, t):
 
 
 k = int(input())
-
 for t in range(k):
     n = int(input())
     s = input()

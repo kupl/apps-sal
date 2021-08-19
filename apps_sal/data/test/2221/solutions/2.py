@@ -1,5 +1,5 @@
-x1, y1 = map(int, input().split())
-x2, y2 = map(int, input().split())
+(x1, y1) = map(int, input().split())
+(x2, y2) = map(int, input().split())
 n = int(input())
 s = list(input())
 p = [(0, 0)]
@@ -15,7 +15,7 @@ for i in range(n):
 
 
 def check(m):
-    dx, dy = p[-1][0] * (m // n) + p[m % n][0], p[-1][1] * (m // n) + p[m % n][1]
+    (dx, dy) = (p[-1][0] * (m // n) + p[m % n][0], p[-1][1] * (m // n) + p[m % n][1])
     if abs(x1 + dx - x2) + abs(y1 + dy - y2) <= m:
         return True
     else:
@@ -24,7 +24,7 @@ def check(m):
 
 def outer(k):
     l = 0
-    h = 10**10
+    h = 10 ** 10
     ans = -1
     while l <= h:
         m = (l + h) // 2

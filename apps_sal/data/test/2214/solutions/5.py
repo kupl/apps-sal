@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = []
 
 
@@ -50,7 +49,6 @@ elif n == 2 or m == 2:
     print(min(res1, res2))
 else:
     a = []
-
     if n == 3:
         b = list(input())
         c = list(input())

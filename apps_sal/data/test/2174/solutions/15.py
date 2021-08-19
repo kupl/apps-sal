@@ -9,7 +9,7 @@ def main():
         else:
             tail.append(a)
     tail.sort()
-    print(sum(abs(a - b) for a, b in zip((i for i, _ in enumerate(l) if _), tail)))
+    print(sum((abs(a - b) for (a, b) in zip((i for (i, _) in enumerate(l) if _), tail))))
 
 
 def __starting_point():

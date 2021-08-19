@@ -1,5 +1,5 @@
 for TT in range(1, int(input()) + 1):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     res = 0
     while n:
         if n % k:

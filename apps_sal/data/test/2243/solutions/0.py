@@ -1,8 +1,8 @@
-n, k, q = [int(x) for x in input().split()]
+(n, k, q) = [int(x) for x in input().split()]
 T = [int(x) for x in input().split()]
 S = set()
 for i in range(q):
-    t, _id = [int(x) for x in input().split()]
+    (t, _id) = [int(x) for x in input().split()]
     if t == 1:
         m = min(S, default=0)
         if len(S) == k:

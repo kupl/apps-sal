@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 print(m * (m - 1) // 2)
 for i in range(n):
     a = list(map(int, input().split()))

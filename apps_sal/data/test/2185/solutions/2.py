@@ -1,7 +1,6 @@
 from sys import stdin
 from collections import deque
 t = int(stdin.readline().strip())
-
 for cas in range(t):
     n = int(stdin.readline().strip())
     s = list(map(int, stdin.readline().strip().split()))
@@ -24,6 +23,6 @@ for cas in range(t):
         st.add(aux[i])
     st = list(st)
     if len(st) == 0 or (len(st) == 1 and st[0] < 0):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

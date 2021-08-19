@@ -1,7 +1,6 @@
 import sys
 readline = sys.stdin.readline
-
-n, x = list(map(int, readline().split()))
+(n, x) = list(map(int, readline().split()))
 tmp = list(map(float, readline().split()))
 for i in range(128 - x - 1):
     tmp.append(0)
@@ -25,4 +24,4 @@ def MatPow(mat, p):
     return newMat
 
 
-print(('%.16f' % (1 - MatPow(tmp, n)[0])))
+print('%.16f' % (1 - MatPow(tmp, n)[0]))

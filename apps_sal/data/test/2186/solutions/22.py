@@ -1,7 +1,6 @@
 from sys import stdin
 from functools import reduce
 from collections import defaultdict
-
 _data = iter(stdin.read().split('\n'))
 
 
@@ -28,20 +27,20 @@ def found(s):
     return False
 
 
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 B = 10007
 MOD = 1000000000000000003
-def h(s): return reduce(lambda s, c: (B * s + ord(c)) % MOD, s, 0)
+
+
+def h(s):
+    return reduce(lambda s, c: (B * s + ord(c)) % MOD, s, 0)
 
 
 hs = defaultdict(set)
-
 for i in range(n):
     s = input()
     insert(s)
-
 text = []
-
 for i in range(m):
     s = input()
     text.append('YES' if found(s) else 'NO')

@@ -1,6 +1,6 @@
 from collections import Counter
-x1, y1 = list(map(int, input().split()))
-x2, y2 = list(map(int, input().split()))
+(x1, y1) = list(map(int, input().split()))
+(x2, y2) = list(map(int, input().split()))
 x = x1 - x2
 y = y1 - y2
 xpy = x + y
@@ -33,7 +33,6 @@ else:
 
     def g(a, b, d, e):
         return a == 0 or (b if a < 0 else d) > e
-
     for c in s:
         res += 1
         if c in 'dr':

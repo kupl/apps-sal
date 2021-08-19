@@ -21,13 +21,13 @@ def read_int_array(sep=None, maxsplit=-1):
 def write(*args, **kwargs):
     sep = kwargs.get('sep', ' ')
     end = kwargs.get('end', '\n')
-    stdout.write(sep.join(str(a) for a in args) + end)
+    stdout.write(sep.join((str(a) for a in args)) + end)
 
 
 def write_array(array, **kwargs):
     sep = kwargs.get('sep', ' ')
     end = kwargs.get('end', '\n')
-    stdout.write(sep.join(str(a) for a in array) + end)
+    stdout.write(sep.join((str(a) for a in array)) + end)
 
 
 def f(a, b):
@@ -39,7 +39,7 @@ results = []
 for _ in range(n):
     read_int()
     arr = collections.Counter(read_int_array(sep=' '))
-    prev_el, next_el = None, None
+    (prev_el, next_el) = (None, None)
     min_sticks_el = None
     min_sticks = None
     keys = sorted(arr.keys())
@@ -48,7 +48,7 @@ for _ in range(n):
             arr[k] = 4
         while arr[k] > 1:
             arr[k] -= 2
-            prev_el, next_el = next_el, k
+            (prev_el, next_el) = (next_el, k)
             if prev_el and next_el:
                 if not min_sticks_el:
                     min_sticks_el = (prev_el, next_el)
@@ -58,6 +58,5 @@ for _ in range(n):
                 if min_sticks > current_value:
                     min_sticks = current_value
                     min_sticks_el = (prev_el, next_el)
-    results.append("{0} {0} {1} {1}".format(min_sticks_el[0], min_sticks_el[1]))
-
+    results.append('{0} {0} {1} {1}'.format(min_sticks_el[0], min_sticks_el[1]))
 print('\n'.join(results))

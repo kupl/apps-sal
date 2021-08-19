@@ -23,7 +23,7 @@ def sub(a, b):
 
 
 def mul(a, b):
-    return (a * b) % 1000000007
+    return a * b % 1000000007
 
 
 p = 102367
@@ -38,7 +38,7 @@ for i in range(len(t)):
 
 def cmp(a, b, l):
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     h1 = sub(h[a + l], mul(h[a], pp[l]))
     h2 = sub(h[b + l], mul(h[b], pp[l]))
     return h2 == h1
@@ -53,7 +53,7 @@ for i in range(len(s)):
 Mv = max(c)
 mv = min(c)
 Mi = c.index(Mv)
-mi = (Mi ^ 1)
+mi = Mi ^ 1
 lt = len(t)
 sp = [0, 0]
 res = 0

@@ -4,9 +4,9 @@ def __starting_point():
     en = N * N
     for i in range(N):
         for j in range(N // 2):
-            print(st, end=" ")
+            print(st, end=' ')
             st += 1
-            print(en, end=" ")
+            print(en, end=' ')
             en -= 1
         print()
 

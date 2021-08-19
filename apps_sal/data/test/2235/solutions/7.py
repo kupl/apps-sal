@@ -1,10 +1,8 @@
-
 n = int(input())
-a = [0, ]
+a = [0]
 for i in range(n):
     x = int(input())
     a.append(x)
-
 dp = [0] * (n + 1)
 dp[0] = 0
 p90 = 1

@@ -10,7 +10,7 @@ def getf(x):
         x = f[x]
     while y < n and a[y] == 0:
         t = f[y]
-        f[y], y = x, t
+        (f[y], y) = (x, t)
     return x
 
 

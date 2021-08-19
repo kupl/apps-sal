@@ -1,13 +1,13 @@
 import sys
 input = sys.stdin.readline
 for f in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = [0] * m
     b = [0] * m
     acop = [0] * m
     bcop = [0] * m
     for i in range(m):
-        a[i], b[i] = map(int, input().split())
+        (a[i], b[i]) = map(int, input().split())
         acop[i] = a[i]
         bcop[i] = [b[i], i]
     acop.sort(reverse=True)

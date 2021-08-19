@@ -1,15 +1,10 @@
 import sys
 input = sys.stdin.readline
-
-
-n, T = map(int, input().split())
+(n, T) = map(int, input().split())
 a = list(map(int, input().split()))
 t = list(map(int, input().split()))
-
-
 for i in range(n):
     t[i] -= T
-
 lower = []
 upper = []
 max_lower = 0
@@ -24,13 +19,11 @@ for i in range(n):
     else:
         upper.append((t[i], a[i]))
         max_upper += abs(a[i] * t[i])
-
 max_heat = min(max_upper, max_lower)
 lower.sort()
 upper.sort()
-
 tmp = 0
-for ti, ai in lower:
+for (ti, ai) in lower:
     if tmp + ti * ai < max_heat:
         ans += ai
         tmp += ti * ai
@@ -38,7 +31,7 @@ for ti, ai in lower:
         ans += (max_heat - tmp) / ti
         tmp = max_heat
 tmp = 0
-for ti, ai in upper:
+for (ti, ai) in upper:
     if tmp + ti * ai < max_heat:
         ans += ai
         tmp += ti * ai

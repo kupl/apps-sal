@@ -16,4 +16,4 @@ for i in range(N):
     for ne in range(n_even):
         res.append(evens[s])
         s += 1
-    print(" ".join(map(str, res)))
+    print(' '.join(map(str, res)))

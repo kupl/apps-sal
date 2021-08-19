@@ -8,21 +8,15 @@ Then
     sh(vu) = sh(v) + sh(u) + s(v)*h(u)
 So we want uv if s(u)*h(v) > s(v)*h(u), else vu.
 """
-
-
 from functools import cmp_to_key
-
-
 n = int(input())
 strings = [input() for _ in range(n)]
-
-
-strings = [(s, s.count("s"), s.count("h")) for s in strings]
+strings = [(s, s.count('s'), s.count('h')) for s in strings]
 
 
 def compare(u, v):
-    _, su, hu = u
-    _, sv, hv = v
+    (_, su, hu) = u
+    (_, sv, hv) = v
     suxhv = su * hv
     svxhu = sv * hu
     if suxhv > svxhu:
@@ -34,15 +28,12 @@ def compare(u, v):
 
 
 strings.sort(key=cmp_to_key(compare))
-
-
 noise = 0
 ss = 0
-for string, _, _ in strings:
+for (string, _, _) in strings:
     for c in string:
-        if c == "s":
+        if c == 's':
             ss += 1
         else:
             noise += ss
-
 print(noise)

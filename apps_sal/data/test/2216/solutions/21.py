@@ -2,8 +2,8 @@ from collections import defaultdict, deque, Counter, OrderedDict
 
 
 def main():
-    n, m, k = map(int, input().split())
-    l, ans = [], []
+    (n, m, k) = map(int, input().split())
+    (l, ans) = ([], [])
     for i in range(1, n + 1):
         if i % 2 == 0:
             for j in range(m, 0, -1):
@@ -21,7 +21,7 @@ def main():
         ans[-1].append(l[i][0])
         ans[-1].append(l[i][1])
     for i in ans:
-        print(len(i) // 2, " ".join(map(str, i)))
+        print(len(i) // 2, ' '.join(map(str, i)))
 
 
 def __starting_point():

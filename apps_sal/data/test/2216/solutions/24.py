@@ -13,7 +13,7 @@ def main():
             for j in range(m - 1, -1, -1):
                 l.append((i + 1, j + 1))
         alt ^= True
-    length = (n * m) // k
+    length = n * m // k
     i = 0
     for j in range(1, k + 1):
         g = l[i:j * length]

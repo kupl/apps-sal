@@ -21,7 +21,6 @@ forbidden_factors = set({})
 prime_factors = sieve(2000005)
 is_greater = False
 min_available = 2
-
 for ai in a:
     factors = prime_factors[ai]
     if not is_greater:
@@ -67,4 +66,4 @@ for ai in a:
         for f in factors:
             forbidden_factors.add(f)
     b.append(str(curr))
-print(" ".join(b))
+print(' '.join(b))

@@ -21,10 +21,9 @@ for daf in range(t):
             else:
                 f = False
                 break
-        else:
-            if cs == 1:
-                cs = 2
+        elif cs == 1:
+            cs = 2
     if f:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -16,7 +16,7 @@ m = int(input())
 for i in range(m):
     s = list(map(int, input().split()))
     if s[0] == 1:
-        x0, p = s[1], s[2]
+        (x0, p) = (s[1], s[2])
         x = x0
         temp1 = set()
         while True:

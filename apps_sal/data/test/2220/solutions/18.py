@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort(reverse=True)
 if m < k:

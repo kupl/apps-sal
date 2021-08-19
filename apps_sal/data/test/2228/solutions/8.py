@@ -2,7 +2,7 @@ n = int(input())
 l1 = []
 l2 = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     l1.append(a)
     l2.append(b)
 l1.sort()
@@ -22,5 +22,4 @@ while i < n:
     else:
         cc += 1
         c -= 1
-
 print(kk, ans)

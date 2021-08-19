@@ -12,4 +12,4 @@ for i in range(n):
                 num = j + 1 - n2
                 n2 = j + 1
                 break
-    print(num, end=" ")
+    print(num, end=' ')

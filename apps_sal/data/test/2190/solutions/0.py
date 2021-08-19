@@ -12,9 +12,8 @@ def f(n):
     return Ans
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-
 m = {}
 c = 0
 for i in arr:

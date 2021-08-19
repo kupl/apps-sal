@@ -1,13 +1,10 @@
 from sys import stdin
-
-n, m = map(int, stdin.readline().split())
+(n, m) = map(int, stdin.readline().split())
 lst = list(map(int, stdin.readline().split()))
 x = 1 << n
-
 arr = [0] * (2 * x)
 for j in range(x, 2 * x):
     arr[j] = lst[j - x]
-
 y = x
 while y != 1:
     for j in range(y, 2 * y, 2):
@@ -19,7 +16,7 @@ while y != 1:
         arr[j // 2] = arr[j] ^ arr[j + 1]
     y >>= 1
 for _ in range(m):
-    p, b = map(int, stdin.readline().split())
+    (p, b) = map(int, stdin.readline().split())
     z = x + p - 1
     arr[z] = b
     while z != 1:

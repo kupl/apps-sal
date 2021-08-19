@@ -1,8 +1,8 @@
-destination, max_gas_tank_volume, gas_prices_number = list(map(int, input().split()))
+(destination, max_gas_tank_volume, gas_prices_number) = list(map(int, input().split()))
 start_point = 0
 gas_prices = {start_point: 0}
 for i in range(gas_prices_number):
-    coordinate, price = list(map(int, input().split()))
+    (coordinate, price) = list(map(int, input().split()))
     gas_prices[coordinate] = price
 points = sorted(list(gas_prices.keys()), reverse=True)
 current_point = start_point
@@ -20,12 +20,11 @@ while current_point != destination:
             next_point = destination
         else:
             reachable_points = [point for point in reachable_points if point > next_point]
+    elif farthest_reachable_point >= destination:
+        next_point = destination
     else:
-        if farthest_reachable_point >= destination:
-            next_point = destination
-        else:
-            count = -1
-            break
+        count = -1
+        break
     distantion = next_point - current_point
     if next_point != destination and gas_prices[current_point] <= gas_prices[next_point]:
         required_gas_volume = max_gas_tank_volume

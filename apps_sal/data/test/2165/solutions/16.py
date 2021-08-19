@@ -1,12 +1,13 @@
-def rd(): return map(int, input().split())
+def rd():
+    return map(int, input().split())
 
 
-n, t = rd()
+(n, t) = rd()
 a = list(rd())
 b = list(rd())
 x = [[b[i], a[i]] for i in range(n)]
 x.sort()
-tot, val = sum(a), 0
+(tot, val) = (sum(a), 0)
 for i in range(n):
     val += (t - x[i][0]) * x[i][1]
 if val:

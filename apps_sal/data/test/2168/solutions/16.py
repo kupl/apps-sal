@@ -1,5 +1,4 @@
 n = int(input())
-
 c = []
 w = 0
 while w < n:
@@ -7,7 +6,6 @@ while w < n:
     m = c[w][0]
     c[w] = [max(c[w][1:m + 1]), m]
     w += 1
-
 w = 0
 prise = c[w][0]
 count = c[w][1]

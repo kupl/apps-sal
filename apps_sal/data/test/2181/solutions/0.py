@@ -1,4 +1,4 @@
-a, d = list(map(float, input().split()))
+(a, d) = list(map(float, input().split()))
 n = int(input())
 
 
@@ -14,4 +14,4 @@ def coordinates(s):
 
 
 for i in range(1, n + 1):
-    print("%f %f" % coordinates(i * d % (4 * a)))
+    print('%f %f' % coordinates(i * d % (4 * a)))

@@ -7,7 +7,7 @@ for i in S:
     digit = int(i)
     residue = (residue + power * digit) % 2019
     residuelist.append(residue)
-    power = (power * 10) % 2019
+    power = power * 10 % 2019
 val = Counter(residuelist).values()
 ans = 0
 for j in val:

@@ -1,6 +1,6 @@
 import sys
 import math
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 for i in range(n - 1):
     input()
 w = input()

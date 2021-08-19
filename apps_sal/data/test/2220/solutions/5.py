@@ -2,11 +2,8 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-6 9 2
-1 3 3 7 4 2
-'''
-n, m, k = mi()
+'\n6 9 2\n1 3 3 7 4 2\n'
+(n, m, k) = mi()
 a = list(mi())
 a.sort(reverse=True)
 t = k + 1

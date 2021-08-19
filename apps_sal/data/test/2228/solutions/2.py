@@ -3,7 +3,7 @@ n = int(input())
 bs = []
 ds = []
 for i in range(n):
-    b, d = map(int, input().split())
+    (b, d) = map(int, input().split())
     bs.append(b)
     ds.append(d)
 bs.sort()

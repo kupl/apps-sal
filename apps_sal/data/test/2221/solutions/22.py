@@ -1,16 +1,13 @@
 import sys
-
-x0, y0 = list(map(int, input().split(' ')))
-x1, y1 = list(map(int, input().split(' ')))
+(x0, y0) = list(map(int, input().split(' ')))
+(x1, y1) = list(map(int, input().split(' ')))
 n = int(input())
 s = input()
 l = 0
-r = 10**18
-
+r = 10 ** 18
 d = [[0, 0]]
 dx = 0
 dy = 0
-
 for lv in s:
     if lv == 'R':
         dx += 1
@@ -40,7 +37,6 @@ while l <= r:
         max_mid = mid
     else:
         l = mid + 1
-
 if check(x0, y0, x1, y1, max_mid):
     print(max_mid)
 else:

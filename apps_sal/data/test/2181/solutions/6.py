@@ -19,10 +19,9 @@ def setPoint(point, a):
     return str(x) + ' ' + str(y)
 
 
-a, d = list(map(float, input().split()))
+(a, d) = list(map(float, input().split()))
 n = int(input())
 curP = 0
-
 for l in range(0, n):
     curP += d
     curP = curP % (a * 4)

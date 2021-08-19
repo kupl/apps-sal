@@ -8,6 +8,6 @@ for i in range(n):
 b[n] = counter
 q = int(input())
 for i in range(q):
-    x, y = [int(x) for x in input().split()]
+    (x, y) = [int(x) for x in input().split()]
     z = b[y] - b[x - 1]
     print(z // 10)

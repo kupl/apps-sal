@@ -1,8 +1,7 @@
-
 def main():
     n = int(input())
-    a = list([int(x) for x in input().split(" ")])
-    b = list([int(x) for x in input().split(" ")])
+    a = list([int(x) for x in input().split(' ')])
+    b = list([int(x) for x in input().split(' ')])
     now = 0
     ans = []
     h = set()
@@ -13,7 +12,7 @@ def main():
             now += 1
             count += 1
         ans.append(str(count))
-    print(" ".join(ans))
+    print(' '.join(ans))
 
 
 def __starting_point():

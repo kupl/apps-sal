@@ -2,7 +2,7 @@ n = int(input())
 masb = []
 masd = []
 for i in range(n):
-    z1, z2 = list(map(int, input().split()))
+    (z1, z2) = list(map(int, input().split()))
     masb.append(z1)
     masd.append(z2)
 masb.sort()

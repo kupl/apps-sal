@@ -1,5 +1,5 @@
 for nt in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if k < n:
         if n % 2 == 0:
             if k % 2:

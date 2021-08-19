@@ -1,9 +1,7 @@
 from sys import stdin
 input = stdin.readline
-
-n, m = list(map(int, input().split()))
-s = list((0, 1)[c == '.'] for c in list(input()))
-
+(n, m) = list(map(int, input().split()))
+s = list(((0, 1)[c == '.'] for c in list(input())))
 res = 0
 cnt = 0
 for k in s:
@@ -13,9 +11,8 @@ for k in s:
         res += max(cnt - 1, 0)
         cnt = 0
 res += max(0, cnt - 1)
-
 for i in range(m):
-    x, c = input().split()
+    (x, c) = input().split()
     x = int(x)
     nc = (0, 1)[c == '.']
     if s[x - 1] != nc:

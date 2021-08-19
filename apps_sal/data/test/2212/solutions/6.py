@@ -31,4 +31,4 @@ for i in range(n):
                 line[i] += [nech[-1]]
                 nech.pop()
 for i in range(n):
-    print(" ".join(map(str, line[i])))
+    print(' '.join(map(str, line[i])))

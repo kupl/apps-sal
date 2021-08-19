@@ -8,7 +8,6 @@ for i in range(len(S), 0, -1):
     P[i - 1] = P[i - 1] % mod
     d *= 10
     d = d % mod
-
 P = Counter(P)
 ans = 0
 for p in P.values():

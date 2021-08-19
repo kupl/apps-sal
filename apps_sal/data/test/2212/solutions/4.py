@@ -14,4 +14,4 @@ for i in range(n):
             e += 2
     m.append(row)
 for row in m:
-    print(" ".join(row))
+    print(' '.join(row))

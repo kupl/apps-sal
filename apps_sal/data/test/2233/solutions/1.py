@@ -10,13 +10,13 @@ for _ in range(q):
             cnt += 1
             tmp.append(i)
     if cnt == 0:
-        print("Yes")
+        print('Yes')
     elif cnt == 1:
-        print("No")
+        print('No')
     elif cnt == 2:
         if s[tmp[0]] == s[tmp[1]] and t[tmp[0]] == t[tmp[1]]:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     else:
-        print("No")
+        print('No')

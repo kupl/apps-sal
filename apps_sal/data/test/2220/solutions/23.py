@@ -1,6 +1,6 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = list(map(int, input().split()))
-mx, mxx = 0, 0
+(mx, mxx) = (0, 0)
 for i in a:
     if i >= mx:
         mxx = mx

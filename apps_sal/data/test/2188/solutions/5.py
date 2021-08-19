@@ -1,5 +1,4 @@
 n = int(input())
-
 v = []
 u = []
 for i in range(n):
@@ -10,35 +9,7 @@ for i in range(n):
         v.append((a, b, i + 1))
     else:
         u.append((a, b, i + 1))
-
-'''nr = 1
-sol = [str(v[0][2])]
-act = v[0][1]
-i = 1
-n = len(v)
-while i < n:
-	while i < n and v[i][0] < act:
-		i += 1
-	if i < n:
-		nr += 1
-		sol.append(str(v[i][2]))
-		act = v[i][1]
-		i += 1
-
-u = sorted(uv, key = lambda x:x[1])
-nr2 = 1
-sol2 = [str(u[0][2])]
-act = u[0][1]
-i = 1
-n = len(u)
-while i < n:
-	while i < n and u[i][0] < act:
-		i += 1
-	if i < n:
-		nr2 += 1
-		sol2.append(str(u[i][2]))
-		act = u[i][1]
-		i += 1'''
+'nr = 1\nsol = [str(v[0][2])]\nact = v[0][1]\ni = 1\nn = len(v)\nwhile i < n:\n\twhile i < n and v[i][0] < act:\n\t\ti += 1\n\tif i < n:\n\t\tnr += 1\n\t\tsol.append(str(v[i][2]))\n\t\tact = v[i][1]\n\t\ti += 1\n\nu = sorted(uv, key = lambda x:x[1])\nnr2 = 1\nsol2 = [str(u[0][2])]\nact = u[0][1]\ni = 1\nn = len(u)\nwhile i < n:\n\twhile i < n and u[i][0] < act:\n\t\ti += 1\n\tif i < n:\n\t\tnr2 += 1\n\t\tsol2.append(str(u[i][2]))\n\t\tact = u[i][1]\n\t\ti += 1'
 if len(u) > len(v):
     u = sorted(u, key=lambda x: x[1], reverse=True)
     print(len(u))

@@ -8,7 +8,7 @@ for q in range(n):
     else:
         w = a.find('0')
         a = a[:w] + a[w + 1:]
-        if any(q in ['0', '2', '4', '6', '8'] for q in a):
+        if any((q in ['0', '2', '4', '6', '8'] for q in a)):
             print('red')
         else:
             print('cyan')

@@ -1,1 +1,1 @@
-print(*set("123") - set(input()))
+print(*set('123') - set(input()))
