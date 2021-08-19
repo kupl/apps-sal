@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     n = int(input())
@@ -13,15 +12,15 @@ while t > 0:
             a[i] += a[i - 1]
     q = int(input())
     while q > 0:
-        l, r = [int(ele) for ele in input().split()]
+        (l, r) = [int(ele) for ele in input().split()]
         x = a[r - 1]
         if l == 1:
             y = 0
         else:
             y = a[l - 2]
-        if (x - y == (r - l + 1)):
-            print("ODD")
+        if x - y == r - l + 1:
+            print('ODD')
         else:
-            print("EVEN")
+            print('EVEN')
         q -= 1
     t -= 1

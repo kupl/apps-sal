@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     st = input()
     a = st.count('a')
     b = st.count('b')
@@ -11,5 +10,4 @@ for _ in range(int(input())):
             ca += 1
         if st[i] == 'b':
             c += ca
-
     print(a * b * (k * (k - 1) // 2) + c * k)

@@ -5,7 +5,5 @@ def f(n):
             return None
         elif int(n) > 0:
             return sum([i for i in range(0, n + 1)])
-
     except:
         None
-    # pass

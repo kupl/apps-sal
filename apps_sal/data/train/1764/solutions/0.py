@@ -1,8 +1,6 @@
-# THanks to easter eggs kata ;*
-
 def height(n, m):
     if n >= m:
-        return (2 ** (min(n, m)) - 1)
+        return 2 ** min(n, m) - 1
     f = 1
     res = 0
     for i in range(n):
@@ -23,5 +21,4 @@ def solve(emulator):
         else:
             h += tryh
         m -= 1
-    return(h + 1)
-    # continue here
+    return h + 1

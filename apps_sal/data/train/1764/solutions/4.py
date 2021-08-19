@@ -1,13 +1,11 @@
 def solve(emulator):
     num_drops = emulator.drops
     num_eggs = emulator.eggs
-    # generate table for max heights with certain numbers of eggs and drops
     HEIGHTS = heights(num_eggs, num_drops)
     return solve_part(emulator, 0, HEIGHTS[num_eggs][num_drops], HEIGHTS) + 1
 
 
 def solve_part(emulator, min_floor, max_floor, HEIGHTS):
-    # solve for the highest possible floor without breaking
     if min_floor == max_floor:
         return min_floor
     else:
