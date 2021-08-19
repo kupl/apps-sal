@@ -7,6 +7,7 @@ sys.setrecursionlimit(1500)
 
 
 class F:
+
     def __init__(self, m, n):
         self.m = m
         self.n = n
@@ -31,22 +32,20 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, y, x = egcd(b % a, a)
-        return (g, x - (b // a) * y, y)
+        (g, y, x) = egcd(b % a, a)
+        return (g, x - b // a * y, y)
 
 
 def modinv(a, m):
-    g, x, y = egcd(a, m)
+    (g, x, y) = egcd(a, m)
     if g != 1:
         raise Exception('modular inverse does not exist')
     else:
         return x % m
-# print(estimate([2,1,0]))
 
 
 n = int(input())
 arr = [int(x) for x in input().split()]
-# arr = [3,3,-1,-1,4,4,-1,-1,-1,-1,-1,10,10,10,10,10,10,4,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3]
 a = []
 cnt = defaultdict(int)
 for x in arr:
@@ -60,14 +59,9 @@ for (key, value) in list(cnt.items()):
             a.append(1)
     else:
         a.append(value + 1)
-# print(len(a),sum(a),a)
 n = len(a)
 m = sum(a)
 f = F(m, n)
-# for i in range(m+1):
-# print(i,f(i))
-ans = sum(f(x) for x in a) - f(m)
-MOD = 10**9 + 7
-# print(float(ans))
-# print(modinv(25025,MOD)*25025%MOD,ans.denominator)
+ans = sum((f(x) for x in a)) - f(m)
+MOD = 10 ** 9 + 7
 print(ans.numerator * modinv(ans.denominator, MOD) % MOD)
