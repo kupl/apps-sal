@@ -1,13 +1,8 @@
 import sys
 import math
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 x = [int(i) for i in input().split()]
-
-# ==================================================-
-# 二分探索
-# functionを満たす,search_listの最大の要素を出力
-# 【注意点】searchリストの初めの方はfunctionを満たし、後ろに行くにつれて満たさなくなるべき
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 def binary_research(start, end, function):
@@ -24,8 +19,6 @@ def binary_research(start, end, function):
 positive = []
 negative = []
 zero = False
-
-
 for i in x:
     if i < 0:
         negative.append(abs(i))
@@ -59,7 +52,7 @@ def function(time):
     negative_list = negative_list[::-1]
     newans = ans
     while negative_list:
-        newans, ans_list, negative_list = function2(ans_list, negative_list, newans, time)
+        (newans, ans_list, negative_list) = function2(ans_list, negative_list, newans, time)
         ans = max(ans, newans)
         if ans_list == []:
             break
@@ -87,7 +80,7 @@ def function2(ans_list, negative_list, ans, time):
         else:
             negative_list.append(i)
             break
-    return ans, ans_list, negative_list
+    return (ans, ans_list, negative_list)
 
 
-print(binary_research(-1, 3 * 10**8 + 1, function) + 1)
+print(binary_research(-1, 3 * 10 ** 8 + 1, function) + 1)

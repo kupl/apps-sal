@@ -1,7 +1,4 @@
-m, s = map(int, input().split())
-# for m in range(1, 100):
-#    for s in range(1, 100):
-# print(";;;;;;", s, m)
+(m, s) = map(int, input().split())
 ar = [0] * m
 ar[0] = 1
 sum1 = 1
@@ -34,7 +31,7 @@ else:
         if sum1 > s:
             ar[i] -= sum1 - s
             sum1 -= sum1 - s
-    if sum1 < s or dd == 1 or ar[0] == 0 or min(min1) < 0:
+    if sum1 < s or dd == 1 or ar[0] == 0 or (min(min1) < 0):
         print('-1 -1')
     else:
         print(''.join(map(str, min1)), ''.join(map(str, ar)))

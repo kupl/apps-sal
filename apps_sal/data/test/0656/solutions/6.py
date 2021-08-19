@@ -1,12 +1,11 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 days = list(map(int, input().split()))
-a = [0 for i in range(n)]  # for < 0
-b = [0 for i in range(n)]  # for >= 0
+a = [0 for i in range(n)]
+b = [0 for i in range(n)]
 asum = 0
 ia = 0
 ib = 0
 inf = n + 199
-
 for x in days:
     if x < 0:
         a[ia] += 1
@@ -19,7 +18,7 @@ for x in days:
             ia += 1
 changes = ia + 1 if a[ia] > 0 else ia
 changes += changes - 1
-if (a[ia] == 0):
+if a[ia] == 0:
     ia -= 1
 if b[ib] == 0:
     ib -= 1
@@ -38,15 +37,12 @@ if days[len(days) - 1] >= 0:
     changes += 1
     lastb = b[ib]
 b.sort()
-# print('ia = ' + str(ia))
-# print('changes = ' + str(changes))
 curb = 0
-# take care abount choosing smth in the middle exept for last\
 seccurb = curb
 secasum = asum
 secchanges = changes
 secremovedlastb = removedlastb
-while (curb <= ib and asum + b[curb] <= k):
+while curb <= ib and asum + b[curb] <= k:
     asum += b[curb]
     if not removedlastb:
         if b[curb] == lastb:
@@ -57,7 +53,7 @@ while (curb <= ib and asum + b[curb] <= k):
     else:
         changes -= 2
     curb += 1
-while (seccurb <= ib and secasum + b[seccurb] <= k):
+while seccurb <= ib and secasum + b[seccurb] <= k:
     secasum += b[seccurb]
     if not secremovedlastb:
         if b[seccurb] == lastb:

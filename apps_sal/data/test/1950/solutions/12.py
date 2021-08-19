@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -8,20 +6,11 @@ import time
 import random
 import itertools
 import sys
-
-"""
-created by shhuan at 2017/11/8 09:35
-
-"""
-
-
+'\ncreated by shhuan at 2017/11/8 09:35\n\n'
 N = int(input())
 A = [int(x) for x in input().split()]
-
-
 if N % 2 == 0:
     A.append(0)
-
 heapq.heapify(A)
 ans = 0
 while len(A) > 1:

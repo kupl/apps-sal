@@ -1,9 +1,8 @@
-# @author
-
 import sys
 
 
 class ASinglePush:
+
     def solve(self):
         t = int(input())
         for _ in range(t):
@@ -17,21 +16,17 @@ class ASinglePush:
                 if u[i]:
                     l = i
                     break
-
             for i in range(n - 1, -1, -1):
                 if u[i]:
                     r = i
                     break
-
             if l == -1:
-                print("YES")
+                print('YES')
             else:
-                assert(l != -1 and r != -1)
-                # print(u[l:r + 1], l, r)
-                print("YES" if u[l] > 0 and u[l:r + 1] == [u[l]] * (r - l + 1) else "NO")
+                assert l != -1 and r != -1
+                print('YES' if u[l] > 0 and u[l:r + 1] == [u[l]] * (r - l + 1) else 'NO')
 
 
 solver = ASinglePush()
 input = sys.stdin.readline
-
 solver.solve()

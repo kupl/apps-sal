@@ -2,9 +2,9 @@ from sys import stdin
 
 
 def getval():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     x = list(map(int, input().split()))
-    return n, k, x
+    return (n, k, x)
 
 
 def main(n, k, x):
@@ -18,7 +18,6 @@ def main(n, k, x):
         ans = min(abs(x[0]), abs(x[idx])) * 2 + max(abs(x[0]), abs(x[idx]))
     for i in range(k, n):
         temp = 0
-        # print(ans)
         if x[i - k + 1] >= 0:
             temp = x[i]
         elif x[i] <= 0:
@@ -30,7 +29,7 @@ def main(n, k, x):
 
 
 def __starting_point():
-    n, k, x = getval()
+    (n, k, x) = getval()
     main(n, k, x)
 
 

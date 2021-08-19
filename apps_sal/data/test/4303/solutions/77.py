@@ -1,14 +1,11 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Oct  5 20:18:18 2020
 
 @author: liang
 """
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 X = [int(x) for x in input().split()]
-ans = 10**10
-
+ans = 10 ** 10
 for i in range(N - K + 1):
     tmp = X[i + K - 1] - X[i] + min(abs(X[i + K - 1]), abs(X[i]))
     if tmp < ans:
