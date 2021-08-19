@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -11,7 +10,6 @@ def main():
     s = input().rstrip()
     datas = ngram(s, 3)
     answers = []
-
     for data in datas:
         answers.append(abs(753 - int(data)))
     print(min(answers))

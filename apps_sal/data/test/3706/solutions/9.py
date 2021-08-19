@@ -43,10 +43,8 @@ If there are multiple optimal solutions, output any one of them.
 
 """
 import logging
-
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
-
 logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 logger.addHandler(ch)
@@ -54,54 +52,45 @@ logger.addHandler(ch)
 
 def solve(n, m, grid):
     logger.debug('\n'.join([str(x) for x in grid]))
-
-    # Check if ...
     a = [grid[i][0] for i in range(n)]
     b = [grid[0][i] - grid[0][0] for i in range(m)]
-    if any(grid[i][j] != a[i] + b[j] for i in range(n) for j in range(m)):
+    if any((grid[i][j] != a[i] + b[j] for i in range(n) for j in range(m))):
         logger.debug('Not possible ....')
         return [-1]
-
-    best_move, best = None, float('inf')
+    (best_move, best) = (None, float('inf'))
     for z in range(501):
         a = [grid[i][0] - z for i in range(n)]
         b = [z + grid[0][i] - grid[0][0] for i in range(m)]
         logger.debug('z = %s', z)
         logger.debug('a = %s', a)
         logger.debug('b = %s', b)
-        if any(x < 0 for x in a + b):
+        if any((x < 0 for x in a + b)):
             logger.debug('Non-positives on z %s', z)
             continue
         current = sum(a) + sum(b)
         if current < best:
             best_move = z
             best = current
-
     if best_move is None:
         return [-1]
-
     logger.debug('Best move is %s', best_move)
-
     res = []
     res.append(best)
-
     a = [grid[i][0] - best_move for i in range(n)]
-    for i, times in enumerate(a):
+    for (i, times) in enumerate(a):
         if not times:
             continue
         res.extend(['row {}'.format(i + 1)] * times)
-
     b = [best_move + grid[0][i] - grid[0][0] for i in range(m)]
-    for i, times in enumerate(b):
+    for (i, times) in enumerate(b):
         if not times:
             continue
         res.extend(['col {}'.format(i + 1)] * times)
-
     return res
 
 
 def main():
-    n, m = list(map(int, input().strip().split()))
+    (n, m) = list(map(int, input().strip().split()))
     grid = [list(map(int, input().strip().split())) for _ in range(n)]
     result = solve(n, m, grid)
     print('\n'.join(map(str, result)))

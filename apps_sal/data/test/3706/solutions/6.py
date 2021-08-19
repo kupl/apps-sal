@@ -9,12 +9,10 @@ true = 0
 def prt():
     for xx in range(n):
         for yy in range(m):
-            print(tbl[xx][yy], end='	')
+            print(tbl[xx][yy], end='\t')
         print()
     print()
     print()
-
-# prt()
 
 
 def lines():
@@ -32,7 +30,6 @@ def lines():
             if not may:
                 break
             rows.append(i + 1)
-        # prt()
     return rows
 
 
@@ -51,7 +48,6 @@ def cols():
             if not may:
                 break
             stolbs.append(i + 1)
-        # prt()
     return stolbs
 
 
@@ -61,7 +57,6 @@ if m > n:
 else:
     c = cols()
     l = lines()
-
 br = 0
 for i in range(n):
     for j in range(m):

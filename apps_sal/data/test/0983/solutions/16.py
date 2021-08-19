@@ -1,7 +1,5 @@
 import sys
-# =int(input())
-# =list(map(int, input().split()))
-n, p, q, r = list(map(int, input().split()))
+(n, p, q, r) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 minil = [0] * n
 minir = [0] * n
@@ -16,7 +14,7 @@ for i in range(n - 2, -1, -1):
     minir[i] = min(minir[i + 1], a[i])
     maxir[i] = max(maxir[i + 1], a[i])
 ans = 0
-tans = -10**19
+tans = -10 ** 19
 for i in range(n):
     ans = q * a[i]
     ans += max(p * minil[i], p * maxil[i])

@@ -1,6 +1,5 @@
 import sys
 import math
-# sys.stdin = open("in.txt")
 for _ in range(int(input())):
     n = int(input())
     li = sorted(list(map(int, input().split())))
