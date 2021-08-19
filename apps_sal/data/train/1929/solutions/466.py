@@ -16,7 +16,6 @@ class StreamChecker:
         self.trie = [None] * 27
         for word in words:
             self.add_trie(self.trie, word[::-1], 0)
-
         self.str = []
 
     def query(self, letter: str) -> bool:
@@ -34,10 +33,4 @@ class StreamChecker:
             i -= 1
         if trie and trie[26]:
             return True
-
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

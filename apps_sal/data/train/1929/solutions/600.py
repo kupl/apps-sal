@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self):
         self.chars = {}
 
@@ -10,7 +11,6 @@ class Trie:
         cur['#'] = '#'
 
     def find(self, word):
-
         cur = self.chars
         for ch in word:
             if ch not in cur:
@@ -20,6 +20,7 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words):
         self.trie = Trie()
         for word in words:

@@ -2,12 +2,14 @@ from collections import defaultdict
 import queue
 
 
-class TrieNode():
+class TrieNode:
+
     def __init__(self):
         self.children = defaultdict(TrieNode)
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.root = TrieNode()
         self.cstream = []
@@ -28,8 +30,3 @@ class StreamChecker:
             curr = curr.children[c]
         return '$' in curr.children
         pass
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

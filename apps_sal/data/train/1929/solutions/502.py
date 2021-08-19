@@ -1,7 +1,6 @@
 class StreamChecker:
 
     def __init__(self, words: List[str]):
-
         self.wordSet = set(words)
         lSet = set()
         self.lastL = set()
@@ -14,7 +13,6 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.q = self.q + letter
-
         if letter in self.lastL:
             for i in range(len(self.l)):
                 if self.l[i] > len(self.q):
@@ -22,8 +20,3 @@ class StreamChecker:
                 elif self.q[-self.l[i]:] in self.wordSet:
                     return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

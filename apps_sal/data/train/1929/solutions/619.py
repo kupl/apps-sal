@@ -2,16 +2,18 @@ from collections import defaultdict
 
 
 class TrieNode:
+
     def __init__(self):
         self.nexts = defaultdict(TrieNode)
         self.isword = False
 
 
 class Trie:
+
     def __init__(self, words):
         self.root = TrieNode()
         for w in words:
-            self.insert(w[:: -1])
+            self.insert(w[::-1])
 
     def insert(self, w):
         cur = self.root
@@ -32,16 +34,11 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
-        # Time: O(WQ), W is the maximum length of all words, Q is number of calls of function query
         self.t = Trie(words)
         self.cache = list()
 
     def query(self, letter: str) -> bool:
         self.cache.append(letter)
         return self.t.search(self.cache)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

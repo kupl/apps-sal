@@ -10,42 +10,5 @@ class StreamChecker:
         self.letters.append(letter)
         l = ''.join(self.letters)
         return l.endswith(self.words)
-
-    '''
-    def __init__(self, words: List[str]):
-        self.words = set(words)
-        self.letters = ''
-        self.fragments = {}
-        for w in words:
-            temp = self.fragments
-            for i in range(len(w)):
-                sec = w[len(w)-1-i:]
-                if sec not in temp:
-                    temp[sec] = {}
-                temp = temp[sec]
-                    
-    def query(self, letter: str) -> bool:
-        self.letters += letter
-        chars = self.letters
-        
-        temp = self.fragments
-        for i in range(len(chars)):
-            sec = chars[len(chars) - 1 - i:]
-            if sec in self.words:
-                return True
-            if sec not in temp:
-                return False
-            temp = temp[sec]
-    '''
-    '''
-    def __init__(self, words: List[str]):
-        self.words = tuple(words)
-        self.letters = ''
-        
-    def query(self, letter: str) -> bool:
-        self.letters +=letter
-        return self.letters.endswith(self.words)        
-    '''
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+    "\n    def __init__(self, words: List[str]):\n        self.words = set(words)\n        self.letters = ''\n        self.fragments = {}\n        for w in words:\n            temp = self.fragments\n            for i in range(len(w)):\n                sec = w[len(w)-1-i:]\n                if sec not in temp:\n                    temp[sec] = {}\n                temp = temp[sec]\n                    \n    def query(self, letter: str) -> bool:\n        self.letters += letter\n        chars = self.letters\n        \n        temp = self.fragments\n        for i in range(len(chars)):\n            sec = chars[len(chars) - 1 - i:]\n            if sec in self.words:\n                return True\n            if sec not in temp:\n                return False\n            temp = temp[sec]\n    "
+    "\n    def __init__(self, words: List[str]):\n        self.words = tuple(words)\n        self.letters = ''\n        \n    def query(self, letter: str) -> bool:\n        self.letters +=letter\n        return self.letters.endswith(self.words)        \n    "

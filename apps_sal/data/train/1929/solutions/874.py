@@ -1,9 +1,7 @@
 class StreamChecker:
 
     def __init__(self, words: List[str]):
-
         self.trie = {}
-
         for word in words:
             cur = self.trie
             for c in word:
@@ -11,17 +9,14 @@ class StreamChecker:
                     cur[c] = {}
                 cur = cur[c]
             cur['end'] = None
-
         self.buffer = []
 
     def query(self, letter: str) -> bool:
-
         found = False
         swap = []
         if letter in self.trie:
             swap.append(self.trie[letter])
             found = 'end' in self.trie[letter]
-
         for b in self.buffer:
             if letter in b:
                 swap.append(b[letter])
@@ -29,8 +24,3 @@ class StreamChecker:
                     found = True
         self.buffer = swap
         return found
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

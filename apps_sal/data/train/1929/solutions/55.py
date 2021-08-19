@@ -3,6 +3,7 @@ def to_index(c):
 
 
 class Node:
+
     def __init__(self, val=None):
         self.val = val
         self.end = False
@@ -62,7 +63,7 @@ class StreamChecker:
         self.k.append(i)
         v = self.store.get(tuple(self.k), None)
         if v is not None:
-            self.d, r = v
+            (self.d, r) = v
             return r
         new_d = set()
         for node in self.d:
@@ -77,8 +78,3 @@ class StreamChecker:
         self.d = tuple(new_d)
         self.store[tuple(self.k)] = (self.d, r)
         return r
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

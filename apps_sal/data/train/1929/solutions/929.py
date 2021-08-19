@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self):
         self._values = set()
         self.next = None
@@ -20,7 +21,6 @@ class StreamChecker:
         self.q = ''
         self.chars = set()
         self.words = set()
-
         for word in words:
             curr = self.root
             for index in range(len(word) - 1, -1, -1):
@@ -30,16 +30,13 @@ class StreamChecker:
                 if not curr.__next__:
                     curr.next = TrieNode()
                 curr = curr.__next__
-
             self.words.add(word)
-
-        print((self.root))
+        print(self.root)
 
     def query(self, letter: str) -> bool:
         if letter not in self.chars:
             self.q = ''
             return False
-
         self.q = letter + self.q
         curr = self.root
         sub_q = ''
@@ -49,12 +46,5 @@ class StreamChecker:
             sub_q = char + sub_q
             if sub_q in self.words:
                 return True
-
             curr = curr.__next__
-
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

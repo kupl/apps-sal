@@ -9,7 +9,6 @@ class StreamChecker:
                     root[ch] = {}
                 root = root[ch]
             root['#'] = '#'
-
         self.nodes = [self.trie]
 
     def query(self, letter: str) -> bool:
@@ -23,8 +22,3 @@ class StreamChecker:
                 new_nodes.append(new_node)
         self.nodes = new_nodes
         return res
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -27,10 +27,4 @@ class StreamChecker:
                 if _end not in tr[letter] or len(tr[letter]) > 1:
                     new_tries.append(tr[letter])
         self.cur_tries = new_tries
-
         return result
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

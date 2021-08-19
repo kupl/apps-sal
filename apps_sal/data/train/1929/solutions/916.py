@@ -1,7 +1,7 @@
 class Trie:
+
     def __init__(self):
         self.children = defaultdict(bool)
-        # self.children = {}
 
     def insert(self, word):
         if word == '':
@@ -17,6 +17,7 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.root = Trie()
         for word in words:
