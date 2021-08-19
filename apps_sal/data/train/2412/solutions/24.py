@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         if len(S) < 2:
             return S
@@ -11,9 +12,8 @@ class Solution:
                 if S[i] != S[i - 1]:
                     if not chain:
                         newS += S[i - 1]
-                    else:
-                        if count % 2 == 1:
-                            newS += S[i - 1]
+                    elif count % 2 == 1:
+                        newS += S[i - 1]
                     chain = False
                     count = 1
                 else:
@@ -21,11 +21,9 @@ class Solution:
                     count += 1
             if not chain:
                 newS += S[-1]
-            else:
-                if count % 2 == 1:
-                    newS += S[-1]
+            elif count % 2 == 1:
+                newS += S[-1]
             if newS == S:
                 return S
             S = newS
-            # print(S)
         return S

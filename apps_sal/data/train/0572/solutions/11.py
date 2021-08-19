@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(0, t):
     arr = list(map(int, input().split()))
@@ -6,7 +5,7 @@ for i in range(0, t):
     m = arr[1]
     k = arr[2]
     if m > n:
-        n, m = m, n
+        (n, m) = (m, n)
     diff = n - m
     if diff == k:
         print(0)

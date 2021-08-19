@@ -1,6 +1,6 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
-        # stack application
         stack = []
         for i in S:
             if not stack:
@@ -9,5 +9,4 @@ class Solution:
                 stack.pop()
             else:
                 stack.append(i)
-
         return ''.join(stack)
