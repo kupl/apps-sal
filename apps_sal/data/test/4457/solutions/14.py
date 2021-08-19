@@ -7,10 +7,8 @@ for i in range(n):
 a = sorted(origi, reverse=True)
 l = 0
 ans = []
-# x = 0
 for i in range(n):
     l += a[i] * i + 1
-    # x += 1
     ans.append(rec[a[i]].pop())
 print(l)
 for i in ans:

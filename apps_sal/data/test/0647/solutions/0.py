@@ -1,4 +1,3 @@
-# python 3
 """
 """
 
@@ -20,13 +19,11 @@ def __starting_point():
     Inside of this is the test. 
     Outside is the API
     """
-    with open("input.txt", 'r') as f_input:
+    with open('input.txt', 'r') as f_input:
         n = int(f_input.readline())
         students = f_input.readline()
-        # print(n, students)
-
     sitting = lefthanders_and_righthanders(n, students)
-    with open("output.txt", 'w') as f_output:
+    with open('output.txt', 'w') as f_output:
         for each in sitting:
             f_output.write(str(each[0]) + ' ' + str(each[1]) + '\n')
 

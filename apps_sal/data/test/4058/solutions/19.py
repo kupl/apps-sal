@@ -1,4 +1,4 @@
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 l = list(map(int, input().split()))
 c = [0] * n
 ans = 0
@@ -11,10 +11,8 @@ for i in range(n):
             if c[j] != 1:
                 b = True
             c[j] = 1
-
         if b:
             ans += 1
-
 if c.count(0) == 0:
     ans = 1
     i = 0
@@ -25,10 +23,8 @@ if c.count(0) == 0:
             i = j
             break
     while True:
-        # print(i)
         if i + r - 1 >= n - 1:
             break
-
         for j in range(i + 2 * (r - 1) + 1, i, -1):
             if j >= n:
                 continue
@@ -36,10 +32,8 @@ if c.count(0) == 0:
                 ans += 1
                 i = j
                 break
-
-        if i + r - 1 >= n - 1 or (i == n - 1):
+        if i + r - 1 >= n - 1 or i == n - 1:
             break
     print(ans)
-
 else:
     print(-1)

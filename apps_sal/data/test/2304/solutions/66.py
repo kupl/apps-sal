@@ -3,18 +3,16 @@ from collections import deque
 
 
 def main():
-    # 入力
     readline = stdin.readline
-    n, m = map(int, readline().split())
+    (n, m) = map(int, readline().split())
     G = [[] for _ in range(n + 1)]
     for i in range(m):
-        l, r, d = map(int, readline().split())
+        (l, r, d) = map(int, readline().split())
         G[l].append((r, d))
         G[r].append((l, -d))
-
     flags = [False] * (n + 1)
     flags[0] = True
-    inf = 10**10
+    inf = 10 ** 10
     x = [-inf] * (n + 1)
     q = deque([])
     ans = True
@@ -32,15 +30,13 @@ def main():
                     cost = t[1]
                     if x[nex] == -inf:
                         x[nex] = x[now] + cost
-                    else:
-                        if x[nex] != x[now] + cost:
-                            ans = False
-                            break
+                    elif x[nex] != x[now] + cost:
+                        ans = False
+                        break
                     if flags[nex] == False:
                         flags[nex] = True
                         q.append(nex)
-
-    print("Yes" if ans else "No")
+    print('Yes' if ans else 'No')
 
 
 def __starting_point():

@@ -4,15 +4,24 @@ import sys
 stdin = sys.stdin
 
 
-def ni(): return int(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def nn(): return list(stdin.readline().split())
-def ns(): return stdin.readline().rstrip()
+def ni():
+    return int(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nn():
+    return list(stdin.readline().split())
+
+
+def ns():
+    return stdin.readline().rstrip()
 
 
 n = ni()
 a = na()
-
 c = sorted(Counter(a).values())
 cc = [0]
 m = len(c)
@@ -28,15 +37,13 @@ def is_ok(k, arg):
 
 for k in range(1, n + 1):
     if k > m:
-        print((0))
+        print(0)
         continue
-    # にぶたん
-    ok, ng = -1, n // k + 1
-    while (abs(ok - ng) > 1):
+    (ok, ng) = (-1, n // k + 1)
+    while abs(ok - ng) > 1:
         mid = (ok + ng) // 2
         if is_ok(k, mid):
             ok = mid
         else:
             ng = mid
-
     print(ok)

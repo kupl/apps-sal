@@ -4,14 +4,12 @@ NTC here
 from sys import stdin
 
 
-def iin(): return int(stdin.readline())
+def iin():
+    return int(stdin.readline())
 
 
-def lin(): return list(map(int, stdin.readline().split()))
-
-
-# range = xrange
-# input = raw_input
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
@@ -38,6 +36,3 @@ def main():
 
 
 main()
-# try:
-#     main()
-# except Exception as e: print(e)

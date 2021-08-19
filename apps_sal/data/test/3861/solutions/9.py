@@ -1,10 +1,9 @@
-# list(map(int, input().split()))
 from math import sqrt
 n = int(input())
-ans = -1e9
+ans = -1000000000.0
 z = list(map(int, input().split()))
 for t in z:
-    if (t < 0):
+    if t < 0:
         ans = max(t, ans)
     else:
         p = int(sqrt(t))

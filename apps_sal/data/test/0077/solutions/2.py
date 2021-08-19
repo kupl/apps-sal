@@ -1,4 +1,3 @@
-#!/bin/python3
 import sys
 import math
 n = int(input())
@@ -15,11 +14,11 @@ maxsum = -odds[0]
 i = 1
 cursum = -odds[0]
 while i < len(odds):
-    cursum += -(odds[i])
+    cursum += -odds[i]
     i += 1
     if i >= len(odds):
         break
-    cursum += -(odds[i])
+    cursum += -odds[i]
     i += 1
     maxsum = max(maxsum, cursum)
 print(maxsum + even)

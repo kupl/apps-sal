@@ -1,5 +1,4 @@
-# You lost the game.
-n, b, d = list(map(int, input().split()))
+(n, b, d) = list(map(int, input().split()))
 L = list(map(int, input().split()))
 r = 0
 c = 0

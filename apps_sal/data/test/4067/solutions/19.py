@@ -5,8 +5,8 @@ for s in S:
     L[int(s)] += 1
 num = N // 3
 T = S
-a, b, c = L[0], L[1], L[2]
-if a >= num and b >= num and c <= num:
+(a, b, c) = (L[0], L[1], L[2])
+if a >= num and b >= num and (c <= num):
     t = num - c
     s = a - num
     u = b - num
@@ -21,8 +21,7 @@ if a >= num and b >= num and c <= num:
             t -= 1
             s -= 1
         i -= 1
-
-elif a >= num and b <= num and c <= num:
+elif a >= num and b <= num and (c <= num):
     t = num - c
     i = N - 1
     while t > 0:
@@ -36,8 +35,7 @@ elif a >= num and b <= num and c <= num:
             T[i] = '1'
             s -= 1
         i -= 1
-
-elif a >= num and b <= num and c >= num:
+elif a >= num and b <= num and (c >= num):
     t = c - num
     i = 0
     while t > 0:
@@ -52,8 +50,7 @@ elif a >= num and b <= num and c >= num:
             T[i] = '1'
             s -= 1
         i -= 1
-
-elif a <= num and b >= num and c <= num:
+elif a <= num and b >= num and (c <= num):
     t = num - a
     i = 0
     while t > 0:
@@ -68,7 +65,7 @@ elif a <= num and b >= num and c <= num:
             T[i] = '2'
             s -= 1
         i -= 1
-elif a <= num and b <= num and c >= num:
+elif a <= num and b <= num and (c >= num):
     t = num - a
     i = 0
     while t > 0:
@@ -82,7 +79,7 @@ elif a <= num and b <= num and c >= num:
             T[i] = '1'
             s -= 1
         i += 1
-elif a <= num and b >= num and c >= num:
+elif a <= num and b >= num and (c >= num):
     t = num - a
     s = b - num
     u = c - num
@@ -98,4 +95,3 @@ elif a <= num and b >= num and c >= num:
             s -= 1
         i += 1
 print(''.join(T))
-# print(L)

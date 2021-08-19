@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 def solve():
     n = int(input())
     al = set([int(i) for i in input().split()])
