@@ -3,9 +3,9 @@ def factors(n, limit):
 
 
 def pythagorean_triplet(n):
-    for x in factors(n, int(n**(1 / 3))):
+    for x in factors(n, int(n ** (1 / 3))):
         nn = n // x
-        for y in factors(nn, int(nn**(1 / 2))):
+        for y in factors(nn, int(nn ** (1 / 2))):
             z = nn // y
             if x * x + y * y == z * z:
                 return [x, y, z]

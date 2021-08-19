@@ -1,5 +1,5 @@
 def string_constructing(a, s):
-    current = ""
+    current = ''
     step = 0
     while current != s:
         for i in range(len(current)):
@@ -12,5 +12,4 @@ def string_constructing(a, s):
         else:
             current += a
         step += 1
-
     return step

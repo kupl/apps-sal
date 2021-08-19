@@ -1,5 +1,5 @@
 def layers(n):
-    level, i = 1, 1
+    (level, i) = (1, 1)
     continuer = True
     while continuer:
         x = i * i

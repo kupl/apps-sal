@@ -3,4 +3,4 @@ def problem(a):
         if a != str:
             return a * 50 + 6
     except TypeError:
-        return "Error"
+        return 'Error'

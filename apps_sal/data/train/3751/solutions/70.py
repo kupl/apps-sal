@@ -1,5 +1,5 @@
 def bool_to_word(boolean):
-    n = "No"
+    n = 'No'
     if boolean == True:
-        n = "Yes"
+        n = 'Yes'
     return n

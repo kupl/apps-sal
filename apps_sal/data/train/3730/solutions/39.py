@@ -1,7 +1,7 @@
 def capitalize(s):
     array = list(s)
-    output1, output2 = [], []
-    for i, letter in enumerate(array):
+    (output1, output2) = ([], [])
+    for (i, letter) in enumerate(array):
         if i % 2 == 0:
             output1.append(letter.upper())
             output2.append(letter.lower())

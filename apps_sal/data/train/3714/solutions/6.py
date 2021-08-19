@@ -14,7 +14,7 @@ def encoder(data):
         try:
             search + data[i + 1]
         except IndexError:
-            if search == data[-(len(search)):]:
+            if search == data[-len(search):]:
                 output += f'{dct[search]}'
     return output
 
@@ -22,8 +22,8 @@ def encoder(data):
 def decoder(data):
     dct = {0: ''}
     output = ''
-    lsnb = re.findall(r'\d+', data)
-    lsch = re.findall(r'[A-Z]', data)
+    lsnb = re.findall('\\d+', data)
+    lsch = re.findall('[A-Z]', data)
     for i in range(len(lsnb)):
         try:
             lsch[i]

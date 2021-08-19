@@ -4,6 +4,6 @@ def hex_to_dec(s):
     x = 0
     for i in s:
         print(i)
-        x += (h.index(i)) * (16**y)
+        x += h.index(i) * 16 ** y
         y -= 1
     return x

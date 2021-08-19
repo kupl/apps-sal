@@ -16,7 +16,7 @@ def oddest(a):
     for n in a:
         result[oddity(n)].append(n)
     try:
-        x, = result[max(result)]
+        (x,) = result[max(result)]
         return x
     except ValueError:
         pass

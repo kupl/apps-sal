@@ -4,6 +4,4 @@ def convert_num(number, base):
     except KeyError:
         return 'Invalid base input'
     except TypeError:
-        return 'Invalid {} input'.format(
-            ('base', 'number')[isinstance(base, str)]
-        )
+        return 'Invalid {} input'.format(('base', 'number')[isinstance(base, str)])

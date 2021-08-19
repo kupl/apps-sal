@@ -2,8 +2,8 @@ from string import ascii_lowercase as AL
 
 
 def encode(s, key, n):
-    a = "".join(dict.fromkeys(key + AL))
-    d = {x: i for i, x in enumerate(a, 1)}
+    a = ''.join(dict.fromkeys(key + AL))
+    d = {x: i for (i, x) in enumerate(a, 1)}
     r = []
     for x in s:
         if x in d:
@@ -11,12 +11,12 @@ def encode(s, key, n):
             n = d[x]
         else:
             r.append(x)
-    return "".join(r)
+    return ''.join(r)
 
 
 def decode(s, key, n):
-    a = "".join(dict.fromkeys(key + AL))
-    d = {x: i for i, x in enumerate(a, 1)}
+    a = ''.join(dict.fromkeys(key + AL))
+    d = {x: i for (i, x) in enumerate(a, 1)}
     r = []
     for x in s:
         if x in d:
@@ -24,4 +24,4 @@ def decode(s, key, n):
             n = d[r[-1]]
         else:
             r.append(x)
-    return "".join(r)
+    return ''.join(r)

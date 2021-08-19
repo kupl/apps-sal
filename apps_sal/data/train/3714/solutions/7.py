@@ -2,9 +2,9 @@ import re
 
 
 def encoder(s):
-    d, i, r = {"": 0}, 0, []
+    (d, i, r) = ({'': 0}, 0, [])
     while i < len(s):
-        x = ""
+        x = ''
         while i < len(s) - 1 and x + s[i] in d:
             x += s[i]
             i += 1
@@ -12,13 +12,13 @@ def encoder(s):
             d[x + s[i]] = len(d)
             r.append((d[x], s[i]))
         else:
-            r.append((d[x + s[i]], ""))
+            r.append((d[x + s[i]], ''))
         i += 1
-    return "".join(str(x) + y for x, y in r)
+    return ''.join((str(x) + y for (x, y) in r))
 
 
 def decoder(s):
-    a, r = [""], []
-    for x, y in re.findall(r"(\d+)(\D*)", s):
+    (a, r) = ([''], [])
+    for (x, y) in re.findall('(\\d+)(\\D*)', s):
         a.append(a[int(x)] + y)
-    return "".join(a)
+    return ''.join(a)

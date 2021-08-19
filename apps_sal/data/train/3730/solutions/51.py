@@ -1,5 +1,5 @@
 def capitalize(s):
-    a1 = a2 = ""
+    a1 = a2 = ''
     for i in range(len(s)):
         if i % 2 == 0:
             a1 += s[i].upper()

@@ -3,7 +3,6 @@ def minimum(arr: []):
     for i in arr:
         if i < result:
             result = i
-
     return result
 
 
@@ -12,5 +11,4 @@ def maximum(arr: []):
     for i in arr:
         if i > result:
             result = i
-
     return result

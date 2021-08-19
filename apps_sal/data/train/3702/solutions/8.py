@@ -1,6 +1,6 @@
 def olympic_ring(string):
     rings = 'abdegopqADOPQRBB'
-    count = sum(string.count(c) for c in rings) // 2
+    count = sum((string.count(c) for c in rings)) // 2
     if count <= 1:
         return 'Not even a medal!'
     if count == 2:

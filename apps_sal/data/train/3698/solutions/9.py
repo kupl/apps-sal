@@ -11,4 +11,4 @@ def ironyarder(m):
 
 
 def tiy_fizz_buzz(s):
-    return re.sub(r'[A-Zaeiou]', ironyarder, s)
+    return re.sub('[A-Zaeiou]', ironyarder, s)

@@ -16,8 +16,8 @@
              reversed (-> big endian notation : this avoid the need of filling the 
              binary string representation with leading 0).
 """
+ARCHIVE = [sum((5 ** (i + 1) for (i, s) in enumerate(reversed(bin(n)[2:])) if s == '1')) for n in range(1, 7001)]
 
-ARCHIVE = [sum(5**(i + 1) for i, s in enumerate(reversed(bin(n)[2:])) if s == '1') for n in range(1, 7001)]
 
-
-def nth_chandos_number(n): return ARCHIVE[n - 1]
+def nth_chandos_number(n):
+    return ARCHIVE[n - 1]

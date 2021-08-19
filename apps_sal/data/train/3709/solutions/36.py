@@ -4,4 +4,4 @@ def simple_multiplication(number):
         simple_multiplication = number * 8
     elif number % 2 == 1:
         simple_multiplication = number * 9
-    return(simple_multiplication)
+    return simple_multiplication

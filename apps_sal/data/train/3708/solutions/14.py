@@ -4,5 +4,5 @@ def hex_to_dec(s):
     res = 0
     for i in range(len(s)):
         curr_power = len(s) - 1 - i
-        res += (ints[i] * 16**curr_power)
+        res += ints[i] * 16 ** curr_power
     return res

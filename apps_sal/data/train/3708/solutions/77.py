@@ -6,6 +6,6 @@ def hex_to_dec(s):
         if place == 0:
             deci += hex.index(x)
         else:
-            deci += hex.index(x) * 16**place
+            deci += hex.index(x) * 16 ** place
         place += 1
     return deci

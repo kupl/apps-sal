@@ -11,4 +11,4 @@ def gcd(a, b):
 
 
 def lcms(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)

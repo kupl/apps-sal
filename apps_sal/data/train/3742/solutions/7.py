@@ -1,5 +1,5 @@
 def modes(data):
-    most, l, length = 0, [], len(data)
+    (most, l, length) = (0, [], len(data))
     for x in set(data):
         res = data.count(x)
         if most < res:

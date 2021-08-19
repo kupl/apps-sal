@@ -3,7 +3,7 @@ def capitalize(s):
     odd = ''
     bigArr = []
     for i in range(len(s)):
-        if(i % 2 == 0):
+        if i % 2 == 0:
             even += s[i].upper()
             odd += s[i].lower()
         else:

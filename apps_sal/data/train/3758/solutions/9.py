@@ -1,5 +1,5 @@
 def word_mesh(arr):
-    re, e, i = '', len(arr[0]), 0
+    (re, e, i) = ('', len(arr[0]), 0)
     while e != 0:
         e -= 1
         if e == 0:
@@ -8,5 +8,5 @@ def word_mesh(arr):
             re += arr[i][-e:]
             e = len(arr[i])
             i += 1
-            if i == (len(arr) - 1):
+            if i == len(arr) - 1:
                 return re

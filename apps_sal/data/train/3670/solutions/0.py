@@ -1,8 +1,8 @@
 def domino_reaction(s):
-    ds = ""
+    ds = ''
     for (i, d) in enumerate(s):
-        if(d == "|"):
-            ds += "/"
+        if d == '|':
+            ds += '/'
         else:
             return ds + s[i:]
     return ds

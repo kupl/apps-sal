@@ -1,7 +1,7 @@
 def capitalize(s):
-    a1 = ""
-    a2 = ""
-    for i, v in enumerate(s, 1):
+    a1 = ''
+    a2 = ''
+    for (i, v) in enumerate(s, 1):
         if i % 2:
             a1 += v.upper()
             a2 += v.lower()

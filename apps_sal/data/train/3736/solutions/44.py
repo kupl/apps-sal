@@ -5,5 +5,4 @@ def minimum(arr):
 
 def maximum(arr):
     large = max(arr)
-
     return large

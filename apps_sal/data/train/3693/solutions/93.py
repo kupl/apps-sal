@@ -1,5 +1,4 @@
 def make_negative(number):
     if number == 0 or number < 0:
-        return (number)
-
-    return -(number)
+        return number
+    return -number

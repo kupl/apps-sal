@@ -1,1 +1,2 @@
-def sorter(x): return sorted(x, key=str.casefold)
+def sorter(x):
+    return sorted(x, key=str.casefold)

@@ -1,5 +1,5 @@
 def calc(a):
-    for i, n in enumerate(a):
+    for (i, n) in enumerate(a):
         if a[i] > 0:
             a[i] *= a[i]
         if i % 3 == 2:

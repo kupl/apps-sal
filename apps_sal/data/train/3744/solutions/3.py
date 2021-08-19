@@ -4,8 +4,8 @@ from functools import cmp_to_key
 
 def oddity(n1, n2):
     while True:
-        n1, m1 = divmod(n1, 2)
-        n2, m2 = divmod(n2, 2)
+        (n1, m1) = divmod(n1, 2)
+        (n2, m2) = divmod(n2, 2)
         if m1 != m2 or m1 == 0 == m2 or n1 == n2:
             break
     return -1 if m1 < m2 else m1 > m2

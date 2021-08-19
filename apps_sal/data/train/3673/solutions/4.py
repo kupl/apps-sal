@@ -1,4 +1,3 @@
-
 def totient(n):
     if not isinstance(n, int) or n < 1:
         return 0
@@ -6,7 +5,7 @@ def totient(n):
     up = 1
     down = 1
     for i in factor:
-        up *= (i - 1)
+        up *= i - 1
         down *= i
     return n * up // down
 

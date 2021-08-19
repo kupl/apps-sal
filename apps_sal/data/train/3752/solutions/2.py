@@ -11,6 +11,5 @@ def comb(x, r):
 
 
 def value_at(p, x):
-    result = sum(a * comb(x, i) for i, a in enumerate(p[::-1]))
-
+    result = sum((a * comb(x, i) for (i, a) in enumerate(p[::-1])))
     return result if isinstance(x, int) else round(result, 2)

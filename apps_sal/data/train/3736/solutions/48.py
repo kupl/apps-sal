@@ -1,5 +1,5 @@
 def minimum(arr):
-    minv = 10e7
+    minv = 100000000.0
     for i in range(len(arr)):
         if arr[i] < minv:
             minv = arr[i]
@@ -7,7 +7,7 @@ def minimum(arr):
 
 
 def maximum(arr):
-    maxv = -10e7
+    maxv = -100000000.0
     for i in range(len(arr)):
         if arr[i] > maxv:
             maxv = arr[i]

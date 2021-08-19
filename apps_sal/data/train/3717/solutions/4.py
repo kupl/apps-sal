@@ -1,17 +1,8 @@
-letters = {
-    'a': ('b',),
-    'b': ('a', 'c',),
-    'c': ('b', 'd',),
-    'd': ('c', 'e',),
-    'e': ('d', 'f',),
-    'f': ('e', 'g',),
-    'g': ('f', 'h',),
-    'h': ('g',),
-}
+letters = {'a': ('b',), 'b': ('a', 'c'), 'c': ('b', 'd'), 'd': ('c', 'e'), 'e': ('d', 'f'), 'f': ('e', 'g'), 'g': ('f', 'h'), 'h': ('g',)}
 
 
 def get_cells(pawn):
-    x, y = pawn
+    (x, y) = pawn
     y = int(y)
     if y < 8:
         cells = [letter + str(y + 1) for letter in letters[x]]

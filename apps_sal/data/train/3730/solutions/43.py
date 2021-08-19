@@ -1,6 +1,6 @@
 def capitalize(s):
-    new = ""
-    new1 = ""
+    new = ''
+    new1 = ''
     out = []
     for i in range(len(s)):
         if i % 2 == 0:

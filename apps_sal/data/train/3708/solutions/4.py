@@ -5,9 +5,9 @@ def hex_to_dec(s):
     for num in reversed(s):
         if num.isalpha():
             hxnum = hxdict.get(num)
-            total = total + hxnum * (16**count)
+            total = total + hxnum * 16 ** count
             count += 1
         else:
-            total = int(num) * (16**count) + total
+            total = int(num) * 16 ** count + total
             count += 1
     return total

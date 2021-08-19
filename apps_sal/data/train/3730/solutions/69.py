@@ -11,7 +11,6 @@ def capitalize(s):
             my_string_1 += s[i]
             my_string_2 += s[i].upper()
             i = i + 1
-
     arr = []
     arr.append(my_string_1)
     arr.append(my_string_2)

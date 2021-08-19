@@ -1,5 +1,5 @@
 def string_constructing(a, b):
-    s, c = [], 0
+    (s, c) = ([], 0)
     while ''.join(s) != b:
         s.extend(list(a))
         c += 1

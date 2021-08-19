@@ -2,7 +2,7 @@ def capitalize(str):
     resArr = []
 
     def one(string):
-        resStr = ""
+        resStr = ''
         for index in range(len(string)):
             if index % 2 == False:
                 resStr = resStr + string[index].upper()
@@ -11,7 +11,7 @@ def capitalize(str):
         return resStr
 
     def two(string):
-        resStr = ""
+        resStr = ''
         for index in range(len(string)):
             if index % 2 == False:
                 resStr = resStr + string[index].lower()

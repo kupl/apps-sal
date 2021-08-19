@@ -3,4 +3,4 @@ def arithmetic_sequence_elements(a, r, n):
     for i in range(1, n):
         a = a + r
         result.append(str(a))
-    return ", ".join(result)
+    return ', '.join(result)

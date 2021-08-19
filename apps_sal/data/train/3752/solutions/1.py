@@ -8,6 +8,6 @@ def aCb(a, b):
 def value_at(poly_spec, x):
     answer = 0
     l = len(poly_spec)
-    for i, coeff in enumerate(poly_spec):
+    for (i, coeff) in enumerate(poly_spec):
         answer += coeff * aCb(x, l - i - 1)
     return round(answer, 2)

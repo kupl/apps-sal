@@ -1,11 +1,10 @@
 import functools as ft
 import math
-
 ops = ['*', '/', '+', '-']
 
 
 def SanitizeExpression(expression):
-    return expression.replace("+-", "-").replace("-+", "-").replace("--", "+")
+    return expression.replace('+-', '-').replace('-+', '-').replace('--', '+')
     pass
 
 
@@ -31,7 +30,7 @@ def IndexOfAny(expression, operators, startIndex):
 
 
 def FloatToString(value):
-    return "%.30f" % value
+    return '%.30f' % value
     pass
 
 
@@ -40,20 +39,14 @@ def EvaluateSimpleExpression(expression):
     numberText = ft.reduce(lambda r, s: ExtendList(r, s, ops[2]), numberText, [])
     numberText = ft.reduce(lambda r, s: ExtendList(r, s, ops[3]), numberText, [])
     numberText = ft.reduce(lambda r, s: ExtendList(r, s, ops[1]), numberText, [])
-
     numbers = [float(x) for x in numberText if x != '']
-
     minusCount = expression.count('-')
-
     if expression.count('*') > 0:
         return numbers[0] * numbers[1] * math.pow(-1, minusCount)
-
     if expression.count('/') > 0:
         return numbers[0] / numbers[1] * math.pow(-1, minusCount)
-
     if expression.count('-') > 0:
         return numbers[0] - numbers[1]
-
     return numbers[0] + numbers[1]
     pass
 
@@ -61,14 +54,11 @@ def EvaluateSimpleExpression(expression):
 def ResolveSimpleExpression(expression, operatorIndex):
     startIndex = LastIndexOfAny(expression, ops, operatorIndex - 1) + 1
     indexNext = IndexOfAny(expression, ops, operatorIndex + 2)
-
     if indexNext == -1:
         length = len(expression)
     else:
         length = indexNext
-
     length -= startIndex
-
     return expression[startIndex:startIndex + length]
     pass
 
@@ -79,9 +69,7 @@ def EvaluateSimpleInComplexExpression(expression, operatorIndex):
     if math.fabs(simpleAns) < 1e-10:
         simpleAns = 0
         pass
-
     insertIndex = expression.find(simple)
-
     return expression[0:insertIndex] + FloatToString(simpleAns) + expression[insertIndex + len(simple):]
     pass
 
@@ -89,23 +77,18 @@ def EvaluateSimpleInComplexExpression(expression, operatorIndex):
 def SimplifyExpressionByOperatorsRec(expression, applyNegative, multiplier, operators):
     if expression[0] == '+':
         expression = expression[1:]
-
     if applyNegative and expression[0] == '-':
         multiplier *= -1
-        expression = expression[1:].replace("+", "X").replace("-", "+").replace("X", "-")
+        expression = expression[1:].replace('+', 'X').replace('-', '+').replace('X', '-')
         pass
-
     indexArr = [x for x in [expression.find(op) for op in operators] if x > 0]
     if len(indexArr) > 0:
         indexArr.sort()
         index = indexArr[0]
-
         expression = EvaluateSimpleInComplexExpression(expression, index)
         expression = SanitizeExpression(expression)
-
         return SimplifyExpressionByOperatorsRec(expression, applyNegative, multiplier, operators)
         pass
-
     try:
         return FloatToString(float(expression) * multiplier)
     except:
@@ -119,7 +102,6 @@ def SimplifyExpressionByOperators(expression, applyNegative, operators):
 
 def EvaluateComplexExpression(expression):
     result = SimplifyExpressionByOperators(expression, False, ['*', '/'])
-
     return SimplifyExpressionByOperators(result, True, ['+', '-'])
     pass
 
@@ -130,16 +112,12 @@ def EvaluateBracketExpression(expression):
         openIndex = expression[0:closeIndex].rfind('(')
         startIndex = openIndex + 1
         length = closeIndex - startIndex
-
         complexExp = expression[startIndex:closeIndex]
         resolved = EvaluateComplexExpression(complexExp)
-
         expression = expression[0:openIndex] + str(resolved) + expression[openIndex + length + 2:]
         expression = SanitizeExpression(expression)
-
         return EvaluateBracketExpression(expression)
         pass
-
     return EvaluateComplexExpression(expression)
     pass
 
@@ -149,13 +127,10 @@ def calculate(expression):
         test = 'string' + expression
     except:
         return False
-
-    expression = str(expression).replace(" ", "")
+    expression = str(expression).replace(' ', '')
     if expression == '':
         return 0
-
     expression = SanitizeExpression(expression)
-
     try:
         return float(EvaluateBracketExpression(expression))
     except:

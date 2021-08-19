@@ -6,7 +6,7 @@ def totient(n):
             phi -= phi // 2
             while not n % 2:
                 n //= 2
-        for p in range(3, int(n ** .5) + 1, 2):
+        for p in range(3, int(n ** 0.5) + 1, 2):
             if not n % p:
                 phi -= phi // p
                 while not n % p:

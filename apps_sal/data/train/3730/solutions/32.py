@@ -11,4 +11,4 @@ def capitalize(s):
             odds = odds + s[i]
         else:
             odds = odds + s[i].upper()
-    return([evens, odds])
+    return [evens, odds]

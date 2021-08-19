@@ -1,18 +1,18 @@
 def calculate_string(st):
-    clean = ""
+    clean = ''
     for i in st:
-        if i.isdigit() or i == ".":
+        if i.isdigit() or i == '.':
             clean += i
-        elif i in ["+", "-", "*", "/"]:
+        elif i in ['+', '-', '*', '/']:
             clean += i
             operator = i
     clean = clean.split(operator)
     print(clean)
-    if operator == "+":
+    if operator == '+':
         return str(round(float(clean[0]) + float(clean[1])))
-    elif operator == "-":
+    elif operator == '-':
         return str(round(float(clean[0]) - float(clean[1])))
-    elif operator == "*":
+    elif operator == '*':
         return str(round(float(clean[0]) * float(clean[1])))
     else:
         return str(round(float(clean[0]) / float(clean[1])))

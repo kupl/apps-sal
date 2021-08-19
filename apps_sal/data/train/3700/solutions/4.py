@@ -2,4 +2,4 @@ import re
 
 
 def kooka_counter(laughing):
-    return len(re.findall(r'(Ha)+|(ha)+', laughing))
+    return len(re.findall('(Ha)+|(ha)+', laughing))

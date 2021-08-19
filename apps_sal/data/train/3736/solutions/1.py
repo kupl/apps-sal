@@ -1,1 +1,1 @@
-minimum, maximum = min, max
+(minimum, maximum) = (min, max)

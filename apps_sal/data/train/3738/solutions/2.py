@@ -1,7 +1,7 @@
 def fib(n, a, b):
     for i in range(n):
         yield a
-        a, b = b, a + b
+        (a, b) = (b, a + b)
 
 
 def calc(k, n, m, x):

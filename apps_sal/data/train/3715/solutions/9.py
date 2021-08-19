@@ -1,5 +1,5 @@
 def nth_chandos_number(n):
-    t, ans = 1, 0
+    (t, ans) = (1, 0)
     while n:
         t *= 5
         if n % 2:

@@ -10,14 +10,12 @@ def roll(desc, verbose=False):
             return False
     if desc != desc.replace('++', '+').replace('--', '-'):
         return False
-
     operations = '-+'
     rolls = []
     result = ''
-
     for each in operations:
         desc = desc.replace(each, f' {each} ')
-    for i, part in enumerate(desc.split(' ')):
+    for (i, part) in enumerate(desc.split(' ')):
         if 'd' in part:
             part = resolve(part, verbose)
             rolls.extend(part)
@@ -26,11 +24,11 @@ def roll(desc, verbose=False):
             result += part
     result = eval(result)
     if verbose:
-        return {'dice': rolls, "modifier": result - sum(rolls)}
+        return {'dice': rolls, 'modifier': result - sum(rolls)}
     return result
 
 
 def resolve(dice, verbose=None):
     dice = dice.split('d')
-    d, t = list(map(int, dice)) if dice[0] != '' else (1, int(dice[1]))
+    (d, t) = list(map(int, dice)) if dice[0] != '' else (1, int(dice[1]))
     return [randint(1, t) for _ in range(d)]

@@ -15,7 +15,7 @@ def decode(string, key, initShift):
     key = tuple(dict.fromkeys(key.lower() + 'abcdefghijklmnopqrstuvwxyz'))
     shift = (initShift - 1) % 26
     res = ''
-    for i, c in enumerate(string):
+    for (i, c) in enumerate(string):
         if c in key:
             res += key[(key.index(c) - shift - 1) % 26]
             shift = key.index(res[i])

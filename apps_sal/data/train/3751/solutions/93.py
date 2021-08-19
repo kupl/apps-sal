@@ -1,6 +1,6 @@
 def bool_to_word(boolean):
     if boolean is True:
-        res = "Yes"
+        res = 'Yes'
     else:
-        res = "No"
+        res = 'No'
     return res

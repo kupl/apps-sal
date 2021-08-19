@@ -4,8 +4,8 @@ def hex_to_dec(s):
     n = 0
     for i in s[::-1]:
         if i.upper() in hexn:
-            sum += hexn[i.upper()] * 16**n
+            sum += hexn[i.upper()] * 16 ** n
         else:
-            sum += int(i) * 16**n
+            sum += int(i) * 16 ** n
         n += 1
     return sum

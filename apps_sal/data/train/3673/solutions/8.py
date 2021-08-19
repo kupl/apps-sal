@@ -12,5 +12,5 @@ def totient(n):
             tot *= p ** (k - 1) * (p - 1)
         p += 1
     if n > 1:
-        tot *= (n - 1)
+        tot *= n - 1
     return tot

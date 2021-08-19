@@ -12,9 +12,9 @@ def hex_to_dec(s):
     o = len(index)
     sum_dec = 0
     for i in range(i_len):
-        sum_dec += int(index[i]) * 16**(o - 1)
+        sum_dec += int(index[i]) * 16 ** (o - 1)
         o -= 1
     return sum_dec
 
 
-hex_to_dec("a1b2")
+hex_to_dec('a1b2')

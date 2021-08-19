@@ -8,4 +8,4 @@ def make_negative(number):
         return number
 
 
-print((make_negative(1)))
+print(make_negative(1))

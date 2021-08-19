@@ -1,9 +1,8 @@
 def totient(n):
     if not isinstance(n, int) or n < 1:
         return 0
-
     phi = n >= 1 and n
-    for p in range(2, int(n ** .5) + 1):
+    for p in range(2, int(n ** 0.5) + 1):
         if not n % p:
             phi -= phi // p
             while not n % p:

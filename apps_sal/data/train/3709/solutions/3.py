@@ -1,1 +1,2 @@
-def simple_multiplication(a): return a * (8 + (a & 1))
+def simple_multiplication(a):
+    return a * (8 + (a & 1))

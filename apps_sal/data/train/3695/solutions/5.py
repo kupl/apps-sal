@@ -15,9 +15,8 @@ def repeat_adjacent(string):
         for i in range(1, len(b)):
             if b[i] == 1:
                 c.append(1)
-            else:
-                if b[i - 1] == 0:
-                    c.append(0)
+            elif b[i - 1] == 0:
+                c.append(0)
         k = 0
         for i in range(1, len(c) - 1):
             if c[i] == 1 == c[i - 1] and c[i + 1] == 0:

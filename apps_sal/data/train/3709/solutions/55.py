@@ -6,7 +6,6 @@ def simple_multiplication(number):
         even = True
     else:
         even = False
-
     if even == True:
         return int(number) * 8
     else:

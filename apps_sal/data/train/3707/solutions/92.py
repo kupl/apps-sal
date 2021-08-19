@@ -1,4 +1,5 @@
-class Book():
+class Book:
+
     def __init__(self, subject):
         self.subject = subject
 

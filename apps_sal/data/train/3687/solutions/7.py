@@ -7,5 +7,5 @@ def lcm(a, b):
 
 
 def mn_lcm(m, n):
-    m, n = sorted([m, n])
+    (m, n) = sorted([m, n])
     return reduce(lcm, range(m, n + 1))

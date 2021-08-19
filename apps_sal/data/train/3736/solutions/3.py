@@ -1,4 +1,3 @@
-
 def minimum(arr):
     min = None
     for i in arr:
