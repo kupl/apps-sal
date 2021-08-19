@@ -12,7 +12,7 @@ def opposite(number):
         Number complex if input number is complex or wrote in string
         None if we had empty line or another input types
     """
-    if (type(number) is int) or (type(number) is float) or (type(number) is complex):
+    if type(number) is int or type(number) is float or type(number) is complex:
         number = number * -1
         return number
     else:
@@ -20,5 +20,5 @@ def opposite(number):
             number = complex(number) * -1
             return number
         except ValueError:
-            print("Input data cannot be represented as a number")
+            print('Input data cannot be represented as a number')
             return None

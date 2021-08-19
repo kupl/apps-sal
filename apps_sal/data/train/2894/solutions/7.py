@@ -1,2 +1,2 @@
 def triple_trouble(*args):
-    return "".join(map("".join, zip(*args)))
+    return ''.join(map(''.join, zip(*args)))

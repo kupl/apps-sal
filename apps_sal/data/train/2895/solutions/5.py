@@ -1,5 +1,4 @@
 import re
-
 r = re.compile('[aeiou]+', re.I)
 
 

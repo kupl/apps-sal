@@ -7,4 +7,4 @@ def triple_trouble(one, two, three):
         returnArr.append(oneL[i])
         returnArr.append(twoL[i])
         returnArr.append(threeL[i])
-    return "".join(returnArr)
+    return ''.join(returnArr)

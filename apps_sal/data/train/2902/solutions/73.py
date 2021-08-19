@@ -1,5 +1,5 @@
 def opposite(number):
     if number > 0:
-        return float("-" + str(number))
+        return float('-' + str(number))
     else:
         return number - number - number

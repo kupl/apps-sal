@@ -1,5 +1,5 @@
 def case_id(s):
-    if '--' in s or '_' in s and '-' in s:
+    if '--' in s or ('_' in s and '-' in s):
         return 'none'
     if s.replace('_', '').replace('-', '').islower():
         if '-' in s:

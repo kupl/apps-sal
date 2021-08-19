@@ -2,4 +2,4 @@ import re
 
 
 def remove(s):
-    return re.sub(r'\b!+', '', s)
+    return re.sub('\\b!+', '', s)

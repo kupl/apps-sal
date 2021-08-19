@@ -5,7 +5,4 @@ def opposite(number):
         return number * -1
 
 
-"""
-def opposite(number):
-    return -number
-"""
+'\ndef opposite(number):\n    return -number\n'

@@ -8,8 +8,8 @@ def champernowneDigit(n):
     while n > mag_len:
         n -= mag_len
         nr_digits += 1
-        mag_len = nr_digits * (10**nr_digits - 10**(nr_digits - 1))
+        mag_len = nr_digits * (10 ** nr_digits - 10 ** (nr_digits - 1))
         print(n, nr_digits, mag_len)
-    quoitent, reminder = divmod(n - 1, nr_digits)
+    (quoitent, reminder) = divmod(n - 1, nr_digits)
     print(quoitent, reminder)
-    return int(str(quoitent + 10**(nr_digits - 1))[reminder])
+    return int(str(quoitent + 10 ** (nr_digits - 1))[reminder])

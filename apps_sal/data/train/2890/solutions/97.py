@@ -4,4 +4,4 @@ def multiples(m, n):
     while count <= m:
         results.append(count * n)
         count += 1
-    return(results)
+    return results

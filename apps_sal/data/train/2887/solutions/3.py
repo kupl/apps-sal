@@ -14,13 +14,13 @@ def adFly_decoder(sc):
 
 
 def adFly_encoder(url):
-    url_encoded = str(base64.b64encode(url.encode("ascii")))[2:-1]
+    url_encoded = str(base64.b64encode(url.encode('ascii')))[2:-1]
     url_adfly = str(randint(0, 9)) + str(randint(0, 9)) + 'https://adf.ly/go.php?u=' + url_encoded
-    b = base64.b64encode(url_adfly.encode("ascii"))
+    b = base64.b64encode(url_adfly.encode('ascii'))
     b = str(b)[2:-1]
     sc1 = b[0:len(b) // 2]
     sc2 = b[len(b) // 2:][::-1]
-    sc = ""
+    sc = ''
     idx = 0
     for x in range(len(b)):
         if x % 2 == 0:
