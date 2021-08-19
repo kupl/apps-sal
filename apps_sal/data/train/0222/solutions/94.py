@@ -1,20 +1,16 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         d = {}
-        for i, v in enumerate(A):
+        for (i, v) in enumerate(A):
             d[v] = i
-
         l = len(A)
-
         res = -1
         for i in range(0, l):
-
             for j in range(i + 1, l):
-
                 one_behind = A[j]
                 two_behind = A[i]
                 total = one_behind + two_behind
-
                 c = 0
                 while total in d:
                     print((total, one_behind, two_behind))
@@ -26,9 +22,5 @@ class Solution:
                     one_behind = total
                     two_behind = tmp
                     total = one_behind + two_behind
-
                 res = max(res, c)
-            # break
-
-        # print(res)
         return res

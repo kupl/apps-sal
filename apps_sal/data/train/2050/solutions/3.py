@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/455/problem/B
 import sys
 reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
@@ -18,25 +17,24 @@ class Trie:
 
     def dfs(self):
         if not len(self.arr):
-            return False, True
-        win, lose = False, False
+            return (False, True)
+        (win, lose) = (False, False)
         for x in self.arr:
-            w, l = self.arr[x].dfs()
+            (w, l) = self.arr[x].dfs()
             win = win or not w
             lose = lose or not l
-        return win, lose
+        return (win, lose)
 
 
 def answer(flag):
-    print("First" if flag else "Second")
+    print('First' if flag else 'Second')
 
 
 T = Trie()
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 for _ in range(n):
     T.insert(input())
-win, lose = T.dfs()
-
+(win, lose) = T.dfs()
 if k == 1:
     answer(win)
 elif not win:

@@ -7,34 +7,29 @@ def abc(i, n, w, x, c):
     return ans
 
 
-e = 10**9 + 7
+e = 10 ** 9 + 7
 t = int(input())
 for _ in range(t):
-    n, w = list(map(int, input().split()))
+    (n, w) = list(map(int, input().split()))
     ans = 0
     for i in range(1, 10):
         pass
-        # ans+=abc(i,n,w,0,1)
-    # print(ans)
     if n == 1:
         if w == 0:
             print(9)
         else:
             print(0)
+    elif w >= 9:
+        print(0)
+    elif w > 0:
+        x = (9 - w) * pow(10, n - 2, e) % e
+        print(x)
+    elif w <= -10:
+        print(0)
+    elif w == 0:
+        print(9 * pow(10, n - 2, e) % e)
     else:
-        if w >= 9:
-            print(0)
-        elif w > 0:
-            x = ((9 - w) * pow(10, n - 2, e)) % e
-            print(x)
-        elif w <= -10:
-            print(0)
-        elif w == 0:
-            print((9 * pow(10, n - 2, e)) % e)
-        else:
-            c = -w
-            x = ((10 - c) * pow(10, n - 2, e)) % e
-            print(x)
-
-
+        c = -w
+        x = (10 - c) * pow(10, n - 2, e) % e
+        print(x)
 0
