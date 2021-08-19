@@ -1,4 +1,3 @@
-# B. DDoS
 n = int(input())
 r = [int(s) for s in input().split()]
 ans = 0
@@ -16,5 +15,4 @@ for i in range(n, 0, -1):
             break
     if ans > 0:
         break
-
 print(ans)

@@ -1,9 +1,6 @@
-#fin = open("input.txt")
-#a1, b1 = map(int, fin.readline().split())
-#a2, b2 = map(int, fin.readline().split())
-a1, b1 = list(map(int, input().split()))
-a2, b2 = list(map(int, input().split()))
-F, S = [a1, b1], [a2, b2]
+(a1, b1) = list(map(int, input().split()))
+(a2, b2) = list(map(int, input().split()))
+(F, S) = ([a1, b1], [a2, b2])
 A = dict()
 B = dict()
 A[2] = A[3] = B[2] = B[3] = 0
@@ -64,7 +61,7 @@ if C1 != C2:
 else:
     flag = True
     for i in C1:
-        if (A[i] != B[i]):
+        if A[i] != B[i]:
             flag = False
     if not flag:
         print(-1)

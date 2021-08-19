@@ -1,5 +1,3 @@
-# -*- coding:utf-8 -*-
-
 """
 
 created by shuangquan.huang at 11/20/18
@@ -25,20 +23,15 @@ Print the only integer number — the length of the longest time period which is
 If it doesn't exist print 0.
 
 """
-
-
 N = int(input())
 A = [int(x) for x in input().split()]
 ans = 0
-
 left = [0] * (N + 1)
 for i in range(1, N + 1):
     left[i] = left[i - 1] + A[i - 1]
-
 for l in range(N):
     for r in range(l + 1, N + 1):
         count = left[r] - left[l]
         if count > 100 * (r - l):
             ans = max(ans, r - l)
-
 print(ans)

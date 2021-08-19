@@ -1,11 +1,8 @@
-X, Y = map(int, input().split())
-X, Y = max(X, Y), min(X, Y)
-# print(X,Y)
-
+(X, Y) = map(int, input().split())
+(X, Y) = (max(X, Y), min(X, Y))
 if X <= 1:
-    print("Brown")
+    print('Brown')
+elif X - Y >= 2:
+    print('Alice')
 else:
-    if X - Y >= 2:
-        print("Alice")
-    else:
-        print("Brown")
+    print('Brown')

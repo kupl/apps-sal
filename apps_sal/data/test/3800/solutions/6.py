@@ -7,34 +7,34 @@ from collections import deque
 from fractions import Fraction
 from collections import Counter
 from collections import OrderedDict
-pi = 3.14159265358979323846264338327950
+pi = 3.141592653589793
 
 
-def II():  # to take integer input
+def II():
     return int(stdin.readline())
 
 
-def IP():  # to take tuple as input
+def IP():
     return list(map(int, stdin.readline().split()))
 
 
-def L():  # to take list as input
+def L():
     return list(map(int, stdin.readline().split()))
 
 
-def P(x):  # to print integer,list,string etc..
-    return stdout.write(str(x) + "\n")
+def P(x):
+    return stdout.write(str(x) + '\n')
 
 
-def PI(x, y):  # to print tuple separatedly
-    return stdout.write(str(x) + " " + str(y) + "\n")
+def PI(x, y):
+    return stdout.write(str(x) + ' ' + str(y) + '\n')
 
 
-def lcm(a, b):  # to calculate lcm
-    return (a * b) // gcd(a, b)
+def lcm(a, b):
+    return a * b // gcd(a, b)
 
 
-def gcd(a, b):  # to calculate gcd
+def gcd(a, b):
     if a == 0:
         return b
     elif b == 0:
@@ -45,7 +45,7 @@ def gcd(a, b):  # to calculate gcd
         return gcd(a, b % a)
 
 
-def bfs(adj, v):  # a schema of bfs
+def bfs(adj, v):
     visited = [False] * (v + 1)
     q = deque()
     while q:
@@ -53,14 +53,14 @@ def bfs(adj, v):  # a schema of bfs
 
 
 def sieve():
-    li = [True] * (2 * (10**5) + 5)
-    li[0], li[1] = False, False
+    li = [True] * (2 * 10 ** 5 + 5)
+    (li[0], li[1]) = (False, False)
     for i in range(2, len(li), 1):
         if li[i] == True:
             for j in range(i * i, len(li), i):
                 li[j] = False
     prime = []
-    for i in range((2 * (10**5) + 5)):
+    for i in range(2 * 10 ** 5 + 5):
         if li[i] == True:
             prime.append(i)
     return prime
@@ -69,12 +69,12 @@ def sieve():
 def setBit(n):
     count = 0
     while n != 0:
-        n = n & (n - 1)
+        n = n & n - 1
         count += 1
     return count
 
 
-mx = 10**7
+mx = 10 ** 7
 spf = [mx] * (mx + 1)
 
 
@@ -89,16 +89,15 @@ def SPF():
     return
 
 
-def readTree(n, e):  # to read tree
+def readTree(n, e):
     adj = [set() for i in range(n + 1)]
     for i in range(e):
-        u1, u2 = IP()
+        (u1, u2) = IP()
         adj[u1].add(u2)
     return adj
 
 
-#####################################################################################
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def solve():
@@ -123,7 +122,7 @@ def solve():
                     ans += d[ele] * d[a // ele]
     else:
         cnt = d.get(0, 0)
-        ans = 2 * cnt * ((n * (n + 1)) // 2) - cnt**2
+        ans = 2 * cnt * (n * (n + 1) // 2) - cnt ** 2
     P(ans)
     return
 
@@ -131,11 +130,3 @@ def solve():
 t = 1
 for i in range(t):
     solve()
-
-    #######
-   #
-  #
- #######   #     #  # ####   # #     #
-    #  # #   #  # #   #  # # #   #
-    #  ####  #  # ####   ####  # #
-######  #   # #### #    # #   #   #
