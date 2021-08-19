@@ -3,17 +3,15 @@ from collections import deque
 
 
 def solve():
-    sys.setrecursionlimit(10**6)
+    sys.setrecursionlimit(10 ** 6)
     readline = sys.stdin.readline
     writelines = sys.stdout.writelines
     N = int(readline())
     G = [[] for i in range(N)]
     for i in range(N - 1):
-        u, v = map(int, readline().split())
+        (u, v) = map(int, readline().split())
         G[u - 1].append(v - 1)
         G[v - 1].append(u - 1)
-
-    # Euler tour technique
     S = []
     FS = [0] * N
     LS = [0] * N
@@ -36,10 +34,8 @@ def solve():
             stk.append(G[v][i])
             it[v] += 1
         S.append(v)
-
     L = len(S)
     lg = [0] * (L + 1)
-    # Sparse Table
     for i in range(2, L + 1):
         lg[i] = lg[i >> 1] + 1
     st = [[L] * (L - (1 << i) + 1) for i in range(lg[L] + 1)]
@@ -49,10 +45,9 @@ def solve():
         st0 = st[i]
         st1 = st[i + 1]
         for j in range(L - (b << 1) + 1):
-            st1[j] = (st0[j] if depth[st0[j]] <= depth[st0[j + b]] else st0[j + b])
+            st1[j] = st0[j] if depth[st0[j]] <= depth[st0[j + b]] else st0[j + b]
         b <<= 1
-
-    INF = 10**18
+    INF = 10 ** 18
     ans = []
     Q = int(readline())
     G0 = [[]] * N
@@ -62,7 +57,7 @@ def solve():
     A = [0] * N
     B = [0] * N
     for t in range(Q):
-        k, *vs = map(int, readline().split())
+        (k, *vs) = map(int, readline().split())
         for i in range(k):
             vs[i] -= 1
             KS[vs[i]] = 1
@@ -99,7 +94,6 @@ def solve():
             if deg[v] == 0:
                 que.append(v)
             prv = v
-
         while que:
             v = que.popleft()
             if KS[v]:
@@ -119,10 +113,9 @@ def solve():
                 for w in G0[v]:
                     ra = A[w]
                     rb = B[w]
-                    a, b, c = a + ra, min(a + rb, b + ra), min(b + rb, c + min(ra, rb))
+                    (a, b, c) = (a + ra, min(a + rb, b + ra), min(b + rb, c + min(ra, rb)))
                 A[v] = min(a, b + 1, c + 1)
                 B[v] = b
-
             p = P[v]
             if p != -1:
                 deg[p] -= 1
@@ -130,12 +123,11 @@ def solve():
                     que.append(p)
         v = min(A[vs[0]], B[vs[0]])
         if v >= INF:
-            ans.append("-1\n")
+            ans.append('-1\n')
         else:
-            ans.append("%d\n" % v)
+            ans.append('%d\n' % v)
         for v in vs:
             KS[v] = 0
-
     writelines(ans)
 
 

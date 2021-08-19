@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import Counter
 
 
@@ -6,7 +5,6 @@ def solve(arr, n, k):
     ans = 0
     dict1 = {}
     mod = 1000000007
-
     for i in range(n):
         if arr[i] in dict1:
             dict1[arr[i]] += 1
@@ -14,7 +12,7 @@ def solve(arr, n, k):
             dict1[arr[i]] = 1
     l1 = [0] + list(dict1.keys())
     v = min(k, len(l1))
-    dp = [[0 for _ in range(v + 1)]for _ in range(len(l1))]
+    dp = [[0 for _ in range(v + 1)] for _ in range(len(l1))]
     dp[0][0] = 1
     for i in range(1, len(l1)):
         dp[i][0] = 1
@@ -26,6 +24,6 @@ def solve(arr, n, k):
     return ans
 
 
-n, k = map(int, input().strip().split())
+(n, k) = map(int, input().strip().split())
 arr = list(map(int, input().strip().split()))
 print(solve(arr, n, k))

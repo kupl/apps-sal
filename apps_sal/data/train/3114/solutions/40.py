@@ -2,7 +2,6 @@ import datetime
 
 
 def year_days(year):
-    # your code here
     if year == 0:
         return f'{year} has 366 days'
     elif year % 400 == 0:
