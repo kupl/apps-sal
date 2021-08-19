@@ -2,13 +2,12 @@ from collections import defaultdict
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     xy = [list(map(int, input().split())) for _ in range(n)]
     x = [p[0] for p in xy]
     y = [p[1] for p in xy]
     x.sort()
     y.sort()
-
     s1 = [[0] * n for _ in range(n)]
     s2 = [[0] * n for _ in range(n)]
     s3 = [[0] * n for _ in range(n)]
@@ -18,8 +17,8 @@ def main():
             for p in xy:
                 if p[0] <= x[i] and p[1] <= y[j]:
                     s1[i][j] += 1
-                    s2[i][j] += (p[0] < x[i])
-                    s3[i][j] += (p[1] < y[j])
+                    s2[i][j] += p[0] < x[i]
+                    s3[i][j] += p[1] < y[j]
                     s4[i][j] += (p[0] < x[i]) * (p[1] < y[j])
     ans = float('inf')
     for s in range(n):

@@ -10,5 +10,4 @@ else:
     for i in range(n):
         ans += P * c[i] * (n + 1 - i)
         ans %= MOD
-
 print(ans)

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 x = input().split()
 t = input().split()
 r = [0] * n
@@ -20,13 +20,13 @@ for i in range(n):
             break
         current += 1
     if current == m - 1:
-        count[m - 1] += (n - i)
+        count[m - 1] += n - i
         break
-    if 2 * r[i] <= (d[current] + d[current + 1]):
+    if 2 * r[i] <= d[current] + d[current + 1]:
         count[current] += 1
     else:
         count[current + 1] += 1
-s = ""
+s = ''
 for i in range(m):
-    s += str(count[i]) + " "
+    s += str(count[i]) + ' '
 print(s[:-1])

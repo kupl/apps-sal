@@ -1,9 +1,9 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 grid = []
 gridx = set()
 gridy = set()
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     grid.append((x, y))
     gridx.add(x)
     gridy.add(y)

@@ -5,7 +5,6 @@ input = sys.stdin.readline
 def main():
     N = int(input())
     A = [int(x) for x in input().split()]
-
     r = 0
     b = A[0]
     ans = 0
@@ -15,7 +14,6 @@ def main():
             b |= A[r]
         ans += r - l + 1
         b = b ^ A[l]
-
     print(ans)
 
 

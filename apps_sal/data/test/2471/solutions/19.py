@@ -1,14 +1,14 @@
 def main():
-    h, w, n = map(int, input().split())
+    (h, w, n) = map(int, input().split())
     dic = {}
     for _ in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         for i in range(max(2, a - 1), min(h, a + 2)):
             for j in range(max(2, b - 1), min(w, b + 2)):
                 if (i, j) in dic:
-                    dic[(i, j)] += 1
+                    dic[i, j] += 1
                 else:
-                    dic[(i, j)] = 1
+                    dic[i, j] = 1
     ans = [0] * 10
     cnt = 0
     for v in dic.values():

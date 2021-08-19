@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.par = [-1] * n
@@ -16,20 +17,20 @@ class UnionFind():
         if x == y:
             return
         if self.par[x] > self.par[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.par[x] += self.par[y]
         self.par[y] = x
 
 
-N, K, L = map(int, input().split())
+(N, K, L) = map(int, input().split())
 Uni_1 = UnionFind(N)
 Uni_2 = UnionFind(N)
 D = {}
 for _ in range(K):
-    p, q = map(int, input().split())
+    (p, q) = map(int, input().split())
     Uni_1.union(p - 1, q - 1)
 for _ in range(L):
-    p, q = map(int, input().split())
+    (p, q) = map(int, input().split())
     Uni_2.union(p - 1, q - 1)
 for i in range(N):
     k = (Uni_1.find(i), Uni_2.find(i))
@@ -38,4 +39,4 @@ for i in range(N):
     else:
         D[k] = 1
 for i in range(N):
-    print(D[(Uni_1.find(i), Uni_2.find(i))], end=" ")
+    print(D[Uni_1.find(i), Uni_2.find(i)], end=' ')

@@ -3,6 +3,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def makeArrayIncreasing(self, A: List[int], B: List[int]) -> int:
         B = sorted(set(B))
 
@@ -20,15 +21,10 @@ class Solution:
                 return float('-inf')
             elif ops > n:
                 return min_last_value_given_operations(n, n)
-            return min(
-                A[n - 1] if min_last_value_given_operations(n - 1, ops) < A[n - 1] else float('inf'),
-                find_larger_value_in_B(min_last_value_given_operations(n - 1, ops - 1)),
-            )
-
+            return min(A[n - 1] if min_last_value_given_operations(n - 1, ops) < A[n - 1] else float('inf'), find_larger_value_in_B(min_last_value_given_operations(n - 1, ops - 1)))
         last_success = -1
         for ops in range(min(len(A), len(B)), -1, -1):
             if min_last_value_given_operations(len(A), ops) == float('inf'):
                 break
             last_success = ops
-
         return last_success

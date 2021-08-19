@@ -1,14 +1,11 @@
 from collections import deque
 from itertools import accumulate
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
-
 l = [c - 1 for c in l]
-
 l = [0] + l
 cum = list(accumulate(l))
 cum = [c % k for c in cum]
-
 ans = 0
 d = {}
 q = deque()

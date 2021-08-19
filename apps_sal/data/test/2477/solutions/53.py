@@ -1,11 +1,8 @@
 import math
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
-
 left = 0
 right = max(A)
-
 while right - left > 1:
     mid = (left + right) // 2
     jk = 0
@@ -17,5 +14,4 @@ while right - left > 1:
         right = mid
     else:
         left = mid
-
 print(right)

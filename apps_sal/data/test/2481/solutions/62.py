@@ -4,14 +4,14 @@ read = sys.stdin.read
 
 
 def main():
+
     def warshall_floyd(d):
         for k in range(n):
             for i in range(n):
                 for j in range(n):
                     d[i][j] = min(d[i][j], d[i][k] + d[k][j])
         return d
-
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     n = 10
     d = []
     for _ in range(10):

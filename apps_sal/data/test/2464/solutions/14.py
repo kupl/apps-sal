@@ -1,7 +1,8 @@
 import sys
 
 
-class UnionFindVerSize():
+class UnionFindVerSize:
+
     def __init__(self, N):
         self._parent = [n for n in range(0, N)]
         self._size = [1] * N
@@ -17,7 +18,6 @@ class UnionFindVerSize():
         gy = self.find_root(y)
         if gx == gy:
             return
-
         if self._size[gx] < self._size[gy]:
             self._parent[gx] = gy
             self._size[gy] += self._size[gx]
@@ -45,18 +45,16 @@ n = int(input())
 uf0 = UnionFindVerSize(n)
 uf1 = UnionFindVerSize(n)
 for i in range(n - 1):
-    x, y, c = map(int, input().split())
+    (x, y, c) = map(int, input().split())
     if c == 0:
         uf0.unite(x - 1, y - 1)
     else:
         uf1.unite(x - 1, y - 1)
-
 data = [0] * n
 cnt = [0] * n
 for i in range(n):
     root = uf1.find_root(i)
     data[root] += uf0.get_size(i)
     cnt[root] += 1
-
-ans = sum(data[i] * cnt[i] for i in range(n))
+ans = sum((data[i] * cnt[i] for i in range(n)))
 print(ans - n)

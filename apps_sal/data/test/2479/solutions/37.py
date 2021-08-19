@@ -4,20 +4,17 @@ input = sys.stdin.readline
 
 
 def main():
-    n, q = list(map(int, input().split()))
-
+    (n, q) = list(map(int, input().split()))
     ans = 0
-    min1, min2 = n - 2, n - 2
+    (min1, min2) = (n - 2, n - 2)
     judge1 = [-n - 1]
     judge2 = [-n - 1]
     dict1 = dict()
     dict2 = dict()
     dict1[-n - 1] = n - 2
     dict2[-n - 1] = n - 2
-
     for i in range(q):
-        query, x = list(map(int, input().split()))
-
+        (query, x) = list(map(int, input().split()))
         if query == 1:
             index = bisect.bisect(judge1, -x) - 1
             key = dict1[judge1[index]]
@@ -36,8 +33,7 @@ def main():
                 judge2.append(-x)
                 dict2[-x] = key
                 dict1[judge1[-1]] = min2
-
-    print(((n - 2)**2 - ans))
+    print((n - 2) ** 2 - ans)
 
 
 def __starting_point():

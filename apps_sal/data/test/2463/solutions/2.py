@@ -17,4 +17,4 @@ for i in range(1, n - 1):
     if ans[i - 1] > ans[i] and ans[i] < ans[i + 1]:
         v += 1
 print(v)
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

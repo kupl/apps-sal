@@ -1,6 +1,5 @@
 import math
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 l = 0
 r = max(A)

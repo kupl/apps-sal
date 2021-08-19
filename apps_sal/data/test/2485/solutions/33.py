@@ -1,9 +1,9 @@
-h, w, n = map(int, input().split())
+(h, w, n) = map(int, input().split())
 H = [0] * h
 W = [0] * w
 L = [(0, 0)] * n
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     L[i] = (a, b)
     H[a - 1] += 1
     W[b - 1] += 1

@@ -1,11 +1,14 @@
 import sys
 import heapq
 import math
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     A = list(map(int, input().split()))
 
     def is_good(mid, key):
@@ -25,7 +28,6 @@ def main():
             else:
                 bad = mid
         return good
-
     print(bi_search(0, max(A), k))
 
 

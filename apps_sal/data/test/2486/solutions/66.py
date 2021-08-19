@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 
@@ -15,4 +15,4 @@ def card(N, K, A):
     return ans
 
 
-print((card(n, k, a)))
+print(card(n, k, a))

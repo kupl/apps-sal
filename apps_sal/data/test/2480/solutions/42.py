@@ -5,7 +5,7 @@ def add(x):
         dic[x] = 1
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = [0]
 for i in range(n):

@@ -12,4 +12,4 @@ for i in s:
             l.append(i)
     else:
         l.append(i)
-print((l.count(')') * '(' + s + l.count('(') * ')'))
+print(l.count(')') * '(' + s + l.count('(') * ')')

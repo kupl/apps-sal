@@ -1,5 +1,5 @@
 import math
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 
 
@@ -18,12 +18,9 @@ ansm = 0
 ans = (ansp + ansm) // 2
 d = 1
 while ansp - ansm > d:
-
     if judge(ans, K, A):
         ansp = ans
-
     else:
         ansm = ans
-
     ans = (ansp + ansm) // 2
 print(ansp)

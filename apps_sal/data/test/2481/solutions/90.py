@@ -11,25 +11,35 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
 
 
-h, w = MAP()
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+(h, w) = MAP()
 c = []
 for i in range(10):
     c.append(LIST())
 a = []
 for i in range(h):
     a.append(LIST())
-
 for i in range(10):
     for j in range(10):
         for k in range(10):
             c[j][k] = min(c[j][k], c[j][i] + c[i][k])
-
 ans = 0
 for i in range(h):
     for j in range(w):

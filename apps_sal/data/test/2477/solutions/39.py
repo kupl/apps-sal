@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 alist = list(map(int, input().split()))
 
 
@@ -10,7 +10,7 @@ def is_ok(arg):
 
 
 def nibun(ng, ok):
-    while (abs(ok - ng) > 1):
+    while abs(ok - ng) > 1:
         mid = (ok + ng) // 2
         if is_ok(mid):
             ok = mid
@@ -19,4 +19,4 @@ def nibun(ng, ok):
     return ok
 
 
-print(nibun(0, 10**9 + 1))
+print(nibun(0, 10 ** 9 + 1))

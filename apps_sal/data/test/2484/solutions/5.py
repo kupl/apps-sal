@@ -1,8 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 to = [0] * N
-
 for i in range(N - 1):
     if i == 0:
         SUM = A[i]
@@ -16,5 +14,4 @@ for i in range(N - 1):
             to[i] = j
             break
         SUM += A[j]
-
 print(sum([max(0, to[i] - i) for i in range(N)]) + N)

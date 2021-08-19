@@ -1,10 +1,10 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 n -= 2
-R, C = [n] * n, [n] * n
-h, w = n, n
-a = n**2
+(R, C) = ([n] * n, [n] * n)
+(h, w) = (n, n)
+a = n ** 2
 for _ in range(q):
-    t, x = list(map(int, input().split()))
+    (t, x) = list(map(int, input().split()))
     x -= 2
     if t == 1:
         for i in range(x, h):

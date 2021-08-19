@@ -4,25 +4,21 @@ input = sys.stdin.readline
 
 
 def main():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     XY = [list(map(int, input().split())) for _ in range(N)]
-
     Xs = []
     Ys = []
-    for x, y in XY:
+    for (x, y) in XY:
         Xs.append(x)
         Ys.append(y)
     Xs.sort()
     Ys.sort()
     points = [[0 for _ in range(N)] for _ in range(N)]
-
-    for x, y in XY:
+    for (x, y) in XY:
         ix = bisect_left(Xs, x)
         iy = bisect_left(Ys, y)
         points[ix][iy] += 1
-
     sumpoints = [[0 for _ in range(N + 1)] for _ in range(N + 1)]
-
     for ix in range(1, N + 1):
         s = 0
         for iy in range(1, N + 1):
@@ -31,8 +27,7 @@ def main():
             if points[ix - 1][iy - 1] == 1:
                 s = 1
             sumpoints[ix][iy] = sumpoints[ix - 1][iy] + s
-
-    ans = int(8E18)
+    ans = int(8e+18)
     for lx in range(N - 1):
         for rx in range(lx + 1, N):
             for ly in range(N - 1):

@@ -18,11 +18,11 @@ def solve(n, m, x, t):
             cn += 1
             ans[i] += 1
     ans[-1] += n - sum(ans)
-    return ' '.join(str(i) for i in ans)
+    return ' '.join((str(i) for i in ans))
 
 
 def main():
-    n, m = [int(i) for i in input().split()]
+    (n, m) = [int(i) for i in input().split()]
     x = [int(i) for i in input().split()]
     t = [int(i) for i in input().split()]
     print(solve(n, m, x, t))

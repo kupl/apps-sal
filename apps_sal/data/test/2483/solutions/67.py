@@ -1,10 +1,10 @@
 import numpy as np
-N, C = map(int, input().split())
+(N, C) = map(int, input().split())
 s = np.empty(N)
 t = np.empty(N)
 c = np.empty(N)
 for i in range(N):
-    s[i], t[i], c[i] = map(int, input().split())
+    (s[i], t[i], c[i]) = map(int, input().split())
 TimeTable = np.zeros((C, 100001))
 maxTime = 0
 for i in range(N):

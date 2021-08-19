@@ -1,6 +1,5 @@
 N = int(input())
 a_l = [int(a) for a in input().split()]
-
 ans = 0
 right = 0
 _sum = 0
@@ -13,5 +12,4 @@ for left in range(N):
         right += 1
     else:
         _sum -= a_l[left]
-
 print(ans)

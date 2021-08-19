@@ -1,5 +1,5 @@
 import math
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 
@@ -14,7 +14,6 @@ def flag(mid):
 
 
 def cal(i, j):
-
     while abs(i - j) > 1:
         mid = (i + j) // 2
         if flag(mid):

@@ -1,4 +1,4 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 C = [list(map(int, input().split())) for _ in range(10)]
 for i in range(10):
     for k in range(10):

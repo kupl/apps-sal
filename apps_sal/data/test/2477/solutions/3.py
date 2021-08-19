@@ -9,7 +9,7 @@ def judge(A, x, k):
     return True
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = list(map(int, input().split()))
 l = 0
 r = max(A)

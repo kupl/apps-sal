@@ -6,12 +6,11 @@ INF = 10 ** 15
 
 
 def main():
-    H, W, N = map(int, input().split())
+    (H, W, N) = map(int, input().split())
     point = [tuple(map(int, input().split())) for _ in range(N)]
     ans = [0] * 10
-
     dic = defaultdict(int)
-    for p, q in point:
+    for (p, q) in point:
         for dy in (-1, 0, 1):
             for dx in (-1, 0, 1):
                 if p + dy <= 1 or p + dy >= H:

@@ -11,6 +11,6 @@ def d_no_need(N, K, A):
     return ans
 
 
-N, K = [int(i) for i in input().split()]
+(N, K) = [int(i) for i in input().split()]
 A = [int(i) for i in input().split()]
-print((d_no_need(N, K, A)))
+print(d_no_need(N, K, A))

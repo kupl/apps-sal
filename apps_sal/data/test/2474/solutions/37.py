@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def A001792(n):
@@ -11,7 +11,7 @@ def A001792(n):
 nn = int(input())
 C = list(map(int, input().split()))
 C.sort(reverse=True)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = 0
 for i in range(nn):
     ans += pow(2, nn - i - 1, mod) * A001792(i + 1) * C[i]

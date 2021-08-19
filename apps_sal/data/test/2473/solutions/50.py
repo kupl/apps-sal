@@ -23,27 +23,25 @@ def da_calc(da, p, q, x, y):
     return da[x][y] - da[p - 1][y] - da[x][q - 1] + da[p - 1][q - 1]
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mototen = []
 atuten = []
 zax = []
 zay = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     mototen.append((x, y))
     zax.append(x)
     zay.append(y)
 zax.sort()
 zay.sort()
-
 a = [[0 for i in range(len(zay))] for j in range(len(zax))]
-
-for x, y in mototen:
+for (x, y) in mototen:
     atx = zax.index(x)
     aty = zay.index(y)
     a[atx][aty] += 1
 b = da_generate(len(zax), len(zay), a)
-ans = float("inf")
+ans = float('inf')
 for p in range(len(zax) - 1):
     for q in range(len(zay) - 1):
         for x in range(p + 1, len(zax)):

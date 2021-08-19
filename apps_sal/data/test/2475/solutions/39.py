@@ -1,6 +1,5 @@
 n = int(input())
 l = list(map(int, input().split()))
-
 ans = 0
 for c in range(1, n):
     now = 0
@@ -14,5 +13,4 @@ for c in range(1, n):
         pas.add(n - 1 - k * c)
         pas.add(k * c)
         ans = max(ans, now)
-
 print(ans)

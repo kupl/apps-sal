@@ -4,7 +4,6 @@ for i in range(3, 361):
     x = 180 / i
     for j in range(1, i - 1):
         l[-1].append(x * j)
-
 for _ in range(int(input())):
     x = int(input())
     flag = False

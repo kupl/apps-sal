@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 t = list(map(int, input().split()))
 taxi = list()
@@ -18,4 +18,4 @@ for i in range(len(arr)):
         j += 1
     if t[i] != 1:
         taxi3[j] += 1
-print(" ".join(map(str, taxi3)))
+print(' '.join(map(str, taxi3)))

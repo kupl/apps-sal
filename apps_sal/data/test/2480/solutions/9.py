@@ -1,6 +1,6 @@
 import collections
 from itertools import accumulate
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = [0] + [i % k - 1 for i in list(map(int, input().split()))]
 l = list(accumulate(l))
 d = collections.defaultdict(int)

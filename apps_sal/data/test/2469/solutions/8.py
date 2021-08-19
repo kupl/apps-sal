@@ -1,4 +1,5 @@
 class Solution:
+
     def majorityElement(self, nums):
         """
         :type nums: List[int]
@@ -12,8 +13,6 @@ class Solution:
                 h[n] += 1
             else:
                 h[n] = 1
-
             if h[n] > least and n not in ret:
                 ret.append(n)
-
         return ret

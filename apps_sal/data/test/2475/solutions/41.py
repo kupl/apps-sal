@@ -1,4 +1,4 @@
-n, *s = map(int, open(0).read().split())
+(n, *s) = map(int, open(0).read().split())
 a = 0
 for i in range(1, n):
     t = 0

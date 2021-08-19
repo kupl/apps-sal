@@ -1,6 +1,6 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
-s = 10**19
+s = 10 ** 19
 B = sorted(A, key=lambda x: x[0])
 for i in range(N - K + 1):
     for j in range(K, N - i + 1):

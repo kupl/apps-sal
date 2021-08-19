@@ -1,12 +1,10 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 query = [list(map(int, input().split())) for _ in range(q)]
-
-ans = (n - 2)**2
+ans = (n - 2) ** 2
 x = [n] * (n + 1)
 y = [n] * (n + 1)
 xm = ym = n
-
-for a, b in query:
+for (a, b) in query:
     if a == 1:
         if b < xm:
             y[b:xm] = [ym] * (xm - b)

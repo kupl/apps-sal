@@ -1,7 +1,7 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 l = [[] for i in range(100001)]
 for i in range(A):
-    X, Y, Z = list(map(int, input().split()))
+    (X, Y, Z) = list(map(int, input().split()))
     for j in range(X - 1, Y):
         l[j].append(Z)
 ans = 0

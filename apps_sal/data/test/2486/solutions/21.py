@@ -1,8 +1,8 @@
 def main():
     import numpy as np
     from bisect import bisect_left as bl
-    mod = 10**9 + 7
-    n, k = map(int, input().split())
+    mod = 10 ** 9 + 7
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     a.sort()
     dp = np.zeros(k, dtype=np.int32)

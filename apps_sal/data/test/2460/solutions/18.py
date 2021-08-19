@@ -1,5 +1,5 @@
 import bisect
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 rid = [None for i in range(n)]
 tax = [None for i in range(m)]
 res = [0 for i in range(m)]
@@ -8,7 +8,7 @@ s = input().split()
 indrid = 0
 indtax = 0
 for i in range(n + m):
-    if s[i] == "0":
+    if s[i] == '0':
         rid[indrid] = int(ss[i])
         indrid += 1
     else:
@@ -27,5 +27,5 @@ for x in rid:
     else:
         res[ind - 1] += 1
 for i in res:
-    print(i, end=" ")
-print("")
+    print(i, end=' ')
+print('')

@@ -1,7 +1,6 @@
 from collections import defaultdict
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l = list(map(int, input().split()))
-
 mod = [0]
 for i in range(n):
     a = (l[i] - 1) % k
@@ -22,5 +21,4 @@ for i in range(1, n + 1):
             dic[mod[i]] += 1
         else:
             dic[mod[i]] = 1
-
 print(ans)

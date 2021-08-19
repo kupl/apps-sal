@@ -4,7 +4,7 @@ while tc != 0:
     n = 3
     tc -= 1
     if a == 180:
-        print("-1")
+        print('-1')
         continue
     while True:
         z = 180 / n

@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 for _ in range(int(input())):
-    n, r = map(int, input().split())
+    (n, r) = map(int, input().split())
     if r >= n:
         print(n * (n - 1) // 2 + 1)
     else:

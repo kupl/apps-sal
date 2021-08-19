@@ -1,6 +1,7 @@
 class Solution:
+
     def combinationSum3(self, k, n):
-        res, com = [], []
+        (res, com) = ([], [])
         self.combination(n, res, com, 1, k)
         return res
 

@@ -2,7 +2,7 @@ def solve(h, w, n, black_list):
     if len(black_list) == 0:
         return [(h - 2) * (w - 2)] + [0] * 9
     idx_list = []
-    for idx, (a, b) in enumerate(black_list):
+    for (idx, (a, b)) in enumerate(black_list):
         left = max(0, b - 3)
         top = max(0, a - 3)
         for row in range(top, a):
@@ -12,10 +12,8 @@ def solve(h, w, n, black_list):
                 if col + 2 >= w:
                     continue
                 idx_list.append(row * w + col)
-
     set_count = set(idx_list)
     idx_list = sorted(idx_list)
-
     ans = [0] * 9
     now = idx_list[0]
     count = 0
@@ -33,7 +31,7 @@ def solve(h, w, n, black_list):
 
 
 def __starting_point():
-    h, w, n = list(map(int, input().split()))
+    (h, w, n) = list(map(int, input().split()))
     black_list = [tuple(map(int, input().split())) for _ in range(n)]
     ret = solve(h, w, n, black_list)
     for i in ret:

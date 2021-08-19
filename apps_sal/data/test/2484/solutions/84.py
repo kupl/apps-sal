@@ -1,6 +1,5 @@
 import sys
 readline = sys.stdin.readline
-
 N = int(readline())
 A = list(map(int, readline().split()))
 
@@ -22,10 +21,8 @@ for left in range(N):
         xor ^= A[right]
         right += 1
     ans += right - left
-
     if left == right:
         right += 1
     else:
         xor ^= A[left]
-
 print(ans)

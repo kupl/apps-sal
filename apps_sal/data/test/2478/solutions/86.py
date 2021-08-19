@@ -8,7 +8,6 @@ for i in range(N):
     else:
         x -= 1
         m = min(x, m)
-
 a = -m
 b = x - m
-print(('(' * a + S + ')' * b))
+print('(' * a + S + ')' * b)

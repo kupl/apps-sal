@@ -1,26 +1,23 @@
 from itertools import accumulate
 from operator import add
-
-N, K = list(map(int, input().split()))
-xs, ys = [], []
+(N, K) = list(map(int, input().split()))
+(xs, ys) = ([], [])
 for _ in range(N):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     xs.append(x)
     ys.append(y)
-
 iXs = list(range(N))
 iXs.sort(key=lambda iX: xs[iX])
-odrXs = [0] * (N)
-for odrX, iX in enumerate(iXs):
+odrXs = [0] * N
+for (odrX, iX) in enumerate(iXs):
     odrXs[iX] = odrX
 iYs = list(range(N))
 iYs.sort(key=lambda iY: ys[iY])
-odrYs = [0] * (N)
-for odrY, iY in enumerate(iYs):
+odrYs = [0] * N
+for (odrY, iY) in enumerate(iYs):
     odrYs[iY] = odrY
-
-Ass = [[0] * (N) for _ in range(N)]
-for odrX, odrY in zip(odrXs, odrYs):
+Ass = [[0] * N for _ in range(N)]
+for (odrX, odrY) in zip(odrXs, odrYs):
     Ass[odrX][odrY] = 1
 
 
@@ -36,8 +33,7 @@ def getRangeSum2D(accAss, xFr, xTo, yFr, yTo):
 
 
 accAss = getAccAss(Ass)
-
-ans = 10**20
+ans = 10 ** 20
 for xFr in range(N - 1):
     for xTo in range(xFr + 1, N):
         for yFr in range(N - 1):
@@ -46,5 +42,4 @@ for xFr in range(N - 1):
                 if num >= K:
                     area = (xs[iXs[xTo]] - xs[iXs[xFr]]) * (ys[iYs[yTo]] - ys[iYs[yFr]])
                     ans = min(ans, area)
-
 print(ans)

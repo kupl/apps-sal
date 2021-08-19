@@ -6,7 +6,7 @@ a = [int(j) for j in input().split()]
 c = Counter(a)
 l = c.most_common()
 ll = []
-for i, j in l:
+for (i, j) in l:
     ll.append(j)
 ll.sort()
 s = sum(ll)
@@ -18,4 +18,4 @@ for k in range(1, n + 1):
         ll.pop()
         rem += 1
         rest -= 1
-    print((s // rest))
+    print(s // rest)

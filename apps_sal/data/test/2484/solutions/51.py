@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,12 +8,11 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
+    (N, *A) = list(map(int, read().split()))
     csum = [[0] * 20 for _ in range(N + 1)]
     for i in range(N):
         for j in range(20):
-            csum[i + 1][j] = csum[i][j] + (1 if A[i] & (1 << j) else 0)
+            csum[i + 1][j] = csum[i][j] + (1 if A[i] & 1 << j else 0)
 
     def is_ok(l, r):
         res = True
@@ -23,18 +21,14 @@ def main():
                 res = False
                 break
         return res
-
     ans = 0
     right = 0
     for left in range(N):
         while right < N and is_ok(left, right + 1):
             right += 1
-
         ans += right - left
-
         if left == right:
             right += 1
-
     print(ans)
     return
 

@@ -1,8 +1,8 @@
 def main():
     import sys
 
-    def input(): return sys.stdin.readline().rstrip()
-
+    def input():
+        return sys.stdin.readline().rstrip()
     n = int(input())
     s = input()
     cnt = 0
@@ -13,7 +13,7 @@ def main():
         else:
             cnt -= 1
         m = min(m, cnt)
-    ans = '(' * (-m) + s + ')' * (cnt - m)
+    ans = '(' * -m + s + ')' * (cnt - m)
     print(ans)
 
 

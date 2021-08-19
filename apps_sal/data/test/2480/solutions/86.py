@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = []
 d = {}
 A = list(map(int, input().split()))

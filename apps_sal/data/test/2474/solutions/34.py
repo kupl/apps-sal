@@ -1,6 +1,6 @@
 import sys
-INF = 1e9
-mod = 1e9 + 7
+INF = 1000000000.0
+mod = 1000000000.0 + 7
 n = int(input())
 lit = list(map(int, input().split()))
 lit.sort()

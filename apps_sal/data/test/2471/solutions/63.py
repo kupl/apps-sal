@@ -5,10 +5,10 @@ def input():
     return sys.stdin.readline()[:-1]
 
 
-H, W, N = map(int, input().split())
+(H, W, N) = map(int, input().split())
 d = []
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     for j in range(-1, 2):
         if not 1 < a + j < H:
             continue
@@ -30,4 +30,4 @@ for i in d:
         c = 1
 l[c] += 1
 l[0] = (H - 2) * (W - 2) - sum(l) + 1
-print(*l, sep="\n")
+print(*l, sep='\n')

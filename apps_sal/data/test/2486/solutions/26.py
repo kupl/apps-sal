@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = list(map(int, input().split()))
 
 
@@ -7,14 +7,13 @@ def f(N, K, a):
     if a[0] >= K:
         print(0)
         return
-
     a = [a[i] for i in range(N) if a[i] < K]
     N = len(a)
     ans = N
     dp = [False] * K
     dp[0] = True
     Smax = 0
-    for i, a_ in reversed(list(enumerate(a))):
+    for (i, a_) in reversed(list(enumerate(a))):
         if Smax + a_ >= K:
             ans = i
         updated = True

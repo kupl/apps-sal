@@ -3,21 +3,27 @@ import numpy as np
 from collections import defaultdict
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-N, K = lr()
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
+(N, K) = lr()
 A = np.array([0] + lr())
 A = (A - 1) % K
 Acum = A.cumsum() % K
 counter = defaultdict(int)
 answer = 0
-for i, x in enumerate(Acum):
+for (i, x) in enumerate(Acum):
     answer += counter[x]
     counter[x] += 1
     if i >= K - 1:
         counter[Acum[i - (K - 1)]] -= 1
-
 print(answer)

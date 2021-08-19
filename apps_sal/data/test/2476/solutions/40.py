@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 num = [0 for _ in range(N)]
 for a in A:
     num[a - 1] += 1
@@ -9,7 +8,6 @@ cum = [0 for _ in range(N)]
 cum[0] = num[0]
 for i in range(1, N):
     cum[i] = cum[i - 1] + num[i]
-
 index = N - 1
 ans = N
 for k in range(1, N + 1):

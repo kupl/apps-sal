@@ -1,4 +1,4 @@
-_, S, l, r = input(), input(), '(', ')'
+(_, S, l, r) = (input(), input(), '(', ')')
 t = S
 while t.count(l + r):
     t = t.replace(l + r, '')

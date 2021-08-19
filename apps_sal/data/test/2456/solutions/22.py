@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 for _ in range(t):
-    n, r = map(int, input().split())
+    (n, r) = map(int, input().split())
     if r >= n:
         ans = 1
         r = n - 1

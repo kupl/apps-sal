@@ -8,8 +8,8 @@ def warshall_floyd():
                 C[i][j] = min(C[i][j], C[i][k] + C[k][j])
 
 
-H, W = list(map(int, input().split()))
-inf = float("inf")
+(H, W) = list(map(int, input().split()))
+inf = float('inf')
 C = [list(map(int, sys.stdin.readline().rsplit())) for _ in range(10)]
 A = [list(map(int, sys.stdin.readline().rsplit())) for _ in range(H)]
 warshall_floyd()
@@ -18,5 +18,4 @@ for row in A:
     for col in row:
         if col != -1:
             res += C[col][1]
-
 print(res)

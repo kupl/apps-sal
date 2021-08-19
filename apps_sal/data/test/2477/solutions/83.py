@@ -1,4 +1,4 @@
-n, k, *a = map(int, open(0).read().split())
+(n, k, *a) = map(int, open(0).read().split())
 
 
 def func(b):
@@ -12,7 +12,7 @@ def func(b):
 
 l = 1
 r = max(a)
-while(r > l):
+while r > l:
     lr = (l + r) // 2
     if func(lr):
         r = lr

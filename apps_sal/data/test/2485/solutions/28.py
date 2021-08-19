@@ -1,5 +1,5 @@
-H, W, M = map(int, input().split())
-l = [list(map(int, input().split(" "))) for i in range(M)]
+(H, W, M) = map(int, input().split())
+l = [list(map(int, input().split(' '))) for i in range(M)]
 h = [0] * H
 w = [0] * W
 for i in range(M):

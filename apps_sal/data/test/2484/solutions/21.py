@@ -3,6 +3,7 @@ from operator import add, sub
 
 
 class TwoPointers:
+
     def __init__(self, cond, init=0, right=add, left=sub):
         self.cond = cond
         self.init = init
@@ -11,7 +12,7 @@ class TwoPointers:
 
     def __call__(self, A, uniq=True):
         cond = self.cond
-        next_right, next_left = self.next_right, self.next_left
+        (next_right, next_left) = (self.next_right, self.next_left)
         s = deepcopy(self.init)
         n = len(A)
         X = {}
@@ -31,12 +32,12 @@ class TwoPointers:
 
     def maximum(self, A):
         X = self.__call__(A)
-        return max(r - l for l, r in X) if X else 0
+        return max((r - l for (l, r) in X)) if X else 0
 
     def count(self, A):
         X = self.__call__(A, False)
-        return sum(r - l for l, r in X)
+        return sum((r - l for (l, r) in X))
 
 
-n, *A = map(int, open(0).read().split())
+(n, *A) = map(int, open(0).read().split())
 print(TwoPointers(lambda s, n: s + n == s ^ n).count(A))

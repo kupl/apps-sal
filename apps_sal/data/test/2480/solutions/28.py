@@ -1,5 +1,5 @@
 from collections import defaultdict
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 a[0] = (a[0] - 1) % k
 for i in range(n - 1):

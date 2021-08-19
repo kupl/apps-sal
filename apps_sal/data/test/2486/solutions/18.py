@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [int(x) for x in input().split()]
 A.sort(reverse=True)
 su = 0

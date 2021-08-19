@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 point = [tuple(map(int, input().split())) for i in range(N)]
 point.sort(key=lambda x: x[0])
 ans = float('inf')

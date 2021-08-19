@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 mo = [0]
 mod = [0]
@@ -24,5 +24,4 @@ for i in range(1, n + 1):
             dic[mod[i]] += 1
         else:
             dic[mod[i]] = 1
-
 print(ans)

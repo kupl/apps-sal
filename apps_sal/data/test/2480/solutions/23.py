@@ -10,7 +10,7 @@ def readi():
     return int(input())
 
 
-N, K = ints()
+(N, K) = ints()
 A = ints()
 S = [0] + list(accumulate(A))
 
@@ -23,10 +23,8 @@ s = 0
 memo = defaultdict(int)
 for j in range(1, N + 1):
     fj = f(j)
-
     if j - K >= 0:
         memo[f(j - K)] -= 1
     memo[f(j - 1)] += 1
-
     s += memo[fj]
 print(s)

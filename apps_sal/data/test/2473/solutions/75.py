@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 xy = []
 for i in range(N):
     xy.append(tuple(map(int, input().split())))

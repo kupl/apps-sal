@@ -1,10 +1,9 @@
 3
-
 MOD = 1000000007
-t, k = map(int, input().split())
-a, b = [], []
+(t, k) = map(int, input().split())
+(a, b) = ([], [])
 for i in range(t):
-    _a, _b = map(int, input().split())
+    (_a, _b) = map(int, input().split())
     a.append(_a)
     b.append(_b)
 upper = max(b) + 1

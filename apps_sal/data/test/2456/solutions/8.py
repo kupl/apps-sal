@@ -10,7 +10,7 @@ def r2(t):
 
 
 for _ in range(r1(int)):
-    n, r = r2(int)
+    (n, r) = r2(int)
     if n > r:
         print(r * (r + 1) // 2)
     else:

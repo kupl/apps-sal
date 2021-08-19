@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -16,7 +17,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -31,7 +32,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -40,29 +41,29 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
 def main():
-    n, k, l = map(int, input().split())
+    (n, k, l) = map(int, input().split())
     p = [list(map(int, input().split())) for _ in range(k)]
     r = [list(map(int, input().split())) for _ in range(l)]
     uf1 = UnionFind(n)
-    for a, b in p:
+    for (a, b) in p:
         uf1.union(a - 1, b - 1)
     uf2 = UnionFind(n)
-    for a, b in r:
+    for (a, b) in r:
         uf2.union(a - 1, b - 1)
     dic = {}
     for i in range(n):
-        rt1, rt2 = uf1.find(i), uf2.find(i)
+        (rt1, rt2) = (uf1.find(i), uf2.find(i))
         if (rt1, rt2) in dic:
-            dic[(rt1, rt2)] += 1
+            dic[rt1, rt2] += 1
         else:
-            dic[(rt1, rt2)] = 1
+            dic[rt1, rt2] = 1
     for i in range(n):
-        rt1, rt2 = uf1.find(i), uf2.find(i)
-        print(dic[(rt1, rt2)], end=" ")
+        (rt1, rt2) = (uf1.find(i), uf2.find(i))
+        print(dic[rt1, rt2], end=' ')
 
 
 def __starting_point():

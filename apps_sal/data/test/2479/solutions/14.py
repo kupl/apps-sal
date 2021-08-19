@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -7,14 +6,13 @@ mod = 10 ** 9 + 7
 
 
 def resolve():
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     query = [list(map(int, input().split())) for _ in range(q)]
-
     res = (n - 2) * (n - 2)
     R = C = n - 1
     yoko = [n - 1] * (n - 1)
     tate = [n - 1] * (n - 1)
-    for x, y in query:
+    for (x, y) in query:
         y -= 1
         if x == 1:
             if y > C:

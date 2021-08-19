@@ -3,6 +3,7 @@ from operator import mul, floordiv
 
 
 class Two_pointer:
+
     def __init__(self, cond, init=0, right=add, left=sub):
         self.cond = cond
         self.init = init
@@ -11,7 +12,7 @@ class Two_pointer:
 
     def __call__(self, A):
         cond = self.cond
-        next_right, next_left = self.next_right, self.next_left
+        (next_right, next_left) = (self.next_right, self.next_left)
         s = init = self.init
         n = len(A)
         X = {}
@@ -29,6 +30,6 @@ class Two_pointer:
         return list(X.items())
 
 
-n, *A = map(int, open(0).read().split())
+(n, *A) = map(int, open(0).read().split())
 X = Two_pointer(lambda s, n: s + n == s ^ n)(A)
-print(sum(r - l for l, r in X))
+print(sum((r - l for (l, r) in X)))

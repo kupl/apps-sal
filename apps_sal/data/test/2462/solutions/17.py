@@ -1,12 +1,9 @@
 from math import gcd
 import sys
 input = sys.stdin.readline
-
 t = int(input())
-
 for ccc in range(t):
     x = int(input())
-
     if x > 6 + 10 + 14:
         print('YES')
         if x - 30 not in [6, 10, 14]:

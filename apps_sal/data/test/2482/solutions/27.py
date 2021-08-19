@@ -11,7 +11,7 @@ for idx1 in range(K + L):
 
 def makeTree(a):
     aT = list(range(N + 1))
-    for p, q in a:
+    for (p, q) in a:
         rootp = getRoot(aT, p)
         rootq = getRoot(aT, q)
         thisRoot = max(rootp, rootq, q)
@@ -30,15 +30,13 @@ def getRoot(a, i):
         return a[i]
 
 
-N, K, L = list(map(int, input().split()))
+(N, K, L) = list(map(int, input().split()))
 pqrs = []
 for idx1 in range(K + L):
-    temp0, temp1 = list(map(int, input().split()))
+    (temp0, temp1) = list(map(int, input().split()))
     pqrs.append([temp0, temp1])
-
 MTree = makeTree(pqrs[0:K])
 TTree = makeTree(pqrs[K:])
-
 aRet = []
 dRet = {}
 for idx1 in range(1, N + 1):
@@ -48,5 +46,4 @@ for idx1 in range(1, N + 1):
         dRet[Comb] += 1
     else:
         dRet[Comb] = 1
-
-print((" ".join([str(dRet[_]) for _ in aRet])))
+print(' '.join([str(dRet[_]) for _ in aRet]))

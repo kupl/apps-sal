@@ -1,8 +1,8 @@
-n, h = map(int, input().split())
-p, x, y = [], [], []
-z = float("inf")
+(n, h) = map(int, input().split())
+(p, x, y) = ([], [], [])
+z = float('inf')
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     p.append((a, b))
     x.append(a)
     y.append(b)
@@ -11,10 +11,10 @@ y.sort()
 for i in range(n - 1):
     for j in range(i, n):
         for k in range(n - 1):
-            lx, rx, dy = x[i], x[j], y[k]
+            (lx, rx, dy) = (x[i], x[j], y[k])
             c = 0
             t = []
-            for a, b in p:
+            for (a, b) in p:
                 if x[i] <= a <= x[j] and y[k] <= b:
                     c += 1
                     t.append(b)

@@ -3,7 +3,7 @@ def solve():
     N = int(input())
     C = list(map(int, input().split()))
     C.sort()
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     for i in range(N):
         ans += C[i] * (N + 1 - i)
         ans %= mod

@@ -1,8 +1,6 @@
 import sys
-
 inf = float('inf')
-
-n, k, *xy = map(int, sys.stdin.read().split())
+(n, k, *xy) = map(int, sys.stdin.read().split())
 xy = list(zip(*[iter(xy)] * 2))
 
 
@@ -13,7 +11,6 @@ def main():
     for i in range(n):
         x.append(xy[i][0])
         y.append(xy[i][1])
-
     area = inf
     for l in range(n - k + 1):
         for r in range(l + k - 1, n):
@@ -24,7 +21,6 @@ def main():
                 for u in range(d + k - 1, m):
                     dy = seq_y[u] - seq_y[d]
                     area = min(area, dx * dy)
-
     return area
 
 

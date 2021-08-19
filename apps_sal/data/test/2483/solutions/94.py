@@ -5,8 +5,8 @@ read = sys.stdin.read
 
 
 def main():
-    n, c = map(int, readline().split())
-    m = 2 * 10**5
+    (n, c) = map(int, readline().split())
+    m = 2 * 10 ** 5
     stc = [list(map(int, l.split())) for l in read().splitlines()]
     cht = np.zeros((c, m + 1), dtype='int64')
     for e in stc:

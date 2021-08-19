@@ -1,9 +1,8 @@
 from collections import Counter
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 a.reverse()
-
 tmp = []
 tmp_sum = 0
 b = []
@@ -13,7 +12,6 @@ for i in a:
     else:
         tmp.append(i)
         tmp_sum += i
-
 if len(b) == 0:
     print(N)
 else:

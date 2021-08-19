@@ -1,9 +1,8 @@
-n, K = map(int, input().split())
+(n, K) = map(int, input().split())
 d = [[int(i) for i in input().split()] for _ in range(n)]
 x = sorted(d, key=lambda x: x[0])
 y = sorted(d, key=lambda x: x[1])
-ans = float("inf")
-
+ans = float('inf')
 for i in range(n):
     for j in range(i + 1, n):
         for k in range(n):

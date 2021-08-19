@@ -5,7 +5,7 @@ t = 0
 for ab in AB:
     t += ab[0]
     if t > ab[1]:
-        print("No")
+        print('No')
         break
 else:
-    print("Yes")
+    print('Yes')

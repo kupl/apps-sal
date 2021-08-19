@@ -11,7 +11,7 @@ while r <= N - 1:
         t += L[r]
         r += 1
     else:
-        ans += (r - l)
+        ans += r - l
         t -= L[l]
         l += 1
 ans += (r - l) * (r - l + 1) / 2

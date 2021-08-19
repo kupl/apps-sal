@@ -5,4 +5,4 @@ c.sort()
 c.reverse()
 for i in range(n):
     f = f + c[i] * (i + 2)
-print(f * (4**(n - 1)) % (10**9 + 7))
+print(f * 4 ** (n - 1) % (10 ** 9 + 7))

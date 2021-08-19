@@ -1,6 +1,5 @@
 n = int(input())
 alst = list(map(int, input().split()))
-
 total = alst[0]
 xor = alst[0]
 ans = 0

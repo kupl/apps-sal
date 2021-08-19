@@ -7,7 +7,7 @@ hshs！！ﾊｱﾊｱ！！興奮興奮！！！！うおおおおおおお！�
 """
 from scipy.sparse.csgraph import shortest_path
 from scipy.sparse import csr_matrix
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 num = [list(map(int, input().split())) for _ in range(10)]
 num = csr_matrix(num)
 ans = shortest_path(num)

@@ -9,5 +9,4 @@ for C in range(1, N - 1):
             continue
         s += S[k * C] + S[-1 - k * C]
         ma = max(ma, s)
-
 print(ma)

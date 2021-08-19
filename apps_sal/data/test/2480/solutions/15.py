@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 X = [0 for _ in range(N)]
 D = {0: [-1]}
@@ -29,7 +29,7 @@ for i in D:
             if m - x < K:
                 S += n - 1 - j
             else:
-                l, r = j, n
+                (l, r) = (j, n)
                 d = (l + r) // 2
                 tmp = 2 * n
                 while tmp != 0:

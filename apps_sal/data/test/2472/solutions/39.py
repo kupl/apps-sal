@@ -1,7 +1,7 @@
 n = int(input())
 t = []
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     t.append([b, a])
 t.sort()
 p = 0

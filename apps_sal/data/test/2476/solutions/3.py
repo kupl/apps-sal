@@ -6,7 +6,7 @@ C = Counter(A)
 D = [0] * (n + 1)
 for v in C.values():
     D[v] += 1
-E = tuple(accumulate(k * d for k, d in enumerate(D)))
+E = tuple(accumulate((k * d for (k, d) in enumerate(D))))
 D = tuple(accumulate(D))
 F = [0] * (n + 1)
 for x in range(1, n + 1):

@@ -23,7 +23,6 @@ while t > 0:
                 break
         if flag == True:
             ans.append((r, c))
-
     print(len(ans), end='')
     for i in range(len(ans)):
         print(' ', ans[i][0], 'x', ans[i][1], sep='', end='')

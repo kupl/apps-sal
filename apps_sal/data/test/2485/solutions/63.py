@@ -1,10 +1,10 @@
-h, w, m = map(int, input().split())
+(h, w, m) = map(int, input().split())
 l = [list(map(int, input().split())) for _ in range(m)]
-ch, cw = [0] * (h + 1), [0] * (w + 1)
+(ch, cw) = ([0] * (h + 1), [0] * (w + 1))
 for x in l:
     ch[x[0]] += 1
     cw[x[1]] += 1
-Mh, Mw = max(ch), max(cw)
+(Mh, Mw) = (max(ch), max(cw))
 n0 = ch.count(Mh) * cw.count(Mw)
 cnt = 0
 for x in l:

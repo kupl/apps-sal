@@ -5,11 +5,11 @@ def solve():
     N = int(input())
     que = []
     for i in range(N):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         heapq.heappush(que, (-b, a))
     now = 10 ** 10
     while que:
-        b, a = heapq.heappop(que)
+        (b, a) = heapq.heappop(que)
         b = -b
         if now > b:
             now = b
@@ -20,6 +20,6 @@ def solve():
 
 
 if solve():
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -4,7 +4,7 @@ import re
 from functools import lru_cache
 from collections import defaultdict
 sys.setrecursionlimit(500000)
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def input():
@@ -33,12 +33,9 @@ def main():
             l.append(l[-1] + 1)
         else:
             l.append(l[-1] - 1)
-
     m = min(l)
-
     if m < 0:
         l = list(map(lambda x: x - m, l))
-
     print('(' * l[0] + S + ')' * l[-1])
 
 

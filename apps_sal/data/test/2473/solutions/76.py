@@ -1,7 +1,7 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 XY = [list(map(int, input().split())) for _ in range(N)]
 XY.sort()
-r = 10**20
+r = 10 ** 20
 for xi0 in range(N - K + 1):
     for xi1 in range(K + xi0 - 1, N):
         x = XY[xi1][0] - XY[xi0][0]

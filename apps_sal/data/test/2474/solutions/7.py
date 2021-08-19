@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = int(input())
 arr = list(map(int, input().split()))
 arr = sorted(arr)

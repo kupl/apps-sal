@@ -1,8 +1,9 @@
-from operator import*
-from copy import*
+from operator import *
+from copy import *
 
 
 class TP:
+
     def __init__(self, cond, init=0, right=add, left=sub):
         self.cond = cond
         self.init = init
@@ -11,7 +12,7 @@ class TP:
 
     def __call__(self, A, uniq=True):
         cond = self.cond
-        next_right, next_left = self.next_right, self.next_left
+        (next_right, next_left) = (self.next_right, self.next_left)
         s = deepcopy(self.init)
         n = len(A)
         X = {}
@@ -31,12 +32,12 @@ class TP:
 
     def maximum(self, A):
         X = self.__call__(A)
-        return max(r - l for l, r in X) if X else 0
+        return max((r - l for (l, r) in X)) if X else 0
 
     def count(self, A):
         X = self.__call__(A, False)
-        return sum(r - l for l, r in X)
+        return sum((r - l for (l, r) in X))
 
 
-n, *a = map(int, open(0).read().split())
+(n, *a) = map(int, open(0).read().split())
 print(TP(lambda s, n: s + n == s ^ n).count(a))

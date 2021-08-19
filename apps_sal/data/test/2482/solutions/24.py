@@ -1,7 +1,6 @@
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-INF = float("inf")
+INF = float('inf')
 MOD = 10 ** 9 + 7
 
 
@@ -10,6 +9,7 @@ def input():
 
 
 class UnionFind:
+
     def __init__(self, n_nodes):
         self.n_nodes = n_nodes
         self.parents = [-1] * n_nodes
@@ -24,13 +24,10 @@ class UnionFind:
     def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -41,7 +38,7 @@ class UnionFind:
         return self.find(x) == self.find(y)
 
     def get_parent_list(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def get_members(self, x):
         parent = self.find(x)
@@ -52,35 +49,31 @@ class UnionFind:
 
 
 def main():
-    N, K, L = map(int, input().split())
+    (N, K, L) = map(int, input().split())
     tree_road = UnionFind(N)
     tree_subway = UnionFind(N)
-
     for _ in range(K):
-        p, q = map(int, input().split())
+        (p, q) = map(int, input().split())
         p -= 1
         q -= 1
         tree_road.unite(p, q)
-
     for _ in range(L):
-        r, s = map(int, input().split())
+        (r, s) = map(int, input().split())
         r -= 1
         s -= 1
         tree_subway.unite(r, s)
-
     d = {}
     for i in range(N):
         p1 = tree_road.find(i)
         p2 = tree_subway.find(i)
         if (p1, p2) not in d:
-            d[(p1, p2)] = 1
+            d[p1, p2] = 1
         else:
-            d[(p1, p2)] += 1
-
+            d[p1, p2] += 1
     for i in range(N):
         p1 = tree_road.find(i)
         p2 = tree_subway.find(i)
-        print(d[(p1, p2)], end=" ")
+        print(d[p1, p2], end=' ')
 
 
 def __starting_point():

@@ -1,7 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
-max_l = 10**9
+max_l = 10 ** 9
 min_l = 0
 while max_l - min_l != 1:
     count = 0

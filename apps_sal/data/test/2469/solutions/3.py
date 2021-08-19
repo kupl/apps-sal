@@ -1,4 +1,5 @@
 class Solution:
+
     def majorityElement(self, nums):
         """
         :type nums: List[int]
@@ -6,8 +7,8 @@ class Solution:
         """
         if len(nums) <= 2:
             return list(set(nums))
-        can, can2 = 0, 0
-        num, num2 = 0, 1
+        (can, can2) = (0, 0)
+        (num, num2) = (0, 1)
         for i in range(len(nums)):
             if nums[i] == can:
                 num += 1
@@ -20,7 +21,7 @@ class Solution:
                 num2 = 1
                 can2 = nums[i]
             else:
-                num, num2 = num - 1, num2 - 1
+                (num, num2) = (num - 1, num2 - 1)
         res = []
         if nums.count(can) > int(len(nums) / 3):
             res.append(can)

@@ -1,6 +1,6 @@
 n = int(input())
 a = tuple(map(int, input().split(' ')))
-r, ans, tsum, txor = 0, 0, 0, 0
+(r, ans, tsum, txor) = (0, 0, 0, 0)
 for l in range(n):
     while r < n and txor ^ a[r] == tsum + a[r]:
         txor = txor ^ a[r]

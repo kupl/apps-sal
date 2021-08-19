@@ -1,5 +1,5 @@
 def main():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = list(map(int, input().split()))
     A.sort(reverse=True)
     no_need = 0
@@ -10,7 +10,6 @@ def main():
             no_need += 1
         else:
             no_need = 0
-
     print(no_need)
 
 

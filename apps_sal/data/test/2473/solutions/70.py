@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(n)]
 ax = sorted(a)
-ans = 10**19
+ans = 10 ** 19
 for i in range(n - 1):
     for j in range(i + 1, n):
         a_use = ax[i:j + 1]

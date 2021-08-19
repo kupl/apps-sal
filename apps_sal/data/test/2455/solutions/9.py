@@ -5,7 +5,7 @@ for k in range(n):
     s = input().strip()
     ot = set()
     for i in range(1, 13):
-        if i == 5 or i == 7 or i == 9 or i == 10 or i == 11 or i == 8:
+        if i == 5 or i == 7 or i == 9 or (i == 10) or (i == 11) or (i == 8):
             continue
         for t in range(i):
             p = True

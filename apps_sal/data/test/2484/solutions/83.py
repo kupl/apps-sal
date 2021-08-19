@@ -3,8 +3,7 @@ A = list(map(int, input().split()))
 xsum = A[0]
 asum = A[0]
 ans = 0
-left, right = 0, 0
-
+(left, right) = (0, 0)
 while True:
     if xsum == asum:
         ans += right - left + 1

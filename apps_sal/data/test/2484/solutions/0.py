@@ -1,12 +1,11 @@
 def main():
     ans = 0
     n = int(input())
-    A = [int(i) for i in input().split()] + [10**9]
-
+    A = [int(i) for i in input().split()] + [10 ** 9]
     Sum = 0
     right = 0
     for left in range(n):
-        while(right < n):
+        while right < n:
             if Sum ^ A[right] == Sum + A[right]:
                 Sum += A[right]
                 right += 1

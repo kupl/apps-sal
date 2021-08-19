@@ -1,4 +1,5 @@
 class Solution:
+
     def makeArrayIncreasing(self, arr1: List[int], arr2: List[int]) -> int:
         m = len(arr1)
         arr2 = list(set(arr2))
@@ -23,7 +24,6 @@ class Solution:
                     swap[i][j] = keep[i - 1] + 1
                 swap[i][j] = min(swap[i][j], min_swap)
                 keep[i] = min(keep[i], min_keep)
-
         k = keep[-1]
         min_swap = min(swap[-1])
         ans = min(min_swap, k)

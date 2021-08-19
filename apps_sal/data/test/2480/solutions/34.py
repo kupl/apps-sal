@@ -3,12 +3,10 @@ from itertools import accumulate
 
 
 def solve():
-    N, K, *A = list(map(int, open(0).read().split()))
-
+    (N, K, *A) = list(map(int, open(0).read().split()))
     Acumsum = [0] + list(accumulate(A))
     si = [(Acumsum[i] - i) % K for i in range(N + 1)]
     counter = defaultdict(int)
-
     ans = 0
     for j in range(N):
         counter[si[j]] += 1

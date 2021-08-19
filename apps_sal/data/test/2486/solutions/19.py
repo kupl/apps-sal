@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 x = [int(p) for p in input().split()]
 x.sort()
 x = x[::-1]

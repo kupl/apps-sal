@@ -1,14 +1,14 @@
 N = int(input())
 S = input()
 l = r = 0
-L = ""
+L = ''
 for i in S:
-    if i == "(":
+    if i == '(':
         l += 1
     else:
         r += 1
     if l < r:
-        L += "("
+        L += '('
         l += 1
-R = ")" * (l - r)
+R = ')' * (l - r)
 print(L + S + R)
