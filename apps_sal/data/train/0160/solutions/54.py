@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         n = len(piles)
 
@@ -11,9 +12,7 @@ class Solution:
                 return 0
             player = (j - i - n) % 2
             if player == 1:
-                # alex
                 return max(piles[i] + dp(i + 1, j), piles[j] + dp(i, j - 1))
             else:
-                # lee: he requires to decrease alex's score, so we need to find the minimum
                 return min(dp(i + 1, j) - piles[i], dp(i, j - 1) - piles[j])
         return dp(0, n - 1) > 0
