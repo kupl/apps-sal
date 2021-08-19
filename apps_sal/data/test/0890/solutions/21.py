@@ -31,19 +31,14 @@ n = int(s[0])
 l = int(s[1])
 r = int(s[2])
 x = int(s[3])
-
 a = input()
 a = a.split()
 arr = []
 for i in a:
     arr.append(int(i))
-
 count = 0
 for i in range(2, len(arr) + 1):
     for subset in itertools.combinations(arr, i):
-        # print(subset)
         if classify(subset, l, r, x):
-            # print(subset)
             count += 1
-
 print(count)

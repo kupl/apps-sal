@@ -1,5 +1,3 @@
-# coding: utf-8
-
 num = int(input())
 str = input().split()
 table = [int(i) for i in str]
