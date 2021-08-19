@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 try:
 
     def F(S):
@@ -12,7 +10,6 @@ try:
                 balance -= 1
             max_balance = max(balance, max_balance)
         return max_balance
-
     for _ in range(int(input())):
         S = input()
         max_balance = F(S)
@@ -21,6 +18,5 @@ try:
         for i in range(max_balance):
             print(')', end='')
         print('')
-
 except:
     pass

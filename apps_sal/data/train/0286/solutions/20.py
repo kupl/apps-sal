@@ -1,14 +1,15 @@
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
-        '''
+        """
         箱子中有n个球，箱中有2种颜色的球，分别有k1,k2个
         箱子中的组合数为n!/k1!k2!
         每次选取同一色彩的所有球分开放入两个盒子中
-        '''
-        k = len(balls)  # 总色彩数
-        n = sum(balls)  # 总球数
-        total = 0  # 总组合数
-        valid = 0  # 符合条件总数
+        """
+        k = len(balls)
+        n = sum(balls)
+        total = 0
+        valid = 0
         fact = [1] * 50
         for i in range(1, 50):
             fact[i] = i * fact[i - 1]

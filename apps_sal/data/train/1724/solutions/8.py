@@ -5,7 +5,7 @@ def blast_sequence(aliens, position):
         for x in range(len(aliens[y])):
             if aliens[y][x] != 0:
                 dal.append((y, x, aliens[y][x]))
-    yp, xp = position
+    (yp, xp) = position
     hgh = yp + 1
     dr = []
     i = -1
@@ -13,8 +13,7 @@ def blast_sequence(aliens, position):
         i += 1
         ddel = []
         for k in range(len(dal)):
-            y, x, v = dal[k]
-            # print(y, x, v)
+            (y, x, v) = dal[k]
             x += v
             if x < 0:
                 v = -v
@@ -34,11 +33,11 @@ def blast_sequence(aliens, position):
         if len(ddel) > 0:
             ymax = 0
             for k in ddel:
-                y, x, v = dal[k]
+                (y, x, v) = dal[k]
                 ymax = max(ymax, y)
             ddel2 = []
             for k in ddel:
-                y, x, v = dal[k]
+                (y, x, v) = dal[k]
                 if y == ymax:
                     ddel2.append(k)
             if len(ddel2) == 1:
@@ -46,18 +45,18 @@ def blast_sequence(aliens, position):
             else:
                 vmax = 0
                 for k in ddel2:
-                    y, x, v = dal[k]
+                    (y, x, v) = dal[k]
                     vmax = max(vmax, abs(v))
                 ddel = []
                 for k in ddel2:
-                    y, x, v = dal[k]
+                    (y, x, v) = dal[k]
                     if abs(v) == vmax:
                         ddel.append(k)
                 if len(ddel) == 1:
                     kdel = ddel[0]
                 else:
                     for k in ddel:
-                        y, x, v = dal[k]
+                        (y, x, v) = dal[k]
                         if v > 0:
                             kdel = k
                             break

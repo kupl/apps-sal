@@ -1,17 +1,11 @@
 from sys import stdin
-
 tt = int(stdin.readline())
-
 for loop in range(tt):
-
     n = int(stdin.readline())
     a = list(map(int, stdin.readline().split()))
-
     lis = [[1]]
-
     now = []
     tmp = 0
-
     for i in range(1, n):
         if len(now) == 0:
             now.append(a[i])
@@ -26,9 +20,6 @@ for loop in range(tt):
                 now.append(a[i])
         else:
             now.append(a[i])
-
     if len(now) > 0:
         lis.append(now)
-
-    #print (lis)
     print(len(lis) - 1)

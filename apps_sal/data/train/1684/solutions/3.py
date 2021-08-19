@@ -1,4 +1,3 @@
-
 from math import radians
 from heapq import heapify, heappush, heappop
 import bisect
@@ -15,59 +14,67 @@ import sys
 import threading
 from collections import deque, Counter, OrderedDict, defaultdict
 from heapq import *
-# from math import ceil, floor, log, sqrt, factorial, pow, pi, gcd
-# from bisect import bisect_left,bisect_right
-# from decimal import *,threading
 from fractions import Fraction
 mod = int(pow(10, 9) + 7)
-# mod = 998244353
 
 
-def ii(): return int(input())
+def ii():
+    return int(input())
 
 
-def si(): return str(input())
+def si():
+    return str(input())
 
 
-def mi(): return map(int, input().split())
+def mi():
+    return map(int, input().split())
 
 
-def li1(): return list(mi())
+def li1():
+    return list(mi())
 
 
-def fii(): return int(stdin.readline())
+def fii():
+    return int(stdin.readline())
 
 
-def fsi(): return str(stdin.readline())
+def fsi():
+    return str(stdin.readline())
 
 
-def fmi(): return map(int, stdin.readline().split())
+def fmi():
+    return map(int, stdin.readline().split())
 
 
-def fli(): return list(fmi())
+def fli():
+    return list(fmi())
 
 
-abd = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7, 'i': 8, 'j': 9, 'k': 10, 'l': 11, 'm': 12,
-       'n': 13, 'o': 14, 'p': 15, 'q': 16, 'r': 17, 's': 18, 't': 19, 'u': 20, 'v': 21, 'w': 22, 'x': 23, 'y': 24,
-       'z': 25}
+abd = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7, 'i': 8, 'j': 9, 'k': 10, 'l': 11, 'm': 12, 'n': 13, 'o': 14, 'p': 15, 'q': 16, 'r': 17, 's': 18, 't': 19, 'u': 20, 'v': 21, 'w': 22, 'x': 23, 'y': 24, 'z': 25}
 
 
-def getKey(item): return item[0]
+def getKey(item):
+    return item[0]
 
 
-def sort2(l): return sorted(l, key=getKey)
+def sort2(l):
+    return sorted(l, key=getKey)
 
 
-def d2(n, m, num): return [[num for x in range(m)] for y in range(n)]
+def d2(n, m, num):
+    return [[num for x in range(m)] for y in range(n)]
 
 
-def isPowerOfTwo(x): return (x and (not (x & (x - 1))))
+def isPowerOfTwo(x):
+    return x and (not x & x - 1)
 
 
-def decimalToBinary(n): return bin(n).replace("0b", "")
+def decimalToBinary(n):
+    return bin(n).replace('0b', '')
 
 
-def ntl(n): return [int(i) for i in str(n)]
+def ntl(n):
+    return [int(i) for i in str(n)]
 
 
 def powerMod(x, y, p):
@@ -75,9 +82,9 @@ def powerMod(x, y, p):
     x %= p
     while y > 0:
         if y & 1:
-            res = (res * x) % p
+            res = res * x % p
         y = y >> 1
-        x = (x * x) % p
+        x = x * x % p
     return res
 
 
@@ -103,7 +110,7 @@ def bfs(d, v):
 def make_graph(e):
     d = {}
     for i in range(e):
-        x, y = mi()
+        (x, y) = mi()
         if x not in d:
             d[x] = [y]
         else:
@@ -118,7 +125,7 @@ def make_graph(e):
 def gr2(n):
     d = defaultdict(list)
     for i in range(n):
-        x, y = mi()
+        (x, y) = mi()
         d[x].append(y)
     return d
 
@@ -135,7 +142,6 @@ def connected_components(graph):
             vs |= set(graph[v]) - seen
             component.append(v)
         return component
-
     ans = []
     for v in graph:
         if v not in seen:
@@ -173,10 +179,10 @@ def SieveOfEratosthenes(n, isPrime):
     for i in range(2, n):
         isPrime[i] = True
     p = 2
-    while (p * p <= n):
-        if (isPrime[p] == True):
+    while p * p <= n:
+        if isPrime[p] == True:
             i = p * p
-            while (i <= n):
+            while i <= n:
                 isPrime[i] = False
                 i += p
         p += 1
@@ -185,10 +191,9 @@ def SieveOfEratosthenes(n, isPrime):
 
 def dijkstra(edges, f, t):
     g = defaultdict(list)
-    for l, r, c in edges:
+    for (l, r, c) in edges:
         g[l].append((c, r))
-
-    q, seen, mins = [(0, f, ())], set(), {f: 0}
+    (q, seen, mins) = ([(0, f, ())], set(), {f: 0})
     while q:
         (cost, v1, path) = heappop(q)
         if v1 not in seen:
@@ -196,8 +201,7 @@ def dijkstra(edges, f, t):
             path = (v1, path)
             if v1 == t:
                 return (cost, path)
-
-            for c, v2 in g.get(v1, ()):
+            for (c, v2) in g.get(v1, ()):
                 if v2 in seen:
                     continue
                 prev = mins.get(v2, None)
@@ -205,7 +209,7 @@ def dijkstra(edges, f, t):
                 if prev is None or next < prev:
                     mins[v2] = next
                     heappush(q, (next, v2, path))
-    return float("inf")
+    return float('inf')
 
 
 def binsearch(a, l, r, x):
@@ -220,14 +224,10 @@ def binsearch(a, l, r, x):
     return -1
 
 
-# def input():
-#    return stdin.buffer.readline()
-
-
 def readTree(n):
     adj = [set() for _ in range(n)]
     for _ in range(n - 1):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         adj[u - 1].add(v - 1)
         adj[v - 1].add(u - 1)
     return adj
