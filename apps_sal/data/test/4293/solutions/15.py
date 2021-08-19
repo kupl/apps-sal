@@ -1,6 +1,2 @@
-p, q, r = map(int, input().split())
-
-# 飛行ルートは、p,q,r のみ。
-
-# 結局はルートp＋r、p＋q、r＋qの内から最小のものを選ぶ
+(p, q, r) = map(int, input().split())
 print(min([p + r, p + q, r + q]))

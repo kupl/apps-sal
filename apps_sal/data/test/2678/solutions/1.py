@@ -1,4 +1,3 @@
-# cook your dish here
 from operator import itemgetter
 n = int(input())
 array = []
