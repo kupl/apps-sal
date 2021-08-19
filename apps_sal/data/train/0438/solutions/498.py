@@ -1,4 +1,5 @@
 class UnionFindSet:
+
     def __init__(self, n):
         self.parents = list(range(n))
         self.ranks = [0] * n
@@ -9,7 +10,7 @@ class UnionFindSet:
         return self.parents[u]
 
     def union(self, u, v):
-        pu, pv = self.find(u), self.find(v)
+        (pu, pv) = (self.find(u), self.find(v))
         if pu == pv:
             return False
         if self.ranks[pu] > self.ranks[pv]:
@@ -25,13 +26,13 @@ class UnionFindSet:
 
 
 class Solution:
-    def findLatestStep(self, arr: List[int], m: int) -> int:
-        n, ans = len(arr), -1
-        uf = UnionFindSet(n)
 
+    def findLatestStep(self, arr: List[int], m: int) -> int:
+        (n, ans) = (len(arr), -1)
+        uf = UnionFindSet(n)
         if m == n:
             return m
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             i -= 1
             uf.ranks[i] = 1
             for j in (i - 1, i + 1):
@@ -42,5 +43,4 @@ class Solution:
                         uf.union(i, j)
             if uf.ranks[i] == m == 1 and uf.parents[i] == i:
                 ans = step + 1
-            # print(step, i, uf.ranks, ans)
         return ans

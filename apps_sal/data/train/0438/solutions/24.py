@@ -1,14 +1,13 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         forward = [0] * len(arr)
         backward = [0] * len(arr)
         counter = collections.defaultdict(int)
         res = -1
         step = 1
-
         for i in arr:
             i = i - 1
-            # print(counter)
             if i - 1 >= 0 and i + 1 < len(arr):
                 curr = forward[i - 1] + 1 + backward[i + 1]
                 counter[forward[i - 1]] -= 1
@@ -41,10 +40,7 @@ class Solution:
                 forward[i] = curr
                 backward[i - forward[i - 1]] = curr
                 counter[curr] += 1
-
             if counter[m] >= 1:
                 res = step
-
             step += 1
-
         return res

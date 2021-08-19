@@ -1,9 +1,10 @@
 class Solution:
+
     def findLatestStep(self, a: List[int], m: int) -> int:
         g = [0] * (len(a) + 1)
         cnt = Counter()
         last = -1
-        for i, p in enumerate(a):
+        for (i, p) in enumerate(a):
             l = g[p - 1] if p > 1 else 0
             r = g[p + 1] if p < len(g) - 1 else 0
             new_l = l + 1 + r
@@ -19,5 +20,4 @@ class Solution:
             cnt[new_l] += 1
             if m in cnt:
                 last = i + 1
-            # print(i, l, r, g)
         return last

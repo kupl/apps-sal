@@ -17,18 +17,16 @@ class Solution:
         ns = self.size[r1] + self.size[r2]
         if ns == self.m:
             self.num_m += 1
-
         if self.rank[r1] > self.rank[r2]:
             self.parent[r2] = r1
             self.size[r1] = ns
+        elif self.rank[r2] > self.rank[r1]:
+            self.parent[r1] = r2
+            self.size[r2] = ns
         else:
-            if self.rank[r2] > self.rank[r1]:
-                self.parent[r1] = r2
-                self.size[r2] = ns
-            else:
-                self.parent[r1] = r2
-                self.rank[r2] += 1
-                self.size[r2] = ns
+            self.parent[r1] = r2
+            self.rank[r2] += 1
+            self.size[r2] = ns
 
     def findLatestStep(self, arr: List[int], m: int) -> int:
         self.parent = {}
@@ -37,7 +35,7 @@ class Solution:
         self.m = m
         self.num_m = 0
         ans = -1
-        for i, v in enumerate(arr):
+        for (i, v) in enumerate(arr):
             self.parent[v] = v
             self.rank[v] = 1
             self.size[v] = 1
@@ -49,5 +47,4 @@ class Solution:
                 self.union(v + 1, v)
             if self.num_m > 0:
                 ans = i + 1
-            # print(i,self.num_m,ans)
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         sele = [0] * n
@@ -12,23 +13,21 @@ class Solution:
             return repe[a]
 
         def join(a, b):
-            ra, rb = getRepe(a), getRepe(b)
-            # print(ra,rb)
+            (ra, rb) = (getRepe(a), getRepe(b))
             repe[b] = ra
             sis[ra] += sis[rb]
 
         def sete(x):
-            # print('-',x)
             if x > 0 and sele[x - 1]:
                 join(x - 1, x)
             if x < n - 1 and sele[x + 1]:
                 join(x, x + 1)
             sele[x] = 1
         res = -1
-        for i, v in enumerate(arr, 1):
-            if v > 1 and sele[v - 2] and sis[getRepe(v - 2)] == m:
+        for (i, v) in enumerate(arr, 1):
+            if v > 1 and sele[v - 2] and (sis[getRepe(v - 2)] == m):
                 res = i - 1
-            if v < n and sele[v] and sis[getRepe(v)] == m:
+            if v < n and sele[v] and (sis[getRepe(v)] == m):
                 res = i - 1
             sete(v - 1)
             if sis[getRepe(v - 1)] == m:
