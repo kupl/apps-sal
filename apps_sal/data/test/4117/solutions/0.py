@@ -7,6 +7,6 @@ for i in range(0, n - 2):
             x = [l[i], l[j], l[k]]
             ma = sorted(x)[2]
             _ma = sorted(x)[0] + sorted(x)[1]
-            if l[i] != l[j] and l[i] != l[k] and l[j] != l[k] and ma < _ma:
+            if l[i] != l[j] and l[i] != l[k] and (l[j] != l[k]) and (ma < _ma):
                 cnt += 1
 print(cnt)

@@ -13,8 +13,7 @@ while flag:
         if int(tmp) > N:
             flag = False
             break
-        if '3' in tmp and '5' in tmp and '7' in tmp:
+        if '3' in tmp and '5' in tmp and ('7' in tmp):
             ans += 1
         q.append(tmp)
-
 print(ans)

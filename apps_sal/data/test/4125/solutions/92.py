@@ -1,6 +1,5 @@
 import math
-
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 D = abs(x[0] - X)
 for i in range(1, N):

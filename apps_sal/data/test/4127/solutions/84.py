@@ -1,7 +1,4 @@
 from decimal import Decimal
-
-A, B = list(map(Decimal, input().split()))
-
+(A, B) = list(map(Decimal, input().split()))
 ans = A * B
-
-print((int(ans)))
+print(int(ans))

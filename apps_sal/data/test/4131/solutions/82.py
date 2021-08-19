@@ -1,7 +1,7 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 numbers = [{} for n in range(N)]
 for m in range(M):
-    P, Y = list(map(int, input().split()))
+    (P, Y) = list(map(int, input().split()))
     numbers[P - 1][m] = Y
 answers = {}
 for n in range(N):
@@ -15,4 +15,4 @@ for n in range(N):
         suuji += 1
 answer = sorted(list(answers.items()), key=lambda x: x[0])
 for ans in answer:
-    print((ans[1]))
+    print(ans[1])

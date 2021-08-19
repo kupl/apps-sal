@@ -1,6 +1,5 @@
 from sys import stdin
-
-H, n = list(map(int, stdin.readline().split()))
+(H, n) = list(map(int, stdin.readline().split()))
 arr = list(map(int, stdin.readline().split()))
 k = H
 d = {}
@@ -26,9 +25,9 @@ else:
     if s < 0:
         a = min(list(d.keys()))
         m = (H + a) // abs(s)
-        H += (s * m)
+        H += s * m
         ans = n * m
-        while(H > 0):
+        while H > 0:
             l = list([x for x in list(d.keys()) if x + H <= 0])
             if len(l) > 0:
                 case = []

@@ -1,2 +1,2 @@
-a, b = map(int, input().replace('.', '').split())
+(a, b) = map(int, input().replace('.', '').split())
 print(a * b // 100)

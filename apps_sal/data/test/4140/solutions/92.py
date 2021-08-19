@@ -12,5 +12,4 @@ for i in range(len(s)):
             canb += 1
         else:
             canw += 1
-
 print(min(canb, canw))

@@ -7,8 +7,7 @@ for i in range(0, n):
     if a[i] % 3 == 0 or a[i] % 5 == 0:
         continue
     ans = False
-
 if ans:
-    print("APPROVED")
+    print('APPROVED')
 else:
-    print("DENIED")
+    print('DENIED')

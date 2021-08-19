@@ -4,8 +4,7 @@ def check(s):
 
 s = input()
 n = len(s)
-
 if check(s) and check(s[:(n - 1) // 2]) and check(s[(n + 3) // 2 - 1:n]):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

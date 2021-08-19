@@ -8,13 +8,11 @@ def make_code(prifacture_num, city_num):
     return s1 + s2
 
 
-prifacture_cnt, city_cnt = list(map(int, input().split()))
+(prifacture_cnt, city_cnt) = list(map(int, input().split()))
 data = [list(map(int, input().split())) for i in range(city_cnt)]
 city_data = []
-
 for i in range(city_cnt):
     city_data.append([data[i][0], data[i][1], i])
-
 city_data.sort()
 city_code = []
 prifacture = city_data[0][0]
@@ -29,7 +27,6 @@ for city in city_data:
         prifacture = city[0]
         s = make_code(prifacture, cnt)
         city_code.append([city[2], s])
-
 city_code.sort()
-for num, code in city_code:
+for (num, code) in city_code:
     print(code)

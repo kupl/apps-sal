@@ -1,7 +1,6 @@
 import re
-
 string = input()
-pattern = re.compile(r'^([^L][^R])*[^L]?$')
+pattern = re.compile('^([^L][^R])*[^L]?$')
 if pattern.match(string):
     print('Yes')
 else:

@@ -1,7 +1,5 @@
 N = int(input())
-
 dic = [3, 5, 7]
-
 ans = set()
 
 
@@ -16,5 +14,5 @@ def dfs(s):
         dfs(s + c)
 
 
-dfs("")
-print((len(ans)))
+dfs('')
+print(len(ans))

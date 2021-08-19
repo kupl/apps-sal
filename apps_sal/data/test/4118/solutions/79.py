@@ -1,6 +1,5 @@
-a, b = list(map(int, input().split()))
-
+(a, b) = list(map(int, input().split()))
 if a >= 10 or b >= 10:
-    print((-1))
+    print(-1)
 else:
-    print((a * b))
+    print(a * b)

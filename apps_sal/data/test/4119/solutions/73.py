@@ -1,4 +1,4 @@
-n, m, *a = list(map(int, open(0).read().split()))
+(n, m, *a) = list(map(int, open(0).read().split()))
 a.sort()
 b = []
 for i in range(m - 1):

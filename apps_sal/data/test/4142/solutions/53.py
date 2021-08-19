@@ -5,8 +5,7 @@ for i in range(len(s)):
         if s[i] not in ['R', 'U', 'D']:
             ans = 'No'
             break
-    else:
-        if s[i] not in ['L', 'U', 'D']:
-            ans = 'No'
-            break
+    elif s[i] not in ['L', 'U', 'D']:
+        ans = 'No'
+        break
 print(ans)

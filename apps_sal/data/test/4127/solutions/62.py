@@ -5,7 +5,7 @@ def main(A, B):
 
 
 def __starting_point():
-    A, B = input().split()
+    (A, B) = input().split()
     A = int(A)
     B = float(B)
     ans = main(A, B)

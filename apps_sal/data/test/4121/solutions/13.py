@@ -6,5 +6,4 @@ for i in input().split():
         l.append(tmp)
     else:
         l.pop()
-
-print("YES" if len(l) < 2 else "NO")
+print('YES' if len(l) < 2 else 'NO')

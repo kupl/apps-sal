@@ -1,5 +1,5 @@
 N = int(input())
-T = ["3", "5", "7"]
+T = ['3', '5', '7']
 l = T.copy()
 ans = 0
 while l:

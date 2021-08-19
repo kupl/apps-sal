@@ -8,17 +8,12 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
-a, b = input().split()
-
+(a, b) = input().split()
 tmp = 0
 res = 0
-
 a = int(a)
-b = int(b.replace(".", ""))
+b = int(b.replace('.', ''))
 res = a * b // 100
-
 print(res)

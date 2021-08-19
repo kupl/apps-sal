@@ -1,5 +1,4 @@
 S = str(input())
-
 N = len(S)
 half = (N + 1) // 2
 ans = 0

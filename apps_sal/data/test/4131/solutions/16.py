@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 pref = [[] for _ in range(n + 1)]
 py = [[i] + list(map(int, input().split())) for i in range(m)]
 py.sort(key=lambda x: (x[1], x[2]))
@@ -11,4 +11,4 @@ for x in py:
     ans.append([x[0], x[1], cnt])
 ans.sort(key=lambda x: x[0])
 for x in ans:
-    print((str(x[1]).zfill(6) + str(x[2]).zfill(6)))
+    print(str(x[1]).zfill(6) + str(x[2]).zfill(6))

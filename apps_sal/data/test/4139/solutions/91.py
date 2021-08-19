@@ -2,11 +2,11 @@ from collections import deque
 N = int(input())
 S = deque([3, 5, 7])
 ans = 0
-for _ in range(3**10):
+for _ in range(3 ** 10):
     a = S.popleft()
     if a <= N:
         tmp = a
-        j3, j5, j7 = False, False, False
+        (j3, j5, j7) = (False, False, False)
         while tmp > 0:
             if tmp % 10 == 3:
                 j3 = True

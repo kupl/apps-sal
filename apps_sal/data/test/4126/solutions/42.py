@@ -7,6 +7,6 @@ def f(s):
 
 
 if f(s) and f(s[:(n - 1) // 2]) and f(s[(n + 3) // 2 - 1:]):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

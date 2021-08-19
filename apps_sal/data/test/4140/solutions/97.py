@@ -1,5 +1,5 @@
 s = list(input())
-ans = 1e5
+ans = 100000.0
 for i0 in range(2):
     sum = 0
     for i in range(len(s)):

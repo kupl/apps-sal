@@ -10,5 +10,4 @@ while d != n // 2:
     i += 1
     j -= 1
     d += 1
-
 print(cnt)

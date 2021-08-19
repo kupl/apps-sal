@@ -21,8 +21,6 @@ for i in range(0, len(S)):
         RW.append(len(S) - i - 1)
         if len(LW) > 1:
             Close.append(LW[-1] - LW[-2])
-
-
 index = 0
 removed = 0
 while index < z - 1:
@@ -32,14 +30,12 @@ while index < z - 1:
     else:
         removed += 2 * (LW[index] - removed) + 1
         index += 1
-
 if index == z - 1:
     if abs(LW[z - 1] - removed - RW[z - 1]) <= 1:
         print('YES')
     else:
         print('NO')
+elif removed >= len(S) - 1:
+    print('YES')
 else:
-    if removed >= len(S) - 1:
-        print('YES')
-    else:
-        print('NO')
+    print('NO')

@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 review_result = 'APPROVED'
 for i in A:
     if i % 2 == 0:
@@ -9,5 +8,4 @@ for i in A:
             break
         else:
             review_result = 'APPROVED'
-
 print(review_result)

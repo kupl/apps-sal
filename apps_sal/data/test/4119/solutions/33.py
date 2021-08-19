@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 N_List = sorted(list(map(int, input().split())))
 N_Diff = []
 for i in range(1, M):

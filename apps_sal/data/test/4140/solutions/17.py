@@ -13,12 +13,10 @@ for i in range(len(s)):
         s2.append('0')
     else:
         s2.append('1')
-
-for x, y in zip(s, s1):
+for (x, y) in zip(s, s1):
     if x != y:
         ans1 += 1
-for x, y in zip(s, s2):
+for (x, y) in zip(s, s2):
     if x != y:
         ans2 += 1
-
 print(min(ans1, ans2))

@@ -1,6 +1,5 @@
 N = int(input())
 A = sorted([int(a) for a in input().split()])
-
 k = 0
 ans = 0
 for i in range(N):

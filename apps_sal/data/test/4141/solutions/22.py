@@ -10,6 +10,6 @@ for i in range(N):
         else:
             ans = 0
 if ans == n:
-    print("APPROVED")
+    print('APPROVED')
 else:
-    print("DENIED")
+    print('DENIED')

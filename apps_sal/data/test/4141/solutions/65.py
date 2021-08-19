@@ -6,7 +6,7 @@ def solve():
             if not (a % 3 == 0 or a % 5 == 0):
                 print('DENIED')
                 return
-    print("APPROVED")
+    print('APPROVED')
 
 
 solve()

@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 X = list(map(int, input().split()))
 X.sort()
 A = []

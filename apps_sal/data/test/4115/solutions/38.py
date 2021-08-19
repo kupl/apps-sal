@@ -1,5 +1,4 @@
 S = input()
-
 mid = len(S) // 2
 count = 0
 for i in range(mid):

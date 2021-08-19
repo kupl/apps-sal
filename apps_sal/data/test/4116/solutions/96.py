@@ -3,11 +3,10 @@ def kuku(n):
         for j in range(1, 10):
             ans = i * j
             if ans == n:
-                print("Yes")
+                print('Yes')
                 return 0
-    print("No")
+    print('No')
 
 
 n = int(input())
-
 kuku(n)

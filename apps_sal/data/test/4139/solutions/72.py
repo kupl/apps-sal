@@ -12,5 +12,4 @@ for num in nums:
     if num <= n and len(set(str(num))) == 3:
         ans += 1
     generator(num, n)
-
 print(ans)

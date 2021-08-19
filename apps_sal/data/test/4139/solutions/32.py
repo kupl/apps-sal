@@ -12,7 +12,6 @@ while 1:
     else:
         break
     i += 1
-
 ans = 0
 B = {'3', '5', '7'}
 for a in A:

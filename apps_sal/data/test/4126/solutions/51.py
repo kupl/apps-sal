@@ -11,11 +11,9 @@ def isKaibun(S):
 
 S = input()
 N = len(S)
-
 S1 = S[0:(N - 1) // 2]
 S2 = S[(N + 3) // 2 - 1:N]
-
 if isKaibun(S) and isKaibun(S1) and isKaibun(S2):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

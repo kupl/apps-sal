@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,20 +8,16 @@ MOD = 1000000007
 
 
 def main():
-    N, M, *X = list(map(int, read().split()))
-
+    (N, M, *X) = list(map(int, read().split()))
     if N >= M:
-        print((0))
+        print(0)
         return
-
     X.sort()
     dist = [0] * (M - 1)
     for i in range(M - 1):
         dist[i] = X[i + 1] - X[i]
-
     dist.sort()
-    ans = sum(dist[: M - N])
-
+    ans = sum(dist[:M - N])
     print(ans)
     return
 

@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 alist = []
 for i in range(m):
-    p, y = map(int, input().split())
+    (p, y) = map(int, input().split())
     alist.append([i + 1, p, y])
 alist.sort(key=lambda x: x[2])
 blist = [0] * (n + 1)

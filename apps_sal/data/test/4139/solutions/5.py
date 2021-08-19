@@ -12,7 +12,7 @@ while x:
         x.append(a * 10 + 5)
         x.append(a * 10 + 7)
 ans = []
-for i in range(3**11):
+for i in range(3 ** 11):
     a = sft.popleft()
     ans.append(a)
     sft.append(a * 10 + 3)
@@ -25,5 +25,5 @@ for i in ans:
         break
     else:
         ss = str(i)
-        if "3" in ss and "5" in ss and "7" in ss:
+        if '3' in ss and '5' in ss and ('7' in ss):
             count += 1

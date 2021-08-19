@@ -1,2 +1,2 @@
 S = input()
-print(sum(i != j for i, j in zip(S, S[::-1])) // 2)
+print(sum((i != j for (i, j) in zip(S, S[::-1]))) // 2)

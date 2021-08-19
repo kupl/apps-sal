@@ -6,8 +6,7 @@ for i in range(N):
         if A[i] % 3 != 0 and A[i] % 5 != 0:
             flag = False
             break
-
 if flag == True:
-    print("APPROVED")
+    print('APPROVED')
 else:
-    print("DENIED")
+    print('DENIED')

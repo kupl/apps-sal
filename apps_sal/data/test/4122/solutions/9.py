@@ -1,5 +1,5 @@
 import math
-h, n = map(int, input().strip().split())
+(h, n) = map(int, input().strip().split())
 l = list(map(int, input().strip().split()))
 mn = 0
 sm = 0

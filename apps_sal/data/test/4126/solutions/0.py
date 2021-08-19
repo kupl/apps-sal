@@ -11,7 +11,6 @@ def is_palinedrome(st):
 s_pali = is_palinedrome(s)
 sub_pali_left = is_palinedrome(s[:len(s) // 2])
 sub_pali_right = is_palinedrome(s[len(s) // 2 + 1:])
-
 if s_pali and sub_pali_left and sub_pali_right:
     print('Yes')
 else:

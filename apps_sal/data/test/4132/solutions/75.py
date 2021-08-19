@@ -8,5 +8,4 @@ def gcd_list(numbers):
 
 n = input()
 l = [int(x) for x in input().split()]
-
-print((gcd_list(l)))
+print(gcd_list(l))

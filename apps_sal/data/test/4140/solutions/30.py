@@ -7,10 +7,9 @@ for i in range(len(s)):
             ans1 += 1
         else:
             ans2 += 1
+    elif s[i] == 0:
+        ans2 += 1
     else:
-        if s[i] == 0:
-            ans2 += 1
-        else:
-            ans1 += 1
+        ans1 += 1
 ans = min(ans1, ans2)
 print(ans)

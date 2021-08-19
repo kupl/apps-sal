@@ -1,8 +1,6 @@
-
 flag = True
 n = int(input())
 l = list(map(int, input().split()))
-
 for _ in range(n):
     for num in l:
         if num % 2 == 0:
@@ -12,6 +10,6 @@ for _ in range(n):
                 flag = False
                 break
 if flag:
-    print("APPROVED")
+    print('APPROVED')
 else:
-    print("DENIED")
+    print('DENIED')

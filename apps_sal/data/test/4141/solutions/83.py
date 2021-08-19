@@ -9,9 +9,7 @@ for i in A:
             j = j + 1
         elif i % 5 == 0:
             j = j + 1
-
-
 if k == j:
-    print("APPROVED")
+    print('APPROVED')
 else:
-    print("DENIED")
+    print('DENIED')

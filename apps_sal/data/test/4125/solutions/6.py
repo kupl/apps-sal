@@ -1,5 +1,5 @@
 from math import gcd
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 x = list(map(int, input().split()))
 ans = 0
 for i in range(N):

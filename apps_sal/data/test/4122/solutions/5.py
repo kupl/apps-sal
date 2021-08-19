@@ -1,9 +1,7 @@
 [H, n] = [int(x) for x in input().split()]
 d = [int(x) for x in input().split()]
-
 H_old = H
 mH = H
-
 for i in range(n):
     H += d[i]
     mH = min(mH, H)

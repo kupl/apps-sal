@@ -1,13 +1,7 @@
 import sys
 import io
-
 stream_enable = 0
-
-inpstream = """
-codeforces
-yes
-"""
-
+inpstream = '\ncodeforces\nyes\n'
 if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()

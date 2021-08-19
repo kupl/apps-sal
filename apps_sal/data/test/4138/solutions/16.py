@@ -12,7 +12,7 @@ def cached(func):
 @cached
 def num_count_with_len(l):
     """Количество чисел длины l"""
-    return 10**l - 10**(l - 1) if l > 0 else 0
+    return 10 ** l - 10 ** (l - 1) if l > 0 else 0
 
 
 @cached
@@ -48,7 +48,7 @@ def block_len_sum(block_num):
     """Суммарная длина всех блоков подряд вплоть до блока block_num включительно"""
     l = len(str(block_num))
     len_sum = numbers_len_sum(l - 1)
-    num_count = block_num - (10 ** (l - 1)) + 1
+    num_count = block_num - 10 ** (l - 1) + 1
     return block_len_sum_(l - 1) + len_sum * num_count + l * arith_sum(num_count)
 
 

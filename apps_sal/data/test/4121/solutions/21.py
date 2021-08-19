@@ -9,6 +9,6 @@ for i in range(n):
     else:
         s.pop()
 if len(s) <= 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

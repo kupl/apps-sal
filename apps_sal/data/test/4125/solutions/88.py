@@ -1,10 +1,7 @@
 from math import gcd
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 m = [x] + list(map(int, input().split()))
-
-
 m.sort()
-
 if n == 1:
     print(m[1] - m[0])
 else:
@@ -17,7 +14,6 @@ else:
                 res = gcd(a, b)
             else:
                 res = gcd(res, gcd(a, b))
-        else:
-            if gcd(a, b) % res != 0:
-                res = gcd(res, gcd(a, b))
+        elif gcd(a, b) % res != 0:
+            res = gcd(res, gcd(a, b))
     print(res)

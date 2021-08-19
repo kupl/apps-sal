@@ -11,7 +11,7 @@ def cached(func):
 
 def len_num(l):
     """Количество чисел длины l"""
-    return 10**l - 10**(l - 1) if l > 0 else 0
+    return 10 ** l - 10 ** (l - 1) if l > 0 else 0
 
 
 @cached
@@ -19,7 +19,7 @@ def len_sum(l):
     """Сумма длин всех чисел, длина которых строго меньше чем l"""
     if l <= 1:
         return 0
-    return len_sum(l - 1) + (len_num(l - 1)) * (l - 1)
+    return len_sum(l - 1) + len_num(l - 1) * (l - 1)
 
 
 def block_len(block_num):
@@ -48,7 +48,7 @@ def block_len_sum(block_num):
     """
     l = len(str(block_num))
     ls = len_sum(l)
-    ln = block_num - (10 ** (l - 1)) + 1
+    ln = block_num - 10 ** (l - 1) + 1
     return block_len_sum_(l) + ls * ln + l * arith_sum(ln)
 
 

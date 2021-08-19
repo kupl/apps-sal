@@ -10,7 +10,7 @@ def gcd_list(numbers):
     return reduce(math.gcd, numbers)
 
 
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = list(map(int, input().split()))
 a.append(x)
 a.sort()

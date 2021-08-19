@@ -1,5 +1,5 @@
 import math
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 xl = list(map(int, input().split()))
 dis = []
 ans = 0

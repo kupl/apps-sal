@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2020/08/28
 
 @author: harurun
-'''
+"""
 
 
 def main():
@@ -11,8 +11,7 @@ def main():
     pin = sys.stdin.readline
     pout = sys.stdout.write
     perr = sys.stderr.write
-
-    N, X = map(int, pin().split())
+    (N, X) = map(int, pin().split())
     x = list(map(int, pin().split()))
     m = abs(x[0] - X)
     for i in range(1, N):

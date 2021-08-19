@@ -4,12 +4,11 @@ N = int(input())
 def dfs(current, judge, count):
     if current > N:
         return
-    if judge == 0b111:
+    if judge == 7:
         count.append(1)
-
-    dfs(current * 10 + 7, judge | 0b100, count)
-    dfs(current * 10 + 5, judge | 0b010, count)
-    dfs(current * 10 + 3, judge | 0b001, count)
+    dfs(current * 10 + 7, judge | 4, count)
+    dfs(current * 10 + 5, judge | 2, count)
+    dfs(current * 10 + 3, judge | 1, count)
 
 
 cnt = []

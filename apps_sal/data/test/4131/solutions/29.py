@@ -1,11 +1,9 @@
-N, M = list(map(int, input().split()))
-
+(N, M) = list(map(int, input().split()))
 C = []
 for i in range(M):
-    p, y = list(map(int, input().split()))
+    (p, y) = list(map(int, input().split()))
     C.append([i, p, y])
 C.sort(key=lambda x: (x[1], x[2]))
-
 ans = []
 k = C[0][1]
 n = 1
@@ -19,4 +17,4 @@ for i in range(M):
     n += 1
 ans.sort(key=lambda x: x[0])
 for i in range(M):
-    print((ans[i][1]))
+    print(ans[i][1])

@@ -13,6 +13,6 @@ ans = 0
 for k in range(3, len(NS) + 1):
     for i in iter_p_adic(k):
         ls = list(i)
-        if ls.count('3') > 0 and ls.count('5') > 0 and ls.count('7') > 0 and int(''.join(ls)) <= N:
+        if ls.count('3') > 0 and ls.count('5') > 0 and (ls.count('7') > 0) and (int(''.join(ls)) <= N):
             ans += 1
 print(ans)

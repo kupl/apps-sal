@@ -7,7 +7,6 @@ for i in range(len(a)):
             q += 1
     else:
         q += 1
-
 if q == len(a):
     print('APPROVED')
 else:

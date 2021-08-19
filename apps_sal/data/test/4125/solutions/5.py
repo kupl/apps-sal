@@ -1,5 +1,5 @@
 import math
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 xlist = list(map(int, input().split()))
 ylist = []
 for i in range(n):

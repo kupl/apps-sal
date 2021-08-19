@@ -6,6 +6,6 @@ for i in range(1, 10):
         if tar > 0 and tar < 10:
             flag = 1
 if flag == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

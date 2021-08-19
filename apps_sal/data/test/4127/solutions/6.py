@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 a = int(a)
 b = int(b.replace('.', ''))
-print((a * b // 100))
+print(a * b // 100)

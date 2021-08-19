@@ -1,9 +1,9 @@
 N = int(input())
-T = ("3", "5", "7")
+T = ('3', '5', '7')
 
 
 def dfs(x):
-    if x != "" and int(x) > N:
+    if x != '' and int(x) > N:
         return 0
     res = 0
     if len(set(x)) == 3:
@@ -13,4 +13,4 @@ def dfs(x):
     return res
 
 
-print(dfs(""))
+print(dfs(''))

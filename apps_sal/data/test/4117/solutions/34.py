@@ -5,7 +5,6 @@ def cin():
 N = int(input())
 L = cin()
 count = 0
-
 for i in range(0, N - 2):
     for j in range(1 + i, N - 1, 1):
         for k in range(1 + j, N, 1):
@@ -15,5 +14,4 @@ for i in range(0, N - 2):
                 continue
             if data[0] + data[1] > data[2]:
                 count += 1
-
 print(count)

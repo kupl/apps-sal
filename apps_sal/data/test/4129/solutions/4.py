@@ -10,16 +10,16 @@ def dfs(u):
 
 
 sys.setrecursionlimit(6000)
-n, m, s = map(int, input().split())
+(n, m, s) = map(int, input().split())
 g = [[] for _ in range(n)]
 for _ in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     g[u - 1].append(v - 1)
-avail, topo = [True] * n, []
-for i, a in enumerate(avail):
+(avail, topo) = ([True] * n, [])
+for (i, a) in enumerate(avail):
     if a:
         dfs(i)
-avail, res = [True] * n, 0
+(avail, res) = ([True] * n, 0)
 dfs(s - 1)
 for i in reversed(topo):
     if avail[i]:
