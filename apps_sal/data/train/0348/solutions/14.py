@@ -1,10 +1,11 @@
 class Solution:
+
     def maximumSum(self, arr: List[int]) -> int:
         if len(arr) == 1:
             return arr[0]
-        dps = [elem for elem in arr]  # dps[i] LCS starting at i
-        dpe = [elem for elem in arr]  # dpe[i] LCS ending at i
-        dpt = [elem for elem in arr]  # dpt[i] = dpe[i-1] + dps[i+1]
+        dps = [elem for elem in arr]
+        dpe = [elem for elem in arr]
+        dpt = [elem for elem in arr]
         for i in range(len(arr)):
             if i != 0:
                 dpe[i] = max(dpe[i], dpe[i] + dpe[i - 1])
@@ -17,5 +18,4 @@ class Solution:
                 dpt[i] = dps[i + 1]
             else:
                 dpt[i] = dpe[i - 1]
-        # print(dps,dpe,dpt)
         return max(max(dpt), max(dpe), max(dps))

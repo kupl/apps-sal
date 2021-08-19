@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSum(self, nums: List[int]) -> int:
         maxi = nums[0]
         sumi = nums[0]
@@ -15,10 +16,8 @@ class Solution:
         right = right[::-1]
         l = len(nums)
         res = 0
-        # print(left)
-        # print(right)
         for i in range(l):
-            res = max(res, (left[i] + right[i] - (2 * nums[i])))
+            res = max(res, left[i] + right[i] - 2 * nums[i])
         if res != 0:
             return res
         return max(nums)

@@ -1,25 +1,20 @@
-# 1591. Strange Printer II
-
 def walk(grid):
-    for i, row in enumerate(grid):
-        for j, elem in enumerate(row):
+    for (i, row) in enumerate(grid):
+        for (j, elem) in enumerate(row):
             yield ((i, j), elem)
 
 
 def extend(bound, ij):
-    i, j = ij
+    (i, j) = ij
     if bound is None:
         return (ij, ij)
     else:
         ((i0, j0), (i1, j1)) = bound
-        return (
-            (min(i0, i), min(j0, j)),
-            (max(i1, i), max(j1, j)),
-        )
+        return ((min(i0, i), min(j0, j)), (max(i1, i), max(j1, j)))
 
 
 def contains(bound, ij):
-    i, j = ij
+    (i, j) = ij
     ((i0, j0), (i1, j1)) = bound
     return i0 <= i <= i1 and j0 <= j <= j1
 
@@ -38,15 +33,12 @@ def has_toposort(prereq):
 
 
 def printable(grid):
-    m, n = len(grid), len(grid[0])
+    (m, n) = (len(grid), len(grid[0]))
     assert m >= 1 and n >= 1
-
     colors = {c for row in grid for c in row}
     bounds = {c: None for c in colors}
-
     for ((i, j), c) in walk(grid):
         bounds[c] = extend(bounds[c], (i, j))
-
     prereq = {c: set() for c in colors}
     for ((i, j), c) in walk(grid):
         for c2 in colors:
@@ -54,10 +46,10 @@ def printable(grid):
                 continue
             if contains(bounds[c2], (i, j)):
                 prereq[c].add(c2)
-
     return has_toposort(prereq)
 
 
 class Solution:
+
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
         return printable(targetGrid)

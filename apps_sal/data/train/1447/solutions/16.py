@@ -1,7 +1,6 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
-    ingredients = list(map(int, input().split(" ")))
+    ingredients = list(map(int, input().split(' ')))
     ls = [ingredients[0]]
     count = []
     index = []
@@ -22,8 +21,6 @@ for _ in range(int(input())):
             count.append(c)
             c = 1
     if c in count or flag == 0:
-        print("NO")
+        print('NO')
         continue
-    print("YES")
-
-    # for i in range(n):
+    print('YES')

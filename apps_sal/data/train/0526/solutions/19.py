@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 import math
 from itertools import permutations, combinations
@@ -27,7 +26,7 @@ def main():
         s = input()
         st = s[0]
         i = 1
-        c1, c2 = 1, 0
+        (c1, c2) = (1, 0)
         while i < len(s):
             if s[i] == s[i - 1]:
                 j = i

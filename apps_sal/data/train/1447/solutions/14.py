@@ -5,20 +5,18 @@ for _ in range(int(input())):
     count = []
     c = 1
     d = l[0]
-    ans = "YES"
+    ans = 'YES'
     for i in l[1:]:
         if d == i:
             c += 1
+        elif c not in count and i not in ing:
+            count.append(c)
+            c = 1
+            d = i
+            ing.append(d)
         else:
-            if c not in count and (i not in ing):
-                count.append(c)
-                c = 1
-                d = i
-                ing.append(d)
-            else:
-                ans = "NO"
-                break
-        # print(ing,count)
+            ans = 'NO'
+            break
     if c in count:
-        ans = "NO"
+        ans = 'NO'
     print(ans)

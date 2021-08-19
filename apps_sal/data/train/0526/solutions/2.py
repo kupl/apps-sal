@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     c = input()
@@ -17,7 +16,6 @@ while t > 0:
             sum2 += 8
         else:
             q += 1
-
     if q > 1:
         sum2 += 32
     print(sum1 - sum2)

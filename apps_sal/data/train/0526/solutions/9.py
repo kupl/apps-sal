@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 for i in range(n):
     s = str(input())
@@ -9,12 +8,12 @@ for i in range(n):
         if s[i] == s[i + 1]:
             t += 1
         else:
-            if(t >= 1):
+            if t >= 1:
                 n_l += 32 + 8
             else:
                 n_l += 8
             t = 0
-    if(t >= 1):
+    if t >= 1:
         n_l += 32 + 8
     else:
         n_l += 8

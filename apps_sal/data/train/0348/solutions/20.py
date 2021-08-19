@@ -1,7 +1,6 @@
 class Solution:
-    def maximumSum(self, arr: List[int]) -> int:
-        # Make a dp[n][2], where dp[i][0] is the largest sum of subarry ending at i without removing any element and dp[i][1] represents largest sum of subarray ending at i after removal of at most one element.
 
+    def maximumSum(self, arr: List[int]) -> int:
         n = len(arr)
         dp = [[0 for _ in range(2)] for _ in range(n)]
         dp[0] = [arr[0]] * 2
