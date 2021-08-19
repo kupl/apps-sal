@@ -7,5 +7,5 @@ def multiply(n):
     if n < 0:
         digits = digits - 1
     for x in range(digits - 1):
-        sum = (sum * 5)
+        sum = sum * 5
     return sum

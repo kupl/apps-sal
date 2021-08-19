@@ -8,7 +8,6 @@ def alphabet_war(fight):
         elif x in 'mqdz':
             p2 = {'m': 4, 'q': 3, 'd': 2, 'z': 1}
             right += p2.get(x)
-
     if left != right:
         return 'Left side wins!' if left > right else 'Right side wins!'
     else:

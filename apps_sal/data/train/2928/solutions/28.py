@@ -9,8 +9,8 @@ def alphabet_war(fight):
         elif i in left:
             l += left[i]
     if l > r:
-        return "Left side wins!"
+        return 'Left side wins!'
     elif r > l:
-        return "Right side wins!"
+        return 'Right side wins!'
     else:
         return "Let's fight again!"

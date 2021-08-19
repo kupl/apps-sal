@@ -1,4 +1,4 @@
-is_vowel = set("aeiouAEIOU").__contains__
+is_vowel = set('aeiouAEIOU').__contains__
 
 
 def count_vowels(s=''):

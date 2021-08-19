@@ -1,4 +1,5 @@
 def pascal(p):
+
     def create_row(n):
         row = [1]
         for k in range(n):

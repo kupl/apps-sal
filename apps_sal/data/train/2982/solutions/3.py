@@ -7,6 +7,5 @@ def pascal(p):
                 row.append(1)
             else:
                 row.append(ans[i - 1][k - 1] + ans[i - 1][k])
-
         ans.append(row)
     return ans

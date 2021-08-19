@@ -7,4 +7,4 @@ def find_multiples(integer, limit):
         counter += 1
         count += 1
     output.pop()
-    return(output)
+    return output

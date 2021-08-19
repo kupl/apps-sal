@@ -1,8 +1,8 @@
 def divisors(n):
     count = 2
     i = 2
-    while(i**2 < n):
-        if(n % i == 0):
+    while i ** 2 < n:
+        if n % i == 0:
             count += 2
         i += 1
     if i ** 2 == n:
@@ -14,6 +14,6 @@ def find_min_num(num):
     i = 2
     while True:
         d = divisors(i)
-        if (d == num):
+        if d == num:
             return i
         i += 1

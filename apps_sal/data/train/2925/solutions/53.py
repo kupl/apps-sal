@@ -5,4 +5,4 @@ def multiply(n):
     else:
         l = len(n) - 1
     n = int(n)
-    return n * (5**l)
+    return n * 5 ** l

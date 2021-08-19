@@ -10,7 +10,6 @@ def sum_two_smallest_numbers(numbers):
     for i in range(0, len(num)):
         if num[i] < firstnum:
             firstnum = num[i]
-
         else:
             {}
     for i in range(0, len(num)):
@@ -18,7 +17,6 @@ def sum_two_smallest_numbers(numbers):
             {}
         elif num[i] < secondnum:
             secondnum = num[i]
-
         else:
             {}
     sum = firstnum + secondnum

@@ -14,7 +14,7 @@ def PrimeFactorsSum(nr):
             cs += ct
         s *= cs
     if nr > 2:
-        s *= (nr + 1)
+        s *= nr + 1
         res.append(nr)
     if res and s % sum(res) == 0:
         return True

@@ -1,11 +1,7 @@
 def summation(num):
-
     summa = 0
-
     for i in range(1, num + 1):
-
         summa += i
-
     return summa
 
 

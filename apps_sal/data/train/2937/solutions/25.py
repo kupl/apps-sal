@@ -1,1 +1,2 @@
-def between(k, l): return [*list(range(k, l + 1))]
+def between(k, l):
+    return [*list(range(k, l + 1))]

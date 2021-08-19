@@ -2,7 +2,7 @@ import re
 
 
 def get_age(age):
-    r = re.compile(r"^(\d+) years old$")
+    r = re.compile('^(\\d+) years old$')
     m = r.match(age)
     if m:
         return int(m.group(1))

@@ -8,4 +8,4 @@ def alphabet_war(fight):
             rarr.append(right.get(s))
         elif s in 'wpbs':
             larr.append(left.get(s))
-    return 'Left side wins!' if sum(larr) > sum(rarr) else 'Right side wins!' if sum(rarr) > sum(larr) else 'Let\'s fight again!'
+    return 'Left side wins!' if sum(larr) > sum(rarr) else 'Right side wins!' if sum(rarr) > sum(larr) else "Let's fight again!"

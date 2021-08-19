@@ -8,4 +8,4 @@ def coprime(n, m):
 
 
 def are_coprime(n, m):
-    return (coprime(n, m) == 1)
+    return coprime(n, m) == 1

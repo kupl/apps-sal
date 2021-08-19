@@ -2,9 +2,9 @@ a = [1] * 20000
 a[0] = a[1] = 0
 for i in range(2, 20000):
     if a[i]:
-        for j in range(i**2, 20000, i):
+        for j in range(i ** 2, 20000, i):
             a[j] = 0
-a = [i for i, x in enumerate(a) if x]
+a = [i for (i, x) in enumerate(a) if x]
 
 
 def ds_multof_pfs(a, b):
@@ -13,7 +13,7 @@ def ds_multof_pfs(a, b):
 
 def divisors(n):
     r = 0
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if not n % i:
             r += i
             if i * i != n:

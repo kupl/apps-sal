@@ -4,4 +4,4 @@ def get_drink_by_profession(param):
     if param in menu.keys():
         return menu[param]
     else:
-        return "Beer"
+        return 'Beer'

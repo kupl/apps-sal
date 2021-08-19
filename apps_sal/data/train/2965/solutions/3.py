@@ -1,7 +1,7 @@
 def solve_eq(eq):
     for i in range(3):
         if eq[i][i] == 0:
-            eq[i], eq[i + 1] = eq[i + 1], eq[i]
+            (eq[i], eq[i + 1]) = (eq[i + 1], eq[i])
         eq[i] = [x / eq[i][i] for x in eq[i]]
         for j in range(3):
             if i != j:

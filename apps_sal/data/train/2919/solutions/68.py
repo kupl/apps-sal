@@ -4,11 +4,11 @@ def encode(message, key):
     value = 0
     res = []
     n = len(message)
-    key_index = list(i for i in str(key))
-    m_index = list(j for j in message)
+    key_index = list((i for i in str(key)))
+    m_index = list((j for j in message))
     m = len(str(key)) - 1
     while count < n:
-        res.append(alpha[m_index[count]] + int((key_index[value])))
+        res.append(alpha[m_index[count]] + int(key_index[value]))
         if value == m:
             value = 0
         else:

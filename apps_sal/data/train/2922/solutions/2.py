@@ -12,4 +12,4 @@ def crap(garden, bags, cap):
     if a > b:
         return 'Cr@p'
     else:
-        return "Clean"
+        return 'Clean'

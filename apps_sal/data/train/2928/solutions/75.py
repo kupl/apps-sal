@@ -23,4 +23,4 @@ def alphabet_war(fight):
     if left > right:
         return 'Left side wins!'
     else:
-        return 'Let\'s fight again!'
+        return "Let's fight again!"

@@ -1,5 +1,5 @@
 def encode(string):
-    return ''.join([(i * 3) for i in ''.join([(bin(i)[2:]).zfill(8) for i in [ord(i) for i in string]])])
+    return ''.join([i * 3 for i in ''.join([bin(i)[2:].zfill(8) for i in [ord(i) for i in string]])])
 
 
 def decode(bits):

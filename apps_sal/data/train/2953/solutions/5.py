@@ -2,6 +2,7 @@ from collections import Counter
 
 
 def numericals(s):
+
     def f(s):
         cnts = Counter()
         for c in s:

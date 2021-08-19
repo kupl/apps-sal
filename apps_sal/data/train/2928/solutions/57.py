@@ -8,8 +8,8 @@ def alphabet_war(fight):
         elif l in right_power:
             count -= right_power[l]
     if count < 0:
-        return "Right side wins!"
+        return 'Right side wins!'
     if count > 0:
-        return "Left side wins!"
+        return 'Left side wins!'
     elif count == 0:
         return "Let's fight again!"

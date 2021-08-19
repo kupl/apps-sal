@@ -29,9 +29,8 @@ def factors_of(n):
 
 def filter_func(n):
     factors = factors_of(n)
-    pfs = sum(p * i for p, i in factors)
-    ds = reduce(op.mul, ((p**(i + 1) - 1) / (p - 1) for p, i in factors))
-
+    pfs = sum((p * i for (p, i) in factors))
+    ds = reduce(op.mul, ((p ** (i + 1) - 1) / (p - 1) for (p, i) in factors))
     return ds % pfs == 0
 
 

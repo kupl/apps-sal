@@ -2,13 +2,13 @@ import numpy as np
 
 
 def watch_pyramid_from_the_side(characters):
-    return characters and '\n'.join((i + i * level * 2)
-                                    .center(len(characters) * 2 - 1) for
-                                    level, i in enumerate(characters[::-1])) or characters
+    return characters and '\n'.join(((i + i * level * 2).center(len(characters) * 2 - 1) for (level, i) in enumerate(characters[::-1]))) or characters
 
 
 def watch_pyramid_from_above(characters):
-    def to_char(x): return chr(x)
+
+    def to_char(x):
+        return chr(x)
     int_to_char = np.vectorize(to_char)
     try:
         arr = np.asarray([ord(characters[-1])])[np.newaxis]
@@ -24,5 +24,4 @@ def count_visible_characters_of_the_pyramid(characters):
 
 
 def count_all_characters_of_the_pyramid(characters):
-    return characters and sum((1 + level * 2) ** 2
-                              for level, _ in enumerate(characters)) or -1
+    return characters and sum(((1 + level * 2) ** 2 for (level, _) in enumerate(characters))) or -1

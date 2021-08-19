@@ -1,2 +1,2 @@
 def get_age(age):
-    return int(__import__('re').search(r'\d+', age).group(0))
+    return int(__import__('re').search('\\d+', age).group(0))

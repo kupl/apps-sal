@@ -1,1 +1,1 @@
-is_vowel = set("aeiouAEIOU").__contains__
+is_vowel = set('aeiouAEIOU').__contains__

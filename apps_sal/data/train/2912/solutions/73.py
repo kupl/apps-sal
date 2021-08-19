@@ -4,5 +4,4 @@ def find_multiples(integer, limit):
     while integer <= limit:
         l.append(integer)
         integer += i
-
     return l

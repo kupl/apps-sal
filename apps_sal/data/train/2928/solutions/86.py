@@ -8,4 +8,4 @@ def alphabet_war(fight):
             l += db[i]
         elif i in 'mqdz':
             r += db[i]
-    return 'Left side wins!' if l > r else 'Right side wins!' if r > l else 'Let\'s fight again!'
+    return 'Left side wins!' if l > r else 'Right side wins!' if r > l else "Let's fight again!"

@@ -3,5 +3,4 @@ def divisible_by(numbers, divisor):
     for divisible in numbers:
         if divisible % divisor == 0:
             factors.append(divisible)
-
     return factors

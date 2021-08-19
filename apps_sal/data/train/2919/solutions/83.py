@@ -1,5 +1,5 @@
 def encode(message, key):
-    L1 = "abcdefghijklmnopqrstuvwxyz"
+    L1 = 'abcdefghijklmnopqrstuvwxyz'
     L2 = []
     number = 0
     L3 = []

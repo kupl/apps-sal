@@ -12,7 +12,7 @@ def prod_int_part(n):
     m = n
     for i in range(2, n // 2 + 1):
         if n % i == 0:
-            while (m % i == 0):
+            while m % i == 0:
                 m /= i
                 y.append(i)
     return [x, y]

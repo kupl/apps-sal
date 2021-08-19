@@ -10,5 +10,4 @@ def encode(m, key):
         i += 1
         if i >= len_str_key:
             i = 0
-
-    return [a + b for a, b in zip(array_key, ords_list)]
+    return [a + b for (a, b) in zip(array_key, ords_list)]

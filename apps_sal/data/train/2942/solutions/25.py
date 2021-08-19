@@ -1,5 +1,5 @@
 def fold_to(distance):
-    paperThickness = .0001
+    paperThickness = 0.0001
     folds = 0
     if distance < 0:
         return None

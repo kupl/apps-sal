@@ -6,5 +6,4 @@ def multiply(n):
     n *= 5 ** len(str(n))
     if minus:
         n *= -1
-
     return n

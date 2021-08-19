@@ -3,7 +3,6 @@ def fold_to(d, t=0.0001):
         return 0
     elif d <= 0:
         return None
-
     c = 0
     while t < d:
         c += 1

@@ -12,4 +12,4 @@ def alphabet_war(fight):
         return 'Left side wins!'
     elif left < right:
         return 'Right side wins!'
-    return 'Let\'s fight again!'
+    return "Let's fight again!"

@@ -9,7 +9,4 @@ def f(n):
 
 def pattern(n):
     m = n * 2 - 1
-    return '\n'.join(
-        '{:^{}}'.format(f(i), m)
-        for i in range(1, n + 1)
-    )
+    return '\n'.join(('{:^{}}'.format(f(i), m) for i in range(1, n + 1)))

@@ -3,4 +3,4 @@ def x(n):
     for i in range(len(ret)):
         ret[i][i] = '■'
         ret[i][-1 - i] = '■'
-    return '\n'.join(''.join(row) for row in ret)
+    return '\n'.join((''.join(row) for row in ret))

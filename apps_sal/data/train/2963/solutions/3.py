@@ -1,1 +1,2 @@
-def swap(s): return s.swapcase()
+def swap(s):
+    return s.swapcase()

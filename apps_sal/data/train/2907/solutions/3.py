@@ -7,7 +7,7 @@ for n in range(1, 1801):
 
 
 def combs_non_empty_boxesII(n):
-    tot, max, index = 0, 1, 1
+    (tot, max, index) = (0, 1, 1)
     for ix in range(len(S[n - 1])):
         val = S[n - 1][ix]
         tot = tot + val

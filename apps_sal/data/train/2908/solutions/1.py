@@ -1,10 +1,10 @@
 def flatten(dictionary):
     result = {}
-    for k, v in dictionary.items():
+    for (k, v) in dictionary.items():
         if v == {}:
-            result[k] = ""
+            result[k] = ''
         elif isinstance(v, dict):
-            for l, w in flatten(v).items():
+            for (l, w) in flatten(v).items():
                 result[k + '/' + l] = w
         else:
             result[k] = v

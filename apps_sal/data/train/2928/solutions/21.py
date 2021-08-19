@@ -7,8 +7,7 @@ def points(s, dictionary):
 
 
 def alphabet_war(fight):
-    left, right = points(fight, LEFT), points(fight, RIGHT)
-
+    (left, right) = (points(fight, LEFT), points(fight, RIGHT))
     if left > right:
         return 'Left side wins!'
     elif right > left:

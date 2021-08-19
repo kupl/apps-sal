@@ -11,6 +11,7 @@ def find_digit(num, nth):
 
 
 class TestFindDigit(unittest.TestCase):
+
     def test_should_return_negative_one_given_nth_is_negative(self):
         negative_nth = -123
         self.assertEqual(find_digit(num=-12345, nth=negative_nth), -1)

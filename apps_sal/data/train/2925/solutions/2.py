@@ -1,1 +1,2 @@
-def multiply(n): return n * 5**len(str(abs(n)))
+def multiply(n):
+    return n * 5 ** len(str(abs(n)))

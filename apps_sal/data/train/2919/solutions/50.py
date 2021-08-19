@@ -3,5 +3,5 @@ def encode(message, key):
     key = list(str(key))
     message = list(message)
     for i in range(len(message)):
-        message[i] = (ord(message[i]) - 96) + (int(key[i % len(key)]))
+        message[i] = ord(message[i]) - 96 + int(key[i % len(key)])
     return message

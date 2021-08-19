@@ -12,7 +12,6 @@ def divisible_by(numbers, divisor):
     """
     divisibleNums = []
     for num in numbers:
-        if((num % divisor) == 0):
+        if num % divisor == 0:
             divisibleNums.append(num)
-
     return divisibleNums

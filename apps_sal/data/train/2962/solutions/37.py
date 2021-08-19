@@ -5,5 +5,4 @@ def divisible_by(num, div):
         if num[i] % div == 0:
             res.append(num[i])
         i += 1
-
     return res

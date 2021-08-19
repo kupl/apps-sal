@@ -1,4 +1,3 @@
-
 def find_digit(num, nth):
     y = list(str(num))
     if nth > len(y):

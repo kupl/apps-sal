@@ -1,6 +1,5 @@
 import string
 import numpy as np
-
 alpha = list(string.ascii_lowercase)
 values = list(range(1, 27))
 dictionary = dict(zip(alpha, values))

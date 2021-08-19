@@ -2,7 +2,7 @@ def optimal_number_of_coins(n, coins):
     dicto = {}
 
     def optimal_number_of_coinss(n, coins, mino=0, indo=0):
-        key = f"{n}mino:{mino}"
+        key = f'{n}mino:{mino}'
         if key in dicto:
             return dicto[key]
         if not n:
