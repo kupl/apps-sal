@@ -4,7 +4,7 @@ def over_the_road(address, n):
     y = (address - 1) // 2
     if address % 2 == 0:
         z = -totale + 1 + x * 4
-        return (address + z)
+        return address + z
     else:
         z = totale - 1 - y * 4
-        return(address + z)
+        return address + z

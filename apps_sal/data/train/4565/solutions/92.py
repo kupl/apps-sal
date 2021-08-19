@@ -6,4 +6,4 @@ def replace_dots(s):
         return ''
     if '.' not in s:
         return 'no dots'
-    return re.sub(r"\.", "-", s)
+    return re.sub('\\.', '-', s)

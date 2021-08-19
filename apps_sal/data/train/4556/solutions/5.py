@@ -3,6 +3,6 @@ def count_me(data):
         return ''
     output = ''
     from itertools import groupby
-    for k, v in groupby(data):
+    for (k, v) in groupby(data):
         output += str(len(list(v))) + k
     return output

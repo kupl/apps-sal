@@ -1,6 +1,6 @@
 def caesar_crypto_encode(text, shift):
     if not text or not text.strip():
-        return''
+        return ''
     a = 'abcdefghijklmnopqrstuvwxyz'
     a += a.upper()
     shift %= len(a)

@@ -1,4 +1,5 @@
 def hop_across(lst):
+
     def one_side(lst):
         i = 0
         steps = 0

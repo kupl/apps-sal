@@ -6,5 +6,4 @@ def row_weights(l):
             li_eve.append(l[i])
         else:
             li_odd.append(l[i])
-
-    return(sum(li_eve), sum(li_odd))
+    return (sum(li_eve), sum(li_odd))

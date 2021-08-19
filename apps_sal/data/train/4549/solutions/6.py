@@ -2,7 +2,7 @@ def lemming_battle(k, a, b):
     a.sort(reverse=True)
     b.sort(reverse=True)
     while a and b:
-        for i, j in zip(a[:k], b[:k]):
+        for (i, j) in zip(a[:k], b[:k]):
             temp = max(i, j)
             a.remove(i)
             b.remove(j)
@@ -14,4 +14,4 @@ def lemming_battle(k, a, b):
                 b.append(j - i)
         a.sort(reverse=True)
         b.sort(reverse=True)
-    return [[f"Green wins: {' '.join(map(str, a))}", f"Blue wins: {' '.join(map(str, b))}"][len(b) > 0], "Green and Blue died"][len(a) == len(b)]
+    return [[f"Green wins: {' '.join(map(str, a))}", f"Blue wins: {' '.join(map(str, b))}"][len(b) > 0], 'Green and Blue died'][len(a) == len(b)]

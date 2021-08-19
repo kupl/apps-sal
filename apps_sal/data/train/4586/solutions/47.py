@@ -1,13 +1,6 @@
-KEYBOARD_STRING = "a    b   c   d   e   1   2   3 \
-                    f   g   h   i   j   4   5   6 \
-                    k   l   m   n   o   7   8   9 \
-                    p   q   r   s   t   .   @   0 \
-                    u   v   w   x   y   z   _   /"
-
+KEYBOARD_STRING = 'a    b   c   d   e   1   2   3                     f   g   h   i   j   4   5   6                     k   l   m   n   o   7   8   9                     p   q   r   s   t   .   @   0                     u   v   w   x   y   z   _   /'
 keyboard_list = list(KEYBOARD_STRING.split())
-
 keyboard_dictionary = {}
-
 n = 0
 for i in keyboard_list:
     row = n // 8

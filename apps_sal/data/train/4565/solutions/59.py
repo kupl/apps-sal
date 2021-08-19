@@ -1,2 +1,2 @@
 def replace_dots(stroka):
-    return stroka.replace(".", "-")
+    return stroka.replace('.', '-')

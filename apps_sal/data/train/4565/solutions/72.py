@@ -1,3 +1,3 @@
 def replace_dots(strng):
-    strng = strng.replace(".", "-")
+    strng = strng.replace('.', '-')
     return strng

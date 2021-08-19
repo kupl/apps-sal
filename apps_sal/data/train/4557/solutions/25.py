@@ -11,4 +11,4 @@ def row_weights(array):
             team2.append(array[e + 1])
             team1.append(array[e])
             e += 2
-    return sum(team1), sum(team2)
+    return (sum(team1), sum(team2))

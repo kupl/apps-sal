@@ -1,5 +1,5 @@
 def replace_dots(s):
-    if s == "":
-        return ""
+    if s == '':
+        return ''
     else:
-        return s.replace(".", "-")
+        return s.replace('.', '-')

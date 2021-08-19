@@ -2,7 +2,7 @@ from math import atan, pi
 
 
 def get_score(x, y):
-    d = (x * x + y * y) ** .5
+    d = (x * x + y * y) ** 0.5
     if d < 6.35:
         return 'DB'
     if d < 15.9:

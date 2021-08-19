@@ -1,2 +1,2 @@
 def validate_code(code):
-    return (str(code)[0]) <= '3'
+    return str(code)[0] <= '3'

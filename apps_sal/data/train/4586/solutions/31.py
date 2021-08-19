@@ -1,9 +1,16 @@
 s = 'abcde123fghij456klmno789pqrst.@0uvwxyz_/'
-def dx(c1, c2): return abs(s.index(c1) % 8 - s.index(c2) % 8)
-def dy(c1, c2): return abs(s.index(c1) // 8 - s.index(c2) // 8)
 
 
-def d(c1, c2): return 1 + dx(c1, c2) + dy(c1, c2)
+def dx(c1, c2):
+    return abs(s.index(c1) % 8 - s.index(c2) % 8)
+
+
+def dy(c1, c2):
+    return abs(s.index(c1) // 8 - s.index(c2) // 8)
+
+
+def d(c1, c2):
+    return 1 + dx(c1, c2) + dy(c1, c2)
 
 
 def tv_remote(word, r=0):

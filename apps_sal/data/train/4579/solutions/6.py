@@ -6,7 +6,7 @@ def pattern(n):
     strng = ''
     res.append(current * n)
     for i in range(1, n):
-        strng = (strng + current)
+        strng = strng + current
         if current == '0':
             res.append(strng.ljust(n, '9'))
             current = '9'

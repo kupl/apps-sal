@@ -5,10 +5,10 @@ SCORES = 'DB SB {} T{} {} D{} X'.split()
 
 
 def get_score(x, y):
-    r, phi = polar(x + 1j * y)
-    r, phi = 2 * r, phi + pi / 20
+    (r, phi) = polar(x + 1j * y)
+    (r, phi) = (2 * r, phi + pi / 20)
     section = SECTIONS[int(10 * phi // pi)]
-    for d, f in zip(RINGS, SCORES):
+    for (d, f) in zip(RINGS, SCORES):
         if r < d:
             return f.format(section)
     return SCORES[-1]

@@ -1,4 +1,5 @@
-def f(n): return list(g(n))
+def f(n):
+    return list(g(n))
 
 
 def g(n):
@@ -6,4 +7,4 @@ def g(n):
     for i in range(n + 1):
         yield v
         v *= 2
-    yield v - 1
+    yield (v - 1)

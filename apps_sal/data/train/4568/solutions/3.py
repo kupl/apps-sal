@@ -2,14 +2,14 @@ def find_min_max_product(arr, k):
     if k > len(arr):
         return None
     arr.sort(key=abs, reverse=True)
-    neg, pos, prod = None, None, 1
+    (neg, pos, prod) = (None, None, 1)
     for i in range(k):
         if arr[i] < 0:
             neg = arr[i]
         if arr[i] > 0:
             pos = arr[i]
         prod *= arr[i]
-    neg1, pos1 = None, None
+    (neg1, pos1) = (None, None)
     for i in range(k, len(arr)):
         if not neg1 and arr[i] < 0:
             neg1 = arr[i]
@@ -27,4 +27,4 @@ def find_min_max_product(arr, k):
         for i in range(-k, 0):
             prod *= arr[i]
         candidates.append(prod)
-    return min(candidates), max(candidates)
+    return (min(candidates), max(candidates))

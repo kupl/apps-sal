@@ -14,13 +14,11 @@ def prime_or_composite(n):
                 return 'Probable Prime'
             x = pow(x, 2, n)
         return x == n - 1
-
     s = 0
     d = n - 1
     while d % 2 == 0:
         d >>= 1
         s += 1
-
     for i in range(2, 20):
         a = randrange(2, n)
         if not check(a, s, d, n):

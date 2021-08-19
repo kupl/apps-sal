@@ -10,8 +10,8 @@ def winner(deck_Steve, deck_Josh):
         else:
             continue
     if Steve > Josh:
-        return "Steve wins " + str(Steve) + " to " + str(Josh)
+        return 'Steve wins ' + str(Steve) + ' to ' + str(Josh)
     elif Josh > Steve:
-        return "Josh wins " + str(Josh) + " to " + str(Steve)
+        return 'Josh wins ' + str(Josh) + ' to ' + str(Steve)
     else:
-        return "Tie"
+        return 'Tie'

@@ -1,11 +1,5 @@
 def tv_remote(word):
-    keyboard = [
-        'abcde123',
-        'fghij456',
-        'klmno789',
-        'pqrst.@0',
-        'uvwxyz_/'
-    ]
+    keyboard = ['abcde123', 'fghij456', 'klmno789', 'pqrst.@0', 'uvwxyz_/']
     total = 0
     r_start = 0
     c_start = 0

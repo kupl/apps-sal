@@ -9,6 +9,5 @@ def build_a_wall(x=None, y=None):
         for i in range(x):
             r.append(d[i % 2])
         return '\n'.join(r[::-1])
-
     except:
         return

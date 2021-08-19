@@ -1,6 +1,6 @@
 def are_similar(a, b):
     swap = 0
-    for idx, x in enumerate(a):
+    for (idx, x) in enumerate(a):
         if a.count(x) != b.count(x):
             return False
         if x != b[idx]:

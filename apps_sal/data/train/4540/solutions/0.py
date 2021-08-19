@@ -3,9 +3,9 @@ def prime_or_composite(n):
         return 'Probable Prime'
     if n % 2 == 0:
         return 'Composite'
-    d, r = n - 1, 0
+    (d, r) = (n - 1, 0)
     while d % 2 == 0:
-        d, r = d // 2, r + 1
+        (d, r) = (d // 2, r + 1)
     for a in [2, 31]:
         x = pow(a, d, n)
         if x in (1, n - 1):

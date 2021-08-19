@@ -1,5 +1,4 @@
 import math
-
 PI = math.pi
 
 
@@ -29,14 +28,13 @@ def calc_angle(x, y):
 
 def get_score(x, y):
     ang = calc_angle(x, y)
-    for i, c in enumerate(num_cutoffs):
+    for (i, c) in enumerate(num_cutoffs):
         if ang < c:
             numval = hitvals[i]
             break
     else:
         numval = 6
-
-    dist = math.sqrt(x**2 + y**2)
+    dist = math.sqrt(x ** 2 + y ** 2)
     if dist > 170:
         return 'X'
     if dist > 162:

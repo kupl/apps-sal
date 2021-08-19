@@ -3,7 +3,7 @@ def zfunc(str_):
         return []
     n = len(str_)
     z = [0] * n
-    left, right, z[0] = 0, 0, n
+    (left, right, z[0]) = (0, 0, n)
     for i in range(1, n):
         if i < right:
             k = i - left

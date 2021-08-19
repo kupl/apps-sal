@@ -5,6 +5,6 @@ def tv_remote(word):
     for x in word:
         for i in range(5):
             if x in t[i]:
-                r += abs(pos[1] - (t[i].index(x))) + 1 + abs(pos[0] - i)
+                r += abs(pos[1] - t[i].index(x)) + 1 + abs(pos[0] - i)
                 pos = (i, t[i].index(x))
     return r

@@ -4,5 +4,4 @@ def invert(lst):
             lst[i] = -abs(lst[i])
         else:
             lst[i] = abs(lst[i])
-
     return lst

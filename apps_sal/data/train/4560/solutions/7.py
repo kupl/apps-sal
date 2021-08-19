@@ -1,6 +1,6 @@
 def answer(question, information):
-    info = [i.split(" ") for i in information]
-    ques = question.lower().split(" ")
+    info = [i.split(' ') for i in information]
+    ques = question.lower().split(' ')
     high = 0
     iHigh = -1
     for i in range(len(info)):
@@ -13,5 +13,5 @@ def answer(question, information):
             high = score
     if iHigh == -1:
         return None
-    a = "".join(j + " " for j in info[iHigh])[:-1]
+    a = ''.join((j + ' ' for j in info[iHigh]))[:-1]
     return a

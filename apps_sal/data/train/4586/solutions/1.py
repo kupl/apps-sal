@@ -4,10 +4,10 @@ def getlocation(letter):
 
 
 def tv_remote(word):
-    x1, y1 = 0, 0
+    (x1, y1) = (0, 0)
     moves = 0
     for letter in word:
-        x2, y2 = getlocation(letter)
+        (x2, y2) = getlocation(letter)
         moves += abs(x2 - x1) + abs(y2 - y1) + 1
-        x1, y1 = x2, y2
+        (x1, y1) = (x2, y2)
     return moves

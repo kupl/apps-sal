@@ -6,4 +6,4 @@ def row_weights(array):
             odd += array[i]
         else:
             even += array[i]
-    return odd, even
+    return (odd, even)

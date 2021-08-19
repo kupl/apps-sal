@@ -3,4 +3,4 @@ def geometric_sequence_elements(a, r, n):
     for _ in range(n):
         l.append(str(a))
         a *= r
-    return ", ".join(l)
+    return ', '.join(l)

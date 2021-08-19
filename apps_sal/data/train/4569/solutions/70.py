@@ -3,7 +3,6 @@ def next_item(xs, item):
     for i in xs:
         if r:
             return i
-        else:
-            if i == item:
-                r = True
+        elif i == item:
+            r = True
     return None

@@ -9,6 +9,6 @@ def permute_a_palindrome(string):
                 even += 1
             else:
                 odd += 1
-    if (len(string) % 2 != 0 and odd == 1) or (len(string) % 2 == 0 and odd == 0):
+    if len(string) % 2 != 0 and odd == 1 or (len(string) % 2 == 0 and odd == 0):
         return True
     return False

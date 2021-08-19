@@ -11,7 +11,7 @@ def is_prime(n):
         return False
     d = n - 1
     s = 0
-    while(d % 2 == 0):
+    while d % 2 == 0:
         s += 1
         d //= 2
     for i in range(k):

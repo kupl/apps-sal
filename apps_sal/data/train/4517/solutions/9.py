@@ -9,5 +9,4 @@ def odd_one_out(s):
                 del c[i]
         except:
             pass
-
     return ans[::-1]

@@ -10,6 +10,6 @@ def row_weights(array):
     Returns:
         tuple of total weights of team 1 and 2.
     """
-    weight_t1 = sum(array[i] for i in range(0, len(array), 2))
-    weight_t2 = sum(array[i] for i in range(1, len(array), 2))
+    weight_t1 = sum((array[i] for i in range(0, len(array), 2)))
+    weight_t2 = sum((array[i] for i in range(1, len(array), 2)))
     return (weight_t1, weight_t2)

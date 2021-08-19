@@ -9,5 +9,4 @@ def decompose(n):
         result.append(k)
         n -= i ** k
         i += 1
-
     return [result, n]

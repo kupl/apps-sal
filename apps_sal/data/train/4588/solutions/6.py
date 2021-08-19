@@ -20,4 +20,4 @@ def controller(events: str):
                     up = True
                     movement = False
         positions += [p]
-    return ''.join(str(p) for p in positions)
+    return ''.join((str(p) for p in positions))

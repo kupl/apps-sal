@@ -8,4 +8,4 @@ def decompose(num):
         if num < x * x:
             return [result, num]
         result.append(int(log(num, x)))
-        num -= x**result[-1]
+        num -= x ** result[-1]

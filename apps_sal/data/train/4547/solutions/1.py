@@ -3,9 +3,9 @@ def more_zeros(s):
     L1 = []
     L2 = []
     for i in s:
-        a = int(' '.join(format(ord(x), 'b') for x in i))
+        a = int(' '.join((format(ord(x), 'b') for x in i)))
         for j in str(a):
-            if j == "0":
+            if j == '0':
                 L1.append(j)
             else:
                 L2.append(j)

@@ -1,4 +1,4 @@
-A, S, Z = list(range(1000)), set(), []
+(A, S, Z) = (list(range(1000)), set(), [])
 while len(Z) < 501:
     for i in A:
         T = set(str(i))
@@ -9,4 +9,5 @@ while len(Z) < 501:
     A.remove(Z[-1])
 
 
-def find_num(n): return Z[n]
+def find_num(n):
+    return Z[n]

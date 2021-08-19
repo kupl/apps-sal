@@ -1,5 +1,5 @@
 def snap(flash, bot):
-    face_up, c, turn = [], 0, 1
+    (face_up, c, turn) = ([], 0, 1)
     while bot:
         face_up.append(flash.pop(0) if turn else bot.pop(0))
         turn ^= 1

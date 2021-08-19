@@ -4,9 +4,9 @@ def more_zeros(s):
     lst_res = []
     stage = 0
     while stage != len(s):
-        tmp = "{0:b}".format(ord(s[stage]))
+        tmp = '{0:b}'.format(ord(s[stage]))
         for x in tmp:
-            if x == "1":
+            if x == '1':
                 lst1.append(x)
             else:
                 lst0.append(x)

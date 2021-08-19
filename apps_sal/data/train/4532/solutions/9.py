@@ -1,1 +1,2 @@
-def validate_code(n): return str(n).startswith(tuple('123'))
+def validate_code(n):
+    return str(n).startswith(tuple('123'))

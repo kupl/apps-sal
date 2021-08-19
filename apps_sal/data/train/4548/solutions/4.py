@@ -9,7 +9,7 @@ def SumEvenFibonacci(limit):
 
 
 def fib(num):
-    a, b = 1, 2
+    (a, b) = (1, 2)
     while True:
         yield a
-        a, b = b, a + b
+        (a, b) = (b, a + b)

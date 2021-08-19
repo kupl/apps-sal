@@ -1,7 +1,7 @@
 def permute_a_palindrome(input):
     a = 'abcdefghijklmnopqrstuvwxyz'
     times = [0] * len(a)
-    if input == "":
+    if input == '':
         return True
     if len(input) % 2 == 0:
         for x in range(0, len(a)):

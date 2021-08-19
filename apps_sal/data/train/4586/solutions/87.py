@@ -1,5 +1,5 @@
 def tv_remote(word):
-    keyboard = "abcde123fghij456klmno789pqrst.@0uvwxyz_/"
+    keyboard = 'abcde123fghij456klmno789pqrst.@0uvwxyz_/'
     presses = 0
     pointer_pos = (0, 0)
     for i in word:

@@ -17,5 +17,4 @@ def tv_remote(word):
     for i in range(len(word) - 1):
         print((word[i], pos(word[i]), word[i + 1], pos(word[i + 1])))
         res += dist(pos(word[i]), pos(word[i + 1]))
-
     return res + len(word) - 1

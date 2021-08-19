@@ -15,4 +15,4 @@ def find_min_max_product(arr, k):
         for b in range(len(darr)):
             res.append(reduce(mul, compress(darr, mask)))
             mask.rotate(-1)
-        return min(res), max(res)
+        return (min(res), max(res))

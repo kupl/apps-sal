@@ -1,4 +1,5 @@
 def gcd_matrix(a, b):
+
     def gcd(a2, b2):
         for i in range(min(a2, b2), 0, -1):
             if a2 % i == 0 and b2 % i == 0:

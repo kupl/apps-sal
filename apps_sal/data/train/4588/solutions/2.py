@@ -1,10 +1,10 @@
 def controller(s):
-    current, pause, door, output, i = 0, 0, 0, [], 0
+    (current, pause, door, output, i) = (0, 0, 0, [], 0)
     for symbol in s:
         if symbol == 'P':
             if pause:
                 pause = False
-            elif not door and not current:
+            elif not door and (not current):
                 door = True
             elif door and current == 5:
                 door = False

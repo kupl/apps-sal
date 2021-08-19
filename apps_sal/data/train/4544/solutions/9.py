@@ -1,6 +1,6 @@
 def factor_sum(n):
     while True:
-        t, s, d = n, 0, 2
+        (t, s, d) = (n, 0, 2)
         while d * d <= t:
             while t % d == 0:
                 s += d

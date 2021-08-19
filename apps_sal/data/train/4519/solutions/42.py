@@ -5,5 +5,5 @@ def max_number(n):
         result.append(i)
     num = sorted(result)
     num.reverse()
-    out = "".join(num)
+    out = ''.join(num)
     return int(out)
