@@ -1,7 +1,4 @@
-#!python3
-
-# input
-A, B, C = list(map(int, input().split()))
+(A, B, C) = list(map(int, input().split()))
 
 
 def main():

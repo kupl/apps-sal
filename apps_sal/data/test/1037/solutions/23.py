@@ -1,12 +1,5 @@
-#!/usr/bin/env python3
-# vim: set fileencoding=utf-8
-
-# pylint: disable=unused-import, invalid-name, missing-docstring, bad-continuation
-
-
 """Module docstring
 """
-
 import functools
 import heapq
 import itertools
@@ -22,9 +15,9 @@ from typing import Dict, List, Optional, Set, Tuple
 
 
 def solve(values: List[int], nb: int) -> int:
-    s_values = sorted(((v, i) for i, v in enumerate(values)), reverse=True)
+    s_values = sorted(((v, i) for (i, v) in enumerate(values)), reverse=True)
     dp = [[0 for _ in range(nb + 1)] for _ in range(nb + 1)]
-    for i, (v, p) in enumerate(s_values, start=1):
+    for (i, (v, p)) in enumerate(s_values, start=1):
         for x in range(i + 1):
             y = i - x
             if y == 0:
@@ -33,39 +26,29 @@ def solve(values: List[int], nb: int) -> int:
             if x == 0:
                 dp[x][y] = dp[x][y - 1] + abs(nb - y - p) * v
                 continue
-            dp[x][y] = max(
-                dp[x - 1][y] + abs(p - x + 1) * v, dp[x][y - 1] + abs(nb - y - p) * v
-            )
-    return max(dp[i][nb - i] for i in range(nb + 1))
+            dp[x][y] = max(dp[x - 1][y] + abs(p - x + 1) * v, dp[x][y - 1] + abs(nb - y - p) * v)
+    return max((dp[i][nb - i] for i in range(nb + 1)))
 
 
 def do_job():
-    "Do the work"
-    LOG.debug("Start working")
-    # first line is number of test cases
+    """Do the work"""
+    LOG.debug('Start working')
     N = int(input())
     values = list(map(int, input().split()))
-    # values = []
-    # for _ in range(N):
-    #     values.append(input().split())
     result = solve(values, N)
     print(result)
 
 
 def print_output(testcase: int, result) -> None:
-    "Formats and print result"
+    """Formats and print result"""
     if result is None:
-        result = "IMPOSSIBLE"
-    print(("Case #{}: {}".format(testcase + 1, result)))
-    # 6 digits float precision {:.6f} (6 is the default value)
-    # print("Case #{}: {:f}".format(testcase + 1, result))
+        result = 'IMPOSSIBLE'
+    print('Case #{}: {}'.format(testcase + 1, result))
 
 
 def configure_log(log_file: Optional[str] = None) -> None:
-    "Configure the log output"
-    log_formatter = logging.Formatter(
-        "%(asctime)s - %(filename)s:%(lineno)d - " "%(levelname)s - %(message)s"
-    )
+    """Configure the log output"""
+    log_formatter = logging.Formatter('%(asctime)s - %(filename)s:%(lineno)d - %(levelname)s - %(message)s')
     if log_file:
         handler = logging.FileHandler(filename=log_file)
     else:
@@ -75,25 +58,17 @@ def configure_log(log_file: Optional[str] = None) -> None:
 
 
 LOG = None
-# for interactive call: do not add multiple times the handler
 if not LOG:
-    LOG = logging.getLogger("template")
+    LOG = logging.getLogger('template')
     configure_log()
 
 
 def main(argv=None):
-    "Program wrapper."
+    """Program wrapper."""
     if argv is None:
         argv = sys.argv[1:]
     parser = ArgumentParser()
-    parser.add_argument(
-        "-v",
-        "--verbose",
-        dest="verbose",
-        action="store_true",
-        default=False,
-        help="run as verbose mode",
-    )
+    parser.add_argument('-v', '--verbose', dest='verbose', action='store_true', default=False, help='run as verbose mode')
     args = parser.parse_args(argv)
     if args.verbose:
         LOG.setLevel(logging.DEBUG)
@@ -103,9 +78,8 @@ def main(argv=None):
 
 def __starting_point():
     import doctest
-
     doctest.testmod()
-    return(main())
+    return main()
 
 
 class memoized:
@@ -126,8 +100,6 @@ class memoized:
             self.cache[args] = value
             return value
         except TypeError:
-            # uncachable -- for instance, passing a list as an argument.
-            # Better to not cache than to blow up entirely.
             return self.func(*args)
 
     def __repr__(self):

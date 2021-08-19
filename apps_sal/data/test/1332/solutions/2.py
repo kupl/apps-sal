@@ -13,13 +13,8 @@ def main():
     else:
         print(a // 5)
 
-# NON-SOLUTION STUFF BELOW
-
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -29,13 +24,13 @@ def read(mode=2):
         return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 write(main())

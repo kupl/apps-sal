@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     n = int(input())
     arr = [int(a) for a in input().split()]

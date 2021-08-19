@@ -1,17 +1,11 @@
-
 n = int(input())
-
 arr = []
-
 for i in range(n):
-    a, b = list(map(int, input().strip().split()))
+    (a, b) = list(map(int, input().strip().split()))
     arr.append([a, b])
-
 ans = 1
 la = [0, 0]
-
 for i in range(n):
-    # print(ans)
     if i == 0:
         ans += min(arr[i][0], arr[i][1])
     else:

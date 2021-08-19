@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 
@@ -12,18 +11,19 @@ def solve(A: int, B: int, C: int):
     elif o == 1:
         for i in range(3):
             a[i] += 1 - (a[i] & 1)
-    print(((2 * a[2] - a[1] - a[0]) // 2 + c))
+    print((2 * a[2] - a[1] - a[0]) // 2 + c)
 
 
 def main():
+
     def iterate_tokens():
         for line in sys.stdin:
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    A = int(next(tokens))  # type: int
-    B = int(next(tokens))  # type: int
-    C = int(next(tokens))  # type: int
+    A = int(next(tokens))
+    B = int(next(tokens))
+    C = int(next(tokens))
     solve(A, B, C)
 
 

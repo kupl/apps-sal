@@ -1,6 +1,4 @@
-#!/usr/bin/env python3.4
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 board = []
 for i in range(n):
     board.append(input())
