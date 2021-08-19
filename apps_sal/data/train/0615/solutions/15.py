@@ -1,10 +1,8 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     l = list(map(int, input().split(' ')))
     a = l[0]
     b = l[1]
-
     l1 = list(map(int, input().split(' ')))
     for i in range(b):
         l2 = list(map(int, input().split(' ')))

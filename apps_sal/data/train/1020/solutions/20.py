@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = input().split()
     s = 0
     for j in range(len(l)):

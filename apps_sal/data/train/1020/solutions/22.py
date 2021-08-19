@@ -1,8 +1,6 @@
-# cook your dish here
 t = int(input())
-
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     sum = 0
     for i in range(n):
@@ -11,11 +9,10 @@ for _ in range(t):
                 sum += a[i]
             else:
                 sum -= a[i]
+        elif sum > 0:
+            sum -= a[i]
         else:
-            if sum > 0:
-                sum -= a[i]
-            else:
-                sum += a[i]
+            sum += a[i]
     if abs(sum) >= k:
         print(1)
     else:
