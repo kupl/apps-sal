@@ -1,34 +1,25 @@
-# List of lowercase letters.
 letters = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
-
-# Constructs the alphabetically smallest palindrome based on letter frequencies for a palindrome.
 
 
 def getPalindrome(counts):
-    returnString = ""
-
+    returnString = ''
     for i in range(len(counts)):
         if counts[i] >= 2:
             for j in range(counts[i] // 2):
                 counts[i] -= 2
                 returnString += letters[i]
-
     for i in range(len(counts)):
         if counts.count(0) == 26:
-            return (returnString + returnString[::-1])
+            return returnString + returnString[::-1]
         elif counts[i] == 1 and counts.count(0) == 25:
-            return (returnString + letters[i] + returnString[::-1])
-
-# Changes the counts of each letter in preparation for constructing a palindrome.
+            return returnString + letters[i] + returnString[::-1]
 
 
 def changeCounts(counts):
     allEven = True
-
     for i in counts:
         if i % 2 == 1:
             allEven = False
-
     if allEven == True:
         return counts
     else:
@@ -45,11 +36,8 @@ def changeCounts(counts):
 
 
 inputArg = list(input())
-
 counts = []
-
 for i in letters:
     counts.append(inputArg.count(i))
-
 counts = changeCounts(counts)
 print(getPalindrome(counts))

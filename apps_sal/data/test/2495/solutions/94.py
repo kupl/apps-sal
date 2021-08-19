@@ -1,7 +1,5 @@
-
 N = int(input())
 a = list(map(int, input().split()))
-# >0
 r = 0
 res = 0
 for i in range(N):
@@ -11,13 +9,10 @@ for i in range(N):
         if r <= 0:
             sa = 1 - r
             r += sa
-    else:
-        if r >= 0:
-            sa = r + 1
-            r -= sa
+    elif r >= 0:
+        sa = r + 1
+        r -= sa
     res += sa
-
-# <0
 r = 0
 res2 = 0
 for i in range(N):
@@ -27,9 +22,8 @@ for i in range(N):
         if r <= 0:
             sa = 1 - r
             r += sa
-    else:
-        if r >= 0:
-            sa = r + 1
-            r -= sa
+    elif r >= 0:
+        sa = r + 1
+        r -= sa
     res2 += sa
-print((min(res, res2)))
+print(min(res, res2))

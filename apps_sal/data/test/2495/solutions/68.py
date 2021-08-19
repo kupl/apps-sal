@@ -1,8 +1,6 @@
 import copy
-
 n = int(input())
 a = list(map(int, input().split()))
-# print(a)
 
 
 def f(org_a, odd):
@@ -11,7 +9,7 @@ def f(org_a, odd):
     if a[0] == 0:
         a[0] = 1 if odd else -1
         ans += 1
-    elif a[0] > 0 and not odd:
+    elif a[0] > 0 and (not odd):
         ans += a[0] + 1
         a[0] = -1
     elif a[0] < 0 and odd:
@@ -26,13 +24,10 @@ def f(org_a, odd):
             move = -current_sum - 1
         elif not is_positive and current_sum <= 0:
             move = -current_sum + 1
-
         current_sum += move
-        # print(current_sum)
         a[i] += move
         ans += abs(move)
     return ans
 
 
-# print(a)
-print((min(f(a, True), f(a, False))))
+print(min(f(a, True), f(a, False)))

@@ -16,24 +16,21 @@ def COM(n, k):
     return fac[n] * (finv[k] * finv[n - k] % mod) % mod
 
 
-mod = 10**9 + 7
-
-X, Y = list(map(int, input().split()))
-
-a = X % 2  # 1の数
-b = X // 2  # 2の数
+mod = 10 ** 9 + 7
+(X, Y) = list(map(int, input().split()))
+a = X % 2
+b = X // 2
 for i in range(b + 1):
     if a * 2 + b * 1 == Y:
         break
     a += 2
     b -= 1
-
 if a * 2 + b * 1 != Y:
-    print((0))
+    print(0)
 else:
     max = a + b + 1
     fac = [0] * max
     finv = [0] * max
     inv = [0] * max
     COMinit()
-    print((COM(a + b, a)))
+    print(COM(a + b, a))

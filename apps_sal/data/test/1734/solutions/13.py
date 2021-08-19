@@ -3,24 +3,29 @@
 """
 import sys
 from collections import defaultdict
-def input(): return sys.stdin.readline()
+
+
+def input():
+    return sys.stdin.readline()
 
 
 def print(arg, *argv, end=None):
     sys.stdout.write(str(arg))
     for i in argv:
-        sys.stdout.write(" " + str(i))
-    sys.stdout.write(end) if end or end == "" else sys.stdout.write("\n")
+        sys.stdout.write(' ' + str(i))
+    sys.stdout.write(end) if end or end == '' else sys.stdout.write('\n')
 
 
-def mapi(): return map(int, input().split())
-def maps(): return map(str, input().split())
-#---------------------------------------------------------------#
+def mapi():
+    return map(int, input().split())
+
+
+def maps():
+    return map(str, input().split())
 
 
 def solve():
     t = 1
-    #t = int(input())
     for _ in range(t):
         n = int(input())
         ss = []
@@ -35,7 +40,6 @@ def solve():
                     sett.add(x[i:j])
             for it in sett:
                 mem[it] += 1
-
         for id in range(n):
             length = 1
             flag = True
@@ -51,8 +55,6 @@ def solve():
                     i += 1
                     j += 1
                 length += 1
-
-#---------------------------------------------------------------#
 
 
 def __starting_point():

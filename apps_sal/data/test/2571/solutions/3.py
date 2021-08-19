@@ -2,11 +2,6 @@ from math import *
 import os
 import sys
 from io import BytesIO
-
-#input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
-#sys.stdin = open("input.txt", "r")
-#sys.stdout = open("output.txt", "w")
-
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))

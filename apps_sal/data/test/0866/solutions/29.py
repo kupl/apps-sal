@@ -1,7 +1,6 @@
 class Factorial:
+
     def __init__(self, max_fact, mod):
-        # mod should be prime number
-        # using homogeneous_product(n,r), max_fact ≧ max(n+r-1)
         f = [1] * (max_fact + 1)
         for idx in range(2, max_fact + 1):
             f[idx] = f[idx - 1] * idx
@@ -37,14 +36,13 @@ class Factorial:
         return f[n + r - 1] * fi[r] * fi[n - 1] % self.mod
 
 
-max_fact = 10**6
-mod = 10**9 + 7
+max_fact = 10 ** 6
+mod = 10 ** 9 + 7
 fact_instance = Factorial(max_fact, mod)
 comb = fact_instance.combination
 perm = fact_instance.permutation
 combrep = fact_instance.homogeneous_product
-
-X, Y = [int(_) for _ in input().split()]
+(X, Y) = [int(_) for _ in input().split()]
 i = X - (X + Y) // 3
 j = Y - (X + Y) // 3
 if (X + Y) % 3 or i < 0 or j < 0:
