@@ -1,8 +1,8 @@
-# ways @ i, rem is equal to all possible routes
 class Solution:
+
     def countRoutes(self, A: List[int], start: int, finish: int, fuel: int) -> int:
         N = len(A)
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @functools.lru_cache(None)
         def dp(i, rem):

@@ -1,10 +1,10 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         from functools import lru_cache
 
         @lru_cache(None)
         def dfs(cur, end, fuel):
-            # print(cur, end, fuel)
             if fuel == 0:
                 return cur == end
             ret = cur == end

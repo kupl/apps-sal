@@ -1,7 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        # print(start, finish, fuel)
-        self.mp = {}  # key: start-finish-fuel; val: numWays
+        self.mp = {}
         return self.dfs(locations, start, finish, fuel)
 
     def dfs(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
@@ -14,6 +14,6 @@ class Solution:
         for i in range(len(locations)):
             if i != start:
                 res += self.dfs(locations, i, finish, fuel - abs(locations[start] - locations[i]))
-        res %= (10**9 + 7)
+        res %= 10 ** 9 + 7
         self.mp[key] = res
         return res
