@@ -1,14 +1,8 @@
-#from bisect import bisect_left
-
-rose = {
-    'U': (0, 1),
-    'D': (0, -1),
-    'L': (-1, 0),
-    'R': (1, 0),
-}
+rose = {'U': (0, 1), 'D': (0, -1), 'L': (-1, 0), 'R': (1, 0)}
 
 
 class Solution:
+
     def __init__(self):
         self.wind_cost = one_cycle()
         self.wind_len = len(wind)
@@ -17,7 +11,7 @@ class Solution:
         ncycles = days // self.wind_len
         wind_x = x1 + ncycles * self.wind_cost[0]
         wind_y = y1 + ncycles * self.wind_cost[1]
-        wind_x, wind_y = rest([wind_x, wind_y], days % self.wind_len)
+        (wind_x, wind_y) = rest([wind_x, wind_y], days % self.wind_len)
         return abs(wind_x - x2) + abs(wind_y - y2)
 
     def __getitem__(self, days):
@@ -49,7 +43,6 @@ def bisect_left(a, x, lo=0, hi=None):
     Optional args lo (default 0) and hi (default len(a)) bound the
     slice of a to be searched.
     """
-
     if lo < 0:
         raise ValueError('lo must be non-negative')
     if hi is None:
@@ -63,11 +56,10 @@ def bisect_left(a, x, lo=0, hi=None):
     return lo
 
 
-x1, y1 = list(map(int, input().split()))
-x2, y2 = list(map(int, input().split()))
+(x1, y1) = list(map(int, input().split()))
+(x2, y2) = list(map(int, input().split()))
 n = int(input())
 wind = input()
-
 k = bisect_left(Solution(), 1, 0, 100000000000000000)
 if k == 100000000000000000:
     k = -1

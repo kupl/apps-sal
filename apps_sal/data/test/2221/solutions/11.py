@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Feb 18 21:05:51 2019
 
 @author: HP
 """
-
-x1, y1 = map(int, input().split())
-xx, yy = map(int, input().split())
+(x1, y1) = map(int, input().split())
+(xx, yy) = map(int, input().split())
 n = int(input())
 x = 0
 y = 0
@@ -21,7 +19,7 @@ for i in s:
     else:
         y -= 1
 start = 0
-end = 10**18
+end = 10 ** 18
 while start < end:
     mid = (start + end) // 2
     div = mid // n
@@ -44,8 +42,7 @@ while start < end:
         end = mid
     else:
         start = mid + 1
-
-if start >= 10**18:
+if start >= 10 ** 18:
     print(-1)
 else:
     print(start)

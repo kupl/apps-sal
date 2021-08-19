@@ -1,9 +1,8 @@
 S = input()
 mod = 2019
-
 array = []
 for i in range(len(S)):
-    x = (int(S[len(S) - 1 - i]) * pow(10, i, mod)) % mod
+    x = int(S[len(S) - 1 - i]) * pow(10, i, mod) % mod
     array.append(x)
 array2 = [0]
 y = 0
@@ -17,4 +16,3 @@ for i in range(len(array2)):
     ans += array3[z]
     array3[z] += 1
 print(ans)
-# 3*673

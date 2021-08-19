@@ -5,18 +5,18 @@ import itertools
 import collections
 import heapq
 import bisect
-# sys.setrecursionlimit(10**4)
 
 
 class Solution:
+
     def __init__(self):
         pass
 
     def solve(self, *Input):
-        n, edges = Input
-        ans = (n * (n + 2) * (n + 1) // 3) >> 1
+        (n, edges) = Input
+        ans = n * (n + 2) * (n + 1) // 3 >> 1
         for edge in edges:
-            a, b = sorted(edge)
+            (a, b) = sorted(edge)
             ans -= a * (n + 1 - b)
         return ans
 
@@ -33,7 +33,7 @@ class Solution:
             if self.primes[i] and i * i <= b:
                 for j in range(i * i, b + 1, i):
                     self.primes[j] = False
-        self.primes = [x for x, y in enumerate(self.primes) if y]
+        self.primes = [x for (x, y) in enumerate(self.primes) if y]
         ind = bisect.bisect_left(self.primes, a)
         self.primes[:ind] = []
         return None
@@ -41,7 +41,6 @@ class Solution:
 
 def __starting_point():
     solution = Solution()
-
     inputs = iter(sys.stdin.readlines())
     n = int(next(inputs))
     edges = [list(map(int, next(inputs).split())) for _ in range(n - 1)]

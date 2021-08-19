@@ -11,13 +11,4 @@ for s in reversed(S):
     r %= mod
     d = d * 10 % mod
     p[r] += 1
-
-# p.append(0)
-#ans = 0
-#c = Counter(p)
-# for k,n in c.most_common():
-#  if n > 1:
-#    ans += 1
-#  else:break
-
 print(sum([i * (i - 1) // 2 for i in p]))

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict, Counter
 from itertools import product, groupby, count, permutations, combinations
 from math import pi, sqrt
@@ -8,10 +7,10 @@ from string import ascii_lowercase
 from functools import lru_cache
 import sys
 sys.setrecursionlimit(10000)
-INF = float("inf")
-YES, Yes, yes, NO, No, no = "YES", "Yes", "yes", "NO", "No", "no"
-dy4, dx4 = [0, 1, 0, -1], [1, 0, -1, 0]
-dy8, dx8 = [0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1]
+INF = float('inf')
+(YES, Yes, yes, NO, No, no) = ('YES', 'Yes', 'yes', 'NO', 'No', 'no')
+(dy4, dx4) = ([0, 1, 0, -1], [1, 0, -1, 0])
+(dy8, dx8) = ([0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1])
 
 
 def inside(y, x, H, W):
@@ -41,16 +40,14 @@ def solve():
     N = int(input())
     edges = []
     for _ in range(N - 1):
-        U, V = list(map(int, input().split()))
+        (U, V) = list(map(int, input().split()))
         edges.append((U, V))
-
     ans = 0
     for i in range(1, N + 1):
         ans += i * (N - i + 1)
-
-    for u, v in edges:
+    for (u, v) in edges:
         if u > v:
-            u, v = v, u
+            (u, v) = (v, u)
         ans -= u * (N - v + 1)
     print(ans)
 
