@@ -1,6 +1,6 @@
-class union_find():
+class union_find:
+
     def __init__(self, n):
-        # self.n = n
         self.root = [-1] * (n + 1)
         self.rank = [0] * (n + 1)
         self.siz = n
@@ -34,24 +34,19 @@ class union_find():
         return self.siz
 
 
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 ab = []
 for _ in range(m):
     ab.append(list(map(int, input().split())))
-
 g = union_find(n)
 ans = 0
 for i in range(len(ab)):
     for j in range(len(ab)):
         if i == j:
             continue
-        a, b = ab[j]
+        (a, b) = ab[j]
         g.unite(a, b)
-
     if g.size() != 1:
         ans += 1
     g = union_find(n)
-
-
 print(ans)

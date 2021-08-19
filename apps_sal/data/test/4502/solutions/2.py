@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import queue
 
 
@@ -13,7 +12,7 @@ def main():
             q.append(a[i])
     if n % 2 == 1:
         q.reverse()
-    print(*q, sep=" ")
+    print(*q, sep=' ')
 
 
 def __starting_point():

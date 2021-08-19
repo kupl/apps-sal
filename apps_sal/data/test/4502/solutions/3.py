@@ -1,48 +1,9 @@
 n = int(input())
 a = list(map(str, input().split()))
 b = []
-'''
-b = [str(a[0])]
-if (n == 1):
-    print(a[0])
-    return
-
-a = a[1:]
-
-for i in a:
-    b.append(str(i))
-    b.reverse()
-'''
-'''
-loop = int(n / 2)
-loop_rest = n - loop
-
-for i in range(loop):
-    tar_index = (n - 1) - 2 * i
-    tar = a[tar_index]
-
-    b.append(str(tar))
-
-
-if (n % 2 == 0):
-    tar_index = 0
-else:
-    tar_index = 1
-
-for i in range(loop_rest):
-    b.append(str(a[tar_index]))
-    tar_index += 2
-'''
-
-# 一つおきでListを取る場合。
-# a[0::2]
-# 1つ目：起点。
-# 2つ目：Step
-
-# a[::-1]
-# > -1step,つまりReverse
-
+'\nb = [str(a[0])]\nif (n == 1):\n    print(a[0])\n    return\n\na = a[1:]\n\nfor i in a:\n    b.append(str(i))\n    b.reverse()\n'
+'\nloop = int(n / 2)\nloop_rest = n - loop\n\nfor i in range(loop):\n    tar_index = (n - 1) - 2 * i\n    tar = a[tar_index]\n\n    b.append(str(tar))\n\n\nif (n % 2 == 0):\n    tar_index = 0\nelse:\n    tar_index = 1\n\nfor i in range(loop_rest):\n    b.append(str(a[tar_index]))\n    tar_index += 2\n'
 if n % 2 == 1:
-    print((" ".join((a[0::2][::-1] + a[1::2]))))
+    print(' '.join(a[0::2][::-1] + a[1::2]))
 else:
-    print((" ".join((a[1::2][::-1] + a[0::2]))))
+    print(' '.join(a[1::2][::-1] + a[0::2]))

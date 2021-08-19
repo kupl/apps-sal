@@ -1,6 +1,6 @@
 from collections import deque, defaultdict
 import sys
-sys.setrecursionlimit(2**20)
+sys.setrecursionlimit(2 ** 20)
 
 
 class LowLink:
@@ -41,32 +41,24 @@ class LowLink:
                     if self.pre[x]:
                         is_articulation = True
                     if self.pre[x] < low_y:
-                        self.bridges.append(
-                            (min(x, y), max(x, y))
-                        )
-            else:
-                if y != prev and self.pre[y] < self.low[x]:
-                    self.low[x] = self.pre[y]
+                        self.bridges.append((min(x, y), max(x, y)))
+            elif y != prev and self.pre[y] < self.low[x]:
+                self.low[x] = self.pre[y]
         if prev is None and n > 1:
             is_articulation = True
-
         if is_articulation:
             self.articulations.append(x)
-
         return self.low[x]
 
 
 def solve():
-    V, E = map(int, input().split())
+    (V, E) = map(int, input().split())
     G = defaultdict(lambda: [])
     for _ in range(E):
-        s, t = map(int, input().split())
+        (s, t) = map(int, input().split())
         G[s].append(t)
         G[t].append(s)
-
-    # initialize
     lowlink = LowLink(G)
-    # bridges
     bridges = lowlink.bridges
     print(len(bridges))
 

@@ -1,4 +1,3 @@
-
 def main():
     buf = input()
     N = int(buf)
@@ -10,7 +9,7 @@ def main():
     v = list(map(int, buflist))
     t.append(0)
     v.append(0)
-    for i, _ in enumerate(t):  # double time and speed to make calculation easier
+    for (i, _) in enumerate(t):
         t[i] *= 2
         v[i] *= 2
     time = 0
@@ -19,8 +18,8 @@ def main():
     distance = 0.0
     point = 0
     spd_time_list = []
-    for i, _ in enumerate(t):
-        spd_time_list.append((v[i], (0 if not spd_time_list else t[i - 1] + spd_time_list[-1][1])))
+    for (i, _) in enumerate(t):
+        spd_time_list.append((v[i], 0 if not spd_time_list else t[i - 1] + spd_time_list[-1][1]))
     while time < spd_time_list[-1][1]:
         last_speed = speed
         brake = False
@@ -36,7 +35,7 @@ def main():
         time += 1
         if time >= spd_time_list[point + 1][1]:
             point += 1
-    distance /= 4  # roll back time and speed (and so the distance)
+    distance /= 4
     print(distance)
 
 

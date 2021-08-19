@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -16,7 +17,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -28,10 +29,10 @@ class UnionFind():
 
     def members(self, x):
         root = self.find(x)
-        return list(i for i in range(self.n) if self.find(i) == root)
+        return list((i for i in range(self.n) if self.find(i) == root))
 
     def roots(self):
-        return list(i for i, x in enumerate(self.parents) if x < 0)
+        return list((i for (i, x) in enumerate(self.parents) if x < 0))
 
     def group_count(self):
         return len(self.roots)
@@ -40,19 +41,18 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
 adj = []
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 for m in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     adj.append([a - 1, b - 1])
-
 ans = 0
-for i in range(M):  # 取り除く辺の番号
+for i in range(M):
     uf = UnionFind(N)
-    for j in range(M):  # 辺を追加しない（取り除く）
+    for j in range(M):
         if i == j:
             continue
         uf.union(*adj[j])

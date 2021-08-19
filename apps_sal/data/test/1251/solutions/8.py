@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -9,25 +7,20 @@ import random
 import itertools
 import sys
 from typing import List
-
-"""
-created by shhuan at 2020/1/8 19:48
-
-"""
+'\ncreated by shhuan at 2020/1/8 19:48\n\n'
 
 
 def solve(A, left, right):
     s = [(left, right, 0)]
     memo = {}
     while s:
-        l, r, ph = s.pop()
-        h = min(A[l: r + 1])
+        (l, r, ph) = s.pop()
+        h = min(A[l:r + 1])
         n = r - l + 1
         if h - ph >= n:
-            memo[(l, r)] = n
+            memo[l, r] = n
             continue
-
-        i, j = l, l
+        (i, j) = (l, l)
         t = []
         while j <= r:
             if A[j] == h:
@@ -37,13 +30,11 @@ def solve(A, left, right):
             j += 1
         if i <= r:
             t.append((i, r, h))
-
         if any([(v[0], v[1]) not in memo for v in t]):
             s.append((l, r, ph))
             s.extend(t)
         else:
-            memo[(l, r)] = min(n, h - ph + sum([memo[(v[0], v[1])] for v in t] or [0]))
-
+            memo[l, r] = min(n, h - ph + sum([memo[v[0], v[1]] for v in t] or [0]))
     return memo[left, right]
 
 
