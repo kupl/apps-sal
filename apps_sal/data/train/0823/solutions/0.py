@@ -1,8 +1,3 @@
-# cook your dish here
-
-# cook your dish here
-
-
 t = int(input())
 while t:
     t -= 1
@@ -14,9 +9,7 @@ while t:
         for i in range(4):
             if b[i] == '1':
                 s += ar[i]
-
-        if(s == 0):
+        if s == 0:
             c = 1
             break
-
-    print("Yes" if c == 1 else "No")
+    print('Yes' if c == 1 else 'No')

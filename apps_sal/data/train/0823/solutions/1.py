@@ -3,7 +3,7 @@ def subset(n, s, l):
     for i in range(1, t):
         temp = 0
         for j in range(n):
-            if i & (1 << j):
+            if i & 1 << j:
                 temp += l[j]
         if temp == s:
             return True
@@ -12,5 +12,4 @@ def subset(n, s, l):
 
 for _ in range(int(input())):
     l = list(map(int, input().split()))
-    # l.sort()
-    print("Yes" if subset(len(l), 0, l) else "No")
+    print('Yes' if subset(len(l), 0, l) else 'No')

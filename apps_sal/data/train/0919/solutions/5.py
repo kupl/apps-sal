@@ -1,4 +1,3 @@
-# evens
 def solve(s):
     seen = set()
     out = 0

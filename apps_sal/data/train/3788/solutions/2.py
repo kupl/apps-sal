@@ -1,11 +1,10 @@
 def isqrt(num):
-    '''Compute int(sqrt(n)) for n integer > 0
-    O(log4(n)) and no floating point operation, no division'''
-    res, bit = 0, 1
+    """Compute int(sqrt(n)) for n integer > 0
+    O(log4(n)) and no floating point operation, no division"""
+    (res, bit) = (0, 1)
     while bit <= num:
         bit <<= 2
     bit >>= 2
-
     while bit:
         if num >= res + bit:
             num -= res + bit
@@ -16,10 +15,7 @@ def isqrt(num):
 
 
 def sqrt(n):
-    # return n ** .5                                 ## Nope
-    # return __import__('math').sqrt(n)              ## Not enough precision...
-    # return __import__('decimal').Decimal(n).sqrt() ## That one works great!
-    return isqrt(n)  # The very best, you don't need those nasty floating point numbers
+    return isqrt(n)
 
 
 def s_num(n):

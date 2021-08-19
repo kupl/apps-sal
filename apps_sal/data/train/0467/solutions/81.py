@@ -1,7 +1,7 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         valAll = 0
-
         for num in nums:
             local = set()
             for i in range(1, int(math.sqrt(num)) + 1):
@@ -12,5 +12,4 @@ class Solution:
                         break
             if len(local) == 4:
                 valAll += sum(local)
-            # print(str(num)+\"  \"+str(local))
         return valAll

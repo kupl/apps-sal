@@ -3,25 +3,20 @@ sys.setrecursionlimit(1000000)
 
 
 def LCES(l, prevSel, parity, ind, length):
-    if(ind == len(l)):
-        if(parity == 0):
+    if ind == len(l):
+        if parity == 0:
             return length
         else:
             return -1
+    elif parity == 0:
+        left = LCES(l, l[ind], 1, ind + 1, length + 1)
+        right = LCES(l, prevSel, 0, ind + 1, length)
+        return max(left, right)
+    elif prevSel != l[ind]:
+        return LCES(l, prevSel, 1, ind + 1, length)
     else:
-        if(parity == 0):
-            # if(dp.get(str(parity)+" "+str(ind))):
-            #     return dp[str(parity)+" "+str(ind)]
-            left = LCES(l, l[ind], 1, ind + 1, length + 1)
-            right = LCES(l, prevSel, 0, ind + 1, length)
-            return max(left, right)
-            # return dp[str(parity)+" "+str(ind)]
-        else:
-            if(prevSel != l[ind]):
-                return LCES(l, prevSel, 1, ind + 1, length)
-            else:
-                left = LCES(l, l[ind], 0, ind + 1, length + 1)
-                return left
+        left = LCES(l, l[ind], 0, ind + 1, length + 1)
+        return left
 
 
 for _ in range(int(input())):

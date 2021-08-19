@@ -1,4 +1,3 @@
-# cook your dish here
 def ss(a, su, i, cnt):
     if su == 0 and cnt != 0:
         return 1
@@ -10,6 +9,6 @@ def ss(a, su, i, cnt):
 for _ in range(int(input())):
     a = [int(x) for x in input().split()]
     if ss(a, 0, 3, 0):
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

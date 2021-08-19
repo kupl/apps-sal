@@ -1,6 +1,6 @@
 class Solution:
+
     def findLucky(self, arr: List[int]) -> int:
-        # count = 0
         max1 = -1
         n = len(arr)
         for i in range(n):
@@ -12,11 +12,9 @@ class Solution:
                     break
             if flag == True:
                 continue
-
             for j in range(i, n):
                 if arr[j] == arr[i]:
                     count += 1
-            # print(arr[i], count)
             if arr[i] == count:
                 if max1 < arr[i]:
                     max1 = arr[i]

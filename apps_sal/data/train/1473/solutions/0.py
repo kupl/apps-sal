@@ -1,20 +1,18 @@
-#!/usr/bin/python
 import sys
 
 
 def __starting_point():
     t = int(input())
     for iteration in range(t):
-        r, c, m_inp, k_inp, j_inp = input().strip().split(" ")
+        (r, c, m_inp, k_inp, j_inp) = input().strip().split(' ')
         r = int(r)
         c = int(c)
         m_inp = int(m_inp)
         k_inp = int(k_inp)
         j_inp = int(j_inp)
-
-        ans = ""
-        if (r * c) != (m_inp + k_inp + j_inp):
-            print("No")
+        ans = ''
+        if r * c != m_inp + k_inp + j_inp:
+            print('No')
             continue
         else:
             flag = False
@@ -47,73 +45,68 @@ def __starting_point():
                     j = m_inp
                 if m % r == 0:
                     r_remain_1 = r
-                    c_remain_1 = c - (m / r)
-
+                    c_remain_1 = c - m / r
                     if k % r_remain_1 == 0:
                         r_remain_2 = r_remain_1
-                        c_remain_2 = c_remain_1 - (k / r_remain_1)
+                        c_remain_2 = c_remain_1 - k / r_remain_1
                         if r_remain_2 * c_remain_2 == j:
-                            print("Yes")
+                            print('Yes')
                             flag = True
                             continue
                     if k % c_remain_1 == 0:
                         c_remain_2 = c_remain_1
-                        r_remain_2 = r_remain_1 - (k / c_remain_1)
+                        r_remain_2 = r_remain_1 - k / c_remain_1
                         if r_remain_2 * c_remain_2 == j:
-                            print("Yes")
+                            print('Yes')
                             flag = True
                             continue
-
                     if j % r_remain_1 == 0:
                         r_remain_2 = r_remain_1
-                        c_remain_2 = c_remain_1 - (j / r_remain_1)
+                        c_remain_2 = c_remain_1 - j / r_remain_1
                         if r_remain_2 * c_remain_2 == k:
-                            print("Yes")
+                            print('Yes')
                             flag = True
                             continue
                     if j % c_remain_1 == 0:
                         c_remain_2 = c_remain_1
-                        r_remain_2 = r_remain_1 - (j / c_remain_1)
+                        r_remain_2 = r_remain_1 - j / c_remain_1
                         if r_remain_2 * c_remain_2 == k:
-                            print("Yes")
+                            print('Yes')
                             flag = True
                             continue
-
                 if m % c == 0:
                     c_remain_1 = c
-                    r_remain_1 = r - (m / c)
-
+                    r_remain_1 = r - m / c
                     if k % r_remain_1 == 0:
                         r_remain_2 = r_remain_1
-                        c_remain_2 = c_remain_1 - (k / r_remain_1)
+                        c_remain_2 = c_remain_1 - k / r_remain_1
                         if r_remain_2 * c_remain_2 == j:
-                            print("Yes")
+                            print('Yes')
                             flag = True
                             continue
                     if k % c_remain_1 == 0:
                         c_remain_2 = c_remain_1
-                        r_remain_2 = r_remain_1 - (k / c_remain_1)
+                        r_remain_2 = r_remain_1 - k / c_remain_1
                         if r_remain_2 * c_remain_2 == j:
-                            print("Yes")
+                            print('Yes')
                             flag = True
                             continue
-
                     if j % r_remain_1 == 0:
                         r_remain_2 = r_remain_1
-                        c_remain_2 = c_remain_1 - (j / r_remain_1)
+                        c_remain_2 = c_remain_1 - j / r_remain_1
                         if r_remain_2 * c_remain_2 == k:
-                            print("Yes")
+                            print('Yes')
                             flag = True
                             continue
                     if j % c_remain_1 == 0:
                         c_remain_2 = c_remain_1
-                        r_remain_2 = r_remain_1 - (j / c_remain_1)
+                        r_remain_2 = r_remain_1 - j / c_remain_1
                         if r_remain_2 * c_remain_2 == k:
-                            print("Yes")
+                            print('Yes')
                             flag = True
                             continue
             if not flag:
-                print("No")
+                print('No')
 
 
 __starting_point()
