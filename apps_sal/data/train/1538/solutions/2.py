@@ -1,11 +1,10 @@
-# cook your dish here
 import math
 
 
 def find():
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a = math.gcd(x, y)
-    lcm = (x * y) // a
+    lcm = x * y // a
     print(a, lcm)
 
 

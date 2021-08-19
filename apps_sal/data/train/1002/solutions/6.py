@@ -15,24 +15,20 @@ def check2(a, pos, d):
 
 
 T = int(input())
-
 for _ in range(T):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     a = [int(e) for e in input().split()]
     startVal = a[0]
     a.sort()
     band = True
     startPos = 0
-    # print(a)
-    for i, e in enumerate(a[1:]):
-        #print("i: {}, e: {}, ant:{}".format(i,e,a[i]))
+    for (i, e) in enumerate(a[1:]):
         if e - a[i] > d:
             band = False
             break
         if e == startVal:
             startPos = i + 1
-    # print(band)
     if band and (check(a, startPos, d) or check2(a, startPos, d)):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

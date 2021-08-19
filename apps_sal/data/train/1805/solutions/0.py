@@ -1,4 +1,5 @@
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         vis = [0 for i in range(len(friends))]
         index = id
@@ -7,7 +8,6 @@ class Solution:
             temp = []
             for i in lis:
                 if vis[i] == 0:
-                    # print(i)
                     temp += friends[i]
                     vis[i] = 1
             lis = set(temp)

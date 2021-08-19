@@ -3,22 +3,22 @@ from heapq import heappop, heappush
 
 
 def main0(n, m, s, t, abc):
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     g = [set() for _ in range(n)]
-    for i, (a, b, c) in enumerate(abc):
-        a, b = a - 1, b - 1
+    for (i, (a, b, c)) in enumerate(abc):
+        (a, b) = (a - 1, b - 1)
         g[a].add((b, c, i))
         g[b].add((a, c, i))
-    s, t = s - 1, t - 1
+    (s, t) = (s - 1, t - 1)
     todo = [[0, s]]
     inf = float('inf')
     froms = [inf] * n
     froms[s] = 0
     while todo:
-        c, v = heappop(todo)
+        (c, v) = heappop(todo)
         if froms[v] < c:
             continue
-        for nv, nc, _ in g[v]:
+        for (nv, nc, _) in g[v]:
             if froms[nv] > c + nc:
                 froms[nv] = c + nc
                 heappush(todo, [nc + c, nv])
@@ -32,8 +32,8 @@ def main0(n, m, s, t, abc):
     fromt[t] = 0
     fromt[s] = mincost
     while todo:
-        c, v = heappop(todo)
-        for nv, nc, i in g[v]:
+        (c, v) = heappop(todo)
+        for (nv, nc, i) in g[v]:
             if mincost == froms[nv] + c + nc:
                 if c < mincost / 2 and c + nc > mincost / 2:
                     mideary[i] += vary[v]
@@ -46,7 +46,6 @@ def main0(n, m, s, t, abc):
                 if fromt[nv] > c + nc:
                     fromt[nv] = c + nc
                     heappush(todo, [c + nc, nv])
-
     mideary1 = [0] * m
     midvary1 = [0] * n
     vary = [0] * n
@@ -56,8 +55,8 @@ def main0(n, m, s, t, abc):
     nfroms[s] = 0
     nfroms[t] = mincost
     while todo:
-        c, v = heappop(todo)
-        for nv, nc, i in g[v]:
+        (c, v) = heappop(todo)
+        for (nv, nc, i) in g[v]:
             if mincost == fromt[nv] + c + nc:
                 if c < mincost / 2 and c + nc > mincost / 2:
                     mideary1[i] += vary[v]
@@ -87,7 +86,6 @@ def main0(n, m, s, t, abc):
         if x != 0:
             ret += x * (summid - x)
             ret %= mod
-    # print(mincost,mideary,midvary)
     return ret
 
 
@@ -95,10 +93,10 @@ input = sys.stdin.readline
 
 
 def __starting_point():
-    n, m = list(map(int, input().split()))
-    s, t = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
+    (s, t) = list(map(int, input().split()))
     abc = [list(map(int, input().split())) for _ in range(m)]
-    print((main0(n, m, s, t, abc)))
+    print(main0(n, m, s, t, abc))
 
 
 __starting_point()

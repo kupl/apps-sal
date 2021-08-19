@@ -1,5 +1,3 @@
-# cook your dish here
-# from itertools import groupby
 t = int(input())
 for _ in range(t):
     s = input()
