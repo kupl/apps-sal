@@ -7,13 +7,11 @@ class StockSpanner:
 
     def next(self, price: int) -> int:
         if len(self.prices) == 0:
-
             self.lastCount = 1
             self.lastP = 0
             self.prices.append(price)
             return 1
         count = self.lastCount
-        # print(self.prices)
         if price == self.prices[-1]:
             count += 1
             self.lastCount = count
@@ -38,7 +36,3 @@ class StockSpanner:
             self.lastP = len(self.prices)
         self.prices.append(price)
         return count
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

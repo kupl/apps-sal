@@ -1,7 +1,6 @@
-# cook your dish here
 arr = [1]
 for i in range(1, 18):
-    x = 6**i
+    x = 6 ** i
     b = [x]
     for j in arr:
         b.append(j + x)

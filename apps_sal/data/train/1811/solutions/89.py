@@ -13,9 +13,7 @@ class StockSpanner:
         l = len(self.s)
         i = l - 2
         o = 1
-        # print(self.O,self.s,i)
         while i >= 0:
-            # print(self.s[i])
             if self.s[i] <= price:
                 o += self.O[i]
                 i -= self.O[i]
@@ -23,8 +21,3 @@ class StockSpanner:
                 break
         self.O.append(o)
         return o
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

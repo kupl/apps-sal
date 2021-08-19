@@ -10,17 +10,12 @@ class StockSpanner:
         else:
             days = 0
             while self.stack and price >= self.stack[-1][0]:
-                p, d = self.stack.pop()
-                days += d  # stack previous days
+                (p, d) = self.stack.pop()
+                days += d
             try:
                 days += self.stack[-1][1]
-                self.stack[-1][1] = days  # insert
+                self.stack[-1][1] = days
             except:
                 self.stack.append([0, days])
             self.stack.append([price, 1])
         return days
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)
