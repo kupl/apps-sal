@@ -1,13 +1,12 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     s = input()
     l = []
     f = True
     for i in range(n):
-        if s[i] == "H":
+        if s[i] == 'H':
             l.append(s[i])
-        elif s[i] == "T":
+        elif s[i] == 'T':
             if len(l) >= 1:
                 l = l[:-1]
             else:
@@ -17,6 +16,6 @@ for _ in range(int(input())):
     if len(l) > 0:
         f = False
     if f == True:
-        print("Valid")
+        print('Valid')
     else:
-        print("Invalid")
+        print('Invalid')

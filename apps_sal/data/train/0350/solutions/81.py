@@ -1,7 +1,8 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         result = 0
-        i, j = 0, 0
+        (i, j) = (0, 0)
         cnt = collections.Counter()
         l = 0
         n = len(A)
@@ -26,7 +27,6 @@ class Solution:
                 cnt[A[i]] -= 1
                 i += 1
                 l += 1
-            # print(j, l)
             result += l
             j += 1
         return result

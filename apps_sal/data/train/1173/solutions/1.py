@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -8,8 +7,6 @@ for i in range(int(input())):
         sum = a[i]
         for j in range(i + 1, n):
             sum = sum ^ a[j]
-            # print(sum)
-            if(sum == 0):
+            if sum == 0:
                 count = count + (j - i)
-
     print(count)

@@ -19,17 +19,14 @@ def subarrayXor(arr, n, m):
     for i in range(n):
         mp[xorArr[i]].append(i)
     a = sorted(mp.items())
-    # print(xorArr)
-    # print(a)
     for i in a:
         diffs = 0
-        if(i[0] != 0):
+        if i[0] != 0:
             l = len(i[1]) - 1
-            ans += sumPairs(i[1], len(i[1])) - ((l * (l + 1)) // 2)
-
+            ans += sumPairs(i[1], len(i[1])) - l * (l + 1) // 2
         else:
             l = len(i[1]) - 1
-            ans += sumPairs(i[1], len(i[1])) - ((l * (l + 1)) // 2)
+            ans += sumPairs(i[1], len(i[1])) - l * (l + 1) // 2
             ans += sum(i[1])
     return ans
 

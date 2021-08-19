@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     x = input()
@@ -6,16 +5,15 @@ for _ in range(t):
     cnt = 0
     lst = []
     for i in x:
-        if (i == '<'):
+        if i == '<':
             lst.append(i)
+        elif len(lst) == 0:
+            break
         else:
+            lst.pop()
             if len(lst) == 0:
-                break
+                cnt += 2 + t
+                t = 0
             else:
-                lst.pop()
-                if len(lst) == 0:
-                    cnt += 2 + t
-                    t = 0
-                else:
-                    t += 2
+                t += 2
     print(cnt)
