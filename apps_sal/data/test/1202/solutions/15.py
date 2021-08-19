@@ -9,7 +9,7 @@ def semifinals(l1, l2):
     while i < len(l1):
         if l1[i] < l2[n - i - 1]:
             output1[i] = 1
-        if l2[i] < l1[n - i - 1]:  # xet tuong tu voi l2[i] va l1[n - 1 - i]
+        if l2[i] < l1[n - i - 1]:
             output2[i] = 1
         i += 1
     output1 = ''.join([str(x) for x in output1])

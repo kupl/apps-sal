@@ -2,13 +2,19 @@ import sys
 import numpy as np
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-# 二分探索、浮き沈みの沈みに注意
-N, K = lr()
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
+(N, K) = lr()
 A = np.array(lr())
 A.sort()
 F = np.array(lr())
@@ -17,7 +23,7 @@ F = F[::-1]
 
 
 def check(x):
-    limit = x // F  # このラインまでにAを落とす
+    limit = x // F
     Y = A - limit
     cost = Y[Y >= 0].sum()
     return cost <= K
@@ -31,5 +37,4 @@ while abs(ng - ok) > 1:
         ok = mid
     else:
         ng = mid
-
 print(ok)

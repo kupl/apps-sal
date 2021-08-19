@@ -1,7 +1,6 @@
-n, k = tuple(map(int, input().split()))
+(n, k) = tuple(map(int, input().split()))
 arr = list(map(int, input().split()))
 arr.sort()
-
 karms = []
 for i in arr:
     t = []
@@ -10,10 +9,7 @@ for i in arr:
         i //= 2
     t.append(0)
     karms.append(t)
-
-# print(*karms)
-
-ans = 1e15
+ans = 1000000000000000.0
 for i in range(0, arr[-1] + 1):
     count = 0
     for karm in karms:
@@ -21,7 +17,6 @@ for i in range(0, arr[-1] + 1):
             count += 1
         if count == k:
             break
-
     if count < k:
         continue
     adds = []
@@ -32,5 +27,4 @@ for i in range(0, arr[-1] + 1):
         if len(adds) == k:
             break
     ans = min(ans, sum(adds))
-
 print(ans)

@@ -1,9 +1,7 @@
 import numpy as np
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = np.array(list(map(int, input().split())))
 f = np.array(list(map(int, input().split())))
-
 a.sort()
 f.sort()
 f = f[::-1]
@@ -16,7 +14,6 @@ def test(x):
 def nibutan(low, hi):
     while True:
         ave = (low + hi) // 2
-        # ここの条件式を問題文に合わせる
         if test(ave):
             hi = ave
         else:
@@ -27,6 +24,5 @@ def nibutan(low, hi):
     return li
 
 
-li = nibutan(-1, 10**12)
-
+li = nibutan(-1, 10 ** 12)
 print(li[1])

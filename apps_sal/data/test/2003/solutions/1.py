@@ -1,12 +1,9 @@
 import collections
-
 max_bits = 30
-
-#root = collections.Counter()
-#vals = collections.defaultdict(int)
 
 
 class BNode:
+
     def __init__(self, ct=0, zero=None, one=None):
         self.ct = ct
         self.zero = None
@@ -20,7 +17,7 @@ root = BNode()
 
 
 def bits(x):
-    bit = 2**(max_bits - 1)
+    bit = 2 ** (max_bits - 1)
     for i in range(max_bits):
         if x & bit:
             yield 1
@@ -69,24 +66,20 @@ def question(x, root):
             else:
                 root = root.one
                 y = y * 2 + 1
+        elif root.one and root.one.ct > 0:
+            root = root.one
+            y = y * 2 + 1
         else:
-            if root.one and root.one.ct > 0:
-                root = root.one
-                y = y * 2 + 1
-            else:
-                root = root.zero
-                y = y * 2
+            root = root.zero
+            y = y * 2
     return x ^ y
 
 
 add(0, root)
-
 q = int(input())
-
 output = []
-
 for i in range(q):
-    qtype, x = input().split()
+    (qtype, x) = input().split()
     x = int(x)
     if qtype == '+':
         add(x, root)
@@ -94,5 +87,4 @@ for i in range(q):
         sub(x, root)
     if qtype == '?':
         output.append(str(question(x, root)))
-
-print("\n".join(output))
+print('\n'.join(output))

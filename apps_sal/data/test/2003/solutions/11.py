@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -9,14 +7,11 @@ import random
 import itertools
 import sys
 from typing import List
-
-"""
-created by shhuan at 2020/1/7 22:34
-
-"""
+'\ncreated by shhuan at 2020/1/7 22:34\n\n'
 
 
 class Node:
+
     def __init__(self):
         self.val = None
         self.left = None
@@ -55,8 +50,7 @@ def remove(val):
         nt = t.left if v == '1' else t.right
         q.append((t, v))
         t = nt
-
-    for t, v in reversed(q):
+    for (t, v) in reversed(q):
         ended = t.left and t.right
         if v == '1':
             t.left = None
@@ -67,7 +61,7 @@ def remove(val):
 
 
 def search(val):
-    u = binval(((1 << N) - 1) ^ val)
+    u = binval((1 << N) - 1 ^ val)
     x = ''
     t = tree
     for v in u:
@@ -78,13 +72,12 @@ def search(val):
             else:
                 x += '0'
                 t = t.right
+        elif t.right:
+            x += '0'
+            t = t.right
         else:
-            if t.right:
-                x += '0'
-                t = t.right
-            else:
-                x += '1'
-                t = t.left
+            x += '1'
+            t = t.left
     return int(x, 2) ^ val
 
 
@@ -94,7 +87,7 @@ wc = collections.defaultdict(int)
 bwc = collections.defaultdict(set)
 ans = []
 for qi in range(q):
-    a, b = input().split()
+    (a, b) = input().split()
     v = int(b)
     if a == '+':
         wc[v] += 1

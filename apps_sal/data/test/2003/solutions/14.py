@@ -3,16 +3,18 @@ input = sys.stdin.readline
 
 
 class BinaryTrie:
+
     class Node:
+
         def __init__(self, bit: bool = False):
-            self.bit = bit  # Stores the current bit (False if 0, True if 1)
+            self.bit = bit
             self.children = []
-            self.count = 0  # stores number of keys finishing at this bit
-            self.counter = 1  # stores number of keys with this bit as prefix
+            self.count = 0
+            self.counter = 1
 
     def __init__(self, size):
         self.root = BinaryTrie.Node()
-        self.size = size  # Maximum size of each key
+        self.size = size
 
     def convert(self, key):
         """Converts key from string/integer to a list of boolean values!"""
@@ -23,7 +25,7 @@ class BinaryTrie:
             for i in range(self.size - len(key)):
                 bits += [False]
             for i in key:
-                if i == "0":
+                if i == '0':
                     bits += [False]
                 else:
                     bits += [True]
@@ -62,7 +64,7 @@ class BinaryTrie:
                     nodelist.append(node)
                     break
         node.count -= 1
-        if not node.children and not node.count:
+        if not node.children and (not node.count):
             for i in range(len(nodelist) - 2, -1, -1):
                 nodelist[i].children.remove(nodelist[i + 1])
                 if nodelist[i].children or nodelist[i].count:
@@ -90,19 +92,18 @@ class BinaryTrie:
 di = {}
 tr = BinaryTrie(32)
 tr.add(0)
-
 for _ in range(int(input())):
-    a, b = input().split()
-    if a == "+":
+    (a, b) = input().split()
+    if a == '+':
         tr.add(int(b))
-    elif a == "-":
+    elif a == '-':
         tr.remove(int(b))
     else:
         ans = 0
         node = tr.root
         cnt = 32
         y = bin(int(b))[2:]
-        x = [False if i == "0" else True for i in "0" * (32 - len(y)) + y]
+        x = [False if i == '0' else True for i in '0' * (32 - len(y)) + y]
         for i in x:
             cnt -= 1
             next = tr.query([not i], node)
@@ -110,5 +111,5 @@ for _ in range(int(input())):
                 node = tr.query([i], node)
             else:
                 node = next
-                ans += 2**cnt
+                ans += 2 ** cnt
         print(ans)

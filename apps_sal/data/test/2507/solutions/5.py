@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import numpy as np
 
 
@@ -7,14 +6,13 @@ def is_ok(mid, K, A, F):
 
 
 def main():
-    N, K = input_line(int, int)
+    (N, K) = input_line(int, int)
     A = input_line([int])
     F = input_line([int])
     A = np.array(sorted(A))
     F = np.array(sorted(F, reverse=True))
-
     ng = -1
-    ok = int(1e12)
+    ok = int(1000000000000.0)
     while ok - ng > 1:
         mid = (ng + ok) // 2
         if is_ok(mid, K, A, F):
@@ -30,7 +28,7 @@ def input_line(*types):
     elif len(types) == 1:
         return types[0](input())
     else:
-        return [t(x) for t, x in zip(types, input().split())]
+        return [t(x) for (t, x) in zip(types, input().split())]
 
 
 def __starting_point():

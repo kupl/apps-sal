@@ -1,10 +1,7 @@
-# Bhargey Mehta (Sophomore)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
-#sys.stdin = open("input.txt", "r")
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def getBin(x):
@@ -29,17 +26,15 @@ def add(x, trie, i):
 def query(x, trie, i, ans):
     if i == len(x):
         return ans
-
     if x[i] == 1:
         if trie[0] == -1:
             return query(x, trie[1], i + 1, ans << 1)
         else:
             return query(x, trie[0], i + 1, (ans << 1) + 1)
+    elif trie[1] == -1:
+        return query(x, trie[0], i + 1, ans << 1)
     else:
-        if trie[1] == -1:
-            return query(x, trie[0], i + 1, ans << 1)
-        else:
-            return query(x, trie[1], i + 1, (ans << 1) + 1)
+        return query(x, trie[1], i + 1, (ans << 1) + 1)
 
 
 def delete(x, trie, i):
@@ -53,9 +48,8 @@ def delete(x, trie, i):
 n = int(input())
 add(getBin(0), t, 0)
 f = {0: 1}
-
 for _ in range(n):
-    q, x = input().split()
+    (q, x) = input().split()
     x = int(x)
     if q == '+':
         if x in f:
@@ -65,9 +59,8 @@ for _ in range(n):
             add(getBin(x), t, 0)
     elif q == '?':
         print(query(getBin(x), t, 0, 0))
+    elif f[x] == 1:
+        del f[x]
+        delete(getBin(x), t, 0)
     else:
-        if f[x] == 1:
-            del f[x]
-            delete(getBin(x), t, 0)
-        else:
-            f[x] -= 1
+        f[x] -= 1

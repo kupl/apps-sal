@@ -11,17 +11,16 @@ def yn(a, f, k, x):
         return False
 
 
-n, k = list(map(int, input().split()))
-a = list((list(map(int, input().split()))))
-f = list((list(map(int, input().split()))))
+(n, k) = list(map(int, input().split()))
+a = list(list(map(int, input().split())))
+f = list(list(map(int, input().split())))
 a.sort()
 f.sort(reverse=True)
 xo = max([a[i] * f[i] for i in range(n)])
 a = np.array(a)
 f = np.array(f)
-# binary search
 if xo == 0:
-    print((0))
+    print(0)
 else:
     l = 0
     r = xo
