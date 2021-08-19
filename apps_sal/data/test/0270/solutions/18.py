@@ -16,7 +16,7 @@ References
 def solve(n, m, s, t):
     edges = [[] for i in range(n)]
     for i in range(m):
-        u, v = s[i], t[i]
+        (u, v) = (s[i], t[i])
         edges[u - 1].append(v - 1)
     p = [0] * n
     p[0] = 1
@@ -32,15 +32,15 @@ def solve(n, m, s, t):
         deg = len(edges[i])
         if deg <= 1:
             continue
-        k = max((E[j], j) for j in edges[i])[1]
+        k = max(((E[j], j) for j in edges[i]))[1]
         v = [E[j] for j in edges[i] if j != k]
         res = min(res, E[0] + p[i] * (sum(v) / (deg - 1) - E[k]) / deg)
     return res
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = [0] * m
 t = [0] * m
 for i in range(m):
-    s[i], t[i] = map(int, input().split())
+    (s[i], t[i]) = map(int, input().split())
 print(solve(n, m, s, t))

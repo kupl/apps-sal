@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -11,8 +10,6 @@ def main():
     P = []
     for _ in range(N):
         P.append(list(map(int, input().split())))
-
-    # A: choosen list
     A = list(range(10))
     n = len(A)
     ans = -float('inf')
@@ -20,18 +17,16 @@ def main():
         select = []
         score = 0
         for j in range(n):
-            if (i >> j) & 1:
+            if i >> j & 1:
                 select.append(A[j])
         if len(select) == 0:
             continue
-
         for j in range(N):
             cnt = 0
             for k in select:
                 if F[j][k] == 1:
                     cnt += 1
             score += P[j][cnt]
-
         ans = max(ans, score)
     print(ans)
 

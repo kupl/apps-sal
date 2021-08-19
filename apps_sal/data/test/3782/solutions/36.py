@@ -2,19 +2,22 @@ import sys
 import math
 from collections import defaultdict
 from bisect import bisect_left, bisect_right
-
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def input():
     return sys.stdin.readline()[:-1]
 
 
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
-def I(): return int(input())
-def LI(): return list(map(int, input().split()))
+def I():
+    return int(input())
+
+
+def LI():
+    return list(map(int, input().split()))
 
 
 def LIR(row, col):
@@ -26,14 +29,9 @@ def LIR(row, col):
         read_all = [LI() for _ in range(row)]
         return map(list, zip(*read_all))
 
-#################
 
-
-N, K, Q = LI()
+(N, K, Q) = LI()
 A = LI()
-
-# 最小値を決め打ちすると区間を分割できる
-
 Aval = set(A)
 ans = float('inf')
 for a in Aval:
@@ -57,5 +55,4 @@ for a in Aval:
         mins.sort()
         if mins[Q - 1] - a < ans:
             ans = mins[Q - 1] - a
-
 print(ans)

@@ -1,10 +1,9 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 inf = float('inf')
 
 
 def main(n, m, g, uv):
-    # 1<=E<=n-1
     eary = [inf] * m
     vary = [inf] * n
     vary[-1] = 0
@@ -15,7 +14,7 @@ def main(n, m, g, uv):
             return vary[v]
         ret = 0
         cnt = 0
-        for i, nv in g[v]:
+        for (i, nv) in g[v]:
             if i == x:
                 continue
             tmp = dfs(nv, x) + 1
@@ -35,7 +34,7 @@ def main(n, m, g, uv):
     for v in range(n):
         k = len(g[v])
         e = vary[v]
-        for i, nv in g[v]:
+        for (i, nv) in g[v]:
             bary[nv] += 1 / k * bary[v]
             if k > 1 and bary[v]:
                 ary[i] = max(0, e - (e * k - eary[i]) / (k - 1))
@@ -43,10 +42,10 @@ def main(n, m, g, uv):
     return e0 - max(0, max(ary))
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 uv = [list(map(int, input().split())) for _ in range(m)]
 g = [[] for _ in range(n)]
-for i, (u, v) in enumerate(uv):
-    u, v = u - 1, v - 1
+for (i, (u, v)) in enumerate(uv):
+    (u, v) = (u - 1, v - 1)
     g[u].append((i, v))
-print((main(n, m, g, uv)))
+print(main(n, m, g, uv))

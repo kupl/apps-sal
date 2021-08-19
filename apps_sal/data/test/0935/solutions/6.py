@@ -1,10 +1,6 @@
-# Codeforces 258
-# Game with Sticks
-
-a, b = input().split()
+(a, b) = input().split()
 horiz = int(a)
 vert = int(b)
-
 if horiz > vert:
     if vert % 2 == 0:
         print('Malvika')

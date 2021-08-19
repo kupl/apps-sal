@@ -1,16 +1,28 @@
 from collections import *
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
 
 
-class Dinic():
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+class Dinic:
+
     def __init__(self, n, s, t):
-        self.n, self.s, self.t = n, s, t
+        (self.n, self.s, self.t) = (n, s, t)
         self.to = defaultdict(list)
         self.level = [-1]
         self.max_flow = -1
@@ -28,8 +40,8 @@ class Dinic():
         q = deque()
         q.append([s, 0])
         while q:
-            u, u_level = q.popleft()
-            for v, cap, _ in self.to[u]:
+            (u, u_level) = q.popleft()
+            for (v, cap, _) in self.to[u]:
                 if cap == 0:
                     continue
                 if level[v] != -1:
@@ -48,7 +60,7 @@ class Dinic():
             return flow_to_me
         flow_from_me = 0
         u_level = self.level[u]
-        for utov_i, (v, cap, vtou_i) in enumerate(self.to[u]):
+        for (utov_i, (v, cap, vtou_i)) in enumerate(self.to[u]):
             if self.level[v] != u_level + 1:
                 continue
             if cap == 0:
@@ -67,7 +79,6 @@ class Dinic():
             res += self.dfs()
         return res
 
-    # これが出力用
     def get_max_flow(self):
         if self.max_flow == -1:
             self.max_flow = self.calculation()
@@ -79,7 +90,7 @@ def main():
     aa = LI()
     mf = Dinic(n + 2, 0, n + 1)
     max_sum = 0
-    for i, a in enumerate(aa, 1):
+    for (i, a) in enumerate(aa, 1):
         if a > 0:
             mf.add_edge(i, n + 1, a)
             max_sum += a

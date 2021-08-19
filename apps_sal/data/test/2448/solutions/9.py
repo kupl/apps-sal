@@ -1,42 +1,36 @@
-# import sys
-# input = sys.stdin.readline
-
 t = int(input())
 for i in range(t):
     n = int(input())
-    r, p, s = list(map(int, input().split()))
+    (r, p, s) = list(map(int, input().split()))
     st = input()
-
-    rr = st.count("R")
-    pp = st.count("P")
-    ss = st.count("S")
-
-    w = -((-n) // 2)
-    # print(min(r,ss),min(s,pp),min(p,rr),w)
+    rr = st.count('R')
+    pp = st.count('P')
+    ss = st.count('S')
+    w = -(-n // 2)
     if min(r, ss) + min(s, pp) + min(p, rr) >= w:
-        print("YES")
-        ANS = ["n"] * n
+        print('YES')
+        ANS = ['n'] * n
         for j in range(n):
-            if r > 0 and st[j] == "S":
-                ANS[j] = "R"
+            if r > 0 and st[j] == 'S':
+                ANS[j] = 'R'
                 r -= 1
-            elif p > 0 and st[j] == "R":
-                ANS[j] = "P"
+            elif p > 0 and st[j] == 'R':
+                ANS[j] = 'P'
                 p -= 1
-            elif s > 0 and st[j] == "P":
-                ANS[j] = "S"
+            elif s > 0 and st[j] == 'P':
+                ANS[j] = 'S'
                 s -= 1
         for j in range(n):
-            if ANS[j] == "n":
+            if ANS[j] == 'n':
                 if r > 0:
-                    ANS[j] = "R"
+                    ANS[j] = 'R'
                     r -= 1
                 elif p > 0:
-                    ANS[j] = "P"
+                    ANS[j] = 'P'
                     p -= 1
                 elif s > 0:
-                    ANS[j] = "S"
+                    ANS[j] = 'S'
                     s -= 1
-        print("".join(ANS))
+        print(''.join(ANS))
     else:
-        print("NO")
+        print('NO')
