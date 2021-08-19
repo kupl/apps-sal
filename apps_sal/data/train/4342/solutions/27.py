@@ -1,3 +1,2 @@
 def no_space(x):
-    # your code here
-    return "".join(str.split(x))
+    return ''.join(str.split(x))

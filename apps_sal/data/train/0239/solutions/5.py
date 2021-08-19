@@ -1,9 +1,9 @@
 class Solution:
+
     def largestValsFromLabels(self, values: List[int], labels: List[int], num_wanted: int, use_limit: int) -> int:
         label2values = defaultdict(list)
-        for value, label in zip(values, labels):
+        for (value, label) in zip(values, labels):
             label2values[label].append(value)
-
         all_top_nums = []
         for values in list(label2values.values()):
             if use_limit >= len(values):
@@ -11,7 +11,6 @@ class Solution:
             else:
                 top_nums = self.quick_select(use_limit, values)
             all_top_nums.extend(top_nums)
-
         if num_wanted >= len(all_top_nums):
             return sum(all_top_nums)
         return sum(self.quick_select(num_wanted, all_top_nums))
@@ -42,20 +41,4 @@ class Solution:
         return pivot
 
     def _swap(self, nums, i, j):
-        nums[i], nums[j] = nums[j], nums[i]
-
-# Follow-up 1
-# Do beter than O(nlogn).
-
-# Follow-up 2
-# Can you do it in O(n) time?
-
-# What about using QuickSelect?
-
-# Steps:
-
-# Separate all elements by label => HashMap<Label, Array> m;
-# Use QuickSelect on each label's elements to find the largest m elements.
-# Merge the largest m elements from each label into an array
-# Use QuickSelect again on the resulting array to get the largest k elements.
-# *each step can be done in O(N).
+        (nums[i], nums[j]) = (nums[j], nums[i])

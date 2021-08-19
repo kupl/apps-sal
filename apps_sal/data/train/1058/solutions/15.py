@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n = int(input())
@@ -6,11 +5,10 @@ while t:
     while n > 0:
         temp = n % 10
         n //= 10
-
         l.append(temp)
     for i in range(len(l)):
         l[i] -= 2
-    s = ""
+    s = ''
     l.reverse()
     for i in l:
         s += str(i)

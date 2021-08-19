@@ -1,25 +1,19 @@
-# cook your dish here
 from sys import stdin, stdout
-
 a0 = 0
 a1 = 1
-n, k = stdin.readline().strip().split(' ')
-n, k = int(n), int(k)
-
+(n, k) = stdin.readline().strip().split(' ')
+(n, k) = (int(n), int(k))
 arr = list(map(int, stdin.readline().strip().split(' ')))
 
 
 def solve(n, k, arr):
     sol = []
-
     l = 0
     u = k
-
     while l != u:
         sol.append(arr[l:min(len(arr), u)])
         l = min(l + k, len(arr))
         u = min(u + k, len(arr))
-
     tiwari = []
     for i in range(k):
         titi = 0
@@ -31,7 +25,6 @@ def solve(n, k, arr):
                 else:
                     gao += 1
         tiwari.append((titi, gao))
-
     minflip = (-1, -1)
     ans = 0
     ctr = 0
@@ -45,14 +38,10 @@ def solve(n, k, arr):
             ans += i[1]
             if i[0] < minflip[0] or minflip[0] == -1:
                 minflip = (i[0], i[1])
-    # print(ans,ctr)
-    # print(tiwari)
-    # print(minflip)
     if ctr % 2 == 0:
         ans += minflip[0]
         ans -= minflip[1]
-
-    stdout.write(str(ans) + "\n")
+    stdout.write(str(ans) + '\n')
 
 
 solve(n, k, arr)

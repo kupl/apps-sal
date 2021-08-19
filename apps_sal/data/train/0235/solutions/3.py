@@ -1,11 +1,11 @@
 class Solution:
+
     def numberOfArithmeticSlices(self, A):
         ans = [0] * len(A)
         for i in range(0, len(A)):
             if i < 2:
                 ans[i] = 0
             else:
-                # add number of slices for i - 1
                 ans[i] = ans[i - 1]
                 temp = A[:i + 1][::-1]
                 for j in range(0, i - 1):
