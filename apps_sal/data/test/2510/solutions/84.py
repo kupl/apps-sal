@@ -1,5 +1,5 @@
 import statistics
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = [0] * M
 B = [0] * M
 par = [-1] * N
@@ -30,11 +30,8 @@ def unite(x, y):
 
 
 for i in range(M):
-    A[i], B[i] = sorted(map(int, input().split()))
+    (A[i], B[i]) = sorted(map(int, input().split()))
     unite(A[i] - 1, B[i] - 1)
-
 for i in range(N):
     par[i] *= -1
-
-# print(par)
 print(max(par))

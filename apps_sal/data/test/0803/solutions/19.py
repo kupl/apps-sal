@@ -1,13 +1,10 @@
-#! /usr/bin/env python
-
 n = int(input())
 s = list(input())
-
 cnt = s.count('x')
 ans = cnt - n // 2
 if ans > 0:
     tmp = ans
-    for i, x in enumerate(s):
+    for (i, x) in enumerate(s):
         if x == 'x':
             s[i] = 'X'
             tmp -= 1
@@ -16,7 +13,7 @@ if ans > 0:
 elif ans < 0:
     ans = -ans
     tmp = ans
-    for i, x in enumerate(s):
+    for (i, x) in enumerate(s):
         if x == 'X':
             s[i] = 'x'
             tmp -= 1

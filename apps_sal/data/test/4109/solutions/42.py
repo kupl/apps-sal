@@ -1,10 +1,8 @@
-N, M, X = [int(s) for s in input().split()]
+(N, M, X) = [int(s) for s in input().split()]
 Book = [[int(s) for s in input().split()] for _ in range(N)]
-INF = 10**7
-
+INF = 10 ** 7
 ans = set()
 ans.add(INF)
-# 深さ優先探索
 
 
 def DFS(n, cost, Xls):

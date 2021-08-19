@@ -1,4 +1,5 @@
-class UnionFind():  # 0インデックス
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -13,13 +14,10 @@ class UnionFind():  # 0インデックス
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -27,16 +25,14 @@ class UnionFind():  # 0インデックス
         return -self.parents[self.find(x)]
 
 
-N, M = map(int, input().split())  # N人、M個の関係
+(N, M) = map(int, input().split())
 union_find = UnionFind(N)
 for _ in range(M):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     A -= 1
     B -= 1
     union_find.union(A, B)
-
 answer = 0
 for i in range(N):
     answer = max(answer, union_find.size(i))
-
 print(answer)

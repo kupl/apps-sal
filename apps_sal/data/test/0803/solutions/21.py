@@ -1,5 +1,3 @@
-#!/usr/local/bin/python3
-
 n = list(map(int, input()))
 a = list(input())
 i_x = a.count('x')
@@ -20,10 +18,9 @@ for i in range(len(a)):
         if flag == 1:
             a[i] = 'X'
             cnt += 1
-    else:
-        if flag == 0:
-            a[i] = 'x'
-            cnt += 1
+    elif flag == 0:
+        a[i] = 'x'
+        cnt += 1
     if cnt == result:
         break
-print("".join(a))
+print(''.join(a))

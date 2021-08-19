@@ -16,11 +16,9 @@ def union(x, y):
     if root_x == root_y:
         return
     if parent[root_x] > parent[root_y]:
-        root_x, root_y = root_y, root_x
+        (root_x, root_y) = (root_y, root_x)
     parent[root_x] += parent[root_y]
     parent[root_y] = root_x
-
-# 今回これ使わないけど、どこに誰がいるのかはこれでわかる
 
 
 def members(n, x):
@@ -33,13 +31,13 @@ def get_size(x):
 
 
 def get_root():
-    return [i for i, root in enumerate(parent) if root < 0]
+    return [i for (i, root) in enumerate(parent) if root < 0]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 parent = [-1 for _ in range(n)]
 for _ in range(m):
-    a, b = map(lambda x: int(x) - 1, input().split())
+    (a, b) = map(lambda x: int(x) - 1, input().split())
     union(a, b)
 ans = 0
 for i in range(n):

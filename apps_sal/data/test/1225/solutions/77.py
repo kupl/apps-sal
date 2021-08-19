@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def solve(H: int):
     n = 1
     attack = 0

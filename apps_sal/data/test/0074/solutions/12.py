@@ -9,7 +9,7 @@ for i in range(3, math.ceil(n ** 0.5) + 1):
         primes.append(i)
 
 
-def isprime(x):  # x < n
+def isprime(x):
     if x == 1:
         return False
     for p in primes:
