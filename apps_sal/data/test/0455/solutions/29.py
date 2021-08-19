@@ -1,15 +1,6 @@
-# 解説を参考に作成
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N, XY):
     tmp = 0
-    for x, y in XY:
+    for (x, y) in XY:
         tmp += (abs(x) + abs(y)) % 2
     if tmp % N != 0:
         print(-1)
@@ -20,7 +11,7 @@ def solve(N, XY):
     d += [1] if tmp == 0 else []
     m = len(d)
     w = []
-    for xi, yi in XY:
+    for (xi, yi) in XY:
         xx = 0
         yy = 0
         W = ''
@@ -32,13 +23,12 @@ def solve(N, XY):
                 else:
                     xx -= di
                     W += 'L'
+            elif yy <= yi:
+                yy += di
+                W += 'U'
             else:
-                if yy <= yi:
-                    yy += di
-                    W += 'U'
-                else:
-                    yy -= di
-                    W += 'D'
+                yy -= di
+                W += 'D'
         w.append(W)
     print(m)
     print(' '.join([str(i) for i in d]))
@@ -46,18 +36,9 @@ def solve(N, XY):
 
 
 def __starting_point():
-    # S = input()
     N = int(input())
-    # N, M = map(int, input().split())
-    # A = [int(i) for i in input().split()]
-    # B = [int(i) for i in input().split()]
     XY = [[int(i) for i in input().split()] for _ in range(N)]
     solve(N, XY)
-
-    # # test
-    # from random import randint
-    # from func import random_str
-    # solve()
 
 
 __starting_point()

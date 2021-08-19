@@ -7,9 +7,8 @@ def ncr(x, y):
     return F[x] // (F[y] * F[x - y])
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 P = [0] * 2000
-
 for j in range(1, min(m, n) + 1):
     mine = m
     total = n * m
@@ -24,11 +23,8 @@ for j in range(1, min(m, n) + 1):
     p *= n
     p *= ncr(n, j)
     P[j] = p
-
 ans = 0
-
 for j in range(1, min(m, n) + 1):
-    # What is the probability that the deck will contain j cards of type i
     p = P[j]
     ans += P[j] * (j * j) / (n * n)
 print(ans)

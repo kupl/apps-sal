@@ -1,18 +1,14 @@
 import sys
-# 結局よくわからず解法見てしもた
-# これで通るかな
 
 
 def 解():
     iN = int(input())
-    aP = [[int(_) for _ in sLine.rstrip("\n").split()] for sLine in sys.stdin.readlines()]
-
-    i最遠 = max([abs(iX) + abs(iY) for iX, iY in aP])
-
+    aP = [[int(_) for _ in sLine.rstrip('\n').split()] for sLine in sys.stdin.readlines()]
+    i最遠 = max([abs(iX) + abs(iY) for (iX, iY) in aP])
     iMod = sum(aP[0]) % 2
     for i in range(1, iN):
         if sum(aP[i]) % 2 != iMod:
-            print("-1")
+            print('-1')
             return
     a腕 = [1]
     if iMod == 0:
@@ -24,7 +20,7 @@ def 解():
     a腕.reverse()
     iLen腕 = len(a腕)
     print(iLen腕)
-    print((" ".join([str(_) for _ in a腕])))
+    print(' '.join([str(_) for _ in a腕]))
     aRet = []
     for aE in aP:
         aCommand = []
@@ -34,19 +30,18 @@ def 解():
             if abs(iX) > abs(iY):
                 if iX < 0:
                     iX += a腕[i]
-                    aCommand.append("L")
+                    aCommand.append('L')
                 else:
                     iX -= a腕[i]
-                    aCommand.append("R")
+                    aCommand.append('R')
+            elif iY < 0:
+                iY += a腕[i]
+                aCommand.append('D')
             else:
-                if iY < 0:
-                    iY += a腕[i]
-                    aCommand.append("D")
-                else:
-                    iY -= a腕[i]
-                    aCommand.append("U")
-        aRet.append("".join(aCommand))
-    sys.stdout.write("\n".join(aRet) + "\n")
+                iY -= a腕[i]
+                aCommand.append('U')
+        aRet.append(''.join(aCommand))
+    sys.stdout.write('\n'.join(aRet) + '\n')
 
 
 def __starting_point():
