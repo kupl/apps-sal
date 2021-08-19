@@ -1,4 +1,4 @@
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 ans = []
 if N >= A + B - 1 and N <= A * B:
     for i in range(A):
@@ -8,8 +8,7 @@ if N >= A + B - 1 and N <= A * B:
                 break
             elif i * (B - 1) + (B - 1 - j) >= N - A + 1:
                 continue
-            #print(i * (B-1) + (B-1 -j))
             ans.append(str(i * (B - 1) + (B - 1 - j)))
 else:
-    ans = ["-1"]
-print(" ".join(ans))
+    ans = ['-1']
+print(' '.join(ans))

@@ -4,6 +4,7 @@ input = sys.stdin.readline
 
 
 class Problem:
+
     def __init__(self):
         pass
 
@@ -11,7 +12,7 @@ class Problem:
         print(self._solve())
 
     def _solve(self):
-        n, m = [int(item) for item in input().split()]
+        (n, m) = [int(item) for item in input().split()]
         pairs = []
         cnt = {}
         mp = defaultdict(int)
@@ -25,9 +26,7 @@ class Problem:
                 cnt[pair] += 1
             else:
                 cnt[pair] = 1
-
         res = []
-
         for x in mp:
             res.append([mp[x], x])
         res.sort()
@@ -42,11 +41,9 @@ class Problem:
                     occs = 0
                 else:
                     occs = cnt[pair]
-                # print(pair, res[i][0], res[j][0], occs)
                 if res[i][0] + res[j][0] - occs == m:
-                    # return ' '.join(str(x) for x in sorted([res[i][1], res[j][1]]))
-                    return "YES"
-        return "NO"
+                    return 'YES'
+        return 'NO'
 
 
 def main():

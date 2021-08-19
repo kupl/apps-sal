@@ -1,21 +1,17 @@
-n, m, D = [int(x) for x in input().split(' ')]
-
+(n, m, D) = [int(x) for x in input().split(' ')]
 G = {}
 for u in range(1, n + 1):
     G[u] = set()
 for i in range(m):
-    u, v = [int(x) for x in input().split(' ')]
+    (u, v) = [int(x) for x in input().split(' ')]
     G[u].add(v)
     G[v].add(u)
-
 if len(G[1]) < D:
     print('NO')
 else:
-
     visited = [1] + [0] * n
     comp = [0] * (n + 1)
     c_visited = [1] + [0] * n
-
     a = 0
     for i in G[1]:
         if not visited[i]:
@@ -23,11 +19,10 @@ else:
             comp[i] = a
             visited[i] = 1
             q = [i]
-            # bfs
             while len(q) > 0:
                 u = q.pop(0)
                 for v in G[u]:
-                    if v != 1 and not visited[v]:
+                    if v != 1 and (not visited[v]):
                         q.append(v)
                         comp[v] = a
                         visited[v] = 1
@@ -57,7 +52,6 @@ else:
                     queue.append(v)
                     if not d:
                         break
-        # bfs
         while len(queue) > 0 and n_edges < n - 1:
             u = queue.pop(0)
             for v in G[u]:

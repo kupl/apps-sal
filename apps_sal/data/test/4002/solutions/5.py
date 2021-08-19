@@ -1,10 +1,9 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 A = [list(map(int, input().split())) for _ in range(n)]
-
 dp1 = []
 for i in range(n):
     B = A[i]
-    temp = [[-1] * (k) for _ in range(m // 2 + 1)]
+    temp = [[-1] * k for _ in range(m // 2 + 1)]
     temp[0][0] = 0
     for b in B:
         for l in reversed(list(range(m // 2))):
@@ -16,7 +15,6 @@ for i in range(n):
         for l in range(m // 2 + 1):
             temp2[j] = max(temp2[j], temp[l][j])
     dp1.append(temp2)
-# print(dp1)
 dp2 = [[-1] * k for i in range(n + 1)]
 dp2[0][0] = 0
 for i in range(n):

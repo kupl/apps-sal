@@ -2,19 +2,22 @@ import sys
 import math
 from collections import defaultdict
 from bisect import bisect_left, bisect_right
-
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def input():
     return sys.stdin.readline()[:-1]
 
 
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
-def I(): return int(input())
-def LI(): return list(map(int, input().split()))
+def I():
+    return int(input())
+
+
+def LI():
+    return list(map(int, input().split()))
 
 
 def LIR(row, col):
@@ -26,16 +29,10 @@ def LIR(row, col):
         read_all = [LI() for _ in range(row)]
         return map(list, zip(*read_all))
 
-#################
 
-# Aは単調減少列の右端から選べる
-# Bは ceil(N/A) ~ N-A+1 を取れる
-
-
-N, A, B = LI()
-
+(N, A, B) = LI()
 if math.ceil(N / A) <= B <= N - A + 1:
-    numl = [1] * A  # 各単調減少列の要素数
+    numl = [1] * A
     numl[0] = B
     left = N - A - B + 1
     for i in range(1, A):

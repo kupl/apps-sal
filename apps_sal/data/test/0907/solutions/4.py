@@ -1,9 +1,6 @@
-n, m = list(map(int, input().split()))
-pairs = [tuple(int(x) for x in input().split()) for _ in range(m)]
-
-# print(pairs)
+(n, m) = list(map(int, input().split()))
+pairs = [tuple((int(x) for x in input().split())) for _ in range(m)]
 possible = {pairs[0], (pairs[0][0], None), (pairs[0][1], None)}
-# print(pairs[0], possible)
 for p in pairs[1:]:
     add = set()
     remove = set()
@@ -14,11 +11,9 @@ for p in pairs[1:]:
         if o[1] is None:
             add.add((o[0], p[0]))
             add.add((o[0], p[1]))
-    possible = (possible - remove) | add
-    # print(p, possible)
+    possible = possible - remove | add
     if not possible:
         break
-
 if not possible:
     print('NO')
 else:

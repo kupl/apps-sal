@@ -9,7 +9,7 @@ def _pow(a, d, md):
     return res
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 mod = 1000000007
@@ -32,8 +32,8 @@ for i in range(0, n):
         base %= mod
     elif a[i] == 0 and b[i] == 0:
         dp[0][i] = dp[0][i - 1] * m % mod
-        dp[1][i] = (dp[1][i - 1] * m * m) % mod
-        dp[1][i] += (dp[0][i - 1] * (m - 1) * m // 2) % mod
+        dp[1][i] = dp[1][i - 1] * m * m % mod
+        dp[1][i] += dp[0][i - 1] * (m - 1) * m // 2 % mod
         base *= m * m
         base %= mod
     elif a[i] != 0 and b[i] != 0:
@@ -45,8 +45,6 @@ for i in range(0, n):
         else:
             dp[0][i] = dp[0][i - 1] % mod
             dp[1][i] = dp[1][i - 1] % mod
-    #print(dp[0][i], dp[1][i])
-
 p = dp[1][n - 1]
 q = base
 p %= mod
