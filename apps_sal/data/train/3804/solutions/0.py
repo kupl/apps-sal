@@ -1,8 +1,7 @@
-# precalculate results
 results = {}
-n, digits = 1, 0
+(n, digits) = (1, 0)
 while digits <= 1000:
-    digits = len(str(sum(x**(n - x + 1) for x in range(1, n))))
+    digits = len(str(sum((x ** (n - x + 1) for x in range(1, n)))))
     if digits not in results:
         results[digits] = n
     n += 1

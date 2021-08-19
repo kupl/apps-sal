@@ -1,6 +1,5 @@
 import sys
-# sys.setrecursionlimit(10**5)
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = {i: [] for i in range(1, n + 1)}
 dp = [[[-1] * 26 for _ in range(n + 1)] for i in range(n + 1)]
 
@@ -26,5 +25,5 @@ for _ in range(m):
     g[a].append([b, c])
 for i in range(1, n + 1):
     for j in range(1, n + 1):
-        print('A', end="") if rec(i, j, 'a') else print('B', end="")
+        print('A', end='') if rec(i, j, 'a') else print('B', end='')
     print()

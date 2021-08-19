@@ -1,14 +1,12 @@
-#!/usr/bin/env	python
-# -*-coding:utf-8 -*-
 import sys
 import collections
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 M = collections.defaultdict(collections.deque)
 Q = collections.deque()
 L = []
 s = n = m = 0
 for _ in range(q):
-    y, x = list(map(int, input().split()))
+    (y, x) = list(map(int, input().split()))
     if 2 > y:
         s += 1
         Q.append(x)

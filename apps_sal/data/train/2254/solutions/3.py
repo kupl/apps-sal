@@ -1,14 +1,12 @@
-#!/usr/bin/env	python
-# -*-coding:utf-8 -*-
 import collections
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 Q = collections.deque()
 A = n * [0]
 B = A[:]
 L = []
 s = n = 0
 for _ in range(q):
-    y, x = list(map(int, input().split()))
+    (y, x) = list(map(int, input().split()))
     if 2 > y:
         x -= 1
         Q.append(x)
@@ -24,7 +22,7 @@ for _ in range(q):
             n += 1
             y = Q.popleft()
             B[y] -= 1
-            if(B[y] < A[y]):
+            if B[y] < A[y]:
                 A[y] -= 1
                 s -= 1
     L.append(str(s))

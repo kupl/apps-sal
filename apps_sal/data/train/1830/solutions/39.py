@@ -1,8 +1,5 @@
 class Solution:
-    # Version 1: Greedy
-    # Use binary search to find the first dry day after the city got wet.
-    # TC: O(n^2), SC: O(n)
-    '''
+    """
     def avoidFlood(self, rains: List[int]) -> List[int]:
         from bisect import bisect_left
         wet = {}
@@ -25,39 +22,9 @@ class Solution:
                     ans[dry[index]] = rains[k]
                     dry.pop(index)
         return ans
-    '''
+    """
+    '\n    def avoidFlood(self, rains: List[int]) -> List[int]:\n        from sortedcontainers import SortedList\n        wet = {}\n        ans = [1]*len(rains)\n        dry = SortedList()\n        for k in range(len(rains)):\n            if not rains[k]:\n                dry.add(k)\n            else:\n                ans[k] = -1\n        for k in range(len(rains)):\n            if rains[k] > 0:\n                if rains[k] not in wet:\n                    wet[rains[k]] = k\n                else:\n                    index = dry.bisect_left(wet[rains[k]])\n                    if index == len(dry) or dry[index] > k:\n                        return []\n                    wet[rains[k]] = k\n                    ans[dry[index]] = rains[k]\n                    dry.pop(index)\n        return ans\n    '
 
-    # Version 2: Improved version 1
-    # Use SortedList to accelerate remove part
-    # TC: O(nlogn), SC: O(n)
-    '''
-    def avoidFlood(self, rains: List[int]) -> List[int]:
-        from sortedcontainers import SortedList
-        wet = {}
-        ans = [1]*len(rains)
-        dry = SortedList()
-        for k in range(len(rains)):
-            if not rains[k]:
-                dry.add(k)
-            else:
-                ans[k] = -1
-        for k in range(len(rains)):
-            if rains[k] > 0:
-                if rains[k] not in wet:
-                    wet[rains[k]] = k
-                else:
-                    index = dry.bisect_left(wet[rains[k]])
-                    if index == len(dry) or dry[index] > k:
-                        return []
-                    wet[rains[k]] = k
-                    ans[dry[index]] = rains[k]
-                    dry.pop(index)
-        return ans
-    '''
-
-    # Version 3: Greedy
-    # Store the next position of wet cities in the heap and pop out by urgency
-    # TC: O(nlogn), SC: O(n)
     def avoidFlood(self, rains: List[int]) -> List[int]:
         from collections import deque
         import heapq
@@ -80,11 +47,10 @@ class Solution:
                     city[rains[k]].popleft()
                     if city[rains[k]]:
                         heapq.heappush(option, (city[rains[k]][0], rains[k]))
+            elif option:
+                (_, c) = heapq.heappop(option)
+                ans[k] = c
+                wet.pop(c)
             else:
-                if option:
-                    _, c = heapq.heappop(option)
-                    ans[k] = c
-                    wet.pop(c)
-                else:
-                    ans[k] = 1
+                ans[k] = 1
         return ans

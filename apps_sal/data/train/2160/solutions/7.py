@@ -1,32 +1,27 @@
-n, k = list(map(int, input().strip().split()))
+(n, k) = list(map(int, input().strip().split()))
 A = list(map(int, input().strip().split()))
 s = sum(A)
 t = s // k
-if(s % t != 0):
-    print("No")
+if s % t != 0:
+    print('No')
 else:
     final = []
     i = 0
     flag = True
-    while(i != n):
+    while i != n:
         s1 = 0
         temp = []
-
-        while(s1 < t and i < n):
+        while s1 < t and i < n:
             s1 += A[i]
             temp.append(A[i])
-            #print("as",A[i], s1)
             i += 1
-        # print(temp)
-        if(s1 != t):
-            # print("s",s1,t)
+        if s1 != t:
             flag = False
             break
         else:
             final.append(len(temp))
-
-    if(flag is False):
-        print("No")
+    if flag is False:
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
         print(' '.join(list(map(str, final))))

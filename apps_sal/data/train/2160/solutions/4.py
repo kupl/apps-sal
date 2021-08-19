@@ -1,7 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 arr = list(map(int, input().split()))
 l = sum(arr)
-
 if l % k == 0:
     count = l // k
     a = [-1] * (k + 1)
@@ -9,18 +8,16 @@ if l % k == 0:
     i = 0
     ptr1 = 0
     flag = 0
-    while(i < k):
+    while i < k:
         temp = 0
-        while(ptr1 < n):
+        while ptr1 < n:
             temp += arr[ptr1]
             if temp == count:
-                # print(ptr1)
                 a[j] = ptr1
                 j += 1
                 ptr1 += 1
                 break
             elif temp > count:
-                # print(ptr1,temp,count)
                 flag = 1
                 break
             ptr1 += 1
@@ -30,12 +27,11 @@ if l % k == 0:
             break
         i += 1
     if flag == 1:
-        print("No")
+        print('No')
     else:
-        print("Yes")
-        # print(*a)
+        print('Yes')
         for i in range(1, k + 1):
-            print(a[i] - a[i - 1], end=" ")
+            print(a[i] - a[i - 1], end=' ')
         print()
 else:
-    print("No")
+    print('No')

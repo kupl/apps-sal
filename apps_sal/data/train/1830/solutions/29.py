@@ -1,4 +1,5 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         a = rains
         n = len(a)
@@ -10,7 +11,6 @@ class Solution:
             c = a[i]
             if c:
                 if c in v:
-                   # print(i, q)
                     j = bisect.bisect(q, v[c])
                     if j == len(q):
                         return []

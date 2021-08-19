@@ -3,12 +3,13 @@ from sortedcontainers import SortedSet
 
 
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
+
         def getCeil(a, v):
             if not a:
                 return None
             b = a.bisect_right(v)
-
             if b == 0:
                 if a[b] >= v:
                     return a[b]
@@ -16,12 +17,10 @@ class Solution:
             if b == len(a):
                 return None
             return a[b]
-
         res = [0] * len(rains)
         zeros = SortedSet()
         m = {}
-        for i, val in enumerate(rains):
-            # print(i, val, m, zeros, res)
+        for (i, val) in enumerate(rains):
             if val == 0:
                 zeros.add(i)
             else:
