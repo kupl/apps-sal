@@ -1,14 +1,11 @@
-# from future import print_function,division
-# range = xrange
 from sys import stdin, stdout
 import sys
 input = sys.stdin.readline
-# sys.setrecursionlimit(10**9)
 
 
 def main():
     for _ in range(int(input())):
-        a, b = [int(s) for s in input().split()]
+        (a, b) = [int(s) for s in input().split()]
         w = a // b
         w1 = a % b
         if w1 == 0:

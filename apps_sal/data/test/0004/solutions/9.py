@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 x = int(input())
-hh, mm = read()
+(hh, mm) = read()
 r = 0
 while '7' not in str(mm) and '7' not in str(hh):
     mm -= x

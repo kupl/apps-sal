@@ -1,6 +1,6 @@
 le = int(input())
 s = input()
-l = [0, 0, 0]  # B,G,R
+l = [0, 0, 0]
 for i in range(le):
     c = s[i]
     if c == 'B':
@@ -35,12 +35,11 @@ elif l[1] == 0:
         print('GR')
     else:
         print('BGR')
+elif l[1] == 1 and l[0] == 1:
+    print('R')
+elif l[0] == 1:
+    print('BR')
+elif l[1] == 1:
+    print('GR')
 else:
-    if l[1] == 1 and l[0] == 1:
-        print('R')
-    elif l[0] == 1:
-        print('BR')
-    elif l[1] == 1:
-        print('GR')
-    else:
-        print('BGR')
+    print('BGR')

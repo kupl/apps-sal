@@ -1,7 +1,7 @@
 x = int(input())
-h, m = map(int, input().split())
+(h, m) = map(int, input().split())
 ans = 0
-while (h % 10 != 7) and (m % 10 != 7):
+while h % 10 != 7 and m % 10 != 7:
     if m - x >= 0:
         m -= x
     else:
@@ -12,5 +12,4 @@ while (h % 10 != 7) and (m % 10 != 7):
         else:
             h = 23
     ans += 1
-    # print(':'.join([str(h),str(m)]))
 print(ans)

@@ -7,26 +7,36 @@ from functools import reduce, cmp_to_key
 import sys
 input = sys.stdin.readline
 
-# M = mod = 10**9 + 7
+
+def factors(n):
+    return sorted(list(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))))
 
 
-def factors(n): return sorted(list(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))))
-# def inv_mod(n):return pow(n, mod - 2, mod)
+def li():
+    return [int(i) for i in input().rstrip('\n').split(' ')]
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split(' ')]
-def st(): return input().rstrip('\n')
-def val(): return int(input().rstrip('\n'))
-def li2(): return [i for i in input().rstrip('\n').split(' ')]
-def li3(): return [int(i) for i in input().rstrip('\n')]
+def st():
+    return input().rstrip('\n')
 
 
-n, m = li()
+def val():
+    return int(input().rstrip('\n'))
+
+
+def li2():
+    return [i for i in input().rstrip('\n').split(' ')]
+
+
+def li3():
+    return [int(i) for i in input().rstrip('\n')]
+
+
+(n, m) = li()
 l = []
 for i in range(n):
-    x, y = li()
+    (x, y) = li()
     l.append([x - y, x + y])
-
 dp = [m for i in range(m + 1)]
 dp[0] = 0
 for i in range(1, m + 1):
@@ -35,5 +45,4 @@ for i in range(1, m + 1):
         x = max(0, j[0] - i)
         y = min(m, j[1] + x)
         dp[y] = min(dp[y], dp[i - 1] + x)
-
 print(dp[-1])

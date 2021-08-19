@@ -1,7 +1,6 @@
 from math import ceil
 from sys import stdin
 3
-# -*- config:utf-8 -*-
 
 
 def getdata():
@@ -9,38 +8,38 @@ def getdata():
     s = s.rstrip()
     s = s.split(' ')
     s = [int(i) for i in s]
-    a, ta = s
+    (a, ta) = s
     s = stdin.readline()
     s = s.rstrip()
     s = s.split(' ')
     s = [int(i) for i in s]
-    b, tb = s
+    (b, tb) = s
     s = stdin.readline()
     s = s.rstrip()
     s = s.split(':')
     s = [int(i) for i in s]
-    dth, dtm = s
+    (dth, dtm) = s
     dtm = dth * 60 + dtm
     return (a, ta, b, tb, dtm)
 
 
 def getfile():
-    f = open("test.txt")
+    f = open('test.txt')
     s = f.readline()
     s = s.rstrip()
     s = s.split(' ')
     s = [int(i) for i in s]
-    a, ta = s
+    (a, ta) = s
     s = f.readline()
     s = s.rstrip()
     s = s.split(' ')
     s = [int(i) for i in s]
-    b, tb = s
+    (b, tb) = s
     s = f.readline()
     s = s.rstrip()
     s = s.split(':')
     s = [int(i) for i in s]
-    dth, dtm = s
+    (dth, dtm) = s
     dtm = dth * 60 + dtm
     f.close()
     return (a, ta, b, tb, dtm)
@@ -49,8 +48,7 @@ def getfile():
 def run1():
     starttime = 5 * 60
     endtime = 23 * 60 + 59
-    # a,ta,b,tb,dtm=getdata()
-    a, ta, b, tb, dtm = getfile()
+    (a, ta, b, tb, dtm) = getfile()
     b_first_dt = dtm - tb
     if b_first_dt < starttime:
         b_first_dt = 0
@@ -66,7 +64,7 @@ def run1():
         b_first_dt -= b
     b_last_dt = b_last_dt // b * b
     cnt = (b_last_dt - b_first_dt) // b + 1
-    if b_last_dt == (dtm + ta - starttime):
+    if b_last_dt == dtm + ta - starttime:
         cnt -= 1
     print(cnt)
 
@@ -81,14 +79,14 @@ def check_time(bus_departure_time, starttime, endtime):
 
 def get_actual_first(first_bus_departure_time, starttime, endtime, b):
     tmp = ceil((first_bus_departure_time - starttime) / b) * b
-    if tmp > (endtime - starttime):
+    if tmp > endtime - starttime:
         tmp = endtime - starttime
     return tmp
 
 
 def get_actual_last(last_bus_departure_time, starttime, endtime, b):
     tmp = (last_bus_departure_time - starttime) // b * b
-    if tmp > (endtime - starttime):
+    if tmp > endtime - starttime:
         tmp = endtime - starttime
     return tmp
 
@@ -96,8 +94,7 @@ def get_actual_last(last_bus_departure_time, starttime, endtime, b):
 def run():
     starttime = 5 * 60
     endtime = 23 * 60 + 59
-    a, ta, b, tb, dtm = getdata()
-    # a,ta,b,tb,dtm=getfile()
+    (a, ta, b, tb, dtm) = getdata()
     first_bus_departure_time = dtm - tb
     last_bus_departure_time = dtm + ta
     first_bus_departure_time = check_time(first_bus_departure_time, starttime, endtime)
@@ -105,9 +102,9 @@ def run():
     first_bus_departure_time = get_actual_first(first_bus_departure_time, starttime, endtime, b)
     last_bus_departure_time = get_actual_last(last_bus_departure_time, starttime, endtime, b)
     cnt = (last_bus_departure_time - first_bus_departure_time) // b + 1
-    if (dtm + ta - starttime) == last_bus_departure_time:
+    if dtm + ta - starttime == last_bus_departure_time:
         cnt -= 1
-    if (dtm - starttime) == first_bus_departure_time + tb:
+    if dtm - starttime == first_bus_departure_time + tb:
         cnt -= 1
     print(cnt)
 

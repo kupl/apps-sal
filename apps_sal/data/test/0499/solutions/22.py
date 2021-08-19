@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import time
 
 
@@ -14,16 +11,11 @@ def pr(d, k):
 
 n = int(input())
 a = list(input())
-
 start = time.time()
-
 d = {'R': 0, 'G': 0, 'B': 0}
-
 for i in a:
     d[i] += 1
-
 b = list(set(a))
-
 if len(b) == 1:
     ans = b[0]
 elif len(b) == 2:
@@ -37,10 +29,7 @@ elif len(b) == 2:
         ans = 'BGR'
 else:
     ans = 'BGR'
-
 for i in sorted(ans):
     print(i, end='')
 print()
-
 finish = time.time()
-#print(finish - start)

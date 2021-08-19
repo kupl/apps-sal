@@ -1,6 +1,5 @@
-n, m, w = map(int, input().split(' '))
+(n, m, w) = map(int, input().split(' '))
 h = list(map(int, input().split(' ')))
-
 p = [0] * n
 
 
@@ -14,10 +13,9 @@ def doit(k):
         else:
             p[i] = 0
         ts += p[i]
-        if (i >= w - 1):
+        if i >= w - 1:
             ts -= p[i - w + 1]
-   # print(' '.join(map(str, [k, td])))
-    if (td <= m):
+    if td <= m:
         return 1
     else:
         return 0
