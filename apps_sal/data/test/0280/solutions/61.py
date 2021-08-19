@@ -1,18 +1,17 @@
 from itertools import permutations
 from functools import lru_cache
-N, M = map(int, input().strip().split())
+(N, M) = map(int, input().strip().split())
 weights = list(map(int, input().strip().split()))
 c = []
-min_weight = float("inf")
+min_weight = float('inf')
 for _ in range(M):
-    l, v = map(int, input().strip().split())
+    (l, v) = map(int, input().strip().split())
     min_weight = min(v, min_weight)
     c.append([l, v])
-
-if min_weight < max(weights):  # we can never pas
-    print("-1")
+if min_weight < max(weights):
+    print('-1')
 else:
-    min_weight = float("inf")
+    min_weight = float('inf')
     c.sort()
     for i in range(M - 1, -1, -1):
         min_weight = min(min_weight, c[i][1])
@@ -20,7 +19,7 @@ else:
 
     @lru_cache(None)
     def bisect(val):
-        l, r = 0, M - 1
+        (l, r) = (0, M - 1)
         while l <= r:
             mid = (l + r) // 2
             if c[mid][1] < val:

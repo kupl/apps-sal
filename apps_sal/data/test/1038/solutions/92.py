@@ -1,10 +1,6 @@
-# 偶数a ^ (a + 1)　は必ず1になる
-# 従い、0 〜 4の倍数 - 1でXORは0になる
-
 import sys
 readline = sys.stdin.readline
-
-A, B = list(map(int, readline().split()))
+(A, B) = list(map(int, readline().split()))
 
 
 def f(x):
@@ -15,4 +11,4 @@ def f(x):
     return res
 
 
-print((f(A - 1) ^ f(B)))
+print(f(A - 1) ^ f(B))

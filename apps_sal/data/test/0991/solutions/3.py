@@ -24,13 +24,11 @@ def dijkstra_heap():
     return used
 
 
-################################
-n, m, ss = map(int, input().split())
+(n, m, ss) = map(int, input().split())
 ss = min(2450, ss)
 edge = [[] for i in range(n)]
-
 for i in range(m):
-    x, y, a, b = map(int, input().split())
+    (x, y, a, b) = map(int, input().split())
     edge[x - 1].append([b, a, y - 1])
     edge[y - 1].append([b, a, x - 1])
 cd = []
@@ -38,7 +36,7 @@ for i in range(n):
     cd.append(list(map(int, input().split())))
 pp = dijkstra_heap()
 for i in range(1, n):
-    ans = 10**20
+    ans = 10 ** 20
     for j in range(2451):
         if pp[i * 2451 + j] != -1:
             ans = min(ans, pp[i * 2451 + j])
