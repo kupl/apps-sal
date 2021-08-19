@@ -32,7 +32,7 @@ def solve(n, m, t, a):
         s[0] = 0
         for j in range(m):
             for k in range(h + 1, -1, -1):
-                if 0 < (s[k] + 1) <= m // 2:
+                if 0 < s[k] + 1 <= m // 2:
                     v = a[i][j]
                     s[k + v] = min(s[k + v], s[k] + 1)
                     if s[k + v] == -1:
@@ -41,23 +41,18 @@ def solve(n, m, t, a):
         for j in range(len(s)):
             if s[j] > -1:
                 toAdd.append(j)
-
         ss.append(toAdd)
-
     res = [0] * t
-
     for s in ss:
         nextRes = [0] * t
         for j in range(t):
             for v in s:
                 nextRes[(v + res[j]) % t] = max(res[j] + v, nextRes[(v + res[j]) % t])
         res = nextRes
-
     return res[0]
 
 
 tests = 1
-
 for t in range(tests):
     n = readint()
     m = readint()

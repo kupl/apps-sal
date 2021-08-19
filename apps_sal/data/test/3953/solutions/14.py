@@ -35,7 +35,6 @@ t = False
 if not canpurify(field):
     field = transpose(field)
     t = True
-
 if canpurify(field):
     purify(field, t)
 else:

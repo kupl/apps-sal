@@ -1,7 +1,7 @@
 n = int(input())
 V = list(map(int, input().split()))
 V.sort()
-Mod = int(1e9 + 7)
+Mod = int(1000000000.0 + 7)
 Sum = 0
 p = [1]
 for i in range(n):

@@ -17,7 +17,7 @@ def getans():
                 break
     if minlen == n:
         return -1
-    return (minlen + n - 1)
+    return minlen + n - 1
 
 
 print(getans())

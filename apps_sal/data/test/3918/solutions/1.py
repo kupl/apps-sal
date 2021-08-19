@@ -1,4 +1,4 @@
-n, k1, k2 = list(map(int, input().split()))
+(n, k1, k2) = list(map(int, input().split()))
 s = []
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
@@ -17,5 +17,5 @@ for i in range(k1 + k2):
         s[ind] -= 1
 t = 0
 for i in s:
-    t += i**2
+    t += i ** 2
 print(t)

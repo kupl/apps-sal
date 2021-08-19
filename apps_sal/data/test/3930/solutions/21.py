@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 qw = [int(i) for i in input().split()]
 q = 1
 c = 0
@@ -13,7 +13,6 @@ for i in range(50):
             er[summ + q] += 1
         else:
             er[summ + q] = 1
-
     q *= k
 if k == 1:
     print(c // 50)

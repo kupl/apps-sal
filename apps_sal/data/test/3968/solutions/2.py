@@ -1,8 +1,6 @@
 from collections import Counter
-
 n = int(input())
 c = Counter(list(map(int, input().split())))
-
 if c[1] == 0:
     print('2 ' * c[2])
 elif c[2] == 0:

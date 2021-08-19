@@ -15,15 +15,14 @@ while len(s2) > 0:
         else:
             s1 += s2
             break
+    elif s1[0] != s2[-1]:
+        s1.appendleft(s2[-1])
+        s2.pop()
+    elif s1[-1] != s2[0]:
+        t = True
     else:
-        if s1[0] != s2[-1]:
-            s1.appendleft(s2[-1])
-            s2.pop()
-        elif s1[-1] != s2[0]:
-            t = True
-        else:
-            s1 += s2
-            break
+        s1 += s2
+        break
 ans = 1
 x = 1
 for i in range(1, len(s1)):
@@ -49,15 +48,14 @@ while len(s2) > 0:
         else:
             s1 += s2
             break
+    elif s1[0] != s2[-1]:
+        s1.appendleft(s2[-1])
+        s2.pop()
+    elif s1[-1] != s2[0]:
+        t = True
     else:
-        if s1[0] != s2[-1]:
-            s1.appendleft(s2[-1])
-            s2.pop()
-        elif s1[-1] != s2[0]:
-            t = True
-        else:
-            s1 += s2
-            break
+        s1 += s2
+        break
 ans1 = 1
 x = 1
 for i in range(1, len(s1)):

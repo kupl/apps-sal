@@ -1,8 +1,6 @@
 input()
 a = list(map(int, input().split()))
-
-p1, p2, p3, p4 = 0, 0, 0, 0
-
+(p1, p2, p3, p4) = (0, 0, 0, 0)
 for n in a:
     if n == 1:
         p1 += 1

@@ -7,4 +7,4 @@ for i in range(int(input())):
             if arr[c] == arr[j]:
                 flag = True
                 break
-    print("YES" if flag else "NO")
+    print('YES' if flag else 'NO')

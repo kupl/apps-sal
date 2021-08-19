@@ -16,10 +16,9 @@ for i in range(n - 1):
             a.append(1)
 ans = 3 if a[0] == 1 else 6
 for i in range(len(a) - 1):
-    b, c = a[i:i + 2]
+    (b, c) = a[i:i + 2]
     if b == 1:
-        ans = (ans * 2) % mod
-    else:
-        if c == 2:
-            ans = (ans * 3) % mod
+        ans = ans * 2 % mod
+    elif c == 2:
+        ans = ans * 3 % mod
 print(ans)

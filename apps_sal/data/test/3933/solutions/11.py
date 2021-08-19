@@ -1,7 +1,5 @@
 n = int(input())
-
 a = list(map(int, input().strip().split(' ')))
-
 d = a[1] - a[0]
 fl = True
 for i in range(2, n):
@@ -9,7 +7,6 @@ for i in range(2, n):
     if d != cd:
         fl = False
         break
-
 if fl:
     print(a[n - 1] + d)
 else:

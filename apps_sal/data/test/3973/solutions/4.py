@@ -12,26 +12,49 @@ import random
 import time
 import copy
 import functools
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
-
-
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def LS(): return sys.stdin.readline().split()
-def I(): return int(sys.stdin.readline())
-def F(): return float(sys.stdin.readline())
-def S(): return input()
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 
 
-def M(n): return ModInt(n)
-def MI(): return M(I())
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
 
 
-class ModInt():
+def LI_():
+    return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+
+def LF():
+    return [float(x) for x in sys.stdin.readline().split()]
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def F():
+    return float(sys.stdin.readline())
+
+
+def S():
+    return input()
+
+
+def M(n):
+    return ModInt(n)
+
+
+def MI():
+    return M(I())
+
+
+class ModInt:
+
     def __init__(self, n):
         self.n = n
 
@@ -45,7 +68,7 @@ class ModInt():
 
     def __mul__(self, x):
         x = ModInt.xn(x)
-        return ModInt((self.n * x) % mod)
+        return ModInt(self.n * x % mod)
 
     def __truediv__(self, x):
         x = ModInt.xn(x)
@@ -62,7 +85,7 @@ class ModInt():
 
 
 def main():
-    n, m = LI()
+    (n, m) = LI()
     a = LI_()
     b = [0] * (m * 2)
     c = [[] for _ in range(m * 2)]
@@ -75,7 +98,6 @@ def main():
         b[d + 2] += 1
         c[e].append(e - d - 1)
         r += e - d
-
     f = [0] * (m * 2)
     t = 0
     tt = 0
@@ -88,8 +110,7 @@ def main():
             tt -= g
     for i in range(m):
         f[i] += f[i + m]
-
     return r - max(f)
 
 
-print((main()))
+print(main())

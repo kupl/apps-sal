@@ -1,10 +1,9 @@
 n = int(input())
-ps, qs = [], []
+(ps, qs) = ([], [])
 for _ in range(n):
-    p, q = list(map(int, input().split()))
+    (p, q) = list(map(int, input().split()))
     ps.append(p)
     qs.append(q)
-
 ps.sort(reverse=True)
 qs.sort(reverse=True)
 res = n

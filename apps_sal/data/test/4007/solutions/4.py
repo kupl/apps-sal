@@ -1,7 +1,6 @@
 from sys import stdin, stdout
 n = int(stdin.readline().strip())
 s = list(map(int, stdin.readline().strip().split()))
-
 vis = [False for i in range(n + 10)]
 for i in s:
     vis[i] = True
@@ -27,8 +26,6 @@ while len(nu) >= 2:
     s[nu[-2] - 1] = nu[-1]
     nu.pop()
     nu.pop()
-
-
 if len(nu) == 1:
     s[nu[-1] - 1] = nu1[-1]
     nu1.pop()

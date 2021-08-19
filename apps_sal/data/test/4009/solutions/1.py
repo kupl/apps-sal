@@ -1,4 +1,4 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 s = input()
 cnt = 0
 for i in range(n - x, n):

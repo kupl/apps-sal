@@ -1,8 +1,8 @@
 s = input().rstrip()
-minimum = "z"
+minimum = 'z'
 for ch in s:
     if ch > minimum:
-        print("Ann")
+        print('Ann')
     else:
-        print("Mike")
+        print('Mike')
         minimum = ch

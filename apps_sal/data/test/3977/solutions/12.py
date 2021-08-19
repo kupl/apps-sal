@@ -2,6 +2,7 @@ gr = {}
 
 
 class node:
+
     def __init__(self):
         self.adj = set()
 
@@ -9,12 +10,12 @@ class node:
         self.adj.add(b)
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = list(map(int, input().split()))
 for i in range(n):
     gr[i + 1] = node()
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     gr[u].add(v)
     gr[v].add(u)
 v = [False for i in range(n + 1)]
@@ -59,7 +60,6 @@ if b != 0:
                     continue
                 s.add(j)
             last = x
-
         edge += ed // 2
     ans = ans - maxi * (maxi - 1) // 2 + (maxi + b) * (maxi + b - 1) // 2 - edge
 print(ans)

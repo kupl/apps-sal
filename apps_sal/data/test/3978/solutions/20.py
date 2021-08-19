@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 a = sorted(list(set(map(int, input().split()))))
 n = len(a)

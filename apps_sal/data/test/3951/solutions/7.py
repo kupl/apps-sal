@@ -7,16 +7,16 @@ def main():
     res = []
     for k in kk:
         c = Counter()
-        for k0, v0 in res:
+        for (k0, v0) in res:
             q = gcd(k, k0)
             c[q] += v0
         b = c[k]
         del c[k]
         v = int(sqrt(b * b + cnt[k])) - b
         res.append((k, v))
-        for k0, v0 in list(c.items()):
+        for (k0, v0) in list(c.items()):
             cnt[k0] -= v0 * v * 2
-    print(*sorted((k for k, v in res for _ in range(v))))
+    print(*sorted((k for (k, v) in res for _ in range(v))))
 
 
 def __starting_point():

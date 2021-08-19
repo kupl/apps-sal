@@ -1,6 +1,5 @@
 n = int(input())
 a = sorted(list(map(int, input().split())))
-
 ans = 0
 if n == 1:
     ans = a[0]

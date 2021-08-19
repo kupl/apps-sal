@@ -1,6 +1,6 @@
 n = int(input())
 s = [int(i) for i in input().split()]
-u = ["a", "o", "i", "u", "e", "y"]
+u = ['a', 'o', 'i', 'u', 'e', 'y']
 y = 1
 for i in range(n):
     count = 0
@@ -11,6 +11,6 @@ for i in range(n):
     if count != s[i]:
         y = 0
 if not y:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

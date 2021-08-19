@@ -9,14 +9,13 @@ else:
 for i in range(1, N):
     if s1[i] == s2[i]:
         if s1[i - 1] == s2[i - 1]:
-            dp[i] = (2 * dp[i - 1]) % (10**9 + 7)
+            dp[i] = 2 * dp[i - 1] % (10 ** 9 + 7)
         else:
             dp[i] = dp[i - 1]
+    elif s1[i] == s1[i - 1]:
+        dp[i] = dp[i - 1]
+    elif s1[i - 1] != s2[i - 1]:
+        dp[i] = 3 * dp[i - 1] % (10 ** 9 + 7)
     else:
-        if s1[i] == s1[i - 1]:
-            dp[i] = dp[i - 1]
-        elif s1[i - 1] != s2[i - 1]:
-            dp[i] = (3 * dp[i - 1]) % (10**9 + 7)
-        else:
-            dp[i] = (2 * dp[i - 1]) % (10**9 + 7)
+        dp[i] = 2 * dp[i - 1] % (10 ** 9 + 7)
 print(dp[N - 1])

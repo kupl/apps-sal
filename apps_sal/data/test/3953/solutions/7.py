@@ -1,13 +1,11 @@
-
-
 class Solver(object):
+
     def read_input(self):
         n = int(input())
         grid = []
         for i in range(n):
             l = list(input())
             grid.append(l)
-
         self.n = n
         self.grid = grid
 
@@ -16,10 +14,9 @@ class Solver(object):
         for i in range(self.n):
             res = False
             for j in range(self.n):
-                if self.grid[i][j] == ".":
+                if self.grid[i][j] == '.':
                     res = True
                     pos.append((i, j))
-
                 if res == True:
                     break
             if res == True:
@@ -35,10 +32,9 @@ class Solver(object):
         for j in range(self.n):
             res = False
             for i in range(self.n):
-                if self.grid[i][j] == ".":
+                if self.grid[i][j] == '.':
                     res = True
                     pos.append((i, j))
-
                 if res == True:
                     break
             if res == True:
@@ -50,14 +46,13 @@ class Solver(object):
         return pos
 
     def print_solution(self):
-        for i, j in self.pos:
+        for (i, j) in self.pos:
             print(i + 1, j + 1)
 
     def solve(self):
         lines = self.solve_line()
         if lines != -1:
             self.print_solution()
-
         else:
             cols = self.solve_column()
             if cols == -1:

@@ -13,7 +13,7 @@ class Task:
 
     def solve(self):
         counter = 0
-        leftBound, rightBound = 0, 0
+        (leftBound, rightBound) = (0, 0)
         for x in self.signs:
             counter += 1 if x == '+' else -1
             leftBound = min(leftBound, counter)

@@ -10,7 +10,7 @@ for i in range(2, n):
 a = list(map(int, input().rstrip().split()))
 dp = [0] * (n + 1)
 for i in a:
-    x = max(dp[j] for j in div[i]) + 1
+    x = max((dp[j] for j in div[i])) + 1
     for j in div[i]:
         dp[j] = x
 print(max(dp))

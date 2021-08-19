@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 a = list([int(x) - 1 for x in input().split()])
 P = 300005
 d1 = [0] * P
@@ -17,7 +17,6 @@ for i in range(N - 1):
         d1[M + x + 2] += 1
         d1[M + y + 1] -= 1
         d2[M + y + 1] += y - x - 1
-
 ans = float('inf')
 for i in range(3 * M):
     if i > 0:
@@ -25,5 +24,4 @@ for i in range(3 * M):
         d2[i] += d2[i - 1]
     d2[i] -= d1[i]
     ans = min(ans, s + d2[i])
-
 print(ans)

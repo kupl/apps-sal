@@ -14,9 +14,9 @@ for i in range(q):
 for i in range(len(r)):
     if r[i] == t[i]:
         if i == 0:
-            t[i], t[1] = t[1], t[i]
+            (t[i], t[1]) = (t[1], t[i])
         else:
-            t[i], t[0] = t[0], t[i]
+            (t[i], t[0]) = (t[0], t[i])
 for i in range(len(r)):
     w[r[i]] = t[i] + 1
 print(*w)

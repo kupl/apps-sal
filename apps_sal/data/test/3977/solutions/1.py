@@ -1,4 +1,5 @@
 class DisjointSet:
+
     def __init__(self, n):
         self._n = n
         self._size = [1 for _ in range(n)]
@@ -29,36 +30,36 @@ class DisjointSet:
         return [u for u in range(self._n) if self._root[u] == u]
 
 
-def ReadMany(): return list(map(int, input().split()))
-def SubtractOne(c): return [x - 1 for x in c]
-def C2(n): return n * (n - 1) // 2
+def ReadMany():
+    return list(map(int, input().split()))
 
 
-n, m, k = ReadMany()
+def SubtractOne(c):
+    return [x - 1 for x in c]
+
+
+def C2(n):
+    return n * (n - 1) // 2
+
+
+(n, m, k) = ReadMany()
 c = list(SubtractOne(ReadMany()))
-
 degree = [0 for _ in range(n)]
 ds = DisjointSet(n)
-
 for i in range(m):
-    u, v = SubtractOne(ReadMany())
+    (u, v) = SubtractOne(ReadMany())
     ds.join(u, v)
     degree[u] += 1
     degree[v] += 1
-
-
 ccDegree = [0 for _ in range(n)]
 for u in range(n):
     ccDegree[ds.root(u)] += degree[u]
-
 cRoots = list(map(ds.root, c))
 biggestCRoot = max(list(map(ds.size, cRoots)))
-
 answer = 0
 for u in ds.roots():
     answer += C2(ds.size(u)) - ccDegree[u] // 2
     if u not in cRoots:
         answer += ds.size(u) * biggestCRoot
         biggestCRoot += ds.size(u)
-
 print(answer)

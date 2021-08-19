@@ -1,6 +1,4 @@
 import sys
-
-
 for line in sys.stdin:
     lexfirst = '{'
     for c in line[:-1]:

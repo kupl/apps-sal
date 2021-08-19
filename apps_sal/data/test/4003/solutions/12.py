@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(item) for item in input().split()]
-
 s = []
 i = 0
 j = n - 1
@@ -37,17 +36,15 @@ while i <= j:
             cur_last = a[i]
             i += 1
             p1 += 1
-
         cur_last = s[-1] if s else None
         while or_i <= j and (cur_last is None or a[j] > cur_last):
             cur_last = a[j]
             j -= 1
             p2 += 1
         if p1 > p2:
-            ans += list("L" * p1)
+            ans += list('L' * p1)
         else:
-            ans += list("R" * p2)
+            ans += list('R' * p2)
         break
-
 print(len(ans))
-print(''.join(str(x) for x in ans))
+print(''.join((str(x) for x in ans)))

@@ -3,6 +3,7 @@ import math
 
 
 def main():
+
     def input():
         return sys.stdin.readline()[:-1]
     n = int(input())
@@ -15,12 +16,11 @@ def main():
         for k in range(n):
             if t < l[k][1]:
                 pass
-            else:
-                if (t - l[k][1]) % l[k][0] == 0:
-                    if s[k] == 1:
-                        s[k] = 0
-                    else:
-                        s[k] = 1
+            elif (t - l[k][1]) % l[k][0] == 0:
+                if s[k] == 1:
+                    s[k] = 0
+                else:
+                    s[k] = 1
         ans = max(ans, s.count(1))
     print(ans)
 

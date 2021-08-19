@@ -5,4 +5,4 @@ for _ in range(n):
     while len(slimes) > 1 and slimes[-1] == slimes[-2]:
         slimes.pop()
         slimes[-1] += 1
-print(" ".join(map(str, slimes)))
+print(' '.join(map(str, slimes)))

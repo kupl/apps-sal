@@ -9,8 +9,7 @@ for i in range(n):
 a = [0] * n
 b = [0] * n
 for i in range(n):
-    a[i], b[i] = list(map(int, input().split()))
-
+    (a[i], b[i]) = list(map(int, input().split()))
 ans = 0
 for time in range(500):
     for i in range(n):

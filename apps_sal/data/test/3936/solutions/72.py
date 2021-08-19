@@ -1,7 +1,6 @@
 N = int(input())
 S = [input() for i in range(2)]
 MOD = 1000000007
-
 ans = 1
 prev = ''
 i = 0
@@ -24,7 +23,5 @@ while i < N:
             ans *= 6
         prev = '-'
         i += 2
-
     ans %= MOD
-
 print(ans)

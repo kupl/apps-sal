@@ -10,12 +10,12 @@ def gen(l, ll):
         return
     t.add((l, ll))
     if l > 6:
-        d[s[l - 2: l]] = 1
-        if s[l - 2: l] != s[l: ll]:
+        d[s[l - 2:l]] = 1
+        if s[l - 2:l] != s[l:ll]:
             gen(l - 2, l)
     if l > 7:
-        d[s[l - 3: l]] = 1
-        if s[l - 3: l] != s[l: ll]:
+        d[s[l - 3:l]] = 1
+        if s[l - 3:l] != s[l:ll]:
             gen(l - 3, l)
 
 

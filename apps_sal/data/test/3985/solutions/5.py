@@ -1,16 +1,17 @@
 def g(i):
     u[i] = 0
     for j in p[i]:
-        if v[j] < 0 or u[v[j]] and g(v[j]):
+        if v[j] < 0 or (u[v[j]] and g(v[j])):
             v[j] = i
             return 1
     return 0
 
 
-def f(): return list(map(int, input().split()))
+def f():
+    return list(map(int, input().split()))
 
 
-n, m = f()
+(n, m) = f()
 s = k = 0
 d = [[]]
 for i in f():
@@ -28,11 +29,11 @@ for i in f():
     d.append(t)
 p = [[] for i in range(k)]
 for q in range(m):
-    a, b = f()
+    (a, b) = f()
     if b % 2:
-        a, b = b, a
-    for x, i in d[a]:
-        for y, j in d[b]:
+        (a, b) = (b, a)
+    for (x, i) in d[a]:
+        for (y, j) in d[b]:
             if x == y:
                 p[i].append(j)
 v = [-1] * k

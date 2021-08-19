@@ -1,4 +1,4 @@
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
 n = input()
 r = [0 for i in range(26)]
 s = [[0 for i in range(26)] for j in range(26)]

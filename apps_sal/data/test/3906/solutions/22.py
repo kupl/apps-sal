@@ -1,5 +1,5 @@
 import sys
-a, b = map(int, sys.stdin.readline().split())
+(a, b) = map(int, sys.stdin.readline().split())
 pp = pow(10, 9) + 7
 fib = [[0, 1], [1, 1]]
 

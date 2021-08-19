@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 mass = list(map(int, input().split()))
 fol = 0
 for t in set(mass):

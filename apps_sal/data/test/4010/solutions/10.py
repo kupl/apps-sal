@@ -7,12 +7,12 @@ for i in range(t):
         cnt[arr[i]].append(i)
     for el in cnt:
         if len(el) > 2:
-            print("YES")
+            print('YES')
             break
-        if (len(el) < 2):
+        if len(el) < 2:
             continue
         if abs(el[1] - el[0]) != 1:
-            print("YES")
+            print('YES')
             break
     else:
-        print("NO")
+        print('NO')

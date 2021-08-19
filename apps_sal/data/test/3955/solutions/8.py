@@ -1,16 +1,16 @@
 def main():
-    n, k, x = list(map(int, input().split()))
+    (n, k, x) = list(map(int, input().split()))
     aa = list(map(int, input().split()))
-    x, lo, u = x ** k, [0] * n, 0
-    for i, a in enumerate(aa):
+    (x, lo, u) = (x ** k, [0] * n, 0)
+    for (i, a) in enumerate(aa):
         lo[i] = u
         u |= a
-    hi, u = [], 0
+    (hi, u) = ([], 0)
     for a in reversed(aa):
         hi.append(u)
         u |= a
     hi.reverse()
-    for i, u, a, v in zip(list(range(n)), lo, aa, hi):
+    for (i, u, a, v) in zip(list(range(n)), lo, aa, hi):
         aa[i] = a * x | u | v
     print(max(aa))
 

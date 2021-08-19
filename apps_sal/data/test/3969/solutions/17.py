@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = []
 for i in range(n):
-    a, b = input().split()
+    (a, b) = input().split()
     l.append(int(a))
 dp = [1] * n
 for i in range(1, n):

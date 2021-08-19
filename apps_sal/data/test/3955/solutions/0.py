@@ -1,4 +1,5 @@
-class Ortree():
+class Ortree:
+
     def __init__(self, n, As):
         size = 1
         while n > size:
@@ -23,7 +24,7 @@ class Ortree():
 
 def solve(n, k, x, As):
     As.sort(reverse=True)
-    xk = x**k
+    xk = x ** k
     if n == 1:
         As[0] *= xk
         return As[0]
@@ -48,7 +49,7 @@ def is_simplecase(xk, As):
 
 def complexcase(n, xk, As):
     len0 = len(bin(As[0] * xk))
-    for i, a in enumerate(As[1:], 1):
+    for (i, a) in enumerate(As[1:], 1):
         if len(bin(a * xk)) < len0:
             end = i
             rest = cumor(As[end:])
@@ -66,6 +67,6 @@ def complexcase(n, xk, As):
     return record
 
 
-n, k, x = map(int, input().split())
+(n, k, x) = map(int, input().split())
 As = list(map(int, input().split()))
 print(solve(n, k, x, As))

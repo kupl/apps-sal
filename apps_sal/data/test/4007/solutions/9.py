@@ -28,4 +28,4 @@ p = [i for i in c]
 q = [i for i in d]
 for i in range(len(p)):
     a[p[i]] = q[i]
-print(" ".join(map(str, a)))
+print(' '.join(map(str, a)))

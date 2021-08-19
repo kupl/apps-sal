@@ -4,7 +4,7 @@ l = list(map(int, input().split()))
 d = {}
 for x in l:
     d[x] = d.get(x, 0) + 1
-d = {x: d[x]for x in sorted(d, key=lambda w: -w)}
+d = {x: d[x] for x in sorted(d, key=lambda w: -w)}
 out = []
 for x in d:
     while d[x]:

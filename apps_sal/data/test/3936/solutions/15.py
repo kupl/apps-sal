@@ -27,5 +27,5 @@ while not i >= n:
             Ans *= 3
         sig = 2
         i += 2
-    Ans = Ans % (10**9 + 7)
+    Ans = Ans % (10 ** 9 + 7)
 print(Ans)

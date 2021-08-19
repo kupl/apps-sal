@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 i = 0
 t = 0 if a[0] != 0 else 1
 for j in range(n):
@@ -19,4 +18,4 @@ for j in range(n):
         bl = False
         break
     i += 1
-print("YES" if bl else "NO")
+print('YES' if bl else 'NO')

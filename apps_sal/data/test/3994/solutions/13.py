@@ -1,4 +1,4 @@
-'''input
+"""input
 6
 011100
 5 3
@@ -9,11 +9,10 @@
 1 5
 
 
-'''
+"""
 import sys
 from collections import defaultdict as dd
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -25,14 +24,10 @@ def ri(flag=0):
 
 n = ri(1)
 a = input()
-
 b = []
-
 time = [0 for i in range(5030)]
-
-
 for i in range(n):
-    x, y = ri()
+    (x, y) = ri()
     cur = int(a[i])
     for j in range(y):
         time[j] += cur
@@ -40,6 +35,4 @@ for i in range(n):
         if j % x == 0:
             cur = cur ^ 1
         time[y + j] += cur
-
-
 print(max(time))

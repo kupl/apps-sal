@@ -16,18 +16,16 @@ def bfs_shortest_path(graph, start, goal):
     return -1
 
 
-town_rail = input().split(" ")
+town_rail = input().split(' ')
 town = int(town_rail[0])
 rail = int(town_rail[1])
 railways = []
 graph = {}
 for j in range(1, town + 1):
     graph[j] = []
-
 for i in range(rail):
-    railways.append(input().split(" "))
-
-if ["1", str(town)] in railways or [str(town), "1"] in railways:
+    railways.append(input().split(' '))
+if ['1', str(town)] in railways or [str(town), '1'] in railways:
     for key in graph:
         for k in range(1, town + 1):
             if k != key:

@@ -2,7 +2,7 @@ n = int(input())
 s = []
 for i in range(n):
     s.append(input())
-r, cl = 0, 0
+(r, cl) = (0, 0)
 for i in range(n):
     c = 0
     for j in range(n):

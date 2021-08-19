@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(item) for item in input().split()]
-
 s = set(a)
 l = list(s)
 if len(s) > 3:

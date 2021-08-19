@@ -1,6 +1,5 @@
 c = input()
 s = input()
-
 star = []
 no_star = []
 for i in range(len(s)):
@@ -8,7 +7,6 @@ for i in range(len(s)):
         star.append(i)
     else:
         no_star.append(i)
-
 n = int(input())
 d = {}
 skip = 0

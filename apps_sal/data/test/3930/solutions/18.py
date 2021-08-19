@@ -14,7 +14,7 @@ def mints():
     return map(int, minp().split())
 
 
-n, k = mints()
+(n, k) = mints()
 x = 1
 pows = []
 if k == 1:
@@ -22,7 +22,7 @@ if k == 1:
 elif k == -1:
     pows = [1, -1]
 else:
-    m = 10**(9 + 5)
+    m = 10 ** (9 + 5)
     while x <= m:
         pows.append(x)
         x *= k

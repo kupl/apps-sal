@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 nums = list(map(int, input().split()))
 if k == 1:
     print(len(nums))

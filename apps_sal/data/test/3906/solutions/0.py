@@ -1,5 +1,5 @@
-N, M = list(map(int, input().split()))
-P = 10**9 + 7
+(N, M) = list(map(int, input().split()))
+P = 10 ** 9 + 7
 F = [1, 2]
 for i in range(101010):
     F.append((F[-1] + F[-2]) % P)

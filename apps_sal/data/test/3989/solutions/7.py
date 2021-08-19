@@ -2,16 +2,13 @@ s = input()
 cnt = [0] * 10
 for c in s:
     cnt[int(c)] += 1
-
-if cnt[1] == 1 and cnt[6] == 1 and cnt[8] == 1 and cnt[9] == 1 and sum(cnt) == cnt[0] + 4:
+if cnt[1] == 1 and cnt[6] == 1 and (cnt[8] == 1) and (cnt[9] == 1) and (sum(cnt) == cnt[0] + 4):
     print('9618' + '0' * cnt[0])
 else:
-
     cnt[1] -= 1
     cnt[6] -= 1
     cnt[8] -= 1
     cnt[9] -= 1
-
     s = []
     mod = 0
     for d in range(1, 10):
@@ -20,7 +17,6 @@ else:
             mod *= 10
             mod += d
             mod %= 7
-
     import itertools
     a = [1, 6, 8, 9]
     for p in itertools.permutations(a):

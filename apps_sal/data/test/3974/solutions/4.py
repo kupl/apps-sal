@@ -1,6 +1,6 @@
 s = input()
 n = len(s)
-x, a, b = 0, 0, 0
+(x, a, b) = (0, 0, 0)
 for i in range(n):
     if s[i] == '-':
         x -= 1

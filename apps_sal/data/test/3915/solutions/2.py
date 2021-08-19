@@ -1,5 +1,5 @@
 n = 12 * 10 ** 5
-p, q = map(int, input().split())
+(p, q) = map(int, input().split())
 pr = [0] * n
 pr[1] = 1
 for i in range(2, n):

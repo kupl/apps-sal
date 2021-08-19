@@ -1,4 +1,5 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 def isL():
@@ -11,9 +12,9 @@ def isL():
     return k1 >= k2
 
 
-n, a = int(input()), list(R())
+(n, a) = (int(input()), list(R()))
 res = []
-i, j = 0, n - 1
+(i, j) = (0, n - 1)
 v = 0
 while i <= j:
     if a[i] <= v and a[j] <= v:
@@ -46,7 +47,6 @@ while i <= j:
         res.append('R')
         v = a[j]
         j -= 1
-
 res = ''.join(res)
 print(len(res))
 print(res)

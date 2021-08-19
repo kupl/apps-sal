@@ -4,12 +4,12 @@ MOD = 1000000007
 def fib(n):
     a = b = 1
     for _ in range(n):
-        a, b = b, (a + b) % MOD
+        (a, b) = (b, (a + b) % MOD)
     return a
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     print((fib(n) + fib(m) - 1) * 2 % MOD)
 
 

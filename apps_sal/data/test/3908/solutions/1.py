@@ -6,5 +6,4 @@ for a in A:
     for k in range(26):
         Y[k][a] += X[k]
     X[a] += 1
-
 print(max([max(y) for y in Y] + X))

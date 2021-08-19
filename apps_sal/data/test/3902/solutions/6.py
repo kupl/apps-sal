@@ -1,7 +1,7 @@
 s = input()
 n = len(s)
-dp2, dp3 = [0 for i in range(n)], [0 for i in range(n)]
-if(n < 7):
+(dp2, dp3) = ([0 for i in range(n)], [0 for i in range(n)])
+if n < 7:
     print(0)
 else:
     if n - 2 > 4:
@@ -10,8 +10,8 @@ else:
         dp3[n - 3] = 1
     i = n - 4
     while i >= 5:
-        dp2[i] = (dp3[i + 2] | (dp2[i + 2] & (s[i:i + 2] != s[i + 2:i + 4])))
-        dp3[i] = dp2[i + 3] | (dp3[i + 3] & (s[i:i + 3] != s[i + 3:i + 6]))
+        dp2[i] = dp3[i + 2] | dp2[i + 2] & (s[i:i + 2] != s[i + 2:i + 4])
+        dp3[i] = dp2[i + 3] | dp3[i + 3] & (s[i:i + 3] != s[i + 3:i + 6])
         i = i - 1
     a = set()
     for i in range(n):

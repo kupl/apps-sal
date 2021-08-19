@@ -1,11 +1,12 @@
-def f(): return list(map(int, input().split()))
+def f():
+    return list(map(int, input().split()))
 
 
-n, m = f()
+(n, m) = f()
 k = n + 1
 s = [[0] * k for i in range(k)]
 for j in range(m):
-    u, v = f()
+    (u, v) = f()
     s[u][v] = s[v][u] = 1
 d = [-1] * k
 d[1] = 0

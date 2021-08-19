@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = list(map(int, input().split()))
 imos1 = [0] * (m * 2 + 2)
 imos2 = [0] * (m * 2 + 2)
@@ -25,7 +25,7 @@ for i in range(m * 2 + 2):
 for i in range(1, m * 2 + 2):
     imos1[i] += imos1[i - 1]
 xs = [0] * (m + 1)
-xs[0] = 10**18
+xs[0] = 10 ** 18
 for i in range(1, m + 1):
     xs[i] = imos1[i] + imos1[m + i]
 print(min(xs))

@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mex = 10000000
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     mex = min(mex, b - a)
 mex = mex + 1
 print(mex)

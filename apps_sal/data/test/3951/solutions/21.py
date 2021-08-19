@@ -11,7 +11,6 @@ n = int(input())
 l = [int(i) for i in input().split()]
 g = Counter(l)
 ans = []
-
 while g:
     m = max(g)
     g[m] -= 1

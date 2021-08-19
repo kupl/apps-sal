@@ -4,7 +4,7 @@ outclb = 0
 seen = 0
 i = 0
 for i in range(0, len(inp)):
-    if inp[i] == "-":
+    if inp[i] == '-':
         outclb += 1
         if inclb > 0:
             inclb -= 1

@@ -1,10 +1,8 @@
 from itertools import accumulate
 import sys
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list([int(x) - 1 for x in input().split()])
-
 cnt0 = [0] * m
 cnt1 = [0] * m
 for i in range(n - 1):

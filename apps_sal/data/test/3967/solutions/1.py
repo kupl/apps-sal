@@ -1,5 +1,4 @@
 import itertools
-
 unfold = itertools.chain.from_iterable
 
 
@@ -12,11 +11,11 @@ def jumps(a):
 
 
 def calc(d):
-    return sum(d - 1 - (i - 1) % d for i in a)
+    return sum((d - 1 - (i - 1) % d for i in a))
 
 
 def ans():
-    for d, pd in zip(D, D[1:]):
+    for (d, pd) in zip(D, D[1:]):
         d -= 1
         cd = calc(d)
         if cd <= k:
@@ -29,11 +28,8 @@ def ans():
     return 1
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 speedup = int(max(a) ** 0.5)
-
-D = sorted(set(range(1, speedup + 1)).union([max(a) + k + 1]).union(set(
-    unfold(map(jumps, a)))), reverse=True)
-
+D = sorted(set(range(1, speedup + 1)).union([max(a) + k + 1]).union(set(unfold(map(jumps, a)))), reverse=True)
 print('%d' % ans())

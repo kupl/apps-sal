@@ -1,4 +1,4 @@
-n, k1, k2 = list(map(int, input().split()))
+(n, k1, k2) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 d = [abs(a[i] - b[i]) for i in range(n)]
@@ -11,4 +11,4 @@ while k > 0:
         d[0] -= 1
         k -= 1
         d = sorted(d)[::-1]
-print(sum([i**2 for i in d]) + k % 2)
+print(sum([i ** 2 for i in d]) + k % 2)

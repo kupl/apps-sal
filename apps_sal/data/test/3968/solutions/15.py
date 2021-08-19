@@ -1,5 +1,8 @@
 import math
-def read(): return map(int, input().split())
+
+
+def read():
+    return map(int, input().split())
 
 
 def codeforce1149A():
@@ -8,7 +11,7 @@ def codeforce1149A():
     if len(p) == 1:
         print(p[0])
         return
-    odd, even = 0, 0
+    (odd, even) = (0, 0)
     for i in p:
         if i % 2 == 0:
             even += 1
@@ -25,7 +28,7 @@ def codeforce1149A():
         even -= 1
         odd -= 1
         for _ in range(even):
-            print(2, end=" ")
+            print(2, end=' ')
         for _ in range(odd):
             print(1, end=' ')
 

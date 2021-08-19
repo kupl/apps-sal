@@ -1,21 +1,17 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     N = int(input())
     S = input().rstrip('\n')
-
     T = [0] * N
-    for i, s in enumerate(S):
+    for (i, s) in enumerate(S):
         if s == '(':
             T[i] = 1
         else:
             T[i] = -1
-
     if sum(T) != 0:
         print(-1)
         return
-
     for i in range(1, N):
         T[i] += T[i - 1]
     ans = 0

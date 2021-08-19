@@ -1,5 +1,5 @@
-__, s = input(), input()
-a, n = 0, 0
+(__, s) = (input(), input())
+(a, n) = (0, 0)
 pt = {'(': 1, ')': -1}
 for c in s:
     da = pt.get(c, 0)

@@ -10,15 +10,13 @@ def solve(a, l, r, k):
     return cur
 
 
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 assert len(a) == n
-
 best = a[0]
 for l in range(n):
     for r in range(l + 1, n + 1):
         cur = solve(a, l, r, k)
         if cur > best:
             best = cur
-
 print(best)

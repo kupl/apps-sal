@@ -1,10 +1,9 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 C = list(map(int, input().split()))
 g = [[0] * (n + 1) for _ in range(n + 1)]
 for _ in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     g[a][b] = g[b][a] = 1
-
 y = [0] * k
 v = [0] * (n + 1)
 
@@ -26,6 +25,5 @@ for i in range(k):
     if y[i] == mm:
         y[i] += s
         break
-
 y = list([w * (w - 1) // 2 for w in y])
 print(sum(y) - m)

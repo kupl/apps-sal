@@ -5,10 +5,10 @@ str = s + s
 i = 0
 j = 0
 m = 0
-while(i < n):
+while i < n:
     j = i
-    while(j - i + 1 < n):
-        if(str[j] != str[j + 1]):
+    while j - i + 1 < n:
+        if str[j] != str[j + 1]:
             j += 1
         else:
             break

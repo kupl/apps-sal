@@ -2,7 +2,7 @@ N = int(input())
 A = input()
 B = input()
 p = 1000000007
-C = [1 if a == b else 0 for a, b in zip(A, B)]
+C = [1 if a == b else 0 for (a, b) in zip(A, B)]
 if C[0] == 1:
     score = 3
     i = 1

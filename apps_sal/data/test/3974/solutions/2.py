@@ -1,5 +1,4 @@
 3
-
 inside = outside = 0
 for c in list(input()):
     if c == '+':

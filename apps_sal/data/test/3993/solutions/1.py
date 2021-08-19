@@ -1,6 +1,5 @@
 import sys
-
-n, m, k = list(map(int, sys.stdin.readline().strip().split()))
+(n, m, k) = list(map(int, sys.stdin.readline().strip().split()))
 p = list(map(int, sys.stdin.readline().strip().split()))
 i = 0
 c = 0

@@ -1,7 +1,7 @@
 def __starting_point():
     s = input()
     ans = []
-    cnt, key, tmp, new = 0, True, 0, 0
+    (cnt, key, tmp, new) = (0, True, 0, 0)
     for e in s:
         if e == '(':
             cnt += 1

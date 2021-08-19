@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 p = list(map(int, input().split()))
 count = 0
 delete = 0

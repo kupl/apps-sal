@@ -1,7 +1,7 @@
 from collections import Counter
 from fractions import gcd
 input()
-g, v = Counter(list(map(int, input().split()))), []
+(g, v) = (Counter(list(map(int, input().split()))), [])
 while g:
     x = max(g)
     g[x] -= 1

@@ -1,11 +1,15 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 sys.setrecursionlimit(300000)
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = [-1] * n
         self.r = [0] * n
@@ -43,27 +47,14 @@ class UnionFind:
         return self.siz
 
 
-"""
-N
-頂点数のペア -> 追加できる辺の数
-7
-1 6 -> 0 + 15 -> 15
-2 5 -> 1 + 10 -> 11
-3 4 -> 3 + 6  -> 9
-
-8
-1 7 -> 0 + 21 -> 21
-2 6 -> 1 + 15 -> 16
-3 5 -> 3 + 10 -> 13
-4 4 -> 6 + 6 -> 12
-"""
-F = "First"
-S = "Second"
+'\nN\n頂点数のペア -> 追加できる辺の数\n7\n1 6 -> 0 + 15 -> 15\n2 5 -> 1 + 10 -> 11\n3 4 -> 3 + 6  -> 9\n\n8\n1 7 -> 0 + 21 -> 21\n2 6 -> 1 + 15 -> 16\n3 5 -> 3 + 10 -> 13\n4 4 -> 6 + 6 -> 12\n'
+F = 'First'
+S = 'Second'
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     uf = UnionFind(n)
     for i in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         a -= 1
         b -= 1
         uf.unite(a, b)

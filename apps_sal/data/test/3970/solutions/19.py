@@ -1,8 +1,8 @@
+def R():
+    return map(int, input().split())
 
-def R(): return map(int, input().split())
 
-
-n, k = R()
+(n, k) = R()
 arr = sorted(list(R()))
 s = set(arr)
 if k == 1:

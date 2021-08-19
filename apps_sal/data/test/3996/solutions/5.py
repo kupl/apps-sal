@@ -1,10 +1,8 @@
 k = int(input())
 n = list(map(int, input().split()))
-
 for i in range(k):
     n[i] = bin(n[i])
     n[i] = n[i][2:]
-
 magic = 1000000007
 
 
@@ -19,15 +17,15 @@ def mod_pow(x, s, p):
     ans = 1
     for i in range(len(s)):
         if s[i] == '1':
-            ans = (((ans * ans) % p) * x) % p
+            ans = ans * ans % p * x % p
         else:
-            ans = (ans * ans) % p
+            ans = ans * ans % p
     return ans
 
 
 def div_in_field(a, b, p):
     b_op = pow(b, p - 2, p)
-    return (b_op * a) % p
+    return b_op * a % p
 
 
 denominator = 2
@@ -36,7 +34,6 @@ for i in range(len(n)):
     denominator = mod_pow(denominator, n[i], magic)
     if par(n[i]):
         n_par = True
-
 denominator = div_in_field(denominator, 2, magic)
 numerator = 0
 if n_par:

@@ -1,9 +1,7 @@
-n, a, b, k, f = map(int, input().split())
-
+(n, a, b, k, f) = map(int, input().split())
 slov = dict()
 temp = input().split()
 slov[frozenset(temp)] = a
-
 for i in range(1, n):
     temp2 = input().split()
     try:
@@ -17,13 +15,10 @@ for i in range(1, n):
         else:
             slov[frozenset(temp2)] = a
     temp = temp2
-
 costs = sorted(list(slov.values()), reverse=True)
-
 for i in range(min(k, len(costs))):
     if costs[i] > f:
         costs[i] = f
     else:
         break
-
 print(sum(costs))

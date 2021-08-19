@@ -8,7 +8,7 @@ def main():
     oneCnt = 0
     for i in A:
         tmp = math.gcd(tmp, i)
-        oneCnt += (i == 1)
+        oneCnt += i == 1
     if tmp != 1:
         print(-1)
         return

@@ -4,7 +4,7 @@ mask = 0
 isunknown = [0] * n
 for i in range(n):
     if s[i] != '*':
-        mask |= 1 << (ord(s[i]) - 97)
+        mask |= 1 << ord(s[i]) - 97
     else:
         isunknown[i] = 1
 m = int(input())
@@ -15,7 +15,7 @@ for i in range(m):
     li = []
     for j in range(n):
         if isunknown[j]:
-            umask |= 1 << (ord(words[j]) - 97)
+            umask |= 1 << ord(words[j]) - 97
             li.append('*')
         else:
             li.append(words[j])

@@ -2,8 +2,9 @@ import itertools
 
 
 class Rectangle:
+
     def intersection(self, other):
-        a, b = self, other
+        (a, b) = (self, other)
         x1 = max(min(a.x1, a.x2), min(b.x1, b.x2))
         y1 = max(min(a.y1, a.y2), min(b.y1, b.y2))
         x2 = min(max(a.x1, a.x2), max(b.x1, b.x2))
@@ -27,16 +28,14 @@ class Rectangle:
             ys.add(other.y1)
         if self.y1 < other.y2 < self.y2:
             ys.add(other.y2)
-        for (x1, x2), (y1, y2) in itertools.product(
-            pairwise(sorted(xs)), pairwise(sorted(ys))
-        ):
+        for ((x1, x2), (y1, y2)) in itertools.product(pairwise(sorted(xs)), pairwise(sorted(ys))):
             rect = type(self)(x1, y1, x2, y2)
             if rect != inter:
                 yield rect
     __sub__ = difference
 
     def __init__(self, x1, y1, x2, y2):
-        self.x1, self.y1, self.x2, self.y2 = x1, y1, x2, y2
+        (self.x1, self.y1, self.x2, self.y2) = (x1, y1, x2, y2)
 
     def __iter__(self):
         yield self.x1
@@ -48,11 +47,11 @@ class Rectangle:
         return isinstance(other, Rectangle) and tuple(self) == tuple(other)
 
     def __ne__(self, other):
-        return not (self == other)
+        return not self == other
 
 
 def pairwise(iterable):
-    a, b = itertools.tee(iterable)
+    (a, b) = itertools.tee(iterable)
     next(b, None)
     return list(zip(a, b))
 
@@ -60,7 +59,6 @@ def pairwise(iterable):
 first_rect = Rectangle(*list([int(x) for x in input().split(' ')]))
 second_rect = Rectangle(*list([int(x) for x in input().split(' ')]))
 third_rect = Rectangle(*list([int(x) for x in input().split(' ')]))
-
 found = False
 diff1 = first_rect - second_rect
 for elem in diff1:
@@ -68,5 +66,4 @@ for elem in diff1:
     for elem2 in diff2:
         if elem2:
             found = True
-
 print('NO' if not found else 'YES')

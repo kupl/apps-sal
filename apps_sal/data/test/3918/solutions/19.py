@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 k = b + c
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
@@ -20,5 +20,5 @@ while i < k:
     i = i + 1
 s = 0
 for elem in z:
-    s = s + elem**2
+    s = s + elem ** 2
 print(s)

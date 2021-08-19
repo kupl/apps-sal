@@ -1,9 +1,6 @@
 n = int(input())
-
 a = list(map(int, input().split()))
-
 a.sort(reverse=True)
-
 cnt = 0
 while a:
     f = a.pop()
@@ -14,5 +11,4 @@ while a:
     for x in rm:
         a.remove(x)
     cnt += 1
-
 print(cnt)

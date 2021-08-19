@@ -1,12 +1,12 @@
-height, width = list(map(int, input().split()))
+(height, width) = list(map(int, input().split()))
 
 
 def fib(n):
     if n < 2:
         return n
-    a, b = [0, 1]
+    (a, b) = [0, 1]
     for i in range(0, n):
-        a, b = [b, a + b]
+        (a, b) = [b, a + b]
     return a
 
 

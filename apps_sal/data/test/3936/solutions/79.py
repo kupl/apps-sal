@@ -2,8 +2,7 @@ N = int(input())
 s1 = input()
 s2 = input()
 ans = 0
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 if s1[0] == s2[0]:
     i = 1
     ans += 3

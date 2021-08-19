@@ -28,4 +28,4 @@ else:
     for i in range(1, len(givenNotRecieved)):
         l[recievedNotGiven[i] - 1] = givenNotRecieved[i]
 for i in range(len(l)):
-    print(l[i], end=" ")
+    print(l[i], end=' ')

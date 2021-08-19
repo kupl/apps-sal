@@ -5,5 +5,4 @@ while n >= 10:
     a += 1
     while n % 10 == 0:
         n = n // 10
-
 print(a + 9)

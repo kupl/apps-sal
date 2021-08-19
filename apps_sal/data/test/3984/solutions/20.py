@@ -1,15 +1,10 @@
 A = input()
-
 n = len(A)
-
 m = A[0]
-
-print("Mike")
-
+print('Mike')
 for i in range(1, n):
     if m < A[i]:
-        print("Ann")
+        print('Ann')
     else:
-        print("Mike")
-
+        print('Mike')
     m = min(m, A[i])

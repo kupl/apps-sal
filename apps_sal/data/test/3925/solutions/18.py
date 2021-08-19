@@ -1,6 +1,5 @@
 import sys
 f = sys.stdin
-
 s = f.readline().rstrip('\r\n')
 arr = []
 cnt = 1
@@ -13,7 +12,7 @@ for i in range(1, len(s)):
         cnt = 1
 ma = max(ma, cnt)
 if ma == len(s):
-    print(str(ma) + "\n")
+    print(str(ma) + '\n')
 else:
     cnt1 = 1
     cnt2 = 1
@@ -29,4 +28,4 @@ else:
             else:
                 break
         ma = max(ma, cnt1 + cnt2)
-    sys.stdout.write(str(ma) + "\n")
+    sys.stdout.write(str(ma) + '\n')

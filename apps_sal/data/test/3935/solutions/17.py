@@ -11,7 +11,6 @@ def twoDiv(n):
 
 total = int(next(sys.stdin))
 nums = [int(k) for k in next(sys.stdin).split()]
-
 comps = {}
 largest = 0
 for n in nums:
@@ -20,14 +19,12 @@ for n in nums:
         comps[k] = set()
     comps[k].add(n)
     largest = max(largest, len(comps[k]))
-
 good = -1
 for c in comps:
     if len(comps[c]) == largest:
         good = c
         break
 del comps[good]
-
 ans = set()
 for c in comps:
     ans = ans | comps[c]
@@ -37,6 +34,6 @@ at = 0
 for k in ans:
     at = at + 1
     if at == total - largest:
-        print(k, end="\n")
+        print(k, end='\n')
         quit()
-    print(k, end=" ")
+    print(k, end=' ')

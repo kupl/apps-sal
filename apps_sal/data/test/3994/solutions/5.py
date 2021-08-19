@@ -1,15 +1,13 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 s = list(input())
 a = []
 b = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     a.append(x)
     b.append(y)
-
 cnt = s.count('1')
 ans = cnt
 for t in range(1, 1000):

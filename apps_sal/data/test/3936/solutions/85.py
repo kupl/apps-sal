@@ -16,7 +16,7 @@ if cnt[0] == 1:
     ans = 3
 else:
     ans = 6
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in range(1, len(cnt)):
     if cnt[i - 1] == 1:
         ans *= 2

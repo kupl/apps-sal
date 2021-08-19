@@ -1,14 +1,11 @@
 import sys
-
 input = sys.stdin.readline
-
 q = int(input())
-
 for _ in range(q):
     N = int(input())
     A = list(map(int, input().split()))
     if N < 3:
-        print("NO")
+        print('NO')
     else:
         ans = False
         for i in range(N - 2):
@@ -17,6 +14,6 @@ for _ in range(q):
                 if A[j] == x:
                     ans = True
         if ans:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

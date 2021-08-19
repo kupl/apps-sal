@@ -18,10 +18,10 @@ while max(L) != min(L):
         max_1 = 0
         max_2 = 1
         if L[max_1] < L[max_2]:
-            max_1, max_2 = max_2, max_1
+            (max_1, max_2) = (max_2, max_1)
         for i in range(2, n):
             if L[i] > L[max_1]:
-                max_2, max_1 = max_1, i
+                (max_2, max_1) = (max_1, i)
             elif L[i] > L[max_2]:
                 max_2 = i
         s = ''

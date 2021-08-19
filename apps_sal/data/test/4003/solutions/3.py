@@ -9,7 +9,7 @@ while l:
         if len(l) <= 2:
             res.append('L')
             break
-        c0, c1 = [], []
+        (c0, c1) = ([], [])
         p = prev
         for e in l:
             if p < e:

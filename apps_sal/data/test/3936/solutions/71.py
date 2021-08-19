@@ -1,4 +1,4 @@
-N, S, T = open(0)
+(N, S, T) = open(0)
 ans = 3
 i = 1
 if S[0] != T[0]:
@@ -10,4 +10,4 @@ while i < int(N):
     elif S[i] != T[i]:
         ans *= 3
     i += 1 + (S[i] != T[i])
-print(ans % (10**9 + 7))
+print(ans % (10 ** 9 + 7))

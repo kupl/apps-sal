@@ -12,6 +12,6 @@ for i in range(n):
         fl = 0
         break
 if fl:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

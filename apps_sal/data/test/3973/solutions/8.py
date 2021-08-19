@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 As = list(map(int, input().split()))
 
 
@@ -20,7 +20,7 @@ def solve(n, m, As):
         row_sum[a] += 1
         col_sum[b] += 1
         weighted_sum[b] += (b - a - 1) % m
-        if (a > b and a != m - 1):
+        if a > b and a != m - 1:
             delta_sum0 += 1
             delta_weighted += m - a - 1
     delta_sum[0] = delta_sum0
@@ -34,4 +34,4 @@ def solve(n, m, As):
     return sol - record
 
 
-print((solve(n, m, As)))
+print(solve(n, m, As))

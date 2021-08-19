@@ -1,4 +1,4 @@
-n, k1, k2 = [int(x) for x in input().split()]
+(n, k1, k2) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 d = [abs(a[i] - b[i]) for i in range(n)]

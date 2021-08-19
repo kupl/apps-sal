@@ -1,8 +1,8 @@
 import sys
 n = int(input())
-f = {'AND': (lambda a, b: a & b), 'OR': (lambda a, b: a | b), 'XOR': (lambda a, b: a ^ b), 'NOT': (lambda a: a ^ 1)}
-g = {'0': (lambda: 0), '1': (lambda: 1)}
-d = [(g[v[0]], []) if o == 'IN' else (f[o], [int(a) - 1 for a in v]) for o, *v in map(str.split, sys.stdin.read().strip().split('\n'))]
+f = {'AND': lambda a, b: a & b, 'OR': lambda a, b: a | b, 'XOR': lambda a, b: a ^ b, 'NOT': lambda a: a ^ 1}
+g = {'0': lambda: 0, '1': lambda: 1}
+d = [(g[v[0]], []) if o == 'IN' else (f[o], [int(a) - 1 for a in v]) for (o, *v) in map(str.split, sys.stdin.read().strip().split('\n'))]
 t = [0]
 for i in t:
     t.extend(d[i][1])
@@ -14,11 +14,11 @@ f[0] = 1
 for i in t:
     if f[i] < 1:
         continue
-    o, a = d[i]
-    b = [v[x]for x in a]
+    (o, a) = d[i]
+    b = [v[x] for x in a]
     assert o(*b) == v[i]
-    for j, k in enumerate(a):
+    for (j, k) in enumerate(a):
         b[j] ^= 1
-        f[k] = (o(*b) != v[i])
+        f[k] = o(*b) != v[i]
         b[j] ^= 1
-print(''.join(str(f[i] ^ v[0]) for i in range(n) if not d[i][1]))
+print(''.join((str(f[i] ^ v[0]) for i in range(n) if not d[i][1])))

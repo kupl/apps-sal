@@ -13,20 +13,19 @@ else:
 while i < n:
     if s1[i - 1] == s2[i - 1]:
         if s1[i] == s2[i]:
-            ans = (ans * 2) % mod
+            ans = ans * 2 % mod
             i += 1
             continue
         else:
-            ans = (ans * 2) % mod
+            ans = ans * 2 % mod
             i += 2
             continue
+    elif s1[i] == s2[i]:
+        ans = ans * 1 % mod
+        i += 1
+        continue
     else:
-        if s1[i] == s2[i]:
-            ans = (ans * 1) % mod
-            i += 1
-            continue
-        else:
-            ans = (ans * 3) % mod
-            i += 2
-            continue
+        ans = ans * 3 % mod
+        i += 2
+        continue
 print(ans)

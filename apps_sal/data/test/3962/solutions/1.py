@@ -9,13 +9,13 @@ def mainA():
 
 
 def mainB():
+
     def get(n):
         ret = 0
         while n > 0:
             ret += n % 10
             n //= 10
         return ret
-
     n = int(input())
     if n <= 9:
         print(n)
@@ -28,9 +28,9 @@ def mainB():
 
 
 def mainD():
-    n, A, B, ans = int(input()), [], [], 0
+    (n, A, B, ans) = (int(input()), [], [], 0)
     for i in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         A.append(a)
         B.append(b)
     A.sort()

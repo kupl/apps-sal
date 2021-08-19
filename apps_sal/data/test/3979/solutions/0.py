@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     cap = [None] * (m + 1)
     same_cap = defaultdict(list)
     q = deque()
@@ -20,19 +20,15 @@ def main():
                     same_cap[b[0]] = []
                 elif cap[b[0]] != c:
                     return False
-
         return True
 
     def same(a, b):
         same_cap[b].append((a, True))
         same_cap[a].append((b, False))
-
         if cap[a] == False:
             return apply_cap(b, False)
-
         if cap[b] == True:
             return apply_cap(a, True)
-
         return True
 
     def process(p, c):
@@ -44,7 +40,6 @@ def main():
             if p[i] < c[i]:
                 return same(p[i], c[i])
         return lp <= lc
-
     p = list(map(int, input().split()))
     for i in range(n - 1):
         c = list(map(int, input().split()))
@@ -55,7 +50,7 @@ def main():
     else:
         print('Yes')
         res = []
-        for i, b in enumerate(cap):
+        for (i, b) in enumerate(cap):
             if b:
                 res.append(i)
         print(len(res))

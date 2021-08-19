@@ -6,14 +6,13 @@ def main():
     store = [[] for x in range(k)]
     colors = []
     if k > n:
-        print("NO")
+        print('NO')
     elif k == n:
-        print("YES")
-        string = ""
+        print('YES')
+        string = ''
         for x in range(k):
-            string += str(x + 1) + " "
+            string += str(x + 1) + ' '
         print(string)
-
     else:
         for x in range(k):
             store[x].append(int(arr[x]))
@@ -33,13 +32,13 @@ def main():
             if x == n - 1:
                 bo_end = True
         if bo_end:
-            print("YES")
-            string = ""
+            print('YES')
+            string = ''
             for x in colors:
-                string += str(x) + " "
+                string += str(x) + ' '
             print(string)
         else:
-            print("NO")
+            print('NO')
 
 
 main()

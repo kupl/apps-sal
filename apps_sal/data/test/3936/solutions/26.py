@@ -1,4 +1,4 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 n = int(input())
 s1 = input()
 s2 = input()
@@ -21,12 +21,11 @@ while count < n:
             ans %= MOD
             count += 2
             end = 0
+    elif s1[count] == s2[count]:
+        count += 1
+        end = 1
     else:
-        if s1[count] == s2[count]:
-            count += 1
-            end = 1
-        else:
-            ans *= 3
-            ans %= MOD
-            count += 2
+        ans *= 3
+        ans %= MOD
+        count += 2
 print(ans)

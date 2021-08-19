@@ -1,6 +1,5 @@
 N = int(input())
 S = [input() for _ in range(2)]
-
 types = []
 i = 0
 while i < N:
@@ -10,7 +9,7 @@ while i < N:
     else:
         types.append(2)
         i += 2
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 if types[0] == 1:
     ans = 3
 else:
@@ -25,4 +24,4 @@ for i in range(1, len(types)):
     elif types[i] == 2 and types[i - 1] == 2:
         ans *= 3
     ans %= MOD
-print((ans % MOD))
+print(ans % MOD)

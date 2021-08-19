@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     half = m // 2
     se_s = []
     for i in range(n):
@@ -17,7 +17,6 @@ def main():
                     pos = (num + num2) % k
                     dp[i][pos] = max(dp[i][pos], num + num2)
         se_s.append(set(dp[-1]))
-
     ans = 0
     ans_sub = set([0])
     for se in se_s:
@@ -31,7 +30,6 @@ def main():
         for num in se_tmp:
             tmp[num % k] = max(tmp[num % k], num)
         ans_sub = set(tmp)
-
     print(ans)
 
 

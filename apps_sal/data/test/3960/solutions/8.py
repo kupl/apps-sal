@@ -5,8 +5,8 @@ f = 1
 for i in range(len(a) - 1):
     b.append(abs(a[i] - a[i + 1]) * f)
     f *= -1
-max1, max2 = 0, 0
-a1, a2 = 0, 0
+(max1, max2) = (0, 0)
+(a1, a2) = (0, 0)
 for i in range(n - 1):
     if a1 + b[i] > 0:
         a1 += b[i]

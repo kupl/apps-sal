@@ -1,6 +1,5 @@
 n = int(input())
 arr = list(sorted(set(map(int, input().split()))))
-
 if len(arr) == 1:
     print(0)
 elif len(arr) == 2:

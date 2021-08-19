@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = [int(i) - 1 for i in input().split()]
 ds = [0] * m
 de = [[] for i in range(m)]
-h, dec = 0, 0
+(h, dec) = (0, 0)
 for i in range(n - 1):
     if A[i + 1] - A[i] > 0:
         h += A[i + 1] - A[i]
@@ -13,7 +13,7 @@ for i in range(n - 1):
 for i in range(m):
     for a in de[i]:
         ds[(i - a[1] + 1) % m] += 1
-ans = float("inf")
+ans = float('inf')
 for i in range(m):
     for a in de[i]:
         h += a[1] - 1
@@ -22,5 +22,4 @@ for i in range(m):
     ans = min(h, ans)
     if i <= m - 2:
         dec += ds[i + 1]
-
 print(ans)

@@ -3,7 +3,7 @@ from collections import Counter
 
 
 def gen(counter, skip):
-    for c, n in counter:
+    for (c, n) in counter:
         has = n // 2
         if skip > has:
             skip -= has
@@ -16,11 +16,11 @@ def gen(counter, skip):
 
 
 def gen_o(counter, take):
-    for c, n in counter:
+    for (c, n) in counter:
         for i in range(n % 2):
             yield c
-    for c, n in counter:
-        has = (n // 2) * 2
+    for (c, n) in counter:
+        has = n // 2 * 2
         if take > has:
             take -= has
         elif take > 0:
@@ -31,24 +31,21 @@ def gen_o(counter, take):
 
 
 N = int(next(sys.stdin))
-
 s = next(sys.stdin).strip()
 c = Counter(s)
-
 even = 0
 odd = 0
 items = list(c.items())
-for _, n in items:
+for (_, n) in items:
     even += n // 2
     odd += n % 2
 generator = gen(items, 0)
 generator_o = gen_o(items, 0)
-
 odd_c = odd
 if odd == 0:
     print(1)
     front = [next(generator) for i in range(len(s) // 2)]
-    fs = "".join(front)
+    fs = ''.join(front)
     print(fs + fs[::-1])
 else:
     skip = 0
@@ -63,6 +60,6 @@ else:
     strs = []
     for i in range(odd):
         front = [next(generator) for i in range(per)]
-        fs = "".join(front)
+        fs = ''.join(front)
         strs.append(fs + next(generator_o) + fs[::-1])
-    print(" ".join(strs))
+    print(' '.join(strs))

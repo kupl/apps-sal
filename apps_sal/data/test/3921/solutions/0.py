@@ -10,7 +10,7 @@ for i in range(2, n):
 input()
 a = list(map(int, input().split()))
 for i in a:
-    x = max(p[j] for j in t[i]) + 1
+    x = max((p[j] for j in t[i])) + 1
     for j in t[i]:
         p[j] = x
 print(max(p))

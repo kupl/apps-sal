@@ -3,17 +3,16 @@ import os
 import math
 import array
 3
-
-
 MOD = 10 ** 9 + 7
 
 
 def main():
-    N, M = read_ints()
+    (N, M) = read_ints()
     print(solve(N, M))
 
 
 def solve(N, M):
+
     def row_count(w):
         dp = [0] * (w + 1)
         dp[0] = 1
@@ -25,11 +24,9 @@ def solve(N, M):
                 dp[i + 2] += dp[i]
                 dp[i + 2] %= MOD
         return dp[w]
-
     c = row_count(N)
     r = row_count(M)
-
-    return ((c + r - 1) * 2) % MOD
+    return (c + r - 1) * 2 % MOD
 
 
 DEBUG = 'DEBUG' in os.environ

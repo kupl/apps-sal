@@ -1,12 +1,11 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
     import sys
     input = sys.stdin.readline
-
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     A = [a - 1 for a in A]
     imos = [0] * M
@@ -50,7 +49,7 @@ def main():
             B[i] = B[i] + imos[i]
         else:
             B[i] = B[i - 1] + imos[i]
-    print((min(B) + base))
+    print(min(B) + base)
 
 
 def __starting_point():

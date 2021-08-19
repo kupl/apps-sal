@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = sorted(map(int, input().split()))
 d = 0
 i = 0

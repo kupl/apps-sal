@@ -1,6 +1,6 @@
 n = int(input())
 dp = [0] * (n + 1)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dp[0] = n
 dp[1] = n * n
 SUM = n + n * n

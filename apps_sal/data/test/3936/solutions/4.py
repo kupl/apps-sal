@@ -132,7 +132,7 @@ class modint:
 n = int(input())
 s = input()
 t = input()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = modint(0, m=mod)
 if s[0] == t[0]:
     ans += 3

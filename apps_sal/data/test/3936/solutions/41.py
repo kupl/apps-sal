@@ -11,31 +11,41 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
 
 
 n = INT()
 s1 = input()
 s2 = input()
-
 ans = 3
 i = 1
 while i < n:
     if i == 1 or s1[i - 1] != s1[i - 2]:
         if i == n - 1 or s1[i] != s1[i + 1]:
-            ans = ans * 2 % (10**9 + 7)
+            ans = ans * 2 % (10 ** 9 + 7)
             i += 1
         else:
-            ans = ans * 2 % (10**9 + 7)
+            ans = ans * 2 % (10 ** 9 + 7)
             i += 2
+    elif i == n - 1 or s1[i] != s1[i + 1]:
+        ans = ans * 1 % (10 ** 9 + 7)
+        i += 1
     else:
-        if i == n - 1 or s1[i] != s1[i + 1]:
-            ans = ans * 1 % (10**9 + 7)
-            i += 1
-        else:
-            ans = ans * 3 % (10**9 + 7)
-            i += 2
+        ans = ans * 3 % (10 ** 9 + 7)
+        i += 2
 print(ans)

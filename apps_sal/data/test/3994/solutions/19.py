@@ -3,7 +3,7 @@ s = [int(i) for i in input()]
 a = []
 b = []
 for i in range(n):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     a += [c]
     b += [d]
 k = sum(s)

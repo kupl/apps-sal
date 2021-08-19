@@ -14,17 +14,16 @@ def main():
         numn = len(nx.node_connected_component(G, n))
         num1 = len(nx.node_connected_component(G, 1))
         numlv = [num * (num - 1) / 2 + (n - num) * (n - num - 1) / 2 - m for num in range(numn, n - num1 + 1)]
-        if(n % 2):
+        if n % 2:
             numl = numlv[0]
+        elif (numn - num1) % 2:
+            numl = 1
         else:
-            if((numn - num1) % 2):
-                numl = 1
-            else:
-                numl = numlv[0]
-        if(numl % 2):
-            print("First")
+            numl = numlv[0]
+        if numl % 2:
+            print('First')
         else:
-            print("Second")
+            print('Second')
     return
 
 

@@ -1,5 +1,5 @@
-m, p, c = 0, 0, 0
-s = (input())
+(m, p, c) = (0, 0, 0)
+s = input()
 for i in s:
     if i == '-':
         c -= 1

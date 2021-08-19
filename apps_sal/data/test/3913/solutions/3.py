@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 lr = []
 r = []
 w = set()
@@ -11,7 +10,6 @@ for i in range(len(s)):
         r.append(i)
         w.add(s[i])
 m = int(input())
-
 k = None
 for i in range(m):
     e = input()
@@ -27,9 +25,8 @@ for i in range(m):
     if f:
         continue
     if k is None:
-        k = set(e[i] for i in lr)
+        k = set((e[i] for i in lr))
     else:
-        u = set(e[i] for i in lr)
+        u = set((e[i] for i in lr))
         k = k.intersection(u)
-
 print(len(k))

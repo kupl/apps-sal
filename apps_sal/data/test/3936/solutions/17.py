@@ -9,11 +9,11 @@ else:
     a = 6
     l = 1
     v = False
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def mult_mod(x, y):
-    return (x * y) % mod
+    return x * y % mod
 
 
 while l + 1 < n:
@@ -25,12 +25,10 @@ while l + 1 < n:
             l += 2
             a = mult_mod(a, 2)
             v = False
+    elif s1[l + 1] == s2[l + 1]:
+        l += 1
+        v = True
     else:
-        if s1[l + 1] == s2[l + 1]:
-            l += 1
-            v = True
-        else:
-            l += 2
-            a = mult_mod(a, 3)
-
+        l += 2
+        a = mult_mod(a, 3)
 print(a % mod)

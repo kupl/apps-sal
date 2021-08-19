@@ -9,6 +9,6 @@ for i in Graph:
     if i == 2:
         flag = False
 if flag == True:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

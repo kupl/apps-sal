@@ -10,12 +10,10 @@ for letter in s:
         else:
             inside += 1
             outside -= 1
+    elif inside == 0:
+        outside += 1
+        seen += 1
     else:
-        if inside == 0:
-            outside += 1
-            seen += 1
-        else:
-            outside += 1
-            inside -= 1
-
+        outside += 1
+        inside -= 1
 print(seen)

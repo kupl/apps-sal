@@ -10,12 +10,12 @@ def solve(n, k, x, a):
     for i in range(n, 0, -1):
         suffix[i] = suffix[i + 1] | a[i]
     for i in range(1, n + 1):
-        s = max(s, prefix[i - 1] | (a[i] * m) | suffix[i + 1])
+        s = max(s, prefix[i - 1] | a[i] * m | suffix[i + 1])
     return s
 
 
 def main(infile, outfile):
-    n, k, x = list(map(int, infile.readline().split()))
+    (n, k, x) = list(map(int, infile.readline().split()))
     a = list(map(int, infile.readline().split()))
     outfile.write(str(solve(n, k, x, a)) + '\n')
 

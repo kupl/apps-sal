@@ -1,24 +1,23 @@
-N = int(3e5 + 3)
-MOD = int(1e9 + 7)
+N = int(300000.0 + 3)
+MOD = int(1000000000.0 + 7)
 pow2 = [1] * N
 for i in range(1, N):
     pow2[i] = pow2[i - 1] * 2 % MOD
-
 n = int(input())
 arr = list(map(int, input().split()))
 arr.sort()
 
 
 def add(x, y):
-    return ((x % MOD + MOD) + (y % MOD + MOD) + MOD) % MOD
+    return (x % MOD + MOD + (y % MOD + MOD) + MOD) % MOD
 
 
 def substract(x, y):
-    return ((x % MOD + MOD) - (y % MOD + MOD) + MOD) % MOD
+    return (x % MOD + MOD - (y % MOD + MOD) + MOD) % MOD
 
 
 def multiple(x, y):
-    return ((x % MOD) * (y % MOD)) % MOD
+    return x % MOD * (y % MOD) % MOD
 
 
 res = 0

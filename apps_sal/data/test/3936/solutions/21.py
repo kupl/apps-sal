@@ -9,12 +9,10 @@ else:
 for i in range(n - 1):
     if s1[i] == s2[i]:
         ans *= 2
+    elif s1[i] == s1[i + 1]:
+        continue
+    elif s1[i + 1] != s2[i + 1]:
+        ans *= 3
     else:
-        if s1[i] == s1[i + 1]:
-            continue
-        else:
-            if s1[i + 1] != s2[i + 1]:
-                ans *= 3
-            else:
-                ans *= 1
+        ans *= 1
 print(ans % 1000000007)

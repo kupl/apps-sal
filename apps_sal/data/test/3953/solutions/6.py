@@ -2,8 +2,8 @@ def main():
     n = int(input())
     l = [input() for _ in range(n)]
     res = []
-    for y, s in enumerate(l):
-        for x, c in enumerate(s):
+    for (y, s) in enumerate(l):
+        for (x, c) in enumerate(s):
             if c == '.':
                 res.append((x, y))
                 break
@@ -17,7 +17,7 @@ def main():
         if len(res) < n:
             print(-1)
             return
-    for x, y in res:
+    for (x, y) in res:
         print(y + 1, x + 1)
 
 

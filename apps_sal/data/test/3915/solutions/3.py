@@ -1,4 +1,4 @@
-p, q = (int(x) for x in input().split())
+(p, q) = (int(x) for x in input().split())
 top = 1200000
 isPrime = [1] * top
 isPrime[1] = 0

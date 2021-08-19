@@ -1,7 +1,6 @@
 import math
 n = int(input())
 l = list(map(int, input().split()))
-
 if l.count(1):
     print(n - l.count(1))
 else:
@@ -10,9 +9,9 @@ else:
         tmp2 = l[i]
         for j in range(n - i):
             tmp2 = math.gcd(tmp2, l[i + j])
-            if (tmp2 == 1):
+            if tmp2 == 1:
                 tmp1 = min(tmp1, j)
-    if (tmp1 == n + 1):
-        print("-1")
+    if tmp1 == n + 1:
+        print('-1')
     else:
         print(tmp1 + n - 1)

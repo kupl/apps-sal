@@ -1,4 +1,4 @@
-a = input().split(" ")
+a = input().split(' ')
 x = int(a[0])
 y = int(a[1])
 n = 2

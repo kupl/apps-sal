@@ -16,4 +16,4 @@ x = p[0][0]
 print(n - p[0][1])
 for i in range(n):
     if b[i] != x:
-        print(a[i], end=" ")
+        print(a[i], end=' ')

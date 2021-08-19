@@ -5,9 +5,9 @@ def main():
     cnt = [0] * n
     for x in aa:
         cnt[x] += 1
-    a, b = 0, cnt[1]
+    (a, b) = (0, cnt[1])
     for i in range(2, n):
-        a, b = b, max(b, a + cnt[i] * i)
+        (a, b) = (b, max(b, a + cnt[i] * i))
     print(b)
 
 

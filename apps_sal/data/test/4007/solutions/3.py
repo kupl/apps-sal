@@ -24,7 +24,7 @@ for i in range(1, n + 1):
 for i in range(n):
     if mas[i] == i + 1:
         if i == x:
-            mas[i], mas[y] = mas[y], mas[i]
+            (mas[i], mas[y]) = (mas[y], mas[i])
         else:
-            mas[i], mas[x] = mas[x], mas[i]
+            (mas[i], mas[x]) = (mas[x], mas[i])
 print(*mas)

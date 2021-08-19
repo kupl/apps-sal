@@ -1,7 +1,7 @@
 s = input()
-win1 = "Ann"
-win2 = "Mike"
-alth = "abcdefghijklmnopqrstuvwxyz"
+win1 = 'Ann'
+win2 = 'Mike'
+alth = 'abcdefghijklmnopqrstuvwxyz'
 num = alth.find(s[0])
 for i in s:
     num2 = alth.find(i)

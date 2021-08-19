@@ -10,11 +10,10 @@ for i in range(len(line)):
         print(-1)
         out = True
         break
-    else:
-        if element not in sets:
-            h += [element]
-            mm[element] = len(h) - 1
-            sets.add(element)
+    elif element not in sets:
+        h += [element]
+        mm[element] = len(h) - 1
+        sets.add(element)
 if not out:
     g = []
     for i in range(n):
@@ -23,5 +22,5 @@ if not out:
         g += [index + 1]
     if not out:
         print(len(h))
-        print(" ".join(map(str, g)))
-        print(" ".join(map(str, h)))
+        print(' '.join(map(str, g)))
+        print(' '.join(map(str, h)))

@@ -23,5 +23,4 @@ else:
     for i in range(1, len(c)):
         ans *= cnt[c[i - 1]][c[i]]
         ans %= mod
-
     print(ans % mod)

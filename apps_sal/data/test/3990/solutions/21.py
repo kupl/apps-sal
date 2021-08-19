@@ -1,10 +1,10 @@
 from math import inf
 from collections import Counter as cntr
-n, m = map(int, input().split(' '))
-road = [[1 for i in range(n)]for i in range(n)]
-railway = [[0 for i in range(n)]for i in range(n)]
+(n, m) = map(int, input().split(' '))
+road = [[1 for i in range(n)] for i in range(n)]
+railway = [[0 for i in range(n)] for i in range(n)]
 for i in range(m):
-    u, v = map(int, input().split(' '))
+    (u, v) = map(int, input().split(' '))
     u -= 1
     v -= 1
     road[u][v] = 0
@@ -19,9 +19,8 @@ def bfs(graph, source, n):
     q = [source]
     visited[source] = True
     d[source] = 0
-    while(q):
+    while q:
         idx = q.pop(0)
-
         for i in range(n):
             if graph[idx][i] == 1 and visited[i] == False:
                 visited[i] = True
