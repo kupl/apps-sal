@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2020/09/03
 
 @author: harurun
-'''
+"""
 
 
 def main():
@@ -10,8 +10,7 @@ def main():
     pin = sys.stdin.readline
     pout = sys.stdout.write
     perr = sys.stderr.write
-
-    K, S = map(int, pin().split())
+    (K, S) = map(int, pin().split())
     ans = 0
     for x in range(K + 1):
         for y in range(K + 1):

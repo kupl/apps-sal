@@ -13,5 +13,4 @@ for i in range(5):
         jikan.append(l[i])
     else:
         jikan.append(l[i] + amari[i])
-
-print((sum(jikan) - max(amari)))
+print(sum(jikan) - max(amari))

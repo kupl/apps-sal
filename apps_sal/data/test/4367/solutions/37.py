@@ -1,2 +1,2 @@
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 print([r + 100 * (10 - n), r][n >= 10])

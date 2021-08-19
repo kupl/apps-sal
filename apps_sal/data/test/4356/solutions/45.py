@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = [input() for i in range(N)]
 B = ''.join([input() for i in range(M)])
 f = 0

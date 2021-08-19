@@ -1,5 +1,5 @@
-A, B = input().split()
+(A, B) = input().split()
 if int(A) <= 8 and int(B) <= 8:
-    print("Yay!")
+    print('Yay!')
 else:
-    print(":(")
+    print(':(')

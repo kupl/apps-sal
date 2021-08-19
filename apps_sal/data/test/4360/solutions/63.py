@@ -3,7 +3,7 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def aaa(num):
@@ -13,7 +13,7 @@ def aaa(num):
 def main():
     n = int(input())
     a = Input()
-    ans = 1 / sum(aaa(i) for i in a)
+    ans = 1 / sum((aaa(i) for i in a))
     print(ans)
 
 

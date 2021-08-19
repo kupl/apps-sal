@@ -1,5 +1,5 @@
 from math import ceil
-time = [int(input())for i in range(5)]
+time = [int(input()) for i in range(5)]
 mod = [i % 10 for i in time]
 a = 124
 res = 0

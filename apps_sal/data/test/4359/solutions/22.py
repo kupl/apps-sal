@@ -6,9 +6,7 @@ for x in time:
         new_time.append(x)
     else:
         amari = min(amari, x % 10)
-        new_time.append(10 * ((x // 10) + 1))
-
+        new_time.append(10 * (x // 10 + 1))
 total = sum(new_time)
 dead = 10 - amari
-
-print((total - dead))
+print(total - dead)

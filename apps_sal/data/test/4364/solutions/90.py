@@ -8,10 +8,10 @@ if 1 <= MM <= 12:
 if 1 <= YY <= 12:
     MMYY = True
 if YYMM == True and MMYY == True:
-    print("AMBIGUOUS")
+    print('AMBIGUOUS')
 elif YYMM == True and MMYY == False:
-    print("YYMM")
+    print('YYMM')
 elif YYMM == False and MMYY == True:
-    print("MMYY")
+    print('MMYY')
 elif YYMM == False and MMYY == False:
-    print("NA")
+    print('NA')

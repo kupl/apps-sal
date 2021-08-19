@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [list(input()) for _ in range(n)]
 b = [list(input()) for _ in range(m)]
-
 eq = False
 find = False
 for i in range(n - m + 1):

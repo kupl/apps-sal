@@ -5,7 +5,7 @@ def answer(n: int, p: []) -> int:
 
 def main():
     n = int(input())
-    p = list(int(input()) for _ in range(n))
+    p = list((int(input()) for _ in range(n)))
     print(answer(n, p))
 
 

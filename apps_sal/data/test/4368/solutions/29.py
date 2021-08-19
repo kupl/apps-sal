@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 i = 1
 while n // k > 0:
     n = n // k

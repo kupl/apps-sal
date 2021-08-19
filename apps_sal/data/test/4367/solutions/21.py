@@ -1,4 +1,4 @@
-N, R = [int(x) for x in input().split()]
+(N, R) = [int(x) for x in input().split()]
 if N >= 10:
     print(R)
 else:

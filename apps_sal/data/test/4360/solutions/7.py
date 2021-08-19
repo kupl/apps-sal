@@ -6,6 +6,6 @@ for a in A:
         continue
     ans += 1 / a
 if ans == 0:
-    print((0))
+    print(0)
 else:
-    print((1 / ans))
+    print(1 / ans)

@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 h = [int(input()) for _ in range(N)]
 h.sort()
-print((min(h[i + K - 1] - h[i] for i in range(N - K + 1))))
+print(min((h[i + K - 1] - h[i] for i in range(N - K + 1))))

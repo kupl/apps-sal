@@ -1,2 +1,2 @@
 abc = list(map(int, input().split()))
-print((sum(abc) + max(abc) * 9))
+print(sum(abc) + max(abc) * 9)

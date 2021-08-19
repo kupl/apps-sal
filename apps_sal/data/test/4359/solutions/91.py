@@ -11,7 +11,7 @@ ans = list_x.pop(max_dif_indx)
 tmp = 0
 for i in range(4):
     tmp += list_x.pop()
-    while(tmp % 10 != 0):
+    while tmp % 10 != 0:
         tmp += 1
 ans += tmp
 print(ans)

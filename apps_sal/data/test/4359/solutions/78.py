@@ -3,7 +3,7 @@ import math
 menu = 5
 times = [int(input()) for i in range(menu)]
 orders = list(permutations(times))
-minimum = sum(math.ceil(time / 10) * 10 for time in times)
+minimum = sum((math.ceil(time / 10) * 10 for time in times))
 for order in orders:
     total = order[0]
     for i in range(1, menu):

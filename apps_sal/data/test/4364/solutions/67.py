@@ -12,14 +12,14 @@ def hantei(number):
     num = math.floor(number / 100)
     ber = number % 100
     if isMM(num) is False and isMM(ber) is False:
-        return "NA"
+        return 'NA'
     elif isMM(num) is True and isMM(ber) is True:
-        return "AMBIGUOUS"
+        return 'AMBIGUOUS'
     elif isMM(num) is True and isMM(ber) is False:
-        return "MMYY"
+        return 'MMYY'
     else:
-        return "YYMM"
+        return 'YYMM'
 
 
 num = int(input())
-print((hantei(num)))
+print(hantei(num))

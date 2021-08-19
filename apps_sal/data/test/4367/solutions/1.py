@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 if n >= 10:
     print(x)
 else:

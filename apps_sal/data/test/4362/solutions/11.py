@@ -1,1 +1,1 @@
-print(('a' if 'Z' < input() else 'A'))
+print('a' if 'Z' < input() else 'A')

@@ -10,6 +10,5 @@ for _ in range(5):
         A = A + [n]
     else:
         A = [n] + A
-
 A = [int(m.ceil(n / 10) * 10) for n in A[:-1]] + [A[-1]]
 print(sum(A))

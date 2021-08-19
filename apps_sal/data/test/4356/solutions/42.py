@@ -2,27 +2,39 @@ import sys
 stdin = sys.stdin
 
 
-def ip(): return int(sp())
-def fp(): return float(sp())
+def ip():
+    return int(sp())
 
 
-def lp(): return list(map(int, stdin.readline().split()))
-def sp(): return stdin.readline().rstrip()
-def yp(): return print('Yes')
-def np(): return print('No')
+def fp():
+    return float(sp())
 
 
-n, m = lp()
+def lp():
+    return list(map(int, stdin.readline().split()))
+
+
+def sp():
+    return stdin.readline().rstrip()
+
+
+def yp():
+    return print('Yes')
+
+
+def np():
+    return print('No')
+
+
+(n, m) = lp()
 ans = []
 for _ in range(n):
     s = list(sp())
     ans.append(s)
-
 next = []
 for _ in range(m):
     p = list(sp())
     next.append(p)
-
 ok = 0
 count = 0
 for x in range(n - m + 1):
@@ -34,7 +46,6 @@ for x in range(n - m + 1):
                     ch += 1
                 if ch == m * m:
                     ok += 1
-
 if ok == 0:
     print('No')
 else:

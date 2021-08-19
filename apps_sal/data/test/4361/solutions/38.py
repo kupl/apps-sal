@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 h = [0] * n
 for i in range(n):
     h[i] = int(input())

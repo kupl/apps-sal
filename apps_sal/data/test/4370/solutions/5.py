@@ -1,8 +1,8 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if abs(a - b) > 0:
     if a + b + abs(a - b) < 17:
-        print("Yay!")
+        print('Yay!')
     else:
-        print(":(")
+        print(':(')
 else:
-    print("Yay!")
+    print('Yay!')

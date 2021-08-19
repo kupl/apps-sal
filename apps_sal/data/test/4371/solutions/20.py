@@ -1,5 +1,4 @@
 S = str(input())
-
 N = len(S)
 X = []
 for i in range(N - 2):

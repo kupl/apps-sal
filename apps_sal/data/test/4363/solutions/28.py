@@ -1,5 +1,4 @@
-k, s = list(map(int, input().split()))
-
+(k, s) = list(map(int, input().split()))
 cnt = 0
 for x in range(k + 1):
     for y in range(k + 1):

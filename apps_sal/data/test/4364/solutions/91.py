@@ -1,5 +1,4 @@
 s = input()
-
 b = int(s[:2])
 a = int(s[2:])
 
@@ -15,7 +14,6 @@ def yorm(i):
 
 bf = yorm(b)
 af = yorm(a)
-
 ans = bf + af
 if len(ans) != 4:
     ans = 'NA'

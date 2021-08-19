@@ -1,5 +1,5 @@
 import numpy as np
-N, M = (int(T) for T in input().split())
+(N, M) = (int(T) for T in input().split())
 A = np.zeros((N, N), dtype=bool)
 B = np.zeros((M, M), dtype=bool)
 for TN in range(0, N):

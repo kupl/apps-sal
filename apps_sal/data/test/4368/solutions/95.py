@@ -6,6 +6,6 @@ a = 1
 b = 0
 while a == 1:
     b = b + 1
-    if k**b > n:
+    if k ** b > n:
         a = 0
 print(b)

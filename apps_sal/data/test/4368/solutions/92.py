@@ -4,6 +4,6 @@ def base10toK_base(num, K):
     return str(num % K)
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 ans = len(base10toK_base(N, K))
 print(ans)

@@ -3,7 +3,7 @@ from functools import reduce
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(*a):

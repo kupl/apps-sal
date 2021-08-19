@@ -1,6 +1,6 @@
 alpha = input()
 if alpha.isupper():
-    ans = "A"
+    ans = 'A'
 else:
-    ans = "a"
+    ans = 'a'
 print(ans)

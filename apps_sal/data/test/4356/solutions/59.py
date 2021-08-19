@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = [list(input()) for _ in range(n)]
 B = [list(input()) for _ in range(m)]
 ok = False
@@ -22,4 +22,4 @@ for ai in range(n - m + 1):
             break
     if ok:
         break
-print(('Yes' if ok else 'No'))
+print('Yes' if ok else 'No')

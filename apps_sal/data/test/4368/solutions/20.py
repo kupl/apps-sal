@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 cnt = 0
 while N // K != 0:
     N = N // K

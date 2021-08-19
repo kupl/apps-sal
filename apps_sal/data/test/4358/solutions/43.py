@@ -9,8 +9,7 @@ def __starting_point():
     n = int(input())
     for i in range(n):
         prices.append(int(input()))
-
-    print((christmas_eve_eve(prices)))
+    print(christmas_eve_eve(prices))
 
 
 __starting_point()

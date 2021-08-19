@@ -1,5 +1,5 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if max(a, b) > 8:
-    print(":(")
+    print(':(')
 else:
-    print("Yay!")
+    print('Yay!')

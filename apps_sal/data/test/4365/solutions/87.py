@@ -6,5 +6,4 @@ for i in range(1, K + 1):
         odd += 1
     else:
         even += 1
-
 print(odd * even)

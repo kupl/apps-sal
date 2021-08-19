@@ -9,5 +9,5 @@ for i in range(5):
         sum += a[i]
     elif a[i] % 10 != 0:
         r = min(r, a[i] % 10)
-        sum += (10 * math.ceil(a[i] / 10))
+        sum += 10 * math.ceil(a[i] / 10)
 print(sum - 10 + r)

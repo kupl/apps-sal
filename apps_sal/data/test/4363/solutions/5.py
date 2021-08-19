@@ -1,6 +1,5 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 n = 0
-
 for y in range(a + 1):
     for z in range(a + 1):
         p = b - y - z

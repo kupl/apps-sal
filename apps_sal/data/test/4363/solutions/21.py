@@ -1,5 +1,5 @@
 def main():
-    K, S = list(map(int, input().split()))
+    (K, S) = list(map(int, input().split()))
     ans = 0
     for Z in range(0, K + 1):
         if 0 <= S - Z <= 2 * K:

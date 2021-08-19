@@ -1,2 +1,2 @@
 N = int(input())
-print((int((N + 2 - 1) / 2)))
+print(int((N + 2 - 1) / 2))

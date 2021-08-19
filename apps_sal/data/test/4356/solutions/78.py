@@ -1,12 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ln = []
 lm = []
-
 for i in range(n):
     ln.append(input())
 for i in range(m):
     lm.append(input())
-
 lim = n - m + 1
 for i in range(lim):
     for j in range(lim):
@@ -16,11 +14,10 @@ for i in range(lim):
                 break
             l += 1
         else:
-            print("Yes")
+            print('Yes')
             break
     else:
         continue
     break
-
 else:
-    print("No")
+    print('No')

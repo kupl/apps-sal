@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [input() for _ in range(n)]
 b = [input() for _ in range(m)]
-
 success = 0
 for i in range(n - m + 1):
     fail = 0

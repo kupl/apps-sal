@@ -1,9 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = [list(input()) for _ in range(N)]
 B = [list(input()) for _ in range(M)]
-
 check = False
-
 for i in range(N - M + 1):
     for j in range(N - M + 1):
         if A[i][j:j + M] == B[0]:
@@ -13,5 +11,4 @@ for i in range(N - M + 1):
                     flag = False
             if flag:
                 check = True
-
-print("Yes" if check else "No")
+print('Yes' if check else 'No')

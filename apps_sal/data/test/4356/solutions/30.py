@@ -1,6 +1,6 @@
-N, M = list(map(int, input().split()))
-A = list(list(input()) for _ in range(N))
-B = list(list(input()) for _ in range(M))
+(N, M) = list(map(int, input().split()))
+A = list((list(input()) for _ in range(N)))
+B = list((list(input()) for _ in range(M)))
 flag = False
 for i in range(0, N - M + 1):
     for j in range(0, N - M + 1):
@@ -11,6 +11,6 @@ for i in range(0, N - M + 1):
                     sub = False
         flag = flag or sub
 if flag:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

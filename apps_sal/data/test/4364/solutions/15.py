@@ -1,12 +1,20 @@
 import sys
-
 sys.setrecursionlimit(10 ** 8)
-def ini(): return int(sys.stdin.readline())
-def inl(): return [int(x) for x in sys.stdin.readline().split()]
-def ins(): return sys.stdin.readline().rstrip()
 
 
-debug = lambda *a, **kw: print("\033[33m", *a, "\033[0m", **dict(file=sys.stderr, **kw))
+def ini():
+    return int(sys.stdin.readline())
+
+
+def inl():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def ins():
+    return sys.stdin.readline().rstrip()
+
+
+debug = lambda *a, **kw: print('\x1b[33m', *a, '\x1b[0m', **dict(file=sys.stderr, **kw))
 
 
 def solve():
@@ -16,13 +24,13 @@ def solve():
     am = 0 < a < 13
     bm = 0 < b < 13
     if am and bm:
-        return "AMBIGUOUS"
+        return 'AMBIGUOUS'
     elif am:
-        return "MMYY"
+        return 'MMYY'
     elif bm:
-        return "YYMM"
+        return 'YYMM'
     else:
-        return "NA"
+        return 'NA'
 
 
 print(solve())

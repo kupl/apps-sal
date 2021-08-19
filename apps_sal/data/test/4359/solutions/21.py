@@ -8,4 +8,4 @@ for i in a:
 for i in b:
     c.append((10 - i) % 10)
 d = max(c)
-print((sum(a) + sum(c) - d))
+print(sum(a) + sum(c) - d)

@@ -1,5 +1,5 @@
 def f():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = [list(input()) for i in range(n)]
     b = [list(input()) for j in range(m)]
     for p in range(n - m + 1):
@@ -10,10 +10,10 @@ def f():
                     if a[x + p][y + q] == b[x][y]:
                         cnt += 1
                         if cnt == m * m:
-                            return "Yes"
+                            return 'Yes'
                     else:
                         break
-    return "No"
+    return 'No'
 
 
 print(f())

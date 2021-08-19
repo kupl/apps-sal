@@ -1,6 +1,6 @@
 def is_YY(S):
     N = int(S)
-    if 00 <= N <= 99:
+    if 0 <= N <= 99:
         return True
     else:
         return False

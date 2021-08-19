@@ -6,11 +6,11 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def calc(i, h):
-    return all(h[i] >= h[j] for j in range(i))
+    return all((h[i] >= h[j] for j in range(i)))
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
     data = [int(input()) for i in range(5)]
     for row in permutations(data, 5):
         time = 0
-        for index, i in enumerate(row):
+        for (index, i) in enumerate(row):
             if index == 4:
                 time += i
                 continue

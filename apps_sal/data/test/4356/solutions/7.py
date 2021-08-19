@@ -1,7 +1,5 @@
-
-
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = ['' for i in range(n)]
     b = ['' for i in range(m)]
     for i in range(n):
@@ -16,9 +14,9 @@ def main():
                     if a[i1 + j][i2 + k] != b[j][k]:
                         fl = False
             if fl:
-                print("Yes")
+                print('Yes')
                 return
-    print("No")
+    print('No')
 
 
 def __starting_point():

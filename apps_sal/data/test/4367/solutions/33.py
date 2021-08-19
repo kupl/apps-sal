@@ -1,5 +1,4 @@
-n, r = map(int, input().split())
-
+(n, r) = map(int, input().split())
 if n >= 10:
     ans = r
 else:

@@ -1,5 +1,4 @@
 l = [int(input()) for i in range(5)]
-
 diff = 0
 num = 0
 for i in l:
@@ -9,5 +8,4 @@ for i in l:
         a = round(i + 5, -1)
         num += a
         diff = max(diff, a - i)
-
 print(num - diff)

@@ -1,1 +1,1 @@
-print("Aa"[ord(input()) > 96])
+print('Aa'[ord(input()) > 96])

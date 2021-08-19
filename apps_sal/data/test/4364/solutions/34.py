@@ -1,4 +1,3 @@
-
 s = input()
 a = int(s[0:2])
 b = int(s[2:4])
@@ -8,6 +7,5 @@ elif 0 < b <= 12:
     print('YYMM')
 elif 0 < a <= 12:
     print('MMYY')
-
 else:
     print('NA')

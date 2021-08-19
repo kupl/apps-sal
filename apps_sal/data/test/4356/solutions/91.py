@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = []
 for i in range(N):
     a = list(input())
@@ -7,7 +7,7 @@ B = []
 for i in range(M):
     b = list(input())
     B.append(b)
-ans = "No"
+ans = 'No'
 for i in range(N - M + 1):
     for j in range(N - M + 1):
         if A[i][j] == B[0][0]:
@@ -17,6 +17,6 @@ for i in range(N - M + 1):
                     if A[i + k][j + l] == B[k][l]:
                         count += 1
             if count == M * M:
-                ans = "Yes"
+                ans = 'Yes'
                 break
 print(ans)

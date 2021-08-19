@@ -1,3 +1,2 @@
 A = input()
-
-print("A") if A.isupper() else print("a")
+print('A') if A.isupper() else print('a')

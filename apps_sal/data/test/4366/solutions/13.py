@@ -1,6 +1,5 @@
 def iroha():
-    a, b = list(map(int, input().split()))
-
+    (a, b) = list(map(int, input().split()))
     num = a + b
     if num >= 24:
         new_num = num % 24

@@ -5,4 +5,4 @@ for i in a:
     if i % 10 != 0:
         z = min(z, i % 10)
     ans += 10 * ((i + 10 - 1) // 10)
-print(ans + z - 10 if (z != 123) or (z == 0) else ans)
+print(ans + z - 10 if z != 123 or z == 0 else ans)

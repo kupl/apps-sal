@@ -1,4 +1,4 @@
-N, K, *H = map(int, open(0).read().split())
+(N, K, *H) = map(int, open(0).read().split())
 H.sort()
 ans = float('inf')
 for i in range(N - K + 1):

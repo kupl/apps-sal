@@ -1,5 +1,5 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 if max(a, b) - min(a, b) <= 1:
-    print("Yay!")
+    print('Yay!')
 else:
-    print(":(")
+    print(':(')

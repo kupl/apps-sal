@@ -1,5 +1,5 @@
 j = input()
 if 'A' <= j and j <= 'Z':
-    print("A")
+    print('A')
 else:
-    print("a")
+    print('a')
