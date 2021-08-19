@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def sufficientSubset(self, root: TreeNode, limit: int) -> TreeNode:
         head = TreeNode()
         head.left = root
@@ -40,7 +35,6 @@ class Solution:
                 inner3(root.left)
                 inner3(root.right)
                 return
-
         inner1(head, 0)
         _ = inner2(head)
         inner3(head)

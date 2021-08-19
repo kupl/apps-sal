@@ -1,13 +1,11 @@
-# cook your dish here
 T = int(input())
-
 for _ in range(T):
     s = input()
-    if(len(s) > 3):
+    if len(s) > 3:
         g = s[::-1]
-        if(g[0:4] == "0001"):
-            print("YES")
+        if g[0:4] == '0001':
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')

@@ -5,8 +5,8 @@ def interpret(code):
     i = list(map(list, code.split('\n')))
     res = ''
     dir = ((1, 0), (-1, 0), (0, -1), (0, 1))
-    x, y = 0, 0
-    dx, dy = 1, 0
+    (x, y) = (0, 0)
+    (dx, dy) = (1, 0)
     seed()
     s = []
     str_mode = False
@@ -36,19 +36,19 @@ def interpret(code):
         elif o == '`':
             s.append(int(s.pop() < s.pop()))
         elif o == '>':
-            dx, dy = dir[0]
+            (dx, dy) = dir[0]
         elif o == '<':
-            dx, dy = dir[1]
+            (dx, dy) = dir[1]
         elif o == '^':
-            dx, dy = dir[2]
+            (dx, dy) = dir[2]
         elif o == 'v':
-            dx, dy = dir[3]
+            (dx, dy) = dir[3]
         elif o == '?':
-            dx, dy = dir[randint(0, 3)]
+            (dx, dy) = dir[randint(0, 3)]
         elif o == '_':
-            dx, dy = dir[1 if s.pop() else 0]
+            (dx, dy) = dir[1 if s.pop() else 0]
         elif o == '|':
-            dx, dy = dir[2 if s.pop() else 3]
+            (dx, dy) = dir[2 if s.pop() else 3]
         elif o == '"':
             str_mode = not str_mode
         elif o == ':':
@@ -71,7 +71,7 @@ def interpret(code):
         elif o == ',':
             res += chr(s.pop())
         elif o == '#':
-            x, y = x + dx, y + dy
+            (x, y) = (x + dx, y + dy)
         elif o == 'p':
             py = s.pop()
             px = s.pop()

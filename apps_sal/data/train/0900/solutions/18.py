@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 
 
@@ -18,7 +17,7 @@ t = int(input())
 a = com()
 w = 10000000 - 1
 m = 1000000007
-while(t > 0):
+while t > 0:
     k = int(input())
     c = a[k - 1] * 10
     c = c % m

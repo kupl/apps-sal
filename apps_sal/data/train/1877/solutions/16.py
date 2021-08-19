@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def sufficientSubset(self, root: TreeNode, limit: int) -> TreeNode:
 
         def dfs(node, value):
@@ -13,7 +8,7 @@ class Solution:
             value += node.val
             l = dfs(node.left, value)
             r = dfs(node.right, value)
-            if not node.left and not node.right:
+            if not node.left and (not node.right):
                 if value < limit:
                     return False
                 return True
