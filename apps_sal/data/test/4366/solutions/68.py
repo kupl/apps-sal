@@ -1,7 +1,5 @@
-# A - Remaining Time
 def main():
-    a, b = map(int, input().split())
-
+    (a, b) = map(int, input().split())
     if a + b < 24:
         print(a + b)
     else:

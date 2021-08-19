@@ -1,5 +1,5 @@
-H, W, A, B = map(int, open(0).read().split())
-MOD = 10**9 + 7
+(H, W, A, B) = map(int, open(0).read().split())
+MOD = 10 ** 9 + 7
 
 
 def modcomb(m, n, mod):
@@ -15,20 +15,15 @@ def modcomb(m, n, mod):
 
 
 total = modcomb(H + W - 2, W - 1, MOD)
-
 tmp = modcomb(A + W - 2, W - 1, MOD)
 total -= tmp
-
 for i in range(B - 1):
     a = H - A + i
     b = i + 1
     c = W - i - 1
     d = W + A - 2 - i
-#     print(a,b,c,d)
     tmp = tmp * a * c % MOD
     tmp = tmp * pow(b, -1, MOD) % MOD
     tmp = tmp * pow(d, -1, MOD) % MOD
-#     print(tmp)
     total = (total - tmp) % MOD
-
 print(total)

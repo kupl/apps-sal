@@ -1,17 +1,15 @@
-#!/usr/bin/env python3
 import sys
-sys.setrecursionlimit(10**8)
-INF = float("inf")
-
-MOD = 1000000007  # type: int
+sys.setrecursionlimit(10 ** 8)
+INF = float('inf')
+MOD = 1000000007
 
 
 class Combination(object):
 
     def __init__(self, N, mod=MOD):
-        fac, finv, inv = [0] * (N + 1), [0] * (N + 1), [0] * (N + 1)
-        fac[:2] = 1, 1
-        finv[:2] = 1, 1
+        (fac, finv, inv) = ([0] * (N + 1), [0] * (N + 1), [0] * (N + 1))
+        fac[:2] = (1, 1)
+        finv[:2] = (1, 1)
         inv[1] = 1
         for i in range(2, N + 1):
             fac[i] = fac[i - 1] * i % mod
@@ -35,9 +33,7 @@ class Combination(object):
 
 
 def solve(H: int, W: int, A: int, B: int):
-
     cmb = Combination(H + W + 1, MOD)
-
     ans = 0
     for i in range(B, W):
         buf = cmb(H - A - 1 + i, i)
@@ -46,7 +42,6 @@ def solve(H: int, W: int, A: int, B: int):
         ans += buf
         ans %= MOD
     print(ans)
-
     return
 
 
@@ -57,10 +52,10 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    H = int(next(tokens))  # type: int
-    W = int(next(tokens))  # type: int
-    A = int(next(tokens))  # type: int
-    B = int(next(tokens))  # type: int
+    H = int(next(tokens))
+    W = int(next(tokens))
+    A = int(next(tokens))
+    B = int(next(tokens))
     solve(H, W, A, B)
 
 

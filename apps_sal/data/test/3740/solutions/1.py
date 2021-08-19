@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import math
 import random
 
@@ -10,7 +9,6 @@ class Prime:
         is_prime_common = self.is_prime_common(n)
         if is_prime_common is not None:
             return is_prime_common
-
         if n < 2000000:
             return self.is_prime_bf(n)
         else:
@@ -34,24 +32,19 @@ class Prime:
         d = n - 1
         while d % 2 == 0:
             d //= 2
-
         witnesses = self.get_witnesses(n)
-        #witnesses = [random.randint(1, n - 1) for _ in range(100)]
-
         for w in witnesses:
             t = d
             y = pow(w, t, n)
-
-            while t != n - 1 and y != 1 and y != n - 1:
-                y = (y ** 2) % n
+            while t != n - 1 and y != 1 and (y != n - 1):
+                y = y ** 2 % n
                 t *= 2
-
             if y != n - 1 and t % 2 == 0:
                 return False
-
         return True
 
     def get_witnesses(self, num):
+
         def _get_range(num):
             if num < 2047:
                 return 1
@@ -70,16 +63,15 @@ class Prime:
             if num < 38255123056546413051:
                 return 9
             return 12
-
         return self.seed_primes[:_get_range(num)]
 
     def gcd(self, a, b):
         if a < b:
-            a, b = b, a
+            (a, b) = (b, a)
         if b == 0:
             return a
         while b:
-            a, b = b, a % b
+            (a, b) = (b, a % b)
         return a
 
     @staticmethod
@@ -90,15 +82,13 @@ class Prime:
     def find_factor(self, n, seed=1):
         if self.is_prime(n):
             return n
-
-        x, y, d = 2, 2, 1
+        (x, y, d) = (2, 2, 1)
         count = 0
         while d == 1:
             count += 1
             x = self.f(x, n, seed)
             y = self.f(self.f(y, n, seed), n, seed)
             d = self.gcd(abs(x - y), n)
-
         if d == n:
             return self.find_factor(n, seed + 1)
         return self.find_factor(d)
@@ -108,23 +98,19 @@ class Prime:
         if self.is_prime(n):
             primes[n] = 1
             return primes
-
         while n > 1:
             factor = self.find_factor(n)
-
             primes.setdefault(factor, 0)
             primes[factor] += 1
-
             n //= factor
-
         return primes
 
 
 def gcd(a, b):
     if a < b:
-        a, b = b, a
+        (a, b) = (b, a)
     while 0 < b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -137,7 +123,6 @@ def powmod(a, x, m):
         x //= 2
         a = a ** 2
         a %= M
-
     return y
 
 
@@ -146,20 +131,15 @@ prime = Prime()
 
 
 def solve(s):
-
     if s == 1:
         return 9
-
     ans = 0
-
     n = 1
     c = 9
     while n * c < s:
         n += 1
         c *= 10
-
     ans += s // n
-
     for log_r in range(n - 1, n + 1):
         c_r = 9 * 10 ** (log_r - 1)
         sum_r = log_r * c_r
@@ -188,7 +168,6 @@ def solve(s):
                 c_l_min = (res - sum_r + log_l - 1) // log_l
             div = log_r // g
             ans += (c_l_max - c_l_min + div) // div
-
     factors = prime.find_factors(s)
     num_prime_factors = len(factors)
     prime_factors = []
@@ -197,34 +176,29 @@ def solve(s):
     for k in list(factors.keys()):
         prime_factors.append(k)
         count_limit.append(factors[k])
-
     loop = True
     while loop:
         p = 1
-        for i, f in enumerate(prime_factors):
+        for (i, f) in enumerate(prime_factors):
             p *= f ** count[i]
         if n <= p:
             ans += 9 * powmod(10, p - 1, M)
             ans += M - s // p
             ans %= M
-
         count[0] += 1
-        for i, limit in enumerate(count_limit):
+        for (i, limit) in enumerate(count_limit):
             if limit < count[i]:
                 if i == num_prime_factors - 1:
                     loop = False
                     break
                 count[i + 1] += 1
                 count[i] = 0
-
     return ans
 
 
 def main():
-
     s = int(input())
-
-    print((solve(s)))
+    print(solve(s))
 
 
 def __starting_point():

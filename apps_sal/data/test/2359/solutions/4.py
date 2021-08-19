@@ -1,23 +1,15 @@
 t = int(input())
-
 for _ in range(t):
-    h, c, g = [int(x) for x in input().split()]
+    (h, c, g) = [int(x) for x in input().split()]
     av = (h + c) / 2
     if g == h:
         print(1)
     elif g <= av + 0.001:
         print(2)
     else:
-        # after 2n+1 pours (n = 0, 1, ...) we have a temp of ((n+1)*h + n*c)/(2*n+1) = g,
-        # so we have n*(h+c) + h = g*(2*n+1),
-        # or n*(h+c) + h = g*2*n + g
-        # or n*(h+c-g*2) = g - h
-        # or n ~= (g-h)/(h+c-g*2)
         n = int((g - h) / (h + c - g * 2))
         best_n = -1
         for j in range(max(n - 3, 0), n + 3):
-            if best_n == -1 or \
-                    abs(((best_n + 1) * h + best_n * c) - (2 * best_n + 1) * g) * (2 * j + 1) > \
-                    abs(((j + 1) * h + j * c) - g * (2 * j + 1)) * (2 * best_n + 1):
+            if best_n == -1 or abs((best_n + 1) * h + best_n * c - (2 * best_n + 1) * g) * (2 * j + 1) > abs((j + 1) * h + j * c - g * (2 * j + 1)) * (2 * best_n + 1):
                 best_n = j
         print(2 * best_n + 1)
