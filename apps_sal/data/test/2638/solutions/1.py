@@ -11,8 +11,6 @@ class Solution:
         :type triangle: List[List[int]]
         :rtype: int
         """
-        # return self.minmum(triangle, 0, 0)
-
         rows = len(triangle)
         minPath = triangle[rows - 1]
         for i in range(rows - 1)[::-1]:

@@ -13,18 +13,17 @@ for y in range(t):
     for i in range(0, 2 * n, 2):
         m = -1
         for j in range(b[i], 2 * n + 1):
-            if(ch[j] == 0):
+            if ch[j] == 0:
                 ch[j] = 1
                 m = j
                 break
-        if(m == -1):
+        if m == -1:
             flag = -1
             break
         b[i + 1] = m
-        # print(ch)
-    if(flag == -1):
+    if flag == -1:
         print(-1)
     else:
         for i in b:
-            print(i, end=" ")
+            print(i, end=' ')
         print()
