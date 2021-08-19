@@ -1,14 +1,8 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def numComponents(self, head: ListNode, G: List[int]) -> int:
-
         count = 0
-        p1, p2 = head, head
-
+        (p1, p2) = (head, head)
         while p2:
             if p1.val in G:
                 p2 = p1.next
@@ -18,5 +12,4 @@ class Solution:
             else:
                 p1 = p2.next
                 p2 = p1
-
         return count

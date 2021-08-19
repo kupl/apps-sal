@@ -1,10 +1,8 @@
-# From slowest to fastest.
-
 from math import ceil
 
 
 def century(year):
-    centuries, remaining = divmod(year, 100)
+    (centuries, remaining) = divmod(year, 100)
     return centuries + bool(remaining)
 
 

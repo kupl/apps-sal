@@ -7,5 +7,4 @@ def century(year):
         n = int(y[-2:])
         if n != 0:
             m += 1
-    # print(m)
     return m

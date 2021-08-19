@@ -1,5 +1,4 @@
 def words_to_marks(s):
-    # Easy one
     import string
     letters = string.ascii_lowercase
     score = 0

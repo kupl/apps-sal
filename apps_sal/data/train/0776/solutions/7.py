@@ -1,8 +1,7 @@
-# cook your dish here
 def solve(d):
     op = []
-    p = (10**5) - 2
-    if(d > 0):
+    p = 10 ** 5 - 2
+    if d > 0:
         while d > 0:
             p = min(d, p)
             op.append(p + 1)

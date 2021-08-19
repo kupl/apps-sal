@@ -1,12 +1,10 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
 import sys
 input = sys.stdin.readline
-inp, ip = lambda: int(input()), lambda: [int(w) for w in input().split()]
-
+(inp, ip) = (lambda: int(input()), lambda: [int(w) for w in input().split()])
 for _ in range(inp()):
     n = inp()
     ans = []
-    t = 10**5 - 2
+    t = 10 ** 5 - 2
     for i in range(n // t):
         ans.extend([t + 2, t + 1, 1])
     n = n % t

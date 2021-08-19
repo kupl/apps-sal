@@ -1,9 +1,5 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         d = {}
         n = len(G)
@@ -18,7 +14,6 @@ class Solution:
             return fa[x]
 
         def union(x, y):
-
             if x == y:
                 return
             else:
@@ -31,16 +26,12 @@ class Solution:
                 if rank[i] == rank[j]:
                     rank[j] += 1
         p = head
-        while(p and p.__next__):
+        while p and p.__next__:
             if p.val in d and p.next.val in d:
-
                 union(d[p.val], d[p.next.val])
             p = p.__next__
-
-        # merge res
         r = 0
         rset = set()
-
         for i in range(0, n):
             tmp = find(i)
             if tmp not in rset:
