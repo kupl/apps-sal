@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
 import heapq
-# input = stdin.readline
 
 
 def solve(n, m, a):
@@ -13,9 +11,9 @@ def solve(n, m, a):
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     a = list(sorted(map(int, input().split())))
-    print((solve(N, M, a)))
+    print(solve(N, M, a))
     pass
 
 

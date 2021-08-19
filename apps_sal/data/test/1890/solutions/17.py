@@ -1,23 +1,15 @@
 s = input()
 k = int(input())
-
-p = 10**9 + 7
+p = 10 ** 9 + 7
 n = len(s)
 amodp = (pow(2, k * n, p) - 1) % p
-
 b1modp = pow((pow(2, n, p) - 1 + p) % p, p - 2, p)
-
-MOD = (amodp * b1modp) % p
+MOD = amodp * b1modp % p
 ans = 0
 for i in range(len(s)):
-    if(s[i] == '5' or s[i] == '0'):
-        ans += pow(2, i, 10**9 + 7)
+    if s[i] == '5' or s[i] == '0':
+        ans += pow(2, i, 10 ** 9 + 7)
 Ans = 0
-
-Ans += ans * (MOD)
-
+Ans += ans * MOD
 Ans %= p
-# for i in range(k):
-# Ans+=ans*pow(2,i*len(s),10**9+7)
-
 print(Ans)

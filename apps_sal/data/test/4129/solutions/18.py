@@ -4,7 +4,6 @@ from collections import defaultdict
 def topo_sort_variant(graph, n):
     result = []
     visited = [False] * (n + 1)
-
     for i in range(1, n + 1):
         if not visited[i]:
             stack = [i]
@@ -22,18 +21,12 @@ def topo_sort_variant(graph, n):
 
 def __starting_point():
     min_roads_required = 0
-    ncities, nroads, capital = map(int, input().split())
-
+    (ncities, nroads, capital) = map(int, input().split())
     g = defaultdict(list)
-
     for i in range(nroads):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         g[u].append(v)
-
-    #print("The graph is:", g)
     op = topo_sort_variant(g, ncities)
-    #print("The topo sort output is", op)
-
     visited = [False] * (ncities + 1)
 
     def topo_dfs(i):
@@ -47,13 +40,11 @@ def __starting_point():
                         stack.append(child)
             else:
                 stack.pop()
-
     topo_dfs(capital)
     for i in reversed(topo_sort_variant(g, ncities)):
         if not visited[i]:
             topo_dfs(i)
             min_roads_required += 1
-
     print(min_roads_required)
 
 

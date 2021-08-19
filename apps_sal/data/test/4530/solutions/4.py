@@ -4,16 +4,16 @@ input = sys.stdin.readline
 
 
 def compress(string):
-    string.append("#")
+    string.append('#')
     n = len(string)
-    begin, end, cnt = 0, 1, 1
+    (begin, end, cnt) = (0, 1, 1)
     ans = []
     while end < n:
         if string[begin] == string[end]:
-            end, cnt = end + 1, cnt + 1
+            (end, cnt) = (end + 1, cnt + 1)
         else:
             ans.append((string[begin], cnt))
-            begin, end, cnt = end, end + 1, 1
+            (begin, end, cnt) = (end, end + 1, 1)
     return ans
 
 

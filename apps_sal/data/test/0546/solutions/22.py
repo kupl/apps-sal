@@ -1,9 +1,9 @@
 def local_right_to_global(test, local_right):
-    return(len(test) + local_right)
+    return len(test) + local_right
 
 
 def local_left_to_global(test, local_left):
-    return(local_left)
+    return local_left
 
 
 def check_left(test, template, good_symbols):
@@ -11,15 +11,15 @@ def check_left(test, template, good_symbols):
     for symbol in template:
         left_idx += 1
         if symbol == '*':
-            return(local_left_to_global(test, left_idx))
+            return local_left_to_global(test, left_idx)
         try:
             if test[left_idx] != template[left_idx]:
                 if template[left_idx] != '?':
-                    return('NO')
+                    return 'NO'
                 elif test[left_idx] not in good_symbols:
-                    return('NO')
+                    return 'NO'
         except:
-            return('NO')
+            return 'NO'
 
 
 def check_right(test, template, good_symbols):
@@ -27,15 +27,15 @@ def check_right(test, template, good_symbols):
     for symbol in reversed(template):
         right_idx -= 1
         if symbol == '*':
-            return(local_right_to_global(test, right_idx))
+            return local_right_to_global(test, right_idx)
         try:
             if test[right_idx] != template[right_idx]:
                 if template[right_idx] != '?':
-                    return('NO')
+                    return 'NO'
                 elif test[right_idx] not in good_symbols:
-                    return('NO')
+                    return 'NO'
         except:
-            return('NO')
+            return 'NO'
 
 
 good_symbols = set(list(input()))
@@ -44,7 +44,6 @@ tests_nr = int(input())
 tests = []
 for _ in range(tests_nr):
     tests.append(input())
-
 abaca = '*' not in template
 for test in tests:
     if abaca:
@@ -74,7 +73,6 @@ for test in tests:
         continue
     left_idx = check_left(test, template, good_symbols)
     right_idx = check_right(test, template, good_symbols)
-    # print(left_idx, right_idx)
     if left_idx == 'NO':
         print('NO')
     elif right_idx == 'NO':
