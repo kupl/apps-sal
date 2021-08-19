@@ -3,11 +3,12 @@ from enum import Enum
 
 
 class Gender(Enum):
-    Male = "M"
-    Female = "F"
+    Male = 'M'
+    Female = 'F'
 
 
 class Member:
+
     def __init__(self, name):
         self.name = name
         self.parents = []
@@ -22,21 +23,18 @@ class Member:
         return hash(self.name)
 
     def __repr__(self):
-        return f"[{self.name}|{self.gender}<=>{self.spouse.name if self.spouse is not None else '?'}: {list(map(lambda c: c.name, self.children))}]"
+        return f"[{self.name}|{self.gender}<=>{(self.spouse.name if self.spouse is not None else '?')}: {list(map(lambda c: c.name, self.children))}]"
 
     def set_gender(self, gender):
         if self.gender is not None and gender != self.gender:
             return False
-
         if self.spouse is not None:
             if self.spouse.gender == gender:
                 return False
+            elif gender == Gender.Male:
+                self.spouse.gender = Gender.Female
             else:
-                if gender == Gender.Male:
-                    self.spouse.gender = Gender.Female
-                else:
-                    self.spouse.gender = Gender.Male
-
+                self.spouse.gender = Gender.Male
         if self.gender is None:
             self.gender = gender
         return True
@@ -58,6 +56,7 @@ class Member:
 
 
 class family:
+
     def __init__(self):
         self.members = []
 
@@ -71,7 +70,6 @@ class family:
 
     def male(self, name):
         member = self.add_member(name)
-
         if member.set_gender(Gender.Male):
             self.update_genders()
             return True
@@ -80,7 +78,6 @@ class family:
 
     def female(self, name):
         member = self.add_member(name)
-
         if member.set_gender(Gender.Female):
             self.update_genders()
             return True
@@ -90,10 +87,8 @@ class family:
     def set_parent_of(self, child_name, parent_name):
         child = self.add_member(child_name)
         parent = self.add_member(parent_name)
-
         if not self.valid_relationship(child, parent):
             return False
-
         child.set_parent(parent)
         parent.set_child(child)
         self.update_genders()
@@ -118,40 +113,29 @@ class family:
     def valid_relationship(self, child, parent):
         if child == parent:
             return False
-
         if child in parent.children:
             return True
-
         if not self.check_children_of_children(child, parent):
             return False
-
         if len(child.parents) >= 2:
             return False
-
         if len(child.parents) == 1:
             current_parent = child.parents[0]
             if current_parent.gender == parent.gender and current_parent.gender is not None:
                 return False
-
         if not self.check_gender_assignment(child, parent):
             return False
-
         return True
 
-    # BFS algorithm
     def check_gender_assignment(self, child, parent):
         visited = set()
         queue = deque([parent])
         visited.add(parent)
-
         counter = 1
-
         while queue:
             p = queue.popleft()
-
             if len(p.children) == 0:
                 continue
-
             for c in p.children:
                 if c not in visited:
                     visited.add(p)
@@ -161,8 +145,6 @@ class family:
                             queue.append(pp)
                             if pp.gender is None:
                                 counter += 1
-
-            # Detect cycle
             if child in p.children:
                 if counter > 2:
                     if counter % 2 != 0 or counter > 5:
@@ -173,21 +155,16 @@ class family:
         visited = set()
         queue = deque([child])
         visited.add(child)
-
         while queue:
             c = queue.popleft()
-
             if len(c.children) == 0:
                 continue
-
             for cc in c.children:
                 if cc == parent:
                     return False
-
                 if cc not in visited:
                     visited.add(cc)
                     queue.append(cc)
-
         return True
 
     def add_member(self, name):

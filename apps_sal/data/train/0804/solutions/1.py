@@ -1,4 +1,3 @@
-# cook your dish here
 import numpy as np
 tests = int(input())
 for _ in range(tests):
@@ -9,13 +8,11 @@ for _ in range(tests):
     attacks[:n] = np.array(soldiers)
     attacks[n:2 * n] = attacks[:n]
     shield = [0 for _ in range(n)]
-
     pow_of_2 = 1
     while n // pow_of_2 > 0:
         pow_of_2 *= 2
     soldier_of_attack = (2 * n - pow_of_2) % n
     pow_of_2 = attacks[soldier_of_attack] > force
-
     for i in range(n):
         if attacks[i] > force:
             shield[i] = 10 ** 11
@@ -33,7 +30,7 @@ for _ in range(tests):
             if num_of_survivors > 1:
                 pow_2 = 1
                 while True:
-                    attacker = num_of_survivors - (num_of_survivors % pow_2)
+                    attacker = num_of_survivors - num_of_survivors % pow_2
                     pow_2 *= 2
                     if attacker == 0:
                         break
@@ -43,13 +40,12 @@ for _ in range(tests):
             shield[i] = force
         else:
             shield[i] = force + 1
-
     shield_needed = min(shield)
     if shield_needed == 10 ** 11:
-        print("impossible")
+        print('impossible')
     else:
-        print("possible")
+        print('possible')
         for i in range(n):
             if shield[i] == shield_needed:
-                print(str(i + 1) + " " + str(shield_needed))
+                print(str(i + 1) + ' ' + str(shield_needed))
                 break

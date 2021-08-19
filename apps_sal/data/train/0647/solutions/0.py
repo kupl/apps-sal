@@ -5,32 +5,29 @@
 import sys
 import math
 input = sys.stdin.readline
-############ ---- USER DEFINED INPUT FUNCTIONS ---- ############
 
 
 def inp():
-    return(int(input()))
+    return int(input())
 
 
 def inlt():
-    return(list(map(int, input().split())))
+    return list(map(int, input().split()))
 
 
 def insr():
     s = input()
-    return(s[:len(s) - 1])
+    return s[:len(s) - 1]
 
 
 def invr():
-    return(map(int, input().split()))
+    return map(int, input().split())
 
 
-################################################################
-############ ---- THE ACTUAL CODE STARTS BELOW ---- ############
 t = 1
 t = inp()
 for tt in range(t):
-    n, s = invr()
+    (n, s) = invr()
     if n == 2 and s > 1:
         print(s - 1)
     elif n > 2 and s > 1:

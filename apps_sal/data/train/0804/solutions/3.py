@@ -1,4 +1,3 @@
-# cook your dish here
 import numpy as np
 tests = int(input())
 for _ in range(tests):
@@ -25,10 +24,10 @@ for _ in range(tests):
                 starting_soldier = 0
     shield_needed = min(shield)
     if shield_needed == 10 ** 11:
-        print("impossible")
+        print('impossible')
     else:
-        print("possible")
+        print('possible')
         for i in range(n):
             if shield[i] == shield_needed:
-                print(str(i + 1) + " " + str(shield_needed))
+                print(str(i + 1) + ' ' + str(shield_needed))
                 break

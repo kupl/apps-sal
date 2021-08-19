@@ -1,4 +1,3 @@
-# cook your dish here
 def main():
     for _ in range(int(input())):
         n = int(input())
@@ -11,7 +10,7 @@ def main():
                 idxs.append(i)
             i += 1
         if len(idxs) == 0:
-            print("impossible")
+            print('impossible')
             continue
         mn = 1000000000
         for k in idxs:
@@ -33,7 +32,6 @@ def main():
                     pts += a[elm]
                     left = (left + 1) // 2
                     sleft *= 2
-
                 if right % 2 == 0:
                     last -= slast
                     right //= 2
@@ -42,7 +40,6 @@ def main():
                     slast *= 2
                     left -= 1
                     right = (right + 1) // 2
-
             while right > 2:
                 if right % 2 == 0:
                     last -= slast
@@ -59,7 +56,7 @@ def main():
                 idx = k
                 if pts == 0:
                     break
-        print("possible")
+        print('possible')
         print(idx + 1, mn + f)
 
 

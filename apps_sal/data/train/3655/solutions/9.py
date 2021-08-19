@@ -1,5 +1,5 @@
 class House(object):
-    roofleft, roofright = '/', '\\'
+    (roofleft, roofright) = ('/', '\\')
     wall = '|'
     bottom = '_'
 
@@ -37,28 +37,22 @@ class House(object):
 
     def genpart(self, index):
         if index in self.roofparts:
-            return self.genroof(index, outerfill=" ", innerfill=" ")
+            return self.genroof(index, outerfill=' ', innerfill=' ')
         if index in self.gutterparts:
-            return self.genroof(index, outerfill="", innerfill="_")
+            return self.genroof(index, outerfill='', innerfill='_')
         if index in self.floorparts:
-            return self.genfloor(index, outerfill="", innerfill=" ")
+            return self.genfloor(index, outerfill='', innerfill=' ')
         if index in self.groundparts:
-            return self.genfloor(index, outerfill="", innerfill="_")
+            return self.genfloor(index, outerfill='', innerfill='_')
 
     def genroof(self, index, innerfill, outerfill):
-        margin = "{:{outerfill}^{width}}".format("", outerfill=outerfill, width=(self.floors - index))
-        roofpart = "{margin}{roofleft}{centerfill}{roofright}{margin}".format(
-            margin=margin,
-            roofleft=self.roofleft,
-            roofright=self.roofright,
-            centerfill=innerfill * 2 * index)
+        margin = '{:{outerfill}^{width}}'.format('', outerfill=outerfill, width=self.floors - index)
+        roofpart = '{margin}{roofleft}{centerfill}{roofright}{margin}'.format(margin=margin, roofleft=self.roofleft, roofright=self.roofright, centerfill=innerfill * 2 * index)
         return roofpart
 
     def genfloor(self, index, innerfill, outerfill):
-        margin = "{outerfill:{innerfill}^{width}}".format(innerfill=innerfill, outerfill=outerfill, width=self.width)
-        roofpart = "{wall}{centerfill}{wall}".format(
-            wall=self.wall,
-            centerfill=innerfill * (self.width - 2))
+        margin = '{outerfill:{innerfill}^{width}}'.format(innerfill=innerfill, outerfill=outerfill, width=self.width)
+        roofpart = '{wall}{centerfill}{wall}'.format(wall=self.wall, centerfill=innerfill * (self.width - 2))
         return roofpart
 
     def draw(self):
@@ -66,7 +60,7 @@ class House(object):
         for index in range(self.height):
             part = self.genpart(index)
             if not part:
-                part = "X" * self.width
+                part = 'X' * self.width
             lines.append(part)
         return '\n'.join(lines)
 
@@ -78,14 +72,13 @@ class House(object):
 
     @property
     def __name__(self):
-        return [objname for objname, oid in list(globals().items()) if id(oid) == id(self)]
+        return [objname for (objname, oid) in list(globals().items()) if id(oid) == id(self)]
 
     def allnames(self):
-        results = [n for n, v in list(globals().items()) if v is arg]
+        results = [n for (n, v) in list(globals().items()) if v is arg]
         return results[0] if len(results) is 1 else results if results else None
 
     def __repr__(self):
-        # return 'House({})'.format(self.floors)
         return repr(self.draw())
 
     def __str__(self):

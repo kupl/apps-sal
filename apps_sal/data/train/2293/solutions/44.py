@@ -13,17 +13,15 @@ def update(now, next):
 
 
 def main(n, a):
-    dp = [[a[i], 0] for i in range(2**n)]
-    # dp[0][0]=a[0]
+    dp = [[a[i], 0] for i in range(2 ** n)]
     now = a[0]
     for j in range(n):
         bit = 1 << j
         for i in range(1 << n):
             if i & bit == 0:
-                # i|bit:iを部分集合として含む数字
                 dp[i | bit] = update(dp[i], dp[i ^ bit])
     now = sum(dp[0])
-    for k in range(1, 2**n):
+    for k in range(1, 2 ** n):
         now = max(now, sum(dp[k]))
         print(now)
 
