@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         if d > len(jobDifficulty):
             return -1
@@ -6,14 +7,10 @@ class Solution:
         return self.recurse(jobDifficulty, len(jobDifficulty) - 1, d)
 
     def recurse(self, jd, start, remain):
-        # if start == 0:
-        #     return jd[0]
         if remain == 1:
             return max(jd[:start + 1])
-
         if (start, remain) in self.memo:
-            return self.memo[(start, remain)]
-
+            return self.memo[start, remain]
         mx = 0
         mn = float('inf')
         total = float('inf')
@@ -21,6 +18,5 @@ class Solution:
             curr = jd[j]
             mx = max(mx, curr)
             mn = min(mn, mx + self.recurse(jd, j - 1, remain - 1))
-        self.memo[(start, remain)] = mn
-        # print((start, remain), self.memo, mx, mn)
+        self.memo[start, remain] = mn
         return mn

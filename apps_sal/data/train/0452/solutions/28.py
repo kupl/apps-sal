@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         n = len(jobDifficulty)
         if n < d:
@@ -21,10 +22,9 @@ class Solution:
         for i in range(n):
             for j in range(i, n):
                 dp[i][j] = max(jobDifficulty[i:j + 1])
-        # print(dp)
         res = [float('inf')]
 
-        def search(i, j, val):  # i- cut, j - idx
+        def search(i, j, val):
             if i == d:
                 res[0] = min(res[0], val + (0 if j >= n else dp[j][-1]))
                 return

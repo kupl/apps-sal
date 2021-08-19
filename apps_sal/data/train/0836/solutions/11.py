@@ -5,7 +5,6 @@ for i in range(int(input())):
     c = []
     for j in range(len(a)):
         c.append(a[j] * b[j])
-    # print c.index(max(c))
     mx = max(c)
     ndx = []
     temp = []
