@@ -1,15 +1,12 @@
 n = int(input())
 A = input().split()
 A = [int(k) for k in A]
-
 imposs = False
 days = []
 curr_empl = set()
 day_empl = set()
 d_s = 0
 for i in range(n):
-    # print(curr_empl)
-    # print(day_empl)
     e = A[i]
     if e < 0:
         if -e not in curr_empl:
@@ -27,7 +24,6 @@ for i in range(n):
         day_empl = set()
         days.append(i - d_s + 1)
         d_s = i + 1
-
 if imposs or len(curr_empl) > 0:
     print(-1)
 else:

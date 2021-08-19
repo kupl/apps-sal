@@ -1,7 +1,7 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 if x == 0:
-    print((sum(a)))
+    print(sum(a))
 else:
     eat = 0
     for i in range(n - 1):
@@ -16,4 +16,3 @@ else:
             else:
                 a[i + 1] -= tmp
     print(eat)
-    # print(a)

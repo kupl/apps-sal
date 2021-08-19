@@ -1,6 +1,4 @@
-# ABC131 B
-
-N, L = map(int, input().split())
+(N, L) = map(int, input().split())
 aji = []
 for i in range(N):
     aji.append(L + i)

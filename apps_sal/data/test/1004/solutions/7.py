@@ -16,11 +16,10 @@ def main():
 
 def solve(N, A):
     ans = []
-
     start = 0
     present = set()
     left = set()
-    for i, a in enumerate(A):
+    for (i, a) in enumerate(A):
         if a > 0:
             if a in present or a in left:
                 return None
@@ -31,19 +30,14 @@ def solve(N, A):
                 return None
             present.remove(a)
             left.add(a)
-
             if not present:
                 ans.append(i - start + 1)
                 start = i + 1
                 left = set()
-
     if start != N:
         return None
     return ans
 
-
-###############################################################################
-# AUXILIARY FUNCTIONS
 
 DEBUG = 'DEBUG' in os.environ
 

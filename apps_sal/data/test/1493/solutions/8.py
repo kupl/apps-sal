@@ -1,6 +1,4 @@
-#!/usr/env python3
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 for i in range(n):
     a.append(input())
@@ -13,11 +11,10 @@ for i in range(n):
                 print('W', end='')
             else:
                 print('-', end='')
+        elif a[i][j] == '.' and j % 2:
+            print('W', end='')
+        elif a[i][j] == '.':
+            print('B', end='')
         else:
-            if a[i][j] == '.' and j % 2:
-                print('W', end='')
-            elif a[i][j] == '.':
-                print('B', end='')
-            else:
-                print('-', end='')
+            print('-', end='')
     print()

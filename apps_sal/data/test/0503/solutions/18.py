@@ -1,11 +1,9 @@
 import sys
 from collections import defaultdict
 
-#sys.stdin = open('input')
-
 
 def main():
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     current_sequence = defaultdict(list)
     total_subsequences = 0
