@@ -1,5 +1,5 @@
-n, l = map(int, input(). split())
-a = [int(i) for i in input(). split()]
+(n, l) = map(int, input().split())
+a = [int(i) for i in input().split()]
 a.sort()
 a += [l]
 d = a[0]

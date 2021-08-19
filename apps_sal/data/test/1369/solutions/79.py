@@ -1,13 +1,10 @@
 Point = complex
-
-
-N, *XY = map(int, open(0).read().split())
-
-P = [Point(x, y) for x, y in zip(*[iter(XY)] * 2)]
+(N, *XY) = map(int, open(0).read().split())
+P = [Point(x, y) for (x, y) in zip(*[iter(XY)] * 2)]
 
 
 def max_distance(center):
-    return max(abs(center - p) for p in P)
+    return max((abs(center - p) for p in P))
 
 
 def ternary_search(f, left, right, MAX_ITER=100):

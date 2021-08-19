@@ -1,4 +1,4 @@
-x, y, x0, y0 = list(map(int, input().split(' ')))
+(x, y, x0, y0) = list(map(int, input().split(' ')))
 g = [[0] * (y + 1) for i in range(x + 1)]
 s = input()
 result = [0] * len(s)

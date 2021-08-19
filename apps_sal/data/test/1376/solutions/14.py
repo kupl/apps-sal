@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 dict1 = {}
 for i in range(1, n + 1):
     dict1[i] = []
-for count, i in enumerate(a):
+for (count, i) in enumerate(a):
     dict1[i].append(count)
 ans = 0
 d = 0

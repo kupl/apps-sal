@@ -10,7 +10,7 @@ def li():
     return list(mi())
 
 
-n, k = mi()
+(n, k) = mi()
 a = li()
 a.sort()
 ans = 0

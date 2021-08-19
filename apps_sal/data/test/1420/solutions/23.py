@@ -1,4 +1,4 @@
-'''
+"""
 import sys
 def Calc(N):
     return(N*((N+1)*.5))
@@ -12,10 +12,10 @@ for I in range(1000000000000000000):
     elif C>N:
         print(I-1)
         return
-'''
+"""
 A = list(map(int, input().split()))
 L = list(map(int, input().split()))
-L.append(-(min(L)))
+L.append(-min(L))
 L.sort()
 
 

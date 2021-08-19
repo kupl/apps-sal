@@ -4,7 +4,7 @@ def upc(c):
     return c
 
 
-a1, a2 = {}, {}
+(a1, a2) = ({}, {})
 for i in input():
     if i in a1:
         a1[i] += 1
@@ -15,8 +15,8 @@ for i in input():
         a2[i] += 1
     else:
         a2[i] = 1
-r1, r2 = 0, 0
-a3, a4 = {}, {}
+(r1, r2) = (0, 0)
+(a3, a4) = ({}, {})
 for k in a1:
     v = a1[k]
     if not k in a2:

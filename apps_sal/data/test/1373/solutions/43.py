@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 L = list(range(n + 1))
-
 cnt = 0
 ans = 0
 
@@ -13,7 +12,5 @@ def calc(i):
 
 for i in range(k, n + 2):
     cnt += calc(i)
-    cnt %= (10**9 + 7)
-
-
+    cnt %= 10 ** 9 + 7
 print(cnt)

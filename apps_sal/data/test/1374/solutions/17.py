@@ -20,8 +20,8 @@ def check(x):
 
 
 alpha = sorted(a)
-l, r = 0, n
-m, c = n // 2, n * (n + 1) // 2
+(l, r) = (0, n)
+(m, c) = (n // 2, n * (n + 1) // 2)
 while True:
     if check(alpha[m]) <= c // 2:
         if m == n - 1:
@@ -29,8 +29,7 @@ while True:
         elif check(alpha[m + 1]) > c // 2:
             break
         else:
-            l, m = m, (m + r) // 2
+            (l, m) = (m, (m + r) // 2)
     else:
-        m, r = (m + l) // 2, m + 1
-
+        (m, r) = ((m + l) // 2, m + 1)
 print(alpha[m])

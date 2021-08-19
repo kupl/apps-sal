@@ -25,25 +25,23 @@ for i in range(len(a)):
                 start = 0
             else:
                 t += v
+        elif v == ' ':
+            if t != '<':
+                t += '>'
+                ans.append(t)
+                t = ''
+                start = 0
         else:
-            if v == ' ':
-                if t != '<':
-                    t += '>'
-                    ans.append(t)
-                    t = ''
-                    start = 0
-            else:
-                t += v
+            t += v
+    elif v == ' ':
+        start = 1
+    elif v == '"':
+        start = 1
+        t = '<'
+        qoute = 1
     else:
-        if v == ' ':
-            start = 1
-        elif v == '"':
-            start = 1
-            t = '<'
-            qoute = 1
-        else:
-            t = '<' + v
-            start = 1
+        t = '<' + v
+        start = 1
 if t != '':
     t += '>'
     ans.append(t)

@@ -1,7 +1,7 @@
-numberOfcities, nBlocked = [int(item) for item in input().split()]
+(numberOfcities, nBlocked) = [int(item) for item in input().split()]
 blocked = set()
 for i in range(nBlocked):
-    n, m = [int(item) for item in input().split()]
+    (n, m) = [int(item) for item in input().split()]
     blocked.add(n)
     blocked.add(m)
 point = 0

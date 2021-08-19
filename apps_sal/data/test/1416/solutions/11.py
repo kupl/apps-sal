@@ -1,4 +1,4 @@
-n, w = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 arr.sort()
 a = arr[0]

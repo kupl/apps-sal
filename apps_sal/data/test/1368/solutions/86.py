@@ -1,5 +1,5 @@
 import math
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 V = list(map(int, input().split()))
 V.sort(reverse=True)
 
@@ -17,10 +17,8 @@ for i in range(n):
         if V[i] == V[a - 1]:
             x += 1
             y += 1
-    else:
-        if V[i] == V[a - 1]:
-            x += 1
-
+    elif V[i] == V[a - 1]:
+        x += 1
 if V[0] != V[a - 1]:
     cnt = combinations_count(x, y)
     print(ans / a)

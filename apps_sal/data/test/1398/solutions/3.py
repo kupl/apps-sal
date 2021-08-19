@@ -5,7 +5,7 @@ n = int(input())
 res = [int(t) for t in input().split()]
 res.sort()
 min_erase = n
-i, j = 0, 0
+(i, j) = (0, 0)
 while i != n - 1:
     if res[j] <= 2 * res[i]:
         ans = True

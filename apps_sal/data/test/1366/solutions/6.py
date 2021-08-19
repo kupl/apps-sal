@@ -12,6 +12,6 @@ for i in range(n):
         if L[i][0] == L[j][1] and i != j:
             exist = True
             break
-    if not(exist):
+    if not exist:
         ans += 1
 print(ans)

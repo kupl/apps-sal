@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
-
-MOD = 10**9 + 7
+(n, k) = map(int, input().split())
+MOD = 10 ** 9 + 7
 n += 1
 ans = 0
 for i in range(k, n + 1):

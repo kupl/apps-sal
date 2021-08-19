@@ -1,4 +1,4 @@
-n, m = input().split()
+(n, m) = input().split()
 n = int(n)
 m = int(m)
 ban = [True] * (n + 1)
@@ -9,12 +9,9 @@ for i in range(m):
     L[1] = int(L[1])
     ban[L[0]] = False
     ban[L[1]] = False
-
 x = ban.index(True)
-
 print(n - 1)
-
 for i in range(1, n + 1):
-    if(i == x):
+    if i == x:
         continue
-    print(i, end=" " + str(x) + '\n')
+    print(i, end=' ' + str(x) + '\n')

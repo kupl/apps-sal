@@ -1,4 +1,4 @@
-n, k = input().split(' ')
+(n, k) = input().split(' ')
 n = int(n)
 k = int(k)
 y = [int(x) for x in input().split(' ')]

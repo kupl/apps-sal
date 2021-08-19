@@ -6,11 +6,10 @@ def cmb(n, r):
     return factorial(n) // (factorial(n - r) * factorial(r))
 
 
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 v = list(map(int, input().split()))
 v.sort(reverse=True)
 l = Counter(v)
-
 avg = 0
 cnt = 0
 for i in range(A, B + 1):

@@ -1,6 +1,5 @@
 __author__ = 'Daniil'
-n, t = list(map(int, input().split()))
-
+(n, t) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 i = 0
 while i != t - 1:

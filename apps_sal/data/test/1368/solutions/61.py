@@ -7,9 +7,9 @@ def comb(n, r):
     return factorial(n) // (factorial(r) * factorial(n - r))
 
 
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 v = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 v.sort(reverse=True)
 x = v[a - 1]
 cnt = 0

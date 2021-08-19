@@ -26,4 +26,4 @@ while Ri > Li + 1:
             break
     else:
         Ri = i
-print((x[Li]))
+print(x[Li])

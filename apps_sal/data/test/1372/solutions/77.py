@@ -1,10 +1,13 @@
 import numpy as np
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    h, n = map(int, input().split())
+    (h, n) = map(int, input().split())
     lis = np.array([list(map(int, input().split())) for _ in range(n)])
     dp = np.zeros(h + 1, int)
     dp[0] = 0

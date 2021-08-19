@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def comb(n, r):
@@ -15,7 +15,6 @@ def comb(n, r):
 
 
 S = int(input())
-
 ans = 0
 n = 1
 while 3 * n <= S:
@@ -23,5 +22,4 @@ while 3 * n <= S:
     ans += comb(n + r - 1, r)
     ans %= mod
     n += 1
-
 print(ans)

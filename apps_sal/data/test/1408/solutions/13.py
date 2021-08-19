@@ -2,6 +2,7 @@ from operator import itemgetter
 
 
 class CodeforcesTask294BSolution:
+
     def __init__(self):
         self.result = ''
         self.books_count = 0
@@ -10,7 +11,7 @@ class CodeforcesTask294BSolution:
     def read_input(self):
         self.books_count = int(input())
         for x in range(self.books_count):
-            self.books_dims.append([int(y) for y in input().split(" ")])
+            self.books_dims.append([int(y) for y in input().split(' ')])
 
     def process_task(self):
         v1 = sum([1 for x in self.books_dims if x[0] == 1])
@@ -23,7 +24,7 @@ class CodeforcesTask294BSolution:
         for x in range(v1 + 1):
             for y in range(v2 + 1):
                 width = x + y * 2
-                thickness = sum(v1_books[:(v1 - x)]) + sum(v2_books[:(v2 - y)])
+                thickness = sum(v1_books[:v1 - x]) + sum(v2_books[:v2 - y])
                 if thickness <= width:
                     minimum = min(minimum, width)
         self.result = str(minimum)

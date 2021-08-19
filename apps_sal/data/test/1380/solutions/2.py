@@ -2,7 +2,7 @@ import math
 
 
 def main():
-    n, k = [int(i) for i in input().split()]
+    (n, k) = [int(i) for i in input().split()]
     l = [int(i) for i in input().split()]
     l2 = [l[i] - i * k for i in range(len(l))]
     d = dict()
@@ -28,7 +28,8 @@ def main():
         print(i)
 
 
-def __starting_point(): main()
+def __starting_point():
+    main()
 
 
 __starting_point()

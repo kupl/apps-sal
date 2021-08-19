@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 class Problem:
+
     def __init__(self):
         pass
 
@@ -21,8 +22,7 @@ class Problem:
                 done[k * i] = v
                 k += 1
             v += 1
-
-        return ' '.join(str(x) for x in done[2:])
+        return ' '.join((str(x) for x in done[2:]))
 
 
 def main():

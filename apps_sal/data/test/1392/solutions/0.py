@@ -5,7 +5,7 @@ def check(s, k):
     return True
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ans = 0
 for i in range(n):
     ss = input()

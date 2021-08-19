@@ -2,6 +2,7 @@ import re
 
 
 class Solution(object):
+
     def minWidth(self):
         k = int(input())
         s = input()
@@ -24,7 +25,7 @@ class Solution(object):
                     if c > k:
                         return False
             return True
-        while (end - start > 1):
+        while end - start > 1:
             pos = (start + end) // 2
             if can(pos):
                 end = pos

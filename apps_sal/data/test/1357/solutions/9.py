@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 works = list(map(int, input().split()))
 ans = 0
 current_home = 1

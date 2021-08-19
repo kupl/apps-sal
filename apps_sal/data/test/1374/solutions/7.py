@@ -24,7 +24,6 @@ l = 0
 r = n
 m = n // 2
 c = n * (n + 1) // 2
-
 while True:
     if search(S[m]) <= c // 2:
         if m == n - 1:
@@ -37,5 +36,4 @@ while True:
     else:
         r = m + 1
         m = (m + l) // 2
-
-print((S[m]))
+print(S[m])

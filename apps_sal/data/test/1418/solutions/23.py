@@ -3,7 +3,7 @@ def main():
     for i in range(3, 318):
         check = True
         for j in prime:
-            check = check and (i % j != 0)
+            check = check and i % j != 0
         if check:
             prime.append(i)
     now = 67

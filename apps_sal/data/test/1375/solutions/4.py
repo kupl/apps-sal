@@ -9,7 +9,6 @@ for i in a[:-1][::-1]:
 d = d[::-1]
 c = [0] * n
 s = b[n - 1]
-
 if b[0] * 3 == s:
     c[0] = 1
 for i in range(1, n):
@@ -17,10 +16,8 @@ for i in range(1, n):
         c[i] = c[i - 1] + 1
     else:
         c[i] = c[i - 1]
-
 ans = 0
 for i in range(2, n):
     if d[i] * 3 == s:
         ans = ans + c[i - 2]
-
 print(ans)

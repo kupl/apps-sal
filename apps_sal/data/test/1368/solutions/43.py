@@ -1,6 +1,6 @@
 from math import comb
 import math
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 D = list(map(int, input().split()))
 D = sorted(D)[::-1]
 print(sum(D[:A]) / A)

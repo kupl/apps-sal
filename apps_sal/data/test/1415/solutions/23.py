@@ -1,4 +1,4 @@
-x, y, x0, y0 = map(int, input().split())
+(x, y, x0, y0) = map(int, input().split())
 s = input()
 z = set()
 k = (len(s) + 1) * [0]
@@ -15,11 +15,9 @@ for i in s:
         y0 -= 1
     elif i == 'R' and y0 < y:
         y0 += 1
-
     if not (x0, y0) in z:
         k[u] += 1
         z.add((x0, y0))
-
-k[len(s)] += (x * y) - sum(k)
+k[len(s)] += x * y - sum(k)
 for i in k:
     print(i, end=' ')

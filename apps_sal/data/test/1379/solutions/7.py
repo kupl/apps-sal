@@ -1,12 +1,12 @@
 import heapq
-n, m, d = list(map(int, input().split()))
+(n, m, d) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = []
-a = [(x, i) for i, x in enumerate(a)]
+a = [(x, i) for (i, x) in enumerate(a)]
 a.sort()
 heap = []
 day = 0
-for b, i in a:
+for (b, i) in a:
     found = False
     if len(heap) > 0:
         if heap[0][0] + d < b:

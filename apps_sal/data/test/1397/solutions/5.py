@@ -1,7 +1,8 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, m = R()
+(n, m) = R()
 a = set(range(1, n + 1))
 for i in range(m):
     a = a - set(R())

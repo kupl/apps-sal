@@ -16,9 +16,9 @@ def main(H, N, A, B):
     return ans
 
 
-H, N = map(int, input().split())
+(H, N) = map(int, input().split())
 A = np.zeros(N, np.int64)
 B = np.zeros(N, np.int64)
 for i in range(N):
-    A[i], B[i] = map(int, input().split())
+    (A[i], B[i]) = map(int, input().split())
 print(main(H, N, A, B))

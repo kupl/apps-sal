@@ -1,4 +1,5 @@
 class CodeforcesTask291BSolution:
+
     def __init__(self):
         self.result = ''
         self.command = ''
@@ -18,21 +19,20 @@ class CodeforcesTask291BSolution:
                     cmd = []
                 else:
                     cmd.append(self.command[x])
+            elif self.command[x] == ' ':
+                if cmd:
+                    lexems.append(cmd)
+                    cmd = []
+            elif self.command[x] == '"':
+                started = True
             else:
-                if self.command[x] == " ":
-                    if cmd:
-                        lexems.append(cmd)
-                        cmd = []
-                elif self.command[x] == '"':
-                    started = True
-                else:
-                    cmd.append(self.command[x])
+                cmd.append(self.command[x])
         if cmd:
             lexems.append(cmd)
         if lexems:
-            lexems[0] = ["<"] + lexems[0]
-            lexems[-1].append(">")
-        self.result = ">\n<".join(["".join(x) for x in lexems])
+            lexems[0] = ['<'] + lexems[0]
+            lexems[-1].append('>')
+        self.result = '>\n<'.join([''.join(x) for x in lexems])
 
     def get_result(self):
         return self.result

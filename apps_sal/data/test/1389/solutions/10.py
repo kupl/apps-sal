@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 l = []
 for i in range(n):
     l.append(input())
@@ -12,10 +12,9 @@ for i in range(n - 1, -1, -1):
                 s += 1
                 for k in range(j, -1, -1):
                     la[k] += x
-        else:
-            if la[j] != -1:
-                x = -1 - la[j]
-                s += 1
-                for k in range(j, -1, -1):
-                    la[k] += x
+        elif la[j] != -1:
+            x = -1 - la[j]
+            s += 1
+            for k in range(j, -1, -1):
+                la[k] += x
 print(s)

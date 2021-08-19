@@ -4,12 +4,11 @@ e = []
 for i in range(n):
     e.append([])
 for i in range(1, n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     e[x - 1].append([i, y])
-
 b = [0] * n
 c = [0] * n
-d = [(10**18)] * n
+d = [10 ** 18] * n
 l = 0
 r = 1
 cnt = 0

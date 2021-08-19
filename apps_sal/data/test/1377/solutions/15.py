@@ -8,7 +8,7 @@ for i in range(maxi):
         flag = 1
         break
 if flag == 1:
-    print("NO")
+    print('NO')
 else:
     flag = 0
     for i in range(maxi + 1, n):
@@ -16,6 +16,6 @@ else:
             flag = 1
             break
     if flag == 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

@@ -1,6 +1,5 @@
 n = int(input())
 s = list(map(int, input().split()))
-
 ans = 0
 x0 = 0
 x1 = 0

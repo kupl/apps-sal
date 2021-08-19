@@ -1,5 +1,4 @@
 import numpy as np
-
 memory = {}
 
 
@@ -19,11 +18,10 @@ def recursive(n):
 
 
 def __starting_point():
-
     input_str = input()
     s = int(input_str)
     ans = recursive(s)
-    print((ans % (10**9 + 7)))
+    print(ans % (10 ** 9 + 7))
 
 
 __starting_point()

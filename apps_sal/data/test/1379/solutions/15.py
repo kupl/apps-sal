@@ -1,4 +1,4 @@
-n, work, gap = list(map(int, input().split()))
+(n, work, gap) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a = sorted([(a[i], i) for i in range(n)])
 ret = [0] * n

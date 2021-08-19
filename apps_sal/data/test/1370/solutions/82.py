@@ -1,12 +1,12 @@
 f = range
-h, w, k = map(int, input().split())
+(h, w, k) = map(int, input().split())
 g = [[int(i) for i in input()] for _ in f(h)]
 s = [[0] * -~w for _ in f(h + 1)]
 for i in f(h):
     for j in f(w):
         s[i + 1][j + 1] = s[i + 1][j] + s[i][j + 1] + g[i][j] - s[i][j]
 a = h + w
-for i in f(2**~-h):
+for i in f(2 ** (~-h)):
     u = d = l = r = c = 0
     e = []
     while d < h:
@@ -17,7 +17,7 @@ for i in f(2**~-h):
             u = d
     e += [(u, h)]
     while r < w:
-        if max(s[d][r + 1] - s[u][r + 1] - s[d][l] + s[u][l] for u, d in e) > k:
+        if max((s[d][r + 1] - s[u][r + 1] - s[d][l] + s[u][l] for (u, d) in e)) > k:
             if r == l:
                 break
             c += 1

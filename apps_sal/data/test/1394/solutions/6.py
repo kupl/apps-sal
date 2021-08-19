@@ -8,13 +8,13 @@ if nb % 2 == 0:
     nb = nb // 2
     a = s[:nb + c]
     b = s[nb + c:]
-    z = ""
+    z = ''
     for i in a:
         if i != 'a':
             z = z + i
     if z == b:
         print(a)
     else:
-        print(":(")
+        print(':(')
 else:
-    print(":(")
+    print(':(')

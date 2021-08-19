@@ -7,4 +7,4 @@ dp[3] = 1
 for i in range(4, N + 1):
     for j in range(i - 2):
         dp[i] += dp[j]
-print(dp[N] % (10**9 + 7))
+print(dp[N] % (10 ** 9 + 7))

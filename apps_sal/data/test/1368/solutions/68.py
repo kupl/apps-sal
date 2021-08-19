@@ -6,7 +6,7 @@ def comb(a, b):
     return math.factorial(a) // (math.factorial(a - b) * math.factorial(b))
 
 
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 v = list(map(int, input().split()))
 v.sort(reverse=1)
 va = v[:A]

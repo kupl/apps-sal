@@ -2,7 +2,7 @@ from itertools import groupby, accumulate, product, permutations, combinations
 
 
 def solve():
-    H, W, K = list(map(int, input().split()))
+    (H, W, K) = list(map(int, input().split()))
     S = [input() for _ in range(H)]
     cum = [[0] * (W + 1) for _ in range(H + 1)]
     for i in range(1, H + 1):
@@ -41,4 +41,4 @@ def solve():
     return ans
 
 
-print((solve()))
+print(solve())

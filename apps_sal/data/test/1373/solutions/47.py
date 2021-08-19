@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ans = 1
 y = sum(list(range(n - k + 2, n + 1)))
 j = n - k + 1

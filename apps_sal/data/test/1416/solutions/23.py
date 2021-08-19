@@ -1,5 +1,5 @@
 __author__ = 'Andrey'
-n, w = map(int, input().split())
+(n, w) = map(int, input().split())
 volumes = list(map(int, input().split()))
 volumes.sort()
 m = -1

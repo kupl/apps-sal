@@ -11,12 +11,11 @@ def physics(f):
     if y <= 2 * x:
         return 0
     else:
-        for index, x in enumerate(res):
+        for (index, x) in enumerate(res):
             y = 2 * x
             i = bisect.bisect(res, y, index + 1, num)
-
             if res[i - 1] <= 2 * x:
-                removes = (index + num - i)
+                removes = index + num - i
                 m = min(m, removes)
             if index >= m:
                 return m

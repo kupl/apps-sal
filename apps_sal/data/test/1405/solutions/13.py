@@ -13,7 +13,7 @@ for q in s:
         while s.get(b, 0):
             s[b] -= 1
             t.append(b)
-            a, b = b, a + b
+            (a, b) = (b, a + b)
         n = max(n, len(t))
         for c in t:
             s[c] += 1

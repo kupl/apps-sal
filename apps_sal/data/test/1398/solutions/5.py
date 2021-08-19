@@ -5,7 +5,7 @@ def main():
     sys.stdout = open('output.txt', 'w')
     n = int(input())
     cc = sorted(map(int, input().split()))
-    print(n - max(bisect(cc, c * 2, i) - i for i, c in enumerate(cc)))
+    print(n - max((bisect(cc, c * 2, i) - i for (i, c) in enumerate(cc))))
 
 
 def __starting_point():

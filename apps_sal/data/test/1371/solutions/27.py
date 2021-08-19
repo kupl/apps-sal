@@ -5,10 +5,9 @@ def calculate(n):
     for i in range(1, n + 1):
         x = 0
         for j in range(i - 3 + 1):
-            x += (dp[j] % MOD)
+            x += dp[j] % MOD
         dp[i] = x
-
-    print((dp[n] % MOD))
+    print(dp[n] % MOD)
 
 
 calculate(int(input()))

@@ -1,5 +1,5 @@
 import math
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def dist(a, b):
@@ -21,7 +21,7 @@ def ternary_search2(p, x):
     for i in range(100):
         c1 = (l * 2 + r) / 3
         c2 = (l + r * 2) / 3
-        if(max_dist(p, x, c1) > max_dist(p, x, c2)):
+        if max_dist(p, x, c1) > max_dist(p, x, c2):
             l = c1
         else:
             r = c2
@@ -34,11 +34,10 @@ def ternary_search1(p):
     for i in range(100):
         c1 = (l * 2 + r) / 3
         c2 = (l + r * 2) / 3
-        if(ternary_search2(p, c1) > ternary_search2(p, c2)):
+        if ternary_search2(p, c1) > ternary_search2(p, c2):
             l = c1
         else:
             r = c2
-
     return ternary_search2(p, l)
 
 
@@ -47,8 +46,7 @@ def main():
     p = []
     for i in range(n):
         p.append(list(map(int, input().split())))
-
-    print((ternary_search1(p)))
+    print(ternary_search1(p))
 
 
 main()

@@ -11,9 +11,9 @@ def ncr(n, r):
     return res
 
 
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 v = sorted(list(map(int, input().split())), reverse=True)
-print((sum(v[0:a]) / a))
+print(sum(v[0:a]) / a)
 if v[0] == v[a - 1]:
     c = v.count(v[0])
     ans = 0
@@ -23,4 +23,4 @@ if v[0] == v[a - 1]:
 else:
     k = v.count(v[a - 1])
     r = v[0:a].count(v[a - 1])
-    print((ncr(k, r)))
+    print(ncr(k, r))

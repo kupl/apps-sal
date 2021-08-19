@@ -3,7 +3,6 @@ from sys import stdin
 
 def main():
     input = stdin.readline
-
     s = int(input())
     dp = [0] * (s + 1)
     dp[0] = 1

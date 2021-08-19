@@ -1,5 +1,5 @@
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     mod = 10 ** 9 + 7
     cnt = 0
     for i in range(k, n + 2):

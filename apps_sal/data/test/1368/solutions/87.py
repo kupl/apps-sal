@@ -1,4 +1,4 @@
-N, A, B, *V = map(int, open(0).read().split())
+(N, A, B, *V) = map(int, open(0).read().split())
 V = sorted(V)[::-1]
 ans1 = sum(V[:A]) / A
 print(ans1)

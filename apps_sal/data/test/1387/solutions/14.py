@@ -1,4 +1,4 @@
-n, t = (int(i) for i in input().split())
+(n, t) = (int(i) for i in input().split())
 portals = [int(i) for i in input().split()]
 home = 1
 while True:

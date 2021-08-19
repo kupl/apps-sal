@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 tree = list(map(int, input().split()))
 min_action = 1010
 for i in range(1, 1001):

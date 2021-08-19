@@ -1,7 +1,7 @@
 from bisect import bisect_left, bisect_right
 from decimal import Decimal
 from scipy.special import comb
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 v = list(map(lambda x: -int(x), input().split()))
 v.sort()
 li = [[None] * 2 for _ in range(n + 1)]

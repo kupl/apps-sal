@@ -33,18 +33,18 @@ for letter in s.intersection(t):
     rt = set()
     if a == b:
         y += a
-        ms[ms.index(letter) + 1], mt[mt.index(letter) + 1] = 0, 0
+        (ms[ms.index(letter) + 1], mt[mt.index(letter) + 1]) = (0, 0)
         rs.add(letter)
         rt.add(letter)
     elif a > b:
         y += b
-        ms[ms.index(letter) + 1], mt[mt.index(letter) + 1] = ms[ms.index(letter) + 1] - mt[mt.index(letter) + 1], 0
+        (ms[ms.index(letter) + 1], mt[mt.index(letter) + 1]) = (ms[ms.index(letter) + 1] - mt[mt.index(letter) + 1], 0)
         rt.add(letter)
     else:
         y += a
-        ms[ms.index(letter) + 1], mt[mt.index(letter) + 1] = 0, mt[mt.index(letter) + 1] - ms[ms.index(letter) + 1]
+        (ms[ms.index(letter) + 1], mt[mt.index(letter) + 1]) = (0, mt[mt.index(letter) + 1] - ms[ms.index(letter) + 1])
         rs.add(letter)
-    s, t = s - rs, t - rt
+    (s, t) = (s - rs, t - rt)
 for letter in sc.intersection(tc):
     letter = letter.upper()
     a = ms[ms.index(letter) + 1]
@@ -53,18 +53,18 @@ for letter in sc.intersection(tc):
     rtc = set()
     if a == b:
         y += a
-        ms[ms.index(letter) + 1], mt[mt.index(letter) + 1] = 0, 0
+        (ms[ms.index(letter) + 1], mt[mt.index(letter) + 1]) = (0, 0)
         rsc.add(letter.lower())
         rtc.add(letter.lower())
     elif a > b:
         y += b
-        ms[ms.index(letter) + 1], mt[mt.index(letter) + 1] = ms[ms.index(letter) + 1] - mt[mt.index(letter) + 1], 0
+        (ms[ms.index(letter) + 1], mt[mt.index(letter) + 1]) = (ms[ms.index(letter) + 1] - mt[mt.index(letter) + 1], 0)
         rtc.add(letter.lower())
     else:
         y += a
-        ms[ms.index(letter) + 1], mt[mt.index(letter) + 1] = 0, mt[mt.index(letter) + 1] - ms[ms.index(letter) + 1]
+        (ms[ms.index(letter) + 1], mt[mt.index(letter) + 1]) = (0, mt[mt.index(letter) + 1] - ms[ms.index(letter) + 1])
         rsc.add(letter.lower())
-    sc, tc = sc - rsc, tc - rtc
+    (sc, tc) = (sc - rsc, tc - rtc)
 for letter in sc.intersection(t):
     a = ms[ms.index(letter.upper()) + 1]
     b = mt[mt.index(letter) + 1]
@@ -80,7 +80,7 @@ for letter in sc.intersection(t):
     else:
         w += a
         rsc.add(letter)
-    sc, t = sc - rsc, t - rt
+    (sc, t) = (sc - rsc, t - rt)
 for letter in s.intersection(tc):
     a = ms[ms.index(letter) + 1]
     b = mt[mt.index(letter.upper()) + 1]
@@ -96,5 +96,5 @@ for letter in s.intersection(tc):
     else:
         w += a
         rs.add(letter)
-    s, tc = s - rs, tc - rtc
+    (s, tc) = (s - rs, tc - rtc)
 print(y, w)

@@ -1,5 +1,5 @@
 import sys
-n, k = list(map(int, sys.stdin.readline().split()))
+(n, k) = list(map(int, sys.stdin.readline().split()))
 count = 0
 while n > 0:
     num = input()

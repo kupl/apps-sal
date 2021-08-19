@@ -5,7 +5,6 @@ for c in s:
         l1.append(c)
 if len(l1) % 2 == 0:
     flag = 0
-
     for i in range(0, len(l1) // 2):
         if l1[i] == l1[len(l1) // 2 + i]:
             continue
@@ -13,7 +12,7 @@ if len(l1) % 2 == 0:
             flag = 1
             break
     if flag == 1:
-        print(":(")
+        print(':(')
     else:
         flag = 0
         for c in s[len(s) - len(l1) // 2:]:
@@ -21,9 +20,8 @@ if len(l1) % 2 == 0:
                 flag = 1
                 break
         if flag == 0:
-
             print(s[:len(s) - len(l1) // 2])
         else:
-            print(":(")
+            print(':(')
 else:
-    print(":(")
+    print(':(')

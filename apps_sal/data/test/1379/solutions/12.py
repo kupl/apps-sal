@@ -1,4 +1,4 @@
-n, m, d = map(int, input().split())
+(n, m, d) = map(int, input().split())
 a = list(map(int, input().split()))
 o = [0] * n
 x = [(a[i], i) for i in range(n)]

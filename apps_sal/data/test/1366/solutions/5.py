@@ -8,5 +8,4 @@ for i in range(n):
         if i != j and a[i][0] == a[j][1]:
             k += 1
             break
-
 print(n - k)

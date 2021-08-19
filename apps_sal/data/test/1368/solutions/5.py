@@ -5,7 +5,7 @@ def C(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 l = sorted(list(map(int, input().split())), reverse=True)
 print(sum(l[:a]) / a)
 if l.count(l[a - 1]) > 1:

@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-ret, s = 0, sum(a)
-
+(ret, s) = (0, sum(a))
 if s % 3 == 0:
     p1 = s // 3
     p2 = s - p1

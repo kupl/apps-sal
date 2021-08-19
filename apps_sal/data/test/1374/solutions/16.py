@@ -1,12 +1,11 @@
 def main():
-    N, *A = map(int, open(0).read().split())
-
+    (N, *A) = map(int, open(0).read().split())
     B = sorted(A)
-    l, r = 0, N
-    m, c = N // 2, N * (N + 1) // 2
+    (l, r) = (0, N)
+    (m, c) = (N // 2, N * (N + 1) // 2)
 
     def check(x):
-        b, r, y = N, 0, 0
+        (b, r, y) = (N, 0, 0)
         D = [0] * (2 * N + 1)
         for a in A:
             D[b] += 1
@@ -18,16 +17,14 @@ def main():
                 r -= D[b]
             y += r
         return y
-
     while True:
         if check(B[m]) <= c // 2:
             if m == N - 1 or check(B[m + 1]) > c // 2:
                 break
             else:
-                l, m = m, (m + r) // 2
+                (l, m) = (m, (m + r) // 2)
         else:
-            m, r = (m + l) // 2, m + 1
-
+            (m, r) = ((m + l) // 2, m + 1)
     print(B[m])
 
 

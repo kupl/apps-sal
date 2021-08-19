@@ -1,7 +1,5 @@
 n = int(input().strip())
-
 dp = [0] * (n + 1)
-
 cur_factor = 2
 color = 1
 while cur_factor <= n:

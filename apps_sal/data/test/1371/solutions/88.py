@@ -1,11 +1,9 @@
 n = int(input())
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 per = [1] * (n + 1)
 for i in range(1, n + 1):
     per[i] = per[i - 1] * i
     per[i] %= mod
-
 inv = [1] * (n + 1)
 inv[-1] = pow(per[-1], mod - 2, mod)
 for j in range(2, n + 2):
@@ -25,5 +23,4 @@ for k in range(1, n + 1):
         break
     total += C(n - 2 * k - 1, k - 1)
     total %= mod
-
 print(total)

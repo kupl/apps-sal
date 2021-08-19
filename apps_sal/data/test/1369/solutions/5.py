@@ -8,7 +8,7 @@ def d(x, y):
 
 
 def nai(x, y, z):
-    c, b, a = sorted([d(x, y), d(y, z), d(z, x)])
+    (c, b, a) = sorted([d(x, y), d(y, z), d(z, x)])
     co = (b ** 2 + c ** 2 - a ** 2) / (2 * b * c)
     if co < 0:
         return a / 2

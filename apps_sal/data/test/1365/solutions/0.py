@@ -1,9 +1,9 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     cnt = [[[0] * 21 for _ in (0, 1)] for _ in range(n + 1)]
-    edges, mod = [[] for _ in range(n + 1)], 1000000007
+    (edges, mod) = ([[] for _ in range(n + 1)], 1000000007)
     for _ in range(n - 1):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         edges[u].append(v)
         edges[v].append(u)
 
@@ -12,7 +12,7 @@ def main():
         for v in edges[u]:
             if v != f:
                 dfs(v, u)
-                tmp0, tmp1 = [0] * 21, [0] * 21
+                (tmp0, tmp1) = ([0] * 21, [0] * 21)
                 for i in range(k + 1):
                     for j in range(k + 1):
                         if i != k:
@@ -31,9 +31,8 @@ def main():
                     tmp1[i] %= mod
                 cnt[u][0] = tmp0
                 cnt[u][1] = tmp1
-
     dfs(1, 1)
-    print(sum(cnt[1][1][j] for j in range(k + 1)) % mod)
+    print(sum((cnt[1][1][j] for j in range(k + 1))) % mod)
 
 
 def __starting_point():

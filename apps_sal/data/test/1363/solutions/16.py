@@ -1,4 +1,4 @@
-g, d, f = map(int, input().split())
+(g, d, f) = map(int, input().split())
 G = sorted([0] + list(map(int, input().split())))
 D = sorted([0] + list(map(int, input().split())))
 F = sorted([0] + list(map(int, input().split())))
@@ -33,7 +33,7 @@ for i in range(1, 100001):
     b2 = b[2 * i] - b[i]
     c2 = c[2 * i] - c[i]
     if a[i] - a[i - 1] == 1:
-        q += (b2 * (b2 - 1) // 2) * (c2 * (c2 - 1) * (c2 - 2) // 6)
+        q += b2 * (b2 - 1) // 2 * (c2 * (c2 - 1) * (c2 - 2) // 6)
     if b[i] - b[i - 1] == 1:
         q += a2 * b2 * (c2 * (c2 - 1) * (c2 - 2) // 6)
     if c[i] - c[i - 1] == 1:

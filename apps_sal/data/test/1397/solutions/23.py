@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = set(range(1, n + 1))
 for i in range(m):
     a = a - set(map(int, input().split()))

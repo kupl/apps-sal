@@ -1,15 +1,10 @@
 from math import factorial
-
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 v = list(map(int, input().split()))
-
 v.sort(reverse=True)
-
 ans = sum(v[:a]) / a
 ans2 = 0
-
 count1 = v.count(v[a - 1])
-
 index1 = v.index(v[a - 1])
 
 
@@ -22,6 +17,5 @@ if v[0] == v[a - 1]:
         ans2 += ncr(count1, i)
 else:
     ans2 = ncr(count1, a - index1)
-
 print(ans)
 print(ans2)

@@ -1,5 +1,5 @@
 __author__ = 'Rakshak.R.Hegde'
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 a = sorted(map(int, input().split()))
 r = 0.0
 for i in range(n - 1):

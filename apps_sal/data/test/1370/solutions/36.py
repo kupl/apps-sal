@@ -1,4 +1,4 @@
-h, w, k = map(int, input().split())
+(h, w, k) = map(int, input().split())
 g = [[int(c) for c in input()] for _ in range(h)]
 s = [[0] * (w + 1) for _ in range(h + 1)]
 for i in range(h):
@@ -6,11 +6,12 @@ for i in range(h):
         s[i + 1][j + 1] = s[i + 1][j] + s[i][j + 1] + g[i][j] - s[i][j]
 
 
-def ssum(u, d, l, r): return s[d][r] - s[u][r] - s[d][l] + s[u][l]
+def ssum(u, d, l, r):
+    return s[d][r] - s[u][r] - s[d][l] + s[u][l]
 
 
 a = h + w
-for i in range(2**(h - 1)):
+for i in range(2 ** (h - 1)):
     e = []
     u = d = ch = 0
     for j in range(h):
@@ -22,7 +23,7 @@ for i in range(2**(h - 1)):
                 u = d
     l = r = cw = 0
     while r < w:
-        if max(ssum(u, d, l, r + 1) for u, d in e) > k:
+        if max((ssum(u, d, l, r + 1) for (u, d) in e)) > k:
             if r == l:
                 break
             cw += 1

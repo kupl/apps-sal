@@ -1,7 +1,10 @@
 import sys
 import numpy as np
 from itertools import combinations_with_replacement, product
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def culc(array, k, count):
@@ -9,7 +12,7 @@ def culc(array, k, count):
     cuts = np.zeros(array.shape[1])
     for i in range(array.shape[0]):
         if any(array[i] > k):
-            return 10**6
+            return 10 ** 6
         elif any(array[i] + cuts > k):
             cuts = array[i]
             count += 1
@@ -19,11 +22,11 @@ def culc(array, k, count):
 
 
 def main():
-    h, w, k = map(int, input().split())
+    (h, w, k) = map(int, input().split())
     choco = np.zeros((h, w))
     for i in range(h):
         choco[i] = list(input())
-    ans = 10**6
+    ans = 10 ** 6
     choco = choco.astype(np.int64)
     for bit in product([0, 1], repeat=h - 1):
         if sum(bit) >= ans:

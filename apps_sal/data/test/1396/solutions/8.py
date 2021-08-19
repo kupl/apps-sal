@@ -1,4 +1,4 @@
-n, k, x = list(map(int, input().split()))
+(n, k, x) = list(map(int, input().split()))
 c0 = list(map(int, input().split()))
 max = 0
 for i in range(len(c0) - 1):

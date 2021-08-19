@@ -1,6 +1,6 @@
 import math
 s = input().split()
-n, l = int(s[0]), int(s[1])
+(n, l) = (int(s[0]), int(s[1]))
 a = input().split()
 a = [int(a) for a in a]
 a.sort()

@@ -3,8 +3,8 @@ import sys
 
 def solve():
     input = sys.stdin.readline
-    H, W, K = map(int, input().split())
-    S = [list(map(int, list(input().strip("\n")))) for _ in range(H)]
+    (H, W, K) = map(int, input().split())
+    S = [list(map(int, list(input().strip('\n')))) for _ in range(H)]
     sumS = [[0] * (W + 1) for _ in range(H + 1)]
     for h in range(H):
         for w in range(W):

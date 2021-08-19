@@ -3,6 +3,7 @@ from math import gcd
 
 
 class Segment:
+
     def __init__(self, x1, y1, x2, y2):
         self.x1 = x1
         self.y1 = y1
@@ -31,14 +32,14 @@ class Segment:
         l = self.x1
         r = self.x2
         if l > r:
-            l, r = r, l
+            (l, r) = (r, l)
         return l <= x <= r
 
     def inner_y(self, y):
         l = self.y1
         r = self.y2
         if l > r:
-            l, r = r, l
+            (l, r) = (r, l)
         return l <= y <= r
 
     def inner(self, x, y):
@@ -49,14 +50,14 @@ class Segment:
         dy = det(self.A(), self.C(), other.A(), other.C())
         d = det(self.A(), self.B(), other.A(), other.B())
         if d == 0:
-            return False, 0, 0
+            return (False, 0, 0)
         if dx % d != 0 or dy % d != 0:
-            return False, 0, 0
+            return (False, 0, 0)
         x = -dx // d
         y = -dy // d
         if not self.inner(x, y) or not other.inner(x, y):
-            return False, 0, 0
-        return True, x, y
+            return (False, 0, 0)
+        return (True, x, y)
 
 
 def det(a, b, c, d):
@@ -68,12 +69,12 @@ def main():
     segments = []
     ans = 0
     for _ in range(n):
-        x1, y1, x2, y2 = map(int, input().split())
+        (x1, y1, x2, y2) = map(int, input().split())
         segment = Segment(x1, y1, x2, y2)
         ans += segment.pt_cnt()
         pt = set()
         for other in segments:
-            result, x, y = segment.intersect(other)
+            (result, x, y) = segment.intersect(other)
             if result:
                 pt.add((x, y))
         ans -= len(pt)

@@ -12,7 +12,7 @@ def __starting_point():
     pr = 1
     ans = 0
     bst = True
-    while (st + 1) < m:
+    while st + 1 < m:
         if L[st] > L[st + 1]:
             if bst:
                 ans += L[st] - pr
@@ -20,7 +20,6 @@ def __starting_point():
             else:
                 ans += L[st] - pr + n
             pr = L[st]
-
         st += 1
     if bst:
         ans += L[st] - 1

@@ -1,5 +1,5 @@
 def f(r):
-    prev, ofs = -1, -1
+    (prev, ofs) = (-1, -1)
     s = list()
     while True:
         try:
@@ -16,7 +16,7 @@ s = f(input().replace('-', ' '))
 
 
 def can(w):
-    cnt, cur = 0, 0
+    (cnt, cur) = (0, 0)
     for l in s:
         if l > w:
             return False

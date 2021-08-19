@@ -2,7 +2,7 @@ import sys
 
 
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     res = 0
     tab = [list(input()) for _ in range(n)]
     for row in range(n):
@@ -20,5 +20,5 @@ def solve():
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 print(solve())

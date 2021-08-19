@@ -1,5 +1,5 @@
 import numpy as np
-H, N = map(int, input().split())
+(H, N) = map(int, input().split())
 m = np.array([list(map(int, input().split())) for _ in range(N)])
 max_a = np.max(m[:, 0])
 dp = np.zeros(H + max_a + 1, dtype='i8')

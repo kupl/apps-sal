@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 yi = list(map(int, input().split()))
 num_peo = 0
 for peo in yi:

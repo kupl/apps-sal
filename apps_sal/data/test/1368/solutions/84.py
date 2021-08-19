@@ -1,5 +1,5 @@
 import math
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 v = list(map(int, input().split()))
 v.sort(reverse=True)
 c = 0

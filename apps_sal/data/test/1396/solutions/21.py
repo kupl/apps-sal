@@ -1,8 +1,7 @@
 (n, k, x) = input().split()
-n, k = int(n), int(k)
+(n, k) = (int(n), int(k))
 balls = input().split()
 ans = 0
-
 for i in range(n):
     s = balls.copy()
     s.insert(i, x)
@@ -20,5 +19,4 @@ for i in range(n):
         if len(s) == l:
             break
     ans = max(ans, n - len(s))
-
 print(ans)

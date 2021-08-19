@@ -14,5 +14,4 @@ for i in range(1, len(L)):
         cur_old = cur
         cur = 1
         ans_cur = 0
-
 print(ans * 2)

@@ -9,5 +9,5 @@ def g(a, k):
     return len(s) == k + 1
 
 
-n, k = (int(x) for x in input().split())
-print(sum(g(int(input()), k) for i in range(n)))
+(n, k) = (int(x) for x in input().split())
+print(sum((g(int(input()), k) for i in range(n))))

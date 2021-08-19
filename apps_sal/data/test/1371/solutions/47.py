@@ -8,10 +8,10 @@ def C(n, r):
 n = int(input())
 s = n // 3
 a = 0
-if(s >= 1):
+if s >= 1:
     for i in range(1, s + 1):
         t = n - 3 * i
         a += C(t + i - 1, i - 1)
-    print((a % 1000000007))
+    print(a % 1000000007)
 else:
-    print((0))
+    print(0)

@@ -1,9 +1,9 @@
 import numpy as np
-
 EPS = 1e-12
 
 
 class MinEnclosingCircle:
+
     def __init__(self, pts):
         self.pts = pts
         self.center = None
@@ -15,7 +15,7 @@ class MinEnclosingCircle:
         for i in range(2, len(self.pts)):
             distance = np.linalg.norm(self.pts[i] - self.center)
             if distance >= self.radius:
-                self.center, self.radius = self.find_second_point(i)
+                (self.center, self.radius) = self.find_second_point(i)
 
     def find_second_point(self, i):
         center = (self.pts[0] + self.pts[i]) / 2
@@ -23,11 +23,11 @@ class MinEnclosingCircle:
         for j in range(1, i):
             distance = np.linalg.norm(self.pts[j] - center)
             if distance >= radius:
-                new_center, new_radius = self.find_third_point(i, j)
+                (new_center, new_radius) = self.find_third_point(i, j)
                 if new_radius > 0:
                     center = new_center
                     radius = new_radius
-        return center, radius
+        return (center, radius)
 
     def find_third_point(self, i, j):
         center = (self.pts[j] + self.pts[i]) / 2
@@ -35,11 +35,11 @@ class MinEnclosingCircle:
         for k in range(j):
             distance = np.linalg.norm(self.pts[k] - center)
             if distance >= radius:
-                new_center, new_radius = self.find_circle_3pts(i, j, k)
+                (new_center, new_radius) = self.find_circle_3pts(i, j, k)
                 if new_radius > 0:
                     center = new_center
                     radius = new_radius
-        return center, radius
+        return (center, radius)
 
     def find_circle_3pts(self, i, j, k):
         v1 = self.pts[j] - self.pts[i]
@@ -66,12 +66,11 @@ class MinEnclosingCircle:
             center[1] = v1[0] * c2 - v2[0] * c1
             center = center / det
             radius = np.linalg.norm(center - self.pts[i]) + EPS
-        return center, radius
+        return (center, radius)
 
 
 n = int(input())
 point = [np.array(input().split(), dtype=int) for _ in range(n)]
 mec = MinEnclosingCircle(point)
 mec.fit()
-
 print(mec.radius)

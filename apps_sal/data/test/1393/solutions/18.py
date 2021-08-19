@@ -1,5 +1,5 @@
 def main():
-    s, t = input(), input()
+    (s, t) = (input(), input())
     mappingS = list(s)
     mappingT = list(t)
     yay = 0
@@ -13,7 +13,7 @@ def main():
         contribution = min(sLower, tLower) + min(sUpper, tUpper)
         yay += contribution
         whoops += min(tLower + tUpper, sLower + sUpper) - contribution
-    print("{0} {1}".format(yay, whoops))
+    print('{0} {1}'.format(yay, whoops))
 
 
 def __starting_point():

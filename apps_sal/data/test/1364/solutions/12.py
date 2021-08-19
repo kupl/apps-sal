@@ -4,7 +4,7 @@ import sys
 def main():
     n = int(input())
     sushi = list(map(int, sys.stdin.readline().split()))
-    debut, milieu, fin = 0, 0, 1
+    (debut, milieu, fin) = (0, 0, 1)
     maxLong = 0
     for i in range(1, n):
         if sushi[i] == sushi[i - 1]:

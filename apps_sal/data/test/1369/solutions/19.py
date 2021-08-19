@@ -6,10 +6,9 @@ for _ in range(n):
 
 
 def calc(k):
-    i, j = k
-    return max((x - i)**2 + (y - j)**2 for x, y in xy)
+    (i, j) = k
+    return max(((x - i) ** 2 + (y - j) ** 2 for (x, y) in xy))
 
 
-x, y = fmin(calc, [500, 500], disp=0)
-
-print(calc([x, y])**0.5)
+(x, y) = fmin(calc, [500, 500], disp=0)
+print(calc([x, y]) ** 0.5)

@@ -19,4 +19,4 @@ if not l in second:
     current = l - second[len(second) - 1]
     if current > maximum:
         maximum = current
-print("{:.10f}".format(maximum))
+print('{:.10f}'.format(maximum))

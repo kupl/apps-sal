@@ -12,14 +12,14 @@ def sml_cmb(n, r):
 
 
 def main():
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     v = list(map(int, input().split()))
     v.sort()
     ave = 0
     for i in range(1, a + 1):
         ave += v[n - i]
     ave /= a
-    l, r = -1, -1
+    (l, r) = (-1, -1)
     target = v[n - a]
     for i in range(n):
         if v[i] == target:
@@ -30,7 +30,7 @@ def main():
             r = i
             break
     cnt = r - l + 1
-    high, low = min(cnt, r - (n - b) + 1), r - (n - a) + 1
+    (high, low) = (min(cnt, r - (n - b) + 1), r - (n - a) + 1)
     ans = sml_cmb(cnt, low)
     if v[n - a] == v[n - 1]:
         for i in range(low + 1, high + 1):

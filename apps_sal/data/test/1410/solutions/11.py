@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 n = int(input())
@@ -10,7 +13,7 @@ graph = {}
 for i in range(1, n + 1):
     graph[i] = []
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
 for i in range(1, n + 1):

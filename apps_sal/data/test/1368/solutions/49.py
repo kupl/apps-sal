@@ -1,6 +1,6 @@
 from math import comb
 mod = 10 ** 9 + 7
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 v = list(map(int, input().split()))
 v.sort(reverse=True)
 print(sum(v[:a]) / a)

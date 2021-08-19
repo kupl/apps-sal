@@ -1,5 +1,5 @@
 def go(a, b):
-    ret, c = 0, a + b
+    (ret, c) = (0, a + b)
     if d.get(c) and d[c] > 0:
         d[c] -= 1
         ret = go(b, c) + 1
@@ -14,7 +14,6 @@ for i in map(int, input().split()):
         d[i] += 1
     else:
         d[i] = 1
-
 ans = 2
 for a in d:
     for b in d:

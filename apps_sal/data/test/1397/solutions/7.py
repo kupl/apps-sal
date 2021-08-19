@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 t = set()
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     t.add(x)
     t.add(y)
 for i in range(1, n + 1):

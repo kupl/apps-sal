@@ -5,7 +5,7 @@ def comb(n, k):
     return f(n) // f(k) // f(n - k)
 
 
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 V = sorted(map(int, input().split()))
 s = sum(V[-a:]) / a
 print(s)

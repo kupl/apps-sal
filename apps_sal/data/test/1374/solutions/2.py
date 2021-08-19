@@ -5,7 +5,7 @@ NN = ((N + 1) * N // 2 + 1) // 2
 
 def ok(x):
     B = [0] * (2 * N + 1)
-    res, cum, cur = 0, 0, 0
+    (res, cum, cur) = (0, 0, 0)
     B[0] += 1
     for a in A:
         if a >= x:

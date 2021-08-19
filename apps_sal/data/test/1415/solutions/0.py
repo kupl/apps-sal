@@ -1,4 +1,4 @@
-a, b, x, y = map(int, input().split())
+(a, b, x, y) = map(int, input().split())
 s = input()
 p = []
 for i in range(a + 1):

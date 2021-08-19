@@ -16,6 +16,6 @@ for i in range(n - 1, 0, -1):
     good = False
     break
 if good:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

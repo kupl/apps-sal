@@ -1,7 +1,5 @@
 import sys
 input = sys.stdin.readline
-
-
 n = int(input())
 sieve = [0] * (n + 1)
 c = 1

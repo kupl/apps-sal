@@ -7,33 +7,23 @@ for i in a:
         d[i] = 1
     else:
         d[i] += 1
-
 ans = max(ans, 2)
-
 for i in range(n):
     for j in range(n):
-
-        if(i != j and (a[i] != 0 or a[j] != 0)):
-
+        if i != j and (a[i] != 0 or a[j] != 0):
             first = a[i]
             second = a[j]
             temp = [first, second]
             third = first + second
-
-            while(True):
-
-                if abs(third) > int(1e9):
+            while True:
+                if abs(third) > int(1000000000.0):
                     break
-
                 if third not in d:
                     break
-
                 temp.append(third)
-
                 first = second
                 second = third
                 third = first + second
-
             count = 0
             f = 1
             for k in range(len(temp)):
@@ -49,6 +39,4 @@ for i in range(n):
                 for k in temp:
                     d[k] += 1
             ans = max(ans, count)
-
-
 print(ans)

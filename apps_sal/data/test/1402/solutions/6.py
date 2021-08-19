@@ -12,7 +12,7 @@ for i in range(n):
         ans *= 10
         ans %= mod
 for i in range(n):
-    if s1[i] != '?' and s2[i] != '?' and s1[i] > s2[i]:
+    if s1[i] != '?' and s2[i] != '?' and (s1[i] > s2[i]):
         break
     if s1[i] == '?' and s2[i] == '?':
         tc *= 55
@@ -28,7 +28,7 @@ for i in range(n):
         ans = (ans + mod) % mod
 tc = 1
 for i in range(n):
-    if s1[i] != '?' and s2[i] != '?' and s2[i] > s1[i]:
+    if s1[i] != '?' and s2[i] != '?' and (s2[i] > s1[i]):
         break
     if s1[i] == '?' and s2[i] == '?':
         tc *= 55
@@ -44,7 +44,7 @@ for i in range(n):
         ans = (ans + mod) % mod
 tc = 1
 for i in range(n):
-    if s1[i] != '?' and s2[i] != '?' and s1[i] != s2[i]:
+    if s1[i] != '?' and s2[i] != '?' and (s1[i] != s2[i]):
         break
     if s1[i] == '?' and s2[i] == '?':
         tc *= 10

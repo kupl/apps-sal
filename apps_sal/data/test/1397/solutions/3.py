@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 dx = []
 dy = []
 for i in range(0, m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     dx.append(a - 1)
     dy.append(b - 1)
 c = []

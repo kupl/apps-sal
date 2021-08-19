@@ -1,7 +1,7 @@
 n = int(input())
 d = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     d.append([a, b])
 d.sort()
 m = [c[0] for c in d]

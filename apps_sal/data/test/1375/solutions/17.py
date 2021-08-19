@@ -17,7 +17,6 @@ for i in range(1, n):
     else:
         c[i] = c[i - 1]
 ans = 0
-
 for i in range(2, n):
     if d[i] * 3 == s:
         ans = ans + c[i - 2]

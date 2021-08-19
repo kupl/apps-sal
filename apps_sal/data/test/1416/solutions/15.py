@@ -1,7 +1,7 @@
 def read_data():
-    n, w = map(int, input().split())
+    (n, w) = map(int, input().split())
     As = list(map(int, input().split()))
-    return n, w, As
+    return (n, w, As)
 
 
 def solve(n, w, As):
@@ -14,5 +14,5 @@ def solve(n, w, As):
         return min(cap_boys * 1.5 * n, w)
 
 
-n, w, As = read_data()
+(n, w, As) = read_data()
 print(solve(n, w, As))

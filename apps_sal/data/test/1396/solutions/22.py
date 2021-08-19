@@ -1,4 +1,3 @@
-
 import re
 import inspect
 from copy import copy
@@ -31,9 +30,9 @@ def prnt(*args, override=False):
 
 
 def remove_split(l, i, j):
-    prnt("Removed {} thru {}, {}".format(i, j, l[i:j]))
+    prnt('Removed {} thru {}, {}'.format(i, j, l[i:j]))
     new_l = l[:i] + l[j:]
-    prnt("New List: {}".format(new_l))
+    prnt('New List: {}'.format(new_l))
     return new_l
 
 
@@ -41,22 +40,20 @@ def degrade(l, initial_size):
     i = 0
     color = 0
     removed = False
-    for j, x in enumerate(l):
+    for (j, x) in enumerate(l):
         if not color:
             color = x
             i = j
-
         if color != x:
             if j - i >= 3:
                 l = remove_split(l, i, j)
                 removed = True
             color = x
             i = j
-        if j == len(l) - 1 and color == x and j - i >= 2:
+        if j == len(l) - 1 and color == x and (j - i >= 2):
             prnt('removing {} {}'.format(i, j))
             l = remove_split(l, i, j + 1)
             removed = True
-
     if removed:
         prnt(l)
         return degrade(l, initial_size)
@@ -67,7 +64,6 @@ def degrade(l, initial_size):
 def __starting_point():
     (num, kolors, xolor) = rints()
     balls = rints()
-
     results = []
     for i in range(len(balls)):
         l = copy(balls)

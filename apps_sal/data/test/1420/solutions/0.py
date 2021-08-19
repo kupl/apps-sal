@@ -1,7 +1,6 @@
-n, l = list(map(int, input().split()))
+(n, l) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
-
 result = 0
 for i in range(1, n):
     result = max(result, (a[i] - a[i - 1]) / 2)

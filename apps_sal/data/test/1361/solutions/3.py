@@ -8,5 +8,4 @@ for i in range(1, len(l) - 1):
     for j in range(len(li) - 1):
         m = max(li[j + 1] - li[j], m)
     ans = min(m, ans)
-
 print(ans)

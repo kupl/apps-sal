@@ -1,5 +1,5 @@
 import math
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 a = sorted(list(map(int, input().split())), reverse=True)
 dic = {}
 for i in range(N):
@@ -10,7 +10,7 @@ for i in range(N):
         dic[v] += 1
 tmp = 0
 num_used = {}
-m = 10**18
+m = 10 ** 18
 M = -1
 for i in range(A):
     v = a[i]

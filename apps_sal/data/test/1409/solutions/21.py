@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 k = 6 - k
 l = list(map(int, input().split()))
 c = 0

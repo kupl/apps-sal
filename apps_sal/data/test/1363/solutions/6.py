@@ -1,4 +1,4 @@
-g, d, f = map(int, input().split())
+(g, d, f) = map(int, input().split())
 gg = list(map(int, input().split()))
 dd = list(map(int, input().split()))
 ff = list(map(int, input().split()))
@@ -25,9 +25,7 @@ def get_kolvo(left, right, lst):
             r = m
         else:
             l = m
-
     qr = l
-
     return qr - ql + 1
 
 

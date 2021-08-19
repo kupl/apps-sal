@@ -2,7 +2,7 @@ from collections import Counter
 
 
 def go(a, b, counter):
-    res, c = 0, a + b
+    (res, c) = (0, a + b)
     if counter.get(c) and counter[c] > 0:
         counter[c] -= 1
         res = max(res, go(b, c, counter) + 1)

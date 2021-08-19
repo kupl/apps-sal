@@ -12,4 +12,4 @@ for i in range(2, n + 1):
         ans[i * t] = newcnt
         t += 1
     newcnt += 1
-print(*(ans[2:n + 1]))
+print(*ans[2:n + 1])
