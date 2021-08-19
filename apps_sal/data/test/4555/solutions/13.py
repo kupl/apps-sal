@@ -2,8 +2,7 @@ lst = input().split()
 A = int(lst[0])
 B = int(lst[1])
 K = int(lst[2])
-
-if (B - A + 1) <= 2 * K:
+if B - A + 1 <= 2 * K:
     for n in list(range(A, B + 1)):
         print(n)
 else:

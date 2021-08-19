@@ -6,7 +6,6 @@ for i in range(int(input())):
         arr2.append(a)
     else:
         arr.append(a)
-
 arr.sort()
 j = sum(arr) + sum(arr2)
 if j % 10 != 0:

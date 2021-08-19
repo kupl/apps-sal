@@ -1,4 +1,4 @@
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 if a > x:
     print('NO')
 elif x - a < b:

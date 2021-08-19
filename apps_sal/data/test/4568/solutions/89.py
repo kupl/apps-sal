@@ -12,4 +12,4 @@ for i in range(len(s) - 1):
             a += 1
             kaburu.append(zenhan[j])
     shurui.append(a)
-print((max(shurui)))
+print(max(shurui))

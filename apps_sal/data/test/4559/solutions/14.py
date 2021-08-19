@@ -6,7 +6,7 @@ if 0 in a:
 else:
     for i in range(N):
         sum_ *= a[i]
-        if sum_ > 10**18:
+        if sum_ > 10 ** 18:
             sum_ = -1
             break
     print(sum_)

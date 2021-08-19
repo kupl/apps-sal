@@ -1,5 +1,4 @@
-a, b, k = map(int, input().split())
-
+(a, b, k) = map(int, input().split())
 ans = set()
 r = range(a, b + 1)
 for i in range(min(k, len(r))):

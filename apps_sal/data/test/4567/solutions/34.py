@@ -2,7 +2,6 @@ N = int(input())
 S = []
 for _ in range(N):
     S.append(int(input()))
-
 s = sum(S)
 if s % 10 != 0:
     print(s)

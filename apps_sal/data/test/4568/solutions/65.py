@@ -1,8 +1,6 @@
 n = int(input())
 s = input()
-
 max_count = 0
-
 for i in range(1, n):
     s1 = ''.join(set(s[:i]))
     s2 = ''.join(set(s[i:]))

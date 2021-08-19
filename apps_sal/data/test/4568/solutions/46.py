@@ -1,7 +1,7 @@
 N = int(input())
 S = input()
 ans = 0
-s = "abcdefghijklmnopqrstuvwxyz"
+s = 'abcdefghijklmnopqrstuvwxyz'
 for i in range(1, N):
     T1 = S[0:i]
     T2 = S[i:N]

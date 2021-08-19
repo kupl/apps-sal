@@ -1,14 +1,12 @@
 n = int(input())
 s = input()
-
 dp_w = [0]
 dp_e = [0]
-
 for i in range(n):
     if i != 0:
         dp_w.append(dp_w[-1])
         dp_e.append(dp_e[-1])
-    if s[i] == "W":
+    if s[i] == 'W':
         dp_w[-1] += 1
     else:
         dp_e[-1] += 1

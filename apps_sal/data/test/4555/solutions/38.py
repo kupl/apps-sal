@@ -1,4 +1,4 @@
-A, B, K = list(map(int, input().split()))
+(A, B, K) = list(map(int, input().split()))
 if A + K - 1 >= B - K + 1:
     for i in range(A, B + 1):
         print(i)

@@ -1,11 +1,8 @@
 N = int(input())
 s = []
-
 for i in range(N):
     s.append(int(input()))
-
 S = sum(s)
-
 if S % 10 != 0:
     print(S)
 else:

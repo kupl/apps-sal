@@ -2,7 +2,6 @@ def calc_intersection():
     n = int(input())
     s = input()
     list_intersection = []
-
     for i in range(1, n):
         a = set(s[:i])
         b = set(s[i:])

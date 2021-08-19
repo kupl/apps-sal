@@ -1,4 +1,4 @@
-A, B, K = map(int, input().split())
+(A, B, K) = map(int, input().split())
 if K >= (B - A + 1) / 2:
     for i in range(A, B + 1):
         print(i)

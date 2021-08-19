@@ -1,5 +1,5 @@
-A, B, X = map(int, input().split())
-s = "YES"
+(A, B, X) = map(int, input().split())
+s = 'YES'
 if A > X or A + B < X:
-    s = "NO"
+    s = 'NO'
 print(s)

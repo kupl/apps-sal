@@ -3,14 +3,12 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    a, b, x = Input()
-    print("YES"
-          if a <= x <= (a + b)
-          else "NO")
+    (a, b, x) = Input()
+    print('YES' if a <= x <= a + b else 'NO')
 
 
 main()

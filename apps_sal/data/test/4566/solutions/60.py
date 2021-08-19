@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 road = [list(map(int, input().split())) for _ in range(m)]
 cnt = [0] * n
 for i in road:

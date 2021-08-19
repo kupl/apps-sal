@@ -1,5 +1,4 @@
-x, a, b = map(int, input().split())
-
+(x, a, b) = map(int, input().split())
 tmp = b - a
 if tmp <= 0:
     print('delicious')

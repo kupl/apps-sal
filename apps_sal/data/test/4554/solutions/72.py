@@ -1,4 +1,4 @@
-w, a, b = list(map(int, input().split()))
+(w, a, b) = list(map(int, input().split()))
 ans = 0
 if a + w < b:
     ans = b - (a + w)

@@ -1,4 +1,4 @@
-w, a, b = map(int, input().split())
+(w, a, b) = map(int, input().split())
 A = [i for i in range(a, a + w + 1)]
 B = [i for i in range(b, b + w + 1)]
 if a in B or b in A:

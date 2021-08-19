@@ -1,9 +1,7 @@
 n = int(input())
 s = input()
 s = list(s)
-
 x = []
-
 for i in range(n):
     a = s[:i]
     b = s[i:]
@@ -18,5 +16,4 @@ for i in range(n):
                 cnt += 1
                 break
     x.append(cnt)
-
 print(max(x))

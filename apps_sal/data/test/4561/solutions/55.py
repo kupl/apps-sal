@@ -1,4 +1,4 @@
-x, a, b = list(map(int, input().split()))
+(x, a, b) = list(map(int, input().split()))
 if a >= b:
     print('delicious')
 elif x + a >= b:

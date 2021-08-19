@@ -9,7 +9,6 @@ for i in range(n):
         others.append(s)
 tens.sort(reverse=True)
 others.sort(reverse=True)
-
 score = sum(tens) + sum(others)
 if score % 10 == 0:
     if len(others) != 0:

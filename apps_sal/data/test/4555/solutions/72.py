@@ -7,6 +7,6 @@ if B - A + 1 <= K * 2:
         print(i)
 else:
     for i in range(K):
-        print((A + i))
+        print(A + i)
     for i in range(K):
-        print((B - K + 1 + i))
+        print(B - K + 1 + i)

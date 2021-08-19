@@ -1,8 +1,6 @@
 N = int(input())
 S = input()
-
 e_all = S.count('E')
-
 w_cnt = 0
 e_cnt = 0
 ans = float('inf')
@@ -13,5 +11,4 @@ for i in range(N):
     else:
         e_cnt += 1
         ans = min(ans, w_cnt + e_all - e_cnt)
-
 print(ans)

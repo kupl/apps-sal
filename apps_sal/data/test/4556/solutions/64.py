@@ -1,2 +1,2 @@
 s = list(input().split())
-print("A" + s[1][0] + "C")
+print('A' + s[1][0] + 'C')

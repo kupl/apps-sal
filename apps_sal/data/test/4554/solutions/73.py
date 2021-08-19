@@ -1,4 +1,4 @@
-w, a, b = map(int, input().split())
+(w, a, b) = map(int, input().split())
 if a <= b:
     print(max(0, b - (a + w)))
 else:

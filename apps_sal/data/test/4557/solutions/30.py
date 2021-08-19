@@ -1,11 +1,11 @@
-a, b, c = input().split()
+(a, b, c) = input().split()
 a = int(a)
 b = int(b)
 c = int(c)
 if a + b >= c:
     if a <= c:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 else:
-    print("NO")
+    print('NO')

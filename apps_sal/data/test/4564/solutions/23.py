@@ -6,5 +6,4 @@ for i in range(len(S)):
         check = False
         break
     ls.append(S[i])
-
-print("yes" if check else "no")
+print('yes' if check else 'no')

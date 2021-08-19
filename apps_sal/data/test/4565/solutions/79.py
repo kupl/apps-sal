@@ -8,12 +8,10 @@ def main():
         if ss[i - 1] == 'W':
             west_sum += 1
         num_sum[i] += west_sum
-
     for i in range(n - 2, -1, -1):
         if ss[i + 1] == 'E':
             east_sum += 1
         num_sum[i] += east_sum
-
     ans = min(num_sum)
     print(ans)
 

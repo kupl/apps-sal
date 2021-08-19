@@ -1,10 +1,10 @@
 def resolve():
-    a, b, x = map(int, input().split())
-    ans = ""
+    (a, b, x) = map(int, input().split())
+    ans = ''
     if a <= x and x <= a + b:
-        ans = "YES"
+        ans = 'YES'
     else:
-        ans = "NO"
+        ans = 'NO'
     print(ans)
 
 

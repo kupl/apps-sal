@@ -1,4 +1,4 @@
-w, a, b = map(int, input().split())
+(w, a, b) = map(int, input().split())
 aw = a + w
 bw = b + w
 if a == bw or b == aw or a == b:

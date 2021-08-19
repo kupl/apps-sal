@@ -1,9 +1,9 @@
 N = int(input())
 S = input()
-e = S.count("E")
+e = S.count('E')
 cnt = e
 for i in S:
-    if i == "E":
+    if i == 'E':
         cnt -= 1
     else:
         cnt += 1

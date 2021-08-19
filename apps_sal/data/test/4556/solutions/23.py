@@ -1,4 +1,4 @@
-a, b, c = input().split()
+(a, b, c) = input().split()
 x = b[0]
 A = []
 A.append('A')

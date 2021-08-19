@@ -1,6 +1,5 @@
 N = int(input())
 S = input()
-
 EP = [0] * (N + 1)
 WP = [0] * (N + 1)
 CP = [0] * N

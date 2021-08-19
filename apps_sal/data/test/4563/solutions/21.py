@@ -3,7 +3,6 @@ N = int(input())
 ls = []
 for i in range(N):
     ls.append(list(map(int, input().split())))
-
 T = 1
 A = 1
 for i in range(N):

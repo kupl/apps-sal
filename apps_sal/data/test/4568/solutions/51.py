@@ -8,5 +8,4 @@ for i in range(1, n):
             l.append(j)
     l = set(l)
     cnt = max(cnt, len(l))
-
 print(cnt)

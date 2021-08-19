@@ -2,6 +2,6 @@ n = int(input())
 a = int(input())
 n -= n // 500 * 500
 if n <= a:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

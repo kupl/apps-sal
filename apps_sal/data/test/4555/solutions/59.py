@@ -1,4 +1,4 @@
-a, b, k = map(int, input().split())
+(a, b, k) = map(int, input().split())
 ans = []
 for i in range(k):
     if a <= a + i <= b:

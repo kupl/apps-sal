@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 city = [0] * N
 for i in range(M):
     road = list(map(int, input().split()))

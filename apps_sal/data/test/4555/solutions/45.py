@@ -1,5 +1,4 @@
-a, b, k = list(map(int, input().split()))
-
+(a, b, k) = list(map(int, input().split()))
 if b - a <= k:
     for i in range(a, b + 1):
         print(i)

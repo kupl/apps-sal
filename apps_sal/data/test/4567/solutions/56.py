@@ -2,7 +2,6 @@ N = int(input())
 s = []
 for i in range(N):
     s.append(int(input()))
-
 s.sort()
 ans = sum(s)
 if ans % 10 == 0:

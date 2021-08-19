@@ -1,3 +1,3 @@
 import math
 N = int(input())
-print((int(math.sqrt(N)))**2)
+print(int(math.sqrt(N)) ** 2)

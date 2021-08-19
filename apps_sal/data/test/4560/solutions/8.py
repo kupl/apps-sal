@@ -1,7 +1,6 @@
 n = int(input())
 a = int(input())
-
 if a >= n % 500:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

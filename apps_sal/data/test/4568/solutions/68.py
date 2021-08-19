@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 result = 0
 for i in range(1, n):
     x = s[:i]

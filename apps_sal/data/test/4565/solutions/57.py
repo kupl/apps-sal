@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 count = s.count('E')
 ans = s.count('E')
 for i in range(len(s)):

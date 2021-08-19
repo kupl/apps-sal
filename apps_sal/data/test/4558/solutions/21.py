@@ -1,5 +1,5 @@
 def main():
-    X, t = list(map(int, input().split()))
+    (X, t) = list(map(int, input().split()))
     tmp = X - t
     if tmp < 0:
         return 0
@@ -7,4 +7,4 @@ def main():
         return tmp
 
 
-print((main()))
+print(main())

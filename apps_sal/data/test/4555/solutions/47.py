@@ -1,4 +1,4 @@
-a, b, k = map(int, input().split())
+(a, b, k) = map(int, input().split())
 x = []
 y = []
 if b - a < k:

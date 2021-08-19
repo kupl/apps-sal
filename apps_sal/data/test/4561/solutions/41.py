@@ -1,4 +1,4 @@
-x, a, b = map(int, input().split())
+(x, a, b) = map(int, input().split())
 y = b - a
 if y > x:
     print('dangerous')

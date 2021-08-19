@@ -9,4 +9,4 @@ for i in range(1, n):
         if word in after_falf:
             count += 1
     ans.append(count)
-print((max(ans)))
+print(max(ans))

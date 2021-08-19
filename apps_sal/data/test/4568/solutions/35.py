@@ -1,7 +1,6 @@
 n = int(input())
 s = input()
 ans = 0
-
 for i in range(1, len(s)):
     s1 = s[:i]
     s2 = s[i:]

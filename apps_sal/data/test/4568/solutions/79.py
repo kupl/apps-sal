@@ -1,6 +1,6 @@
 n = int(input())
 a = input()
-dic = "abcdefghijklmnopqrstuvwxyz"
+dic = 'abcdefghijklmnopqrstuvwxyz'
 maxcount = 0
 for i in range(n):
     count = 0

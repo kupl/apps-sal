@@ -1,11 +1,9 @@
 S = input()
-ans = ""
-
+ans = ''
 for s in S:
     if S.count(s) > 1:
-        ans = "no"
+        ans = 'no'
         break
     else:
-        ans = "yes"
-
+        ans = 'yes'
 print(ans)

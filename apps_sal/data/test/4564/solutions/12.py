@@ -1,7 +1,7 @@
 S = input()
 for c in S:
     if S.count(c) > 1:
-        print("no")
+        print('no')
         break
 else:
-    print("yes")
+    print('yes')
