@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, n):
         self.p = [i for i in range(n)]
 
@@ -8,7 +9,7 @@ class UF:
         return self.p[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px == py:
             return False
         self.p[py] = px
@@ -16,10 +17,11 @@ class UF:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        A, B = set(), set()
-        rmA, rmB = 0, 0
-        for t, u, v in edges:
+        (A, B) = (set(), set())
+        (rmA, rmB) = (0, 0)
+        for (t, u, v) in edges:
             if t == 1:
                 if (-3, u, v) in A:
                     rmA += 1
@@ -39,30 +41,25 @@ class Solution:
                     B.remove((-2, u, v))
                 A.add((-3, u, v))
                 B.add((-3, u, v))
-        # print(rmA, rmB, A, B)
         common = set()
         ufa = UF(n + 1)
-        for t, u, v in sorted(A):
+        for (t, u, v) in sorted(A):
             if not ufa.union(u, v):
                 if t == -1:
                     rmA += 1
                 else:
                     common.add((u, v))
-
         for i in range(1, n + 1):
             if ufa.find(i) != ufa.find(1):
                 return -1
-
         ufb = UF(n + 1)
-        for t, u, v in sorted(B):
+        for (t, u, v) in sorted(B):
             if not ufb.union(u, v):
                 if t == -2:
                     rmB += 1
                 else:
                     common.add((u, v))
-
         for i in range(1, n + 1):
             if ufb.find(i) != ufb.find(1):
                 return -1
-
         return rmA + rmB + len(common)

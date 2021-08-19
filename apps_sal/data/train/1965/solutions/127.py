@@ -1,4 +1,3 @@
-
 class DSU:
 
     def __init__(self, a):
@@ -16,46 +15,27 @@ class DSU:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        # well its just two graphs, dude
-
-        # MST would only require n-1 edges
-        # this is ALWAYS TRUE
-
-        # just process all of the type 3 first
-
-        # because they will increase group size of both A and B
-
-        # and then you can just do A and B separately
-
-        # again, operate on both graphs
-
         dsu1 = DSU(range(1, n + 1))
         dsu2 = DSU(range(1, n + 1))
-
         both = [edge[1:] for edge in edges if edge[0] == 3]
         alice = [edge[1:] for edge in edges if edge[0] == 1]
         bob = [edge[1:] for edge in edges if edge[0] == 2]
-
         used = 0
-
-        for u, v in both:
+        for (u, v) in both:
             if dsu1.find(u) != dsu1.find(v):
                 dsu1.merge(u, v)
                 dsu2.merge(u, v)
                 used += 1
-
-        for u, v in alice:
+        for (u, v) in alice:
             if dsu1.find(u) != dsu1.find(v):
                 dsu1.merge(u, v)
                 used += 1
-
-        for u, v in bob:
+        for (u, v) in bob:
             if dsu2.find(u) != dsu2.find(v):
                 dsu2.merge(u, v)
                 used += 1
-
-        if len(set(dsu1.find(u) for u in dsu1.par)) != 1 or len(set(dsu2.find(u) for u in dsu2.par)) != 1:
+        if len(set((dsu1.find(u) for u in dsu1.par))) != 1 or len(set((dsu2.find(u) for u in dsu2.par))) != 1:
             return -1
-
         return len(edges) - used

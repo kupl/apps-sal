@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.size = [1] * n
@@ -8,7 +9,6 @@ class UF:
 
     def find(self, a):
         while self.parent[a] != a:
-            # path compression
             self.parent[a] = self.parent[self.parent[a]]
             a = self.parent[a]
         return a
@@ -18,8 +18,6 @@ class UF:
         p2 = self.find(b)
         if self.isConnected(p1, p2):
             return
-
-        # optimization - try to make the new tree balanced
         if self.size[p1] < self.size[p2]:
             self.parent[p1] = p2
             self.size[p2] += self.size[p1]
@@ -29,13 +27,13 @@ class UF:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         uf_1 = UF(n)
         uf_2 = UF(n)
         res = 0
         edges = sorted(edges, key=lambda edges: edges[0], reverse=True)
-
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             if t == 3:
                 if uf_1.isConnected(a - 1, b - 1) and uf_2.isConnected(a - 1, b - 1):
                     res += 1
@@ -47,12 +45,10 @@ class Solution:
                     res += 1
                 else:
                     uf_1.union(a - 1, b - 1)
+            elif uf_2.isConnected(a - 1, b - 1):
+                res += 1
             else:
-                if uf_2.isConnected(a - 1, b - 1):
-                    res += 1
-                else:
-                    uf_2.union(a - 1, b - 1)
-
+                uf_2.union(a - 1, b - 1)
         return res if self.isValid(uf_1, n) and self.isValid(uf_2, n) else -1
 
     def isValid(self, uf, n):

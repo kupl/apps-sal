@@ -1,17 +1,25 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
 import math
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -35,8 +43,6 @@ def LSR(n):
 sys.setrecursionlimit(1000000)
 mod = 1000000007
 
-# A
-
 
 def A():
     n = I()
@@ -46,7 +52,7 @@ def A():
     p = 0
     ans = 0
     while p < n:
-        while p < n and not f[p]:
+        while p < n and (not f[p]):
             p += 1
         if p == n:
             break
@@ -57,8 +63,6 @@ def A():
     print(ans)
     return
 
-# B
-
 
 def B():
     n = I()
@@ -67,7 +71,7 @@ def B():
     ans = sum(s)
     for t in range(30000):
         for i in range(n):
-            ai, bi = g[i]
+            (ai, bi) = g[i]
             if t < bi:
                 continue
             if (t - bi) % ai == 0:
@@ -77,8 +81,6 @@ def B():
             ans = su
     print(ans)
     return
-
-# C
 
 
 def C():
@@ -101,16 +103,15 @@ def C():
         p.sort()
         if p == q:
             for i in ans:
-                print(i, end="")
+                print(i, end='')
             print()
         else:
-            print("-")
+            print('-')
     return
-
-# D
 
 
 def D():
+
     def root(x):
         if x == par[x]:
             return x
@@ -126,12 +127,11 @@ def D():
             par[y] = x
             if rank[x] == rank[y]:
                 rank[x] += 1
-
-    n, k = LI()
+    (n, k) = LI()
     par = [i for i in range(n)]
     rank = [0] * n
     for i in range(k):
-        x, y = LI()
+        (x, y) = LI()
         x -= 1
         y -= 1
         if root(x) != root(y):
@@ -146,13 +146,11 @@ def D():
     print(k - ans)
     return
 
-# E
-
 
 def E():
     t = I()
     for _ in range(t):
-        n, m = LI()
+        (n, m) = LI()
         s = LIR(n)
         s = [[s[i][j] for i in range(n)] for j in range(m)]
         if n <= m:
@@ -177,17 +175,13 @@ def E():
             print(ans)
     return
 
-# F
-
 
 def F():
-
     return
-
-# G
 
 
 def G():
+
     def root(x):
         if x == par[x]:
             return x
@@ -203,11 +197,10 @@ def G():
             par[y] = x
             if rank[x] == rank[y]:
                 rank[x] += 1
-
     m = 200000
     par = [i for i in range(m)]
     rank = [0] * m
-    n, q = LI()
+    (n, q) = LI()
     a = LI()
     for i in range(n):
         a[i] -= 1
@@ -229,12 +222,12 @@ def G():
             f[ai] = 1
     f = [0] * n
     for i in lis:
-        li, ri = l[i], r[i]
+        (li, ri) = (l[i], r[i])
         f[li] += 1
         f[ri] -= 1
     for i in range(n - 1):
         if f[i] > 0:
-            x, y = a[i], a[i + 1]
+            (x, y) = (a[i], a[i + 1])
             if root(x) != root(y):
                 unite(x, y)
         f[i + 1] += f[i]
@@ -247,14 +240,9 @@ def G():
     print(ans)
     return
 
-# H
-
 
 def H():
-
     return
-
-# Solve
 
 
 def __starting_point():

@@ -2,17 +2,13 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        # 1、移除type3的重复边
-        # 2、检查alice和bob的可遍历性
-        # 3、检查type3组成的环
-        # 4、检查alice type1组成的环
-        # 5、检查bob type2组成的环
         count = 0
-        set1, set2, set3 = set(), set(), set()
-        adj_a, adj_b, adj_3 = defaultdict(set), defaultdict(set), defaultdict(set)
+        (set1, set2, set3) = (set(), set(), set())
+        (adj_a, adj_b, adj_3) = (defaultdict(set), defaultdict(set), defaultdict(set))
         for edge in edges:
-            tp, i, j = edge
+            (tp, i, j) = edge
             if tp == 3:
                 set3.add((i, j))
                 adj_3[i].add(j)
@@ -21,11 +17,10 @@ class Solution:
                 adj_a[j].add(i)
                 adj_b[i].add(j)
                 adj_b[j].add(i)
-
         for edge in edges:
-            tp, i, j = edge
+            (tp, i, j) = edge
             if tp != 3:
-                if ((i, j) in set3 or (j, i) in set3):
+                if (i, j) in set3 or (j, i) in set3:
                     count += 1
                 elif tp == 1:
                     set1.add((i, j))
@@ -49,10 +44,8 @@ class Solution:
                 return False
             else:
                 return True
-
         if not is_traversable(adj_a) or not is_traversable(adj_b):
             return -1
-
         dup_3 = 0
         visited = set()
         for edge in set3:
@@ -60,7 +53,7 @@ class Solution:
                 continue
             node_set = set()
             edge_set = set()
-            i, j = edge
+            (i, j) = edge
             queue = deque([i])
             while queue:
                 root = queue.popleft()
@@ -72,10 +65,8 @@ class Solution:
                             edge_set.add((root, k))
                         else:
                             edge_set.add((k, root))
-
             dup_3 += len(edge_set) - len(node_set) + 1
             for v_edge in edge_set:
                 visited.add(v_edge)
-
         type3_count = len(set3) - dup_3
         return count + len(set1) + 2 * type3_count - n + 1 + len(set2) - n + 1 + dup_3

@@ -1,16 +1,16 @@
 def value(a, b, c):
-    if(c == '&'):
+    if c == '&':
         return a & b
-    elif(c == '^'):
+    elif c == '^':
         return a ^ b
-    elif(c == '|'):
+    elif c == '|':
         return a | b
 
 
 def break_rules(n, operator):
-    if(len(n) == 1):
+    if len(n) == 1:
         return n
-    elif(len(n) == 2):
+    elif len(n) == 2:
         return [value(n[0], n[1], operator[0])]
     else:
         cont_ans = []
@@ -34,14 +34,13 @@ while t > 0:
     exp = input()
     temp = ''
     for i in range(len(exp)):
-        if(ord(exp[i]) > 47 and ord(exp[i]) < 58):
+        if ord(exp[i]) > 47 and ord(exp[i]) < 58:
             temp = temp + exp[i]
         else:
             num.append(int(temp))
             temp = ''
             operator.append(exp[i])
-        if(i == len(exp) - 1):
+        if i == len(exp) - 1:
             num.append(int(temp))
     t -= 1
-    # print(num,operator)
     print(max(break_rules(num, operator)))

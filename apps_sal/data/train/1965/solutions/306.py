@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
 
         def find(x):
@@ -7,39 +8,32 @@ class Solution:
             return graph[x]
 
         def union(x, y):
-            px, py = find(x), find(y)
+            (px, py) = (find(x), find(y))
             if px != py:
                 graph[px] = py
                 return 1
             return 0
-
         graph = [i for i in range(n + 1)]
         res = alice = bob = 0
-        for t, i, j in edges:
+        for (t, i, j) in edges:
             if t == 3:
                 if union(i, j):
-                    # get one more edge
                     alice += 1
                     bob += 1
                 else:
-                    # i, j has been connected, this one is not necessary
                     res += 1
-
         tmpG = graph[:]
-        for t, i, j in edges:
+        for (t, i, j) in edges:
             if t == 1:
                 if union(i, j):
                     alice += 1
                 else:
                     res += 1
-
         graph = tmpG
-
-        for t, i, j in edges:
+        for (t, i, j) in edges:
             if t == 2:
                 if union(i, j):
                     bob += 1
                 else:
                     res += 1
-
         return res if alice == bob == n - 1 else -1

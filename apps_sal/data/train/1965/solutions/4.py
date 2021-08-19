@@ -1,6 +1,7 @@
 class UF:
+
     def __init__(self, n: int):
-        self.p, self.e = list(range(n)), 0
+        (self.p, self.e) = (list(range(n)), 0)
 
     def find(self, x: int):
         if x != self.p[x]:
@@ -8,7 +9,7 @@ class UF:
         return self.p[x]
 
     def union(self, x: int, y: int):
-        rx, ry = self.find(x), self.find(y)
+        (rx, ry) = (self.find(x), self.find(y))
         if rx == ry:
             return 1
         self.p[rx] = ry
@@ -17,17 +18,18 @@ class UF:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        A, B = UF(n + 1), UF(n + 1)
+        (A, B) = (UF(n + 1), UF(n + 1))
         ans = 0
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t != 3:
                 continue
-            ans += A.union(u, v)  # return 1 if connected else 0
+            ans += A.union(u, v)
             B.union(u, v)
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 3:
                 continue
             d = A if t == 1 else B
             ans += d.union(u, v)
-        return ans if A.e == B.e == n - 1 else -1  # merge times equal to edges
+        return ans if A.e == B.e == n - 1 else -1
