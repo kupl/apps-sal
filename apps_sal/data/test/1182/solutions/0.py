@@ -1,8 +1,8 @@
 dhuang = 0
-a, b, c, d = list(map(int, input().split(' ')))
+(a, b, c, d) = list(map(int, input().split(' ')))
 huang = [['*'] * b for _ in range(a)]
 for i in range(c):
-    x, y = list(map(int, input().split(' ')))
+    (x, y) = list(map(int, input().split(' ')))
     huang[x - 1][y - 1] = '#'
 for i in range(a):
     for j in range(b):

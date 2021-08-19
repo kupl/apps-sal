@@ -1,12 +1,8 @@
-# You lost the game.
-r, c, n, k = list(map(int, input().split()))
+(r, c, n, k) = list(map(int, input().split()))
 V = [list(map(int, input().split())) for _ in range(n)]
-
 G = [[0 for _ in range(c)] for _ in range(r)]
 for i in range(n):
     G[V[i][0] - 1][V[i][1] - 1] = 1
-
-
 T = [[0 for _ in range(c)] for _ in range(r)]
 T[0][0] = G[0][0]
 for i in range(1, r):

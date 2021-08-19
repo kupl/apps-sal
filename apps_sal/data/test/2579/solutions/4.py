@@ -1,17 +1,16 @@
-# IAWT
-l, r, x, y, k = list(map(int, input().split()))
+(l, r, x, y, k) = list(map(int, input().split()))
 
 
 def f():
     for i in range(x, y + 1):
         n = i * k
         if l <= n <= r:
-            print("YES")
+            print('YES')
             return
         if n > r:
-            print("NO")
+            print('NO')
             return
-    print("NO")
+    print('NO')
     return
 
 

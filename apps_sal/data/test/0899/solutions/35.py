@@ -9,13 +9,12 @@ sys.setrecursionlimit(20000000)
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     S = []
-
-    d = [[float("inf")] * N for _ in range(N)]
+    d = [[float('inf')] * N for _ in range(N)]
     L = []
     for i in range(M):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         d[a - 1][b - 1] = c
         d[b - 1][a - 1] = c
         if a < b:
@@ -27,7 +26,6 @@ def main():
     L = set(L)
 
     def warshall_floyd(d):
-        # d[i][j]: iからjへの最短距離
         for k in range(N):
             for i in range(N):
                 for j in range(N):
@@ -36,13 +34,11 @@ def main():
                         if i < j:
                             if (i, j) in L:
                                 S.append((i, j))
-                        else:
-                            if (j, i) in L:
-                                S.append((j, i))
+                        elif (j, i) in L:
+                            S.append((j, i))
         return d
-
     warshall_floyd(d)
-    print((len(set(S))))
+    print(len(set(S)))
 
 
 def __starting_point():

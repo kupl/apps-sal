@@ -1,5 +1,4 @@
-# kitten
-n, m, t = list(map(int, input().split()))
+(n, m, t) = list(map(int, input().split()))
 c = [0] * m
 r = 0
 for i in range(n):

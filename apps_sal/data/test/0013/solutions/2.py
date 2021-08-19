@@ -6,11 +6,12 @@ from copy import copy, deepcopy
 
 
 class Solver:
+
     def __init__(self):
         pass
 
     def solve(self):
-        n, k = list(map(int, input().split()))
+        (n, k) = list(map(int, input().split()))
         q = list([int(x) - 1 for x in input().split()])
         used = [False] * n
         for e in q:
@@ -46,7 +47,6 @@ class Solver:
                 degs[e] -= 1
                 if degs[e] == 0:
                     nq.append(e)
-        # print(nq)
         if len(q) != len(nq):
             print(-1)
             return

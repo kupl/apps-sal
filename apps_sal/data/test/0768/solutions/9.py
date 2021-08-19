@@ -1,5 +1,4 @@
-# kitten
-f, y, t = map(int, input().split())
+(f, y, t) = map(int, input().split())
 cnt = [0] * y
 for i in range(0, f):
     s = input()
