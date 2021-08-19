@@ -1,10 +1,9 @@
 class Solution:
-    def numSub(self, s: str) -> int:
-        # 10/6/20
-        dic = collections.defaultdict(int)
 
+    def numSub(self, s: str) -> int:
+        dic = collections.defaultdict(int)
         n = len(s)
-        left, right = 0, 0
+        (left, right) = (0, 0)
         while left < n:
             if s[left] == '1':
                 right = left
@@ -14,8 +13,7 @@ class Solution:
                 left = right
             else:
                 left += 1
-
         total = 0
         for ones in dic:
-            total = (total + (ones * (ones + 1)) // 2 * dic[ones]) % (10**9 + 7)
+            total = (total + ones * (ones + 1) // 2 * dic[ones]) % (10 ** 9 + 7)
         return total

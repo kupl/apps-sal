@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         self.amount = amount
         self.coins = coins
@@ -15,14 +16,10 @@ class Solution:
             return float('inf')
         if i == 0:
             return 0
-
         if self.memo[i] >= 0:
             return self.memo[i]
-
         mini = float('inf')
         for coin in self.coins:
             mini = min(mini, self.coindp(i - coin) + 1)
-
         self.memo[i] = mini
-        # print(self.memo)
         return self.memo[i]

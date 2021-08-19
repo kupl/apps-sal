@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = list(map(int, input().split()))
     a = max(l)
     p = a
@@ -26,7 +25,7 @@ for _ in range(int(input())):
             j += 1
     for i in range(len(x)):
         if x[i] > y[i]:
-            print(x[i], end=" ")
+            print(x[i], end=' ')
         else:
-            print(y[i], end=" ")
+            print(y[i], end=' ')
     print()

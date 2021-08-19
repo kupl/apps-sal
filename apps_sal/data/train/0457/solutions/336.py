@@ -4,10 +4,8 @@ class Solution:
     def numCoins(self, coins, amount):
         if amount in self.memory:
             return self.memory[amount]
-
         if amount == 0:
             return 0
-
         ncarr = []
         carr = []
         for c in coins:
@@ -15,10 +13,8 @@ class Solution:
                 nnc = self.numCoins(coins, amount - c)
                 ncarr.append(nnc + 1)
                 carr.append(c)
-
         if len(ncarr) > 0:
             nc = min(ncarr)
-            #accum += carr[ncarr.index(nc)]
             self.memory[amount] = nc
             return nc
         else:
@@ -29,5 +25,4 @@ class Solution:
         nc = self.numCoins(coins, amount)
         if nc == float('inf'):
             return -1
-
         return nc

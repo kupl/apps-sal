@@ -2,10 +2,9 @@ from collections import deque
 
 
 def cxx2(x):
-    # print(x)
-    if(x <= 1):
+    if x <= 1:
         return 0
-    elif(x == 2):
+    elif x == 2:
         return 1
     else:
         sans = 1
@@ -16,10 +15,9 @@ def cxx2(x):
 
 
 def cxx3(x):
-    # print(x)
-    if(x <= 2):
+    if x <= 2:
         return 0
-    elif(x == 3):
+    elif x == 3:
         return 1
     else:
         sans2 = 1
@@ -29,9 +27,7 @@ def cxx3(x):
         return sans2
 
 
-# print(cxx3(4))
-'''for i in range(10):
-    print(cxx2(i))'''
+'for i in range(10):\n    print(cxx2(i))'
 inp = input().split()
 n = int(inp[0])
 d = int(inp[1])
@@ -40,13 +36,11 @@ a = deque()
 ans = 0
 for i in range(n):
     a.append(int(inp[i]))
-    if(len(a) != 0):
-        while(a[-1] - a[0] > d):
+    if len(a) != 0:
+        while a[-1] - a[0] > d:
             a.popleft()
-            # print(cxx2(len(a)-1))
             ans += cxx2(len(a) - 1)
-while(len(a) != 0):
+while len(a) != 0:
     a.popleft()
     ans += cxx2(len(a))
-    # print(cxx2(len(a)))
 print(ans)
