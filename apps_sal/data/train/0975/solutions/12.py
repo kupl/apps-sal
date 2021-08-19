@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 for t in range(T):
     s = input().split(' ')
@@ -8,20 +7,18 @@ for t in range(T):
     y = int(s[3])
     X = []
     Y = []
-    if(x > 0):
+    if x > 0:
         s = input().split(' ')
     for i in range(x):
         X.append(int(s[i]))
-    if(y > 0):
+    if y > 0:
         s = input().split(' ')
     for i in range(y):
         Y.append(int(s[i]))
-
     X = set(X)
     Y = set(Y)
-
     z = n - len(X.union(Y))
-    if(z >= r):
+    if z >= r:
         print(r)
     else:
         print(z)

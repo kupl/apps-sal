@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     s = list(input())
     letters = set()
@@ -9,8 +8,7 @@ for _ in range(int(input())):
         else:
             flag = True
             break
-
     if flag:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

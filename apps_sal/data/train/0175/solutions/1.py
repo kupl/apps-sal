@@ -1,4 +1,5 @@
 class Solution:
+
     def findIntegers(self, num):
         """
         :type num: int
@@ -12,9 +13,9 @@ class Solution:
         ans = 0
         numL = list(map(int, bin(num)[2:]))
         l = len(numL)
-        for i, n in enumerate(numL):
+        for (i, n) in enumerate(numL):
             if n == 1:
                 ans += f[l - i - 1]
                 if i > 0 and numL[i - 1] == 1:
                     return ans
-        return ans + 1  # include itself since we know if num contains two 1s, it will return before
+        return ans + 1

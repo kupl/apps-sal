@@ -1,31 +1,8 @@
 class Solution:
-    #   def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
-    #     satisfiedCount = 0
-
-    #     for i in range(len(customers)):
-    #       if grumpy[i] == 0:
-    #         satisfiedCount += customers[i]
-    #         customers[i] = 0
-
-    #     maxPotentialCount = 0
-    #     val = 0
-
-    #     for i in range(len(customers)):
-    #       if i < X:
-    #         val += customers[i]
-    #         continue
-
-    #       maxPotentialCount = max(maxPotentialCount, val)
-    #       val -= customers[i - X]
-    #       val += customers[i]
-
-    #     maxPotentialCount = max(maxPotentialCount, val)
-
-    #     return satisfiedCount + maxPotentialCount
 
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         i = win_of_make_satisfied = satisfied = max_make_satisfied = 0
-        for c, g in zip(customers, grumpy):
+        for (c, g) in zip(customers, grumpy):
             satisfied += (1 - g) * c
             win_of_make_satisfied += g * c
             if i >= X:

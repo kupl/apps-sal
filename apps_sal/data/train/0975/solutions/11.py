@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    n, r, x, y = map(int, input().split())
+    (n, r, x, y) = map(int, input().split())
     if x == 1:
         xli = [int(input())]
     if x > 1:
