@@ -1,17 +1,7 @@
 from collections import Counter
 import sys
 input = sys.stdin.readline
-
-#n = int(input())
-#l = list(map(int, input().split()))
-
-'''
-a=[]
-b=[]
-for i in range():
-    A, B = map(int, input().split())
-    a.append(A)   
-    b.append(B)'''
+'\na=[]\nb=[]\nfor i in range():\n    A, B = map(int, input().split())\n    a.append(A)   \n    b.append(B)'
 
 
 def cal(n, li):
@@ -28,11 +18,9 @@ a = list(map(int, input().split()))
 a.sort()
 l = cal(a[-1], a)
 ll = Counter(a)
-# print(l,ll)
 ans = 0
 for i in range(n):
     if ll[a[i]] == 1:
         if l[a[i]]:
             ans += 1
-
 print(ans)

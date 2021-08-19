@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Codeforces Round #319 (Div. 2)
 
@@ -7,7 +6,6 @@ Problem 577 B. Modulo Sum
 @author yamaton
 @date 2015-09-10
 """
-
 import itertools as it
 import functools
 import operator
@@ -39,7 +37,6 @@ def main():
     [n, m] = [int(i) for i in input().strip().split()]
     xs = [int(i) for i in input().strip().split()]
     assert len(xs) == n
-
     result = solve(xs, m)
     print(tf_to_yn(result))
 

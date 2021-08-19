@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -9,11 +7,7 @@ import random
 import itertools
 import sys
 from typing import List
-
-"""
-created by shhuan at 2020/1/10 01:32
-
-"""
+'\ncreated by shhuan at 2020/1/10 01:32\n\n'
 
 
 def shortest_path(u, v, g):
@@ -31,7 +25,6 @@ def shortest_path(u, v, g):
                     vis.add(x)
                     nq.append(x)
         q = nq
-
     return float('inf')
 
 
@@ -40,7 +33,7 @@ def solve(N, A):
     g = collections.defaultdict(list)
     edges = []
     for i in range(64):
-        connected = [i for i, v in enumerate(A) if v & b > 0]
+        connected = [i for (i, v) in enumerate(A) if v & b > 0]
         if len(connected) >= 3:
             return 3
         for u in connected:
@@ -49,14 +42,9 @@ def solve(N, A):
                     g[u].append(v)
                     edges.append((u, v))
         b <<= 1
-
-    # print(g)
     ans = float('inf')
-    for u, v in edges:
-        # remove edge u, v
-        # print(u, v, shortest_path(u, v, g))
+    for (u, v) in edges:
         ans = min(ans, 1 + shortest_path(u, v, g))
-
     return ans if ans < float('inf') else -1
 
 

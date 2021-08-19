@@ -1,5 +1,5 @@
 input_str = input()
-n, m = int(input_str.split()[0]), int(input_str.split()[1])
+(n, m) = (int(input_str.split()[0]), int(input_str.split()[1]))
 a = []
 points_wall = []
 points = 0
@@ -30,9 +30,7 @@ def count(matr, x):
     return c
 
 
-# 1
 if len(points_wall):
     print(2)
-else:
-    if points:
-        print(4)
+elif points:
+    print(4)
