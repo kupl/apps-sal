@@ -2,9 +2,9 @@ import math
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        # bruteforce
-        '''
+        """
         divisor = 0 
         trial_sum = float(inf) 
         while trial_sum > threshold:
@@ -15,12 +15,10 @@ class Solution:
 
 
         return divisor 
-        '''
-
-        # binary search
+        """
         low = 1
         high = 100000000
-        while (low <= high):
+        while low <= high:
             mid = low + (high - low) // 2
             if self.getSum(nums, mid) <= threshold:
                 high = mid - 1

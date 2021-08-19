@@ -1,7 +1,7 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort()
-        # print(piles)
         i = 0
         start = 0
         end = len(piles) - 2

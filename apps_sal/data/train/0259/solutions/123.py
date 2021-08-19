@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         end = 1
         start = end
@@ -13,7 +14,6 @@ class Solution:
                 break
         while end > start:
             mid = (start + end) // 2
-            # print(start, end, mid, findSum(mid))
             if findSum(mid) > threshold:
                 start = mid + 1
             else:

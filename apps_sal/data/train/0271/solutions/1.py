@@ -1,4 +1,5 @@
 class Solution:
+
     def canJump(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,7 @@ class Solution:
         """
         n = len(nums)
         maxReachable = 0
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             if num >= n - i - 1:
                 return True
             flag = False
@@ -16,7 +17,6 @@ class Solution:
                         flag = True
                         break
                 if flag == False:
-                    # print(i, num)
                     return False
             maxReachable = max(maxReachable, i + num)
         return True
