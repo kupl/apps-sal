@@ -1,4 +1,4 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 v = list(map(int, input().split()))
 d = [list() for i in range(n)]
 r = [1] * n
@@ -28,7 +28,7 @@ for i in range(n - 1, -1, -1):
         r[s[i]] += r[j]
 ss = []
 for x in range(q):
-    u, k = map(int, input().split())
+    (u, k) = map(int, input().split())
     if k > r[u - 1]:
         ss.append(-1)
     else:

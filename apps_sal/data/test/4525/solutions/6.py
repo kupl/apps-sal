@@ -1,5 +1,4 @@
 from math import *
-
 for zz in range(int(input())):
     n = int(input())
     if n % 4 != 0:

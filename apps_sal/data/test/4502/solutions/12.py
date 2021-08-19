@@ -9,7 +9,7 @@ for i in range(N):
         deq.append(A[i])
 if N % 2 == 0:
     for i in reversed(range(N)):
-        print(deq[i], end=" ")
+        print(deq[i], end=' ')
 else:
     for i in range(N):
-        print(deq[i], end=" ")
+        print(deq[i], end=' ')

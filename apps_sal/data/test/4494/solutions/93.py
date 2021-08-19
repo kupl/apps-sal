@@ -1,6 +1,5 @@
 string = input()
-
-if string == "ABC":
-    print("ARC")
+if string == 'ABC':
+    print('ARC')
 else:
-    print("ABC")
+    print('ABC')

@@ -1,7 +1,7 @@
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 count = 0
 start = 0
-for i in range(x, 10**18 + x + 1, x):
+for i in range(x, 10 ** 18 + x + 1, x):
     if a <= i:
         start = count
         break

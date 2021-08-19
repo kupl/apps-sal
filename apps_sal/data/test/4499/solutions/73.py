@@ -1,1 +1,1 @@
-print(''.join(s[0].upper() for s in input().split()))
+print(''.join((s[0].upper() for s in input().split())))

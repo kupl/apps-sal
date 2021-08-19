@@ -1,7 +1,7 @@
 mod = 998244353
-n, m = map(int, input().split())
-a = [0] * max(0, m - n) + list(int(ch) for ch in input())
-b = [0] * max(0, n - m) + list(int(ch) for ch in input())
+(n, m) = map(int, input().split())
+a = [0] * max(0, m - n) + list((int(ch) for ch in input()))
+b = [0] * max(0, n - m) + list((int(ch) for ch in input()))
 pow2 = 1
 for i in range(len(a) - 2, -1, -1):
     pow2 = (pow2 << 1) % mod

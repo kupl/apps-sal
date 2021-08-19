@@ -1,16 +1,18 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-N, M = list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+(N, M) = list(map(int, input().split()))
 X = [[] for i in range(N)]
 for i in range(N - 1):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     X[x].append(y)
     X[y].append(x)
-
 P = [-1] * N
 DE = [0] * N
 
@@ -47,8 +49,7 @@ def EulerTour(n, X, i0=0):
     return (ET, ET1, ET2)
 
 
-ET, ET1, ET2 = EulerTour(N, X, 0)
-
+(ET, ET1, ET2) = EulerTour(N, X, 0)
 for _ in range(M):
     A = [max(P[int(a) - 1], 0) for a in input().split()][1:]
     mad = -1
@@ -58,8 +59,8 @@ for _ in range(M):
             maa = a
     e = ET1[maa]
     for a in A:
-        if not (ET1[a] <= e <= ET2[a]):
-            print("NO")
+        if not ET1[a] <= e <= ET2[a]:
+            print('NO')
             break
     else:
-        print("YES")
+        print('YES')

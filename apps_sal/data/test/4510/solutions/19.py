@@ -1,6 +1,6 @@
 from collections import defaultdict
 from collections import deque
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = deque()
 c = defaultdict(int)
@@ -18,15 +18,14 @@ while i < n:
             c[a[i]] = 1
             l = l + 1
             i = i + 1
+    elif c[a[i]] == 1:
+        i = i + 1
+        continue
     else:
-        if c[a[i]] == 1:
-            i = i + 1
-            continue
-        else:
-            e = b.pop()
-            c[e] = 0
-            c[a[i]] = 1
-            b.appendleft(a[i])
-            i = i + 1
+        e = b.pop()
+        c[e] = 0
+        c[a[i]] = 1
+        b.appendleft(a[i])
+        i = i + 1
 print(len(b))
 print(*b)

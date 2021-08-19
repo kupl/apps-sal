@@ -2,9 +2,9 @@ for _ in range(int(input())):
     am = int(input())
     arr = list(map(int, input().split()))
     if len(set(arr)) == 1:
-        print("NO")
+        print('NO')
         continue
-    print("YES")
+    print('YES')
     f = (0, arr[0])
     s = (0, 0)
     for i in range(am):

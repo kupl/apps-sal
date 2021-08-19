@@ -3,7 +3,6 @@ def main():
     c1 = c_lst[0][0] + c_lst[1][1] + c_lst[2][2]
     c2 = c_lst[1][0] + c_lst[2][1] + c_lst[0][2]
     c3 = c_lst[2][0] + c_lst[0][1] + c_lst[1][2]
-
     if c1 == c2 and c2 == c3:
         print('Yes')
     else:

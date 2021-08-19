@@ -6,7 +6,7 @@ import array
 
 
 def main():
-    N, M = read_ints()
+    (N, M) = read_ints()
     X = [x - 1 for x in read_ints()]
     print(*solve(N, M, X))
 
@@ -27,32 +27,28 @@ def solve(N, M, X):
         pairs[a][b] += 1
         pairs[b][a] += 1
         fsum += abs(pos[a] - pos[b])
-
     ans = [fsum]
     fst = 0
     for i in range(N - 1):
         j = i + 1
         pi = pos[i]
         pj = pos[j]
-
         d = 0
-        for k, c in pairs[i].items():
+        for (k, c) in pairs[i].items():
             if k == j:
                 continue
             pk = pos[k]
             d -= abs(pi - pk) * c
             d += abs(pj - pk) * c
-        for k, c in pairs[j].items():
+        for (k, c) in pairs[j].items():
             if k == i:
                 continue
             pk = pos[k]
             d -= abs(pj - pk) * c
             d += abs(pi - pk) * c
-
         fsum += d
         ans.append(fsum)
-        pos[i], pos[j] = pj, pi
-
+        (pos[i], pos[j]) = (pj, pi)
     return ans
 
 

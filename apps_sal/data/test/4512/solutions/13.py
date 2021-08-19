@@ -1,11 +1,12 @@
 import sys
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
 
 
-class SegmentTree():
+class SegmentTree:
+
     def __init__(self, n):
-        self.n = 2**(n - 1).bit_length()
+        self.n = 2 ** (n - 1).bit_length()
         self.data = [0 for _ in range(2 * self.n)]
 
     def set(self, k, v):
@@ -18,9 +19,8 @@ class SegmentTree():
 
     def update(self, k, a):
         k += self.n - 1
-        v_val = ord(a) - ord("a")
+        v_val = ord(a) - ord('a')
         self.data[k] = 1 << v_val
-
         while k > 0:
             k = (k - 1) // 2
             self.data[k] = self.data[k * 2 + 1] | self.data[k * 2 + 2]
@@ -45,16 +45,13 @@ S = [v for v in input()[:-1]]
 N = len(S)
 Q = int(input())
 query = [[v for v in input()[:-1].split()] for _ in range(Q)]
-
 Seg = SegmentTree(N)
-for i, s in enumerate(S):
+for (i, s) in enumerate(S):
     Seg.set(i, s)
-
 Seg.build()
-
-for q, v1, v2 in query:
-    if q == "1":
+for (q, v1, v2) in query:
+    if q == '1':
         Seg.update(int(v1) - 1, v2)
     else:
         val = Seg.query(int(v1) - 1, int(v2))
-        print(bin(val)[2:].count("1"))
+        print(bin(val)[2:].count('1'))

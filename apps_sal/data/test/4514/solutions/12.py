@@ -1,4 +1,4 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 p = [-1] + [int(s) - 1 for s in input().split()]
 o = [0] * n
 l = [0] * n
@@ -13,7 +13,7 @@ for i in range(1, n):
     v[i] = l[i] + 1
 res = [0] * q
 for i in range(q):
-    u, k = map(int, input().split())
+    (u, k) = map(int, input().split())
     u -= 1
     k -= 1
     res[i] = str(o[l[u] + k] + 1 if k < s[u] else -1)

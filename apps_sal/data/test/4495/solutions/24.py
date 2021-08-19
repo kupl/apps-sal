@@ -3,7 +3,7 @@ def answer(a: int, b: int, x: int) -> int:
 
 
 def main():
-    a, b, x = map(int, input().split())
+    (a, b, x) = map(int, input().split())
     print(answer(a, b, x))
 
 

@@ -1,12 +1,12 @@
 def resolve():
-    a, b, c, d = map(int, input().split())
-    ans = ""
+    (a, b, c, d) = map(int, input().split())
+    ans = ''
     if abs(c - a) <= d:
-        ans = "Yes"
+        ans = 'Yes'
     elif abs(c - b) <= d and abs(b - a) <= d:
-        ans = "Yes"
+        ans = 'Yes'
     else:
-        ans = "No"
+        ans = 'No'
     print(ans)
 
 

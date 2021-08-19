@@ -1,5 +1,5 @@
 def answer(s: str) -> str:
-    return ''.join(s[0].upper() for s in s.split())
+    return ''.join((s[0].upper() for s in s.split()))
 
 
 def main():

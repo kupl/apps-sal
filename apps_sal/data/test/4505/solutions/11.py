@@ -1,6 +1,5 @@
 s = sorted(input())
-
-if "".join(s) == "abc":
-    print("Yes")
+if ''.join(s) == 'abc':
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -8,7 +8,7 @@ def rec(n):
         return 0
 
 
-m, c = 0, 1
+(m, c) = (0, 1)
 for i in range(1, N + 1):
     if m < rec(i):
         m = rec(i)

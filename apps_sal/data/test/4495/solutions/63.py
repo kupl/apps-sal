@@ -1,5 +1,4 @@
-a, b, x = map(int, input().split())
-
+(a, b, x) = map(int, input().split())
 a_div = 0
 b_div = b // x
 if a != 0:

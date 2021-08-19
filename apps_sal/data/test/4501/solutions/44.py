@@ -1,6 +1,5 @@
-N, A = list(map(int, input().split()))
+(N, A) = list(map(int, input().split()))
 ls1 = [0] + list(map(int, input().split()))
-
 dp = [[[0 for k in range(2600)] for j in range(51)] for i in range(51)]
 for i in range(51):
     dp[i][0][0] = 1

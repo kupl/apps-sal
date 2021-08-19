@@ -2,7 +2,7 @@ def get_input_list():
     return list(map(int, input().split()))
 
 
-n, m = get_input_list()
+(n, m) = get_input_list()
 a = input()
 b = input()
 l = 0

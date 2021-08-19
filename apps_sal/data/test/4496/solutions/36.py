@@ -1,10 +1,10 @@
 a = input()
 a = int(a)
 if a == 25:
-    print("Christmas")
+    print('Christmas')
 if a == 24:
-    print("Christmas Eve")
+    print('Christmas Eve')
 if a == 23:
-    print("Christmas Eve Eve")
+    print('Christmas Eve Eve')
 if a == 22:
-    print("Christmas Eve Eve Eve")
+    print('Christmas Eve Eve Eve')

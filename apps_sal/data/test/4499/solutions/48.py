@@ -1,4 +1,4 @@
-a, b, c = map(str, input().split())
+(a, b, c) = map(str, input().split())
 a = a.upper()
 b = b.upper()
 c = c.upper()

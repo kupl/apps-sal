@@ -8,16 +8,11 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 s = input()
-
 tmp = 0
-res = "ABC"
-
-if s == "ABC":
-    res = "ARC"
-
+res = 'ABC'
+if s == 'ABC':
+    res = 'ARC'
 print(res)

@@ -1,5 +1,5 @@
-A, B, C = list(map(int, input().split()))
+(A, B, C) = list(map(int, input().split()))
 if A + B >= C:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

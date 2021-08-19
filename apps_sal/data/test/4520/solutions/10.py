@@ -1,12 +1,10 @@
 import sys
 from collections import deque
 readline = sys.stdin.readline
-
-n, k = map(int, readline().split())
-
+(n, k) = map(int, readline().split())
 tmp = []
 for i in range(n):
-    a, b = map(int, readline().split())
+    (a, b) = map(int, readline().split())
     tmp.append([b, a, i])
 tmp.sort()
 ans = []

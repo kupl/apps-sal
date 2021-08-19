@@ -1,4 +1,4 @@
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 bb = b // x
 aa = a // x
 ans = bb - aa

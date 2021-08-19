@@ -1,8 +1,6 @@
 N = int(input())
-
 count_max = -1
 OK = True
-
 for i in range(N):
     count = 0
     a = N - i

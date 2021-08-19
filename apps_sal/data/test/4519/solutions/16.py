@@ -7,7 +7,7 @@ def I():
 
 q = int(I())
 for _ in range(q):
-    n, k = list(map(int, I().split()))
+    (n, k) = list(map(int, I().split()))
     l = I()
     r = []
     o = 0
@@ -21,4 +21,4 @@ for _ in range(q):
             k -= o
             r.append('0')
     r.extend(['1'] * o)
-    print("".join(r))
+    print(''.join(r))

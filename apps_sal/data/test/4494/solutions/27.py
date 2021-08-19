@@ -1,1 +1,1 @@
-print(f"A{'RB'['R'in input()]}C")
+print(f"A{'RB'['R' in input()]}C")

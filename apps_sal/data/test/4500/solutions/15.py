@@ -2,9 +2,9 @@ def LI():
     return list(map(int, input().split()))
 
 
-A, B, C = LI()
+(A, B, C) = LI()
 if A + B >= C:
-    ans = "Yes"
+    ans = 'Yes'
 else:
-    ans = "No"
+    ans = 'No'
 print(ans)

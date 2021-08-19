@@ -1,4 +1,4 @@
-n, a, *l = map(int, open(0).read().split())
+(n, a, *l) = map(int, open(0).read().split())
 R = 2500
 dp = [[0] * R * 2, [0] * R * 2]
 dp[0][0] = 1

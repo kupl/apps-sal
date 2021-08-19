@@ -1,5 +1,5 @@
 d = int(input())
-s = "Christmas"
+s = 'Christmas'
 for _ in range(25 - d):
-    s += " Eve"
+    s += ' Eve'
 print(s)

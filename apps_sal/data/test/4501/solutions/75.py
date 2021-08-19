@@ -1,5 +1,5 @@
 def main():
-    N, A = list(map(int, input().split()))
+    (N, A) = list(map(int, input().split()))
     x = list(map(int, input().split()))
     dp = [[0] * (50 * N + 1) for _ in range(N + 1)]
     dp[0][0] = 1
@@ -13,4 +13,4 @@ def main():
     return r
 
 
-print((main()))
+print(main())

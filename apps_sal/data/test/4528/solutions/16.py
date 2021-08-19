@@ -14,7 +14,7 @@ def mints():
 
 
 def solve():
-    a, b = mints()
+    (a, b) = mints()
     print(24 * 60 - a * 60 - b)
 
 

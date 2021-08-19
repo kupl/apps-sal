@@ -1,4 +1,4 @@
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 nums = [int(i) - a for i in input().split()]
 d = {0: 1}
 for i in nums:

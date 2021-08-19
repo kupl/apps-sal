@@ -1,7 +1,8 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, a = f()
+(n, a) = f()
 l = [i - a for i in f()]
 dp = [[0] * 5000 for _ in range(51)]
 Z = 2500

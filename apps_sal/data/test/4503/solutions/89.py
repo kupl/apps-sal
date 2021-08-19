@@ -1,12 +1,8 @@
-H, M = list(map(int, input().split()))
-
+(H, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
-a = (sum(A))
-
+a = sum(A)
 if a >= H:
-    ans = "Yes"
+    ans = 'Yes'
 else:
-    ans = "No"
-
+    ans = 'No'
 print(ans)

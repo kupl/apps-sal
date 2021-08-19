@@ -1,5 +1,4 @@
 N = int(input())
-
 cnt_list = []
 for i in range(1, N + 1):
     cnt = 0

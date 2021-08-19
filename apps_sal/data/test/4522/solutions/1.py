@@ -17,11 +17,10 @@ def union_query(d, size, n):
 def union_merge(d, size, x, y):
     xRoot = union_query(d, size, x)
     yRoot = union_query(d, size, y)
-
     if xRoot == yRoot:
         return
     if size[xRoot] < size[yRoot]:
-        xRoot, yRoot = yRoot, xRoot
+        (xRoot, yRoot) = (yRoot, xRoot)
     d[yRoot] = xRoot
     size[xRoot] = size[xRoot] + size[yRoot]
 
@@ -34,8 +33,7 @@ def sizeComponent(d, size, x):
 nm = input().split()
 n = int(nm[0])
 m = int(nm[1])
-
-d, size = union_init(n)
+(d, size) = union_init(n)
 pairs = [(0, 0)]
 edges = []
 for _ in range(n - 1):
@@ -44,7 +42,6 @@ for _ in range(n - 1):
     v = int(edge[1]) - 1
     w = int(edge[2])
     edges.append((w, u, v))
-
 edges.sort()
 totalP = 0
 for e in edges:
@@ -55,10 +52,9 @@ for e in edges:
     totalP += uSize * vSize
     union_merge(d, size, u, v)
     pairs.append((e[0], totalP))
-
 ms = [int(mi) for mi in input().split()]
 answer = [0] * m
-for i, mi in enumerate(ms):
+for (i, mi) in enumerate(ms):
     start = bisect(pairs, (mi, inf)) - 1
     answer[i] = pairs[start][1]
 print(*answer)

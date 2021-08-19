@@ -1,7 +1,6 @@
 n = int(input())
 maxCnt = 0
 ans = 1
-
 for i in range(1, n + 1, 1):
     tmpCnt = 0
     j = i
@@ -11,5 +10,4 @@ for i in range(1, n + 1, 1):
     if maxCnt < tmpCnt:
         maxCnt = tmpCnt
         ans = i
-
 print(ans)

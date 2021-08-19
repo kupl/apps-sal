@@ -10,7 +10,6 @@ def main():
     for i in range(n):
         ans = (ans + a[i] * b[i]) % mod
     print(ans)
-
     return 0
 
 

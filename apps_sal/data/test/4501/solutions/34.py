@@ -3,7 +3,7 @@ readline = sys.stdin.readline
 
 
 def main():
-    N, A = map(int, readline().rstrip().split())
+    (N, A) = map(int, readline().rstrip().split())
     X = list(map(int, readline().rstrip().split()))
     lim = max(X) * N
     X = [x - A for x in X]
@@ -16,7 +16,6 @@ def main():
                 dp[i][j] = dp[i - 1][j] + dp[i - 1][j - x]
             else:
                 dp[i][j] = dp[i - 1][j]
-
     print(dp[N][lim] - 1)
 
 

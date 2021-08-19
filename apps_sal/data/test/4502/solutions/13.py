@@ -14,5 +14,4 @@ if N % 2 == 1:
             lsb.append(lsa[i])
         else:
             lsb.appendleft(lsa[i])
-
 print(' '.join(lsb))

@@ -1,16 +1,22 @@
 import sys
 from collections import deque
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 INF = float('inf')
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
+
+
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
 
 
 n = inp()
 edges = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = inpl()
-    a, b = a - 1, b - 1
+    (a, b) = inpl()
+    (a, b) = (a - 1, b - 1)
     edges[a].append(b)
     edges[b].append(a)
 dist = [-1] * n
@@ -35,7 +41,7 @@ pq = pq[::-1]
 res = 0
 ind = 0
 while se:
-    d, v = pq[ind]
+    (d, v) = pq[ind]
     ind += 1
     if not v in se:
         continue

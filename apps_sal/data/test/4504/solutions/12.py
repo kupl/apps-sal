@@ -1,7 +1,6 @@
 S = list(input())
-
 S.pop(-1)
-if (len(S)) % 2 == 1:
+if len(S) % 2 == 1:
     S.pop(-1)
 while True:
     count = 0

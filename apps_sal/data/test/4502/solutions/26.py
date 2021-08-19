@@ -20,4 +20,4 @@ for i in range(n):
         b.append(a[i])
     else:
         b.appendleft(a[i])
-print((f(b)))
+print(f(b))

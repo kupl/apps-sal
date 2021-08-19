@@ -1,5 +1,4 @@
 day = int(input())
-
 if day == 22:
     print('Christmas Eve Eve Eve')
 elif day == 23:

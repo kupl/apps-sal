@@ -1,17 +1,17 @@
 import heapq as h
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l = [0] * n
 r = [0] * n
 events = [(0, 0)] * 2 * n
 for i in range(n):
-    l[i], r[i] = list(map(int, input().split()))
+    (l[i], r[i]) = list(map(int, input().split()))
     events[2 * i] = (l[i], 0, i)
     events[2 * i + 1] = (r[i], 1, i)
 events.sort()
 s = []
 ans = []
 for e in events:
-    x, t, id = e
+    (x, t, id) = e
     if t == 0:
         h.heappush(s, (-r[id], l[id], id))
     else:

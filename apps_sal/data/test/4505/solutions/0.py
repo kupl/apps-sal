@@ -1,6 +1,6 @@
 S = list(input())
 S.sort()
 if S == ['a', 'b', 'c']:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

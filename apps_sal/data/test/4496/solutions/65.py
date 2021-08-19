@@ -1,9 +1,9 @@
 D = int(input())
 if D == 25:
-    print("Christmas")
+    print('Christmas')
 elif D == 24:
-    print("Christmas Eve")
+    print('Christmas Eve')
 elif D == 23:
-    print("Christmas" + " Eve" * 2)
+    print('Christmas' + ' Eve' * 2)
 else:
-    print("Christmas" + " Eve" * 3)
+    print('Christmas' + ' Eve' * 3)

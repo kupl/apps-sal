@@ -1,9 +1,9 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 N = 2 * 10 ** 5 + 1
 pre = [0] * (N + 1)
 seg = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     x -= 1
     y -= 1
     seg.append([y, -x, i + 1])
@@ -29,7 +29,7 @@ for i in range(N):
                 mini = 100000000000000
                 maksi = seg[d][1]
                 opti = d
-            elif seg[d][1] == maksi and seg[d][0] < mini and seg[d][0] <= i:
+            elif seg[d][1] == maksi and seg[d][0] < mini and (seg[d][0] <= i):
                 mini = seg[d][0]
                 opti = d
         pt = seg[opti][1]

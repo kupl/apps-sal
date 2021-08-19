@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(str, input().split()))
-b, c = [], []
+(b, c) = ([], [])
 if n % 2 == 0:
     for i in range(n):
         if i % 2 == 0:
@@ -15,4 +15,4 @@ else:
         else:
             c.append(a[i])
     c.reverse()
-print(" ".join(c + b))
+print(' '.join(c + b))

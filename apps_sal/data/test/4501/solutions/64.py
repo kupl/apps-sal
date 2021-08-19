@@ -1,5 +1,5 @@
 import numpy as np
-n, a = list(map(int, input().split()))
+(n, a) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 dp = np.zeros((n + 1, 2501), int)
 dp[0, 0] = 1

@@ -2,6 +2,7 @@ from collections import deque
 
 
 class CodeforcesTask1006ESolution:
+
     def __init__(self):
         self.result = ''
         self.n_q = []
@@ -9,10 +10,10 @@ class CodeforcesTask1006ESolution:
         self.queries = []
 
     def read_input(self):
-        self.n_q = [int(x) for x in input().split(" ")]
-        self.command = [int(x) for x in input().split(" ")]
+        self.n_q = [int(x) for x in input().split(' ')]
+        self.command = [int(x) for x in input().split(' ')]
         for _ in range(self.n_q[1]):
-            self.queries.append([int(x) for x in input().split(" ")])
+            self.queries.append([int(x) for x in input().split(' ')])
 
     def process_task(self):
         tree = [[] for _ in range(self.n_q[0])]

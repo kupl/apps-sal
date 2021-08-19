@@ -1,5 +1,5 @@
 N = int(input())
-Ans = "Christmas"
+Ans = 'Christmas'
 for i in range(25, N, -1):
-    Ans += " Eve"
+    Ans += ' Eve'
 print(Ans)

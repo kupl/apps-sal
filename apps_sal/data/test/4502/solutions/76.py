@@ -2,7 +2,7 @@ n = int(input())
 a_list = [int(x) for x in input().split()]
 b = []
 c = []
-for i, a in enumerate(a_list):
+for (i, a) in enumerate(a_list):
     if i % 2 == 0:
         b.append(a)
     else:

@@ -10,7 +10,7 @@ if n % 2 == 1:
     while i <= n:
         ans.append(str(a[i - 1]))
         i += 2
-    print(" ".join(ans))
+    print(' '.join(ans))
 else:
     i = n
     while i >= 1:
@@ -20,4 +20,4 @@ else:
     while i <= n:
         ans.append(str(a[i - 1]))
         i += 2
-    print(" ".join(ans))
+    print(' '.join(ans))

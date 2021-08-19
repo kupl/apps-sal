@@ -1,10 +1,9 @@
 def __starting_point():
-
     s = input()
-    if s == "ARC":
-        print("ABC")
+    if s == 'ARC':
+        print('ABC')
     else:
-        print("ARC")
+        print('ARC')
 
 
 __starting_point()

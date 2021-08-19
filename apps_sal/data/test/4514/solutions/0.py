@@ -1,7 +1,7 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 par = [int(v) - 1 for v in input().split()]
 chs = [[] for i in range(n)]
-for i, p in enumerate(par):
+for (i, p) in enumerate(par):
     chs[p].append(i + 1)
 vis = [0 for _ in range(n)]
 bel = [1 for _ in range(n)]
@@ -19,11 +19,11 @@ while stack:
     order.append(ch)
     stack.append(ch)
 FST = {}
-for i, c in enumerate(order):
+for (i, c) in enumerate(order):
     FST[c] = i
 out = []
 for _ in range(q):
-    u, k = map(lambda x: int(x) - 1, input().split())
+    (u, k) = map(lambda x: int(x) - 1, input().split())
     if k >= bel[u]:
         out.append(-1)
     else:

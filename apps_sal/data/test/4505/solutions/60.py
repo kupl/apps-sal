@@ -1,17 +1,28 @@
 import sys
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
-def mi(): return map(int, input().split())
-def ii(): return int(input())
-def isp(): return input().split()
-def deb(text): print("-------\n{}\n-------".format(text))
+def mi():
+    return map(int, input().split())
 
 
-INF = 10**20
+def ii():
+    return int(input())
+
+
+def isp():
+    return input().split()
+
+
+def deb(text):
+    print('-------\n{}\n-------'.format(text))
+
+
+INF = 10 ** 20
 
 
 class Counter:
+
     def __init__(self):
         self.dict = {}
 
@@ -35,14 +46,12 @@ def main():
     counter = Counter()
     for s in S:
         counter.add(s)
-
     d = counter.get_dict()
     for s in ['a', 'b', 'c']:
         if not s in d or d[s] != 1:
-            print("No")
+            print('No')
             return
-
-    print("Yes")
+    print('Yes')
 
 
 def __starting_point():

@@ -1,1 +1,1 @@
-print(input().translate(str.maketrans({"R": "B", "B": "R"})))
+print(input().translate(str.maketrans({'R': 'B', 'B': 'R'})))

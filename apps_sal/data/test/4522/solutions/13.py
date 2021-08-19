@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 link = [0] * (n + 1)
 size = [0] * (n + 1)
 arr = [0] * m
@@ -22,7 +22,7 @@ def unite(a, b, res):
     a = find(a)
     b = find(b)
     if size[a] < size[b]:
-        a, b = b, a
+        (a, b) = (b, a)
     res = res - comb(size[a]) - comb(size[b]) + comb(size[a] + size[b])
     size[a] += size[b]
     link[b] = a
@@ -32,11 +32,11 @@ def unite(a, b, res):
 edges = []
 ask = []
 for i in range(n - 1):
-    x, y, z = [int(x) for x in input().split()]
+    (x, y, z) = [int(x) for x in input().split()]
     edges.append((z, x, y))
 edges.sort()
 x = 0
-edges.append((10**100, 1, 1))
+edges.append((10 ** 100, 1, 1))
 ask = sorted(zip([int(x) for x in input().split()], list(range(m))))
 for i in range(m):
     while edges[x][0] <= ask[i][0]:

@@ -1,4 +1,4 @@
-N, A = map(int, input().split())
+(N, A) = map(int, input().split())
 X = list(map(int, input().split()))
 dp = [[[0] * 6000 for _ in range(N + 1)] for _ in range(N + 1)]
 dp[0][0][0] = 1

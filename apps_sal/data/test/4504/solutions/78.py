@@ -1,10 +1,11 @@
 class mystr:
+
     def __init__(self, string):
         self.value = string
 
     def isEven(self):
         l = len(self.value)
-        if (not l & 1) and self.value[:l // 2] == self.value[l // 2:]:
+        if not l & 1 and self.value[:l // 2] == self.value[l // 2:]:
             return True
         else:
             return False

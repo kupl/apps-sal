@@ -1,5 +1,4 @@
 import numpy as np
-
 l = [list(map(int, input().split())) for i in range(3)]
 l_2 = np.array(l).T
 
@@ -14,6 +13,6 @@ def square(l):
 
 
 if square(l) * square(l_2) == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

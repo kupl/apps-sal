@@ -1,9 +1,7 @@
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 x = list(map(int, input().split()))
-
 for i in range(n):
     x[i] -= a
-
 d = [0] * 6000
 ans = 0
 for dif in x:
@@ -19,5 +17,4 @@ for dif in x:
             if 0 <= i + dif < 6000:
                 d[i + dif] += d[i]
     d[dif + 3000] = d[dif + 3000] + 1
-
 print(ans)

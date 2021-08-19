@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2020/08/28
 
 @author: harurun
-'''
+"""
 
 
 def main():
@@ -11,7 +11,6 @@ def main():
     pin = sys.stdin.readline
     pout = sys.stdout.write
     perr = sys.stderr.write
-
     n = int(pin())
     a = list(map(int, pin().split()))
     b = deque([])
@@ -30,8 +29,8 @@ def main():
     for k in range(n):
         pout(str(b[k]))
         if k != n - 1:
-            pout(" ")
-    pout("\n")
+            pout(' ')
+    pout('\n')
     return
 
 

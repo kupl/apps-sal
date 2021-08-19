@@ -1,6 +1,6 @@
 d = int(input())
-c = "Christmas"
-e = "Eve"
+c = 'Christmas'
+e = 'Eve'
 if d == 25:
     print(c)
 elif d == 24:

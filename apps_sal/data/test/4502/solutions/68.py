@@ -17,4 +17,4 @@ else:
 B = []
 for i in range(n):
     B.append(b.popleft())
-print(" ".join(B))
+print(' '.join(B))

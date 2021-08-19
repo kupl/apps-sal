@@ -1,7 +1,6 @@
 import numpy as np
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 x = list(map(int, input().split()))
-
 s = sum(x)
 dp = np.zeros((n, s + 1), dtype=np.int64)
 for i in range(n):

@@ -1,5 +1,5 @@
 a = input().split()
-res = ""
+res = ''
 for i in range(len(a)):
     a[i] = a[i].upper()
     res += a[i][0]

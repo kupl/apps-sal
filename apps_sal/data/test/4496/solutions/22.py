@@ -1,5 +1,4 @@
 a = int(input())
-
 if a == 25:
     print('Christmas')
 if a == 24:

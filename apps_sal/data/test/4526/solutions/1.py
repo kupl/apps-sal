@@ -1,5 +1,9 @@
-def Zs(): return list(map(int, input().split()))
-def Z(): return int(input())
+def Zs():
+    return list(map(int, input().split()))
+
+
+def Z():
+    return int(input())
 
 
 def solve(N, A):

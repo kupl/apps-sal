@@ -1,7 +1,6 @@
-h, n = map(int, input().split())
+(h, n) = map(int, input().split())
 a = map(int, input().split())
-
 if sum(a) >= h:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

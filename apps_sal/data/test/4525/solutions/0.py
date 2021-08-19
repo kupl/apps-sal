@@ -1,8 +1,8 @@
 for _ in range(int(input())):
     n = int(input())
-    if(n % 4 != 0):
+    if n % 4 != 0:
         print('NO')
-    elif(n % 4 == 0):
+    elif n % 4 == 0:
         print('YES')
         a = []
         for i in range(1, n // 2 + 1):

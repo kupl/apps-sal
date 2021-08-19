@@ -1,7 +1,7 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     lo = 0
-    hi = 10**20
+    hi = 10 ** 20
 
     def check(mi):
         return mi - mi // n >= k

@@ -1,6 +1,6 @@
-N = int(2e5 + 3)
+N = int(200000.0 + 3)
 cum = [0] * N
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = [0] * n
 for i in range(n):
     arr[i] = [[0, 0], i + 1]
@@ -11,7 +11,7 @@ for i in range(1, N):
     cum[i] += cum[i - 1]
 arr.sort()
 st = set()
-res, j, prev = [], 0, 0
+(res, j, prev) = ([], 0, 0)
 rmv = [0] * N
 for i in range(N):
     while j < n and arr[j][0][0] <= i:
@@ -24,6 +24,5 @@ for i in range(N):
         res.append(it[1])
         rmv[it[0] + 1] += 1
         prev += 1
-
 print(len(res))
 print(*res)

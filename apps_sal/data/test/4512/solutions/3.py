@@ -1,13 +1,12 @@
 from string import ascii_lowercase as lows
 import sys
-
 input = sys.stdin.readline
-
 s = [c for c in input().strip()]
 N = len(s)
 
 
 class bit:
+
     def __init__(self):
         self.l = [0] * (1 + N)
 
@@ -20,13 +19,13 @@ class bit:
     def add(self, i, val):
         while i <= N:
             self.l[i] += val
-            i += (i & (-i))
+            i += i & -i
 
     def get(self, i):
         r = 0
         while i > 0:
             r += self.l[i]
-            i -= (i & (-i))
+            i -= i & -i
         return r
 
     def range(self, l, r):
@@ -34,11 +33,9 @@ class bit:
 
 
 bits = {c: bit() for c in lows}
-
-for i, c in enumerate(s):
+for (i, c) in enumerate(s):
     bits[c].set(i + 1)
 q = int(input().strip())
-
 for _ in range(q):
     ins = input().split()
     if ins[0] == '1':
@@ -47,7 +44,7 @@ for _ in range(q):
         bits[ins[2]].set(pos)
         s[pos - 1] = ins[2]
     else:
-        l, r = list(map(int, ins[1:]))
+        (l, r) = list(map(int, ins[1:]))
         sm = 0
         for b in list(bits.values()):
             if b.range(l, r) > 0:

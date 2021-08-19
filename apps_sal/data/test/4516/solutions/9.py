@@ -7,10 +7,10 @@ def pos(x, i):
         return 1
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = list(map(int, input().split()))
 delta_ = [0] * (n + 2)
-func = sum(abs(x[i + 1] - x[i]) for i in range(m - 1))
+func = sum((abs(x[i + 1] - x[i]) for i in range(m - 1)))
 for i in range(m):
     if x[i] < n:
         if i > 0:
@@ -30,7 +30,6 @@ for i in range(m):
             prev_r = abs(pos(x[i], x[i] - 1) - pos(x[i + 1], x[i] - 1))
             cur_r = abs(pos(x[i], x[i]) - pos(x[i + 1], x[i]))
             delta_[x[i]] += cur_r - prev_r
-
 for i in range(1, n + 1):
-    print(func, end=" ")
+    print(func, end=' ')
     func += delta_[i + 1]

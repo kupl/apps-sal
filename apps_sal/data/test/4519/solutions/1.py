@@ -1,11 +1,9 @@
-'''
+"""
 https://codeforces.com/contest/1256/problem/D
-'''
-
-
+"""
 q = int(input())
 for _ in range(q):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = list(input())
     l = 0
     for i in range(n):

@@ -1,7 +1,7 @@
 import collections
 import sys
 input = sys.stdin.readline
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 par = [-1] * n
 
 
@@ -24,7 +24,7 @@ def unite(x, y):
         return False
     else:
         if par[x] > par[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         par[x] += par[y]
         par[y] = x
         return True
@@ -40,18 +40,18 @@ def size(x):
 
 Edge = collections.defaultdict(list)
 for _ in range(n - 1):
-    u, v, w = list(map(int, input().split()))
+    (u, v, w) = list(map(int, input().split()))
     Edge[w].append((u, v))
 Q = [int(i) for i in input().split()]
 q = max(Q)
 Ans = [0] * (q + 1)
 ans = 0
 for i in range(1, q + 1):
-    for u, v in Edge[i]:
+    for (u, v) in Edge[i]:
         if same(u - 1, v - 1):
             continue
         else:
-            uu, vv = size(u - 1), size(v - 1)
+            (uu, vv) = (size(u - 1), size(v - 1))
             unite(u - 1, v - 1)
             uv = size(u - 1)
             ans += c(uv) - c(uu) - c(vv)

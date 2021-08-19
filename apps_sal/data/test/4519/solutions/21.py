@@ -1,6 +1,6 @@
 def solve(k, bits):
     indices = []
-    for i, b in enumerate(bits):
+    for (i, b) in enumerate(bits):
         if b == '0':
             indices.append(i)
     cur = k
@@ -22,7 +22,7 @@ def solve(k, bits):
 def __starting_point():
     q = int(input())
     for _ in range(q):
-        n, k = [int(r) for r in input().split(' ')]
+        (n, k) = [int(r) for r in input().split(' ')]
         print(solve(k, input()))
 
 

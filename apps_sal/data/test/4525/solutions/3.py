@@ -10,12 +10,12 @@ for test_case in range(test):
     for i in range(1, n // 2):
         ans.append(i * 2 - 1)
         s -= i * 2 - 1
-    if(s % 2 == 0):
-        print("NO")
+    if s % 2 == 0:
+        print('NO')
         continue
     else:
         ans.append(s)
-        print("YES")
+        print('YES')
         for i in ans:
-            print(i, end=" ")
+            print(i, end=' ')
         print()

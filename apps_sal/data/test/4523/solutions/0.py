@@ -27,4 +27,4 @@ for q in range(t):
         if a[i] - a[i - 1] > 1:
             boo = False
             break
-    print("YES" if boo else "NO")
+    print('YES' if boo else 'NO')
