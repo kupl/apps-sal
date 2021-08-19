@@ -1,9 +1,7 @@
-# In the name of GOD!
 t = int(input())
 for i in range(t):
     k = int(input())
     a = list(map(int, input().split()))
-
     sm = sum(a)
     ans = 0
     if k % sm == 0:
@@ -12,7 +10,6 @@ for i in range(t):
     else:
         ans = k // sm * 7
         k %= sm
-
     ad = 7
     for i in range(7):
         day = 0
@@ -24,5 +21,4 @@ for i in range(t):
             if cnt == 0:
                 ad = min(ad, day)
                 break
-
     print(ans + ad)

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -9,11 +7,7 @@ import random
 import itertools
 import sys
 from typing import List
-
-"""
-created by shhuan at 2020/1/13 20:48
-
-"""
+'\ncreated by shhuan at 2020/1/13 20:48\n\n'
 
 
 def solve(N, L, X, Y, A):
@@ -29,20 +23,17 @@ def solve(N, L, X, Y, A):
         print(1)
         print(X)
     else:
-        # try to add 1 mark
         for a in vs:
-            for b, c in [(a + X, Y), (a + Y, X), (a - X, Y), (a - Y, X)]:
+            for (b, c) in [(a + X, Y), (a + Y, X), (a - X, Y), (a - Y, X)]:
                 if 0 <= b <= L:
-                    if (b + c <= L and b + c in vs) or (b - c >= 0 and b - c in vs):
+                    if b + c <= L and b + c in vs or (b - c >= 0 and b - c in vs):
                         print(1)
                         print(b)
                         return
-
-        # add 2 marks
         print(2)
         print('{} {}'.format(X, Y))
 
 
-N, L, X, Y = map(int, input().split())
+(N, L, X, Y) = map(int, input().split())
 A = [int(x) for x in input().split()]
 solve(N, L, X, Y, A)

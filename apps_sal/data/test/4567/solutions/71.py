@@ -8,9 +8,7 @@ for _ in range(n):
         x = min(x, v)
 if a % 10 != 0:
     print(a)
+elif x == 9999:
+    print(0)
 else:
-    if x == 9999:
-        # ぜんぶ10で割り切れるので駄目
-        print((0))
-    else:
-        print((a - x))
+    print(a - x)

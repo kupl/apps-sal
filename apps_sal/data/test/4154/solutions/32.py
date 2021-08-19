@@ -1,15 +1,13 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
 
 def main():
     gates = []
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     gates = [list(map(int, input().split())) for _ in range(m)]
     min_data = 0
-    max_data = 10**5 + 1
-
+    max_data = 10 ** 5 + 1
     for gate in gates:
         if min_data < gate[0]:
             min_data = min(gate)

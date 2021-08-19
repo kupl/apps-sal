@@ -1,4 +1,4 @@
-'''class data:
+"""class data:
     def __init__(self,a):
         self.data=a
     def qsort(self,l,r,reverse):
@@ -32,13 +32,13 @@
                     self.data[i]=self.data[j]
                     self.data[j]=t
         self.qsort(l,ind,reverse)
-        self.qsort(ind+1,r,reverse)'''
-n, m = [int(i) for i in input().split()]
+        self.qsort(ind+1,r,reverse)"""
+(n, m) = [int(i) for i in input().split()]
 adata = [int(i) for i in input().split()]
 t = [None] * m
 r = [None] * m
 for i in range(m):
-    t[i], r[i] = [int(j) for j in input().split()]
+    (t[i], r[i]) = [int(j) for j in input().split()]
 Sortlist = []
 Sortcount = 0
 M = 0
@@ -47,13 +47,12 @@ for i in range(m - 1, -1, -1):
         Sortlist.append([r[i], t[i]])
         Sortcount += 1
         M = r[i]
-# a.qsort(0,Sortlist[-1][0]-1,1)
 S = sorted(adata[0:Sortlist[-1][0]])
 L = 0
 R = M - 1
 for i in range(M - 1, -1, -1):
-    if (Sortcount > 0):
-        if (i < Sortlist[Sortcount - 1][0]):
+    if Sortcount > 0:
+        if i < Sortlist[Sortcount - 1][0]:
             Reverse = Sortlist[Sortcount - 1][1]
             Sortcount -= 1
     if Reverse == 1:
@@ -63,5 +62,5 @@ for i in range(M - 1, -1, -1):
         adata[i] = S[L]
         L += 1
 for i in adata[0:-1]:
-    print(str(i) + " ", end="")
+    print(str(i) + ' ', end='')
 print(adata[-1])

@@ -9,24 +9,36 @@ from string import ascii_lowercase, ascii_uppercase, digits
 from bisect import bisect, bisect_left, insort, insort_left
 from heapq import heappush, heappop
 from functools import reduce, lru_cache
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
-def TUPLE(): return tuple(map(int, input().split()))
-def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def TUPLE():
+    return tuple(map(int, input().split()))
+
+
+def ZIP(n):
+    return list(zip(*(MAP() for _ in range(n))))
 
 
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
-#mod = 998244353
-#from decimal import *
-#import numpy as np
-#decimal.getcontext().prec = 10
-
-N, K = MAP()
-
+(N, K) = MAP()
 gcd_cnt = [0] * (K + 1)
 ans = 0
 for i in range(K, 0, -1):
@@ -37,5 +49,4 @@ for i in range(K, 0, -1):
     gcd_cnt[i] = cnt
     ans += i * cnt
     ans %= mod
-
 print(ans)

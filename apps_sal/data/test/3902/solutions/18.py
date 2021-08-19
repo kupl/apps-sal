@@ -3,13 +3,12 @@ sufix = set()
 comb = {(len(lectura), 2)}
 setPrueba = set()
 while comb:
-    x, y = comb.pop()
+    (x, y) = comb.pop()
     pos3 = x + y
     for i in [y, 5 - y]:
         posIni = x - i
         stringActual = (posIni, i)
-        if (stringActual in setPrueba or (posIni < 5) or (lectura[posIni:x] == lectura[x:pos3])):
-            #print("encontrado en el set")
+        if stringActual in setPrueba or posIni < 5 or lectura[posIni:x] == lectura[x:pos3]:
             continue
         else:
             sufix.add(lectura[posIni:x])

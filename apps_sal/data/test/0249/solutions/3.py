@@ -1,5 +1,4 @@
-# Adapted from code of hatsuyuki15 in this contest
-n, l, x, y = list(map(int, input().split()))
+(n, l, x, y) = list(map(int, input().split()))
 a = set(map(int, input().split()))
 boy = False
 girl = False
@@ -22,17 +21,15 @@ for i in a:
     if i - x - y in a:
         one = True
         where = i - x
-
-
 if boy and girl:
     print(0)
-if boy and not girl:
+if boy and (not girl):
     print(1)
     print(y)
-if girl and not boy:
+if girl and (not boy):
     print(1)
     print(x)
-if not boy and not girl:
+if not boy and (not girl):
     if one:
         print(1)
         print(where)

@@ -1,5 +1,3 @@
-# -*- coding:utf-8 -*-
-
 """
 
 created by shuangquan.huang at 12/3/18
@@ -13,9 +11,8 @@ def solve(k, a):
     if k <= w:
         for start in range(7):
             for end in range(start, 8):
-                if sum(a[start: end]) >= k:
+                if sum(a[start:end]) >= k:
                     ans = min(ans, end - start)
-
     for start in range(7):
         for end in range(7):
             x = sum(a[start:])
@@ -32,5 +29,4 @@ for ti in range(T):
     K = int(input())
     A = [int(x) for x in input().split()]
     ans.append(solve(K, A))
-
 print('\n'.join(map(str, ans)))

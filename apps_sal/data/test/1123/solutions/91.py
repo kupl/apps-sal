@@ -1,11 +1,9 @@
-
 def resolve():
-    MOD = 10**9 + 7
-    N, K = map(int, input().split())
+    MOD = 10 ** 9 + 7
+    (N, K) = map(int, input().split())
     cnt = [0] * (K + 1)
-
     for g in range(K, 0, -1):
-        cnt[g] = pow(K // g, N, MOD)  # (K//g)**N
+        cnt[g] = pow(K // g, N, MOD)
         gg = g * 2
         while gg <= K:
             cnt[g] -= cnt[gg]
