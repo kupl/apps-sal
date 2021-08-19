@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 
@@ -14,10 +13,10 @@ def isPrime(num):
 
 
 for i in range(t):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     i = 1
     res = 0
-    while(isPrime(a + b + i)):
+    while isPrime(a + b + i):
         res = res + 1
         i = i + 1
     print(res + 1)

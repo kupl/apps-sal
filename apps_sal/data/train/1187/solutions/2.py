@@ -1,12 +1,12 @@
 import sys
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 mod = 998244353
 
 
 def power(a, b):
     res = 1
-    while(b > 0):
-        if(b % 2):
+    while b > 0:
+        if b % 2:
             res *= a
             res %= mod
         b //= 2
@@ -16,15 +16,15 @@ def power(a, b):
 
 
 def solve(a):
-    if(a > n):
+    if a > n:
         return (0, 1)
     val = a
     c = 1
     p = 1
     size = 0
     ways = 0
-    while(1):
-        if(val > (n // m)):
+    while 1:
+        if val > n // m:
             break
         val *= m
         p *= m
@@ -34,21 +34,20 @@ def solve(a):
     rem = u // m
     rem -= (a - 1) // m
     u -= rem
-    size = ((c + 1) // 2) * (u - a + 1)
-    if(c % 2):
+    size = (c + 1) // 2 * (u - a + 1)
+    if c % 2:
         ways = 1
     else:
         ways = power(c // 2 + 1, u - a + 1)
     size += ans[0]
     ways *= ans[1]
     ways %= mod
-    # print(a,ways,size)
     return (size, ways)
 
 
 t = int(input())
-while(t):
+while t:
     t -= 1
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     ans = solve(1)
     print(ans[0], ans[1])

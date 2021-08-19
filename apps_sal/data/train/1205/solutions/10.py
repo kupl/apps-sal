@@ -1,9 +1,8 @@
-# cook your dish here
 try:
     for _ in range(int(input())):
         s = input()
         size = len(s)
-        m = (size * (size - 1)) // 2
+        m = size * (size - 1) // 2
         n = size
         answer = 0
         for i in range(size - 1):

@@ -13,7 +13,6 @@ def isPrime(n):
 
 for i in range(int(input())):
     ip = list(map(int, input().split()))
-
     pots = sum(ip)
     flag = 0
     cnt = 1
@@ -23,5 +22,3 @@ for i in range(int(input())):
             break
         else:
             cnt += 1
-
-# cook your dish here

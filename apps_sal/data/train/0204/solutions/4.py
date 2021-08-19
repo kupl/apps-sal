@@ -1,16 +1,12 @@
 class Solution:
+
     def search(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
         :rtype: int
         """
-        # if target in nums:
-        #     return nums.index(target)
-        # else:
-        #     return -1
-
-        low, high = 0, len(nums) - 1
+        (low, high) = (0, len(nums) - 1)
         while low < high:
             mid = (low + high) // 2
             if nums[mid] > nums[high]:
@@ -18,10 +14,10 @@ class Solution:
             else:
                 high = mid
         start = low
-        low, high = 0, len(nums) - 1
+        (low, high) = (0, len(nums) - 1)
         while low <= high:
             mid = (low + high) // 2
-            realMid = (mid + start) % (len(nums))
+            realMid = (mid + start) % len(nums)
             if nums[realMid] == target:
                 return realMid
             if target > nums[realMid]:

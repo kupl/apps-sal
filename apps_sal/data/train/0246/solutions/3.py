@@ -1,4 +1,5 @@
 class Solution:
+
     def replaceWords(self, dict, sentence):
         trie_tree = {'root': {}}
         for word in dict:
@@ -6,10 +7,10 @@ class Solution:
             for c in word + '#':
                 parent.setdefault(c, {})
                 parent = parent[c]
-        sentence, res = sentence.split(), []
+        (sentence, res) = (sentence.split(), [])
         for word in sentence:
             parent = trie_tree['root']
-            for i, c in enumerate(word + '*'):
+            for (i, c) in enumerate(word + '*'):
                 if c not in parent:
                     res.append(word)
                     break

@@ -1,5 +1,4 @@
-# cook your dish here
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 for i in range(m):
     x = int(input())
     if x <= n or x > 3 * n:
@@ -7,4 +6,4 @@ for i in range(m):
     elif x > n and x <= 2 * n:
         print(x - n - 1)
     else:
-        print(n - (x % (2 * n)) + 1)
+        print(n - x % (2 * n) + 1)

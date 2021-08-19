@@ -1,7 +1,8 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         A_dict = []
-        B_dict = {}  # final dictionary of B taking max of cnt
+        B_dict = {}
         ans = []
         for ww in A:
             temp = {}
@@ -18,15 +19,15 @@ class Solution:
                     temp[ele] += 1
                 else:
                     temp[ele] = 1
-            for key, cnt in temp.items():
+            for (key, cnt) in temp.items():
                 if key in B_dict:
                     B_dict[key] = max(cnt, B_dict[key])
                 else:
                     B_dict[key] = cnt
-        for ind, ele in enumerate(A_dict):
+        for (ind, ele) in enumerate(A_dict):
             cur_dict = ele
             flag = True
-            for key, cnt in B_dict.items():
+            for (key, cnt) in B_dict.items():
                 if key not in cur_dict or cur_dict[key] < cnt:
                     flag = False
                     break

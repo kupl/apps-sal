@@ -1,5 +1,3 @@
-# cook your dish here
-# the evilprofessor
 t = int(input())
 while t > 0:
     s = input()
@@ -18,7 +16,5 @@ while t > 0:
             for k in range(len(x) - 1):
                 if x[k] == x[k + 1]:
                     ans += 1
-            #print(x , ans)
     print(ans)
-
     t -= 1
