@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = []
     for i in range(n):
         l.append(list(map(int, input().split())))
@@ -17,7 +17,6 @@ for _ in range(t):
         y = i[2]
         s[x][y] = 1
         c = 1
-        # print(x,y)
         for j in range(x + 1, n):
             s[j][y] = 0
             for b in range(y - 1, max(y - c - 1, -1), -1):
@@ -25,6 +24,5 @@ for _ in range(t):
             for b in range(y + 1, min(m, y + c + 1)):
                 s[j][b] = 0
             c += 1
-
     for i in s:
-        print("".join(map(str, i)))
+        print(''.join(map(str, i)))

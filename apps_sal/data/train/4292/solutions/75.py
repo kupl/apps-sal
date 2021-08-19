@@ -10,7 +10,4 @@ def string_clean(s):
         else:
             emptystring = emptystring + eachletter
     return emptystring
-    """
-    Function will return the cleaned string
-    """
-    # Your code here
+    '\n    Function will return the cleaned string\n    '

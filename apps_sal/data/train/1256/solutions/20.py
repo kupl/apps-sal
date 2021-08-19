@@ -1,4 +1,3 @@
-# cook your dish here
 def solve():
     n = int(input())
     l = list(map(int, input().split()))
@@ -9,7 +8,7 @@ def solve():
             tn_2 += 1
         elif l[i] == 2:
             t_2 += 1
-    ans = (tn_2 * (tn_2 - 1)) / 2
+    ans = tn_2 * (tn_2 - 1) / 2
     ans += t_2 * tn_2
     print(int(ans))
 
