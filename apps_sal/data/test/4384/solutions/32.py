@@ -1,6 +1,5 @@
-
 N = int(input())
 if N >= 1000:
-    print("ABD")
+    print('ABD')
 else:
-    print("ABC")
+    print('ABC')

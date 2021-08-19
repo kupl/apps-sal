@@ -10,6 +10,6 @@ for i in range(5):
     if flag:
         break
 if flag:
-    print(":(")
+    print(':(')
 else:
-    print("Yay!")
+    print('Yay!')

@@ -1,5 +1,5 @@
 n = int(input())
-f = ["R", "G", "B"]
+f = ['R', 'G', 'B']
 s = list(input())
 i = 1
 x = 0

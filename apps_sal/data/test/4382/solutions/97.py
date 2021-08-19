@@ -1,3 +1,3 @@
 N = input()
 n = int(N)
-print(n**3)
+print(n ** 3)

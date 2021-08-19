@@ -3,7 +3,7 @@ def mapt(fn, *args):
 
 
 def Vector(line):
-    return mapt(Atom, line.split(" "))
+    return mapt(Atom, line.split(' '))
 
 
 def Atom(segment):
@@ -20,8 +20,8 @@ def main():
     n = int(input())
     data = [Vector(input()) for _ in range(n)]
     total = 0
-    for amount, currency in data:
-        if currency == "JPY":
+    for (amount, currency) in data:
+        if currency == 'JPY':
             total += amount
         else:
             total += amount * 380000

@@ -2,14 +2,14 @@ def readinput():
     n = int(input())
     dama = []
     for _ in range(n):
-        a, b = input().split()
+        (a, b) = input().split()
         dama.append((a, b))
-    return n, dama
+    return (n, dama)
 
 
 def main(n, dama):
     sum = 0.0
-    for x, u in dama:
+    for (x, u) in dama:
         if u == 'JPY':
             sum += int(x)
         else:
@@ -18,7 +18,7 @@ def main(n, dama):
 
 
 def __starting_point():
-    n, dama = readinput()
+    (n, dama) = readinput()
     ans = main(n, dama)
     print(ans)
 

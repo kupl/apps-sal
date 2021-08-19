@@ -1,5 +1,5 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = [0] + list(map(int, input().split()))
     if k == 1:
         print(max(a))

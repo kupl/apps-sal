@@ -12,7 +12,7 @@ def solve(n, k, l):
 
 
 def __starting_point():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     print(solve(n, k, l))
 

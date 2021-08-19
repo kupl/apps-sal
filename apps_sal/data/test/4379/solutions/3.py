@@ -11,11 +11,10 @@ res = list(best_range)
 size = len(res)
 output = []
 pointer = 0
-for i, c in enumerate(s):
+for (i, c) in enumerate(s):
     if res[pointer] == c:
         output.append(str(i + 1))
         pointer += 1
-
     if pointer >= size:
         break
 print(size)

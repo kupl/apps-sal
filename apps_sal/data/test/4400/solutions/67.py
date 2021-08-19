@@ -1,8 +1,8 @@
 s = input()
-a0 = ["SSS"]
-a1 = ["RSS", "SRS", "SSR", "RSR"]
-a2 = ["RRS", "SRR"]
-a3 = ["RRR"]
+a0 = ['SSS']
+a1 = ['RSS', 'SRS', 'SSR', 'RSR']
+a2 = ['RRS', 'SRR']
+a3 = ['RRR']
 if s in a0:
     ans = 0
 elif s in a1:

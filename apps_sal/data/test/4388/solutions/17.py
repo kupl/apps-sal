@@ -5,5 +5,4 @@ for i in s_l:
         new_list.append(1)
     else:
         new_list.append(9)
-
 print(''.join(map(str, new_list)))

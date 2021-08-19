@@ -1,14 +1,12 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 g = [[] for i in range(n)]
 for i in range(n - 1):
-    v, u = map(int, input().split())
+    (v, u) = map(int, input().split())
     v -= 1
     u -= 1
     g[v].append(u)
     g[u].append(v)
-
 dp = [[] for i in range(n)]
 d = [1 for i in range(n)]
 
@@ -19,7 +17,7 @@ def dfs(v, p=-1):
         if u == p:
             continue
         dfs(u, v)
-        tmp = [-10**18 for i in range(max(d[v], d[u] + 1))]
+        tmp = [-10 ** 18 for i in range(max(d[v], d[u] + 1))]
         for i in range(d[v]):
             for j in range(max(0, k - i), d[u]):
                 tmp[min(i, j + 1)] = max(tmp[min(i, j + 1)], dp[v][i] + dp[u][j])

@@ -2,7 +2,7 @@ n = int(input())
 s = input()
 s = [i for i in s]
 ans = 0
-e = ["R", "G", "B"]
+e = ['R', 'G', 'B']
 for i in range(1, n):
     if s[i] == s[i - 1]:
         ans += 1
@@ -17,4 +17,4 @@ for i in range(1, n):
                 s[i] = e[j]
                 break
 print(ans)
-print("".join(s))
+print(''.join(s))

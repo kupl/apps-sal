@@ -2,7 +2,7 @@ s = input()
 j = 0
 ren = 0
 for num in range(3):
-    if s[num] == "R":
+    if s[num] == 'R':
         if ren == 1:
             j += 1
         else:

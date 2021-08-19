@@ -5,6 +5,6 @@ a.sort()
 j = int(input())
 k = a[4] - a[0]
 if k <= j:
-    print("Yay!")
+    print('Yay!')
 else:
-    print(":(")
+    print(':(')

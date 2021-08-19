@@ -1,5 +1,4 @@
 T = int(input())
-
 for t in range(T):
     a = input()
     b = a[0]

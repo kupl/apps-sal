@@ -1,7 +1,7 @@
 s = input()
-if(s == 'AAA'):
+if s == 'AAA':
     print('No')
-elif(s == 'BBB'):
+elif s == 'BBB':
     print('No')
 else:
     print('Yes')

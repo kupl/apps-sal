@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 rooms = [int(i) for i in input().split()]
 letters = [int(i) for i in input().split()]
-
 room = rooms[0]
 roomsum = 0
 cnt = 1

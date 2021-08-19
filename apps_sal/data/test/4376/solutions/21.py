@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().strip().split(' ')]
+(n, m) = [int(x) for x in input().strip().split(' ')]
 a = [int(x) for x in input().strip().split(' ')]
 b = [int(x) for x in input().strip().split(' ')]
 s = [1] * (n + 1)

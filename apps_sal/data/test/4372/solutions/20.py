@@ -7,7 +7,7 @@ def gcd(a, b):
 
 def lcm(a, b):
     """a, bの最小公倍数(least common multiple:LCM)を求める"""
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 def multi_gcd(array: list) -> int:
@@ -22,7 +22,7 @@ def multi_lcm(array):
     """arrayのLCMを求める"""
     ans = array[0]
     for i in range(1, len(array)):
-        ans = (ans * array[i]) // gcd(ans, array[i])
+        ans = ans * array[i] // gcd(ans, array[i])
     return ans
 
 

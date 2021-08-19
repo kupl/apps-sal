@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 i = 0
 to_add = 1
 while i < n:

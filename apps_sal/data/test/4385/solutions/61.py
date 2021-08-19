@@ -4,7 +4,7 @@ for i in range(5):
 k = int(input())
 for i in range(4):
     if s[i + 1] - s[0] > k:
-        print(":(")
+        print(':(')
         break
 else:
-    print("Yay!")
+    print('Yay!')

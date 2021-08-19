@@ -8,4 +8,4 @@ for i in range(len(S)):
     else:
         count = 0
         L.append(count)
-print((max(L)))
+print(max(L))

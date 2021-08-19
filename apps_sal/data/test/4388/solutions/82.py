@@ -1,2 +1,2 @@
 a = int(input())
-print((1110 - a))
+print(1110 - a)

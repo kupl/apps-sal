@@ -1,10 +1,11 @@
+MOD = 10 ** 9 + 7
 
 
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
-n, = I()
+(n,) = I()
 s = input()
 res = ''
 i = 0

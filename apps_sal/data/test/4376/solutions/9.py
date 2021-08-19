@@ -2,10 +2,9 @@ from itertools import accumulate
 
 
 def main():
-    n, m = [int(_) for _ in input().split()]
+    (n, m) = [int(_) for _ in input().split()]
     a = [int(_) for _ in input().split()]
     b = [int(_) for _ in input().split()]
-
     i = 0
     acc = 0
     for x in b:

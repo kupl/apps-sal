@@ -1,10 +1,10 @@
 import math
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 neigh = []
 for i in range(n):
     neigh.append([])
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     neigh[a - 1].append(b - 1)
     neigh[b - 1].append(a - 1)
 seen = set()

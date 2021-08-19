@@ -10,7 +10,6 @@ for i in a:
     if d[i] > m:
         m = d[i]
         val = int(i)
-
 ans = []
 ap = ans.append
 for i in range(n - 1, -1, -1):

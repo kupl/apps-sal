@@ -1,6 +1,5 @@
 a = int(input())
-p, q = input().split()
-
+(p, q) = input().split()
 ans = ''
 for i in range(a):
     ans += p[i]

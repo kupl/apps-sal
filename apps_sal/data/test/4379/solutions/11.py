@@ -18,5 +18,5 @@ curr = number
 print(maxx)
 for i in range(n):
     if arr[i] == curr:
-        print(i + 1, end=" ")
+        print(i + 1, end=' ')
         curr += 1

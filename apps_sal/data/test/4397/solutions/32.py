@@ -1,2 +1,2 @@
-N, i = list(map(int, input().split()))
-print((N - i + 1))
+(N, i) = list(map(int, input().split()))
+print(N - i + 1)

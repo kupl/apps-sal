@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,13 +8,11 @@ MOD = 1000000007
 
 
 def main():
-    a, b, c, d, e, k = list(map(int, read().split()))
-
+    (a, b, c, d, e, k) = list(map(int, read().split()))
     if e - a > k:
         print(':(')
     else:
         print('Yay!')
-
     return
 
 

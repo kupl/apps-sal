@@ -5,7 +5,7 @@ d = int(input())
 e = int(input())
 x = int(input())
 ls = [a, b, c, d, e]
-if (e - a) <= x:
-    print("Yay!")
+if e - a <= x:
+    print('Yay!')
 else:
-    print(":(")
+    print(':(')

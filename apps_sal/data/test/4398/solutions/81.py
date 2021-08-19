@@ -4,8 +4,7 @@ import itertools
 
 def resolve(in_):
     N = int(next(in_))
-    S, T = next(in_).strip().split()
-
+    (S, T) = next(in_).strip().split()
     ans = itertools.chain.from_iterable(list(zip(S, T)))
     return ''.join(ans)
 

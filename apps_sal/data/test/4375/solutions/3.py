@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 g = {}
 
@@ -33,8 +33,7 @@ def dfs(v, p=-1):
 
 
 for _ in range(1, n):
-    u, v = map(lambda x: int(x) - 1, input().split())
+    (u, v) = map(lambda x: int(x) - 1, input().split())
     g.setdefault(u, set()).add(v)
     g.setdefault(v, set()).add(u)
-
 print(dfs(0)[0])

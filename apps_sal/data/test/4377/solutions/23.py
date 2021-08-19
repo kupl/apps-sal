@@ -1,8 +1,5 @@
-a, b, c, d = list(map(int, input().split()))
-
-
+(a, b, c, d) = list(map(int, input().split()))
 x = max(a, b, c, d)
-
 if x == a:
     print(x - b, x - c, x - d)
 elif x == b:

@@ -1,1 +1,1 @@
-print(eval((input() + "//2").replace(" ", "+")))
+print(eval((input() + '//2').replace(' ', '+')))

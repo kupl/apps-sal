@@ -9,6 +9,6 @@ for i in range(5):
             ans = True
             break
 if ans == False:
-    print("Yay!")
+    print('Yay!')
 else:
-    print(":(")
+    print(':(')

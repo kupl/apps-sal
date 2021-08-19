@@ -1,6 +1,5 @@
 n = input()
 ans = ''
-
 for i in n:
     if i == '1':
         tmp = '9'
@@ -9,5 +8,4 @@ for i in n:
     else:
         tmp = i
     ans += tmp
-
 print(ans)

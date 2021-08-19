@@ -1,7 +1,7 @@
 n = int(input())
 total = 0
 for i in range(n):
-    value, currency = input().split()
+    (value, currency) = input().split()
     if currency == 'JPY':
         total += float(value)
     else:

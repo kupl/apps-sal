@@ -1,8 +1,8 @@
 import bisect
 import itertools
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 aa = list(map(int, input().split()))
-a, c = [0] + list(itertools.accumulate(aa)), 0
+(a, c) = ([0] + list(itertools.accumulate(aa)), 0)
 for b in input().split():
     b = int(b)
     f = bisect.bisect_left(a, b, lo=c)

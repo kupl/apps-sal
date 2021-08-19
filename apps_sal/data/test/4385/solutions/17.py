@@ -4,8 +4,8 @@ def f():
     for i in range(5):
         for j in range(5):
             if abs(x[i] - x[j]) > k:
-                return":("
-    return "Yay!"
+                return ':('
+    return 'Yay!'
 
 
 print(f())

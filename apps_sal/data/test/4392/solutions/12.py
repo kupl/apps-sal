@@ -1,5 +1,5 @@
 for eps in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     check = [False] * n
@@ -14,8 +14,8 @@ for eps in range(int(input())):
         for j in range(len(a) - i):
             if a[j] > a[j + 1] and check[j]:
                 k = k + 1
-                a[j], a[j + 1] = a[j + 1], a[j]
+                (a[j], a[j + 1]) = (a[j + 1], a[j])
     if a == b:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

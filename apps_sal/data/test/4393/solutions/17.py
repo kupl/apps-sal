@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-ans = ""
+ans = ''
 i = 0
 y = 0
 while i < n:

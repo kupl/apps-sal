@@ -1,5 +1,5 @@
 n = int(input())
 if n > 999:
-    print("ABD")
+    print('ABD')
 else:
-    print("ABC")
+    print('ABC')

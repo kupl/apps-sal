@@ -13,10 +13,9 @@ for i in range(1, n):
                     z.append(j)
                     count += 1
                     break
-            else:
-                if j != a[i]:
-                    z.append(j)
-                    count += 1
-                    break
+            elif j != a[i]:
+                z.append(j)
+                count += 1
+                break
 print(count)
 print(''.join(z))

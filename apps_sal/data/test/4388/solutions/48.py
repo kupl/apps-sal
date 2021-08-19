@@ -5,5 +5,4 @@ for i in n:
         result += '9'
     elif i == '9':
         result += '1'
-
 print(result)

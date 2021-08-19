@@ -1,11 +1,11 @@
-f = ["R", "G", "B"]
+f = ['R', 'G', 'B']
 n = int(input())
 s = input()
 b = n * [0]
 for i in range(len(s)):
-    if s[i] == "R":
+    if s[i] == 'R':
         b[i] = 0
-    elif s[i] == "G":
+    elif s[i] == 'G':
         b[i] = 1
     else:
         b[i] = 2

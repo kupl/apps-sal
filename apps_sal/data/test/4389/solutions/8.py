@@ -21,7 +21,7 @@ def SI():
 t = II()
 for q in range(t):
     s = SI()
-    ans = ""
+    ans = ''
     for i in range(0, len(s), 2):
         ans += s[i]
     print(ans + s[-1])

@@ -1,13 +1,12 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 a = list(map(int, input().split()))
 
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -23,5 +22,4 @@ M = max(a)
 l2 = [M - i for i in a if i != M]
 tot = sum(l2)
 small = gcdL(l2)
-
 print(tot // small, small)

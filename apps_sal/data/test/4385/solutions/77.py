@@ -6,4 +6,4 @@ if a[-1] - a[0] > k:
     s = 0
 else:
     s = 1
-print([":(", "Yay!"][s])
+print([':(', 'Yay!'][s])

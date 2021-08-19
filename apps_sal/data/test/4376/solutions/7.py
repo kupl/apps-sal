@@ -1,10 +1,10 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 j = 0
 mk = a[0]
 i = 0
-while(i != m):
+while i != m:
     if b[i] > mk:
         j += 1
         mk += a[j]

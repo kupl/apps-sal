@@ -1,2 +1,2 @@
-x, y = list(map(int, input().split()))
-print((int(x + y / 2)))
+(x, y) = list(map(int, input().split()))
+print(int(x + y / 2))

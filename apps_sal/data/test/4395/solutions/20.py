@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 c = ['RGB', 'RBG', 'GRB', 'GBR', 'BRG', 'BGR']
-ans = 10**9
+ans = 10 ** 9
 ss = ''
 for base in c:
     x = base * (len(s) // 3 + 1)

@@ -1,7 +1,7 @@
 rate = int(input())
 if rate < 1200:
-    print("ABC")
+    print('ABC')
 elif rate >= 2800:
-    print("AGC")
+    print('AGC')
 else:
-    print("ARC")
+    print('ARC')

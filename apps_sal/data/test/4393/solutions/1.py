@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-ans = ""
+ans = ''
 i = 0
 ad = 1
 while i < n:
