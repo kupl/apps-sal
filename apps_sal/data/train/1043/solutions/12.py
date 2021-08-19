@@ -1,8 +1,7 @@
 try:
-    # cook your code here
     t = int(input())
     while t > 0:
-        n, q = map(int, input().split())
+        (n, q) = map(int, input().split())
         A = [j for j in input().split()]
         tmp = []
         while q > 0:
@@ -11,9 +10,9 @@ try:
         i = 0
         while n > i:
             if A[i] in tmp:
-                print("YES", end=' ')
+                print('YES', end=' ')
             else:
-                print("NO", end=' ')
+                print('NO', end=' ')
             i += 1
         print()
         t -= 1

@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for z in range(t):
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     s = input().split()
     x = []
     for i in range(b):
@@ -10,7 +9,7 @@ for z in range(t):
     l = set(x)
     for i in s:
         if i in l:
-            print("YES", end=' ')
+            print('YES', end=' ')
         else:
-            print("NO", end=' ')
+            print('NO', end=' ')
     print()

@@ -1,27 +1,20 @@
-# import math
-# import sys
-# sys.stdin = open('input.txt', 'r')
-# sys.stdout = open('output.txt', 'w')
-
 for _ in range(int(input())):
-    # k=int(input())
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     if a == b:
         print(0)
-    else:
-        if b > a:
-            c = b - a
-            if c % 2 != 0:
-                print(1)
-            else:
-                c = c // 2
-                if c % 2 == 0:
-                    print(3)
-                else:
-                    print(2)
+    elif b > a:
+        c = b - a
+        if c % 2 != 0:
+            print(1)
         else:
-            c = a - b
-            if c % 2 != 0:
-                print(2)
+            c = c // 2
+            if c % 2 == 0:
+                print(3)
             else:
-                print(1)
+                print(2)
+    else:
+        c = a - b
+        if c % 2 != 0:
+            print(2)
+        else:
+            print(1)

@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for w in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(str, input().split()))
     ans = []
     for q in range(k):

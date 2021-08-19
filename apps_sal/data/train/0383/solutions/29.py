@@ -1,4 +1,5 @@
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         n = len(graph)
         d = collections.defaultdict(list)
@@ -15,7 +16,6 @@ class Solution:
                     vis.add(node)
                     d[node].append(init)
                     Q.append(node)
-        # count the most frequent node
         res = [0] * n
         for key in d:
             if len(d[key]) == 1:

@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x == y:
         print(0)
     elif x > y:
@@ -8,10 +7,9 @@ for _ in range(int(input())):
             print(1)
         else:
             print(2)
+    elif (y - x) % 4 == 0:
+        print(3)
+    elif (y - x) % 2 == 0:
+        print(2)
     else:
-        if (y - x) % 4 == 0:
-            print(3)
-        elif (y - x) % 2 == 0:
-            print(2)
-        else:
-            print(1)
+        print(1)

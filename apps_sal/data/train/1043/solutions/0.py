@@ -1,6 +1,6 @@
 test_case = int(input())
 for w in range(test_case):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(str, input().split()))
     ans = []
     for q in range(k):
@@ -11,4 +11,4 @@ for w in range(test_case):
             print('YES', end=' ')
         else:
             print('NO', end=' ')
-    print()  # cook your dish here
+    print()

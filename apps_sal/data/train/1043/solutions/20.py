@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     ns = [i for i in input().split()]
     d = {}
     for i in ns:
@@ -12,8 +11,7 @@ for _ in range(int(input())):
                 d[j] = True
     for i in ns:
         if d[i] == True:
-            print("YES", end=' ')
+            print('YES', end=' ')
         else:
-            print("NO", end=' ')
-
+            print('NO', end=' ')
     print()
