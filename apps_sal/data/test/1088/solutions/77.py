@@ -38,13 +38,10 @@ class UnionFindTree:
         """
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.par[x] > self.par[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.par[x] += self.par[y]
         self.par[y] = x
 
@@ -72,14 +69,11 @@ class UnionFindTree:
         return -self.par[self.find(x)]
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(N)]
-
 mod = 998244353
-
 uf1 = UnionFindTree(N)
 uf2 = UnionFindTree(N)
-
 for i in range(N):
     for j in range(i + 1, N):
         flag = True
@@ -88,7 +82,6 @@ for i in range(N):
                 flag = False
         if flag:
             uf1.union(i, j)
-
 for i in range(N):
     for j in range(i + 1, N):
         flag = True
@@ -97,16 +90,13 @@ for i in range(N):
                 flag = False
         if flag:
             uf2.union(i, j)
-
 l = [1]
 for i in range(1, N + 1):
     l.append(l[-1] * i % mod)
-
 res = 1
 for i in range(N):
     if i == uf1.find(i):
         res = res * l[uf1.size(i)] % mod
     if i == uf2.find(i):
         res = res * l[uf2.size(i)] % mod
-
 print(res)

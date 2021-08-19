@@ -1,5 +1,4 @@
-n, d = map(int, input().split())
-
+(n, d) = map(int, input().split())
 days = 0
 max_days = 0
 for i in range(d):

@@ -1,8 +1,7 @@
 def main():
     from collections import defaultdict
-
     d = defaultdict(int)
-    d[(0, 0)] += 1
+    d[0, 0] += 1
     n = int(input())
     s = input()
     x = y = 0
@@ -16,9 +15,8 @@ def main():
             y += 1
         else:
             y -= 1
-        res += d[(x, y)]
-        d[(x, y)] += 1
-
+        res += d[x, y]
+        d[x, y] += 1
     print(res)
 
 

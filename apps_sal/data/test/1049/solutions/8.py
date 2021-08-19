@@ -1,5 +1,5 @@
 from sys import stdin, stdout
-e, n = map(int, stdin.readline().split())
+(e, n) = map(int, stdin.readline().split())
 cnt = 0
 ans = 0
 for i in range(n):

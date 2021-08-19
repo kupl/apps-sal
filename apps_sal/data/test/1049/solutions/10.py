@@ -1,8 +1,6 @@
-n, d = list(map(int, input().split()))
-
+(n, d) = list(map(int, input().split()))
 max_stroke = 0
 current_stroke = 0
-
 for i in range(d):
     schedule = input()
     if '0' in schedule:
@@ -11,5 +9,4 @@ for i in range(d):
             max_stroke = current_stroke
     else:
         current_stroke = 0
-
 print(max_stroke)

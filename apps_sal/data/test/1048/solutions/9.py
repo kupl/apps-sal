@@ -2,11 +2,11 @@ n = int(input())
 s = input()
 x = [0 for i in range(4)]
 for i in range(n):
-    if s[i] == "U":
+    if s[i] == 'U':
         x[0] += 1
-    elif s[i] == "D":
+    elif s[i] == 'D':
         x[1] += 1
-    elif s[i] == "L":
+    elif s[i] == 'L':
         x[2] += 1
     else:
         x[3] += 1

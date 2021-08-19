@@ -5,7 +5,7 @@ def divisors(n):
     ret1 = []
     ret2 = []
     i = 1
-    while i**2 <= N:
+    while i ** 2 <= N:
         if n % i == 0:
             ret1 += [i]
             ret2 += [n // i]
@@ -24,6 +24,4 @@ for k in ans2_cand:
         n = n // k
     if n % k == 1:
         ans2 += 1
-
-
 print(len(ans1) + ans2 - 1)

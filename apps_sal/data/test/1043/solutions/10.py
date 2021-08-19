@@ -2,14 +2,12 @@ def main():
     import sys
     from operator import itemgetter
     input = sys.stdin.readline
-
     N = int(input())
     K = N.bit_length() - 1
     A_raw = list(map(int, input().split()))
-
     flg = 1
     A = []
-    for i, a in enumerate(A_raw):
+    for (i, a) in enumerate(A_raw):
         if flg:
             if a == -1:
                 flg = 0
@@ -25,7 +23,7 @@ def main():
             if dp[i][j] < inf:
                 if j < K:
                     dp[i + 1][j + 1] = min(dp[i + 1][j + 1], dp[i][j] + A[N - 2 - i])
-                if N - 2**(K - j) > i:
+                if N - 2 ** (K - j) > i:
                     dp[i + 1][j] = min(dp[i + 1][j], dp[i][j])
     print(dp[-1][-1])
 

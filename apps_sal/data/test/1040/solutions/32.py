@@ -1,7 +1,6 @@
 l = int(input())
 text = input()
-tgt, ans = 'fox', ''
-
+(tgt, ans) = ('fox', '')
 for i in range(l):
     ans += text[i]
     if ans[-3:] == tgt:

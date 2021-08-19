@@ -13,7 +13,6 @@ def main():
                 count += 1
     if sqrt ** 2 == n - 1:
         count -= 1
-
     print(count)
 
 

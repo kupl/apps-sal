@@ -1,13 +1,12 @@
 def count(s):
     c = 0
-
     for i in range(len(s) - 1):
         if s[i + 1] == s[i]:
             c += 1
     return c
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 a = [str(c) for c in s]
 cmax = n - 1
@@ -23,5 +22,4 @@ while 1:
         k -= 1
     else:
         break
-
 print(p)

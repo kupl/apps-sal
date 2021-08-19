@@ -14,7 +14,6 @@ for i in range(n):
         elif calls[d[i]] == 3:
             invalid = True
             break
-
 if invalid:
     print(-1)
 else:

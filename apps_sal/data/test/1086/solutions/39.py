@@ -1,11 +1,10 @@
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 A = [[int(i) for i in input().split()] for j in range(H)]
 B = [[int(i) for i in input().split()] for j in range(H)]
 dp = [[0 for j in range(W)] for i in range(H)]
 M = 161 * 161
-dp[0][0] |= 1 << (A[0][0] - B[0][0] + M)
-dp[0][0] |= 1 << (-A[0][0] + B[0][0] + M)
-
+dp[0][0] |= 1 << A[0][0] - B[0][0] + M
+dp[0][0] |= 1 << -A[0][0] + B[0][0] + M
 for i in range(H):
     for j in range(W):
         dij = abs(A[i][j] - B[i][j])
@@ -17,6 +16,6 @@ for i in range(H):
             dp[i][j] |= dp[i][j - 1] << dij
 ans = []
 for k in range(2 * M + 1):
-    if (1 << k) & dp[-1][-1] != 0:
+    if 1 << k & dp[-1][-1] != 0:
         ans.append(abs(k - M))
-print((min(ans)))
+print(min(ans))

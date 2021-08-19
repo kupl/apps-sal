@@ -1,25 +1,24 @@
 def XorWorld():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a % 2 == 0 and b % 2 == 0:
-        if ((b - a) // 2) % 2 == 0:
-            print((0 ^ b))
+        if (b - a) // 2 % 2 == 0:
+            print(0 ^ b)
         else:
-            print((1 ^ b))
+            print(1 ^ b)
     elif a % 2 == 0:
-        if ((b - a + 1) // 2) % 2 == 0:
-            print((0))
+        if (b - a + 1) // 2 % 2 == 0:
+            print(0)
         else:
-            print((1))
+            print(1)
     elif b % 2 == 0:
-        if ((b - a - 1) // 2) % 2 == 0:
-            print((0 ^ a ^ b))
+        if (b - a - 1) // 2 % 2 == 0:
+            print(0 ^ a ^ b)
         else:
-            print((1 ^ a ^ b))
+            print(1 ^ a ^ b)
+    elif (b - a) // 2 % 2 == 0:
+        print(0 ^ a)
     else:
-        if ((b - a) // 2) % 2 == 0:
-            print((0 ^ a))
-        else:
-            print((1 ^ a))
+        print(1 ^ a)
 
 
 def __starting_point():

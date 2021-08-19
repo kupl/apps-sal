@@ -1,4 +1,4 @@
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 
 
 def cmb(x, y):
@@ -7,10 +7,10 @@ def cmb(x, y):
     for i in range(1, y + 1):
         X = X * (x + 1 - i) % MOD
         Y = Y * i % MOD
-    return (X * pow(Y, MOD - 2, MOD)) % MOD
+    return X * pow(Y, MOD - 2, MOD) % MOD
 
 
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 A = cmb(M * N - 2, K - 2)
 ans = 0
 for d in range(1, N):

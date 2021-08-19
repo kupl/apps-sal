@@ -1,4 +1,5 @@
-def readln(): return list(map(int, input().rstrip().split()))
+def readln():
+    return list(map(int, input().rstrip().split()))
 
 
 n = int(input())

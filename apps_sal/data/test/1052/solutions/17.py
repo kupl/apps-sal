@@ -5,7 +5,7 @@ def factorial(k):
     return ans
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ans = 0
 
 
@@ -22,6 +22,4 @@ for i in range(2, k + 1):
         coeff = -1 if j % 2 else 1
         si += coeff / factorial(j)
     ans += A(n, n - i) * si
-
-
 print(int(ans + 1.5))

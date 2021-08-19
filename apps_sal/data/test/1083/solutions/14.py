@@ -1,5 +1,5 @@
 n = int(input())
-whSumv = (n * (n + 1)) // 2
+whSumv = n * (n + 1) // 2
 sumv = 0
 ans = []
 for i in reversed(range(1, n + 1)):

@@ -1,6 +1,6 @@
 t = int(input())
 a = input()
-l, r, d, u = 0, 0, 0, 0
+(l, r, d, u) = (0, 0, 0, 0)
 for i in a:
     if i == 'L':
         l += 1

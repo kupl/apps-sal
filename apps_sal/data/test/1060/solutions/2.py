@@ -3,7 +3,6 @@ def clique_in_the_divisibility_graph(n, a):
     L = [0] * MAX
     for v in a:
         L[v] = 1
-
     for i in range(n):
         if L[a[i]]:
             for x in range(a[i] * 2, MAX, a[i]):

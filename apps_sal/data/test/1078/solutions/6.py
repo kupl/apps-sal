@@ -1,7 +1,5 @@
 n = int(input())
-
 cnt = 0
-
 for _ in range(n):
     v = int(input())
     if v % 2 == 0:

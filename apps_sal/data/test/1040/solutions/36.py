@@ -1,11 +1,10 @@
 def main():
     _ = int(input())
     s = input()
-
     st = []
     for c in s:
         if c == 'x':
-            if len(st) >= 2 and st[-1] == 'o' and st[-2] == 'f':
+            if len(st) >= 2 and st[-1] == 'o' and (st[-2] == 'f'):
                 for _ in range(2):
                     st.pop()
                 continue

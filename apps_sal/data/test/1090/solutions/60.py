@@ -7,12 +7,21 @@ import itertools
 from collections import Counter
 from collections import deque
 from operator import itemgetter
-def input(): return sys.stdin.readline().strip()
-def mp(): return list(map(int, input().split()))
-def lmp(): return list(map(int, input().split()))
 
 
-n, k = mp()
+def input():
+    return sys.stdin.readline().strip()
+
+
+def mp():
+    return list(map(int, input().split()))
+
+
+def lmp():
+    return list(map(int, input().split()))
+
+
+(n, k) = mp()
 s = list(input())
 ans = []
 c = 1
@@ -24,6 +33,6 @@ for i in range(1, n):
         c = 1
 ans.append(c)
 if len(ans) // 2 <= k:
-    print((n - 1))
+    print(n - 1)
 else:
-    print((n - len(ans) + 2 * k))
+    print(n - len(ans) + 2 * k)

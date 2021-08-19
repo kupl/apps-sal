@@ -1,6 +1,5 @@
 n = int(input())
 s = list(input())
-
 d = 'UDLR'
 cnt = {}
 for c in d:

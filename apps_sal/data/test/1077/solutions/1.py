@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 count_good = [[0, i + 1] for i in range(m)]
 bad = 0
@@ -22,7 +22,7 @@ minn = count_good[0][0]
 bad_Cnt = 0
 while minn != ideal:
     j = 0
-    while j < len(count_good) and count_good[j][0] == minn and bad > 0:
+    while j < len(count_good) and count_good[j][0] == minn and (bad > 0):
         count_good[j][0] += 1
         A[bad_places[bad_Cnt]] = count_good[j][1]
         bad_Cnt += 1

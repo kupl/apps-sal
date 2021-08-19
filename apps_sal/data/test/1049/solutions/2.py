@@ -1,5 +1,5 @@
-n, d = list(map(int, input().split()))
-check = "1" * n
+(n, d) = list(map(int, input().split()))
+check = '1' * n
 ans = 0
 cur = 0
 for i in range(d):

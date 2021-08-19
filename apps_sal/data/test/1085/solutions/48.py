@@ -14,7 +14,7 @@ def f(N, i):
 
 ans = 0
 i = 1
-while i <= N**0.5:
+while i <= N ** 0.5:
     if N % i > 0:
         i += 1
         continue
@@ -23,9 +23,8 @@ while i <= N**0.5:
     if i % (N // i) == 1:
         ans += 1
     i += 1
-
 i = 1
-while i <= (N - 1)**0.5:
+while i <= (N - 1) ** 0.5:
     if (N - 1) % i > 0:
         i += 1
         continue
@@ -34,5 +33,4 @@ while i <= (N - 1)**0.5:
     if N % ((N - 1) // i) == 1:
         ans += 1
     i += 1
-
 print(ans)

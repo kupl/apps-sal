@@ -1,23 +1,20 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 if a % 2 == 0:
     if (b - a + 1) % 2 == 0:
         if (b - a + 1) % 4 == 0:
-            print((0))
+            print(0)
         else:
-            print((1))
+            print(1)
+    elif (b - a) % 4 == 0:
+        print(0 ^ b)
     else:
-        if (b - a) % 4 == 0:
-            print((0 ^ b))
-        else:
-            print((1 ^ b))
+        print(1 ^ b)
+elif (b - a) % 2 == 0:
+    if (b - a) % 4 == 0:
+        print(a ^ 0)
+    else:
+        print(a ^ 1)
+elif (b - a - 1) % 4 == 0:
+    print(0 ^ b ^ a)
 else:
-    if (b - a) % 2 == 0:
-        if (b - a) % 4 == 0:
-            print((a ^ 0))
-        else:
-            print((a ^ 1))
-    else:
-        if (b - a - 1) % 4 == 0:
-            print((0 ^ b ^ a))
-        else:
-            print((1 ^ b ^ a))
+    print(1 ^ b ^ a)

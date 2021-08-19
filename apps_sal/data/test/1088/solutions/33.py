@@ -1,5 +1,5 @@
 class UnionFind:
-    '''
+    """
     UnionFind(n) : n頂点0辺の無向グラフを構築する O(n)
       p:親ノード番号(代表元以外)、木のサイズの負数(代表元)を格納
     leader(a)    : aの属する代表元を返す O(α(n))
@@ -8,7 +8,7 @@ class UnionFind:
     size(a)      : aの属する連結成分のサイズを返す O(α(n))
     count()      : グループ数を返す O(n)
     groups()     : グラフをsetにグループ分けして返す O(n)
-    '''
+    """
 
     def __init__(self, n):
         self.n = n
@@ -25,7 +25,7 @@ class UnionFind:
         if x == y:
             return x
         if self.p[x] > self.p[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.p[x] += self.p[y]
         self.p[y] = x
         return x
@@ -37,7 +37,7 @@ class UnionFind:
         return -self.p[self.leader(a)]
 
     def count(self):
-        return sum(i < 0 for i in self.p)
+        return sum((i < 0 for i in self.p))
 
     def groups(self):
         leader_buf = [0] * self.n
@@ -52,17 +52,18 @@ class UnionFind:
         return res
 
 
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, k = f()
+(n, k) = f()
 A = [[*f()] for _ in range(n)]
-ufh, ufw = UnionFind(n), UnionFind(n)
+(ufh, ufw) = (UnionFind(n), UnionFind(n))
 for y in range(n):
     for x in range(y):
-        if all(A[h][x] + A[h][y] <= k for h in range(n)):
+        if all((A[h][x] + A[h][y] <= k for h in range(n))):
             ufw.merge(x, y)
-        if all(A[x][w] + A[y][w] <= k for w in range(n)):
+        if all((A[x][w] + A[y][w] <= k for w in range(n))):
             ufh.merge(x, y)
 M = 998244353
 F = [1]

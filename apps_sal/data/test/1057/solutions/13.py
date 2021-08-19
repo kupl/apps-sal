@@ -4,7 +4,7 @@ MOD = 998244353
 left = 0
 right = 0
 right_1 = 0
-a, b, c = True, True, True
+(a, b, c) = (True, True, True)
 i = 0
 while (a or b or c) and i < n:
     if a and s[i] == s[0]:

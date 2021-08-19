@@ -1,1 +1,1 @@
-print(format(int(input()), 'o').count("1"))
+print(format(int(input()), 'o').count('1'))

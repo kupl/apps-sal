@@ -19,6 +19,7 @@ MOD = 998244353
 
 
 class UnionFind:
+
     def __init__(self, N):
         self.par = [i for i in range(N)]
         self.siz = [1 for _ in range(N)]
@@ -36,15 +37,14 @@ class UnionFind:
         b = self.find(b)
         if a == b:
             return 0
+        elif self.rank[a] > self.rank[b]:
+            self.par[b] = a
+            self.siz[a] += self.siz[b]
         else:
-            if self.rank[a] > self.rank[b]:
-                self.par[b] = a
-                self.siz[a] += self.siz[b]
-            else:
-                self.par[a] = b
-                self.siz[b] += self.siz[a]
-                if self.rank[a] == self.rank[b]:
-                    self.rank[b] += 1
+            self.par[a] = b
+            self.siz[b] += self.siz[a]
+            if self.rank[a] == self.rank[b]:
+                self.rank[b] += 1
 
     def size(self, a):
         return self.siz[self.find(a)]
@@ -53,14 +53,13 @@ class UnionFind:
         return self.find(a) == self.find(b)
 
 
-N, K = MAP()
+(N, K) = MAP()
 a = [LI() for _ in range(N)]
 UFg = UnionFind(N)
 UFr = UnionFind(N)
 fac = [1] * (N + 1)
 for i in range(2, N + 1):
     fac[i] = fac[i - 1] * i % MOD
-
 for i in range(N):
     for j in range(i):
         isokg = True
@@ -74,13 +73,11 @@ for i in range(N):
             UFg.union(i, j)
         if isokr:
             UFr.union(i, j)
-
 dicg = Counter([UFg.find(i) for i in range(N)])
 dicr = Counter([UFr.find(i) for i in range(N)])
-
-resg, resr = 1, 1
-for x, size in dicg.items():
+(resg, resr) = (1, 1)
+for (x, size) in dicg.items():
     resg = resg * fac[size] % MOD
-for y, size in dicr.items():
+for (y, size) in dicr.items():
     resr = resr * fac[size] % MOD
 print(resg * resr % MOD)

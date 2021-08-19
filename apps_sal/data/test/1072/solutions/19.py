@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = [[c for c in input()] for i in range(n)]
     che = [[0 for i in range(n + 2)] for j in range(n + 2)]
     ans = 0

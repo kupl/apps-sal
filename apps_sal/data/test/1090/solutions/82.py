@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 lsS = list(input())
 ans = N
 if lsS[0] == 'R':

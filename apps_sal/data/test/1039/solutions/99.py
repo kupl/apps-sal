@@ -1,17 +1,12 @@
 import sys
 sys.setrecursionlimit(200000)
-
 N = int(input())
 adj = {}
-
 adj = {i + 1: [] for i in range(N)}
-
 for i in range(N - 1):
-    a, b, c = map(int, input().split())
-
+    (a, b, c) = map(int, input().split())
     adj[a].append((b, c))
     adj[b].append((a, c))
-
 dis = [0] * N
 
 
@@ -23,15 +18,13 @@ def dfs(k, u, d):
     これらのじょうけんのもとでdisを更新する
     """
     dis[k - 1] = d
-
-    for p, pk_dis in adj[k]:
+    for (p, pk_dis) in adj[k]:
         if p != u:
             dfs(p, k, d + pk_dis)
 
 
-Q, K = map(int, input().split())
+(Q, K) = map(int, input().split())
 dfs(K, -1, 0)
-
 for i in range(Q):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     print(dis[x - 1] + dis[y - 1])

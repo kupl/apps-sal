@@ -1,11 +1,10 @@
 def resolve():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     dp = [[-1 for _ in range(2)] for __ in range(45)]
     dp[0][0] = 0
-
     for i in range(40):
-        mask = 1 << (40 - i - 1)
+        mask = 1 << 40 - i - 1
         one_num = 0
         for a in A:
             if a & mask:

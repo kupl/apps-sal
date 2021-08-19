@@ -1,5 +1,4 @@
 n = int(input())
-
 a = [i for i in range(10000)]
 i = 0
 res = 0

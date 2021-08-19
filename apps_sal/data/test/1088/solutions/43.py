@@ -3,7 +3,7 @@ fact = [0] * 100
 fact[0] = 1
 for i in range(1, 100):
     fact[i] = fact[i - 1] * i % mo
-n, K = map(int, input().split())
+(n, K) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(n)]
 fa = [i for i in range(n)]
 fc = [1 for i in range(n)]

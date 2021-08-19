@@ -1,5 +1,5 @@
 def main():
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     if A == B:
         return A
     elif A % 2 == 0 and B % 2 == 0:
@@ -28,4 +28,4 @@ def main():
             return 1 ^ A
 
 
-print((main()))
+print(main())

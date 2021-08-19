@@ -1,6 +1,6 @@
 n = int(input())
-ns = int(n**0.5)
-nms = int((n - 1)**0.5)
+ns = int(n ** 0.5)
+nms = int((n - 1) ** 0.5)
 p = [n]
 for i in range(2, ns + 1):
     if n % i == 0:
@@ -12,7 +12,7 @@ for i in range(2, ns + 1):
 def chd(x, k):
     while x % k == 0:
         x = x // k
-    return int((x % k) == 1)
+    return int(x % k == 1)
 
 
 count = 0

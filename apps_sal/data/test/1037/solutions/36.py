@@ -1,10 +1,10 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-    AA = [(v, i) for i, v in enumerate(A)]
+    AA = [(v, i) for (i, v) in enumerate(A)]
     AA.sort(reverse=True)
     dp = [[0] * (N + 1) for _ in range(N + 1)]
-    for i, (a, b) in enumerate(AA, start=1):
+    for (i, (a, b)) in enumerate(AA, start=1):
         for x in range(i + 1):
             y = i - x
             if y == 0:
@@ -19,4 +19,4 @@ def main():
     return r
 
 
-print((main()))
+print(main())

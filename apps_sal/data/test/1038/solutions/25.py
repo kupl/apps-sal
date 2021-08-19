@@ -10,5 +10,5 @@ def r(n):
         return 0
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 print(r(a - 1) ^ r(b))

@@ -1,10 +1,10 @@
 def div(n):
-    r = int(n**(1 / 2))
+    r = int(n ** (1 / 2))
     for i in range(1, r + 1):
         if n % i == 0:
             yield i
             if i * i != n:
-                yield n // i
+                yield (n // i)
 
 
 n = int(input())
@@ -16,5 +16,4 @@ for i in div(n):
             x //= i
         if x % i == 1:
             count += 1
-
 print(count)

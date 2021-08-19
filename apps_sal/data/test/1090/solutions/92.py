@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
-
 rl = s.count('RL')
 if s[0] == 'L':
     start = 1
@@ -17,4 +16,4 @@ elif a == 0:
     ans = start + end
 elif a <= -1:
     ans = 1
-print((n - ans))
+print(n - ans)

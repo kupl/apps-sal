@@ -1,14 +1,11 @@
 from collections import Counter
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(n)]
 MOD = 998244353
-
 lst1 = [[] for _ in range(n)]
 lst2 = [[] for _ in range(n)]
-
 g1 = [-1] * n
 g2 = [-1] * n
-
 for i in range(n - 1):
     for j in range(i + 1, n):
         jdg1 = True
@@ -18,7 +15,7 @@ for i in range(n - 1):
                 jdg1 = False
             if a[l][i] + a[l][j] > k:
                 jdg2 = False
-            if (not jdg1) and (not jdg2):
+            if not jdg1 and (not jdg2):
                 break
         if jdg1:
             lst1[i].append(j)
@@ -52,24 +49,19 @@ def calc(lst, g):
 
 g1 = calc(lst1, g1)
 cnt1 = Counter(g1)
-
 g2 = calc(lst2, g2)
 cnt2 = Counter(g2)
-
 ans = 1
-
-for i, v in cnt1.items():
+for (i, v) in cnt1.items():
     if i == -1:
         continue
     for j in range(1, v + 1):
-        ans *= (j % MOD)
+        ans *= j % MOD
     ans %= MOD
-
-for i, v in cnt2.items():
+for (i, v) in cnt2.items():
     if i == -1:
         continue
     for j in range(1, v + 1):
-        ans *= (j % MOD)
+        ans *= j % MOD
     ans %= MOD
-
 print(ans)

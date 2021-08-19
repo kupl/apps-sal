@@ -1,9 +1,9 @@
 def main():
     law = 998244353
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     mat = [list(map(int, input().split())) for i in range(n)]
     t_mat = [[mat[j][i] for j in range(n)] for i in range(n)]
-    print(((line_pattern_counter_mod(mat, n, k, law) * line_pattern_counter_mod(t_mat, n, k, law)) % law))
+    print(line_pattern_counter_mod(mat, n, k, law) * line_pattern_counter_mod(t_mat, n, k, law) % law)
     return
 
 
@@ -23,7 +23,7 @@ def line_pattern_counter_mod(mat, n, k, law):
     for m in range(n):
         swappable_count[min_swapable[m]] += 1
     for count in swappable_count:
-        ret = (ret * fact_mod(count, law)) % law
+        ret = ret * fact_mod(count, law) % law
     return ret
 
 
@@ -37,7 +37,7 @@ def swappable(l_1, l_2, n, k):
 def fact_mod(m, law, acc=1):
     if m == 0:
         return acc
-    return fact_mod(m - 1, law, (acc * m) % law)
+    return fact_mod(m - 1, law, acc * m % law)
 
 
 def __starting_point():

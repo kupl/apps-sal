@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = input()
-
 now = S[0]
 a = -1
 for s in S:

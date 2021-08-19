@@ -1,11 +1,11 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 M = 50
 l = len(str(N))
 dp = [[-1] * 2 for _ in range(M + 1)]
 dp[0][0] = 0
 for i in range(M):
-    mask = 1 << (M - i - 1)
+    mask = 1 << M - i - 1
     num = 0
     for j in range(N):
         if A[j] & mask:
@@ -20,4 +20,4 @@ for i in range(M):
             dp[i + 1][0] = max(dp[i + 1][0], dp[i][0] + c1)
         else:
             dp[i + 1][0] = max(dp[i + 1][0], dp[i][0] + c0)
-print((max(dp[M][0], dp[M][1])))
+print(max(dp[M][0], dp[M][1]))

@@ -1,7 +1,6 @@
 from collections import defaultdict, deque
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 l = list(map(int, input().split()))
 pos = 0

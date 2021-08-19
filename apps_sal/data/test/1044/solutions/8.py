@@ -5,9 +5,8 @@ d = 2
 for i in range(a):
     if b[i] == 1:
         print(d)
+    elif b[i] % 2 == 0:
+        print(c[d])
+        d = c[d]
     else:
-        if b[i] % 2 == 0:
-            print(c[d])
-            d = c[d]
-        else:
-            print(d)
+        print(d)

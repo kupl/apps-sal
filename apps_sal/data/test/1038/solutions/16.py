@@ -10,26 +10,37 @@ from time import time
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
 
 
-a, b = MAP()
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+(a, b) = MAP()
 
 
 def f(n):
     if n % 2 == 1:
-        if ((n + 1) // 2) % 2 == 1:
+        if (n + 1) // 2 % 2 == 1:
             return 1
         else:
             return 0
+    elif n // 2 % 2 == 1:
+        return n ^ 1
     else:
-        if (n // 2) % 2 == 1:
-            return n ^ 1
-        else:
-            return n
+        return n
 
 
 ans = f(a - 1) ^ f(b)

@@ -1,7 +1,6 @@
-
 def main():
     n = int(input())
-    items = input().split(" ")
+    items = input().split(' ')
     s = 0
     for p in items:
         s += int(p) + 1

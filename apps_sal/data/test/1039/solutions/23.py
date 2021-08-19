@@ -1,9 +1,8 @@
 from collections import deque
-
 N = int(input())
 G = [{} for _ in range(N + 1)]
 for i in range(N - 1):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     G[a][b] = G[b][a] = c
 
 
@@ -26,8 +25,8 @@ def bfs(s):
     return d
 
 
-Q, K = map(int, input().split())
+(Q, K) = map(int, input().split())
 d = bfs(K)
 for q in range(Q):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     print(d[x] + d[y])

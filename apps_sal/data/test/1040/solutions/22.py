@@ -1,8 +1,8 @@
 input()
 a = input()
-res = ""
+res = ''
 for c in a:
     res += c
-    if res.endswith("fox"):
+    if res.endswith('fox'):
         res = res[:-3]
 print(len(res))

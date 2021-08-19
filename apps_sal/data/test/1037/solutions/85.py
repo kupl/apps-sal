@@ -1,11 +1,11 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-    AA = [(v, i) for i, v in enumerate(A)]
+    AA = [(v, i) for (i, v) in enumerate(A)]
     AA.sort(reverse=True)
     dp = [[0] * (N + 1) for _ in range(N + 1)]
     for len in range(1, N + 1):
-        val, index = AA[len - 1]
+        (val, index) = AA[len - 1]
         for x in range(0, len + 1):
             y = len - x
             if x == 0:

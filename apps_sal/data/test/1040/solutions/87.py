@@ -1,6 +1,5 @@
 N = int(input())
 s = input()
-
 t = ''
 for i in s:
     t += i

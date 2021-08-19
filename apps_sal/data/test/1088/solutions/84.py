@@ -1,9 +1,9 @@
 mod = 998244353
 fact = [1]
 for i in range(1, 51):
-    x = (i * fact[-1]) % mod
+    x = i * fact[-1] % mod
     fact.append(x)
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 
 
 def dfs(node):
@@ -32,15 +32,12 @@ for i in range(n):
         if e:
             m[i].append(j)
             m[j].append(i)
-
 a = 1
 b = 1
 vis = [0] * n
 for i in range(n):
     x = dfs(i)
-    a = (a * fact[x]) % mod
-
-
+    a = a * fact[x] % mod
 m = []
 for i in range(n):
     m.append([])
@@ -57,6 +54,6 @@ for i in range(n):
 vis = [0] * n
 for i in range(n):
     x = dfs(i)
-    b = (b * fact[x]) % mod
-ans = (a * b) % mod
+    b = b * fact[x] % mod
+ans = a * b % mod
 print(ans)

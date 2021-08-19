@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 c = 0
 maxc = 0
 while d > 0:

@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -7,6 +6,7 @@ mod = 998244353
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -26,7 +26,7 @@ class UnionFind:
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -45,7 +45,7 @@ class UnionFind:
         """
         edge.sort()
         cost_sum = 0
-        for cost, node1, node2 in edge:
+        for (cost, node1, node2) in edge:
             if not self.same(node1, node2):
                 cost_sum += cost
                 self.union(node1, node2)
@@ -53,9 +53,8 @@ class UnionFind:
 
 
 def resolve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     A = [list(map(int, input().split())) for _ in range(n)]
-
     uf_row = UnionFind(n)
     for x in range(n):
         for y in range(x + 1, n):
@@ -64,7 +63,6 @@ def resolve():
                     break
             else:
                 uf_row.union(x, y)
-
     uf_col = UnionFind(n)
     for x in range(n):
         for y in range(x + 1, n):
@@ -73,26 +71,21 @@ def resolve():
                     break
             else:
                 uf_col.union(x, y)
-
     fact = [1, 1]
     for i in range(2, n + 1):
         fact.append(fact[-1] * i % mod)
-
     size_row = [1] * n
     for i in range(n):
         root = uf_row.find(i)
         size_row[root] = uf_row.size(root)
-
     size_col = [1] * n
     for i in range(n):
         root = uf_col.find(i)
         size_col[root] = uf_col.size(root)
-
     tot_row = tot_col = 1
-    for i, j in zip(size_row, size_col):
+    for (i, j) in zip(size_row, size_col):
         tot_row = tot_row * fact[i] % mod
         tot_col = tot_col * fact[j] % mod
-
     res = tot_row * tot_col % mod
     print(res)
 

@@ -1,10 +1,9 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = []
 for i in range(n):
     a.append(list(map(int, input().split())))
 mod = 998244353
 ans = 1
-
 parent = [i + 1 for i in range(n)]
 rank = [0 for i in range(n)]
 size = [1 for i in range(n)]
@@ -47,11 +46,9 @@ for i in range(n):
         for j in range(size[i]):
             ans *= j + 1
             ans %= mod
-
 parent = [i + 1 for i in range(n)]
 rank = [0 for i in range(n)]
 size = [1 for i in range(n)]
-
 for i in range(n):
     for j in range(i + 1, n):
         flag = True

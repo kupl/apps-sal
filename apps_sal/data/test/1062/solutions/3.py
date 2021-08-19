@@ -1,4 +1,4 @@
-alth = "abcdefghijklmnopqrstuvwxyz"
+alth = 'abcdefghijklmnopqrstuvwxyz'
 n = int(input())
 S = input()
 T = input()

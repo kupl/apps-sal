@@ -4,7 +4,6 @@ m = int(line[1])
 data = []
 for i in range(n):
     data.append(input())
-
 x = [1 for i in range(n)]
 delete = 0
 for i in range(m):
@@ -15,11 +14,10 @@ for i in range(m):
             dum[j] = 0
         elif data[j][i] == data[j - 1][i]:
             dum[j] = 1
-        else:
-            if x[j] == 1:
-                delete += 1
-                status = 0
-                break
+        elif x[j] == 1:
+            delete += 1
+            status = 0
+            break
     if status == 1:
         for j in range(len(dum)):
             if dum[j] == 0:

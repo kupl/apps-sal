@@ -18,4 +18,4 @@ for i in make_divisors(n):
             j //= i
         if (j - 1) % i == 0:
             divisors.append(i)
-print((ans + len(divisors) - 1))
+print(ans + len(divisors) - 1)

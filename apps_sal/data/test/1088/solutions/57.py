@@ -1,10 +1,10 @@
 MOD = 998244353
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 AMat = [list(map(int, input().split())) for _ in range(N)]
 
 
 class UnionFind:
+
     def __init__(self, N):
         self.parent = list(range(N))
         self.rank = [0] * N
@@ -48,7 +48,6 @@ for i in range(N - 1):
                 break
         if flag:
             uf_x.unite(i, j)
-
 uf_y = UnionFind(N)
 for i in range(N - 1):
     for j in range(i + 1, N):
@@ -59,15 +58,12 @@ for i in range(N - 1):
                 break
         if flag:
             uf_y.unite(i, j)
-
 ans_list1 = [0] * N
 for i in range(N):
     ans_list1[uf_x.find(i)] += 1
-
 ans_list2 = [0] * N
 for i in range(N):
     ans_list2[uf_y.find(i)] += 1
-
 ans_list = ans_list1 + ans_list2
 ans = 1
 for a in ans_list:
@@ -75,5 +71,4 @@ for a in ans_list:
         for x in range(1, a + 1):
             ans *= x
             ans %= MOD
-
-print((ans % MOD))
+print(ans % MOD)

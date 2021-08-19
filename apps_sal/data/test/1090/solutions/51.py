@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = list(input())
 lr = 0
 rl = 0
@@ -10,7 +10,6 @@ for i in range(n - 1):
         rl += 1
     else:
         ans += 1
-
 if lr >= k and rl >= k:
     ans += 2 * k
 elif lr == rl:
@@ -18,5 +17,4 @@ elif lr == rl:
 else:
     num = max(lr, rl)
     ans += 2 * num - 1
-
 print(ans)

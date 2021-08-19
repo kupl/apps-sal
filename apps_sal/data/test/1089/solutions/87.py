@@ -1,12 +1,10 @@
-
-
 def modinv(a, mod):
     b = mod
-    x, u = 1, 0
+    (x, u) = (1, 0)
     while b:
         q = a // b
-        a, b = b, a - q * b
-        x, u = u, x - q * u
+        (a, b) = (b, a - q * b)
+        (x, u) = (u, x - q * u)
     x %= mod
     return x
 
@@ -27,20 +25,16 @@ def mod_nCr(n, r, mod):
     return fac[n] * (facinv[r] * facinv[n - r] % mod) % mod
 
 
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 fac = [0] * (N * M)
 facinv = [0] * (N * M)
 inv = [0] * (N * M)
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 mod_nCr_init(N * M, mod)
 C = mod_nCr(N * M - 2, K - 2, mod)
-
 ans = 0
 for _ in [0, 0]:
     for d in range(1, N):
         ans += (N - d) * M * M * d * C
-
-    N, M = M, N
-
-print((ans % mod))
+    (N, M) = (M, N)
+print(ans % mod)

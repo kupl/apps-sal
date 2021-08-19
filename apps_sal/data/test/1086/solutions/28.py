@@ -1,11 +1,11 @@
 import numpy as np
-H, W, *L = map(int, open(0).read().split())
+(H, W, *L) = map(int, open(0).read().split())
 A = L[:H * W]
 B = L[H * W:]
-C = [abs(b - a) for a, b in zip(A, B)]
+C = [abs(b - a) for (a, b) in zip(A, B)]
 U = max(C) * (H + W)
 N = 2 * U + 1
-INF = 10**10
+INF = 10 ** 10
 dp = np.zeros((H, W, N), dtype=bool)
 dp[0, 0, C[0] + U] = True
 for i in range(1, W):

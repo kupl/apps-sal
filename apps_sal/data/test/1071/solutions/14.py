@@ -1,6 +1,6 @@
 from math import ceil
-a, b, c = map(int, input().split())
-d, e, f = map(int, input().split())
+(a, b, c) = map(int, input().split())
+(d, e, f) = map(int, input().split())
 n = int(input())
 k = a + b + c
 l = d + e + f

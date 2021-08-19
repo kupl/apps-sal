@@ -13,6 +13,6 @@ for c in s[::-1]:
         break
     r2 += 1
 if f == p:
-    print((r1 * r2) % 998244353)
+    print(r1 * r2 % 998244353)
 else:
     print((r1 + r2 - 1) % 998244353)

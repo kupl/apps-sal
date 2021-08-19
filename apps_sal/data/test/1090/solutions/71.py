@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = input()
 RL = 0
 for i in range(N - 1):
@@ -12,4 +12,4 @@ if K >= RL:
         egde = max(1, egde - K)
 else:
     RL -= K
-print((N - 2 * RL - egde))
+print(N - 2 * RL - egde)

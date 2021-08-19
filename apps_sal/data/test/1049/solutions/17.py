@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 ch = []
 c_ch = 0
 for i in range(d):

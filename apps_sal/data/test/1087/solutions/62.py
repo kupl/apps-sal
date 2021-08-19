@@ -1,5 +1,5 @@
 def solve():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = list(map(int, input().split()))
     digit = len(str(bin(K))) - 2
     digits1 = [0] * digit

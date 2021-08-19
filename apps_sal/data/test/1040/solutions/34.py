@@ -1,8 +1,8 @@
 N = int(input())
 S = input()
-T = ""
+T = ''
 for s in S:
     T += s
-    if T[len(T) - 3:len(T)] == "fox":
+    if T[len(T) - 3:len(T)] == 'fox':
         T = T[:len(T) - 3]
 print(len(T))

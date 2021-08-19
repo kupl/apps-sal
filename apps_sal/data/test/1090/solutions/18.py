@@ -1,6 +1,6 @@
 import sys
 r = sys.stdin.readline
-N, K = map(int, r().split())
+(N, K) = map(int, r().split())
 S = r().strip()
 
 
@@ -15,6 +15,6 @@ def HappyCnt(S):
 
 
 cnt = HappyCnt(S)
-LR = list(S).count("LR")
-RL = list(S).count("RL")
+LR = list(S).count('LR')
+RL = list(S).count('RL')
 print(min(N - 1, cnt + 2 * K))

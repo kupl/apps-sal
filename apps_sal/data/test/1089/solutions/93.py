@@ -1,6 +1,5 @@
-N, M, K = map(int, input().split())
-MOD = 10**9 + 7
-
+(N, M, K) = map(int, input().split())
+MOD = 10 ** 9 + 7
 MAXN = N * M + 5
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN
@@ -25,7 +24,6 @@ for d in range(1, N):
 b = 0
 for d in range(1, M):
     b += d * (M - d) * N * N
-
 ans = (a + b) * comb(N * M - 2, K - 2)
 ans %= MOD
 print(ans)

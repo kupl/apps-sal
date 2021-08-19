@@ -1,9 +1,9 @@
 n = int(input())
 s = input()
-l = ["0"]
+l = ['0']
 for i in s:
-    if l[-1] == "o":
-        if l[-2] == "f" and i == "x":
+    if l[-1] == 'o':
+        if l[-2] == 'f' and i == 'x':
             l.pop()
             l.pop()
         else:

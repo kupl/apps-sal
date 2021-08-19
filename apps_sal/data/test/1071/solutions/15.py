@@ -11,12 +11,10 @@ if (a1 + a2 + a3) % 5 == 0:
     aa = (a1 + a2 + a3) // 5
 else:
     aa = (a1 + a2 + a3) // 5 + 1
-
 if (b1 + b2 + b3) % 10 == 0:
     bb = (b1 + b2 + b3) // 10
 else:
     bb = (b1 + b2 + b3) // 10 + 1
-
 if aa + bb <= n:
     print('YES')
 else:

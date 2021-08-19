@@ -1,5 +1,5 @@
 def abc121_d():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ans = 0
     if b - a < 8:
         for k in range(a, b + 1):

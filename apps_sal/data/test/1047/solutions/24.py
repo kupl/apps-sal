@@ -4,7 +4,7 @@ l = len(sn)
 
 
 def getDecimal(n):
-    return (len(str(n)) - 1)
+    return len(str(n)) - 1
 
 
 def intAr(a):
@@ -20,7 +20,6 @@ def getQDNumber(number):
     n = ''
     pointer = 0
     _len = len(number)
-
     if inum:
         if inum >= 10:
             while 1:
@@ -29,9 +28,7 @@ def getQDNumber(number):
                 else:
                     _n[pointer] -= 1
                     n += '1'
-
                 pointer += 1
-
                 if pointer >= _len:
                     break
         else:

@@ -1,5 +1,5 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     hp = [0] * n
     for i in range(n):

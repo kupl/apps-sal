@@ -1,11 +1,10 @@
 def f(A):
     if len(A) == 1:
         return 1
+    elif A == sorted(A):
+        return len(A)
     else:
-        if A == sorted(A):
-            return len(A)
-        else:
-            return max(f(A[:len(A) // 2]), f(A[len(A) // 2:]))
+        return max(f(A[:len(A) // 2]), f(A[len(A) // 2:]))
 
 
 n = int(input())

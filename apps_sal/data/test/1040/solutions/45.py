@@ -5,14 +5,14 @@ def main():
     cur = 0
     ans = N
     for c in S:
-        if c == "f" and cur != 0:
+        if c == 'f' and cur != 0:
             stack.append(cur)
             cur = 1
-        elif c == "f" and cur == 0:
+        elif c == 'f' and cur == 0:
             cur += 1
-        elif c == "o" and cur == 1:
+        elif c == 'o' and cur == 1:
             cur += 1
-        elif c == "x" and cur == 2:
+        elif c == 'x' and cur == 2:
             ans -= 3
             if len(stack):
                 cur = stack.pop()

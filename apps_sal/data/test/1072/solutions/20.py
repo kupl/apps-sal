@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, m = read()
+(n, m) = read()
 a = [input() for i in range(n)]
 ans = 0
 ind = [i for i in range(1, n)]

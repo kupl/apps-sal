@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 half = int(n / 2) + n % 2
 if k > half:
     k -= half

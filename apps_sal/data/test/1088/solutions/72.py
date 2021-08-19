@@ -1,7 +1,8 @@
 import numpy as np
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -19,7 +20,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -34,14 +35,14 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def all_group_members(self):
         return {r: self.members(r) for r in self.roots()}
 
 
 mod = 998244353
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = np.array([list(map(int, input().split())) for _ in range(n)], dtype=np.int64)
 ans = 1
 for _ in range(2):
@@ -53,7 +54,7 @@ for _ in range(2):
             if max(a[i] + a[j]) <= k:
                 uf.union(i, j)
     c = uf.all_group_members()
-    for key, v in c.items():
+    for (key, v) in c.items():
         tmp = 1
         for i in range(len(v)):
             tmp *= i + 1

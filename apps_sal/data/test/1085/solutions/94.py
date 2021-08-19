@@ -1,5 +1,5 @@
 def make_divisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -11,12 +11,9 @@ def make_divisors(n):
 
 
 n = int(input())
-
 tmp = n - 1
 ret = len(make_divisors(tmp)) - 1
-
 tmplen = make_divisors(n)
-
 for item in tmplen:
     if item == 1:
         continue
@@ -28,5 +25,4 @@ for item in tmplen:
             if val % item == 1:
                 ret += 1
             break
-
 print(ret)

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 facts = [1]
 for i in range(1, n + 1):
     facts.append(i * facts[i - 1])

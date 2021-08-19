@@ -15,13 +15,12 @@ def prime_factorize(n):
 N = int(input())
 prime_n = prime_factorize(N)
 prime_n_1 = prime_factorize(N - 1)
-
 ans = 0
 for i in prime_n:
     n = copy.deepcopy(N)
-    while (n % i) == 0:
+    while n % i == 0:
         n = n // i
-    if (n % i) == 1:
+    if n % i == 1:
         ans += 1
 ans += len(prime_n_1)
 if N > 2:

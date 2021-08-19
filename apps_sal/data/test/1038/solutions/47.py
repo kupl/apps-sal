@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
 if b - a <= 10:
     for i in range(a, b + 1):

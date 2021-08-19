@@ -1,4 +1,4 @@
-n, d = list(map(int, input().strip().split()))
+(n, d) = list(map(int, input().strip().split()))
 res = 0
 cur = 0
 for _ in range(d):

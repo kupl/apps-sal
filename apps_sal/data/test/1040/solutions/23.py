@@ -1,8 +1,6 @@
 N = int(input())
 S = input()
-
 R = ''
-
 rep = 'fox'
 nxt = 0
 ans = 0
@@ -17,4 +15,4 @@ for i in range(N):
     if R[-3:] == rep:
         ans += 1
         R = R[:-3]
-print((N - ans * 3))
+print(N - ans * 3)

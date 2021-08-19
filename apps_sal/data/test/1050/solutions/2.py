@@ -1,9 +1,9 @@
 def main():
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     if min(m, k) >= n:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 main()

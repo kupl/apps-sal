@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def F(a: int):
@@ -8,7 +8,7 @@ def F(a: int):
         else:
             return 0
     else:
-        return F(a + 1) ^ (a + 1)
+        return F(a + 1) ^ a + 1
 
 
 ans = F(a - 1) ^ F(b)

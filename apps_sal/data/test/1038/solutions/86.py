@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 a -= 1
 
 
@@ -11,7 +11,6 @@ def allx(n):
                 continue
         c = pow(2, i + 1)
         k = n % c
-
         if k >= c // 2 and k % 2 == 0:
             ans += pow(2, i)
     return ans

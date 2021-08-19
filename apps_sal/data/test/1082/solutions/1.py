@@ -21,13 +21,13 @@ def main():
     for i in range(1, maxn):
         masks[getmask(i)] += cnt[i]
     while masks[0] != sum(masks.values()):
-        fixed = max(i for i in masks if masks[i])
+        fixed = max((i for i in masks if masks[i]))
         masks[0] -= 1
         for i in list(masks.keys()):
             if i ^ fixed < i:
                 masks[i ^ fixed] += masks[i]
                 masks[i] = 0
-    print(pow(2, masks[0], 10**9 + 7) - 1)
+    print(pow(2, masks[0], 10 ** 9 + 7) - 1)
 
 
 main()

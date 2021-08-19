@@ -1,6 +1,5 @@
 A = input()
 B = input()
-
 if int(A) == len(B):
     x = ''
     for i in B:

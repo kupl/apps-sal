@@ -1,12 +1,12 @@
-N, M, K = map(int, input().split())
-mod = 10**9 + 7
+(N, M, K) = map(int, input().split())
+mod = 10 ** 9 + 7
 
 
 def nCk(n, k, mod):
     nu = 1
     de = 1
     for i in range(1, k + 1):
-        nu *= (n - i + 1)
+        nu *= n - i + 1
         de *= i
         nu = nu % mod
         de = de % mod

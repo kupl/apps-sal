@@ -17,4 +17,4 @@ l.sort()
 r.sort()
 ans = [l, r]
 ans.sort()
-print(len(ans[0]), " ".join(str(i) for i in ans[0]))
+print(len(ans[0]), ' '.join((str(i) for i in ans[0])))

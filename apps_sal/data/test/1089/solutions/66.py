@@ -1,9 +1,9 @@
 from functools import reduce
-n, m, k = list(map(int, input().split()))
-mod = 10**9 + 7
+(n, m, k) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 
 
-def nCr(n, r, MOD=10**9 + 7):
+def nCr(n, r, MOD=10 ** 9 + 7):
     from functools import reduce
     if r == 0:
         return 1
@@ -15,12 +15,12 @@ def nCr(n, r, MOD=10**9 + 7):
 ncr = nCr(n * m - 2, k - 2)
 ans = 0
 for d in range(1, m):
-    temp = d * (m - d) * n**2
+    temp = d * (m - d) * n ** 2
     temp %= mod
     ans += temp
     ans %= mod
 for d in range(1, n):
-    temp = d * (n - d) * m**2
+    temp = d * (n - d) * m ** 2
     temp %= mod
     ans += temp
     ans %= mod

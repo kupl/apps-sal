@@ -5,14 +5,13 @@ INF = 10 ** 15
 
 
 def main():
-    H, W = map(int, input().split())
+    (H, W) = map(int, input().split())
     A = [list(map(int, input().split())) for _ in range(H)]
     B = [list(map(int, input().split())) for _ in range(H)]
-
     dp = [[0] * (1 + W) for _ in range(H + 1)]
     x = abs(A[0][0] - B[0][0])
-    dp[0][0] = 1 << (12800 + x)
-    dp[0][0] |= 1 << (12800 - x)
+    dp[0][0] = 1 << 12800 + x
+    dp[0][0] |= 1 << 12800 - x
     for i in range(H):
         for j in range(W):
             c = abs(A[i][j] - B[i][j])

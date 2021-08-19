@@ -9,8 +9,7 @@ def binomial(x, y):
     return binom
 
 
-n, k = [int(i) for i in input().split()]
-
+(n, k) = [int(i) for i in input().split()]
 if k == 1:
     print(1)
 elif k == 2:

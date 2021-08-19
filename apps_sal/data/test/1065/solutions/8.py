@@ -1,4 +1,4 @@
-n, k, M, D = input().split()
+(n, k, M, D) = input().split()
 n = int(n)
 k = int(k)
 M = int(M)

@@ -1,5 +1,5 @@
 def solve():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     S = input()
     cnt = 1
     for i in range(N - 1):

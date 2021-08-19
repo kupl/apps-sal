@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = [list(map(int, input().split())) for _ in range(n)]
 
 
@@ -13,7 +13,6 @@ def Find(x, par):
 def Unite(x, y, par, rank):
     x = Find(x, par)
     y = Find(y, par)
-
     if x != y:
         if rank[x] < rank[y]:
             par[y] += par[x]
@@ -42,7 +41,6 @@ for x in range(n):
                 break
         else:
             Unite(x, y, par1, rank1)
-
 par2 = [-1] * n
 rank2 = [0] * n
 for x in range(n):
@@ -52,7 +50,6 @@ for x in range(n):
                 break
         else:
             Unite(x, y, par2, rank2)
-
 N = 1000
 mod = 998244353
 fac = [1] * (N + 1)
@@ -62,7 +59,6 @@ for i in range(N):
 finv[-1] = pow(fac[-1], mod - 2, mod)
 for i in reversed(list(range(N))):
     finv[i] = finv[i + 1] * (i + 1) % mod
-
 ans = 1
 for i in par1:
     if i < 0:

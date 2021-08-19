@@ -1,5 +1,5 @@
 __author__ = 'Данила'
-n = (input())
+n = input()
 a = []
 s = int(n)
 min = 0

@@ -1,7 +1,5 @@
 n = int(input())
-
 ans2 = [0]
-
 for i in range(1, 64):
     ans2.append(ans2[i - 1] + ans2[i - 1] + pow(2, i - 1))
 

@@ -16,7 +16,7 @@ def bfs(G, s, j):
     return p
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(n)]
 mod = 998244353
 G1 = [[] for _ in range(n)]

@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.root = [-1] * n
@@ -41,14 +42,13 @@ class UnionFind():
 
 
 mod = 998244353
-n, K = map(int, input().split())
+(n, K) = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(n)]
-
 r = UnionFind(n)
 c = UnionFind(n)
 for i in range(n):
     for j in range(i + 1, n):
-        pr, pc = True, True
+        (pr, pc) = (True, True)
         for k in range(n):
             if A[i][k] + A[j][k] > K:
                 pr = False
@@ -60,7 +60,7 @@ for i in range(n):
             c.unite(i + 1, j + 1)
 p = [1] * (n + 1)
 for i in range(1, n + 1):
-    p[i] = (p[i - 1] * i) % mod
+    p[i] = p[i - 1] * i % mod
 ans = 1
 for x in r.roots():
     ans = ans * p[-r.root[x - 1]] % mod

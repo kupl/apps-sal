@@ -1,6 +1,6 @@
 N = int(input())
 S = input()
-a = ""
+a = ''
 for i in range(N):
     a += S[i]
     if len(a) >= 3 and a[-3] + a[-2] + a[-1] == 'fox':

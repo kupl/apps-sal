@@ -1,4 +1,4 @@
-n, k, m, d = [int(x) for x in input().split()]
+(n, k, m, d) = [int(x) for x in input().split()]
 res = 0
 for a in range(1, d + 1):
     x = n // (a * k - k + 1)

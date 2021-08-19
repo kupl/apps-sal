@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def xor(n):
@@ -14,5 +14,4 @@ def xor(n):
 
 
 xxx = xor(b) ^ xor(a - 1)
-
 print(xxx)

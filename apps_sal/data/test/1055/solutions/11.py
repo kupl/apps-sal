@@ -17,7 +17,7 @@ def sort(a):
     a2 = a[t:]
     a1 = sort(a1)
     a2 = sort(a2)
-    if (len(a1) >= len(a2)):
+    if len(a1) >= len(a2):
         return a1
     else:
         return a2

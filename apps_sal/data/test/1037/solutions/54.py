@@ -1,9 +1,7 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-
     dp = [[0] * (N + 1 - i) for i in range(N + 1)]
-
     A = list(enumerate(A))
     A.sort(key=lambda x: x[1])
     ans = 0

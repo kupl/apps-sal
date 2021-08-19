@@ -13,7 +13,7 @@ s = sgn(l[0])
 wynik = 0
 zera = 0
 for i in range(n):
-    wynik += (abs(l[i]) - 1 if l[i] != 0 else 1)
+    wynik += abs(l[i]) - 1 if l[i] != 0 else 1
     if l[i] == 0:
         zera = 1
 if zera == 1:

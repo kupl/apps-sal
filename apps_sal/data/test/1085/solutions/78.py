@@ -14,7 +14,7 @@ def check(N, k):
         N //= k
 
 
-for k in range(1, int(N**0.5) + 1):
+for k in range(1, int(N ** 0.5) + 1):
     if (N - 1) % k == 0:
         ans.add(k)
         ans.add((N - 1) // k)
@@ -23,6 +23,5 @@ for k in range(1, int(N**0.5) + 1):
             ans.add(k)
         if check(N, N // k):
             ans.add(N // k)
-
 ans.remove(1)
 print(len(ans))

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 Max = 0
 m = 1
 H = list(map(int, input().split()))

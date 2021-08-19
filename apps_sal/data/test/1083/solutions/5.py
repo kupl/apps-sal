@@ -1,7 +1,5 @@
 n = int(input())
-
 total = int(n * (n + 1) / 2)
-
 l = []
 cur = 0
 if total % 2 == 0:

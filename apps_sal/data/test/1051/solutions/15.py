@@ -5,5 +5,4 @@ for i in range(25 - k):
         if j not in rs:
             rs.add(j)
             break
-
 print(max(rs) - 25)

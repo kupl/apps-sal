@@ -1,9 +1,8 @@
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 A = [list(map(int, input().split())) for i in range(H)]
 B = [list(map(int, input().split())) for i in range(H)]
-
 dp = [[0] * W for i in range(H)]
-dp[0][0] = 1 << (abs(A[0][0] - B[0][0]) + 6400)
+dp[0][0] = 1 << abs(A[0][0] - B[0][0]) + 6400
 for i in range(H):
     for j in range(W):
         d = abs(A[i][j] - B[i][j])

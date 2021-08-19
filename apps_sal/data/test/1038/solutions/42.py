@@ -1,5 +1,4 @@
-A, B = list(map(int, input().split()))
-
+(A, B) = list(map(int, input().split()))
 answer = 0
 X = A - 1
 Y = B
@@ -17,8 +16,6 @@ for i in range(1, 41):
     if rY >= cycle // 2:
         oneY += rY - cycle // 2 + 1
     one = oneY - oneX
-
     if one % 2 == 1:
         answer += 2 ** (i - 1)
-
 print(answer)

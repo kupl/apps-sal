@@ -13,7 +13,6 @@ for i in range(2, int(pow(N, 0.5)) + 1):
         wari.append(i)
         if i != N // i:
             wari.append(N // i)
-
 for i in wari:
     if i == 1:
         continue
@@ -25,5 +24,4 @@ for i in wari:
             if tmpN % i == 1:
                 ans += 1
             break
-
 print(ans + 1)

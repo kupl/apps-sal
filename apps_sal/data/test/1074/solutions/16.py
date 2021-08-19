@@ -1,1 +1,1 @@
-print(oct(int(input())).count("1"))
+print(oct(int(input())).count('1'))

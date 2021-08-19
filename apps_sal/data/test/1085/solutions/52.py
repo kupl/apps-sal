@@ -22,6 +22,5 @@ for x in enum_divisor(n):
         tmp //= x
     if tmp % x == 1:
         ans += 1
-
 ans += len(enum_divisor(n - 1)) - 1
 print(ans)

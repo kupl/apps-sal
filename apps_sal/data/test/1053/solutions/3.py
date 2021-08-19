@@ -1,5 +1,5 @@
 n = int(input())
-a, t = n - 1, 1
+(a, t) = (n - 1, 1)
 n -= 1
 i = 2
 while i <= n:

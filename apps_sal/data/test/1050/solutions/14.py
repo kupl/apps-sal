@@ -1,5 +1,5 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 if n <= min(m, k):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

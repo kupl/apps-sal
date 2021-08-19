@@ -25,4 +25,4 @@ def main():
     return len(r)
 
 
-print((main()))
+print(main())

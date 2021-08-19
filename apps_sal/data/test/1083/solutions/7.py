@@ -4,7 +4,7 @@ flag = 0
 if n % 2:
     n -= 1
     flag = 1
-if (n % 4 == 0 and not flag) or (n % 4 and flag):
+if n % 4 == 0 and (not flag) or (n % 4 and flag):
     print(0)
     for i in range(n // 2):
         if i % 2 == 0:

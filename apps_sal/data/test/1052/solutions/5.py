@@ -3,7 +3,7 @@ import sys
 
 def main():
     args = sys.stdin.readline()[:-1].split()
-    n, k = int(args[0]), int(args[1])
+    (n, k) = (int(args[0]), int(args[1]))
     a = 1
     b = n * (n - 1) // 2
     c = n * (n - 1) * (n - 2) // 6 * 2

@@ -1,5 +1,4 @@
 __author__ = 'PrimuS'
-
 n = int(input())
 i = 0
 k = 0
@@ -9,5 +8,4 @@ while n >= 0:
     m += i
     k += m
     n -= m
-
 print(i - 1)

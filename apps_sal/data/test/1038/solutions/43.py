@@ -1,5 +1,5 @@
 import itertools
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 
 
 def hoge(x: int):
@@ -14,7 +14,7 @@ def hoge(x: int):
 
 ans = 0
 t = 1
-for i, j in itertools.zip_longest(hoge(b), hoge(a - 1), fillvalue=0):
+for (i, j) in itertools.zip_longest(hoge(b), hoge(a - 1), fillvalue=0):
     if (i - j) % 2 == 1:
         ans += t
     t *= 2

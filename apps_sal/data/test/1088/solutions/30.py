@@ -1,5 +1,4 @@
-N, K = map(int, input().split())
-
+(N, K) = map(int, input().split())
 A = [list(map(int, input().split())) for _ in [0] * N]
 MOD = 998244353
 B = [[A[j][i] for j in range(N)] for i in range(N)]
@@ -7,9 +6,10 @@ B = [[A[j][i] for j in range(N)] for i in range(N)]
 
 def f(A):
     import sys
-    sys.setrecursionlimit(10**7)
+    sys.setrecursionlimit(10 ** 7)
 
     class UnionFind:
+
         def __init__(self, N):
             self.Parent = list(range(N))
             self.size = [1] * N
@@ -29,7 +29,7 @@ def f(A):
             y = self.get_Parent(y)
             if x != y:
                 if self.get_size(x) < self.get_size(y):
-                    x, y = y, x
+                    (x, y) = (y, x)
                 self.size[x] += self.size[y]
                 self.Parent[y] = x
                 return True
@@ -37,7 +37,6 @@ def f(A):
 
         def is_united(self, x, y):
             return self.get_Parent(x) == self.get_Parent(y)
-
     U_row = UnionFind(N)
     for i in range(N):
         for j in range(i + 1, N):
@@ -48,7 +47,6 @@ def f(A):
                     break
             else:
                 U_row.merge(i, j)
-
     ans = 1
     for i in range(N):
         j = U_row.get_Parent(i)

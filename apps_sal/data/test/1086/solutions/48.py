@@ -1,19 +1,15 @@
 import numpy as np
-
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 A = [0] * h
 B = [0] * h
 for _ in range(h):
     A[_] = list(map(int, input().split()))
-
 for _ in range(h):
     B[_] = list(map(int, input().split()))
-
 C = [[0] * w for _ in range(h)]
 for i in range(h):
     for j in range(w):
         C[i][j] = abs(A[i][j] - B[i][j])
-
 dp = [[0] * w for _ in range(h)]
 D = 80 * (h + w)
 L = 2 * D + 1
@@ -31,7 +27,6 @@ for i in range(h):
             x[C[i][j]:] |= dp[i][j - 1][:L - C[i][j]]
             x[:L - C[i][j]] |= dp[i][j - 1][C[i][j]:]
         dp[i][j] = x
-
 temp = np.where(dp[-1][-1] > 0)[0] - D
 temp = np.abs(temp)
 print(np.min(temp))
