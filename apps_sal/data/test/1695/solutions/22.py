@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = []
 for x in range(n):
     l.append(input().strip())
@@ -14,5 +13,4 @@ for i in range(m):
         choice = x[i]
         t[ord(choice) - 65] += 1
     cnts[i] = max(t)
-# print(cnts)
-print(sum(i[0] * i[1] for i in zip(points, cnts)))
+print(sum((i[0] * i[1] for i in zip(points, cnts))))

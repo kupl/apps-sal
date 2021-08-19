@@ -1,17 +1,15 @@
-# ABC135D - Digits Parade
-# digit DP
 def main():
     S = input().rstrip()
-    ans, MOD = [0] * 13, 10 ** 9 + 7
+    (ans, MOD) = ([0] * 13, 10 ** 9 + 7)
     ans[0] = 1
     for c in S:
         dp = [0] * 13
         for i in range(13):
-            dp[(i * 10) % 13] = ans[i] % MOD
+            dp[i * 10 % 13] = ans[i] % MOD
         dp += dp
-        if c == "?":
+        if c == '?':
             for i in range(13):
-                ans[i] = sum(dp[i + 4: i + 14])
+                ans[i] = sum(dp[i + 4:i + 14])
         else:
             x = int(c)
             for i in range(13):

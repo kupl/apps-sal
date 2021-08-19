@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-
-INF = 10**9 + 1
+INF = 10 ** 9 + 1
 
 
 def solve(n, a):
@@ -23,7 +21,7 @@ def solve(n, a):
 def main():
     N = int(input())
     a = list(map(int, input().split()))
-    print((solve(N, a)))
+    print(solve(N, a))
 
 
 def __starting_point():

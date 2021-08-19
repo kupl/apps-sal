@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 cnt_fu = 0
 cnt_0 = 0
 ans = 0
@@ -12,8 +11,7 @@ for i in range(n):
         cnt_fu += 1
     if a[i] == 0:
         cnt_0 += 1
-# print(cnt_fu,cnt_0,ans,b)
 if cnt_fu % 2 == 0:
     print(ans)
 else:
-    print((ans - min(b) * 2))
+    print(ans - min(b) * 2)

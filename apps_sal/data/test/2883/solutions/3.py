@@ -1,10 +1,5 @@
-# Definition for an interval.
-# class Interval:
-#     def __init__(self, s=0, e=0):
-#         self.start = s
-#         self.end = e
-
 class Solution:
+
     def merge(self, intervals):
         """
         :type intervals: List[Interval]
@@ -18,7 +13,7 @@ class Solution:
             return start
         result = list()
         make_interval = 1
-        i, j = 1, 0
+        (i, j) = (1, 0)
         first_start = 0
         while i < len(start) and j < len(end):
             if start[i] <= end[j]:
@@ -30,7 +25,6 @@ class Solution:
                     result.append([start[first_start], end[j]])
                     first_start = i
                 j += 1
-
         if j < len(end):
             result.append([start[first_start], end[-1]])
         return result

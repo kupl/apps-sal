@@ -1,8 +1,8 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    if (n // 2) % 2:
-        print("NO")
+    if n // 2 % 2:
+        print('NO')
         continue
     a = []
     s = 0
@@ -13,9 +13,5 @@ for _ in range(t):
         s -= 2 * j + 1
         a.append(2 * j + 1)
     a.append(s)
-    print("YES")
+    print('YES')
     print(*a)
-
-
-# a = list(map(int,input().split()))
-# n,m = map(int,input().split())
