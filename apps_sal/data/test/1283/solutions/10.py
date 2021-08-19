@@ -31,22 +31,21 @@ def check_vertical(board, boat_size, col_index, row_index):
 
 
 def main():
-    n, k = read_nums()
+    (n, k) = read_nums()
     board = read_board(n)
     counter = Counter()
     for row_index in range(n):
         for col_index in range(n):
             if check_horizontal(board, k, col_index, row_index):
                 for i in range(col_index, col_index + k):
-                    counter[(row_index, i)] += 1
+                    counter[row_index, i] += 1
             if check_vertical(board, k, col_index, row_index):
                 for i in range(row_index, row_index + k):
-                    counter[(i, col_index)] += 1
+                    counter[i, col_index] += 1
     res = (0, 0)
-    for k, v in list(counter.items()):
+    for (k, v) in list(counter.items()):
         if v > counter[res]:
             res = k
-
     print(res[0] + 1, res[1] + 1)
 
 

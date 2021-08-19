@@ -2,7 +2,7 @@ def read():
     return list(map(int, input().split()))
 
 
-n, k = read()
+(n, k) = read()
 a = []
 w = 0
 q = []
@@ -13,14 +13,7 @@ for i in range(n):
     b.append(q.copy())
 for i in range(n):
     a.append(input())
-'''if k==1:
-    ans=0
-    for i in range(n):
-        for j in range(n):
-            if a[i][j]=='.':
-                ans+=1
-    print(ans)
-    return'''
+"if k==1:\n    ans=0\n    for i in range(n):\n        for j in range(n):\n            if a[i][j]=='.':\n                ans+=1\n    print(ans)\n    return"
 for i in range(n):
     for j in range(n - k + 1):
         for l in range(j, j + k):

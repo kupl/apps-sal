@@ -10,7 +10,8 @@ class Edge(object):
         return f'{self.x}-->{self.y} ({self.cap} , {self.cost})'
 
 
-class MCFP():
+class MCFP:
+
     def __init__(self):
         self.G = []
 
@@ -33,7 +34,7 @@ class MCFP():
         G[y].append(z)
 
     def solve(self, src, tgt, inf=float('inf')):
-        n, G = len(self.G), self.G
+        (n, G) = (len(self.G), self.G)
         flowVal = flowCost = 0
         phi = [0] * n
         prev = [None] * n
@@ -64,15 +65,15 @@ class MCFP():
                     dist[i] = inf
             cntQ += 1
             prev[tgt] = None
-        return flowVal, flowCost
+        return (flowVal, flowCost)
 
     def shortest(self, src, phi, prev, inQ, dist, inf, cntQ):
-        n, G = len(self.G), self.G
+        (n, G) = (len(self.G), self.G)
         Q = [(dist[src], src)]
         inQ[src] = cntQ
         dist[src] = 0
         while Q:
-            _, x = heappop(Q)
+            (_, x) = heappop(Q)
             inQ[x] = 0
             dx = dist[x] + phi[x]
             for e in G[x]:
@@ -84,14 +85,14 @@ class MCFP():
                     if inQ[y] != cntQ:
                         inQ[y] = cntQ
                         heappush(Q, (dy, y))
-        return dist, prev
+        return (dist, prev)
 
     def __repr__(self):
-        n, G = len(self.G), self.G
+        (n, G) = (len(self.G), self.G)
         s = []
         for i in range(n):
             s.append('    G[{}]:'.format(i))
-            s.append('\n'.join('        {}'.format(e) for e in G[i]))
+            s.append('\n'.join(('        {}'.format(e) for e in G[i])))
         return '\n'.join(s)
 
 
@@ -100,17 +101,17 @@ sys.setrecursionlimit(3000)
 
 
 def main():
-    n, q = (next(ints) for i in range(2))
+    (n, q) = (next(ints) for i in range(2))
     leq = [n - 1] * n
     geq = [0] * n
     for q in range(q):
-        t, l, r, v = (next(ints) for i in range(4))
+        (t, l, r, v) = (next(ints) for i in range(4))
         for i in range(l - 1, r):
             if t == 1:
                 geq[i] = max(geq[i], v - 1)
             if t == 2:
                 leq[i] = min(leq[i], v - 1)
-    imp = any(geq[i] > leq[i] for i in range(n))
+    imp = any((geq[i] > leq[i] for i in range(n)))
     if imp:
         ans = -1
     else:
@@ -126,9 +127,7 @@ def main():
             for j in range(n):
                 G.add(i + n, 2 * n + i * n + j, 1, 0)
                 G.add(2 * n + i * n + j, tgt, 1, 2 * j + 1)
-        _, ans = G.solve(src, tgt)
-        # print(G)
-        #print(leq, geq)
+        (_, ans) = G.solve(src, tgt)
     print(ans)
     return
 

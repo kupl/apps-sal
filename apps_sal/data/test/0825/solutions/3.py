@@ -1,7 +1,5 @@
 import collections
 
-# https://note.nkmk.me/python-prime-factorization/
-
 
 def prime_factorize(n):
     a = []
@@ -22,7 +20,7 @@ def prime_factorize(n):
 
 def f(n):
     for i in range(1, 20):
-        if n < (i * (i + 1)) // 2:
+        if n < i * (i + 1) // 2:
             return i - 1
 
 

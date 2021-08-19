@@ -1,12 +1,10 @@
 import math
 
 
-# get line input split by space
 def getLnInput():
     return input().split()
 
 
-# ceil(a / b) for a > b
 def ceilDivision(a, b):
     return (a - 1) // b + 1
 
@@ -32,11 +30,10 @@ def main():
         print(1)
     elif n % 2 == 0:
         print(2)
+    elif isPrime(n - 2):
+        print(2)
     else:
-        if isPrime(n - 2):
-            print(2)
-        else:
-            print(3)
+        print(3)
     return
 
 

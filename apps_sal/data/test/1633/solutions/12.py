@@ -27,25 +27,21 @@ def checkFail(i, j):
                 res += board[x][y]
         if res == 4:
             return True
-
     return False
 
 
-n, m, k = [int(x) for x in input().strip().split()]
+(n, m, k) = [int(x) for x in input().strip().split()]
 board = [[0] * m for i in range(0, n)]
-
 isFail = False
 res = 0
 for moveIndex in range(0, k):
-    i, j = [int(x) for x in input().strip().split()]
+    (i, j) = [int(x) for x in input().strip().split()]
     if not isFail:
         i -= 1
         j -= 1
         if board[i][j] == 0:
             board[i][j] = 1
-            #print( board )
             if checkFail(i, j):
                 isFail = True
                 res = moveIndex + 1
-                #print( "found!!!" + str(res) )
 print(res)

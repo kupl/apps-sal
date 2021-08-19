@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-
-# min odd non-prime is 9
-# min even non-prime in 4, NO even numbers gt 2 are primes
-
 def m(n):
     if n == 9:
         return 1
@@ -15,7 +10,7 @@ def m(n):
             n -= 9
         else:
             return -1
-    if not ((n - 2) % 4):
+    if not (n - 2) % 4:
         n -= 2
     if not n % 4:
         return c + n // 4

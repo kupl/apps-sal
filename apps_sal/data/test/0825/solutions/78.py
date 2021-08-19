@@ -25,11 +25,9 @@ for i in np:
         npl.append(j)
         j *= i
 npl.sort()
-
 cz = 2
 ans = 0
 for cz in npl:
-    # print(n, cz)
     if cz > n:
         break
     if n % cz == 0:

@@ -2,10 +2,10 @@ from math import sqrt, floor
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-#import numpy as np
 
 
 def main():
+
     def factorization(n):
         l = []
         t = n
@@ -23,7 +23,7 @@ def main():
         return l
     n = int(input())
     if n == 1:
-        print((0))
+        print(0)
         return
     p = factorization(n)
     r = 0

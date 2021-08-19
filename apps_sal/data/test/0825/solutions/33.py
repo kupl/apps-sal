@@ -1,7 +1,4 @@
 n = int(input())
-#a, b, c, x, y = map(int, input().split())
-#al = list(map(int, input().split()))
-#al=[list(input()) for i in range(n)]
 
 
 def prime_factorize(n):
@@ -30,7 +27,7 @@ def sumf(n):
 primes = prime_factorize(n)
 ans = 0
 for pl in primes:
-    a, ex = pl
+    (a, ex) = pl
     i = 0
     while True:
         if sumf(i + 1) > ex:
