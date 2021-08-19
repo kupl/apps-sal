@@ -1,5 +1,9 @@
-def n2a(x): return chr(x + ord('a'))
-def a2n(x): return ord(x) - ord('a')
+def n2a(x):
+    return chr(x + ord('a'))
+
+
+def a2n(x):
+    return ord(x) - ord('a')
 
 
 def main(a):
@@ -18,7 +22,6 @@ def main(a):
             mi = set(range(nc))
     if any(tmp):
         ary.append(tmp)
-    #for x in ary:print(x)
     ans = []
     now = 0
     tmp = ary.pop()
@@ -45,7 +48,6 @@ def main(a):
         tmp[a2n(a[now])] -= 1
         now += 1
     while True:
-        # print(ary,tmp,ans)
         for i in range(nc):
             if tmp[i] == 0:
                 ans.append(n2a(i))
@@ -64,10 +66,4 @@ def main(a):
 
 a = input()
 print(*main(a), sep='')
-"""
-bcdefghijklmnopqrstuvwxyza
-
-aabbccaabca
-aab / bccaa / bca
-
-"""
+'\nbcdefghijklmnopqrstuvwxyza\n\naabbccaabca\naab / bccaa / bca\n\n'

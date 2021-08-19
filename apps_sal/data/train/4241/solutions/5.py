@@ -1,11 +1,3 @@
-# For learning purposes. From slowest to fastest.
-#
-# sn = sorted(Timer('sequence_sum_n(1, 1_000_000, 18)', steup=this_file).repeat(10, 1000))
-# Averages:
-# s1 = 5.40761180743560299078
-# s2 = 0.00299944687756124049
-# s3 = 0.00121562700535378094
-
 def sequence_sum(start, stop, step):
     return sum(range(start, stop + 1, step))
 

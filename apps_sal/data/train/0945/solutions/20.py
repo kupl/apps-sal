@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 i = 0
 while i < t:
@@ -6,5 +5,5 @@ while i < t:
     if n == 2:
         print(n)
     else:
-        print((n // 2) + 1)
+        print(n // 2 + 1)
     i += 1
