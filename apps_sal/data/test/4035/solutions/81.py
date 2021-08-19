@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 i = 1
 f = 0
 while True:

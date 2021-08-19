@@ -1,15 +1,15 @@
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     sym = False
     for i in range(n):
-        x, y = list(map(int, input().split()))
-        z, w = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
+        (z, w) = list(map(int, input().split()))
         if y == z:
             sym = True
     if m % 2 == 0 and sym:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     return
 
 

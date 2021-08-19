@@ -1,4 +1,4 @@
-x, k, d = map(int, input().split())
+(x, k, d) = map(int, input().split())
 x = abs(x)
 s = min(k, x // d)
 k -= s

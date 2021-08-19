@@ -1,11 +1,9 @@
 import math
-a, b = [int(x) for x in input().split()]
-
+(a, b) = [int(x) for x in input().split()]
 area = a + b
 t = int(math.sqrt(area))
 sa = int(math.sqrt(a))
 sb = int(math.sqrt(b))
-
 D = []
 DA = []
 DB = []
@@ -16,7 +14,6 @@ for i in range(1, t + 1):
             D.append(area // i)
         else:
             D.append(i)
-
 for i in range(1, sa + 1):
     if a % i == 0:
         if i * i != a:
@@ -24,7 +21,6 @@ for i in range(1, sa + 1):
             DA.append(a // i)
         else:
             DA.append(i)
-
 for i in range(1, sb + 1):
     if b % i == 0:
         if i * i != b:
@@ -35,8 +31,7 @@ for i in range(1, sb + 1):
 DA.sort()
 DB.sort()
 D.sort()
-
-start = ((len(D) + 1) // 2) - 1
+start = (len(D) + 1) // 2 - 1
 div = len(D)
 
 

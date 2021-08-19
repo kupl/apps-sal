@@ -14,6 +14,6 @@ else:
         while needed > i:
             steps.append(needed)
             needed -= 1
-            s[needed], s[needed + 1] = s[needed + 1], s[needed]
+            (s[needed], s[needed + 1]) = (s[needed + 1], s[needed])
     print(len(steps))
     print(' '.join(map(str, steps)))

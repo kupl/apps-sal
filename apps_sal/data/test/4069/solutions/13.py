@@ -1,7 +1,6 @@
-x, k, d = map(int, input().split())
+(x, k, d) = map(int, input().split())
 x = abs(x)
 l = x // d
-
 if k <= l:
     print(abs(x - k * d))
 else:

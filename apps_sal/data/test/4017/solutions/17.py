@@ -20,10 +20,10 @@ ans = []
 l = sorted(l1, key=fun)
 s = sm(l) - l[n - 1][0]
 for i in range(n - 1):
-    if(s - l[i][0] == l[n - 1][0]):
+    if s - l[i][0] == l[n - 1][0]:
         ans.append(l[i][1] + 1)
-if(s - l[n - 2][0] == l[n - 2][0]):
+if s - l[n - 2][0] == l[n - 2][0]:
     ans.append(l[n - 1][1] + 1)
 print(len(ans))
 for i in ans:
-    print(i, end=" ")
+    print(i, end=' ')

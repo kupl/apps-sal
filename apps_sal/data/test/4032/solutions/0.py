@@ -1,8 +1,11 @@
 input = __import__('sys').stdin.readline
-def MIS(): return map(int, input().split())
 
 
-n, k = MIS()
+def MIS():
+    return map(int, input().split())
+
+
+(n, k) = MIS()
 prob = list(MIS())
 while prob and prob[0] <= k:
     prob.pop(0)

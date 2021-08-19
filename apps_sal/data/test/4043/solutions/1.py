@@ -1,22 +1,22 @@
 def main():
-    n, d, k = list(map(int, input().split()))
-    if n == 2 and d == 1 and k == 1:
-        print("YES")
-        print("1 2")
+    (n, d, k) = list(map(int, input().split()))
+    if n == 2 and d == 1 and (k == 1):
+        print('YES')
+        print('1 2')
         return 0
     if n == d + 1 and k - 1:
-        print("YES")
+        print('YES')
         for i in range(1, d + 1):
             print(i, i + 1)
         return 0
     if n < d + 1 or k <= 2 or d == 1:
-        print("NO")
+        print('NO')
         return 0
     if d % 2 == 0:
         if n * (k - 2) > -2 + k * (k - 1) ** (d // 2):
-            print("NO")
+            print('NO')
             return 0
-        print("YES")
+        print('YES')
         for i in range(1, d + 1):
             print(i, i + 1)
         nodes = d + 1
@@ -33,12 +33,11 @@ def main():
                         return 0
             dev += 1
             leaves = new_leaves + [1 - dev + d // 2, 1 + dev + d // 2]
-
     else:
         if n * (k - 2) > -2 + k * (k - 1) ** (d // 2) + (k - 2) * (k - 1) ** (d // 2):
-            print("NO")
+            print('NO')
             return 0
-        print("YES")
+        print('YES')
         for i in range(1, d + 1):
             print(i, i + 1)
         nodes = d + 1

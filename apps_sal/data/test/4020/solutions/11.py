@@ -2,8 +2,8 @@ def mp():
     return map(int, input().split(':'))
 
 
-h1, m1 = mp()
-h2, m2 = mp()
+(h1, m1) = mp()
+(h2, m2) = mp()
 r = h1 * 60 + m1 + h2 * 60 + m2
 r = r // 2
 h3 = str(r // 60)

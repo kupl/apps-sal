@@ -1,7 +1,7 @@
-'''input
+"""input
 01:02
 03:02
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -10,7 +10,7 @@ from collections import Counter as ccd
 from random import randint as rd
 from bisect import bisect_left as bl
 import heapq
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -20,9 +20,8 @@ def ri(flag=0):
         return int(sys.stdin.readline())
 
 
-h1, m1 = [int(i) for i in input().split(":")]
-h2, m2 = [int(i) for i in input().split(":")]
-
+(h1, m1) = [int(i) for i in input().split(':')]
+(h2, m2) = [int(i) for i in input().split(':')]
 k1 = h1
 k2 = m1
 c = 0
@@ -39,4 +38,4 @@ while c:
         k1 += 1
         k2 = 0
     c -= 1
-print("%02d:%02d" % (k1, k2))
+print('%02d:%02d' % (k1, k2))

@@ -1,11 +1,11 @@
-a, b, x = list(map(int, input().split()))
-mn = "0"
+(a, b, x) = list(map(int, input().split()))
+mn = '0'
 mncnt = a
-mx = "1"
+mx = '1'
 mxcnt = b
-res = ""
+res = ''
 if a > b:
-    mn, mx = mx, mn
+    (mn, mx) = (mx, mn)
     mncnt = b
     mxcnt = a
 if x % 2 == 0:
@@ -14,6 +14,6 @@ if x % 2 == 0:
     res += mx * (mxcnt - x // 2)
 else:
     res += (mx + mn) * (x // 2)
-    res += mx * (mxcnt - (x // 2))
-    res += mn * (mncnt - (x // 2))
+    res += mx * (mxcnt - x // 2)
+    res += mn * (mncnt - x // 2)
 print(res)

@@ -7,6 +7,7 @@ from copy import copy, deepcopy
 
 
 class Solver:
+
     def __init__(self):
         pass
 

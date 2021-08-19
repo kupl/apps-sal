@@ -8,14 +8,12 @@ def super_solve(n, k, s):
         for j in range(0, 105):
             tmp.append(0)
         dp.append(tmp)
-
     now = []
     for i in range(0, 105):
         tmp = []
         for j in range(0, 105):
             tmp.append(0)
         now.append(tmp)
-
     dp[0][0] = 1
     now[0][0] = 1
     for i in range(1, n + 1):
@@ -30,18 +28,16 @@ def super_solve(n, k, s):
         for j in range(0, n + 1):
             now[i][j] = dp[i][j] - dp[i - 1][j]
         last[c] = i
-
     cost = 0
     baki = k
     j = n
-    while(j >= 0):
+    while j >= 0:
         for i in range(0, n + 1):
             cur = now[i][j]
             my = min(baki, cur)
             cost += my * j
             baki -= my
         j -= 1
-
     ret = k * n - cost
     if baki > 0:
         ret = -1

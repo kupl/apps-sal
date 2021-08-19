@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 d = M / N
 if not d.is_integer():
     print(-1)

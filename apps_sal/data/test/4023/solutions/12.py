@@ -11,19 +11,14 @@ def f():
                 b.append(e)
         else:
             b.append(e)
-
     if len(b) == 0:
         print('YES')
-
+    elif len(set(b)) == 1 and b[0] == max(a):
+        print('YES')
     else:
-        if len(set(b)) == 1 and b[0] == max(a):
-            print('YES')
-        else:
-            print('NO')
+        print('NO')
 
 
 n = int(input())
 a = [int(i) for i in input().split()]
-
-
 f()

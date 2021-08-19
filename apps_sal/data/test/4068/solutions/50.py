@@ -1,10 +1,10 @@
 def f():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = [int(input()) for _ in range(m)]
     for i in range(m - 1):
         if a[i] + 1 == a[i + 1]:
             return 0
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     x = [1] * (n + 1)
     for j in a:
         x[j] = 0

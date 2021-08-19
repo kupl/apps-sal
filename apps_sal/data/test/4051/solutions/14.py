@@ -17,5 +17,4 @@ while len(x) > 1:
     x.remove(m)
     if not check(x):
         okay = False
-
 print('YES' if okay else 'NO')

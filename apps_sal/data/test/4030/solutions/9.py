@@ -12,12 +12,11 @@ while ind < n:
         for i in range(ind + 1, n):
             if kol[i] != -1:
                 continue
-            else:
-                if s[i] >= best:
-                    kol[i] = cur
-                    best = s[i]
+            elif s[i] >= best:
+                kol[i] = cur
+                best = s[i]
         ind += 1
         cur += 1
 print(max(kol))
 for i in range(n):
-    print(kol[i], end=" ")
+    print(kol[i], end=' ')

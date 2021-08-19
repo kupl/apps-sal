@@ -39,5 +39,5 @@ else:
 F = factor(g)
 ans = 1
 for i in F:
-    ans *= (F[i] + 1)
+    ans *= F[i] + 1
 print(ans)

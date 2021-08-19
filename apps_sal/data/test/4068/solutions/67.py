@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = [int(input()) for i in range(M)]
 n = 0
 if M != 0:
@@ -20,6 +20,6 @@ for i in range(1, N + 1):
         c = ans[-2]
     else:
         c = ans[-1] + ans[-2]
-    c %= 10**9 + 7
+    c %= 10 ** 9 + 7
     ans.append(c)
 print(ans[-1])

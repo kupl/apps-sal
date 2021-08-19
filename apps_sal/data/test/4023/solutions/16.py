@@ -8,10 +8,10 @@ for i in l:
     elif len(st) == 0 or st[-1] > d:
         st.append(d)
     else:
-        print("NO")
+        print('NO')
         break
 else:
-    if len(st) == 0 or len(st) == 1 and st[-1] == max(l):
-        print("YES")
+    if len(st) == 0 or (len(st) == 1 and st[-1] == max(l)):
+        print('YES')
     else:
-        print("NO")
+        print('NO')

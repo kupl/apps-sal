@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mod = pow(10, 9) + 7
 dp = [0] * (n + 5)
 for _ in range(m):

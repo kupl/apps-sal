@@ -2,7 +2,8 @@ import sys
 import math
 
 
-def input(): return sys.stdin.readline().rstrip()
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def gcd(n, f):
@@ -19,15 +20,15 @@ def division_with_remainder_up(pp, ppp):
 
 
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     mas = []
-    ans = "NO"
+    ans = 'NO'
     for i in range(n):
-        a, b = list(map(int, input().split()))
-        v, c = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
+        (v, c) = list(map(int, input().split()))
         if b == v:
-            ans = "YES"
+            ans = 'YES'
     if m % 2 == 0:
         print(ans)
     else:
-        print("NO")
+        print('NO')

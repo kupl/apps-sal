@@ -1,7 +1,7 @@
-n, m = map(int, input().strip().split())
+(n, m) = map(int, input().strip().split())
 r = input()
-ans = ""
-ans1 = ""
+ans = ''
+ans1 = ''
 for i in range(n - 1):
     if r[:i + 1] == r[n - 1 - i:]:
         ans = r[:i + 1]

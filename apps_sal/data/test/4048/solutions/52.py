@@ -1,5 +1,5 @@
 n = int(input())
-ans = int(1e18)
+ans = int(1e+18)
 for i in range(1, n):
     if i * i <= n:
         if n % i == 0:

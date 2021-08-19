@@ -11,7 +11,6 @@ while i <= m:
     exses.append([i, s, d, c])
     pops[d] = i
     i += 1
-
 i = 1
 result = [0] * (n + 1)
 fail = False
@@ -25,7 +24,7 @@ while i <= n:
         ex = None
         min = n + 1
         for e in exses:
-            if e[D] > i and e[S] <= i and e[D] < min and e[C] > 0:
+            if e[D] > i and e[S] <= i and (e[D] < min) and (e[C] > 0):
                 min = e[D]
                 ex = e
         if ex == None:
@@ -34,7 +33,6 @@ while i <= n:
             result[i] = ex[I]
             ex[C] -= 1
     i += 1
-
 if fail:
     print(-1)
 else:

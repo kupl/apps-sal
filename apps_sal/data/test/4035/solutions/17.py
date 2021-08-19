@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 a = 0 - -A * 25 // 2
 b = (A + 1) * 25 // 2
 c = B * 10

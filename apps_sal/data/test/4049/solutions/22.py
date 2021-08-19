@@ -1,7 +1,7 @@
 import itertools
 n = int(input())
-a1, a2, a3 = map(int, input().split())
-b1, b2, b3 = map(int, input().split())
+(a1, a2, a3) = map(int, input().split())
+(b1, b2, b3) = map(int, input().split())
 win = min(a1, b2) + min(a2, b3) + min(a3, b1)
 mx = 0
 pt = -1

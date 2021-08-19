@@ -1,10 +1,9 @@
-MOD = 10**9 + 7
-N, M = map(int, input().split())
+MOD = 10 ** 9 + 7
+(N, M) = map(int, input().split())
 dp = [0] * (N + 1)
 for _ in range(M):
     dp[int(input())] = -1
 dp[0] = 1
-
 for i in range(N + 1):
     if dp[i] == -1:
         continue

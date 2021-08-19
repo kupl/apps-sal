@@ -1,4 +1,4 @@
-X, K, D = list(map(int, input().split()))
+(X, K, D) = list(map(int, input().split()))
 if X < 0:
     X = -X
 if X - K * D >= 0:

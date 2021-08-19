@@ -1,9 +1,16 @@
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(mi())
+def ii():
+    return int(input())
 
 
-n, m = mi()
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(mi())
+
+
+(n, m) = mi()
 if m % n == 0:
     d = m // n
     c2 = c3 = 0

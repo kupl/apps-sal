@@ -1,8 +1,7 @@
-N, K = list(map(int, input().split()))
-
+(N, K) = list(map(int, input().split()))
 a = K * (K + 1) // 2
 if a > N:
-    print("NO")
+    print('NO')
 else:
     b = (N - a) // K
     c = N - a - b * K
@@ -14,7 +13,7 @@ else:
             r[K - 1] += r[i + 1] - r[i] * 2
             r[i + 1] = r[i] * 2
     if r[K - 2] * 2 < r[K - 1]:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         print(' '.join(list(map(str, r))))

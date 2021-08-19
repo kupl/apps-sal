@@ -17,13 +17,13 @@ for i in range(n):
         if t2:
             y = y[::-1]
             ans += y
-            s = s[0:i] + t[i] + s[i:j] + s[j + 1::]
+            s = s[0:i] + t[i] + s[i:j] + s[j + 1:]
         else:
             t1 = False
             break
 if t1:
     print(len(ans))
     for i in ans:
-        print(i, end=" ")
+        print(i, end=' ')
 else:
     print(-1)

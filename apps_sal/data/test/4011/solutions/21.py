@@ -17,4 +17,4 @@ for i in range(n):
             else:
                 break
 for i in wyn:
-    print(i, end="")
+    print(i, end='')

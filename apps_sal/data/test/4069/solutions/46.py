@@ -1,4 +1,4 @@
-X, K, D = map(int, input().split())
+(X, K, D) = map(int, input().split())
 ans = 0
 if X == 0:
     if K % 2 == 0:
@@ -27,5 +27,4 @@ if X < 0:
             ans = abs(X + n * D)
         else:
             ans = abs(X + (n - 1) * D)
-
 print(ans)

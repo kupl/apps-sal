@@ -1,9 +1,11 @@
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+MOD = 10 ** 9 + 7
 
 
-n, = I()
+def I():
+    return list(map(int, input().split()))
 
+
+(n,) = I()
 n %= 4
 if n == 1:
     print(1)

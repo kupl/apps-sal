@@ -13,7 +13,7 @@ def f(a, b, c):
 
 
 def main():
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     d = min(a // 3, b >> 1, c >> 1)
     ans = 7 * d
     a -= 3 * d

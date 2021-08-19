@@ -1,8 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [int(input()) for i in range(m)]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = 1
-
 dp = [0] * (n + 1)
 dp[0] = 1
 dp[1] = 1
@@ -17,14 +16,10 @@ else:
     for i in range(m):
         end = a[i] - 1
         ans *= dp[end - begin]
-
-        if(i + 1 < m and a[i + 1] == a[i] + 1):
+        if i + 1 < m and a[i + 1] == a[i] + 1:
             ans = 0
             break
-
         else:
             begin = end + 2
-
     ans *= dp[n - a[m - 1] - 1]
-
 print(ans % mod)

@@ -1,7 +1,6 @@
 n = int(input())
 s = input().split()
 l = [int(s[i]) for i in range(n)]
-
 res = 1
 cnt = 1
 now = l[0]

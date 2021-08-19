@@ -1,7 +1,5 @@
 import sys
-
-
-n, m, d = list(map(int, input().split()))
+(n, m, d) = list(map(int, input().split()))
 M = list(map(int, sys.stdin.readline().split()))
 sumM = sum(M)
 A = [0] * n
@@ -12,7 +10,7 @@ for platf in range(m):
     posit = ii
     sumM -= M[platf]
 if n - posit > d:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     print(*A)

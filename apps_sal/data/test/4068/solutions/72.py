@@ -19,7 +19,7 @@ def f(n):
     return dp[n - 1] + dp[n - 2]
 
 
-N, M = map(int, pin().split())
+(N, M) = map(int, pin().split())
 mod = 1000000007
 dp = [-1] * (N + 1)
 dp[0] = 1

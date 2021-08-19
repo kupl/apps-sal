@@ -1,6 +1,6 @@
 A = list(map(int, input().split()))
 X = [0, 1, 2, 0, 2, 1, 0]
-a, b, c = A
+(a, b, c) = A
 res = min(min(a // 3, b // 2), c // 2)
 a -= res * 3
 b -= res * 2

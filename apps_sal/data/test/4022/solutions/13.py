@@ -1,11 +1,11 @@
 n = int(input())
-l, r = [], []
-a, b = 0, 0
+(l, r) = ([], [])
+(a, b) = (0, 0)
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     l.append(a)
     r.append(b)
-minr = 10**10
+minr = 10 ** 10
 maxl = -1
 l1 = -1
 r1 = -1

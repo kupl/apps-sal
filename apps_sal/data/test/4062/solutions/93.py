@@ -1,4 +1,4 @@
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 x = a * c
 y = a * d
 z = b * c

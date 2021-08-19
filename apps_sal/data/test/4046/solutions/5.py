@@ -5,7 +5,6 @@ def __starting_point():
     for ai in a:
         b.append(b[-1] + ai)
     b.sort()
-
     for i in range(1, len(b)):
         if b[i - 1] + 1 != b[i]:
             print(-1)

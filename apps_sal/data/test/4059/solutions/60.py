@@ -1,6 +1,5 @@
 def solve():
     ans = 0
-
     for a in range(1, n):
         for b in range(1, n):
             c = n - a * b
@@ -8,10 +7,8 @@ def solve():
                 break
             else:
                 ans += 1
-
     return ans
 
 
 n = int(input())
-
-print((solve()))
+print(solve())

@@ -3,7 +3,7 @@ x = input()
 a = x.count('0')
 b = x.count('1')
 c = x.count('2')
-s = list(c for c in x)
+s = list((c for c in x))
 if a > n // 3:
     if c < n // 3:
         for i in range(len(s) - 1, -1, -1):
@@ -28,7 +28,7 @@ if a > n // 3:
                     break
 if b > n // 3:
     if a < n // 3:
-        for i in range(0, len(s),):
+        for i in range(0, len(s)):
             if s[i] == '1':
                 s[i] = '0'
                 a += 1

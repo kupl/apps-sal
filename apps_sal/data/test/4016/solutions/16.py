@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 t = input()
 P = [0] * n
 for i in range(1, n):
@@ -8,8 +8,7 @@ for i in range(1, n):
     if t[i] == t[j]:
         j += 1
     P[i] = j
-
-ans = t[:(n - P[n - 1])] * k
+ans = t[:n - P[n - 1]] * k
 if P[n - 1] > 0:
-    ans += t[(n - P[n - 1]):]
+    ans += t[n - P[n - 1]:]
 print(ans)

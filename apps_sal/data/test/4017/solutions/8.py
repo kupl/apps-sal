@@ -9,8 +9,7 @@ for i in range(n):
         tempMax = max(a[:i] + a[i + 1:])
         if s - a[i] - tempMax == tempMax:
             answer.append(i + 1)
-    else:
-        if s - a[i] - maxi == maxi:
-            answer.append(i + 1)
+    elif s - a[i] - maxi == maxi:
+        answer.append(i + 1)
 print(len(answer))
 print(*answer)

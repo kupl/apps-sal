@@ -1,9 +1,9 @@
-n, r = [int(s) for s in input().split()]
+(n, r) = [int(s) for s in input().split()]
 a = [int(s) for s in input().split()]
 b = [0] * n
 ans = 0
 for i in range(n):
-    if (b[i] == 0):
+    if b[i] == 0:
         found = False
         for j in range(min(n - 1, i + r - 1), max(-1, i - r), -1):
             if a[j] == 1:

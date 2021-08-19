@@ -1,7 +1,6 @@
 n = int(input())
 D = list(map(int, input().split()))
 D.sort()
-
 d = {}
 c = 0
 for i in range(n):

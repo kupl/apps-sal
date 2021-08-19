@@ -1,6 +1,5 @@
-h1, m1 = list(map(int, input().split(':')))
-h2, m2 = list(map(int, input().split(':')))
-
+(h1, m1) = list(map(int, input().split(':')))
+(h2, m2) = list(map(int, input().split(':')))
 t1 = h1 * 60 + m1
 t2 = h2 * 60 + m2
 mid = (t1 + t2) // 2

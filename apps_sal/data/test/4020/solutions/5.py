@@ -19,4 +19,4 @@ if mn < 10:
     s = '0'
     s += str(mn)
     mn = s
-print(chas, mn, sep=":")
+print(chas, mn, sep=':')

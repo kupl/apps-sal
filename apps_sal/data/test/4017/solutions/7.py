@@ -1,4 +1,5 @@
-def gcd(a, b): return gcd(b, a % b) if b else a
+def gcd(a, b):
+    return gcd(b, a % b) if b else a
 
 
 def main():
@@ -6,7 +7,7 @@ def main():
     arr = list(map(int, input().split()))
     summ = sum(arr)
     ind = []
-    fm, sm = arr[0], -1
+    (fm, sm) = (arr[0], -1)
     ind_fm = 0
     for i in range(len(arr)):
         if arr[i] > fm:
@@ -20,7 +21,6 @@ def main():
             ind.append(i + 1)
         if i == ind_fm and summ - arr[i] - sm == sm:
             ind.append(i + 1)
-
     print(len(ind))
     print(*ind)
 

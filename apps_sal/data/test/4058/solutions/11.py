@@ -1,4 +1,4 @@
-n, r = [int(x) for x in input().split()]
+(n, r) = [int(x) for x in input().split()]
 ns = [int(x) for x in input().split()]
 
 

@@ -3,7 +3,7 @@ def read_nums():
 
 
 def main():
-    n, = read_nums()
+    (n,) = read_nums()
     nums = sorted(read_nums())
     res = min(nums[-2] - nums[0], nums[-1] - nums[1])
     print(res)

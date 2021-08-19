@@ -8,7 +8,7 @@ for i in a:
 for i in range(n):
     s -= a[i]
     c[a[i]] -= 1
-    if s % 2 == 0 and s // 2 <= 1000000 and c[s // 2] > 0:
+    if s % 2 == 0 and s // 2 <= 1000000 and (c[s // 2] > 0):
         ans.append(i)
     s += a[i]
     c[a[i]] += 1

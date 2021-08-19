@@ -1,5 +1,5 @@
 n = int(input())
 d = list(map(int, input().split()))
 d.sort()
-x, y = n // 2 - 1, n // 2
+(x, y) = (n // 2 - 1, n // 2)
 print(d[y] - d[x])

@@ -1,4 +1,4 @@
-n, h, l, r = map(int, input().split())
+(n, h, l, r) = map(int, input().split())
 a = list(map(int, input().split()))
 dp = [[-1] * h for _ in range(n + 1)]
 dp[0][0] = 0

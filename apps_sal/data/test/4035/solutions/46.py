@@ -1,5 +1,5 @@
 import math
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ast = math.ceil(a * 12.5)
 aend = math.ceil((a + 1) * 12.5) - 1
 bst = b * 10

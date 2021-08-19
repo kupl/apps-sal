@@ -2,7 +2,7 @@ def inp():
     return map(int, input().split())
 
 
-n, k = inp()
+(n, k) = inp()
 a = list(inp())
 ans = 0
 i = 0

@@ -1,11 +1,8 @@
-A, B, C = list(map(int, input().split()))
-
+(A, B, C) = list(map(int, input().split()))
 g = min(A // 3, B // 2, C // 2)
-
 A -= g * 3
 B -= g * 2
 C -= g * 2
-
 L = [0, 0, 1, 2, 0, 2, 1]
 
 
@@ -20,5 +17,4 @@ def calc(today, x):
 ma = 0
 for i in range(7):
     ma = max(ma, calc(i, [A, B, C]))
-
 print(ma + g * 7)

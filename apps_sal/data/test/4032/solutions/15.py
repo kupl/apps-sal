@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 p = 0
 a = list(map(int, input().split()))
 q = [1] * n

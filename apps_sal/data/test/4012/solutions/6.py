@@ -1,7 +1,6 @@
 import sys
-
 for _ in range(int(sys.stdin.readline().rstrip())):
-    a, b, c = list(map(int, sys.stdin.readline().rstrip().split()))
+    (a, b, c) = list(map(int, sys.stdin.readline().rstrip().split()))
     re = 99999999
     re_arr = [a, b, c]
     for i in range(1, 10001):
@@ -10,12 +9,12 @@ for _ in range(int(sys.stdin.readline().rstrip())):
             break
         j = 1
         while True:
-            chk_j = chk_i + abs(b - (i * j))
+            chk_j = chk_i + abs(b - i * j)
             if chk_j > re and i * j > b:
                 break
             k = 1
             while True:
-                chk_k = chk_j + abs(c - (i * j * k))
+                chk_k = chk_j + abs(c - i * j * k)
                 if chk_k > re and i * j * k > c:
                     break
                 elif chk_k < re:

@@ -1,4 +1,4 @@
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(n)]
 pos = []
 neg = []

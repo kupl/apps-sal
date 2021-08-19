@@ -6,7 +6,6 @@ def topple(a):
         elif a[i] + 2 <= a[i - 1]:
             a[i - 1] -= 1
             a[i] += 1
-
     return a
 
 
@@ -20,7 +19,6 @@ def ravioli(a):
                 best = i
         res.append(a[best])
         a = a[:best] + a[best + 1:]
-
     return list(reversed(res))
 
 
@@ -28,7 +26,6 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(a)
 b.sort()
-
 c = ravioli(a)
 if b == c:
     print('YES')

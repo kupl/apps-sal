@@ -1,10 +1,13 @@
 s = input()[::-1]
 t = len(s)
 I = 50
-def g(c, i=0): return s.find(str(c), i) + 1 or I
 
 
-i, f = g(0), g(5)
+def g(c, i=0):
+    return s.find(str(c), i) + 1 or I
+
+
+(i, f) = (g(0), g(5))
 j = min(g(0, i), f)
 m = i + j - 3 + (j < i)
 if f < I:

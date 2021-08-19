@@ -1,11 +1,10 @@
 from collections import Counter
-
 z = int(input())
 x1_pos = []
 x2_pos = []
 ch = 0
 while ch < z:
-    x, xx = list(map(int, input().split()))
+    (x, xx) = list(map(int, input().split()))
     x1_pos.append(x)
     x2_pos.append(xx)
     ch += 1

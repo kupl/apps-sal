@@ -2,9 +2,7 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-
-'''
+'\n\n'
 n = int(input())
 a = list(mi())
 for i in range(n):

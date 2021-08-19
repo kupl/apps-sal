@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline())
 liste = list(map(int, sys.stdin.readline().split()))
 seen = [0] * 200

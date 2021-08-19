@@ -21,11 +21,8 @@ for i in range(len(s) - 1, -1, -1):
         y += 1
         if x < 0:
             break
-
 ans = 0
 for i in range(len(s1) + 1):
     ans = max(dp1[len(s1) - i] - dp[i] - 1, ans)
     ans = max(dp[len(s1) - i] - dp1[i] - 1, ans)
-
-
 print(ans)

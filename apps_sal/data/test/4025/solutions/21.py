@@ -1,11 +1,11 @@
-a, b, c = map(int, input().split())
-sa, sb, sc = a // 3, b // 2, c // 2
+(a, b, c) = map(int, input().split())
+(sa, sb, sc) = (a // 3, b // 2, c // 2)
 m = min(sa, sb, sc)
-pa, pb, pc = a - 3 * m, b - 2 * m, c - 2 * m
+(pa, pb, pc) = (a - 3 * m, b - 2 * m, c - 2 * m)
 d = [1, 2, 3, 1, 3, 2, 1, 1, 2, 3, 1, 3, 2, 1, 1, 2, 3, 1, 3, 2, 1]
 mr = 0
 for i in range(7):
-    a, b, c = pa, pb, pc
+    (a, b, c) = (pa, pb, pc)
     k = i
     r = 0
     while not -1 in [a, b, c]:

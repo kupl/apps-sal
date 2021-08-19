@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 s = sys.stdin.readline().strip()
 A = [0] * n
@@ -15,14 +14,13 @@ for i in range(0, n):
     else:
         c2 = c2 + 1
     A[i] = s[i]
-
 i = 0
 while c0 < k:
-    if (A[i] == '1' and c1 > k):
+    if A[i] == '1' and c1 > k:
         A[i] = '0'
         c0 = c0 + 1
         c1 = c1 - 1
-    elif (A[i] == '2' and c2 > k):
+    elif A[i] == '2' and c2 > k:
         A[i] = '0'
         c0 = c0 + 1
         c2 = c2 - 1
@@ -54,5 +52,4 @@ while c1 < k and c2 > k:
         c2 = c2 - 1
         c1 = c1 + 1
     i = i + 1
-
-print("".join(A))
+print(''.join(A))

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split(' ')))
+(n, k) = list(map(int, input().split(' ')))
 s = input()
 dp = [[0] * (n + 1) for _ in range(n + 1)]
 dp[0][0] = 1

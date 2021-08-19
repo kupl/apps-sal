@@ -1,4 +1,4 @@
-n, m, d = list(map(int, input().split()))
+(n, m, d) = list(map(int, input().split()))
 c = list(map(int, input().split()))
 sumc = 0
 for elem in c:
@@ -15,7 +15,7 @@ else:
                 ans.append(0)
             for j in range(c[i]):
                 ans.append(i + 1)
-            x -= (d - 1)
+            x -= d - 1
         elif x > 0:
             for j in range(x):
                 ans.append(0)

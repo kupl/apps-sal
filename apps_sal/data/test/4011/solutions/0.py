@@ -12,7 +12,7 @@ def main():
             break
         else:
             a[j] = f[a[j]]
-    print("".join(str(x) for x in a))
+    print(''.join((str(x) for x in a)))
     return 0
 
 

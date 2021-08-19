@@ -3,7 +3,7 @@ o = []
 c = []
 l3 = []
 for i in range(n):
-    r, s = map(int, input().strip().split())
+    (r, s) = map(int, input().strip().split())
     l3.append([r, s])
     o.append(r)
     c.append(s)
@@ -11,7 +11,7 @@ o.sort()
 c.sort()
 e1 = o[-1]
 e2 = c[0]
-if (e1 <= e2):
+if e1 <= e2:
     ans = e2 - e1
 else:
     ans = 0

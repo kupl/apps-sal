@@ -3,6 +3,7 @@ dn = list(map(int, input().split()))
 
 
 class Solution:
+
     def __init__(self, n, dn):
         self.n = n
         self.dn = dn
@@ -15,7 +16,7 @@ class Solution:
         self.dn = self.__reverse()
         a = self.dn[self.n // 2 - 1]
         b = self.dn[self.n // 2]
-        print((b - a))
+        print(b - a)
 
 
 conditions = Solution(n, dn)

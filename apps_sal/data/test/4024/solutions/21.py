@@ -2,7 +2,7 @@ from itertools import combinations
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     lenf = len
     l_prev = {s}

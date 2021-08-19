@@ -7,12 +7,10 @@ for i in range(n):
     for j in range(c + 1, 26):
         res[i] = max(res[i], f[j] + 1)
     f[c] = max(f[c], res[i])
-
 maxres = max(res)
-
 if maxres <= 2:
-    print("YES")
+    print('YES')
     for i in res:
         print(i - 1, end='')
 else:
-    print("NO")
+    print('NO')

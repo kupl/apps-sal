@@ -1,4 +1,4 @@
-x, k, d = map(int, input().split())
+(x, k, d) = map(int, input().split())
 q = abs(x) // d
 if q >= k:
     print(abs(x) - k * d)

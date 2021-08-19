@@ -12,7 +12,7 @@ for i in range(1, n):
     else:
         while len(b) != 0 and a[i] > b[-1][0]:
             if b[-1][1] % 2 != 0:
-                print("NO")
+                print('NO')
                 fl = True
                 break
             b.pop()
@@ -28,6 +28,6 @@ if not fl:
             break
         i -= 1
     if fl:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

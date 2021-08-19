@@ -1,14 +1,12 @@
 def main():
-    n, d, k = list(map(int, input().split()))
+    (n, d, k) = list(map(int, input().split()))
     _min = d + 1
-
     if n < _min:
         print('NO')
     else:
         res = []
         deg = [0] * (n + 1)
         dist = [0] * (n + 1)
-
         stack = []
         deg[1] = 1
         for i in range(1, d + 1):
@@ -18,10 +16,8 @@ def main():
             dist[i] = max(i - 1, d + 1 - i)
         dist[d + 1] = d
         deg[d + 1] = 1
-
         for i in range(2, d + 1):
             stack.append(i)
-
         next = d + 2
         while stack:
             if next > n:
@@ -36,11 +32,9 @@ def main():
                     if dist[next] < d:
                         stack.append(next)
                     next += 1
-
         ok = next > n
-        ok &= all(deg[i] <= k for i in range(1, n + 1))
-        ok &= all(dist[i] <= d for i in range(1, n + 1))
-
+        ok &= all((deg[i] <= k for i in range(1, n + 1)))
+        ok &= all((dist[i] <= d for i in range(1, n + 1)))
         if not ok:
             print('NO')
         else:

@@ -15,10 +15,10 @@ def go():
             while j < n and a[j] != b[i]:
                 j += 1
             for k in range(j, i, -1):
-                a[k], a[k - 1] = a[k - 1], a[k]
+                (a[k], a[k - 1]) = (a[k - 1], a[k])
                 o.append(k)
     print(len(o))
-    return ' '.join(str(i) for i in o)
+    return ' '.join((str(i) for i in o))
 
 
 print(go())

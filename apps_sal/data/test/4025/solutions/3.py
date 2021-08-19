@@ -1,7 +1,16 @@
 IN = input
-def rint(): return int(IN())
-def rmint(): return list(map(int, IN().split()))
-def rlist(): return list(rmint())
+
+
+def rint():
+    return int(IN())
+
+
+def rmint():
+    return list(map(int, IN().split()))
+
+
+def rlist():
+    return list(rmint())
 
 
 w = [0, 1, 2, 0, 2, 1, 0]

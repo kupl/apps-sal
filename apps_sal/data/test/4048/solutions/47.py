@@ -8,7 +8,7 @@ def enum_divisors(n):
 
 N = int(input())
 divs = enum_divisors(N)
-ans = float("inf")
+ans = float('inf')
 for d in divs:
-    ans = min(ans, (d - 1) + (N // d - 1))
+    ans = min(ans, d - 1 + (N // d - 1))
 print(ans)

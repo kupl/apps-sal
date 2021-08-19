@@ -1,4 +1,4 @@
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 a = input().split()
 i = -r
 n_r = n - r

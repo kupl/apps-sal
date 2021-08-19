@@ -7,8 +7,8 @@ for i in range(1, n):
         flag = False
         break
 if flag:
-    print("YES")
+    print('YES')
     for i in L:
         print(i)
 else:
-    print("NO")
+    print('NO')

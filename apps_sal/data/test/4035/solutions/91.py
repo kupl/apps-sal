@@ -1,5 +1,5 @@
 def main():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ans = -1
     import math
     i = 1

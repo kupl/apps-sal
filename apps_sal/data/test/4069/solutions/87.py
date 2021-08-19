@@ -1,4 +1,4 @@
-X, K, D = map(int, input().split())
+(X, K, D) = map(int, input().split())
 a = abs(X) // D
 b = abs(X) % D
 ans = 0

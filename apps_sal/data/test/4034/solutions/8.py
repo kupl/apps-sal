@@ -12,12 +12,12 @@ def main():
         for j in range(i + 1, n):
             if ord(s[j]) < ord(s[i]):
                 if color[j] == color[i]:
-                    print("NO")
+                    print('NO')
                     return
                 if color[j] == None:
                     color[j] = color[i] ^ 1
-    print("YES")
-    print(*color, sep="")
+    print('YES')
+    print(*color, sep='')
 
 
 main()

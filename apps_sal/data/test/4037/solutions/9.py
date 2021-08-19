@@ -1,11 +1,10 @@
 from collections import namedtuple
-
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 plus = []
 minus = []
 Project = namedtuple('Project', 'value a b')
 for _ in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if b >= 0:
         plus.append((a, b))
     else:
@@ -13,7 +12,7 @@ for _ in range(n):
 plus.sort()
 minus.sort(reverse=True)
 ans = 0
-for a, b in plus:
+for (a, b) in plus:
     if r >= a:
         r += b
         ans += 1
