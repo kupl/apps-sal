@@ -1,13 +1,13 @@
 n = int(input())
 a = [int(x) for x in input().split()]
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 class Comb(object):
-    def __init__(self, N, mod=10**9 + 7):
+
+    def __init__(self, N, mod=10 ** 9 + 7):
         self.mod = mod
-        self.fac, self.inv = [1] * (N + 1), [1] * (N + 1)
+        (self.fac, self.inv) = ([1] * (N + 1), [1] * (N + 1))
         for i in range(2, N + 1):
             self.fac[i] = self.fac[i - 1] * i % mod
             self.inv[i] = self.inv[i - 1] * pow(i, mod - 2, mod) % mod
@@ -27,7 +27,6 @@ for i in range(n + 1):
     if c[a[i]] == 2:
         indexes = indexes[a[i]]
         break
-
 m = indexes[0] + (n - indexes[1])
 comb = Comb(n + 1)
 for k in range(1, n + 2):

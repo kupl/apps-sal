@@ -1,7 +1,9 @@
 import sys
+p = 10 ** 9 + 7
 
-p = 10**9 + 7
-def dthbit(d, n): return (n >> d) & 1
+
+def dthbit(d, n):
+    return n >> d & 1
 
 
 def main(n):
@@ -17,4 +19,4 @@ def main(n):
 
 
 n = int(input())
-print((main(n)))
+print(main(n))

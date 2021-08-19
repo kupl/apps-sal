@@ -9,7 +9,7 @@ def bellmanford(G, s):
     dist[s] = 0
     for i in range(2 * n):
         for v in range(n):
-            for w, c in G[v]:
+            for (w, c) in G[v]:
                 if dist[w] < dist[v] + c:
                     dist[w] = dist[v] + c
                     if i >= n - 1 and w == n - 1:
@@ -18,16 +18,16 @@ def bellmanford(G, s):
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     graph = [[] for _ in range(N)]
     for _ in range(M):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         a -= 1
         b -= 1
         graph[a].append((b, c))
     dist = bellmanford(graph, 0)
     if dist == -1:
-        print("inf")
+        print('inf')
     else:
         print(dist[N - 1])
 

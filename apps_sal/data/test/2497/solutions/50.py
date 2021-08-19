@@ -5,8 +5,8 @@ dir = {'R', 'L', 'U', 'D'}
 N = int(input())
 dic = defaultdict(list)
 for _ in range(N):
-    x, y, d = input().split()
-    x, y = int(x), int(y)
+    (x, y, d) = input().split()
+    (x, y) = (int(x), int(y))
     dic[d].append((x, y))
 x_max = defaultdict(lambda: -inf)
 x_min = defaultdict(lambda: inf)
@@ -41,5 +41,5 @@ def make_cand(s, d, i):
 
 
 cand = [0] + make_cand(max(x_max['U'], x_max['D']), x_max['R'], x_max['L']) + make_cand(min(x_min['U'], x_min['D']), x_min['R'], x_min['L']) + make_cand(max(y_max['R'], y_max['L']), y_max['U'], y_max['D']) + make_cand(min(y_min['R'], y_min['L']), y_min['U'], y_min['D'])
-ans = min(f(t)for t in cand)
+ans = min((f(t) for t in cand))
 print(ans)

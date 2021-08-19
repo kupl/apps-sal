@@ -1,9 +1,9 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 adjacent = []
 score = ['None' for i in range(N)]
 score[0] = 0
 for i in range(M):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     adjacent.append([a - 1, b - 1, c])
 for i in range(N):
     for j in adjacent:
@@ -16,8 +16,8 @@ for i in range(N):
         t = score[N - 1]
     if i == N - 1:
         if t != score[N - 1]:
-            score[N - 1] = 1e+15
-if score[N - 1] < 1e+15:
+            score[N - 1] = 1000000000000000.0
+if score[N - 1] < 1000000000000000.0:
     print(t)
 else:
     print('inf')

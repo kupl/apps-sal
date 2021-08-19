@@ -1,5 +1,5 @@
 from collections import deque
-n, d, a = map(int, input().split())
+(n, d, a) = map(int, input().split())
 mon = [tuple(map(int, input().split())) for i in range(n)]
 mon.sort()
 p = deque(mon)
@@ -7,9 +7,9 @@ baku = deque()
 cou = 0
 ans = 0
 while p:
-    nowx, nowh = p.popleft()
+    (nowx, nowh) = p.popleft()
     while baku:
-        bx, bh = baku.popleft()
+        (bx, bh) = baku.popleft()
         if bx >= nowx:
             baku.appendleft((bx, bh))
             break

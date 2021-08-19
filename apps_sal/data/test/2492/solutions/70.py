@@ -13,12 +13,10 @@ def partsolve(A, x, positive, zero, negative):
     P = x // positive
     Pc = np.searchsorted(A, P, side='right')
     count += Pc.sum()
-
     N = (-x - 1) // -negative
     Nc = np.searchsorted(A, N, side='right')
     Nc = len(A) - Nc
     count += Nc.sum()
-
     count -= np.count_nonzero(A * A <= x)
     return count // 2
 
@@ -28,7 +26,6 @@ def solve(N, K, As):
     positive = A[A > 0]
     zero = A[A == 0]
     negative = A[A < 0]
-
     left = -10 ** 18
     right = 10 ** 18
     while right - left > 1:
@@ -42,9 +39,9 @@ def solve(N, K, As):
 
 
 def __starting_point():
-    N, K = tuple(map(int, input().split(" ")))
-    As = list(map(int, input().split(" ")))
-    print((solve(N, K, As)))
+    (N, K) = tuple(map(int, input().split(' ')))
+    As = list(map(int, input().split(' ')))
+    print(solve(N, K, As))
 
 
 __starting_point()

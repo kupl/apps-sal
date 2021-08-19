@@ -1,12 +1,15 @@
 import sys
-def finput(): return sys.stdin.readline().strip()
+
+
+def finput():
+    return sys.stdin.readline().strip()
 
 
 def main():
-    p = 10**9 + 7
+    p = 10 ** 9 + 7
     n = int(finput())
     a = list(map(int, finput().split()))
-    k = sum(a) - (n * (n + 1)) // 2
+    k = sum(a) - n * (n + 1) // 2
     pk = [i for i in range(n + 1) if a[i] == k]
     fact = [1] * (n + 2)
     ifact = [1] * (n + 2)
@@ -34,7 +37,7 @@ def main():
     for i in range(sn + 1):
         ans1[i + 1] -= fact[sn] * ifact[sn - i] * ifact[i] % p
     for i in range(1, n + 2):
-        print(((ans0[i] + ans1[i] + ans2[i]) % p))
+        print((ans0[i] + ans1[i] + ans2[i]) % p)
 
 
 def __starting_point():

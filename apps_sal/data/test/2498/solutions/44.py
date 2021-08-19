@@ -2,12 +2,10 @@ from functools import reduce
 
 
 def main():
-    N, M = map(int, input().split())
-    *A, = map(int, input().split())
-
+    (N, M) = map(int, input().split())
+    (*A,) = map(int, input().split())
     A = list(set(A))
     N = len(A)
-
     B = [A[i] // 2 for i in range(N)]
 
     def factorize(n):
@@ -21,13 +19,11 @@ def main():
                 i += 1
             if n == 1:
                 break
-            if i > int(n**.5 + 3):
+            if i > int(n ** 0.5 + 3):
                 out.append(n)
                 break
         return out
-
     ord_list = [len(factorize(B[i])) for i in range(N)]
-
     if len(set(ord_list)) != 1:
         print(0)
         return
@@ -39,7 +35,6 @@ def main():
 
     def lcm(a, b):
         return a * b // gcd(a, b)
-
     LCM = reduce(lcm, B)
     print((M // LCM + 1) // 2)
 

@@ -1,6 +1,6 @@
 def main():
     N = int(input())
-    A = [int(a) for a in input().split(" ")]
+    A = [int(a) for a in input().split(' ')]
     A.sort()
     l = A[-1]
     p = [1] * l

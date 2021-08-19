@@ -13,5 +13,4 @@ for i in range(-1, -m - 1, -1):
         cnt += 10 - cs
         y.append([10 - cs, s[i]])
         up = 1
-
 print(cnt)

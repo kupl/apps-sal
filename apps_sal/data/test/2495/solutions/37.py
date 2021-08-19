@@ -8,7 +8,7 @@ flag = True
 for i in range(len(A)):
     sum1 = sum1 + A[i]
     sum2 = sum2 + A[i]
-    flag = not(flag)
+    flag = not flag
     if flag:
         if sum1 > 0:
             pass
@@ -31,4 +31,4 @@ for i in range(len(A)):
         else:
             ans1 += abs(-1 - sum1)
             sum1 = -1
-print((min(ans1, ans2)))
+print(min(ans1, ans2))

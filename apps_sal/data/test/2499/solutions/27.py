@@ -5,7 +5,7 @@ sx = 0
 for i in l:
     sx ^= i
 for i in l:
-    i &= (~sx)
+    i &= ~sx
     for j in e:
         i = min(i, i ^ j)
     if i:

@@ -8,10 +8,9 @@ for i in range(n):
         if t <= 0:
             a1 += 1 - t
             t = 1
-    else:
-        if t >= 0:
-            a1 += 1 + t
-            t = -1
+    elif t >= 0:
+        a1 += 1 + t
+        t = -1
 a2 = 0
 t = 0
 for i in range(n):
@@ -20,8 +19,7 @@ for i in range(n):
         if t <= 0:
             a2 += 1 - t
             t = 1
-    else:
-        if t >= 0:
-            a2 += 1 + t
-            t = -1
+    elif t >= 0:
+        a2 += 1 + t
+        t = -1
 print(min(a1, a2))

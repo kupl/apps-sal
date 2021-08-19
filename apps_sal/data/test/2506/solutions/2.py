@@ -1,5 +1,5 @@
 from bisect import bisect_left, bisect_right
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 for i in range(n):
     a[i] *= -1
@@ -16,7 +16,7 @@ def check(mid):
 
 
 ok = 0
-ng = 10**10 + 7
+ng = 10 ** 10 + 7
 while ng != ok + 1:
     mid = (ok + ng) // 2
     if check(mid) >= m:

@@ -11,10 +11,9 @@ for p in range(2):
                 s = 1
             else:
                 s = t
+        elif t >= 0:
+            b[p] += 1 + t
+            s = -1
         else:
-            if t >= 0:
-                b[p] += 1 + t
-                s = -1
-            else:
-                s = t
+            s = t
 print(min(b))

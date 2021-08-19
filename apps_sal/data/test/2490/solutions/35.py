@@ -13,14 +13,11 @@ for i in range(L - 1, -1, -1):
     elif N[i] > 5:
         ans += 10 - N[i]
         N[i - 1] += 1
+    elif i == 0:
+        ans += N[i]
+    elif N[i - 1] >= 5:
+        N[i - 1] += 1
+        ans += 5
     else:
-        if i == 0:
-            ans += N[i]
-        else:
-            if N[i - 1] >= 5:
-                N[i - 1] += 1
-                ans += 5
-            else:
-                ans += N[i]
-
+        ans += N[i]
 print(ans)

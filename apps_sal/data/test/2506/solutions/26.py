@@ -1,7 +1,7 @@
 from itertools import accumulate
 from bisect import bisect_left, bisect_right
-N, M = list(map(int, input().split()))
-*A, = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
+(*A,) = list(map(int, input().split()))
 A.sort()
 acc = list(accumulate(A[::-1]))[::-1] + [0]
 
@@ -21,7 +21,6 @@ while l + 1 < r:
         l = m
     else:
         r = m
-
 ans = 0
 cnt = 0
 for a in A:

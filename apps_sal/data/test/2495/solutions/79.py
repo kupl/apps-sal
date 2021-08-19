@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 ans = 0
 
 
@@ -13,11 +12,10 @@ def func(A, flag):
             if acc >= 0:
                 ans += 1 + acc
                 acc = -1
-        else:
-            if acc <= 0:
-                ans += 1 - acc
-                acc = 1
+        elif acc <= 0:
+            ans += 1 - acc
+            acc = 1
     return ans
 
 
-print((min(func(A, 0), func(A, 1))))
+print(min(func(A, 0), func(A, 1)))

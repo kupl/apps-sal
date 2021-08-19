@@ -1,17 +1,14 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-
 K = int(input())
-
 D = [-1] * K
-
 q = deque()
 q.append(1)
 D[1] = 1
 while q:
     p = q.pop()
-    n1 = (p * 10) % K
+    n1 = p * 10 % K
     if D[n1] == -1 or D[n1] > D[p]:
         D[n1] = D[p]
         q.append(n1)

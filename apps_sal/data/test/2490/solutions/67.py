@@ -7,5 +7,4 @@ for s in n:
     b_ = min(a + 10 - v + 1, b + 10 - v + 1 - 2)
     a = a_
     b = b_
-
 print(min(a, b))

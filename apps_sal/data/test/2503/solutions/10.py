@@ -1,11 +1,11 @@
-from numpy import*
-N, K = map(int, input().split())
+from numpy import *
+(N, K) = map(int, input().split())
 m = zeros((3 * K, 3 * K), dtype=int)
 L = 2 * K
 o = 0
 for _ in [0] * N:
-    x, y, c = input().split()
-    x, y = int(x) % L, int(y) % L
+    (x, y, c) = input().split()
+    (x, y) = (int(x) % L, int(y) % L)
     t = c == 'W'
     m[x, y] += 2 * t - 1
     o += t

@@ -1,4 +1,3 @@
-
 def resolve():
     S = input()
     n = len(S)
@@ -8,7 +7,7 @@ def resolve():
         d = int(S[i - 1])
         dp[i][0] = min(dp[i - 1][0] + d, dp[i - 1][1] + (10 - d))
         dp[i][1] = min(dp[i - 1][0] + (d + 1), dp[i - 1][1] + (10 - 1 - d))
-    print((dp[n][0]))
+    print(dp[n][0])
 
 
 def __starting_point():

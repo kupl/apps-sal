@@ -4,7 +4,7 @@ xyd = [list(input().split()) for _ in range(N)]
 
 def nasu(s, e, f, n, inf):
     L = [0] * 3
-    a, b, c = inf, inf, inf
+    (a, b, c) = (inf, inf, inf)
     for i in range(N):
         t = int(xyd[i][n])
         if xyd[i][2] == s:
@@ -17,7 +17,7 @@ def nasu(s, e, f, n, inf):
     if f(a, c) == a:
         L[1] = abs(a - c)
     else:
-        L[0], L[1] = c, 0
+        (L[0], L[1]) = (c, 0)
     if f(L[0], b) != b:
         if f(c, b) == c:
             L[2] = abs(b - c)
@@ -36,10 +36,10 @@ def nasu(s, e, f, n, inf):
 
 
 inf = 10 ** 10
-R = nasu("L", "R", max, 0, -inf)
-L = nasu("R", "L", min, 0, inf)
-U = nasu("D", "U", max, 1, -inf)
-D = nasu("U", "D", min, 1, inf)
+R = nasu('L', 'R', max, 0, -inf)
+L = nasu('R', 'L', min, 0, inf)
+U = nasu('D', 'U', max, 1, -inf)
+D = nasu('U', 'D', min, 1, inf)
 
 
 def honya(x):
@@ -51,7 +51,7 @@ def honya(x):
 
 
 def honyaraka(X, x, f):
-    a, b, c = X
+    (a, b, c) = X
     if x <= b:
         return a + x * f * -1
     if x < c:
@@ -66,5 +66,4 @@ for i in range(4):
         x = T[i][j]
         if x != inf:
             ans = min(ans, honya(x))
-
 print(ans)

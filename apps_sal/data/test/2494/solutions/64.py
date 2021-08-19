@@ -1,15 +1,15 @@
 from collections import deque
 k = int(input())
 x = [50 for i in range(k)]
-x[1], q = 0, deque()
+(x[1], q) = (0, deque())
 q.append(1)
 while q:
     n = q.pop()
     m = n
     while 1:
-        m2 = (m * 10) % k
+        m2 = m * 10 % k
         if x[m2] > x[m]:
-            x[m2], m = x[m], m2
+            (x[m2], m) = (x[m], m2)
             q.append(m)
         else:
             break

@@ -1,7 +1,6 @@
 N = int(input())
 A = sorted(list(map(int, input().split())))
 B = [0] * (A[-1] + 1)
-
 for i in A:
     j = i
     while j <= A[-1]:

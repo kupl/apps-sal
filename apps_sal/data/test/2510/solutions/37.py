@@ -1,4 +1,5 @@
 class Unionfind:
+
     def __init__(self, n):
         self.par = [x for x in range(n)]
         self.num = [1] * n
@@ -11,7 +12,7 @@ class Unionfind:
         return parent
 
     def unite(self, a, b):
-        ra, rb = self.root(a), self.root(b)
+        (ra, rb) = (self.root(a), self.root(b))
         self.par[rb] = ra
         self.num[ra] += self.num[rb]
 
@@ -20,15 +21,13 @@ class Unionfind:
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     uf = Unionfind(n)
-
     for _ in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         if uf.same(a - 1, b - 1):
             continue
         uf.unite(a - 1, b - 1)
-
     print(max(uf.num))
 
 

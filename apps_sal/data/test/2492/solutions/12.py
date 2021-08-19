@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 
 def main():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = np.sort(np.array(list(map(int, input().split())), np.int64))
     z = A[A == 0]
     p = A[A > 0]
@@ -19,7 +19,6 @@ def main():
         cnt -= np.count_nonzero(A * A <= x)
         assert cnt % 2 == 0
         return cnt // 2
-
     l = -10 ** 18
     r = 10 ** 18
     while l + 1 < r:
@@ -28,7 +27,6 @@ def main():
             r = x
         else:
             l = x
-
     print(r)
 
 

@@ -1,6 +1,6 @@
 def A():
-    d, t, s = list(map(int, input().split()))
-    print(("Yes" if t * s >= d else "No"))
+    (d, t, s) = list(map(int, input().split()))
+    print('Yes' if t * s >= d else 'No')
 
 
 def B():
@@ -24,10 +24,11 @@ def C():
     T = 0
     for e in A:
         T += e * e
-    print(((S * S - T) // 2))
+    print((S * S - T) // 2)
 
 
 class UF:
+
     def __init__(self, N):
         self.N = N
         self.sz = [1] * N
@@ -56,12 +57,12 @@ class UF:
 
 
 def D():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     uf = UF(n + 1)
     for i in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         uf.unite(a, b)
-    print((max(uf.sz)))
+    print(max(uf.sz))
 
 
 D()

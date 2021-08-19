@@ -1,14 +1,10 @@
 from collections import deque
 from bisect import bisect_left, bisect_right, bisect, insort_left, insort_right, insort
-N, D, A = map(int, input().split())
-
+(N, D, A) = map(int, input().split())
 Monster = [0] * N
 for i in range(N):
     Monster[i] = list(map(int, input().split()))
-
 Monster.sort(key=lambda x: x[0])
-
-
 d = deque()
 damage = 0
 ans = 0
@@ -24,7 +20,7 @@ for i in range(N):
     count = -(-max(Monster[i][1], 0) // A)
     ans += count
     right = Monster[i][0] + 2 * D
-    ind = bisect(Monster, [right, 10**9 + 1])
+    ind = bisect(Monster, [right, 10 ** 9 + 1])
     damage += A * count
     d.append([ind, A * count])
 print(ans)

@@ -4,7 +4,8 @@ a = list(map(int, input().split()))
 mod = 10 ** 9 + 7
 
 
-class nCr():
+class nCr:
+
     def __init__(self, n):
         self.n = n
         self.fa = [1] * (self.n + 1)
@@ -24,6 +25,6 @@ class nCr():
 comb = nCr(2 * n)
 c = Counter(a)
 num = c.most_common()[0][0]
-l, r = a.index(num), n - list(reversed(a)).index(num)
+(l, r) = (a.index(num), n - list(reversed(a)).index(num))
 for i in range(1, n + 2):
     print((comb.comb(n + 1, i) - comb.comb(n - (r - l), i - 1)) % mod)

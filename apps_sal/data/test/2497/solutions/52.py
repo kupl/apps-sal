@@ -1,25 +1,23 @@
 from decimal import *
 getcontext().prec = 100
 N = int(input())
-Xmi, Xma, Ymi, Yma, DYmi, DYma, UYmi, UYma, RXmi, RXma, LXmi, LXma = [(10**10), -(10**10)] * 6
+(Xmi, Xma, Ymi, Yma, DYmi, DYma, UYmi, UYma, RXmi, RXma, LXmi, LXma) = [10 ** 10, -10 ** 10] * 6
 for _ in range(N):
-    x, y, d = input().split()
-    x, y = int(x), int(y)
-
-    if d == "R":
+    (x, y, d) = input().split()
+    (x, y) = (int(x), int(y))
+    if d == 'R':
         RXmi = min(RXmi, x)
         RXma = max(RXma, x)
-    elif d == "L":
+    elif d == 'L':
         LXmi = min(LXmi, x)
         LXma = max(LXma, x)
     else:
         Xmi = min(Xmi, x)
         Xma = max(Xma, x)
-
-    if d == "U":
+    if d == 'U':
         UYmi = min(UYmi, y)
         UYma = max(UYma, y)
-    elif d == "D":
+    elif d == 'D':
         DYmi = min(DYmi, y)
         DYma = max(DYma, y)
     else:
@@ -36,16 +34,16 @@ def calc(t):
 
 
 def dii(t):
-    a = Decimal("0.00000001")
+    a = Decimal('0.00000001')
     return calc(t + a) - calc(t - a)
 
 
-l = Decimal("0")
-r = Decimal("10000000000")
+l = Decimal('0')
+r = Decimal('10000000000')
 for _ in range(500):
     m = (l + r) / 2
     if dii(m) > 0:
         r = m
     else:
         l = m
-print((calc(m)))
+print(calc(m))

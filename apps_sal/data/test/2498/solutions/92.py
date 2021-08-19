@@ -1,6 +1,9 @@
 import sys
 import numpy as np
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def kosuu(x):
@@ -13,7 +16,7 @@ def kosuu(x):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     li = [kosuu(a[0])[0]]
     hantei = kosuu(a[0])[1]
@@ -26,7 +29,7 @@ def main():
             li.append(hantei2[0])
     else:
         lc = np.lcm.reduce(li)
-        print(((m // (lc * 2**(hantei - 1))) + 1) // 2)
+        print((m // (lc * 2 ** (hantei - 1)) + 1) // 2)
 
 
 def __starting_point():

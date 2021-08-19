@@ -1,10 +1,7 @@
 from collections import deque
-
 K = int(input())
-
 deq = deque([(1, 1)])
 history = set()
-
 while True:
     to = deq.popleft()
     if to[0] == 0:

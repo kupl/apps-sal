@@ -1,5 +1,4 @@
-n, *a = map(int, open(0).read().split())
-
+(n, *a) = map(int, open(0).read().split())
 left = 0
 right = 0
 val = 0
@@ -14,9 +13,7 @@ for i in range(n):
     if a[i] == val:
         left = i
         break
-
 mod = 10 ** 9 + 7
-
 fac = [1] * (n + 5)
 for i in range(1, n + 3):
     fac[i] = fac[i - 1] * i % mod

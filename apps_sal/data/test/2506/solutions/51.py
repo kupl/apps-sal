@@ -1,8 +1,6 @@
 from bisect import bisect_left
-
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 A.sort()
 
 
@@ -21,11 +19,9 @@ while less - overEq > 1:
         overEq = mid
     else:
         less = mid
-
 accA = [0] * (N + 1)
-for i, a in enumerate(A, start=1):
+for (i, a) in enumerate(A, start=1):
     accA[i] = accA[i - 1] + a
-
 ans = 0
 cnt = 0
 for a in A:
@@ -33,6 +29,5 @@ for a in A:
     ans += accA[N] - accA[i]
     ans += (N - i) * a
     cnt += N - i
-
 ans -= max(0, cnt - M) * overEq
 print(ans)

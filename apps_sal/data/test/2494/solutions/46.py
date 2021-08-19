@@ -23,7 +23,7 @@ def main():
                 dist[nv1] = dist[v] + 1
                 stack.appendleft(nv1)
             visited[v] = 1
-    print((dist[0] + 1))
+    print(dist[0] + 1)
 
 
 def __starting_point():

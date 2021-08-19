@@ -4,7 +4,7 @@ ans = {}
 K = int(input())
 q.append((1, 1))
 while len(q):
-    resid, total = q.popleft()
+    (resid, total) = q.popleft()
     if resid in ans:
         continue
     ans[resid] = total

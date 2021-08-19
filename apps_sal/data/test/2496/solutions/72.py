@@ -2,6 +2,7 @@ from math import gcd
 
 
 class Factor:
+
     def __init__(self, max_element):
         self.minFactor = [-1] * (max_element + 1)
         for i in range(2, max_element + 1):
@@ -52,15 +53,15 @@ def main():
         if not f:
             break
     if f:
-        print("pairwise coprime")
+        print('pairwise coprime')
     else:
         all_gcd = a[0]
         for i in range(1, n):
             all_gcd = gcd(all_gcd, a[i])
         if all_gcd == 1:
-            print("setwise coprime")
+            print('setwise coprime')
         else:
-            print("not coprime")
+            print('not coprime')
 
 
 def __starting_point():

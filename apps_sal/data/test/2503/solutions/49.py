@@ -2,17 +2,17 @@ import numpy as np
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     p = [list(map(str, input().split())) for _ in range(n)]
     arr = [[[0] * 2 for j in range(k)] for i in range(k)]
     for i in range(n):
-        x, y, c = p[i]
-        x, y = int(x), int(y)
-        mx, my = x % k, y % k
+        (x, y, c) = p[i]
+        (x, y) = (int(x), int(y))
+        (mx, my) = (x % k, y % k)
         f = False
-        if (x // k) % 2 != (y // k) % 2:
+        if x // k % 2 != y // k % 2:
             f = not f
-        if c == "W":
+        if c == 'W':
             f = not f
         if f:
             arr[0][0][0] += 1
@@ -24,9 +24,9 @@ def main():
             arr[mx][0][0] += 1
             arr[mx][my][0] -= 2
         f = False
-        if (x // k) % 2 != (y // k) % 2:
+        if x // k % 2 != y // k % 2:
             f = not f
-        if c == "B":
+        if c == 'B':
             f = not f
         if f:
             arr[0][0][1] += 1

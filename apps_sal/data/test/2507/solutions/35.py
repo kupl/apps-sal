@@ -1,5 +1,5 @@
 import numpy as np
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [int(c) for c in input().split()]
 F = [int(c) for c in input().split()]
 A.sort()
@@ -8,7 +8,6 @@ A = np.array(A)
 F = np.array(F)
 Asum = A.sum()
 M = np.max(A * F)
-
 l = -1
 r = M + 1
 while l + 1 < r:
@@ -18,5 +17,4 @@ while l + 1 < r:
         l = s
     else:
         r = s
-
 print(r)

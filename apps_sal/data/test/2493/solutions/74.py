@@ -1,5 +1,5 @@
-N = 10**5 + 3
-mod = 10**9 + 7
+N = 10 ** 5 + 3
+mod = 10 ** 9 + 7
 fac = [1] * (N + 1)
 for i in range(1, N + 1):
     fac[i] = fac[i - 1] * i % mod

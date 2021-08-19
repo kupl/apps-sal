@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -13,13 +14,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -27,22 +25,17 @@ class UnionFind():
         return -self.parents[self.find(x)]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
 
-N, M = list(map(int, input().split()))
-
+(N, M) = list(map(int, input().split()))
 uf = UnionFind(N)
-
 for i in range(M):
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     a = uf.find(A - 1)
     b = uf.find(B - 1)
     uf.union(a, b)
-
 ans = 0
-
 for i in uf.roots():
     ans = max(uf.size(i), ans)
-
 print(ans)

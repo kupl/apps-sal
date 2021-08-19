@@ -1,6 +1,5 @@
 from collections import Counter
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 rng = 100002
 fctr = [1]
 finv = [1]
@@ -28,4 +27,4 @@ for i in range(n + 1):
 y = same[1] - same[0] + 1
 print(n)
 for k in range(2, n + 2):
-    print(((cmb(n + 1, k) - cmb(n + 1 - y, k - 1)) % mod))
+    print((cmb(n + 1, k) - cmb(n + 1 - y, k - 1)) % mod)

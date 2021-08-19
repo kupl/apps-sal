@@ -1,6 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-M = 10**6 + 1
+M = 10 ** 6 + 1
 cnt = [0] * M
 for a in A:
     if cnt[a] != 0:

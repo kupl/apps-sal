@@ -1,7 +1,6 @@
 import sys
 from bisect import bisect_right, bisect_left
 from itertools import accumulate
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -9,6 +8,7 @@ mod = 10 ** 9 + 7
 
 
 def resolve():
+
     def meguru_bisect(ok, ng):
         while abs(ok - ng) > 1:
             mid = (ok + ng) // 2
@@ -25,14 +25,12 @@ def resolve():
             idx = bisect_right(A, t)
             cnt += n - idx
         return cnt < m
-
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     A.sort()
-    ng, ok = 0, 10 ** 15 + 1
+    (ng, ok) = (0, 10 ** 15 + 1)
     mth = meguru_bisect(ok, ng)
     R = [0] + list(accumulate(A))
-
     res = 0
     cnt = 0
     for a in A:
@@ -40,7 +38,7 @@ def resolve():
         left = bisect_left(A, s)
         res += (n - left) * a + R[-1] - R[left]
         cnt += n - left
-    print((res - mth * (cnt - m)))
+    print(res - mth * (cnt - m))
 
 
 def __starting_point():

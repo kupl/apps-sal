@@ -1,9 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 ma = max(a)
 m = [0] * (ma + 1)
-
 for i in a:
     if m[i] == 1:
         m[i] = 2

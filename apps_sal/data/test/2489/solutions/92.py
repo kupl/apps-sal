@@ -1,5 +1,5 @@
 from collections import Counter
-n, *a = map(int, open(0).read().split())
+(n, *a) = map(int, open(0).read().split())
 s = set(a)
 c = Counter(a)
 m = max(s)

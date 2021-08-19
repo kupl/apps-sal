@@ -1,7 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
 A.sort()
-INF = 10**6 + 1
+INF = 10 ** 6 + 1
 lis = [1] * INF
 exist = [0] * INF
 for i in range(N):

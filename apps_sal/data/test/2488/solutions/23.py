@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def nibun_right(a, x):
-    lo, hi = 0, len(a)
+    (lo, hi) = (0, len(a))
     while lo < hi:
         mid = (lo + hi) // 2
         if x < a[mid][0]:
@@ -13,7 +13,7 @@ def nibun_right(a, x):
     return lo
 
 
-N, D, A = list(map(int, input().split()))
+(N, D, A) = list(map(int, input().split()))
 lst = [0] * N
 for i in range(N):
     lst[i] = list(map(int, input().split()))

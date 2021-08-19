@@ -1,8 +1,7 @@
 import math
 import sys
 input = sys.stdin.readline
-
-N, M = (int(x) for x in input().rstrip('\n').split())
+(N, M) = (int(x) for x in input().rstrip('\n').split())
 As = [int(x) for x in input().rstrip('\n').split()]
 n = 1
 use2 = 0
@@ -22,10 +21,10 @@ for i in range(N):
         if use2 != use:
             check += 1
             break
-        lcm = lcm * x // (math.gcd(lcm, x))
+        lcm = lcm * x // math.gcd(lcm, x)
 if check > 0:
     print(0)
 else:
-    LCM = 2**(use2 - 1)
+    LCM = 2 ** (use2 - 1)
     LCM = LCM * lcm
-    print(((M // LCM) + 1) // 2)
+    print((M // LCM + 1) // 2)

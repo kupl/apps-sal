@@ -1,6 +1,5 @@
 N = 0
 a = 0
-
 try:
     N = int(input())
     for i in range(N + 1):
@@ -12,5 +11,4 @@ try:
         a -= (u + 1) * (N - v)
 except:
     pass
-
 print(a)

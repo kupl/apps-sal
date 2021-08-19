@@ -11,15 +11,13 @@ def f(isPlus):
             if sum <= 0:
                 ret += abs(sum) + 1
                 sum = 1
-        else:
-            if sum >= 0:
-                ret += abs(sum) + 1
-                sum = -1
-
+        elif sum >= 0:
+            ret += abs(sum) + 1
+            sum = -1
         isPlus = not isPlus
     return ret
 
 
 a1 = f(True)
 a2 = f(False)
-print((min(a1, a2)))
+print(min(a1, a2))

@@ -1,6 +1,6 @@
 import bisect
 from itertools import accumulate
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = sorted(list(map(int, input().split())))
 A2 = [0] + list(accumulate(A))
 
@@ -18,7 +18,7 @@ def judge(mid):
 
 
 mina = 0
-maxa = 2 * (10**5) + 1
+maxa = 2 * 10 ** 5 + 1
 while maxa - mina > 1:
     mid = (maxa + mina) // 2
     if judge(mid):

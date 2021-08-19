@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 ipa = {}
 ima = {}
 for i in range(n):
@@ -14,7 +13,6 @@ for i in range(n):
         ima[m] += 1
     else:
         ima[m] = 1
-
 ans = 0
 for k in ipa:
     if k in ima:

@@ -1,7 +1,7 @@
 xh = []
-n, d, a = list(map(int, input().split()))
+(n, d, a) = list(map(int, input().split()))
 for _ in range(n):
-    x, h = list(map(int, input().split()))
+    (x, h) = list(map(int, input().split()))
     xh.append([x, h])
 xh.sort()
 ans = 0

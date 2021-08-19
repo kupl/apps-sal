@@ -17,14 +17,12 @@ def count_factor_2(num):
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     A = list([int(x) // 2 for x in input().split()])
-
     check = len(set(map(count_factor_2, A)))
     if check != 1:
-        print((0))
+        print(0)
         return
-
     lcm_a = reduce(lcm, A)
     step = lcm_a * 2
     ans = (m + lcm_a) // step

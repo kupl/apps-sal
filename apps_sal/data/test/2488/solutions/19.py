@@ -11,12 +11,30 @@ from functools import reduce, lru_cache
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def MAP1(): return map(lambda x: int(x) - 1, input().split())
-def LIST(): return list(MAP())
-def LIST1(): return list(MAP1())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def MAP1():
+    return map(lambda x: int(x) - 1, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+def LIST1():
+    return list(MAP1())
 
 
 def is_ok(arg):
@@ -24,7 +42,7 @@ def is_ok(arg):
 
 
 def meguru_bisect(ng, ok):
-    while (abs(ok - ng) > 1):
+    while abs(ok - ng) > 1:
         mid = (ok + ng) // 2
         if is_ok(mid):
             ok = mid
@@ -33,11 +51,10 @@ def meguru_bisect(ng, ok):
     return ok
 
 
-n, d, a = MAP()
+(n, d, a) = MAP()
 h = [LIST() + [0] for i in range(n)]
 h = sorted(h, key=itemgetter(0))
 attack = 0
-
 ans = 0
 for i in range(n):
     bomb = ceil((h[i][1] - attack) / a)
@@ -47,5 +64,4 @@ for i in range(n):
         attack += bomb * a
         ans += bomb
     attack += h[i][2] * a
-
 print(ans)

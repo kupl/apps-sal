@@ -2,7 +2,7 @@ def resolve():
     n = int(input())
     a = list(map(int, input().split()))
     a.sort()
-    M = int(1e6 + 1)
+    M = int(1000000.0 + 1)
     f = [0] * M
     for x in a:
         if f[x] != 0:

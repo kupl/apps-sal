@@ -1,9 +1,9 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = [int(c) for c in input().split()]
 A.sort(reverse=True)
 B = A[::-1]
 l = 0
-r = 10**6
+r = 10 ** 6
 
 
 def f(m):

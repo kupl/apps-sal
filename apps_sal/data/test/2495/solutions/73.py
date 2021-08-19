@@ -1,6 +1,5 @@
 n = int(input())
 l = list(map(int, input().split()))
-
 ans = 0
 
 
@@ -22,5 +21,4 @@ def func(l, pn):
 
 pn1 = [1 if i % 2 == 0 else -1 for i in range(n)]
 pn2 = [-1 if i % 2 == 0 else 1 for i in range(n)]
-
 print(min(func(l, pn1), func(l, pn2)))

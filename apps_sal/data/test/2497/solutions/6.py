@@ -12,10 +12,9 @@ MUm = -inf
 mUp = inf
 mU = inf
 mUm = inf
-
 for i in range(N):
-    x, y, d = input().split()
-    x, y = int(x), int(y)
+    (x, y, d) = input().split()
+    (x, y) = (int(x), int(y))
     if d == 'R':
         MRp = max(MRp, x)
         mRp = min(mRp, x)
@@ -36,7 +35,6 @@ for i in range(N):
         mUm = min(mUm, y)
         MR = max(MR, x)
         mR = min(mR, x)
-
 t = [0]
 if MR > max(MRp, MRm):
     t.append(MR - MRp)
@@ -66,7 +64,6 @@ elif mUm + mUp <= 2 * mU and mUm > mUp:
 elif mUm > mUp:
     t.append(mUm - mU)
     t.append(mU - mUp)
-
 ans = inf
 for i in t:
     dx = max(MRp + i, MR, MRm - i) - min(mRp + i, mR, mRm - i)

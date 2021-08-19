@@ -11,12 +11,11 @@ for i in range(A):
         else:
             ans += abs(1 - sum_n)
             sum_n = 1
+    elif sum_n < 0:
+        continue
     else:
-        if sum_n < 0:
-            continue
-        else:
-            ans += abs(-1 - sum_n)
-            sum_n = -1
+        ans += abs(-1 - sum_n)
+        sum_n = -1
 caseA = ans
 ans = 0
 sum_n = 0
@@ -28,10 +27,9 @@ for i in range(A):
         else:
             ans += abs(1 - sum_n)
             sum_n = 1
+    elif sum_n < 0:
+        continue
     else:
-        if sum_n < 0:
-            continue
-        else:
-            ans += abs(-1 - sum_n)
-            sum_n = -1
+        ans += abs(-1 - sum_n)
+        sum_n = -1
 print(min(ans, caseA))

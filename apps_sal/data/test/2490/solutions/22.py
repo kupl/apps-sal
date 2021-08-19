@@ -1,5 +1,5 @@
 N = input()
-inf = float("inf")
+inf = float('inf')
 dp = [[inf] * (len(N) + 1) for i in range(2)]
 dp[0][0] = 0
 for i in range(len(N)):

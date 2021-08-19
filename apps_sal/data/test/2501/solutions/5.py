@@ -7,5 +7,4 @@ count = 0
 for i in lhs:
     if i in rhs:
         count += lhs[i] * rhs[i]
-
 print(count)

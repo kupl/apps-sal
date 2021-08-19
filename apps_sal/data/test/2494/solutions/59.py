@@ -4,7 +4,7 @@ K = int(input())
 q += [(1, 1)]
 m = {}
 while len(q):
-    n, s = q.pop()
+    (n, s) = q.pop()
     if not n in m:
         m[n] = s
         q += [(n * 10 % K, s)]

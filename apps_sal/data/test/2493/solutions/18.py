@@ -1,13 +1,12 @@
 from collections import Counter
 N = int(input())
 A = list(map(int, input().split()))
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 ctr = Counter(A)
 dup = ctr.most_common()[0][0]
 i = A.index(dup)
 j = A[::-1].index(dup)
 l = i + j
-
 MAXN = N + 5
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN

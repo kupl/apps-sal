@@ -1,10 +1,10 @@
 from collections import defaultdict
 from heapq import heappop, heappush
-
 K = int(input())
 
 
 class Graph(object):
+
     def __init__(self):
         self.graph = defaultdict(list)
 
@@ -19,21 +19,19 @@ class Graph(object):
 
 
 class Dijkstra(object):
+
     def __init__(self, graph, start):
         g = graph.graph
-
         self.dist = defaultdict(lambda: float('inf'))
         self.dist[start] = 0
         self.prev = defaultdict(lambda: None)
-
         Q = []
         heappush(Q, (self.dist[start], start))
-
         while Q:
-            dist_u, u = heappop(Q)
+            (dist_u, u) = heappop(Q)
             if self.dist[u] < dist_u:
                 continue
-            for v, weight in g[u]:
+            for (v, weight) in g[u]:
                 alt = dist_u + weight
                 if self.dist[v] > alt:
                     self.dist[v] = alt
@@ -55,9 +53,8 @@ class Dijkstra(object):
 g = Graph()
 for i in range(K - 1):
     g.add_edge(i, i + 1, 1)
-    g.add_edge(i, (i * 10) % K, 0)
+    g.add_edge(i, i * 10 % K, 0)
 g.add_edge(K - 1, 0, 1)
-g.add_edge(K - 1, ((K - 1) * 10) % K, 0)
-
+g.add_edge(K - 1, (K - 1) * 10 % K, 0)
 d = Dijkstra(g, 1)
 print(d.shortest_distance(0) + 1)

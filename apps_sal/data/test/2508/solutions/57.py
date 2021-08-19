@@ -1,14 +1,14 @@
 def main():
     import sys
     input = sys.stdin.readline
-    h, w, k = map(int, input().split())
-    sx, sy, tx, ty = map(int, input().split())
+    (h, w, k) = map(int, input().split())
+    (sx, sy, tx, ty) = map(int, input().split())
     b = [[-1] * (w + 2)]
     for i in range(h):
         s = input()
         bb = [-1]
         for j in s:
-            if j == ".":
+            if j == '.':
                 bb.append(0)
             else:
                 bb.append(-1)
@@ -18,7 +18,7 @@ def main():
     d = []
     d.append((sx, sy))
     for ss in d:
-        x, y = ss
+        (x, y) = ss
         if x == tx and y == ty:
             print(b[x][y])
             return

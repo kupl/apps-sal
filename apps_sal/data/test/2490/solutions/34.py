@@ -1,10 +1,8 @@
 s = input()[::-1]
 size = len(s)
-s += "4"
-
+s += '4'
 ans = 0
 bef = 0
-
 for i in range(size):
     v1 = int(s[i])
     v2 = int(s[i + 1])
@@ -12,8 +10,7 @@ for i in range(size):
         ans += 10 - (v1 + bef)
         bef = 1
     else:
-        ans += (v1 + bef)
+        ans += v1 + bef
         bef = 0
-
 ans += bef
 print(ans)

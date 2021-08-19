@@ -14,21 +14,17 @@ def merge(a, b, p, size):
     p[ra] = rb
 
 
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 size = [1] * n
 p = [0] * n
 for i in range(n):
     p[i] = i
-
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     merge(a, b, p, size)
-
 ans = 0
 for x in size:
     ans = max(ans, x)
-
 print(ans)

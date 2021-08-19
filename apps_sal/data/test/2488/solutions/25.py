@@ -1,6 +1,6 @@
 from collections import deque
 import math
-n, d, a = list(map(int, input().split()))
+(n, d, a) = list(map(int, input().split()))
 l = [list(map(int, input().split())) for _ in range(n)]
 l.sort(key=lambda x: x[0])
 cnt = 0

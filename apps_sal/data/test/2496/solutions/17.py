@@ -7,7 +7,6 @@ for x in A:
 maxc = 0
 for i in range(2, maxA + 1):
     maxc = max(maxc, sum(count[i::i]))
-
 if maxc == N:
     print('not coprime')
 elif maxc <= 1:

@@ -7,9 +7,9 @@ for i in range(n + 1):
     else:
         p = l[a[i]] + n - i
         break
-pr = 10**9 + 7
+pr = 10 ** 9 + 7
 print(n)
-MAX_NUM = 10**5 + 2
+MAX_NUM = 10 ** 5 + 2
 fac = [0 for _ in range(MAX_NUM)]
 finv = [0 for _ in range(MAX_NUM)]
 inv = [0 for _ in range(MAX_NUM)]

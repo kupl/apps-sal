@@ -1,7 +1,7 @@
 N = int(input())
 M = {'R': [], 'L': [], 'U': [], 'D': [], 'X': [], 'Y': []}
 for _ in range(N):
-    x, y, d = input().split()
+    (x, y, d) = input().split()
     if d in ['R', 'L']:
         M[d].append(int(x))
         M['Y'].append(int(y))
@@ -24,7 +24,7 @@ T[9] = M['Y'][0] - M['U'][0] if M['Y'] and M['U'] else -1
 T[10] = M['D'][0] - M['Y'][0] if M['Y'] and M['D'] else -1
 T[11] = (M['D'][0] - M['U'][0]) / 2 if M['D'] and M['U'] else -1
 Rect = [-1] * 13
-for i, t in enumerate(T):
+for (i, t) in enumerate(T):
     if t < 0:
         continue
     R = []

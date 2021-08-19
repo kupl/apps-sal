@@ -1,4 +1,4 @@
-n, d, a = list(map(int, input().split()))
+(n, d, a) = list(map(int, input().split()))
 e = []
 for i in range(n):
     inp = list(map(int, input().split()))
@@ -16,7 +16,7 @@ while True:
         if i >= n:
             break
         s += sd[i]
-    while i < n and j < n and e[j][0] <= e[i][0] + 2 * d:
+    while i < n and j < n and (e[j][0] <= e[i][0] + 2 * d):
         j += 1
     if j < n:
         sd[j] += e[i][1] + s - mx
@@ -25,5 +25,4 @@ while True:
         if i >= n:
             break
         mx = e[i][1] + s
-
 print(mx)

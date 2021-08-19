@@ -1,4 +1,5 @@
-class Factorial():
+class Factorial:
+
     def __init__(self, n, mod):
         self.mod = mod
         self.factorial = [0 for _ in range(n + 1)]
@@ -17,14 +18,10 @@ class Factorial():
 
 
 MOD = 1000000007
-
 N = int(input())
 A = list(map(int, input().split()))
-
 F = Factorial(N + 1, MOD)
-
 tmp = [None for _ in range(N)]
-
 for i in range(N + 1):
     if tmp[A[i] - 1] is None:
         tmp[A[i] - 1] = i
@@ -32,10 +29,7 @@ for i in range(N + 1):
         a = tmp[A[i] - 1]
         b = i
         break
-
 A = []
-
 for i in range(1, N + 2):
     A.append((F.comb(N - 1, i) + F.comb(N - 1, i - 2) + F.comb(N - 1, i - 1) * 2 - F.comb(N + a - b, i - 1)) % MOD)
-
 print('\n'.join(map(str, A)))

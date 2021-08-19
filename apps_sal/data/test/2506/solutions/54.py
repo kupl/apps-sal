@@ -16,11 +16,10 @@ def func(A, N, M, x):
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     A = sorted(list(map(int, input().split())))
     A_rev = list(reversed(A))
     B = [0] + list(accumulate(A_rev))
-
     min_ = 0
     max_ = 2 * 10 ** 5 + 1
     while max_ - min_ > 1:
@@ -29,7 +28,6 @@ def main():
             min_ = mid
         else:
             max_ = mid
-
     ans = 0
     count = 0
     for Ai in A_rev:

@@ -1,7 +1,5 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 s = 0
-
 if k == 0:
     print(n ** 2)
 else:
@@ -10,5 +8,4 @@ else:
             s += n // i * (i - k)
         else:
             s += n // i * (i - k) + n % i - (k - 1)
-
     print(s)

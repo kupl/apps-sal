@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 ans = 0
 if k != 0:
     for i in range(k + 1, n + 1):
@@ -7,5 +6,5 @@ if k != 0:
         num = n // i * i
         ans += max(0, n - num - k + 1)
 else:
-    ans = n**2
+    ans = n ** 2
 print(ans)

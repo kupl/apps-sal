@@ -2,7 +2,7 @@ s = input()
 s = s[::-1]
 s += '0'
 ans = 0
-dp = [0, 10**9]
+dp = [0, 10 ** 9]
 for c in s:
     i = int(c)
     a = dp[0] + i

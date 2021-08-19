@@ -3,7 +3,7 @@ def main():
     A = list(map(int, input().split()))
     s = 0
     c1 = 0
-    for i, a in enumerate(A):
+    for (i, a) in enumerate(A):
         s += a
         if i % 2 == 0:
             if s == 0:
@@ -23,7 +23,7 @@ def main():
             s = -1
     s = 0
     c2 = 0
-    for i, a in enumerate(A):
+    for (i, a) in enumerate(A):
         s += a
         if i % 2 != 0:
             if s == 0:
@@ -41,7 +41,7 @@ def main():
             else:
                 continue
             s = -1
-    print((min(c1, c2)))
+    print(min(c1, c2))
 
 
 def __starting_point():

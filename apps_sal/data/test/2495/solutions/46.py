@@ -19,6 +19,6 @@ def calc(tmp, cnt=0):
 
 if a[0]:
     hugou = 1 if a[0] > 0 else -1
-    print((min(calc(a[0]), calc(-hugou, abs(a[0]) + 1))))
+    print(min(calc(a[0]), calc(-hugou, abs(a[0]) + 1)))
 else:
-    print((min(calc(1, 1), calc(-1, 1))))
+    print(min(calc(1, 1), calc(-1, 1)))

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 
@@ -18,7 +18,6 @@ def lcm(num1, num2):
 
 lcm1 = a[0] // 2
 lcm2 = a[0]
-
 for i in range(1, n):
     t = a[i]
     lcm1 = lcm(lcm1, t // 2)
@@ -29,12 +28,10 @@ for i in range(1, n):
         lcm1 = 0
         lcm2 = 0
         break
-
 if lcm1 != 0:
     ans1 = m // lcm1
     ans2 = m // lcm2
     ans = ans1 - ans2
 else:
     ans = 0
-
 print(ans)

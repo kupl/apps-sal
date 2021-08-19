@@ -1,5 +1,5 @@
 import numpy as np
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 mod = 2 * K
 field = [[0] * (2 * K + 1) for _ in range(2 * K + 1)]
 
@@ -12,18 +12,17 @@ def gen_pattern(x):
 
 
 for _ in range(N):
-    x, y, c = input().split()
-    x, y = int(x), int(y)
+    (x, y, c) = input().split()
+    (x, y) = (int(x), int(y))
     if c == 'W':
         y += K
     x %= mod
     y %= mod
     for tmp in [0, K]:
-        for l, r in gen_pattern((x + tmp) % mod):
-            for b, t in gen_pattern((y + tmp) % mod):
+        for (l, r) in gen_pattern((x + tmp) % mod):
+            for (b, t) in gen_pattern((y + tmp) % mod):
                 field[l][b] += 1
                 field[l][t] -= 1
                 field[r][b] -= 1
                 field[r][t] += 1
-
-print((np.max(np.cumsum(np.cumsum(field, axis=0), axis=1))))
+print(np.max(np.cumsum(np.cumsum(field, axis=0), axis=1)))

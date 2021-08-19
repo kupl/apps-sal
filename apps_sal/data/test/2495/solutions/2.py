@@ -21,4 +21,4 @@ def cost(a, neg=False):
     return ret
 
 
-print((min(cost(a, False), cost(a, True))))
+print(min(cost(a, False), cost(a, True)))

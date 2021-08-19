@@ -1,7 +1,7 @@
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    f, s = {}, {}
+    (f, s) = ({}, {})
     for i in range(n):
         if i + 1 - a[i] not in list(f.keys()):
             f[i + 1 - a[i]] = 1

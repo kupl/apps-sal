@@ -1,5 +1,5 @@
 from math import ceil
-N, D, A = map(int, input().split())
+(N, D, A) = map(int, input().split())
 XH = [list(map(int, input().split())) for i in range(N)]
 XH.sort()
 times = ceil(XH[0][1] / A)

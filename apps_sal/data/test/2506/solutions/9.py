@@ -1,4 +1,3 @@
-
 from itertools import accumulate
 from bisect import bisect_left
 8
@@ -29,8 +28,7 @@ from bisect import bisect_left
 33
 34
 35
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = sorted(list(map(int, input().split())))
 A_r = list(reversed(A))
 B = [0] + list(accumulate(A_r))
@@ -48,17 +46,15 @@ def func(x):
 
 
 MIN = 0
-MAX = 2 * 10**5 + 1
+MAX = 2 * 10 ** 5 + 1
 while MAX - MIN > 1:
     MID = (MIN + MAX) // 2
     if func(MID):
         MIN = MID
     else:
         MAX = MID
-
 ans = 0
 count = 0
-
 for Ai in A_r:
     idx = bisect_left(A, MIN - Ai)
     ans += Ai * (N - idx) + B[N - idx]

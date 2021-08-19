@@ -1,5 +1,5 @@
 N = int(input())
-MAX = 10**6
+MAX = 10 ** 6
 table = [0] * (MAX + 1)
 for x in map(int, input().split()):
     table[x] += 1

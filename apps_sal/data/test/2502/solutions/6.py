@@ -12,18 +12,14 @@ def getTableMP(Ss):
 
 Ss = input()
 Ts = input()
-
-lenS, lenT = len(Ss), len(Ts)
+(lenS, lenT) = (len(Ss), len(Ts))
 num = (lenT + lenS - 1 + lenS - 1) // lenS
 S2s = Ss * num
-
 tableMP = getTableMP(Ts + '$' + S2s)
-
 isFounds = [False] * lenS
 for i in range(2 * lenT + 1, 2 * lenT + lenS + 1):
     if tableMP[i] >= lenT:
         isFounds[i - 2 * lenT - 1] = True
-
 ans = 0
 numDone = 0
 for i in range(lenS):
@@ -38,7 +34,6 @@ for i in range(lenS):
         else:
             ans = -1
             break
-
 if numDone < lenS:
     ans = -1
 print(ans)

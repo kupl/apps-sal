@@ -19,4 +19,4 @@ else:
     if r == 1:
         print('setwise coprime')
     else:
-        print("not coprime")
+        print('not coprime')

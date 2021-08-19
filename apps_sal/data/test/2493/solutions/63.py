@@ -1,16 +1,13 @@
 from math import factorial
-
 n = int(input())
 a = list(map(int, input().split()))
 se = set()
-mod = 10**9 + 7
-
-for i, j in enumerate(a):
+mod = 10 ** 9 + 7
+for (i, j) in enumerate(a):
     if j in se:
         two = i
     else:
         se.add(j)
-
 one = a.index(a[two])
 
 
@@ -22,10 +19,10 @@ def prepare(n, MOD):
     invs[n] = pow(facts[n], MOD - 2, MOD)
     for i in range(0, n)[::-1]:
         invs[i] = invs[i + 1] * (i + 1) % MOD
-    return facts, invs
+    return (facts, invs)
 
 
-facts, invs = prepare(n + 1, mod)
+(facts, invs) = prepare(n + 1, mod)
 
 
 def make_combi(facts, invs, n, r, mod):

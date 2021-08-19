@@ -7,7 +7,6 @@ As = getInts()
 A = {}
 for i in range(1, N + 1):
     A[i] = As[i - 1]
-
 L = {}
 R = {}
 for i in range(1, N + 1):

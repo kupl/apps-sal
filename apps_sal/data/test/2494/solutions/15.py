@@ -10,7 +10,7 @@ while len(q) > 0:
     if dist[r] + 1 < dist[s]:
         dist[s] = dist[r] + 1
         q.append(s)
-    t = (r * 10) % k
+    t = r * 10 % k
     if dist[r] < dist[t]:
         dist[t] = dist[r]
         q.appendleft(t)

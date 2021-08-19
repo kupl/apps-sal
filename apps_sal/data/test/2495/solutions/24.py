@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 cost = 0
 sum = 0
 for i in range(n):
@@ -11,13 +10,11 @@ for i in range(n):
         else:
             cost += 1 - sum
             sum = 1
+    elif sum <= -1:
+        pass
     else:
-        if sum <= -1:
-            pass
-        else:
-            cost += sum + 1
-            sum = -1
-
+        cost += sum + 1
+        sum = -1
 kost = 0
 kom = 0
 for i in range(n):
@@ -28,11 +25,9 @@ for i in range(n):
         else:
             kost += 1 - kom
             kom = 1
+    elif kom <= -1:
+        pass
     else:
-        if kom <= -1:
-            pass
-        else:
-            kost += kom + 1
-            kom = -1
-
+        kost += kom + 1
+        kom = -1
 print(min(cost, kost))

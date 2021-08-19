@@ -5,7 +5,7 @@ a = q.append
 a((1, 1))
 m = {}
 while len(q):
-    n, s = q.popleft()
+    (n, s) = q.popleft()
     if n in m:
         continue
     m[n] = s

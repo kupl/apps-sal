@@ -8,10 +8,9 @@ for i in range(len(N)):
     elif 6 <= c:
         ans += 10 - c
         N[i + 1] += 1
+    elif N[i + 1] < 5:
+        ans += c
     else:
-        if N[i + 1] < 5:
-            ans += c
-        else:
-            ans += 10 - c
-            N[i + 1] += 1
+        ans += 10 - c
+        N[i + 1] += 1
 print(ans)

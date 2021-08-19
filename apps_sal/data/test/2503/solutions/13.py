@@ -1,7 +1,6 @@
 import numpy as np
 import io
-
-nime, mike = map(int, input().split())
+(nime, mike) = map(int, input().split())
 mod = 2 * mike
 array = [[0] * (2 * mike + 1) for _ in range(2 * mike + 1)]
 
@@ -14,15 +13,15 @@ def gen_pattern(x):
 
 
 for _ in range(nime):
-    x, y, c = input().split()
-    x, y = int(x), int(y)
+    (x, y, c) = input().split()
+    (x, y) = (int(x), int(y))
     if c == 'W':
         y += mike
     x %= mod
     y %= mod
     for tmp in [0, mike]:
-        for l, r in gen_pattern((x + tmp) % mod):
-            for b, t in gen_pattern((y + tmp) % mod):
+        for (l, r) in gen_pattern((x + tmp) % mod):
+            for (b, t) in gen_pattern((y + tmp) % mod):
                 array[l][b] += 1
                 array[l][t] -= 1
                 array[r][b] -= 1

@@ -1,17 +1,13 @@
 from collections import Counter
-
-U = 10**5 + 1
-MOD = 10**9 + 7
-
+U = 10 ** 5 + 1
+MOD = 10 ** 9 + 7
 fact = [1] * (U + 1)
 fact_inv = [1] * (U + 1)
-
 for i in range(1, U + 1):
-    fact[i] = (fact[i - 1] * i) % MOD
+    fact[i] = fact[i - 1] * i % MOD
 fact_inv[U] = pow(fact[U], MOD - 2, MOD)
-
 for i in range(U, 0, -1):
-    fact_inv[i - 1] = (fact_inv[i] * i) % MOD
+    fact_inv[i - 1] = fact_inv[i] * i % MOD
 
 
 def comb(n, k):

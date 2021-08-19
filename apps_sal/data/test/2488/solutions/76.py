@@ -4,13 +4,14 @@ input = sys.stdin.readline
 
 
 def solve():
+
     def makeBIT(numEle):
         numPow2 = 2 ** (numEle - 1).bit_length()
         data = [0] * (numPow2 + 1)
-        return data, numPow2
+        return (data, numPow2)
 
     def setInit(As):
-        for iB, A in enumerate(As, 1):
+        for (iB, A) in enumerate(As, 1):
             data[iB] = A
         for iB in range(1, numPow2):
             i = iB + (iB & -iB)
@@ -29,19 +30,15 @@ def solve():
             ans += data[iB]
             iB += iB & -iB
         return ans
-
-    N, D, A = list(map(int, input().split()))
+    (N, D, A) = list(map(int, input().split()))
     XHs = [tuple(map(int, input().split())) for _ in range(N)]
-
     XHs.sort()
-    Xs, Hs = [], []
-    for X, H in XHs:
+    (Xs, Hs) = ([], [])
+    for (X, H) in XHs:
         Xs.append(X)
         Hs.append(H)
-
-    data, numPow2 = makeBIT(N)
+    (data, numPow2) = makeBIT(N)
     setInit(Hs)
-
     ans = 0
     for i in range(N):
         rest = getValue(i)
@@ -53,7 +50,6 @@ def solve():
         ans += num
         damage = num * A
         addValue(iR, -damage)
-
     print(ans)
 
 

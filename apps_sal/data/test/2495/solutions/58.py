@@ -1,8 +1,5 @@
 n = int(input())
-
 A = list(map(int, input().split()))
-
-
 N = A[:]
 ncount = 0
 if N[0] >= 0:
@@ -14,11 +11,9 @@ for i in range(1, n):
         if N[i] <= 0:
             ncount += abs(N[i]) + 1
             N[i] = 1
-    else:
-        if N[i] >= 0:
-            ncount += abs(N[i]) + 1
-            N[i] = -1
-
+    elif N[i] >= 0:
+        ncount += abs(N[i]) + 1
+        N[i] = -1
 P = A[:]
 pcount = 0
 if P[0] <= 0:
@@ -30,10 +25,7 @@ for i in range(1, n):
         if P[i] <= 0:
             pcount += abs(P[i]) + 1
             P[i] = 1
-    else:
-        if P[i] >= 0:
-            pcount += abs(P[i]) + 1
-            P[i] = -1
-
-
+    elif P[i] >= 0:
+        pcount += abs(P[i]) + 1
+        P[i] = -1
 print(min(ncount, pcount))

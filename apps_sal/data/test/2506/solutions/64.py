@@ -1,10 +1,7 @@
 from bisect import bisect_left
-
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 A.sort()
-
 l = 1
 r = 200000 + 1
 
@@ -26,14 +23,10 @@ while l + 1 < r:
         l = mid
     else:
         r = mid
-
 AN = l
-
 S = [0] * (N + 1)
-
 for i in range(N):
     S[i + 1] = S[i] + A[i]
-
 ans1 = 0
 c = 0
 for la in A:
@@ -47,6 +40,5 @@ for la in A:
             ll = mi
     c += N - rr
     ans1 = ans1 + la * (N - rr) + S[N] - S[rr]
-
 ans = ans1 + (M - c) * AN
 print(ans)

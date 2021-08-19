@@ -1,17 +1,13 @@
 import sys
 input = sys.stdin.readline
-
-
-n, d, a = list(map(int, input().split()))
+(n, d, a) = list(map(int, input().split()))
 fox = [list(map(int, input().split())) for _ in range(n)]
-
 fox.sort()
-
 sub = [0] * (n + 1)
 
 
 def bisect(x):
-    l, r = 0, n
+    (l, r) = (0, n)
     while r - l > 1:
         k = (r + l) // 2
         if fox[k][0] <= x:
@@ -25,7 +21,6 @@ def bisect(x):
 
 def main():
     ans = 0
-
     for i in range(n):
         if i != 0:
             sub[i] += sub[i - 1]
@@ -35,7 +30,6 @@ def main():
         ans += count
         sub[i] += count
         sub[bisect(fox[i][0] + 2 * d) + 1] -= count
-
     print(ans)
 
 

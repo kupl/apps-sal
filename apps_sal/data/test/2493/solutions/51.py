@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = int(input())
 a = list(map(int, input().split()))
 place = [-1] * n

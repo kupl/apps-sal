@@ -1,18 +1,13 @@
 from collections import deque
-
-H, W, K = list(map(int, input().split()))
-sx, sy, tx, ty = [int(a) - 1 for a in input().split()]
-INF = 10**18
-
+(H, W, K) = list(map(int, input().split()))
+(sx, sy, tx, ty) = [int(a) - 1 for a in input().split()]
+INF = 10 ** 18
 A = [input() for _ in range(H)]
-
 minDist = [[INF] * W for _ in range(H)]
 minDist[sx][sy] = 0
 que = deque([(0, sx, sy)])
-
 while que:
-    dist, nx, ny = que.popleft()
-
+    (dist, nx, ny) = que.popleft()
     for i in range(1, K + 1):
         if nx + i >= H:
             break
@@ -45,6 +40,5 @@ while que:
         if minDist[nx][ny - i] > dist + 1:
             minDist[nx][ny - i] = dist + 1
             que.append((dist + 1, nx, ny - i))
-
 ans = minDist[tx][ty]
-print((ans if ans < INF else -1))
+print(ans if ans < INF else -1)

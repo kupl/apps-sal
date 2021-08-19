@@ -2,12 +2,11 @@ def main():
     import numpy as np
     import sys
     input = sys.stdin.readline
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     A = np.sort(list(map(int, input().split())))
     F = np.sort(list(map(int, input().split())))[::-1]
-
     if K >= np.sum(A) * N:
-        print((0))
+        print(0)
         return
     ma = A[-1] * F[0]
     mi = 0

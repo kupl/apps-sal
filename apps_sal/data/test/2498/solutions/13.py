@@ -1,10 +1,10 @@
 import math
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(lambda x: int(x) // 2, input().split()))
 
 
 def lcm(x, y):
-    return (x // math.gcd(x, y)) * y
+    return x // math.gcd(x, y) * y
 
 
 def pow2(x):
@@ -18,7 +18,6 @@ def pow2(x):
 P = []
 for a in A:
     P.append(pow2(a))
-
 if len(set(P)) != 1:
     print(0)
 else:

@@ -1,14 +1,12 @@
 from collections import Counter
 N = int(input())
 A = list(map(int, input().split()))
-MOD = 10**9 + 7
-
+MOD = 10 ** 9 + 7
 ctr = Counter(A)
 d = ctr.most_common(1)[0][0]
 x = A.index(d)
 y = x + 1 + A[x + 1:].index(d)
 f = x + N - y
-
 MAXN = N + 5
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN

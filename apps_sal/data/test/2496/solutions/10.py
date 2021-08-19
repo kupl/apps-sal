@@ -7,7 +7,7 @@ A = list(map(int, input().split()))
 def primes(n):
     is_prime = [True] * (n + 1)
     is_prime[0] = is_prime[1] = False
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if not is_prime[i]:
             continue
         for j in range(i * 2, n + 1, i):
@@ -21,7 +21,7 @@ for i in A:
     d[i - 1] = 1
 if reduce(gcd, A) > 1:
     print('not coprime')
-elif all(sum(d[i - 1::i]) <= 1 for i in l):
+elif all((sum(d[i - 1::i]) <= 1 for i in l)):
     print('pairwise coprime')
 else:
     print('setwise coprime')

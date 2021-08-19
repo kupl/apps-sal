@@ -25,7 +25,7 @@ def f(x, y):
 
 
 if a[0] == 0:
-    ans3 = float("inf")
+    ans3 = float('inf')
 else:
     ans3 = f(ans3, a[0])
 print(min(ans3, f(ans1, 1), f(ans2, -1)))

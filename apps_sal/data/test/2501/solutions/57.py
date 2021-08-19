@@ -1,7 +1,6 @@
 import collections
 N = int(input())
 A = list(map(int, input().split()))
-
 s = 0
 d = collections.defaultdict(int)
 for i in range(N):

@@ -1,5 +1,5 @@
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     A = sorted(list(map(int, input().split())), reverse=True)
 
     def helper(x):
@@ -10,7 +10,7 @@ def main():
                 p -= 1
             t += p + 1
         return t
-    l, r = 0, A[0] * 2 + 1
+    (l, r) = (0, A[0] * 2 + 1)
     while r - l > 1:
         m = (l + r) // 2
         if helper(m) > M:

@@ -1,16 +1,14 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 abc = []
 for _ in range(M):
     abc.append(list(map(int, input().split())))
-
-cost = [-(10**10) * N] * N
+cost = [-10 ** 10 * N] * N
 cost[0] = 0
-
 for i in range(N):
     update = False
-    for a, b, c in abc:
-        a, b = a - 1, b - 1
-        if cost[a] != -(10**10) * N:
+    for (a, b, c) in abc:
+        (a, b) = (a - 1, b - 1)
+        if cost[a] != -10 ** 10 * N:
             if cost[b] < cost[a] + c:
                 cost[b] = cost[a] + c
                 update = True
@@ -18,8 +16,6 @@ for i in range(N):
         Max = cost[N - 1]
     elif i < N - 1:
         Max = max(Max, cost[N - 1])
-
-
 if update == True and Max < cost[N - 1]:
     print('inf')
 else:

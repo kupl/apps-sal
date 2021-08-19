@@ -5,7 +5,7 @@ import sys
 input = sys.stdin.readline
 
 
-class RAQ():
+class RAQ:
 
     def __init__(self, size):
         """初期化"""
@@ -17,14 +17,14 @@ class RAQ():
     @classmethod
     def from_array(cls, a):
         st = cls(len(a))
-        for i, x in enumerate(a):
+        for (i, x) in enumerate(a):
             st.add(i, i + 1, x)
         return st
 
     def add(self, a, b, value):
         """区間[a, b) に対する加算"""
         if a > b:
-            raise ValueError("a must be less than equal b.")
+            raise ValueError('a must be less than equal b.')
         self.sub[a] += value
         self.sub[b] -= value
 
@@ -40,21 +40,19 @@ class RAQ():
 
 
 def read():
-    N, D, A = list(map(int, input().strip().split()))
+    (N, D, A) = list(map(int, input().strip().split()))
     XH = list()
     for i in range(N):
-        x, h = list(map(int, input().strip().split()))
+        (x, h) = list(map(int, input().strip().split()))
         XH.append((x, h))
-    return N, D, A, XH
+    return (N, D, A, XH)
 
 
 def solve(N, D, A, XH):
     XH = sorted(XH)
-    X = [x for x, h in XH]
-    H = [h for x, h in XH]
-
+    X = [x for (x, h) in XH]
+    H = [h for (x, h) in XH]
     st = RAQ.from_array(H)
-
     ans = 0
     i = 0
     while i < N:
@@ -78,7 +76,7 @@ def solve(N, D, A, XH):
 
 def __starting_point():
     inputs = read()
-    print(("%s" % solve(*inputs)))
+    print('%s' % solve(*inputs))
 
 
 __starting_point()

@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = int(input())
 a = list(map(int, input().split()))
 c = [0] * n
@@ -15,7 +15,8 @@ for i in range(1, n + 2):
     f.append(f[-1] * i % mod)
 
 
-def comb(n, r): return f[n] * pow(f[r], mod - 2, mod) * pow(f[n - r], mod - 2, mod) % mod
+def comb(n, r):
+    return f[n] * pow(f[r], mod - 2, mod) * pow(f[n - r], mod - 2, mod) % mod
 
 
 for k in range(1, n + 2):

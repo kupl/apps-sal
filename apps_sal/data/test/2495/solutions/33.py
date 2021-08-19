@@ -8,10 +8,9 @@ for i in range(n):
         if s >= 0:
             c1 += s + 1
             s = -1
-    else:
-        if s <= 0:
-            c1 += -s + 1
-            s = 1
+    elif s <= 0:
+        c1 += -s + 1
+        s = 1
 c2 = 0
 s = 0
 for i in range(n):
@@ -20,8 +19,7 @@ for i in range(n):
         if s <= 0:
             c2 += -s + 1
             s = 1
-    else:
-        if s >= 0:
-            c2 += s + 1
-            s = -1
+    elif s >= 0:
+        c2 += s + 1
+        s = -1
 print(min(c1, c2))

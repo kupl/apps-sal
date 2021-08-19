@@ -4,16 +4,14 @@ import sys
 
 def main():
     input = sys.stdin.readline
-    n, d, a = map(int, input().split())
+    (n, d, a) = map(int, input().split())
     fox = [None] * n
     for i in range(n):
-        x, h = map(int, input().split())
+        (x, h) = map(int, input().split())
         fox[i] = (x, h)
-
     fox.sort()
     x = [int(fox[i][0]) for i in range(n)]
     h = [int(fox[i][1]) for i in range(n)]
-
     ans = 0
     bit = [0] * n
     for i in range(n):

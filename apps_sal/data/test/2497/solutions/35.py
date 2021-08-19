@@ -1,22 +1,43 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 INF = 10 ** 9
 MOD = 10 ** 9 + 7
-def YesNo(x): return 'Yes' if x else 'No'
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def LS(): return sys.stdin.readline().split()
-def II(): return int(sys.stdin.readline())
-def SI(): return input()
+
+
+def YesNo(x):
+    return 'Yes' if x else 'No'
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+
+def LF():
+    return [float(x) for x in sys.stdin.readline().split()]
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def SI():
+    return input()
 
 
 def main():
     N = II()
-    xp9, xm9, xf9, yp9, ym9, yf9 = [-INF] * 6
-    xp0, xm0, xf0, yp0, ym0, yf0 = [INF] * 6
+    (xp9, xm9, xf9, yp9, ym9, yf9) = [-INF] * 6
+    (xp0, xm0, xf0, yp0, ym0, yf0) = [INF] * 6
     for _ in range(N):
-        x, y, d = LS()
+        (x, y, d) = LS()
         x = int(x)
         y = int(y)
         if d == 'R':
@@ -55,7 +76,6 @@ def main():
         ymin = min(yf0, ym0 - t, yp0 + t)
         tmp = (xmax - xmin) * (ymax - ymin)
         ans = min(ans, tmp)
-
     return ans
 
 

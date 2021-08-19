@@ -1,13 +1,13 @@
 def men(t):
-    xmin = min(st + i * t for i, st in enumerate(mg[0]))
-    xmax = max(st + i * t for i, st in enumerate(mg[1]))
-    ymin = min(st + i * t for i, st in enumerate(ue[0]))
-    ymax = max(st + i * t for i, st in enumerate(ue[1]))
+    xmin = min((st + i * t for (i, st) in enumerate(mg[0])))
+    xmax = max((st + i * t for (i, st) in enumerate(mg[1])))
+    ymin = min((st + i * t for (i, st) in enumerate(ue[0])))
+    ymax = max((st + i * t for (i, st) in enumerate(ue[1])))
     return (xmax - xmin) * (ymax - ymin)
 
 
 n = int(input())
-inf = 10**9
+inf = 10 ** 9
 mg = [[inf, inf, inf], [-inf, -inf, -inf]]
 ue = [[inf, inf, inf], [-inf, -inf, -inf]]
 mg0 = mg[0]
@@ -15,16 +15,16 @@ mg1 = mg[1]
 ue0 = ue[0]
 ue1 = ue[1]
 for _ in range(n):
-    x, y, d = input().split()
+    (x, y, d) = input().split()
     x = int(x)
     y = int(y)
-    if d == "U":
+    if d == 'U':
         mv = 1
         uv = 2
-    elif d == "D":
+    elif d == 'D':
         mv = 1
         uv = 0
-    elif d == "R":
+    elif d == 'R':
         mv = 2
         uv = 1
     else:
@@ -40,8 +40,8 @@ for _ in range(n):
         ue1[uv] = y
 t = set([0])
 for lst in [mg0, mg1, ue0, ue1]:
-    v0, v1, v2 = lst
+    (v0, v1, v2) = lst
     for tk in [v0 - v1, v1 - v2, (v0 - v2) / 2]:
         if tk >= 0:
             t.add(tk)
-print(min(men(tk) for tk in t))
+print(min((men(tk) for tk in t)))

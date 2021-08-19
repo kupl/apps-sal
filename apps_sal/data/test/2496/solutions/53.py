@@ -11,26 +11,41 @@ from functools import reduce, lru_cache
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def MAP1(): return map(lambda x: int(x) - 1, input().split())
-def LIST(): return list(MAP())
-def LIST1(): return list(MAP1())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def MAP1():
+    return map(lambda x: int(x) - 1, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+def LIST1():
+    return list(MAP1())
 
 
 n = INT()
 a = LIST()
-
-c = [0] * (10**6 + 1)
+c = [0] * (10 ** 6 + 1)
 for x in a:
     c[x] += 1
-
-k = max(sum(c[i::i]) for i in range(2, 10**6 + 1))
-
+k = max((sum(c[i::i]) for i in range(2, 10 ** 6 + 1)))
 if k <= 1:
-    print("pairwise coprime")
+    print('pairwise coprime')
 elif k < n:
-    print("setwise coprime")
+    print('setwise coprime')
 else:
-    print("not coprime")
+    print('not coprime')

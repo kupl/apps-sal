@@ -15,7 +15,7 @@ def binary_search(bad, good, key):
     return good
 
 
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = np.array(input().split(), dtype=np.int64)
 F = np.array(input().split(), dtype=np.int64)
 A.sort()

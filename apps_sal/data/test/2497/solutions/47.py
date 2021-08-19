@@ -1,10 +1,9 @@
 N = int(input())
-x1, x2, y1, y2 = {}, {}, {}, {}
+(x1, x2, y1, y2) = ({}, {}, {}, {})
 INF = 10 ** 10
-
 for i in range(N):
-    x, y, d = input().split()
-    x, y = int(x) * 2, int(y) * 2
+    (x, y, d) = input().split()
+    (x, y) = (int(x) * 2, int(y) * 2)
 
     def update_x(v, x):
         if v not in x1:
@@ -19,7 +18,6 @@ for i in range(N):
         else:
             y1[v] = min(y1[v], y)
             y2[v] = max(y2[v], y)
-
     if d == 'R':
         update_x(+1, x)
         update_y(0, y)
@@ -35,7 +33,7 @@ for i in range(N):
 
 
 def area(t):
-    xmin, xmax, ymin, ymax = INF, -INF, INF, -INF
+    (xmin, xmax, ymin, ymax) = (INF, -INF, INF, -INF)
     for (v, x) in list(x1.items()):
         xmin = min(xmin, x + v * t)
     for (v, x) in list(x2.items()):
@@ -48,7 +46,6 @@ def area(t):
 
 
 ans = area(0)
-
 x3 = list(x1.items()) + list(x2.items())
 for i in range(len(x3)):
     for j in range(i + 1, len(x3)):
@@ -56,7 +53,6 @@ for i in range(len(x3)):
             t = (x3[j][1] - x3[i][1]) // (x3[i][0] - x3[j][0])
             if t >= 0:
                 ans = min(ans, area(t))
-
 y3 = list(y1.items()) + list(y2.items())
 for i in range(len(y3)):
     for j in range(i + 1, len(y3)):
@@ -64,5 +60,4 @@ for i in range(len(y3)):
             t = (y3[j][1] - y3[i][1]) // (y3[i][0] - y3[j][0])
             if t >= 0:
                 ans = min(ans, area(t))
-
-print((ans / 4))
+print(ans / 4)

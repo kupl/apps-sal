@@ -17,7 +17,6 @@ for i in a[1:]:
             now = 1
     else:
         now = t
-
 if a[0] >= 0:
     now = -1
     ans2 = a[0] - now

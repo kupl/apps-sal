@@ -1,5 +1,5 @@
 cache = {}
-M = 10**9 + 7
+M = 10 ** 9 + 7
 
 
 def f(i):
@@ -18,4 +18,4 @@ def f(i):
     return cache[i]
 
 
-print((f(int(input()) + 1)))
+print(f(int(input()) + 1))
