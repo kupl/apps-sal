@@ -11,10 +11,8 @@ def main():
     numbers = numbers.split()
     for i in range(0, len(numbers)):
         numbers[i] = int(numbers[i])
-
     if is_arithmatic(numbers):
         print(numbers[len(numbers) - 1] + (numbers[len(numbers) - 1] - numbers[len(numbers) - 2]))
-
     elif is_geometric(numbers):
         next_number = numbers[len(numbers) - 1] * (numbers[len(numbers) - 1] / numbers[len(numbers) - 2])
         if next_number == int(next_number):
@@ -25,6 +23,4 @@ def main():
         print(42)
 
 
-#import doctest
-# doctest.testmod()
 main()

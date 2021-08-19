@@ -1,14 +1,13 @@
-# 930A
 import collections
 
 
 def do():
     n = int(input())
-    nums = [0] + [int(c) - 1 for c in input().split(" ")]
+    nums = [0] + [int(c) - 1 for c in input().split(' ')]
     g = collections.defaultdict(list)
-    for i, j in enumerate(nums):
+    for (i, j) in enumerate(nums):
         if i != j:
-            g[j].append(i)  # children
+            g[j].append(i)
     cur = [0]
     res = 0
     while cur:

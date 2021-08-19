@@ -3,19 +3,19 @@ NTC here
 """
 from sys import setcheckinterval, stdin, setrecursionlimit
 setcheckinterval(1000)
-setrecursionlimit(10**7)
-
-# print("Case #{}: {} {}".format(i, n + m, n * m))
+setrecursionlimit(10 ** 7)
 
 
-def iin(): return int(stdin.readline())
+def iin():
+    return int(stdin.readline())
 
 
-def lin(): return list(map(int, stdin.readline().split()))
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
-x, n = lin()
-md = 10**9 + 7
+(x, n) = lin()
+md = 10 ** 9 + 7
 
 
 def factors(a):

@@ -1,14 +1,10 @@
-
-
-f0 = "What are you doing at the end of the world? Are you busy? Will you save us?"
+f0 = 'What are you doing at the end of the world? Are you busy? Will you save us?'
 first_part = 'What are you doing while sending "'
 between1 = '"? Are you busy? Will you send "'
 f_lengths = [0 for i in range(64)]
 f_lengths[0] = len(f0)
 for i in range(1, 64):
     f_lengths[i] = 2 * f_lengths[i - 1] + 68
-
-# print(f_lengths)
 
 
 def determine_n(n, k):
@@ -17,19 +13,14 @@ def determine_n(n, k):
         n -= 1
     return n
 
-# k is 0 based here
-
 
 def index_find(n, k) -> str:
-    # print("index_find(n, k): ", n , k)
     if n == 0:
         if k >= len(f0):
-            return "."
+            return '.'
         return f0[k]
-
     if k < 34:
         return first_part[k]
-
     first_end = 34 + f_lengths[n - 1]
     if 34 <= k < first_end:
         return index_find(n - 1, k - 34)
@@ -47,15 +38,11 @@ def index_find(n, k) -> str:
 n = int(input())
 queries = [list(map(int, input().split())) for i in range(n)]
 r = []
-
-for n, k in queries:
-    # print(k, n)
-
+for (n, k) in queries:
     if n > 64:
         new_n = determine_n(n, k - 1)
         prefix = (n - new_n) * 34
         r.append(index_find(new_n, k - 1 - prefix))
     else:
         r.append(index_find(n, k - 1))
-
-print("".join(r))
+print(''.join(r))

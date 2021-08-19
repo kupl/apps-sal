@@ -1,16 +1,12 @@
 def func():
     n = int(input())
     g = [()] + [set(map(int, input().split())) for i in range(n)]
-    # print(g)
     if n == 3:
         print(1, 2, 3)
         return None
-
     xor = [1]
     for i in range(n - 1):
-        # print(xor)
-        x, y = (j for j in g[xor[-1]])
-        # print(x,y)
+        (x, y) = (j for j in g[xor[-1]])
         if x in g[y]:
             xor.append(y)
         elif y in g[x]:

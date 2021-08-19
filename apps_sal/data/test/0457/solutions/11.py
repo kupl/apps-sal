@@ -1,6 +1,5 @@
 import math
-
-X, N = map(int, input().split())
+(X, N) = map(int, input().split())
 
 
 def prime(n):
@@ -22,12 +21,12 @@ def prime(n):
 
 
 def power_func(a, n, p):
-    bi = str(format(n, "b"))  # 2進表現に
+    bi = str(format(n, 'b'))
     res = 1
     for i in range(len(bi)):
-        res = (res * res) % p
-        if bi[i] == "1":
-            res = (res * a) % p
+        res = res * res % p
+        if bi[i] == '1':
+            res = res * a % p
     return res
 
 
@@ -40,12 +39,10 @@ def main():
             a //= num
             c += a
         NUM[num] = c
-
-    mod = int(1E9 + 7)
+    mod = int(1000000000.0 + 7)
     ans = 1
-    for num, c in NUM.items():
-        ans = (ans * power_func(num, c, mod)) % mod
-
+    for (num, c) in NUM.items():
+        ans = ans * power_func(num, c, mod) % mod
     print(ans)
 
 
