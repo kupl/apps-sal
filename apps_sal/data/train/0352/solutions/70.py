@@ -1,10 +1,10 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         n = len(words)
         W = defaultdict(list)
-        for i, w in enumerate(words):
+        for (i, w) in enumerate(words):
             W[len(w)].append(i)
-        # print(W)
         G = defaultdict(set)
         for i in range(n):
             for j in W[len(words[i]) + 1]:
@@ -15,7 +15,6 @@ class Solution:
                         break
                 if found:
                     G[i].add(j)
-        # print(G)
 
         @lru_cache(None)
         def dfs(i):
@@ -23,4 +22,4 @@ class Solution:
             for j in G[i]:
                 out = max(out, 1 + dfs(j))
             return out
-        return max(dfs(i) for i in range(n))
+        return max((dfs(i) for i in range(n)))

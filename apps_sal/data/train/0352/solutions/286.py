@@ -1,4 +1,5 @@
 class Solution:
+
     def one_off(self, a, b):
         if abs(len(a) - len(b)) != 1:
             return False
@@ -16,25 +17,19 @@ class Solution:
                     i -= 1
             i += 1
             j += 1
-
         return True
 
     def longestStrChain(self, words: List[str]) -> int:
         if not words:
             return 0
         words.sort(key=lambda word: -len(word))
-        # print(words)
         dp = {}
-        # prev = {}
         best = 1
-        for i, word in enumerate(words):
+        for (i, word) in enumerate(words):
             for other in words[i + 1:]:
                 if len(word) - 1 > len(other):
                     break
                 if self.one_off(word, other):
                     dp[other] = max(dp.get(other, 0), dp.get(word, 1) + 1)
-                    # if dp[other] > best:
-                    #     prev[other] = word
                     best = max(best, dp[other])
-        # print(prev)
         return best

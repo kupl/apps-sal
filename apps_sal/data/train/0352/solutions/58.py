@@ -1,14 +1,12 @@
 class Solution:
-    def longestStrChain(self, words: List[str]) -> int:
 
-        # key is current word, value is current length
+    def longestStrChain(self, words: List[str]) -> int:
         chains = {}
         len_arr = [len(x) for x in words]
-        min_len, max_len = min(len_arr), max(len_arr)
+        (min_len, max_len) = (min(len_arr), max(len_arr))
         max_len_w = [w for w in words if len(w) == max_len]
         for w in max_len_w:
             chains[w] = 1
-
         for length in range(max_len - 1, min_len - 1, -1):
             for w in words:
                 if len(w) != length:
@@ -18,7 +16,7 @@ class Solution:
                     if len(key) == len(w) + 1 and self.is_chain(w, key):
                         max_w = max(max_w, chains[key] + 1)
                 chains[w] = max_w
-        len_chain = [y for x, y in list(chains.items())]
+        len_chain = [y for (x, y) in list(chains.items())]
         return max(len_chain)
 
     def is_chain(self, small_w, large_w):

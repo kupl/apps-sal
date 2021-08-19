@@ -2,8 +2,8 @@ from collections import defaultdict
 
 
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
-        #words.sort(key = lambda x: len(x))
         chain = defaultdict(list)
 
         def checkPredecessor(w1, w2):
@@ -11,15 +11,14 @@ class Solution:
                 if w2[:i] + w2[i + 1:] == w1:
                     return True
             return False
-        for idx, word in enumerate(words):
+        for (idx, word) in enumerate(words):
             chain[len(word)].append((word, idx))
         dp = [0] * len(words)
-
         i = 1
-        while(i < 17):
-            for word, dp_idx in chain[i]:
+        while i < 17:
+            for (word, dp_idx) in chain[i]:
                 if i - 1 in chain:
-                    for checkWord, dp_jdx in chain[i - 1]:
+                    for (checkWord, dp_jdx) in chain[i - 1]:
                         if checkPredecessor(checkWord, word):
                             dp[dp_idx] = max(dp[dp_idx], 1 + dp[dp_jdx])
             i += 1

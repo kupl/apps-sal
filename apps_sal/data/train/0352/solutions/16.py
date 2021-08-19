@@ -1,11 +1,9 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
-        # group by length
         length2words = defaultdict(list)
         for w in words:
             length2words[len(w)].append(w)
-
-        # for each length l -> check words in previous l-1 that form longer chain
         word2chain = dict()
         for l in sorted(length2words):
             for w in length2words[l]:
@@ -17,11 +15,9 @@ class Solution:
                         continue
                     if self.isPredecessor(prev_w, w):
                         word2chain[w] = max(word2chain[w], word2chain[prev_w] + 1)
-
         return max(word2chain.values())
 
     def isPredecessor(self, word1, word2):
-        # try skip letter in word2
         for i in range(len(word2)):
             skip = word2[:i] + word2[i + 1:]
             if skip == word1:

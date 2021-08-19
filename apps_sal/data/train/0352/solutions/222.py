@@ -1,4 +1,5 @@
 class Solution:
+
     def isPredecessor(self, word1, word2):
         if len(word1) + 1 == len(word2):
             i = 0
@@ -27,8 +28,6 @@ class Solution:
             return memo[i]
         length = 0
         for j in range(i + 1, len(words)):
-            # if i==14:
-            #     print(words[i], words[j], self.isPredecessor(words[i], words[j]))
             if self.isPredecessor(words[i], words[j]):
                 length = max(length, self.memoization(j, words, memo))
         memo[i] = 1 + length
