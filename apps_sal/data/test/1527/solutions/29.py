@@ -1,6 +1,5 @@
 import copy
-H, W = map(int, input().split())
-
+(H, W) = map(int, input().split())
 maze = []
 maze.append(['#'] * (W + 2))
 for i in range(H):
@@ -23,11 +22,9 @@ for i in range(1, H + 1):
             pos = [[sx, sy, 0]]
             max_depth = 0
             while len(pos) > 0:
-                x, y, depth = pos.pop(0)
-                # print(x,y)
+                (x, y, depth) = pos.pop(0)
                 if depth > max_depth:
                     max_depth = depth
-                # 探索終了条件
                 maze[x][y] = 0
                 if maze[x - 1][y] == '.':
                     pos.append([x - 1, y, depth + 1])
@@ -41,7 +38,6 @@ for i in range(1, H + 1):
                 if maze[x][y + 1] == '.':
                     pos.append([x, y + 1, depth + 1])
                     maze[x][y + 1] = 0
-            # print("max_depth={}".format(max_depth))
             if max_depth > global_max:
                 global_max = max_depth
 print(global_max)
