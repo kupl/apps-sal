@@ -1,10 +1,9 @@
 class Solution:
-    def distinctEchoSubstrings(self, text: str) -> int:
 
+    def distinctEchoSubstrings(self, text: str) -> int:
         d = set()
         c = 0
         lim = len(text)
-
         for i in range(0, lim, 2):
             for j in range(0, lim - i):
                 val = text[j:j + i]

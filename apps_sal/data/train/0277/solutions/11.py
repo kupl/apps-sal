@@ -1,4 +1,5 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         left_most_off = 0
         right_most_on = -1
@@ -13,5 +14,4 @@ class Solution:
                     left_most_off += 1
                 if left_most_off == len(light) or left_most_off > right_most_on:
                     res += 1
-
         return res

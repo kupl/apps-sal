@@ -1,7 +1,8 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         dp = {}
-        for i, Ai in enumerate(A):
+        for (i, Ai) in enumerate(A):
             for j in range(i + 1, len(A)):
                 b = A[j] - Ai
                 if (i, b) not in dp:

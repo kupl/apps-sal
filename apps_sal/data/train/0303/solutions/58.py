@@ -1,5 +1,7 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
+
         @lru_cache(None)
         def checkSum(i, j, k):
             if j - i <= k:

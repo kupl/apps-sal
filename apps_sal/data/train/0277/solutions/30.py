@@ -1,4 +1,5 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         c = 0
         mx = 0

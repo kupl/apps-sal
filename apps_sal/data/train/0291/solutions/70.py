@@ -1,11 +1,10 @@
 class Solution:
-    def numOfSubarrays(self, arr: List[int]) -> int:
 
+    def numOfSubarrays(self, arr: List[int]) -> int:
         o = 0
         e = 0
         c = 0
         p = 0
-
         for i in arr:
             p += i
             if p % 2 == 0:

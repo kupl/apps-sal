@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         maxd = max(A) - min(A)
         dp = [[1 for j in range(2 * maxd + 1)] for i in range(len(A))]

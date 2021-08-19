@@ -1,4 +1,5 @@
 class Solution:
+
     def isSelfCrossing(self, x):
         """
         :type x: List[int]
@@ -7,7 +8,6 @@ class Solution:
         n = len(x)
         if n < 4:
             return False
-
         i = 3
         while i < n:
             if x[i] >= x[i - 2] and x[i - 3] >= x[i - 1]:

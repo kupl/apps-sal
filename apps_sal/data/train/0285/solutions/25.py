@@ -1,7 +1,8 @@
 class Solution:
+
     def smallestRangeII(self, A: List[int], K: int) -> int:
         A.sort()
-        minV, maxV = A[0], A[-1]
+        (minV, maxV) = (A[0], A[-1])
         res = maxV - minV
         for i in range(len(A) - 1):
             A[i] += 2 * K

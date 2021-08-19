@@ -1,9 +1,9 @@
 class Solution:
+
     def checkValid(self, checkString):
         l = len(checkString)
         if l % 2 != 0 or l == 0:
             return False
-
         if checkString[:l // 2] != checkString[l // 2:]:
             return False
         return True
@@ -18,6 +18,6 @@ class Solution:
                 diff = end - start
                 left = text[start:diff // 2 + start]
                 right = text[diff // 2 + start:end]
-                if diff > 0 and (diff % 2) == 0 and left == right:
+                if diff > 0 and diff % 2 == 0 and (left == right):
                     dic[text[start:end]] = 1
         return len(list(dic.keys()))

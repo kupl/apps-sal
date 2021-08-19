@@ -1,7 +1,7 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         counter = Counter(ages)
-
         ages = list(counter.keys())
         res = 0
         for a in ages:
@@ -12,10 +12,8 @@ class Solution:
                     continue
                 if b > 100 and a < 100:
                     continue
-
                 if a == b:
                     res += counter[a] * (counter[a] - 1)
                 else:
                     res += counter[a] * counter[b]
-
         return res

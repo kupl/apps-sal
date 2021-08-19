@@ -1,19 +1,16 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         if k == 1:
             return sum(arr)
-
         if k == len(arr):
             max_val = max(arr)
             return max_val * len(arr)
-
         sums = [-1 for index in range(k)]
         maxs = [-1 for index in range(k)]
         max_sum = 0
-
         sums[0] = arr[0]
         maxs[0] = arr[0]
-
         for idx in range(1, len(arr)):
             val = arr[idx]
             max_sum = max(sums)

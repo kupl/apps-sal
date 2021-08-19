@@ -1,4 +1,5 @@
 class Solution:
+
     def findMinStep(self, board, hand):
         """
         :type board: str
@@ -15,7 +16,7 @@ class Solution:
         if not board:
             return 0
         result = float('inf')
-        i, j = 0, 0
+        (i, j) = (0, 0)
         n = len(board)
         while i < n:
             j = i
@@ -34,7 +35,7 @@ class Solution:
         return result if float('inf') != result else -1
 
     def shrink(self, board):
-        i, j = 0, 0
+        (i, j) = (0, 0)
         while i < len(board):
             j = i
             while j < len(board) and board[i] == board[j]:

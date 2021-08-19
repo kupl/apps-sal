@@ -1,4 +1,5 @@
 class Solution:
+
     def get_permute(self, opts, cur_sol):
         for i in range(len(opts)):
             c = opts[i]

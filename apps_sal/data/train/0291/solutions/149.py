@@ -1,9 +1,10 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         result = 0
-        sumOdd = [0] * (len(arr))
-        sumEven = [0] * (len(arr))
+        sumOdd = [0] * len(arr)
+        sumEven = [0] * len(arr)
         if arr[0] % 2 == 1:
             sumOdd[0] = 1
             sumEven[0] = 0

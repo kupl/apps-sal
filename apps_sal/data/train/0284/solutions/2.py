@@ -1,8 +1,9 @@
 class Solution:
+
     def bagOfTokensScore(self, tokens: List[int], P: int) -> int:
-        max_points, points = 0, 0
+        (max_points, points) = (0, 0)
         tokens.sort()
-        i, j = 0, len(tokens) - 1
+        (i, j) = (0, len(tokens) - 1)
         while i <= j:
             if P < tokens[i]:
                 if i == j or points == 0:

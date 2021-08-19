@@ -1,4 +1,5 @@
 class Solution:
+
     def fonction(self, a, b, i, j, dp):
         if j == len(b) or i == len(a):
             return 0

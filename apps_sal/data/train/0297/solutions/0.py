@@ -1,4 +1,5 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
         res = 0
         freqs = [f + 1 for f in Counter(tiles).values()]

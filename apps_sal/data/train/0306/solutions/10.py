@@ -1,4 +1,5 @@
 class Solution:
+
     def combinationSum4(self, nums, target):
         """
         :type nums: List[int]
@@ -17,7 +18,6 @@ class Solution:
         if target == 0:
             self.result += 1
             return
-
         for num in nums:
             if num > target:
                 break

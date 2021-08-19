@@ -1,5 +1,7 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
+
         def findMaxSum(A, L, M):
             max_num = 0
             for i in range(len(A) - L):

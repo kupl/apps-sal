@@ -1,4 +1,5 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         count = [0] * 121
         s = [0] * 121

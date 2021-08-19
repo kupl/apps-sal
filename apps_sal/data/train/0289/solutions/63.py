@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         Len = len(A) + 1
         prefix = [0] + A

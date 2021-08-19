@@ -1,4 +1,5 @@
 class Solution:
+
     def util(self, i, n, A, K, d):
         if i >= n:
             return 0
@@ -6,7 +7,7 @@ class Solution:
             count = 0
             ma = A[i]
             temp = -1
-            while (i + count < n) and count <= K - 1:
+            while i + count < n and count <= K - 1:
                 if A[i + count] > ma:
                     ma = A[i + count]
                 nex = self.util(i + count + 1, n, A, K, d)

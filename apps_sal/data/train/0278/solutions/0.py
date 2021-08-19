@@ -1,4 +1,5 @@
 class Solution:
+
     def largestMultipleOfThree(self, digits: List[int]) -> str:
         counts = Counter(digits)
         m = sum(digits) % 3
@@ -8,10 +9,9 @@ class Solution:
             else:
                 counts[min([i - m for i in [3, 6, 9] if counts[i - m]])] -= 1
                 counts[min([i - m for i in [3, 6, 9] if counts[i - m]])] -= 1
-
         ans = ''
         for i in range(9, -1, -1):
-            if not ans and not counts[i]:
+            if not ans and (not counts[i]):
                 continue
             ans += str(i) * counts[i]
         if ans:

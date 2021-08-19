@@ -2,6 +2,7 @@ from itertools import repeat
 
 
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         length = len(A)
         onleft = 0
@@ -24,8 +25,8 @@ class Solution:
                 if c > res:
                     res = c
                 toextend[nextval][diff] = c
-            b = (1 << val)
-            if not (onleft & b):
+            b = 1 << val
+            if not onleft & b:
                 onleftl.append(val)
-                onleft = (onleft | b)
+                onleft = onleft | b
         return res

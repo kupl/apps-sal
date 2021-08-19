@@ -2,6 +2,7 @@ import sys
 
 
 class Solution:
+
     def rec(self, l, h, cuts, dp):
         if h in dp[l]:
             return dp[l][h]

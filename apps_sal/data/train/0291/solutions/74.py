@@ -1,6 +1,7 @@
 class Solution:
+
     def numOfSubarrays(self, A):
-        MOD = (10**9 + 7)
+        MOD = 10 ** 9 + 7
         ans = 0
         tt = 0
         even = odd = 0

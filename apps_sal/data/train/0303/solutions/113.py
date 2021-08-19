@@ -1,12 +1,11 @@
 class Solution:
-    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
 
+    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         mem = {}
 
         def find(s, e):
             if (s, e) in mem:
-                return mem[(s, e)]
-
+                return mem[s, e]
             if e - s == 1:
                 return arr[s]
             elif e - s == 0:
@@ -17,7 +16,6 @@ class Solution:
                     subsum = max(arr[s:i]) * (i - s) + find(i, e)
                     if m is None or subsum > m:
                         m = subsum
-                mem[(s, e)] = m
+                mem[s, e] = m
                 return m
-
         return find(0, len(arr))

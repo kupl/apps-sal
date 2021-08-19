@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, nums: List[int], k: int) -> int:
         n = len(nums)
         dp = [nums[0]] + [0] * (n - 1)

@@ -1,6 +1,6 @@
 class Solution:
-    def longestArithSeqLength(self, A: List[int]) -> int:
 
+    def longestArithSeqLength(self, A: List[int]) -> int:
         res = 0
         dp = [{} for _ in range(len(A))]
         for i in range(1, len(A)):
@@ -11,5 +11,4 @@ class Solution:
                 else:
                     dp[i][diff] = 2
                 res = max(res, dp[i][diff])
-
         return res

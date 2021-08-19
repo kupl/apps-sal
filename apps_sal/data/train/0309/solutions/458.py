@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         N = len(A)
         dp = [collections.defaultdict(int) for _ in A]
@@ -10,11 +11,9 @@ class Solution:
                     dp[i][diff] = 0
                 if dp[j][diff] == None:
                     dp[j][diff] = 0
-
                 if dp[j][diff] == 0:
                     dp[i][diff] = 2
                 else:
                     dp[i][diff] = dp[j][diff] + 1
-
                 res = max(res, dp[i][diff])
         return res

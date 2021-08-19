@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
         self.n = sum(balls) // 2
         self.balls = balls

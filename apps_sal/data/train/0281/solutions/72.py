@@ -1,4 +1,5 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
@@ -18,5 +19,4 @@ class Solution:
                 if l > k:
                     return False
                 occ[l] = 1
-
         return True

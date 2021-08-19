@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, A: List[int], k: int) -> int:
         L = len(A)
         vis = {}

@@ -1,4 +1,5 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         cur_max = 0
         count = 0

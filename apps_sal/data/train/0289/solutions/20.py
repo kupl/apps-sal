@@ -18,22 +18,18 @@ class Solution:
             if n < L:
                 return -1
             roll_max = 0
-
             for i in range(L):
                 roll_max += arr[i]
             curr_max = roll_max
-
             start = 0
             for n in arr[L:]:
                 roll_max = roll_max - arr[start] + n
                 curr_max = max(curr_max, roll_max)
                 start += 1
             return curr_max
-
         for x in range(N):
             curr_total = sum(A[x:x + M])
             first_half = maxOverlap(A[:x])
             second_half = maxOverlap(A[x + M:])
             max_two_sum = max(max_two_sum, curr_total + first_half, curr_total + second_half)
-
         return max_two_sum

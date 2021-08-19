@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         mm = [[a for a in arr]]
         for i in range(len(arr) - 1):

@@ -4,6 +4,7 @@ from functools import lru_cache
 class Solution:
 
     def minCost(self, n: int, cuts: List[int]) -> int:
+
         @lru_cache(None)
         def minCost_r(k, l):
             if l - k <= 1:
@@ -14,5 +15,4 @@ class Solution:
                     continue
                 mc = min(mc, minCost_r(k, c) + minCost_r(c, l) + (l - k))
             return mc if mc != float('inf') else 0
-
         return minCost_r(0, n)

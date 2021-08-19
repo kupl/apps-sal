@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         q = []
         res = 0

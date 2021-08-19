@@ -1,6 +1,7 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
-        m, n = len(A), len(B)
+        (m, n) = (len(A), len(B))
         dp = collections.defaultdict(int)
         for i in range(m):
             for j in range(n):

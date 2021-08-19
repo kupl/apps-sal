@@ -1,4 +1,5 @@
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
         self.total = 0
         self.valid = 0
@@ -14,18 +15,18 @@ class Solution:
         def update(s):
             x = y = fac[-1]
             cnt1 = cnt2 = 0
-            for i, c in enumerate(s):
+            for (i, c) in enumerate(s):
                 x //= fac[c]
                 y //= fac[balls[i] - c]
-                cnt1 += (c > 0)
-                cnt2 += (balls[i] - c > 0)
+                cnt1 += c > 0
+                cnt2 += balls[i] - c > 0
             ret = x * y
             self.total += ret
             if cnt1 == cnt2:
                 self.valid += ret
 
         def dfs(state, i):
-            s, cnt = state
+            (s, cnt) = state
             if cnt == t:
                 update(s)
                 return

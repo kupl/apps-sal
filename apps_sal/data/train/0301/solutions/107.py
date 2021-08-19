@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         memo = [[None for i in range(len(B))] for i in range(len(A))]
         return self.uncrossRec(A, B, 0, 0, memo)

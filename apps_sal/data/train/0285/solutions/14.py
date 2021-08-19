@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRangeII(self, A: List[int], k: int) -> int:
         A.sort()
         n = len(A)

@@ -1,4 +1,5 @@
 class Solution:
+
     def soupServings(self, N: int) -> float:
         memo = {}
         if N > 4800:

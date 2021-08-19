@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         dp = collections.defaultdict(int)
         n = len(A)

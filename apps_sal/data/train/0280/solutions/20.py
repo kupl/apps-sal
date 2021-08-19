@@ -1,11 +1,11 @@
 class Solution:
+
     def palindromePartition(self, s: str, k: int):
         prefix = [[0] * len(s) for _ in range(len(s))]
         for r in range(len(prefix)):
             for c in range(len(prefix[0])):
                 if r < c:
                     prefix[r][c] = self.find_change(s, r, c)
-
         dp = [[0] * len(s) for _ in range(k)]
         dp[0] = prefix[0]
         for r in range(1, len(dp)):

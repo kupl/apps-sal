@@ -1,4 +1,5 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
         if len(tiles) < 2:
             return len(tiles)
@@ -28,6 +29,7 @@ class Solution:
 
 
 class Node:
+
     def __init__(self, char: str):
         self.char = char
         self.edges = []

@@ -1,4 +1,5 @@
 class Solution:
+
     def findMin(self, nums):
         """
         :type nums: List[int]
@@ -6,13 +7,10 @@ class Solution:
         """
         if len(nums) == 0:
             return -1
-
         if nums[len(nums) - 1] > nums[0]:
             return nums[0]
-
         start = 0
         end = len(nums) - 1
-
         while start + 1 < end:
             mid = start + (end - start) // 2
             if nums[mid] == nums[start]:

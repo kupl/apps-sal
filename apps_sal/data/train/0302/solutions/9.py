@@ -1,4 +1,5 @@
 class Solution:
+
     def validSquare(self, p1, p2, p3, p4):
         """
         :type p1: List[int]
@@ -18,4 +19,4 @@ class Solution:
         return len(s) == 2
 
     def dist(self, a, b):
-        return (a[0] - b[0])**2 + (a[1] - b[1])**2
+        return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2

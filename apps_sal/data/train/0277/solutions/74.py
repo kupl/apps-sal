@@ -1,4 +1,5 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         res = 0
         n = len(light)

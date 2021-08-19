@@ -2,12 +2,13 @@ from collections import defaultdict
 
 
 class Solution:
+
     def find(self, A):
         dp = []
         ans = 1
         for _ in A:
             dp.append({})
-        for i, ai in enumerate(A):
+        for (i, ai) in enumerate(A):
             for j in range(i):
                 aj = A[j]
                 d = ai - aj

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         length = len(A)
         onleft = 0
@@ -25,8 +26,8 @@ class Solution:
                     if ending > 500 or ending < 0 or onright[ending] == 0:
                         continue
                 toextend[nextval][diff] = c
-            b = (1 << val)
-            if not (onleft & b):
-                onleft = (onleft | b)
+            b = 1 << val
+            if not onleft & b:
+                onleft = onleft | b
                 onleftl.append(val)
         return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
         pre = [0]
         for n in arr:

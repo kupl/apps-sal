@@ -1,9 +1,10 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
-        '''
+        """
         odd[i] = number of sub arrays with odd sum and end at i
         even[i] = number of sub arrays with even sum and end at i
-        '''
+        """
         odd = [0 for x in arr]
         even = [0 for x in arr]
         odd[0] = 1 if arr[0] % 2 == 1 else 0

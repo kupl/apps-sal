@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, n: int, cuts: List[int]) -> int:
         cuts.sort()
 
@@ -16,6 +17,5 @@ class Solution:
                 res = 0
             memo[key] = res
             return res
-
         c = collections.defaultdict(int)
         return helper(cuts, c, 0, n)

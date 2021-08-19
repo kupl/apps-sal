@@ -1,4 +1,4 @@
-'''
+"""
 subseq: non contiguous
 
 B[i+1] - B[i] is always the same 
@@ -28,17 +28,17 @@ if i > 0:
 dp[(i, diff)]: length of longest arith seq ending at i with difference diff 
 
 
-'''
+"""
 from functools import lru_cache
 
 
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         n = len(A)
         dp = {}
-
         for i in range(n):
             for j in range(i + 1, n):
                 d = A[j] - A[i]
-                dp[(j, d)] = dp.get((i, d), 1) + 1
+                dp[j, d] = dp.get((i, d), 1) + 1
         return max(dp.values())

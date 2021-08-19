@@ -1,6 +1,6 @@
 class Solution:
-    def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
 
+    def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         S = [A[0]]
         for i in range(1, len(A)):
             S.append(S[-1] + A[i])

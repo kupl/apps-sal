@@ -2,6 +2,7 @@ import bisect
 
 
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         sl = []
         count = 0

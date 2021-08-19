@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         n = len(A)
         m = len(B)
@@ -16,5 +17,4 @@ class Solution:
                 return fun(i + 1, j)
             else:
                 return max(fun(i + 1, j), 1 + fun(i + 1, loc + 1))
-
         return fun(0, 0)

@@ -1,4 +1,5 @@
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
         n = len(s)
         palindrome = [[0 for x in range(n)] for y in range(n)]
@@ -12,7 +13,7 @@ class Solution:
                     palindrome[start][end] = palindrome[start + 1][end - 1]
                 else:
                     palindrome[start][end] = palindrome[start + 1][end - 1] + 1
-        dp = [[2**31 for x in range(k + 1)] for y in range(n + 1)]
+        dp = [[2 ** 31 for x in range(k + 1)] for y in range(n + 1)]
         dp[0][0] = 0
         for i in range(1, n + 1):
             for j in range(1, k + 1):

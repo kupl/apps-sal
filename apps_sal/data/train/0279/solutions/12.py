@@ -1,4 +1,5 @@
 class Solution:
+
     def getPermutation(self, n, k):
         """
         :type n: int
@@ -8,22 +9,16 @@ class Solution:
 
         def fn(x, y):
             return x * y
-
         import functools
-
         nums = list(range(1, n + 1))
         nn = functools.reduce(fn, nums)
-        out = ""
+        out = ''
         k = k - 1
-
         while n > 1:
             nn = nn // n
-
-            idx, k = k // nn, k % nn
+            (idx, k) = (k // nn, k % nn)
             out = out + str(nums[idx])
             nums.remove(nums[idx])
-
             n = n - 1
-
         out = out + str(nums[0])
         return out

@@ -1,4 +1,5 @@
 class Solution:
+
     def distinctEchoSubstrings(self, text: str) -> int:
         satisfies = set()
         for i in range(2, len(text) + 2, 2):

@@ -1,4 +1,5 @@
 class Solution:
+
     def cal(self, i, j, cuts):
         if i in self.dp:
             if j in self.dp[i]:
@@ -6,7 +7,7 @@ class Solution:
         ans = float('inf')
         cost = j - i
         found = False
-        for ind, c in enumerate(cuts):
+        for (ind, c) in enumerate(cuts):
             if i < c and c < j:
                 t = cuts[:]
                 del t[ind]

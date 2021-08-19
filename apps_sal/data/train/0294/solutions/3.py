@@ -1,4 +1,5 @@
 class Solution:
+
     def totalNQueens(self, n):
         """
         :type n: int
@@ -16,7 +17,7 @@ class Solution:
             rl[0] += 1
             return True
         for i in range(n):
-            if not col[i] and not dia1[index + i] and not dia2[index - i + n - 1]:
+            if not col[i] and (not dia1[index + i]) and (not dia2[index - i + n - 1]):
                 col[i] = True
                 dia1[index + i] = True
                 dia2[index - i + n - 1] = True

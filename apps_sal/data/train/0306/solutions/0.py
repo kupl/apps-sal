@@ -1,4 +1,5 @@
 class Solution:
+
     def combinationSum4(self, nums, target):
         """
         :type nums: List[int]
@@ -10,7 +11,6 @@ class Solution:
         def f(val):
             if val == target:
                 return 1
-
             total = 0
             remain = target - val
             for num in nums:
@@ -22,5 +22,4 @@ class Solution:
                         cache[k] = f(val + num)
                         total += cache[k]
             return total
-
         return f(0)

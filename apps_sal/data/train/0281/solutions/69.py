@@ -1,8 +1,8 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
-
         hash_map = {}
         for i in range(len(s)):
             if s[i] != t[i]:

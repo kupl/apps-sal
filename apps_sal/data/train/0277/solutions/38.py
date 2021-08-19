@@ -1,4 +1,5 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         if len(light) == 0:
             return 0
@@ -6,7 +7,7 @@ class Solution:
         count = 0
         flag = True
         Max = light[0]
-        for i, item in enumerate(light):
+        for (i, item) in enumerate(light):
             dic[item] = True
             Max = max(light[i], Max)
             if Max == len(dic):

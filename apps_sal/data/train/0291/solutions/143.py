@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
         odd = 0
         even = 0
@@ -17,5 +18,5 @@ class Solution:
                 output += 1
                 output += even
                 odd += 1
-            output %= (10**9 + 7)
+            output %= 10 ** 9 + 7
         return output

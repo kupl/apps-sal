@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         maxi = 0
         n = len(A)
@@ -6,7 +7,7 @@ class Solution:
             A[i] += A[i - 1]
         for i in range(n - L + 1):
             for j in range(n - M + 1):
-                if (i >= j and i - j < M) or (i < j and j - i < L):
+                if i >= j and i - j < M or (i < j and j - i < L):
                     continue
                 else:
                     istart = A[i - 1] if i > 0 else 0

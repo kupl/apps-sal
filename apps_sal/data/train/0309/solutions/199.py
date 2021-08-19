@@ -1,8 +1,9 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         stored = [{} for i in range(len(A))]
         best = 0
-        for index, value in enumerate(A):
+        for (index, value) in enumerate(A):
             if index == 0:
                 continue
             for compare in range(index):

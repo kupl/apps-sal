@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
         prefixSum = [0]
         for i in range(1, len(arr) + 1):
@@ -13,4 +14,4 @@ class Solution:
             else:
                 prefixOdd += 1
                 out += prefixEven
-        return out % (10**9 + 7)
+        return out % (10 ** 9 + 7)

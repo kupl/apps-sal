@@ -1,11 +1,12 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         from collections import defaultdict
         if len(s) != len(t):
             return False
         i = 0
         j = defaultdict(int)
-        print((len(s)))
+        print(len(s))
         while i < len(s):
             mr = (ord(t[i]) - ord(s[i])) % 26
             if mr == 0:

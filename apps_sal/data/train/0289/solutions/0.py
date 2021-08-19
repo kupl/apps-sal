@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         N = len(A)
         if L + M > N:
@@ -15,7 +16,6 @@ class Solution:
                     sLmax.append(sL[i])
                 else:
                     sLmax.append(sLmax[-1])
-
             sM = [sum(A[-M:])]
             for i in range(N - M - 1, L - 1, -1):
                 tmp = sM[-1] + A[i] - A[i + M]
@@ -26,12 +26,9 @@ class Solution:
                     sMmax.append(sM[i])
                 else:
                     sMmax.append(sMmax[-1])
-
             sMax = [sum(x) for x in zip(sLmax, sMmax[::-1])]
             m = max(sMax)
-
             return m
-
         if L == M:
             return findmax(L, M)
         else:

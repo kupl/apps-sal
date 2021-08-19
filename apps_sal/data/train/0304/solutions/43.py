@@ -1,10 +1,11 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         ages.sort(reverse=True)
         n = len(ages)
 
         def check(a, b):
-            if b <= (a * 0.5) + 7:
+            if b <= a * 0.5 + 7:
                 return False
             if b > a:
                 return False

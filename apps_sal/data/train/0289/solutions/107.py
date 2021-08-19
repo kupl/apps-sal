@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         if len(A) < M + L:
             return -1
@@ -12,7 +13,6 @@ class Solution:
                 preSumM = preSumM - A[i - 1] + A[i + M - 1]
                 maxM = max(maxM, preSumM)
             return maxM
-
         preSumL = sum(A[:L - 1])
         maxSum = -sys.maxsize
         for i in range(len(A) - L + 1):

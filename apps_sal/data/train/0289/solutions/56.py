@@ -1,7 +1,8 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         largestSum = 0
-        LList, MList = [0] * len(A), [0] * len(A)
+        (LList, MList) = ([0] * len(A), [0] * len(A))
         thisSum = sum(A[:L])
         LList[0] = thisSum
         for idx in range(len(A) - L):

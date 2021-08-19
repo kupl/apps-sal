@@ -1,8 +1,9 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
-        run, prev = [], 0
+        (run, prev) = ([], 0)
         count = 0
-        odd, even = 0, 0
+        (odd, even) = (0, 0)
         for ele in arr:
             run.append(prev + ele)
             prev = run[-1]

@@ -1,6 +1,7 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
-        diffs = set(y - x for i, x in enumerate(A) for y in A[i + 1:])
+        diffs = set((y - x for (i, x) in enumerate(A) for y in A[i + 1:]))
         ans = 0
         for diff in diffs:
             data = {}

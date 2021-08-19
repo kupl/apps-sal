@@ -1,10 +1,11 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
         valid = {}
         moves = []
-        for a, b in zip(s, t):
+        for (a, b) in zip(s, t):
             if a != b:
                 diff = ord(b) - ord(a)
                 if diff < 0:

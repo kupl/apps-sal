@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
         n = len(A)
         dp = [0] * (n + 1)
@@ -7,5 +8,4 @@ class Solution:
                 if i - w < 0:
                     break
                 dp[i] = max(dp[i], dp[i - w] + max(A[i - w:i]) * w)
-
         return dp[-1]

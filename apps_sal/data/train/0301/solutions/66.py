@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         mat = [[0] * (len(B) + 1) for j in range(len(A) + 1)]
         for i in range(1, len(A) + 1):

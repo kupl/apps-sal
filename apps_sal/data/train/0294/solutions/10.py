@@ -1,4 +1,5 @@
 class Solution:
+
     def totalNQueens(self, n):
         """
         :type n: int
@@ -20,7 +21,7 @@ class Solution:
         else:
             result = []
             for x in table[n]:
-                table1 = [(x if type(x) == int else x.copy()) for x in table]
+                table1 = [x if type(x) == int else x.copy() for x in table]
                 table1[n] = x
                 for row in range(n + 1, len(table)):
                     if x in table1[row]:

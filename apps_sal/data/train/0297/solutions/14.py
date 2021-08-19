@@ -1,4 +1,5 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
         d = set()
         for i in range(len(tiles)):

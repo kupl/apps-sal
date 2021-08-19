@@ -1,4 +1,5 @@
 class Solution:
+
     def combinationSum4(self, nums, target):
         """
         :type nums: List[int]
@@ -16,5 +17,4 @@ class Solution:
                     res += helper(target - x)
             record[target] = res
             return res
-
         return helper(target)

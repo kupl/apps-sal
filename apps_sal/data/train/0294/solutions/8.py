@@ -7,7 +7,7 @@ class Solution:
         for y in range(n):
             diag1 = x + y
             diag2 = x - y + n
-            if not diag1_used[diag1] and not diag2_used[diag2] and not col_used[y]:
+            if not diag1_used[diag1] and (not diag2_used[diag2]) and (not col_used[y]):
                 arrangement.append(y)
                 diag1_used[diag1] = True
                 diag2_used[diag2] = True
@@ -18,7 +18,6 @@ class Solution:
                 diag2_used[diag2] = False
                 col_used[y] = False
                 res += cur_res
-
         return res
 
     def totalNQueens(self, n):
@@ -26,7 +25,6 @@ class Solution:
         :type n: int
         :rtype: int
         """
-
         arrangement = []
         diag1_used = [False] * (2 * n)
         diag2_used = [False] * (2 * n)

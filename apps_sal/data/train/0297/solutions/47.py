@@ -1,4 +1,5 @@
 class Solution:
+
     def poss(self, tiles: str) -> set:
         if len(tiles) == 1:
             return set([tiles[0]])

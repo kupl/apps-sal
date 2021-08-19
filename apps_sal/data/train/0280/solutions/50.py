@@ -1,5 +1,7 @@
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
+
         def cost(st, i, j):
             res = 0
             while j > i:

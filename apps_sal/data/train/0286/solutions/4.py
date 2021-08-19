@@ -4,6 +4,7 @@ import operator
 
 
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
         self.total = 0
         self.valid = 0
@@ -26,7 +27,7 @@ class Solution:
         if len(left_balls) == self.k:
             if total != self.n:
                 return
-            right_balls = [total_cnt - left_cnt for left_cnt, total_cnt in zip(left_balls, self.balls)]
+            right_balls = [total_cnt - left_cnt for (left_cnt, total_cnt) in zip(left_balls, self.balls)]
             count = self.count(*sorted(left_balls)) * self.count(*sorted(right_balls))
             self.total += count
             if delta == 0:

@@ -1,7 +1,8 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         mp = defaultdict(list)
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             mp[a].append(i)
 
         @lru_cache(None)
@@ -15,5 +16,4 @@ class Solution:
                     if j < i:
                         res = max(res, 1 + dp(j, diff))
             return res
-
         return max([dp(i) for i in range(len(A))])

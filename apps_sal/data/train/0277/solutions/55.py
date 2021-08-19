@@ -1,6 +1,7 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
-        '''m = set()
+        """m = set()
         flag, c = -1, 0
         for i in range(len(light)):
             m.add(light[i])
@@ -12,10 +13,10 @@ class Solution:
                 flag = -1
             else:
                 c += 1
-        return c'''
+        return c"""
         res = 0
         curr = -1
-        for p, q in enumerate(light):
+        for (p, q) in enumerate(light):
             curr = max(curr, q)
             if curr == p + 1:
                 res += 1

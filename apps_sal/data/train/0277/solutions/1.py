@@ -1,14 +1,15 @@
-'''
+"""
 Time Limited
 https://leetcode.com/submissions/detail/406886943/testcase/
-'''
+"""
 
 
 class Solution:
+
     def numTimesAllBlue(self, light):
-        cnt, N = 0, len(light)
+        (cnt, N) = (0, len(light))
         bulbs = [0] * N
-        for i, pos in enumerate(light, start=1):
+        for (i, pos) in enumerate(light, start=1):
             pos -= 1
             if sum(bulbs[:pos]) == 2 * pos:
                 bulbs[pos] = 2
@@ -23,8 +24,9 @@ class Solution:
 
 
 class Solution:
+
     def numTimesAllBlue(self, light):
-        cnt, seen = 0, set()
+        (cnt, seen) = (0, set())
         for v in light:
             seen.add(v)
             if max(seen) == len(seen):
@@ -33,9 +35,10 @@ class Solution:
 
 
 class Solution:
+
     def numTimesAllBlue(self, light):
         cnt = 0
-        maxV, size = 0, 0
+        (maxV, size) = (0, 0)
         for v in light:
             size += 1
             if v > maxV:

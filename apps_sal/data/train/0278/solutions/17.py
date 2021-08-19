@@ -1,4 +1,5 @@
 class Solution:
+
     def largestMultipleOfThree(self, digits: List[int]) -> str:
         dic = defaultdict(list)
         for d in digits:
@@ -42,4 +43,4 @@ class Solution:
         arr.sort(reverse=1)
         if arr and arr[0] == 0:
             return '0'
-        return ''.join(str(i) for i in arr)
+        return ''.join((str(i) for i in arr))

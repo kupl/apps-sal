@@ -1,6 +1,7 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
-        yellow, blue = set(), set()
+        (yellow, blue) = (set(), set())
         moment = 0
         for bulb in light:
             if bulb == 1 or bulb - 1 in blue:

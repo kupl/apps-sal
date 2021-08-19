@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRangeII(self, A: List[int], K: int) -> int:
         N = len(A)
         if N == 1:

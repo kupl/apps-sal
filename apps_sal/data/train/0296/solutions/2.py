@@ -1,4 +1,5 @@
 class Solution(object):
+
     def findMin(self, nums):
         """
         :type nums: List[int]
@@ -6,9 +7,7 @@ class Solution(object):
         """
         if len(nums) == 1:
             return nums.pop()
-
-        start, finish = 1, len(nums) - 1
-
+        (start, finish) = (1, len(nums) - 1)
         while start < finish:
             half = (start + finish) // 2
             if nums[half] > nums[0]:
@@ -17,5 +16,4 @@ class Solution(object):
                 return min(Solution.findMin(self, nums[:half]), Solution.findMin(self, nums[half:]))
             else:
                 finish = half
-
         return min(nums[start], nums[0])

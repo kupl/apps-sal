@@ -1,6 +1,6 @@
 class Solution:
-    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
 
+    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         self.dp = {}
 
         def recur(index, arr, k):

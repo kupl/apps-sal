@@ -1,4 +1,5 @@
 class Solution:
+
     def totalNQueens(self, n):
         """
         :type n: int
@@ -27,6 +28,5 @@ class Solution:
                     vert[y] = True
                     diag_lr[y - x + n - 1] = True
                     diag_rl[x + y] = True
-
         _helper(0)
         return len(res)

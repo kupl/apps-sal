@@ -1,4 +1,5 @@
 class Solution(object):
+
     def longestArithSeqLength(self, A):
         if not A:
             return None
