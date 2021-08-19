@@ -1,13 +1,13 @@
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
         n = len(s)
         if n == k:
             return 0
 
-        # @lru_cache(None)
-        def cost(s):  # calculate the cost of transferring one substring into palindrome string
+        def cost(s):
             r = 0
-            i, j = 0, len(s) - 1
+            (i, j) = (0, len(s) - 1)
             while i < j:
                 if s[i] != s[j]:
                     r += 1

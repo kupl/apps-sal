@@ -1,13 +1,19 @@
 from itertools import product
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(max(1000, 10**9))
-def write(x): return sys.stdout.write(x + "\n")
+def input():
+    return sys.stdin.readline().rstrip()
 
 
-xs, ys, xt, yt = list(map(int, input().split()))
+sys.setrecursionlimit(max(1000, 10 ** 9))
+
+
+def write(x):
+    return sys.stdout.write(x + '\n')
+
+
+(xs, ys, xt, yt) = list(map(int, input().split()))
 n = int(input())
 xyr = [None] * (n + 2)
 for i in range(n):
@@ -17,9 +23,9 @@ s = n
 t = n + 1
 xyr[s] = (xs, ys, 0)
 xyr[t] = (xt, yt, 0)
-for i, j in product(list(range(n + 2)), list(range(n + 2))):
+for (i, j) in product(list(range(n + 2)), list(range(n + 2))):
     if i < j:
-        d = max(0, ((xyr[i][0] - xyr[j][0])**2 + (xyr[i][1] - xyr[j][1])**2)**0.5 - (xyr[i][2] + xyr[j][2]))
+        d = max(0, ((xyr[i][0] - xyr[j][0]) ** 2 + (xyr[i][1] - xyr[j][1]) ** 2) ** 0.5 - (xyr[i][2] + xyr[j][2]))
         ns[i].append((d, j))
         ns[j].append((d, i))
 
@@ -27,15 +33,15 @@ for i, j in product(list(range(n + 2)), list(range(n + 2))):
 def dijkstra(start):
     import heapq
     vals = [None] * (n + 2)
-    h = [(0, start)]  # (距離, ノード番号)
+    h = [(0, start)]
     vals[start] = 0
     while h:
-        val, u = heapq.heappop(h)
+        (val, u) = heapq.heappop(h)
         if u == t:
             break
         if val > vals[u]:
             continue
-        for d, v in ns[u]:
+        for (d, v) in ns[u]:
             if vals[v] is None or vals[v] > val + d:
                 vals[v] = val + d
                 heapq.heappush(h, (vals[v], v))

@@ -1,6 +1,6 @@
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
-        # dfs with memorization
         n = len(s)
         memo = dict()
 
@@ -15,8 +15,7 @@ class Solution:
 
         def dfs(i, k):
             if (i, k) in memo:
-                return memo[(i, k)]
-            # the length of the substring is equal to k
+                return memo[i, k]
             if n - i == k:
                 return 0
             if k == 1:
@@ -24,6 +23,6 @@ class Solution:
             res = float('inf')
             for j in range(i, n - k + 1):
                 res = min(res, cost(s, i, j) + dfs(j + 1, k - 1))
-            memo[(i, k)] = res
+            memo[i, k] = res
             return res
         return dfs(0, k)
