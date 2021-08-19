@@ -18,5 +18,5 @@ def pick_peaks(arr):
                 i = j
     print(pos)
     print(peaks)
-    res = {"pos": pos, "peaks": peaks}
+    res = {'pos': pos, 'peaks': peaks}
     return res

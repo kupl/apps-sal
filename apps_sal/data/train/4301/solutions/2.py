@@ -1,1 +1,1 @@
-calc_ms = (20).__pow__
+calc_ms = 20 .__pow__

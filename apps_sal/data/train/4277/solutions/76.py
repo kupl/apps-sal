@@ -3,4 +3,4 @@ def difference_in_ages(ages):
     a = ages[0]
     b = ages[-1]
     m = b - a
-    return(a, b, m)
+    return (a, b, m)

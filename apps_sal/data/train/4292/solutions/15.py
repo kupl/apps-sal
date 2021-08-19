@@ -5,4 +5,4 @@ def string_clean(s):
     """
     Function will return the cleaned string
     """
-    return re.sub(r'[\d+]', '', s)
+    return re.sub('[\\d+]', '', s)

@@ -4,9 +4,9 @@ def pick_peaks(arr):
     enum_arr = list(enumerate(arr))
     possible_peaks = enum_arr[1:-1]
     for point in possible_peaks:
-        current_p, current_v = point[0], point[1]
-        prior_p, prior_v = enum_arr[current_p - 1]
-        next_p, next_v = enum_arr[current_p + 1]
+        (current_p, current_v) = (point[0], point[1])
+        (prior_p, prior_v) = enum_arr[current_p - 1]
+        (next_p, next_v) = enum_arr[current_p + 1]
         is_peak = prior_v < current_v > next_v
         if is_peak:
             peaks['pos'].append(current_p)

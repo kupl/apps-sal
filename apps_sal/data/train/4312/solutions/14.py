@@ -1,5 +1,5 @@
 def pick_peaks(arr):
-    i, pos = len(arr) - 2, []
+    (i, pos) = (len(arr) - 2, [])
     while i > 0:
         while i > 0 and arr[i + 1] >= arr[i]:
             i -= 1

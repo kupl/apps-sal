@@ -1,10 +1,5 @@
-
-
 def pick_peaks(arr):
-    out = {
-        'pos': [],
-        'peaks': []
-    }
+    out = {'pos': [], 'peaks': []}
     if len(arr) == 0:
         return out
     last_i = arr[0]

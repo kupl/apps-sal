@@ -1,1 +1,2 @@
-def shorten_to_date(d): return d.split(",")[0]
+def shorten_to_date(d):
+    return d.split(',')[0]

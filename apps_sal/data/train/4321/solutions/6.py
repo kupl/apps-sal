@@ -3,10 +3,10 @@ def player_manager(players):
     if not players:
         return []
     players = players.split(', ')
-    for i, x in enumerate(players):
+    for (i, x) in enumerate(players):
         if i % 2 == 0:
             result.append({})
-            result[-1]["player"] = x
+            result[-1]['player'] = x
         else:
-            result[-1]["contact"] = int(x)
+            result[-1]['contact'] = int(x)
     return result

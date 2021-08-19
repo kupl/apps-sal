@@ -11,9 +11,9 @@ def isPeak(arr, pos):
 
 
 def pick_peaks(arr):
-    result = {"pos": [], "peaks": []}
-    for pos, val in enumerate(arr):
+    result = {'pos': [], 'peaks': []}
+    for (pos, val) in enumerate(arr):
         if isPeak(arr, pos):
-            result["pos"].append(pos)
-            result["peaks"].append(val)
+            result['pos'].append(pos)
+            result['peaks'].append(val)
     return result

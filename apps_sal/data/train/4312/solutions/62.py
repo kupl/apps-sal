@@ -22,4 +22,4 @@ def pick_peaks(arr):
             else:
                 raise Error
             n += 1
-    return {"pos": pos, "peaks": peaks}
+    return {'pos': pos, 'peaks': peaks}

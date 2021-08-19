@@ -1,5 +1,5 @@
 def chess_bishop_dream(board_size, init_position, init_direction, k):
-    l, (m, n), (x, y), (dx, dy) = 0, board_size, init_position, init_direction
+    (l, (m, n), (x, y), (dx, dy)) = (0, board_size, init_position, init_direction)
     while k:
         k -= 1
         l += 1

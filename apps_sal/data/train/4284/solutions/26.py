@@ -1,4 +1,3 @@
-
 def array_leaders(numbers):
     i = 0
     output = []

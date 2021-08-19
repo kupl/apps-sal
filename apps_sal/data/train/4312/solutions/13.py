@@ -6,7 +6,6 @@ def pick_peaks(a):
     pos = []
     count = 0
     spusk = True
-
     for i in range(len(a)):
         if pred == a[i] and spusk == False:
             count += 1
@@ -23,6 +22,5 @@ def pick_peaks(a):
             spusk = False
         pred = a[i]
         count = 0
-    d = {"pos": pos, "peaks": peaks}
-
+    d = {'pos': pos, 'peaks': peaks}
     return d

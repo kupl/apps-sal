@@ -1,6 +1,6 @@
 def balanced_num(number):
     n = str(number)
-    a, b = 0, 0
+    (a, b) = (0, 0)
     if len(n) <= 2:
         return 'Balanced'
     if len(n) % 2 == 0:

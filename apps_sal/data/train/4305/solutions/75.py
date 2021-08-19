@@ -2,7 +2,7 @@ def sum_digits(a):
     n = int(a)
     r = 0
     while n:
-        r, n = r + n % 10, n // 10
+        (r, n) = (r + n % 10, n // 10)
     return r
 
 

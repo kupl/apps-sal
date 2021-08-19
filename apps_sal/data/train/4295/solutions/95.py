@@ -9,9 +9,9 @@ def balanced_num(number):
         for i in range(n + 1, len(a)):
             sum2 += int(a[i])
         if sum1 == sum2:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
+            return 'Not Balanced'
     else:
         n = len(a) // 2
         sum1 = 0
@@ -21,6 +21,6 @@ def balanced_num(number):
         for i in range(n + 1, len(a)):
             sum2 += int(a[i])
         if sum1 == sum2:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
+            return 'Not Balanced'

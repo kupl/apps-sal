@@ -1,10 +1,6 @@
 def pick_peaks(arr):
-    result = {
-        "pos": [],
-        "peaks": []
-    }
-
-    for pos, val in enumerate(arr):
+    result = {'pos': [], 'peaks': []}
+    for (pos, val) in enumerate(arr):
         if pos == 0 or pos == len(arr) - 1:
             continue
         if arr[pos + 1] > val:
@@ -25,5 +21,4 @@ def pick_peaks(arr):
         if arr[pos - 1] < val:
             result['pos'].append(pos)
             result['peaks'].append(val)
-
     return result

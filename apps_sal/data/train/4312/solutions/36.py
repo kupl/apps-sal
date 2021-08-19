@@ -16,4 +16,4 @@ def pick_peaks(arr):
                 else:
                     break
         i += 1
-    return {"pos": pos, "peaks": peaks}
+    return {'pos': pos, 'peaks': peaks}

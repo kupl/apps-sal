@@ -6,15 +6,15 @@ def balanced_num(number):
         cnt = 0
         cnt1 = 0
         for i in range(len(lst)):
-            if i < (len(lst) // 2 - 1):
+            if i < len(lst) // 2 - 1:
                 cnt += lst[i]
-            elif i > (len(lst) // 2):
+            elif i > len(lst) // 2:
                 cnt1 += lst[i]
         print((cnt, cnt1))
         if cnt == cnt1:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
+            return 'Not Balanced'
     else:
         lst = list(str(number))
         lst = list(map(int, lst))
@@ -27,6 +27,6 @@ def balanced_num(number):
                 cnt1 += lst[i]
         print((cnt, cnt1))
         if cnt == cnt1:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
+            return 'Not Balanced'

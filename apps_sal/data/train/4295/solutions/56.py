@@ -8,9 +8,8 @@ def balanced_num(number):
     else:
         l = s[:ln - 1]
         r = s[ln + 1:]
-    print(("l= ", l, "r= ", r))
+    print(('l= ', l, 'r= ', r))
     res = sum([int(x) for x in l]) == sum([int(x) for x in r])
-
     if res:
         return 'Balanced'
     else:

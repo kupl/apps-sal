@@ -1,7 +1,7 @@
 def shorten_to_date(long_date):
-    string = ""
+    string = ''
     for c in long_date:
-        if c != ",":
+        if c != ',':
             string += c
         else:
             return string

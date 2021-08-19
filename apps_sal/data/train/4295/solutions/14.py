@@ -9,9 +9,9 @@ def balanced_num(number):
         for n in b[-1:i:-1]:
             asum += int(n)
         if bsum == asum:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
+            return 'Not Balanced'
     else:
         i = len(str(number)) // 2
         bsum = 0
@@ -21,6 +21,6 @@ def balanced_num(number):
         for n in b[-1:i:-1]:
             asum += int(n)
         if bsum == asum:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
+            return 'Not Balanced'

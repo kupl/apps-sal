@@ -1,6 +1,6 @@
 def order_weight(strng):
     splitted = strng.split()
-    solution = ""
+    solution = ''
     list = []
     for item in splitted:
         weight = 0
@@ -10,6 +10,5 @@ def order_weight(strng):
         list.append(arr)
     list.sort()
     for item in list:
-
-        solution += " " + item[1]
+        solution += ' ' + item[1]
     return solution[1:]

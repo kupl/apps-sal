@@ -2,13 +2,12 @@ from re import compile
 from functools import reduce
 from itertools import cycle, starmap
 from operator import add, sub, mul, truediv as div, itemgetter
-
-REGEX = compile(r"(\d*)([a-z])(\d*)").fullmatch
+REGEX = compile('(\\d*)([a-z])(\\d*)').fullmatch
 
 
 def extract(i, s):
-    a, b, c = REGEX(s).groups()
-    return b, i, int(a + c)
+    (a, b, c) = REGEX(s).groups()
+    return (b, i, int(a + c))
 
 
 def do_math(s):

@@ -4,8 +4,7 @@ def century(year):
             return int(str(year)[:-2]) + 1
         else:
             return int(str(year)[:-2])
+    elif year > 0:
+        return 1
     else:
-        if year > 0:
-            return 1
-        else:
-            return 0
+        return 0

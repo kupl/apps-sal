@@ -1,6 +1,6 @@
 def pick_peaks(arr):
     out = {}
-    i, wait_pick, temp_pick = 1, 0, 0
+    (i, wait_pick, temp_pick) = (1, 0, 0)
     while i < len(arr) - 1:
         if arr[i] == arr[i + 1] and arr[i] > arr[i - 1]:
             temp_pick = i
@@ -18,4 +18,4 @@ def pick_peaks(arr):
             if arr[i] > arr[i - 1] and arr[i] > arr[i + 1]:
                 out[i] = arr[i]
             i += 1
-    return {"pos": list(out.keys()), "peaks": list(out.values())}
+    return {'pos': list(out.keys()), 'peaks': list(out.values())}

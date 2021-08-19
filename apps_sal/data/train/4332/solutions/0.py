@@ -1,9 +1,9 @@
 move = [lambda p: (p[0] + 1, p[1]), lambda p: (p[0], p[1] + 1), lambda p: (p[0] - 1, p[1]), lambda p: (p[0], p[1] - 1)]
-start, loop, size = 9977, 104, 12
+(start, loop, size) = (9977, 104, 12)
 
 
 def langtons_ant(n):
-    pos, d, black, res = (0, 0), 0, set(), 0
+    (pos, d, black, res) = ((0, 0), 0, set(), 0)
     if n > start:
         x = (n - start) % loop
         res = size * (n - start - x) // loop

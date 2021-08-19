@@ -1,7 +1,6 @@
 import re
 from operator import add, sub, mul, truediv
-
-letter_re = re.compile(r'[a-z]')
+letter_re = re.compile('[a-z]')
 operations = [add, sub, mul, truediv]
 
 

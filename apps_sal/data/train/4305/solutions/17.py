@@ -8,4 +8,4 @@ def custom_sorting(numbers):
 
 
 def order_weight(strng):
-    return " ".join(custom_sorting(strng.strip().split(" ")))
+    return ' '.join(custom_sorting(strng.strip().split(' ')))

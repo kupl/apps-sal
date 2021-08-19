@@ -1,9 +1,5 @@
 def greek_comparator(lhs, rhs):
-    greek_alphabet = [
-        'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta',
-        'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu',
-        'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma',
-        'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega']
+    greek_alphabet = ['alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega']
     l = len(greek_alphabet)
     k = 0
     v = 0

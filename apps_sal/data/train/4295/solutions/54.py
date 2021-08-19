@@ -12,6 +12,6 @@ def balanced_num(number):
         a = sum(num[:len(num) // 2 - 1])
         b = sum(num[len(num) // 2 + 1:])
     if a == b:
-        return "Balanced"
+        return 'Balanced'
     else:
-        return "Not Balanced"
+        return 'Not Balanced'

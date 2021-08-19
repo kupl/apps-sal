@@ -12,4 +12,4 @@ def pick_peaks(arr):
                 pos.append(lastind)
                 peaks.append(arr[i - 1])
                 status = 'lol'
-    return {"pos": pos, "peaks": peaks}
+    return {'pos': pos, 'peaks': peaks}

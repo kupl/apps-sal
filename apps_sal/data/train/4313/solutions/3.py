@@ -1,5 +1,4 @@
 from functools import reduce
-
 BOX_DIM = 16
 
 

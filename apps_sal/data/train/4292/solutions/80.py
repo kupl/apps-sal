@@ -9,4 +9,4 @@ def string_clean(s):
             a = 1
         else:
             fini.append(i)
-    return "".join(fini)
+    return ''.join(fini)

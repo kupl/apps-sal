@@ -1,5 +1,5 @@
 def string_clean(s):
-    res = ""
+    res = ''
     for i in s:
         if i.isdigit():
             continue

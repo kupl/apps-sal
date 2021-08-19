@@ -5,4 +5,4 @@ def find_slope(points):
         m = dy / dx
         return f'{int(m)}'
     except:
-        return "undefined"
+        return 'undefined'

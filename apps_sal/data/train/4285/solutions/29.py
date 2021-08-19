@@ -3,7 +3,6 @@ def find_slope(points):
     b = points[1]
     c = points[2]
     d = points[3]
-
     if c - a == 0:
         return 'undefined'
     else:

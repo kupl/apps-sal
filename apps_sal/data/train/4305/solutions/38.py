@@ -1,5 +1,5 @@
 def sumStr(strng):
-    return sum(int(num) for num in strng)
+    return sum((int(num) for num in strng))
 
 
 def order_weight(strng):

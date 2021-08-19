@@ -2,7 +2,6 @@ def balanced_num(number):
     num_str = str(number)
     length = len(num_str)
     middle = int(length // 2)
-
     if length % 2 == 0:
         left = 0
         right = 0
@@ -11,10 +10,9 @@ def balanced_num(number):
         for j in range(middle + 1, length, 1):
             right += int(num_str[j])
         if left == right:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
-
+            return 'Not Balanced'
     if length % 2 != 0:
         left = 0
         right = 0
@@ -23,6 +21,6 @@ def balanced_num(number):
         for j in range(middle + 1, length, 1):
             right += int(num_str[j])
         if left == right:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
+            return 'Not Balanced'

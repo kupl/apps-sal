@@ -1,6 +1,6 @@
 def string_clean(s):
-    c = ""
+    c = ''
     for i in s:
-        if i not in "0123456789":
+        if i not in '0123456789':
             c = c + i
     return c

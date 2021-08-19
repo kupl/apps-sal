@@ -13,7 +13,6 @@ def balanced_num(number):
         even = False
     else:
         even = True
-
     if not even:
         if sum(number[:middle]) == sum(number[middle + 1:]):
             return 'Balanced'

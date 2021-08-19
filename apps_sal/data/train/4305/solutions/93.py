@@ -18,7 +18,7 @@ def sort_weights(w1, w2):
 
 def order_weight(strng):
     if not strng:
-        return ""
-    weights = [int(x) for x in strng.split(" ")]
+        return ''
+    weights = [int(x) for x in strng.split(' ')]
     sorted_weights = sorted(weights, key=cmp_to_key(sort_weights))
-    return " ".join(map(str, sorted_weights))
+    return ' '.join(map(str, sorted_weights))

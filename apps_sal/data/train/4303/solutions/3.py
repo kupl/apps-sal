@@ -4,4 +4,4 @@ def sum_arrangements(num):
     number = len(num)
     for i in range(1, number):
         n *= i
-    return int('1' * number) * sum(int(i) for i in num) * n
+    return int('1' * number) * sum((int(i) for i in num)) * n

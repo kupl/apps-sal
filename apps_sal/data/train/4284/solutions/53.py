@@ -1,5 +1,5 @@
 def array_leaders(numbers):
-    sum_tot = sum(i for i in numbers)
+    sum_tot = sum((i for i in numbers))
     sum_left = 0
     a = []
     for i in numbers:

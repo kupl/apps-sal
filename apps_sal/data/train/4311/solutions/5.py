@@ -3,7 +3,7 @@ import itertools
 
 
 def is_prime(num):
-    return num > 1 and all(num % i for i in range(2, num if num < 53 else math.ceil(math.sqrt(num)) + 1))
+    return num > 1 and all((num % i for i in range(2, num if num < 53 else math.ceil(math.sqrt(num)) + 1)))
 
 
 def solve(a, b):

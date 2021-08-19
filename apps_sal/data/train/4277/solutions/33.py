@@ -7,4 +7,4 @@ def difference_in_ages(ages):
         if age > max:
             max = age
     diff = max - min
-    return min, max, diff
+    return (min, max, diff)

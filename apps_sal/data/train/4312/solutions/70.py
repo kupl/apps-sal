@@ -6,7 +6,7 @@ def pick_peaks(arr):
             if arr[i] == arr[i + 1]:
                 j = i
                 done = False
-                while j < len(arr) and add and not done:
+                while j < len(arr) and add and (not done):
                     if arr[j] > arr[i]:
                         add = False
                     elif arr[j] < arr[i]:

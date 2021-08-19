@@ -5,7 +5,7 @@ def balanced_num(number):
         leftside = number[:middle]
         rightside = number[middle + 1:]
         sumofleft = sum(list([int(x) for x in leftside]))
-        sumofright = sum(list(int(x) for x in rightside))
+        sumofright = sum(list((int(x) for x in rightside)))
         if sumofleft == sumofright:
             return 'Balanced'
         else:
@@ -15,7 +15,7 @@ def balanced_num(number):
         leftside = number[:middle - 1]
         rightside = number[middle + 1:]
         sumofleft = sum(list([int(x) for x in leftside]))
-        sumofright = sum(list(int(x) for x in rightside))
+        sumofright = sum(list((int(x) for x in rightside)))
         if sumofleft == sumofright:
             return 'Balanced'
         else:

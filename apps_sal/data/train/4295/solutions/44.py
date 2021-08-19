@@ -10,5 +10,6 @@ def balanced_num(number):
             l = st[:int(len(st) / 2)]
             r = st[int(len(st) / 2) + 1:]
 
-    def topl(t): return sum(int(i) for i in t)
+    def topl(t):
+        return sum((int(i) for i in t))
     return 'Balanced' if topl(l) == topl(r) else 'Not Balanced'

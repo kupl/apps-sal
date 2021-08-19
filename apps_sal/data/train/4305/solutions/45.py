@@ -6,4 +6,4 @@ def order_weight(string):
 
 
 def f(n):
-    return sum(int(i) for i in n)
+    return sum((int(i) for i in n))

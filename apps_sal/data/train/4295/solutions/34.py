@@ -4,10 +4,8 @@ def balanced_num(number):
     right = []
     l = []
     r = []
-
     if len(str(number)) == 1 or len(str(number)) == 2:
         return 'Balanced'
-
     elif len(str(number)) % 2 == 0:
         number = str(number)
         left = number[:middle - 1]

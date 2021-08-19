@@ -4,4 +4,4 @@ def find_slope(p):
     if x != 0:
         return str(int(y / x))
     else:
-        return "undefined"
+        return 'undefined'
