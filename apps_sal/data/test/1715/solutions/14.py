@@ -11,51 +11,51 @@ import heapq
 import decimal
 import statistics
 import queue
-
-# import numpy as np
-
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 16
 MOD = 10 ** 9 + 7
-# MOD = 998244353
 
 
-def ni(): return int(sys.stdin.readline())
-def ns(): return list(map(int, sys.stdin.readline().split()))
-def na(): return list(map(int, sys.stdin.readline().split()))
-def na1(): return list([int(x) - 1 for x in sys.stdin.readline().split()])
+def ni():
+    return int(sys.stdin.readline())
 
 
-# ===CODE===
+def ns():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def na():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def na1():
+    return list([int(x) - 1 for x in sys.stdin.readline().split()])
+
 
 def disLR(a, idx):
     small = a[max(0, idx - 1)]
     large = a[min(len(a) - 1, idx)]
-    return small, large
+    return (small, large)
 
 
 def main():
-    a, b, q = ns()
+    (a, b, q) = ns()
     s = [ni() for _ in range(a)]
     t = [ni() for _ in range(b)]
-
     for _ in range(q):
         ans = INF
-
         x = ni()
         tmpans = [0] * 4
-
         idxs = bisect.bisect_left(s, x)
-        sml, lrg = disLR(s, idxs)
+        (sml, lrg) = disLR(s, idxs)
         tmpans[0] += abs(x - sml)
         tmpans[1] += abs(x - lrg)
         idxsml = bisect.bisect_left(t, sml)
         tmpans[0] += min([abs(sml - i) for i in disLR(t, idxsml)])
         idxlrg = bisect.bisect_left(t, lrg)
         tmpans[1] += min([abs(lrg - i) for i in disLR(t, idxlrg)])
-
         idxt = bisect.bisect_left(t, x)
-        sml, lrg = disLR(t, idxt)
+        (sml, lrg) = disLR(t, idxt)
         tmpans[2] += abs(x - sml)
         tmpans[3] += abs(x - lrg)
         idxsml = bisect.bisect_left(s, sml)

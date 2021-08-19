@@ -1,9 +1,4 @@
-#from random import random, randint
-#from sys import stdout
-
-#n, k = map(int, input().split())
 n = int(input())
-
 if n == 1:
     a = input()
     print(a)
