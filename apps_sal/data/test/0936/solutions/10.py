@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 max_n = 1
 cnt = dict()
 cnt[a[0]] = 1

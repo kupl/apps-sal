@@ -1,4 +1,4 @@
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 t = list(map(int, input().split()))
 sum_l = 0
@@ -14,8 +14,8 @@ for i in range(n):
     t_r += t[i]
     sum_r += max(0, p[i] - t_r * c)
 if sum_l > sum_r:
-    print("Limak")
+    print('Limak')
 elif sum_l < sum_r:
-    print("Radewoosh")
+    print('Radewoosh')
 else:
-    print("Tie")
+    print('Tie')

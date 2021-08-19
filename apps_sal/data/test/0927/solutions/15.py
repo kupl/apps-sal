@@ -1,6 +1,5 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
-
 dp = [0] * (N + 1)
 cost = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 for i in range(1, N + 1):

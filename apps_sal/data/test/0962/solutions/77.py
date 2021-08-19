@@ -37,10 +37,10 @@ def solve(G, p, ans, st, fst, arr, x):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     G = [[] for _ in range(n + 1)]
     for _ in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         G[a].append(b)
     ans = []
     f = False

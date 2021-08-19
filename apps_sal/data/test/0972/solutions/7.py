@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 c = [input() for _ in ' ' * n]
 
 
@@ -12,7 +12,6 @@ def sol(n, m):
             return False
         if count == 2 and c[i][0] == 'B':
             return False
-
     for j in range(m):
         count = 0
         for i in range(1, n):
@@ -22,7 +21,6 @@ def sol(n, m):
             return False
         if count == 2 and c[0][j] == 'B':
             return False
-
     for i in range(n):
         for j in range(m):
             if c[i][j] == 'B':

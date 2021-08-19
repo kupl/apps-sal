@@ -1,8 +1,8 @@
-a, b, c, d, e, f = list(map(int, input().split()))
-m = sorted([(max(a, b), min(a, b), "A"), (max(c, d), min(c, d), "B"), (max(e, f), min(e, f), "C")])
+(a, b, c, d, e, f) = list(map(int, input().split()))
+m = sorted([(max(a, b), min(a, b), 'A'), (max(c, d), min(c, d), 'B'), (max(e, f), min(e, f), 'C')])
 ma = m[-1][0]
 ma2 = ma - m[-1][1]
-ans = [["A"] * ma for i in range(ma)]
+ans = [['A'] * ma for i in range(ma)]
 if a * b + c * d + e * f != ma * ma:
     print(-1)
 elif m[0][0] * m[0][1] + m[1][0] * m[1][1] != ma2 * ma:

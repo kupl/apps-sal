@@ -1,4 +1,4 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 A = [list(map(int, input().split())) for h in range(H)]
 x = 1
 w = 0

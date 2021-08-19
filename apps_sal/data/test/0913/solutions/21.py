@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-pos, neg = 0, 0
+(pos, neg) = (0, 0)
 for i in range(n):
     if a[i] == 1 and b[i] == 0:
         pos += 1

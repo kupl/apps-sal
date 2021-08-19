@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, s, k = list(map(int, input().split()))
+    (n, s, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a = set(a)
     for i in range(0, 1005):

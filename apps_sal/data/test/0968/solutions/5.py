@@ -2,7 +2,7 @@ n = int(input())
 tmp = [input().split() for _ in range(n)]
 p = list(map(int, input().split()))
 l = [None] * n
-for i, v in enumerate(p):
+for (i, v) in enumerate(p):
     l[i] = tmp[v - 1]
 l[0] = min(l[0])
 for i in range(1, n):

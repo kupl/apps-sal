@@ -1,5 +1,4 @@
 s = input()
-
 se = set()
 for _ in range(51):
     se.add(s)

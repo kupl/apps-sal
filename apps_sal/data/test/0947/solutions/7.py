@@ -17,7 +17,7 @@ def solve():
     if n % 2 == 0:
         print(n // 2, n // 2)
     else:
-        sq = int(n**0.5) + 2
+        sq = int(n ** 0.5) + 2
         for i in range(3, sq):
             if n % i == 0:
                 print(n // i, n - n // i)
@@ -27,7 +27,6 @@ def solve():
 
 
 mode = 'T'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

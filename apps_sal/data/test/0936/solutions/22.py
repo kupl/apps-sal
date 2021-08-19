@@ -9,6 +9,6 @@ for i in range(1, n):
         mas[a] = 1
     else:
         mas[a] += 1
-    if (mas[a] > mas[maxi]):
+    if mas[a] > mas[maxi]:
         maxi = a
 print(maxi)

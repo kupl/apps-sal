@@ -1,5 +1,5 @@
 n = int(input())
-a = [(n - int(x)) for x in input().split()]
+a = [n - int(x) for x in input().split()]
 b = [0] * n
 fh = 1
 i = 0
@@ -19,7 +19,7 @@ while i < n:
         fh += 1
     i += 1
 if len(hd) != 0:
-    print("Impossible")
+    print('Impossible')
 else:
-    print("Possible")
+    print('Possible')
     print(*b)

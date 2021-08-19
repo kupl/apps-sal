@@ -1,5 +1,5 @@
 mod = 998244353
-n, k, *LR = map(int, open(0).read().split())
+(n, k, *LR) = map(int, open(0).read().split())
 dp = [0] * (3 * n)
 dp[1] = 1
 dp[2] = -1

@@ -1,12 +1,12 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     l = [[] for _ in range(N)]
     for _ in range(M):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         l[a - 1].append(b - 1)
     c = [0] * N
     loop = []
@@ -28,7 +28,7 @@ def main():
         if cyclic(i):
             break
     if len(loop) == 0:
-        print((-1))
+        print(-1)
         return
     loop.reverse()
     t = loop[-1]
@@ -36,7 +36,7 @@ def main():
     ll = set(loop)
     flag = True
     while flag:
-        for i, v in enumerate(loop[:-1]):
+        for (i, v) in enumerate(loop[:-1]):
             flag2 = False
             for j in l[v]:
                 if j in ll and loop[i + 1] != j:
@@ -54,9 +54,9 @@ def main():
         else:
             flag = False
     loop = set(loop)
-    print((len(loop)))
+    print(len(loop))
     for i in loop:
-        print((i + 1))
+        print(i + 1)
     return
 
 

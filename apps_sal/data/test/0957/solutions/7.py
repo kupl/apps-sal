@@ -17,6 +17,6 @@ a = input()
 b = 'heidi'
 s1 = lcs(a, b)
 if s1[-1][5] == 5:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

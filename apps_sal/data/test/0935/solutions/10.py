@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 aks = False
 while n > 0 and m > 0:
     n -= 1
@@ -9,6 +9,6 @@ while n > 0 and m > 0:
         aks = True
 else:
     if aks == True:
-        print("Akshat")
+        print('Akshat')
     else:
-        print("Malvika")
+        print('Malvika')

@@ -1,6 +1,6 @@
 x = input()
-y = "heidi"
-z = ""
+y = 'heidi'
+z = ''
 j = 0
 for i in y:
     t = True
@@ -11,6 +11,6 @@ for i in y:
         j += 1
 else:
     if y == z:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

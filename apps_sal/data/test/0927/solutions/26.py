@@ -1,8 +1,8 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 l = list(map(int, input().split()))
 w = [2, 5, 5, 4, 5, 6, 3, 7, 6]
 l.sort()
-dp = [0] * (max(N + 1, 8))
+dp = [0] * max(N + 1, 8)
 for j in l:
     dp[w[j - 1]] = j
 for i in range(N):

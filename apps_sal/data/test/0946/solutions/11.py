@@ -5,6 +5,6 @@ for i in input().split():
         ans = 0
         break
 if ans:
-    print("EASY")
+    print('EASY')
 else:
-    print("HARD")
+    print('HARD')

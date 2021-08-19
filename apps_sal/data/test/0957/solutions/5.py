@@ -3,7 +3,6 @@ import sys
 
 def solve():
     s = input()
-
     if is_subst(s, 'heidi'):
         print('YES')
     else:
@@ -14,9 +13,7 @@ def is_subst(s, t):
     tlen = len(t)
     slen = len(s)
     cnt = 0
-
     l = 0
-
     for i in range(tlen):
         for j in range(l, slen):
             if t[i] == s[j]:
@@ -25,7 +22,6 @@ def is_subst(s, t):
                 break
         else:
             l = slen
-
     return cnt == tlen
 
 

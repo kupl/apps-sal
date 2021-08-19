@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 L = [2, 5, 5, 4, 5, 6, 3, 7, 6]
 dp = [-float('inf')] * (n + 1)

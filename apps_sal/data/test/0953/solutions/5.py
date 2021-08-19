@@ -2,7 +2,7 @@ def dfs(v):
     pos.append(v)
     used[v] = True
     for g in range(n):
-        if int(s[v][g]) and not used[g]:
+        if int(s[v][g]) and (not used[g]):
             dfs(g)
 
 

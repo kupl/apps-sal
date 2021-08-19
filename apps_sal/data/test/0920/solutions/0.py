@@ -1,8 +1,12 @@
-def L(): return list(map(int, input().split()))
-def I(): return int(input())
+def L():
+    return list(map(int, input().split()))
 
 
-n, t = I(), [L() for i in range(4)]
+def I():
+    return int(input())
+
+
+(n, t) = (I(), [L() for i in range(4)])
 p = [min(i[0], i[1]) + min(i[2], i[3]) for i in t]
 x = min(p)
 if x > n:

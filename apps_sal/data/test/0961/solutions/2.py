@@ -1,7 +1,7 @@
 people = int(input())
 cities = list(map(int, input().split()))
 maximum = max(cities)
-last, first = [-1 for i in range(maximum + 1)], [float('inf') for i in range(maximum + 1)]
+(last, first) = ([-1 for i in range(maximum + 1)], [float('inf') for i in range(maximum + 1)])
 for i in range(people):
     first[cities[i]] = min(i, first[cities[i]])
     last[cities[i]] = max(i, last[cities[i]])

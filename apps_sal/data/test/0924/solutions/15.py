@@ -15,9 +15,7 @@ def solution(la, ra, ta, lb, rb, tb):
     return min(ra - la + 1 - d, rb - lb + 1)
 
 
-la, ra, ta = map(int, stdin.readline().split())
-lb, rb, tb = map(int, stdin.readline().split())
-
-
+(la, ra, ta) = map(int, stdin.readline().split())
+(lb, rb, tb) = map(int, stdin.readline().split())
 ans = max(solution(la, ra, ta, lb, rb, tb), solution(lb, rb, tb, la, ra, ta))
 stdout.write(str(max(0, ans)))

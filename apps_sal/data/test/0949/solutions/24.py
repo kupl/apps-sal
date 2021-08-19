@@ -1,2 +1,2 @@
-a, b = map(int, input().split())
-print(1 if (a != b) else a)
+(a, b) = map(int, input().split())
+print(1 if a != b else a)

@@ -8,7 +8,7 @@ def product(s):
     return res
 
 
-string = "codeforces"
+string = 'codeforces'
 nums = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 index = 0
 while True:
@@ -18,9 +18,7 @@ while True:
         index = (index + 1) % len(nums)
     else:
         break
-
-result = ""
-for i, e in enumerate(nums):
+result = ''
+for (i, e) in enumerate(nums):
     result += e * string[i]
-
 print(result)

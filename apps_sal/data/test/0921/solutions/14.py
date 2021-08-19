@@ -1,4 +1,4 @@
-n, w = map(int, input().split())
+(n, w) = map(int, input().split())
 arr = [int(x) for x in input().split()]
 arr2 = [(x + 1) // 2 for x in arr]
 s = sum(arr2)

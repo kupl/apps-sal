@@ -6,17 +6,16 @@ INF = 10 ** 15
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     G = [[] for _ in range(N)]
     G_rev = [[] for _ in range(N)]
     for _ in range(M):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         a -= 1
         b -= 1
         G[a].append(b)
         G_rev[b].append(a)
-
-    s, g = None, None
+    (s, g) = (None, None)
     ans = INF
     q = deque([])
     for i in range(N):
@@ -29,11 +28,10 @@ def main():
                 if i == e:
                     if ans > dist[v] + 1:
                         ans = dist[v] + 1
-                        s, g = i, v
+                        (s, g) = (i, v)
                 elif dist[e] < 0:
                     dist[e] = dist[v] + 1
                     q.append(e)
-
     if ans == INF:
         print(-1)
     else:

@@ -1,6 +1,5 @@
 def main():
-    n, m = [int(i) for i in input().split()]
-
+    (n, m) = [int(i) for i in input().split()]
     colors = [0 for i in range(n + 1)]
     for i in range(m):
         arr = [int(i) for i in input().split()]
@@ -11,8 +10,7 @@ def main():
         for i in arr:
             if colors[i] == 0:
                 colors[i] = l.pop()
-
-    print(' '.join(str(colors[i]) for i in range(1, n + 1)))
+    print(' '.join((str(colors[i]) for i in range(1, n + 1))))
 
 
 main()

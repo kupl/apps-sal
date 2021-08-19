@@ -1,13 +1,15 @@
 import sys
 入力 = sys.stdin.readline
-範囲, 出力 = range, print
-def 一行に複数個の入力(): return map(int, 入力().split())
+(範囲, 出力) = (range, print)
+
+
+def 一行に複数個の入力():
+    return map(int, 入力().split())
 
 
 数列 = list
 絶対値 = abs
-
-長さ, 合計値の下限 = 一行に複数個の入力()
+(長さ, 合計値の下限) = 一行に複数個の入力()
 整数列 = 数列(一行に複数個の入力())
 累積和 = [0 for _ in 範囲(長さ + 1)]
 for _ in 範囲(長さ):

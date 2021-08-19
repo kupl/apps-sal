@@ -6,11 +6,10 @@ for i in range(n):
         b[a[i]] += 1
     except:
         b[a[i]] = 1
-c = [(b[k] % (n - k)) == 0 for k in list(b.keys())]
+c = [b[k] % (n - k) == 0 for k in list(b.keys())]
 d = [b[k] for k in a]
-
 if all(c):
-    print("Possible")
+    print('Possible')
     types = dict()
     hat = 1
     for k in list(b.keys()):
@@ -25,7 +24,6 @@ if all(c):
     hats = list()
     for i in range(n):
         hats.append(types[a[i]].pop())
-    print(' '.join(str(e) for e in hats))
-
+    print(' '.join((str(e) for e in hats)))
 else:
-    print("Impossible")
+    print('Impossible')

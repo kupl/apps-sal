@@ -13,13 +13,8 @@ def fodd(pieces, n):
 
 
 n = int(input())
-
 pieces = list(map(int, input().split()))
-
 pieces = sorted(pieces)
-
 ans1 = feven(pieces, n)
-
 ans2 = fodd(pieces, n)
-
 print(min(ans1, ans2))

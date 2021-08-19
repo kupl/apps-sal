@@ -2,7 +2,6 @@ def main():
     n = int(input())
     a = [int(t) for t in input().split()]
     shift = n - a[0]
-
     turn = 1
     out = 'Yes'
     for i in range(len(a)):
@@ -11,7 +10,6 @@ def main():
         if a[i] != i:
             out = 'No'
             break
-
     print(out)
 
 

@@ -1,7 +1,7 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 total = a + b
 s = 0
-e = 1e10
+e = 10000000000.0
 while s != e:
     g = (s + e + 1) // 2
     if g * (g + 1) // 2 > total:
@@ -41,9 +41,9 @@ else:
     first_day = books[:]
 print(len(first_day))
 for book in first_day:
-    print(book, end=" ")
+    print(book, end=' ')
 print()
 print(len(sec_day))
 for book in sec_day:
-    print(book, end=" ")
+    print(book, end=' ')
 print()

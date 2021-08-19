@@ -1,5 +1,5 @@
 input()
 if '1' in input():
-    print("HARD")
+    print('HARD')
 else:
-    print("EASY")
+    print('EASY')

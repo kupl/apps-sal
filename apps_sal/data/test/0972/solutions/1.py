@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 z = [[] for i in range(n + 1)]
-
 for i in range(n):
     a = input()
     for j in a:
@@ -17,7 +16,6 @@ def solve(n, m):
             return 1
         if cnt == 2 and z[i][0] == 'B':
             return 1
-
     for j in range(m):
         cnt = 0
         for i in range(1, n):

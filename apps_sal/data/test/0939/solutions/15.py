@@ -1,7 +1,6 @@
-
 def __starting_point():
-    n, m = input().split()
-    n, m = int(n), int(m)
+    (n, m) = input().split()
+    (n, m) = (int(n), int(m))
     d = []
     color = dict()
     for i in range(m):
@@ -9,7 +8,6 @@ def __starting_point():
     for i in range(len(d)):
         for j in range(len(d[i])):
             d[i][j] = int(d[i][j])
-
     for i in range(m):
         if i == 0:
             for j in range(3):

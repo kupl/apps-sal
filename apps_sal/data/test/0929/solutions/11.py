@@ -1,9 +1,7 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 a = [[0] * w] * h
-
 for i in range(h):
     a[i] = list(map(int, input().split()))
-
 l = []
 p = []
 for i in range(h):
@@ -20,7 +18,7 @@ i = 0
 while i < h * w:
     if l[i] % 2 == 1:
         k = i
-        while ((k == i) or (l[k] % 2 == 0)) and k < h * w - 1:
+        while (k == i or l[k] % 2 == 0) and k < h * w - 1:
             ans.append(p[k] + p[k + 1])
             k += 1
         i = k

@@ -2,7 +2,7 @@ n = int(input())
 x = [int(i) for i in input().split()]
 data = dict()
 for i in range(0, n):
-    if not (x[i] in data):
+    if not x[i] in data:
         data[x[i]] = [1, i]
     else:
         data[x[i]] = [data[x[i]][0] + 1, i]

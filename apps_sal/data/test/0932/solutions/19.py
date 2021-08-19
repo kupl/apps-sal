@@ -17,16 +17,14 @@ def foldM0(mat, n, m, f):
 def solve(mat, n, m):
     matpo = foldM0(mat, n, m, lambda x, y: x & y)
     if mat == foldM0(matpo, n, m, lambda x, y: x | y):
-        print("YES")
-        print("\n".join(" ".join(str(x) for x in xs) for xs in matpo))
+        print('YES')
+        print('\n'.join((' '.join((str(x) for x in xs)) for xs in matpo)))
     else:
-        print("NO")
+        print('NO')
 
 
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 mat = []
 for i in range(n):
     mat.append(list(map(int, input().split())))
-
 solve(mat, n, m)

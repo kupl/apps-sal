@@ -5,9 +5,9 @@ r = 0
 for a in s:
     d.setdefault(a, 0)
     d[a] += 1
-    if(d[a] > r):
+    if d[a] > r:
         r = d[a]
-if (len(d) > n):
+if len(d) > n:
     print(-1)
 else:
     l = 0

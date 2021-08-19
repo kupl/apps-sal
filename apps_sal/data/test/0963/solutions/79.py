@@ -1,8 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l = [None] * k
 r = [None] * k
 for i in range(k):
-    l[i], r[i] = list(map(int, input().split()))
+    (l[i], r[i]) = list(map(int, input().split()))
 mod = 998244353
 s = [0] * n
 d = [0] * n
@@ -17,4 +17,4 @@ for i in range(n - 1):
             d[i + r[j] + 1] %= mod
     s[i + 1] = s[i] + d[i + 1]
     s[i + 1] %= mod
-print((d[n - 1]))
+print(d[n - 1])

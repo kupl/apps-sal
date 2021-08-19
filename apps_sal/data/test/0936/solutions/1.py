@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 d = dict()
 d[0] = 0
 mx = 0

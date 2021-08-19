@@ -5,7 +5,7 @@ def hats(n, arr):
     processed = [False] * n
     hats = [None] * n
     cur_hat = 0
-    for i, diff_count in enumerate(arr):
+    for (i, diff_count) in enumerate(arr):
         if processed[i]:
             continue
         cur_hat += 1

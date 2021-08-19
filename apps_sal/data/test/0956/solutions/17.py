@@ -1,13 +1,13 @@
-m, p = map(int, input().split())
+(m, p) = map(int, input().split())
 fr = set()
 arr = {}
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x in arr:
         arr[x].append(y)
     else:
         arr[x] = [y]
-    x, y = y, x
+    (x, y) = (y, x)
     if x in arr:
         arr[x].append(y)
     else:
@@ -15,7 +15,7 @@ for i in range(m):
     fr.add((x, y))
     fr.add((y, x))
 res = {}
-for x, y in fr:
+for (x, y) in fr:
     res[x] = []
     res[y] = []
 for i in arr:
@@ -24,7 +24,7 @@ for i in arr:
             continue
         r = 0
         for k in arr:
-            if i == k or j == k or (i, k) not in fr or (j, k) not in fr:
+            if i == k or j == k or (i, k) not in fr or ((j, k) not in fr):
                 continue
             r += 1
         if r * 100 >= p * len(arr[i]):

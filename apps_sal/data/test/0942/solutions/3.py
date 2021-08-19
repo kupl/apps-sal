@@ -29,12 +29,12 @@ def main():
         cnt = a[i][0]
         for k in range(i, i + cnt):
             if k >= n or a[k][0] != cnt:
-                print("Impossible")
+                print('Impossible')
                 return
             r[a[k][1]] = j
         j += 1
         i += cnt
-    print("Possible")
+    print('Possible')
     print(*r)
 
 

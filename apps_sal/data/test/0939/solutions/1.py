@@ -1,10 +1,7 @@
-
-n, m = map(int, input().split(" "))
-
+(n, m) = map(int, input().split(' '))
 color = n * [0]
-
 for i in range(0, m):
-    a, b, c = map(lambda a: int(a) - 1, input().split(" "))
+    (a, b, c) = map(lambda a: int(a) - 1, input().split(' '))
     if color[a] != 0:
         color[b] = color[a] % 3 + 1
         color[c] = (color[a] + 1) % 3 + 1
@@ -18,5 +15,4 @@ for i in range(0, m):
         color[a] = 1
         color[b] = 2
         color[c] = 3
-
 print(' '.join(map(str, color)))

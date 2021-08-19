@@ -1,4 +1,4 @@
-n, a, b = (int(s) for s in input().split())
+(n, a, b) = (int(s) for s in input().split())
 if a * b < n:
     print(-1)
 elif b % 2:

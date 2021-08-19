@@ -7,13 +7,11 @@ def __starting_point():
     s = input()
     n = int(input())
     dictionary = {}
-
     for i in s:
         if i in dictionary:
             dictionary[i] = dictionary[i] + 1
         else:
             dictionary[i] = 1
-
     if len(dictionary) > n:
         print(-1)
     else:

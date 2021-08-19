@@ -1,9 +1,9 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 mod = 998244353
 L = list()
 R = list()
 for i in range(K):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     L.append(l)
     R.append(r)
 dp = [0] * (N + 1)

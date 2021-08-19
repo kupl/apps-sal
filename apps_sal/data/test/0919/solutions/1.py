@@ -1,5 +1,5 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     st = input()
     a = [0] * n
     for i in range(n):

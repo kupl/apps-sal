@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 a = []
 for i in range(h):
     b = [int(i) % 2 for i in input().split()]

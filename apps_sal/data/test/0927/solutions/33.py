@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort(reverse=True)
 numk = {1: 2, 2: 5, 3: 5, 4: 4, 5: 5, 6: 6, 7: 3, 8: 7, 9: 6}
@@ -15,4 +15,4 @@ while m > 0:
             m -= numk[i]
             ans.append(str(i))
             break
-print("".join(ans))
+print(''.join(ans))

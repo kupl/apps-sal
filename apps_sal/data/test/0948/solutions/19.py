@@ -1,12 +1,12 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, m = R()
+(n, m) = R()
 rs = 0
 a = []
 for i in range(n):
     a.append(input())
-
 for i in range(n - 1):
     for j in range(m - 1):
         c = []

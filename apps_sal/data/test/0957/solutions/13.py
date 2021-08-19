@@ -26,4 +26,4 @@ if ind[3]:
             ind[4] = i + 1
             flag = True
             break
-print('YES' if flag else'NO')
+print('YES' if flag else 'NO')

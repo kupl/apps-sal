@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = list(map(int, input().split()))
-
 L = 0
 R = 0
 rangeSum = a[0]

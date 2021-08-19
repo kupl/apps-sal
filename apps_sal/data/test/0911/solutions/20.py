@@ -10,7 +10,6 @@ for i in range(len(b)):
     b[i] = int(b[i])
 for i in range(len(t)):
     t[i] = int(t[i])
-
 time = 0
 coun_lew = 0
 coun = 0
@@ -20,7 +19,6 @@ for i in range(n):
     if coun <= 0:
         coun = 0
     coun_lew += coun
-
 time = 0
 coun_rew = 0
 coun = 0
@@ -30,10 +28,9 @@ for i in range(n - 1, -1, -1):
     if coun <= 0:
         coun = 0
     coun_rew += coun
-
 if coun_lew > coun_rew:
-    print("Limak")
+    print('Limak')
 elif coun_lew < coun_rew:
-    print("Radewoosh")
+    print('Radewoosh')
 else:
-    print("Tie")
+    print('Tie')

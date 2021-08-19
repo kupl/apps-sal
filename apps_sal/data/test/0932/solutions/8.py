@@ -1,23 +1,19 @@
 __author__ = '-'
-
-l1 = input().strip().split(" ")
+l1 = input().strip().split(' ')
 m = int(l1[0])
 n = int(l1[1])
-
 B = []
 for i in range(m):
-    line = input().strip().split(" ")
+    line = input().strip().split(' ')
     row = []
     for p in line:
         row.append(int(p))
     B.append(row)
-
 A = [[0 for x in range(n)] for y in range(m)]
 
 
 def transferA(B, m, n):
     A = [[0 for x in range(n)] for y in range(m)]
-
     for i in range(m):
         rida1 = True
         for j in range(n):
@@ -52,12 +48,11 @@ def transfer(A, m, n):
 
 
 C = transfer(A, m, n)
-
 if C == B:
-    print("YES")
+    print('YES')
     for i in range(len(A)):
         for j in range(len(A[i])):
-            print(A[i][j], end=" ")
+            print(A[i][j], end=' ')
         print()
 else:
-    print("NO")
+    print('NO')

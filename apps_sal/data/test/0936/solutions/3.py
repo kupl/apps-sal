@@ -8,7 +8,6 @@ for i in a:
         s[i] += 1
     else:
         s[i] = 1
-    if (ans < s[i]):
-        pos, ans = i, s[i]
-
+    if ans < s[i]:
+        (pos, ans) = (i, s[i])
 print(pos)

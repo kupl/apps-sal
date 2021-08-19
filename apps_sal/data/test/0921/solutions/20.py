@@ -1,4 +1,4 @@
-n, w = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = [(ai + 1) // 2 for ai in a]
 r = w - sum(b)

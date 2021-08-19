@@ -1,21 +1,20 @@
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = [tuple(map(int, input().split())) for i in range(M)]
 es = [[] for i in range(N)]
-for a, b in AB:
-    a, b = a - 1, b - 1
+for (a, b) in AB:
+    (a, b) = (a - 1, b - 1)
     es[a].append(b)
-
 mindist = N
 opt = None
-for g, tos in enumerate(es):
+for (g, tos) in enumerate(es):
     for s in tos:
         q = deque([(s, 0)])
         prev = [-1] * N
         dist = [N] * N
         dist[s] = 0
         while q:
-            v, d = q.popleft()
+            (v, d) = q.popleft()
             for to in es[v]:
                 if to == g:
                     break

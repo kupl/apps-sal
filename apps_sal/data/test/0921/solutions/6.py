@@ -1,4 +1,4 @@
-n, w = map(int, input().split())
+(n, w) = map(int, input().split())
 ai = list(map(int, input().split()))
 ai2 = list(range(n))
 ai3 = [0] * n
@@ -25,4 +25,4 @@ else:
         w -= temp
         ai3[ai2[i]] = ai[i] // 2 + ai[i] % 2 + temp
     for num in ai3:
-        print(num, end=" ")
+        print(num, end=' ')

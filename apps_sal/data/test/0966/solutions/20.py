@@ -11,7 +11,7 @@ def is_b_year(x):
         return False
 
 
-for x in range(y + 1, 2**31 - 1):
+for x in range(y + 1, 2 ** 31 - 1):
     if is_b_year(x):
         print(x)
         break

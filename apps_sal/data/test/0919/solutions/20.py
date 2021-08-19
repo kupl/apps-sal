@@ -1,9 +1,9 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 
 
 def f(x):
-    return (ord(x) - ord("a")) + 1
+    return ord(x) - ord('a') + 1
 
 
 a = []

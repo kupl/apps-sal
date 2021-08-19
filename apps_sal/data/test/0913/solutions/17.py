@@ -14,14 +14,14 @@ def solve(N, R, B):
             eq += 1
     if more == 0:
         return -1
-    d, r = divmod(less, more)
+    (d, r) = divmod(less, more)
     if r == 0:
         return d + 1
     return d + 1
 
 
 def __starting_point():
-    N, = list(map(int, input().split()))
+    (N,) = list(map(int, input().split()))
     R = [int(x) for x in input().split()]
     B = [int(x) for x in input().split()]
     ans = solve(N, R, B)

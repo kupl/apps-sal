@@ -11,20 +11,19 @@ for i in range(n):
         KeyError
         dict1[arr[i]] = [i]
         dict2[arr[i]] = 0
-
 tempcount = 0
 for i in dict1.keys():
     count = 0
-    while(dict2[i] < len(dict1[i])):
-        if(dict2[i] + n - i > len(dict1[i])):
+    while dict2[i] < len(dict1[i]):
+        if dict2[i] + n - i > len(dict1[i]):
             flag = 1
             break
         else:
             tempcount += n - i
             dict2[i] += n - i
-if(tempcount != n):
+if tempcount != n:
     flag = 1
-if(flag == 1):
+if flag == 1:
     print('Impossible')
 else:
     count = 0

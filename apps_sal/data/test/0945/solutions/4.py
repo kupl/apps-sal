@@ -11,7 +11,6 @@ else:
                 break
         if fg:
             break
-
     if fg:
         print('yes')
     else:

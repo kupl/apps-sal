@@ -1,6 +1,6 @@
 from itertools import accumulate
 import bisect
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 Asum = [0] + list(accumulate(A))
 ans = 0

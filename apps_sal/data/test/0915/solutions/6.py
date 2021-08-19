@@ -1,6 +1,6 @@
 from math import *
 from random import *
-s = "codeforces"
+s = 'codeforces'
 n = len(s)
 k = int(input())
 cnt = [1 for i in range(n)]

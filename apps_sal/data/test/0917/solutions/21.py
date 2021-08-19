@@ -9,5 +9,5 @@ for i in range(m):
         maxheights[j] = min(maxheights[j], integers[2])
 maxSum = 0
 for i in range(n):
-    maxSum = maxSum + (maxheights[i])**2
+    maxSum = maxSum + maxheights[i] ** 2
 print(maxSum)

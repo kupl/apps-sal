@@ -1,15 +1,13 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 dp = [0] * (n + 1)
-f, l = {}, {}
+(f, l) = ({}, {})
 for i in range(len(a)):
     x = a[i]
     if x not in f:
         f[x] = i
     l[x] = i
 pr = [a[0]]
-
 for i in range(1, len(a) + 1):
     j = i
     mx = 0

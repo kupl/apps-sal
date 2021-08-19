@@ -11,4 +11,4 @@ for i in range(n):
 if a == 0:
     print(-1)
 else:
-    print((b) // a + 1)
+    print(b // a + 1)

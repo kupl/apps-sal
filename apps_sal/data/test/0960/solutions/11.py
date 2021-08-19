@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 i = 1
 while True:
     if n % (k - i) == 0:

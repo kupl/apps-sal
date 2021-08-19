@@ -14,12 +14,12 @@ def mints():
     return list(map(int, minp().split()))
 
 
-b, k = mints()
+(b, k) = mints()
 z = 0
 for i in mints():
     z = z * b + i
-    z = (z & 1)
+    z = z & 1
 if z == 0:
-    print("even")
+    print('even')
 else:
-    print("odd")
+    print('odd')

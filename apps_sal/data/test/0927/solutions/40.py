@@ -1,47 +1,43 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
-
 if 1 in A:
     if N % 2 == 0:
-        print("1" * (N // 2))
+        print('1' * (N // 2))
+    elif 7 in A:
+        print('7' + '1' * (N // 2 - 1))
+    elif 5 in A:
+        print('5' + '1' * (N // 2 - 2))
+    elif 3 in A:
+        print('3' + '1' * (N // 2 - 2))
+    elif 2 in A:
+        print('2' + '1' * (N // 2 - 2))
     else:
-        if 7 in A:
-            print("7" + "1" * (N // 2 - 1))
-        elif 5 in A:
-            print("5" + "1" * (N // 2 - 2))
-        elif 3 in A:
-            print("3" + "1" * (N // 2 - 2))
-        elif 2 in A:
-            print("2" + "1" * (N // 2 - 2))
-        else:
-            print("8" + "1" * (N // 2 - 3))
+        print('8' + '1' * (N // 2 - 3))
 elif 7 in A:
     if N % 3 == 0:
-        print("7" * (N // 3))
+        print('7' * (N // 3))
     elif N % 3 == 1:
         if 4 in A:
-            print("7" * (N // 3 - 1) + "4")
+            print('7' * (N // 3 - 1) + '4')
         elif 8 in A:
-            print("8" + "7" * (N // 3 - 2))
+            print('8' + '7' * (N // 3 - 2))
         elif 5 in A:
-            print("7" * (N // 3 - 3) + "55")
+            print('7' * (N // 3 - 3) + '55')
         elif 3 in A:
-            print("7" * (N // 3 - 3) + "33")
+            print('7' * (N // 3 - 3) + '33')
         elif 2 in A:
-            print("7" * (N // 3 - 3) + "22")
-    else:
-        if 5 in A:
-            print("7" * (N // 3 - 1) + "5")
-        elif 3 in A:
-            print("7" * (N // 3 - 1) + "3")
-        elif 2 in A:
-            print("7" * (N // 3 - 1) + "2")
-        elif 4 in A:
-            print("7" * (N // 3 - 2) + "44")
-        elif 8 in A:
-            print(print("7" * (N // 3 - 4) + "88"))
-
+            print('7' * (N // 3 - 3) + '22')
+    elif 5 in A:
+        print('7' * (N // 3 - 1) + '5')
+    elif 3 in A:
+        print('7' * (N // 3 - 1) + '3')
+    elif 2 in A:
+        print('7' * (N // 3 - 1) + '2')
+    elif 4 in A:
+        print('7' * (N // 3 - 2) + '44')
+    elif 8 in A:
+        print(print('7' * (N // 3 - 4) + '88'))
 else:
     B = [[] for i in range(0, 10)]
     for i in range(0, M):
@@ -59,7 +55,6 @@ else:
             B[7].append(8)
         if 9 in A:
             B[6].append(9)
-
     dp = ['n' for i in range(0, max(10, N + 1))]
     for i in range(0, min(N + 1, 10)):
         if i == 2:
@@ -83,7 +78,6 @@ else:
         if i == 9:
             if 9 in A:
                 dp[6] = '9'
-
     if N >= 6:
         a = '0'
         b = '0'
@@ -101,7 +95,6 @@ else:
             c = int(c)
             d = int(dp[6])
             dp[6] = str(max(a, b, c, d))
-
     if N >= 7:
         a = '0'
         b = '0'
@@ -122,7 +115,6 @@ else:
             d = int(d)
             e = int(dp[7])
             dp[7] = str(max(e, a, b, c, d))
-
     for i in range(8, N + 1):
         a = '0'
         b = '0'

@@ -16,19 +16,19 @@ def main():
     def write(*args, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in args) + end)
+        stdout.write(sep.join((str(a) for a in args)) + end)
 
     def write_array(array, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in array) + end)
-    n, h, m = read_int_array()
+        stdout.write(sep.join((str(a) for a in array)) + end)
+    (n, h, m) = read_int_array()
     restr = [h] * n
     for _ in range(m):
-        l, r, x = read_int_array()
+        (l, r, x) = read_int_array()
         for i in range(l - 1, r):
             restr[i] = min(restr[i], x)
-    write(sum(x * x for x in restr))
+    write(sum((x * x for x in restr)))
 
 
 main()

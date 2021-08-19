@@ -1,6 +1,5 @@
-nim, mike = map(int, input().split())
+(nim, mike) = map(int, input().split())
 array = list(map(int, input().split()))
-
 dp = [-1 for i in range(nim + 10)]
 l = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 dp[0] = 0

@@ -1,11 +1,10 @@
 n = int(input())
 a = list(map(int, input().split()))
-R, L = {}, {}
+(R, L) = ({}, {})
 for i in range(n):
     if a[i] not in L:
         L[a[i]] = i
     R[a[i]] = i
-
 dp = [0] * (n + 1)
 for i in range(n):
     dp[i] = dp[i - 1]
@@ -22,5 +21,4 @@ for i in range(n):
                 dp[i] = max(dp[i], dp[j - 1] + s)
         else:
             break
-
 print(dp[n - 1])

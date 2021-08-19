@@ -1,5 +1,5 @@
-n = int(input(""))
-a = [int(x) for x in input("").split(' ')]
+n = int(input(''))
+a = [int(x) for x in input('').split(' ')]
 output = 0
 cache = 0
 for x in range(n - 1):

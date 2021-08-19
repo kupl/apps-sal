@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 b = [[0] * 3 for i in range(n)]
 for i in range(n):
-    b[i][2], b[i][0], b[i][1] = list(map(str, input().split()))
+    (b[i][2], b[i][0], b[i][1]) = list(map(str, input().split()))
     b[i][0] = int(b[i][0])
     b[i][1] = int(b[i][1])
 b.sort()

@@ -1,4 +1,4 @@
-b, k = map(int, input().split())
+(b, k) = map(int, input().split())
 A = list(map(int, input().split()))
 if b % 2 == 1:
     cnt = 0
@@ -9,8 +9,7 @@ if b % 2 == 1:
         print('odd')
     else:
         print('even')
+elif A[-1] % 2:
+    print('odd')
 else:
-    if A[-1] % 2:
-        print('odd')
-    else:
-        print('even')
+    print('even')

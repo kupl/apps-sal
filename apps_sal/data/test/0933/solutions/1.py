@@ -9,8 +9,7 @@ while i < l - 1:
     while i < l - 2 and cur == given[i + 1] == given[i + 2]:
         i += 1
         yesno[i] = 0
-
-given = "".join([c for i, c in enumerate(given) if yesno[i] == 1])
+given = ''.join([c for (i, c) in enumerate(given) if yesno[i] == 1])
 l = len(given)
 typos = 0
 yesno = [1 for _ in range(l)]
@@ -21,4 +20,4 @@ while i < l - 3:
         i += 3
     else:
         i += 1
-print("".join([c for i, c in enumerate(given) if yesno[i] == 1]))
+print(''.join([c for (i, c) in enumerate(given) if yesno[i] == 1]))

@@ -1,4 +1,4 @@
-n, b, d = map(int, input().split())
+(n, b, d) = map(int, input().split())
 A = list(map(int, input().split()))
 answer = 0
 bal = 0

@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 A.sort(reverse=True)
 INF = float('inf')
@@ -14,7 +14,7 @@ for i in range(2, N + 1):
 ans = ''
 i = N
 while i != 0:
-    for k, v in list(can_use.items()):
+    for (k, v) in list(can_use.items()):
         if i - v < 0:
             continue
         while dp[i] == dp[i - v] + 1:

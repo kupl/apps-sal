@@ -1,5 +1,4 @@
-n, k, *a = list(map(int, open(0).read().split()))
-
+(n, k, *a) = list(map(int, open(0).read().split()))
 l = r = 0
 s = 0
 unko = 0

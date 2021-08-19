@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 rng = [list(map(int, input().split())) for i in range(K)]
 dp = [0] * (N + 1)
 dp[1] = 1
@@ -6,7 +6,7 @@ s = [0] * (N + 1)
 s[1] = 1
 MOD = 998244353
 for i in range(2, N + 1):
-    for j, k in rng:
+    for (j, k) in rng:
         if i - j < 1:
             pass
         elif i - k < 1:

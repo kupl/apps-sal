@@ -10,7 +10,6 @@ from sys import stdin, stdout
 def main():
     n = int(stdin.readline().strip())
     a = [0 for i in range(n + 1)]
-
     top = -1
     reordered = 0
     toRemove = 1
@@ -27,7 +26,6 @@ def main():
                 top = -1
                 reordered += 1
             toRemove += 1
-
     stdout.write(str(reordered) + '\n')
 
 

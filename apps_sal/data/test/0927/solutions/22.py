@@ -12,7 +12,7 @@ def f(a, b):
     return False
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 se = set()
 A = list(map(int, input().split()))
 toNum = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]

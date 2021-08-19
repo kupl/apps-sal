@@ -1,7 +1,7 @@
 n = int(input())
 names = []
 sortnames = []
-result = "YES"
+result = 'YES'
 for i in range(n):
     names.append(input().split(' '))
     sortnames.append('')
@@ -14,10 +14,9 @@ sortnames[0] = sortnames[0][0]
 for i in range(n - 1):
     if sortnames[i] < sortnames[i + 1][0]:
         sortnames[i + 1] = sortnames[i + 1][0]
+    elif sortnames[i] < sortnames[i + 1][1]:
+        sortnames[i + 1] = sortnames[i + 1][1]
     else:
-        if sortnames[i] < sortnames[i + 1][1]:
-            sortnames[i + 1] = sortnames[i + 1][1]
-        else:
-            result = "NO"
-            break
+        result = 'NO'
+        break
 print(result)

@@ -1,12 +1,19 @@
-def f(): return map(int, input().split())
-def g(x, y): return d.setdefault(x, set()).add(y)
-def h(b): return a == b or b in d[a] or len(d[a] & d[b]) * 100 < k * len(d[a])
+def f():
+    return map(int, input().split())
+
+
+def g(x, y):
+    return d.setdefault(x, set()).add(y)
+
+
+def h(b):
+    return a == b or b in d[a] or len(d[a] & d[b]) * 100 < k * len(d[a])
 
 
 d = {}
-m, k = f()
+(m, k) = f()
 for i in range(m):
-    a, b = f()
+    (a, b) = f()
     g(a, b)
     g(b, a)
 t = sorted(d)

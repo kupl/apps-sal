@@ -21,16 +21,14 @@ def solve():
     while count < n:
         i = (i + 1) % 10
         mult[i] += 1
-        count = (count // (mult[i] - 1)) * mult[i]
-    out = ""
+        count = count // (mult[i] - 1) * mult[i]
+    out = ''
     for i in range(10):
         out += word[i] * mult[i]
-
     print(out)
 
 
 mode = 's'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

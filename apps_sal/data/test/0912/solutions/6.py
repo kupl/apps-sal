@@ -1,12 +1,10 @@
 def main():
     for _ in range(int(input())):
-        n, s, k = map(int, input().split())
+        (n, s, k) = map(int, input().split())
         a = list(map(int, input().split()))
-
         if s not in a:
             print(0)
             continue
-
         ans = 1
         t1 = s + 1
         t2 = s - 1
@@ -20,7 +18,6 @@ def main():
                     break
                 t1 += 1
             ans += 1
-
         print(ans)
 
 

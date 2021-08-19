@@ -1,7 +1,7 @@
-a, b = input().split()
+(a, b) = input().split()
 n = int(a)
 m = int(b)
-t = ["" for j in range(n)]
+t = ['' for j in range(n)]
 for i in range(n):
     t[i] = input()
 v = 0
@@ -13,7 +13,7 @@ def test(a, b, c, d):
     g[ord(b)] += 1
     g[ord(c)] += 1
     g[ord(d)] += 1
-    return (g[ord('f')] * g[ord('a')] * g[ord('c')] * g[ord('e')] == 1)
+    return g[ord('f')] * g[ord('a')] * g[ord('c')] * g[ord('e')] == 1
 
 
 for i in range(n - 1):

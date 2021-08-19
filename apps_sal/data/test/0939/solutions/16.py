@@ -1,6 +1,5 @@
-
 def __starting_point():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     color = dict()
     for i in range(m):
         d = list(map(int, input().split()))

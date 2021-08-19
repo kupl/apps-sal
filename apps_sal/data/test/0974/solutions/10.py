@@ -1,12 +1,11 @@
 from heapq import heappush, heappop
-
 n = int(input())
 heap = []
 ans = 0
 last_added = []
 for i in range(2 * n):
     c = input()
-    if c == "remove":
+    if c == 'remove':
         out = heappop(heap)
         if len(last_added):
             if out != last_added[-1]:

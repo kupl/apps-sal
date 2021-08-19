@@ -16,6 +16,6 @@ for i in range(names):
         else:
             false = True
 if false:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

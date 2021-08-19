@@ -1,13 +1,10 @@
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = [tuple(map(int, input().split())) for i in range(M)]
-
 es = [[] for _ in range(N)]
-for a, b in AB:
-    a, b = a - 1, b - 1
+for (a, b) in AB:
+    (a, b) = (a - 1, b - 1)
     es[a].append(b)
-
-
 mindist = N
 ans = None
 for g in range(N):
@@ -37,7 +34,6 @@ for g in range(N):
             v = prev[v]
             tmp.append(v + 1)
         ans = tmp
-
 if ans:
     print(len(ans))
     print(*ans, sep='\n')

@@ -10,11 +10,9 @@ for j in range(2 * n):
     else:
         if queue:
             if cou == queue[-1]:
-
                 queue.pop()
             else:
                 ans += 1
                 queue = deque()
-
         cou += 1
 print(ans)

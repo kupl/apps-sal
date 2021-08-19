@@ -1,11 +1,10 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = False
 if b < a:
     c = True
-    a, b = b, a
+    (a, b) = (b, a)
 xa = 0
 n = 0
-
 while a >= (xa + 1) * xa // 2:
     xa += 1
 xa -= 1
@@ -14,8 +13,7 @@ if c == False:
     print(xa)
 sa = (xa + 1) * xa // 2
 xb = xa + 1
-x = (xa + 1) - (a - sa)
-
+x = xa + 1 - (a - sa)
 flag = False
 if a - sa != 0 and b >= x:
     flag = True
@@ -27,11 +25,10 @@ if a - sa != 0 and b >= x:
                 print(i + 1, sep=' ', end=' ')
         print(xa + 1, sep=' ', end=' ')
         print()
-else:
-    if c == False:
-        for i in range(xa):
-            print(i + 1, sep=' ', end=' ')
-        print()
+elif c == False:
+    for i in range(xa):
+        print(i + 1, sep=' ', end=' ')
+    print()
 r = xb
 xb = 0
 while b >= (2 * r + xb) * (xb + 1) // 2:

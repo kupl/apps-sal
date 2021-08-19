@@ -15,8 +15,8 @@ def num_to_match(n):
 
 def max_length(N, match):
     match = set(match)
-    INF = 10**15
-    dp = [- INF for _ in range(N + 1)]
+    INF = 10 ** 15
+    dp = [-INF for _ in range(N + 1)]
     dp[0] = 0
     for n in range(1, N + 1):
         max_l = dp[n]
@@ -28,7 +28,7 @@ def max_length(N, match):
 
 
 def main():
-    N, _ = list(map(int, input().split(' ')))
+    (N, _) = list(map(int, input().split(' ')))
     A = list(map(int, input().split(' ')))
     A.sort(reverse=True)
     match = list(map(num_to_match, A))

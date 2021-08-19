@@ -9,7 +9,6 @@ for i in lst:
     else:
         s += i
         cnt += 1
-
 if cnt % 2 == 0:
     print(s)
 else:

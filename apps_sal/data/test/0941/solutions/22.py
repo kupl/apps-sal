@@ -1,4 +1,4 @@
-B, K = list(map(int, input().split()))
+(B, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 if B % 2 == 0:
     print('odd' if A[-1] % 2 else 'even')

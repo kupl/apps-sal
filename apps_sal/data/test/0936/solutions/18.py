@@ -1,6 +1,5 @@
 n = int(input())
 data = list(map(int, input().split()))
-
 lst = dict()
 tme = dict()
 for i in range(n):
@@ -9,7 +8,6 @@ for i in range(n):
     else:
         lst[data[i]] = 1
     tme[data[i]] = i
-
 ps = -1
 mx = -1
 time = -1
@@ -22,5 +20,4 @@ for i in list(lst.keys()):
         if time > tme[i]:
             time = tme[i]
             ps = i
-
 print(ps)

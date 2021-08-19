@@ -1,5 +1,5 @@
 mod = 10 ** 9 + 7
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 binomial = [1]
 cum = 1
 for i in range(1, n + 2):

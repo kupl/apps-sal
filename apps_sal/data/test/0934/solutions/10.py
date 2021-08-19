@@ -7,6 +7,6 @@ for x in a:
     if x[0] == t[0]:
         can = True
 if can:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -15,10 +15,8 @@ def solve(n, p, g):
         if i not in visited:
             indexes = dfs(i, visited, g)
             values = [p[i] for i in indexes]
-
             indexes = sorted(indexes)
             values = sorted(values)
-
             for j in range(len(indexes)):
                 result[indexes[j]] = values[j]
     return result
@@ -36,7 +34,7 @@ def main():
                 temp.append(j)
         swaps.append(temp)
     result = solve(n, p, swaps)
-    print(" ".join(map(str, result)))
+    print(' '.join(map(str, result)))
 
 
 def __starting_point():

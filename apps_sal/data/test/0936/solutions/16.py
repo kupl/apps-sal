@@ -10,7 +10,6 @@ for i in l:
     else:
         d[i] = 1
     s.add(i)
-
 max1 = 0
 for i in d:
     max1 = max(max1, d[i])

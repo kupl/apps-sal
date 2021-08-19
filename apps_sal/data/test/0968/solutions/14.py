@@ -2,7 +2,6 @@ n = int(input())
 a = [''] * n
 b = [''] * n
 c = [''] * n
-
 for i in range(n):
     s = input()
     k = s.find(' ')
@@ -16,7 +15,7 @@ for j in p:
         c[k] = min(a[i], b[i])
         k += 1
     else:
-        if a[i] > c[k - 1] and not (b[i] > c[k - 1] and b[i] < a[i]):
+        if a[i] > c[k - 1] and (not (b[i] > c[k - 1] and b[i] < a[i])):
             c[k] = a[i]
         elif b[i] > c[k - 1]:
             c[k] = b[i]

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 colors = [0] * n
 
 
@@ -16,5 +16,4 @@ def setColors(a):
 
 for i in range(m):
     setColors(list(map(int, input().split())))
-
 print(' '.join(map(str, colors)))

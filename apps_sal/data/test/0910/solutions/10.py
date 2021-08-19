@@ -1,4 +1,4 @@
-n, a, b = [int(x) for x in input().split()]
+(n, a, b) = [int(x) for x in input().split()]
 arr = [[0] * b for i in range(a)]
 cnt = 1
 if n > a * b:

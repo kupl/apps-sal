@@ -1,4 +1,4 @@
-s, c = 'heidi', 0
+(s, c) = ('heidi', 0)
 for i in input():
     if i == s[c]:
         c += 1

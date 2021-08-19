@@ -1,4 +1,4 @@
-n, b, d = list(map(int, input().split()))
+(n, b, d) = list(map(int, input().split()))
 v = 0
 cnt = 0
 for cur in map(int, input().split()):

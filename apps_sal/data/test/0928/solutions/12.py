@@ -1,6 +1,5 @@
-N, K = [int(x) for x in input().split()]
+(N, K) = [int(x) for x in input().split()]
 A = [int(x) for x in input().split()] + [0]
-
 cnt = 0
 left = 0
 right = 0

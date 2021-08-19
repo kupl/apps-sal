@@ -1,8 +1,7 @@
 n = int(input())
 l = [input().split() for i in range(n)]
 p = [int(x) - 1 for x in input().split()]
-
-cur = ""
+cur = ''
 poss = True
 for i in range(n):
     per = l[p[i]]
@@ -11,10 +10,9 @@ for i in range(n):
             cur = min(per[0], per[1])
         else:
             cur = per[0]
+    elif per[1] > cur:
+        cur = per[1]
     else:
-        if per[1] > cur:
-            cur = per[1]
-        else:
-            poss = False
-            break
-print("YES" if poss else "NO")
+        poss = False
+        break
+print('YES' if poss else 'NO')

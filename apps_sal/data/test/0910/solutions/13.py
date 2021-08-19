@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 if n > a * b:
     print(-1)
 else:

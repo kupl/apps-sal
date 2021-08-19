@@ -1,6 +1,5 @@
 def main():
-    N, k = map(int, input().split())
-
+    (N, k) = map(int, input().split())
     MAX_N = 3 * 10 ** 5
     MOD = 10 ** 9 + 7
     fac = [0] * MAX_N
@@ -23,9 +22,7 @@ def main():
             return 0
         elif k > n:
             return 0
-
-        return (fac[n] * finv[n - k] % MOD) * finv[k] % MOD
-
+        return fac[n] * finv[n - k] % MOD * finv[k] % MOD
     k = min(k, N - 1)
     ans = 1
     com_init()

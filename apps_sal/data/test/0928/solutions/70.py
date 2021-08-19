@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [int(i) for i in input().split()]
 ans = 0
 r = 0
@@ -10,5 +10,4 @@ for r in range(N):
         ans += N - r
         s -= A[l]
         l += 1
-
 print(ans)

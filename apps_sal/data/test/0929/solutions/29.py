@@ -1,4 +1,4 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(H)]
 N = 0
 A = []
@@ -18,7 +18,6 @@ for h in range(H):
                     grid[h + 1][w] += 1
                     A.append([h + 1, w + 1, h + 2, w + 1])
                     N += 1
-
     else:
         for w in range(W - 1, -1, -1):
             if grid[h][w] % 2:
@@ -36,4 +35,4 @@ for h in range(H):
                     N += 1
 print(N)
 for a in A:
-    print(" ".join(map(str, a)))
+    print(' '.join(map(str, a)))

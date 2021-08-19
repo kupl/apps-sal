@@ -15,11 +15,10 @@ def dfs(N, AB):
                 if status[n] == -1:
                     stack.append(n)
                     status[n] = 0
-                else:
-                    if n in stack:
-                        idx = stack.index(n)
-                        cycle = stack[idx:]
-                        return cycle
+                elif n in stack:
+                    idx = stack.index(n)
+                    cycle = stack[idx:]
+                    return cycle
             else:
                 status[v] = 1
                 stack.pop()
@@ -41,22 +40,19 @@ def find_smaller_cycle(cycle, AB):
                 i = cycle.index(v)
         else:
             i += 1
-
     return cycle
 
 
-N, M = [int(i) for i in input().split()]
+(N, M) = [int(i) for i in input().split()]
 AB = [deque() for _ in range(N)]
 for _ in range(M):
-    A, B = [int(i) - 1 for i in input().split()]
+    (A, B) = [int(i) - 1 for i in input().split()]
     AB[A].append(B)
-
 cycle = dfs(N, AB)
 if not cycle:
     print(-1)
 else:
     cycle = find_smaller_cycle(cycle, AB)
-
     print(len(cycle))
     for v in cycle:
         print(v + 1)

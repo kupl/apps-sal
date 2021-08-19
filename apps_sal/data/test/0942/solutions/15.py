@@ -6,7 +6,7 @@ if 0 in a:
     else:
         print('Possible')
         print(*[1] * n)
-elif not all(q < n for q in a):
+elif not all((q < n for q in a)):
     print('Impossible')
 else:
     s = {}

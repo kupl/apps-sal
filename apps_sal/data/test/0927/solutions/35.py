@@ -1,5 +1,5 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     a.sort(reverse=True)
     cost = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
@@ -18,8 +18,8 @@ def main():
                 cnt -= cost[j]
                 break
     for j in ans:
-        print(j, end="")
-    print("")
+        print(j, end='')
+    print('')
 
 
 def __starting_point():

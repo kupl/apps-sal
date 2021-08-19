@@ -1,4 +1,4 @@
-n, b, d = list(map(int, input().split()))
+(n, b, d) = list(map(int, input().split()))
 line = list(map(int, input().split()))
 othodes = 0
 result = 0

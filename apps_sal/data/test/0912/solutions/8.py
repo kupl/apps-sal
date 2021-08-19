@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, s, k = map(int, input().split())
+    (n, s, k) = map(int, input().split())
     l = [*map(int, input().split())]
     dic = set(l)
     cnt = 0
@@ -18,9 +18,9 @@ for _ in range(int(input())):
             break
         else:
             cnt1 += 1
-    if(flag and flag1):
+    if flag and flag1:
         print(min(cnt, cnt1))
-    elif(flag1):
+    elif flag1:
         print(cnt)
     else:
         print(cnt1)

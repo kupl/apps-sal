@@ -1,10 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 cnt = 0
 cur = 0
 r = -1
-
 for l in range(n):
     stop = True
     if cur < k:
@@ -15,7 +13,6 @@ for l in range(n):
                 cnt += n - r
                 stop = False
                 break
-
     elif cur > k:
         stop = False
         if r == l:
@@ -29,14 +26,10 @@ for l in range(n):
                     cur += a[r]
                     cnt += n - r
                     break
-
     else:
         cnt += n - r
         stop = False
-
     cur -= a[l]
-
     if stop:
         break
-
 print(cnt)

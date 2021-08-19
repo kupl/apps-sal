@@ -6,7 +6,6 @@ for i in s:
         good = True
     if i[1] == t[1]:
         good = True
-
 if good:
     print('YES')
 else:

@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 Alist = list(map(int, input().split()))
 Slist = [0]
 tale = N + 1
@@ -17,7 +17,7 @@ if Ans != 0:
         if Sum >= K:
             Ans += N - tale + 1
         elif tale == head and tale < N:
-            for _ in range(10**6):
+            for _ in range(10 ** 6):
                 tale += 1
                 Sum = Slist[tale] - Slist[head]
                 if Sum >= K:
@@ -26,7 +26,7 @@ if Ans != 0:
                 elif tale == N:
                     break
         elif tale != N:
-            for _ in range(10**6):
+            for _ in range(10 ** 6):
                 tale += 1
                 Sum = Slist[tale] - Slist[head]
                 if Sum >= K:

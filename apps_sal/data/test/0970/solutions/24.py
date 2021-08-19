@@ -19,9 +19,9 @@ n = int(input())
 p = getIntList()
 p.sort()
 result1 = 0
-for i, x in enumerate(p):
+for (i, x) in enumerate(p):
     result1 += abs(x - (2 * i + 1))
 result2 = 0
-for i, x in enumerate(p):
+for (i, x) in enumerate(p):
     result2 += abs(x - (2 * i + 2))
 print(min(result1, result2))

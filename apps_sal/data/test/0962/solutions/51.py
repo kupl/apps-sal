@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,11 +9,10 @@ MOD = 1000000007
 
 
 def main():
-    N, M, *AB = list(map(int, read().split()))
+    (N, M, *AB) = list(map(int, read().split()))
     G = [[] for _ in range(N)]
-    for a, b in zip(*[iter(AB)] * 2):
+    for (a, b) in zip(*[iter(AB)] * 2):
         G[a - 1].append(b - 1)
-
     ans = []
     for i in range(N):
         queue = deque([i])
@@ -36,17 +34,14 @@ def main():
             while k != -1:
                 tmp.append(k)
                 k = prev[k]
-
             if not ans or len(ans) > len(tmp):
                 ans = tmp
-
     if ans:
-        print((len(ans)))
+        print(len(ans))
         for v in ans:
-            print((v + 1))
+            print(v + 1)
     else:
-        print((-1))
-
+        print(-1)
     return
 
 

@@ -9,7 +9,7 @@ def calc(img):
             tset.add(img[i][j + 1])
             tset.add(img[i + 1][j])
             tset.add(img[i + 1][j + 1])
-            if 'f' in tset and 'a' in tset and 'c' in tset and 'e' in tset:
+            if 'f' in tset and 'a' in tset and ('c' in tset) and ('e' in tset):
                 ret += 1
     return ret
 

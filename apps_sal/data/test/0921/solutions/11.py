@@ -1,5 +1,5 @@
 def main():
-    n, w = map(int, input().split())
+    (n, w) = map(int, input().split())
     a = list(map(int, input().split()))
     res1 = [0 for i in range(n)]
     maxes = a[:]
@@ -14,7 +14,7 @@ def main():
     while w > 0:
         maxi = a.index(maxes[i])
         if w > a[maxi] - res1[maxi]:
-            w -= (a[maxi] - res1[maxi])
+            w -= a[maxi] - res1[maxi]
             res1[maxi] = a[maxi]
             a[maxi] = 0
             maxes[i] = 0

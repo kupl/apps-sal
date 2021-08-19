@@ -15,17 +15,15 @@ def mx_or(mx):
     return result
 
 
-def none(iterable): return all(map(operator.not_, iterable))
+def none(iterable):
+    return all(map(operator.not_, iterable))
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 mx = [[] for i in range(n)]
-
 for i in range(n):
     mx[i] = list(map(int, input().split()))
-
 result = [[1 for j in range(m)] for i in range(n)]
-
 for i in range(n):
     for j in range(m):
         if not mx[i][j]:
@@ -33,10 +31,9 @@ for i in range(n):
                 result[k][j] = 0
             for k in range(m):
                 result[i][k] = 0
-
 if mx_or(result) == mx:
-    print("YES")
+    print('YES')
     for i in range(n):
         print(' '.join(map(str, result[i])))
 else:
-    print("NO")
+    print('NO')

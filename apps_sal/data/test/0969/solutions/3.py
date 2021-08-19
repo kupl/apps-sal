@@ -10,11 +10,11 @@ errFlag = 0
 i = 0
 res = []
 while i < len(t):
-    if s.find(t[i:i + cur]) != -1 and i + cur <= len(t) and s.find(t[i:i + cur]) + cur <= n:
+    if s.find(t[i:i + cur]) != -1 and i + cur <= len(t) and (s.find(t[i:i + cur]) + cur <= n):
         start = s.find(t[i:i + cur]) + 1
         end = start + cur - 1
         cur += 1
-    elif revS.find(t[i:i + cur]) != -1 and i + cur <= len(t) and revS.find(t[i:i + cur]) + cur <= n:
+    elif revS.find(t[i:i + cur]) != -1 and i + cur <= len(t) and (revS.find(t[i:i + cur]) + cur <= n):
         start = n - revS.find(t[i:i + cur])
         end = start - cur + 1
         cur += 1
@@ -24,10 +24,9 @@ while i < len(t):
             break
         i += cur - 1
         cur = 1
-        res.append(str(start) + " " + str(end))
+        res.append(str(start) + ' ' + str(end))
         start = -1
         end = -1
-
 if errFlag != 1:
     print(len(res))
     for p in res:

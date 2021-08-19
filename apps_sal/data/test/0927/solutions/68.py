@@ -1,4 +1,4 @@
-n, m = (int(x) for x in input().split())
+(n, m) = (int(x) for x in input().split())
 A = sorted([int(x) for x in input().split()])[::-1]
 cost = (0, 2, 5, 5, 4, 5, 6, 3, 7, 6)
 dp = [[0] * (n + 1) for _ in range(m + 1)]

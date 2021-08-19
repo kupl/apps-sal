@@ -15,6 +15,6 @@ for i in range(nm[1]):
             newDict[h] = largeDict[i + 1][h]
     largeDict[i + 1] = newDict
     if len(list(largeDict[i + 1].keys())) > 2:
-        print("?")
+        print('?')
     else:
-        print(" ".join(list(largeDict[i + 1].keys())))
+        print(' '.join(list(largeDict[i + 1].keys())))

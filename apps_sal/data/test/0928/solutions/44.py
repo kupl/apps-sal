@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 sum = 0
 d = 0

@@ -1,12 +1,12 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     V = [[] for _ in range(N)]
     for _ in range(M):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         V[a - 1].append(b - 1)
     C = [0] * N
 
@@ -27,4 +27,4 @@ def main():
     return -1
 
 
-print((main()))
+print(main())

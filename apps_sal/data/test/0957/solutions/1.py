@@ -7,4 +7,4 @@ def is_subsequence(x, y):
 
 
 s = input()
-print("YES" if is_subsequence("heidi", s) else "NO")
+print('YES' if is_subsequence('heidi', s) else 'NO')

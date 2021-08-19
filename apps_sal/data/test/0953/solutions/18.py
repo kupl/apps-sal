@@ -18,7 +18,7 @@ def merge(a, b):
     a = find(a)
     b = find(b)
     if siz[a] < siz[b]:
-        a, b = b, a
+        (a, b) = (b, a)
     par[b] = a
     siz[a] += siz[b]
 
@@ -35,10 +35,9 @@ def main():
     for i in range(n):
         a = find(i)
         bisect.insort(d[a], l[i])
-
     for i in range(n):
         a = find(i)
-        print(d[a][0], end=" ")
+        print(d[a][0], end=' ')
         d[a] = d[a][1:]
 
 

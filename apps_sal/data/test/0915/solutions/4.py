@@ -21,7 +21,6 @@ while cnt < k:
     cnt = cnt * (ts[ci] + 1) // ts[ci]
     ts[ci] += 1
     ci = (ci + 1) % len(s)
-
 for i in range(len(ts)):
     print(s[i] * ts[i], end='')
 print()

@@ -1,5 +1,4 @@
 3
-
 y = int(input())
 ans = y + 1
 while True:

@@ -8,14 +8,13 @@ for i in range(1, n):
             r = i - l[i]
         else:
             r = i - l[i] + n
+    elif i <= l[i]:
+        r = l[i] - i
     else:
-        if i <= l[i]:
-            r = l[i] - i
-        else:
-            r = l[i] - i + n
+        r = l[i] - i + n
     if r != d:
-        print("No")
+        print('No')
         d = -1
         break
 if d >= 0:
-    print("Yes")
+    print('Yes')

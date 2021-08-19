@@ -14,5 +14,4 @@ for i in range(n * 2):
         indexToDel += 1
     else:
         stack.append(int(line[1]))
-
 print(count)

@@ -1,4 +1,4 @@
-N, B, D = list(map(int, input().split()))
+(N, B, D) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 ans = 0
 now = 0

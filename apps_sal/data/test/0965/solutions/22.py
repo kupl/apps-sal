@@ -1,4 +1,4 @@
-a, f, ii, n, s = 0, 0, 0, int(input()), str(input())
+(a, f, ii, n, s) = (0, 0, 0, int(input()), str(input()))
 for i in range(n):
     if s[i] == 'I':
         ii += 1

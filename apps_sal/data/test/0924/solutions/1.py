@@ -13,16 +13,15 @@ def li():
     return list(mi())
 
 
-la, ra, ta = mi()
-lb, rb, tb = mi()
+(la, ra, ta) = mi()
+(lb, rb, tb) = mi()
 if la > lb:
-    la, ra, ta, lb, rb, tb = lb, rb, tb, la, ra, ta
+    (la, ra, ta, lb, rb, tb) = (lb, rb, tb, la, ra, ta)
 lb -= la
 ra -= la
 rb -= la
 dif = math.gcd(ta, tb)
 difl = lb
-
 off1 = difl % dif
 ans1 = min(ra, off1 + rb - lb) - max(0, off1) + 1
 off2 = off1 - dif

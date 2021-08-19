@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = reversed(sorted(map(int, input().split())))
 M = [2, 5, 5, 4, 5, 6, 3, 7, 6]
 D = {}
@@ -10,7 +10,6 @@ for a in A:
         D[M[a - 1]] = a
         E[a] = M[a - 1]
 S = list(reversed(sorted(E)))
-
 dp = [0] * (n + 2)
 for i in range(1, n + 2):
     cnt = -1
@@ -20,8 +19,7 @@ for i in range(1, n + 2):
                 cnt = max(dp[i - d] + 1, cnt)
     dp[i] = cnt
 k = dp[n]
-ans = ""
-
+ans = ''
 while k > 0:
     for s in S:
         x = E[s]

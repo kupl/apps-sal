@@ -7,7 +7,7 @@ def solve(n, k, l, r):
     memo = [1] * n
     for i in range(1, n):
         v = 0
-        for x, y in zip(l, r):
+        for (x, y) in zip(l, r):
             a = i - x
             if a < 0:
                 continue
@@ -21,6 +21,6 @@ def solve(n, k, l, r):
     return dp[n - 1]
 
 
-n, k = list(map(int, input().split()))
-l, r = list(zip(*[list(map(int, input().split())) for i in range(k)]))
-print((solve(n, k, l, r)))
+(n, k) = list(map(int, input().split()))
+(l, r) = list(zip(*[list(map(int, input().split())) for i in range(k)]))
+print(solve(n, k, l, r))

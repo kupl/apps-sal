@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
 for i in range(1, n):
     l[i] += l[i - 1]
@@ -12,10 +12,9 @@ while j < n:
             i += 1
         else:
             j += 1
+    elif k <= l[j] - l[i - 1]:
+        ans += n - j
+        i += 1
     else:
-        if k <= (l[j] - l[i - 1]):
-            ans += n - j
-            i += 1
-        else:
-            j += 1
+        j += 1
 print(ans)

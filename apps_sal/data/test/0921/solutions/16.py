@@ -1,4 +1,4 @@
-n, w = map(int, input().split())
+(n, w) = map(int, input().split())
 Cup = list(map(int, input().split()))
 Water = []
 for a in Cup:
@@ -15,5 +15,5 @@ else:
         Cup[i] = 0
     s = str(Water[0])
     for c in range(1, len(Water)):
-        s += " " + str(Water[c])
+        s += ' ' + str(Water[c])
     print(s)

@@ -1,8 +1,7 @@
 import sys
 import math
-
 s = input()
-s2 = "heidi"
+s2 = 'heidi'
 ind = 0
 for i in range(len(s)):
     if s[i] == s2[ind]:
@@ -10,6 +9,6 @@ for i in range(len(s)):
     if ind == len(s2):
         break
 if ind == len(s2):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

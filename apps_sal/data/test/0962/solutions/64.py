@@ -1,16 +1,12 @@
 import queue
-
 import sys
 sys.setrecursionlimit(10000)
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 S = set(range(N))
-
 to = [[] for _ in range(N)]
 for _ in range(M):
-    a, b = [int(x) - 1 for x in input().split()]
+    (a, b) = [int(x) - 1 for x in input().split()]
     to[a].append(b)
-
 visit = [0] * N
 
 

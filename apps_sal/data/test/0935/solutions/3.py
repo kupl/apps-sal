@@ -1,4 +1,4 @@
 if min(list(map(int, input().split()))) % 2 == 1:
-    print("Akshat")
+    print('Akshat')
 else:
-    print("Malvika")
+    print('Malvika')

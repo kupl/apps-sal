@@ -12,11 +12,8 @@ for u in s:
         _c = 1
         new = new + u
         g = u
-
-    else:
-        if _c < 2 and _two == False:
-            new = new + u
-            g = u
-
-            _c += 1
+    elif _c < 2 and _two == False:
+        new = new + u
+        g = u
+        _c += 1
 print(new)

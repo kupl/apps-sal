@@ -9,11 +9,8 @@ d['6'] = [6, 8]
 d['7'] = [0, 3, 7, 8, 9]
 d['8'] = [8]
 d['9'] = [8, 9]
-
 s = input()
-
 ret = 1
 for j in [len(d[i]) for i in s]:
     ret *= j
-
 print(ret)

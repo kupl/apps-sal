@@ -5,15 +5,13 @@ input = sys.stdin.readline
 
 
 def main():
-    n, m = list(map(int, input().split()))
-
+    (n, m) = list(map(int, input().split()))
     tree = [[] for _ in range(n)]
     edge = dict()
     for i in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         tree[a - 1].append(b - 1)
-        edge[(a - 1, b - 1)] = i + 1
-
+        edge[a - 1, b - 1] = i + 1
     ans = 0
     for i in range(n):
         not_yet = deque([i])
@@ -22,12 +20,10 @@ def main():
         par = [0] * n
         already[i] = True
         sub = []
-
         while not_yet:
             key = not_yet.popleft()
             for v in tree[key]:
                 if already[v]:
-
                     if v == i:
                         sub = [key + 1]
                         now = key
@@ -36,27 +32,24 @@ def main():
                             now = par[now]
                         break
                     continue
-
                 not_yet.append(v)
                 already[v] = True
                 dist[v] = dist[key] + 1
                 par[v] = key
             if sub:
                 break
-
         if sub:
             if ans:
                 if len(ans) > len(sub):
                     ans = copy(sub)
             else:
                 ans = copy(sub)
-
     if ans:
-        print((len(ans)))
+        print(len(ans))
         for a in ans:
             print(a)
     else:
-        print((-1))
+        print(-1)
 
 
 def __starting_point():
