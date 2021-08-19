@@ -2,8 +2,7 @@ import re
 
 
 def triple_double(num1, num2):
-    # code me ^^
-    r3 = re.compile(r'(\d)\1\1')
+    r3 = re.compile('(\\d)\\1\\1')
     f = r3.findall(str(num1))
     if len(f) > 0:
         r2 = re.compile(f[0] + '{2}')

@@ -1,8 +1,5 @@
-# cook your dish here
 import sys
-
 tt = int(sys.stdin.readline())
-
 for _ in range(tt):
     nn = int(sys.stdin.readline())
     arr = list(map(int, sys.stdin.readline().split()))
@@ -11,6 +8,6 @@ for _ in range(tt):
     for i in range(nn - 3):
         summ = summ - arr[i] + arr[i + 3]
         maxx = max(summ, maxx)
-    if(arr[-1] + arr[-2] + arr[0] > maxx):
+    if arr[-1] + arr[-2] + arr[0] > maxx:
         maxx = arr[-1] + arr[-2] + arr[0]
     print(maxx)

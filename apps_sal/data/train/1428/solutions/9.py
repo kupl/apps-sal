@@ -1,12 +1,10 @@
-# cook your dish here
 import heapq
 from math import ceil
 for i in range(int(input())):
-    n, a, b, x, y, z = list(map(int, input().split()))
-    cntrbtns = [-(int(x)) for x in input().split()]
-
+    (n, a, b, x, y, z) = list(map(int, input().split()))
+    cntrbtns = [-int(x) for x in input().split()]
     if b >= z:
-        print("RIP")
+        print('RIP')
         continue
     sum = a + x * (ceil((z - b) / y) - 1)
     c = 0
@@ -16,4 +14,4 @@ for i in range(int(input())):
         ele = -heapq.heappushpop(cntrbtns, -(ele >> 1))
         sum += ele
         c += 1
-    print(["RIP", c][sum >= z])
+    print(['RIP', c][sum >= z])

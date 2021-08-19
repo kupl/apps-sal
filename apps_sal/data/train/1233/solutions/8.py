@@ -1,4 +1,3 @@
-# cook your dish here
 def isgood(s):
     c = 0
     for i in set(s):
@@ -7,7 +6,6 @@ def isgood(s):
             return 0
         elif k % 2:
             c = 1
-    # print(s)
     return 1
 
 

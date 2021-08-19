@@ -1,2 +1,1 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-print(("-").join(input().strip().split()))
+print('-'.join(input().strip().split()))
