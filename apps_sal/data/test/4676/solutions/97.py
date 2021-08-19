@@ -1,12 +1,10 @@
-#!/usr/bin/env python3
-
 def main():
     a = input()
     b = input()
     for i in range(len(a)):
-        print(a[i], end="")
+        print(a[i], end='')
         if i < len(b):
-            print(b[i], end="")
+            print(b[i], end='')
     print()
 
 
