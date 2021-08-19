@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -8,7 +7,7 @@ for _ in range(int(input())):
         if a % 2 == 0:
             even += 1
     if l[-1] % 2 == 0:
-        a = (n - even) + (even - 1) * 2
+        a = n - even + (even - 1) * 2
         if even != n:
             b = even + (n - even - 1) * 2
         else:
@@ -20,7 +19,7 @@ for _ in range(int(input())):
     else:
         a = even + (n - even - 1) * 2
         if even != 0:
-            b = (n - even) + 2 * (even - 1)
+            b = n - even + 2 * (even - 1)
         else:
             b = n
         if a > b:

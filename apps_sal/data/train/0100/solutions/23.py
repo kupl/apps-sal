@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for i in range(t):
     candy = [int(item) for item in input().split()]

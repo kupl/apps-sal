@@ -6,12 +6,10 @@ class Sudoku(object):
     def __init__(self, theArray):
         self.grid = np.array(theArray)
         self.listgrid = theArray
-
         self.N = len(theArray)
         self.M = len(theArray[0])
 
     def has_valid_size(self):
-
         if isinstance(self.listgrid[0][0], bool):
             return False
         if self.grid.shape == (1, 1):
@@ -21,11 +19,9 @@ class Sudoku(object):
                 return False
         return True
 
-    # your code here
     def is_valid(self):
         if not self.has_valid_size():
             return False
-
         seqs2check = [self.getRowsIterator(), self.getColsIterator(), self.getSquaresIterator()]
         for it in seqs2check:
             for seq in it:

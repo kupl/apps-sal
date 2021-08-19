@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     N = int(input())
     array = list(map(int, input().split()))
@@ -9,8 +8,7 @@ for _ in range(int(input())):
             even += 1
         else:
             odds += 1
-
-    if (even > 1):
+    if even > 1:
         ans = odds + (even - 1) * 2
     else:
         ans = odds

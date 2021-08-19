@@ -3,7 +3,6 @@ for _ in range(int(input())):
     a = list(map(int, input().split()))
     ev = []
     od = []
-
     for i in a:
         if i % 2 == 0:
             ev.append(i)
@@ -26,7 +25,6 @@ for _ in range(int(input())):
                 cc += 2
             else:
                 cc += 1
-
     if ev:
         me = max(ev)
         for i in a:
@@ -34,12 +32,12 @@ for _ in range(int(input())):
                 c1 += 2
             elif i != me and i % 2 != me % 2:
                 c1 += 1
-        me += 1  # odd now
+        me += 1
         for i in a:
-            if i % 2 == me % 2:  # odd odd 2
+            if i % 2 == me % 2:
                 cc1 += 2
             else:
-                cc1 += 1  # odd even 1
+                cc1 += 1
     if ev and od:
         print(min(c, c1, cc, cc1))
     elif not ev:

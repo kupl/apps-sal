@@ -1,8 +1,7 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    a, b = map(int, input().split())
-    if(a % 2 == 0 or b % 2 == 0):
-        print("YES")
+    (a, b) = map(int, input().split())
+    if a % 2 == 0 or b % 2 == 0:
+        print('YES')
     else:
-        print("NO")
+        print('NO')
