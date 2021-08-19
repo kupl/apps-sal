@@ -7,7 +7,6 @@ for i in range(n):
     a[i] = []
     for j in range(n):
         a[i].append(t[j] == '1')
-# print(a)
 maxRes = -1
 for i in range(n):
     s = []
@@ -19,7 +18,6 @@ for i in range(n):
         for k in range(n):
             if s[k]:
                 b[j][k] = not b[j][k]
-    # print(s)
     for j in range(i + 1, n):
         for k in range(n):
             if s[k]:
@@ -33,6 +31,4 @@ for i in range(n):
         if t:
             res += 1
     maxRes = max(maxRes, res)
-    # print(b)
-    # print()
 print(maxRes)

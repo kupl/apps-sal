@@ -1,25 +1,27 @@
-#!/usr/bin/pypy3
-
 import cProfile
 from sys import stdin, stderr
 from heapq import heappush, heappop
 from random import randrange
 
 
-def readInts(): return map(int, stdin.readline().strip().split())
-def print_err(*args, **kwargs): print(*args, file=stderr, **kwargs)
+def readInts():
+    return map(int, stdin.readline().strip().split())
+
+
+def print_err(*args, **kwargs):
+    print(*args, file=stderr, **kwargs)
 
 
 def create_heap(ns):
     mins = {}
     maxs = {}
-    for i, v in enumerate(ns):
+    for (i, v) in enumerate(ns):
         if v not in mins:
             mins[v] = i
         maxs[v] = i
     ranges = {}
     rheap = []
-    for v, minix in mins.items():
+    for (v, minix) in mins.items():
         maxix = maxs[v]
         ranges[v] = (minix, maxix)
         heappush(rheap, (maxix - minix + 1, minix))
@@ -29,13 +31,13 @@ def create_heap(ns):
 def create_heap2(ns):
     mins = {}
     maxs = {}
-    for i, v in enumerate(ns):
+    for (i, v) in enumerate(ns):
         if v not in mins:
             mins[v] = i
         maxs[v] = i
     ranges = {}
     rheap = []
-    for v, minix in mins.items():
+    for (v, minix) in mins.items():
         maxix = maxs[v]
         ranges[v] = (minix, maxix)
         heappush(rheap, (maxix - minix + 1, minix, set([v])))
@@ -43,13 +45,11 @@ def create_heap2(ns):
 
 
 def solve(n, ns):
-    ranges, pq = create_heap(ns)
+    (ranges, pq) = create_heap(ns)
     resolved_ranges = {}
     while pq:
-        w, lo_ix = heappop(pq)
-        # print(len(pq),w,lo_ix)
+        (w, lo_ix) = heappop(pq)
         if lo_ix in resolved_ranges:
-            # print(len(pq))
             continue
         tot_subs = 0
         tot_x = 0
@@ -58,7 +58,7 @@ def solve(n, ns):
         xsv = set()
         while ix < lo_ix + w:
             v = ns[ix]
-            lo2, hi2 = ranges[v]
+            (lo2, hi2) = ranges[v]
             if lo2 < lo_ix or hi2 > lo_ix + w - 1:
                 lo2 = min(lo2, lo_ix)
                 hi2 = max(hi2, lo_ix + w - 1)
@@ -66,7 +66,7 @@ def solve(n, ns):
                 fail = True
                 break
             if ix in resolved_ranges:
-                rhi_ix, c, x = resolved_ranges[ix]
+                (rhi_ix, c, x) = resolved_ranges[ix]
                 tot_x ^= x
                 tot_subs += c
                 ix = rhi_ix + 1
@@ -80,17 +80,17 @@ def solve(n, ns):
     ix = 0
     tot_c = 0
     while ix < n:
-        rhi, c, _ = resolved_ranges[ix]
+        (rhi, c, _) = resolved_ranges[ix]
         ix = rhi + 1
         tot_c += c
     return tot_c
 
 
 def solve2(n, ns):
-    ranges, pq = create_heap(ns)
+    (ranges, pq) = create_heap(ns)
     resolved_ranges = {}
     while pq:
-        w, lo_ix, xs = heappop(pq)
+        (w, lo_ix, xs) = heappop(pq)
         print(len(pq), w, lo_ix, xs)
         if lo_ix in resolved_ranges:
             print(len(pq))
@@ -107,12 +107,12 @@ def solve2(n, ns):
                 ix += 1
                 continue
             if ix in resolved_ranges:
-                rhi_ix, c, x = resolved_ranges[ix]
+                (rhi_ix, c, x) = resolved_ranges[ix]
                 tot_x ^= x
                 tot_subs += c
                 ix = rhi_ix + 1
                 continue
-            lo2, hi2 = ranges[v]
+            (lo2, hi2) = ranges[v]
             lo2 = min(lo2, lo_ix)
             hi2 = max(hi2, lo_ix + w - 1)
             xs.add(v)
@@ -124,7 +124,7 @@ def solve2(n, ns):
     ix = 0
     tot_c = 0
     while ix < n:
-        rhi, c, _ = resolved_ranges[ix]
+        (rhi, c, _) = resolved_ranges[ix]
         ix = rhi + 1
         tot_c += c
     return tot_c
@@ -139,7 +139,7 @@ def test():
 
 
 def run():
-    n, = readInts()
+    (n,) = readInts()
     ns = list(readInts())
     print(solve(n, ns))
 

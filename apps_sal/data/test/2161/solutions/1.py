@@ -11,7 +11,6 @@ print(len(d))
 for x in d:
     a = d[x]
     a.sort(reverse=True)
-    # print(a)
     b = [a[0]]
     for i in range(1, len(a)):
         if a[i - 1][:len(a[i])] != a[i]:

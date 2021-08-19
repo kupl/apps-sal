@@ -1,8 +1,6 @@
 def solve(n, p):
     p = sorted(p, key=lambda x: (x[0], x[1], x[2]))
-    # print('solve', p)
-    p.append([10**20, 10**20, 10**20, 10**20])
-    # eliminate matching x coord ones:
+    p.append([10 ** 20, 10 ** 20, 10 ** 20, 10 ** 20])
     c = 1
     pn = []
     for i in range(1, len(p)):
@@ -16,14 +14,12 @@ def solve(n, p):
             else:
                 pn.append(p[i - 1])
             c = 1
-    # print(pn)
     for i in range(0, len(pn) - 1, 2):
         print(pn[i][3], pn[i + 1][3])
 
 
 def solve_2d(p1):
-    # print('solve_2d', p1)
-    p1.append([10**20, 10**20, 10**20, 10**20])
+    p1.append([10 ** 20, 10 ** 20, 10 ** 20, 10 ** 20])
     c = 1
     p1n = []
     i = 1

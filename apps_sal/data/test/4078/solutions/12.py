@@ -1,11 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = [list(map(int, input().split())) for i in range(m)]
 gl_ans = -1
 gl_mas = []
-
 for num_i in range(n):
-    ma = -1e7
+    ma = -10000000.0
     ans_m = []
     o = []
     for i in range(m):
@@ -15,28 +14,20 @@ for num_i in range(n):
             ans_m.append(i + 1)
     for i in range(n):
         o.append([i, 1])
-
     o.sort()
     cnt = 0
-    mi = 1e7
+    mi = 10000000.0
     for u in range(len(o)):
         if o[u][1] == -1:
             cnt -= 1
         elif o[u][1] == 0:
             cnt += 1
-        else:
-            if a[o[u][0]] + cnt < mi:
-                mi = a[o[u][0]] + cnt
-            # if a[o[u][0]] + cnt > ma:
-            #             #     ma = a[o[u][0]] + cnt
-            #             #     print(cnt)
+        elif a[o[u][0]] + cnt < mi:
+            mi = a[o[u][0]] + cnt
     ma = a[num_i]
-    # print(mi, ma, ans_m, o)
-
     if ma - mi > gl_ans:
         gl_ans = ma - mi
         gl_mas = ans_m
-
 print(gl_ans)
 print(len(gl_mas))
 print(*gl_mas)

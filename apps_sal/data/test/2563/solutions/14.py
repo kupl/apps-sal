@@ -1,7 +1,6 @@
 Q = int(input())
 for q in range(Q):
     s = input()
-
     chet = []
     nechet = []
     for i in s:
@@ -9,11 +8,8 @@ for q in range(Q):
             chet.append(int(i))
         else:
             nechet.append(int(i))
-    # chet.sort()
-    # nechet.sort()
     chet.append(10)
     nechet.append(10)
-
     i = 0
     j = 0
     ans = []
@@ -26,5 +22,4 @@ for q in range(Q):
         else:
             ans.append(nechet[j])
             j += 1
-
     print(*ans, sep='')

@@ -1,13 +1,12 @@
 def dp():
     dparr = [0] * len(sections)
     for i in range(len(sections) - 1, -1, -1):
-        _, curend, curcomfort = sections[i]
+        (_, curend, curcomfort) = sections[i]
         nextsection = i + 1
         try:
             while sections[nextsection][0] <= curend:
                 nextsection += 1
         except IndexError:
-            # Loop til end
             inc = curcomfort
         else:
             inc = curcomfort + dparr[nextsection]
@@ -20,9 +19,9 @@ n = int(input())
 zs = list(map(int, input().split()))
 sections = []
 seenstartz = set()
-first = {z: i for i, z in reversed(list(enumerate(zs)))}
-last = {z: i for i, z in enumerate(zs)}
-for start, z in enumerate(zs):
+first = {z: i for (i, z) in reversed(list(enumerate(zs)))}
+last = {z: i for (i, z) in enumerate(zs)}
+for (start, z) in enumerate(zs):
     if z in seenstartz:
         continue
     seenstartz.add(z)
@@ -38,6 +37,5 @@ for start, z in enumerate(zs):
         i += 1
     else:
         sections.append((start, end, comfort))
-
 ans = dp()
 print(ans)

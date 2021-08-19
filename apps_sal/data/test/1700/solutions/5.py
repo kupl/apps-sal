@@ -1,7 +1,7 @@
 input()
 s = input()
 r = b = 0
-op = []  # False=r
+op = []
 ans = []
 for c in s:
     if c == '(':
@@ -13,11 +13,10 @@ for c in s:
             op.append(True)
             b += 1
             ans.append('1')
+    elif op.pop():
+        b -= 1
+        ans.append('1')
     else:
-        if op.pop():
-            b -= 1
-            ans.append('1')
-        else:
-            r -= 1
-            ans.append('0')
+        r -= 1
+        ans.append('0')
 print(''.join(ans))
