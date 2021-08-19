@@ -1,5 +1,3 @@
-# Switch the endianness of integer n
-# Assume 64-bit unsigned integers
 import re
 import math
 
@@ -16,7 +14,7 @@ def switch_endian(n, bits):
     if length <= result:
         diff = result - length
         number_in_hex = number_in_hex.replace('0x', '0' * diff)
-        res_list = re.findall('[\da-z]{2}[^\da-z]*', number_in_hex)
+        res_list = re.findall('[\\da-z]{2}[^\\da-z]*', number_in_hex)
         res_list = res_list[::-1]
         number_in_hex = ''.join(res_list)
-        return(int('0x' + number_in_hex, 0))
+        return int('0x' + number_in_hex, 0)

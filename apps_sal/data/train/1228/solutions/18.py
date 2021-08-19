@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import Counter
 t = int(input())
 for _ in range(t):
@@ -6,7 +5,7 @@ for _ in range(t):
     x = Counter()
     y = Counter()
     for i in range(4 * n - 1):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         x.update([a])
         y.update([b])
     for i in x.keys():

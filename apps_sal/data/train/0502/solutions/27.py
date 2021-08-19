@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         size = Counter()
         color = defaultdict(int)
@@ -9,22 +10,17 @@ class Solution:
         def dfs(node, c):
             color[node] = c
             size[c] += 1
-            for nextNode, val in enumerate(graph[node]):
+            for (nextNode, val) in enumerate(graph[node]):
                 if val and nextNode not in color:
                     dfs(nextNode, c)
-
         c = 0
         for node in range(len(graph)):
             if node not in color:
                 dfs(node, c)
                 c += 1
-
-        # find node with unique color
         color_count = Counter()
         for node in initial:
             color_count[color[node]] += 1
-
-        # if unique color, ans is node color with greatest size else smallest index
         ans = -1
         for node in initial:
             c = color[node]

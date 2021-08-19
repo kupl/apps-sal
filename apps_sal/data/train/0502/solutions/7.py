@@ -1,5 +1,7 @@
 class Solution:
+
     def minMalwareSpread(self, graph, initial):
+
         def dfs(i):
             nodes.add(i)
             for j in range(len(graph[i])):
@@ -7,15 +9,13 @@ class Solution:
                     dfs(j)
         rank = {}
         initial = set(initial)
-        # rank, initial = collections.defaultdict(list), set(initial)
         for node in sorted(initial):
             nodes = set()
             dfs(node)
             rank[node] = nodes
         print(rank)
-
         passed = []
-        for k, v in list(rank.items()):
+        for (k, v) in list(rank.items()):
             count = 0
             for i in initial:
                 if i in v:
@@ -27,9 +27,3 @@ class Solution:
             return min(initial)
         else:
             return passed[0][0]
-
-        # return min(initial)
-
-        #     if nodes & initial == {node}:
-        #         rank[len(nodes)].append(node)
-        # return rank[max(rank)][0] if rank else min(initial)

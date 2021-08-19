@@ -1,10 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 pn = list(map(lambda x: int(x) - 1, input().split()))
 ls = [-1] * n
 for i in pn:
     ls[pn[i]] = i
-# print(ls)
-
 par = [i for i in range(n)]
 
 
@@ -27,14 +25,12 @@ def unite(x, y):
 
 
 for _ in range(m):
-    x, y = map(lambda x: int(x) - 1, input().split())
+    (x, y) = map(lambda x: int(x) - 1, input().split())
     unite(ls[x], ls[y])
-
 ans2 = 0
 for i in range(n):
     place1 = i
     place2 = ls[i]
-
     if find(place1) == find(place2):
         ans2 += 1
 print(ans2)

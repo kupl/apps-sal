@@ -1,11 +1,10 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     x = []
     y = []
     k = 4 * n - 1
     for i in range(k):
-        a, b = input().split()
+        (a, b) = input().split()
         x.append(a)
         y.append(b)
     x.sort()
