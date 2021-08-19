@@ -1,5 +1,4 @@
 def remove_smallest(numbers):
-    # raise NotImplementedError("TODO: remove_smallest")
     if len(numbers) == 0:
         return numbers
     x = min(numbers)

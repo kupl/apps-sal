@@ -7,4 +7,3 @@ def generate_number(squad, n):
         if b not in squad:
             return b
     return None
-    # TODO: complete

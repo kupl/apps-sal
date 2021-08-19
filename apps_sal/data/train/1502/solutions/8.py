@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     st = input().strip()
@@ -7,7 +6,7 @@ for _ in range(t):
     arr = input().split()
     for i in arr:
         st = st.replace(i, '')
-    if(len(st) == 0):
+    if len(st) == 0:
         print('1')
     else:
         print('0')

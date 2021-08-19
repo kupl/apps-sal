@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 i = 0
 while i < t:
@@ -15,7 +14,7 @@ while i < t:
             c += 1
             break
     if c == 0:
-        print("1")
+        print('1')
     else:
-        print("0")
+        print('0')
     i += 1

@@ -3,9 +3,8 @@ import numpy as np
 
 
 class Solution:
-    def minFallingPathSum(self, arr: List[List[int]]) -> int:
-        # This requires exploring all subpaths ? No I dont think so, It jus trquires an intelligent browse of the problem
 
+    def minFallingPathSum(self, arr: List[List[int]]) -> int:
         x = len(arr)
         new_count = np.zeros((x, x))
         new_count[0] = arr[0]
@@ -16,7 +15,5 @@ class Solution:
                     value_to_add = previous_line_maxes[1]
                 else:
                     value_to_add = previous_line_maxes[0]
-
                 new_count[k, index] = value_to_add + arr[k][index]
-
-        return(int(min(new_count[-1])))
+        return int(min(new_count[-1]))
