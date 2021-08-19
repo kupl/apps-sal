@@ -1,8 +1,4 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
-
 from bisect import bisect_left
-
 N = int(input())
 A = []
 for _ in range(N):
@@ -14,5 +10,4 @@ for _ in range(N):
         A.insert(idx, x)
     else:
         A[idx - 1] = x
-#    print(A,x)
-print((len(A)))
+print(len(A))

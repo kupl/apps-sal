@@ -6,12 +6,10 @@ input = sys.stdin.readline
 def read():
     N = int(input().strip())
     A = [int(input().strip()) for _ in range(N)]
-    return N, A
+    return (N, A)
 
 
-def solve(N, A, INF=10**9 + 1):
-    # LIS
-    # dp[i]: 長さiの最長増加部分列(A[i]<A[j])のうち、最も小さい数字
+def solve(N, A, INF=10 ** 9 + 1):
     dp = [INF for i in range(N)]
     for i in range(N):
         a = A[N - i - 1]
@@ -24,7 +22,7 @@ def __starting_point():
     inputs = read()
     outputs = solve(*inputs)
     if outputs is not None:
-        print(("%s" % str(outputs)))
+        print('%s' % str(outputs))
 
 
 __starting_point()

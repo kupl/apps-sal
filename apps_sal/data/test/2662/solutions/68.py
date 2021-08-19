@@ -1,8 +1,6 @@
 import bisect
 from collections import deque
-
 n = int(input())
-#c = []
 c = deque([])
 for i in range(n):
     a = int(input())
@@ -14,5 +12,4 @@ for i in range(n):
             c[ind - 1] = a
         else:
             c.appendleft(a)
-
 print(len(c))

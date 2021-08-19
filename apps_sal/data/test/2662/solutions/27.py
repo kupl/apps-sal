@@ -1,4 +1,3 @@
-# YouTube解説の方法（deque使わない）
 import sys
 input = sys.stdin.readline
 
@@ -17,7 +16,6 @@ def bisect_right_reverse(L, target):
 
 N = int(input())
 A = [int(input()) for _ in range(N)]
-
 L = []
 for i in range(N):
     k = bisect_right_reverse(L, A[i])
@@ -25,5 +23,4 @@ for i in range(N):
         L.append(A[i])
     else:
         L[k] = A[i]
-
 print(len(L))

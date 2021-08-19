@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import bisect
 
 
@@ -12,7 +10,6 @@ def main():
         for j in range(i + 1, N - 1):
             y = L[j]
             res += bisect.bisect_left(L, x + y) - j - 1
-
     print(res)
     return
 
