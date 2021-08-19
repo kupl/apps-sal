@@ -1,6 +1,6 @@
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
-        #li = list(filter(lambda x: 0<=x<len(arr), arr))
         pair = {p: dict() for p in (a, b, c)}
         n = len(arr)
         for i in range(n):
@@ -13,7 +13,7 @@ class Solution:
                         pair[p][i].add(j)
         ans = 0
         empty = set()
-        for i, js in list(pair[a].items()):
+        for (i, js) in list(pair[a].items()):
             for j in js:
                 ans += len(pair[b].get(j, empty) & pair[c].get(i, empty))
         return ans

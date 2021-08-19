@@ -1,5 +1,5 @@
-par = [0] * (100005)
-rank = [1] * (100005)
+par = [0] * 100005
+rank = [1] * 100005
 
 
 def find(x):
@@ -22,6 +22,7 @@ def union(x, y):
 
 
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         n = len(s)
         for i in range(n + 3):
@@ -29,13 +30,10 @@ class Solution:
             par[i] = i
         for i in pairs:
             union(i[0], i[1])
-            # print(par[:5])
-        # print(par[:10])
         poi = [0] * (n + 3)
-        # a=[0]*(n+3)
         for i in range(n):
             par[i] = find(par[i])
-        ans = [[]for i in range(n + 3)]
+        ans = [[] for i in range(n + 3)]
         for i in range(n):
             ans[par[i]].append(s[i])
         for i in range(n):

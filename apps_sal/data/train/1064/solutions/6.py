@@ -1,4 +1,3 @@
-# cook your dish here
 def check(arr):
     dic = {0: 'C', 1: 'H', 2: 'E', 3: 'F'}
     for i in range(4):
@@ -16,12 +15,10 @@ for _ in range(t):
     arr = input()
     arr = list(arr)
     i = len(arr)
-
     if i < 4:
         for k in range(i):
             if arr[k] == '?':
                 arr[k] = 'A'
-
     while i > 3:
         if '?' in arr[i - 4:i]:
             if check(arr[i - 4:i]) == -1:
@@ -34,7 +31,6 @@ for _ in range(t):
     for k in range(len(arr)):
         if arr[k] == '?':
             arr[k] = 'A'
-
     res = ''
     for ele in arr:
         res += ele

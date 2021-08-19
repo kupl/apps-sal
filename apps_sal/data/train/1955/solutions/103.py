@@ -1,5 +1,7 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
+
         def dfs(root, res):
             if letters[root] == 1:
                 return
@@ -7,10 +9,9 @@ class Solution:
             res.append(root)
             for node in graph[root]:
                 dfs(node, res)
-
         letters = [0] * len(s)
         graph = [[] for _ in range(len(s))]
-        for a, b in pairs:
+        for (a, b) in pairs:
             graph[a].append(b)
             graph[b].append(a)
         res = list(s)
@@ -23,8 +24,6 @@ class Solution:
                     nodes.append(res[node])
                 nodes.sort()
                 visited.sort()
-                # print(nodes)
-                # print(visited)
-                for node, index in zip(nodes, visited):
+                for (node, index) in zip(nodes, visited):
                     res[index] = node
         return ''.join(res)

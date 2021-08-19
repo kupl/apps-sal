@@ -12,22 +12,16 @@ class Solution:
         self.ls = list(s)
         self.visited = set()
         self.d = [[] for _ in range(len(self.ls))]
-
-        for i, j in pairs:
+        for (i, j) in pairs:
             self.d[i].append(j)
             self.d[j].append(i)
-
         for i in range(len(self.ls)):
             if i not in self.visited:
                 self.tmp = []
                 self.idx = []
                 self.dfs(i)
-
                 sorted_tmp = sorted(self.tmp)
                 sorted_idx = sorted(self.idx)
-                # print(sorted_tmp, sorted_idx,\"CONNECTED\", self.visited)
-
                 for index in range(len(sorted_idx)):
                     self.ls[sorted_idx[index]] = sorted_tmp[index]
-
         return ''.join(self.ls)

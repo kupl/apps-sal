@@ -1,5 +1,7 @@
 class Solution:
+
     def backspaceCompare(self, S: str, T: str) -> bool:
+
         def test(s):
             stack = []
             for l in s:
@@ -9,5 +11,4 @@ class Solution:
                 else:
                     stack.append(l)
             return ''.join(stack)
-
         return test(S) == test(T)

@@ -3,7 +3,6 @@ import math
 
 def primes(n):
     maxPrime = -1
-
     while n % 2 == 0:
         maxPrime = 2
         n >>= 1
@@ -13,7 +12,6 @@ def primes(n):
             n = n / i
     if n > 2:
         maxPrime = n
-
     return int(maxPrime)
 
 
@@ -28,7 +26,6 @@ def prtable(n):
 
 
 pr = prtable(100000)
-
 for i in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -40,8 +37,6 @@ for i in range(int(input())):
             d[pr[a[i]]] = 1
     ans = 0
     maxx = 0
-    # print(d)
-
     for i in d:
         if d[i] > ans:
             ans = d[i]
@@ -50,5 +45,4 @@ for i in range(int(input())):
             if maxx < i:
                 maxx = i
                 ans = d[i]
-
     print(maxx)
