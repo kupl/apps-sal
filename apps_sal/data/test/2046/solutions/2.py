@@ -5,7 +5,7 @@ cur = n
 for i in range(0, n):
     x = num[i]
     used[x] = True
-    while(used[cur]):
+    while used[cur]:
         print(cur, end=' ')
         cur -= 1
     print('')

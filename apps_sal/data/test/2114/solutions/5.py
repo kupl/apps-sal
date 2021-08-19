@@ -24,6 +24,5 @@ else:
                 out[i][j] = i * i + j + 1
             for j in range(i):
                 out[j][i] = (i + 1) * (i + 1) - j
-
     for l in out:
         print(' '.join(map(lambda x: str(n * n + 1 - x), l)))

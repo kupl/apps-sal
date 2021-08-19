@@ -9,7 +9,7 @@ for i in n:
     n1.append(a)
 for i in range(len(s)):
     if not s[i]:
-        k += (n1[len(n) - len(s) + i + 1] - n1[i])
+        k += n1[len(n) - len(s) + i + 1] - n1[i]
     else:
-        k += (len(n) - len(s) + i + 1 - n1[len(n) - len(s) + i + 1] - (i - n1[i]))
+        k += len(n) - len(s) + i + 1 - n1[len(n) - len(s) + i + 1] - (i - n1[i])
 print(k)

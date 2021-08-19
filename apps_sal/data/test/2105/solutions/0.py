@@ -1,8 +1,11 @@
 input = __import__('sys').stdin.readline
-def MIS(): return map(int, input().split())
 
 
-n, m = MIS()
+def MIS():
+    return map(int, input().split())
+
+
+(n, m) = MIS()
 A = input().split()
 B = input().split()
 for TEST in range(int(input())):

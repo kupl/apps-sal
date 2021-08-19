@@ -12,5 +12,4 @@ for z in range(0, n):
             if a[l] < a[i]:
                 a[l] += 1
         a[i] = 1
-
 print(answer)

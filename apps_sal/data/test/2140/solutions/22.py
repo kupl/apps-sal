@@ -10,8 +10,8 @@ def main():
         if i > 0:
             b[i] += b[i - 1]
         if b[i] % 2 == 1:
-            s[i], s[len(s) - i - 1] = s[len(s) - i - 1], s[i]
-    return "".join(s)
+            (s[i], s[len(s) - i - 1]) = (s[len(s) - i - 1], s[i])
+    return ''.join(s)
 
 
 def __starting_point():

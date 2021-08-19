@@ -1,13 +1,12 @@
 import sys
 input = sys.stdin.readline
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [int(i) for i in input().split()]
 g = [[] for _ in range(n)]
 for i in range(n - 1):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     g[u - 1].append(v - 1)
     g[v - 1].append(u - 1)
-
 stack = [0]
 done = [False] * n
 par = [0] * n
@@ -49,10 +48,10 @@ def good(guess):
     for i in order[::-1]:
         if a[i] < guess:
             continue
-        opt, secondOpt = 0, 0
+        (opt, secondOpt) = (0, 0)
         total = 1
         for j in g[i]:
-            val, size = 0, 0
+            (val, size) = (0, 0)
             if par[j] == i:
                 val = cnt[j]
                 size = sub[j]
@@ -61,12 +60,10 @@ def good(guess):
                 size = n - sub[i]
             if val == size:
                 total += val
-            else:
-                if opt < val:
-                    opt, secondOpt = val, opt
-                elif secondOpt < val:
-                    secondOpt = val
-
+            elif opt < val:
+                (opt, secondOpt) = (val, opt)
+            elif secondOpt < val:
+                secondOpt = val
         for j in g[i]:
             if par[j] == i:
                 up[j] = total
@@ -79,9 +76,9 @@ def good(guess):
     for i in range(n):
         if a[i] < guess:
             continue
-        total, opt = 1, 0
+        (total, opt) = (1, 0)
         for j in g[i]:
-            val, size = 0, 0
+            (val, size) = (0, 0)
             if par[j] == i:
                 val = cnt[j]
                 size = sub[j]
@@ -97,7 +94,7 @@ def good(guess):
     return False
 
 
-l, r = 0, max(a)
+(l, r) = (0, max(a))
 while l < r:
     mid = (l + r + 1) // 2
     if good(mid):

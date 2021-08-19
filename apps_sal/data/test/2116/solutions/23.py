@@ -1,4 +1,4 @@
-user, item, total = list(map(int, input().split()))
+(user, item, total) = list(map(int, input().split()))
 items = list(map(int, input().split()))
 to = 0
 for i in range(user):

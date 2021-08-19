@@ -1,4 +1,4 @@
-w, l = list(map(int, input().split()))
+(w, l) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 for i in range(1, w - 1):
     a[i] = a[i] + a[i - 1]

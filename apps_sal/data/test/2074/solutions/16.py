@@ -1,11 +1,9 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = []
-
     for _ in range(n):
         a = list(map(int, input().split()))
         l.append(min(a))
-
     print(max(l))
 
 

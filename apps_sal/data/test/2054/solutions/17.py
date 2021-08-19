@@ -1,5 +1,4 @@
 def solve(a, b, mid):
-
     a -= mid
     b -= mid
     if a < 0 or b < 0:
@@ -12,7 +11,7 @@ def solve(a, b, mid):
 
 t = int(input())
 for _ in range(t):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ok = 0
     ng = 10 ** 10
     while abs(ok - ng) > 1:

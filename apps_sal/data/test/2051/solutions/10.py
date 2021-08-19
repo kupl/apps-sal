@@ -23,11 +23,11 @@ def dfs(v, visited, edges, colors):
     return len(comp) - max_c
 
 
-n, m, k = [int(x) for x in input().split()]
-colors = {i + 1: int(x) for i, x in enumerate(input().split())}
+(n, m, k) = [int(x) for x in input().split()]
+colors = {i + 1: int(x) for (i, x) in enumerate(input().split())}
 edges = dict()
 for i in range(m):
-    v1, v2 = [int(x) for x in input().split()]
+    (v1, v2) = [int(x) for x in input().split()]
     if v1 in edges:
         edges[v1].append(v2)
     else:
@@ -36,12 +36,9 @@ for i in range(m):
         edges[v2].append(v1)
     else:
         edges[v2] = [v1]
-
 visited = set()
 answer = 0
 for i in range(1, n + 1):
     if i not in visited:
         answer += dfs(i, visited, edges, colors)
-
-
 print(answer)

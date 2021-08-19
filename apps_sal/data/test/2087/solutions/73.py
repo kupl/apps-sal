@@ -1,6 +1,5 @@
 m = 998244353
-a, b, c = map(int, input().split())
-
+(a, b, c) = map(int, input().split())
 a %= m
 b %= m
 c %= m

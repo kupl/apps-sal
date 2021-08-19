@@ -16,6 +16,6 @@ def solve(n, m, w, l):
     print(low)
 
 
-n, m, w = map(int, input().split())
+(n, m, w) = map(int, input().split())
 l = [*map(int, input().split())]
 solve(n, m, w, l)

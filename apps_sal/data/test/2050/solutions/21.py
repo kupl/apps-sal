@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 print((6 * n - 1) * k)
 for a in range(n):
     val = 6 * a

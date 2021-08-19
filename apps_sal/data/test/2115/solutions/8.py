@@ -3,7 +3,6 @@ n = input()
 n = int(n)
 lst = input()
 lst = lst.split()
-
 for a in lst:
     stk.append(int(a))
     while len(stk) > 1:
@@ -16,4 +15,4 @@ for a in lst:
             break
 print(len(stk))
 for a in stk:
-    print(a, end=" ")
+    print(a, end=' ')

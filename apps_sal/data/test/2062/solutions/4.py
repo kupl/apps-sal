@@ -11,6 +11,6 @@ for i in l:
     s = 0
     for j in range(i, 200001, i):
         s += (l1[min(200000, i + j - 1)] - l1[j - 1]) * j
-    if(s > m):
+    if s > m:
         m = s
 print(m)

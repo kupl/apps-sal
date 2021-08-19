@@ -1,5 +1,4 @@
 import sys
-
 [n, m] = list(map(int, sys.stdin.readline().strip().split(' ')))
 s = list(sys.stdin.readline().strip().split(' '))
 t = list(sys.stdin.readline().strip().split(' '))

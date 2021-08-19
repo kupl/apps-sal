@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.rank = [0 for i in range(n)]
@@ -27,6 +28,7 @@ def __starting_point():
 
 
 class graph:
+
     def __init__(self, n):
         self.size = n
         self.adj = [[] for _ in range(n)]
@@ -53,16 +55,15 @@ class graph:
 
 
 def __starting_point():
-    n, m, k = [int(x) for x in input().split()]
+    (n, m, k) = [int(x) for x in input().split()]
     uf = UnionFind(n)
     color = [int(x) for x in input().split()]
     for _ in range(m):
-        u, v = [int(x) for x in input().split()]
+        (u, v) = [int(x) for x in input().split()]
         uf.union(u - 1, v - 1)
     collection = [[] for i in range(n)]
     for i in range(n):
         collection[uf.find(i)].append(i)
-
     ans = 0
     for sock_set in collection:
         if not sock_set:
@@ -76,7 +77,6 @@ def __starting_point():
             except:
                 count[color[sock]] = 1
         ans += len(sock_set) - set_max
-
     print(ans)
 
 

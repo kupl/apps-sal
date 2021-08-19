@@ -25,12 +25,12 @@ def fact(n):
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
 for i in ' ' * int(input()):
-    a, m = map(int, input().split())
+    (a, m) = map(int, input().split())
     g = gcd(a, m)
     aa = a // g
     mm = m // g
@@ -40,6 +40,6 @@ for i in ' ' * int(input()):
         if i not in M:
             M.append(i)
     for i in M:
-        mm *= (i - 1)
+        mm *= i - 1
         mm //= i
     print(mm)

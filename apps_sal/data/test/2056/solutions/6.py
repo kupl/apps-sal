@@ -12,5 +12,5 @@ for i in range(n):
         if ls[j]:
             x += 1 << j
             ls[j] -= 1
-    ans += x**2
+    ans += x ** 2
 print(ans)

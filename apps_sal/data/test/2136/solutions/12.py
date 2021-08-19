@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 t = int(input())
@@ -8,7 +11,7 @@ for _ in range(t):
     s = []
     for _ in range(n):
         s.append(input())
-    x0, x1, x2, x3 = int(s[0][1]), int(s[1][0]), int(s[-1][-2]), int(s[-2][-1])
+    (x0, x1, x2, x3) = (int(s[0][1]), int(s[1][0]), int(s[-1][-2]), int(s[-2][-1]))
     ans = []
     if x0 == 1:
         ans.append((1, 2))

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 min1 = -1
 for i in range(n):
     help = list(map(int, input().split()))

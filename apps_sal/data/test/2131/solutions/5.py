@@ -1,7 +1,7 @@
 n = int(input())
 g = [0 for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     g[a - 1] += 1
     g[b - 1] += 1
 q = 0

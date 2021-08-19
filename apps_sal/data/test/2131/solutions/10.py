@@ -4,7 +4,7 @@ f = [0] * (n - 1)
 t = [0] * (n - 1)
 co = [0] * n
 for i in range(n - 1):
-    f[i], t[i] = map(int, input().split())
+    (f[i], t[i]) = map(int, input().split())
     co[f[i] - 1] += 1
     co[t[i] - 1] += 1
 mid = 0
@@ -16,11 +16,11 @@ for i in range(n):
         if mid == 0:
             mid = i + 1
         else:
-            print("No")
+            print('No')
             flag = False
             break
 if flag:
-    print("Yes")
+    print('Yes')
     if mid != 0:
         print(len(en))
         for i in range(len(en)):

@@ -1,6 +1,6 @@
 n = int(input())
 v = int(input()[2:])
-p = [1e9]
+p = [1000000000.0]
 d = k = 0
 for i in range(n - 1):
     s = input()
@@ -22,7 +22,7 @@ for i in range(n - 1):
     if t == 4:
         d = 0
     if t == 5:
-        p = [1e9]
+        p = [1000000000.0]
     if t == 6:
         d += 1
 print(k)

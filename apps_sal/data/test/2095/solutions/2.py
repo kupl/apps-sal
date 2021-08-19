@@ -1,7 +1,5 @@
-
 import math
 import sys
-
 n = int(input())
 ans = 0
 c = []
@@ -16,6 +14,6 @@ for i in range(0, n):
         c.append(i)
 print(ans)
 for j in c:
-    print(j + 1, end=" ")
+    print(j + 1, end=' ')
 if c != []:
     print()

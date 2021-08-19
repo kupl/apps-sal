@@ -3,19 +3,22 @@ from collections import defaultdict as dd, Counter
 from math import ceil
 from math import gcd
 import sys
-INF = 10**20
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+INF = 10 ** 20
+MOD = 10 ** 9 + 7
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 def solve():
-    a, b = I()
+    (a, b) = I()
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     print(min(a, (a + b) // 3))
 
 
-t, = I()
+(t,) = I()
 while t:
     t -= 1
     solve()

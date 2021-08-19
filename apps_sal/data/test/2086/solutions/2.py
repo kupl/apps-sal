@@ -1,6 +1,6 @@
 n = int(input())
 L = list(map(int, input().split()))
-s, f = list(map(int, input().split()))
+(s, f) = list(map(int, input().split()))
 count = 0
 count_max = 0
 ans = 0

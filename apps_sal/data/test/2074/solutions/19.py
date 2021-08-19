@@ -10,15 +10,10 @@ for i in range(n):
         row[k] = int(row[k])
     town.append(row)
     minpricestreet.append(min(row))
-
 maxposprice = 0
-
-for i in (list(range(n))):
+for i in list(range(n)):
     if minpricestreet[i] > maxposprice:
         street_num = i
         maxposprice = minpricestreet[i]
-
 price = min(town[street_num])
-
-
 print(price)

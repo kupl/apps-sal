@@ -1,5 +1,6 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, k = R()
+(n, k) = R()
 print(sum(sorted(R())[:k]))

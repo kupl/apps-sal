@@ -1,15 +1,15 @@
 def main():
     from collections import Counter
-    n, m, _ = list(map(int, input().split()))
+    (n, m, _) = list(map(int, input().split()))
     cc = list(map(int, input().split()))
-    pairs, avail = [[] for _ in range(n)], [True] * n
+    (pairs, avail) = ([[] for _ in range(n)], [True] * n)
     for _ in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         pairs[a - 1].append(b - 1)
         pairs[b - 1].append(a - 1)
-    for a, f in enumerate(avail):
+    for (a, f) in enumerate(avail):
         if f:
-            stack, cnt, avail[a] = [a], Counter(), False
+            (stack, cnt, avail[a]) = ([a], Counter(), False)
             while stack:
                 a = stack.pop()
                 cnt[cc[a]] += 1

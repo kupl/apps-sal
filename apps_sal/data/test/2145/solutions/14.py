@@ -1,21 +1,21 @@
 def main():
-    answer = ""
+    answer = ''
     for query in range(int(input())):
         ans = None
-        x, y = list(map(int, input().split(' ')))
+        (x, y) = list(map(int, input().split(' ')))
         if x == 1:
             if y in {1}:
-                ans = "YES"
+                ans = 'YES'
             else:
-                ans = "NO"
+                ans = 'NO'
         elif x == 2 or x == 3:
             if y in {1, 2, 3}:
-                ans = "YES"
+                ans = 'YES'
             else:
-                ans = "NO"
+                ans = 'NO'
         else:
-            ans = "YES"
-        answer += str(ans) + "\n"
+            ans = 'YES'
+        answer += str(ans) + '\n'
     print(answer)
 
 

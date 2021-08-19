@@ -6,7 +6,6 @@ def get_max_s(s):
     i = 0
     l = 0
     count = 0
-
     while i < n:
         if s[i:i + 4] == 'bear':
             count += (n - (i + 4) + 1) * (i - l + 1)
@@ -14,7 +13,6 @@ def get_max_s(s):
             i += 4
             continue
         i += 1
-
     return count
 
 
@@ -25,10 +23,10 @@ def __starting_point():
 
 
 class TestFoo(unittest.TestCase):
+
     def test_world(self):
         got = get_max_s('bearbtear')
         self.assertEqual(got, 6)
-
         got = get_max_s('bearaabearc')
         self.assertEqual(got, 20)
 

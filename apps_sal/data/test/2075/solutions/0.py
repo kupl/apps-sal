@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = input()
 mod = 10 ** 9 + 7
 c = b = 0

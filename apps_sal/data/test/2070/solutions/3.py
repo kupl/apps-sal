@@ -1,6 +1,5 @@
 A = list(map(int, input().split()))
 L = [ord(i) - ord('a') for i in input()]
-
 score = ans = 0
 D = [dict() for i in range(26)]
 for i in L:
@@ -11,5 +10,4 @@ for i in L:
         D[i][score] = 1
     else:
         D[i][score] += 1
-
 print(ans)

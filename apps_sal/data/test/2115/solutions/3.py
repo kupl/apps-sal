@@ -10,15 +10,14 @@ while True:
         if i == n:
             break
         x = a[i]
+    elif x == stack[-1]:
+        del stack[-1]
+        x += 1
     else:
-        if x == stack[-1]:
-            del stack[-1]
-            x += 1
-        else:
-            stack.append(x)
-            i += 1
-            if i == n:
-                break
-            x = a[i]
+        stack.append(x)
+        i += 1
+        if i == n:
+            break
+        x = a[i]
 print(len(stack))
-print(" ".join([str(x) for x in stack]))
+print(' '.join([str(x) for x in stack]))

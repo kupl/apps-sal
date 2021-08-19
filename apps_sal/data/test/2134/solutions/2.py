@@ -15,7 +15,6 @@ for bc in a:
         lis[bc] += 1
     except:
         lis[bc] = 1
-
 bcs = bitcode(lis)
 if len(bcs) == 0:
     print(0)
@@ -26,7 +25,7 @@ else:
             bsum += b[i]
             continue
         for bc in bcs:
-            if (a[i] & ~bc) == 0:
+            if a[i] & ~bc == 0:
                 bsum += b[i]
                 break
     print(bsum)

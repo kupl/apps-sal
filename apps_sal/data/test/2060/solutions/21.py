@@ -7,8 +7,8 @@ def main(x):
         else:
             a += 1
         if b < 0:
-            return "NO"
-    return "YES"
+            return 'NO'
+    return 'YES'
 
 
 def __starting_point():

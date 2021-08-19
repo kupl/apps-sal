@@ -1,14 +1,15 @@
 from collections import deque
-def R(): return map(int, input().split())
 
 
-n, m, s, t = R()
+def R():
+    return map(int, input().split())
 
+
+(n, m, s, t) = R()
 graph = [set() for _ in range(n)]
 edges = set()
-
 for _ in range(m):
-    u, v = R()
+    (u, v) = R()
     graph[u - 1].add(v - 1)
     graph[v - 1].add(u - 1)
     edges.add((u - 1, v - 1))
@@ -32,8 +33,7 @@ def bfs(v):
 ds = bfs(s - 1)
 dt = bfs(t - 1)
 dist = bfs(s - 1)[t - 1]
-
-res = (n * (n - 1)) // 2 - m
+res = n * (n - 1) // 2 - m
 for i in range(n):
     for j in range(i + 1, n):
         if (i, j) not in edges:
@@ -41,5 +41,4 @@ for i in range(n):
                 res -= 1
             elif ds[j] + dt[i] + 1 < dist:
                 res -= 1
-
 print(res)

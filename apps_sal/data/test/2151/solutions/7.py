@@ -1,9 +1,7 @@
 n = int(input())
-
 for _ in range(n):
     d = int(input())
     s = input()
-
     if len(s) == 1:
         print('NO')
     elif len(s) == 2:

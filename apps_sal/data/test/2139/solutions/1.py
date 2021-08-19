@@ -21,5 +21,4 @@ else:
         if b:
             break
         ans += len(s) - start - 3
-
     print(ans)

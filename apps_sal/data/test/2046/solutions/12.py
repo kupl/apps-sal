@@ -1,4 +1,4 @@
-__author__ = "Ryabchun Vladimir"
+__author__ = 'Ryabchun Vladimir'
 
 
 class Stack:
@@ -47,7 +47,7 @@ class Stack:
         :return: Last element from the stack
         """
         if self.length == 0:
-            raise IndexError("Stack is empty")
+            raise IndexError('Stack is empty')
         else:
             self.length -= 1
             return self.__stack.pop()
@@ -59,7 +59,7 @@ class Stack:
         :return: Last element from the stack
         """
         if self.length == 0:
-            raise IndexError("Stack is empty")
+            raise IndexError('Stack is empty')
         else:
             return self.__stack[-1]
 

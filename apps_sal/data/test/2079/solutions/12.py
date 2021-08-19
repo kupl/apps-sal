@@ -9,9 +9,8 @@ for i in range(n):
     temp1.append(a[i])
 s = input()
 temp1.sort(reverse=True)
-
 for i in s:
-    if(i == '0'):
+    if i == '0':
         x = temp1.pop()
         print(z[x], end=' ')
         temp2.append(x)

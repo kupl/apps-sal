@@ -1,10 +1,13 @@
 def main():
-    mode = "filee"
-    if mode == "file":
-        f = open("test.txt", "r")
+    mode = 'filee'
+    if mode == 'file':
+        f = open('test.txt', 'r')
 
-    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
-    def gets(): return [str(x) for x in (f.readline() if mode == "file" else input()).split()]
+    def get():
+        return [int(x) for x in (f.readline() if mode == 'file' else input()).split()]
+
+    def gets():
+        return [str(x) for x in (f.readline() if mode == 'file' else input()).split()]
     num = 100005
     w = get()
     [g] = gets()
@@ -20,8 +23,7 @@ def main():
         if p[s[i]][ord(g[i]) - 97] != 0:
             count += p[s[i]][ord(g[i]) - 97]
     print(count)
-
-    if mode == "file":
+    if mode == 'file':
         f.close()
 
 

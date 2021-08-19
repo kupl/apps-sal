@@ -1,6 +1,6 @@
 a = input().rstrip()
 b = input().rstrip()
-n, m = len(a), len(b)
+(n, m) = (len(a), len(b))
 q = [0] * (m + 1)
 for i in range(1, m + 1):
     q[i] = q[i - 1] + int(b[i - 1])

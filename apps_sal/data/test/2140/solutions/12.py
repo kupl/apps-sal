@@ -14,4 +14,4 @@ for i in range(n):
         l2.append(s[i])
     else:
         l2.append(s[n - i - 1])
-print("".join(l2))
+print(''.join(l2))

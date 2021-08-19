@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split(' ')))
-
 sums = {}
 for i in a:
     for j in a:

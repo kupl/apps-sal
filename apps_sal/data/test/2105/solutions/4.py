@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 nsl = list(map(str, input().split()))
 msl = list(map(str, input().split()))
 q = int(input())

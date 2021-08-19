@@ -19,17 +19,16 @@ for f in range(int(input())):
         print(c)
         for x in cs:
             print(*x)
-    else:
-        if grid[-1][-2] == grid[-2][-1]:
-            print(1)
-            if grid[0][1] == grid[-1][-2]:
-                print(1, 2)
-            else:
-                print(2, 1)
+    elif grid[-1][-2] == grid[-2][-1]:
+        print(1)
+        if grid[0][1] == grid[-1][-2]:
+            print(1, 2)
         else:
-            print(2)
             print(2, 1)
-            if grid[-2][-1] == grid[0][1]:
-                print(n - 1, n)
-            else:
-                print(n, n - 1)
+    else:
+        print(2)
+        print(2, 1)
+        if grid[-2][-1] == grid[0][1]:
+            print(n - 1, n)
+        else:
+            print(n, n - 1)

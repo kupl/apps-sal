@@ -10,11 +10,11 @@ for i in range(len(w)):
 i = 0
 w1 = [0] * l
 j = 0
-wkend = " "
+wkend = ' '
 for k in range(l):
     if k == l - 1:
-        wkend = "\n"
-    if pas[k] == "0":
+        wkend = '\n'
+    if pas[k] == '0':
         wkindex = d[seat[i]] + 1
         print(wkindex, end=wkend)
         j += 1

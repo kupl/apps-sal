@@ -2,7 +2,7 @@ N = int(input())
 Nums = list(map(int, input().split()))
 Good = [1] * (N * 2)
 Amounts = [0] * 100
-Mono, Duo = 0, 0
+(Mono, Duo) = (0, 0)
 for Num in Nums:
     if Amounts[Num] == 0:
         Mono += 1
@@ -33,5 +33,5 @@ for i in range(2 * N):
                 Good[i] = 2
             Duo_Flag = not Duo_Flag
         Counts[Num] += 1
-print((Duo + (Mono // 2)) * (Duo + ((Mono + 1) // 2)))
+print((Duo + Mono // 2) * (Duo + (Mono + 1) // 2))
 print(*Good)

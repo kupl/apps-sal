@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    x, y = [int(x) for x in input().split(' ')]
+    (x, y) = [int(x) for x in input().split(' ')]
     if x == 1:
         if y == 1:
             print('YES')

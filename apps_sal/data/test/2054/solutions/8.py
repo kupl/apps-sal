@@ -4,8 +4,8 @@ from collections import *
 import sys
 input = sys.stdin.readline
 t = int(input())
-while(t):
+while t:
     t -= 1
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     z = (a + b) // 3
     print(min(a, b, z))

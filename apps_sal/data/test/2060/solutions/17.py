@@ -15,6 +15,6 @@ n = int(input())
 for _ in range(n):
     x = int(input())
     if check(x):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-s, f = map(int, input().split())
+(s, f) = map(int, input().split())
 s -= 1
 f -= 1
 best_sum = sum(a[s:f])

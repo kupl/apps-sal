@@ -1,7 +1,7 @@
 n = int(input())
 S = [int(x) for x in input().split()]
 s = tuple(S)
-c = tuple(int(x) for x in input().split())
+c = tuple((int(x) for x in input().split()))
 S.sort()
 
 
@@ -16,7 +16,7 @@ def rank(x):
     l = 0
     r = n - 1
     while l < r:
-        mid = (l + r) >> 1
+        mid = l + r >> 1
         if S[mid] < x:
             l = mid + 1
         else:
@@ -24,7 +24,7 @@ def rank(x):
     return l
 
 
-rk = tuple(rank(x) for x in s)
+rk = tuple((rank(x) for x in s))
 Min = [10000000000 for i in range(30000)]
 
 
@@ -32,7 +32,7 @@ def insert(x, l, r, p, v):
     Min[x] = min(Min[x], v)
     if l == r:
         return
-    mid = (l + r) >> 1
+    mid = l + r >> 1
     if p > mid:
         insert(x << 1 | 1, mid + 1, r, p, v)
     else:
@@ -42,7 +42,7 @@ def insert(x, l, r, p, v):
 def query(x, l, r, L, R):
     if l >= L and r <= R:
         return Min[x]
-    mid = (l + r) >> 1
+    mid = l + r >> 1
     ans = 10000000000
     if L <= mid:
         ans = min(ans, query(x << 1, l, mid, L, R))

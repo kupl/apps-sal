@@ -7,13 +7,13 @@ def input():
 
 
 def solve():
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     was = set()
     Q = [None] * q
     all = [0] * (2 * q)
     for i in range(q):
-        x, y, t = input().split()
-        x, y = int(x), int(y)
+        (x, y, t) = input().split()
+        (x, y) = (int(x), int(y))
         Q[i] = (x, y, t)
         all[2 * i] = x
         all[2 * i + 1] = y
@@ -21,7 +21,7 @@ def solve():
     sz = 2 * q
     V = [0] * (2 * sz)
     H = [0] * (2 * sz)
-    for x, y, t in Q:
+    for (x, y, t) in Q:
         if (x, y) in was:
             print(0)
         else:
@@ -30,7 +30,7 @@ def solve():
                 TA = H
                 TB = V
             else:
-                x, y = y, x
+                (x, y) = (y, x)
                 TA = V
                 TB = H
             v = bisect(all, y) - 1 + sz

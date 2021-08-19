@@ -8,7 +8,6 @@ else:
         pi = int(s[i - 2])
         adj[i].append(pi)
         adj[pi].append(i)
-
     num = 1
     curr = [1]
     nextcurr = []
@@ -24,19 +23,17 @@ else:
                     num += 1
         curr = nextcurr
         nextcurr = []
-
     nl = {}
     nlvals = {}
     for v in disco[::-1]:
-        nl[v] = max(sum(nl.get(w, 0) for w in adj[v]), 1)
+        nl[v] = max(sum((nl.get(w, 0) for w in adj[v])), 1)
         nlvals[nl[v]] = nlvals.get(nl[v], 0) + 1
     colors = {}
     leaves = nlvals[1]
     colors[1] = leaves
     for c in range(2, leaves + 1):
         colors[c] = colors[c - 1] + nlvals.get(c, 0)
-
-    ans = ""
+    ans = ''
     j = 1
     for i in range(1, n + 1):
         while colors[j] < i:

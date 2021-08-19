@@ -18,5 +18,4 @@ for i in range(n):
         time = time + curpos + 1
         del pos[curpos]
         pos.insert(0, need[j])
-
 print(time)

@@ -3,6 +3,7 @@ from collections import Counter
 
 
 class Node:
+
     def __init__(self, val):
         self.val = val
         self.forw = set()
@@ -18,8 +19,6 @@ c = 2
 for x in map(int, stdin.readline().split()):
     arr[x - 1].forw.add(c)
     c += 1
-
-
 dct = Counter()
 lst = [1]
 while len(lst):
@@ -37,7 +36,6 @@ while len(lst):
         k = arr[lst.pop() - 1].cou
         if len(lst):
             arr[lst[-1] - 1].cou += k
-
 y = 1
 for _ in range(n):
     while not dct[y]:

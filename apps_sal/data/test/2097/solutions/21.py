@@ -6,8 +6,6 @@ for _ in range(int(input())):
         if L[i] == 0:
             ans += 1
             L[i] = 1
-
     if sum(L) == 0:
         ans += 1
-
     print(ans)

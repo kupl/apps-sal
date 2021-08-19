@@ -12,7 +12,7 @@ for letter in y:
 energy = 0
 money = 0
 for i in range(len(pylons) - 1):
-    if pylons[i + 1] > (pylons[i] + energy):
+    if pylons[i + 1] > pylons[i] + energy:
         money += pylons[i + 1] - (pylons[i] + energy)
         energy = 0
     else:

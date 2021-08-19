@@ -1,8 +1,8 @@
-'''
-Created on ٠١‏/٠١‏/٢٠١٥
+"""
+Created on ٠١\u200f/٠١\u200f/٢٠١٥
 
 @author: mohamed265
-'''
+"""
 t = input().split()
 n = int(t[0])
 m = int(t[1])

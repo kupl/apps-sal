@@ -10,21 +10,16 @@ def bfs(beg, deeps, d):
     return
 
 
-n, m, s, t = list(map(int, input().split()))
-
+(n, m, s, t) = list(map(int, input().split()))
 d = [[] for i in range(n + 1)]
-
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     d[x].append(y)
     d[y].append(x)
-
 froms = [0 for i in range(n + 1)]
 fromt = [0 for i in range(n + 1)]
-
 bfs(s, froms, d)
 bfs(t, fromt, d)
-
 ans = 0
 for i in range(1, n + 1):
     for j in range(i + 1, n + 1):

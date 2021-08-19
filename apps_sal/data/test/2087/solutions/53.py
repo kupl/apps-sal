@@ -1,4 +1,4 @@
-A, B, C = list(map(int, input().split()))
+(A, B, C) = list(map(int, input().split()))
 total_c = (1 + C) * C // 2
 total_b = (1 + B) * B // 2
 total_a = (1 + A) * A // 2

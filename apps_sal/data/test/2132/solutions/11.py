@@ -3,9 +3,7 @@ def Task485D():
     is_outstrip = 0
     err_count = 0
     event_speed_limit = []
-
     event_count = int(input())
-
     for a in range(event_count):
         ev = list(map(int, input().split()))
         if ev[0] == 1:
@@ -16,26 +14,20 @@ def Task485D():
                     err_count += 1
                 else:
                     break
-
         if ev[0] == 2:
             err_count += is_outstrip
             is_outstrip = 0
-
         if ev[0] == 3:
             if cur_speed > ev[1]:
                 err_count += 1
             else:
                 event_speed_limit.append(ev[1])
-
         if ev[0] == 4:
             is_outstrip = 0
-
         if ev[0] == 5:
             event_speed_limit.clear()
-
         if ev[0] == 6:
             is_outstrip += 1
-
     print(err_count)
 
 

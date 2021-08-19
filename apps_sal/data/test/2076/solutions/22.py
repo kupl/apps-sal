@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     if b == 0:
         print(0)
     else:

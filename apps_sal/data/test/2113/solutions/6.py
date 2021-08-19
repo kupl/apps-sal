@@ -3,12 +3,10 @@ tr = {}
 for i in range(1, n + 1):
     tm = []
     tr[i] = tm
-
 for i in range(n - 1):
-    x, y = list(map(int, input().strip().split(' ')))
+    (x, y) = list(map(int, input().strip().split(' ')))
     tr[x].append(y)
     tr[y].append(x)
-
 a = set({})
 b = set({})
 sv = 0
@@ -30,7 +28,6 @@ while len(q) > 0:
             if a.__contains__(i) == False:
                 a.add(i)
                 q.append(i)
-
 for i in a:
-    ans += (len(b) - len(tr[i]))
+    ans += len(b) - len(tr[i])
 print(ans)

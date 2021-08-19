@@ -5,7 +5,7 @@ for you in range(t):
     b = int(l[1])
     x = max(a, b)
     y = min(a, b)
-    if(x > 2 * y):
+    if x > 2 * y:
         print(y)
     else:
         print((x + y) // 3)

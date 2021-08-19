@@ -1,4 +1,4 @@
-n, m, h = list(map(int, input().split()))
+(n, m, h) = list(map(int, input().split()))
 maks_kol = list(map(int, input().split()))
 maks_wie = list(map(int, input().split()))
 gora = [list(map(int, input().split())) for i in range(n)]
@@ -9,6 +9,6 @@ for i in range(n):
 for j in range(n):
     for i in range(m):
         if i < m - 1:
-            print(gora[j][i], end=" ")
+            print(gora[j][i], end=' ')
         else:
-            print(gora[j][i], end="\n")
+            print(gora[j][i], end='\n')

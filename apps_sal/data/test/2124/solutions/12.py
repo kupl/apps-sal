@@ -1,24 +1,21 @@
 from sys import stdin
-
 t = int(stdin.readline())
 
 
 def c(l, r, msg):
     f = True
-    if l > 0 and not msg[l - 1].isdigit() and not msg[l - 1].isalpha():
+    if l > 0 and (not msg[l - 1].isdigit()) and (not msg[l - 1].isalpha()):
         pass
     elif l == 0:
         pass
     else:
         f = False
-
     if r == len(msg) - 1:
         pass
-    elif not msg[r + 1].isdigit() and not msg[r + 1].isalpha():
+    elif not msg[r + 1].isdigit() and (not msg[r + 1].isalpha()):
         pass
     else:
         f = False
-
     return f
 
 
@@ -59,7 +56,7 @@ try:
         no_author_set = set()
         for j in range(m):
             line = stdin.readline().strip()
-            author, msg = line.split(':')
+            (author, msg) = line.split(':')
             messages.append(msg)
             if author == '?':
                 no_author.append(j)
@@ -78,7 +75,6 @@ try:
                 authors.append(author)
                 if j - 1 in no_author_set:
                     authors[j - 1].discard(author)
-
         for j in no_author:
             if j in no_author_set:
                 if len(authors[j]) == 1:
@@ -90,7 +86,6 @@ try:
                         ans = False
                 elif len(authors[j]) == 0:
                     ans = False
-
         no_author = list()
         for j in no_author_set:
             no_author.append(j)
@@ -108,6 +103,5 @@ try:
                 answers.append('%s:%s' % (authors[j], messages[j]))
 except Exception as e:
     print(e)
-
 for m in answers:
     print(m)

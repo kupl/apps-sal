@@ -1,21 +1,19 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
 a = list(R())
-s, f = R()
-
+(s, f) = R()
 d = f - s
 
 
 def solve(a, d, n, s):
-    if (n < d + 1):
+    if n < d + 1:
         return s
-
     t = 0
     for i in range(0, d):
         t += a[i]
-
     m = t
     res = s
     for i in range(1, n):
@@ -25,13 +23,12 @@ def solve(a, d, n, s):
             res = gr(i, s, n)
         elif t == m:
             res = min(res, gr(i, s, n))
-
     return res
 
 
 def gr(i, s, n):
     res = (s - i) % n
-    if (res <= 0):
+    if res <= 0:
         return n - res
     return res
 

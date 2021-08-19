@@ -6,7 +6,7 @@ ans = [0, 0] + [None] * (n - 1)
 def bfs():
     path = [(s[1], 1), (2, 1)]
     while path:
-        nom, pre = path.pop(0)
+        (nom, pre) = path.pop(0)
         if ans[nom] != None:
             continue
         ans[nom] = pre
@@ -18,6 +18,5 @@ def bfs():
 
 
 bfs()
-
 for j in range(1, n + 1):
     print(ans[j], end=' ')

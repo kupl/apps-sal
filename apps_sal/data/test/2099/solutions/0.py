@@ -1,15 +1,18 @@
 def main():
-    mode = "filee"
-    if mode == "file":
-        f = open("test.txt", "r")
+    mode = 'filee'
+    if mode == 'file':
+        f = open('test.txt', 'r')
 
-    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
-    def gets(): return [str(x) for x in (f.readline()[:-1] if mode == "file" else input()).split(":")]
+    def get():
+        return [int(x) for x in (f.readline() if mode == 'file' else input()).split()]
+
+    def gets():
+        return [str(x) for x in (f.readline()[:-1] if mode == 'file' else input()).split(':')]
     [n, m, t] = get()
     a = [0] * 20002
     b = [0] * 20002
     if n < m:
-        print("No solution")
+        print('No solution')
         return
     for i in range(1, 1 + n):
         g = gets()
@@ -28,13 +31,12 @@ def main():
             is_solution_there = True
         b[i] = count
     if is_solution_there == False:
-        print("No solution")
+        print('No solution')
         return
     print(count)
     for i in range(1, n + 1):
         print(b[i], end=' ')
-
-    if mode == "file":
+    if mode == 'file':
         f.close()
 
 

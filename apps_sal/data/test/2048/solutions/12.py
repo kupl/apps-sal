@@ -21,7 +21,7 @@ def getTransIntList(n):
 n = int(input())
 s = getIntList()
 c = getIntList()
-maxValue = 10**8 + 1
+maxValue = 10 ** 8 + 1
 result = maxValue * 3
 minLeft = [0] * n
 minRight = [0] * n
@@ -41,7 +41,7 @@ for i in range(n - 2, -1, -1):
     maxSRight[i] = max(s[i], maxSRight[i + 1])
 prices = [(c[j], j) for j in range(1, n - 1)]
 prices.sort()
-for currC, j in prices:
+for (currC, j) in prices:
     if minLeft[j - 1] + c[j] + minRight[j + 1] >= result:
         continue
     if minSLeft[j - 1] >= s[j] or s[j] >= maxSRight[j + 1]:
@@ -52,7 +52,7 @@ for currC, j in prices:
             a = min(a, c[i])
     b = maxValue
     for k in range(j + 1, n):
-        if (s[j] < s[k]):
+        if s[j] < s[k]:
             b = min(b, c[k])
     curr = a + b + c[j]
     result = min(result, curr)

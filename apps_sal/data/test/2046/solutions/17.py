@@ -3,7 +3,7 @@ import heapq
 
 
 def debug(x, table):
-    for name, val in table.items():
+    for (name, val) in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
@@ -14,7 +14,6 @@ def solve():
     A = [int(i) for i in input().split()]
     heap = []
     nxt = n
-
     for i in range(n):
         tmp = []
         heapq.heappush(heap, -A[i])

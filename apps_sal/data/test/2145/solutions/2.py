@@ -4,8 +4,8 @@ def f(x):
 
 def main():
     for _ in range(int(input())):
-        x, y = list(map(int, input().split()))
-        print("YES" if f(x) >= f(y) else "NO")
+        (x, y) = list(map(int, input().split()))
+        print('YES' if f(x) >= f(y) else 'NO')
 
 
 main()

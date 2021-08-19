@@ -8,11 +8,11 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a * b) / gcd(a, b)
+    return a * b / gcd(a, b)
 
 
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     f = -1
@@ -24,7 +24,7 @@ for _ in range(int(input())):
     for i in b:
         if i in d:
             f = i
-    if (f == -1):
+    if f == -1:
         print('NO')
     else:
         print('YES')

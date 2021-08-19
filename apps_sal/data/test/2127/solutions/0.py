@@ -1,9 +1,7 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 m = 0
 M = 0
-
 for i in range(0, n):
     line = sys.stdin.readline().strip().split()
     s = line[0]
@@ -12,8 +10,7 @@ for i in range(0, n):
     if s == '+':
         m = max([m, x])
         M = max([M, y])
+    elif x >= m and y >= M:
+        print('YES')
     else:
-        if x >= m and y >= M:
-            print("YES")
-        else:
-            print("NO")
+        print('NO')

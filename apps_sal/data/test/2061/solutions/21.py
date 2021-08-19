@@ -1,4 +1,5 @@
 def main():
+
     def dfs(x, y):
         nonlocal inner
         if land[y][x] == '.':
@@ -22,19 +23,18 @@ def main():
                 inner = False
             return s
         return 0
-
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     land = [list(input()) for _ in range(n)]
     sav = [row[:] for row in land]
     lakes = []
-    for y, row in enumerate(land):
-        for x, f in enumerate(row):
+    for (y, row) in enumerate(land):
+        for (x, f) in enumerate(row):
             inner = True
             s = dfs(x, y)
             if s and inner:
                 lakes.append((s, x, y))
-    land, res = sav, 0
-    for _, x, y in sorted(lakes)[:len(lakes) - k]:
+    (land, res) = (sav, 0)
+    for (_, x, y) in sorted(lakes)[:len(lakes) - k]:
         res += dfs(x, y)
     print(res)
     for row in land:
@@ -43,7 +43,6 @@ def main():
 
 def __starting_point():
     from sys import setrecursionlimit
-
     setrecursionlimit(3000)
     main()
 

@@ -10,7 +10,7 @@ for i in range(n - 1):
     l[a[i]] += [(s, i)]
     r[a[i + 1]] += [(s, i)]
 for i in range(26):
-    n, m = len(l[i]), len(r[i])
+    (n, m) = (len(l[i]), len(r[i]))
     if n < 1 or m < 1:
         continue
     l[i].sort()
@@ -25,7 +25,7 @@ for i in range(26):
     for j in range(n):
         while y < m and r[i][y][0] < l[i][j][0]:
             y += 1
-        while y < m and r[i][y][0] == l[i][j][0] and r[i][y][1] < l[i][j][1]:
+        while y < m and r[i][y][0] == l[i][j][0] and (r[i][y][1] < l[i][j][1]):
             y += 1
         if y == m:
             break

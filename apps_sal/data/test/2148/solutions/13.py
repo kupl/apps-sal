@@ -1,5 +1,5 @@
 import math
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 xs = list(map(int, input().split()))
 
 
@@ -19,5 +19,4 @@ for i in range(len(xs)):
         else:
             h = max(h, ch([x, h], c))
     cs.append([x, h])
-
 print(' '.join([str(i[1]) for i in cs]))

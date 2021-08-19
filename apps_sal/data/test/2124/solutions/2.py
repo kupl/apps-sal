@@ -34,28 +34,26 @@ def solve():
 
     def get_names(text):
         result = []
-        for p in re.split("\W+", text):
+        for p in re.split('\\W+', text):
             if p in set_names:
                 result.append(p)
         return result
-
     m = int(input())
     messages = []
     for i in range(m):
         s = input()
-        colon = s.find(":")
+        colon = s.find(':')
         name = s[:colon]
         text = s[colon + 1:]
-        if name == "?":
+        if name == '?':
             name = None
         messages.append([name, text, get_names(text)])
-
     for i in range(m):
         if messages[i][0]:
             continue
         j = i
         cts = []
-        while j < m and not messages[j][0]:
+        while j < m and (not messages[j][0]):
             cts.append(set(messages[j][2]))
             j += 1
         if i > 0:
@@ -67,9 +65,8 @@ def solve():
             return None
         for k in range(i, j):
             messages[k][0] = sb[k - i]
-
     for p in messages:
-        print("%s:%s" % (p[0], p[1]))
+        print('%s:%s' % (p[0], p[1]))
     return True
 
 
@@ -77,12 +74,12 @@ def main():
     tests = int(input())
     for i in range(tests):
         if not solve():
-            print("Impossible")
+            print('Impossible')
     return 0
 
 
 def __starting_point():
-    return(main())
+    return main()
 
 
 __starting_point()

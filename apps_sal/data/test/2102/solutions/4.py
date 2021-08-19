@@ -7,7 +7,7 @@ for i in range(n):
         b.append((s[i] - j) * n + i)
 b = sorted(b)
 i = j = 0
-ans = 10**18
+ans = 10 ** 18
 cs = [0] * n
 cs[b[0] % n] += 1
 nz = 1

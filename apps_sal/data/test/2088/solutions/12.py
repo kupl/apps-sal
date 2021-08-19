@@ -28,9 +28,9 @@ else:
             if children[vert] == []:
                 count[vert] = 1
             else:
-                count[vert] = sum(count[v] for v in children[vert])
+                count[vert] = sum((count[v] for v in children[vert]))
     count.sort()
-    out = ""
+    out = ''
     for guy in count:
-        out += str(guy) + " "
+        out += str(guy) + ' '
     print(out)

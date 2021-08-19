@@ -3,7 +3,6 @@ p = list(map(int, input().split()))
 gr = [[] for i in range(n)]
 for i in range(n - 1):
     gr[p[i] - 1].append(i + 1)
-
 q = [0]
 after = []
 i = 0
@@ -18,7 +17,6 @@ while q:
             used.add(el)
             q.append(el)
             i += 1
-
 q = after
 for j in range(i, -1, -1):
     if len(gr[q[j]]) == 0:

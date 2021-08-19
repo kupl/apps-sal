@@ -8,7 +8,7 @@ for i in range(n):
 b = sorted(b)
 cs = {}
 i = j = 0
-ans = 10**18
+ans = 10 ** 18
 cs[b[0] % n] = cs.get(b[0] % n, 0) + 1
 z = len(b)
 while j < z:

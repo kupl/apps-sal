@@ -26,11 +26,10 @@ if len(a) * 2 <= len(b):
                 total += ones
             else:
                 total += zeros
-        elif (la <= i) and (i <= len(b) - la - 1):
+        elif la <= i and i <= len(b) - la - 1:
             ones = a_ones[la]
             zeros = a_zeros[la]
             if b[i] == '0':
-
                 total += ones
             else:
                 total += zeros

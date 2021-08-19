@@ -37,12 +37,11 @@ def main():
     for i in range(len(msg)):
         if msg[i][0] == '?':
             msg[i][0] = msg[i][2][0]
-            if i < m - 1 and len(msg[i + 1]) == 3 and msg[i][0] in msg[i + 1][2]:
+            if i < m - 1 and len(msg[i + 1]) == 3 and (msg[i][0] in msg[i + 1][2]):
                 msg[i + 1][2].remove(msg[i][0])
         print(msg[i][0], ':', texts[i], sep='')
 
 
 t = int(input())
-
 for _ in range(t):
     main()

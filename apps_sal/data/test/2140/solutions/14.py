@@ -18,7 +18,7 @@ for i in range(0, 1000):
     go = 1
 b.append(m + 1)
 while l >= 0:
-    if(l % 2 == 1):
+    if l % 2 == 1:
         for i in range(b[l - 1] - 1, b[l] - 1):
             t = s[i]
             s[i] = s[k - i]
@@ -27,4 +27,4 @@ while l >= 0:
 for i in range(0, 1000):
     go = 1
 for i in range(0, k + 1):
-    print(s[i], end="")
+    print(s[i], end='')

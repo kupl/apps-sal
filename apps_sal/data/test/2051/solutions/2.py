@@ -1,12 +1,10 @@
-n, m, k = [int(i) for i in input().split()]
+(n, m, k) = [int(i) for i in input().split()]
 c = [int(i) for i in input().split()]
-
 num = 0
 clusters = {}
 socks = {}
-
 for i in range(m):
-    l, r = [int(i) for i in input().split()]
+    (l, r) = [int(i) for i in input().split()]
     if l not in socks and r not in socks:
         socks[l] = num
         socks[r] = num
@@ -24,9 +22,7 @@ for i in range(m):
         for sock in clusters[socks[r]]:
             socks[sock] = socks[l]
         clusters.pop(temp)
-
 to_paint = 0
-
 for i in clusters:
     colors = {}
     ma = 0
@@ -39,5 +35,4 @@ for i in clusters:
         if colors[k] > ma:
             ma = colors[k]
     to_paint += len(clusters[i]) - ma
-
 print(to_paint)

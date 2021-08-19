@@ -1,12 +1,12 @@
-n, d = int(input()), []
+(n, d) = (int(input()), [])
 for i in range(n):
     d.append(tuple(map(int, input().split())))
-st, c = [], 0
-ans, v = 0, 0
+(st, c) = ([], 0)
+(ans, v) = (0, 0)
 for i in d:
     if i[0] == 1:
         v = i[1]
-        while(len(st) != 0 and st[-1] < v):
+        while len(st) != 0 and st[-1] < v:
             ans += 1
             st.pop()
     elif i[0] == 2:

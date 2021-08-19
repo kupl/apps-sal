@@ -1,13 +1,16 @@
 n = int(input())
-def f(u, v): return u.append(v)
+
+
+def f(u, v):
+    return u.append(v)
 
 
 l = [0] * n
-d = [[]for _ in range(n)]
+d = [[] for _ in range(n)]
 l[0] = 1
 c = [1]
 for _ in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     f(d[a - 1], b)
     f(d[b - 1], a)
 while c:

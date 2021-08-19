@@ -10,21 +10,19 @@ import bisect
 import sys
 import random
 import time
-
-sys.setrecursionlimit(10**7)
-inf = 10**10
-mod = 10**9 + 7
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 10
+mod = 10 ** 9 + 7
 
 
 def f():
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     a = [[inf] * (m + 2)]
     g = []
     for _ in range(n):
         a.append([inf] + [_ for _ in input()] + [inf])
         g.append([False] * m)
     a.append([[inf] * (m + 2)])
-
     c = 0
     for i in range(1, n + 1):
         if a[i][1] == '.':
@@ -43,7 +41,6 @@ def f():
                 if a[i][j] == n1:
                     a[i][j] = n2
     ff('*', inf)
-
     for i in range(1, n + 1):
         for j in range(1, m + 1):
             if a[i][j] == '.':
@@ -81,9 +78,7 @@ def f():
             for j in range(1, m + 1):
                 if a[i][j] == ind:
                     a[i][j] = '*'
-
     print(r)
-
     for i in range(1, n + 1):
         s = ''
         for j in range(1, m + 1):

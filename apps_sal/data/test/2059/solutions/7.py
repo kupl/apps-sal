@@ -1,8 +1,8 @@
 def solve(a):
     for ea in map(enumerate, (a, a[::-1])):
         next(ea)
-        for i, ai in ea:
-            yield ai // i
+        for (i, ai) in ea:
+            yield (ai // i)
 
 
 def main():

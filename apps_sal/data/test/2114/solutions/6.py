@@ -30,5 +30,5 @@ else:
             a[i][j] = val + b[i][j]
     for i in range(n):
         for j in range(n):
-            print(a[i][j], end=" ")
-        print("")
+            print(a[i][j], end=' ')
+        print('')

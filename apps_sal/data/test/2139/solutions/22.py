@@ -1,5 +1,5 @@
 s = input()
-a = list(map(len, s.split("bear")))
+a = list(map(len, s.split('bear')))
 n = len(a)
 for i in range(n):
     if 0 < i < n - 1:

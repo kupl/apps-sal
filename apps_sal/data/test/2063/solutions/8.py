@@ -1,11 +1,14 @@
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
-def input(): return next(_data)
 
 
-n, m, w = list(map(int, input().split()))
+def input():
+    return next(_data)
+
+
+(n, m, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-ub, lb = 2 * 10 ** 9, 0
+(ub, lb) = (2 * 10 ** 9, 0)
 
 
 def check(x):

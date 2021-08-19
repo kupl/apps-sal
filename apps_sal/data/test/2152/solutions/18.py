@@ -2,7 +2,7 @@ n = int(input())
 meat = [0] * n
 price = [0] * n
 for i in range(n):
-    meat[i], price[i] = list(map(int, input().split()))
+    (meat[i], price[i]) = list(map(int, input().split()))
 min_price = price[0]
 ans = 0
 for i in range(n):

@@ -1,9 +1,7 @@
 A = list(map(int, input().split()))
 S = [ord(x) - ord('a') for x in input()]
-
 score = ans = 0
 D = [dict() for _ in range(26)]
-
 for i in S:
     if score in D[i]:
         ans += D[i][score]

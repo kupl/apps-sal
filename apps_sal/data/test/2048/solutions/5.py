@@ -1,10 +1,8 @@
 import sys
 from collections import deque
-
 n = int(sys.stdin.readline().strip())
 s = list(map(int, sys.stdin.readline().strip().split(' ')))
 c = list(map(int, sys.stdin.readline().strip().split(' ')))
-
 lower = [float('inf') for i in range(n)]
 upper = [float('inf') for i in range(n)]
 for i in range(n):

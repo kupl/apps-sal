@@ -2,6 +2,7 @@ from collections import defaultdict, deque
 
 
 class DSU:
+
     def __init__(self, n):
         self.parents = [i for i in range(n)]
         self.ranks = [0 for i in range(n)]
@@ -17,7 +18,7 @@ class DSU:
         v = self.find_parent(v)
         if u != v:
             if self.ranks[u] < self.ranks[v]:
-                u, v = v, u
+                (u, v) = (v, u)
             self.parents[v] = u
             if self.ranks[v] == self.ranks[u]:
                 self.ranks[u] += 1
@@ -28,12 +29,12 @@ dsu = DSU(n)
 colors = list(map(int, input().split(' ')))
 vertices = []
 for i in range(n - 1):
-    u, v = [int(x) - 1 for x in input().split(' ')]
+    (u, v) = [int(x) - 1 for x in input().split(' ')]
     if colors[u] == colors[v]:
         dsu.join_sets(u, v)
     vertices.append((u, v))
 graph = defaultdict(list)
-for u, v in vertices:
+for (u, v) in vertices:
     if colors[u] != colors[v]:
         u = dsu.find_parent(u)
         v = dsu.find_parent(v)

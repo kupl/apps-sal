@@ -2,7 +2,7 @@ import sys
 
 
 def __starting_point():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     arr = sys.stdin.readlines()
     f = 0
     flgs = {}
@@ -26,14 +26,11 @@ def __starting_point():
                     flgs[k].append([c, c])
                 else:
                     flgs[k] = [[c, c]]
-
             strt += cnts[i][1]
-
     for flg in list(flgs.values()):
         for fl in flg:
             lng = fl[1] - fl[0] + 1
-            f += (lng * (lng + 1)) // 2
-
+            f += lng * (lng + 1) // 2
     print(f)
 
 

@@ -30,6 +30,5 @@ def solve(left, right):
 A = list(map(int, input().split()))
 S = input()
 L = [ord(i) - ord('a') for i in S]
-
 ans = solve(0, len(L))
 print(ans)

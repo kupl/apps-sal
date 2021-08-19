@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 t = []
 for i in range(h):
     lis = input()
@@ -18,7 +18,6 @@ for i in range(w):
 for i in range(1, h):
     for j in range(w):
         d[i][j] = d[i - 1][j] + a[i][j]
-
 a = [[0 for i in range(w)] for j in range(h)]
 for j in range(w):
     maxi = 0
@@ -36,7 +35,7 @@ for j in range(1, w):
         d1[i][j] = a[i][j] + d1[i][j - 1]
 q = int(input())
 for i in range(q):
-    r1, c1, r2, c2 = list(map(int, input().split()))
+    (r1, c1, r2, c2) = list(map(int, input().split()))
     r1 -= 1
     c1 -= 1
     r2 -= 1

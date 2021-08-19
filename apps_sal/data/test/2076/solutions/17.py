@@ -18,5 +18,5 @@ def f2(a, b, c):
 
 t = int(input())
 for i in range(t):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     print(max(f1(a, b, c), f2(a, b, c)))

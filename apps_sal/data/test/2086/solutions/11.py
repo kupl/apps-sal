@@ -6,7 +6,7 @@ ans = 0
 m = 0
 for i in range(1, n + 1):
     a[i] = int(a[i])
-s, f = input().split()
+(s, f) = input().split()
 s = int(s)
 f = int(f)
 for i in range(s, f):

@@ -7,6 +7,6 @@ for i in range(n):
             if 3 * a + 7 * b == x:
                 f = 1
     if f == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -18,5 +18,5 @@ def okay(n):
 t = int(input())
 while t:
     t -= 1
-    a, m = list(map(int, input().split()))
+    (a, m) = list(map(int, input().split()))
     print(okay(int(m / math.gcd(a, m))))

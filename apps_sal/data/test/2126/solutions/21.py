@@ -1,5 +1,4 @@
-n, m, h = list(map(int, input().split()))
-
+(n, m, h) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 l = [[0] * m for _ in range(n)]

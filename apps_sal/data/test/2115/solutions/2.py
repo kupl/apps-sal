@@ -1,4 +1,4 @@
-n, m = int(input()), 0
+(n, m) = (int(input()), 0)
 b = [int(t) for t in input().split()]
 a = []
 for i in range(n):
@@ -7,4 +7,4 @@ for i in range(n):
         del a[-1]
         a[-1] += 1
 print(len(a))
-print(" ".join([str(t) for t in a]))
+print(' '.join([str(t) for t in a]))

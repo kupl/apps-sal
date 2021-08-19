@@ -2,7 +2,7 @@ import math
 
 
 def __starting_point():
-    n, r = [int(x) for x in input().split()]
+    (n, r) = [int(x) for x in input().split()]
     x = [int(x) for x in input().split()]
     h = [None] * n
     for i in range(n):

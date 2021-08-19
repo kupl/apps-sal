@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split()]
-s, f = map(int, input().split())
+(s, f) = map(int, input().split())
 s -= 1
 f -= 2
 pref = [0] * n

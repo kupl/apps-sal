@@ -5,7 +5,6 @@ c2 = 0
 speed = 0
 c = 0
 st = []
-
 for i in a:
     if i[0] == 1:
         speed = i[1]

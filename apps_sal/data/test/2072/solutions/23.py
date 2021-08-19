@@ -11,15 +11,11 @@ def fin(a):
 
 
 left = 1
-right = 1e9
-
-while (abs(left - right) > 5e-7):
-
+right = 1000000000.0
+while abs(left - right) > 5e-07:
     mid = (left + right) / 2
-    if (fin(mid - 4e-6) < fin(mid + 4e-6)):
+    if fin(mid - 4e-06) < fin(mid + 4e-06):
         right = mid
     else:
         left = mid
-
-
 print(fin(left))

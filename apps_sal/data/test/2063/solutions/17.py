@@ -1,4 +1,4 @@
-n, m, w = map(int, input().split())
+(n, m, w) = map(int, input().split())
 a = list(map(int, input().split()))
 
 
@@ -18,7 +18,7 @@ def check(x):
 
 
 left = 1
-right = 1e9 + 1e6
+right = 1000000000.0 + 1000000.0
 ans = 0
 while left <= right:
     mid = (left + right) // 2
@@ -27,5 +27,4 @@ while left <= right:
         ans = mid
     else:
         right = mid - 1
-
 print(int(ans))

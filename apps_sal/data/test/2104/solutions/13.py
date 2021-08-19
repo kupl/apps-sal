@@ -17,7 +17,7 @@ def map_string():
     return input().split()
 
 
-l, r = map_input()
-print("YES")
+(l, r) = map_input()
+print('YES')
 for i in range(l, r, 2):
     print(i, i + 1)

@@ -7,13 +7,10 @@ for i in range(cars):
     if 1 not in inputline and 3 not in inputline:
         ans += 1
         ansline.append(i + 1)
-
-
 print(ans)
 ansline.sort()
-a = ""
+a = ''
 if ans > 0:
     for i in range(ans):
-        a += str(ansline[i]) + " "
-
+        a += str(ansline[i]) + ' '
 print(a)

@@ -1,14 +1,12 @@
 n = int(input())
 orders = [0 for i in range(n)]
 for i in range(n - 1):
-    a, b = [int(j) - 1 for j in input().split()]
+    (a, b) = [int(j) - 1 for j in input().split()]
     orders[a] += 1
     orders[b] += 1
-
 roots = []
 leafs = []
-
-for i, x in enumerate(orders):
+for (i, x) in enumerate(orders):
     if x > 2:
         roots.append(i)
     elif x == 2:
@@ -17,8 +15,6 @@ for i, x in enumerate(orders):
         leafs.append(i)
     else:
         raise Exception('woww')
-
-
 if len(roots) > 1:
     print('No')
 elif len(roots) == 0:

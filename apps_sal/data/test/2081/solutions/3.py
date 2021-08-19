@@ -4,7 +4,7 @@ a = list(map(int, input().split()))
 
 def findMinimumL(a):
     A = [-1] * len(a)
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         j = i - 1
         while j != -1 and a[j] > a[i]:
             j = A[j]
@@ -14,7 +14,7 @@ def findMinimumL(a):
 
 def findMaximumL(a):
     A = [-1] * len(a)
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         j = i - 1
         while j != -1 and a[j] < a[i]:
             j = A[j]
@@ -43,17 +43,17 @@ def findMaximumR(a):
 
 
 def minimumSum():
-    L, R = findMinimumL(a), findMinimumR(a)
+    (L, R) = (findMinimumL(a), findMinimumR(a))
     ans = 0
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         ans += (i - L[i]) * (R[i] - i) * x
     return ans
 
 
 def maximumSums():
-    L, R = findMaximumL(a), findMaximumR(a)
+    (L, R) = (findMaximumL(a), findMaximumR(a))
     ans = 0
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         ans += (i - L[i]) * (R[i] - i) * x
     return ans
 

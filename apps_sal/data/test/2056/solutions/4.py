@@ -20,5 +20,5 @@ for j in range(n):
         if ile[i] > 0:
             liczba += pot[i]
             ile[i] -= 1
-    wyn += liczba**2
+    wyn += liczba ** 2
 print(wyn)

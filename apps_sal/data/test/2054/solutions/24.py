@@ -3,7 +3,7 @@ import bisect as b
 import math
 from collections import defaultdict as dd
 input = sys.stdin.readline
-mo = 10**9 + 7
+mo = 10 ** 9 + 7
 
 
 def cin():
@@ -23,5 +23,5 @@ def inin():
 
 
 for i in range(inin()):
-    a, b = cin()
+    (a, b) = cin()
     print(min(a, b, (a + b) // 3))

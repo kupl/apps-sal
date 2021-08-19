@@ -1,18 +1,18 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 G = [[ord(s) - 96 for s in input().strip()] for _ in range(H)]
 G = list(map(list, zip(*G)))
 A = [None] * W
 B = [None] * W
 Col = [None] * W
 Dic = [None] * W
-for j, Gi in enumerate(G):
+for (j, Gi) in enumerate(G):
     pre = -1
     D = [None] * H
     con = 0
     ctr = 0
     E = [None] * H
     F = []
-    for i, g in enumerate(Gi):
+    for (i, g) in enumerate(Gi):
         if pre != g:
             F.append(con)
             ctr += 1
@@ -27,7 +27,7 @@ for j, Gi in enumerate(G):
     B[j] = D[:]
     pm = 0
     pre = -1
-    for i, (g, d) in enumerate(zip(Gi[::-1], D[::-1])):
+    for (i, (g, d)) in enumerate(zip(Gi[::-1], D[::-1])):
         if pre != g:
             pm = 0
         pm = max(pm, d)
@@ -42,7 +42,7 @@ for w in range(W):
             continue
         leng = A[w][h] + 1 - B[w][h]
         if Dic[w][c + 1] == leng and Dic[w][c + 2] >= leng:
-            C[w][h] = leng * 10**6 + 900 * G[w][h] + 30 * G[w][h + leng] + G[w][h + 2 * leng]
+            C[w][h] = leng * 10 ** 6 + 900 * G[w][h] + 30 * G[w][h + leng] + G[w][h + 2 * leng]
 C = list(map(list, zip(*C)))
 ans = 0
 for Ci in C:

@@ -9,7 +9,6 @@ for i in range(n):
             break
     if tr:
         ans.append(i + 1)
-
 print(len(ans))
 ans = [str(x) for x in ans]
 print(' '.join(ans))

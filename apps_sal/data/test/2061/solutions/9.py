@@ -1,4 +1,3 @@
-
 def make_set(a):
     parent[a] = a
     size[a] = 1
@@ -17,7 +16,7 @@ def union_sets(a, b):
     b = find_set(b)
     if a != b:
         if size[a] < size[b]:
-            a, b = b, a
+            (a, b) = (b, a)
         parent[b] = a
         size[a] += size[b]
 
@@ -39,77 +38,54 @@ def is_valid(a):
 
 parent = dict()
 size = dict()
-n, m, ks = map(int, input().split())
+(n, m, ks) = map(int, input().split())
 A = [0] * n
 for i in range(n):
     A[i] = list(input())
-
 for i in range(n):
     for j in range(m):
-        if i != 0 and j != 0 and i != n - 1 and j != m - 1:
-
+        if i != 0 and j != 0 and (i != n - 1) and (j != m - 1):
             if A[i][j] == '.':
                 if is_valid((i - 1, j)) and is_valid((i, j - 1)):
-
                     make_set((i, j))
                     if (i - 1, j) in parent:
                         union_sets((i - 1, j), (i, j))
                     if (i, j - 1) in parent:
                         union_sets((i, j - 1), (i, j))
-                else:
-                    if A[i][j] == '.':
-                        dels = []
-                        if (i - 1, j) in parent:
-                            a1 = find_set((i - 1, j))
-
-                            for k in parent:
-                                if find_set(k) == a1:
-
-                                    dels.append(k)
-
-                        for f in dels:
-
-                            parent.pop(f)
-                        dels = []
-                        if (i, j - 1) in parent:
-
-                            a1 = find_set((i, j - 1))
-
-                            for k in parent:
-                                if find_set(k) == a1:
-                                    dels.append(k)
-
-                        for f in dels:
-
-                            parent.pop(f)
-
-        else:
-            if A[i][j] == '.':
-                dels = []
-                if (i - 1, j) in parent:
-                    a1 = find_set((i - 1, j))
-
-                    for k in parent:
-                        if find_set(k) == a1:
-
-                            dels.append(k)
-
-                for f in dels:
-
-                    parent.pop(f)
-                dels = []
-                if (i, j - 1) in parent:
-
-                    a1 = find_set((i, j - 1))
-
-                    for k in parent:
-                        if find_set(k) == a1:
-                            dels.append(k)
-
-                for f in dels:
-
-                    parent.pop(f)
-
+                elif A[i][j] == '.':
+                    dels = []
+                    if (i - 1, j) in parent:
+                        a1 = find_set((i - 1, j))
+                        for k in parent:
+                            if find_set(k) == a1:
+                                dels.append(k)
+                    for f in dels:
+                        parent.pop(f)
+                    dels = []
+                    if (i, j - 1) in parent:
+                        a1 = find_set((i, j - 1))
+                        for k in parent:
+                            if find_set(k) == a1:
+                                dels.append(k)
+                    for f in dels:
+                        parent.pop(f)
+        elif A[i][j] == '.':
+            dels = []
+            if (i - 1, j) in parent:
+                a1 = find_set((i - 1, j))
+                for k in parent:
+                    if find_set(k) == a1:
+                        dels.append(k)
+            for f in dels:
+                parent.pop(f)
+            dels = []
+            if (i, j - 1) in parent:
+                a1 = find_set((i, j - 1))
+                for k in parent:
+                    if find_set(k) == a1:
+                        dels.append(k)
+            for f in dels:
+                parent.pop(f)
 ans = 0
 ass = 0
 ans2 = []
@@ -128,7 +104,6 @@ for j in range(ans - ks):
             new_sizes[a1] += 1
         else:
             new_sizes[a1] = 1
-
     for t in new_sizes:
         if new_sizes[t] < mins:
             mins = new_sizes[t]
@@ -136,10 +111,8 @@ for j in range(ans - ks):
     ass += mins
     dels = []
     for t in parent:
-
         if find_set(t) == numer:
             dels.append(t)
-
             A[t[0]][t[1]] = '*'
     for t in dels:
         parent.pop(t)

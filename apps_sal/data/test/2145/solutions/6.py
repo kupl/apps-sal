@@ -1,6 +1,6 @@
 a = int(input())
 for i in range(a):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x >= 4:
         print('YES')
     elif y <= x:

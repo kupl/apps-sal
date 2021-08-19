@@ -12,12 +12,12 @@ def bfs(s, level):
                 level[w] = level[v] + 1
 
 
-n, m, s, t = map(int, input().split())
+(n, m, s, t) = map(int, input().split())
 g = []
 for i in range(n):
     g.append(set())
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     g[u - 1].add(v - 1)
     g[v - 1].add(u - 1)
 a = [-1] * n
@@ -28,6 +28,6 @@ cur = a[t - 1]
 ans = 0
 for i in range(n):
     for j in range(i + 1, n):
-        if (min(a[i] + b[j] + 1, a[j] + b[i] + 1) >= cur and (j not in g[i])):
+        if min(a[i] + b[j] + 1, a[j] + b[i] + 1) >= cur and j not in g[i]:
             ans += 1
 print(ans)

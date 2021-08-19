@@ -3,7 +3,8 @@ from collections import Counter, defaultdict
 from itertools import accumulate
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())

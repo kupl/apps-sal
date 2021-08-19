@@ -1,6 +1,5 @@
 import sys
 from collections import defaultdict
-
 rlines = sys.stdin.readlines()
 lines = (l.strip() for l in rlines)
 
@@ -24,28 +23,25 @@ def eucycle(n, m, adj):
 
 def solve(n, m, edges):
     adj = defaultdict(set)
-    for u, v in edges:
+    for (u, v) in edges:
         adj[u].add(v)
         adj[v].add(u)
-
-    odds = set(u for u in adj if len(adj[u]) % 2 == 1)
-
+    odds = set((u for u in adj if len(adj[u]) % 2 == 1))
     for odd in odds:
         adj[odd].add(n + 1)
         adj[n + 1].add(odd)
     total = n - len(odds)
     dir_edges = eucycle(n + 1, m, adj)
-    return total, dir_edges
+    return (total, dir_edges)
 
 
 t = int(next(lines))
-
 for ti in range(t):
-    n, m = [int(s) for s in next(lines).split()]
+    (n, m) = [int(s) for s in next(lines).split()]
     edges = []
     for ei in range(m):
-        u, v = [int(s) for s in next(lines).split()]
+        (u, v) = [int(s) for s in next(lines).split()]
         edges.append((u, v))
-    total, ans = solve(n, m, edges)
+    (total, ans) = solve(n, m, edges)
     print(total)
-    print('\n'.join(str(u) + ' ' + str(v) for u, v in ans if u != n + 1 and v != n + 1))
+    print('\n'.join((str(u) + ' ' + str(v) for (u, v) in ans if u != n + 1 and v != n + 1)))

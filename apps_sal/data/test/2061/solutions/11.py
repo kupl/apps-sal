@@ -1,12 +1,9 @@
 def find_neigh(t, x, y):
-    return [(i, j) for (i, j) in [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1), (x, y + 1)]
-            if t[i][j] == '.']
+    return [(i, j) for (i, j) in [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1), (x, y + 1)] if t[i][j] == '.']
 
 
 def lake(table):
-    return [(i, j) for i in range(0, len(table) - 1)
-            for j in range(0, len(table[i]) - 1)
-            if table[i][j] == '.']
+    return [(i, j) for i in range(0, len(table) - 1) for j in range(0, len(table[i]) - 1) if table[i][j] == '.']
 
 
 stack = set()
@@ -45,7 +42,7 @@ def island(table, n, m, k):
         lakes.append(tlake)
     lakes = sorted(lakes, key=len)
     for p in range(0, len(lakes) - k):
-        for i, j in lakes[p]:
+        for (i, j) in lakes[p]:
             row = list(table[i])
             row[j] = '*'
             count += 1
@@ -55,7 +52,7 @@ def island(table, n, m, k):
         print(table[i][1:m + 1])
 
 
-n, m, k = input().split(' ')
+(n, m, k) = input().split(' ')
 carta = []
 for i in range(int(n)):
     row = '0' + input() + '0'

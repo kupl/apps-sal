@@ -1,9 +1,9 @@
 n = int(input())
 a = [int(x) for x in input().split()]
-s, f = [int(x) for x in input().split()]
+(s, f) = [int(x) for x in input().split()]
 zones = f - s
 currans = 1
-currmax = sum(a[s - 1: f - 2])
+currmax = sum(a[s - 1:f - 2])
 ans = 1
 maxppl = currmax
 fst = s - 1

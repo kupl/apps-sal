@@ -6,7 +6,7 @@ ans = 0
 for i in range(n):
     diff = p - L[i]
     e += diff
-    if(e <= 0):
+    if e <= 0:
         ans += -e
         e = 0
     p = L[i]

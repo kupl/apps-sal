@@ -7,5 +7,4 @@ else:
     ans += '7'
     for i in range(n // 2 - 1):
         ans += '1'
-
 print(ans)

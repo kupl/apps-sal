@@ -1,5 +1,4 @@
-n, m = [int(_) for _ in input().split()]
-
+(n, m) = [int(_) for _ in input().split()]
 ans = []
 for i in range(n):
     ary = []
@@ -7,5 +6,4 @@ for i in range(n):
     for q in inp:
         ary.append(int(q))
     ans.append(min(ary))
-
 print(max(ans))

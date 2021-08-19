@@ -2,7 +2,7 @@ n = int(input())
 arr = [0] + list(map(int, input().split()))
 came = [False] * (n + 2)
 put = [False] * (n + 2)
-put[n + 1], came[n + 1] = True, True
+(put[n + 1], came[n + 1]) = (True, True)
 for i in range(1, n + 1):
     if put[arr[i] + 1] == True:
         put[arr[i]] = True

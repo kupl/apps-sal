@@ -1,11 +1,10 @@
 from math import ceil
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 d = list(map(int, input().split()))
 s = list(map(int, input().split()))
 fuel = 0
 stor = 0
 time = 0
-
 for i in range(n):
     fuel += s[i]
     stor = max(stor, s[i])

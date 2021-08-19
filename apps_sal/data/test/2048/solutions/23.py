@@ -18,7 +18,7 @@ for i in range(n - 1, -1, -1):
             if len(a[j]) == 1:
                 heappush(b, c[i] + c[j] + c[a[j][0]])
             if ind == -1 or m >= c[j]:
-                m, ind = c[j], j
+                (m, ind) = (c[j], j)
     if ind != -1:
         a[i] = [ind]
 if b:

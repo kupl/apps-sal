@@ -15,4 +15,4 @@ for ch in input():
     else:
         res.append(st[-1])
         st.pop()
-print(' '.join(str(item) for item in res))
+print(' '.join((str(item) for item in res)))

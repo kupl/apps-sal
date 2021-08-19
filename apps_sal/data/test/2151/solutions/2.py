@@ -13,7 +13,7 @@ def li():
 for q in range(ii()):
     n = ii()
     s = input().strip()
-    a, b = int(s[0]), int(s[1:])
+    (a, b) = (int(s[0]), int(s[1:]))
     if a >= b:
         print('NO')
     else:

@@ -1,6 +1,5 @@
 import math
 import itertools
-
 a = [int(x) for x in input().rstrip()]
 b = [int(x) for x in input().rstrip()]
 n = len(a)

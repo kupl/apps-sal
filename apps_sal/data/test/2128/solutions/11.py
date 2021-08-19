@@ -7,7 +7,7 @@ c = 1
 m = 998244353
 counter = 0
 for i in L:
-    k += c * (pow(100, n - counter, m))
+    k += c * pow(100, n - counter, m)
     k %= m
     c *= i
     c %= m
@@ -18,9 +18,9 @@ def modInverse(a, m):
     m0 = m
     y = 0
     x = 1
-    if (m == 1):
+    if m == 1:
         return 0
-    while (a > 1):
+    while a > 1:
         q = a // m
         t = m
         m = a % m
@@ -28,11 +28,11 @@ def modInverse(a, m):
         t = y
         y = x - q * y
         x = t
-    if (x < 0):
+    if x < 0:
         x = x + m0
     return x
 
 
 p = k % m
 q = c % m
-print((modInverse(q, m) * p) % m)
+print(modInverse(q, m) * p % m)

@@ -1,5 +1,4 @@
 from collections import deque
-
 n = int(input())
 speed_stack = deque()
 over_take = 0

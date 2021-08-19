@@ -1,8 +1,7 @@
 import sys
 lines = sys.stdin.readlines()
 n = int(lines[0].strip())
-arr = list(map(int, lines[1].strip().split(" ")))
-
+arr = list(map(int, lines[1].strip().split(' ')))
 digits = [0 for _ in range(21)]
 for a in arr:
     b = bin(a)[2:]

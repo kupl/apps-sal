@@ -1,4 +1,4 @@
-p = [1e9]
+p = [1000000000.0]
 d = k = v = 0
 for i in range(int(input())):
     s = input()
@@ -9,7 +9,7 @@ for i in range(int(input())):
             p.pop()
             k += 1
     if t == 2:
-        k, d = k + d, 0
+        (k, d) = (k + d, 0)
     if t == 3:
         u = int(s[2:])
         if v > u:
@@ -19,7 +19,7 @@ for i in range(int(input())):
     if t == 4:
         d = 0
     if t == 5:
-        p = [1e9]
+        p = [1000000000.0]
     if t == 6:
         d += 1
 print(k)

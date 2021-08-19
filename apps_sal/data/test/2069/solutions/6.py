@@ -2,12 +2,12 @@ from sys import stdin
 
 
 def main():
-    n, k = list(map(int, stdin.readline().split()))
+    (n, k) = list(map(int, stdin.readline().split()))
     ar = list(map(int, stdin.readline().split()))
     lk = {ar[i] - 1: i for i in range(n)}
     pair = [-1 for _ in range(n)]
     for _ in range(k):
-        x, y = list(map(int, stdin.readline().split()))
+        (x, y) = list(map(int, stdin.readline().split()))
         if lk[y - 1] > lk[x - 1]:
             pair[y - 1] = max(pair[y - 1], lk[x - 1])
         else:

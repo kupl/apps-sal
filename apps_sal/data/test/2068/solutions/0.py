@@ -5,9 +5,9 @@ def main():
     mx = 1
     n = int(input())
     D = {}
-    D["polycarp"] = 1
+    D['polycarp'] = 1
     for i in range(n):
-        s, r, t = input().split()
+        (s, r, t) = input().split()
         s = s.lower()
         t = t.lower()
         D[s] = D[t] + 1

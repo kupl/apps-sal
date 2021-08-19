@@ -1,4 +1,4 @@
-a, b, c, d, e = input(), input(), [0], 0, 0
+(a, b, c, d, e) = (input(), input(), [0], 0, 0)
 for i in range(len(b)):
     d += int(b[i])
     c.append(d)

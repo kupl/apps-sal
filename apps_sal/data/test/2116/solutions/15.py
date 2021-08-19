@@ -1,10 +1,6 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
-
 time = 0
-
-
 for i in range(n):
     c = list(map(int, input().split()))
     for j in c:
@@ -14,5 +10,4 @@ for i in range(n):
                 break
         time += p + 1
         a = [j] + a[:k] + a[k + 1:]
-
 print(time)

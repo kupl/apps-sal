@@ -12,13 +12,13 @@ def sooolve(l, lst, r, x, k, y):
     if x > k * y:
         ans += n * y
     else:
-        ans += (n // k) * x + (n % k) * y
+        ans += n // k * x + n % k * y
     return ans
 
 
 def solve():
-    n, m = map(int, input().split())
-    x, k, y = map(int, input().split())
+    (n, m) = map(int, input().split())
+    (x, k, y) = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     lastpos = -1

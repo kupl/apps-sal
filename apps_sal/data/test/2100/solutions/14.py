@@ -2,7 +2,7 @@ n = int(input())
 left = 0
 right = 0
 for i in range(n):
-    left_cup, right_cup = map(int, input().split())
+    (left_cup, right_cup) = map(int, input().split())
     left += left_cup
     right += right_cup
 left_close = n - left

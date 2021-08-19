@@ -5,9 +5,8 @@ def rl():
     return [int(w) for w in stdin.readline().split()]
 
 
-n, = rl()
+(n,) = rl()
 a = rl()
-
 a_set = set(a)
 free = 0
 prev = 0
