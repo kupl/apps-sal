@@ -1,10 +1,10 @@
 import sys
 import copy
-
 sys.setrecursionlimit(10 ** 6)
 
 
 def main():
+
     def per(s, a=[]):
         if not s:
             return [a]
@@ -28,14 +28,11 @@ def main():
             s.add(uu)
         s.add(u)
         return res
-
-    ord_a = ord("a")
-    h, w = list(map(int, input().split()))
+    ord_a = ord('a')
+    (h, w) = list(map(int, input().split()))
     t0 = [[ord(c) - ord_a for c in input()] for _ in range(h)]
     h_set = set(range(h))
     pattern = per(h_set)
-    # print(t0)
-    # print(pattern)
     b = h % 2
     for p in pattern:
         t1 = [[] for _ in range(h)]
@@ -46,17 +43,15 @@ def main():
             t1[i] = t0[p[ii]]
             t1[h - 1 - i] = t0[p[ii + 1]]
             i += 1
-        # print(p)
-        # print(t1)
         fin = [False] * w
-        mid = (w % 2 == 1)
+        mid = w % 2 == 1
         br = False
-        for j, c0 in enumerate(zip(*t1)):
+        for (j, c0) in enumerate(zip(*t1)):
             if fin[j]:
                 continue
             fin[j] = True
             c0 = c0[::-1]
-            for jj, c1 in enumerate(zip(*t1)):
+            for (jj, c1) in enumerate(zip(*t1)):
                 if jj <= j:
                     continue
                 if fin[jj]:
@@ -72,9 +67,9 @@ def main():
                     break
         if br:
             continue
-        print("YES")
+        print('YES')
         return
-    print("NO")
+    print('NO')
 
 
 main()

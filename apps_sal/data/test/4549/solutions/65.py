@@ -1,19 +1,17 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 
 
 def solve():
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     grid = []
     for _ in range(h):
         s = input()
-        assert(len(s) == w)
+        assert len(s) == w
         grid.append(s)
-
     for i in range(h):
         for j in range(w):
             if grid[i][j] == '.':
                 continue
-
             isolate = True
             for px in [i - 1, i + 1]:
                 if px >= 0 and px < h:
@@ -24,10 +22,9 @@ def solve():
                     if grid[i][py] == '#':
                         isolate = False
             if isolate:
-                print("No")
+                print('No')
                 return
-
-    print("Yes")
+    print('Yes')
 
 
 def main():

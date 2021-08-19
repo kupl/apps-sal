@@ -12,37 +12,30 @@ def get_biggest_star(ar, i, j):
     while cur >= 0 and ar[cur][j] == '*':
         ans += 1
         cur -= 1
-
     length = 0
     cur = i + 1
     while cur < n and ar[cur][j] == '*':
         length += 1
         cur += 1
     ans = min(ans, length)
-
     length = 0
     cur = j - 1
     while cur >= 0 and ar[i][cur] == '*':
         length += 1
         cur -= 1
     ans = min(ans, length)
-
     length = 0
     cur = j + 1
     while cur < m and ar[i][cur] == '*':
         length += 1
         cur += 1
     ans = min(ans, length)
-
     return ans
 
 
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 ar = []
-
 stars = []
-
 for i in range(n):
     cur = input()
     st = []
@@ -53,7 +46,6 @@ for i in range(n):
             st.append(False)
     stars.append(st)
     ar.append(cur)
-
 finalAns = []
 ans = 0
 for i in range(1, n - 1):
@@ -81,9 +73,6 @@ for i in range(1, n - 1):
             while temp < length:
                 temp += 1
                 stars[i][j + temp] = True
-
-##print(*stars, sep = '\n')
-
 if all_true(stars, n, m):
     print(ans)
     for i in finalAns:

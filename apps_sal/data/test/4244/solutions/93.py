@@ -1,10 +1,4 @@
-# coding=utf-8
-
-# lib
-#import copy
-#import collections
-#import sys
-'''
+"""
 def generate_2d_array(Row, Column, IV):
     array = [[IV] * Column for i in range(Row)]
     return array
@@ -28,23 +22,18 @@ def input_2d_array(Row, Column):
             array[i][j] = temp[j]
 
     return array
-'''
+"""
 
 
 def __starting_point():
     N = int(input())
     Xli = list(map(int, input().split()))
-
     ans = float('inf')
-
     for i in range(101):
         cnt = 0
-
         for j in range(N):
-            cnt += abs(Xli[j] - i)**2
-
+            cnt += abs(Xli[j] - i) ** 2
         ans = min(ans, cnt)
-
     print(ans)
 
 

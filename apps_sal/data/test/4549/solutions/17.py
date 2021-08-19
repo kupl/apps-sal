@@ -1,16 +1,6 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# FileName: 	C
-# CreatedDate:  2020-06-27 11:11:46 +0900
-# LastModified: 2020-10-01 00:51:09 +0900
-#
-
-
 import os
 import sys
 import numpy as np
-# import pandas as pd
 
 
 def dfs(visited, maze, h, w):
@@ -39,7 +29,7 @@ def check_maze(maze, h, w):
 
 
 def main():
-    H, W = list(map(int, input().split()))
+    (H, W) = list(map(int, input().split()))
     maze = []
     for _ in range(H):
         S = input()
@@ -53,9 +43,9 @@ def main():
             if maze[h, w] == 1:
                 flag = check_maze(maze, h, w)
                 if flag == 0:
-                    print("No")
+                    print('No')
                     return
-    print("Yes")
+    print('Yes')
 
 
 def __starting_point():

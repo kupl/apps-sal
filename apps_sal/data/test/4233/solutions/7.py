@@ -1,30 +1,13 @@
-# import logging
-
-
-# fmt = r'%(levelname)s - %(name)s (line:%(lineno)s) - %(message)s'
-# formatter = logging.Formatter(fmt)
-
-# ch = logging.StreamHandler()
-# ch.setLevel(logging.ERROR)
-# ch.setFormatter(formatter)
-
-# logger = logging.getLogger()
-# logger.setLevel(logging.ERROR)
-# logger.addHandler(ch)
-
-
 class StarCell:
+
     def __init__(self, row, col, top=None, bot=None, left=None, right=None):
         self.row = row
         self.col = col
-
         self.covered = False
-
         self.top = top
         self.bot = bot
         self.left = left
         self.right = right
-
         self._size = None
         self._size_top = None
         self._size_bot = None
@@ -32,7 +15,7 @@ class StarCell:
         self._size_right = None
 
     def set_adjacents(self, cells):
-        row, col = self.row, self.col
+        (row, col) = (self.row, self.col)
         self.top = cells.get((row - 1, col), None)
         self.bot = cells.get((row + 1, col), None)
         self.left = cells.get((row, col - 1), None)
@@ -59,7 +42,6 @@ class StarCell:
         if not self.top:
             return 0
         if not self._size_top:
-            # Update cache
             self._size_top = 1 + self.top.size_top
         return self._size_top
 
@@ -90,11 +72,7 @@ class StarCell:
     @property
     def size(self):
         if not self._size:
-            self._size = min(
-                [self.size_top,
-                 self.size_bot,
-                 self.size_left,
-                 self.size_right])
+            self._size = min([self.size_top, self.size_bot, self.size_left, self.size_right])
         return self._size
 
     def __repr__(self):
@@ -104,37 +82,29 @@ class StarCell:
 
 
 def solve(grid):
-    n, m = len(grid), len(grid[0])
-
+    (n, m) = (len(grid), len(grid[0]))
     cells = {}
     for row in range(n):
         for col in range(m):
             if grid[row][col] == '.':
                 continue
-            cells[(row, col)] = StarCell(row, col)
-
-    for key, val in list(cells.items()):
+            cells[row, col] = StarCell(row, col)
+    for (key, val) in list(cells.items()):
         val.set_adjacents(cells)
-
-    for key, val in list(cells.items()):
+    for (key, val) in list(cells.items()):
         val.set_covered()
-
-    # for key, val in cells.items():
-    #     print(key, val)
-
     ans = []
-    for key, val in list(cells.items()):
-        if val.size == 0 and not val.covered:
+    for (key, val) in list(cells.items()):
+        if val.size == 0 and (not val.covered):
             return None
         if val.size > 0:
-            ans.append([val.row + 1, val.col + 1, val.size])  # Rebase index 1
+            ans.append([val.row + 1, val.col + 1, val.size])
     return ans
 
 
 def main():
-    n, m = list(map(int, input().strip().split()))
+    (n, m) = list(map(int, input().strip().split()))
     grid = [list(input().strip()) for _ in range(n)]
-
     results = solve(grid)
     if results is None:
         print('-1')
