@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 rec = [0]
 i = 0
@@ -15,6 +15,6 @@ while True:
     i += 1
 count = (k - len(pre)) % len(loop)
 if k <= len(pre):
-    print((pre[k] + 1))
+    print(pre[k] + 1)
 else:
-    print((loop[count] + 1))
+    print(loop[count] + 1)

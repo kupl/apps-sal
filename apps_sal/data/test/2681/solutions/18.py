@@ -1,11 +1,11 @@
 a = int(input())
 b = int(input())
 c = str(input())
-if(c == "+"):
+if c == '+':
     print(a + b)
-elif(c == "-"):
+elif c == '-':
     print(a - b)
-elif(c == "*"):
+elif c == '*':
     print(a * b)
 else:
     print(a / b)

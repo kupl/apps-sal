@@ -1,6 +1,6 @@
 from heapq import heappop, heappush
 q = int(input())
-queries = [list(map(int, input().split()))for _ in range(q)]
+queries = [list(map(int, input().split())) for _ in range(q)]
 l = []
 r = []
 ans = 0
@@ -8,7 +8,7 @@ quecount = 0
 for query in queries:
     if query[0] == 1:
         quecount += 1
-        _, a, b = query
+        (_, a, b) = query
         ans += b
         if quecount == 1:
             mid = a

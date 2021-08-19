@@ -2,7 +2,7 @@ N = int(input())
 A = []
 B = []
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     A.append(a)
     B.append(b)
 A.sort()
@@ -12,4 +12,4 @@ if N % 2 == 0:
     print(B[n] + B[n - 1] - A[n] - A[n - 1] + 1)
 else:
     n = N // 2
-    print((B[n] - A[n] + 1))
+    print(B[n] - A[n] + 1)

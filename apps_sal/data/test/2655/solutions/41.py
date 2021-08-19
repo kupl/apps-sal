@@ -1,5 +1,4 @@
 from collections import deque
-
 n = int(input())
 a = sorted(list(map(int, input().split())), reverse=True)
 q = deque([a[0]])

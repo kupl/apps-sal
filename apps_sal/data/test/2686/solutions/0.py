@@ -1,12 +1,25 @@
 from sys import stdin, stdout
 from collections import deque
-def st(): return list(stdin.readline().strip())
 
 
-def li(): return list(map(int, stdin.readline().split()))
-def mp(): return list(map(int, stdin.readline().split()))
-def inp(): return int(stdin.readline())
-def pr(n): return stdout.write(str(n) + "\n")
+def st():
+    return list(stdin.readline().strip())
+
+
+def li():
+    return list(map(int, stdin.readline().split()))
+
+
+def mp():
+    return list(map(int, stdin.readline().split()))
+
+
+def inp():
+    return int(stdin.readline())
+
+
+def pr(n):
+    return stdout.write(str(n) + '\n')
 
 
 mod = 1000000007
@@ -14,13 +27,13 @@ INF = float('inf')
 
 
 def solve():
-    n, m = mp()
+    (n, m) = mp()
     d = {i: [] for i in range(n + 1)}
     for i in range(m):
-        a, b = mp()
+        (a, b) = mp()
         d[a].append(b)
         d[b].append(a)
-    x, y = mp()
+    (x, y) = mp()
     v = [False for i in range(n + 1)]
     q = deque()
     q.append(x)

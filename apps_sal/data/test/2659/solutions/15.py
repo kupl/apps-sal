@@ -13,13 +13,12 @@ for i in range(18):
     for j in range(1, 150):
         candidate_lst.append(int(str(j) + '9' * i))
 candidate_lst = sorted(list(set(candidate_lst)))
-
 count = 0
 index = -1
 snuke = 1
 while count < k:
-    min_snuke = 10**100
-    for m, i in enumerate(candidate_lst[index + 1:]):
+    min_snuke = 10 ** 100
+    for (m, i) in enumerate(candidate_lst[index + 1:]):
         if i > 100 * snuke:
             break
         po_snuke = func(i)

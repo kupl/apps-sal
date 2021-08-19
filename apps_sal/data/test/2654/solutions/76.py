@@ -2,12 +2,11 @@ n = int(input())
 m = []
 M = []
 for _ in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     m.append(x)
     M.append(y)
 m = sorted(m)
 M = sorted(M)
-
 z = n // 2
 if n % 2 == 1:
     a = m[z]

@@ -1,6 +1,6 @@
 try:
-    m, n = map(int, input().split())
-    while(n != 0):
+    (m, n) = map(int, input().split())
+    while n != 0:
         if m % 10 == 0:
             m = m // 10
         else:

@@ -3,7 +3,7 @@ N = int(input())
 min_all = []
 max_all = []
 for _ in range(N):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     min_all.append(a)
     max_all.append(b)
 min_median = statistics.median(min_all)

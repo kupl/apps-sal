@@ -30,8 +30,8 @@ def solve(n, nodes):
     distance = 0
     current_edges = [*edges[0]]
     heapify(current_edges)
-    while(len(current_edges)):
-        d, x = heappop(current_edges)
+    while len(current_edges):
+        (d, x) = heappop(current_edges)
         if tree[x]:
             continue
         distance += d
@@ -45,7 +45,7 @@ def main():
     n = int(input())
     nodes = []
     for i in range(n):
-        x, y = map(int, input().split(' '))
+        (x, y) = map(int, input().split(' '))
         nodes.append((i, x, y))
     ans = solve(n, nodes)
     print(ans)

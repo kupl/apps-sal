@@ -2,6 +2,7 @@ import heapq as hq
 
 
 class Delheap:
+
     def __init__(self):
         self.heap = []
         self.deleted = {}
@@ -37,25 +38,24 @@ class Delheap:
 
 
 def __starting_point():
-    N, Q = map(int, input().split())
+    (N, Q) = map(int, input().split())
     shozoku = []
     rate = []
     saikyo = Delheap()
-    nurs = [Delheap() for _ in range(2 * 10**5)]
+    nurs = [Delheap() for _ in range(2 * 10 ** 5)]
     for _ in range(N):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         b -= 1
         shozoku.append(b)
         rate.append(a)
         nurs[b].push(-a)
-
-    for i in range(2 * 10**5):
+    for i in range(2 * 10 ** 5):
         x = nurs[i].peek()
         if x != None:
             saikyo.push(-x)
     anss = []
     for _ in range(Q):
-        c, d = map(int, input().split())
+        (c, d) = map(int, input().split())
         c -= 1
         d -= 1
         nur = shozoku[c]
@@ -71,7 +71,7 @@ def __starting_point():
         nurs[d].push(-rate[c])
         saikyo.push(-nurs[d].peek())
         anss.append(saikyo.peek())
-    print(*anss, sep="\n")
+    print(*anss, sep='\n')
 
 
 __starting_point()

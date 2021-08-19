@@ -10,7 +10,7 @@ for _ in range(q):
     t = list(map(int, input().split()))
     if t[0] == 1:
         f ^= 1
-        _, a, b = t
+        (_, a, b) = t
         sb += b
         if f:
             c = heappushpop(r, a)

@@ -7,7 +7,7 @@ def f(n):
 
 ans = [1]
 for k in range(K - 1):
-    min_f_val, next_snuke = float('inf'), None
+    (min_f_val, next_snuke) = (float('inf'), None)
     n = str(ans[-1] + 1)
     for i in range(len(n)):
         for x in range(int(n[i]), 10):

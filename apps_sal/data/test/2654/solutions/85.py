@@ -1,5 +1,5 @@
 n = int(input())
-a, b = [], []
+(a, b) = ([], [])
 for i in range(n):
     inp = list(map(int, input().split()))
     a.append(inp[0])

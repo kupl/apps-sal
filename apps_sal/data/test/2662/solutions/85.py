@@ -1,6 +1,5 @@
 import sys
 from bisect import bisect_right
-
 input = sys.stdin.readline
 
 
@@ -9,9 +8,7 @@ def main():
     A = [0] * N
     for i in range(N):
         A[i] = int(input())
-
     A = [-a for a in A]
-
     colors = []
     for a in A:
         idx = bisect_right(colors, a)
@@ -19,7 +16,6 @@ def main():
             colors.append(a)
         else:
             colors[idx] = a
-
     ans = len(colors)
     print(ans)
 

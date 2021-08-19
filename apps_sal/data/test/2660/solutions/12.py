@@ -1,5 +1,4 @@
 import heapq
-
 q = int(input())
 inf = 10000000000
 left = [inf]
@@ -8,7 +7,7 @@ minval = 0
 for _ in range(q):
     query = list(map(int, input().split()))
     if query[0] == 1:
-        _, a, b = query
+        (_, a, b) = query
         if a < -left[0]:
             v = -heapq.heappop(left)
             heapq.heappush(right, v)

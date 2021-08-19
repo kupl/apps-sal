@@ -10,5 +10,4 @@ else:
     for i in range(n // 2):
         ans += f[i] * 2
     ans += f[n // 2] - f[0]
-
 print(ans)

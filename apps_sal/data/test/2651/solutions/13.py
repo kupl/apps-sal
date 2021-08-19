@@ -1,8 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 X = list(map(int, input().split()))
 Y = list(map(int, input().split()))
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 ans1 = 0
 for k in range(1, n + 1):
     ans1 += (2 * k - 1 - n) * X[k - 1]

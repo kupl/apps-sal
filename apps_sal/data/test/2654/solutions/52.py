@@ -3,7 +3,7 @@ def main():
     al = []
     bl = []
     for _ in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         al.append(a)
         bl.append(b)
     al.sort()

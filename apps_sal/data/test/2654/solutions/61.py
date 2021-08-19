@@ -1,7 +1,7 @@
 N = int(input())
-l, r = [], []
+(l, r) = ([], [])
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l.append(a)
     r.append(b)
 l.sort()

@@ -6,11 +6,11 @@ def sin():
 
 
 def out(s):
-    stdout.write(str(s) + "\n")
+    stdout.write(str(s) + '\n')
 
 
-a, b, c = map(int, sin().split(" "))
-if ((c - a) // b) % 2 == 0:
-    print("Lucky Chef")
+(a, b, c) = map(int, sin().split(' '))
+if (c - a) // b % 2 == 0:
+    print('Lucky Chef')
 else:
-    print("Unlucky Chef")
+    print('Unlucky Chef')

@@ -1,6 +1,6 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 c = (c - a) // b
 if c % 2 == 0:
-    print("Lucky Chef")
+    print('Lucky Chef')
 else:
-    print("Unlucky Chef")
+    print('Unlucky Chef')

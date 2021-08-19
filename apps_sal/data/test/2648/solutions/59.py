@@ -2,9 +2,7 @@ from collections import Counter
 n = int(input())
 L = list(map(int, input().split()))
 L.sort()
-
 L = Counter(L)
-
 cnt = 0
 one = 0
 for v in L.values():
@@ -15,5 +13,5 @@ for v in L.values():
 if cnt % 2 == 0:
     one += cnt
 else:
-    one += (cnt - 1)
+    one += cnt - 1
 print(one)

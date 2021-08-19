@@ -1,11 +1,10 @@
 from collections import deque
 from sys import stdin, stdout
-
 MAX_SOLDIERS = 200000
 
 
 def solve():
-    n, m = [int(_) for _ in stdin.readline().rstrip().split()]
+    (n, m) = [int(_) for _ in stdin.readline().rstrip().split()]
     all_lines = stdin.readlines()
     start_vals = [int(_) for _ in all_lines[0].split()]
     end_vals = [int(_) for _ in all_lines[1].split()]
@@ -19,7 +18,7 @@ def solve():
         graph[n + i + 1][n * 2 + 2 - 1] = end_vals[i]
         graph[i + 1][n + i + 1] = start_vals[i]
     for index in range(m):
-        i, j = [int(_) for _ in all_lines[2 + index].split()]
+        (i, j) = [int(_) for _ in all_lines[2 + index].split()]
         graph[i][n + j] = start_vals[i - 1]
         graph[j][n + i] = start_vals[j - 1]
         edges.append((i, j))
@@ -33,7 +32,7 @@ def solve():
         mat[j - 1][i - 1] = start_vals[j - 1] - graph[j][n + i]
     stdout.write('YES\n')
     for i in mat:
-        stdout.write(' '.join(str(_) for _ in i))
+        stdout.write(' '.join((str(_) for _ in i)))
         stdout.write('\n')
 
 

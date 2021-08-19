@@ -13,10 +13,9 @@ try:
         s.append(data[i])
         for j in range(i + 1, n):
             s.append(data[j])
-            if(s == rev(s)):
+            if s == rev(s):
                 ans.append(''.join(rev(s)))
         s.clear()
-
     r = max(ans, key=len)
     print(len(r))
     print(r)

@@ -1,10 +1,8 @@
 import heapq
-
 q = int(input())
 l = []
 r = []
 ans = 0
-
 for i in range(q):
     a = list(map(int, input().split()))
     if a[0] == 1:
@@ -20,7 +18,6 @@ for i in range(q):
                 heapq.heappush(l, -ll)
                 heapq.heappush(r, a[1])
                 heapq.heappush(l, -a[1])
-
             elif ll > a[1]:
                 ans += ll - a[1]
                 heapq.heappush(r, rr)
@@ -33,7 +30,6 @@ for i in range(q):
                 heapq.heappush(l, -ll)
                 heapq.heappush(r, a[1])
                 heapq.heappush(r, a[1])
-
     else:
         a = heapq.heappop(l)
         print(-a, ans)

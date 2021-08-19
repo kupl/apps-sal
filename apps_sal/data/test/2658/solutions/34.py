@@ -1,7 +1,6 @@
 def main():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = [0] + list(map(int, input().split()))
-
     i = 1
     pas = [i]
     pas_set = set(pas)
@@ -16,7 +15,6 @@ def main():
         ans = A[i]
         i = A[i]
         k += 1
-
     if k >= K:
         print(ans)
     else:

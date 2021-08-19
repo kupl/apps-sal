@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
-sumx, sumy = 0, 0
-mod = 10**9 + 7
+(sumx, sumy) = (0, 0)
+mod = 10 ** 9 + 7
 for i in range(n):
     sumx += i * x[i] - (n - i - 1) * x[i]
 sumx %= mod

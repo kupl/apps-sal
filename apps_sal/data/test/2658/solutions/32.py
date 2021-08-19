@@ -1,6 +1,5 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 a_list = [int(x) - 1 for x in input().split()]
-
 ci = 0
 temp_dict = {0: 0}
 temp_list = [0]

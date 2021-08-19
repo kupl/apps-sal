@@ -2,7 +2,7 @@ N = int(input())
 A = []
 B = []
 for i in range(N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a = x + y
     A.append(a)
     b = x - y

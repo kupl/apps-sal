@@ -1,7 +1,5 @@
-
 t = int(input())
 nums = list(map(int, input().split()))
-
 for i in nums:
     for row in range(1, 5):
         if row == 3:
@@ -13,10 +11,8 @@ for i in nums:
         else:
             y = row
             x = 3
-
         for col in range(1, i + 1):
-            print(y, end=" ")
+            print(y, end=' ')
             y += x
             x *= 2
-
         print()

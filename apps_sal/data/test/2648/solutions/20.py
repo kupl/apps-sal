@@ -5,6 +5,6 @@ r = 0
 for cnt in list(co.values()):
     r += cnt - 1
 if r % 2 == 0:
-    print((n - r))
+    print(n - r)
 else:
-    print((n - r - 1))
+    print(n - r - 1)

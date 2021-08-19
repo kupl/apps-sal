@@ -4,7 +4,7 @@ def abc053_d():
     ans = 0
     from collections import Counter
     multi_even = 0
-    for _, v in Counter(A).items():
+    for (_, v) in Counter(A).items():
         ans += 1
         if 2 <= v and v % 2 == 0:
             multi_even += 1

@@ -11,7 +11,6 @@ def snuke(n):
 
 
 K = int(input())
-
 ans = 1
 print(ans)
 for i in range(K - 1):

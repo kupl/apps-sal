@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 p = 1
 t = [1]
@@ -15,9 +15,8 @@ c = t.index(p)
 r = len(t) - c
 if k < len(t):
     ans = t[k]
+elif (k - c + 1) % r == 0:
+    ans = t[-1]
 else:
-    if (k - c + 1) % r == 0:
-        ans = t[-1]
-    else:
-        ans = t[(k - c + 1) % r + c - 1]
+    ans = t[(k - c + 1) % r + c - 1]
 print(ans)

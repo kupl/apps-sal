@@ -10,13 +10,12 @@ n = int(input())
 a = []
 b = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     a += [x]
     b += [y]
 a.sort()
 b.sort()
-
 if n % 2 == 0:
-    print((int((med(b) - med(a)) * 2) + 1))
+    print(int((med(b) - med(a)) * 2) + 1)
 else:
-    print((med(b) - med(a) + 1))
+    print(med(b) - med(a) + 1)

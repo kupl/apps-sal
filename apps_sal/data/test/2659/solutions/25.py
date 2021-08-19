@@ -8,8 +8,8 @@ def s(n):
 
 def f(x):
     nines = max(0, len(str(x)) - 3)
-    base = 10**nines - 1
-    d = 10**nines
+    base = 10 ** nines - 1
+    d = 10 ** nines
     snuke = x
     ratio = x / s(x)
     candidate = base + (x - base + d - 1) // d * d

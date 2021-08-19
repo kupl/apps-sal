@@ -1,6 +1,5 @@
 N = int(input())
-A = list(int(input()) for _ in range(N))
-
+A = list((int(input()) for _ in range(N)))
 S = [A[0]]
 for i in range(1, N):
     if A[i] <= S[0]:
@@ -8,7 +7,7 @@ for i in range(1, N):
         continue
     ok = 0
     ng = len(S)
-    tmp = (ok + ng)
+    tmp = ok + ng
     while ok + 1 < ng:
         tmp = (ok + ng) // 2
         if A[i] > S[tmp]:
@@ -16,4 +15,4 @@ for i in range(1, N):
         else:
             ng = tmp
     S[ok] = A[i]
-print((len(S)))
+print(len(S))

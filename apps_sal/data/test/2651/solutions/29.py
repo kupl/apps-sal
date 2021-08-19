@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 MOD = 1000000007
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))

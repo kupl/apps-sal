@@ -1,11 +1,10 @@
 from heapq import heapify, heappush, heappop
 import sys
 input = sys.stdin.readline
-
 Q = int(input())
 ss = input()
-t, A, B = list(map(int, ss.split()))
-PQ1, PQ2 = [-A], [A]
+(t, A, B) = list(map(int, ss.split()))
+(PQ1, PQ2) = ([-A], [A])
 fr = to = A
 minF = 0
 accB = B
@@ -13,7 +12,7 @@ anss = []
 for _ in range(Q - 1):
     ss = input()
     if ss[0] == '1':
-        t, A, B = list(map(int, ss.split()))
+        (t, A, B) = list(map(int, ss.split()))
         if fr <= A <= to:
             heappush(PQ1, -A)
             heappush(PQ2, A)
@@ -36,5 +35,4 @@ for _ in range(Q - 1):
         accB += B
     else:
         anss.append((fr, minF + accB))
-
-print(('\n'.join([str(x[0]) + ' ' + str(x[1]) for x in anss])))
+print('\n'.join([str(x[0]) + ' ' + str(x[1]) for x in anss]))

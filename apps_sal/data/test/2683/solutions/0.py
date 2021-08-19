@@ -7,15 +7,14 @@ def f(n, k):
         s.append(list(input().strip()))
     for i in range(n):
         for j in range(n):
-            if s[i][j] == "X":
+            if s[i][j] == 'X':
                 s[i][j] = 1
-            elif s[i][j] == ".":
+            elif s[i][j] == '.':
                 s[i][j] = 0
                 flag = 1
             else:
                 s[i][j] = -1
             row[i][j] = col[j][i] = s[i][j]
-
     for i in range(n):
         temp = []
         for j in range(n - k + 1):
@@ -38,8 +37,8 @@ def f(n, k):
 
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     if f(n, k):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

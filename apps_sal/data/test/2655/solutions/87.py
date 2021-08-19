@@ -6,7 +6,7 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    n, *a = list(map(int, read().split()))
+    (n, *a) = list(map(int, read().split()))
     a.sort(reverse=True)
     a = deque(a)
     circle_joined = deque()

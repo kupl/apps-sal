@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 c = list(map(int, input().split()))
 d = list(map(int, input().split()))
 ans = 0

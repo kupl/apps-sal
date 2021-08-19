@@ -1,10 +1,8 @@
 def main():
     from sys import stdin, stdout
     rl = stdin.readline
-
     n = int(rl())
     a = [[int(x) for x in rl().split()] for _ in range(n)]
-
     a.sort()
     i = s = 0
     while i < n:
@@ -13,7 +11,6 @@ def main():
             i += 1
             end = min(end, a[i][1]) if i < n else end
         s += 1
-
     stdout.write(str(s))
 
 

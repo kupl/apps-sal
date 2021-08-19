@@ -1,12 +1,12 @@
 from heapq import heappop, heappush
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 n = int(input())
 pair = [i for i in range(n)]
 que = []
 e = [None] * n
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     e[i] = (i, x, y)
 ex = sorted(e, key=lambda x: x[1])
 ey = sorted(e, key=lambda x: x[2])
@@ -30,7 +30,7 @@ def find(x):
 q = []
 ans = 0
 while que:
-    w, s, t = heappop(que)
+    (w, s, t) = heappop(que)
     root_s = find(s)
     root_t = find(t)
     if root_s != root_t:

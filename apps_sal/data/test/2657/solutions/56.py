@@ -1,7 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
 A.sort()
-A.append(10**12)
+A.append(10 ** 12)
 MAX = A[N - 1]
 ans = N
 for i in range(N):

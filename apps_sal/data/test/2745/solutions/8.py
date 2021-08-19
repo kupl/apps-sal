@@ -1,4 +1,5 @@
 class Solution:
+
     def findSubstring(self, s, words):
         """
         :type s: str
@@ -29,5 +30,4 @@ class Solution:
                 else:
                     curr_dict.clear()
                     l = r
-
         return result

@@ -1,18 +1,14 @@
 import sys
-sys.setrecursionlimit(10**9)
-
-N, Q = map(int, input().split())
+sys.setrecursionlimit(10 ** 9)
+(N, Q) = map(int, input().split())
 L = [[] for _ in range(N)]
-
 for _ in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     L[a - 1].append(b - 1)
     L[b - 1].append(a - 1)
-
 S = [0] * N
-
 for _ in range(Q):
-    p, x = map(int, input().split())
+    (p, x) = map(int, input().split())
     S[p - 1] += x
 
 

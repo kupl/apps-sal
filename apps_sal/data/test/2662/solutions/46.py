@@ -1,5 +1,4 @@
 import bisect
-
 N = int(input())
 A = [int(input()) for i in range(N)]
 
@@ -7,7 +6,6 @@ A = [int(input()) for i in range(N)]
 def lis(S):
     from bisect import bisect_right
     L = [S[0]]
-
     for s in S[1:]:
         if s >= L[-1]:
             L.append(s)

@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 n = int(input())
 points = [list(map(int, input().split())) + [i] for i in range(n)]
@@ -13,6 +13,7 @@ for i in range(n - 1):
 
 
 class UnionFind(object):
+
     def __init__(self, N):
         self.parent = [i for i in range(N)]
         self.size = [1 for i in range(N)]

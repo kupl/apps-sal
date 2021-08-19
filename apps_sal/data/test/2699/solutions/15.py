@@ -13,5 +13,5 @@ for n in ns:
         a[3].append(d)
     for i in a:
         for j in i:
-            print(j, end=" ")
+            print(j, end=' ')
         print()

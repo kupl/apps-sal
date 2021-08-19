@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 d = {}
 m = 0
 for i in a:

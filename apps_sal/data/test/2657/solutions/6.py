@@ -1,5 +1,5 @@
 import bisect
-n, *A = map(int, open(0).read().split())
+(n, *A) = map(int, open(0).read().split())
 A.sort()
 m = A[-1]
 i = bisect.bisect_right(A, m / 2)

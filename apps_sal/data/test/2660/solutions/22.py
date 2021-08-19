@@ -1,9 +1,8 @@
 import heapq
-
 q = int(input())
 ans = []
 mini = 0
-left, right = [], []
+(left, right) = ([], [])
 cnt = 0
 mid = None
 for _ in range(q):
@@ -14,7 +13,7 @@ for _ in range(q):
         else:
             ans.append([mid, mini])
     else:
-        kind, a, b = map(int, qi.split())
+        (kind, a, b) = map(int, qi.split())
         if cnt % 2 == 1:
             mini += abs(mid - a) + b
             heapq.heappush(left, -min(mid, a))
@@ -44,6 +43,5 @@ for _ in range(q):
                 heapq.heappush(right, a)
                 mid = r
         cnt += 1
-
-for i, j in ans:
+for (i, j) in ans:
     print(i, j)

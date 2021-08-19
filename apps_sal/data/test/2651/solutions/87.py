@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
-
 mod = 10 ** 9 + 7
 w = 0
 for i in range(n - 1):

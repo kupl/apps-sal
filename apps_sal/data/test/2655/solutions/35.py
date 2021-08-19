@@ -10,7 +10,6 @@ def chat_in_a_circle():
         res += a * 2
     if t:
         res -= a
-
     print(res)
 
 

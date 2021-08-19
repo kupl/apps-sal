@@ -16,13 +16,11 @@ def S(n: int) -> int:
 def f(N: int) -> int:
     if N < 10:
         return N
-
     D = ceil(log10(N) + 1)
     x = 10 * (N // 10 + 1) - 1
     for d in range(1, D + 1):
         td = 10 ** (d + 1)
         nx = td * (N // td + 1) - 1
-
         if nx / S(nx) < x / S(x):
             x = nx
     return x

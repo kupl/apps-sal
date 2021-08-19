@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -7,6 +6,7 @@ mod = 10 ** 9 + 7
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -30,7 +30,7 @@ class UnionFind:
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -53,7 +53,7 @@ class UnionFind:
         """
         edge.sort()
         cost_sum = 0
-        for cost, node1, node2 in edge:
+        for (cost, node1, node2) in edge:
             if not self.same(node1, node2):
                 cost_sum += cost
                 self.union(node1, node2)
@@ -62,9 +62,9 @@ class UnionFind:
 
 def resolve():
     n = int(input())
-    X, Y = [], []
+    (X, Y) = ([], [])
     for i in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         X.append([x, i])
         Y.append([y, i])
     X.sort()
@@ -75,7 +75,6 @@ def resolve():
         edge.append([cost1, X[i - 1][1], X[i][1]])
         cost2 = Y[i][0] - Y[i - 1][0]
         edge.append([cost2, Y[i - 1][1], Y[i][1]])
-
     uf = UnionFind(n)
     res = uf.kruskal(edge)
     print(res)

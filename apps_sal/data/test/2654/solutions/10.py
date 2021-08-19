@@ -1,7 +1,6 @@
 N = int(input())
 AB = [list(map(int, input().split())) for _ in range(N)]
-A, B = map(list, zip(*AB))
-
+(A, B) = map(list, zip(*AB))
 A.sort()
 B.sort()
 
@@ -13,7 +12,5 @@ def median(a):
 
 A_mid = median(A)
 B_mid = median(B)
-
 r = int((B_mid - A_mid) * [2, 1][N % 2]) + 1
-
 print(r)

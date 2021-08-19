@@ -1,6 +1,5 @@
 import sys
 from bisect import bisect_left
-
 input = sys.stdin.readline
 
 
@@ -9,7 +8,6 @@ def main():
     A = [0] * N
     for i in range(N):
         A[i] = int(input())
-
     colors = []
     for a in A:
         idx = bisect_left(colors, a)
@@ -17,7 +15,6 @@ def main():
             colors.insert(0, a)
         else:
             colors[idx - 1] = a
-
     ans = len(colors)
     print(ans)
 

@@ -1,21 +1,21 @@
-from heapq import*
-f, g = heappush, heappop
-(n, q), *z = [[*map(int, t.split())]for t in open(0)]
-*x, (l, r) = eval('[[],[]],' * 8**6)
-for a, b in z[:n]:
+from heapq import *
+(f, g) = (heappush, heappop)
+((n, q), *z) = [[*map(int, t.split())] for t in open(0)]
+(*x, (l, r)) = eval('[[],[]],' * 8 ** 6)
+for (a, b) in z[:n]:
     f(x[b][0], -a)
 for t in x:
     t[0] and f(l, -t[0][0])
-for c, d in z[n:]:
-    a, b = z[c - 1]
+for (c, d) in z[n:]:
+    (a, b) = z[c - 1]
     z[c - 1][1] = d
-    v, w = x[b]
-    y, _ = x[d]
+    (v, w) = x[b]
+    (y, _) = x[d]
     t = 0
     f(w, -a)
-    if-v[0] == a:
+    if -v[0] == a:
         while w and w[0] == v[0]:
-            g(w), g(v)
+            (g(w), g(v))
         f(r, a)
         v and f(l, -v[0])
     if y:
@@ -25,5 +25,5 @@ for c, d in z[n:]:
         f(l, a)
         t < 0 and f(r, -t)
     while r and l[0] == r[0]:
-        g(l), g(r)
+        (g(l), g(r))
     print(l[0])

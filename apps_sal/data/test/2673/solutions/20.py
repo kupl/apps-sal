@@ -24,5 +24,4 @@ while q.empty() == False:
     if h - 1 > 0 and d[h - 1] == -1:
         d[h - 1] = d[h] + 1
         q.put(h - 1)
-
 print(d[len(s) - 1])

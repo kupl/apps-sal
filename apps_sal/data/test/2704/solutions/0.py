@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 k = [int(x) for x in input().split()]
 a = min(k)
 b = max(k)

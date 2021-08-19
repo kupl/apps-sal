@@ -24,12 +24,11 @@ def listStr():
     return list(input().strip())
 
 
-"""
-"""
+'\n'
 
 
 def solve():
-    A, B, C = getInts()
+    (A, B, C) = getInts()
     return A + B + C - 1
 
 

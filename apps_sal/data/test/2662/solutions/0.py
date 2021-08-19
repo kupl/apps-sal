@@ -11,7 +11,7 @@ def main():
             lis.append(a[i])
         else:
             lis[bisect_right(lis, a[i])] = a[i]
-    print((len(lis)))
+    print(len(lis))
 
 
 def __starting_point():

@@ -1,4 +1,4 @@
-k, l = list(map(int, input().split()))
+(k, l) = list(map(int, input().split()))
 for i in range(0, l):
     if k % 10 == 0:
         k = k / 10

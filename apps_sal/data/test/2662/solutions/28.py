@@ -1,7 +1,5 @@
 from bisect import bisect_right
-
-
-N, *A = list(map(int, open(0).read().split()))
+(N, *A) = list(map(int, open(0).read().split()))
 A = [-a for a in A]
 q = []
 for a in A:
@@ -10,4 +8,4 @@ for a in A:
         q.append(a)
     else:
         q[idx] = a
-print((len(q)))
+print(len(q))

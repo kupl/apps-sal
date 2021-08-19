@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
-M, a, b = 10**9 + 7, 0, 0
+(M, a, b) = (10 ** 9 + 7, 0, 0)
 for i in range(n):
     a += (2 * i - n + 1) * x[i]
     a %= M

@@ -1,6 +1,5 @@
-
 import collections
-url = "https://atcoder.jp//contests/abc057/tasks/abc057_d"
+url = 'https://atcoder.jp//contests/abc057/tasks/abc057_d'
 
 
 def main():
@@ -9,7 +8,6 @@ def main():
     c_cards = collections.Counter(cards)
     credit = 0
     r = 0
-
     for k in c_cards:
         surplus = c_cards[k] - 1
         r += surplus

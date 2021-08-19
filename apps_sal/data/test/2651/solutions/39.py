@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
 sum_x = 0
@@ -9,5 +9,5 @@ for i in range(n):
 for i in range(m):
     sum_y += y[i] * i
     sum_y -= y[i] * (m - 1 - i)
-mod = 10**9 + 7
-print(((sum_x % mod) * (sum_y % mod) % mod))
+mod = 10 ** 9 + 7
+print(sum_x % mod * (sum_y % mod) % mod)

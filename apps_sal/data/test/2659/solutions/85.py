@@ -20,8 +20,8 @@ for n in range(1, 14):
         i = n - 2
     else:
         i = n - 1
-    while((i + 1) / (s(i) + 9 * n) <= (i + 2) / (s(i + 1) + 9 * n)):
+    while (i + 1) / (s(i) + 9 * n) <= (i + 2) / (s(i + 1) + 9 * n):
         sunuke_list.append(combine_int(i, n))
         i += 1
 for i in range(k):
-    print((sunuke_list[i]))
+    print(sunuke_list[i])

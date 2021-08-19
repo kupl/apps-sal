@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 sum_x = 0
 sum_y = 0
 for i in range(n):

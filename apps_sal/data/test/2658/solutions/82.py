@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = list(map(lambda x: int(x) - 1, input().split()))
 prev = 0
 count = 0

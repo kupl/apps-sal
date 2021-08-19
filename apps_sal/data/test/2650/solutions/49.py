@@ -7,13 +7,24 @@ from collections import defaultdict
 stdin = sys.stdin
 
 
-def ns(): return stdin.readline().rstrip()
-def ni(): return int(stdin.readline().rstrip())
-def nm(): return map(int, stdin.readline().split())
-def nl(): return list(map(int, stdin.readline().split()))
+def ns():
+    return stdin.readline().rstrip()
 
 
-class My_heapavi():
+def ni():
+    return int(stdin.readline().rstrip())
+
+
+def nm():
+    return map(int, stdin.readline().split())
+
+
+def nl():
+    return list(map(int, stdin.readline().split()))
+
+
+class My_heapavi:
+
     def __init__(self):
         self.p = list()
         self.q = list()
@@ -51,21 +62,21 @@ maxs = My_heapavi()
 
 
 def getmax(i):
-    if(s[i].size() == 0):
+    if s[i].size() == 0:
         return -1
     return s[i].maximum()
 
 
 def addYouchien(i):
     x = getmax(i)
-    if(x == -1):
+    if x == -1:
         return
     maxs.insert(x)
 
 
 def delYouchien(i):
     x = getmax(i)
-    if(x == -1):
+    if x == -1:
         return
     maxs.erase(x)
 
@@ -82,16 +93,14 @@ def delEnji(i, x):
     addYouchien(i)
 
 
-N, Q = nm()
+(N, Q) = nm()
 a = [0 for i in range(200005)]
 b = [0 for i in range(200005)]
-
 for i in range(N):
-    a[i], b[i] = nm()
+    (a[i], b[i]) = nm()
     addEnji(b[i], a[i])
-
 for i in range(Q):
-    c, d = nm()
+    (c, d) = nm()
     c -= 1
     delEnji(b[c], a[c])
     b[c] = d

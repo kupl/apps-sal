@@ -10,7 +10,7 @@ def column(matrix, i):
 
 
 for _ in range(eval(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     f = 0
     st = 'X' * k
     a = []
@@ -26,11 +26,11 @@ for _ in range(eval(input())):
                 a[i][j] = 'X'
                 if len(re.findall(st, ''.join(a[i]))) != 0:
                     f = 1
-                    print("YES")
+                    print('YES')
                     break
                 elif len(re.findall(st, ''.join(column(a, j)))) != 0:
                     f = 1
-                    print("YES")
+                    print('YES')
                     break
                 a[i][j] = '.'
     if f == 0:
@@ -40,15 +40,15 @@ for _ in range(eval(input())):
                     fd[i][j] = 'X'
                     if len(re.findall(st, ''.join(fd[i]))) != 0:
                         f = 1
-                        print("YES")
+                        print('YES')
                         break
                     fd[i][j] = '.'
                 if bd[i][j] == '.' and f == 0:
                     bd[i][j] = 'X'
                     if len(re.findall(st, ''.join(bd[i]))) != 0:
                         f = 1
-                        print("YES")
+                        print('YES')
                         break
                     bd[i][j] = '.'
     if f == 0:
-        print("NO")
+        print('NO')

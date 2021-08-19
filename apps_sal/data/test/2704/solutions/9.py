@@ -1,17 +1,16 @@
-
 def chk(a, q):
     l = a[0]
     m = a[len(a) - 1]
     if q >= l and q <= m:
-        return("Yes")
-    return "No"
+        return 'Yes'
+    return 'No'
 
 
 def main():
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     A.sort()
-    while(q > 0):
+    while q > 0:
         q -= 1
         ques = int(input())
         print(chk(A, ques))

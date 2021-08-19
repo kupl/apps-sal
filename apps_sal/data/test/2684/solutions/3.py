@@ -5,12 +5,10 @@ def get_longest_palindromes(strng):
     def is_palindrome(lo, hi):
         if cache[lo][hi] is not None:
             return cache[lo][hi]
-
         if lo == hi:
             return True
         elif lo + 1 == hi:
             return strng[lo] == strng[hi]
-
         ans = False if strng[lo] != strng[hi] else is_palindrome(lo + 1, hi - 1)
         cache[lo][hi] = ans
         return ans
@@ -19,10 +17,8 @@ def get_longest_palindromes(strng):
         ret = []
         longest = N
         found = False
-
         if not strng:
             return ['']
-
         for l in range(N, 0, -1):
             found = False
             for s in range(N - l + 1):
@@ -32,7 +28,6 @@ def get_longest_palindromes(strng):
             if found:
                 break
         return ret
-
     return generate_palindromes()
 
 

@@ -11,7 +11,7 @@ if N > 1:
     distance = [0] * N
     Q = Queue()
     Q.put(0)
-    while (not Q.empty()):
+    while not Q.empty():
         t = Q.get()
         for i in graph[S[t]]:
             if visited[i] == 0 and i != t:

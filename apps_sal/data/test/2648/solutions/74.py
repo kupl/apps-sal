@@ -1,7 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
 A.sort()
-dp = [0] * (10**5 + 1)
+dp = [0] * (10 ** 5 + 1)
 bp = []
 for i in range(N):
     if dp[A[i]] != 0:
@@ -11,7 +11,7 @@ bp.sort()
 p = len(bp)
 q = p
 o = 0
-for i in range(10**5):
+for i in range(10 ** 5):
     if p < 3:
         break
     p -= 2

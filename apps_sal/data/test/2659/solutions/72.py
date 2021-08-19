@@ -12,6 +12,6 @@ p = 1
 q = 0
 for i in range(k):
     print(p)
-    if s(p + 10**q) > s(p + 10**(q + 1)):
+    if s(p + 10 ** q) > s(p + 10 ** (q + 1)):
         q += 1
-    p += 10**q
+    p += 10 ** q

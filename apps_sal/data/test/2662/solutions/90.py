@@ -6,9 +6,8 @@ for a in A[1:]:
     idx = bisect_right(res, a)
     if idx == len(res):
         res.append(a)
+    elif res[idx] == a:
+        insort_right(res, a)
     else:
-        if res[idx] == a:
-            insort_right(res, a)
-        else:
-            res[idx] = a
-print((len(res)))
+        res[idx] = a
+print(len(res))

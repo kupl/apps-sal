@@ -1,7 +1,7 @@
 import bisect
 n = int(input())
-a = [(-1) * int(input()) for _ in range(n)]
-dp = [10**18 for _ in range(n)]
+a = [-1 * int(input()) for _ in range(n)]
+dp = [10 ** 18 for _ in range(n)]
 
 
 def lis(a):

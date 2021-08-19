@@ -11,10 +11,10 @@ def snk_cal(i):
 K = int(input())
 if K <= 9:
     for i in range(K):
-        print((i + 1))
+        print(i + 1)
 else:
     for i in range(9):
-        print((i + 1))
+        print(i + 1)
     K -= 9
     snk = 9
     while K > 0:

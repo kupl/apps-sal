@@ -3,19 +3,29 @@ import heapq as hq
 readline = sys.stdin.readline
 
 
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return list(map(int, readline().split()))
-def nl(): return list(map(int, readline().split()))
+def ns():
+    return readline().rstrip()
 
 
-n, q = nm()
-m = 2 * 10**5 + 5
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return list(map(int, readline().split()))
+
+
+def nl():
+    return list(map(int, readline().split()))
+
+
+(n, q) = nm()
+m = 2 * 10 ** 5 + 5
 cur = [-1] * n
 rate = [0] * n
 sec = [list() for _ in range(m)]
 for i in range(n):
-    a, b = nm()
+    (a, b) = nm()
     rate[i] = a
     cur[i] = b
     hq.heappush(sec[b], (-a, i))
@@ -24,7 +34,7 @@ for i in range(m):
     if sec[i]:
         hq.heappush(top, (-sec[i][0][0], sec[i][0][1], i))
 for _ in range(q):
-    c, d = nm()
+    (c, d) = nm()
     c -= 1
     bef = cur[c]
     cur[c] = d
@@ -39,4 +49,4 @@ for _ in range(q):
         hq.heappush(top, (-sec[bef][0][0], sec[bef][0][1], bef))
     while not sec[top[0][2]] or sec[top[0][2]][0][1] != top[0][1]:
         hq.heappop(top)
-    print((top[0][0]))
+    print(top[0][0])

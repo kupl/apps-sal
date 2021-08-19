@@ -6,10 +6,8 @@ for i in range(N):
     ab = list(map(int, input().split()))
     a_list.append(ab[0])
     b_list.append(ab[1])
-
 a_list = sorted(a_list)
 b_list = sorted(b_list)
-
 if N % 2 == 1:
     a_median = a_list[t]
     b_median = b_list[t]

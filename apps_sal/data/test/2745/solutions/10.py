@@ -1,4 +1,5 @@
 class Solution:
+
     def findSubstring(self, s, words):
         if not words:
             return []
@@ -11,7 +12,7 @@ class Solution:
         for i in range(len(s)):
             word = s[i:i + word_len]
             if word in word_set:
-                matched_queue, matched_counts = scopes[i % word_len]
+                (matched_queue, matched_counts) = scopes[i % word_len]
                 while matched_counts.get(word, 0) >= word_set[word]:
                     matched_counts[matched_queue.pop(0)] -= 1
                 matched_queue.append(word)

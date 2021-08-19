@@ -1,15 +1,15 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 l = [int(i) for i in input().split()]
-cons = int(5e5 + 1)
-mod = 10**9 + 7
+cons = int(500000.0 + 1)
+mod = 10 ** 9 + 7
 tpa = [1 for i in range(cons)]
 tpa[0] = 1
 for i in range(1, cons):
-    tpa[i] = (tpa[i - 1] * 2) % mod
+    tpa[i] = tpa[i - 1] * 2 % mod
 if k > n:
     print(tpa[n - 1])
 else:
-    il = [[]for i in range(k + 1)]
+    il = [[] for i in range(k + 1)]
     for i in range(n):
         if l[i] <= k:
             il[l[i]].append(i)

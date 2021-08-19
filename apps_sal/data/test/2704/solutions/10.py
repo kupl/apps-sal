@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = [int(i) for i in input().split()]
 p = min(a)
 z = max(a)

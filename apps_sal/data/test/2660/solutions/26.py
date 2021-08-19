@@ -16,7 +16,6 @@ for iii in range(q_num):
                 h.heappush(low, -q[1])
             else:
                 h.heappush(high, q[1])
-
         if len(low) >= len(high) + 2:
             ltoh = h.heappop(low)
             h.heappush(high, -ltoh)

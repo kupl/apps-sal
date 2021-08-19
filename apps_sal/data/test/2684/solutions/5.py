@@ -7,7 +7,6 @@ def pal(string):
 
 n = int(input())
 s = input()
-
 if s == s[::-1]:
     print(len(s))
     print(s)
@@ -18,7 +17,7 @@ else:
         for j in range(n):
             if i + j > n:
                 break
-            cur = s[i: i + j]
+            cur = s[i:i + j]
             if len(cur) > maxLen and pal(cur):
                 out = cur
                 maxLen = len(cur)

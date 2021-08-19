@@ -10,5 +10,5 @@ def solve(n, x, y):
 
 
 n = int(input())
-x, y = list(zip(*[list(map(int, input().split())) for i in range(n)]))
-print((solve(n, x, y)))
+(x, y) = list(zip(*[list(map(int, input().split())) for i in range(n)]))
+print(solve(n, x, y))

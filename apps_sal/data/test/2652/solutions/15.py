@@ -1,8 +1,8 @@
 from heapq import *
 N = int(input())
-X, Y = [], []
+(X, Y) = ([], [])
 for n in range(N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     X.append((x, n))
     Y.append((y, n))
 X.sort()
@@ -15,21 +15,19 @@ for n in range(N - 1):
     cost = Y[n + 1][0] - Y[n][0]
     D[Y[n + 1][1]].append((cost, Y[n][1]))
     D[Y[n][1]].append((cost, Y[n + 1][1]))
-
 visited = [0] * N
 pq = []
-for w, t in D[0]:
+for (w, t) in D[0]:
     heappush(pq, (w, t))
 visited[0] = 1
-
 ans = 0
 while pq:
-    w, t = heappop(pq)
+    (w, t) = heappop(pq)
     if visited[t]:
         continue
     visited[t] = 1
     ans += w
-    for w, s in D[t]:
+    for (w, s) in D[t]:
         if visited[s] == 0:
             heappush(pq, (w, s))
 print(ans)

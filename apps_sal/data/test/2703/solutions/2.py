@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort(reverse=True)
 p = []

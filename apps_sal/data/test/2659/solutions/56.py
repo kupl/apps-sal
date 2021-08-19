@@ -9,7 +9,7 @@ def next_sunuke(N):
     ret_val = N
     ret_vals = [ret_val]
     for d in range(0, D):
-        x = ((10 ** (d + 1)) * math.floor((N / (10 ** (d + 1))) + 1)) - 1
+        x = 10 ** (d + 1) * math.floor(N / 10 ** (d + 1) + 1) - 1
         w = str(x)
         sx = [int(w[:1]) for w in w]
         y = x / sum(sx)
@@ -26,5 +26,5 @@ def next_sunuke(N):
 K = int(input())
 n = 1
 for i in range(1, K + 1):
-    print((next_sunuke(n)))
+    print(next_sunuke(n))
     n = next_sunuke(n) + 1

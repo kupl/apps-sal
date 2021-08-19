@@ -12,5 +12,5 @@ def f(n, b):
     return count
 
 
-n, b = list(map(int, input().split()))
+(n, b) = list(map(int, input().split()))
 print(f(n, b))

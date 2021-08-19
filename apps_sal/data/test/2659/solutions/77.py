@@ -13,13 +13,13 @@ def D(x):
 N = 1
 S = 1
 a = 0
-print((1))
+print(1)
 while k <= K:
-    N += 10**a
+    N += 10 ** a
     S = D(N)
     if a < math.log10(N / S):
         a += 1
-        N = (N // 10**a + 1) * 10**a - 1
+        N = (N // 10 ** a + 1) * 10 ** a - 1
     S = D(N)
     print(N)
     k += 1

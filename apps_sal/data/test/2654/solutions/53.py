@@ -3,7 +3,7 @@ def main():
     a = [None] * n
     b = [None] * n
     for i in range(n):
-        a[i], b[i] = map(int, input().split())
+        (a[i], b[i]) = map(int, input().split())
     a.sort()
     b.sort()
     if n & 1:

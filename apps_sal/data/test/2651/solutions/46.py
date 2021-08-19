@@ -2,13 +2,20 @@ import sys
 import numpy as np
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
+
+
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
 
 
 MOD = 10 ** 9 + 7
-n, m = lr()
+(n, m) = lr()
 X = np.array(lr())
 Y = np.array(lr())
 coef_x = np.arange(n) * 2 - (n - 1)

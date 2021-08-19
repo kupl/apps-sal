@@ -1,7 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 b = [bi - 1 for bi in list(map(int, input().split()))]
 a = 0
-
 f = [0] * n
 c = 1
 for i in range(k):

@@ -1,10 +1,7 @@
 import bisect
-
 _ = int(input())
 a = sorted(map(int, input().split()))
-
 n = a[-1]
-
 m = n / 2
 b = bisect.bisect(a, m)
 s = a[b - 1]

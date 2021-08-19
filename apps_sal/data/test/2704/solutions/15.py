@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 x = max(a)
 y = min(a)

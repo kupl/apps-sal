@@ -2,7 +2,7 @@ def rawInput():
     return [int(x) for x in input().split()]
 
 
-n, b = rawInput()
+(n, b) = rawInput()
 x = rawInput()
 y = rawInput()
 
@@ -18,5 +18,4 @@ def compute(a, b):
 rlt = 0
 for i in range(b):
     rlt = rlt + compute(x[i], y[i])
-
 print(rlt)

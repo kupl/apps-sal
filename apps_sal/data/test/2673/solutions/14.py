@@ -2,12 +2,13 @@ from collections import defaultdict
 
 
 class Graph:
+
     def __init__(self, v):
         self.adj = defaultdict(list)
         self.V = v
 
     def findstep(self, s):
-        visit = [0] * (self.V)
+        visit = [0] * self.V
         dist = [0] * self.V
         q = []
         q.append(0)

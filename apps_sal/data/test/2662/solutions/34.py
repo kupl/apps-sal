@@ -6,4 +6,4 @@ for i in range(N):
     a = int(input())
     idx = bisect.bisect_left(dp, a)
     dp[idx - 1] = a
-print((len(dp[bisect.bisect_left(dp, 0):])))
+print(len(dp[bisect.bisect_left(dp, 0):]))

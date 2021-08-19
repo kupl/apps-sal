@@ -1,4 +1,4 @@
-m, n = map(int, input().split())
+(m, n) = map(int, input().split())
 X = list(map(int, input().split()))
 Y = list(map(int, input().split()))
 MOD = 1000000007
@@ -10,5 +10,5 @@ sum_x %= MOD
 for l in range(n):
     sum_y += (2 * l + 1 - n) * Y[l]
 sum_y %= MOD
-Answer = (sum_x * sum_y) % MOD
+Answer = sum_x * sum_y % MOD
 print(Answer)

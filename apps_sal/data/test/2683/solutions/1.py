@@ -7,9 +7,9 @@ def f(n, k):
         s.append(list(input()))
     for i in range(n):
         for j in range(n):
-            if s[i][j] == "X":
+            if s[i][j] == 'X':
                 s[i][j] = 1
-            elif s[i][j] == ".":
+            elif s[i][j] == '.':
                 s[i][j] = 0
                 flag = 1
             else:
@@ -30,15 +30,15 @@ def f(n, k):
         d1[i] = s[i][i]
         d2[i] = s[i][n - i - 1]
     for i in range(n - k + 1):
-        if (sum(d1[i:i + k]) >= k - 1) or (sum(d2[i:i + k]) >= k - 1):
+        if sum(d1[i:i + k]) >= k - 1 or sum(d2[i:i + k]) >= k - 1:
             return True
     return False
 
 
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     if f(n, k):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
