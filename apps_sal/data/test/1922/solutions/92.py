@@ -1,13 +1,12 @@
 import sys
 from collections import deque
-from bisect import bisect_left, bisect_right, insort_left, insort_right  # func(リスト,値)
+from bisect import bisect_left, bisect_right, insort_left, insort_right
 from heapq import heapify, heappop, heappush
 from math import *
-
-sys.setrecursionlimit(10**6)
-INF = 10**20
-eps = 1.0e-20
-MOD = 10**9 + 7
+sys.setrecursionlimit(10 ** 6)
+INF = 10 ** 20
+eps = 1e-20
+MOD = 10 ** 9 + 7
 
 
 def mint():
@@ -19,7 +18,7 @@ def lint():
 
 
 def ilint():
-    return int(input()), list(map(int, input().split()))
+    return (int(input()), list(map(int, input().split())))
 
 
 def judge(x, l=['Yes', 'No']):
@@ -31,7 +30,7 @@ def lprint(l, sep='\n'):
         print(x, end=sep)
 
 
-N, M = mint()
+(N, M) = mint()
 if N == M == 1:
     print(1)
 else:

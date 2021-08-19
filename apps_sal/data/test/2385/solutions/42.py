@@ -1,4 +1,3 @@
-
 """
 Writer: SPD_9X2
 https://atcoder.jp/contests/abc160/tasks/abc160_f
@@ -14,16 +13,11 @@ import sys
 sys.setrecursionlimit(10 ** 6)
 
 
-def inverse(a, mod):  # aのmodを法にした逆元を返す
+def inverse(a, mod):
     return pow(a, mod - 2, mod)
 
 
-# modのn!と、n!の逆元を格納したリストを返す(拾いもの)
-# factorialsには[1, 1!%mod , 2!%mod , 6!%mod… , n!%mod] が入っている
-# invsには↑の逆元が入っている
-
 def modfac(n, MOD):
-
     f = 1
     factorials = [1]
     for m in range(1, n + 1):
@@ -37,80 +31,58 @@ def modfac(n, MOD):
         inv *= m
         inv %= MOD
         invs[m - 1] = inv
-    return factorials, invs
+    return (factorials, invs)
 
 
-def modnCr(n, r, mod, fac, inv):  # 上で求めたfacとinvsを引数に入れるべし(上の関数で与えたnが計算できる最大のnになる)
-
+def modnCr(n, r, mod, fac, inv):
     return fac[n] * inv[n - r] * inv[r] % mod
 
 
 N = int(input())
-mod = 10**9 + 7
-fac, inv = modfac(N, mod)
-
+mod = 10 ** 9 + 7
+(fac, inv) = modfac(N, mod)
 lis = [[] for i in range(N)]
-
 for i in range(N - 1):
-
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
-
     lis[a].append(b)
     lis[b].append(a)
-
 plis = [i for i in range(N)]
 chnum = [0] * N
 mulis = [0] * N
 
 
 def dfs(v, p):
-
     rch = 1
     rmu = 1
     chlis = []
-
     for nex in lis[v]:
-
         if nex != p:
-
-            ch, mu = dfs(nex, v)
+            (ch, mu) = dfs(nex, v)
             rch += ch
             rmu *= mu
             rmu %= mod
             chlis.append(ch)
-
     nsum = sum(chlis)
-
     for i in range(len(chlis)):
-
         rmu *= modnCr(nsum, chlis[i], mod, fac, inv)
         rmu %= mod
         nsum -= chlis[i]
-
     plis[v] = p
     chnum[v] = rch
     mulis[v] = rmu
-
-    return rch, rmu
+    return (rch, rmu)
 
 
 ans = [None] * N
-
-temp, ans[0] = dfs(0, 0)
-
-#print (plis,chnum,mulis)
+(temp, ans[0]) = dfs(0, 0)
 
 
 def dfs2(v, p):
-
-    #print (v,p)
-
     if v != 0:
         vn = chnum[v]
         mn = mulis[v]
-
         ans[v] = ans[p] * modnCr(N - 1, N - vn, mod, fac, inv) * inverse(modnCr(N - 1, vn, mod, fac, inv), mod) % mod
     for nex in lis[v]:
         if nex != p:
@@ -118,4 +90,4 @@ def dfs2(v, p):
 
 
 dfs2(0, 0)
-print(("\n".join(map(str, ans))))
+print('\n'.join(map(str, ans)))

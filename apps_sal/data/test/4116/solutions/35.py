@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict, Counter
 from itertools import product, groupby, count, permutations, combinations
 from math import pi, sqrt
@@ -8,10 +7,10 @@ from string import ascii_lowercase
 from functools import lru_cache
 import sys
 sys.setrecursionlimit(500000)
-INF = float("inf")
-YES, Yes, yes, NO, No, no = "YES", "Yes", "yes", "NO", "No", "no"
-dy4, dx4 = [0, 1, 0, -1], [1, 0, -1, 0]
-dy8, dx8 = [0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1]
+INF = float('inf')
+(YES, Yes, yes, NO, No, no) = ('YES', 'Yes', 'yes', 'NO', 'No', 'no')
+(dy4, dx4) = ([0, 1, 0, -1], [1, 0, -1, 0])
+(dy8, dx8) = ([0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1])
 
 
 def inside(y, x, H, W):
@@ -42,9 +41,9 @@ def solve():
     for i in range(1, 10):
         for j in range(1, 10):
             if i * j == N:
-                print("Yes")
+                print('Yes')
                 return
-    print("No")
+    print('No')
 
 
 def main():

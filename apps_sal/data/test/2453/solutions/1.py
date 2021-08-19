@@ -18,20 +18,16 @@ def readlist():
     return list(map(int, input().split()))
 
 
-# C
 N = read()
 LIST = []
 left = 0
 right = 1
 for i in range(N):
-    l, r = readmap()
+    (l, r) = readmap()
     LIST.append((l, left))
     LIST.append((r, right))
-
 LIST.sort()
-
-cnt = [0] * (N + 1)  # DO NOT USE cnt[0]
-
+cnt = [0] * (N + 1)
 n = 1
 x = LIST[0][0]
 dir = left
@@ -47,16 +43,14 @@ for item in LIST[1:]:
             n += 1
             x = item[0]
             dir = left
+    elif dir == left:
+        cnt[n] += item[0] - x + 1
+        n -= 1
+        x = item[0]
+        dir = right
     else:
-        if dir == left:
-            cnt[n] += item[0] - x + 1
-            n -= 1
-            x = item[0]
-            dir = right
-        else:
-            cnt[n] += item[0] - x
-            n -= 1
-            x = item[0]
-            dir = right
-
-print(" ".join(list(map(str, cnt[1:]))))
+        cnt[n] += item[0] - x
+        n -= 1
+        x = item[0]
+        dir = right
+print(' '.join(list(map(str, cnt[1:]))))

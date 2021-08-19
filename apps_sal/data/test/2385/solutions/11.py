@@ -3,8 +3,8 @@ sys.setrecursionlimit(505050)
 
 
 class Combination:
-    def __init__(self, n_max, mod=10**9 + 7):
-        # O(n_max + log(mod))
+
+    def __init__(self, n_max, mod=10 ** 9 + 7):
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -22,13 +22,12 @@ class Combination:
 N = int(input())
 G = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     G[a].append(b)
     G[b].append(a)
-
 Siz = [0] * (N + 1)
 A = [0] * (N + 1)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 comb = Combination(202020)
 
 
@@ -39,7 +38,7 @@ def dfs1(v, p):
     an_denom = 1
     for u in G[v]:
         if u != p:
-            s, a = dfs1(u, v)
+            (s, a) = dfs1(u, v)
             siz += s
             an_prod = an_prod * a % mod
             an_numer += s
@@ -48,13 +47,10 @@ def dfs1(v, p):
     an = an_numer * an_denom % mod * an_prod % mod
     Siz[v] = siz
     A[v] = an
-    return siz, an
+    return (siz, an)
 
 
-_, ans = dfs1(1, 0)
-# for i in range(1, N+1):
-#     print(i, dfs1(i, 0))
-
+(_, ans) = dfs1(1, 0)
 Ans = [0] * (N + 1)
 Ans[1] = ans
 
@@ -74,4 +70,4 @@ def dfs2(v, p, an_p):
 
 
 dfs2(1, 0, None)
-print(("\n".join(map(str, Ans[1:]))))
+print('\n'.join(map(str, Ans[1:])))

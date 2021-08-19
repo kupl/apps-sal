@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 def calc(p, t):
     return max(3 * p // 10, p - p // 250 * t)
 
@@ -8,13 +5,11 @@ def calc(p, t):
 (a, b, c, d) = list(map(int, input().split()))
 m = calc(a, c)
 v = calc(b, d)
-
-ret = ""
+ret = ''
 if m > v:
-    ret = "Misha"
+    ret = 'Misha'
 elif v > m:
-    ret = "Vasya"
+    ret = 'Vasya'
 else:
-    ret = "Tie"
-
+    ret = 'Tie'
 print(ret)

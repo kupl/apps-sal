@@ -1,11 +1,8 @@
 import itertools
-
 n = int(input())
 p = [[0 for i in range(2)] for j in range(n)]
-
 for i in range(n):
-    p[i][0], p[i][1] = list(map(int, input().split()))
-# print(p)
+    (p[i][0], p[i][1]) = list(map(int, input().split()))
 
 
 def dis(a, b):
@@ -22,4 +19,4 @@ for v in itertools.permutations(perm, n):
         path += dis(p[v[i]], p[v[i + 1]])
     num += 1
     total += path
-print((total / num))
+print(total / num)
