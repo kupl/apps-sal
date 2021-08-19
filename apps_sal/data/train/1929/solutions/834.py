@@ -13,7 +13,7 @@ class StreamChecker:
         self.cur = []
 
     def query(self, letter: str) -> bool:
-        tmp, self.cur = self.cur, []
+        (tmp, self.cur) = (self.cur, [])
         tmp.append(self.dic)
         res = False
         for d in tmp:
@@ -22,7 +22,3 @@ class StreamChecker:
                 if '#' in d[letter]:
                     res = True
         return res
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

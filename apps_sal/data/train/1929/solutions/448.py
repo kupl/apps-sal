@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self):
         self.children = defaultdict(TrieNode)
         self.is_end = False
@@ -25,7 +26,3 @@ class StreamChecker:
             if current.is_end:
                 return True
         return False
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

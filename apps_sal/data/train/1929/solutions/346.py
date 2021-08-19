@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, char):
         self.char = char
         self.nxts = {}
@@ -6,6 +7,7 @@ class Node:
 
 
 class Trie:
+
     def __init__(self):
         self.root = Node('')
 
@@ -43,9 +45,4 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.sofar = letter + self.sofar
-        # print(self.sofar)
         return self.trie.search(self.sofar)
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

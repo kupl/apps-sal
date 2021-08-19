@@ -9,15 +9,13 @@ class StreamChecker:
                 self.memo[word_[:i + 1]] = 0
             self.words.add(word_)
         self.hist = []
-
-        print((self.memo))
+        print(self.memo)
 
     def query(self, letter: str) -> bool:
         self.hist.append(letter)
         w = ''
         for i in range(len(self.hist) - 1, -1, -1):
             w += self.hist[i]
-            # print(w)
             if w not in self.memo:
                 return False
             if w in self.words:

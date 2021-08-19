@@ -19,18 +19,13 @@ class StreamChecker:
         matched = False
         if letter in self.trie:
             self.activePtr.append(self.trie)
-        for i, trie in enumerate(self.activePtr):
+        for (i, trie) in enumerate(self.activePtr):
             if letter in trie:
                 trie = trie[letter]
                 if 'END' in trie:
                     matched = True
-                    #self.activePtr[i] = None
                 self.activePtr[i] = trie
             else:
                 self.activePtr[i] = None
         self.activePtr = [t for t in self.activePtr if t is not None]
         return matched
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

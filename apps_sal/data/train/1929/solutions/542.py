@@ -12,7 +12,6 @@ class StreamChecker:
             if len(temp_level[1][ord(c) - ord('a')]) == 0:
                 temp_level[1][ord(c) - ord('a')] = [False, [[] for _ in range(26)]]
             temp_level = temp_level[1][ord(c) - ord('a')]
-
         temp_level[0] = True
 
     def query(self, letter: str) -> bool:
@@ -25,8 +24,3 @@ class StreamChecker:
             if temp_level[0]:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

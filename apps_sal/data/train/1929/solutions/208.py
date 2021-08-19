@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self):
         self.trie = {}
 
@@ -20,6 +21,7 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.trie = Trie()
         for word in words:
@@ -29,8 +31,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         return self.trie.match(self.stream)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

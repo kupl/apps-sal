@@ -7,22 +7,19 @@ class StreamChecker:
             self.root.insert(word)
 
     def query(self, letter: str) -> bool:
-
         temp = []
         for node in self.waiting + [self.root]:
             if letter in node.child:
                 temp.append(node.child[letter])
-
         self.waiting = temp
-
         for node in self.waiting:
             if node.is_complete:
                 return True
-
         return False
 
 
 class TrieNode:
+
     def __init__(self):
         self.child = {}
         self.is_complete = False
@@ -35,8 +32,3 @@ class TrieNode:
                 node.child[letter] = new_node
             node = node.child[letter]
         node.is_complete = True
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -2,6 +2,7 @@ from typing import Dict
 
 
 class Node:
+
     def __init__(self, char=None):
         self.char = char
         self.is_complete_word = False
@@ -9,6 +10,7 @@ class Node:
 
 
 class Trie:
+
     def __init__(self):
         self.root = Node()
 
@@ -22,6 +24,7 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.waitlist = []
         self._max_length = 0
@@ -43,6 +46,3 @@ class StreamChecker:
             node = node.children[letter]
             i -= 1
         return node.is_complete_word
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

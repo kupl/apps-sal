@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self):
         self.child = [None] * 26
         self.w = False
@@ -16,7 +17,6 @@ class StreamChecker:
                     p.child[k] = Node()
                 p = p.child[k]
             p.w = True
-
         self.q = []
 
     def query(self, letter: str) -> bool:
@@ -30,8 +30,3 @@ class StreamChecker:
             if p.w:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

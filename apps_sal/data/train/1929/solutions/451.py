@@ -9,7 +9,7 @@ class StreamChecker:
                     pass
                 self.dic[word[-1]].append(word)
             except:
-                self.dic[word[-1]] = [word, ]
+                self.dic[word[-1]] = [word]
 
     def query(self, letter: str) -> bool:
         self.s += letter
@@ -21,8 +21,3 @@ class StreamChecker:
         except:
             pass
         return ans
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

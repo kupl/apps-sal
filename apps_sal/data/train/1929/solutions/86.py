@@ -1,4 +1,5 @@
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.dic = {}
         for i in words:
@@ -23,8 +24,3 @@ class StreamChecker:
             if i in cur:
                 cur = cur[i]
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
