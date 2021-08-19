@@ -1,5 +1,4 @@
-# -*- coding:utf-8 -*-
-class BellmanFord():
+class BellmanFord:
     """ベルマンフォード法で最短経路を求める"""
 
     def __init__(self, s, V):
@@ -12,7 +11,7 @@ class BellmanFord():
         for i in range(V):
             self.graph[i] = []
         self._V = V
-        self.dst = [float("inf") for _ in range(V)]
+        self.dst = [float('inf') for _ in range(V)]
         self.dst[s] = 0
 
     @property
@@ -35,36 +34,30 @@ class BellmanFord():
         for t in range(self.V):
             update = False
             for u in range(self.V):
-                if self.dst[u] == float("inf"):
+                if self.dst[u] == float('inf'):
                     continue
-                for v, cost in self.graph[u]:
+                for (v, cost) in self.graph[u]:
                     if self.dst[v] > self.dst[u] + cost:
                         self.dst[v] = self.dst[u] + cost
                         update = True
-
                         if t == self.V - 1 and v == self.V - 1:
                             return True
-
             if not update:
                 break
-
         return False
 
 
 def solve():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     bf = BellmanFord(0, N)
-
     for _ in range(M):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         bf.add(a - 1, b - 1, -c)
-
     nloop = bf.shortest_path()
-
     if nloop:
-        print("inf")
+        print('inf')
     else:
-        print((-bf.dist[N - 1]))
+        print(-bf.dist[N - 1])
 
 
 def __starting_point():

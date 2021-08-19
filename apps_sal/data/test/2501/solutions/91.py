@@ -11,16 +11,24 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
 
 
-#i - j == a[i] + a[j]
-# => i - a[i] == j + a[j]
-#j - i == a[i] + a[j]
-# => i + a[i] == j - a[j]
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
 n = INT()
 a = LIST()
 c = [0] * (2 * n + 1)

@@ -11,7 +11,6 @@ for k in range(N):
         C.append(-A[k] + k)
 B.sort()
 C.sort()
-
 c = 0
 b = 0
 while b < len(B) and c < len(C):
@@ -38,6 +37,4 @@ while b < len(B) and c < len(C):
         c += 1
     else:
         b += 1
-# print(B)
-# print(C)
 print(ans)

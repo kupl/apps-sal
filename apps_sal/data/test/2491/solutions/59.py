@@ -11,12 +11,12 @@ def reachable(es, source):
 
 
 def BellmanFord(V: int, es: list, source=0):
-    INF = float("inf")
+    INF = float('inf')
     D = [INF] * V
     D[source] = 0
     for _ in range(V):
         upd = False
-        for f, t, c in es:
+        for (f, t, c) in es:
             tmp = D[f] + c
             if D[t] > tmp:
                 D[t] = tmp
@@ -24,23 +24,22 @@ def BellmanFord(V: int, es: list, source=0):
         if not upd:
             return D[-1]
     else:
-        # Negative Cycle
         return None
 
 
 def main():
-    N, M, *L = map(int, open(0).read().split())
+    (N, M, *L) = map(int, open(0).read().split())
     fwd = [[] for _ in range(N)]
     bwd = [[] for _ in range(N)]
     tmp = []
-    for a, b, c in zip(*[iter(L)] * 3):
+    for (a, b, c) in zip(*[iter(L)] * 3):
         fwd[a - 1].append(b - 1)
         bwd[b - 1].append(a - 1)
-        tmp += [(a - 1, b - 1, - c)]
+        tmp += [(a - 1, b - 1, -c)]
     ra = reachable(fwd, 0) & reachable(bwd, N - 1)
-    ans = BellmanFord(N, [(a, b, c) for a, b, c in tmp if a in ra and b in ra])
+    ans = BellmanFord(N, [(a, b, c) for (a, b, c) in tmp if a in ra and b in ra])
     if ans == None:
-        print("inf")
+        print('inf')
     else:
         print(-ans)
 
