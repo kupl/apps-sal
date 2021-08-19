@@ -1,4 +1,3 @@
-# cook your dish here
 def __starting_point():
     try:
         while int(input()) != 0:
@@ -6,7 +5,7 @@ def __starting_point():
             l1 = [0] * len(l)
             for i in range(len(l)):
                 l1[l[i] - 1] = i + 1
-            print("ambiguous" if l == l1 else "not ambiguous")
+            print('ambiguous' if l == l1 else 'not ambiguous')
     except EOFError:
         print('EOFError')
 

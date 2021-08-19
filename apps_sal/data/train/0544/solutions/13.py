@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     n = int(input())
@@ -18,8 +17,7 @@ while t > 0:
                 l = m
             elif s[i] == '1':
                 k = m + 1
-
             i = i + 1
-        print(arr[k], end="")
+        print(arr[k], end='')
     print()
     t = t - 1

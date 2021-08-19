@@ -1,6 +1,6 @@
 t = int(input())
 for tt in range(t):
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     k -= 1
     arr = []
     for i in range(n):
@@ -8,7 +8,7 @@ for tt in range(t):
         arr.append(l)
     mm = 0
     for i in range(n):
-        x = [0] * (len(arr[i]))
+        x = [0] * len(arr[i])
         x[0] = arr[i][0]
         for j in range(1, m):
             x[j] = x[j - 1] + arr[i][j]
@@ -22,8 +22,7 @@ for tt in range(t):
         x = []
         for j in range(n):
             x.append(arr[j][i])
-        # print(x)
-        y = [0] * (n)
+        y = [0] * n
         y[0] = x[0]
         for j in range(1, n):
             y[j] = y[j - 1] + x[j]

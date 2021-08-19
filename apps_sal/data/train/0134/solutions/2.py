@@ -1,4 +1,5 @@
 class Solution:
+
     def numDupDigitsAtMostN(self, N: int) -> int:
         k = 0
         num = []
@@ -16,7 +17,6 @@ class Solution:
                 return 1
             if dp[dig][state]:
                 return dp[dig][state]
-
             seen.add(d1)
             for d in digits:
                 if d in seen:
@@ -30,24 +30,18 @@ class Solution:
                         dp[dig][state] += count(dp, dig + 1, state ^ 1, d, seen)
                     elif d == num[dig]:
                         dp[dig][state] += count(dp, dig + 1, state, d, seen)
-
             seen.remove(d1)
             return dp[dig][state]
-
         v = 0
-        # print(k)
         for d in range(1, 10):
             seen = set()
             if d < num[0]:
                 v += count(dp, 1, 0, d, seen)
             elif d == num[0]:
                 v += count(dp, 1, 1, d, seen)
-
         for i in range(1, k):
             for p in range(1, 10):
                 seen = set()
                 dp = [[0 for _ in range(2)] for _ in range(k + 1)]
                 v += count(dp, i + 1, 0, p, seen)
-            # print(v)
-        # print(dp[3][0])
         return N - v

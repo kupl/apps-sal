@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 while n:
     l = list(map(int, input().split()))
@@ -8,8 +7,8 @@ while n:
         invl[l[j] - 1] = i
     for i in range(n):
         if l[i] != invl[i]:
-            print("not ambiguous")
+            print('not ambiguous')
             break
     else:
-        print("ambiguous")
+        print('ambiguous')
     n = int(input())

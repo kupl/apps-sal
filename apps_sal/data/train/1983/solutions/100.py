@@ -16,6 +16,7 @@ class ProductOfNumbers:
 
 
 class SlidingWindow:
+
     def __init__(self, k: int):
         self.k = k
         self.q = deque()
@@ -38,8 +39,3 @@ class SlidingWindow:
         if self.zero_cnt > 0:
             return 0
         return self.q[-1]
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)
