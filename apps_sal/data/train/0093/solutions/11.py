@@ -1,16 +1,12 @@
 import sys
-
-# inf = open('input.txt', 'r')
-# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, line.split())) for line in sys.stdin)
 input = reader.__next__
-
-t, = input()
+(t,) = input()
 for _ in range(t):
-    n, m = input()
+    (n, m) = input()
     a = list(input())
     b = list(input())
-    d = {el: i for i, el in enumerate(a)}
+    d = {el: i for (i, el) in enumerate(a)}
     maxPos = d[b[0]]
     ans = 2 * maxPos + 1
     Nremoved = 1
@@ -23,6 +19,3 @@ for _ in range(t):
             maxPos = pos
         Nremoved += 1
     print(ans)
-
-
-# inf.close()

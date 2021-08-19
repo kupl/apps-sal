@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 for _ in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     aa = list(map(int, input().split()))
     bb = list(map(int, input().split()))
     ans = 0
@@ -21,12 +21,8 @@ for _ in range(t):
                 ind += 1
                 break
             else:
-
                 vis[aa[ind] - 1] = 1
                 ind += 1
         co -= 1
         ans += co * 2 + 1
-       # print(ans,ind)
-
     print(ans)
-   # print()

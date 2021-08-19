@@ -1,5 +1,3 @@
-#!/usr/bin/env pypy3
-
 from sys import stdin, stdout
 
 
@@ -9,13 +7,11 @@ def input():
 
 def ans(A):
     A = A[::-1]
-
-    ret = float("-inf")
+    ret = float('-inf')
     s = 0
     for a in A:
         s += a
         ret = max(ret, s)
-
     return ret
 
 

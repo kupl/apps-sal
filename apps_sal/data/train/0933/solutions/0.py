@@ -1,5 +1,3 @@
-#!/usr/bin/env python2
-
 def gc(c):
     return 'a' <= c <= 'h'
 
@@ -12,10 +10,10 @@ t = int(input())
 for i in range(t):
     line = input()
     if len(line) != 5:
-        print("Error")
+        print('Error')
         continue
     if line[2] != '-':
-        print("Error")
+        print('Error')
         continue
     x1 = line[0]
     y1 = line[1]
@@ -25,10 +23,10 @@ for i in range(t):
         d1 = abs(ord(x1) - ord(x2))
         d2 = abs(ord(y1) - ord(y2))
         if d1 > d2:
-            d1, d2 = d2, d1
-        if (d1 == 1) and (d2 == 2):
-            print("Yes")
+            (d1, d2) = (d2, d1)
+        if d1 == 1 and d2 == 2:
+            print('Yes')
         else:
-            print("No")
+            print('No')
     else:
-        print("Error")
+        print('Error')
