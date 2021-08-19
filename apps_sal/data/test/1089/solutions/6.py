@@ -1,7 +1,6 @@
-n, m, k = list(map(int, input().split()))
-
-mod = 10**9 + 7
-N = 2 * 10**5 + 50
+(n, m, k) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
+N = 2 * 10 ** 5 + 50
 fac = [1] * (N + 1)
 finv = [1] * (N + 1)
 for i in range(N):
@@ -20,13 +19,10 @@ def cmb1(n, r, mod):
 
 ans = 0
 for i in range(n * m):
-    x, y = divmod(i, m)
-    # x
+    (x, y) = divmod(i, m)
     ans += x * m * cmb1(n * m - 2, k - 2, mod) * x
     ans -= (n - 1 - x) * m * cmb1(n * m - 2, k - 2, mod) * x
-    # y
     ans += y * n * cmb1(n * m - 2, k - 2, mod) * y
     ans -= (m - 1 - y) * n * cmb1(n * m - 2, k - 2, mod) * y
-
 ans %= mod
 print(ans)

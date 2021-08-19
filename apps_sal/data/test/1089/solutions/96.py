@@ -1,15 +1,11 @@
-#!python3
-
 def LI():
     return list(map(int, input().split()))
 
 
-# input
-N, M, K = LI()
-
+(N, M, K) = LI()
 MOD = 10 ** 9 + 7
 MAX = 10 ** 5 * 2
-fac, finv, inv = [None] * MAX, [None] * MAX, [None] * MAX
+(fac, finv, inv) = ([None] * MAX, [None] * MAX, [None] * MAX)
 
 
 def comb_init():
@@ -44,7 +40,6 @@ def main():
         for j in range(M):
             v = cal(N - i, M - j) + cal(N - i, j + 1) - (s(j) + s(N - i - 1))
             ans = (ans + v) % MOD
-
     ans = ans * comb(N * M - 2, K - 2) % MOD
     print(ans)
 

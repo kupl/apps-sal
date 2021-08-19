@@ -1,6 +1,3 @@
-# E - Cell Distance
-# https://atcoder.jp/contests/abc127/tasks/abc127_e
-
 def comb(n, k, mod):
     if n < k:
         return 0
@@ -17,18 +14,13 @@ def comb(n, k, mod):
     return ans
 
 
-n, m, k = map(int, input().split())
-
+(n, m, k) = map(int, input().split())
 MOD = 1000000007
-
 distX = 0
 for d in range(n):
     distX += d * (n - d) * m ** 2
-
 distY = 0
 for d in range(m):
     distY += d * (m - d) * n ** 2
-
-ans = ((distX + distY) * comb(n * m - 2, k - 2, MOD)) % MOD
-
+ans = (distX + distY) * comb(n * m - 2, k - 2, MOD) % MOD
 print(ans)

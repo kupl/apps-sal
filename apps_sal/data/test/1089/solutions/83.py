@@ -1,8 +1,5 @@
-
-N, M, K = list(map(int, input().split()))
-
-MOD = 10**9 + 7
-
+(N, M, K) = list(map(int, input().split()))
+MOD = 10 ** 9 + 7
 MAXN = N * M + 10
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN
@@ -21,31 +18,17 @@ def nCr(n, r):
     return fac[n] * (finv[r] * finv[n - r] % MOD) % MOD
 
 
-# X：+ax*(ax - 1) * N - ax * (M - ax) * N = ax*N*(ax-1-M+ax) = ax*N*(2ax-1-M)
 ans = 0
-
 for i in range(1, M + 1):
-    tmp = (((((i * N) % MOD) * (2 * i - 1 - M)) % MOD) * N) % MOD
-
-    #print("~~~", i*N, 2*i - 1 - M,tmp, nCr(N*M-2, K-2))
-
+    tmp = i * N % MOD * (2 * i - 1 - M) % MOD * N % MOD
     tmp *= nCr(N * M - 2, K - 2)
-
     tmp %= MOD
-    #print("pppp", tmp)
     ans += tmp
-
     ans %= MOD
-
-
 for i in range(1, N + 1):
-    tmp = (((((i * M) % MOD) * (2 * i - 1 - N)) % MOD) * M) % MOD
-
+    tmp = i * M % MOD * (2 * i - 1 - N) % MOD * M % MOD
     tmp *= nCr(N * M - 2, K - 2)
-
     tmp %= MOD
     ans += tmp
     ans %= MOD
-
-
 print(ans)

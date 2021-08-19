@@ -1,16 +1,11 @@
-# python 3.4.3
 import sys
 input = sys.stdin.readline
 
-# -------------------------------------------------------------
-# library
-# -------------------------------------------------------------
-
 
 def init_fact(n, mod):
-    fact, finv, inv = [1] * n, [1] * n, [1] * n
+    (fact, finv, inv) = ([1] * n, [1] * n, [1] * n)
     for i in range(2, n):
-        fact[i] = (fact[i - 1] * i) % mod
+        fact[i] = fact[i - 1] * i % mod
         inv[i] = mod - inv[mod % i] * (mod // i) % mod
         finv[i] = finv[i - 1] * inv[i] % mod
     return (fact, finv, inv)
@@ -23,16 +18,9 @@ def nCr(n, r, mod, fact, finv):
         return fact[n] * (finv[r] * finv[n - r] % mod) % mod
 
 
-mod = 10**9 + 7
-fact, finv, inv = init_fact(200010, mod)
-
-
-# -------------------------------------------------------------
-# main
-# -------------------------------------------------------------
-
-N, M, K = map(int, input().split())
-
+mod = 10 ** 9 + 7
+(fact, finv, inv) = init_fact(200010, mod)
+(N, M, K) = map(int, input().split())
 ans = 0
 for d in range(1, N):
     t = d * nCr(N * M - 2, K - 2, mod, fact, finv)
@@ -48,5 +36,4 @@ for d in range(1, M):
     t %= mod
     ans += t
     ans %= mod
-
 print(ans)

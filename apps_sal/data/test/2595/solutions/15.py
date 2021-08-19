@@ -7,7 +7,6 @@ def solve():
     def helper(A, B):
         count = 0
         while A != B:
-           #         print(A,B)
             if A > B:
                 return False
             if 8 * A <= B:
@@ -22,7 +21,6 @@ def solve():
             else:
                 return -1
         return count
-
     return helper(min(A, B), max(A, B))
 
 

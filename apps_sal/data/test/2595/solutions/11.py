@@ -1,9 +1,7 @@
 from sys import stdin, stdout
 T = int(stdin.readline().strip())
-# n=int(stdin.readline().strip())
 for caso in range(T):
-
-    a, b = list(map(int, stdin.readline().strip().split()))
+    (a, b) = list(map(int, stdin.readline().strip().split()))
     ans = 0
     while a > b:
         if a % 8 == 0 and a // 8 >= b:
@@ -33,4 +31,3 @@ for caso in range(T):
         print(ans)
     else:
         print(-1)
-# s=list(map(int,stdin.readline().strip().split()))

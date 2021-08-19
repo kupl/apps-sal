@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
-
 def __starting_point():
     n = int(input())
     a = list(map(int, input().split()))
-
     possible = True
     prev = 0
     for i in range(n):
@@ -12,7 +9,6 @@ def __starting_point():
             possible = False
         v %= 2
         prev = v
-
     if prev == 0 and possible:
         print('YES')
     else:
