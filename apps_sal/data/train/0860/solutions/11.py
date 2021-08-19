@@ -1,4 +1,3 @@
-# cook your dish here
 def MinimumHours(n, h, a):
     a.sort()
     j = 0
@@ -9,9 +8,9 @@ def MinimumHours(n, h, a):
     while 1:
         for i in a[-1:-(n + 2):-1]:
             if i % mi == 0:
-                s += (i // mi)
+                s += i // mi
             else:
-                s += (i // mi) + 1
+                s += i // mi + 1
             if s > h:
                 c = 1
                 if c2 == 1:
@@ -31,8 +30,7 @@ def MinimumHours(n, h, a):
 
 p = []
 for i in range(int(input())):
-    n, h = input().split()
+    (n, h) = input().split()
     p.append(MinimumHours(int(n), int(h), [int(i) for i in input().split()]))
-
 for i in p:
     print(i)

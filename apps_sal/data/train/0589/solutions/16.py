@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 t = int(stdin.readline())
 
@@ -16,7 +15,6 @@ def attic(s):
                 k = c
                 m += 1
                 l.append(c)
-
             c = 0
     return m
 

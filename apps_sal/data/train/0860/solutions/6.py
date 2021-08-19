@@ -1,9 +1,8 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
-    n, hour = list(map(int, input().split()))
+    (n, hour) = list(map(int, input().split()))
     l = list(map(int, input().split()))
-    low, h = 1, max(l)
+    (low, h) = (1, max(l))
     while low != h:
         mid = (low + h) // 2
         count = 0

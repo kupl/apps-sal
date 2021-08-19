@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
     s = input()
-    l, d, m = 0, 0, 0
+    (l, d, m) = (0, 0, 0)
     for i in range(len(s)):
         if s[i] == '.':
             l += 1

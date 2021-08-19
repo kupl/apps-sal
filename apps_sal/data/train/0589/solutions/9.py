@@ -7,4 +7,4 @@ for _ in range(t):
         if len(i) > jump:
             jump = len(i)
             day += 1
-    print(day)  # cook your dish here
+    print(day)

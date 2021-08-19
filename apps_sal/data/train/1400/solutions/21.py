@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, l, r = list(map(int, input().split()))
+    (n, l, r) = list(map(int, input().split()))
     temp = [1]
     temp1 = [1]
     t = 1
@@ -18,4 +18,3 @@ for _ in range(int(input())):
             temp1.append(max(temp1))
         count = count + 1
     print(sum(temp), sum(temp1))
-    #print(temp , temp1)

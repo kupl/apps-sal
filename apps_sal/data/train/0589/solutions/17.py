@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 
@@ -15,7 +14,6 @@ def attic(s):
                 k = c
                 m += 1
                 l.append(c)
-
             c = 0
     return m
 

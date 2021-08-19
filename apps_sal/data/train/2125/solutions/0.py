@@ -1,4 +1,3 @@
-# http://codeforces.com/problemset/problem/848/B
 from collections import defaultdict
 
 
@@ -9,18 +8,16 @@ def get_dest(start, w, h):
         return (str(w), str(start[1]))
 
 
-n, w, h = [int(x) for x in input().split()]
+(n, w, h) = [int(x) for x in input().split()]
 dancers = []
 groups = defaultdict(list)
 destinations = [None for x in range(n)]
 for ii in range(n):
-    g, p, t = [int(x) for x in input().split()]
+    (g, p, t) = [int(x) for x in input().split()]
     dancers.append((g, p, t))
     groups[p - t].append(ii)
-
-
 for gg in list(groups.values()):
-    V, H = [], []
+    (V, H) = ([], [])
     for ii in gg:
         dancer = dancers[ii]
         if dancer[0] == 1:
@@ -29,10 +26,8 @@ for gg in list(groups.values()):
             H.append(dancer)
     V.sort(key=lambda x: -x[1])
     H.sort(key=lambda x: x[1])
-    table = {orig: get_dest(new, w, h) for orig, new in zip(V + H, H + V)}
+    table = {orig: get_dest(new, w, h) for (orig, new) in zip(V + H, H + V)}
     for ii in gg:
         destinations[ii] = table[dancers[ii]]
-
-# print(destinations)
 for dd in destinations:
-    print(" ".join(dd))
+    print(' '.join(dd))

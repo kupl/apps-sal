@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 
@@ -13,7 +12,6 @@ def attic(s):
             if c > k:
                 k = c
                 l.append(c)
-
             c = 0
     return len(set(sorted(l)))
 
