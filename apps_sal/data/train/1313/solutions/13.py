@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
     n = int(input())
@@ -11,10 +10,10 @@ for _ in range(int(input())):
         k = -1
     else:
         k = x
-        x1 = x**0.5
+        x1 = x ** 0.5
         t = int(x1)
         for i in range(2, t + 1):
-            if(x % i == 0):
+            if x % i == 0:
                 k = i
                 break
     print(k)

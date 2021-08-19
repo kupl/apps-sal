@@ -1,10 +1,9 @@
-# cook your dish here
 def maxnum(s, k):
     l = len(s)
     if l == 0 or k == 0:
         return s
     if l == 1:
-        return "9"
+        return '9'
     if s[0] != '9':
         s = '9' + s[1:]
         k -= 1
@@ -17,6 +16,6 @@ def maxnum(s, k):
     return s
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = f'{n}'
 print(maxnum(s, k))

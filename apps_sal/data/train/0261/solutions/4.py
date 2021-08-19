@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthLargest(self, nums, k):
         """
         :type nums: List[int]
@@ -7,26 +8,16 @@ class Solution:
         """
 
         def partition(nums, ind, i, j):
-
-            big, scan = i, i
-
-            nums[ind], nums[j] = nums[j], nums[ind]
-
+            (big, scan) = (i, i)
+            (nums[ind], nums[j]) = (nums[j], nums[ind])
             while scan < j:
                 if nums[scan] > nums[j]:
-                    nums[big], nums[scan] = nums[scan], nums[big]
+                    (nums[big], nums[scan]) = (nums[scan], nums[big])
                     big += 1
-
                 scan += 1
-
-            nums[j], nums[big] = nums[big], nums[j]
-            # print(nums)
-            # print(big)
+            (nums[j], nums[big]) = (nums[big], nums[j])
             return big
-
-        # 12 53 - 1 09
-
-        i, j = 0, len(nums) - 1
+        (i, j) = (0, len(nums) - 1)
         while i <= j:
             ind = random.randint(i, j)
             new_ind = partition(nums, ind, i, j)
@@ -36,5 +27,4 @@ class Solution:
                 i = new_ind + 1
             else:
                 j = new_ind - 1
-
         return -1

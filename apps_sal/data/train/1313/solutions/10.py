@@ -13,13 +13,11 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     list1 = list(map(int, input().strip().split()))
-
     curr = list1[0]
     for i in range(1, n):
         curr = hcf(curr, list1[i])
         if curr == 1:
             break
-
     if curr == 1:
         print(-1)
     else:
@@ -28,9 +26,7 @@ for _ in range(t):
             if curr % i == 0:
                 ans = i
                 break
-
         if ans == -1:
-            # curr is a prime number
             print(curr)
         else:
             print(i)

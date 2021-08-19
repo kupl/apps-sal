@@ -1,15 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 import math
 
 
 def solve(a, b):
-    a, b = min(a, b), max(a, b)
+    (a, b) = (min(a, b), max(a, b))
     if a == b:
         return 2 * a - 2
-
     c = int(math.sqrt(a * b)) + 2
     while True:
         if c * c < a * b:
@@ -23,5 +18,5 @@ def solve(a, b):
 
 Q = int(input())
 for _ in range(Q):
-    a, b = list(map(int, input().split()))
-    print((solve(a, b)))
+    (a, b) = list(map(int, input().split()))
+    print(solve(a, b))

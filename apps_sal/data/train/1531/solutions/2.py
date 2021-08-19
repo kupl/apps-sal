@@ -2,7 +2,7 @@ Nb = int(input())
 tree = list(map(int, input().split()))
 Ns = int(input())
 for i in range(Ns):
-    branch, bird = map(int, input().split())
+    (branch, bird) = map(int, input().split())
     branch -= 1
     bird -= 1
     u = bird
@@ -14,6 +14,5 @@ for i in range(Ns):
         tree[branch + 1] += l
     except:
         pass
-    # print(tree)
 for nb in tree:
     print(nb)

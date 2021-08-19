@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -6,7 +5,7 @@ for i in range(t):
     i = 0
     count = 0
     j = 0
-    while (j < n):
+    while j < n:
         if a[j] % 2 == 0:
             i += 1
         else:
