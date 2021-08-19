@@ -1,22 +1,17 @@
 import sys
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 n = int(input())
 g = [[] for _ in range(n)]
-
 pow2 = [0 for _ in range(n + 1)]
 pow2[0] = 1
 for i in range(n):
     pow2[i + 1] = pow2[i] * 2 % mod
-
 for _ in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     g[a - 1].append(b - 1)
     g[b - 1].append(a - 1)
-
 depth = [-1] * n
 ko_all = [0 for _ in range(n)]
 ko_only = [0 for _ in range(n)]
@@ -32,9 +27,7 @@ def dfs(v, d):
 
 
 dfs(0, 0)
-
 cnt = 0
-
 for i in range(n):
     tmp = pow2[n - 1] - 1 - (pow2[n - 1 - ko_all[i]] - 1) - ko_only[i]
     tmp %= mod
@@ -50,8 +43,8 @@ def inv(a, mod):
         r_new = [r[0] - q * w[0], r[1] - q * w[1], r[2] - q * w[2]]
         r = w
         w = r_new
-    x, y = w[0], w[1]    # a*x+y*mod = 1
+    (x, y) = (w[0], w[1])
     return (mod + x % mod) % mod
 
 
-print((inv(pow2[n], mod) * cnt % mod))
+print(inv(pow2[n], mod) * cnt % mod)

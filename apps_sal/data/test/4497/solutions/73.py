@@ -1,7 +1,5 @@
-# B - Break Number
 def main():
     n = int(input())
-
     if 64 <= n <= 100:
         print(64)
     elif 32 <= n <= 63:
@@ -18,5 +16,5 @@ def main():
         print(1)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -2,21 +2,18 @@ from itertools import permutations, combinations
 import sys
 from math import *
 from fractions import gcd
-from random import *  # randint(inclusive,inclusive)
-def readints(): return list(map(int, input().strip('\n').split()))
+from random import *
 
 
-s = "abcdefghijklmnopqrstuvwxyz"
-# print('', end=" ")
-# for i in {1..5}; do echo "hi"; done
+def readints():
+    return list(map(int, input().strip('\n').split()))
 
 
-n, k = readints()
+s = 'abcdefghijklmnopqrstuvwxyz'
+(n, k) = readints()
 s = input()
-
 lo = -1
 hi = n + 1
-
 hop = [0] * n
 for i in range(n):
     if s[i] == '0':
@@ -28,7 +25,6 @@ for i in range(n):
 def test(jump):
     at = 0
     used = 0
-
     while used < k - 2:
         if at + jump < n:
             to = hop[at + jump]
@@ -38,7 +34,6 @@ def test(jump):
             used += 1
         else:
             break
-
     if n - 1 - at > jump:
         return False
     return True
@@ -50,6 +45,4 @@ while hi - lo > 1:
         hi = mid
     else:
         lo = mid
-
-
 print(hi - 1)

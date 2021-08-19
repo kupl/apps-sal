@@ -1,8 +1,5 @@
-#!/usr/bin/env python3
-
 def main():
     import math
-
     try:
         while True:
             n = int(input())
@@ -10,7 +7,6 @@ def main():
             while n % x:
                 x -= 1
             print(x, n // x)
-
     except EOFError:
         pass
 

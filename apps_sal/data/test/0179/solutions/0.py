@@ -7,13 +7,13 @@ def f(n, cnt):
     """
     ans = 1
     for _ in range(cnt):
-        ans = (ans * n) % MOD
+        ans = ans * n % MOD
         n -= 1
     return ans
 
 
 def main():
-    n, x, pos = list(map(int, input().split()))
+    (n, x, pos) = list(map(int, input().split()))
     chk1 = 0
     chk_r = 0
     left = 0
@@ -30,7 +30,6 @@ def main():
     if chk1 > x - 1 or chk_r > n - x:
         print(0)
     else:
-        # (x - 1)! / (x - 1 - chk1)! * (n - x)! / (n - x - chk_r)! * (n - chk1 - chk_r - 1)!
         rest = n - chk1 - chk_r - 1
         print(f(x - 1, chk1) * f(n - x, chk_r) * f(rest, rest) % MOD)
 

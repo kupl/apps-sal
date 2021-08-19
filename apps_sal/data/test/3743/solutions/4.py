@@ -24,7 +24,6 @@ def solve(N):
             if x * x < N:
                 d.append(N // x)
         x += 1
-
     d.sort()
     if not d:
         return N
@@ -33,9 +32,6 @@ def solve(N):
         g = math.gcd(g, x)
     return g
 
-
-###############################################################################
-# AUXILIARY FUNCTIONS
 
 DEBUG = 'DEBUG' in os.environ
 

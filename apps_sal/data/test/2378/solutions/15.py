@@ -1,4 +1,3 @@
-# classを使うのをやめてlistで実施する
 import sys
 sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
@@ -34,17 +33,14 @@ AL = [[1, []] for _ in range(n)]
 visited = [False] * n
 p = 10 ** 9 + 7
 powp = pow(2, n - 1, p)
-
 for i in range(n - 1):
-    a, b = [int(x) - 1 for x in input().split()]
+    (a, b) = [int(x) - 1 for x in input().split()]
     AL[a][CHILDREN].append(b)
     AL[b][CHILDREN].append(a)
-
 dfs(0)
 numer = 0
 for i in range(n):
     numer += anaaki(i)
     numer %= p
-
 denom = powp * 2 % p
 print(numer * pow(denom, p - 2, p) % p)

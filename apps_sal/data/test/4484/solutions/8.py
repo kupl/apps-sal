@@ -1,4 +1,4 @@
-n, m = map(int, input().split(" "))
+(n, m) = map(int, input().split(' '))
 if abs(n - m) >= 2:
     print(0)
 else:
@@ -7,8 +7,7 @@ else:
     for i in range(1, min(n, m) + 1):
         temp *= i
         temp %= mod
-    # print(temp)
     if n != m:
-        print((temp**2 * (max(n, m)) % mod))
+        print(temp ** 2 * max(n, m) % mod)
     else:
-        print((temp**2 * 2 % mod))
+        print(temp ** 2 * 2 % mod)
