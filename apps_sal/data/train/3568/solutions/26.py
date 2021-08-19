@@ -1,6 +1,5 @@
 def bumps(road):
     bumps = 0
-
     for char in road:
         if char == 'n':
             bumps = bumps + 1

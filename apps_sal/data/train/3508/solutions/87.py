@@ -12,6 +12,7 @@ def halving_sum(n):
 
 
 class TestHalvingSum(unittest.TestCase):
+
     def test_halving_sum_when_given_n_is_25(self):
         n = 25
         actual = halving_sum(n)

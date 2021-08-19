@@ -8,8 +8,7 @@ def invite_more_women(arr):
             return False
         else:
             return True
+    elif women > len(arr) // 2:
+        return False
     else:
-        if women > len(arr) // 2:
-            return False
-        else:
-            return True
+        return True

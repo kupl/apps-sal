@@ -3,4 +3,4 @@ def bumps(road):
     for char in road:
         if char == 'n':
             bump = bump - 1
-    return "Car Dead" if bump < 0 else "Woohoo!"
+    return 'Car Dead' if bump < 0 else 'Woohoo!'

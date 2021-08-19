@@ -9,4 +9,4 @@ def rep(m):
 def increment_string(strng):
     if len(strng) == 0 or not strng[-1].isdigit():
         return strng + '1'
-    return re.sub(r'([0-9]+)$', rep, strng)
+    return re.sub('([0-9]+)$', rep, strng)

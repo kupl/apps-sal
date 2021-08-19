@@ -1,5 +1,5 @@
 def increment_string(strng):
-    s, m = strng[::-1], ''
+    (s, m) = (strng[::-1], '')
     for i in s:
         if i.isdigit():
             m = i + m

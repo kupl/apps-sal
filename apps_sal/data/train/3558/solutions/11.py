@@ -2,4 +2,4 @@ def capitalize_word(word):
     return word.title()
 
 
-print(capitalize_word("word"))
+print(capitalize_word('word'))

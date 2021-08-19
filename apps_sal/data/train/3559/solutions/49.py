@@ -1,6 +1,6 @@
 def chromosome_check(sperm):
-    if sperm == "XX":
-        result = 'Congratulations! You\'re going to have a daughter.'
+    if sperm == 'XX':
+        result = "Congratulations! You're going to have a daughter."
     else:
-        result = 'Congratulations! You\'re going to have a son.'
+        result = "Congratulations! You're going to have a son."
     return result

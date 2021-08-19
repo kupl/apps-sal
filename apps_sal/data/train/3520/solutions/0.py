@@ -16,4 +16,4 @@ def step(g, m, n):
     else:
         for i in range(m, n + 1 - g):
             if isPrime(i) and isPrime(i + g):
-                return[i, i + g]
+                return [i, i + g]

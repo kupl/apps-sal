@@ -1,5 +1,5 @@
 def owned_cat_and_dog(cat_years, dog_years):
-    c, d = 0, 0
+    (c, d) = (0, 0)
     if cat_years < 15:
         c = 0
     elif 15 <= cat_years < 24:

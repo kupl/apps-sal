@@ -1,5 +1,5 @@
 def capitalize_word(word):
-    return "".join(word.capitalize())
+    return ''.join(word.capitalize())
 
 
-'''delicious'''
+'delicious'

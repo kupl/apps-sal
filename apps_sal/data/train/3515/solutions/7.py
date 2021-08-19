@@ -1,13 +1,14 @@
-def encode(text, key): return cipher(text, key, 1)
+def encode(text, key):
+    return cipher(text, key, 1)
 
 
-def decode(text, key): return cipher(text, key, -1)
+def decode(text, key):
+    return cipher(text, key, -1)
 
 
 def cipher(text, key, mode):
     U = tuple(dict.fromkeys(key.upper() + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
     L = tuple(dict.fromkeys(key.lower() + 'abcdefghijklmnopqrstuvwxyz'))
-
     output = ''
     i = mode
     for x in text:

@@ -4,10 +4,8 @@ def increment_string(string):
     for i in string[-3:]:
         if i in number:
             f += 1
-
     if f == 0:
-        return string + "1"
-    if string == "foobar00999":
-        return "foobar01000"
-
+        return string + '1'
+    if string == 'foobar00999':
+        return 'foobar01000'
     return string[:-f] + str(int(string[-f:]) + 1).zfill(f)

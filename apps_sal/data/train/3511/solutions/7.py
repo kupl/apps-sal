@@ -1,5 +1,7 @@
 def find_key(encryption_key):
-    def is_prime(p): return all(p % i for i in range(3, int(p**0.5) + 1, 2)) and (p == 2 or p % 2)
+
+    def is_prime(p):
+        return all((p % i for i in range(3, int(p ** 0.5) + 1, 2))) and (p == 2 or p % 2)
     n = int(encryption_key, 16)
     if n % 2 == 0 and is_prime(n // 2):
         return n // 2 - 1

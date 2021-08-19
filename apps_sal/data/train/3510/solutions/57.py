@@ -5,5 +5,4 @@ def count_red_beads(n):
         count = 2
         for i in range(2, n):
             count += 2
-
         return count

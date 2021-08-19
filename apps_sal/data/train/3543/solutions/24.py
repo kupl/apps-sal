@@ -3,7 +3,7 @@ def increment_string(st):
         return st + '1'
     if int(st[-1]) < 9:
         return st[:-1] + str(int(st[-1]) + 1)
-    end, i = '', len(st) - 1
+    (end, i) = ('', len(st) - 1)
     while st[i].isdigit() and int(st[i]) == 9:
         i -= 1
         end += '0'

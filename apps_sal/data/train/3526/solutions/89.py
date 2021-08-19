@@ -1,4 +1,5 @@
 class Arrow:
+
     def __init__(self, range=5, damaged=False):
         self.range = range
         self.damaged = damaged

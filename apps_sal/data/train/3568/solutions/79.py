@@ -5,4 +5,4 @@ def bumps(road):
             counter += 1
         else:
             pass
-    return 'Woohoo!'if counter <= 15 else 'Car Dead'
+    return 'Woohoo!' if counter <= 15 else 'Car Dead'

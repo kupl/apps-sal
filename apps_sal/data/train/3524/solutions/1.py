@@ -1,1 +1,2 @@
-def dna_to_rna(s): return s.replace('T', 'U')
+def dna_to_rna(s):
+    return s.replace('T', 'U')

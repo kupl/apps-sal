@@ -7,7 +7,7 @@ def stringy(size):
         else:
             bla += str(1)
     print(bla)
-    return (bla)
+    return bla
 
 
 size = 3

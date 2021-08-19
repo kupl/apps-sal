@@ -1,5 +1,5 @@
 def capitalize_word(word):
-    return (word.capitalize())
+    return word.capitalize()
 
 
-capitalize_word("hi")
+capitalize_word('hi')

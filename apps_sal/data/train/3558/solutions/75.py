@@ -1,2 +1,2 @@
 def capitalize_word(word):
-    return "{}".format(word.capitalize())
+    return '{}'.format(word.capitalize())

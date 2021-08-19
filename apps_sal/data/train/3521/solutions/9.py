@@ -18,7 +18,7 @@ def on_line(points):
             break
     if test:
         return True
-    if (points[1][x] - points[0][x]) != 0:
+    if points[1][x] - points[0][x] != 0:
         a = (points[1][y] - points[0][y]) / (points[1][x] - points[0][x])
     else:
         a = 0

@@ -8,6 +8,6 @@ def bumps(road):
         else:
             countUnderscore += 1
     if countN > 15:
-        return "Car Dead"
+        return 'Car Dead'
     else:
-        return "Woohoo!"
+        return 'Woohoo!'

@@ -1,5 +1,5 @@
 def stringy(size):
-    outStr = ""
+    outStr = ''
     lastAdd = 0
     for x in range(size):
         if lastAdd == 0:

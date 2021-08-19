@@ -9,7 +9,7 @@ def dna_to_rna(dna):
         elif item == 'T':
             rna_lst.append('U')
         else:
-            print("This is no dna structure")
+            print('This is no dna structure')
             break
     rna = ''.join(rna_lst)
     return rna

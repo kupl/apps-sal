@@ -4,5 +4,4 @@ def halving_sum(n):
     while n // x > 0:
         summed += n // x
         x *= 2
-
     return summed

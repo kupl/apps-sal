@@ -3,6 +3,6 @@ def invite_more_women(arr):
     for item in arr:
         i += item
     if i > 0:
-        return(True)
+        return True
     else:
-        return(False)
+        return False

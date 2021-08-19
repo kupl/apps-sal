@@ -6,10 +6,8 @@ def increment_string(strng):
             s += i
         else:
             a += i
-
     if len(s) == 0:
-        return strng + "1"
-
+        return strng + '1'
     a = a[::-1]
     s = s[::-1]
     s2 = int(s) + 1

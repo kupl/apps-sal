@@ -6,5 +6,5 @@ def dna_to_rna(dna):
         elif base == 'G' or 'C' or 'A':
             rna = rna + base
         else:
-            print(f"{base} is not a DNA nucleotide base")
+            print(f'{base} is not a DNA nucleotide base')
     return rna

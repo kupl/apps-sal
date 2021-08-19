@@ -2,5 +2,7 @@ songs = [{'artist': 'Marillion', 'title': 'Keyleigh', 'playback': '03:36'}, {'ar
 
 
 def longest_possible(playback):
-    def f(song): return sum(int(x) * 60 ** (1 - i) for i, x in enumerate(song['playback'].split(':'))) <= playback
+
+    def f(song):
+        return sum((int(x) * 60 ** (1 - i) for (i, x) in enumerate(song['playback'].split(':')))) <= playback
     return max(filter(f, songs), default={'title': False}, key=lambda x: x['playback'])['title']

@@ -14,7 +14,7 @@ def prime(number):
 def step(g, m, n):
     res = []
     i = m
-    while (i <= n - g):
+    while i <= n - g:
         if prime(i) and prime(i + g):
             res.append(i)
             res.append(i + g)

@@ -1,3 +1,3 @@
 def quotable(name, quote):
-    name = name + " said: \""
+    name = name + ' said: "'
     return name + quote + '"'

@@ -5,7 +5,7 @@ def solve(arr):
         working_arr = []
         if x in arr:
             continue
-        for idx_y, y in enumerate(arr):
+        for (idx_y, y) in enumerate(arr):
             if x < y:
                 working_arr = arr[:idx_y]
                 if sum(working_arr) < x:

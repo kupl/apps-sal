@@ -1,10 +1,8 @@
 def dna_to_rna(dna):
-    rna = ""
-
+    rna = ''
     for l in dna:
-        if l.upper() == "T":
-            rna += "U"
+        if l.upper() == 'T':
+            rna += 'U'
         else:
             rna += l.upper()
-
     return rna

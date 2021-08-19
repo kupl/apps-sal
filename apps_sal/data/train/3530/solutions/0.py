@@ -6,4 +6,4 @@ def asterisc_it(s):
         s = str(s)
     elif isinstance(s, list):
         s = ''.join(map(str, s))
-    return re.sub(r'(?<=[02468])(?=[02468])', '*', s)
+    return re.sub('(?<=[02468])(?=[02468])', '*', s)

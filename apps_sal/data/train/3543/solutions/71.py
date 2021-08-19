@@ -7,4 +7,4 @@ def increment_string(strng):
             break
     if not digit_count:
         return strng + '1'
-    return f'{strng[: -digit_count]}{(int(strng[-digit_count:]) + 1):0{digit_count}}'
+    return f'{strng[:-digit_count]}{int(strng[-digit_count:]) + 1:0{digit_count}}'

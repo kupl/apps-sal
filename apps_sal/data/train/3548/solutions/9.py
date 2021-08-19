@@ -6,9 +6,8 @@ def polynomialize(roots):
             new_poly.append(poly[i] - root * poly[i - 1])
         new_poly.append(poly[-1] * -root)
         poly = new_poly
-
     str_poly = []
-    for i, coeff in enumerate(poly):
+    for (i, coeff) in enumerate(poly):
         power = len(roots) - i
         if coeff < 0:
             str_poly.append(' - ')
@@ -25,4 +24,4 @@ def polynomialize(roots):
         if power >= 2:
             str_poly.append('^')
             str_poly.append(str(power))
-    return f'{"".join(str_poly)} = 0'
+    return f"{''.join(str_poly)} = 0"

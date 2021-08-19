@@ -6,6 +6,7 @@ def odd_count(n):
 
 
 class TestOddCount(unittest.TestCase):
+
     def test_should_return_7_when_given_n_is_15(self):
         n = 15
         actual = odd_count(n)

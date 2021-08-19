@@ -1,5 +1,5 @@
 def stringy(size):
-    binary_yo = ""
+    binary_yo = ''
     for i in range(size):
         if i % 2 == 0:
             binary_yo += '1'

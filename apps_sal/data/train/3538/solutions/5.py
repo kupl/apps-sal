@@ -4,4 +4,4 @@ def sinus(u):
 
 
 def scroller(t, a, p):
-    return "\n".join(' ' * round((sinus(i % p / p - 1 / 2) + 1) * a) + c for i, c in enumerate(t))
+    return '\n'.join((' ' * round((sinus(i % p / p - 1 / 2) + 1) * a) + c for (i, c) in enumerate(t)))

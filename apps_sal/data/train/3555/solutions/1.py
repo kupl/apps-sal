@@ -10,7 +10,7 @@ def move(n, a, b, c, source, target, auxiliary, output):
 
 
 def hanoiArray(n):
-    a, b, c = list(range(n, 0, -1)), [], []
+    (a, b, c) = (list(range(n, 0, -1)), [], [])
     with StringIO() as output:
         print([a, b, c], file=output)
         move(n, a, b, c, a, c, b, output)

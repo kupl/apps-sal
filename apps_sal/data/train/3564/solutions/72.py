@@ -1,5 +1,5 @@
 def stringy(size):
-    c, l = '1', []
+    (c, l) = ('1', [])
     for i in range(size):
         if c == '1':
             l.append(c)

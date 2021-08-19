@@ -2,7 +2,6 @@ def count_red_beads(n):
     ecount = 2
     ocount = 4
     oplst1 = []
-
     if n < 2:
         return 0
     else:
@@ -13,5 +12,4 @@ def count_red_beads(n):
             else:
                 oplst1.append(ocount)
                 ocount += 4
-
         return oplst1[-1]

@@ -1,7 +1,7 @@
 def increment_string(string):
     l = 0
     for x in range(1, 100):
-        if not string[-x::].isnumeric():
+        if not string[-x:].isnumeric():
             l = x
             break
     if l == 1:

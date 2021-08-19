@@ -1,5 +1,5 @@
 def hanoiArray(n):
-    A, B, C = list(range(n, 0, -1)), [], []
+    (A, B, C) = (list(range(n, 0, -1)), [], [])
     res = [str([A, C, B])]
 
     def rec(n, X, Y, Z):

@@ -3,5 +3,5 @@ def odd_count(n):
     if n % 2 == 0:
         c = n / 2
     else:
-        c = (n / 2) - 0.5
-    return (c)
+        c = n / 2 - 0.5
+    return c

@@ -7,7 +7,7 @@ def increment_string(strng):
     if len(originalnum) > 0:
         num = int(originalnum) + 1
     else:
-        return strng + "1"
+        return strng + '1'
     if len(str(num)) < len(originalnum):
         numstr = str(num).zfill(len(originalnum))
     else:

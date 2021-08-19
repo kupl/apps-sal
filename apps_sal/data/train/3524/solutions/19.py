@@ -1,5 +1,5 @@
-dnatab = "T"
-rnatab = "U"
+dnatab = 'T'
+rnatab = 'U'
 
 
 def dna_to_rna(dna):

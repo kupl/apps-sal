@@ -2,7 +2,7 @@ import re
 
 
 def increment_string(string):
-    digits = re.search(r'\d+$', string)
+    digits = re.search('\\d+$', string)
     if not len(string):
         return '{}'.format('1')
     elif digits:

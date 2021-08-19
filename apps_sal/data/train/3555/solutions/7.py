@@ -10,7 +10,7 @@ def hanoiArray(n):
     moves = hanoi(n, 0, 2)
     towers = [list(range(n, 0, -1)), [], []]
     ans = [str(towers)]
-    for i, j in moves:
+    for (i, j) in moves:
         towers[j].append(towers[i].pop())
         ans.append(str(towers))
     return '\n'.join(ans)

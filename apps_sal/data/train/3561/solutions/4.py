@@ -3,13 +3,11 @@ def around_fib(n):
     ch = ['9', '8', '7', '6', '5', '4', '3', '2', '1', '0']
     maxcnt = 0
     chunk = ''
-
     for digit in ch:
         cnt = f.count(digit)
         if cnt >= maxcnt:
             maxcnt = cnt
             maxdig = digit
-
     l = len(f) % 25
     if l == 0:
         start = len(f) - 25
@@ -17,7 +15,6 @@ def around_fib(n):
         start = len(f) - l
     for i in range(start, len(f)):
         chunk += f[i]
-
     return 'Last chunk %s; Max is %d for digit %s' % (chunk, maxcnt, maxdig)
 
 

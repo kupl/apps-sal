@@ -4,11 +4,9 @@ songs = [{'artist': 'Marillion', 'title': 'Keyleigh', 'playback': '03:36'}, {'ar
 def longest_possible(playback):
 
     def to_seconds(t):
-        mins, secs = t.split(':')
+        (mins, secs) = t.split(':')
         return int(mins) * 60 + int(secs)
-
     valids = [(song['title'], to_seconds(song['playback'])) for song in songs if to_seconds(song['playback']) <= playback]
-
     if len(valids) == 0:
         return False
     else:

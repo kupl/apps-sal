@@ -1,6 +1,5 @@
 from re import compile, search
-
-REGEX = compile(r'(?P<num>\d+)$')
+REGEX = compile('(?P<num>\\d+)$')
 
 
 def increment_string(strng):

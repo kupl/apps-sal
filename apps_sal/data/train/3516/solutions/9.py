@@ -1,6 +1,6 @@
 def present(x, y):
     if x == 'badpresent':
-        return "Take this back!"
+        return 'Take this back!'
     elif x == 'dog':
         return f'pass out from excitement {y} times'
     elif x in ['crap', 'empty']:

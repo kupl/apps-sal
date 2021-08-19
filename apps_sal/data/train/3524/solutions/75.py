@@ -1,5 +1,5 @@
 def dna_to_rna(dna):
-    rna = ""
+    rna = ''
     for c in dna:
         if c == 'T':
             rna += 'U'

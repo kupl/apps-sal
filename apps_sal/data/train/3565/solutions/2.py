@@ -12,4 +12,4 @@ def solve(s, n):
         cum_count[ord(c) - 97] += 1
         if cum_count[ord(c) - 97] > n:
             result.append(c)
-    return "".join(result)
+    return ''.join(result)

@@ -1,6 +1,5 @@
 def any_arrows(arrows):
     lst = []
-
     if arrows == []:
         lst.append(False)
     else:

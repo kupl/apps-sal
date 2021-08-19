@@ -2,7 +2,7 @@ songs = [{'artist': 'Marillion', 'title': 'Keyleigh', 'playback': '03:36'}, {'ar
 
 
 def calculate_seconds(s):
-    minutes, seconds = [int(x) for x in s.split(':')]
+    (minutes, seconds) = [int(x) for x in s.split(':')]
     return minutes * 60 + seconds
 
 

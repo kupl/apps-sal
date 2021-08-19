@@ -1,4 +1,3 @@
-
 def invite_more_women(arr):
     a = sum(arr)
     if a <= 0:

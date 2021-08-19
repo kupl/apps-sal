@@ -6,5 +6,5 @@ def longest_possible(n):
 
 
 def extractor(d):
-    m, s = map(int, d['playback'].split(':'))
-    return m * 60 + s, d['title']
+    (m, s) = map(int, d['playback'].split(':'))
+    return (m * 60 + s, d['title'])

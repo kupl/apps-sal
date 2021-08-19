@@ -2,15 +2,13 @@ import re
 
 
 def increment_string(strng):
-    if strng == "":
-        return "1"
-
+    if strng == '':
+        return '1'
     try:
-        strngSearch = re.search("[^1-9]", strng[::-1]).start()
-        absStart = re.search("[^\d]", strng[::-1]).start()
+        strngSearch = re.search('[^1-9]', strng[::-1]).start()
+        absStart = re.search('[^\\d]', strng[::-1]).start()
     except AttributeError:
         return str(int(strng) + 1).zfill(len(strng))
-
     if absStart > 0:
         sa = strng[-absStart:]
         oldNum = int(sa)
@@ -18,4 +16,4 @@ def increment_string(strng):
         newStrng = strng[:-absStart] + newNum
         return newStrng
     else:
-        return strng + "1"
+        return strng + '1'

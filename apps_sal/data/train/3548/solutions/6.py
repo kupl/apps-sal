@@ -10,13 +10,12 @@ def toTerm(coef, power):
         p = 'x'
     else:
         p = 'x^' + str(power)
-
     term = ('' if abs(coef) == 1 and power > 0 else str(abs(coef))) + p
     return (' - ' if coef < 0 else ' + ') + str(term) if term else ''
 
 
 def co2poly(coefs):
-    terms = [toTerm(c, i) for i, c in enumerate(coefs)]
+    terms = [toTerm(c, i) for (i, c) in enumerate(coefs)]
     terms.reverse()
     t = ''.join(terms)
     return (t[3:] if t.startswith(' +') else t[1:]) + ' = 0'

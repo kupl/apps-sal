@@ -3,5 +3,4 @@ def count_red_beads(n):
         return 0
     else:
         output = (n - 1) * 2
-
         return output

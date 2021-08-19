@@ -1,1 +1,2 @@
-def is_divisible(n, d): return not n % d
+def is_divisible(n, d):
+    return not n % d

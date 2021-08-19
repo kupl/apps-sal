@@ -2,5 +2,5 @@ songs = [{'artist': 'Marillion', 'title': 'Keyleigh', 'playback': '03:36'}, {'ar
 
 
 def longest_possible(playback):
-    song_list = [x for x in songs if x['playback'] <= ("%02d:%02d" % divmod(playback, 60))]
-    return max(song_list, key=lambda x: x["playback"])["title"] if song_list else False
+    song_list = [x for x in songs if x['playback'] <= '%02d:%02d' % divmod(playback, 60)]
+    return max(song_list, key=lambda x: x['playback'])['title'] if song_list else False

@@ -1,4 +1,4 @@
-s = ""
+s = ''
 
 
 def dna_to_rna(dna):

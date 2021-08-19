@@ -4,7 +4,6 @@ def bumps(road):
     for i in lista:
         if i == 'n':
             bumps += 1
-
     if bumps <= 15:
         return 'Woohoo!'
     else:
