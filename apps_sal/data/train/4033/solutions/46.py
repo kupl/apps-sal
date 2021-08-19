@@ -1,5 +1,5 @@
 def contamination(text, char):
-    if text == "":
+    if text == '':
         return text
     else:
         for letter in text:

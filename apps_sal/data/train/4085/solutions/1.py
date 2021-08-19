@@ -9,4 +9,4 @@ def scramble(m):
 
 
 def mix_words(string):
-    return sub('\B\w+\B', scramble, string)
+    return sub('\\B\\w+\\B', scramble, string)

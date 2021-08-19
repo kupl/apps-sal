@@ -1,5 +1,5 @@
 def string_to_array(s):
-    if s == "":
+    if s == '':
         res = [s]
     else:
         res = s.split()

@@ -1,5 +1,4 @@
 from math import factorial
-
 facts = {factorial(n): n for n in range(1000)}
 
 

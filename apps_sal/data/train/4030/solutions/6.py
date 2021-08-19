@@ -1,5 +1,5 @@
 def radix_tree(*Q):
-    U, R = set(Q), {}
+    (U, R) = (set(Q), {})
     for Q in Q:
         T = R
         for Q in Q:
@@ -10,7 +10,7 @@ def radix_tree(*Q):
     def H(Q, S):
         T = list(Q)
         for V in T:
-            if 1 == len(Q[V]) and (S + V) not in U:
+            if 1 == len(Q[V]) and S + V not in U:
                 B = next(iter(Q[V]))
                 Q[V + B] = Q[V][B]
                 del Q[V]

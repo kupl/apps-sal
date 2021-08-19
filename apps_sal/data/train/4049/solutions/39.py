@@ -4,5 +4,4 @@ def monkey_count(n):
     list2 = []
     for i in list:
         list2.append(i)
-
     return list2

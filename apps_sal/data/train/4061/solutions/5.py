@@ -5,7 +5,7 @@ def gn(n):
     prev = 7
     i = 2
     res = [1]
-    while (i <= n):
+    while i <= n:
         nou = prev + gcd(prev, i)
         res.append(nou - prev)
         prev = nou
@@ -23,10 +23,10 @@ def pn(n):
     i = 2
     res = []
     cnt = 0
-    while (cnt < n):
+    while cnt < n:
         nou = prev + gcd(prev, i)
         d = nou - prev
-        if ((d != 1) and (d not in res)):
+        if d != 1 and d not in res:
             res.append(d)
             cnt += 1
         prev = nou
@@ -43,10 +43,10 @@ def an_overn(n):
     i = 2
     res = []
     cnt = 0
-    while (cnt < n):
+    while cnt < n:
         nou = prev + gcd(prev, i)
         d = nou - prev
-        if (d != 1):
+        if d != 1:
             res.append(nou / i)
             cnt += 1
         prev = nou

@@ -1,12 +1,11 @@
 from statistics import mean
-
 DIGITS = '0123456789abcdef'
 
 
 def to(n, base):
     result = []
     while n:
-        n, r = divmod(n, base)
+        (n, r) = divmod(n, base)
         result.append(DIGITS[r])
     return ''.join(reversed(result))
 

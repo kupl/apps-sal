@@ -1,2 +1,2 @@
 def main(*sen):
-    return "".join(sen)
+    return ''.join(sen)

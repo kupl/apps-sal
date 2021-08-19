@@ -7,6 +7,6 @@ def sum_dif_rev(n):
         i += 1
         j = int(str(i)[::-1])
         d = abs(i - j)
-        if i % 10 and d and not (i + j) % d:
+        if i % 10 and d and (not (i + j) % d):
             buf.append(i)
     return buf[n - 1]

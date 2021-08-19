@@ -8,9 +8,9 @@ def count_fours(n, base):
 
 
 def int_to_str_in_base(n, base):
-    result = ""
+    result = ''
     while n > 0:
-        result = str(n % base) + result if n % base < 10 else "x" + result
+        result = str(n % base) + result if n % base < 10 else 'x' + result
         n //= base
     return result
 
@@ -23,7 +23,7 @@ def fouriest(i):
         if fours > highscore:
             highscore = fours
             winner = base
-        elif 4 * base**(highscore) > i:
+        elif 4 * base ** highscore > i:
             break
     result = int_to_str_in_base(i, winner)
-    return "{} is the fouriest ({}) in base {}".format(i, result, winner)
+    return '{} is the fouriest ({}) in base {}'.format(i, result, winner)

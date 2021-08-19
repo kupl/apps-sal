@@ -1,5 +1,5 @@
 def get_num(arr):
-    c, n, r = 1, 1, {}
+    (c, n, r) = (1, 1, {})
     arr.sort()
     for a in arr:
         n *= a

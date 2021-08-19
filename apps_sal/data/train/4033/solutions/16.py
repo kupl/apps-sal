@@ -4,5 +4,4 @@ def contamination(text, char):
     res = ''
     for i in range(len(text)):
         res += text[i].replace(text[i], char)
-
     return res

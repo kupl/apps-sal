@@ -1,1 +1,2 @@
-def main(verb, noun): return ''.join((verb, noun))
+def main(verb, noun):
+    return ''.join((verb, noun))

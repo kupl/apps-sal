@@ -2,11 +2,11 @@ def jumps(code):
     stack = []
     skip_to = dict()
     return_to = dict()
-    for i, c in enumerate(code):
+    for (i, c) in enumerate(code):
         if c == '[':
             stack.append(i)
         elif c == ']':
-            opening, closing = stack.pop(), i
+            (opening, closing) = (stack.pop(), i)
             skip_to[opening] = closing
             return_to[closing] = opening
     return (skip_to, return_to)
@@ -39,8 +39,8 @@ def interpreter(code, tape):
     pointer = 0
     max_pc = len(code) - 1
     pc = 0
-    skip_to, return_to = jumps(code)
+    (skip_to, return_to) = jumps(code)
     while not should_terminate(pc, max_pc, pointer, max_pointer):
-        pc, pointer = run_one_instruction(code, tape, pc, pointer, skip_to, return_to)
+        (pc, pointer) = run_one_instruction(code, tape, pc, pointer, skip_to, return_to)
         pc += 1
-    return ''.join(str(cell) for cell in tape)
+    return ''.join((str(cell) for cell in tape))

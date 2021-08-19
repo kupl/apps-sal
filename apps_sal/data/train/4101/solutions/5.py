@@ -1,1 +1,2 @@
-def sum_prod(s): return '%.5e' % eval(s)
+def sum_prod(s):
+    return '%.5e' % eval(s)

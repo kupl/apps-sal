@@ -2,10 +2,10 @@ def score_hand(cards):
     total = 0
     number_of_aces = 0
     for i in cards:
-        if i == "A":
+        if i == 'A':
             total += 1
             number_of_aces += 1
-        elif i == "J" or i == "Q" or i == "K":
+        elif i == 'J' or i == 'Q' or i == 'K':
             total += 10
         else:
             total += int(i)

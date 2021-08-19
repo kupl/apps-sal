@@ -7,5 +7,5 @@ def search_substr(full_text, search_text, allow_overlap=True):
     if len(search_text) == 1 or not allow_overlap:
         pattern = re.compile(search_text)
     else:
-        pattern = re.compile(f"(?<={search_text[:-1]}){search_text[-1]}")
+        pattern = re.compile(f'(?<={search_text[:-1]}){search_text[-1]}')
     return len(list(re.findall(pattern, full_text)))

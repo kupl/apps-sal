@@ -3,5 +3,4 @@ def validate_hello(greetings):
     for word in i18n:
         if word in greetings.lower():
             return True
-
     return False

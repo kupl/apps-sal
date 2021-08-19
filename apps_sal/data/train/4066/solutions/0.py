@@ -1,2 +1,2 @@
 def string_to_array(string):
-    return string.split(" ")
+    return string.split(' ')

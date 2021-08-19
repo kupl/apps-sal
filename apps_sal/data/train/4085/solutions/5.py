@@ -10,4 +10,4 @@ def scrambler(m):
 
 def mix_words(s):
     if isinstance(s, str):
-        return re.sub(r'(?<=\w)\w{2,}(?=\w)', scrambler, s)
+        return re.sub('(?<=\\w)\\w{2,}(?=\\w)', scrambler, s)

@@ -4,4 +4,4 @@ def string_to_array(s):
     else:
         words = s.split()
         for word in words:
-            return(words)
+            return words

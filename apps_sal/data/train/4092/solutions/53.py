@@ -3,4 +3,4 @@ def main(verb, noun):
     return x
 
 
-print(main("verb", "noun"))
+print(main('verb', 'noun'))

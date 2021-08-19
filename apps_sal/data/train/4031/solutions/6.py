@@ -1,6 +1,6 @@
 def interpreter(code, tape):
     cells = list(map(int, tape))
-    cell_p, command_p = 0, -1
+    (cell_p, command_p) = (0, -1)
     scope_stack = [(0, len(code))]
     while True:
         command_p += 1

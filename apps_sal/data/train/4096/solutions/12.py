@@ -1,5 +1,5 @@
 def valid_parentheses(string):
-    string = "".join([x for x in string if x == "(" or x == ")"])
+    string = ''.join([x for x in string if x == '(' or x == ')'])
     before_reduce = len(string)
     string = string.replace('()', '')
     if string == '':

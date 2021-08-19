@@ -6,7 +6,6 @@ def find_a(array, n):
     b3 = 3 * b2 - b1 - array[2]
     b0 = 3 * b1 - b2 - array[1]
     array_b = [b0, b1, b2, b3]
-
     if n > 3:
         count = 3
     else:
@@ -20,5 +19,4 @@ def find_a(array, n):
         array.append(a_next)
         array_b.append(b_next)
         count += 1
-
     return array[-1]

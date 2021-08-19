@@ -13,7 +13,7 @@ def gn(length):
     previous = False
     for current in an(length):
         if previous:
-            yield current - previous
+            yield (current - previous)
         else:
             yield 1
         previous = current
@@ -37,10 +37,10 @@ def max_pn(length):
 
 def an_over(length):
     count = 0
-    for i, (a, g) in enumerate(zip(an(maxsize), gn(maxsize))):
+    for (i, (a, g)) in enumerate(zip(an(maxsize), gn(maxsize))):
         if g != 1:
             count += 1
-            yield a / (i + 1)
+            yield (a / (i + 1))
         if count == length:
             break
 

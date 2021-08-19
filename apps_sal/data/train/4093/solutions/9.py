@@ -13,16 +13,12 @@ def find_a(array, n):
         for k in range(4, n + 1, 1):
             an = 3 * a3 - a2 - b3
             bn = 3 * b3 - b2 - a3
-
-            a2, a3 = a3, an
-            b2, b3 = b3, bn
-
+            (a2, a3) = (a3, an)
+            (b2, b3) = (b3, bn)
     else:
         for k in range(-1, n - 1, -1):
             an = 3 * a0 - a1 - b0
             bn = 3 * b0 - b1 - a0
-
-            a0, a1 = an, a0
-            b0, b1 = bn, b0
-
+            (a0, a1) = (an, a0)
+            (b0, b1) = (bn, b0)
     return an

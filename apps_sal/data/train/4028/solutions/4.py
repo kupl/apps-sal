@@ -3,7 +3,6 @@ def riders(stations, station_x):
     miles = 0
     for i in range(len(stations)):
         if i == station_x - 2:
-
             miles = stations[i]
         miles += stations[i]
         if miles > 100:
@@ -13,5 +12,4 @@ def riders(stations, station_x):
         if miles + stations[i + 1] > 100:
             riders += 1
             miles = 0
-
     return riders

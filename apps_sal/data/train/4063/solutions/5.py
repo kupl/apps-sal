@@ -1,6 +1,6 @@
 def evenator(s):
-    words = [dupiword(evenatorword(s)) for s in s.split(" ")]
-    return " ".join(words).strip()
+    words = [dupiword(evenatorword(s)) for s in s.split(' ')]
+    return ' '.join(words).strip()
 
 
 def dupiword(s):
@@ -8,4 +8,4 @@ def dupiword(s):
 
 
 def evenatorword(w):
-    return "".join([x if x.isalnum() else '' for x in w]).replace("  ", " ")
+    return ''.join([x if x.isalnum() else '' for x in w]).replace('  ', ' ')

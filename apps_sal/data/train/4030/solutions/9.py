@@ -12,8 +12,8 @@ def splitAlong(xs, ys):
 
 
 def insert(tree, word):
-    for key, val in tree.items():
-        pref, wt, kt = splitAlong(word, key)
+    for (key, val) in tree.items():
+        (pref, wt, kt) = splitAlong(word, key)
         if pref:
             if kt:
                 del tree[key]

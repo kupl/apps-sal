@@ -1,1 +1,2 @@
-def main(_, __): return _ + __
+def main(_, __):
+    return _ + __

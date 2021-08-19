@@ -1,6 +1,6 @@
 def riders(S, x):
     R = []
-    for i, s in enumerate(S, 1):
+    for (i, s) in enumerate(S, 1):
         if R == [] or 100 < R[-1] + s:
             R += [s]
         else:

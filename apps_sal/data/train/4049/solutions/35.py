@@ -6,5 +6,4 @@ def monkey_count(n):
 
 
 huhu = monkey_count(9)
-
 print(huhu)

@@ -18,7 +18,6 @@ def sum_list(x):
     >>> sum_list([])
     0
     """
-
     return sum(x) if x else 0
 
 
@@ -31,5 +30,4 @@ def head_of_list(x):
     >>> head_of_list([]) is None
     True
     """
-
     return x[0] if x else None

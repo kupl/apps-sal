@@ -1,3 +1,3 @@
 def string_to_array(s):
-    p = s.split(" ")
+    p = s.split(' ')
     return p

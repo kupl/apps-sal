@@ -5,12 +5,10 @@ def interpreter(code, tape):
     tape_length = len(tape)
     code_length = len(code)
     tape = [c for c in tape]
-
     while True:
         if code_pointer >= code_length:
             break
         command = code[code_pointer]
-
         if command == '>':
             pointer += 1
             if pointer >= tape_length:
@@ -38,5 +36,4 @@ def interpreter(code, tape):
             else:
                 pointer_stack.pop()
         code_pointer += 1
-
     return ''.join(tape)

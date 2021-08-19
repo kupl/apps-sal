@@ -7,12 +7,10 @@ def binary(x):
         remainder = x % 2
         result.append(str(remainder))
         x = x // 2
-
         if x == 0:
             break
-
     result.reverse()
-    return "".join(result)
+    return ''.join(result)
 
 
 def octal(x):
@@ -21,19 +19,16 @@ def octal(x):
         remainder = x % 8
         result.append(str(remainder))
         x = x // 8
-
         if x == 0:
             break
-
     result.reverse()
-    return "".join(result)
+    return ''.join(result)
 
 
 def hexadecimal(x):
     result = []
     while True:
         remainder = x % 16
-
         if remainder == 10:
             result.append('a')
         elif remainder == 11:
@@ -48,13 +43,11 @@ def hexadecimal(x):
             result.append('f')
         else:
             result.append(str(remainder))
-
         x = x // 16
         if x == 0:
             break
-
     result.reverse()
-    return "".join(result)
+    return ''.join(result)
 
 
 def func(l):

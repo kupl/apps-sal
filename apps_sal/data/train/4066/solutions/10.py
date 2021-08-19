@@ -1,11 +1,8 @@
 def string_to_array(s):
     arr = []
-
-    words = s.split(" ")
+    words = s.split(' ')
     if len(s) == 0:
-        return [""]
-
+        return ['']
     for word in words:
         arr.append(word)
-
     return arr

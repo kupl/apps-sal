@@ -6,7 +6,7 @@ def first_non_consecutive(nums):
     if checkConsecutive(nums):
         return None
     else:
-        gaps = [[s, e] for s, e in zip(nums, nums[1:]) if s + 1 < e]
+        gaps = [[s, e] for (s, e) in zip(nums, nums[1:]) if s + 1 < e]
         edges = iter(nums[:1] + sum(gaps, []) + nums[-1:])
         A = list(zip(edges, edges))
         A.pop(0)

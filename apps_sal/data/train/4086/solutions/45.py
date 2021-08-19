@@ -1,6 +1,6 @@
 def first_non_consecutive(arr):
     is_consecutive = True
-    for index, item in enumerate(arr[0:-1]):
+    for (index, item) in enumerate(arr[0:-1]):
         if item + 1 == arr[index + 1]:
             continue
         else:

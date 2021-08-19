@@ -2,4 +2,4 @@ def main(verb, noun):
     return verb + noun
 
 
-main("take", "shit")
+main('take', 'shit')

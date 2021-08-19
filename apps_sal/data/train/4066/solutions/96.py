@@ -4,6 +4,6 @@ def string_to_array(s):
         arr = ['']
     else:
         import re
-        pattern = '(\w+)'
+        pattern = '(\\w+)'
         arr = re.findall(pattern, s)
     return arr

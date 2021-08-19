@@ -1,1 +1,2 @@
-def main(alpha, beta): return alpha + beta
+def main(alpha, beta):
+    return alpha + beta

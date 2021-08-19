@@ -11,5 +11,4 @@ def count_positives_sum_negatives(arr):
             else:
                 count = count + arr[loop]
             tableau = [sum, count]
-
         return tableau

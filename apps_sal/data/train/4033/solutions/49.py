@@ -3,5 +3,5 @@ def contamination(text, char):
     n = []
     for i in m:
         n.append(char)
-    a = "".join(n)
+    a = ''.join(n)
     return a

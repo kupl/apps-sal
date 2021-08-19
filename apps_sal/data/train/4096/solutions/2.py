@@ -1,4 +1,3 @@
-
 iparens = iter('(){}[]<>')
 parens = dict(zip(iparens, iparens))
 closing = parens.values()

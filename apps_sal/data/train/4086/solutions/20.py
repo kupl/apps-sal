@@ -3,8 +3,7 @@ def first_non_consecutive(list):
     for item in list:
         if tmp == '':
             tmp = str(item)
+        elif item == int(tmp) + 1:
+            tmp = str(item)
         else:
-            if item == int(tmp) + 1:
-                tmp = str(item)
-            else:
-                return item
+            return item

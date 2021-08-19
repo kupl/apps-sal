@@ -1,5 +1,5 @@
 def contamination(text, char):
     if not char or not text:
-        return ""
+        return ''
     else:
         return char * len(text)

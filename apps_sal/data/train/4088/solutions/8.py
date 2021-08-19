@@ -2,8 +2,8 @@ import numpy as np
 
 
 def columnDecode(code):
-    code = code.replace("R", "+")
-    code = code.replace("L", "-")
+    code = code.replace('R', '+')
+    code = code.replace('L', '-')
     return int(code) + 4
 
 
@@ -23,7 +23,7 @@ def lineCheck(board):
 
 def tetris(arr):
     totalLines = 0
-    board = np.zeros((9, 29), dtype="int")
+    board = np.zeros((9, 29), dtype='int')
     for piece in arr:
         col = columnDecode(piece[1:])
         size = int(piece[0])
@@ -36,7 +36,7 @@ def tetris(arr):
                 lines = lineCheck(board)
                 if lines > 0:
                     board = board[:, lines:]
-                    board = np.hstack((board, np.zeros((board.shape[0], lines), dtype="int")))
+                    board = np.hstack((board, np.zeros((board.shape[0], lines), dtype='int')))
                     totalLines += lines
                     lines = 0
                 break

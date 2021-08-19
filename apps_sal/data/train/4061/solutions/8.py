@@ -1,12 +1,10 @@
 from math import gcd
-
 a = [7]
 g = [1]
 p = []
 pn = []
 ones = [1]
 anover = []
-
 for i in range(2, 1000000):
     c = gcd(a[-1], i)
     g.append(c)
@@ -21,6 +19,13 @@ for i in range(2, 1000000):
         ones.append(ones[-1] + 1)
 
 
-def count_ones(n): return ones[n - 1]
-def max_pn(n): return max(pn[:n])
-def an_over_average(n): return 3
+def count_ones(n):
+    return ones[n - 1]
+
+
+def max_pn(n):
+    return max(pn[:n])
+
+
+def an_over_average(n):
+    return 3

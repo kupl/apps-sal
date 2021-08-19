@@ -1,1 +1,2 @@
-def string_to_array(x): return x.split(" ")
+def string_to_array(x):
+    return x.split(' ')

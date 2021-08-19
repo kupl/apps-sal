@@ -1,6 +1,6 @@
 def get_sequence(offset, size):
     num = max(offset, 1023456789)
-    digits = set("0123456789")
+    digits = set('0123456789')
     ret = []
     for _ in range(size):
         while num < 9876543210:
@@ -10,5 +10,4 @@ def get_sequence(offset, size):
             else:
                 num += 1
         num += 1
-
     return ret

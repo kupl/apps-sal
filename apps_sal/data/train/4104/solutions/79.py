@@ -1,13 +1,8 @@
 def max_tri_sum(numbers):
-
     lst = sorted(numbers[:3])
-
     for i in numbers[3:]:
-
         if i > lst[0]:
-
             if i not in lst:
-
                 for x in range(len(lst)):
                     if i < lst[x]:
                         del lst[0]
@@ -17,5 +12,4 @@ def max_tri_sum(numbers):
                         del lst[0]
                         lst.append(i)
                         break
-
     return sum(lst)

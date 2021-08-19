@@ -1,1 +1,2 @@
-def get_char(x): return chr(x)
+def get_char(x):
+    return chr(x)

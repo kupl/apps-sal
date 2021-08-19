@@ -3,7 +3,7 @@ def valid_parentheses(string):
     for i in string:
         if i == '(':
             stack.append(i)
-        elif i == ')' and not stack:
+        elif i == ')' and (not stack):
             return False
         elif i == ')':
             stack.pop()

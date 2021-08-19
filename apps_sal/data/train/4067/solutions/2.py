@@ -3,7 +3,7 @@ def iq_test(numbers):
     indexOdd = 0
     numEven = 0
     numOdd = 0
-    nums = numbers.split(" ")
+    nums = numbers.split(' ')
     for i in range(len(nums)):
         if int(nums[i]) % 2 == 0:
             numEven += 1

@@ -1,5 +1,5 @@
 def iq_test(numbers):
-    all = numbers.split(" ")
+    all = numbers.split(' ')
     odd = [int(x) for x in all if int(x) % 2 != 0]
     even = [int(x) for x in all if int(x) % 2 == 0]
     if len(odd) == 1:
