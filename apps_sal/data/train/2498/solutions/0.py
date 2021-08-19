@@ -1,9 +1,9 @@
 class Solution:
-    def isAlienSorted(self, words: List[str], order: str) -> bool:
-        char_map = {char: i for i, char in enumerate(order)}
-        for j in range(1, len(words)):
-            prev, curr = words[j - 1], words[j]
 
+    def isAlienSorted(self, words: List[str], order: str) -> bool:
+        char_map = {char: i for (i, char) in enumerate(order)}
+        for j in range(1, len(words)):
+            (prev, curr) = (words[j - 1], words[j])
             k = 0
             while k < min(len(prev), len(curr)):
                 if prev[k] == curr[k]:

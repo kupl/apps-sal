@@ -1,4 +1,5 @@
 class Solution:
+
     def countLargestGroup(self, n: int) -> int:
         print(n)
         str_nums = [str(i) for i in range(1, n + 1)]

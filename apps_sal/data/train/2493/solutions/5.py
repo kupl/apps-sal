@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumProduct(self, nums):
         a = b = c = -1001
         d = e = 1001
@@ -12,7 +13,6 @@ class Solution:
                 b = num
             elif num >= c:
                 c = num
-
             if num <= d:
                 e = d
                 d = num

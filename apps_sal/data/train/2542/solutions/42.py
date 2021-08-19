@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         if len(A) <= 1:
             return True

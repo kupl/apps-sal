@@ -1,4 +1,5 @@
 class Solution:
+
     def repeatedNTimes(self, A) -> int:
         B = list(A)
         B.sort()

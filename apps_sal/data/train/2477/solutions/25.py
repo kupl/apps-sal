@@ -1,4 +1,5 @@
 class Solution:
+
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         d = set()
         for w in A:

@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheDistanceValue(self, arr1, arr2, d):
         arr1.sort()
         arr2.sort()
@@ -11,11 +12,10 @@ class Solution:
                     j += 1
                 else:
                     i += 1
+            elif arr2[j] - arr1[i] > d:
+                i += 1
+                dist += 1
             else:
-                if arr2[j] - arr1[i] > d:
-                    i += 1
-                    dist += 1
-                else:
-                    i += 1
+                i += 1
         dist += len(arr1) - i
         return dist

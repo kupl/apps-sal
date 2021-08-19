@@ -1,4 +1,5 @@
 class Solution:
+
     def getSum(self, a, b):
         """
         :type a: int
@@ -9,11 +10,9 @@ class Solution:
             return b
         if b == 0:
             return a
-
-        MAX = 0x7FFFFFFF
-        MIN = 0x80000000
-        mask = 0xFFFFFFFF
+        MAX = 2147483647
+        MIN = 2147483648
+        mask = 4294967295
         while b:
-            a, b = (a ^ b) & mask, ((a & b) << 1) & mask
-
+            (a, b) = ((a ^ b) & mask, (a & b) << 1 & mask)
         return a if a <= MAX else ~(a ^ mask)

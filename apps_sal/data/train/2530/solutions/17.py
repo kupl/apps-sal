@@ -1,8 +1,8 @@
 class Solution:
+
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         mem = defaultdict(int)
         count = 0
-
         for t in time:
             t = t % 60
             target = (60 - t) % 60

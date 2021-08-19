@@ -1,4 +1,5 @@
 class Solution:
+
     def canPlaceFlowers(self, flowerbed, n):
         """
         :type flowerbed: List[int]
@@ -11,10 +12,10 @@ class Solution:
         m = 0
         if flowerbed[0] == 0:
             temp = 1
-        for i, plot in enumerate(flowerbed):
+        for (i, plot) in enumerate(flowerbed):
             if plot == 0:
                 temp += 1
-                if(i == len(flowerbed) - 1):
+                if i == len(flowerbed) - 1:
                     temp += 1
             if plot == 1 or i == len(flowerbed) - 1:
                 m += int((temp - 1) / 2)

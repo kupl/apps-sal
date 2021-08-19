@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         n = len(A)
         if self.checkMonInc(A, n) or self.checkMonDec(A, n):

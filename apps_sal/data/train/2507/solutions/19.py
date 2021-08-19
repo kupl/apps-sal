@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         start = 0
         for i in words:

@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         arr1.sort()
         arr2.sort()
@@ -9,10 +10,9 @@ class Solution:
             flag = True
             for j in range(n):
                 dis = abs(arr1[i] - arr2[j])
-                if(dis <= d):
+                if dis <= d:
                     flag = False
                     break
-            if(flag):
+            if flag:
                 cnt += 1
-
         return cnt

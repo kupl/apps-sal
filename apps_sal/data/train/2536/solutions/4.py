@@ -1,10 +1,11 @@
 class Solution:
+
     def findLucky(self, arr: List[int]) -> int:
         adict = {}
         i = 0
         j = len(arr)
         while i < j:
-            if (arr[i]) in adict:
+            if arr[i] in adict:
                 print(arr[i], adict.get(arr[i]))
                 adict[arr[i]] += 1
                 print(arr[i], adict.get(arr[i]))

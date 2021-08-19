@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, logs: List[str]) -> int:
         stack = []
         for line in logs:

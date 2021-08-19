@@ -1,10 +1,10 @@
 class Solution:
-    def reverseStr(self, s, k):
-        ans = ""
-        i = 0
 
+    def reverseStr(self, s, k):
+        ans = ''
+        i = 0
         while i < len(s):
-            rev = ""
+            rev = ''
             j = 0
             while i + j < len(s) and j < k:
                 rev += s[i + j]

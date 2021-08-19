@@ -1,6 +1,6 @@
 class Solution:
-    def minOperations(self, logs: List[str]) -> int:
 
+    def minOperations(self, logs: List[str]) -> int:
         t = 0
         for i in logs:
             if i == '../':

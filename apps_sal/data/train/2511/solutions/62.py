@@ -1,4 +1,5 @@
 class Solution:
+
     def repeatedNTimes(self, A: List[int]) -> int:
         dic = self.convert_to_dic(A)
         for i in dic:

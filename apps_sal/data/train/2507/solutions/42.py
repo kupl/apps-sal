@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         d = Counter(chars)
         ans = 0
@@ -12,7 +13,6 @@ class Solution:
                     else:
                         b = False
                         break
-
                 except:
                     b = False
                     break

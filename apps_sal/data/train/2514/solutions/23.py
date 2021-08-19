@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         count = len(arr1)
         for i in range(len(arr1)):

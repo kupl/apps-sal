@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         res = 0
         d = dict()
@@ -9,7 +10,7 @@ class Solution:
             for char in word:
                 c[char] = c.get(char, 0) + 1
             bad = False
-            while c and not bad:
+            while c and (not bad):
                 char = c.popitem()
                 if char[0] in d and d[char[0]] >= char[1]:
                     continue

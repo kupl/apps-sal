@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         n = 0
         for word in words:

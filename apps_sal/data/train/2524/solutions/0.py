@@ -1,4 +1,5 @@
 class Solution:
+
     def findLengthOfLCIS(self, nums):
         """
         :type nums: List[int]
@@ -13,7 +14,6 @@ class Solution:
                 cur_len = cur_len + 1
             else:
                 cur_len = 1
-
             if cur_len > max_len:
                 max_len = cur_len
         return max_len

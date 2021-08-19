@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfit(self, prices):
         """
         :type prices: List[int]
@@ -13,5 +14,4 @@ class Solution:
                 profit = prices[i] - min_val
             if prices[i] < min_val:
                 min_val = prices[i]
-
         return profit

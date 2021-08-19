@@ -2,9 +2,9 @@ import copy
 
 
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         charmap = dict()
-
         for c in chars:
             if c in charmap:
                 charmap[c] += 1

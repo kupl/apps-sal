@@ -1,4 +1,5 @@
 class Solution:
+
     def containsNearbyDuplicate(self, nums, k):
         """
         :type nums: List[int]
@@ -14,5 +15,4 @@ class Solution:
                         return True
             l.append(i)
             d[nums[i]] = l
-
         return False

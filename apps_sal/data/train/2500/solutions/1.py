@@ -1,4 +1,5 @@
 class Solution:
+
     def maxPower(self, s: str) -> int:
         cnt = 0
         current = s[0]

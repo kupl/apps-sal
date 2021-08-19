@@ -2,6 +2,7 @@ from collections import Counter as di
 
 
 class Solution:
+
     def countCharacters(self, a: List[str], c: str) -> int:
         d = di(c)
         ans = 0

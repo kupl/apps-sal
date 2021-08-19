@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         tot = 0
         for w in words:
@@ -16,7 +17,5 @@ class Solution:
                 else:
                     temp = 0
                     break
-
             tot += temp
-
         return tot

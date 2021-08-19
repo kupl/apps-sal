@@ -17,13 +17,10 @@ class Solution:
         deck.sort()
         B = [0] * (max(deck) + len(deck))
         B = self.fill(deck, B)
-
         for i in range(len(B) - 1):
             if B[i] == 1:
                 return False
-
         MCD = self.mcd(B)
         if MCD == 1:
             return False
-
         return True

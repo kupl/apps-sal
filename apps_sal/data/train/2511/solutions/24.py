@@ -1,4 +1,5 @@
 class Solution:
+
     def repeatedNTimes(self, A: List[int]) -> int:
         maos = {x: 0 for x in set(A)}
         for x in A:

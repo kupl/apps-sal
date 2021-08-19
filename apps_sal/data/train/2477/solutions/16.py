@@ -1,4 +1,5 @@
 class Solution:
+
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         haveList = list()
         ans = 0

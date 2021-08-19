@@ -1,4 +1,5 @@
 class Solution:
+
     def reverse(self, x):
         """
         :type x: int
@@ -14,7 +15,7 @@ class Solution:
             result = result * 10 + end
             x = x // 10
         result *= sign
-        if result > 2**31 - 1 or result < -2**31:
+        if result > 2 ** 31 - 1 or result < -2 ** 31:
             return 0
         else:
             return result

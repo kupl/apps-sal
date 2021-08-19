@@ -1,4 +1,5 @@
 class Solution:
+
     def findShortestSubArray(self, nums):
         """
         :type nums: List[int]
@@ -18,7 +19,6 @@ class Solution:
         for k in d:
             if len(d.get(k)) == c:
                 low.append(k)
-
         result = len(nums)
         for s in low:
             tmp = d.get(s)[-1] - d.get(s)[0] + 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         count = 0
         freq = {}
@@ -14,7 +15,6 @@ class Solution:
                     word_fq[word[m]] = 1
                 else:
                     word_fq[word[m]] += 1
-
             is_fit = True
             for key in word_fq.keys():
                 if key not in freq.keys():
@@ -25,5 +25,4 @@ class Solution:
                     break
             if is_fit:
                 count += len(word)
-
         return count

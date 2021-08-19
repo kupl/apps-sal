@@ -14,6 +14,7 @@ def sort(list_a):
 
 
 class Solution:
+
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         target = sort(target)
         arr = sort(arr)

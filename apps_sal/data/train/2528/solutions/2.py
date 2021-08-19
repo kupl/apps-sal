@@ -1,13 +1,13 @@
 class Solution:
+
     def longestCommonPrefix(self, strs):
         """
         :type strs: List[str]
         :rtype: str
         """
         if len(strs) == 0:
-            return ""
-
-        result = ""
+            return ''
+        result = ''
         judge = strs[0]
         flag = True
         for i in range(len(judge)):
@@ -18,5 +18,4 @@ class Solution:
                 result += judge[i]
             else:
                 break
-
         return result

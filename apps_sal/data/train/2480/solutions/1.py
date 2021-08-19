@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostToMoveChips(self, position: List[int]) -> int:
         oddc = evenc = 0
         for i in position:

@@ -1,4 +1,5 @@
 class Solution:
+
     def checkPossibility(self, nums):
         """
         :type nums: List[int]
@@ -13,7 +14,7 @@ class Solution:
                     count += 1
                     if count > 1:
                         break
-                    if i + 1 != (len(nums) - 1):
+                    if i + 1 != len(nums) - 1:
                         nums[i + 1] = nums[i]
                 else:
                     nums[i] = nums[i + 1]
@@ -22,7 +23,6 @@ class Solution:
                         break
                     if count == 1:
                         nums[i] -= 1
-
         if count > 1:
             return False
         else:

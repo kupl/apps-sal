@@ -1,6 +1,7 @@
 class Solution:
+
     def sumByDigits(self, num: int) -> int:
-        result, _n = 0, num
+        (result, _n) = (0, num)
         while _n > 0:
             result += _n % 10
             _n = math.floor(_n / 10)

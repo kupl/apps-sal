@@ -1,4 +1,5 @@
 class Solution:
+
     def minMoves(self, nums):
         """
         :type nums: List[int]
@@ -6,8 +7,6 @@ class Solution:
         """
         count = 0
         smallest = min(nums)
-
         for num in nums:
             count += abs(num - smallest)
-
-        return(count)
+        return count

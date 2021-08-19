@@ -1,4 +1,5 @@
 class Solution:
+
     def minMoves(self, nums):
         """
         :type nums: List[int]
@@ -6,5 +7,4 @@ class Solution:
         """
         n = len(nums)
         mn = min(nums)
-
         return sum(nums) - n * mn

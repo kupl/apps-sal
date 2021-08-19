@@ -1,4 +1,5 @@
 class Solution:
+
     def hammingDistance(self, x, y):
         """
         :type x: int
@@ -7,7 +8,7 @@ class Solution:
         """
         count = 0
         for i in range(32):
-            count += (x & 1) ^ (y & 1)
+            count += x & 1 ^ y & 1
             x >>= 1
             y >>= 1
         return count

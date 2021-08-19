@@ -2,10 +2,9 @@ import copy
 
 
 class Solution:
+
     def countCharacters(self, w: List[str], c: str) -> int:
-
         d = {}
-
         for i in c:
             d[i] = d.get(i, 0) + 1
         ans = 0

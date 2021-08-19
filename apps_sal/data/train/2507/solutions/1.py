@@ -1,27 +1,24 @@
 class Solution:
-    def countCharacters(self, words: List[str], chars: str) -> int:
 
+    def countCharacters(self, words: List[str], chars: str) -> int:
         d = {}
         for i in chars:
             if i in d:
                 d[i] += 1
             else:
                 d[i] = 1
-
         c = 0
-
         for i in words:
             flag = True
             for j in i:
                 if j in d:
-                    if(i.count(j) > d[j]):
+                    if i.count(j) > d[j]:
                         flag = False
                         break
                 else:
                     flag = False
                     break
-            if(flag):
+            if flag:
                 c += len(i)
-
         print(c)
         return c

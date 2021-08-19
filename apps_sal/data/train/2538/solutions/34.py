@@ -1,4 +1,5 @@
 class Solution:
+
     def countLargestGroup(self, n: int) -> int:
         map = {}
         mx = 0

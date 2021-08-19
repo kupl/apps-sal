@@ -1,4 +1,5 @@
 class Solution:
+
     def findNumbers(self, nums: List[int]) -> int:
         ec = 0
         digit = 0

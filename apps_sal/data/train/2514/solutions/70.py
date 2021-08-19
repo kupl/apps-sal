@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         ok = 0
         arr2.sort()
@@ -10,7 +11,7 @@ class Solution:
                 if abs(test) <= d:
                     ele = 1
                     break
-                if (test > d) or (d < 0):
+                if test > d or d < 0:
                     break
             if ele == 0:
                 ok += 1

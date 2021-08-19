@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         char_sum = 0
 
@@ -9,10 +10,8 @@ class Solution:
                 else:
                     return False
             return True
-
         for word in words:
             counter = Counter(chars)
             if isValid(word, counter):
                 char_sum += len(word)
-
         return char_sum

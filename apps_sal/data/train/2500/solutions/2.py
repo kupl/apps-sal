@@ -1,10 +1,9 @@
 class Solution:
-    def maxPower(self, s: str) -> int:
 
+    def maxPower(self, s: str) -> int:
         count = 0
         new_count = 0
-        for i, char in enumerate(s):
-
+        for (i, char) in enumerate(s):
             print(char)
             try:
                 if s[i + 1] == char:
@@ -21,5 +20,4 @@ class Solution:
                     count = new_count
                     new_count = 0
                 break
-
         return count + 1

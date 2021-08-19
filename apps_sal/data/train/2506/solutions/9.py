@@ -1,4 +1,5 @@
 class Solution:
+
     def isIsomorphic(self, s, t):
         """
         :type s: str
@@ -6,12 +7,10 @@ class Solution:
         :rtype: bool
         """
         mapping1 = dict()
-
         if len(s) != len(t):
             return False
         for i in range(len(s)):
             mapping1.setdefault(s[i], None)
-
             if mapping1[s[i]] == None:
                 mapping1[s[i]] = t[i]
             elif mapping1[s[i]] != t[i]:

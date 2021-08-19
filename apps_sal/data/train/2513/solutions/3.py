@@ -1,4 +1,5 @@
 class Solution:
+
     def findNthDigit(self, n):
         """
         :type n: int
@@ -7,10 +8,10 @@ class Solution:
         start = 0
         digit = 0
         while True:
-            temp = 9 * 10**digit
+            temp = 9 * 10 ** digit
             if temp * (digit + 1) < n:
                 n -= temp * (digit + 1)
-                start += 10**digit * 9
+                start += 10 ** digit * 9
                 digit += 1
             else:
                 break
@@ -20,4 +21,4 @@ class Solution:
         if n == 0:
             return start % 10
         start += 1
-        return (int(start / 10**(digit + 1 - n))) % 10
+        return int(start / 10 ** (digit + 1 - n)) % 10

@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         count = Counter(time)
         pair = 0
@@ -14,5 +15,4 @@ class Solution:
                 else:
                     pair += tp * (tp - 1)
                 t += 60
-
         return pair // 2

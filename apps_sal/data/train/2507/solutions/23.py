@@ -1,6 +1,6 @@
 class Solution:
-    def countCharacters(self, words: List[str], chars: str) -> int:
 
+    def countCharacters(self, words: List[str], chars: str) -> int:
         total = 0
         for word in words:
             mod_chars = list(chars)
@@ -11,5 +11,4 @@ class Solution:
                     found += 1
             if found == len(word):
                 total += found
-
         return total

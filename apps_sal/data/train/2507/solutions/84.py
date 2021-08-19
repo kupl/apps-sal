@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         char_map = {c: chars.count(c) for c in set(chars)}
         count = 0

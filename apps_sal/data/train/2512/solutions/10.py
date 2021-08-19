@@ -1,4 +1,5 @@
 class Solution:
+
     def numUniqueEmails(self, emails: List[str]) -> int:
         l = []
         for i in emails:
@@ -15,5 +16,4 @@ class Solution:
                 else:
                     s = s + j
             l.append(s + end)
-
-        return (len(set(l)))
+        return len(set(l))

@@ -1,4 +1,5 @@
 class Solution:
+
     def findLUSlength(self, a, b):
         """
         :type a: str
@@ -6,7 +7,7 @@ class Solution:
         :rtype: int
         """
         if len(a) < len(b):
-            a, b = b, a
+            (a, b) = (b, a)
         l = len(a)
         c = -1
         for rg in range(1, l + 1):

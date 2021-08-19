@@ -1,4 +1,5 @@
 class Solution:
+
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
         flag = False
         odd = 0
@@ -12,15 +13,12 @@ class Solution:
                 else:
                     odd += 1
                     i += 1
+            elif not flag:
+                i += 1
             else:
-                if not flag:
-                    i += 1
-                else:
-                    flag = False
-                    odd = 0
-                    i += 1
-
+                flag = False
+                odd = 0
+                i += 1
             if odd == 3:
                 return True
-
         return False

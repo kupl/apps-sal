@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScore(self, s: str) -> int:
         list_score = []
         for i in range(1, len(s)):
@@ -10,5 +11,4 @@ class Solution:
                 if j == '1':
                     score += 1
             list_score.append(score)
-
         return max(list_score)

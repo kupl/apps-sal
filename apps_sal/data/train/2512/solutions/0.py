@@ -1,4 +1,5 @@
 class Solution:
+
     def numUniqueEmails(self, emails: List[str]) -> int:
         s = []
         for email in emails:

@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         asc = True
         dsc = True

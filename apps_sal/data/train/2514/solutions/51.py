@@ -1,6 +1,6 @@
 class Solution:
-    def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
 
+    def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         cnt = 0
         ans = 0
         for i in range(len(arr1)):
@@ -13,5 +13,4 @@ class Solution:
                 if j == len(arr2) - 1 and cnt == len(arr2):
                     ans += 1
                     cnt = 0
-
         return ans

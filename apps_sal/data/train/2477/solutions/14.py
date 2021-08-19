@@ -1,11 +1,12 @@
 class Solution:
+
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         haveList = list()
         ans = 0
         for i in range(len(A)):
             odd = dict()
             even = dict()
-            for y, v in enumerate(A[i]):
+            for (y, v) in enumerate(A[i]):
                 if y % 2 == 0:
                     odd[v] = odd.get(v, 0) + 1
                 else:

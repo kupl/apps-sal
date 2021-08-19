@@ -1,6 +1,6 @@
 class Solution:
-    def largestPerimeter(self, A: List[int]) -> int:
 
+    def largestPerimeter(self, A: List[int]) -> int:
         A.sort(reverse=True)
         la = len(A)
         for i in range(la - 2):

@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         is_decreasing = is_increasing = True
         for i in range(len(A) - 1):

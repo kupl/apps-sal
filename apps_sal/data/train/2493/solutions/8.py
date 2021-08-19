@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumProduct(self, nums):
         """
         :type nums: List[int]
@@ -11,7 +12,7 @@ class Solution:
         product = 1
         digit = []
         for i in range(2000, -1, -1):
-            while(new[i] > 0):
+            while new[i] > 0:
                 digit.append(i - 1000)
                 count = count + 1
                 new[i] = new[i] - 1
@@ -20,7 +21,7 @@ class Solution:
             if count == 3:
                 break
         for i in range(2001):
-            while(new[i] > 0):
+            while new[i] > 0:
                 digit.append(i - 1000)
                 count = count + 1
                 new[i] = new[i] - 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def heightChecker(self, heights: List[int]) -> int:
         sorted_arry = []
         for x in heights:
@@ -7,7 +8,7 @@ class Solution:
             curr_ele = sorted_arry[i]
             j = i + 1
             curr_index = i
-            while(j < len(sorted_arry)):
+            while j < len(sorted_arry):
                 if curr_ele > sorted_arry[j]:
                     curr_ele = sorted_arry[j]
                     curr_index = j

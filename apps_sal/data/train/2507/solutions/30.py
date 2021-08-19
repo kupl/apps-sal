@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         char_set = collections.Counter(chars)
         N = len(chars)

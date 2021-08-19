@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheDifference(self, s, t):
         """
         :type s: str

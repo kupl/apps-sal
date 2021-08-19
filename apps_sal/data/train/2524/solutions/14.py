@@ -1,4 +1,5 @@
 class Solution:
+
     def findLengthOfLCIS(self, nums):
         ans = anchor = 0
         for i in range(len(nums)):

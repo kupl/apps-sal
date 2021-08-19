@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheDistanceValue(self, arr1, arr2, d):
         d = abs(d)
         res = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def findUnsortedSubarray(self, nums):
         """
         :type nums: List[int]
@@ -16,7 +17,7 @@ class Solution:
         right = size - 1
         while right > 0 and nums[right] >= nums[right - 1]:
             right -= 1
-        sub = nums[left: right + 1]
+        sub = nums[left:right + 1]
         min_ = min(sub)
         max_ = max(sub)
         for i in range(left):

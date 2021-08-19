@@ -1,4 +1,5 @@
 class Solution:
+
     def buddyStrings(self, A: str, B: str) -> bool:
         if len(A) != len(B):
             return False
@@ -11,7 +12,7 @@ class Solution:
             return False
         else:
             pairs = []
-            for a, b in zip(A, B):
+            for (a, b) in zip(A, B):
                 if a != b:
                     pairs.append((a, b))
                 if len(pairs) > 2:

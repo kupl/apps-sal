@@ -1,4 +1,5 @@
 class Solution:
+
     def digits(self, num):
         count = 0
         while num:

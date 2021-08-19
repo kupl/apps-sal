@@ -1,4 +1,5 @@
 class Solution:
+
     def findLucky(self, arr: List[int]) -> int:
         c = collections.Counter(arr)
         maxi = -1

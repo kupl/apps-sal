@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostToMoveChips(self, position: List[int]) -> int:
         position.sort()
         mn = float('inf')

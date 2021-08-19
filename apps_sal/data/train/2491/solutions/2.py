@@ -1,4 +1,5 @@
 class Solution:
+
     def buddyStrings(self, A: str, B: str) -> bool:
         if len(A) != len(B):
             return False
@@ -11,7 +12,7 @@ class Solution:
         if len(cand) == 1:
             return False
         if len(cand) == 2:
-            i, j = cand
+            (i, j) = cand
             if A[i] == B[j] and B[i] == A[j]:
                 return True
             else:

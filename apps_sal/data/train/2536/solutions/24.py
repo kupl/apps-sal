@@ -1,4 +1,5 @@
 class Solution:
+
     def findLucky(self, arr: List[int]) -> int:
         num = -1
         for c in arr:

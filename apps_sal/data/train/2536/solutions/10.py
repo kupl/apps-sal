@@ -1,4 +1,4 @@
-'''
+"""
 Given an array of integers arr, a lucky integer is an integer which has a
 frequency in the array equal to its value.
 
@@ -33,28 +33,22 @@ Constraints:
 
 1 <= arr.length <= 500
 1 <= arr[i] <= 500
-'''
+"""
 
 
 class Solution:
 
     def findLucky(self, arr):
-
         dict_counts = {}
-
         for num in arr:
             if num in dict_counts:
                 dict_counts[num] += 1
             else:
                 dict_counts[num] = 1
-
         list_lukcy_nums = []
-
         for num in dict_counts:
             if num == dict_counts[num]:
                 list_lukcy_nums.append(num)
-
         if len(list_lukcy_nums) > 0:
             return max(list_lukcy_nums)
-
         return -1

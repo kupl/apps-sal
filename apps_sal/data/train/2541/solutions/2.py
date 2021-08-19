@@ -1,4 +1,5 @@
 class Solution:
+
     def isPowerOfFour(self, num):
         """
         :type num: int
@@ -6,4 +7,4 @@ class Solution:
         """
         if num < 1:
             return False
-        return (num - 1) & num == 0 and num & 0x55555555 != 0
+        return num - 1 & num == 0 and num & 1431655765 != 0

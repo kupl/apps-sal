@@ -1,12 +1,13 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         setChars = set(chars)
         counts = [0] * len(setChars)
         map = {}
         res = 0
-        for i, val in enumerate(setChars):
+        for (i, val) in enumerate(setChars):
             map[val] = i
-        for i, val in enumerate(chars):
+        for (i, val) in enumerate(chars):
             counts[map.get(val)] += 1
         for word in words:
             tempCounts = counts[:]

@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         c1 = Counter(target)
         c2 = Counter(arr)

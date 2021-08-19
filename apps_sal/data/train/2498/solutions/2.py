@@ -1,10 +1,11 @@
 class Solution:
+
     def alienCompare(self, word1: str, word2: str, order: str) -> int:
         if word1 == word2:
             return 0
         else:
             i: int = 0
-            while i < len(word1) and i < len(word2) and word1[i] == word2[i]:
+            while i < len(word1) and i < len(word2) and (word1[i] == word2[i]):
                 i += 1
             if i == len(word1):
                 return -1

@@ -1,4 +1,5 @@
 class Solution:
+
     def findNumbers(self, nums: List[int]) -> int:
         result = 0
         for num in nums:
@@ -8,5 +9,4 @@ class Solution:
                 count += 1
             if count % 2 == 0:
                 result += 1
-
         return result

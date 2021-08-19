@@ -1,8 +1,7 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
-
-        inc, dec = True, True
-
+        (inc, dec) = (True, True)
         for i in range(len(A) - 1):
             if A[i + 1] > A[i]:
                 dec = False

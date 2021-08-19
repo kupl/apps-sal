@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostToMoveChips(self, position: List[int]) -> int:
         l = [0, 0]
         for i in range(len(position)):

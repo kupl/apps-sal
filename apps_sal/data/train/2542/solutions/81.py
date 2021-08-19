@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         increasing = True
         decreasing = True
@@ -7,5 +8,4 @@ class Solution:
                 increasing = False
             if A[i] < A[i + 1]:
                 decreasing = False
-
         return increasing or decreasing

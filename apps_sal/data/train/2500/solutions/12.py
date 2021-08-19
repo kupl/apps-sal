@@ -1,4 +1,5 @@
 class Solution:
+
     def maxPower(self, s: str) -> int:
         c = 1
         maxc = c
@@ -8,5 +9,4 @@ class Solution:
                 maxc = max(maxc, c)
             else:
                 c = 1
-
         return maxc

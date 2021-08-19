@@ -1,4 +1,5 @@
 class Solution:
+
     def sumOddLengthSubarrays(self, arr: List[int]) -> int:
         n = len(arr)
         prefix = [0] * (n + 1)

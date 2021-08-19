@@ -1,7 +1,8 @@
 class Solution:
+
     def isAlienSorted(self, words: List[str], order: str) -> bool:
         for i in range(len(words) - 1):
-            s1, s2 = words[i], words[i + 1]
+            (s1, s2) = (words[i], words[i + 1])
             if not self.checkWords(s1, s2, order):
                 return False
         return True

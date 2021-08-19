@@ -1,8 +1,5 @@
 class Solution:
-    def missingNumber(self, nums):
 
-        return (sum(range(len(nums) + 1)) - sum(nums))
-        """ 
-         :type nums: List[int]
-         :rtype: int
-         """
+    def missingNumber(self, nums):
+        return sum(range(len(nums) + 1)) - sum(nums)
+        ' \n         :type nums: List[int]\n         :rtype: int\n         '

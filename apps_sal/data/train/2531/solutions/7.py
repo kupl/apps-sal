@@ -1,4 +1,5 @@
 class Solution:
+
     def findUnsortedSubarray(self, nums):
         """
         :type nums: List[int]
@@ -12,8 +13,6 @@ class Solution:
                 start = i
             elif a[i] != nums[i]:
                 end = i
-
         if start == -1:
             return 0
-
         return end - start + 1

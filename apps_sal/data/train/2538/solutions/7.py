@@ -1,4 +1,5 @@
 class Solution:
+
     def countLargestGroup(self, n: int) -> int:
         d = {}
         for i in range(1, n + 1):
@@ -12,7 +13,6 @@ class Solution:
                 d[sum] = [i]
         values = list(d.values())
         values.sort(key=len, reverse=True)
-
         count = 0
         length = len(values[0])
         for v in values:

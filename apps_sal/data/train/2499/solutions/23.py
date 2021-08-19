@@ -1,4 +1,5 @@
 class Solution:
+
     def checkMultiple(self, num, maxLCM):
         d = 2
         while d <= maxLCM:
@@ -29,6 +30,6 @@ class Solution:
         if leastDiff == 0 or leastDiff == None:
             leastDiff = leastCnt
         for num in intCnt:
-            if intCnt[num] < 2 or leastDiff <= 1 or not self.checkMultiple(intCnt[num], leastDiff):
+            if intCnt[num] < 2 or leastDiff <= 1 or (not self.checkMultiple(intCnt[num], leastDiff)):
                 return False
         return True

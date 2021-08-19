@@ -1,4 +1,5 @@
 class Solution:
+
     def defangIPaddr(self, address: str) -> str:
         new_string = ''
         for s in address:

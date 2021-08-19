@@ -1,4 +1,5 @@
 class Solution:
+
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         odds = []
         evens = []
@@ -12,14 +13,12 @@ class Solution:
                         de[s[i]] += 1
                     else:
                         de[s[i]] = 1
+                elif s[i] in do:
+                    do[s[i]] += 1
                 else:
-                    if s[i] in do:
-                        do[s[i]] += 1
-                    else:
-                        do[s[i]] = 1
+                    do[s[i]] = 1
             odds.append(do)
             evens.append(de)
-
         total = []
         i = 0
         while i < len(odds):

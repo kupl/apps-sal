@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScore(self, s: str) -> int:
         lis = []
         for i in range(1, len(s)):
