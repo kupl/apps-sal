@@ -1,12 +1,6 @@
-# coding: utf-8
 import sys
-#from operator import itemgetter
 sysread = sys.stdin.readline
-#from heapq import heappop, heappush
-#from collections import defaultdict
-sys.setrecursionlimit(10**7)
-#import math
-#from itertools import combinations
+sys.setrecursionlimit(10 ** 7)
 
 
 def run():
@@ -14,7 +8,7 @@ def run():
     A = [0] + list(map(int, sysread().split()))
     to = [[] for _ in range(N + 1)]
     for _ in range(N - 1):
-        u, v = map(int, sysread().split())
+        (u, v) = map(int, sysread().split())
         to[u].append(v)
         to[v].append(u)
     seen = [False] * (N + 1)
@@ -22,11 +16,10 @@ def run():
     dp[0] = -float('inf')
     ddp2 = [0]
     paths = []
-    actions = []  # (idx, pre, pro)
+    actions = []
     ans = [0] * (N + 1)
 
     def dfs(node, parent=None):
-
         a = A[node]
         seen[node] = True
         if parent == None:
@@ -45,11 +38,9 @@ def run():
         for next in to[node]:
             if not seen[next]:
                 dfs(next, node)
-
-        idx, pre, pro, change = actions.pop()
+        (idx, pre, pro, change) = actions.pop()
         dp[idx] = pre
         ddp2[0] -= change
-
     dfs(1)
     for s in ans[1:]:
         print(s)
@@ -57,9 +48,9 @@ def run():
 
 
 def bin_search(A, x):
-    '''
+    """
     return index which is lowest in values more than or equal to x
-    '''
+    """
     low = 0
     high = len(A) - 1
     c = (low + high) // 2
@@ -69,7 +60,6 @@ def bin_search(A, x):
         if A[c] < x:
             low = c
             c = (low + high) // 2
-
         elif A[c] > x:
             high = c
             c = (high + low) // 2

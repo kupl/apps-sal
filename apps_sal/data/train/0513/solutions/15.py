@@ -1,23 +1,28 @@
-# coding: utf-8
 import sys
 from bisect import bisect_left, bisect_right, insort
 sys.setrecursionlimit(10 ** 7)
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
+
+
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
 
 
 N = ir()
-A = [0] + lr()  # 1-indexed
-graph = [[] for _ in range(N + 1)]  # 1-indexed
+A = [0] + lr()
+graph = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
-    a, b = lr()
+    (a, b) = lr()
     graph[a].append(b)
     graph[b].append(a)
-
-answer = [0] * (N + 1)  # 1-indexed
+answer = [0] * (N + 1)
 INF = 10 ** 10
 parent = [-1] * (N + 1)
 

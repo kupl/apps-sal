@@ -1,12 +1,12 @@
-#!/usr/bin/env python3
 from collections import defaultdict
 from bisect import bisect_left
 import sys
-sys.setrecursionlimit(10**8)
-INF = float("inf")
+sys.setrecursionlimit(10 ** 8)
+INF = float('inf')
 
 
 class Graph(object):
+
     def __init__(self, N):
         self.N = N
         self.E = defaultdict(list)
@@ -16,43 +16,35 @@ class Graph(object):
         self.E[t].append((f, w))
 
 
-def solve(N: int, a: "List[int]", u: "List[int]", v: "List[int]"):
-
+def solve(N: int, a: 'List[int]', u: 'List[int]', v: 'List[int]'):
     g = Graph(N)
-    for x, y in zip(u, v):
+    for (x, y) in zip(u, v):
         g.add_edge(x - 1, y - 1)
-
     ans = [0] * N
-
     dp = [INF] * N
     event = []
-    var = {"last": 0}
+    var = {'last': 0}
 
     def dfs(curr, par):
         i = bisect_left(dp, a[curr])
         if dp[i] > a[curr]:
             if dp[i] == INF:
-                var["last"] = i
+                var['last'] = i
             event.append((curr, i, dp[i]))
             dp[i] = a[curr]
-
-        ans[curr] = var["last"] + 1
-
-        for child, w in g.E[curr]:
+        ans[curr] = var['last'] + 1
+        for (child, w) in g.E[curr]:
             if child == par:
                 continue
             dfs(child, curr)
-
-        c, i, v = event[-1]
+        (c, i, v) = event[-1]
         if c == curr:
             dp[i] = v
             if v == INF:
-                var["last"] = i - 1
+                var['last'] = i - 1
             event.pop()
-
     dfs(0, -1)
-    print(*ans, sep="\n")
-
+    print(*ans, sep='\n')
     return
 
 
@@ -63,10 +55,10 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    a = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
-    u = [int()] * (N - 1)  # type: "List[int]"
-    v = [int()] * (N - 1)  # type: "List[int]"
+    N = int(next(tokens))
+    a = [int(next(tokens)) for _ in range(N)]
+    u = [int()] * (N - 1)
+    v = [int()] * (N - 1)
     for i in range(N - 1):
         u[i] = int(next(tokens))
         v[i] = int(next(tokens))
