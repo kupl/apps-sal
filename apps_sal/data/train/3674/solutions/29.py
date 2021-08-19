@@ -1,11 +1,8 @@
 def add_binary(a, b):
-    # your code here
-    res = a + b  # sum first
+    res = a + b
     buf = ''
-    while res >= 1:  # since the number in binary can be represented as
-        # a reverse of remainders of series of it divisions
-        # by 2 - we'll do the divisions first...
+    while res >= 1:
         buf += str(res % 2)
         res = res // 2
-    buf = buf[::-1]  # ...and then reverse the string
+    buf = buf[::-1]
     return buf

@@ -1,5 +1,4 @@
 def monkey_count(n):
-    # your code here
     count = []
     i = 0
     while i < n:

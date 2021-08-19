@@ -3,15 +3,15 @@ from math import inf
 
 
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
-        byrow = defaultdict(set)  # row: {col,}
-        bycol = defaultdict(set)  # col: {row,}
-        for x, y in points:
+        byrow = defaultdict(set)
+        bycol = defaultdict(set)
+        for (x, y) in points:
             byrow[y].add(x)
             bycol[x].add(y)
-
         area = inf
-        for x1, ys in list(bycol.items()):
+        for (x1, ys) in list(bycol.items()):
             if len(ys) < 2:
                 continue
             for y1 in ys:
