@@ -7,4 +7,3 @@ def find(n):
         i += 1
     x = sum(m)
     return x
-    # Code here

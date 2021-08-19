@@ -1,6 +1,4 @@
 import operator
-# a skeleton class with required operators provided for convenience
-# feel free to use another approach
 
 
 def calc(tree, args):
@@ -16,6 +14,7 @@ def calc(tree, args):
 
 
 class Tree:
+
     def __init__(self, left=None, op=None, right=None):
         self.left = left
         self.right = right

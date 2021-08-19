@@ -1,12 +1,10 @@
-# cook your dish here
 try:
     t = int(input())
     for _ in range(t):
-        m, a, b = map(int, input().split())
+        (m, a, b) = map(int, input().split())
         if (b - a) % 3 == 0 and (b - a) / 3 <= m:
-            print("No")
+            print('No')
         else:
-            print("Yes")
-
+            print('Yes')
 except:
     pass

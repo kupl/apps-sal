@@ -1,8 +1,7 @@
-# cook your dish here
 for i in range(int(input())):
-    m, a, b = list(map(int, input().split()))
+    (m, a, b) = list(map(int, input().split()))
     d = abs(a - b)
     if d % 3 == 0 and d / 3 <= m:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

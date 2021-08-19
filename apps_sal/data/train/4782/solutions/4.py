@@ -5,15 +5,13 @@ class Placeholder:
     num = -1
 
     def __init__(self, so_farr=[]):
-        #         if Placeholder.num != -1:
-        #             Placeholder.num = -1
         self.so_far = so_farr
 
     def __call__(self, *args):
         ds = self.unpacked()
-        priori, m = 0, 0
+        (priori, m) = (0, 0)
         for i in range(len(ds)):
-            if ds[i] == "":
+            if ds[i] == '':
                 ds[i] = args[m]
                 m += 1
         i = 0
@@ -39,7 +37,7 @@ class Placeholder:
             else:
                 ds += [self.so_far[i]]
         if not self.so_far:
-            ds += [""]
+            ds += ['']
         return ds
 
     def __add__(self, other):
@@ -54,7 +52,7 @@ class Placeholder:
 
     def nullif(self):
         if not self.so_far:
-            self.so_far.append("")
+            self.so_far.append('')
 
     def __mul__(self, other):
         self.nullif()

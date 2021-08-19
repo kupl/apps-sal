@@ -1,5 +1,4 @@
 import math
-# Miles per gallon to kilometers per liter
 
 
 def converter(mpg):
