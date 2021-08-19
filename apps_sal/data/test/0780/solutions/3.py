@@ -4,7 +4,7 @@ import itertools
 from itertools import permutations
 import sys
 import bisect
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def SI():
@@ -26,37 +26,30 @@ def LI():
 YN = ['Yes', 'No']
 YNeos = 'YNeos'
 GYN = ['Yes', 'trumpet']
-mo = 10**9 + 7
+mo = 10 ** 9 + 7
 imp = 'IMPOSSIBLE'
-
 s = list(input())
 di = defaultdict(int)
 for i in range(len(s) - 1):
-    di[(int(s[i]), int(s[i + 1]))] += 1
-
+    di[int(s[i]), int(s[i + 1])] += 1
 mp = [[[[0] * 10 for i in range(10)] for j in range(10)] for k in range(10)]
 for h in range(10):
     for w in range(10):
         for x in range(10):
             for y in range(10):
-
-                zm = 10**3
+                zm = 10 ** 3
                 for nx in range(11):
                     for ny in range(11):
                         if nx + ny == 0:
                             continue
                         if (x * nx + y * ny - (w - h)) % 10 == 0:
-                            # print('Y',(x,nx),(y,ny),x*nx+y*ny,(w,h),zm)
                             zm = min(zm, nx + ny - 1)
                 if zm < 30:
                     zz = zm
                 else:
                     zz = -1
                 mp[h][w][x][y] = zz
-
-
 ans = [[0] * 10 for i in range(10)]
-
 for x in range(10):
     for y in range(10):
         for i in list(di.items()):

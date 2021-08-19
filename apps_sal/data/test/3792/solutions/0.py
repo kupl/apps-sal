@@ -9,13 +9,10 @@ def mi():
 def li():
     return list(mi())
 
-# B. The Fair Nut and Strings
 
-
-n, k = mi()
+(n, k) = mi()
 s = input().strip()
 t = input().strip()
-
 ans = 0
 jj = 0
 for i in range(n):
@@ -35,5 +32,4 @@ for j in range(jj, n):
         break
     ans += cur
     cur *= 2
-
 print(ans)

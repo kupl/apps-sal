@@ -1,9 +1,5 @@
-#import sys
-#sys.stdin = open("in.txt", "r")
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 one = k * 2 + 1
-
 ans = 0
 if n % one == 0:
     ans = n // one
@@ -18,9 +14,7 @@ while cnt <= ans:
     if t > n:
         minus = t - n
     arr += [t]
-    #print("%d" % t, end=" ")
     t += one
     cnt += 1
-
 for s in arr:
-    print("%d" % (s - minus), end=" ")
+    print('%d' % (s - minus), end=' ')

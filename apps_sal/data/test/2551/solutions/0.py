@@ -7,7 +7,7 @@ def input():
 
 
 def ctoi(c):
-    return ord(c) - ord("a")
+    return ord(c) - ord('a')
     print(ans)
 
 
@@ -15,7 +15,7 @@ T = int(input())
 for _ in range(T):
     s = input()
     t = input()
-    if not (set(s) >= set(t)):
+    if not set(s) >= set(t):
         print(-1)
     else:
         alph = [[] for _ in range(26)]
@@ -24,7 +24,6 @@ for _ in range(T):
         for a in alph:
             if a:
                 a.append(a[0] + len(s))
-        # print(alph)
         cur = len(s) - 1
         ans = 0
         for i in range(len(t)):

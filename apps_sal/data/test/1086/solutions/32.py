@@ -2,18 +2,24 @@ import sys
 import numpy as np
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-H, W = lr()
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
+(H, W) = lr()
 A = np.array([lr() for _ in range(H)])
 B = np.array([lr() for _ in range(H)])
 diff = np.abs(A - B).tolist()
-
 X = (H + W) * 80
-L = X + X + 1  # 真ん中を0とする、最後に-X
+L = X + X + 1
 dp = [[np.zeros(L, np.bool)] * W for _ in range(H)]
 dp[0][0] = np.zeros(L, np.bool)
 di = diff[0][0]
@@ -34,7 +40,6 @@ for h in range(H):
             x[di:] |= prev[:L - di]
             x[:L - di] |= prev[di:]
         dp[h][w] = x
-
 dp = dp[-1][-1][X:]
 possible = np.nonzero(dp)[0]
 answer = possible.min()
