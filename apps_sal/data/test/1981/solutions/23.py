@@ -1,11 +1,11 @@
 from collections import deque as dq
-n, m = input().split()
-n, m = int(n), int(m)
+(n, m) = input().split()
+(n, m) = (int(n), int(m))
 a = list(map(int, input().split()))
 v = [[] for _ in range(n)]
 for i in range(n - 1):
     x = list(map(int, input().split()))
-    x[0], x[1] = int(x[0]) - 1, int(x[1]) - 1
+    (x[0], x[1]) = (int(x[0]) - 1, int(x[1]) - 1)
     v[x[0]].append(x[1])
     v[x[1]].append(x[0])
 tag = [False] * n
@@ -16,8 +16,7 @@ con[0] = a[0]
 tag[0] = True
 ans = 0
 while len(d) > 0:
-    x, chd = d.popleft(), 0
-    #  print( ( x , con[ x ] ) )
+    (x, chd) = (d.popleft(), 0)
     if con[x] > m:
         continue
     for y in v[x]:

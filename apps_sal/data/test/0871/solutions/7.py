@@ -1,6 +1,5 @@
-# python3
-
-def readline(): return tuple(map(int, input().split()))
+def readline():
+    return tuple(map(int, input().split()))
 
 
 def readlines(count):
@@ -10,12 +9,10 @@ def readlines(count):
 
 
 def main():
-    n, s = readline()
+    (n, s) = readline()
     shedule = [h * 60 + m for (h, m) in readlines(n)]
-
     shedule.append(float('inf'))
     prev = -s
-
     for time in shedule:
         if prev + s < time - s:
             print(*divmod(prev + s, 60))

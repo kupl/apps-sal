@@ -1,4 +1,4 @@
-def sum1(x):  # подсчёт суммы цифр числа x
+def sum1(x):
     summa = 0
     for i in x:
         summa += int(i)
@@ -12,8 +12,8 @@ n = len(x) - 1
 j = n
 for i in range(0, n):
     if x[i] != '0':
-        ni = int(x[i]) - 1  # уменьшаю i-ый разряд на 1
-        xi = x[0:i] + str(ni) + '9' * j  # строю новое число
+        ni = int(x[i]) - 1
+        xi = x[0:i] + str(ni) + '9' * j
         j -= 1
         ci = sum1(xi)
         if c < ci:

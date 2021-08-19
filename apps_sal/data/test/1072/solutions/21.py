@@ -1,8 +1,3 @@
-# from itertools import combinations
-# from bisect import bisect_left
-# from functools import *
-# from collections import Counter
-
 def is_lexigraphic(s):
     for i in range(len(s) - 1):
         if s[i] > s[i + 1]:
@@ -10,10 +5,11 @@ def is_lexigraphic(s):
     return True
 
 
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
-n, m = I()
+(n, m) = I()
 a = [input() for i in range(n)]
 mn = m
 columns = list(zip(*a))

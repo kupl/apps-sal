@@ -5,16 +5,15 @@ input = stdin.readline
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    mod = [defaultdict(int) for i in range(11)]  # number length 1-10, 1-indexed
+    mod = [defaultdict(int) for i in range(11)]
     for val in a:
         mod[len(str(val))][val % k] += 1
-
     pairs = 0
     for val in a:
         for _len in range(1, 11):
-            mod1 = (val * 10**_len) % k
+            mod1 = val * 10 ** _len % k
             mod2 = k - mod1 if mod1 != 0 else 0
             pairs += mod[_len][mod2]
             if len(str(val)) == _len and val % k == mod2:
