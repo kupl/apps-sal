@@ -4,5 +4,4 @@ def remove_url_anchor(url):
         if i == '#':
             break
         pos += 1
-    # print(url[:pos])
     return url[:pos]

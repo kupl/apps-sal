@@ -4,7 +4,7 @@ def remove_url_anchor(url):
         j += 1
         if i == '#':
             print(j)
-            url = url[0:(j - 1)]
+            url = url[0:j - 1]
             return url
         else:
             pass
