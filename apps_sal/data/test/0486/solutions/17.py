@@ -8,7 +8,6 @@ def get_p(n):
     while n > 0:
         p *= n % 10
         n //= 10
-
     return p
 
 
@@ -17,9 +16,7 @@ d = 10
 nn = n
 while d <= n:
     nn -= d
-    nn = nn - (nn % d) + (d - 1)
+    nn = nn - nn % d + (d - 1)
     mx = max(get_p(nn), mx)
-
     d *= 10
-
 print(mx)

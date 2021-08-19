@@ -3,9 +3,9 @@ def isZ(a):
 
 
 def geom(a, b, c, d):
-    if 0 in (a, b, c, d) and not (a == b == c == d == 0):
+    if 0 in (a, b, c, d) and (not a == b == c == d == 0):
         return False
-    if(b / a == c / b == d / c):
+    if b / a == c / b == d / c:
         nxt = d * (d / c)
         if not isZ(nxt):
             return False
@@ -15,12 +15,12 @@ def geom(a, b, c, d):
 
 
 def ar(a, b, c, d):
-    if(b - a == c - b == d - c):
+    if b - a == c - b == d - c:
         print(int(2 * d - c))
         return True
     return False
 
 
-a, b, c, d = map(float, input().split())
-if not geom(a, b, c, d) and not ar(a, b, c, d):
+(a, b, c, d) = map(float, input().split())
+if not geom(a, b, c, d) and (not ar(a, b, c, d)):
     print(42)

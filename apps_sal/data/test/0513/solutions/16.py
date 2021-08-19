@@ -6,7 +6,7 @@ def solve():
     yc = [0] * 3
     i = 0
     for i in range(8):
-        xi, yi = list(map(int, input().split()))
+        (xi, yi) = list(map(int, input().split()))
         if str([xi, yi]) in S:
             return 0
         S.add(str([xi, yi]))
@@ -37,8 +37,8 @@ def solve():
     i = 0
     while i < 3:
         if xc[i] == 2:
-            x[i], x[1] = x[1], x[i]
-            xc[i], xc[1] = xc[1], xc[i]
+            (x[i], x[1]) = (x[1], x[i])
+            (xc[i], xc[1]) = (xc[1], xc[i])
             break
         i += 1
     if i == 3:
@@ -46,14 +46,14 @@ def solve():
     if xc[0] != 3 or xc[2] != 3:
         return 0
     if x[0] > x[2]:
-        x[0], x[2] = x[2], x[0]
+        (x[0], x[2]) = (x[2], x[0])
     if x[0] > x[1] or x[1] > x[2]:
         return 0
     i = 0
     while i < 3:
         if yc[i] == 2:
-            y[i], y[1] = y[1], y[i]
-            yc[i], yc[1] = yc[1], yc[i]
+            (y[i], y[1]) = (y[1], y[i])
+            (yc[i], yc[1]) = (yc[1], yc[i])
             break
         i += 1
     if i == 3:
@@ -61,7 +61,7 @@ def solve():
     if yc[0] != 3 or yc[2] != 3:
         return 0
     if y[0] > y[2]:
-        y[0], y[2] = y[2], y[0]
+        (y[0], y[2]) = (y[2], y[0])
     if y[0] > y[1] or y[1] > y[2]:
         return 0
     return 1

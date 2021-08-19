@@ -9,7 +9,6 @@ def f(n, r):
 
 n = int(input())
 a = list(map(int, input().split()))
-
 dic = {}
 for ai in a:
     if ai in dic:
@@ -17,7 +16,6 @@ for ai in a:
     else:
         dic[ai] = 1
 a = list(sorted(set(a)))
-
 ans = 1
 i = 0
 cnt = 3
@@ -27,5 +25,4 @@ while 0 < cnt:
         ans *= f(x, min(x, cnt))
     cnt -= x
     i += 1
-
 print(ans)

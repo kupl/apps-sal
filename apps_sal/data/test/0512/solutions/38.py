@@ -2,7 +2,6 @@ import collections
 import sys
 from functools import total_ordering
 from typing import List
-
 sys.setrecursionlimit(10 ** 9)
 
 
@@ -18,11 +17,11 @@ def main():
 
 
 def solve(N: int, AB: List[List[int]]) -> str:
-    for a, b in AB:
-        if a != -1 and b != -1 and not a < b:
+    for (a, b) in AB:
+        if a != -1 and b != -1 and (not a < b):
             return 'No'
     tp = [0] * (2 * N + 1)
-    for a, b in AB:
+    for (a, b) in AB:
         if a != -1:
             if tp[a] != 0:
                 return 'No'
@@ -32,7 +31,7 @@ def solve(N: int, AB: List[List[int]]) -> str:
                 return 'No'
             tp[b] = 1
     P = [[0] * (2 * N + 1) for _ in range(2 * N + 1)]
-    for a, b in AB:
+    for (a, b) in AB:
         if a != -1 and b != -1:
             for i in range(0, 2 * N + 1):
                 P[a][i] = -1
@@ -58,7 +57,6 @@ def solve(N: int, AB: List[List[int]]) -> str:
                     P[j][b] = -1
             for j in range(b + 1, 2 * N + 1):
                 P[j][b] = -1
-
     dp = [False] * (2 * N + 1)
     dp[0] = True
     for i in range(0, 2 * N + 1, 2):
@@ -74,7 +72,6 @@ def solve(N: int, AB: List[List[int]]) -> str:
                         break
                 if not ng:
                     dp[j] = True
-
     return 'Yes' if dp[2 * N] else 'No'
 
 

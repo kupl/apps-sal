@@ -9,7 +9,7 @@ def ncr(z, r):
     return numer // denom
 
 
-n, m, k = list(map(int, input().strip().split()))
+(n, m, k) = list(map(int, input().strip().split()))
 mod = 998244353
 if m == 1:
     if k == 0:
@@ -19,7 +19,7 @@ if m == 1:
 elif n == 1:
     print(m)
 else:
-    ans = m * ((m - 1)**k)
+    ans = m * (m - 1) ** k
     ans = ans % mod
     c = ncr(n - 1, k) % mod
     ans = ans * c

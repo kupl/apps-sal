@@ -1,5 +1,5 @@
 string = input()
-numbers = string.split(" ")
+numbers = string.split(' ')
 a = int(numbers[0])
 b = int(numbers[1])
 s = input()
@@ -7,7 +7,7 @@ t = input()
 values = []
 lists = []
 for x in range(b - a + 1):
-    substring = t[x:(x + a)]
+    substring = t[x:x + a]
     n = 0
     positions = []
     for y in range(a):
@@ -20,4 +20,4 @@ for x in range(b - a + 1):
     lists.append(positions)
 minimum = min(values)
 print(minimum)
-print(" ".join(lists[values.index(minimum)]))
+print(' '.join(lists[values.index(minimum)]))

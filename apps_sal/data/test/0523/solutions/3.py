@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ar = []
 for _ in range(n):
     ar.append(input())

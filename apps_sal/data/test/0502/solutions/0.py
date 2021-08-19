@@ -3,7 +3,7 @@ def read_ints():
 
 
 coords = read_ints()
-a, b, c = [(coords[i], coords[i + 1]) for i in range(0, len(coords), 2)]
+(a, b, c) = [(coords[i], coords[i + 1]) for i in range(0, len(coords), 2)]
 
 
 def length_sqr(a, b):

@@ -21,8 +21,7 @@ else:
             print(int(j * (j - 1) / 2))
         elif j == 2:
             print(1)
+        elif len(b) <= 2:
+            print(0)
         else:
-            if len(b) <= 2:
-                print(0)
-            else:
-                print(c[b[2]])
+            print(c[b[2]])

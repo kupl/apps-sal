@@ -1,6 +1,5 @@
 n = int(input())
 arr = [int(x) for x in input().split()]
-
 if arr[0] != arr[n - 1]:
     print(n - 1)
 else:

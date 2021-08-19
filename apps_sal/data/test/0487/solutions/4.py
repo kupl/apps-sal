@@ -10,6 +10,6 @@ n = scand()
 a = scana()
 summ = sum(a)
 for i in range(max(a), 10000):
-    if(i * n - summ > summ):
+    if i * n - summ > summ:
         print(i)
         break

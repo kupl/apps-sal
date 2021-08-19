@@ -1,6 +1,6 @@
-s, x1, x2 = list(map(int, input().split()))
-t1, t2 = list(map(int, input().split()))
-p, d = list(map(int, input().split()))
+(s, x1, x2) = list(map(int, input().split()))
+(t1, t2) = list(map(int, input().split()))
+(p, d) = list(map(int, input().split()))
 if x1 > x2:
     x1 = s - x1
     x2 = s - x2
@@ -11,11 +11,10 @@ if x1 > x2:
 def dist(sx, fx, d, s):
     if d == -1:
         return sx + fx
+    elif fx >= sx:
+        return fx - sx
     else:
-        if fx >= sx:
-            return fx - sx
-        else:
-            return 2 * s - abs(fx - sx)
+        return 2 * s - abs(fx - sx)
 
 
 if t1 > t2:

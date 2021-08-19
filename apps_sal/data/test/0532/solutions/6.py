@@ -1,6 +1,6 @@
 s = input()
-x = "abcdefghijklmnopqrstuvwxyz"
-cur = "a"
+x = 'abcdefghijklmnopqrstuvwxyz'
+cur = 'a'
 ans = 0
 for c in s:
     p = abs(x.find(cur) - x.find(c))

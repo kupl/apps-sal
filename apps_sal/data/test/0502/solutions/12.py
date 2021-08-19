@@ -1,8 +1,8 @@
 def get_len_sq(a, b):
-    return (a[0] - b[0])**2 + (a[1] - b[1])**2
+    return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2
 
 
-ax, ay, bx, by, cx, cy = list(map(int, input().split()))
+(ax, ay, bx, by, cx, cy) = list(map(int, input().split()))
 a = (ax, ay)
 b = (bx, by)
 c = (cx, cy)

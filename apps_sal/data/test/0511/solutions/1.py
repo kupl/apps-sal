@@ -1,5 +1,5 @@
 def sqrt(n):
-    return n**.5
+    return n ** 0.5
 
 
 def pfs(n):
@@ -37,24 +37,20 @@ def gcd(a, b):
 s = input()
 x = int(s.split()[0])
 y = int(s.split()[1])
-
 d = gcd(x, y)
 x //= d
 y //= d
-
 arr = pfs(x)
 ans = 0
-
 while y > 0:
     if x == 1:
         ans += y
         y = 0
-
     else:
         maxcand = -1
         for p in set(arr):
-            maxcand = max(maxcand, y - (y % p))
-        ans += (y - maxcand)
+            maxcand = max(maxcand, y - y % p)
+        ans += y - maxcand
         y = maxcand
         e = gcd(x, y)
         x //= e
@@ -62,5 +58,4 @@ while y > 0:
         arr1 = pfs(e)
         for pf in arr1:
             arr.remove(pf)
-
 print(ans)

@@ -16,28 +16,26 @@ def val(c):
 for c in s:
     l += [val(c)]
     v[val(c)] += 1
-
-if (len(set(l))) == 3:
+if len(set(l)) == 3:
     print('BGR')
-elif (len(set(l))) == 1:
+elif len(set(l)) == 1:
     print(s[0])
-else:
-    if v[0] == 1 or v[1] == 1 or v[2] == 1:
-        a = ''
-        if v[0] == 0:
-            a = 'B'
-        elif v[1] == 0:
-            a = 'G'
-        else:
-            a = 'R'
-        if max(v) > 1:
-            if v[0] == 1:
-                a += 'B'
-            elif v[1] == 1:
-                a += 'G'
-            else:
-                a += 'R'
-        for c in sorted(a):
-            print(c, end='')
+elif v[0] == 1 or v[1] == 1 or v[2] == 1:
+    a = ''
+    if v[0] == 0:
+        a = 'B'
+    elif v[1] == 0:
+        a = 'G'
     else:
-        print('BGR')
+        a = 'R'
+    if max(v) > 1:
+        if v[0] == 1:
+            a += 'B'
+        elif v[1] == 1:
+            a += 'G'
+        else:
+            a += 'R'
+    for c in sorted(a):
+        print(c, end='')
+else:
+    print('BGR')

@@ -4,7 +4,7 @@ def main():
     S = input()
     T = input()
     if set(S) & set(T) != set(T):
-        print((-1))
+        print(-1)
     else:
         lt = len(T)
         ls = len(S)
@@ -12,7 +12,7 @@ def main():
         D = dict()
         for t in st:
             D[t] = list()
-            for i, s in enumerate(S):
+            for (i, s) in enumerate(S):
                 if t == s:
                     D[t].append(i)
         pre = -1
@@ -26,14 +26,12 @@ def main():
                 return (X[0], True)
             else:
                 return (X[index], False)
-
         for t in T:
             J = judge(pre, t)
             pre = J[0]
             if J[1]:
                 cnt += 1
-
-        print((cnt * len(S) + pre + 1))
+        print(cnt * len(S) + pre + 1)
 
 
 def __starting_point():

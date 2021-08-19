@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 ans = 1
 for i in range(1, k + 1):
     ans *= n - i

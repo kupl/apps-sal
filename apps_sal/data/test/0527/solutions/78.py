@@ -4,7 +4,7 @@ s = input()
 n = len(s)
 t = input()
 if set(s) & set(t) != set(t):
-    print((-1))
+    print(-1)
 else:
     cnt = defaultdict(list)
     for i in range(n):
@@ -19,4 +19,4 @@ else:
         else:
             prev = x[0]
             loop += 1
-    print((loop * n + prev))
+    print(loop * n + prev)

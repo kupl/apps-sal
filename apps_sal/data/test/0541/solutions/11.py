@@ -1,7 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 li = []
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     li.append([b, a])
 li.sort()
 an = 1

@@ -1,11 +1,8 @@
 import sys
 sys.setrecursionlimit(1000000)
 read = sys.stdin.readline
-
 points = read().strip()
-
 lst = [[points[0], 1]]
-
 for p in points[1:]:
     if p == lst[-1][0]:
         lst[-1][1] += 1
@@ -29,5 +26,4 @@ while len(lst) > 1:
         else:
             tmp[-1][1] += lst[-1][1] - 1
     lst = tmp
-
 print(ans)

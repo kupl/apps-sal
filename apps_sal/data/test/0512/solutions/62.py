@@ -4,12 +4,12 @@ def main():
     YesFlag = True
     arr = [True] * (2 * n + 1)
     cnt = 0
-    for a, b in AB:
-        if a != -1 and b != -1 and a > b:
+    for (a, b) in AB:
+        if a != -1 and b != -1 and (a > b):
             YesFlag = False
-        if a != -1 and not arr[a]:
+        if a != -1 and (not arr[a]):
             YesFlag = False
-        if b != -1 and not arr[b]:
+        if b != -1 and (not arr[b]):
             YesFlag = False
         if a != -1:
             arr[a] = False
@@ -26,20 +26,19 @@ def main():
             fs = [True] * (2 * n + 1)
             lngth = (j - i) // 2
             sf = True
-            for a, b in AB:
-                if (a == -1 and b == -1) or (a != -1 and (a <= i or j < a)) or (b != -1 and (b <= i or j < b)):
+            for (a, b) in AB:
+                if a == -1 and b == -1 or (a != -1 and (a <= i or j < a)) or (b != -1 and (b <= i or j < b)):
                     continue
                 if a != -1 and b != -1:
                     if b - a != lngth or a <= i or j < b:
                         sf = False
                         break
+                    elif not fs[a] or not fs[b]:
+                        sf = False
+                        break
                     else:
-                        if not fs[a] or not fs[b]:
-                            sf = False
-                            break
-                        else:
-                            fs[a] = False
-                            fs[b] = False
+                        fs[a] = False
+                        fs[b] = False
                 elif a == -1:
                     p = b - lngth
                     if p <= i or j < b:
@@ -72,9 +71,9 @@ def main():
     if dp[-1] != 0:
         YesFlag = False
     if YesFlag:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

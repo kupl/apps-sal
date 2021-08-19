@@ -1,8 +1,8 @@
 n = int(input())
-a = [int(i)for i in input().split()]
-b = [int(i)for i in input().split()]
+a = [int(i) for i in input().split()]
+b = [int(i) for i in input().split()]
 ans = [0] * n
-s = set([int(i)for i in range(1, n + 1)])
+s = set([int(i) for i in range(1, n + 1)])
 for i in range(n):
     if a[i] == b[i]:
         ans[i] = a[i]

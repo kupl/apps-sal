@@ -10,7 +10,6 @@ for i in range(len(T)):
 for i in range(len(S)):
     if S[i] in D:
         D[S[i]].append(i)
-
 if len(set(T) - set(S)) > 0:
     print(-1)
 else:

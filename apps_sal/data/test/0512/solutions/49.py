@@ -1,6 +1,5 @@
 import sys
 from typing import List
-
 sys.setrecursionlimit(10 ** 9)
 
 
@@ -16,11 +15,11 @@ def main():
 
 
 def solve(N: int, AB: List[List[int]]) -> str:
-    for a, b in AB:
-        if a != -1 and b != -1 and not a < b:
+    for (a, b) in AB:
+        if a != -1 and b != -1 and (not a < b):
             return 'No'
     exists = [False] * (2 * N + 1)
-    for a, b in AB:
+    for (a, b) in AB:
         if a != -1:
             if exists[a]:
                 return 'No'
@@ -30,7 +29,7 @@ def solve(N: int, AB: List[List[int]]) -> str:
                 return 'No'
             exists[b] = True
     P = [[0] * (2 * N + 1) for _ in range(2 * N + 1)]
-    for a, b in AB:
+    for (a, b) in AB:
         if a != -1:
             for i in range(1, a):
                 P[i][a] = -1
@@ -51,7 +50,6 @@ def solve(N: int, AB: List[List[int]]) -> str:
                 for j in range(i, b):
                     P[i][j] = -1
             P[a][b] = 0
-
     dp = [False] * (2 * N + 1)
     dp[0] = True
     for i in range(0, 2 * N + 1, 2):
@@ -67,7 +65,6 @@ def solve(N: int, AB: List[List[int]]) -> str:
                         break
                 if not ng:
                     dp[j] = True
-
     return 'Yes' if dp[2 * N] else 'No'
 
 

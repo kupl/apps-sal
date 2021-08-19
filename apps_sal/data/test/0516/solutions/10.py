@@ -1,4 +1,4 @@
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 s = input()
 t = input()
 l = [i for i in range(1, x + 1)]

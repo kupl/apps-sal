@@ -4,21 +4,21 @@ def main():
     r = s.count('R')
     g = s.count('G')
     b = s.count('B')
-    if r > 0 and g > 0 and b > 0:
+    if r > 0 and g > 0 and (b > 0):
         print('BGR')
         return
     r = min(r, 2)
     g = min(g, 2)
     b = min(b, 2)
-    a = r, 'R'
-    c = b, 'B'
-    b = g, 'G'
+    a = (r, 'R')
+    c = (b, 'B')
+    b = (g, 'G')
     if a[0] < b[0]:
-        a, b = b, a
+        (a, b) = (b, a)
     if b[0] < c[0]:
-        b, c = c, b
+        (b, c) = (c, b)
     if a[0] < b[0]:
-        a, b = b, a
+        (a, b) = (b, a)
     if a[0] == 2 and b[0] == 2:
         print('BGR')
         return

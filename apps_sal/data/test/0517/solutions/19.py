@@ -1,5 +1,5 @@
-n, d, h = map(int, input().split())
-if h < ((d + 1) >> 1) or (n > 2 and d == 1):
+(n, d, h) = map(int, input().split())
+if h < d + 1 >> 1 or (n > 2 and d == 1):
     print(-1)
 else:
     k = 2 if h != 1 else 1

@@ -1,4 +1,4 @@
-s, k = map(str, input().split())
+(s, k) = map(str, input().split())
 k = int(k)
 z = len(s)
 for i in range(z):

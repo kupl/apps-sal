@@ -1,5 +1,5 @@
 from collections import defaultdict
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 dict = defaultdict(int)
 larr = ''
 rarr = ''
@@ -17,7 +17,6 @@ for _ in range(n):
             mxeq = s
     else:
         dict[s] = 1
-
 farr = larr + mxeq + rarr
 print(len(farr))
 print(farr)

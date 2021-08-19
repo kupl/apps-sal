@@ -1,4 +1,4 @@
-ax, ay, bx, by, cx, cy = list(map(int, input().split()))
+(ax, ay, bx, by, cx, cy) = list(map(int, input().split()))
 
 
 def r(x1, y1, x2, y2):
@@ -11,7 +11,7 @@ def line(x3, y3, x1, y1, x2, y2):
     return False
 
 
-if r(ax, ay, bx, by) == r(bx, by, cx, cy) and not line(ax, ay, bx, by, cx, cy):
+if r(ax, ay, bx, by) == r(bx, by, cx, cy) and (not line(ax, ay, bx, by, cx, cy)):
     print('Yes')
 else:
     print('No')

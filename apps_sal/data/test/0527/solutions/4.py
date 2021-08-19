@@ -3,11 +3,10 @@ def main():
     s_ = set(list(s))
     t = str(input())
     t_ = set(list(t))
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
     if t_ <= s_:
         length_s = len(s)
-
-        res = [[length_s] * (26) for _ in range(length_s + 1)]
+        res = [[length_s] * 26 for _ in range(length_s + 1)]
         for i in range(length_s - 1, -1, -1):
             for j in range(26):
                 if s[i] == alphabet[j]:
@@ -32,5 +31,5 @@ def main():
         print(-1)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

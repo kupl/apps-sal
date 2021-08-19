@@ -4,6 +4,6 @@ while len(s1) < 100 and s1 != s:
     s1 += '0'
     s = '0' + s
 if s == s1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

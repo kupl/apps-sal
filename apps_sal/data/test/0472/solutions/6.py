@@ -6,8 +6,8 @@ def sumd(n):
     return v
 
 
-n, v = int(input()), -1
-a, b = 0, n + 1
+(n, v) = (int(input()), -1)
+(a, b) = (0, n + 1)
 while a < b - 1:
     c = (a + b) // 2
     if c ** 2 <= n:

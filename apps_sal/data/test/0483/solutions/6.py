@@ -1,7 +1,7 @@
 n = int(input())
 s = input().rstrip()
 a = list(map(int, input().split()))
-l, r = [], []
+(l, r) = ([], [])
 for i in range(n):
     if s[i] == 'R':
         r.append(a[i])

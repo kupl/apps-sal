@@ -1,4 +1,4 @@
-n, k = [int(x) for x in input().split(' ')]
+(n, k) = [int(x) for x in input().split(' ')]
 current = input()
 
 
@@ -16,5 +16,4 @@ def turn(str):
 
 for i in range(k):
     current = turn(current)
-
 print(current)

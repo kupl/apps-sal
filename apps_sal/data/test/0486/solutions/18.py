@@ -18,5 +18,4 @@ for i in range(len(nums)):
         for j in range(len(nums) - i - 1):
             nums2.append(9)
         res = max(res, foo(nums2))
-
 print(res)

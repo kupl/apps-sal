@@ -1,5 +1,5 @@
 def main():
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     abc = sorted([a, b, c])
     ans = 0
     if abc[1] - abc[0] < d:

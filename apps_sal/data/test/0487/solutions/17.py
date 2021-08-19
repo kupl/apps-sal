@@ -1,12 +1,11 @@
-def gcd(a, b): return gcd(b, a % b) if b else a
+def gcd(a, b):
+    return gcd(b, a % b) if b else a
 
 
 def main():
     n = int(input())
     arr = list(map(int, input().split()))
-
     d = max(arr)
-
     while True:
         res = 0
         for i in arr:

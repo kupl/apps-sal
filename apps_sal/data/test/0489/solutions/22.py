@@ -2,14 +2,14 @@ from math import factorial
 
 
 def c(n, k):
-    return (factorial(n) // factorial(k)) // factorial(n - k)
+    return factorial(n) // factorial(k) // factorial(n - k)
 
 
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()
-f, s, t = 0, 0, 0
-i, j, k = 0, 0, 0
+(f, s, t) = (0, 0, 0)
+(i, j, k) = (0, 0, 0)
 f = a[:3].count(a[0])
 if f == 1:
     s = a[:3].count(a[1])

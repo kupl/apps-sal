@@ -13,9 +13,8 @@ for i in range(n):
         bsum += -temp
         b.append(-temp)
 if asum != bsum:
-    print("first") if asum > bsum else print("second")
+    print('first') if asum > bsum else print('second')
+elif a == b:
+    print('first') if temp > 0 else print('second')
 else:
-    if a == b:
-        print("first") if temp > 0 else print("second")
-    else:
-        print("first") if a > b else print("second")
+    print('first') if a > b else print('second')

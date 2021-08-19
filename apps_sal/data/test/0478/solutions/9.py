@@ -2,7 +2,7 @@ n = int(input())
 s = input()
 flag = True
 while flag:
-    s1 = ""
+    s1 = ''
     n1 = len(s)
     m = 95
     ind = -1

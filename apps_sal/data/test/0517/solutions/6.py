@@ -1,5 +1,5 @@
-n, d, h = map(int, input().split())
-if d > h * 2 or (h == 1 and d == 1 and n != 2):
+(n, d, h) = map(int, input().split())
+if d > h * 2 or (h == 1 and d == 1 and (n != 2)):
     print(-1)
 else:
     save = 1

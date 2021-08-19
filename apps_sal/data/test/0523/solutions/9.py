@@ -3,7 +3,6 @@ def solve(N, M, A):
     used = set()
     forward = []
     mid = []
-
     for x in strs:
         rev = x[::-1]
         if x == rev:
@@ -12,19 +11,17 @@ def solve(N, M, A):
             forward.append(x)
             used.add(x)
             used.add(rev)
-
-    front = "".join(forward)
+    front = ''.join(forward)
     back = front[::-1]
     if mid:
         ret = front + next(iter(mid)) + back
     else:
         ret = front + back
-    return str(len(ret)) + "\n" + ret
+    return str(len(ret)) + '\n' + ret
 
 
 def __starting_point():
-
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     A = []
     for i in range(N):
         S = input()

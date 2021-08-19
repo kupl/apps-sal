@@ -16,6 +16,6 @@ def f(s):
 input()
 s = input()
 if f(s):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

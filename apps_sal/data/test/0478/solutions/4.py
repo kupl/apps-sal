@@ -14,8 +14,7 @@ def remove(s):
             if ord(s[i]) - ord(s[i + 1]) == 1 and s[i] > actC:
                 actC = s[i]
                 actI = i
-
-    return actC, actI
+    return (actC, actI)
 
 
 ans = 0

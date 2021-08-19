@@ -1,12 +1,12 @@
 __author__ = 'Rakshak.R.Hegde'
 n = int(input())
-w1, w2 = [], []
-w1pnts, w2pnts = 0, 0
+(w1, w2) = ([], [])
+(w1pnts, w2pnts) = (0, 0)
 lastByW1 = True
 while n:
     n -= 1
     pnts = int(input())
-    if (pnts > 0):
+    if pnts > 0:
         w1.append(pnts)
         w1pnts += pnts
         lastByW1 = True

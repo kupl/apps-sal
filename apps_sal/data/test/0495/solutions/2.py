@@ -1,4 +1,4 @@
-a1, K = map(int, input().split())
+(a1, K) = map(int, input().split())
 a = []
 while a1 != 0:
     a.append(a1 % 10)
@@ -16,8 +16,8 @@ while 1:
     if ma == a[k - 1]:
         k -= 1
         continue
-    while K != 0 and pos + 1 < n and a[pos + 1] < a[pos]:
-        a[pos], a[pos + 1] = a[pos + 1], a[pos]
+    while K != 0 and pos + 1 < n and (a[pos + 1] < a[pos]):
+        (a[pos], a[pos + 1]) = (a[pos + 1], a[pos])
         pos += 1
         K -= 1
     if K == 0:

@@ -1,8 +1,12 @@
 """http://codeforces.com/problemset/problem/233/B"""
 
 
-def s(x): return sum(map(int, str(x)))
-def val(x): return x * x + s(x) * x
+def s(x):
+    return sum(map(int, str(x)))
+
+
+def val(x):
+    return x * x + s(x) * x
 
 
 def solve(n):
@@ -22,7 +26,7 @@ def solve(n):
 
 def solve2(n):
     for sx in range(1, 81):
-        x = int((-sx + (sx**2 + 4 * n)**0.5) // 2)
+        x = int((-sx + (sx ** 2 + 4 * n) ** 0.5) // 2)
         if s(int(x)) == sx and x * (x + sx) == n:
             return x
     return -1

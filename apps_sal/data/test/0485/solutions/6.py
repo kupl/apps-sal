@@ -36,7 +36,7 @@ def main():
     y = []
     for i in range(4 * n + 1):
         input = sys.stdin.readline()
-        X, Y = [int(j) for j in input.split()]
+        (X, Y) = [int(j) for j in input.split()]
         x.append(X)
         y.append(Y)
     xs = sort(x)
@@ -55,21 +55,21 @@ def main():
         Y = ys[4 * n]
     else:
         py = 1
-    if px and not(py):
+    if px and (not py):
         i = 0
         while i < 4 * n + 1 and y[i] != Y:
             i += 1
         X = x[i]
-    if py and not(px):
+    if py and (not px):
         i = 0
         while i < 4 * n + 1 and x[i] != X:
             i += 1
         Y = y[i]
     if px and py:
         i = 0
-        while x[i] == min(x) or x[i] == max(x) or y[i] == min(y) or y[i] == max(y):
+        while x[i] == min(x) or x[i] == max(x) or y[i] == min(y) or (y[i] == max(y)):
             i += 1
-        X, Y = x[i], y[i]
+        (X, Y) = (x[i], y[i])
     print(X, Y)
 
 

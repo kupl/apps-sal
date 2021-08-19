@@ -1,6 +1,6 @@
 a = input().lower()
 num = int(input())
-c = ""
+c = ''
 for i in a:
     if ord(i) < num + 97:
         c += i.upper()

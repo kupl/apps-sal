@@ -33,6 +33,6 @@ def sumto(l):
     return S
 
 
-l, r = list(map(int, input().split()))
-mod = 10**9 + 7
+(l, r) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 print((sumto(r) - sumto(l - 1)) % mod)

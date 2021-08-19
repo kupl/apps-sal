@@ -43,7 +43,7 @@ def is_prime(n):
 
 
 def max_len_sublist(l, f):
-    start, max_length, length = 0, 0, 0
+    (start, max_length, length) = (0, 0, 0)
     for i in range(1, len(l)):
         if f(l[i], l[i - 1]):
             length += 1
@@ -52,7 +52,7 @@ def max_len_sublist(l, f):
                 start = i - length
                 max_length = length
             length = 0
-    return start, max_length
+    return (start, max_length)
 
 
 def tf_to_yn(b):
@@ -64,7 +64,6 @@ def longest_non_descent_subsequence(s, restore_sequence=False):
     for i in range(len(s)):
         possible = [d[j] + 1 if s[j] <= s[i] else 1 for j in range(i)]
         d[i] = 1 if len(possible) == 0 else max(possible)
-
     if not restore_sequence:
         return d[-1] if len(d) != 0 else 0
 

@@ -3,11 +3,11 @@ MOD = 1000000007
 
 def evensum(n):
     n //= 2
-    return (n * (n + 1)) % MOD
+    return n * (n + 1) % MOD
 
 
 def oddsum(n):
-    a = (n * (n + 1)) // 2
+    a = n * (n + 1) // 2
     a %= MOD
     a -= evensum(n - 1)
     a %= MOD
@@ -38,7 +38,7 @@ def cs(n):
     return ans
 
 
-L, R = list(map(int, input().split()))
+(L, R) = list(map(int, input().split()))
 ans = cs(R)
 if L > 1:
     ans -= cs(L - 1)

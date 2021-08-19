@@ -1,7 +1,8 @@
 """http://codeforces.com/problemset/problem/233/B"""
 
 
-def s(x): return sum(map(int, str(x)))
+def s(x):
+    return sum(map(int, str(x)))
 
 
 def solve(n):

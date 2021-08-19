@@ -1,6 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = []
-l = ""
+l = ''
 for i in range(k):
     s.append(chr(97 + i))
 for i in range(len(s)):

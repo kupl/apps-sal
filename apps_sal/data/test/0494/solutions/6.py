@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 l = [int(i) - 1 for i in input().split()]
 ans = [-1] * n
 for i in range(m - 1):
@@ -21,7 +21,6 @@ else:
                 c += 1
             ans[i] = c
             s.add(c)
-
     if len(set(ans)) == n:
         print(' '.join([str(i) for i in ans]))
     else:

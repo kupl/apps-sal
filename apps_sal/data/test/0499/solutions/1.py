@@ -1,43 +1,40 @@
-
-
 x = int(input())
 y = input()
 r = y.count('R')
 g = y.count('G')
 b = y.count('B')
-
-if r >= 1 and g >= 1 and b >= 1:
-    print("BGR")
+if r >= 1 and g >= 1 and (b >= 1):
+    print('BGR')
 elif r >= 1 and g >= 1:
     if r == 1 and g == 1:
-        print("B")
+        print('B')
     elif r == 1:
-        print("BR")
+        print('BR')
     elif g == 1:
-        print("BG")
+        print('BG')
     else:
-        print("BGR")
+        print('BGR')
 elif r >= 1 and b >= 1:
     if r == 1 and b == 1:
-        print("G")
+        print('G')
     elif r == 1:
-        print("GR")
+        print('GR')
     elif b == 1:
-        print("BG")
+        print('BG')
     else:
-        print("BGR")
+        print('BGR')
 elif b >= 1 and g >= 1:
     if b == 1 and g == 1:
-        print("R")
+        print('R')
     elif b == 1:
-        print("BR")
+        print('BR')
     elif g == 1:
-        print("GR")
+        print('GR')
     else:
-        print("BGR")
+        print('BGR')
 elif r >= 1:
-    print("R")
+    print('R')
 elif g >= 1:
-    print("G")
+    print('G')
 else:
-    print("B")
+    print('B')

@@ -14,9 +14,8 @@ if flg:
     for q in notpaint:
         if 0 == q or n - 1 == q:
             work *= 2
-        else:
-            if s[q - 1] == s[q + 1] or s[q - 1] == '?' or s[q + 1] == '?':
-                work *= 2
+        elif s[q - 1] == s[q + 1] or s[q - 1] == '?' or s[q + 1] == '?':
+            work *= 2
     if work > 1:
         print('Yes')
     else:

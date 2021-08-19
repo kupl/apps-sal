@@ -1,4 +1,4 @@
-q, w, e = list(map(int, input().split()))
+(q, w, e) = list(map(int, input().split()))
 if e % 2 == 1:
     c = 'L'
 else:

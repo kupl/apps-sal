@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 lm = list(map(int, input().split()))
-
 impossible = False
 an = [-1] * (n + 1)
 f = [False] * (n + 1)
@@ -27,7 +26,6 @@ for k in range(m - 1):
         if lm[k + 1] != x:
             impossible = True
             break
-
 if impossible:
     print(-1)
 else:

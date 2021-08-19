@@ -4,7 +4,6 @@ def mp():
 
 n = int(input())
 a = list(mp())
-
 ans = 1
 for i in range(1, n):
     if a[i] != a[0]:

@@ -11,6 +11,6 @@ def p(x):
 
 ans = p(n)
 for i in range(len(str(n))):
-    cans = 9 ** i * p((n // 10 ** i) - 1)
+    cans = 9 ** i * p(n // 10 ** i - 1)
     ans = max(ans, cans)
 print(ans)

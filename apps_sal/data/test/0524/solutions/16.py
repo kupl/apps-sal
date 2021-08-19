@@ -9,7 +9,7 @@ if n > 10:
     while c < 20:
         t = 0
         for i in range(n):
-            t += abs(c**i - arr[i])
+            t += abs(c ** i - arr[i])
             if t >= m:
                 break
         if t < m:
@@ -20,7 +20,7 @@ else:
     while c <= 1000000:
         t = 0
         for i in range(n):
-            t += abs(c**i - arr[i])
+            t += abs(c ** i - arr[i])
             if t >= m:
                 break
         if t < m:

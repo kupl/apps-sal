@@ -3,7 +3,6 @@ s = input()
 cnt = 0
 num = 0
 chk = False
-
 for i in range(n):
     if chk and s[i] == 'L':
         if cnt % 2 == 1:

@@ -1,4 +1,4 @@
-n, m = [int(t) for t in input().split()]
+(n, m) = [int(t) for t in input().split()]
 
 
 def xor(arr):

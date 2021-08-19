@@ -9,20 +9,18 @@ for I in range(X):
     else:
         S.append(-t)
     E.append(t)
-
 if sum(F) > sum(S):
-    print("first")
+    print('first')
 elif sum(F) < sum(S):
-    print("second")
+    print('second')
 else:
     a = [int(x) for x in F]
     b = [int(x) for x in S]
     if a > b:
-        print("first")
+        print('first')
     elif a < b:
-        print("second")
+        print('second')
+    elif E[-1] > 0:
+        print('first')
     else:
-        if E[-1] > 0:
-            print("first")
-        else:
-            print("second")
+        print('second')

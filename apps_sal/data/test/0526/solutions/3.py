@@ -5,7 +5,7 @@ def groupxor(l):
     return result
 
 
-r, c = [int(x) for x in input().split()]
+(r, c) = [int(x) for x in input().split()]
 rows = []
 for _ in range(r):
     rows.append([int(x) for x in input().split()])

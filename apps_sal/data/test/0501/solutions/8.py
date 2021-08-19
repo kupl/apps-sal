@@ -1,4 +1,4 @@
-l, r = list(map(int, input().split()))
+(l, r) = list(map(int, input().split()))
 l -= 1
 if l == 0:
     ar1 = []
@@ -12,7 +12,6 @@ while sum1 < l:
     else:
         ar1.append(l - sum1)
         sum1 = l
-
 ar2 = [1]
 sum2 = 1
 while sum2 < r:
@@ -22,7 +21,6 @@ while sum2 < r:
     else:
         ar2.append(r - sum2)
         sum2 = r
-
 sum1_odd = sum(ar1[::2])
 sum1_even = sum(ar1[1::2])
 sum2_odd = sum(ar2[::2])

@@ -13,13 +13,11 @@ if sum(a) > sum(b):
     print('first')
 elif sum(b) > sum(a):
     print('second')
-else:
-    if a > b:
-        print('first')
-    elif a < b:
-        print('second')
-    else:
-        if last > 0:
-            print('first')
-        elif last < 0:
-            print('second')
+elif a > b:
+    print('first')
+elif a < b:
+    print('second')
+elif last > 0:
+    print('first')
+elif last < 0:
+    print('second')

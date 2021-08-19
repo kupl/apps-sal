@@ -1,6 +1,5 @@
-k, m = input().split()
+(k, m) = input().split()
 n = int(input())
-
 n %= 4
 a = ['v', '<', '^', '>', 'v', '<', '^', '>']
 if n == 2 or n == 0:

@@ -1,9 +1,7 @@
-num, n = map(int, input().split())
-
+(num, n) = map(int, input().split())
 a = []
 b = []
-center = ""
-
+center = ''
 for i in range(num):
     s = input()
     if s[::-1] == s:
@@ -12,13 +10,9 @@ for i in range(num):
         b.append(s)
     else:
         a.append(s)
-
-ans = ""
-
+ans = ''
 for x in b:
     ans += x
-
 ans = ans + center + ans[::-1]
-
 print(len(ans))
 print(ans)

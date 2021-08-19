@@ -1,7 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = 'abcdefghijklmnopqrstuvwxyz'
-res = ""
+res = ''
 for i in range(n):
     res += s[i % k]
-
 print(res)

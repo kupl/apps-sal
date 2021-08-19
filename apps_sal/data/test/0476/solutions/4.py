@@ -1,6 +1,6 @@
 x = str(input())
 i = 0
-while i <= (len(x) - 1):
+while i <= len(x) - 1:
     if x[i] == '1':
         if x[i:i + 2] == '14':
             if x[i:i + 3] == '144':

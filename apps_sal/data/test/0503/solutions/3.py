@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 s = [int(i) for i in input().split()]
 ans = 0
 c = {}
@@ -8,19 +8,17 @@ for i in s:
         c[i] += 1
     else:
         c[i] = 1
-    if i % (k) == 0:
+    if i % k == 0:
         if i in c2:
             if i // k in c:
                 c2[i] += c[i // k]
+        elif i // k in c:
+            c2[i] = c[i // k]
         else:
-            if i // k in c:
-                c2[i] = c[i // k]
-            else:
-                c2[i] = 0
+            c2[i] = 0
     if i % (k * k) == 0:
-        if i // (k * k) == i // (k):
+        if i // (k * k) == i // k:
             ans += (c[i // (k * k)] - 1) * (c[i // (k * k)] - 2) // 2
-        else:
-            if i // k in c2:
-                ans += c2[i // k]
+        elif i // k in c2:
+            ans += c2[i // k]
 print(ans)

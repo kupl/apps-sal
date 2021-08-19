@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 t = [[n] for i in range(n)]
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     t[a - 1].append(b - 1)
 g = []
 for i in t:

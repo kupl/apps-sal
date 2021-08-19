@@ -6,8 +6,8 @@ t = a[1]
 queue = list(input())
 for i in range(t):
     j = 0
-    while (j < n - 1):
-        if (queue[j] == 'B' and queue[j + 1] == 'G'):
+    while j < n - 1:
+        if queue[j] == 'B' and queue[j + 1] == 'G':
             queue[j] = 'G'
             queue[j + 1] = 'B'
             j += 1

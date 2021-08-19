@@ -5,7 +5,7 @@ def process(s):
     res = s[:]
     for i in range(1, len(s)):
         if s[i] == 'G' and s[i - 1] == 'B':
-            res[i], res[i - 1] = res[i - 1], res[i]
+            (res[i], res[i - 1]) = (res[i - 1], res[i])
     return res
 
 
@@ -18,7 +18,7 @@ for i in range(n):
     S.append(s[i])
 for i in range(t):
     S = process(S)
-ans = ""
+ans = ''
 for i in range(n):
     ans += S[i]
 print(ans)

@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 s = input()
 for tem in range(0, t):
     s2 = ''

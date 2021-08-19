@@ -14,14 +14,12 @@ for i in range(n):
         last = 'second'
         b.append(-x)
         sumb += -x
-
 if suma > sumb:
     print('first')
     quit()
 if suma < sumb:
     print('second')
     quit()
-
 for i in range(min(len(a), len(b))):
     if a[i] > b[i]:
         print('first')
@@ -29,7 +27,6 @@ for i in range(min(len(a), len(b))):
     elif a[i] < b[i]:
         print('second')
         quit()
-
 if len(a) > len(b):
     print('first')
 elif len(a) < len(b):

@@ -13,15 +13,15 @@ for x in range(n):
     elif a.count(b[x]) + b.count(b[x]) == 1:
         c[x] = b[x]
         d.remove(b[x])
-if(len(d)) == 0:
-    ty = str(c)[1:-1].replace(",", "")
+if len(d) == 0:
+    ty = str(c)[1:-1].replace(',', '')
     print(ty)
 if len(d) == 1:
     c[c.index(0)] = d.pop()
-    ty = str(c)[1:-1].replace(",", "")
+    ty = str(c)[1:-1].replace(',', '')
     print(ty)
 elif len(d) == 2:
     c[c.index(0)] = d.pop()
     c[c.index(0)] = d.pop()
-    ty = str(c)[1:-1].replace(",", "")
+    ty = str(c)[1:-1].replace(',', '')
     print(ty)

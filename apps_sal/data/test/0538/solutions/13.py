@@ -1,5 +1,5 @@
 import re
-x = re.sub(r'0*$', '', input())
+x = re.sub('0*$', '', input())
 if x == x[::-1]:
     print('YES')
 else:

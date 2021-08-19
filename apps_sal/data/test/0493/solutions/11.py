@@ -1,6 +1,6 @@
 n = int(input())
 s = k = 0
-for i, x in enumerate(input(), 1):
+for (i, x) in enumerate(input(), 1):
     if x == 'R':
         k = i
     elif x == 'L':

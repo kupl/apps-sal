@@ -1,6 +1,6 @@
 def main():
     n = int(input().strip())
-    aa, bb = [], []
+    (aa, bb) = ([], [])
     for _ in range(n):
         a = int(input().strip())
         if a > 0:
@@ -14,7 +14,7 @@ def main():
         res = a < 0
         aa.append(0)
         bb.append(0)
-        for a, b in zip(aa, bb):
+        for (a, b) in zip(aa, bb):
             if a != b:
                 res = a < b
                 break

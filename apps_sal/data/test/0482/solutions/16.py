@@ -1,7 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 use_chars = chars[:k]
-password = " "
+password = ' '
 x = 0
 for char_i in range(1, n + 1):
     current_char = use_chars[x]

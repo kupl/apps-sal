@@ -8,7 +8,7 @@ for i in range(n):
         not_equals.append(i)
 if len(not_equals) == 1:
     x = 1
-    while x <= n and x in a and x in b:
+    while x <= n and x in a and (x in b):
         x += 1
     a[not_equals[0]] = x
     print(*a)

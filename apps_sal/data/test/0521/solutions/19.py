@@ -20,6 +20,6 @@ def f(s):
 
 
 if f(s):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

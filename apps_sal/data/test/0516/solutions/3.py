@@ -2,11 +2,9 @@ import sys
 
 
 def main():
-    n, m = list(map(int, sys.stdin.readline().split()))
-
+    (n, m) = list(map(int, sys.stdin.readline().split()))
     s = sys.stdin.readline().rstrip()
     t = sys.stdin.readline().rstrip()
-
     r = 10000
     res = []
     for i in range(m - n + 1):
@@ -21,7 +19,7 @@ def main():
             res = p
     print(r)
     if r != 0:
-        print(" ".join(map(str, res)))
+        print(' '.join(map(str, res)))
 
 
 main()

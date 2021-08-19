@@ -1,7 +1,7 @@
 def solve(arr):
     arr.sort()
     c = 2
-    ans = sum(v - 1 for v in arr)
+    ans = sum((v - 1 for v in arr))
     while True:
         cur = 1
         cur_ans = 0
@@ -11,10 +11,9 @@ def solve(arr):
             cur_ans += abs(v - cur)
             cur *= c
         ans = min(ans, cur_ans)
-
         c += 1
 
 
 n = int(input())
-*arr, = list(map(int, input().split()))
+(*arr,) = list(map(int, input().split()))
 print(solve(arr))

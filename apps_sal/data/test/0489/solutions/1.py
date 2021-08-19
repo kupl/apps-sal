@@ -13,7 +13,7 @@ if j == k:
         num2 = ans
         ans = 0
         for num in range(1, num2 + 2):
-            ans += (num * (num - 1)) // 2
+            ans += num * (num - 1) // 2
     else:
-        ans = (ans * (ans + 1)) // 2
+        ans = ans * (ans + 1) // 2
 print(ans)

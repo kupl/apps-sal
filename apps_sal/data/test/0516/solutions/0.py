@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mi = 100000000000000
-ts = ""
+ts = ''
 
 
 def num_d(a, b):
@@ -11,7 +11,7 @@ def num_d(a, b):
     return t
 
 
-s, t = input(), input()
+(s, t) = (input(), input())
 for x in range(m - n + 1):
     d = num_d(s, t[x:x + n])
     if d < mi:
@@ -20,4 +20,4 @@ for x in range(m - n + 1):
 print(mi)
 for x in range(n):
     if s[x] != ts[x]:
-        print(x + 1, end=" ")
+        print(x + 1, end=' ')

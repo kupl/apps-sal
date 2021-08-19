@@ -1,4 +1,4 @@
-n, m, k = [int(i) for i in input().split()]
+(n, m, k) = [int(i) for i in input().split()]
 ryad = k // (2 * m) + 1
 if k % (2 * m) == 0:
     ryad -= 1

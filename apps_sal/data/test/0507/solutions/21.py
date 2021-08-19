@@ -1,8 +1,20 @@
 import sys
-def read(): return sys.stdin.readline().rstrip()
-def readi(): return int(sys.stdin.readline())
-def writeln(x): return sys.stdout.write(str(x) + "\n")
-def write(x): return sys.stdout.write(x)
+
+
+def read():
+    return sys.stdin.readline().rstrip()
+
+
+def readi():
+    return int(sys.stdin.readline())
+
+
+def writeln(x):
+    return sys.stdout.write(str(x) + '\n')
+
+
+def write(x):
+    return sys.stdout.write(x)
 
 
 N = readi()
@@ -16,15 +28,12 @@ for i in range(N):
         diff.append(i)
     ncntA[A[i]] += 1
     ncntB[B[i]] += 1
-
 if len(diff) == 2:
     P = list(A)
     P[diff[0]] = B[diff[0]]
-
     ncntP = [0] * (N + 1)
     for i in range(N):
         ncntP[P[i]] += 1
-
     flag = False
     for i in range(1, N + 1):
         if ncntP[i] == 0:
@@ -33,8 +42,7 @@ if len(diff) == 2:
     if flag:
         P = list(A)
         P[diff[1]] = B[diff[1]]
-
-    writeln(' '.join(str(c) for c in P))
+    writeln(' '.join((str(c) for c in P)))
 else:
     k = -1
     for i in range(1, N + 1):
@@ -43,4 +51,4 @@ else:
             break
     P = list(A)
     P[diff[0]] = k
-    writeln(' '.join(str(c) for c in P))
+    writeln(' '.join((str(c) for c in P)))

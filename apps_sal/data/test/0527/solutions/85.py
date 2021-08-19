@@ -2,10 +2,13 @@ from bisect import bisect_right
 s = input()
 t = input()
 alpha = [[] for _ in range(26)]
-def f(c): return ord(c) - ord("a")
 
 
-for i, c in enumerate(s):
+def f(c):
+    return ord(c) - ord('a')
+
+
+for (i, c) in enumerate(s):
     alpha[f(c)].append(i)
 idx = -1
 roop = 0

@@ -11,11 +11,11 @@ if val == 2:
     mx = max(mx, val)
 elif val == 3:
     val = a.count(l[0])
-    val = (val * (val - 1) * (val - 2)) // 6
+    val = val * (val - 1) * (val - 2) // 6
     mx = max(mx, val)
 elif val2 == 2:
     val = a.count(l[1])
-    val = (val * (val - 1)) // 2
+    val = val * (val - 1) // 2
     mx = max(mx, val)
 else:
     for i in l:

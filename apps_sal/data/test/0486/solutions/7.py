@@ -8,7 +8,7 @@ def multi(nu):
 n = int(input())
 res = multi(n)
 for i in range(100):
-    aa = n - (n % (10**i)) - 1
+    aa = n - n % 10 ** i - 1
     if aa >= 0:
         res = max(res, multi(aa))
 print(res)

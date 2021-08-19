@@ -3,7 +3,6 @@ a2 = int(input())
 k1 = int(input())
 k2 = int(input())
 n = int(input())
-
 p = a1 * (k1 - 1) + a2 * (k2 - 1)
 if p >= n:
     print(0, end=' ')

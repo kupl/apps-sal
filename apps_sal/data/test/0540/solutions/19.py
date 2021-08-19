@@ -1,5 +1,5 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     nm = n * m
     neigh = [[] for _ in range(nm)]
     for i in range(0, nm - m, m):
@@ -13,28 +13,28 @@ def main():
     field = [c == '.' for _ in range(n) for c in input()]
     l = []
     for _ in (0, 1):
-        i, j = list(map(int, input().split()))
+        (i, j) = list(map(int, input().split()))
         l.append(i * m + j - m - 1)
-    start, stop = l
+    (start, stop) = l
     if start == stop:
-        print(("NO", "YES")[any(field[_] for _ in neigh[stop])])
+        print(('NO', 'YES')[any((field[_] for _ in neigh[stop]))])
         return
     field[start] = True
-    if field[stop] and sum(field[_] for _ in neigh[stop]) < 2:
-        print("NO")
+    if field[stop] and sum((field[_] for _ in neigh[stop])) < 2:
+        print('NO')
         return
-    nxt, field[stop] = (start,), True
+    (nxt, field[stop]) = ((start,), True)
     while nxt:
-        cur, nxt = nxt, []
+        (cur, nxt) = (nxt, [])
         for u in cur:
             if u == stop:
-                print("YES")
+                print('YES')
                 return
             for v in neigh[u]:
                 if field[v]:
                     field[v] = False
                     nxt.append(v)
-    print("NO")
+    print('NO')
 
 
 def __starting_point():

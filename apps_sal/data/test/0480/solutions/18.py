@@ -1,9 +1,7 @@
-s, x1, x2 = list(map(int, input().split()))
-t1, t2 = list(map(int, input().split()))
-p, d = list(map(int, input().split()))
+(s, x1, x2) = list(map(int, input().split()))
+(t1, t2) = list(map(int, input().split()))
+(p, d) = list(map(int, input().split()))
 alt = abs(x1 - x2) * t2
-
-
 curpos = p
 curtime = 0
 inbus = False

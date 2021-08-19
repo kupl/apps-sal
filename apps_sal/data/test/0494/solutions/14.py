@@ -2,12 +2,10 @@ def R():
     return list(map(int, input().split()))
 
 
-n, m = R()
+(n, m) = R()
 l = list(R())
-
 a = [None] * n
 b = [False] * n
-
 c = set(range(1, n + 1))
 for i in range(m - 1):
     j = l[i] - 1

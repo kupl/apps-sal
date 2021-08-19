@@ -16,11 +16,11 @@ def bsearch(d, n):
 
 def __starting_point():
     for _ in range(int(input())):
-        n, d = list(map(int, input().split()))
+        (n, d) = list(map(int, input().split()))
         if bsearch(d, n):
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
 
 
 __starting_point()

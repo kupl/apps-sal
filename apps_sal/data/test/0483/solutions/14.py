@@ -1,7 +1,7 @@
 n = int(input())
 d = input()
 x = list(map(int, input().split()))
-inf = 10**10
+inf = 10 ** 10
 
 
 def solve():

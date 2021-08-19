@@ -2,9 +2,7 @@ def __starting_point():
     n = int(input())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-
     ans_list = [-3 for i in range(n)]
-
     mismatch_count = 0
     ans_set = set([])
     for i in range(0, n):
@@ -14,7 +12,6 @@ def __starting_point():
         else:
             mismatch_count += 1
             ans_list[i] += mismatch_count
-
     one_to_n_set = set([i for i in range(1, n + 1)])
     add_set = one_to_n_set.difference(ans_set)
     if mismatch_count == 1:
@@ -36,7 +33,6 @@ def __starting_point():
         elif ele2 == a[tmp2] and ele1 == b[tmp1]:
             ans_list[tmp2] = ele2
             ans_list[tmp1] = ele1
-
     for i in range(0, n):
         print(ans_list[i], end=' ')
 

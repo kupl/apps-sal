@@ -1,6 +1,6 @@
 def cnt(a, b):
-    if (a < b):
-        a, b = b, a
+    if a < b:
+        (a, b) = (b, a)
     if b == 0:
         return 0
     if a == b:
@@ -8,5 +8,5 @@ def cnt(a, b):
     return a // b + cnt(b, a % b)
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 print(cnt(a, b))

@@ -1,5 +1,4 @@
 from collections import defaultdict
-
 n = int(input())
 dx = defaultdict(int)
 dy = defaultdict(int)
@@ -7,7 +6,7 @@ mx = my = 0
 lx = ly = 100
 s = set()
 for i in range(4 * n + 1):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     s.add((x, y))
     dx[x] += 1
     dy[y] += 1
@@ -22,5 +21,5 @@ for i in range(4 * n + 1):
         if y < ly:
             ly = y
 for el in s:
-    if ((lx < el[0] < mx) and (ly < el[1] < my)) or el[0] < lx or el[0] > mx or el[1] < ly or el[1] > my:
+    if lx < el[0] < mx and ly < el[1] < my or el[0] < lx or el[0] > mx or (el[1] < ly) or (el[1] > my):
         print(*el)

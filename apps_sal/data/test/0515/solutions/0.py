@@ -1,5 +1,4 @@
 k = int(input())
-
 if k // 2 + k % 2 > 18:
     print(-1)
 else:

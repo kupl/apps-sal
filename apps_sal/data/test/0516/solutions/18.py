@@ -6,8 +6,8 @@ def check(r, o, p):
     return change
 
 
-a, b = input().split()
-a, b = [int(a), int(b)]
+(a, b) = input().split()
+(a, b) = [int(a), int(b)]
 s = input()
 t = input()
 _min = b

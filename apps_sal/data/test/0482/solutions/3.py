@@ -1,7 +1,5 @@
 import string
-
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 symbs = []
 letters = string.ascii_lowercase[:k]
 last = 0

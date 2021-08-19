@@ -1,15 +1,9 @@
-
-
 n = int(input())
-
 a = []
 b = []
-
 first = True
 i = 0
 j = 0
-
-
 for i in range(n):
     d = int(input())
     if d > 0:
@@ -18,8 +12,6 @@ for i in range(n):
     else:
         b.append(-d)
         last = 1
-
-
 suma = sum(a)
 sumb = sum(b)
 if suma > sumb:
@@ -44,8 +36,7 @@ else:
             print('first')
         elif lenb > lena:
             print('second')
+        elif last == 0:
+            print('first')
         else:
-            if last == 0:
-                print('first')
-            else:
-                print('second')
+            print('second')

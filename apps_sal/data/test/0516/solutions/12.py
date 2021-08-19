@@ -1,4 +1,4 @@
-n, m = [int(val) for val in input().split()]
+(n, m) = [int(val) for val in input().split()]
 s = input()
 t = input()
 ans = 100000000

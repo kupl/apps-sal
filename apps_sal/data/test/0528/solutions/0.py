@@ -15,10 +15,10 @@ def bfs(start):
     return res
 
 
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 s = [[] for i in range(n)]
 for i in range(m):
-    a, b = [int(i) for i in input().split()]
+    (a, b) = [int(i) for i in input().split()]
     s[a - 1].append(b - 1)
     s[b - 1].append(a - 1)
 vis = [0 for i in range(n)]
@@ -29,9 +29,9 @@ for i in range(n):
         for j in d:
             if len(s[j]) != len(d) - 1:
                 r = 1
-                print("NO")
+                print('NO')
                 break
     if r:
         break
 else:
-    print("YES")
+    print('YES')

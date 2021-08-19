@@ -1,7 +1,7 @@
 s = 0
 m = {}
 o = {}
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
 for a in l:
     o[a / k] = m[a / k] = m[a] = o[a] = 0

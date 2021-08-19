@@ -1,38 +1,35 @@
 def main():
     n = int(input())
     s = input()
-
-    b, g, r = [s.count(i) for i in "BGR"]
-
+    (b, g, r) = [s.count(i) for i in 'BGR']
     if min(b, g, r) > 0:
-        print("BGR")
+        print('BGR')
         return
     if max(b, g, r) == n:
         if b == n:
-            print("B")
+            print('B')
         if g == n:
-            print("G")
+            print('G')
         if r == n:
-            print("R")
+            print('R')
         return
     if max(b, g, r) == 1:
         if b == 0:
-            print("B")
+            print('B')
         if g == 0:
-            print("G")
+            print('G')
         if r == 0:
-            print("R")
+            print('R')
         return
     if max(b, g, r) == n - 1:
         if b == n - 1:
-            print("GR")
+            print('GR')
         if g == n - 1:
-            print("BR")
+            print('BR')
         if r == n - 1:
-            print("BG")
+            print('BG')
         return
-
-    print("BGR")
+    print('BGR')
 
 
 main()

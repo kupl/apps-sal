@@ -16,6 +16,6 @@ else:
             f = True
             break
     if f:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

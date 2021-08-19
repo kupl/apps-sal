@@ -1,7 +1,6 @@
-a, b = (list(map(int, input().split())))
+(a, b) = list(map(int, input().split()))
 count = 0
-
-while ((b != 0) and (a != 0)):
+while b != 0 and a != 0:
     if b > a:
         count = count + b // a
         b = b % a
@@ -10,6 +9,4 @@ while ((b != 0) and (a != 0)):
         count = count + a // b
         b = b
         a = a % b
-
-
 print(count)

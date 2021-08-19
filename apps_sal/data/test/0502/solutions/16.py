@@ -6,14 +6,13 @@ def isTria(a, b, c, d, e, f):
 
 
 def length(a, b, c, d):
-    return (d - b)**2 + (c - a)**2
+    return (d - b) ** 2 + (c - a) ** 2
 
 
-ax, ay, bx, by, cx, cy = list(map(int, input().split()))
+(ax, ay, bx, by, cx, cy) = list(map(int, input().split()))
 if not isTria(ax, ay, bx, by, cx, cy):
     print('No')
+elif length(ax, ay, bx, by) == length(bx, by, cx, cy):
+    print('Yes')
 else:
-    if length(ax, ay, bx, by) == length(bx, by, cx, cy):
-        print('Yes')
-    else:
-        print('No')
+    print('No')

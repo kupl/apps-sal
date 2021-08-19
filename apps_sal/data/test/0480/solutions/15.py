@@ -1,19 +1,14 @@
-s, x1, x2 = list(map(int, input().split()))
-
-t1, t2 = list(map(int, input().split()))
-
-p, d = list(map(int, input().split()))
-
+(s, x1, x2) = list(map(int, input().split()))
+(t1, t2) = list(map(int, input().split()))
+(p, d) = list(map(int, input().split()))
 if x2 < x1:
-    x1 = (s - x1)
-    x2 = (s - x2)
-    p = (s - p)
+    x1 = s - x1
+    x2 = s - x2
+    p = s - p
     d = -d
-
 vt = 1.0 / t1
 vi = 1.0 / t2
 xt0 = 0.0
-
 if d == -1:
     xt0 = -p
 elif p <= x1:
@@ -31,6 +26,6 @@ def solve(vt, xt0, vi, x1, x2):
 
 
 if t2 <= t1:
-    print("%.0f" % ((x2 - x1) / vi))
+    print('%.0f' % ((x2 - x1) / vi))
 else:
-    print("%.0f" % solve(vt, xt0, vi, x1, x2))
+    print('%.0f' % solve(vt, xt0, vi, x1, x2))

@@ -17,5 +17,5 @@ def prodDigits(r):
 l = []
 for i in range(numDigits(x)):
     l.append(prodDigits(x))
-    l.append(prodDigits(x - (x % (10**i)) - 1))
+    l.append(prodDigits(x - x % 10 ** i - 1))
 print(max(l))

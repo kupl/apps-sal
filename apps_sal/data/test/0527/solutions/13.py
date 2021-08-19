@@ -1,5 +1,4 @@
 import bisect
-
 s = input()
 t = input()
 n = len(s)

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = input()
 t = input()
 res = 10 ** 9

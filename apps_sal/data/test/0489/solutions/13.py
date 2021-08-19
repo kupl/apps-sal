@@ -12,7 +12,7 @@ def comb(n, r):
 
 
 n = int(input())
-l = [int(i)for i in input().split()]
+l = [int(i) for i in input().split()]
 d = sorted(l)
 a = d[0]
 b = d[1]

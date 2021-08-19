@@ -7,7 +7,7 @@ def mult(m1, m2):
         for y in range(r):
             for z in range(q):
                 m3[x][y] += m1[x][z] * m2[z][y]
-                m3[x][y] %= (M - 1)
+                m3[x][y] %= M - 1
     return m3
 
 
@@ -23,7 +23,7 @@ def binpow(mat, x):
 matrix = [[0, 1, 0], [0, 0, 1], [1, 1, 1]]
 E = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 M = 10 ** 9 + 7
-n, f1, f2, f3, c = map(int, input().split())
+(n, f1, f2, f3, c) = map(int, input().split())
 matrix = binpow(matrix, n - 1)
 g1 = matrix[0][0]
 g2 = matrix[0][1]

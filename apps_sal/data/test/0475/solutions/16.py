@@ -10,14 +10,13 @@ def ncr(n, r):
 
 
 def mult(a, b):
-    return (a * b) % mod
+    return a * b % mod
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 mod = 998244353
 ans = 1
-ans = mult(ans, (m - 1)**k)
+ans = mult(ans, (m - 1) ** k)
 ans = mult(ans, m)
 ans = mult(ans, ncr(n - 1, k))
-
 print(ans)

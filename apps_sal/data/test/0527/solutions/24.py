@@ -7,7 +7,7 @@ sys.setrecursionlimit(200000)
 def read():
     S = input().strip()
     T = input().strip()
-    return S, T
+    return (S, T)
 
 
 def have_ahswer(S, T):
@@ -20,11 +20,11 @@ def have_ahswer(S, T):
 
 
 def solve(S, T):
-    Z = "abcdefghijklmnopqrstuvwxyz"
+    Z = 'abcdefghijklmnopqrstuvwxyz'
     if not have_ahswer(S, T):
         return -1
     D = defaultdict(list)
-    for i, s in enumerate(S):
+    for (i, s) in enumerate(S):
         D[s].append(i)
     ans = 0
     prev_index = -1
@@ -44,7 +44,7 @@ def solve(S, T):
 
 def __starting_point():
     inputs = read()
-    print(("{}".format(solve(*inputs))))
+    print('{}'.format(solve(*inputs)))
 
 
 __starting_point()

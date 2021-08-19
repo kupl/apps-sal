@@ -1,4 +1,4 @@
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 r = 42
 if b - a == c - b == d - c:
     r = d + b - a
