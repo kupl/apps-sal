@@ -1,8 +1,8 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         piles.sort()
-
-        lo, hi = 1, piles[-1]
+        (lo, hi) = (1, piles[-1])
         ans = hi
         while lo <= hi:
             k = (lo + hi) // 2
@@ -12,12 +12,9 @@ class Solution:
                 if not t:
                     t += 1
                 time += t
-
-            #print(k, time)
             if time <= H:
                 hi = k - 1
                 ans = k
             else:
                 lo = k + 1
-
         return ans

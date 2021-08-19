@@ -1,6 +1,6 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        #bananas = sum(piles)
         K = sum(piles) // H + (sum(piles) % H != 0)
         while True:
             hours_needed = 0

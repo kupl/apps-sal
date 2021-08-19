@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         L = len(piles)
         if L == H:
@@ -11,7 +12,6 @@ class Solution:
         res = k2
         k = k1
         while k1 < k2 - 1:
-
             cur = 0
             for j in range(L):
                 cur += math.ceil(piles[j] / k)
@@ -21,6 +21,5 @@ class Solution:
             if cur <= H:
                 k2 = k
                 res = min(res, k)
-            # print(k1,k2,k,cur)
             k = (k1 + k2) // 2
         return res

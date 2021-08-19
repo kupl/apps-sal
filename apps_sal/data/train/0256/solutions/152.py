@@ -1,9 +1,10 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        lo, hi = 1, max(piles)
+        (lo, hi) = (1, max(piles))
         while lo <= hi:
             k = lo + (hi - lo) // 2
-            if self.finish(k, piles) <= H:  # count time to eat all bananas at speed K
+            if self.finish(k, piles) <= H:
                 hi = k - 1
             else:
                 lo = k + 1

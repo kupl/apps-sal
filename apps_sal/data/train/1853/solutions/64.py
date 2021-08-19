@@ -1,6 +1,9 @@
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], threeshold: int) -> int:
+
         class Graph:
+
             def __init__(self, vertices):
                 self.v = vertices
                 self.graph = collections.defaultdict(dict)
@@ -10,7 +13,7 @@ class Solution:
                 self.graph[v][u] = cost
 
             def calculateDist(self, s, dT):
-                dist = [sys.maxsize] * (self.v)
+                dist = [sys.maxsize] * self.v
                 dist[s] = 0
                 unvisited_queue = [[0, s]]
                 visited = [False] * self.v
@@ -38,9 +41,8 @@ class Solution:
         v = n
         graph = Graph(v)
         for edge in edges:
-            n, m, cost = edge[0], edge[1], edge[2]
+            (n, m, cost) = (edge[0], edge[1], edge[2])
             graph.add_edge(n, m, cost)
-        # print(graph.graph)
         for i in range(v):
             cities = graph.calculateDist(i, threeshold)
             if cities < min_connections:
