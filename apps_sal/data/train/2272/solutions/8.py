@@ -4,9 +4,6 @@ def main():
     n = int(input())
     a = np.array(list(map(int, input().split())))
     b = np.array(list(map(int, input().split())))
-    #n = 100000
-    #a = np.array([i+1 for i in range(n)])
-    #b = np.array([2*i+2 for i in range(n)])
     a = np.sort(a)
     b = np.sort(b[::-1])
     m = n % 2
@@ -27,7 +24,7 @@ def main():
         x = (k + br(b, 0)) * m % 2
         a = np.sort(a)
         x += np.sum(np.searchsorted(b, a + 1))
-        ans += (x % 2) * j
+        ans += x % 2 * j
     print(ans)
 
 

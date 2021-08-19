@@ -1,4 +1,3 @@
-
 """
 
 https://atcoder.jp/contests/arc092/tasks/arc092_b
@@ -16,21 +15,15 @@ https://atcoder.jp/contests/arc092/tasks/arc092_b
 200000*28*log
 
 """
-
 from sys import stdin
 import bisect
-
 N = int(stdin.readline())
 a = list(map(int, stdin.readline().split()))
 b = list(map(int, stdin.readline().split()))
-
 ans = 0
-
 for i in range(29):
-
-    ndig = 2**i
+    ndig = 2 ** i
     now = 0
-
     for j in a:
         if j & ndig > 0:
             if N % 2 == 1:
@@ -39,28 +32,20 @@ for i in range(29):
         if j & ndig > 0:
             if N % 2 == 1:
                 now ^= 1
-
     nb = [j % ndig for j in b]
     nb.sort()
     nb.reverse()
-    #print (now)
-
     for j in a:
-
         na = j % ndig
         l = -1
         r = N
-
         while r - l != 1:
             m = (l + r) // 2
             if nb[m] + na < ndig:
                 r = m
             else:
                 l = m
-
         if r % 2 == 1:
             now ^= 1
-
     ans += now * ndig
-
 print(ans)

@@ -5,8 +5,6 @@ B = np.array(input().split(), dtype=np.int32)
 
 
 def sum_count(A, B, x):
-    # A,B is sorted.
-    # return count(a+b < x)
     C = np.searchsorted(B, x - A)
     return C.sum()
 
@@ -18,8 +16,7 @@ def f(t, A, B):
     BB = B & mask
     AA.sort()
     BB.sort()
-
-    x1, x2, x3 = (sum_count(AA, BB, v) for v in [power, 2 * power, 3 * power])
+    (x1, x2, x3) = (sum_count(AA, BB, v) for v in [power, 2 * power, 3 * power])
     zero_cnt = x1 + (x3 - x2)
     return (N - zero_cnt) % 2
 
@@ -29,5 +26,4 @@ for t in range(30):
     x = f(t, A, B)
     if x == 1:
         answer += 1 << t
-
 print(answer)

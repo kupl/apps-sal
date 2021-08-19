@@ -6,7 +6,7 @@ b = list(map(int, input().split()))
 res = 0
 ln = max(max(a), max(b)).bit_length() + 1
 for i in range(ln):
-    y = (1 << (i + 1))
+    y = 1 << i + 1
     u = [x % y for x in a]
     v = [x % y for x in b]
     y >>= 1
@@ -24,7 +24,6 @@ for i in range(ln):
         t -= N - kk
     k = 0
     kk = 0
-    # print(t)
     for x in u:
         while k < N and x + v[k] < y * 2 + y:
             k += 1
@@ -32,7 +31,5 @@ for i in range(ln):
         while kk < N and x + v[kk] < y * 4:
             kk += 1
         t -= N - kk
-        # print(t)
-    #print(u, v, t)
     res ^= t % 2 * y
 print(res)

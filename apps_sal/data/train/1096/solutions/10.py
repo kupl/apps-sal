@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 import bisect
 input = sys.stdin.readline
@@ -17,10 +16,10 @@ l = input().split()
 yi = [int(i) for i in l]
 xi.sort()
 yi.sort()
-mina = 10**18
+mina = 10 ** 18
 for i in range(n):
     num1 = bisect.bisect_right(xi, ok[i][0])
     num2 = bisect.bisect_left(yi, ok[i][1])
-    if(num1 >= 1 and num2 < y):
+    if num1 >= 1 and num2 < y:
         mina = min(yi[num2] - xi[num1 - 1], mina)
 print(mina + 1)

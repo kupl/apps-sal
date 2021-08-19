@@ -8,8 +8,6 @@ def eprint(*args):
 
 
 zz = 1
-#from math import *
-# sys.setrecursionlimit(10**6)
 if zz:
     input = sys.stdin.readline
 else:
@@ -40,5 +38,5 @@ def bo(i):
 t = fi()
 while t > 0:
     t -= 1
-    a, b = mi()
-    print(max(min(a, b) * 2, max(a, b))**2)
+    (a, b) = mi()
+    print(max(min(a, b) * 2, max(a, b)) ** 2)
