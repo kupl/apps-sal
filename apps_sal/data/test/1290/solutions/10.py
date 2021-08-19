@@ -1,8 +1,6 @@
 import atexit
 import io
 import sys
-
-# Buffering IO
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -15,9 +13,9 @@ def write():
 
 
 def main():
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     c = [int(x) for x in input().split()]
-    print(min(c.count(x) for x in range(1, n + 1)))
+    print(min((c.count(x) for x in range(1, n + 1))))
 
 
 def __starting_point():

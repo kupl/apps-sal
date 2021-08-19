@@ -1,9 +1,8 @@
-# 501C
-
 __author__ = 'artyom'
 
 
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -12,12 +11,11 @@ degrees = []
 adj = []
 queue = []
 for i in range(n):
-    degree, s = read()
+    (degree, s) = read()
     degrees.append(degree)
     adj.append(s)
     if degree == 1:
         queue.append(i)
-
 counter = 0
 ans = ''
 while queue:
@@ -34,5 +32,4 @@ while queue:
     degrees[s] -= 1
     if degrees[s] == 1:
         queue.append(s)
-
 print(str(counter) + ans)

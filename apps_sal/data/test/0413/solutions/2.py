@@ -5,11 +5,11 @@ def two_degree(n, m):
         res *= 2
         deg += 1
     print(res)
-    return deg, res - m
+    return (deg, res - m)
 
 
 my_str = input()
-n, m = int(my_str.split()[0]), int(my_str.split()[1])
+(n, m) = (int(my_str.split()[0]), int(my_str.split()[1]))
 if m < n:
     print(n - m)
 else:
@@ -23,7 +23,6 @@ else:
             m = int(m / 2)
             oper += 1
         elif m < res:
-            oper += (res - m)
+            oper += res - m
             m = res
-      #  print (m)
     print(oper)

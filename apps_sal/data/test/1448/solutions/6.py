@@ -4,16 +4,16 @@ inf = 2000000000
 
 
 class Point:
-    x, y = 0, 0
+    (x, y) = (0, 0)
 
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
-    def __add__(self, vec):  # point + VECTOR
+    def __add__(self, vec):
         return Point(self.x + vec.x, self.y + vec.y)
 
-    def __sub__(self, vec):  # point - VECTOR
+    def __sub__(self, vec):
         self.x -= vec.x
         self.y -= vec.y
 
@@ -31,11 +31,11 @@ class Point:
     def dist_to_segment(self, pA, pB):
         AB = vector_by_points(pA, pB)
         AC = vector_by_points(pA, self)
-        if AB * AC < 0:  # this means angle CAB > 90
+        if AB * AC < 0:
             return self.dist_to_point(pA)
         BA = -AB
         BC = vector_by_points(pB, self)
-        if BA * BC < 0:  # this means angle CBA > 90
+        if BA * BC < 0:
             return self.dist_to_point(pB)
         return abs(self.dist_to_line(line_by_points(pA, pB)))
 
@@ -48,37 +48,37 @@ class Point:
 
 
 class Vector:
-    x, y = 0, 0
+    (x, y) = (0, 0)
 
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
-    def length(self):  # |vector|
+    def length(self):
         return math.sqrt(self.x * self.x + self.y * self.y)
 
-    def __mul__(self, vec):  # scalar multiplication
+    def __mul__(self, vec):
         return self.x * vec.x + self.y * vec.y
 
-    def __pow__(self, vec):  # vector multiplication
+    def __pow__(self, vec):
         return self.x * vec.y - self.y * vec.x
 
-    def __truediv__(self, x):  # vector / number
+    def __truediv__(self, x):
         return Vector(self.x / x, self.y / x)
 
-    def __add__(self, vec):  # vector1 + vector2
+    def __add__(self, vec):
         return Vector(self.x + vec.x, self.y + vec.y)
 
-    def __sub__(self, vec):  # vector1 - vector2
+    def __sub__(self, vec):
         return Vector(self.x - vec.x, self.y - vec.y)
 
-    def __neg__(self):  # -vector
+    def __neg__(self):
         return Vector(-self.x, -self.y)
 
     def __str__(self):
         return str(self.x) + ' ' + str(self.y)
 
-    def normalize(self):  # vector / |vector|
+    def normalize(self):
         ln = self.length()
         self.x /= ln
         self.y /= ln
@@ -102,7 +102,7 @@ class Vector:
 
 
 class Line:
-    a, b, c = 0, 0, 0
+    (a, b, c) = (0, 0, 0)
 
     def __init__(self, a, b, c):
         self.a = a
@@ -142,14 +142,14 @@ def line_by_points(p1, p2):
     return Line(a, b, c)
 
 
-def segment_intersect(pA, pB, pC, pD):  # does AB intersect CD?
+def segment_intersect(pA, pB, pC, pD):
     AB = vector_by_points(pA, pB)
     AC = vector_by_points(pA, pC)
     AD = vector_by_points(pA, pD)
     CD = vector_by_points(pC, pD)
     CB = vector_by_points(pC, pB)
     CA = -AC
-    if (AB ** AC) * (AB ** AD) <= 0 and (CD ** CB) * (CD ** CA) <= 0 and (min(pC.x, pD.x) <= max(pA.x, pB.x) <= max(pC.x, pD.x) or min(pA.x, pB.x) <= max(pC.x, pD.x) <= max(pA.x, pB.x)):
+    if AB ** AC * AB ** AD <= 0 and CD ** CB * CD ** CA <= 0 and (min(pC.x, pD.x) <= max(pA.x, pB.x) <= max(pC.x, pD.x) or min(pA.x, pB.x) <= max(pC.x, pD.x) <= max(pA.x, pB.x)):
         return True
     return False
 
@@ -170,7 +170,7 @@ def ray_to_ray(pA, pB, pC, pD):
     return min(pA.dist_to_ray(pC, pD), pC.dist_to_ray(pA, pB))
 
 
-def area(a):  # a is list of Points (shape not necessary convex)
+def area(a):
     prev = Vector(a[-1].x, a[-1].y)
     ans = 0
     for pt in a:
@@ -180,12 +180,12 @@ def area(a):  # a is list of Points (shape not necessary convex)
     return abs(ans)
 
 
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 field = [Point(0, d), Point(d, 0), Point(n, n - d), Point(n - d, n)]
 s = area(field)
 q = int(input())
 for i in range(q):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     cur = Point(x, y)
     ar = area([field[0], field[1], cur]) + area([field[1], field[2], cur]) + area([field[2], field[3], cur]) + area([field[3], field[0], cur])
     if ar == s:
