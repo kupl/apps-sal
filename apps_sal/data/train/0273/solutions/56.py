@@ -1,10 +1,10 @@
 class Solution:
+
     def racecar(self, target: int) -> int:
-        # bfs
         bq = collections.deque([(0, 1, 0)])
         visited = set((0, 1))
         while bq:
-            p, s, step = bq.popleft()
+            (p, s, step) = bq.popleft()
             if p == target:
                 return step
             if (p + s, 2 * s) not in visited:

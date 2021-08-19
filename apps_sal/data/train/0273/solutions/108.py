@@ -1,7 +1,7 @@
 class Solution:
 
     def racecar(self, tgt: int) -> int:
-        '''
+        """
             shortest path -> bfs
 
             starting from [0, 1], how to reach tgt = 5?
@@ -40,51 +40,29 @@ class Solution:
                                         [3, 2] -> [5 , 4]  -->> arrived
 
                                         -> 7 steps                                    
-        '''
-
-        '''
-            1. try greedy -> can't pass tgt = 5
-            
-            2. list out all the step until reach the tgt -> time: O(2 ^ (num of operations) )
-            
-            3. speed up -> dont visit same nodes, dont go to \"too far\" nodes                        
-        '''
-
+        """
+        '\n            1. try greedy -> can\'t pass tgt = 5\n            \n            2. list out all the step until reach the tgt -> time: O(2 ^ (num of operations) )\n            \n            3. speed up -> dont visit same nodes, dont go to "too far" nodes                        \n        '
         visited = dict()
         q = collections.deque()
-
         q.append([0, 1])
         visited[0] = set()
         visited[0].add(1)
-
         step = 0
         while len(q) > 0:
-
             curSize = len(q)
-
             for i in range(0, curSize):
-
                 pop = q.pop()
-                pos, spd = pop[0], pop[1]
-
+                (pos, spd) = (pop[0], pop[1])
                 if pos == tgt:
                     return step
-
-                nextSteps = [[pos + spd, spd * 2], [pos, - 1 * spd // abs(spd)]]
+                nextSteps = [[pos + spd, spd * 2], [pos, -1 * spd // abs(spd)]]
                 for nextStep in nextSteps:
-
-                    nPos, nSpd = nextStep[0], nextStep[1]
-
-                    # check is too far node:
+                    (nPos, nSpd) = (nextStep[0], nextStep[1])
                     if abs(nPos - tgt) <= tgt:
-                        # check visited
                         if nPos not in visited or nSpd not in visited[nPos]:
                             q.appendleft(nextStep)
                             if nPos not in visited:
                                 visited[nPos] = set()
-
                             visited[nPos].add(nSpd)
-
             step += 1
-
         return -1

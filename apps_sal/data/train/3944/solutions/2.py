@@ -1,3 +1,2 @@
 def sum_triangular_numbers(n):
-    # your code here
-    return sum(sum(range(x + 1)) for x in range(n + 1))
+    return sum((sum(range(x + 1)) for x in range(n + 1)))

@@ -5,7 +5,6 @@ def sum_triangular_numbers(n):
         return 1
     else:
         a = [1]
-       # a[0]=1
         for i in range(1, n):
             a.append(a[i - 1] + i + 1)
         return sum(a)

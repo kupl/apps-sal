@@ -1,17 +1,14 @@
 class Solution:
+
     def racecar(self, target: int) -> int:
         nodes = [(0, 1)]
-        seen, length = set([(0, 1)]), 0
+        (seen, length) = (set([(0, 1)]), 0)
         while nodes:
             new_nodes = []
-            for pos, speed in nodes:
+            for (pos, speed) in nodes:
                 if pos == target:
                     return length
-                # A
-                for new_pos, new_speed in [
-                    (pos + speed, speed * 2),
-                    (pos, -1 if speed > 0 else 1),
-                ]:
+                for (new_pos, new_speed) in [(pos + speed, speed * 2), (pos, -1 if speed > 0 else 1)]:
                     if (new_pos, new_speed) not in seen:
                         seen.add((new_pos, new_speed))
                         new_nodes.append((new_pos, new_speed))
