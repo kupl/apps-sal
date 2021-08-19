@@ -6,6 +6,7 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 
 ### Removed
 - Remove duplicated solutions.
+- Delete comments in solutions.
 
 ## [v0.0.1](https://github.com/kupl/apps-sal/releases/v0.0.1) - 2021-08-06
 
