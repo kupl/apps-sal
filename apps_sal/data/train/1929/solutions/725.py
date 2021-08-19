@@ -14,7 +14,6 @@ class Trie:
 
     def search(self, query):
         curTrie = self
-        # print('query : {}'.format(query))
         for ch in query:
             if ch in curTrie.dict:
                 curTrie = curTrie.dict[ch]
@@ -37,7 +36,3 @@ class StreamChecker:
         self.queryStr += letter
         curTrie = self.trie
         return curTrie.search(self.queryStr[::-1])
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self):
         self.endofword = False
         self.children = [None] * 26
@@ -27,15 +28,9 @@ class StreamChecker:
     def __init__(self, words: List[str]):
         self.t = Trie()
         self.stream = collections.deque()
-
         for w in words:
             self.t.insert(reversed(w))
 
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         return self.t.search(self.stream)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

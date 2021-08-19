@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self, value, leaf=False, children=None):
         self.children = children or {}
         self.value = value
@@ -31,7 +32,3 @@ class StreamChecker:
                 revised_pointers.append(node)
         self.pointers = revised_pointers
         return result
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

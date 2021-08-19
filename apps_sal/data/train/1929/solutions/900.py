@@ -21,8 +21,3 @@ class StreamChecker:
             if 'end' in cur:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

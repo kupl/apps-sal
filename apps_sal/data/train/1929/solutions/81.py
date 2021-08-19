@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, x):
         self.val = x
         self.next = {}
@@ -6,6 +7,7 @@ class Node:
 
 
 class Trie:
+
     def __init__(self):
         self.root = Node(None)
 
@@ -45,7 +47,3 @@ class StreamChecker:
                 ans = True
         self.pre = temp
         return ans
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

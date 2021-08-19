@@ -1,7 +1,6 @@
 class StreamChecker:
 
     def __init__(self, words: List[str]):
-        # construct a trie (a dict of dicts)
         self.root = {}
         for word in words:
             sub = self.root
@@ -24,8 +23,3 @@ class StreamChecker:
             newQueries.append(nextQuery)
         self.current = newQueries
         return checker
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

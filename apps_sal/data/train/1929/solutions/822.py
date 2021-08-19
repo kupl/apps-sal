@@ -10,7 +10,7 @@ class StreamChecker:
         self.ptrs = []
 
     def query(self, letter: str) -> bool:
-        ret, new_list = False, []
+        (ret, new_list) = (False, [])
         self.ptrs.append(self.trie)
         for ptr in self.ptrs:
             if letter in ptr:
@@ -20,7 +20,3 @@ class StreamChecker:
                 new_list.append(ptr)
         self.ptrs = new_list
         return ret
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

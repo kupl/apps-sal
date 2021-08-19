@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, val='', endWord=False):
         self.val = val
         self.endWord = endWord
@@ -6,6 +7,7 @@ class Node:
 
 
 class Trie:
+
     def __init__(self, words):
         self.root = Node()
         for word in words:
@@ -31,19 +33,11 @@ class StreamChecker:
         newNodes = []
         if letter in self.trieRoot.children:
             newNodes.append(self.trieRoot.children[letter])
-
         for node in self.currentNodes:
             if letter in node.children:
                 newNodes.append(node.children[letter])
-
         self.currentNodes = newNodes
         for node in self.currentNodes:
             if node.endWord:
                 return True
-
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

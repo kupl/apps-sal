@@ -19,8 +19,4 @@ class StreamChecker:
             if letter in p:
                 nps.append(p[letter])
         self.ps = nps
-        return any('' in p for p in self.ps)
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return any(('' in p for p in self.ps))

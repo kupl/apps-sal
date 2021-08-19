@@ -4,7 +4,6 @@ class StreamChecker:
         self.tab = collections.defaultdict(set)
         for w in words:
             self.tab[w[-1]].add(w[::-1])
-
         self.queried = ''
 
     def query(self, letter: str) -> bool:
@@ -16,8 +15,3 @@ class StreamChecker:
             if can == self.queried[:len(can)]:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

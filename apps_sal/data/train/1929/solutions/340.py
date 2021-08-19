@@ -20,7 +20,6 @@ class StreamChecker:
         self.queue.appendleft(letter)
         if len(self.queue) > self.max_word_len:
             self.queue.pop()
-
         node = self.trie
         for char in self.queue:
             if True in node:
@@ -29,7 +28,3 @@ class StreamChecker:
                 return False
             node = node[char]
         return True in node
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

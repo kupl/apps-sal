@@ -19,8 +19,3 @@ class StreamChecker:
                 newWords.append(t[letter])
         self.words = newWords
         return any(['*' in t for t in self.words])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

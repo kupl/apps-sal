@@ -11,7 +11,6 @@ class TRIE:
 class StreamChecker:
 
     def __init__(self, words: List[str]):
-        # build a trie
         self.root = TRIE()
         for word in words:
             curr_node = self.root
@@ -23,12 +22,11 @@ class StreamChecker:
                 else:
                     curr_node = curr_node.next_letters[l]
             curr_node.flag = True
-        # a collection of curr_nodes
         self.curr_nodes = set([self.root])
 
     def query(self, letter: str) -> bool:
         found = False
-        new_curr_nodes = set([self.root])  # always add back root
+        new_curr_nodes = set([self.root])
         for node in self.curr_nodes:
             if letter in node.next_letters:
                 curr_node = node.next_letters[letter]
@@ -37,8 +35,3 @@ class StreamChecker:
                     found = True
         self.curr_nodes = new_curr_nodes
         return found
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

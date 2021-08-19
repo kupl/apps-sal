@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.terminal = False
@@ -15,18 +16,15 @@ class StreamChecker:
                     node.children[char] = TrieNode()
                 node = node.children[char]
             node.terminal = True
-
         self.array = []
         self.root = TrieNode()
         for word in words:
             addword(word)
 
     def query(self, letter: str) -> bool:
-
         array = self.array
         node = self.root
         array.append(letter)
-
         for char in reversed(array):
             if char in node.children:
                 node = node.children[char]
@@ -34,8 +32,3 @@ class StreamChecker:
                     return True
             else:
                 return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,4 +1,5 @@
 class StreamChecker:
+
     def __init__(self, words):
         self.trie = dict()
         for word in words:
@@ -19,10 +20,11 @@ class StreamChecker:
             if c not in t:
                 return False
             t = t[c]
-        return '#' in t     # last check
+        return '#' in t
 
 
 class StreamChecker:
+
     def __init__(self, words):
         self.trie = dict()
         for word in words:

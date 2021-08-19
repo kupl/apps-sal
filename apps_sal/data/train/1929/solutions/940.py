@@ -10,7 +10,6 @@ class Trie:
             if not c in curr:
                 curr[c] = dict()
             curr = curr[c]
-
         curr['$'] = dict()
 
     def search(self, c):
@@ -21,7 +20,6 @@ class Trie:
             if c in ptr:
                 new_ptr.append(ptr[c])
         self.ptr = new_ptr
-
         return any(['$' in p for p in self.ptr])
 
 
@@ -34,8 +32,3 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         return self.T.search(letter)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

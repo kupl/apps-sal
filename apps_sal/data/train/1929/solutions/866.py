@@ -4,7 +4,7 @@ class StreamChecker:
         self.trie = {}
         for w in words:
             start = self.trie
-            for i, l in enumerate(w):
+            for (i, l) in enumerate(w):
                 if l not in start:
                     start[l] = {}
                 start = start[l]
@@ -21,6 +21,3 @@ class StreamChecker:
                 new_past.append(ele[letter])
         self.past = new_past
         return ans
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

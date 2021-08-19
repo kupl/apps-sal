@@ -2,6 +2,7 @@ _end = '_end_'
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.trie = {}
         self.nodes_for_letters = []
@@ -19,9 +20,4 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         potential_nodes = self.nodes_for_letters + [self.trie]
         self.nodes_for_letters = [node[letter] for node in potential_nodes if letter in node]
-        return any((_end in node) for node in self.nodes_for_letters)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return any((_end in node for node in self.nodes_for_letters))
