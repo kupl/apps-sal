@@ -1,19 +1,16 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 v = list(map(int, input().split()))
-s, dp = [0 for i in range(0, n)], [0 for i in range(0, n)]
-sol, a, b = 0, 0, 0
-
+(s, dp) = ([0 for i in range(0, n)], [0 for i in range(0, n)])
+(sol, a, b) = (0, 0, 0)
 for i in range(n - 1, -1, -1):
     s[i] = v[i]
     if i + 1 < n:
         s[i] += s[i + 1]
     if i + k < n:
         s[i] -= v[i + k]
-
     dp[i] = s[i]
     if i + 1 < n:
         dp[i] = max(dp[i], dp[i + 1])
-
 for i in range(0, n):
     if i + k > n - 1:
         break
@@ -25,7 +22,4 @@ for b in range(a + k, n):
         break
     if s[a] + s[b] == sol:
         break
-
-# print(s)
-# print(dp)
 print(a + 1, b + 1)

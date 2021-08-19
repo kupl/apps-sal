@@ -3,7 +3,7 @@ def fhelp(a):
     f = 10
     res = 0
     while a >= s:
-        if (a >= s and a < f):
+        if a >= s and a < f:
             break
         res += len(str(s)) * k * (f - s)
         s *= 10
@@ -16,11 +16,10 @@ def f(a, b):
     return fhelp(b) - fhelp(a - 1)
 
 
-w, m, k = list(map(int, input().split()))
-# print(fhelp(10))
+(w, m, k) = list(map(int, input().split()))
 l = m - 1
 r = 1000000000000000000
-while (r - l > 1):
+while r - l > 1:
     c = (r + l) // 2
     if w >= f(m, c):
         l = c

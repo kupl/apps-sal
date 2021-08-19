@@ -1,4 +1,4 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 from itertools import permutations
 
 
@@ -7,7 +7,7 @@ def read_int_from_line():
 
 
 def solve():
-    n, k = read_int_from_line()
+    (n, k) = read_int_from_line()
     a = read_int_from_line()
     if (n - 1) % (k - 1) == 0:
         ans = (n - 1) // (k - 1)

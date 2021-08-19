@@ -1,21 +1,23 @@
 from bisect import bisect_left as bl, bisect_right as br, insort
 import sys
 import heapq
-#from math import *
 from collections import defaultdict as dd, deque
-def data(): return sys.stdin.readline().strip()
-def mdata(): return list(map(int, data().split()))
 
 
-#def print(x): return sys.stdout.write(str(x)+'\n')
-# sys.setrecursionlimit(100000)
-mod = int(1e9 + 7)
+def data():
+    return sys.stdin.readline().strip()
 
+
+def mdata():
+    return list(map(int, data().split()))
+
+
+mod = int(1000000000.0 + 7)
 n = int(data())
 dp1 = []
 dp2 = []
 for i in range(n):
-    t, w = mdata()
+    (t, w) = mdata()
     if t == 1:
         dp1.append(w)
     else:
@@ -39,11 +41,10 @@ while flag:
                     k += dp1.pop()
                     s -= 1
                 flag = True
-        else:
-            if len(dp2) > 0 and dp2[-1] + k <= s - 2:
-                k += dp2.pop()
-                s -= 2
-                flag = True
+        elif len(dp2) > 0 and dp2[-1] + k <= s - 2:
+            k += dp2.pop()
+            s -= 2
+            flag = True
     if flag == False:
         if len(dp1) > 0 and dp1[-1] + k <= s - 1:
             k += dp1.pop()

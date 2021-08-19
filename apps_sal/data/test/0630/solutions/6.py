@@ -2,15 +2,10 @@ def read_ints():
     return list(map(int, input().split()))
 
 
-n_messages, n_visible = read_ints()
-
+(n_messages, n_visible) = read_ints()
 refs = read_ints()
-
 NO_REF = -1
-
-# To match indexes in list
 refs = [i - 1 for i in refs]
-
 read = [0] * n_messages
 
 
@@ -20,14 +15,12 @@ def messages_seen_at(index):
 
 def intersection_seen(index, reference):
     if index <= reference:
-        print("NOoooooooooo")
+        print('NOoooooooooo')
 
     def segment(index):
         return (max(0, index - n_visible), min(reference + n_visible, n_messages - 1))
-
-    a, b = segment(reference)
-    c, d = segment(index)
-
+    (a, b) = segment(reference)
+    (c, d) = segment(index)
     return max(b - c + 1, 0)
 
 
@@ -42,5 +35,4 @@ def get_read(index):
 
 for i in range(n_messages):
     get_read(i)
-
 print(' '.join(map(str, read)))

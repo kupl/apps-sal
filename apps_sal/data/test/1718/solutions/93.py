@@ -1,7 +1,5 @@
-# 34
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = list(map(int, input().split()))
-
 mn = min(a)
 count_mn = a.count(mn)
 ans = 0

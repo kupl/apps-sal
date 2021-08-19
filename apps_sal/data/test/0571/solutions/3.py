@@ -1,8 +1,8 @@
-# AC
 import sys
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0
@@ -41,8 +41,7 @@ class Main:
         if ss[-1] == '?':
             ss[-1] = ')'
             y += 1
-        flag = (n % 2 == 0 and ss[0] != ')' and ss[-1] != '(' and z * 2 <= n and y * 2 <= n)
-
+        flag = n % 2 == 0 and ss[0] != ')' and (ss[-1] != '(') and (z * 2 <= n) and (y * 2 <= n)
         c = 1
         for i in range(1, n - 1):
             if not flag:
@@ -59,10 +58,8 @@ class Main:
                 ss[i] = ')'
                 c -= 1
                 y -= 1
-
             if c == 0:
                 flag = False
-
         if not flag:
             print(':(')
         else:

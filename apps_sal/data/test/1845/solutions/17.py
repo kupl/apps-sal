@@ -28,19 +28,13 @@ def par(a):
 
 
 class pair:
+
     def __init__(self, f, s):
         self.fi = f
         self.se = s
 
     def __lt__(self, other):
         return (self.fi, self.se) < (other.fi, other.se)
-
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
 
 
 def __starting_point():

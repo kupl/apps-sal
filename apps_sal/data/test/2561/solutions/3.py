@@ -1,5 +1,3 @@
-# Author: πα
-
 n = int(input())
 for i in range(n):
     b = bin(int(input()))
