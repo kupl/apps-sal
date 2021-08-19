@@ -5,7 +5,7 @@ def is_palindrome(n):
 def palindrome_chain_length(n):
     c = 0
     while not is_palindrome(n):
-        a, b = n, int(str(n)[::-1])
+        (a, b) = (n, int(str(n)[::-1]))
         n = a + b
         c += 1
     return c

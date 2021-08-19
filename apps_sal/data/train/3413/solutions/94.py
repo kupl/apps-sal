@@ -1,5 +1,3 @@
-
-
 def solution(nums):
     nums3 = []
     if nums == None:

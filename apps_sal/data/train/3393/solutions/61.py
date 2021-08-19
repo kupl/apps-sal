@@ -20,7 +20,7 @@ def is_square(n):
     x = n // 2
     seen = set([x])
     while x * x != n:
-        x = (x + (n // x)) // 2
+        x = (x + n // x) // 2
         if x in seen:
             return False
         seen.add(x)
@@ -30,7 +30,7 @@ def is_square(n):
 def list_squared(m, n):
     out = []
     for a in range(m, n + 1):
-        divisor_sum = sum(int(r * r) for r in list(divisorGenerator(a)))
+        divisor_sum = sum((int(r * r) for r in list(divisorGenerator(a))))
         if is_square(divisor_sum):
             out.append([a, divisor_sum])
     return out

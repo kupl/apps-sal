@@ -8,7 +8,6 @@ def lowercase_count(strng):
         if 97 <= index <= 122 and index > 91:
             variableForArray = chr(index)
             array.append(variableForArray)
-
         else:
             continue
     return len(array)

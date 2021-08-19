@@ -2,11 +2,11 @@ def m(n):
     if n <= 0:
         return 0
     else:
-        return (n - f(m(n - 1)))
+        return n - f(m(n - 1))
 
 
 def f(n):
     if n <= 0:
         return 1
     else:
-        return (n - m(f(n - 1)))
+        return n - m(f(n - 1))

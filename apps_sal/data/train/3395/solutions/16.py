@@ -5,5 +5,4 @@ def remove_duplicate_words(s):
         if word not in unique:
             unique.append(word)
     s = ' '.join(unique)
-
     return s

@@ -1,6 +1,6 @@
 def amort(rate, bal, term, num_payments):
     monthlyRate = rate / (12 * 100)
-    c = bal * (monthlyRate * (1 + monthlyRate) ** term) / (((1 + monthlyRate) ** term) - 1)
+    c = bal * (monthlyRate * (1 + monthlyRate) ** term) / ((1 + monthlyRate) ** term - 1)
     newBalance = bal
     for i in range(num_payments):
         interest = newBalance * monthlyRate

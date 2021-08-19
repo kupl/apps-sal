@@ -10,8 +10,8 @@ def find_square_sums(m, n):
 
 
 def candidate(n):
-    total = sum(x**2 for x in divisors(n))
-    if (total**0.5).is_integer():
+    total = sum((x ** 2 for x in divisors(n)))
+    if (total ** 0.5).is_integer():
         return [n, total]
     return False
 

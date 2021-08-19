@@ -1,4 +1,5 @@
 def remove_duplicate_words(s):
+
     def f():
         seen = set()
         for word in s.split():

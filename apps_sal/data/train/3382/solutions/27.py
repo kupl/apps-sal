@@ -5,4 +5,4 @@ def lowercase_count(strng):
     for elem in l_1:
         if elem in l_2:
             l_3.append(elem)
-    return(len(l_3))
+    return len(l_3)

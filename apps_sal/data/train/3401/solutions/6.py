@@ -1,5 +1,9 @@
-def product(dice): return dice[int()] * product(dice[1:]) if len(dice) > 1 else dice[int()]
-def eq_dice(dice): return len(recursive(product(dice), [], [])) - 1 if len(dice) > 1 else len(recursive(product(dice), [], []))
+def product(dice):
+    return dice[int()] * product(dice[1:]) if len(dice) > 1 else dice[int()]
+
+
+def eq_dice(dice):
+    return len(recursive(product(dice), [], [])) - 1 if len(dice) > 1 else len(recursive(product(dice), [], []))
 
 
 def recursive(num, x, y, dice=3):

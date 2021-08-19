@@ -8,5 +8,4 @@ def palindrome_chain_length(n):
         while s != int(str(s)[::-1]):
             s = s + int(str(s)[::-1])
             count += 1
-
         return count

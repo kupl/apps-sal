@@ -11,6 +11,6 @@ def list_squared(m, n):
                     results.append(int(i / j) ** 2)
                 results.append(j ** 2)
         summ = sum(results)
-        if (math.sqrt(summ).is_integer()):
+        if math.sqrt(summ).is_integer():
             final.append([i, summ])
     return final

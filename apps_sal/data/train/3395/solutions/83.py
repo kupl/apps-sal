@@ -5,6 +5,5 @@ def remove_duplicate_words(s):
         print(i)
         if i not in lstt:
             lstt.append(i)
-
         f = ' '.join(lstt)
     return f

@@ -9,5 +9,4 @@ def solve(a):
                 t = [abs(curr_a[0] + i * k - a[i]) for i in range(len(a))]
                 if max(t) <= 1:
                     r.append(sum(t))
-
     return min(r) if r else -1

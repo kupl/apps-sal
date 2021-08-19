@@ -2,7 +2,7 @@ def domain_name(url):
     print(url)
     start = url[0:3]
     print(start)
-    http = "htt"
+    http = 'htt'
     www = 'www'
     start2 = url[0:10]
     http2 = 'http://www'

@@ -4,4 +4,4 @@ def remove_duplicate_words(s):
     for elem in arr:
         if not elem in res_list:
             res_list.append(elem)
-    return " ".join(res_list)
+    return ' '.join(res_list)

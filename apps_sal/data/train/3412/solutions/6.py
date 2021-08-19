@@ -8,7 +8,7 @@ def f(n):
         if i == m:
             c += 1
         else:
-            r *= c * m**(c - 1)
+            r *= c * m ** (c - 1)
             m = i
             c = 1
     return r

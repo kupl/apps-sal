@@ -2,7 +2,7 @@ from collections import Counter
 
 
 def word_square(letters):
-    sq = len(letters) ** .5
+    sq = len(letters) ** 0.5
     if sq % 1 != 0:
         return False
     d = Counter(letters)

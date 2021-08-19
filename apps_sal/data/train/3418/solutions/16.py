@@ -1,5 +1,5 @@
 def reverse_list(l):
-    'return a list with the reverse order of l'
+    """return a list with the reverse order of l"""
     index = len(l)
     i = index - 1
     temp = []

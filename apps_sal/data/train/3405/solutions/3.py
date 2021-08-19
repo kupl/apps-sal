@@ -1,7 +1,9 @@
 from itertools import permutations as p
-
 n_str = '123456789'
-def formt(n): return sorted(list(map(''.join, list(filter(set, p(n_str, n))))))
+
+
+def formt(n):
+    return sorted(list(map(''.join, list(filter(set, p(n_str, n))))))
 
 
 db = formt(1) + formt(2) + formt(3) + formt(4) + formt(5)

@@ -7,8 +7,6 @@ def f(n):
             factors.append(i)
         else:
             i += 1
-
     from collections import Counter
     from numpy import prod
-    return prod([occurences * factor ** (occurences - 1)
-                for factor, occurences in Counter(factors).items()])
+    return prod([occurences * factor ** (occurences - 1) for (factor, occurences) in Counter(factors).items()])

@@ -6,4 +6,4 @@ def string_merge(string1, string2, letter):
     >>> "jason","samson","s"
     jasamson 
     """
-    return string1[0:(string1.find(letter))] + string2[(string2.find(letter)):]
+    return string1[0:string1.find(letter)] + string2[string2.find(letter):]

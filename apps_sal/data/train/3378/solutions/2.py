@@ -4,7 +4,7 @@ def decrypt(text, n):
     half = len(text) // 2
     arr = list(text)
     for _ in range(n):
-        arr[1::2], arr[::2] = arr[:half], arr[half:]
+        (arr[1::2], arr[::2]) = (arr[:half], arr[half:])
     return ''.join(arr)
 
 

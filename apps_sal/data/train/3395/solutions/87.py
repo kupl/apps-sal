@@ -5,4 +5,4 @@ def remove_duplicate_words(s):
             pass
         else:
             nwrd.append(i)
-    return " ".join(nwrd)
+    return ' '.join(nwrd)

@@ -2,6 +2,7 @@ from math import *
 
 
 def list_squared(m, n):
+
     def factors(x):
         lst = []
         for i in range(1, int(sqrt(x) + 1)):

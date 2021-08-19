@@ -3,4 +3,4 @@ def reverse_list(l):
 
 
 l = [1, 2, 3, 4]
-print((reverse_list(l)))
+print(reverse_list(l))

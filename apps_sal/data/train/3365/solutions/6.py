@@ -1,1 +1,2 @@
-def format_poem(p): return '.\n'.join(p.split(". "))
+def format_poem(p):
+    return '.\n'.join(p.split('. '))

@@ -6,5 +6,4 @@ def flatten(*args):
                 yield from _flat(x)
             else:
                 yield x
-
     return list(_flat(args))

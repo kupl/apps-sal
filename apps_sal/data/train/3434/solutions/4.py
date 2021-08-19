@@ -1,5 +1,5 @@
 def bin_mul(a, b):
-    (b, a), r = sorted((a, b)), []
+    ((b, a), r) = (sorted((a, b)), [])
     while a:
         if a % 2 and b:
             r.append(b)

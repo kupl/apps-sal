@@ -1,5 +1,5 @@
 def fish(shoal):
-    eaten, size, target = 0, 1, 4
+    (eaten, size, target) = (0, 1, 4)
     for f in sorted(map(int, shoal)):
         if f > size:
             break

@@ -7,7 +7,7 @@ def break_down(text):
     ns = list(range(1, len(numbers[0])))
     for n in ns:
         for idxs in itertools.combinations(ns, n):
-            yield [''.join(numbers[0][i:j]) for i, j in zip((0,) + idxs, idxs + (None,))]
+            yield [''.join(numbers[0][i:j]) for (i, j) in zip((0,) + idxs, idxs + (None,))]
 
 
 def next_higher(start_value, k):

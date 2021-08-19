@@ -2,4 +2,4 @@ from re import sub
 
 
 def domain_name(url):
-    return sub(r'^(?:https?:\/\/)?(?:www\.)?([\w\-]+)\.(?:.*?)$', r'\1', url)
+    return sub('^(?:https?:\\/\\/)?(?:www\\.)?([\\w\\-]+)\\.(?:.*?)$', '\\1', url)

@@ -6,6 +6,5 @@ def remove_duplicate_words(s):
             compressed.append(word)
         else:
             pass
-
     compressed_to_string = ' '.join(compressed)
     return compressed_to_string

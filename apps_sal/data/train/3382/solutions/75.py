@@ -1,1 +1,2 @@
-def lowercase_count(s): return len(list(filter(str.islower, s)))
+def lowercase_count(s):
+    return len(list(filter(str.islower, s)))

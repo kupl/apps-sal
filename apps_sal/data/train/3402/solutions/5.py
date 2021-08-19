@@ -1,10 +1,10 @@
 def calculate(a, o, b):
-    if (o == "+"):
+    if o == '+':
         return a + b
-    elif (o == "-"):
+    elif o == '-':
         return a - b
-    elif b != 0 and o == "/":
+    elif b != 0 and o == '/':
         return a / b
-    elif (o == "*"):
+    elif o == '*':
         return a * b
     return None

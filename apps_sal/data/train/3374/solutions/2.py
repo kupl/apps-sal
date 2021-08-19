@@ -11,8 +11,8 @@ def compare(x, y):
 
 
 def compare_powers(x, y):
-    a, c = x
-    b, d = y
-    x = (c * log(a)) / log(2)
-    y = (d * log(b)) / log(2)
+    (a, c) = x
+    (b, d) = y
+    x = c * log(a) / log(2)
+    y = d * log(b) / log(2)
     return compare(x, y)

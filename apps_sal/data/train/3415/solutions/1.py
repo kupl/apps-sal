@@ -1,5 +1,5 @@
 def build_palindrome(str):
-    suf = ""
+    suf = ''
     for c in str:
         pal = str + suf
         if pal == pal[::-1]:

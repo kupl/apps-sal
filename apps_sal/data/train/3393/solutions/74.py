@@ -6,8 +6,8 @@ def div(n):
     l = []
     m = []
     while i <= math.sqrt(n):
-        if (n % i == 0):
-            if (n / i == i):
+        if n % i == 0:
+            if n / i == i:
                 l.append(i)
                 m.append(i ** 2)
             else:

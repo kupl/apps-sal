@@ -4,7 +4,6 @@ def solution(nums):
         insertion_sort(list)
     else:
         return []
-
     return list
 
 

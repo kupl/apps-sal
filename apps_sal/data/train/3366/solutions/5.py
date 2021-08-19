@@ -1,5 +1,5 @@
 import sys
-p = sys.modules['iter''tools'].permutations
+p = sys.modules['itertools'].permutations
 
 
 def nth_perm(n, d):

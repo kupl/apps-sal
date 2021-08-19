@@ -2,7 +2,7 @@ import re
 
 
 def scanner(q):
-    bitseq, mask = [], []
+    (bitseq, mask) = ([], [])
     for row in range(20, 8, -1):
         bitseq.append(q[row][20])
         mask.append((row + 20) % 2 == 0)
@@ -23,6 +23,6 @@ def scanner(q):
         mask.append((row + 14) % 2 == 0)
         bitseq.append(q[row][13])
         mask.append((row + 13) % 2 == 0)
-    code = [int(not x) if mask[i] else x for i, x in enumerate(bitseq)]
+    code = [int(not x) if mask[i] else x for (i, x) in enumerate(bitseq)]
     length = int(''.join(map(str, code[4:12])), 2)
-    return(''.join([chr(int(x, 2)) for x in re.findall(r"[01]{8}", ''.join(map(str, code[12:(8 * length) + 12])))]))
+    return ''.join([chr(int(x, 2)) for x in re.findall('[01]{8}', ''.join(map(str, code[12:8 * length + 12])))])

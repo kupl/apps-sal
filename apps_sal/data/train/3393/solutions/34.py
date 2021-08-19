@@ -31,7 +31,7 @@ def factorize(n, primes):
 def divisors(factors):
     div = [1]
     for (p, r) in factors:
-        div = [d * p**e for d in div for e in range(r + 1)]
+        div = [d * p ** e for d in div for e in range(r + 1)]
     return div
 
 

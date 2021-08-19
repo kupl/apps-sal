@@ -1,6 +1,6 @@
 def flatten(*arr):
     inputlist = list(arr)
-    while (True):
+    while True:
         typelist = []
         for i in inputlist:
             typelist.append(type(i))

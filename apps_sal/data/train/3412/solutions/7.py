@@ -3,7 +3,7 @@ from functools import reduce
 
 def f(n):
     facts = factorization(n)
-    return mul(power * prime ** (power - 1) for prime, power in facts)
+    return mul((power * prime ** (power - 1) for (prime, power) in facts))
 
 
 def mul(ar):

@@ -1,5 +1,5 @@
 def scratch(lottery):
-    return sum(win(*line.split()) for line in lottery)
+    return sum((win(*line.split()) for line in lottery))
 
 
 def win(a, b, c, d):

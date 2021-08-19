@@ -4,5 +4,4 @@ def evaporator(content, evap_per_day, threshold):
     while content > critical:
         days += 1
         content -= content * evap_per_day / 100
-
     return days

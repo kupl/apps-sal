@@ -12,5 +12,4 @@ def palindrome_chain_length(n):
             nreverserd = n[::-1]
             if n == nreverserd:
                 break
-
     return count

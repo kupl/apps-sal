@@ -3,7 +3,7 @@ def s(n):
     yield xs
     for i in range(n):
         while True:
-            xs = [a ^ b for a, b in zip([0] + xs, xs + [0])]
+            xs = [a ^ b for (a, b) in zip([0] + xs, xs + [0])]
             yield xs
             if all(xs):
                 break
@@ -12,7 +12,4 @@ def s(n):
 def sierpinski(n):
     xss = list(s(n))
     width = len(xss) * 2 - 1
-    return '\n'.join(
-        ' '.join(' *'[x] for x in xs).center(width)
-        for xs in xss
-    )
+    return '\n'.join((' '.join((' *'[x] for x in xs)).center(width) for xs in xss))

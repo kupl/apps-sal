@@ -12,7 +12,6 @@ def rotate(l, n):
 
 
 def circular_prime(number):
-
     number_list = [int(x) for x in str(number)]
     if is_prime(number):
         check_list = [True]
@@ -21,7 +20,7 @@ def circular_prime(number):
             number_join = int(''.join(map(str, number_rotated)))
             if is_prime(number_join):
                 check_list.append(True)
-        if (len(check_list) == len(number_list)):
+        if len(check_list) == len(number_list):
             return True
         else:
             return False

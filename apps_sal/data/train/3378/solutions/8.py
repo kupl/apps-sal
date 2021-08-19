@@ -35,7 +35,6 @@ def decrypt(encrypted_text, n):
     if n <= 0 or encrypted_text == '':
         return encrypted_text
     new_str = encrypted_text
-
     for x in range(n):
         a = int(len(encrypted_text) / 2)
         str1 = new_str[:a]
@@ -46,5 +45,4 @@ def decrypt(encrypted_text, n):
             new_str += str1[new_X]
         if len(encrypted_text) % 2 == 1:
             new_str += str2[-1]
-
     return new_str

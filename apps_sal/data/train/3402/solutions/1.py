@@ -1,16 +1,16 @@
 def calculate(a, o, b):
     result = 0
-    if(o == "+"):
+    if o == '+':
         return a + b
-    elif(o == "-"):
+    elif o == '-':
         return a - b
-    elif(o == "/" and b == 0):
+    elif o == '/' and b == 0:
         return None
-    elif(o == "/"):
+    elif o == '/':
         return a / b
-    elif(o == "*" and b == 0):
+    elif o == '*' and b == 0:
         return b
-    elif(o == "*"):
+    elif o == '*':
         return a * b
     else:
         return None

@@ -1,5 +1,4 @@
 def palindrome_chain_length(n):
-
     number = n
     i = 0
     while i < 10000:

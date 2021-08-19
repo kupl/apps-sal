@@ -6,5 +6,4 @@ def reverse_list(l):
 
 
 r = reverse_list([1, 2, 3, 4])
-
 print(r)

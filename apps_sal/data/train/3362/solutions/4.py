@@ -2,7 +2,7 @@ from functools import reduce
 
 
 def to_int(num):
-    "convert to int digit or string"
+    """convert to int digit or string"""
     try:
         return int(num)
     except ValueError:

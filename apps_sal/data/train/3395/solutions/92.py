@@ -1,8 +1,7 @@
 def remove_duplicate_words(s):
-    res = ""
+    res = ''
     k = s.split()
     for i in k:
         if i not in res:
-            res += i + " "
-
+            res += i + ' '
     return res.rstrip()

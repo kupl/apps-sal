@@ -1,5 +1,5 @@
 def sum_mix(arr):
-    total = ""
+    total = ''
     new_lst = []
     for i in arr:
         if i == str(i):

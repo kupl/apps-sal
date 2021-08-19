@@ -1,7 +1,7 @@
 def square_free_part(n):
     if type(n) != int or n <= 0:
         return None
-    r, d = 1, 2
+    (r, d) = (1, 2)
     while d * d <= n:
         if n % d == 0:
             while n % d == 0:

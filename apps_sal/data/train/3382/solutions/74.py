@@ -1,5 +1,4 @@
 def lowercase_count(strng):
-
     dgu = []
     rwp = []
     pwr = list(str(strng))

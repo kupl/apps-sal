@@ -10,7 +10,6 @@ def domain_name(url):
         if dom_spl[0] == 'www':
             return dom_spl[1]
         return dom_spl[0]
-
     elif path:
         path_spl = path.split('.')
         if path_spl[0] == 'www':

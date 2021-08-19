@@ -40,7 +40,7 @@ def square_free_part(n):
     facs = get_factors(n)
     for factor in facs[::-1]:
         lis = getUniquePrimeFactorsWithCount(factor)
-        if any(en > 1 for en in lis[1]):
+        if any((en > 1 for en in lis[1])):
             continue
         else:
             return factor

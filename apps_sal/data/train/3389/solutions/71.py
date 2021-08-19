@@ -26,7 +26,6 @@ def domain_name(url):
                 break
             if adding:
                 domain += char
-
     domain_arr = list(domain)
     if '/' in domain_arr:
         domain_arr.remove('/')

@@ -3,8 +3,8 @@ import re
 
 def domain_name(url):
     print(url)
-    ur = r'(?:https?://www\.|www\.|https://www\.|https?://|)(.+?)\.'
+    ur = '(?:https?://www\\.|www\\.|https://www\\.|https?://|)(.+?)\\.'
     a = re.findall(ur, url)
     if len(a) == 0:
-        return ""
+        return ''
     return a[0]

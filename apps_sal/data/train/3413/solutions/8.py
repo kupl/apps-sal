@@ -3,6 +3,5 @@ def solution(nums):
     if nums != [] and nums != None:
         nums.sort()
         return nums
-    else:
-        if not nums:
-            return []
+    elif not nums:
+        return []

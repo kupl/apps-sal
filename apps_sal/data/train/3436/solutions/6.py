@@ -6,4 +6,4 @@ def repl(m):
 
 
 def err_bob(s):
-    return re.sub(r'(?![aeiou])[a-z]\b', repl, s, flags=re.I)
+    return re.sub('(?![aeiou])[a-z]\\b', repl, s, flags=re.I)

@@ -3,5 +3,5 @@ def domain_name(url):
     for f in filter_list:
         if f in url:
             url = url.replace(f, '')
-    new_url = url.split(".")
+    new_url = url.split('.')
     return new_url[0]

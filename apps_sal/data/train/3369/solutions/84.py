@@ -1,3 +1,3 @@
 def move(position, roll):
     if roll:
-        return position + (roll * 2)
+        return position + roll * 2
