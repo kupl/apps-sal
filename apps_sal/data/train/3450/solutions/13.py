@@ -5,12 +5,4 @@ def array(string):
     if len(s) == 0:
         print(None)
     else:
-        return(s)
-
-
-#     newstring = string.strip()
-#     newstring = (newstring[1:-2].replace(',', ' ')).strip()
-#     if len(newstring) == 0:
-#         print(None)
-#     else:
-#         return newstring
+        return s

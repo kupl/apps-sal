@@ -1,8 +1,5 @@
 def traffic_jam(main_road, side_streets):
-    #display(main_road, side_streets)
-
     result = ''
-
     while True:
         for i in range(len(main_road) - 1, -1, -1):
             if len(side_streets) > i and len(side_streets[i]) > 0:
