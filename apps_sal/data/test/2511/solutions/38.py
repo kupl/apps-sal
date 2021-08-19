@@ -3,21 +3,18 @@ from collections import deque
 
 
 def main():
-    # 入力
     readline = stdin.readline
-    mod = 10**9 + 7
-    n, k = map(int, readline().split())
+    mod = 10 ** 9 + 7
+    (n, k) = map(int, readline().split())
     G = [[] for _ in range(n)]
     for i in range(n - 1):
-        a, b = map(lambda x: int(x) - 1, readline().split())
+        (a, b) = map(lambda x: int(x) - 1, readline().split())
         G[a].append(b)
         G[b].append(a)
-
     ans = k
     stack = deque([0])
     flags = [False] * n
     flags[0] = True
-    # dfs
     while len(stack) > 0:
         now = stack.pop()
         if now == 0:
@@ -30,7 +27,6 @@ def main():
             if flags[nex] == False:
                 flags[nex] = True
                 stack.append(nex)
-
     print(ans)
 
 

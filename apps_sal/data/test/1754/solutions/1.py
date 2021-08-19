@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 s = list(map(int, input().split()))
 good = list(map(int, input().split()))
@@ -14,6 +14,3 @@ for el in sch:
     for i in el[1:]:
         cnt += is_good[i[1]]
 print(cnt)
-
-
-# sorted(i * i for i in range(n))

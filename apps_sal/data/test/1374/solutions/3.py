@@ -1,5 +1,5 @@
-
 def median_of_medians(N: int, A: list) -> int:
+
     def search(c):
         bar = N
         r = 0
@@ -11,12 +11,10 @@ def median_of_medians(N: int, A: list) -> int:
                 r += dp_arr[bar]
                 bar += 1
             else:
-                r -= (dp_arr[bar - 1])
+                r -= dp_arr[bar - 1]
                 bar -= 1
             res_nega += r
         return res_nega
-
-    # binary search
     a_sorted = sorted(A)
     left = 0
     right = N
@@ -34,7 +32,6 @@ def median_of_medians(N: int, A: list) -> int:
         else:
             right = mid + 1
             mid = (mid + left) // 2
-
     return a_sorted[mid]
 
 

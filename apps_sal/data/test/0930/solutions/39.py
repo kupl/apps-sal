@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-mod = 10**9 + 7
+(n, k) = map(int, input().split())
+mod = 10 ** 9 + 7
 if n <= k:
     l = 2 * n - 1
     inverse = [0, 1]
@@ -19,7 +19,7 @@ else:
         inverse.append(-inverse[mod % i] * (mod // i) % mod)
         g.append(g[-1] * inverse[-1] % mod)
 
-    def comb(a, b): return h[a] * g[b] * g[a - b] % mod
-    # i手かけないとたどり着けないやつ
+    def comb(a, b):
+        return h[a] * g[b] * g[a - b] % mod
     t = [comb(n, i) * comb(n - 1, i) % mod for i in range(k + 1)]
     print(sum(t) % mod)

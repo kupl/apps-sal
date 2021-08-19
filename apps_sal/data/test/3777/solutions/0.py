@@ -1,11 +1,11 @@
 import sys
 from operator import itemgetter
 readline = sys.stdin.readline
+sys.setrecursionlimit(2 * 10 ** 6)
 
-sys.setrecursionlimit(2 * 10**6)
 
+class UF:
 
-class UF():
     def __init__(self, num):
         self.par = [-1] * num
         self.size = [1] * num
@@ -47,37 +47,34 @@ def parorder(Edge, p):
     while stack:
         vn = stack.pop()
         apo(vn)
-        for vf, cost in Edge[vn]:
+        for (vf, cost) in Edge[vn]:
             if vf in visited:
                 continue
             visited.add(vf)
             par[vf] = vn
             Cs[vf] = cost
             ast(vf)
-    return par, order, Cs
+    return (par, order, Cs)
 
 
 def getcld(p):
     res = [[] for _ in range(len(p))]
-    for i, v in enumerate(p[1:], 1):
+    for (i, v) in enumerate(p[1:], 1):
         res[v].append(i)
     return res
 
 
-MOD = 10**9 + 7
-N, M = list(map(int, readline().split()))
+MOD = 10 ** 9 + 7
+(N, M) = list(map(int, readline().split()))
 X = int(readline())
 Edge = []
 for _ in range(M):
-    a, b, c = list(map(int, readline().split()))
+    (a, b, c) = list(map(int, readline().split()))
     a -= 1
     b -= 1
     Edge.append((c, a, b))
-
 Edge.sort(key=itemgetter(0))
-
 T = UF(N)
-
 cnt = 0
 idx = 0
 tEdge = [[] for _ in range(N)]
@@ -85,7 +82,7 @@ oEdge = []
 mst = 0
 while cnt < N - 1:
     while True:
-        cost, x, y = Edge[idx]
+        (cost, x, y) = Edge[idx]
         rx = T.find(x)
         ry = T.find(y)
         idx += 1
@@ -99,17 +96,12 @@ while cnt < N - 1:
     T.union(x, y)
 for i in range(idx, M):
     oEdge.append(Edge[i])
-
-
 root = 0
-P, L, Cs = parorder(tEdge, root)
-#C = getcld(P)
-
+(P, L, Cs) = parorder(tEdge, root)
 Leng = [0] * N
 for i in L[1:]:
     p = P[i]
     Leng[i] = 1 + Leng[p]
-
 Dl = [list(range(N))] + [[P[i] for i in range(N)]]
 depth = N.bit_length()
 for _ in range(depth - 1):
@@ -119,9 +111,7 @@ for _ in range(depth - 1):
         if a != root and a != -1:
             res[i] = Dl[-1][a]
     Dl.append(res)
-
 data = [[0] * N] + [[0 if i == root else Cs[i] for i in range(N)]]
-
 for j in range(depth - 1):
     res = [0] * N
     for i in range(N):
@@ -132,13 +122,13 @@ for j in range(depth - 1):
 
 
 def query(u0, v0):
-    u, v = u0, v0
+    (u, v) = (u0, v0)
     if Leng[u] > Leng[v]:
-        u, v = v, u
+        (u, v) = (v, u)
     dif = Leng[v] - Leng[u]
     res = 0
     for i in range(dif.bit_length()):
-        if (1 << i) & dif:
+        if 1 << i & dif:
             res = max(res, data[i + 1][v])
             v = Dl[i + 1][v]
     ll = Leng[u].bit_length()
@@ -148,10 +138,8 @@ def query(u0, v0):
             res = max(res, data[k + 1][v], data[k + 1][u])
             u = Dl[k + 1][u]
             v = Dl[k + 1][v]
-
     if u != v:
         res = max(res, Cs[v], Cs[u])
-
     return res
 
 
@@ -162,7 +150,7 @@ else:
 cue = 0
 ran = 0
 dec = 0
-for c, u, v in oEdge:
+for (c, u, v) in oEdge:
     me = query(u, v)
     if mst + c - me < X:
         dec += 1
@@ -170,7 +158,5 @@ for c, u, v in oEdge:
         cue += 1
     else:
         ran += 1
-
 ans = (ans + 2 * (pow(2, cue) - 1) * pow(2, ran, MOD)) % MOD
-
 print(ans)

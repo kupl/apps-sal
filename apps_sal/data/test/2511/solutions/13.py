@@ -1,15 +1,12 @@
-#!/usr/bin/env python3
-
 from functools import lru_cache
-
 MOD = 10 ** 9 + 7
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     adj = [[] for i in range(n)]
     for i in range(n - 1):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         a -= 1
         b -= 1
         adj[a].append(b)
@@ -21,7 +18,7 @@ def main():
         i = stack.pop()
         visited[i] = True
         children = [x for x in adj[i] if not visited[x]]
-        res *= perm((k - 1 if i == 0 else k - 2), len(children))
+        res *= perm(k - 1 if i == 0 else k - 2, len(children))
         res %= MOD
         for c in children:
             stack.append(c)

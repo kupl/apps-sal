@@ -14,20 +14,9 @@ from collections import defaultdict
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
-INF = float("inf")
-#d = defaultdict(int)
-#d = defaultdict(list)
-#N = int(input())
-#A = list(map(int,input().split()))
-#S = list(input())
-# S.remove("\n")
-#N,M = map(int,input().split())
-#S,T = map(str,input().split())
-#A = [int(input()) for _ in range(N)]
-#S = [input() for _ in range(N)]
-#A = [list(map(int,input().split())) for _ in range(N)]
-n, k = map(int, input().split())
-MOD = 10**9 + 7
+INF = float('inf')
+(n, k) = map(int, input().split())
+MOD = 10 ** 9 + 7
 
 
 def comb(n, k, mod):
@@ -41,10 +30,9 @@ def comb(n, k, mod):
     for i in range(k):
         x = x * (n - i) % mod
         y = y * (i + 1) % mod
-    return (x * pow(y, mod - 2, mod)) % mod
+    return x * pow(y, mod - 2, mod) % mod
 
 
-# こっちは計算量O(N)
 fac = [1, 1]
 inv = [0, 1]
 finv = [1, 1]
@@ -55,7 +43,7 @@ for i in range(2, 2 * n + 1):
 
 
 def comb_mod(n, r, m):
-    if (n < 0 or r < 0 or n < r):
+    if n < 0 or r < 0 or n < r:
         return 0
     r = min(r, n - r)
     return fac[n] * finv[n - r] * finv[r] % m
