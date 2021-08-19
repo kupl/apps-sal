@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         n = len(arr)
         arr.append(-1)
@@ -20,14 +21,13 @@ class Solution:
             return False
         res = n - 1
         for i in range(start, -1, -1):
-            lo, hi = end, n - 1
+            (lo, hi) = (end, n - 1)
             while lo <= hi:
                 mid = (lo + hi) // 2
-                if valid(i, mid):  # hi+1 is valid
+                if valid(i, mid):
                     hi = mid - 1
-                else:  # lo-1 is not valid
+                else:
                     lo = mid + 1
             lo = min(lo, n - 1)
-            # print(start,lo,i,lo-i+1)
             res = min(res, lo - i + 1)
         return res

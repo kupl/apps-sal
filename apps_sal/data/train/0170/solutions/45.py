@@ -1,16 +1,14 @@
 class Solution:
+
     def findLengthOfShortestSubarray(self, nums: List[int]) -> int:
-        # equal to max increasing subarray
         seqs = [0]
         last = nums[0]
-
-        for i, num in enumerate(nums[1:]):
+        for (i, num) in enumerate(nums[1:]):
             if num < last:
                 seqs.append(i + 1)
             last = num
         if len(seqs) == 1:
             return 0
-
         no_first_size = seqs[-1]
         has_first_size = len(nums) - seqs[1]
         for first_end in range(0, seqs[1]):

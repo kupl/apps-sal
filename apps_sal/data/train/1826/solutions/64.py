@@ -1,9 +1,7 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         ans = []
-        # answer[0][0] = -1 <= r <= 1 , -1 <= c <= 1
-        # answer[1][1] = 0 <= r <= 2, 0 <= c <= 2
-
         for i in range(0, len(mat)):
             ans.append([])
             for j in range(0, len(mat[0])):

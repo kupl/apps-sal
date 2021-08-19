@@ -1,14 +1,6 @@
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
-
-        # 1 4 5 2 3 2 1 5 6 7
-        # can be removed only in 3 types
-        # last, middle, front
-
-        # front - what is the longest sorted array in the suffix
-        # last - what is the longest sorted array in the prefix
-        # middle - find the prefix and sufix sorting then see if then can be merged else 0
-
         n = len(arr)
         if n == 1 or n == 0:
             return 0
@@ -36,7 +28,6 @@ class Solution:
                 last = c
                 b = i
                 break
-
         if c == n:
             b = 0
             last = c
@@ -50,5 +41,4 @@ class Solution:
                 if arr[i] <= arr[b]:
                     middle = max(middle, last + i + 1)
                     print((2, i, b))
-
         return n - max(last, max(front, middle))
