@@ -1,5 +1,4 @@
 def close_compare(a, b, margin=0):
-    # close to:
     marginal = abs(a - b)
     if margin >= marginal:
         return 0
@@ -9,5 +8,5 @@ def close_compare(a, b, margin=0):
         return 1
 
 
-print(close_compare(2, 8, ))
+print(close_compare(2, 8))
 pass

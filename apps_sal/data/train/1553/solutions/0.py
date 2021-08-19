@@ -1,6 +1,5 @@
-# cook your dish here
 from sys import stdin
-n, m = map(int, stdin.readline().split())
+(n, m) = map(int, stdin.readline().split())
 forest = []
 matrix = []
 for _ in range(n):
@@ -16,7 +15,7 @@ for i in range(1, n):
         matrix[i][j] = matrix[i - 1][j] + matrix[i][j - 1] - matrix[i - 1][j - 1] + forest[i][j]
 c = int(input())
 for _ in range(c):
-    x1, y1, x2, y2 = map(int, stdin.readline().split())
+    (x1, y1, x2, y2) = map(int, stdin.readline().split())
     x1 -= 1
     y1 -= 1
     x2 -= 1

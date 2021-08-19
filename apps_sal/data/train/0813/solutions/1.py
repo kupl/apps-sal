@@ -1,21 +1,15 @@
-# cook your dish here
-
-# using the concept of binary search
-
 def ret_sum(arr, k, x):
     s = 0
-
     for i in arr:
-        s += abs((x - i)**k)
+        s += abs((x - i) ** k)
     return s
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-start, end = min(arr), max(arr)
+(start, end) = (min(arr), max(arr))
 hash_arr = {}
 flag = 0
-
 while start <= end and flag == 0:
     mid = (start + end) // 2
     mid_prev = mid - 1
