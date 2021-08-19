@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -16,8 +15,7 @@ for i in range(t):
     elif n == 4:
         if lst[3] >= lst[1] + lst[0] + lst[2]:
             print(lst[3])
+        elif lst[0] == lst[1] == lst[2] == lst[3]:
+            print(2 * lst[0])
         else:
-            if lst[0] == lst[1] == lst[2] == lst[3]:
-                print(2 * lst[0])
-            else:
-                print(lst[0] + lst[1] + lst[2])
+            print(lst[0] + lst[1] + lst[2])

@@ -1,6 +1,5 @@
 def main():
     input()
-    #aa = sorted(set(map(int, input().split())))
     aa = sorted(map(int, set(input().split())))
     x = []
     b = res = 0

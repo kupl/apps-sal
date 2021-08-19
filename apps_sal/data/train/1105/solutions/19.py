@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -14,13 +13,13 @@ for i in range(int(input())):
             c = 1
     if c == 0:
         if n % 2 != 0:
-            n = (n // 2) + 1
+            n = n // 2 + 1
             print(n * l[0])
         else:
             n = n // 2
             print(n * l[0])
     else:
-        while(len1 >= 0):
+        while len1 >= 0:
             if len1 == 0:
                 z = max(a, b)
                 sum += z

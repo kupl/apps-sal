@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     c = 0
@@ -7,7 +6,7 @@ for _ in range(t):
     a.sort(reverse=True)
     b = c = 0
     for i in a:
-        if(b < c):
+        if b < c:
             b += i
         else:
             c += i

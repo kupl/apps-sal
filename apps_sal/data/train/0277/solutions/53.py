@@ -5,6 +5,7 @@ def fillMissingSet(highest_bulb, bulbs_missing, bulbs_lit, difference):
 
 
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         highest_bulb = 1
         difference = 0
@@ -23,5 +24,4 @@ class Solution:
             fillMissingSet(highest_bulb, bulbs_missing, bulbs_lit, difference)
             if len(bulbs_missing) == 0:
                 instances += 1
-            #print(highest_bulb, bulbs_missing, bulbs_lit, instances, difference)
         return instances

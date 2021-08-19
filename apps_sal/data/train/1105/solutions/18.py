@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     t = int(input())
 except:
@@ -9,7 +8,7 @@ for i in range(t):
     l.sort(reverse=True)
     b1 = b2 = 0
     for i in l:
-        if(b1 < b2):
+        if b1 < b2:
             b1 += i
         else:
             b2 += i

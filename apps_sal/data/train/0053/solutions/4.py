@@ -14,26 +14,20 @@ def solve(N, S):
     repeat = makeRepeat(S)
     longest = list(range(1, N + 1))
     shortest = list(reversed(list(range(1, N + 1))))
-    for ch, count in repeat:
-        if ch == ">":
-            longest[curr: curr + count + 1] = reversed(
-                longest[curr: curr + count + 1]
-            )
+    for (ch, count) in repeat:
+        if ch == '>':
+            longest[curr:curr + count + 1] = reversed(longest[curr:curr + count + 1])
         else:
-            assert ch == "<"
-            shortest[curr: curr + count + 1] = reversed(
-                shortest[curr: curr + count + 1]
-            )
+            assert ch == '<'
+            shortest[curr:curr + count + 1] = reversed(shortest[curr:curr + count + 1])
         curr += count
-
-    # print(" " + " ".join(S))
-    return " ".join(map(str, shortest)) + "\n" + " ".join(map(str, longest))
+    return ' '.join(map(str, shortest)) + '\n' + ' '.join(map(str, longest))
 
 
 def __starting_point():
-    T, = list(map(int, input().split()))
+    (T,) = list(map(int, input().split()))
     for t in range(T):
-        N, S = input().split()
+        (N, S) = input().split()
         N = int(N)
         ans = solve(N, S)
         print(ans)
