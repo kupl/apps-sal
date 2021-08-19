@@ -1,4 +1,4 @@
-'''input
+"""input
 8
 20 1000
 32 37
@@ -8,11 +8,10 @@
 16 16
 14 1000
 2 1000
-'''
+"""
 import heapq
 from bisect import bisect
-
-inf = 10**18 + 2
+inf = 10 ** 18 + 2
 
 
 def rints():
@@ -36,36 +35,27 @@ def bin_search(arr, pred, lo=0, hi=None):
 
 
 n = ri()
-score, _ = rints()
-
+(score, _) = rints()
 teams = []
 for _ in range(n - 1):
-    t, w = rints()
+    (t, w) = rints()
     teams.append((w - t + 1, t, w))
-
 teams.sort(key=lambda x: x[1])
-# print(teams)
 
 
 def solve(score):
     idx = bin_search(teams, lambda x: x[1] > score)
     best = pos = len(teams) - idx + 1
-    # print(teams[idx:], pos)
-
     ahead = teams[idx:]
     behind = teams[:idx]
     heapq.heapify(ahead)
-    # print(ahead)
-
     while ahead and score >= ahead[0][0]:
         score -= heapq.heappop(ahead)[0]
         pos -= 1
         while behind and behind[-1][1] > score:
             heapq.heappush(ahead, behind.pop())
             pos += 1
-        # print(score, pos)
         best = min(best, pos)
-
     return best
 
 

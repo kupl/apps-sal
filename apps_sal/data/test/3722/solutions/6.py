@@ -1,22 +1,47 @@
 from functools import lru_cache
 import sys
+sys.setrecursionlimit(10 ** 6)
 
-sys.setrecursionlimit(10**6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def MI1(): return map(int1, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
-def BI(): return sys.stdin.readline().rstrip().encode()
-def SI(): return sys.stdin.readline().rstrip()
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def MI1():
+    return map(int1, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def BI():
+    return sys.stdin.readline().rstrip().encode()
+
+
+def SI():
+    return sys.stdin.readline().rstrip()
 
 
 dij = [(0, 1), (-1, 0), (0, -1), (1, 0)]
-inf = 10**16
-# md = 998244353
-md = 10**9 + 7
+inf = 10 ** 16
+md = 10 ** 9 + 7
 
 
 @lru_cache(maxsize=None)
@@ -29,16 +54,16 @@ def f(a):
 def solve():
     if n < 4:
         return 1
-    if ab == "A":
-        if aa == "A":
+    if ab == 'A':
+        if aa == 'A':
             return 1
-        if ba == "A":
+        if ba == 'A':
             return f(n - 2)
         return pow(2, n - 3, md)
     else:
-        if bb == "B":
+        if bb == 'B':
             return 1
-        if ba == "B":
+        if ba == 'B':
             return f(n - 2)
         return pow(2, n - 3, md)
 

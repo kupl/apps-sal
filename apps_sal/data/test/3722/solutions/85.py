@@ -1,17 +1,12 @@
 def main():
-
     N = int(input())
-
     if N == 2 or N == 3:
         return 1
-
     cAA = input()
     cAB = input()
     cBA = input()
     cBB = input()
-
     mod = pow(10, 9) + 7
-
     v1 = 1
     for i in range(N - 3):
         v1 = v1 * 2 % mod
@@ -23,25 +18,19 @@ def main():
         temp[1] = (dp[0] + dp[1]) % mod
         dp = temp
     v2 = sum(dp) % mod
-
-    # print(v1, v2)
-
     if cAB == 'B':
         if cBB == 'B':
             return 1
+        elif cBA == 'A':
+            return v1
         else:
-            if cBA == 'A':
-                return v1
-            else:
-                return v2
+            return v2
+    elif cAA == 'A':
+        return 1
+    elif cBA == 'B':
+        return v1
     else:
-        if cAA == 'A':
-            return 1
-        else:
-            if cBA == 'B':
-                return v1
-            else:
-                return v2
+        return v2
 
 
 def __starting_point():

@@ -3,8 +3,7 @@ aa = input()
 ab = input()
 ba = input()
 bb = input()
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def solve(n, aa, ab, ba, bb):
@@ -19,7 +18,6 @@ def solve(n, aa, ab, ba, bb):
         if ba == 'B':
             print(pow(2, n - 3, mod))
         else:
-            # n-3の区間にaaを除く全パターン
             dp = [[0] * 2 for i in range(n + 1)]
             dp[0][0] = 1
             dp[0][1] = 1
@@ -32,7 +30,6 @@ def solve(n, aa, ab, ba, bb):
         if ba == 'A':
             print(pow(2, n - 3, mod))
         else:
-            # n-3の区間にaaを除く全パターン
             dp = [[0] * 2 for i in range(n + 1)]
             dp[0][0] = 1
             dp[0][1] = 1
@@ -46,11 +43,5 @@ def solve(n, aa, ab, ba, bb):
         print('ptn5')
 
 
-"""
-from itertools import product
-for n in range(3, 100):
-    for bit in product(['A', 'B'], repeat=4):
-        aa, ab, ba, bb = bit
-        solve(n, aa, ab, ba, bb)
-"""
+"\nfrom itertools import product\nfor n in range(3, 100):\n    for bit in product(['A', 'B'], repeat=4):\n        aa, ab, ba, bb = bit\n        solve(n, aa, ab, ba, bb)\n"
 solve(n, aa, ab, ba, bb)

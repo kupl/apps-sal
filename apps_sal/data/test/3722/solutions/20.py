@@ -1,10 +1,10 @@
-N, = list(map(int, input().split()))
+(N,) = list(map(int, input().split()))
 X = dict()
-X["AA"] = input().strip()
-X["AB"] = input().strip()
-X["BA"] = input().strip()
-X["BB"] = input().strip()
-ss = set(["AB"])
+X['AA'] = input().strip()
+X['AB'] = input().strip()
+X['BA'] = input().strip()
+X['BB'] = input().strip()
+ss = set(['AB'])
 R = [1]
 for i in range(4):
     nss = set()
@@ -14,20 +14,16 @@ for i in range(4):
             nss.add(nt)
     ss = nss
     R.append(len(ss))
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 if N - 2 < 5:
-    print((R[N - 2]))
-else:
-    if R[-3] + R[-2] == R[-1]:
-        for _ in range(N - 2 - 4):
-            R.append((R[-1] + R[-2]) % MOD)
-        print((R[-1]))
-    elif R[-2] == R[-1]:
-        print((R[-1]))
-    elif R[-2] * 2 == R[-1]:
-        for _ in range(N - 2 - 4):
-            R.append(R[-1] * 2 % MOD)
-        print((R[-1]))
-#
-# print(ss)
-# print(len(ss))
+    print(R[N - 2])
+elif R[-3] + R[-2] == R[-1]:
+    for _ in range(N - 2 - 4):
+        R.append((R[-1] + R[-2]) % MOD)
+    print(R[-1])
+elif R[-2] == R[-1]:
+    print(R[-1])
+elif R[-2] * 2 == R[-1]:
+    for _ in range(N - 2 - 4):
+        R.append(R[-1] * 2 % MOD)
+    print(R[-1])

@@ -1,9 +1,8 @@
-# @author
-
 import sys
 
 
 class ADIYWoodenLadder:
+
     def solve(self):
         t = int(input())
         for _ in range(t):
@@ -15,5 +14,4 @@ class ADIYWoodenLadder:
 
 solver = ADIYWoodenLadder()
 input = sys.stdin.readline
-
 solver.solve()

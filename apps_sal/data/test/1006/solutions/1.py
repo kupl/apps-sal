@@ -1,7 +1,7 @@
 def deleteCross(m, i, j):
-    if i <= 0 or j <= 0 or i >= len(m) - 1 or j >= len(m) - 1:
+    if i <= 0 or j <= 0 or i >= len(m) - 1 or (j >= len(m) - 1):
         return (m, False)
-    if m[i][j] == r'#' and m[i + 1][j] == r'#' and m[i - 1][j] == r'#' and m[i][j + 1] == r'#' and m[i][j - 1] == r'#':
+    if m[i][j] == '#' and m[i + 1][j] == '#' and (m[i - 1][j] == '#') and (m[i][j + 1] == '#') and (m[i][j - 1] == '#'):
         m[i][j] = m[i + 1][j] = m[i - 1][j] = m[i][j + 1] = m[i][j - 1] = '.'
         return (m, True)
     return (m, False)
@@ -10,7 +10,7 @@ def deleteCross(m, i, j):
 def solve(m):
     for i in range(len(m)):
         for j in range(len(m)):
-            if m[i][j] == r'#':
+            if m[i][j] == '#':
                 r1 = deleteCross(m, i + 1, j)
                 if not r1[1]:
                     return False

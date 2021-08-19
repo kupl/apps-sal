@@ -1,25 +1,21 @@
 import sys
 readline = sys.stdin.readline
-
 N = int(readline())
 caa = readline().strip() == 'A'
 cab = readline().strip() == 'A'
 cba = readline().strip() == 'A'
 cbb = readline().strip() == 'A'
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 if not cab:
-    caa, cbb = cbb ^ 1, caa ^ 1
+    (caa, cbb) = (cbb ^ 1, caa ^ 1)
     cab ^= 1
     cba ^= 1
-#print(N, caa, cab, cba, cbb)
-
 if N == 2:
-    print((1))
+    print(1)
 elif N == 3:
-    print((1))
+    print(1)
 elif caa:
-    print((1))
+    print(1)
 else:
     if cba:
         dp = [0] * (N - 2)

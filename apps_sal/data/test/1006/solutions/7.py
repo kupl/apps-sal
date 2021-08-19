@@ -1,4 +1,3 @@
-
 def f():
     n = int(input())
     t = [list(input()) for i in range(n)]

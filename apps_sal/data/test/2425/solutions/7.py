@@ -16,7 +16,7 @@ def mints():
 
 def gcd(a, b):
     while b != 0:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -39,14 +39,14 @@ d[33554431] = 1082401
 def smart(x):
     if x in d:
         return d[x]
-    if (x & (x + 1)) == 0:
+    if x & x + 1 == 0:
         i = 0
-        while ((1 << i) - 1) != x:
+        while (1 << i) - 1 != x:
             i += 1
         if i % 2 == 0:
             z = 0
             for i in range(0, i, 2):
-                z += (1 << i)
+                z += 1 << i
             return z
         else:
             return 1
@@ -54,7 +54,7 @@ def smart(x):
         i = 1
         z = 0
         while i < x:
-            if (i & x) == 0:
+            if i & x == 0:
                 z += i
             i *= 2
         return x + z
@@ -64,8 +64,3 @@ q = mint()
 for i in range(q):
     x = mint()
     print(smart(x))
-    # if (x & (x+1)) == 0:
-    #	a = stupid(x)
-    #	b = smart(x)
-    #	if a != b:
-    #		print(x,a,b)

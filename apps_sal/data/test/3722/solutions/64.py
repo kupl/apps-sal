@@ -3,10 +3,10 @@ input = sys.stdin.readline
 
 
 def ot(s):
-    return "A" if s == "B" else "B"
+    return 'A' if s == 'B' else 'B'
 
 
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 N = int(input())
 Ss = [input().rstrip() for _ in range(4)]
 
@@ -14,7 +14,7 @@ Ss = [input().rstrip() for _ in range(4)]
 def solve(caa, cab, cba, cbb):
     if caa == cab or N <= 3:
         return 1
-    if cba == "A":
+    if cba == 'A':
         dp = [[0, 0] for _ in range(N + 1)]
         dp[0][1] = 1
         for n in range(N):
@@ -25,15 +25,6 @@ def solve(caa, cab, cba, cbb):
         return pow(2, N - 3, mod)
 
 
-if Ss[1] == "B":
-    Ss = [ot(Ss[3]), "A", ot(Ss[2]), ot(Ss[0])]
-
-print((solve(Ss[0], Ss[1], Ss[2], Ss[3])))
-
-# AB = ["A", "B"]
-# for s1 in AB:
-#     for s2 in AB:
-#         for s3 in AB:
-#             for s4 in AB:
-#                 print(s1+s2+s3+s4)
-#                 T(6, [s1, s2, s3, s4])
+if Ss[1] == 'B':
+    Ss = [ot(Ss[3]), 'A', ot(Ss[2]), ot(Ss[0])]
+print(solve(Ss[0], Ss[1], Ss[2], Ss[3]))

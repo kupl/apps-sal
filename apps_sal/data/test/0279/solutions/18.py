@@ -1,7 +1,5 @@
-# sry...
-
-v1, v2 = list(map(int, input().split()))
-t, d = list(map(int, input().split()))
+(v1, v2) = list(map(int, input().split()))
+(t, d) = list(map(int, input().split()))
 L1 = [0] * t
 L2 = [0] * t
 L1[0] = v1
