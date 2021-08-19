@@ -1,8 +1,8 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = []
 b = []
 for i in range(n):
-    t, h, m = list(map(int, input().split()))
+    (t, h, m) = list(map(int, input().split()))
     if t:
         a.append((h, m))
     else:
@@ -14,9 +14,8 @@ b1 = b[:]
 x2 = x
 while 1:
     if now:
-        if(len(a) == 0):
+        if len(a) == 0:
             break
-
         i = 0
         maxx = 0
         mi = 0
@@ -32,7 +31,7 @@ while 1:
         counter1 += 1
         now = False
     else:
-        if(len(b) == 0):
+        if len(b) == 0:
             break
         i = 0
         maxx = 0
@@ -42,18 +41,17 @@ while 1:
                 maxx = kor[1]
                 mi = i
             i += 1
-        if(maxx == 0):
+        if maxx == 0:
             break
         x += maxx
         b.pop(mi)
         counter1 += 1
         now = True
-
 counter2 = 0
 now = False
 while 1:
     if now:
-        if(len(a1) == 0):
+        if len(a1) == 0:
             break
         i = 0
         maxx = 0
@@ -70,7 +68,7 @@ while 1:
         counter2 += 1
         now = False
     else:
-        if(len(b1) == 0):
+        if len(b1) == 0:
             break
         i = 0
         maxx = 0
@@ -80,7 +78,7 @@ while 1:
                 maxx = kor[1]
                 mi = i
             i += 1
-        if(maxx == 0):
+        if maxx == 0:
             break
         x2 += maxx
         b1.pop(mi)

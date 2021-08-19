@@ -1,7 +1,7 @@
 n = int(input())
 arr = list(map(int, input().split()))
 absArr = list(map(abs, arr))
-positiveCount, negativeCount = 0, 0
+(positiveCount, negativeCount) = (0, 0)
 for num in arr:
     if num > 0:
         positiveCount += 1

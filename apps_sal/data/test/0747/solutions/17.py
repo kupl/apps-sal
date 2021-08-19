@@ -1,4 +1,4 @@
-n, x1 = map(int, input().split())
+(n, x1) = map(int, input().split())
 
 
 class Candy:
@@ -11,7 +11,7 @@ candy0 = []
 candy1 = []
 for i in range(n):
     candy = Candy()
-    candy.t, candy.h, candy.m = map(int, input().split())
+    (candy.t, candy.h, candy.m) = map(int, input().split())
     if candy.t == 0:
         candy0.append(candy)
     else:
@@ -33,7 +33,6 @@ def getnext(items, x):
 
 candy0.sort(key=sortfn, reverse=True)
 candy1.sort(key=sortfn, reverse=True)
-
 count0 = 0
 count1 = 0
 
@@ -56,5 +55,4 @@ def getcount(candy0, candy1):
 
 count0 = getcount(candy0.copy(), candy1.copy())
 count1 = getcount(candy1.copy(), candy0.copy())
-
 print(max(count0, count1))

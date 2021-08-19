@@ -3,9 +3,9 @@ a = list(map(int, input().split()))
 
 
 def Reverse(a, l, r):
-    i, j = l, r
+    (i, j) = (l, r)
     while i < j:
-        a[i], a[j] = a[j], a[i]
+        (a[i], a[j]) = (a[j], a[i])
         i += 1
         j -= 1
 
@@ -24,11 +24,11 @@ for l in range(n - 1):
             r += 1
         Reverse(a, l, r)
         if IsSorted(a):
-            print("yes")
+            print('yes')
             print(l + 1, r + 1)
         else:
-            print("no")
+            print('no')
         break
 else:
-    print("yes")
+    print('yes')
     print(1, 1)

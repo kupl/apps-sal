@@ -1,4 +1,4 @@
-s = ""
+s = ''
 n = int(input())
 s = input()
 count = 0

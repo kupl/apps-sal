@@ -1,13 +1,13 @@
 def test(x, y, a, b):
     t = x * y // gcd(x, y)
-    return (b // t - (a - 1) // t)
+    return b // t - (a - 1) // t
 
 
 def gcd(a, b):
     if a < b:
-        a, b = b, a
+        (a, b) = (b, a)
     while b != 0:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 

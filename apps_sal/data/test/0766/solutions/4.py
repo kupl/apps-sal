@@ -8,7 +8,7 @@ if kol == 4:
     print('Yes')
 elif kol == 3 and len(s) != 3:
     print('Yes')
-elif kol == 2 and s.count(tmp[0]) != 1 and s.count(tmp[1]) != 1:
+elif kol == 2 and s.count(tmp[0]) != 1 and (s.count(tmp[1]) != 1):
     print('Yes')
 else:
     print('No')

@@ -3,10 +3,8 @@ s = input()
 m = defaultdict(int)
 for c in s:
     m[c] += 1
-
-cnts = [j for i, j in list(m.items())]
-
+cnts = [j for (i, j) in list(m.items())]
 if len(s) < 4 or len(cnts) > 4 or len(cnts) == 1 or (len(cnts) == 2 and min(cnts) == 1):
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

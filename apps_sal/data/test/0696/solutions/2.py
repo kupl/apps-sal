@@ -1,5 +1,5 @@
 def phi(n):
-    t, i = n, 2
+    (t, i) = (n, 2)
     while i * i <= n:
         if n % i == 0:
             n //= i

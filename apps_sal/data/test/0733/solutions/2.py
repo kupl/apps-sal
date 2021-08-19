@@ -1,9 +1,9 @@
-x, y, a, b = list(map(int, input().split()))
+(x, y, a, b) = list(map(int, input().split()))
 
 
 def arch(a, b):
     while b != 0:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 

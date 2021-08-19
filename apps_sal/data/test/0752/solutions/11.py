@@ -5,7 +5,6 @@ for i in range(n):
     if size not in clothes:
         clothes[size] = 0
     clothes[size] += 1
-
 ans = 0
 for i in range(n):
     size = input()
@@ -13,5 +12,4 @@ for i in range(n):
         ans += 1
     else:
         clothes[size] -= 1
-
 print(ans)

@@ -11,7 +11,7 @@ if not j:
     print('yes')
     print(1, 1)
 else:
-    rev = numbers[i: j + 1]
+    rev = numbers[i:j + 1]
     rev.reverse()
     sd = numbers[:i] + rev + numbers[j + 1:]
     if sd == sorted(numbers):

@@ -19,9 +19,8 @@ def readlist():
     return list(map(int, input().split()))
 
 
-N, B = readmap()
+(N, B) = readmap()
 A = readlist()
-
 even = 0
 odd = 0
 cost = []
@@ -32,7 +31,6 @@ for i in range(0, N - 1):
         odd += 1
     if even == odd:
         cost.append(abs(A[i] - A[i + 1]))
-
 cost.sort()
 ans = 0
 for c in cost:
@@ -41,5 +39,4 @@ for c in cost:
     else:
         ans += 1
         B -= c
-
 print(ans)

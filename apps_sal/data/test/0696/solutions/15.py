@@ -7,7 +7,7 @@ def f(p):
             if y == 1:
                 good = False
                 break
-            y = (y * x) % p
+            y = y * x % p
         if y != 1:
             good = False
         if good:

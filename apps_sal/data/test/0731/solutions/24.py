@@ -1,4 +1,4 @@
-w, m, k = map(int, input().split())
+(w, m, k) = map(int, input().split())
 
 
 def size(a):
@@ -28,7 +28,7 @@ def check(n):
 
 l = m
 r = 10 ** 18
-while (r - l > 1):
+while r - l > 1:
     n = l + (r - l) // 2
     if check(n):
         l = n

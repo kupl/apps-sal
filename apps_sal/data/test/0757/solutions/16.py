@@ -7,7 +7,7 @@ def main():
         return 0
     while i < n:
         ret += 1
-        k += (a[i] - 1)
+        k += a[i] - 1
         if k >= m:
             return ret
         i += 1

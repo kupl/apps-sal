@@ -6,10 +6,10 @@ for c in s:
 b = [0] * 26
 for c in t:
     b[ord(c) - ord('a')] += 1
-if any(a[i] < b[i] for i in range(26)):
-    print("need tree")
+if any((a[i] < b[i] for i in range(26))):
+    print('need tree')
 else:
-    needAutomaton = (len(s) > len(t))
+    needAutomaton = len(s) > len(t)
     needArray = False
     j = 0
     for i in range(len(t)):
@@ -19,8 +19,8 @@ else:
             break
         j = k + 1
     if needAutomaton and needArray:
-        print("both")
+        print('both')
     elif needAutomaton:
-        print("automaton")
+        print('automaton')
     else:
-        print("array")
+        print('array')

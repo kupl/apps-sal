@@ -1,4 +1,4 @@
-t, s, q = [int(i) for i in input().split()]
+(t, s, q) = [int(i) for i in input().split()]
 a = 1
 l = 0
 while t > s:

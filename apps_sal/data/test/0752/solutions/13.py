@@ -21,7 +21,7 @@ while len(num):
         best = -1
         min_el = 10000
         for i in range(len(num2)):
-            if (len(num2[i]) == len(x)):
+            if len(num2[i]) == len(x):
                 ans += 1
                 num2.pop(i)
                 num.pop(0)

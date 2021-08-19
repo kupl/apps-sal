@@ -2,7 +2,7 @@
 answer = 0
 digitCount = len(str(m))
 while w > 0:
-    ceiling = 10**digitCount
+    ceiling = 10 ** digitCount
     numberCountInThisLength = ceiling - m
     cost = digitCount * k * numberCountInThisLength
     if w > cost:
@@ -13,5 +13,4 @@ while w > 0:
     else:
         answer += w / (k * digitCount)
         break
-
 print('%d' % answer)

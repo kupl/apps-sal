@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-m = float("inf")
+m = float('inf')
 for x in range(n):
     e = 0
     for f in range(n):

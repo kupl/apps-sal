@@ -1,7 +1,7 @@
 def GCD(x, y):
-    while (x != y):
+    while x != y:
         if x < y:
-            x, y = y, x
+            (x, y) = (y, x)
         x -= y
     return x
 

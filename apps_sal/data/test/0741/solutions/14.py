@@ -1,13 +1,13 @@
-def MIS(): return map(int, input().split())
+def MIS():
+    return map(int, input().split())
 
 
-n, m = MIS()
+(n, m) = MIS()
 a = [0] + list(MIS()) + [m]
 inter = []
 for i in range(n + 1):
     inter.append(a[i + 1] - a[i])
 S = sum(inter[::2])
-
 opt = S
 cur = S
 mul = 1 if n % 2 == 1 else -1

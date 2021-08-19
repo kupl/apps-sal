@@ -15,12 +15,10 @@ def nod(x, y):
 k = 1
 for i in M:
     k = k * i // nod(k, i)
-
 ans = 0
 for D in range(k):
     for i in range(n):
         if D % M[i] == R[i]:
             ans += 1
             break
-
 print(ans / k)

@@ -1,11 +1,9 @@
-n, x = input().split()
-n, x = int(n), int(x)
-
+(n, x) = input().split()
+(n, x) = (int(n), int(x))
 m1 = 2 ** 17
 m2 = 2 ** 18
-
 if n == 2 and x == 0:
-    print("NO")
+    print('NO')
 elif n == 1:
     a = [x]
 elif n == 2 and x > 0:
@@ -25,5 +23,5 @@ else:
         a.append(m1 ^ x ^ ans)
         a.append(0)
 if not (n == 2 and x == 0):
-    print("YES")
-    print(" ".join([str(e) for e in a]))
+    print('YES')
+    print(' '.join([str(e) for e in a]))

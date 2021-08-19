@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 lo = min([n, m]) + 1
 print(lo)
 for i in range(lo):

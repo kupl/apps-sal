@@ -1,6 +1,6 @@
 def main():
     l = input().split(' ')
-    n, d = int(l[0]), int(l[1])
+    (n, d) = (int(l[0]), int(l[1]))
     k = input().split(' ')
     for x in range(0, n):
         k[x] = int(k[x])
@@ -13,7 +13,7 @@ def main():
     else:
         for x in range(0, n):
             sume = sume + k[x]
-        sume = sume - ((m - n) * d)
+        sume = sume - (m - n) * d
     print(sume)
 
 

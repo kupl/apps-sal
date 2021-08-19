@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if b - a == 1:
     print(a, b)
 elif a == b:

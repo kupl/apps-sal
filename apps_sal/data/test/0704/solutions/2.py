@@ -1,10 +1,9 @@
 import sys
 sys.stdin = open('input.txt')
 sys.stdout = open('output.txt', 'w')
-
 n = int(input())
 a = list(map(int, input().split()))
-r1, c1, r2, c2 = list(map(int, input().split()))
+(r1, c1, r2, c2) = list(map(int, input().split()))
 r1 -= 1
 r2 -= 1
 c1 -= 1

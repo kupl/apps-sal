@@ -1,11 +1,11 @@
-MOD = 10**9 + 7
-n, m = map(int, input().split())
+MOD = 10 ** 9 + 7
+(n, m) = map(int, input().split())
 
 
 def factorization(n):
     retval = []
     tmp = n
-    for i in range(2, int(-(-n**.5 // 1)) + 1):
+    for i in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if tmp % i == 0:
             cnt = 0
             while tmp % i == 0:

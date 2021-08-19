@@ -1,10 +1,8 @@
 n = int(input())
 b = [0] * 8
 a = [int(x) for x in input().split()]
-
 for i in a:
     b[i] += 1
-
 k1 = k2 = k3 = 0
 if b[5] == b[7] == 0:
     if b[3] > 0:
@@ -12,13 +10,11 @@ if b[5] == b[7] == 0:
         b[1] -= b[3]
         k2 = b[3]
         b[3] = 0
-
     if b[6] > 0:
         k1 = b[6]
         b[1] -= b[6]
         b[2] -= b[6]
         b[6] = 0
-
     if b[4] > 0:
         k3 = b[4]
         b[1] -= b[4]

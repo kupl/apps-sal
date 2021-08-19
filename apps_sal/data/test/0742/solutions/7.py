@@ -22,6 +22,6 @@ for i in range(t):
             mega_bul = False
             break
     if mega_bul:
-        print(" ".join(map(str, a)))
+        print(' '.join(map(str, a)))
     else:
         print(-1)

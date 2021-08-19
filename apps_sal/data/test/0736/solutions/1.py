@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = n // 2 + n % 2
 while x <= n and x % m != 0:
     x += 1

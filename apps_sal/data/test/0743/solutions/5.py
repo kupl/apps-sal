@@ -12,5 +12,4 @@ def gcd(x, y):
 g = v[0]
 for each_v in v:
     g = gcd(g, each_v)
-
 print(g * n)

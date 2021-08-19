@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if a == b:
     print(a * 10, b * 10 + 1)
 elif b - 1 == a:

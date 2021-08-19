@@ -1,9 +1,9 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 groups = list(map(int, input().split()))
 temp = m
 buses = 1
 for i in groups:
-    if(i <= temp):
+    if i <= temp:
         temp -= i
     else:
         temp = m - i

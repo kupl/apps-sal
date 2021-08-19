@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 xrr = [int(x) for x in input().split()]
 prr = [int(x) for x in input().split()]
 xrr.sort()

@@ -3,14 +3,13 @@ def prime_factor(n):
         return [[1, 0]]
     arr = []
     temp = n
-    for i in range(2, int(-(-n**0.5 // 1)) + 1):
+    for i in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if temp % i == 0:
             cnt = 0
             while temp % i == 0:
                 cnt += 1
                 temp //= i
             arr.append([i, cnt])
-
     if temp != 1:
         arr.append([temp, 1])
     if arr == []:
@@ -18,7 +17,7 @@ def prime_factor(n):
     return arr
 
 
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 lim = 200000
 inv_t = [-1 for i in range(lim + 1)]
 factrial = [-1 for i in range(lim + 1)]
@@ -32,13 +31,13 @@ def set_inv(max=lim):
 
 
 def mod_inv(x, mod=MOD):
-    y, u, v, _x = mod, 1, 0, x
+    (y, u, v, _x) = (mod, 1, 0, x)
     while y:
         t = _x // y
         _x -= t * y
-        _x, y = y, _x
+        (_x, y) = (y, _x)
         u -= t * v
-        u, v = v, u
+        (u, v) = (v, u)
     u %= mod
     if u < 0:
         u += mod
@@ -68,12 +67,12 @@ def set_factrial(max=lim, mod=MOD):
 def comb(a, b, mod=MOD):
     if factrial[0] == -1:
         set_factrial()
-    return (factrial[a] * factrial_inv[b] * factrial_inv[a - b]) % mod
+    return factrial[a] * factrial_inv[b] * factrial_inv[a - b] % mod
 
 
-n, m = [int(_) for _ in input().split()]
+(n, m) = [int(_) for _ in input().split()]
 ans = 1
-for p, e in prime_factor(m):
+for (p, e) in prime_factor(m):
     ans *= comb(n - 1 + e, e)
     ans %= MOD
 print(ans)

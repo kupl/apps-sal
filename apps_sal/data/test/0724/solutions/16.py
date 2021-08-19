@@ -1,4 +1,4 @@
-n, d = list(map(int, input().split(' ')))
+(n, d) = list(map(int, input().split(' ')))
 a = list(map(int, input().split(' ')))
 c = 0
 t = 0

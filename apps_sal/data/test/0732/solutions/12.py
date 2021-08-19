@@ -1,6 +1,13 @@
-def ii(): return int(input())
-def kk(): return map(int, input().split())
-def ll(): return list(kk())
+def ii():
+    return int(input())
+
+
+def kk():
+    return map(int, input().split())
+
+
+def ll():
+    return list(kk())
 
 
 q = []

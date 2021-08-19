@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dic = {}
 
 
@@ -9,8 +9,8 @@ def ADD(x):
         dic[x] = 1
 
 
-n, m = list(map(int, input().split()))
-for i in range(2, int(m**0.5 + 2)):
+(n, m) = list(map(int, input().split()))
+for i in range(2, int(m ** 0.5 + 2)):
     while m % i == 0:
         ADD(i)
         m //= i
@@ -19,7 +19,7 @@ if m > 1:
 dic = tuple(dic.values())
 ans = 1
 fac = [1]
-for i in range(10**6):
+for i in range(10 ** 6):
     fac.append(fac[-1] * (i + 1) % mod)
 
 

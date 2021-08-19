@@ -1,6 +1,6 @@
 import math
-h, m = list(map(int, input().split()))
-H, D, C, N = list(map(int, input().split()))
+(h, m) = list(map(int, input().split()))
+(H, D, C, N) = list(map(int, input().split()))
 mn = (20 - h) * 60 - m
 if mn < 0:
     mn = 0

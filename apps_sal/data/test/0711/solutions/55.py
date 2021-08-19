@@ -1,7 +1,8 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 class mint:
+
     def __init__(self, i):
         self.i = i
 
@@ -21,7 +22,7 @@ class mint:
         return mint(self.i * (m.i if isinstance(m, mint) else m) % MOD)
 
     def __sub__(self, m):
-        t = self.i - (m.i if isinstance(m, mint) else (m % MOD))
+        t = self.i - (m.i if isinstance(m, mint) else m % MOD)
         if t < 0:
             t += MOD
         return mint(t)
@@ -37,11 +38,10 @@ class mint:
         return repr(self.i)
 
 
-fact_range = 10**6
+fact_range = 10 ** 6
 facts = [1] * (fact_range + 1)
 for i in range(0, fact_range):
     facts[i + 1] = facts[i] * (i + 1) % MOD
-
 ifacts = [1] * (fact_range + 1)
 ifacts[fact_range] = pow(facts[fact_range], MOD - 2, MOD)
 for i in range(fact_range, 0, -1):
@@ -55,7 +55,7 @@ def comb(n, k):
         return facts[n] * ifacts[n - k] % MOD * ifacts[k] % MOD
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 d = []
 p = 2
 while p < 10 ** 5:

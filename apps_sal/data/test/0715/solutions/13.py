@@ -13,12 +13,12 @@ for i in range(4):
         if i != j and 2 * a[i] > a[j]:
             f2 = 0
     if f1:
-        ans = chr(ord("A") + i)
+        ans = chr(ord('A') + i)
         f += 1
     if f2:
-        ans = chr(ord("A") + i)
+        ans = chr(ord('A') + i)
         f += 1
 if f == 1:
     print(ans)
 else:
-    print("C")
+    print('C')

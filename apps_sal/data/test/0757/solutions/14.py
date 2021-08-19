@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = list(map(int, input().split()))
 a = sorted(a, reverse=True)
 for i in range(n + 1):

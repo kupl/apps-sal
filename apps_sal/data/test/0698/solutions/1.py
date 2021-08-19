@@ -1,4 +1,4 @@
-x, k = map(int, input().split())
+(x, k) = map(int, input().split())
 a = [1] * x
 for i in range(k):
     s = input().split()

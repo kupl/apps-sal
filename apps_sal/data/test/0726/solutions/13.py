@@ -10,7 +10,7 @@ def li():
     return list(mi())
 
 
-n, d = mi()
+(n, d) = mi()
 a = li()
 a.sort()
 ans = set()

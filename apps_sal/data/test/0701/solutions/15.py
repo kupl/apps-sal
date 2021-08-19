@@ -23,7 +23,6 @@ def find(s, t):
 
 s = input()
 t = input()
-
 if find(s, t):
     print('automaton')
 elif contain(s, t) and len(s) > len(t):

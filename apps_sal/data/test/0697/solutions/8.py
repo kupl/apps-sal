@@ -9,10 +9,10 @@ def frac(limit):
     fraci[-1] = pow(frac[-1], mod - 2, mod)
     for i in range(-2, -limit - 1, -1):
         fraci[i] = fraci[i + 1] * (limit + i + 1) % mod
-    return frac, fraci
+    return (frac, fraci)
 
 
-frac, fraci = frac(13413)
+(frac, fraci) = frac(13413)
 
 
 def comb(a, b):
@@ -21,5 +21,5 @@ def comb(a, b):
     return frac[a] * fraci[b] * fraci[a - b] % mod
 
 
-N, M = list(map(int, input().split()))
-print(sum(comb(N + M, min(i, M)) for i in range(N)) % mod)
+(N, M) = list(map(int, input().split()))
+print(sum((comb(N + M, min(i, M)) for i in range(N))) % mod)

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = min(n, m)
 print(x + 1)
 for i in range(x + 1):

@@ -1,7 +1,6 @@
-
 def solve():
     s = input().strip('\n')
-    _, year = s.split("'")
+    (_, year) = s.split("'")
     k = len(year)
     year = int(year)
     cover = 0
@@ -9,7 +8,6 @@ def solve():
     for _ in range(k - 1):
         cover += base10
         base10 *= 10
-
     while year < 1989 + cover:
         year += base10
     print(year)

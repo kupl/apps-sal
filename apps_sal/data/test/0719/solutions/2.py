@@ -13,7 +13,6 @@ def gen(num, rem):
 
 for i in range(1, 10):
     gen(str(i), 10 - i)
-
 ls.sort()
 n = int(input())
 print(ls[n - 1])

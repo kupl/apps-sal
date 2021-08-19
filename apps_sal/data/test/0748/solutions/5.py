@@ -1,13 +1,10 @@
 n = int(input())
-
 count = dict()
 for i in range(1, 8):
     count[i] = 0
 solutions = []
-
 for i in map(int, input().split()):
     count[i] += 1
-
 for i in range(n // 3):
     if count[1] > 0:
         if count[2] > 0:
@@ -27,9 +24,8 @@ for i in range(n // 3):
                 count[2] -= 1
                 count[6] -= 1
                 solutions.append([1, 3, 6])
-
 if len(solutions) == n // 3:
-    for a, b, c in solutions:
-        print("{} {} {}".format(a, b, c))
+    for (a, b, c) in solutions:
+        print('{} {} {}'.format(a, b, c))
 else:
     print(-1)

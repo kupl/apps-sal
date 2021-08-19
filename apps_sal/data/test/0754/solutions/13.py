@@ -6,11 +6,11 @@ g = 0
 b = 0
 t = 0
 for i in range(0, len(c)):
-    if c[i] == "R":
+    if c[i] == 'R':
         r = r + 1
         g = 0
         b = 0
-    elif c[i] == "G":
+    elif c[i] == 'G':
         r = 0
         g = g + 1
         b = 0

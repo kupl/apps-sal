@@ -10,7 +10,6 @@ if k <= 3000:
         if sum(b) == 10:
             lst.append(a)
             i += 1
-
 elif k <= 6000:
     a = 1000027
     i = 3000
@@ -41,5 +40,4 @@ else:
         if sum(b) == 10:
             lst.append(a)
             i += 1
-
 print(max(lst))

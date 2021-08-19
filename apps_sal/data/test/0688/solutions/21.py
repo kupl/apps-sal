@@ -2,12 +2,12 @@ from collections import defaultdict as dd
 
 
 def re(s):
-    t = ""
+    t = ''
     for i in s:
-        if(i == "2" or i == "5"):
-            t += "a"
-        elif(i == "6" or i == "9"):
-            t += "b"
+        if i == '2' or i == '5':
+            t += 'a'
+        elif i == '6' or i == '9':
+            t += 'b'
         else:
             t += i
     return t
@@ -18,7 +18,7 @@ def main():
     s = re(input())
     req = dd(int)
     hv = dd(int)
-    ans = 10**9
+    ans = 10 ** 9
     for i in t:
         req[i] += 1
     for j in s:

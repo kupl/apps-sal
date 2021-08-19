@@ -10,7 +10,7 @@ k[3] = a.count(4)
 k[4] = a.count(5)
 k[5] = a.count(6)
 k[6] = a.count(7)
-if (k[0] == k[1] + k[2] == k[3] + k[5]) and (k[4] + k[6] == 0) and (k[2] <= k[5]) and (k[3] <= k[1]):
+if k[0] == k[1] + k[2] == k[3] + k[5] and k[4] + k[6] == 0 and (k[2] <= k[5]) and (k[3] <= k[1]):
     flag = True
 else:
     print(-1)

@@ -1,5 +1,5 @@
 s = input()
-l, *v = (int(x) for x in input().split())
+(l, *v) = (int(x) for x in input().split())
 v.sort(reverse=True)
 count = 0
 while l <= v[0]:

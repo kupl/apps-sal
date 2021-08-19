@@ -5,16 +5,13 @@ import os
 def solve(slimes):
     if len(slimes) == 1:
         return slimes[0]
-
     havePos = False
     haveNeg = False
-
     for s in slimes:
         if s > 0:
             havePos = True
         elif s < 0:
             haveNeg = True
-
     if havePos and haveNeg:
         return sum(map(abs, slimes))
     elif not havePos:

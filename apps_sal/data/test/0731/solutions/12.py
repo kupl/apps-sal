@@ -1,6 +1,6 @@
-w, m, k = input().split()
+(w, m, k) = input().split()
 k = int(w) // int(k)
-l, m = len(m), int(m)
+(l, m) = (len(m), int(m))
 s = pow(10, l)
 if (s - m) * l > k:
     print(k // l)

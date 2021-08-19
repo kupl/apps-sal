@@ -9,7 +9,6 @@ for i in req_arr:
         required_list[6] += 1
     else:
         required_list[i] += 1
-
 for i in arr:
     if i == 5:
         num_list[2] += 1
@@ -18,7 +17,7 @@ for i in arr:
     else:
         num_list[i] += 1
 ans = len(arr)
-for i, j in enumerate(required_list):
+for (i, j) in enumerate(required_list):
     if j > 0:
         ans = min(ans, int(num_list[i] / j))
 print(ans)

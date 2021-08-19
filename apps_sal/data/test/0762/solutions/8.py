@@ -1,4 +1,4 @@
-n, m = map(int, input().strip().split())
+(n, m) = map(int, input().strip().split())
 odd = 0
 even = 0
 l = list(map(int, input().strip().split()))
@@ -9,7 +9,7 @@ for i in range(n - 1):
     else:
         odd = odd + 1
     if odd == even:
-        if (l[i] - l[i + 1]) < 0:
+        if l[i] - l[i + 1] < 0:
             l1.append(l[i + 1] - l[i])
         else:
             l1.append(l[i] - l[i + 1])

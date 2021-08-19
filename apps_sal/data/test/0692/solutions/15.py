@@ -14,7 +14,6 @@ def lcm(x, y):
 n = int(input())
 m = [int(i) for i in input().split()]
 r = [int(i) for i in input().split()]
-
 l = 1
 for i in range(n):
     l = lcm(l, m[i])

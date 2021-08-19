@@ -10,7 +10,7 @@ def li():
     return list(mi())
 
 
-n, M = mi()
+(n, M) = mi()
 a = [0] + li() + [M]
 n = len(a)
 ans = 0
@@ -23,7 +23,6 @@ for i in range(1, n):
         p[i] += a[i] - a[i - 1]
     else:
         q[i] += a[i] - a[i - 1]
-
 ans = q[-1]
 for i in range(1, n):
     if a[i] == a[i - 1] + 1:

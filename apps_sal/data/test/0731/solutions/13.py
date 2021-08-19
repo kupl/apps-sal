@@ -1,4 +1,4 @@
-w, m, k = tuple(map(int, input().split()))
+(w, m, k) = tuple(map(int, input().split()))
 s = len(str(m))
 t = m
 n = 10 ** s

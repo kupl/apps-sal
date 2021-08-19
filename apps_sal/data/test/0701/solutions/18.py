@@ -1,6 +1,6 @@
 import sys
 try:
-    f = open("input.txt")
+    f = open('input.txt')
 except IOError:
     f = sys.stdin
 s = f.readline().rstrip()
@@ -13,23 +13,22 @@ for c in t:
     else:
         needTree = True
 if needTree:
-    print("need tree")
-else:
-    if not t in s:
-        if len(s) > len(t):
-            j = 0
-            both = False
-            for i in range(len(t)):
-                while j < len(s) and s[j] != t[i]:
-                    j += 1
-                if j >= len(s):
-                    both = True
+    print('need tree')
+elif not t in s:
+    if len(s) > len(t):
+        j = 0
+        both = False
+        for i in range(len(t)):
+            while j < len(s) and s[j] != t[i]:
                 j += 1
-            if both:
-                print("both")
-            else:
-                print("automaton")
+            if j >= len(s):
+                both = True
+            j += 1
+        if both:
+            print('both')
         else:
-            print("array")
+            print('automaton')
     else:
-        print("automaton")
+        print('array')
+else:
+    print('automaton')

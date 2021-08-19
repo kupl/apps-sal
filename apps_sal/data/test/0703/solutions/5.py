@@ -1,7 +1,6 @@
-k, a, b, v = list(map(int, input().split(' ')))
+(k, a, b, v) = list(map(int, input().split(' ')))
 ans = 1
 cur_section_count = 1
-
 while a > 0:
     a -= v
     if a <= 0:
@@ -12,5 +11,4 @@ while a > 0:
     else:
         cur_section_count = 1
         ans += 1
-
 print(ans)

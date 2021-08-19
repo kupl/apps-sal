@@ -1,7 +1,7 @@
 n = int(input().rstrip())
 d = []
 for i in range(n):
-    w, h = list(map(int, input().rstrip().split()))
+    (w, h) = list(map(int, input().rstrip().split()))
     d.append([w, h])
 s = '.'
 for i in range(len(d)):

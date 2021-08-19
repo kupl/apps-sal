@@ -1,9 +1,7 @@
 n = int(input())
-
 data = []
 for j in range(n):
     data.append([int(i) for i in input().split()])
-
 s = 1000 * 1000 * 1000 + 1
 for h in range(1, 1001):
     w = 0
@@ -18,8 +16,6 @@ for h in range(1, 1001):
             w += h1
         else:
             w += w1
-
     if ok:
         s = min(s, h * w)
-
 print(s)

@@ -16,9 +16,8 @@ def canHash(n, ln):
             if token == 1:
                 yes.append(i)
                 ans += 1
-        else:
-            if gcd(ln, i) in yes:
-                ans += 1
+        elif gcd(ln, i) in yes:
+            ans += 1
     return ans
 
 

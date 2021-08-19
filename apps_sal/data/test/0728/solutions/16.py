@@ -1,11 +1,9 @@
 import operator
 N = int(input())
 x = [int(i) for i in input().split()]
-
 iters = 0
-
 while True:
-    i, v = max(enumerate(x[1:]), key=operator.itemgetter(1))
+    (i, v) = max(enumerate(x[1:]), key=operator.itemgetter(1))
     if x[0] > max(x[1:]):
         print(iters)
         break

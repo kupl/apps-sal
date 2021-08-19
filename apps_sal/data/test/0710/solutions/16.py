@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-res = 10**8
+res = 10 ** 8
 r = 'ACTG'
 
 

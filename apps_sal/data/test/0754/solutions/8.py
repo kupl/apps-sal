@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-c = " "
+c = ' '
 tmp = 0
 for i in range(len(s)):
     if s[i] != c:

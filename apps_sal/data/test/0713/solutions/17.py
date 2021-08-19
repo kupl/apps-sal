@@ -1,6 +1,5 @@
 import math
 import random
-
 (n, m) = map(int, input().split())
 n_points = n + 1 if n < m else m + 1
 print(n_points)

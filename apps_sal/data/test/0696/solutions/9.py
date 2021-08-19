@@ -3,7 +3,7 @@ def main():
     if p < 5:
         print(1)
         return
-    res, r = 0, list(range(p - 2))
+    (res, r) = (0, list(range(p - 2)))
     for x in range(2, p):
         xx = x
         for _ in r:

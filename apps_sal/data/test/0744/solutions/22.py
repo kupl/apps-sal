@@ -6,9 +6,8 @@ for i in range(1, n):
     if s[i] == 'S':
         if s[i - 1] == 'F':
             S += 1
-    else:
-        if s[i - 1] == 'S':
-            F += 1
+    elif s[i - 1] == 'S':
+        F += 1
 if F > S:
     print('YES')
 else:

@@ -1,14 +1,11 @@
 n = int(input())
-
 hs = []
 ws = []
 for i in range(n):
-    w, h = list(map(int, input().split()))
+    (w, h) = list(map(int, input().split()))
     hs.append(h)
     ws.append(w)
-
 ans = float('inf')
-
 for H in range(1, 1001):
     wr = 0
     pos = True
@@ -27,5 +24,4 @@ for H in range(1, 1001):
     r = H * wr
     if r < ans:
         ans = r
-
 print(ans)

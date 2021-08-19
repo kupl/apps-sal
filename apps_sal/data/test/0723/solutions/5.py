@@ -1,7 +1,7 @@
 n = int(input())
 ar = []
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ar.append((a, b))
 l = 0
 hmin = 0
@@ -17,6 +17,5 @@ for h in range(hmin, 1001):
             l += i[1]
         else:
             l += min(i[0], i[1])
-
     s = min(s, l * h)
 print(s)

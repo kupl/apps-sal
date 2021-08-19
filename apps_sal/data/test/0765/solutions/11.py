@@ -6,10 +6,8 @@ q = (q - 1) / q
 p = s
 ans = 0
 while p < t:
-
     p = p / (1 - q)
-    if ((int(p) + 1) - p) < .005:
+    if int(p) + 1 - p < 0.005:
         p = int(p) + 1
     ans += 1
-
 print(ans)

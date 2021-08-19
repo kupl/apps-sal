@@ -7,7 +7,6 @@ def match(str1, str2):
 
 string = input()
 k = int(input())
-
 length = len(string)
 mark = False
 if k >= length:

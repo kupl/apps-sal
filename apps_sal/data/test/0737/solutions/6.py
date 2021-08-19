@@ -1,11 +1,7 @@
 import math
 n = int(input())
-
-
 b = math.floor(math.sqrt(n))
-
 bb = b * b
-
 if bb == n:
     print(b * 4)
 else:

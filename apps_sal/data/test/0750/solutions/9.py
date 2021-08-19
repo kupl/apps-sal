@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = 2 * n
 b = 5 * n
 c = 8 * n

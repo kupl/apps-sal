@@ -3,7 +3,7 @@ import sys
 
 def solve():
     input = sys.stdin.readline
-    A, B, C, D = map(int, input().split())
+    (A, B, C, D) = map(int, input().split())
     ans = 0
     fib = [0] * (D + 1)
     fib[1] = 1
@@ -23,9 +23,7 @@ def solve():
                 ans += fib[pN]
             else:
                 ans += fib[pN] - fib[psubN]
-
     print(ans)
-
     return 0
 
 

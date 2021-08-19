@@ -1,20 +1,16 @@
 from collections import defaultdict
-
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 prime_list = defaultdict(int)
 p = 2
-while p <= 10**4.5 + 5:
+while p <= 10 ** 4.5 + 5:
     if m % p == 0:
         prime_list[p] += 1
         m //= p
     else:
         p += 1
-
 if m > 1:
     prime_list[m] += 1
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def comb(n, r):
@@ -31,5 +27,4 @@ ans = 1
 for k in prime_list.keys():
     ans *= comb(prime_list[k] + n - 1, prime_list[k])
     ans %= MOD
-
 print(ans)

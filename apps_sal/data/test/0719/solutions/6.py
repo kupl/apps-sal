@@ -7,5 +7,4 @@ while c <= 10000:
         l.append(i)
         c += 1
     i += 9
-
 print(l[k - 1])

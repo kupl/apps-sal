@@ -21,12 +21,11 @@ def can_with_both(src, dst):
 
 s = input()
 t = input()
-
 if can_with_automaton(s, t):
-    print("automaton")
+    print('automaton')
 elif can_with_array(s, t):
-    print("array")
+    print('array')
 elif can_with_both(s, t):
-    print("both")
+    print('both')
 else:
-    print("need tree")
+    print('need tree')

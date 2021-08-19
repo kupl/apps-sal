@@ -4,7 +4,6 @@ n = raw[0]
 d = raw[1]
 a = [int(x) for x in input().split(' ')]
 a = sorted(a)
-
 strat = 0
 best = 200
 going = True
@@ -20,10 +19,8 @@ while strat < 101 and going:
     for i in range(strat):
         if dimof(temp) <= d:
             break
-
         del temp[0]
         c += 1
-
     if going:
         if dimof(temp) <= d:
             going = False
@@ -31,9 +28,7 @@ while strat < 101 and going:
             while dimof(temp) > d:
                 del temp[-1]
                 c += 1
-
     if c < best:
         best = c
     strat += 1
-
 print(best)

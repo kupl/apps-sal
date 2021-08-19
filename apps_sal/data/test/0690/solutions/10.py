@@ -7,7 +7,6 @@ for i in range(len(n)):
     else:
         print('O-|', end='')
         q = n[i]
-
     if q == 0:
         print('-OOOO')
     if q == 1:

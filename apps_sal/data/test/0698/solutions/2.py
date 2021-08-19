@@ -1,5 +1,5 @@
 def main():
-    x, k = map(int, input().split())
+    (x, k) = map(int, input().split())
     A = [0] * x
     mx = x - 1
     for i in range(k):

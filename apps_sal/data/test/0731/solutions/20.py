@@ -1,5 +1,5 @@
-w, m, k = list(map(int, input().split()))
-d, v = len(str(m)), 0
+(w, m, k) = list(map(int, input().split()))
+(d, v) = (len(str(m)), 0)
 c = min(10 ** d - m, w // (k * d))
 while c:
     v += c

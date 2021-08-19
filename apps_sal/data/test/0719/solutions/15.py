@@ -20,5 +20,4 @@ while k > 0:
     i += 9
     if IsPretty(i):
         k -= 1
-
 print(i)

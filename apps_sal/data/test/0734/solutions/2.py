@@ -1,8 +1,6 @@
 import sys
 import math
 3
-
-
 DEBUG = False
 
 
@@ -17,7 +15,6 @@ def dprint(*value, sep=' ', end='\n'):
 
 def solve(N, M, A):
     A.sort(reverse=True)
-
     lh = A[0]
     cnt = 1
     for a in A[1:]:
@@ -29,14 +26,12 @@ def solve(N, M, A):
         else:
             cnt += lh - a
             lh = a
-
     cnt += lh - 1
-
     return sum(A) - cnt
 
 
 def main():
-    N, M = [int(e) for e in inp().split()]
+    (N, M) = [int(e) for e in inp().split()]
     A = [int(e) for e in inp().split()]
     assert len(A) == N
     print(solve(N, M, A))

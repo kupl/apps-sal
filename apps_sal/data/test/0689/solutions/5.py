@@ -14,6 +14,6 @@ for _ in range(int(input())):
             c = 0
             break
     if c == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

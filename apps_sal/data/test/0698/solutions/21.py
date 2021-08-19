@@ -1,5 +1,5 @@
 def main():
-    x, k = map(int, input().split())
+    (x, k) = map(int, input().split())
     l = [(0, 0)]
     for _ in range(k):
         tmp = list(map(int, input().split()))
@@ -7,7 +7,7 @@ def main():
         l.sort()
     l.append((x, x))
     mi = ma = 0
-    for (a, b), (c, _) in zip(l, l[1:]):
+    for ((a, b), (c, _)) in zip(l, l[1:]):
         x = c - b
         mi += x // 2
         ma += x - 1

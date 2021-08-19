@@ -1,5 +1,4 @@
-n, m = map(int, list(input().split()))
-
+(n, m) = map(int, list(input().split()))
 min_v = n // 2 + n % 2
 while min_v % m != 0:
     min_v += 1

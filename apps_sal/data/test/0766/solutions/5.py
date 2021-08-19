@@ -20,8 +20,7 @@ elif s == 2:
         print('Yes')
     else:
         print('No')
+elif q >= 1:
+    print('Yes')
 else:
-    if q >= 1:
-        print('Yes')
-    else:
-        print('No')
+    print('No')

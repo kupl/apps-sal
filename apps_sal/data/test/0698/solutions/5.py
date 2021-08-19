@@ -1,4 +1,4 @@
-x, k = map(int, input().split())
+(x, k) = map(int, input().split())
 rounds = [False for i in range(x + 1)]
 for i in range(k):
     line = list(map(int, input().split()))
@@ -11,7 +11,7 @@ maximum = rounds[1:x].count(False)
 minimum = 0
 i = x - 1
 while i > 0:
-    if i > 1 and rounds[i] == False and rounds[i - 1] == False:
+    if i > 1 and rounds[i] == False and (rounds[i - 1] == False):
         i -= 2
         minimum += 1
     elif rounds[i] == False:

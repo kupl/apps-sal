@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 s = input()
 k = s[a - 1]
 t = s[b - 1]

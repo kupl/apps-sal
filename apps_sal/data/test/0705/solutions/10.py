@@ -8,14 +8,12 @@ def solution():
     dicy = {}
     for _y in y:
         dicx[_y] = True
-
     ans = 0
     for _x in dicx:
         for _y in dicy:
             current = _x ^ _y
             if current in dicx or current in dicx:
                 ans += 1
-
     if ans % 2 == 0:
         print('Karen')
     else:

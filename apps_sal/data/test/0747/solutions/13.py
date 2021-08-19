@@ -1,6 +1,4 @@
-
-n, x = (int(x) for x in input().split())
-
+(n, x) = (int(x) for x in input().split())
 cs = []
 for i in range(n):
     cs.append([int(x) for x in input().split()])
@@ -14,17 +12,15 @@ def try_eat(t0):
     while True:
         m0 = 0
         i0 = -1
-        for i, (t, h, m) in enumerate(cs):
-            if t != t0 and h <= h0 and m > m0 and i not in used:
+        for (i, (t, h, m)) in enumerate(cs):
+            if t != t0 and h <= h0 and (m > m0) and (i not in used):
                 m0 = m
                 i0 = i
         if i0 == -1:
             break
-
         used.add(i0)
         h0 += cs[i0][2]
         t0 = 1 - t0
-
     return len(used)
 
 

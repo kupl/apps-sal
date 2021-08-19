@@ -1,10 +1,8 @@
 import sys
-
-
 try:
     while True:
         dp = [[0 for j in range(2001)] for i in range(2001)] * 2001
-        n, p, t = map(float, input().split(" "))
+        (n, p, t) = map(float, input().split(' '))
         n = int(n)
         t = int(t)
         dp[0][0] = 1

@@ -8,6 +8,6 @@ for i in range(n):
         if a[i] ^ b[j] in shit:
             counter += 1
 if counter % 2 == 0:
-    print("Karen")
+    print('Karen')
 else:
-    print("Koyomi")
+    print('Koyomi')

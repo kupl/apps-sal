@@ -1,4 +1,4 @@
-t, s, q = list(map(int, input().split()))
+(t, s, q) = list(map(int, input().split()))
 lecture = 0
 sol = 1
 pas = 1 - 1 / q

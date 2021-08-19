@@ -7,5 +7,4 @@ for i in range(n, min(4 * n, n + 1000)):
         if i % j == 0:
             mn = min(mn, 2 * (j + i // j))
             break
-
 print(mn)

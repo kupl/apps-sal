@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = [[abs(0 - a[0]), 0]]
 li = b[0][0]

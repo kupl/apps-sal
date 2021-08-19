@@ -4,7 +4,7 @@ s = s + '?' * k
 for i in range(len(s) // 2 + 1):
     a = [0] * len(s)
     for j in range(len(s) - i):
-        if (s[j] == s[j + i]) or (s[j + i] == '?'):
+        if s[j] == s[j + i] or s[j + i] == '?':
             a[j] = 1
     c = 0
     mx = 0

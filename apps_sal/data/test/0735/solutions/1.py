@@ -3,11 +3,11 @@ a = list(map(int, input().split()))
 s = a.copy()
 s.sort()
 if a == s:
-    print("yes\n1 1")
+    print('yes\n1 1')
 else:
     _First = -1
     _Last = -1
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if s[i] != x:
             if _First == -1:
                 _First = i
@@ -23,7 +23,7 @@ else:
         __First += 1
         __Last -= 1
     if _b:
-        print("yes")
+        print('yes')
         print(str(_First + 1), str(_Last + 1))
     else:
-        print("no")
+        print('no')

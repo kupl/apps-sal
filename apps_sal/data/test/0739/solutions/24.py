@@ -20,12 +20,12 @@ def mat_pow(A, n, m):
     return mat_prod(B, B, m)
 
 
-L, a, b, m = map(int, input().split())
+(L, a, b, m) = map(int, input().split())
 ans = 0
 s = a
 for k in range(1, 19):
-    l = (10**(k - 1) - a + b - 1) // b
-    r = (10**k - a + b - 1) // b
+    l = (10 ** (k - 1) - a + b - 1) // b
+    r = (10 ** k - a + b - 1) // b
     l = max(l, 0)
     r = min(r, L)
     if l >= r:
@@ -34,5 +34,5 @@ for k in range(1, 19):
     X = [[ans, s, 1]]
     Y = [[pow(10, k, m), 0, 0], [1, 1, 0], [0, b, 1]]
     Z = mat_prod(X, mat_pow(Y, d, m), m)
-    ans, s = Z[0][:2]
+    (ans, s) = Z[0][:2]
 print(ans)

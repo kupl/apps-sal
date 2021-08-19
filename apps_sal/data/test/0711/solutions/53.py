@@ -1,19 +1,16 @@
-N, M = map(int, input().split())
-ans = int(M**0.5 + 10) * [N - 1]
-mod = 10**9 + 7
+(N, M) = map(int, input().split())
+ans = int(M ** 0.5 + 10) * [N - 1]
+mod = 10 ** 9 + 7
 p = 2
 O = M
-
-while p <= O**0.5:
+while p <= O ** 0.5:
     if M % p == 0:
         M = M // p
         ans[p] += 1
     else:
         p += 1
-
 if M != 1:
     ans[-1] += 1
-
 out = 1
 for r in ans:
     hoge = 1
@@ -22,5 +19,4 @@ for r in ans:
         hoge //= i + 1
     out *= hoge
     out %= mod
-
 print(out)

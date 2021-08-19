@@ -1,6 +1,5 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
-
 result = 0
 cur = 0
 for i in a:

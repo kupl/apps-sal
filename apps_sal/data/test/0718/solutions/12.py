@@ -9,5 +9,4 @@ def has_eight(x):
 while not has_eight(x):
     x += 1
     c += 1
-
 print(c)

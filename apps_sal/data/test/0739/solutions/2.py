@@ -17,7 +17,6 @@ def dot(A, B, mod):
 def rec_pow(k, n, mod):
     if n == 1:
         return k
-
     k2 = dot(k, k, mod)
     if n % 2 == 0:
         return rec_pow(k2, n // 2, mod)
@@ -27,29 +26,23 @@ def rec_pow(k, n, mod):
 
 def main():
     input = sys.stdin.readline
-    L, A, B, M = list(map(int, input().split()))
-
+    (L, A, B, M) = list(map(int, input().split()))
     s = [[0, A % M, 1]]
     for d in range(1, 19):
-        n1 = min(max(0, (10**d - 1 - A) // B + 1), L)
-        n0 = min(max(0, (10**(d - 1) - 1 - A) // B + 1), L)
+        n1 = min(max(0, (10 ** d - 1 - A) // B + 1), L)
+        n0 = min(max(0, (10 ** (d - 1) - 1 - A) // B + 1), L)
         n = n1 - n0
         if n == 0:
             continue
-
-        k = [[pow(10, d, M), 0, 0],
-             [1, 1, 0],
-             [0, B % M, 1]]
+        k = [[pow(10, d, M), 0, 0], [1, 1, 0], [0, B % M, 1]]
         s = dot(s, rec_pow(k, n, M), M)
-
         if n1 >= L:
             break
-
     return s[0][0]
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

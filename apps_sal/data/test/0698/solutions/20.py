@@ -1,7 +1,7 @@
-x, k = [int(x) for x in input().split()]
+(x, k) = [int(x) for x in input().split()]
 used = [0, x]
 for i in range(k):
-    a, *l = [int(x) for x in input().split()]
+    (a, *l) = [int(x) for x in input().split()]
     used += l
 used.sort()
 m = M = 0

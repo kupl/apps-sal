@@ -7,7 +7,7 @@ def lcd(a, b):
 
 
 def __starting_point():
-    x, y, a, b = [int(x) for x in input().split()]
+    (x, y, a, b) = [int(x) for x in input().split()]
     l = lcd(x, y)
     r = a % l
     if r == 0:

@@ -1,6 +1,6 @@
 from collections import defaultdict
-MOD = 10**9 + 7
-UPPERLIMIT = 2 * 10**5
+MOD = 10 ** 9 + 7
+UPPERLIMIT = 2 * 10 ** 5
 MODMUL = [1, 1] + [0] * (UPPERLIMIT - 1)
 for i in range(2, UPPERLIMIT + 1):
     MODMUL[i] = MODMUL[i - 1] * i % MOD
@@ -10,10 +10,10 @@ for i in range(UPPERLIMIT, 0, -1):
 
 
 def MODCOMB(n, r):
-    return (((MODMUL[n] * MODDIV[r]) % MOD) * MODDIV[n - r]) % MOD
+    return MODMUL[n] * MODDIV[r] % MOD * MODDIV[n - r] % MOD
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 
 
 def PrimeFactorization(x):
@@ -32,5 +32,4 @@ ans = 1
 for x in primenums.values():
     ans *= MODCOMB(N + x - 1, N - 1)
     ans %= MOD
-
 print(ans)

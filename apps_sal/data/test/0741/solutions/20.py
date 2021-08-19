@@ -1,9 +1,9 @@
 def main():
-    n, M = list(map(int, input().split()))
+    (n, M) = list(map(int, input().split()))
     seq = [0] + list(map(int, input().split())) + [M]
     seq = [seq[i + 1] - seq[i] for i in range(n + 1)]
     ret = [sum([seq[i] for i in range(n + 1) if i % 2 == 0])]
-    seq = [seq[i] * ((-1) ** i) for i in range(n + 1)]
+    seq = [seq[i] * (-1) ** i for i in range(n + 1)]
     s = 0
     s0 = sum(seq)
     for i in range(n + 1):

@@ -1,6 +1,6 @@
 n = int(input())
 a = input()
-s, f = 0, 0
+(s, f) = (0, 0)
 for i in range(n - 1):
     if a[i] == 'S' and a[i + 1] == 'F':
         f += 1

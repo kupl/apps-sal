@@ -12,7 +12,7 @@ def comb(n, k, mod=10 ** 9 + 7):
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     factorization = defaultdict(int)
     while not m % 2:
         factorization[2] += 1
@@ -28,7 +28,7 @@ def main():
         factorization[m] += 1
     ans = 1
     mod = 10 ** 9 + 7
-    for _, c in list(factorization.items()):
+    for (_, c) in list(factorization.items()):
         ans *= comb(c + n - 1, c, mod)
         ans %= mod
     print(ans)

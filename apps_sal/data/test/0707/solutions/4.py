@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = list(map(int, input().split()))
 p = list(map(int, input().split()))
 d = [x[i] - x[i - 1] for i in range(1, n)]

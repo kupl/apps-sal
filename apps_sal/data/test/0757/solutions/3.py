@@ -8,7 +8,7 @@ def result(n, m, k, l):
     f = 0
     l.sort()
     l.reverse()
-    while(k < m):
+    while k < m:
         if l == []:
             return -1
         f += 1

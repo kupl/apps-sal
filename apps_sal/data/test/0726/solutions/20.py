@@ -1,4 +1,4 @@
-n, m = [int(el) for el in input().split()]
+(n, m) = [int(el) for el in input().split()]
 col = 2
 a = [int(el) for el in input().split()]
 for i in range(n - 1):

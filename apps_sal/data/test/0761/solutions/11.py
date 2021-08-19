@@ -14,9 +14,8 @@ for i in range(len(arr)):
 m = min(b)
 if n == 1:
     print(arr[0])
+elif cp > 0 and cn > 0:
+    print(sum(b))
 else:
-    if cp > 0 and cn > 0:
-        print(sum(b))
-    else:
-        nrt = 2 * (min(b))
-        print(sum(b) - nrt)
+    nrt = 2 * min(b)
+    print(sum(b) - nrt)

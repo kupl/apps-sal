@@ -1,9 +1,9 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 k = [[], []]
 
 
 def add(s):
-    t, h, m = map(int, s.split())
+    (t, h, m) = map(int, s.split())
     k[t].append([h, m])
 
 
@@ -18,7 +18,7 @@ def calc(t):
         w = 0
         id = 0
         for i in range(len(k[t])):
-            if mark[t][i] == False and w < k[t][i][1] and cur >= k[t][i][0]:
+            if mark[t][i] == False and w < k[t][i][1] and (cur >= k[t][i][0]):
                 w = k[t][i][1]
                 id = i
         if w == 0:

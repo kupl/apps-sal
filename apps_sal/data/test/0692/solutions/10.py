@@ -14,7 +14,7 @@ for mod in m:
     result = result * mod // gcd(result, mod)
 good = 0
 for i in range(result):
-    for mod, car in zip(m, r):
+    for (mod, car) in zip(m, r):
         if i % mod == car:
             good += 1
             break

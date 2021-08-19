@@ -1,11 +1,10 @@
 3
-
-x, y, a, b = tuple(map(int, input().split()))
+(x, y, a, b) = tuple(map(int, input().split()))
 
 
 def gcd(i, j):
     while i:
-        i, j = j % i, i
+        (i, j) = (j % i, i)
     return j
 
 

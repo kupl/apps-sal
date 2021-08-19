@@ -1,5 +1,4 @@
 from math import *
-
 zzz = int(input())
 for zz in range(zzz):
     n = int(input())
@@ -26,7 +25,6 @@ for zz in range(zzz):
                 break
             else:
                 a[2 * i + 1] = sl.pop(j)
-
     if ha:
         print(' '.join(map(str, a)))
     else:

@@ -26,7 +26,7 @@ def compare_matrices(first, second):
 def wrap(first, second):
     if compare_matrices(first, second) == True:
         return 'Yes'
-    hold_first = first[::]
+    hold_first = first[:]
     for _ in range(3):
         first = rotate_90(first)
         if compare_matrices(first, second) == True:

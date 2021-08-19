@@ -17,7 +17,6 @@ if f != -1:
         c += a[l:f - 1:-1]
     else:
         c += a[l::-1]
-
     c += a[l + 1:]
 else:
     f = 0

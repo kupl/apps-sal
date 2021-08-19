@@ -1,4 +1,4 @@
-x, y, a, b = list(map(int, input().split()))
+(x, y, a, b) = list(map(int, input().split()))
 count = 0
 A = 2 * [0]
 for i in range(a, b + 1):

@@ -8,6 +8,6 @@ def lcm(a, b):
     return a * b / gcd(a, b)
 
 
-x, y, a, b = list(map(int, input().split(' ')))
+(x, y, a, b) = list(map(int, input().split(' ')))
 l = lcm(x, y)
 print(int(b // l - (a - 1) // l))

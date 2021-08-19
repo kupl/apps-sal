@@ -11,11 +11,10 @@ if len(s) == len(t):
         if x[i] != y[i]:
             ntree = True
             break
-
     if ntree:
-        print("need tree")
+        print('need tree')
     else:
-        print("array")
+        print('array')
 else:
     x = list(s)
     y = list(t)
@@ -34,7 +33,7 @@ else:
             break
         j += 1
     if not nboth:
-        print("automaton")
+        print('automaton')
     else:
         x.sort()
         y.sort()
@@ -51,6 +50,6 @@ else:
                 break
             j += 1
         if not ntree:
-            print("both")
+            print('both')
         else:
-            print("need tree")
+            print('need tree')

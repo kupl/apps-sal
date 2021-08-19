@@ -1,4 +1,4 @@
-l = [int(i) for i in input().split(" ")]
+l = [int(i) for i in input().split(' ')]
 k = l[0]
 a = l[1]
 b = l[2]
@@ -9,7 +9,7 @@ while a > 0:
     box += 1
     sections = 1
     a -= v
-    while a > 0 and sections < k and divs < b:
+    while a > 0 and sections < k and (divs < b):
         divs += 1
         sections += 1
         a -= v

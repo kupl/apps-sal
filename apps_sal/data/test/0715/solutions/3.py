@@ -14,6 +14,6 @@ for i in range(4):
         cnt += 1
         res = i
 if cnt == 1:
-    print(["A", "B", "C", "D"][res])
+    print(['A', 'B', 'C', 'D'][res])
 else:
-    print("C")
+    print('C')

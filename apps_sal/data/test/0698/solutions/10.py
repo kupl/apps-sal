@@ -1,10 +1,10 @@
-a = [int(i) for i in input().split(" ")]
+a = [int(i) for i in input().split(' ')]
 present = a[0]
 number = a[1]
 l = [0 for i in range(present - 1)]
 while number:
-    a = [int(i) for i in input().split(" ")]
-    if(a[0] == 2):
+    a = [int(i) for i in input().split(' ')]
+    if a[0] == 2:
         l[a[1] - 1] = 2
     else:
         l[a[1] - 1] = 2

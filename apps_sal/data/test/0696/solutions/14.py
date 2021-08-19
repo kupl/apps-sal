@@ -7,7 +7,7 @@ def toi(n):
             while pre % i == 0:
                 c += 1
                 pre //= i
-            ans *= (i - 1) * (i**(c - 1))
+            ans *= (i - 1) * i ** (c - 1)
         i += 1
     return int(ans)
 

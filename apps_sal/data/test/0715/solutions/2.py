@@ -11,4 +11,4 @@ for i in range(4):
 if len(var) == 1:
     print(chr(ord('A') + var[0]))
 else:
-    print("C")
+    print('C')

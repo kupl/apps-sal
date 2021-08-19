@@ -30,12 +30,11 @@ def solve(currentT):
 
 
 candy = []
-n, x = tuple(map(int, input().split()))
+(n, x) = tuple(map(int, input().split()))
 for i in range(n):
     temp = list(map(int, input().split()))
     if temp[0] > 0:
         temp[0] = 1
     candy.append(temp)
 candy = tuple(candy)
-
 print(max(solve(0), solve(1)))

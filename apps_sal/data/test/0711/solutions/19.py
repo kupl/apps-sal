@@ -1,15 +1,18 @@
 import collections
 import sys
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 
 
-N, M = LI()
+def LI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+(N, M) = LI()
 ans = 1
 
 
 def prime_factor(num):
     prime_factor = collections.defaultdict(int)
-    for i in range(2, int(num**0.5) + 1):
+    for i in range(2, int(num ** 0.5) + 1):
         while num % i == 0:
             prime_factor[i] += 1
             num //= i
@@ -30,6 +33,6 @@ def nCr(n, r, mod):
 
 
 for v in list(prime_factor(M).values()):
-    ans *= nCr(v + N - 1, v, 10**9 + 7)
-    ans %= 10**9 + 7
+    ans *= nCr(v + N - 1, v, 10 ** 9 + 7)
+    ans %= 10 ** 9 + 7
 print(ans)

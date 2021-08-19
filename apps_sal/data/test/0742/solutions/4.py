@@ -7,9 +7,9 @@ for t in range(int(input())):
         visited[i - 1] = 1
     for i in l:
         temp = i
-        while (temp < 2 * n and visited[temp]):
+        while temp < 2 * n and visited[temp]:
             temp += 1
-        if (temp >= 2 * n):
+        if temp >= 2 * n:
             res = [-1]
             break
         visited[temp] = 1

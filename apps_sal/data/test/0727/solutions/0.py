@@ -12,7 +12,7 @@ def main():
     r = [0] * (n + 1)
     k = [0] * (n + 1)
     pa = [0] * (n + 1)
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if x == a[p]:
             c += 1
         else:
@@ -33,16 +33,16 @@ def main():
     heapify(q)
     ans = 0
     while len(q):
-        c, p = heappop(q)
+        (c, p) = heappop(q)
         c = -c
         if k[p] > c:
             continue
         ans += 1
         ls = l[p]
         rs = r[pa[p]]
-        if ls >= 0 and rs < n and a[ls] == a[rs]:
+        if ls >= 0 and rs < n and (a[ls] == a[rs]):
             nc = k[ls] + k[rs]
-            nl, nr = pa[ls], pa[rs]
+            (nl, nr) = (pa[ls], pa[rs])
             k[nl] = k[nr] = k[ls] = k[rs] = nc
             pa[nr] = nl
             pa[nl] = nr

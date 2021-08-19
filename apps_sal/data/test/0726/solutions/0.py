@@ -1,7 +1,8 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-n, d = read()
+(n, d) = read()
 x = sorted(read())
 ans = 2
 for i in range(1, n):

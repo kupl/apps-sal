@@ -8,7 +8,7 @@ def main(n, nums):
         w = nums.count(6)
         e = nums.count(3)
         r = nums.count(2)
-        if r != q + w - e or w != e + r - q or e > w or q > r:
+        if r != q + w - e or w != e + r - q or e > w or (q > r):
             return -1
         s += '1 2 4\n' * q
         s += '1 2 6\n' * (ex - q - e)
@@ -19,7 +19,6 @@ def main(n, nums):
 def init():
     n = int(input())
     nums = list(map(int, input().split()))
-
     print(main(n, nums))
 
 

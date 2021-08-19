@@ -1,5 +1,4 @@
 from fractions import gcd
-
 n = int(input())
 m = list(map(int, input().split()))
 r = list(map(int, input().split()))

@@ -1,6 +1,6 @@
 def nod(a, b):
     for i in range(min(a, b), 0, -1):
-        if (a % i == 0 and b % i == 0):
+        if a % i == 0 and b % i == 0:
             return i
 
 
@@ -14,7 +14,6 @@ r = [int(x) for x in input().split()]
 ans = 1
 for i in range(n):
     ans = nok(ans, m[i])
-
 x = 0
 for d in range(ans):
     for i in range(n):

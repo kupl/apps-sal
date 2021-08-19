@@ -8,6 +8,6 @@ for i in range(n - 1):
     if s[i] == 'F' and s[i + 1] == 'S':
         b += 1
 if a > b:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

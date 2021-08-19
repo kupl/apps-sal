@@ -1,4 +1,4 @@
-q, w = list(map(int, input().split()))
+(q, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 d = []
 k = 0

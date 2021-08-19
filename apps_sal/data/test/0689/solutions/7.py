@@ -6,7 +6,7 @@ from heapq import *
 from bisect import *
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10 ** 5)
 
 
 def lis():
@@ -26,7 +26,7 @@ def st1():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     n = inp()
     co = [0] * 26
@@ -36,10 +36,10 @@ while(t):
             co[ord(j) - 97] += 1
     fl = 0
     for i in range(26):
-        if(co[i] % n == 0):
+        if co[i] % n == 0:
             continue
         fl = 1
     s = 'YES'
-    if(fl):
+    if fl:
         s = 'NO'
     print(s)

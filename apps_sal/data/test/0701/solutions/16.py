@@ -37,10 +37,10 @@ def isBoth(s, t):
 s = input()
 t = input()
 if isAuto(s, t):
-    print("automaton")
+    print('automaton')
 elif isArray(s, t):
-    print("array")
+    print('array')
 elif isBoth(s, t):
-    print("both")
+    print('both')
 else:
-    print("need tree")
+    print('need tree')

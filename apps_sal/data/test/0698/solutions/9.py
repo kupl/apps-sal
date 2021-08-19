@@ -1,4 +1,4 @@
-x, k = map(int, input().split())
+(x, k) = map(int, input().split())
 p = [1] * 4001
 p[0] = p[x] = 0
 for i in range(k):

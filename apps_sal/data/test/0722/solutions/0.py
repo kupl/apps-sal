@@ -1,7 +1,7 @@
 def main():
     l = []
     for i in range(int(input())):
-        y, n, m = 1989, 0, 1
+        (y, n, m) = (1989, 0, 1)
         for d in input()[-1:3:-1]:
             n += (ord(d) - 48) * m
             m *= 10

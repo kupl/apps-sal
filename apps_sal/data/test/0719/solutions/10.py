@@ -3,7 +3,7 @@ k = int(input())
 
 def valid(l):
     s = 0
-    for i, n in enumerate(l):
+    for (i, n) in enumerate(l):
         s += n
         if s > 10:
             return i + 1
@@ -33,7 +33,7 @@ while True:
     else:
         if r > 0:
             r = len(d) - r
-        i = ((i // (10**r)) + 1) * (10**r)
+        i = (i // 10 ** r + 1) * 10 ** r
     if n == k:
         print(i - 1)
         break
