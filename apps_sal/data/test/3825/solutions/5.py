@@ -1,17 +1,13 @@
 import itertools
-
-STC = [
-    [0, 4, 0, 5],
-    [1, 0, 8, 0],
-    [1, 0, 0, 5]]
+STC = [[0, 4, 0, 5], [1, 0, 8, 0], [1, 0, 0, 5]]
 
 
 def ch(N, K):
     ans = 1
     for k in range(K):
-        ans *= (N - k)
+        ans *= N - k
     for k in range(K):
-        ans //= (k + 1)
+        ans //= k + 1
     return ans
 
 
@@ -26,7 +22,6 @@ for s in range(1, len(STC) + 1):
                 aq[i] = max(aq[i], c[i])
         tot = sum(aq)
         if N >= tot:
-            # print(aq,cb)
             ans += sgn * ch(N - tot + 3, 3)
     sgn *= -1
 print(ans)

@@ -2,21 +2,11 @@ import heapq
 
 
 class Solution:
+
     def letterCombinations(self, digits):
-        digit_map = {'1': [""],
-                     '2': ['a', 'b', 'c'],
-                     '3': ['d', 'e', 'f'],
-                     '4': ['g', 'h', 'i'],
-                     '5': ['j', 'k', 'l'],
-                     '6': ['m', 'n', 'o'],
-                     '7': ['p', 'q', 'r', 's'],
-                     '8': ['t', 'u', 'v'],
-                     '9': ['w', 'x', 'y', 'z'],
-                     '0': [""]}
+        digit_map = {'1': [''], '2': ['a', 'b', 'c'], '3': ['d', 'e', 'f'], '4': ['g', 'h', 'i'], '5': ['j', 'k', 'l'], '6': ['m', 'n', 'o'], '7': ['p', 'q', 'r', 's'], '8': ['t', 'u', 'v'], '9': ['w', 'x', 'y', 'z'], '0': ['']}
         combs = []
-        # Queue will hold a list of tuples mapping to how many characters are already mapped,
-        # and the current converted string!
-        letter_q = [(0, "")]
+        letter_q = [(0, '')]
         if not digits:
             return []
         while letter_q:

@@ -1,44 +1,31 @@
-
-
 """
 NTC here
 """
 import sys
 inp = sys.stdin.readline
-def input(): return inp().strip()
-# flush= sys.stdout.flush
-# import threading
-# sys.setrecursionlimit(10**6)
-# threading.stack_size(2**26)
 
 
-def iin(): return int(input())
+def input():
+    return inp().strip()
 
 
-def lin(): return list(map(int, input().split()))
+def iin():
+    return int(input())
+
+
+def lin():
+    return list(map(int, input().split()))
 
 
 def main():
     T = iin()
     while T:
         T -= 1
-        n, m = lin()
+        (n, m) = lin()
         a = lin()
         ans = sum(a)
         print(min(ans, m))
 
 
 main()
-
-# threading.Thread(target=main).start()
-
-
-"""
-1
-5
-1 3
-1 4
-1 6
-2 6
-0 5
-"""
+'\n1\n5\n1 3\n1 4\n1 6\n2 6\n0 5\n'

@@ -1,4 +1,3 @@
-
 def check(gears):
     for i in range(0, len(gears)):
         if gears[i] != i:
@@ -6,7 +5,6 @@ def check(gears):
     return True
 
 
-# print((0-1)%3)
 n = int(input())
 gears = [int(i) for i in input().split()]
 saved = set()
@@ -22,8 +20,7 @@ while True:
             gears[i] = (gears[i] - 1) % n
     if check(gears):
         break
-    # print("HI")
 if check(gears):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

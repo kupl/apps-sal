@@ -1,8 +1,5 @@
-# 入力
-A, op, B = list(map(str, input().split()))
-
-# +なら足す、-なら引く
+(A, op, B) = list(map(str, input().split()))
 if op == '+':
-    print((int(A) + int(B)))
+    print(int(A) + int(B))
 elif op == '-':
-    print((int(A) - int(B)))
+    print(int(A) - int(B))

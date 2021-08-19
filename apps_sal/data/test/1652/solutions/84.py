@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -9,7 +8,8 @@ from functools import lru_cache
 import heapq
 
 
-class cin():
+class cin:
+
     def int():
         return int(sys.stdin.readline().rstrip())
 
@@ -29,14 +29,15 @@ class cin():
         return [int(input()) for i in range(n)]
 
 
-class Math():
+class Math:
+
     def gcd(a, b):
         if b == 0:
             return a
         return Math.gcd(b, a % b)
 
     def lcm(a, b):
-        return (a * b) // Math.gcd(a, b)
+        return a * b // Math.gcd(a, b)
 
     def roundUp(a, b):
         return -(-a // b)
@@ -45,15 +46,15 @@ class Math():
         return Math.roundUp(a, x) * x
 
     def toLowerMultiple(a, x):
-        return (a // x) * x
+        return a // x * x
 
     def nearPow2(n):
         if n <= 0:
             return 0
-        if n & (n - 1) == 0:
+        if n & n - 1 == 0:
             return n
         ret = 1
-        while(n > 0):
+        while n > 0:
             ret <<= 1
             n >>= 1
         return ret
@@ -72,24 +73,24 @@ class Math():
         return True
 
 
-MOD = int(1e09) + 7
+MOD = int(1000000000.0) + 7
 
 
 def main():
     S = cin.string()
     while len(S) != 0:
-        if S[-5:] == "dream":
+        if S[-5:] == 'dream':
             S = S[:-5]
-        elif S[-7:] == "dreamer":
+        elif S[-7:] == 'dreamer':
             S = S[:-7]
-        elif S[-5:] == "erase":
+        elif S[-5:] == 'erase':
             S = S[:-5]
-        elif S[-6:] == "eraser":
+        elif S[-6:] == 'eraser':
             S = S[:-6]
         else:
-            print("NO")
+            print('NO')
             return
-    print("YES")
+    print('YES')
     return
 
 

@@ -1,26 +1,15 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
-
-#n,*a = map(int,readline().split())
-
-"""
-a = "dream"[::-1]
-b = "dreamer"[::-1]
-c = "erase"[::-1]
-d = "eraser"[::-1]
-"""
+'\na = "dream"[::-1]\nb = "dreamer"[::-1]\nc = "erase"[::-1]\nd = "eraser"[::-1]\n'
 s = [*input()]
-a = [*"dream"]
-b = [*"dreamer"]
-c = [*"erase"]
-d = [*"eraser"]
-
+a = [*'dream']
+b = [*'dreamer']
+c = [*'erase']
+d = [*'eraser']
 while True:
     if not s:
-        print("YES")
+        print('YES')
         break
     elif s[-5:] == a:
         for _ in range(5):
@@ -35,5 +24,5 @@ while True:
         for _ in range(6):
             s.pop()
     else:
-        print("NO")
+        print('NO')
         break

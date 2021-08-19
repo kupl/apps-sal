@@ -1,19 +1,27 @@
-# coding: utf-8
-
-def YESNO(ans, yes="YES", no="NO"):
-    print(([no, yes][ans]))
+def YESNO(ans, yes='YES', no='NO'):
+    print([no, yes][ans])
 
 
-def II(): return int(input())
-def MI(): return list(map(int, input().split()))
-def MIL(): return list(MI())
-def MIS(): return input().split()
+def II():
+    return int(input())
+
+
+def MI():
+    return list(map(int, input().split()))
+
+
+def MIL():
+    return list(MI())
+
+
+def MIS():
+    return input().split()
 
 
 def check(s):
-    if s == "":
+    if s == '':
         return True
-    if s[:5] in ["dream", "erase"]:
+    if s[:5] in ['dream', 'erase']:
         return True
     return False
 
@@ -23,9 +31,9 @@ def main():
     i = 0
     l = len(S)
     while i < l:
-        if S[i:i + 7] == "dreamer" and check(S[i + 7:]):
+        if S[i:i + 7] == 'dreamer' and check(S[i + 7:]):
             i += 7
-        elif S[i:i + 6] == "eraser" and check(S[i + 6:]):
+        elif S[i:i + 6] == 'eraser' and check(S[i + 6:]):
             i += 6
         elif check(S[i:]):
             i += 5
