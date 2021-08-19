@@ -19,11 +19,6 @@ class Cashier:
         for i in range(len(product)):
             summoney += self.prices[self.products.index(product[i])] * amount[i]
         if applied:
-            return summoney - (summoney * self.discount) / 100
+            return summoney - summoney * self.discount / 100
         else:
             return summoney
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

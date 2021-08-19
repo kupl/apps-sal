@@ -1,9 +1,9 @@
 def main(r, c, n, xy):
     ary = []
-    for i, (x1, y1, x2, y2) in enumerate(xy):
+    for (i, (x1, y1, x2, y2)) in enumerate(xy):
         if x1 in (0, r) or y1 in (0, c):
             if x2 in (0, r) or y2 in (0, c):
-                for x, y in ((x1, y1), (x2, y2)):
+                for (x, y) in ((x1, y1), (x2, y2)):
                     tmp = 0
                     if x == 0:
                         tmp = y
@@ -15,9 +15,8 @@ def main(r, c, n, xy):
                         tmp = c + x
                     ary.append([i, tmp])
     ary.sort(key=lambda x: x[1])
-    # print(ary)
     stc = []
-    for i, x in ary:
+    for (i, x) in ary:
         if stc and stc[-1] == i:
             stc.pop()
         else:
@@ -29,7 +28,7 @@ def main(r, c, n, xy):
 
 
 def __starting_point():
-    r, c, n = map(int, input().split())
+    (r, c, n) = map(int, input().split())
     xy = [list(map(int, input().split())) for _ in range(n)]
     print(main(r, c, n, xy))
 

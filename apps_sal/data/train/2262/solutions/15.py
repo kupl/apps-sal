@@ -1,7 +1,7 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-R, C, N = map(int, input().split())
+(R, C, N) = map(int, input().split())
 table = []
 
 
@@ -17,8 +17,8 @@ def f(i, j):
 
 
 for i in range(N):
-    a, b, c, d = map(int, input().split())
-    if (0 < a < R and 0 < b < C) or (0 < c < R and 0 < d < C):
+    (a, b, c, d) = map(int, input().split())
+    if 0 < a < R and 0 < b < C or (0 < c < R and 0 < d < C):
         continue
     table.append((f(a, b), i))
     table.append((f(c, d), i))
@@ -29,7 +29,6 @@ for i in range(len(table)):
         H.pop()
     else:
         H.append(table[i][1])
-# print(H,table)
 while len(H) != 0 and H[0] == H[-1]:
     H.popleft()
     H.pop()
