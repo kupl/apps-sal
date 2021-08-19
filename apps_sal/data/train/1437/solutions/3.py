@@ -1,4 +1,3 @@
-# your code goes here
 import math
 
 
@@ -21,7 +20,7 @@ while t > 0:
     ans = 1
     k = 0
     for x in arr:
-        if(isp(x)):
+        if isp(x):
             if lst[x] == 0:
                 lst[x] = 1
                 ans *= x
@@ -39,26 +38,23 @@ while t > 0:
             if i <= j:
                 k += 1
                 break
+            elif lst[x] == 0:
+                lst[x] = 1
+                ans *= x // math.gcd(ans, x)
             else:
-                if lst[x] == 0:
-                    lst[x] = 1
-                    ans *= x // math.gcd(ans, x)
-                else:
-                    k += 1
-                    break
-
+                k += 1
+                break
     if k:
         print(-1)
-    else:
-        if ans == arr[n - 1]:
-            p = ans
-            while p % arr[0] == 0:
-                p //= arr[0]
-            if p == 1:
-                ans *= arr[0]
-                print(ans)
-            else:
-                print(-1)
-        else:
+    elif ans == arr[n - 1]:
+        p = ans
+        while p % arr[0] == 0:
+            p //= arr[0]
+        if p == 1:
+            ans *= arr[0]
             print(ans)
+        else:
+            print(-1)
+    else:
+        print(ans)
     t -= 1

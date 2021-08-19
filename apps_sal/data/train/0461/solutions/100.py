@@ -1,6 +1,7 @@
 class Solution:
-    # 1152 ms
+
     def numOfMinutes(self, n, headID, manager, informTime):
+
         @lru_cache(None)
         def myTime(myBoss):
             if manager[myBoss] > -1:
