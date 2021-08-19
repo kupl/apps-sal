@@ -1,13 +1,9 @@
 n = int(input())
 s = input()
-
 mod = 998244353
-
 left = s[0]
 right = s[-1]
-
-ans = 1  # include remove all
-
+ans = 1
 if left != right:
     lcount = 0
     for i in range(n):

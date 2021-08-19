@@ -1,8 +1,7 @@
 L = input()
 l = len(L)
-mod = 10**9 + 7
-ans = 1  # (0,0)
-
+mod = 10 ** 9 + 7
+ans = 1
 d = dict()
 
 
@@ -15,14 +14,12 @@ def modpow(x, n, mod):
         ret *= x
         ret %= mod
         d[x].append(ret)
-    return(d[x][n])
+    return d[x][n]
 
 
 ans = modpow(3, l, mod)
-
 r = 0
 count = 0
-
 for i in range(l):
     if L[i] == '0':
         r = modpow(3, l - i - 1, mod) * modpow(2, count, mod) * 2

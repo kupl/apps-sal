@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-
-# input = stdin.readline
-
 def solve(n, m, a, queries):
     res = 0
     cnt = 0
@@ -17,10 +13,10 @@ def solve(n, m, a, queries):
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    queries = list(list(map(int, input().split())) for _ in range(M))
-    print((solve(N, M, a, queries)))
+    queries = list((list(map(int, input().split())) for _ in range(M)))
+    print(solve(N, M, a, queries))
 
 
 def __starting_point():
