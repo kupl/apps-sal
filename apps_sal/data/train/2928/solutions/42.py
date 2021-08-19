@@ -1,27 +1,26 @@
 def alphabet_war(fight):
-    # your code here
     left_score = 0
     right_score = 0
     for l in list(fight):
-        if l == "w":
+        if l == 'w':
             left_score += 4
-        elif l == "p":
+        elif l == 'p':
             left_score += 3
-        elif l == "b":
+        elif l == 'b':
             left_score += 2
-        elif l == "s":
+        elif l == 's':
             left_score += 1
-        elif l == "m":
+        elif l == 'm':
             right_score += 4
-        elif l == "q":
+        elif l == 'q':
             right_score += 3
-        elif l == "d":
+        elif l == 'd':
             right_score += 2
-        elif l == "z":
+        elif l == 'z':
             right_score += 1
     if left_score > right_score:
-        return "Left side wins!"
+        return 'Left side wins!'
     elif left_score < right_score:
-        return "Right side wins!"
+        return 'Right side wins!'
     elif right_score == left_score:
         return "Let's fight again!"

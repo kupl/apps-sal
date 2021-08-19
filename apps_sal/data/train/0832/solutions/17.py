@@ -1,8 +1,7 @@
-# cook your dish here
 from math import factorial
 t = int(input())
 for i in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(int, input().split()))
     l.sort()
     x = 0
@@ -15,7 +14,7 @@ for i in range(t):
                 y += 1
             elif l[j] > l[k - 1]:
                 break
-        s = int((factorial(x + y)) // ((factorial(x)) * factorial(y)))
+        s = int(factorial(x + y) // (factorial(x) * factorial(y)))
         print(s)
     else:
         print(1)

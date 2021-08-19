@@ -1,5 +1,4 @@
-# cook your dish here
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort()
 p = 0

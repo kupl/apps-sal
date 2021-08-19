@@ -2,13 +2,30 @@ from sys import stdin, stdout
 import math
 import bisect
 from collections import Counter, deque, defaultdict
-def L(): return list(map(int, stdin.readline().strip().split()))
-def M(): return list(map(int, stdin.readline().strip().split()))
-def I(): return int(stdin.readline().strip())
-def S(): return stdin.readline().strip()
-def C(): return stdin.readline().strip().split()
-def pr(a): return(" ".join(list(map(str, a))))
-#_________________________________________________#
+
+
+def L():
+    return list(map(int, stdin.readline().strip().split()))
+
+
+def M():
+    return list(map(int, stdin.readline().strip().split()))
+
+
+def I():
+    return int(stdin.readline().strip())
+
+
+def S():
+    return stdin.readline().strip()
+
+
+def C():
+    return stdin.readline().strip().split()
+
+
+def pr(a):
+    return ' '.join(list(map(str, a)))
 
 
 m = 2 * pow(10, 5) + 1

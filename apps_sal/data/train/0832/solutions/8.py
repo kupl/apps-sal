@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 def fact(n):
     res = 1
     for i in range(1, n + 1):
@@ -9,7 +7,7 @@ def fact(n):
 
 t = int(input())
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     arr.sort()
     tot = 0
@@ -19,7 +17,6 @@ for _ in range(t):
     for i in range(n):
         if arr[i] == arr[k - 1]:
             count += 1
-
     orig_count = 0
     for i in range(k):
         if arr[i] == arr[k - 1]:
