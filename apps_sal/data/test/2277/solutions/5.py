@@ -1,4 +1,3 @@
-
 def f(a, b):
     val = 0
     for x in range(a, b):
@@ -11,15 +10,12 @@ def f(a, b):
 n = int(input())
 ar = list(map(int, input().split()))
 inv = f(0, n)
-# print()
 m = int(input())
 ans = []
 for x in range(m):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     z = r - l + 1
     inv += int(z * (z - 1) / 2)
     inv %= 2
     ans.append('odd' if inv else 'even')
-    # print(query(0,n-1))
-# print(*t)
 print(*ans, sep='\n')

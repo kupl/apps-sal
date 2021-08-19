@@ -1,5 +1,4 @@
 from sys import stdin, stdout
-
 s = stdin.readline().rstrip()
 n = len(s)
 aCount = 0
@@ -15,15 +14,13 @@ for i in range(n):
         bCount += 1
         aList.append(aCount)
         bList.append(bCount)
-
 bestScore = 0
-for i in range(n + 1):  # start
-    for j in range(i, n + 1):  # end
+for i in range(n + 1):
+    for j in range(i, n + 1):
         score = 0
         score += aList[i]
         score += bList[j] - bList[i]
         score += aCount - aList[j]
         if score > bestScore:
             bestScore = score
-
 print(bestScore)

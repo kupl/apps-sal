@@ -1,4 +1,3 @@
-# author="_rabbit"
 n = int(input())
 a = list(map(int, input().split()))
 ans = []
@@ -13,7 +12,7 @@ for i in range(n):
         flag = True
     else:
         s.add(a[i])
-if(flag == False):
+if flag == False:
     print(-1)
 else:
     print(len(ans))

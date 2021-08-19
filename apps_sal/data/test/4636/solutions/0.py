@@ -17,10 +17,6 @@ from io import BytesIO, IOBase
 from itertools import accumulate
 
 
-# sys.setrecursionlimit(200000)
-# input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
-
-
 def input():
     return sys.stdin.readline().strip()
 
@@ -41,17 +37,10 @@ def rlinput():
     return list(rinput())
 
 
-# mod = int(1e9)+7
-
-
 def factors(n):
-    return set(reduce(list.__add__,
-                      ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+    return set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
 
 
-# ----------------------------------------------------
-# sys.stdin = open('input.txt', 'r')
-# sys.stdout = open('output.txt', 'w')
 for _ in range(iinput()):
     n = iinput()
     a = rlinput()
@@ -64,7 +53,7 @@ for _ in range(iinput()):
     while i <= j:
         temp = 0
         f = False
-        while i <= j and i < n and temp <= prev:
+        while i <= j and i < n and (temp <= prev):
             temp += a[i]
             f = True
             i += 1
@@ -74,7 +63,7 @@ for _ in range(iinput()):
         prev = temp
         temp = 0
         f = False
-        while j >= i and j > 0 and temp <= prev:
+        while j >= i and j > 0 and (temp <= prev):
             temp += a[j]
             f = True
             j -= 1

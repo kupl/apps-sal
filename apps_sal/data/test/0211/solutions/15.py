@@ -1,10 +1,5 @@
-
-# COPIED
-
 MOD = 1000000009
-
-n, m, k = [int(x) for x in input().split()]
-
+(n, m, k) = [int(x) for x in input().split()]
 num0 = n - m
 num1fin = num0 * (k - 1)
 if num1fin >= m:

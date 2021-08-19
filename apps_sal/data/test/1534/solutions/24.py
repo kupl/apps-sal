@@ -1,6 +1,3 @@
-# python3
-# utf-8
-
 string = input()
 prefix___a_nr = [0]
 prefix___b_nr = [0]
@@ -13,7 +10,6 @@ for sym in string:
         curr_b_nr += 1
     prefix___a_nr.append(curr_a_nr)
     prefix___b_nr.append(curr_b_nr)
-
 ans = 5000
 for sep1 in range(len(string) + 1):
     for sep2 in range(sep1, len(string) + 1):

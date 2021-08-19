@@ -1,8 +1,7 @@
 s = input()
-# ________b..._________
-back = 0  # itung a sampe ktemu b [a....]
-now = 0  # setelah a../nggak, jumlah b [a...b.. / b...]
-after_ab = 0  # setelah a..b.. [a..b..a]
+back = 0
+now = 0
+after_ab = 0
 for i in s:
     if i == 'a':
         back += 1
