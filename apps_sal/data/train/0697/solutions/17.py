@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     pows = list(map(int, input().split()))
     if k == 1:
         print(max(pows))
@@ -13,5 +13,4 @@ for _ in range(int(input())):
         else:
             lastsum += pows[i + k - 1] - pows[i - 1]
             arr.append(lastsum)
-    # print(arr)
     print(max(arr))

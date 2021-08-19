@@ -1,11 +1,10 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
     s = input()
     p = input()
     if s.count('1') != p.count('1'):
-        print("No")
+        print('No')
         continue
     c = 0
     ans = True
@@ -20,6 +19,6 @@ for _ in range(t):
             else:
                 c = c + 1
     if ans:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

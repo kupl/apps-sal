@@ -1,5 +1,4 @@
 from math import log10
-#A = list(map(int, input().split()))
 Ans = []
 for i in range(int(input())):
     x = int(input())

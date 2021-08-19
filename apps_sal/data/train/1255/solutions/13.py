@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    t, k = input().split()
+    (t, k) = input().split()
     k = int(k)
     str = ''
     for c in range(97, 123):

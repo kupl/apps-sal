@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     s = input().strip()
@@ -17,15 +16,12 @@ for _ in range(int(input())):
         if p[i - 1] == '1':
             arr2[i] += 1
             p1 += 1
-
         if arr1[i] < arr2[i]:
             flag = True
             break
-    # print(arr1)
-    # print(arr2)
     if p1 != s1:
         flag = True
     if flag:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
