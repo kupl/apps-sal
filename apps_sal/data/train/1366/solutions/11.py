@@ -1,11 +1,9 @@
-# cook your dish here
 import math
 
 
 def solve():
     n = int(input())
     l = list(map(int, input().split()))
-
     pos = n
     for i in range(n):
         if l[i] != 0:
@@ -17,7 +15,7 @@ def solve():
             c += 1
         else:
             break
-    if (n - c - pos) > 0:
+    if n - c - pos > 0:
         print(n - c - pos)
     else:
         print(1)

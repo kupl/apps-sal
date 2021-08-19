@@ -4,21 +4,30 @@ import sys
 input = sys.stdin.readline
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split(' ')]
-def st(): return input().rstrip('\n')
-def val(): return int(input())
-def stli(): return [int(i) for i in input().rstrip('\n')]
+def li():
+    return [int(i) for i in input().rstrip('\n').split(' ')]
+
+
+def st():
+    return input().rstrip('\n')
+
+
+def val():
+    return int(input())
+
+
+def stli():
+    return [int(i) for i in input().rstrip('\n')]
 
 
 for _ in range(val()):
     n = val()
     a = li()
-    # print(a)
     m = val()
     h = []
     visited = defaultdict(int)
     for i in range(m):
-        x, y = li()
+        (x, y) = li()
         visited[x] = max(visited[x], y)
     h = []
     for i in visited:
@@ -31,9 +40,7 @@ for _ in range(val()):
         if h[i][1] > currmax:
             currmax = max(currmax, h[i][1])
             endurance[h[i][0]] = currmax
-
     power = sorted(list(endurance))
-    # print(power,endurance)
     totdays = 0
     i = 0
     while i < n:
@@ -41,7 +48,6 @@ for _ in range(val()):
         if ind == len(power):
             totdays = -1
             break
-
         cou = 0
         while i < n:
             while ind < len(power) and a[i] > power[ind]:
@@ -53,7 +59,6 @@ for _ in range(val()):
                 break
             i += 1
             cou += 1
-
         if totdays == -1:
             break
         totdays += 1

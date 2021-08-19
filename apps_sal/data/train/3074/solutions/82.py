@@ -6,4 +6,3 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
         initial -= downSpeed
         count += 1
     return count
-    # your code here
