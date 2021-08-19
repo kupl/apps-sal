@@ -1,8 +1,9 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         uf = UnionFind(len(A))
         prime_index = {}
-        for i, n in enumerate(A):
+        for (i, n) in enumerate(A):
             pfs = get_prime_factors(n)
             for p in pfs:
                 if p in prime_index:
@@ -12,6 +13,7 @@ class Solution:
 
 
 class UnionFind:
+
     def __init__(self, N):
         self.uf = [i for i in range(N)]
         self.size = [1] * N
@@ -24,10 +26,8 @@ class UnionFind:
     def union(self, x, y):
         x_root = self.find(x)
         y_root = self.find(y)
-
         if x_root == y_root:
             return
-
         if self.size[x_root] > self.size[y_root]:
             self.uf[y_root] = x_root
             self.size[x_root] += self.size[y_root]
@@ -43,13 +43,10 @@ def get_prime_factors(n):
     while n % 2 == 0:
         prime_factors.add(2)
         n //= 2
-
     for d in range(3, int(math.sqrt(n)) + 1, 2):
         while n % d == 0:
             prime_factors.add(d)
             n //= d
-
     if n > 2:
         prime_factors.add(n)
-
     return prime_factors

@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.arr = []
 
@@ -14,20 +15,17 @@ class Solution:
         return self.arr[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         self.arr[xr] = yr
 
     def largestComponentSize(self, A: List[int]) -> int:
-
         self.arr = [0] * (max(A) + 1)
         ans = [0] * (max(A) + 1)
         A.sort()
-        for j, i in enumerate(self.arr):
+        for (j, i) in enumerate(self.arr):
             self.arr[j] = j
-
         for i in A:
             self.fac(i)
-
         for i in A:
             ans[self.find(i)] += 1
         return max(ans)

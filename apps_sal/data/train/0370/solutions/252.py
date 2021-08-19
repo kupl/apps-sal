@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, N):
         self.p = list(range(N))
 
@@ -8,11 +9,12 @@ class DSU:
         return self.p[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         self.p[xr] = yr
 
 
 class Solution:
+
     def primes_set(self, n):
         for i in range(2, int(math.sqrt(n)) + 1):
             if n % i == 0:
@@ -23,19 +25,18 @@ class Solution:
         n = len(A)
         UF = DSU(n)
         primes = defaultdict(list)
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             pr_set = self.primes_set(num)
             for q in pr_set:
                 primes[q].append(i)
-
-        for _, indexes in list(primes.items()):
+        for (_, indexes) in list(primes.items()):
             for i in range(len(indexes) - 1):
                 UF.union(indexes[i], indexes[i + 1])
-
         return max(Counter([UF.find(i) for i in range(n)]).values())
 
 
 class UnionFind:
+
     def __init__(self, A):
         self.factorparent = []
         for i in range(A):
@@ -53,18 +54,18 @@ class UnionFind:
 
 
 class Solution1:
+
     def largestComponentSize(self, A: List[int]) -> int:
         if not A:
             return 0
         length = len(A)
         obj = UnionFind(length)
         primes = defaultdict(list)
-        for i, n in enumerate(A):
+        for (i, n) in enumerate(A):
             primeset = self.getPrime(n)
             for p in primeset:
                 primes[p].append(i)
-
-        for k, v in list(primes.items()):
+        for (k, v) in list(primes.items()):
             for i in range(len(v) - 1):
                 obj.union(v[i], v[i + 1])
         primes = {}

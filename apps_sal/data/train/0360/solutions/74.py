@@ -1,5 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def possible(cap):
             s = 0
             ship = 0
@@ -18,7 +20,7 @@ class Solution:
             if s == 0:
                 return ship <= D
             else:
-                return (ship + 1) <= D
+                return ship + 1 <= D
         lo = max(weights)
         hi = sum(weights)
         while lo <= hi:

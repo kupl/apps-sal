@@ -1,9 +1,10 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         m = max(rollMax)
         dp = [[[1] * m for _ in range(len(rollMax))] for _ in range(n)]
         dp[0] = [[1] + [0] * (m - 1) for _ in range(len(rollMax))]
-        MOD = 1e9 + 7
+        MOD = 1000000000.0 + 7
         sumPrev = [1] * len(rollMax)
         for i in range(1, n):
             tempSumPrev = [0] * len(rollMax)

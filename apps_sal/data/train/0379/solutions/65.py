@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         n1 = len(nums1)
         n2 = len(nums2)

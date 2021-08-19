@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         dic = defaultdict(list)
@@ -18,7 +19,6 @@ class Solution:
             if x > sqrt(y):
                 s.append(x)
             return s
-
         for i in range(n):
             primes = primefactor(A[i])
             for d in primes:
@@ -27,7 +27,7 @@ class Solution:
         sz = [1] * n
 
         def root(i):
-            while(i != a[i]):
+            while i != a[i]:
                 a[i] = a[a[i]]
                 i = a[i]
             return i
@@ -46,7 +46,6 @@ class Solution:
                 a[root_i] = root_j
                 sz[root_j] += sz[root_i]
                 sz[root_i] = 0
-
         for v in dic.values():
             for i in range(len(v) - 1):
                 if find(v[i], v[i + 1]) == False:

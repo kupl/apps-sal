@@ -12,7 +12,7 @@ def prime_factors(n: int) -> Set[int]:
         n //= 3
     root = int(n ** 0.5) + 1
     while True and n:
-        a, b = 6 * i + 1, 6 * i - 1
+        (a, b) = (6 * i + 1, 6 * i - 1)
         while n % a == 0:
             n //= a
             f.add(a)
@@ -28,6 +28,7 @@ def prime_factors(n: int) -> Set[int]:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         A.sort(reverse=True)
         islands: List[Tuple[Set[int], int]] = []
@@ -36,7 +37,7 @@ class Solution:
             factors = prime_factors(n)
             first_merged = None
             to_delete: Set[int] = set()
-            for i, (g, v) in enumerate(islands):
+            for (i, (g, v)) in enumerate(islands):
                 if factors.isdisjoint(g):
                     continue
                 if first_merged is None:
@@ -44,7 +45,7 @@ class Solution:
                     islands[i] = (g, v + 1)
                     first_merged = i
                 else:
-                    gf, vf = islands[first_merged]
+                    (gf, vf) = islands[first_merged]
                     gf.update(g)
                     islands[first_merged] = (gf, vf + v)
                     to_delete.add(i)
@@ -54,7 +55,7 @@ class Solution:
                     new_v = len(primes_inside) + 1
                     islands.append((factors, new_v))
                 else:
-                    gf, vf = islands[first_merged]
+                    (gf, vf) = islands[first_merged]
                     islands[first_merged] = (gf, vf + len(primes_inside))
                 primes.difference_update(primes_inside)
             elif first_merged is None:
@@ -62,5 +63,5 @@ class Solution:
                     primes.add(n)
                 else:
                     islands.append((factors, 1))
-            islands = [g for i, g in enumerate(islands) if i not in to_delete]
-        return max(v for g, v in islands)
+            islands = [g for (i, g) in enumerate(islands) if i not in to_delete]
+        return max((v for (g, v) in islands))

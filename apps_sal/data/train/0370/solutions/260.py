@@ -1,23 +1,20 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         graph = defaultdict(list)
         uf = UnionFind(len(A))
-
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             prime_factors = set(self.get_prime_factors(num))
             for factor in prime_factors:
                 graph[factor].append(i)
-
         for factor in graph:
             indices = graph[factor]
             for i in range(len(indices) - 1):
                 uf.union(indices[i], indices[i + 1])
-
         counter = Counter()
         for i in range(len(A)):
             root = uf.find(i)
             counter[root] += 1
-
         return max(counter.values())
 
     def get_prime_factors(self, num):
@@ -34,6 +31,7 @@ class Solution:
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = list(range(n))
 

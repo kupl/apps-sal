@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         n = len(weights)
         l = max(weights)
@@ -12,28 +13,28 @@ class Solution:
             y = 0
             j = 0
             i = 0
-            while(i < len(pre)):
+            while i < len(pre):
                 x = pre[i] - y
-                if(x == val):
+                if x == val:
                     x = 0
                     y = pre[i]
                     j += 1
-                    if(j > D):
+                    if j > D:
                         return False
-                elif(x > val):
+                elif x > val:
                     x = 0
                     y = pre[i - 1]
                     i -= 1
                     j += 1
-                    if(j > D):
+                    if j > D:
                         return False
                 i += 1
-            if(j == D) and (x != 0):
+            if j == D and x != 0:
                 return False
             return True
-        while(l < r):
+        while l < r:
             mid = (l + r) // 2
-            if(checker(mid) == True):
+            if checker(mid) == True:
                 r = mid
             else:
                 l = mid + 1

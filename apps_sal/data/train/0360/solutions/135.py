@@ -1,6 +1,6 @@
 class Solution:
-    def shipWithinDays(self, weights: List[int], D: int) -> int:
 
+    def shipWithinDays(self, weights: List[int], D: int) -> int:
         l = max(weights)
         r = sum(weights)
 
@@ -13,7 +13,6 @@ class Solution:
                     cur = w
                     cnt += 1
             return cnt + 1 <= D
-
         while l < r:
             mid = (l + r) // 2
             good = calc(mid)

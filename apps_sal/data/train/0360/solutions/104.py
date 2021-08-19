@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         if D == 1:
             return sum(weights)
@@ -19,7 +20,6 @@ class Solution:
             if i == n - 1 and cur <= x:
                 return True
             return False
-
         while start < end:
             m = (start + end) // 2
             if validate(m):

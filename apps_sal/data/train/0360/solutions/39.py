@@ -1,8 +1,8 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
 
         def isvalid(mid):
-
             total = 0
             package = 1
             for weight in weights:
@@ -15,7 +15,6 @@ class Solution:
             return package <= D
 
         def binsearch(low, high):
-
             while low < high:
                 mid = low + (high - low) // 2
                 print(isvalid(mid), mid)
@@ -24,5 +23,4 @@ class Solution:
                 else:
                     high = mid
             return low
-
         return binsearch(max(weights), sum(weights))

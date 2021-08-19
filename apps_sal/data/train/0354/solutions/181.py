@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         dp = [[0 for _ in range(len(rollMax) + 1)] for _ in range(n + 1)]
         for j in range(len(rollMax)):
@@ -11,6 +12,6 @@ class Solution:
                 if k == 1:
                     dp[i][j] -= 1
                 elif k > 1:
-                    dp[i][j] -= (dp[k - 1][-1] - dp[k - 1][j])
+                    dp[i][j] -= dp[k - 1][-1] - dp[k - 1][j]
                 dp[i][-1] += dp[i][j]
-        return dp[-1][-1] % int(1e9 + 7)
+        return dp[-1][-1] % int(1000000000.0 + 7)

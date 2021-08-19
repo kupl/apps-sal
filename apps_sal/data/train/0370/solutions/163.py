@@ -26,6 +26,7 @@ class DUS(object):
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
 
         def PFD(num):
@@ -42,13 +43,11 @@ class Solution:
             if num > 2:
                 ret.add(num)
             return ret
-
         dic = {}
         dus = DUS(len(A))
-        for idx, a in enumerate(A):
+        for (idx, a) in enumerate(A):
             for p in PFD(a):
                 if p in dic:
                     dus.Union(dic[p], idx)
                 dic[p] = idx
-
         return max(dus.size)

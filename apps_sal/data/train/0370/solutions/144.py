@@ -46,7 +46,7 @@ class Solution:
         n = len(A)
         M = max(A)
         node_lists = clc.defaultdict(list)
-        for idx, a in enumerate(A):
+        for (idx, a) in enumerate(A):
             for prime in self.decompose(a):
                 node_lists[prime].append(idx)
         uf = UnionFind(n)

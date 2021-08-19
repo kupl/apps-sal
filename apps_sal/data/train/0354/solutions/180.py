@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         memo = {}
 
@@ -15,6 +16,6 @@ class Solution:
                             res += dfs(i, s + 1, k + 1)
                     else:
                         res += dfs(i, 1, k + 1)
-                memo[last, s, k] = res % (10**9 + 7)
+                memo[last, s, k] = res % (10 ** 9 + 7)
             return memo[last, s, k]
-        return dfs(None, 0, 0) % (10**9 + 7)
+        return dfs(None, 0, 0) % (10 ** 9 + 7)

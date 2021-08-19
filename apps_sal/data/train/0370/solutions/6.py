@@ -1,4 +1,5 @@
 class ds:
+
     def __init__(self, n):
         self.arr = list(range(n))
         self.size = [1] * n
@@ -14,7 +15,7 @@ class ds:
         if Ax == Ay:
             return False
         if self.size[Ax] > self.size[Ay]:
-            Ax, Ay = Ay, Ax
+            (Ax, Ay) = (Ay, Ax)
         self.arr[Ax] = Ay
         self.size[Ay] += self.size[Ax]
         return True
@@ -27,7 +28,9 @@ def primes(n):
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def factors(n):
             result = set()
             for p in primeNumber:
@@ -37,10 +40,9 @@ class Solution:
             if n > 1:
                 result.add(n)
             return list(result)
-
-        n, m = len(A), max(A)
+        (n, m) = (len(A), max(A))
         dsa = ds(m + 1)
-        primeNumber = primes(round(m**.5) + 1)
+        primeNumber = primes(round(m ** 0.5) + 1)
         for d in A:
             rest = factors(d)
             for i in rest:

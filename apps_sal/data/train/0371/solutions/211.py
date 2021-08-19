@@ -1,4 +1,5 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
@@ -7,11 +8,10 @@ class Solution:
             routes[b] = set(routes[b])
             for s in routes[b]:
                 s2b[s].add(b)
-
         visited = set()
         q = [(1, b) for b in s2b[S]]
         while q:
-            n, b = q.pop(0)
+            (n, b) = q.pop(0)
             if b in visited:
                 continue
             visited.add(b)
@@ -22,5 +22,4 @@ class Solution:
                 bs |= s2b[s]
             for bn in bs:
                 q.append((n + 1, bn))
-
         return -1

@@ -1,11 +1,11 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         stop_to_bus = collections.defaultdict(list)
         for i in range(len(routes)):
             for stop in routes[i]:
                 stop_to_bus[stop].append(i)
         bus_to_stop = routes
-
         queue = collections.deque([S])
         visited_bus = set()
         level = 0

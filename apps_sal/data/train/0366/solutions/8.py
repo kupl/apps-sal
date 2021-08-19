@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubstring(self, s, k):
         """
         :type s: str

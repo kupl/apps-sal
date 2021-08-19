@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         mod = 10 ** 9 + 7
 
@@ -13,7 +14,6 @@ class Solution:
                 elif k < rollMax[j]:
                     ans += dfs(i + 1, j, k + 1)
             return ans
-
         ans = 0
         for i in range(6):
             ans += dfs(1, i, 1)

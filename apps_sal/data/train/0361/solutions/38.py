@@ -1,11 +1,12 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         self.result = n * m
 
         def dfs(heights, moves):
             if moves > self.result:
                 return
-            if all(h == n for h in heights):
+            if all((h == n for h in heights)):
                 self.result = min(self.result, moves)
                 return
             min_height = min(heights)

@@ -16,7 +16,6 @@ class Solution:
                 spf[i] = i
             for i in range(4, MAXN, 2):
                 spf[i] = 2
-
             for i in range(3, ceil(sqrt(MAXN))):
                 if spf[i] == i:
                     for j in range(i * i, MAXN, i):
@@ -29,9 +28,7 @@ class Solution:
                 if not ret or spf[x] != ret[-1]:
                     ret.append(spf[x])
                 x = x // spf[x]
-
             return ret
-
         sieve()
         parents = {0: [0, 0]}
 
@@ -39,7 +36,6 @@ class Solution:
             if curr == parents[curr][0]:
                 return curr
             return find(parents[curr][0])
-
         for i in range(len(A)):
             factors = getFactorization(A[i])
             parent = 0
@@ -52,6 +48,5 @@ class Solution:
                     parents[p][1] = 0
                 else:
                     parent = p
-
             parents[parent][1] += 1
         return max(list(parents.values()), key=lambda x: x[1])[1]

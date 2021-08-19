@@ -2,25 +2,23 @@ import math
 
 
 class disjoint(object):
+
     def __init__(self, size):
         self.root_node_size = [1] * size
         self.nodes = [n for n in range(size)]
 
     def findRoot(self, node):
-        while(self.nodes[node] != node):
+        while self.nodes[node] != node:
             node = self.nodes[node]
         return node
 
     def merge(self, val_one, val_two):
         root_one = self.findRoot(val_one)
         root_two = self.findRoot(val_two)
-
         if root_one == root_two:
             return
-
         r1size = self.root_node_size[root_one]
         r2size = self.root_node_size[root_two]
-
         new_root = None
         old_root = None
         if r1size <= r2size:
@@ -37,6 +35,7 @@ class disjoint(object):
 class Solution:
 
     def largestComponentSize(self, A: List[int]) -> int:
+
         def factors(n):
             known_factors = set()
             while n % 2 == 0:
@@ -49,7 +48,6 @@ class Solution:
             if n > 2:
                 known_factors.add(n)
             return known_factors
-
         dj = disjoint(len(A))
         known_factors = dict()
         for (i, v) in enumerate(A):

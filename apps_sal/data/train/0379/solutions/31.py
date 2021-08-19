@@ -1,7 +1,8 @@
 class Solution:
+
     def maxSum(self, A: List[int], B: List[int]) -> int:
-        i, j, n, m = 0, 0, len(A), len(B)
-        a, b, mod = 0, 0, 10**9 + 7
+        (i, j, n, m) = (0, 0, len(A), len(B))
+        (a, b, mod) = (0, 0, 10 ** 9 + 7)
         while i < n or j < m:
             if i < n and (j == m or A[i] < B[j]):
                 a += A[i]

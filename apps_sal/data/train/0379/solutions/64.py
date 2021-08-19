@@ -1,9 +1,10 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-        a, b = nums1, nums2
-        m, n = len(a), len(b)
-        p1 = {x: i for i, x in enumerate(a)}
-        p2 = {x: i for i, x in enumerate(b)}
+        (a, b) = (nums1, nums2)
+        (m, n) = (len(a), len(b))
+        p1 = {x: i for (i, x) in enumerate(a)}
+        p2 = {x: i for (i, x) in enumerate(b)}
 
         @lru_cache(None)
         def dp(i, use_a):
@@ -22,5 +23,4 @@ class Solution:
                     j = p1[b[i]] + 1
                     ans = max(ans, b[i] + dp(j, True))
             return ans
-
         return max(dp(0, True), dp(0, False)) % (10 ** 9 + 7)

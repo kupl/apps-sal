@@ -1,6 +1,7 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        MOD = (10 ** 9) + 7
+        MOD = 10 ** 9 + 7
 
         @lru_cache(maxsize=None)
         def solve(n, last, last_count):
@@ -13,5 +14,4 @@ class Solution:
                 elif i != last and rollMax[i] > 0:
                     ans += solve(n - 1, i, rollMax[i] - 1)
             return ans % MOD
-
         return solve(n, -1, -1)

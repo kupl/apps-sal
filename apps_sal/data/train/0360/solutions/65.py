@@ -1,4 +1,5 @@
 class Solution:
+
     def canShip(self, w, d, cap):
         i = 0
         res = 0
@@ -23,5 +24,4 @@ class Solution:
                 end = mid
             else:
                 start = mid + 1
-
         return start

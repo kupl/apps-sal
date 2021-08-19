@@ -1,12 +1,12 @@
 class Solution:
-    def largestComponentSize(self, A: List[int]) -> int:
 
+    def largestComponentSize(self, A: List[int]) -> int:
         N = len(A)
         maxi = max(A)
         p = [i for i in range(N)]
         size = [1] * N
         ret = 1
-        primes, isPrime = [], [True] * (maxi + 1)
+        (primes, isPrime) = ([], [True] * (maxi + 1))
         for i in range(2, maxi + 1):
             if isPrime[i]:
                 primes.append(i)
@@ -21,14 +21,13 @@ class Solution:
 
         def union(x, y):
             nonlocal ret
-            px, py = find(x), find(y)
+            (px, py) = (find(x), find(y))
             if px == py:
                 return
             p[py] = px
             size[px] += size[py]
             size[py] = 0
             ret = max(ret, size[px])
-
         for i in range(N):
             a = A[i]
             for f in primes:
@@ -47,5 +46,4 @@ class Solution:
                         a //= f
                 if a == 1:
                     break
-
         return ret

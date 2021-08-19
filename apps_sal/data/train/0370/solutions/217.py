@@ -1,5 +1,7 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def union(x, y):
             graph[find(x)] = find(y)
 
@@ -11,9 +13,8 @@ class Solution:
             for n in path:
                 graph[n] = x
             return x
-
         graph = {}
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             if num not in graph:
                 graph[num] = num
             for factor in range(2, int(math.sqrt(num) + 1)):
@@ -25,7 +26,6 @@ class Solution:
                             union(num, graph[fac])
                         else:
                             graph[fac] = num
-
         roots = collections.defaultdict(int)
         for num in A:
             roots[find(num)] += 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         dp = [[0 for _ in range(7)] for _ in range(n + 1)]
         dp[0][6] = 1

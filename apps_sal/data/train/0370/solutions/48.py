@@ -1,5 +1,7 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def find(v):
             if parent[v] != v:
                 parent[v] = find(parent[v])
@@ -29,7 +31,6 @@ class Solution:
                         primes[i] = False
                 p += 1
             return [element for element in range(2, n) if primes[element]]
-
         rank = {}
         primes = sieve(max(A) // 2 + 1)
         parent = {i: i for i in A + primes}
@@ -45,5 +46,4 @@ class Solution:
                     t //= p
             if t > 1:
                 union(num, t)
-
         return max(Counter([find(n) for n in A]).values())

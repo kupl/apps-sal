@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         dp = []
         max_roll = max(rollMax) + 1
@@ -11,8 +12,7 @@ class Solution:
                         dp[-1][-1].append(1)
                     else:
                         dp[-1][-1].append(0)
-
-        MOD = (10 ** 9) + 7
+        MOD = 10 ** 9 + 7
         for k in range(1, n + 1):
             for prev_roll in range(6):
                 for cur_roll in range(6):

@@ -1,15 +1,16 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         parents = [-1] * n
         factors = {}
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             primes = self.primes(a)
             for p in primes:
                 if p in factors:
                     self.union(parents, i, factors[p])
                 factors[p] = i
-        return max(-c for c in parents if c < 0)
+        return max((-c for c in parents if c < 0))
 
     def primes(self, n):
         ans = set()
@@ -30,9 +31,9 @@ class Solution:
         return n
 
     def union(self, parents, i, j):
-        parent_i, parent_j = self.find(parents, i), self.find(parents, j)
+        (parent_i, parent_j) = (self.find(parents, i), self.find(parents, j))
         if parent_i != parent_j:
             if parents[parent_i] > parents[parent_j]:
-                parent_i, parent_j = parent_j, parent_i
+                (parent_i, parent_j) = (parent_j, parent_i)
             parents[parent_i] += parents[parent_j]
             parents[parent_j] = parent_i

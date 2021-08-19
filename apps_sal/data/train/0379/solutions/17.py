@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-        l1, l2 = len(nums1), len(nums2)
+        (l1, l2) = (len(nums1), len(nums2))
         g = defaultdict(set)
         for i in range(1, l1):
             g[nums1[i - 1]].add(nums1[i])

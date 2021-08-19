@@ -1,4 +1,5 @@
 class DisjSet:
+
     def __init__(self, n):
         self.disj_set = [-1] * n
 
@@ -24,7 +25,9 @@ class DisjSet:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def factor(n):
             f = []
             while True:
@@ -40,7 +43,7 @@ class Solution:
         n = len(A)
         disj = DisjSet(n)
         g = {}
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             for f in factor(a):
                 if f not in g:
                     g[f] = i

@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         par = [-1] * 100001
 
@@ -13,13 +14,11 @@ class Solution:
             yp = find1(y)
             if xp != yp:
                 par[yp] = xp
-
         for x in A:
             for i in range(2, int(sqrt(x)) + 1):
                 if x % i == 0:
                     union1(i, x)
                     union1(x, x // i)
-
         cnt = 0
         cach = {}
         for x in A:

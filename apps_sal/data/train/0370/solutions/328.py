@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         if not A:
             return 0
@@ -12,7 +13,6 @@ class Solution:
 
         def union(a, i):
             root[find(a)] = find(i)
-
         for a in A:
             for i in range(2, int(math.sqrt(a)) + 1):
                 if a % i == 0:

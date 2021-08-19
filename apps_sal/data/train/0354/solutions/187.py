@@ -8,11 +8,10 @@ def simulatorHelper(n, rollMax, consec, rolls, last, dp):
         for i in range(len(rollMax)):
             if last == i and consec == rollMax[i]:
                 continue
+            elif last == i:
+                total += simulatorHelper(n, rollMax, consec + 1, rolls + 1, i, dp)
             else:
-                if last == i:
-                    total += simulatorHelper(n, rollMax, consec + 1, rolls + 1, i, dp)
-                else:
-                    total += simulatorHelper(n, rollMax, 1, rolls + 1, i, dp)
+                total += simulatorHelper(n, rollMax, 1, rolls + 1, i, dp)
         dp[rollMax[last]][consec][rolls] = total
         return total
 
@@ -23,5 +22,6 @@ def simulator(n, rollMax):
 
 
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         return simulator(n, rollMax)

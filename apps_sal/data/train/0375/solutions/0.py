@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumGap(self, nums):
         """
         :type nums: List[int]
@@ -13,5 +14,4 @@ class Solution:
             gap = nums[curr + 1] - nums[curr]
             if gap > sorted_gap:
                 sorted_gap = gap
-
         return sorted_gap

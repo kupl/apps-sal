@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistToClosest(self, seats) -> int:
         max_len = 0
         _cnt = 0

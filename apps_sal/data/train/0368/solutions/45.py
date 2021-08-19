@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSatisfaction(self, satisfaction) -> int:
         n = satisfaction.__len__()
         if n == 0:

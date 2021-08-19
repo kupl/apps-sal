@@ -3,6 +3,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         union = DisjoinSet(max(A))
         for a in A:
@@ -20,6 +21,7 @@ class Solution:
 
 
 class DisjoinSet:
+
     def __init__(self, size):
         self.parent = [i for i in range(size + 1)]
         self.size = [1 for _ in range(size + 1)]
@@ -30,12 +32,12 @@ class DisjoinSet:
         return self.parent[val]
 
     def union(self, i, j):
-        parentI, parentJ = self.find(i), self.find(j)
+        (parentI, parentJ) = (self.find(i), self.find(j))
         if parentI == parentJ:
             return
         if self.size[parentI] >= self.size[parentJ]:
-            big, small = parentI, parentJ
+            (big, small) = (parentI, parentJ)
         else:
-            big, small = parentJ, parentI
+            (big, small) = (parentJ, parentI)
         self.size[big] += self.size[small]
         self.parent[small] = big

@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
+
         def backtrack(state):
             if state in cache:
                 return cache[state]
@@ -10,7 +12,6 @@ class Solution:
                 return cache[state[::-1]]
             if min(state) == n:
                 return 0
-
             temp = state
             state = list(state)
             min_size = min(state)
@@ -29,5 +30,5 @@ class Solution:
         max_area = m * n
         cache = {}
         if m > n:
-            m, n = n, m
+            (m, n) = (n, m)
         return backtrack((0,) * m)

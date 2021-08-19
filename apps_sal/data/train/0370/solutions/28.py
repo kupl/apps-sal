@@ -1,4 +1,5 @@
 class UFDS:
+
     def __init__(self, n, nums):
         self.p = list(range(n + 1))
         self.size = [0] * (n + 1)
@@ -23,6 +24,7 @@ class UFDS:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         hi = max(A)
         ufds = UFDS(hi, A)

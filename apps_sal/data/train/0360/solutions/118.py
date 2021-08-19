@@ -3,6 +3,7 @@ import bisect
 
 
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         l = min(weights)
         r = max(weights) * len(weights)
@@ -24,7 +25,7 @@ class Solution:
                         break
                 day += 1
             return day <= D
-        print((isOk(15)))
+        print(isOk(15))
         while r - l > 1:
             mid = l + (r - l) // 2
             if isOk(mid):
@@ -34,4 +35,4 @@ class Solution:
         return r
 
 
-print((Solution().shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)))
+print(Solution().shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5))

@@ -11,9 +11,9 @@ def isOK(cap, weights, D):
 
 
 class Solution:
-    def shipWithinDays(self, weights: List[int], D: int) -> int:
-        left, right = max(weights), max(weights) * len(weights) // D
 
+    def shipWithinDays(self, weights: List[int], D: int) -> int:
+        (left, right) = (max(weights), max(weights) * len(weights) // D)
         while left <= right:
             mid = (right + left) // 2
             if isOK(mid, weights, D):

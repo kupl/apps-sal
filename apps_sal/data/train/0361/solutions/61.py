@@ -1,4 +1,5 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         self.res = math.inf
         grid = [[False] * n for _ in range(m)]
@@ -15,11 +16,7 @@ class Solution:
             else:
                 side = min(m - i, n - j)
                 while side:
-                    if not any(
-                        grid[ni][nj]
-                        for ni in range(i, i + side)
-                        for nj in range(j, j + side)
-                    ):
+                    if not any((grid[ni][nj] for ni in range(i, i + side) for nj in range(j, j + side))):
                         for ni in range(i, i + side):
                             for nj in range(j, j + side):
                                 grid[ni][nj] = True
@@ -28,6 +25,5 @@ class Solution:
                             for nj in range(j, j + side):
                                 grid[ni][nj] = False
                     side -= 1
-
         dfs(0, 0, 0)
         return self.res

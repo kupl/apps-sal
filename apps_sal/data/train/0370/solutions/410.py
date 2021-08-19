@@ -1,5 +1,7 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def factor(n):
             res = []
             t = int(math.sqrt(n)) + 1
@@ -24,7 +26,7 @@ class Solution:
             qroot = root(q)
             uf[proot] = uf[qroot] = proot
         components = collections.defaultdict(list)
-        for i, n in enumerate(A):
+        for (i, n) in enumerate(A):
             for p in factor(n):
                 if len(components[p]) > 0:
                     union(components[p][-1], i)

@@ -2,11 +2,12 @@ import fractions
 
 
 class Solution:
+
     def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
         self.normalize(A, B)
         multiples_before_lcm = self.get_multiples_before_lcm(A, B)
         mod = 10 ** 9 + 7
-        div, rem = N // self.num_before_lcm, N % self.num_before_lcm
+        (div, rem) = (N // self.num_before_lcm, N % self.num_before_lcm)
         return (div * self.lcm + multiples_before_lcm[rem]) % mod
 
     def normalize(self, A, B):

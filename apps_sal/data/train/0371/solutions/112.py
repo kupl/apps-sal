@@ -1,12 +1,12 @@
 class Solution:
+
     def numBusesToDestination(self, routes, S, T):
         if S == T:
             return 0
         stop_to_bus = collections.defaultdict(list)
-        for bus, stops in enumerate(routes):
+        for (bus, stops) in enumerate(routes):
             for stop in stops:
                 stop_to_bus[stop].append(bus)
-
         q = collections.deque([S])
         seen_bus = set()
         seen_stop = set()

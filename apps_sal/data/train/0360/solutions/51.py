@@ -1,9 +1,9 @@
 class Solution:
+
     def shipWithinDays(self, weights, D: int) -> int:
         if not weights or not D:
             return 0
-
-        lo, hi = max(weights), sum(weights)
+        (lo, hi) = (max(weights), sum(weights))
         ans = 0
         while lo <= hi:
             mid = lo + (hi - lo) // 2

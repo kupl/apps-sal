@@ -1,4 +1,5 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         adj_list = collections.defaultdict(set)
         for i in range(len(routes)):
@@ -8,7 +9,7 @@ class Solution:
         visited = set()
         visited.add(S)
         while queue:
-            node, taken = queue.popleft()
+            (node, taken) = queue.popleft()
             if node == T:
                 return taken
             for i in adj_list[node]:

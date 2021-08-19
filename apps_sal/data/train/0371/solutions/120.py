@@ -1,7 +1,8 @@
 class Solution:
+
     def numBusesToDestination(self, routes, originStop, destinationStop):
         stopToBus = collections.defaultdict(set)
-        for bus, stops in enumerate(routes):
+        for (bus, stops) in enumerate(routes):
             for stop in stops:
                 stopToBus[stop].add(bus)
         from collections import deque
@@ -9,7 +10,7 @@ class Solution:
         visited = set()
         visited.add(originStop)
         while dq:
-            stop, numOfBuses = dq.popleft()
+            (stop, numOfBuses) = dq.popleft()
             if stop == destinationStop:
                 return numOfBuses
             for bus in stopToBus[stop]:

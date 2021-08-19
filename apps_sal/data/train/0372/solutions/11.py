@@ -1,4 +1,5 @@
 class Solution:
+
     def isMatch(self, s, p):
         """
         :type s: str

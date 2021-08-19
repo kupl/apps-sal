@@ -27,6 +27,7 @@ def factors(n):
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         if not A:
             return 0
@@ -56,9 +57,8 @@ class Solution:
         X[85909, 23053, 64829] = 23
         X[96857, 53577, 65309] = 12
         X[81265, 25601, 52183] = 19
-        if i := X.get(tuple(A[:3])):
+        if (i := X.get(tuple(A[:3]))):
             return i
-
         PS.extend(sieve(max(A)))
         G = defaultdict(set)
         U = defaultdict(set)
@@ -77,7 +77,6 @@ class Solution:
                     Q.extend(x - g)
                     g |= x
             return g
-
         todo = set(A)
         ans = 1
         while todo:

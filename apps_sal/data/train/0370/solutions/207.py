@@ -12,15 +12,13 @@ class Solution:
         def union(a, b):
             if (a := ds(a)) != (b := ds(b)):
                 if size[a] < size[b]:
-                    a, b = b, a
+                    (a, b) = (b, a)
                 parent[b] = a
                 size[a] += size[b]
-
         for a in A:
             for d in factors(a):
                 union(-d, a)
-
-        return Counter(ds(a) for a in A).most_common(1)[0][1]
+        return Counter((ds(a) for a in A)).most_common(1)[0][1]
 
 
 FS = {}

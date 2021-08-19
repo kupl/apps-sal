@@ -1,4 +1,5 @@
 class Solution:
+
     def canPartition(self, nums):
         """
         :type nums: List[int]
@@ -11,7 +12,7 @@ class Solution:
             def myFun(t, nu):
                 nu.sort()
                 nu.reverse()
-                for index, item in enumerate(nu):
+                for (index, item) in enumerate(nu):
                     if item == t:
                         return True
                     elif item > t:

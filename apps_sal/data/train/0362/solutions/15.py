@@ -1,4 +1,5 @@
 class Solution:
+
     def numberWays(self, hats: List[List[int]]) -> int:
         from collections import defaultdict
         from functools import lru_cache
@@ -15,11 +16,10 @@ class Solution:
                 return 0
             ans = call(ht + 1, mask)
             for p in ppl[ht + 1]:
-                if mask & (1 << p):
+                if mask & 1 << p:
                     continue
-                mask |= (1 << p)
+                mask |= 1 << p
                 ans += call(ht + 1, mask)
-                mask ^= (1 << p)
-
-            return ans % (10**9 + 7)
+                mask ^= 1 << p
+            return ans % (10 ** 9 + 7)
         return call(0, 0)

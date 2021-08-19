@@ -1,4 +1,5 @@
 class UnionFind(object):
+
     def __init__(self, n):
         self.uf = [i for i in range(n)]
         self.size = [1] * n
@@ -20,6 +21,7 @@ class UnionFind(object):
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
 
         def prime(n):
@@ -34,14 +36,13 @@ class Solution:
             if n > 2:
                 cur.add(n)
             return cur
-
         index = {A[i]: i for i in range(len(A))}
         uf = UnionFind(len(A))
         res = collections.defaultdict(list)
         for i in A:
             for j in prime(i):
                 res[j].append(i)
-        for i, e in list(res.items()):
+        for (i, e) in list(res.items()):
             if e:
                 root = e[0]
                 for j in e[1:]:

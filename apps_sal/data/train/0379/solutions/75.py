@@ -1,12 +1,13 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         matrix = []
         matrix.append(nums1[:])
         matrix.append(nums2[:])
         dics = []
-        dics.append({num: i for i, num in enumerate(nums1)})
-        dics.append({num: i for i, num in enumerate(nums2)})
-        sys.setrecursionlimit(10**6)
+        dics.append({num: i for (i, num) in enumerate(nums1)})
+        dics.append({num: i for (i, num) in enumerate(nums2)})
+        sys.setrecursionlimit(10 ** 6)
 
         @lru_cache(None)
         def dfs(row, index):

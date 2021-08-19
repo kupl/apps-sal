@@ -1,4 +1,5 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         self.n = n
         self.m = m
@@ -10,7 +11,7 @@ class Solution:
     def dfs(self, board, count):
         if count >= self.res:
             return
-        i, j = self.find_next(board)
+        (i, j) = self.find_next(board)
         if i == -1 and j == -1:
             self.res = min(self.res, count)
             return
@@ -41,5 +42,5 @@ class Solution:
         for i in range(self.m):
             for j in range(self.n):
                 if board[i][j] == 0:
-                    return i, j
-        return -1, -1
+                    return (i, j)
+        return (-1, -1)

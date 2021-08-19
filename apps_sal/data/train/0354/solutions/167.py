@@ -20,7 +20,6 @@ class Solution:
                     result %= mod
             memo[n][index][k] = result % mod
             return memo[n][index][k]
-
         for i in range(6):
             result += dfs(n - 1, i, 1)
             result %= mod

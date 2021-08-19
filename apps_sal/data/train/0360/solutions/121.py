@@ -1,11 +1,10 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         mini = max(weights)
         maxi = sum(weights)
-
         if len(weights) == 1:
             return weights[0]
-
         while maxi >= mini:
             mid = (maxi + mini) // 2
             if self.check(weights, mid) < D:

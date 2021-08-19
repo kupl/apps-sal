@@ -1,4 +1,5 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
 
         @lru_cache
@@ -18,7 +19,5 @@ class Solution:
                         p3 = dp(i, y - k)
                         p4 = dp(x - i, y - k - l)
                         r = min(r, p1 + p2 + p3 + p4 + 1)
-
             return r
-
         return dp()

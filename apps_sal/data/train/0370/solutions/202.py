@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         uf = {}
 
@@ -10,8 +11,7 @@ class Solution:
 
         def union(x, y):
             uf[find(x)] = find(y)
-
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             if not a % 2:
                 union(A[i], 2)
                 if a // 2 > 1:

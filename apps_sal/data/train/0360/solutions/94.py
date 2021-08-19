@@ -1,5 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, arr: List[int], D: int) -> int:
+
         def count(arr, x):
             res = i = 0
             while i < len(arr):
@@ -9,7 +11,6 @@ class Solution:
                     i += 1
                 res += 1
             return res
-
         end = start = 0
         for i in arr:
             end += i

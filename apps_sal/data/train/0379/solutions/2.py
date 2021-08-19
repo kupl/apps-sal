@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-        i1, i2, n1, n2, f1, f2 = 0, 0, len(nums1), len(nums2), 0, 0
+        (i1, i2, n1, n2, f1, f2) = (0, 0, len(nums1), len(nums2), 0, 0)
         while i1 < n1 or i2 < n2:
             if i1 == n1:
                 f2 += sum(nums2[i2:])

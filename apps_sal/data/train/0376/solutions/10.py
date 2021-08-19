@@ -1,10 +1,8 @@
 class Solution:
+
     def minScoreTriangulation(self, A: List[int]) -> int:
         N = len(A)
-        dp = [
-            [0 for j in range(N)] for i in range(N)
-        ]
-
+        dp = [[0 for j in range(N)] for i in range(N)]
         for l in range(3, N + 1):
             for i in range(N - l + 1):
                 j = i + l - 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         memo = {}
 
@@ -6,8 +7,7 @@ class Solution:
             if n == 0:
                 return 1
             if (n, lastnum) in memo:
-                return memo[(n, lastnum)]
-
+                return memo[n, lastnum]
             res = 0
             for num in range(6):
                 if num == lastnum:
@@ -17,7 +17,6 @@ class Solution:
                     if nxtn < 0:
                         break
                     res += helper(nxtn, num)
-            memo[(n, lastnum)] = res % (10**9 + 7)
-            return memo[(n, lastnum)]
-
+            memo[n, lastnum] = res % (10 ** 9 + 7)
+            return memo[n, lastnum]
         return helper(n, None)

@@ -1,10 +1,11 @@
-'''
+"""
 [inf,0]
 [1,0]
-'''
+"""
 
 
 class Solution:
+
     def maxDistToClosest(self, seats: List[int]) -> int:
         index = float('inf')
         left = []

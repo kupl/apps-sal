@@ -1,12 +1,11 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         n1 = len(nums1)
         n2 = len(nums2)
-
         a1 = [-1 for _ in range(n1)]
         a2 = [-1 for _ in range(n2)]
-
-        i, j = 0, 0
+        (i, j) = (0, 0)
         while i < n1 and j < n2:
             if nums1[i] < nums2[j]:
                 i += 1
@@ -17,7 +16,6 @@ class Solution:
                 a2[j] = i
                 i += 1
                 j += 1
-
         cache1 = {}
         cache2 = {}
 
@@ -44,5 +42,4 @@ class Solution:
                     ans = nums2[idx] + max(process2(idx + 1), process1(a2[idx] + 1))
                 cache2[idx] = ans
             return cache2[idx]
-
         return max(process1(0), process2(0)) % (10 ** 9 + 7)

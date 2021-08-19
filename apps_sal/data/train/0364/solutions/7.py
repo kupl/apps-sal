@@ -1,4 +1,5 @@
 class Solution:
+
     def canMeasureWater(self, x, y, z):
         """
         :type x: int
@@ -11,13 +12,13 @@ class Solution:
         if z > x + y or z < 0:
             return False
         if x > y:
-            x, y = y, x
+            (x, y) = (y, x)
         if x != 0:
             for i in range(x):
-                if z % x == (y * i) % x:
+                if z % x == y * i % x:
                     return True
         if y != 0:
             for i in range(y):
-                if z % y == (x * i) % y:
+                if z % y == x * i % y:
                     return True
         return False

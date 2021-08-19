@@ -25,10 +25,8 @@ class Solution:
                 if a % k == 0:
                     self.union(m, a, k)
                     self.union(m, a, a // k)
-
         count = collections.defaultdict(int)
         for a in A:
             if a != 1:
                 count[self.fac(m, a)] += 1
-
         return max(count.values())

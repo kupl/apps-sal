@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         numFaces = len(rollMax)
         dp = [[0 for i in range(numFaces + 1)] for j in range(n + 1)]

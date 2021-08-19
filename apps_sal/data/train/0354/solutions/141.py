@@ -2,7 +2,9 @@ import functools
 
 
 class Solution:
+
     def dieSimulator(self, n: int, R: List[int]) -> int:
+
         @functools.lru_cache(None)
         def g(n, k):
             if n < 1:
@@ -18,5 +20,4 @@ class Solution:
             if n == 0:
                 return 1
             return sum([g(n, k) for k in range(1, 7)])
-
         return f(n) % (10 ** 9 + 7)

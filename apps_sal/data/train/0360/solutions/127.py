@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         preSum = [0]
         for weight in weights:
@@ -22,14 +23,11 @@ class Solution:
                 D0 -= 1
                 start = l - 1
                 r = N
-
             if l == N + 1:
                 return True
             return False
-
         wl = max(weights)
         wr = sum(weights)
-
         if D >= len(weights):
             return wl
         if D == 1:

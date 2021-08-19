@@ -1,10 +1,10 @@
 class Solution:
-    def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
 
+    def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
         graph = collections.defaultdict(list)
-        for i, stops in enumerate(routes):
+        for (i, stops) in enumerate(routes):
             for s in stops:
                 graph[s].append(i)
         que = graph[S]

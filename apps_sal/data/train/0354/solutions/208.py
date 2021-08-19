@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
 
         def helper(n, last, count):
@@ -7,7 +8,6 @@ class Solution:
                 return d[key]
             if n == 0:
                 return 1
-
             ans = 0
             for i in range(6):
                 if i == last and count == rollMax[i]:
@@ -16,8 +16,7 @@ class Solution:
                     ans += helper(n - 1, i, count + 1)
                 else:
                     ans += helper(n - 1, i, 1)
-
             d[key] = ans
             return d[key]
         d = dict()
-        return helper(n, -1, 0) % (10**9 + 7)
+        return helper(n, -1, 0) % (10 ** 9 + 7)

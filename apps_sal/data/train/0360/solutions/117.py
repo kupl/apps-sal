@@ -1,7 +1,7 @@
 class Solution:
-    def shipWithinDays(self, weights: List[int], D: int) -> int:
-        low, high = max(weights), sum(weights)
 
+    def shipWithinDays(self, weights: List[int], D: int) -> int:
+        (low, high) = (max(weights), sum(weights))
         while low < high:
             mid = low + (high - low) // 2
             d = 1
@@ -11,7 +11,6 @@ class Solution:
                     d += 1
                     curr_sum = 0
                 curr_sum += weights[idx]
-
             if d <= D:
                 high = mid
             else:

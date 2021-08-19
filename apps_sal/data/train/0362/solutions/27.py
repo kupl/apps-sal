@@ -1,4 +1,5 @@
 class Solution:
+
     def numberWays(self, hats: List[List[int]]) -> int:
         dp = {}
         n_ppl = len(hats)
@@ -16,11 +17,10 @@ class Solution:
                 return dp[hat][mask]
             res = dfs(hat + 1, mask)
             for ppl in hat_2_ppl.get(hat, []):
-                if not mask & (1 << ppl):
-                    res += dfs(hat + 1, mask | (1 << ppl))
+                if not mask & 1 << ppl:
+                    res += dfs(hat + 1, mask | 1 << ppl)
                     res %= 1000000000 + 7
             dp[hat] = dp.get(hat, {})
             dp[hat][mask] = res
             return res
-
         return dfs(1, 0)

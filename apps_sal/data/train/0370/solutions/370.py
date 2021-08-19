@@ -1,4 +1,5 @@
 class Solution:
+
     def find_common_fractor(self, num: int, u):
         for i in range(2, int(sqrt(num)) + 1):
             if num % i == 0:
@@ -22,6 +23,7 @@ class Solution:
 
 
 class UnionFind:
+
     def __init__(self, len_: int):
         self.lst = [i for i in range(len_)]
 

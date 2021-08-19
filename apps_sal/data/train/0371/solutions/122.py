@@ -1,15 +1,14 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         stop_bus = collections.defaultdict(set)
         for i in range(len(routes)):
             for stop in routes[i]:
                 stop_bus[stop].add(i)
-
         if S not in list(stop_bus.keys()) or T not in list(stop_bus.keys()):
             return -1
         if S == T:
             return 0
-
         q = [x for x in stop_bus[S]]
         seen = set([x for x in stop_bus[S]])
         cnt = 0

@@ -2,6 +2,7 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         primes = []
         i = 2
@@ -14,9 +15,8 @@ class Solution:
             if flg:
                 primes.append(i)
             i += 1
-
-        d, primeToNode = defaultdict(set), defaultdict(set)
-        for i, x in enumerate(A):
+        (d, primeToNode) = (defaultdict(set), defaultdict(set))
+        for (i, x) in enumerate(A):
             for p in primes:
                 if x % p == 0:
                     while x % p == 0:
@@ -26,7 +26,7 @@ class Solution:
             if x > 1:
                 d[A[i]].add(x)
                 primeToNode[x].add(A[i])
-        visited, visited_prime = set(), set()
+        (visited, visited_prime) = (set(), set())
         ans = 0
         for x in A:
             if x not in visited:
@@ -44,5 +44,4 @@ class Solution:
                                     q.append(adj)
                             visited_prime.add(p)
                 ans = max(ans, len(tmp))
-
         return ans

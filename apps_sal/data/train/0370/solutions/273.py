@@ -2,6 +2,7 @@ import collections
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = list(range(n))
@@ -44,6 +45,7 @@ def factorize_all(n):
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         uf = UnionFind(max(A) + 1)
         factorization = factorize_all(max(A))
@@ -53,9 +55,8 @@ class Solution:
                 continue
             factors = list(factorization[a].keys())
             ids[a] = factors[0]
-            for p0, p1 in zip(factors, factors[1:]):
+            for (p0, p1) in zip(factors, factors[1:]):
                 uf.merge(p0, p1)
-
         counter = collections.defaultdict(int)
         maxval = 0
         for a in A:
@@ -64,5 +65,4 @@ class Solution:
             id_ = uf.get_root(ids[a])
             counter[id_] += 1
             maxval = max(maxval, counter[id_])
-
         return maxval

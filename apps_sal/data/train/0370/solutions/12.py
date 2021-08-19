@@ -1,4 +1,5 @@
 class UnionFindSet:
+
     def __init__(self, n):
         self.parents = list(range(n))
         self.ranks = [1] * n
@@ -9,7 +10,7 @@ class UnionFindSet:
         return self.parents[u]
 
     def union(self, u, v):
-        pu, pv = self.find(u), self.find(v)
+        (pu, pv) = (self.find(u), self.find(v))
         if pu == pv:
             return False
         if self.ranks[pu] > self.ranks[pv]:
@@ -25,7 +26,9 @@ class UnionFindSet:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def get_prime_factors(n):
             ans = set()
             while n % 2 == 0:
@@ -38,16 +41,13 @@ class Solution:
             if n > 2:
                 ans.add(n)
             return ans
-
         n = len(A)
         uf = UnionFindSet(n)
-
         dic = {}
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             primes = get_prime_factors(a)
             for p in primes:
                 if p in dic:
                     uf.union(i, dic[p])
                 dic[p] = i
-
         return max(uf.ranks)

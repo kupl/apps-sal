@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         factor = {}
         dsu = DSU()
@@ -15,7 +16,6 @@ class Solution:
             if num > 1:
                 primes.add(num)
             return primes
-
         for num in A:
             primes = get_primes(num)
             for p in primes:
@@ -29,6 +29,7 @@ class Solution:
 
 
 class DSU:
+
     def __init__(self):
         self.father = {}
         self.count = {}

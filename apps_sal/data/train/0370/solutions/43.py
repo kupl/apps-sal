@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, nums: List[int]) -> int:
         upper_p = max(nums)
         is_prime = [1] * (upper_p + 1)
@@ -32,7 +33,6 @@ class Solution:
                 p_cnt[par1] += p_cnt[par2]
                 p_cnt[par2] = 0
             return
-
         for num in nums:
             if num == 1:
                 continue
@@ -46,9 +46,7 @@ class Solution:
                         num //= p
             if num in primes_set:
                 factors.append(num)
-
             for other_p in factors[1:]:
                 union(factors[0], other_p)
             p_cnt[find_par(factors[0])] += 1
-
         return max(p_cnt.values())

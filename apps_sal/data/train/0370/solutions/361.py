@@ -17,6 +17,7 @@ class UnionFind:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         union_find = UnionFind(100000)
         for num in A:
@@ -24,6 +25,5 @@ class Solution:
                 if num % factor == 0:
                     union_find.union(num, factor)
                     union_find.union(num, num // factor)
-
         counter = Counter(map(union_find.find, A))
         return counter.most_common(1)[0][1]

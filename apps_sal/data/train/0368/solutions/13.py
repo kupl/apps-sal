@@ -7,7 +7,7 @@ class Solution:
         like_time = 0
         dish_index = 1
         for satisfaction in prepared_dishes:
-            like_time += (dish_index * satisfaction)
+            like_time += dish_index * satisfaction
             dish_index += 1
         return like_time
 

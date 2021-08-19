@@ -1,4 +1,5 @@
 class DisjointSet:
+
     def __init__(self, size):
         self.parents = list(range(size))
         self.sizes = [1] * size
@@ -17,6 +18,7 @@ class DisjointSet:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         N = len(A)
 
@@ -36,7 +38,7 @@ class Solution:
                     divisors[j].append(i)
         disjoint_set = DisjointSet(N)
         divisor_to_index = {}
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             for d in divisors[a]:
                 if d in divisor_to_index:
                     disjoint_set.union(i, divisor_to_index[d])

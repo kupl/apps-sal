@@ -1,10 +1,11 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
         visited = [False] * len(routes)
         graph = {}
-        for i, route in enumerate(routes, 0):
+        for (i, route) in enumerate(routes, 0):
             for stop in route:
                 if stop not in graph:
                     graph[stop] = []

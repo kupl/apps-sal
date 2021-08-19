@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
 
         @lru_cache(None)
@@ -21,8 +22,7 @@ class Solution:
                 state[start:end + 1] = [minimum + side] * side
                 res = min(res, dfs(tuple(state)))
             return res + 1
-
         inf = m * n
         if m > n:
-            m, n = n, m
+            (m, n) = (n, m)
         return dfs(tuple([0] * m))

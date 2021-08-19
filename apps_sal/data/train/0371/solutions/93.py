@@ -1,13 +1,12 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
         graph = collections.defaultdict(list)
-
-        for i, stops in enumerate(routes):
+        for (i, stops) in enumerate(routes):
             for stop in stops:
                 graph[stop].append(i)
-
         que = graph[S]
         visited = set()
         steps = 0
@@ -23,7 +22,6 @@ class Solution:
                     for bus2 in graph[stop]:
                         if bus2 not in visited:
                             tmp.append(bus2)
-
             que = tmp
             steps += 1
         return -1

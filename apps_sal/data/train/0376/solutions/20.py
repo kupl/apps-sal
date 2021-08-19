@@ -1,4 +1,5 @@
 class Solution:
+
     def minScoreTriangulation_v2(self, A: List[int]) -> int:
         length = len(A)
         DP = [[float('inf')] * length for _ in range(len(A))]
@@ -23,12 +24,10 @@ class Solution:
                 return memo[start][end]
             if memo[start][end] != float('inf'):
                 return memo[start][end]
-
             val = memo[start][end]
             for i in range(start + 1, end):
                 val = min(val, A[start] * A[i] * A[end] + memo_dp(start, i) + memo_dp(i, end))
             memo[start][end] = val
             return memo[start][end]
-
         memo_dp(0, length - 1)
         return memo[0][length - 1]

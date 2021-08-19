@@ -1,7 +1,8 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-        rev1 = {v: k for k, v in enumerate(nums1)}
-        rev2 = {v: k for k, v in enumerate(nums2)}
+        rev1 = {v: k for (k, v) in enumerate(nums1)}
+        rev2 = {v: k for (k, v) in enumerate(nums2)}
 
         def dp(val, memo):
             if val in memo:
@@ -19,4 +20,4 @@ class Solution:
             memo[val] = ans
             return ans
         memo = {}
-        return max(dp(nums1[0], memo), dp(nums2[0], memo)) % (1000000007)
+        return max(dp(nums1[0], memo), dp(nums2[0], memo)) % 1000000007

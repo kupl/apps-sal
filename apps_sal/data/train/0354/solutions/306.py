@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         dp = [[0] * 7 for _ in range(n + 1)]
         dp[0][6] = 1
@@ -12,4 +13,4 @@ class Solution:
                         break
                     dp[i][roll] += dp[i - j][6] - dp[i - j][roll]
                 dp[i][6] += dp[i][roll]
-        return dp[n][6] % (int(1e9) + 7)
+        return dp[n][6] % (int(1000000000.0) + 7)

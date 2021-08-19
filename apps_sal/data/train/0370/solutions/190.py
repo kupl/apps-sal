@@ -25,12 +25,13 @@ class UnionFind:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         uf = UnionFind(len(A))
 
         def gcf(a, b):
             while b:
-                a, b = b, a % b
+                (a, b) = (b, a % b)
             return a
 
         def primes(x):
@@ -49,7 +50,6 @@ class Solution:
                     facts[prime] = []
                 facts[prime].append(i)
         for prime in facts:
-
             for i in range(len(facts[prime]) - 1):
                 uf.union(facts[prime][i], facts[prime][i + 1])
         return uf.most()

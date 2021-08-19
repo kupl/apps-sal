@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n: int):
         self.n = n
         self.root = list(range(n))
@@ -11,7 +12,7 @@ class DSU:
         return self.root[x]
 
     def union(self, x: int, y: int):
-        rx, ry = self.find(x), self.find(y)
+        (rx, ry) = (self.find(x), self.find(y))
         if not rx == ry:
             self.root[rx] = ry
             self.size[ry] += self.size[rx]
@@ -19,11 +20,12 @@ class DSU:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         dsu = DSU(n)
         seen = {}
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             for j in range(2, int(math.sqrt(a)) + 1):
                 if a % j:
                     continue

@@ -1,13 +1,14 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         if m > n:
-            n, m = m, n
-        res, state = m * n, [0] * n
+            (n, m) = (m, n)
+        (res, state) = (m * n, [0] * n)
         visited = {}
 
         def dfs(count):
             nonlocal res
-            s = ''.join(str(v) for v in state)
+            s = ''.join((str(v) for v in state))
             if s in visited and count > visited[s]:
                 return
             visited[s] = count
@@ -28,5 +29,4 @@ class Solution:
                 for i in range(s, s + l):
                     state[i] -= l
         dfs(0)
-
         return res

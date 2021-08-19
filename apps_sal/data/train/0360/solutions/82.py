@@ -1,17 +1,16 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         self.weight = weights
         self.D = D
         hi = sum(weights)
         lo = 1
-
         while hi != lo:
             mid = (hi + lo) // 2
             if self.if_fit(mid):
                 hi = mid
             else:
                 lo = mid + 1
-
         return hi
 
     def if_fit(self, cap):

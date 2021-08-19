@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSatisfaction(self, s: List[int]) -> int:
         s.sort(reverse=True)
         maxi = 0

@@ -1,9 +1,11 @@
 class Solution:
+
     def largestComponentSize(self, A):
+
         def getUniqueDivisors(x: int) -> set():
             result = set()
             while x % 2 == 0:
-                result .add(2)
+                result.add(2)
                 x >>= 1
             i = 3
             while i * i <= x:
@@ -13,7 +15,6 @@ class Solution:
                 i += 2
             if x > 1:
                 result.add(x)
-
             if x > 1:
                 result.add(x)
             return result

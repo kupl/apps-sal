@@ -1,5 +1,7 @@
 class Solution:
+
     def dieSimulator(self, n: int, roll_max: List[int]) -> int:
+
         @lru_cache(maxsize=None)
         def die_simulator(n, consec_num, consec_count):
             if n == 0:
@@ -13,5 +15,4 @@ class Solution:
                     elif roll_max[i] != 0:
                         res += die_simulator(n - 1, i, 1)
                 return res
-
         return die_simulator(n, -1, 0) % (10 ** 9 + 7)

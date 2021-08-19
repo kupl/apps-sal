@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         MOD = 10 ** 9 + 7
 
@@ -14,5 +15,4 @@ class Solution:
                 else:
                     cnt = (cnt + roll(i - 1, d, 1)) % MOD
             return cnt
-
         return roll(n, -1, 0)

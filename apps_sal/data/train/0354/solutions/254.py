@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
 
         @lru_cache(None)
@@ -16,7 +17,5 @@ class Solution:
                             t += r(v + 1, i, c + 1)
                     else:
                         t += r(1, i, c + 1)
-
                 return t
-
-        return r(0, 0, 0) % (10**9 + 7)
+        return r(0, 0, 0) % (10 ** 9 + 7)

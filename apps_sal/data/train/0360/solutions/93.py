@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         maxCap = sum(weights)
         minCap = max(weights)

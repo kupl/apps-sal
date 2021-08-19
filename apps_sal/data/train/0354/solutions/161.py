@@ -2,7 +2,6 @@ import functools as ft
 
 
 class Solution:
-
     BASE = 10 ** 9 + 7
 
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:

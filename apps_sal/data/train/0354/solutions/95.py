@@ -1,10 +1,9 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         dp = [[[0 for k in range(16)] for j in range(6)] for i in range(n)]
-
         for s in range(6):
             dp[0][s][1] = 1
-
         for i in range(1, n):
             for j in range(6):
                 for k in range(1, rollMax[j] + 1):
@@ -20,5 +19,4 @@ class Solution:
         for l in range(6):
             for m in range(1, rollMax[l] + 1):
                 ans += dp[n - 1][l][m]
-
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

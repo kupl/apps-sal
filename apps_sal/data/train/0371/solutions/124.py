@@ -1,7 +1,8 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         connections = defaultdict(set)
-        for i, route in enumerate(routes):
+        for (i, route) in enumerate(routes):
             for stop in route:
                 connections[stop].add(i)
         visited = set()

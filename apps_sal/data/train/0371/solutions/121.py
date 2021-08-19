@@ -1,4 +1,5 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
@@ -11,7 +12,7 @@ class Solution:
         stack = [(S, 0)]
         visited = set([S])
         while stack:
-            node, level = stack.pop(0)
+            (node, level) = stack.pop(0)
             for bus in stop[node]:
                 for s in routes[bus]:
                     if s in visited:

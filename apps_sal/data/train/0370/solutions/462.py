@@ -1,5 +1,7 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def parent(x):
             while root[x] != x:
                 root[x] = root[root[x]]
@@ -11,7 +13,7 @@ class Solution:
             py = parent(y)
             if px != py:
                 if size[px] > size[py]:
-                    px, py = py, px
+                    (px, py) = (py, px)
                 size[py] += size[px]
                 root[px] = py
 
@@ -21,7 +23,6 @@ class Solution:
                     factorParent[smallestPrimeFactor[val]] = index
                 union(index, factorParent[smallestPrimeFactor[val]])
                 val //= smallestPrimeFactor[val]
-
         m = max(A) + 1
         smallestPrimeFactor = [i for i in range(m)]
         for i in range(2, int(pow(m, 0.5)) + 1):
@@ -29,7 +30,6 @@ class Solution:
                 for j in range(i * i, m, i):
                     if smallestPrimeFactor[j] == j:
                         smallestPrimeFactor[j] = i
-
         n = len(A)
         size = [1] * n
         root = [i for i in range(n)]

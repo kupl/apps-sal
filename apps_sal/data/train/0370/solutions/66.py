@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         cnt = dict([(num, 1) for num in A])
@@ -11,15 +12,14 @@ class Solution:
             return par[num]
 
         def union(num, num2):
-            root, root2 = find(num), find(num2)
+            (root, root2) = (find(num), find(num2))
             if root == root2:
                 return
             if root > root2:
-                root, root2 = root2, root
+                (root, root2) = (root2, root)
             par[root2] = root
             cnt[root] = cnt[root] + cnt[root2]
             cnt[root2] = 0
-
         primes = [2]
         i = 3
         maxA = max(A)
@@ -53,9 +53,8 @@ class Solution:
             for p in prime_set[num]:
                 prime_nums.setdefault(p, [])
                 prime_nums[p].append(num)
-
-        for prime, nums in prime_nums.items():
-            roots = set(find(num) for num in nums)
+        for (prime, nums) in prime_nums.items():
+            roots = set((find(num) for num in nums))
             if len(roots) <= 1:
                 continue
             roots = sorted(list(roots))

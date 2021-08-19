@@ -1,10 +1,11 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         low = max(weights)
         high = sum(weights)
         total = 0
         parts = 1
-        while(low < high):
+        while low < high:
             total = 0
             parts = 1
             mid = int((low + high) / 2)

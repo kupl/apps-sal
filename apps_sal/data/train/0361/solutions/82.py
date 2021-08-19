@@ -1,8 +1,9 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         INF = m * n
         if m > n:
-            m, n = n, m
+            (m, n) = (n, m)
         state = tuple([0] * m)
 
         @lru_cache(None)
@@ -19,8 +20,7 @@ class Solution:
                 side = end - start + 1
                 if mn + side > n:
                     break
-                state[start: end + 1] = [mn + side] * side
+                state[start:end + 1] = [mn + side] * side
                 res = min(res, dp(tuple(state)))
             return res + 1
-
         return dp(state)

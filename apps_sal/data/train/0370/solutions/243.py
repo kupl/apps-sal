@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         parent = dict()
 
@@ -9,7 +10,6 @@ class Solution:
             if x not in parent:
                 parent[x] = -1
                 return x
-
             if parent[x] == -1:
                 return x
             parent[x] = find_parent(parent[x])
@@ -21,13 +21,11 @@ class Solution:
             if px != py:
                 parent[py] = px
             return
-
         for x in A:
             for i in range(2, int(math.sqrt(x)) + 1):
                 if x % i == 0:
                     union_num(i, x)
                     union_num(i, x // i)
-
         count = 0
         count_ref = dict()
         for x in A:

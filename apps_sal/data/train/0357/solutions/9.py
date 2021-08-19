@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistToClosest(self, seats: List[int]) -> int:
         prev_s = [None for _ in seats]
         next_s = [None for _ in seats]
@@ -9,13 +10,11 @@ class Solution:
                 last_1 = i
             else:
                 prev_s[i] = last_1
-
         for i in range(len(seats) - 1, -1, -1):
             if seats[i] == 1:
                 next_1 = i
             else:
                 next_s[i] = next_1
-
         print(prev_s, next_s)
         closest_max = -1
         for i in range(len(seats)):

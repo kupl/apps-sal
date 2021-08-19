@@ -14,7 +14,6 @@ class Solution:
             mp = _locate(m)
             if np != mp:
                 x[mp] = np
-
         for n in A:
             for i in range(2, int(sqrt(n)) + 1):
                 if not n % i:

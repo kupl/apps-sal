@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         left = int(sum(weights) / D)
         right = max(weights) * len(weights) / D
@@ -19,7 +20,6 @@ class Solution:
             if day <= D:
                 return True
             return False
-
         while left <= right:
             mid = left + (right - left) // 2
             if is_valid(weights, D, mid):

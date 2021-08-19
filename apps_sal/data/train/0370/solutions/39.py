@@ -1,17 +1,16 @@
-prime, idx = [2, 3], [0, 1, 2, 3]
+(prime, idx) = ([2, 3], [0, 1, 2, 3])
 
 
 def ensure(n):
     n0 = len(idx)
     if n <= n0:
         return
-    prime.extend([x for i, x in enumerate(idx[prime[-1] + 1:], prime[-1] + 1)
-                 if i == x])
+    prime.extend([x for (i, x) in enumerate(idx[prime[-1] + 1:], prime[-1] + 1) if i == x])
     idx.extend(range(n0, n))
     for x in prime:
         for j in range(max(x, (n0 - 1) // x + 1) * x, n, x):
             idx[j] = x
-    for i, x in enumerate(idx[n0:], n0):
+    for (i, x) in enumerate(idx[n0:], n0):
         if n <= i * i:
             break
         if i != x:
@@ -22,11 +21,12 @@ def ensure(n):
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         ensure(max(A) + 1)
-        best, src, dst, visited = 0, {}, {}, set()
+        (best, src, dst, visited) = (0, {}, {}, set())
         for x in A:
-            x0, ps = x, set()
+            (x0, ps) = (x, set())
             while x != 1:
                 p = idx[x]
                 if p not in ps:
@@ -43,10 +43,10 @@ class Solution:
         for p in dst:
             if p in visited:
                 continue
-            work, grp, xs = {p}, set(), set()
+            (work, grp, xs) = ({p}, set(), set())
             while work:
                 grp |= work
-                old, work = work, set()
+                (old, work) = (work, set())
                 for p in old:
                     xs |= dst[p]
                     for x in dst[p] - {p}:

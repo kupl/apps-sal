@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         self.ret = 0
         record = {}
@@ -42,6 +43,6 @@ class Solution:
             if x > 1:
                 union(record.get(x, idx), idx)
                 record[x] = idx
-        for i, item in enumerate(A, 0):
+        for (i, item) in enumerate(A, 0):
             factor(item, i)
         return -self.ret

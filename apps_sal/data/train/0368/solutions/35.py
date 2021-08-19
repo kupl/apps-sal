@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSatisfaction(self, sat: List[int]) -> int:
-        if (max(sat) < 0):
+        if max(sat) < 0:
             return 0
         arr = []
         sat.sort(reverse=True)

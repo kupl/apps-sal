@@ -1,5 +1,7 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
+
         @lru_cache(maxsize=None)
         def recursion(n, last, freq):
             if n == 0:
@@ -14,4 +16,4 @@ class Solution:
                 else:
                     answer += recursion(n - 1, i, 1)
             return answer
-        return recursion(n, -1, 0) % (10**9 + 7)
+        return recursion(n, -1, 0) % (10 ** 9 + 7)

@@ -1,10 +1,8 @@
 def union(parent, rank, i, j):
     parI = find(parent, i)
     parJ = find(parent, j)
-
     if parI == parJ:
         return
-
     if rank[parI] < rank[parJ]:
         parent[parI] = parJ
     elif rank[parI] > rank[parJ]:
@@ -21,13 +19,13 @@ def find(parent, i):
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         rank = [0] * n
         parent = list(range(n))
         factorToSet = {}
-
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             for factor in range(2, int(math.sqrt(num) + 1)):
                 if num % factor == 0:
                     if factor in factorToSet:
@@ -43,7 +41,6 @@ class Solution:
                 union(parent, rank, i, factorToSet[num])
             else:
                 factorToSet[num] = i
-
         for i in range(n):
             find(parent, i)
         return max(collections.Counter(parent).values())

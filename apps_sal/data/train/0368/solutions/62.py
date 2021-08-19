@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSatisfaction(self, satisfaction: List[int]) -> int:
         res = total = 0
         i = len(satisfaction) - 1

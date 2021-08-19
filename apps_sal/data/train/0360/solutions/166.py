@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
 
         def canShip(capacity: int) -> bool:
@@ -12,10 +13,9 @@ class Solution:
                     count += 1
                     curcap = w
             return count <= D
-
         max_weight = max(weights)
         lo = sum(weights) // D
-        hi = max_weight * (len(weights)) // D + 1
+        hi = max_weight * len(weights) // D + 1
         while lo < hi:
             mid = (lo + hi) // 2
             if mid < max_weight or not canShip(mid):

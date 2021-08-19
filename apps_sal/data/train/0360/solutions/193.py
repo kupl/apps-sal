@@ -1,4 +1,5 @@
 class Solution:
+
     def check(self, weights, limit):
         cur = 0
         count = 1
@@ -8,14 +9,12 @@ class Solution:
                 cur = weights[i]
             else:
                 cur += weights[i]
-
         return count
 
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         l = max(weights)
         r = sum(weights)
         ans = 1
-
         while l <= r:
             mid = int((r + l) / 2)
             if self.check(weights, mid) <= D:

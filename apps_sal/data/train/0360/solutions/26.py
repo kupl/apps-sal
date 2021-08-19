@@ -2,10 +2,10 @@ from collections import defaultdict
 
 
 class Solution:
+
     def canShipWithinDays(self, weights: List[int], D: int, maxWeight: int) -> bool:
         if max(weights) > maxWeight:
             return False
-
         shipmentweights = [0]
         for w in weights:
             if shipmentweights[-1] + w <= maxWeight:

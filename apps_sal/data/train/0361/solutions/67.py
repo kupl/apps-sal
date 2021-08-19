@@ -2,17 +2,18 @@ import math
 
 
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         grid = [[0 for _ in range(m)] for _ in range(n)]
 
         def try_place(i: int, j: int, l: int) -> bool:
             ok = True
-            xb, yb = None, None
+            (xb, yb) = (None, None)
             for x in range(i, i + l):
                 for y in range(j, j + l):
                     if grid[x][y] == 1:
                         ok = False
-                        xb, yb = x, y
+                        (xb, yb) = (x, y)
                         break
                     grid[x][y] = 1
                 if not ok:
@@ -50,7 +51,6 @@ class Solution:
                 if try_place(i, j, l):
                     search(i + 1, j, sofar + 1, ans)
                     un_place(i, j, l)
-
         if len(grid) == len(grid[0]):
             return 1
         ans = [math.inf]
