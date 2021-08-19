@@ -1,7 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         d = defaultdict(lambda: defaultdict(int))
-
         from functools import lru_cache
 
         @lru_cache(None)
@@ -21,5 +21,4 @@ class Solution:
                         res += dfs(j, expected)
                 d[i][fuel] = res
                 return res
-        return dfs(start, fuel) % (10**9 + 7)
-        # print(d[1])
+        return dfs(start, fuel) % (10 ** 9 + 7)

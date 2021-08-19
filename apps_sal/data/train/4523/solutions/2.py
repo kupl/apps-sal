@@ -7,14 +7,14 @@ def digit_sum(n: Union[List[int], int]) -> int:
     """
     if isinstance(n, list):
         return sum(n)
-    return sum(int(ch) for ch in str(n))
+    return sum((int(ch) for ch in str(n)))
 
 
 def to_int(arr: List[int]) -> int:
     """
     Converts an array of positional integers into a single integer
     """
-    return int(''.join(str(n) for n in arr))
+    return int(''.join((str(n) for n in arr)))
 
 
 def bump(arr, i):
@@ -31,11 +31,9 @@ def solve(n: int) -> int:
     Find the largest number <= n with the maximum digit sum
     """
     s = str(n)
-    # Decrement the first digit and convert all others to 9 as a baseline
     option = [int(s[0]) - 1] + [9] * (len(s) - 1)
     if digit_sum(option) > digit_sum(n):
         for i in range(len(option) - 1):
-            # Keep bumping digit i in option while still a single digit and the int value <= n
             while True:
                 if option[i] == 9:
                     break

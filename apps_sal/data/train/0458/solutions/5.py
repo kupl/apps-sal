@@ -1,6 +1,6 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
-        # remove smallest thing from centert
         tot = sum(nums)
         need = sum(nums) % p
         if need == 0:
@@ -8,7 +8,7 @@ class Solution:
         seen = {0: -1}
         curr = 0
         ret = len(nums)
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             curr = (curr + num) % p
             other = (curr - need) % p
             if other in seen:

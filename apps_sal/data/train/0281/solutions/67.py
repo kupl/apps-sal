@@ -1,12 +1,12 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
-            return False  # edge case
-
+            return False
         visited = {}
-        for ss, tt in zip(s, t):
+        for (ss, tt) in zip(s, t):
             if ss != tt:
-                d = (ord(tt) - ord(ss)) % 26  # distance
+                d = (ord(tt) - ord(ss)) % 26
                 if d not in visited:
                     visited[d] = d
                 else:

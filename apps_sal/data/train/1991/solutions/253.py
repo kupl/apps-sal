@@ -1,7 +1,8 @@
 class Solution:
+
     def countRoutes(self, nums: List[int], start: int, finish: int, fuel: int) -> int:
+
         def dp(i, f, cache):
-            # print(i, f)
             if f < 0:
                 return 0
             if f == 0:
@@ -11,7 +12,6 @@ class Solution:
                 for j in range(len(nums)):
                     if j != i:
                         ans += dp(j, f - abs(nums[i] - nums[j]), cache)
-                cache[(i, f)] = ans
-            return cache[(i, f)]
-
+                cache[i, f] = ans
+            return cache[i, f]
         return dp(start, fuel, {}) % (10 ** 9 + 7)

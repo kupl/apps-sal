@@ -1,9 +1,10 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
         count = [0 for _ in range(26)]
-        for a, b in zip(s, t):
+        for (a, b) in zip(s, t):
             if a == b:
                 continue
             shift = (ord(b) - ord(a)) % 26
@@ -16,5 +17,4 @@ class Solution:
                 max_count = count[i]
         if max_count < 1:
             return True
-        # print('max_count', max_count, 'max_shift', max_shift)
-        return (((max_count - 1) * 26) + max_shift) <= k
+        return (max_count - 1) * 26 + max_shift <= k

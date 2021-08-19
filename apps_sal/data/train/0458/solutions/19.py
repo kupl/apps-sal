@@ -1,6 +1,7 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
-        '''
+        """
         Find subarray[i:j] where i < j such that 
         (sum(arr) - sum(arr[i:j])) % p == 0
 
@@ -36,23 +37,17 @@ class Solution:
         c[i] % p will be stored in the hashmap along with the index
         Which is why we query the LHS, for it
 
-        '''
+        """
         for i in range(1, len(nums)):
             nums[i] += nums[i - 1]
-
         target = nums[-1] % p
         if target == 0:
-            return 0  # Early Exit, we don't have to remove anything
-
+            return 0
         ans = len(nums)
         remainders = {0: -1}
-
         for j in range(len(nums)):
             complement = (nums[j] % p - target) % p
-
             if complement in remainders:
                 ans = min(ans, j - remainders[complement])
-
             remainders[nums[j] % p] = j
-
         return ans if ans < len(nums) else -1
