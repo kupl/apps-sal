@@ -1,8 +1,6 @@
 import sys
-sys.setrecursionlimit(10**9)
-
+sys.setrecursionlimit(10 ** 9)
 t = int(input())
 for _ in range(t):
-    n, x = map(int, input().split())
-    # 2, 4, 6, ...
+    (n, x) = map(int, input().split())
     print(2 * x)

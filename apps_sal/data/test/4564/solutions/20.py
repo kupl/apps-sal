@@ -1,6 +1,4 @@
-# 31
 S = str(input())
-
 list = []
 ans = 'yes'
 for s in S:
@@ -11,5 +9,4 @@ for s in S:
     if ans == 'no':
         break
     list.append(s)
-
 print(ans)

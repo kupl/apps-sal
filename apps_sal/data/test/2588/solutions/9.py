@@ -1,9 +1,6 @@
-# E71_C
-
 T = int(input())
-
 for i in range(0, T):
-    ln = [int(j) for j in input().split(" ")]
+    ln = [int(j) for j in input().split(' ')]
     n = ln[0]
     a = ln[1]
     b = ln[2]
@@ -15,7 +12,7 @@ for i in range(0, T):
     seg = []
     ft = False
     for j in range(0, len(st)):
-        if st[j] == "1":
+        if st[j] == '1':
             ft = False
             if ct == 0:
                 seg.append(j - 1)
@@ -40,12 +37,12 @@ for i in range(0, T):
         if ft:
             ct -= 1
         pls += ct + 1
-    cost = pls * (b * 2) + (n + 1 - pls) * (b)
+    cost = pls * (b * 2) + (n + 1 - pls) * b
     cost += (n + len(seg)) * a
     if len(seg) > 2:
         for j in range(1, len(seg) - 1, 2):
             plc = (seg[j + 1] - seg[j]) * b
             pipc = 2 * a
             if plc < pipc:
-                cost -= (pipc - plc)
+                cost -= pipc - plc
     print(cost)

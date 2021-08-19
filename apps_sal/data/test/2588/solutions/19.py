@@ -28,11 +28,10 @@ def solve(A, n, a, b):
     return cost
 
 
-in_file = sys.stdin  # open("C.txt", "r")
-
+in_file = sys.stdin
 t = int(in_file.readline().strip())
 for _ in range(t):
-    n, a, b = map(int, in_file.readline().strip().split())
+    (n, a, b) = map(int, in_file.readline().strip().split())
     A = list(map(int, in_file.readline().strip()))
-    sys.stdout.write(str(solve(A, n, a, b)) + "\n")
+    sys.stdout.write(str(solve(A, n, a, b)) + '\n')
 sys.stdout.flush()

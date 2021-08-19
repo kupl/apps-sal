@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import time
 
 
@@ -15,19 +12,15 @@ def polytest(str):
 
 str = input()
 k = int(input())
-
 start = time.time()
 dm = divmod(len(str), k)
-
 if dm[1] != 0:
-    ans = "NO"
+    ans = 'NO'
 else:
     for i in range(k):
-        ans = "YES"
-        if polytest(str[i * dm[0]: (i + 1) * dm[0]]) == False:
-            ans = "NO"
+        ans = 'YES'
+        if polytest(str[i * dm[0]:(i + 1) * dm[0]]) == False:
+            ans = 'NO'
             break
-
 print(ans)
 finish = time.time()
-#print (finish - start), "sec"

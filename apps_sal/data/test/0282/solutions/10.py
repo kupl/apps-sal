@@ -1,7 +1,7 @@
 def jump(n, d, s):
-    string = ""
+    string = ''
     for x in range(d):
-        string += "0"
+        string += '0'
     for i in range(len(s) - d):
         if s[i:i + d] == string:
             return -1
@@ -15,7 +15,6 @@ def jump(n, d, s):
                 dist += d
                 count += 1
                 a += d
-                # if d+a-r<len(s):
             else:
                 while d - r > 0:
                     if int(s[d + a - r]) == 1:
@@ -26,16 +25,13 @@ def jump(n, d, s):
                         break
                     else:
                         r += 1
-                # else:
-                #	while d+a-r>=len(s):
-                #		r+=1
         else:
             a -= 1
     return count
 
 
 def __starting_point():
-    [n, d] = [int(i) for i in input().split(" ")]
+    [n, d] = [int(i) for i in input().split(' ')]
     s = input()
     print(jump(n, d, s))
 
