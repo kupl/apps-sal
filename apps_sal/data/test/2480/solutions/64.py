@@ -1,7 +1,6 @@
 def main():
     from collections import defaultdict, deque
-
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     a = list(map(int, input().split()))
 
     def accumulate(a, mod):
@@ -10,9 +9,7 @@ def main():
         for x in a:
             s = (s + x - 1) % mod
             yield s
-
     acc = accumulate(a, mod=K)
-
     d = defaultdict(int)
     dq = deque()
     ans = 0
@@ -28,15 +25,6 @@ def main():
 
 def __starting_point():
     main()
-
-# import sys
-#
-# sys.setrecursionlimit(10 ** 7)
-#
-# input = sys.stdin.readline
-# rstrip()
-# int(input())
-# map(int, input().split())
 
 
 __starting_point()

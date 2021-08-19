@@ -1,6 +1,5 @@
 import sys
-
-n, p, t = list(map(str, sys.stdin.readline().split()))
+(n, p, t) = list(map(str, sys.stdin.readline().split()))
 n = int(n)
 p = float(p)
 t = int(t)
@@ -25,7 +24,6 @@ def C(n, k):
     t = max(n - k, k)
     for i in range(1, min(n - k, k) + 1):
         tmp = tmp * (t + i) * p * (1 - p) / i
-
     return tmp
 
 
@@ -44,9 +42,7 @@ elif p != 1 and p != 0:
     for i in range(t - n):
         b = b + CC(i + 1, n + i)
     b = b * pow(p, n)
-    #print(a + b)
+elif p == 1:
+    print(n)
 else:
-    if p == 1:
-        print(n)
-    else:
-        print(0)
+    print(0)

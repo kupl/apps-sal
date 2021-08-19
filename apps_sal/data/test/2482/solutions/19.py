@@ -1,15 +1,12 @@
-# UNIONFIND
 class UnionFind:
+
     def __init__(self, n):
-        # 負  : 根であることを示す。絶対値はランクを示す
-        # 非負: 根でないことを示す。値は親を示す
         self.table = [-1] * n
 
     def _root(self, x):
         if self.table[x] < 0:
             return x
         else:
-            # 経路の圧縮
             self.table[x] = self._root(self.table[x])
             return self.table[x]
 
@@ -21,7 +18,6 @@ class UnionFind:
         r2 = self._root(y)
         if r1 == r2:
             return
-        # ランクの取得
         d1 = self.table[r1]
         d2 = self.table[r2]
         if d1 <= d2:
@@ -33,14 +29,14 @@ class UnionFind:
 
 
 def __starting_point():
-    n, k, l = map(int, input().split())
+    (n, k, l) = map(int, input().split())
     pq = UnionFind(n + 1)
     rs = UnionFind(n + 1)
     for i in range(k):
-        p, q = map(int, input().split())
+        (p, q) = map(int, input().split())
         pq.union(p, q)
     for i in range(l):
-        r, s = map(int, input().split())
+        (r, s) = map(int, input().split())
         rs.union(r, s)
     sameroot = []
     for i in range(1, n + 1):
@@ -48,9 +44,9 @@ def __starting_point():
     sameroot.sort()
     sameroot.append([0, 0, n + 1])
     cnt = [0] * (n + 1)
-    bx, by = 0, 0
+    (bx, by) = (0, 0)
     samelist = []
-    for x, y, i in sameroot:
+    for (x, y, i) in sameroot:
         if bx == x and by == y:
             samelist.append(i)
         else:
@@ -59,7 +55,7 @@ def __starting_point():
                 for j in samelist:
                     cnt[j] = k
             samelist = [i]
-            bx, by = x, y
+            (bx, by) = (x, y)
     print(' '.join(map(str, cnt[1:])))
 
 

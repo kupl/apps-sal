@@ -1,4 +1,3 @@
-# solution
 import io
 import math
 import string
@@ -7,7 +6,7 @@ import string
 def col(n, m):
     X = [[] for _ in range(n)]
     for _ in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         X[a - 1].append(b - 1)
         X[b - 1].append(a - 1)
     C = [-1] * n
@@ -27,15 +26,14 @@ def col(n, m):
     return C
 
 
-N, K, L = map(int, input().split())
+(N, K, L) = map(int, input().split())
 A = col(N, K)
 B = col(N, L)
 D = {}
-for a, b in zip(A, B):
+for (a, b) in zip(A, B):
     t = (a << 18) + b
     if t in D:
         D[t] += 1
     else:
         D[t] = 1
-
-print(*[D[(a << 18) + b] for a, b in zip(A, B)])
+print(*[D[(a << 18) + b] for (a, b) in zip(A, B)])

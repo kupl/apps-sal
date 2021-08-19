@@ -1,7 +1,8 @@
 from collections import Counter
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -19,7 +20,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -34,7 +35,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -43,28 +44,18 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-N, K, L = list(map(int, input().split()))
+(N, K, L) = list(map(int, input().split()))
 pq = [list(map(int, input().split())) for i in range(K)]
 rs = [list(map(int, input().split())) for i in range(L)]
-
 uf_road = UnionFind(N)
 uf_train = UnionFind(N)
-
 for i in range(K):
     uf_road.union(pq[i][0] - 1, pq[i][1] - 1)
 for i in range(L):
     uf_train.union(rs[i][0] - 1, rs[i][1] - 1)
-
-# 各都市に連結しているroadとtrainの積集合の探索はTLE
-# ans = []
-# for i in range(N):
-#   ans.append(len(set(uf_road.members(i)) & set(uf_train.members(i))))
-# print(*ans)
-
-# road,trainの根のペアで同じペアを持つ都市は連結している
 pair = [(uf_road.find(i), uf_train.find(i)) for i in range(N)]
 ans = Counter(pair)
 print(*[ans[i] for i in pair])

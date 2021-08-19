@@ -3,7 +3,7 @@ import sys
 
 def main():
     input = sys.stdin.readline
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     accum = [0] * n
     accum[0] = a[0]
@@ -20,7 +20,6 @@ def main():
         else:
             ans += d[(accum[j] - j) % k]
             d[(accum[j] - j) % k] += 1
-        # print(d)
     return print(ans)
 
 

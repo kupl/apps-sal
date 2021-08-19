@@ -1,11 +1,9 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 for i in range(1, N):
     A[i] += A[i - 1]
-    # A[i]=(A[i]+A[i-1]-1)%K
-
 for i in range(N):
-    A[i] -= (i + 1)
+    A[i] -= i + 1
     A[i] %= K
 A = [0] + A
 D = {}

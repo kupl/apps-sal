@@ -1,17 +1,7 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 998244353
-INF = 1000_000_000
-
-# from heapq import heappush, heappop
-# from collections import defaultdict
-# from math import sqrt
-# from collections import deque
-
-t = 1  # int(input())
-
+INF = 1000000000
+t = 1
 for test in range(t):
     n = int(input())
-    # n,m = map(int, input().split())
     arr = list(map(int, input().split()))
     if n == 1:
         print(max(arr[0], -arr[0] - 1))
