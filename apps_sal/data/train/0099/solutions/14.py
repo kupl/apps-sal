@@ -1,13 +1,9 @@
 for _ in range(int(input())):
-    #n, m = map(int, input().split())
-    #A = list(map(int, input().split()))
     n = int(input())
     s = input()
     if s == '0' * n or s == '1' * n:
         print(s)
-
     else:
-
         i = 0
         while s[i] == '0':
             i += 1

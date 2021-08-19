@@ -2,7 +2,6 @@ def main():
     import sys
     from operator import itemgetter
     input = sys.stdin.readline
-
     X = int(input())
     K = int(input())
     R = list(map(int, input().split()))
@@ -11,17 +10,15 @@ def main():
         Q.append((r, -1))
     q = int(input())
     for _ in range(q):
-        t, a = list(map(int, input().split()))
+        (t, a) = list(map(int, input().split()))
         Q.append((t, a))
     Q.sort(key=itemgetter(0))
-
-    # print(Q)
     prev = 0
     m = 0
     M = X
     flg = -1
     R_cs = 0
-    for t, a in Q:
+    for (t, a) in Q:
         if a < 0:
             r = t - prev
             R_cs -= r * flg
@@ -34,31 +31,28 @@ def main():
                 M = min(X, M + r)
                 flg = -1
             prev = t
-        else:
-            if m == M:
-                if flg == 1:
-                    print((min(X, m + t - prev)))
-                else:
-                    print((max(0, m - t + prev)))
+        elif m == M:
+            if flg == 1:
+                print(min(X, m + t - prev))
             else:
-                am = m + R_cs
-                aM = M + R_cs
-                #print('am', am, 'aM', aM, m, M)
-                if a <= am:
-                    if flg == 1:
-                        print((min(X, m + t - prev)))
-                    else:
-                        print((max(0, m - t + prev)))
-                elif a >= aM:
-                    if flg == 1:
-                        print((min(X, M + t - prev)))
-                    else:
-                        print((max(0, M - t + prev)))
+                print(max(0, m - t + prev))
+        else:
+            am = m + R_cs
+            aM = M + R_cs
+            if a <= am:
+                if flg == 1:
+                    print(min(X, m + t - prev))
                 else:
-                    if flg == 1:
-                        print((min(X, m + (a - am) + t - prev)))
-                    else:
-                        print((max(0, m + (a - am) - t + prev)))
+                    print(max(0, m - t + prev))
+            elif a >= aM:
+                if flg == 1:
+                    print(min(X, M + t - prev))
+                else:
+                    print(max(0, M - t + prev))
+            elif flg == 1:
+                print(min(X, m + (a - am) + t - prev))
+            else:
+                print(max(0, m + (a - am) - t + prev))
 
 
 def __starting_point():
