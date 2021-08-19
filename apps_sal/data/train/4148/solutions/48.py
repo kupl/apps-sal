@@ -6,7 +6,6 @@ def sum_digits(number):
         number = abs(number)
     for split in str(number):
         digits.append(split)
-
     print(digits)
     for add in digits:
         num_sum += int(add)

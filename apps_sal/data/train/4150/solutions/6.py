@@ -2,8 +2,8 @@ import re
 
 
 def rot13(message):
-    pattern1 = re.compile(r'[A-Ma-m]')
-    pattern2 = re.compile(r'[N-Zn-z]')
+    pattern1 = re.compile('[A-Ma-m]')
+    pattern2 = re.compile('[N-Zn-z]')
     deciphered = []
     for s in message:
         if pattern1.match(s):

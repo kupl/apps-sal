@@ -1,5 +1,5 @@
 def repeater(string, n):
-    newstring = ""
+    newstring = ''
     count = n
     while count > 0:
         newstring += string

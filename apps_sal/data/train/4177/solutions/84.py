@@ -5,5 +5,4 @@ def men_from_boys(arr):
     b = list(set(y))
     b.sort(reverse=True)
     a.sort()
-
     return a + b

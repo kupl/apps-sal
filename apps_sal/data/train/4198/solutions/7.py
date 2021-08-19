@@ -16,8 +16,8 @@ def prime_factor(n):
 
 
 def simplify(n):
-    a, b = 1, 1
-    for k, v in prime_factor(n).items():
+    (a, b) = (1, 1)
+    for (k, v) in prime_factor(n).items():
         while v >= 2:
             a *= k
             v -= 2
@@ -30,7 +30,7 @@ def simplify(n):
 
 
 def desimplify(s):
-    res = re.match(r'(\d+ ?)?(sqrt (\d+))?', s)
-    a, b = res.group(1), res.group(3)
-    ans = int(a)**2 if a else 1
+    res = re.match('(\\d+ ?)?(sqrt (\\d+))?', s)
+    (a, b) = (res.group(1), res.group(3))
+    ans = int(a) ** 2 if a else 1
     return ans * int(b) if b else ans

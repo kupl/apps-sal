@@ -10,7 +10,7 @@ def rat_at(n):
         k = rat_at(j)
         return (k[0], k[0] + k[1])
     else:
-        j = int((n - (2 ** i)) / 2 + 2 ** (i - 1) - 1)
+        j = int((n - 2 ** i) / 2 + 2 ** (i - 1) - 1)
         k = rat_at(j)
         return (k[0] + k[1], k[1])
 

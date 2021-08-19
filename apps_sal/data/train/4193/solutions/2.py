@@ -1,8 +1,7 @@
-s, hh = -464148, []
-
+(s, hh) = (-464148, [])
 while s < 464159:
-    v = s**3
-    sv, b = str(v), 1
+    v = s ** 3
+    (sv, b) = (str(v), 1)
     for c in sv:
         if not c in '-13579':
             b = 0

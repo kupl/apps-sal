@@ -4,7 +4,7 @@ from math import ceil
 def rat_at(n):
     if n == 0:
         return (1, 1)
-    a, b = rat_at(max(ceil(n / 2) - 1, 0))
+    (a, b) = rat_at(max(ceil(n / 2) - 1, 0))
     return (a, b + a) if n % 2 else (a + b, b)
 
 

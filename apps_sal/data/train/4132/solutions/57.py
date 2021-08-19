@@ -6,4 +6,4 @@ def correct_tail(body, tail):
         return False
 
 
-print(correct_tail("Fox", "x"))
+print(correct_tail('Fox', 'x'))

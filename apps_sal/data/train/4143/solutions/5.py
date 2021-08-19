@@ -7,4 +7,4 @@ def points(s):
     try:
         return d[m]
     except KeyError:
-        return 20 if "".join(sorted(list(s))) in ["12345", "13456", "23456"] else 0
+        return 20 if ''.join(sorted(list(s))) in ['12345', '13456', '23456'] else 0

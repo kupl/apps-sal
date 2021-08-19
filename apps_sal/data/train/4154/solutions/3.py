@@ -9,4 +9,4 @@ def is_triangle(a, b, c):
         Returns:
             bool: True if the three sides given can form a triangle.
     """
-    return a < b + c and b < a + c and c < a + b
+    return a < b + c and b < a + c and (c < a + b)

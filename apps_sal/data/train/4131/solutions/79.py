@@ -1,5 +1,2 @@
 def how_much_water(water, load, clothes):
-
-    return("Not enough clothes" if clothes
-           < load else "Too much clothes" if clothes > load * 2
-           else round(water * 1.1 ** (clothes - load), 2))
+    return 'Not enough clothes' if clothes < load else 'Too much clothes' if clothes > load * 2 else round(water * 1.1 ** (clothes - load), 2)

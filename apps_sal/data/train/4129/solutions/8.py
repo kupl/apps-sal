@@ -9,5 +9,4 @@ def queue(queuers, pos):
         queuers.append(queuers[0])
         queuers.pop(0)
         count += 1
-
     return count + sum([i for i in queuers if i < 0])

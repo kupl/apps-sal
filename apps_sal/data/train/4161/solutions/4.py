@@ -13,8 +13,8 @@ def rat_at(n):
     num = [1, f[len(f) - 1]]
     for i in range(len(f) - 2, -1, -1):
         num[0] = f[i] * num[1] + num[0]
-        num[0], num[1] = num[1], num[0]
-    num[0], num[1] = num[1], num[0]
+        (num[0], num[1]) = (num[1], num[0])
+    (num[0], num[1]) = (num[1], num[0])
     return tuple(num)
 
 
@@ -24,14 +24,14 @@ def index_of(a, b):
     bin = ''
     l = '1'
     while num[0] != 0:
-        num[0], num[1] = num[1], num[0]
+        (num[0], num[1]) = (num[1], num[0])
         f.append(num[0] // num[1])
         num[0] -= f[len(f) - 1] * num[1]
     if len(f) % 2 == 0:
         f[len(f) - 1] -= 1
         f.append(1)
     for n in f:
-        bin = (n * l) + bin
+        bin = n * l + bin
         if l == '0':
             l = '1'
         else:

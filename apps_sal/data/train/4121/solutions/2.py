@@ -1,6 +1,6 @@
 def fight_resolve(defender, attacker):
     res = attacker
-    if defender.islower() and attacker.islower() or defender.isupper() and attacker.isupper():
+    if defender.islower() and attacker.islower() or (defender.isupper() and attacker.isupper()):
         return -1
     elif attacker.lower() == 'a':
         if defender.lower() == 'k':

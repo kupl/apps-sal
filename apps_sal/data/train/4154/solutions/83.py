@@ -9,7 +9,6 @@ def is_triangle(a, b, c):
     _a = v.pop()
     _b = v.pop()
     _c = v.pop()
-
     if _a < _b + _c:
         return True
     if _a == _b + _c:

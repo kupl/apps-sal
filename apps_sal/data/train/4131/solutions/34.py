@@ -4,4 +4,4 @@ def how_much_water(water, load, clothes):
     elif load > clothes:
         return 'Not enough clothes'
     else:
-        return ((water * 1.1**(clothes - load) + 0.005) * 100) // 1 / 100
+        return (water * 1.1 ** (clothes - load) + 0.005) * 100 // 1 / 100

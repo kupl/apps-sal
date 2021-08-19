@@ -1,1 +1,2 @@
-def repeater(a, n): return a * n
+def repeater(a, n):
+    return a * n

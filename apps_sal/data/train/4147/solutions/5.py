@@ -1,6 +1,6 @@
 def play_pass(phrase, n):
     output = ''
-    for i, char in enumerate(phrase):
+    for (i, char) in enumerate(phrase):
         if char.isdigit():
             char = str(9 - int(char))
         elif char.isalpha():

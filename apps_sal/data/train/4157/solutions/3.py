@@ -1,6 +1,5 @@
 import re
-
-BRACES = '\(\)|{}|\[\]'
+BRACES = '\\(\\)|{}|\\[\\]'
 
 
 def group_check(s):

@@ -6,11 +6,10 @@ def is_sorted_and_how(arr):
             decend_Counter += 1
         if arr[i] < arr[i + 1]:
             accend_Counter += 1
-    if (decend_Counter == len(arr) - 1):
-        return "yes, descending"
-    elif (accend_Counter == len(arr) - 1):
-        return "yes, ascending"
+    if decend_Counter == len(arr) - 1:
+        return 'yes, descending'
+    elif accend_Counter == len(arr) - 1:
+        return 'yes, ascending'
     else:
-        return "no"
-
+        return 'no'
     return 1

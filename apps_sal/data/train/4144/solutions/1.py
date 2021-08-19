@@ -1,9 +1,7 @@
 from operator import itemgetter
 from bisect import bisect
-
 LIMIT = 2000
-
-memo, result = [0] * LIMIT, {}
+(memo, result) = ([0] * LIMIT, {})
 for x in range(1, LIMIT):
     if memo[x] > x:
         result[x] = memo[x] - x

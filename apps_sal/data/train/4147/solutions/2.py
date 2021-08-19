@@ -7,5 +7,4 @@ def play_pass(s, n):
             passphrase[i] = passphrase[i].lower() if i % 2 == 1 else passphrase[i].upper()
         if passphrase[i].isdigit():
             passphrase[i] = str(9 - int(passphrase[i]))
-
     return ''.join(passphrase[::-1])

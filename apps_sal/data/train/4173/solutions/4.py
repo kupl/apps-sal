@@ -1,12 +1,14 @@
 def ant(gr, cl, ro, n, di=0):
-    class ant_class():
+
+    class ant_class:
+
         def __init__(self, col, row, direction):
             self.c = col
             self.r = row
             self.direction = ['N', 'E', 'S', 'W']
 
         def __repr__(self):
-            return ('col: {}, row: {}, direction: {}'.format(self.c, self.r, self.direction[0]))
+            return 'col: {}, row: {}, direction: {}'.format(self.c, self.r, self.direction[0])
 
         def turn_right(self):
             self.direction.append(self.direction.pop(0))
@@ -34,7 +36,8 @@ def ant(gr, cl, ro, n, di=0):
                     grid.expand_east()
                 ant.c += 1
 
-    class grid():
+    class grid:
+
         def __init__(self, arr):
             self.grid = arr
 
@@ -51,13 +54,11 @@ def ant(gr, cl, ro, n, di=0):
             self.grid = [[0] + i for i in self.grid]
 
         def invert(self, ant):
-            self.grid[ant.r][ant.c] = int(not(self.grid[ant.r][ant.c]))
-
+            self.grid[ant.r][ant.c] = int(not self.grid[ant.r][ant.c])
     ant = ant_class(cl, ro, di)
     field = grid(gr)
     for i in range(di):
         ant.turn_right()
-
     for i in range(n):
         if field.grid[ant.r][ant.c] == 1:
             ant.turn_right()
@@ -67,5 +68,4 @@ def ant(gr, cl, ro, n, di=0):
             ant.turn_left()
             field.invert(ant)
             ant.move(field)
-
     return field.grid

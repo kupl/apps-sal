@@ -1,5 +1,5 @@
 def smallest(n):
-    x, y, m = 1, 1, 1
+    (x, y, m) = (1, 1, 1)
     while m <= n:
         if x % m == 0:
             m += 1

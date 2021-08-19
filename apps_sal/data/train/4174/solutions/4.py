@@ -6,8 +6,6 @@ def gcd(a, b):
 
 def smallest(n):
     p = 1
-
     for i in range(2, n + 1):
-        p *= (i / gcd(p, i))
-
+        p *= i / gcd(p, i)
     return p

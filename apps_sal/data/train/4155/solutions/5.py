@@ -8,7 +8,7 @@ def solve(a, b):
         else:
             n = str(i)
             if set(n).issubset(s):
-                left, right = 0, len(n) - 1
+                (left, right) = (0, len(n) - 1)
                 while left <= right:
                     ln = n[left]
                     rn = n[right]
@@ -21,7 +21,6 @@ def solve(a, b):
                         break
                 if left > right:
                     total += 1
-
             else:
                 continue
     return total

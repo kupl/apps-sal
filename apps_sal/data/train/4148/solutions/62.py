@@ -1,7 +1,6 @@
 def sum_digits(number):
     if number < 0:
         number *= -1
-
     if number < 10:
         return number
     else:

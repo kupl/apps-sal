@@ -4,7 +4,6 @@ def ant(grid, col, row, n, direction=0):
             direction = (direction + 1) % 4
         else:
             direction = (direction - 1) % 4
-
         grid[row][col] = int(not grid[row][col])
         if direction == 0:
             row -= 1

@@ -7,8 +7,9 @@ def correct_tail(body, tail):
 
 
 class TestCorrectTail(unittest.TestCase):
+
     def test_should_return_false_when_last_of_char_of_body_is_not_equal_tail(self):
-        self.assertFalse(correct_tail(body="Emu", tail="m"))
+        self.assertFalse(correct_tail(body='Emu', tail='m'))
 
     def test_should_return_true_when_last_of_char_of_body_is_equal_tail(self):
-        self.assertTrue(correct_tail(body="Fox", tail="x"))
+        self.assertTrue(correct_tail(body='Fox', tail='x'))

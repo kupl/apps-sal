@@ -5,14 +5,12 @@ def is_sorted_and_how(arr):
     for i in range(len(arr) - 1):
         if arr[i] < arr[i + 1]:
             d = False
-
     for i in range(len(arr) - 1):
         if arr[i] > arr[i + 1]:
             a = False
-
     if d:
-        return "yes, descending"
+        return 'yes, descending'
     elif a:
-        return "yes, ascending"
+        return 'yes, ascending'
     else:
-        return "no"
+        return 'no'

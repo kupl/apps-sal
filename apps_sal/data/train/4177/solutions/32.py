@@ -1,5 +1,5 @@
 def men_from_boys(arr):
-    odd, even = [], []
+    (odd, even) = ([], [])
     arr = list(set(arr))
     arr.sort()
     for i in arr:

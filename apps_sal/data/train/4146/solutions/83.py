@@ -3,7 +3,6 @@ def is_sorted_and_how(arr):
     crr = arr.copy()
     brr.sort()
     crr.sort(reverse=True)
-
     if arr == brr:
         return 'yes, ascending'
     if arr == crr:

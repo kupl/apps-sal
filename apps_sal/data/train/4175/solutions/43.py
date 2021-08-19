@@ -1,5 +1,5 @@
 def repeater(string, n):
-    yes = ""
+    yes = ''
     for a in range(n):
         yes += string
     return yes

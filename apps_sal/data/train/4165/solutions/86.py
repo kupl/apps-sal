@@ -3,4 +3,4 @@ def uni_total(string):
     tot = 0
     for i in a:
         tot = tot + ord(i)
-    return(tot)
+    return tot

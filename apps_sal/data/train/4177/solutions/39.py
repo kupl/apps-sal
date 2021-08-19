@@ -5,5 +5,4 @@ def men_from_boys(arr):
     boys = sorted(boys)
     boys.reverse()
     res = []
-
     return men + boys

@@ -10,4 +10,4 @@ def descriptions(arr):
     for i in range(1, len(arr)):
         if arr[i] == arr[i - 1] + 1:
             count += 1
-    return 2**count
+    return 2 ** count

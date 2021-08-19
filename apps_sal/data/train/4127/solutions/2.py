@@ -6,4 +6,4 @@ for i in range(2, TOP):
 
 
 def count_pairs_int(diff, n_max):
-    return sum(CNT[a] == CNT[a + diff] for a in range(1, n_max - diff))
+    return sum((CNT[a] == CNT[a + diff] for a in range(1, n_max - diff)))

@@ -1,10 +1,10 @@
 def sum_digits(number):
     kol = 0
-    j = ""
+    j = ''
     string = str(number)
     for i in string:
-        j = ""
-        if i == "-":
+        j = ''
+        if i == '-':
             continue
         else:
             j += i

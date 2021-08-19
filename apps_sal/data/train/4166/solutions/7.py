@@ -1,5 +1,5 @@
 def solve(p):
-    i, ans = 1, 0
+    (i, ans) = (1, 0)
     while i * i <= p - 1:
         if (p - 1) % i == 0:
             j = (p - 1) // i

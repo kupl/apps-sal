@@ -1,4 +1,4 @@
-s, seq, sums = {0}, [0], [0]
+(s, seq, sums) = ({0}, [0], [0])
 for i in range(25 * 10 ** 5 + 1):
     x = seq[-1] - i
     if x < 0 or x in s:

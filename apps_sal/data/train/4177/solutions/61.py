@@ -1,14 +1,12 @@
 def men_from_boys(arr):
     even = []
     odd = []
-
     for a in arr:
         if a % 2 == 0:
             if a not in even:
                 even.append(a)
-        else:
-            if a not in odd:
-                odd.append(a)
+        elif a not in odd:
+            odd.append(a)
     print(even)
     print(odd)
     odd.sort(reverse=True)

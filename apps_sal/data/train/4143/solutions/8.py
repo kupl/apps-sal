@@ -2,14 +2,12 @@ def points(dice):
     x = sorted(dice)
     if len(set(x)) == 1:
         return 50
-
     if len(set(x)) == 2:
         for i in set(x):
             if dice.count(i) in [1, 4]:
                 return 40
             else:
                 return 30
-
     if x[0] == '1':
         exp = [x[0], x[1]]
         for i in range(1, 4):
