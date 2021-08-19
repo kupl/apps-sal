@@ -1,9 +1,6 @@
-
-# 1340. Jump Game V
-
 class Solution:
-    def maxJumps(self, arr: List[int], d: int) -> int:
 
+    def maxJumps(self, arr: List[int], d: int) -> int:
         n = len(arr)
         res = [0] * n
 
@@ -17,7 +14,4 @@ class Solution:
                         break
                     res[i] = max(res[i], dp(j) + 1)
             return res[i]
-
         return max(list(map(dp, list(range(n)))))
-
-    # range(0, n) as input of dp func, then get the max of their results

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         dp = [0] * len(arr)
         path = {i: [(i, arr[i])] for i in range(len(arr))}
@@ -7,8 +8,8 @@ class Solution:
             nonlocal dp, path
             if dp[i] != 0:
                 return dp[i]
-            left, right = 0, 0
-            nl, nr = i, i
+            (left, right) = (0, 0)
+            (nl, nr) = (i, i)
             for j in range(i + 1, i + d + 1):
                 if j >= len(arr):
                     break
@@ -35,10 +36,8 @@ class Solution:
                 path[i] += path[nl]
             dp[i] = max(left, right) + 1
             return dp[i]
-
         ans = 0
         for i in range(len(arr)):
             jump(i)
-            # print(i, path[i])
             ans = max(ans, dp[i])
         return ans
