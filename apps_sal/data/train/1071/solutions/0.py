@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     blst = [0]
     for i in range(1, 65):
         blst.append(0)
@@ -28,7 +27,7 @@ while t > 0:
             if blst[p] == 1:
                 blst[p] = 0
         else:
-            p, r = list(map(int, input().split()))
+            (p, r) = list(map(int, input().split()))
             if blst[p] != blst[r]:
                 blst[p] += 1
                 blst[p] %= 2

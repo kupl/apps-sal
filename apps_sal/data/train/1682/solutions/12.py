@@ -1,4 +1,3 @@
-# cook your dish here
 n = str(input())
 max = 0
 i = 0
@@ -20,4 +19,4 @@ while i < len(n) - 1:
         sum = int(n[i])
         a = i + 1
         b = a
-print("{}:{}-{}".format(max, p, q))
+print('{}:{}-{}'.format(max, p, q))

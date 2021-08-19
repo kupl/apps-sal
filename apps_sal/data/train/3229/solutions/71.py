@@ -1,34 +1,8 @@
-def am_i_wilson(n):  # This is idiotic...
+def am_i_wilson(n):
     if n in [5, 13, 563]:
         return True
     else:
         return False
 
 
-"""
-def is_prime(n):
-    if n % 2 == 0 and n > 2: 
-        return False
-    for i in range(3, int(n**0.5) + 1, 2):
-        if n % i == 0:
-            return False
-    return True  
-
-def fac(n):
-    count = 1
-    for each in range(1, n + 1):
-        print(count)
-        count *= each
-    return count
-
-def am_i_wilson(n):
-    print(n)
-    if n in (0,1):
-        return False
-    if is_prime(n):
-        tmp = (fac(n-1)+1)/(n**2)
-        if tmp == int(tmp):
-            return True
-    else:
-        return False 
-"""
+'\ndef is_prime(n):\n    if n % 2 == 0 and n > 2: \n        return False\n    for i in range(3, int(n**0.5) + 1, 2):\n        if n % i == 0:\n            return False\n    return True  \n\ndef fac(n):\n    count = 1\n    for each in range(1, n + 1):\n        print(count)\n        count *= each\n    return count\n\ndef am_i_wilson(n):\n    print(n)\n    if n in (0,1):\n        return False\n    if is_prime(n):\n        tmp = (fac(n-1)+1)/(n**2)\n        if tmp == int(tmp):\n            return True\n    else:\n        return False \n'

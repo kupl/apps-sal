@@ -1,6 +1,7 @@
 class ThroneInheritance:
 
     class Person:
+
         def __init__(self, name):
             self.name = name
             self.children = list()
@@ -20,7 +21,6 @@ class ThroneInheritance:
         self.tracker[name].is_alive = False
 
     def getInheritanceOrder(self) -> List[str]:
-
         res = list()
 
         def recursion(node):
@@ -30,10 +30,3 @@ class ThroneInheritance:
                 recursion(child)
         recursion(self.root)
         return res
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

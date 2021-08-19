@@ -1,7 +1,5 @@
 from functools import reduce
 
-# get a len = 10 array with occurrences of digits
-
 
 def num_to_arr(num):
     s = str(num)
@@ -9,8 +7,6 @@ def num_to_arr(num):
     for c in s:
         arr[int(c)] += 1
     return arr
-
-# get an array of distinctive digits in an array as above
 
 
 def dist_digits(arr):
@@ -20,8 +16,6 @@ def dist_digits(arr):
             dist.append(i)
     return dist
 
-# get all combos given number of digits (m) and an array as above
-
 
 def all_combos(arr, m):
     combos = []
@@ -30,10 +24,8 @@ def all_combos(arr, m):
             if arr[i] > 0:
                 combos.append([i])
         return combos
-
     if m > sum(arr):
         return []
-
     digits = dist_digits(arr)
     for d in digits:
         nextArr = [0] * 10
@@ -47,8 +39,6 @@ def all_combos(arr, m):
             nextComb.append(d)
         combos.extend(nextCombos)
     return combos
-
-# now give all combos with all possible numbers of digits that % 3 == 0
 
 
 def complete_combos(arr):
@@ -78,6 +68,5 @@ def permus(combo):
 
 
 def find_mult_3(num):
-    # your code here
     comp_combos = complete_combos(num_to_arr(num))
     return [sum(map(permus, comp_combos)), reduce(lambda x, y: x * 10 + y, comp_combos[-1])]

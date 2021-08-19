@@ -1,18 +1,16 @@
 import math
 import sys
 sys.float_info.max
-# sys.setrecursionlimit(n)
 
 
 def am_i_wilson(n):
-    # sys.setrecursionlimit(100000)
     print(n)
     if n <= 1:
         return False
     if n > 1000:
-        if n % 2 == 0:  # even
+        if n % 2 == 0:
             return False
-        else:  # odd
+        else:
             return False
 
     def factorial(a):
@@ -25,6 +23,5 @@ def am_i_wilson(n):
             result *= i
         return result
     print('got here')
-
     num = (math.factorial(n - 1) + 1) % (n * n)
     return num == 0

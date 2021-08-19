@@ -1,16 +1,12 @@
-n, A, cf, cm, mN = list(map(int, input().split()))
-
+(n, A, cf, cm, mN) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 aCOPY = []
 for elem in a:
     aCOPY.append(elem)
 a.sort()
-
 aPartialSum = [0]
-
 for elem in a:
     aPartialSum.append(aPartialSum[-1] + elem)
-
 maxScore = 0
 ansMAXIBound = 0
 ansMAXI = 0
@@ -18,7 +14,7 @@ ansMIN = 0
 for MAXI in range(n + 1):
     currentScore = cf * MAXI
     if MAXI >= 1:
-        mN -= (A - a[-MAXI])
+        mN -= A - a[-MAXI]
     if mN < 0:
         break
     if MAXI == n:
@@ -26,10 +22,8 @@ for MAXI in range(n + 1):
         ansMAXIBound = 0
         ansMAXI = 10 ** 10
         ansMIN = 0
-    # Find the maximum of minimum
     l = a[0]
     r = A - 1
-
     while l < r:
         m = (l + r + 1) // 2
         lA = 0
@@ -58,7 +52,6 @@ for MAXI in range(n + 1):
         ansMAXIBound = a[-MAXI]
         ansMAXI = MAXI
         ansMIN = l
-
 print(maxScore)
 inclCount = 0
 for i in range(n):
@@ -71,4 +64,4 @@ for i in range(n):
         inclCount += 1
     if aCOPY[i] < ansMIN:
         aCOPY[i] = ansMIN
-print(" ".join(map(str, aCOPY)))
+print(' '.join(map(str, aCOPY)))

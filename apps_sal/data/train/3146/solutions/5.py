@@ -1,16 +1,15 @@
 def to_utf8_binary(string):
-
     stList = list(string)
     bincodes = [toBin(c) for c in stList]
     return ''.join(bincodes)
 
 
 def toBin(string):
-    print((ord(string)))
+    print(ord(string))
     a = bin(ord(string))[2:]
-    if(ord(string) <= 127):
+    if ord(string) <= 127:
         padded = a.zfill(8)
-        return (padded)
+        return padded
     elif ord(string) <= 2047:
         padded = a.zfill(11)
         return '110' + padded[:5] + '10' + padded[5:]
@@ -50,7 +49,7 @@ def getLenInByte(part):
         return 2
     elif part[:4] == '1110':
         return 3
-    elif part[:5] == '11110':  # 4 byte
+    elif part[:5] == '11110':
         return 4
 
 
@@ -58,13 +57,12 @@ def from_utf8_binary(bitstring):
     li = splitEveryN(8, bitstring)
     i = 0
     result = []
-    while(i < len(li)):
+    while i < len(li):
         bytelen = getLenInByte(li[i])
-        nextbin = li[i: i + bytelen]
+        nextbin = li[i:i + bytelen]
         joined = ''.join(nextbin)
-
         frombin = fromBin(joined)
-        result += frombin  # li[i] is a string
+        result += frombin
         i += bytelen
     return ''.join(result)
 

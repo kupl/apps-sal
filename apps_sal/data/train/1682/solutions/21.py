@@ -14,9 +14,8 @@ for i in range(1, len(l)):
     if i == len(l) - 1:
         l3.append(i + 1)
         l1.append(int(s))
-'''print(max(l1),l1,l3)
-#,l2[l1.index(max(l1))],l3[l1.index(max(l1))])'''
+'print(max(l1),l1,l3)\n#,l2[l1.index(max(l1))],l3[l1.index(max(l1))])'
 if l3[1 + l1.index(max(l1))] == len(l):
-    print("{}:{}-{}".format(max(l1), l3[l1.index(max(l1))], l3[1 + l1.index(max(l1))]))
+    print('{}:{}-{}'.format(max(l1), l3[l1.index(max(l1))], l3[1 + l1.index(max(l1))]))
 else:
-    print("{}:{}-{}".format(max(l1), l3[l1.index(max(l1))], l3[1 + l1.index(max(l1))] - 1))
+    print('{}:{}-{}'.format(max(l1), l3[l1.index(max(l1))], l3[1 + l1.index(max(l1))] - 1))
