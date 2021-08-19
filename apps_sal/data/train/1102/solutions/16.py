@@ -1,5 +1,4 @@
-# cook your dish here
-constant = (10**9) + 7
+constant = 10 ** 9 + 7
 try:
     testCases = int(input().strip())
     for _ in range(testCases):
