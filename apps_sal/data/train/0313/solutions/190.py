@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if not bloomDay or m * k > len(bloomDay):
             return -1
@@ -14,9 +15,6 @@ class Solution:
                 r = day
             else:
                 l = day + 1
-            # if l >= r and not p:
-            #    not_possible = True
-
         return l if not not_possible else -1
 
     def works(self, day, arr, m, k):

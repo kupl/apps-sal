@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if m * k > len(bloomDay):
             return -1
@@ -17,9 +18,8 @@ class Solution:
                     if bouq == m:
                         return True
             return False
-
-        left = min(bloomDay)  # min number of days
-        right = max(bloomDay)  # maximum number of days
+        left = min(bloomDay)
+        right = max(bloomDay)
         while left < right:
             mid = left + (right - left) // 2
             if feasible(mid, m, k):

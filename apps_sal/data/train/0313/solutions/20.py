@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if k * m > len(bloomDay):
             return -1
@@ -14,16 +15,12 @@ class Solution:
                     if numFlowers >= k:
                         numBouquets += 1
                         numFlowers -= k
-
-            # print(mid, numBouquets)
             return numBouquets >= m
-
         low = 0
         high = max(bloomDay)
-        while (low < high):
+        while low < high:
             mid = int((low + high) / 2)
-            if (isPossible(mid)):
-                # print(\"true\", mid)
+            if isPossible(mid):
                 high = mid
             else:
                 low = mid + 1

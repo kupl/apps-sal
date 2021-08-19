@@ -1,4 +1,3 @@
-# DSU
 import bisect
 import sys
 from collections import deque, namedtuple
@@ -21,8 +20,8 @@ def merge(a, b):
 
 
 def main():
-    n, m = map(int, input().split())
-    check, ans = 0, -1
+    (n, m) = map(int, input().split())
+    (check, ans) = (0, -1)
     for _ in range(n):
         l = [int(i) for i in input().split()][1:]
         check = max(check, len(l))

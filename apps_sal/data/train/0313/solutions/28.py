@@ -1,13 +1,13 @@
 class Solution:
+
     def minDays(self, bloomDay, m: int, k: int) -> int:
         beg = min(bloomDay)
         end = max(bloomDay)
         n = len(bloomDay)
         res = -1
-        while (beg <= end):
+        while beg <= end:
             mid = beg + int((end - beg) / 2)
-            # print(mid)
-            if (self.isValid(bloomDay, n, m, k, mid) >= m):
+            if self.isValid(bloomDay, n, m, k, mid) >= m:
                 res = mid
                 end = mid - 1
             else:
@@ -20,10 +20,9 @@ class Solution:
         k1 = 0
         for i in range(n):
             k1 += 1
-            if (bloomDay[i] > mx):
+            if bloomDay[i] > mx:
                 k1 = 0
-            if(k1 == k):
+            if k1 == k:
                 boquet += 1
                 k1 = 0
-        # print(\"boquet\",boquet)
         return boquet

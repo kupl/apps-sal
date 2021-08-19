@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if m * k > len(bloomDay):
             return -1
@@ -18,7 +19,6 @@ class Solution:
                     if flow >= k:
                         flow = 0
                         nums += 1
-            # print(mid, nums)
             if nums >= m:
                 r = mid
             else:
